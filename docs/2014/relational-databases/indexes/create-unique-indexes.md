@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162350"
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的唯一索引。 唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 创建 UNIQUE 约束和创建与约束无关的唯一索引并没有明显的区别。 进行数据验证的方式相同，而且对于唯一索引是由约束创建的还是手动创建的，查询优化器并不加以区分。 但是，创建列的 UNIQUE 约束会使索引目标更清晰。 有关 UNIQUE 约束的详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
@@ -120,7 +120,7 @@ ms.locfileid: "54127227"
   
 11. 在主网格中，在“(常规)”下，选择“是唯一的”，然后从列表中选择“是”。  
   
-12. 可选:在主网格中下,**表设计器**，选择**忽略重复键**，然后选择**是**从列表中。 如果要忽略尝试添加导致唯一索引中有重复键的数据，请这样做。  
+12. 可选：在主网格中下,**表设计器**，选择**忽略重复键**，然后选择**是**从列表中。 如果要忽略尝试添加导致唯一索引中有重复键的数据，请这样做。  
   
 13. 单击 **“关闭”**。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "54127227"
   
 8.  在“从 table_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
-9. 单击“确定” 。  
+9. 单击 **“确定”**。  
   
 10. 在 **“新建索引”** 对话框中，单击 **“确定”**。  
   

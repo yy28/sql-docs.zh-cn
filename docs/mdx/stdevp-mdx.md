@@ -1,5 +1,5 @@
 ---
-title: StdevP (MDX) |Microsoft 文档
+title: StdevP (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 14117ed4a3e3e7afc0152c5e659d1c7f040957e9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150142"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 
 
-  返回数值表达式对集求得使用有偏差的总体公式计算总体标准偏差 (除以*n*)。  
+  返回对数值表达式使用有偏差的总体公式对集求得的总体标准偏差 (除以*n*)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,8 +35,8 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- **StdevP**函数使用有偏差的总体公式、 时[Stdev](../mdx/stdev-mdx.md)函数使用无偏差的总体公式。  
+## <a name="remarks"></a>备注  
+ **StdevP**函数使用有偏差的总体公式，而[Stdev](../mdx/stdev-mdx.md)函数使用无偏差的总体公式。  
   
 ## <a name="example"></a>示例  
  下面的示例将使用有偏差总体公式返回对 2003 日历年度中前三个月求得的 Internet Order Quantity 的标准偏差。  
@@ -53,6 +53,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2772c8d6470f9ad6eb5e8b7cadb6dedd136bd48b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137586"
 ---
 # <a name="unloading-an-extended-stored-procedure-dll"></a>卸载扩展存储过程 DLL
     
@@ -32,6 +32,6 @@ DBCC xp_hello(FREE)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [DBCC dllname&#40;免费&#41; &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dllname-free-transact-sql)  
+ [DBCC dllname &#40;FREE&#41; &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dllname-free-transact-sql)  
   
   

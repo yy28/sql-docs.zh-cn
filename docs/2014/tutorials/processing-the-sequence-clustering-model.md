@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188138"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>处理顺序分析和聚类分析模型
   在创建新的挖掘结构后，必须部署对数据挖掘解决方案所做的更改，然后再处理结构。 处理完新结构和挖掘模型之后，就可以浏览挖掘模型了。  

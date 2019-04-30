@@ -16,65 +16,65 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188818"
 ---
 # <a name="interval-literal-syntax"></a>间隔文本语法
 以下语法用于间隔 ODBC 中的文本。  
   
- *间隔文本:: = 间隔*[+*&#124;*-]*时间间隔字符串间隔限定符*  
+ *interval-literal ::= INTERVAL* [+*&#124;*-] *interval-string interval-qualifier*  
   
- *时间间隔字符串*:: =*报价*{*年-月-文本* &#124; *天时间文字*}*引号*  
+ *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
   
- *年-月-文字*:: =*年份值* &#124; [*年份值*-]*月数值*  
+ *year-month-literal* ::= *years-value* &#124; [*years-value* -] *months-value*  
   
- *日期时间文字*:: =*天时间间隔* &#124; *时间间隔*  
+ *day-time-literal* ::= *day-time-interval* &#124; *time-interval*  
   
- *一天时间间隔*:: =*天数值*[*小时值*[:*分钟值*[:*秒值*]]]  
+ *day-time-interval* ::= *days-value* [*hours-value* [:*minutes-value*[:*seconds-value*]]]  
   
- *时间间隔*:: =*小时值*[:*分钟值*[:*秒值*]]  
+ *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
   
- &#124;*分钟值*[:*秒值*]  
+ &#124; *minutes-value* [:*seconds-value* ]  
   
- &#124;*秒值*  
+ &#124; *seconds-value*  
   
- *年份值*:: =*日期时间值*  
+ *years-value* ::= *datetime-value*  
   
- *月数值*:: =*日期时间值*  
+ *months-value* ::= *datetime-value*  
   
- *天数值*:: =*日期时间值*  
+ *days-value* ::= *datetime-value*  
   
- *小时值*:: =*日期时间值*  
+ *hours-value* ::= *datetime-value*  
   
- *分钟值*:: =*日期时间值*  
+ *minutes-value* ::= *datetime-value*  
   
- *秒值*:: =*秒的整数值*[。 [*秒部分*]]  
+ *seconds-value* ::= *seconds-integer-value* [.[*seconds-fraction*] ]  
   
- *秒的整数值*:: =*无符号整数*  
+ *seconds-integer-value* ::= *unsigned-integer*  
   
- *秒部分的前*:: =*无符号整数*  
+ *seconds-fraction* ::= *unsigned-integer*  
   
- *日期时间值*:: =*无符号整数*  
+ *datetime-value* ::= *unsigned-integer*  
   
- *间隔限定符*:: =*开始字段*TO*结束字段* &#124; *单日期时间字段*  
+ *interval-qualifier* ::= *start-field* TO *end-field* &#124; *single-datetime-field*  
   
- *开始字段*:: =*非-秒的日期时间的字段*[(*间隔前导字段精度*)]  
+ *start-field* ::= *non-second-datetime-field* [(*interval-leading-field-precision* )]  
   
- *结束字段*:: =*非-秒的日期时间的字段*&#124;第二个 [(*间隔的小数部分的秒的精度*)]  
+ *end-field* ::= *non-second-datetime-field* &#124; SECOND[(*interval-fractional-seconds-precision*)]  
   
  *单个日期时间字段*:: =*非-秒的日期时间的字段*[(*间隔前导字段精度*)]&#124;第二个 [(*间隔前导字段精度* [，(*时间间隔的小数部分的秒的精度*)]  
   
- *日期时间字段*:: =*非-秒的日期时间的字段*&#124;第二个  
+ *datetime-field* ::= *non-second-datetime-field* &#124; SECOND  
   
  *非-秒的日期时间的字段*:: = 年&#124;月&#124;天&#124;小时&#124;分钟  
   
- *时间间隔的小数部分的秒的精度*:: =*无符号整数*  
+ *interval-fractional-seconds-precision* ::= *unsigned-integer*  
   
- *间隔前导字段精度*:: =*无符号整数*  
+ *interval-leading-field-precision* ::= *unsigned-integer*  
   
- *引号*:: =  
+ *quote* ::= '  
   
- *无符号整数*:: =*数字...*
+ *unsigned-integer* ::= *digit...*

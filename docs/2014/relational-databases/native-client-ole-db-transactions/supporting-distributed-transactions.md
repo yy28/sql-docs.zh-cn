@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213505"
 ---
 # <a name="supporting-distributed-transactions"></a>支持分布式事务
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用者可以使用**itransactionjoin:: Jointransaction**方法可以参与分布式事务协调由 Microsoft 分布式事务处理协调器 (MS DTC)。  
@@ -34,7 +34,7 @@ ms.locfileid: "48061089"
   
  对于分布式事务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口实现**itransactionjoin:: Jointransaction**参数，如下所示。  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|指向 MS DTC 事务对象的指针。|  
 |IsoLevel|忽略[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。 使用者在从 MS DTC 获取事务对象时，确定由 MS DTC 协调的事务的隔离级别。|  

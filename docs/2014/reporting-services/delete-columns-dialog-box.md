@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a198ad51c424b42aff71afbeb3a82952aa57a52
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164728"
 ---
 # <a name="delete-columns-dialog-box"></a>“删除列”对话框
   使用 **“删除列”** 对话框可以删除表、矩阵或列表数据区域中的列。 对于与组关联的列，您还可以删除组定义。  

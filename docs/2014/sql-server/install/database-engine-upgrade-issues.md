@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6540789cbd05f2a7c5e5b61bf5597221dc3305f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162477"
 ---
 # <a name="database-engine-upgrade-issues"></a>数据库引擎升级问题
   本节中的主题介绍可能会影响您升级到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]问题。 这些主题介绍了为减轻这些更改对您环境的影响可以采取的措施。  

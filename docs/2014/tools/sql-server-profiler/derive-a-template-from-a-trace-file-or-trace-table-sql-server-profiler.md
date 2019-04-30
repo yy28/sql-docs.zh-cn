@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1982d7941fd42eeac8a2d6eaa0bb78260c24317
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184265"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>从跟踪文件或跟踪表派生模板 (SQL Server Profiler)
   本主题说明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]从现有跟踪文件或跟踪表创建跟踪模板。  
@@ -29,7 +29,7 @@ ms.locfileid: "52775049"
   
 2.  在 **“文件”** 菜单上，指向 **“另存为”**，再单击 **“跟踪模板”**。  
   
-3.  键入名称或从列表中选择一个名称。 单击“确定” 。  
+3.  键入名称或从列表中选择一个名称。 单击 **“确定”**。  
   
 > [!NOTE]  
 >  如果选择现有模板文件，系统将会询问您是否希望覆盖现有文件。  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e29fac8b9cdb955ddaff6643eacae352e9c39bf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214318"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>测试迁移的数据库对象 (SybaseToSQL)
 Microsoft SQL Server Migration Assistant for Sybase 测试人员 （SSMA 测试程序） 自动测试的数据库对象转换和数据迁移所做的 SSMA。 在完成所有的 SSMA 迁移步骤后，使用 SSMA 测试人员验证已转换的对象相同的方式工作，所有数据已正确都传输。  
@@ -46,7 +46,7 @@ SSMA 测试人员执行测试上 Sybase 和其对应的 SQL Server 中为所选�
 > [!NOTE]  
 > 注意 ！ 永远不会在生产系统上使用 SSMA 测试人员。 在测试人员执行期间修改的源架构和数据。 同时，原始状态的完整还原可能对于某些类型的测试的代码不可能。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 如果你想要使用 SSMA 测试人员，安装 SSMA Sybase 扩展包**安装的测试人员数据库**选项已打开。  
   
 此外，验证以下各项：  

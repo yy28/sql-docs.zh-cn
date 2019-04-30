@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c522a8d278080d9249761309d29f465befe217d8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184787"
 ---
 # <a name="xslt-transformations"></a>XSLT 转换
 XSLT 可以应用于生成的 XML，以将其转换为另一种格式。 了解在 ADO 中的 XML 格式时，可帮助开发 XSLT 模板，可以将它转换为更加用户友好格式。  

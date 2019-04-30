@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156770"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>调用本机编译存储过程的最佳做法
   本机编译存储过程：  
@@ -48,7 +48,7 @@ ms.locfileid: "48048527"
   
  可通过 XEvent `hekaton_slow_parameter_passing` 及 `reason=named_parameters` 检测使用了（低效）命名参数的本机编译存储过程。  
   
- 同样，可以检测通过相同的 XEvent 的类型不匹配`hekaton_slow_parameter_passing`，使用`reason=parameter_conversion`。  
+ 类似地，可通过 XEvent `hekaton_slow_parameter_passing` 及 `reason=parameter_conversion` 检测类型不匹配。  
   
  因为在使用内存优化表时需要实现重试逻辑（在许多情况下），并且，因为需要解决某些功能限制，所以，您可能需要创建包装解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 有关示例，请参阅[内存优化表上的事务的重试逻辑准则](memory-optimized-tables.md)。  
   

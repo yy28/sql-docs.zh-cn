@@ -1,5 +1,5 @@
 ---
-title: 从 C 到 SQL： 位 |Microsoft Docs
+title: 从 C 到 SQL：Bit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9eeeaeaa3bb4af7a244697e992e79e8c66c2a660
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201664"
 ---
-# <a name="c-to-sql-bit"></a>从 C 到 SQL：位
+# <a name="c-to-sql-bit"></a>从 C 到 SQL：bit
 位 ODBC C 数据类型的标识符是：  
   
  SQL_C_BIT  

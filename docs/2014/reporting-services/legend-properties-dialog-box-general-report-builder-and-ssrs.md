@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae9d8c9b156b2b7b1655c0b854a4615264e56b3c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143006"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>“图例属性”对话框 ->“常规”（报表生成器和 SSRS）
   使用 **“图例”** 对话框可以定义图表中图例的外观和布局。 有关详细信息，请参阅[设置图表上的图例的格式&#40;报表生成器和 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)。  

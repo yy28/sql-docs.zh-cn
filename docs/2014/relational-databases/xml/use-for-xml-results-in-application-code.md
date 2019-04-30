@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193339"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在应用程序代码中使用 FOR XML 结果
   通过在 SQL 查询中使用 FOR XML 子句，可以检索查询结果，甚至可以将其转换为 XML 数据。 当 FOR XML 查询结果可以在 XML 应用程序代码中使用时，您可以使用此功能执行以下操作：  
@@ -153,25 +153,25 @@ ms.locfileid: "58532829"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>XML 文档 MyDataIsle 的客户端处理  
   
--   **AnnualSales:** 1500000  
+-   **AnnualSales：** 1500000  
   
--   **AnnualRevenue:** 150000  
+-   **AnnualRevenue：** 150000  
   
--   **BankName:** Primary International  
+-   **BankName：** Primary International  
   
--   **BusinessType:** OS  
+-   **BusinessType：** OS  
   
--   **YearOpened:** 1974  
+-   **YearOpened：** 1974  
   
--   **Specialty:** Road  
+-   **Specialty：** Road  
   
--   **SquareFeet:** 38000  
+-   **SquareFeet：** 38000  
   
--   **品牌：** 3  
+-   **Brands：** 3  
   
--   **Internet:** DSL  
+-   **Internet：** DSL  
   
--   **NumberEmployees:** 40  
+-   **NumberEmployees：** 40  
   
  然后，VBScript 消息框将显示以下由 FOR XML 查询结果返回的原始、未筛选的 XML 数据岛内容。  
   

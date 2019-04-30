@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 088c9b60861266bf99649343aec2e763097bf155
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198187"
 ---
 # <a name="driver-setup-dll"></a>驱动程序安装程序 DLL
 > [!NOTE]  
@@ -30,7 +30,7 @@ ms.locfileid: "47786325"
   
  **ConfigDSN**安装程序来维护注册表中的数据源信息的 DLL 中调用以下函数：  
   
--   **SQLWriteDSNToIni**。 添加数据源。  
+-   **SQLWriteDSNToIni**. 添加数据源。  
   
 -   **SQLRemoveDSNFromIni**。 删除数据源。  
   

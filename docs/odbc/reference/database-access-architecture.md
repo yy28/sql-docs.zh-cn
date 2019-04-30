@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43c6ffd93020b1db1b90ad1768822075299d16b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186273"
 ---
 # <a name="database-access-architecture"></a>数据库访问体系结构
 ODBC 的开发中的问题之一是数据库访问体系结构进行标准化的哪个部分。 在上一部分的嵌入式 SQL 中所述的 SQL 编程接口 SQL 模块和 Cli-是只有一个此体系结构的一部分。 事实上，因为 ODBC 主要用于基于个人计算机的应用程序连接到小型计算机和大型机 Dbms，还有多个网络组件，其中一些无法进行标准化。  

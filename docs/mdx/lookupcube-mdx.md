@@ -1,5 +1,5 @@
 ---
-title: LookupCube (MDX) |Microsoft 文档
+title: LookupCube (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8f8338a542bf9e15816205930704c45a536a5629
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208520"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (MDX)
 
@@ -42,17 +42,17 @@ LookupCube(Cube_Name, String_Expression )
  *String_Expression*  
  一个有效的字符串表达式，通常为返回一个字符串的单元坐标的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 如果指定数值表达式，则**LookupCube**函数中指定的多维数据集的指定数值表达式的计算结果并返回生成的数字值。  
+## <a name="remarks"></a>备注  
+ 如果指定了数值表达式，则**LookupCube**函数中指定的多维数据集的指定数值表达式的计算结果并返回结果的数字值。  
   
  如果指定的字符串表达式，则**LookupCube**函数中指定的多维数据集的指定的字符串表达式的计算结果并返回结果的字符串值。  
   
- **LookupCube**函数工作方式的同一数据库中的多维数据集，因为在其 MDX 查询的源多维数据集包含**LookupCube**运行函数。  
+ **LookupCube**因为其的 MDX 查询的源多维数据集包含，函数适用于同一数据库中的多维数据集**LookupCube**函数正在运行。  
   
 > [!IMPORTANT]  
 >  因为当前查询的上下文不会延续到将要查询的多维数据集，所以必须在数值或字符串表达式内提供任何必要的当前成员。  
   
- 任何计算使用**LookupCube**函数是可能遇到中的性能不佳。 请考虑重新设计您的解决方案，而不是使用此函数，以便在一个多维数据集中提供您所需的所有数据。  
+ 使用任何计算**LookupCube**函数很可能会遇到性能不佳。 请考虑重新设计您的解决方案，而不是使用此函数，以便在一个多维数据集中提供您所需的所有数据。  
   
 ## <a name="examples"></a>示例  
  以下查询演示 LookupCube 的用法：  
@@ -66,6 +66,6 @@ LookupCube(Cube_Name, String_Expression )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

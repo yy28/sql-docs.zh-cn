@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 44b5a7950517990f7e2b1ef2afb2d17b5c4340dc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164595"
 ---
 # <a name="design-the-table-report-wizard"></a>设计表（报表向导）
   使用报表向导的此页可以选择要在报表中包含的字段。  

@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181411"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 级别 1  
+ ODBC API 一致性：级别 1  
   
  返回有关所支持的数据源的数据类型的信息。 该驱动程序中的 SQL 结果集返回的信息。 下表列出了 ODBC 数据类型和相应的 Visual FoxPro 数据类型。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47733055"
 |SQL_BIT|逻辑函数|  
 |SQL_CHAR|字符|  
 |SQL_DATE|date|  
-|SQL_DECIMAL|数字|  
+|SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|双精度|  
 |SQL_FLOAT|双精度|  
 |SQL_INTEGER|Integer|  

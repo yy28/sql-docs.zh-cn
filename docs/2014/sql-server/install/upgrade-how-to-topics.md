@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a6fbf5cbf55b5ad63317b7cadc0db2c7df738712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193060"
 ---
 # <a name="upgrade-how-to-topics"></a>升级操作指南主题
   本节中的主题说明如何升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立实例。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[升级到 SQL Server 2014 使用安装向导&#40;安装程序&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的过程主题。|  
 |[升级 SQL Server 故障转移群集实例（安装程序）](../failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集的实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的过程主题。|  
@@ -33,6 +33,6 @@ ms.locfileid: "48071009"
 ## <a name="see-also"></a>请参阅  
  [升级服务器实例时，尽量减少镜像数据库的停机时间](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)   
  [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [后向兼容性](../../../2014/getting-started/backward-compatibility.md)  
+ [向后兼容性](../../../2014/getting-started/backward-compatibility.md)  
   
   

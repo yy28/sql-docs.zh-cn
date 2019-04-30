@@ -1,5 +1,5 @@
 ---
-title: 创建和查询使用 DMX 数据挖掘模型：教程 (Analysis Services-数据挖掘) |Microsoft Docs
+title: 使用 DMX 创建和查询数据挖掘模型：教程 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180558"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>创建和查询使用 DMX 数据挖掘模型：教程 (Analysis Services-数据挖掘)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>使用 DMX 创建和查询数据挖掘模型：教程 (Analysis Services-数据挖掘)
   使用创建数据挖掘解决方案后[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，可以创建针对数据挖掘模型以预测趋势、 检索数据中的模式以及度量挖掘模型的准确性的查询。  
   
  以下列表中的分步教程可帮助您了解如何生成并运行通过使用数据挖掘查询[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，以便可以充分利用你的数据。  

@@ -16,39 +16,39 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181287"
 ---
 # <a name="numeric-literal-syntax"></a>数值语法
 以下语法用于 ODBC 中的数字文本：  
   
- *数值文字*:: =*签名数字文本&#124;无符号数字文本*  
+ *numeric-literal* ::= *signed-numeric-literal &#124; unsigned-numeric-literal*  
   
- *签名数值文字*:: = [*符号*]*无符号数字文本*  
+ *signed-numeric-literal* ::= [*sign*] *unsigned-numeric-literal*  
   
- *无符号数值文字*:: =*精确数字文本&#124;近似数字文本*  
+ *unsigned-numeric-literal* ::= *exact-numeric-literal &#124; approximate-numeric-literal*  
   
- *精确数值文字*:: =*无符号整数*[*段*[*无符号整数*]] *&#124;时间段的无符号整数*  
+ *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
   
- *登录*:: =*加号&#124;负号*  
+ *sign* ::= *plus-sign &#124; minus-sign*  
   
- *近似数值文字*:: =*尾数 E 指数*  
+ *approximate-numeric-literal* ::= *mantissa E exponent*  
   
- *尾数*:: =*精确数字文本*  
+ *mantissa* ::= *exact-numeric-literal*  
   
- *指数*:: =*已签名整数*  
+ *exponent* ::= *signed-integer*  
   
- *已签名整数*:: = [*符号*]*无符号整数*  
+ *signed-integer* ::= [*sign*] *unsigned-integer*  
   
- *无符号整数*:: =*数字...*  
+ *unsigned-integer* ::= *digit...*  
   
- *加号*:: = *+*  
+ *plus-sign* ::= *+*  
   
- *负号*:: =-  
+ *minus-sign* ::= -  
   
- *数字*:: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *digit* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
  *段*:: =。

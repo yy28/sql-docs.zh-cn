@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1763ee0cd8c5bc2017160de44b9c047781649eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150023"
 ---
 # <a name="sql-type-identifiers"></a>SQL 类型标识符
 每个数据源定义其自己的 SQL 数据类型。 ODBC 定义类型的标识符和描述可能映射到每个类型标识符的 SQL 数据类型的一般特征。 它是驱动程序特定于如何在基础数据源中的每种数据类型映射到的 ODBC SQL 类型标识符。  
@@ -31,4 +31,4 @@ ms.locfileid: "47740145"
   
  ODBC 定义各种类型的 SQL 标识符。 但是，该驱动程序不需要使用所有这些标识符。 相反，它使用基础数据源仅需要公开支持的 SQL 数据类型的标识符。 如果基础数据源支持到 SQL 数据类型的任何类型标识符相对应，该驱动程序可以定义其他类型标识符。 有关详细信息，请参阅[特定于驱动程序的数据类型、 描述符类型、 信息类型、 诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
- SQL 类型标识符的完整说明，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 数据类型。
+ SQL 类型标识符的完整说明，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)中附录 d:数据类型。

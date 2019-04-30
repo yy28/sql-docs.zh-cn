@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b7c63e4850d17009992f8749c35d86534c0ee83
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188339"
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
   报表定义语言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义的 XML 表示形式。 报表定义包含报表的数据检索和布局信息。 RDL 由 XML 元素组成，这些元素符合为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建的 XML 语法。 通过访问报表定义文件中的代码程序集，可以添加您自己的自定义函数，以便控制报表项值、样式和格式。  
@@ -60,7 +60,7 @@ ms.locfileid: "59955144"
 ##  <a name="bkmk_RDL_Types"></a> RDL 类型  
  下表列出了在 RDL 元素和属性中使用的类型。  
   
-|Type|Description|  
+|Type|描述|  
 |----------|-----------------|  
 |`Binary`|具有 Base-64 编码二进制值的属性。|  
 |`Boolean`|以 `true` 或 `false` 作为对象值的属性。 除非另行指定，否则未指定的可选布尔对象的值为 `False`。|  

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4ef2127e3f554ac4d7bbd92e9d823ecd1e025fe9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131436"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>客户端和服务器端 XML 格式的体系结构 (SQLXML 4.0)
   下图显示服务器端的 XML 格式的体系结构。  
@@ -40,7 +40,7 @@ ms.locfileid: "52750349"
   
  ![在客户端 XML 格式的体系结构。](../../../database-engine/dev-guide/media/clientsidexml.gif "客户端上的体系结构的 XML 格式。")  
   
- 在该示例中，客户端使用 SQLXMLOLEDB 访问接口。 连接字符串中的数据提供程序属性必须设置为 SQLOLEDB。 （在 SQLXML 4.0 中这是唯一接受的值。）在客户端上执行的命令将发送到服务器。 在服务器上生成的行集则发送到客户端。 由行集转换至 XML 文档的格式设置操作将在客户端上执行。  
+ 在该示例中，客户端使用 SQLXMLOLEDB 访问接口。 连接字符串中的数据提供程序属性必须设置为 SQLOLEDB。 （这是唯一接受在 SQLXML 4.0 中的值）。在客户端执行的命令发送到服务器。 在服务器上生成的行集则发送到客户端。 由行集转换至 XML 文档的格式设置操作将在客户端上执行。  
   
  在 SQLXML 4.0 中，可以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) 或 SQLOLEDB 访问接口用作数据访问接口。 您应当可以访问任何数据源。 只要查询返回单个行集，就可以在客户端应用 XML 转换。  
   

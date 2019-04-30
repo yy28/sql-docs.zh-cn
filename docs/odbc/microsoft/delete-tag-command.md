@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eabecbc399751f03e9e5c25b32423ce0839072dc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198247"
 ---
 # <a name="delete-tag-command"></a>DELETE TAG 命令
 从复合索引 (.cdx) 文件中删除标记。  
@@ -34,10 +34,10 @@ DELETE TAG ALL [OF CDXFileName]
 ```  
   
 ## <a name="arguments"></a>参数  
- *TagName1*OF *CDXFileName1*[， *TagName2*[OF *CDXFileName2*]]...  
+ *TagName1*OF *CDXFileName1*[, *TagName2*[OF *CDXFileName2*]] ...  
  指定一个标记，以从复合索引文件中删除。 可以通过包括一系列以逗号分隔的标记名称与一个删除标记删除多个标记。 如果在打开索引文件中存在具有相同名称的两个或多个标记，则可以通过包含的从特定索引文件删除标记*CDXFileName*。  
   
- 所有 [OF *CDXFileName*]  
+ ALL [OF *CDXFileName*]  
  从复合索引文件中删除每个标记。 如果当前表具有结构复合索引文件，从索引文件中删除所有标记、 从磁盘中，将删除该索引文件和都删除表的标头，该值指示存在相关联的结构化复合索引文件中的标志。 使用所有这些都有 OF *CDXFileName*若要从非结构化的复合索引文件打开复合索引文件删除所有标记。  
   
 ## <a name="remarks"></a>备注  

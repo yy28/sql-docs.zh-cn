@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d53891b4e82b3ae391d095e8cbca2189fb201d29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142956"
 ---
 # <a name="updating-and-persisting-data"></a>更新和保留数据
 前面几章讨论了如何使用 ADO 来访问数据源中的数据、 如何在数据中，移动和了解如何编辑数据。 当然，如果你的应用程序的目标是允许用户对数据进行更改，您需要了解如何保存这些更改。 您也可以保留**记录集**更改为文件使用**保存**方法，或者可以发送所做的更改回存储使用的数据源**更新**或**UpdateBatch**方法。  

@@ -1,5 +1,5 @@
 ---
-title: + （字符串串联）(MDX) |Microsoft 文档
+title: + （字符串串联）(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 292d671fb3b971c30b6e261e3b851aba1ead9b36
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150007"
 ---
 # <a name="-string-concatenation-mdx"></a>+（字符串串联）(MDX)
 
@@ -35,7 +35,7 @@ String_Expression + String_Expression
 ## <a name="return-value"></a>返回值  
  具有与优先级较高的参数相同的数据类型的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。 如果一个表达式求出的值为空值，该运算符将返回另一个表达式的结果。  
   
 ## <a name="see-also"></a>请参阅  

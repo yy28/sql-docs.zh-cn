@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198224"
 ---
 # <a name="configuring-data-sources"></a>配置数据源
 有关数据源的信息存储在系统注册表中。 用户修改通过管理计划的数据源信息。 这可以是 ODBC 管理器、 ODBC 控制面板设备或应用程序或驱动程序的开发人员编写的管理程序。  

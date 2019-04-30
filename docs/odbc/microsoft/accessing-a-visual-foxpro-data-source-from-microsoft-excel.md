@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 575ba4abf9ed20ffbc0f2602a91bee9776e42b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198194"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>从 Microsoft Excel 访问 Visual FoxPro 数据源
 如果您安装的 Microsoft 查询，您可以连接到 Visual FoxPro 数据的 Microsoft Excel 中创建数据源。  

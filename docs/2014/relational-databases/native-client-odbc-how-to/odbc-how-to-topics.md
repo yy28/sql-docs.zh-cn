@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200373"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 操作指南主题
   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 驱动程序，您必须能够创建 ODBC 数据源，并确保服务器具有正确版本的目录存储过程。 若要为使用 SQL Server 的 ODBC 应用程序编码，您必须了解如何分配 ODBC 句柄、设置属性、连接到 SQL Server 实例、执行查询和处理结果。  

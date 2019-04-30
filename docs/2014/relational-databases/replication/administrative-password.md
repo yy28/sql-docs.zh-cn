@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186951"
 ---
 # <a name="administrative-password"></a>管理密码
   如果在此向导的 **“分发服务器”** 页上为此发布服务器选择了远程分发服务器，则必须输入复制使用 **distributor_admin** 登录名在发布服务器和分发服务器之间所建立的连接的密码。 该密码必须与在配置分发向导的 **“分发服务器密码”** 页上或在 **“分发服务器属性”** 对话框的 **“发布服务器”** 页上指定的密码相匹配。  

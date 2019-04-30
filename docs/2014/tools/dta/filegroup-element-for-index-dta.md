@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154606"
 ---
 # <a name="filegroup-element-for-index-dta"></a>索引的文件组元素 (DTA)
   指定要针对用户指定的配置，对其创建索引的文件组。  
@@ -37,7 +37,7 @@ ms.locfileid: "52782969"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|`string`，长度没有限制。|  
 |**默认值**|无。|  

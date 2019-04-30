@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161851"
 ---
 # <a name="indexes"></a>索引
   下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的索引类型，并提供了指向其他信息的链接。  
   
-|索引类型|Description|其他信息|  
+|索引类型|描述|其他信息|  
 |----------------|-----------------|----------------------------|  
 |哈希|借助于哈希索引，可通过内存中的哈希表来访问数据。 哈希索引的内存用量固定不变，是存储桶数量的函数。|[在内存优化表上使用索引的准则](../in-memory-oltp/memory-optimized-tables.md)|  
 |内存优化的非聚集索引|对于内存优化的非聚集索引，内存使用量依赖于行计数以及索引键列的大小|[在内存优化表上使用索引的准则](../in-memory-oltp/memory-optimized-tables.md)|  
@@ -34,7 +34,7 @@ ms.locfileid: "48101157"
 |计算列上的索引|从一个或多个其他列的值或某些确定的输入值派生的列上的索引。|[计算列上的索引](indexes-on-computed-columns.md)|  
 |筛选|一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。|[创建筛选索引](create-filtered-indexes.md)|  
 |空间|利用空间索引，可以更高效地对*几何*数据类型的列中的空间对象（ **空间数据** ）执行某些操作。 空间索引可减少需要应用开销相对较大的空间操作的对象数。|[空间索引概述](../spatial/spatial-indexes-overview.md)|  
-|XML|XML 二进制大型对象 (Blob) 中的已拆分持久表示`xml`数据类型列。|[XML 索引 (SQL Server)](../xml/xml-indexes-sql-server.md)|  
+|XML|`xml` 数据类型列中 XML 二进制大型对象 (BLOB) 的已拆分持久表示形式。|[XML 索引 (SQL Server)](../xml/xml-indexes-sql-server.md)|  
 |全文|一种特殊类型的基于标记的功能性索引，由 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文引擎生成和维护。 用于帮助在字符串数据中搜索复杂的词。|[填充全文索引](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

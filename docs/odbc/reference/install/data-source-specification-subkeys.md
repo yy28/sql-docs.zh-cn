@@ -16,25 +16,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad210f91d00f9e692c8ee20fef01a808a01501c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198199"
 ---
 # <a name="data-source-specification-subkeys"></a>数据源规范子项
 在 ODBC 数据源的子项中列出每个数据源都有其自己的子项。 此子项有同名的 ODBC 数据源子项下的相应值。 此子项下的值必须列出驱动程序 DLL，并可能会列出数据源的说明。 如果驱动程序支持的翻译人员，这些值可能会列出默认转换器、 默认转换 DLL 和默认转换选项的名称。 值还可以列出连接到数据源所需的驱动程序的其他信息。 例如，驱动程序可能需要服务器名称、 数据库名称或架构名称。  
   
  值的格式为下表中所示。 仅将驱动程序的值是必需的。  
   
-|“属性”|数据类型|data|  
+|名称|数据类型|数据|  
 |----------|---------------|----------|  
-|Description|REG_SZ|*description*|  
-|驱动程序|REG_SZ|*驱动程序 DLL 路径*|  
-|TranslationDLL|REG_SZ|*转换器 DLL 路径*|  
-|TranslationName|REG_SZ|*转换器名称*|  
-|TranslationOption|REG_SZ|*翻译选项*|  
-|*选择值名称*|*选择值类型*|*选择值数据*|  
+|描述|REG_SZ|*description*|  
+|驱动程序|REG_SZ|*driver-DLL-path*|  
+|TranslationDLL|REG_SZ|*translator-DLL-path*|  
+|TranslationName|REG_SZ|*translator-name*|  
+|TranslationOption|REG_SZ|*translation-option*|  
+|*opt-value-name*|*opt-value-type*|*opt-value-data*|  
   
  例如，假设 SQL Server 驱动程序到 ANSI 的转换为 OEM 需要服务器名称和一个标志，并且这些定义的服务器和 OEMTOANSI 值。 此外假设库存数据源使用 Microsoft® 代码页转换程序的 Windows® Latin 1 (1250) 和多语言 (850) 代码页之间进行转换。 在清单子项下的值可能按如下所示：  
   

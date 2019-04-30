@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161899"
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
   本主题中的这部分引用了使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框提供的各种索引属性。  
@@ -52,7 +52,7 @@ ms.locfileid: "48084697"
  显示索引的名称。 对于现有索引，此字段是只读的。 在创建新的索引时，请键入索引的名称。  
   
  **索引类型**  
- 指示索引的类型。 对于新索引，指示在打开该对话框时所选索引的类型。 索引可以是： **“聚集”**、 **“非聚集”**、 **“主 XML”**、 **“辅助 XML”**、 **“空间”** \ **“聚集列存储索引”** 或 **“非聚集列存储”**。  
+ 指示索引的类型。 对于新索引，指示在打开该对话框时所选索引的类型。 索引可以是：**聚集**，**非聚集**，**主 XML**，**辅助 XML**，**空间**，**群集列存储**，或**非聚集列存储**。  
   
  **注意** 每个表只允许创建一个聚集索引。 每个表只允许创建一个 xVelocity 内存优化的列存储索引。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "48084697"
  指示索引的分割方案。 支持的分割方案如下所示。  
   
  **几何图形网格**  
- 指定几何图形网格分割方案，并将应用到的列`geometry`数据类型。  
+ 指定“几何图形网格”分割方案，它适用于 `geometry` 数据类型的列。  
   
  **几何自动网格**  
  在数据库兼容级别设置为 110 或更高时，将为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启用此选项。  

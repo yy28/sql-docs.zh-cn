@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9af2cfd73556baca4870428cdcdfcee3e07191d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217612"
 ---
 # <a name="checking-feature-support-and-variability"></a>检查功能支持和可变性
 若要检查的功能支持和可变性，应用程序通常会调用**SQLGetInfo**， **SQLGetFunctions**，并**SQLGetTypeInfo**。 很好的起点是驱动程序的 API 和 SQL 语法一致性级别。 这些过程描述广泛级别的功能支持。 然后，应用程序可以调用**SQLGetInfo**与其他选项来确定的支持的功能需求，可变性**SQLGetFunctions**以确定是否在超出返回需要函数它支持的一致性级别，并**SQLGetTypeInfo**来确定支持哪些 SQL 数据类型。  

@@ -16,11 +16,11 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: 578e6ac47e84ad764cb050112eae768ff21444f3
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151899"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>确定适当的 Azure SQL 数据库 SKU 的本地数据库
 
@@ -33,7 +33,7 @@ ms.locfileid: "57973817"
 
 以下说明可帮助您确定 Azure SQL 数据库 SKU 的建议和使用数据迁移助手预配到 Azure，关联的数据库。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 下载数据库迁移助手 v4.0 或更高版本，然后将其安装。 如果已有该工具安装，请关闭并重新打开它，并将提示您升级该工具。
 

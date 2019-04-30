@@ -1,5 +1,5 @@
 ---
-title: ADCPROP_AUTORECALC_ENUM |Microsoft Docs
+title: ADCPROP_AUTORECALC_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb10b3f4fb563275a8f27a92e41c265336c3cb55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065395"
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 指定何时[MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)提供程序重新计算分层记录集中的聚合和计算列。  
   
  仅用于这些常量**MSDataShape**提供程序和**记录集**"**自动重新计算**"中引用的动态属性[ADO动态属性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)并在有案可稽[用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)或[Microsoft Data Shaping 服务适用于 OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)文档。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adRecalcAlways**|1|默认值。 每当重新计算**MSDataShape**提供程序确定取决于计算的列的值已更改。|  
 |**adRecalcUpFront**|0|仅在最初生成层次结构时计算**记录集**。|  

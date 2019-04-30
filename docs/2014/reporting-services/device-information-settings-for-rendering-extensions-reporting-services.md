@@ -12,18 +12,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 336eae5accaf5fabed542012bbb4e5b6145a02c5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164662"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>呈现扩展插件的设备信息设置 (Reporting Services)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，设备信息设置用于将呈现参数传递到呈现扩展插件。 每个呈现扩展插件接受一组特定设置。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[ATOM 设备信息设置](../../2014/reporting-services/atom-device-information-settings.md)|介绍与 Atom 兼容的呈现输出相关的设备信息设置。|  
 |[CSV 设备信息设置](csv-device-information-settings.md)|介绍与 CSV 呈现输出相关的设备信息设置。|  

@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 423573c78c78cb97b83f8709e19a0bfd6d642645
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162219"
 ---
 # <a name="database-engine-configuration---user-instance"></a>数据库引擎配置 - 用户实例
   使用 **“用户实例”** 页可以为不具有管理员权限的用户生成单独的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并可以将用户添加到管理员角色中。  
   
-## <a name="option"></a>选项  
+## <a name="option"></a>Option  
  启用用户实例  
  默认值为“启用”。 若要禁用用户实例的功能，请清除此复选框。  
   

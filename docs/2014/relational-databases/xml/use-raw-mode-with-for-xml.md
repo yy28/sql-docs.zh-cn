@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193247"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>将 RAW 模式与 FOR XML 一起使用
   RAW 模式可将查询结果集中的每一行转换为带有通用标识符 \<row> 或可能提供元素名称的 XML 元素。 默认情况下，非 NULL 行集中的每列值都将映射到 \<row> 元素的一个属性。 如果将 ELEMENTS 指令添加到 FOR XML 子句，则每列值都将映射到 \<row> 元素的子元素。 指定 ELEMENTS 指令之后，您还可以选择性地指定 XSINIL 选项以将结果集中的 NULL 列值映射到具有 xsi:nil=`"`true`"`属性的元素。  
@@ -39,15 +39,15 @@ ms.locfileid: "58537039"
   
 -   [示例：指定带有 ELEMENTS 指令的 XSINIL](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [示例：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [示例：检索二进制数据](example-retrieving-binary-data.md)  
   
--   [示例：重命名&#60;行&#62;元素](example-renaming-the-row-element.md)  
+-   [示例：重命名 &#60;row&#62; 元素](example-renaming-the-row-element.md)  
   
--   [示例：FOR XML 生成的 xml 指定根元素](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [示例：为 FOR XML 生成的 XML 指定根元素](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [示例：查询 xml 类型的列](example-querying-xmltype-columns.md)  
+-   [示例：查询 XMLType 列](example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>请参阅  
  [使用 WITH XMLNAMESPACES 将命名空间添加到查询](add-namespaces-to-queries-with-with-xmlnamespaces.md)   

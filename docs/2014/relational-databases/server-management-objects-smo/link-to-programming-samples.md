@@ -15,18 +15,18 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131775"
 ---
 # <a name="link-to-programming-samples"></a>链接到编程示例
   下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 目录中的 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理对象 (SMO) 编程示例。 这些示例中均提供[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
   
  有关如何安装示例的详细信息，请参阅[AdventureWorks for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330)。  
   
-|标题|Description|  
+|标题|描述|  
 |-----------|-----------------|  
 |BackRest|说明如何备份和还原数据库。|  
 |ChangeTableOwner|说明如何将所有权不是 dbo 的所有表的所有权更改为 dbo。|  

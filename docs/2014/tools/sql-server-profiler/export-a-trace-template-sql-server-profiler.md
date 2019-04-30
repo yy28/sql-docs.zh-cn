@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f4fcc8f39f668422189780f89da0935f21444173
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184251"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>导出跟踪模板 (SQL Server Profiler)
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]导出现有跟踪模板以另存为模板文件 (.tdf)。 导出跟踪模板并将其保存为文件后，可以将该模板用于另一个 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]实例。  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f4f835876eef8f0740b1a90dc48e33e0518cfd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183618"
 ---
 # <a name="jobs-node-sql-server-agent-f1-help"></a>作业节点（SQL Server 代理的 F1 帮助）
   本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“作业”节点的 F1 帮助。  

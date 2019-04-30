@@ -1,5 +1,5 @@
 ---
-title: '第 4 课：运行应用程序 (VB-VC #) |Microsoft Docs'
+title: 第 4 课：运行应用程序 (VB-VC#) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 85dc3fc5d38db71cd30600f84d3ab3cfd739aeea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137483"
 ---
-# <a name="lesson-4-running-the-application-vb-vc"></a>第 4 课：运行应用程序 (VB-VC #)
+# <a name="lesson-4-running-the-application-vb-vc"></a>第 4 课：运行应用程序 (VB-VC#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供了几种从 IDE 生成和运行控制台应用程序的方法，例如：  
   
 -   开始执行（调试）  

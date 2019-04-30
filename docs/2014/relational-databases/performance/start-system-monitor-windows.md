@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150587"
 ---
 # <a name="start-system-monitor-windows"></a>启动系统监视器 (Windows)
   使用系统监视器可以监视系统资源的使用率。 使用计数器形式收集和查看服务器资源（如处理器和内存使用）和许多 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源（如锁和事务）的实时性能数据。  

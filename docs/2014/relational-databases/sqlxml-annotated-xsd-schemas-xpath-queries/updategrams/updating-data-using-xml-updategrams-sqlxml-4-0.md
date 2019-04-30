@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131515"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新数据 (SQLXML 4.0)
   更新现有数据时，必须指定**\<之前 >** 并**\<后 >** 块。 中指定的元素**\<之前 >** 并**\<后 >** 块描述所需的更改。 Updategram 使用在中指定的元素**\<之前 >** 块来标识数据库中的现有记录。 中的相应元素**\<后 >** 块指示执行更新操作后应如何查找记录的。 中的信息，updategram 创建与匹配的 SQL 语句**\<后 >** 块。 然后，Updategram 使用该语句更新数据库。  

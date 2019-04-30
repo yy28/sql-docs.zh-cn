@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85142b248fe8e734aeb1700d8eee353df1684d51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131196"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 中的带批注的 XSD 架构
   本节提供有关使用 SQLXML 4.0 中的带批注的 XSD 架构的信息。 在以往的 SQLXML 版本中，使用 XML 数据简化 (XDR) 架构提供类似的功能。 本节还提供早期应用程序的 XDR 信息。  

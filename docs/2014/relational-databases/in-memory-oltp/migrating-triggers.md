@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071465"
 ---
 # <a name="migrating-triggers"></a>迁移触发器
   本主题论述 DDL 和 DML 触发器以及内存优化表。  

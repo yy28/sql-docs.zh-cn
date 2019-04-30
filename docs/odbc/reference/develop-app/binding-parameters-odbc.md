@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199604"
 ---
 # <a name="binding-parameters-odbc"></a>绑定参数 ODBC
 SQL 语句中的每个参数必须为关联，或*绑定，* 到应用程序之前执行该语句中的变量。 当应用程序将变量绑定到参数时，它描述了该驱动程序到该变量的地址、 C 数据类型等的。 它还介绍了参数本身的 SQL 数据类型、 精度和等等。 驱动程序将此信息存储在它维护适用于该语句，并使用的信息来检索该变量值时执行该语句的结构。  

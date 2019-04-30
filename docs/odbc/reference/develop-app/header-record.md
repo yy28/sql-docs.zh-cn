@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7b6ffacb618dd2b7714be59814f3f1a88a52228
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208482"
 ---
 # <a name="header-record"></a>标头记录
 标头记录中的字段包含有关函数的执行，包括返回代码、 行计数、 状态记录数和执行的语句类型的一般信息。 除非该函数返回 SQL_INVALID_HANDLE 始终创建标头记录。 标头记录中的字段的完整列表，请参阅[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明。

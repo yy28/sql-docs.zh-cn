@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070877"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>对查询结果进行排序和分组 (Visual Database Tools)
   您可以创建这样的一个查询结果，其中每个结果行都与来自原始数据的一整组行相对应。  

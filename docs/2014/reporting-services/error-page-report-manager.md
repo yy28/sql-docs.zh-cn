@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164678"
 ---
 # <a name="error-page-report-manager"></a>“错误”页（报表管理器）
   使用“错误”页可以查看关于错误情况的详细信息。 在此页上会显示基于服务器的或基于会话的错误。 与特定页面控件有关的验证错误将排成一行显示在该控件旁边。  

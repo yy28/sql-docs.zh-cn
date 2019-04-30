@@ -1,5 +1,5 @@
 ---
-title: 任务 15:生成和运行 SSIS 项目 |Microsoft Docs
+title: 任务 15：生成和运行 SSIS 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,13 +8,13 @@ ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.openlocfilehash: 1dc31f9b3df500e862236d4125fb1de99bc93eda
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191844"
 ---
-# <a name="task-15-building-and-running-the-ssis-project"></a>任务 15:生成和运行 SSIS 项目
+# <a name="task-15-building-and-running-the-ssis-project"></a>任务 15：生成和运行 SSIS 项目
   在本任务中，您将生成并运行 SSIS 项目。 如果必须在计算机上安装 Excel 2010 的 64 位版本，则应设置的值**Run64BitRuntime**到**False**有关 Excel 源正常工作。  
   
 1.  在中**解决方案资源管理器**窗口中，单击**项目**菜单中，然后单击**CleanseAndCurateSuppliers 属性**。  

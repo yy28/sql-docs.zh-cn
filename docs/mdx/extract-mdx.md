@@ -1,5 +1,5 @@
 ---
-title: 提取 (MDX) |Microsoft 文档
+title: 提取 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3c58799cc3e95efd7d49b3aff0bf31a1fce22b1
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155197"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
 
@@ -38,13 +38,13 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  *Hierarchy_Expression2*  
  返回层次结构的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- **提取**函数返回的元组从提取层次结构元素组成的集。 对于指定集中的每个元组，将指定层次结构的成员提取到结果集中的新元组。 此函数始终删除重复元组。  
+## <a name="remarks"></a>备注  
+ **提取**函数返回的元组从提取的层次结构元素组成的集。 对于指定集中的每个元组，将指定层次结构的成员提取到结果集中的新元组。 此函数始终删除重复元组。  
   
- **提取**函数执行相反操作[叉积](../mdx/crossjoin-mdx.md)函数。  
+ **提取**函数执行相反的操作[叉积](../mdx/crossjoin-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  
- 下面的查询演示如何使用**提取**函数对元组返回一组**NonEmpty**函数：  
+ 以下查询说明如何使用**提取**上的元组返回的一组函数**NonEmpty**函数：  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -79,6 +79,6 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

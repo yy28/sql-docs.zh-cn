@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 83d6f9a67fbef5be4acb2230d88e5e61feddf16c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143138"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>配置文件中的 URL（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 RSReportServer.config 文件中存储应用程序设置。 在此文件内，有一些既用于 URL 又用于 URL 预留的配置设置。 这些配置设置的用途和修改规则大不相同。 如果您习惯于通过修改配置文件来优化部署，则本主题可帮助您了解每项 URL 设置的用法。  
@@ -54,7 +54,7 @@ ms.locfileid: "59953733"
   
  下表简要概括了所有可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件中指定的 URL。  
   
-|设置|用法|Description|  
+|设置|用法|描述|  
 |-------------|-----------|-----------------|  
 |`ReportServerUrl`|可选。 除非您自己添加此元素，否则此元素不包含在 RSReportServer.config 文件中。 仅当您配置以下方案之一时才应设置此元素：<br /><br /> 报表管理器提供对在另一台计算机上运行或在同一台计算机上的另一实例上运行的报表服务器 Web 服务的 Web 前端访问。<br /><br /> 当您有指向一个报表服务器的多个 URL，并且您希望报表服务器使用特定的 URL 时。<br /><br /> 您有特定的报表服务器 URL，您希望所有报表管理器连接均使用此 URL。<br /><br /> 例如，您可能为网络中的所有计算机都启用报表管理器访问，但需要报表管理器通过一个本地连接连接到报表服务器。 在这种情况下，你可以配置`ReportServerUrl`到"http://localhost/reportserver"。<br /><br /> <br /><br /> 有关如何实现这些方案的说明，请参阅[配置报表管理器&#40;本机模式&#41;](../report-server/configure-web-portal.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。|该值指定一个指向报表服务器 Web 服务的 URL。 此值由报表管理器在启动时读取。 如果已设置该值，则报表管理器将连接到此 URL 中指定的报表服务器。<br /><br /> 默认情况下，报表管理器提供对与报表管理器运行在同一报表服务器实例中的报表服务器 Web 服务的 Web 前端访问。 然而，如果希望将报表管理器与作为另一实例一部分或在另一台计算机的实例上运行的报表服务器 Web 服务一起使用，则可以将此 URL 设置为定向报表管理器使之连接到外部报表服务器 Web 服务。<br /><br /> 如果安全套接字层 (SSL) 证书安装在您要连接的报表服务器上，则 `ReportServerUrl` 值必须是为获得此证书而注册的服务器的名称。 如果收到错误，"基础连接已关闭：无法建立信任关系为 SSL/TLS 安全通道"，设置`ReportServerUrl`到为其颁发 SSL 证书的服务器的完全限定的域名。 例如，如果证书注册到 https://adventure-works.com.onlinesales，则报表服务器 URL 将为 https://adventure-works.com.onlinesales/reportserver。|  
 |`ReportServerExternalUrl`|可选。 除非您自己添加此元素，否则此元素不包含在 RSReportServer.config 文件中。<br /><br /> 仅当您使用的是 SharePoint 2.0 Web 部件且希望用户能够检索报表并在新的浏览器窗口中打开该报表时，才应设置此元素。<br /><br /> 添加 <`ReportServerExternalUrl`> 下 <`ReportServerUrl`> 元素，然后将设置为完全限定的报表服务器名称解析为报表服务器实例时在单独的浏览器窗口中访问。 不要删除 <`ReportServerUrl`>。<br /><br /> 下面的示例说明了相应的语法：<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|该值由 SharePoint 2.0 Web 部件使用。<br /><br /> 在早期版本中，建议您设置该值以在面向 Internet 的报表服务器上部署报表生成器。 这是未经测试的部署方案。 如果您在过去使用此设置支持对报表生成器的 Internet 访问，那么现在您应考虑使用替代策略。|  

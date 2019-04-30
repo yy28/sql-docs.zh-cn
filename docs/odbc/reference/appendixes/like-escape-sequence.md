@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188800"
 ---
 # <a name="like-escape-sequence"></a>LIKE 转义序列
 ODBC LIKE 子句中使用转义序列。 此转义序列的语法如下所示：  
@@ -32,14 +32,14 @@ ODBC LIKE 子句中使用转义序列。 此转义序列的语法如下所示：
 ## <a name="remarks"></a>备注  
  BNF 表示法中的语法是按如下所示：  
   
- *类似的 ODBC 转义*:: =  
+ *ODBC-like-escape* ::=  
   
  *ODBC esc 启动器*转义*转义符* *ODBC esc 终止符*  
   
- *转义符*:: =*字符*  
+ *escape-character* ::= *character*  
   
- *ODBC esc 启动器*:: = {  
+ *ODBC-esc-initiator* ::= {  
   
- *ODBC esc 终止符*:: =}  
+ *ODBC-esc-terminator* ::= }  
   
  若要确定驱动程序是否支持 LIKE 转义序列，应用程序可以调用**SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 信息类型。

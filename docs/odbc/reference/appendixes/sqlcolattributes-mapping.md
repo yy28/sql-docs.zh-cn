@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7a1508d10431ba9975c44a2002faa4e5b913312
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199405"
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes 映射
 当应用程序调用**SQLColAttributes**通过 ODBC 3 *.x*驱动程序，将会调用**SQLColAttributes**映射到**SQLColAttribute** ，如下所示：  

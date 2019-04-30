@@ -1,5 +1,5 @@
 ---
-title: ColumnAttributesEnum |Microsoft Docs
+title: ColumnAttributesEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aba6b8a983b831919987417cd8faef66b08b8e8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183963"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
 指定的特征[列](../../../ado/reference/adox-api/column-object-adox.md)。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adColFixed**|1|列是固定的长度。|  
 |**adColNullable**|2|列可能包含 null 值。|  

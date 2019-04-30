@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33b2d2f33cf0ed85524dba50c936f4a2ea774d29
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164689"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>“输入数据源凭据”对话框
   使用**输入数据源凭据**对话框可以提供你[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]凭据，以便可以从数据源检索数据。  

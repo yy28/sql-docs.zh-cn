@@ -15,11 +15,11 @@ ms.author: genemi
 ms.reviewer: ''
 manager: craigg
 ms.openlocfilehash: cda6719eb46a4a05222bd54062e6cab98459d7dc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181778"
 ---
 # <a name="parameter-markers"></a>参数标记
 SQL-92 规范中，根据应用程序不能将参数标记放置在以下位置。 有关更全面的列表，请参阅 SQL-92 规范。  

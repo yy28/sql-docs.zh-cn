@@ -1,5 +1,5 @@
 ---
-title: Visual c + + ADO 编程 |Microsoft Docs
+title: Visual C++ ADO 编程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,26 +17,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142966"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 编程
-ADO API 参考介绍 ADO 应用程序编程接口 (API) 使用 Microsoft Visual Basic 类似的语法的功能。 ADO 程序员的目标的受众是所有用户，但采用不同语言，例如 Visual Basic、 Visual c + + (带和不带 **#import**指令)，和 Visual J + + 中 （与 ADO/WFC 类包）。  
+ADO API 参考介绍 ADO 应用程序编程接口 (API) 使用 Microsoft Visual Basic 类似的语法的功能。 ADO 程序员的目标的受众是所有用户，但采用不同语言，例如 Visual Basic、 Visual C++ (具有和没有 **#import**指令)，和 Visual J + + 中 （与 ADO/WFC 类包）。  
 
 > [!NOTE]
 > Microsoft 在 2004 年结束支持 Visual J + +。
 
- 以适应这种多样性[的 ADO for Visual c + + 语法索引](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)Visual c + + 特定于语言的语法提供的功能、 参数、 异常行为和等等，API 中的常见描述链接引用。  
+ 以适应这种多样性[的 ADO for VisualC++语法索引](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)提供 VisualC++使用的特定于语言的语法链接到的功能、 参数、 异常行为等，共同描述中的API 参考。  
   
- ADO 使用 COM （组件对象模型） 接口实现。 但是，它是更易于编程人员使用比其他某些编程语言中的 COM。 例如，使用 COM 的几乎所有详细信息是隐式 for 处理 Visual Basic 编程人员，而 Visual c + + 程序员必须参加到这些本身的详细信息。  
+ ADO 使用 COM （组件对象模型） 接口实现。 但是，它是更易于编程人员使用比其他某些编程语言中的 COM。 例如，使用 COM 的几乎所有详细信息是隐式处理为 Visual Basic 编程人员，而 VisualC++程序员必须参加到这些本身的详细信息。  
   
- 以下部分概述详细信息的 C 和 c + + 程序员使用 ADO 和 **#import**指令。 它重点介绍特定于 COM 数据类型 (**Variant**， **BSTR**，并**SafeArray**)，和错误处理 (_com_error)。  
+ 以下部分概述于 c 语言的详细信息和C++使用 ADO 程序员和 **#import**指令。 它重点介绍特定于 COM 数据类型 (**Variant**， **BSTR**，并**SafeArray**)，和错误处理 (_com_error)。  
   
 ## <a name="using-the-import-compiler-directive"></a>使用 #import 编译器指令  
- **#Import** Visual c + + 编译器指令可以简化使用 ADO 方法和属性。 指令将包含类型库，如 ADO.dll (Msado15.dll) 的文件的名称，并生成包含 typedef 声明、 接口和枚举的常量的智能指针的标头文件。 每个接口封装，或将其包装在类中。  
+ **#Import** VisualC++编译器指令可以简化使用 ADO 方法和属性。 指令将包含类型库，如 ADO.dll (Msado15.dll) 的文件的名称，并生成包含 typedef 声明、 接口和枚举的常量的智能指针的标头文件。 每个接口封装，或将其包装在类中。  
   
  类 （即，方法或属性调用） 中的每个操作，对于没有声明来调用此操作直接 （即，"原始"窗体的操作），并声明调用原始操作并引发 COM 错误，如果该操作无法执行 successfully。 如果该操作是一个属性，则通常创建的语法与 Visual Basic 语法的操作的可选语法的编译器指令。  
   
@@ -75,7 +75,7 @@ variable = objectPtr->GetProperty;  // get property value
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>集合、 GetItem 方法和项属性  
 
- ADO 定义了多个集合，包括**字段**，**参数**，**属性**，以及**错误**。 在 Visual c + + **GetItem (_索引_)** 方法返回集合的成员。 *索引*是**变体**，其值是数字索引的集合中的成员或包含的成员的名称的字符串。  
+ ADO 定义了多个集合，包括**字段**，**参数**，**属性**，以及**错误**。 视觉对象中C++，则**GetItem (_索引_)** 方法返回集合的成员。 *索引*是**变体**，其值是数字索引的集合中的成员或包含的成员的名称的字符串。  
   
  **__Declspec(property...)** 编译器指令声明**项**属性设置为每个集合的可选语法的基本**GetItem()** 方法。 替代语法使用方括号括起来，看起来类似于数组引用。 一般情况下，两种形式如以下所示：  
   
@@ -96,7 +96,7 @@ rs(2) = "value"
 rs!au_fname = "value"  
 ```
   
- 在 Visual c + + 更高版本的前两个窗体的等效项是：  
+ 视觉对象中的等效项C++对上述的前两个窗体是：  
   
 ```cpp
 rs->Fields->GetItem(long(2))->PutValue("value");   
@@ -113,7 +113,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
  有关循环访问集合的示例，请参阅"ADO 参考"的"ADO 集合"部分。  
   
 ## <a name="com-specific-data-types"></a>特定于 COM 的数据类型  
- 一般情况下，ADO API 参考中查找任何 Visual Basic 数据类型具有一个返回 Visual c + + 等效。 这些包括标准的数据类型，如下所述**unsigned char**适用于 Visual Basic**字节**，**短**有关**整数**，和**长**有关**长**。 查找范围语法 Indexesto 看到所需的特定的方法或属性的操作数的内容。  
+ 一般情况下，在 ADO API 参考中查找任何 Visual Basic 数据类型具有视觉对象C++等效。 这些包括标准的数据类型，如下所述**unsigned char**适用于 Visual Basic**字节**，**短**有关**整数**，和**长**有关**长**。 查找范围语法 Indexesto 看到所需的特定的方法或属性的操作数的内容。  
   
  此规则的例外是特定于 COM 的数据类型：**变体**， **BSTR**，和**SafeArray**。  
   
@@ -165,7 +165,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
 ### <a name="safearray"></a>SafeArray  
  一个**SafeArray**是包含其他数据类型的数组的结构化的数据类型。 一个**SafeArray**称为*安全*因为它包含的每个数组维度的界限的信息，并限制对这些边界内的数组元素的访问。  
   
- 当 ADO API 参考说一种方法或属性接受或返回一个数组，意味着该方法或属性接受或返回**SafeArray**，不本机 C/c + + 数组。  
+ 当 ADO API 参考说一种方法或属性接受或返回一个数组，意味着该方法或属性接受或返回**SafeArray**，未一个本机 C /C++数组。  
   
  例如，第二个参数的**连接**对象**OpenSchema**方法需要一个数组**变体**值。 那些**变体**值必须作为元素传递**SafeArray**，并且**SafeArray**设置为另一个值，必须**变体**. 它是其他**Variant**作为第二个参数传递**OpenSchema**。  
   
@@ -174,7 +174,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
 ## <a name="missing-and-default-parameters"></a>缺少和默认参数  
  Visual Basic 允许缺少中方法的参数。 例如，**记录集**对象**打开**方法具有五个参数，但你可以跳过中间参数并将保持关闭状态的尾随参数。 默认值**BSTR**或**变体**将替换具体取决于缺少操作数的数据类型。  
   
- 在 C/c + + 中，必须指定所有操作数。 如果你想要指定缺少的参数的数据类型为字符串，指定 **_bstr_t**包含空字符串。 如果想要指定缺少的参数的数据类型是**Variant**，指定 **_variant_t** DISP_E_PARAMNOTFOUND 和 VT_ERROR 类型的值。 或者，指定等效 **_variant_t**常量， **vtMissing**，它们由提供 **#import**指令。  
+ 在 C /C++，必须指定所有操作数。 如果你想要指定缺少的参数的数据类型为字符串，指定 **_bstr_t**包含空字符串。 如果想要指定缺少的参数的数据类型是**Variant**，指定 **_variant_t** DISP_E_PARAMNOTFOUND 和 VT_ERROR 类型的值。 或者，指定等效 **_variant_t**常量， **vtMissing**，它们由提供 **#import**指令。  
   
  三种方法是例外情况的典型用法**vtMissing**。 这些是**Execute**方法的**连接**并**命令**对象，并**NextRecordset** 方法**记录集**对象。 它们的签名如下：  
   
@@ -205,10 +205,10 @@ pRecordset->NextRecordset(NULL);
   
  请记住，这些是 ADO 错误： 可疑 ADO 操作失败。 基础提供程序返回的错误显示为**错误**中的对象**连接**对象**错误**集合。  
   
- **#Import**指令创建唯一的错误处理例程的方法和 ADO.dll 中声明的属性。 但是，您可以利用此相同的错误处理机制，通过编写自己的错误检查宏或内联函数。 请参阅主题[Visual c + + 扩展](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)，或有关示例的以下部分中的代码。  
+ **#Import**指令创建唯一的错误处理例程的方法和 ADO.dll 中声明的属性。 但是，您可以利用此相同的错误处理机制，通过编写自己的错误检查宏或内联函数。 请参阅主题[可视化C++扩展](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)，或示例的以下部分中的代码。  
   
-## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual c + + 的 Visual Basic 约定的等效项  
- 下面是在 ADO 文档中，编码在 Visual Basic 和 Visual c + + 中的等效项的多个约定的摘要。  
+## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual C++ Visual Basic 约定的等效项  
+ 以下是在 ADO 文档中，编码在 Visual Basic 中，以及它们的等效项的视觉对象中的多个约定的摘要C++。  
   
 ### <a name="declaring-an-ado-object"></a>声明 ADO 对象  
  在 Visual Basic 中的 ADO 对象变量 (在本例中为**记录集**对象) 的声明方式如下：  
@@ -230,7 +230,7 @@ Dim rst As ADODB.Recordset
 Set rst = New ADODB.Recordset  
 ```
   
- 在 Visual c + + **#import**指令生成的所有 ADO 对象的智能指针类型声明。 例如，变量指向 **_Recordset**对象属于类型 **_RecordsetPtr**，并声明，如下所示：  
+ 视觉对象中C++，则 **#import**指令生成的所有 ADO 对象的智能指针类型声明。 例如，变量指向 **_Recordset**对象属于类型 **_RecordsetPtr**，并声明，如下所示：  
   
 ```cpp
 _RecordsetPtr  rs;  
@@ -267,14 +267,14 @@ rs->Open(...);
  可以通过两种方式使用变量，因为"`->`"运算符将重载以允许进行的行为类似指向接口的类的实例。 实例变量的私有类成员包含一个指向 **_Recordset**接口;"`->`"运算符将返回该指针;，返回的指针访问成员的 **_Recordset**对象。  
   
 ### <a name="coding-a-missing-parameter---string"></a>缺少参数的字符串进行编码  
- 当需要进行代码缺少**字符串**操作数在 Visual Basic 中，只是省略操作数。 在 Visual c + + 中，必须指定操作数。 代码 **_bstr_t**具有一个空字符串作为一个值。  
+ 当需要进行代码缺少**字符串**操作数在 Visual Basic 中，只是省略操作数。 必须在视觉对象中指定的操作数C++。 代码 **_bstr_t**具有一个空字符串作为一个值。  
   
 ```cpp
 _bstr_t strMissing(L"");  
 ```
   
 ### <a name="coding-a-missing-parameter---variant"></a>缺少参数的变体进行编码  
- 当需要进行代码缺少**变体**操作数在 Visual Basic 中，只是省略操作数。 在 Visual c + + 中，必须指定所有操作数。 代码缺少**Variant**参数与 **_variant_t**设置为特殊值、 DISP_E_PARAMNOTFOUND 和类型，VT_ERROR。 或者，指定**vtMissing**，它们等效的预定义的常量由提供 **#import**指令。  
+ 当需要进行代码缺少**变体**操作数在 Visual Basic 中，只是省略操作数。 必须在视觉对象中指定所有操作数C++。 代码缺少**Variant**参数与 **_variant_t**设置为特殊值、 DISP_E_PARAMNOTFOUND 和类型，VT_ERROR。 或者，指定**vtMissing**，它们等效的预定义的常量由提供 **#import**指令。  
   
 ```cpp
 _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
@@ -293,7 +293,7 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR); 
 Dim VariableName As Variant  
 ```
   
- 在 Visual c + +，将变量声明为类型 **_variant_t**。 几个示意图 **_variant_t**声明如下所示。  
+ 视觉对象中C++，将变量声明为类型 **_variant_t**。 几个示意图 **_variant_t**声明如下所示。  
   
 > [!NOTE]
 >  这些声明只是为提供大致了解一下您在编写你自己的程序中。 有关详细信息，请参阅下面的示例和 Visual C + + 文档。  
@@ -325,7 +325,7 @@ Dim fld As ADODB.Field
 End Sub  
 ```
   
- 下面的 Visual c + + 示例演示了如何使用**SafeArray**用于 **_variant_t**。  
+ 下面的视觉对象C++示例演示如何使用**SafeArray**用于 **_variant_t**。  
   
 #### <a name="notes"></a>说明  
  以下说明对应于代码示例中的注释部分。  
@@ -434,7 +434,7 @@ cn.Close
 End Sub  
 ```
   
- 此 Visual c + + 示例演示**获取**/**放**/**PutRef**_属性_。  
+ 此视觉对象C++的示例演示**获取**/**Put**/**PutRef**_属性_。  
   
 #### <a name="notes"></a>说明  
  以下说明对应于代码示例中的注释部分。  
@@ -504,7 +504,7 @@ rs.Close
 End Sub  
 ```
   
- 此 Visual c + + 示例演示**项**。  
+ 此视觉对象C++的示例演示**项**。  
   
 > [!NOTE]
 >  以下注释对应于代码示例中的注释部分：与访问集合时**项**，索引**2**，必须强制转换为**长**因此将调用相应的构造函数。  
@@ -553,7 +553,7 @@ void main() {
 ```
   
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>使用 ADO 对象指针强制转换 (IDispatch *)  
- 下面的 Visual c + + 示例演示了如何使用 (IDispatch *) 的强制转换 ADO 对象指针。  
+ 下面的视觉对象C++示例演示如何使用 (IDispatch *) 的强制转换 ADO 对象指针。  
   
 #### <a name="notes"></a>说明  
  以下说明对应于代码示例中的注释部分。  

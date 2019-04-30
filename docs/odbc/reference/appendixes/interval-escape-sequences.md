@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81481db74d973da0e54bc6bf9e70550fa3cc0c81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188884"
 ---
 # <a name="interval-escape-sequences"></a>间隔转义序列
 ODBC 使用间隔文字的转义序列。 此转义序列的语法如下所示：  
   
- {*间隔文本*}  
+ {*interval-literal*}  
   
  有关的 BNF 语法*间隔文字*，请参阅[间隔文本语法](../../../odbc/reference/appendixes/interval-literal-syntax.md)本附录中稍后的部分。  
   

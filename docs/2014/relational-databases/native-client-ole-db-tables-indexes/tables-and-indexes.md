@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f0b3fcf58f3f2767fbdc653327bec334545bdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213521"
 ---
 # <a name="tables-and-indexes"></a>表和索引
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口公开**IIndexDefinition**并**ITableDefinition**接口，从而允许使用者创建、 更改和删除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表和索引。 表和索引定义是否有效取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。  
@@ -35,9 +35,9 @@ ms.locfileid: "48072707"
   
  在特定于访问接口的 DBPROPSET_SQLSERVERCOLUMN 属性集中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了以下属性。  
   
-|属性 ID|Description|  
+|属性 ID|描述|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|类型：VT_BSTR<br /><br /> R/W：写<br /><br /> 默认值：Null<br /><br /> 说明：该属性只能在 ITableDefinition 中使用。 该属性中指定的字符串可在创建 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)<br /><br /> 语句时使用。|  
+|SSPROP_COL_COLLATIONNAME|键入：VT_BSTR<br /><br /> R/W:写入<br /><br /> 默认值：Null<br /><br /> 说明:仅在使用此属性**ITableDefinition**。 该属性中指定的字符串可在创建 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)<br /><br /> 语句时使用。|  
   
 ## <a name="in-this-section"></a>本节内容  
   

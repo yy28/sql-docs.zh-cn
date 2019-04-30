@@ -1,5 +1,5 @@
 ---
-title: 使用 SSIS PDW 目标适配器创建脚本任务 |Microsoft 文档
+title: 使用 SSIS PDW 目标适配器创建一个脚本任务 |Microsoft Docs
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 manager: craigg
@@ -10,26 +10,26 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142299"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>创建使用 SSIS 并行数据仓库目标适配器的脚本任务
-此 SSIS 包脚本代码是代码示例，用于使用 SSIS PDW 目标适配器。  Integration Services 脚本任务，可在.Net 应用程序的上下文中的 SSIS 控制流中执行，可几乎任何操作。 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>创建一个脚本任务，使用 SSIS 并行数据仓库目标适配器
+此 SSIS 包脚本代码是使用 SSIS PDW 目标适配器的代码示例。  Integration Services 脚本任务可以在.Net 应用程序上下文中的 SSIS 控制流中执行可以完成几乎任何操作。 
   
 ## <a name="sample-code"></a>示例代码  
   
-1.  在 SSIS 中创建空白的脚本任务。  
+1.  在 SSIS 中创建空白脚本任务。  
   
 2.  打开中的任务**脚本任务编辑器**，然后单击**编辑脚本**。  
   
-3.  编辑要使用下面提供的代码的脚本。 通过进行以下更改自定义将脚本保存到你的环境：  
+3.  编辑脚本以使用下面提供的代码。 通过进行以下更改自定义脚本保存到您的环境：  
   
-    -   你必须保留由脚本任务创建的脚本的命名空间。 请注意的命名空间名称`namespace ST_<GUID>`和编辑下面的脚本，更改*ST_<GUID>* 与原始*GUID*脚本任务。  
+    -   必须保留的命名空间的脚本任务创建的脚本。 请记下命名空间的名称`namespace ST_<GUID>`和编辑下面的脚本，更改*ST_<GUID>* 到原始*GUID*的脚本任务。  
   
-    -   四个匹配项的占位符值替换*XXXXXXXX*适合于你的环境和预期操作的值。  
+    -   四个匹配项的占位符值替换为*XXXXXXXX*使用适合你的环境和预期的操作的值。  
   
     ```c#  
     #region Help:  Introduction to the script task  
@@ -264,7 +264,7 @@ ms.locfileid: "31538967"
     }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [使用 Integration Services 加载数据](load-with-ssis.md)  
 
 <!-- MISSING LINK

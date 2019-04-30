@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a971da68a8f2a35df8fa513e68d1eba127e9c430
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208553"
 ---
 # <a name="value-list-arguments"></a>值列表自变量
 值列表自变量包含的逗号分隔值用于匹配列表。 ODBC 目录函数中没有只有一个值列表自变量： *TableType*中的参数**SQLTables**。 设置*TableType*到 null 指针如是否都设置为 SQL_ALL_TABLE_TYPES，枚举的值列表的所有可能成员。 此参数不受 SQL_ATTR_METADATA_ID 语句属性。 有关详细信息，请参阅[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)函数说明。

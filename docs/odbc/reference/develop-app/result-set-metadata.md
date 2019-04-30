@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dc88892fab2fd18dbcbec5ce54fa09c9c9b89e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199387"
 ---
 # <a name="result-set-metadata"></a>结果集元数据
 *元数据*是描述其他数据的数据。 例如，结果集元数据描述结果集，例如，在结果集中的列数、 这些列，其名称、 精度、 为 null 性和等等的数据类型。  

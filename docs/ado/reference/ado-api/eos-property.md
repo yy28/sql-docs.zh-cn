@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47b3e48e612e0ee5595ada33127f016ee6b986f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180995"
 ---
 # <a name="eos-property"></a>EOS 属性
 指示当前位置是否在末尾[流](../../../ado/reference/ado-api/stream-object-ado.md)。  

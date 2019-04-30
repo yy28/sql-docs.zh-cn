@@ -1,5 +1,5 @@
 ---
-title: AddCalculatedMembers (MDX) |Microsoft 文档
+title: AddCalculatedMembers (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18ccf4ad808c15945d82f1ca05616f0da878a7ca
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201614"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 
@@ -32,8 +32,8 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 默认情况下，MDX 在解析集函数时会排除计算成员。 **AddCalculatedMembers**函数将检查中指定的集表达式*值赋，* 和包括包含作用域内的成员的同级的计算的成员的集表达式。  
+## <a name="remarks"></a>备注  
+ 默认情况下，MDX 在解析集函数时会排除计算成员。 **AddCalculatedMembers**函数将检查中指定的集表达式*Set_Expression，* 和包括包含该集的作用域内的成员的同级的计算的成员表达式。  
   
 > [!NOTE]  
 >  此函数只能与一维集表达式一起使用。  
@@ -51,7 +51,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- 下面的示例返回`Measures.[Unit Price]`成员，除了中的所有计算成员**度量值**维度，从**Adventure Works**多维数据集。  
+ 下面的示例返回`Measures.[Unit Price]`成员中的所有计算成员除了**度量值**维度，从**Adventure Works**多维数据集。  
   
 ```  
 SELECT  
@@ -61,6 +61,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

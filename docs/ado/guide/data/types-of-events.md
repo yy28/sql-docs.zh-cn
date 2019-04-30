@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142936"
 ---
 # <a name="types-of-events"></a>事件类型
 有两种基本类型的事件。 "将事件，"调用操作开始之前，通常包括在其名称中的"将"，例如， **WillChangeRecordset**或**WillConnect**。 通常完成事件后调用的事件名称-中包括"已完成"等**RecordChangeComplete**或**ConnectComplete**。 存在例外-例如**InfoMessage** -但关联的操作完成后，会发生这些问题。  

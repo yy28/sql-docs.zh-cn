@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d56689bb045a6540bfdfbb9c7147dc34db110bde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207003"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日期和时间改进 (ODBC)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了新的日期和时间数据类型。 本部分介绍如何将这些新类型公开为中的扩展[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。 概览[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 支持新的日期和时间数据类型，请参阅[日期和时间改进](../native-client/features/date-and-time-improvements.md)。 有关演示 ODBC 日期/时间支持的示例，请参阅[使用日期和时间类型](../native-client-odbc-how-to/use-date-and-time-types.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "48123617"
  [针对 ODBC 日期/时间改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
  提供有关支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型的 ODBC 类型的信息。  
   
- [元数据&#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
+ [Metadata &#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
  描述在实现参数描述符 (IPD) 和实现行描述符 (IRD) 字段中返回的信息，以及由 `SQLColumns` 和 `SQLProcedureColumns` 返回的列元数据。 还描述了由 `SQLGetTypeInfo` 返回的数据类型元数据。  
   
  [datetime 数据类型转换&#40;ODBC&#41;](datetime-data-type-conversions-odbc.md)  

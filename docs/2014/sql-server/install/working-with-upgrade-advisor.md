@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154738"
 ---
 # <a name="working-with-upgrade-advisor"></a>使用升级顾问
   为了帮助确保成功升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，升级顾问提供了一个中央控制台，用于确定升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前要在您的安装中解决的问题。  
@@ -40,7 +40,7 @@ ms.locfileid: "48076247"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[升级顾问概述](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|概要介绍升级过程、升级顾问分析向导以及升级顾问报表查看器。|  
 |[升级顾问操作指南主题](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|提供执行升级顾问常用步骤的说明。|  

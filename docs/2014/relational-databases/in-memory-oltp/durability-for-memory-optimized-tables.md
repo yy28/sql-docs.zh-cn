@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072741"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 为内存优化表提供完整持续性。 提交更改内存优化表的事务时，假设基础存储可用， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] （就像对基于磁盘的表一样）会保证更改是永久的（数据库重新启动时仍然有效）。 持续性有两个重要方面：事务日志记录和在磁盘存储上持久保存数据更改。  
@@ -111,7 +111,7 @@ ms.locfileid: "52392021"
  如果需要手动合并可以显式执行通过调用[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP 的生命周期  
- CPF 首先要经过若干状态，然后才能被释放。 在任何给定时间，CFP 都将处于以下阶段之一：PRECREATED、UNDER CONSTRUCTION、ACTIVE、MERGE TARGET、MERGED SOURCE、REQUIRED FOR BACKUP/HA、IN TRANSITION TO TOMBSTONE 和 TOMBSTONE。 有关这些阶段的说明，请参阅 [sys.dm_db_xtp_checkpoint_files (Transact SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
+ CPF 首先要经过若干状态，然后才能被释放。 在任何给定时间，Cfp 都处于以下几个阶段之一：PRECREATED、 UNDER CONSTRUCTION、 ACTIVE、 MERGE TARGET、 MERGED SOURCE、 REQUIRED FOR BACKUP/HA、 IN TRANSITION TO TOMBSTONE 和逻辑删除。 有关这些阶段的说明，请参阅 [sys.dm_db_xtp_checkpoint_files (Transact SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
   
  在考虑处于各种状态的 CFP 所占用的存储空间后，持久的内存优化表所占用的整个存储空间最高可为内存中表大小的 2 倍。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)能查询以列出所有 Cfp 内存优化文件组中，包括其阶段。 将 CFP 从 MERGE SOURCE 状态转换为 TOMBSTONE 及最终垃圾收集可能占用五个检查点，其中每个检查点后跟一个事务日志备份（如果数据库针对完整或大容量日志恢复模式进行了配置）。  
   

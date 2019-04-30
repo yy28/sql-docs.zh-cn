@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23302543e43ca3f378e2d7915007490186ce6ec0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217669"
 ---
 # <a name="rds-code-examples"></a>RDS 代码示例
 > [!IMPORTANT]
@@ -32,4 +32,4 @@ ms.locfileid: "51604217"
   
 -   [在 Microsoft Visual Basic Scripting Edition 的 RDS 代码示例](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
   
--   [Microsoft Visual c + + 中的 RDS 代码示例](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
+-   [Microsoft 的视觉对象中的 RDS 代码示例C++](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213375"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>使用 Integration Services 并行数据仓库加载数据
 提供了数据加载到 SQL Server 并行数据仓库，通过使用 SQL Server Integration Services (SSIS) 包的引用和部署信息。  
@@ -115,7 +115,7 @@ SQL Server PDW 不支持以下 Integration Services 数据类型：
   
 若要加载到 SQL Server PDW 中包含这些类型的数据的列，必须将数据转换为兼容的数据类型的数据流中添加数据转换上游组件。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 若要运行 Integration Services 加载包，需要：  
   
 -   加载数据库的权限。  
@@ -151,7 +151,7 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
   
 ## <a name="Examples"></a>示例  
   
-### <a name="Walkthrough"></a>一个。 从平面文件的简单负载  
+### <a name="Walkthrough"></a>A. 从平面文件的简单负载  
 下面的演练演示如何将 Integration Services 将平面文件数据加载到 SQL Server PDW 设备使用简单的数据负载。  此示例假定已在客户端计算机上安装集成服务，并且已安装 SQL Server PDW 目标，如上文所述。  
   
 在此示例中我们将加载到`Orders`表，该表具有以下 DDL。 `Orders`表属于`LoadExampleDB`数据库。  
@@ -218,9 +218,9 @@ id,city,lastUpdateDate,orderDate
   
 5.  填写 server、 用户、 密码和目标数据库的信息特定于你的设备的信息。 （示例所示）。 再单击 **“确定”**。  
   
-    对于 InfiniBand 连接，请**服务器名称**： 输入 < 设备名称 >-SQLCTL01，17001。  
+    对于 InfiniBand 连接，请**服务器名称**:输入 < 设备名称 >-SQLCTL01，17001。  
   
-    为以太网连接**服务器名称**： 输入的控制节点的群集、 逗号、 端口 17001 的 IP 地址。 例如，10.192.63.134,17001。  
+    为以太网连接**服务器名称**:输入控制节点的群集、 逗号、 端口 17001 的 IP 的地址。 例如，10.192.63.134,17001。  
   
     **用户：**`user1`  
   
@@ -250,11 +250,11 @@ Integration Services 在计算机上运行包。
 [创建一个脚本任务，使用 SSIS PDW 目标适配器](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
 [设计和实现包 (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[教程： 创建基本包使用向导](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[教程：创建基本包使用向导](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [入门 (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [动态程序包生成示例](https://go.microsoft.com/fwlink/?LinkId=202413)  
 [设计 SSIS 包以实现并发性 （SQL Server 视频）](https://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server 社区示例： Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
+[Microsoft SQL Server 社区示例：Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [通过变更数据捕获改善增量加载](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [渐变维度转换](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [大容量插入任务](../integration-services/control-flow/bulk-insert-task.md)  

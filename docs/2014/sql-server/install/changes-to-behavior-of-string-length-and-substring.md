@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4d793720638ee4a98d99e6a915457d8657a1c325
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215297"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>string-length 和 substring 行为的变化
   [String-length 函数&#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length)并[substring 函数&#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring)函数可能返回不同的结果与包含的 XML 数据库一起使用时代理项字符。  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  当数据库设置为与兼容[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的行为[string-length 函数&#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length)并[substring 函数&#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring)在处理 Unicode 补充字符时，则函数更改。 每个 Unicode 增补字符（通过大于 U+FFFF 的码位来定义）将被这些函数计为一个字符，而不是早期版本中的两个字符。  
   
  有关代理项字符的详细信息，请参阅[代理项和增补字符](https://go.microsoft.com/fwlink/?LinkId=178317)。  

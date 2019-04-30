@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cf188964290652d9b98e55e3f646d83337dafe1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188384"
 ---
 # <a name="new-folder-page-report-manager"></a>“新建文件夹”页（报表管理器）
   使用“新建文件夹”页可以在报表服务器文件夹层次结构中创建新文件夹。 您创建的文件夹是存储在报表服务器数据库中的虚拟文件夹。 未在计算机的文件系统中创建该文件夹。  

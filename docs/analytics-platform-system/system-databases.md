@@ -1,5 +1,5 @@
 ---
-title: 系统数据库的并行数据仓库 |Microsoft 文档
+title: 系统数据库的并行数据仓库 |Microsoft Docs
 description: 系统数据库中并行数据仓库 (PDW)。
 author: mzaman1
 manager: craigg
@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: eafd857bdc4e9b997b8bc3bca587843f6dff30f7
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157005"
 ---
 # <a name="system-databases-in-parallel-data-warehouse-pdw"></a>系统数据库中并行数据仓库 (PDW)
-系统数据库是 SQL Server PDW 使用来管理用户、 数据库和临时数据的数据库。 SQL Server PDW 包括以下系统数据库： master 和 tempdb。  
+系统数据库是 SQL Server PDW 使用来管理用户、 数据库和临时数据的数据库。 SQL Server PDW 包含以下系统数据库： master 和 tempdb。  
   
 ## <a name="system-database-topics"></a>系统数据库主题  
   

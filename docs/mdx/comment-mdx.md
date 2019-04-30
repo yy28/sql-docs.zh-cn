@@ -1,5 +1,5 @@
 ---
-title: 注释 (MDX) |Microsoft 文档
+title: 注释 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6469921572b8a1809e228fff0d25061475399ae7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181578"
 ---
 # <a name="comment-mdx"></a>注释 (MDX)
 
@@ -32,8 +32,8 @@ ms.locfileid: "34740716"
  *Comment_Text*  
  包含注释文本的字符串。  
   
-## <a name="remarks"></a>Remarks  
- 服务器不会评估之间注释字符的文本 / * 和\*/。 注释可以插入到单独一行中，也可以插入到多维表达式 (MDX) 语句中。 必须由指示多行注释 /\*和\*/。  
+## <a name="remarks"></a>备注  
+ 服务器不会评估注释字符之间的文本 / * 和\*/。 注释可以插入到单独一行中，也可以插入到多维表达式 (MDX) 语句中。 多行的注释值必须表示为 /\*和\*/。  
   
  注释没有最大长度限制。 注释可以嵌套，例如，`/* Test /*Comment*/ Text*/` 就是一个嵌套注释的例子。  
   
@@ -54,7 +54,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [&#40;注释&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [&#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
  [--（注释）(MDX)](../mdx/comment-mdx-operator-reference.md)   
  [MDX 运算符参考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   

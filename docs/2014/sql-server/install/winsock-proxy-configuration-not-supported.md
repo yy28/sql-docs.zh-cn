@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9f73710f1cdb13477736d3b7496fb26b76f90e3
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184496"
 ---
 # <a name="winsock-proxy-configuration-not-supported"></a>不支持 Winsock 代理配置
   不能使用配置 Winsock 代理[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具。  
@@ -26,7 +26,7 @@ ms.locfileid: "59583200"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具不能配置 Windows 组件。  
   
 ## <a name="corrective-action"></a>纠正措施  

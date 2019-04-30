@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b3c7d20d92b56de299f25665701a295e54fce89
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164581"
 ---
 # <a name="delete-rows-dialog-box"></a>“删除行”对话框
   使用 **“删除行”** 对话框可以删除表、矩阵或列表数据区域中的行。 对于与组关联的行，您还可以删除组定义。  

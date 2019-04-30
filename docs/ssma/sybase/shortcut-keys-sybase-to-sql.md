@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b918534fc70cbe2e707f4e2e32d1818ac8dea277
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214300"
 ---
 # <a name="shortcut-keyssybase-to-sql"></a>快捷键 (Sybase To SQL)
 可以使用键盘快捷方式来浏览 SSMA 应用程序。 有关详细信息，请参阅以下主题。  

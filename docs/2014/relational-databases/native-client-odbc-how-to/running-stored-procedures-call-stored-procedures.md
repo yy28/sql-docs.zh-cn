@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58e5160065847d5729548702b5f1d65eb31bf694
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200261"
 ---
 # <a name="call-stored-procedures-odbc"></a>调用存储过程 (ODBC)
   当 SQL 语句调用存储的过程，请使用 ODBC CALL 转义子句，Microsoft?? SQL Server??? 驱动程序将该过程发送到 SQL Server 使用远程存储的过程调用 (RPC) 机制。 RPC 请求在 SQL Server 中跳过大多数语句分析和参数处理，因此，其速度快于使用 Transact-SQL EXECUTE 语句。  

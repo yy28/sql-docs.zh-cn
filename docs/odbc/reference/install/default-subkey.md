@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4f52e01375a142772f7514ea6bcf766a5a3225e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198174"
 ---
 # <a name="default-subkey"></a>默认子项
 注册表可能会使用默认子项指定默认数据源。 此子项是一种特殊情况的数据源规范子项，并具有与任何其他数据源规范子项相同的值。 唯一的区别是在 ODBC 数据源的子项下的值作为未列出。

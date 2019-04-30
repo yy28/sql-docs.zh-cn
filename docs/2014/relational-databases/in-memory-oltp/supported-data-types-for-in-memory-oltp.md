@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155157"
 ---
 # <a name="supported-data-types"></a>支持的数据类型
   内存优化表和本机编译存储过程中 **支持** 以下数据类型：  
@@ -40,23 +40,23 @@ ms.locfileid: "48075297"
 |数据类型|有关详细信息，请参阅：|  
 |---------------|--------------------------|  
 |char(n)|[char 和 varchar (Transact-SQL)](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar （n) <sup>1</sup>|[char 和 varchar (Transact-SQL)](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar(n) <sup>1</sup>|[char 和 varchar (Transact-SQL)](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |nvarchar(n) <sup>1</sup>|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar 和 nvarchar (Transact-SQL)](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
  <sup>1</sup>限制为每行总数 8060 个字节变量长度类型中的 counting (n)。  
   
- 有关支持的排序规则的信息，请参阅[Collations and Code Pages](../../database-engine/collations-and-code-pages.md)。  
+ 有关支持的排序规则的信息，请参阅 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)。  
   
  **日期和时间数据类型**  
   
 |数据类型|有关详细信息，请参阅：|  
 |---------------|--------------------------|  
-|日期|[日期&#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|date|[date (Transact-SQL)](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql)|  
 |DATETIME|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)|  
-|datetime2|[datetime2 &#40;Transact SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
+|datetime2|[datetime2 (Transact-SQL)](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime (Transact-SQL)](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   
  **二进制数据类型**  

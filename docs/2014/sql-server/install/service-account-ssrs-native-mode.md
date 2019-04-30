@@ -14,23 +14,23 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 96cee57e82cc9fbb01a43dc1ec13bf0691f737fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185531"
 ---
 # <a name="service-account-ssrs-native-mode"></a>服务帐户（SSRS 本机模式）
   使用“服务帐户”页可以指定运行报表服务器服务的帐户。 此帐户最初在安装过程中进行配置。 如果要更改此帐户或密码，则可以对其进行修改。 报表服务器 Web 服务、报表管理器和后台处理应用程序都使用此页上指定的服务标识运行。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
- 为报表服务器服务指定的帐户需要拥有访问注册表、报表服务器程序文件和报表服务器数据库的权限。 所有权限都配置的帐户会自动使用时[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager 设置帐户。 如果使用的服务帐户连接到报表服务器数据库，Configuration Manager 创建帐户的数据库登录名，并将此帐户分配到 RSExecRole 上配置数据库权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]托管实例报表服务器数据库。 报表服务器数据库是报表服务器可以写入的唯一数据存储区。 此服务帐户不需要其他任何数据存储区的权限。  
+ 为报表服务器服务指定的帐户需要拥有访问注册表、报表服务器程序文件和报表服务器数据库的权限。 在您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器设置此帐户时，所有权限都会自动配置给此帐户。 如果使用的服务帐户连接到报表服务器数据库，Configuration Manager 创建帐户的数据库登录名，并将此帐户分配到 RSExecRole 上配置数据库权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]托管实例报表服务器数据库。 报表服务器数据库是报表服务器可以写入的唯一数据存储区。 此服务帐户不需要其他任何数据存储区的权限。  
   
- 若要打开此页，请启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器，然后选择导航窗格中的链接。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，然后在导航窗格中选择相应链接。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 > [!IMPORTANT]  
->  无论何时需要更新帐户或密码，强烈建议你使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器。 使用配置管理器更新帐户可确保其他基于此服务标识的内部设置都能同时自动更新。  
+>  我们极力建议您在每次更新帐户或密码时都使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 使用配置管理器更新帐户可确保其他基于此服务标识的内部设置都能同时自动更新。  
   
 ## <a name="options"></a>选项  
  **使用内置帐户**  
@@ -46,9 +46,9 @@ ms.locfileid: "48079119"
  如果您要切换帐户类型（例如，将一个 Windows 帐户替换为另一个 Windows 帐户，或者将内置帐户替换为 Windows 域帐户），系统将提示您创建加密密钥的备份副本。 在选择新帐户时将自动还原备份副本。  
   
 > [!NOTE]  
->  每次修改服务帐户时，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器都会提示您备份和还原加密密钥。 必须执行这些步骤，才能确保加密数据在报表服务器上可用。 有关这些操作的详细信息，请参阅[加密密钥&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
+>  每次修改服务帐户时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器都会提示您备份和还原加密密钥。 必须执行这些步骤，才能确保加密数据在报表服务器上可用。 有关这些操作的详细信息，请参阅[加密密钥&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
   
- 此外，如果必须是报表服务器配置为运行在 SharePoint 集成模式并且您的服务帐户使用更改[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器中，您还必须打开 SharePoint 管理中心并使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**授予数据库访问权限**页后，可以重新应用报表服务器和实例设置。 此步骤将授予新服务帐户访问 SharePoint 数据库中，这是集成所必需的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]与 SharePoint 产品或技术。 有关如何授予在 SharePoint 管理中心内的数据库访问权限的详细信息，请参阅[配置和管理报表服务器的&#40;Reporting Services SharePoint 模式&#41;](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)并[Reporting Services SharePoint 模式下安装&#40;SharePoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
+ 此外，如果必须是报表服务器配置为运行在 SharePoint 集成模式并且您的服务帐户使用更改[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器中，您还必须打开 SharePoint 管理中心并使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**授予数据库访问权限**页后，可以重新应用报表服务器和实例设置。 此步骤将授予新服务帐户访问 SharePoint 数据库的权限，将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与 SharePoint 产品或技术集成在一起时需要此权限。 有关如何授予在 SharePoint 管理中心内的数据库访问权限的详细信息，请参阅[配置和管理报表服务器的&#40;Reporting Services SharePoint 模式&#41;](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)并[Reporting Services SharePoint 模式下安装&#40;SharePoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="choosing-an-account"></a>选择帐户  
  为了实现最佳的结果，请指定一个拥有网络连接权限、可以访问网络域控制器和公司 SMTP 服务器或网关的帐户。 下表汇总了各个帐户，并为使用这些帐户提供了建议。  
@@ -73,7 +73,7 @@ ms.locfileid: "48079119"
   
 ## <a name="see-also"></a>请参阅  
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置服务帐户&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [配置服务帐户（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

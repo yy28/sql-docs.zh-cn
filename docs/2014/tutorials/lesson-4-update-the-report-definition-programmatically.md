@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137467"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>第 4 课：以编程方式更新报表定义
   从报表服务器加载了报表定义并且通过报表字段拥有了对该报表定义的引用之后，需要更新报表定义。 对本例来说，您将更新报表的 `Description` 属性。  

@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f90f2395eac5dce76848d7bc309f1a3d5ce289f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63179892"
 ---
 # <a name="is-odbc-the-answer"></a>需要 ODBC？
-在深入探讨的互操作性问题之前, 请考虑以下问题： 应在应用程序在所有使用 ODBC？ 这看起来有点奇怪问题到 ODBC，指南中提出，但它实际上是，合法。 ODBC 不用于完全取代本机数据库 Api，也不旨在提供在所有情况下的数据库访问权限。 它旨在提供一个公共接口对数据库和要用于免费应用程序程序员无需了解和维护多个数据库的链接。  
+在深入探讨的互操作性问题之前, 请考虑以下问题：应用程序应在所有使用 ODBC？ 这看起来有点奇怪问题到 ODBC，指南中提出，但它实际上是，合法。 ODBC 不用于完全取代本机数据库 Api，也不旨在提供在所有情况下的数据库访问权限。 它旨在提供一个公共接口对数据库和要用于免费应用程序程序员无需了解和维护多个数据库的链接。  
   
  自定义应用程序是本机数据库 Api 的首要候选对象。 主要原因是自定义应用程序通常使用单个 DBMS 工作，并具有无需进行互操作。 本机数据库 Api 可能会更好地晚于 ODBC 的公开特定 DBMS 的功能和可能会公开不通过 ODBC 公开的功能。 此外，由于自定义应用程序的开发人员通常熟悉其 DBMS 本机数据库 API，是几乎不需要了解 ODBC。 但是，有趣的是要注意，对于某些 Dbms，ODBC 是本机数据库 API。  
   

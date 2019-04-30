@@ -1,5 +1,5 @@
 ---
-title: 任务 8:创建复合域规则 |Microsoft Docs
+title: 任务 8：创建复合域规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: douglaslms
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217803"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>任务 8:创建复合域规则
+# <a name="task-8-creating-a-composite-domain-rule"></a>任务 8：创建复合域规则
   在此任务中，创建的规则**地址验证**复合域。 你可以定义跨域规则： 如果**城市**是**Los Angeles**，**状态**必须是**CA**其中**城市**并**状态**是两个域。  
   
 1.  在右窗格中，切换到**复合域规则**选项卡。  

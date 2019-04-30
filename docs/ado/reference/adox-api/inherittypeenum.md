@@ -1,5 +1,5 @@
 ---
-title: InheritTypeEnum |Microsoft Docs
+title: InheritTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 249616f2f08b8b8f6138ce13621d26c5f7af9e1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213347"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 指定对象如何继承权限集与[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|对象和其他容器所包含的主要对象将继承该条目。|  
 |**adInheritContainers**|2|主要对象所包含的其他容器继承该条目。|  

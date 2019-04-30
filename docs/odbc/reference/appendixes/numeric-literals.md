@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b2effb3900e4277d82edee70439628c8adc837d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181319"
 ---
 # <a name="numeric-literals"></a>数值
 数值数据值存储在字符字符串时，使用数字文本。 对于为 SQL_C_CHAR 字符串，数值 SQL 数据的转换或转换的数字的 C 数据为 SQL_CHAR 或 SQL_VARCHAR 字符串，数字文本语法用于指定在目标中存储的内容。 对于数值存储为 SQL_C_CHAR 字符串到数值的 SQL 数据或作为 SQL_CHAR 字符串到数值的 C 数据存储的数字的转换，此语法用于验证在源中存储的内容。  
   
- 数字文本应符合一节中定义的语法[数字文本语法](../../../odbc/reference/appendixes/numeric-literal-syntax.md)附录 c: SQL 语法中。  
+ 数字文本应符合一节中定义的语法[数字文本语法](../../../odbc/reference/appendixes/numeric-literal-syntax.md)附录 c： 驱动器中SQL 语法。  
   
  本部分包含以下主题。  
   

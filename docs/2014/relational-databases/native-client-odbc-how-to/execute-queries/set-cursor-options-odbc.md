@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48389a3b537461a89bcf5c8bcbc646d3417939c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200342"
 ---
 # <a name="set-cursor-options-odbc"></a>设置游标选项 (ODBC)
   若要设置游标选项，请调用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)若要设置或[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)获取控制游标行为的语句选项。  
@@ -30,7 +30,7 @@ ms.locfileid: "48185988"
 |SQL_ATTR_CURSOR_SENSITIVITY|显示或不显示由其他连接对游标行进行的更新的游标|  
 |SQL_ATTR_CURSOR_SCROLLABLE|可以向前和向后滚动的游标|  
   
- 这些属性（只进、只读、行集大小为 1）的默认值不使用服务器游标。 若要使用服务器游标，必须将这些属性中的至少一个属性设置为非默认值，并且所执行的语句必须是包含单个 SELECT 语句的单个 SELECT 语句或存储过程。 使用服务器游标时，SELECT 语句无法使用服务器游标不支持的子句：COMPUTE、COMPUTE BY、FOR BROWSE 和 INTO。  
+ 这些属性（只进、只读、行集大小为 1）的默认值不使用服务器游标。 若要使用服务器游标，必须将这些属性中的至少一个属性设置为非默认值，并且所执行的语句必须是包含单个 SELECT 语句的单个 SELECT 语句或存储过程。 使用服务器游标时，SELECT 语句不能使用服务器游标不支持的子句：COMPUTE、 COMPUTE BY、 FOR BROWSE 和 INTO。  
   
  您可以控制使用通过设置 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或通过设置 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE 的游标类型。 不应将指定游标行为的两种方法混用。  
   

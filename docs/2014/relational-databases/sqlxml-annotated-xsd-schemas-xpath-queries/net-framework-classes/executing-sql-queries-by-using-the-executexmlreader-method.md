@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d6b24bfdcd9f6b4634a5a66ab43223285b0e3f36
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127604"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>使用 ExecuteXMLReader 方法执行 SQL 查询
   而不是使用 ExecuteToStream 方法，可以使用 SqlXmlCommand 对象 ExecuteXmlReader 方法执行命令。 此方法返回可用于进一步处理结果 （在此示例中打印元素或属性名称和值） 的 XmlReader 对象。  

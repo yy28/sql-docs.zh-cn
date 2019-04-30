@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect （Access 驱动程序） |Microsoft Docs
+title: SQLDriverConnect (Access Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a71874c91e48c25072fbfed8f66a312d65b4697
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048471"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect（Access 驱动程序）
 > [!NOTE]  
@@ -27,7 +27,7 @@ ms.locfileid: "47626376"
   
  **SQLDriverConnect**使你能够连接到驱动程序而无需创建数据源 (DSN)。  
   
- 在连接字符串中的所有驱动程序支持下列关键字： **DSN**， **DBQ**，并**FIL**。  
+ 在连接字符串中的所有驱动程序支持以下关键字：**DSN**， **DBQ**，和**FIL**。  
   
  **UID**并**PWD**关键字也受支持。  
   
@@ -37,4 +37,4 @@ ms.locfileid: "47626376"
   
 |驱动程序|所需的关键字|示例|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|驱动程序 DBQ|驱动程序 = {Microsoft Access 驱动程序 (*.mdb)};DBQ = c:\\\temp\\\sample.mdb|
+|Microsoft Access|驱动程序 DBQ|Driver={Microsoft Access Driver (*.mdb)}; DBQ=c:\\\temp\\\sample.mdb|

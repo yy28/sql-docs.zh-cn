@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5cd13809703c14022b6e2a1e7dbb87716c4778c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184004"
 ---
 # <a name="columns-collection-adox"></a>列集合 (ADOX)
 包含所有[列](../../../ado/reference/adox-api/column-object-adox.md)表、 索引或键的对象。  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204590"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>查询类型 (Visual Database Tools)
   查询和视图设计器为某些查询类型（例如“选择”、“插入结果”、“插入值”、“更新”和“生成表”）提供了内置的功能，并且还支持 UNION、全文搜索和 CASE 表达式查询。  

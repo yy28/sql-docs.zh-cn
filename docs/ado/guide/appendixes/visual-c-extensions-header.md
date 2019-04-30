@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 扩展标头 |Microsoft Docs
+title: VisualC++扩展标头 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e9d744955faa41b771834095a6cc51233af4bd
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217663"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ 扩展标头
 以下标头**icrsint.h**，详细介绍了允许客户端检索中的字段的界面**记录集**到派生类中定义的变量**CADORecordBinding**. 必须指定想要访问每个字段的 ADO 绑定宏。  
@@ -209,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Visual c + + 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+ [VisualC++扩展插件示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [使用 Visual C++ 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)

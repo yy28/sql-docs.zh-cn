@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61bb013885238492d9c7324658ede198c489361d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127325"
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字符串参数的函数
 采用字符串参数的所有函数将都转换为 Unicode。 （导出函数的"W"形式。）转换的字节数进行计数的字符，对于这些适用的 ODBC Api。 这适用于以下函数：  
@@ -47,9 +47,9 @@ ms.locfileid: "47818735"
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (将成为**SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** (becomes **SQLGetStmtAttr**)  
   
--   **SQLSetStmtOption** (将成为**SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** (becomes **SQLSetStmtAttr**)  
   
 -   **SQLGetConnectOption**  
   

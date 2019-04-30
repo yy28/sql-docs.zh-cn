@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40cd9973bfdce68b1ccbe63edd8c875519dbd22b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201589"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>从 C 到 SQL 的数据转换示例
 以下示例说明了该驱动程序如何将 C 数据转换为 SQL 数据：  
   
-|C 类型标识符|C 数据值|SQL 类型<br /><br /> 标识符 (identifier)|“列”<br /><br /> 长度|SQL 数据<br /><br /> 值|SQLSTATE|  
+|C 类型标识符|C 数据值|SQL 类型<br /><br /> 标识符 (identifier)|“列”<br /><br /> 长度|SQL 数据<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
-|SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|不适用|  
-|SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  
-|SQL_C_CHAR|1234.56\0 [a]|SQL_DECIMAL|8 [b]|1234.56|不适用|  
-|SQL_C_CHAR|1234.56\0 [a]|SQL_DECIMAL|7 [b]|1234.5|22001|  
-|SQL_C_CHAR|1234.56\0 [a]|SQL_DECIMAL|4|----|22003|  
+|SQL_C_CHAR|abcdef\0[a]|SQL_CHAR|6|abcdef|不适用|  
+|SQL_C_CHAR|abcdef\0[a]|SQL_CHAR|5|abcde|22001|  
+|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|8[b]|1234.56|不适用|  
+|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|7[b]|1234.5|22001|  
+|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|4|----|22003|  
 |SQL_C_FLOAT|1234.56|SQL_FLOAT|不适用|1234.56|不适用|  
 |SQL_C_FLOAT|1234.56|SQL_INTEGER|不适用|1234|22001|  
 |SQL_C_FLOAT|1234.56|SQL_TINYINT|不适用|----|22003|  

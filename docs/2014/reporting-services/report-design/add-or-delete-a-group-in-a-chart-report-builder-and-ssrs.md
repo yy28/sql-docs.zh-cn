@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206483"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在图表中添加或删除组（报表生成器和 SSRS）
   单击图表数据区域以显示 **“图表数据”** 窗格。 通过将数据集字段拖到 **“类别组”** 和 **“序列组”** 区域来创建组。 若要添加嵌套组，请向该区域添加多个字段。  

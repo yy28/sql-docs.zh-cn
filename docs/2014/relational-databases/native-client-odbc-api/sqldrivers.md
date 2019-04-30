@@ -1,5 +1,5 @@
 ---
-title: SQLDrivers |Microsoft Docs
+title: SQLDrivers | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87b7f550bf63c9cf14f16c829932398470848e6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192331"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
   ODBC 驱动程序管理器返回所有**SQLDrivers**属性规范字符串。 有关属性字符串和值定义的详细信息，请参阅[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink/?LinkId=4173)，或者您也可以观看[ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)联机。  

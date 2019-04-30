@@ -1,5 +1,5 @@
 ---
-title: 保留关键字 （MDX 语法） |Microsoft 文档
+title: 保留关键字 （MDX 语法） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149856"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>保留关键字（MDX 语法）
 
 
-  Analysis Services 保留为专用某些关键字。 有关保留关键字的列表，请参阅[MDX 保留字](../mdx/mdx-reserved-words.md)。  
+  Analysis Services 保留其独占使用的某些关键字。 有关保留关键字的列表，请参阅[MDX 保留字](../mdx/mdx-reserved-words.md)。  
   
  保留关键字遵循下列指导原则：  
   

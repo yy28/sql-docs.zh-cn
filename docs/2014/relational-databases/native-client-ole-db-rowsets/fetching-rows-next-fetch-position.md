@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c47f1a8692cf7d2e3fb4f00c64770b3b0c69e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183641"
 ---
 # <a name="next-fetch-position"></a>下次提取位置
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序保留对其进行跟踪的下次提取位置因此对的调用序列**GetNextRows**方法 (而无需跳过，方向或干预性的更改调用**FindNextRow**， **Seek**，或**RestartPosition**方法) 读取整个行集，而无需跳过或重复任何行。 可以通过调用 IRowset::GetNextRows、IRowset::RestartPosition 或 IRowsetIndex::Seek，或通过调用 FindNextRow 且 pBookmark 值为空来更改下次提取位置。 调用 FindNextRow 且 pBookmark 值不为空时，不会影响下次提取位置。  

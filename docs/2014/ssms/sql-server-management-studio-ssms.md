@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154992"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用于管理您的 SQL Server 基础架构的集成环境。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 提供用于配置、监视和管理 SQL Server 实例的工具。 此外，它还提供了用于部署、监视和升级数据层组件（如应用程序使用的数据库和数据仓库）的工具以生成查询和脚本。  
@@ -25,7 +25,7 @@ ms.locfileid: "52812349"
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 组件  
   
-|Description|主题|  
+|描述|主题|  
 |-----------------|-----------|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]介绍使用  执行的常见任务，如自定义键盘快捷方式和查看属性页。|[使用 SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)|  
 | 介绍如何使用“对象资源管理器” [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查看和管理  的一个或多个实例中的所有对象。|[对象资源管理器](object/object-explorer.md)|  
@@ -37,6 +37,6 @@ ms.locfileid: "52812349"
   
 ## <a name="see-also"></a>请参阅  
  [教程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
- [教程：编写 TRANSACT-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

@@ -28,11 +28,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1edd2b59d7a681fda1f18083b73f26aa3e38fbe3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143326"
 ---
 # <a name="manage-code-formatting"></a>管理代码格式
   使用编辑器可以用缩进、隐藏文本、URL 等来设置代码的格式。 还可以使用智能缩进在键入时自动格式化代码。  

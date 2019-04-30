@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c4eae0608e433ed3ca7888091a7c658726192d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214783"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>授予 Web 服务器计算机来宾特权
 匿名的 Web 服务器帐户 (IUSR_*ComputerName*) 必须添加到来宾本地组 Web 服务器计算机上使用 rds。  
@@ -38,6 +38,6 @@ ms.locfileid: "51557824"
   
 5.  如果在列表中不显示匿名的 Web 服务器帐户**选择用户或组**对话框框中，键入其名称 (IUSR_*ComputerName*) 到下空白框中，然后单击**添加**.  
   
-6.  单击“确定” 。
+6.  单击 **“确定”**。
 
 

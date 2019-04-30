@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c95c4e28a5f32131307daeaa61e214af887b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069693"
 ---
 # <a name="odbc-core-subkey"></a>ODBC 核心子项
 在 ODBC 核心子项下的值提供的核心组件 （驱动程序管理器、 光标库、 安装程序 DLL，等） 的使用计数。 下表中显示此值的格式。  
   
-|“属性”|数据类型|data|  
+|“属性”|数据类型|数据|  
 |----------|---------------|----------|  
 |UsageCount|REG_DWORD|*计数*|  
   

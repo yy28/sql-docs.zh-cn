@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5f034eaea1faeb1547a3697bec4dab50090864d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157936"
 ---
 # <a name="implementing-a-case-statement"></a>实现 CASE 语句
   本机编译的存储过程中不支持 case 语句。 以下示例演示一种在本机编译的存储过程中实现 case 语句功能的方法。  

@@ -1,5 +1,5 @@
 ---
-title: 调用 SQLSetPos |Microsoft Docs
+title: Calling SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70d574f867934af87ac7b5071b7f30bc9e89bccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199444"
 ---
 # <a name="calling-sqlsetpos"></a>调用 SQLSetPos
 在 ODBC 2。*x*，指向行状态数组的指针时的参数**SQLExtendedFetch**。 行状态数组更高版本已更新通过调用**SQLSetPos**。 某些驱动程序已依赖于此数组不会更改之间的事实**SQLExtendedFetch**并**SQLSetPos**。 在 ODBC 3。*x*、 状态数组的指针是描述符字段，因此应用程序可以轻松地将其更改为指向另一个数组。 这会在 ODBC 3 时出现问题。*x*应用程序使用 ODBC 2。*x*驱动程序但在调用**SQLSetStmtAttr**设置数组状态指针时调用**SQLFetchScroll**来提取数据。 驱动程序管理器将其映射为一系列调用**SQLExtendedFetch**。 在下面的代码中，将通常情况下引发错误时驱动程序管理器映射第二个**SQLSetStmtAttr**使用 ODBC 2 时调用 *.x*驱动程序：  

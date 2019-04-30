@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047611"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布尔构造函数 - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- 在以下示例中，指定了查询针对类型化**xml**列。 `if` 表达式将检查 <`ROOT`> 元素的类型化布尔值，并相应地返回结构化 XML。 该示例执行以下操作：  
+ 在以下示例中，指定了查询针对类型化**xml**列。 `if`表达式将检查的类型化布尔值 <`ROOT`> 元素，并相应地返回构造的 XML。 该示例执行以下操作：  
   
--   创建一个定义 xs:boolean 类型的 <`ROOT`> 元素的 XML 架构集合。  
+-   创建 XML 架构集合，用于定义 <`ROOT`> xs: boolean 类型的元素。  
   
 -   创建一个具有类型化表**xml**使用 XML 架构集合的列。  
   

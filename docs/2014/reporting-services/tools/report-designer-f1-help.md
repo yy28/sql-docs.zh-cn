@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 359acef5bc6f6015a6404a3cb4f3605cdcd07b4b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201179"
 ---
 # <a name="report-designer-f1-help"></a>报表设计器的 F1 帮助
   本节提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表设计器向导、视图和对话框的 F1 帮助。 另外，您也可以在使用对话框时按 F1 或单击对话框中显示的“帮助”按钮来打开 F1 帮助。  

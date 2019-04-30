@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162019"
 ---
 # <a name="metadata-discovery"></a>元数据发现
   中的元数据发现改进[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]允许[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端应用程序以确保从执行的查询返回的列或参数元数据是否与相同或兼容的元数据设置你前面指定的格式执行查询。 如果执行查询后返回的元数据与执行该查询之前指定的元数据格式不兼容，您将会收到错误。  

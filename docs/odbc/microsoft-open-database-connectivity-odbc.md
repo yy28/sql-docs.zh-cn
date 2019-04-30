@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198326"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft 开放式数据库连接 (ODBC)
 Microsoft 开放式数据库连接 (ODBC) 接口是 C 编程语言接口，它使应用程序从各种数据库管理系统 (Dbms) 访问数据。 ODBC 是一个低级别、 高性能的接口，专为关系数据存储。  
@@ -44,7 +44,7 @@ Microsoft 开放式数据库连接 (ODBC) 接口是 C 编程语言接口，它�
   
  定义与 ODBC 相关的术语。  
   
- [ODBCCONF。EXE](../odbc/odbcconf-exe.md)  
+ [ODBCCONF.EXE](../odbc/odbcconf-exe.md)  
   
  描述用于配置驱动程序和数据源名称的命令行实用程序。  
   

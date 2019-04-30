@@ -1,5 +1,5 @@
 ---
-title: '使用 irow:: Open 和 ISequentialStream 提取 BLOB 数据 |Microsoft Docs'
+title: 使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c67e606b0f74d3886f0b5890d5061406d0d7f3fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183546"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据
   IRow::Open 只支持打开 DBGUID_STREAM 和 DBGUID_NULL 对象类型。  
   
- 以下函数使用**irow:: Open**并**ISequentialStream**提取大型数据。  
+ 以下函数使用 IRow::Open 和 ISequentialStream 提取大型数据。  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -76,7 +76,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 大型数据，可绑定或通过使用来检索**ISequentialStream**接口。 对于绑定列，状态标志指示是否通过设置 DBSTATUS_S_TRUNCATED 来截断数据。  
+ 大型数据可使用 ISequentialStream 接口进行绑定或检索。 对于绑定列，状态标志指示是否通过设置 DBSTATUS_S_TRUNCATED 来截断数据。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 IRow 提取 BLOB 数据](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  

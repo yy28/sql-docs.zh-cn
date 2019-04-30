@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f5dfd3a6a7615fa3fd91c917bba6dbf0808f0f9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63163970"
 ---
 # <a name="removing-a-data-processing-extension"></a>删除数据处理扩展插件
   要删除数据处理扩展插件，只需从配置文件中删除数据处理扩展插件的 Extension 元素。 如果为报表服务器以及报表设计器生成了条目，则从 RSReportServer.config 文件和 RSReportDesigner.config 文件中删除 Extension 元素。 在删除配置信息之后，该数据处理扩展插件对于该组件将不再可用。  

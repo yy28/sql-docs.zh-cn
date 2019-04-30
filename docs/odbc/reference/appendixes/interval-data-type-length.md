@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188917"
 ---
 # <a name="interval-data-type-length"></a>间隔数据类型长度
 以下规则用于确定以字符为单位的时间间隔数据类型的长度。 中的字符数表示长度。 字节数取决于的字符集。 长度包括加在一起的以下值：  

@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 135ca9d30b6baa9d5f358409c9a49fb3d0fc61e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131763"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 updategram 中指定带批注的映射架构 (SQLXML 4.0)
   本主题说明如何使用在 updategram 中指定的映射架构（XSD 或 XDR）来处理更新。 在 updategram 中，您可以使用映射到表和列中的元素和属性在 updategram 中的带批注的映射架构的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定映射架构时，updategram 中指定的元素和属性名称必须映射为该映射架构的元素和属性。  
@@ -46,7 +46,7 @@ ms.locfileid: "52772159"
  若要创建使用以下示例的工作示例，必须满足中指定的要求[运行 SQLXML 示例的要求](../../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. 创建采用简单映射架构的 Updategram  
- 以下 XSD 架构 (SampleSchema.xml) 是映射的映射架构**\<客户 >** 到 Sales.Customer 表的元素：  
+ 以下 XSD 架构 (SampleSchema.xml) 是映射的映射架构 **\<客户 >** 到 Sales.Customer 表的元素：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -113,7 +113,7 @@ ms.locfileid: "52772159"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用在映射架构中指定的父子关系插入记录  
- 架构元素可以相互关联。  **\<Sql: relationship >** 元素指定架构元素之间的父-子关系。 此信息用于更新具有主键/外键关系的相应表。  
+ 架构元素可以相互关联。 **\<Sql: relationship >** 元素指定架构元素之间的父-子关系。 此信息用于更新具有主键/外键关系的相应表。  
   
  以下映射架构 (SampleSchema.xml) 由两个元素组成**\<顺序 >** 并 **\<OD >**:  
   
@@ -154,7 +154,7 @@ ms.locfileid: "52772159"
 </xsd:schema>  
 ```  
   
- 以下 updategram 使用此 XSD 架构添加新的订单详细记录 (  **\<OD >** 中的元素**\<后 >** 块) 为订单 43860。 `mapping-schema` 属性用于指定 updategram 中的映射架构。  
+ 以下 updategram 使用此 XSD 架构添加新的订单详细记录 (**\<OD >** 中的元素 **\<后 >** 块) 为订单 43860。 `mapping-schema` 属性用于指定 updategram 中的映射架构。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -273,9 +273,9 @@ ms.locfileid: "52772159"
 </xsd:schema>  
 ```  
   
- 在此示例中，XSD 架构包含**\<客户 >** 并**\<顺序 >** 元素，并指定两个元素之间的父-子关系。 它标识**\<顺序 >** 与父元素和**\<客户 >** 作为子元素。  
+ 在此示例中，XSD 架构包含 **\<客户 >** 并 **\<顺序 >** 元素，并指定两个元素之间的父-子关系。 它标识**\<顺序 >** 与父元素和**\<客户 >** 作为子元素。  
   
- updategram 处理逻辑使用父子关系相关信息来确定将记录插入到表中的顺序。 在此示例中，updategram 逻辑首先尝试向 Ord 表插入记录 (因为**\<顺序 >** 父级)，然后尝试向 Cust 表插入记录 (因为 **\<客户 >** 的子级)。 但是，鉴于数据库表架构中包含的主键/外键信息，此插入操作将导致在数据库中的外键冲突，继而导致插入失败。  
+ updategram 处理逻辑使用父子关系相关信息来确定将记录插入到表中的顺序。 在此示例中，updategram 逻辑首先尝试向 Ord 表插入记录 (因为 **\<顺序 >** 父级)，然后尝试向 Cust 表插入记录 (因为 **\<客户 >** 的子级)。 但是，鉴于数据库表架构中包含的主键/外键信息，此插入操作将导致在数据库中的外键冲突，继而导致插入失败。  
   
  若要指示 updategram 逻辑在更新操作期间反转父子关系`inverse`指定批注**\<关系 >** 元素。 这会导致首先向 Cust 表添加记录，然后再向 Ord 表添加记录，并且该操作将成功。  
   

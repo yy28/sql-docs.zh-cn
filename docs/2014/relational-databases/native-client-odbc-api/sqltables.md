@@ -1,5 +1,5 @@
 ---
-title: SQLTables |Microsoft Docs
+title: SQLTables | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188672"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables 可以对静态服务器游标执行。 尝试对可更新的 （动态或键集） 游标执行 SQLTables 将返回 sql_success_with_info 以指示游标类型已更改。  

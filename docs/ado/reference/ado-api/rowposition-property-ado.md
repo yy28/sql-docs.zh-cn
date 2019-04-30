@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e2e8bab73bfe93e8a78e013572a376b608ca9a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180614"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 属性 (ADO)
 获取或设置 OLE DB **RowPosition**对象从/上**ADORecordsetConstruction**对象。 当你使用**put_RowPosition**若要设置**RowPosition**生成的对象**记录集**对象使用**RowPosition**对象传递给确定当前行。  

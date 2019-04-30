@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0aeef25c70e3e8ff7be1cbec739063ffe2c20dbb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185690"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Parameters 集合引用（报表生成器和 SSRS）
   报表参数是可以在表达式中引用的内置集合之一。 通过在表达式中包含参数，您可以基于用户的选择来自定义报表的数据和外观。 表达式可用于提供 (Fx) 或 \<Expression> 选项的任何报表项属性或文本框属性。 表达式还可用于以其他方式控制报表的内容和外观。 有关详细信息，请参阅[表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "59938013"
 ##  <a name="Single"></a> 在表达式中使用单值参数  
  下表显示了在表达式中包含对任何数据类型单值参数的引用时所用的语法示例。  
   
-|示例|Description|  
+|示例|描述|  
 |-------------|-----------------|  
 |`=Parameters!` \<ParameterName> `.IsMultiValue`|返回 `False`。<br /><br /> 检查参数是否是多值。 如果`True`，该参数是多值是对象的集合。 如果`False`，该参数是单值并且是单个对象。|  
 |`=Parameters!` \<ParameterName> `.Count`|返回整数值 1。 对于单值参数，该计数始终为 1。|  
@@ -45,7 +45,7 @@ ms.locfileid: "59938013"
 ##  <a name="Multi"></a> 在表达式中使用多值参数  
  下表显示了在表达式中包含对任何数据类型多值参数的引用时所用的语法示例。  
   
-|示例|Description|  
+|示例|描述|  
 |-------------|-----------------|  
 |`=Parameters!` \<MultivalueParameterName> `.IsMultiValue`|返回 `True` 或 `False`。<br /><br /> 检查参数是否是多值。 如果是 `True`，则该参数是多值并且是一个对象集合。 如果是 `False`，则该参数是单值并且是单个对象。|  
 |`=Parameters!` \<MultivalueParameterName> `.Count`|返回整数值。<br /><br /> 表示值的数量。 对于单值参数，该计数始终为 1。 对于多值参数，该计数为 0 或更多。|  

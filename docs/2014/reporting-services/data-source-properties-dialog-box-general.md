@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7db7aa857e695e35dee5125cdfed1effe3dd1852
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164726"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>“数据源属性”对话框 ->“常规”
   在 **“数据源属性”** 对话框中选择 **“常规”** 可以显示和修改报表中数据源的连接信息。  

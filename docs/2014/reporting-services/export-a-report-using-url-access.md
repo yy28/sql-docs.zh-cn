@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80238e8edb5b84bc353eca63d63491a8ee74c8ad
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164009"
 ---
 # <a name="export-a-report-using-url-access"></a>使用 URL 访问导出报表
   您可以选择指定用来通过使用来呈现报表的格式*rs: Format*参数。 例如，若要直接从本机模式报表服务器获取报表的 PDF 副本：  

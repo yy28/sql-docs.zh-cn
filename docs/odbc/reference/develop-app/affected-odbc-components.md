@@ -18,20 +18,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72e004e6fd41ee74643fc05ec9020e6ac1933e09
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186258"
 ---
 # <a name="affected-odbc-components"></a>受影响的 ODBC 组件
 向后兼容性介绍引入新版本的驱动程序管理器如何影响应用程序、 驱动程序管理器和驱动程序。 这会影响应用程序和驱动程序时或这两个文件保留在旧版本。 有，因此，三种类型的向后兼容性，还需要考虑以下表中所示。  
   
 |类型|数据挖掘的版本|应用程序的版本|驱动程序版本|  
 |----------|-------------------|----------------------------|-----------------------|  
-|向后兼容的驱动程序管理器|3 *.x*|2。*x*|2。*x*|  
-|向后兼容性驱动程序 [1]|3 *.x*|2。*x*|3。*x*|  
-|应用程序的向后兼容性|3。*x*|3。*x*|2。*x*|  
+|向后兼容的驱动程序管理器|3 *.x*|2.*x*|2.*x*|  
+|向后兼容性驱动程序 [1]|3 *.x*|2.*x*|3.*x*|  
+|应用程序的向后兼容性|3.*x*|3.*x*|2.*x*|  
   
  [在附录 g： 主要讨论驱动程序 1] 的向后兼容性为了向后兼容的驱动程序指南。  
   

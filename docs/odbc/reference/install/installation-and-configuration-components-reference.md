@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aad19b3cb15c02e5db8e2635641a88f298c898c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198348"
 ---
 # <a name="installation-and-configuration-components-reference"></a>安装和配置组件参考
 > [!NOTE]  

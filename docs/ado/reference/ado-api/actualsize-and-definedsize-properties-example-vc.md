@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065462"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 属性示例 （VC + +）
 此示例使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)并[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)要显示的定义的大小和实际大小字段的属性。  
@@ -129,24 +129,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **存储区名称： Eric 读取丛书**  
-**定义的大小： 40**  
-**实际大小： 19**  
-**存储区名称： Barnum**  
-**定义的大小： 40**  
-**实际大小： 8**  
-**存储区名称： 新闻和啤酒**  
-**定义的大小： 40**  
-**实际大小： 12**  
-**存储区名称： Doc U Mat： 质量洗衣房和书籍**  
-**定义的大小： 40**  
-**实际大小： 36**  
-**存储区名称： 音符书店**  
-**定义的大小： 40**  
-**实际大小： 18**  
-**存储名称： Bookbeat**  
-**定义的大小： 40**  
-**实际大小： 8**   
+ **存储区名称：Eric 读取丛书**  
+**定义的大小：40**  
+**实际大小：19**  
+**存储区名称：Barnum 的**  
+**定义的大小：40**  
+**实际大小：8**  
+**存储区名称：新闻和啤酒**  
+**定义的大小：40**  
+**实际大小：12**  
+**存储区名称：文档-U-操作：质量洗衣房和书籍**  
+**定义的大小：40**  
+**实际大小：36**  
+**存储区名称：音符书店**  
+**定义的大小：40**  
+**实际大小：18**  
+**存储区名称：Bookbeat**  
+**定义的大小：40**  
+**实际大小：8**   
 ## <a name="see-also"></a>请参阅  
  [ActualSize 属性 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 属性](../../../ado/reference/ado-api/definedsize-property.md)

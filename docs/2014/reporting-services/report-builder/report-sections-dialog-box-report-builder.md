@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a24b4a4dd0ffe0c4b4ba988460e10f6bf832766e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155562"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>“报表区域”对话框（报表生成器）
   打开报表时，报表生成器会验证报表是否只包含一个报表定义语言 (RDL) \<Section> 元素。 不支持打开具有多个 \<Section> 元素的报表。  

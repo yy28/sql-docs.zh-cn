@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25f79dee9adb9ac6e953a802d404597508e7abba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204535"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>汇总查询结果 (Visual Database Tools)
   当您创建聚合查询时，需要符合某些逻辑原则。 例如，在汇总查询中不能显示单个行的内容。 查询和视图设计器可帮助你遵循 [“关系图”窗格](visual-database-tools.md) 和 [“条件”窗格](criteria-pane-visual-database-tools.md) 的行为原则。  

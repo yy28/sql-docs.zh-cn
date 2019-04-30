@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4676f1d0a9d96779303898631164101bbdc4201d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065405"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize 属性 (ADO)
 指示字段的值以字节为单位的实际长度。  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08b853d57068121fccb4db2341754eea0af7f734
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185856"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>关于客户端对 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的使用的警告
   程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型，具有已从版本 10.0 升级到版本 11.0。 满足某些条件时，引用此程序集的自定义应用程序可能会失败。  
@@ -24,7 +24,7 @@ ms.locfileid: "59583130"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型，具有已从版本 10.0 升级到版本 11.0。 满足以下条件时，引用此程序集的自定义应用程序可能失败：  
   
 -   移动时自定义应用程序从一台计算机依据[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]到仅计算机上安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是安装，该应用程序将失败，因为的被引用的版本 10.0 **SqlTypes**程序集不存在。 您可能会看到此错误消息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  

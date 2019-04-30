@@ -1,5 +1,5 @@
 ---
-title: EventReasonEnum |Microsoft Docs
+title: EventReasonEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 743e36e379760cb2c148c5484bb7b49b08d1d27e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070851"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 指定导致了事件发生的原因。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|操作添加一个新的记录。|  
 |**adRsnClose**|9|操作关闭**记录集**。|  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc4dd805faffb9fcf172f372f48d497a037fd16c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188395"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>新建角色分配：编辑角色分配页 （报表管理器）
   使用“新建角色分配”或“编辑角色分配”页可以授予对报表服务器项和操作的权限。 需要访问报表服务器的每个用户都必须拥有用来定义访问级别的角色分配。 可以针对根节点或者针对特定的报表、模型、文件夹、资源或共享数据源创建角色分配。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安全性可以通过您应用到项的角色分配来强制执行。 角色分配将某个组或用户匹配到某个角色定义，每个角色定义标识该组或用户可以执行的与某一特定项相关的任务。  

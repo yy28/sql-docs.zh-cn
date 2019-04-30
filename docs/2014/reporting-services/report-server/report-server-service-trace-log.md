@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bbe16cf43b546c0b4eb0c6f0c59c695dff6c7ad8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190946"
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器跟踪日志是一个含有报表服务器服务操作详细信息的 ASCII 文本文件，其中包括由报表服务器 Web 服务、报表管理器和后台处理执行的操作。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息可能非常有用。  
@@ -53,7 +53,7 @@ ms.locfileid: "59948133"
 ##  <a name="bkmk_trace_configuration_settings"></a> 跟踪配置设置  
  在配置文件 **ReportingServicesrService.exe.config**中管理跟踪日志行为。可在以下文件夹路径中找到该配置文件：  
   
- `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin` 的用户。  
+ `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`。  
   
  下面的示例演示 `RStrace` 设置的 XML 结构。 `DefaultTraceSwitch` 的值确定添加到日志的信息种类。 除了 `Components` 属性以外，各个配置文件 `RStrace` 的值是相同的。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "59948133"
   
  下表提供了有关每个设置的信息。  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |`RStrace`|指定用于错误和跟踪的命名空间。|  
 |`DefaultTraceSwitch`|指定向 ReportServerService 跟踪日志报告的信息的级别。 每个级别都包含所有更低级别（用更小的数字表示）报告的信息。 建议您不要禁用跟踪。 有效值为<br /><br /> 0= 禁用跟踪。 默认情况下，启用 ReportServerService 日志文件。 若要将其关闭，请将跟踪级别设为 0。<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式|  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184843"
 ---
 # <a name="xml-persistence-format"></a>XML 暂留格式
 ADO 使用 utf-8 编码的 XML 流，它仍然存在。  

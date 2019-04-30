@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140581"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
   当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行大容量的数据导入或导出时，您可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
@@ -59,7 +59,7 @@ ms.locfileid: "54126697"
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|Description|  
+|限定符|描述|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|指定非 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
@@ -89,7 +89,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|Description|  
+|限定符|描述|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|指定非 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
@@ -159,11 +159,11 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|Description|  
+|限定符|描述|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
-|**-t** `,`|将逗号 (**,**) 指定为字段终止符。<br /><br /> 注意：如果数据文件使用默认的字段终止符 (`\t`)，则 **-t**开关是不必要。|  
+|**-t** `,`|将逗号 (**,**) 指定为字段终止符。<br /><br /> 注意：如果数据文件使用默认的字段终止符 (`\t`)，则不需要 -t 开关。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
  在 Windows 命令提示符下，输入以下 `bcp` 命令：  
@@ -199,7 +199,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|Description|  
+|限定符|描述|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  

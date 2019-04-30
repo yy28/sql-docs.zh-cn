@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics |Microsoft Docs
+title: SQLStatistics | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188607"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
   **SQLStatistics**可以对静态游标执行。 尝试执行**SQLStatistics**可更新 （由键集驱动或动态） 返回 sql_success_with_info 以指示游标类型已更改。  

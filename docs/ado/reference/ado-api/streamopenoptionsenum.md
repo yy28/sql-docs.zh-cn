@@ -1,5 +1,5 @@
 ---
-title: StreamOpenOptionsEnum |Microsoft Docs
+title: StreamOpenOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a1e7e685e9d3f23d4d1c3317e24f63d7bdac23db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180740"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 指定用于打开选项[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。 可以使用或运算组合的值。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|此时将打开**Stream**在异步模式下的对象。|  
 |**adOpenStreamFromRecord**|4|标识的内容*源*参数是已打开[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。 默认行为是将视为*源*作为 URL 直接指向树状结构中的节点。 打开与该节点关联的默认流。|  
