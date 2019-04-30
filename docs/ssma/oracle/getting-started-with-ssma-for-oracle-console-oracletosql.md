@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 09cfb2bb9d4d07f410ad901d3fcf0d2a458e00f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308415"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>SSMA for Oracle 控制台入门 (OracleToSQL)
 本部分介绍的过程启动并开始使用 Oracle 控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口中。  
@@ -56,7 +56,7 @@ ms.locfileid: "47780995"
   
 下表中的控制台输出的颜色解释：  
   
-|Color|Description|  
+|颜色|Description|  
 |---------|---------------|  
 |Red|执行期间出错|  
 |灰色|日期和时间戳，向用户显示消息|  

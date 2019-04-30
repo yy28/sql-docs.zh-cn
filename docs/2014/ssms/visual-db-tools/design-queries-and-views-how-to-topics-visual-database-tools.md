@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316071"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>设计查询和视图操作指南主题 (Visual Database Tools)
   查询和视图设计器可以帮助您创建和维护应用程序的数据检索和数据操作部分。  

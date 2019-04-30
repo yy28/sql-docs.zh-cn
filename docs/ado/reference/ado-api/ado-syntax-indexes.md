@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404c84cd5e8b737552163082d78b5e8fcc3b1ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249043"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 语法索引
 调用 ADO 方法和属性的语法不同，具体取决于你的开发环境。 ADO 语言参考的其余部分使用 Microsoft Visual Basic 编程语言来演示 ADO 方法和属性语法。 但是，请参阅以下各节基于你的编程语言和方法的更具体语法示例：  
   
--   [ADO for Visual c + + 语法索引 com](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)介绍 ADO 属性和方法，而无需使用 **#import**使用 Microsoft Visual c + + 编译器指令。  
+-   [视觉对象的 ADO C++ COM 的语法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)介绍 ADO 属性和方法，而无需使用 **#import**编译器指令使用 Microsoft Visual C++。  
   
--   [ADO for Visual c + + 语法索引与 #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)介绍 ADO 属性和方法使用时 **#import**使用 Microsoft Visual c + + 编译器指令。  
+-   [视觉对象的 ADOC++使用 #import 语法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)介绍 ADO 属性和方法使用时 **#import**编译器指令使用 Microsoft Visual C++。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 ADO 与 Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [使用 ADO 与 Microsoft Visual c + +](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+ [使用 ADO 与 Microsoft VisualC++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [配合使用 ADO 与脚本语言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

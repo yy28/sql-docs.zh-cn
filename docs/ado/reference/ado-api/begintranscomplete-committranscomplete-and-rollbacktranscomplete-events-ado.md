@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: afd8b9d4a45bdc98388f1133b3478a1cfbe51e4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316800"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、 CommitTransComplete 和 RollbackTransComplete 事件 (ADO)
 将对关联的操作之后调用这些事件[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象完成执行。  
@@ -64,7 +64,7 @@ RollbackTransComplete pError, adStatus, pConnection
  **连接**发生此事件的对象。  
   
 ## <a name="remarks"></a>备注  
- 在 Visual c + +，多个**连接**可以共享同一个事件处理方法。 该方法使用返回**连接**对象，以确定哪个对象引发事件的原因。  
+ 视觉对象中C++，则多**连接**可以共享同一个事件处理方法。 该方法使用返回**连接**对象，以确定哪个对象引发事件的原因。  
   
  如果[特性](../../../ado/reference/ado-api/attributes-property-ado.md)属性设置为**adXactCommitRetaining**或**adXactAbortRetaining**，提交或回滚事务后启动新事务。 使用**BeginTransComplete**要忽略所有事件，但第一个事务开始事件。  
   

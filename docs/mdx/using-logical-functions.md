@@ -1,5 +1,5 @@
 ---
-title: 使用逻辑函数 |Microsoft 文档
+title: 使用逻辑函数 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a63d8cb22a8533cf352acb690f87916e2e9d568d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249828"
 ---
 # <a name="using-logical-functions"></a>使用逻辑函数
 
 
   逻辑函数对对象和表达式执行逻辑操作或比较并返回布尔值。 在多维表达式 (MDX) 中，逻辑函数对确定成员的位置至关重要。  
   
- 最常使用的逻辑函数是**IsEmpty**函数。 有关详细信息如何使用**IsEmpty**函数中，请参阅[处理空值](../mdx/working-with-empty-values.md)。  
+ 最常使用的逻辑函数是**IsEmpty**函数。 有关如何使用的详细信息**IsEmpty**函数中，请参阅[处理空值](../mdx/working-with-empty-values.md)。  
   
- 下面的查询演示如何使用**IsLeaf**和**IsAncestor**函数：  
+ 以下查询说明如何使用**IsLeaf**并**IsAncestor**函数：  
   
  `WITH`  
   

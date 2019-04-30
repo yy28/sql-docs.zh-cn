@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301300"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>修改预测结构（数据挖掘中级教程）
   您在上一个任务中创建的挖掘结构包含单个预测模型。 在处理和浏览该模型之前，您必须对其结构稍加更改并修改它的一个属性。  

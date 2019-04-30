@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0bf63b831dace7678f5d3fdf952a9d6d5f60aa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313389"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL 一致性级别（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
@@ -71,4 +71,4 @@ ms.locfileid: "47669365"
     ||  
     |-|  
     |Ifnull|  
-    |用户|
+    |“用户”|

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277429"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>从对象资源管理器连接到实例
   若要使用对象资源管理器管理对象，必须首先将对象资源管理器连接到包含对象的实例。 可以同时将对象资源管理器连接到多个实例。  

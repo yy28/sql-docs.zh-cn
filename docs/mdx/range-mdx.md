@@ -1,5 +1,5 @@
 ---
-title: ': （范围) (MDX) |Microsoft 文档'
+title: 解码的字符：（范围）(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 882082d503bf88f21566ac79ea4393a24ee551e4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277901"
 ---
-# <a name="-range-mdx"></a>:（范围）(MDX)
+# <a name="-range-mdx"></a>解码的字符：（范围）(MDX)
 
 
   执行一个集运算以返回一个自然排序集，它将两个指定成员作为端点，并将这两个指定成员之间的所有成员作为该集的成员。  
@@ -35,8 +35,8 @@ Member_Expression : Member_Expression
 ## <a name="return-value"></a>返回值  
  包含指定成员以及指定成员之间的所有成员的集。  
   
-## <a name="remarks"></a>Remarks  
- 两个参数所指定的成员必须位于给定维度的同一级别和层次结构中。 如果这两个参数指定相同的成员， **: （范围）** 运算符将返回包含指定的成员的集。 如果第一个参数为 Null，则该集包含从第二个参数中指定的成员级别开始直到包括该成员的所有成员。 如果第二个参数为 Null，则该集包含从第一个参数中指定的成员开始直到包括同一级别最后一个成员的所有成员。  
+## <a name="remarks"></a>备注  
+ 两个参数所指定的成员必须位于给定维度的同一级别和层次结构中。 如果这两个参数指定相同的成员， **:（范围）** 运算符返回仅包含指定的成员的集。 如果第一个参数为 Null，则该集包含从第二个参数中指定的成员级别开始直到包括该成员的所有成员。 如果第二个参数为 Null，则该集包含从第一个参数中指定的成员开始直到包括同一级别最后一个成员的所有成员。  
   
  在 MDX 中没有与此集运算符功能相同的函数。  
   

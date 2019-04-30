@@ -5,16 +5,16 @@ description: Mssqlctl 存储命令的参考文章。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 47c4d331c2f1848265c1322bda88c358b61cf56a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 120f230fad10c968590ab7e5c1430433598ddcd6
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860610"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473194"
 ---
 # <a name="mssqlctl-storage"></a>mssqlctl 存储
 
@@ -22,11 +22,10 @@ ms.locfileid: "58860610"
 
 以下文章提供了参考**存储**中的命令**mssqlctl**工具。 有关其他详细信息**mssqlctl**命令，请参阅[mssqlctl 引用](reference-mssqlctl.md)。
 
-## <a id="commands"></a> 命令
-
-|||
-|---|---|
-| [mount](reference-mssqlctl-storage-mount.md) | 管理远程存储在 HDFS 中的装载。 |
+## <a name="commands"></a>命令
+|     |     |
+| --- | --- |
+[mssqlctl storage mount](reference-mssqlctl-storage-mount.md) | 管理远程存储在 HDFS 中的装载。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90b21c6fa21322afe1d9351e73460fce1a4592f8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944153"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461875"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>将报表作为点击链接型报表链接到模型
   您可以不使用默认的点击链接型报表模板，而创建报表生成器报表并将其链接到报表模型中的特定实体。 当查看报表的用户单击主报表中的交互式数据时，该报表便会显示为点击链接型报表。 若要将报表链接到某个实体，请使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表管理器。  

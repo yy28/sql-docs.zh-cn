@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68e5000e924c438a4611e2fa8c134f0dd822f930
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294491"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>删除用于去除系统对象的语句
   升级顾问检测到用于删除系统对象的语句。 系统对象，包括扩展存储的过程，部署在只读**资源**数据库 (mssqlsystemresource) 中，不能删除。 请修改您的应用程序以撤消或拒绝针对系统对象的 EXECUTE 权限。  

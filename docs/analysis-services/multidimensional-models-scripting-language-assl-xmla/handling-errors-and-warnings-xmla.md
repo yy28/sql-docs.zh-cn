@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 884474398abc9f449e5f6bd82c9f4b981f9a3a43
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261699"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>处理错误和警告 (XMLA)
   错误处理时是必需的 XML for Analysis (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)或[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法调用不会运行，成功运行，但将生成错误或警告，或成功运行，但返回的结果包含错误的。  
@@ -42,10 +42,10 @@ ms.locfileid: "50144922"
 |列名|类型|Description|允许 null<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
 |**ErrorCode**|**UnsignedInt**|指示方法是成功还是失败的返回代码。 十六进制值必须可转换为**UnsignedInt**值。|否|  
-|**WarningCode**|**UnsignedInt**|指示警告条件的返回代码。 十六进制值必须可转换为**UnsignedInt**值。|用户帐户控制|  
-|**Description**|**String**|由生成错误的组件返回的错误或警告的文本和说明。|用户帐户控制|  
-|**数据源**|**String**|生成错误或警告的组件的名称。|用户帐户控制|  
-|**HelpFile**|**String**|指向介绍错误或警告的“帮助”文件或主题的路径或 URL。|用户帐户控制|  
+|**WarningCode**|**UnsignedInt**|指示警告条件的返回代码。 十六进制值必须可转换为**UnsignedInt**值。|是|  
+|**说明**|**String**|由生成错误的组件返回的错误或警告的文本和说明。|是|  
+|**数据源**|**String**|生成错误或警告的组件的名称。|是|  
+|**HelpFile**|**String**|指向介绍错误或警告的“帮助”文件或主题的路径或 URL。|是|  
   
  <sup>1</sup>指示是否将数据是必需的并且必须返回，或是否数据是可选的如果列不适用于允许使用 null 字符串。  
   
@@ -114,7 +114,7 @@ HelpFile="" />
 </return>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

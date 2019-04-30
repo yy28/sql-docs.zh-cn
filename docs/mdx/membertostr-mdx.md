@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ff7ffb1b57c8af38e1b2eeebc64f2a3e753fc5b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278489"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
@@ -36,7 +36,7 @@ MemberToStr(Member_Expression)
  此函数返回包含成员的唯一名称的字符串。 它通常用于将成员的唯一名称传递给外部函数。  
   
 ## <a name="example"></a>示例  
- 下例返回字符串 [Geography].[Geography].[Country].&[United States]：  
+ 下面的示例返回字符串 [Geography]。[Geography]。[Country]。 （& a) [United States]:  
   
  `WITH MEMBER Measures.x AS MemberToStr`  
   

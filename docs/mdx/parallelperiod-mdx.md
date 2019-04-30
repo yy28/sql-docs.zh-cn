@@ -1,5 +1,5 @@
 ---
-title: ParallelPeriod (MDX) |Microsoft 文档
+title: ParallelPeriod (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1f495ce1fad9a318ea5e6c1f3fadd88f8313cd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742366"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473064"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 
@@ -38,20 +38,20 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 尽管类似于[Cousin](../mdx/cousin-mdx.md)函数， **ParallelPeriod**函数更紧密地与时间序列。 **ParallelPeriod**函数指定的级别，获取指定的成员的祖先、 查找与指定的滞后的上级的同级和最后返回指定成员的同级元素的后代中的并行期间。  
+## <a name="remarks"></a>备注  
+ 尽管类似于[同类](../mdx/cousin-mdx.md)函数， **ParallelPeriod**函数更紧密地与时间序列。 **ParallelPeriod**函数指定级别的采用指定成员的祖先、 查找具有指定滞后的该祖先的同级，最后返回指定成员在并行时间段同级的后代。  
   
  **ParallelPeriod**函数具有以下默认值：  
   
--   如果指定既不是级别表达式，也不是成员表达式，则默认成员值是上一种类型的第一个维度的第一个层次结构的当前成员*时间*度量值组中。  
+-   如果指定了级别表达式既不是成员表达式，则默认成员值是一种类型的第一个维度上的第一个层次结构的当前成员*时间*度量值组中。  
   
--   如果指定一个级别表达式，但未指定一个成员表达式，该默认成员值将*Level_Expression*。**Hierarchy.CurrentMember**。  
+-   如果指定了级别表达式，但未指定成员表达式，则默认成员值是*Level_Expression*。**Hierarchy.CurrentMember**。  
   
 -   默认索引值为 1。  
   
 -   默认级别为指定成员的父级别。  
   
- **ParallelPeriod**函数等同于以下的 MDX 语句：  
+ **ParallelPeriod**函数等同于下面的 MDX 语句：  
   
  `Cousin(Member_Expression, Ancestor(Member_Expression, Level_Expression) .Lag(Numeric_Expression))`  
   
@@ -77,6 +77,6 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

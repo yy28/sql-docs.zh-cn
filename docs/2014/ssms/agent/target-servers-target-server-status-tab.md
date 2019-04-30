@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245715"
 ---
 # <a name="target-servers-target-server-status-tab"></a>目标服务器（“目标服务器状态”选项卡）
   使用此页可查看此主服务器的目标服务器的状态。  

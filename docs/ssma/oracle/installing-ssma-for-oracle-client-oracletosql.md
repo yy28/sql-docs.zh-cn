@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 27e5c0ef0c834806351bda73eb69dbe783d78db2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223579"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>安装 SSMA for Oracle 客户端 (OracleToSQL)
 SSMA 客户端包含的程序文件的执行以下任务：  
@@ -34,7 +34,7 @@ SSMA 客户端包含的程序文件的执行以下任务：
   
 本主题提供安装先决条件和安装 SSMA 的说明。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 SSMA 设计用于 Oracle 9 或更高版本和所有版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 安装 SSMA 之前，请确保计算机满足以下要求：  

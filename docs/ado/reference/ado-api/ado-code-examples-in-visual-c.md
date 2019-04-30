@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 中的 ADO 代码示例 |Microsoft Docs
+title: 视觉对象中的 ADO 代码示例C++|Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f03d615bf17cf4086482d02dfca001230276b1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249023"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ 中的 ADO 代码示例
-使用下面的代码示例来了解如何使用 ADO 方法、 属性和事件时在 Microsoft Visual c + + 编写。  
+使用下面的代码示例来了解如何使用 ADO 方法、 属性和事件时在 Microsoft Visual 中编写C++。  
   
 > [!NOTE]
 >  将粘贴整个代码示例中的，从开头到末尾到代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，该示例可能无法正确运行。  
@@ -149,4 +149,4 @@ ms.locfileid: "47613285"
 ## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 代码示例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [附录 D：ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [附录 d:ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

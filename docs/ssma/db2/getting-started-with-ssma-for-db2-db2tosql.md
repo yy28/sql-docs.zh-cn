@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298854"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>开始使用 SSMA for DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 的 DB2 可以快速将转换到 DB2 数据库架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构中，将为生成的架构上传[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并将数据从 DB2 到迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -45,7 +45,7 @@ ms.locfileid: "47737345"
 ### <a name="metadata-explorers"></a>元数据资源管理器  
 SSMA 包含两个元数据资源管理器来浏览和 DB2 上执行操作和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
   
-#### <a name="db2-metadata-explorer"></a>DB2 的元数据资源管理器  
+#### <a name="db2-metadata-explorer"></a>DB2 Metadata Explorer  
 DB2 的元数据资源管理器显示有关 DB2 架构的信息。 通过使用 DB2 的元数据资源管理器，可以执行以下任务：  
   
 -   浏览每个架构中的对象。  
@@ -54,13 +54,13 @@ DB2 的元数据资源管理器显示有关 DB2 架构的信息。 通过使用 
   
 -   选择数据迁移的表，然后将数据迁移到这些表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[将 DB2 数据库迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)。  
   
-#### <a name="sql-server-metadata-explorer"></a>SQL Server 元数据资源管理器  
+#### <a name="sql-server-metadata-explorer"></a>SQL Server Metadata Explorer  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元数据资源管理器中显示的实例有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 当您连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SSMA 检索该实例的相关元数据，并将其存储在项目文件中。  
   
 可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器中选择已转换的 DB2 数据库对象，并同步这些对象的实例与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ### <a name="metadata"></a>元数据  
-每个元数据资源管理器右侧是描述所选的对象的选项卡。 例如，如果 DB2 元数据资源管理器中选择一个表，将显示六个选项卡：**表**， **SQL**，**类型映射，并报告**，**属性**，并**数据**。 **报表**选项卡只创建报表后，将包含所选的对象包含的信息。 如果您选择的表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器中，将显示三个选项卡：**表**， **SQL**，并且**数据**。  
+每个元数据资源管理器右侧是描述所选的对象的选项卡。 例如，如果 DB2 元数据资源管理器中选择一个表，将显示六个选项卡：**表**， **SQL**，**类型映射，报表**，**属性**，并且**数据**。 **报表**选项卡只创建报表后，将包含所选的对象包含的信息。 如果您选择的表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器中，将显示三个选项卡：**表**， **SQL**，和**数据**。  
   
 大多数元数据设置是只读的。 但是，可以更改以下元数据：  
   
@@ -93,7 +93,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
 |----|-----------|  
 |**File**|包含用于处理项目、 连接到 DB2，以及连接到命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**编辑**|包含用于查找和使用中的详细信息页面，如将复制的文本命令[!INCLUDE[tsql](../../includes/tsql-md.md)]SQL 的详细信息窗格中。 此外包含**管理书签**选项，其中你将能够看到的现有书签列表。 可以使用对话框右侧的按钮来管理书签。|  
-|**“视图”**|包含**同步元数据资源管理器**命令。 用于将同步 DB2 元数据资源管理器之间的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器。 此外包含命令以显示和隐藏**输出**并**错误列表**窗格和一个选项**布局**管理布局。|  
+|**视图**|包含**同步元数据资源管理器**命令。 用于将同步 DB2 元数据资源管理器之间的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器。 此外包含命令以显示和隐藏**输出**并**错误列表**窗格和一个选项**布局**管理布局。|  
 |**工具**|包含用于创建报表，并将对象和数据迁移命令。 此外提供访问权限**全局设置**并**项目设置**对话框。|  
 |**帮助**|提供访问到 SSMA 帮助和**有关**对话框。|  
   

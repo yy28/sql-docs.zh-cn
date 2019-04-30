@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5dd36e82b71ff862a543bfa38cda4b4a660738a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287747"
 ---
 # <a name="arguments-in-catalog-functions"></a>目录函数中的自变量
 所有目录函数都接受自变量与该应用程序可以将限制返回的数据的作用域。 例如，第一个和第二个调用到**SQLTables**下面的代码中返回的结果集包含所有表有关的信息，而第三个调用返回订单表有关的信息：  
@@ -45,7 +45,7 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
 |**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID 为 ID ID|  
 |**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID 为 ID ID|  
 |**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ID 为 ID ID|  
-|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV 批量许可|ID ID ID 批量许可|  
+|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV VL|ID ID ID 批量许可|  
   
  本部分包含以下主题。  
   

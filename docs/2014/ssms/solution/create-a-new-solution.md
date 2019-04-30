@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282104"
 ---
 # <a name="create-a-new-solution"></a>新建解决方案
   创建项目时，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将创建一个解决方案来包含该项目。 一次只能打开一个解决方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不允许在项目中创建文件夹。 若要对您的工作进行组织，请创建多个项目。  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d6a8943ab1cc22da90208c10a5dcbfe5b8f5e369
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312018"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>新建项目 (SSMA) (MySQLToSQL)
 使用**新的项目**对话框创建新的 SSMA 项目。 访问**新的项目**对话框中，在**文件**菜单中，单击**新项目**。  

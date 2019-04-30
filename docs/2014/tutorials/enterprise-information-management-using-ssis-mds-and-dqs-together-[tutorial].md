@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313860"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>综合使用 SSIS、MDS 和 DQS 来执行企业信息管理 [教程]
   在企业中管理信息通常涉及集成来自企业和企业之外的信息、清理数据、对数据进行匹配以便删除重复项、标准化数据、丰富数据、使数据符合法律和遵从性要求，以及将数据存储于具有所有必需的安全设置的集中位置。  
@@ -83,6 +83,6 @@ ms.locfileid: "56035398"
 |[第 5 课：自动执行清理和匹配使用 SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|在本课中，您创建一个 SSIS 解决方案，该解决方案使用 DQS 清理输入数据、匹配已清理的数据以便删除重复项，以及以自动方式在 MDS 上存储已清理和匹配的数据。|75|  
   
 ## <a name="next-steps"></a>后续步骤  
- 要开始学习本教程，请转到第一课：[第 1 课：创建 DQS Suppliers 知识库](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)。  
+ 若要开始本教程，请继续第一课：[第 1 课：创建 DQS Suppliers 知识库](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)。  
   
   

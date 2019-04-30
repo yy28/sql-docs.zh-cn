@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c70a558b065765dd9f8c0895345959e8aa22ebfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232096"
 ---
 # <a name="standard-gateway"></a>标准网关
 一个*网关*是一种软件会导致一个 DBMS 与另一个类似的形式。 也就是说，网关接受编程接口，SQL 语法和数据流协议的单个 dbms 和将其转换到的编程接口，SQL 语法并数据流协议隐藏 DBMS。 例如，应用程序编写为使用 Microsoft® SQL Server™ 还可以访问 DB2 数据通过 Micro Decisionware DB2 网关;此产品将导致 DB2 看起来像 SQL Server。 当使用网关时，必须为每个目标数据库编写不同的网关。  

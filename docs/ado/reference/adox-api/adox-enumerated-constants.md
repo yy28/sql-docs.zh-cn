@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bdbd67d5e4d7d4647b92b32590a5258de038c80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308303"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 枚举常量
 若要帮助调试，ADOX 枚举常量列出每个常量的值。 但是，此值是纯粹是参考性的并且可能从一个版本的 ADOX 更改为另一个。 你的代码应仅依赖名称不是实际值的枚举常量。  

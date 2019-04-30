@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 626f125fff9b0dfb21e617166817fbc618f082a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278704"
 ---
 # <a name="spatial-results-window"></a>“空间结果”窗口
   **“空间结果”** 窗口提供了用于查看空间数据的可视化映射工具。 若要查看空间结果，查询结果中必须包括一个包含几何图形或地域数据的空间列。  
@@ -34,7 +34,7 @@ ms.locfileid: "48092860"
  如果某个查询中仅返回了点实例，则此选项不可用。  
   
  **选择投影**  
- 在下面的一个投影中显示地域数据：Equirectangular、Mercator、Robinson 或 Bonne。  
+ 中的一个投影中显示地域数据：Equirectangular、 Mercator、 Robinson 或 Bonne。  
   
  此选项不适用于几何图形数据。  
   

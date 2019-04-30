@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249341"
 ---
 # <a name="activity-monitor"></a>活动监视器
   活动监视器显示有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的信息，并了解这些进程如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前实例。  
   
 ## <a name="benefits-of-activity-monitor"></a>活动监视器的优点  
- 活动监视器是一个选项卡式的文档窗口，有以下可展开和折叠窗格：**概述**，**活动用户任务**，**资源等待**，**数据文件 I/O**，并且**最近消耗资源的查询**。 展开任何窗格时，活动监视器都将查询实例以获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 还可以同时展开一个或多个窗格，以查看实例上不同种类的活动。  
+ 活动监视器是一个选项卡式的文档窗口，有以下可展开和折叠窗格：“概述”、“活动用户任务”、“资源等待”、“数据文件 I/O”和“最近消耗大量资源的查询”。 展开任何窗格时，活动监视器都将查询实例以获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 还可以同时展开一个或多个窗格，以查看实例上不同种类的活动。  
   
  中包含的列**活动用户任务**，**资源等待**，**数据文件 I/O**，以及**最近消耗资源的查询**窗格中，您可以自定义显示在以下方面：  
   

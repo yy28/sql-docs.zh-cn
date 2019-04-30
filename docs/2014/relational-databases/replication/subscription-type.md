@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249383"
 ---
 # <a name="subscription-type"></a>订阅类型
   合并复制提供了两种订阅类型：服务器和客户端（以前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本分别称为全局和本地）。 使用服务器订阅的订阅服务器可以：  
@@ -38,7 +38,7 @@ ms.locfileid: "52799689"
  对于每个订阅服务器，请从 **“订阅类型”** 列的下拉列表框中选择 **“客户端”** 或 **“服务器”** 。 对于使用服务器订阅的订阅服务器，请在 **“冲突解决的优先级”** 列中输入 0 和 99.99 之间的数字（数字越大，订阅服务器的优先级越高）。  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [创建请求订阅](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
  [订阅发布](subscribe-to-publications.md)  
   

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bcbe0d14d95d7ba003969a31b8a87d692edb7435
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63246018"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>PropertyName 属性（ClientNetworkProtocolProperty 类）
   获取引用的当前属性的名称[PropertyIdx 属性 （ClientNetworkProtocolProperty 类）](clientnetworkprotocolproperty-class.md)属性值。  

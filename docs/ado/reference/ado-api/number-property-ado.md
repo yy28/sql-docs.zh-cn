@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: afc9955920784af966ef5d793d76ce251df1bc1d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242668"
 ---
 # <a name="number-property-ado"></a>Number 属性 (ADO)
 指示唯一标识的数字[错误](../../../ado/reference/ado-api/error-object.md)对象。  

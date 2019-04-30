@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668296"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453314"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>开始使用 SSMA for DB2 控制台 (DB2ToSQL)
 本部分介绍的过程启动并开始使用 DB2 控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口中。  
@@ -53,7 +53,7 @@ ms.locfileid: "51668296"
   
 下表中的控制台输出的颜色解释：  
   
-|Color|Description|  
+|颜色|Description|  
 |---------|---------------|  
 |Red|执行期间出错|  
 |灰色|日期和时间戳，向用户显示消息|  

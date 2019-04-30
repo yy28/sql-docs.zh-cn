@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281901"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
 指定的权限[组](../../../ado/reference/adox-api/group-object-adox.md)或[用户](../../../ado/reference/adox-api/user-object-adox.md)对象上。  
@@ -49,7 +49,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *权限*  
  一个**长**值，它可以是一个位掩码的一个或多个[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常量，指示要设置的权限。  
   
- *继承*  
+ *Inherit*  
  可选。 一个**长**值，它可以是其中一个的[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)常量，它指定如何对象将继承这些权限。 默认值是**adInheritNone**。  
   
  *ObjectTypeId*  

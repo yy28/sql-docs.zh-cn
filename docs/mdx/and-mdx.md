@@ -1,5 +1,5 @@
 ---
-title: 和 (MDX) |Microsoft 文档
+title: AND (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249874"
 ---
 # <a name="and-mdx"></a>AND (MDX)
 
@@ -36,10 +36,10 @@ Expression1 AND Expression2
  返回数值的有效 MDX 表达式。  
   
 ## <a name="return-value"></a>返回值  
- 一个布尔值，如果两个参数的计算结果为将返回 true **true**; 否则为**false**。  
+ 一个布尔值，则返回 true，如果这两个参数的计算结果为 **，则返回 true**; 否则为**false**。  
   
-## <a name="remarks"></a>Remarks  
- **AND**运算符将两个表达式视为布尔值 (0，0，作为**false**; 否则为**true**) 执行逻辑与运算的运算符之前。 下表说明了如何**AND**运算符执行逻辑与。  
+## <a name="remarks"></a>备注  
+ **AND**运算符将这两个表达式视为布尔值 (0 被作为**false**; 否则为**true**) 运算符执行逻辑与运算之前。 下表说明了如何**AND**运算符执行逻辑与运算。  
   
 |*Expression1*|*Expression2*|返回值|  
 |-------------------|-------------------|------------------|  

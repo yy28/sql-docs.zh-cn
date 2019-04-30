@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249318"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 类
   提供用于查看与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件有关的信息的属性。  
@@ -35,16 +35,16 @@ class SQLErrorLogFile
 };  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  SQLErrorLogFile 类定义以下属性。  
   
 |||  
 |-|-|  
-|ArchiveNumber|数据类型：`uint32`<br /><br /> 访问类型:只读<br /><br /> <br /><br /> 日志文件的存档号。|  
-|InstanceName|数据类型：`string`<br /><br /> 访问类型:只读<br /><br /> 限定符:Key<br /><br /> <br /><br /> 日志文件所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
-|LastModified|数据类型：`datetime`<br /><br /> 访问类型:只读<br /><br /> <br /><br /> 上次修改日志文件的日期。|  
-|LogFileSize|数据类型：`uint32`<br /><br /> 访问类型:只读<br /><br /> <br /><br /> 日志文件大小（字节）。|  
-|“属性”|数据类型：`string`<br /><br /> 访问类型:只读<br /><br /> 限定符:Key<br /><br /> <br /><br /> 日志文件名。|  
+|ArchiveNumber|数据类型：`uint32`<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 日志文件的存档号。|  
+|InstanceName|数据类型：`string`<br /><br /> 访问类型：只读<br /><br /> 限定符：Key<br /><br /> <br /><br /> 日志文件所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
+|LastModified|数据类型：`datetime`<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 上次修改日志文件的日期。|  
+|LogFileSize|数据类型：`uint32`<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 日志文件大小（字节）。|  
+|“属性”|数据类型：`string`<br /><br /> 访问类型：只读<br /><br /> 限定符：Key<br /><br /> <br /><br /> 日志文件名。|  
   
 ## <a name="remarks"></a>备注  
   

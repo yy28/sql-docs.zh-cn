@@ -19,11 +19,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d2be7854240a52edd8f3308ea92e3ea7eb25924f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299203"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>映射源数据库和目标数据库 (AccessToSQL)
 当您连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您需要指定目标数据库以进行迁移。 如果您有多个 Access 数据库可以将它们映射到多个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库 （或架构） 或向下连接的 SQL Azure 数据库的多个架构。  

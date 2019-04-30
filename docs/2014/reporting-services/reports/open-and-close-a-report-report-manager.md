@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 11f2aa43220ef419325f64c368f80ea7691b3b65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272788"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>打开和关闭报表（报表管理器）
   可以使用报表管理器来查看已经发布到报表服务器的报表。 默认情况下，所有的报表都以 HTML 形式打开。 在打开报表之后，可以将其导出，以便以其他应用程序格式进行查看。 如果报表中包含交互式功能，或者如果它是包含交互式数据的报表生成器报表，则可以单击相应的链接来查看其他报表或数据。  

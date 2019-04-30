@@ -1,6 +1,6 @@
 ---
-title: 设备管理任务-分析平台系统 |Microsoft 文档
-description: 本指南介绍如何执行分析平台系统 (AP) 的设备管理任务。
+title: 设备管理任务的分析平台系统 |Microsoft Docs
+description: 本指南介绍如何执行 Analytics Platform System (APS) 的设备管理任务。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 9012ddc562e9252367c7204383fa4ccc06f06345
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276413"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>分析平台系统的设备管理任务
-本指南介绍如何执行分析平台系统 (AP) 的设备管理任务。  
+本指南介绍如何执行 Analytics Platform System (APS) 的设备管理任务。  
   
 ## <a name="guide-sections"></a>指南部分  
   
@@ -29,11 +29,11 @@ ms.locfileid: "31538827"
   
 -   [设备配置&#40;分析平台系统&#41;](appliance-configuration.md)  
   
--   [软件维护&#40;分析平台系统&#41;](software-servicing.md)  
+-   [软件维护服务&#40;分析平台系统&#41;](software-servicing.md)  
   
--   [PDW Services 状态&#40;分析平台系统&#41;](pdw-services-status.md)  
+-   [PDW 服务状态&#40;分析平台系统&#41;](pdw-services-status.md)  
   
--   [打开或关闭电源 AP 设备&#40;分析平台系统&#41;](power-the-aps-appliance-on-or-off.md)  
+-   [打开或关闭电源 APS 设备&#40;分析平台系统&#41;](power-the-aps-appliance-on-or-off.md)  
   
 -   [设备监视&#40;分析平台系统&#41;](appliance-monitoring.md)  
   

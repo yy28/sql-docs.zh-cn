@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267443"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>设置跟踪定义默认设置 (SQL Server Profiler)
   跟踪定义默认设置是用于每一个提供程序或服务器的默认跟踪模板。 您可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]设置默认跟踪模板。  

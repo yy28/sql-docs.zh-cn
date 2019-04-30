@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34cc4479a26d633e689963a945095248f683993f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287279"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>例如：指定带有 ELEMENTS 指令的 XSINIL
   以下查询将指定 `ELEMENTS` 指令以根据查询结果生成以元素为中心的 XML。  

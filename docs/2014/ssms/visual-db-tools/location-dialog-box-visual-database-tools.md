@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306219"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>“位置”对话框（可视化数据库工具）
   使用此对话框可以找到并选择包含所需文件的文件夹。 此对话框将选定文件夹的路径返回到调用对话框。 可通过以下方式访问此对话框：  

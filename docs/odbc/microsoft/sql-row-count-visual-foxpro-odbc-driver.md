@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 240cc9b8e6ee5439a92db807a6334622760c63f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313373"
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>SQL 行计数（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 核心级别  
+ ODBC API 一致性：核心级别  
   
  返回由最后一个受影响的行数[更新](../../odbc/microsoft/update-sql-command.md)，[插入](../../odbc/microsoft/insert-sql-command.md)，或[删除](../../odbc/microsoft/delete-sql-command.md)语句。  
   

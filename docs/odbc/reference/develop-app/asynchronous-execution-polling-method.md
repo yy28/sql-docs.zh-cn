@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306302"
 ---
 # <a name="asynchronous-execution-polling-method"></a>异步执行（轮询方法）
 在 ODBC 3.8 和 Windows 7 SDK 之前, 是仅在语句函数上允许异步操作。 有关详细信息，请参阅**以异步方式执行语句操作**，本主题中更高版本。  

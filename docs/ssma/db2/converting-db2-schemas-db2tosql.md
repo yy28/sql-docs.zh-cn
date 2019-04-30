@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298968"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>转换 DB2 架构 (DB2ToSQL)
 已连接到 DB2 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并将项目设置和数据映射选项，可以将转换到 DB2 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象。  
@@ -33,7 +33,7 @@ ms.locfileid: "52520671"
   
 |DB2 对象|生成 SQL Server 对象|  
 |-----------|----------------------------|  
-|数据类型|**SSMA 映射除下面所列的下列每种类型：**<br /><br />CLOB:与此类型的工作某些本机函数都不支持 (例如 CLOB_EMPTY())<br /><br />BLOB：与此类型的工作某些本机函数都不支持 (例如 BLOB_EMPTY())<br /><br />DBLOB:与此类型的工作某些本机函数都不支持 (例如 DBLOB_EMPTY())|  
+|数据类型|**SSMA 映射除下面所列的下列每种类型：**<br /><br />CLOB:与此类型的工作某些本机函数都不支持 (例如 CLOB_EMPTY())<br /><br />BLOB:与此类型的工作某些本机函数都不支持 (例如 BLOB_EMPTY())<br /><br />DBLOB:与此类型的工作某些本机函数都不支持 (例如 DBLOB_EMPTY())|  
 |用户定义类型|**SSMA 映射以下用户：**<br /><br />不同的类型<br /><br />结构化的类型<br /><br />SQL PL 数据类型-注意：不支持弱游标类型。|  
 |特殊寄存器|**SSMA 仅会在下面列出的寄存器：**<br /><br />当前时间戳<br /><br />当前日期<br /><br />当前时间<br /><br />当前时区<br /><br />当前用户<br /><br />SESSION_USER 和用户<br /><br />SYSTEM_USER<br /><br />当前 CLIENT_APPLNAME<br /><br />当前 CLIENT_WRKSTNNAME<br /><br />当前锁定超时<br /><br />当前架构<br /><br />当前服务器<br /><br />当前的隔离<br /><br />其他特殊的注册未映射到 SQL server 语义。|  
 |CREATE TABLE|**SSMA 映射创建表，但存在以下例外：**<br /><br />多维聚类分析 (MDC) 表<br /><br />范围聚集表 (RCT)<br /><br />分区表<br /><br />已分离的表<br /><br />DATA CAPTURE 子句<br /><br />IMPLICITLY 隐藏选项<br /><br />易失性选项|  

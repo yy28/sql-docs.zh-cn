@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250273"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>SQL Server 复制订阅属性 
 本部分提供有关的信息**订阅属性**对话框。 
@@ -43,7 +43,7 @@ ms.locfileid: "54134977"
   
  有关每个代理所需权限的详细信息，请参阅 [Replication Agent Security Model](security/replication-agent-security-model.md)。  
   
-### <a name="publisher-options-for-transactional-subscriptions"></a>用于事务订阅的发布者选项  
+### <a name="publisher-options-for-transactional-subscriptions"></a>用于事务订阅的发布服务器选项  
  **防止事务循环**  
  确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器。 此选项用于双向事务复制。 有关详细信息，请参阅 [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md)。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54134977"
   
 ### <a name="options-for-merge-subscriptions"></a>用于合并订阅的选项  
  **分区定义(HOST_NAME)**  
- 对于使用参数化筛选器的发布，合并复制将在同步过程中对以下两个系统函数中的一个函数求值（如果筛选器同时引用了这两个函数，则对这两个函数求值），以确定订阅服务器应接收的数据：**Suser_sname （)** 或**host_name （)**。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
+ 对于使用参数化筛选器的发布，合并复制的计算结果的两个系统函数 （或两者如果筛选器引用这两个函数） 一个期间同步，以确定订阅服务器应接收的数据：SUSER_SNAME() 或 HOST_NAME()。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
   
  **“订阅类型”** 和 **“优先级”**  
  显示订阅是客户端订阅还是服务器订阅（在创建订阅后不能更改）。 服务器订阅可以将数据重新发布到其他订阅服务器，并可以为服务器订阅分配冲突解决优先级。  
@@ -110,7 +110,7 @@ ms.locfileid: "54134977"
   
 ### <a name="options-for-merge-subscriptions"></a>用于合并订阅的选项  
  **分区定义(HOST_NAME)**  
- 对于使用参数化筛选器的发布，合并复制将在同步过程中对以下两个系统函数中的一个函数求值（如果筛选器同时引用了这两个函数，则对这两个函数求值），以确定订阅服务器应接收的数据：**Suser_sname （)** 或**host_name （)**。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
+ 对于使用参数化筛选器的发布，合并复制的计算结果的两个系统函数 （或两者如果筛选器引用这两个函数） 一个期间同步，以确定订阅服务器应接收的数据：SUSER_SNAME() 或 HOST_NAME()。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
   
  **“订阅类型”** 和 **“优先级”**  
  显示订阅是客户端订阅还是服务器订阅（在创建订阅后不能更改）。 服务器订阅可以将数据重新发布到其他订阅服务器，并可以为服务器订阅分配冲突解决优先级。  

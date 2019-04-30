@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e0e10a6b8c15b6522e6b34ab008295fc411fcd3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232066"
 ---
 # <a name="standard-programming-interface"></a>标准编程接口
 编程接口可能是标准化的最明显候选项。 事实上，开发 ODBC 时，ANSI 和 ISO 已提供标准的嵌入式 SQL 和 SQL 模块。 尽管没有标准数据库 CLI 已存在，但 SQL 访问组-数据库供应商一个行业协会-已考虑是否要创建一个;更高版本的 ODBC 部分成为了其工作的基础。  

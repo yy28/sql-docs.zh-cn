@@ -1,5 +1,5 @@
 ---
-title: 不 (MDX) |Microsoft 文档
+title: NOT (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b70068562ff24e8a1619b85fe091ab3e17da173
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278498"
 ---
 # <a name="not-mdx"></a>NOT (MDX)
 
@@ -33,10 +33,10 @@ NOT Expression1
  返回数值的有效多维表达式 (MDX) 表达式。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个布尔值**false**如果自变量的计算结果为**true**; 否则为**true**。  
+ 一个布尔值，返回**false**如果参数的值为**true**; 否则为**true**。  
   
-## <a name="remarks"></a>Remarks  
- **不**运算符将表达式视为一个布尔值 (0，0，作为**false**; 否则为**true**) 运算符执行逻辑求反运算之前。 下表说明了如何**不**运算符执行逻辑求反运算。  
+## <a name="remarks"></a>备注  
+ **不**运算符将表达式视为一个布尔值 (0 被作为**false**; 否则为**true**) 运算符执行逻辑非运算之前。 下表说明了如何**不**运算符执行逻辑求反。  
   
 |*Expression1*|返回值|  
 |-------------------|------------------|  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301732"
 ---
 # <a name="operator-properties-history-page"></a>操作员属性（“历史记录”页）
   使用此页可查看发送给操作员的最近通知的日期、时间和类型。  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281987"
 ---
 # <a name="display-the-query-window"></a>显示查询窗口
   打开多个查询窗口时，它们显示为选项卡式文档窗口。  

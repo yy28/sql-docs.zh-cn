@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301812"
 ---
 # <a name="column-name-limitations"></a>列名限制
 列名称可以包含任何有效的字符 （例如，空格）。 如果列名称中包含除字母、 数字和下划线的任何字符，必须由括在单引号 （'）） 后分隔名称。  

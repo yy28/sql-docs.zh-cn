@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b87a8b4ba546c53dfd4e4e1819b3b01b4f5cf3bc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278957"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>第 9 课：生成并运行应用程序
   创建用于数据表的数据筛选器后，接下来要生成并运行网站应用程序。  

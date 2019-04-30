@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4dcaa288df7b6e232c187ae50dac3e4ac51d8be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308581"
 ---
 # <a name="count-property-example-vc"></a>Count 属性示例 (VC++)
 此示例演示[计数](../../../ado/reference/ado-api/count-property-ado.md)与中的两个集合的属性***员工***数据库。 属性获取的每个集合中的对象数，并设置枚举这些集合的循环的上限。  

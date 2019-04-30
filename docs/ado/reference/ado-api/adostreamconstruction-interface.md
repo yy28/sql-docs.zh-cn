@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf21be88854837ab2dff1a8bc8bc73f44a6e20c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248831"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 接口
-**ADOStreamConstruction**界面用于构造 ADO **Stream**从 OLE DB 对象**IStream** C/c + + 应用程序中的对象。  
+**ADOStreamConstruction**界面用于构造 ADO **Stream**从 OLE DB 对象**IStream** C 中的对象 /C++应用程序。  
   
 ## <a name="properties"></a>属性  
   

@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582442"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472242"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 大数据群集 （预览版） 上的应用程序
 
@@ -45,7 +45,7 @@ ms.locfileid: "59582442"
 
 ## <a name="capabilities"></a>功能
 
-在 SQL Server 2019 （预览版） CTP 2.4 可以创建、 删除、 描述、 初始化，列表运行，并更新你的应用程序。 下表描述了可用于应用程序部署命令**mssqlctl**。
+在 SQL Server 2019 （预览版） ctp 版本 2.5 可以创建、 删除、 描述、 初始化，列表运行，并更新你的应用程序。 下表描述了可用于应用程序部署命令**mssqlctl**。
 
 |Command |Description |
 |:---|:---|
@@ -68,19 +68,19 @@ mssqlctl app create --help
 
 ## <a name="sign-in"></a>登录
 
-在部署或与应用程序进行交互之前，先登录到 SQL Server 使用的大数据群集`mssqlctl login`命令。 指定的外部 IP 地址`endpoint-service-proxy`服务 (例如： `https://ip-address:30777`) 以及用户名和密码向群集。
+在部署或与应用程序进行交互之前，先登录到 SQL Server 使用的大数据群集`mssqlctl login`命令。 指定的外部 IP 地址`mgmtproxy-svc-external`服务 (例如： `https://ip-address:30777`) 以及用户名和密码向群集。
 
 ```bash
-mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
+mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="aks"></a>AKS
 
-如果使用 AKS 时，需要运行以下命令以获取的 IP 地址`endpoint-service-proxy`服务通过在 bash 或 cmd 窗口中运行以下命令：
+如果使用 AKS 时，需要运行以下命令以获取的 IP 地址`mgmtproxy-svc-external`服务通过在 bash 或 cmd 窗口中运行以下命令：
 
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm 或 Minikube

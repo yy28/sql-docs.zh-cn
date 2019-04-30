@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313764"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用“结果”窗格中的数据 (Visual Database Tools)
   在运行查询或视图之后，将在“结果”窗格中显示结果。 然后您就可以对这些结果进行处理。 例如，您可以添加和删除行、输入或更改数据以及在大型结果集中轻松导航。  

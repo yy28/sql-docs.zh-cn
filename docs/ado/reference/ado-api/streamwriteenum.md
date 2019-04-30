@@ -1,5 +1,5 @@
 ---
-title: StreamWriteEnum |Microsoft Docs
+title: StreamWriteEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d0f42561d7b324a13068c14d0fc7971d3d46d83b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311776"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 指定是否将行分隔符追加到字符串写入到[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。  

@@ -1,7 +1,7 @@
 ---
 title: 什么是新的 SQL Server 机器学习服务 |Microsoft Docs
 description: 新的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 机器学习服务的每个版本的功能公告。
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
-ms.translationtype: MT
+ms.openlocfilehash: a1990a96b1257fcd566536e846892c3946448818
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645519"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63458802"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什么是 SQL Server 机器学习服务中的新增功能
 
@@ -30,6 +30,7 @@ ms.locfileid: "58645519"
 
 | 发行版本 | 功能更新 |
 |---------|----------------|
+| CTP 2.5 | 新[Microsoft 扩展性 SDK for Java](java/java-sdk.md)。 |
 | CTP 2.4 | 针对 Linux 支持[CREATE EXTERNAL LIBRARY (Transact SQL)](../t-sql/statements/create-external-library-transact-sql.md)适用于 R、 Python 和 Java。 |
 | | 环境变量，指定 Java 解释器的位置已更改，不再`JAVA_HOME`到`JRE_HOME`。 |
 | CTP 2.3 | 新的受支持[Java 数据类型](java/java-sql-datatypes.md)。 |
@@ -103,7 +104,7 @@ Python 是一种语言，提供了极大的灵活性和各种机器学习任务�
 
 | 发行版本 |功能更新 |
 |---------|----------------|
-| CU 的新增功能 | [**实时评分**](real-time-scoring.md)依赖于本机 c + + 库读取模型中优化的二进制格式，存储，而无需调用 R 运行时来生成预测。 这使得计分操作要快得多。 使用实时评分，可以运行存储的过程或执行实时评分，从 R 代码。 也可用于 SQL Server 2016 中，如果该实例升级到最新版本的实时评分是[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]。 |
+| CU 的新增功能 | [**实时评分**](real-time-scoring.md)依赖于本机C++库读取模型中优化的二进制格式，存储，而无需调用 R 运行时来生成预测。 这使得计分操作要快得多。 使用实时评分，可以运行存储的过程或执行实时评分，从 R 代码。 也可用于 SQL Server 2016 中，如果该实例升级到最新版本的实时评分是[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]。 |
 | 初始版本 | [**数据库内分析的 R 集成**](r/sql-server-r-services.md)。 <br/><br/> 调用 R 的 R 包的函数在 T-SQL，反之亦然。 RevoScaleR 函数提供大规模的 R 分析通过对数据进行分块成组件部分，协调和管理分布式处理和聚合结果。 在 SQL Server 2016 R Services （数据库内），RevoScaleR 引擎集成使用数据库引擎实例，善于数据和分析组合在一起的处理上下文中。 <br/><br/>通过 T-SQL 和 R 集成[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)。 可以调用使用此存储的过程的任何 R 代码。 此安全的基础结构支持企业级部署 Rn 模型和可以从应用程序使用的简单存储的过程调用的脚本。 是通过将数据从 SQL 流式处理到 R 进程和 MPI 环并行化来实现更多的性能提升。 <br/><br/>可以使用 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md)函数来执行[本机计分](sql-native-scoring.md)上具有所需的二进制格式中的以前保存的预先训练模型。|
 
 ## <a name="linux-support-roadmap"></a>Linux 支持路线图

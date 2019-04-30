@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c759e530baf792de7e015eac87337f35cf9f5a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312535"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>使用 Visual FoxPro 数据在 Microsoft Word 中创建邮件标签
 Windows 95 或 Windows 98 的文档，可以在 Microsoft Word 中使用 Visual FoxPro 数据。 例如，你可能想要从 Visual FoxPro 表中存储的客户信息创建邮件标签。  

@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fbb43d39e28a8b99e49a4dcaf0b2b4f0fc83e670
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582230"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472135"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>如何使用群集管理门户监视 SQL Server 大数据群集
 
@@ -35,10 +35,10 @@ ms.locfileid: "59582230"
 
 请按照[快速入门部署大数据群集](quickstart-big-data-cluster-deploy.md)直至到达**群集管理门户**部分。 运行时与 mssqlctl 的大数据群集后，请遵循以下说明：
 
-控制器 pod 运行后，可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`endpoint-service-proxy`(例如： **https://\<ip 地址\>: 30777/门户**)。 凭据的访问管理门户中的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的环境变量。
+控制器 pod 运行后，可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`mgmtproxy-svc-external`(例如： **https://\<ip 地址\>: 30777/门户**)。 凭据的访问管理门户中的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的环境变量。
 
 > [!NOTE]
-> 对于 CTP 2.4，没有一条安全警告时访问 web 页，因为它使用自动生成的 SSL 证书。
+> 对于 ctp 版本 2.5 时，没有一条安全警告时访问 web 页，因为它使用自动生成的 SSL 证书。
 
 ## <a name="overview"></a>概述
 

@@ -6,23 +6,23 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4dba3e620ae3e6cd9aa6c09eb6196ac37acd77a7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583400"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472163"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集上的控制器？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-控制器托管用于部署和管理大数据群集的核心逻辑。 它负责与 Kubernetes，是在群集和 HDFS 和 Spark 等其他组件的一部分的 SQL Server 实例的所有交互。 
+控制器托管用于部署和管理大数据群集的核心逻辑。 它负责与 Kubernetes，是在群集和 HDFS 和 Spark 等其他组件的一部分的 SQL Server 实例的所有交互。
 
 控制器服务提供了以下的核心功能：
 
@@ -31,9 +31,10 @@ ms.locfileid: "59583400"
 - 管理计算、 数据和存储池
 - 公开监视工具来观察群集的状态
 - 公开来检测和修复意外的问题的故障排除工具
-- 管理群集安全性： 确保安全的群集终结点、 管理用户和角色，配置为群集内通信的凭据
-- 管理升级的工作流，以便安全地实现 （在 CTP 2.4 中不可用）
-- （不适用于 CTP 2.4） 群集中的有状态服务用于管理高可用性和灾难恢复
+- 管理群集安全性：
+  - 确保安全的群集终结点
+  - 管理用户和角色
+  - 配置群集内通信的凭据
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服务
 

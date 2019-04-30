@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d70d3ca60a046a355549260406edba261f805e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312482"
 ---
 # <a name="using-concise-functions"></a>使用简洁的函数
 某些 ODBC 函数获取描述符的隐式访问权限。 应用程序编写器可能会发现它们相对于调用更方便**SQLSetDescField**或**SQLGetDescField**。 调用这些函数*简洁*函数由于它们执行的许多功能，包括设置或获取描述符字段。 一些简洁的函数允许应用程序设置或检索单个函数调用中的多个相关的描述符字段。  

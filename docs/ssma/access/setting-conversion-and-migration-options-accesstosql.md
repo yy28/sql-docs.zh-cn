@@ -18,17 +18,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cf8e07b15db7f4c2c7807c75a9862c26a92edcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299094"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>设置转换和迁移选项 (AccessToSQL)
 对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项用于指定如何转换对象、 如何迁移数据和源数据类型如何映射到目标数据类型。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，验证配置选项是否适用于该项目。  
   
 ## <a name="configuration-options-and-modes"></a>配置选项和模式  
-SSMA 中有四个组配置设置和配置这些设置的四种模式： 默认、 Optimistic、 Full 和自定义。 建议大多数用户使用的默认模式。 使用乐观模式进行简单转换。 如果你想要查看所有消息，请使用完整模式。 在自定义模式下，您可以设置选项。  
+SSMA 中有四个组配置设置和四种模式来配置这些设置：默认值，乐观、 完全和自定义。 建议大多数用户使用的默认模式。 使用乐观模式进行简单转换。 如果你想要查看所有消息，请使用完整模式。 在自定义模式下，您可以设置选项。  
   
 本文档的"用户界面参考"部分中描述了这些设置。 有关设置以及如何在每种模式中应用设置的详细信息，请参阅以下主题：  
   

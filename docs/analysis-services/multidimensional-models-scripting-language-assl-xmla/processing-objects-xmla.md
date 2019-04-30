@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 59a581f7e70f3fc1afd7eb7c1eaf4751d32719d0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261654"
 ---
 # <a name="processing-objects-xmla"></a>处理对象 (XMLA)
   在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 处理指的是或系列的指导的数据转换为业务分析的信息。 处理因对象类型而异，但处理始终是将数据转换为信息的一个环节。  
@@ -23,7 +23,7 @@ ms.locfileid: "50145382"
   
 -   多维数据集  
   
--   “数据库”  
+-   数据库  
   
 -   维度  
   

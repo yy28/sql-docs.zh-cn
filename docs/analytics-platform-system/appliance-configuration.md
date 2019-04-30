@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276051"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>分析平台系统的设备配置清单
 提供自己的环境配置分析平台系统所需的任务的清单。 可以使用该设备，还需要执行这些配置任务。  

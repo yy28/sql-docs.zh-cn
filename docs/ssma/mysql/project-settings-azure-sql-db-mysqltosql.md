@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0c16fe617b5808f22f15cdf89af8dc7a1e79898
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311986"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>项目设置 (Azure SQL DB) (MySQLToSQL)
 SQL Azure 项目设置可配置要在连接对话框中添加并允许在 SQL Azure 连接实施检测信号机制的 SQL Azure 数据库后缀。  
@@ -37,7 +37,7 @@ SQL Azure 窗格现已推出**项目设置**并**默认项目设置**对话框�
   
 应指定的值中是： ss 的格式 (例如，"4:45 或"0:50)。  
   
-**SQL Azure 服务器后缀**  
+**SQL Azure Server Suffix**  
   
 指定 SQL Azure 服务器后缀  
   

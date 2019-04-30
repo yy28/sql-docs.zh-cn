@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248281"
 ---
 # <a name="executing-batches"></a>执行批处理
 应用程序执行一批语句之前，应首先检查是否支持它们。 为此，应用程序调用**SQLGetInfo** SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项。 第一个选项返回是否行计数生成和结果集生成语句中显式批处理和过程，行计数和结果的返回信息可用性设置中的后一种两个选项时支持参数化执行。  

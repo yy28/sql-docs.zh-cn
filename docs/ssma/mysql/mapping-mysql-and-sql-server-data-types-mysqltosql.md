@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ffe475b53048a97f878bfad1d8bef68d6fb3cfc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312513"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>映射 MySQL 和 SQL Server 数据类型 (MySQLToSQL)
 MySQL 数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库类型。 转换到 MySQL 数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象，您必须指定如何将数据类型从 mysql 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 可以接受默认数据类型映射，也可以自定义映射，如下面的过程中所示。  

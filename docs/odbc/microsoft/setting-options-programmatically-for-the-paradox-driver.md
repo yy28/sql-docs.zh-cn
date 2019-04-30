@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd92344552371e2e052a958485340b70522cc121
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313573"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>以编程方式为 Paradox 驱动程序设置选项
 
-|选项|Description|方法|  
+|Option|Description|方法|  
 |------------|-----------------|------------|  
 |目录|设置的目标的目录。|若要动态设置此选项，请使用**DEFAULTDIR**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)。|  
 |对序列进行排序|字段的排序顺序的序列。<br /><br /> 序列可以是 ASCII （默认值）、 国际、 瑞典语-芬兰语或挪威语-丹麦语。|若要动态设置此选项，请使用**COLLATINGSEQUENCE**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)。|  

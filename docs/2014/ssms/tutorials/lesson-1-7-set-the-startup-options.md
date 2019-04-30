@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312618"
 ---
 # <a name="set-the-startup-options"></a>设置启动选项
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可配置为在启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时打开首选配置的设计图面。 通过将 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 配置为打开首选配置，您可以节省时间。  

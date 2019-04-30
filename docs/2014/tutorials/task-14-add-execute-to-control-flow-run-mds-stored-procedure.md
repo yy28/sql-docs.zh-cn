@@ -1,5 +1,5 @@
 ---
-title: 任务 14:添加执行 SQL 任务添加到控制流以运行 MDS 的存储的过程 |Microsoft Docs
+title: 任务 14：添加执行 SQL 任务添加到控制流以运行 MDS 的存储的过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cf0a02e973d046f3dff2b2df95327cf38e88443c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222741"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>任务 14:将执行 SQL 任务添加到控制流以运行 MDS 的存储过程
-  在将数据加载到 MDS 的临时表后，您运行与该表相关联的存储过程以便将数据从临时表加载到 MDS 数据库的相应表中。 此存储过程具有两个您需要传递的必需的参数：LogFlag 和 VersionName。 LogFlag 指定在临时过程中是否将事务记入日志，而 VersionName 表示模型版本。 请参阅[临时存储过程](https://msdn.microsoft.com/library/hh231028.aspx)主题的更多详细信息。  
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>任务 14：将执行 SQL 任务添加到控制流以运行 MDS 的存储过程
+  在将数据加载到 MDS 的临时表后，您运行与该表相关联的存储过程以便将数据从临时表加载到 MDS 数据库的相应表中。 此存储的过程具有两个需要传递的必需的参数：LogFlag 和 VersionName。 LogFlag 指定在临时过程中是否将事务记入日志，而 VersionName 表示模型版本。 请参阅[临时存储过程](https://msdn.microsoft.com/library/hh231028.aspx)主题的更多详细信息。  
   
  在本任务中，您将执行 SQL 任务添加到控制流中，以便调用该存储过程来将临时数据加载到相应 MDS 表中。  
   

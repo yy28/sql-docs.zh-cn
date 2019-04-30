@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315285"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 数据定义 - ALTER CUBE
 
@@ -92,7 +92,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  除非在根节点新建维度成员，否则提供该维度成员父级名称的有效字符串表达式。  
   
- *成员名称*  
+ *MemberName*  
  提供成员名称的有效字符串表达式。  
   
  *Key_Value*  
@@ -101,7 +101,7 @@ CELL CALCULATION Calculation_Name
  *Property_Name*  
  代表成员属性的有效多维表达式 (MDX) 标识符。  
   
- *Property_value 为*  
+ *Property_Value*  
  定义计算成员属性值的有效多维表达式 (MDX) 标量表达式。  
   
 ## <a name="dropping-a-dimension-member"></a>删除一个维度成员  
@@ -140,7 +140,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  提供要移动维度成员的新父级名称的有效字符串表达式。  
   
- *成员名称*  
+ *MemberName*  
  提供成员名称的有效字符串表达式。  
   
  Unsigned_*整数*  
@@ -152,13 +152,13 @@ CELL CALCULATION Calculation_Name
  UPDATE DIMENSION MEMBER 子句可以修改成员的属性以及与成员相关的自定义成员公式。  
   
 ### <a name="arguments"></a>参数  
- *成员名称*  
+ *MemberName*  
  提供成员名称的有效字符串表达式。  
   
  *MDX_Expression*  
  返回单个成员的有效 MDX 表达式。  
   
- *Property_value 为*  
+ *Property_Value*  
  定义计算成员属性值的有效 MDX 标量表达式。  
   
 ## <a name="creating-a-cell-calculation"></a>创建单元计算  

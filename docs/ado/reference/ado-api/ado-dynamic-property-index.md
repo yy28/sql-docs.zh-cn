@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249559"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 动态属性索引
-数据提供程序、 服务提供程序和服务组件可以添加到动态属性**属性**的未打开集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)并[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 打开这些对象时，给定的提供程序还可能会插入其他属性。 中列出了这些属性的一些[ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)部分。 下列出中的特定提供程序的详细信息[附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)部分。  
+数据提供程序、 服务提供程序和服务组件可以添加到动态属性**属性**的未打开集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)并[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 打开这些对象时，给定的提供程序还可能会插入其他属性。 中列出了这些属性的一些[ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)部分。 下列出中的特定提供程序的详细信息[附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)部分。  
   
  下表是为每个标准的 OLE DB 提供程序动态属性的 ADO 和 OLE DB 名称 cross-indexes。 你的提供商可能此处添加更多属性比列出。 有关特定于提供程序的动态属性的特定信息，请参阅提供程序文档。  
   
@@ -52,12 +52,12 @@ ms.locfileid: "47684725"
 |隔离级别|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |隔离保持|DBPROP_SUPPORTEDTXNISORETAIN|  
 |区域设置标识符|DBPROP_INIT_LCID|  
-|位置|DBPROP_INIT_LOCATION|  
+|Location|DBPROP_INIT_LOCATION|  
 |最大索引大小|DBPROP_MAXINDEXSIZE|  
 |最大行大小|DBPROP_MAXROWSIZE|  
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |最大的表中选择|DBPROP_MAXTABLESINSELECT|  
-|“模式”|DBPROP_INIT_MODE|  
+|模式|DBPROP_INIT_MODE|  
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|  
 |多个结果|DBPROP_MULTIPLERESULTS|  
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -114,13 +114,13 @@ ms.locfileid: "47684725"
 |IRowsetFind|DBPROP_IROWSETFIND|  
 |IRowsetIdentity|DBPROP_IROWSETIDENTITY|  
 |IRowsetInfo|DBPROP_IROWSETINFO|  
-|IrowsetLocate|DBPROP_IROWSETLOCATE|  
+|IRowsetLocate|DBPROP_IROWSETLOCATE|  
 |IRowsetRefresh|DBPROP_IROWSETREFRESH|  
 |IRowsetResynch||  
 |IRowsetScroll|DBPROP_IROWSETSCROLL|  
 |IRowsetUpdate|DBPROP_IROWSETUPDATE|  
 |IRowsetView|DBPROP_IROWSETVIEW|  
-|IrowsetIndex|DBPROP_IROWSETINDEX|  
+|IRowsetIndex|DBPROP_IROWSETINDEX|  
 |ISequentialStream|DBPROP_ISEQUENTIALSTREAM|  
 |IStorage|DBPROP_ISTORAGE|  
 |IStream|DBPROP_ISTREAM|  

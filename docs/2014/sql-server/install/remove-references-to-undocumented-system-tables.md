@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c2c25120191b88abcf177723749aa5c46ba44ff
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294821"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>删除对未记录的系统表的引用
   在早期版本中未记录的许多系统表都已更改或不再存在，因此，如果使用这些表，在升级可能会出现错误。 由于升级顾问查找的是针对系统表名称的引用，因而它将报告任何与系统表同名的用户表。  

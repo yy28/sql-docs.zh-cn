@@ -5,17 +5,17 @@ description: 使用 curl 在 SQL Server 2019 大数据群集上将数据加载�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 56bee3241427b9de9768e7bdd9e49646b51521d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: 74e08c16e528c580bf78b3928a1aaf0c9b3eb069
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947793"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472095"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>使用 curl 在 SQL Server 大数据群集上将数据加载到 HDFS
 
@@ -25,10 +25,10 @@ ms.locfileid: "59947793"
 
 ## <a name="obtain-the-service-external-ip"></a>获取服务的外部 IP
 
-在完成部署，并且其访问权限将经历 Knox 启动 WebHDFS。 通过名为的 Kubernetes 服务公开的 Knox 终结点**终结点安全**。  若要创建要上传/下载文件的必要 WebHDFS URL，需要**终结点安全**服务外部的 IP 地址和群集的名称。 可以获取**终结点安全**服务外部的 IP 地址通过运行以下命令：
+在完成部署，并且其访问权限将经历 Knox 启动 WebHDFS。 通过名为的 Kubernetes 服务公开的 Knox 终结点**网关 svc 外部**。  若要创建要上传/下载文件的必要 WebHDFS URL，需要**网关 svc 外部**服务外部的 IP 地址和群集的名称。 可以获取**网关 svc 外部**服务外部的 IP 地址通过运行以下命令：
 
 ```bash
-kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
@@ -38,7 +38,7 @@ kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.
 
 现在，您可以构造用于访问 WebHDFS，如下所示的 URL:
 
-`https://<endpoint-security service external IP address>:30443/gateway/default/webhdfs/v1/`
+`https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
 例如：
 
@@ -49,7 +49,7 @@ kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.
 下列表文件**hdfs: / / airlinedata**，使用以下 curl 命令：
 
 ```bash
-curl -i -k -u root:root-password -X GET 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
+curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>将本地文件放置在 HDFS
@@ -57,7 +57,7 @@ curl -i -k -u root:root-password -X GET 'https://<endpoint-security IP external 
 若要将新文件放**test.csv**从本地目录更改为 airlinedata 目录，请使用以下 curl 命令 (**内容类型**参数是必需的):
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>创建一个目录
@@ -65,7 +65,7 @@ curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP extern
 若要创建一个目录**测试**下`hdfs:///`，使用以下命令：
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## <a name="next-steps"></a>后续步骤

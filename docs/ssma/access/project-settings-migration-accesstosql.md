@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299293"
 ---
 # <a name="project-settings-migration-accesstosql"></a>项目设置 （迁移） (AccessToSQL)
 迁移项目设置允许你配置如何将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
@@ -33,47 +33,47 @@ ms.locfileid: "51659336"
 **检查约束**  
 指定当其将数据添加到表 SSMA 是否应检查约束。  
   
--   **默认模式**: False  
+-   **默认模式**:False  
   
--   **乐观模式**: True  
+-   **乐观模式**:True  
   
--   **完整模式**: False  
+-   **完整模式**:False  
   
 **激发触发器**  
 指定添加到数据时 SSMA 是否应激发插入触发器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。  
   
--   **默认模式**: False  
+-   **默认模式**:False  
   
--   **乐观模式**: True  
+-   **乐观模式**:True  
   
--   **完整模式**: False  
+-   **完整模式**:False  
   
 **保留标识**  
 指定 SSMA 时它将添加到的数据是否保留对其进行访问的标识值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果此值为 False，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分配标识值。  
   
--   **默认模式**: True  
+-   **默认模式**:True  
   
--   **乐观模式**: True  
+-   **乐观模式**:True  
   
--   **完整模式**: False  
+-   **完整模式**:False  
   
 **保留 Null**  
 指定是否 SSMA 保留源数据中的 null 值时将添加到数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]无论中指定的默认值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
--   **默认模式**: True  
+-   **默认模式**:True  
   
--   **乐观模式**: False  
+-   **乐观模式**:False  
   
--   **完整模式**: True  
+-   **完整模式**:True  
   
 **表锁**  
 指定时它将数据添加到表数据迁移期间，SSMA 是否锁定表。 如果值为 False，SSMA 使用行锁。  
   
--   **默认模式**: True  
+-   **默认模式**:True  
   
--   **乐观模式**: True  
+-   **乐观模式**:True  
   
--   **完整模式**: True  
+-   **完整模式**:True  
   
 **替换为不受支持的日期**  
 指定是否 SSMA 应纠正访问日期早于最早[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]datetime 日期 (01 1753 年 1 月)。  

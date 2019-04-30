@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04bd9a37d87c91fe3f42cbb1fdf464660ba5a299
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313468"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>以编程方式为文本文件驱动程序设置选项
 
-|选项|Description|方法|  
+|Option|Description|方法|  
 |------------|-----------------|------------|  
 |数据源名称|用于标识数据源，例如工资单或人员的名称。|若要动态设置此选项，请使用**DSN**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  
 |定义格式|显示**定义文本格式**对话框中，可用于指定数据源目录中为单独的表的架构。|此选项不能动态设置通过调用[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  

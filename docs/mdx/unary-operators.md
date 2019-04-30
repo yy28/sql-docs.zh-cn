@@ -1,5 +1,5 @@
 ---
-title: 一元运算符 |Microsoft 文档
+title: 一元运算符 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6704d9a2fad8b1b19d7757c0e6de40bfccdcc1f8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287803"
 ---
 # <a name="unary-operators"></a>一元运算符
 
@@ -41,7 +41,7 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- MDX 此外，使用特殊的一元运算符以确定执行的聚合操作[RollupChildren](../mdx/rollupchildren-mdx.md)函数。 有关这些特殊的一元运算符的详细信息，请参阅[向维度中添加自定义聚合](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md)。  
+ 此外，MDX 使用特殊的一元运算符来确定由执行聚合运算[RollupChildren](../mdx/rollupchildren-mdx.md)函数。 有关这些特殊的一元运算符的详细信息，请参阅[向维度中添加自定义聚合](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [运算符&#40;MDX 语法&#41;](../mdx/operators-mdx-syntax.md)  

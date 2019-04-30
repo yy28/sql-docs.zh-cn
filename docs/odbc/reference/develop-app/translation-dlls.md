@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec1d0e23019f3e5b68ad38711c1f041b160ceb31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305753"
 ---
 # <a name="translation-dlls"></a>转换 DLL
 应用程序和数据源通常将数据存储在不同的字符集。 ODBC 提供了将允许驱动程序将数据从设置到另一个字符转换的通用机制。 它包含实现的转换函数的 DLL **SQLDriverToDataSource**并**SQLDataSourceToDriver**，由驱动程序进行转换的数据源之间流动的所有数据调用和驱动程序。 此 DLL 可由应用程序开发人员，驱动程序开发人员，编写或第三方。  

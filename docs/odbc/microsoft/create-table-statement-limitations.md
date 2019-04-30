@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f5eab1c3bf6891f10c897966035dced2ffdc10ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232212"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE 语句限制
 使用 Microsoft Access、 Microsoft Excel 或 Paradoxdriver 时，和未指定的文本或二进制列长度 （或指定为 0），列长度将设置为 255。  

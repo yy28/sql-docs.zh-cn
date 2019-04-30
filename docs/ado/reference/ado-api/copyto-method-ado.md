@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308910"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 复制指定的数目的字符或字节 (具体取决于[类型](../../../ado/reference/ado-api/type-property-ado-stream.md)) 中[Stream](../../../ado/reference/ado-api/stream-object-ado.md)到另一个**Stream**对象。  
@@ -41,7 +41,7 @@ Stream.CopyTo DestStream, NumChars
 > [!NOTE]
 >  *DestStream*参数不能的代理**Stream**对象，因为这需要访问的专用接口上**Stream**不能为远程连接到的对象客户端。  
   
- *numChars*  
+ *NumChars*  
  可选。 **整数**值，该值指定要从当前源中的位置复制的字节或字符数**Stream**到目标**Stream**。 默认值为-1，指定从当前位置到复制所有字符或字节[EOS](../../../ado/reference/ado-api/eos-property.md)。  
   
 ## <a name="remarks"></a>备注  

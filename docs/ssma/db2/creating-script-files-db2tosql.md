@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cddfa2e3fd5d1263bf4f9e5e0bb1fd4c6e8fe675
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520645"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453413"
 ---
 # <a name="creating-script-files-db2tosql"></a>创建脚本文件 (DB2ToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建变量值文件和服务器连接文件。  
@@ -26,7 +26,7 @@ ms.locfileid: "52520645"
   
 2.  **服务器：** 使用户能够设置源/目标服务器定义。 这也可以是单独的服务器连接文件中。  
   
-3.  **脚本命令：** 使用户能够执行 SSMA 工作流命令。  
+3.  **script-commands:** 使用户能够执行 SSMA 工作流命令。  
   
 下面将详细介绍每个部分：  
   
@@ -84,9 +84,9 @@ ms.locfileid: "52520645"
   
     即使用只有一个或另一个指定的属性：  
   
-    -   源-使用-上次使用 ="true"（默认值） 或源服务器 ="source_servername"  
+    -   source-use-last-used="true" (default) or source-server="source_servername"  
   
-    -   目标-使用-上次使用 ="true"（默认值） 或目标服务器 ="target_servername"  
+    -   target-use-last-used="true" (default) or target-server="target_servername"  
   
     **示例：**  
   
@@ -194,7 +194,7 @@ ms.locfileid: "52520645"
   
 5.  **转换器覆盖提供程序：** 这使用户能够处理对象已在目标上存在的元数据库。 可能的操作包括：  
   
-    -   error:在控制台显示错误并停止执行。  
+    -   错误：在控制台显示错误并停止执行。  
   
     -   覆盖：将覆盖现有对象值。 默认情况下完成此操作。  
   
@@ -286,7 +286,7 @@ ms.locfileid: "52520645"
   
     -   -错误：记录仅致命错误消息。  
   
-    -   error:唯一的错误和严重错误消息记录。  
+    -   错误：唯一的错误和严重错误消息记录。  
   
     -   警告：除了调试和信息消息记录的所有级别。  
   

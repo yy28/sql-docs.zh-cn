@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255793"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查询结果 (Visual Database Tools)
   在“查询和视图设计器”中运行查询后，可以清除“结果”窗格。 此过程适用于通过使用对象资源管理器中的“打开视图”或“打开表”选项创建的查询。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，在查询编辑器中运行查询后，除非关闭查询编辑器窗口或运行其他查询，否则不能清除“结果”窗格。  

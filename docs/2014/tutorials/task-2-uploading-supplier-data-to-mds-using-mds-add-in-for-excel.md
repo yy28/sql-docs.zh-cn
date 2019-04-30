@@ -1,5 +1,5 @@
 ---
-title: 任务 2:供应商数据上载到 MDS 外接程序用于 Excel 的 MDS |Microsoft Docs
+title: 任务 2：供应商数据上载到 MDS 外接程序用于 Excel 的 MDS |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250224"
 ---
-# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>任务 2:使用用于 Excel 的 MDS 外接程序将供应商数据上载到 MDS
+# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>任务 2：使用用于 Excel 的 MDS 外接程序将供应商数据上传到 MDS
   在本任务中，将发布到的已清理和供应商数据**MDS**使用**MDS 外接程序 excel**。 创建名为实体**供应商**中**供应商**在上一课中创建的模型。 该实体对于 Excel 文件中的每一列具有一个属性。 Supplier 实体的 Code 和 Name 属性分别对应于**SupplierID**并**Supplier Name** Excel 中的列。  
   
 1.  打开**清理和匹配 Suppliers.xls**中**Excel**。  

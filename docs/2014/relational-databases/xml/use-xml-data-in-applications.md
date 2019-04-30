@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232436"
 ---
 # <a name="use-xml-data-in-applications"></a>使用 XML 数据应用程序
   本主题介绍在应用程序中使用 `xml` 数据类型时可用的选项。 本主题包括有关下列操作的信息：  

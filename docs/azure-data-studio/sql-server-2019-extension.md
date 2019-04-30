@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934123"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472187"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 扩展 （预览版）
 
@@ -30,9 +30,9 @@ SQL Server 2019 扩展 （预览版） 提供新功能和工具支持的寄送�
 
    |平台|下载|发布日期|版本
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|2019 年 4 月 18日日 |0.12.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|2019 年 4 月 18日日 |0.12.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|2019 年 4 月 18日日 |0.12.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|2019 年 4 月 18日日 |0.12.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|2019 年 4 月 18日日 |0.12.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|2019 年 4 月 18日日 |0.12.1
 
 1. 在 Azure Data Studio 中选择**安装 VSIX 包中的扩展插件**从**文件**菜单，然后选择已下载的.vsix 文件。
 
@@ -44,7 +44,7 @@ SQL Server 2019 扩展 （预览版） 提供新功能和工具支持的寄送�
 
 1. 依赖项后完成的安装，关闭并重新打开 Azure Data Studio。 **SQL Server 大数据群集**之前重新启动 Azure Data Studio，连接类型不可用。
 
-## <a name="changes-in-release-012"></a>0.12 版本中的更改
+## <a name="changes-in-release-0121"></a>版本 0.12.1 中的更改
 
 * **SQL Server 大数据群集**连接类型已在此版本中被删除。 从 SQL Server 大数据群集连接以前提供的所有功能现都已推出的 SQL Server 连接。
 * HDFS 浏览可以下找到**Data Services**文件夹

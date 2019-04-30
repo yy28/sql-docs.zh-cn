@@ -1,5 +1,5 @@
 ---
-title: 项 （元组） (MDX) |Microsoft 文档
+title: Item （元组） (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58cb48c467bbd3ca1c929da1fdff4881086d2e1d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273082"
 ---
 # <a name="item-tuple-mdx"></a>Item（元组）(MDX)
 
@@ -45,21 +45,21 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *Index*  
  根据集中位置指定要返回的特定元组的有效数值表达式。  
   
-## <a name="remarks"></a>Remarks  
- **项**函数返回指定集的元组。 有三个可能的方法来调用**项**函数：  
+## <a name="remarks"></a>备注  
+ **项**函数返回从指定集的元组。 有三种可能的方法来调用**项**函数：  
   
--   如果指定单个字符串表达式，则**项**函数将返回指定元组。 例如，"([2005].Q3, [Store05])"。  
+-   如果指定了一个字符串表达式，则**项**函数返回指定元组。 例如，"([2005].Q3, [Store05])"。  
   
 -   如果指定多个字符串表达式，则**项**函数返回由指定的坐标定义的元组。 字符串数必须与轴数一致，而且每个字符串都必须标识一个唯一的层次结构。 例如，"[2005].Q3", "[Store05]"。  
   
--   如果指定一个整数，则**项**函数返回的从零开始的位置指定的元组*索引*。  
+-   如果指定一个整数，则**项**函数返回在指定的从零开始的位置的元组*索引*。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回 ([1996],Sales)：  
   
  `{([1996],Sales), ([1997],Sales), ([1998],Sales)}.Item(0)`  
   
- 下面的示例使用一个级别表达式，并返回 Australia 中每个 State-Province 的 Internet Sales Amount 及其占 Australia 总 Internet Sales Amount 的百分比。 此示例使用 Item 函数以返回集中提取的第一个 （和仅元组）**上级**函数。  
+ 下面的示例使用一个级别表达式，并返回 Australia 中每个 State-Province 的 Internet Sales Amount 及其占 Australia 总 Internet Sales Amount 的百分比。 此示例使用 Item 函数从返回的集中提取第一个 （和仅元组）**上级**函数。  
   
 ```  
 WITH MEMBER Measures.x AS [Measures].[Internet Sales Amount] /   
@@ -79,6 +79,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

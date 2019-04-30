@@ -1,26 +1,26 @@
 ---
-title: 在 SQL Server 2019-SQL Server 机器学习服务的 Java 语言扩展
+title: 在 SQL Server 2019-SQL Server 语言扩展中的 Java 语言扩展
 description: 安装、 配置和验证 Linux 和 Windows 系统上 SQL Server 2019 的 Java 语言扩展。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 725aebbcd40adf0c571dd6b99b68cf1be389af8b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: db57689227445b0f50d6ff59fbf81e1d84ecacdb
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582082"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473407"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>在 SQL Server 2019 Java 语言扩展 
 
-从 Windows 和 Linux 上的 SQL Server 2019 预览版中开始，你可以运行自定义 Java 代码[可扩展性框架](../concepts/extensibility-framework.md)作为数据库引擎实例的附加项。 
+从 Windows 和 Linux 上的 SQL Server 2019 预览版中开始，你可以自定义 Java 代码使用运行[可扩展性框架](../concepts/extensibility-framework.md)作为数据库引擎实例的附加项。
 
-可扩展性框架是用于执行外部代码的体系结构：（从 SQL Server 2019），Java [（从 SQL Server 2017） 的 Python](../concepts/extension-python.md)，并[R （从 SQL Server 2016 开始）](../concepts/extension-r.md)。 执行代码是独立于核心引擎进程，但与 SQL Server 的查询执行完全集成。 这意味着您可以将数据从任何 SQL Server 查询推送到外部运行时，并使用或持久保存回 SQL Server 中的结果。
+可扩展性框架是用于执行外部代码的体系结构：（从 SQL Server 2019），Java [（从 SQL Server 2017） 的 Python](../concepts/extension-python.md)，并[R （从 SQL Server 2016 开始）](../concepts/extension-r.md)。 执行代码是独立于核心引擎进程，但与 SQL Server 的查询执行完全集成。 这意味着您可以将数据从任何 SQL Server 查询推送到外部运行时 (Java)，并使用或持久保存回 SQL Server 中的结果。
 
 使用任何编程语言扩展，如系统存储过程[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)是用于执行预编译的 Java 代码的接口。
 
@@ -30,7 +30,7 @@ ms.locfileid: "59582082"
 
 SQL Server 2019 预览实例是必需的。 早期版本不具有 Java 集成。
 
-支持 Java 8。 Java Runtime Environment (JRE) 的最低要求，但 Jdk 非常有用，如果您需要 Java 编译器或开发包。 JDK 是全包含所有，如果安装了 JDK，因为不需要 JRE。
+Java 8 目前受支持的版本。 较新版本，如 Java 11 中，应使用的语言扩展，但目前不支持。 Java Runtime Environment (JRE) 的最低要求，但 JDK 是所需的 Java 编译器和开发包的情况下很有用。 JDK 是全包含所有，如果安装了 JDK，因为不需要 JRE。
 
 可以使用你的首选的 Java 8 分发。 以下是两个建议的分布：
 
@@ -39,7 +39,7 @@ SQL Server 2019 预览实例是必需的。 早期版本不具有 Java 集成。
 | [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows 和 Linux | 是 | 是 |
 | [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows 和 Linux | 是 | 否 |
 
-在 Linux 上， **mssql server 扩展性 java**包会自动安装 JRE 8，如果尚未安装。 安装脚本还将 JVM 路径添加到名为 JRE_HOME 环境变量。
+在 Linux 上，目前**mssql server 扩展性 java**包会自动安装 JRE 8，如果尚未安装。 安装脚本还将 JVM 路径添加到名为 JRE_HOME 环境变量。
 
 在 Windows 中，我们建议安装下默认 JDK`/Program Files/`文件夹在可能的情况。 否则，需要额外配置，以授予对可执行文件的权限。 有关详细信息，请参阅[授予的权限 (Windows)](#perms-nonwindows)本文档中的部分。
 
@@ -63,7 +63,7 @@ sudo apt-get install mssql-server-extensibility-java
 sudo zypper install mssql-server-extensibility-java
 ```
 
-当你安装**mssql server 扩展性 java**，如果尚未安装包将自动安装 JRE 8。 它还将添加到名为 JAVA_HOME 的环境变量的 JVM 路径。
+当你安装**mssql server 扩展性 java**，如果尚未安装包将自动安装 JRE 8。 它还将添加到名为 JRE_HOME 环境变量的 JVM 路径。
 
 完成安装后下, 一步是[配置外部脚本执行](#configure-script-execution)。
 
@@ -76,14 +76,13 @@ sudo zypper install mssql-server-extensibility-java
 
 如果不使用外部库，您需要向 SQL Server 提供有权在 jar 中执行的 Java 类。
 
-若要授予读取和执行 jar 文件的访问权限，请运行以下**chmod**命令上的 jar 文件。 我们建议始终将类文件放在一个 jar，当您使用 SQL Server 时。 创建一个 jar 的帮助，请参阅[如何创建一个 jar 文件](#create-jar)。
+若要授予读取和执行到 jar 文件的访问权限，请运行以下**chmod**命令上的 jar 文件。 我们建议始终将类文件放在一个 jar，当您使用 SQL Server 时。 创建一个 jar 的帮助，请参阅[如何创建一个 jar 文件](#create-jar)。
 
 ```cmd
 chmod ug+rx <MyJarFile.jar>
 ```
+
 此外需要为要读取/执行的 jar 文件提供 mssql_satellite 权限。
-
-
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -105,12 +104,12 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ### <a name="add-the-jrehome-variable"></a>添加 JRE_HOME 变量
 
-JRE_HOME 是一个环境变量，指定 Java 解释器的位置。 在此步骤中，系统环境变量为其创建在 Windows 上。
+JRE_HOME 是用于指定 Java 解释器的位置的系统环境变量。 在此步骤中，系统环境变量为其创建在 Windows 上。
 
 1. 查找并复制 JRE 主目录路径 (例如， `C:\Program Files\Zulu\zulu-8\jre\`)。
 
-    具体取决于你的首选 Java 分发，你的 JRE 的 JDK 的位置可能不同于上面的示例路径。 
-    即使已安装 JDK，则通常时间将获取 JRE 子文件夹作为该安装的一部分。 
+    具体取决于你的首选 Java 分发，你的 JRE 的 JDK 的位置可能不同于上面的示例路径。
+    即使已安装 JDK，您通常时间将作为该安装的一部分获取的 JRE 子文件夹，因此在这种情况下点到 jre 文件夹。
     Java 扩展将尝试从路径 %jre_home%\bin\server 加载 jvm.dll。
 
 2. 在控制面板中，打开**系统和安全**，打开**系统**，然后单击**高级系统属性**。
@@ -129,7 +128,7 @@ JRE_HOME 是一个环境变量，指定 Java 解释器的位置。 在此步骤�
 
 ### <a name="grant-access-to-non-default-jre-folder-windows-only"></a>授予对非默认 JRE 文件夹 (仅 Windows) 访问权限
 
-运行**icacls**命令从*提升*行，以授予访问权限**SQLRUsergroup**和 SQL Server 服务帐户 (在**ALL_APPLICATION_包**) 用于访问 JRE。 命令将以递归方式授予对所有文件和给定的目录路径下的文件夹的访问权限。
+如果你不安装的 JDK 或 JRE program files 下，您需要执行以下步骤。 运行**icacls**命令从*提升*行，以授予访问权限**SQLRUsergroup**和 SQL Server 服务帐户 (在**ALL_APPLICATION_包**) 用于访问 JRE。 命令将以递归方式授予对所有文件和给定的目录路径下的文件夹的访问权限。
 
 #### <a name="sqlrusergroup-permissions"></a>SQLRUserGroup 的权限
 
@@ -151,7 +150,7 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="configure-script-execution"></a>配置脚本执行
 
-此时，已基本准备好在 Linux 或 Windows 上运行 Java 代码。 作为最后一个步骤中，切换到 SQL Server Management Studio 或运行 TRANSACT-SQL 脚本，以启用外部脚本执行的其他工具。
+此时，已基本准备好在 Linux 或 Windows 上运行 Java 代码。 作为最后一个步骤中，切换到 SQL Server Management Studio、 Azure 数据 studio、 SQL CMD 或另一个工具，可用于运行 TRANSACT-SQL 脚本以启用外部脚本执行。
 
   ```sql
   EXEC sp_configure 'external scripts enabled', 1
@@ -161,13 +160,13 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="verify-installation"></a>验证安装
 
-若要确认安装是否正常工作，请创建并运行[示例应用程序](java-first-sample.md)使用您刚安装，将文件放在之前配置的类路径中的 JDK。
+若要确认安装是否正常工作，请创建并运行[示例应用程序](java-first-sample.md)使用 Java 运行时只需安装并添加到 JRE_HOME。
 
-## <a name="differences-in-ctp-24"></a>CTP 2.4 中的差异
+## <a name="differences-in-ctp-25"></a>在 ctp 版本 2.5 的差异
 
 如果你已熟悉机器学习服务，扩展的授权和隔离模型已在此版本中更改。 有关详细信息，请参阅[SQL Server 机器 2019年学习服务安装中的差异](../install/sql-machine-learning-services-ver15.md)。
 
-## <a name="limitations-in-ctp-24"></a>CTP 2.4 中的限制
+## <a name="limitations-in-ctp-25"></a>在 ctp 版本 2.5 的限制
 
 * 输入和输出缓冲区中值的数目不能超过`MAX_INT (2^31-1)`，因为它是可以在 Java 中的数组中分配的元素的最大数目。
 
@@ -194,4 +193,5 @@ jar -cf <MyJar.jar> *.class
 
 + [如何在 SQL Server 中调用 Java](howto-call-java-from-sql.md)
 + [SQL Server 中的 Java 示例](java-first-sample.md)
++ [Microsoft 扩展适用于 Microsoft SQL Server 的 Java SDK](java-sdk.md)
 + [Java 和 SQL Server 数据类型](java-sql-datatypes.md)

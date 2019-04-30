@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1d1a55d3b417ff7a0a673bda8d289a72d7c1cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312855"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long 数据和 SQLSetPos 及 SQLBulkOperations
 更新行时在 SQL 语句中使用参数的情况一样，可以发送长数据**SQLBulkOperations**或**SQLSetPos**或插入的行时**SQLBulkOperations**. 将数据发送中使用多个调用部件**SQLPutData**。 在执行时为其发送数据的列被称为*执行时数据列*。  
@@ -46,4 +46,4 @@ ms.locfileid: "47658425"
   
 6.  调用**SQLParamData**再次以指示它已发送的所有列的数据。 如果尚未发送的数据的任何执行时数据列，驱动程序将返回 SQL_NEED_DATA 和下一步执行时数据列中; 的唯一值应用程序返回到步骤 5。 如果数据已发送的所有执行时数据列，行的数据是发送到数据源。 **SQLParamData** ，然后再返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 和可以返回任何 SQLSTATE **SQLBulkOperations**或**SQLSetPos**可以返回。  
   
- 之后**SQLBulkOperations**或**SQLSetPos**返回 SQL_NEED_DATA 和最后一个执行时数据列已完全将数据之前，该语句是处于需要的数据状态。 在此状态下，应用程序可以调用仅**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函数都返回 SQLSTATE HY010 （函数序列错误）。 调用**SQLCancel**取消该语句的执行并将其返回到其以前的状态。 有关详细信息，请参阅[附录 b: ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。
+ 之后**SQLBulkOperations**或**SQLSetPos**返回 SQL_NEED_DATA 和最后一个执行时数据列已完全将数据之前，该语句是处于需要的数据状态。 在此状态下，应用程序可以调用仅**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函数都返回 SQLSTATE HY010 （函数序列错误）。 调用**SQLCancel**取消该语句的执行并将其返回到其以前的状态。 有关详细信息，请参阅[附录 b:状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。

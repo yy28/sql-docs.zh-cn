@@ -1,5 +1,5 @@
 ---
-title: 用户名 (MDX) |Microsoft 文档
+title: UserName (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8c08855d70d6a880607cc4310e6adcabbf7d9ad
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298024"
 ---
 # <a name="username-mdx"></a>UserName (MDX)
 
@@ -28,10 +28,10 @@ ms.locfileid: "34743476"
 UserName [ ( ) ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  返回值为以下格式的字符串：  
   
- *域名 \ 用户名*  
+ *domain-name\user-name*  
   
 ## <a name="example"></a>示例  
  下例将返回正在执行查询的用户的用户名。  
@@ -44,6 +44,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

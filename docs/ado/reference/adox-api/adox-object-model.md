@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 334f96c221e87188bc830c868170852d690e3269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308365"
 ---
 # <a name="adox-object-model"></a>ADOX 对象模型
 下图说明了如何表示和 ADOX 中的相关对象。 有关特定对象或集合的详细信息，请参阅特定参考主题，或[ADOX 对象](../../../ado/reference/adox-api/adox-objects.md)并[ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)。  

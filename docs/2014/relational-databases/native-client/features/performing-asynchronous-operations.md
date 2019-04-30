@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63246149"
 ---
 # <a name="performing-asynchronous-operations"></a>执行异步操作
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许应用程序执行异步数据库操作。 异步处理将使方法能够立即返回，而不会阻塞调用线程。 这使得多线程机制能提供更强大的功能和灵活性，而不需要开发人员显式创建线程或处理同步。 应用程序将在初始化数据库连接时或初始化由执行命令所生成的结果时请求异步处理。  
@@ -60,7 +60,7 @@ ms.locfileid: "48110677"
   
  然后，可通过 QueryInterface 查询多个结果接口，从而获得 IDBAsynchStatus 和 ISSAsynchStatus 接口。  
   
- 命令执行完毕后，可照常使用 IMultipleResults，但同步时有一个例外，即可能返回 DB_S_ASYNCHRONOUS，此情况下可使用 IDBAsynchStatus 或 ISSAsynchStatus 确定操作的完成时间。  
+ 该命令完成后执行时， **IMultipleResults**可用作正常，并且从同步的情况下的一个例外：可能返回 DB_S_ASYNCHRONOUS，在这种情况下**IDBAsynchStatus**或**ISSAsynchStatus**可用于确定何时完成该操作。  
   
 ## <a name="examples"></a>示例  
  在以下示例中，应用程序调用非阻止方法，执行一些其他处理，然后返回以处理结果。 ISSAsynchStatus::WaitForAsynchCompletion 等待内部事件对象，直到异步执行操作完成，或超过了 dwMilisecTimeOut 指定的时间。  

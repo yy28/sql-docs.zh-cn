@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228113"
 ---
 # <a name="understanding-cursors-and-locks"></a>了解游标和锁定
 请务必了解这样您就可以选择应用程序的数据访问要求的最佳和最高效的游标类型游标的工作方式。 不太理想的游标配置可以进行数据访问操作带来痛苦的煎熬。  

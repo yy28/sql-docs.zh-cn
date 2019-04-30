@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245785"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自定义菜单和快捷键
-  借助于键盘快捷键，您可以通过按 ALT + 选择菜单命令或按钮*\<单个字母 >*。 例如，若要打开“编辑”菜单，请按 Alt+E。 使用“自定义”对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
+  借助于键盘快捷键，可以通过按 ALT+\<single letter> 来选择菜单命令或按钮。 例如，若要打开“编辑”菜单，请按 Alt+E。 使用“自定义”对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
   
  用于存储过程的键盘快捷键（使用 Ctrl 键）可以从“工具”/“选项”对话框的“键盘”页中创建。  
   

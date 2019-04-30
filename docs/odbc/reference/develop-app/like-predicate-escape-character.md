@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312923"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 谓词转义字符
-在中**如**谓词，百分号 （%） 匹配零个或多个任意字符和下划线 (_) 匹配的任何一个字符。 若要匹配实际的百分比符号或下划线中**如**谓词，转义符必须在之前的百分比符号或下划线。 定义的转义序列**如**谓词转义符是：  
+在中**如**谓词，百分号 （%）匹配零个或多个任意字符和下划线 (_) 匹配的任何一个字符。 若要匹配实际的百分比符号或下划线中**如**谓词，转义符必须在之前的百分比符号或下划线。 定义的转义序列**如**谓词转义符是：  
   
- **{转义 '** *转义符* **}**  
+ **{escape '** *escape-character* **'}**  
   
  其中*转义符*是数据源支持的任何字符。  
   
- 详细了解类似转义序列，请参阅[转义序列等](../../../odbc/reference/appendixes/like-escape-sequence.md)附录 c: SQL 语法中。  
+ 详细了解类似转义序列，请参阅[转义序列等](../../../odbc/reference/appendixes/like-escape-sequence.md)附录 c： 驱动器中SQL 语法。  
   
  例如，以下 SQL 语句创建客户相同的结果的集以字符"%AAA"开头的名称。 第一个语句使用转义序列语法。 第二个语句的本机语法用于 Microsoft® 访问并不是可互操作。 请注意，在每个字符的第二个百分比**如**谓词是匹配零个或多个任意字符的通配符字符。  
   

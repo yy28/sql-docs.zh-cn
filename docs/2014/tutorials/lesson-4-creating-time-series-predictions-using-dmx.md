@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312093"
 ---
-# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>第 4 课：创建时序预测使用 DMX
+# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>第 4 课：使用 DMX 创建时序预测
   在本课和下一课中，您将使用数据挖掘扩展插件 (DMX) 创建不同类型的基于时序模型中创建的预测[第 1 课：创建时序挖掘模型和挖掘结构](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)和[第 2 课：向时序挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)。  
   
  使用时序模型，可以通过许多选项来进行预测：  

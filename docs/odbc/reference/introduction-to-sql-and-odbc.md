@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4cb5d88243b604d7ca0fe40ee8b7f9a040380150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63274415"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>SQL 和 ODBC 简介
 创建 ODBC 是为了提供对不同，或异类，数据库管理系统 (Dbms) 的访问权限的统一方法。 本简介讨论与 ODBC 的开发相关的概念。  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: dd1068e509a14c9d7388beea3727f2b30dd3ba40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299271"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>全局设置 （对话框） (AccessToSQL)
 使用的对话框页面**全局设置**对话框可以指定的默认用户执行任何操作和 SSMA 的警告设置。  

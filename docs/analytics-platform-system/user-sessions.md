@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 33bf052e27640ee08784927351579378bffbec2b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316361"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>分析平台系统中的用户会话
 具有适当权限的登录名可以管理 SQL Server PDW 设备，包括执行这些操作上的所有登录名的会话：  

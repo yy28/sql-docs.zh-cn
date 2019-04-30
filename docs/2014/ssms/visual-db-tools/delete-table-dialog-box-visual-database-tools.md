@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316112"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>“删除表”对话框 (Visual Database Tools)
   使用此对话框可以指定要从中删除记录的表。 当您将查询的类型更改为 DELETE 查询时，如果“关系图”窗格中显示了多个表，则将显示此对话框。  

@@ -14,21 +14,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 398d098615a0453cb016286867836388fd817540
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631785"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473030"
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 部分  
+ 支持：Partial  
   
- ODBC API 一致性： 级别 1  
+ ODBC API 一致性：级别 1  
   
- 设置可以控制以下方面的连接的选项。 此函数支持部分： 驱动程序支持的所有值*fOption*自变量，但不支持的一些*vParam*值*fOption*参数SQL_TXN_ISOLATION。  
+ 设置可以控制以下方面的连接的选项。 部分支持此函数：该驱动程序支持的所有值*fOption*自变量，但不支持的一些*vParam*值*fOption* SQL_TXN_ISOLATION 参数。  
   
  下表描述了仅特定于 Visual FoxPro ODBC 驱动程序实现的行为与这些参数**SQLSetConnectOption**。  
   

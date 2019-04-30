@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288075"
 ---
 # <a name="allocating-and-freeing-buffers"></a>分配和释放缓冲区
 所有缓冲区分配和释放应用程序。 如果缓冲区不会被推迟，它需要仅存在对函数调用的持续时间。 例如， **SQLGetInfo**返回通过指向的缓冲区中的特定选项与关联的值*InfoValuePtr*参数。 可以在调用后立即释放此缓冲区**SQLGetInfo**，下面的代码示例中所示：  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298143"
 ---
 # <a name="ado-glossary-terms"></a>ADO 术语表术语
 本主题定义与 ADO 相关的术语。
@@ -39,9 +39,9 @@ ms.locfileid: "52528021"
  一个将控制返回给调用程序，而无需等待操作完成的操作的异步操作。 操作已完成之前，将继续执行代码。 另请参阅*同步操作*。
 
 ## <a name="b"></a>B
- 在表中的字段和变量之间的绑定条目的映射。 在 ADO 的 Visual c + + 扩展中，**记录集**字段映射到 C/c + + 变量。
+ 在表中的字段和变量之间的绑定条目的映射。 在 ADO VisualC++扩展中，**记录集**字段映射到 C /C++变量。
 
- 位掩码的数字值适用于与其他数字值，通常为参数中的标志选项或返回值的按位值比较。 通常这种比较通过按位逻辑运算符，如**并**并**或者**在 Visual Basic 中**&** 并 **&#124;** c + + 中。
+ 位掩码的数字值适用于与其他数字值，通常为参数中的标志选项或返回值的按位值比较。 通常这种比较通过按位逻辑运算符，如**并**并**或者**在 Visual Basic 中**&** 并 **&#124;** 在C++。
 
  例如，ADO **FieldAttributeEnum**值可以使用为位掩码，以确定字段的特性。 假设你想要确定字段是否可更新。 可以使用以下表达式在 Visual Basic 中对此进行测试：`Field.Attributes AND adFldUpdatable`
 

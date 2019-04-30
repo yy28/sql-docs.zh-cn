@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecb486f51caa97c715d54885c34575a60bfdfb83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231844"
 ---
 # <a name="installer-dll-function-summary"></a>安装程序 DLL 函数摘要
 下表介绍在安装程序 DLL 的函数。 有关语法和语义为每个函数的详细信息，请参阅[安装程序 DLL API 参考](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "47723325"
 |配置数据源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|调用特定于驱动程序安装程序 DLL。|  
 ||[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|显示一个对话框来添加数据源。|  
 ||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|检索指示列出 DSN 的值的 Odbc.ini 项所在的系统信息中的配置模式。|  
-||[不到 SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|将值写入系统信息。|  
+||[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|将值写入系统信息。|  
 ||[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|显示一个对话框来选择转换器。|  
 ||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|显示一个对话框来配置数据源和驱动程序。|  
 ||[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|从文件 Dsn 中读取信息。|  

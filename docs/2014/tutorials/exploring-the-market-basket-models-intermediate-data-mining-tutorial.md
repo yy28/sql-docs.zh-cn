@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224610"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>浏览市场篮模型（数据挖掘中级教程）
   现在，您构建`Association`模型中，您可以浏览该模型使用[!INCLUDE[msCoName](../includes/msconame-md.md)]中的关联查看器**挖掘模型查看器**数据挖掘设计器选项卡。 本教程指导您使用查看器来浏览各项之间的关系。 查看器可以帮助您快速查看哪些产品通常会一起出现，并且大致了解出现的模式。  
@@ -37,7 +37,7 @@ ms.locfileid: "56035298"
   
  连接两个项的线条意味着这些项很可能共同出现在同一事务中。 也就是说，客户很可能一起购买这些物品。 滑块与规则的概率关联。 上下移动滑块可以筛选出弱关联，弱关联意味着这些规则的概率很低。  
   
- 依赖关系网络图显示了成对规则，这些规则在逻辑上可以用 A->B 表示，意思是如果购买了产品 A，就很可能购买产品 B。 该图不能显示类型 AB->C 的规则。 如果您移动滑块来显示所有规则，但仍未在图中看到任何线条，则意味着没有成对规则满足算法参数的条件。  
+ 依赖关系网络图显示了成对规则，可以从逻辑上表示，为 A-> B，这意味着如果购买产品 A，则可能是产品 B。 此图不能显示类型 AB 的规则，-> c。 如果您移动滑块来显示所有规则，但仍未在图中看到任何线条，则意味着没有成对规则满足算法参数的条件。  
   
  还可以通过键入属性名称的前几个字母，按名称查找节点。 有关详细信息，请参阅[“查找节点”对话框（挖掘模型查看器）](../../2014/analysis-services/find-node-dialog-box-mining-model-viewer.md)。  
   

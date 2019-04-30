@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312564"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>选择键盘快捷键方案
   如果不使用标准 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 键盘方案，您可以配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以使用与 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]兼容的键盘方案。  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250763"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server Buffer Manager 对象
   **Buffer Manager** 对象提供了计数器，用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用以下项：  

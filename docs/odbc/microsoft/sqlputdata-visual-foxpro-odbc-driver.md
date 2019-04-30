@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3644516fc25a97abaefe5e6819b19d6669a94255
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305652"
 ---
 # <a name="sqlputdata-visual-foxpro-odbc-driver"></a>SQLPutData（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 级别 1  
+ ODBC API 一致性：级别 1  
   
  允许应用程序将参数或列的数据发送到在语句执行时驱动程序。  
   
