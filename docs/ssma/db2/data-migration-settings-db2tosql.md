@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298881"
 ---
 # <a name="data-migration-settings-db2tosql"></a>数据迁移设置 (DB2ToSQL)
   
@@ -50,7 +50,7 @@ ms.locfileid: "51681075"
   
 -   **应用：** 单击**应用**以应用设置已更改。  
   
--   **取消:** 单击**取消**若要还原的设置存在，就发生了更改。  
+-   **取消：** 单击**取消**若要还原的设置存在，就发生了更改。  
   
 ## <a name="see-also"></a>请参阅  
 [将 DB2 数据迁移到 SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  

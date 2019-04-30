@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308618"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
 创建一个新[参数](../../../ado/reference/ado-api/parameter-object.md)对象使用指定的属性。  
@@ -47,7 +47,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *方向*  
  可选。 一个[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)值，该值指定的类型**参数**对象。  
   
- *Size*  
+ *大小*  
  可选。 一个**长**值，该值以字节或字符指定参数值的最大长度。  
   
  *ReplTest1*  

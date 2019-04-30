@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298919"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空断开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -47,7 +47,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  一个**Variant**的定义中的每列的属性数组**记录集**创建。 每个列定义中包含的四个必需的属性和一个可选属性的数组。  
   
-|Attribute|Description|  
+|特性|Description|  
 |---------------|-----------------|  
 |“属性”|列标题的名称。|  
 |类型|数据类型的整数。|  

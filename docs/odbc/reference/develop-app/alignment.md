@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4c86fd8fba66e6424b41fa4b80b42fc089e6d64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287442"
 ---
-# <a name="alignment"></a>Alignment
+# <a name="alignment"></a>对齐方式
 通常没有什么不同比任何其他应用程序是在 ODBC 应用程序中的对齐问题。 也就是说，大多数 ODBC 应用程序具有弱或根本没有问题的对齐方式。 用于不对齐地址损失因硬件和操作系统，可能是作为对略微的性能产生负面影响等小或为主要作为运行时错误。 因此，ODBC 应用程序和可移植的 ODBC 应用程序具体而言，应务必正确对齐的数据。  
   
  一个 ODBC 应用程序时遇到对齐问题的示例是当它们分配大的内存块并将该内存的不同部分绑定到结果集中的列。 这是最有可能发生时通用的应用程序必须在运行时确定的结果集的形状和分配并相应地绑定内存。  

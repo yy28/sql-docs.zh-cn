@@ -16,11 +16,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287853"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>处理 SSMA 项目 (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，必须首先创建 SSMA 项目。 项目是一个文件包含以下信息：  
@@ -106,7 +106,7 @@ SSMA 会创建项目文件。
   
 1.  为每个数据库的状态显示**元数据缺少**，选择数据库名称旁边的复选框。 正在保存元数据可能需要几分钟的时间。 如果您不想要现在保存元数据，则选择任何复选框。  
   
-2.  单击 **“保存”**。  
+2.  单击“保存” 。  
   
 SSMA 将 MySQL 架构中分析并将元数据保存到项目文件。  
   

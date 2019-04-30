@@ -1,5 +1,5 @@
 ---
-title: 任务 2:测试和发布匹配策略 |Microsoft Docs
+title: 任务 2：测试和发布匹配策略 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250310"
 ---
-# <a name="task-2-testing-and-publishing-the-matching-policy"></a>任务 2:测试和发布匹配策略
+# <a name="task-2-testing-and-publishing-the-matching-policy"></a>任务 2：测试和发布匹配策略
   在此任务中，测试和发布**删除重复供应商**匹配策略。  
   
 1.  在中**匹配结果**页上，单击**启动**可以测试整个策略。 对于您，此策略中只有唯一的一条规则，因此，测试此规则和策略的结果应该相同。  
@@ -28,7 +28,7 @@ ms.locfileid: "56040757"
   
     2.  记录**1000023**记录的匹配**1000022**匹配分数：93%，因为两个记录具有相同的值**SupplierID （先决条件）** 并**Supplier Name**列，但不同的值**ContactEmailAddress**列。  
   
-    3.  滚动到列表底部，以查看具有以下记录 ID 的两条记录：**1000051**并**1000052**。 记录**1000052**被视为匹配分数匹配**91%** 因为两个记录具有相同的值**SupplierID**和**ContactEmailAddress**列，但不同的值**Supplier Name**列。  
+    3.  滚动到要查看具有记录 Id 的两个记录的列表的底部：**1000051**并**1000052**。 记录**1000052**被视为匹配分数匹配**91%** 因为两个记录具有相同的值**SupplierID**和**ContactEmailAddress**列，但不同的值**Supplier Name**列。  
   
      ![策略定义-策略结果](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "策略定义-策略结果")  
   

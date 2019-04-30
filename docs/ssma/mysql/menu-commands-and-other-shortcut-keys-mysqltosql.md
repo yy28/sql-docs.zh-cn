@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 19e9abcf3af93ef85934d536de6ca726139afde0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311840"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>菜单命令和其他快捷键 (MySQLToSQL)
 以下部分介绍的键盘快捷键来访问菜单命令和 MySQL 应用程序使用各种对话框的 SSMA 中的其他键盘快捷方式。  

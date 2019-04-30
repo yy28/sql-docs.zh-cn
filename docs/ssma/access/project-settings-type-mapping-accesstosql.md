@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299131"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>项目设置 （类型映射） (AccessToSQL)
 类型映射项目设置，可以设置 SSMA 项目的默认类型映射。 此外可以指定单个数据库对象的类型映射。 有关详细信息，请参阅[映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)。  
@@ -46,20 +46,20 @@ ms.locfileid: "51681245"
 |--------------------|------------------------|  
 |**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
-|**字节**|**tinyint**|  
+|**byte**|**tinyint**|  
 |**currency**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**长**|**int**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**备注**|**nvarchar(max)**|  
+|**memo**|**nvarchar(max)**|  
 |**备注**-适用于 Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**text[\*..\*]**|**nvarchar[\*]**|  
-|**文本 [\*...\*]** -对于 Access 97|**varchar[\*]**|  
+|**text[\*..\*]** - for Access 97|**varchar[\*]**|  
   
 **“添加”**  
 单击此项可将数据类型添加到映射列表。  

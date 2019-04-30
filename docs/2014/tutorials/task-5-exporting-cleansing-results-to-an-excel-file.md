@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aab1eff896ba602f118606b8f80894260e26f7ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276773"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>任务 5：将清理结果导出到 Excel 文件
   在本任务中，您将清理活动的结果导出到 Excel 文件。 请参阅[导出阶段](https://msdn.microsoft.com/library/hh213061.aspx#Export)主题的更多详细信息。  

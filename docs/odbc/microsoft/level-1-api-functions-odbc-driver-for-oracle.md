@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a70116fb0e8ef1236b18cb478184e96fe08fce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262230"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>级别 1 API 函数（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "47829415"
 |**SQLGetTypeInfo**|返回有关所支持的数据源的数据类型的信息。 该驱动程序中的 SQL 结果集返回的信息。|  
 |**SQLParamData**|结合使用**SQLPutData**以指定参数在语句执行时数据。|  
 |**SQLPutData**|允许应用程序将参数或列的数据发送到在语句执行时驱动程序。|  
-|**SQLSetConnectOption**|提供访问控制的连接方面的选项。 此函数支持部分： 驱动程序支持的所有值*fOption*自变量，但不支持某些*vParam*值*fOption*参数[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)。 有关详细信息，请参阅[连接选项](../../odbc/microsoft/connect-options.md)。|  
+|**SQLSetConnectOption**|提供访问控制的连接方面的选项。 部分支持此函数：该驱动程序支持的所有值*fOption*自变量，但不支持某些*vParam*值*fOption*参数[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). 有关详细信息，请参阅[连接选项](../../odbc/microsoft/connect-options.md)。|  
 |**SQLSetStmtOption**|设置与语句句柄，相关的选项*hstmt*。 有关详细信息，请参阅[语句选项](../../odbc/microsoft/statement-options.md)。|  
 |**SQLSpecialColumns**|检索最佳列集的唯一标识表中的行。|  
 |**SQLStatistics**|检索有关单个表的索引或标记名称，与表关联的统计信息的列表。 驱动程序返回的信息作为结果集。|  

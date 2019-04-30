@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b76b7a550211522c2b2100776b88f311abb2b932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233346"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： 不推荐使用  
+ 版本引入了：ODBC 1.0 标准符合性：不推荐使用  
   
  **摘要**  
  在 ODBC 3。*x*，ODBC 2 *.x*函数**SQLTransact**已由**SQLEndTran**。 有关详细信息，请参阅[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0bba8402bb49d481886e4c81071443873834c8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248901"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 对象和接口
 在中表示这些对象之间的关系[ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)。  
@@ -29,11 +29,11 @@ ms.locfileid: "47660645"
 |||  
 |-|-|  
 |[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|用于从 ADOCommand 对象检索基础 OLEDB 命令。|  
-|[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|构造一个 ADO**记录**对象从 OLE DB**行**C/c + + 应用程序中的对象。|  
-|[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|构造一个 ADO**记录集**对象从 OLE DB**行集**C/c + + 应用程序中的对象。|  
-|[ADOStreamConstruction 接口](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|构造一个 ADO **Stream**对象从 OLE DB **IStream** C/c + + 应用程序中的对象。|  
+|[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|构造一个 ADO**记录**对象从 OLE DB**行**C 中的对象 /C++应用程序。|  
+|[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|构造一个 ADO**记录集**对象从 OLE DB**行集**C 中的对象 /C++应用程序。|  
+|[ADOStreamConstruction 接口](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|构造一个 ADO **Stream**对象从 OLE DB **IStream** C 中的对象 /C++应用程序。|  
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|定义要对数据源执行的特定命令。<br /><br /> **命令**对象不是可安全执行脚本。|  
-|[连接](../../../ado/reference/ado-api/connection-object-ado.md)|表示与数据源的开放连接。<br /><br /> **连接**对象是可安全执行脚本。|  
+|[“连接”](../../../ado/reference/ado-api/connection-object-ado.md)|表示与数据源的开放连接。<br /><br /> **连接**对象是可安全执行脚本。|  
 |[IDSOShapeExtensions 接口](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|获取形状提供程序的基础的 OLEDB 数据源对象。|  
 |[错误](../../../ado/reference/ado-api/error-object.md)|包含有关适用于单个操作涉及该提供程序的数据访问错误的详细信息。<br /><br /> **错误**对象不是可安全执行脚本。|  
 |[字段](../../../ado/reference/ado-api/field-object.md)|表示与常见的数据类型的数据的列。|  
@@ -48,7 +48,7 @@ ms.locfileid: "47660645"
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 枚举常量](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [附录 B:ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [附录 b:ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)   

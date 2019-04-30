@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f2b49a645866f310a7a0ff006b47cce2ff32f3c3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: a89cb1d06b60d086c139b4d618b7bd716c04616e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954153"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63462033"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   若要在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表中包含数据，必须首先创建“数据源”  和“数据集” 。 本主题解释数据源的类型、如何创建数据源以及与数据源凭据相关的重要信息。 数据源包含数据源类型、连接信息以及要使用的凭据的类型。 有两种类型的数据源：嵌入数据源和共享数据源。 嵌入数据源在报表中定义并只由该报表使用。 共享数据源独立于报表定义并可由多个报表使用。 有关详细信息，请参阅[嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)和[嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
@@ -135,7 +135,7 @@ ms.locfileid: "59954153"
 |SQL Server 并行数据仓库|`HOST=<IP address>;database= AdventureWorks; port=<port>`|将数据源类型设置为 `Microsoft SQL Server Parallel Data Warehouse`。 有关详细信息，请参阅 [SQL Server 并行数据仓库连接类型 (SSRS)](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
 |本地服务器上的 Analysis Services 数据库|`data source=localhost;initial catalog=Adventure Works DW`|将数据源类型设置为 `Microsoft SQL Server Analysis Services`。 有关详细信息，请参阅[针对 MDX 的 Analysis Services 连接类型 (SSRS)](report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或[针对 DMX 的 Analysis Services 连接类型 (SSRS)](report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
 |具有 Sales 透视的 Analysis Services 表格模型数据库|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|将数据源类型设置为 `Microsoft SQL Server Analysis Services`。 在 cube= 设置中指定透视名称。 有关详细信息，请参阅 [透视表（SSAS 表格）](../analysis-services/tabular-models/perspectives-ssas-tabular.md)。|  
-|在本机模式下配置的报表服务器上的报表模型数据源|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。 有关详细信息，请参阅[报表模型连接 (SSRS)](report-data/report-model-connection-ssrs.md)。|  
+|在本机模式下配置的报表服务器上的报表模型数据源|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。
 |在 SharePoint 集成模式下配置的报表服务器上的报表模型数据源|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|将数据源类型设置为 `OLE DB Provider for OLAP Services 8.0`。<br /><br /> 如果将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 属性设置为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，则可以快速连接到 `ConnectTo` 2000 `8.0` 数据源。 若要设置此属性，请使用 **“连接属性”** 对话框中的 **“高级属性”** 选项卡。|  
 |Oracle 服务器|`data source=myserver`|将数据源类型设置为 `Oracle`。 此外，还必须在报表设计器计算机上和报表服务器上安装 Oracle 客户端工具。 有关详细信息，请参阅 [Oracle 连接类型 (SSRS)](report-data/oracle-connection-type-ssrs.md)。|  
@@ -146,9 +146,7 @@ ms.locfileid: "59954153"
 |XML 数据源、XML 文档|`http://localhost/XML/Customers.xml`|将数据源类型设置为 `XML`。 其连接字符串是一个指向 XML 文档的 URL。|  
 |XML 数据源、嵌入的 XML 文档|*Empty*|将数据源类型设置为 `XML`。 XML 数据嵌入在报表定义中。|  
   
- 如果无法使用 `localhost` 连接到报表服务器，请检查是否已启用网络协议 TCP/IP 协议。 有关详细信息，请参阅 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)。  
-  
- 有关连接到这些数据源类型所需的配置详细信息，请参阅[从外部数据源中添加数据 (SSRS)](report-data/add-data-from-external-data-sources-ssrs.md) 或 [Reporting Services 支持的数据源 (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md) 下的特定数据连接主题。  
+如果无法使用 `localhost` 连接到报表服务器，请检查是否已启用网络协议 TCP/IP 协议。 有关详细信息，请参阅 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)。  
   
 ##  <a name="bkmk_special_password_characters"></a> 密码中的特殊字符  
  如果将 ODBC 或 SQL 数据源配置为提示输入密码或在连接字符串中包含密码，并且用户输入了具有标点符号等特殊字符的密码，则有些基础数据源驱动程序无法验证特殊字符。 处理报表时，可能会出现“密码无效”这一消息来指示此问题。 如果不能更改密码，则可以使用数据库管理员角色将相应的凭据作为系统 ODBC 数据源名称 (DSN) 的一部分存储在服务器上。 有关详细信息，请参阅 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 文档中的“OdbcConnection.ConnectionString”。  

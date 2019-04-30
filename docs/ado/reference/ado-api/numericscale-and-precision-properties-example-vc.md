@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8cde8f5d9d50b37f3d89154d09d6d60ac3bc987
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242629"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 和 Precision 属性示例 (VC++)
 此示例使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)并[精度](../../../ado/reference/ado-api/precision-property-ado.md)要显示的小数位数和精度中字段的属性***折扣***的表***Pubs***数据库。  

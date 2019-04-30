@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 47e1321802b237f02a63535572b1850dbb4c74f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299263"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>编辑类型映射 (DB2ToSQL)
 **编辑类型映射**对话框可以指定类型的源和目标数据库对象之间的映射方式。  

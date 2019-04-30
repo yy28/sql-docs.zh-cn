@@ -4,18 +4,18 @@ description: 本主题介绍了 SQL Server 如何在 Linux 上运行和提供有
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/25/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.openlocfilehash: c24e4fa86c92a183c957c44a33a2d3524cdd1f8c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408874"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457366"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -26,25 +26,25 @@ ms.locfileid: "52408874"
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-SQL Server 2019 预览版在 Linux 上运行。 它是相同的 SQL Server 数据库引擎，与许多类似的功能和服务而不考虑您的操作系统。 若要了解有关此版本的详细信息，请参阅[什么是适用于 Linux 的 SQL Server 2019 preview 中的新增](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)。
+SQL Server 2019 预览版在 Linux 上运行。 它是相同的 SQL Server 数据库引擎，与许多类似的功能和服务而不考虑您的操作系统。 若要了解有关此版本的详细信息，请参阅[什么是适用于 Linux 的 SQL Server 2019 preview 中的新增](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)。
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [SQL Server 2019 预览](sql-server-linux-overview.md?view=sql-server-ver15)已发布 ！ 若要了解什么是适用于 Linux 的最新版本中的新增功能，请参阅[什么是适用于 Linux 的 SQL Server 2019 preview 中的新增](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)。
+> [SQL Server 2019 预览](sql-server-linux-overview.md?view=sql-server-ver15)已发布 ！ 若要了解什么是适用于 Linux 的最新版本中的新增功能，请参阅[什么是适用于 Linux 的 SQL Server 2019 preview 中的新增](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)。
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [SQL Server 2019 预览](sql-server-linux-overview.md?view=sql-server-linux-ver15)已发布 ！ 若要了解什么是适用于 Linux 的最新版本中的新增功能，请参阅[什么是适用于 Linux 的 SQL Server 2019 preview 中的新增](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux)。
+> [SQL Server 2019 预览](sql-server-linux-overview.md?view=sql-server-linux-ver15)已发布 ！ 若要了解什么是适用于 Linux 的最新版本中的新增功能，请参阅[什么是适用于 Linux 的 SQL Server 2019 preview 中的新增](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sql-server-on-linux)。
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> SQL Server 2019 预览版已发布 ！ 若要了解什么是适用于 Linux 的最新版本中的新增功能，请参阅[什么是适用于 Linux 的 SQL Server 2019 preview 中的新增](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)。
+> SQL Server 2019 预览版已发布 ！ 若要了解什么是适用于 Linux 的最新版本中的新增功能，请参阅[什么是适用于 Linux 的 SQL Server 2019 preview 中的新增](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)。
 ::: moniker-end
 
-## <a name="install"></a>Install
+## <a name="install"></a>安装
 
 若要开始，请使用以下快速入门教程之一在 Linux 上安装 SQL Server：
 
@@ -57,11 +57,11 @@ SQL Server 2019 预览版在 Linux 上运行。 它是相同的 SQL Server 数�
 > [!NOTE]
 > Docker 本身可运行在多个平台上，这意味着，你可以在 Linux、 Mac 和 Windows 上运行 Docker 映像。
 
-## <a name="connect"></a>“连接”
+## <a name="connect"></a>连接
 
 安装完成后，连接到你的 Linux 计算机上的 SQL Server 实例。 你可以利用多种工具和驱动程序在本地或远程进行连接。 快速入门教程演示了如何使用 [sqlcmd](sql-server-linux-setup-tools.md) 命令行工具。 其他工具包括：
 
-| 工具 | 教程 |
+| Tool | 教程 |
 |-----|-----|
 | Visual Studio Code (VS Code) | [通过 VS Code 使用 Linux 上的 SQL Server](sql-server-linux-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [在 Windows 上使用 SSMS 连接 Linux 上的 SQL Server](sql-server-linux-manage-ssms.md) |
@@ -99,7 +99,7 @@ SQL Server 2017 和[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]所有
 然后看看哪些新增功能：
 
 - [什么是 SQL Server 2017 的新增功能](sql-server-linux-whats-new.md)
-- [什么是新的 Linux 上的 SQL Server 2019 预览](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
+- [什么是新的 Linux 上的 SQL Server 2019 预览](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 ::: moniker-end
 

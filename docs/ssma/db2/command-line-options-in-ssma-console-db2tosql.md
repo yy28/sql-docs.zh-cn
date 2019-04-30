@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: de41d864b6bfd8e7fe80188b69b50e2592d6cf16
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514481"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453408"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 控制台 (DB2ToSQL) 中的命令行选项
 Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  

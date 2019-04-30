@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255229"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>“创建新策略”或“打开策略”对话框，“说明”页
   此对话框用于为基于策略的管理策略添加说明和补充信息。  

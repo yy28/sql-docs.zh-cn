@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281941"
 ---
 # <a name="customization-file-connect-section"></a>自定义文件 Connect 部分
 该处理程序的默认行为是拒绝所有连接。 **连接**节指定该行为的例外情况。 例如，如果所有**连接**部分已不存在或为空，则默认情况下无法不建立任何连接。  
@@ -57,9 +57,9 @@ connectionString
 |组成部分|Description|  
 |----------|-----------------|  
 |**“连接”**|文本字符串，用于指示这是一个连接字符串条目。|  
-|**_ConnectionString_**|一个字符串，将整个客户端的连接字符串。|  
+|**_connectionString_**|一个字符串，将整个客户端的连接字符串。|  
 |**访问**|文本字符串，用于指示这是访问项。|  
-|**_种_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
+|**_accessRight_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
   
  如果你想要允许任何连接 （实际上，禁用默认处理程序行为），在中设置的访问权限条目**连接默认**部分`Access=ReadWrite`，然后删除或注释掉任何其他**连接**_标识符_部分。  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273390"
 ---
 # <a name="usage-counting"></a>使用情况计数
 > [!NOTE]  
@@ -54,15 +54,15 @@ ms.locfileid: "47664625"
 >   
 >  CurrentVersion  
 >   
->  需要在 SharedDlls  
+>  SharedDlls  
   
  它将这些值的数据设置为 1，并将文件复制到系统。 重新安装该组件时，安装程序或安装程序 DLL 会递增的使用情况计数。 删除该组件后，安装程序或安装程序 DLL 递减的使用计数。 如果任何使用情况计数降为 0，安装程序或安装程序 DLL 中删除文件的值并，如果该组件是一个驱动程序或翻译，删除文件。 不应删除驱动程序管理器文件。  
   
  下表中显示文件使用情况计数值的格式。  
   
-|“属性”|数据类型|data|  
+|“属性”|数据类型|数据|  
 |----------|---------------|----------|  
-|*完整路径*|REG_DWORD|*计数*|  
+|*full-path*|REG_DWORD|*计数*|  
   
  例如，假设 Informix 的驱动程序使用 Infrmx32.dll 和 Infrmx32.hlp 文件，并假设此驱动程序已安装程序两次。 Informix 驱动程序的需要在 SharedDlls 子项下的值将按如下所示：  
   

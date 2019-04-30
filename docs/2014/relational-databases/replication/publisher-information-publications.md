@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128907"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63462514"
 ---
 # <a name="sql-server-replication-publisher-information-dialog-box"></a>SQL Server 复制发布服务器信息对话框
   **“发布”** 选项卡提供在左窗格中选择的发布服务器的所有发布的摘要信息。  
@@ -25,13 +25,13 @@ ms.locfileid: "54128907"
 ## <a name="options"></a>选项  
  若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**:中的一个或多个列的排序**排**对话框。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
   
--   **选择显示的列**:选择哪些列显示以及用来显示它们中的顺序**选择列**对话框。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
   
--   **筛选器**:筛选列中的值为基础的网格中的行**筛选器设置**对话框。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
   
--   **清除筛选器**:清除网格的任何筛选器设置。  
+-   **清除筛选器**：清除网格的任何筛选设置。  
   
  筛选设置是特定于每个网格的。 列的选择和排序应用于同一类型的所有网格，如每个发布服务器的发布网格。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54128907"
  状态值 **“‘严重’状态下的性能”** 与事务订阅和合并订阅相关；只有设置阈值后，才可以显示该值。 有关性能度量和设置阈值的信息，请参阅[使用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)和[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **发布**  
- 每个发布，在窗体中的名称*PublicationDatabaseName:PublicationName*。  
+ 每个发布的名称，格式为 PublicationDatabaseName:PublicationName。  
   
  **订阅**  
  每个发布的订阅数量。  
@@ -84,7 +84,7 @@ ms.locfileid: "54128907"
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)  
   
   

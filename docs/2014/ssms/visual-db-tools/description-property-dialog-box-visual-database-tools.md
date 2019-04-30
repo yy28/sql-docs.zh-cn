@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 88134b2bcad38bda180b7a6102df04a9766f392a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316081"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>“说明属性”对话框 (Visual Database Tools)
   “说明属性”对话框提供了一个可编辑的区域，用于编写如表、列、外键约束之类的数据库对象的详细说明。 对于如表和视图之类的对象，如果已在设计器中选定这些对象，可以从“属性”窗口中访问此对话框；对于如索引和 CHECK 约束之类的对象，可以从这些对象的相应对话框中访问此对话框；对于表列，可以从表设计器的“列属性”选项卡中访问此对话框。 该说明将作为对象的扩展属性进行存储。  

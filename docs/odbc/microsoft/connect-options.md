@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 06695bf1770c9e362decac5702dcd924d47c23bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301764"
 ---
 # <a name="connect-options"></a>连接选项
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "47750457"
 |SQL_ODBC_CURSORS|此连接属性实现驱动程序管理器中。|  
 |SQL_OPT_TRACE|此连接属性实现驱动程序管理器中。|  
 |SQL_OPT_TRACEFILE|此连接属性实现驱动程序管理器中。|  
-|SQL_TRANSLATE_DLL|将返回错误:"驱动程序不可用。"|  
+|SQL_TRANSLATE_DLL|将返回错误："驱动程序不可用。"|  
 |SQL_TRANSLATE_OPTION|一个 32 位值传递给转换.dll。|  
 |SQL_TXN_ISOLATION|驱动程序允许仅 SQL_TXN_READ_COMMITTED。<br /><br /> 不支持以下 vParams:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
 |SQL_ATTR_ENLIST_IN_DTC|此 ODBC 3.0 连接属性，可在由 Microsoft 组件服务 （或 MTS，如果您使用的 Windows NT） 协调的分布式事务中使用用于 Oracle 的 ODBC 驱动程序。 它提供的接口指针*pITransaction*为作为事务*vParam*参数。|  

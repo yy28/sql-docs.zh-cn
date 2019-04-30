@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0bc793e9a18e993989563fd3526ff12272f775c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260789"
 ---
 # <a name="rendering-and-execution-methods"></a>呈现和执行方法
   可以使用这些方法来管理项执行和缓存以及报表呈现。  

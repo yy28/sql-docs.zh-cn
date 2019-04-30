@@ -1,5 +1,5 @@
 ---
-title: 任务 9:创建派生层次结构使用主数据管理器 |Microsoft Docs
+title: 任务 9：创建派生层次结构使用主数据管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262360"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>任务 9:使用主数据管理器创建派生层次结构
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>任务 9：使用主数据管理器创建派生层次结构
   在本任务中，您将使用主数据管理器创建一个派生层次结构。 此派生层次结构派生自之间的基于域的属性关系**供应商**并**状态**实体。  
   
 1.  切换到的主页**主数据管理器**通过单击**SQL Server 2012 Master Data Services**页的顶部。  

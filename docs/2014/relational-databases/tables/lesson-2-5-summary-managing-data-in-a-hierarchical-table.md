@@ -1,5 +1,5 @@
 ---
-title: 摘要：管理层次结构表中的数据 | Microsoft Docs
+title: 摘要：管理层次结构表中的数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26fefad9fa8b2a20e03a8a87e873556427db1646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223324"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>摘要：管理层次结构表中的数据
   `hierarchyid` 数据类型使您可以轻松地创建反映分层数据的表，然后再创建深度优先和广度优先的索引以有效地访问此表。 使用分层方法来查询和操作数据。  

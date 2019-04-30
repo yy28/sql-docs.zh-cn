@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fe58a49e707bdca231b488ae207d14bbbfc7cb0a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242537"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>SetStrValue 方法（ClientNetworkProtocolProperty 类）
   设置引用的当前属性的字符串值[PropertyIdx 属性 （ClientNetworkProtocolProperty 类）](clientnetworkprotocolproperty-class.md)值。  
@@ -47,7 +47,7 @@ StrValue
   
 |参数|Description|  
 |---------------|-----------------|  
-|*strValue*|一个指定当前属性的新值的字符串值。|  
+|*StrValue*|一个指定当前属性的新值的字符串值。|  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 uint32 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  

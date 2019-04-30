@@ -5,16 +5,16 @@ description: 了解步骤以及用于部署 SQL Server 2019 大数据群集 （�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/18/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860428"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472246"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 大数据群集入门
 
@@ -45,21 +45,23 @@ ms.locfileid: "58860428"
 
 - **Minikube**:Minikube，可在单个服务器上本地运行 Kubernetes。 如果您尝试大数据群集或需要在测试或开发方案中使用它，它是一个不错的选择。 有关使用 Minikube 的详细信息，请参阅[Minikube 文档](https://kubernetes.io/docs/setup/minikube/)。 有关在使用 Minikube 的大数据群集的特定要求，请参阅[配置用于 SQL Server 2019 大数据群集部署 minikube](deploy-on-minikube.md)。
 
-## <a name="deployment-scripts"></a>部署脚本
-
-部署脚本可以帮助部署 Kubernetes 和大数据群集中单个步骤。 它们通常还为必需的环境变量提供默认值。 大数据群集在 Azure Kubernetes 服务 (AKS) 的部署脚本的示例，请参阅[部署大数据使用部署脚本 (AKS) 群集 SQL Server 2019](quickstart-big-data-cluster-deploy.md)。
-
-通过创建自己的版本，用于以不同的方式配置大数据群集环境变量，可以自定义任何部署脚本。
-
 ## <a name="deploy-a-big-data-cluster"></a>部署大数据群集
 
-若要将 Kubernetes 和大数据群集到 AKS 部署与单个脚本，请参阅下面的示例：
+配置 Kubernetes 之后, 你部署使用的大数据群集`mssqlctl cluster create`命令。 在部署时，您可以采取几种不同方法。
 
-- [部署 SQL Server 2019 大数据群集使用部署脚本 (AKS)](quickstart-big-data-cluster-deploy.md)
+- 如果您要部署到开发测试环境，你可以选择使用之一[默认配置](deployment-guidance.md#deploy)提供**mssqlctl**。
 
-有关部署使用 AKS、 kubeadm 和 MiniKube 的大数据群集的详细的部署指南，请参阅以下文章：
+- 若要自定义部署，可以创建并使用您自己[部署配置文件](deployment-guidance.md#configfile)。 
 
-- [如何部署 SQL Server 大数据群集在 Kubernetes 上](deployment-guidance.md)
+- 对于完全无人参与安装，可以在环境变量中传递的所有其他设置。 有关详细信息，请参阅[无人参与的部署](deployment-guidance.md#unattended)。
+
+## <a name="deployment-scripts"></a>部署脚本
+
+部署脚本可以帮助部署 Kubernetes 和大数据群集中单个步骤。 它们通常还为大数据群集设置提供默认值。 大数据群集在 Azure Kubernetes 服务 (AKS) 的部署脚本的示例，请参阅以下文章：
+
+[部署大数据使用部署脚本 (AKS) 群集 SQL Server 2019](quickstart-big-data-cluster-deploy.md)。
+
+通过创建自己的版本，用于以不同的方式配置大数据群集环境变量，可以自定义任何部署脚本。
 
 ## <a name="next-steps"></a>后续步骤
 

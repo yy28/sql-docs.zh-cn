@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299154"
 ---
 # <a name="connect-to-db2-db2tosql"></a>连接到 DB2 (DB2ToSQL)
 使用**连接到 DB2**对话框以连接到你想要迁移的 DB2 数据库。  

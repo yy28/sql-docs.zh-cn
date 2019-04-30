@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 299a4c6379f1323128e28dc992e18fd7228014ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669295"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473108"
 ---
 # <a name="sqlsetpos-visual-foxpro-odbc-driver"></a>SQLSetPos（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 级别 2  
+ ODBC API 一致性：级别 2  
   
  设置在行集中的游标位置。 可以使用**SQLSetPos**与[SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md)在行集中定位光标移到特定行后从未绑定的列中检索行。  
   

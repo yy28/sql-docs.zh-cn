@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250416"
 ---
 # <a name="republish-data"></a>重新发布数据
   在重新发布模式中，发布服务器将数据发送到订阅服务器，后者将数据重新发布到任意数目的其他订阅服务器。 当发布服务器必须通过低速或昂贵的通信链接向订阅服务器发送数据时，这很有用。 如果在链接的远端有许多订阅服务器，那么使用重新发布服务器可将大量分发负荷转移到链接的远端。  
@@ -69,7 +69,7 @@ ms.locfileid: "52794189"
 ## <a name="see-also"></a>请参阅  
  [“配置分发”](configure-distribution.md)   
  [发布数据和数据库对象](publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [订阅发布](subscribe-to-publications.md)   
  [初始化订阅](initialize-a-subscription.md)   
  [同步数据](synchronize-data.md)  
   

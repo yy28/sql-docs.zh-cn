@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316397"
 ---
 # <a name="script-a-table"></a>编写表脚本
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以创建脚本，用于选择、插入、更新和删除表，以及用于创建、更改、删除或执行存储过程。  
@@ -28,13 +28,13 @@ ms.locfileid: "48091547"
   
 1.  在“对象资源管理器”中，依次展开服务器、“数据库”、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]、“表”，再右键单击“HumanResources.Employee”，然后指向“编写表脚本为”。  
   
-2.  快捷菜单有七个可用脚本选项：“CREATE To”、“DROP To”、“DROP and CREATE To”、“SELECT To”、“INSERT To”、“UPDATE To”和“DELETE To”。 指向“UPDATE To”，再单击“新查询编辑器窗口”。  
+2.  快捷菜单有七个可用脚本选项：**创建到**，**放到**， **DROP 和 CREATE 到**，**选择此选项将**，**插入到**，**更新**，并**删除到**。 指向“UPDATE To”，再单击“新查询编辑器窗口”。  
   
 3.  系统将打开一个新查询编辑器窗口，执行连接并显示完整的更新语句。  
   
      本练习阐释了除编写脚本创建表或存储过程外，脚本编写功能如何实现其他功能。 使用这项新功能可以将数据操作脚本快速添加到项目中，并可轻松编写执行存储过程的脚本。 这可以大量节省多字段的表和过程的执行时间。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [摘要：编写 Transact-SQL](../../tutorials/summary-writing-transact-sql.md)  
+ [摘要：编写 TRANSACT-SQL](../../tutorials/summary-writing-transact-sql.md)  
   
   

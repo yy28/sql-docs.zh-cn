@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df68b9ee1e778d0523b63d69bd010022b6f6f219
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301339"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>从命令提示符安装升级顾问
   您可以使用安装向导或从命令提示符安装升级顾问。 使用命令提示符，可以执行无人参与的自动安装。  
@@ -35,9 +35,9 @@ ms.locfileid: "53589861"
   
 |参数|Description|  
 |--------------|-----------------|  
-|/q [n&#124;b&#124;r&#124;f]|设置用户界面 (UI) 级别：<br /><br /> n = 无 UI<br /><br /> b = 基本 UI（仅显示进度，不显示提示）<br /><br /> r = 简化的 UI（在安装结束时显示对话框）<br /><br /> f = 完整的 UI|  
+|/q[n&#124;b&#124;r&#124;f]|设置用户界面 (UI) 级别：<br /><br /> n = 无 UI<br /><br /> b = 基本 UI（仅显示进度，不显示提示）<br /><br /> r = 简化的 UI（在安装结束时显示对话框）<br /><br /> f = 完整的 UI|  
 |/L|指定日志文件选项。 若要所有消息都记录到*log_file_name*，使用 **-L\*v**_log_file_name_。 若要只记录错误消息，请使用`-Le` *log_file_name*。|  
-|ADDLOCAL = ALL&AMP;#124;删除 = ALL&AMP;#124;REINSTALL = ALL|指定安装 (ADDLOCAL)、删除 (REMOVE) 或重新安装 (REINSTALL) 升级顾问。|  
+|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|指定安装 (ADDLOCAL)、删除 (REMOVE) 或重新安装 (REINSTALL) 升级顾问。|  
 |UAINSTALLDIR=路径|将升级顾问安装到路径指定的位置。|  
   
 ## <a name="installation-examples"></a>安装示例  

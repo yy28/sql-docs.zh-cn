@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241243"
 ---
 # <a name="display-size"></a>显示大小
 列的显示大小是最大字符窗体中显示数据所需的字符数。 下表定义每个 ODBC SQL 数据类型的显示大小。  

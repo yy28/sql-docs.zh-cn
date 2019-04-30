@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231822"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>项目设置（类型映射）(MySQLToSQL)
 类型映射项目设置，可以设置 SSMA 项目的默认类型映射。  
@@ -54,36 +54,36 @@ ms.locfileid: "47713245"
 |**MySQL 数据类型**|**SQL Server 数据类型**|  
 |BIGINT|BIGINT|  
 |bigint[*..255]|BIGINT|  
-|BINARY|二进制 [1]|  
-|binary[0..1]|二进制 [1]|  
+|BINARY|binary[1]|  
+|binary[0..1]|binary[1]|  
 |binary[2..255]|binary[*]|  
-|bit|二进制 [1]|  
-|bit[0..8]|二进制 [1]|  
-|bit[17..24]|二进制文件 [3]|  
-|bit[25..32]|二进制文件 [4]|  
-|bit[33..40]|二进制 [5]|  
-|bit[41..48]|二进制 [6]|  
-|bit[49..56]|二进制 [7]|  
-|bit[57..64]|二进制 [8]|  
-|bit[9..16]|二进制文件 [2]|  
+|bit|binary[1]|  
+|bit[0..8]|binary[1]|  
+|bit[17..24]|binary[3]|  
+|bit[25..32]|binary[4]|  
+|bit[33..40]|binary[5]|  
+|bit[41..48]|binary[6]|  
+|bit[49..56]|binary[7]|  
+|bit[57..64]|binary[8]|  
+|bit[9..16]|binary[2]|  
 |blob|varbinary(max)|  
-|blob[0..1]|varbinary [1]|  
+|blob[0..1]|varbinary[1]|  
 |blob[2..8000]|varbinary[*]|  
 |blob[8001..*]|varbinary(max)|  
 |bool|bit|  
 |boolean|bit|  
-|char|nchar [1]|  
-|char 字节|二进制 [1]|  
-|char 字节 [0..1]|二进制 [1]|  
-|char 字节 [2..255]|binary[*]|  
-|char[0..1]|nchar [1]|  
+|char|nchar[1]|  
+|char 字节|binary[1]|  
+|char byte[0..1]|binary[1]|  
+|char byte[2..255]|binary[*]|  
+|char[0..1]|nchar[1]|  
 |char[2..255]|nchar[*]|  
-|character|nchar [1]|  
-|不同的 [0..1] 的字符|nvarchar [1]|  
+|character|nchar[1]|  
+|不同的 [0..1] 的字符|nvarchar[1]|  
 |不同的 [2..255] 的字符|NVARCHAR|  
-|character[0..1]|nchar [1]|  
+|character[0..1]|nchar[1]|  
 |character[2..255]|nchar[*]|  
-|日期|日期|  
+|date|date|  
 |DATETIME|datetime2[0]|  
 |dec|Decimal|  
 |dec[*..65]|decimal[*][0]|  
@@ -91,65 +91,65 @@ ms.locfileid: "47713245"
 |Decimal|Decimal|  
 |decimal[*..65]|decimal[*][0]|  
 |decimal[*..65][\*..30]|decimal[*][\*]|  
-|double|float [53]|  
-|双精度|float [53]|  
+|double|float[53]|  
+|双精度|float[53]|  
 |双精度 [*...255] [\*...30]|numeric[*][\*]|  
 |double[*..255][\*..30]|numeric[*][\*]|  
 |已修复|NUMERIC|  
 |fixed[*..65][\*..30]|numeric[*][\*]|  
 |FLOAT|float[24]|  
 |float[*..255][\*..30]|numeric[*][\*]|  
-|float[*..53]|float [53]|  
+|float[*..53]|float[53]|  
 |ssNoversion|ssNoversion|  
 |int[*..255]|ssNoversion|  
 |integer|ssNoversion|  
 |integer[*..255]|ssNoversion|  
 |longblob|varbinary(max)|  
-|长文本|nvarchar(max)|  
+|longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|ssNoversion|  
 |mediumint[*..255]|ssNoversion|  
 |mediumtext|nvarchar(max)|  
-|national char|nchar [1]|  
-|national char [0..1]|nchar [1]|  
+|national char|nchar[1]|  
+|national char [0..1]|nchar[1]|  
 |national char [2..255]|nchar[*]|  
-|区域字符集|nchar [1]|  
-|不同的区域字符集|nvarchar [1]|  
-|国家/地区字符不同的 [0..1]|nvarchar [1]|  
+|区域字符集|nchar[1]|  
+|不同的区域字符集|nvarchar[1]|  
+|国家/地区字符不同的 [0..1]|nvarchar[1]|  
 |国家/地区字符不同的 [2..4000]|nvarchar[*]|  
 |不同的区域字符集 [4001..*]|nvarchar(max)|  
-|国家/地区字符 [0..1]|nchar [1]|  
+|国家/地区字符 [0..1]|nchar[1]|  
 |区域字符集 [2..255]|nchar[*]|  
-|国家/地区 varchar|nvarchar [1]|  
-|国家/地区 varchar [0..1]|nvarchar [1]|  
-|国家/地区 varchar [2..4000]|nvarchar[*]|  
+|国家/地区 varchar|nvarchar[1]|  
+|国家/地区 varchar [0..1]|nvarchar[1]|  
+|national varchar[2..4000]|nvarchar[*]|  
 |国家/地区 varchar [4001..*]|nvarchar(max)|  
-|NCHAR|nchar [1]|  
-|nchar varchar|nvarchar [1]|  
-|nchar varchar [0..1]|nvarchar [1]|  
-|nchar varchar [2..4000]|nvarchar[*]|  
-|nchar varchar [4001..*]|nvarchar(max)|  
-|nchar[0..1]|nchar [1]|  
+|NCHAR|nchar[1]|  
+|nchar varchar|nvarchar[1]|  
+|nchar varchar[0..1]|nvarchar[1]|  
+|nchar varchar[2..4000]|nvarchar[*]|  
+|nchar varchar[4001..*]|nvarchar(max)|  
+|nchar[0..1]|nchar[1]|  
 |nchar[2..255]|nchar[*]|  
 |NUMERIC|NUMERIC|  
 |numeric[*..65]|numeric[*][0]|  
 |numeric[*..65][\*..30]|numeric[*][\*]|  
-|NVARCHAR|nvarchar [1]|  
-|nvarchar[0..1]|nvarchar [1]|  
+|NVARCHAR|nvarchar[1]|  
+|nvarchar[0..1]|nvarchar[1]|  
 |nvarchar[2..4000]|nvarchar[*]|  
 |nvarchar[4001..*]|nvarchar(max)|  
-|REAL|float [53]|  
+|REAL|float[53]|  
 |real[*..255][\*..30]|numeric[*][\*]|  
 |串行|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint[*..255]|SMALLINT|  
-|text|nvarchar(max)|  
-|text[0..1]|nvarchar [1]|  
+|Text|nvarchar(max)|  
+|text[0..1]|nvarchar[1]|  
 |text[2..4000]|nvarchar[*]|  
 |text[4001..*]|nvarchar(max)|  
 |time|time|  
 |TIMESTAMP|DATETIME|  
-|tinyblob|varbinary [255]|  
+|tinyblob|varbinary[255]|  
 |TINYINT|SMALLINT|  
 |tinyint[*..255]|SMALLINT|  
 |tinytext|nvarchar[255]|  
@@ -161,15 +161,15 @@ ms.locfileid: "47713245"
 |无符号的小数|Decimal|  
 |无符号的小数 [*...65]|decimal[*][0]|  
 |无符号的小数 [*...65] [\*...30]|decimal[*][\*]|  
-|无符号的双精度|float [53]|  
-|无符号的双精度|float [53]|  
+|无符号的双精度|float[53]|  
+|无符号的双精度|float[53]|  
 |无符号的双精度 [*...255] [\*...30]|numeric[*][\*]|  
 |未签名的双精度 [*...255] [\*...30]|numeric[*][\*]|  
 |未签名的固定|NUMERIC|  
 |未签名的固定 [*...65] [\*...30]|numeric[*][\*]|  
 |无符号的浮点型|float[24]|  
 |无符号的 float [*...255] [\*...30]|numeric[*][\*]|  
-|无符号的 float [*...53]|float [53]|  
+|无符号的 float [*...53]|float[53]|  
 |unsigned int|BIGINT|  
 |无符号的整数 [*...255]|BIGINT|  
 |无符号的整数|BIGINT|  
@@ -179,16 +179,16 @@ ms.locfileid: "47713245"
 |无符号的数字|NUMERIC|  
 |无符号的数字 [*...65]|numeric[*][0]|  
 |无符号的数字 [*...65] [\*...30]|numeric[*][\*]|  
-|无符号真正|float [53]|  
+|无符号真正|float[53]|  
 |未签名的实际 [*...255 [[\*...30]|numeric[*][\*]|  
 |无符号的 smallint|ssNoversion|  
 |无符号的 smallint [*...255]|ssNoversion|  
 |无符号的 tinyint|TINYINT|  
 |无符号的 tinyint [*...255]|TINYINT|  
-|varbinary[0..1]|varbinary [1]|  
+|varbinary[0..1]|varbinary[1]|  
 |varbinary[2..8000]|varbinary[*]|  
 |varbinary[8001..*]|varbinary(max)|  
-|varchar[0..1]|nvarchar [1]|  
+|varchar[0..1]|nvarchar[1]|  
 |varchar[2..4000]|nvarchar[*]|  
 |varchar[4001..*]|nvarchar(max)|  
 |year|SMALLINT|  

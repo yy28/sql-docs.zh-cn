@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be133079c1b6beffd484942eb9ae058c14dd5c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306039"
 ---
 # <a name="transaction-support"></a>事务支持
 对事务程度是支持的驱动程序定义的。 ODBC 被设计为具有无需管理其数据的多个更新的单用户或桌面数据库上实现。 此外，某些支持事务的数据库执行操作因此仅限于 SQL、 数据操作语言 (DML) 语句限制或特殊事务语义与使用数据定义语言 (DDL) 时有一个事务处于活动状态。 也就是说，可能存在有关表的多个同时进行更新而不是更改的数量和事务处理期间的表定义的事务支持。  

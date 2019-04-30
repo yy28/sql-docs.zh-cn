@@ -1,5 +1,5 @@
 ---
-title: 如何： 查看升级顾问报表 |Microsoft Docs
+title: 如何：查看升级顾问报表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294551"
 ---
-# <a name="how-to-view-an-upgrade-advisor-report"></a>如何查看升级顾问报表
+# <a name="how-to-view-an-upgrade-advisor-report"></a>如何：查看升级顾问报表
   升级顾问会为选择分析的每个组件创建报表。 本主题说明如何从升级顾问起始页中查看升级顾问报表。  
   
 > [!IMPORTANT]  
@@ -74,8 +74,8 @@ ms.locfileid: "48201927"
 >  该报表可能包含与无法检测的问题有关的项。 这些问题是那些无法检测到的问题或会产生太多的误报结果的问题。 单击**告诉我有关此问题以及如何解决该问题的详细信息**链接以查看组件无法检测到问题的列表。  
   
 ## <a name="see-also"></a>请参阅  
- [如何： 导出报表](../../../2014/sql-server/install/how-to-export-reports.md)   
- [如何： 运行升级顾问分析向导](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [如何：导出报表](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [如何：运行升级顾问分析向导](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [解决升级问题](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [升级顾问操作指南主题](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [使用升级顾问](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

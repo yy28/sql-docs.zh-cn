@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 86f52c2ea61b8b62ea9bfe5ffe6b3c7b06977740
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231955"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>创建和更改对象 (XMLA)
   可以单独创建、更改和删除主要对象。 主要对象包括以下对象：  
@@ -136,7 +136,7 @@ ms.locfileid: "50145142"
 ### <a name="comments"></a>注释  
  **ObjectExpansion**的属性**Alter**命令已设置为*ObjectProperties*。 此设置允许[ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)元素中，次要对象，若要从数据源中定义排除**ObjectDefinition**。 因此，该数据源的模拟信息仍设置为在第一个示例中所指定的服务帐户。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行方法&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   
  [使用 Analysis Services 脚本语言 (ASSL) 开发](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  

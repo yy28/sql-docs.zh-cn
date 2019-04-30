@@ -1,5 +1,5 @@
 ---
-title: 任务 4 （可选）：组合、 匹配和发布新的数据集 |Microsoft Docs
+title: 任务 4（可选）：组合、 匹配和发布新的数据集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250094"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>任务 4 （可选）：组合、匹配和发布新数据集
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>任务 4（可选）：组合、匹配和发布新数据集
   随着时间的推移，您将会想要向 MDS 存储库中添加更多的数据。 然后再添加数据，它可用于已托管 MDS，以确保不添加重复或不准确的数据中的数据的新数据进行比较。 在用于 Excel 的 Master Data Services 外接程序中，您可以合并两个工作表的数据并比较数据以在将数据发布到 MDS 前识别并删除重复项。 MDS Excel 外接程序的匹配功能使用 DQS 匹配功能来识别数据中的匹配项。 在本任务中，您将两个工作表中的数据合并到一个工作表中，然后执行匹配活动以在发布到 MDS 前识别并删除重复项。 请参阅[MDS 外接程序中用于 Excel 的数据质量匹配](https://msdn.microsoft.com/library/hh548681.aspx)并[合并数据](https://msdn.microsoft.com/library/hh548680.aspx)主题的更多详细信息。  
   
 1.  启动的新实例**Excel**。 单击**启动**，依次指向**运行**，类型**Excel**，然后单击**确定**。  
@@ -30,7 +30,7 @@ ms.locfileid: "56014271"
   
 4.  应会看到**主数据资源管理器**右侧的窗格。 如果看不到主数据资源管理器，请单击**显示资源管理器**功能区上的按钮。  
   
-5.  在中**主数据资源管理器**窗口中，选择**供应商**的下拉列表中**模型**。 您应看到该模型具有一个实体：**供应商**。  
+5.  在中**主数据资源管理器**窗口中，选择**供应商**的下拉列表中**模型**。 你应看到该模型具有一个实体：**供应商**。  
   
      ![Excel-主数据资源管理器窗口](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel 的主数据资源管理器窗口")  
   

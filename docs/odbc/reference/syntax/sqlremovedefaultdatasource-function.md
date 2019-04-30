@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90270f119b351592348287823c2b9d879a15154b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262240"
 ---
 # <a name="sqlremovedefaultdatasource-function"></a>SQLRemoveDefaultDataSource 函数
 **符合性**  
- 版本引入了： ODBC 1.0，不推荐使用  
+ 版本引入了：ODBC 1.0，不推荐使用  
   
  **摘要**  
  在 ODBC 3.0 **SQLRemoveDefaultDataSource**的调用替换为函数[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)与*fRequest* ODBC_REMOVE_DEFAULT_DSN 参数。 如果 ODBC 2 *.x*安装程序会调用此函数，ODBC 安装程序会将其映射到以下**SQLConfigDataSource**调用：  

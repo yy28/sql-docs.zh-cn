@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d664b5f66b742b02404dc35952d02b03b8c7103
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232244"
 ---
 # <a name="creating-and-dropping-views-and-procedures-using-extendedansisql"></a>使用 ExtendedAnsiSQL 创建和删除视图和过程
 启用 ExtendedAnsiSQL 标志后，Jet 4.0 支持创建和删除视图和过程通过 SQL 功能。 这些视图和过程将不会显示通过访问。

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d92a7d12f7ea0f60bcd6ea7f89e105962785b2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308327"
 ---
 # <a name="adox-code-examples"></a>ADOX 代码示例
 使用下面的代码示例来了解如何使用 ADOX 对象、 方法、 属性和事件。  

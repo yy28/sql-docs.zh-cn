@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312112"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>第 4 课：执行市场篮预测
   在本课程中，您将使用 DMX`SELECT`语句以创建基于关联的预测模型中创建[第 2 课：向市场篮挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 使用 DMX `SELECT` 语句并添加一个 `PREDICTION JOIN` 子句可创建一个预测查询。 预测联接语法的详细信息，请参阅[SELECT FROM&#60;模型&#62;预测联接&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)。  

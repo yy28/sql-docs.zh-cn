@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b1c9991c12cb35ed89217afc41d31c8b447c5de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299078"
 ---
 # <a name="shortcut-keys-accesstosql"></a>键盘快捷方式 (AccessToSQL)
 可以使用键盘快捷方式来浏览 SSMA 应用程序。 有关详细信息，请参阅以下主题。  

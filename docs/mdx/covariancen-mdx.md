@@ -1,5 +1,5 @@
 ---
-title: CovarianceN (MDX) |Microsoft 文档
+title: CovarianceN (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 054acaaca417ca7d3fa5303fb31b5ea027bfcd72
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249603"
 ---
 # <a name="covariancen-mdx"></a>CovarianceN (MDX)
 
@@ -38,15 +38,15 @@ CovarianceN(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  通常是单元坐标（返回代表 X 轴的值的数字）的多维表达式 (MDX) 的有效数值表达式。  
   
-## <a name="remarks"></a>Remarks  
- **CovarianceN**函数的计算结果的第一个数值表达式，以获取 y 轴的值针对指定的集。 然后，此函数对指定的集计算第二个数值表达式（如果指定），以获得 x 轴的一组值。 如果未指定第二个数值表达式，则该函数使用指定集中的单元的当前上下文作为 X 轴的值。  
+## <a name="remarks"></a>备注  
+ **CovarianceN**函数的第一个数值表达式，以获取 y 轴的值对指定的集计算。 然后，此函数对指定的集计算第二个数值表达式（如果指定），以获得 x 轴的一组值。 如果未指定第二个数值表达式，则该函数使用指定集中的单元的当前上下文作为 X 轴的值。  
   
- **CovarianceN**函数使用无偏差的总体公式。 这是与此相反[协方差](../mdx/covariance-mdx.md)使用有偏差的总体公式 （除以 x，y 对的数目） 的函数。  
+ **CovarianceN**函数使用无偏差的总体公式。 这是与此相反[协方差](../mdx/covariance-mdx.md)函数使用有偏差的总体公式 （除以 x-y 对的数量）。  
   
 > [!NOTE]  
->  **CovarianceN**函数将忽略空单元格包含文本或逻辑值。 但是，该函数将包含值为零的单元。  
+>  **CovarianceN**函数将忽略空单元或单元格包含文本或逻辑值。 但是，该函数将包含值为零的单元。  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

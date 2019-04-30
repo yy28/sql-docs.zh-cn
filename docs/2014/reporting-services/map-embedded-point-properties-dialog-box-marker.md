@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88898800b2d24bcf6af7f421dc3ae6e91f123728
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63279009"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>“地图嵌入点属性”对话框 -&gt;“标记”
   选择 **“嵌入的点属性”** 对话框中的 **“标记”** 可以更改以下地图元素的标记类型和标记大小选项：  

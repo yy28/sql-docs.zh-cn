@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescRec 函数 |Microsoft Docs
+title: SQLGetDescRec Function | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f8c585bc758b74c666c8da625c1e57af7af2582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258803"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLGetDescRec**返回当前设置或描述符记录的多个字段的值。 描述返回的字段的名称、 数据类型和列或参数的数据的存储。  

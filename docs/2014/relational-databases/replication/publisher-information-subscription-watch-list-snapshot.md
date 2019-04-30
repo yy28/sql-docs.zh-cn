@@ -13,25 +13,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b84f87aff9684cc08fc0d91fc5de364f816125a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262149"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot-publication-sql-server-2005-and-later"></a>发布服务器信息，订阅监视列表（快照发布，SQL Server 2005 和更高版本）
-  在运行 **及更高版本的分发服务器上，可以使用** “订阅监视列表” [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 选项卡；此选项卡用于显示所选发布服务器上的所有可用发布中的订阅的相关信息。 可以筛选订阅列表，以查看有错误的订阅、出现警告的订阅以及所有性能较差的订阅。 此选项卡提供了一个位置以便管理员可以监视发布服务器上的所有复制活动：复制监视器显示需要注意，根据所选的复制类型和在中选择的选项的所有订阅**显示**下拉列表框。 由于此选项卡上显示的项基于当前状态和性能，因此只有与 **“显示”** 列表框中的当前选项相匹配的订阅才会显示在此页上。  
+  在运行 **及更高版本的分发服务器上，可以使用** “订阅监视列表” [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 选项卡；此选项卡用于显示所选发布服务器上的所有可用发布中的订阅的相关信息。 可以筛选订阅列表，以查看有错误的订阅、出现警告的订阅以及所有性能较差的订阅。 此选项卡为管理员提供了监视发布服务器上所有复制活动的单一位置：复制监视器根据所选复制类型以及“显示”下拉列表框中选择的选项，显示需要注意的所有订阅。 由于此选项卡上显示的项基于当前状态和性能，因此只有与 **“显示”** 列表框中的当前选项相匹配的订阅才会显示在此页上。  
   
 ## <a name="options"></a>选项  
  有关订阅的详细信息及相关任务，请右键单击相应订阅所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**:中的一个或多个列的排序**排**对话框。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
   
--   **选择显示的列**:选择哪些列显示以及用来显示它们中的顺序**选择列**对话框。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
   
--   **筛选器**:筛选列中的值为基础的网格中的行**筛选器设置**对话框。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
   
--   **清除筛选器**:清除网格的任何筛选器设置。  
+-   **清除筛选器**：清除网格的任何筛选设置。  
   
  筛选设置是特定于每个网格的。 列的选择和排序应用于同一类型的所有网格，如每个发布服务器的发布网格。  
   
@@ -65,17 +65,17 @@ ms.locfileid: "54131877"
  只有在设置了阈值时，才会显示状态值 **“即将过期/已过期”** 。 有关设置阈值的信息，请参阅[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **订阅**  
- 每个订阅，请在窗体的名称：*SubscriberName:SubscriptionDatabaseName*。  
+ 每个订阅的名称，格式为：SubscriberName:SubscriptionDatabaseName。  
   
  **发布**  
- 与订阅同步，在窗体中的发布的名称：*PublicationDatabaseName:PublicationName*。  
+ 与订阅同步的发布的名称，格式为：PublicationDatabaseName:PublicationName。  
   
  **上次同步**  
  分发代理上次运行的时间。 如果正在进行同步，则显示 **“正在进行”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)  
   
   

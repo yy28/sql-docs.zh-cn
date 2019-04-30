@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb18bc37f63b74981fcccbcb889bd80dcb816d12
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273154"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>创建数据源（数据挖掘基础教程）
   一个*数据源*是保存和管理在项目中并部署到的数据连接应用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库。 除了其他所有必需的连接属性外，数据源还包含源数据所在的服务器和数据库的名称。  

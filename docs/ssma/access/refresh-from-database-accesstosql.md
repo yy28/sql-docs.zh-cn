@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 29dd391a094f37334008e98af60bcdc2396a997a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299123"
 ---
 # <a name="refresh-from-database-accesstosql"></a>从数据库 (AccessToSQL) 刷新
 **从数据库刷新**对话框允许您选择要从 Access 数据库刷新的对象。 在对话框中的行进行了颜色编码基于元数据的状态：  

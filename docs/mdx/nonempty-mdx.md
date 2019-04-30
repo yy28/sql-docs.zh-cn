@@ -1,5 +1,5 @@
 ---
-title: 非空 (MDX) |Microsoft 文档
+title: NonEmpty (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278518"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -35,17 +35,17 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 此函数返回位于第一个指定集中并且在对第二个集中的元组求值时不为空的元组。 **NonEmpty**函数将考虑帐户计算和保留了重复元组。 如果未提供第二个集，将在多维数据集中属性层次结构和度量值的成员的当前坐标上下文中对表达式求值。  
+## <a name="remarks"></a>备注  
+ 此函数返回位于第一个指定集中并且在对第二个集中的元组求值时不为空的元组。 **NonEmpty**函数将考虑计算并保留重复元组。 如果未提供第二个集，将在多维数据集中属性层次结构和度量值的成员的当前坐标上下文中对表达式求值。  
   
 > [!NOTE]  
->  使用此函数而不是不推荐使用[NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md)函数。  
+>  使用此函数而不是已弃用[NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md)函数。  
   
 > [!IMPORTANT]  
 >  非空是元组所引用的单元的特征，而不是元组本身的特征。  
   
 ## <a name="examples"></a>示例  
- 以下查询显示的一个简单示例**NonEmpty**，返回具有用于 Internet Sales Amount 的非 null 值，2001 年 7 月 1 日的所有客户：  
+ 以下查询显示了一个简单的示例**NonEmpty**，返回 2001 年 7 月 1 日 Internet Sales Amount 的具有非 null 值的所有客户：  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -61,7 +61,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- 下面的示例返回包含客户和购买日期，使用元组的一套**筛选器**函数和**NonEmpty**函数来查找每个客户购买过的最后日期：  
+ 下面的示例返回包含客户和采购日期，使用元组集**筛选器**函数和**NonEmpty**函数来查找最后一个日期，每个客户购买：  
   
  `WITH SET MYROWS AS FILTER`  
   
@@ -89,9 +89,9 @@ NONEMPTY(set_expression1 [,set_expression2])
   
 ## <a name="see-also"></a>请参阅  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [筛选器&#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Filter (MDX)](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

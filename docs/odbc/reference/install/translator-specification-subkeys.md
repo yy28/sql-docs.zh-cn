@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272941"
 ---
 # <a name="translator-specification-subkeys"></a>转换器规范子项
 ODBC 转换器子项中列出每个翻译人员都有其自己的子项。 此子项有同名 ODBC 转换器子项下的相应值。 此子项下的值列出转换器和转换器安装程序 Dll 和使用情况计数的完整的路径。 值的格式为下表中所示。  
   
-|“属性”|数据类型|data|  
+|“属性”|数据类型|数据|  
 |----------|---------------|----------|  
-|转换器|REG_SZ|*转换器 DLL 路径*|  
-|安装|REG_SZ|*安装程序 DLL 路径*|  
+|转换器|REG_SZ|*translator-DLL-path*|  
+|安装|REG_SZ|*setup-DLL-path*|  
 |UsageCount|REG_DWORD|*计数*|  
   
  有关使用情况计数信息，请参阅[使用情况计数](../../../odbc/reference/install/usage-counting.md)本部分前面。  

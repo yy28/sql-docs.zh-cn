@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea282362853ca25a761f870970a288585a00160e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275896"
 ---
 # <a name="error-object"></a>错误对象
 包含有关适用于单个操作涉及该提供程序的数据访问错误的详细信息。  
@@ -62,4 +62,4 @@ ms.locfileid: "47802925"
  [Description、 HelpContext、 HelpFile、 NativeError、 数、 源和 SQLState 属性示例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

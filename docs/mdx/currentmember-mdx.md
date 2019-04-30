@@ -1,5 +1,5 @@
 ---
-title: CurrentMember (MDX) |Microsoft 文档
+title: CurrentMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7d47e12b95a92930bbdfceaba5cc8997c286eec
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248893"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -32,14 +32,14 @@ Hierarchy_Expression.CurrentMember
  *Hierarchy_Expression*  
  返回层次结构的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  遍历一组层次结构成员时，在遍历过程的每一步，所操作的成员就是当前成员。 **CurrentMember**函数将返回该成员。  
   
 > [!IMPORTANT]  
 >  如果维度只包含一个可见的层次结构，则可以通过此维度的名称或此层次结构的名称引用此层次结构，原因是此维度的名称会解析为它唯一可见的层次结构。 例如，`Measures.CurrentMember` 是一个有效的 MDX 表达式，这是因为它会解析为 Measures 维度中唯一的层次结构。  
   
 ## <a name="examples"></a>示例  
- 以下查询显示如何**Currentmember**可用于从列、 行和切片轴上的层次结构中查找的当前成员：  
+ 以下查询说明如何**Currentmember**可用于查找列、 行和切片轴上层次结构中的当前成员：  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
   
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- 当前成员在查询中的轴上使用的层次结构上进行更改。 因此，还可以更改同一维度未使用轴上的其他层次结构上的当前成员;此行为称为自动存在，在找不到更多详细信息[在 MDX 中的关键概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。 例如，下面的查询说明当 Calendar 层次结构上的当前成员显示在行轴上时，Date 维度的 Calendar Year 层次结构上的当前成员如何随 Calendar 层次结构上的当前成员更改：  
+ 当前成员在查询中的轴上使用的层次结构上进行更改。 因此，还可以更改同一维度上未使用的轴上的其他层次结构上的当前成员;此行为称为自动共存并且可以在中找到更多详细信息[MDX 中的重要概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。 例如，下面的查询说明当 Calendar 层次结构上的当前成员显示在行轴上时，Date 维度的 Calendar Year 层次结构上的当前成员如何随 Calendar 层次结构上的当前成员更改：  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -93,7 +93,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **CurrentMember**进行计算感知的查询中正在使用它们的上下文对于而言非常重要。 下面的示例返回订单数量的每个产品和订单数量百分比按类别和模型中，从**Adventure Works**多维数据集。 **CurrentMember**函数标识其订单数量是在计算过程中使用的产品。  
+ **CurrentMember**对于使计算能够识别它们的使用中的查询的上下文是非常重要。 下面的示例返回每个产品的订单数量和订单数量百分比按类别和型号，从**Adventure Works**多维数据集。 **CurrentMember**函数标识其订单数量来计算过程中使用的产品。  
   
 ```  
 WITH   
@@ -118,6 +118,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241296"
 ---
 # <a name="load-xml-data"></a>加载 XML 数据
   您可以采用多种方式将 XML 数据传输到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中。 例如：  
@@ -32,7 +32,7 @@ ms.locfileid: "58526429"
 ## <a name="bulk-loading-xml-data"></a>大容量加载 XML 数据  
  可以通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的大容量加载功能（如 bcp）将 XML 数据大容量加载到服务器中。 通过使用 OPENROWSET 可以将文件中的数据加载到 XML 列中。 以下示例说明了这一点。  
   
-##### <a name="example-loading-xml-from-files"></a>例如：从文件加载 XML  
+##### <a name="example-loading-xml-from-files"></a>例如：从文件中加载 XML  
  此示例显示了如何在表 T 中插入行。从文件 C:\MyFile\xmlfile.xml 中将 XML 列的值作为 CLOB 加载，并为整数列提供了值 10。  
   
 ```  

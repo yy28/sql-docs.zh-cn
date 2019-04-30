@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eacb57e4db5d312d04fdcd1e3b06b446f62635cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301513"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>连接 Visual FoxPro 数据源
 您可以连接到 Visual FoxPro 数据源使用 Microsoft Office 应用程序或使用 SQL API。  
@@ -27,5 +27,5 @@ ms.locfileid: "47817776"
 |若要从连接|请参阅|  
 |---------------------|---------|  
 |Microsoft Access、 Microsoft Excel 或 Microsoft Word|[从 Microsoft Office 访问 Visual FoxPro 数据](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
-|在 C 或 c + + 应用程序|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
+|在 C 或C++应用程序|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
 |Visual Basic 应用程序|[Visual FoxPro ODBC 驱动程序中使用 Visual Basic 应用程序](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|

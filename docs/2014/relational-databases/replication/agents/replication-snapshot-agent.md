@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250588"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
   复制快照代理是一个可执行文件，用于准备快照文件（其中包含已发布表和数据库对象的架构及数据），然后将这些文件存储在快照文件夹中，并在分发数据库中记录同步作业。  
@@ -87,7 +87,7 @@ ms.locfileid: "54132277"
  **-70Subscribers**  
  如果有任何订阅服务器在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 版，则必须使用此参数。  
   
- **-BcpBatchSize** _bcp_ \_ *批处理*\_ *大小*  
+ -BcpBatchSize bcp\_ batch\_ size  
  在一次大容量复制操作中发送的行数。 执行 **bcp in** 操作时，批的大小为要作为一个事务发送到服务器的行数，并且也是分发代理记录 **bcp** 进度消息之前必须发送的行数。 当执行 **bcp out** 操作时，将使用固定批大小 1000。 值为 0 表示不记录任何消息。  
   
  **-DefinitionFile** _def_path_and_file_name_  
@@ -196,7 +196,7 @@ ms.locfileid: "54132277"
 |**2**|输出所有错误消息和进度报告消息，这对于调试很有用。|  
 
  **-PrefetchTables** [ **0**| **1**]  
- 可选参数，指定是否预提取并缓存表对象。  默认行为是，根据内部计算结果，使用 SMO 组件来预提取特定表属性。  此参数可在其中 SMO 预提取操作会花费相当长时间运行的方案中很有帮助。 如果你不使用此参数，此决定是在运行时做出，依据为以项目形式添加到发布中的表所占的百分比。  
+ 可选参数，指定是否预提取并缓存表对象。  默认行为是，根据内部计算结果，使用 SMO 组件来预提取特定表属性。  如果 SMO 预提取操作的耗时相当长，你会发现此参数非常有用。 如果你不使用此参数，此决定是在运行时做出，依据为以项目形式添加到发布中的表所占的百分比。  
   
 |OutputVerboseLevel 值|Description|  
 |------------------------------|-----------------|  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 05ef20ebb3458e32cda4cc1f0bbe9a924ed8e422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281703"
 ---
 # <a name="new-project-db2tosql"></a>新项目 (DB2ToSQL)
 使用**新的项目**对话框创建新的 SSMA 项目。 访问**新的项目**对话框中，在**文件**菜单中，单击**新项目**。  

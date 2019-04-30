@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a33663ff92a093ea63f183cf8efb901d133a5a27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751739"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460135"
 ---
 # <a name="create-a-project"></a>创建项目
   可以在现有解决方案中创建一个或多个项目。  
@@ -94,7 +94,7 @@ ms.locfileid: "52751739"
   
 4.  单击“确定” 。  
   
- 您可以设置脚本项目的名称，但文件夹名称则由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 确定，并且不能更改。 可以使用“添加新项目”对话框，为一组公共文件夹配置驱动器和路径说明。 右键单击“解决方案资源管理器”中的解决方案图标，再单击“添加”。 脚本项目文件夹的默认位置为：C:\Documents and Settings\\*用户名*\My Documents\SQL Server Management Studio\Projects\\。  
+ 您可以设置脚本项目的名称，但文件夹名称则由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 确定，并且不能更改。 可以使用“添加新项目”对话框，为一组公共文件夹配置驱动器和路径说明。 右键单击“解决方案资源管理器”中的解决方案图标，再单击“添加”。 脚本项目文件夹的默认位置为：C:\Documents and Settings\\username\My Documents\SQL Server Management Studio\Projects\\。  
   
 ## <a name="see-also"></a>请参阅  
  [解决方案资源管理器](solution-explorer.md)   

@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312870"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 动态游标
-动态游标只是： 动态。 它可以检测到的成员身份、 顺序和结果集打开游标后的值所做的任何更改。 例如，假设动态游标提取两个行，另一个应用程序，然后更新这些行之一并删除其他。 如果动态游标然后尝试重新提取这些行，它将找不到已删除的行，但将返回已更新的行的新值。  
+动态游标只是： 动态。 它可以检测到的成员身份、 顺序和结果集打开游标后的值所做的任何更改。 例如，假设动态游标提取两行，然后另一个应用程序将更新这两行之一并删除另一行。 如果动态游标然后尝试重新提取这些行，它将找不到已删除的行，但将返回已更新的行的新值。  
   
  动态游标检测所有更新，删除和插入，同时其自己和所做的其他人。 （这是受限于隔离级别事务由 SQL_ATTR_TXN_ISOLATION 连接属性设置。）将 SQL_ATTR_ROW_STATUS_PTR 语句属性指定的行状态数组反映这些更改，并且可以包含 SQL_ROW_SUCCESS、 SQL_ROW_SUCCESS_WITH_INFO、 SQL_ROW_ERROR、 SQL_ROW_UPDATED 和 SQL_ROW_ADDED。 因为动态游标不会返回外部行集已删除的行，因此不再能识别的结果集中已删除的行或行状态数组中的对应元素存在，它不能返回 SQL_ROW_DELETED。 仅当通过调用更新了某行时返回 SQL_ROW_ADDED **SQLSetPos**、 不是在另一个游标更新时。  
   

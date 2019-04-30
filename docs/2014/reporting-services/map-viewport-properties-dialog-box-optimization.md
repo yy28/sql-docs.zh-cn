@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 833b60a0e96cc79c136a58bebca1c69486795e2b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278537"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>“地图视区属性”对话框 -&gt;“优化”
   针对 **“地图视区属性”** 对话框选择 **“优化”** 有助于控制用于在报表中查看地图的分辨率。  

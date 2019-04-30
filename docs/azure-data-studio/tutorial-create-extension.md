@@ -12,11 +12,11 @@ author: kevcunnane
 ms.author: kcunnane
 manager: craigg
 ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309442"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>教程：创建 Azure Data Studio 扩展
 
@@ -66,7 +66,7 @@ Azure Data Studio 基于相同的框架作为 Visual Studio Code 中，因此使
 
 ### <a name="add-a-keyboard-shortcut"></a>添加键盘快捷方式
 
-**第 1 步：找到要替换的快捷方式**
+**步骤 1：找到要替换的快捷方式**
 
 现在，我们已准备就绪我们扩展，添加一些 SSMS 键盘快捷方式 （或键绑定） 到 Azure Data Studio。 我使用了[Andy Mallon 备忘单](https://am2.co/2018/02/updated-cheat-sheet/)和灵感 RedGate 的键盘快捷方式列表。
 

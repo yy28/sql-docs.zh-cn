@@ -1,5 +1,5 @@
 ---
-title: 维度 (MDX) |Microsoft 文档
+title: 维度 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2703122b67debf0749abcd2ea01114fb6ecaa06
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248143"
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
 
@@ -39,16 +39,16 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Name*  
  指定层次结构名称的有效字符串表达式。  
   
-## <a name="remarks"></a>Remarks  
- 如果指定层次结构号，**维度**函数返回在多维数据集的从零开始的位置是层次结构指定层次结构数目。  
+## <a name="remarks"></a>备注  
+ 如果指定了层次结构号，则**维度**函数返回其从零开始的位置，在多维数据集中的层次结构指定层次结构号。  
   
- 如果指定层次结构名称，则**维度**函数将返回指定层次结构。 通常情况下，使用此字符串版本**维度**与用户定义函数的函数。  
+ 如果指定层次结构名称，则**维度**函数返回指定层次结构。 通常情况下，使用此字符串版本**维度**函数和用户定义的函数。  
   
 > [!NOTE]  
 >  **度量值**维度始终由`Dimensions(0)`。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用**维度**函数以返回名称、 级别的计数和计数的使用数值表达式和字符串表达式指定层次结构的成员。  
+ 下面的示例使用**维度**函数以返回名称、 级别计数和计数的成员的指定层次结构中，使用数值表达式和字符串表达式。  
   
 ```  
 WITH MEMBER Measures.x AS Dimensions  
@@ -80,6 +80,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

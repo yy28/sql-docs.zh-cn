@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14a89c859e98a069106b79c9289187a64c310fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232828"
 ---
 # <a name="installer-dll-api-reference-function"></a>安装程序 DLL API 参考函数
 本部分介绍在安装程序 DLL API 函数的语法。 安装程序 DLL API 由 20 功能组成。 这些函数的三个**SQLGetTranslator**， **SQLRemoveDSNFromIni**，并**SQLWriteDSNToIni**，只能由安装程序 Dll 调用。 安装和管理程序通过调用其他函数。  

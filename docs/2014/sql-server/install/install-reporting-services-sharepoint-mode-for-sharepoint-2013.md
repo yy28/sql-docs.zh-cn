@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ec3e854d72f28646ba556d09514b6646dbb3e60c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298825"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>安装用于 SharePoint 2013 的 Reporting Services SharePoint 模式
   本主题中的过程将指导您完成以 SharePoint 模式在单台服务器上安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。 本主题还可用于更新现有安装的单独过程，例如创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。  
@@ -39,13 +39,13 @@ ms.locfileid: "53359839"
   
 -   [安装帐户](#bkmk_setupaccounts)  
   
--   [第 1 步：在 SharePoint 模式下安装 Reporting Services 报表服务器](#bkmk_install_SSRS)  
+-   [步骤 1：在 SharePoint 模式下安装 Reporting Services 报表服务器](#bkmk_install_SSRS)  
   
--   [步骤 2:注册并启动 Reporting Services SharePoint 服务](#bkmk_install_SSRS_sharedservice)  
+-   [步骤 2：注册并启动 Reporting Services SharePoint 服务](#bkmk_install_SSRS_sharedservice)  
   
--   [步骤 3:创建 Reporting Services 服务应用程序](#bkmk_create_serrviceapplication)  
+-   [步骤 3：创建 Reporting Services 服务应用程序](#bkmk_create_serrviceapplication)  
   
--   [步骤 4:激活 Power View 网站集功能。](#bkmk_powerview)  
+-   [步骤 4：激活 Power View 网站集功能。](#bkmk_powerview)  
   
 -   [等同于步骤 1-4 的 Windows PowerShell 脚本](#bkmk_full_script)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53359839"
   
      根据最佳安全做法，SharePoint 场管理员帐户不应同时作为本地操作系统管理员帐户。 如果您在安装过程中向本地管理员组中添加场管理员帐户，建议您在安装完成后从本地管理员组中删除该帐户。  
   
-##  <a name="bkmk_install_SSRS"></a> 步骤 1:在 SharePoint 模式下安装 Reporting Services 报表服务器  
+##  <a name="bkmk_install_SSRS"></a> 步骤 1：在 SharePoint 模式下安装 Reporting Services 报表服务器  
  此步骤在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器以及用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。 根据已在您的计算机上安装的项，您可能不会看到在下面的步骤中介绍的某些安装页。  
   
 1.  运行 SQL Server 安装向导 (Setup.exe)。  
@@ -161,7 +161,7 @@ ms.locfileid: "53359839"
   
 20. 安装将需要几分钟时间。 您将看到 **“完成”** 页，其中列出了功能以及各功能的状态。 您可能会看到一个信息对话框，指示计算机需要重新启动。  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> 步骤 2:注册并启动 Reporting Services SharePoint 服务  
+##  <a name="bkmk_install_SSRS_sharedservice"></a> 步骤 2：注册并启动 Reporting Services SharePoint 服务  
  ![与 PowerShell 相关的内容](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell related content")  
   
 > [!NOTE]  
@@ -192,7 +192,7 @@ ms.locfileid: "53359839"
     > [!IMPORTANT]  
     >  如果您看到与以下内容类似的错误消息：  
     >   
-    >  Install-SPRSService:术语 Install-sprsservice**无法识别**为  
+    >  Install-sprsservice:术语 Install-sprsservice**无法识别**为  
     > cmdlet、函数、脚本文件或可运行程序的名称。 请检查  
     > 名称的拼写，如果包括路径，请确保路径正确，  
     > 然后重试。  
@@ -222,7 +222,7 @@ ms.locfileid: "53359839"
     > [!NOTE]  
     >  如果 Reporting Services 服务停留在“正在启动”状态，并且未更改为“已启动”，则验证是否已在 Windows 服务器管理器中启动“SharePoint 2013 管理”服务。  
   
-##  <a name="bkmk_create_serrviceapplication"></a> 步骤 3:创建 Reporting Services 服务应用程序  
+##  <a name="bkmk_create_serrviceapplication"></a> 步骤 3：创建 Reporting Services 服务应用程序  
  本节提供您在查看现有服务应用程序的情况下，用于创建服务应用程序的步骤和属性说明。  
   
 1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”**。  

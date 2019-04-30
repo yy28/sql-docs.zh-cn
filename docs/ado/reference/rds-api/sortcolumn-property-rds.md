@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e11588900c963576d4fec31545b27c6fdb480ab8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272811"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 属性 (RDS)
 表示要对记录进行排序的列。  

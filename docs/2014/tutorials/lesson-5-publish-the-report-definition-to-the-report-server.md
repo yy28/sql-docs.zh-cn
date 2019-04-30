@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272871"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>第 5 课：将报表定义发布到报表服务器
   更新报表定义的最后一步是将其发布回报表服务器。  

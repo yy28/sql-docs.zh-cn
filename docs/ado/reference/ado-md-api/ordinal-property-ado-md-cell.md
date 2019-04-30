@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae4b9a3c623fdcb22d7665e4242ce2f58397b2a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281931"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal 属性（ADO MD 单元）
 唯一标识[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)按其单元集内的位置。  

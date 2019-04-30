@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267731"
 ---
 # <a name="data-returned-by-catalog-functions"></a>目录函数返回的数据
 每个目录函数返回的数据作为结果集。 此结果集是与任何其他结果集没有什么不同。 它通常生成的一个预定义参数化**选择**是硬编码在驱动程序或存储在数据源中的过程中的语句。 有关如何从结果集中检索数据的信息，请参阅[是一个结果集创建？](../../../odbc/reference/develop-app/was-a-result-set-created.md)。  

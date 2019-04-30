@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273042"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 程序员&#39;的参考
 *ODBC 程序员参考*包含以下各节。  
@@ -50,7 +50,7 @@ ms.locfileid: "52520176"
   
 |格式|用于|  
 |------------|--------------|  
-|选择 * 从|大写的字母指示 SQL 语句、 宏名称和操作系统命令级别使用的术语。|  
+|SELECT * FROM|大写的字母指示 SQL 语句、 宏名称和操作系统命令级别使用的术语。|  
 |`RETCODE SQLFetch(hdbc)`|Monospace 字体用于示例命令行和程序代码。|  
 |argument|斜体字表明以编程方式参数，用户或应用程序必须提供，或 word 强调的信息。|  
 |**SQLEndTran**|粗体表示必须按所示，其中包括函数名称的原样键入的语法。|  
@@ -98,7 +98,7 @@ ms.locfileid: "52520176"
   
  有关事务处理的其他信息，请参阅：  
   
--   灰色，J.n。 和 Reuter，Andreas:*事务处理：概念和技术*（Morgan Kaufmann 出版社，1993年）。  
+-   Gray, J. N. 和 Reuter，Andreas:*事务处理：概念和技术*（Morgan Kaufmann 出版社，1993年）。  
   
 -   Hackathorn，Richard D.:*企业数据库连接*(Wiley & 儿子，1993年)。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52520176"
   
 -   约翰斯顿、 Tom 和 Osborne，标记：*ODBC 开发人员指南*（Howard W.Sam 和公司，1994年）。  
   
--   北部，Ken:*Windows 多 DBMS 编程：为 DBMS 项目使用 c + +、 Visual Basic、 ODBC、 OLE 2 和工具*（John Wiley 和儿子，Inc.，1995年）。  
+-   北部，Ken:*Windows 多 DBMS 编程：使用C++，Visual Basic、 ODBC、 OLE 2 和 Tools for DBMS 项目*（John Wiley 和儿子，Inc.，1995年）。  
   
 -   Stegman、 Michael O.、 Signore、 Robert 和 Creamer，John:*ODBC 解决方案、 开放式数据库连接中的分布式环境*(2.0》(mcgraw-Hill，1995年)。  
   

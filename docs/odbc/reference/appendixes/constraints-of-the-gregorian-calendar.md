@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30fbdd17e7ec5eb970948e1c7133020081222614
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224568"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>公历的约束
 日期和日期时间数据类型和 interval 数据类型的尾部字段必须符合公历的约束。 这些约束如下所示：  

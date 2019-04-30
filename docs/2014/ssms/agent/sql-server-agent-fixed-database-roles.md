@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245986"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 代理固定数据库角色
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有下列 **msdb** 数据库固定数据库角色，使管理员可以更好地控制对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的访问。 下面按从低到高的访问权限列出了角色：  
@@ -50,14 +50,14 @@ ms.locfileid: "52773769"
   
 |操作|运算符|本地作业<br /><br /> （仅限于所拥有的作业）|作业计划<br /><br /> （仅限于所拥有的计划）|代理|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
-|创建/修改/删除|否|是 <sup>1</sup>|用户帐户控制|否|  
-|视图列表（枚举）|是 <sup>2</sup>|用户帐户控制|用户帐户控制|是 <sup>3</sup>|  
-|启用/禁用|否|是|用户帐户控制|不适用|  
+|创建/修改/删除|否|是 <sup>1</sup>|是|否|  
+|视图列表（枚举）|是 <sup>2</sup>|是|是|是 <sup>3</sup>|  
+|启用/禁用|否|是|是|不适用|  
 |视图属性|否|是|是|否|  
-|执行/停止/开始|不适用|用户帐户控制|不适用|不适用|  
-|查看作业历史记录|不适用|用户帐户控制|不适用|不适用|  
-|删除作业历史记录|不适用|不<sup>4</sup>|不适用|不适用|  
-|附加/分离|不适用|不适用|用户帐户控制|不适用|  
+|执行/停止/开始|不适用|是|不适用|不适用|  
+|查看作业历史记录|不适用|是|不适用|不适用|  
+|删除作业历史记录|不适用|否<sup>4</sup>|不适用|不适用|  
+|附加/分离|不适用|不适用|是|不适用|  
   
  <sup>1</sup>无法更改作业所有权。  
   
@@ -78,13 +78,13 @@ ms.locfileid: "52773769"
 |操作|运算符|本地作业|多服务器作业|作业计划|代理|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
 |创建/修改/删除|否|是<sup>1</sup> （仅拥有的作业）|否|是（仅拥有的计划）|否|  
-|视图列表（枚举）|是 <sup>2</sup>|用户帐户控制|是|用户帐户控制|是 <sup>3</sup>|  
+|视图列表（枚举）|是 <sup>2</sup>|是|是|是|是 <sup>3</sup>|  
 |启用/禁用|否|是（仅拥有的作业）|否|是（仅拥有的计划）|不适用|  
 |视图属性|否|是|是|是|否|  
 |编辑属性|否|是（仅拥有的作业）|否|是（仅拥有的计划）|否|  
 |执行/停止/开始|不适用|是（仅拥有的作业）|否|不适用|不适用|  
-|查看作业历史记录|不适用|用户帐户控制|用户帐户控制|不适用|不适用|  
-|删除作业历史记录|不适用|不<sup>4</sup>|否|不适用|不适用|  
+|查看作业历史记录|不适用|是|是|不适用|不适用|  
+|删除作业历史记录|不适用|否<sup>4</sup>|否|不适用|不适用|  
 |附加/分离|不适用|不适用|不适用|是（仅拥有的计划）|不适用|  
   
  <sup>1</sup>无法更改作业所有权。  
@@ -110,13 +110,13 @@ ms.locfileid: "52773769"
 |操作|警报|运算符|本地作业|多服务器作业|作业计划|代理|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
 |创建/修改/删除|否|否|是<sup>2</sup> （仅拥有的作业）|否|是（仅拥有的计划）|否|  
-|视图列表（枚举）|用户帐户控制|是 <sup>1</sup>|用户帐户控制|是|是|用户帐户控制|  
+|视图列表（枚举）|是|是 <sup>1</sup>|是|是|是|是|  
 |启用/禁用|否|否|是 <sup>3</sup>|否|是<sup>4</sup>|不适用|  
-|视图属性|用户帐户控制|是|是|是|是|用户帐户控制|  
+|视图属性|是|是|是|是|是|是|  
 |编辑属性|否|否|是（仅拥有的作业）|否|是（仅拥有的计划）|否|  
-|执行/停止/开始|不适用|不适用|用户帐户控制|否|不适用|不适用|  
-|查看作业历史记录|不适用|不适用|用户帐户控制|用户帐户控制|不适用|不适用|  
-|删除作业历史记录|不适用|不适用|用户帐户控制|否|不适用|不适用|  
+|执行/停止/开始|不适用|不适用|是|否|不适用|不适用|  
+|查看作业历史记录|不适用|不适用|是|是|不适用|不适用|  
+|删除作业历史记录|不适用|不适用|是|否|不适用|不适用|  
 |附加/分离|不适用|不适用|不适用|不适用|是（仅拥有的计划）|不适用|  
   
  <sup>1</sup>可以获取有关在中使用的可用运算符列表**sp_notify_operator**并且**作业属性**的 Management Studio 对话框。  
@@ -132,9 +132,9 @@ ms.locfileid: "52773769"
   
 ## <a name="see-also"></a>请参阅  
  [实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
- [sp_update_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)   
- [sp_notify_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
- [sp_purge_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
+ [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)   
+ [sp_notify_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
+ [sp_purge_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 步骤 3： 服务器获取记录集 （RDS 教程） |Microsoft Docs
+title: 步骤 3：服务器获取记录集 （RDS 教程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5dc57cd55667691433515319762f9c4727060cdf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316764"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步骤 3：服务器获取记录集（RDS 教程）
 服务器程序使用的连接字符串和命令文本查询所需的行的数据源。 检索此信息通常用于 ADO**记录集**，尽管其他 Microsoft 数据访问接口，如无法使用 OLE DB。  
@@ -39,5 +39,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [步骤 4： 服务器返回记录集 （RDS 教程）](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
+ [步骤 4：服务器返回记录集 （RDS 教程）](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

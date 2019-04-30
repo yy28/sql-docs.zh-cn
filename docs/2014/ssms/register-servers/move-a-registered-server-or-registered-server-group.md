@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1718ef034b6650dde246f8c0bc3d4e5f02f2f2ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298051"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>移动注册服务器或注册服务器组 (SQL Server Management Studio)
   本主题说明如何通过在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中移动已注册服务器或服务器组来整理服务器。 服务器组可以包括注册服务器，也可以包含其他服务器组。 服务器和服务器组都可以从一个服务器组移动到另一个服务器组。  

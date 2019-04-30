@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312514"
 ---
 # <a name="using-arrays-of-parameters"></a>使用参数的数组
 若要使用的参数，应用程序调用数组**SQLSetStmtAttr**与*属性*参数则 SQL_ATTR_PARAMSET_SIZE 指定数量的参数集。 它将调用**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAMS_PROCESSED_PTR 指定驱动程序可以在其中返回集的处理，参数数量的变量的地址的自变量其中包括错误设置。 它将调用**SQLSetStmtAttr**与*属性*SQL_ATTR_PARAM_STATUS_PTR 为指向数组中要返回其参数值的每一行的状态信息的自变量。 该驱动程序将这些地址存储在它保留为该语句的结构。  

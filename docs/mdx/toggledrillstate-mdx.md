@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58acac77e4826855997791476b0602699452b7b8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228081"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -48,7 +48,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  查询 XMLA 属性 MdpropMdxDrillFunctions，您可以验证的服务器为钻取功能; 提供的支持级别请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)有关详细信息。  
   
- 请参阅[数据库日志： MDX 集函数： toggledrillstate （） 函数](https://go.microsoft.com/fwlink/?LinkId=517759)的方案和示例涉及此函数。  
+ 请参阅[数据库日志：MDX 集函数：Toggledrillstate （） 函数](https://go.microsoft.com/fwlink/?LinkId=517759)的方案和示例涉及此函数。  
   
 ## <a name="example"></a>示例  
  下例对第一个集中的澳大利亚成员进行深化，而对第一个集中的美国成员进行浅化。  

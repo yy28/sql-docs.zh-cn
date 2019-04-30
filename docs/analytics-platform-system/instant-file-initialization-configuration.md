@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298124"
 ---
 # <a name="instant-file-initialization-configuration"></a>即时文件初始化配置
 即时文件初始化功能允许数据文件操作，以更快地运行的 SQL Server 功能。 选中的复选框以启用即时文件初始化会提高性能的 SQL Server PDW。 但是，如果这会带来安全风险，业务，然后取消选中框。  

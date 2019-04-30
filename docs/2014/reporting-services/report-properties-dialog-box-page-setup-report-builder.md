@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d24e05e13827624c7bb1b2d771ed1641c8e9ee13
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306563"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>“报表属性”对话框 ->“页面设置”（报表生成器）
   选择**页面设置**上**报表属性**，对话框可以设置整个报表页选项。  

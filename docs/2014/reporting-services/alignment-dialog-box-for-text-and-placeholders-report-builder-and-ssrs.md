@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233455"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>文本和占位符的“对齐”对话框（报表生成器和 SSRS）
   选择 **“对齐”** 选项卡可以在选定的单元或数据区域内放置值。 您只能设置文本框中单个文本的水平对齐格式。 如果您希望在文本框中设置空白值或文本的垂直对齐方式，则使用相应文本框属性。 有关详细信息，请参阅[文本属性对话框中，对齐方式&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md)。  

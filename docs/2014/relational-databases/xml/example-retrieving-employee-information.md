@@ -1,5 +1,5 @@
 ---
-title: 例如：检索员工信息 |Microsoft Docs
+title: 例如：检索员工信息 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287840"
 ---
 # <a name="example-retrieving-employee-information"></a>例如：检索员工信息
   此示例检索每个雇员的雇员 ID 和雇员姓名。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，可从 Employee 表的 BusinessEntityID 列获得 employeeID。 可从 Person 表中获得雇员姓名。 可使用 BusinessEntityID 列来联接表。  

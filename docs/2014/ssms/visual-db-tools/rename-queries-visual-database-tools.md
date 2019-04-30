@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316840"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重命名查询 (Visual Database Tools)
   您可以对当前未打开进行编辑的任何查询进行重命名。 以下过程假设您要重命名的查询处于关闭状态。  

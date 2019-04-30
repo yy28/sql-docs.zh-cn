@@ -1,5 +1,5 @@
 ---
-title: 次序 (MDX) |Microsoft 文档
+title: 次序 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 43a75f4a42193c231c1acc710512b05537675991
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277849"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -45,13 +45,13 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  通常是单元坐标（返回以字符串表示的数字）的有效多维表达式 (MDX) 的有效字符串表达式。  
   
-## <a name="remarks"></a>Remarks  
- **顺序**函数可以是分层 (所指定的使用**ASC**或**DESC**标志) 或非层次结构 (通过使用指定**BASC**或**BDESC**标志; **B**代表"中断层次结构")。 如果**ASC**或**DESC**指定，则**顺序**函数首先将根据其位置在位于层次结构的成员，然后订单每个级别。 如果**BASC**或**BDESC**指定，则**顺序**函数排列而不考虑层次结构集中的成员。 在任何标志指定如何， **ASC**是默认设置。  
+## <a name="remarks"></a>备注  
+ **顺序**函数可以是层次结构 (通过使用指定**ASC**或**DESC**标志) 或非层次结构 (通过使用指定**BASC**或**BDESC**标志; **B**代表"打乱层次结构")。 如果**ASC**或**DESC**指定，则**顺序**函数首先排列是根据其位置在层次结构中的成员，然后每个级别进行排序。 如果**BASC**或**BDESC**指定，则**顺序**函数排列集中而不考虑层次结构成员。 指定任何标志， **ASC**是默认值。  
   
- 如果**顺序**函数用于处理一组其中两个或多个层次结构是交叉联接，和**DESC**使用标志，则只有组中的最后一个层次结构的成员进行排序。 这与 Analysis Services 2000 不同，后者对集合中的所有层次结构进行排序。  
+ 如果**顺序**函数用于使用一组在两个或多个层次结构执行叉积，并**DESC**使用标志，只有在集中的最后一个层次结构的成员进行排序。 这与 Analysis Services 2000 不同，后者对集合中的所有层次结构进行排序。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回时，从**Adventure Works**多维数据集，从日期维度上的日历层次结构的所有日历季度的分销商订单数。**顺序**函数重新排序为 ROWS 轴的集。 **顺序**函数进行排序的集`[Reseller Order Count]`降序分层所确定的那样`[Calendar]`层次结构。  
+ 下面的示例返回从**Adventure Works**多维数据集，在日期维度的 Calendar 层次结构中所有日历季度的分销商订单数。**顺序**函数重新为 ROWS 轴的集进行排序。 **顺序**函数进行排序的集`[Reseller Order Count]`降序所确定的那样的层次结构顺序`[Calendar]`层次结构。  
   
  `SELECT`  
   
@@ -69,7 +69,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 请注意如何在此示例中，当**DESC**标志更改为**BDESC**、 层次结构已断开，且而不考虑为层次结构返回的日历季度的列表：  
+ 请注意如何在此示例中，当**DESC**标志将变为**BDESC**、 层次结构被破坏，而不考虑层次结构返回日历季度的列表：  
   
  `SELECT`  
   
@@ -87,7 +87,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 下例根据 Reseller Gross Profit（分销商毛利润），返回前五个销售产品子类别的分销商销售额度量值，而不管层次结构如何。 **子集**函数用于后使用排序结果集中返回仅前 5 元组**顺序**函数。  
+ 下例根据 Reseller Gross Profit（分销商毛利润），返回前五个销售产品子类别的分销商销售额度量值，而不管层次结构如何。 **子集**函数用于后使用排序结果集中返回仅前 5 个元组**顺序**函数。  
   
  `SELECT Subset`  
   
@@ -109,7 +109,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 下面的示例使用**级别**函数来进行排名的市/县层次结构中，成员基于 Reseller Sales Amount 度量值，，然后按排序顺序显示它们。 通过使用**顺序**函数到第一个订单的市/县层次结构的成员组成的集，排序仅一次执行，并对后跟线性扫描之前要呈现在排序顺序。  
+ 下面的示例使用**排名**函数进行排名的 City 层次结构成员基于 Reseller Sales Amount 度量值，然后按照排名高低显示它们。 通过使用**顺序**函数先对 City 层次结构的成员的集，排序是仅执行一次，并再后跟线性扫描之前显示按排序顺序。  
   
 ```  
 WITH   
@@ -127,7 +127,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例中是唯一的使用的集返回的产品数目**顺序**函数进行排序之前使用的非空元组**筛选器**函数。 **CurrentOrdinal**函数用于比较并消除等同值。  
+ 下面的示例中是唯一的使用的集返回的产品数量**顺序**函数进行排序之前使用的非空元组**筛选器**函数。 **CurrentOrdinal**函数用于比较和消除等同值。  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -161,7 +161,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
- 若要了解如何**DESC**标志适用于集的元组，首先，请考虑以下查询的结果：  
+ 若要了解如何**DESC**标志使用元组集的是，请首先考虑以下查询的结果：  
   
 ```  
   
@@ -175,7 +175,7 @@ FROM [Adventure Works]
   
 ```  
   
- 在行轴上，您可以看到 Sales Territory Groups 已按 Tax Amount 的降序排序，如下所示：North America、Europe、Pacific、NA。 发生什么情况，现在请参阅我们叉积的一套产品子类别的销售区域组的集，并将应用**顺序**函数相同的方式，如下所示：  
+ 行轴上您可以看到，Sales Territory Groups 已按降序按 Tax Amount，如下所示：North America、 Europe、 Pacific、 na。 现在，看会发生什么情况我们叉积的一套产品子类别的 Sales Territory Groups 集并应用**顺序**功能的方式相同，按如下所示：  
   
 ```  
   
@@ -191,7 +191,7 @@ FROM [Adventure Works]
   
 ```  
   
- 尽管 Product Subcategories 的集合已按层次结构顺序的降序进行排序，但 Sales Territory Groups 现在未排序并且以它们在层次结构上出现的顺序出现：Europe、NA、North America 和 Pacific。 其原因在于，仅对元组集合中最后一个层次结构 Product Subcategories 进行了排序。 若要重现的 Analysis Services 2000 的行为，请使用一系列嵌套**生成**函数对每个组进行排序，才使用它交叉联接，例如：  
+ 而按降序，层次结构顺序排序的一套产品子类别 Sales Territory Groups 现在未排序，并将显示在层次结构的顺序出现：欧洲、 NA、 North America 和 Pacific。 其原因在于，仅对元组集合中最后一个层次结构 Product Subcategories 进行了排序。 若要重现 Analysis Services 2000 的行为，请使用一系列嵌套**生成**函数对每个组进行排序，才使用它执行叉积，例如：  
   
 ```  
   
@@ -212,6 +212,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

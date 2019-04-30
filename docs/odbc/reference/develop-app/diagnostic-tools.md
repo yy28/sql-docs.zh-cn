@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fe70b1e484039593c9bb02a28788259f9afaf18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242370"
 ---
 # <a name="diagnostic-tools"></a>诊断工具
 两个功能可以帮助诊断在 ODBC 应用程序的问题。 这两个可以从 ODBC 管理器中使用和实现由驱动程序管理器。 *跟踪*提供一种方法来记录到日志文件的函数调用序列。 Visual Studio 分析器允许在分布式环境中分析的组件的交互的信息。  

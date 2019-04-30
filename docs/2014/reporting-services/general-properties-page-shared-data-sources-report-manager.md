@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261101"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>共享数据源的“常规”属性页（报表管理器）
   使用“常规”属性页可以查看或修改共享数据源项的属性。 单击 **“应用”** 后，对属性所做的任何更改对于引用该项的所有报表都将生效。  

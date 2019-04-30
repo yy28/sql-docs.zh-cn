@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224489"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>将数据从 SQL 转换为 C 数据类型
 当应用程序调用**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**，驱动程序从数据源检索数据。 如果有必要，它将数据从转换中的驱动程序在检索到指定的数据类型的数据类型*TargetType*中的参数**SQLBindCol**或**SQLGetData。** 最后，它将数据存储在指向的位置*TargetValuePtr*中的参数**SQLBindCol**或**SQLGetData** （和 ARD SQL_DESC_DATA_PTR 字段）。  
@@ -49,28 +49,28 @@ ms.locfileid: "47680835"
   
 -   **字符字节长度**是以字符格式显示数据所需的字节总数。 这是为每个 C 数据类型的部分中定义的一样[显示大小](../../../odbc/reference/appendixes/display-size.md)，只不过字符字节长度是以字节为单位，而显示大小是以字符为单位。  
   
--   中的词*斜体*表示函数自变量或 SQL 语法元素。 为语法元素的语法，请参阅[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  
+-   中的词*斜体*表示函数自变量或 SQL 语法元素。 为语法元素的语法，请参阅[附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  
   
  本部分包含以下主题。  
   
--   [从 SQL 到 C：字符](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [从 SQL 到 c:字符](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [从 SQL 到 C：数字](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [从 SQL 到 c:Numeric](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [从 SQL 到 C：位](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [从 SQL 到 c:Bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [从 SQL 到 C：二进制](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [从 SQL 到 c:二进制文件](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [从 SQL 到 C：日期](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [从 SQL 到 c:日期](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [从 SQL 到 C：GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [从 SQL 到 c:GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [从 SQL 到 C：时间](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [从 SQL 到 c:时间](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [从 SQL 到 C：时间戳](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [从 SQL 到 c:时间戳](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [从 SQL 到 C：年月间隔](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [从 SQL 到 c:年月间隔](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [从 SQL 到 C：日期时间间隔](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [从 SQL 到 c:日期时间间隔](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [从 SQL 到 C 的数据转换示例](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259005"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用示例控制台脚本文件 (DB2ToSQL)
 几个示例文件与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足最终用户需求。  
@@ -70,7 +70,7 @@ ms.locfileid: "52394926"
   
 5.  **ConversionAndDataMigrationSample.xml:** 此示例使用户能够从转换到数据迁移执行端到端迁移。 下面列出了必需的属性值，它们将需要更改的列表：  
   
-    |命令名|Description|Attribute|  
+    |命令名|Description|特性|  
     |----------------|---------------|-------------|  
     |`map-schema`|源数据库到目标架构的架构映射。|`source-schema:` 指定转换所需的源数据库。<br /><br />`sql-server-schema`设置用户帐户 ：指定是要迁移到目标数据库|  
     |`convert-schema`|执行架构转换从源到目标架构。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`命令的示例 4 的示例控制台脚本文件。|`object-name`设置用户帐户 ：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  

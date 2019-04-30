@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312371"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>映射 MySQL 和 SQL Server 字符集 (MySQLToSQL)
 可以为 MySQL 字符数据类型、 表达式和文本指定字符集 (Charset)。  
@@ -56,9 +56,9 @@ ms.locfileid: "47789025"
 >   
 > 它们分别是：  
 >   
-> 1.  **应用：** 适用的用户，仅当编辑，尚未保存字符集的映射时，才启用所做的更改。  
-> 2.  **取消:** 取消用户所做的更改。 字符集的映射进行了编辑，但不是会保存时，获取启用该按钮。  
-> 3.  **重置为默认值：** 重置为默认值的所有映射。  
+> 1.  **应用：** 应用用户，仅当编辑，尚未保存字符集的映射时，才启用所做的更改。  
+> 2.  **取消：** 取消用户所做的更改。 字符集的映射进行了编辑，但不是会保存时，获取启用该按钮。  
+> 3.  **重置为默认值：** 将所有映射重都置为默认值。  
   
 1.  **在根元数据节点级别：** 字符集映射网格包含字符集网格具有每个字符集的单独列。 网格的列包括：  
   
@@ -88,17 +88,17 @@ ms.locfileid: "47789025"
     |拉丁语 1|cp1252 西部欧洲|CHAR/VARCHAR （默认值）|  
     |latin2|ISO 8859-2 中欧|CHAR/VARCHAR （默认值）|  
     |swe7|7 位瑞典语|CHAR/VARCHAR （默认值）|  
-    |Ascii|US ASCII|CHAR/VARCHAR （默认值）|  
+    |ascii|US ASCII|CHAR/VARCHAR （默认值）|  
     |ujis|EUC-JP 日语|NCHAR/NVARCHAR （默认值）|  
     |sjis|Shift JIS 日语|NCHAR/NVARCHAR （默认值）|  
     |希伯来语|ISO 8859-8 希伯来语|CHAR/VARCHAR （默认值）|  
     |tis620|TIS620 泰语|CHAR/VARCHAR （默认值）|  
     |euckr|EUC-KR 朝鲜语|NCHAR/NVARCHAR （默认值）|  
     |koi8u|乌克兰语 KOI8-U|CHAR/VARCHAR （默认值）|  
-    |gb2312|GB2312 简体中文|NCHAR/NVARCHAR （默认值）|  
+    |gb2312|GB2312 Simplified Chinese|NCHAR/NVARCHAR （默认值）|  
     |希腊语|ISO 8859-7 希腊语|CHAR/VARCHAR （默认值）|  
     |cp 1250|Windows 中欧|CHAR/VARCHAR （默认值）|  
-    |gbk|中文 （简体） GBK|NCHAR/NVARCHAR （默认值）|  
+    |gbk|GBK Simplified Chinese|NCHAR/NVARCHAR （默认值）|  
     |latin5|ISO 8859-9 土耳其语|CHAR/VARCHAR （默认值）|  
     |armscii8|ARMSCII 8 亚美尼亚语|CHAR/VARCHAR （默认值）|  
     |utf8|Utf-8 Unicode|NCHAR/NVARCHAR （默认值）|  
@@ -108,16 +108,16 @@ ms.locfileid: "47789025"
     |macce|Mac 中欧|CHAR/VARCHAR （默认值）|  
     |macroman|Mac 西部欧洲|CHAR/VARCHAR （默认值）|  
     |cp852|DOS 中部欧洲|CHAR/VARCHAR （默认值）|  
-    |latin7|ISO-8859 13 波罗的语|CHAR/VARCHAR （默认值）|  
-    |cp 1251|Windows 西里尔文|CHAR/VARCHAR （默认值）|  
-    |cp 1256|Windows 阿拉伯语|CHAR/VARCHAR （默认值）|  
-    |cp 1257|Windows 波罗的语|CHAR/VARCHAR （默认值）|  
+    |latin7|ISO 8859-13 Baltic|CHAR/VARCHAR （默认值）|  
+    |cp 1251|Windows Cyrillic|CHAR/VARCHAR （默认值）|  
+    |cp 1256|Windows Arabic|CHAR/VARCHAR （默认值）|  
+    |cp 1257|Windows Baltic|CHAR/VARCHAR （默认值）|  
     |BINARY|二进制伪字符集|CHAR/VARCHAR （默认值）|  
     |geostd8|GEOSTD8 格鲁吉亚语|CHAR/VARCHAR （默认值）|  
     |cp932|Windows 日语 SJIS|NCHAR/NVARCHAR （默认值）|  
     |eucjpms|Windows 日语 UJIS|NCHAR/NVARCHAR （默认值）|  
   
-2.  **在数据库、 类别或对象节点级别上：** 在数据库、 类别或对象节点级别中，字符集映射网格包含相同的行中的一个根元数据节点级别，报道。:  
+2.  **在数据库、 类别或对象节点级别中：** 在数据库、 类别或对象节点级别中，字符集映射网格包含相同的行中的一个根元数据节点级别，报道。:  
   
     1.  标题为网格的第一列**字符设置名称**包含字符集名称。  
   

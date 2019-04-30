@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4fece6307ff005031e7ab770b14bd5fbca541d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308801"
 ---
-# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 代码示例：NumericScale 和 Precision 属性示例 (VB)
+# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADO 代码示例：NumericScale 和 Precision 属性示例 (VB)
 此示例演示[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)并[精度](../../../ado/reference/adox-api/precision-property-adox.md)的属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。 此代码将显示其值**订单详细信息**表的*Northwind*数据库。  
   
 ```  

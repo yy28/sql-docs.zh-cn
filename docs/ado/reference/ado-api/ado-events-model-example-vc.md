@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248983"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 (VC++)
-Visual c + + 部分[ADO 事件实例化的语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供了如何实例化 ADO 事件模型的一般说明。 以下是实例化创建的环境中的事件模型的特定示例 **#import**指令。  
+视觉对象C++一节[ADO 事件实例化的语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供了如何实例化 ADO 事件模型的一般说明。 以下是实例化创建的环境中的事件模型的特定示例 **#import**指令。  
   
  使用一般的说明**adoint.h**作为方法签名的引用。 但是，在一般的说明中的一些详细信息作为使用略微 **#import**指令：  
   

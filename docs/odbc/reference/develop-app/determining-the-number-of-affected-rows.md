@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99e3676c3b73b177f5e6fc3acef0d93d55cce898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262100"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>确定受影响的行数
 应用程序更新、 删除或插入行后，它可以调用**SQLRowCount**来确定受影响行数。 **SQLRowCount**返回此值，指示是否已更新、 删除，或由执行插入的行**更新**，**删除**，或**插入**语句，通过执行定位更新或 delete 语句，或通过调用**SQLSetPos**。  

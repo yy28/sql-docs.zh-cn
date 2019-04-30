@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2deba8c745b29b5bd69432060debad2c585e31b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242749"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 方法 (ADO)
 将表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)到另一个位置。  
@@ -50,7 +50,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *选项*  
  可选。 一个[MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)值，其默认值为**adMoveUnspecified**。 指定此方法的行为。  
   
- *异步*  
+ *Async*  
  可选。 一个**布尔**值，当**True**，指定此操作应为异步。  
   
 ## <a name="return-value"></a>返回值  

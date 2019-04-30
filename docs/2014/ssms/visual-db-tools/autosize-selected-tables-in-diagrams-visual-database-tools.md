@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297573"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>自动调整关系图中选定表的大小 (Visual Database Tools)
   您可以将关系图中的表快速调整到最小大小，以显示所有字段。  

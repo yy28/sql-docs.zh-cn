@@ -1,5 +1,5 @@
 ---
-title: 任务 2:手动添加域值 |Microsoft Docs
+title: 任务 2：手动添加域值 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14bfb87bca7a375ce471ed22dde4ee68714ed906
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244664"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>任务 2:手动添加域值
+# <a name="task-2-adding-domain-values-manually"></a>任务 2：手动添加域值
   在本任务中，添加的值**国家/地区**域手动。 请参阅[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)有关此页上的字段的更多详细信息的主题。  
   
 1.  单击**国家/地区**中的域**域列表**。  

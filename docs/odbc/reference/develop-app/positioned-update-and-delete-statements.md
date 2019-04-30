@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312487"
 ---
 # <a name="positioned-update-and-delete-statements"></a>定位更新和删除语句
 应用程序可以更新或删除当前行在结果集中使用定位更新或删除语句。 定位 update 和 delete 语句支持的某些数据源，但不是全部。 若要确定是否定位数据源支持更新和删除语句，应用程序调用**SQLGetInfo**使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1*信息类型*（具体取决于游标的类型）。 请注意 ODBC 游标库模拟定位的更新和删除语句。  
@@ -30,9 +30,9 @@ ms.locfileid: "47777736"
   
  **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
   
- **从***表引用列表*  
+ **FROM** *table-reference-list*  
   
- [**其中***搜索条件*]  
+ [**WHERE** *search-condition*]  
   
  **有关 UPDATE OF** [*列名*[**，** *列名称*]...]  
   
@@ -40,9 +40,9 @@ ms.locfileid: "47777736"
   
  **更新***表名称*  
   
- **设置***列标识符* **=** {*表达式* &#124; **NULL**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**，** *列标识符* **=** {*表达式* &#124; **NULL**}]...  
+ [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *游标名称*  
   

@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1d1db0287c0876c80d5353657c525f4e0597c5f0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228455"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 标识键列 (SQLXML 4.0)
   针对 XSD 架构指定 XPath 查询时，大多数情况下必须有键信息才能获得结果中的正确嵌套。 指定 `sql:key-fields` 批注是一种确保生成正确层次结构的方式。  
@@ -44,9 +44,9 @@ ms.locfileid: "52795639"
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 生成正确的嵌套时\<sql: relationship > 未提供足够信息  
  该示例显示必须指定 `sql:key-fields` 的地方。  
   
- 请考虑以下架构。 该架构指定的层次结构之间**\<顺序 >** 并**\<客户 >** 元素在其中**\<顺序 >** 元素是父元素和**\<客户 >** 元素是子元素。  
+ 请考虑以下架构。 该架构指定的层次结构之间 **\<顺序 >** 并 **\<客户 >** 元素在其中 **\<顺序 >** 元素是父元素和 **\<客户 >** 元素是子元素。  
   
-  **\<Sql: relationship >** 标记用于指定父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息 **\<sql: relationship >** 不足以唯一标识父表 (Sales.SalesOrderHeader) 中的行。 因此，如果没有 `sql:key-fields` 批注，则生成的层次结构不准确。  
+ **\<Sql: relationship >** 标记用于指定父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息 **\<sql: relationship >** 不足以唯一标识父表 (Sales.SalesOrderHeader) 中的行。 因此，如果没有 `sql:key-fields` 批注，则生成的层次结构不准确。  
   
  与`sql:key-fields`上指定**\<顺序 >**、 批注可唯一标识父 （Sales.SalesOrderHeader 表） 中的行和及其子元素出现其父级的下方。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52795639"
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 KeyFields1.xml。  
   
-2.  复制以下模板，并将它粘贴到文本文件中。 在保存 KeyFields1.xml 的相同目录中将该文件另存为 KeyFields1T.xml。 模板中的 XPath 查询返回所有**\<顺序 >** customerid 小于 3 的元素。  
+2.  复制以下模板，并将它粘贴到文本文件中。 在保存 KeyFields1.xml 的相同目录中将该文件另存为 KeyFields1T.xml。 模板中的 XPath 查询返回所有 **\<顺序 >** customerid 小于 3 的元素。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -125,7 +125,7 @@ ms.locfileid: "52795639"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. 指定 sql:key-fields 以便在结果中生成正确的嵌套  
- 在以下架构中，没有使用指定的层次结构 **\<sql: relationship >**。 此架构仍然需要指定 `sql:key-fields` 批注才能唯一标识 HumanResources.Employee 表中的雇员。  
+ 在以下架构中，没有使用指定的层次结构**\<sql: relationship >**。 此架构仍然需要指定 `sql:key-fields` 批注才能唯一标识 HumanResources.Employee 表中的雇员。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Visual c + + 中的 ADOX 代码示例 |Microsoft Docs
+title: Microsoft 的视觉对象中的 ADOX 代码示例C++|Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e72c7714ad5aae30deace933a35f42002ecd3d26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308669"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ 中的 ADOX 代码示例
-这些主题提供示例代码，以帮助你了解如何使用 ADOX。 使用 Microsoft Visual c + + 编写的所有代码示例。  
+这些主题提供示例代码，以帮助你了解如何使用 ADOX。 使用 Microsoft Visual 中编写所有代码示例C++。  
   
 > [!NOTE]
 >  将粘贴整个代码示例中的，从开头到末尾到代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，该示例可能无法正确运行。  

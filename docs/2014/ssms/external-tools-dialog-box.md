@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245635"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具对话框
   使用“外部工具”对话框可以将外部工具（如 SQLCMD 或记事本）添加到“工具”菜单中。 通过添加外部工具，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中工作时可以轻松启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，“输出”窗口中可以显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  

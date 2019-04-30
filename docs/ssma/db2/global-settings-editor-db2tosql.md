@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a03a18bb5231ebf40c91a6cc94b0bb78aa536c16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298780"
 ---
 # <a name="global-settings-editor-db2tosql"></a>全局设置 （编辑器） (DB2ToSQL)
 使用的编辑器页面**全局设置**对话框可以指定代码编辑器窗口的设置。  

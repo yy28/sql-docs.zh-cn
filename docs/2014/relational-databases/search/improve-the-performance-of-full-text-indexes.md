@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273151"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
   硬件资源（例如内存、磁盘速度、CPU 速度和计算机体系结构）会影响全文索引和全文查询的性能。  
@@ -105,7 +105,7 @@ ms.locfileid: "54128609"
   
  可以使用下面的公式粗略估算筛选器后台程序宿主占用的内存量（以字节为单位）：  
   
- *number_of_crawl_ranges* \`ism_size'*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \`ism_size`*max_outstanding_isms*\* 2  
   
  上面公式中的变量的默认值如下所示：  
   
@@ -128,7 +128,7 @@ ms.locfileid: "54128609"
   
 |平台|估计 fdhost.exe 内存需求量 MB-*F*<sup>1</sup>|用于计算最大服务器内存的公式*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _爬网范围数_ **&#42;** 50|_M_ **= 最小值 (** _T_ **，** 2000年 **)-*`F`* -** 500|  
+|x86|_F_ **=** _爬网范围数_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)-*`F`*-** 500|  
 |x64|_F_ **=** _爬网范围数_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
  <sup>1</sup>如果正在多个完全填充，则计算每个的 fdhost.exe 内存需求量分别作为*F1*， *F2*，依次类推。 然后计算 M 为 T- sigma(_F_i)。  

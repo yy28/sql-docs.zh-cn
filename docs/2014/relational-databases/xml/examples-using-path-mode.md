@@ -1,5 +1,5 @@
 ---
-title: 示例：使用 PATH 模式 |Microsoft Docs
+title: 示例：使用 PATH 模式 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287775"
 ---
 # <a name="examples-using-path-mode"></a>示例：使用 PATH 模式
   下面的示例演示如何使用 PATH 模式通过 SELECT 查询生成 XML。 这些查询中有许多都是针对 ProductModel 表的 Instructions 列中存储的自行车生产说明 XML 文档指定的。  

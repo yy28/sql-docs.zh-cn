@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31dd441af6e46784b928006fe45b726f4c59f0c3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267381"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>设置跟踪显示默认值 (SQL Server Profiler)
   本主题说明如何设置工具选项来指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于在跟踪窗口中显示跟踪的字体类型、大小和字形。 还可以指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用为操作系统配置的区域设置来显示所有日期和时间。  

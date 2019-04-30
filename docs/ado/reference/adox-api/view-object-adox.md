@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61b3f81a23c3bb35921e0374eea44e58a31dcd4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281284"
 ---
 # <a name="view-object-adox"></a>视图对象 (ADOX)
 表示一组筛选的记录或一个虚拟表。 与 ADO 一起使用时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，**视图**对象可以用于添加、 删除或修改视图。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb62318b9f8eb03fbd3c9732dc8ad0caa9127d17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294430"
 ---
 # <a name="adding-multiple-fields-and-values"></a>添加多个字段和值
 有时，可能会更有效的字段和其对应的值数组中传递**AddNew**方法，而不是设置**值**多次针对每个新字段。 如果*FieldList*是一个数组*值*必须也是一个数组具有相同成员的数目; 否则为就会出错。 字段名称的顺序必须与匹配的每个数组中的字段值的顺序。 下面的代码将数组的字段和值对的数组传递**AddNew**方法。
