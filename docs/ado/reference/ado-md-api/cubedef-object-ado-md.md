@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1027fc76cb09f7b846e1b8edad52a3cb5dbf2bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225907"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 对象 (ADO MD)
 表示从多维架构，其中包含一组相关的维度的多维数据集。  

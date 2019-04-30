@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db5077b9df2673593b6eaec9622aafd1d2c77234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270633"
 ---
 # <a name="sql-92-cast-function"></a>SQL-92 CAST 函数
 **CAST** SQL-92 中定义的函数等效于**转换**在 ODBC 中定义的函数。 等效的函数的语法如下所示：  

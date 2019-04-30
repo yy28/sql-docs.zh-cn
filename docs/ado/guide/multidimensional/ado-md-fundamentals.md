@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ceb1bcf0e05a667372aefa625c40d4ef0238661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240025"
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD 基础知识
 Microsoft® ActiveX® 数据对象 （多维） (ADO MD) 可轻松访问多维数据语言 Microsoft Visual Basic®，如从 Microsoft Visual C++®。 ADO MD 扩展了 Microsoft ActiveX® 数据对象 (ADO) 以将对象特定于多维数据，如[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)并[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象。 使用 ADO MD 可以浏览多维架构、 查询多维数据集，并检索结果。  

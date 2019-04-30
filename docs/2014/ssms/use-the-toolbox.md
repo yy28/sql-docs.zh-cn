@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280673"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
   您可以选择工具箱中的项、文本和控件并将其拖至窗体、页和设计器，也可以将这些项从上述源位置拖回到工具箱中，以备将来再次使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，可以将任务拖到“维护计划”上。  

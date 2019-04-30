@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3acdea5ae284b2e9a0ac9c28fe8430a11de8fbd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281581"
 ---
 # <a name="user-object-adox"></a>用户对象 (ADOX)
 表示具有受保护的数据库中的访问权限的用户帐户。  

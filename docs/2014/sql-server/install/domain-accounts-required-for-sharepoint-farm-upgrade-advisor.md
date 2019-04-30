@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 983e01046fd90fbaf8d9ff680492f1b385435f61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253579"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 场要求使用域帐户（升级顾问）
   为场环境配置的 SharePoint 产品要求您使用域帐户。  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;= （小于或等于） (MDX) |Microsoft 文档'
+title: '&lt;= （小于或等于） (MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 02f6990698603efdf813e244d11e57c3bd6bb7eb
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311902"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= （小于或等于） (MDX)
 
@@ -35,9 +35,9 @@ MDX_Expression <= MDX_Expression
 ## <a name="return-value"></a>返回值  
  布尔值，具体情形如下：  
   
--   t**rue**如果这两个参数均非 null，并且第一个参数是一个值小于或等于第二个参数的值。  
+-   t**rue**如果两个参数都非空，并且第一个参数的值是小于或等于第二个参数的值。  
   
--   f**alse**如果这两个参数均非 null，并且第一个参数具有一个值，大于第二个参数的值。  
+-   f**alse**如果两个参数都非空，并且第一个参数的值，大于第二个参数的值。  
   
 -   如果两个参数或其中任何一个参数计算出来的值为空值，则为 Null。  
   

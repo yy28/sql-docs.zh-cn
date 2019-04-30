@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240782"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>引用内置 XML 架构集合 (sys)
   创建的每个数据库在 **sys** 关系架构中都有一个预定义的 **sys** XML 架构集合。 数据库将保留这些预定义架构，这些架构可以从任何其他用户创建的 XML 架构集合进行访问。 这些预定义架构中使用的前缀在 XQuery 中是有意义的。 只有 **xml** 是保留前缀。  

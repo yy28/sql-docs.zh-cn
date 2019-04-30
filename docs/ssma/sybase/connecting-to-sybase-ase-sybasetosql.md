@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d9c76a33a650284fde21b28af3a61b197829ef98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298534"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>连接到 Sybase ASE (SybaseToSQL)
 以自适应服务器 Sybase 企业 (ASE) 将数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您必须连接到包含要迁移的数据库的自适应服务器。 连接时，SSMA 获得有关自适应服务器上所有数据库的元数据并在 Sybase 的元数据资源管理器窗格中显示数据库元数据。 SSMA 存储信息，数据库服务器中，但不存储密码。  

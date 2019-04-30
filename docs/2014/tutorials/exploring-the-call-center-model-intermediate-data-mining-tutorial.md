@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315080"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>探索呼叫中心模型（数据挖掘中级教程）
   您已生成了探索模型，现在可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的以下工具来了解有关数据的更多信息。  
@@ -43,7 +43,7 @@ ms.locfileid: "56037758"
     > [!NOTE]  
     >  根据模型的配置方式，此范围内的确切值可能会有所不同。  
   
-2.  有关**值 2**，选择具有最高值的范围。 例如，值 >=0.12 的范围表示最高的挂断率，因此为最差服务级别。 换句话说，在此班次期间，打电话的客户有 12% 在与代表通话之前就挂断了电话。  
+2.  有关**值 2**，选择具有最高值的范围。 例如，值范围 > = 0.12 表示最高的挂断率，因此最差服务等级。 换句话说，在此班次期间，打电话的客户有 12% 在与代表通话之前就挂断了电话。  
   
      内容**变量**窗格会更新，以比较导致的结果值的属性。 因此，左列显示与最佳服务等级关联的属性，右列显示与最差服务等级关联的属性。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56037758"
   
  但是，当您向下查看相关因素的列表时，会发现一些其他因素产生的影响更微妙、更难于解释。 例如，班次似乎影响服务，但提升分数和相关概率指示班次不是主要因素。  
   
-|Attribute|ReplTest1|倾向于\<0.07|倾向于 >= 0.12|  
+|特性|ReplTest1|倾向于\<0.07|Favors >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
 |Average Time Per Issue|89.087 - 120.000||分数：100<br /><br /> Value1 的概率：4.45 %<br /><br /> Value2 的概率：51.94 %<br /><br /> Value1 的提升：0.19<br /><br /> Value2 的提升：1.94|  
 |Average Time Per Issue|44.000 - 70.597|分数：92.35<br /><br /> Value1 的概率：60.06 %<br /><br /> Value2 的概率：8.30 %<br /><br /> Value1 的提升：2.61<br /><br /> Value2 的提升：0.31||  

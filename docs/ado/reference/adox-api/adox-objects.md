@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab1a748eeda5f1b192010203bd59760942b3611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309185"
 ---
 # <a name="adox-objects"></a>ADOX 对象
 ## <a name="adox-object-summary"></a>ADOX 对象摘要  
@@ -34,7 +34,7 @@ ms.locfileid: "47772291"
 |[过程](../../../ado/reference/adox-api/procedure-object-adox.md)|表示存储的过程。|  
 |[表](../../../ado/reference/adox-api/table-object-adox.md)|表示数据库表，其中包括列、 索引和键。|  
 |[用户](../../../ado/reference/adox-api/user-object-adox.md)|表示具有受保护的数据库中的访问权限的用户帐户。|  
-|[“视图”](../../../ado/reference/adox-api/view-object-adox.md)|表示一组筛选的记录或一个虚拟表。|  
+|[视图](../../../ado/reference/adox-api/view-object-adox.md)|表示一组筛选的记录或一个虚拟表。|  
   
  这些对象之间的关系中所示[ADOX 对象模型](../../../ado/reference/adox-api/adox-object-model.md)。  
   

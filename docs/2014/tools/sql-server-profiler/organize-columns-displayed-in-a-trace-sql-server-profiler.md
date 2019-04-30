@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240538"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>组织跟踪中显示的列 (SQL Server Profiler)
   通过在跟踪表或 **“跟踪文件属性”** 对话框中选择 **“组织列”** ，或者在定义跟踪时，都可以将跟踪中的数据列分组。 将数据列分组可以更好地分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪输出。 有关详细信息，请参阅 [使用 SQL Server Profiler 查看和分析跟踪](view-and-analyze-traces-with-sql-server-profiler.md)。  

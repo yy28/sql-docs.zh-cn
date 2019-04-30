@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 443c6e0c556a7e69510796b1d58ab0f7b2567e6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225496"
 ---
 # <a name="using-encryption-without-validation"></a>使用不带验证的加密
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终对与登录相关的网络数据包进行加密。 如果在服务器启动时未为其提供任何证书，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将生成可用于对登录数据包进行加密的自签名证书。  
@@ -36,13 +36,13 @@ ms.locfileid: "48115987"
   
 |“强制协议加密”客户端设置|“信任服务器证书”客户端设置|连接字符串/连接属性加密/对数据使用加密|连接字符串/连接属性信任服务器证书|结果|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|否|N/A|否（默认值）|忽略|无加密。|  
-|否|N/A|用户帐户控制|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|否|N/A|用户帐户控制|用户帐户控制|始终加密，但可能使用自签名的服务器证书。|  
-|用户帐户控制|否|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|用户帐户控制|用户帐户控制|否（默认值）|忽略|始终加密，但可能使用自签名的服务器证书。|  
-|用户帐户控制|是|用户帐户控制|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|用户帐户控制|是|是|用户帐户控制|始终加密，但可能使用自签名的服务器证书。|  
+|否|不可用|否（默认值）|忽略|无加密。|  
+|否|不可用|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|否|不可用|是|是|始终加密，但可能使用自签名的服务器证书。|  
+|是|否|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|是|是|否（默认值）|忽略|始终加密，但可能使用自签名的服务器证书。|  
+|是|是|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|是|是|是|是|始终加密，但可能使用自签名的服务器证书。|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持加密，而无需通过添加 SSPROP_INIT_TRUST_SERVER_CERTIFICATE 数据源初始化属性，它将实现在 DBPROPSET_SQLSERVERDBINIT 属性验证设置。 此外，还添加了新的连接字符串关键字“TrustServerCertificate”。 它接受值 yes 或 no；默认值为 no。 使用服务组件时，它接受值 true 或 false；默认值为 false。  

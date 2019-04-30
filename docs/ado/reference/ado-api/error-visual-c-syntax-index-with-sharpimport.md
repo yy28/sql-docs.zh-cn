@@ -1,5 +1,5 @@
 ---
-title: '错误 （使用的 Visual c + + 语法索引 #import） |Microsoft Docs'
+title: '错误 (VisualC++使用 #import 语法索引) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3a8bf1b5817156bb21b9ceddf9d68400d85d7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276260"
 ---
-# <a name="error-visual-c-syntax-index-with-import"></a>错误 （使用的 Visual c + + 语法索引 #import）
+# <a name="error-visual-c-syntax-index-with-import"></a>错误 (VisualC++使用 #import 语法索引)
 ## <a name="properties"></a>属性  
   
 ```  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240995"
 ---
 # <a name="decimal-digits"></a>十进制数字
 *十进制数字*的 decimal 和 numeric 数据类型指小数点右侧或数据的小数位数的最大位数。 近似的浮点数字列或参数，小数位数是未定义，因为小数点右侧的位数不固定。 对于 datetime 或间隔秒数部分包含的数据，十进制数字被指数据的秒数部分在小数点右侧的位数。  

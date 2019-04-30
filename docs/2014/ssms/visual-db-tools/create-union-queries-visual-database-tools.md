@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34e06960274c7e16ef4f6efc31f1b7ca55a7d48c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270593"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>创建 UNION 查询 (Visual Database Tools)
   使用 UNION 关键字，可以在一个结果表中包含两个 SELECT 语句的结果。 任一 SELECT 语句返回的所有行都可合并到 UNION 表达式的结果中。 有关示例，请参阅[SELECT 示例&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)。  
@@ -53,6 +53,6 @@ ms.locfileid: "52815759"
  [支持的查询类型&#40;可视化数据库工具&#41;](visual-database-tools.md)   
  [设计查询和视图操作指南主题&#40;可视化数据库工具&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [执行基本的查询操作&#40;可视化数据库工具&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
- [UNION &#40;Transact SQL&#41;](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
+ [UNION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
   
   

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 780368a3b3c4b61c404f18289a7085a5f70c3d89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268623"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定 XPath 变量 (SQLXML 4.0)
   以下示例说明如何在 XPath 查询中传递 XPath 变量。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关该示例架构的信息，请参阅[示例带批注的 XSD 架构的 XPath 示例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  

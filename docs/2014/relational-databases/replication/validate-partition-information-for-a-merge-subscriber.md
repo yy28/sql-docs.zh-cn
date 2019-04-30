@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255313"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>验证合并订阅服务器的分区信息
   在为合并发布定义参数化行筛选器时，将使用引用订阅服务器信息（如订阅服务器的登录名）的函数。 默认情况下，每次同步前和快照应用于订阅服务器时，复制都将根据此函数验证订阅服务器信息。 验证过程确保每个订阅服务器的数据都进行了正确的分区。 验证行为由 **validate_subscriber_info** 发布属性控制，此属性可以使用 [sp_changemergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) 或在“发布属性”对话框的“订阅选项”页上进行更改。 有关更改发布属性的详细信息，请参阅 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)。  

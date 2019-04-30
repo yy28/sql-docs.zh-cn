@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1ef6a456a6a1903364c996e87c54cebee1fedb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280652"
 ---
 # <a name="indexes-collection-adox"></a>索引集合 (ADOX)
 包含所有[索引](../../../ado/reference/adox-api/index-object-adox.md)表的对象。  

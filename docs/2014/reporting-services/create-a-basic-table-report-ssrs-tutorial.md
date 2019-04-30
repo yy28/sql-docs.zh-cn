@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266269"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>创建基本表报表（SSRS 教程）
   本教程旨在帮助您创建基本表报表基于[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库使用报表设计器。 您还可以使用报表生成器或报表向导创建报表。 在本教程中，您将执行以下操作：创建报表项目、设置连接信息、定义查询、添加表数据区域、对某些字段进行分组和汇总以及预览报表。  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240532"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>运行 SQL Server Profiler 所需的权限
   默认情况下，用户运行 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 所需的权限与执行用于创建跟踪的 Transact-SQL 存储过程所需的权限相同。 若要运行 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]，用户必须拥有 ALTER TRACE 权限。 有关详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql)。  

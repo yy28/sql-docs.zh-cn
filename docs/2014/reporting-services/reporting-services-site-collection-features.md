@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283591"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 网站集功能
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式提供了三个 SharePoint 网站集功能。 这些功能支持一般的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式报告环境、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]（用于 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Enterprise Edition 的 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] 外接程序的功能）以及 SharePoint 管理中心的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的管理操作。  

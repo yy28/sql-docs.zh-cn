@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6e1399c97e77a2b7b0bb68a8022effefb1d4814
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265914"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供数据驱动订阅功能，这样您便可根据动态订阅服务器数据自定义报表的分发。 数据驱动订阅专门用于下列情况：  

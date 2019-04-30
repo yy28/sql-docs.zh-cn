@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d546fff544c616d4f2750dba76c4b8e68d21aab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241005"
 ---
 # <a name="datetime-data-types"></a>日期时间数据类型
 在 ODBC 3 *.x*、 的标识符的日期、 时间和时间戳 SQL 数据类型已更改从 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP (的实例，并用 **#define** 9、 10 和 11 的标头文件中) 到 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP (的实例，并用 **#define** 91、 92 和 93 的标头文件中)，分别。 标识符已更改从 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，和 SQL_C_TYPE_TIMESTAMP，分别对应的 C 类型和实例 **#define**已更改相应地。  
   
- ODBC 3 中的 SQL 日期时间数据类型返回的列大小和小数位数 *.x*是否与精度和小数位数相同 ODBC 2 中为其返回。*x*。 这些值是不同于 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 描述符字段中的值。 (有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型中。)  
+ ODBC 3 中的 SQL 日期时间数据类型返回的列大小和小数位数 *.x*是否与精度和小数位数相同 ODBC 2 中为其返回。*x*。 这些值是不同于 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 描述符字段中的值。 (有关详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。）  
   
  这些更改会影响**SQLDescribeCol**， **SQLDescribeParam**，并**SQLColAttributes**;**SQLBindCol**， **SQLBindParameter**，并**SQLGetData**; 并且**SQLColumns**， **SQLGetTypeInfo**， **SQLProcedureColumns**， **SQLStatistics**，并且**SQLSpecialColumns**。  
   

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225553"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>获取 FAST_FORWARD 游标
   若要获取只进只读游标，请将行集属性 DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT 和 DBPROP_OWNUPDATEDELETE 设置为 VARIANT_TRUE。  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283659"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>选项 （设计人员表和数据库设计器页）
   使用此页可确定设计器的默认行为。 若要访问这些设置，请在“工具”菜单上，单击“选项”，展开“设计器”文件夹，再单击“表设计器”。  

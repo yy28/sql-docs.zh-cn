@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ac2b8ca912f02aecc5e1b3e76d04d84b501db89b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253485"
 ---
 # <a name="remove-joins-visual-database-tools"></a>删除联接 (Visual Database Tools)
   如果您不希望表通过内部联接或外部联接进行联接，则可移除它们之间的联接。 例如，希望删除 [查询和视图设计器](visual-database-tools.md) 在两个表之间自动创建的联接。  

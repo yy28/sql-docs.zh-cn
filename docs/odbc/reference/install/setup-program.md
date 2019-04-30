@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f64eda5ad640e50afd25db111de74141e41e652d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280779"
 ---
 # <a name="setup-program"></a>安装程序
-> **注意：** 从 Windows XP 和 Windows Server 2003 中，开始**ODBC 包含在 Windows 操作系统**。 在早期版本的 Windows 上，应仅显式安装 ODBC。  
+> **注意**：从 Windows XP 和 Windows Server 2003 **ODBC 包含在 Windows 操作系统**。 在早期版本的 Windows 上，应仅显式安装 ODBC。  
   
  用户运行安装程序，开始安装过程。 安装程序是应用程序或驱动程序开发人员编写的。 除了安装 ODBC 组件，它可以安装其他软件。 例如，应用程序开发人员可能会使用相同的安装程序来安装 ODBC 组件并安装其应用程序。  
   

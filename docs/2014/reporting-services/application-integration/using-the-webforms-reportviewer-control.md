@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238201"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控件
   若要查看部署到报表服务器的报表或在本地文件系统上存在的报表，您可以在 Web 应用程序中使用 WebForms ReportViewer 控件来呈现它们。  

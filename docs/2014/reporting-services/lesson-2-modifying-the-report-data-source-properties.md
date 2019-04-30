@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41746f2938afd17e59dc4a9f2278179e4ccc1695
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225124"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 课：修改报表数据源属性
   在本课中，您将使用报表管理器来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在 **创建基本表报表（SSRS 教程）** 教程中创建的 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)报表。 在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用 **已存储凭据** 访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。  

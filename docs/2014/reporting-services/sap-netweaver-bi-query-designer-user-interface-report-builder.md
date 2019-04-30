@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f87e9cb6153c94ab40e6b415fb19c6a61929f99
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238260"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>SAP NetWeaver BI 查询设计器用户界面（报表生成器）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可用于为 SAP NetWeaver® Business Intelligence 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个元数据窗格，在该窗格中，您可以从 InfoCube、MultiProvider 或根据数据源定义的启用 Web 的查询中拖动成员，创建 MDX 查询以便在处理报表时检索数据。  

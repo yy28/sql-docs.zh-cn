@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239350"
 ---
 # <a name="integrated-terminal"></a>集成的终端
 
@@ -97,14 +97,14 @@ ms.locfileid: "53030431"
 Key|Command
 ---|---
 **Ctrl +'**|显示集成的终端
-**Ctrl + Shift +**|创建新的终端
-**Ctrl + 向上键**|向上滚动
-**Ctrl + 向下键**|向下滚动
-**Ctrl + PageUp**|向上滚动一页
-**Ctrl + PageDown**|向下滚动一页
-**Ctrl + Home**|滚动到顶部
-**Ctrl + End**|滚动到底部
-**Ctrl + K**|清除终端
+**Ctrl + Shift +'**|创建新的终端
+**Ctrl+Up**|向上滚动
+**Ctrl+Down**|向下滚动
+**Ctrl+PageUp**|向上滚动一页
+**Ctrl+PageDown**|向下滚动一页
+**Ctrl+Home**|滚动到顶部
+**Ctrl+End**|滚动到底部
+**Ctrl+K**|清除终端
 
 其他终端命令可用，并且可以绑定到首选的键盘快捷方式。
 
@@ -129,7 +129,7 @@ Key|Command
 
 用于复制和粘贴的键盘快捷键遵循平台标准：
 
-* Linux:**Ctrl + Shift + C**和**Ctrl + Shift + V**
+* Linux：**Ctrl + Shift + C**和**Ctrl + Shift + V**
 * Mac:**Cmd + C**和**Cmd + V**
 * Windows:**Ctrl + C**和**Ctrl + V**
 

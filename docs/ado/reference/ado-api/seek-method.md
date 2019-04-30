@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89b82d6efe87cec6643d68837447ed64a6f69059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314713"
 ---
 # <a name="seek-method"></a>Seek 方法
 搜索的索引[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)快速找到匹配指定的值，并将更改为该行的当前行位置的行。  
@@ -35,7 +35,7 @@ recordset.Seek KeyValues, SeekOption
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *架构*  
+ *KeyValues*  
  一个数组**变体**值。 索引的一个或多个列组成，该数组包含要与每个对应列进行比较的值。  
   
  *SeekOption*  

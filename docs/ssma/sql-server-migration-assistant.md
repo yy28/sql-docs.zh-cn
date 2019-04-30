@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240226"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) 是旨在自动从 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 数据库迁移到 SQL Server 的工具。  
@@ -82,7 +82,7 @@ SSMA 支持以下目标版本。
   
 Microsoft 可能拥有本文档中内容的专利、专利申请、商标、版权或其他知识产权。 除非 Microsoft 提供了明确的书面许可协议，否则提供本文档并不意味着赋予您有关这些专利、商标、版权或其他知识产权的任何许可。  
   
-© 2019 Microsoft Corporation。 保留所有权利。  
+© 2019 Microsoft Corporation. 保留所有权利。  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 和 WinFX 是 Microsoft Corporation 在美国和/或其他国家/地区的注册商标或商标。  
   

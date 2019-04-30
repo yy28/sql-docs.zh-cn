@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224976"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隐藏第一页或最后一页的页眉或页脚（报表生成器和 SSRS）
   报表可以包含页眉和页脚，它们分别位于每一页的顶部和底部。 添加页眉或页脚后，可以在报表的第一页和最后一页选择性地将其隐藏。  

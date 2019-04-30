@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aee8914493c66ff451d7bca7f56fc8723d2a7ca0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254143"
 ---
 # <a name="return-codes-odbc"></a>返回代码 ODBC
 在 ODBC 中的每个函数返回代码，称为其*返回代码，* 指示总体成功或失败的函数。 程序逻辑通常基于返回代码。  
@@ -51,6 +51,6 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_SUCCESS_WITH_INFO|已成功完成，可能出现非致命错误 （警告） 的函数。 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索其他信息。|  
 |SQL_ERROR|失败的函数。 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索其他信息。 函数的任何输出自变量的内容未定义。|  
 |SQL_INVALID_HANDLE|由于环境、 连接、 语句或描述符句柄无效而失败的函数。 这指示编程错误。 从没有其他信息，则**SQLGetDiagRec**或**SQLGetDiagField**。 仅当该句柄为空指针或类型有误，如当语句句柄传递的参数所需的连接句柄时，才返回此代码。|  
-|SQL_NO_DATA|没有更多数据不可用。 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索其他信息。 可能返回类 02xxx 中的一个或多个驱动程序定义的状态记录。 **注意：** ODBC 2 中。*x*，这会返回代码名为 SQL_NO_DATA_FOUND。|  
+|SQL_NO_DATA|没有更多数据不可用。 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索其他信息。 可能返回类 02xxx 中的一个或多个驱动程序定义的状态记录。 **注意：** 在 ODBC 2。*x*，这会返回代码名为 SQL_NO_DATA_FOUND。|  
 |SQL_NEED_DATA|需要更多的数据，例如在执行时发送参数数据或其他连接信息是必需的。 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**要检索的其他信息，如果有的话。|  
 |SQL_STILL_EXECUTING|以异步方式启动的函数仍在执行。 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**要检索的其他信息，如果有的话。|

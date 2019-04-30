@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf2aab4e9f11ff3dae9852dd80007867fe5a462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240822"
 ---
 # <a name="recordset-object-ado"></a>记录集对象 (ADO)
 表示整个记录集的基础表或执行命令的结果中。 任何时候**记录集**对象是指仅为当前记录集内的单个记录。  
@@ -81,4 +81,4 @@ Debug.Print objRs(0)              '  the Value of Item(0).
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

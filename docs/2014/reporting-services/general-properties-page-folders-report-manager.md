@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0eb6f4a62eb9b6228f8aeb3715ea35dec2eec026
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260884"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>文件夹的“常规”属性页（报表管理器）
   使用文件夹的“常规”属性页可以查看和设置所创建文件夹的属性。 有关创建或修改文件夹的用户以及修改文件夹的时间的信息显示在“常规属性”页面顶部。  

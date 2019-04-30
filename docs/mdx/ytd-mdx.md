@@ -1,5 +1,5 @@
 ---
-title: Ytd (MDX) |Microsoft 文档
+title: Ytd (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 67df625611f2451c3442d5d59b56c76dfc14a74a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295160"
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 
 
-  为给定成员，与第一个同级的开始和结束与约束通过将给定成员属于同一级别返回一组同级成员*年*时间维度中的级别。  
+  从与给定成员，从第一个同级成员开始和结尾的约束将给定成员相同的级别返回一组同级成员*年*时间维度中的级别。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,13 +32,13 @@ Ytd( [ Member_Expression ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 如果未指定一个成员表达式，默认值是第一个层次结构使用的类型级别的当前成员*年*中类型的第一个维度*时间*度量值组中。  
+## <a name="remarks"></a>备注  
+ 如果未指定成员表达式，默认值是第一个层次结构的当前成员类型的级别*年*类型的第一个维中*时间*度量值组中。  
   
- **Ytd**函数是快捷函数[PeriodsToDate](../mdx/periodstodate-mdx.md)函数其中级别所基于的属性层次结构的类型属性设置为*年*。 也就是说，`Ytd(Member_Expression)` 等效于 `PeriodsToDate(Year_Level_Expression,Member_Expression)`。 请注意，此功能将不运行时类型属性设置为*FiscalYears*。  
+ **Ytd**的快捷函数技术支持部门[PeriodsToDate](../mdx/periodstodate-mdx.md)函数的属性层次结构级别所基于的 Type 属性设置为*年*。 也就是说，`Ytd(Member_Expression)` 等效于 `PeriodsToDate(Year_Level_Expression,Member_Expression)`。 请注意，此功能将不运行时的 Type 属性设置为*FiscalYears*。  
   
 ## <a name="example"></a>示例  
- 下面的示例返回的总和`Measures.[Order Quantity]`成员，在第一个八个月内的日历年 2003年中包含聚合`Date`维度，从**Adventure Works**多维数据集。  
+ 下面的示例返回的总和`Measures.[Order Quantity]`成员，包含在 2003年日历年度前八个月内的聚合`Date`维度中，从**Adventure Works**多维数据集。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8MonthsCY2003] AS  
@@ -54,7 +54,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **Ytd**不带参数指定，也就是说，通常用在组合[CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md)函数将显示运行累积年度截止到现在总在报表中中, 所示以下查询：  
+ **Ytd**经常结合起来使用不带参数指定，这表示[CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md)函数将显示的年初至今的连续累积合计在报表中，如中所示以下查询：  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -67,6 +67,6 @@ WHERE
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

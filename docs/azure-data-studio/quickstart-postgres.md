@@ -12,11 +12,11 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: dbf7b427c8c978538370a576aa50c35dd15417cf
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252966"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>快速入门：连接和查询 PostgreSQL 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入门介绍如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]若要连接到 Postgres，以及如何将 SQL 语句来创建数据库*tutorialdb*和对其进行查询。

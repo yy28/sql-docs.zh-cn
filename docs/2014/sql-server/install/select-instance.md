@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87f2ed4ff5bac29d65e9fe6132b2593580aa6639
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270350"
 ---
 # <a name="select-instance"></a>选择实例
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“选择实例”页可以指定要升级到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]实例。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98b6b3e454aa37e220bbcb62fa932c4b127ecd79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302334"
 ---
 # <a name="clone-method-example-vb"></a>Clone 方法示例 (VB)
 此示例使用[克隆](../../../ado/reference/ado-api/clone-method-ado.md)方法创建的副本[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，然后允许用户独立地定位记录每个副本的指针。  
