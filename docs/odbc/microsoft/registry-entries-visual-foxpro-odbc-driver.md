@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de287802693adb18e39509fdc0e7577d05984949
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316826"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>注册表项（Visual FoxPro ODBC 驱动程序）
 在安装 Visual FoxPro ODBC 驱动程序时，安装程序更新您的系统注册表中，在注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini，添加名为 Microsoft Visual FoxPro 驱动程序的新项。 在该注册表项，添加下表中描述的值。  
@@ -50,8 +50,8 @@ ms.locfileid: "47766545"
 |逐份打印|REG_SQ|任何受支持的排序规则序列|  
 |Description|REG_SZ|数据源的用户说明|  
 |驱动程序||Vfpodbc.dll 文件系统路径|  
-|排他||是或否|  
-|BackgroundFetch||是或否|  
+|排他|| 是或否|  
+|BackgroundFetch|| 是或否|  
 |SourceDB|REG_SZ|路径。DBC 文件|  
 |SourceType|REG_SZ|"DBC"或者"DBF"|  
   

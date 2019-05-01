@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312826"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改用户和工作区设置
 

@@ -1,5 +1,5 @@
 ---
-title: '* （叉积）(MDX) |Microsoft 文档'
+title: '* (Crossjoin)(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 132b237fd8baa9c50dc254b02d90ed95d7159a0c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249623"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>叉积的 MDX 运算符参考
 
@@ -35,8 +35,8 @@ Set_Expression * Set_Expression
 ## <a name="return-value"></a>返回值  
  一个包含两个指定参数的叉积的集。  
   
-## <a name="remarks"></a>Remarks  
- **\* （叉积）** 运算符在功能上等效于[叉积](../mdx/crossjoin-mdx.md)函数。  
+## <a name="remarks"></a>备注  
+  **\* （叉积）** 运算符在功能上等效于[叉积](../mdx/crossjoin-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示了此运算符的用法。  

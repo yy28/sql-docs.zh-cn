@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250491"
 ---
 # <a name="replication-backward-compatibility"></a>复制的向后兼容性
   向后兼容性部分中的主题说明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制各版本之间的行为更改。 如果要升级或者在复制拓扑中有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个版本，则了解向后兼容性是十分重要的。  

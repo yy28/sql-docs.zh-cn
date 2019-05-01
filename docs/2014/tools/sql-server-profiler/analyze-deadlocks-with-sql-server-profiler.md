@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316331"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死锁
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 确定死锁的原因。 当 SQL Server 中某组资源的两个或多个线程或进程之间存在循环的依赖关系时，将会发生死锁。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以创建记录、重播和显示死锁事件的跟踪以进行分析。  
@@ -47,7 +47,7 @@ ms.locfileid: "52780679"
  数据库对象。例如，表、索引或行。  
   
  边  
- 进程和资源之间的关系。 当进程等待资源时，将出现 `request` 边。 当资源等待进程时，将出现 `owner` 边。 边说明中包括了锁模式。 例如，**“模式:X**。  
+ 进程和资源之间的关系。 当进程等待资源时，将出现 `request` 边。 当资源等待进程时，将出现 `owner` 边。 边说明中包括了锁模式。 例如，**模式：X**。  
   
 ## <a name="deadlock-process-node"></a>死锁进程节点  
  在等待图形中，进程节点包含有关进程的信息。 下表介绍了进程的组件。  

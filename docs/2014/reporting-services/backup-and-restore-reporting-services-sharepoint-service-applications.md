@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0613234749c2bf419f3013226b3935782833e65e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237766"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
   本主题说明如何使用 SharePoint 管理中心或 PowerShell 备份和还原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 本主题包含：  
