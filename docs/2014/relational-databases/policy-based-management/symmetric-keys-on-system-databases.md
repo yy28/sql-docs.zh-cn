@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ac7d41bc693813f471caff7e746a44184146962
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252658"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>系统数据库中的对称密钥
   此规则检查 master、msdb、model 和 tempdb 数据库中是否存在用户创建的对称密钥。  

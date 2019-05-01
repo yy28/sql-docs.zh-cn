@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252677"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>查看代码窗口的其他方式
   可以配置代码窗口，以多种方式显示多个代码窗口。  

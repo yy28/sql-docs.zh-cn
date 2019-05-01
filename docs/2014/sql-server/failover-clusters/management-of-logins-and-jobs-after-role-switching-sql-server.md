@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252859"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切换后登录名和作业的管理 (SQL Server)
   在为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署高可用性或灾难恢复解决方案时，重新生成为 **master** 或 **msdb** 数据库中的数据库存储的相关信息十分重要。 通常，相关信息包括主/主体数据库的作业以及连接到数据库所需的用户或进程的登录名。 您应该在承载辅助/镜像数据库的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上复制此信息。 如果可能，角色切换后最好在新的主/主体数据库中以编程方式重新生成此信息。  

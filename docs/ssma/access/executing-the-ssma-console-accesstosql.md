@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408314"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473525"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>执行 SSMA 控制台 (AccessToSQL)
 Microsoft 为您提供了一系列可靠的脚本文件命令和命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  
@@ -218,7 +218,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-连接目标数据库  
+connect-target-database  
   
 -   连接到目标 SQL Server 或 SQL Azure 数据库并完全加载目标数据库的高级别的元数据，但不是元数据。  
   
@@ -394,7 +394,7 @@ convert-schema
 ```  
 **Command**  
   
-迁移数据  
+migrate-data  
   
 1.  将源数据迁移到目标。  
   
@@ -531,7 +531,7 @@ convert-schema
   
 **Command**  
   
-同步目标  
+synchronize-target  
   
 1.  将目标对象与目标数据库同步。  
   
@@ -547,11 +547,11 @@ convert-schema
   
 3.  `on-error:` 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
-    -   作为警告报告总数  
+    -   report-total-as-warning  
   
-    -   报表的每个-作为-警告  
+    -   report-each-as-warning  
   
-    -   脚本失败  
+    -   fail-script  
   
 4.  `report-errors-to:` 为同步操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**TargetSynchronizationReport.XML**创建。  
   
@@ -596,7 +596,7 @@ convert-schema
 ```  
 **Command**  
   
-从数据库刷新  
+refresh-from-database  
   
 -   刷新数据库中的源对象。  
   
@@ -612,11 +612,11 @@ convert-schema
   
 3.  `on-error:` 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
-    -   作为警告报告总数  
+    -   report-total-as-warning  
   
-    -   报表的每个-作为-警告  
+    -   report-each-as-warning  
   
-    -   脚本失败  
+    -   fail-script  
   
 4.  `report-errors-to:` 刷新操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**SourceDBRefreshReport.XML**创建。  
   

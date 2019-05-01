@@ -1,5 +1,5 @@
 ---
-title: VisualTotals (MDX) |Microsoft 文档
+title: VisualTotals (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e4732425d0e400ef7247ae133b5713949664e0f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251416"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 
@@ -35,13 +35,13 @@ VisualTotals(Set_Expression[,Pattern])
  *模式*  
  集中父成员的有效字符串表达式，包含星号 (*) 作为父名称的替代字符。  
   
-## <a name="remarks"></a>Remarks  
- 指定的集表达式可以指定包含单个维度内任何级别成员（通常是具有祖先-后代关系的成员）的集。 **VisualTotals**函数中指定集的子成员的值进行合计并忽略不在集合中计算结果总计的子成员。 直观地对以层次结构顺序排序的集计算总和。 如果集中成员的顺序违背了层次结构，则结果就不是直观合计了。 例如，VisualTotals (USA, WA, CA, Seattle) 不将 WA 返回为 Seattle，而返回 WA、CA 和 Seattle 的值，然后计算这些值的总和作为 USA 的直观合计，同时计算两次 Seattle 的销售额。  
+## <a name="remarks"></a>备注  
+ 指定的集表达式可以指定包含单个维度内任何级别成员（通常是具有祖先-后代关系的成员）的集。 **VisualTotals**函数指定集内子成员的值进行合计，并忽略不在计算结果总和集中的子成员。 直观地对以层次结构顺序排序的集计算总和。 如果集中成员的顺序违背了层次结构，则结果就不是直观合计了。 例如，VisualTotals (USA, WA, CA, Seattle) 不将 WA 返回为 Seattle，而返回 WA、CA 和 Seattle 的值，然后计算这些值的总和作为 USA 的直观合计，同时计算两次 Seattle 的销售额。  
   
 > [!NOTE]  
->  应用**VisualTotals**到不相关的度量值或处于下的度量值组粒度的维度成员函数将导致值替换为 null。  
+>  将应用**VisualTotals**不相关的度量值或度量值组粒度下的维度成员函数将导致值替换为 null。  
   
- *模式*，这是可选的指定总计标签的格式。 *模式*需要一个星号 （*），因为父成员和文本字符串中的其余部分的替换字符显示在父名称串接的结果。 若要显示原义星号，使用两个星号 (\*\*)。  
+ *模式*，是可选的指定合计标签的格式。 *模式*父成员以及在字符串中的文本的其余部分的替代字符出现在与父名称相串联的结果中需要用星号 （*）。 若要显示星号，使用两个星号 (\*\*)。  
   
 ## <a name="examples"></a>示例  
  下面的示例根据所指定的一个后代 - 7 月，返回 2001 日历年第三季度的直观合计。  
@@ -68,6 +68,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

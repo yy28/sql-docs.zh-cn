@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c7c3d1f4ccc6b6a7fc9f398c528dcab79ffbd426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253421"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>高级对象选择 (MySQLToSQL)
 **高级对象部分**对话框可以通过使用字符串和子字符串中的对象名称，来筛选数据库对象，然后选择或取消选择这些对象。 SSMA 执行对所选对象的转换和迁移操作。  

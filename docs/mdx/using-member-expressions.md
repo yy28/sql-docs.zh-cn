@@ -1,5 +1,5 @@
 ---
-title: 使用成员表达式 |Microsoft 文档
+title: 使用成员表达式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7abc83ae3483afedaa540c8fdcff0383af6ae994
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251445"
 ---
 # <a name="using-member-expressions"></a>使用成员表达式
 
@@ -57,7 +57,7 @@ Dimension_Name
   
 ```  
   
- 存在返回成员的许多 MDX 函数。 完整列表，请参阅[MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ 存在返回成员的许多 MDX 函数。 有关完整列表，请参阅[MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
 >  有关成员名称和成员键的详细信息，请参阅[使用成员、 元组和集&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。  

@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253329"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，必须连接到你想要迁移的 MySQL 数据库。 连接时，SSMA 中获取有关所有 MySQL 架构的元数据，然后在 MySQL 的元数据资源管理器窗格中显示。 SSMA 存储信息，数据库服务器中，但不存储密码。  

@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 42f731f93f0344d5b96a8e3cba41f28dd7fadada
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253205"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA 控制台中的命令行选项 (MySQLToSQL)
 Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  

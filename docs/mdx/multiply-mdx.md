@@ -1,5 +1,5 @@
 ---
-title: '* （乘）(MDX) |Microsoft 文档'
+title: '* （乘）(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f752aec0a2e1b49fbf1145129876d2f8c5901ed
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742266"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456583"
 ---
 # <a name="-multiply-mdx"></a>*（乘）(MDX)
 
@@ -35,7 +35,7 @@ Numeric_Expression * Numeric_Expression
 ## <a name="return-value"></a>返回值  
  具有与优先级较高的参数相同的数据类型的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。 如果一个表达式的值为空值，则此运算符返回空值。  
   
 ## <a name="see-also"></a>请参阅  

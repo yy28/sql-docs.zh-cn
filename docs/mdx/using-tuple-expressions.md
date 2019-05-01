@@ -1,5 +1,5 @@
 ---
-title: 使用元组表达式 |Microsoft 文档
+title: 使用元组表达式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251501"
 ---
 # <a name="using-tuple-expressions"></a>使用元组表达式
 
@@ -37,7 +37,7 @@ ms.locfileid: "34743686"
   
 -   如果隐式引用的层次结构有默认成员，则将该默认成员添加到元组中。  
   
--   如果隐式引用的层次结构不具有任何默认成员， **（全部）** 使用的默认层次结构的成员。  
+-   如果隐式引用的层次结构没有默认成员， **（全部）** 使用默认层次结构的成员。  
   
 -   如果隐式引用的层次结构没有默认成员，则使用该层次结构最上层的第一个成员。  
   
@@ -46,6 +46,6 @@ ms.locfileid: "34743686"
   
 ## <a name="see-also"></a>请参阅  
  [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

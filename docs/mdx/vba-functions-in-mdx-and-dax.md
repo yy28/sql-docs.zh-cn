@@ -1,5 +1,5 @@
 ---
-title: MDX 和 DAX 中的 VBA 函数 |Microsoft 文档
+title: MDX 和 DAX 中的 VBA 函数 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251551"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函数
 
 
-  本文档包含所有 VBA 函数中可用的交叉的引用[应用程序函数的 Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) ，支持在 MDX 中; 此外，该列表包含注释，使用 DAX 语言的功能等效性时.  
+  本文档包含在可用的所有 VBA 函数的交叉的引用[Visual Basic for Applications 函数](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications)支持在 MDX 中; 此外，该列表包括一条注释功能上与 DAX 语言的等效时.  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 函数引用  
   
-|函数名称|是否支持|说明|  
+|函数名称|支持|说明|  
 |-------------------|---------------|-----------|  
 |Abs|DAX、MDX||  
 |Array|不支持||  
@@ -51,8 +51,8 @@ ms.locfileid: "34743886"
 |CurDir|不支持||  
 |CVar|仅 MDX||  
 |CVErr|不支持||  
-|date|仅 MDX|**警告**DAX 实现不同的函数具有相同名称; 用来从给定的自变量生成日期类型值的日期 （年、 月、 日） 函数|  
-|DateAdd|仅 MDX|**警告**DAX 实现不同的函数具有相同名称; DATEADD (\<日期 >，< number_of_intervals >\<间隔 >) 函数，用于移动给定的日期由大量给定的时间间隔|  
+|date|仅 MDX|**警告**DAX 实现同名的不同函数; DATE (Year，Month，Day) 函数，用于从给定参数生成一个 date 类型值|  
+|DateAdd|仅 MDX|**警告**DAX 实现同名的不同函数; DATEADD (\<日期 >，< number_of_intervals >\<间隔 >) 函数，用于移动从给定的日期由数量的给定时间间隔|  
 |DateDiff]|仅 MDX||  
 |DatePart|仅 MDX||  
 |DateSerial|仅 MDX||  
@@ -68,7 +68,7 @@ ms.locfileid: "34743886"
 |FileAttr|不支持||  
 |FileDateTime|不支持||  
 |FileLen|不支持||  
-|“筛选器”|不支持|**警告**MDX 实现不同的函数具有相同的名称; 筛选器 （值赋，Logical_Expression） 函数返回筛选基于搜索条件从给定的自变量的指定的集后得到的集<br /><br /> **警告**DAX 实现不同的函数具有相同名称; 筛选器 (\<表 >，\<筛选器 >) 函数返回表示另一个表或从给定的自变量的表达式的一个子集的表|  
+|“筛选器”|不支持|**警告**MDX 实现同名的不同函数; FILTER （Set_Expression，Logical_Expression） 函数返回一组指定基于从给定参数的搜索条件筛选后得到的集<br /><br /> **警告**DAX 实现同名的不同函数名称; 在筛选器 (\<表 >，\<筛选器 >) 函数返回表示另一个表或从给定参数的表达式的子集的表|  
 |Fix|仅 MDX||  
 |Format  (Visual Basic for Applications)|DAX、MDX||  
 |FormatCurrency|不支持||  
@@ -83,7 +83,7 @@ ms.locfileid: "34743886"
 |GetSetting|不支持||  
 |Hex|仅 MDX||  
 |Hour|DAX、MDX||  
-|Iif|仅 MDX|**警告**DAX 实现具有名称的类似函数： 如果 （满足，value_if_true，value_if_false） 函数。|  
+|Iif|仅 MDX|**警告**DAX 实现同名的类似函数：IF (logical_test，value_if_true，value_if_false) 函数。|  
 |IMEStatus|不支持||  
 |输入|不支持||  
 |InputBox|不支持||  
@@ -107,7 +107,7 @@ ms.locfileid: "34743886"
 |Len|DAX、MDX||  
 |Loc|不支持||  
 |LOF|不支持||  
-|日志|仅 MDX|**重要**DAX 实现不同的函数具有相同名称; 日志 (数字，base) 函数。 从给定参数返回指定底数的数字的对数。|  
+|日志|仅 MDX|**重要**DAX 实现同名的不同函数名称; LOG (number，base) 函数。 从给定参数返回指定底数的数字的对数。|  
 |LTrim|仅 MDX||  
 |MacID|不支持||  
 |MacScript|不支持||  
@@ -150,7 +150,7 @@ ms.locfileid: "34743886"
 |StrReverse|不支持||  
 |开关|仅 MDX||  
 |SYD|仅 MDX||  
-|选项卡|不支持||  
+|Tab|不支持||  
 |Tan|仅 MDX||  
 |Time|不支持||  
 |Timer|仅 MDX||  

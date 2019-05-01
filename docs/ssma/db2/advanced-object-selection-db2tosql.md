@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 46e1bdc5b9fdfbbe9c804b4bf2214b9c04b6cdac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781285"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453495"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>高级的对象选择 (DB2ToSQL)
 **高级对象部分**对话框可以通过使用字符串和子字符串中的对象名称，来筛选数据库对象，然后选择或取消选择这些对象。 SSMA 执行对所选对象的转换和迁移操作。  

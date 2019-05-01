@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fee221caf91d5d70f291f9351d05a00352e7cc00
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253259"
 ---
 # <a name="conversion-settings-mysqltosql"></a>转换设置 (MySQLToSQL)
 **设置**选项卡允许用户设置节点级别设置。 选项卡将出现在以下元数据库节点：  
@@ -65,7 +65,7 @@ ms.locfileid: "52400041"
   
         -   根据项目设置 [继承] 转换  
   
-        -   用户帐户控制  
+        -   是  
   
         -   否  
   

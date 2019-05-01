@@ -5,17 +5,17 @@ description: 了解如何配置用于 SQL Server 2019 大数据群集 （预览�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: afa5c3bae6eb7898ccaedf534382c9aeb467f01c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860688"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473493"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>配置用于 SQL Server 大数据群集部署 minikube
 
@@ -27,7 +27,7 @@ ms.locfileid: "58860688"
 
 - 32 GB 的内存 (建议 64 GB)。
 
-- 如果计算机已配置推荐的内存的最小值，然后配置群集，使只有一个计算池实例、 数据池实例 1 和 1 的存储池实例的部署。 此配置应仅用于评估环境的持续性和可用性的数据不重要。 请参阅[部署文档](deployment-guidance.md#env)对于要为配置数据池的副本数设置的环境变量的详细信息，计算池和存储池。
+- 如果计算机已配置推荐的内存的最小值，然后配置群集，使只有一个计算池实例、 数据池实例 1 和 1 的存储池实例的部署。 此配置应仅用于评估环境的持续性和可用性的数据不重要。 请参阅[部署文档](deployment-guidance.md#configfile)对于要为配置数据池的副本数设置的环境变量的详细信息，计算池和存储池。
 
 - 必须在计算机的 BIOS 中启用 VT x 或 amd-v 虚拟化。
 
@@ -44,11 +44,11 @@ ms.locfileid: "58860688"
    - 对于 Linux，安装[VirtualBox](https://www.virtualbox.org/wiki/Downloads)或[KVM](https://www.linux-kvm.org/)。
    - 对于 Windows，安装[VirtualBox](https://www.virtualbox.org/wiki/Downloads)或[HYPER-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install)。 如果没有外部交换机的 hyper-v 中配置，然后创建一个具有外部网络访问权限。  请参阅如何[minikube 的 hyper-v 中创建外部交换机](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/)。
 
-## <a name="install-minikube"></a>安装 Minikube
+## <a name="install-minikube"></a>安装 minikube
 
-根据说明安装 Minikube [v0.28.2 版本](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)。 SQL Server 2019 大数据群集 （预览版） 仅适用于版本 v0.24.1 和设置。
+安装的说明根据 minikube [v0.28.2 版本](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)。 SQL Server 2019 大数据群集 （预览版） 仅适用于版本 v0.24.1 和设置。
 
-## <a name="create-a-minikube-cluster"></a>创建 Minikube 群集
+## <a name="create-a-minikube-cluster"></a>创建 minikube 群集
 
 下面的命令中的 HYPER-V VM 具有 8 个 Cpu，28 GB 内存，并为 100 GB 的磁盘大小创建 minikube 群集。 磁盘大小不是保留的空间。  它可增长到该大小在磁盘上根据需要。  我们建议不更改磁盘空间为我们遇到了问题，在测试中小于 100 GB。 这还将指定的 hyper-v 交换机与外部访问显式。
 
@@ -58,7 +58,7 @@ ms.locfileid: "58860688"
 minikube start --vm-driver="hyperv" --cpus 8 --memory 28672 --disk-size 100g --hyperv-virtual-switch "External"
 ```
 
-如果使用 VirtualBox 使用 Minikube 该命令将如下所示：
+如果使用 VirtualBox 使用 minikube 该命令将如下所示：
 
 ```base
 minikube start --cpus 8 --memory 28672 --disk-size 100g
@@ -74,6 +74,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>后续步骤
 
-在本文中的步骤配置 Minikube 群集。 下一步是部署 SQL Server 2019 大数据群集。 有关说明，请参阅以下文章：
+在本文中的步骤配置 minikube 群集。 下一步是部署 SQL Server 2019 大数据群集。 有关说明，请参阅以下文章：
 
 [部署 SQL Server 2019 大数据群集在 Kubernetes 上](deployment-guidance.md#deploy)

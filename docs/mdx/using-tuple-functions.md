@@ -1,5 +1,5 @@
 ---
-title: 使用元组函数 |Microsoft 文档
+title: 使用元组函数 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 578192fa982b8bbf65527f4ff1d71b6595a2400d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251637"
 ---
 # <a name="using-tuple-functions"></a>使用元组函数
 
@@ -23,7 +23,7 @@ ms.locfileid: "34743816"
   
  与成员函数和集函数一样，元组函数对协商 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的多维结构至关重要。  
   
- 在 MDX 中，有三个元组函数[当前&#40;MDX&#41;](../mdx/current-mdx.md)，[项&#40;元组&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md)和[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). 以下示例查询说明如何使用这三个函数：  
+ 在 MDX 中，有三个元组函数[当前&#40;MDX&#41;](../mdx/current-mdx.md)，[项目&#40;元组&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md)并[StrToTuple &#40;&#41;](../mdx/strtotuple-mdx.md). 以下示例查询说明如何使用这三个函数：  
   
  `WITH`  
   

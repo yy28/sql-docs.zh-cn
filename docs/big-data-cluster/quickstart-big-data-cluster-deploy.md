@@ -5,17 +5,17 @@ description: 演练的 SQL Server 2019 大数据群集 （预览版） 在 Azure
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582911"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473477"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -60,7 +60,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>运行部署脚本
 
-使用以下步骤来运行部署脚本。 此脚本将在 Azure 中创建的 AKS 服务，然后将 SQL Server 2019 大数据群集部署到 AKS。 此外可以修改与其他脚本[环境变量](deployment-guidance.md#env)若要创建自定义部署。
+使用以下步骤来运行部署脚本。 此脚本将在 Azure 中创建的 AKS 服务，然后将 SQL Server 2019 大数据群集部署到 AKS。 此外可以修改与其他脚本[环境变量](deployment-guidance.md#configfile)若要创建自定义部署。
 
 1. 使用以下命令运行脚本：
 
@@ -114,7 +114,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 ```
 
 > [!IMPORTANT]
-> 整个部署可能需要很长时间由于下载的大数据群集组件的容器映像所需的时间。 但是，也不会花费几个小时。 如果遇到你的部署的问题，请参阅[部署故障排除](deployment-guidance.md#troubleshoot)一部分部署的指导文章。
+> 整个部署可能需要很长时间由于下载的大数据群集组件的容器映像所需的时间。 但是，也不会花费几个小时。 如果遇到你的部署的问题，请参阅[监视和故障排除 SQL Server 大数据群集](cluster-troubleshooting-commands.md)。
 
 ## <a name="inspect-the-cluster"></a>检查群集
 
@@ -149,20 +149,20 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    ```
 
 > [!TIP]
-> 有关如何监视和排查部署问题的更多详细信息，请参阅[部署故障排除](deployment-guidance.md#troubleshoot)一部分部署的指导文章。
+> 有关如何监视和排查部署问题的更多详细信息，请参阅[监视和故障排除 SQL Server 大数据群集](cluster-troubleshooting-commands.md)。
 
 ### <a name="use-the-cluster-administration-portal"></a>使用群集管理门户
 
-控制器 pod 运行后，你可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`endpoint-service-proxy`(例如： **https://\<ip 地址\>: 30777/门户**)。 用于登录到门户的凭据匹配的值**控制器用户**并**密码**你在部署脚本中指定。
+控制器 pod 运行后，你可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`mgmtproxy-svc-external`(例如： **https://\<ip 地址\>: 30777/门户**)。 用于登录到门户的凭据匹配的值**控制器用户**并**密码**你在部署脚本中指定。
 
-可以获取的 IP 地址**终结点服务代理**服务通过在 bash 或 cmd 窗口中运行以下命令：
+可以获取的 IP 地址**mgmtproxy svc 外部**服务通过在 bash 或 cmd 窗口中运行以下命令：
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> 在 CTP 2.4，您会看到一条安全警告时访问网页，因为大数据群集当前正在使用自动生成的 SSL 证书。
+> 在 ctp 版本 2.5 中，您会看到一条安全警告时访问网页，因为大数据群集当前正在使用自动生成的 SSL 证书。
 
 ## <a name="connect-to-the-cluster"></a>连接到群集
 

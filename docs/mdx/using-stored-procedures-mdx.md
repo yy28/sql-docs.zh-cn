@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0d4d455ed7bd804f4c2d4ce036c00f85fd94629f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251582"
 ---
 # <a name="using-stored-procedures-mdx"></a>使用存储过程 (MDX)
 
@@ -41,7 +41,7 @@ WHERE [Measures].[Reseller Freight Cost]
 > [!NOTE]  
 >  Microsoft Visual Basic for Applications (VBA) COM 程序集是自动注册的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数&#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)  
   
   

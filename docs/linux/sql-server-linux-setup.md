@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
-ms.translationtype: MT
+ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280621"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455083"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安装指南
 
@@ -109,7 +109,7 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 
 回滚或降级到以前的版本的 SQL Server，使用以下步骤：
 
-1. 确定想要降级到 SQL Server 包的版本号。 有关包号码的列表，请参阅[发行说明](sql-server-linux-release-notes.md)。
+1. 确定想要降级到 SQL Server 包的版本号。 有关包号码的列表，请参阅[发行说明](../linux/sql-server-linux-release-notes.md)。
 
 1. 降级到早期版本的 SQL Server。 在以下命令，将为`<version_number>`使用您在第一步中标识的 SQL Server 版本号。
 
@@ -178,7 +178,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 > [!TIP]
 > 如果使用快速入门中的步骤已成功安装，您不需要下载或手动安装 SQL Server 包。 本部分仅适用于脱机方案。
 
-1. **下载你的平台的数据库引擎包**。 包详细信息部分中找到包下载链接[发行说明](sql-server-linux-release-notes.md)。
+1. **下载你的平台的数据库引擎包**。 包详细信息部分中找到包下载链接[发行说明](../linux/sql-server-linux-release-notes.md)。
 
 1. **将下载的包移到 Linux 计算机**。 如果使用另一台计算机下载包，将包移到 Linux 计算机的一种方法是使用**scp**命令。
 

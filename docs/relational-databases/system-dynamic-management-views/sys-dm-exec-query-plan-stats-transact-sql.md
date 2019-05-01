@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_plan_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 62ddfda48429b99558b987cd06c95e96d62702fa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 89185976120c15f9d1fcdfef75f2bddb41415c65
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582086"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63474277"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 返回之前已缓存的查询计划的最后一个已知的实际执行计划的等效项。 
 
@@ -64,7 +64,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="remarks"></a>备注
 此系统函数是从开始提供[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4。
 
-这是一个选择加入功能，并且需要启用[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。   
+这是一个选择加入功能，并且需要启用[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 从开始[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.5 然后在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，若要在数据库级别完成此操作，请参阅中的 LAST_QUERY_PLAN_STATS 选项[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
 
 此系统函数工作原理**轻型**查询执行统计信息分析基础结构。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  
 
@@ -80,7 +80,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
     **AND**    
 -   查询相当简单，通常属于 OLTP 工作负荷的一部分。
 
-<sup>1</sup>这指的显示计划，其中仅包含根节点运算符 （选择）。 有关[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4 仅这是指作为可通过 sys.dm_exec_cached_plans 高速缓存的计划。
+<sup>1</sup>开头[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]ctp 版本 2.5 时，这是指显示计划，其中仅包含根节点运算符 （选择）。 有关[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]这是指作为可通过缓存的计划的 CTP 2.4 `sys.dm_exec_cached_plans`。
 
 在以下情况下**会返回任何输出**从**sys.dm_exec_query_plan_stats**:
 
@@ -131,6 +131,16 @@ CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle) AS qps
 WHERE st.text LIKE 'SELECT * FROM Person.Person%';  
 GO  
 ```   
+
+### <a name="d-look-at-cached-events-for-trigger"></a>D. 查看缓存触发器的事件
+
+```sql
+SELECT *
+FROM sys.dm_exec_cached_plans
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)
+WHERE objtype ='Trigger';
+GO
+```
 
 ## <a name="see-also"></a>请参阅
   [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
