@@ -61,7 +61,7 @@ ms.locfileid: "63158826"
   
 ## <a name="rsexe-scripting-samples"></a>RS.exe 脚本示例  
   
--   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)列中的一个值匹配。  
+-   [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。列中的一个值匹配。  
   
 -   有关其他脚本、应用程序和扩展插件的示例，请参阅 [SQL Server Reporting Service 产品示例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
