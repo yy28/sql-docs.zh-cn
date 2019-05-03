@@ -156,7 +156,7 @@ ms.locfileid: "58280751"
   
 ## <a name="external-resources"></a>外部资源  
   
--   www.mssqltips.com 上的博客项 [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783)（如何在 SQL Server Integration Services SSIS 中使用事务）  
+-    www.mssqltips.com 上的博客项 [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783)（如何在 SQL Server Integration Services SSIS 中使用事务）  
   
 ## <a name="see-also"></a>另请参阅  
  [继承的事务](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   

@@ -82,7 +82,7 @@ ms.locfileid: "62892394"
   
 ## <a name="external-resources"></a>外部资源  
   
--   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
+-    www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Integration Services](sql-server-integration-services.md)  
