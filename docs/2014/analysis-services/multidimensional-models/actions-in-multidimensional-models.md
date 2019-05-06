@@ -63,7 +63,7 @@ ms.locfileid: "62701940"
 |数据集|检索数据集。|  
 |专有|使用除此表列出的这些类型以外的其他接口执行操作。|  
 |行集|检索行集。|  
-|。|运行 OLE DB 命令。|  
+|声明专用纸|运行 OLE DB 命令。|  
 |URL|在 Internet 浏览器中显示可变页。|  
   
  对于 **“操作表达式”**，请指定运行操作时所传递的参数。 该语法的计算结果必须为字符串，并且必须包含以 MDX 编写的表达式。 例如，MDX 表达式可以指示该语法所包含的多维数据集的一部分。 MDX 表达式在传递参数之前得到取值。 MDX 生成器也可以帮助生成 MDX 表达式。  
@@ -77,7 +77,7 @@ ms.locfileid: "62701940"
 |**应用程序**|说明操作的应用程序。|  
 |**说明**|说明操作。|  
 |**Caption**|提供为操作显示的标题。 如果标题是 MDX，指定`True`有关**标题是 MDX**。|  
-|**True**|如果标题是 MDX，请指定 `True`，如果不是，则指定 `False`。|  
+|**标题是 MDX**|如果标题是 MDX，请指定 `True`，如果不是，则指定 `False`。|  
   
 > [!NOTE]  
 >  必须使用 Analysis Services 脚本语言 (ASSL) 或分析管理对象 (AMO)，才能定义 HTML 和命令行操作类型。 有关详细信息，请参阅 [Action 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)、[Type 元素 (Action) (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 和 [AMO OLAP 高级对象的编程](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)。  
