@@ -10,15 +10,15 @@ helpviewer_keywords:
 - members [Master Data Services], permissions
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a7e762a450a28f1d07e58a0baa6f7f3ff3948681
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924382"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482956"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
   层次结构成员权限是可选的，仅当您希望某个用户对特定成员具有受限的访问权限时才应使用。 如果您未在 **“层次结构成员”** 选项卡上分配权限，则用户的权限仅基于在 **“模型”** 选项卡上分配的权限。  

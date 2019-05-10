@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e966260ac9880ffbdc722abca8eef86c5409da6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923602"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482661"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>快捷查询文件（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用快捷查询文件可快速连接并加载常用数据。 当您要与他人共享 MDS 数据时，也可以使用这些文件。 不需要保存工作表再通过电子邮件发送，而应保存一个快捷查询文件然后通过电子邮件发送该文件。 这将确保您同时连接到 MDS 存储库，以获取最新数据。  

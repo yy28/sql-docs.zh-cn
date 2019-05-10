@@ -29,7 +29,7 @@ ms.locfileid: "62637842"
 ## <a name="examples"></a>示例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布尔函数  
- 此查询返回所有**\<客户 >** 的上下文节点的子元素不具有**\<顺序 >** 子元素：  
+ 此查询返回所有 **\<客户 >** 的上下文节点的子元素不具有 **\<顺序 >** 子元素：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -77,7 +77,7 @@ ms.locfileid: "62637842"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布尔函数  
- 此查询返回所有**\<客户 >** 上下文节点不具有元素子级**\<顺序 >** 子元素。 就关系而言，此查询返回未下订单的所有客户。  
+ 此查询返回所有 **\<客户 >** 上下文节点不具有元素子级 **\<顺序 >** 子元素。 就关系而言，此查询返回未下订单的所有客户。  
   
 ```  
 /child::Customer[child::Order=false()]  

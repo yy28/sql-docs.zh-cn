@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b614f31292999dd5424935d57e4cd1412dee864
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764844"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482894"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能和任务
   了解如何使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 来管理组织的主数据。 了解如何创建和操作模型对象（数据的容器）。 了解如何组织和维护主数据本身。 了解如何导入和导出主数据，以及在测试环境和生产环境之间共享模型。 最后，了解如何开发用于访问 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务的自定义应用程序。  

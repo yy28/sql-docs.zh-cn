@@ -10,15 +10,15 @@ helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3533108054d1c65e73f3167d68a05727e95fa2d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925606"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483547"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
   集合是一组来自单个实体的叶成员和合并成员。 不需要完整层次结构并且想要查看不同的成员分组以便进行报告或分析时，或者需要创建分类时，使用集合。  

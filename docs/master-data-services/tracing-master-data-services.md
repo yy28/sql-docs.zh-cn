@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: c291ad016664cf8ac7dcbe2deb9cc04680a707c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f74158bcb8a83b65842d016f3dd8aeacf73f0427
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765019"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485074"
 ---
 # <a name="tracing-master-data-services"></a>跟踪 (Master Data Services)
 
@@ -60,11 +60,11 @@ ms.locfileid: "52765019"
   
 -   日志格式为 CSV。 下表介绍了日志格式。  
   
-    |元素|描述|  
+    |元素|Description|  
     |-------------|-----------------|  
     |Time|跟踪条目出现的时间。|  
     |CorrelationID|每个请求都分配有一个相关 ID。 此请求触发的所有跟踪都使用同一个相关 ID。<br /><br /> 当 UI 出错时，错误消息中会显示相关 ID。|  
-    |运算|请求操作名称。 如果是 Web UI 请求，则操作名称为 URL。 如果是 API 请求，则操作名称为服务名称。|  
+    |操作|请求操作名称。 如果是 Web UI 请求，则操作名称为 URL。 如果是 API 请求，则操作名称为服务名称。|  
     |级别|此跟踪条目的级别。|  
     |消息|跟踪的消息正文|  
   
