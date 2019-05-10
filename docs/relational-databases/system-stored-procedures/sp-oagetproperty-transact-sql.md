@@ -1,5 +1,5 @@
 ---
-title: sp_OAGetProperty (TRANSACT-SQL) |Microsoft Docs
+title: sp_OAGetProperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8c87eb8ed41b1669cf423aaccb8b06ee8b0e54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6611998b8aa22242693ec5d44bf842671a777c98
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690005"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449724"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_OAGetProperty objecttoken , propertyname
  *propertyvalue* **输出**  
  返回的属性值。 如果指定此参数，则必须是相应数据类型的局部变量。  
   
- 如果属性返回 OLE 对象， *propertyvalue*必须是数据类型的本地变量**int**。对象令牌保存在该局部变量中，并且此对象令牌可用于其他 OLE 自动化存储过程。  
+ 如果属性返回 OLE 对象， *propertyvalue*必须是数据类型的本地变量**int**。一个对象标记标记存储在本地变量，此对象令牌可用于其他 OLE 自动化存储过程。  
   
  如果属性返回单个值，指定的局部变量*propertyvalue*，返回属性值在本地变量中; 或者不指定*propertyvalue*，它将返回向客户端作为单列、 单行结果集的属性值。  
   
@@ -95,8 +95,8 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="remarks"></a>备注  
  此外可以使用**sp_OAMethod**获取属性值。  
   
-## <a name="permissions"></a>Permissions  
- 要求具有 **sysadmin** 固定服务器角色的成员身份。  
+## <a name="permissions"></a>权限  
+ 要求的成员身份**sysadmin**固定服务器角色或直接在此存储过程的执行权限。 `Ole Automation Procedures` 必须配置**启用**若要使用相关的 OLE 自动化到任何系统过程。  
   
 ## <a name="examples"></a>示例  
   

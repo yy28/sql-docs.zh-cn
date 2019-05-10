@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ae5e6ad40a9a4c071ca452d893ca6644dae133d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 879ee3d55a178e2ef5fc7feca3f6ef475e683a8c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403892"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477170"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>“筛选器”对话框（用于 Excel 的 MDS 外接程序）
 
@@ -24,12 +24,12 @@ ms.locfileid: "52403892"
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用“筛选器”  对话框可以先筛选 MDS 管理的数据列表，然后再将其加载到 Excel 中。  
   
- 此对话框包含三个部分： **“列”**、 **“行”** 和 **“摘要”**。  
+ 此对话框包含三个部分：**列**，**行**，和**摘要**。  
   
 ## <a name="columns"></a>“列”  
  使用“列”  部分可以确定要在 Excel 中显示的属性（列）。  
   
-|控件名称|描述|  
+|控件名称|Description|  
 |------------------|-----------------|  
 |属性类型|属性类型描述您想要使用的成员的类型。 在大多数情况下，类型为 **“叶”**。 有关成员类型的详细信息，请参阅[成员 (Master Data Services)](../../master-data-services/members-master-data-services.md)。|  
 |显式层次结构|如果您选择 **“已合并”** 属性类型，请选择已合并成员所属的层次结构。 有关详细信息，请参阅[显式层次结构 (Master Data Services)](../../master-data-services/explicit-hierarchies-master-data-services.md)。|  
@@ -41,9 +41,9 @@ ms.locfileid: "52403892"
 ## <a name="rows"></a>“行”  
  使用“行”  部分可以确定要在 Excel 中显示的成员（行）。 通过定义要显示的行的筛选条件可以确定要显示的行。  
   
-|控件名称|描述|  
+|控件名称|Description|  
 |------------------|-----------------|  
-|Attribute|显示筛选所依据的属性。 如果未列出任何属性，这是因为尚未添加任何属性。<br /><br /> 注意：可依据不准备在工作表中显示的属性进行筛选。|  
+|特性|显示筛选所依据的属性。 如果未列出任何属性，这是因为尚未添加任何属性。<br /><br /> 注意：您可以通过不打算在工作表中显示的属性进行筛选。|  
 |运算符|显示对应于所选属性的类型的运算符。 有关详细信息，请参阅 [Filter 运算符 (Master Data Services)](../../master-data-services/filter-operators-master-data-services.md)。|  
 |条件|筛选要依据的条件。|  
 |更新摘要|处理大型数据集时，单击该选项可使用要加载的数据的详细信息来更新 **“摘要”** 部分。|  
@@ -54,7 +54,7 @@ ms.locfileid: "52403892"
 ## <a name="summary"></a>“摘要”  
  使用 **“摘要”** 部分可以在加载数据之前先查看有关要加载的数据的详细信息。  
   
-|控件名称|描述|  
+|控件名称|Description|  
 |------------------|-----------------|  
 |“模型”|模型的名称。|  
 |版本|版本的名称。|  
@@ -62,8 +62,8 @@ ms.locfileid: "52403892"
 |“行”|基于在 **“行”** 部分中应用的筛选器要加载到 Excel 中的行数。|  
 |“列”|基于在 **“列”** 部分中所选的属性要加载到 Excel 中的列数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [导出前筛选数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
- [概述：将数据导出到 Excel（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+ [概述：将数据导出到 Excel (MDS Add-in for Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

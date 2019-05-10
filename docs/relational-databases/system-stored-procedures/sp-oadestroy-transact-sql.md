@@ -18,12 +18,12 @@ ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: faf9af4fee3d49dfacaea9ab6e73daef0d56465f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b4a7b238d3f7ade1706a78c3e595ec63ae2cce7
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714875"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449729"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,8 @@ sp_OADestroy objecttoken
 ## <a name="remarks"></a>备注  
  如果**sp_OADestroy**不调用时，所创建的 OLE 对象时会自动破坏批的末尾。  
   
-## <a name="permissions"></a>Permissions  
- 要求具有 **sysadmin** 固定服务器角色的成员身份。  
+## <a name="permissions"></a>权限  
+ 要求的成员身份**sysadmin**固定服务器角色或直接在此存储过程的执行权限。 `Ole Automation Procedures` 必须配置**启用**若要使用相关的 OLE 自动化到任何系统过程。  
   
 ## <a name="examples"></a>示例  
  下面的示例将破坏先前创建**SQLServer**对象。  

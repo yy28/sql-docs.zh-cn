@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attribute groups [Master Data Services], creating
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b53cff2104d5f510db446095a3a65c6be27be77d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b32182dd1d75a35d42587c839c3f46c89654511b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813299"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477142"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>创建属性组 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52813299"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要在 **“资源管理器”** 网格中的单独选项卡上显示属性时，创建属性组。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -66,13 +66,13 @@ ms.locfileid: "52813299"
   
 11. 单击  “可用组”框中的组，然后单击  “添加”箭头。 若要添加所有组，请单击  “全部添加”箭头。  
   
-12. 单击 **“保存”**。  
+12. 单击“保存” 。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   [使属性组对用户可见 (Master Data Services)](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [更改属性组名称 (Master Data Services)](../master-data-services/change-an-attribute-group-name-master-data-services.md)   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 609246d2a41ea8d1b6737ffd485bc9989ebd2b34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 0e4861ad317b71fd646ee8f6f91e73494bee9264
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656521"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476980"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>匹配相似数据（用于 Excel 的 MDS 外接程序）
 
@@ -30,7 +30,7 @@ ms.locfileid: "47656521"
   
 -   创建您自己的自定义 DQS 知识库和匹配策略。 有关详细信息，请参阅 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   必须具有包含 MDS 管理的数据的工作表。 有关详细信息，请参阅 [从 Master Data Services 中将数据导出至 Excel](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47656521"
   
 4.  在所有 DQS 域都映射到该工作表中的列后，单击 **“确定”**。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   查看其他信息以便确定哪些数据是类似的。 有关详细信息，请参阅[数据质量匹配列（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/data-quality-matching-columns-mds-add-in-for-excel.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 Excel 的 MDS 外接程序中的数据质量匹配](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [数据匹配](../../data-quality-services/data-matching.md)  
   

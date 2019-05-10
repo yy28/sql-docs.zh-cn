@@ -11,15 +11,15 @@ helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3597ac503684c84b10b9ce8025b8fddbb26f3947
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 686c3f487207a430136feac2588e4b4b2dda9b1f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755079"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477000"
 ---
 # <a name="create-an-entity-master-data-services"></a>创建实体 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52755079"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建一个实体以便包含成员及其属性。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -65,16 +65,16 @@ ms.locfileid: "52755079"
   
 9. 可选。 选择“启用数据压缩”  复选框。 默认情况下，系统将打开行压缩。 有关详细信息，请参阅 [Data Compression](../relational-databases/data-compression/data-compression.md)。  
   
-10. 单击 **“保存”**。  
+10. 单击“保存” 。  
   
 ## <a name="grid-columns"></a>网格列  
  对于创建的每个实体，系统都会在网格中添加一行（其中包含十三列）。 下面介绍了这些列。  
   
-|“属性”|描述|  
+|“属性”|Description|  
 |----------|-----------------|  
 |“登录属性”|实体状态。 单击“保存”  时，将显示下图，指示实体正在更新。<br /><br /> ![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")<br /><br /> 如果在创建或编辑实体时出错，将显示下面的图像。<br /><br /> ![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")|  
 |“属性”|实体名称。|  
-|描述|实体说明。|  
+|Description|实体说明。|  
 |临时表|用于存储数据的表的前缀名称。|  
 |事务日志类型|实体的事务日志类型。|  
 |自动创建代码|指定是否启用自动代码创建。|  
@@ -86,7 +86,7 @@ ms.locfileid: "52755079"
 |更新者|上次更新实体的用户的用户名。|  
 |更新时间|上次更新实体的日期和时间。|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   [创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52755079"
   
 -   [创建文件属性 (Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)   
  [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [编辑实体 (Master Data Services)](../master-data-services/edit-an-entity-master-data-services.md)   

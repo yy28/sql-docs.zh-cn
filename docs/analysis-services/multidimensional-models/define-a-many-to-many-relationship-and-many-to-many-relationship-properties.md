@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53b20b10aea985722f9c498079a3267a5ddb6969
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 31a0127e9e7e7ed7c6bc94d518e5785af04da46d
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825668"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357396"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -183,7 +183,7 @@ ms.locfileid: "62825668"
   
 ## <a name="see-also"></a>请参阅  
  [维度关系](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [安装 Analysis Services 多维建模教程的示例数据和项目](../../analysis-services/install-sample-data-and-projects.md)   
+
  [部署 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [多维模型中的透视](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   

@@ -153,8 +153,6 @@
       href: ../report-data/dataset-properties-dialog-box-parameters.md
     - name: “数据集属性”对话框 -&gt;“查询”
       href: ../dataset-properties-dialog-box-query.md
-    - name: “定义查询参数”对话框
-      href: define-query-parameters-dialog-box.md
     - name: “输入数据源凭据”对话框
       href: ../enter-data-source-credentials-dialog-box.md
     - name: “共享数据源属性”对话框 -&gt;“凭据”
