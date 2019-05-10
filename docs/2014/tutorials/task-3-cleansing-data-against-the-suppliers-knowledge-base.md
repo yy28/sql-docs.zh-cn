@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 53dde66e84dd7304f81c4b6fd7de8dbe939d22d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dea74f8fc22bea5a0903a3dae17f6c969849181c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250151"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485055"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>任务 3：对照 Suppliers 知识库清理数据
   在本任务中，您将运行计算机辅助的清理过程。 DQS 基于指定的域值，使用高级算法和置信度来针对所选知识库分析数据，然后清理数据。 请参阅[清理数据使用 DQS （内部） 知识](https://msdn.microsoft.com/library/hh213061.aspx)的更多详细信息。  

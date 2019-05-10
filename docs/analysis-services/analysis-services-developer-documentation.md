@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 44be6e7ab0bb3598b2478f1a5f94e64fee48d05a
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930328"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449979"
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 开发人员文档
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ Analysis Services 提供了多种可以自定义解决方案，通过代码，�
 - 尽管可以生成基于开放标准的 XMLA 和 MDX 的解决方案，但它是很少见，若要执行此操作。 没有任何文档以外 XMLA 和 MDX 参考，可帮助你和大多数社区和论坛支持绘制从使用.NET 或本机 (MSOLAP) 技术的体验。
 
 ## <a name="programming-in-analysis-services"></a>在 Analysis Services 中的编程
-[数据挖掘编程](../analysis-services/data-mining-programming.md)介绍构建解决方案，其中包括数据挖掘对象的方法。
+[数据挖掘编程](../analysis-services/data-mining/data-mining-programming.md)介绍构建解决方案，其中包括数据挖掘对象的方法。
 
 [多维模型编程](../analysis-services/multidimensional-models/multidimensional-model-programming.md)介绍的开发任务和集成自定义解决方案中的多维模型对象的方法。
 

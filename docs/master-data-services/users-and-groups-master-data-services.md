@@ -13,15 +13,15 @@ helpviewer_keywords:
 - users [Master Data Services], about users
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00c51ad3a3b3d428a9a89ef5aafed54c26db76cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: bba9009365a4353a6fc5610fe97b6c859ea8910f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781779"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484948"
 ---
 # <a name="users-and-groups-master-data-services"></a>用户和组 (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "52781779"
   
  不要向单个用户分配其他权限，也不要将一个用户包括在对 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]具有访问权限的多个组中。 此外，不要使用层次结构成员权限，除非您希望某个组对特定成员具有受限的访问权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [添加用户 (Master Data Services)](../master-data-services/add-a-user-master-data-services.md)   
  [添加组 (Master Data Services)](../master-data-services/add-a-group-master-data-services.md)   
  [删除用户或组 &#40;Master Data Services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   

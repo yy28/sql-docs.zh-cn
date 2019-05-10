@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教程第 5 课：创建计算的列 |Microsoft Docs
-ms.date: 03/08/2019
+ms.date: 04/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685553"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776068"
 ---
 # <a name="create-calculated-columns"></a>创建计算列
 
@@ -27,7 +27,7 @@ ms.locfileid: "57685553"
 
 本课程也是首次使用数据分析表达式 (DAX)。 DAX 是一种特殊语言用于创建表格模型的可高度自定义公式表达式。 在本教程中，使用 DAX 创建计算的列、 度量值和角色筛选器。 若要了解详细信息，请参阅[表格模型中的 DAX](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)。 
   
-学完本课的预计时间：**15 分钟**  
+估计的时间才能完成本课程中：**15 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 
@@ -47,7 +47,7 @@ ms.locfileid: "57685553"
   
     一个名为“Calculated Column 1”的新列插入到“Calendar Quarter”列的左侧。  
   
-4.  在表上方公式栏中，键入以下 DAX 公式：自动完成功能将帮助您键入列和表的完全限定名称，并且列出可用的函数。  
+4.  在表上方公式栏中，键入以下 DAX 公式：自动完成可帮助你键入的完全限定的名称的列和表，并列出可用的函数。  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -85,7 +85,7 @@ DayOfWeek 计算列提供可排序的星期几名称。
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>在 DimProduct 表中创建 ProductSubcategoryName 计算的列  
   
   
-1.  在中**DimProduct**表中，滚动到最右侧的表。 请注意，最右侧的列被命名为“添加列”（斜体），单击该列标题。  
+1.  在中**DimProduct**表中，滚动到最右侧的表。 请注意，名为的最右侧的列***添加列***，请单击列标题。  
   
 2.  在公式栏中，键入以下公式：  
     

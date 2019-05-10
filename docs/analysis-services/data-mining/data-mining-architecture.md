@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘体系结构 |Microsoft 文档
+title: 数据挖掘体系结构 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc79919837b1a50f9eb6335d12a13c7ea5389b50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 29f1d0fb4a6cc2126feed494df0fb4d09ac61044
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019994"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450053"
 ---
 # <a name="data-mining-architecture"></a>数据挖掘体系结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,23 +28,23 @@ ms.locfileid: "34019994"
   
  [数据库存储位置](../../analysis-services/multidimensional-models/database-storage-location.md)  
   
- [切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  有关如何在您的商业智能解决方案中实施数据挖掘的详细信息，请参阅 MSDN Library 中的“解决方案指南”一节。  
   
 ## <a name="in-this-section"></a>本节内容  
- [逻辑体系结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [逻辑体系结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [物理体系结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [物理体系结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
  [数据挖掘服务和数据源](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
   
- [数据挖掘解决方案和对象的管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [管理数据挖掘解决方案和对象](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
- [安全概述 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+ [安全性概述（数据挖掘）](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型编程](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
- [数据挖掘编程](../../analysis-services/data-mining-programming.md)  
+ [数据挖掘编程](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

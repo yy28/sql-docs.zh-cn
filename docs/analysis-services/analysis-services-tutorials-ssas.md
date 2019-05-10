@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教程 |Microsoft 文档
-ms.date: 05/08/2018
+ms.date: 05/07/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b92410b6c078d83158b64db69716e23204745db
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 64a5fbd4cf2bff4d4fb7338c565bb9bc46a5a22d
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034975"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449998"
 ---
 # <a name="analysis-services-tutorials"></a>Analysis Services 教程
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "38034975"
 [表格建模 （1400年兼容级别）](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
 适用于 Azure Analysis Services 和 SQL Server 2017 Analysis Services 及更高版本。 本教程提供的课程介绍如何通过使用 SQL Server Data Tools (SSDT) 为虚构的公司 Adventure Works 创建基本的 Analysis Services 表格模型。 
 
-[表格建模（1200 兼容级别）](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
+[表格建模（1200 兼容级别）](tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md)  
 适用于 Azure Analysis Services 和 SQL Server 2016 Analysis Services 及更高版本。 本教程提供的课程介绍如何通过使用 SQL Server Data Tools (SSDT) 为虚构的公司 Adventure Works 创建基本的 Analysis Services 表格模型。  
   
-[多维建模](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模](multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)  
 适用于 SQL Server 2012 Analysis Services 和更高版本。 Azure Analysis Services 不支持多维模型。 本教程提供的课程学习基本技能和 SSDT 中进行多维建模的概念。 完成后，您将拥有基于 Adventure Works 数据，可从 Excel、 Reporting Services 或任何其他客户端应用程序连接到 Analysis Services 多维数据集数据库。  
   
-[数据挖掘](../analysis-services/data-mining-tutorials-analysis-services.md)  
+[数据挖掘](../analysis-services/data-mining/data-mining-tutorials-analysis-services.md)  
 适用于 SQL Server 2012 Analysis Services 和更高版本。 Azure Analysis Services 不支持使用数据挖掘多维模型。 此教程集合介绍如何使用向导和集成可视化创建数据挖掘解决方案。  
   
   

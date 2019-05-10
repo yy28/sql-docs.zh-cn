@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b0dc4612ff2d77558a04062704df61e1f93b58ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 008c1915c793eedb27d70cac27e135c2c7e753c4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774099"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477093"
 ---
 # <a name="create-an-index-master-data-services"></a>创建索引 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52774099"
 
   为经常查询的属性列表创建自定义索引，以提高查询性能。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -47,11 +47,11 @@ ms.locfileid: "52774099"
   
 7.  依次单击“可用属性”  框中的属性和“添加”  箭头。 若要添加全部属性，请单击“全部添加”  箭头。  
   
-8.  单击 **“保存”**。  
+8.  单击“保存” 。  
   
  对于你创建的每个索引，系统都会在网格中添加一行（其中包含四列）。 下表介绍了这些列。  
   
-|列名|描述|  
+|列名|Description|  
 |-----------------|-----------------|  
 |“登录属性”|索引状态。<br /><br /> 单击“保存”后，系统会显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示索引正在更新。<br /><br /> 如果创建或编辑索引时出现错误，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标 ](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
 |“属性”|索引名称。|  
@@ -68,10 +68,10 @@ ms.locfileid: "52774099"
   
 -   **更新时间**：上次更新索引的日期和时间。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  [编辑和删除索引 (Master Data Services)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   
   
