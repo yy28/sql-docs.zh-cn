@@ -12,15 +12,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25de38d04af8b98b600422a843c6b6fb6260d514
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 56c7203db3e7c32383b59a85d2bc7cb16cba4d0a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783459"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484388"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>配置业务规则以发送通知 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52783459"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您要向用户通知有关属性值更改时，请配置业务规则以发送通知。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“用户和组权限”** 功能区域。 如果您对 **“用户和组权限”** 功能区域没有权限，则无法查看要向其发送通知的用户和组的列表。  
@@ -57,13 +57,13 @@ ms.locfileid: "52783459"
   
 7.  选中“发送通知”复选框，并从下拉列表中选择要向其发送电子邮件通知的用户或组。  
   
-8.  单击 **“保存”**。  
+8.  单击“保存” 。  
   
 9. 单击“全部发布” 。  
   
 10. 在确认对话框中，单击 **“确定”**。 “业务规则状态”  列中的值更改为“活动”  ，且“通知”  列显示想要向其发送通知的选中用户或组。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   通过以下过程之一将业务规则应用到数据：  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52783459"
   
     -   [配置电子邮件通知 (Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通知 (Master Data Services)](../master-data-services/notifications-master-data-services.md)   
  [配置电子邮件通知 (Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   

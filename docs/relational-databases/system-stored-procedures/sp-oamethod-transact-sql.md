@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530369"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450107"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_OAMethod objecttoken , methodname
   
  如果该方法返回单个值，指定的局部变量*returnvalue*，这会返回该方法在本地变量中，返回值或不指定*returnvalue*，它将返回方法作为单列、 单行结果集返回到客户端的值。  
   
- 如果该方法的返回值是 OLE 对象， *returnvalue*必须是数据类型的本地变量**int**。对象令牌保存在该局部变量中，并且此对象令牌可用于其他 OLE 自动化存储过程。  
+ 如果该方法的返回值是 OLE 对象， *returnvalue*必须是数据类型的本地变量**int**。一个对象标记标记存储在本地变量，此对象令牌可用于其他 OLE 自动化存储过程。  
   
  如果方法返回值是一个数组，如果*returnvalue*指定，则设置为 NULL。  
   
@@ -106,7 +106,7 @@ sp_OAMethod objecttoken , methodname
  此外可以使用**sp_OAMethod**获取属性值。  
   
 ## <a name="permissions"></a>权限  
- 要求具有 **sysadmin** 固定服务器角色的成员身份。  
+ 要求的成员身份**sysadmin**固定服务器角色或直接在此存储过程的执行权限。 `Ole Automation Procedures` 必须配置**启用**若要使用相关的 OLE 自动化到任何系统过程。  
   
 ## <a name="examples"></a>示例  
   

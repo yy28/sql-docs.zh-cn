@@ -11,15 +11,15 @@ helpviewer_keywords:
 - committing versions [Master Data Services]
 - versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6dddedd419ca8d4a6bcdb25f67788926fbac36a5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: dc503340e741e2503803cc51ad4a57c15e2a8a7f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766790"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484295"
 ---
 # <a name="commit-a-version-master-data-services"></a>提交版本 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52766790"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，提交某一模型的版本以便防止对该模型的成员及其属性的更改。 已提交的版本无法取消锁定。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
@@ -52,7 +52,7 @@ ms.locfileid: "52766790"
   
 5.  在确认对话框中，单击 **“确定”**。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   [创建版本标志 (Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52766790"
   
 -   [复制版本 (Master Data Services)](../master-data-services/copy-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
   

@@ -2,21 +2,21 @@
 title: 从
 titleSuffix: Azure Data Studio
 description: 下载和为 Windows 安装 Azure 数据 Studio、 macOS 或 Linux
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f352e47f95d6c530eea062505860fdab10cb25af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.custom: seodec18
+ms.date: 04/19/2019
+ms.reviewer: alayu; sstein
+ms.openlocfilehash: 06f6dbd9184b13768e25f1ea652ed41b4fe245a1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180510"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104872"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
@@ -158,11 +158,12 @@ ms.locfileid: "63180510"
 
 ## <a name="recommended-system-requirements"></a>建议的系统要求
 为获得最佳体验，请使用建议的系统要求。
+[需要此处更新来量化内存]
 
 |             | CPU 核心数 | 内存/RAM |
-|:-----------:|:---------:|:----------:|
-| 建议 |     4     |      8     |
-|   最低要求   |     2     |      4     |
+|:-----------|:---------|:----------|
+| 建议 |     4     |      8 GB    |
+|   最低要求   |     2     |      4 GB     |
 |             |           |            |
 
 ## <a name="check-for-updates"></a>检查更新

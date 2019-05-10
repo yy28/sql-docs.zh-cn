@@ -12,15 +12,15 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 43316ba8dad76417e48d6fdb4fefece87131041a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: e8eea75f4f92fc62275b1a2a32896f2673bfc3ef
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033138"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487325"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 
@@ -84,7 +84,7 @@ ms.locfileid: "56033138"
 |说明如何备份和还原 DQS 数据库。|[备份和还原 DQS 数据库](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |介绍如何分离和附加 DQS 数据库。|[分离和附加 DQS 数据库](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DQS 中的 Reference Data Services](../data-quality-services/reference-data-services-in-dqs.md)   
  [管理 DQS 日志文件](../data-quality-services/manage-dqs-log-files.md)   
  [管理 DQS 数据库](../data-quality-services/manage-dqs-databases.md)  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 18d788e78a58f171a9a6ead5afbe7706eed2111b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f4f39c05c0f2d8bccafa31488bab2fad700a0d90
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812999"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489008"
 ---
 # <a name="member-revision-history-master-data-services"></a>成员修订历史记录 (Master Data Services)
 
@@ -71,7 +71,7 @@ ms.locfileid: "52812999"
 |----------------------|-----------|  
 |回退成员修订历史记录|[回退成员修订历史记录 (Master Data Services)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)   
  [系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)  
   

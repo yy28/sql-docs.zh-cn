@@ -11,15 +11,15 @@ helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 78badeae93c8fbcf7adf03638f22e62f591b56ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 887380136c96cb9cb1dbcd8d9d04b486daaf6659
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782729"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486106"
 ---
 # <a name="transactions-master-data-services"></a>事务 (Master Data Services)
 
@@ -55,7 +55,7 @@ ms.locfileid: "52782729"
   
  你也可以调用以下存储过程来清除事务日志。  
   
-|存储过程|描述|  
+|存储过程|Description|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|清除事务历史记录|  
 |mdm.udpValidationsCleanup|清除验证历史记录|  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6967178e237f62695bc4843087e8ff8fe676fba7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fdf3b766e48843a15e73b7a41b7c434ba604e0af
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819112"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478222"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>删除属性 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52819112"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您希望永久删除某个属性以及所有关联的属性值时，可以删除此属性。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -61,7 +61,7 @@ ms.locfileid: "52819112"
   
 8.  在确认对话框中，单击 **“确定”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)   
  [创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)   
