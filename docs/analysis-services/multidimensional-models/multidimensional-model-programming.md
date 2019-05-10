@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f24376d93f09066d68610e7ac5463945a6db7abd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f8bc4571d212f2722050818e8e591e48b63df06e
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147792"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449627"
 ---
 # <a name="multidimensional-model-programming"></a>多维模型编程
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "50147792"
   
  [Analysis Services OLE DB 提供程序（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表格模型编程兼容级别 1050年到 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [数据挖掘编程](../../analysis-services/data-mining-programming.md)  
+ [数据挖掘编程](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

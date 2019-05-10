@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: edef0fa21cc2a41785e14f7c96cf3c52b1e0bacb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472194"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776158"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>与 SQL Server 大数据群集在 Kubernetes 上的数据持久性
 
@@ -49,19 +49,19 @@ SQL Server 大数据群集使用这些持久卷的方法是通过使用[存储�
 > [!WARNING]
 > 没有永久性存储的情况下运行可在测试环境中，但它可能会导致无法正常工作的群集。 在 pod 重新启动时，群集元数据和/或用户数据将永久丢失。 我们不建议在此配置中运行。 
 
-本部分提供有关如何配置 SQL Server 大数据群集部署的存储设置的更多示例。
+[配置存储](#config-samples)部分提供有关如何配置 SQL Server 大数据群集部署的存储设置的更多示例。
 
 ## <a name="aks-storage-classes"></a>AKS 存储类
 
 附带了 AKS[两个内置的存储类](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)**默认**并**托管高级**以及为其预配的动态程序。 可以指定任何一项都或创建您自己的存储类用于大数据群集部署与已启用的持久存储。 默认情况下，生成适用于 aks 群集配置文件中*aks 开发 test.json*附带了所要使用的持久性存储区配置**托管高级**存储类。
 
 > [!WARNING]
-> 使用创建的永久性卷**默认**存储类具有的回收策略*删除*。 因此时您删除 SQL Server 大数据群集，永久性卷声明获取也被删除，而且然后持久卷。 **管理高级**具有的回收策略*保留*。 有关详细信息，在 AKS 中的存储类和在其配置[这](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)一文。
+> 使用内置的存储类创建的永久性卷**默认**并**托管高级**具有的回收策略*删除*。 因此时您删除 SQL Server 大数据群集，永久性卷声明获取也被删除，而且然后持久卷。 你可以创建使用自定义存储类**azure 磁盘**与 privioner*保留*回收策略，如中所示[这](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)一文。
 
 
 ## <a name="minikube-storage-class"></a>Minikube 存储类
 
-Minikube 附带了一个名为的内置存储类**标准**以及为其动态预配程序。 内置的配置文件。 minikube *minikube 开发 test.json*控制平面规范中具有存储配置设置。相同的设置将应用于所有池规范。 此外可以自定义此文件的副本，并将其用于大数据群集部署在 minikube 上。 可以手动编辑自定义文件和更改你想要运行特定池以适应工作负荷的永久性卷声明的大小。 或者，有关如何编辑使用请参阅此部分示例*mssqlctl*命令。
+Minikube 附带了一个名为的内置存储类**标准**以及为其动态预配程序。 内置的配置文件。 minikube *minikube 开发 test.json*控制平面规范中具有存储配置设置。相同的设置将应用于所有池规范。 此外可以自定义此文件的副本，并将其用于大数据群集部署在 minikube 上。 可以手动编辑自定义文件和更改你想要运行特定池以适应工作负荷的永久性卷声明的大小。 或者，请参阅[配置存储](#config-samples)有关如何执行操作的示例部分编辑使用*mssqlctl*命令。
 
 ## <a name="kubeadm-storage-classes"></a>Kubeadm 存储类
 
@@ -97,7 +97,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
-### <a name="configure-storage-class"></a>配置存储类
+### <a id="config-samples"></a> 配置存储类
 
 下面的示例演示如何修改控制平面的存储类：
 

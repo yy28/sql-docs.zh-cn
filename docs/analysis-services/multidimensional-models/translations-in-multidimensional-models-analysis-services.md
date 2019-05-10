@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f25023f6a0191cb645134d327f40ea84ba64932f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147072"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357314"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多维模型中的翻译 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "50147072"
 4.  右键单击任一字段并选择“浏览数据” 。 你将看到每个成员的英语、西班牙语和法语翻译。  
   
  日期、时间和货币的格式不通过翻译实现。 若要根据客户端的区域设置动态提供区域特定的格式，请使用货币换算向导和 **FormatString** 属性。 有关详细信息，请参阅 [货币换算 (Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md) 和 [FormatString 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
-  
- Analysis Services 教程中的[Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) 将引导你完成创建和测试翻译的所有步骤。  
   
 ## <a name="defining-translations"></a>定义翻译  
   
@@ -108,16 +106,16 @@ ms.locfileid: "50147072"
   
     |指定语言标识符|替代语言标识符|  
     |-----------------------------------|-----------------------------------|  
-    |3076 - 中文（中华人民共和国香港特别行政区）|1028 - 中文（中国台湾）|  
-    |5124 - 中文（中国澳门特别行政区）|1028 - 中文（中国台湾）|  
-    |1028 - 中文（中国台湾）|默认语言|  
+    |3076 - 中文（中华人民共和国香港特别行政区）|1028 - 中文（台湾）|  
+    |5124 - 中文（中国澳门特别行政区）|1028 - 中文（台湾）|  
+    |1028 - 中文（台湾）|默认语言|  
     |4100 - 中文（新加坡）|2052 - 中文（中华人民共和国）|  
     |2074 - 克罗地亚语|默认语言|  
     |3098 - 克罗地亚语（西里尔文）|默认语言|  
   
 -   对于所有其他指定语言标识符， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将提取指定语言标识符的主要语言，并检索 Windows 指示的语言标识符作为主要语言的最佳匹配项。 如果找不到最佳匹配语言标识符的翻译，或者指定的语言标识符是主要语言的最佳匹配项，则将使用默认语言。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 的全球化方案](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [语言和排序规则 (Analysis Services)](../../analysis-services/languages-and-collations-analysis-services.md)  
   
