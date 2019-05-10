@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3fa566c26c95d84544ecd2dbb9f54c815f677e02
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685704"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776086"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>补充课程 - 动态安全性
 
@@ -29,7 +29,7 @@ ms.locfileid: "57685704"
   
 这些任务是此 Adventure Works 表格模型方案所特有的，但并不一定适用于实际的应用场景。 每个任务都包含描述任务目的的附加信息。  
   
-学完本课的预计时间：**30 分钟**  
+估计的时间才能完成本课程中：**30 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 
@@ -150,10 +150,9 @@ AdventureWorksDW 示例数据库中的 DimEmployee 表包含来自 AdventureWork
 9. 有关**DimSalesTerritory**表中，键入以下公式：  
 
     ```  
-    ='Sales Territory'[Sales Territory Id]=LOOKUPVALUE('Employee Security'[Sales Territory Id], 
-      'Employee Security'[Login Id], USERNAME(), 
-      'Employee Security'[Sales Territory Id], 
-      'Sales Territory'[Sales Territory Id]) 
+    ='DimSalesTerritory'[SalesTerritoryKey]=LOOKUPVALUE('EmployeeSecurity'[SalesTerritoryId], 
+      'EmployeeSecurity'[LoginId], USERNAME(), 
+      'EmployeeSecurity'[SalesTerritoryId], 'DimSalesTerritory'[SalesTerritoryKey]) 
     ```
   
     在此公式中，LOOKUPVALUE 函数返回 DimEmployeeSecurity [SalesTerritoryId] 列，其中，EmployeeSecurity [LoginId] 是与当前登录的 Windows 用户名相同，EmployeeSecurity [SalesTerritoryId] 是的所有值与 DimSalesTerritory [SalesTerritoryId] 相同。  

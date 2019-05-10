@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f04ba82fe1352a7b04c03fe5bdcf757564271035
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3583e737644b4555a25ffd74db6f297953fe09f8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790179"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485402"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>更改派生层次结构名称 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52790179"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以更改派生层次结构的名称。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -51,7 +51,7 @@ ms.locfileid: "52790179"
   
 8.  单击 **“保存派生层次结构”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)   
  [创建派生层次结构 (Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [删除派生层次结构 (Master Data Services)](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  

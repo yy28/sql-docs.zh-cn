@@ -1,5 +1,5 @@
 ---
-title: 多维数据集、 分区和维度处理的错误配置 |Microsoft 文档
+title: 多维数据集、 分区和维度处理的错误配置 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57ad330c44f378dd71cad1e02f3a5b3e6c63f38f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025544"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357359"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>多维数据集、 分区和维度处理的错误配置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -142,7 +142,7 @@ ms.locfileid: "34025544"
   
 -   设置 **NullProcessing**=**Error** 可排除具有 null 值的记录。 这会生成要进行记录并针对键错误限制进行计数的 **NullKeyNotAllowed** 错误。 可以在 **“不允许 Null 键”** 上将错误配置属性设置为 **IgnoreError** ，以允许处理继续进行。  
   
- Null 值对于非键字段可能是个问题，因为 MDX 查询根据 Null 值是解释为零值还是空值返回不同结果。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供 Null 值处理选项，使您可以预定义所需的转换行为。 有关详细信息，请参阅 [定义未知成员和 Null 处理属性](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 和 <xref:Microsoft.AnalysisServices.NullProcessing> 。  
+ Null 值对于非键字段可能是个问题，因为 MDX 查询根据 Null 值是解释为零值还是空值返回不同结果。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供 Null 值处理选项，使您可以预定义所需的转换行为。  
   
 #### <a name="set-nullprocessing-property-on-a-dimension-attribute"></a>对维度属性设置 NullProcessing 属性  
   
@@ -174,10 +174,10 @@ ms.locfileid: "34025544"
 ##  <a name="bkmk_next"></a> 下一步  
  决定错误是停止处理还是被忽略。 请记住，忽略的只是错误。 不会忽略导致错误的记录；该记录会被弃用或转换为未知成员。 违反数据完整性规则的记录绝不会添加到数据库中。 默认情况下，处理在出现第一个错误时停止，但是您可以通过提高错误限制来更改此行为。 在多维数据集开发中，放宽错误配置规则可能十分有用，从而允许处理继续进行，以便可以使用数据进行测试。  
   
- 决定是否更改默认 null 值处理行为。 默认情况下，字符串列中的 null 值会作为空字符串进行处理，而数字列中的 null 值会作为零值进行处理。 有关对属性设置 null 值处理的说明，请参阅 [定义未知成员和 Null 处理属性](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 。  
+ 决定是否更改默认 null 值处理行为。 默认情况下，字符串列中的 null 值会作为空字符串进行处理，而数字列中的 null 值会作为零值进行处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [日志属性](../../analysis-services/server-properties/log-properties.md)   
- [定义未知的成员和 Null 处理属性](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [定义未知成员和 Null 处理属性](../multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 401dc7a80db0a1499943802671866ebef0eef901
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777339"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489613"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>创建和发布业务规则 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52777339"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便确保您的主数据的精确性。 创建规则后，必须首先发布它，然后才能将该规则应用于数据。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -80,7 +80,7 @@ ms.locfileid: "52777339"
   
 19. 填写所有必填字段。  
   
-20. 单击 **“保存”**。 此时，系统会在“Then”  网格中新添加一行。  
+20. 单击“保存” 。 此时，系统会在“Then”  网格中新添加一行。  
   
 21. （可选）若要添加“Else”  操作，请完成以下步骤。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "52777339"
   
     4.  填写所有必填字段。  
   
-    5.  单击 **“保存”**。 此时，系统会在“Else”  网格中新添加一行。  
+    5.  单击“保存” 。 此时，系统会在“Else”  网格中新添加一行。  
   
-22. 单击 **“保存”**。 此时，系统会在业务规则网格中新添加一行。  
+22. 单击“保存” 。 此时，系统会在业务规则网格中新添加一行。  
   
 23. 单击“全部发布” 。  
   
@@ -103,16 +103,16 @@ ms.locfileid: "52777339"
 ## <a name="grid-columns"></a>网格列  
  对于你创建的每个业务规则，系统都会在网格中添加一行（其中包含六列）。 下面介绍了这些列。  
   
-|“属性”|描述|  
+|“属性”|Description|  
 |----------|-----------------|  
 |“登录属性”|在你单击“保存”  后，系统会显示下面的图像，指明业务规则正在更新。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果在创建或编辑业务规则时出错，系统会显示下面的图像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |“属性”|业务规则名称。|  
-|描述|业务规则描述。|  
+|Description|业务规则描述。|  
 |业务规则状态|以下业务规则状态之一：未定义规则、有效、已排除、待更改、待排除、待删除。|  
 |已排除|指定是否排除业务规则。|  
 |通知|指定要向其发送电子邮件通知的选定用户或组。|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   通过以下过程之一将业务规则应用到数据：  
   
@@ -120,7 +120,7 @@ ms.locfileid: "52777339"
   
     -   [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置业务规则以发送通知 (Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [更改业务规则名称 (Master Data Services)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [向业务规则添加多个条件 (Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

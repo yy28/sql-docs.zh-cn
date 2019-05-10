@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793198"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480925"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>为 DQS 日志文件配置严重级别
   本主题介绍如何通过使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 为 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) 中的不同活动和模块配置严重级别。 严重级别定义 DQS 中发生的事件的强度。 DQS 事件具有以下严重级别，这些级别按严重程度递减列出：  

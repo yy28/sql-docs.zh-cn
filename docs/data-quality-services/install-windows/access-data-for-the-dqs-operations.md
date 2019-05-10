@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 3481d9f8460182d58e11c0910c1c86bd10563459
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024588"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487567"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>访问 DQS 操作数据
 
@@ -28,7 +28,7 @@ ms.locfileid: "56024588"
   
 -   使用您自己的数据库作为 DQS 操作的源数据，以及导出已处理的数据的目标。 为此，请确保你的数据库与数据质量服务器数据库在同一个 SQL Server 实例中。 否则，该数据库将无法在数据质量客户端中用于 DQS 操作。 此外，为导出匹配结果，必须向你的 Windows 用户帐户授予对 DQS_STAGING_DATA 数据库的访问权限，因为匹配结果分为两个阶段进行导出：首先，匹配结果导出到 DQS_STAGING_DATA 数据库的临时表中，然后移到你的目标数据库的表中。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   您必须已通过运行 DQSInstaller.exe 文件完成了 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 有关详细信息，请参阅 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "56024588"
   
 4.  在 **“登录属性”** 对话框的左侧窗格中，单击 **“用户映射”** 页。  
   
-5.  在右侧窗格中，选中“DQS_STAGING_DATA”数据库的“映射”列下的复选框，然后在“数据库角色成员身份:DQS_STAGING_DATA”窗格中选择以下角色：  
+5.  在右侧窗格中，选中“DQS_STAGING_DATA”数据库的“映射”列下的复选框，然后在“数据库角色成员身份:DQS_STAGING_DATA”窗格中选择以下角色**：  
   
     -   **db_datareader**：从表/视图中读取数据。  
   
@@ -54,10 +54,10 @@ ms.locfileid: "56024588"
   
 6.  在 **“登录属性”** 对话框中，单击 **“确定”** 以应用所做的更改。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  尝试执行 DQS 操作，这些操作访问数据库来作为 DQS 操作的数据源，然后将处理后的数据导出到数据库。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

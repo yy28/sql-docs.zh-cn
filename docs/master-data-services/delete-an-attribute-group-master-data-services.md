@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d9b308459c406555c81a89203fea5de768356a11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 243847e8ac2a1f3cb06a121b9ec42f556accc0e1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759899"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478593"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>删除属性组 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52759899"
   
 -   **注意** 存在属性组时，不属于属性组的属性将不在 **“资源管理器”** 中显示。 不存在属性组时，显示所有属性。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -54,7 +54,7 @@ ms.locfileid: "52759899"
   
 8.  在确认对话框中，单击 **“确定”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
  [创建属性组 (Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
