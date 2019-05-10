@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90189e37b486d712f0a1a93fccc42b101f90bdbb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: c45e7f7122aba245297a4ab6fe74ea978bb2a6ad
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027478"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480443"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -69,13 +69,13 @@ ms.locfileid: "56027478"
   
 -   **建议**:用于 DQS 查找建议的值，这些值的置信度高于“自动建议阈值”，但是低于“自动更正阈值”。 您应该检查这些值，并按需批准或拒绝它们。  
   
--   **新建**：用于 DQS 没有足够信息（建议）的有效值，因此不能映射到任何其他选项卡。此外，此选项卡还包含这样的值：它们的置信度低于 *自动建议阈值* ，但是足以被标记为有效。  
+-   **新建**：有效的值用于 DQS 没有足够信息 （建议），并因此不能映射到任何其他选项卡。此外，此选项卡还包含这样的值：它们的置信度低于 *自动建议阈值* ，但是足以被标记为有效。  
   
--   **无效**：在知识库的域中标记为无效的值或不符合域规则或引用数据要求的值。 此选项卡还包含在交互式清理过程中被用户在任何其他四个选项卡中拒绝的值。  
+-   **无效**：在域中的知识库或符合域规则或引用数据的值被标记为无效的值。 此选项卡还包含在交互式清理过程中被用户在任何其他四个选项卡中拒绝的值。  
   
 -   **更正**：当 DQS 以高于自动更正阈值的置信度找到值的更正时，DQS 在自动化清理过程中更正的值。 此选项卡还包含这样的值：用户在交互式清理期间在 **“更正为”** 列中指定了正确值，然后通过单击任何其他四个选项卡中 **“批准”** 列中的单选按钮批准了它。  
   
--   **更正**：正确的值。 例如，与域值匹配的值。 根据需要，您可以通过拒绝此选项卡中的值，或通过指定 **“更正为”** 列中的替代字词，然后单击 **“接受”** 列中的单选按钮来覆盖 DQS 清理。 此选项卡还包含这样的值：用户在交互式清理期间通过单击 **“新建”** 或 **“无效”** 选项卡中 **“批准”** 列中的单选按钮批准了该值。  
+-   **更正**：未找到正确的值。 例如，与域值匹配的值。 根据需要，您可以通过拒绝此选项卡中的值，或通过指定 **“更正为”** 列中的替代字词，然后单击 **“接受”** 列中的单选按钮来覆盖 DQS 清理。 此选项卡还包含这样的值：用户在交互式清理期间通过单击 **“新建”** 或 **“无效”** 选项卡中 **“批准”** 列中的单选按钮批准了该值。  
   
 > [!NOTE]  
 >  在 **“建议的”**、 **“已更正”** 和 **“正确”** 选项卡中，DQS 针对相应域值在 **“更正为”** 列中显示域的前导值（如果适用）。  
@@ -107,7 +107,7 @@ ms.locfileid: "56027478"
 |说明如何使用引用数据服务中的知识清理数据。|[使用引用数据（外部）知识清理数据](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |说明如何清理复合域。|[清理复合域中的数据](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据质量项目 (DQS)](../data-quality-services/data-quality-projects-dqs.md)   
  [数据匹配](../data-quality-services/data-matching.md)  
   

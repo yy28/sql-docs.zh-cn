@@ -11,15 +11,15 @@ helpviewer_keywords:
 - entities [Master Data Services], deleting
 - deleting entities [Master Data Services]
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3453c6418c2871e697f1eb9de2a1499d4262d226
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 64e8a75df1cfda03d0f90e1debb6fcbab750eaf6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765089"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478213"
 ---
 # <a name="delete-an-entity-master-data-services"></a>删除实体 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52765089"
 > [!NOTE]  
 >  该实体的来自所有版本的成员都将永久删除。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -51,7 +51,7 @@ ms.locfileid: "52765089"
   
 6.  在确认对话框中，单击 **“确定”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)   
  [创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   

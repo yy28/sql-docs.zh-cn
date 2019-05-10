@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e5f87caf233c5b2a0f7bedc50f5ab9b9f6f392f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ef92aa3410ee12fd5edc4ea602e64a6fa06fdc9c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814249"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477221"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 配置参考 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52814249"
 ## <a name="webconfig-elements"></a>Web.Config 元素  
  Web.config 文件除了包含标准的 IIS、.NET Framework、ASP.NET 和 Windows Communication Foundation (WCF) 配置元素外，还包含一个自定义 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 元素 “<masterDataServices\<”。 下表描述了 Web.config 文件中包括的元素。  
   
-|配置元素|描述|  
+|配置元素|Description|  
 |---------------------------|-----------------|  
 |**masterDataServices**|自定义元素。 将 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务连接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。|  
 |**connectionStrings**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [connectionStrings 元素（ASP.NET 设置架构）](https://go.microsoft.com/fwlink/?LinkId=178347) 。|  
@@ -56,7 +56,7 @@ ms.locfileid: "52814249"
   
 ### <a name="elements-and-attributes"></a>元素和属性  
   
-|项|描述|  
+|项|Description|  
 |----------|-----------------|  
 |**instance**|子元素。 包含指定 Web 服务和数据库连接字符串信息的属性。|  
 |**virtualPath**|属性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序和服务的虚拟路径。 此属性与 IIS ApplicationHost.config 文件中 <site\< 元素下的 <application\< 元素的 path 属性相对应。|  

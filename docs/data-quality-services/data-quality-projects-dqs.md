@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c08c3ccfb637f00fef08b63bf1afc3cae8a0d34
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: e6a58554d045ab907820016c8d51782fa7f02e8e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032238"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480317"
 ---
 # <a name="data-quality-projects-dqs"></a>数据质量项目 (DQS)
 
@@ -42,7 +42,7 @@ ms.locfileid: "56032238"
  有关数据质量项目中的清理活动的详细信息，请参阅 [Data Cleansing](../data-quality-services/data-cleansing.md)。  
   
 ##  <a name="Matching"></a>数据质量项目：匹配活动  
- 匹配数据质量项目支持您基于知识库中的匹配策略执行匹配活动，通过标识精确匹配项和近似匹配项，进而删除重复数据，以防止数据重复。 建议先清除数据，然后再运行匹配。 为此：  
+ 匹配数据质量项目支持您基于知识库中的匹配策略执行匹配活动，通过标识精确匹配项和近似匹配项，进而删除重复数据，以防止数据重复。 建议先清除数据，然后再运行匹配。 为此，请执行以下操作：  
   
 1.  创建数据质量项目，选择 **“清理”** 活动，对源数据完成数据清理活动，然后将其导出到 SQL Server 数据库中的表。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "56032238"
 |描述如何打开、解锁、重命名和删除数据质量项目。|[打开、解锁、重命名和删除数据质量项目](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |描述如何在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中打开 Integration Services 项目。|[在 Data Quality Client 中打开 Integration Services 项目](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

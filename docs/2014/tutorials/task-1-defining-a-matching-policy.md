@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222798"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481317"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>任务 1：定义匹配策略
   在本任务中，您将创建含有一个规则的匹配策略。 该规则具有一个先决条件：**供应商 ID**，这意味着在使用在规则中的其他域之前 Supplier Id 必须匹配。 该规则使用其他两个域：**供应商名称**与**相似性**值设置为**70%** 并**联系人电子邮件**与**相似性**值设置为**30%**。  

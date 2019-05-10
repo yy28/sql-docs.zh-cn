@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62644802"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099961"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**account name**|**sysname**|完全限定的 Windows 帐户名。|  
-|**类型**|**char(8)**|Windows 帐户类型。 有效的值为**用户**或**组**。|  
+|**type**|**char(8)**|Windows 帐户类型。 有效的值为**用户**或**组**。|  
 |**privilege**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问特权。 有效的值为**管理员**，**用户**，或**null**。|  
 |**映射的登录名**|**sysname**|拥有用户特权的用户帐户**映射登录名**显示了映射的登录名的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]尝试前面添加的映射的规则使用的域名与此帐户登录时使用。|  
 |**权限路径**|**sysname**|使帐户得到访问权限的组成员身份。|  
@@ -74,7 +74,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  如果*account_name*并**成员**都指定，则返回组的下一级别成员的列表。 如果*account_name*是本地组列表可包括本地用户、 域用户和组。 如果*account_name*是域帐户，该列表由域用户组成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须连接到域控制器，才能检索组成员身份信息。 如果该服务器无法联系域控制器，则不返回任何信息。  
   
- **xp_logininfo**只从 Active Director 全局组，而非通用组返回信息。  
+ **xp_logininfo**只从 Active Directory 全局组，而非通用组返回信息。  
   
 ## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定服务器角色或成员身份**公共**固定的数据库角色的**主**且拥有 EXECUTE 权限的数据库。  

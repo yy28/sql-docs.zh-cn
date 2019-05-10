@@ -2,26 +2,26 @@
 title: 在 Azure Data Studio 中运行 notebook
 titleSuffix: SQL Server big data clusters
 description: 本文介绍如何在 Azure Data Studio 连接到 SQL Server 2019 大数据群集中运行的 Jupyter 笔记本。
-author: rothja
+author: achatter
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859968"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65462052"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 预览版中使用笔记本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何启动 Azure 数据 Studio 中的笔记本体验以及如何开始创作自己的笔记本。 它还演示如何编写使用不同的内核的笔记本。
+本文介绍了如何启动的最新版本中的笔记本体验[ **Azure Data Studio** ](../azure-data-studio/download.md)以及如何开始创作自己的笔记本。 它还演示如何编写使用不同的内核的笔记本。
 
 ## <a name="connect-to-sql-server"></a>连接到 SQL Server
 
@@ -48,7 +48,7 @@ ms.locfileid: "58859968"
 
 Azure Data Studio 中的 Notebook 安装以本机方式支持 SQL 内核。 如果是 SQL 开发人员并且想要使用笔记本，则这将是你所选择的内核。 
 
-SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 PostgreSQL 开发人员，并且想要连接到 PostgreSQL 服务器，然后下载[ **PostgreSQL 扩展**](../azure-data-studio/postgres-extension.md) Azure Data Studio 扩展应用商店中。
+SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 PostgreSQL 开发人员，并且想要将笔记本连接到 PostgreSQL 服务器，然后下载[ **PostgreSQL 扩展**](../azure-data-studio/postgres-extension.md) Azure Data Studio 扩展应用商店中，然后启动**新的 Notebook**打开 notebook 实例，若要连接到 PostgreSQL 服务器。
 
 ![PostgreSQL 连接](media/notebooks-guidance/sql-kernel-dropdown.png)
 
@@ -73,6 +73,19 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 查询结果
 
 ![查询结果](media/notebooks-guidance/pgsql-cell-results.png)
+
+如果你想要将文本单元格添加到现有笔记本附加到 SQL 内核，请单击 **+ 文本**命令工具栏中。
+
+![Notebook 工具栏](media/notebooks-guidance/notebook-toolbar.png)
+
+单元格更改编辑模式，现在键入 markdown 和你将看到在同一时间的预览
+
+![Markdown 单元格](media/notebooks-guidance/notebook-markdown-cell.png)
+
+文本单元格外单击，则会显示 markdown 文本。
+
+![Markdown 文本](media/notebooks-guidance/notebook-markdown-preview.png)
+
 
 ### <a name="configure-python-for-notebooks"></a>适用于笔记本中配置 Python
 
@@ -119,9 +132,27 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 
 如果从某个其他源中打开笔记本，它将在中打开**非受信任**模式，然后你可以使其**受信任**。
 
+### <a name="run-cells"></a>运行的单元格
+如果你想要在笔记本中运行所有单元格，然后单击**运行的单元格**按钮在工具栏中的。
+
+![Markdown 文本](media/notebooks-guidance/run-cell.png)
+
+
+### <a name="clear-results"></a>清除结果
+
+如果你想要清除在笔记本中，执行的所有单元格的结果，则可以单击**清除结果**按钮在工具栏中的。
+
+![Markdown 文本](media/notebooks-guidance/clear-results.png)
+
 ### <a name="save"></a>保存
 
-您可以保存通过笔记本**Ctrl + S**或单击**文件将保存**，**文件另存为...** 并**文件将保存所有**从文件菜单命令和**文件：保存**在命令面板中输入的命令。
+若要保存笔记本，请执行以下值之一。
+
+- 选择 Ctrl + S
+- 单击**文件** > **保存**
+- 单击**文件** > **另存为...**
+- 单击**文件** > **全部保存** 
+- 在命令面板中，输入**文件：保存** 
 
 ### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark 内核
 

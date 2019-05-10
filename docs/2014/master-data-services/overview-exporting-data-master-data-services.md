@@ -11,15 +11,15 @@ helpviewer_keywords:
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763834"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482843"
 ---
 # <a name="exporting-data-master-data-services"></a>导出数据 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 您可以通过创建订阅视图将  数据导出到订阅系统。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 然后，任何订阅系统都可以在  数据库中查看发布的数据。 有关视图的详细信息，请参阅 [视图](../relational-databases/views/views.md)。  

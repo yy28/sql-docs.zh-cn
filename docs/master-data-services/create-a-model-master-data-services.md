@@ -11,15 +11,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5c55db7072020f715882912b46cac0e9219cbbf9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748829"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477057"
 ---
 # <a name="create-a-model-master-data-services"></a>创建模型 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52748829"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建模型以便包含模型对象。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -60,7 +60,7 @@ ms.locfileid: "52748829"
   
 -   **名称**：模型名称。  
   
--   **说明**：模型描述。  
+-   **说明**：模型说明。  
   
 -   **日志保留天数**：日志可为该模型保留的天数。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "52748829"
   
 -   **更新日期和时间**：上次更新模型的日期和时间。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   [创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [模型 (Master Data Services)](../master-data-services/models-master-data-services.md)   
  [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)   
  [删除模型 (Master Data Services)](../master-data-services/delete-a-model-master-data-services.md)   

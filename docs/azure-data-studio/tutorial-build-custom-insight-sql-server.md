@@ -2,21 +2,21 @@
 title: 教程：生成自定义见解小组件
 titleSuffix: Azure Data Studio
 description: 本教程演示如何生成自定义见解小组件并将其添加到 Azure Data Studio 中的数据库和服务器仪表板。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 4a2aee7f7ca9c61306e0241ff77a87c1c7dae112
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157025"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089733"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>教程：生成自定义见解小组件
 

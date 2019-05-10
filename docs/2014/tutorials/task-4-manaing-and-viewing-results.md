@@ -1,5 +1,5 @@
 ---
-title: 任务 4:管理和查看报表 |Microsoft Docs
+title: 任务 4：管理和查看报表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -7,32 +7,32 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c719b7d4bcd9b792beaa59fdbcf69783d7d3259d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745628"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489456"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>任务 4:管理和查看报表
+# <a name="task-4-manaing-and-viewing-results"></a>任务 4：管理和查看报表
   在该任务中，您查看计算机辅助清理的结果，还对供应商数据执行交互式清理。 请参阅[交互式清理阶段](https://msdn.microsoft.com/library/hh213061.aspx#Interactive)的更多详细信息。  
   
 1.  选择**Contact Email**从域列表的域。  
   
-2.  切换到**无效**右窗格中的选项卡。 请注意，两个电子邮件地址缺少字符的结尾。 这些被认为是无效的要求所有电子邮件地址结尾的域规则的两个电子邮件**@adventure-works.com** (使用的)。 在清理时，DQS 使用此域规则来确定电子邮件是否有效。 此选项卡显示在知识库中被标记为无效的域值或不符合域规则要求的值。 在这种情况下，这些值不符合域规则的要求（电子邮件验证）。  
+2.  切换到**无效**右窗格中的选项卡。 请注意，两个电子邮件地址缺少字符的结尾。 这些被认为是无效的要求所有电子邮件地址结尾的域规则的两个电子邮件 **@adventure-works.com** (使用的)。 在清理时，DQS 使用此域规则来确定电子邮件是否有效。 此选项卡显示在知识库中被标记为无效的域值或不符合域规则要求的值。 在这种情况下，这些值不符合域规则的要求（电子邮件验证）。  
   
-3.  在中**更正为**列中，键入正确的电子邮件地址结尾**@adventure-works.com** (使用的)。  
+3.  在中 **更正为** 列中，键入正确的电子邮件地址结尾 **@adventure-works.com** (使用的)。  
   
      ![从电子邮件验证规则的更正](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "从电子邮件验证规则的更正")  
   
-4.  单击**批准**这两个要批准这两个更改的记录。 当您批准后时，记录将移至**已更正**选项卡。而不是单独批准每个项，可使用一次的所有更改进行都审批**都批准所有字词**工具栏按钮。  
+4.  单击**批准**这两个要批准这两个更改的记录。 当您批准后时，记录将移至 **已更正** 选项卡。而不是单独批准每个项，可使用一次的所有更改进行都审批 **都批准所有字词** 工具栏按钮。  
   
-5.  切换到**新建**右窗格中的选项卡。 此选项卡上的值是 DQS 在知识库中尚未具有足够的信息来确定其是否正确的值。 因此，它无法更改域值，也无法建议对域值所做的更改。  
+5.  切换到 **新建** 右窗格中的选项卡。 此选项卡上的值是 DQS 在知识库中尚未具有足够的信息来确定其是否正确的值。 因此，它无法更改域值，也无法建议对域值所做的更改。  
   
-6.  检查这些值以确认所有电子邮件结尾**@adventure-works.com**然后单击**批准所有字词**工具栏上。 此选项卡中的已批准的值将移到**更正**选项卡。  
+6.  检查这些值以确认所有电子邮件结尾 **@adventure-works.com** 然后单击 **批准所有字词** 工具栏上。 此选项卡中的已批准的值将移到 **更正** 选项卡。  
   
 7.  选择**国家/地区**从域列表的域。  
   

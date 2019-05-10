@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 697a1c06a2d30d5721c122c557f3e41836335b02
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147942"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449949"
 ---
 # <a name="data-mining-query-tools"></a>数据挖掘查询工具
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "50147942"
 |数据挖掘查询转换|使用数据流源所提供的数据，在数据流内执行预测查询。<br /><br /> 任务编辑器提供了预测查询生成器和一个用于手动修改 DMX 查询的文本框。<br /><br /> 转换只能用于创建使用数据流中的数据的查询；即使用 PREDICTION JOIN 语法的查询。 此组件不能用于执行内容查询或其他类型的 DMX 语句。|  
   
 ##  <a name="bkmk_API"></a> 应用程序编程接口  
- 您可以创建自定义应用程序，这些应用程序通过使用多种编程语言，并且与 OLE DB 或 Analysis Services ADOMD 客户端之类的服务器协议相结合，针对数据挖掘模型执行查询。 有关详细信息，请参阅 [数据挖掘编程](../../analysis-services/data-mining-programming.md)。  
+ 您可以创建自定义应用程序，这些应用程序通过使用多种编程语言，并且与 OLE DB 或 Analysis Services ADOMD 客户端之类的服务器协议相结合，针对数据挖掘模型执行查询。 有关详细信息，请参阅 [数据挖掘编程](../../analysis-services/data-mining/data-mining-programming.md)。  
   
  但是，XMLA 构成了与 Analysis Service 服务器进行的所有交互的基础邮件格式。 在某一 XMLA 消息内，根据您是否基于 DMX、内容查询或使用数据挖掘架构行集检索模型元数据的查询发送预测查询，表示查询的方式也将有所不同。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "50147942"
   
 -   若要检索**模型内容**和**模型元数据**，例如群集的数目、在决策树中使用的属性、上次处理模型的日期以及在创建模型时使用的算法参数，可以使用 [Discover 方法 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) 并在 [RequestType 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla) 标头中指定数据挖掘架构行集之一。 若要缩小查询范围，请在 [RestrictionList 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla) 内输入限制条件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)   
  [了解 DMX Select 语句](../../dmx/understanding-the-dmx-select-statement.md)   

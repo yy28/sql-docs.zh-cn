@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1aede5993fea74932e58e682e6efd89dec84671c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8669a087dd2cd4459c4bdb35c7a808d6d7b665d5
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754629"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485380"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>更改业务规则名称 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52754629"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当分配的业务规则名称不能满足您的业务需要时，可以更改此名称。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -51,13 +51,13 @@ ms.locfileid: "52754629"
   
 7.  为业务规则键入新名称。  
   
-8.  单击 **“保存”**。  
+8.  单击“保存” 。  
   
 9. 单击“全部发布” 。  
   
 10. 在确认对话框中，单击 **“确定”**。 “业务规则状态” 列中的值为“有效” 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
   
