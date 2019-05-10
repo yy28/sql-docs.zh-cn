@@ -3,17 +3,17 @@ title: 安装 SQL Server 机器学习服务 （数据库内） 上 Windows 的 S
 description: 在 SQL Server 或 SQL Server 的 Windows 上的 SQL Server 2017 机器学习服务的安装步骤上的 Python 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4cd076ae79db7537235aa2a57fe4992ac0993473
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 088a553b28e968c1241486040de3c628fd6299cc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748669"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097294"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安装 SQL Server 机器学习在 Windows 上的服务
 
@@ -252,6 +252,7 @@ I will inform HeidiSteen  [GeneMi, 2019/01/17]
 * [启用其他网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [启用远程连接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [创建登录名为 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [管理磁盘配额](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)以避免外部脚本正在运行的任务已经用完了磁盘空间
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 

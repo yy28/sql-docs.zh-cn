@@ -1,5 +1,5 @@
 ---
-title: 任务 8:为在 Excel 中的 State 实体添加新值 |Microsoft Docs
+title: 任务 8：为在 Excel 中的 State 实体添加新值 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866489"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489700"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>任务 8:为在 Excel 中的 State 实体添加新值
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>任务 8：在 Excel 中为 State 实体添加新值
   在本任务中，您将在 Excel 中为 State 实体添加值，并且将更改发布到 MDS 服务器。  
   
 1.  添加**工作表**Excel 通过单击底部的新选项卡中。  

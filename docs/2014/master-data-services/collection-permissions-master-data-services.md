@@ -10,15 +10,15 @@ helpviewer_keywords:
 - collections [Master Data Services], permissions
 - permissions [Master Data Services], collections
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f85a8baf6eb40ad6ed268db0eae4b1060469d2f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 47534b08e32f9e8fe585e4ad7fe2e36f6c6e8c8f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925616"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484008"
 ---
 # <a name="collection-permissions-master-data-services"></a>集合权限（主数据服务）
   集合权限应用到实体的所有集合。 不能将权限授予特定集合，权限应用到所有集合。  

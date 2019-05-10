@@ -1,5 +1,5 @@
 ---
-title: 任务 8:添加有条件拆分转换以拆分清理输出 |Microsoft Docs
+title: 任务 8：添加有条件拆分转换以拆分清理输出 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 401768ca9a811e9b9709127be391bb52de778b32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866137"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489674"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>任务 8:添加有条件拆分转换以拆分清理输出
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>任务 8：添加有条件拆分转换以拆分清理输出
   在此转换中，您向数据流添加有条件拆分转换。 有条件拆分转换可以根据数据内容将行路由到不同的输出。 对于本教程中，你使用**记录状态**从 DQS 清理转换的输出列。 在本教程中，您将只向 MDS 服务器上载正确或已更正的记录。 因此，您可以检查**记录状态**是**更正**或**已更正**，和之前上载到 MDS 中合并的记录。  
   
 1.  拖放**有条件拆分转换**从**常见**主题中**SSIS 工具箱**到**数据流**选项卡下**清理供应商数据**。  

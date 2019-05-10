@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5d9f97f58747ecde143a1c2244a68d8bdaf7d91c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: d338d3d5039c6b8c3111dbccf7e49d161435e0cb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769666"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485084"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>用户和组权限功能区域（主数据管理器）
 
@@ -50,7 +50,7 @@ ms.locfileid: "52769666"
   
  [排除主数据管理器安全性方面的故障](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [主数据管理器 Web 应用程序](../master-data-services/master-data-manager-web-application.md)  
   
   

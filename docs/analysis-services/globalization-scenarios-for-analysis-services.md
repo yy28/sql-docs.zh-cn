@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d708a2e3daca372bc336e91886889b79909627a
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659692"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357404"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services 的全球化方案
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "62659692"
 |**功能**|**表格**|**多维**|  
 |[语言和排序规则 (Analysis Services)](../analysis-services/languages-and-collations-analysis-services.md)|从操作系统继承。|继承，但能够改写模型层次结构中主要对象的语言和排序规则。|  
 |翻译支持范围|标题和说明。|可以为对象名、标题、标识符和说明创建翻译，也可以翻译任何 Unicode 语言和脚本。 即使工具和环境使用的是另一种语言仍是如此。 例如，在整个堆栈中使用英语和拉丁语排序规则的开发环境中，你可以在你的模型中包含一个名称中使用了西里尔语字符的对象。|  
-|实现翻译支持|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 进行创建，生成你填充并导回模型中的翻译文件。<br /><br /> 有关详细信息，请参阅[表格模型 (Analysis Services) 中的翻译](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)。|使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 进行创建，为多维数据集、度量值、维度和属性的标题、说明和帐户类型定义翻译。<br /><br /> 有关详细信息，请参阅[多维模型中的翻译 (Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)。 有关如何使用此功能可在[第 9 课：定义透视和翻译](../analysis-services/lesson-9-defining-perspectives-and-translations.md)的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教程。|  
+|实现翻译支持|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 进行创建，生成你填充并导回模型中的翻译文件。<br /><br /> 有关详细信息，请参阅[表格模型 (Analysis Services) 中的翻译](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)。|使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 进行创建，为多维数据集、度量值、维度和属性的标题、说明和帐户类型定义翻译。<br /><br /> 有关详细信息，请参阅[多维模型中的翻译 (Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)。 |  
 |货币换算|不可用。|货币换算通过专用 MDX 脚本进行，这些脚本可以转换包含货币数据的度量值。 你可以使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的商业智能向导生成一个 MDX 脚本，它使用来自维度、属性和度量值组的组合数据与元数据来转换包含货币数据的度量值。 请参阅[货币换算 (Analysis Services)](../analysis-services/currency-conversions-analysis-services.md)。|  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,5 +1,5 @@
 ---
-title: sp_OASetProperty (TRANSACT-SQL) |Microsoft Docs
+title: sp_OASetProperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b57c4dfe7a0b798801968acb8afa7b5a2b0341de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2d3cc319a99c9e1b157e5b6bc06cabea2dd19a7
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747025"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450064"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,8 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
  有关 HRESULT 返回代码的详细信息，请参阅[OLE 自动化返回代码和错误信息](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
-## <a name="permissions"></a>Permissions  
- 要求具有 **sysadmin** 固定服务器角色的成员身份。  
+## <a name="permissions"></a>权限  
+ 要求的成员身份**sysadmin**固定服务器角色或直接在此存储过程的执行权限。 `Ole Automation Procedures` 必须配置**启用**若要使用相关的 OLE 自动化到任何系统过程。  
   
 ## <a name="examples"></a>示例  
  下面的示例设置`HostName`属性 (先前创建的**SQLServer**对象) 为新值。  
