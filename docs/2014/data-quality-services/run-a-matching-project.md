@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c17f478c8c7735aca0100a2fd99d6315d923bad
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792335"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481086"
 ---
 # <a name="run-a-matching-project"></a>运行匹配项目
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中执行数据匹配。 该匹配过程基于匹配策略中的匹配规则标识匹配记录的群集，基于存活规则将每个群集中的一个记录指定为存活，并且导出结果。 DQS 还在计算机辅助过程中执行匹配过程（也称作消除重复），但您以交互方式创建匹配规则，并且从若干选择中选择存活规则，以便控制匹配过程。  

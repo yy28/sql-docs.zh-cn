@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 66e545b5c02ad513724f44b1e6ed22ab94625b8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 87e33ff166f07c10ee8b0b32eac5590f486e70c1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926292"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483917"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>为事务添加批注 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，为保留历史记录的目的而希望提供有关事务的支持详细信息时，可以为事务添加批注。  

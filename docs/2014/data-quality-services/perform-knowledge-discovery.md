@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cc2eac8564c08831527d71ee5942c37b618aedcf
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792315"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481299"
 ---
 # <a name="perform-knowledge-discovery"></a>执行知识发现
   本主题描述如何通过知识发现生成知识库。 在发现过程中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 将通过计算机辅助进程对示例数据源中的数据进行分析，并且将获取的知识添加到知识库中。 可以在知识发现活动的 **“管理域值”** 步骤中或在域管理活动中修改和增强此知识。  

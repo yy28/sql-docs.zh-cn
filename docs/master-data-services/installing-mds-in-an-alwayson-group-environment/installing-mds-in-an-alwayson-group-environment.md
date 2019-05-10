@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: ''
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215816"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489606"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
@@ -94,7 +94,7 @@ ms.locfileid: "53215816"
 
 WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一组独立的 Windows Server 实例以及在这些实例上运行的 Microsoft 故障转移群集服务组成。 这些 Windows Server 实例（或有时被称为节点）彼此连接，以实现相互通信，这样就可以进行故障检测。 WSFC 提供故障检测和故障转移功能。 如果群集中的某个节点或服务出现故障，则会检测到该故障，并且另一个节点将自动或手动开始提供托管在故障节点上的服务。 因此，用户仅遇到最小程度的服务中断，服务可用性得以提升。  
 
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>先决条件
 
 所有实例都已安装 Windows Server 操作系统，并且所有更新都已修补。
 
@@ -213,7 +213,7 @@ AG 可增强数据库级别的高可用性。 AG（一组用户数据库）及�
 FCI 可增强实例级别的高可用性。 SQL Server 服务及相关服务均在 WSFC 中注册为资源。 此外，FCI 解决方案需要对称的共享磁盘存储（例如 SAN 或 SMB 文件共享），这些存储必须适用于 WFC 群集中的所有节点。
 
 
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>先决条件
 
 -   在所有节点上安装 SQL Server。 有关详细信息，请参阅[安装 SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server)。
 
@@ -317,9 +317,9 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
 8.  在“指定副本”页上，单击“侦听器”选项卡，执行以下操作。 请参阅图 18。
 
-    A.  单击“创建可用性组侦听器”以设置 MDS 数据库连接的可用性组侦听器。
+    a.  单击“创建可用性组侦听器”以设置 MDS 数据库连接的可用性组侦听器。
 
-    B.  输入“侦听器 DNS 名称”，例如 MDSSQLServer。
+    b.  输入“侦听器 DNS 名称”，例如 MDSSQLServer。
 
     c.  在“端口”文本框中输入默认 SQL 端口 (1433)。
 
@@ -394,7 +394,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
     有关 Master Data Service 的详细信息，请参阅 [Master Data Services](https://docs.microsoft.com/sql/master-data-services/master-data-services-overview-mds)。
 
-## <a name="conclusion"></a>结语
+## <a name="conclusion"></a>结束语
 
 在此白皮书中，我们已了解如何在 SQL Server AlwaysOn 可用性组上设置并配置 Master Data Services 后端数据库。 此配置在 Master Data Services 后端数据库上提供高可用性和灾难恢复。 若要实现此配置，需要安装并配置 Windows Server 故障转移群集、SQL Server AlwaysOn 可用性组和 Master Data Services。
 

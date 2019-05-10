@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c5c7afe44889dd380e9048044a34a94410213f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774922"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481204"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>选项（“查询结果”和“依赖关系服务”页）
   使用此页可为依赖关系服务指定要连接的服务器。 通过依赖关系服务，您可以提取与在不同服务器上存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象之间的依赖关系有关的信息。 通过查看对象依赖关系**对象依赖关系**对话框中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  

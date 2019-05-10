@@ -1,5 +1,5 @@
 ---
-title: 任务 7:将 DQS 清理转换向数据流添加 |Microsoft Docs
+title: 任务 7：将 DQS 清理转换向数据流添加 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866357"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488946"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>任务 7:添加 DQS 清理转换添加到数据流
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>任务 7：将 DQS 清理转换添加到数据流
   在本任务中，您将向数据流添加 DQS 清理转换以使用 DQS 清理输入的供应商数据。 请参阅 **[DQS 清理转换](https://msdn.microsoft.com/library/ee677619.aspx)** 有关转换的详细信息。  
   
 1.  右键单击**DQS 清理**中**数据流**选项卡，然后单击**重命名**。 类型**清理供应商数据**，然后按**ENTER**。  

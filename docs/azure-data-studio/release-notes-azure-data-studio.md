@@ -2,25 +2,40 @@
 title: 发行说明
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 发行说明
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f142602efa4e2c0d7c12b4f5f7634f2a9b668cb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 05/08/2019
+ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143706"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450026"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的发行说明
 
 **[下载并安装最新版本 ！](download.md)**
+
+## <a name="may-2019"></a>2019 年 5
+
+2019 年 5 月 8 日， &nbsp;  /  &nbsp;版本：1.7.0 
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 版本的架构比较扩展 | 架构比较是一项的已知功能在 SQL Server Data Tools (SSDT)，以及其主要用例是比较和可视化之间数据库和.dacpac 文件的差异，并执行操作来使它们相同。 |
+| 移动到输出窗口的任务视图 | 用户现在可以在输出窗口中的任务视图中查看长时间运行任务，例如备份、 还原和架构比较的状态
+| 添加了欢迎页 | &bull; &nbsp; 常见操作的链接等新查询，将新文件中，新的 Notebook <br/>&bull; &nbsp; 文档和 Github 链接 |
+| SQL Notebook 改进 | &bull; &nbsp; Markdown 呈现改进，包括说明和表的更好地支持 <br/>&bull; &nbsp; 工具栏的可用性改进 <br/>&bull; &nbsp; Markdown 链接，了解受信任笔记本不再需要 Cmd/Ctrl + 单击和可直接单击 <br/>&bull; &nbsp; 在关闭笔记本，并减少错误，同时启动多个 notebook 时清理 Jupyter 进程中的改进 <br/>&bull; &nbsp; 在同一个数据库运行 2 个 notebook 时不会发生 SQL 笔记本连接，以便确保错误的改进 <br/>&bull; &nbsp; 自动滚动到当前正在执行的单元格时单击运行单元格按钮从工具栏中的 notebook 的改进 <br/>&bull; &nbsp; 一般的稳定性和性能改进 |
+| 已解决的 bug 和问题。 | 请参阅[Bug 和问题，在 GitHub 上的](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2019"></a>2019 年 4 月
 

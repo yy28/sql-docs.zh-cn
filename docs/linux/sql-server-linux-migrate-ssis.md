@@ -1,7 +1,7 @@
 ---
 title: 提取、 转换和加载数据使用 SSIS 在 Linux 上的 |Microsoft Docs
 description: 本文介绍 SQL Server Integration Services (SSIS) 的 Linux 计算机
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 07072a2c6cc724c26c6ae2f6f7950d199cd57df7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9790835dfa3f81105ac36818ecdda418c5433a84
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697565"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488349"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>提取、 转换和加载使用 SSIS 在 Linux 上的数据
 
@@ -27,7 +27,7 @@ ms.locfileid: "47697565"
 
 有关 SSIS 的功能的详细信息，请参阅[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 若要在 Linux 计算机上运行 SSIS 包，您首先需要安装 SQL Server Integration Services。 SSIS 不包括在安装 SQL Server 的 Linux 计算机。 有关安装说明，请参阅[安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)。
 
@@ -38,7 +38,7 @@ ms.locfileid: "47697565"
 若要在 Linux 计算机上运行 SSIS 包，请执行以下操作：
 
 1.  将 SSIS 包复制到 Linux 计算机。
-2.  运行以下命令：
+2.  运行下面的命令：
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```

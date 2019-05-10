@@ -1,5 +1,5 @@
 ---
-title: 任务 1:创建知识库和域 |Microsoft Docs
+title: 任务 1：创建知识库和域 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822145"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481246"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>任务 1:创建知识库和域
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>任务 1：创建知识库和域
   在本任务中，您将创建**供应商**知识库，并创建用于清理数据和匹配数据以便删除重复项的域。  
   
 1.  启动**数据质量客户端**。 单击**启动**，依次指向**所有程序**，单击**Microsoft SQL Server 2012**，单击**Data Quality Services**，然后单击**数据质量客户端**。  

@@ -1,5 +1,5 @@
 ---
-title: 任务 6:验证是否已创建基于域的属性，使用主数据管理器 |Microsoft Docs
+title: 任务 6：验证是否已创建基于域的属性，使用主数据管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe3f404d4f41e2977ef389216dcbc9106327266a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866133"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488952"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>任务 6:验证使用主数据管理器创建基于域的属性
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>任务 6：验证基于域的属性是否使用主数据管理器进行创建
   在本任务中，将使用“主数据管理器”验证在 **MDS** 中创建了 **State** 实体并且 **Supplier** 实体的 **State** 属性是依赖 **State** 实体的基于域的属性。  
   
 1.  切换到“主数据管理器”Web 应用程序。  

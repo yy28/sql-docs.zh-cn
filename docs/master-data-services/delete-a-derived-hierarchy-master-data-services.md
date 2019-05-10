@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8918a9c8373f8d711f0400915be97dc6799a5b5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 66671c88d3cf2cec018da1450ce8564853a3e3f1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779599"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487796"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>删除派生层次结构 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52779599"
 > [!NOTE]  
 >  删除派生层次结构对于该层次结构所基于的属性关系没有影响。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -51,7 +51,7 @@ ms.locfileid: "52779599"
   
 6.  在确认对话框中，单击 **“确定”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建派生层次结构 (Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   

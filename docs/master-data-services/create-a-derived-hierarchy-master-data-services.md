@@ -11,15 +11,15 @@ helpviewer_keywords:
 - derived hierarchies, creating
 - creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b02615d498509408bcf783527d6e26fe61e3c2bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 046bebc200c25ee41bd056fae6d478fe0542cca6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767949"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487460"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>创建派生层次结构 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52767949"
 > [!NOTE]  
 >  如果对于某一成员不存在基于域的属性值，则在派生层次结构中将不包括该成员。 若要获取针对所有成员的基于域的属性值，请参阅[要求属性值 (Master Data Services)](../master-data-services/require-attribute-values-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -60,7 +60,7 @@ ms.locfileid: "52767949"
   
 9. 单击 **“上一步”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)   
  [具有显式顶端的派生层次结构 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  

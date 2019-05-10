@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5d081e301045cd78b836bd7e9ab2dec61e1df25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 9a7303d6791c8320bc2c45fc624c396eaee52e98
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678165"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488208"
 ---
 # <a name="data-quality-matching-columns-mds-add-in-for-excel"></a>数据质量匹配列（用于 Excel 的 MDS 外接程序）
 
@@ -26,16 +26,16 @@ ms.locfileid: "47678165"
   
  下表显示匹配数据时显示的列。  
   
-|“属性”|描述|  
+|“属性”|Description|  
 |----------|-----------------|  
 |**CLUSTER_ID**|用于对相似记录进行分组的唯一标识符。 所有相似的行都具有相同的 **CLUSTER_ID**。 如果没有为某一行显示 **CLUSTER_ID** ，则找不到相似的记录。|  
 |**RECORD_ID**|用于标识记录的唯一标识符。 与在 MDS 存储库中存储的代码值相似，它是用于标识记录的值。 每次出现匹配时都将自动生成该值。|  
 |**PIVOT_MARK**|其他记录与其进行比较的任意记录；它不具有得分值。|  
 |**SCORE**|表示组中的记录与透视记录的相似程度。 该得分是由 DQS 确定的。 如果没有显示任何得分，则该记录是其他记录的透视记录，或者找不到匹配项。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于 Excel 的 MDS 外接程序中的数据质量匹配](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
- [匹配相似数据 &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)   
+ [匹配相似数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)   
  [数据匹配](../../data-quality-services/data-matching.md)  
   
   

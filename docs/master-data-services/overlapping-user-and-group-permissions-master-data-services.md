@@ -12,15 +12,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6b337b716905523d78d3e49d60477c7b6f29f72f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 7bf5202eebc890ec549952adfc46f6928e99445b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765319"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489245"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重叠的用户和组权限（主数据服务）
 
@@ -82,7 +82,7 @@ ms.locfileid: "52765319"
   
  结果：用户对这些成员的有效权限是“更新”。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [重叠的模型和成员权限 &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

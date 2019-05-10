@@ -10,12 +10,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4913526270e919e95c2ff6dad73fa4b67693a038
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 2d31736ee4dd68857e3afce678b6dd806701a82b
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473304"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774950"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>部署具有 GPU 支持的大数据群集和运行 TensorFlow
 
@@ -53,11 +53,11 @@ ms.locfileid: "63473304"
 1. 在与 AKS 创建 Kubernetes 群集[az aks 创建](https://docs.microsoft.com/cli/azure/aks)命令。 下面的示例创建名为的 Kubernetes 群集`gpucluster`在`sqlbigdatagroupgpu`资源组。
 
    ```azurecli
-   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
+   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6s_v3 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
    ```
 
    > [!NOTE]
-   > 此群集使用**Standard_NC6** [GPU 优化虚拟机大小](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu)，这是一个专门适用于单个或多个 NVIDIA Gpu 的虚拟机。 有关详细信息，请参阅[计算密集型工作负荷在 Azure Kubernetes 服务 (AKS) 的使用 Gpu](https://docs.microsoft.com/azure/aks/gpu-cluster)。
+   > 此群集使用**Standard_NC6s_v3** [GPU 优化虚拟机大小](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu)，这是一个专门适用于单个或多个 NVIDIA Gpu 的虚拟机。 有关详细信息，请参阅[计算密集型工作负荷在 Azure Kubernetes 服务 (AKS) 的使用 Gpu](https://docs.microsoft.com/azure/aks/gpu-cluster)。
 
 1. 若要配置 kubectl 以连接到 Kubernetes 群集，运行[az aks get-credentials 来获取凭据](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)命令。
 
@@ -69,7 +69,7 @@ ms.locfileid: "63473304"
 
 1. 使用**kubectl**创建名为 Kubernetes 命名空间`gpu-resources`。
 
-   ```
+   ```bash
    kubectl create namespace gpu-resources
    ```
 
@@ -122,69 +122,31 @@ ms.locfileid: "63473304"
 
 1. 现在使用 kubectl apply 命令创建 DaemonSet。 **nvidia 设备插件 ds.yaml**运行以下命令必须为工作目录中：
 
-   ```
+   ```bash
    kubectl apply -f nvidia-device-plugin-ds.yaml
    ```
 
 ## <a name="deploy-the-big-data-cluster"></a>部署大数据群集
 
-若要部署支持 Gpu 的 SQL Server 2019 大数据群集 （预览版），您必须从特定的 docker 注册表和存储库部署。 具体而言，使用不同的值**DOCKER_REGISTRY**， **DOCKER_REPOSITORY**， **DOCKER_USERNAME**， **DOCKER_PASSWORD**，并**DOCKER_EMAIL**。 以下部分提供有关如何设置环境变量的示例。 使用的 Windows 或 Linux 部分取决于平台的客户端用来部署大数据群集。
+若要部署支持 Gpu 的 SQL Server 2019 大数据群集 （预览版），您必须从特定的 docker 注册表和存储库部署。 以下环境变量是不同的 GPU 部署：
 
-### <a name="windows"></a>Windows
+| 环境变量 | ReplTest1 |
+|---|---|
+| **DOCKER_REGISTRY** | `marinchcreus3.azurecr.io` |
+| **DOCKER_REPOSITORY** | `ctp25-8-0-61-gpu` |
+| **DOCKER_USERNAME** | `<your username, gpu-specific credentials provided by Microsoft>` |
+| **DOCKER_PASSWORD** | `<your password, gpu-specific credentials provided by Microsoft>` |
 
-   1. 使用 CMD 窗口 (而不是 PowerShell)，配置以下环境变量。 不要使用引号将值。
+使用**mssqlctl**部署群集中，选择 aks 开发 test.json 配置，并出现提示时自定义值的提供。
 
-      ```cmd
-      SET ACCEPT_EULA=yes
-      SET CLUSTER_PLATFORM=aks
+```bash
+mssqlctl cluster create
+```
 
-      SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-      SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-      SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-      SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+> [!TIP]
+> 大数据群集的默认名称是`mssql-cluster`。
 
-      SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
-      SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_EMAIL=<your email address>
-      SET DOCKER_PRIVATE_REGISTRY=1
-      SET STORAGE_SIZE=10Gi
-      ```
-
-   1. 部署大数据群集：
-
-      ```cmd
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
-
-### <a name="linux"></a>Linux
-
-   1. 初始化以下环境变量。 在 bash 中，可以使用引号将每个值。
-
-      ```bash
-      export ACCEPT_EULA=yes
-      export CLUSTER_PLATFORM="aks"
-
-      export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-      export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-      export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-      export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
-
-      export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
-      export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_EMAIL="<your email address>"
-      export DOCKER_PRIVATE_REGISTRY="1"
-      export STORAGE_SIZE="10Gi"
-      ```
-
-   1. 部署大数据群集：
-
-      ```bash
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
+你还可以通过传递自定义部署配置文件定义你的部署更多。 有关详细信息，请参阅[部署指南](deployment-guidance.md#customconfig)。
 
 ## <a name="run-the-tensorflow-example"></a>运行 TensorFlow 示例
 
@@ -198,7 +160,7 @@ ms.locfileid: "63473304"
 将相应笔记本文件到本地计算机，然后打开并在 Azure Data Studio 使用的 PySpark3 内核中运行它。 除非有特定需要 CUDA 或 TensorFlow 的较旧版本，否则选择 CUDA 9/CUDNN 7/TensorFlow 1.12.0。 有关如何使用大数据群集上笔记本的详细信息，请参阅[如何在 SQL Server 2019 预览版中使用笔记本](notebooks-guidance.md)。
 
 > [!NOTE]
-> 请注意笔记本系统位置中安装软件。 这可能是因为笔记本目前以 CTP 2.4 中的 root 权限运行。
+> 请注意笔记本系统位置中安装软件。 这可能是因为笔记本目前以 CTP 2.5 中的 root 权限运行。
 
 在对于 GPU 安装 NVIDIA GPU 库和 TensorFlow，笔记本列出可用的 GPU 设备。 然后，它们适合，并评估 TensorFlow 模型来识别手写的数字使用 MNIST 数据集。 在检查可用磁盘空间后, 它们下载并运行从 CIFAR 10 图像分类示例[ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git)。 通过在群集具有不同的 Gpu 上运行 CIFAR 10 示例，可以观察到的速度增长提供 GPU 可用在 Azure 中的每个生成。
 
@@ -206,7 +168,7 @@ ms.locfileid: "63473304"
 
 若要删除的大数据群集，请使用以下命令：
 
-```
+```bash
 mssqlctl cluster delete --name gpubigdatacluster
 ```
 

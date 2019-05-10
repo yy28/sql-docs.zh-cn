@@ -11,15 +11,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
 - attributes [Master Data Services], requiring values
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3daebd23c88fe1865755fe4a24a672377fe077c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ae1eb0a03e7387c7985a4b05f9f0fba562d03d67
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765489"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485978"
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求属性值 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52765489"
 > [!NOTE]  
 >  缺少基于域的属性值的成员不显示在基于那些关系的派生层次结构中。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -61,15 +61,15 @@ ms.locfileid: "52765489"
   
 11. 从  “属性”下拉列表中选择一个属性。  
   
-12. 单击 **“保存”**。 此时，系统会在“Then”  网格中新添加一行。  
+12. 单击“保存” 。 此时，系统会在“Then”  网格中新添加一行。  
   
-13. 单击 **“保存”**。  
+13. 单击“保存” 。  
   
 14. 单击“全部发布” 。  
   
 15. 在确认对话框中，单击 **“确定”**。 “业务规则状态”  列中的值为“有效” 。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   通过以下过程之一将业务规则应用到数据：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52765489"
   
     -   [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   

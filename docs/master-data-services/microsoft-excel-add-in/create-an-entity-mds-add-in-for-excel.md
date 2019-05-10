@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79a35e83a492a45f3683759445eafe815b43e789
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: ea995a4d0f188db2e958b3020da9646a6b069a21
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663735"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488236"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>创建实体（用于 Excel 的 MDS 外接程序）
 
@@ -24,12 +24,12 @@ ms.locfileid: "47663735"
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，管理员可以创建新的实体来存储数据。 当您创建实体时，应加载要存储的数据的至少一个抽样。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../../master-data-services/administrators-master-data-services.md)。  
   
 -   您必须具有要在其中创建实体的现有模型。 有关详细信息，请参阅[创建模型 (Master Data Services)](../../master-data-services/create-a-model-master-data-services.md)。  
   
@@ -73,13 +73,13 @@ ms.locfileid: "47663735"
   
 12. 单击“确定” 。 在已成功创建该实体后，将显示一个新的标题行，单元将突出显示，并且工作表名称将更新以匹配该实体名称。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   若要查看发生的错误，请在 **“发布并验证”** 组中单击 **“显示状态”**。 将显示 ValidationStatus 和 InputStatus 列。 有关详细信息，请参阅[验证数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
   
 -   确认属性以您期望的数据类型创建。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建基于域的属性（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   
