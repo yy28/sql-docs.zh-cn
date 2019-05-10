@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 772c32ade01fc80a867da1cbc88dc4f7a3762e79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 87578321618f87f1505c3d9163af1a9c8dedfd14
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779870"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488044"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>临时存储过程 (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "52779870"
 ## <a name="staging-process-stored-procedure-parameters"></a>临时过程存储过程参数  
  下表列出了这些存储过程的参数。  
   
-|参数|描述|  
+|参数|Description|  
 |---------------|-----------------|  
 |**VersionName**<br /><br /> Required|版本的名称。 这可能区分大小写，也可能不区分，具体取决于您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 排序规则设置。|  
 |**LogFlag**<br /><br /> Required|确定在临时过程中是否记录事务。 可能的值有：<br /><br /> **0**：不记录事务。<br /><br /> **1**：记录事务。<br /><br /> <br /><br /> 有关事务的详细信息，请参阅[事务 (Master Data Services)](../master-data-services/transactions-master-data-services.md)。|  
@@ -61,7 +61,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [验证存储过程 (Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [查看暂存过程中出现的错误 (Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
   

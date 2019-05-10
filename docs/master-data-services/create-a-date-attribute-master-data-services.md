@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f7c2dece1ac25d99348080c9c6f338c7db8f50c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 9179b2f016fe2d720da1b82078c03f0e7cb3e67a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753449"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487386"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>创建日期属性 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52753449"
 > [!NOTE]  
 >  该属性称为 DateTime，但不支持时间值。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -71,7 +71,7 @@ ms.locfileid: "52753449"
   
 12. 根据需要，选择 **“启用更改跟踪”** 可以跟踪对属性组的更改。 有关详细信息，请参阅[向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-13. 单击 **“保存”**。  
+13. 单击“保存” 。  
   
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>显示日期时间值的时间部分  
  若要使用户界面显示日期时间值的时间部分，您必须为该属性选择一个适当的输入掩码。 对于日期时间属性没有内置的此类掩码，但您可以添加一个新掩码以便显示时间。 为此，在存储内置掩码的 MDS 数据库的 mdm.tblList 表中添加一行。 此行应具有以下各值：  
@@ -90,7 +90,7 @@ ms.locfileid: "52753449"
   
  输入掩码是一个自定义 .NET DateTime 格式字符串。 有关详细信息，请参阅 [自定义日期和时间格式字符串](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [更改属性名称和数据类型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [创建基于域的属性 (Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

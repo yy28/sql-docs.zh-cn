@@ -44,11 +44,11 @@ ms.locfileid: "63241260"
 |**\<xsd:simpleType>** 值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对带有除 `xs:time` 和 `xs:dateTime` 以外的秒部分的简单类型仅支持毫秒精度，对 `xs:time` 和 `xs:dateTime` 则支持 100 纳秒精度。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对所有已识别的 XSD 简单类型枚举具有限制。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持在 **\<xsd:simpleType>** 声明中使用“NaN”值。<br /><br /> 有关详细信息，请参阅[&lt;xsd:simpleType&gt; 声明的值](values-for-xsd-simpletype-declarations.md)一起使用。|  
 |**xsi:schemaLocation** 和 **xsi:noNamespaceSchemaLocation**|如果在插入到 `xml` 数据类型的列或变量的 XML 实例数据中存在这些属性，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将忽略这些属性。|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持从 **xs:QName** 派生的使用 XML 架构限制元素的类型。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持将 **xs:QName** 作为成员元素的联合类型。<br /><br /> 有关详细信息，请参阅 [The xs:QName Type](the-xs-qname-type.md)。|  
-|将成员添加到现有替换组|无法将成员添加到 XML 架构集合中的现有替换组。 XML 架构中的替换组有以下限制：头元素和所有其成员元素必须在相同的 {CREATE | ALTER} XML SCHEMA COLLECTION 语句中定义。|  
+|将成员添加到现有替换组|无法将成员添加到 XML 架构集合中的现有替换组。 XML 架构中的替换组有以下限制：头元素和所有其成员元素必须在相同的 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 语句中定义。|  
 |规范格式和模式限制|值的规范表示形式不能违反其类型的模式限制。 有关详细信息，请参阅 [Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md)。|  
 |枚举方面|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持包含以下类型的 XML 架构：具有模式方面或违反这些方面的枚举的类型。|  
 |方面长度|**长度**， **minLength**，并**maxLength**方面存储为`long`类型。 此类型为 32 位类型。 因此，这些值可接受值的范围是 2<sup>^</sup>31。|  
-|ID 属性|每个 XML 架构组件可在其上具有 ID 属性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对 **ID** 类型的 **\<xsd:attribute>** 声明强制唯一性，但不存储这些值。 唯一性的强制的作用范围是 {CREATE | ALTER} XML SCHEMA COLLECTION 语句。|  
+|ID 属性|每个 XML 架构组件可在其上具有 ID 属性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对 **ID** 类型的 **\<xsd:attribute>** 声明强制唯一性，但不存储这些值。 唯一性的强制的作用范围是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 语句。|  
 |ID 类型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持类型为 **xs:ID**、 **xs:IDREF**或 **xs:IDREFS**的元素。 架构不会声明这种类型的元素或者从这种类型的限制或扩展派生的元素。|  
 |本地命名空间|必须为 **\<xsd:any>** 元素显式指定本地命名空间。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝使用空字符串 ("") 作为命名空间属性的值的架构。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而是要求显式使用“##local”以指示作为通配符实例的未限定元素或属性。|  
 |混合类型和简单内容|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持将混合类型限制为简单内容。 有关详细信息，请参阅 [Mixed Type and Simple Content](mixed-type-and-simple-content.md)。|  
