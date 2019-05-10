@@ -1,5 +1,5 @@
 ---
-title: 任务 6:导入值从 Cleanse Supplier List 项目 |Microsoft Docs
+title: 任务 6：导入值从 Cleanse Supplier List 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0780636d3bcaecfe0519192bd450bb538d78bbf9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866767"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489093"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>任务 6:导入值从 Cleanse Supplier List 项目
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>任务 6：从 Cleanse Supplier List 项目导入值
   在该任务中，您将导入在清理过程中收集的数据质量知识。 请参阅[清理项目值导入到域](https://msdn.microsoft.com/library/hh479581.aspx)主题的更多详细信息。 您还将知识库导出到 DQS 文件发布已更新前**供应商**知识库。  
   
 1.  在主页面中的**DQS 客户端**，单击**右箭头**旁边**供应商**下**最近的知识库**单击**域管理**。  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ac666af5ed24d526953dd8aa57c76871d2064f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 01e00d353f3585f7fd2568d5b8906e202263c212
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414484"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103304"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>示例  
   
-###  <a name="HowToTopPhrases"></a> 示例 1:查找特定文档中的最重要关键短语  
+###  <a name="HowToTopPhrases"></a> 示例 1：查找特定文档中的最重要关键短语  
  以下示例从通过 @DocumentId 变量指定的文档中检索前 10 个关键短语，该变量位于 AdventureWorks 示例数据库的 Production.Document 表的 Document 列中。 @DocumentId 变量表示全文检索的键列的一个值。 **SEMANTICKEYPHRASETABLE** 函数使用索引查找替代表扫描高效检索这些结果。 此示例假定列已配置为进行全文和语义索引。  
   
 ```sql  
@@ -107,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a> 示例 2:查找包含特定关键短语的最相关文档  
+###  <a name="HowToTopDocuments"></a> 示例 2：查找包含特定关键短语的最相关文档  
  以下示例从 AdventureWorks 示例数据库的 Production.Document 表的 Document 列中检索包含关键短语“Bracket”的前 25 个文档。 此示例假定列已配置为进行全文和语义索引。  
   
 ```sql  

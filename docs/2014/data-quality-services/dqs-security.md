@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ff745dfbbae04132e8ea7f3565eee804e9de0e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ae5ff9bf9fe78ca7230865c6f3df5f2b1333f005
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755205"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480848"
 ---
 # <a name="dqs-security"></a>DQS 安全性
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 安全基础结构基于 SQL Server 安全基础结构。 数据库管理员通过将用户与 DQS 角色相关联，向用户授予一组权限。 这样，可以确定用户可访问的 DQS 资源以及允许用户执行的功能活动。  

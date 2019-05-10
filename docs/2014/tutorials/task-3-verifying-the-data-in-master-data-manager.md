@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 230c8bbeb2736a3f9810a65dd445013d22e41f03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 21d43023fd12d6e417268d115ce3f44d2364c2b1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249917"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489217"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>任务 3：在主数据管理器中验证数据
   在本任务中，您验证**供应商**上创建实体**MDS**使用**主数据管理器 Web 应用程序**。  

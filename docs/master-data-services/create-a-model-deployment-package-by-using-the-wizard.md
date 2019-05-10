@@ -12,15 +12,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating a deployment package
 - creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d8511565ebaa757fb10d9f4b16ea2c973c3c94d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 21303e8b4fbf6f1d03fa2487a31457355febc2a7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754389"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487431"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用向导创建模型部署包
 
@@ -28,7 +28,7 @@ ms.locfileid: "52754389"
 
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署向导可创建只包含模型对象的包。 如果需要在包中包含数据，请参阅 [使用 MDSModelDeploy 创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，您必须有权访问 **“系统管理”** 功能区域。  
@@ -55,11 +55,11 @@ ms.locfileid: "52754389"
   
 8.  单击 **“关闭”** 关闭该向导。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   [使用向导部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 91e6ab46cb0171f3e0c16deb5a494ed1f644a660
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766129"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488019"
 ---
 # <a name="staging-process-errors-master-data-services"></a>临时过程错误 (Master Data Services)
 
@@ -46,7 +46,7 @@ ms.locfileid: "52766129"
 |210047|该成员不能为“未使用”节点的同级。|**RelationshipType** = **2** （同级）并且 **ParentCode** 或 **ChildCode** 为 **Unused**时出现这种情况。 成员只能“未使用”节点的子级。|关系|  
 |210048|**ParentCode** 和 **ChildCode** 不能相同。|**ParentCode** 值与 **ChildCode** 值相同。 这些值必须不同。|关系|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查看暂存过程中出现的错误 (Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

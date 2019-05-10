@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ee0818babb7fb973aed7e61c5efc4b42600af5a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 5153aebb1598a3cba9ff860654e2dae9ae7f33d8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031718"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487316"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
 
@@ -114,7 +114,7 @@ ms.locfileid: "56031718"
   
 -   仅当知识库处于工作状态且知识库由正在执行导入的用户锁定，才可从项目中导入值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据清理](../data-quality-services/data-cleansing.md)   
  [DQS 清理转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

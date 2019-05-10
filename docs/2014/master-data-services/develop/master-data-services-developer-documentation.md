@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b204fe10d94cc875f1967aa50d8531826cd53f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f87f812ad9f4f12f5f78828e88c220e3dcf494d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765430"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483029"
 ---
 # <a name="developer39s-guide-master-data-services"></a>开发人员&#39;s 指南 (Master Data Services)
   查找有关如何编写用于自定义您和您的用户如何与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 交互的代码的信息。 了解如何操作：  

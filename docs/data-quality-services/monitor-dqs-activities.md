@@ -13,15 +13,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a9bc3aa9f703cc53b50bc499f44ffc6b7971dcfd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 308001ec4e6e903eadfcf203b6673e154de8faf7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020399"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489190"
 ---
 # <a name="monitor-dqs-activities"></a>监视 DQS 活动
 
@@ -129,7 +129,7 @@ ms.locfileid: "56020399"
     -   **探查器**：显示当前活动和历史活动的探查信息。 对于当前活动，它包含部分但一致的信息。 在您将相应的活动详细信息导出到某一 Excel 文件时，活动的事件探查信息将导出到该 Excel 文件。 导出的 Excel 文件的“事件探查器 - 源”和“事件探查器 - 字段”工作表中提供这些信息。  
   
 ##  <a name="Export"></a> 导出 DQS 活动详细信息  
- 您可以将监视屏幕中某一活动的活动属性、活动进程和事件探查信息导出到 Excel 文件中。 为此：  
+ 您可以将监视屏幕中某一活动的活动属性、活动进程和事件探查信息导出到 Excel 文件中。 为此，请执行以下操作：  
   
 1.  在活动网格（位于上部窗格中）中选择某一活动。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "56020399"
   
 3.  系统会提示您指定要保存的 Excel 文件的名称和位置。 导出的 Excel 文件包含以下工作表：  
   
-    |工作表名称|描述|  
+    |工作表名称|Description|  
     |----------------|-----------------|  
     |活动|包含与活动网格中的活动有关的信息（列）。|  
     |进程|包含与 **“活动步骤”** 选项卡中活动的进程有关的信息（列）。|  

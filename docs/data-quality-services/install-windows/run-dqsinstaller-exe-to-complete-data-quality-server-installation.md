@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: f16d39d738149d10a58dde8c01d8b447393ef9c6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013418"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487533"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>运行 DQSInstaller.exe 以便完成数据质量服务器安装
 
@@ -56,7 +56,7 @@ ms.locfileid: "56013418"
 3.  系统将提示您为数据库主密钥键入密码。 该数据库密钥是加密引用数据服务提供程序密钥所必需的，当您以后在 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中设置引用数据提供程序时，这些密钥将存储于 DQS_MAIN 数据库中。  
   
     > [!IMPORTANT]  
-    >  该密钥的长度必须至少为 8 个字符，并且必须包含以下四类字符中的三类：大写英文字母 (A, B, C,…Z)、英文小写字母 (a, b, c,… z)，数字 (0, 1, 2,...9)，和非字母数字或特殊字符 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/)。 例如： P@ssword。 如果当前密码与这些要求不匹配，安装程序将提示您输入其他密码。  
+    >  密码必须至少为 8 个字符之间，并且必须包含三个以下四个类别的字符：大写英文字母 (A, B, C,…Z)、英文小写字母 (a, b, c,… z)，数字 (0, 1, 2,...9)，和非字母数字或特殊字符 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/)。 例如： P@ssword。 如果当前密码与这些要求不匹配，安装程序将提示您输入其他密码。  
   
 4.  提供一个密码，确认该密码，然后按下 ENTER 键以便继续安装。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "56013418"
 ##  <a name="CommandPrompt"></a> 从命令提示符运行 DQSInstaller.exe  
  您可以从命令提示符处使用以下命令行参数运行 DQSInstaller.exe：  
   
-|DQSInstaller.exe 参数|描述|示例语法|  
+|DQSInstaller.exe 参数|Description|示例语法|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]时要使用的服务器排序规则。<br /><br /> DQS 仅支持不区分大小写的排序规则。 如果您指定了区分大小写的排序规则，则该安装程序将尝试使用指定排序规则的不区分大小写版本。 如果没有不区分大小写的排序规则，或者 SQL 不支持排序规则，则 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装将失败。<br /><br /> 如果未指定服务器排序规则，则使用默认排序规则 SQL_Latin1_General_CP1_CI_AS。|`dqsinstaller.exe -collation <collation_name>`|  
 |-upgradedlls|跳过重新创建 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA），并且仅更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库中的 DQS 所使用的 SQL 公共语言运行时 (SQLCLR) 程序集。<br /><br /> 有关详细信息，请参阅 [.NET Framework 更新后升级 SQLCLR 程序集](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)|`dqsinstaller.exe -upgradedlls`|  
@@ -93,11 +93,11 @@ ms.locfileid: "56013418"
   
     -   **不使用命令行参数**：键入 `dqsinstaller.exe`，然后按 Enter。  
   
-    -   **使用命令行参数**：键入上表中提到的所需命令，然后按 Enter。  
+    -   **使用命令行参数**：键入所需的命令上，表中所述，然后按 ENTER。  
   
 4.  基于指定的命令执行所需的操作。 如果你刚刚选择的是在不使用任何命令行参数的情况下安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，则其余步骤如上一节的步骤 2-6 中所述， [从开始屏幕、开始菜单或 Windows 资源管理器运行 DQSInstaller.exe](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer)。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   基于工作配置文件向用户授予适当的 DQS 角色。 请参阅 [将 DQS 角色授予用户](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "56013418"
   
 -   确保您可以访问用于 DQS 操作的源数据，并且可以将已处理的数据导出到数据库中的某个表。 请参阅 [访问 DQS 操作数据](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [.NET Framework 更新后升级 SQLCLR 程序集](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  

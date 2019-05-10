@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 597012bc5f008402ade7bd3d18888a3321ba6a9a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: ecdbff5b071ae82fe8bd8322c1ef9d46f153b0cc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398110"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488908"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>更改属性类型（用于 Excel 的 MDS 外接程序）
 
@@ -29,7 +29,7 @@ ms.locfileid: "52398110"
 > [!NOTE]  
 >  不能更新“名称”或“代码”列的类型或长度。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
@@ -59,7 +59,7 @@ ms.locfileid: "52398110"
   
 -   生成包含之前值的带有后缀“_old”的属性的副本。 这称为弃用的属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性 (Master Data Services)](../../master-data-services/attributes-master-data-services.md)   
  [生成模型（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 230553acbe808f8ddd70b18660643c19008ce3dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 26b3bedcd92729f2573cf82f944258f77faf14b2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807315"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488934"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>应用业务规则（用于 Excel 的 MDS 外接程序）
 
@@ -27,7 +27,7 @@ ms.locfileid: "47807315"
 > [!NOTE]  
 >  发布数据时会自动验证数据。 有关详细信息，请参阅[验证 (Master Data Services)](../../master-data-services/validation-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“资源管理器”** 功能区域。  
@@ -43,7 +43,7 @@ ms.locfileid: "47807315"
   
 2.  根据业务规则对数据进行验证后，将显示两个状态列。 如果不自动显示这些列，请在 **“发布并验证”** 组中，单击 **“显示状态”** 以查看这些列。  
   
-## <a name="see-also"></a>另请参阅  
- [概述：从 Excel 导入数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>请参阅  
+ [概述：从 Excel 导入数据&#40;MDS add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

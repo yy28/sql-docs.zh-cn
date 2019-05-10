@@ -13,15 +13,15 @@ helpviewer_keywords:
 - versions [Master Data Services], validating
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b98ef0c4d85385ab683590d128b427636a23331d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: bfa4d13e82bd82bd08d2d3338e51feb0382ca094
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822161"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484973"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>针对业务规则验证版本 (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "52822161"
 > [!NOTE]  
 >  所有成员必须通过验证后，才能提交版本。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
@@ -60,11 +60,11 @@ ms.locfileid: "52822161"
     > [!NOTE]  
     >  一旦不再显示进度指示器，则表明该版本已完成验证。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [验证状态 (Master Data Services)](../master-data-services/validation-statuses-master-data-services.md)   
  [验证存储过程 (Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)   

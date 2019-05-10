@@ -12,15 +12,15 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07ba6990049c5ad3bff2e93b06aac0023dedbfe8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767389"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481349"
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以创建模型中主数据的多个版本。 在验证数据时可以锁定版本，并在验证数据之后提交。 提交的版本组成可审核的更改记录。 创建的每个版本包含模型的所有成员、属性值、层次结构成员、层次结构关系和集合。  

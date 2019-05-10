@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.kb.selectkb.f1
 - sql12.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2edab11fc05f7fec3af8d2fcbff48f4f44a2e8e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2402a69f428fe0c9ba2359f100e2baf16e1a1d04
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793122"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480999"
 ---
 # <a name="create-a-knowledge-base"></a>创建知识库
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建知识库，以及如何准备知识库以用于域管理、知识发现或添加匹配策略。  

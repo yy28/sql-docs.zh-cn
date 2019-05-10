@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d65dee84a2636508af997a4aac2c851e7bd9e72
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 53e92a9e6af2111fabb911b81eede5473341b2b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017198"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480248"
 ---
 # <a name="data-quality-services"></a>“数据库引擎服务”
 
@@ -47,7 +47,7 @@ ms.locfileid: "56017198"
   
  ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 安全性](../data-quality-services/dqs-security.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Data Quality Services 简介](../data-quality-services/introduction-to-data-quality-services.md)   
  [Data Quality Services 概念](../data-quality-services/data-quality-services-concepts.md)   
  [DQS 资源](https://technet.microsoft.com/sqlserver/hh780961)   

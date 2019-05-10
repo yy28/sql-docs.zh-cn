@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797129"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488062"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>显示派生层次结构中的多对多关系 (Master Data Services)
 
@@ -103,7 +103,7 @@ ms.locfileid: "52797129"
 ## <a name="collections"></a>集合  
  已弃用集合和显式层次结构。 转换存储过程 (udpConvertCollectionAndConsolidatedMembersToLeaf) 可将集合成员转换为叶成员，并创建多对多派生层次结构以捕获集合成员信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

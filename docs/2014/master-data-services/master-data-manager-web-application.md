@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20783b06559eab97cec56b527c5c8ab0f13518e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c8777250946ad689c324314ecbbdff7bf9dcc9b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923878"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482907"
 ---
 # <a name="master-data-manager-web-application"></a>主数据管理器 Web 应用程序
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序主要由管理员用于执行管理任务。 例如，只有管理员才能创建模型、业务规则或数据版本。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  

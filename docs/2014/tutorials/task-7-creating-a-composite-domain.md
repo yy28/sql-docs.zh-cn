@@ -1,5 +1,5 @@
 ---
-title: 任务 7:创建复合域 |Microsoft Docs
+title: 任务 7：创建复合域 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866272"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488967"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>任务 7:创建复合域
+# <a name="task-7-creating-a-composite-domain"></a>任务 7：创建复合域
   在此任务中，创建复合域**地址验证**，其包含**Address Line**，**城市**，**状态**，和**Zip**域。 通过复合域，您可以定义在一个规则中涉及多个域的跨域规则。 复合域还有其他一些好处，例如能够将一个字段值分析到多个域中。  例如，可以将“全名”字段的值分析到单独的“名字”、“中间名”和“姓氏”域中。 在本教程中，您将只定义一个跨域规则。 请参阅[管理复合域](https://msdn.microsoft.com/library/hh510399.aspx)的更多详细信息。  
   
 1.  在左窗格中，单击**创建复合域**工具栏上的按钮。  

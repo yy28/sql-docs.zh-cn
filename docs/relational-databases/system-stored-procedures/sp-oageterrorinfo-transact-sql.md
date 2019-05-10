@@ -1,5 +1,5 @@
 ---
-title: sp_OAGetErrorInfo (TRANSACT-SQL) |Microsoft Docs
+title: sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589121"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450084"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**错误**|**binary(4)**|错误号的二进制表示形式。|  
 |**数据源**|**nvarchar(nn)**|错误的源。|  
 |**说明**|**nvarchar(nn)**|错误的说明。|  
-|**帮助文件**|**nvarchar(nn)**|错误源的帮助文件。|  
+|**Helpfile**|**nvarchar(nn)**|错误源的帮助文件。|  
 |**HelpID**|**int**|错误源帮助文件中的帮助上下文 ID。|  
   
 ## <a name="remarks"></a>备注  
@@ -91,12 +91,12 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**服务器执行失败 (0x80080005)**|指定的 OLE 对象已注册为本地 OLE 服务器（.exe 文件），但无法找到或启动该 .exe 文件。|  
 |**无法找到指定的模块 (0x8007007e)**|指定的 OLE 对象已注册为进程内 OLE 服务器（.dll 文件），但无法找到或半截该 .dll 文件。|  
 |**类型不匹配 (0x80020005)**|用于存储返回的属性值或者方法返回值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部变量的数据类型与属性或方法返回值的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 数据类型不匹配。 或者，要求属性或方法返回值，但该属性或方法未返回值。|  
-|**sp_OACreate 的“context”参数的数据类型或值无效。(0x8004275B)**|上下文参数的值应为之一：1、 4 或 5。|  
+|**数据类型或 sp_OACreate 的 'context' 参数的值无效。(0x8004275B)**|上下文参数的值应为之一：1、 4 或 5。|  
   
  有关处理 HRESULT 返回代码的详细信息，请参阅[OLE 自动化返回代码和错误信息](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
 ## <a name="permissions"></a>权限  
- 要求具有 **sysadmin** 固定服务器角色的成员身份。  
+ 要求的成员身份**sysadmin**固定服务器角色或直接在此存储过程的执行权限。 `Ole Automation Procedures` 必须配置**启用**若要使用相关的 OLE 自动化到任何系统过程。  
   
 ## <a name="examples"></a>示例  
  以下示例将显示 OLE 自动化错误信息。  

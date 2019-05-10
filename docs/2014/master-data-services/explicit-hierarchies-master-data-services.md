@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924534"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483006"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>显式层次结构 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，显式层次结构以您指定的任意方式组织一个实体中的成员。 显式层次结构可以是不规则的，并且与派生层次结构不同，该结构不依据基于域的属性关系。  

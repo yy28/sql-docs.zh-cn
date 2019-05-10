@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0432f590af92befa845af819269b1111da28251c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4e79c74851dae2d86b74064799b053d57b1a17db
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860609"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488276"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>配置用于 SQL Server 大数据群集部署的多台计算机上的 Kubernetes
 
@@ -80,7 +80,7 @@ ms.locfileid: "58860609"
 
 ## <a name="configure-the-kubernetes-master"></a>将 Kubernetes 主机配置
 
-每台计算机上运行上述命令后, 选择的一台计算机为 Kubernetes 母版。 然后有趣该计算机上的以下命令。
+每台计算机上运行上述命令后, 选择的一台计算机为 Kubernetes 母版。 然后该计算机上运行以下命令。
 
 1. 首先，使用以下命令在当前目录中创建一个 rbac.yaml 文件。 
 

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65de28bcf880fab6dc0546c5ed4c315978ad39f4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763268"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478795"
 ---
 # <a name="staging-process-errors-master-data-services"></a>临时过程错误 (Master Data Services)
   当临时过程完成后，临时表中的所有已处理记录在 ErrorCode 列中都对应一个值。 下表中列出了这些值。  

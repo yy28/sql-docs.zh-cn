@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fc622f0f8d4e8d07594fca5ebead56502cfc3526
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 5a4257b8ef9977f3673e961855c7dc48b9abb064
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019558"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487334"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>从 .dqs 文件导入知识库
 
@@ -40,7 +40,7 @@ ms.locfileid: "56019558"
 ####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能从 .dqs 数据文件导入知识库。  
   
-##  <a name="Import"></a> 从.dqs 文件导入知识库  
+##  <a name="Import"></a> 从 .dqs 文件导入知识库  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   

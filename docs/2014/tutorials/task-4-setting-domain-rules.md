@@ -1,5 +1,5 @@
 ---
-title: 任务 4:设置域规则 |Microsoft Docs
+title: 任务 4：设置域规则 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8816afcf44bdcb38f6513f61b3b88ce505dedc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753176"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489070"
 ---
-# <a name="task-4-setting-domain-rules"></a>任务 4:设置域规则
-  在此任务中，创建的规则**联系人电子邮件**域，以确认电子邮件地址是否以结尾**@adventure-works.com**。 请参阅[创建域规则](https://msdn.microsoft.com/library/hh510397.aspx)更多详细信息页上的主题。  
+# <a name="task-4-setting-domain-rules"></a>任务 4：设置域规则
+  在此任务中，创建的规则 **联系人电子邮件** 域，以确认电子邮件地址是否以结尾 **@adventure-works.com** 。 请参阅[创建域规则](https://msdn.microsoft.com/library/hh510397.aspx)更多详细信息页上的主题。  
   
-1.  单击**联系人电子邮件**中**域列表**。  
+1.  单击 **联系人电子邮件** 中 **域列表** 。  
   
 2.  切换到**域规则**右窗格中的选项卡。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62753176"
   
 5.  在中**生成规则**窗格中，单击**向下箭头**，然后选择**值结尾**。  
   
-6.  类型**@adventure-works.com**文本框中，然后按**选项卡**。 可以通过单击添加更多条件**向所选子句添加新的条件**中的工具栏按钮**生成规则**窗格。  
+6.  类型 **@adventure-works.com** 文本框中，然后按 **选项卡** 。 可以通过单击添加更多条件 **向所选子句添加新的条件** 中的工具栏按钮 **生成规则** 窗格。  
   
      ![电子邮件验证规则](../../2014/tutorials/media/et-settingdomainrules-02.jpg "电子邮件验证规则")  
   
@@ -44,9 +44,9 @@ ms.locfileid: "62753176"
   
      ![测试域规则对话框](../../2014/tutorials/media/et-settingdomainrules-04.jpg "测试域规则对话框")  
   
-9. 类型**frank7@adventure-works.com** （有效值） 中**联系人电子邮件**列。  
+9. 类型 **frank7@adventure-works.com** （有效值） 中 **联系人电子邮件**列 。  
   
-10. 重复前两个步骤以添加**joe2@adventure-work.com** (不带值无效的)。  
+10. 重复前两个步骤以添加 **joe2@adventure-work.com** (不带值无效的)。  
   
 11. 单击最后一个按钮 (**对所有字词测试域规则**) 在工具栏上，若要测试针对规则的输入的数据。  
   

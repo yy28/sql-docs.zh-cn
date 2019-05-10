@@ -1,7 +1,7 @@
 ---
 title: 计划在 Linux 上使用 cron 的 SSIS 包 |Microsoft Docs
 description: 本文介绍如何安排与 cron 服务在 Linux 上的 SQL Server Integration Services (SSIS) 包。
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bfc30c25d93581ee36f88c075416dbfebf59aea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32734698fffde10594513ad770b2129886e97b01
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753495"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486040"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>计划 SQL Server Integration Services 包在 Linux 上的使用 cron 执行
 
@@ -25,7 +25,7 @@ ms.locfileid: "47753495"
 
 本文提供了示例，演示如何自动执行 SSIS 包的执行。 编写示例是在 Red Hat Enterprise 上运行。 代码是针对其他 Linux 发行版，例如 Ubuntu 类似。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 使用 cron 服务运行作业之前，检查它您的计算机上运行。
 

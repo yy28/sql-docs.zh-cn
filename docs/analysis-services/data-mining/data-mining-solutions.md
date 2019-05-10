@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4668afcd31c7eb97e398772587866636ff155459
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cef68db4bc688aafae6f6c106063ff61fa7ad015
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62670655"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449972"
 ---
 # <a name="data-mining-solutions"></a>数据挖掘解决方案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -82,6 +82,6 @@ ms.locfileid: "62670655"
 |更新和管理数据挖掘解决方案。|链接 TBD|  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘教程 (Analysis Services)](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [数据挖掘教程 (Analysis Services)](../../analysis-services/data-mining/data-mining-tutorials-analysis-services.md)  
   
   
