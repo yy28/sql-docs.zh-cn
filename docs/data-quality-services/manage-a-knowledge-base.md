@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00c70154e06cd5e16b687a7d6a9848216456a26b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 9cfa9f3770c0a9ce5b5ac6ae176a33f92d9b79c9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028078"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488304"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知识库
 
@@ -46,15 +46,15 @@ ms.locfileid: "56028078"
   
     1.  **打开**：单击以在“选择活动”窗格内所选的活动中打开该知识库。  
   
-    2.  **解锁**：如果你是在域管理、知识发现和匹配策略活动的某一步骤中正在使用该知识库的用户，并且关闭了该知识库，则可以取消锁定该知识库。 如果您卸载了该知识库，则其他人士将能够打开并使用该知识库。 如果知识库未处于某一活动状态中，则此命令将不可用。 有关详细信息，请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+    2.  **解锁**：你是否正在使用知识库中的一个步骤的域管理、 知识发现和匹配策略活动，并关闭它的用户，可以取消锁定该知识库。 如果您卸载了该知识库，则其他人士将能够打开并使用该知识库。 如果知识库未处于某一活动状态中，则此命令将不可用。 有关详细信息，请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
-    3.  **放弃工作**：在知识库处于使用状态时单击，如表的“状态”字段中的条目所示。 如果知识库未处于某一活动状态中，则此命令将不可用；并且在知识库被锁定时不可用。 有关详细信息，请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+    3.  **放弃工作**：单击时该知识库处于正被使用，状态表中的状态字段中的条目所示。 如果知识库未处于某一活动状态中，则此命令将不可用；并且在知识库被锁定时不可用。 有关详细信息，请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
-    4.  **重命名**：单击它，可使表的“知识库”字段对于你右键单击的知识库而言可编辑。 更改名称，然后单击该知识库和字段中的其他知识库，以便接受名称更改。  
+    4.  **重命名**：单击此项可使表的知识库字段对于您右键单击的知识库可编辑。 更改名称，然后单击该知识库和字段中的其他知识库，以便接受名称更改。  
   
-    5.  **删除**：单击它，可从 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 上的 DQS_MAIN 数据库中删除该知识库。  
+    5.  **删除**：单击此项可在 DQS_MAIN 数据库中删除该知识库[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
   
-    6.  **属性**：单击它，可显示数据库的属性，这些属性是只读的。  
+    6.  **属性**：单击此项可显示数据库的属性是只读的。  
   
         1.  **源知识库**：此数据库所基于的知识库。 此为可选项。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "56028078"
   
         3.  **已锁定**：如果知识库已锁定，则为 True；否则为 False  
   
-        4.  **包含未发布的内容**：如果知识库包含尚未通过发布保存的内容，则为 True；否则为 False  
+        4.  **包含未发布的内容**：如果知识库包含尚未保存的发布为 False 不的内容，则返回 true  
   
         5.  **锁定方**：关闭了知识库并且锁定它的用户的名称。  
   

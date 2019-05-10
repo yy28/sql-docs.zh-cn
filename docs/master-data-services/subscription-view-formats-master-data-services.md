@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1031a8f30ff65a00dafeff90e5ce0b5efa1155f7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 27d0f3f85117812719a642c947fda71b71c4e32c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766635"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488001"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>订阅视图格式 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52766635"
   
 ## <a name="subscription-view-formats"></a>订阅视图格式  
   
-|“属性”|描述|  
+|“属性”|Description|  
 |----------|-----------------|  
 |**叶成员**|包含叶成员及其关联的属性值。|  
 |**叶成员历史记录**|包含叶成员历史数据及关联的属性值。 视图格式是缓慢更改维度类型 4 样式。|  
@@ -43,7 +43,7 @@ ms.locfileid: "52766635"
 |**派生的父子（派生层次结构视图）**|包含派生层次结构，以父子格式显示。|  
 |**派生级别（派生层次结构视图）**|包含派生层次结构，以级别格式显示。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概述：导出数据 (Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
  [创建订阅视图以导出数据 (Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

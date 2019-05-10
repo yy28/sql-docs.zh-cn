@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e62c50026d391db37beca5844da24eae43f12014
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: feb215c24081d8f7c33e63369a24651b4008595c
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072444"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65356502"
 ---
 # <a name="dax-in-tabular-models"></a>表格模型中的 DAX 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -382,7 +382,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  在前四种情况中，DAX 标记包含无效公式的整个列。 在最后一种情况中，DAX 会灰显该列，以便指示该列处于未处理的状态中。  
   
 ##  <a name="bkmk_addional_resources"></a> 其他资源  
- [表格建模（Adventure Works 教程）](../../analysis-services/tabular-modeling-adventure-works-tutorial.md)提供关于如何创建在计算列、度量值和行筛选器中包含许多计算的表格模型的分步说明。 对于大多数公式，都提供关于该公式的用途的说明。  
+ [表格建模（Adventure Works 教程）](../tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md)提供关于如何创建在计算列、度量值和行筛选器中包含许多计算的表格模型的分步说明。 对于大多数公式，都提供关于该公式的用途的说明。  
   
  [Analysis Services 团队博客](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)提供最新信息、 提示、 新闻和公告。 
   

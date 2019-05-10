@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676897"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106277"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>性能最佳实践和 Linux 上的 SQL Server 配置准则
 
@@ -67,7 +67,7 @@ ms.locfileid: "51676897"
 | CPU 频率调控器 | 性能 | 请参阅**cpupower**命令 |
 | ENERGY_PERF_BIAS | 性能 | 请参阅**x86_energy_perf_policy**命令 |
 | min_perf_pct | 100 | 请参阅 intel p 状态的文档 |
-| C 状态 | 仅 C1 | 请参阅有关如何确保只能 C 状态设置为 C1 的 Linux 或系统文档 |
+| C-States | 仅 C1 | 请参阅有关如何确保只能 C 状态设置为 C1 的 Linux 或系统文档 |
 
 下表提供了建议的磁盘设置：
 

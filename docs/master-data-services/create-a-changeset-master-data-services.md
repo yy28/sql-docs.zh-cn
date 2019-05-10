@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bd8bd63f7fa3bb2d674076ae7780a132a916e7a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 97cc3f748f5d5b94a65eddcbcb54b9d407c7bed6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753579"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484237"
 ---
 # <a name="create-a-changeset-master-data-services"></a>创建变更集 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52753579"
 
   变更集是主数据的挂起更改的集合。 如果实体需要批准更改，则挂起的更改必须保存在变更集中，然后提交以供管理员批准。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   你必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)  
   
@@ -56,10 +56,10 @@ ms.locfileid: "52753579"
   
 6.  若要使用现有变更集，请单击“现有”  并从列表中选择变更集。 只有处于打开或已拒绝状态的变更集才可用。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  [应用并更新变更集 (Master Data Services)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [确认或提交变更 (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
  [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   

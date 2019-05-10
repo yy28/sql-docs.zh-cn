@@ -1,5 +1,5 @@
 ---
-title: 任务 9:配置引用数据服务 |Microsoft Docs
+title: 任务 9：配置引用数据服务 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: adbde32de86da407bdd2655f66d036021e6784f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 08ead4185051ad90f53e904b55e541e9bb2edd2f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866224"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489572"
 ---
-# <a name="task-9-configuring-a-reference-data-service"></a>任务 9:配置引用数据服务
+# <a name="task-9-configuring-a-reference-data-service"></a>任务 9：配置引用数据服务
   在本任务中，您将 DQS 配置为使用 Microsoft Azure 市场上的引用数据服务。 在下一个任务，您将配置**地址验证**域以使用此服务。 在运行时，在清理活动，DQS 将传递的值中的域**地址验证**的域和服务以进行清理。 请参阅[配置 DQS 以使用引用数据](https://msdn.microsoft.com/library/hh213070.aspx)的更多详细信息。  
   
 1.  在主页面中的**DQS 客户端**，在**管理**窗格中，单击**配置**。  

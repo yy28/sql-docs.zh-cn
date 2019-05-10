@@ -49,7 +49,7 @@ LocalDirectory|指定包含待上传数据文件的本地目录。
 Recursively|指定是否以递归方式搜索子目录。
 FileName|指定用于选择具有特定名称模式的文件的名称筛选器。 例如 MySheet*.xls\* 将包含如 MySheet001.xsl 和 MySheetABC.xslx 等文件。
 RowDelimiter|指定标记每一行末尾的字符。
-ColumnDelimiter|指定标记每一列末尾的一个或多个字符。 例如 |（管道）、\t（制表符）、'（单引号），"（双引号）以及 0x5c（反斜杠）。
+ColumnDelimiter|指定标记每一列末尾的一个或多个字符。 例如 &#124;（管道）、\t（制表符）、'（单引号），"（双引号）以及 0x5c（反斜杠）。
 IsFirstRowHeader|指定每个数据文件的第一行是否包含列名称，而非实际数据。
 AzureStorageConnection|指定 Azure 存储连接管理器。
 BlobContainer|指定通过 PolyBase 将本地数据上传并转送到 Azure DW 的目标 blob 容器名称。 如果此容器不存在，则将创建新容器。
@@ -70,7 +70,7 @@ AzureStorageConnection|指定 Azure 存储连接管理器。
 BlobContainer|指定源数据所在的 blob 容器的名称。
 BlobDirectory|指定源数据所在的 blob 目录（虚拟层次结构）。
 RowDelimiter|指定标记每一行末尾的字符。
-ColumnDelimiter|指定标记每一列末尾的一个或多个字符。 例如 |（管道）、\t（制表符）、'（单引号），"（双引号）以及 0x5c（反斜杠）。
+ColumnDelimiter|指定标记每一列末尾的一个或多个字符。 例如 &#124;（管道）、\t（制表符）、'（单引号），"（双引号）以及 0x5c（反斜杠）。
 CompressionType|指定用于源数据的压缩格式。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 连接管理器。
 TableName|指定目标表的名称。 可选择现有的表名称，或通过选择“\<新建表...>”创建一个新表。

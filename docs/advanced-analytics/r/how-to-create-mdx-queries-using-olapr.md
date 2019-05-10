@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 1bee5741d00e4043314c36800cd4fe5cf61aab48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0b9cb6e9b52ff1823a613c7e81f7b026c22948f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503739"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357518"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 创建 MDX 查询
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "62503739"
 
 下面的示例基于 AdventureWorks 数据市场和多维数据集项目，因为该项目是广泛可用，在多个版本中，包括可轻松地将还原到 Analysis Services 的备份文件。 如果没有现有的多维数据集，获取示例多维数据集使用这些选项之一：
 
-+ 创建多维数据集，可在这些示例中的 Analysis Services 教程第 4 课：[创建的 OLAP 多维数据集](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ 创建多维数据集，可在这些示例中的 Analysis Services 教程第 4 课：[创建的 OLAP 多维数据集](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
 
 + 下载为备份，将现有多维数据集并将其还原到的 Analysis Services 实例。 例如，此站点提供了完全处理的多维数据集，以压缩格式：[Adventure Works 多维模型 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 提取文件，并再将其还原为 SSAS 实例。 有关详细信息，请参阅[备份和还原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)，或[Restore-asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
 

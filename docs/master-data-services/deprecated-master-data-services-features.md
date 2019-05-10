@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: cee36fff695390d770a0dc65d3cbb7b321c3de4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: d08fd9bbb91a3783cf176f150fc966d1b44a2fc4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765109"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485286"
 ---
 # <a name="deprecated-master-data-services-features"></a>弃用的 Master Data Services 功能
 
@@ -55,7 +55,7 @@ ms.locfileid: "52765109"
 ## <a name="external-resources"></a>外部资源  
  msdn.com 上的博客文章[Deprecated:Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)（已弃用：显式层次结构和集合）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [弃用的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
   
   

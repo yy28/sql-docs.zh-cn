@@ -1,5 +1,5 @@
 ---
-title: 计划 SSAS Administrative Tasks with SQL Server 代理 |Microsoft 文档
+title: 来计划 SSAS 管理任务使用 SQL Server 代理 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f0a8525196bacff6d0bf75b28a17c154a6eb919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 171caf19d960533c1043cdbfaea7226207d277f5
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019114"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357514"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server 代理来计划 SSAS 管理任务
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "34019114"
   
  默认情况下，作业在服务帐户下运行。 SQL Server 代理的默认帐户是 NT Service\SQLAgent$\<实例名 >。 若要执行备份或处理任务，此帐户必须是 Analysis Services 实例的系统管理员。 有关详细信息，请参阅 [向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
- 您还应拥有要使用的测试数据库。 可以部署 AdventureWorks 多维示例数据库或 Analysis Services 多维教程中的项目以在本演练中使用。 有关详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](../../analysis-services/install-sample-data-and-projects.md)。  
+ 您还应拥有要使用的测试数据库。 可以部署 AdventureWorks 多维示例数据库或 Analysis Services 多维教程中的项目以在本演练中使用。 有关详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](../multidimensional-tutorial/install-sample-data-and-projects.md)。  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>示例 1：处理计划任务中的维度  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>示例 1：处理计划的任务中的维度  
  此示例演示如何创建和计划处理维度的作业。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计划任务是嵌入在 SQL Server 代理作业中的 XMLA 脚本。 该作业经过计划，按照所需时间和频率运行。 由于 SQL Server 代理是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一部分，因此要同时使用数据库引擎和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来创建和计划管理任务。  
@@ -83,13 +83,13 @@ ms.locfileid: "34019114"
   
 7.  在“服务器”中，为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的默认实例键入“localhost”，并为命名实例键入“localhost”\\\<实例名称>。  
   
-     如果您将从远程计算机运行作业，请使用将运行作业的服务器和实例的名称。 使用格式\<*服务器名称*> 对于默认实例，和\<*服务器名称*>\\<*实例名称*> 对于命名实例。  
+     如果您将从远程计算机运行作业，请使用将运行作业的服务器和实例的名称。 使用格式\<*服务器名称*> 对于默认实例，并\<*服务器名称*>\\<*实例名称*> 对于命名实例。  
   
 8.  在 **“类型”** 中，选择 **“SQL Server Analysis Services 命令”**。  
   
 9. 在“命令”中，右键单击并选择“粘贴”。 上一步中生成的 XMLA 脚本应显示在命令窗口中。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
 11. 在 **“选择页”** 下，单击 **“计划”**，然后单击 **“新建”**。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34019114"
   
 15. 在作业完成后，请单击 **“关闭”**。  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>示例 2：批处理计划任务中的维度和分区  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>示例 2：批处理操作的维度和计划任务中的一个分区  
  此示例中的过程演示如何创建和计划一个作业，该作业将批处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库维度并处理依赖于聚合维度的多维数据集分区。 有关批处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的详细信息，请参阅[批处理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)。  
   
 ###  <a name="bkmk_BatchProcess"></a> 创建用于批处理 SQL Server 代理作业中的维度和分区的脚本  
@@ -205,7 +205,7 @@ ms.locfileid: "34019114"
   
 10. 在“命令”中，右键单击并选择“粘贴”。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
 12. 在 **“计划”** 页上，单击 **“新建”**。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "34019114"
   
 16. 在作业完成后，请单击 **“关闭”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [处理选项和设置&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   

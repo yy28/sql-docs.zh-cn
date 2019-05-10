@@ -1,7 +1,7 @@
 ---
 title: 限制和已知的问题为 Linux 上的 SSIS |Microsoft Docs
 description: 本文介绍的限制和已知的问题的 SQL Server Integration Services (SSIS) 的 Linux 计算机上
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: cb186426441092ddfcb350d6c8ad6c5e65a972d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95a2918e2461fec5cdbf0261679c28cfb1693300
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839985"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487767"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>限制和 Linux 上的 SSIS 的已知的问题
 
