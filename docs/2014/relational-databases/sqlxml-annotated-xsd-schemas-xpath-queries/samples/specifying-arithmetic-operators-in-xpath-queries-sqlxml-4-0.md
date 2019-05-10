@@ -34,7 +34,7 @@ ms.locfileid: "62740427"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查询中，`child`是轴和`OrderDetail`是节点测试 (如果**OrderDetail**是**\<元素节点 >**，因为 **\<元素 >** 节点是主节点`child`轴)。 为所有 **\<OrderDetail >** 元素节点，在谓词中的测试应用，并返回满足条件的这些节点。  
+ 在查询中，`child`是轴和`OrderDetail`是节点测试 (如果**OrderDetail**是 **\<元素节点 >**，因为 **\<元素 >** 节点是主节点`child`轴)。 为所有 **\<OrderDetail >** 元素节点，在谓词中的测试应用，并返回满足条件的这些节点。  
   
 > [!NOTE]  
 >  XPath 中的数字是双精度浮点数，对本示例中的浮点数进行比较将导致舍入。  

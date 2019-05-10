@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e0f1b8a425e3b21ac1e36e0f301f3b380d791d1a
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: eafc21d079561b6024d23b3e90bd24dbf7b369fc
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566576"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774744"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 方面的常见问题 (FAQ)
 
@@ -152,7 +152,7 @@ ms.locfileid: "58566576"
 
 1. **是否可以迁移我的数据从 Oracle 和其他数据库引擎到 Linux 上的 SQL Server？**
 
-   是。 SSMA 支持将从数据库引擎的几种类型的迁移：Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE (以前称为 SAP Sybase ASE)。 有关如何使用 SSMA 的示例，请参阅[将 Oracle 架构迁移到 SQL Server Linux 上使用 SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)。
+   是。 SSMA 支持将从数据库引擎的几种类型的迁移：Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE (以前称为 SAP Sybase ASE)。 有关如何使用 SSMA 的示例，请参阅[将 Oracle 架构迁移到 SQL Server Linux 上使用 SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)。
 
 1. **SQL Server 文件需要哪些权限？**
 

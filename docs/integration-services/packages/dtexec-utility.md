@@ -640,6 +640,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>相关内容  
- [www.mattmasson.com](www.mattmasson.com) 上的博客文章 [退出代码、DTEXEC 和 SSIS 目录](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
+  [www.mattmasson.com](www.mattmasson.com) 上的博客文章 [退出代码、DTEXEC 和 SSIS 目录](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
   
   

@@ -21,7 +21,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
 ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58538549"
@@ -55,7 +55,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]仅支持数据库和表对象。
   
-`[ @updateusage = ] 'updateusage'` 指示应运行 DBCC UPDATEUSAGE 以更新空间使用情况信息。 当*objname*是未指定，在整个数据库上运行该语句; 否则，运行该语句*objname*。 值可以是 **，则返回 true**或**false**。 *updateusage*是**varchar(5)**，默认值为**false**。  
+`[ @updateusage = ] 'updateusage'` 指示应运行 DBCC UPDATEUSAGE 以更新空间使用情况信息。 当*objname*是未指定，在整个数据库上运行该语句; 否则，运行该语句*objname*。 值可以为 **true**或**false**。 *updateusage*是**varchar(5)**，默认值为**false**。  
   
 `[ @mode = ] 'mode'` 指示结果的范围。 为已延伸的表或数据库，*模式下*参数可以包括或排除的对象的远程部分。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   

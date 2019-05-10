@@ -12,11 +12,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472163"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775589"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集上的控制器？
 

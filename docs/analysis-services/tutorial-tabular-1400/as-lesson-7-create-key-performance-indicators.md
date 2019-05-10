@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5f3b3de71cb60a27613482255556bfbff6bcc8cf
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685403"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877623"
 ---
 # <a name="create-key-performance-indicators"></a>创建关键绩效指标
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685403"
 
 在本课程中，您将创建关键绩效指标 (Kpi)。 Kpi 用于测量由定义的值的性能*Base*度量值，针对*目标*同样由度量值或绝对值定义的值。 在报表客户端应用程序中，KPI 可以向业务专业人士提供一种快速简便的方法，使他们了解业务绩效的摘要或确定趋势。 若要了解详细信息，请参阅[Kpi](../tabular-models/kpis-ssas-tabular.md)
   
-学完本课的预计时间：**15 分钟**  
+估计的时间才能完成本课程中：**15 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 
@@ -40,7 +40,7 @@ ms.locfileid: "57685403"
 3.  在表上面的公式栏中，键入以下公式： 
  
     ```  
-    InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
+    InternetCurrentQuarterSalesPerformance :=IF([InternetPreviousQuarterSalesProportionToQTD]<>0,([InternetCurrentQuarterSales]-[InternetPreviousQuarterSalesProportionToQTD])/[InternetPreviousQuarterSalesProportionToQTD],BLANK()) 
     ```
 
     此度量值用作 KPI 的基本度量值。  
