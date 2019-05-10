@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 357b7d9e6ec63de52c5a7128b60330ce53943251
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241965"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357369"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多维模型中创建度量值和度量值组
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "59241965"
   
 |||  
 |-|-|  
-|多维数据集向导|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行多维数据集向导以创建多维数据集。<br /><br /> 在“解决方案资源管理器”中，右键单击“多维数据集”，然后选择“新建多维数据集”。 如果在执行这些步骤中需要帮助，请参阅[多维建模（Adventure Works 教程）](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)。<br /><br /> 创建基于来自现有数据仓库的表的多维数据集时，度量值和度量值组的定义具体化为多维数据集创建过程的一部分。 在向导中，你将选择要用作多维数据集中度量值和度量值组对象的基础的事实和事实数据表。|  
+|多维数据集向导|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行多维数据集向导以创建多维数据集。<br /><br /> 在“解决方案资源管理器”中，右键单击“多维数据集”，然后选择“新建多维数据集”。 如果在执行这些步骤中需要帮助，请参阅[多维建模（Adventure Works 教程）](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)。<br /><br /> 创建基于来自现有数据仓库的表的多维数据集时，度量值和度量值组的定义具体化为多维数据集创建过程的一部分。 在向导中，你将选择要用作多维数据集中度量值和度量值组对象的基础的事实和事实数据表。|  
 |新建度量值对话|假定 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中已存在该多维数据集，则双击“解决方案资源管理器”中的多维数据集名称，在“多维数据集设计器”中打开该多维数据集。 在“度量值”窗格中，通过指定源表、列和聚合类型，右键单击顶端节点以创建新度量值组或新度量值。 使用此方法需从预构建函数固定列表中选择聚合方法。 有关更常用的聚合的讨论，请参阅 [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) 。|  
 |“计算成员”|计算成员会增加 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中多维数据集的灵活性，并提高其分析能力，因为你可以控制创建它们的时间和方式。 有时你只是临时需要一个度量值，需要度量值的时间仅为用户会话持续时间，或需要位于 Management Studio 中作为调查的一部分的度量值。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开“计算”选项卡创建新计算成员。<br /><br /> 度量值基于 MDX 表达式时，请选择这种方法。 请参阅以下主题，获取详细信息：[构建在 MDX 中的度量值](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)，[计算](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)，[多维模型中的计算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)并[MDX 脚本编写基础知识&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX 或 XMLA|在 SQL Server Management Studio 中，你可以执行 MDX 或 XMLA 以更改数据库，从而以包含新的计算度量值。 在该解决方案已部署到服务器之后，这种方法对数据的临时测试有用。 请参阅 [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)。|  
