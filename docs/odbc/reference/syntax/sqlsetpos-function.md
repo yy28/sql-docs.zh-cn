@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982399"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536320"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函数
 **符合性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982399"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetPos(
 ## <a name="code-example"></a>代码示例  
  在以下示例中，应用程序允许用户浏览订单表和更新订单状态。 游标是由键集驱动的行集大小为 20，并使用比较行版本的乐观并发控制。 提取每个行集后，应用程序进行打印，允许用户选择和更新订单的状态。 应用程序使用**SQLSetPos**将游标定位在所选行上，并执行定位的更新的行。 （省略了错误处理为清楚起见。）  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   

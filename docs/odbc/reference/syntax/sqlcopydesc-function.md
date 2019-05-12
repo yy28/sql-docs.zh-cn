@@ -20,12 +20,12 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259281"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537729"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 函数
 **符合性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259281"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   
 SQLRETURN SQLCopyDesc(  
      SQLHDESC     SourceDescHandle,  
@@ -106,7 +106,7 @@ SQLRETURN SQLCopyDesc(
 ### <a name="code-example"></a>代码示例  
  在以下示例中，描述符操作用于将 PartsSource 表的字段复制到 PartsCopy 表。 PartsSource 表的内容提取到行集缓冲区*hstmt0*。 在使用这些值作为参数的 INSERT 语句*hstmt1*来填充 PartsCopy 表的列。 若要执行此操作的 IRD 字段*hstmt0*复制到的 IPD 的字段*hstmt1*，和字段的 ARD *hstmt0*复制到的字段的APD*hstmt1*。 使用**SQLSetDescField**以 IRD 字段中具有输出参数的语句复制到 IPD 字段所需的输入的参数时 IPD 的 SQL_DESC_PARAMETER_TYPE 属性设置为 SQL_PARAM_INPUT。  
   
-```  
+```cpp  
 #define ROWS 100  
 #define DESC_LEN 50  
 #define SQL_SUCCEEDED(rc) (rc == SQL_SUCCESS || rc == SQL_SUCCESS_WITH_INFO)  

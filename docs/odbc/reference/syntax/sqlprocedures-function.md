@@ -20,12 +20,12 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76e1154e3cdf3cc52d311d0afa6372b4be9019c4
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186132"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537212"
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 函数
 **符合性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63186132"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   
 SQLRETURN SQLProcedures(  
      SQLHSTMT       StatementHandle,  
@@ -82,7 +82,7 @@ SQLRETURN SQLProcedures(
 ## <a name="diagnostics"></a>诊断  
  当**SQLProcedures**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLProcedures** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|描述|  
+|SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  

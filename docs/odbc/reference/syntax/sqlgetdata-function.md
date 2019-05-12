@@ -20,12 +20,12 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0dc0e57356c972797cbd72fa4ce3427a0e473dad
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258961"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537993"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函数
 **符合性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63258961"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetData(  
       SQLHSTMT       StatementHandle,  
@@ -204,7 +204,7 @@ SQLRETURN SQLGetData(
   
  后续调用**SQLGetData**将从所请求的最后一列中检索数据; 而在以前的偏移量会无效。 例如，执行以下顺序执行：  
   
-```  
+```cpp  
 SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)  
 ```  
   
@@ -218,7 +218,7 @@ SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)
 ## <a name="code-example"></a>代码示例  
  在以下示例中，应用程序执行**选择**语句返回结果集的客户 Id、 名称和电话号码按名称、 ID 和电话号码。 对于每个数据行，它调用**SQLFetch**来定位光标移到下一行。 它将调用**SQLGetData**检索提取的数据; 数据和返回的字节数的缓冲区中指定调用**SQLGetData**。 最后，会输出每个雇员的名称、 ID 和电话号码。  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 50  
   

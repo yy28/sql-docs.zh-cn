@@ -20,12 +20,12 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5254b7bb3744e06dae300f33ff1b612b4aca2341
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186111"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537269"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 函数
 **符合性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63186111"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   
 SQLRETURN SQLPutData(  
       SQLHSTMT     StatementHandle,  
@@ -68,7 +68,7 @@ SQLRETURN SQLPutData(
 ## <a name="diagnostics"></a>诊断  
  当**SQLPutData**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLPutData** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|描述|  
+|SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|字符串或二进制数据返回为输出参数时截断了非空白字符或非 NULL 的二进制数据。 如果它是一个字符串值，它是右侧被截断。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
@@ -114,11 +114,11 @@ SQLRETURN SQLPutData(
 ## <a name="example"></a>示例  
  下面的示例假定名为 Test 的数据源名称。 关联的数据库应具有您可以创建，按如下所示的表：  
   
-```  
+```sql  
 CREATE TABLE emp4 (NAME char(30), AGE int, BIRTHDAY datetime, Memo1 text)  
 ```  
   
-```  
+```cpp  
 // SQLPutData.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <stdio.h>  

@@ -11,12 +11,12 @@ ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d4e546aa56cf9831a0b519f5788359d8c58c41fb
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273419"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538166"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位信息
 从 Windows Server 2003 开始，Microsoft 操作系统必须支持 64 位 ODBC 库。 ODBC 标头和库首次随 MDAC 2.7 SDK 包含更改，以允许编程人员能够轻松地编写新的 64 位平台的代码。 通过确保您的代码使用下面列出的定义的 ODBC 类型，可以编译为 64 位和 32 位平台基于相同的源代码 **_WIN64**或**WIN32**宏。  
@@ -34,7 +34,7 @@ ms.locfileid: "63273419"
 ## <a name="function-declaration-changes"></a>函数声明的更改  
  64 位编程的情况下，以下函数签名已更改。 以粗体文本的项是不同的特定参数。  
   
-```c
+```cpp
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
    SQLSMALLINT TargetType, SQLPOINTER TargetValuePtr, SQLLEN BufferLength,   SQLLEN * StrLen_or_Ind);  
   
@@ -126,7 +126,7 @@ typedef SQLLEN SQLROWOFFSET;
   
  SQLSETPOSIROW 的定义已更改为 32 位和 64 位编译器中：  
   
-```c
+```cpp
 #ifdef _WIN64   
 typedef UINT64 SQLSETPOSIROW;   
 #else   
@@ -136,7 +136,7 @@ typedef UINT64 SQLSETPOSIROW;
   
  为 SQLLEN 和 sqlulen 生成的定义已更改为 64 位编译器：  
   
-```c
+```cpp
 #ifdef _WIN64   
 typedef INT64 SQLLEN;   
 typedef UINT64 SQLULEN;   
@@ -148,7 +148,7 @@ typedef UINT64 SQLULEN;
   
  尽管 SQL_C_BOOKMARK 为 2.0 客户端上的 64 位编译器已弃用在 ODBC 3.0 中，此值已更改：  
   
-```c
+```cpp
 #ifdef _WIN64   
 #define SQL_C_BOOKMARK SQL_C_UBIGINT   
 #else   
@@ -158,7 +158,7 @@ typedef UINT64 SQLULEN;
   
  书签类型中的较新的标头以不同的方式定义：  
   
-```c
+```cpp
 typedef SQLULEN BOOKMARK;  
 ```  
   

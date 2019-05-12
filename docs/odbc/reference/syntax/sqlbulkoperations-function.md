@@ -20,12 +20,12 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14e51f1d04012e22c198b7ed5f70d9b508933c5d
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237852"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538040"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 函数
 **符合性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63237852"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   
 SQLRETURN SQLBulkOperations(  
      SQLHSTMT       StatementHandle,  
@@ -261,7 +261,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="code-example"></a>代码示例  
  下面的示例在从客户表中提取一次 10 行数据。 然后会提示用户操作来执行。 若要减少网络流量，示例缓冲区更新、 删除和插入本地在绑定的数组，但在过去的行集数据的偏移量。 当用户选择发送更新、 删除和插入到数据源时，代码设置适当的偏移量的绑定，并调用**SQLBulkOperations**。 为简单起见，用户不能缓冲 10 个以上的更新、 删除或插入。  
   
-```  
+```cpp  
 // SQLBulkOperations_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

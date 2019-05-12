@@ -20,12 +20,12 @@ ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2e810d2e7ff3f69faea5fdcbccbb7f7ba276df48
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982295"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537618"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 函数
 **符合性**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982295"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   
 SQLRETURN SQLDescribeParam(  
       SQLHSTMT        StatementHandle,  
@@ -111,7 +111,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="code-example"></a>代码示例  
  以下示例将提示用户输入的 SQL 语句，并随后将准备该语句。 接下来，调用**SQLNumParams**以确定该语句是否包含任何参数。 如果语句包含参数，则会调用**SQLDescribeParam**来描述这些参数和**SQLBindParameter**以将其绑定。 最后，它提示用户输入任何参数的值，然后执行该语句。  
   
-```  
+```cpp  
 SQLCHAR       Statement[100];  
 SQLSMALLINT   NumParams, i, DataType, DecimalDigits, Nullable;  
 SQLUINTEGER   ParamSize;  

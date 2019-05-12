@@ -20,12 +20,12 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f2eabec895a0b56d396d5848c8f418451e0afb7
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259527"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537678"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 函数
 **符合性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259527"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   
 SQLRETURN SQLConnect(  
      SQLHDBC        ConnectionHandle,  
@@ -193,7 +193,7 @@ SQLRETURN SQLConnect(
 ### <a name="code-example"></a>代码示例  
  在以下示例中，应用程序分配环境和连接句柄。 然后，连接到具有用户 ID 约翰的销售订单数据源和密码 Sesame 并处理数据。 完成处理数据后，它与数据源断开连接并释放句柄。  
   
-```  
+```cpp  
 // SQLConnect_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  
