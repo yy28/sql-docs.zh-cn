@@ -20,12 +20,12 @@ ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbd405189d17051c4f1a6f07c943f77d6a6289c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01ecb5457ce3fbc343541063047cb935cbf85a72
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186015"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537396"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 函数
 **符合性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63186015"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   
 BOOL SQLRemoveDSNFromIni(  
      LPCSTR   lpszDSN);  
@@ -52,7 +52,7 @@ BOOL SQLRemoveDSNFromIni(
 ## <a name="diagnostics"></a>诊断  
  当**SQLRemoveDSNFromIni**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|描述|  
+|*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_INVALID_DSN|无效的 DSN|*LpszDSN*参数无效。|  

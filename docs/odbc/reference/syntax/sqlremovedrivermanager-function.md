@@ -20,12 +20,12 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e3413cf3c0e316e25ad52cc35ba348cab1694ae4
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186033"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537408"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 函数
 **符合性**  
@@ -36,7 +36,7 @@ ms.locfileid: "63186033"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```cpp  
   
 BOOL SQLRemoveDriverManager(  
      LPDWORD     pdwUsageCount);  
@@ -52,7 +52,7 @@ BOOL SQLRemoveDriverManager(
 ## <a name="diagnostics"></a>诊断  
  当**SQLRemoveDriverManager**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|描述|  
+|*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|在注册表中找不到组件|安装程序无法删除驱动程序管理器的信息，因为它在注册表中不存在或找不到注册表中。|  

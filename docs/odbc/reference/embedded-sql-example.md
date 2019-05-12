@@ -15,17 +15,17 @@ ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eef8c87a152795d4756d05ba8a279a0d12cbc38c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eeab20c5385b02a874908cc941c1c69910efa228
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628611"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536664"
 ---
 # <a name="embedded-sql-example"></a>嵌入式 SQL 示例
 下面的代码是一个简单嵌入式的 SQL 的程序，用 c 语言编写该程序说明了很多，但不是全部的嵌入式 SQL 技术。 该程序提示用户输入订单号、 检索的客户数量、 销售人员和订单的状态，并在屏幕上显示检索到的信息。  
   
-```  
+```cpp  
 int main() {  
    EXEC SQL INCLUDE SQLCA;  
    EXEC SQL BEGIN DECLARE SECTION;  
