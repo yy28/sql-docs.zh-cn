@@ -35,7 +35,7 @@ Azure Data Lake Store 连接管理器是[适用于 Azure 的 SQL Server Integrat
 
 1.  在“添加 SSIS 连接管理器” 对话框中，选择“AzureDataLake”，然后选择“添加”。 此时将打开“Azure Data Lake Store 连接管理器编辑器”对话框。
   
-2.  在“Azure Data Lake Store 连接管理器编辑器”对话框的“ADLS 主机”字段中提供 Data Lake Storage Gen1 主机 URL。 例如：`https://test.azuredatalakestore.net` 或 `test.azuredatalakestore.net`。
+2.  在“Azure Data Lake Store 连接管理器编辑器”对话框的“ADLS 主机”字段中提供 Data Lake Storage Gen1 主机 URL。 例如： `https://test.azuredatalakestore.net` 或 `test.azuredatalakestore.net` 。
   
 3.  在“身份验证”字段中，选择相应的身份验证类型，以用于访问 Data Lake Storage Gen1 中的数据。
 

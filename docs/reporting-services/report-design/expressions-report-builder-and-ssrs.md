@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a32bb1fef21b41fae6ef30dd011b5b7260203c94
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ccd9e4edc5a1238ba9c68f97de1d7f53fb899a74
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285985"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775542"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>表达式（报表生成器和 SSRS）
   表达式在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中被广泛使用，以便对数据进行检索、计算、显示、分组、排序、筛选、参数化和格式设置。 
@@ -56,13 +56,9 @@ ms.locfileid: "56285985"
   
  有关详细信息，请参阅 [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)的详细信息。  
   
-### <a name="report-model-formulas"></a>报表模型公式  
- 为使用报表模型作为数据源的数据集设计查询时，可以创建“公式” 。 公式用于对报表中基于报表模型的数据的值进行计算。  
-  
- 有关详细信息，请参阅[报表模型查询中的公式（报表生成器和 SSRS）](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md)。  
-   
-##  <a name="DisplayText"></a> 了解简单表达式中的前缀符号  
- 简单表达式使用符号来指示引用是指向字段、参数、内置集合还是指向 ReportItems 集合。 下表显示了显示文本和表达式文本的示例：  
+## <a name="DisplayText"></a> 了解简单表达式中的前缀符号  
+
+简单表达式使用符号来指示引用是指向字段、参数、内置集合还是指向 ReportItems 集合。 下表显示了显示文本和表达式文本的示例：  
   
 |项|显示文本示例|表达式文本示例|  
 |----------|--------------------------|-----------------------------|  
