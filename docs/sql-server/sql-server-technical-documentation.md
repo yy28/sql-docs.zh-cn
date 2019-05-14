@@ -21,16 +21,15 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 523b1cc852c7098f6c18828efdb789fa2fcafcdf
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 0cdd3d2a7a64ddc701a73a3b6c978bd9f0264e20
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801741"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877590"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文档
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数据库管理系统 (ODBMS) 领域处于领先水平。 本文档可帮助你在 Windows 和 Linux 上安装、配置和使用 SQL Server。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
@@ -84,8 +83,6 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
 **试用 SQL Server 2016！**
 - [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server for Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
-- [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [获取具有 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
@@ -93,10 +90,10 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 **试用 SQL Server！**
 - [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server for Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![在 Linux 上安装 SQL Server](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [在 Linux 上安装 SQL Server](../linux/sql-server-linux-setup.md)
-- [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [获取具有 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
+
+[!INCLUDE[get-sql-tools](../includes/paragraph-content/get-sql-tools.md)]
 
 ## <a name="sql-server-technologies"></a>SQL Server 技术
 

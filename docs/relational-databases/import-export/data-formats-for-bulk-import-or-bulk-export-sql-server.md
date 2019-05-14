@@ -11,16 +11,16 @@ helpviewer_keywords:
 - data formats [SQL Server], choosing
 - bulk importing [SQL Server], data formats
 ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b87bd6357b51803ff9535483b9991099b903e1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a0c07adf30c4d41e14c3eb81723a164e84eea39
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527520"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946271"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>用于批量导入或导出的数据格式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "52527520"
 |运算|本机|Unicode 本机|字符|Unicode 字符|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |使用不包含任何扩展字符或双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。 除非使用格式化文件，否则这些表的定义必须相同。|是*|-|-|-|  
-|对于“sql_variant”  列，最好使用本机数据格式，因为本机数据格式可以保留每一个 **sql_variant** 值的元数据，这一点不同于字符格式或 Unicode 格式。|用户帐户控制|-|-|-|  
-|使用包含扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|-|用户帐户控制|-|-|  
-|大容量导入其他程序生成的文本文件中的数据。|-|-|用户帐户控制|-|  
-|将数据大容量导出到要在其他程序中使用的文本文件中。|-|-|用户帐户控制|-|  
-|使用包含 Unicode 数据而不包含任何扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|-|-|-|用户帐户控制|  
+|对于“sql_variant”  列，最好使用本机数据格式，因为本机数据格式可以保留每一个 **sql_variant** 值的元数据，这一点不同于字符格式或 Unicode 格式。|是|-|-|-|  
+|使用包含扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|-|是|-|-|  
+|大容量导入其他程序生成的文本文件中的数据。|-|-|是|-|  
+|将数据大容量导出到要在其他程序中使用的文本文件中。|-|-|是|-|  
+|使用包含 Unicode 数据而不包含任何扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|-|-|-|是|  
   
  \* 这是在使用 **bcp** 时从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批量导出数据的最快方法。  
   
