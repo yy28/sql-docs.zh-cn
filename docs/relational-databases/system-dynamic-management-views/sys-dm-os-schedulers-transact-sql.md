@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99a456ee0b2159c7cfebfbb1ac2dff2468c2cdd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939695"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626774"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,6 +62,10 @@ ms.locfileid: "62939695"
 |memory_object_address|**varbinary(8)**|计划程序内存对象的内存地址。 不可为 NULL。|  
 |task_memory_object_address|**varbinary(8)**|任务内存对象的内存地址。 不可为 null。 有关详细信息，请参阅[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]公开 SQLOS 使用的计划程序量程。|  
+| total_cpu_usage_ms |**bigint**|**适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]及更高版本 <br><br> 报告由非抢先的辅助角色，此计划程序所占用的总 CPU。 不可为 null。|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 指示基于的阻止功能[服务级别目标](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)，将始终为 0 的非 Azure 版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以为 Null。|
+|total_scheduler_delay_ms|**bigint**|**适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]及更高版本 <br><br> 切出的一个辅助角色，另一个中的切换之间的时间。 可能被引起延迟安排的下一步的非抢先辅助角色，或由于操作系统计划从其他进程的线程抢先式工作线程。 不可为 null。|
+|ideal_workers_limit|**int**|**适用于**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]及更高版本 <br><br> 理想情况下应在计划程序多少辅助角色。 如果当前工作线程超过由于不均衡任务负载的限制后进入空闲状态，则它们将会截掉。 不可为 null。|
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
 ## <a name="permissions"></a>权限

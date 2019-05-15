@@ -1,5 +1,5 @@
 ---
-title: 概述
+title: 什么是 Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 是免费的轻型工具，用于管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库运行在 Windows、 macOS 和 Linux。
 ms.prod: sql
@@ -9,14 +9,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 1b64b8d23ce58fda704926affdea1103afae0e91
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
+ms.openlocfilehash: 00c8a5aeba30d16e2ae2f5c98290797765c9a357
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089490"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620189"
 ---
 # <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
@@ -160,9 +160,8 @@ SQL 代码段生成正确的 SQL 语法来创建数据库、 表、 视图、 �
 |漏洞评估||是|
 |XEvent 管理||是|
 
-
-
 ## <a name="next-steps"></a>后续步骤
+
 - [下载并安装 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [连接和查询 SQL Server](quickstart-sql-server.md)
 - [连接和查询 Azure SQL 数据库](quickstart-sql-database.md)

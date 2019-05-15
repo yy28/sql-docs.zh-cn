@@ -1,19 +1,19 @@
 ---
 title: 创建报表服务器数据库（SSRS Configuration Manager）| Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/15/2018
-ms.openlocfilehash: 9fee8b60cff2b0c8bdfa2e38576cfed036f09584
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: 7f04bff24ca1472b35b71c5e8f04d017714ddf0f
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54184983"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502657"
 ---
 # <a name="create-a-report-server-database"></a>创建报表服务器数据库 
 
@@ -25,7 +25,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机�
 
 这两个数据库一起创建，并按名称绑定。 默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例下，这两个数据库分别命名为 **reportserver** 和 **reportservertempdb**。 这两个数据库统称为“报表服务器数据库”或“报表服务器目录”。
 
-SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式包含用于数据警报元数据的第三个数据库。 为每个 SSRS 服务应用程序创建三个数据库。 默认情况下，数据库名称包含表示服务应用程序的 GUID。 以下是三个 SharePoint 模式数据库的示例名称：
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式包含用于数据警报元数据的第三个数据库。 为每个 SSRS 服务应用程序创建三个数据库。 默认情况下，数据库名称包含表示服务应用程序的 GUID。 
+
+> [!NOTE]
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
+
+以下是三个 SharePoint 模式数据库的示例名称：
 
 - ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -46,6 +51,8 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
 - **自动**。 如果选择默认配置安装选项，请使用 SQL Server 安装向导。 在 SQL Server 安装向导中，此选项为“报表服务器安装选项”页中的“安装和配置”。 如果选择“仅安装”选项，则必须使用 SQL Server Reporting Services 配置管理器来创建数据库。  
   
 - **手动**。 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 如果使用远程 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 来承载该数据库，则必须手动创建报表服务器数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ### <a name="sharepoint-mode"></a>SharePoint 模式 
 “报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项（“仅安装”）。 此选项安装所有 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下某个方式至少创建一个 SSRS 服务应用程序：  
@@ -53,6 +60,8 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
 - 转到 SharePoint Server 的管理中心，创建 SSRS 服务应用程序。 有关详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)中的“创建服务应用程序”部分。  
   
 - 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet 创建服务应用程序和报表服务器数据库。 有关详细信息，请参阅[用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 主题中创建服务应用程序的示例。  
+
+::: moniker-end
   
 ## <a name="database-server-version-requirements"></a>数据库服务器版本要求
 

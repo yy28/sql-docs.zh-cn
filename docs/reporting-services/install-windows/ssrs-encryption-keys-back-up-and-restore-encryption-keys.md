@@ -10,14 +10,14 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13f213f9914245de11257c7fad17a30d1a24388e
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306155"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502854"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密密钥 - 备份和还原加密密钥
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "58306155"
   报表服务器配置的一个重要部分是为用于加密敏感信息的对称密钥创建备份副本。 该密钥的备份副本对许多例程操作来说是必需的，通过使用备份副本，您可以在新的安装中重用现有报表服务器数据库。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+
+> [!NOTE]
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
  在发生以下任何事件时，必须还原加密密钥的备份副本：  
   
@@ -44,11 +47,15 @@ ms.locfileid: "58306155"
  备份对称密钥是将密钥写入所指定的文件，然后使用所提供的密码对密钥进行加密的过程。 对称密钥绝对不能在未加密状态下存储，所以在将它保存到磁盘时，必须提供密码对密钥进行加密。 创建文件后，必须将其存储在安全的位置， **并记住文件的解锁密码** 。 若要备份对称密钥，可以使用以下工具：  
   
  **本机模式：** Reporting Services 配置管理器或 **rskeymgmt** 实用工具。  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **SharePoint 模式：** SharePoint 管理中心页或 PowerShell。  
   
 ##  <a name="bkmk_backup_sharepoint"></a> 备份 SharePoint 模式报表服务器  
  对于 SharePoint 模式报表服务器，您可以使用 PowerShell 命令或使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的管理页。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的“密钥管理”部分  
+
+::: moniker-end
   
 ##  <a name="bkmk_backup_configuration_manager"></a> 备份加密密钥 - Reporting Services 配置管理器（本机模式）  
   

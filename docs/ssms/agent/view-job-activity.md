@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, viewing
 - displaying job activity
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1ce3fe6aec1612eff8d9560801119894de15e16
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 33cf01dda6f512428090d0c12654f43e1b03c0ab
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702977"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103178"
 ---
 # <a name="view-job-activity"></a>View Job Activity
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51702977"
   
 -   **开始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要查看作业活动，请使用：**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "51702977"
 ## <a name="before-you-begin"></a>开始之前  
   
 ### <a name="Security"></a>Security  
-有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
+有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   

@@ -33,7 +33,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51661557"

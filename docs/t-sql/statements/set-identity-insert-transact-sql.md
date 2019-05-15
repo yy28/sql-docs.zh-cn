@@ -23,15 +23,16 @@ ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c4f054e6690f6b836864a69b27a22a0bb3edf07
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
+ms.openlocfilehash: d1318a4a3a72c0deb27e86487782ca835cd552e9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803222"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094192"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 允许将显式值插入到表的标识列中。  
 
@@ -61,7 +62,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
   
  SET IDENTITY_INSERT 的设置是在执行或运行时设置的，而不是在分析时设置的。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须拥有表，或对表具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

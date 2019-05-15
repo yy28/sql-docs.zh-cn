@@ -20,7 +20,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
 ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/19/2018
 ms.locfileid: "51947615"
