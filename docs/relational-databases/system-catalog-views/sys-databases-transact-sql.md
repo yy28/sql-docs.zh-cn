@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b656e0119e99f37c62a19df2ec2b1f053f414323
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080367"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560135"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "58080367"
 |**is_temporal_retention_enabled**|**bit**|指示是否启用临时保留策略清除任务。<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|目录排序规则设置：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|目录排序规则设置：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**Is_result_set_caching**|**int**|保留供内部使用</br>**适用对象**：Azure SQL 数据仓库
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on is on</br>0 = is_result_set_caching_on is off</br>**适用对象**：Azure SQL 数据仓库 Gen2
   
 ## <a name="permissions"></a>权限  
  如果调用方`sys.databases`不是数据库的所有者，该数据库不是`master`或`tempdb`，查看对应行所需的最小权限`ALTER ANY DATABASE`或`VIEW ANY DATABASE`服务器级别权限，或者`CREATE DATABASE`中的权限`master`数据库。 始终可以在查看调用方连接到的数据库`sys.databases`。  

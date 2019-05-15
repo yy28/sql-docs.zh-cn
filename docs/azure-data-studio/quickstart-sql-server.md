@@ -2,8 +2,8 @@
 title: 快速入门：连接和查询 SQL Server
 titleSuffix: Azure Data Studio
 description: 本快速入门介绍如何使用 Azure Data Studio 来连接到 SQL Server 并运行查询
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142388"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620394"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门：使用 SQL Server 连接和查询 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入门显示如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到SQL Server，然后使用Transact-SQL（T-SQL）语句创建[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程中使用的*TutorialDB*。
@@ -37,7 +37,7 @@ ms.locfileid: "63142388"
 
    
 1. 启动**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
-1. 第一次运行*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 时，将打开**连接**对话框。 如果**连接**对话框未打开，请单击**服务器**页面中的**新的连接**图标：
+1. 首次运行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**欢迎**应打开页面。 如果没有看到**欢迎**页上，选择**帮助** > **欢迎**。 选择**新的连接**以打开**连接**窗格：
    
    ![新的连接图标](media/quickstart-sql-server/new-connection-icon.png)
 

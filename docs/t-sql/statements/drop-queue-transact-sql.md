@@ -22,12 +22,12 @@ ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b9c8d95cec73c09b59a1d2045961fb1707f0d92c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 297ef4c06b88d02e3c1a28829c7223d49c8ecee6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698635"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503706"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,7 @@ DROP QUEUE <object>
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-        queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -63,7 +60,7 @@ DROP QUEUE <object>
 ## <a name="remarks"></a>Remarks  
  如果有任何服务正在引用一个队列，则不能删除该队列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，队列所有者、**db_ddladmin** 或 **db_owner** 固定数据库角色的成员以及 **sysadmin** 固定服务器角色的成员拥有删除队列的权限。  
   
 ## <a name="examples"></a>示例  

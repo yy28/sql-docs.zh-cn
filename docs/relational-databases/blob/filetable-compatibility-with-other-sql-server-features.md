@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b8205fdb8dc5e869a9ef96ab4d76739e08ce386
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4afc0cfe0b310dcfcc106fc9d38b028c88f0261c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522368"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094377"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 与其他 SQL Server 功能的兼容性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52522368"
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]支持部分 FileTable 功能。 故障转移后，FileTable 数据在主副本上是可访问的，但是在可读辅助副本上不可访问。  
   
-    > **注意：**  请注意故障转移后支持所有 FILESTREAM 功能。 FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
+    > **注意**：请注意故障转移后支持所有 FILESTREAM 功能。 FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
   
 -   FILESTREAM 和 FileTable 函数接受或返回虚拟网络名称 (VNN)，而非计算机名称。 有关这些函数的详细信息，请参阅 [Filestream 和 FileTable 函数 (Transact-SQL)](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md)。  
   

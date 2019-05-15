@@ -1,9 +1,9 @@
 ---
-title: 使用见解小组件来监视服务器和数据库
+title: 在 Azure Data Studio 中使用见解小组件，用于监视服务器和数据库
 titleSuffix: Azure Data Studio
 description: 了解如何在 Azure Data Studio 见解小组件
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5b52d54d60361b7572490da766b29eb5691efc0
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238892"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620343"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>管理服务器和见解小组件中使用的数据库 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-见解小组件需要使用来监视服务器和数据库的 TRANSACT-SQL (T-SQL) 查询并将其转换为见解深刻的可视化效果。 
+见解小组件需要使用来监视服务器和数据库的 TRANSACT-SQL (T-SQL) 查询并将其转换为见解深刻的可视化效果。
 
-Insights 是可自定义图表和图形添加到服务器和数据库监视仪表板。 查看一眼见解的服务器和数据库，然后深入了解更多详细信息，并启动的已定义的管理操作。 
+Insights 是可自定义图表和图形添加到服务器和数据库监视仪表板。 查看一眼见解的服务器和数据库，然后深入了解更多详细信息，并启动的已定义的管理操作。
 
 您可以构建令人惊叹服务器和数据库管理仪表板类似于下面的示例：
 
@@ -33,11 +33,11 @@ Insights 是可自定义图表和图形添加到服务器和数据库监视仪�
 
 - [生成自定义见解小组件](tutorial-build-custom-insight-sql-server.md)
 - *启用内置见解小组件*
-   - [启用性能监视见解](tutorial-qds-sql-server.md)
-   - [启用表空间使用情况见解](tutorial-table-space-sql-server.md)
+  - [启用性能监视见解](tutorial-qds-sql-server.md)
+  - [启用表空间使用情况见解](tutorial-table-space-sql-server.md)
 
 
-## <a name="sql-queries"></a>SQL 查询 
+## <a name="sql-queries"></a>SQL 查询
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 尝试避免引入但另一个语言或大量用户界面以便尝试使用 T-SQL 尽可能多地使用最小 JSON 配置。 使用 T-SQL 配置见解小组件利用无数的现有源的查询可以转换为见解深刻的小组件的非常有用的 T-SQL 查询数。
 

@@ -22,12 +22,12 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5016c697c83ff286fe9d1d66f59dad92f1c534dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c835ea8b1610256f41ee9d0d0787e84b7afcda3d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700925"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503669"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +57,7 @@ ms.locfileid: "51700925"
 }     [ ,...n ]   
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-        queue_name  
-}  
-  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -177,7 +173,7 @@ ms.locfileid: "51700925"
 |**validation**|**nchar(2)**|对消息所用的验证。<br /><br /> E=Empty N=None X=XML|  
 |**message_body**|**varbinary(MAX)**|消息的内容。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要接收消息，则当前用户必须对队列有 RECEIVE 权限。  
   
 ## <a name="examples"></a>示例  

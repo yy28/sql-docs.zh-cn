@@ -69,7 +69,7 @@ ms.locfileid: "62730804"
   
      在中国和新加坡，Microsoft 技术支持部门通常见到的是简体中文，简体中文以拼音作为首选的排序方式。 建议使用的排序规则是 Chinese_PRC（用于 SQL Server 2000）、Chinese_PRC_90（用于 SQL Server 2005）或 Chinese_Simplified_Pinyin_100（用于 SQL Server 2008 和更高版本）。  
   
-     在中国台湾地区，它是更常见繁体中文使用建议的排序顺序基于笔画数：Chinese_Taiwan_Stroke （用于 SQL Server 2000)、 Chinese_Taiwan_Stroke_90 （用于 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 （用于 SQL Server 2008 和更高版本）。  
+     在台湾，它是更常见繁体中文使用建议的排序顺序基于笔画数：Chinese_Taiwan_Stroke （用于 SQL Server 2000)、 Chinese_Taiwan_Stroke_90 （用于 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 （用于 SQL Server 2008 和更高版本）。  
   
      其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在中国澳门，较常使用的是 Chinese_Traditional_Stroke_Count_100（在 SQL Server 2008 和更高版本上）。  
   

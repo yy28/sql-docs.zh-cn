@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 148e4942babafb35af2efe33eb427f9462f0a47e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969873"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620322"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中使用 sparklyr
 
@@ -36,17 +36,20 @@ Sparklyr 适用于 Apache Spark 提供的 R 接口。 Sparklyr 是 R 开发人�
 
 1. 安装完成后，运行 RStudio Desktop 内的以下命令以安装所需的包：
 
-   ```RStudio Desktop install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01") install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01") install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   ```RStudioDesktop
+   install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    ```
 
-## Connect to Spark in a big data cluster
+## <a name="connect-to-spark-in-a-big-data-cluster"></a>大数据群集中连接到 Spark
 
-You can use sparklyr to connect from a client to the big data cluster using Livy and the HDFS/Spark gateway. 
+Sparklyr 可用于从客户端连接到大数据群集使用 Livy 和 HDFS/Spark 网关。 
 
-In RStudio, create an R script and connect to Spark as in the following example:
+在 RStudio 中，创建一个 R 脚本并连接到 Spark，如以下示例所示：
 
 > [!TIP]
-> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+> 有关`<USERNAME>`和`<PASSWORD>`值，请使用 （如根） 的用户名和密码在大数据群集部署过程中设置。 有关`<IP>`并`<PORT>`值，请参阅的文档[HDFS/Spark 网关](connect-to-big-data-cluster.md#hdfs)。
 
 ```r
 library(sparklyr)

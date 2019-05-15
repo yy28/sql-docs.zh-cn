@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 882f6c9691905d4dd18d7c70a19b3afd9bc86751
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f184ea911bb7731c8b5adba8010d81a91ee4ff3c
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012658"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503957"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ CREATE TABLE AS SELECT (CTAS) 是提供最重要的 T-SQL 功能之一。 它是
 ## <a name="syntax"></a>语法   
 
 ```  
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
       <distribution_option> -- required
@@ -114,7 +114,7 @@ select 语句是 CTAS 和 CREATE TABLE 之间的根本区别。
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限。
 
 有关创建表的权限，请参阅 CREATE TABLE 中的[权限](https://msdn.microsoft.com/library/mt203953/#Permissions)。 

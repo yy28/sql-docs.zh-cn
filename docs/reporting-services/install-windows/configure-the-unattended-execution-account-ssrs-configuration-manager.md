@@ -13,14 +13,14 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099908"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502935"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>配置无人参与的执行帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  
@@ -75,6 +75,9 @@ ms.locfileid: "50099908"
  若要检索图像文件，报表服务器将自动使用该帐户，您不需要执行任何具体操作。 若要使用此帐户连接到为报表提供数据的外部数据源，则必须在报表数据源或共享数据源的“数据源属性”页中指定 **“凭据类型”** 选项：  
   
 -   在 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或 SharePoint 网站中，选择“不需要凭据”选项。  
+
+> [!NOTE]
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
  无人参与的报表处理帐户主要用于连接到外部服务器，而不是用作数据库服务器的登录名。 如果要使用此帐户凭据登录到数据库，则必须在连接字符串中指定凭据。 如果数据库服务器支持 Windows 集成安全性，并且用于无人参与报表处理的帐户拥有数据库读取权限，则可以指定 **Integrated Security=SSPI** 。 否则，必须在连接字符串中输入用户名和密码，该字符串对拥有数据源连接属性编辑权限的任何用户均显示为明文形式。  
   
