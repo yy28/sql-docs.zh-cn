@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02cbdeaaf754819b3a0efa15aa9515cc8515e62
 ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58534029"
