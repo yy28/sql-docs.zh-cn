@@ -1,6 +1,13 @@
+---
+ms.openlocfilehash: e0ef092d2227f380c9da1f982d954b8b5d310aaf
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877747"
+---
 ##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 获取帮助
 
-- [获取帮助的所有方式](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
 - [UserVoice - 改进 SQL Server 的建议？](https://feedback.azure.com/forums/908035-sql-server)
 - [安装和升级 - MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools - MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
@@ -12,6 +19,4 @@
 - [Microsoft SQL Server 许可条款和许可证信息](https://www.microsoft.com/download/details.aspx?id=39299)
 - [企业用户支持选项](https://support.microsoft.com/gp/support-options-for-business)
 - [请联系 Microsoft](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
-- [编辑 SQL 文档](https://aka.ms/editsqldocs)
-- [SQL 文档反馈](https://aka.ms/sqldocsfeedback)
-- [SQL 文档调查](https://aka.ms/sqldocsurvey)
+- [获取帮助的所有方式](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)

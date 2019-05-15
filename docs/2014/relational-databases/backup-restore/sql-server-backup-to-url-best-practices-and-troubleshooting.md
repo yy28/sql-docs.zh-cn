@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877089"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619584"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
   本主题介绍 SQL Server 备份和还原到 Windows Azure Blob 服务的最佳做法和故障排除提示。  
@@ -125,7 +125,7 @@ ms.locfileid: "62877089"
   
      备份数据库异常终止。  
   
--   Backupiorequest:: Reportioerror 备份设备上写入失败 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息：无法从传输连接读取数据：连接已关闭。  
+-   Backupiorequest:: Reportioerror 备份设备上写入失败 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息：无法从传输连接读取数据：连接已关闭。  
   
  如果使用跟踪标志 3051 打开详细日志记录，您还可能在日志中看到以下消息：  
   

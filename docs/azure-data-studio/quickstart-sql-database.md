@@ -2,8 +2,8 @@
 title: 快速入门：连接和查询 Azure SQL 数据库
 titleSuffix: Azure Data Studio
 description: 本快速入门介绍如何使用 Azure Data Studio 来连接到 SQL 数据库并运行查询
-ms.custom: seodec18
-ms.date: 12/21/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255981"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620352"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入门：使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]进行连接和查询 Azure SQL 数据库
 
@@ -39,7 +39,7 @@ ms.locfileid: "63255981"
 
 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]建立到 Azure SQL 数据库服务器的连接。
 
-1. 首次运行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**连接**应打开页面。 如果没有看到**连接**页上，选择**添加连接**，或**新连接**中的图标**服务器**边栏：
+1. 首次运行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**欢迎**应打开页面。 如果没有看到**欢迎**页上，选择**帮助** > **欢迎**。 选择**新的连接**以打开**连接**窗格：
    
    ![新的连接图标](media/quickstart-sql-database/new-connection-icon.png)
 
