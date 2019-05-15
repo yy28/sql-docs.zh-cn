@@ -491,7 +491,7 @@
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
                 - name: PowerShell
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
-                - name: Azure 虚拟机 +
+                - name: Azure 虚拟机 >
                   href: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
         - name: 操作说明
           href: ../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
@@ -1946,9 +1946,9 @@
               href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 开发
   items:
-    - name: 编程交互 ++
+    - name: 客户端程序编码 >>
+      displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
       href: ../connect/index.md
-      displayName: 'Connectivity, Connect, Connection'
     - name: 数据层应用程序
       href: ../relational-databases/data-tier-applications/data-tier-applications.md
       items:
@@ -4432,12 +4432,12 @@
               href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: 迁移和加载数据
   items:
-    - name: SQL Server Integration Services (SSIS) ++
+    - name: SQL Server Integration Services (SSIS) >>
       href: ../integration-services/index.md
     - name: 大容量复制实用工具 (bcp)
       href: ../tools/bcp-utility.md
-    - name: Azure 迁移服务 +
-      displayName: 'DMS, Data Migration Service'
+    - name: Azure 迁移服务 >
+      displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
     - name: Data Quality Services (DQS)
       items:
@@ -4965,7 +4965,7 @@
               items:
                 - name: 内存优化表订阅
                   href: ../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md
-                - name: 复制到 SQL 数据库 +
+                - name: 复制到 SQL 数据库 >
                   href: /azure/sql-database/replication-to-sql-database
                 - name: 重新发布数据
                   href: ../relational-databases/replication/republish-data.md
@@ -5315,7 +5315,7 @@
                     - name: 合并订阅
                       href: ../relational-databases/replication/subscription-validation-options-merge-subscriptions.md
                 - name: 重新初始化订阅
-                  itmes:
+                  items:
                     - name: 所有订阅
                       href: ../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md
                     - name: 一个订阅
@@ -5593,13 +5593,13 @@
                   href: ../sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: Resources
           items:
-            - name: 定价 +
+            - name: 定价 >
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: 博客 +
+            - name: 博客 >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: 服务更新 +
+            - name: 服务更新 >
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: 视频 +
+            - name: 视频 >
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: 数据库实验向导
       href: ../dea/database-experimentation-assistant-overview.md
@@ -7310,15 +7310,15 @@
               href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: Resources
           items:
-            - name: DBA Stack Exchange +
+            - name: DBA Stack Exchange >
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: Stack Overflow +
+            - name: Stack Overflow >
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN 论坛 +
+            - name: MSDN 论坛 >
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: 提交反馈 +
+            - name: 提交反馈 >
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: Reddit +
+            - name: Reddit >
               href: 'https://www.reddit.com/r/SQLServer'
     - name: 链接服务器
       href: ../relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7414,16 +7414,17 @@
           href: ../relational-databases/synonyms/create-synonyms.md
 - name: 报告和分析
   items:
-    - name: 高级分析和机器学习 ++
+    - name: 高级分析和机器学习 >>
       href: ../advanced-analytics/index.md
-    - name: 分析平台系统 ++
+    - name: 分析平台系统 >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: ../analytics-platform-system/index.md
-    - name: SQL Server Analysis Services (SSAS) ++
+    - name: SQL Server Analysis Services (SSAS) >>
       href: ../analysis-services/index.md
-    - name: SQL Server Reporting Services (SSRS) ++
+    - name: SQL Server Reporting Services (SSRS) >>
       href: ../reporting-services/index.md
     - name: Master Data Services
+      displayName: MDS
       href: ../master-data-services/master-data-services-overview-mds.md
       items:
         - name: 入门
@@ -7951,11 +7952,11 @@
           items:
             - name: 经加密的 SQL Server 连接器
               href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
-            - name: 自带密钥 +
+            - name: 自带密钥 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
-            - name: 轮替 TDE BYOK 密钥 +
+            - name: 轮替 TDE BYOK 密钥 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
-            - name: 删除 TDE 保护程序 +
+            - name: 删除 TDE 保护程序 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
             - name: 使用 Azure Key Vault 的 EKM
               href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
@@ -8024,10 +8025,10 @@
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: 透明数据加密 (TDE)
               href: ../relational-databases/security/encryption/transparent-data-encryption.md
-            - name: 使用 Azure SQL 数据库的 TDE +
+            - name: 使用 Azure SQL 数据库的 TDE >
               href: /azure/sql-database/transparent-data-encryption-azure-sql
               items:
-                - name: 自带密钥 +
+                - name: 自带密钥 >
                   href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
             - name: 始终加密
               href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
@@ -8153,13 +8154,13 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: Resources
           items:
-            - name: Azure Data Studio GitHub 存储库 +
+            - name: Azure Data Studio GitHub 存储库 >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: SQL Server 博客 +
+            - name: SQL Server 博客 >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
             - name: 常见问题解答
               href: ../azure-data-studio/faq.md
-            - name: 报告问题并提供建议 +
+            - name: 报告问题并提供建议 >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: 命令提示符实用程序
       href: ../tools/command-prompt-utility-reference-database-engine.md
@@ -9045,8 +9046,8 @@
                       href: ../ssms/agent/job-categories-manage-job-categories.md
                     - name: 新建作业类别
                       href: ../ssms/agent/job-categories-properties-new-job-category.md
-                    - name: 作业属性
-                      items: null
+                - name: 作业属性
+                  items:
                     - name: 引用计划的作业
                       href: ../ssms/agent/jobs-that-reference-a-schedule.md
                     - name: “警报”页
@@ -10040,7 +10041,7 @@
           href: ../linux/quickstart-install-connect-ubuntu.md
         - name: 运行和连接 - Docker
           href: ../linux/quickstart-install-connect-docker.md
-        - name: 在 Azure 中预配 SQL VM +
+        - name: 在 Azure 中预配 SQL VM >
           href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
         - name: 运行和连接 - 云
           href: ../linux/quickstart-install-connect-clouds.md
@@ -10254,63 +10255,63 @@
       items:
         - name: 故障排除
           href: ../linux/sql-server-linux-troubleshooting-guide.md
-        - name: 如何授予许可
+        - name: 如何授予许可 >
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow +
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 论坛 +
+        - name: MSDN 论坛 >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: 提交反馈 +
+        - name: 提交反馈 >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
 - name: Azure 上的 SQL
   items:
-    - name: Azure SQL 数据库 +
+    - name: Azure SQL 数据库 >
       href: /azure/sql-database/
-    - name: Azure SQL 数据仓库 +
+    - name: Azure SQL 数据仓库 >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-    - name: Azure VM 上的 SQL Server +
+    - name: Azure VM 上的 SQL Server >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Resources
   items:
     - name: 了解
       items:
-        - name: Microsoft Virtual Academy +
+        - name: Microsoft Virtual Academy >
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: 第 9 频道上的 SQL +
+        - name: 第 9 频道上的 SQL >
           href: 'https://channel9.msdn.com/Search'
     - name: 博客
       items:
-        - name: SQL Server +
+        - name: SQL Server >
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server 数据库引擎 +
+        - name: SQL Server 数据库引擎 >
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server 安全性 +
+        - name: SQL Server 安全性 >
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools +
+        - name: SQL Server Data Tools >
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: 反馈和帮助
       items:
         - name: 获取帮助
           href: ../sql-server/sql-server-get-help.md
-        - name: 有关 SQL 文档内容的反馈 +
+        - name: 有关 SQL 文档内容的反馈 >
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: 有关 SQL Server (UserVoice) 的反馈 +
+        - name: 有关 SQL Server (UserVoice) 的反馈 >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: SQL 文档调查 +
+        - name: SQL 文档调查 >
           href: 'https://aka.ms/sqldocsurvey'
         - name: 参与编辑 SQL 文档！
           href: ../sql-server/sql-server-docs-contribute.md
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow +
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 论坛 +
+        - name: MSDN 论坛 >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
     - name: 伙伴
       items:
@@ -10328,14 +10329,14 @@
   items:
     - name: SQL 文档包括文件
       href: ../sql-server/applies-to-includes.md
-    - name: 已存档内容 (SQL 2005-2012) +
-      displayName: '2005, 2008, 2008 r2, 2012'
+    - name: 已存档内容 (SQL 2005-2012) >
+      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: 数据库示例
       items:
         - name: 示例概述
           href: ../samples/sql-samples-where-are.md
-        - name: 所有 Github 示例 +
+        - name: 所有 Github 示例 >
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -17118,6 +17119,8 @@
                   href: ../t-sql/statements/set-quoted-identifier-transact-sql.md
                 - name: REMOTE_PROC_TRANSACTIONS
                   href: ../t-sql/statements/set-remote-proc-transactions-transact-sql.md
+                - name: RESULT SET CACHING
+                  href: ../t-sql/statements/set-result-set-caching-transact-sql.md
                 - name: ROWCOUNT
                   href: ../t-sql/statements/set-rowcount-transact-sql.md
                 - name: SHOWPLAN_ALL
