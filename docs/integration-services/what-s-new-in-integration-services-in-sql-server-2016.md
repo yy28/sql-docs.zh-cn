@@ -15,15 +15,14 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a747f7dea48d8c8d733e256473609f37764850a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290633"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877719"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 本主题介绍 SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中新增或更新的功能。 它还包括在 SQL Server 2016 期限期间在 [Integration Services (SSIS) 的 Azure 功能包](../integration-services/azure-feature-pack-for-integration-services-ssis.md)中添加或更新的功能。  
 
@@ -367,10 +366,10 @@ ms.locfileid: "58290633"
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 在 **Service Pack 2 中引入了** ValidationDetails [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 属性。 此时尚未公布或记录这一新属性。 **和** 中也提供 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ValidationDetails [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]属性。   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)   
  [SQL Server 2016 的各版本和支持的功能](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

@@ -1,5 +1,5 @@
 ---
-title: 分区 (Analysis Services-多维数据) |Microsoft 文档
+title: 分区 (Analysis Services-多维数据) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf73453ce1bfec6d3cd55a73fe6e85938ee7b006
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b46bd2e1f314d447b6b4a2f10b0470879bfbcea5
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023330"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560061"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>分区（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34023330"
   
  简单 <xref:Microsoft.AnalysisServices.Partition> 对象由基本信息、切片定义、聚合设计等组成。 基本信息包括分区的名称、存储模式和处理模式等。 切片定义是指定元组或集的 MDX 表达式。 切片定义具有的限制与 StrToSet MDX 函数相同。 借助 CONSTRAINED 参数，切片定义可使用多维数据集中的维度、层次结构、级别和成员名称、键、唯一名称或其他命名对象，但不能使用 MDX 函数。 聚合设计是可由多个分区共享的聚合定义的集合。 默认聚合设计取自父多维数据集的聚合设计。  
   
- 通过使用分区[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]以管理和多维数据集中存储数据和聚合的度量值组。 每个度量值组至少有一个分区；该分区在定义度量值组时创建。 为度量值组创建新分区时，该新分区将添加到此度量值组已有的分区集合中。 度量值组反映了其所有分区中所包含的组合数据。 这意味着必须确保度量值组中某分区的数据不同于此度量值组中任何其他分区的数据，从而确保未在度量值组中多次反映此数据。 度量值组的原始分区基于多维数据集的数据源视图中的单个事实数据表。 当度量值组有多个分区时，每个分区可以引用数据源视图中的或者多维数据集的基本关系数据源中的不同表。 如果将每个分区限制到表中的不同行，则度量值组中的多个分区可以引用同一个表。  
+ 通过使用分区[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用于管理和存储多维数据集中的数据和聚合的度量值组。 每个度量值组至少有一个分区；该分区在定义度量值组时创建。 为度量值组创建新分区时，该新分区将添加到此度量值组已有的分区集合中。 度量值组反映了其所有分区中所包含的组合数据。 这意味着必须确保度量值组中某分区的数据不同于此度量值组中任何其他分区的数据，从而确保未在度量值组中多次反映此数据。 度量值组的原始分区基于多维数据集的数据源视图中的单个事实数据表。 当度量值组有多个分区时，每个分区可以引用数据源视图中的或者多维数据集的基本关系数据源中的不同表。 如果将每个分区限制到表中的不同行，则度量值组中的多个分区可以引用同一个表。  
   
  分区是用来管理多维数据集（尤其是大型多维数据集）的强大而灵活的工具。 例如，某个包含销售信息的多维数据集可以包含存储过去每一年数据的分区和存储当年每一季度数据的分区。 将当前信息添加到多维数据集时，只需处理当前季度分区；如果处理的数据量越少，则会通过缩短处理时间来提高处理性能。 在年末，这四个针对季度的分区可以合并成一个单独的针对全年的分区，并为新一年的第一季度创建新分区。 此外，该新分区的创建过程可以作为数据仓库加载和多维数据集处理过程的一部分自动执行。  
   
  分区对多维数据集的业务用户不可见。 但是，管理员可以配置、添加或删除分区。 每个分区都存储在一组单独的文件中。 每个分区的聚合数据都可以存储在定义该分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中，也可以存储在其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中，或者存储在用于提供分区的源数据的数据源中。 分区允许多维数据集的源数据和聚合数据分布在多个硬盘驱动器和多个服务器计算机中。 对于中型到大型的多维数据集而言，分区可以极大地提高查询性能、负载性能和多维数据集的易维护性。  
   
- 可以在独立于度量值组中其他分区的情况下，对每个分区的存储模式进行配置。 可以使用源数据位置、存储模式、主动缓存和聚合设计的选项的任意组合来存储分区。 在设计分区时，您可以使用实时 OLAP 和主动缓存的选项来平衡查询速度以避免发生滞后。 存储选项还可以应用于相关的维度以及度量值组中的事实。 这种灵活性使您能够按照需要设计多维数据集的存储策略。 有关详细信息，请参阅[分区存储模式和处理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)，[聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)和[主动缓存&#40;分区&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
+ 可以在独立于度量值组中其他分区的情况下，对每个分区的存储模式进行配置。 可以使用源数据位置、存储模式、主动缓存和聚合设计的选项的任意组合来存储分区。 在设计分区时，您可以使用实时 OLAP 和主动缓存的选项来平衡查询速度以避免发生滞后。 存储选项还可以应用于相关的维度以及度量值组中的事实。 这种灵活性使您能够按照需要设计多维数据集的存储策略。 有关详细信息，请参阅[分区存储模式和处理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)，[聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)并[主动缓存&#40;分区&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="partition-structure"></a>分区结构  
  分区的结构必须与其度量值组的结构匹配，这意味着还必须在分区中定义用于定义度量值组的度量值以及所有相关维度。 因此，创建分区时，它将自动继承为度量值组定义的同一组度量值和相关维度。  
@@ -40,18 +40,18 @@ ms.locfileid: "34023330"
  有些事实数据表可能会包含未用于定义度量值组中度量值的列，但有些则不会包含。 同样，有些数据库可能会包含未用于定义相关维度表中属性的列，但有些则不会包含。 某些数据库可能会包含未用于事实数据表或相关维度表的表，而其他数据库则不包含。  
   
 ## <a name="data-sources-and-partition-storage"></a>数据源和分区存储  
- 分区基于数据源中的表或视图，或者基于数据源视图中的表或命名查询。 分区数据的存储位置是由数据源绑定定义的。 通常，可以对度量值组进行水平或垂直分区：  
+ 分区基于数据源中的表或视图，或者基于数据源视图中的表或命名查询。 分区数据的存储位置是由数据源绑定定义的。 你可以使用单表分区方案或多表分区方案的度量值组进行分区：  
   
--   在水平分区的度量值组中，其中的每个分区都基于一个单独的表。 此分区类型适用于数据被分隔为多个表的情况。 例如，在某些关系数据库中，对每个月的数据都使用一个单独的表。  
+-   多表分区方案中度量值组分区中的每个分区基于一个单独的表。 此分区类型适用于数据被分隔为多个表的情况。 例如，在某些关系数据库中，对每个月的数据都使用一个单独的表。  
   
--   在垂直分区的度量值组中，度量值组基于单个表，并且每个分区基于筛选该分区数据的源系统查询。 例如，如果一个表中包含几个月的数据，则通过应用 Transact-SQL WHERE 子句以返回每个分区的每个月的数据，仍可以按月份对度量值组进行分区。  
+-   在单表分区方案的度量值组基于单个表，以及每个分区基于筛选器分区的数据的源系统查询。 例如，如果一个表中包含几个月的数据，则通过应用 Transact-SQL WHERE 子句以返回每个分区的每个月的数据，仍可以按月份对度量值组进行分区。  
   
- 每个分区都有存储设置，用来确定分区的数据和聚合是存储在本地 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中，还是存储在使用其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的远程分区中。 存储设置还可以指定存储模式，并指定是否使用主动缓存来控制分区的滞后时间。 有关详细信息，请参阅[分区存储模式和处理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)，[主动缓存&#40;分区&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)，和[远程分区](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。  
+ 每个分区都有存储设置，用来确定分区的数据和聚合是存储在本地 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中，还是存储在使用其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的远程分区中。 存储设置还可以指定存储模式，并指定是否使用主动缓存来控制分区的滞后时间。 有关详细信息，请参阅[分区存储模式和处理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)，[主动缓存&#40;分区&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)，并且[远程分区](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。  
   
 ## <a name="incremental-updates"></a>增量更新  
  在多分区的度量值组中创建和管理分区时，必须十分谨慎，以确保多维数据集数据的准确性。 虽然对于单分区的度量值组通常不需要特别谨慎，但在对这些分区进行增量更新时则需要十分小心。 对分区进行增量更新时，将创建与源分区具有相同结构的新临时分区。 临时分区在被处理后将与源分区合并。 因此，必须确保填充临时分区的处理查询不会复制现有分区中的任何已有数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置度量值属性](../../analysis-services/multidimensional-models/configure-measure-properties.md)   
  [多维模型中的多维数据集](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
