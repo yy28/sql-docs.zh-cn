@@ -31,7 +31,7 @@ ms.locfileid: "63158281"
   
  有关脚本示例，请参阅下面内容：  
   
- [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)列中的一个值匹配。  
+ [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。列中的一个值匹配。  
   
  [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
