@@ -20,7 +20,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 750d299b951b403ed6fe51baa43b047505860c3f
 ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58493799"
