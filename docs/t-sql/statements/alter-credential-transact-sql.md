@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 32df63456e46fd8f522d897cd6068967bbb785b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ec9f609ed3687106ca65152496cbb20b2ff1b8f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63051590"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  可以在 **sys.credentials** 目录视图中查看有关凭据的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 ALTER ANY CREDENTIAL 权限。 如果该凭据是系统凭据，则要求具有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

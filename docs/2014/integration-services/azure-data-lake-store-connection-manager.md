@@ -28,7 +28,7 @@ ms.locfileid: "62836887"
   
 1.  在“添加 SSIS 连接管理器”  对话框中，选择“AzureDataLake” ，然后单击“添加” 。   
   
-2.  在“Azure Data Lake Store 连接管理器编辑器”对话框的“ADLS 主机”  字段中，键入 Azure Data Lake Store 主机 URL。 例如： https://test.azuredatalakestore.net或 test.azuredatalakestore.net。
+2.  在“Azure Data Lake Store 连接管理器编辑器”对话框的“ADLS 主机”  字段中，键入 Azure Data Lake Store 主机 URL。 例如： https://test.azuredatalakestore.net 或 test.azuredatalakestore.net。
   
 3.  选择相应的身份验证类型来访问 Azure Data Lake Store 数据。
 

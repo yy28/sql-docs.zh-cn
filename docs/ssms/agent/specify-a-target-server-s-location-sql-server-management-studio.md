@@ -11,16 +11,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], location
 ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 580cfacc0aacb1144bc16b61ebb8ea3f902c049f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6ec05e58eefd80d4ef3f2602ad9a3d5f55c01fd4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696216"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095524"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>指定目标服务器的位置 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51696216"
   
     [限制和局限](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要指定目标服务器的位置，请使用：**  
   
