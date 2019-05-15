@@ -23,7 +23,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
 ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52409574"
