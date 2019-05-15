@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, viewing
 - displaying jobs
 ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 68f154a268a4ed3cac1b4dcd1ebad493db361ae8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 41db40bfdb2de654a924da50c1c2de46fe65a625
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696146"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089587"
 ---
 # <a name="view-a-job"></a>View a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51696146"
   
 -   **开始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要查看作业，可使用：**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "51696146"
 ## <a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="Security"></a>安全性  
-除非您是 **sysadmin** 固定服务器角色的成员，否则您只能查看自己拥有的作业。 此角色的成员可以查看所有作业。 有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
+除非您是 **sysadmin** 固定服务器角色的成员，否则您只能查看自己拥有的作业。 此角色的成员可以查看所有作业。 有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   

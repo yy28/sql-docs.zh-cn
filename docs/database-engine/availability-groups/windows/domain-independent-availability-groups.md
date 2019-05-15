@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: c11900048bf7f32e39f993cb8369162a468be13d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744557"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090256"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>创建域独立可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Windows Server 2016 引入了一种基于与 Active Directory 分离的群集的
 
 当前，完全使用 SQL Server Management Studio 无法实现创建域独立可用性组。 尽管创建域独立可用性组与创建常规可用性组基本相同，但某些方面（如创建证书）只有使用 Transact-SQL 才能实现。 以下示例假定具有两个副本的可用性组配置：一个主要副本和一个次要副本。 
 
-1. [使用此链接中的说明](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/)部署工作组群集，该群集由将加入可用性组的所有服务器组成。 确保在配置工作组群集之前已配置常见 DNS 后缀。
+1. [使用此链接中的说明](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059)部署工作组群集，该群集由将加入可用性组的所有服务器组成。 确保在配置工作组群集之前已配置常见 DNS 后缀。
 2. 在将加入可用性组的每个实例上[启用 AlwaysOn 可用性组功能](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)。 这需要重新启动每个 SQL Server 实例。
 3. 将托管主要副本的每个实例都需要数据库主密钥。 如果主密钥不存在，运行以下命令：
 
