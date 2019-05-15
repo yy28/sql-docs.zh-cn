@@ -1,7 +1,7 @@
 ---
 title: 使用 Microsoft 商业智能 (BI) 工具进行分析和报告
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services, sql-server
@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 3acb11029c767efb3be21274d27ab271a5140793
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 7916d3b2afe514d576ba7ec99cd1a7edab244278
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658071"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503904"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商业智能 (BI) 工具进行分析和报告
 
@@ -23,6 +23,9 @@ ms.locfileid: "58658071"
 下表将数据分析和报告的工作负荷映射到最适合这些工作负荷的 Microsoft BI 工具。 有关产品的详细信息，请单击表中的产品链接。  
   
  如果要查找这些工具的简短概述以帮助确定适合的工具，请参阅 [Microsoft Business Intelligence (BI) 工具简介](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx)。
+
+> [!NOTE]
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
 |工作负荷|用户|||BI 工具|||  
 |---------------|----------|-|-|--------------|-|-|  

@@ -12,15 +12,15 @@ f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTDATABASESUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.IMPORTSCRIPTWIZARD.SUMMARY
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5ed0acd238ebc934c6adf5061eafe3f15ce44bef
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: d2c08af731fc8f75089250c92ec4f0912a96eee6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143457"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099576"
 ---
 # <a name="import-into-a-database-project"></a>导入到数据库项目
 可以通过“导入”从活动的数据库或 .dacpac 使用新项目填充项目，或使用脚本中的新定义更新您项目中的现有对象。 请注意这三种途径存在一些行为差异，下面将进行说明。  

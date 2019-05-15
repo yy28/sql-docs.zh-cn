@@ -1,5 +1,5 @@
 - name: 欢迎
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: 概述
   items:
     - name: SQL Server 的新增功能
@@ -28,7 +28,7 @@
         - name: SQL Server 2019
           href: ../sql-server/sql-server-ver15-release-notes.md
         - name: SQL Server 2017
-          href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
+          href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
         - name: SQL Server 2016
           href: ../sql-server/sql-server-2016-release-notes.md
         - name: SQL Server 2014
@@ -61,20 +61,30 @@
               href: ../big-data-cluster/deploy-big-data-tools.md
             - name: 安装 mssqlctl
               href: ../big-data-cluster/deploy-install-mssqlctl.md
-        - name: 部署脚本
-          items:
-            - name: Azure Kubernetes 服务
-              href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: 部署指南
+        - name: 部署
           items:
             - name: 部署指南
               href: ../big-data-cluster/deployment-guidance.md
-            - name: Azure Kubernetes 服务
-              href: ../big-data-cluster/deploy-on-aks.md
-            - name: Kubeadm
-              href: ../big-data-cluster/deploy-with-kubeadm.md
-            - name: Minikube
-              href: ../big-data-cluster/deploy-on-minikube.md
+            - name: 升级到新版本
+              href: ../big-data-cluster/deployment-upgrade.md
+            - name: 自定义部署
+              href: ../big-data-cluster/deployment-custom-configuration.md
+            - name: 配置存储
+              href: ../big-data-cluster/concept-data-persistence.md
+            - name: 脱机部署
+              href: ../big-data-cluster/deploy-offline.md
+            - name: 部署目标
+              items:
+                - name: Azure Kubernetes 服务
+                  href: ../big-data-cluster/deploy-on-aks.md
+                - name: Kubeadm
+                  href: ../big-data-cluster/deploy-with-kubeadm.md
+                - name: Minikube
+                  href: ../big-data-cluster/deploy-on-minikube.md
+            - name: 部署脚本
+              items:
+                - name: Azure Kubernetes 服务
+                  href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
     - name: 概念
       items:
         - name: 应用程序部署
@@ -89,8 +99,6 @@
           href: ../big-data-cluster/concept-storage-pool.md
         - name: 计算池
           href: ../big-data-cluster/concept-compute-pool.md
-        - name: 数据暂留
-          href: ../big-data-cluster/concept-data-persistence.md
         - name: Security
           href: ../big-data-cluster/concept-security.md
     - name: 操作指南
@@ -111,6 +119,10 @@
                   href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: HDFS 分层
                   href: ../big-data-cluster/hdfs-tiering.md
+                - name: 为 HDFS 分层装入 ADLS Gen2
+                  href: ../big-data-cluster/hdfs-tiering-mount-adlsgen2.md
+                - name: 为 HDFS 分层装入 S3
+                  href: ../big-data-cluster/hdfs-tiering-mount-s3.md
         - name: 数据引入
           items:
             - name: 使用 curl 加载数据
@@ -141,6 +153,8 @@
               href: ../big-data-cluster/sparklyr-from-RStudio.md
             - name: GPU 支持和 TensorFlow
               href: ../big-data-cluster/spark-gpu-tensorflow.md
+            - name: 将 Spark 与 SQL Server 集成
+              href: ../big-data-cluster/spark-mssql-connector.md
         - name: 管理 SQL Server 大数据群集
           items:
             - name: 连接到大数据群集
@@ -167,6 +181,10 @@
               href: ../big-data-cluster/spark-history-server.md
     - name: 参考
       items:
+        - name: 部署参考
+          items:
+            - name: 部署配置文件
+              href: ../big-data-cluster/reference-deployment-config.md
         - name: mssqlctl 参考
           items:
             - name: mssqlctl
@@ -183,6 +201,8 @@
                   href: ../big-data-cluster/reference-mssqlctl-cluster.md
                 - name: mssqlctl 群集配置
                   href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+                - name: mssqlctl 群集配置部分
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
                 - name: mssqlctl 群集调试
                   href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
             - name: 存储器
@@ -6958,180 +6978,173 @@
                     - name: 分析实际执行计划
                       href: ../relational-databases/performance/analyze-an-actual-execution-plan.md
         - name: 内存中 OLTP
-          href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
           items:
-            - name: 示例
-              items:
-                - name: 内存中 OLTP 代码示例
-                  href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
-                  items:
-                    - name: 演示：内存 OLTP 的性能改进
-                      href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
-                    - name: 创建内存优化表和本机编译的存储过程
-                      href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
-                    - name: 应用程序级分区
-                      href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
-                    - name: 内存中 OLTP 的示例数据库
-                      href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
             - name: 概念
               items:
-                - name: 使用方案
+                - name: 内存中概述
                   href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
-                - name: 对功能的应用进行规划
-                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
-                - name: 要求
-                  href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
-                - name: 针对内存中 OLTP 的标量用户定义函数
-                  href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
-                - name: 索引
-                  href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
-                - name: 内存优化表
-                  href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
                   items:
-                    - name: 概述
+                    - name: 内存优化表
                       href: ../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
-                    - name: 本机编译
-                      href: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
-                    - name: 更改表
-                      href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
-                    - name: 中的
-                      href: ../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
-                    - name: 分区的应用程序模式
-                      href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
-                    - name: 统计信息
-                      href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
+                    - name: 快速调查
+                      href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
+                    - name: 视频、示例、资源
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+                - name: 内存中规划
+                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
+                  items:
+                    - name: 要求
+                      href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
+                    - name: 评估优势
+                      href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+                    - name: 使用 PowerShell 进行评估
+                      href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
+                    - name: 内存优化顾问
+                      href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
+                    - name: 本机编译顾问
+                      href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
                     - name: 表和行大小
                       href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
-                    - name: 查询处理指南
-                      href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
-                    - name: 本机编译的存储过程
-                      href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
-                      items:
-                        - name: 创建本机编译的存储过程
-                          href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
-                        - name: Altering Natively Compiled T-SQL Modules
-                          href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
-                        - name: ATOMIC 块
-                          href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
-                        - name: 本机编译存储过程和执行的 Set 选项
-                          href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
-                        - name: 调用本机编译存储过程的最佳做法
-                          href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
-                        - name: 监视本机编译的存储过程的执行
-                          href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
-                        - name: 从数据访问应用程序调用本机编译的存储过程
-                          href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
-                    - name: 估计的所需内存
+                    - name: 估计内存
                       href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
-                      items:
-                        - name: 将数据库绑定到资源池
-                          href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
-                        - name: 内存使用情况的监视和故障排除
-                          href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
-                        - name: 解决内存不足问题
-                          href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
-                        - name: 还原数据库并将它绑定到资源池
-                          href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
-                        - name: 垃圾回收
-                          href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
-                    - name: 创建和管理存储
-                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
-                      items:
-                        - name: 配置存储
-                          href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
-                        - name: 内存优化的文件组
-                          href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
-                        - name: 持久性
-                          href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
-                        - name: 检查点操作
-                          href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
-                        - name: 定义持续性
-                          href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
-                        - name: 比较基于磁盘的表存储与内存优化的表存储
-                          href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
-                        - name: 可伸缩性
-                          href: ../relational-databases/in-memory-oltp/scalability.md
-                    - name: 备份数据库
+                    - name: 配置存储
+                      href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
+                    - name: 迁移触发器
+                      href: ../relational-databases/in-memory-oltp/migrating-triggers.md
+                - name: 本机编译存储过程
+                  href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
+                  items:
+                    - name: 表和存储过程
+                      href: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
+                    - name: ATOMIC 块
+                      href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
+                    - name: 标量用户定义函数
+                      href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
+                    - name: 最佳做法
+                      href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
+                    - name: 内存中表访问权限阐释
+                      href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+                - name: 内存中的性能
+                  href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
+                  items:
+                    - name: 内存中的硬件
+                      href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
+                    - name: Azure SQL 数据库上的内存中
+                      href: /azure/sql-database/sql-database-in-memory
+                - name: 管理内存中
+                  href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
+                  items:
+                    - name: 还原和恢复
+                      href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
+                    - name: Backup
                       href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
-                      items:
-                        - name: 段落还原
-                          href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
-                        - name: 还原和恢复
-                          href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
-                    - name: SQL Server 支持
-                      href: ../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md
-                      items:
-                        - name: 不支持的功能
-                          href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
-                        - name: 管理对象
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
-                        - name: SQL Server Integration Services
-                          href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
-                        - name: SQL Server Management Studio
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
-                        - name: 高可用性
-                          href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-                        - name: T-SQL 支持
-                          href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
-                          items:
-                            - name: 数据类型
-                              href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-                            - name: 使用解释型 T-SQL 访问内存优化表
-                              href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
-                            - name: 本机编译的 T-SQL 模块支持的功能
-                              href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
-                            - name: 对于本机编译的 T-SQL 模块支持的 DDL
-                              href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-                            - name: 内存中 OLTP 不支持的 T-SQL 构造
-                              href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
-                    - name: 迁移到内存中 OLTP
-                      href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
-                      items:
-                        - name: 确定表或存储过程是否应移植到内存中 OLTP
-                          href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
-                        - name: 内存优化顾问
-                          href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
-                        - name: 本机编译顾问
-                          href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
-                        - name: 用于迁移评估的 PowerShell Cmdlet
-                          href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
-                        - name: 在内存优化的表中实现 SQL_VARIANT
-                          href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
-                        - name: 迁移计算列
-                          href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
-                        - name: 迁移触发器
-                          href: ../relational-databases/in-memory-oltp/migrating-triggers.md
-                        - name: 跨数据库查询
-                          href: ../relational-databases/in-memory-oltp/cross-database-queries.md
-                        - name: 在内存优化的表中实现 IDENTITY
-                          href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
-                        - name: 本机编译的存储过程的迁移问题
-                          href: ../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md
-                          items:
-                            - name: 通过本机编译的存储过程创建和访问 TempDB 中的表
-                              href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
-                            - name: 在本机编译模块中模拟 IF-WHILE EXISTS 语句
-                              href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
-                            - name: 在本机编译的存储过程中实现 MERGE 功能
-                              href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-                            - name: 在本机编译的存储过程中实现 CASE 表达式
-                              href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
-                            - name: 实现包含 FROM 或子查询的 UPDATE
-                              href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
-                            - name: 实现外部联接
-                              href: ../relational-databases/in-memory-oltp/implementing-an-outer-join.md
-            - name: 操作说明
-              items:
-                - name: 更快性能的技术清单
-                  href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
-                - name: 通过使用内存优化获得更快的临时表和表变量
-                  href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
-                - name: 对哈希索引进行故障排除
-                  href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
-            - name: References
-              items:
-                - name: SQL Server 2016 白皮书的内部机制
+                    - name: 检查点
+                      href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
+                    - name: 高可用性
+                      href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
+                    - name: 可伸缩性
+                      href: ../relational-databases/in-memory-oltp/scalability.md
+                    - name: 标识实现
+                      href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
+                - name: 内存中体系结构
                   href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+                  items:
+                    - name: 存储器
+                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
+                    - name: 比较存储模式
+                      href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+                    - name: 持久性
+                      href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
+                    - name: 垃圾回收
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
+                - name: 内存中的 T-SQL
+                  href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
+                  items:
+                    - name: 受支持的 T-SQL
+                      href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
+                    - name: 不受支持的 T-SQL
+                      href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
+                    - name: 不支持的功能
+                      href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
+                    - name: 本机编译的 DDL
+                      href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
+                    - name: 定义持续性
+                      href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
+                    - name: 数据类型
+                      href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
+                    - name: 内存中的索引
+                      href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
+                - name: 内存中的 SSIS
+                  href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
+            - name: 教程
+              items:
+                - name: 创建表和内存优化过程
+                  href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+                - name: 应用程序分区(按热日期)
+                  href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
+                - name: 性能演示
+                  href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
+                - name: 监视和故障排除
+                  href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
+            - name: 示例
+              items:
+                - name: 内存中的示例 DB
+                  href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+                - name: 调用本机编译的过程
+                  href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
+                - name: 表分区模式
+                  href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
+                - name: 在本机编译过程中进行合并
+                  href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+                - name: '内存中的 SMO C#'
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
+            - name: 操作指南
+              items:
+                - name: 内存优化表
+                  href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+                  items:
+                    - name: 哈希索引
+                      href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
+                - name: 本机编译模块
+                  href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
+                  items:
+                    - name: 更改本机编译模块
+                      href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
+                - name: T-SQL 解决方法
+                  href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
+                  items:
+                    - name: 访问 TempDb 表
+                      href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
+                    - name: 跨数据库查询
+                      href: ../relational-databases/in-memory-oltp/cross-database-queries.md
+                    - name: 模拟 IF WHILE EXISTS
+                      href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+                    - name: CASE 表达式
+                      href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+                    - name: SQL_VARIANT 列
+                      href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
+                    - name: SQL 2016 中的计算列
+                      href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
+                    - name: 中的
+                      href: ../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
+                - name: 管理，包括内存不足
+                  href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
+                  items:
+                    - name: 资源池
+                      href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+                    - name: 将数据库还原到一个池
+                      href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
+                    - name: 分阶段还原
+                      href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
+                - name: 性能，包括统计信息
+                  href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
+                  items:
+                    - name: 监视性能
+                      href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
+                    - name: 更快的临时表
+                      href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
+                - name: 使用 SSMS 实现内存优化
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
         - name: “度量值组”
           href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
           items:
@@ -7247,6 +7260,8 @@
               items:
                 - name: 在 Windows 上安装
                   href: ../relational-databases/polybase/polybase-installation.md
+                - name: 在 Linux 上安装
+                  href: ../relational-databases/polybase/polybase-linux-setup.md
                 - name: 功能和限制
                   href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
             - name: 配置外部数据源
@@ -7291,6 +7306,8 @@
           items:
             - name: T-SQL 参考
               href: ../relational-databases/polybase/polybase-t-sql-objects.md
+            - name: 类型映射
+              href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: Resources
           items:
             - name: DBA Stack Exchange +
@@ -7891,6 +7908,8 @@
           items:
             - name: 选择一种算法
               href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
+            - name: TDE 故障排除
+              href: ../relational-databases/security/encryption/troubleshoot-tde.md
             - name: 配置具有安全 enclave 的 Always Encrypted
               href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
               items:
@@ -7996,6 +8015,8 @@
               href: ../relational-databases/security/permissions-database-engine.md
             - name: 权限层次结构
               href: ../relational-databases/security/permissions-hierarchy-database-engine.md
+            - name: 使用服务 SID 授予对 SQL Server 中的服务的访问权限
+              href: ../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
         - name: 加密
           href: ../relational-databases/security/encryption/sql-server-encryption.md
           items:
@@ -10104,8 +10125,10 @@
               href: ../linux/sql-server-linux-manage-ssms.md
             - name: 使用 Azure Data Studio 进行管理
               href: ../azure-data-studio/quickstart-sql-server.md
-            - name: 使用 PowerShell 进行管理
+            - name: 使用 Windows PowerShell
               href: ../linux/sql-server-linux-manage-powershell.md
+            - name: 使用 PowerShell Core
+              href: ../linux/sql-server-linux-manage-powershell-core.md
             - name: 使用日志传送
               href: ../linux/sql-server-linux-use-log-shipping.md
             - name: 使用 DB 邮件和电子邮件警报

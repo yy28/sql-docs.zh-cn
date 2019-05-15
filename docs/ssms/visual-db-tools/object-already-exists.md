@@ -1,9 +1,8 @@
 ---
 title: 对象已存在 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -14,16 +13,16 @@ ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db816122ceb5d8320e33d883ac5f6b1f4fd2e944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdadc4734db5dd8911b384b8aa35a01248aff453
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744785"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095266"
 ---
 # <a name="object-already-exists"></a>对象已存在
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-您试图保存的对象与数据库中已有的某个对象同名。 请另选一个名称，然后继续。  
+  您试图保存的对象与数据库中已有的某个对象同名。 请另选一个名称，然后继续。  
   
-也可指示列名已存在。  
+ 也可指示列名已存在。  
+  
   

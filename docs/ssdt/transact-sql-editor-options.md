@@ -25,15 +25,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.ONLINE_EDITING
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ADVANCED
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ffc6d128bcc1984a0d340e3ec4a39e0f6dccc897
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667046"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102059"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 编辑器选项
 本主题包含有关 Transact-SQL 编辑器的一些选项的信息。 要设置这些选项，请通过“工具\选项”菜单导航到“选项”对话框。  
@@ -44,7 +44,7 @@ ms.locfileid: "51667046"
   
 ## <a name="QueryExecution"></a>查询执行  
   
-|“属性”|描述|  
+|属性|描述|  
 |------------|---------------|  
 |**SET ROWCOUNT**|默认值为 0，指示 SQL Server 在收到所有结果之前将一直等待结果。 如果希望 SQL Server 在获取指定数目的行后暂停查询，请提供一个大于 0 的值。 若要关闭此选项（以便返回所有的行），请将 SET ROWCOUNT 指定为 0。|  
 |**SET TEXTSIZE**|默认值为 2,147,483,647 个字节，表示 SQL Server 将针对 text、ntext、nvarchar(max) 和 varchar(max) 数据字段提供最高上限的数据。 它将不影响 XML 数据类型。 提供较小的数值，可以在存在大量值时限制结果数量。 超出指定数量的列将被截断。|  
@@ -72,14 +72,14 @@ ms.locfileid: "51667046"
   
 ## <a name="QueryResults"></a>查询结果  
   
-|“属性”|描述|  
+|属性|描述|  
 |------------|---------------|  
 |在结果集中包括查询|将查询文本作为结果集的一部分返回。|  
 |复制或保存结果时包括列标题|将结果复制到剪贴板或保存到文件时，包括列标题。 如果希望保存或复制的结果数据只有数据而没有列标题，请清除此复选框。|  
 |执行后放弃结果|当屏幕显示接收到查询结果之后，通过放弃查询结果来释放内存。|  
 |在单独选项卡中显示结果|在新文档窗口中显示结果集，而不是在查询文档窗口的底部显示。|  
 |执行查询后切换到“结果”选项卡|自动将屏幕焦点设置到结果集。|  
-|检索的最多字符数|非 XML 数据：<br /><br />输入一个介于 1 到 65535 之间的数字以指定每个单元中显示的最大字符数。 注意：指定大量字符可能会导致结果集中显示的数据截断。 每个单元中显示的最大字符数取决于字号。 在返回较大的结果集时，如果此框中的值太大，可能会导致 SQL Server Management Studio 运行时内存不足，从而影响系统性能。<br /><br />XML 数据：<br /><br />选择 1 MB、2 MB 或 5 MB。 选择“无限制”将检索所有字符。|  
+|检索的最多字符数|非 XML 数据：<br /><br />输入一个介于 1 到 65535 之间的数字以指定每个单元中显示的最大字符数。 **注意：** 指定大量字符可能会导致结果集中显示的数据截断。 每个单元中显示的最大字符数取决于字号。 在返回较大的结果集时，如果此框中的值太大，可能会导致 SQL Server Management Studio 运行时内存不足，从而影响系统性能。<br /><br />XML 数据：<br /><br />选择 1 MB、2 MB 或 5 MB。 选择“无限制”将检索所有字符。|  
 |输出格式|默认情况下，将在通过用空格分隔结果而得到的列中显示输出。 您还可以使用逗号、制表符或空格来分隔列。 选中 **“自定义分隔符”** 复选框，可以在 **“自定义分隔符”** 框中指定其他分隔字符。|  
 |自定义分隔符|自行指定用于分隔列的字符。 只有在 **“输出格式”** 框中选中 **“自定义分隔符”** 复选框时，才可使用此选项。|  
 |在结果集中包括列标题|如果不希望每列都带有列标题，请清除此复选框。|  
