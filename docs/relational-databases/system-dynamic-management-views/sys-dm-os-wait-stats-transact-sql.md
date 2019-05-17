@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 05/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed6edb74cea3c96ae8791c28b23510222aa69ecc
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62690787"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805173"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -778,6 +778,10 @@ GO
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |QUERY_TRACEOUT |标识为仅供参考。 不提供支持。 不保证以后的兼容性。| 
 |RBIO_WAIT_VLF |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|RBIO_RG_STORAGE |由于延迟的日志在页服务器的占用量而要中止的超大规模数据库计算节点时发生。 <br /> **适用对象**：Azure SQL 数据库的超大规模。|
+|RBIO_RG_DESTAGE |通过从长远来看日志存储由于延迟的日志占用量而受到限制超大规模数据库计算节点时发生。 <br /> **适用对象**：Azure SQL 数据库的超大规模。|
+|RBIO_RG_REPLICA |超大规模数据库计算节点被阻止原因延迟日志消耗的可读辅助副本节点时发生。 <br /> **适用对象**：Azure SQL 数据库的超大规模。|
+|RBIO_RG_LOCALDESTAGE |超大规模数据库计算节点将由日志服务由于延迟的日志占用量而中止时发生。 <br /> **适用对象**：Azure SQL 数据库的超大规模。|
 |RECOVER_CHANGEDB |在备用数据库中同步数据库状态期间出现。| 
 |RECOVERY_MGR_LOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
