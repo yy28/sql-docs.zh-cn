@@ -301,7 +301,7 @@ GO
   
 -   对于更新要复制到订阅服务器上内存优化表的表的主键，存在一些限制。 有关详细信息，请参阅[将更改复制到主键](#PrimaryKey)。  
   
--   在内存优化表中不支持外键、唯一约束、触发器、架构修改、ROWGUIDCOL、计算列、数据压缩、别名数据类型、版本化和锁。 有关信息，请参阅 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 。  
+-   在内存优化表中不支持外键、唯一约束、触发器、架构修改、ROWGUIDCOL、计算列、数据压缩、别名数据类型、版本化和锁。 有关信息，请参阅 [内存中 OLTP 不支持的 T-SQL 构造](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 。  
   
 ##  <a name="Schema"></a> 修改架构文件  
   

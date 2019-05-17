@@ -8692,7 +8692,7 @@
               href: ../ssms/install-other-languages.md
             - name: SSMS 的支持策略
               href: ../ssms/support-policy.md
-        - name: 教程：SQL Server Management Studio
+        - name: SQL Server Management Studio
           href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
           items:
             - name: 使用 SSMS 连接并查询 SQL Server
@@ -9274,6 +9274,10 @@
                           items:
                             - name: 生成脚本向导支持的对象
                               href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+        - name: 故障排除
+          items:
+            - name: 获取完整内存转储
+              href: ../ssms/troubleshoot/get-full-memory-dump.md
         - name: References
           items:
             - name: SSMS 环境
