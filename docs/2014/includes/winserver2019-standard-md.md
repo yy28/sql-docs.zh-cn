@@ -1,1 +1,9 @@
-Windows Server 2019 标准版
+---
+ms.openlocfilehash: fd9b126ea6c748f19d43cc7a9f51d0150d46155b
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820104"
+---
+Windows Server 2019 Standard
