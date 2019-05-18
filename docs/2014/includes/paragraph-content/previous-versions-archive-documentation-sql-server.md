@@ -1,18 +1,23 @@
 ---
-ms.openlocfilehash: 51254f2045ea7e3125a42abbbab9c1599a1deb2a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 7bcf7ac382bb60e1a38b34ac6e3a26c2126e1e88
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2019
-ms.locfileid: "65820617"
+ms.locfileid: "65836167"
 ---
 
+我们通过一组存档网页来留存较早版本的 SQL Server 的相关文档。 已存档的网页不由搜索引擎，例如 Bing.com 和 Google.com 处理。 但您可以看到我们的文档在这些存档_以前版本 /_ 地址：
 
-我们通过一组存档网页来留存较早版本的 SQL Server 的相关文档。 可在 [SQL Server 以前版本文档](https://docs.microsoft.com/previous-versions/sql/)中看到这些存档。
+- [https://docs.microsoft.com/previous-versions/sql/](https://docs.microsoft.com/previous-versions/sql/)
 
-截至 2018 年 11 月，这些存档至少包括以下内容的相关文档：
+这些存档的文档至少包含在以下较旧版本：
+
 - SQL Server 2012
 - SQL Server 2008 R2
 - SQL Server 2008
 - SQL Server 2005
 
+[SQL Server 2014 文档](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)仍由搜索引擎处理。
+
+SQL Server 2016 和更高版本，记录[此处](https://docs.microsoft.com/sql/sql-server/index)。

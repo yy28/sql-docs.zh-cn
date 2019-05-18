@@ -19,17 +19,19 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8c8ac11c1dada747783a1edaac3d3b1c8b5c795
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62470382"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836210"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 联机丛书
 
   欢迎使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 联机丛书。 联机丛书包含任务说明和参考文档，此类信息旨在介绍如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]执行数据管理和商业智能工作。  
-  
+
+SQL Server 2016 和更高版本，记录[此处](https://docs.microsoft.com/sql/sql-server/index)。 SQL Server 2012 和较旧版本中，记录[此处](#previous-versions-gm2014)。 <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
+
  **进行试用：**  
  ![Azure 虚拟机小](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 是否拥有 Azure 帐户？  然后转**[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 启动具有 SQL Server 2014 Service Pack 1 (SP1) 的虚拟机已安装。 SQL Server 2014 (SP1) 的详细信息，请参阅[SQL Server 2014 Service Pack 1 发布信息](https://support.microsoft.com/en-us/kb/3058865)。 
   
@@ -64,7 +66,11 @@ ms.locfileid: "62470382"
 -   [数据平台开发人员中心](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
 -   [XML 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=42458)  
-  
+
+## <a name="previous-versions-gm2014"></a> SQL Server 2005、 2008、 2012、 2016年 +
+
+[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>请参阅  
 
  [SQL Server 配置管理器帮助](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
