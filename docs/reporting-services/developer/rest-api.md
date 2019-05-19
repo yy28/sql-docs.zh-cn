@@ -1,21 +1,21 @@
 ---
 title: 使用 Reporting Services 的 REST API 进行开发 | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: d4f4af8dc03713046915f61effc684003303aaa9
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254692"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502745"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 进行开发
 
@@ -34,7 +34,7 @@ REST API 请求/响应对可分解为五个组件：
 * **请求 URI**，其中包括：`{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`。 虽然请求 URI 包含在请求消息标头中，但此处将单独进行调用，因为大多数语言或框架都要求将其与请求消息分开传递。
 
     * URI 方案：指示用于传输请求的协议。 例如，`http` 或 `https`。
-    * URI 主机：指定通过 REST 服务终结点的服务器域名或 IP 地址，例如 `myserver.contoso.com`。
+    * URI 主机：指定承载 REST 服务终结点的服务器域名或 IP 地址，例如 `myserver.contoso.com`。
     * 资源路径：指定资源或资源集合，其中可能包含服务在做资源抉择时使用的多个段。 例如：`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` 可用于获取 CatalogItem 的指定属性。
     * 查询字符串（可选）：提供其他简单参数，例如 API 版本或资源选择条件。
 
@@ -56,7 +56,7 @@ REST API 请求/响应对可分解为五个组件：
 
 ## <a name="api-documentation"></a>API 文档
 
-新式 REST API 需要新式 API 文档。 REST API 基于 OpenAPI 规范（又名 swagger 规范） 文档可从 [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) 上获取。 除记录 API 外，SwaggerHub 还帮助在选择的语言中生成客户端库 - JavaScript、TypeScript、C#、Java、Python、Ruby 等。
+新式 REST API 需要新式 API 文档。 REST API 基于 OpenAPI 规范（也称为 swagger 规范）构建，且文档可从 [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) 上获取。 除记录 API 外，SwaggerHub 还帮助在选择的语言中生成客户端库 - JavaScript、TypeScript、C#、Java、Python、Ruby 等。
 
 ## <a name="testing-api-calls"></a>测试 API 调用
 

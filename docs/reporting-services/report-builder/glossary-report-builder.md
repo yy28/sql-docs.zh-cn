@@ -6,23 +6,22 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 793672d6f98d588b0f2d4c80963a29c41e392354
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296468"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775428"
 ---
 # <a name="glossary-report-builder"></a>词汇表（报表生成器）
-  
   
 |术语|定义|  
 |----------|----------------|  
 |.NET Framework|支持生成、部署和运行下一代应用程序和 Web 服务的必备 Windows 组件。 此组件为现有投资与下一代应用程序和服务间的集成提供了基于标准的高效率多语言环境，并能够快速灵活地解决 Internet 规模应用程序的部署和操作提出的挑战。 .NET Framework 由三个主要部分组成：公共语言运行时、分层的统一类库集和称为 ASP.NET 的 ASP 组件化版本。 请参阅：ASP.NET、公共语言运行时和 .NET Framework 类库。|  
 |ActiveX 数据对象 (ActiveX Data Objects)|可访问数据源的组件对象模型对象。 此 API 在 OLE DB 和编程语言（例如 Visual Basic、Visual Basic for Applications、Active Server Pages 和 Microsoft Internet Explorer Visual Basic Scripting）之间提供了一个接口层。|  
-|特别报告 (ad hoc report)|使用访问报表模型的 Report Builder 1.0 生成的 .rdl 报表。|  
+|特别报告 (ad hoc report)|  
 |修饰 (adornment)|附加到窗格或窗口边缘的控件或状态区域（如工具栏或标尺）。|  
 |聚合|由多个单独值组成的汇总值。|  
 |聚合函数|对多个值执行计算并返回单个汇总值的函数。|  
@@ -60,7 +59,6 @@ ms.locfileid: "56296468"
 |图表数据区域 (chart data region)|报表布局中以图形格式显示数据的报表项。|  
 |子级|层次结构中与当前成员直接相关的下一较低级别的成员。|  
 |子句 (clause)|Transact-SQL 中 SQL 语句的子单元。 子句以一个关键字开始。|  
-|点击链接型报表 (clickthrough report)|当点击呈现的报表生成器报表中的数据时显示相关报表模型数据的报表。|  
 |客户端应用程序 (client application)|从服务器检索数据并对来自关系数据库或多维数据库的数据进行本地分析和表示的应用程序。|  
 |客户端游标 (client cursor)|在客户端实现的游标。 整个结果集首先传输到客户端，接着客户端 API 软件从这一缓存的结果集实现游标功能。|  
 |CLR|请参阅另一术语：公共语言运行时 (common language runtime)|  
@@ -210,7 +208,7 @@ ms.locfileid: "56296468"
 |主文件 (master file)|随早期的 SQL Server 版本一起安装的文件，用来存储 master、model 和 tempdb 系统数据库和事务日志以及 pubs 示例数据库和事务日志。|  
 |匹配字段 (match fields)|用于在分析数据和空间数据之间建立关系的一组字段。|  
 |矩阵数据区域 (matrix data region)|报表布局上的数据区域，用于提供与交叉表和数据透视表类似的功能。 在运行时，由于报表数据和数据区域是组合在一起的，所以矩阵在页面上沿水平和垂直方向增长。 矩阵单元中的值显示仅限于单元所属行组和列组的交集的聚合值。|  
-|MDX|请参阅另一术语：多维表达式 (MDX)|  
+|MDX|请参阅另一术语：多维表达式 (Multidimensional Expressions) (MDX)|  
 |Mercator 投影 (Mercator projection)|在地图报表项中，指的是 Gerardus Mercator 在 1569 年发现的柱面地图投影。|  
 |元数据|有关数据属性的信息，例如列中的数据类型（numeric、text 等）或列的长度；有关文件的信息，例如其标题、说明、创建日期以及最后修改日期；或者有关数据结构的信息或指定对象设计（例如多维数据集或维度）的信息。|  
 |方法|通过使用 COM 对象执行操作的函数，与在 SQL-DMO、OLE DB 和 ActiveX 数据对象 (ADO) 中一样。|  
@@ -259,16 +257,16 @@ ms.locfileid: "56296468"
 |属性页|在界面中显示对象的相关信息的对话框。|  
 |属性|为控件、字段或数据库对象设置的命名属性，用来定义对象的其中一个特征（例如大小、颜色或屏幕位置）或某一方面的行为（例如是否隐藏）。|  
 |protocol|使计算机之间可以交换信息的一组标准的格式和过程。|  
-|提供程序|1.OLE DB 访问接口。 2. 提供数据库访问的进程内动态链接库 (DLL)。|  
+|提供程序|1.OLE DB 提供程序。 2. 提供数据库访问的进程内动态链接库 (DLL)。|  
 |查询参数 (query parameters)|在数据集查询中指定的参数，如 Transact-SQL 查询。|  
-|RDL|请参阅另一术语：报表定义语言|  
+|RDL|请参阅另一术语：报表定义语言 (Report Definition Language)|  
 |记录 (record)|视为一个单元的一组相关字段（列）信息。 在关系数据库中，人们更习惯于将记录称为行。|  
 |矩形 (rectangle)|一个报表项，可用作多个报表项的容器，也可用作报表上的一个图形元素。|  
 |递归层次结构 (recursive hierarchy)|1.将来自包含多个层次结构级别的单个报表数据集的数据组织到分层结构中的层次结构。例如，表示组织层次结构中的经理－雇员关系的报告结构。 2. 在 Master Data Services 中，指的是包括递归关系的派生层次结构。 在实体具有基于域的属性，而该属性基于实体本身时，存在递归关系。|  
 |关系数据库|在表中以数据行和数据列的形式存储信息，并通过使用一个表的指定列中的数据在另一个表中查找其他数据来执行搜索的数据库或数据库管理系统。|  
 |关系数据库管理系统 (relational database management system)|将数据组织成相关行和列的系统。|  
 |关系 OLAP|使用关系数据库中的表存储多维结构的存储模式。|  
-|关系 (relationship)|1.表之间的一种联系，使一个表中的主键与另一个表中的外键关联起来。 在数据库关系图中，如果强制表之间的引用完整性，则使用实线表示关系线，如果对 INSERT 和 UPDATE 事务不强制引用完整性，则使用虚线表示关系线。 关系线的端点显示主键符号以表示主键到外键关系，或者显示无穷符号以表示一对多关系的外键一方。 <br />2.在 Metadata Services 中，关系是对象对之间的关联，其中一个对象是起点，另一个对象是目标。 每个后续对象对都重复这种关联，因此一个关系的目标就成为下一个关系中的起点。 这样，信息模型中的所有对象通过关系链相关联，在整个信息模型中这种关系链从一个对象扩展到下一个对象。|  
+|关系 (relationship)|1.表之间的一种联系，使一个表中的主键与另一个表中的外键关联起来。 在数据库关系图中，如果强制表之间的引用完整性，则使用实线表示关系线，如果对 INSERT 和 UPDATE 事务不强制引用完整性，则使用虚线表示关系线。 关系线的端点显示主键符号以表示主键到外键关系，或者显示无穷符号以表示一对多关系的外键一方。 <br />2.在元数据服务中，关系是对象对之间的关联，其中一个对象是起点，另一个对象是目标。 每个后续对象对都重复这种关联，因此一个关系的目标就成为下一个关系中的起点。 这样，信息模型中的所有对象通过关系链相关联，在整个信息模型中这种关系链从一个对象扩展到下一个对象。|  
 |呈现的报表 (rendered report)|包含数据和布局信息的完全处理报表，采用了适于查看的格式。|  
 |呈现扩展插件 (rendering extension)|Reporting Services 中用于处理报表输出格式的组件。|  
 |呈现扩展插件|一个以特定格式呈现报表的插件。|  
@@ -283,12 +281,10 @@ ms.locfileid: "56296468"
 |报表布局 (report layout)|报表中数据区域、报表项和文本的位置以及应用的格式。|  
 |报表布局模板 (report layout template)|报表生成器中预先设计的表、矩阵或图表报表模板。|  
 |报表链接 (report link)|超链接报表的 URL。|  
-|报表模型|报表生成器中用来创建特别报告的业务数据的元数据说明。|  
 |报表参数 (report parameter)|在报表定义中定义的一个参数。 所有的查询参数都有报表参数，但可以独立于查询创建报表参数。|  
 |报表部件 (report parts)|已单独发布到报表服务器上并且可以在其他报表中重复使用的报表项。 表、矩阵、图表和图像等报表项可以作为报表部件发布。 报表部件具有 .rsc 文件扩展名并且符合架构 componentdefinition.xsd。|  
 |报表处理扩展插件 (report processing extension)|Reporting Services 中用于扩展报表处理逻辑的组件。|  
 |报表呈现 (report rendering)|组合报表布局与数据源的数据以查看报表的操作。|  
-|报表服务器|启动报表生成器的 ClickOnce 版本以及保存、管理和发布报表的网络位置。|  
 |报表服务器管理员 (report server administrator)|具有提升特权的用户，能够访问报表服务器的所有设置和内容。|  
 |报表服务器数据库|为报表服务器提供内部存储位置的数据库。|  
 |报表服务器执行帐户 (report server execution account)|报表服务器 Web 服务和报表服务器 Windows 服务在运行时使用的帐户。|  
@@ -329,7 +325,7 @@ ms.locfileid: "56296468"
 |SKU|一种用来标识一个产品的不同版本的方法；同时也是 stock keeping unit（单品）的首字母缩略词，这是一个标准商业术语。|  
 |切片 (slice)|多维数据集中的一个数据子集，通过用维度成员限制一个或多个维度来指定。|  
 |智能标记 (smart tag)|在 Visual Studio 2005 中，智能标记直接在设计图面上显示关键配置以提高设计时的总体工作效率。|  
-|SMDL|请参阅另一术语：语义模型定义语言 (SMDL)|  
+|SMDL|请参阅另一术语：语义模型定义语言 (SMDL) (Semantic Model Definition Language)|  
 |snapshot|请参阅另一术语：报表快照 (report snapshot)|  
 |排序顺序 (sort order)|在排序规则中用于定义字符在比较运算中的求值方式及其排序顺序的一组规则。|  
 |空间数据 (spatial data)|指定对象在平面或曲面上的位置的数据。 空间数据可以是点、线条或多边形。|  
@@ -367,7 +363,6 @@ ms.locfileid: "56296468"
 |x 轴 (x-axis)|请参阅另一术语：类别 (x) 轴 (category (x) axis)|  
 |y 轴 (y-axis)|请参阅另一术语：值 (y) 轴 (value (y) axis)|  
   
-## <a name="see-also"></a>另请参阅  
- [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
+
+ [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)

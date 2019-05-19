@@ -1,18 +1,18 @@
 ---
 title: 迁移 Reporting Services 安装（本机模式）| Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 96b55cafe46994f44f496679f2d66f887baf4dce
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712418"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503613"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>迁移 Reporting Services 安装（本机模式）
 
@@ -38,9 +38,10 @@ ms.locfileid: "52712418"
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
-::: moniker-end
 
 有关迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署的信息，请参阅 [迁移 Reporting Services 安装（SharePoint 模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)。  
+
+::: moniker-end
   
  迁移是指将应用程序数据文件移到新的 SQL Server 实例。 下面是必须迁移您的安装的常见原因：  
   
@@ -89,7 +90,7 @@ ms.locfileid: "52712418"
   
 * 编写调用 WMI 提供程序的代码，以在各数据库之间复制数据。 有关这种方法的详细信息，请参阅 [访问 Reporting Services WMI 提供程序](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
   
-* 如果仅有少量项，则可以将报表、报表模型以及共享数据源从报表设计器、模型设计器和报表生成器重新发布到新的报表服务器。 重新创建角色分配、订阅、共享计划、报表快照计划、对报表或其他项设置的自定义属性、模型项安全性以及对报表服务器设置的属性。 如果执行这些操作，请做好丢失报表历史记录和报告执行日志数据的准备。
+* 如果仅有少量项，则可以将报表和共享数据源从报表设计器、模型设计器和报表生成器重新发布到新的报表服务器。 重新创建角色分配、订阅、共享计划、报表快照计划、对报表或其他项设置的自定义属性、模型项安全性以及对报表服务器设置的属性。 如果执行这些操作，请做好丢失报表历史记录和报告执行日志数据的准备。
   
 ## <a name="bkmk_before_you_start"></a> 开始之前
 

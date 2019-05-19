@@ -1,8 +1,8 @@
 ---
 title: 授予用户对报表服务器的访问权限 | Microsoft Docs
-ms.date: 05/15/2017
+ms.date: 05/6/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021851"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449687"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>授予用户对报表服务器的访问权限
 
@@ -29,7 +29,7 @@ ms.locfileid: "50021851"
 
  **SharePoint 模式报表服务器：** 对于配置为 SharePoint 集成模式的报表服务器，使用 SharePoint 权限从 SharePoint 站点配置访问权限。 对 SharePoint 站点的权限级别确定对报表服务器内容和操作的访问权限。 您必须是站点管理员才能授予对 SharePoint 站点的权限。 有关详细信息，请参阅 [在 SharePoint 站点上授予对报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。
 
- **本机模式报表服务器：** 本主题侧重于配置为本机模式的报表服务器以及使用 Web 门户向角色分配用户。 有两种类型的角色：
+ **本机模式报表服务器：** 本文侧重于配置为本机模式的报表服务器以及使用 Web 门户向用户分配角色。 有两种类型的角色：
 
 - 项级角色用于查看、添加和管理报表服务器内容、订阅、报表处理和报表历史记录。 可以对根节点（主文件夹）或位于该层次结构中的特定下级文件夹或项定义项级角色分配。
 
@@ -61,7 +61,7 @@ ms.locfileid: "50021851"
 
 5. 选择“添加组或用户”。
 
-6. 在“组或用户”中，按如下格式输入一个 Windows 域用户或组帐户：\<domain>\\<account\>。 
+6. 在“组或用户”中，按如下格式输入一个 Windows 域用户或组帐户：\<domain>\\<account\>。
 
     > [!NOTE]
     > 如果使用窗体身份验证或自定义安全性，则以适用于您的部署的格式指定该用户帐户或组帐户。
@@ -95,10 +95,8 @@ ms.locfileid: "50021851"
 
 ## <a name="next-steps"></a>后续步骤
 
-[创建和管理角色分配](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[“新建角色分配: 编辑角色分配”页（报表管理器）](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[项的“安全性”属性页（报表管理器）](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[角色分配](../../reporting-services/security/role-assignments.md)   
+[创建和管理角色分配](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[角色分配](../../reporting-services/security/role-assignments.md)  
 [角色定义](../../reporting-services/security/role-definitions.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
-title: 'Pdo:: prepare |Microsoft Docs'
+title: PDO::prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 04/25/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,135 +11,140 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 583ed80add549b5d90cff2aba24e25fb6e2050f9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7eac30ff1391ba5c56099cf7c59fa89b1368f115
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606397"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105879"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-准备语句用于执行。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-  
-PDOStatement PDO::prepare ( $statement [, array(key_pair)] )  
-```  
-  
-#### <a name="parameters"></a>Parameters  
-$*statement*：包含 SQL 语句的字符串。  
-  
-key_pair：包含属性名称和值的数组。 有关详细信息，请参阅“备注”部分。  
-  
-## <a name="return-value"></a>返回值  
-如果成功，则返回 PDOStatement 对象。 如果失败，则返回 PDOException 对象或 False，具体取决于 PDO::ATTR_ERRMODE 的值。  
-  
-## <a name="remarks"></a>Remarks  
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 在执行已准备的语句之前不会对其进行评估。  
-  
-下表列出可能的 key_pair 值。  
-  
-|Key|描述|  
-|-------|---------------|  
-|PDO::ATTR_CURSOR|指定游标行为。 默认值为 PDO::CURSOR_FWDONLY。 PDO::CURSOR_SCROLL 是静态游标。<br /><br />例如， `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`。<br /><br />如果使用 PDO::CURSOR_SCROLL，你可以使用下方介绍的 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE。<br /><br />有关 PDO_SQLSRV 驱动程序中的结果集和游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|  
-|PDO::ATTR_EMULATE_PREPARES|默认情况下，此属性为 false，这可以更改此`PDO::ATTR_EMULATE_PREPARES => true`。 请参阅[模拟准备](#emulate-prepare)有关详细信息和示例。|
-|PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8（默认值）<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
-|PDO::SQLSRV_ATTR_DIRECT_QUERY|如果为 True，则指定直接查询执行。 False 表示已准备的语句执行。 有关 PDO::SQLSRV_ATTR_DIRECT_QUERY 的详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和已准备的语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|  
-|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|  
-  
-如果使用 PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL，你可以使用 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE。 例如，  
-  
-```  
-array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_DYNAMIC));  
-```  
-  
-下表显示 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE 的可能值。  
-  
-|ReplTest1|描述|  
-|---------|---------------|  
-|PDO::SQLSRV_CURSOR_BUFFERED|创建客户端（缓冲）静态游标。 有关客户端游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|  
-|PDO::SQLSRV_CURSOR_DYNAMIC|创建服务器端（无缓冲）动态游标，该游标支持你采用任意顺序访问行，并且可以反映数据库中的更改。|  
-|PDO::SQLSRV_CURSOR_KEYSET_DRIVEN|创建服务器端键集游标。 如果从表中删除某一行，键集游标不会更新行计数（将返回不含任何值的已删除行）。|  
-|PDO::SQLSRV_CURSOR_STATIC|创建服务器端静态游标，该游标支持你采用任意顺序访问行，但不会反映数据库中的更改。<br /><br />PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL 暗指 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_STATIC。|  
-  
-通过将 PDOStatement 对象设置为 NULL 来将其关闭。  
-  
-## <a name="example"></a>示例  
-本示例演示如何将 PDO::prepare 方法与参数标记以及只进游标结合使用。  
-  
-```  
-<?php  
-$database = "Test";  
-$server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
-  
-$col1 = 'a';  
-$col2 = 'b';  
-  
-$query = "insert into Table1(col1, col2) values(?, ?)";  
-$stmt = $conn->prepare( $query, array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY, PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 1  ) );  
-$stmt->execute( array( $col1, $col2 ) );  
-print $stmt->rowCount();  
-echo "\n";  
-  
-$query = "insert into Table1(col1, col2) values(:col1, :col2)";  
-$stmt = $conn->prepare( $query, array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY, PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 1  ) );  
-$stmt->execute( array( ':col1' => $col1, ':col2' => $col2 ) );  
-print $stmt->rowCount();  
-  
-$stmt = null  
-?>  
-```  
+准备语句用于执行。
 
-## <a name="example"></a>示例  
-本示例演示如何将 PDO::prepare 方法与客户端游标结合使用。 有关展示服务器端游标的示例，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。  
-  
-```  
-<?php  
-$database = "AdventureWorks";  
-$server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
-  
-$query = "select * from Person.ContactType";  
-$stmt = $conn->prepare( $query, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));  
-$stmt->execute();  
-  
-echo "\n";  
-  
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
-   print "$row[Name]\n";  
-}  
-echo "\n..\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_BOTH, PDO::FETCH_ORI_FIRST );  
-print_r($row);  
-  
-$row = $stmt->fetch( PDO::FETCH_ASSOC, PDO::FETCH_ORI_REL, 1 );  
-print "$row[Name]\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT );  
-print "$row[1]\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_PRIOR );  
-print "$row[1]..\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_ABS, 0 );  
-print_r($row);  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_LAST );  
-print_r($row);  
-?>  
-```  
+## <a name="syntax"></a>语法
+
+```
+PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
+```
+
+#### <a name="parameters"></a>Parameters
+$*statement*：包含 SQL 语句的字符串。
+
+key_pair：包含属性名称和值的数组。 有关详细信息，请参阅“备注”部分。
+
+## <a name="return-value"></a>返回值
+如果成功，则返回 PDOStatement 对象。 如果失败，则返回 PDOException 对象或 False，具体取决于 `PDO::ATTR_ERRMODE` 的值。
+
+## <a name="remarks"></a>Remarks
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 在执行已准备的语句之前不会对其进行评估。
+
+下表列出可能的 key_pair 值。
+
+|Key|描述|
+|-------|---------------|
+|PDO::ATTR_CURSOR|指定游标行为。 默认值为 `PDO::CURSOR_FWDONLY`，一个不可滚动的前向游标。 `PDO::CURSOR_SCROLL` 是可滚动的游标。<br /><br />例如， `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`。<br /><br />如果设置为 `PDO::CURSOR_SCROLL`，则可以使用 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 设置可滚动游标的类型，如下所述。<br /><br />有关 PDO_SQLSRV 驱动程序中的结果集和游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|
+|PDO::ATTR_EMULATE_PREPARES|默认情况下，此属性为 false，可通过此 `PDO::ATTR_EMULATE_PREPARES => true` 更改。 有关详细信息和示例，请参阅[模拟准备](#emulate-prepare)。|
+|PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|指定可滚动游标的类型。 仅在 `PDO::ATTR_CURSOR` 设置为 `PDO::CURSOR_SCROLL` 时有效。 有关此属性可采用的值，请参阅下文。|
+|PDO::SQLSRV_ATTR_DECIMAL_PLACES|指定设置提取的 Money 值格式时的小数位数。 仅当 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 为 true 时此选项才起作用。 有关详细信息，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。|
+|PDO::SQLSRV_ATTR_DIRECT_QUERY|如果为 True，则指定直接查询执行。 False 表示已准备的语句执行。 有关 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 的详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和预定语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|
+|PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8（默认值）<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象形式检索日期和时间类型。 有关详细信息，请参阅[如何：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|处理具有数值 SQL 类型的列中的数值提取。 有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
+|PDO::SQLSRV_ATTR_FORMAT_DECIMALS|指定是否在合适时向十进制字符串添加前导零。 如已设置，此选项将启用用于设置 Money 类型格式的 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 选项。 有关详细信息，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。| 
+|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
+
+使用 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` 时，可以使用 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 来指定游标的类型。 例如，将以下数组传递给 PDO::prepare 来设置动态游标：
+```
+array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_DYNAMIC));
+```
+下表列出了 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 的可能值。 有关可滚动游标的详细信息，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。
+
+|ReplTest1|描述|
+|---------|---------------|
+|PDO::SQLSRV_CURSOR_BUFFERED|创建一个客户端（缓冲）静态游标，该游标将结果集缓冲到客户端计算机上的内存中。|
+|PDO::SQLSRV_CURSOR_DYNAMIC|创建服务器端（无缓冲）动态游标，该游标支持你采用任意顺序访问行，并且可以反映数据库中的更改。|
+|PDO::SQLSRV_CURSOR_KEYSET|创建服务器端键集游标。 如果从表中删除某一行，键集游标不会更新行计数（将返回不含任何值的已删除行）。|
+|PDO::SQLSRV_CURSOR_STATIC|创建服务器端静态游标，该游标支持你采用任意顺序访问行，但不会反映数据库中的更改。<br /><br />`PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` 意味着 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_STATIC`。|
+
+可以通过调用 `unset` 关闭 PDOStatement 对象：
+```
+unset($stmt);
+```
+
+## <a name="example"></a>示例
+本示例演示如何将 PDO::prepare 与参数标记以及只进游标结合使用。
+
+```
+<?php
+$database = "Test";
+$server = "(local)";
+$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");
+
+$col1 = 'a';
+$col2 = 'b';
+
+$query = "insert into Table1(col1, col2) values(?, ?)";
+$stmt = $conn->prepare( $query, array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY, PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 1  ) );
+$stmt->execute( array( $col1, $col2 ) );
+print $stmt->rowCount();
+echo "\n";
+
+$query = "insert into Table1(col1, col2) values(:col1, :col2)";
+$stmt = $conn->prepare( $query, array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY, PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 1  ) );
+$stmt->execute( array( ':col1' => $col1, ':col2' => $col2 ) );
+print $stmt->rowCount();
+
+unset($stmt);
+?>
+```
+
+## <a name="example"></a>示例
+此示例演示如何将 PDO::prepare 与服务器端静态游标结合使用。 有关展示客户端端游标的示例，请参阅[游标类型（PDO_SQLSRV 驱动程序）](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。
+
+```
+<?php
+$database = "AdventureWorks";
+$server = "(local)";
+$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");
+
+$query = "select * from Person.ContactType";
+$stmt = $conn->prepare( $query, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
+$stmt->execute();
+
+echo "\n";
+
+while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
+   print "$row[Name]\n";
+}
+echo "\n..\n";
+
+$row = $stmt->fetch( PDO::FETCH_BOTH, PDO::FETCH_ORI_FIRST );
+print_r($row);
+
+$row = $stmt->fetch( PDO::FETCH_ASSOC, PDO::FETCH_ORI_REL, 1 );
+print "$row[Name]\n";
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT );
+print "$row[1]\n";
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_PRIOR );
+print "$row[1]..\n";
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_ABS, 0 );
+print_r($row);
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_LAST );
+print_r($row);
+?>
+```
 
 <a name="emulate-prepare" />
 
-## <a name="example"></a>示例 
+## <a name="example"></a>示例
 
-此示例演示如何使用 pdo:: prepare 方法与`PDO::ATTR_EMULATE_PREPARES`设置为 true。 
+此示例演示如何将 PDO::prepare 设置为 true 的 `PDO::ATTR_EMULATE_PREPARES` 结合使用。
 
 ```
 <?php
@@ -153,8 +158,8 @@ $pdo_options = array();
 $pdo_options[PDO::ATTR_EMULATE_PREPARES] = true;
 $pdo_options[PDO::SQLSRV_ATTR_ENCODING] = PDO::SQLSRV_ENCODING_UTF8;
 
-$stmt = $conn->prepare("CREATE TABLE TEST([id] [int] IDENTITY(1,1) NOT NULL, 
-                                          [name] nvarchar(max))", 
+$stmt = $conn->prepare("CREATE TABLE TEST([id] [int] IDENTITY(1,1) NOT NULL,
+                                          [name] nvarchar(max))",
                                           $pdo_options);
 $stmt->execute();
 
@@ -177,7 +182,7 @@ unset($conn);
 ?>
 ```
 
-PDO_SQLSRV 驱动程序在内部使用的绑定的参数替换所有占位符[PDOStatement::bindParam()](../../connect/php/pdostatement-bindparam.md)。 因此，没有占位符包含的 SQL 查询字符串发送到服务器。 请考虑此示例中，
+PDO_SQLSRV 驱动程序在内部用 [PDOStatement::bindParam()](../../connect/php/pdostatement-bindparam.md) 绑定的参数替换所有占位符。 因此，将向服务器发送一个没有占位符的 SQL 查询字符串。 请看下面的示例，
 
 ```
 $statement = $PDO->prepare("INSERT into Customers (CustomerName, ContactName) VALUES (:cus_name, :con_name)");
@@ -186,7 +191,7 @@ $statement->bindParam(:con_name, "Tom B. Erichsen");
 $statement->execute();
 ```
 
-使用`PDO::ATTR_EMULATE_PREPARES`设置为 false （默认情况下），发送到数据库的数据是：
+将 `PDO::ATTR_EMULATE_PREPARES` 设置为 false（默认情况），发送到数据库的数据为：
 
 ```
 "INSERT into Customers (CustomerName, ContactName) VALUES (:cus_name, :con_name)"
@@ -194,38 +199,38 @@ Information on :cus_name parameter
 Information on :con_name parameter
 ```
 
-服务器将执行查询使用的绑定参数其参数化的查询的功能。 但是，与`PDO::ATTR_EMULATE_PREPARES`实质上是设置为 true，发送到服务器的查询：
+服务器将使用绑定参数的参数化查询功能执行查询。 另一方面，当 `PDO::ATTR_EMULATE_PREPARES` 设置为 true 时，发送到服务器的查询本质上是：
 
 ```
 "INSERT into Customers (CustomerName, ContactName) VALUES ('Cardinal', 'Tom B. Erichsen')"
 ```
 
-设置`PDO::ATTR_EMULATE_PREPARES`为 true 可以绕过 SQL Server 中的一些限制。 例如，SQL Server 不支持某些 TRANSACT-SQL 子句中已命名或位置参数。 此外，SQL Server 的绑定 2100年参数的限制。
+将 `PDO::ATTR_EMULATE_PREPARES` 设置为 true 可以绕过 SQL Server 中的一些限制。 例如，SQL Server 在某些 Transact-SQL 子句中不支持命名参数或位置参数。 此外，SQL Server 限制最多绑定 2100 个参数。
 
 > [!NOTE]
-> Emulate 准备设置为 true，参数化查询的安全性不起作用。 因此，应用程序应确保绑定到参数的数据不包含恶意 Transact-SQL 代码。
+> 将模拟准备设置为 true 时，参数化查询的安全性不会生效。 因此，应用程序应确保绑定到参数的数据不包含恶意 Transact-SQL 代码。
 
 ### <a name="encoding"></a>编码
 
-如果用户想要将具有不同的编码 （例如，utf-8 或二进制文件） 的参数绑定，用户应明确指定编码在 PHP 脚本中。
+如果用户希望使用不同的编码绑定参数（例如，UTF-8 或二进制），则应在 PHP 脚本中明确指定编码。
 
-PDO_SQLSRV 驱动程序首先检查中指定的编码`PDO::bindParam()`(例如， `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`)。 
+PDO_SQLSRV 驱动程序首先检查 `PDO::bindParam()` 中指定的编码（例如 `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`）。
 
-如果找不到，该驱动程序会检查如果中设置任何编码`PDO::prepare()`或`PDOStatement::setAttribute()`。 否则，该驱动程序将使用中指定的编码`PDO::__construct()`或`PDO::setAttribute()`。
+如果找不到，则驱动程序会检查是否在 `PDO::prepare()` 或 `PDOStatement::setAttribute()` 中设置了任何编码。 否则，驱动程序将使用 `PDO::__construct()` 或 `PDO::setAttribute()` 中指定的编码。
 
 ### <a name="limitations"></a>限制
 
-正如您所看到的在内部将绑定通过驱动程序。 执行不带任何参数的情况下，有效的查询发送到服务器。 与一般情况相比，不使用参数化的查询功能时产生一些限制。
+如你所见，绑定是由驱动程序在内部完成的。 一个有效的查询会被发送到服务器，以便在没有任何参数的情况下完成执行。 与常规情况相比，当不使用参数化查询功能时，会产生一些限制。
 
-- 它并不适用于参数绑定为`PDO::PARAM_INPUT_OUTPUT`。
-    - 当用户指定了`PDO::PARAM_INPUT_OUTPUT`在`PDO::bindParam()`，PDO 异常。
-- 不适用于参数绑定为输出参数。
-    - 用户创建时已准备的语句使用占位符，用于输出参数 (即，紧接着占位符时遇到一个等号，如`SELECT ? = COUNT(*) FROM Table1`)，将 PDO 引发异常。
-    - 当已准备的语句作为输出参数的参数调用存储的过程与占位符时，将不引发任何异常，因为该驱动程序无法检测到的输出参数。 但是，用户提供的输出参数的变量将保持不变。
-- 不起作用的二进制编码参数重复的占位符
+- 它不适用于绑定为 `PDO::PARAM_INPUT_OUTPUT` 的参数。
+    - 当用户在 `PDO::bindParam()` 中指定 `PDO::PARAM_INPUT_OUTPUT` 时，将引发 PDO 异常。
+- 它不适用于绑定为输出参数的参数。
+    - 当用户使用用于输出参数的占位符创建一个准备好的语句时（也就是说，在占位符后面有一个等号，比如 `SELECT ? = COUNT(*) FROM Table1`），将引发 PDO 异常。
+    - 当准备好的语句调用将占位符作为输出参数自变量的存储过程时，不会引发异常，因为驱动程序无法检测输出参数。 但是，用户为输出参数提供的变量将保持不变。
+- 二进制编码参数的重复占位符将不起作用
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
 [PDO 类](../../connect/php/pdo-class.md)
 
-[PDO](https://php.net/manual/book.pdo.php)  
-  
+[PDO](https://php.net/manual/book.pdo.php)
+

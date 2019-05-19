@@ -2,7 +2,7 @@
 title: Reporting Services 和 Power View 的浏览器支持 | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 161b69416fcdcda57487f0ce2762807835dbd368
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021207"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504105"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的浏览器支持
 
@@ -82,7 +82,11 @@ ms.locfileid: "50021207"
 
  **(+)** 最新公开发布的版本
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  如果当前使用与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]相集成的 SharePoint 产品，请参阅  [在 SharePoint 2016 中计划浏览器支持](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
+
+::: moniker-end
 
 ### <a name="authentication-requirements"></a>身份验证要求
 
@@ -104,7 +108,7 @@ ms.locfileid: "50021207"
 
  如果未启用脚本功能，则打开报表时将显示如下错误消息：
 
-- **您的浏览器不支持脚本或已配置为不允许脚本运行。单击此处查看不含脚本的报表**。
+- **你的浏览器不支持脚本或已配置为不允许脚本运行。单击此处查看不含脚本的报表**。
 
  如果选择查看不支持脚本的报表，则报表将会以 HTML 格式呈现，同时不具有报表工具栏和文档结构图等报表查看器功能。
 
@@ -142,7 +146,11 @@ ms.locfileid: "50021207"
 
  **(+)** 最新公开发布的版本
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  有关 SharePoint 2016 浏览器支持的详细信息，请参阅 [在 SharePoint 2013 中计划浏览器支持](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
+
+::: moniker-end
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -1,8 +1,8 @@
 ---
-title: 修改或删除角色分配（报表管理器）| Microsoft Docs
-ms.date: 03/01/2017
+title: 修改或删除角色分配（SSRS Web 门户）| Microsoft Docs
+ms.date: 05/07/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,58 +12,54 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c2cc79176f0c52cd1fdceae0d04d46b4279e9d50
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b944ca316825e65ce2d1854709e0a08ce1fd1cb8
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030746"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449621"
 ---
 # <a name="role-assignments---modify-or-delete"></a>角色分配 - 修改或删除
-  角色分配将组或用户帐户映射到包含可执行任务的预定义的角色定义。 角色分配确定用户可针对文件夹、报表、模型或其他内容类型执行的操作类型。 若要创建、修改或删除角色分配，请使用报表管理器。 在为特定用户或组创建了角色分配之后，您还可以通过选择其他角色来修改它。 如果要撤消对报表报务器的权限，可从报表服务器删除角色分配。  
+
+角色分配将组或用户帐户映射到预定义的角色，该角色定义可以执行的任务。 角色分配确定用户可针对文件夹、报表、模型或其他内容类型执行的任务类型。 若要创建、修改或删除角色分配，请使用 SSRS Web 门户。 在为特定用户或组创建了角色分配之后，您还可以通过选择其他角色来修改它。 如果要撤消对报表报务器的权限，可从报表服务器删除角色分配。  
+
+根据您的目标，其他方法可能会更合适。 例如自定义或创建新的角色定义，或者在 Active Directory 中修改组帐户的成员身份。  
+
+例如，假定有一组需要管理内容的用户，但他们不应具有与“内容管理员”关联的所有权限。 可以创建一个名为“部门内容管理员”的新角色定义。 它可以包含内容管理员中的所有任务，除了设置各项安全策略。
+
+同样，如果你是系统或网络管理员，在 Web 门户中管理 Active Directory 组帐户可能比管理角色分配更容易。 通过为组帐户创建单个角色分配，可以减少管理角色分配的开销。 然后，当用户不再需要访问报表时，可以修改组成员身份。
   
- 根据您的目标，其他方法可能会更合适。 例如自定义或创建新的角色定义，或者在 Active Directory 中修改组帐户的成员身份。  
+ 如果确定修改或删除角色分配是最佳做法，那么，请记住要同时检查系统角色和项角色分配。 每种类型的角色分配都是通过 Web 门户中不同的页面配置的。
   
- 例如，假定有一组需要完全管理内容的用户，但他们不应具有与“内容管理员”关联的所有权限。 在这种情况下，您可以创建一个名为“部门内容管理员”的新角色定义，其中包括“内容管理员”中除 **“设置项的安全策略”** 以外的所有任务。  
+## <a name="to-modify-or-delete-a-system-role-assignment"></a>修改或删除系统角色分配
   
- 同样，如果您是系统管理员或网络管理员，并且对于您来说管理 Active Directory 组帐户比在报表管理器中管理角色分配更加容易，则您可以通过为组帐户创建一个角色分配来减少管理角色分配的开销，并且在用户不需要再访问报表时调整组成员身份。  
-  
- 如果您确定修改或删除角色分配是最佳做法，那么，请记住要同时检查系统角色分配和项角色分配。 每种类型的角色分配都是通过报表管理器中不同的页面配置的。  
-  
-### <a name="to-modify-or-delete-a-system-role-assignment"></a>修改或删除系统角色分配  
-  
-1.  启动 [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
-  
-2.  单击 **“网站设置”**。  
-  
-3.  单击 **“安全性”**。 将按帐户名列出当前为服务器或扩展部署定义的所有系统级角色分配。  
-  
-4.  查找要修改或删除的角色分配。  
-  
-5.  若要为特定用户或组添加或删除角色，请单击 **“编辑”**。  
-  
-6.  若要删除角色分配，请单击该用户或组名旁边的复选框，再单击 **“删除”**。  
-  
-### <a name="to-modify-or-delete-an-item-role-assignment"></a>修改或删除项角色分配  
-  
-1.  启动 **“报表管理器”** 并找出您要为其编辑或删除角色分配的项。  
-  
-2.  悬停在该项之上，然后单击下拉箭头。  
-  
-3.  在下拉菜单中，单击“安全性”。  
-  
-4.  查找要修改或删除的角色分配。  
-  
-5.  若要为特定用户或组添加或删除角色，请单击 **“编辑”**。  
-  
-6.  若要删除角色分配，请单击该用户或组名旁边的复选框，再单击 **“删除”**。  
-  
-## <a name="see-also"></a>另请参阅  
- [创建和管理角色分配](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [角色分配](../../reporting-services/security/role-assignments.md)   
- [“站点设置”页（报表管理器）](https://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [“新建系统角色分配: 编辑系统角色分配”页（报表管理器）](https://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
-  
-  
+1. 访问[报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)。
+
+2. 选择“站点设置” > “安全性”。 将按帐户名列出当前为服务器或扩展部署定义的所有系统级角色分配。
+
+3. 查找要修改或删除的角色分配。
+
+4. 若要为特定用户或组添加或删除角色，请选择“编辑”。
+
+5. 若要删除角色分配，请选择该用户或组名旁边的复选框，然后选择“删除”。
+
+### <a name="to-modify-or-delete-an-item-role-assignment"></a>修改或删除项角色分配
+
+1. 访问 Web 门户并找出要为其编辑或删除角色分配的项。
+
+2. 悬停在该项之上，然后选择下拉箭头。
+
+3. 在下拉菜单中，选择“安全性”。
+
+4. 查找要修改或删除的角色分配。
+
+5. 若要为特定用户或组添加或删除角色，请选择“编辑”。
+
+6. 若要删除角色分配，请选择该用户或组名旁边的复选框，然后选择“删除”。
+
+## <a name="see-also"></a>另请参阅
+
+[创建和管理角色分配](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[角色分配](../../reporting-services/security/role-assignments.md)  
