@@ -2,20 +2,20 @@
 title: EditionName 属性 (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - EditionName property
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 05dd5c1adf3082fb5db5527bc8681f7f92a2427e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 71247b471b9aa092f6e7c581d891355190006800
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683489"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571093"
 ---
 # <a name="msreportserverinstance-properties---editionname"></a>MSReportServer_Instance 属性 - EditionName
   返回报表服务器版本类别的可读名称。 只读。  

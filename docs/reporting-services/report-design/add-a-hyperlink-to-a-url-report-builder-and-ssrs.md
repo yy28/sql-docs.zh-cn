@@ -2,18 +2,18 @@
 title: 向 URL 添加超链接（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 09/07/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7dcd5d57b3b5452a9d14b8951cc8f8d6572f452d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288945"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574831"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>向 URL 添加超链接（报表生成器和 SSRS）
 了解如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  分页报表向文本框、图像、图表和仪表添加超链接操作。 链接可以转到其他报表、报表中的书签或是静态或动态 URL。 
@@ -26,7 +26,7 @@ ms.locfileid: "56288945"
  
  *  并且你可以在相同报表中 **向特定位置添加书签** 。 
   
-尝试使用以下教程中的示例数据添加超链接：[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)。  
+尝试使用[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)中的示例数据添加超链接。  
   
 > [!NOTE]  
 >  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。  

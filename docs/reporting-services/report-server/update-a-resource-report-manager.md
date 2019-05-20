@@ -2,21 +2,21 @@
 title: 更新资源（报表管理器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d82159a1d93e51715888fc405a94d91a4ffbb925
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 29ebd13314c99d425b191f049f86e6e78d3134fa
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031556"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571470"
 ---
 # <a name="update-a-resource-report-manager"></a>更新资源（报表管理器）
   通过将资源替换为新资源，可以更新资源。 资源是存储在报表服务器上的项，包含您上载的文件中的内容。 通过向现有资源中导入新的文件内容或其他文件内容，即可替换现有资源。 通过更新资源，可以在保留资源的现有属性和安全设置的同时更新内容。  

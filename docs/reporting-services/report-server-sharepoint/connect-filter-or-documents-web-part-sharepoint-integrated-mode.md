@@ -2,17 +2,17 @@
 title: 将筛选器或文档 Web 部件与 Reporting Services 报表查看器 Web 部件连接 | Microsoft Docs
 ms.date: 11/26/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 89b237bffcbe8afc230ae2f29de11a6c018f89c1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d833e0b42a6bfdaf9754525740f9bb58df794fdb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410894"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580029"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>将筛选器或文档 Web 部件与 Reporting Services 报表查看器 Web 部件连接
 

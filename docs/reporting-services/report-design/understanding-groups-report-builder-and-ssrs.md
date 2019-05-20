@@ -2,21 +2,21 @@
 title: 了解组（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cbce55f34f123c2e615b5ace6c1a1b77b3a494e0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b9d8dda589d5753a406fb46fa848191c1e4793a7
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287475"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574453"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>了解组（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，组是绑定到数据区域的报表数据集中的命名数据集。 基本上，一个组可组织一个报表数据集视图。 数据区域中的所有组都指定相同报表数据集的不同视图。  
@@ -34,7 +34,7 @@ ms.locfileid: "56287475"
  一个组具有指定的名称和一个组表达式集。 该组表达式集可以是单个数据集字段引用，也可以是多个表达式的组合。 在运行时，如果组包含多个表达式，则合并组表达式，并应用于组中的数据。 例如，有一个组使用日期字段来组织数据区域中的数据。 在运行时，按日期组织数据，然后与每个日期的其他数据集值总计一起显示。  
   
 ## <a name="when-do-i-create-groups"></a>何时创建组？  
- 大多数情况下，报表生成器和报表设计器会在您设计数据区域时自动为您创建组。 对于表、矩阵或列表，当您在“分组”窗格上放置字段时，将创建组。 对于图表，当您在图表放置区上放置字段时，将创建组。 对于仪表，则必须使用仪表属性对话框。 对于表、矩阵或列表，还可以手动创建组。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 有关如何在生成报表时添加组的示例，请参阅[教程：生成基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)或[生成基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
+ 大多数情况下，报表生成器和报表设计器会在您设计数据区域时自动为您创建组。 对于表、矩阵或列表，当您在“分组”窗格上放置字段时，将创建组。 对于图表，当您在图表放置区上放置字段时，将创建组。 对于仪表，则必须使用仪表属性对话框。 对于表、矩阵或列表，还可以手动创建组。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 有关如何在创建报表时添加组的示例，请参阅[教程：创建基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)或[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
   
 ## <a name="how-can-i-modify-a-group"></a>如何修改组？  
  在创建组之后，可以设置特定于数据区域的属性（例如筛选器和排序表达式、分页符和组变量），以存储特定于作用域的数据。 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
@@ -61,7 +61,7 @@ ms.locfileid: "56287475"
 > [!NOTE]  
 >  尽管组在不同数据区域中有不同的名称，但如何创建和使用组的原则是相同的。 在为数据区域创建组时，需要指定一种方式来组织链接到数据区域的数据集中的详细信息数据。 每个数据区域都支持一个用于显示分组数据的组结构。  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix 数据区域中的组：“详细信息”、“行”和“列”组  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix 数据区域中的组：详细信息组、行组和列组  
  如本主题前面所示，Tablix 数据区域使您能够按行或列将数据组织到组中。 但是，行组和列组不是 Tablix 数据区域中唯一可用的组。 此数据区域可以具有以下类型的组：  
   
 -   **详细信息组** 详细信息组包含在报表生成器或报表设计器应用数据集和数据区域筛选器之后报表数据集中的所有数据。 因此，详细信息组是唯一没有组表达式的组。  

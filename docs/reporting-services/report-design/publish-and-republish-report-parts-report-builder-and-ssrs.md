@@ -2,18 +2,18 @@
 title: 发布和重新发布报表部件（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5733718f34ce62ada3662b161dad9c283a8b220b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f48415c35b57b889b764abfe44f5bf937ee3f650
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291315"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576625"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>发布和重新发布报表部件（报表生成器和 SSRS）
   报表部件是单独发布到报表服务器上并且可以在其他分页报表中重复使用的分页报表项。 您可以使用默认设置将报表部件发布到默认位置中，或者，您可以编辑名称和说明之类的报表部件元数据，并且将其保存在报表服务器上的其他位置。 如果您具有正确的权限，还可以将报表部件保存到与报表服务器集成的 SharePoint 站点上。  
@@ -32,7 +32,7 @@ ms.locfileid: "56291315"
   
      否则，单击 **“在发布前查看和修改报表部件”**。  
   
-3.  编辑报表部件的名称和说明：双击名称即可编辑它，单击“说明”字段即可添加说明。  
+3.  编辑报表部件名称和说明：双击名称以便编辑它，然后在“说明”字段中单击以便添加说明。  
   
     > [!NOTE]  
     >  最好提供报表部件名称和说明，以便在搜索时帮助用户识别它。 对于整个路径而言，报表部件名称的最大长度是 260 个字符，包括服务器上文件夹的名称，后随报表部件的实际名称。  

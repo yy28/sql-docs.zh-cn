@@ -2,7 +2,7 @@
 title: 按规则和分析数据更改多边形、线条和点的显示方式 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +16,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3279ace83e7ed2e3dc2f9997c68331fd0ddbb645
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286396"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578446"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>按规则和分析数据更改多边形、线条和点的显示方式
   通过设置层的选项、设置层上地图元素的规则或覆盖层上特定嵌入地图元素的选项来控制地图层上多边形、线条和点的显示选项。  
@@ -98,15 +98,15 @@ ms.locfileid: "56286396"
 ##  <a name="Distribution"></a> 了解分布选项  
  若要创建值的分布，可以将数据分成若干范围。 指定分布类型、子范围数以及范围的最小值和最大值。  
   
- 在以下列表中，假定您有三个地图元素和六个具有以下值的范围为 1 到 9999 的相关分析值：1、10、200、2000、4777、8999。  
+ 在以下列表中，假定你有三个地图元素和六个具有以下值的相关分析值：1、10、200、2000、4777、8999，范围为 1 到 9999。  
   
--   **相等间隔。** 创建将数据划分为相等范围间隔的范围。 例如，三个范围将为 0-2999, 3000-5999, 6000-8999。 子范围 1：1、10、200、500。 子范围 2：4777。 子范围 3：8999。 此方法不考虑数据的分布方式。 很大的值或很小的值会使分布结果扭曲。  
+-   **相等间隔。** 创建将数据划分为相等范围间隔的范围。 例如，三个范围将为 0-2999, 3000-5999, 6000-8999。 子范围 1：1, 10, 200, 500。 子范围 2：4777。 子范围 3：8999。 此方法不考虑数据的分布方式。 很大的值或很小的值会使分布结果扭曲。  
   
--   **相等分布。** 创建用于划分数据以使每个范围具有相同项数的范围。 对于示例数据，三个范围将为 0-10, 11-500, 501-8999。 子范围 1：1, 10. 子范围 2：200, 500. 子范围 3：4777, 8999. 此方法如果创建跨很大或很小范围的划分，会使分布结果扭曲。  
+-   **相等分布。** 创建用于划分数据以使每个范围具有相同项数的范围。 对于示例数据，三个范围将为 0-10, 11-500, 501-8999。 子范围 1：1、10。 子范围 2：200、500。 子范围 3：4777, 8999。 此方法如果创建跨很大或很小范围的划分，会使分布结果扭曲。  
   
 -   **最佳。** 创建自动调整分布以创建平衡子范围的范围。 子范围数由算法决定。  
   
--   **自定义：** 指定您自己的范围数以控制值的分布。 对于示例数据，可以指定范围 3 的范围：1-2、3-8、9。  
+-   **自定义：** 指定您自己的范围数以控制值的分布。 对于示例数据，你可以指定 3 个范围：1-2、3-8、9。  
   
  分布值由规则使用，以改变地图元素显示值。  
   
