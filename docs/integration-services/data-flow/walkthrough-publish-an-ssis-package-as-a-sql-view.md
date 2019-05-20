@@ -13,14 +13,18 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8614217f7b8b081d43468d25707aa394c917b1ff
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281861"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725763"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本演练提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中将 SSIS 包作为 SQL 视图发布的详细步骤。  
   
 ## <a name="prerequisites"></a>必备条件  
@@ -30,7 +34,7 @@ ms.locfileid: "58281861"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>步骤 1：生成 SSIS 项目并将其部署到 SSIS 目录  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>第 1 步：生成 SSIS 项目并将其部署到 SSIS 目录  
  在此步骤中，创建一个从 SSIS 支持的数据源（在本示例中，我们使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）中提取数据并使用数据流目标组件输出数据的 SSIS 包。 然后，将生成 SSIS 项目并将其部署到 SSIS 目录。  
   
 1.  启动 **SQL Server Data Tools**。 在 **“开始”** 菜单上，依次指向 **“所有程序”**、 **Microsoft SQL Server**，再单击 **SQL Server Data Tools**。  
@@ -82,7 +86,7 @@ ms.locfileid: "58281861"
   
     2.  按照向导中的说明将项目部署到本地数据库服务器中的 SSIS 目录。 以下示例使用 **Power BI** 作为文件夹名称，使用 **SSISPackagePublishing** 作为 SSIS 目录中的项目名称。  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>步骤 2：使用 SSIS 数据馈送发布向导将 SSIS 包发布为 SQL 视图  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>第 2 步：使用 SSIS 数据馈送发布向导将 SSIS 包发布为 SQL 视图  
  在此步骤中，你将使用 SQL Server Integration Services (SSIS) 数据馈送发布向导将 SSIS 包发布为 SQL Server 数据库中的视图。 可通过查询此视图来使用包的输出数据。  
   
  SSIS 数据馈送向导创建一个使用 OLE DB Provider for SSIS (SSISOLEDB) 的链接服务器，然后在链接服务器上创建一个包含查询的 SQL 视图。 该查询包括 SSIS 目录中的文件夹名称、项目名称和包名称。  

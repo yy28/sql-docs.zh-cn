@@ -26,14 +26,18 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edead99162483ab8721384a382d59bdaa1a262a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 072a0506d4dad9aad762cae77cad97a3bf16bdd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277376"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717869"
 ---
 # <a name="set-package-properties"></a>设置包属性
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
   
  **“属性”** 窗口按分类和字母顺序排序列出了一系列属性列表。 若要按类别排列 **“属性”** 窗口，请单击“按分类顺序”图标。  
@@ -127,7 +131,7 @@ ms.locfileid: "58277376"
 |**SuppressConfigurationWarnings**|指示是否取消配置生成的警告。 此属性的默认值为 **False**。|  
 |**UpdateObjects**|指示当包所含对象的更新版本可用时，是否更新包以使用更新版本的对象。 例如，如果此属性设置为 **True**，则会更新包含大容量插入任务的包，以使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的更新版本的大容量插入任务。 此属性的默认值为 **False**。|  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  此类别中的属性用于设置包的保护级别。 有关详细信息，请参阅 [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md)。  
   
 |属性|描述|  

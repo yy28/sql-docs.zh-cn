@@ -14,14 +14,18 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 25d76f4ad37b5fb8631dfacb526576c1fd52d2bf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 81739ff18b8030194b3cb2d2245abb5983fd2725
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270839"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729314"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 服务器和目录
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   当您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中设计和测试包后，可将包含包的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
  在对象资源管理器中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器是承载 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库的 **ssDEnoversion** 实例。 该数据库存储以下对象：包、项目、参数、权限、服务器属性和操作历史记录。  

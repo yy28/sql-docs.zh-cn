@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：将项目转换为项目部署模型 | Microsoft Docs
+title: 第 2 步：将项目转换为项目部署模型 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2dae52f3b8729e919f9ad653c02bc1023d2ed8c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e03317e9d37387e6c2482aea3bdf102a0b063b03
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276876"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721192"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>第 6-2 课：将项目转换为项目部署模型
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在本任务中，使用 Integration Services 项目转换向导将项目转换为项目部署模型。  
   

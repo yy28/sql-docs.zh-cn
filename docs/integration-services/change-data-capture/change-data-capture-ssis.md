@@ -14,14 +14,18 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06e24dcef49f54000010455c1070877f82947ebe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9ff79d145f11d64c7ac97a9d068ea99ec7886d2e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281111"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729004"
 ---
 # <a name="change-data-capture-ssis"></a>变更数据捕获 (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，变更数据捕获为有效地执行从源表到数据市场和数据仓库的增量加载提供了一种颇有成效的解决方案。  
   
 ## <a name="what-is-change-data-capture"></a>什么是变更数据捕获？  
@@ -41,7 +45,7 @@ ms.locfileid: "58281111"
   
  如上面的关系图所示，创建执行变更数据的增量加载的包涉及下列步骤：  
   
- **第 1 步：设计控制流**  
+ **步骤 1：设计控制流**  
  在包的控制流中，需要定义下列任务：  
   
 -   计算要检索的源数据更改间隔的起始和结束 **datetime** 值。  

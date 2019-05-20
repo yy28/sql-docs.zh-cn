@@ -18,14 +18,18 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 89637c641506ae3c536143fc8e55160d5cd1f4e1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9e59dea663e0a18dd9a6b7505d3c4491f0e7128c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271404"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727072"
 ---
 # <a name="data-flow"></a>数据流
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
   
 > [!NOTE]  
@@ -206,7 +210,7 @@ ms.locfileid: "58271404"
   
 -   在列级，除了组件为列提供的任何自定义属性之外，还可以设置所有列共有的属性。 如果组件支持添加输出列，则可向输出添加列。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，您可以使用为每个元素类型提供的自定义对话框，或者使用“属性”窗口或 **“高级编辑器”** 对话框来设置元素属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，您可以使用为每个元素类型提供的自定义对话框，或者使用“属性”窗口或 **“高级编辑器”** 对话框来设置元素属性。  
   
  有关如何使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   

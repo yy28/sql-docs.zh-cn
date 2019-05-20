@@ -14,14 +14,18 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d47462eeb7259b0289f7c554c0c6a4bd30dbb995
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5cf167278c898b71466379dc1e65d783ce2b710b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275240"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725659"
 ---
 # <a name="add-or-change-a-property-expression"></a>添加或更改属性表达式
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   可以为包、任务、Foreach 循环容器、For 循环容器、序列容器、事件处理程序、包和项目级别连接管理器以及日志提供程序创建属性表达式。  
   
  若要创建或更改属性表达式，您可以使用 **“属性表达式编辑器”** 或 **“表达式生成器”**。 可以从任务和容器使用的自定义编辑器中访问 **“属性表达式编辑器”** ，也可以从 **“属性”** 窗口中进行访问。 可以从 **“属性表达式编辑器”** 内部访问 **“表达式生成器”**。 在 **“属性表达式编辑器”** 或 **“表达式生成器”** 中编写表达式时， **“表达式生成器”** 提供一组图形工具，可以非常容易地生成复杂表达式。  

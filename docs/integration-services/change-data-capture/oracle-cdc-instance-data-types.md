@@ -11,14 +11,18 @@ ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f373cf121a0368508e9b4b3380ef5c674a9fc9f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f3714d58bea5ce8751f2b520a6c4f75353f48a64
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271667"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728772"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC 实例数据类型
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 实例支持大多数 Oracle 数据类型。 下面的部分介绍支持的数据类型和不支持的数据类型。  
   
 ## <a name="supported-data-types"></a>支持的数据类型  

@@ -15,14 +15,18 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c6167895a35781d0adf91869a4bcdc3ab4d79a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 20a65f9755e0cea30a79435f885912c15cce5e7b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275260"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725771"
 ---
 # <a name="transform-data-with-transformations"></a>使用转换对数据进行转换
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括三种类型的数据流组件：源、转换和目标。  
   
  下列关系图显示具有一个源、两个转换和一个目标的简单数据流。  

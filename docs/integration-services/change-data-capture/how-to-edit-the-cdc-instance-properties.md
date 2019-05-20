@@ -11,14 +11,18 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42cc80b22f5daae0deeaa355b4c8d23d2c888455
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9da51ac14564fc7e6a00b7ee9d9f5325073b6b48
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289843"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728795"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何编辑 CDC 实例属性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本过程介绍如何使用 CDC 设计器控制台编辑 CDC 实例的配置属性。  
   
 ### <a name="to-edit-the-cdc-instance-configuration-properties"></a>编辑 CDC 实例的配置属性  

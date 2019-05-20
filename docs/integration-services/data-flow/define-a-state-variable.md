@@ -11,14 +11,18 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0561da6cd6877d9129a6581d2d415b3675c467a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d689ee12759b6d894a068bf5a9f9437a0631ef0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281811"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726975"
 ---
 # <a name="define-a-state-variable"></a>定义状态变量
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本过程介绍如何定义用于存储 CDC 状态的包变量。  
   
  该 CDC 状态变量由 CDC 控制任务加载、初始化和更新，并且由 CDC 源数据流组件用于确定针对更改记录的当前处理范围。 可对 CDC 控制任务和 CDC 源所共有的任何容器定义该 CDC 状态变量。 此操作可在包级别进行，但也可以对循环容器之类的其他容器进行。  

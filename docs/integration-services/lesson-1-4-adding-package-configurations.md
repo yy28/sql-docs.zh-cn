@@ -11,14 +11,18 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95469ad21694b0b086731986bfb27fc524f02b26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64c54d20ce6274ae0bb8bbf194cf12324e344d2f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282431"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723036"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>第 1-4 课 — 添加包配置
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在此任务中，将配置添加到每个包。 在运行时，配置更新包属性和包对象的值。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了各种配置类型。 您可以将配置存储在环境变量、注册表项、用户定义变量、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表和 XML 文件中。 为了提供更大的灵活性， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持使用间接配置。 这意味着可使用环境变量指定配置的位置，而配置又指定实际值。 Deployment Tutorial 项目中的包使用 XML 配置文件和间接配置的组合。 一个 XML 配置文件可以包括多个属性的配置，并且在适当的时候还可以被多个包引用。 在本教程中，对于每个包都将使用单独的配置文件。  

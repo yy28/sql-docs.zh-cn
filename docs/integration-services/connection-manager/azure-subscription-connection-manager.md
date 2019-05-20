@@ -14,14 +14,18 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1256bec97be65752d63b9d05c78e068e7d83d420
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3b3dec7a683bcebc28f9bfe90e4b4091a70892f8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270570"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728336"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 订阅连接管理器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   通过使用你为以下属性指定的值，Azure 订阅连接管理器使 SSIS 包能够连接到 Azure 订阅：Azure 订阅 ID 和管理证书。  
   
  Azure 订阅连接管理器是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。

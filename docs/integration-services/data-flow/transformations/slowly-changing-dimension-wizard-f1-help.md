@@ -13,14 +13,18 @@ ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fad4e5066b86870405ac27cae9bdc835137b206b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0f08fdd63b68d2591911d99b02fb0cf67a1f7548
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281801"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725846"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>渐变维度向导的 F1 帮助
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   可以使用 **渐变维度向导** 配置在各种类型的渐变维度中加载数据的过程。 本部分提供 **渐变维度向导**各页的 F1 帮助。 下表对本部分的主题进行了说明：  
   
  若要了解有关此向导的详细信息，请参阅 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)。  

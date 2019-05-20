@@ -18,15 +18,17 @@ ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 6c9c5d1a9b1e61bfd6cb93ea57ad6eafabbe9636
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: ba0fdffbc354e87419da9d349841d63c38ab794b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038458"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577431"
 ---
 # <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
  从 JSON 字符串中提取对象或数组。  
   
@@ -40,7 +42,8 @@ ms.locfileid: "56038458"
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>参数
+
  *expression*  
  一个表达式。 通常是包含 JSON 文本的变量或列的名称。  
   
@@ -57,14 +60,15 @@ path 的默认值是“$”。 因此，如果没有为 path 提供值，则 JSO
 
 如果 path 格式无效，则 JSON_QUERY 返回错误。  
   
-## <a name="return-value"></a>返回值  
+## <a name="return-value"></a>返回值
+
  返回类型为 nvarchar(max) 的 JSON 片段。 返回值的排序规则与输入表达式的排序规则相同。  
   
  如果值不是对象或数组：  
   
--   在宽松模式下，**JSON_QUERY** 返回 NULL。  
+- 在宽松模式下，**JSON_QUERY** 返回 NULL。  
   
--   在严格模式下，**JSON_QUERY** 返回错误。  
+- 在严格模式下，**JSON_QUERY** 返回错误。  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -107,7 +111,8 @@ path 的默认值是“$”。 因此，如果没有为 path 提供值，则 JSO
 
 ## <a name="examples"></a>示例  
   
-### <a name="example-1"></a>示例 1  
+### <a name="example-1"></a>示例 1
+
  下面的示例演示如何在查询结果中从 `CustomFields` 列返回 JSON 片段。  
   
 ```sql  
@@ -116,7 +121,8 @@ SELECT PersonID,FullName,
 FROM Application.People
 ```  
   
-### <a name="example-2"></a>示例 2  
+### <a name="example-2"></a>示例 2
+
 下面的示例演示如何在 FOR JSON 子句的输出中包含 JSON 片段。  
   
 ```sql  
@@ -127,6 +133,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
  [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON 数据 (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  

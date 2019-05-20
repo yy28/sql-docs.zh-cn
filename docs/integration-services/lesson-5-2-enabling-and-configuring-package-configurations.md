@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：启用和配置包配置 | Microsoft Docs
+title: 第 2 步：启用和配置包配置 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b65e44de58e2aeea21485b1a2875fa7f00349dc5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271692"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721519"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>第 5-2 课：启用和配置包配置
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在此任务中，将项目转换为包部署模型并使用包配置向导配置包。 使用此向导生成 XML 配置文件，该文件包含 Foreach 循环容器的 Directory 属性的配置设置。 Directory 属性的值由新的包级别变量提供，该变量可以在运行时进行更新。 此外，还填充了一个新的示例数据文件夹以用于测试。  
   

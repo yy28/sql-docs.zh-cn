@@ -11,14 +11,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e1b4aef64ef4b7f0d99d7b5f44e88ca26d063c0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3cc37fe2dce76dd59baf776238e141a685c94cb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281661"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722575"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 课：使用 SSIS 创建项目和基本包
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在本课中，你将创建简单的 ETL 包，该包从单个平面文件源提取数据，使用两个查找转换组件转换数据，并将转换后的数据写入“AdventureWorksDW2012”示例数据库中的“FactCurrencyRate”事实数据表的副本。 在本课中，将了解如何创建新包、添加和配置数据源和目标连接以及使用新的控制流和数据流组件。  
   
@@ -83,7 +87,7 @@ ms.locfileid: "58281661"
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
--   [第 1 步：创建新的 Integration Services 项目](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [步骤 1：创建新的 Integration Services 项目](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
 -   [步骤 2：添加和配置平面文件连接管理器](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
@@ -102,5 +106,5 @@ ms.locfileid: "58281661"
 -   [步骤 9：测试第 1 课包](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
-[第 1 步：创建新的 Integration Services 项目](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+[步骤 1：创建新的 Integration Services 项目](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   

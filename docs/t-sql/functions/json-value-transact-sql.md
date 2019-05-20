@@ -18,17 +18,18 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: ed749535770a9cf0e0c4e9664b6f7c5be6e06cb4
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: b2e4685c83c1587e43b26363c9a48af5683d33e5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774895"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577450"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  从 JSON 字符串中提取标量值。  
+ 从 JSON 字符串中提取标量值。  
   
  若要从 JSON 字符串而不是标量值中提取对象或数组，请参阅 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)。  
   
@@ -40,27 +41,29 @@ ms.locfileid: "64774895"
 JSON_VALUE ( expression , path )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>参数
+
  *expression*  
  一个表达式。 通常是包含 JSON 文本的变量或列的名称。  
- 
+
  如果 JSON_VALUE 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误。 如果 JSON_VALUE 找不到路径标识的值，则它将扫描整个文本，如果在表达式中的任何位置发现无效的 JSON，则返回错误。
   
  path  
  指定要提取属性的 JSON 路径。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
- 
+
 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值。
   
  如果 path 格式无效，则 JSON_VALUE 返回错误。  
   
-## <a name="return-value"></a>返回值  
+## <a name="return-value"></a>返回值
+
  返回 nvarchar(4000) 类型的单个文本值。 返回值的排序规则与输入表达式的排序规则相同。  
   
  如果值大于 4000 个字符：  
   
--   在宽松模式下，JSON_VALUE 返回 NULL。  
+- 在宽松模式下，JSON_VALUE 返回 NULL。  
   
--   在严格模式下，JSON_VALUE 返回错误。  
+- 在严格模式下，JSON_VALUE 返回错误。  
   
  如果必须返回大于 4000 个字符的标量值，请使用 OPENJSON 而不是 JSON_VALUE。 有关详细信息，请参阅 [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)。  
   
@@ -101,7 +104,7 @@ SET @jsonInfo=N'{
   
 ## <a name="examples"></a>示例  
   
-### <a name="example-1"></a>示例 1  
+### <a name="example-1"></a>示例 1
  以下示例在查询结果中使用 JSON 属性 `town` 和 `state` 的值。 由于 JSON_VALUE 保留了源的排序规则，因此结果的排序顺序取决于 `jsonInfo` 列的排序规则。 
 
 > [!NOTE]
@@ -115,7 +118,7 @@ WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'
 ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ```  
   
-### <a name="example-2"></a>示例 2  
+### <a name="example-2"></a>示例 2
  下面的示例将 JSON 属性 `town` 的值提取到本地变量。  
   
 ```sql  
@@ -128,7 +131,7 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- Paris
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London
 ```  
   
-### <a name="example-3"></a>示例 3  
+### <a name="example-3"></a>示例 3
  下面的示例基于 JSON 属性的值创建计算列。  
   
 ```sql  
@@ -142,8 +145,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
  [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON 数据 (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
-  
   

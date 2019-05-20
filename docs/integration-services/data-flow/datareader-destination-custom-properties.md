@@ -11,14 +11,18 @@ ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 701fbe45a5f6e7f1d0056aa4d549b1ba32246459
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 38c0854947ee9b853d8638593aea1e60d40941ca
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279281"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726940"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目标自定义属性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   DataReader 目标具有自定义属性和所有数据流组件通用的属性。  
   
  下表介绍了 DataReader 目标的自定义属性。 除 **DataReader** 以外的所有属性均可读/写。  

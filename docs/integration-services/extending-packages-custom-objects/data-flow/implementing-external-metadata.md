@@ -24,14 +24,18 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce6b5ea32630a5dca08657150c2819d61c499813
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 925db41997def8591c9304e3116f23271ed77581
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290353"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724671"
 ---
 # <a name="implementing-external-metadata"></a>实现外部元数据
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   组件与其数据源断开连接后，可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> 接口，针对组件的外部数据源中的列验证输入和输出列集合中的列。 使用此接口可以保留一份外部数据源中的列的快照，并可以将这些列映射到组件的输入和输出列集合中的列。  
   
  实现外部元数据列会增加组件开发的开销和复杂度，因为您必须额外保留和验证列集合，但这却能节省往返于服务器进行验证的昂贵开销，从而使得这项开发工作是值得的。  

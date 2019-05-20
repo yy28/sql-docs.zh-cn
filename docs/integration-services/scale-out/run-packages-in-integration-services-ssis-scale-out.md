@@ -13,14 +13,18 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 4c718dd14e1c7d2fc508efa403a9abfbcbae100d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b466bb90d9a40599bad9c924da7f2ae6f5f74089
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205806"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718292"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>在 Integration Services (SSIS) Scale Out 中运行包
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 将包部署到 Integration Services 服务器后，可使用以下任一方法在 Scale Out 中运行它们：
 
 -   [“在 Scale Out 中执行包”对话框](#scale_out_dialog)
@@ -99,7 +103,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id,  @retry_count=0
 GO
 ```
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 在 Scale Out 中运行包需要以下权限之一：
 
 -   **ssis_admin** 数据库角色中的成员资格  

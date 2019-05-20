@@ -16,14 +16,18 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7c0029a40ed27794f7b406ae6e6ba238a5e659e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: de404b8650c78671380a2515848a16a2ebf1b9f1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272752"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713607"
 ---
 # <a name="variables-window"></a>“变量”窗口
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   可以使用“变量”窗口创建和修改用户定义变量，以及查看系统变量。  
   
  默认情况下， **“变量”** 窗口位于 **中 SSIS 设计器的** “连接管理器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]区域之下。 如果看不到“变量”窗口，请单击 SSIS 菜单上的“变量”以显示该窗口。  

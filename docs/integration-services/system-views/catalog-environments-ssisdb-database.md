@@ -11,14 +11,18 @@ ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7dffaba720b8a15650b3f6a7cef20a5a736a71a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c3660f7314ce9514b4dc03ee2d6fb1490a4eab7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274503"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715265"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments（SSISDB 数据库）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中所有环境的环境详细信息。 环境包含可由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目引用的变量。  

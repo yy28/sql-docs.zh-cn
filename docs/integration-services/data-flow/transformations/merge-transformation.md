@@ -20,14 +20,18 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 224c5e74a1f6019404faa45eed3c5a02f18943bb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d7267c2d4f86025f213208baae90057a84ced3e9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276750"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725983"
 ---
 # <a name="merge-transformation"></a>合并转换
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   合并转换将两个排序后的数据集合并为一个数据集。 根据每个数据集中的行的键列的值，将这些行插入到输出中。  
   
  通过将合并转换纳入数据流，可以执行下列任务：  

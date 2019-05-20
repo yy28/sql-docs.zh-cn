@@ -11,14 +11,18 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf1179c8415b7db67e6552ceb0d9db24c4d585a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278921"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722565"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>第 2-3 课：修改平面文件连接管理器
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在本任务中，将修改第 1 课中的平面文件连接管理器。 平面文件连接管理器配置为静态加载单个文件。 若要启用平面文件连接管理器以重复加载文件，请更改连接管理器的 ConnectionString 属性以使用用户定义的变量 `User::varFileName`，该变量包含要在运行时加载的文件的路径。  
   

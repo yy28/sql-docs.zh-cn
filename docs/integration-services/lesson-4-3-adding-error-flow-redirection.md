@@ -11,14 +11,18 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f926f1c1cb9c730401c220120c04ee679d005745
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272012"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721797"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>第 4-3 课：添加错误流重定向
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在上一个任务中，转换尝试处理已损坏的示例平面文件时，Lookup Currency Key 无法生成匹配项，从而产生错误。 由于转换针对错误输出使用了默认设置，因此，任何错误都将导致该转换失败。 当转换失败时，该包的其余部分也将失败。  
   

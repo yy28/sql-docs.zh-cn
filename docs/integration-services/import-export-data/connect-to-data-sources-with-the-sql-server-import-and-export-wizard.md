@@ -10,14 +10,18 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d17b7115fb0a748c16fc7093100d67f377610268
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 17dad1100e0a4dc9df770ef781f8294198247af9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221883"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723857"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导连接到数据源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本部分中的主题说明如何在运行 SQL Server 导入和导出向导时连接到多个常用的数据源。 用户需要在向导的“选择数据源”和“选择目标”页上为数据源提供连接信息。
 
 本部分中的主题仅介绍如何从向导的“选择数据源”和“选择目标”页**连接到数据源**。 如需其他信息，请参阅[相关任务和内容](#related)。

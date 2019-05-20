@@ -12,14 +12,18 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac4a69a7aca5a1e354e345a47e23b413fc9d3422
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 8d2b65f4184ed599cd737cdbb14779f411d09808
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221911"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723935"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>“列转换详细信息”对话框（SQL Server 导入和导出向导）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如果双击“查看数据类型映射”  页上的单个列的行， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “导入和导出向导”会显示“列转换详细信息”  对话框。 在此页上你可以查看有关单个列的详细转换信息。 信息包括以下各项：
 -   源和目标列的数据类型。
 -   向导将执行的数据类型转换（如果需要）。

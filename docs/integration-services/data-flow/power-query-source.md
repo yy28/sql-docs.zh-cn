@@ -17,14 +17,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 0e2bcd19b705aa3dd0afb229d523b9ceb3725fc3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319308"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726574"
 ---
 # <a name="power-query-source-preview"></a>Power Query 源（预览版）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 本文介绍如何配置 SQL Server Integration Services (SSIS) 数据流中的 Power Query 源属性。 借助 Power Query 技术，可以使用 Excel / Power BI Desktop 连接到各种数据源并转换数据。 有关详细信息，请参阅 [Power Query - 概述和学习](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d)一文。 可以将 Power Query 生成的脚本复制并粘贴到 SSIS 数据流的 Power Query 源中来进行配置。
   

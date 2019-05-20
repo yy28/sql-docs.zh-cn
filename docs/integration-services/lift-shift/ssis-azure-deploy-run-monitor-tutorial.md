@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 96a93c846fa2d958343d0fd3913e5710bd79e628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1c5c97eca9553f209e559ddacd25af2618e84f71
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019508"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720865"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教程：在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本教程演示如何将 SQL Server Integration Services (SSIS) 项目部署到 Azure SQL 数据库中的 SSIS 目录、在 Azure-SSIS Integration Runtime 中运行包，以及监视正在运行的包。
 
 ## <a name="prerequisites"></a>必备条件

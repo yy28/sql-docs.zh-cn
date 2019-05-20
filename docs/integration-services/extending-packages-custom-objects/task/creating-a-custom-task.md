@@ -13,14 +13,18 @@ ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1af22803fd1204e2735dde535ce23ce99a4a449a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aeddafd6eeada0479cc18c008c5afabd71d713f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270496"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724412"
 ---
 # <a name="creating-a-custom-task"></a>创建自定义任务
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   创建自定义任务的步骤与创建其他任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 自定义对象的步骤相似：  
   
 -   创建一个从基类继承的新类。 对于任务，基类是 <xref:Microsoft.SqlServer.Dts.Runtime.Task>。  

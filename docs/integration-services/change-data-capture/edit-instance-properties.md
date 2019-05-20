@@ -11,14 +11,18 @@ ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70b018f595f5db67e2674dd0488a81798306c080
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5efde857036053b6ff31499a2ea6d889e34dfb25
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272725"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728913"
 ---
 # <a name="edit-instance-properties"></a>编辑实例属性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用属性编辑器可在您创建初始配置后对 CDC 实例进行更改。 您可以在属性编辑器中执行以下操作。  
   
 -   [编辑 Oracle 数据库属性](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  

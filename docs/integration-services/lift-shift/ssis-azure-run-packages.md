@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 129b2b760f755985028de214a1f18b00be004cd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22eb6e805cf7090c38d1d466d09fe8d3614d2a2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758145"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720592"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>运行部署在 Azure 中的 SQL Server Integration Services (SSIS) 包
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 可以通过选择本文介绍的某个方法，运行部署到 Azure SQL 数据库服务器上 SSISDB 目录中的 SSIS 包。 可以直接运行包，或将包作为 Azure 数据工厂管道的一部分运行。 有关 Azure 上 SSIS 的概述，请参阅[在 Azure 中部署和运行 SSIS 包](ssis-azure-lift-shift-ssis-packages-overview.md)。
 

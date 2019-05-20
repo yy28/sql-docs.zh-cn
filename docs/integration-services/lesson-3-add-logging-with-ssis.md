@@ -11,14 +11,18 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dbec1a2d2fd19e26fc56e8f73db312f2994d300
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4d8fdf2a714f47e40e4c2afe12bb7357068fa9d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270902"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722079"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>第 3 课：使用 SSIS 添加日志记录
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含日志记录功能，可通过提供任务和容器事件跟踪监控包执行情况以及进行故障排除。 日志记录功能非常灵活。 可以在包级别或包中的单个任务或容器上启用日志记录。 选择要记录的事件，也可以对单个包创建多个日志。  
   
@@ -42,12 +46,12 @@ ms.locfileid: "58270902"
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
--   [第 1 步：复制第 2 课包](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+-   [步骤 1：复制第 2 课包](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
 -   [步骤 2：添加和配置日志记录](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
 -   [步骤 3：测试第 3 课包](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
-[第 1 步：复制第 2 课包](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+[步骤 1：复制第 2 课包](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   

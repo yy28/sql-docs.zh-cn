@@ -11,14 +11,18 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc16bdad7012738fde65fbd695dae019d9d41f2c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277066"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720823"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>第 6-4 课：部署第 6 课包
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 部署包涉及将包添加到 SQL Server 实例上 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的 SSISDB 目录。 在本课程中，将第 6 课包添加到 SSISDB 目录，设置新参数，然后执行该包。 对于本课程，使用 SQL Server Management Studio 将第 6 课包添加到 SSISDB 目录，然后部署该包。 部署该包之后，修改参数以指向新位置，然后运行该包。   
 在此任务中，将执行以下操作：  

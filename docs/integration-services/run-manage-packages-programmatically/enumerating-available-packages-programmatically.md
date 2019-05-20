@@ -15,14 +15,18 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ad1532d5f3cca914ad169eb9dec95a16960a7344
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ffb810b333d2e9f353070bcc12ca84fbf3eb9566
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271610"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719370"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>以编程方式枚举可用的包
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   <a name="top"></a> 以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，可能希望确定单个包或文件夹是否存在，或枚举可用于加载和执行的已保存的包。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了多种满足这些要求的方法。    
     
 ##  <a name="exists"></a>确定包或文件夹是否存在    

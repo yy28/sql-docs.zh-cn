@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec39c68294ae1de6563e37857f2c6e1041e674fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dc713f54c9383b240a392304c5c938cdea210b1
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666735"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875214"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,9 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="remarks"></a>Remarks  
  如果 pattern 或 expression 为 NULL，则 PATINDEX 返回 NULL。  
-  
+ 
+ 返回的起始位置从 1 开始，而不是从 0 开始。
+ 
  PATINDEX 基于输入的排序规则执行比较。 若要以指定排序规则进行比较，则可以使用 COLLATE 将显式排序规则应用于输入。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  

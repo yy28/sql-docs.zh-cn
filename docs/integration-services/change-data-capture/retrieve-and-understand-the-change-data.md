@@ -13,14 +13,18 @@ ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c48817f8f24cdb9ab0055c3d46e1e9124bcdc9c6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a62d94a101a2c62ae21950f6ad25e8f44ad333ca
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277896"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728605"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>检索和了解变更数据
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中，第一个任务是运行查询以检索变更数据。 在数据流任务中在源组件内执行此查询。 然后，使用下游转换和目标将变更数据应用到目标。  
   
 > [!NOTE]  

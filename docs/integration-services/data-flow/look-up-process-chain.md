@@ -11,14 +11,18 @@ ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 062efbe700a4c20090f51e6e80196b4a103cfffe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 513145a1c1968e6ca5dbdc2b8cee0566552e500e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280961"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726724"
 ---
 # <a name="look-up-process-chain"></a>查找进程链
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **“查找进程链”** 对话框查找在 SAP Netweaver BW 系统中定义的进程链。 当可用进程链列表显示时，选择您需要的进程链，然后源将使用需要的值填充关联的选项。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 源使用 **“查找进程链”** 对话框。 若要了解有关 SAP BW 源的详细信息，请参阅 [SAP BW Source](../../integration-services/data-flow/sap-bw-source.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：添加和配置 Foreach 循环容器 | Microsoft Docs
+title: 第 2 步：添加和配置 Foreach 循环容器 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4db32185da7c27d94b0afb52230aa89ff71abf95
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c865c00eb1020aa6128cdd7a40d61a191bad2a3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280161"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722740"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>第 2-2 课：添加和配置 Foreach 循环容器
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在本任务中，将添加循环访问平面文件的文件夹的功能，并将第 1 课中的数据流转换应用于其中的每个平面文件。 实现方法是将 Foreach 循环容器添加到控制流中并进行配置。  
   

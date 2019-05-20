@@ -13,14 +13,18 @@ ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 314e6895b4a4888970ae09fb29851446b3d6859c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04992a3c70342d60d5c64e251081a32672d65812
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273220"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720061"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 帮助
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   此部分包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 三个组件的 F1 帮助主题。 也可以按 F1 键或在向导页和对话框中单击“帮助”，从用户界面中查看这些主题。  
 
 > [!IMPORTANT]

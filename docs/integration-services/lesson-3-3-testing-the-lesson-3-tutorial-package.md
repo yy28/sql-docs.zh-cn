@@ -11,14 +11,18 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7e644744a53318ed1359bc0cdb47c3c896ed5ff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5884506c83dfc0f3cbee6119ad9047807c35fbfe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274852"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722086"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>第 3-3 课：测试第 3 课教程包
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在该任务中，运行 Lesson 3.dtsx 包。 在包运行时，“日志事件”窗口会列出日志提供程序 SSIS 写入日志文件的日志条目。 在包完成执行后，可查看日志文件的内容。  
   

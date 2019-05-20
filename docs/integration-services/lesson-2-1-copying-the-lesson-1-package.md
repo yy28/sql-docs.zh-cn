@@ -1,5 +1,5 @@
 ---
-title: 步骤 1：复制第 1 课包 | Microsoft Docs
+title: 第 1 步：复制第 1 课包 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db25f19e7815a0fc801801ac6ad619dbdfd66d43
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 66077bac6ef3ce7f52b03eb5a439aa24a89449a9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280421"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722735"
 ---
 # <a name="lesson-2-1-copy-the-lesson-1-package"></a>第 2-1 课：复制第 1 课包
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在本任务中，创建 Lesson 1.dtsx 包的副本。 如果未完成第 1 课，可以使用此本教程中附带的已完成的第 1 课包。 使用这一新副本来完成第 2 课剩余部分。  
   

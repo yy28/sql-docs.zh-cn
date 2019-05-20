@@ -11,14 +11,18 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b685268f1a4b76adf1d8947dde53c251190ee3d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274834"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721215"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>第 5-3 课：修改 Directory 属性配置值
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在此任务中，修改存储在 SSISTutorial.dtsConfig 文件中的配置设置，以设置包级别变量 `User::varFolderName` 的 Value 属性。 该变量更新 Foreach 循环容器的 Directory 属性。 修改后的值指向前一个任务中创建的 New Sample Data 文件夹。 修改配置设置并运行包后，将从配置文件中的变量更新 Directory 属性。 以前，Directory 属性值包含在包中。  
   

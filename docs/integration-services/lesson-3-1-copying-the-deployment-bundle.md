@@ -1,5 +1,5 @@
 ---
-title: 步骤 1：复制部署捆绑 | Microsoft Docs
+title: 第 1 步：复制部署捆绑 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9fbe3f30d37bab783424deeefb5517cd6fa553a2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 153975d4b2a418c694188ca30c0ddb9fc19b0fc8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279461"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722393"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>第 3-1 课 - 复制部署捆绑
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在此任务中，将部署捆绑复制到目标计算机。  
   
 将部署捆绑复制到目标计算机的最简单方法是，首先在目标计算机上创建公共共享，将一个驱动器映射到公共共享，再将部署捆绑复制到该共享。 如何您不知道如何创建和配置公共文件夹或映射驱动器，请参阅 Windows 文档。  

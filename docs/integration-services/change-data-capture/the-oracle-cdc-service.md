@@ -11,14 +11,18 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34f86e859bb09e6b3e62d9819c13ba1bf7abec26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c033a631425a051fae411acbd5ff589302eb7344
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276083"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728484"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 服务是运行 xdbcdcsvc.exe 程序的一种 Windows 服务。 Oracle CDC 服务可配置为在同一台计算机上运行多个 Windows 服务，每个服务都使用不同的 Windows 服务名称。 在单个计算机上创建多个 Oracle CDC Windows 服务通常是为了在它们之间或在每个服务需要使用不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时实现更好的隔离。  
   
  Oracle CDC 服务是使用 Oracle CDC 服务配置控制台创建的，或者是通过内置于 xdbcdcsvc.exe 程序中的命令行接口定义的。 在这两种情况中，创建的每个 Oracle CDC 服务都与单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关联（可能使用 **AlwaysOn** 安装程序被群集或镜像），并且连接信息（连接字符串和访问凭据）是服务配置的一部分。  

@@ -11,14 +11,18 @@ ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0488d886afdeaac9fe43da22d8a3e9d3c85ff8fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 20253a1bb82bba8b11b24eafbc1c26010abdeb27
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274749"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714681"
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters（SSISDB 数据库）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中所有包和项目的参数。  

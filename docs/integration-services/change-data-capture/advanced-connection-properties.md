@@ -11,14 +11,18 @@ ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f131956e913e210c529921e7ed6655c91f890e77
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed62b74256b15aa27ca94459963928ae4b2727ca
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282691"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729112"
 ---
 # <a name="advanced-connection-properties"></a>高级连接属性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **“高级连接属性”** 对话框可以将更多连接参数添加到连接字符串。  
   
  其他连接参数可以是您正在使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库实例支持的任何 ODBC 连接参数。  

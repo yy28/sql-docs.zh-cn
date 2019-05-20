@@ -11,14 +11,18 @@ ms.date: 08/09/2018
 ms.author: janinez
 author: janinezhang
 manager: craigg
-ms.openlocfilehash: 9ba9dde07be2e879dc44f6d3fd105d0b315f5f98
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671193"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720740"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure SQL 数据仓库中
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 创建 SQL Server Integration Services (SSIS) 包，以将数据加载到 [Azure SQL 数据仓库](/azure/sql-data-warehouse/index)中。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
 

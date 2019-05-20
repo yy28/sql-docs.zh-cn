@@ -14,14 +14,18 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 836be2ee439fa39b433b2c89755e4402bad2e8e3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 83256bfc8b610869b8bbc1938f7846ce41971b1b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270523"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725278"
 ---
 # <a name="len-ssis-expression"></a>LEN（SSIS 表达式）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   返回字符表达式中的字符数。 如果字符串中包含前导空格和尾随空格，则函数会将它们包含在计数内。 LEN 对相同的单字节和双字节字符串返回相同的值。  
   
 ## <a name="syntax"></a>语法  

@@ -13,14 +13,18 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a249a9a155b64ff641197724e55129a6f2fc403
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8b5f187d7efb44997cf53a4064daee4a83206a82
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278006"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728583"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第一个任务是计算变更数据的端点。 这些端点是 **datetime** 值，将存储在包变量中以供以后在包中使用。  
   
 > [!NOTE]  

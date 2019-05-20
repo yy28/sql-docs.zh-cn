@@ -16,14 +16,18 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dd066885e321a9233cae82769676c7c526322aa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e51dd2b69e7b815134b156e0ff065c81aa8d4a63
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274254"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726165"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用派生列转换派生列值
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要添加和配置派生列转换，包必须已包含至少一个数据流任务和一个源。  
   
  派生列转换使用表达式来更新现有值或向新列中添加值。 当您选择向新列中添加值时， **“派生列转换编辑器”** 对话框会对表达式求值并相应地定义列的元数据。 例如，如果一个表达式连接两列（每列的数据类型均为 DT_WSTR，长度均为 50），两列值之间有一个空格，则新列的数据类型为 DT_WSTR，长度为 101。 您可以更新新列的数据类型。 唯一的要求是数据类型与插入的数据兼容。 例如，当您将日期值分配给数据类型为整数的列时， **“派生列转换编辑器”** 对话框将生成验证错误。 根据所选数据类型，您可以指定列的长度、精度、小数位数和代码页。  

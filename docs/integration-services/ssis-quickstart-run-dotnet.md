@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1eccdb5f36d0340097bfb6eb280eb06cf2c04ec5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8344f9377cfe1850c7eefbf379667dba664aedfa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280521"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717597"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>使用 .NET 应用中的 C# 代码运行 SSIS 包
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本快速入门演示如何编写用于连接数据库服务器和运行 SSIS 包的 C# 代码。
 
 可以使用 Visual Studio、Visual Studio Code 或所选的另一工具来创建 C# 应用。

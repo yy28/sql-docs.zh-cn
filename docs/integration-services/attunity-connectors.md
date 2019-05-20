@@ -11,14 +11,18 @@ ms.assetid: ''
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3d73eff658ecfa8f5f145f29c8522a0723d93ff8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b555dfd5c92212e6a8a24568964c96af35eb8c0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275712"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729472"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Attunity 推出的用于 Oracle 和 Teradata 的 Microsoft 连接器（用于 Integration Services (SSIS)）
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 可下载用于Attunity 提供的 Integration Services 的连接器，当在 SSIS 包中向 Oracle 或 Teradata 加载数据或从中下载数据时，该连接器可优化性能。
 

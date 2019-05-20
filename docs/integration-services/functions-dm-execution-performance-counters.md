@@ -11,14 +11,18 @@ ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a66de9bcb28121eae0064c1f25ee691ea44fb322
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 543a4502199287432ca8a13220fa95223797340a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275798"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724045"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>函数 - dm_execution_performance_counters
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   返回正在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上运行的执行的性能统计信息。  

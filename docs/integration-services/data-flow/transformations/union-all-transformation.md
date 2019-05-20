@@ -19,14 +19,18 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9069bffba5739a7eb53c12315ba3d28702e3398
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4173a5153dbd05977fcb8cd42b695d3654b1584
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273748"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725831"
 ---
 # <a name="union-all-transformation"></a>Union All 转换
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Union All 转换将多个输入组合到一个输出中。 例如，可将来自五个不同平面文件源的输出输入到 Union All 转换并将其组合到一个输出中。  
   
 ## <a name="inputs-and-outputs"></a>输入和输出  
@@ -41,7 +45,7 @@ ms.locfileid: "58273748"
  此转换具有多个输入和一个输出。 它不支持错误输出。  
   
 ## <a name="configuration-of-the-union-all-transformation"></a>Union All 转换的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以编程方式设置的属性的详细信息，请参阅 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
   

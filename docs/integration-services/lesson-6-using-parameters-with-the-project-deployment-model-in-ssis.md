@@ -11,14 +11,18 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9ebfb17a69abbaf8482999d3435bbdea11e0822
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 54fb96d23fb02be01068ce5c2206913a0e6716f0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289893"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721060"
 ---
 # <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>第 6 课：在 SSIS 中对项目部署模型使用参数
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SQL Server 2012 引入了一个新的部署模型，可在其中将项目部署到 Integration Services 服务器。 通过 Integration Services 服务器，您可以管理和运行包，以及为包配置运行时值。  
   
@@ -34,7 +38,7 @@ SQL Server 2012 引入了一个新的部署模型，可在其中将项目部署�
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
-1.  [第 1 步：复制第 5 课包](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
+1.  [步骤 1：复制第 5 课包](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   
 2.  [步骤 2：将项目转换为项目部署模型](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
@@ -43,5 +47,5 @@ SQL Server 2012 引入了一个新的部署模型，可在其中将项目部署�
 4.  [步骤 4：部署第 6 课包](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
-[第 1 步：复制第 5 课包](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
+[步骤 1：复制第 5 课包](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   

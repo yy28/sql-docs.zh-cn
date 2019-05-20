@@ -13,14 +13,18 @@ ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb87a00ded7034696f45b2855f5f931ef44eadfa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e28ec706400625641feb2953e6708df7beabde1e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290293"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725883"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>渐变维度列（渐变维度向导）
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   可以使用 **“渐变维度列”** 对话框，为每个渐变维度列选择更改类型。  
   
  若要了解有关此向导的详细信息，请参阅 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)。  

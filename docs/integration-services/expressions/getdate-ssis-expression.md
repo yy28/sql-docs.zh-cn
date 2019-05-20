@@ -15,14 +15,18 @@ ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 283f668b1c751a1808c8254eaaceb523de757081
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c979752f8defa4ed8bbea32bb24389efcd27ddb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275251"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725385"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE（SSIS 表达式）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   以 DT_DBTIMESTAMP 格式返回系统的当前日期。 GETDATE 函数不使用参数。  
   
 > [!NOTE]  

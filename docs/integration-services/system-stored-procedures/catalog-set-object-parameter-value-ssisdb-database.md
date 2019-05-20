@@ -11,14 +11,18 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a8d1d2a86effa392587a922f56b7e9bb11ff39b1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 592af27fb460f748dcf11b1463583a5d221402d9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272843"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715822"
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value（SSISDB 数据库）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中设置参数的值。 将值与环境变量关联，或者未分配其他任何值时，分配默认情况下使用的文本值。  

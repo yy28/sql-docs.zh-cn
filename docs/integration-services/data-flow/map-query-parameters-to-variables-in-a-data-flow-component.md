@@ -16,14 +16,18 @@ ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62517e3934c7ebb446cdcf02a19eca1e1a547b3b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 27b5fd7de403e252967d0d2a9b8073eafbe0c959
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270533"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726697"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>将查询参数映射到数据流组件中的变量
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   当配置 OLE DB 源以使用参数化查询时，可以将参数映射到变量。  
   
  当 OLE DB 源连接到数据源时，OLE DB 源使用参数化查询来筛选数据。  

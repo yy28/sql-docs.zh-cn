@@ -13,14 +13,18 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e14dc619cfe913239e47090ccc2a635454ea6e92
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 76b35434fd3d9a171478394967ef13cca6411c32
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271714"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728962"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>连接到 Oracle 源数据库
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用“Oracle 源”页可提供连接到 Oracle 源数据库所需的信息。 CDC 实例将读取您连接到的 Oracle 数据库的重做日志。  
   
  **Oracle 连接字符串**  

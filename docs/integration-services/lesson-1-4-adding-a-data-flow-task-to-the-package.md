@@ -11,14 +11,18 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ba4cadf966bdeec08cee922d091a3b01820e082
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277666"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723327"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>第 1-4 课：将数据流任务添加到包
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 为源数据和目标数据创建了连接管理器后，你可以将数据流任务添加到包中。 数据流任务将定义在源和目标之间移动数据的数据流引擎，并提供在移动数据时转换、清除和修改数据的功能。 大部分的数据提取、转换和加载 (ETL) 进程均在数据流任务中完成。  
   

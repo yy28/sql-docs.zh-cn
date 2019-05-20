@@ -1,5 +1,5 @@
 ---
-title: 步骤 1：生成部署实用工具 | Microsoft Docs
+title: 第 1 步：生成部署实用工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2272183b648d22db604d63326974c1b3c4686c0a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280891"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722435"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>第 2-1 课 — 生成部署实用工具
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在此任务中，将为 Deployment Tutorial 项目配置和生成部署实用工具。  
   
 必须先修改 Deployment Tutorial 项目的属性，才能生成部署实用工具。 使用“Deployment Tutorial 属性页”对话框配置这些属性。 在此对话框中，您必须允许在部署期间更新配置，并指定生成进程将生成部署实用工具。 在设置属性后，将生成项目。  

@@ -12,14 +12,18 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5805f1c9f7455423bf4fab43c6092e880e62448
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8af55ff084a0f6202bf830a006b01460748d8b4e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281521"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723774"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>查看数据类型映射（SQL Server 导入和导出向导）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 如果在“列映射”  对话框的“映射”  列表中指定了一个可能无法成功的数据类型映射， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导将显示“查看数据类型映射”  页。 在此页上，可查看为了使源数据与目标兼容向导必须执行的数据类型转换的相关详细信息。 此信息包括视觉提示，用于区分应成功的数据类型转换与可能导致错误或截断的转换。 对于每个转换，你都可以决定是否接受向导建议的转换，也可以指定如何处理可能发生的错误。   
   
 > [!TIP]

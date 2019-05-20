@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 09c9765791f68f1026e906f797ac0d00b915866f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5810202a45417f51ac539b4c5e892f0405040dd7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811565"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718786"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>在单台计算机上开始使用 Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本部分指导如何在单一计算机环境中使用默认设置来设置 Integration Services Scale Out。
 
 ## <a name="1-install-sql-server-features"></a>1.安装 SQL Server 功能

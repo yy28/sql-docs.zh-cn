@@ -11,14 +11,18 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 188735b5a02150ba801154e338090ce75dc23060
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8903517affd4d0a8e395a17cb97e27ddd5a67d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274182"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722453"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>第 2 课：使用 SSIS 添加循环
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在[第 1 课中：使用 SSIS 创建项目和基本包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)，创建了一个从单个平面文件源中提取数据的包。 然后使用查找转换转换了数据。 最后，程序包将数据加载到 AdventureWorksDW2012 示例数据库中的 FactCurrencyRate 事实数据表的副本中。  
   
@@ -54,7 +58,7 @@ Foreach 循环容器使包能够对指定枚举器的每个成员重复执行控
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
--   [第 1 步：复制第 1 课包](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
+-   [步骤 1：复制第 1 课包](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
 -   [步骤 2：添加和配置 Foreach 循环容器](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
@@ -63,7 +67,7 @@ Foreach 循环容器使包能够对指定枚举器的每个成员重复执行控
 -   [步骤 4：测试第 2 课教程包](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
-[第 1 步：复制第 1 课包](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
+[步骤 1：复制第 1 课包](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [For 循环容器](../integration-services/control-flow/for-loop-container.md)  
