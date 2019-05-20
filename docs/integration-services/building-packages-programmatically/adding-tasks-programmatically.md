@@ -17,14 +17,18 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0099a76c75e601712c54df2189f32ccadd3ce298
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7a535c18156e3a2b34a778698f51f54c8f66f576
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282901"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729385"
 ---
 # <a name="adding-tasks-programmatically"></a>以编程方式添加任务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   可在运行时引擎中将任务添加到下列对象类型中：  
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.Package>  

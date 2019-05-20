@@ -22,14 +22,18 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: abb30ee26f5063c4a119b13c6891b53518d63b9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282381"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724494"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>在自定义任务中添加对调试的支持
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时引擎可以通过断点在执行过程中将包、任务和其他类型的容器挂起。 通过断点可以检查和纠正那些导致应用程序或任务不能正常运行的错误。 断点体系结构使客户端能够在任务处理被挂起的同时在定义的执行点评估包中对象的运行时值。  
   
  自定义任务开发人员可利用此体系结构，使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口及其父接口 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 创建自定义断点目标。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口定义运行时引擎与用于创建和管理自定义断点位置或目标的任务之间的交互。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口提供由运行时引擎调用以通知任务挂起或继续执行的方法和属性。  

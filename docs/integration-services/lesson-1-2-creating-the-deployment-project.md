@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：创建部署项目 | Microsoft Docs
+title: 第 2 步：创建部署项目 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9d2fe8b249b56ec61196a2df36468f978857bc2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 48f34b1637ce5e388ff5961b984485de8a2e08ab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276784"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723419"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>第 1-2 课 - 创建部署项目
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中，可部署的单元是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 必须先创建一个新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，再将所有包和要与包一起部署的任何辅助文件添加到该项目，才能部署包。  
   
 ### <a name="to-create-the-integration-services-project"></a>创建 Integration Services 项目  

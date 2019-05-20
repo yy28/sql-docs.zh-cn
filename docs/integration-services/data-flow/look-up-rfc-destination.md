@@ -11,14 +11,18 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 046ec13269181eedda2d9fcfd891e7dd823db372
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 960c172b5634ba081fdcec404f13d0314e512f91
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282231"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726711"
 ---
 # <a name="look-up-rfc-destination"></a>查找 RFC 目标
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **“查找 RFC 目标”** 对话框查找在 SAP Netweaver BW 系统中定义的 RFC 目标。 当可用 RFC 目标列表显示时，选择您需要的目标，然后组件将使用需要的值填充关联的选项。  
   
  SAP BW 源和 SAP BW 目标都使用 **“查找 RFC 目标”** 对话框。 有关这些 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 组件的详细信息，请参阅 [SAP BW 源](../../integration-services/data-flow/sap-bw-source.md) 和 [SAP BW 目标](../../integration-services/data-flow/sap-bw-destination.md)。  

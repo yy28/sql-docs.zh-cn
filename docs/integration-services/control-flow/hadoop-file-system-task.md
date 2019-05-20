@@ -13,14 +13,18 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87dd03cb63da117f3d754cdc9692310e9633e70d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ffb3559a379a8d1f64c76072f262b89d41164533
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290733"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727635"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 文件系统任务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Hadoop 文件系统任务允许 SSIS 包在 Hadoop 群集之间或内部复制文件。  
   
  要添加 Hadoop 文件系统任务，请将其拖放到设计器。 然后双击该任务，或右键单击，然后单击“编辑”，以打开“Hadoop 文件系统任务编辑器”对话框。  

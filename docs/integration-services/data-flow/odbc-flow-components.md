@@ -11,14 +11,18 @@ ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f9f23826d6d56b4a1ca52b4552538c9a5af5ef11
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e59efeb278c7d5f1236a9943f03ad471491f354a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279392"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726650"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流组件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本主题介绍使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
  适用于 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的开放式数据库连接 (ODBC) 连接器有助于 SSIS 开发人员轻松创建从支持 ODBC 的数据库加载和卸载数据的包。  

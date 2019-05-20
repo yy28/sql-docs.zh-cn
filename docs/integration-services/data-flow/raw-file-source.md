@@ -19,14 +19,18 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d3117d79ebdb77031ff2572027544c51ef844dfd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0420f900a12ee100a8558cacec3c904d7450da68
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289983"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726524"
 ---
 # <a name="raw-file-source"></a>原始文件源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   原始文件源从文件中读取原始数据。 因为数据的表示方式是源所固有的，所以数据无需转换，并且几乎不需要分析。 这意味着原始文件源可以比其他源（如平面文件和 OLE DB 源）更快地读取数据。  
   
  原始文件源用于检索先前由原始文件目标写入的原始数据。 您还可以将原始文件源指向一个仅包含列的空原始文件（仅元数据文件）。 使用原始文件目标生成仅元数据文件而无需运行包。 有关详细信息，请参阅 [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)。  
@@ -41,7 +45,7 @@ ms.locfileid: "58289983"
  此源具有一个输出。 它不支持错误输出。  
   
 ## <a name="configuration-of-the-raw-file-source"></a>原始文件源的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

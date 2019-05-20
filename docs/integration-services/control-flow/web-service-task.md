@@ -18,14 +18,18 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271971"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727328"
 ---
 # <a name="web-service-task"></a>Web 服务任务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Web 服务任务执行 Web 服务方法。 可以将 Web 服务任务用于下列目的：  
   
 -   将 Web 服务方法返回的值写入变量。 例如，可以从 Web 服务方法获取某天的最高气温，然后使用此值更新设置列值的表达式中使用的变量。  
@@ -64,7 +68,7 @@ ms.locfileid: "58271971"
 |**WSTaskInfo**|有关任务的说明性信息。|  
   
 ## <a name="configuration-of-the-web-service-task"></a>Web 服务任务的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
@@ -181,4 +185,4 @@ ms.locfileid: "58271971"
  **相关主题：**[Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>相关内容  
- technet.microsoft.com 上的视频：[操作说明：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=259642)。  
+ MSDN 库中的视频[操作说明：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=259642)。  

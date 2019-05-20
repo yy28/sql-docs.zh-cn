@@ -19,14 +19,18 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ec8eb1970bc1c6ab3933c4cd2b43e810e31b91e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d81de36b6d0e8df65e1b744b284d9c96dec5d9d0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281451"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725955"
 ---
 # <a name="multicast-transformation"></a>多播转换
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   多播转换将其输入分发到一个或多个输出。 此转换与有条件拆分转换类似。 这两种转换都将一个输入定向到多个输出。 这两者之间的区别在于多播转换将每行定向到每个输出，而有条件拆分则将一行定向到单个输出。 有关详细信息，请参阅 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
   
  您可以通过添加输出来配置多播转换。  
@@ -36,7 +40,7 @@ ms.locfileid: "58281451"
  此转换具有一个输入和多个输出。 它不支持错误输出。  
   
 ## <a name="configuration-of-the-multicast-transformation"></a>多播转换的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以编程方式设置的属性的信息，请参阅 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
   

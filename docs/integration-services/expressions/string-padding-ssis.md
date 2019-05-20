@@ -15,14 +15,18 @@ ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a42f92cf83e75755f079d28e1547135653cdbbd0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cddc755a958850c7042ec59c7c4703ee77716c76
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272532"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724951"
 ---
 # <a name="string-padding-ssis"></a>字符串填充 (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   表达式计算器不检查字符串是否包含前导空格和尾随空格，并且比较前不填充字符串来使其具有相同长度。 如果表达式需要字符串填充，可使用 + 运算符连接列值和空字符串。 有关详细信息，请参阅 [+（连接）（SSIS 表达式）](../../integration-services/expressions/concatenate-ssis-expression.md)。  
   
  另一方面，如果要删除空格，表达式计算器提供了 LTRIM、RTRIM 和 TRIM 函数，用于删除前导空格和/或尾随空格。 有关详细信息，请参阅 [LTRIM（SSIS 表达式）](../../integration-services/expressions/ltrim-ssis-expression.md)、[RTRIM（SSIS 表达式）](../../integration-services/expressions/rtrim-ssis-expression.md)和 [TRIM（SSIS 表达式）](../../integration-services/expressions/trim-ssis-expression.md)。  

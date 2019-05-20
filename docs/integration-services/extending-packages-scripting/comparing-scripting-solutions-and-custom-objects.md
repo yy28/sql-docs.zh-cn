@@ -18,14 +18,18 @@ ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec0b2486845e723feda79db87679a72a6ca4caf9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0addcc06e200cd5ffcf49bc7d0d7beb142cb2142
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270645"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724226"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>比较脚本解决方案与自定义对象
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 脚本任务或脚本组件可实现许多可用于自定义托管任务或数据流组件的相同功能。 下面是有助于您根据需要选择相应的任务类型的一些注意事项：  
   
 -   如果配置或功能特定于单个包，则应使用脚本任务或脚本组件，而不是开发自定义对象。  

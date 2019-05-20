@@ -13,14 +13,18 @@ ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61c14c572d68ee24a0f9239e5ef0b2c7b7b11424
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c2e7ef3c3e4a6c61fe3250ec8d9d267503d9ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269983"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727495"
 ---
 # <a name="select-objects-to-transfer"></a>选择要传输的对象
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   可以使用此对话框选择对象，以便使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 传输任务将这些对象从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的一个实例传输到另一个实例。  
   
  若要指定传输所有对象，请选中对象网格的标题行中的复选框。  

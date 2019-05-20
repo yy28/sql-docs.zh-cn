@@ -14,14 +14,18 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a3c679aa51da959d0b24af2247f563446ac283a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f258f39bac4f26546f9283bce9cfcff5b5420f4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281531"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719616"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 包记录的事件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包将各种事件消息记入 Windows 应用程序事件日志。 包会在包启动时、包停止时和特定问题出现时记录这些消息。  
   
  本主题提供有关包记入应用程序事件日志的常见事件消息的信息。 默认情况下，即使未对包启用日志记录，包也会记录其中某些消息。 但对于其他消息，只有对包启用了日志记录，包才会记录这些消息。 无论包是在默认情况下还是在启用日志记录后记录这些消息，消息的事件源都是 SQLISPackage。  

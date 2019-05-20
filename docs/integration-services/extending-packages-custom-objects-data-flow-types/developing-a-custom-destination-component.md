@@ -21,14 +21,18 @@ ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3aa42ecf4fa8af66026301004ca0520a0d08de7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cb842aa871516beef2b1484a9f76d93b7371999d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277248"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724860"
 ---
 # <a name="developing-a-custom-destination-component"></a>开发自定义目标组件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   开发人员可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到任意自定义数据源并在其中存储数据的自定义目标组件。 自定义目标组件在您需要连接到无法通过使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包含的现有源组件来访问的数据源时非常有用。  
   
  目标组件有一个或多个输入，没有输出。 在设计时，目标组件创建和配置连接并从外部数据源读取列元数据。 在执行过程中，它们连接到外部数据源并将从数据流上游组件收到的行添加到外部数据源中。 如果外部数据源在组件执行之前就存在，则目标组件还必须确保组件收到的列的数据类型与外部数据源中列的数据类型相匹配。  

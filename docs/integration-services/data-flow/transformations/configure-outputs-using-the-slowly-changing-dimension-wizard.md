@@ -15,14 +15,18 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4013b26e52c98566557d8195b5b401956d0721b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274311"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726213"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用渐变维度向导配置输出
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   渐变维度向导所起作用相当于渐变维度转换的编辑器。 为渐变维度数据生成和配置数据流可能是一项复杂的任务。 渐变维度向导提供了为渐变维度转换输出生成数据流的最简便方法，指导您逐步完成映射列、选择业务键列、设置列更改属性以及配置对推断维度成员的支持。  
   
  必须在维度表中选择至少一个业务键列，并将其映射到输入列。 业务键的值将源中的一条记录链接到维度表中的一条记录。 转换使用此映射在维度表中定位该记录，并确定某条记录是新的还是更改过的。 业务键通常是源中的主键。如果业务键唯一标识一条记录而且其值不改变，则它也可以作为备用键。 业务键还可以是由多列构成的组合键。 维度表中的主键通常是代理键，它表示标识列或自定义解决方案（如脚本）自动生成的数值。  

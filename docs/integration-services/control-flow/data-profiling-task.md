@@ -17,14 +17,18 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2512be2c3fcac33c3bb87700f8925a0f4743a8a4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dfe740bfa0ec25d577565f310ebeb3ea5e5d9274
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275091"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727757"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数据事件探查任务计算的各种配置文件可帮助您熟悉数据源并找出数据中要修复的问题。  
   
  可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用数据事件探查任务对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的数据进行事件探查并标识潜在的数据质量问题。  

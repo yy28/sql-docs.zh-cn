@@ -11,14 +11,18 @@ ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc59a55c4965d179b0d960dd455e101b4277a226
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c1d388657efd74dc8cceb1ecc82d152a109d7939
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271740"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729074"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Change Data Capture Service for Oracle by Attunity F1 帮助
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 CDC 服务配置控制台可以定义本地 Oracle CDC 服务以及对该服务进行更新和删除。  
   
  本节中的主题提供与在使用 CDC 服务配置控制台时需提供的信息有关的信息。  

@@ -13,14 +13,18 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd8979186639a840c3fa7721d8f94ed98b35ca39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e6ebbdd1f4df148d146393865039102af26b2984
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280111"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728904"
 ---
 # <a name="edit-the-oracle-database-properties"></a>编辑 Oracle 数据库属性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用属性编辑器中的“Oracle”选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
   
  下表对 **“Oracle”** 选项卡中的信息进行了说明。  

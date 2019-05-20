@@ -11,14 +11,18 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47ba9be2a6ff8a03f40cc6253b0dbd0674e1ec48
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 620314ec11154737dc6d35bcf1d3e2587aaab2a1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281821"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722994"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>第 1-7 课：添加和配置 OLE DB 目标
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 现在，包可以从平面文件源中提取数据，并将该数据转换为与目标兼容的格式。 下一个任务是将已转换的数据加载到目标。 要加载数据，请将 OLE DB 目标添加到数据流。 OLE DB 目标可以使用数据库表、视图或 SQL 命令将数据加载到各种 OLE DB 兼容的数据库中。  
   

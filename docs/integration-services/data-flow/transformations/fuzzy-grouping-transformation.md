@@ -29,14 +29,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a30e2b2ff3ee716f48b3ba91bf0bbea6b4cf571d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba1a50942233f44586be498306e2b58f6fa04223
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274484"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726101"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
   
 > [!NOTE]  
@@ -83,7 +87,7 @@ ms.locfileid: "58274484"
  如果此转换所使用的表和索引位于本地计算机，则此转换的性能可能会提高。  
   
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>配置模糊分组转换  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

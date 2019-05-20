@@ -18,14 +18,18 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a45a0a2e2b5bd19203e2cd0b069a0c118901802
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8af6118eb546b2c5ebd9fe4eecf4c537f94f970e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275104"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723634"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 的向后兼容性
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的不同版本之间的更改。 它包括不再可用或计划在将来的版本中删除的功能。 本部分还介绍对产品所做的更改，已知这些更改会使包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能的现有应用程序无法继续工作，或会使其行为发生变化。  
   
 ## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的 Integration Services 功能

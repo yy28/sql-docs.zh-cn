@@ -11,14 +11,18 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a1bd4c6866f7090a00567240350f1355f5c7f5e6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d65cabf9e0dad9e6c3ee5824a59ce33815722042
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270358"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725669"
 ---
 # <a name="xml-source-custom-properties"></a>XML 源自定义属性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   XML 源具有自定义属性和所有数据流组件通用的属性。  
   
  下表介绍 XML 源的自定义属性。 所有属性均可读/写。  

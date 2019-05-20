@@ -13,14 +13,18 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88b9871a3e89ab1f21c6c37344ed26e19fc5dca7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4991fd3ad95a633881099b9677c9db55935f6a13
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271723"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727601"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 任务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 Hadoop Pig 任务可以在 Hadoop 群集上运行 Pig 脚本。  
   
  要添加 Hadoop Pig 任务，请将其拖放到设计器。 然后双击该任务，或右键单击，然后单击“编辑”，以打开“Hadoop Pig 任务编辑器”对话框。  

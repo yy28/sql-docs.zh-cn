@@ -11,14 +11,18 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf21c4c676ef7aef038f1b6e11a53d148e20a822
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dff95f63c43425f9189413bde0c1ee71c5eae287
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277596"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724943"
 ---
 # <a name="token--ssis-expression"></a>TOKEN（SSIS 表达式）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   基于分隔字符串中的标记的指定分隔符以及表示要返回的标记的标记数目，从字符串返回标记（子字符串）。  
   
 ## <a name="syntax"></a>语法  

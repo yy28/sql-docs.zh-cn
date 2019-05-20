@@ -21,14 +21,18 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1a7e2f0320790959df4f29bfd586f70acec9de7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3d325033d1e315ce7b9175f812ae992316fa2f44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271048"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726805"
 ---
 # <a name="flat-file-source"></a>平面文件源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   平面文件源从文本文件中读取数据。 文本文件可以为带分隔符格式、固定宽度格式或混合格式。  
   
 -   带分隔符格式使用列和行分隔符定义列和行。  
@@ -55,7 +59,7 @@ ms.locfileid: "58271048"
  此源具有一个输出和一个错误输出。  
   
 ## <a name="configuration-of-the-flat-file-source"></a>平面文件源的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

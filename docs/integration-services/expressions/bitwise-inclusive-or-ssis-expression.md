@@ -14,14 +14,18 @@ ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a0e23af1cf138fa3bbf613ce0cc0f34cca75b3c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1c865c1316996c54e589326fa1351aa3cab4a934
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277696"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725609"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>|（位或）（SSIS 表达式）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   对两个整数值执行“位或”运算。 它会将第一个操作数的每一位与第二个操作数中对应的每一位进行比较。 如果任一位为 1，则对应结果位设置为 1。 否则，相应的结果位设置为零 (0)。  
   
  两个条件必须都为有符号的整数数据类型，或都为无符号的整数数据类型。  

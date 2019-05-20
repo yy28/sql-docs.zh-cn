@@ -11,14 +11,18 @@ ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 18b1fd7ce88d7b9be5dfa8440a9675945e99837c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7e2e2fffae3b6c57e0251fdd5b851160824de0f8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280451"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726786"
 ---
 # <a name="flat-file-custom-properties"></a>平面文件自定义属性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **源自定义属性**  
   
  平面文件源具有自定义属性和所有数据流组件通用的属性。  

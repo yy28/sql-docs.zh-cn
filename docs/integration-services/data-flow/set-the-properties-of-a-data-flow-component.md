@@ -13,14 +13,18 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc77716e8df17175c0951645eb1034b6ecb9e183
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e2dcaff5b7b8ad834eb12277c587b222b8f782d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282661"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726384"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>设置数据流组件的属性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要设置数据流组件（包括源、目标和转换）的属性，请使用下列功能之一：  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的组件编辑器。 这些编辑器仅包含每个数据流组件的自定义属性。  
@@ -155,7 +159,7 @@ ms.locfileid: "58282661"
 |IsSorted|Boolean|指示输入中的数据是否已排序。|  
 |“属性”|String|输入的名称。|  
 |SourceLocale|Integer|输入数据的区域设置 ID (LCID)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 实例时都提供 SQL Server 登录名。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
   
  目标以及某些转换不支持错误输出，这些组件的 ErrorRowDisposition 和 TruncationRowDisposition 属性是只读的。  
   

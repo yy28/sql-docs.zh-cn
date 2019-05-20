@@ -20,14 +20,18 @@ ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7558f5505674da6f3345514c5ad28d5fcb47dfdb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9191d9a88480f6efd64099f744abc7b311ec7b39
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270921"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729281"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>以编程方式查找数据流组件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   向包中添加数据流任务后，下一步是确定可用的数据流组件。 可以用编程方式查找本地计算机上安装并且可用的数据流源、转换和目标。 有关向包添加数据流任务的信息，请参阅[以编程方式添加数据流任务](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)。  
   
 ## <a name="discovering-components"></a>查找组件  

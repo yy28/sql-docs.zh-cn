@@ -15,14 +15,18 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e8f03d8978056ecd0faefd247163d2806dc7988
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d6a8b8ce43caad05f56ac780a8c08997a217e288
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290483"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727780"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>数据事件探查任务编辑器（常规页）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   可以使用 **“数据事件探查任务编辑器”** 的 **“常规”** 页配置以下选项：  
   
 -   指定配置文件输出的目标。  

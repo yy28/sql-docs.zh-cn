@@ -11,14 +11,18 @@ ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bbf24f97146e98fc074870410f8e68a83672f72
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7e0ea4b800a4e48959782bfb70d834db93a323d6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282321"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726749"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>通过使用 ODBC 目标来加载数据
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本过程说明如何使用 ODBC 目标加载数据。 若要添加和配置 ODBC 目标，包中必须已包含至少一个数据流任务和源。  
   
 ### <a name="to-load-data-using-an-odbc-destination"></a>使用 ODBC 目标加载数据  

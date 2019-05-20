@@ -13,14 +13,18 @@ ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 913eb1bc47687b890032bf2300a237ec4a29bf5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9272628b44c0f8d9e660e1577bd4485c040d9423
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281053"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724473"
 ---
 # <a name="persisting-custom-objects"></a>使自定义对象持久化
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   只要所创建的自定义对象的属性仅使用简单数据类型（如整数和字符串），就不需要为其实现自定义持久性。 持久性的默认实现可保存对象的元数据及其所有属性的值。  
   
  但是，如果您的对象具有使用复杂数据类型的属性，或您希望在加载和保存属性值时对其执行自定义处理，则可以实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> 接口及其 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A> 方法。 在这些方法中，可以从包的 XML 定义加载包含这些对象属性及其当前值的 XML 片段，或将这些片段保存到包的 XML 定义中。 此 XML 片段的格式未定义；只要求必须是格式正确的 XML。  

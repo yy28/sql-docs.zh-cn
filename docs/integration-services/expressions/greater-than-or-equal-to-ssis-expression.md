@@ -14,14 +14,18 @@ ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 58e6b1d0335cc169a63eaae8b8af5a7cdccb3d74
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed64716c2f4ff7ff0c93f84cf4e73763213b4f22
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289863"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725346"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;=（大于或等于）（SSIS 表达式）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   执行比较来确定第一个表达式是否大于或等于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
   
 > [!NOTE]  

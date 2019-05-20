@@ -16,14 +16,18 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 867822310e1eaef3bd1d715d2f026609d72d0272
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 15ba5f56b5a23b77fae66d8e4032e91a67f6a1f5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282711"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719574"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>通过控制流包部件在包之间重用控制流
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   将常用控制流任务或容器保存到单独的部件文件“.dtsxp”中，然后即可通过控制流包部件在一个或多个包中多次重复使用它。 这种可重用性使得 SSIS 包更容易进行设计和维护。  
   
 ## <a name="create-a-new-control-flow-package-part"></a>创建新的控制流包部件  

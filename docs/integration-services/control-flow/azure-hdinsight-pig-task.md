@@ -14,14 +14,18 @@ ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dc61b40b94942c03037f237a0fe23e0b54063af1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3b07d792d2b73b6fd400835bbfe656bb02db8e18
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272420"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727954"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 任务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 使用 **“Azure HDInsight Pig 任务”** 在 Azure HDInsight 群集上运行 Pig 脚本。
      
 若要添加“Azure HDInsight Pig 任务”，可将其拖放到 SSIS 设计器，并双击或右键单击该任务，然后单击“编辑”，以查看以下“Azure HDInsight Pig 任务编辑器”对话框。  

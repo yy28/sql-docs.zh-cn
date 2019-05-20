@@ -11,14 +11,18 @@ ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fad3dbcd1a181fd2343fc37fb5227a439011c4b6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c280b829f5d3efbca5cdff1dfcf7368e9f26111
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273505"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728736"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本过程介绍如何使用 CDC 服务配置控制台准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便使用 Oracle CDC 服务和创建新的 CDC 服务。  
   
 ### <a name="to-work-with-cdc-services"></a>使用 CDC 服务  

@@ -13,14 +13,18 @@ ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3475e0b818b39a787371a11397a09dbf613be3f6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09c4ff1eaccf529ba30a7bd0d4b9884ae94139ec
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277326"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725044"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE（SSIS 表达式）
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   返回多次复制后的字符表达式。 *times* 参数的计算结果必须为整数。  
   
 > [!NOTE]  

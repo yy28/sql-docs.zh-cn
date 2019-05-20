@@ -13,14 +13,18 @@ ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 48d18edc37d5073ab4346ec58cbb6a341d8870fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4f03fa46643f062aa03cac60dbf3dcbe7b31f22c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282411"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724763"
 ---
 # <a name="coding-a-custom-connection-manager"></a>编写自定义连接管理器代码
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  
   
  有关自定义连接管理器的示例，请参阅[为自定义连接管理器开发用户界面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)。 本主题中演示的代码示例来自 SQL Server 自定义连接管理器示例。  

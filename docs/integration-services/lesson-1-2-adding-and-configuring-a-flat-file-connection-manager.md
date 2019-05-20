@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：添加和配置平面文件连接管理器 | Microsoft Docs
+title: 第 2 步：添加和配置平面文件连接管理器 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79540566b777ecaea55f75223404eac2292cf875
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 60a704adb2fe1bbdcfd5d78cfd02a7b704745642
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289713"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723427"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>第 1-2 课：添加和配置平面文件连接管理器
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在本任务中，将在刚创建的包中添加一个平面文件连接管理器。 通过平面文件连接管理器，包可从平面文件中提取数据。 使用平面文件连接管理器，可以指定包从平面文件中提取数据时要应用的文件的名称与位置、区域设置与代码页以及文件格式，其中包括列分隔符。 另外，还可以为各个列手动指定数据类型；也可以使用“提供列类型建议”对话框，自动将提取出来的数据列映射到 **数据类型。**[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
   

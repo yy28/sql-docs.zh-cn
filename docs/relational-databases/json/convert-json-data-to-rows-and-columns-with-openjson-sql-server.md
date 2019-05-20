@@ -14,16 +14,16 @@ ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e56a64564d3b546f6bd6c45c36bdb7b4b1484b87
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9260a04673ecdf4de8090bf6582fa9c674d9cf2c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033238"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570987"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>使用 OPENJSON 分析和转换 JSON 数据 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 **OPENJSON** 行集函数可将 JSON 文本转换为一组行和列。 使用 OPENJSON 将 JSON 集合转换为行集后，可以在返回的数据上运行任意 SQL 查询或将其插入到 SQL Server 表中。 
   
@@ -42,9 +42,10 @@ ms.locfileid: "56033238"
 OPENJSON 以单独的行返回 JSON 对象的每个属性或数组的每个元素。  
 
 下面是使用具有默认架构（即不包含可选的 WITH 子句）的 OPENJSON 的快捷示例，该示例为 JSON 对象的每个属性返回一行。  
- 
+
 **示例**
-```sql  
+
+```sql
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -53,7 +54,7 @@ SELECT *
 FROM OPENJSON(@json);
 ```  
   
-**结果**  
+**结果**
   
 |Key|值|type|  
 |---------|-----------|----------|  
@@ -68,8 +69,8 @@ FROM OPENJSON(@json);
 
 有关语法和用法的信息，请参阅 [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)下可用。 
 
-    
 ## <a name="option-2---openjson-output-with-an-explicit-structure"></a>选项 2 - 具有显式结构的 OPENJSON 输出
+
 如果使用 **OPENJSON** 函数的 **WITH** 子句指定结果的架构，该函数返回的表只包含 **WITH** 子句中定义的列。 在可选的 WITH 子句中，指定一组输出列、列类型和每个输出值的 JSON 源属性的路径。 **OPENJSON** 循环访问 JSON 对象的数组，读取每一列的指定路径上的值，并将值转换为指定类型。  
 
 下面是使用具有 WITH 子句中显式指定的输出架构的 OPENJSON 快捷示例。  
@@ -114,7 +115,7 @@ WITH (
  ) 
 ```  
   
-**结果**  
+**结果**
   
 |Number|date|Customer|Quantity|  
 |------------|----------|--------------|--------------|  
@@ -128,11 +129,13 @@ WITH (
 -   对于通过使用 `colName type json_path` 语法指定的每一列，OPENJSON 将指定路径上的每个数组元素中找到的值转换为指定类型。 在此示例中，`Date` 列的值获取自路径 `$.Order.Date` 上的每个元素，并被转换为日期时间值。  
   
 ### <a name="more-info-about-openjson-with-an-explicit-schema"></a>有关具有显式架构的 OPENJSON 的详细信息
+
 有关详细信息和更多示例，请参阅[使用具有显示架构的 OPENJSON (SQL Server)](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)。
 
 有关语法和用法的信息，请参阅 [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)下可用。
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON 要求兼容性级别 130
+
 **OPENJSON** 函数仅在 **兼容级别 130**下可用。 如果数据库兼容级别低于 130，SQL Server 将无法找到并运行 OPENJSON 函数。 其他内置 JSON 函数在所有兼容级别均可用。
 
 可以在 `sys.databases` 视图或数据库属性中查看兼容级别。
@@ -146,13 +149,12 @@ WITH (
 
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
 
--   [SQL Server 2016 和 JSON 支持](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+- [SQL Server 2016 和 JSON 支持](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
 
--   [在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+- [在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
 
--   [JSON 充当 NoSQL 和关系环境之间的桥梁](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+- [JSON 充当 NoSQL 和关系环境之间的桥梁](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a>另请参阅  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  
-  
   

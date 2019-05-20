@@ -11,14 +11,18 @@ ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7715008903a51377a5819493a61d2cead90f604d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0f4d20c4a0eaaf573cdb9da6e9880df6d698a8f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271663"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728634"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 补充日志记录脚本
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   此对话框显示 Oracle 补充日志记录脚本。  
   
  在您准备供使用的 CDC 实例时，CDC 设计器将创建一个 Oracle SQL 脚本，该脚本为要捕获的表设置补充日志记录。 该补充日志记录脚本指示 Oracle 在更新特定表时，它写入事务日志的更改记录应包含所有有关列的数据，而不只是更改的列。  

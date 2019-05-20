@@ -13,14 +13,18 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c78c8b091751e1fd849c3490544acd492cd595c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1d9ae752dabee68d6fae786675e640773009f4b7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282891"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727619"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop 配置单元任务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 Hadoop 配置单元任务可以在 Hadoop 群集上运行配置单元脚本。  
   
  要添加 Hadoop 配置单元任务，请将其拖放到设计器。 然后双击该任务，或右键单击，然后单击“编辑”，以打开“Hadoop 配置单元任务编辑器”对话框。  

@@ -11,14 +11,18 @@ ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cb31139e542344f3b7fd8354c250452783ba5bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fcd7c0cf972a6744cf35ace20fb21dcbf7deb7f0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282798"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726495"
 ---
 # <a name="recordset-destination-custom-properties"></a>记录集目标自定义属性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   记录集目标具有自定义属性和所有数据流组件通用的属性。  
   
  下表介绍记录集目标的自定义属性。 所有属性均可读/写。  

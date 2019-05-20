@@ -11,14 +11,18 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91b03ca49059ea12898420eea2abff6326fa7d0e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 795d4d31c3b26d2ef1f587e6b96d158d5d304789
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272772"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725686"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教程：使用 OData 源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本教程介绍了从示例 Northwind OData 服务 (https://services.odata.org/V3/Northwind/Northwind.svc/)) 提取 Employees 集合，然后将它加载到某一平面文件中的过程。  
   
 ## <a name="1-create-an-integration-services-project"></a>1.创建 Integration Services 项目  

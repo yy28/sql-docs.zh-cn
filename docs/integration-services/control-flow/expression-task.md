@@ -13,14 +13,18 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b542d886c20ef0560e92565106d72d8e1303e2b8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 781f734ac394ffa1374c6bc93861c552dc32618a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290523"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727672"
 ---
 # <a name="expression-task"></a>表达式任务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   表达式任务使用表达式生成器创建和计算在运行时设置变量值的表达式。 在您编辑该任务时， [Expression Builder](../../integration-services/expressions/expression-builder.md) 将启动。  
   
 ## <a name="expression-examples"></a>表达式示例  

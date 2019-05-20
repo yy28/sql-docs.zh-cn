@@ -13,14 +13,18 @@ ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a356826385f86f3f33735e4e8b0bba7880ce9aa8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fa74a85020afdac21fd83178679be6e5db3231ee
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289813"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728673"
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以使用 CDC 设计器控制台查看通过 CDC 服务配置控制台创建的服务并且管理 Oracle CDC 服务中的所有实例。  
   
  在左侧窗格中单击服务的名称可显示与该服务有关的信息并且对其进行管理。  

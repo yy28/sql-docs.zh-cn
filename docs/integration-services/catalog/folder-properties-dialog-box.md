@@ -15,14 +15,18 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b5ba4c8a12c194eda57379c1fa382e70142bf8b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a4ade06f7275007c17834fbee3d69e2d5583d7f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280511"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729195"
 ---
 # <a name="folder-properties-dialog-box"></a>“文件夹属性”对话框
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   文件夹包含 **SSISDB** 目录中的项目和环境。 每个文件夹都定义应用于该文件夹的内容的权限。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 权限的详细信息 ，请参阅 [catalog.grant_permission（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)。  
   
 ## <a name="to-set-folder-description-and-permissions"></a>设置文件夹说明和权限  

@@ -15,14 +15,18 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db042dd5722b2b1bc034364878ebf3cfb550e27c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289633"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717283"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本地计算机上安装的所有组件都自动显示在“SSIS 工具箱”中。 当安装其他组件时，在此工具箱内右键单击，然后单击“刷新工具箱”即会添加组件。  
  
  创建新的 SSIS 项目或打开现有项目时，“SSIS 工具箱”自动显示。 也可以通过单击位于包设计图面右上角的工具箱按钮，或通过单击“查看”->“其他窗口”->“SSIS 工具箱”打开 SSIS 工具箱。

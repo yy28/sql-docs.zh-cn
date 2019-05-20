@@ -13,14 +13,18 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e2b709c9e6de54b24da2b99668e85ed72a17651
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 505699164f49511adb95465e0b74e9e90c8f7dc6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273656"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729122"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>将表添加到 CDC 实例
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用“表选择”对话框可以将 Oracle 源中的附加表添加到 CDC 实例。 选定的表将添加到属性编辑器的 **“表”** 选项卡的列表中。  
   
  默认情况下，此对话框的表的列表中不包含任何表。 可以选中“(全选)”复选框或搜索特定表。  

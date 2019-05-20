@@ -11,14 +11,18 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77b941d4f1460b81acf2e90185f6e1a4d9ecbde9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b1ff09c90aece19ea306ec91b8d5cb0d95da937c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277516"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727235"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET 自定义属性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **源自定义属性**  
   
  ADO NET 源具有自定义属性和所有数据流组件共有的属性。  

@@ -20,14 +20,18 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277656"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724887"
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   属性表达式是分配给属性以便能够在运行时对该属性进行动态更新的表达式。 例如，属性表达式可以通过插入存储在变量中的电子邮件地址来更新发送邮件任务所使用的“收件人”行。  
   
  表达式可以添加到包、任务、Foreach 循环、For 循环、序列、Foreach 枚举器、事件处理程序、包或项目级别连接管理器，或添加到日志提供程序。 这些对象的任何读/写属性都可以实现属性表达式。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还支持在数据流组件的某些自定义属性中使用属性表达式。 变量和优先约束不支持属性表达式，但它们包含可以使用表达式的特殊属性。  

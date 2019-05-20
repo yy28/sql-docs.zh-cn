@@ -11,15 +11,19 @@ ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a5058fb2f654ad7aa0325e53e045179688885abc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cab62307fa880ff6ac4f1a948c3abfa138ca1377
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279231"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722370"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>第 2 课：在 SSIS 中创建部署捆绑
-在[第 1 课：准备创建部署捆绑](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)中，创建了名为“Deployment Tutorial”的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，将包和支持文件添加到该项目，并在包中实现了配置。  
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+在[第 1 课中：准备创建部署捆绑](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)中，创建了名为“Deployment Tutorial”的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，将包和支持文件添加到该项目，并在包中实现了配置。  
   
 在本课中，您将创建部署捆绑，它是一个文件夹，其中包含您在其他计算机上安装包所需的项。 部署捆绑将包括部署清单、来自 Deployment Tutorial 项目的包副本和支持文件副本。 部署清单列出部署捆绑中的包、杂项文件和配置。  
   
@@ -30,12 +34,12 @@ ms.locfileid: "58279231"
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
--   [第 1 步：生成部署实用工具](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+-   [步骤 1：生成部署实用工具](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
 -   [步骤 2：验证部署捆绑](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
-[第 1 步：生成部署实用工具](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+[步骤 1：生成部署实用工具](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
   
   

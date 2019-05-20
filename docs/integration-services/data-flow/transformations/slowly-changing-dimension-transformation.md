@@ -18,14 +18,18 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cbd69e8674d7e2672502bfafe6550b83bc4e0362
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8ef0312076baa49f264baba5fbd3eaf24bce8a47
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271109"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725873"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>渐变维度转换
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   渐变维度转换协调数据仓库维度表中的记录更新与插入。 例如，可以用此转换配置转换输出，这些转换输出使用来自 AdventureWorks OLTP 数据库中的 Production.Products 表的数据在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 数据库的 DimProduct 表中插入和更新记录。  
   
 > [!IMPORTANT]  
@@ -86,7 +90,7 @@ ms.locfileid: "58271109"
  您可以记录“渐变维度”转换对外部数据访问接口所做的调用。 利用此日志记录功能，可以排除“渐变维度”转换执行的对外部数据源的连接、命令和查询中发生的故障。 若要记录“渐变维度”转换对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation"></a>配置渐变维度转换  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

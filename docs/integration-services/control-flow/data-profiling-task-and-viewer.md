@@ -15,14 +15,18 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a340ece64bc69b012919bb57afd1b80690f3a59
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6301066549a8008512bef934f9d887349a6b765b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273051"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727775"
 ---
 # <a name="data-profiling-task-and-viewer"></a>数据事件探查任务和查看器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数据事件探查任务在提取、转换和加载数据的过程中提供数据事件探查功能。 使用数据事件探查任务，有以下好处：  
   
 -   更有效地分析源数据  
@@ -56,7 +60,7 @@ ms.locfileid: "58273051"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services 和数据事件探查  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，数据事件探查过程包括以下步骤：  
   
- **第 1 步：设置数据事件探查任务**  
+ **步骤 1：设置数据事件探查任务**  
  数据事件探查任务是用于配置要计算的配置文件的任务。 运行包含数据事件探查任务的包以计算配置文件。 该任务将配置文件输出以 XML 格式保存到文件或包变量。  
   
  **详细信息：**[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  

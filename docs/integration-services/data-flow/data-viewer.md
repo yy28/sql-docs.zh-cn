@@ -15,14 +15,18 @@ ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d2232235b1d89384f269edb3a1632f8ff9db067
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 100dbd947b8b5b8de340bfd45a4d2705a4b0d475
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290823"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726985"
 ---
 # <a name="data-viewer"></a>数据查看器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如果将路径配置为使用数据查看器，当数据在两个数据流组件之间移动时，数据查看器将依次显示各个缓冲区的数据。  
   
 ## <a name="options"></a>选项  
