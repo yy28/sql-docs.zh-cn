@@ -11,33 +11,17 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b2157846fe2102a35412c82b0da24638298aafd2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872317"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104922"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Always On 可用性组的性能方面对维护任务关键型数据库的服务级别协议 (SLA) 至关重要。 了解可用性组如何将日志传送到次要副本有助于估计可用性实现的恢复时间目标 (RTO) 和恢复点目标 (RPO)，并识别执行效果不佳的可用性组或副本中的瓶颈。 本文介绍同步过程，演示如何计算一些关键指标，并提供一些常见性能故障排除方案的链接。  
-  
- 所涉及的主题如下：  
-  
--   [数据同步过程](#data-synchronization-process)  
-  
--   [流控制门](#flow-control-gates)  
-  
--   [估计故障转移时间 (RTO)](#estimating-failover-time-rto)  
-  
--   [估计可能的数据丢失 (RPO)](#estimating-potential-data-loss-rpo)  
-  
--   [监视 RTO 和 RPO](#monitoring-for-rto-and-rpo)  
-  
--   [性能故障排除方案](#BKMK_SCENARIOS)  
-  
--   [有用的扩展事件](#BKMK_XEVENTS)  
-  
+   
 ##  <a name="data-synchronization-process"></a>数据同步过程  
  若要估计完全同步的时间并识别瓶颈，需要了解同步过程。 性能瓶颈可能出现在过程中的任何位置，查找瓶颈有助于更深入发掘潜在的问题。 下图和下表说明了数据同步过程：  
   
@@ -48,7 +32,7 @@ ms.locfileid: "58872317"
 |**序列**|**步骤说明**|**注释**|**有用的指标**|  
 |1|日志生成|日志数据已刷新到磁盘。 必须将此日志复制到次要副本。 日志记录会进入发送队列。|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|捕获|捕获每个数据库的日志，并将其发送到相应的伙伴队列（每个数据库/副本对一个）。 只要已连接可用性副本且数据移动未因任何原因暂停，此捕获进程便会持续运行，并且数据库/副本对显示为“正在同步”或“已同步”。 如果捕获进程不能以足够快的速度扫描消息并将其排入队列，则会构建日志发送队列。|[SQL Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)，这是为该可用性副本排队的所有数据库消息总和的聚合。<br /><br /> 主要副本上的 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)（KB/秒）。|  
-|3|Send|每个数据库副本队列中的消息均取消排队，并跨网络发送到相应的次要副本。|[SQL Server:Availability Replica > Bytes sent to transport\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 和 [SQL Server:Availability Replica > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md)（毫秒）|  
+|3|Send|每个数据库副本队列中的消息均取消排队，并跨网络发送到相应的次要副本。|[SQL Server:Availability Replica > Bytes sent to transport\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|接收和缓存|每个辅助副本都会接收并缓存消息。|性能计数器 [SQL Server:Availability Replica > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|强化|在次要副本上刷新日志以进行强化。 日志刷新后，会将确认发送回主要副本。<br /><br /> 强化日志后，即可避免数据丢失。|性能计数器 [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 等待类型 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|重做|重做次要副本上的刷新页面。 页面在等待重做时会保留在重做队列中。|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。<br /><br /> 等待类型 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  

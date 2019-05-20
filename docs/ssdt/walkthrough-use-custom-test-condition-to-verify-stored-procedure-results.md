@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f109fd19d6c74fc60746fdccd5560b8aa482eb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832995"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097441"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>演练：使用自定义测试条件来验证存储过程的结果
-在本功能扩展演练中，将创建一个测试条件，并且将通过创建 SQL Server 单元测试来验证其功能。 此过程包括为该测试条件创建一个类库项目，并且对该项目进行签名和安装它。 如果已有要更新的测试条件，请参阅[如何：将 Visual Studio 2010 自定义测试条件从早期版本升级到 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)。  
+在本功能扩展演练中，将创建一个测试条件，并且将通过创建 SQL Server 单元测试来验证其功能。 此过程包括为该测试条件创建一个类库项目，并且对该项目进行签名和安装它。 如果你已具有一个要更新的测试条件，请参见[如何：将 Visual Studio 2010 自定义测试条件从早期版本升级到 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)。  
   
 本演练演示以下任务：  
   
@@ -121,7 +121,7 @@ ms.locfileid: "47832995"
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  添加 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)。 有关 UnitTesting.Conditions.ExportTestConditionAttribute 的详细信息，请参阅 [如何：为 SQL Server 单元测试设计器创建测试条件](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)。  
+5.  添加 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)。 请参阅[如何：为 SQL Server 单元测试设计器创建测试条件](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)，了解有关 UnitTesting.Conditions.ExportTestConditionAttribute 的详细信息。  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -381,7 +381,7 @@ namespace ColumnCountCondition
   
 6.  单击“取消”以创建单元测试而不配置要使用数据库连接的测试项目。 空白测试将出现在 SQL Server 单元测试设计器中。 将 Visual C\# 源代码文件添加到该测试项目中。  
   
-    有关创建和配置具有数据库连接的数据库单元测试的更多信息，请参阅[如何：创建空的 SQL Server 单元测试](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)。  
+    有关创建和配置具有数据库连接的数据库单元测试的更多信息，请参见[如何：创建空的 SQL Server 单元测试](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)。  
   
 7.  单击“单击此处以创建”以完成单元测试的创建。 你将看到在 SQL Server 项目中显示的新的测试条件。  
   
@@ -400,7 +400,7 @@ namespace ColumnCountCondition
   
 5.  在“属性”窗口中，配置 Count、Enabled 和 ResultSet 属性。  
   
-    有关详细信息，请参阅[如何：向 SQL Server 单元测试中添加测试条件](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
+    有关详细信息，请参阅[如何：向 SQL Server 单元测试添加测试条件](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [SQL Server 单元测试的自定义测试条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

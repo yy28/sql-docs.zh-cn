@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0e1efe0db32b167214521e1af3b9a1e941480d2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7a0271ff900ced1331308db67fc23d488a83caa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764255"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096929"
 ---
 # <a name="extending-the-database-features"></a>扩展数据库功能
 你可以创建功能扩展，这些功能扩展可使你扩展单元测试和数据库代码分析等功能。 有关详细信息，请参阅以下主题：  

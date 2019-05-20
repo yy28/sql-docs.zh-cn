@@ -1,7 +1,7 @@
 ---
 title: DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: c21fb619391701d3506c3c73f9acf699f4c5d54f
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 5e8cc30ef8ce51a08ce12ed28b7c03bec0fc124d
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305335"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774838"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,9 +115,15 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> 如果有列存储索引，请参阅[在克隆数据库上使用列存储索引优化查询的注意事项](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/)对列存储索引进行更新，然后再运行 DBCC CLONEDATABASE 命令。  自 SQL Server 2019 起，上文中所述的手动步骤将不再是必需的，因为 **DBCC CLONEDATABASE** 命令会自动收集此信息。
+> 如果有列存储索引，请参阅[在克隆数据库上使用列存储索引优化查询的注意事项](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294)对列存储索引进行更新，然后再运行 DBCC CLONEDATABASE 命令。  自 SQL Server 2019 起，上文中所述的手动步骤将不再是必需的，因为 **DBCC CLONEDATABASE** 命令会自动收集此信息。
 
-有关克隆数据库的数据安全的信息，请参阅[了解克隆数据库中的数据安全](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/)。
+<a name="ctp23"></a>
+
+## <a name="stats-blob-for-columnstore-indexes"></a>列存储索引的统计信息 blob
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]，`DBCC CLONEDATABASE` 自动捕获列存储索引的统计信息 blob，因此不再需要任何手动步骤。`DBCC CLONEDATABASE` 创建仅限架构的数据库副本，其中包括在不复制数据的情况下对查询性能问题进行故障排除所需的所有元素。 在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该命令不会复制所需的统计信息来准确地对列存储索引查询进行故障排除，且需要手动步骤来捕获此信息。
+
+有关克隆数据库的数据安全的信息，请参阅[了解克隆数据库中的数据安全](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287)。
 
 ## <a name="internal-database-snapshot"></a>内部数据库快照
 DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复制所需的事务一致性。 使用此快照可防止在执行这些命令时出现阻塞和并发问题。 如果无法创建快照，DBCC CLONEDATABASE 将失败。 
@@ -176,7 +182,7 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 - XML INDEX
 - XML SCHEMA COLLECTION  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色的成员身份。
 
 ## <a name="error-log-messages"></a>错误日志消息

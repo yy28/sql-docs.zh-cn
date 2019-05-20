@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Windows domain accounts [SQL Server]
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 264de74dbc3ee09cd333ceb4815c77890938894b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9991405a69aa43a7452d65003e2ef149c8dbc074
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697865"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104896"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "51697865"
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：针对多服务器管理使用非管理帐户  
 目标服务器可能无法登记到主服务器，并出现以下错误信息：“登记操作失败”。  
   
-若要解决该错误，请重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)。  
+若要解决该错误，请重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)。  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：针对多服务器管理使用本地系统帐户  
 仅当主服务器和目标服务器位于同一台计算机中，并在本地系统帐户下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务时，才支持多服务器管理。 如果使用此配置，则在将目标服务器登记到主服务器时返回以下消息：  
@@ -119,7 +119,7 @@ ms.locfileid: "51697865"
   
 **指定 SQL Server 代理的邮件配置文件**  
   
--   [如何配置 SQL Server 代理邮件以使用数据库邮件 (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [如何：配置 SQL Server 代理邮件以使用数据库邮件 (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以指定启动操作系统时必须启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。  

@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf274779c038f6cb2111a1b01ca8315cbd0002e4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5e2261b8bf307d7d735957d52006b5b0f75ae0cc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606417"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570803"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>配置 max degree of parallelism 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,22 @@ ms.locfileid: "51606417"
 -   除了查询和索引操作之外，此选项还控制 DBCC CHECKTABLE、DBCC CHECKDB 和 DBCC CHECKFILEGROUP 的并行。 使用跟踪标志 2528，可以禁用为这些语句所做的并行执行计划。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 ###  <a name="Guidelines"></a> 准则  
-请使用以下准则配置 max degree of parallelism 服务器配置值：
+从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，在服务启动期间，如果 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在启动时检测到每个 NUMA 节点或插槽内的物理内核数目超过 8 个，在默认情况下就会自动创建 soft-NUMA 节点。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 将相同物理内核中的逻辑处理器放入不同的 soft-NUMA 节点中。 下表中的建议旨在将并行查询的所有工作线程保持在相同 soft-NUMA 节点中。 这将提高跨工作负荷 NUMA 节点查询和分布工作线程的性能。 有关详细信息，请参阅 [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)。
+
+从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，请使用以下准则配置“最大并行度”服务器配置值：
+
+||||
+|----------------|-----------------|-----------------|
+|具有单个 NUMA 节点的服务器|少于 16 个 逻辑处理器|将 MAXDOP 保持为小于或等于逻辑处理器的数量|
+|具有单个 NUMA 节点的服务器|大于 16 个逻辑处理器|将 MAXDOP 保持为逻辑处理器数量的一半，最大值为 16|
+|具有多个 NUMA 节点的服务器|每个 NUMA 节点少于 16 个逻辑处理器|将 MAXDOP 保持为小于或等于每个 NUMA 节点的逻辑处理器的数量|
+|具有多个 NUMA 节点的服务器|每个 NUMA 节点大于 16 个逻辑处理器|将 MAXDOP 保持为每个 NUMA 节点逻辑处理器数量的一半，最大值为 16|
+  
+> [!NOTE]
+> 上表中的 NUMA 节点是指由 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本自动创建的 soft-NUMA 节点。   
+>  为 Resource Governor 工作负荷组设置“最大并行度”选项时，请使用这些相同的准则。 有关详细信息，请参阅 [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)。
+  
+从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，请使用以下准则配置“最大并行度”服务器配置值：
 
 ||||
 |----------------|-----------------|-----------------|
@@ -57,9 +72,9 @@ ms.locfileid: "51606417"
 |具有多个 NUMA 节点的服务器|每个 NUMA 节点少于 8 个逻辑处理器|将 MAXDOP 保持为小于或等于每个 NUMA 节点的逻辑处理器的数量|
 |具有多个 NUMA 节点的服务器|每个 NUMA 节点大于 8 个逻辑处理器|将 MAXDOP 保持为 8 个|
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -76,7 +91,7 @@ ms.locfileid: "51606417"
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>配置 max degree of parallelism 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -89,7 +104,7 @@ EXEC sp_configure 'show advanced options', 1;
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
-EXEC sp_configure 'max degree of parallelism', 8;  
+EXEC sp_configure 'max degree of parallelism', 16;  
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
@@ -97,7 +112,7 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：在配置 max degree of parallelism 选项之后  
+##  <a name="FollowUp"></a> 跟进：在配置“最大并行度”选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
 ## <a name="see-also"></a>另请参阅  

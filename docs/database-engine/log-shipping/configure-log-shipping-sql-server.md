@@ -13,12 +13,12 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19670ec51172fc704d0387664f0c484315c7be7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703805"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105977"
 ---
 # <a name="configure-log-shipping-sql-server"></a>配置日志传送 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47703805"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要配置日志传送，请使用：**  
   
@@ -51,9 +51,9 @@ ms.locfileid: "47703805"
   
 -   在配置日志传送之前，您必须创建共享，以便辅助服务器可以访问事务日志备份。 这是对生成事务日志备份的目录的共享。 例如，如果将事务日志备份到目录 C:\data\tlogs\\，则可以对该目录创建 \\\\*primaryserver*\tlogs 共享。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  日志传送存储过程要求 **sysadmin** 固定服务器角色中的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -70,7 +70,7 @@ ms.locfileid: "47703805"
   
 5.  在 **“备份文件夹的网络路径”** 框中，键入为事务日志备份文件夹创建的共享的网络路径。  
   
-6.  如果备份文件夹位于主服务器上，在 **“如果备份文件夹位于主服务器上，则键入该文件夹的本地路径”** 框中键入该备份文件夹的本地路径。 （如果备份文件夹不在主服务器上，此框可以保留为空。）  
+6.  “如果备份文件夹位于主服务器上，则在备份文件夹中键入本地路径”框。 （如果备份文件夹不在主服务器上，此框可以保留为空。）  
   
     > [!IMPORTANT]  
     >  如果主服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户运行在本地系统帐户下，则必须在主服务器上创建备份文件夹，并指定该文件夹的本地路径。  
@@ -79,7 +79,7 @@ ms.locfileid: "47703805"
   
 8.  请注意 **“备份作业”** 下的 **“计划”** 框中列出的备份计划。 如果想要为安装自定义计划，则单击 **“计划”** 并根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为： **“使用默认服务器设置”**、 **“压缩备份”** 或 **“不压缩备份”**。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为：“使用默认服务器设置”、“压缩备份”或“不压缩备份”。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
 10. 单击 **“确定”** 中配置日志传送。  
   

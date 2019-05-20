@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8573984e58f3442f1536dfd3c4deeabc4636fa2
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 773492f038339a561a1f73ff48f5d1a88b72cadc
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217815"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946431"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,14 +54,14 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 
 ![向导 Excel](media/import-flat-file-wizard/importffexample.png)
 
-### <a name="step-1-access-wizard-and-intro-page"></a>步骤 1：访问向导和简介页
+### <a name="step-1-access-wizard-and-intro-page"></a>第 1 步：访问向导和简介页
 访问如[此处](#started)所述的向导。
 
 向导第一页是欢迎页。 如果不想再次看到此页面，请随意单击“不再显示此起始页”。
 
 ![向导简介](media/import-flat-file-wizard/importffintro.png)
 
-### <a name="step-2-specify-input-file"></a>步骤 2：指定输入文件
+### <a name="step-2-specify-input-file"></a>第 2 步：指定输入文件
 单击“浏览”选择输入文件。 此向导默认搜索 .csv 和 .txt 文件。 
 
 新的表名称应该是唯一的，如果不是，向导不会允许执行下一步。
@@ -80,7 +80,7 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 
 ![向导修改](media/import-flat-file-wizard/importffmodify.png)
 
-### <a name="step-5-summary"></a>步骤 5：摘要
+### <a name="step-5-summary"></a>步骤 5：“摘要”
 这只是一个显示当前配置的摘要页面。 如果出现问题，可以返回到上一部分。 或者，单击“完成”尝试导入过程。
 
 ![向导摘要](media/import-flat-file-wizard/importffsummary.png)

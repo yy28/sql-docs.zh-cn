@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 21096819ebd7a54ab8f4505ad980c0e6a5266d6f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670457"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098103"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>如何：连接到数据库并浏览现有对象
 数据库管理员和开发人员的一个非常常见的任务是连接到活动数据库，并且针对其对象设计或浏览其架构和查询。 Visual Studio 中的 SQL Server 对象资源管理器现在包含一个专用的 SQL Server 节点，在该节点下，所有连接的 SQL Server 实例及其数据库都在类似 SSMS 的层次结构下进行分组。 连接的 SQL Server 实例可以是内部实例，例如运行 SQL Server 2008 的实例，也可以是外部 SQL Azure 实例。  

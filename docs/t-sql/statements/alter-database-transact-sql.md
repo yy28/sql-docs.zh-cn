@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63203060"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -72,6 +72,9 @@ ALTER DATABASE 本文介绍的是用于更改数据库的名称和排序规则�
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 提供 ALTER DATABASE 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 选项的语法和相关信息，该语法用来在 AlwaysOn 可用性组的次要副本上配置辅助数据库。
 
 [ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)：介绍了 ALTER DATABASE 与数据库兼容级别相关的 SET 选项的语法和相关信息。
+
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+提供与用于单个数据库级别设置（例如查询优化和查询执行相关行为）的数据库范围配置相关的语法。 
 
 ## <a name="syntax"></a>语法
 

@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcf7fe3ad0b07b9f8a228318b5eea85b3d8526a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 383992f5e1fc9891fb570dec168d1648913f4254
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780345"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098166"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>如何使用查询创建新的数据库对象
+# <a name="how-to-create-new-database-objects-using-queries"></a>如何：使用查询创建新的数据库对象
 如果更喜欢使用脚本来创建或编辑视图、存储过程、函数、触发器或用户定义的类型，则可以使用 Transact\-SQL 编辑器。 Transact\-SQL 编辑器提供 IntelliSense 和其他语言支持。 有关详细信息，请参阅[使用 Transact-SQL 编辑器编辑和执行脚本](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)。  
   
 在使用“查看代码”上下文菜单在连接的数据库或项目中打开某一数据库实体时，将调用 Transact\-SQL 编辑器。 在从 SQL Server 对象资源管理器使用“新建查询”上下文菜单或者向数据库项目添加新的脚本对象时，该编辑器也自动打开。 如果没有连接到某一数据库，但想要对其执行查询，则也可以使用“新建查询连接”对话框，方法是：从“SQL”菜单中选择“Transact-SQL 编辑器”菜单以连接到某一数据库，然后启动 Transact\-SQL 编辑器。  

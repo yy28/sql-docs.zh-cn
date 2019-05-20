@@ -1,8 +1,8 @@
 ---
 title: 动态数据掩码 | Microsoft Docs
-ms.date: 04/23/2018
+ms.date: 05/02/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -10,45 +10,45 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82afdd3febbd85efc137cc8877f5759ad6428ede
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06a6ef378e621d055d039d22ea023d8d0d68f25b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317777"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088988"
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ![动态数据屏蔽](../../relational-databases/security/media/dynamic-data-masking.png)
 
 动态数据掩码 (DDM) 通过对非特权用户屏蔽敏感数据来限制敏感数据的公开。 它可以用于显著简化应用程序中安全性的设计和编码。  
 
-动态数据屏蔽允许用户在尽量减少对应用程序层的影响的情况下，指定需要披露的敏感数据，从而防止对敏感数据的非授权访问。 DDM 可以在数据库上进行配置，以隐藏对指定数据库字段进行查询时获得的结果集中的敏感数据，同时不会更改数据库中的数据。 可以轻松地对现有应用程序使用动态数据屏蔽，因为屏蔽规则是应用于查询结果。 许多应用程序可以屏蔽敏感数据，而无需修改现有查询。
+动态数据掩码允许用户在尽量减少对应用程序层的影响的情况下，指定需要披露的敏感数据量，从而防止对敏感数据的非授权访问。 可以在指定的数据库字段上配置 DDM，在查询结果集中隐藏敏感数据。 使用 DDM 时，数据库中的数据不会更改。 可以轻松地对现有应用程序使用动态数据屏蔽，因为屏蔽规则是应用于查询结果。 许多应用程序可以屏蔽敏感数据，而无需修改现有查询。
 
 * 一个中央数据掩码策略直接对数据库中的敏感字段起作用。
 * 指定有权访问敏感数据的特权用户或角色。
 * DDM 采用完全掩码和部分掩码功能，以及用于数值数据的随机掩码。
 * 简单的 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 命令定义和管理掩码。
 
-例如，呼叫中心支持人员通过身份证号或信用卡号的几个数字就可以辨识呼叫者，但系统不会将这些数据内容完全公开给该支持人员。 可以通过定义屏蔽规则来屏蔽查询结果集中身份证号或信用卡号最后四位数字以外的所有数字。 另一个例子就是，在需要进行故障排除时，开发人员可以通过对数据进行适当的数据屏蔽来保护个人身份信息 (PII) 数据，因此可以在不违反遵从性法规的情况下，对生产环境进行查询。
+例如，呼叫中心支持人员通过身份证号或信用卡号的几个数字就可以辨识呼叫者。  身份证号或信用卡号码不应完全暴露给支持人员。 可以通过定义屏蔽规则来屏蔽查询结果集中身份证号或信用卡号最后四位数字以外的所有数字。 另一个例子就是，在需要进行故障排除时，开发人员可以通过对数据进行适当的数据屏蔽来保护个人身份信息 (PII) 数据，因此可以在不违反遵从性法规的情况下，对生产环境进行查询。
 
 动态数据屏蔽旨在限制敏感数据的公开，防止没有访问权限的用户查看敏感数据。 动态数据屏蔽并不是要防止数据库用户直接连接到数据库并运行可以公开敏感数据的详尽查询。 动态数据屏蔽是对其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全功能（审核、加密、行级别安全性…）的补充，因此，强烈建议你将此功能与上述功能一起使用，以便更好地保护数据库中的敏感数据。  
   
-动态数据屏蔽在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中提供，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令进行配置。 有关如何使用 Azure 门户来配置动态数据屏蔽的更多信息，请参阅 [开始使用 SQL 数据库动态数据屏蔽（Azure 门户）](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
+动态数据屏蔽在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中提供，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令进行配置。 有关如何使用 Azure 门户来配置动态数据掩码的详细信息，请参阅[开始使用 SQL 数据库动态数据掩码（Azure 门户）](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
   
-## <a name="defining-a-dynamic-data-mask"></a>定义动态数据屏蔽  
+## <a name="defining-a-dynamic-data-mask"></a>定义动态数据屏蔽
  针对表中的列定义屏蔽规则即可模糊该列中的数据。 可以使用四种类型的屏蔽。  
   
 |函数|描述|示例|  
 |--------------|-----------------|--------------|  
-|，则“默认”|根据指定字段的数据类型进行完全屏蔽。<br /><br /> 对于字符串数据类型，可以使用 XXXX 或者在字段不到 4 个字符长的情况下使用更少的 X（**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**）。  <br /><br /> 对于数字数据类型，可使用零值（**bigint** **bit** **decimal**、 **int**、 **money**、 **numeric**、 **smallint**、 **smallmoney**、 **tinyint**、 **float**、 **real**）。<br /><br /> 对于日期和时间数据类型，可使用 01.01.1900 00:00:00.0000000（**date**、**datetime2**、**datetime**、**datetimeoffset**、**smalldatetime**、**time**）。<br /><br />对于二进制数据类型，可使用单字节的 ASCII 值 0（**binary**、 **varbinary**、 **image**）。|列定义语法示例： `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 语法示例： `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|电子邮件|该屏蔽方法公开电子邮件地址的第一个字母，以及电子邮件地址格式中的常量后缀“.com”。 实例时都提供 SQL Server 登录名。 `aXXX@XXXX.com`。|定义语法示例： `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> ALTER 语法示例： `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
-|随机|一种随机屏蔽函数，适用于任何数字类型，可以在指定范围内使用随机值来屏蔽原始值。|定义语法示例： `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> ALTER 语法示例： `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|自定义字符串|该屏蔽方法公开第一个和最后一个字母，在中间添加自定义填充字符串。 `prefix,[padding],suffix`<br /><br /> 注意：如果因原始值太短而无法进行完整的屏蔽，则不会公开部分前缀或后缀。|定义语法示例： `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> ALTER 语法示例： `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 其他示例：<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|，则“默认”|根据指定字段的数据类型进行完全屏蔽。<br /><br /> 对于字符串数据类型，可以使用 XXXX 或者在字段不到 4 个字符长的情况下使用更少的 X（**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**）。  <br /><br /> 对于数字数据类型，可使用零值（**bigint** **bit** **decimal**、 **int**、 **money**、 **numeric**、 **smallint**、 **smallmoney**、 **tinyint**、 **float**、 **real**）。<br /><br /> 对于日期和时间数据类型，可使用 01.01.1900 00:00:00.0000000（**date**、**datetime2**、**datetime**、**datetimeoffset**、**smalldatetime**、**time**）。<br /><br />对于二进制数据类型，可使用单字节的 ASCII 值 0（**binary**、 **varbinary**、 **image**）。|列定义语法示例： `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 语法示例：`ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|电子邮件|该屏蔽方法公开电子邮件地址的第一个字母，以及电子邮件地址格式中的常量后缀“.com”。 `aXXX@XXXX.com` 列中的一个值匹配。|定义语法示例： `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> ALTER 语法示例：`ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
+|随机|一种随机屏蔽函数，适用于任何数字类型，可以在指定范围内使用随机值来屏蔽原始值。|定义语法示例： `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> ALTER 语法示例：`ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
+|自定义字符串|该屏蔽方法公开第一个和最后一个字母，在中间添加自定义填充字符串。 `prefix,[padding],suffix`<br /><br /> 注意：如果因原始值太短而无法进行完整的屏蔽，则不会公开部分前缀或后缀。|定义语法示例： `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> ALTER 语法示例：`ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 其他示例：<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  不需任何特殊权限即可使用动态数据屏蔽来创建表，只需标准的 **CREATE TABLE** 权限以及对架构的 **ALTER** 权限。  
   
  添加、替换或删除对列的屏蔽，需要 **ALTER ANY MASK** 权限以及对表的 **ALTER** 权限。 可以将 **ALTER ANY MASK** 权限授予安全负责人。  
@@ -197,4 +197,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition (Transact-SQL)](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [开始使用 SQL 数据库动态数据屏蔽（Azure 预览门户）](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [开始使用 SQL 数据库动态数据掩码（Azure 门户）](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

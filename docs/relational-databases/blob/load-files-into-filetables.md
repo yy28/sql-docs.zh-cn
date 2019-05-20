@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c36a1b7235b1a323bbace94762411aa2c71df15b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526713"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094261"
 ---
 # <a name="load-files-into-filetables"></a>将文件加载到 FileTable 中
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "52526713"
 |文件的当前位置|用于迁移的选项|  
 |-------------------------------|---------------------------|  
 |文件当前存储在文件系统中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不识别文件。|由于 FileTable 显示为 Windows 文件系统中的文件夹，您可以使用移动或复制文件的任何方法轻松地将文件加载到新的 FileTable。 这些方法包括 Windows 资源管理器、包括 xcopy 和 robocopy 在内的命令行选项，以及自定义脚本或应用程序。<br /><br /> 不能将现有文件夹转换为 FileTable。|  
-|文件当前存储在文件系统中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含一个元数据表，该表中包含指向文件的指针。|第一步是使用之前提到的方法之一移动或复制文件。<br /><br /> 第二步是更新现有元数据的表以指向该文件的新位置。<br /><br /> 有关详细信息，请参阅本文中的 [示例：将文件从文件系统迁移到 FileTable](#HowToMigrateFiles)。|  
+|文件当前存储在文件系统中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含一个元数据表，该表中包含指向文件的指针。|第一步是使用之前提到的方法之一移动或复制文件。<br /><br /> 第二步是更新现有元数据的表以指向该文件的新位置。<br /><br /> 有关详细信息，请参阅本文中的[示例：将文件从文件系统迁移到 FileTable](#HowToMigrateFiles)。|  
   
-###  <a name="HowToLoadNew"></a> 将文件加载到 FileTable 中  
+###  <a name="HowToLoadNew"></a> 如何：将文件加载到 FileTable 中  
 可通过以下方法将文件加载到 FileTable 中：  
   
 -   在 Windows 资源管理器中将文件从源文件夹拖放到新的 FileTable 文件夹。  
@@ -99,7 +99,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO... 带 IGNORE_CONSTRAINTS 子句的 SELECT * FROM OPENROWSET(BULK …)。  
   
-###  <a name="HowToBulkLoad"></a> 如何大容量加载文件到 FileTable  
+###  <a name="HowToBulkLoad"></a> 如何：将文件批量到 FileTable  
  您可以使用各种方法来大容量加载文件到 FileTable：  
   
 -   **bcp**  
@@ -122,7 +122,7 @@ UPDATE PhotoMetadata
   
  有关禁用 FileTable 约束的信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
-###  <a name="disabling"></a> 如何禁用针对大容量加载的 FileTable 约束  
+###  <a name="disabling"></a> 如何：禁用针对批量加载的 FileTable 约束  
  若要在没有强制系统定义约束的开销的情况下将文件大容量加载到 FileTable 中，可以暂时禁用约束。 有关详细信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
 ## <a name="see-also"></a>另请参阅  

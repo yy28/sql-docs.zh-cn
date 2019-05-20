@@ -17,14 +17,18 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 659eb7ee0c6e75c4df778d04b50b30efc35c3f97
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: df12fa3713ea3e8bc44f810a7a02ea3d0bba1c26
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270619"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728081"
 ---
 # <a name="wmi-connection-manager"></a>WMI 连接管理器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   WMI 连接管理器使得包可以使用 Windows Management Instrumentation (WMI) 来管理企业环境中的信息。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服务任务使用 WMI 连接管理器。  
   
  将 WMI 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 WMI 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包的 Connections 集合。 该连接管理器的 **ConnectionManagerType** 属性设置为 **WMI**。  
@@ -38,7 +42,7 @@ ms.locfileid: "58270619"
   
 -   为连接到服务器选择身份验证模式。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请参阅 [WMI 连接管理器编辑器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)。  
   

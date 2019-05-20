@@ -16,14 +16,18 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8e14d92b18c22d793a71d5337f32383b0b887a85
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9ed63abe0ea2c96461409e964b232abce6e1b103
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280751"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723507"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 事务
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   包使用事务将任务执行的数据库操作绑定到原子单元中，这样做可以维护数据的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器类型（包、For 循环、Foreach 循环和序列容器以及封装每个任务的任务宿主）都可以配置为使用事务。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了用于配置事务的三个选项：NotSupported、Supported 和 Required。  
   
 -   **Required** 指示该容器启动一个事务，除非已经存在由其父容器启动的事务。 如果事务已经存在，容器将联接该事务。 例如，如果没有配置为支持事务的包包括一个使用 **Required** 选项的序列容器，则该序列容器会启动其自己的事务。 如果包已经配置为使用 **Required** 选项，则序列容器将联接包事务。  

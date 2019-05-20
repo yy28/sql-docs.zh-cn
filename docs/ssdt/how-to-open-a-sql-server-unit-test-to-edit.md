@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0c1f46ea807e7f51c92df16f7dfc21cfe49ad6bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d464ba2cd7b3b5b3cb2ac687f9f9e1b3ae8023b0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659057"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098448"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>如何：打开 SQL Server 单元测试以进行编辑
 在创建 SQL Server 单元测试之后，你可以使用“SQL Server 单元测试设计器”添加 Transact\-SQL 语句和测试条件。 使用设计器创建的测试将会生成 Visual C# 或 Visual Basic 代码。 此代码即为测试运行时所执行的代码。  

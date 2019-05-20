@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27e3eefcb9a43d8063e9f72f18f76dd8ac7e3c94
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 131e5ee4436cc1cf1e5a5f2f979504e75c169d93
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802881"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503254"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "56802881"
   
 ```
 BULK INSERT   
-   [ database_name . [ schema_name ] . | schema_name . ] [ table_name | view_name ]   
+   { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'   
      [ WITH   
     (   
@@ -224,7 +224,7 @@ LASTROW = last_row 指定要加载的最后一行的行号。 默认值为 0，�
  ROWS_PER_BATCH = rows_per_batch  
  指示数据文件中近似的数据行数量。  
   
- 默认情况下，数据文件中所有的数据都作为单一事务发送到服务器，批处理中的行数对于查询优化器是未知的。 如果指定了 ROWS_PER_BATCH（值 > 0），则服务器将使用此值优化大容量导入操作。 为 ROWS_PER_BATCH 指定的值应当与实际行数大致相同。 有关性能注意事项的信息，请参阅本主题后面的“备注”。  
+ 默认情况下，数据文件中所有的数据都作为单一事务发送到服务器，批处理中的行数对于查询优化器是未知的。 如果指定了 ROWS_PER_BATCH（值 > 0），则服务器将使用此值优化批量导入操作。 为 ROWS_PER_BATCH 指定的值应当与实际行数大致相同。 有关性能注意事项的信息，请参阅本主题后面的“备注”。  
   
  
  TABLOCK  
@@ -341,7 +341,7 @@ GO
 
 ## <a name="general-remarks"></a>一般备注  
 
- 有关 BULK INSERT 语句、INSERT ...SELECT \* FROM OPENROWSET(BULK...) 语句和 **bcp** 命令，请参阅[批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
+ 有关 BULK INSERT 语句、INSERT ...SELECT \* FROM OPENROWSET(BULK...) 语句和 bcp 命令的比较，请参阅[批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
  有关准备数据以进行批量导入的信息，请参阅[准备用于批量导出或导入的数据 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。  
   
@@ -380,7 +380,7 @@ GO
   
  有关详细信息和使用 BULK INSERT 的安全注意事项，请参阅[使用 BULK INSERT 或 OPENROWSET (BULK...) 导入批量数据 (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
 
  需要 INSERT 和 ADMINISTER BULK OPERATIONS 权限。 在 Azure SQL 数据库中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 权限。 另外，如果存在下列一种或多种情况，则还需要 ALTER TABLE 权限：  
   

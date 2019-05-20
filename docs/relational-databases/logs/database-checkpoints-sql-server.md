@@ -1,6 +1,6 @@
 ---
 title: 数据库检查点 (SQL Server) | Microsoft Docs
-ms.date: 09/23/2016
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,18 +28,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d3b1b147bd954ce449315b9efb459767941b045
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a7d761a88d570cfe65c3660656adde6f90e93c21
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518091"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775378"
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  “检查点”会创建一个已知的正常点，在意外关闭或崩溃后进行恢复的过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以从该点开始应用日志中所包含的更改。  
- 
-  
+  “检查点”会创建一个已知的正常点，在意外关闭或崩溃后进行恢复的过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以从该点开始应用日志中所包含的更改。
+
 ##  <a name="Overview"></a> 概述   
 出于性能方面的考虑，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 对内存（缓冲区缓存）中的数据库页进行修改，但在每次更改后不将这些页写入磁盘。 相反， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 定期发出对每个数据库的检查点命令。  “检查点”将当前内存中已修改的页（称为“脏页” ）和事务日志信息从内存写入磁盘，并记录有关事务日志的信息。  
   
@@ -93,7 +92,8 @@ ms.locfileid: "52518091"
   
 如果您决定增大 **recovery interval** 设置，我们建议一点一点逐渐增大该值并评估每次增大对恢复性能的影响。 这种方法很重要，因为随着 **recovery interval** 设置的增大，数据库恢复需要更长的时间来完成。 例如，如果 **recovery interval** 更改为 10 分钟，那么完成恢复所用时间大约比 **recovery interval** 为 1 分钟时长 10 倍。  
   
-##  <a name="IndirectChkpt"></a> 间接检查点  
+##  <a name="IndirectChkpt"></a> 间接检查点
+  
 间接检查点是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的，用于提供自动检查点的可配置数据库级替代方法。 可通过指定“目标恢复时间”数据库配置选项来配置此检查点。 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。
 在系统崩溃时，间接检查点与自动检查点相比，恢复时间可能更短更可预测。 间接检查点具有以下优点：  
   
@@ -110,6 +110,10 @@ ms.locfileid: "52518091"
 > [!IMPORTANT]
 > 间接检查点是在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中创建的新数据库的默认行为，包括模型和 TempDB 数据库。          
 > 就地升级或从以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原的数据库，除非显式更改为使用间接检查点，否则将使用以前的自动检查点行为。       
+
+### <a name="ctp23"></a> 改进了间接检查点可伸缩性
+
+在低于 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 的版本中，如果存在生成大量脏页的数据库（例如 `tempdb`），你可能会遇到计划程序无法完成错误。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 为间接检查点引入了改进的可伸缩性，这应该有助于避免具有大量 `UPDATE`/`INSERT` 工作负载的数据库中出现这些错误。
   
 ##  <a name="EventsCausingChkpt"></a> 内部检查点  
 内部检查点由各种服务器组件生成，以确保磁盘映像与日志的当前状态匹配。 生成内部检查点以响应下列事件：  
@@ -126,6 +130,7 @@ ms.locfileid: "52518091"
   
 -   使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 脱机。      
   
+
 ##  <a name="RelatedTasks"></a> Related tasks  
  **更改服务器实例的恢复间隔**  
   

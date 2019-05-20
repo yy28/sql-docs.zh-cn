@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.dropdatabaseconfirmation.dialog
 - sql.data.tools.dropmultipledatabasesconfirmation.dialog
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1c52b2bcd700d4b7399fe27c79063f4b27d4e68a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd4b8ab01b2b9f16938e9493d5e762cae59a6446
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676165"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090218"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>如何删除对象和解析依赖关系
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>如何：删除对象和解析依赖关系
 在 SQL Server 对象资源管理器中重命名或删除某一对象时，SQL Server Data Tools 将自动检测其所有依赖对象，并且将准备 ALTER 脚本以便根据需要重命名或删除这些依赖对象。  
   
 > [!WARNING]  
@@ -47,7 +47,7 @@ ms.locfileid: "47676165"
     > [!WARNING]  
     > SSDT 不自动更新基于脚本的依赖项，例如对来自视图的表或存储过程的引用。 重命名后，可以使用“错误列表”窗格找到其他所有依赖项，并手动修复它们。  
   
-5.  按照之前的[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)过程中的步骤应用更改。  
+5.  在执行了上一过程中的步骤后应用更改，即[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)。  
   
 6.  再次右键单击“SQL Server 对象资源管理器”中的“Customers”表，然后选择“查看数据”。 请注意，在重命名操作后表数据将保持不变。  
   

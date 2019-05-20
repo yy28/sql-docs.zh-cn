@@ -12,15 +12,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 177c3e0e4dcd6e632b82501441fdb240bcc19b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e55163886d39fc59cd8ce8787088f3645fb7e51
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787495"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105604"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47787495"
   
 3.  右键单击“数据库关系图”节点并选择“新建数据库关系图”。  
   
-    如果此数据库没有创建关系图所必需的对象，则将显示下列消息：**此数据库没有使用数据库关系图创建功能所需的一个或多个支持对象。要创建它们吗？** 选择 **“是”**。  
+    如果数据库没有创建关系图所需的对象，将显示以下消息：**此数据库缺少一个或多个使用数据库关系图所需的支持对象。要创建它们吗？** 选择 **“是”**。  
   
     此时将显示“添加表”对话框。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47787495"
   
 1.  右键单击 `Address` 表。 在快捷菜单上，指向“表视图”，再单击“标准”。  
   
-    表的网格将显示三个列：“列名”、“数据类型”和“允许 Null 值”。  
+    表网格将显示三个列：“列名”、“数据类型”和“允许 NULL 值”。  
   
 2.  右键单击 `Address` 表，单击“表视图”并选择“键”。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47787495"
   
 2.  在“选择名称”对话框中，单击“确定”以接受默认名称“Table1”。  
   
-    将显示具有以下三列的新表网格：“列名”、“数据类型”和“允许 Null 值”。  
+    将出现一个具有三个列的新表网格：“列名”、“数据类型”和“允许 NULL 值”。  
   
 3.  向 **Table1**添加以下信息：  
   
@@ -132,7 +132,7 @@ ms.locfileid: "47787495"
   
 2.  将 `T2col1` 拖动到 `T1col1`。  
   
-    将显示两个对话框：背景中的“外键关系”对话框和前景中的“表和列”对话框。  
+    出现两个对话框：背景中的“外键关系”对话框和前景中的“表和列”对话框。  
   
 3.  单击“确定”保存新的关系。  
   

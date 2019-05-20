@@ -1,5 +1,5 @@
 ---
-title: 如何：更改目标平台和发布数据库项目 | Microsoft Docs
+title: 如何：更改目标平台并发布数据库项目 | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.publish.dialog
 - sql.data.tools.publishdacproject
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516700"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090106"
 ---
-# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何更改目标平台和发布数据库项目
+# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何：更改目标平台并发布数据库项目
 可以将 SQL Server Data Tools (SSDT) 数据库项目的目标 SQL Server 版本更改为任何受支持的 SQL Server 实例（SQL Server 2005、2008、2008 R2、Microsoft SQL Server 2012 或 SQL Azure）。 通过这样做，可以针对一个项目进行数据库开发，但在需要时将其发布到多种不同风格的 SQL Server 实例中。  
   
 SSDT 还通过识别您的目标平台并且自动检测出您的代码中的任何错误（例如，在您为将要发布到 SQL Azure 的项目使用不支持的功能时），对此任务进行简化。  
@@ -41,7 +41,7 @@ SSDT 还通过识别您的目标平台并且自动检测出您的代码中的任
   
 2.  将 `ON [PRIMARY]` 追加到 `CREATE TABLE` 语句的末尾。  
   
-3.  请注意，以下错误将出现在“错误列表”窗格中：SQL70015: 在 SQL Azure 中不支持“文件组引用和分区方案”。  
+3.  请注意，“错误列表”窗格中会显示以下错误：SQL70015：SQL Azure 中不支持“文件组引用和分区方案”。  
   
     SSDT 将基于目标平台自动验证您的脚本。 在这种情况下，因为 SQL Azure 不支持文件组，所以 SSDT 将返回错误。 有关 SQL Azure 中不支持的 Transact\-SQL 语句，请参阅[部分支持的 Transact-SQL 语句（Microsoft Azure SQL 数据库）](https://msdn.microsoft.com/library/ee336267.aspx)。  
   

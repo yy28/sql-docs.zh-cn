@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ae555bf3eaef4d7befd89a572ab926d189183e4e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980343"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776001"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 触发器函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,6 +65,8 @@ UPDATE ( column )
 >  IF UPDATE(column) 子句的功能等同于 IF、IF...ELSE 或 WHILE 子句，并且可以使用 BEGIN...END 语句块。 有关详细信息，请参阅[控制流语言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
   
  可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器主体中的任意位置使用 UPDATE(column)。  
+ 
+如果将触发器应用于列，`UPDATED` 值将返回为 `true` 或 `1`，即使列值保持不变也是如此。 这是有意为之，并且触发器应实现确定是否允许插入/更新/删除操作的业务逻辑。 
   
 ## <a name="examples"></a>示例  
  以下示例创建一个触发器；当有人尝试更新 `StateProvinceID` 表的 `PostalCode` 或 `Address` 列时，该触发器将向客户端输出一条消息。  

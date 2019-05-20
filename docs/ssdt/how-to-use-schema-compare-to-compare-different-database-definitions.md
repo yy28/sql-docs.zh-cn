@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.schemacompare.connectiondialog.f1
 - sql.data.tools.schemacompare.connectiondialog.error.f1
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f8c03ebbb1b49258ae6a7f8744042f763fc7282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668545"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095932"
 ---
-# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>如何使用架构比较来比较不同数据库定义
+# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>如何：使用架构比较来比较不同数据库定义
 SQL Server Data Tools (SSDT) 包含一个可用来比较两个数据库定义的架构比较实用工具。  比较的源和目标可以是连接的数据库、SQL Server 数据库项目、快照或 .dacpac 文件的任意组合。  比较的结果会显示为一组操作，必须针对目标执行这些操作才能使其与源一致。  比较完成后，可以直接更新目标（如果目标为项目或数据库）或生成具有相同效果的更新脚本。  
   
 源和目标之间的差异会在网格中显示以便进行查看。  您可以深入探讨并查看结果网格中的或脚本形式的每项差异。  之后，可以选择性地排除特定差异。  

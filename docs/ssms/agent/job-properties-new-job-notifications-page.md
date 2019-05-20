@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.notifications.f1
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: de4bfe6cb6208e332b5c89ecabd4fc15caab94a7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5d1cc28e21235dfde9c1b7de00d9c97522bab2cc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696278"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095847"
 ---
 # <a name="job-properties---new-job-notifications-page"></a>作业属性 - 新建作业（“通知”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,21 +31,21 @@ ms.locfileid: "51696278"
   
 ## <a name="options"></a>选项  
 **电子邮件**  
-选择此选项将在作业完成时发送电子邮件。 选择此选项后，选择要通知的操作员以及触发该通知的条件：“当作业成功时”；“当作业失败时”；或“当作业完成时”。  
+选择此选项将在作业完成时发送电子邮件。 选择此选项后，选择要通知的操作员以及触发该通知的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”。  
   
 **第**  
-选择此选项将在作业完成时将电子邮件发送到操作员的寻呼程序。 选择此选项后，指定要通知的操作员以及触发该通知的条件：“当作业成功时”；“当作业失败时”；或“当作业完成时”。  
+选择此选项将在作业完成时将电子邮件发送到操作员的寻呼程序。 选择此选项后，指定要通知的操作员以及触发该通知的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”。  
   
 **Net send**  
-选择此选项将在作业完成时通过 net send 通知操作员。 选择此选项后，指定要通知的操作员以及触发该通知的条件：“当作业成功时”；“当作业失败时”；或“当作业完成时”。  
+选择此选项将在作业完成时通过 net send 通知操作员。 选择此选项后，指定要通知的操作员以及触发该通知的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”。  
   
 **写入 Windows 应用程序事件日志**  
-选择此选项将在作业完成时将条目写入到应用程序事件日志中。 选择此选项后，指定导致写入条目的条件：“当作业成功时”；“当作业失败时”；或“当作业完成时”。  
+选择此选项将在作业完成时将条目写入到应用程序事件日志中。 选择此选项后，指定将触发写入条目的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”。  
   
 **自动删除作业**  
-选择此选项将在作业完成时删除该作业。 选择此选项后，指定触发删除作业的条件：“当作业成功时”；“当作业失败时”；或“当作业完成时”。  
+选择此选项将在作业完成时删除该作业。 选择此选项后，指定将触发删除作业的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”。  
   
 ## <a name="see-also"></a>另请参阅  
 [执行作业](../../ssms/agent/implement-jobs.md)  
-[如何配置 SQL Server 代理邮件以使用数据库邮件 (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+[如何：配置 SQL Server 代理邮件以使用数据库邮件 (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   

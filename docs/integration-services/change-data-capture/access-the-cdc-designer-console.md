@@ -13,14 +13,18 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f100526ed890b3c180d0d0e948da81081c0171ab
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 57e8a0986fda07fb0850172497f27af2618dd962
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277796"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729131"
 ---
 # <a name="access-the-cdc-designer-console"></a>访问 CDC 设计器控制台
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以从安装了 CDC 设计器控制台的计算机访问该控制台。 有关安装的详细信息，请参阅“安装”。  
   
  在您打开 CDC 设计器控制台时，“连接到 SQL Server”对话框将打开。  
@@ -45,7 +49,7 @@ ms.locfileid: "58277796"
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
   
  **连接超时值**  
- 键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  
+ 键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 15**。  
   
  **执行超时值**  
  键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  

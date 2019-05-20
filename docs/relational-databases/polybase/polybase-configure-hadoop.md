@@ -1,7 +1,7 @@
 ---
 title: 配置 PolyBase 以访问 Hadoop 中的外部数据 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: polybase
@@ -9,12 +9,13 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 38cdc41469112ed1bfab44e801e5e448b034a9c8
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: e9d3cee432adea10c4a92198a7e8486d2e8ee27f
+ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265244"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65198053"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
@@ -73,14 +74,14 @@ ms.locfileid: "56265244"
 1. 在 SQL Server 的安装路径中查找文件 **yarn-site.xml** 。 通常情况下，该路径为：  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf\  
    ```  
 
 1. 对于 Hadoop 计算机，在 Hadoop 配置目录中查找类似文件。 在文件中，查找并复制配置密钥 yarn.application.classpath 的值。  
   
-1. 对于 SQL Server 计算机，在 **yarn.site.xml 文件中，** 查找 **yarn.application.classpath** 属性。 将 Hadoop 计算机的值粘贴到值元素中。  
+1. 对于 SQL Server 计算机，在 yarn-site.xml 文件中，查找 yarn.application.classpath 属性。 将 Hadoop 计算机的值粘贴到值元素中。  
   
-1. 对于所有 CDH 5.X 版本，你都需要将 mapreduce.application.classpath 配置参数添加到 yarn.site.xml 文件的末尾或添加到 mapred-site.xml 文件中。 HortonWorks 在 yarn.application.classpath 配置中包括了这些配置。 有关示例，请参阅 [PolyBase 配置](../../relational-databases/polybase/polybase-configuration.md)。
+1. 对于所有 CDH 5.X 版本，都需要将 mapreduce.application.classpath 配置参数添加到 yarn-site.xml 文件的末尾或添加到 mapred-site.xml 文件中。 HortonWorks 在 yarn.application.classpath 配置中包括了这些配置。 有关示例，请参阅 [PolyBase 配置](../../relational-databases/polybase/polybase-configuration.md)。
 
 ## <a name="configure-an-external-table"></a>配置外部表
 

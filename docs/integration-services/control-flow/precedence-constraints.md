@@ -20,14 +20,18 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4d6daa4efcd865502429dad0cc8edd498e8a94f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283053"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727565"
 ---
 # <a name="precedence-constraints"></a>优先约束
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   优先约束在控制流中链接包中的可执行文件、容器和任务，并指定决定可执行文件是否运行的条件。 可执行文件可以是 For 循环容器、Foreach 循环容器、序列容器、任务或事件处理程序。 事件处理程序也使用优先约束将其可执行文件链接为控制流。  
   
  优先约束链接两个可执行文件：优先可执行文件和受约束的可执行文件。 优先可执行文件先于受约束的可执行文件运行，而优先可执行文件的执行结果可能决定受约束的可执行文件是否运行。 下列关系图显示由优先约束链接的两个可执行文件。  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f2862d1e5ae68e5b97a9721d22758c5441e9b50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e348fba8c391b438c0429c8a32e167fd810b53d8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669765"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102071"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>使用 Transact-SQL 编辑器编辑和执行脚本
 在使用脚本时，Transact\-SQL 编辑器为你提供了丰富的编辑和调试体验。 在使用“查看代码”上下文菜单在连接的数据库或项目中打开某一数据库实体时，将调用该编辑器。 在从 SQL Server 对象资源管理器使用“新建查询”上下文菜单或者向数据库项目添加新的脚本对象时，该编辑器也自动打开。  
@@ -31,9 +31,9 @@ Transact\-SQL 编辑器包含一个主 T-SQL 窗格，在其中可以编写和�
   
 |主题|描述|  
 |---------|---------------|  
-|[如何：显示 Transact-SQL 脚本的大纲和向 Transact-SQL 脚本添加代码片段](../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md)|使用代码段选择器可向查询中插入现成的 Transact\-SQL 代码。|  
+|[如何：显示 Transact-SQL 脚本的大纲并向 Transact-SQL 脚本添加代码片段](../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md)|使用代码段选择器可向查询中插入现成的 Transact\-SQL 代码。|  
 |[如何：在脚本之间导航](../ssdt/how-to-navigate-between-scripts.md)|使用“转到定义”和“查找所有引用”在脚本之间进行导航。|  
-|[如何：使用重命名和重构对数据库对象进行更改](../ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md)|跨所有脚本重命名对象和预览任何更改。|  
+|[如何：使用重命名和重构更改数据库对象](../ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md)|跨所有脚本重命名对象和预览任何更改。|  
 |[如何：执行部分查询](../ssdt/how-to-execute-a-partial-query.md)|突出显示特定的脚本段落并将其作为单个查询执行。|  
 |[如何：调试存储过程](../ssdt/how-to-debug-stored-procedures.md)|通过单步执行创建和调试 Transact\-SQL 存储过程。|  
 |[分析脚本性能](../ssdt/analyze-script-performance.md)|使用执行计划、客户端统计信息和代码分析确定是否可以提高您的查询、存储过程或脚本的性能。|  

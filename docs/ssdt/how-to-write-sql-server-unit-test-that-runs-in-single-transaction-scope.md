@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681285"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099557"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>如何：编写在单个事务范围内运行的 SQL Server 单元测试
 您可以修改单元测试以便在单个事务的范围内运行。 如果您采用此方法，则可以在测试结束后回滚测试所执行的所有更改。 下面的过程介绍了如何执行以下操作：  
@@ -156,7 +156,7 @@ ms.locfileid: "51681285"
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>启动分布式事务处理协调器服务  
-本主题中的一些过程将会使用 System.Transactions 程序集中的类型。 在按照这些过程进行操作之前，您必须确保在运行单元测试的计算机上正在运行分布式事务处理协调器服务。 否则，测试将失败并显示以下错误消息：“测试方法 ProjectName.TestName.MethodName 引发异常: System.Data.SqlClient.SqlException: 服务器‘ComputerName’上的 MSDTC 不可用”。  
+本主题中的一些过程将会使用 System.Transactions 程序集中的类型。 在按照这些过程进行操作之前，您必须确保在运行单元测试的计算机上正在运行分布式事务处理协调器服务。 否则，测试将失败，并且会出现以下错误消息：“测试方法 ProjectName.TestName.MethodName 引发异常：System.Data.SqlClient.SqlException：服务器 ComputerName 上的 MSDTC 不可用”。  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>启动分布式事务处理协调器服务  
   

@@ -21,14 +21,18 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aa227c82d9481863c6cca360fdac41cec3ace13
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d66c98acec072ff2ce3afa4fb2ecfb0236f05ec
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282451"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726875"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   路径将一个数据流组件的输出连接到另一个组件的输入，以此连接数据流中的两个组件。 路径具有源和目标。 例如，如果路径连接一个 OLE DB 源和一个排序转换，那么 OLE DB 源就是路径的源，而排序转换就是路径的目标。 源是路径开始处的组件，而目标是路径结束处的组件。  
   
  如果在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中运行包，您可以将数据查看器附加到一个路径，以此来查看数据流中的数据。 数据查看器可配置为在网格中显示数据。 数据查看器是个很有用的调试工具。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  

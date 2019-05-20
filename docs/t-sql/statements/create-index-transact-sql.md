@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe34c0441e455fad18d87b5ddb5dfbc3081c378
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 0e53128745296653d3892947310d03d8acc2d780
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802306"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504118"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -118,10 +118,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 [ ; ]
   
 <object> ::=
-{
-    [ database_name. [ schema_name ] . | schema_name. ]
-    table_or_view_name
-}
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 
 <relational_index_option> ::=
 {
@@ -515,8 +512,8 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**..._n_ 
 可以按以下方式指定 \<partition_number_expression>：
 
 - 提供分区号，例如：ON PARTITIONS (2)。
-- 为多个单个分区提供分区号，用逗号分隔，例如：ON PARTITIONS (1,5)。
-- 同时提供范围和单个分区，例如：ON PARTITIONS (2, 4, 6 TO 8)。
+- 为多个单独分区提供分区号，用逗号分隔，例如：ON PARTITIONS (1, 5)。
+- 同时提供范围和单独分区，例如：ON PARTITIONS (2, 4, 6 TO 8)。
 
 \<range> 可指定为由单词 TO 隔开的分区号，例如：ON PARTITIONS (6 TO 8)。
 
@@ -757,7 +754,7 @@ INSERT INTO t1 VALUES (1, 0);
 
 若要评估更改压缩状态将对表、索引或分区有何影响，请使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 存储过程。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。
 
@@ -820,7 +817,7 @@ WITH ( DROP_EXISTING = ON );
 
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 创建唯一非聚集索引
 
-以下示例为 `Name` 数据库中 `Production.UnitMeasure` 表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列创建唯一非聚集索引。 该索引将强制插入 `Name` 列中的数据具有唯一性。
+以下示例为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Name` 表的 `Production.UnitMeasure` 列创建唯一非聚集索引。 该索引将强制插入 `Name` 列中的数据具有唯一性。
 
 ```sql
 CREATE UNIQUE INDEX AK_UnitMeasure_Name
@@ -985,7 +982,7 @@ GO
 
 ### <a name="j-create-a-partitioned-index"></a>J. 创建已分区索引
 
-以下示例为 `TransactionsPS1` 数据库中现有分区方案 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 创建非聚集分区索引。 此示例假定安装了分区索引示例。
+以下示例为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中现有分区方案 `TransactionsPS1` 创建非聚集分区索引。 此示例假定安装了分区索引示例。
 
 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 

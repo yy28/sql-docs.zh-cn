@@ -1,7 +1,7 @@
 ---
 title: 透明数据加密 (TDE) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2019
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: d944c2192e73fd0cb887d0491ecba707a90ff7b5
+ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185123"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527354"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "54185123"
   
  下图显示了 TDE 加密体系结构。 仅数据库级项目（在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上使用 TDE 时，用户可配置数据库加密密钥和 ALTER DATABASE 部分。  
   
- ![显示主题中介绍的层次结构。](../../../relational-databases/security/encryption/media/tde-architecture.gif "显示主题中介绍的层次结构。")  
+ ![显示主题中介绍的层次结构。](../../../relational-databases/security/encryption/media/tde-architecture.png "显示主题中介绍的层次结构。")  
   
 ## <a name="using-transparent-data-encryption"></a>使用透明数据加密  
  若要使用 TDE，请按以下步骤操作。  
@@ -127,7 +127,7 @@ GO
 |[sys.certificates (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|显示数据库中的证书的目录视图。|  
 |[sys.dm_database_encryption_keys (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)|提供有关数据库中使用的加密密钥的信息以及数据库加密状态的动态管理视图。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  如上表中所述，TDE 的每项功能和每个命令都有各自的权限要求。  
   
  查看 TDE 所涉及的元数据要求拥有对证书的 VIEW DEFINITION 权限。  
@@ -226,6 +226,26 @@ GO
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>透明数据加密和 FILESTREAM 数据  
  即使启用了 TDE，也不会加密 FILESTREAM 数据。  
+
+<a name="scan-suspend-resume"></a>
+
+## <a name="transparent-data-encryption-tde-scan"></a>透明数据加密 (TDE) 扫描
+
+为了在数据库上启用透明数据加密 (TDE)，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 必须执行加密扫描，此操作会从数据文件将每个页面读入缓冲池，然后将加密的页面写回磁盘。 为了使用户能够更好地控制加密扫描，[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 引入了 TDE 扫描 - 暂停和恢复语法，可以实现当系统上的工作负荷繁重时或在关键业务时间内暂停扫描，然后稍后再恢复扫描。
+
+使用以下语法暂停 TDE 加密扫描：
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+同样，以下语法将恢复 TDE 加密扫描：
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+为了显示加密扫描的当前状态，已将 `encryption_scan_state` 添加到了 `sys.dm_database_encryption_keys` 动态管理视图中。 还有一个名为 `encryption_scan_modify_date` 的新列，此列将包含上次加密扫描状态更改的日期和时间。 另请注意，如果在加密扫描处于暂停状态时重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，启动时系统将在错误日志中记录一条消息，指示存在已暂停的现有扫描。
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>透明数据加密和缓冲池扩展  
  在使用 TDE 加密数据库时不对与缓冲池扩展 (BPE) 相关的文件进行加密。 必须对与 BPE 相关的文件使用文件系统级别的加密工具，如 Bitlocker 或 EFS。  

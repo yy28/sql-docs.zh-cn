@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 226c4760b0e8461b9183345c9e727f288edd32dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c0d94a0b49e9fd02803d07270ba6f890eb4c311
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751620"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101900"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server 单元测试中的脚本
 每个 SQL Server 单元测试都包含单个预先测试操作、测试操作和后期测试操作。 其中每个操作又包含以下内容：  

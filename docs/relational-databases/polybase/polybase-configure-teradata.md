@@ -1,25 +1,25 @@
 ---
 title: 配置 PolyBase 以访问 Teradata 中的外部数据 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7abd9873b3aeefb5644ade0497fe89c47d7cd343
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
+ms.openlocfilehash: 4f1952a2974ca9ad62be1cb3adaaebfc89172e96
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757952"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774680"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>配置 PolyBase 以访问 Teradata 中的外部数据
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文介绍如何使用 SQL Server 实例上的 PolyBase 来查询 Teradata 中的外部数据。
 
@@ -27,95 +27,56 @@ ms.locfileid: "50757952"
 
 如果尚未安装 PolyBase，请参阅 [PolyBase 安装](polybase-installation.md)。 这篇安装文章介绍了安装的先决条件。
 
+在创建数据库范围凭据之前，必须先创建[主密钥](../../t-sql/statements/create-master-key-transact-sql.md)。 
+
 若要使用 Teradata 上的 PolyBase，则需要安装 VC++ 可再发行组件。
  
-## <a name="configure-an-external-table"></a>配置外部表
+## <a name="configure-a-teradata-external-data-source"></a>配置 Teradata 外部数据源
 
 若要查询 Teradata 数据源中的数据，必须创建外部表以引用外部数据。 本节提供用于创建这些外部表的示例代码。 
 
-本节中创建了下对象：
 
-- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
-- CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
-- CREATE EXTERNAL TABLE (Transact-SQL) 
-- CREATE STATISTICS (Transact-SQL)
 
-1. 创建数据库主密钥（如果尚不存在）。 需要主密钥来加密凭据机密。
+此部分中使用了以下 Transact-SQL 命令：
 
-     ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
-     ```
-    **参数**
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-    PASSWORD ='password'
+1. 创建数据库范围凭据以访问 MongoDB 数据源。
 
-    该密码是否用于加密数据库中的主密钥？ 密码必须符合托管 SQL Server 实例的计算机的 Windows 密码策略要求。
-
-1. 创建数据库范围的凭据。
- 
-     ```sql
-     /*  specify credentials to external data source
-      *  IDENTITY: user name for external source.  
-     *  SECRET: password for external source.
-     */
-     CREATE DATABASE SCOPED CREDENTIAL credential_name
-     WITH IDENTITY = 'username', Secret = 'password'
-     ```
+    ```sql
+    /*  specify credentials to external data source
+    *  IDENTITY: user name for external source. 
+    *  SECRET: password for external source.
+    */
+    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
+    ```
 
 1. 使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 创建外部数据源。
 
-     ```sql
+    ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
     * CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( 
-    LOCATION = teradata://<server address>[:<port>],
-   -- PUSHDOWN = ON | OFF,
-    CREDENTIAL =credential_name
-    );
+    WITH (LOCATION = teradata://<server address>[:<port>],
+    -- PUSHDOWN = ON | OFF,
+    CREDENTIAL =credential_name);
+    ```
 
-     ```
+1. **可选：** 在外部表上创建统计信息。
 
-1.  使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 创建表示存储在外部 Teradata 系统中的数据的外部表。
- 
-     ```sql
-     /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
-      *  DATA_SOURCE: the external data source, created above.
-      */
-     CREATE EXTERNAL TABLE customer(
-      L_ORDERKEY INT NOT NULL,
-      L_PARTKEY INT NOT NULL,
-     L_SUPPKEY INT NOT NULL,
-     L_LINENUMBER INT NOT NULL,
-     L_QUANTITY DECIMAL(15,2) NOT NULL,
-     L_EXTENDEDPRICE DECIMAL(15,2) NOT NULL,
-     L_DISCOUNT DECIMAL(15,2) NOT NULL,
-     L_TAX DECIMAL(15,2) NOT NULL,
-     L_RETURNFLAG CHAR NOT NULL,
-     L_LINESTATUS CHAR NOT NULL,
-     L_SHIPDATE DATE NOT NULL,
-     L_COMMITDATE DATE NOT NULL,
-     L_RECEIPTDATE DATE NOT NULL,
-     L_SHIPINSTRUCT CHAR(25) NOT NULL,
-     L_SHIPMODE CHAR(10) NOT NULL,
-     L_COMMENT VARCHAR(44) NOT NULL
-     )
-     WITH (
-     LOCATION='customer',
-     DATA_SOURCE= external_data_source_name
-     );
-     ```
+    为了获得最佳查询性能，我们建议在外部表列上创建统计信息，尤其是用于联接、筛选和聚合的统计信息。
 
-1. *可选：* 在外部表上创建统计信息。
+    ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+    ```
 
-    为了获得最佳查询性能，请在外部表列上创建统计信息，尤其是用于联接、筛选和聚合的表列。
-
-     ```sql
-      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
-     ```
+>[!IMPORTANT] 
+>创建外部数据源后，可以使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 命令在该数据源上创建可查询的表。
 
 ## <a name="next-steps"></a>后续步骤
 

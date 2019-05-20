@@ -12,37 +12,46 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d8b2d57affda47622722ccefde214e5c2e61d51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6af025104d3d17ba7856df7739539ea065e4c197
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653295"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104990"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>实现包含 FROM 或子查询的 UPDATE
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-本机编译的 T-SQL 模块不支持 UPDATE 语句中的 FROM 子句和子查询（它们在 SELECT 中受支持）。 包含 FROM 子句的 UPDATE 语句通常用于基于表值参数 (TVP) 更新表格中的信息，或用于更新 AFTER 触发器的表格中的列。 
+
+
+在 Transact-SQL UPDATE 语句中，在本机编译的 T-SQL 模块中，不支持以下语法元素：
+
+- FROM 子句
+- 子查询
+
+与之相反，SELECT 语句上的本机编译模块支持前面的元素。
+
+包含 FROM 子句的 UPDATE 语句通常用于基于表值参数 (TVP) 更新表格中的信息，或用于更新 AFTER 触发器的表格中的列。
 
 请参阅 [在本机编译的存储过程中实现 MERGE 功能](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)，了解基于 TVP 的更新方案。 
 
-下面的示例阐释在触发器中执行的更新 - 表格的 LastUpdated 列更新为更新后的当前日期/时间。 该解决办法使用包含标识列的表变量和 WHILE 循环来循环访问表变量中的行，并执行单个更新。
-  
-下面是原始的 T-SQL UPDATE 语句：  
-  
-  
-  
-   ```
+下面的示例说明了在触发器中执行的更新。 在表中，名为 LastUpdated 的列设置为当前日期时间 AFTER 更新。 解决方法通过使用以下各项执行单个更新：
+
+- 具有 IDENTITY 列的表变量。
+- 循环访问表变量中的行的 WHILE 循环。
+
+下面是原始的 T-SQL UPDATE 语句：
+
+   ```sql
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
    ```
-  
-  
 
-本部分中的示例 T-SQL 代码演示一个可提供良好性能的解决办法。 该解决办法在本机编译的触发器中实现。 对于该代码，需要注意的是：  
+以下块中的示例 T-SQL 代码演示一个可提供良好性能的解决办法。 该解决办法在本机编译的触发器中实现。 对于该代码，需要注意的是：  
   
 - 名为 dbo.Type1 的类型，这是一种内存优化表类型。  
 - 触发器中的 WHILE 循环。  
@@ -50,13 +59,13 @@ ms.locfileid: "47653295"
   
   
   
- ```
+ ```sql
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
-    -----------------------------  
-    -- Table and table type
+    -----------------------------
+    -- Table and table type.
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -78,9 +87,10 @@ ms.locfileid: "47653295"
     )   
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
-    ----------------------------- 
-    -- trigger that contains the workaround for UPDATE with FROM 
-    -----------------------------  
+    ----------------------------------------
+    -- Trigger that contains the workaround
+    -- for UPDATE with FROM.
+    ----------------------------------------
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
@@ -120,9 +130,9 @@ ms.locfileid: "47653295"
       END  
     END  
     go  
-    -----------------------------  
-    -- Test to verify functionality
-    -----------------------------  
+    ---------------------------------
+    -- Test to verify functionality.
+    ---------------------------------
   
     SET NOCOUNT ON;  
   
@@ -157,6 +167,4 @@ ms.locfileid: "47653295"
     AFTER--Update   2      10      2016-04-20 21:18:43.8529692  
     AFTER--Update   3     600      2016-04-20 21:18:42.8394659  
     ****/  
-  
-  
  ```

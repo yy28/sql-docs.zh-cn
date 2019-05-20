@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 101c0656aa8720743906e1f9e71075764942b7f3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0703c95824224f8200a43a38ad5990971c6b7911
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282531"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717558"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>使用 PowerShell 运行 SSIS 包
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本快速入门演示如何使用 PowerShell 脚本连接到数据库服务器并运行 SSIS 包。
 
 ## <a name="prerequisites"></a>必备条件
@@ -37,12 +41,22 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 
 要在 Azure SQL 数据库上运行包，请获取连接到 SSIS 目录数据库 (SSISDB) 所需的连接信息。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
 
-1. 登录到 [Azure 门户](https://portal.azure.com/)。
+1. 登录 [Azure 门户](https://portal.azure.com/)。
 2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库。 
 3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 5. 单击“显示数据库连接字符串”。
 6. 查看完整的 ADO.NET 连接字符串。
+
+## <a name="ssis-powershell-provider"></a>SSIS PowerShell 提供程序
+可以使用 SSIS PowerShell 提供程序连接到 SSIS 目录并在其中执行包。
+
+下面是如何使用 SSIS PowerShell 提供程序在包目录中执行 SSIS 包的基本示例。
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## <a name="powershell-script"></a>PowerShell 脚本
 为以下脚本顶部的变量提供相应的值，然后运行脚本以运行 SSIS 包。

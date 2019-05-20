@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 547fb6e8bc880fc98d4cf1f3592e550edfaab735
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3952706cebfd5f26f68e2dd103de1cb19c46bd05
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666246"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101962"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>使用生成参与者和部署参与者来自定义数据库生成和部署
 Visual Studio 提供了可用于为数据库项目修改生成和部署操作的行为的扩展点。  
@@ -47,8 +47,8 @@ Visual Studio 提供了可用于为数据库项目修改生成和部署操作的
   
 |**常见任务**|**支持内容**|  
 |--------------------|--------------------------|  
-|了解有关扩展点的更多信息：可以了解有关用于实现生成和部署参与者的基类的信息。|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|创建示例参与者：了解创建生成或部署参与者所需的步骤。 如果您遵循这些演练，则将：<br /><br />-   创建可生成列出了模型中所有元素的报告的生成参与者。<br />-   创建在执行部署计划前更改该计划的部署参与者。<br />-   创建在部署 SQL 项目时生成部署报告的部署参与者。<br /><br />可以在一个程序集或多个程序集中创建所有参与者，具体取决于您希望采用什么方式向团队分发参与者。|[演练：扩展数据库项目生成以生成模型统计信息](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[演练：扩展数据库项目部署以修改部署计划](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[演练：扩展数据库项目部署以分析部署计划](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|**了解有关扩展点的详细信息：** 可以了解有关用于实现生成和部署参与者的基类的信息。|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**创建示例参与者：** 了解创建生成或部署参与者所需的步骤。 如果您遵循这些演练，则将：<br /><br />-   创建可生成列出了模型中所有元素的报告的生成参与者。<br />-   创建在执行部署计划前更改该计划的部署参与者。<br />-   创建在部署 SQL 项目时生成部署报告的部署参与者。<br /><br />可以在一个程序集或多个程序集中创建所有参与者，具体取决于您希望采用什么方式向团队分发参与者。|[演练：扩展数据库项目生成以生成模型统计信息](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[演练：扩展数据库项目部署以修改部署计划](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[演练：扩展数据库项目部署以分析部署计划](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>另请参阅  
 [定义 SQL 单元测试的自定义条件](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  

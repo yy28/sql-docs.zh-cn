@@ -1,7 +1,7 @@
 ---
 title: 还原与恢复概述 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242038"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461817"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,22 @@ ms.locfileid: "54242038"
 -   [恢复顾问：简介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [恢复顾问：使用 SSMS 创建/还原拆分备份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
-  
+
+## <a name="adr"></a> 加速数据库恢复
+
+SQL Server 2019 预览版 CTP 2.3 为本地 SQL Server 引入了[加速数据库恢复](/azure/sql-database/sql-database-accelerated-database-recovery/)。 通过重新设计 SQL Server 数据库引擎恢复过程，加速数据库恢复极大地提高了数据库可用性，尤其是存在长时间运行的事务时。 [数据库恢复](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started)是 SQL Server 用于让每个数据库以事务一致状态或干净状态启动的进程。 启用了加速数据库恢复的数据库在故障转移或其他非干净关闭后完成恢复操作的速度显著加快。 
+
+可使用以下语法对 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 或更高版本按数据库启用加速数据库恢复：
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> 在 Azure SQL DB 中利用该功能不需要此语法，该功能默认启用。
+
+如果有易于受到大型事务影响的关键数据库，请在预览期间试用此功能。 向 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 团队](<https://aka.ms/sqlfeedback>)提供反馈。
+
 ##  <a name="RelatedContent"></a> 相关内容  
  无。  
   

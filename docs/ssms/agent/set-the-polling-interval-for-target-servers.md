@@ -12,16 +12,16 @@ helpviewer_keywords:
 - target servers [SQL Server], polling interval
 - polling interval [SQL Server]
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8ba2b92e32f5429a873016bdea3f2643dd644292
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fc65ce77ecedb8b5587ab68fb532e72224ca6067
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696899"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095496"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "51696899"
 
 本主题介绍如何设置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理刷新从主服务器到目标服务器的信息的频率。 作业是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的一系列指定操作。 多服务器作业是主服务器在一台或多台目标服务器上运行的作业。  
   
--   **开始之前：**  [安全性](#Security)  
+-   **开始之前：**[安全性](#Security)  
   
--   **若要设置目标服务器的轮询间隔，请使用** [SQL Server Management Studio](#SSMS)、 [Transact-SQL](#TSQL)  
+-   **要设置目标服务器的轮询间隔，请使用**：[SQL Server Management Studio](#SSMS)、[Transact-SQL](#TSQL)  
   
 ## <a name="BeforeYouBegin"></a>开始之前  
 每个目标服务器一次只能运行一个相同作业的实例。 每台目标服务器会定期轮询主服务器，下载分配给目标服务器的任何新作业的一个副本，然后断开连接。 目标服务器在本地运行作业，然后重新连接到主服务器以上载作业结果状态。  

@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512613"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097460"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>演练：扩展数据库项目部署以分析部署计划
 可以创建部署参与者以便在部署 SQL 项目时执行自定义操作。 可以创建 DeploymentPlanModifier 或 DeploymentPlanExecutor。 使用 DeploymentPlanModifier 可在执行计划前更改计划，使用 DeploymentPlanExecutor 可在执行计划时执行操作。 在本演练中，您创建一个名为 DeploymentUpdateReportContributor 的 DeploymentPlanExecutor，它可创建有关在部署数据库项目时执行的操作的报告。 由于此生成参与者接受用于控制是否生成报告的参数，因此您必须额外执行一个必需步骤。  

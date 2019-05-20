@@ -1,7 +1,7 @@
 ---
 title: 排序规则和 Unicode 支持 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206436"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775027"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,15 +147,20 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
     
     -   100 版本的排序规则    
     
-    -   140 版本的排序规则    
+    -   140 版本的排序规则   
+    
+    -   BIN2<sup>1</sup> 二进制排序规则
     
 -   UTF8 标志不能应用于：    
     
     -   不支持补充字符 (\_SC) 或区分变体选择符 (\_VSS) 的 90 版本的排序规则    
     
-    -   BIN 或 BIN2 二进制排序规则    
+    -   BIN 或 BIN2<sup>2</sup> 二进制排序规则    
     
-    -   SQL\* 排序规则       
+    -   SQL\* 排序规则  
+    
+<sup>1</sup> 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 开始     
+<sup>2</sup> 到 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 为止
     
 若要评估与使用 Unicode 或非 Unicode 数据类型相关的问题，请测试您的具体方案以确定您所在环境下的性能差异大小。 最好对整个组织中的系统所使用的排序规则进行标准化，并尽可能部署 Unicode 服务器和客户端。    
     
@@ -245,7 +250,17 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 所有新的排序规则都有对补充字符的内置支持，因此，新的排序规则都没有（或不需要）SC 标志。
 
 数据库引擎索引、内存优化表、列存储索引和本机编译模块中支持这些排序规则。
-    
+
+<a name="ctp23"></a>
+
+## <a name="utf-8-support"></a>UTF-8 支持
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 完全支持广泛使用的 UTF-8 字符编码作为导入或导出编码，或作为文本数据的数据库级或列级排序规则。 `CHAR` 和 `VARCHAR` 数据类型允许使用 UTF-8，并在创建或将对象的排序规则更改为带有 `UTF8` 后缀的排序规则时启用 UTF-8。 
+
+例如：将 `LATIN1_GENERAL_100_CI_AS_SC` 更改为 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 仅适用于支持增补字符的 Windows 排序规则，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中所引入的。 `NCHAR` 和 `NVARCHAR` 仅允许 UTF-16 编码，并保持不变。
+
+此功能可能会节省大量存储空间，具体取决于正在使用的字符集。 例如，使用已启用 UTF-8 的排序规则将带 ASCII（拉丁）字符串的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着将减少 50% 的存储需求。 存储需求减少是因为 `NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 需要 10 个字节存储相同的 Unicode 字符串。
+
 ##  <a name="Related_Tasks"></a> 相关任务    
     
 |任务|主题|    
@@ -260,6 +275,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ##  <a name="Related_Content"></a> 相关内容    
 [SQL Server 最佳实践 - 排序规则更改](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [使用 Unicode 字符格式导入或导出数据 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [“SQL Server 最佳实践 - 迁移到 Unicode”](https://go.microsoft.com/fwlink/?LinkId=113890)- 不再保留   
 [Unicode Consortium 网站](https://go.microsoft.com/fwlink/?LinkId=48619)    
     

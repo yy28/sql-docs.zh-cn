@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 23b3057a23737eb43206f9615ce2f83bad6f5610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745105"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105812"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>将一个或多个表中的数据与引用数据库中的数据进行比较和同步
 可以比较源数据库和目标数据库中的数据，并指定应比较哪些表。 可以查看数据并确定要同步的更改。 然后，可以更新目标以同步数据库，或将更新脚本导出到 Transact\-SQL 编辑器或文件。  
@@ -49,9 +49,9 @@ ms.locfileid: "47745105"
 ## <a name="common-tasks"></a>常见任务  
 在此部分中，您可以找到支持此方案的常见任务的说明。  
   
-设置选项以控制数据的比较方式：在比较数据时，可以安全地忽略标识列、禁用触发器和禁用外键。 还可以从更新脚本中删除主键、索引和唯一约束。  
+**设置选项以控制数据的比较方式：** 在比较数据时，可以安全地忽略标识列、禁用触发器和禁用外键。 还可以从更新脚本中删除主键、索引和唯一约束。  
   
-比较表中的数据并（可选）更新目标以匹配源：在指定要比较的源数据库和目标数据库并进行比较后，可以在“数据比较”窗口中查看结果。 不仅可以查看差异的详细信息，还可以查看可用于同步数据的更新脚本。 在确定两个数据库之间的差异后，可以为每个差异指定相应的操作。 然后，可以更新目标，或将更新脚本导出到 Transact\-SQL 编辑器或文件。 您可能需要导出该脚本，以便您自己或其他人可在您应用更改前检查该脚本。  
+**比较表中的数据并更新目标以匹配源（可选）：** 在指定要比较的源数据库和目标数据库并进行比较后，可以在“数据比较”窗口中查看结果。 不仅可以查看差异的详细信息，还可以查看可用于同步数据的更新脚本。 在确定两个数据库之间的差异后，可以为每个差异指定相应的操作。 然后，可以更新目标，或将更新脚本导出到 Transact\-SQL 编辑器或文件。 您可能需要导出该脚本，以便您自己或其他人可在您应用更改前检查该脚本。  
   
 ## <a name="UnderstandingDataCompareResults"></a>了解比较结果  
 下表介绍了“数据比较”窗口中的五个列。  

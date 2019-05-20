@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523424"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102042"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>演练：扩展数据库项目生成以生成模型统计信息
 可以创建生成参与者以便在生成数据库项目时执行自定义操作。 在本演练中，您将创建一个名为 ModelStatistics 的生成参与者，该参与者可在生成数据库项目时从 SQL 数据库模型中输出统计信息。 由于此生成参与者在您生成时会使用一些参数，因此需要执行一些额外步骤。  
@@ -493,7 +493,7 @@ ms.locfileid: "52523424"
   
     1.  导航到 %Program Files%\MSBuild\\。  
   
-    2.  创建一个用于存储目标文件的新文件夹“MyContributors”。  
+    2.  创建一个将存储目标文件的新文件夹“MyContributors”。  
   
     3.  在该目录中创建一个新文件“MyContributors.targets”，将下列文本添加到该文件中并保存该文件：  
   

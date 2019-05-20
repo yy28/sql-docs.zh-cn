@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
 ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/06/2018
 ms.locfileid: "52984098"
@@ -153,7 +153,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|返回枚举器的名称、数据类型和枚举值的列表，这些枚举器受特定数据源的 XMLA 访问接口支持。|  
 |[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|介绍服务器上的实例。|  
 |[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|提供有关在服务器上执行的活动作业的信息。 作业是命令的一部分，代表命令执行特定任务。|  
-|[DISCOVER_KEYWORDS &AMP;#40;XMLA&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|返回有关 XMLA 服务器保留的关键字的信息。|  
+|[DISCOVER_KEYWORDS &#40;XMLA&#41;](https://msdn.microsoft.com/library/ee301719)|返回有关 XMLA 服务器保留的关键字的信息。|  
 |[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|返回有关服务器支持的文本信息。|  
 |[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|返回有关备份文件的内容的信息。 |
 |[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|提供有关服务器上的当前持续锁定的信息。|  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6c913ffa52c07091e4eec45f6013a3540edfe810
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 935a2671c2496cb6cbb996d25cddc123bc4d782d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614255"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095925"
 ---
 # <a name="how-to-view-data-differences"></a>如何：查看数据差异
 在比较两个数据库中的数据后，将显示比较的每个数据库对象及其状态。 还可以查看每个对象中的记录的结果（按状态分组）。  

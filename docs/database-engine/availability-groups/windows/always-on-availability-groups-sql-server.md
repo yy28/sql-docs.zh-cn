@@ -2,7 +2,7 @@
 title: 可用性组：高可用性和灾难恢复解决方案
 description: Always On 可用性组是 SQL Server 高可用性和灾难恢复解决方案，可以提供替代数据库镜像的企业级方案，具有更强大的功能。 了解此功能的基本信息和基本功能。
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -17,12 +17,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54c5cf218021b2a585ff50afb22ac7594ab4b2d6
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b369247fccdac3407670b5edc63c0f5490fac23e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974276"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775552"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 可用性组：高可用性和灾难恢复解决方案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,9 @@ ms.locfileid: "57974276"
   
     -   同步提交模式。 此可用性模式相对于性能而言更强调高可用性和数据保护，为此付出的代价是事务延迟时间增加。 一个给定的可用性组可支持最多三个同步提交可用性副本（包括当前主副本）。  
   
-     有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
+     有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。 
+
+     [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 将同步副本的最大数目从 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] 中的 3 增加到了 5。 可以配置此组的 5 个副本在该组中进行自动故障转移。 有 1 个主要副本以及 4 个同步的次要副本。
   
 -   支持几种形式的可用性组故障转移：自动故障转移、计划的手动故障转移（通常简称为“手动故障转移”）和强制的手动故障转移（通常简称为“强制故障转移”）。 有关详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)概念。  
   

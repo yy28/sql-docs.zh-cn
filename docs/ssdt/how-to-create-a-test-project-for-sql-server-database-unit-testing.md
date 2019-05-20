@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: e28464059101f6385380ced0a307a61f1e76ba53
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336096"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098064"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>如何：为 SQL Server 数据库单元测试创建测试项目
 在开始编写评估数据库对象的单元测试之前，您必须首先创建测试项目。 该项目包含 SQL Server 单元测试，但它可以包含其他类型的测试。  
@@ -29,7 +29,7 @@ ms.locfileid: "49336096"
 |不同的 SQL Server 单元测试是否需要访问不同的数据库连接才能执行或验证测试？|如果是，则需要创建多个测试项目。 您无法为执行测试指定多个数据库连接。 不过，您可以为验证测试指定不同的数据库连接。|  
 |您是否要为不同的单元测试部署不同的数据库项目？|如果是，则需要创建多个测试项目。 一个测试项目只能部署单个数据库项目。|  
   
-有关每个问题的详细信息，请参阅[如何：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。 作为创建多个测试项目的替代方法，你还可以提供自己的 [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService implementation 实现。  
+有关上述每个问题的详细信息，请参见[如何：配置 SQL Server 单元测试执行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。 作为创建多个测试项目的替代方法，你还可以提供自己的 [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService implementation 实现。  
   
 您可以采用三种方法将测试项目添加到包含数据库项目的解决方案中：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "49336096"
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>创建包含 SQL Server 单元测试类的测试项目  
   
--   请按照[如何：创建空 SQL Server 单元测试](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)或[如何：为函数、触发器和存储过程创建 SQL Server 单元测试](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)中概述的过程进行操作。  
+-   按照[如何：创建空的 SQL Server 单元测试](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)或[如何：为函数、触发器和存储过程创建 SQL Server 单元测试](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

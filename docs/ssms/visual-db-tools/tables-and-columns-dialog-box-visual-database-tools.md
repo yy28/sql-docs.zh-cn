@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.tablesandcolumns
 ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ce7a90a76547d579324fa61246b5b126be8f4b72
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 380c605e4b1504b943c5e0312b29b287b95158ec
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528013"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098490"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>“表和列”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,5 +47,5 @@ ms.locfileid: "52528013"
 > 选作外键的列必须与其对应的主键列具有相同的数据类型。 每个键中列的数目必须相等。 例如，如果关系主键方的表的主键由两列组成，您将需要将这两列中的每一列与关系外键方的表中的列匹配。  
   
 ## <a name="see-also"></a>另请参阅  
-[如何在表之间创建关系 (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
+[如何：在表之间创建关系 (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

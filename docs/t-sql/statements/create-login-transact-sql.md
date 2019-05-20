@@ -28,16 +28,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797037"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095334"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
 为 SQL Server、SQL 数据库、SQL 数据仓库或 Analytics Platform System 数据库创建登录名。 单击以下选项卡之一，了解特定版本的语法、参数、注解、权限和示例。
+
+CREATE LOGIN 参与事务。 如果在事务内执行 CREATE LOGIN 并且该事务回滚，则登录名创建也会回滚。 如果在事务内执行，则在事务提交之前无法使用创建的登录名。
 
 有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 

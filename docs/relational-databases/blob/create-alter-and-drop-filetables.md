@@ -3,7 +3,6 @@ title: 创建、更改和删除 FileTable | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
@@ -12,15 +11,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfe7ea1c88a6d7118be63314824a479bd108f070
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542377"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094355"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52542377"
   
 -   要用于 3 个主键的名称和自动创建的唯一约束。  
   
-###  <a name="HowToCreate"></a> 如何创建 FileTable  
+###  <a name="HowToCreate"></a> 如何：创建 FileTable  
  **使用 Transact-SQL 创建 FileTable**  
  通过调用带 **AS FileTable** 选项的 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 语句创建 FileTable。 由于 FileTable 有固定架构，您不必指定列的列表。 您可以为新的 FileTable 指定以下设置：  
   
@@ -109,7 +108,7 @@ GO
   
  有关使用 ALTER TABLE 语句启用或禁用 FileTable 命名空间（包括系统定义的约束）的信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
-###  <a name="HowToChange"></a> 如何更改 FileTable 的目录  
+###  <a name="HowToChange"></a> 如何：更改 FileTable 的目录  
  **使用 Transact-SQL 更改 FileTable 的目录**  
  调用 ALTER TABLE 语句并为 **FILETABLE_DIRECTORY** SET 选项提供一个有效的新值。  
   

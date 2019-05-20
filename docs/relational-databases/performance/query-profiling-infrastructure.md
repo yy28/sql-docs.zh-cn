@@ -1,7 +1,7 @@
 ---
 title: 查询分析基础结构 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645559"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568271"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "58645559"
 - [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的实时查询统计信息可以利用标准分析基础结构。    
-> 在更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果已启用[轻型分析基础结构](#lwp)，那么它会被实时查询统计信息而不是标准分析所利用。
+> 单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“包含实时查询统计信息”按钮可以利用标准分析基础结构。    
+> 在更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果启用了[轻量级分析基础结构](#lwp)，则在通过[活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)查看或直接查询 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV 时通过实时查询统计信息而非标准分析加以利用。 
 
 以下为所有会话全局收集执行计划信息的方法利用标准分析基础结构：
 
@@ -121,11 +121,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包括一个新修订的轻型分析版本，用于收集所有执行的行计数信息。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中已启用轻型分析，跟踪标志 7412 无效。
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包括一个新修订的轻型分析版本，用于收集所有执行的行计数信息。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中已启用轻型分析，跟踪标志 7412 无效。 可以使用 LIGHTWEIGHT_QUERY_PROFILING [数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;` 在数据库级别禁用轻量级分析。
 
-引入了新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 以返回大多数查询的最后已知的实际执行计划的等效项。 新的 query_post_execution_plan_profile 扩展事件基于轻型分析收集实际执行计划的等效项，与使用标准分析的 query_post_execution_showplan 不同。 
+引入了新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 以返回大多数查询的最后已知实际执行计划的等效项，称为“最后查询计划统计信息”。 可以使用 LAST_QUERY_PLAN_STATS [数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;` 在数据库级别启用最后查询计划统计信息。
 
-可以像如下所示对使用 query_post_execution_plan_profile 扩展事件的示例会话进行配置：
+新的 query_post_execution_plan_profile 扩展事件基于轻型分析收集实际执行计划的等效项，与使用标准分析的 query_post_execution_showplan 不同。 可以像如下所示对使用 query_post_execution_plan_profile 扩展事件的示例会话进行配置：
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -142,6 +142,34 @@ WITH (MAX_MEMORY=4096 KB,
   MEMORY_PARTITION_MODE=NONE,
   TRACK_CAUSALITY=OFF,
   STARTUP_STATE=OFF);
+```
+
+#### <a name="example-1---extended-event-session-using-standard-profiling"></a>示例 1 - 使用标准分析的扩展事件会话
+
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### <a name="example-2---extended-event-session-using-lightweight-profiling"></a>示例 2 - 使用轻型分析的扩展事件会话
+
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
 ## <a name="remarks"></a>Remarks

@@ -17,14 +17,18 @@ ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 11de8cccd124fb8de58ca9ba5aa7aceebb3a12a7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aa08bc78b491fd33c3f904b03caed2f4466512e5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273934"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728134"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 连接管理器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SMTP 连接管理器使包可以连接到简单邮件传输协议 (SMTP) 服务器。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的发送邮件任务使用 SMTP 连接管理器。  
   
  如果将 Microsoft Exchange 用作 SMTP 服务器，则可能需要配置 SMTP 连接管理器才能使用 Windows 身份验证。 Exchange 服务器可以配置为不支持未经身份验证的 SMTP 连接。  
@@ -45,7 +49,7 @@ ms.locfileid: "58273934"
   
 -   指定在发送电子邮件时是否使用安全套接字层 (SSL) 对通信进行加密。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [SMTP 连接管理器编辑器](../../integration-services/connection-manager/smtp-connection-manager-editor.md)。  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - removing tables
 - dropping tables
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96acb5b28a1043bf6a3229c0f072011e5ef1d7a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86a6b43febf6e56797bd8b240389c14019464a40
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700753"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088677"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>从数据库关系图中移除表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,5 +42,5 @@ ms.locfileid: "51700753"
   
 ## <a name="see-also"></a>另请参阅  
 [使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[如何从数据库中删除表 (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
+[如何：从数据库中删除表 (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   

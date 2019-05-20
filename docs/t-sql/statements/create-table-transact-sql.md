@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e33e1602f98094c6085d179982a252aa6abc840b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f5cda166fdd343392f85f5537877cbc7da3e05ae
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478282"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503729"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -70,7 +70,7 @@ ms.locfileid: "58478282"
 ```
 --Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -80,7 +80,7 @@ CREATE TABLE
 ```
 --Disk-Based CREATE TABLE Syntax
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
     ( {   <column_definition>
         | <computed_column_definition>
@@ -265,10 +265,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized
-LE Syntax
+--Memory optimized CREATE TABLE Syntax
 CREATE TABLE
-    [database_name . [schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
     | [ <table_constraint> ] [ ,... n ]
     | [ <table_index> ]
@@ -460,10 +459,10 @@ DEFAULT
 如果在插入过程中未显式提供值，则指定为列提供的值。 DEFAULT 定义可适用于除定义为 timestamp 或带 `IDENTITY` 属性的列以外的任何列。 如果为用户定义类型列指定了默认值，则该类型应当支持从 constant_expression 到用户定义类型的隐式转换。 删除表时，将删除 DEFAULT 定义。 只有常量值（例如字符串）、标量函数（系统函数、用户定义函数或 CLR 函数）或 NULL 可用作默认值。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。
 
 constant_expression    
-是用作列的默认值的常量、NULL 或系统函数。
+常量、NULL 或用作列默认值的系统函数。
 
 memory_optimized_constant_expression     
-是一个常量、NULL 或一个支持用作列默认值的系统函数。 本机编译的存储过程中必须支持它。 有关本机编译已存储进程中内置函数的详细信息，请参阅[本机编译 T-SQL 模块的受支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。
+常量、NULL 或支持用作列默认值的系统函数。 本机编译的存储过程中必须支持它。 有关本机编译已存储进程中内置函数的详细信息，请参阅[本机编译 T-SQL 模块的受支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。
 
 IDENTITY    
 指示新列是标识列。 在表中添加新行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将为该列提供一个唯一的增量值。 标识列通常与 PRIMARY KEY 约束一起用作表的唯一行标识符。 可以将 `IDENTITY` 属性分配给 tinyint、smallint、int、bigint、decimal(p,0) 或 numeric(p,0) 列。 每个表只能创建一个标识列。 不能对标识列使用绑定默认值和 DEFAULT 约束。 必须同时指定种子和增量，或者两者都不指定。 如果二者都未指定，则取默认值 (1,1)。
@@ -472,7 +471,7 @@ seed
 是装入表的第一行所使用的值。
 
 increment    
-是向装载的前一行的标识值中添加的增量值。
+添加到上一加载行的标识值的增量值。
 
 NOT FOR REPLICATION    
 在 `CREATE TABLE` 语句中，可以为 IDENTITY 属性、FOREIGN KEY 约束和 CHECK 约束指定 `NOT FOR REPLICATION` 子句。 如果为 `IDENTITY` 属性指定了此子句，复制代理执行插入时，标识列中的值将不会增加。 如果为约束指定了此子句，则当复制代理执行插入、更新或删除操作时，将不会强制执行此约束。
@@ -609,7 +608,7 @@ NULL | NOT NULL
 确定列中是否允许使用空值。 严格来讲，NULL 不是约束，但可以像指定 NOT NULL 那样指定它。 只有同时指定了 PERSISTED 时，才能为计算列指定 NOT NULL。
 
 PRIMARY KEY    
-是通过唯一索引对给定的一列或多列强制实体完整性的约束。 每个表只能创建一个 PRIMARY KEY 约束。
+通过唯一索引对给定的一列或多列强制实体完整性的约束。 每个表只能创建一个 PRIMARY KEY 约束。
 
 UNIQUE     
 一个约束，该约束通过唯一索引为一个或多个指定列提供实体完整性。 一个表可以有多个 UNIQUE 约束。
@@ -623,12 +622,12 @@ FOREIGN KEY REFERENCES
 为列中的数据提供引用完整性的约束。 FOREIGN KEY 约束要求列中的每个值在所引用的表中对应的被引用列中都存在。 FOREIGN KEY 约束只能引用在所引用的表中是 PRIMARY KEY 或 UNIQUE 约束的列，或所引用的表中在 UNIQUE INDEX 内的被引用列。 计算列上的外键也必须标记为 PERSISTED。
 
 [ _schema\_name_**.**] *referenced_table_name*]      
-是 FOREIGN KEY 约束引用的表的名称，以及该表所属架构的名称。
+FOREIGN KEY 约束引用的表名，以及该表所属架构的名称。
 
 ( ref_column [ ,... n ] ) 是 FOREIGN KEY 约束所引用的表中的一列或多列。
 
 ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT }         
-指定如果已创建表中的行具有引用关系，并且被引用行已从父表中删除，则对这些行采取的操作。 默认值为 NO ACTION。
+指定当已创建表中的行具有引用关系并且被引用行已从父表中删除时将对这些行采取的操作。 默认值为 NO ACTION。
 
 NO ACTION      
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误，并回滚对父表中行的删除操作。
@@ -690,7 +689,7 @@ column
 指定加入到表约束中的一列或多列的排序顺序。 默认值为 ASC。
 
 partition_scheme_name     
-分区架构的名称，该分区架构定义要将已分区表的分区映射到的文件组。 数据库中必须存在该分区架构。
+分区方案的名称，该分区方案定义要将已分区表的分区映射到的文件组。 数据库中必须存在该分区架构。
 
 [ _partition\_column\_name_**.** ]      
 指定对已分区表进行分区所依据的列。 此列必须与 partition_scheme_name 在数据类型、长度和精度方面使用的分区函数中指定的列相匹配。 必须将参与分区函数的计算列显式标记为 PERSISTED。
@@ -699,7 +698,7 @@ partition_scheme_name
 > 建议您对分区表的分区列以及作为 ALTER TABLE...SWITCH 操作源或目标的非分区表指定 NOT NULL。 这样做可确保分区列上的所有 CHECK 约束都不必检查 Null 值。
 
 WITH FILLFACTOR **=** fillfactor     
-指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]存储索引数据时每个索引页的填充程度。 用户指定的 fillfactor 值的范围可以为 1 到 100。 如果未指定值，则默认值为 0。 填充因子的值 0 和 100 在所有方面都是相同的。
+指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 存储索引数据时每个索引页的填充程度。 用户指定的 fillfactor 值的范围可以为 1 到 100。 如果未指定值，则默认值为 0。 填充因子的值 0 和 100 在所有方面都是相同的。
 
 > [!IMPORTANT]
 > 将 WITH FILLFACTOR = fillfactor 记录为适用于 PRIMARY KEY 或 UNIQUE 约束的唯一索引选项是为了保持向后兼容，但在未来的版本中将不会以此方式进行记录。

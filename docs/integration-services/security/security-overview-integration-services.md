@@ -21,14 +21,18 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 202ea098033914875e99510377dcfcd2db6d7506
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67f27f17df5bf41f0b2b88265d0eb91df824a57c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273573"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718116"
 ---
 # <a name="security-overview-integration-services"></a>安全性概述 (Integration Services)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含多层，这些层提供了丰富灵活的安全环境。 这些安全层使用数字签名、包属性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色和操作系统权限。 其中的大部分安全功能属于标识和访问控制类别。  
 
 ## <a name="threat-and-vulnerability-mitigation"></a>威胁和漏洞缓解

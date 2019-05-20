@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b136f2707012860ba7be88f61cd5f6de17ec148d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6573a8667224eacef61c9c22cb4ede026e7d0a61
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635885"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106333"
 ---
 # <a name="custom-test-conditions--for-sql-server-unit-tests"></a>SQL Server 单元测试的自定义测试条件
 可以添加 SQL Server 单元测试的自定义测试条件。 但是，在可以使用测试条件前您必须首先安装它，无论您创建了扩展还是正在安装其他人创建的扩展。  

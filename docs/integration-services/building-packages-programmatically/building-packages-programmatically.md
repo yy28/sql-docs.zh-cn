@@ -11,14 +11,18 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 02f4c2f408b8ab920b970a29917595841b1183fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d76b84ec492203474f0da8839bfdfb0aa6be6a54
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273780"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729348"
 ---
 # <a name="building-packages-programmatically"></a>以编程方式生成包
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如果您需要动态创建包，或需要在开发环境之外管理和执行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，则可以采用编程方式对包进行操作。 如果采用这种方法，则有一系列选择：  
   
 -   加载并执行现有包，不进行修改。  
@@ -92,7 +96,7 @@ ms.locfileid: "58273780"
   
 ## <a name="external-resources"></a>外部资源  
   
--   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
+-    www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 -   blogs.msdn.com 上的博客文章[自定义扩展插件性能探查](https://go.microsoft.com/fwlink/?LinkId=238831)  
 

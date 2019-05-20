@@ -12,14 +12,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49c5203d03ed1a216f4aedc6913ea6e1bddefa2d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: f3b341f6e40fdc5acf618d3f81c5932b9be50149
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711508"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106232"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本文介绍如何监视本机编译的存储过程和其他本机编译的 T-SQL 模块的性能。  
   
@@ -29,7 +30,9 @@ ms.locfileid: "52711508"
  **line_number**，连同扩展事件中的 **object_id** 可用于调查该查询。 可以使用以下查询检索过程定义。 可以使用行号标识该定义内的查询：  
   
 ```sql  
-select [definition] from sys.sql_modules where object_id=object_id  
+SELECT [definition]
+    from sys.sql_modules
+    where object_id=object_id;
 ```  
   
   
@@ -38,28 +41,32 @@ select [definition] from sys.sql_modules where object_id=object_id
 
 执行统计信息反映在系统视图 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 和 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 以及[查询存储](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)中。
 
-### <a name="enabling-procedure-level-execution-statistics-collection"></a>启用过程级别执行统计信息收集
+## <a name="procedure-level-execution-statistics"></a>过程级别执行统计信息
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：可使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用过程级别统计信息收集。  以下语句针对当前实例上所有本机编译的 T-SQL 模块启用过程级别的执行统计信息收集：
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：可使用 [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用过程级别统计信息收集。  以下语句针对当前实例上所有本机编译的 T-SQL 模块启用过程级别的执行统计信息收集：
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：可使用[数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_PROCEDURE_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用过程级别的统计信息收集。 以下语句对当前数据库中的所有本地编译的 T-SQL 模块启用过程级别的执行统计信息收集：
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：可使用[数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_PROCEDURE_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用过程级别的统计信息收集。 以下语句对当前数据库中的所有本地编译的 T-SQL 模块启用过程级别的执行统计信息收集：
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+ALTER DATABASE
+    SCOPED CONFIGURATION
+    SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON;
 ```
 
-### <a name="enabling-query-level-execution-statistics-collection"></a>启用查询级别执行统计信息收集
+## <a name="query-level-execution-statistics"></a>查询级别执行统计信息
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：可使用 [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用查询级别的统计信息收集。  以下语句对当前实例的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：可使用 [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用查询级别的统计信息收集。  以下语句对当前实例的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
 **[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：可使用[数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_QUERY_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用语句级别统计信息收集。 以下语句对当前数据库中的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+ALTER DATABASE
+    SCOPED CONFIGURATION
+    SET XTP_QUERY_EXECUTION_STATISTICS = ON;
 ```
 
 ## <a name="sample-queries"></a>示例查询
@@ -68,49 +75,63 @@ ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
  
   
  下面的查询在统计信息收集后返回当前数据库中本机编译的存储过程的过程名称和执行统计信息：  
-  
-```sql  
-select object_id,  
-       object_name(object_id) as 'object name',  
-       cached_time,  
-       last_execution_time,  
-       execution_count,  
-       total_worker_time,  
-       last_worker_time,  
-       min_worker_time,  
-       max_worker_time,  
-       total_elapsed_time,  
-       last_elapsed_time,  
-       min_elapsed_time,  
-       max_elapsed_time   
-from sys.dm_exec_procedure_stats  
-where database_id=db_id() and object_id in (select object_id   
-from sys.sql_modules where uses_native_compilation=1)  
-order by total_worker_time desc  
-```  
-  
- 下面的查询按总工作线程时间的降序返回当前数据库中已为其收集了统计信息的本机编译的存储过程中所有查询的查询文本以及执行统计信息：  
-  
-```sql  
-select st.objectid,   
-       object_name(st.objectid) as 'object name',   
-       SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
-       qs.creation_time,  
-       qs.last_execution_time,  
-       qs.execution_count,  
-       qs.total_worker_time,  
-       qs.last_worker_time,  
-       qs.min_worker_time,  
-       qs.max_worker_time,  
-       qs.total_elapsed_time,  
-       qs.last_elapsed_time,  
-       qs.min_elapsed_time,  
-       qs.max_elapsed_time  
-from sys.dm_exec_query_stats qs cross apply sys.dm_exec_sql_text(sql_handle) st  
-where  st.dbid=db_id() and st.objectid in (select object_id   
-from sys.sql_modules where uses_native_compilation=1)  
-order by qs.total_worker_time desc  
-```  
+
+```sql
+SELECT
+        object_id,
+        object_name(object_id) as 'object name',
+        cached_time,
+        last_execution_time,  execution_count,
+        total_worker_time,    last_worker_time,
+        min_worker_time,      max_worker_time,
+        total_elapsed_time,   last_elapsed_time,
+        min_elapsed_time,     max_elapsed_time
+    from
+        sys.dm_exec_procedure_stats
+    where
+        database_id = db_id()
+        and
+        object_id in
+            (
+            SELECT object_id
+                from sys.sql_modules
+                where uses_native_compilation=1
+            )
+    order by
+        total_worker_time desc;
+```
+
+下面的查询按总工作线程时间的降序返回当前数据库中已为其收集了统计信息的本机编译的存储过程中所有查询的查询文本以及执行统计信息：  
+
+```sql
+SELECT
+        st.objectid,
+        object_name(st.objectid) as 'object name',
+        SUBSTRING()
+            st.text,
+            (qs.statement_start_offset/2) + 1,
+            ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1
+            ) as 'query text',
+        qs.creation_time,
+        qs.last_execution_time,   qs.execution_count,
+        qs.total_worker_time,     qs.last_worker_time,
+        qs.min_worker_time,       qs.max_worker_time,
+        qs.total_elapsed_time,    qs.last_elapsed_time,
+        qs.min_elapsed_time,      qs.max_elapsed_time
+    FROM
+                    sys.dm_exec_query_stats qs
+        cross apply sys.dm_exec_sql_text(sql_handle) st
+    WHERE
+        st.dbid = db_id()
+        and
+        st.objectid in
+            (SELECT object_id
+                from sys.sql_modules
+                where uses_native_compilation=1
+            )
+    ORDER BY
+        qs.total_worker_time desc;
+```
 
 ## <a name="query-execution-plans"></a>查询执行计划
 

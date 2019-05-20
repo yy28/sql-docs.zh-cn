@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 683d8f082a41b328f9cf86134cee0440e2ca3e4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818748"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090114"
 ---
-# <a name="how-to-clone-an-existing-database"></a>如何克隆现有数据库
-此任务将使用您在以前的过程中学习的某些步骤来创建新数据库并将现有数据移植到其中。 此外，它还使用[如何：使用架构比较来比较不同数据库定义](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)中讨论的步骤以同步源和项目数据库的架构。  
+# <a name="how-to-clone-an-existing-database"></a>如何：克隆现有数据库
+此任务将使用您在以前的过程中学习的某些步骤来创建新数据库并将现有数据移植到其中。 此外，它还使用[如何：使用架构比较来比较不同数据库定义](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)中讨论的步骤来同步源和项目数据库的架构。  
   
 通过使用这些步骤，您可以轻松地从具有相同架构和数据的生产数据库创建开发或测试数据库。 然后，您可以继续在连接模式下开发测试数据库，或者为脱机开发和测试创建数据库项目，所有这些工作都无需中断生产数据库的操作。  
   

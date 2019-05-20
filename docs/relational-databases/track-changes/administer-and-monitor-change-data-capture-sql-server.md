@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d460fcffef089e77825feb19b13602b3a118d20
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991900"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099967"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
 
@@ -176,6 +176,11 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 4. 在步骤 1 配置的数据仓库中，找到表 custom_snapshots.cdc_log_scan_data。 该表提供日志扫描会话中的数据的历史快照。 此数据可以用于分析与时间有关的滞后时间、吞吐量和其他性能度量值。  
   
+## <a name="ScriptUpgrade"></a> 脚本升级模式
+
+在向实例应用累积更新或服务包时，在重启时，实例可进入脚本升级模式。 在此模式下，SQL Server 可能会运行一个步骤以分析和升级内部 CDC 表，这可能会导致在捕获表上重新创建对象，如索引。 根据涉及的数据量，此步骤可能会需要一些时间，或者导致已启用的 CDC 数据库的高事务日志使用情况。
+
+
 ## <a name="see-also"></a>另请参阅
 
 - [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)

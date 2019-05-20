@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc908bd4186035bb1c9089139532c9fa413c8a8a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 192eb9d6fb313f689081c590f2881f028fd54ced
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327418"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774898"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,28 +70,37 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- path_to_file  
- 指定要保存证书的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 默认路径为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹的路径。  
-  
- path_to_private_key_file  
- 指定要保存私钥的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 默认路径为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹的路径。  
+ certname  
+ 要备份的证书的名称。
 
- encryption_password  
+ TO FILE = path_to_file  
+ 指定要保存证书的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 如果仅指定了文件名，则该文件将保存在实例的默认用户数据文件夹中（可能是也可能不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹）。 对于 SQL Server Express LocalDB，实例的默认用户数据文件夹是 `%USERPROFILE%` 环境变量为创建实例的帐户指定的路径。  
+
+ WITH PRIVATE KEY 指定将证书的私钥保存到文件中。 此子句为可选项。
+
+ FILE = path_to_private_key_file  
+ 指定要保存私钥的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 如果仅指定了文件名，则该文件将保存在实例的默认用户数据文件夹中（可能是也可能不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹）。 对于 SQL Server Express LocalDB，实例的默认用户数据文件夹是 `%USERPROFILE%` 环境变量为创建实例的帐户指定的路径。  
+
+ ENCRYPTION BY PASSWORD = encryption_password  
  用于在将密钥写入备份文件之前对私钥进行加密的密码。 该密码需要进行复杂性检查。  
   
- decryption_password  
+ DECRYPTION BY PASSWORD = decryption_password  
  用于在备份密钥之前对私钥进行解密的密码。 如果证书是用主密钥加密，便无需使用此参数。 
   
 ## <a name="remarks"></a>Remarks  
  如果在数据库中使用密码对私钥进行加密，则必须指定解密密码。  
   
- 将私钥备份到文件时，需要进行加密。 用于保护证书的密码和用于加密证书私钥的密码不是同一个密码。  
-  
- 若要还原备份的证书，请使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 语句。
+ 将私钥备份到文件时，需要进行加密。 用于保护文件中私钥的密码和用于加密数据库中证书私钥的密码不是同一个密码。  
+
+ 私钥以 PVK 文件格式保存。
+
+ 若要使用或不使用私钥还原备份证书，请使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 语句。
+ 
+ 若要将私钥还原到数据库中的现有证书，请使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) 语句。
  
  在你执行备份后，这些文件就会通过 ACL 备份到 SQL Server 实例的服务帐户。 如果需要将证书还原到在不同帐户下运行的服务器，必须将文件权限调整为文件可供新帐户读取。 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对证书具有 CONTROL 权限，并且了解用于对私钥进行加密的密码的相关信息。 如果你只备份证书的公共部分，此命令必须拥有对证书的某种权限，并且调用方对证书的 VIEW 权限尚未遭拒绝。  
   
 ## <a name="examples"></a>示例  
@@ -129,6 +138,10 @@ GO
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md)  
+ [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY (Transact-SQL)](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

@@ -10,20 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a832c9001f60433764a17fbedba0ebb93eb15588
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8921129e8e5b7afcf3f141749bc31ec857a166e8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681235"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098040"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>如何：创建空的 SQL Server 单元测试
 在数据库项目中包含单元测试来验证您对数据库对象所做的更改不会破坏现有功能。 以下过程解释如何针对任何数据库对象创建 SQL Server 单元测试。 SQL Server Data Tools 包括对数据库函数、触发器和存储过程的某些其他支持。 有关详细信息，请参阅[如何：为函数、触发器和存储过程创建 SQL Server 单元测试](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)。  
   
-当你使用第一个过程创建 SQL Server 单元测试时，如果不存在测试项目，则会自动为你创建测试项目。 如果测试项目已经存在，则您可以选择将新测试添加到其中的某个项目，或者您可以创建新的测试项目。 有关测试项目的详细信息，请参阅[如何：为 SQL Server 数据库单元测试创建测试项目](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md)。  
+当你使用第一个过程创建 SQL Server 单元测试时，如果不存在测试项目，则会自动为你创建测试项目。 如果测试项目已经存在，则您可以选择将新测试添加到其中的某个项目，或者您可以创建新的测试项目。 有关测试项目的更多信息，请参见[如何：为 SQL Server 数据库单元测试创建测试项目](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md)。  
   
 有两种方法可创建 SQL Server 单元测试：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "51681235"
 -   添加测试条件或其他断言语句以验证脚本结果。  
   
 > [!NOTE]  
-> 无结论的测试条件是添加到每个测试中的默认条件。 包含此测试条件是为了指示尚未执行测试验证。 在您添加其他测试条件之后，请将此测试条件从测试中删除。 有关详细信息，请参阅[如何：向数据库单元测试中添加条件](https://msdn.microsoft.com/library/aa833242(VS.100).aspx)。  
+> 无结论的测试条件是添加到每个测试中的默认条件。 包含此测试条件是为了指示尚未执行测试验证。 在您添加其他测试条件之后，请将此测试条件从测试中删除。 有关详细信息，请参阅[如何：向数据库单元测试添加测试条件](https://msdn.microsoft.com/library/aa833242(VS.100).aspx)。  
   
 ## <a name="see-also"></a>另请参阅  
 [如何：运行 SQL Server 单元测试](../ssdt/how-to-run-sql-server-unit-tests.md)  

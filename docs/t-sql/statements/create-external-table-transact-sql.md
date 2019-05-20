@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99f23b651bad438154f1c38117ea1a3f9f3d9a5c
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: af2fcafbfa9421882ad31ff4b4b8f5cdde1424dc
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658371"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502975"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "58658371"
 -- Syntax for SQL Server 
   
 -- Create a new external table  
-CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH (   
         LOCATION = 'folder_or_filepath',  
@@ -81,7 +81,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 }  
   
 -- Create a table for use with Elastic Database query  
-CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH ( <sharded_external_table_options> )  
 [;]  
@@ -99,7 +99,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -- Syntax for Azure SQL Database
   
 -- Create a table for use with Elastic Database query  
-CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH ( <sharded_external_table_options> )  
 [;]  
@@ -118,7 +118,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 -- Create a new external table in SQL Server PDW  
-CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH (   
         LOCATION = 'hdfs_folder_or_filepath',  
@@ -139,22 +139,21 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>参数  
-database_name . [ schema_name ] . | schema_name. ] *table_name*  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }  
 要创建的表的一到三部分名称。 对于外部表，SQL 仅存储表元数据以及有关 Hadoop 或 Azure blob 存储中引用的文件或文件夹的基本统计信息。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不移动或存储任何实际数据。  
   
-\<column_definition> [ ,...n ] CREATE EXTERNAL TABLE 允许使用一个或多个列定义。 CREATE EXTERNAL TABLE 和 CREATE TABLE 可以使用相同语法定义列。 但是，不能对外部表使用 DEFAULT CONSTRAINT。 有关列定义及其数据类型的完整详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [Azure SQL 数据库上的 CREATE TABLE](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)。  
+\<column_definition> [ ,...n ]  
+CREATE EXTERNAL TABLE 允许使用一个或多个列定义。 CREATE EXTERNAL TABLE 和 CREATE TABLE 可以使用相同语法定义列。 但是，不能对外部表使用 DEFAULT CONSTRAINT。 有关列定义及其数据类型的完整详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [Azure SQL 数据库上的 CREATE TABLE](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)。  
   
 列定义（包括数据类型和列数）必须与外部文件中的数据匹配。 如果存在不匹配，则在查询实际数据时会拒绝文件行。  
   
 LOCATION =  'folder_or_filepath'  
 为 Hadoop 或 Azure blob 存储中的实际数据指定文件夹或文件路径和文件名。 位置从根文件夹开始。 根文件夹是外部数据源中指定的数据位置。  
 
-
 在 SQL Server 中，如果路径和文件夹不存在，则 CREATE EXTERNAL TABLE 语句会进行创建。 然后，可使用 INSERT INTO 将数据从本地 SQL Server 表导出到外部数据源。 有关详细信息，请参阅 [PolyBase 查询](/sql/relational-databases/polybase/polybase-queries)。 
 
 在 SQL 数据仓库和 Analytics Platform System 中，如果路径和文件夹不存在，则 [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 语句会进行创建。 在这两个产品中，CREATE EXTERNAL TABLE 不会创建路径和文件夹。
 
-  
 如果将 LOCATION 指定为一个文件夹，则从外部表中进行选择的 PolyBase 查询会从该文件夹及其所有子文件夹中检索文件。 正如 Hadoop 一样，PolyBase 不返回隐藏文件夹。 它也不返回文件名以下划线 (_) 或句点 (.) 开头的文件。  
   
 在此示例中，如果 LOCATION='/webdata/'，则 PolyBase 查询会从 mydata.txt 和 mydata2.txt 返回行。  它不返回 mydata3.txt，因为它是隐藏文件夹的子文件夹。 它不返回 _hidden.txt，因为它是隐藏文件。  
@@ -461,10 +460,205 @@ WITH
   DISTRIBUTION=ROUND_ROBIN  
 );   
 ```  
+### <a name="h-create-an-external-table-for-sql-server"></a>H. 为 SQL Server 创建外部表
+
+```sql
+     -- Create a Master Key
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+    GO
+ 
+     /*  specify credentials to external data source
+     *  IDENTITY: user name for external source.  
+     *  SECRET: password for external source.
+     */
+     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
+     WITH IDENTITY = 'username', Secret = 'password';
+    GO
+
+    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE SQLServerInstance
+    WITH ( 
+    LOCATION = 'sqlserver://SqlServer',
+    -- PUSHDOWN = ON | OFF,
+      CREDENTIAL = SQLServerCredentials
+    );
+    GO
+
+    CREATE SCHEMA sqlserver;
+    GO
+
+     /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
+     *  DATA_SOURCE: the external data source, created above.
+     */
+     CREATE EXTERNAL TABLE sqlserver.customer(
+     C_CUSTKEY INT NOT NULL,
+     C_NAME VARCHAR(25) NOT NULL,
+     C_ADDRESS VARCHAR(40) NOT NULL,
+     C_NATIONKEY INT NOT NULL,
+     C_PHONE CHAR(15) NOT NULL,
+     C_ACCTBAL DECIMAL(15,2) NOT NULL,
+     C_MKTSEGMENT CHAR(10) NOT NULL,
+     C_COMMENT VARCHAR(117) NOT NULL
+      )
+      WITH (
+      LOCATION='tpch_10.dbo.customer',
+      DATA_SOURCE=SqlServerInstance
+     );
+ ```
+ 
+### <a name="i-create-an-external-table-for-oracle"></a>I. 为 Oracle 创建外部表  
+
+
+ ```sql
+  -- Create a Master Key
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+    
+   /*  
+   * Specify credentials to external data source
+   * IDENTITY: user name for external source.  
+   * SECRET: password for external source.
+   */
+   CREATE DATABASE SCOPED CREDENTIAL credential_name
+   WITH IDENTITY = 'username', Secret = 'password';
+
+   /* 
+   * LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+   * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+   * CONNECTION_OPTIONS: Specify driver location
+   * CREDENTIAL: the database scoped credential, created above.
+   */  
+   CREATE EXTERNAL DATA SOURCE external_data_source_name
+   WITH ( 
+     LOCATION = 'oracle://<server address>[:<port>]',
+     -- PUSHDOWN = ON | OFF,
+     CREDENTIAL = credential_name)
+
+   /*
+   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+   * DATA_SOURCE: the external data source, created above.
+   */
+   CREATE EXTERNAL TABLE customers(
+   [O_ORDERKEY] DECIMAL(38) NOT NULL,
+   [O_CUSTKEY] DECIMAL(38) NOT NULL,
+   [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
+   [O_TOTALPRICE] DECIMAL(15,2) NOT NULL,
+   [O_ORDERDATE] DATETIME2(0) NOT NULL,
+   [O_ORDERPRIORITY] CHAR(15) COLLATE Latin1_General_BIN NOT NULL,
+   [O_CLERK] CHAR(15) COLLATE Latin1_General_BIN NOT NULL,
+   [O_SHIPPRIORITY] DECIMAL(38) NOT NULL,
+   [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
+   )
+   WITH (
+    LOCATION='customer',
+    DATA_SOURCE=  external_data_source_name
+   );
+   ```
+
+### <a name="j-create-an-external-table-for-a-teradata"></a>J. 为 Teradata 创建外部表
+
+ ```sql
+  -- Create a Master Key
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+
+   /*  
+   * Specify credentials to external data source
+   * IDENTITY: user name for external source.  
+   * SECRET: password for external source.
+   */
+   CREATE DATABASE SCOPED CREDENTIAL credential_name
+   WITH IDENTITY = 'username', Secret = 'password';
+
+    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    * CONNECTION_OPTIONS: Specify driver location
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH ( 
+    LOCATION = teradata://<server address>[:<port>],
+   -- PUSHDOWN = ON | OFF,
+    CREDENTIAL =credential_name
+    );
+
+
+     /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
+      *  DATA_SOURCE: the external data source, created above.
+      */
+     CREATE EXTERNAL TABLE customer(
+      L_ORDERKEY INT NOT NULL,
+      L_PARTKEY INT NOT NULL,
+     L_SUPPKEY INT NOT NULL,
+     L_LINENUMBER INT NOT NULL,
+     L_QUANTITY DECIMAL(15,2) NOT NULL,
+     L_EXTENDEDPRICE DECIMAL(15,2) NOT NULL,
+     L_DISCOUNT DECIMAL(15,2) NOT NULL,
+     L_TAX DECIMAL(15,2) NOT NULL,
+     L_RETURNFLAG CHAR NOT NULL,
+     L_LINESTATUS CHAR NOT NULL,
+     L_SHIPDATE DATE NOT NULL,
+     L_COMMITDATE DATE NOT NULL,
+     L_RECEIPTDATE DATE NOT NULL,
+     L_SHIPINSTRUCT CHAR(25) NOT NULL,
+     L_SHIPMODE CHAR(10) NOT NULL,
+     L_COMMENT VARCHAR(44) NOT NULL
+     )
+     WITH (
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
+     );
+```
+  
+### <a name="k-create-an-external-table-for-mongodb"></a>K. 为 MongoDB 创建外部表 
+
+
+ ```sql
+  -- Create a Master Key
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+
+   /*  
+   * Specify credentials to external data source
+   * IDENTITY: user name for external source.  
+   * SECRET: password for external source.
+   */
+   CREATE DATABASE SCOPED CREDENTIAL credential_name
+   WITH IDENTITY = 'username', Secret = 'password';
+
+     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *CONNECTION_OPTIONS: Specify driver location
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH (
+    LOCATION = mongodb://<server>[:<port>],
+    -- PUSHDOWN = ON | OFF,
+      CREDENTIAL = credential_name
+    );
+
+     /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
+     *  DATA_SOURCE: the external data source, created above.
+     */
+     CREATE EXTERNAL TABLE customers(
+     [O_ORDERKEY] DECIMAL(38) NOT NULL,
+     [O_CUSTKEY] DECIMAL(38) NOT NULL,
+     [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
+     [O_TOTALPRICE] DECIMAL(15,2) NOT NULL,
+     [O_ORDERDATE] DATETIME2(0) NOT NULL,
+     [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
+     )
+     WITH (
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
+     );
+```
+
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>H. 将数据从 ADLS 导入 Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="l-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>L. 将数据从 ADLS 导入 Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
  
   
 ```sql
@@ -515,7 +709,7 @@ AS SELECT * FROM
      
 ```  
   
-### <a name="i-join-external-tables"></a>I. 联接外部表  
+### <a name="m-join-external-tables"></a>M. 联接外部表  
   
 ```sql
 SELECT url.description  
@@ -525,7 +719,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="j-join-hdfs-data-with-pdw-data"></a>J. 将 HDFS 数据与 PDW 数据联接  
+### <a name="n-join-hdfs-data-with-pdw-data"></a>N. 将 HDFS 数据与 PDW 数据联接  
   
 ```sql
 SELECT cs.user_ip FROM ClickStream cs  
@@ -535,7 +729,7 @@ WHERE cs.url = 'www.microsoft.com'
   
 ```  
   
-### <a name="k-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>K. 将行数据从 HDFS 导入分布式 PDW 表  
+### <a name="o-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>O. 将行数据从 HDFS 导入分布式 PDW 表  
   
 ```sql
 CREATE TABLE ClickStream_PDW  
@@ -544,7 +738,7 @@ AS SELECT url, event_date, user_ip FROM ClickStream
 ;  
 ```  
   
-### <a name="l-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>L. 将行数据从 HDFS 导入复制 PDW 表  
+### <a name="p-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>P. 将行数据从 HDFS 导入复制 PDW 表  
   
 ```sql
 CREATE TABLE ClickStream_PDW  

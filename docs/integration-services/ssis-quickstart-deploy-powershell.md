@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39d1986d599233b9578fca32ff993ea6cfed4492
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 146b484e96dc35a48ffa5bfe22b0564262bce9e9
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282701"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376879"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>使用 PowerShell 部署 SSIS 项目
 本快速入门演示了如何使用 PowerShell 脚本连接到数据库服务器，并将 SSIS 项目部署到 SSIS 目录。
@@ -37,12 +37,42 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 
 要将项目部署到 Azure SQL 数据库，则获取所需的信息以连接到 SSIS 目录数据库 (SSISDB)。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
 
-1. 登录到 [Azure 门户](https://portal.azure.com/)。
+1. 登录 [Azure 门户](https://portal.azure.com/)。
 2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库。 
 3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 5. 单击“显示数据库连接字符串”。
 6. 查看完整的 ADO.NET 连接字符串。
+
+## <a name="ssis-powershell-provider"></a>SSIS PowerShell 提供程序
+为以下脚本顶部的变量提供适当的值，然后运行脚本以部署 SSIS 项目。
+
+> [!NOTE]
+> 以下示例使用 Windows 身份验证部署到本地 SQL Server。 使用 `New-PSDive` cmdlet 通过 SQL Server 身份验证建立连接。 如果连接到 Azure SQL 数据库服务器，则无法使用 Windows 身份验证。
+
+```powershell
+# Variables
+$TargetInstanceName = "localhost\default"
+$TargetFolderName = "Project1Folder"
+$ProjectFilePath = "C:\Projects\Integration Services Project1\Integration Services Project1\bin\Development\Integration Services Project1.ispac"
+$ProjectName = "Integration Services Project1"
+
+# Get the Integration Services catalog
+$catalog = Get-Item SQLSERVER:\SSIS\$TargetInstanceName\Catalogs\SSISDB\
+
+# Create the target folder
+New-Object "Microsoft.SqlServer.Management.IntegrationServices.CatalogFolder" ($catalog, 
+$TargetFolderName,"Folder description") -OutVariable folder
+$folder.Create()
+
+# Read the project file and deploy it
+[byte[]] $projectFile = [System.IO.File]::ReadAllBytes($ProjectFilePath)
+$folder.DeployProject($ProjectName, $projectFile)
+
+# Verify packages were deployed.
+dir "$($catalog.PSPath)\Folders\$TargetFolderName\Projects\$ProjectName\Packages" | 
+SELECT Name, DisplayName, PackageId
+```
 
 ## <a name="powershell-script"></a>PowerShell 脚本
 为以下脚本顶部的变量提供适当的值，然后运行脚本以部署 SSIS 项目。

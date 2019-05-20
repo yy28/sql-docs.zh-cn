@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 58d283ffaf2c8efd2b360a977af17d985117a2ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eb77a0990d8f0e19458dd66ea7f73b933de961c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682217"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101849"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools 所需权限
 在 Visual Studio 中对某一数据库执行操作之前，必须使用对该数据库具有某些权限的帐户登录。 您所需的特定权限将基于您要执行的操作而异。 下面几节介绍了您可能要执行的各操作以及执行该操作所需的特定权限。  
@@ -45,7 +45,7 @@ ms.locfileid: "47682217"
 |导入服务器对象和设置|您必须能够连接到指定服务器上的 master 数据库。<br /><br />如果服务器正在运行 SQL Server 2005，则必须对该服务器具有 VIEW ANY DEFINITION 权限。<br /><br />如果源数据库基于 SQL Server 2008 或更高版本，则必须对该服务器具有 VIEW ANY DEFINITION 权限。 登录名必须具有 **VIEW SERVER STATE** 权限（对于数据库密钥）。|  
 |创建或更新数据库项目|您不需要任何数据库权限即可创建或修改数据库项目。|  
 |部署新数据库或在已设置“始终重新创建数据库”选项的情况下进行部署|必须具有 **CREATE DATABASE** 权限，或者必须是目标服务器上 **dbcreator** 角色的成员。<br /><br />在创建数据库时，Visual Studio 将连接到模型数据库并且复制其内容。 用于连接目标数据库的初始登录名（例如 *yourLogin*）必须具有 **db_creator** 和 **CONNECT SQL** 权限。 此登录名必须在模型数据库上拥有用户映射。 如果具有 sysadmin 权限，则可以通过发出以下 Transact\-SQL 语句创建映射：<br /><br />`USE [model] CREATE USER yourUser FROM LOGIN yourLogin`<br /><br />用户（在此示例中为 yourUser）必须对模型数据库具有 **CONNECT** 和 **VIEW DEFINITION** 权限。 如果具有 sysadmin 权限，则可以通过发出以下 Transact\-SQL 语句授予这些权限：<br /><br />`USE [model] GRANT CONNECT to yourUser GRANT VIEW DEFINITION TO yourUser`<br /><br />如果部署包含未命名约束的数据库并且启用了 **CheckNewContraints** 选项（默认启用），则必须具有 **db_owner** 或 **sysadmin** 权限，否则部署将失败。 这一原则仅适用于未命名的约束。 有关 **CheckNewConstraints** 选项的详细信息，请参阅[数据库项目设置](../ssdt/database-project-settings.md)。|  
-|部署对现有数据库的更新|您必须是有效数据库用户。 还必须是 **db_ddladmin** 角色的成员、拥有架构或者拥有要在目标数据库上创建或修改的对象。 您需要其他权限以便在预先部署或后期部署脚本中使用更高级概念，例如登录名或链接服务器。<br /><br />**注意：** 如果部署到 master 数据库，则还必须对部署到的服务器具有 **VIEW ANY DEFINITION** 权限。|  
+|部署对现有数据库的更新|您必须是有效数据库用户。 还必须是 **db_ddladmin** 角色的成员、拥有架构或者拥有要在目标数据库上创建或修改的对象。 您需要其他权限以便在预先部署或后期部署脚本中使用更高级概念，例如登录名或链接服务器。<br /><br />**注意**：如果部署到 master 数据库，则还必须在部署到的服务器上具有“查看任何定义”权限。|  
 |在数据库项目中将程序集与 EXTERNAL_ACCESS 选项一起使用|您必须为数据库项目设置 TRUSTWORTHY 属性。 你必须为你的 SQL Server 登录名具有 EXTERNAL ACCESS ASSEMBLY 权限。|  
 |将程序集部署到新的或现有的数据库|您必须是目标部署服务器上 sysadmin 角色的成员。|  
   

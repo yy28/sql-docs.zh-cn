@@ -15,16 +15,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: edaebbf5d6b8f0f5e91e1fc4cd2f3a719363053c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b889b3c391bde7e064eab49c3791fa05cdf1e674
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695706"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104400"
 ---
 # <a name="assign-alerts-to-an-operator"></a>向操作员分配警报
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51695706"
   
     [限制和局限](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要向操作员分配警报，可使用：**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "51695706"
   
 5.  在“_operator\_name_ 属性”对话框的“选择页”下，选择“通知”。  
   
-6.  在 **“按以下方式查看发送给此用户的通知”** 下，选择 **“警报”** 查看发送给此操作员的警报列表或选择 **“作业”** 查看向此操作员发送通知的作业列表。 选中下列一个或多个复选框来根据需要定义每个通知的通知方法：“电子邮件”、“寻呼程序”或“Net send”。  
+6.  在 **“按以下方式查看发送给此用户的通知”** 下，选择 **“警报”** 查看发送给此操作员的警报列表或选择 **“作业”** 查看向此操作员发送通知的作业列表。 选中下列一个或多个复选框来根据需要定义每个通知的通知方法：“电子邮件”、“寻呼机”或“Net Send”。  
   
 7.  完成后，单击 **“确定”**。  
   

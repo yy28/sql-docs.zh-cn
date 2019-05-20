@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63202483"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -60,6 +60,8 @@ ms.locfileid: "59583380"
 ## <a name="sql-server"></a>SQL Server
 
 数据库镜像、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 和兼容性级别属于 `SET` 选项，考虑到这些选项的长度，将在单独的文章中介绍它们。 有关详细信息，请参阅 [ALTER DATABASE 数据库镜像](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)、[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 和 [ALTER DATABASE 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。
+
+数据库范围配置用于在单个数据库级别设置多个数据库配置。 有关详细信息，请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
 
 > [!NOTE]
 > 可以使用 [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) 来为当前会话配置很多数据库 SET 选项，当它们连接时通常通过应用程序来配置。 会话级 SET 选项覆盖 **ALTER DATABASE SET** 值。 下面所述的数据库选项是可以为未明确提供其他 SET 选项值的会话设置的值。

@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: 0459812874f77493520c2c1f3ac794836147a2f0
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736770"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775020"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,8 @@ SELECT TABLE_NAME, COLUMN_NAME,
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS  
 WHERE TABLE_NAME = 'Person';  
 ```  
+
+如果将触发器应用于列，`COLUMNS_UPDATED` 将返回为 `true` 或 `1`，即使列值保持不变也是如此。 这是有意为之，并且触发器应实现确定是否允许插入/更新/删除操作的业务逻辑。 
   
 ## <a name="column-sets"></a>列集
 对表定义了列集后，`COLUMNS_UPDATED` 函数的行为将如下所述：

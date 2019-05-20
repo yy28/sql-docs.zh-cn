@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652866"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096865"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>如何使用表设计器管理表和关系
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>如何：使用表设计器管理表和关系
 在为 Transact\-SQL 数据库创建和编辑表结构（包括特定于表的编程对象）时，表设计器提供与 SQL Server 编辑器相同的视觉体验。  当为连接的数据库或项目创建新表时，或者当你在 SQL Server 对象资源管理器或解决方案资源管理器中双击以便编辑某一表时，表设计器将启动。  
   
 该设计器由列网格、脚本窗格和上下文窗格构成。 列网格将列出表中的所有列。 您可以添加、编辑和删除此网格中的列。  上下文窗格将为你提供表定义（键、索引、约束、触发器等）的逻辑视图，使你可以选择一个对象以便突出显示其与单独列的关系。 你还可以将新对象添加到此窗格中的表，并在属性网格中编辑选定对象的属性。 脚本窗格显示表结构的定义，并且突出显示上下文窗格或列网格中所选对象的脚本。 您可以在视图中与列网格和上下文窗格并排的情况下编辑脚本。 在这三个窗格中任何一个窗格的任何更改都将立即传播到其他两个窗格。  

@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ab178c2f5a3cd8aaeb5a341275956e6bf87dd93
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b7e2f45d7204790d9d6db2ce58d94ddc7a4bfacc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281701"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717353"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 从 Visual Studio Code 运行 SSIS 包
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本快速入门演示如何使用 Visual Studio Code 连接到 SSIS 目录数据库，然后使用 Transact-SQL 语句运行存储在 SSIS 目录中的 SSIS 包。
 
 Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS 和 Linux，其支持的扩展包括用于连接到 Microsoft SQL Server、Azure SQL 数据库或 Azure SQL 数据仓库的 `mssql` 扩展。 有关 VS Code 的详细信息，请参阅 [Visual Studio Code](https://code.visualstudio.com/)。

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2018
+ms.date: 04/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,506 +20,494 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 0ae91678807351dfa53b92a63c9dcd1514974de3
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516523"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536250"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  为 PolyBase 或弹性数据库查询创建外部数据源。 根据具体方案，语法存在显著差异。 为 PolyBase 创建的外部数据源不能用于弹性数据库查询。  同样，为弹性数据库查询创建的外部数据源不能用于 PolyBase 等。 
-  
+为 PolyBase 或弹性数据库查询创建外部数据源。 外部数据源用于建立连接以及支持四个主要用例：
+
+- 使用 [PolyBase][intro_pb] 进行数据虚拟化和数据加载
+- 使用 `BULK INSERT` 或 `OPENROWSET` 通过 SQL Server 或 SQL 数据库进行批量加载操作
+- 使用[弹性查询][remote_eq]通过 SQL 数据库查询远程 SQL 数据库或 SQL 数据仓库实例
+- 使用[弹性查询][sharded_eq]查询分片的 Azure SQL 数据库
+
 > [!NOTE]  
->  仅在 SQL Server 2016（或更高版本）、Azure SQL 数据仓库和并行数据仓库上支持 PolyBase。 仅在 Azure SQL 数据库 v12 或更高版本上支持弹性数据库查询。  
-  
- 对于 PolyBase 方案，外部数据源是 Hadoop 文件系统 (HDFS)、Azure 存储 blob 容器或 Azure Data Lake Store。 有关详细信息，请参阅 [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)。  
-  
- 对于弹性数据库查询方案，外部源是分片映射管理器（在 Azure SQL 数据库上）或远程数据库（在 Azure SQL 数据库上）。  在创建外部数据源之后可使用 [sp_execute_remote（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md)。 有关详细信息，请参阅[弹性数据库查询](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)。  
+> PolyBase 在 SQL Server（2016 或更高版本）、Azure SQL 数据仓库和并行数据仓库上受支持。 [弹性查询][intro_eq]仅在 Azure SQL 数据库 v12 或更高版本上受支持。
 
-  Azure Blob 存储外部数据源支持 `BULK INSERT` 和 `OPENROWSET` 语法，与用于 PolyBase 的 Azure Blob 存储不同。
-    
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
 ## <a name="syntax"></a>语法  
-  
-```  
--- PolyBase only:  Hadoop cluster as data source   
--- (on SQL Server 2016)  
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = HADOOP,
-        LOCATION = 'hdfs://NameNode_URI[:port]'  
-        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]  
-        [, CREDENTIAL = credential_name ]
-    )
-[;]  
-  
--- PolyBase only: Azure Storage Blob as data source   
--- (on SQL Server 2016)  
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = BLOB_STORAGE,  
-        LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-        [, CREDENTIAL = credential_name ]
-    )  
-[;]
 
--- PolyBase only: Azure Data Lake Store
--- (on Azure SQL Data Warehouse)
-CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net',
-    CREDENTIAL = AzureStorageCredential
-);
-
--- PolyBase only: Azure Data Lake Store Gen 2
--- (on Azure SQL Data Warehouse)
-CREATE EXTERNAL DATA SOURCE ABFS 
+```sql
+CREATE EXTERNAL DATA SOURCE <data_source_name>  
 WITH
-(
-              TYPE=HADOOP,
-              LOCATION='abfs://<container>@<AzureDataLake account_name>.dfs.core.windows.net',
-              CREDENTIAL=ABFS_Credemt
-);
-GO
-
-
--- PolyBase only: Hadoop cluster as data source
--- (on Parallel Data Warehouse)
-CREATE EXTERNAL DATA SOURCE data_source_name
-    WITH ( 
-        TYPE = HADOOP, 
-        LOCATION = 'hdfs://NameNode_URI[:port]'
-        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]
-        [, CREDENTIAL = credential_name]
-    )
+(    LOCATION                  = '<prefix>://<path>[:<port>]'
+[,   CONNECTION_OPTIONS        = '<name_value_pairs>']
+[,   CREDENTIAL                = <credential_name> ]
+[,   PUSHDOWN                  = ON | OFF]
+[,   TYPE                      = HADOOP | BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER ]
+[,   RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]']
+[,   DATABASE_NAME             = '<database_name>' ]
+[,   SHARD_MAP_NAME            = '<shard_map_manager>' ]
+)
 [;]
-
--- PolyBase only: Azure Storage Blob as data source   
--- (on Parallel Data Warehouse)  
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = HADOOP,  
-        LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-        [, CREDENTIAL = credential_name ]
-    )  
-[;]
-  
--- Elastic Database query only: a shard map manager as data source   
--- (only on Azure SQL Database)  
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = SHARD_MAP_MANAGER,  
-        LOCATION = '<server_name>.database.windows.net',  
-        DATABASE_NAME = '\<ElasticDatabase_ShardMapManagerDb'>,  
-        CREDENTIAL = <ElasticDBQueryCred>,  
-        SHARD_MAP_NAME = '<ShardMapName>'  
-    )  
-[;]  
-  
--- Elastic Database query only: a remote database on Azure SQL Database as data source   
--- (only on Azure SQL Database)  
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = RDBMS,  
-        LOCATION = '<server_name>.database.windows.net',  
-        DATABASE_NAME = '<Remote_Database_Name>',  
-        CREDENTIAL = <SQL_Credential>  
-    )  
-[;]  
-
--- Bulk operations only: Azure Storage Blob as data source   
--- (on SQL Server 2017 or later, and Azure SQL Database).
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = BLOB_STORAGE,  
-        LOCATION = 'https://storage_account_name.blob.core.windows.net/container_name'
-        [, CREDENTIAL = credential_name ]
-    )  
-```  
-  
-## <a name="arguments"></a>参数  
- *data_source_name*   指定数据源的用户定义名称。 该名称必须在 SQL Server 上的数据库、Azure SQL 数据库和 Azure SQL 数据仓库中是唯一的。 该名称必须在并行数据仓库中的服务器上是唯一的。
-  
- TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
- 指定数据源类型。 当外部数据源是 Hadoop 或适用于 Hadoop 的 Azure 存储 blob 时，可使用 HADOOP。 为弹性数据库查询创建外部数据源以便在 Azure SQL 数据库上进行分片时，可使用 SHARD_MAP_MANAGER。 对于 Azure SQL 数据库上的弹性数据库查询，可将 RDBMS 与跨数据库查询的外部数据源一起使用。  在使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 对 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 执行批量操作时，可使用 BLOB_STORAGE。
-  
-LOCATION = \<location_path> HADOOP    
-对于 HADOOP，指定 Hadoop 群集的统一资源标识符 (URI)。  
-`LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
-NameNode_URI：Hadoop 群集 Namenode 的计算机名称或 IP 地址。  
-port：Namenode IPC 端口。 这通过 Hadoop 中的 fs.default.name 配置参数进行指示。 如果未指定该值，则默认情况下使用 8020。  
-例如：`LOCATION = 'hdfs://10.10.10.10:8020'`
-
-对于具有 Hadoop 的 Azure blob 存储，指定用于连接到 Azure blob 存储的 URI。  
-`LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
-wasb[s]：指定 Azure blob 存储的协议。 [s] 是可选的，指定安全 SSL 连接；从 SQL Server 发送的数据会通过 SSL 协议安全地进行加密。 强烈建议使用“wasbs”而不是“wasb”。 请注意，位置可以使用 asv[s] 而不是 wasb[s]。 asv[s] 已弃用，在未来的版本中将删除。  
-container：指定 Azure blob 存储容器的名称。 若要指定域的存储帐户的根容器，请使用域名而不是容器名称。 根容器是只读的，因此数据无法重新写入容器中。  
-account_name：Azure 存储帐户的完全限定的域名 (FQDN)。  
-例如：`LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
-
-对于 Azure Data Lake Store，位置指定用于连接到 Azure Data Lake Store 的 URI。
-
-
-
-**SHARD_MAP_MANAGER**   
- 对于 SHARD_MAP_MANAGER，指定托管 Azure SQL 数据库中的分片映射管理器或 Azure 虚拟机上的 SQL Server 数据库的 SQL 数据库服务器名称。
- 
- ```
- CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
-
-CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
-WITH IDENTITY = '<username>',
-SECRET = '<password>';
-
-CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
-  (TYPE = SHARD_MAP_MANAGER,
-  LOCATION = '<server_name>.database.windows.net',
-  DATABASE_NAME = 'ElasticScaleStarterKit_ShardMapManagerDb',
-  CREDENTIAL = ElasticDBQueryCred,
-  SHARD_MAP_NAME = 'CustomerIDShardMap'
-) ;
 ```
 
-有关分步教程，请参阅[跨扩展云数据库进行报告（预览）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)。
-  
-**RDBMS**   
-对于 RDBMS，指定 Azure SQL 数据库中远程数据库的 SQL 数据库服务器名称。  
+## <a name="arguments"></a>参数
 
-```  
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
-  
-CREATE DATABASE SCOPED CREDENTIAL SQL_Credential    
-WITH IDENTITY = '<username>',  
-SECRET = '<password>';  
-  
-CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH   
-    (TYPE = RDBMS,   
-    LOCATION = '<server_name>.database.windows.net',   
-    DATABASE_NAME = 'Customers',   
-    CREDENTIAL = SQL_Credential   
-) ;   
-```  
-  
-有关 RDBMS 的分步教程，请参阅[跨数据库查询（纵向分区）入门（预览）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/)。  
+### <a name="datasourcename"></a>data_source_name
 
-**BLOB_STORAGE**   
-此类型仅用于批量操作，对于 Azure Blob 存储和容器，`LOCATION` 必须是有效的 URL。 请勿将 /、文件名或共享访问签名参数放在 `LOCATION` URL 的末尾。 如果 Blob 对象不是公共的，则需要 `CREDENTIAL`。 例如： 
-```sql
-CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
-WITH (  TYPE = BLOB_STORAGE, 
-        LOCATION = 'https://****************.blob.core.windows.net/invoices', 
-        CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
-);
-```
-所用的凭据必须使用 `SHARED ACCESS SIGNATURE` 作为标识进行创建、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 例如：
-```sql
-CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
- WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
- SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
-```
+指定数据源的用户定义名称。 该名称必须在 SQL Server 上的数据库、SQL 数据库 (SQL DB) 和 SQL 数据仓库 (SQL DW) 中是唯一的。 该名称必须在并行数据仓库 (PDW) 中的服务器上是唯一的。
 
-有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 有关访问 blob 存储的示例，请参阅 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 的示例 F。 
->[!NOTE] 
->若要从 Azure Blob 存储加载到 SQL DW 或并行数据仓库，Secret 必须是 Azure 存储密钥。
+### <a name="location--prefixpathport"></a>LOCATION = *`'<prefix>://<path[:port]>'`*
 
-  
- RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
- 指定 Hadoop 资源管理器位置。 指定时，查询优化器可以通过将 Hadoop 的计算功能与 MapReduce 一起使用，来进行基于成本的决策以便 PolyBase 查询预处理数据。 这称为谓词下推，可以显著减少 Hadoop 和 SQL之间传输的数据量，并因此提高查询性能。  
-  
- 未指定此选项时，会为 PolyBase 查询禁用将计算推送到 Hadoop。  
- 
-如果未指定端口，则默认值使用“hadoop 连接”配置的当前设置进行确定。
+提供连接协议和外部数据源的路径。
 
-|Hadoop 连接|默认资源管理器端口|
-|-------------------|-----------------------------|
-|1|50300|
-|2|50300|
-|3|8021|
-|4|8032|
-|5|8050|
-|6|8032|
-|7|8050|
+| 外部数据源        | 位置前缀 | 位置路径                                         | 产品/服务支持的位置    |
+| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
+| Cloudera 或 Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+)、PDW                     |
+| Azure Blob 存储          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+)、PDW、SQL DW             |
+| Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                      |
+| Azure Data Lake Store Gen 2 | `abfss`          | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                      |
+| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                          |
+| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
+| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
+| MongoDB 或 CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
+| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019+) - 仅 Windows           |
+| 批量操作             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)、SQL DB                  |
+| 弹性查询（分片）       | 可选    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                      |
+| 弹性查询（远程）      | 可选    | `<remote_server_name>.database.windows.net`           | SQL DB                                      |
 
-有关每个连接值支持的 Hadoop 分发版和版本的完整列表，请参阅 [PolyBase 连接配置 (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
+位置路径：
+
+- `<`Namenode`>` = Hadoop 群集中 `Namenode` 的计算机名称、名称服务 URI 或 IP 地址。 PolyBase 必须解析 Hadoop 群集使用的任何 DNS 名称。 <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
+- `port` = 外部数据源侦听的端口。 在 Hadoop 中，可以使用 `fs.default.name` 配置参数查找该端口。 默认值为 8020。
+- `<container>` = 保存数据的存储帐户的容器。 根容器是只读的，数据无法写回容器。
+- `<storage_account>` = azure 资源的存储帐户名称。
+- `<server_name>` = 主机名。
+- `<instance_name>` = SQL Server 命名实例的名称。 如果在目标实例上运行 SQL Server Browser 服务，则使用此路径。
+- `<shard_map_server_name>` = Azure 中托管分片映射管理器的逻辑服务器名称。 `DATABASE_NAME` 参数提供用于托管分片映射的数据库，`SHARD_MAP_NAME` 用于分片映射本身。
+- `<remote_server_name>` = 弹性查询的目标逻辑服务器名称。 使用 `DATABASE_NAME` 参数指定数据库名称。
+
+设置位置时的其他说明和指南：
+
+- 创建对象时，SQL 引擎不会验证外部数据源是否存在。 要进行验证，请使用外部数据源创建外部表。
+- 查询 Hadoop 时，所有表使用相同的外部数据源，以确保查询语义一致。
+- 可使用 `sqlserver` 位置前缀，将 SQL Server 2019 连接到 SQL Server、SQL 数据库或 SQL 数据仓库。
+- 通过 `ODBC` 连接时，请指定 `Driver={<Name of Driver>}`。
+- `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为会使用安全的 SSL 连接发送数据。
+- 要确保在 Hadoop `Namenode` 故障转移期间成功进行 PolyBase 查询，请考虑针对 Hadoop 群集的 `Namenode` 使用虚拟 IP 地址。 如果不这样做，请执行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
+
+### <a name="connectionoptions--keyvaluepair"></a>CONNECTION_OPTIONS = key_value_pair
+
+通过 `ODBC` 连接到外部数据源时指定其他选项。
+
+驱动程序的名称是必需的（最基本的要求），但设置其他选项（例如 `APP='<your_application_name>'` 或 `ApplicationIntent= ReadOnly|ReadWrite`）也很有用，可以帮助进行故障排除。
+
+有关允许的 [CONNECTION_OPTIONS][connection_options] 列表，请参阅 `ODBC` 产品文档
+
+### <a name="pushdown--on--off"></a>PUSHDOWN = 打开 | 关闭
+
+说明是否可以将计算下推到外部数据源。 它默认处于打开状态。
+
+在外部数据源级别连接到 SQL Server、Oracle、Teradata、MongoDB 或 ODBC 时，`PUSHDOWN` 受支持。
+
+通过[提示][hint_pb]实现在查询级别启用或禁用下推。
+
+### <a name="credential--credentialname"></a>CREDENTIAL = credential_name
+
+指定用于对外部数据源进行身份验证的数据库范围凭据。
+
+创建凭证时的其他说明和指导：
+
+- 请使用 Azure 存储密钥将数据从 Azure Blob 存储或 Azure Data Lake Store (ADLS) Gen 2 加载到 SQL DW 或 PDW。
+- 只有在 blob 得到保护的情况下才需要 `CREDENTIAL`。 允许匿名访问的数据集不需要 `CREDENTIAL`。
+- 当 `TYPE` = `BLOB_STORAGE` 时，必须使用 `SHARED ACCESS SIGNATURE` 作为标识创建凭据。 此外，应按如下所示配置 SAS 令牌：
+  - 配置为密码时排除前导 `?`
+  - 至少对应加载的文件具有读取权限（例如 `srt=o&sp=r`）
+  - 使用有效的有效期（所有日期均采用 UTC 时间）。
+
+有关使用具有 `SHARED ACCESS SIGNATURE` 和 `TYPE` = `BLOB_STORAGE` 的 `CREDENTIAL` 的示例，请参阅[创建外部数据源以执行批量操作并将数据从 Azure Blob 存储检索到 SQL 数据库](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+
+要创建数据库范围凭据，请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
+
+### <a name="type---hadoop--blobstorage--rdbms--shardmapmanager"></a>TYPE = [ HADOOP | BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]
+
+指定要配置的外部数据源的类型。 此参数并非总是必需的。
+
+- 当外部数据源是 Cloudera、Hortonworks、Azure Blob 存储、ADLS Gen 1 或 ADLS Gen 2 时，请使用 HADOOP。
+- 使用 RDBMS 通过 SQL 数据库中的弹性查询进行跨数据库查询。  
+- 在连接到分片的 SQL 数据库时，使用 SHARD_MAP_MANAGER 创建外部数据源。
+- 在使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 对 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 执行批量操作时，可使用 BLOB_STORAGE。
+
+> [!IMPORTANT]
+> 如果使用任何其他外部数据源，请勿设置 `TYPE`。
+
+有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#e-create-external-data-source-to-reference-azure-blob-storage)。
+
+### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]'
+
+连接到 Hortonworks 或 Cloudera 时配置此可选值。
+
+定义 `RESOURCE_MANAGER_LOCATION` 后，查询优化器将根据成本做出决策以提高性能。 MapReduce 作业可用于将计算下推到 Hadoop。 指定 `RESOURCE_MANAGER_LOCATION` 可以显着减少 Hadoop 和 SQL 之间传输的数据量，从而提高查询性能。  
+
+如果未指定资源管理器，则会为 PolyBase 查询禁用到 Hadoop 的计算下推。
+
+如果未指定端口，则使用“hadoop 连接”配置的当前设置选择默认值。
+
+| Hadoop 连接 | 默认资源管理器端口 |
+| ------------------- | ----------------------------- |
+| 1                   | 50300                         |
+| 2                   | 50300                         |
+| 3                   | 8021                          |
+| 4                   | 8032                          |
+| 5                   | 8050                          |
+| 6                   | 8032                          |
+| 7                   | 8050                          |
+
+有关受支持的 Hadoop 版本的完整列表，请参阅 [PolyBase 连接配置 (Transact-SQL)][connectivity_pb]。
   
 > [!IMPORTANT]  
->  RESOURCE_MANAGER_LOCATION 值是字符串，在创建外部数据源时不进行验证。 输入错误值可能会导致将来在访问位置时出现延迟。  
-  
- Hadoop 示例：  
-  
--   Windows 上的 Hortonworks HDP 2.0、2.1、2.2、 2.3：   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
-    ```  
-  
--   Windows 上的 Hortonworks HDP 1.3：   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:50300'  
-    ```  
-  
--   Linux 上的 Hortonworks HDP 2.0、2.1、2.2、2.3：   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8050'  
-    ```  
-  
--   Linux 上的 Hortonworks HDP 1.3：   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:50300'  
-    ```  
-  
--   Linux 上的 Cloudera 4.3：   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8021'  
-    ```  
-  
--   Linux 上的 Cloudera 5.1 - 5.11：   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
-    ```  
-  
- CREDENTIAL = credential_name  
- 指定用于对外部数据源进行身份验证的数据库范围凭据。 有关示例，请参阅 [C. 创建 Azure blob 存储外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md#credential)。 若要创建凭据，请参阅 [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)。 请注意，允许进行匿名访问的公共数据集不需要 CREDENTIAL。 
-  
- DATABASE_NAME = 'QueryDatabaseName'  
- 充当分片映射管理器（对于 SHARD_MAP_MANAGER）或远程数据库（对于 RDBMS）的数据库的名称。  
-  
- SHARD_MAP_NAME = *'ShardMapName'*  
- 仅用于 SHARD_MAP_MANAGER。 分片映射的名称。 有关创建分片映射的详细信息，请参阅[跨扩展云数据库进行报告（预览）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)  
-  
-## <a name="polybase-specific-notes"></a>特定于 PolyBase 的说明  
-有关受支持的外部数据源的完整列表，请参阅 [PolyBase 连接配置 (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
+> 创建外部数据源时，不会验证 RESOURCE_MANAGER_LOCATION 值。 每次尝试下推时，输入不正确的值都可能会导致查询执行失败，因为提供的值无法解析。
 
- 若要使用 PolyBase，需要创建以下三个对象：  
-  
--   外部数据源。  
-  
--   外部文件格式，以及  
-  
--   引用外部数据源和外部文件格式的外部表。  
-  
-## <a name="permissions"></a>权限  
- 需要 SQL DW、SQL Server、APS 2016 和 SQL DB 中的数据库上的 CONTROL 权限。
+[创建外部数据源以引用启用了下推功能的 Hadoop](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) 中提供了具体示例和详细指南。
 
-> [!IMPORTANT]  
->  在以前版本的 PDW 中，创建外部数据源需要 ALTER ANY EXTERNAL DATA SOURCE 权限。
-  
-  
-## <a name="error-handling"></a>错误处理  
- 如果外部 Hadoop 数据源在定义 RESOURCE_MANAGER_LOCATION 方面不一致，则会发生运行时错误。 也就是说，无法指定引用相同 Hadoop 群集的两个外部数据源，然后为其中一个提供资源管理器位置，而不为另一个提供。  
-  
- 创建外部数据源对象时，SQL 引擎不验证外部数据源是否存在。 如果数据源在查询执行过程中不存在，则会发生错误。  
-  
-## <a name="general-remarks"></a>一般备注  
-对于 PolyBase，外部数据源在 SQL Server 和 SQL 数据仓库中适用于数据库范围。 它并行数据仓库中适用于服务器范围。
-  
-对于 PolyBase，定义 RESOURCE_MANAGER_LOCATION 或 JOB_TRACKER_LOCATION 时，查询优化器会考虑通过在外部 Hadoop 源上启动 map reduce 作业并下推计算，来优化每个查询。 这完全是基于开销的决策。  
+### <a name="databasename--databasename"></a>DATABASE_NAME = database_name
 
-若要确保 PolyBase 查询在 Hadoop NameNode 发生故障转移时成功进行，请考虑对 Hadoop 群集的 NameNode 使用虚拟 IP 地址。 如果不对 Hadoop NameNode 使用虚拟 IP 地址，则发生 Hadoop NameNode 故障转移时，必须 ALTER EXTERNAL DATA SOURCE 对象以指向新位置。  
-  
-## <a name="limitations-and-restrictions"></a>限制和局限  
- 在相同 Hadoop 群集位置上定义的所有数据源都必须对 RESOURCE_MANAGER_LOCATION 或 JOB_TRACKER_LOCATION 使用相同设置。 如果存在不一致，则会发生运行时错误。  
-  
- 如果使用名称设置 Hadoop 群集，而外部数据源对群集位置使用 IP 地址，则 PolyBase 仍必须能够在使用数据源时解析群集名称。 若要解析名称，必须启用 DNS 转发器。  
- 
-暂不支持类型为 `hadoop` 的 SAS 令牌，仅支持将它用于存储帐户访问密钥。 尝试创建类型为 `hadoop` 的外部数据源和使用 SAS 凭据可能会失败，并看到以下错误：
+当 `TYPE` 设置为 `RDBMS` 或 `SHARD_MAP_MANAGER` 时，配置此参数。
+
+| TYPE              | DATABASE_NAME 的值                                                  |
+| ----------------- | ----------------------------------------------------------------------- |
+| RDBMS             | 使用 `LOCATION` 提供的服务器上的远程数据库的名称 |
+| SHARD_MAP_MANAGER | 作为分片映射管理器运行的数据库的名称                 |
+
+有关如何创建 `TYPE` = `RDBMS` 的外部数据源的示例，请参阅[创建 RDBMS 外部数据源](#g-create-an-rdbms-external-data-source)
+
+### <a name="shardmapname--shardmapname"></a>SHARD_MAP_NAME = shard_map_name
+
+将 `TYPE` 参数设置为 `SHARD_MAP_MANAGER` 时使用，仅用于设置分片映射的名称。
+
+有关如何创建 `TYPE` = `SHARD_MAP_MANAGER` 的外部数据源的示例，请参阅[创建分片映射管理器外部数据源](#f-create-a-shard-map-manager-external-data-source)
+
+## <a name="permissions"></a>权限
+
+需要对 SQL Server、并行数据仓库、SQL 数据库和 SQL 数据仓库中的数据库具有 CONTROL 权限。
+
+> [!NOTE]
+> 在以前版本的 PDW 中，创建外部数据源需要 ALTER ANY EXTERNAL DATA SOURCE 权限。
+
+## <a name="locking"></a>锁定
+
+在 EXTERNAL DATA SOURCE 对象上采用共享锁。  
+
+## <a name="security"></a>Security
+
+PolyBase 支持大多数外部数据源的基于代理的身份验证。 创建数据库范围凭据以创建代理帐户。
+
+连接到 SQL Server 大数据群集中的存储或数据池时，会将用户的凭据传递到后端系统。 在数据池本身中创建登录名以启用直通身份验证。
+
+目前，不支持类型为 `HADOOP` 的 SAS 令牌。 它仅在使用存储帐户访问密钥时才受支持。 尝试创建类型为 `HADOOP` 的外部数据源和使用 SAS 凭据失败，并显示以下错误：
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
-  
-## <a name="locking"></a>锁定  
- 在 EXTERNAL DATA SOURCE 对象上采用共享锁。  
-  
-##  <a name="examples"></a>示例：SQL Server 2016  
-  
-### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. 创建外部数据源以引用 Hadoop  
-若要创建外部数据源以引用 Hortonworks 或 Cloudera Hadoop 群集，请指定 Hadoop Namenode 的计算机名称或 IP 地址以及端口。  
-  
-```sql  
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
 
-```  
-  
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. 创建外部数据源以引用 Hadoop 并启用下推  
-指定 RESOURCE_MANAGER_LOCATION 选项以便为 PolyBase 查询启用到 Hadoop 的下推计算。 启用后，PolyBase 会使用基于开销的决策来确定是应将查询计算推送到 Hadoop 还是应移动所有数据以在 SQL Server 中处理查询。
-  
-```sql  
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8020',
-    RESOURCE_MANAGER_LOCATION = '10.10.10.10:8050'
-);
+## <a name="examples-sql-server-2016-and-parallel-data-warehouse"></a>示例：SQL Server (2016+) 和并行数据仓库
 
-```
-  
-###  <a name="credential"></a> C. 创建外部数据源以引用受 Kerberos 保护的 Hadoop  
-若要验证 Hadoop 群集是否受 Kerberos 保护，请检查 Hadoop core-site.xml 中的 hadoop.security.authentication 属性值。 若要引用受 Kerberos 保护的 Hadoop 群集，必须指定包含 Kerberos 用户名和密码的数据库范围凭据。 数据库主密钥用于加密数据库范围凭据密钥。 
-  
-```sql  
+### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>A. 在 SQL 2019 中创建外部数据源以引用 Oracle
+
+要创建引用 Oracle 的外部数据源，请确保具有数据库范围凭据。 也可以选择针对此数据源启用或禁用计算下推。
+
+```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
-
--- Create a database scoped credential with Kerberos user name and password.
-CREATE DATABASE SCOPED CREDENTIAL HadoopUser1 
-WITH IDENTITY = '<hadoop_user_name>', 
-SECRET = '<hadoop_password>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
-    TYPE = HADOOP, 
-    LOCATION = 'hdfs://10.10.10.10:8050', 
-    RESOURCE_MANAGER_LOCATION = '10.10.10.10:8050', 
-    CREDENTIAL = HadoopUser1
-);
-```
-
-### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D. 创建外部数据源以引用 Azure blob 存储
-若要创建外部数据源以引用 Azure blob 存储容器，请指定 Azure blob 存储 URI 以及包含 Azure 存储帐户密钥的数据库范围凭据。
-
-在此示例中，外部数据源是名为 myaccount 的 Azure 存储帐户下的 Azure blob 存储容器（名为 dailylogs）。 Azure 存储外部数据源是仅用于数据传输；不支持谓词下推。
-
-此示例演示如何创建数据库范围凭据以用于对 Azure 存储进行身份验证。 在数据库凭据机密中指定 Azure 存储帐户密钥。 在数据库范围凭据标识中指定任何字符串，它不会用于对 Azure 存储进行身份验证。 随后会在创建外部数据源的语句中使用凭据。
-
-```
--- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '!MyC0mpl3xP@ssw0rd!
+;
 
 -- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential 
-WITH IDENTITY = 'myaccount', 
-SECRET = '<azure_storage_account_key>';
+CREATE DATABASE SCOPED CREDENTIAL OracleProxyAccount
+WITH
+     IDENTITY   = 'oracle_username'
+,    SECRET     = 'oracle_password'
+;
+
+CREATE EXTERNAL DATA SOURCE MyOracleServer
+WITH
+(    LOCATION   = 'oracle://145.145.145.145:1521'
+,    CREDENTIAL = OracleProxyAccount
+,    PUSHDOWN   = ON
+;
+```
+
+有关其他数据源（如 MongoDB）的更多示例，请参阅[配置 PolyBase 以访问 MongoDB 中的外部数据][mongodb_pb]
+
+### <a name="b-create-external-data-source-to-reference-hadoop"></a>B. 创建外部数据源以引用 Hadoop
+
+若要创建外部数据源以引用 Hortonworks 或 Cloudera Hadoop 群集，请指定 Hadoop `Namenode` 的计算机名称或 IP 地址以及端口。 <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE MyHadoopCluster
+WITH
+(    LOCATION = 'hdfs://10.10.10.10:8050'
+,    TYPE     = HADOOP
+)
+;
+```
+
+### <a name="c-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>C. 创建外部数据源以引用 Hadoop 并启用下推
+
+指定 `RESOURCE_MANAGER_LOCATION` 选项以便为 PolyBase 查询启用到 Hadoop 的下推计算。 启用后，PolyBase 会根据成本作出决策，以确定是否应将查询计算下推到 Hadoop。
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE MyHadoopCluster
+WITH
+(    LOCATION                  = 'hdfs://10.10.10.10:8020'
+,    TYPE                      = HADOOP
+,    RESOURCE_MANAGER_LOCATION = '10.10.10.10:8050'
+)
+;
+```
+
+### <a name="d-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>D. 创建外部数据源以引用受 Kerberos 保护的 Hadoop
+
+若要验证 Hadoop 群集是否受 Kerberos 保护，请检查 Hadoop core-site.xml 中的 hadoop.security.authentication 属性值。 若要引用受 Kerberos 保护的 Hadoop 群集，必须指定包含 Kerberos 用户名和密码的数据库范围凭据。 数据库主密钥用于加密数据库范围凭据密钥。
+  
+```sql  
+-- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
+;
+
+-- Create a database scoped credential with Kerberos user name and password.
+CREATE DATABASE SCOPED CREDENTIAL HadoopUser1
+WITH
+     IDENTITY   = '<hadoop_user_name>'
+,    SECRET     = '<hadoop_password>'
+;
 
 -- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
-    TYPE = BLOB_STORAGE, 
-    LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
+CREATE EXTERNAL DATA SOURCE MyHadoopCluster
+WITH
+(    LOCATION                  = 'hdfs://10.10.10.10:8050'
+,    CREDENTIAL                = HadoopUser1
+,    TYPE                      = HADOOP
+,    RESOURCE_MANAGER_LOCATION = '10.10.10.10:8050'
+)
+;
 ```
 
-## <a name="examples-azure-sql-database"></a>示例：Azure SQL Database
+## <a name="examples-sql-server-2016-sql-data-warehouse-and-parallel-data-warehouse"></a>示例：SQL Server (2016+)、SQL 数据仓库和并行数据仓库
 
-### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. 创建分片映射管理器外部数据源
-若要创建外部数据源以引用 SHARD_MAP_MANAGER，请指定托管 Azure SQL 数据库中的分片映射管理器或 Azure 虚拟机上的 SQL Server 数据库的 SQL 数据库服务器名称。
+### <a name="e-create-external-data-source-to-reference-azure-blob-storage"></a>E. 创建外部数据源以引用 Azure blob 存储
+
+在此示例中，外部数据源是名为 `logs` 的 Azure 存储帐户下的 Azure blob 存储容器（名为 `daily`）。 Azure 存储外部数据源仅用于数据传输。 它不支持谓词下推。
+
+此示例演示如何创建数据库范围凭据以用于对 Azure 存储进行身份验证。 在数据库凭据机密中指定 Azure 存储帐户密钥。 可以在数据库范围凭据标识中指定任何字符串，因为在对 Azure 存储进行身份验证的过程中不会使用它。
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
+-- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
+;
 
-CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
-WITH IDENTITY = '<username>',
-SECRET = '<password>';
+-- Create a database scoped credential with Azure storage account key as the secret.
+CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
+WITH
+     IDENTITY   = '<my_account>'
+,    SECRET     = '<azure_storage_account_key>'
+;
 
-CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc 
-WITH (
-    TYPE = SHARD_MAP_MANAGER,
-    LOCATION = '<server_name>.database.windows.net',
-    DATABASE_NAME = 'ElasticScaleStarterKit_ShardMapManagerDb',
-    CREDENTIAL = ElasticDBQueryCred,
-    SHARD_MAP_NAME = 'CustomerIDShardMap'
-);
+-- Create an external data source with CREDENTIAL option.
+CREATE EXTERNAL DATA SOURCE MyAzureStorage
+WITH
+(    LOCATION   = 'wasbs://daily@logs.blob.core.windows.net/'
+,    CREDENTIAL = AzureStorageCredential
+,    TYPE       = HADOOP
+)
+;
 ```
 
-### <a name="f-create-an-rdbms-external-data-source"></a>F. 创建 RDBMS 外部数据源
-若要创建外部数据源以引用 RDBMS，请指定 Azure SQL 数据库中的远程数据库的 SQL 数据库服务器名称。
+## <a name="examples-sql-database"></a>示例：SQL 数据库
+
+### <a name="f-create-a-shard-map-manager-external-data-source"></a>F. 创建分片映射管理器外部数据源
+
+若要创建外部数据源以引用 SHARD_MAP_MANAGER，请指定托管 SQL 数据库中的分片映射管理器或虚拟机上的 SQL Server 数据库的 SQL 数据库服务器名称。
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
+
+CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred
+WITH
+     IDENTITY   = '<username>'
+,    SECRET     = '<password>'
+;
+
+CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc
+WITH
+(    TYPE             = SHARD_MAP_MANAGER
+,    LOCATION         = '<server_name>.database.windows.net'
+,    DATABASE_NAME    = 'ElasticScaleStarterKit_ShardMapManagerDb'
+,    CREDENTIAL       = ElasticDBQueryCred
+,    SHARD_MAP_NAME   = 'CustomerIDShardMap'
+)
+;
+```
+
+有关分步教程，请参阅[分片（水平分区）的弹性查询入门][sharded_eq_tutorial]。
+
+### <a name="g-create-an-rdbms-external-data-source"></a>G. 创建 RDBMS 外部数据源
+
+若要创建外部数据源以引用 RDBMS，请指定 SQL 数据库中的远程数据库的 SQL 数据库服务器名称。
+
+```sql
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
 
 CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
-WITH IDENTITY = '<username>',
-SECRET = '<password>';
+WITH
+     IDENTITY  = '<username>'
+,    SECRET    = '<password>'
+;
 
-CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc 
-WITH (
-    TYPE = RDBMS, 
-    LOCATION = '<server_name>.database.windows.net', 
-    DATABASE_NAME = 'Customers', 
-    CREDENTIAL = SQL_Credential 
-);
+CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc
+WITH
+(    TYPE          = RDBMS
+,    LOCATION      = '<server_name>.database.windows.net'
+,    DATABASE_NAME = 'Customers'
+,    CREDENTIAL    = SQL_Credential
+)
+;
 ```
 
-## <a name="examples-azure-sql-data-warehouse"></a>示例：Azure SQL 数据仓库
+有关 RDBMS 的分步教程，请参阅[跨数据库查询（纵向分区）入门][remote_eq_tutorial]。
 
-### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. 创建外部数据源以引用 Azure Data Lake Store
-Azure Data Lake Store 连接基于 ADLS URI 和 Azure Active Directory 应用程序的服务主体。 可以在[使用 Azure Active Directory 进行 Data Lake Store 服务到服务身份验证](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)中找到有关创建此应用程序的文档。
+## <a name="examples-sql-data-warehouse"></a>示例：SQL 数据仓库
+
+### <a name="h-create-external-data-source-to-reference-azure-data-lake-store-gen-1"></a>H. 创建外部数据源以引用 Azure Data Lake Store Gen 1
+
+Azure Data Lake Store 连接基于 ADLS URI 和 Azure Active Directory 应用程序的服务主体。 可以在[使用 Active Directory 域服务进行 Data Lake Store 身份验证][azure_ad[]中找到有关创建此应用程序的文档。
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
-CREATE MASTER KEY
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
 
 -- These values come from your Azure Active Directory Application used to authenticate to ADLS
-CREATE DATABASE SCOPED CREDENTIAL ADLUser 
-WITH IDENTITY = '<clientID>@<OAuth2.0TokenEndPoint>',
-SECRET = '<KEY>' ;
-
-
+CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
+WITH
+--   IDENTITY   = '<clientID>@<OAuth2.0TokenEndPoint>'
+     IDENTITY   = '536540b4-4239-45fe-b9a3-629f97591c0c@https://login.microsoftonline.com/42f988bf-85f1-41af-91ab-2d2cd011da47/oauth2/token'
+--,  SECRET     = '<KEY>'
+,    SECRET     = 'BjdIlmtKp4Fpyh9hIvr8HJlUida/seM5kQ3EpLAmeDI='
+;
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
-WITH (TYPE = HADOOP,
-      LOCATION = '<ADLS URI>'
+WITH
+(    LOCATION       = 'adl://newyorktaxidataset.azuredatalakestore.net'
+,    CREDENTIAL     = ADLS_credential
+,    TYPE           = HADOOP
 )
+;
 ```
 
+### <a name="i-create-external-data-source-to-reference-azure-data-lake-store-adls-gen-2"></a>I. 创建外部数据源以引用 Azure Data Lake Store (ADLS) Gen 2
 
-
-## <a name="examples-parallel-data-warehouse"></a>示例：并行数据仓库
-
-### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. 创建外部数据源以引用 Hadoop 并启用下推
-指定 JOB_TRACKER_LOCATION 选项以便为 PolyBase 查询启用到 Hadoop 的下推计算。 启用后，PolyBase 会使用基于开销的决策来确定是应将查询计算推送到 Hadoop 还是应移动所有数据以在 SQL Server 中处理查询。 
+连接到 ADLS Gen 2 需要存储帐户密钥作为数据库范围凭据的密钥。 目前不提供对 Oauth2.0 的支持。
 
 ```sql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8020',
-    JOB_TRACKER_LOCATION = '10.10.10.10:8050'
-);
+-- If you do not have a Master Key on your DW you will need to create one.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
+
+-- These values come from your Azure Active Directory Application used to authenticate to ADLS
+CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
+WITH
+--   IDENTITY   = '<storage_account_name>'
+     IDENTITY   = 'newyorktaxidata'
+--,  SECRET     = '<storage_account_key>'
+,    SECRET     = 'yz5N4+bxSb89McdiysJAzo+9hgEHcJRJuXbF/uC3mhbezES/oe00vXnZEl14U0lN3vxrFKsphKov16C0w6aiTQ=='
+;
+
+CREATE EXTERNAL DATA SOURCE <data_source_name>
+WITH
+(    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
+,    CREDENTIAL = ADLS_credential
+,    TYPE       = HADOOP
+)
+[;]
 ```
 
-### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. 创建外部数据源以引用 Azure blob 存储
-若要创建外部数据源以引用 Azure blob 存储容器，请指定 Azure blob 存储 URI 作为外部数据源位置。 将 Azure 存储帐户密钥添加到 PDW core-site.xml 文件以用于身份验证。
+## <a name="examples-bulk-operations"></a>示例：批量操作
 
-在此示例中，外部数据源是名为 myaccount 的 Azure 存储帐户下的 Azure blob 存储容器（名为 dailylogs）。 Azure 存储外部数据源是仅用于数据传输，不支持谓词下推。
+> [!NOTE]
+> 为批量操作配置外部数据源时，请勿在 `LOCATION` URL 的末尾放置尾随 /、文件名或共享访问签名参数。
+
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. 创建外部数据源以用于从 Azure Blob 存储检索数据的批量操作
+
+**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
+对使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
 
 ```sql
-CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
-        TYPE = HADOOP, 
-        LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'
-);
-```
-
-## <a name="examples-bulk-operations"></a>示例：批量操作   
-### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. 创建外部数据源以用于从 Azure Blob 存储检索数据的批量操作。   
-**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。   
-对使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 的批量操作使用以下数据源。 所用的凭据必须使用 `SHARED ACCESS SIGNATURE` 作为标识进行创建、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。   
-```sql
-CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
- WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
- SECRET = '(REMOVE ? FROM THE BEGINNING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
+WITH
+     IDENTITY = 'SHARED ACCESS SIGNATURE'
+--   REMOVE ? FROM THE BEGINNING OF THE SAS TOKEN
+,    SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************'
+;
 
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
-    WITH  (
-        TYPE = BLOB_STORAGE,
-        LOCATION = 'https://newinvoices.blob.core.windows.net/week3',
-        CREDENTIAL = AccessAzureInvoices
-    );   
-```   
-若要查看这一使用中的示例，请参阅 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage)。
-  
-## <a name="see-also"></a>另请参阅
-[ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
-[CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
-[CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   
-[CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
-[CREATE TABLE AS SELECT（Azure SQL 数据仓库）](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
-  
-  
+WITH
+(    LOCATION   = 'https://newinvoices.blob.core.windows.net/week3'
+,    CREDENTIAL = AccessAzureInvoices
+,    TYPE       = BLOB_STORAGE
+)
+;
+```
 
+若要查看正在使用的示例，请参阅 [BULK INSERT][bulk_insert_example]。
+
+## <a name="see-also"></a>另请参阅
+
+- [ALTER EXTERNAL DATA SOURCE (Transact-SQL)][alter_eds]
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
+- [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
+- [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
+- [CREATE EXTERNAL TABLE AS SELECT（Azure SQL 数据仓库）][create_etb_as_sel]
+- [CREATE TABLE AS SELECT（Azure SQL 数据仓库）][create_tbl_as_sel]
+- [sys.external_data_sources (Transact-SQL)][cat_eds]
+- [使用共享访问签名 (SAS)][sas_token]
+- [弹性查询简介][intro_eq]
+
+<!-- links to external pages -->
+<!-- SQL Docs -->
+[bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
+
+[create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
+[create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
+[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-transact-sql
+[create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
+[create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
+
+[alter_eds]: https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql
+
+[cat_eds]: https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql
+<!-- PolyBase docs -->
+[intro_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide
+[mongodb_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-configure-mongodb
+[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[connection_options]: https://docs.microsoft.com/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client
+[hint_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-pushdown-computation#force-pushdown
+<!-- Elastic Query Docs -->
+[intro_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/
+[remote_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/
+[remote_eq_tutorial]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/
+[sharded_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/
+[sharded_eq_tutorial]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/
+
+<!-- Azure Docs -->
+[azure_ad]: https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory
+[sas_token]: https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1

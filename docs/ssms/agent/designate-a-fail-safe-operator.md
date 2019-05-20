@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ea7a499e2d0577b8ac0d57cbb0f530958af9ff8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501980"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096519"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定防故障操作员
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52501980"
   
     [限制和局限](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要指定防故障操作员，请使用：**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "52501980"
   
 5.  在“操作员”列表中，选择想要执行防故障的操作员。  
   
-6.  选中以下任何或所有复选框以指定通知操作员的方法：“电子邮件”、“寻呼程序”或“Net send”。  
+6.  选中以下任意或所有复选框来指定通知操作员的方式：“电子邮件”、“寻呼机”或“Net Send”。  
   
 7.  完成后，单击 **“确定”**。  
   

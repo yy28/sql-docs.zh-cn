@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.dbrefactoring.moveschemadialog
 - sql.data.tools.dbrefactoring.renameserverdatabasedialog
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 971df125a63ecdd1e46b6b884198886cccbcc378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737665"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090098"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>如何使用重命名和重构对您的数据库对象进行更改
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>如何：使用重命名和重构更改数据库对象
 通过 Transact\-SQL 编辑器中的“重构”上下文菜单，可以重命名对象或将对象移到不同架构，并且在提交更改前预览所有受影响的区域。 也可以使用“重构”菜单完全限定对数据库对象的所有引用，或者扩展你的数据库项目的 `SELECT` 语句中的任何通配符。  
   
 > [!NOTE]  

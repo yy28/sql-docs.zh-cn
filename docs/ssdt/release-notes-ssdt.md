@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241879"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101905"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
 
@@ -46,6 +46,36 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1，SSDT for VS 2017
+
+发布时间：&nbsp; 2019 年 4 月 27 日  
+生成号：&nbsp; 14.0.16191.0  
+SSDT for Visual Studio 2017。
+
+### <a name="whats-new"></a>新增功能
+
+#### <a name="ssis"></a>SSIS
+
+| 新项 | 详细信息 |
+| :------- | :------ |
+| 修复了在定位到以前的 SQL Server 版本时无法正确保留包部件的问题 | &nbsp; |
+| 修复了在使用包部件时无法将表达式添加到优先约束的问题 | &nbsp; |
+| 修复了 Power Query 源和连接管理器的“帮助”按钮不链接到正确文档的问题 | &nbsp; |
+| 修复了 VS 帮助窗口中不显示 SSIS 内部版本的问题 | &nbsp; |
+| 为 Ole DB 和平面文件连接管理器添加了属性“ConnectByProxy”，它可以在 Azure-SSIS IR 中使用自承载 IR 启用本地数据访问权限 | &nbsp; |
+| 修复了 ODBC 组件错误映射 DT_DBDATE 数据类型的问题 | &nbsp; |
+| 为 ADO.NET 和 OLE DB 连接管理器添加了属性“ConnectUsingManagedIdentity”，它启用了托管标识身份验证，可以连接到 Azure-SSIS IR 中的数据源 | &nbsp; |
+
+### <a name="known-issues"></a>已知问题
+
+| 已知问题 | 详细信息 |
+| :---------- | :------ |
+| 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 | 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。 |
+| 版本高于 15.8 的 SSDT for Visual Studio 2017 不支持设计包含 Teradata 源/目标的包。 | 使用 SSDT for Visual Studio 2017 (15.8)。 |
+| 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持 OData v4。 | &nbsp; |
+| 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持使用 ODBC 连接到 Oracle。 | &nbsp; |
+| 未本地化 Power Query 源。 | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0，SSDT for VS 2017
 

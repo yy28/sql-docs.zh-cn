@@ -19,14 +19,18 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 181ea0007d2a61ba3705d3d318bda3b0da62fe77
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0a9ef2d748bacbcab184c5f60dea8c3514cb61b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280741"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723665"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 开发人员文档
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含一个完全重写的对象模型，已使用使用功能改善了该模型，以使包扩展和编程更加方便、灵活和强大。 开发人员几乎可以对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包进行全方位的扩展和编程。  
   
  作为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 开发人员，您有两种基本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 编程方法可选用：  

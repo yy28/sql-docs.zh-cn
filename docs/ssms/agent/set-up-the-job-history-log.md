@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, history
 - historical information [SQL Server], jobs
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e413fec31f27231ef52957aff03bbacb082fb782
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6d18a4654fc14aa5c0997734184ec700fad3162
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659365"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095513"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "47659365"
 
 本主题介绍如何设置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志。  
   
--   **开始之前：**  [安全性](#Security)  
+-   **开始之前：**[安全性](#Security)  
   
--   **若要设置作业历史记录日志，请使用：** [SQL Server Management Studio](#SSMS)  
+-   **若要设置作业历史记录日志，请使用：**[SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="Security"></a>安全性  
-有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
+有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
 **设置作业历史记录日志**  

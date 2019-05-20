@@ -38,15 +38,15 @@ f1_keywords:
 - sql.data.tools.dbassemblyinfo
 - sql.data.tools.extendedpropertieseditor.dialog
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 1c3899fc603da55d03ae7acd1e11c7f485637f30
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143577"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099385"
 ---
 # <a name="database-project-settings"></a>数据库项目设置
 使用数据库项目设置可控制数据库、调试和生成配置的各个方面。 这些设置分为以下几类。  

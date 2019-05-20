@@ -40,7 +40,7 @@ ms.locfileid: "63461054"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 SharePoint 2010 和 SharePoint 2013。|  
+|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 &#124; SharePoint 2010 和 SharePoint 2013。|  
   
 ## <a name="list-permissions"></a>列表权限  
  对包含报表服务器项的库设置的权限将确定用户如何访问这些项。  

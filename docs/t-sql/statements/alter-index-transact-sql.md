@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980413"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502869"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,8 +83,7 @@ ALTER INDEX { index_name | ALL } ON <object>
   
 <object> ::=   
 {  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 }  
   
 <rebuild_index_option > ::=  
@@ -538,7 +537,7 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
   
 -   提供分区号，例如：ON PARTITIONS (2)。  
   
--   为多个单个分区提供分区号，用逗号分隔，例如：ON PARTITIONS (1,5)。  
+-   为多个单独分区提供分区号，用逗号分隔，例如：ON PARTITIONS (1, 5)。  
   
 -   提供范围和单个分区：ON PARTITIONS (2, 4, 6 TO 8)。  
   
@@ -735,8 +734,7 @@ Online index rebuild 可使用 RESUMABLE = ON 选项指定为可恢复。
    -    使用索引重新生成的 ALTER TABLE  
    -    无法在显式事务（不能属于 tran ... commit 块）中执行具有“RESUMEABLE = ON”的 DDL 命令
    -    重新生成具有已计算或 TIMESTAMP 列（作为键列）的索引。
--   如果基表包含 LOB 列，则可恢复聚集索引重新生成在此操作开始时需要 Sch-M 锁
-   -    可恢复索引不支持 SORT_IN_TEMPDB=ON 选项 
+-   如果基表包含 LOB 列，则可恢复聚集索引重新生成在此操作开始时需要 Sch-M 锁 
 
 > [!NOTE]
 > DDL 命令会运行到完成、暂停或失败。 如果命令暂停，则会发出错误，指示操作已暂停并且索引创建未完成。 可以从 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md) 获取有关当前索引状态的详细信息。 如同之前一样，发生失败时，也会发出错误。 
@@ -770,7 +768,7 @@ Online index rebuild 可使用 RESUMABLE = ON 选项指定为可恢复。
 ## <a name="statistics"></a>统计信息  
  在对某个表执行 ALTER INDEX ALL ... 时，只更新与索引相关联的统计信息。 针对表（而不是索引）自动或手动创建的统计信息不会更新。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行 ALTER INDEX，至少需要对表或视图具有 ALTER 权限。  
   
 ## <a name="version-notes"></a>版本说明  
@@ -999,7 +997,7 @@ GO
 ## <a name="examples-rowstore-indexes"></a>示例：行存储索引  
   
 ### <a name="a-rebuilding-an-index"></a>A. 重新生成索引  
- 下面的示例在 `Employee` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中重新生成单个索引。  
+ 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Employee` 表中重新生成单个索引。  
   
 ```sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
@@ -1039,7 +1037,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
 ```  
   
 ### <a name="d-setting-options-on-an-index"></a>D. 设置索引的选项。  
- 下面的示例为 `AK_SalesOrderHeader_SalesOrderNumber` 数据库中的索引 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 设置了几个选项。  
+ 下面的示例为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的索引 `AK_SalesOrderHeader_SalesOrderNumber` 设置了几个选项。  
   
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
@@ -1055,7 +1053,7 @@ GO
 ```  
   
 ### <a name="e-disabling-an-index"></a>E. 禁用索引。  
- 下面的示例禁用了对 `Employee` 数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的非聚集索引。  
+ 下面的示例禁用了对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `Employee` 表的非聚集索引。  
   
 ```sql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
@@ -1094,7 +1092,7 @@ GO
 ```  
   
 ### <a name="h-rebuilding-a-partitioned-index"></a>H. 重新生成分区索引  
- 下面的示例在 `5` 数据库中重新生成一个分区索引为 `IX_TransactionHistory_TransactionDate` 的分区，分区号为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 分区 5 是联机重新生成的，并且对索引重新生成操作获取的每个锁分别应用低优先级锁的 10 分钟等待时间。 如果在此时间无法获取锁来完成索引重新生成，重新生成操作语句就会中止。  
+ 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中重新生成一个分区索引为 `5` 的分区，分区号为 `IX_TransactionHistory_TransactionDate`。 分区 5 是联机重新生成的，并且对索引重新生成操作获取的每个锁分别应用低优先级锁的 10 分钟等待时间。 如果在此时间无法获取锁来完成索引重新生成，重新生成操作语句就会中止。  
   
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   

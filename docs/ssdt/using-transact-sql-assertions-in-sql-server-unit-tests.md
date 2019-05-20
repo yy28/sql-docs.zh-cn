@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543904"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102005"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用 Transact-SQL 断言
 在 SQL Server 单元测试中，Transact\-SQL 测试脚本将运行并返回结果。 有时，结果以结果集的形式返回。 您可以使用测试条件来验证结果。 例如，您可以使用测试条件来检查特定结果集中返回的行数，或验证特定测试的运行时长。 有关测试条件的详细信息，请参阅[在 SQL Server 单元测试中使用测试条件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)。  
@@ -79,7 +79,7 @@ RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)
   
 @ErrorState 是介于 1 和 127 之间的任一整数。 您可以使用此整数来区分在代码中的不同位置引发的同一个错误。  
   
-有关详细信息，请参见 [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)。 在 SQL Server 单元测试中使用 RAISERROR 的示例在主题[如何：编写在单个事务范围内运行的 SQL Server 单元测试](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)中提供。  
+有关详细信息，请参见 [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)。 以下主题中提供了在 SQL Server 单元测试中使用 RAISERROR 的示例，即[如何：编写在单个事务范围内运行的 SQL Server 单元测试](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

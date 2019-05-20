@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63446667e82beef51798f7b1d97e3b13911898b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f4dc9a023b74c104e232546ec6c4f8c2bd93919
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731221"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103250"
 ---
-# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>如何：向 SQL Server 单元测试中添加条件
+# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>如何：向 SQL Server 单元测试添加测试条件
 可以使用“SQL Server单元测试设计器”将测试条件添加到 SQL Server 单元测试中。 在保存测试类时，测试条件会自动保存在测试项目中，保存形式为包含测试类的源代码文件中的 Visual C\# 或 Visual Basic 代码。 在保存测试条件后，可以在“SQL Server 单元测试设计器”中或在其源代码文件中编辑测试条件。  
   
 ### <a name="to-add-test-conditions-to-a-sql-server-unit-test"></a>向 SQL Server 单元测试添加测试条件  

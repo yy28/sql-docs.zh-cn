@@ -17,14 +17,18 @@ ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bbbc9ace1d7b142f80f3b2cc5c5ede10284f472a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 03373dc9714d992c36ca29611013979d1c62ecf6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281271"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728121"
 ---
 # <a name="smo-connection-manager"></a>SMO 连接管理器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SMO 连接管理器使得包能够连接到 SQL 管理对象 (SMO) 服务器。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括的传输任务使用 SMO 连接管理器。 例如，传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的传输登录任务使用 SMO 连接管理器。  
   
  将 SMO 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 SMO 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包上的“连接”集合。 该连接管理器的 **ConnectionManagerType** 属性设置为 **SMOServer**。  
@@ -36,7 +40,7 @@ ms.locfileid: "58281271"
 -   为连接到服务器选择身份验证模式。  
   
 ## <a name="configuration-of-the-smo-connection-manager"></a>SMO 连接管理器的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [SMO 连接管理器编辑器](../../integration-services/connection-manager/smo-connection-manager-editor.md)。  
   

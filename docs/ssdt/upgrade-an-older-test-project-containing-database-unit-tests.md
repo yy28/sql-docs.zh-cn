@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c2006cad1fd9ef8708257c331c2411fa916cca89
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: d1b91df1ecce9749ebdec3515a339ac31f2507b7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616223"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101983"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>升级包含数据库单元测试的较旧的测试项目
 可以升级在 Visual Studio 2010 中创建的、包含数据库单元测试的较旧测试项目，以使用新的 SQL Server Data Tools 数据库单元测试运行时和工具。 升级较旧项目后，可以向该项目添加 SQL Server 单元测试（有关详细信息，请参见[创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)）。  
@@ -24,7 +24,7 @@ ms.locfileid: "52616223"
 > [!TIP]  
 > 如果你正在使用 Visual Studio 2010，则在将 SQL Server 单元测试添加到测试项目后，不应使用较旧数据库单元测试模板添加单元测试。 如果这样做，将需要再次转换项目，之后测试才能正确执行。  
   
-如果你有在低于 Visual Studio 2010 的版本中创建的测试数据库项目，在将项目升级到 SQL Server Data Tools 前，可以使用[如何：从早期版本的 Visual Studio 升级数据库单元测试](https://msdn.microsoft.com/library/dd193412(VS.100).aspx)中的信息来将数据库项目升级到 Visual Studio 2010。  
+如果具有在早于 Visual Studio 2010 的版本中创建的测试数据库项目，则可以使用[如何：从以前版本的 Visual Studio 升级数据库单元测试](https://msdn.microsoft.com/library/dd193412(VS.100).aspx)中的信息将数据库项目升级到 Visual Studio 2010，然后再将项目升级到 SQL Server Data Tools。  
   
 ### <a name="initiating-an-upgrade"></a>启动升级  
   

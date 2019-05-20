@@ -14,22 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582761"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372440"
 ---
-# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>SQL Server 使用情况和诊断数据收集的本地审核
+# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用情况和诊断数据收集的本地审核 (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## <a name="introduction"></a>简介
 
-Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和发送关于计算机或设备的信息。 这被称为“标准计算机信息”。 [SQL Server 使用情况和诊断数据收集](https://support.microsoft.com/kb/3153756)的本地审核组件将服务收集的数据（表示将发送给 Microsoft 的数据（日志））写入指定文件夹。 本地审核的用途是，便于客户出于合规性、监管或隐私验证原因，查看 Microsoft 使用此功能收集的所有数据。  
+Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和发送关于计算机或设备的信息。 这被称为“标准计算机信息”。 [SQL Server 使用情况和诊断数据收集](usage-and-diagnostic-data-configuration-for-sql-server.md)的本地审核组件将服务收集的数据（表示将发送给 Microsoft 的数据（日志））写入指定文件夹。 本地审核的用途是，便于客户出于合规性、监管或隐私验证原因，查看 Microsoft 使用此功能收集的所有数据。  
 
 自 SQL Server 2016 CU2 起，可以在实例一级为 SQL Server 数据库引擎和 SQL Server Analysis Services (SSAS) 配置本地审核。 在 SQL Server 2016 CU4 和 SQL Server 2016 SP1 中，SQL Server Integration Services (SSIS) 也启用了本地审核。 在安装过程中安装的其他 SQL Server 组件，以及在安装后下载或安装的 SQL Server 工具没有使用情况和诊断数据收集的本地审核功能。
+
+## <a name="remarks"></a>Remarks
+
+ - 不支持删除或禁用 SQL CEIP 服务。 
+ - 不支持从群集组中删除 SQL CEIP 资源。 
+
+若要选择退出数据收集，请参阅[启用或禁用本地审核](#turning-local-audit-on-or-off)
 
 ## <a name="prerequisites"></a>必备条件 
 

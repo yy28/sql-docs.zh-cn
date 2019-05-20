@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 83fb5aa641537e99f7562f6c4fd7981b8e2233b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30d657ed93a0ff272370f340dbba59c9e72c0079
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532764"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484341"
 ---
 # <a name="install-sql-server-database-engine"></a>安装 SQL Server 数据库引擎
 
@@ -37,7 +37,7 @@ ms.locfileid: "52532764"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   复制 - 是一个可选组件  
+-   [SQL Server 复制](../../relational-databases/replication/sql-server-replication.md) - 可选组件  
 
 -   [使用 R 和 Python 的机器学习服务（数据库内）](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - 是一个可选组件
 
@@ -47,6 +47,9 @@ ms.locfileid: "52532764"
   
     > [!NOTE]  
     >  在此版本中，在安装程序中选中“Data Quality Services”复选框不会安装 Data Quality Services (DQS) 服务器。 您必须执行其他安装后步骤以安装 DQS 服务器。 有关详细信息，请参阅 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
+    
+- [针对外部数据的 PolyBase 查询服务](../../relational-databases/polybase/polybase-guide.md) - 可选组件 
+
   
  下列附加功能是许多典型用户应用场景的可选项：  
   

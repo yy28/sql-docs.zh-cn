@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526056"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099660"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>如何显示 Transact-SQL 脚本的大纲和向 Transact-SQL 脚本添加代码段
-SQL Server Data Tools 包括一个由代码段组成的代码库，可以直接将这些代码段插入到自己的应用程序中。 每个代码段都执行一项完整的脚本任务，如创建函数、表、触发器、索引、视图、用户定义数据类型等。你只需很少的鼠标单击操作即可将代码段插入源代码。 这些代码段可以通过减少您在键入上所用的时间，提高您的工作效率。  
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>如何：显示 Transact-SQL 脚本的大纲并向 Transact-SQL 脚本添加代码片段
+SQL Server Data Tools 包括一个由代码段组成的代码库，可以直接将这些代码段插入到自己的应用程序中。 每个代码段都执行一项完整的脚本任务，如创建函数、表、触发器、索引、视图、用户定义数据类型等。你只需执行很少的鼠标单击操作即可将代码段插入源代码。 这些代码段可以通过减少您在键入上所用的时间，提高您的工作效率。  
   
 需要浏览相应的代码段时，您可以使用代码段选择器，其中给出了可供选择的代码段的分类列表。 一旦您向代码添加了代码段后，就可能存在需要自定义的部分，例如使用更合适的名称替换变量名称，或者放置于存储过程的实际逻辑中。 您将注意到，插入的代码段代码在代码中有一个或多个针对此用途的突出显示的替换点。 如果将鼠标指针放置在替换点上，将出现一个工具提示，说明应该如何更改此代码。  
   

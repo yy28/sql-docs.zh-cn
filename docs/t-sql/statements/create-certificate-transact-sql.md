@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42a486a50e49e2d64024355617e77a84833edba9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: aede830ed407fcd7dddba4d2d9446b6510e84c8a
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326538"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774945"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -126,17 +126,18 @@ CREATE CERTIFICATE certificate_name
 > [!IMPORTANT]
 > Azure SQL 数据库不支持通过文件或使用私钥文件创建证书。
   
+ BINARY =asn_encoded_certificate  
+ 指定为二进制常量的 ASN 编码证书字节数。  
+ **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+  
  WITH PRIVATE KEY  
- 指定将证书的私钥加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 该子句只有在通过文件创建证书时才有效。 若要加载程序集的私钥，请使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)。  
+ 指定将证书的私钥加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 从程序集创建证书时，此子句无效。 若要加载从程序集创建的证书的私钥，请使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)。  
   
  FILE ='path_to_private_key'  
  指定私钥的完整路径（包括文件名）。 path_to_private_key 可以是本地路径，也可以是网络位置的 UNC 路径。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
   
 > [!IMPORTANT]  
 >  这种方法不适用于包含的数据库或 Azure SQL 数据库。  
-  
- asn_encoded_certificate  
- 指定为二进制常量的 ASN 编码证书位。  
   
  BINARY =private_key_bits  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -162,7 +163,7 @@ CREATE CERTIFICATE certificate_name
  使证书可用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话会话的发起方。 默认值为 ON。  
   
 ## <a name="remarks"></a>Remarks  
- 证书是一个数据库级的安全对象，它遵循 X.509 标准并支持 X.509 V1 字段。 CREATE CERTIFICATE 可以通过文件或程序集加载证书。 该语句也可生成密钥对并创建自我签名的证书。  
+ 证书是一个数据库级的安全对象，它遵循 X.509 标准并支持 X.509 V1 字段。 CREATE CERTIFICATE 可以从文件、二进制常量或程序集加载证书。 该语句也可生成密钥对并创建自我签名的证书。  
   
  私钥必须 \<= 2500 个字节，并且为加密格式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的私钥长度在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及以前版本中是 1024 位，从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始是 2048 位。 从外部源导入的私钥的最小长度为 384 位，最大长度为 4,096 位。 导入的私钥的长度必须是 64 位的整数倍。 用于 TDE 的证书限于专用密钥大小 3456 比特。  
   
@@ -183,7 +184,7 @@ CREATE CERTIFICATE certificate_name
   
  可以使用 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md) 函数创建证书的二进制说明。 有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的示例，请参阅文章 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 CREATE CERTIFICATE 权限。 只有 Windows 登录名、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和应用程序角色才能拥有证书。 其他组和角色不能拥有证书。  
   
 ## <a name="examples"></a>示例  
@@ -233,7 +234,10 @@ GO
 ```  
 > [!IMPORTANT]
 > Azure SQL 数据库不支持通过文件创建证书。
-   
+
+> [!IMPORTANT]
+> 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，[CLR 严格安全性](../../database-engine/configure-windows/clr-strict-security.md)服务器配置选项可防止在未先为其设置安全性的情况下加载程序集。 加载证书，从证书创建登录名，向该登录名授予 `UNSAFE ASSEMBLY`，然后加载程序集。
+
 ### <a name="d-creating-a-self-signed-certificate"></a>D. 创建自我签名的证书  
  下面的示例在不指定加密密码的情况下创建名为 `Shipping04` 的证书。 此示例可与 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 一起使用。
   
@@ -251,6 +255,8 @@ GO
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md)   
  [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY (Transact-SQL)](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

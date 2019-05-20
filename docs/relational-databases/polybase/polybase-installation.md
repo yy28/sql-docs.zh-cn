@@ -11,12 +11,13 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872297"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775054"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -40,15 +41,16 @@ ms.locfileid: "58872297"
    
 - 必须启用 TCP/IP 才能使 PolyBase 正常工作。 SQL Server 的所有版本均默认启用 TCP/IP，Developer 和 Express SQL Server 版本除外。 若要使 PolyBase 在 Developer 和 Express 版本上正常工作，必须启用 TCP/IP 连接。 请参阅[启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 
-- MSVC++ 2012。 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > 在每台计算机上仅可在一个 SQL Server 实例上安装 PolyBase。
-> 
-> [!IMPORTANT]
-> 
-> 若要对 Hadoop 使用计算下推功能，目标 Hadoop 群集必须具有 HDFS、YARN 和 MapReduce 的核心组件且已启用作业历史记录服务器。 PolyBase 通过 MapReduce 提交下推查询，并且从作业历史记录服务器拉取状态。 缺少任一组件，查询都会失败。
+
+
+>[!NOTE]
+>若要使用 PolyBase，必须对数据库具有 sysadmin 或 CONTROL SERVER 级别的权限。
+
+>[!IMPORTANT]
+>若要对 Hadoop 使用计算下推功能，目标 Hadoop 群集必须具有 HDFS、YARN 和 MapReduce 的核心组件且已启用作业历史记录服务器。 PolyBase 通过 MapReduce 提交下推查询，并且从作业历史记录服务器拉取状态。 缺少任一组件，查询都会失败。
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>单节点或 PolyBase 横向扩展组
 
@@ -74,11 +76,10 @@ ms.locfileid: "58872297"
    ![PolyBase 服务](../../relational-databases/polybase/media/install-wizard.png "PolyBase 服务")  
    
 4. 在服务器配置页上，将“SQL Server PolyBase 引擎服务”和“SQL Server PolyBase 数据移动服务”配置为在同一域帐户下运行。  
-   
-   > [!IMPORTANT] 
-   >
+
+   >[!IMPORTANT]
    >在 PolyBase 横向扩展组中，所有节点上的 PolyBase 引擎和 PolyBase 数据移动服务必须在同一个域帐户下运行。 请参阅 [PolyBase 横向扩展组](#enable)。
-   
+
 5. 在“PolyBase 配置页”上，选择两个选项之一。 有关详细信息，请参阅 [PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
    
    - 将 SQL Server 实例用作已启用 PolyBase 的独立实例。  
@@ -91,8 +92,7 @@ ms.locfileid: "58872297"
    
 6. 在 PolyBase 配置页上，指定具有至少六个端口的端口范围。 SQL Server 安装程序分配该范围中的前六个可用端口。  
 
-   > [!IMPORTANT]
-   >
+   >[!IMPORTANT]
    > 安装后，必须[启用 PolyBase 功能](#enable)。
 
 

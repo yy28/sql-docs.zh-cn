@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datatoolsoperations
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 99ed8322745c86bbcf18356c27ed9ec68ab34b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 012afa885490bb180b9ba0cae7b8ad435cf70e58
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604525"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099374"
 ---
 # <a name="data-tools-operations-window"></a>“数据工具操作”窗口
 “数据工具操作”窗口会显示本主题中讨论的某些操作的进度，并告知你任何错误。  
@@ -36,7 +36,7 @@ ms.locfileid: "47604525"
   
 -   从“SQL Server 对象资源管理器”中删除对象。 有关详细信息，请参阅[如何：删除对象和解析依赖关系](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)。  
   
--   发布结果。 有关详细信息，请参阅[如何：更改目标平台和发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+-   发布结果。 有关详细信息，请参阅[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   
--   部署。 有关详细信息，请参阅[如何：生成和部署到本地数据库](../ssdt/how-to-build-and-deploy-to-a-local-database.md)。  
+-   部署。 有关详细信息，请参阅[如何：生成并部署到本地数据库](../ssdt/how-to-build-and-deploy-to-a-local-database.md)。  
   

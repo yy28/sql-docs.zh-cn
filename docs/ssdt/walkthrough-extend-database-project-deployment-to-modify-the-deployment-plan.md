@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 073d32e69df1ab852271b1c921f1f3e99bae92c4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fbd30a8b0e112d74bf9bd0d009592d753688fadd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531560"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099542"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>演练：扩展数据库项目部署以修改部署计划
 可以创建部署参与者以便在部署 SQL 项目时执行自定义操作。 可以创建 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 或 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)。 使用 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 可在执行计划前更改计划，使用 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 可在执行计划时执行操作。 在本演练中，你将创建一个名为 SqlRestartableScriptContributor 的 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，用于将 IF 语句添加到部署脚本中的批处理，以便脚本能在执行期间出错时重新运行直至批处理完成。  
@@ -365,7 +365,7 @@ ms.locfileid: "52531560"
     |--------------|-------------------|  
     |CreateExecuteSQL|定义 CreateExecuteSQL 方法以使用 EXEC sp_executesql 语句环绕提供的语句。 主要类型、方法和属性包括：[ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx)、[ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx)、[SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)、[ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) 和 [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx)。|  
     |CreateCompletedBatchesName|定义 CreateCompletedBatchesName 方法。 此方法创建将插入批处理的临时表中的名称。主要类型、方法和属性包括：[SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)。|  
-    |IsStatementEscaped|定义 IsStatementEscaped 方法。 此方法确定此类模型元素是否需要先将语句包装在 EXEC sp_executesql 语句中，然后才能将其包含在 IF 语句中。 主要类型、方法和属性包括：TSqlObject.ObjectType、ModelTypeClass 和以下模型类型的 TypeClass 属性：Schema、Procedure、View、TableValuedFunction、ScalarFunction、DatabaseDdlTrigger、DmlTrigger、ServerDdlTrigger。|  
+    |IsStatementEscaped|定义 IsStatementEscaped 方法。 此方法确定此类模型元素是否需要先将语句包装在 EXEC sp_executesql 语句中，然后才能将其包含在 IF 语句中。 主要类型、方法和属性包括：TSqlObject.ObjectType、ModelTypeClass 以及以下模型类型的 TypeClass 属性：架构、过程、视图、TableValuedFunction、ScalarFunction、DatabaseDdlTrigger、DmlTrigger、ServerDdlTrigger。|  
     |CreateBatchCompleteInsert|定义 CreateBatchCompleteInsert 方法。 此方法创建将添加到部署脚本以便跟踪脚本执行进度的 INSERT 语句。 主要类型、方法和属性包括：InsertStatement、NamedTableReference、ColumnReferenceExpression、ValuesInsertSource 和 RowValue。|  
     |CreateIfNotExecutedStatement|定义 CreateIfNotExecutedStatement 方法。 此方法生成一个 IF 语句，该语句可检查临时批处理是否执行指示此批处理已执行的表。 主要类型、方法和属性包括：IfStatement、ExistsPredicate、ScalarSubquery、NamedTableReference、WhereClause、ColumnReferenceExpression、IntegerLiteral、BooleanComparisonExpression 和 BooleanNotExpression。|  
     |GetStepInfo|定义 GetStepInfo 方法。 此方法提取有关用于创建步骤的脚本的模型元素的信息以及步骤名称。 相关的类型和方法包括：[DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx)、[DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx)、[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) 和 [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。|  

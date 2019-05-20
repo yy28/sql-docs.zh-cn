@@ -1,5 +1,5 @@
 ---
-title: 配置 SQL Server 工具使用情况和诊断数据收集 | Microsoft Docs
+title: 配置 SQL Server 工具使用情况和诊断数据收集 (CEIP) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243511"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376856"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>配置 SQL Server 工具使用情况和诊断数据收集
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>配置 SQL Server 工具使用情况和诊断数据收集 (CEIP)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "59243511"
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>选择加入和退出 SQL Server Data Tools 的 CEIP  
 
- 客户体验改善计划是为了帮助 Microsoft 随着时间的推移改进其产品的计划。 此计划将收集有关计算机硬件和人们如何使用产品的信息，同时不会打断用户在计算机上的任务。 收集的信息可帮助 Microsoft 确定要改善的功能。 在本文档中，我们将介绍如何选择启用或禁用适用于 Visual Studio 2017、Visual Studio 2015 和 Visual Studio 2013 的 SQL Server Data Tools (SSDT) CEIP。  
+ 客户体验改善计划是为了帮助 Microsoft 随着时间的推移改进其产品的计划。 此计划将收集有关计算机硬件和人们如何使用产品的信息，同时不会打断用户在计算机上的任务。 收集的信息可帮助 Microsoft 确定要改善的功能。 在本文档中，我们将介绍如何选择启用或禁用适用于 Visual Studio 2017、Visual Studio 2015 和 Visual Studio 2013 的 SQL Server Data Tools (SSDT) CEIP。  有关选择退出 SQL Server 的 CEIP 的信息，请参阅[禁用 SQL Server 的本地审核](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)。
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>选择和控制适用于 Visual Studio 2017 的 CEIP 和 SQL Server Data Tools
 

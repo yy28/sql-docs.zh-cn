@@ -11,15 +11,15 @@ helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 68b5acfe67f0fc8f1408a50a09f48ee9515e3cb9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535508"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105684"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>汇总或聚合表中所有行的值 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ FROM titles
   
     查询及视图设计器将自动为要汇总的列分配列别名。 您可以用更有意义的名称替换此别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-4.  在“分组依据”网格列中，选择适当的聚合函数，例如：**Sum**、**Avg**、**Min**、**Max** 和 **Count**。 如果只希望聚合结果集中的唯一行，请选择带 DISTINCT 选项的聚合函数，如 **Min Distinct**。 不要选择 **Group By**、 **Expression**或 **Where**，因为这些选项不适用于聚合所有行。  
+4.  在“分组依据”网格列中，选择适当的聚合函数，例如：Sum、Avg、Min、Max 和 Count。 如果只希望聚合结果集中的唯一行，请选择带 DISTINCT 选项的聚合函数，如 **Min Distinct**。 不要选择 **Group By**、 **Expression**或 **Where**，因为这些选项不适用于聚合所有行。  
   
     查询和视图设计器将用指定的聚合函数替换 [“SQL”窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 内语句中的列名。 例如，SQL 语句可能类似以下形式：  
   

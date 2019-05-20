@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530786"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098080"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>如何创建项目的快照
+# <a name="how-to-create-a-snapshot-of-a-project"></a>如何：创建项目的快照
 数据层应用程序文件为你在创建数据库架构时提供数据库架构的只读表示形式。 该文件实质上被视为可以将其中的架构对象导入回某一项目的一种数据库架构。 您还可以将其与某一数据库或项目的架构进行比较，并且更新该数据库或项目以便反映在该快照中定义的架构。  
   
 如果某一源数据库项目出现用户错误，还可将该源项目恢复到创建快照时的状态。 您也可以在不同的开发阶段中出于基准目的建立快照。  

@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535849"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450086"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "58535849"
 - [检查是否对任何 AG 数据库使用了更改数据捕获或复制](#special-steps-for-change-data-capture-or-replication):如果 AG 中的任何数据库已启用更改数据捕获 (CDC)，请完成这些[指令](#special-steps-for-change-data-capture-or-replication)。
 
 >[!NOTE]  
->在就地升级副本的滚动升级外不支持在同一 AG 中混合使用不同版本的 SQL Server 实例。 更高版本的 SQL Server 实例不能作为新副本添加到现有 AG。 例如，SQL Server 2017 副本不能添加到现有 SQL Server 2016 AG。 要通过 AG 迁移至新版本的 SQL Server 实例，唯一可行方式是使用 SQL Server 2016 Enterprise Edition 或更高版本中的分布式 AG。
+>在滚动升级之外，不支持在同一 AG 中混合使用 SQL Server 实例版本，并且不应该长时间保持该状态，因为升级应该快速进行。 升级 SQL Server 2016 及更高版本的其他选项是使用分布式可用性组。
 
 ## <a name="rolling-upgrade-basics-for-always-on-ags"></a>Always On AG 的滚动升级基础  
 在执行服务器升级或更新时请按照以下准则操作，以最大程度减少 AG 的故障时间和数据丢失量：  

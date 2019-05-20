@@ -1,5 +1,5 @@
 ---
-title: 配置 SQL Server 使用情况和诊断数据收集 | Microsoft Docs
+title: 配置 SQL Server 使用情况和诊断数据收集 (CEIP) | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: b616c8f3a41d960ecd04ac1407014aa2bfa3ce29
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 44a8d6c22d7dd003f7c6e90963eb546e6ca1bf50
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582710"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372761"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server"></a>配置 SQL Server 使用情况和诊断数据收集
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>配置 SQL Server 使用情况和诊断数据收集 (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -55,6 +55,12 @@ AND instance_name = '_Total'
 
 > [!NOTE]
 > 只能在付费版本的 SQL Server 中禁用向 Microsoft 发送信息的功能。
+
+## <a name="remarks"></a>Remarks
+ - 不支持删除或禁用 SQL CEIP 服务。 
+ - 不支持从群集组中删除 SQL CEIP 资源。 
+
+若要选择退出数据收集，请参阅[启用或禁用本地审核](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)
 
 ## <a name="error-and-usage-reporting-application"></a>错误和使用情况报告应用程序 
 

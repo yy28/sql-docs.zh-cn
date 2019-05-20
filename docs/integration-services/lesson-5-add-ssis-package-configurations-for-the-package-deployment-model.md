@@ -11,14 +11,18 @@ ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9227f1c3d7cd6e6c6aacfd58c2e3fefa7a19728f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6246183a4a928e1813125676753c827bf20cf8c5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282001"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721150"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>第 5 课：添加包部署模型的 SSIS 包配置
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 包配置允许从开发环境外部设置运行时属性和变量。 配置允许您开发灵活且易于部署和分发的包。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了以下配置类型：  
   
@@ -32,7 +36,7 @@ ms.locfileid: "58282001"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表  
   
-在本课中，将修改在[第 4 课：使用 SSIS 添加错误流重定向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)中创建的示例 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包，以便使用包部署模型并利用包配置。 还可以复制本教程附带的已完成的第 4 课包。 
+在本课中，将修改在[第 4 课：使用 SSIS 添加错误流重定向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)中创建的示例  包，以便使用包部署模型并利用包配置。 还可以复制本教程附带的已完成的第 4 课包。 
 
 使用“程序包配置向导”，可创建一个 XML 配置，以便更新 Foreach 循环容器的 Directory 属性。 使用映射到 Directory 属性的包级别变量。 创建配置文件后，将变量的值从开发环境外部修改为新的示例数据文件夹路径。 再次运行包时，配置文件将填充变量值，而变量将更新 **Directory** 属性。 然后，包将循环访问新数据文件夹中的文件，而不是原始硬编码文件夹中的文件。  
   
@@ -42,7 +46,7 @@ ms.locfileid: "58282001"
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
--   [第 1 步：复制第 4 课包](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
+-   [步骤 1：复制第 4 课包](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
 -   [步骤 2：启用和配置包配置](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
@@ -52,7 +56,7 @@ ms.locfileid: "58282001"
   
 ## <a name="start-the-lesson"></a>开始课程  
   
--   [第 1 步：复制第 4 课包](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
+-   [步骤 1：复制第 4 课包](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
   
   

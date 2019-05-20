@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2ead75f8b71227b1bd3831b650cc036a66b5b325
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e3175f523a0cc6b91fd1d5bd955e6872a5cf0064
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397088"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098408"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何在您的项目中使用 Microsoft SQL Server 2012 对象
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何：在项目中使用 Microsoft SQL Server 2012 对象
 在此示例中，你将向一个面向 Microsoft SQL Server 2012 的数据库项目中添加序列对象。  
   
 Microsoft SQL Server 2012 中引入了序列。 序列是一种用户定义的架构绑定对象，它根据创建该序列时采用的规范生成一组数值。 这组数值以定义的间隔按升序或降序生成，并且可根据要求循环（重复）。  有关序列对象的详细信息，请参阅[序列号](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)。 有关 Microsoft SQL Server 2012 新增功能的信息，请参阅 [SQL Server 2012 中的新增功能](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)。  
@@ -44,9 +44,9 @@ Microsoft SQL Server 2012 中引入了序列。 序列是一种用户定义的�
     CACHE 10  
     ```  
   
-4.  如果项目的目标平台未设置为 Microsoft SQL Server 2012，则“错误列表”将显示 `CREATE SEQUENCE` 语句的语法错误。 若要更正此问题，请按照[如何：更改目标平台和发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述相应地更改目标平台。  
+4.  如果项目的目标平台未设置为 Microsoft SQL Server 2012，则“错误列表”将显示 `CREATE SEQUENCE` 语句的语法错误。 若要更正此问题，请按照[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述相应地更改目标平台。  
   
-5.  请按照[如何：更改目标平台和发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述，将项目发布到已连接的 Microsoft SQL Server 2012 服务器中的数据库。  
+5.  请按照[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述，将项目发布到已连接的 Microsoft SQL Server 2012 服务器中的数据库。  
   
 ### <a name="to-use-the-new-sequence-object"></a>使用新的序列对象  
   

@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b5dcb7c6c40c17cf2cfa68d493217359511b93b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba52dfc0ff41cb1ee4a92fda4a37e368f0533474
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406234"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090168"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>有关创建适用于 SQL Server 的自定义静态代码分析规则程序集的演练
 此演练演示创建 SQL Server 代码分析规则的步骤。 在此演练中创建的规则用于避免存储过程、触发器和函数中的 WAITFOR DELAY 语句。  

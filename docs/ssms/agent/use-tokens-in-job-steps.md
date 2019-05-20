@@ -14,16 +14,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05e88dd8ce75875b44248916cd7bdb238f621e13
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: c6a48d0eb6abae94ba6e3c54e0aa5b0b6b874371
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342878"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089443"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "58342878"
 >   
 > 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，并在“警报系统”页上选择“为警报的所有作业响应替换标记”以启用这些标记。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记替换简单且有效：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以准确的文字字符串值替换标记。 所有标记都是区分大小写的。 您的作业步骤必须考虑到这一点，并且将所用标记正确地用引号引起来或将替换字符串转换为正确的数据类型。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理令牌替换简单且有效：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以准确的文字字符串值替换令牌。 所有标记都是区分大小写的。 您的作业步骤必须考虑到这一点，并且将所用标记正确地用引号引起来或将替换字符串转换为正确的数据类型。  
   
 例如，您可以在作业步骤中使用以下语句输出数据库的名称：  
   
@@ -78,7 +78,7 @@ ms.locfileid: "58342878"
 |**(MSSA)**|主 SQLServerAgent 服务名称。|  
 |**(OSCMD)**|用于运行 **CmdExec** 作业步骤的程序的前缀。|  
 |**(SQLDIR)**|安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目录。 默认情况下，此值为 C:\Program Files\Microsoft SQL Server\MSSQL。|  
-|**(SQLLOGDIR)**|SQL Server 错误日志文件夹路径的替换标记 – 例如 $(ESCAPE_SQUOTE(SQLLOGDIR))。|  
+|**(SQLLOGDIR)**|SQL Server 错误日志文件夹路径的替换标记 – 例如 $(ESCAPE_SQUOTE(SQLLOGDIR))。 此令牌仅适用于 SQL Server 2014 及更高版本。|  
 |**(STEPCT)**|此步骤已执行的次数（不包括重试）。 步骤命令可以使用它来强制终止多步骤循环。|  
 |**(STEPID)**|步骤 ID。|  
 |**(SRVR)**|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机的名称。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是命名实例，此值将包含实例名。|  

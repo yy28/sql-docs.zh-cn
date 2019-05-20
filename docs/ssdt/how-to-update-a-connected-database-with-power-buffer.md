@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d1b5a5c1a20f52d9a0060e54ce38f6cca816a63
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9663829f679eeb0c829a94be00c86a7f1e0544af
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396781"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098421"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>如何：使用 Power Buffer 更新连接的数据库
 SQL Server Data Tools Power Buffer 技术可通过存储你在当前会话中所做的所有编辑工作，方便你将更改应用于连接的数据库。 由于在 Power Buffer 窗口（在 Transact\-SQL 编辑器或表设计器中）中进行编辑所导致的任何错误都将立即显示在“错误列表”窗格中，这使你可以按照这些标识的错误来进一步进行故障排除。 您可以验证挂起的更改，直到可供将其应用于您的数据库。 在更新过程中，SSDT 会基于您的编辑自动创建 ALTER 脚本，并提醒您任何潜在的问题。 然后，您可以将在所有打开的 Power Buffer 窗口上累积的所有更改应用于相同的数据库，或者保存该 ALTER 脚本以便在以后部署。  

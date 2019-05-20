@@ -19,16 +19,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c004a991872257baa045be6e0253d7d63979f2f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c4fdd3b1512d64cb8c702e00ba89aed02d5abb0a
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542436"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946586"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 导入批量数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "52542436"
   
 -   [使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…) 函数  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…)函数  
  通过调用 OPENROWSET 函数并指定 BULK 选项，访问 OPENROWSET 大容量行集提供程序。 使用 OPENROWSET(BULK...) 函数可以通过 OLE DB 访问接口连接到远程数据源（如数据文件）以访问远程数据。  
 
 **适用于：**`OPENROWSET` 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 中不可用。
@@ -77,7 +77,7 @@ ms.locfileid: "52542436"
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- 在 INSERT 语句中使用时，OPENROWSET(BULK...) 支持表提示。 BULK 子句除了接受 TABLOCK 等常规表提示之外，还可以接受下列专用表提示：IGNORE_CONSTRAINTS（仅忽略 CHECK 约束）、IGNORE_TRIGGERS、KEEPDEFAULTS 和 KEEPIDENTITY。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
+ 在 INSERT 语句中使用时，OPENROWSET(BULK...) 支持表提示。 除了常规表提示（例如 TABLOCK），BULK 子句还可以接受以下专用表提示：IGNORE_CONSTRAINTS（仅忽略 CHECK 约束）、IGNORE_TRIGGERS、KEEPDEFAULTS 和 KEEPIDENTITY。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  有关 BULK 选项的更多使用信息，请参阅 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)。  
   

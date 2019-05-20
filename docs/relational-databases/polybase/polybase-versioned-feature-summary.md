@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a20544fb4f19611071f28b7cfc5f16fd7e462ce
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775947"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -31,16 +31,16 @@ ms.locfileid: "51665422"
 ||||||
 |-|-|-|-|-|   
 |**功能**|**SQL Server 2016**|**Azure SQL 数据库**|**Azure SQL 数据仓库**|**并行数据仓库**| 
-|查询 Hadoop 数据和 [!INCLUDE[tsql](../../includes/tsql-md.md)]|用户帐户控制|否|否|用户帐户控制|
-|从 Hadoop 导入数据|用户帐户控制|否|否|用户帐户控制|
-|导出数据到 Hadoop  |用户帐户控制|否|否| 用户帐户控制|
+|查询 Hadoop 数据和 [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|否|否|是|
+|从 Hadoop 导入数据|是|否|否|是|
+|导出数据到 Hadoop  |是|否|否| 是|
 |查询、导入自、导出至 Azure HDInsight |否|否|否|否
-|将查询计算下推到 Hadoop|用户帐户控制|否|否|用户帐户控制|  
-|从 Azure Blob 存储导入数据|用户帐户控制|否|是|用户帐户控制| 
-|导出数据到 Azure Blob 存储|用户帐户控制|否|是|用户帐户控制|  
+|将查询计算下推到 Hadoop|是|否|否|是|  
+|从 Azure Blob 存储导入数据|是|否|是|是| 
+|导出数据到 Azure Blob 存储|是|否|是|是|  
 |从 Azure Data Lake Store 导入数据|否|否|是|否|    
 |从 Azure Data Lake Store 导出数据|否|否|是|否|
-|从 Microsoft BI 工具运行 PolyBase 查询|用户帐户控制|否|是|用户帐户控制|   
+|从 Microsoft BI 工具运行 PolyBase 查询|是|否|是|是|   
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 运算符支持的下推计算
 
@@ -49,8 +49,8 @@ ms.locfileid: "51665422"
 ||||
 |-|-|-| 
 |运算符类型|可推送到 Hadoop|可推送到 Blob 存储|
-|列投影|用户帐户控制|否|
-|谓词|用户帐户控制|否|
+|列投影|是|否|
+|谓词|是|否|
 |聚合|Partial|否|
 |外部表之间的联接|否|否|
 |外部表和本地表之间的联接|否|否|
@@ -61,6 +61,8 @@ ms.locfileid: "51665422"
 ## <a name="known-limitations"></a>已知的限制
 
 PolyBase 具有以下限制：
+
+- 若要使用 PolyBase，必须对数据库具有 sysadmin 或 CONTROL SERVER 级别的权限。
 
 - 在 SQL Server 中最大行大小（包括可变长度列的全长）不能超过 32 KB，在 Azure SQL 数据仓库中不能超过 1 MB。
 

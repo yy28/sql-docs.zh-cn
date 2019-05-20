@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b2e04e5b63000bcdd7100c297ecd9d90dd33f27
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 728981e3b05aa82d80138006c0f1a13648cbcd25
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125577"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105589"
 ---
 # <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "54125577"
   
  可以向作为安全主体的登录名授予权限。 登录名的作用域是整个 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的特定数据库，登录名必须映射到数据库用户。 数据库内的权限是向数据库用户而不是登录名授予和拒绝授予的。 可将作用域为整个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的权限（例如 **CREATE ENDPOINT** 权限）授予一个登录名。  
   
-> **注意：** 当登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，在 master 数据库验证标识。 使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 连接进行身份验证。 当使用包含的数据库用户时，登录名不是必需的。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+> **注意**：当登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，在 master 数据库验证标识。 使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 连接进行身份验证。 当使用包含的数据库用户时，登录名不是必需的。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ##  <a name="Security"></a> Security  
 

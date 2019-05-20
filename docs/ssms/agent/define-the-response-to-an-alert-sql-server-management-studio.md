@@ -12,16 +12,16 @@ helpviewer_keywords:
 - alerts [SQL Server], responding to
 - responding to alerts
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2d8632c99b150d21e2558bf6e35c26f4fcf240ae
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 48712714fb837a769153870404257403184087c0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698260"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096680"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>定义对警报的响应 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51698260"
   
     [限制和局限](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要定义对警报的响应，可使用：**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51698260"
   
 6.  选中 **“执行作业”** 复选框，然后从 **“执行作业”** 复选框下的列表中选择出现警报时执行的作业。 您可以单击 **“新建作业”** 来创建新的作业。 也可以单击 **“查看作业”** 查看有关作业的详细信息。 有关“新建作业”和“作业属性 _job\_name_”对话框中的可用选项的详细信息，请参阅[创建作业](../../ssms/agent/create-a-job.md)和[查看作业](../../ssms/agent/view-a-job.md)。  
   
-7.  如果要在激活警报时通知操作员，请选中 **“通知操作员”** 复选框。 在“操作员”列表中，选择以下用于通知操作员的一个或多个方法：“电子邮件”、“寻呼程序”或“Net Send”。 您可以单击 **“新建操作员”** 创建新的操作员。 也可以单击 **“查看操作员”** 查看有关操作员的详细信息。 有关 **“新建操作员”** 和 **“查看操作员属性”** 对话框中的可用选项的详细信息，请参阅 [Create an Operator](../../ssms/agent/create-an-operator.md) 和 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)。  
+7.  如果要在激活警报时通知操作员，请选中 **“通知操作员”** 复选框。 在“操作员”列表中，选择以下一种或多种方法用于通知操作员：“电子邮件”、“寻呼机”或“Net Send”。 您可以单击 **“新建操作员”** 创建新的操作员。 也可以单击 **“查看操作员”** 查看有关操作员的详细信息。 有关 **“新建操作员”** 和 **“查看操作员属性”** 对话框中的可用选项的详细信息，请参阅 [Create an Operator](../../ssms/agent/create-an-operator.md) 和 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)。  
   
 8.  完成后，单击 **“确定”**。  
   

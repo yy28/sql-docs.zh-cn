@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], creating
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d1be35274e41f259f0213d866bf91151d820f9d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 452cec6a4cfcf5f1f85a4e05f6522007851a31ca
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415994"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095533"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>创建 SQL Server 代理的代理帐户
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52415994"
   
     [限制和局限](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要创建 SQL Server 代理的代理帐户，请使用：**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "52415994"
   
 #### <a name="Permissions"></a>Permissions  
   
--   只有 **sysadmin** 固定服务器角色的成员才有权创建、修改或删除代理帐户。 必须将不属于 **sysadmin** 固定服务器角色的成员的用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中的以下** 代理固定数据库角色之一，才能使用代理： **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole**。  
+-   只有 **sysadmin** 固定服务器角色的成员才有权创建、修改或删除代理帐户。 必须将不属于 sysadmin 固定服务器角色成员的用户添加到 msdb 数据库中的以下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色之一，才能使用代理：SQLAgentUserRole、SQLAgentReaderRole 或 SQLAgentOperatorRole。  
   
 -   如果除了代理之外还需要创建凭据，则需要 **ALTER ANY CREDENTIAL** 权限。  
   
