@@ -2,20 +2,20 @@
 title: 在报表设计器中停靠“报表数据”窗格 (SSRS) | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 230f7bbfcab1587f4934a5548d99cf11f3c94d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c9720a4d5e975f6bf46c17d2008252e05cf7171f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678885"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577861"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>在报表设计器中停靠“报表数据”窗格 (SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]报表设计器中，“报表数据”窗格显示了可在报表中使用的数据对象的层次结构视图（包括数据源、数据集、字段、参数和图像）。 解决方案资源管理器中显示的共享数据源中可嵌入或引用此视图中的数据源。  
