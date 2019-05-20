@@ -2,7 +2,7 @@
 title: 升级本地 SQL Server 到 SQL Server 或使用数据迁移助手的 Azure Vm 上的 SQL Server |Microsoft Docs
 description: 了解如何使用数据迁移助手将升级到更高版本的 SQL Server 或 Azure Vm 上的 SQL Server 的本地 SQL Server
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 05/18/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
+ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 6d90a661c160fbbe473e6c30a8e45e9ea4f75056
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 672473c4e4cfaf5314f53ae7d3a351cb82a93e6d
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62706963"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875182"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在本地 SQL Server 升级到 SQL Server 或使用数据迁移助手的 Azure Vm 上的 SQL Server
 
 数据迁移助手的 Azure Vm 或 Azure SQL 数据库上提供 SQL Server 内部部署和更高版本的 SQL Server 的升级或迁移到 SQL Server 的无缝的评估。
 
-本文提供有关使用数据迁移助手到更高版本的 SQL Server 或 Azure Vm 上的 SQL Server 升级本地 SQL Server 的分步说明。   
+本文提供有关使用数据迁移助手到更高版本的 SQL Server 或 Azure Vm 上的 SQL Server 升级本地 SQL Server 的分步说明。
 
 ## <a name="create-a-new-migration-project"></a>创建新的迁移项目
 
