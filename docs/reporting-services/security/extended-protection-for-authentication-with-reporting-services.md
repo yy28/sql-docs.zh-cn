@@ -2,18 +2,18 @@
 title: Reporting Services 针对验证的扩展保护 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8f096065d690044fdda42f71ebb0c423801b41bb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b273ef327b666c7c660349657fa9ca9eabe9f4a4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212687"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571001"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 针对验证的扩展保护
 
@@ -112,8 +112,8 @@ SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果�
   
 |设置|描述|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|指定扩展保护的实行程度。 有效值为<br /><br /> **OFF**：默认值。 指定没有渠道绑定或服务绑定验证。<br /><br /> **Allow** 支持扩展保护，但并不需要此功能。  指定：<br /><br /> - 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。 实行保护的方式通过设置 **RsWindowsExtendedProtectionScenario**来确定<br /><br /> - 对于在不支持扩展保护的操作系统上运行的应用程序而言，将允许进行身份验证。<br /><br /> **Require** 指定：<br /><br /> - 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。<br /><br /> - 对于在不支持扩展保护的操作系统上运行的应用程序而言，将 **不** 允许进行身份验证。|  
-|**RsWindowsExtendedProtectionScenario**|指定要验证哪些形式的扩展保护：渠道绑定、服务绑定，或两者。 有效值为<br /><br /> **代理**：默认值。 指定：<br /><br /> - 当存在渠道绑定标记时，使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> - 实行服务绑定。<br /><br /> **Any** 指定：<br /><br /> - 不要求 Windows NTLM、Kerberos 和 Negotiate 身份验证以及渠道绑定。<br /><br /> - 实行服务绑定。<br /><br /> **Direct** 指定：<br /><br /> - 当 CBT 存在、与当前服务之间存在 SSL 连接并且用于 SSL 连接的 CBT 与 NTLM、Kerberos 或 Negotiate 标记的 CBT 匹配时，应使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> - 不实行服务绑定。<br /><br /> <br /><br /> 注意：如果 RsWindowsExtendedProtectionLevel 设置为 OFF，则忽略 RsWindowsExtendedProtectionScenario 设置。|  
+|**RSWindowsExtendedProtectionLevel**|指定扩展保护的实行程度。 有效值为<br /><br /> **Off**：默认值。 指定没有渠道绑定或服务绑定验证。<br /><br /> **Allow** 支持扩展保护，但并不需要此功能。  指定：<br /><br /> - 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。 实行保护的方式通过设置 **RsWindowsExtendedProtectionScenario**来确定<br /><br /> - 对于在不支持扩展保护的操作系统上运行的应用程序而言，将允许进行身份验证。<br /><br /> **Require** 指定：<br /><br /> - 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。<br /><br /> - 对于在不支持扩展保护的操作系统上运行的应用程序而言，将 **不** 允许进行身份验证。|  
+|**RsWindowsExtendedProtectionScenario**|指定使哪种格式的扩展保护生效：渠道绑定、服务绑定或这两者。 有效值为<br /><br /> **Proxy**：默认值。 指定：<br /><br /> - 当存在渠道绑定标记时，使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> - 实行服务绑定。<br /><br /> **Any** 指定：<br /><br /> - 不要求 Windows NTLM、Kerberos 和 Negotiate 身份验证以及渠道绑定。<br /><br /> - 实行服务绑定。<br /><br /> **Direct** 指定：<br /><br /> - 当 CBT 存在、与当前服务之间存在 SSL 连接并且用于 SSL 连接的 CBT 与 NTLM、Kerberos 或 Negotiate 标记的 CBT 匹配时，应使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> - 不实行服务绑定。<br /><br /> <br /><br /> 注意：如果 **RsWindowsExtendedProtectionLevel** 设置为 **OFF** ，则忽略 **RsWindowsExtendedProtectionScenario**设置。|  
   
  **rsreportserver.config** 配置文件中的示例条目：  
   
@@ -166,7 +166,7 @@ SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果�
 [使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [针对验证的扩展保护概述](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [Integrated Windows Authentication with Extended Protection（将 Windows 身份验证与扩展保护相集成）](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft 安全公告：身份验证的扩展保护](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Microsoft 安全建议：针对验证的扩展保护](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings 方法 (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

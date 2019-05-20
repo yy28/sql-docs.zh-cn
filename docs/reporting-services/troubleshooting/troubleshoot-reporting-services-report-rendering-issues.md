@@ -2,18 +2,18 @@
 title: 排查 Reporting Services 报表呈现问题 | Microsoft Docs
 ms.date: 02/27/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13a32ba9923a1655b6b8f44d6be2ad4617127edf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646605"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574688"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>排查 Reporting Services 报表呈现问题
 将报表数据与布局信息组合起来后，会将组合的报表发送到报表呈现器。 例如，本地预览报表时，您是使用 HTML 呈现器查看组合报表。 使用本主题可帮助解决特定于报表呈现的问题。   

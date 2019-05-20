@@ -2,18 +2,18 @@
 title: 报表生成器创作环境 (SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 68728f18f72aed6316f3764d81889f1ab5368d25
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 597685b5de75fa78fab0fda4fc3f217462c3d736
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295295"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576310"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>报表生成器创作环境 (SSRS)
   报表生成器 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是独立的创作环境，用于创建 Visual Studio 之外的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 你可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  

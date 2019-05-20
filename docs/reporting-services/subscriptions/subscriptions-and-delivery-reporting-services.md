@@ -2,7 +2,7 @@
 title: 订阅和传递 (Reporting Services) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e04bdc6edaf53e73c7f26dd85a512dbda369ebb1
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711959"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578035"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>订阅和传递 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅是一种配置，它在特定时间或为响应某个事件，以指定的文件格式传递报表。 例如，每周三将 MonthlySales.rdl 报表作为 Microsoft Word 文档保存至文件共享。 订阅可以用于对报表的传递（以特定报表参数值集）进行计划并使其自动完成。  
@@ -99,7 +99,7 @@ ms.locfileid: "52711959"
   
 |要求|描述|  
 |-----------------|-----------------|  
-|Permissions|您必须对报表具有访问权限。 在订阅报表之前，您必须具有查看该报表的权限。<br /><br /> 对于本机模式报表服务器，以下角色分配会影响订阅：<br /><br /> -   通过“管理单独的订阅”任务，用户可以创建、修改和删除特定报表的订阅。 在预定义的角色中，“浏览器”和“报表生成器”角色包括此任务。 包括此任务的角色分配只允许用户管理自己创建的那些订阅。<br />-   通过“管理所有订阅”任务，用户可以访问和修改所有订阅。 此任务是创建数据驱动订阅所必需的。 在预定义的角色中，只有“内容管理员”角色包括此任务。|  
+|权限|您必须对报表具有访问权限。 在订阅报表之前，您必须具有查看该报表的权限。<br /><br /> 对于本机模式报表服务器，以下角色分配会影响订阅：<br /><br /> -   通过“管理单独的订阅”任务，用户可以创建、修改和删除特定报表的订阅。 在预定义的角色中，“浏览器”和“报表生成器”角色包括此任务。 包括此任务的角色分配只允许用户管理自己创建的那些订阅。<br />-   通过“管理所有订阅”任务，用户可以访问和修改所有订阅。 此任务是创建数据驱动订阅所必需的。 在预定义的角色中，只有“内容管理员”角色包括此任务。|  
 |已存储凭据|若要创建订阅，报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅配置为使用当前用户的模拟凭据或委托凭据连接到外部数据源的报表。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅 [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必须拥有查看报表和创建单个订阅的权限。 必须对报表服务器启用 **“预定的事件和报表传递”** 。 有关详细信息，请参阅 [（旧）创建和管理本机模式报表服务器的订阅](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。|  
 |报表中的用户依赖值|仅在标准订阅情况下，如果报表在筛选器中使用用户帐户信息或将此信息以文本形式显示在报表上，则可以对这些报表创建订阅。 在报表中，通过解析为当前用户的 **User!UserID** 表达式指定用户帐户名。 创建订阅时，将把创建订阅的用户视为当前用户。|  
 |无模型项安全性|不能订阅将包含模型项安全设置的模型用作数据源的报表生成器报表。 此限制仅适用于使用模型项安全性的报表。|  

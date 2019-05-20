@@ -2,20 +2,20 @@
 title: 项级任务 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8dc24ff10be5f9621f01ba8ec71e97cce7680074
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792847"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570280"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>任务和权限 - 项级任务
   项级任务是一个权限的集合，并且这些权限是与报表、文件夹、报表模型、资源或共享数据源有关的。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于整个报表服务器站点的系统级任务。 有关详细信息，请参阅 [系统级任务](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "47792847"
   
  共享数据集使用与报表相同的权限集。 报表部件使用与资源相同的权限集。  
   
-|任务|应用到的项|Permissions|  
+|任务|应用到的项|权限|  
 |----------|---------------------|-----------------|  
 |使用报表|报表|读取内容<br /><br /> 读取报表定义<br /><br /> 读取属性|  
 |使用报表|共享数据集|读取内容<br /><br /> 读取报表定义<br /><br /> 读取属性|  

@@ -2,7 +2,7 @@
 title: DatabaseQueryTimeout 属性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DatabaseQueryTimeout property
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eb1d0b0ee7257b6526b93c672e0891b8dd349b19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8149c0954195796ce71a48e022a2f7bc83471601
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772995"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573583"
 ---
 # <a name="configurationsetting-property---databasequerytimeout"></a>ConfigurationSetting 属性 - DatabaseQueryTimeout
   指定必须经过多少秒后报表服务器才能假设命令失败或命令执行的时间过长。 报表服务器会根据 SQL 目录对查询进行计时，而不会根据报表的数据源计时。 读/写。  

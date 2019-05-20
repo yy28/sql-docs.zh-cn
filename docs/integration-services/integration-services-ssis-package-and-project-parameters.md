@@ -14,14 +14,18 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 529bc6a4568ad9979da984607602c2a014b02743
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 97c652c257b6d2aea6eec532c14ffebb6044ed45
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281311"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723599"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
   
  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，您使用 **Project.params** 窗口创建、修改或删除项目参数。 通过使用 **设计器中的** “参数” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡来创建、修改和删除包参数。 通过使用 **“参数化”** 对话框，您可以将新的或现有的参数与任务属性相关联。 有关使用 **Project.params** 窗口和 **“参数”** 选项卡的详细信息，请参阅 [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)。 有关 **“参数化”** 对话框的详细信息，请参阅 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)。  

@@ -2,17 +2,17 @@
 title: 导出报表（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2133fdc66f6dfe6ac4950b1fd9164a4de81f5b6c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289025"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580821"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>导出报表（报表生成器和 SSRS）
 
@@ -96,15 +96,15 @@ ms.locfileid: "56289025"
   
 -   **数据呈现扩展插件** 数据呈现扩展插件会去除报表中的所有格式设置和布局信息而仅显示数据。 可使用所产生的文件将原始报表数据导入为其他文件类型，如 Excel、其他数据库、XML 数据消息或自定义应用程序。 数据呈现器不支持分页。  
   
-     支持以下数据呈现器扩展插件：CSV、XML 和 Atom。  
+     支持以下数据呈现扩展插件：CSV、XML 和 Atom。  
   
 -   **软分页呈现扩展插件** 软分页呈现扩展插件保留报表的布局和格式设置。 为了满足基于屏幕的查看和传递（例如在网页上或在 **ReportViewer** 控件中）需要，对所产生的文件进行优化。  
   
-     支持以下软分页呈现器扩展插件：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 和 Web 存档 (MHTML)。  
+     支持以下软分页呈现扩展插件： [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 和 Web 存档 (MHTML)。  
   
 -   **硬分页呈现扩展插件** 硬分页呈现扩展插件保留报表的布局和格式设置。 对所产生的文件进行了优化，以便提供一致的打印体验或以书本格式联机查看报表。  
   
-     支持以下硬分页呈现器扩展插件：TIFF 和 PDF。  
+     支持以下硬分页呈现扩展插件：TIFF 和 PDF。  
   
 ##  <a name="ExportFormats"></a> 查看报表时可以导出的格式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了用于以不同格式呈现报表的呈现扩展插件。 应针对你所选的文件格式优化报表设计。  下表列出了你可以从用户界面导出的格式。  此外，还列出了你可以结合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅或在从 URL 访问导出报表时使用的其他格式。  请参阅本主题中的 [导出报表的其他方式](#OtherWaysExportingReports)部分。  
@@ -116,7 +116,7 @@ ms.locfileid: "56289025"
 |CSV|data|逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。<br /><br /> 有关详细信息，请参阅[导出到 CSV 文件](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。|  
 |EXCELOPENXML|软分页|查看报表时导出菜单中显示为“Excel”。 Excel 呈现扩展插件可将报表呈现为与 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 兼容的 Excel 文档 (.xlsx)。  有关详细信息，请参阅[导出到 Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。|  
 |PowerPoint|硬分页|PowerPoint 呈现扩展插件可将报表呈现为与 PowerPoint 2013 兼容的 PowerPoint 文档 (.pptx)。|  
-|TIFF 文件|硬分页|图像呈现扩展插件可以将报表呈现为位图或图元文件。 默认情况下，图像呈现扩展插件将生成报表的 TIFF 文件，您可以按多页形式查看此类文件。 客户端收到图像时，可以在图像查看器中显示图像，并可以打印图像。<br /><br /> 图像呈现扩展插件可以采用 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] 支持的任何格式生成文件：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。<br /><br /> 有关详细信息，请参阅[导出到图像文件](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)。|  
+|TIFF 文件|硬分页|图像呈现扩展插件可以将报表呈现为位图或图元文件。 默认情况下，图像呈现扩展插件将生成报表的 TIFF 文件，您可以按多页形式查看此类文件。 客户端收到图像时，可以在图像查看器中显示图像，并可以打印图像。<br /><br /> 图像呈现扩展插件可以生成 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]支持的以下任意格式的文件：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。<br /><br /> 有关详细信息，请参阅[导出到图像文件](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)。|  
 |Web 存档|软分页|HTML 呈现扩展插件以 HTML 格式呈现报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。<br /><br /> 对于在报表生成器中预览并在浏览器中查看的报表（包括在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户中运行时），HTML 呈现扩展插件都是默认的呈现扩展插件。<br /><br /> 有关详细信息，请参阅[以 HTML 格式呈现](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)。|  
 |WORDOPENXML|软分页|查看报表时导出菜单中显示为“Word”。 Word 呈现扩展插件可将报表呈现为与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 兼容的 Word 文档 (.docx)。  有关详细信息，请参阅[导出到 Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)。|  
 |XML|数据|XML 呈现扩展插件可以按 XML 格式返回报表。 报表 XML 的架构专用于相应的报表，并且只包含数据。 布局信息呈现以及分页都不是由 XML 呈现扩展插件完成。 此扩展插件生成的 XML 可以导入到数据库中用作 XML 数据消息，或发送到自定义应用程序。<br/><br/> 有关详细信息，请参阅[导出到 HTML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。|  

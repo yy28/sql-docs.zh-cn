@@ -2,21 +2,21 @@
 title: Analysis Services 数据库的扩展字段属性 (SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73a2539ad976de2a25361835b9c33b03a79fdf97
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031256"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573313"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 **Value** 和 **IsMissing** 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 你可以通过编写使用内置 **Fields** 集合按名称指定扩展字段属性值的表达式，来将这些扩展字段属性值包含在报表中。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 **Value** 和 **IsMissing** 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 你可以通过编写使用内置 **Fields** 集合按名称指定扩展字段属性值的表达式，来将这些扩展字段属性值包含在报表中。  
   
  扩展属性包括预定义属性和自定义属性。 预定义属性是多个数据源中通用的属性，它们映射到特定字段属性名称并可通过内置 **Fields** 集合按名称进行访问。 自定义属性是特定于每个数据提供程序的属性，只能通过内置 **Fields** 集合，使用将扩展属性名称用作字符串的语法进行访问。  
   
@@ -126,7 +126,7 @@ CELL PROPERTIES
   
  即使属性是 MDX 选择语句的一部分，它们也不会显示在结果集列中。 尽管如此，使用扩展属性功能仍可将这些数据用于报表。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 MDX 查询结果窗格中，你可以双击单元格并查看单元格的属性值（如果在多维数据集中进行了设置）。 如果双击第一个包含 1,379 的 Order Count 单元，则会看到一个包含以下单元属性的弹出窗口：  
   
-|“属性”|Value|  
+|属性|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |Value|2481|  

@@ -2,7 +2,7 @@
 title: 报表设计视图（报表生成器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74b2396d7e32e5f8b596e4dcb5abc84645e8fc84
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286035"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577990"
 ---
 # <a name="report-design-view-report-builder"></a>报表设计视图（报表生成器）
   报表生成器窗口旨在帮助轻松组织报表资源并快速生成所需分页报表。 设计图面位于窗口中心，周围是功能区和窗格。 设计图面用于添加和组织报表项。 本文说明用于添加、选择和组织报表资源，以及更改报表项属性的窗格。  
@@ -137,13 +137,13 @@ ms.locfileid: "56286035"
  根据相应的属性，可以从下拉列表中设置属性值、键入值或单击 `<Expression>` 来创建表达式。  
   
 ### <a name="changing-the-properties-pane-view"></a>更改“属性”窗格视图  
- 默认情况下，“属性”窗格中显示的属性是按大的类别（例如操作、边框、填充、字体和常规）分类的。 每个类别都有一组与其相关联的属性。 例如，在“字体”类别中列出以下属性：Color、FontFamily、FontSize、FontStyle、FontWeight、LineHeight 和 TextDecoration。 如果愿意，可以按字母顺序排列该窗格内列出的所有属性。 这会删除类别并按字母顺序列出所有属性，而不考虑类别。  
+ 默认情况下，“属性”窗格中显示的属性是按大的类别（例如操作、边框、填充、字体和常规）分类的。 每个类别都有一组与其相关联的属性。 例如，“字体”类别内会列出以下属性：Color、FontFamily、FontSize、FontStyle、FontWeight、LineHeight 和 TextDecoration。 如果愿意，可以按字母顺序排列该窗格内列出的所有属性。 这会删除类别并按字母顺序列出所有属性，而不考虑类别。  
   
- “属性”窗格的顶部有三个按钮：“类别”、“按字母顺序排序”和“属性页”。 单击“按分类顺序”和“按字母顺序”按钮可在“属性”窗格视图之间切换。 单击 **“属性页”** 按钮可打开所选报表项的属性对话框。  
+ “属性”窗格顶部有三个按钮：“按分类顺序”、“按字母顺序”和“属性页”。 单击“按分类顺序”和“按字母顺序”按钮可在“属性”窗格视图之间切换。 单击 **“属性页”** 按钮可打开所选报表项的属性对话框。  
   
   
 ##  <a name="GroupPane"></a> “分组”窗格 (Report Builder)  
- 使用组可以将报表数据组织成可视层次结构，也可以计算总计。 可以在设计图面上或“分组”窗格中查看数据区域内的行组和列组。 “分组”窗格有两个窗格：“行组”和“列组”。 在你选择数据区域后，“分组”窗格会将此数据区域内的所有组显示为一个层次结构列表：子组以缩进的方式显示在其父组下方。  
+ 使用组可以将报表数据组织成可视层次结构，也可以计算总计。 可以在设计图面上或“分组”窗格中查看数据区域内的行组和列组。 “分组”窗格有两个窗格：“行组”和“列组”。 选定数据区域后，“分组”窗格会将该数据区域内的所有组显示为一个层次结构列表；子组以缩进的方式显示在其父组下方。  
   
  ![报表生成器行组](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Report Builder Row Groups")  
   

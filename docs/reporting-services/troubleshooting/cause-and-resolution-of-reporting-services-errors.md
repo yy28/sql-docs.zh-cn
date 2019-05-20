@@ -2,7 +2,7 @@
 title: Reporting Services 错误的原因和解决方法 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - errors [Reporting Services]
 - troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b330d2dc764a029f805d5063cf99019574173c4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a554e3f4ce5f7f5f844038eeb8c31f84e205312c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784236"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575572"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 错误的原因和解决方法
   本主题包含与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]相关的多个错误的原因和解决方法信息。 本节中的错误消息主题提供对错误消息、可能的原因以及为更正问题可以采取的所有措施的说明。  

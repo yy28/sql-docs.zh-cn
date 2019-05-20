@@ -2,18 +2,18 @@
 title: RunningValue 函数（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1828388fd3079a6a59e840143c2db25d55f4072a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291305"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577174"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>报表生成器函数 - RunningValue 函数
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的运行聚合。  

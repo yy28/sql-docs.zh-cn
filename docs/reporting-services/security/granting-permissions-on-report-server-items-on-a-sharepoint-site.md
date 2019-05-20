@@ -2,7 +2,7 @@
 title: 在 SharePoint 站点上授予对报表服务器项的权限 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dc2b972c797a6f78170eeeba4867f6f377793dac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631145"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580039"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点上授予对报表服务器项的权限
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供了内置安全功能。使用这些功能，你可以授予对从 SharePoint 站点和库访问的报表服务器项的访问权限。 如果已为用户分配权限，则在 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和报表服务器之间配置集成设置后，这些用户就会立即拥有访问报表服务器项和操作的权限。 您可以使用现有权限上载报表定义和其他文档、查看报表、创建订阅以及管理项。  

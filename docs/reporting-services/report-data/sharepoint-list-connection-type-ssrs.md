@@ -2,18 +2,18 @@
 title: SharePoint 列表连接类型 (SSRS) | Microsoft Docs
 ms.date: 05/10/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b3936d04d63f50fb33b2d3d36e080f9a151a186
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 745d7696e7ad98c86586ffc4be2d2d1057fd388b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813570"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575359"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 列表连接类型 (SSRS)
 
@@ -41,10 +41,10 @@ ms.locfileid: "51813570"
   
 ||受支持的凭据|经典模式 Windows 身份验证|*声明身份验证|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|用户帐户控制|  
-||存储、提示、无（带有 Windows 凭据）<br /><br /> 不支持带有非 Windows 凭据的存储和提示凭据。|用户帐户控制|否|  
-|远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|否<br /><br /> 远程 SharePoint 列表不支持基于窗体的身份验证和声明身份验证。|  
-||存储、提示、无（带有 Windows 凭据）<br /><br /> 不支持带有非 Windows 凭据的存储和提示凭据。|用户帐户控制|否<br /><br /> 远程 SharePoint 列表不支持基于窗体的身份验证和声明身份验证。|  
+|本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|是|  
+||存储、提示、无（带有 Windows 凭据）<br /><br /> 不支持带有非 Windows 凭据的存储和提示凭据。|是|否|  
+|远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|否<br /><br /> 远程 SharePoint 列表不支持基于窗体的身份验证和声明身份验证。|  
+||存储、提示、无（带有 Windows 凭据）<br /><br /> 不支持带有非 Windows 凭据的存储和提示凭据。|是|否<br /><br /> 远程 SharePoint 列表不支持基于窗体的身份验证和声明身份验证。|  
   
  *Windows 身份验证、基于窗体的身份验证 (FBA)、安全应用程序标记语言 (SAML) 标记、其他标识提供程序或以上提到的多个身份验证提供程序的组合。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "51813570"
   
 ||受支持的凭据|经典模式 Windows 身份验证|*声明身份验证|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|用户帐户控制|  
+|本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|是|  
 ||存储、提示、无（带有 Windows 凭据）<br /><br /> 不支持带有非 Windows 凭据的存储和提示凭据。|否|否|  
-|远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|否<br /><br /> 远程 SharePoint 列表不支持基于窗体的身份验证和声明身份验证。|  
+|远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|否<br /><br /> 远程 SharePoint 列表不支持基于窗体的身份验证和声明身份验证。|  
 ||存储、提示、无（带有 Windows 凭据）<br /><br /> 不支持带有非 Windows 凭据的存储和提示凭据。|否|否<br /><br /> 远程 SharePoint 列表不支持基于窗体的身份验证和声明身份验证。|  
   
  *Windows 身份验证、基于窗体的身份验证 (FBA)、安全应用程序标记语言 (SAML) 标记、其他标识提供程序或以上提到的多个身份验证提供程序的组合。  

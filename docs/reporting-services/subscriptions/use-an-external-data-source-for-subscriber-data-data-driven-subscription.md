@@ -2,7 +2,7 @@
 title: 使用外部数据源提供订阅方数据（数据驱动订阅）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 98c58da0ba018bc65d8459350f3f8e664587cdc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 39698991ebb6d683944b19966a5712c269c11e88
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657822"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578083"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部数据源提供订阅方数据（数据驱动订阅）
   在数据驱动订阅中，动态订阅数据是由从外部数据源检索数据的查询或命令提供的。 可以从满足数据驱动订阅处理要求的任何支持数据源中检索订阅数据。 查询或命令语法必须对随报表服务器安装的数据处理扩展插件有效。  
@@ -78,7 +78,7 @@ ms.locfileid: "47657822"
   
 ## <a name="see-also"></a>另请参阅  
  [创建、修改和删除数据驱动订阅](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

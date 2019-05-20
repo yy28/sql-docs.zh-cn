@@ -2,7 +2,7 @@
 title: 从数据挖掘模型检索数据 (DMX) (SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - datasets [Reporting Services], Analysis Services
 - queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a2754521a136369995bc0ba6ab93c2fe958dc9e5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fd2ff43f969f198b418a1bf6437e351c2c663391
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031426"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571202"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>从数据挖掘模型检索数据 (DMX) (SSRS)
   若要在报表中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘模型中的数据，则必须定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源以及一个或多个报表数据集。 创建数据源定义时，必须指定连接字符串和凭据，以便能够从客户端计算机访问该数据源。  

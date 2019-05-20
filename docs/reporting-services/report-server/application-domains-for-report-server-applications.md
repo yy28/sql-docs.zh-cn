@@ -2,21 +2,21 @@
 title: 报表服务器应用程序的应用程序域 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec98c02ff88a1d343b96f149bce4bebdb7aa707d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751615"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574796"
 ---
 # <a name="application-domains-for-report-server-applications"></a>报表服务器应用程序的应用程序域
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，报表服务器作为一个包含报表服务器 Web 服务、报表管理器和后台处理应用程序的服务来实现。 每个应用程序都在单个报表服务器进程中其各自的应用程序域中运行。 在大多数情况下，应用程序域是在内部创建、配置和管理的。 但是，如果要研究性能或内存问题并排除服务中断故障，则了解如何针对报表服务器应用程序域执行回收操作会非常有帮助。  
@@ -56,7 +56,7 @@ ms.locfileid: "47751615"
   
  报表服务器 Web 服务、报表管理器和后台处理应用程序的应用程序域可以在一起回收，也可以单独回收，具体取决于导致进行回收的情况：  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 启动的回收操作只会影响 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序：报表服务器 Web 服务和报表管理器。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 将会根据其所监视的文件是否发生了更改来回收应用程序域。 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 启动的回收操作通常独立于后台处理应用程序的回收操作。  
+-    [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 启动的回收操作只会影响 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序：报表服务器 Web 服务和报表管理器。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 将会根据其所监视的文件是否发生了更改来回收应用程序域。 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 启动的回收操作通常独立于后台处理应用程序的回收操作。  
   
 -   由报表服务器执行的回收操作通常会影响报表服务器 Web 服务、报表管理器和后台处理应用程序。 回收操作是为了响应配置设置更改和服务重新启动而执行的。  
   

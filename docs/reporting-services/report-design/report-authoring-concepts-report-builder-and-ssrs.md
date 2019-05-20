@@ -2,21 +2,21 @@
 title: 报表创作概念（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7357530ed6990c10ece43748c6ef7dd3a00c6454
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c6eb51dfb11ad9516da9d4231531d39152e97ea3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288725"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579860"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>报表创作概念（报表生成器和 SSRS）
   本节简要定义报表生成器和报表设计器文档中用来描述分页报表的某些主要概念。 有关具体字词或术语的定义，请参阅[术语（报表生成器）](../../reporting-services/report-builder/glossary-report-builder.md)。  

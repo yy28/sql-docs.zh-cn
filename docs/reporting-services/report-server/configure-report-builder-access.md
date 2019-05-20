@@ -1,19 +1,19 @@
 ---
 title: 配置报表生成器访问权限 | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f99729717d291b241418b12142a5be8cfa67a03
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
-ms.translationtype: HT
+ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774441"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580377"
 ---
 # <a name="configure-report-builder-access"></a>配置报表生成器访问权限
 报表生成器是一个特别报告生成工具，该工具随为本机模式或 SharePoint 集成模式配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器一起安装。  

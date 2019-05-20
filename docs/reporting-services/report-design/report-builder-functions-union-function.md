@@ -2,18 +2,18 @@
 title: Union 函数（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1b31943b01ff49e81a88f35a4a5c3063173e75d6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c3f1e0f0364eebbd0861edb931b0ee7f46954a7d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290285"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577146"
 ---
 # <a name="report-builder-functions---union-function"></a>报表生成器函数 - Union 函数
   返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的联合。  

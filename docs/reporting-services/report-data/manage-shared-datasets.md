@@ -2,18 +2,18 @@
 title: 管理共享数据集 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 04591d5c1d44f0655d0f8dac0743a0e3d0cf6c55
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4da49802b5f1d6aa6dbaa082c3d9a10e6273f3b8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814210"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65572071"
 ---
 # <a name="manage-shared-datasets"></a>管理共享数据集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共享数据集从连接到外部数据源的共享数据源中检索数据。 共享数据集提供可共享查询的方法，以便为多个报表提供一组一致的数据。 数据集查询可以包括数据集参数。 您可以配置共享数据集，以便在首次使用时或通过指定计划为特定的参数组合缓存查询结果。 您可以将共享数据集缓存与报表缓存和报表数据馈送结合使用，以便管理对数据源的访问。  
@@ -50,7 +50,7 @@ ms.locfileid: "51814210"
   
  下面的其他共享数据集属性将自动配置：  
   
-|“属性”|描述|  
+|属性|描述|  
 |--------------|-----------------|  
 |HasDataSourceCredentials|相关联的共享数据源是否将凭据保存在报表服务器上。|  
 |HasUserProfileDependencies|报表在其查询或筛选表达式中是否具有对“用户”全局集合的引用。|  

@@ -2,18 +2,18 @@
 title: StDevP 函数（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1f70d3284864c4b8e4878cf567e80bbfb1706534
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ab50dd468a0efdc1b5345df4e7a1facc3ccd1218
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294165"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577169"
 ---
 # <a name="report-builder-functions---stdevp-function"></a>报表生成器函数 - StDevP 函数
   返回在给定作用域上下文中计算的，由表达式指定的所有非 Null 数值的总体标准偏差。  

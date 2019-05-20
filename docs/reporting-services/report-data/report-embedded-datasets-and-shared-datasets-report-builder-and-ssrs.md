@@ -2,20 +2,20 @@
 title: 报表的嵌入数据集和共享数据集（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7df7fc799411c7aaf8ba8b5c8179457196f21d1d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 093652067f436c83ae46d3cb3053cc93747579db
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020381"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571182"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  
@@ -140,7 +140,7 @@ ms.locfileid: "50020381"
   
  下表将可为报表服务器上共享数据集的定义配置的属性与可为报表定义中共享数据集的实例配置的属性进行了比较。  
   
-|“属性”|有关定义的配置说明|有关实例的配置说明|  
+|属性|有关定义的配置说明|有关实例的配置说明|  
 |--------------|--------------------------------------------|------------------------------------------|  
 |查询文本|配置查询，包括将查询定义为表达式。|无法更改查询。|  
 |查询参数|不能引用报表参数<br /><br /> 包含默认值<br /><br /> 包含只读标志|配置定义中未标记为只读的参数|  

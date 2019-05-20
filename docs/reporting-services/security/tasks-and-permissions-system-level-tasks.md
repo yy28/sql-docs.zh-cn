@@ -2,20 +2,20 @@
 title: 系统级任务 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - system-level tasks [Reporting Services]
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f81807777e84d0f05181b25174896e5b4bc2bdd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0f7ca906c8689c1bf8f40e79875acff5b7ab7c70
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835445"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570298"
 ---
 # <a name="tasks-and-permissions---system-level-tasks"></a>任务和权限 - 系统级任务
   系统级任务是与应用于整个报表服务器站点的操作相关的权限的集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于特定项的项级任务。 有关详细信息，请参阅 [项级任务](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "47835445"
 ## <a name="permissions-in-system-level-tasks"></a>系统级任务中的权限  
  下表给出了各个系统任务的权限集合。 所列出的权限仅供参考，目的是为每个任务的可用功能提供更准确的说明。  
   
-|任务|Permissions|  
+|任务|权限|  
 |----------|-----------------|  
 |执行报表定义|执行报表定义（权限和任务名称相同）|  
 |生成事件|生成事件|  

@@ -2,20 +2,20 @@
 title: 服务器属性（“历史记录”页）| Microsoft Docs
 ms.date: 06/10/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 498bc994828c4ed7089a4aa223659f70d1c612b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663884"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571361"
 ---
 # <a name="server-properties-history-page"></a>服务器属性（“历史记录”页）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中使用此 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 页可设置要保留的报表历史记录副本数的默认值。 该默认值为所有报表提供建立报表历史记录限制的初始设置。 可以针对不同的报表采用不同的设置。  

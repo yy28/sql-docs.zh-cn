@@ -2,7 +2,7 @@
 title: RS.exe 实用工具 (SSRS) | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e923092cbd81bcee6bee7c76f956bae2ede45c35
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983978"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581289"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  
@@ -97,7 +97,7 @@ rs {-?}
  **-t**  
  （可选）将错误信息输出到跟踪日志中。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> 权限  
  若要运行该工具，必须拥有与运行脚本的报表服务器实例连接的权限。 可以运行脚本来更改本地计算机或远程计算机。 若要更改远程计算机上安装的报表服务器，请在 **-s** 参数中指定远程计算机。  
   
 ##  <a name="bkmk_examples"></a> 示例  

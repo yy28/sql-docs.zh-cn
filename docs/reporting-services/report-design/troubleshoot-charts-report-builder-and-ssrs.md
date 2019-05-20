@@ -2,18 +2,18 @@
 title: 图表故障排除（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3f90827cfd1cde13cfdbea730954bd29158e96db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 365128fe0fd67f1b270481f827eef6871acccb5d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286055"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573743"
 ---
 # <a name="troubleshoot-charts-report-builder-and-ssrs"></a>图表故障排除（报表生成器和 SSRS）
   对以下问题的解答可能在您使用图表时对您有所帮助。  

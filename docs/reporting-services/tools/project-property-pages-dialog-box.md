@@ -2,7 +2,7 @@
 title: “项目属性页”对话框 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: reference
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712178"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578241"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
 
@@ -78,7 +78,7 @@ ms.locfileid: "52712178"
  发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如： 
 + `http:\\<servername>`、 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`的用户。  
++ `http:\\<servername>\<site>\<subsite>` 列中的一个值匹配。  
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -1,34 +1,33 @@
 ---
 title: 错误和事件参考 (Reporting Services) | Microsoft Docs
-ms.date: 03/18/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
-helpviewer_keywords:
-- messages [Reporting Services]
-- errors [Reporting Services]
-- Reporting Services, errors and events
-- troubleshooting [Reporting Services], errors
-- events [Reporting Services]
-ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec1e9fc7ec041794b92b5372799678a22483b39e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: dc3b07d150e7992338a356030c2dd36d1edeff0c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021781"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574003"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>错误和事件参考 (Reporting Services)
-  本主题提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的错误和事件的信息。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件中也包含错误信息。 有关可用日志文件类型以及如何查看日志的详细信息，请参阅 [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
-  
+
+本主题提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的错误和事件的信息。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件中也包含错误信息。 有关可用日志文件类型以及如何查看日志的详细信息，请参阅 [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
+
 ## <a name="cause-and-resolution-for-reporting-services-error-messages"></a>Reporting Services 错误消息的原因和解决方法  
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 网站上提供了有关最经常搜索的错误的原因和解决方法信息。 有关详细信息，请参阅 [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)。  
+
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 网站上提供了有关最经常搜索的错误的原因和解决方法信息。 有关详细信息，请参阅 [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)。  
   
-## <a name="report-server-events"></a>报表服务器事件  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志中记录了下列报表服务器事件。  
+## <a name="report-server-events"></a>报表服务器事件
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志中记录了下列报表服务器事件。  
   
 |事件 ID|类型|类别|数据源|描述|  
 |--------------|----------|--------------|------------|-----------------|  
@@ -62,9 +61,7 @@ ms.locfileid: "50021781"
 |133|错误|管理|报表服务器<br /><br /> 报表管理器<br /><br /> 计划和传递处理器|无法加载配置文件。 如果 XML 无效，则可能发生这一错误。|  
 |134|错误|管理|报表服务器|报表服务器无法加密配置文件中某个设置的值。|  
   
-## <a name="see-also"></a>另请参阅  
- [监视 Reporting Services 订阅](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+## <a name="see-also"></a>另请参阅
+
+- [监视 Reporting Services 订阅](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
+- [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

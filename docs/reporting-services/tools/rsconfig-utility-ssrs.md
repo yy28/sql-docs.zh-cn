@@ -2,7 +2,7 @@
 title: rsconfig 实用工具 (SSRS) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8904d9cd03f8d9e7b7010f34f8bfde7e23f0475
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213656"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571531"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 实用工具 (SSRS)
   **rsconfig.exe** 实用工具可以在 RSReportServer.config 文件中加密并存储连接和帐户值。 加密值包括用于无人参与报表处理的报表服务器数据库连接信息和帐户值。  
@@ -57,7 +57,7 @@ rsconfig {-?}
 |**-p**  *password*|如果指定了 **-c** 参数，则为必需项。|指定与 *username* 参数一起使用的密码。 如果帐户不需要密码，则可将该参数设置为空值。 对于域帐户，此值区分大小写。|  
 |**-t**|可选。|将错误消息输出到跟踪日志。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  您必须是要配置的承载报表服务器的计算机本地管理员。  
   
 ## <a name="file-location"></a>文件位置  

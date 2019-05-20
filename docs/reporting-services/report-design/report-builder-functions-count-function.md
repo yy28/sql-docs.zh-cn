@@ -2,18 +2,18 @@
 title: Count 函数（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b0eba548573866c89dffe91df44c4ba78f1417c0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285325"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579721"
 ---
 # <a name="report-builder-functions---count-function"></a>报表生成器函数 - Count 函数
   返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。  

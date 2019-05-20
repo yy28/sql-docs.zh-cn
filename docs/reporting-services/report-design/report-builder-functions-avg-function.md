@@ -2,18 +2,18 @@
 title: Avg 函数（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9da04fb9fdba05beda263d2200c74140861e4e00
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 255201c7f24f013becd8230e9329e41a6d6a8d0d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297187"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576397"
 ---
 # <a name="report-builder-functions---avg-function"></a>报表生成器函数 - Avg 函数
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的平均值。  

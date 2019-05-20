@@ -2,7 +2,7 @@
 title: 在报表管理器中上传文件或报表 | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - uploading files [Reporting Services]
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce224e5b45e22bdc27f675da5d2697c09b139b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660195"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573302"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>在报表管理器中上传文件或报表
 报表服务器的 Web 门户提供上传功能，以便可以将报表和其他文件添加到报表服务器而不必从客户端应用程序发布这些项。 从文件系统上载的文件会存储为报表服务器上的项。 所上载的文件类型决定存储方式：  

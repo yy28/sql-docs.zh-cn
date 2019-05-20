@@ -2,20 +2,20 @@
 title: 导出到 Microsoft Word（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 description: Word 呈现扩展插件将分页报表呈现为  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx)。 格式为 Office Open XML。
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ed7b5a6081171f7f7271573cd83f029ad672a34
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296595"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581229"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
 
@@ -72,9 +72,9 @@ ms.locfileid: "56296595"
   
  发生此情况的原因在于，Word 呈现器针对与 **PageNumber** 和 **TotalPages** 之类的分页相关的字段对报表进行分析，并且仅处理简单引用，而不处理对函数的调用。 在此情况下，该表达式将调用 **ToString** 函数。 下面两个表达式是等效的，并且当在报表生成器或报表设计器中预览报表时，或者在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 库中呈现已发布的报表时，这两个表达式都正确呈现。 但是，Word 呈现器仅对第二个表达式成功进行分析，并且呈现正确的页码。  
   
--   复杂表达式：表达式为 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **复杂表达式：**  表达式为 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   具有文本运行的表达式：文本 Average Sales 和表达式 `=Avg(Fields!YTDPurchase.Value, "Sales)` 以及文本 Page Number 和表达式 `=Globals!PageNumber`  
+-   **具有文本运行的表达式：** 文本 **Average Sales**和表达式  `=Avg(Fields!YTDPurchase.Value, "Sales)`，以及文本 **Page Number**和表达式 `=Globals!PageNumber`  
   
  若要避免此问题，在表头和表尾中使用表达式时，请使用多文本运行，而非一个复杂表达式。 下面两个表达式是等效的。 第一个表达式是复杂表达式，第二个表达式使用文本运行。 Word 呈现器仅成功分析第二个表达式。  
   

@@ -2,7 +2,7 @@
 title: 查找报表定义架构版本 (SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cb28747cd85c007f968e5be0e980ca112638faec
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67f1311e3f8bde71c52301178bf242d88e62c3a0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254142"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576420"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>查找报表定义架构版本 (SSRS)
 
 报表定义文件为用于验证 rdl 文件的报表定义架构的版本指定 RDL 命名空间。 当在报表创作环境（如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的报表设计器或报表生成器）中打开某个 .rdl 文件时，如果报表是针对先前命名空间创建的，会自动创建一个备份文件，并将该报表升级到当前命名空间。 如果保存升级后的报告定义，则同时还会保存转换后的 .rdl 文件。 这是升级报表定义的唯一方法。 报表定义本身在报表服务器上不升级。 已编译的报表在报表服务器上升级。 有关更多信息，请参见 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>如何：确定报表的 RDL 架构版本  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>如何确定报表的 RDL 架构版本  
   
 1.  在某个能够查看 xml 的应用程序（如记事本或 XML Notepad 2007）中打开报表 .rdl 文件。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54254142"
   
      以下 URL 指定了报表定义命名空间： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`。  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>如何：确定报表设计器的 RDL 架构版本  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>如何确定报表设计器的 RDL 架构版本  
   
 1.  打开一个新项目。 您选择的项目版本决定 RDL 架构的版本。 在 SQL Server 中，支持多个架构版本。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54254142"
   
      以下 URL 指定了报表定义命名空间： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>如何：确定报表服务器上的 RDL 架构版本  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>如何确定报表服务器上的 RDL 架构版本  
   
 -   在报表管理器中，键入报表服务器的 URL。 例如，以下 URL 指定一个本地计算机上的报表服务器：  
   

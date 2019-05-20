@@ -2,7 +2,7 @@
 title: 暂停和恢复共享计划 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 579c4b5de14712d5845a6bbf737d85276120bbf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675435"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578177"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>暂停和恢复共享计划
   您可以暂停和恢复正在使用的共享计划。 通过暂停共享计划，可以暂时冻结用于触发报表处理和订阅的计划。 您只能暂停和恢复共享计划。 不能暂停报表特定计划。  
@@ -62,7 +62,7 @@ ms.locfileid: "47675435"
   
 ## <a name="see-also"></a>另请参阅  
  [“计划”](../../reporting-services/subscriptions/schedules.md)   
- [创建、修改和删除计划](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [更改报表服务器上的时区和时钟设置](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
  [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)  
   

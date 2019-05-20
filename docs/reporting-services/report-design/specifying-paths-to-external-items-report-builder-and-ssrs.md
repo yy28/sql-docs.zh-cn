@@ -2,18 +2,18 @@
 title: 指定外部项的路径（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce654cc4724a71be36e49be71bdaf64994812567
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9848a77ae760fc2c1fa4c4d0ddeaa5b1120ec1ef
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293475"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578479"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>指定外部项的路径（报表生成器和 SSRS）
   在报表项属性中指定钻取报表、子报表和图像文件等引用项的路径，这些引用项在报表定义文件外部并存储在报表服务器上。  
@@ -37,9 +37,9 @@ ms.locfileid: "56293475"
   
 -   **项的完整路径。**  
   
-    -   **在报表服务器上：** 路径从 **/** 开始（即主文件夹）。 例如，/Reports/AllSubreports/Subreport1。  
+    -   **在报表服务器上：** 路径将从 **/** 主文件夹开始。 例如，/Reports/AllSubreports/Subreport1。  
   
-    -   **在 SharePoint 网站上：** 必须在表达式中指定报表名称，以及项的完整 URL 和文件扩展名 .rdl。 例如， `="https://server/site/library/folder/Report1.rdl"`。  
+    -   **在 SharePoint 站点上：** 必须在表达式中指定报表名称，并包含报表项的完整 URL 以及文件扩展名 .rdl。 例如， `="https://server/site/library/folder/Report1.rdl"`。  
   
 ## <a name="see-also"></a>另请参阅  
  [添加外部图像（报表生成器和 SSRS）](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   

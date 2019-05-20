@@ -2,21 +2,21 @@
 title: 为报表服务器应用程序配置可用内存 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab39c1de4741906559002281dacf9b255274f9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4727cff529db944205f46be291f65ebb653eb9bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722705"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580388"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>为报表服务器应用程序配置可用内存
   尽管 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可使用所有可用内存，但您可以通过为分配给 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器应用程序的内存资源总量配置上限来覆盖默认行为。 此外，您还可以设置阈值，以便报表服务器根据内存压力（低、中或高）来更改其排列请求优先级和处理请求的方式。 在内存压力较低时，报表服务器通过为交互式或按需报表处理提供一个略高的优先级进行响应。 在内存压力较高时，报表服务器使用多种方法在可用资源有限的情况下保持运行状态。  
@@ -72,7 +72,7 @@ ms.locfileid: "47722705"
 |**MemorySafetyMargin**|指定 **WorkingSetMaximum** 的百分比，该百分比用于定义中压情况和低压情况之间的边界。 此值是为系统保留的可用内存百分比，无法用于报表服务器操作。 默认值为 80。|  
   
 > [!NOTE]  
->  MemoryLimit 和 MaximumMemoryLimit 设置在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中已过时。 如果升级现有安装或使用包含这些设置的 RSReportServer.config 文件，报表服务器将不再读取这些值。  
+>  **MemoryLimit** 和 **MaximumMemoryLimit** 设置在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中已过时。 如果升级现有安装或使用包含这些设置的 RSReportServer.config 文件，报表服务器将不再读取这些值。  
   
 #### <a name="example-of-memory-configuration-settings"></a>内存配置设置示例  
  下面的示例显示了使用自定义内存配置值的报表服务器计算机的配置设置。 如果要添加 **WorkingSetMaximum** 或 **WorkingSetMinimum**，必须在 RSReportServer.config 文件中键入这些元素和值。 两个值都是整数，表示要分配给服务器应用程序的 RAM（以 KB 为单位）。 下面的示例指定报表服务器应用程序的总内存分配不能超过 4 GB。 如果 **WorkingSetMinimum** 的默认值（ **WorkingSetMaximum**的 60%）可接受，则可忽略该值并在 RSReportServer.config 文件中仅指定 **WorkingSetMaximum** 。 此示例包括 **WorkingSetMinimum** 以说明在要添加该元素时的显示方式：  
@@ -91,6 +91,6 @@ ms.locfileid: "47722705"
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [报表服务器应用程序的应用程序域](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+ [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   
   

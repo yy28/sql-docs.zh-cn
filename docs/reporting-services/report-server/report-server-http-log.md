@@ -2,20 +2,20 @@
 title: 报表服务器 HTTP 日志 | Microsoft Docs
 ms.date: 03/02/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 85e0bf1588739c5e27ec46273ad1a24908639c14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2d290d32cbe05a0e378486cad72c5f39a2bc6e58
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789945"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581394"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   报表服务器 HTTP 日志记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
@@ -56,18 +56,18 @@ ms.locfileid: "47789945"
   
 |字段|描述|，则“默认”|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|用户帐户控制|  
+|HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
 |HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|否|  
 |date|活动发生的日期。|否|  
 |Time|活动发生的时间。|否|  
-|ClientIp|访问报表服务器的客户端的 IP 地址。|用户帐户控制|  
+|ClientIp|访问报表服务器的客户端的 IP 地址。|是|  
 |UserName|访问报表服务器的用户的名称。|否|  
 |ServerPort|连接使用的端口号。|否|  
 |主机|主机标头的内容。|否|  
-|方法|从客户端调用的操作或 SOAP 方法。|用户帐户控制|  
-|UriStem|访问的资源。|用户帐户控制|  
+|方法|从客户端调用的操作或 SOAP 方法。|是|  
+|UriStem|访问的资源。|是|  
 |UriQuery|用于访问资源的查询。|否|  
-|ProtocolStatus|HTTP 状态代码。|用户帐户控制|  
+|ProtocolStatus|HTTP 状态代码。|是|  
 |BytesReceived|服务器接收的字节数。|否|  
 |TimeTaken|从即时 HTTP.SYS 返回请求数据到服务器完成最后一次发送所用的时间（以毫秒计），不包括网络传输时间。|否|  
 |ProtocolVersion|客户端使用的协议版本。|否|  
