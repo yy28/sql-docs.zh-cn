@@ -36,6 +36,6 @@ ms.locfileid: "63149002"
   
 -   每个语句属性当前设置  
   
- 语句句柄用于大多数 ODBC 函数。 值得注意的是，它们用于在函数中绑定参数和结果集列 (**SQLBindParameter**并**SQLBindCol**)、 准备和执行语句 (**SQLPrepare****SQLExecute**，并**SQLExecDirect**)，检索元数据 (**SQLColAttribute**并**SQLDescribeCol**)，提取结果 (**SQLFetch**)，并检索诊断 (**SQLGetDiagField**并**SQLGetDiagRec**)。 它们还使用目录函数中 (**SQLColumns**， **SQLTables**，依次类推) 和许多其他功能。  
+ 语句句柄用于大多数 ODBC 函数。 值得注意的是，它们用于在函数中绑定参数和结果集列 (**SQLBindParameter**并**SQLBindCol**)、 准备和执行语句 (**SQLPrepare** **SQLExecute**，并**SQLExecDirect**)，检索元数据 (**SQLColAttribute**并**SQLDescribeCol**)，提取结果 (**SQLFetch**)，并检索诊断 (**SQLGetDiagField**并**SQLGetDiagRec**)。 它们还使用目录函数中 (**SQLColumns**， **SQLTables**，依次类推) 和许多其他功能。  
   
  分配语句句柄**SQLAllocHandle**和与已释放**SQLFreeHandle**。

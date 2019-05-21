@@ -31,7 +31,7 @@ ms.locfileid: "63131123"
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查询中使用带批注的 XSD 架构 (SQLXML 4.0)
   通过在模板中针对 XSD 架构指定 XPath 查询，可以针对带批注的架构指定查询以从数据库检索数据。  
   
-  **\<Sql:xpath-查询 >** 元素允许您指定针对带批注的架构定义的 XML 视图的 XPath 查询。 带批注的架构对其执行 XPath 查询的由使用`mapping-schema`的属性 **\<sql:xpath-查询 >** 元素。  
+ **\<Sql:xpath-查询 >** 元素允许您指定针对带批注的架构定义的 XML 视图的 XPath 查询。 带批注的架构对其执行 XPath 查询的由使用`mapping-schema`的属性 **\<sql:xpath-查询 >** 元素。  
   
  模板是包含一个或多个查询的有效 XML 文档。 FOR XML 和 XPath 查询返回文档片段。 模板用作文档片段的容器；因此，模板提供了一种指定单个顶级元素的方法。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "63131123"
   
  除了指定`mapping-schema`特性，可以在 **\<sql:xpath-查询 >** 元素在模板中 （当 XPath 查询），或在 **\<updg:sync >** 在 updategram 中的元素，您可以执行以下操作：  
   
--   指定`mapping-schema`特性，可以在**\<根 >** 模板中的元素 （全局声明）。 这样，该映射架构就成为默认架构，并将由无显式 `mapping-schema` 批注的所有 XPath 和 updategram 节点使用。  
+-   指定`mapping-schema`特性，可以在 **\<根 >** 模板中的元素 （全局声明）。 这样，该映射架构就成为默认架构，并将由无显式 `mapping-schema` 批注的所有 XPath 和 updategram 节点使用。  
   
 -   使用 ADO `mapping schema` 对象指定 `Command` 属性。  
   

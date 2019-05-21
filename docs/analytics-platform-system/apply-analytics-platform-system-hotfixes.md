@@ -53,7 +53,7 @@ ms.locfileid: "63019042"
   
     2.  使用**以管理员身份运行**选项来打开命令提示符。  
   
-    3.  运行以下命令，替换*<HotfixPackageName>* 修补程序可执行文件包，并替换占位符中的其他项的名称 *< >* 的相应信息。  
+    3.  运行以下命令，替换 *<HotfixPackageName>* 修补程序可执行文件包，并替换占位符中的其他项的名称 *< >* 的相应信息。  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  

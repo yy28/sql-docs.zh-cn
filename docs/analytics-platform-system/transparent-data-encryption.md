@@ -244,7 +244,7 @@ Tempdb 系统数据库进行加密时使用启用加密[sp_pdw_database_encrypti
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-在升级期间，如果用户数据库进行加密，并且不提供在没有密码，则升级操作将失败。 在替换期间如果 DMK 存在时，未提供正确的密码操作将跳过 DMK 恢复步骤。 将替换 VM 操作结束时完成所有其他步骤，但该操作将报告结束时失败指示的其他步骤是必需。 在安装日志中 (位于**\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< 时间戳 > \Detail-Setup**)，结尾附近将显示以下警告。  
+在升级期间，如果用户数据库进行加密，并且不提供在没有密码，则升级操作将失败。 在替换期间如果 DMK 存在时，未提供正确的密码操作将跳过 DMK 恢复步骤。 将替换 VM 操作结束时完成所有其他步骤，但该操作将报告结束时失败指示的其他步骤是必需。 在安装日志中 (位于 **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< 时间戳 > \Detail-Setup** )，结尾附近将显示以下警告。  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   

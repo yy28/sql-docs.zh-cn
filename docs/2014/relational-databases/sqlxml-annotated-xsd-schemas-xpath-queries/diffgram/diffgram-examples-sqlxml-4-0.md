@@ -99,7 +99,7 @@ ms.locfileid: "63127726"
 </ROOT>  
 ```  
   
- 在中**\<之前 >** 块中，没有**\<顺序 >** 元素 (**diffgr: id ="顺序排列 1"**) 和一个 **\<客户 >** 元素 (**diffgr: id ="Customer1"**)。 这些元素表示数据库中的现有记录。 **\<DataInstance >** 元素不具有相应的记录 (具有相同 **diffgr: id**)。 这指示一个删除操作。  
+ 在中 **\<之前 >** 块中，没有 **\<顺序 >** 元素 (**diffgr: id ="顺序排列 1"**) 和一个 **\<客户 >** 元素 (**diffgr: id ="Customer1"**)。 这些元素表示数据库中的现有记录。 **\<DataInstance >** 元素不具有相应的记录 (具有相同 **diffgr: id**)。 这指示一个删除操作。  
   
 #### <a name="to-test-the-diffgram"></a>测试 DiffGram  
   
@@ -341,13 +341,13 @@ ms.locfileid: "63127726"
   
 -   根据 DiffGram 处理逻辑中的所有顶级元素 **\<之前 >** 阻止映射到相应的表，如映射架构中所述。  
   
--   **\<之前 >** 块都有**\<顺序 >** 元素 (**dffgr:id ="顺序排列 1"**) 和一个**\<客户>** 元素 (**diffgr: id ="Customer1"**) 它们没有中的没有相应元素 **\<DataInstance >** 块 （具有相同 ID)。 这指示一个删除操作，将从 Cust 表和 Ord 表中删除记录。  
+-   **\<之前 >** 块都有 **\<顺序 >** 元素 (**dffgr:id ="顺序排列 1"**) 和一个 **\<客户>** 元素 (**diffgr: id ="Customer1"**) 它们没有中的没有相应元素 **\<DataInstance >** 块 （具有相同 ID)。 这指示一个删除操作，将从 Cust 表和 Ord 表中删除记录。  
   
--   **\<之前 >** 块都有**\<客户 >** 元素 (**diffgr: id ="Customer2"**) 它们没有相应**\<客户 >** 中的元素 **\<DataInstance >** 块 （具有相同 ID)。 中的元素 **\<DataInstance >** 块指定**diffgr: haschanges ="modified"**。 这是在其中针对客户 ANATR，CompanyName 和 ContactName 信息更新在使用中指定的值在 Cust 表中的更新操作 **\<DataInstance >** 块。  
+-   **\<之前 >** 块都有 **\<客户 >** 元素 (**diffgr: id ="Customer2"**) 它们没有相应 **\<客户 >** 中的元素 **\<DataInstance >** 块 （具有相同 ID)。 中的元素 **\<DataInstance >** 块指定**diffgr: haschanges ="modified"**。 这是在其中针对客户 ANATR，CompanyName 和 ContactName 信息更新在使用中指定的值在 Cust 表中的更新操作 **\<DataInstance >** 块。  
   
--    **\<DataInstance >** 块都有**\<客户 >** 元素 (**diffgr: id ="Customer3"**) 和一个 **\<顺序 >** 元素 (**diffgr: id ="Order3"**)。 两个元素都不指定**diffgr: haschanges**属性。 因此，DiffGram 处理逻辑将忽略这些元素。  
+-   **\<DataInstance >** 块都有 **\<客户 >** 元素 (**diffgr: id ="Customer3"**) 和一个 **\<顺序 >** 元素 (**diffgr: id ="Order3"**)。 两个元素都不指定**diffgr: haschanges**属性。 因此，DiffGram 处理逻辑将忽略这些元素。  
   
--    **\<DataInstance >** 块都有**\<客户 >** 元素 (**diffgr: id ="Customer4"**) 和一个 **\<顺序 >** 元素 (**diffgr: id ="Order4"**) 为其没有中的相应元素\<之前 > 块。 中的这些元素 **\<DataInstance >** 块指定**diffgr: haschanges ="inserted"**。 因此，将在 Cust 表和 Ord 表中添加一条新记录。  
+-   **\<DataInstance >** 块都有 **\<客户 >** 元素 (**diffgr: id ="Customer4"**) 和一个 **\<顺序 >** 元素 (**diffgr: id ="Order4"**) 为其没有中的相应元素\<之前 > 块。 中的这些元素 **\<DataInstance >** 块指定**diffgr: haschanges ="inserted"**。 因此，将在 Cust 表和 Ord 表中添加一条新记录。  
   
 #### <a name="to-test-the-diffgram"></a>测试 DiffGram  
   
@@ -411,6 +411,6 @@ ms.locfileid: "63127726"
 </diffgr:diffgram>  
 ```  
   
- 此 DiffGram 指定删除操作，因为只有**\<之前 >** 块。 在 DiffGram 中， **parentID**批注用于指定订单和订单详细信息之间的父子关系。 当 SQLXML 删除记录时，它先从此关系标识的子表中删除记录，然后从相应的父表中删除记录。  
+ 此 DiffGram 指定删除操作，因为只有 **\<之前 >** 块。 在 DiffGram 中， **parentID**批注用于指定订单和订单详细信息之间的父子关系。 当 SQLXML 删除记录时，它先从此关系标识的子表中删除记录，然后从相应的父表中删除记录。  
   
   

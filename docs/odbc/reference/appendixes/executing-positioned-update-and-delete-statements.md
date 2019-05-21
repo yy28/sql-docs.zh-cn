@@ -33,7 +33,7 @@ ms.locfileid: "63189015"
   
 2.  构造定位的 update 或 delete 语句使用以下语法：  
   
-     **更新***表名称*  
+     **更新** *表名称*  
   
      **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
