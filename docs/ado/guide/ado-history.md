@@ -52,7 +52,7 @@ ms.locfileid: "62695433"
 
  **CubDef.GetSchemaObject**_方法_从 ADO 2.6 开始，ADO MD 对象可以使用检索的唯一名称，由指定[UniqueName 属性 (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)。 无需已知的父对象的名称和父集合无需填充要检索的架构对象。 请参阅[GetSchemaObject 方法 (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)。
 
- *命令流***命令**对象作为一种方式使用流格式支持命令**CommandText**属性。 [CommandStream 属性 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)可用于指定 XML 模板或 updategram 作为**命令**与 Microsoft OLE DB Provider for SQL Server 的输入。
+ *命令流* **命令**对象作为一种方式使用流格式支持命令**CommandText**属性。 [CommandStream 属性 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)可用于指定 XML 模板或 updategram 作为**命令**与 Microsoft OLE DB Provider for SQL Server 的输入。
 
  **方言**_属性_[方言](../../ado/reference/ado-api/dialect-property.md)是一个新属性，定义的语法和提供程序使用来分析该字符串或流的一般规则。
 

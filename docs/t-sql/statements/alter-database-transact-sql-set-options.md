@@ -29,17 +29,17 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
+ms.openlocfilehash: 9fe393ecdbef5a515d0850b7d859c1c2a7e670a2
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63202483"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560182"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
-设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Azure SQL 数据库中的数据库选项。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Azure SQL 数据库和 Azure SQL 数据仓库中设置数据库选项。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。
 
 单击以下选项卡之一，了解所使用的特定 SQL 版本的语法、参数、注解、权限和示例。
 
@@ -51,9 +51,9 @@ ms.locfileid: "63202483"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||
+> |||||
+> |---|---|---|---|
+> |**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -1148,9 +1148,9 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\*SQL 数据库<br />单一数据库/弹性池\*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\*SQL 数据库<br />单一数据库/弹性池\*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL 数据<br />数据仓库](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1834,9 +1834,9 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL 数据库<br />托管实例\*_** &nbsp;|
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL 数据库<br />托管实例\*_** &nbsp;||[SQL 数据<br />数据仓库](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2442,5 +2442,137 @@ SET QUERY_STORE = ON
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
 - [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|_\*SQL 数据<br />仓库\*_&nbsp;||||
+
+&nbsp;
+
+## <a name="azure-sql-data-warehouse"></a>Azure SQL 数据仓库
+
+> [!NOTE]
+> 可以使用 [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) 来为当前会话配置很多数据库 SET 选项，当它们连接时通常通过应用程序来配置。 会话级 SET 选项覆盖 **ALTER DATABASE SET** 值。 下面所述的数据库选项是可以为未明确提供其他 SET 选项值的会话设置的值。
+
+## <a name="syntax"></a>语法
+
+```
+ALTER DATABASE { database_name | Current }
+SET
+{
+    <optionspec> [ ,...n ]
+}
+;
+
+<auto_option> ::=
+{}
+RESULT_SET_CACHING { ON | OFF}
+}
+```
+
+## <a name="arguments"></a>参数
+
+database_name 要修改的数据库的名称。
+
+**\<auto_option> ::=**
+
+控制自动选项。
+
+**权限**：需要以下权限：
+
+- 服务器级别主体登录名（由预配进程创建），或者
+- dbmanager 数据库角色的成员。
+
+数据库的所有者不能更改数据库，除非该所有者是 dbmanager 角色的成员。
+
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }（Gen2 的预览版）此命令必须在连接到主数据库时运行。  对此数据库设置的更改将立即生效。  缓存查询结果集会产生存储成本。 禁用数据库的结果缓存后，以前保留的结果缓存将立即从 Azure SQL 数据仓库存储中删除。 名为 is_result_set_caching_on 的新列被引入到 sys.databases 中，以显示数据库的结果缓存设置。  
+
+ON 指定从该数据库返回的查询结果集将在 Azure SQL 数据仓库存储中缓存。
+
+OFF 指定从该数据库返回的查询结果集不会在 Azure SQL 数据仓库存储中缓存。
+用户可以通过使用特定的 request_id 查询 sys.pdw_request_steps 来了解所执行的查询的结果缓存命中或失误。   如果存在缓存命中，查询结果将具有包含以下详细信息的单个步骤：
+
+|**列名** |**“运算符”** |**ReplTest1** |
+|----|----|----|
+| operation_type|=|ReturnOperation|
+|step_index|=|0|
+|location_type|=|Control|
+command|Like|%DWResultCacheDb%|
+| | |
+
+## <a name="examples"></a>示例
+
+### <a name="enable-result-set-caching-for-a-database"></a>启用数据库的结果集缓存
+
+```sql
+ALTER DATABASE myTestDW  
+SET RESULT_SET_CACHING ON;
+```
+
+### <a name="disable-result-set-caching-for-a-database"></a>禁用数据库的结果集缓存
+
+```sql
+ALTER DATABASE myTestDW  
+SET RESULT_SET_CACHING OFF;
+```
+
+### <a name="check-result-set-caching-setting-for-a-database"></a>检查数据库的结果集缓存设置
+
+```sql
+SELECT name, is_result_set_caching  
+FROM sys.databases;
+```
+
+### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>检查具有结果集缓存命中和缓存失误的查询的数目
+
+```sql
+SELECT  
+Queries=CacheHits+CacheMisses,
+CacheHits,
+CacheMisses 
+CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
+FROM  
+(SELECT  
+CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
+r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
+s.step_index = 0 then s.request_id else null end) , 
+CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
+s.request_id else null end) 
+     FROM sys.dm_pdw_request_steps s  
+     JOIN sys.dm_pdw_exec_requests r  
+     ON s.request_id = r.request_id) A;
+```
+
+### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>检查查询的结果集缓存命中或缓存失误
+
+```sql
+If
+(SELECT step_index  
+FROM sys.dm_pdw_request_steps  
+WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
+SELECT 1 as is_cache_hit  
+ELSE 
+SELECT 0 as is_cache_hit;
+```
+
+### <a name="check-for-all-queries-with-result-set-cache-hits"></a>检查所有查询的结果集缓存命中数
+
+```sql
+SELECT *  
+FROM sys.dm_pdw_request_steps  
+WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+## <a name="see-also"></a>另请参阅
+
+- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
+- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [Azure SQL 数据仓库的最佳做法](/azure/sql-data-warehouse/sql-data-warehouse-best-practices#maintain-statistics)
+- [在 Azure SQL 数据仓库中设计表](/azure/sql-data-warehouse/sql-data-warehouse-tables-overview#statistics)
+- [SQL 数据仓库语言元素](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end

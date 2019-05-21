@@ -38,7 +38,7 @@ ms.locfileid: "62717904"
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定关系 (SQLXML 4.0)
   可以对 XML 文档中的元素建立相关性。 元素可以按层次结构方式嵌套，并且可以在元素之间指定 ID、IDREF 或 IDREFS 关系。  
   
- 例如，在 XSD 架构中， **\<客户 >** 元素包含**\<顺序 >** 子元素。 当架构映射到 AdventureWorks 数据库中， **\<客户 >** 元素映射到 Sales.Customer 表和**\<顺序 >** 元素映射到Sales.SalesOrderHeader 表。 由于是由客户下订单，因此，基础表 Sales.Customer 和 Sales.SalesOrderHeader 是相关的。 Sales.SalesOrderHeader 表中的 CustomerID 是外键，它引用 Sales.Customer 表中的 CustomerID 主键。 您可以建立在通过使用映射架构元素之间的这些关系`sql:relationship`批注。  
+ 例如，在 XSD 架构中， **\<客户 >** 元素包含 **\<顺序 >** 子元素。 当架构映射到 AdventureWorks 数据库中， **\<客户 >** 元素映射到 Sales.Customer 表和 **\<顺序 >** 元素映射到Sales.SalesOrderHeader 表。 由于是由客户下订单，因此，基础表 Sales.Customer 和 Sales.SalesOrderHeader 是相关的。 Sales.SalesOrderHeader 表中的 CustomerID 是外键，它引用 Sales.Customer 表中的 CustomerID 主键。 您可以建立在通过使用映射架构元素之间的这些关系`sql:relationship`批注。  
   
  在带批注的 XSD 架构中，`sql:relationship` 批注用于根据元素所映射到的各基础表之间的主键和外键关系，按层次结构方式嵌套架构元素。 在指定 `sql:relationship` 批注时，必须标识以下内容：  
   
@@ -76,11 +76,11 @@ ms.locfileid: "62717904"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 针对元素指定 sql:relationship 批注  
- 以下带批注的 XSD 架构包含**\<客户 >** 并**\<顺序 >** 元素。 **\<顺序 >** 元素是子元素的**\<客户 >** 元素。  
+ 以下带批注的 XSD 架构包含 **\<客户 >** 并 **\<顺序 >** 元素。 **\<顺序 >** 元素是子元素的 **\<客户 >** 元素。  
   
- 在架构中，`sql:relationship`指定批注**\<顺序 >** 子元素。 关系本身中定义 **\<xsd: appinfo >** 元素。  
+ 在架构中，`sql:relationship`指定批注 **\<顺序 >** 子元素。 关系本身中定义 **\<xsd: appinfo >** 元素。  
   
- **\<关系 >** 元素中的 CustomerID 标识 Sales.SalesOrderHeader 表作为外键引用 Sales.Customer 表中的 CustomerID 主键。 因此，属于客户的订单将显示为的子元素**\<客户 >** 元素。  
+ **\<关系 >** 元素中的 CustomerID 标识 Sales.SalesOrderHeader 表作为外键引用 Sales.Customer 表中的 CustomerID 主键。 因此，属于客户的订单将显示为的子元素 **\<客户 >** 元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -196,11 +196,11 @@ ms.locfileid: "62717904"
 ...  
 ```  
   
- 对于 Sales.SalesOrderHeader 表中每个订单，XML 文档具有一个**\<顺序 >** 元素。 和每个**\<顺序 >** 元素包含一系列**\<产品 >** 子元素，订单中请求每个产品对应一个对象。  
+ 对于 Sales.SalesOrderHeader 表中每个订单，XML 文档具有一个 **\<顺序 >** 元素。 和每个 **\<顺序 >** 元素包含一系列 **\<产品 >** 子元素，订单中请求每个产品对应一个对象。  
   
  若要指定将生成此层次结构的 XSD 架构，则必须指定两个关系：OrderOD 和 ODProduct。 OrderOD 关系在 Sales.SalesOrderHeader 表与 Sales.SalesOrderDetail 表之间指定父子关系。 ODProduct 关系指定 Sales.SalesOrderDetail 表与 Production.Product 表之间的关系。  
   
- 在以下架构中，`msdata:relationship`上的批注**\<产品 >** 元素指定两个值：OrderOD 和 ODProduct。 指定这些值的顺序非常重要。  
+ 在以下架构中，`msdata:relationship`上的批注 **\<产品 >** 元素指定两个值：OrderOD 和 ODProduct。 指定这些值的顺序非常重要。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -238,7 +238,7 @@ ms.locfileid: "62717904"
 </xsd:schema>  
 ```  
   
- 您可以指定匿名关系，而不指定命名关系。 在本示例中的全部内容**\<批注 >**... **\</annotation >**，它描述了两个关系时，作为子元素的出现**\<产品 >**。  
+ 您可以指定匿名关系，而不指定命名关系。 在本示例中的全部内容 **\<批注 >**... **\</annotation >**，它描述了两个关系时，作为子元素的出现**\<产品 >**。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -382,11 +382,11 @@ ms.locfileid: "62717904"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. 针对多个元素指定 sql:relationship  
- 在此示例中，带批注的 XSD 架构包含**\<客户 >**， **\<顺序 >**，以及 **\<OrderDetail >** 元素。  
+ 在此示例中，带批注的 XSD 架构包含 **\<客户 >**， **\<顺序 >**，以及 **\<OrderDetail >** 元素。  
   
- **\<顺序 >** 元素是子元素的**\<客户 >** 元素。 **\<sql: relationship >** 上指定**\<顺序 >** 子元素; 因此，属于客户的订单将显示为的子元素**\<客户 >**.  
+ **\<顺序 >** 元素是子元素的 **\<客户 >** 元素。 **\<sql: relationship >** 上指定 **\<顺序 >** 子元素; 因此，属于客户的订单将显示为的子元素 **\<客户 >**.  
   
- **\<顺序 >** 元素包含 **\<OrderDetail >** 子元素。 **\<sql: relationship >** 上指定 **\<OrderDetail >** 子元素，因此属于某个订单的订单详细信息显示为子元素的**\<顺序 >** 元素。  
+ **\<顺序 >** 元素包含 **\<OrderDetail >** 子元素。 **\<sql: relationship >** 上指定 **\<OrderDetail >** 子元素，因此属于某个订单的订单详细信息显示为子元素的 **\<顺序 >** 元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -524,7 +524,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 在架构中，同时 **\<Emp1 >** 元素和 **\<Emp2 >** 元素都是类型`EmpType`。 类型`EmpType`描述**\<顺序 >** 子元素和对应 **\<sql: relationship >**。 在这种情况下，没有任何可以中确定的单一父 **\<sql: relationship >** 通过**父**属性。 在此情况下，未指定**父**属性中 **\<sql: relationship >**;**父**从获取属性信息在架构中的层次结构。  
+ 在架构中，同时 **\<Emp1 >** 元素和 **\<Emp2 >** 元素都是类型`EmpType`。 类型`EmpType`描述 **\<顺序 >** 子元素和对应 **\<sql: relationship >**。 在这种情况下，没有任何可以中确定的单一父 **\<sql: relationship >** 通过**父**属性。 在此情况下，未指定**父**属性中 **\<sql: relationship >**;**父**从获取属性信息在架构中的层次结构。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
   

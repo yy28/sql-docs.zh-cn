@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f26a39ab9264fa41ff4e558970a459987bf27ae
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63203060"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560154"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -725,13 +725,12 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
+
 ## <a name="arguments"></a>参数
 
-database_name      
-要修改的数据库的名称。
+database_name 要修改的数据库的名称。
 
-CURRENT     
-指定应更改当前使用的数据库。
+CURRENT 指定应更改当前使用的数据库。
 
 ## <a name="remarks"></a>Remarks
 若要删除数据库，请使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。
@@ -791,16 +790,23 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="overview-azure-sql-data-warehouse"></a>概述：Azure SQL 数据仓库
 
-为数据库修改名称、最大大小或服务对象。
+在 Azure SQL 数据仓库中，“ALTER DATABASE”为数据库修改名称、最大大小或服务对象。
+
+由于 ALTER DATABASE 语法的篇幅较长，因此分为多篇文章。
+
+[ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)：介绍了使用 ALTER DATABASE 的 SET 选项来更改数据库属性的语法和相关信息。
 
 ## <a name="syntax"></a>语法
 
-```
-ALTER DATABASE database_name
-
+```console
+ALTER DATABASE { database_name | CURRENT }
+{
   MODIFY NAME = new_database_name
 | MODIFY ( <edition_option> [, ... n] )
-  
+| SET <option_spec> [ ,...n ] [ WITH <termination> ]
+}
+[;]
+
 <edition_option> ::=
       MAXSIZE = {
             250 | 500 | 750 | 1024 | 5120 | 10240 | 20480
@@ -818,14 +824,11 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>参数
 
-database_name     
-指定要修改的数据库的名称。
+database_name 指定要修改的数据库的名称。
 
-MODIFY NAME = new_database_name    
-使用指定的名称 new_database_name 重命名数据库。
+MODIFY NAME = new_database_name 使用指定的名称 new_database_name 重命名数据库。
 
-MAXSIZE    
-默认为 245,760 GB (240 TB)。
+MAXSIZE 默认为 245,760 GB (240 TB)。
 
 **适用范围：** 已针对计算代系 1 进行优化
 
@@ -835,8 +838,7 @@ MAXSIZE
 
 数据库中允许的最大行存储数据大小。 存储在行存储表中的数据、列存储索引的增量存储或非聚集索引（聚集在列存储索引上）都不可超过 MAXSIZE。 压缩到列存储格式的数据没有大小限制，不受 MAXSIZE 约束。
 
-SERVICE_OBJECTIVE      
-指定性能级别。 有关 SQL 数据仓库的服务目标的详细信息，请参阅[数据仓库单位 (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)。
+SERVICE_OBJECTIVE 指定性能级别。 有关 SQL 数据仓库的服务目标的详细信息，请参阅[数据仓库单位 (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)。
 
 ## <a name="permissions"></a>权限
 

@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502869"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580127"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,8 +173,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## <a name="arguments"></a>参数  
+```
+
+## <a name="arguments"></a>参数
+
  index_name  
  索引的名称。 索引名称在表或视图中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
@@ -653,23 +655,28 @@ ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组�
   
 若要重新生成聚集列存储索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将：  
   
-1.  在重新生成进行时获取表或分区上的排他锁。 在重新生成期间数据“处于脱机状态”并且不可用。  
+1. 在重新生成进行时获取表或分区上的排他锁。 在重新生成期间数据“处于脱机状态”并且不可用。  
   
-2.  通过物理删除已从表中逻辑上删除的行对列存储进行碎片整理；已删除的字节在物理介质上回收。  
+1. 通过物理删除已从表中逻辑上删除的行对列存储进行碎片整理；已删除的字节在物理介质上回收。  
   
-3.  从原始列存储索引（包括增量存储）中读取所有数据。 它将数据合并到新的行组中，并且将行组压缩到列存储中。  
+1. 从原始列存储索引（包括增量存储）中读取所有数据。 它将数据合并到新的行组中，并且将行组压缩到列存储中。  
   
-4.  要求物理介质上的空间，以便在进行重新生成时存储列存储索引的两个副本。 在重新生成完成后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将删除原始聚集列存储索引。  
+1. 要求物理介质上的空间，以便在进行重新生成时存储列存储索引的两个副本。 在重新生成完成后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将删除原始聚集列存储索引。
+
+1. 对于具有有序聚合列存储索引的 Azure SQL 数据仓库表，ALTER INDEX REBUILD 将对数据重新排序。  
   
-## <a name="reorganizing-indexes"></a> 重新组织索引  
+## <a name="reorganizing-indexes"></a> 重新组织索引
 使用最少系统资源重新组织索引。 通过对叶级页以物理方式重新排序，使之与叶节点的从左到右的逻辑顺序相匹配，进而对表和视图中的聚集索引和非聚集索引的叶级进行碎片整理。 重新组织还会压缩索引页。 压缩基于现有的填充因子值。 若要查看填充因子设置，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
   
 如果指定 ALL，将重新组织表中的关系索引（包括聚集索引和非聚集索引）和 XML 索引。 指定 ALL 时应用某些限制，请参阅本文“参数”部分的 ALL 定义。  
   
 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
- 
+
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中重新组织索引时，不更新统计信息。
+
+>[!IMPORTANT]
+> 对于具有有序聚合列存储索引的 Azure SQL 数据仓库表，`ALTER INDEX REORGANIZE` 不会对数据重新排序。 要对数据重新排序，可使用 `ALTER INDEX REBUILD`。
   
 ## <a name="disabling-indexes"></a> 禁用索引  
 禁用索引可防止用户访问该索引，对于聚集索引，还可防止用户访问基础表数据。 索引定义保留在系统目录中。 对视图禁用非聚集索引或聚集索引会以物理方式删除索引数据。 禁用聚集索引将阻止对数据的访问，但在删除或重新生成索引之前，数据在 B 树中一直保持未维护的状态。 若要查看已启用索引或已禁用的索引的状态，请查询 **sys.indexes** 目录视图中的 **is_disabled** 列。  
