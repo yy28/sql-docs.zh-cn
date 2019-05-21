@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,16 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_population_ranges dynamic management view
 ms.assetid: 58d8564b-9c43-4965-a31c-2893890334ef
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad5734a13224df89c034087863cbd39af0b919d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d41e7ce0353d45752896286dc27e59494efbc9c2
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763685"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947173"
 ---
 # <a name="sysdmftspopulationranges-transact-sql"></a>sys.dm_fts_population_ranges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47763685"
 |**processed_row_count**|**int**|此范围内已经处理的行数。 保持前进进度，并且每隔 5 分钟进行一次计数，而不是在每个批次提交时进行计数。|  
 |**error_count**|**int**|此范围内已经出现错误的行数。 保持前进进度，并且每隔 5 分钟进行一次计数，而不是在每个批次提交时进行计数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
@@ -52,7 +52,7 @@ ms.locfileid: "47763685"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|关系|  
+|From|若要|关系|  
 |----------|--------|------------------|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|多对一|  
   

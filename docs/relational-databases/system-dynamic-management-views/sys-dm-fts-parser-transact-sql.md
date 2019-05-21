@@ -1,9 +1,8 @@
 ---
-title: sys.dm_fts_parser (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +16,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-author: douglaslMS
-ms.author: douglasl
+auauthor: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: e296632c0444ba634f87755266efc442038c073d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535300"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944241"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  要用于分析的断字符的区域设置标识符 (LCID) *query_string*。  
   
  *stoplist_id*  
- 非索引字表，如果有，用于通过标识的断字符的 ID *lcid*。 *stoplist_id*是**int**。如果指定“NULL”，则不使用非索引字表。 如果指定 0，则使用系统 STOPLIST。  
+ 非索引字表，如果有，用于通过标识的断字符的 ID *lcid*。 *stoplist_id*是**int**。如果指定 NULL，则不使用任何非索引字表。 如果指定 0，则使用系统 STOPLIST。  
   
  非索引字表 ID 在数据库中是唯一的。 若要获取给定的表使用的全文索引非索引字表 ID [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)目录视图。  
   
@@ -68,8 +68,8 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|关键字 (keyword)|**varbinary(128)**|断字符返回的给定关键字的十六进制表示形式。 该表示形式用于存储全文索引的关键字。 此值不是用户可读，但它对于相关给定的关键字输出返回的返回内容的一个全文索引的索引，如其他动态管理视图很有用[sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)和[sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 表示指示文件或数据集末尾的特殊字符。|  
-|group_id|**int**|包含一个整数值，用于区分从中生成给定字词的逻辑组。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 生成以下英语 group_id 值：<br /><br /> 1：“服务器”<br />2：DB<br />3：DB|  
+|关键字 (keyword)|**varbinary(128)**|断字符返回的给定关键字的十六进制表示形式。 该表示形式用于存储全文索引的关键字。 此值不是用户可读，但它对于相关给定的关键字输出返回的返回内容的一个全文索引的索引，如其他动态管理视图很有用[sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)和[sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 表示指示文件或数据集的末尾的特殊字符。|  
+|group_id|**int**|包含一个整数值，用于区分从中生成给定字词的逻辑组。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 生成以下英语 group_id 值：<br /><br /> 1:“服务器”<br />2:DB<br />3:DB|  
 |phrase_id|**int**|包含一个整数值，用于区别断字符给出复合词（如 full-text）替代形式的情况。 有时，如果存在复合词（“multi-millon”），断字符将给出替代形式。 这些替代形式（短语）有时需要加以区别。<br /><br /> 例如，'`multi-million`' 生成以下英语 phrase_id 值：<br /><br /> 1 表示 `multi`<br />1 表示 `million`<br />2 表示 `multimillion`|  
 |occurrence|**int**|指示分析结果中每个字词的顺序。 例如，对于短语“`SQL Server query processor`”，occurrence 会包含该英语短语中字词的以下 occurrence 值：<br /><br /> 1 表示 `SQL`<br />2 表示 `Server`<br />为 3 `query`<br />4 `processor`|  
 |special_term|**nvarchar(4000)**|包含有关断字符给出的字词特征的信息，可以是以下值之一：<br /><br /> Exact match<br /><br /> Noise word<br /><br /> End of Sentence<br /><br /> End of paragraph<br /><br /> End of Chapter|  

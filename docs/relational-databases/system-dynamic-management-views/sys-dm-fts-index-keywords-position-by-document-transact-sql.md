@@ -16,17 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_index_keywords_position_by_document dynamic management view
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7470367bd827faf4c2468ee7187a05c766256dab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12c557029b0b479fbb780fdd93ae05faa4c26735
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716225"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944333"
 ---
-# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact SQL)
+# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   在索引文档中返回关键字位置信息。  
@@ -61,7 +61,7 @@ OBJECT_ID('table_name')
 ## <a name="remarks"></a>备注  
  使用 DMV 来确定在索引文档中的索引词的位置。 此 DMV 可用于进行故障排除时**sys.dm_fts_index_keywords_by_document**指示的单词是在全文索引中，但运行时使用这些字词的查询，则不返回文档。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有全文索引涵盖的列的 SELECT 权限以及 CREATE FULLTEXT CATALOG 权限。  
   
 ## <a name="examples"></a>示例  

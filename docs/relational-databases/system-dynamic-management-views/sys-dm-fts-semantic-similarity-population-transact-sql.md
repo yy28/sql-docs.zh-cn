@@ -3,7 +3,6 @@ title: sys.dm_fts_semantic_similarity_population (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -16,15 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_semantic_similarity_population dynamic management view
 ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: d65ba08739cde5dede23745c1a891246a6194360
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baeb646853294266e4dbca2a649236e1046ffa1f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644235"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947167"
 ---
 # <a name="sysdmftssemanticsimilaritypopulation-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47644235"
     
 ||||  
 |-|-|-|  
-|**列名**|**类型**|**Description**|  
+|**列名**|**类型**|**说明**|  
 |**database_id**|**int**|包含正在填充的全文索引的数据库 ID。|  
 |**catalog_id**|**int**|包含此全文索引的全文目录的 ID。|  
 |**table_id**|**int**|其全文索引正在被填充的表的 ID。|  
@@ -57,7 +57,7 @@ ms.locfileid: "47644235"
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  

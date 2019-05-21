@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_keywords (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 86a4aa126ef72425aa2e3c284a3762517d31222d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de956e2dffebd801205bf4ac46a7f503e1acbe8f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790025"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944273"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**关键字**|**nvarchar(4000)**|存储在全文索引的关键字的十六进制表示形式。<br /><br /> 注意： OxFF 表示指示文件或数据集的末尾的特殊字符。|  
-|**display_term**|**nvarchar(4000)**|关键字的可读格式。 这种格式是从十六进制格式派生的。<br /><br /> 注意： **display_term**值 OxFF 是"的文件尾"。|  
+|**keyword**|**nvarchar(4000)**|存储在全文索引的关键字的十六进制表示形式。<br /><br /> 注意：OxFF 表示指示文件或数据集的末尾的特殊字符。|  
+|**display_term**|**nvarchar(4000)**|关键字的可读格式。 这种格式是从十六进制格式派生的。<br /><br /> 注意：**Display_term**值 OxFF 是"的文件尾"。|  
 |**column_id**|**int**|从中对当前关键字进行全文索引的列的 ID。|  
 |**document_count**|**int**|包含当前字词的文档或行的数目。|  
   
@@ -77,7 +77,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 > [!NOTE]  
 >  **Document_count**返回的**sys.dm_fts_index_keywords**可能针对特定文档返回的计数不太准确**sys.dm_fts_index_keywords_by_document**或**CONTAINS**查询。 这一可能的不精确估计小于 1%。 由于可能出现这一不精确**document_id**可能跨多个行在索引片段中，或在同一行中多次出现时两次计数。 若要获取更准确的计数为特定文档，请使用**sys.dm_fts_index_keywords_by_document**或**CONTAINS**查询。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

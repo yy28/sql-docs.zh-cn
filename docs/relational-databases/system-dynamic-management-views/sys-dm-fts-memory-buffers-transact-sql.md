@@ -17,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_memory_buffers dynamic management view
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26f63826244bacc32377a2b7e3315f9b4696fdd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 254ba42c828bbe719d5ddce0502d0a9063755fe3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624025"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947269"
 ---
 # <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47624025"
 |**bytes_used**|**int**|该缓冲区中正在使用的内存量（字节）。|  
 |**percent_used**|**int**|已分配内存已用的百分比。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
@@ -57,7 +57,7 @@ ms.locfileid: "47624025"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|关系|  
+|From|若要|关系|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|多对一|  
   
