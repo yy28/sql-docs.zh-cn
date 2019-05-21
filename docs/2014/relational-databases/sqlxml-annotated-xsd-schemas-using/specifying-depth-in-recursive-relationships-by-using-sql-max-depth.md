@@ -375,7 +375,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- 在此架构中，在 `sql:max-depth` 复杂类型上指定了 `CustomerBaseType`。 该架构还指定**\<客户 >** 类型的元素`CustomerType`，它派生自`CustomerBaseType`。 在这样的架构上指定的 XPath 查询将生成错误，因为在 restriction 基类型中定义的元素不支持 `sql:max-depth`。  
+ 在此架构中，在 `sql:max-depth` 复杂类型上指定了 `CustomerBaseType`。 该架构还指定 **\<客户 >** 类型的元素`CustomerType`，它派生自`CustomerBaseType`。 在这样的架构上指定的 XPath 查询将生成错误，因为在 restriction 基类型中定义的元素不支持 `sql:max-depth`。  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>具有深层次结构的架构  
  您可能有一个包含深层次结构的架构，在该层次结构中，元素包含子元素，而该子元素又包含另一个子元素，以此类推。 如果在这样的架构中指定的 `sql:max-depth` 批注生成了一个 XML 文档，并且该文档中包括一个超过 500 级（顶级元素在第 1 级，其子元素在第 2 级，以此类推）的层次结构，则会返回错误。  
