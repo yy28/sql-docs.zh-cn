@@ -30,7 +30,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62717904"
@@ -238,7 +238,7 @@ ms.locfileid: "62717904"
 </xsd:schema>  
 ```  
   
- 您可以指定匿名关系，而不指定命名关系。 在本示例中的全部内容 **\<批注 >**... **\</annotation >**，它描述了两个关系时，作为子元素的出现**\<产品 >**。  
+ 您可以指定匿名关系，而不指定命名关系。 在本示例中的全部内容 **\<批注 >**... **\</annotation >**，它描述了两个关系时，作为子元素的出现 **\<产品 >** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

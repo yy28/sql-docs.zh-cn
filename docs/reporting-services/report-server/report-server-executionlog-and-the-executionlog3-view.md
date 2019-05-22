@@ -2,21 +2,21 @@
 title: 报表服务器 ExecutionLog 和 ExecutionLog3 视图 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414095"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619691"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>报表服务器 ExecutionLog 和 ExecutionLog3 视图
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器执行日志包含有关在一个或多个服务器上在本机模式扩展部署或 SharePoint 场中执行的报表的信息。 您可以使用报表执行日志来查明报表的请求频率、最常用的输出格式以及每个处理阶段所用的处理时间（毫秒）。 该日志包含与执行报表的数据集查询所用的时间长度和处理数据所用的时间长度有关的信息。 如果您是报表服务器管理员，则可以查看日志信息并标识长时间运行的任务，并且向报表作者就其可以改进的报表方面（数据集或处理）提出建议。  
@@ -260,8 +260,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      该值以毫秒计。 此数据可用于诊断性能问题。 从外部 Web 服务器检索图像所需的时间可能使总体报表执行速度变慢。  
   
     ```  
@@ -273,8 +271,6 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 -   **连接**  
-  
-     在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      多级别结构  
   
@@ -322,9 +318,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  下表描述在报表执行日志中捕获的数据  
   
 |“列”|描述|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|处理请求的报表服务器实例的名称。|  
-|ReportPath|报表的路径结构。  例如，在报表管理器的根文件夹中名为“test”的报表将具有“/test”的 ReportPath。<br /><br /> 保存在报表管理器上文件夹“samples”中的名为“test”的报表将具有“/Samples/test/”的 ReportPath|  
+|ReportPath|报表的路径结构。 作为“test”保存在根文件夹中的报表具有“/test”的 ReportPath。<br /><br /> 保存在文件夹“samples”中的名为“test”的报表将具有“/Samples/test/”的 ReportPath|  
 |UserName|用户标识符。|  
 |ExecutionID||  
 |RequestType|请求类型（用户或系统）。|  

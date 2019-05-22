@@ -34,11 +34,11 @@ ms.locfileid: "62729532"
   
      在“属性”窗口保持打开状态时，更容易更改数据源视图中各个表的属性。 如果不使用“自动隐藏”按钮使窗口保持打开状态，则在“关系图”窗格中单击其他对象时，该窗口将会关闭。  
   
-3.  更改**FriendlyName**属性**FactInternetSales**对象传递给*`InternetSales`*。  
+3.  更改**FriendlyName**属性**FactInternetSales** 对象传递给 *`InternetSales`*。  
   
      如果在 **FriendlyName** 属性单元格外单击，则应用此更改。 在下一课中，将定义一个基于该事实数据表的度量值组。 由于您在本课中进行了更改，因此该事实数据表的名称将为 InternetSales，而不是 FactInternetSales。  
   
-4.  在“表”窗格中单击 **DimProduct**。 在属性窗口中更改**FriendlyName**属性设置为*`Product`*。  
+4.  在“表”窗格中单击 **DimProduct**。 在属性窗口中更改**FriendlyName** 属性设置为 *`Product`*。  
   
 5.  使用同样的方法更改数据源视图中剩余的各个表的 **FriendlyName** 属性，删除“**Dim**”前缀。  
   

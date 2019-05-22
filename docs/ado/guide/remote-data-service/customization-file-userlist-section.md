@@ -24,7 +24,7 @@ ms.locfileid: "63214784"
 # <a name="customization-file-userlist-section"></a>自定义文件 UserList 部分
 **Userlist**部分是关于**连接**的相同部分与部分*标识符*参数。  
   
- 此部分可以包含*用户访问权限条目*，它指定访问权限为指定的用户和重写*默认**访问项*匹配中**连接**部分。  
+ 此部分可以包含 *用户访问权限条目* ，它指定访问权限为指定的用户和重写 *默认* *访问项* 匹配中 **连接** 部分。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  

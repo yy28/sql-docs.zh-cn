@@ -2,18 +2,18 @@
 title: 查找、查看和管理报表（报表生成器和 SSRS）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8e19127cd13ddb5e71ce245b4e0a832c63ecad76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0dad0840c216bd8aca67acfedb9de6e6aa15c117
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711008"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581236"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>查找、查看和管理报表（报表生成器和 SSRS）
   在报表生成器中，您可以浏览报表服务器或 SharePoint 站点上的文件夹，以便查找报表、共享数据源、模型和其他相关报表项；并且可以浏览您的计算机，以便查找本地报表。 为了便于查找报表，报表生成器维护最近使用的服务器和站点的列表，并提供对您的计算机的文件系统中“桌面”、“我的文档”和“我的电脑”文件夹的直接访问。  
@@ -67,7 +67,7 @@ ms.locfileid: "52711008"
   
  其中的某些任务可能需要由报表服务器的管理员为您完成。 若要了解有关在报表服务器上执行的任务的详细信息，请参阅 [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
- 报表管理器通常包含文件夹、报表、数据源和报表模型，以及“我的报表”文件夹。 “我的报表”是一个个人工作区，您可以使用它来存储和处理自己的报表。 其他报表服务器文件夹都是公用文件夹，通常要求用户具有高级权限才能添加或修改文件夹内容。 您可以在“我的报表”内创建文件夹，以便进一步组织您的报表。  
+ 报表管理器通常包含文件夹、报表、数据源以及“我的报表”文件夹。 “我的报表”是一个个人工作区，您可以使用它来存储和处理自己的报表。 其他报表服务器文件夹都是公用文件夹，通常要求用户具有高级权限才能添加或修改文件夹内容。 您可以在“我的报表”内创建文件夹，以便进一步组织您的报表。  
   
  报表管理器在 Reporting Services HTML 查看器中显示报表。 该 HTML 查看器提供了用于在 HTML 中查看报表的框架，并且包括报表工具栏、参数部分、凭据部分和文档映射。 报表工具栏提供了页面导航、缩放、刷新、搜索、导出、打印和数据馈送功能。 在通过 URL 访问报表时，报表工具栏也会在浏览器窗口中显示于报表顶部。 打印功能是可选的，并且必须由管理员启用。 如果启用了打印功能，报表工具栏上将显示一个打印机图标。 以下各图显示了“报表管理器”窗口中的报表工具栏和报表工具栏功能概览。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "52711008"
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点中查找报表服务器项  
  在您能够设置属性之前，首先必须能够找到项。 报表服务器项总是存储在多个库中或者存储在某个库的一个文件夹内。  
   
- 访问 SharePoint 站点时，您可以看到“浏览”页和“库工具”选项卡。“浏览”页列出各个库，还列出所选库的内容。 您可以查看库中的报表、报表模型和其他项，浏览文件夹，搜索站点以查找项。  
+ 访问 SharePoint 站点时，您可以看到“浏览”页和“库工具”选项卡。“浏览”页列出各个库，还列出所选库的内容。 可以查看库中的报表和其他项，浏览文件夹，搜索站点以查找项。  
   
- 若要将报表服务器项与 SharePoint 站点中的其他项区分开，可使用图标直观地识别出报表服务器项，也可以将鼠标指针置于类型上方并查看文件扩展名。 下图显示了 **Reports** 库中的文件夹、报表模型和报表定义：  
+ 若要将报表服务器项与 SharePoint 站点中的其他项区分开，可使用图标直观地识别出报表服务器项，也可以将鼠标指针置于类型上方并查看文件扩展名。 下图显示了 Reports 库中的文件夹和报表定义：  
   
  ![带有报表服务器项的 SharePoint 库](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Sharepoint library with report server items")  
   

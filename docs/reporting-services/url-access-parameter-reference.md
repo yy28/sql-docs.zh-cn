@@ -1,22 +1,22 @@
 ---
 title: URL 访问参数引用 | Microsoft Docs
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515124"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620593"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
   可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "52515124"
 -   [报表查看器 Web 部件命令 (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML 查看器命令 (rc:)  
- HTML 查看器命令用于指向 HTML 查看器（例如，从报表管理器中）且以 rc: 为前缀：  
+ - HTML 查看器命令用于指向 HTML 查看器且以 rc: 为前缀：
   
 -   Toolbar：  
                   显示或隐藏工具栏。 如果此参数的值为 **false**，将忽略所有剩余的选项。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。 此参数的默认值为 **true**。  

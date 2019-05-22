@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose 实用工具 (Service Broker) |Microsoft Docs
+title: ssbdiagnose 实用工具 (Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,17 +26,21 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+ms.openlocfilehash: bae9ec6ddd1d3098c04dc1afaaebc189ae079959
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590541"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821096"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。  
-  
+  **ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。
+
+> [!NOTE]
+> ssbdiagnose 实用工具不再与最新版本的 SQL Server Management Studio (SSMS) 18.0 一起安装。 若要安装最新版本的 ssbdiagnose，请安装 [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791)。
+> 未来版本中将修复需要安装以前版本的 SSMS 才能获得最新 ssbdiagnose 这一点。 SSMS 18.x 与 17.x 版本并行运行，因此两个版本都可安装在同一计算机上。
+
 ## <a name="syntax"></a>语法  
   
 ```  
@@ -310,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 环境变量  
  **ssbdiagnose** 实用工具支持 **sqlcmd** 实用工具也使用的 SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDLOGINTIMOUT 环境变量。 设置环境变量可以使用命令提示 SET 命令，也可以使用通过 **sqlcmd** 运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中的 **setvar**命令。 有关如何在 **sqlcmd** 中使用 **setvar**的详细信息，请参阅 [将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  在每个 **connectionoptions** 子句中，通过 **-E** 或 **-U** 指定的登录名必须是 **-S** 所指定实例中 **sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  

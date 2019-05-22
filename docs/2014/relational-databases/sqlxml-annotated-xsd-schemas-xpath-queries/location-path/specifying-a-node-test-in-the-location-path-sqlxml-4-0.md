@@ -17,7 +17,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7450810f45d81dd1530699677a80a052840ed867
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63127597"
@@ -31,7 +31,7 @@ ms.locfileid: "63127597"
 ## <a name="node-test-example-1"></a>节点测试：示例 1  
  位置路径`child::Customer`中选择 **\<客户 >** 上下文节点的子元素。  
   
- 在本示例中，`child` 是轴，`Customer` 是节点测试。 主要节点类型`child`轴是 **\<元素 >**。 因此，如果节点测试为 TRUE **\<客户 >** 节点是 **\<元素 >** 节点。 如果上下文节点没有**\<客户 >** 子级，则返回空节点集。  
+ 在本示例中，`child` 是轴，`Customer` 是节点测试。 主要节点类型`child`轴是 **\<元素 >**。 因此，如果节点测试为 TRUE **\<客户 >** 节点是 **\<元素 >** 节点。 如果上下文节点没有 **\<客户 >** 子级，则返回空节点集。  
   
 ## <a name="node-test-example-2"></a>节点测试：示例 2  
  位置路径`attribute::CustomerID`中选择**CustomerID**上下文节点的属性。  

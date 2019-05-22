@@ -1,8 +1,8 @@
 ---
 title: SQL Server 中的报表生成器 | Microsoft Docs
-ms.date: 11/29/2018
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -11,17 +11,20 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290295"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620607"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server 中的报表生成器
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一种用于创建分页报表的工具，主要面向更愿意在独立环境中工作而不是使用 Visual Studio 中的报表设计器的业务用户。  当你设计分页报表时，需要创建一个报表定义，用于指定在何处获取数据、获取哪些数据以及如何显示数据。 当你运行报表时，报表处理器将使用你指定的报表定义检索数据，并将数据与报表布局相结合生成报表。 可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中预览报表。 然后在本机模式或 SharePoint 集成模式下（2016 及更早版本），将报表发布到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 还可以将分页报表发布到 Power BI 服务。 详细了解 [Power BI Premium 中的分页报表](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi)（预览版）。
+
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一种用于创建分页报表的工具，主要面向更愿意在独立环境中工作而不是使用 Visual Studio/SSDT 中的报表设计器的业务用户。  当你设计分页报表时，需要创建一个报表定义，用于指定检索哪些数据、何处获取数据以及如何显示数据。 当你运行报表时，报表处理器将使用你指定的报表定义检索数据，并将数据与报表布局相结合生成报表。 可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中预览报表。 然后在本机模式或 SharePoint 集成模式下（2016 及更早版本），将报表发布到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 
+
+还可以将分页报表发布到 Power BI 服务。 详细了解 [Power BI Premium 中的分页报表](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi)（预览版）。
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -46,7 +49,6 @@ ms.locfileid: "56290295"
 -   **修改现有报表。** 使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，你可以自定义和更新在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]报表设计器中创建的报表。  
   
 -   **修改数据** ，通过筛选数据及将数据分组和排序或通过添加公式或表达式来修改数据。  
-  
 -   **添加图表、仪表、迷你图和指示器** ，以直观的形式汇总数据，使大量聚合信息一目了然。  
   
 -   **添加交互功能** ，如文档结构图、显示/隐藏按钮以及指向子报表和钻取报表的钻取链接。 使用参数和筛选器可以筛选自定义视图的数据。  
@@ -73,7 +75,7 @@ ms.locfileid: "56290295"
 
   [SQL Server Reporting Services 和报表生成器中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   介绍此版本的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的新增功能。   
-  [教程：脱机生成快速图表报表](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [教程：脱机创建快速图表报表](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  介绍 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 以及可用来帮助创建报表的向导。 教程提供了一组供您使用的数据，因此不需要连接到数据源即可开始工作。  
   
  [规划报表（报表生成器）](../../reporting-services/report-design/planning-a-report-report-builder.md)  

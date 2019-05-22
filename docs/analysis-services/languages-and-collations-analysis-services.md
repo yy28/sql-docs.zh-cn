@@ -124,7 +124,7 @@ ms.locfileid: "62634922"
   
 -   更新排序规则后，重新处理分隔和维度。  
   
- 你可使用 SQL Server Management Studio 或 AMO PowerShell 更改服务器级别的默认语言或排序规则。 或者，可以修改**\<语言 >** 并 **\<CollationName >** 设置在 msmdsrv.ini 文件中，指定语言的 LCID。  
+ 你可使用 SQL Server Management Studio 或 AMO PowerShell 更改服务器级别的默认语言或排序规则。 或者，可以修改 **\<语言>** 并 **\<CollationName>** 设置在 msmdsrv.ini 文件中，指定语言的 LCID。  
   
 1.  在 Management Studio 中，右键单击服务器名 |“属性” | “语言/排序规则”。  
   

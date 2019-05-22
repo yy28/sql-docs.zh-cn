@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f772e860509275c70ae4db05b2da0aa0b0d5418a
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63127715"
@@ -74,7 +74,7 @@ ms.locfileid: "63127715"
 |操作|Description|  
 |---------------|-----------------|  
 |Insert|DiffGram 指示插入操作，当元素出现在 **\<DataInstance >** 块中但不是在相应 **\<之前 >** 块，以及**diffgr: haschanges**指定属性 (**diffgr: haschanges = 插入**) 在元素上。 在这种情况下，DiffGram 插入中指定的记录实例 **\<DataInstance >** 到数据库中的块。<br /><br /> 如果**diffgr: haschanges**未指定属性、 处理逻辑将忽略该元素和不执行任何插入。 有关工作示例，请参阅[DiffGram 示例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)。|  
-|Update|中的某个元素时，DiffGram 指示更新操作\<之前 > 没有相应的元素中的块 **\<DataInstance >** 块 （即，两个元素具有**diffgr: id**具有相同的值属性) 和**diffgr: haschanges**属性指定值**修改**中的元素上**\<DataInstance >** 块。<br /><br /> 如果**diffgr: haschanges**中的元素上未指定特性 **\<DataInstance >** 块中，处理逻辑返回错误。 有关工作示例，请参阅[DiffGram 示例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果**diffgr: parentid**中指定 **\<之前 >** 阻止，请通过指定的元素的父-子关系**parentID**中使用确定更新记录的顺序。|  
+|Update|中的某个元素时，DiffGram 指示更新操作\<之前 > 没有相应的元素中的块 **\<DataInstance >** 块 （即，两个元素具有**diffgr: id**具有相同的值属性) 和**diffgr: haschanges**属性指定值**修改**中的元素上 **\<DataInstance >** 块。<br /><br /> 如果**diffgr: haschanges**中的元素上未指定特性 **\<DataInstance >** 块中，处理逻辑返回错误。 有关工作示例，请参阅[DiffGram 示例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果**diffgr: parentid**中指定 **\<之前 >** 阻止，请通过指定的元素的父-子关系**parentID**中使用确定更新记录的顺序。|  
 |DELETE|当元素出现在 DiffGram 指示删除操作 **\<之前 >** 块中但不是在相应 **\<DataInstance >** 块。 在这种情况下，DiffGram 删除记录实例中指定 **\<之前 >** 从数据库的块。 有关工作示例，请参阅[DiffGram 示例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果**diffgr: parentid**中指定 **\<之前 >** 阻止，请通过指定的元素的父-子关系**parentID**中使用确定删除记录的顺序。|  
   
 > [!NOTE]  

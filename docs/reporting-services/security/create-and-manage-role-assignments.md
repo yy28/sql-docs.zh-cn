@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 815822c983154d55cf67ec02475e81f33008d42e
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449682"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619603"
 ---
 # <a name="create-and-manage-role-assignments"></a>创建和管理角色分配
 
-角色分配是确定用户或组权限的安全策略。 权限决定用户或组是否可以访问特定报表服务器项或执行任务。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。
+角色分配是确定用户或组权限的安全策略。 权限决定用户或组是否可以访问或修改特定报表服务器项，或执行任务。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。
 
 角色分配的作用域为“  项级”或“ 系统级”。
 
-- 项级角色分配在报表服务器文件夹层次结构中的特定项或分支的上下文中创建。 您需要导航到具体的文件夹或项，才能为其创建角色分配。
+- 项级角色分配会创建，用于报表服务器文件夹层次结构中的特定项或分支。 您需要导航到具体的文件夹或项，才能为其创建角色分配。
 
 - 系统级角色分配向所选用户赋予执行影响整个报表服务器站点的任务的能力。 这些任务包括：
   - 创建共享计划
@@ -39,27 +39,23 @@ ms.locfileid: "65449682"
 
 ## <a name="creating-an-item-level-role-assignment"></a>创建项级角色分配
 
-若要创建或管理角色分配，请访问 Web 门户。 打开想要保护的项的“安全属性”页。
-
-可以为需要访问报表服务器的每个用户或组帐户创建一个单独的角色分配。 如果帐户所属的域不是报表服务器所在的域，指定帐户时请包括域名。 指定帐户后，选择一个或多个角色定义。 这些角色定义是可累加的。 对于特定用户或组，其角色分配支持所有定义的所有任务的合集。
+在此，可以为需要访问报表服务器的每个用户或组帐户创建一个单独的角色分配。 如果帐户所属的域不是报表服务器所在的域，指定帐户时请包括域名。 指定帐户后，选择一个或多个角色定义。 这些角色定义是可累加的。 对于特定用户或组，其角色分配支持所有定义的所有任务的合集。
 
 若要扩大访问范围，应在文件夹层次结构的上级选择项（如根文件夹“主文件夹”）。 然后，可以创建角色分配来锁定文件夹层次结构的特定区域。
 
 您必须是报表服务器计算机上的本地管理员组的成员，才能创建角色分配。 您可以通过将其他用户分配给  内容管理员角色来委托该责任。
 
-有关详细信息，请参阅[授予用户报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)
+若要创建或管理角色分配，或了解详细信息，请参阅[授予用户对报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)
   
 ## <a name="creating-a-system-level-role-assignment"></a>创建系统级角色分配
 
-若要创建或管理系统级角色分配，请访问 Web 门户并打开“站点设置”页。
+系统级和项级角色分配一同进行。 为拥有项级角色分配的每个用户或组创建系统级角色分配。
 
-系统级和项级角色分配一同进行。 必须为拥有项级角色分配的每个用户或组创建系统级角色分配。
+系统级角色分配包括的权限广泛，但不包括项级角色分配中的权限。
 
-系统级角色分配包括的权限广泛，但不包括项级角色分配中的权限。 
+与计算机上的系统权限相比，报告服务器上的系统角色不提供包括所有可能任务的全面权限。 相反，系统级角色分配不过是作用域为报表服务器站点的任务的集合。 系统角色分配确定用户能否查看应用程序属性（如主页的图像或标题）、查看或管理共享计划或者使用报表生成器。
 
-与计算机上的系统权限相比，报告服务器上的系统角色不提供包括所有可能任务的完整集合的全面权限。 相反，系统级角色分配不过是作用域为报表服务器站点的任务的集合。 系统角色分配确定用户能否查看应用程序属性（如主页的图像或标题）、查看或管理共享计划或者使用报表生成器。
-
-有关详细信息，请参阅[授予用户对报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)和[预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)。  
+若要创建或管理系统级别的角色分配，或了解详细信息，请参阅[授予用户对报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)以及[预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)。  
 
 ## <a name="modifying-a-role-assignment"></a>修改角色分配
 

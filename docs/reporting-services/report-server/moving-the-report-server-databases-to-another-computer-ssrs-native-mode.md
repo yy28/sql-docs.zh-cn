@@ -2,18 +2,18 @@
 title: 将报表服务器数据库移动到其他计算机（SSRS 本机模式）| Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100218"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619683"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>将报表服务器数据库移至其他计算机（SSRS 本机模式）
 
@@ -27,14 +27,14 @@ ms.locfileid: "50100218"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 您不必将作业移到新计算机上，不过您可能需要删除计算机上不再使用的作业。  
   
--   订阅、缓存报表和快照将保留在移动的数据库中。 如果在数据库移动之后快照不选取刷新的数据，则在报表管理器中清除快照选项，单击“应用”保存更改，重新创建计划，然后再次单击“应用”保存所做的更改。  
+-   订阅、缓存报表和快照将保留在移动的数据库中。 如果在数据库移动之后快照不选取刷新的数据，则清除快照选项，然后选择“应用”保存更改，重新创建计划，然后再次选择“应用”保存所做的更改。  
   
 -   移动数据库时，会保留 reportservertempdb 中存储的临时报表和用户会话数据。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了多种移动数据库的方法，包括备份和还原、附加和分离以及复制。 并不是所有的方法都适用于将现有数据库重新定位到新的服务器实例。 根据您的系统可用性要求，移动报表服务器数据库的方法会有所不同。 移动报表服务器数据库的最简单方法是附加和分离数据库。 但是，此方法要求您在分离数据库的同时使报表服务器脱机。 如果要最大程度地减少服务中断，则备份和还原是最佳选择，但是必须运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令以执行操作。 建议不要复制数据库（特别是不要使用复制数据库向导）；这样做将不保留数据库中的权限设置。  
   
 > [!IMPORTANT]  
->  当重新定位报表服务器数据库是对现有安装的唯一更改时，建议执行本主题中提供的步骤。 若要迁移整个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装（即，移动数据库并更改使用该数据库的报表服务器 Windows 服务的标识），需要重新配置连接并重置加密密钥。  
+>  当报表服务器数据库的重新定位是对现有安装的唯一更改时，建议执行本文中提供的步骤。 若要迁移整个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装（即，移动数据库并更改使用该数据库的报表服务器 Windows 服务的标识），需要重新配置连接并重置加密密钥。  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>分离和附加报表服务器数据库  
  如果可使报表服务器脱机，则可分离数据库，以将其移至要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 此方法将保留数据库中的权限。 如果在使用 SQL Server 数据库，则必须将其移动到另一个 SQL Server 实例。 移动数据库后，必须重新配置报表服务器与报表服务器数据库的连接。 如果您运行的是扩展部署，则必须为部署中的每个报表服务器重新配置报表服务器数据库连接。  

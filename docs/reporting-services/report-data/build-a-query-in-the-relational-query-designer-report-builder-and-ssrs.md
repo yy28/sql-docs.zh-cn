@@ -1,28 +1,31 @@
 ---
-title: 在关系查询设计器中生成查询（报表生成器和 SSRS）| Microsoft Docs
-ms.date: 03/01/2017
+title: 在关系查询设计器中生成查询（报表生成器和 SSRS）
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
-ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9c2e626cb890343f42095a1702942a5aefc37a75
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/25/2019
+ms.openlocfilehash: 67b64a85a8f36fc7c370129ce8524e131a91f6a1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021657"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573247"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在关系查询设计器中生成查询（报表生成器和 SSRS）
-  查询设计器可帮助您指定为报表数据集要从外部数据源中检索的数据。 当您在向导中生成查询或创建数据集查询时，可以使用查询设计器。  
+
+查询设计器可帮助您指定为报表数据集要从外部数据源中检索的数据。 当您在向导中生成查询或创建数据集查询时，可以使用查询设计器。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 数据集基于数据源。 数据源的类型和创作环境决定在定义数据集查询时打开的查询设计器。 查询设计器功能根据基础数据源类型的不同而不同。 有关数据层的详细信息，请参阅[报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)或[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
-  
+ 数据集基于数据源。 数据源的类型和创作环境决定在定义数据集查询时打开的查询设计器。 查询设计器功能根据基础数据源类型的不同而不同。 有关数据层的详细信息，请参阅[报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。
+
  可为以下任务使用查询设计器：  
   
 -   浏览外部数据源中的多个架构的元数据  

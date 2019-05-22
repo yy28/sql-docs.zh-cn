@@ -2,21 +2,21 @@
 title: 预加载缓存（报表管理器）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ebb6fe63178870a5b76383523fc04c9472a4659
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9c92612f58461f1fc94551396b364087cb3c05c3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021871"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581460"
 ---
 # <a name="preload-the-cache-report-manager"></a>预加载缓存（报表管理器）
   您可以通过为共享数据集创建缓存刷新计划，为共享数据集预加载缓存。  
@@ -111,7 +111,7 @@ ms.locfileid: "50021871"
   
 17. 选择如下两个缓存选项之一并配置过期时间：  
   
-    -   若要使缓存的副本在特定的时间段后过期，请单击 **“缓存报表的临时副本。在数分钟之后使报表副本过期。”** 键入报表过期所需的分钟数。  
+    -   若要使缓存的副本在特定的时间段后过期，请单击**缓存报表的临时副本。在数分钟之后使报表副本过期。”** 键入报表过期所需的分钟数。  
   
     -   若要按计划使缓存的副本过期，请单击“缓存报表的临时副本。按下列计划使报表副本过期。” 单击“配置”，或选择一个共享计划以设置报表过期计划。  
   

@@ -2,7 +2,7 @@
 title: 缓存报表（报表管理器）| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - schedules [Reporting Services], report expiration
 - expiration [Reporting Services]
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9106fffcd2a66254acf5a47799fc8942ef3f0b38
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2b82d064b379f7c8a43f854204b9fce7337262e4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030686"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574844"
 ---
 # <a name="cache-a-report-report-manager"></a>如何缓存一个报表（报表管理器）
   提高性能的一种方法是配置报表的缓存属性。 缓存报表后，会在一段时间内保存已呈现报表的副本。 请求该报表的第一个用户必须等到所有处理全部完成后才能查看报表。 以后在缓存期间请求该报表的用户可以立即查看它，因为处理已经完成。  
@@ -40,7 +40,7 @@ ms.locfileid: "50030686"
   
 6.  选择以下两个缓存选项之一，并配置过期时间：  
   
-    -   若要将缓存副本配置为在特定时间段后过期，请单击 **“缓存报表的临时副本。在数分钟之后使报表副本过期”**。 键入报表过期所需的分钟数。  
+    -   若要将缓存副本配置为在特定时间段后过期，请单击**缓存报表的临时副本。在数分钟之后使报表副本过期”**。 键入报表过期所需的分钟数。  
   
     -   若要将缓存副本配置为按计划过期，请单击“缓存报表的临时副本。按下列计划使报表副本过期。” 单击 **“配置”**，或选择一个共享计划以控制报表过期时间。  
   

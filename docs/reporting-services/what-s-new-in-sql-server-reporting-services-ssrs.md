@@ -1,7 +1,7 @@
 ---
 title: Reporting Services (SSRS) 中的新增功能 | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
@@ -9,19 +9,19 @@ ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 02/28/2019
-ms.openlocfilehash: 77a3bdb162298cfaa972ccd7dacce02db9b5e48e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.date: 05/08/2019
+ms.openlocfilehash: d92275ebbccd90cc3a066ec58726c1db3c61c34b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775098"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620579"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-了解 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新增功能。 这包括主要功能区域，在发布新项时进行更新。
+了解 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新增功能。 本文包括主要功能区域，在发布新项时进行更新。
 
 有关最新的发行说明，请参阅 [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)。 
 
@@ -52,7 +52,7 @@ ms.locfileid: "64775098"
 
 ### <a name="dax-queries-in-reporting-tools"></a>在报表工具进行 DAX 查询
 
-在最新版本的报表生成器和 SQL Server Data Tools 中，通过在查询设计器中拖放所需的字段，可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 请参阅 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
+在最新版本的报表生成器和 SQL Server Data Tools 中，可针对 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 可以在查询设计器中拖放字段。 请参阅 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
 
 ### <a name="rest-api-support"></a>REST API 支持
 
@@ -60,7 +60,7 @@ ms.locfileid: "64775098"
 
 ### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>报表生成器和 SQL Server Data Tools 中现提供对 DAX 的查询设计器支持
 
-在报表生成器和 SQL Server Data Tools 中，现可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 可以在这两个工具中使用查询设计器拖放所需字段并生成 DAX 查询，无需亲自编写。  
+在报表生成器和 SQL Server Data Tools 中，现可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 可以使用两种工具中的查询设计器来拖放所需字段。 然后就会为你生成 DAX 查询。
 
 在 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)上了解详细信息。
 
@@ -74,9 +74,16 @@ ms.locfileid: "64775098"
 
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
 
-新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 已推出。 这是一个经过更新的新式门户，综合了 KPI、移动报表、分页报表、Excel 和 Power BI Desktop 文件。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 取代了以前版本中的报表管理器。
+新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 已推出。 已更新的 Web 门户包括
+- KPI
+- 移动报表
+- 分页报表
+- Excel 文件
+- Power BI Desktop 文件
 
-若要创建移动报表，则需使用 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)]。 
+[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 取代了以前版本中的报表管理器。
+
+若要创建移动报表，则需使用 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)]。
 
 有关 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]的详细信息，请参阅 [Web 门户（SSRS 本机模式）](../reporting-services/web-portal-ssrs-native-mode.md)。  
 
@@ -90,7 +97,7 @@ ms.locfileid: "64775098"
 
 #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中的关键绩效指标 (KPI) 
 
-你可以在 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中直接创建与你所在的文件夹有上下文关系的 KPI。 在创建 KPI 时，可以选择数据集字段并汇总这些值。 还可以选择相关内容以钻取到更多详细信息。
+可以在 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中直接创建与当前文件夹有上下文关系的 KPI。 在创建 KPI 时，可以选择数据集字段并汇总它们的值。 还可以选择相关内容以钻取到更多详细信息。
 
 ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
 
@@ -98,7 +105,12 @@ ms.locfileid: "64775098"
 
 ### <a name="mobile-reports"></a>移动报表
 
-Reporting Services 移动报表是针对各种外形规格进行了优化的专用报表，可以在用户访问移动设备上的报表时为其提供最佳体验。 移动报表提供各式各样的可视化效果：从时间、类别和比较图表，到树状地图和自定义地图。 将移动报表连接到各种数据源，包括本地 SQL Server Analysis Services 多维数据和表格数据。 在网格行和列可调整且移动报表元素灵活的设计图面上设计移动报表，这些报表可轻松缩放至任何屏幕大小。 然后，将这些移动报表保存到报告服务服务器，并在 iPad、iPhone、Android 手机和 Windows 10 设备上的浏览器或 Power BI 移动应用中进行查看和交互。
+Reporting Services 移动报表是针对各种外形规格进行了优化的专用报表，可以在用户访问移动设备上的报表时为其提供最佳体验。 移动报表提供各式各样的可视化效果：从时间、类别和比较图表，到树状地图和自定义地图。 将移动报表连接到各种数据源，包括本地 SQL Server Analysis Services 多维数据和表格数据。 可以将移动报表的字段放置在带有可调整网格行和列的设计图面上。 灵活的移动报表元素会自动缩放，从而适合任何屏幕大小。 将移动报表保存到 Reporting Service 服务器，并在浏览器或 Power BI 移动应用中进行查看和交互。 支持的设备包括：
+
+- iPad
+- iPhone
+- Android 手机
+- 或任何 Windows 10 设备
 
 #### <a name="mobile-report-publisher"></a>移动报表发布服务器  
 
@@ -130,7 +142,7 @@ Reporting Services 移动报表是针对各种外形规格进行了优化的专�
 
 ### <a name="microsoft-net-framework-4-support"></a>Microsoft .NET Framework 4 支持  
 
-[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支持最新版本的 Microsoft .NET Framework 4。 包括 4.0 版和 4.5.1 版。 如果没有安装任何版本的 .Net Framework 4.x， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序会在功能安装步骤安装 .NET 4.0。  
+[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)] 支持最新版本的 Microsoft .NET Framework 4，包括版本 4.0 和 4.5.1。 如果没有安装版本 4.x 的 .Net Framework，[!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] 安装程序会在功能安装步骤安装 .NET 4.0。  
 
 ### <a name="report-improvements"></a>报表改进
 
@@ -142,9 +154,15 @@ Reporting Services 移动报表是针对各种外形规格进行了优化的专�
 
 **树状图和旭日图：** 使用树状图 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 和旭日图 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 增强报表，非常适合显示分层数据。 有关详细信息，请参阅 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)。  
 
-**报表嵌入：** 你现在可以使用 iframe 以及 URL 参数将移动报表和分页报表嵌入其他网页和应用程序中。  
+**报表嵌入：** 现可结合使用 iframe 和 URL 参数将移动报表和分页报表嵌入其他网页和应用程序中。  
 
-**将报表项固定到 Power BI 仪表板：** 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中查看报表时，可以选择报表项并将其固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板。   可以固定的项为图表、仪表面板、映射和映像。 可以 **(1)** 选择包含要固定到的仪表板的组， **(2)** 选择要将项固定到的仪表板，并 **(3)** 选择希望仪表板中的磁贴进行更新的频率。   ![说明](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "说明") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。  
+**将报表项固定到 Power BI 仪表板：** 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中查看报表时，可以选择报表项并将其固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板。   可以固定的项为图表、仪表面板、映射和映像。 您可以：
+
+1. 选择包含要固定的仪表板的组。
+2. 选择要在其中固定项的仪表板。
+3. 选择要在仪表板中更新磁贴的频率。
+
+![说明](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "说明") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -162,7 +180,9 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 有关详细信息，请参阅 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)。
 
-**PDF 替换 ActiveX 进行远程打印：** 报表查看器工具栏 ActiveX 打印体验已被替换为新式的基于 PDF 的体验，后者适用于各种受支持的浏览器，包括 Microsoft Edge。 不需要下载 ActiveX 控件！ 根据你所使用的浏览器以及所安装的 PDF 查看应用程序和服务， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 会打开一个打印报表所需的打印对话框，或者提示你下载报表的 .PDF 文件。  作为管理员，你仍然可以在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中禁用客户端打印。 有关详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。
+**PDF 替换 ActiveX 进行远程打印：** 报表查看器工具栏现在可通过 PDF 而不是 ActiveX 控件进行打印。 大多数新式浏览器（包括 Microsoft Edge）都支持新的报表查看器。 不需要下载 ActiveX 控件！ 根据你所使用的浏览器以及所安装的 PDF 查看应用程序和服务，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 会打开一个打印对话框以打印报表，或者提示你下载 .PDF 文件。 作为管理员，你仍然可以在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中禁用客户端打印。
+
+有关详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
@@ -173,7 +193,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |**启用和禁用订阅**。 新用户界面选项可以快速禁用和启用订阅。 已禁用的订阅将维持自身的其他配置属性（例如计划），并且可以轻松地启用。<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 有关详细信息，请参阅 [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。|本机模式|  
 |**订阅说明**。 你现在可以在创建新订阅时提供报表说明，作为订阅属性的一部分。 说明在订阅摘要页中提供。|SharePoint 和本机模式|  
 |**更改订阅所有者**。 增强的用户界面，可以快速更改订阅的所有者。 旧版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 允许管理员使用脚本来更改订阅所有者。 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 版本开始，你可以使用用户界面或脚本更改订阅所有者。 当用户离开组织或者更改其在组织中的角色时，就需要更改订阅所有者，这是一项常规管理任务。|SharePoint 和本机模式|  
-|**文件共享订阅的共享凭据**。 现在，两个工作流与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 文件共享订阅共存：<br /><br /> 使用此版本中的新增功能， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，用于一到多个订阅。 文件共享帐户在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式配置管理器的“指定文件共享帐户”中配置，然后用户即可在订阅配置页中选择“用户文件共享帐户”。<br /><br /> 使用目标文件共享的特定凭据配置单独的订阅。<br /><br /> 你还可以混合使用这两种方法，使一些文件共享订阅使用中央文件共享帐户，而其他订阅使用特定的凭据。|本机模式|  
+|**文件共享订阅的共享凭据**。 现在，两个工作流与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 文件共享订阅共存：<br /><br /> 使用此版本中的新增功能，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，该帐户可用于多个订阅。 文件共享帐户在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式配置管理器“指定文件共享帐户”中配置。 在“订阅配置”页面上，用户可选择“使用文件共享帐户”。<br /><br /> 使用目标文件共享的特定凭据配置单独的订阅。<br /><br /> 你还可以混合使用这两种方法，使一些文件共享订阅使用中央文件共享帐户，而其他订阅使用特定的凭据。|本机模式|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
@@ -188,7 +208,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |新版|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**自定义参数窗格：** 现在可以自定义参数窗格。 利用报表生成器中的设计图面，可以将参数拖到参数窗格中的特定列和行。 你可以通过添加和删除列来更改窗格的布局。   有关详细信息，请参阅 [自定义报表中的参数窗格（报表生成器）](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中所创建的移动报表中使用。  
+**自定义参数窗格：** 现在可以自定义参数窗格。 利用报表生成器中的设计图面，可以将参数拖到参数窗格中的特定列和行。 你可以通过添加和删除列来更改窗格的布局。 有关详细信息，请参阅 [自定义报表中的参数窗格（报表生成器）](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中所创建的移动报表中使用。  
 
 ![“报表数据”窗格和“参数”窗格中的参数列表](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "“报表数据”窗格和“参数”窗格中的参数列表")  
 
@@ -201,9 +221,9 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 ## <a name="next-steps"></a>后续步骤
 
 [Analysis Services 中的新增功能](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[后向兼容性](reporting-services-backward-compatibility.md)   
-[SQL Server 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)   
-[升级和迁移 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[向后兼容性](reporting-services-backward-compatibility.md)  
+[SQL Server 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[升级和迁移 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)
