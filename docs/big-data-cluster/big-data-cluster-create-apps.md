@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 462bff09e37f293f39109e9c129fcbb0ca4d2111
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775368"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994105"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 大数据群集 （预览版） 上的应用程序
 
@@ -45,7 +45,7 @@ ms.locfileid: "64775368"
 
 ## <a name="capabilities"></a>功能
 
-在 SQL Server 2019 （预览版） ctp 版本 2.5 可以创建、 删除、 描述、 初始化，列表运行，并更新你的应用程序。 下表描述了可用于应用程序部署命令**mssqlctl**。
+在 SQL Server 2019 （预览版） CTP 3.0 可以创建、 删除、 描述、 初始化，列表运行，并更新你的应用程序。 下表描述了可用于应用程序部署命令**mssqlctl**。
 
 |Command |Description |
 |:---|:---|
@@ -68,10 +68,10 @@ mssqlctl app create --help
 
 ## <a name="sign-in"></a>登录
 
-在部署或与应用程序进行交互之前，先登录到 SQL Server 使用的大数据群集`mssqlctl login`命令。 指定的外部 IP 地址`mgmtproxy-svc-external`服务 (例如： `https://ip-address:30777`) 以及用户名和密码向群集。
+在部署或与应用程序进行交互之前，先登录到 SQL Server 使用的大数据群集`mssqlctl login`命令。 指定的外部 IP 地址`controller-svc-external`服务 (例如： `https://ip-address:30080`) 以及用户名和密码向群集。
 
 ```bash
-mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
+mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
 ## <a name="aks"></a>AKS

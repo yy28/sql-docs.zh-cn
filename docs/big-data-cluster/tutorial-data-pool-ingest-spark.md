@@ -5,17 +5,17 @@ description: 本教程演示如何将数据引入到在 Azure Data Studio 中使
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582750"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994169"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程：将数据引入到 Spark 作业的 SQL Server 数据池
 
@@ -56,7 +56,7 @@ ms.locfileid: "59582750"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. 创建命名的外部表**web_clickstreams_spark_results**中数据池。
@@ -74,13 +74,13 @@ ms.locfileid: "59582750"
       );
    ```
   
-1. 在 CTP 2.4 数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
+1. 在 CTP 3.0 中，数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
 
 ## <a name="start-a-spark-streaming-job"></a>启动 Spark 流式处理作业
 
 下一步是创建 Spark 流式处理作业，将 web 点击流数据从存储池 (HDFS) 加载到数据池中创建的外部表。
 
-1. 在 Azure Data Studio，连接到**HDFS/Spark 网关**的大数据群集。 有关详细信息，请参阅[连接到 HDFS/Spark 网关](connect-to-big-data-cluster.md#hdfs)。
+1. 在 Azure Data Studio，连接到你的大数据群集的主实例。 有关详细信息，请参阅[连接到大数据群集](connect-to-big-data-cluster.md)。
 
 1. 中的 HDFS/Spark 网关连接上双击**服务器**窗口。 然后选择**新的 Spark 作业**。
 

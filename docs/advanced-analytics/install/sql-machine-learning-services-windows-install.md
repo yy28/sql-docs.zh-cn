@@ -3,17 +3,17 @@ title: 安装 SQL Server 机器学习服务 （数据库内） 上 Windows 的 S
 description: 在 SQL Server 或 SQL Server 的 Windows 上的 SQL Server 2017 机器学习服务的安装步骤上的 Python 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/03/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 088a553b28e968c1241486040de3c628fd6299cc
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 6cb30c306c5cd2b426976aba4a873475639e4ba5
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097294"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994215"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安装 SQL Server 机器学习在 Windows 上的服务
 
@@ -25,7 +25,7 @@ ms.locfileid: "65097294"
 
 ## <a name="bkmk_prereqs"> </a> 预安装清单
 
-+ 如果要安装具有 R、Python 或 Java 语言支持的机器学习服务，则需要SQL Server 2017（或更高版本）安装程序。 而如果你拥有 SQL Server 2016 安装介质，则可以安装 [SQL Server 2016 R Services （数据库内）](sql-r-services-windows-install.md)以获得 R 语言支持。
++ 如果你想要使用 R 或 Python 语言支持安装机器学习服务，则需要 SQL Server 2017 （或更高版本） 安装程序。 而如果你拥有 SQL Server 2016 安装介质，则可以安装 [SQL Server 2016 R Services （数据库内）](sql-r-services-windows-install.md)以获得 R 语言支持。
 
 + 数据库引擎实例为必需项。 不能只安装 R 或 Python 功能，但可以将它们逐步添加到现有实例中。
 
@@ -53,7 +53,7 @@ ms.locfileid: "65097294"
 
 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。
 
-1. 启动 SQL Server 2017 安装向导。 您可以下载 
+1. 启动 SQL Server 2017 安装向导。 
   
 2. 在“安装”选项卡上，选择“新的 SQL Server 独立安装或向现有安装添加功能”。
 
@@ -126,13 +126,13 @@ ms.locfileid: "65097294"
     > [!TIP]
     > 可以下载并安装适当版本，在此页：[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
     > 
-    > 还可以试用 [Azure Data Studio](../../azure-data-studio/what-is.md) 的预览版，它支持针对 SQL Server 的管理任务和查询。
+    > 此外可以使用[Azure Data Studio](../../azure-data-studio/what-is.md)，它支持管理任务和针对 SQL Server 的查询。
   
 2. 连接到安装了机器学习服务的实例，单击“新建查询”以打开查询窗口，然后运行以下命令：
 
-   ```sql
-   sp_configure
-   ```
+    ```sql
+    sp_configure
+    ```
 
     属性 `external scripts enabled` 的值目前应为 **0**。 这是因为该功能默认情况下处于关闭状态。 在运行 R 或 Python 脚本之前，必须由管理员显式启用该功能。
     

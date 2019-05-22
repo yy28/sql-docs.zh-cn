@@ -5,17 +5,17 @@ description: 了解如何在 SQL Server 2019 大数据群集中的数据暂留�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: d08d3607a2670a441cdd300ca25b95ad760e0ab5
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776158"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994069"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>与 SQL Server 大数据群集在 Kubernetes 上的数据持久性
 
@@ -34,17 +34,22 @@ SQL Server 大数据群集使用这些持久卷的方法是通过使用[存储�
 ```json
     "storage": 
     {
-        "usePersistentVolume": true,
-        "className": "managed-premium",
+      "data": {
+        "className": "default",
+        "accessMode": "ReadWriteOnce",
+        "size": "15Gi"
+      },
+      "logs": {
+        "className": "default",
         "accessMode": "ReadWriteOnce",
         "size": "10Gi"
     }
 ```
 
-若要在部署期间使用持久性存储区，设置的值**usePersistentVolume**关键*true*并**className**想要使用的密钥的存储类的名称相应的池。 此外可以自定义部署的一部分创建的永久性卷声明的大小。 最佳做法是，我们建议使用具有存储类*保留*[回收策略](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)。
+大数据群集的部署将使用持久性存储来存储数据、 元数据和日志中的各种组件。 您可以自定义部署的一部分创建的永久性卷声明的大小。 最佳做法是，我们建议使用具有存储类*保留*[回收策略](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)。
 
 > [!NOTE]
-> 在 ctp 版本 2.5 时，不能修改存储配置设置后期部署。 此外，仅`ReadWriteOnce`支持整个群集的访问模式。
+> 在 CTP 3.0 中，不能修改存储配置设置后期部署。 此外，仅`ReadWriteOnce`支持整个群集的访问模式。
 
 > [!WARNING]
 > 没有永久性存储的情况下运行可在测试环境中，但它可能会导致无法正常工作的群集。 在 pod 重新启动时，群集元数据和/或用户数据将永久丢失。 我们不建议在此配置中运行。 
@@ -53,7 +58,7 @@ SQL Server 大数据群集使用这些持久卷的方法是通过使用[存储�
 
 ## <a name="aks-storage-classes"></a>AKS 存储类
 
-附带了 AKS[两个内置的存储类](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)**默认**并**托管高级**以及为其预配的动态程序。 可以指定任何一项都或创建您自己的存储类用于大数据群集部署与已启用的持久存储。 默认情况下，生成适用于 aks 群集配置文件中*aks 开发 test.json*附带了所要使用的持久性存储区配置**托管高级**存储类。
+附带了 AKS[两个内置的存储类](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)**默认**并**托管高级**以及为其预配的动态程序。 可以指定任何一项都或创建您自己的存储类用于大数据群集部署与已启用的持久存储。 默认情况下，生成适用于 aks 群集配置文件中*aks 开发 test.json*附带了所要使用的持久性存储区配置**默认**存储类。
 
 > [!WARNING]
 > 使用内置的存储类创建的永久性卷**默认**并**托管高级**具有的回收策略*删除*。 因此时您删除 SQL Server 大数据群集，永久性卷声明获取也被删除，而且然后持久卷。 你可以创建使用自定义存储类**azure 磁盘**与 privioner*保留*回收策略，如中所示[这](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)一文。
@@ -68,7 +73,7 @@ Minikube 附带了一个名为的内置存储类**标准**以及为其动态预�
 Kubeadm 没有附带内置的存储类。 必须创建自己的存储类和使用本地存储，或者你首选的预配程序，如永久性卷[车](https://github.com/rook/rook)。 在这种情况下，将设置**className**到你配置的存储类。 
 
 > [!NOTE]
-> 中的内置 kubeadm 的部署配置文件中*kubeadm 开发 test.json*的默认值为**usePersistentVolume**该键*true*，因此必须将该值设置有关**className**否则预部署验证将失败。 部署还具有一个验证步骤，检查存在的存储类，而不是必要的永久性卷。 您必须确保创建具体取决于你的群集的规模足够卷。 在 CTP2.5，对于默认群集大小必须创建至少 23 的卷。 [此处](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)示范了如何创建使用本地预配程序永久性卷。
+>  中的内置部署配置文件中*kubeadm kubeadm 开发 test.json*指定的数据和日志存储没有存储类名称。 在部署之前，必须自定义配置文件并将类名否则为预部署验证将失败的值。 部署还具有一个验证步骤，检查存在的存储类，而不是必要的永久性卷。 您必须确保创建具体取决于你的群集的规模足够卷。 在 CTP 3.0 中，对于默认群集大小必须创建至少 23 的卷。 [此处](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)示范了如何创建使用本地预配程序永久性卷。
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>自定义的每个池的存储配置
@@ -85,16 +90,16 @@ mssqlctl cluster config init --src aks-dev-test.json --target custom.json
 
 默认情况下，预配为每个群集中预配 pod 的永久性卷声明的大小为 10 GB。 可以更新此值以容纳在群集部署之前自定义配置文件中运行的工作负荷。
 
-下面的示例仅更新存储池中的永久性卷声明的大小为 32 Gi:
+下面的示例仅更新存储池到 100 Gi 中存储的数据的永久性卷声明的大小。 请注意在运行此命令之前，存储部分必须存在于存储池的配置文件：
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
 ```
 
 下面的示例更新为 32 Gi 的永久性卷声明所有池的大小：
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
 ```
 
 ### <a id="config-samples"></a> 配置存储类
@@ -102,7 +107,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 下面的示例演示如何修改控制平面的存储类：
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlace.spec.storage.className=<yourStorageClassName>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
 ```
 
 另一种方法是手动编辑自定义配置文件或更改存储池的存储类在以下示例中使用 jsonpatch 等。 创建*patch.json*文件使用以下内容：
@@ -111,19 +116,21 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlace.spec.
 {
   "patch": [
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
       "value": {
-        "replicas": 2,
-        "type": "Storage",
-        "storage": {
-          "usePersistentVolume": true,
-          "accessMode": "ReadWriteOnce",
-          "className": "<yourStorageClassName>",
-          "size": "32Gi"
+          "data": {
+            "className": "default",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "default",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
         }
       }
-    }
   ]
 }
 ```
@@ -131,7 +138,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlace.spec.
 应用修补程序文件。 使用*mssqlctl 群集配置部分，设置*命令，将应用 JSON 修补程序文件中的更改。 下面的示例适用于目标部署配置文件 custom.json patch.json 文件。
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>后续步骤

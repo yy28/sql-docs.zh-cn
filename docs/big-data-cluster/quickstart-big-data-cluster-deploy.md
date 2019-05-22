@@ -5,17 +5,17 @@ description: 演练的 SQL Server 2019 大数据群集 （预览版） 在 Azure
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 2c0e00ab14cad3d300a09ecc697b2468f1d7d4ce
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776211"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993393"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -162,7 +162,7 @@ kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> 在 ctp 版本 2.5 中，您会看到一条安全警告时访问网页，因为大数据群集当前正在使用自动生成的 SSL 证书。
+> 在 CTP 3.0 中，您会看到一条安全警告时访问网页，因为大数据群集当前正在使用自动生成的 SSL 证书。
 
 ## <a name="connect-to-the-cluster"></a>连接到群集
 

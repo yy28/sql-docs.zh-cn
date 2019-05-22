@@ -1,7 +1,7 @@
 ---
 title: 什么是新的 SQL Server 机器学习服务 |Microsoft Docs
 description: 新的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 机器学习服务的每个版本的功能公告。
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a1990a96b1257fcd566536e846892c3946448818
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 7c5871c6e33947f744dde571c329e8025b4a0813
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775158"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993449"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什么是 SQL Server 机器学习服务中的新增功能
 
@@ -28,18 +28,17 @@ ms.locfileid: "64775158"
 
 此版本添加了 SQL Server 中 R 和 Python 机器学习操作的请求频率最高的功能。 有关此版本中功能的所有详细信息，请参阅[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)并[Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)。
 
+> [!NOTE]
+> 有关什么是在 Java 中 SQL Server 2019 上的新文档，请参阅[SQL 服务器语言扩展中的新增功能？](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
+
 | 发行版本 | 功能更新 |
 |---------|----------------|
-| CTP 2.5 | 新[Microsoft 扩展性 SDK for Java](java/java-sdk.md)。 |
-| CTP 2.4 | 针对 Linux 支持[CREATE EXTERNAL LIBRARY (Transact SQL)](../t-sql/statements/create-external-library-transact-sql.md)适用于 R、 Python 和 Java。 |
-| | 环境变量，指定 Java 解释器的位置已更改，不再`JAVA_HOME`到`JRE_HOME`。 |
-| CTP 2.3 | 新的受支持[Java 数据类型](java/java-sql-datatypes.md)。 |
-| | 仅 Windows，在 Java 代码可以访问外部库使用[CREATE EXTERNAL LIBRARY (Transact SQL)](../t-sql/statements/create-external-library-transact-sql.md)语句。 等效的功能将会在将来的 ctp 版本中的 Linux 上可用。 了解详细信息：[如何从 SQL Server 调用 Java](java/howto-call-java-from-sql.md)。 |
-| | 仅 Windows，在 Python 代码可以访问外部库使用[CREATE EXTERNAL LIBRARY (Transact SQL)](../t-sql/statements/create-external-library-transact-sql.md)语句。 等效的功能将会在将来的 ctp 版本中的 Linux 上可用。 |
+| CTP 2.5 | 无更改。 |
+| CTP 2.4 | 针对 Linux 支持[CREATE EXTERNAL LIBRARY (Transact SQL)](../t-sql/statements/create-external-library-transact-sql.md)对 R 和 Python。 |
+| CTP 2.3 | 仅 Windows，在 Python 代码可以访问外部库使用[CREATE EXTERNAL LIBRARY (Transact SQL)](../t-sql/statements/create-external-library-transact-sql.md)语句。 |
 | CTP 2.2 | 无更改。 |
 | CTP 2.1 | 无更改。 |
 | CTP 2.0 | R 和 Python 机器学习的 Linux 平台支持。 开始使用[安装 SQL Server 机器学习服务在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。 |
-|   | [Java 语言扩展](java/extension-java.md)Windows 和 Linux 上为 SQL Server 2019 预览版中的新增功能。 您可以提供编译的 Java 代码到 SQL Server 通过将权限分配并将路径设置。 使用 SQL Server 的访问权限的客户端应用程序可以使用数据并运行你的代码通过调用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，相同的过程用于 SQL Server 上的 R 和 Python 集成。 | 
 |  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)引入了使你能够轻松地从已分区数据中生成多个模型的两个新参数。 在本教程中，了解详细信息[在 R 中创建基于分区的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
 |   | 故障转移群集支持现在支持 Windows 和 Linux，假定所有节点上启动 SQL Server Launchpad 服务。 有关详细信息，请参阅[SQL Server 故障转移群集安装](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 |
 
@@ -109,7 +108,7 @@ Python 是一种语言，提供了极大的灵活性和各种机器学习任务�
 
 ## <a name="linux-support-roadmap"></a>Linux 支持路线图
 
-安装机器学习使用数据库引擎实例的包时，SQL Server 2019 CTP 2.3 添加 R、 Python 和 Java 的 Linux 支持。 有关详细信息，请参阅[安装 SQL Server 机器学习服务在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。
+SQL Server 2019 CTP 2.3 安装机器学习使用数据库引擎实例的包时添加对 R 和 Python 的 Linux 支持。 有关详细信息，请参阅[安装 SQL Server 机器学习服务在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。
 
 在 Linux 上，SQL Server 2017 没有 R 或 Python 集成，但可以使用[本机计分](sql-native-scoring.md)Linux 上因为该功能是可通过 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md)，在 Linux 上运行。 本机计分，从预先训练的模型，评分而无需调用或甚至要求 R 运行时的高性能。
 
@@ -117,7 +116,7 @@ Python 是一种语言，提供了极大的灵活性和各种机器学习任务�
 
 ## <a name="machine-learning-services-in-azure-sql-database"></a>Azure SQL 数据库中机器学习服务
 
-机器学习服务 （使用 R) Azure SQL 数据库中处于公共预览状态。 有关详细信息，请参阅[快速入门：在 Azure SQL 数据库 （预览版） 中使用机器学习服务 （使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)。
+机器学习服务 （使用 R) Azure SQL 数据库中处于公共预览状态。 有关详细信息，请参阅[使用 R （预览版） 的 Azure SQL 数据库机器学习服务](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)。
 
 ## <a name="next-steps"></a>后续步骤
 

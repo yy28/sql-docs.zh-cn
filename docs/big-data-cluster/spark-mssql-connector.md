@@ -5,22 +5,22 @@ description: 了解如何在 Spark 中使用 MSSQL Spark 连接器来读取和�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54361f9a061169d51f11ccb130e78ba67c0a9a67
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 12343c2000bca3ae90e62c8702636859a808a580
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759214"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994187"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何读取和写入到 SQL Server 从 Spark 使用 MSSQL Spark 连接器
 
 密钥的大数据使用模式是在 Spark 中，然后将数据写入 SQL Server 访问业务线应用程序的大容量数据处理。 这些使用情况模式受益于利用关键的 SQL 优化，并提供了高效的写机制的连接器。
 
-CTP2.5 大数据群集提供了使用 SQL Server 大容量为高性能 Spark SQL 写入到编写 Api 的新 MSSQL Spark 连接器。 本文提供如何读取和使用 MSSQL Spark 连接器写入从 Spark 到 SQL Server 的示例。 在此示例中，从 HDFS 的大数据群集，处理的 Spark，然后写入群集使用的新 MSSQL Spark 连接器中的 SQL Server 主实例中读取数据。
+大数据群集提供了使用 SQL Server 大容量为高性能 Spark SQL 写入到编写 Api 的新 MSSQL Spark 连接器。 本文提供如何读取和使用 MSSQL Spark 连接器写入从 Spark 到 SQL Server 的示例。 在此示例中，从 HDFS 的大数据群集，处理的 Spark，然后写入群集使用的新 MSSQL Spark 连接器中的 SQL Server 主实例中读取数据。
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 连接器接口
 

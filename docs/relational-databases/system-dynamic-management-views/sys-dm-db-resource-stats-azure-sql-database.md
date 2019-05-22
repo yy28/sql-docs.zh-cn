@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2019
+ms.date: 05/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325500"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993891"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,10 @@ ms.locfileid: "58325500"
 |max_session_percent|**decimal (5,2)**|数据库的服务层限制的百分比形式表示的最大并发会话。|  
 |dtu_limit|**int**|当前最大数据库 DTU 设置为此数据库的在此时间间隔内。 对于使用基于 vCore 的模型数据库，此列为 NULL。|
 |cpu_limit|**decimal (5,2)**|在此间隔期间此数据库的 Vcore 数。 对于使用基于 DTU 的模型数据库，此列为 NULL。|
+|avg_instance_cpu_percent|**decimal (5,2)**|以百分比表示的 CPU 使用率的平均数据库。|
+|avg_instance_memory_percent|**decimal (5,2)**|以百分比表示的平均数据库内存使用量。|
+|avg_login_rate_percent|**decimal (5,2)**|标识为仅供参考。 不提供支持。 不保证以后的兼容性。|
+|replica_role|**int**|表示当前副本包含角色为主要的 0，1 作为辅助数据库，并且 2 作为转发器 （异地辅助数据库的主数据库）。 你将看到"1"时连接到所有的可读辅助副本的只读意向。 如果未指定只读意向，连接到异地辅助数据库，您应看到"2"（连接到该转发器）。|
 |||
   
 > [!TIP]  

@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d54e74bb5956b569adb605a94a56dfeb00b040cd
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472135"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994100"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>如何使用群集管理门户监视 SQL Server 大数据群集
 
@@ -38,7 +38,7 @@ ms.locfileid: "63472135"
 控制器 pod 运行后，可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`mgmtproxy-svc-external`(例如： **https://\<ip 地址\>: 30777/门户**)。 凭据的访问管理门户中的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的环境变量。
 
 > [!NOTE]
-> 对于 ctp 版本 2.5 时，没有一条安全警告时访问 web 页，因为它使用自动生成的 SSL 证书。
+> 对于 CTP 3.0 中，没有一条安全警告时访问 web 页，因为它使用自动生成的 SSL 证书。
 
 ## <a name="overview"></a>概述
 

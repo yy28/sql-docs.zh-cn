@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620322"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994176"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中使用 sparklyr
 
@@ -49,7 +49,7 @@ Sparklyr 可用于从客户端连接到大数据群集使用 Livy 和 HDFS/Spark
 在 RStudio 中，创建一个 R 脚本并连接到 Spark，如以下示例所示：
 
 > [!TIP]
-> 有关`<USERNAME>`和`<PASSWORD>`值，请使用 （如根） 的用户名和密码在大数据群集部署过程中设置。 有关`<IP>`并`<PORT>`值，请参阅的文档[HDFS/Spark 网关](connect-to-big-data-cluster.md#hdfs)。
+> 有关`<USERNAME>`和`<PASSWORD>`值，请使用 （如根） 的用户名和密码在大数据群集部署过程中设置。 有关`<IP>`并`<PORT>`值，请参阅的文档[连接到大数据群集](connect-to-big-data-cluster.md)。
 
 ```r
 library(sparklyr)

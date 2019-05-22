@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2452651fde63b08483e238d900ec82f3a93c146e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65945152"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994147"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教程：SQL Server 大数据群集上运行的示例笔记本
 
@@ -52,7 +52,7 @@ ms.locfileid: "65945152"
 
 以下步骤演示如何在 Azure Data Studio 中打开笔记本文件：
 
-1. 在 Azure Data Studio，连接到你的大数据群集的 HDFS/Spark 网关。 有关详细信息，请参阅[连接到 HDFS/Spark 网关](connect-to-big-data-cluster.md#hdfs)。
+1. 在 Azure Data Studio，连接到你的大数据群集的主实例。 有关详细信息，请参阅[连接到大数据群集](connect-to-big-data-cluster.md)。
 
 1. 中的 HDFS/Spark 网关连接上双击**服务器**窗口。 然后选择**打开 Notebook**。
 

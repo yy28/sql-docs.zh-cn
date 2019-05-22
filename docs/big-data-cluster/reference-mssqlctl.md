@@ -5,16 +5,16 @@ description: Mssqlctl 命令的参考文章。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ebd3b63d641c77dae1afbff21264ec4fe34df4d0
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: dd9248c059cb4179bca7953e8a7d5bf721892fb8
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775501"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993313"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -27,36 +27,38 @@ ms.locfileid: "64775501"
 | --- | --- |
 |[mssqlctl 应用](reference-mssqlctl-app.md) | 创建、 删除、 运行和管理应用程序。 |
 |[mssqlctl cluster](reference-mssqlctl-cluster.md) | 选择、 管理和运行群集。 |
-[mssqlctl login](#mssqlctl-login) | 登录到群集。
+[mssqlctl login](#mssqlctl-login) | 登录到群集的控制器终结点。
 [mssqlctl logout](#mssqlctl-logout) | 日志移出群集。
-|[mssqlctl storage](reference-mssqlctl-storage.md) | 管理群集的存储。 |
 ## <a name="mssqlctl-login"></a>mssqlctl 登录名
-登录到群集。
+部署群集时，将在部署期间，应使用列出的控制器终结点到登录名。  如果不知道控制器终结点，您可能会通过群集的 kube 配置对您的系统的默认位置的登录名<user home>/.kube/config 或使用 KUBECONFIG 环境变量，即导出 KUBECONFIG=path/to/.kube/config。
 ```bash
-mssqlctl login [--username -u] 
-               [--password -p]  
-               [--endpoint -e]
+mssqlctl login [--cluster-name -n] 
+               [--controller-username -u]  
+               [--controller-endpoint -e]  
+               [--accept-eula -a]
 ```
 ### <a name="examples"></a>示例
-以交互方式登录。
+以交互方式登录。 群集名称始终提示输入如果未指定，将作为参数。 如果必须设置你的系统上 CONTROLLER_USERNAME、 CONTROLLER_PASSWORD 和 ACCEPT_EULA 环境变量，则这些将不会提示的。 如果你的系统上具有 kube 配置或使用 KUBECONFIG 环境变量来指定配置的路径，交互式体验将首先尝试使用配置，并在配置时提示您。
 ```bash
 mssqlctl login
 ```
-用户名和密码登录。
+（非交互式） 登录。 登录群集名称、 控制器用户名称、 控制器终结点和最终用户许可协议接受设置作为参数。 环境变量必须设置 CONTROLLER_PASSWORD。  如果您不想要指定控制器终结点，请在默认位置的计算机上有 kube 配置<user home>/.kube/config 或使用 KUBECONFIG 环境变量，即导出 KUBECONFIG=path/to/.kube/config。
 ```bash
-mssqlctl login -u johndoe@contoso.com -p VerySecret
+mssqlctl login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
-登录用户名、 密码和群集终结点。
+登录计算机上，然后设置 CONTROLLER_USERNAME、 CONTROLLER_PASSWORD，和 ACCEPT_EULA env var kube 配置。
 ```bash
-mssqlctl login -u johndoe@contoso.com -p VerySecret --endpoint https://host.com:12800
+mssqlctl login -n ClusterName
 ```
 ### <a name="optional-parameters"></a>可选参数
-#### `--username -u`
-帐户的用户。
-#### `--password -p`
-密码凭据。
-#### `--endpoint -e`
-群集主机和端口 （例如）"http://host:port"。
+#### `--cluster-name -n`
+群集名称。
+#### `--controller-username -u`
+帐户的用户。 如果您不想要使用此参数，您可能会设置环境变量 CONTROLLER_USERNAME。
+#### `--controller-endpoint -e`
+群集控制器终结点"https://host:port"。 如果您不想要使用此参数，您可能会在计算机上使用 kube 配置。 请确保在配置的默认位置是位于<user home>/.kube/config 或使用 KUBECONFIG env var。
+#### `--accept-eula -a`
+您是否接受许可条款？ [是/否]。 如果您不想要使用此参数，您可能会设置环境变量 ACCEPT_EULA 为是
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 增加日志记录详细程度，以显示所有调试日志。

@@ -3,30 +3,30 @@ title: SQL Server 2019-SQL Server 机器学习服务中的差异
 description: 了解什么是 R 和 Python SQL Server 机器学习扩展 SQL Server 2019 预览版本中的新增功能。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d549bdc96e09ed0b9b0235ada51274201f1b91a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745897"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994224"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 机器学习服务安装在 SQL Server 2019 之间的差异  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 Windows、 SQL Server 2019 安装程序更改外部进程隔离机制。 此更改将替换与本地辅助角色帐户[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)，一种用于在 Windows 上运行的客户端应用程序隔离技术。 
 
-修改由于管理员没有特定的操作项。 新的或已升级服务器、 所有外部脚本和代码执行从上[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)自动遵循新的隔离模型。 这适用于 R、 Python 和 SQL Server 2019 中引入的新 Java 语言扩展。
+修改由于管理员没有特定的操作项。 新的或已升级服务器、 所有外部脚本和代码执行从上[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)自动遵循新的隔离模型。 
 
 汇总，在此版本中的主要差异有：
 
 + 本地用户帐户下**SQL 受限制的用户组 (SQLRUserGroup)** 无法再创建或用于运行外部进程。 AppContainers 替换它们。
-+ **SQLRUserGroup**成员身份已更改。 而不是多个本地用户帐户，成员资格包含，只需在 SQL Server 快速启动板服务帐户。 现在，R、 Python 和 Java 进程执行通过 AppContainers 隔离的快速启动板服务标识。
++ **SQLRUserGroup**成员身份已更改。 而不是多个本地用户帐户，成员资格包含，只需在 SQL Server 快速启动板服务帐户。 R 和 Python 进程现在在快速启动板服务标识，通过 AppContainers 隔离下执行。
 
 尽管隔离模型已更改，安装向导和命令行参数将保持在 SQL Server 2019 相同。 有关安装帮助，请参阅[安装 SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)。
 
@@ -49,7 +49,7 @@ ms.locfileid: "62745897"
 
 ## <a name="program-file-permissions"></a>程序文件权限
 
-与早期版本中，一样**SQLRUserGroup**将继续提供读取和执行 SQL Server 中的可执行文件的权限**Binn**， **R_SERVICES**，和**PYTHON_SERVICES**目录。 在此版本的唯一成员**SQLRUserGroup**是 SQL Server 快速启动板服务帐户。  快速启动板服务启动时 R、 Python 或 Java 执行环境，该过程作为快速启动板服务运行。
+与早期版本中，一样**SQLRUserGroup**将继续提供读取和执行 SQL Server 中的可执行文件的权限**Binn**， **R_SERVICES**，和**PYTHON_SERVICES**目录。 在此版本的唯一成员**SQLRUserGroup**是 SQL Server 快速启动板服务帐户。  快速启动板服务启动时 R 或 Python 执行环境，该过程作为快速启动板服务运行。
 
 ## <a name="implied-authentication"></a>隐式身份验证
 

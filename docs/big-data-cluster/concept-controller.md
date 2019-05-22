@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 874648daaccdb3d16f54d7b976bac1ef2543bafe
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775589"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994079"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集上的控制器？
 
@@ -38,11 +38,7 @@ ms.locfileid: "64775589"
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服务
 
-控制器是部署并托管在客户要构建大数据群集相同的 Kubernetes 命名空间中。 在群集启动，使用 mssqlctl 命令行实用工具，Kubernetes 管理员安装此服务：
-
-```bash
-mssqlctl cluster create --name <name of your cluster>
-```
+控制器是部署并托管在客户要构建大数据群集相同的 Kubernetes 命名空间中。 此服务安装群集启动，使用过程中由 Kubernetes 管理员**mssqlctl**命令行实用程序。 有关详细信息，请参阅[开始使用 SQL Server 大数据群集](deploy-get-started.md)。
 
 建设工作流将基于 Kubernetes 的布局包括中所述的所有组件的完全正常运行的 SQL Server 大数据群集[概述](big-data-cluster-overview.md)一文。 启动工作流首先创建控制器服务，这部署后，控制器服务会协调安装和配置 master、 计算、 数据和存储池的服务部分的其余部分。
 

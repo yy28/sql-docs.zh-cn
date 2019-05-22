@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 74e08c16e528c580bf78b3928a1aaf0c9b3eb069
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774223"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994051"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>使用 curl 在 SQL Server 大数据群集上将数据加载到 HDFS
 
@@ -32,7 +32,7 @@ kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .stat
 ```
 
 > [!NOTE]
-> `<cluster name>`以下是你提供在运行时群集的名称`mssqlctl cluster create --name <cluster name>`。
+> `<cluster name>`下面是你在部署配置文件中指定群集的名称。 默认名称是`mssql-cluster`。
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>构造用于访问 WebHDFS 的 URL
 

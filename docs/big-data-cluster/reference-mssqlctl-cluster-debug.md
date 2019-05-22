@@ -5,16 +5,16 @@ description: Mssqlctl 群集调试命令的参考文章。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c309817841bb0b3aeaacc613c327f9d446ccc8c2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774856"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993652"
 ---
 # <a name="mssqlctl-cluster-debug"></a>mssqlctl 群集调试
 
@@ -28,7 +28,7 @@ ms.locfileid: "64774856"
 [mssqlctl cluster debug copy-logs](#mssqlctl-cluster-debug-copy-logs) | 复制日志。
 [mssqlctl 群集调试转储](#mssqlctl-cluster-debug-dump) | 触发器日志记录转储。
 ## <a name="mssqlctl-cluster-debug-copy-logs"></a>mssqlctl cluster debug copy-logs
-从群集复制调试日志。
+从群集复制调试日志-kube 配置需要你的系统上。
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -60,7 +60,7 @@ JMESPath 查询字符串。 请参阅[ http://jmespath.org/ ](http://jmespath.or
 #### `--verbose`
 提高日志记录详细程度。 使用--debug 可获取完整的调试日志。
 ## <a name="mssqlctl-cluster-debug-dump"></a>mssqlctl 群集调试转储
-触发日志记录转储并将其复制容器中。
+触发日志记录转储并将其从容器复制-kube 配置需要你的系统上。
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

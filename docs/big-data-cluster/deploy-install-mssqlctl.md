@@ -5,16 +5,16 @@ description: 了解如何安装 mssqlctl 工具用于安装和管理 SQL Server 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d260ae91a5890938949525f34dfae20a81a8fea
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 32beeaf5ee7dd12b4efb4792ab5e1c489868705e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776101"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994029"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>安装 mssqlctl 来管理 SQL Server 大数据群集
 
@@ -44,16 +44,16 @@ ms.locfileid: "64776101"
    pip3 uninstall mssqlctl
    ```
 
-   CTP 2.3 或更高版本，运行以下命令。 替换`ctp-2.3`在命令中使用的版本**mssqlctl**要卸载：
+   CTP 2.3 或更高版本，运行以下命令。 替换`ctp-2.5`在命令中使用的版本**mssqlctl**要卸载：
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. 安装**mssqlctl**使用以下命令：
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Linux mssqlctl 安装
@@ -82,16 +82,16 @@ ms.locfileid: "64776101"
    pip3 uninstall mssqlctl
    ```
 
-   CTP 2.3 或更高版本，运行以下命令。 替换`ctp-2.3`在命令中使用的版本**mssqlctl**要卸载：
+   CTP 2.3 或更高版本，运行以下命令。 替换`ctp-2.5`在命令中使用的版本**mssqlctl**要卸载：
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. 安装**mssqlctl**使用以下命令：
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

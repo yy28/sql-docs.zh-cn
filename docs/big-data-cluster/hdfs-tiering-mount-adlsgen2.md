@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/18/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d9e01e31f0f9e68c5b41b92da773dca8aab54c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f5d1ce4724f95b511272bb4df8d41ee0df75d90
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317126"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993962"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何装载 ADLS hdfs 分层大数据群集中的第 2 代
 
@@ -100,22 +100,22 @@ ms.locfileid: "63317126"
 
 现在，已准备好的访问密钥或使用 OAuth 的凭据文件，可以开始安装。 以下步骤将 Azure Data Lake 中到本地 HDFS 存储大数据群集的远程 HDFS 存储装载。
 
-1. 使用**kubectl**若要查找的终结点的 IP 地址**mgmtproxy svc 外部**大数据群集中的服务。 寻找**外部 IP**。
+1. 使用**kubectl**若要查找的终结点的 IP 地址**控制器 svc 外部**大数据群集中的服务。 寻找**外部 IP**。
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. 登录方式**mssqlctl**管理代理终结点的外部 IP 地址使用你的群集用户名和密码：
+1. 登录方式**mssqlctl**控制器终结点的外部 IP 地址使用你的群集用户名和密码：
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. 将在 Azure 中使用远程 HDFS 存储装载**mssqlctl 存储装载创建**。 将占位符值替换为之前运行以下命令：
+1. 将在 Azure 中使用远程 HDFS 存储装载**mssqlctl 群集存储池装入创建**。 将占位符值替换为之前运行以下命令：
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ ms.locfileid: "63317126"
 若要列出的大数据群集中的所有装载状态，请使用以下命令：
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 若要列出的在 HDFS 中的特定路径装载状态，请使用以下命令：
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> 删除装载
 
-若要删除装载，请使用**mssqlctl 存储装载删除**命令，并在 HDFS 中指定的装载路径：
+若要删除装载，请使用**mssqlctl 群集存储池装入删除**命令，并在 HDFS 中指定的装载路径：
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>后续步骤

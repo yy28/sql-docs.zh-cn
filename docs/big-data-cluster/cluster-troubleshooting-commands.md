@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877660"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994082"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>监视和故障排除 SQL Server 大数据群集
 
@@ -121,7 +121,7 @@ kubectl get svc -n mssql-cluster
 | **appproxy-svc-external** | 支持应用程序部署方案。 |
 
 > [!TIP]
-> 这是一种方法查看与服务**kubectl**，但也可以使用`mssqlctl cluster endpoints list`命令来查看这些终结点。 有关详细信息，请参阅[获取大数据群集终结点](deployment-guidance.md#endpoints)。
+> 这是一种方法查看与服务**kubectl**，但也可以使用`mssqlctl cluster endpoint list`命令来查看这些终结点。 有关详细信息，请参阅[获取大数据群集终结点](deployment-guidance.md#endpoints)。
 
 ## <a name="get-service-details"></a>获取服务详细信息
 

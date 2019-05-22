@@ -3,17 +3,17 @@ title: 安装新的 R 语言包-SQL Server 机器学习服务
 description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内）
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f443113222181f0909bd72048e3c3f5c739df4ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506928"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994211"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安装新的 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "62506928"
 
 R 包库物理上位于您的 SQL Server 实例，在具有受限访问权限的安全文件夹中的 Program Files 文件夹。 写入到此位置需要管理员权限。
 
-非管理员可以安装包，但执行此操作需要 addititional 配置和功能在初始安装中不可用。 有两种方法对于非管理员包安装：RevoScaleR 使用 9.0.1 版和更高版本，或使用 CREATE EXTERNAL LIBRARY (仅 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或具有 CREATE EXTERNAL LIBRARY 权限的另一个用户可以将 R 包安装到当前数据库。
+非管理员可以安装包，但执行此操作需要其他配置和功能在初始安装中不可用。 有两种方法对于非管理员包安装：RevoScaleR 使用 9.0.1 版和更高版本，或使用 CREATE EXTERNAL LIBRARY (仅 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或具有 CREATE EXTERNAL LIBRARY 权限的另一个用户可以将 R 包安装到当前数据库。
 
 R 开发人员习惯于创建所需位于中心位置的库是否仍受限的包的用户库。 这种做法是为 SQL Server 数据库引擎实例中执行 R 代码有问题。 SQL Server 无法从外部库加载包，即使该库是同一台计算机上。 SQL Server 中运行 R 代码中，可以使用仅实例库中的包。
 
@@ -41,7 +41,6 @@ R 开发人员习惯于创建所需位于中心位置的库是否仍受限的包
 然后再安装新的包，请考虑是否适合在 SQL Server 环境中由给定包启用的功能。 在强化的 SQL Server 环境中，你可能想要避免以下：
 
 + 需要网络访问权限的包
-+ 需要 Java 或 SQL Server 环境中通常不使用其他框架的包
 + 需要提升权限的文件系统访问权限的包
 + 包用于 web 开发或通过在 SQL Server 内运行并不受益的其他任务
 
@@ -51,7 +50,7 @@ R 开发人员习惯于创建所需位于中心位置的库是否仍受限的包
 
 识别所有依赖项变得复杂。 对于 R，我们建议你使用[miniCRAN 创建本地存储库](create-a-local-package-repository-using-minicran.md)然后将完全定义的存储库传输到独立的 SQL Server 实例。
 
-Alternativley，可以手动执行此步骤：
+或者，可以手动执行以下步骤：
 
 1. 识别所有包依赖项。 
 2. 检查是否在服务器上已安装任何所需的包。 如果安装此包，请验证版本是否正确。

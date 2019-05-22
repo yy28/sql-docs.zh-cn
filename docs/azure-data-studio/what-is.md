@@ -11,12 +11,12 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 00c8a5aeba30d16e2ae2f5c98290797765c9a357
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: e93c417f286246f6db25d0463cec97eba8541c1c
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620189"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993850"
 ---
 # <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
@@ -165,3 +165,7 @@ SQL 代码段生成正确的 SQL 语法来创建数据库、 表、 视图、 �
 - [下载并安装 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [连接和查询 SQL Server](quickstart-sql-server.md)
 - [连接和查询 Azure SQL 数据库](quickstart-sql-database.md)
+
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
