@@ -14,17 +14,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_indexes stored procedure
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 329446a2ca5b7719e68123b2257d32ceddcd0e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcb2226c52e8572e6432e0f21f4a782e130df067
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756515"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982943"
 ---
-# <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (Transact SQL)
+# <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若要对帐远程表的索引的架构任务进行排队。 此任务成功完成后，远程表已存在于本地的已启用延伸的表的索引。  
@@ -46,7 +46,7 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
  是你想要对索引进行对帐的已启用延伸的限定或非限定名称。 指定限定的对象时，才需要引号。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 0（成功）或 >0（失败）  
+ 0 （成功） 或 > 0 （失败）  
   
 ## <a name="see-also"></a>请参阅  
  [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  

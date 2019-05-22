@@ -1,5 +1,5 @@
 ---
-title: 序列聚类分析模型的挖掘模型内容 |Microsoft 文档
+title: 序列聚类分析模型的挖掘模型内容 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019284"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65961372"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>顺序分析和聚类分析模型的挖掘模型内容
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -173,7 +173,7 @@ ORDER BY Count(*) DESC
   
  通过这些结果，您可以发现订单号“SO72656”、“SO58845”和“SO70714”包含的序列最大，每个序列各包含 8 个产品。 利用订单 ID 可以查看特定订单的详细信息，以便了解购买了哪些产品及其购买顺序。  
   
-|OrderNumber|LineNumber|Model|  
+|OrderNumber|LineNumber|“模型”|  
 |-----------------|----------------|-----------|  
 |SO58845|1|Mountain-500|  
 |SO58845|2|LL Mountain Tire|  
@@ -227,9 +227,9 @@ ORDER BY Count(*) DESC
   
  下表显示了 NODE_DISTRIBUTION 表的结果以及图形查看器中所显示的舍入概率值。  
   
-|Product|支持（NODE_DISTRIBUTION 表）|概率（NODE_DISTRIBUTION 表）|概率（源自图形）|  
+|产品|支持（NODE_DISTRIBUTION 表）|概率（NODE_DISTRIBUTION 表）|概率（源自图形）|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
-|缺少|48.447887|0.138028169|（未显示）|  
+|Missing|48.447887|0.138028169|（未显示）|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
 |Fender Set - Mountain|80.087324|0.228169014|0.23|  
 |Half-Finger Gloves|0.9887324|0.002816901|0.00|  
@@ -257,8 +257,8 @@ ORDER BY Count(*) DESC
   
  若要了解如何通过查询模型内容来获取被观察路径的列表，并查看针对顺序分析和聚类分析模型的其他查询示例，请参阅 [顺序分析和聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [挖掘模型内容 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [顺序分析和聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   

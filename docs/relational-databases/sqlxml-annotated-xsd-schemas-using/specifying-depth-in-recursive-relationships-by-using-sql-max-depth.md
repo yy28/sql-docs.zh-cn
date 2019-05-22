@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa36c8cc75aecfbff8bba1b2d04c7f296da88147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030718"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980754"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 指定递归关系中的深度
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  使用**sql:max-深度**架构在架构中描述的递归关系中指定递归的深度中的批注。 值**sql:max-深度**批注是一个正整数 （1 到 50 个），该值指示递归数：如果值为 1 使递归停止于该元素为其**sql:max-深度**指定批注; 值为 2 使递归停止于的元素的下一级**sql:max-深度**指定;等等。  
   
 > [!NOTE]  
->  在基础实现中，根据映射架构指定的 XPath 查询将转换为 SELECT ...FOR XML EXPLICIT 查询。 该查询需要您指定一个有限的递归深度。 更高版本为指定的值**sql:max-深度**、 更大的 FOR XML EXPLICIT 查询的生成。 这可能会使检索时间变长。  
+>  在基础实现中，针对映射架构指定 XPath 查询转换为 SELECT...FOR XML EXPLICIT 查询。 该查询需要您指定一个有限的递归深度。 更高版本为指定的值**sql:max-深度**、 更大的 FOR XML EXPLICIT 查询的生成。 这可能会使检索时间变长。  
   
 > [!NOTE]  
 >  Updategram 和 XML 大容量加载将忽略最大深度批注。 这意味着，不管为最大深度指定了什么值，都将发生递归更新或插入。  
@@ -284,7 +284,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  若要测试该架构，请为本主题前面的示例 A 提供的步骤。  
   
 ### <a name="nonrecursive-elements"></a>非递归元素  
- 如果**sql:max-深度**不会导致任何递归的架构中的元素上指定批注，它将被忽略。 在以下架构中，  **\<Emp >** 元素组成**\<常量 >** 子元素，而又有 **\<Emp >** 子元素。  
+ 如果**sql:max-深度**不会导致任何递归的架构中的元素上指定批注，它将被忽略。 在以下架构中，  **\<Emp >** 元素组成 **\<常量 >** 子元素，而又有 **\<Emp >** 子元素。  
   
  在此架构中， **sql:max-深度**上指定的批注**\<常量 >** 元素被忽略，因为之间没有递归 **\<Emp>** 父并**\<常量 >** 子元素。 但之间的递归 **\<Emp >** 祖先和 **\<Emp >** 子。 该架构指定**sql:max-深度**上的批注。 因此， **sql:max-深度**祖先指定的批注 (**\<Emp >** 监督者角色中) 将优先。  
   
@@ -334,7 +334,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
   
  另一方面，如果你具有的复杂类型派生**\<扩展 >**，可以指定相应的基本复杂类型的元素**sql:max-深度**批注。  
   
- 例如，以下 XSD 架构生成一个错误，因为**sql:max-深度**基类型上指定批注。 由派生的类型上不支持此批注**\<限制 >** 从另一种类型。 若要解决此问题，必须更改架构，并指定**sql:max-深度**派生类型中的元素上的批注。  
+ 例如，以下 XSD 架构生成一个错误，因为**sql:max-深度**基类型上指定批注。 由派生的类型上不支持此批注 **\<限制 >** 从另一种类型。 若要解决此问题，必须更改架构，并指定**sql:max-深度**派生类型中的元素上的批注。  
   
 #### <a name="example-d"></a>示例 D  
   

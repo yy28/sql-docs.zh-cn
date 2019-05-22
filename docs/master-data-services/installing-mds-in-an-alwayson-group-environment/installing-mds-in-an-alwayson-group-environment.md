@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489606"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982118"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
@@ -302,8 +302,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
     图 17
 
-    对每个副本配置以下“同步提交”、“自动故障转移”和“可读辅助副本”设置。 请参阅图
-17.
+    对每个副本配置以下“同步提交”、“自动故障转移”和“可读辅助副本”设置。 请参阅图 17。
 
     **同步提交**：确保在数据库的主要副本上提交事务时，在所有其他同步副本上也提交了该事务。 异步提交则不能保证这一点，并且会落后于主要副本。
 

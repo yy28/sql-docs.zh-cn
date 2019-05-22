@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -27,21 +26,22 @@ helpviewer_keywords:
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3baef0dec3d2c4817378cd23684f6012a8050212
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7f3bbe0b7ebe9d516ab23339632e96db184db1e7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013908"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980706"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定关系 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   可以对 XML 文档中的元素建立相关性。 元素可以按层次结构方式嵌套，并且可以在元素之间指定 ID、IDREF 或 IDREFS 关系。  
   
- 例如，在 XSD 架构中， **\<客户 >** 元素包含**\<顺序 >** 子元素。 当架构映射到 AdventureWorks 数据库中， **\<客户 >** 元素映射到 Sales.Customer 表和**\<顺序 >** 元素映射到Sales.SalesOrderHeader 表。 由于是由客户下订单，因此，基础表 Sales.Customer 和 Sales.SalesOrderHeader 是相关的。 Sales.SalesOrderHeader 表中的 CustomerID 是外键，它引用 Sales.Customer 表中的 CustomerID 主键。 您可以建立这些使用映射架构元素之间的关系**sql: relationship**批注。  
+ 例如，在 XSD 架构中， **\<客户 >** 元素包含 **\<顺序 >** 子元素。 当架构映射到 AdventureWorks 数据库中， **\<客户 >** 元素映射到 Sales.Customer 表和 **\<顺序 >** 元素映射到Sales.SalesOrderHeader 表。 由于是由客户下订单，因此，基础表 Sales.Customer 和 Sales.SalesOrderHeader 是相关的。 Sales.SalesOrderHeader 表中的 CustomerID 是外键，它引用 Sales.Customer 表中的 CustomerID 主键。 您可以建立这些使用映射架构元素之间的关系**sql: relationship**批注。  
   
  在带批注的 XSD 架构中， **sql: relationship**批注用于根据主键和外的键关系元素所映射到基础表之间的层次结构方式嵌套架构元素。 在指定**sql: relationship**批注，您必须标识以下：  
   
@@ -79,11 +79,11 @@ ms.locfileid: "56013908"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 针对元素指定 sql:relationship 批注  
- 以下带批注的 XSD 架构包含**\<客户 >** 并**\<顺序 >** 元素。 **\<顺序 >** 元素是子元素的**\<客户 >** 元素。  
+ 以下带批注的 XSD 架构包含 **\<客户 >** 并 **\<顺序 >** 元素。 **\<顺序 >** 元素是子元素的 **\<客户 >** 元素。  
   
  在架构中， **sql: relationship**指定批注**\<顺序 >** 子元素。 关系本身中定义 **\<xsd: appinfo >** 元素。  
   
- **\<关系 >** 元素中的 CustomerID 标识 Sales.SalesOrderHeader 表作为外键引用 Sales.Customer 表中的 CustomerID 主键。 因此，属于客户的订单将显示为的子元素**\<客户 >** 元素。  
+ **\<关系 >** 元素中的 CustomerID 标识 Sales.SalesOrderHeader 表作为外键引用 Sales.Customer 表中的 CustomerID 主键。 因此，属于客户的订单将显示为的子元素 **\<客户 >** 元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -199,7 +199,7 @@ ms.locfileid: "56013908"
 ...  
 ```  
   
- 对于 Sales.SalesOrderHeader 表中每个订单，XML 文档具有一个**\<顺序 >** 元素。 和每个**\<顺序 >** 元素包含一系列**\<产品 >** 子元素，订单中请求每个产品对应一个对象。  
+ 对于 Sales.SalesOrderHeader 表中每个订单，XML 文档具有一个 **\<顺序 >** 元素。 和每个 **\<顺序 >** 元素包含一系列 **\<产品 >** 子元素，订单中请求每个产品对应一个对象。  
   
  若要指定将生成此层次结构的 XSD 架构，则必须指定两个关系：OrderOD 和 ODProduct。 OrderOD 关系在 Sales.SalesOrderHeader 表与 Sales.SalesOrderDetail 表之间指定父子关系。 ODProduct 关系指定 Sales.SalesOrderDetail 表与 Production.Product 表之间的关系。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "56013908"
 </xsd:schema>  
 ```  
   
- 您可以指定匿名关系，而不指定命名关系。 在本示例中的全部内容**\<批注 >**... **\</annotation >**，它描述了两个关系时，作为子元素的出现**\<产品 >**。  
+ 您可以指定匿名关系，而不指定命名关系。 在本示例中的全部内容 **\<批注 >**... **\</annotation >**，它描述了两个关系时，作为子元素的出现**\<产品 >**。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -385,11 +385,11 @@ ms.locfileid: "56013908"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. 针对多个元素指定 sql:relationship  
- 在此示例中，带批注的 XSD 架构包含**\<客户 >**， **\<顺序 >**，以及 **\<OrderDetail >** 元素。  
+ 在此示例中，带批注的 XSD 架构包含 **\<客户 >**， **\<顺序 >**，以及 **\<OrderDetail >** 元素。  
   
- **\<顺序 >** 元素是子元素的**\<客户 >** 元素。 **\<sql: relationship >** 上指定**\<顺序 >** 子元素; 因此，属于客户的订单将显示为的子元素**\<客户 >**.  
+ **\<顺序 >** 元素是子元素的 **\<客户 >** 元素。 **\<sql: relationship >** 上指定 **\<顺序 >** 子元素; 因此，属于客户的订单将显示为的子元素 **\<客户 >**.  
   
- **\<顺序 >** 元素包含 **\<OrderDetail >** 子元素。 **\<sql: relationship >** 上指定 **\<OrderDetail >** 子元素，因此属于某个订单的订单详细信息显示为子元素的**\<顺序 >** 元素。  
+ **\<顺序 >** 元素包含 **\<OrderDetail >** 子元素。 **\<sql: relationship >** 上指定 **\<OrderDetail >** 子元素，因此属于某个订单的订单详细信息显示为子元素的 **\<顺序 >** 元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

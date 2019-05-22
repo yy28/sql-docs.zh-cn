@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
-ms.translationtype: HT
+ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947615"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980047"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ OUTPUT
  默认值是**\<根 xmlns:mp ="urn： 架构-microsoft-com:xml-metaprop">**。 *xpath_namespaces*通过格式正确的 XML 文档在 OPENXML 中的 XPath 表达式中使用的前缀提供命名空间 Uri。 *xpath_namespaces*声明必须用于引用命名空间的前缀**urn： 架构-microsoft-com:xml-metaprop**; 这提供了有关分析的 XML 元素的元数据。 虽然可以使用这项技术来为元属性命名空间重新定义命名空间前缀，但该命名空间不会丢失。 前缀**mp**仍有效**urn： 架构-microsoft-com:xml-metaprop**即使*xpath_namespaces*包含任何此类声明。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 0（成功）或 >0（失败）  
+ 0 （成功） 或 > 0 （失败）  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
@@ -157,7 +157,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
  <br>[XML 存储 Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[系统存储 Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
- <br>[sys.dm_exec_xml_handles (Transact SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
- <br>[sp_xml_removedocument (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb8ac0d8af4c6180bb9851df793285d3bc17340c
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542247"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980056"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "59542247"
 |**runtime_stats_interval_id**|**bigint**|外键。 加入[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
 |**execution_type**|**tinyint**|确定类型的查询执行：<br /><br /> 0-常规执行 （成功完成）<br /><br /> 3-客户端启动已中止执行<br /><br /> 4-异常已中止执行|  
 |**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0-常规<br /><br /> 3-已中止<br /><br /> 4-异常|  
-|**first_execution_time**|**datetimeoffset**|第一个聚合间隔内的查询计划的执行时间。|  
-|**last_execution_time**|**datetimeoffset**|上次执行时间的查询计划的聚合间隔内。|  
+|**first_execution_time**|**datetimeoffset**|第一个聚合间隔内的查询计划的执行时间。 这是指执行查询的结束时间。|  
+|**last_execution_time**|**datetimeoffset**|上次执行时间的查询计划的聚合间隔内。 这是指执行查询的结束时间。|  
 |**count_executions**|**bigint**|聚合间隔内的查询计划执行数的总计数。|  
 |**avg_duration**|**float**|平均持续时间 （以微秒为单位报告） 的聚合时间间隔内的查询计划。|  
 |**last_duration**|**bigint**|查询的最后一个持续时间 （以微秒为单位报告） 在聚合时间间隔内计划。|  

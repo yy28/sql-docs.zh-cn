@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_set_rpo_duration (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_rda_set_rpo_duration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_rpo_duration stored procedure
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11336658a557d9a2ceced08425a12963dd15782e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f46dd0bbedfebec5e21800b477a23d664446bf24
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685225"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982955"
 ---
 # <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,20 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ```    
     
 ## <a name="arguments"></a>参数    
- [ @duration_hrs =] *duration_hrs*    
+ [ @duration_hrs = ] *duration_hrs*    
  是的小时数 （非 null 的整数值） 的迁移的数据所需 SQL Server 以保留当前已启用延伸的数据库。 默认值和最小值为 8 小时。    
  
  > [!NOTE]
  > 较高的值需要 SQL Server 上的更多存储空间。
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>权限    
  需要 db_owner 权限。    
     
 ## <a name="remarks"></a>备注    
  通过运行获取的当前值[sys.sp_rda_get_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)。    
     
 ## <a name="see-also"></a>请参阅    
- [sys.sp_rda_get_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
+ [sys.sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
  [还原已启用延伸的数据库 (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)     
  [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)    
     

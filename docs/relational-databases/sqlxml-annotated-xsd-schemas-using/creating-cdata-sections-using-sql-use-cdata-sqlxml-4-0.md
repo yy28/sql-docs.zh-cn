@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -18,22 +17,23 @@ helpviewer_keywords:
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9b7cac79155e89217a64fbbc309082322853f80
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2b7f6ff5e7f16012d33f805227e6dda997cfc60d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041588"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981066"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 创建 CDATA 节 (SQLXML 4.0)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在 XML 中，CDATA 节用于对那些所含字符不转义则会识别为标记字符的特定文本块进行转义。  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库有时会包含被 XML 语法分析程序视为标记字符的字符；例如，尖括号（< 和 >）、小于或等于符号 (<=) 和 & 符号被视为标记字符。 但是，可以在 CDATA 节中对这类特殊字符进行包装，使它们不被视为标记字符。 XML 语法分析程序将 CDATA 节中的文本视为纯文本。  
+ Microsoft 中的数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有时会包含被 XML 分析器视为标记字符; 例如，尖括号方括号 （< 和 >），小于-比-或者-等于符号的字符 (< =)，并与号 (&) 都视为标记字符。 但是，可以在 CDATA 节中对这类特殊字符进行包装，使它们不被视为标记字符。 XML 语法分析程序将 CDATA 节中的文本视为纯文本。  
   
  **Sql: use-cdata**批注用于指定返回的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应包装在 CDATA 节 (即，它指示列中的值是否由指定**sql: field**应括在 CDATA 节)。 **Sql: use-cdata**可以仅在将映射到数据库列的元素上指定批注。  
   

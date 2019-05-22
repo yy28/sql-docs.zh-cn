@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_set_query_mode (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c6b2fd8fd64bd8d7df6429a21c3f27266657964e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa168f3bbac37e34730d5ee0ab348f5fd7d1743d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740545"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982885"
 ---
 # <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +53,9 @@ sp_rda_set_query_mode [ @mode = ] @mode
  是一个可选的位值，如果你想要更改查询模式，而不进行验证，可以设置为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 0（成功）或 >0（失败）  
+ 0 （成功） 或 > 0 （失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
   
 ## <a name="remarks"></a>备注  
@@ -74,7 +74,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
      在运行时[sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)若要重新连接到远程 Azure 数据库，此操作会自动重置查询模式 LOCAL_AND_REMOTE，这是默认行为为Stretch Database。 也就是说，查询返回结果从本地和远程数据。  
   
 ## <a name="see-also"></a>请参阅  
- [sys.sp_rda_deauthorize_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
   
   

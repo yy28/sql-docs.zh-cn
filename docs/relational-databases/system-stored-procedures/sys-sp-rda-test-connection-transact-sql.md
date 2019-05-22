@@ -14,17 +14,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef50b770019450f99ede55369c1bdaa654cd52b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843725"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982869"
 ---
-# <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact SQL)
+# <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   测试从 SQL Server 与远程 Azure 服务器的连接，并报告可能会阻止数据迁移的问题。  
@@ -59,7 +59,7 @@ EXECUTE sys.sp_rda_test_connection
  @azure_password = N'*azure_password*'  
  远程 Azure 服务器的密码。  
   
- @credential_name = N'*credential_name*  
+ @credential_name = N'*credential_name*'  
  而不是提供用户名和密码，可以提供已启用延伸的数据库中存储的凭据的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -72,11 +72,11 @@ EXECUTE sys.sp_rda_test_connection
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |link_state|ssNoversion|值相对应的以下值之一**link_state_desc**。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|值对应于前面的以下值之一**link_state**。<br /><br /> -正常<br />     SQL Server 之间的远程 Azure 服务器处于正常状态。<br />-ERROR_AZURE_FIREWALL<br />     Azure 防火墙正在阻止 SQL Server 与远程 Azure 服务器之间的链接。<br />-ERROR_NO_CONNECTION<br />     SQL Server 无法建立到远程 Azure 服务器。<br />-   ERROR_AUTH_FAILURE<br />     身份验证失败，导致无法 SQL Server 与远程 Azure 服务器之间的链接。<br />-错误<br />     不是身份验证的问题、 连接问题或防火墙问题的错误阻止 SQL Server 与远程 Azure 服务器之间的链接。|  
+|link_state_desc|varchar(32)|值对应于前面的以下值之一**link_state**。<br /><br /> -正常<br />     SQL Server 之间的远程 Azure 服务器处于正常状态。<br />-   ERROR_AZURE_FIREWALL<br />     Azure 防火墙正在阻止 SQL Server 与远程 Azure 服务器之间的链接。<br />-   ERROR_NO_CONNECTION<br />     SQL Server 无法建立到远程 Azure 服务器。<br />-   ERROR_AUTH_FAILURE<br />     身份验证失败，导致无法 SQL Server 与远程 Azure 服务器之间的链接。<br />-错误<br />     不是身份验证的问题、 连接问题或防火墙问题的错误阻止 SQL Server 与远程 Azure 服务器之间的链接。|  
 |error_number|ssNoversion|错误号。 如果没有错误，则此字段为 NULL。|  
 |error_message|nvarchar(1024)|错误消息。 如果没有错误，则此字段为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
   
 ## <a name="examples"></a>示例  
