@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.refreshdsv.f1
@@ -15,12 +14,12 @@ ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748481"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070509"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>“刷新数据源视图”对话框
   可以使用 **中的** “刷新数据源视图” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，接受或取消刷新数据源视图导致的更改。 该对话框显示对数据源视图的更改，此更改是由更改基础数据源所引发。 您可以单击 **“确定”** 以接受更改并刷新数据源视图，或单击 **“取消”** 以忽略更改并保持数据源视图不变。 通过执行以下操作之一，即可显示 **“刷新数据源视图”** 对话框：  

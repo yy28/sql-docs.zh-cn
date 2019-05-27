@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ec3264095ebdb34730f8112389b50aa6839836f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de72001ced1b7e2690f90b2de4c59bb35aca6ce4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749020"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071105"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>在管理中心中管理和配置 PowerPivot 服务器
   PowerPivot 服务器管理和配置由 SharePoint 服务应用程序管理员使用 SharePoint 管理中心来执行。  

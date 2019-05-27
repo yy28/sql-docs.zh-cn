@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
@@ -16,12 +15,12 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f52194bca9b91e387f49e4fa082feb9fad2c68c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144553"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108851"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>配置报表服务器 URL（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 用于访问报表服务器 Web 服务和报表管理器。 在可以使用任一应用程序之前，必须分别为 Web 服务和报表管理器至少配置一个 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为这两个应用程序 URL 提供了默认值，默认值在大多数部署方案中都能正常使用，包括与其他 Web 服务和应用程序的并行部署。  
@@ -33,10 +32,10 @@ ms.locfileid: "63144553"
 ## <a name="defining-a-report-server-url"></a>定义报表服务器 URL  
  URL 精确标识了网络上报表服务器应用程序实例的位置。 创建报表服务器 URL 时，必须指定以下部分。  
   
-|组成部分|描述|  
+|组成部分|Description|  
 |----------|-----------------|  
 |主机名|TCP/IP 网络使用 IP 地址来唯一标识网络上的设备。 计算机中安装的每个网络适配器都有一个物理 IP 地址。 如果 IP 地址解析为主机标头，则可以指定主机标头。 如果要将报表服务器部署到企业网络上，则可以使用计算机的网络名称。|  
-|端口|TCP 端口是设备上的端点。 报表服务器将侦听指定端口上的请求。|  
+|Port|TCP 端口是设备上的端点。 报表服务器将侦听指定端口上的请求。|  
 |虚拟目录|端口通常由多个 Web 服务或应用程序共享。 为此，报表服务器 URL 始终包括与获取请求的应用程序对应的虚拟目录。 您必须为侦听同一 IP 地址和端口的每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都指定唯一的虚拟目录名称。|  
 |SSL 设置|可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 配置为使用计算机中先前安装的现有 SSL 证书。 有关详细信息，请参阅 [联机丛书中的](../security/configure-ssl-connections-on-a-native-mode-report-server.md) 配置本机模式报表服务器上的 SSL 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
   
@@ -49,10 +48,10 @@ ms.locfileid: "63144553"
   
  下表中显示了使这些 URL 可用的设置。 该表显示了通过包含主机名的 URL 来启用报表服务器连接的默认值：  
   
-|组成部分|值|解释|  
+|组成部分|ReplTest1|解释|  
 |----------|-----------|-----------------|  
 |IP 地址|所有已分配的值|网络上的域名服务将 URL 上的主机名解析为计算机的 IP 地址。 只要定义的 URL 中指定了 IP 地址，发送到特定主机的请求便将到达其预期目标。|  
-|端口|80|端口 80 是计算机上进行 TCP/IP 连接的默认端口。 因为报表服务器侦听的是端口 80，所以可以忽略 URL 中的端口号。 如果指定另一个端口，则必须在 URL 中指定该端口。|  
+|Port|80|端口 80 是计算机上进行 TCP/IP 连接的默认端口。 因为报表服务器侦听的是端口 80，所以可以忽略 URL 中的端口号。 如果指定另一个端口，则必须在 URL 中指定该端口。|  
 |虚拟目录|ReportServer|请注意，这两个示例 URL 都包括虚拟目录名称。 除非自定义 URL 定义，否则必须始终在 URL 中指定该应用程序的虚拟目录名称。|  
   
 > [!NOTE]  

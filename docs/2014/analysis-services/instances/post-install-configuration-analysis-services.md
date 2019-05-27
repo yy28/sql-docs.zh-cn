@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56430aacb7055f3d8ffa531d157ad3c4f65c0b4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730099"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079659"
 ---
 # <a name="post-install-configuration-analysis-services"></a>安装后配置 (Analysis Services)
   安装 Analysis Services 后，需要进行进一步配置以使服务器正常运行并可供常规使用。 本节介绍完成安装后的附加任务。 根据连接要求，还可能需要配置身份验证（请参阅 [连接到 Analysis Services](connect-to-analysis-services.md)）。  

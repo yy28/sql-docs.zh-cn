@@ -1,5 +1,5 @@
 ---
-title: 在 Linux 上安装 SQL Server 机器语言扩展 (Java) |Microsoft Docs
+title: 在 Linux 上安装 SQL Server 语言扩展 (Java) |Microsoft Docs
 description: 了解如何安装 SQL Server 语言扩展 (Java) 在 Red Hat、 Ubuntu 和 SUSE。
 author: dphansen
 ms.author: davidph
@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d25739fb4f2ef104ba86c8e9124162e67fd8553
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: b694cde8784a1607c85ed9ab7dfcc4d770a6d938
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995075"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186804"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安装 SQL Server 2019 语言扩展 (Java)
 
-[SQL Server 机器学习服务](../advanced-analytics/what-is-sql-server-machine-learning.md)启动 SQL Server 2019 此预览版本中的 Linux 操作系统上运行。 按照这篇文章来安装 Java 语言扩展中的步骤。 
-
 语言扩展是到数据库引擎外的接程序。 尽管你可以[同时安装数据库引擎和语言扩展](#install-all)，它是安装和配置 SQL Server 数据库引擎第一次，以便可以添加更多的组件之前解决任何问题的最佳做法。 
+
+按照这篇文章来安装 Java 语言扩展中的步骤。
 
 Java 扩展包位置是在 SQL Server Linux 源存储库中。 如果你已配置的数据库引擎安装源代码存储库，则可以运行**mssql server 扩展性 java**包使用相同的存储库注册的安装命令。
 
@@ -185,6 +185,8 @@ sudo zypper install mssql-server-extensibility-java
 
 6. 重新启动`mssql-launchpadd`再次服务。
 
+7. 对于想要使用中的语言扩展每个数据库，你需要注册的外部语言[创建的外部语言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+
 ## <a name="verify-installation"></a>验证安装
 
 Java 功能集成不包括库，但你可以运行`grep -r JRE_HOME /etc`以确认创建 JAVA_HOME 环境变量。
@@ -195,7 +197,7 @@ Java 功能集成不包括库，但你可以运行`grep -r JRE_HOME /etc`以确�
 
 ## <a name="full-install-of-sql-server-and-language-extensions"></a>完整安装的 SQL Server 和语言扩展
 
-可以安装并在一个过程中配置的数据库引擎和机器学习服务通过附加的 Java 包和上安装数据库引擎的命令的参数。
+可以安装和配置数据库引擎和语言扩展，一个过程中，通过附加的 Java 包和上安装数据库引擎的命令的参数。
 
 1. 提供的命令行，包含数据库引擎和语言扩展功能。
 
@@ -235,7 +237,7 @@ Java 功能集成不包括库，但你可以运行`grep -r JRE_HOME /etc`以确�
 
 #### <a name="download-site"></a>下载站点
 
-您可以从程序包下载[ https://packages.microsoft.com/ ](https://packages.microsoft.com/)。 所有适用于 Java 的包都是与数据库引擎包共存。 
+您可以从程序包下载[ https://packages.microsoft.com/ ](https://packages.microsoft.com/)。 所有适用于 Java 的包都是与数据库引擎包共置。 
 
 #### <a name="redhat7-paths"></a>RedHat/7 路径
 

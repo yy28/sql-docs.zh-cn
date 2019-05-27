@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services], backing up
@@ -20,12 +19,12 @@ ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a11b10ae1403911c7593e9f6cccd21d1fdb8fd16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8c992148017f6a3ecb383e85ad5bbfcc3a3ec3c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261949"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108912"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的备份和还原操作
   本主题概述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中使用的所有数据文件，并介绍应在何时以及如何备份这些文件。 为报表服务器数据库文件制定备份和还原计划是恢复策略中最重要的一部分。 但是，更全面的恢复策略应包括备份加密密钥、自定义程序集或扩展插件、配置文件，以及报表和模型的源文件。  

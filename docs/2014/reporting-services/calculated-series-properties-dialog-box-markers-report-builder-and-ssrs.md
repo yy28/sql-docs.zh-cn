@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10153"
@@ -14,12 +13,12 @@ ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2fdc0a6ee75b2d08b06d440a4d9dd6da48a6b6b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266360"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109891"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>“计算序列属性”对话框 -&gt;“标记”（报表生成器和 SSRS）
   在 **“计算序列属性”** 对话框中选择 **“标记”** 可定义标记在序列的每个数据点上的显示方式。 标记仅对某些图表类型可用。 以下图表类型支持标记：区域中，栏、 列、 行、 极坐标图和散点图。 有关图表功能的详细信息，请参阅[图表类型（报表生成器和 SSRS）](report-design/chart-types-report-builder-and-ssrs.md)。  

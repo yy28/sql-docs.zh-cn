@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10148"
@@ -28,12 +27,12 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654607"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105846"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>设置图表上轴标签的格式（报表生成器和 SSRS）
   基于坐标的图表类型（柱形图、条形图、面积图、点状图、折线图和范围图）有两个用于分类和显示数据关系的轴。 不同类型的格式设置将应用于每个轴。  

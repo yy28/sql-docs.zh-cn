@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STX (geometry Data Type)
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 85bff3199c30a05cc5f3677f9dfabc9ceac84539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22b505e0fbb49790b855b0839530d9208477071
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821715"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935579"
 ---
 # <a name="stx-geometry-data-type"></a>STX（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47821715"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
   
- CLR 类型：SqlDouble  
+ CLR 类型：**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geometry** 实例不是一个点，此属性的值将为 null。  

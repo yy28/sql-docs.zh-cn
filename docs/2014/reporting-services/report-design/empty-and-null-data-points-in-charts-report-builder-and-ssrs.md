@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f350fed895d039a0d5298832e2cd0437748a0a92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b450470ea945f42cfdb625f7ff92444c046b04a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62695770"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105956"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>图表中的空和 Null 数据点（报表生成器和 SSRS）
   如果在图表中显示具有空值或 Null 值的字段，则图表外观可能与预期不符。 图表处理空值的方式会根据指定图表类型而改变：  

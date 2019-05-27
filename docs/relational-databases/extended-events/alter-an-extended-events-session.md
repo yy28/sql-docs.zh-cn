@@ -1,7 +1,7 @@
 ---
 title: 更改扩展事件会话 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07f79ea126998f5949d47dd8fb111d32b72841c6
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: cedb0addec5d6164b418b6bec0458de429dd6a82
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478022"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198202"
 ---
 # <a name="alter-an-extended-events-session"></a>更改扩展事件会话
 
@@ -47,14 +47,14 @@ ms.locfileid: "58478022"
   
 ## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>如何使用 SQL Server 扩展事件向导更改扩展事件会话  
   
--   在对象资源管理器中，依次展开 **“管理”**、 **“扩展事件”** 和 **“会话”**。  
+-   在对象资源管理器中，依次展开 **“管理”** 、 **“扩展事件”** 和 **“会话”** 。  
   
 -   右键单击要更改的会话，然后单击“属性”。  
   
--   在 **“属性”** 对话框中进行相应的更改，然后单击 **“确定”**。  
+-   在 **“属性”** 对话框中进行相应的更改，然后单击 **“确定”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)   
- [使用查询编辑器创建扩展事件会话](https://msdn.microsoft.com/library/cba0e02b-b201-4863-bf1b-9164e68e5fa8)  
+ [使用查询编辑器创建扩展事件会话](quick-start-extended-events-in-sql-server.md)  
   
   

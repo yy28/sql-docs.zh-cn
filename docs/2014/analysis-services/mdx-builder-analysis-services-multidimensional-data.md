@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.mdxbuilderdialof.f1
@@ -15,12 +14,12 @@ ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728023"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078016"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX 生成器（Analysis Services -多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“MDX 生成器”对话框生成多维表达式 (MDX) 表达式。 可以显示**MDX 生成器**通过单击对话框中**编辑 MDX**省略号按钮 (**...**) 用于**允许读取多维数据集内容**选项，**允许根据单元安全性读取单元内容**选项，或**允许读取和编写多维数据集内容**选项卡上**单元格数据**页**角色设计器**。  

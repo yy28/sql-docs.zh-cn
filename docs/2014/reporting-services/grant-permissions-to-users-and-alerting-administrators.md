@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44b0a20461df3214f605e68bbebb861cadf01849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48311ccaa22878fb5b17be75c3f12c64cb4a67e6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225300"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109062"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>向用户和警报管理员授予权限
   用户和警报管理员必须首先被授予 SharePoint 权限，然后才能创建、编辑、删除和查看数据警报。 没有用于使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报功能的特殊权限，你将使用内置的 SharePoint 权限。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - named queries [Analysis Services], creating
@@ -15,12 +14,12 @@ ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 965022adeeee40ca7f8fd45a722b22fa6aa64931
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726488"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075554"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名查询 (Analysis Services)
   命名查询是以表的形式表示的 SQL 表达式。 在命名查询中，可以指定一个 SQL 表达式以选择从一个或多个数据源的一个或多个表返回的行和列。 命名查询基于一个表达式，除此之外，它在行和关系方面都与数据源视图 (DSV) 中的其他表相似。  

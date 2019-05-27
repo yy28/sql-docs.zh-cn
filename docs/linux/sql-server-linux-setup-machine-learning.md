@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2232d56141984d03224967043f1977d178952bd1
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 5c147dfebd3c94d30fe794662db1b040524d6c4a
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993432"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186816"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>安装 SQL Server 2019 机器学习在 Linux 上的服务 （R、 Python）
 
@@ -55,7 +55,7 @@ ls /opt/microsoft/mssql/bin
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
-> Microsoft R Open 三个包组成。 如果任何这些包保留删除 microsoft-r-打开-mro-3.4.4 后，你应分别将其删除。
+> Microsoft R Open 3.4.4 两个或三个包组成，具体取决于该 CTP 版本之前安装。 （foreachiterators 包已合并到 CTP 2.2 中的主要 mro 包。）如果任何这些包保留删除 microsoft-r-打开-mro-3.4.4 后，你应分别将其删除。
 > ```
 > microsoft-r-open-foreachiterators-3.4.4
 > microsoft-r-open-mkl-3.4.4
@@ -96,13 +96,13 @@ ls /opt/microsoft/mssql/bin
 
 Microsoft 的 R 基础分发是使用 RevoScaleR、 MicrosoftML 和使用机器学习服务安装其他 R 包的先决条件。
 
-所需的版本是 MRO 3.4.4。
+所需的版本是 MRO 3.5.2。
 
 选择从以下两种方法安装 MRO:
 
-+ 从 MRAN 下载 MRO tarball，解压缩它，并运行其 install.sh 脚本。 可以按照[MRAN 的安装说明](https://mran.microsoft.com/releases/3.4.4)如果希望此方法。
++ 从 MRAN 下载 MRO tarball，解压缩它，并运行其 install.sh 脚本。 可以按照[MRAN 的安装说明](https://mran.microsoft.com/releases/3.5.2)如果希望此方法。
 
-+ 或者，注册**packages.microsoft.com**如下所述安装三个包组成 MRO 分发存储库： microsoft r open mro、 microsoft-r-打开-mkl，和microsoft-r-打开-foreachiterators。 
++ 或者，注册**packages.microsoft.com**如下所述安装两个包组成 MRO 分发存储库： microsoft r open mro 和 microsoft r open mkl。 
 
 以下命令注册存储库提供 MRO。 注册后，用于安装其他 R 包，例如 mssql-mlservices-mml-r，命令将作为包依赖项中自动包括 MRO。
 
@@ -114,11 +114,6 @@ sudo su
 
 # Optionally, if your system does not have the https apt transport option
 apt-get install apt-transport-https
-
-# Add the **azure-cli** repo to your apt sources list
-AZ_REPO=$(lsb_release -cs)
-
-echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
 
 # Set the location of the package repo the "prod" directory containing the distribution.
 # This example specifies 16.04. Replace with 14.04 if you want that version
@@ -137,8 +132,6 @@ sudo apt-get update
 # Import the Microsoft repository key
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
-# Create local `azure-cli` repository
-sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
 
 # Set the location of the package repo at the "prod" directory
 # The following command is for version 7.x
@@ -195,9 +188,9 @@ zypper update
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python)
-# Be sure to include -9.4.6* in mlsservices package names
-sudo yum install mssql-mlservices-mlm-py-9.4.6*
-sudo yum install mssql-mlservices-mlm-r-9.4.6* 
+# Be sure to include -9.4.7* in mlsservices package names
+sudo yum install mssql-mlservices-mlm-py-9.4.7*
+sudo yum install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
 ### <a name="example-2---minimum-installation"></a>示例 2-最小安装 
@@ -208,8 +201,8 @@ sudo yum install mssql-mlservices-mlm-r-9.4.6*
 # Install as root or sudo
 # Minimum install of R, Python extensions
 # Be sure to include -9.4.6* in mlsservices package names
-sudo yum install mssql-mlservices-packages-py-9.4.6*
-sudo yum install mssql-mlservices-packages-r-9.4.6*
+sudo yum install mssql-mlservices-packages-py-9.4.7*
+sudo yum install mssql-mlservices-packages-r-9.4.7*
 ```
 
 <a name="ubuntu"></a>
@@ -220,16 +213,6 @@ sudo yum install mssql-mlservices-packages-r-9.4.6*
 
 > [!Tip]
 > 如果可能，运行`apt-get update`刷新之前安装系统上的包。 此外，Ubuntu 某些 docker 映像可能没有 https apt 传输选项。 若要安装它，请使用`apt-get install apt-transport-https`。
-
-<!---
-### Prerequisite for 18.04
-
-Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from the Linux Kernel archives. This package is no longer included in the standard distribution and must be installed manually. To get this library, run the following commands:
-
-```bash
-wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
-```--->
 
 ### <a name="example-1----full-installation"></a>示例 1-完整安装 
 
@@ -268,9 +251,9 @@ sudo apt-get install mssql-mlservices-packages-r
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python)
-# Be sure to include -9.4.6* in mlsservices package names
-sudo zypper install mssql-mlservices-mlm-py-9.4.6*
-sudo zypper install mssql-mlservices-mlm-r-9.4.6* 
+# Be sure to include -9.4.7* in mlsservices package names
+sudo zypper install mssql-mlservices-mlm-py-9.4.7*
+sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
 ### <a name="example-2---minimum-installation"></a>示例 2-最小安装 
@@ -281,8 +264,8 @@ sudo zypper install mssql-mlservices-mlm-r-9.4.6*
 # Install as root or sudo
 # Minimum install of R, Python extensions
 # Be sure to include -9.4.6* in mlsservices package names
-sudo zypper install mssql-mlservices-packages-py-9.4.6*
-sudo zypper install mssql-mlservices-packages-r-9.4.6*
+sudo zypper install mssql-mlservices-packages-py-9.4.7*
+sudo zypper install mssql-mlservices-packages-r-9.4.7*
 ```
 
 ## <a name="post-install-config-required"></a>安装后配置 （必需）
@@ -383,13 +366,13 @@ GO
   您可以添加单个功能，例如 Python 集成到数据库引擎安装。
 
   ```bash
-  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.6* 
+  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.7* 
   ```
 
   或者，添加这两种扩展 （R、 Python）。
 
   ```bash
-  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.6* mssql-mlservices-packages-py-9.4.6*
+  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.7* mssql-mlservices-packages-py-9.4.7*
   ```
 
 3. 接受许可协议并完成安装后配置。 使用**mssql conf**此任务的工具。
@@ -428,7 +411,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 #### <a name="download-site"></a>下载站点
 
-您可以从程序包下载[ https://packages.microsoft.com/ ](https://packages.microsoft.com/)。 所有 R 和 Python 的 mlservices 包都是与数据库引擎包共存。 基 mlservices 包版本是 （适用于 CTP 2.0) 9.4.5 9.4.6 （CTP 2.1 和更高版本）。 回想一下，microsoft r open 包位于[不同的存储库](#mro)。
+您可以从程序包下载[ https://packages.microsoft.com/ ](https://packages.microsoft.com/)。 所有 R 和 Python 的 mlservices 包都是与数据库引擎包共置。 基 mlservices 包版本是 （适用于 CTP 2.0) 9.4.5 9.4.6 （CTP 2.1 和更高版本）。 回想一下，microsoft r open 包位于[不同的存储库](#mro)。
 
 #### <a name="rhel7-paths"></a>RHEL/7 路径
 
@@ -463,19 +446,17 @@ mssql-server-extensibility-15.0.1000
 
 # R
 microsoft-openmpi-3.0.0
-microsoft-r-open-foreachiterators-3.4.4
-microsoft-r-open-mkl-3.4.4
-microsoft-r-open-mro-3.4.4
-mssql-mlservices-packages-r-9.4.6.523
-mssql-mlservices-mlm-r-9.4.6.523
-mssql-mlservices-mml-r-9.4.6.523
+microsoft-r-open-mkl-3.5.2
+microsoft-r-open-mro-3.5.2
+mssql-mlservices-packages-r-9.4.7.64
+mssql-mlservices-mlm-r-9.4.7.64
+
 
 # Python
 microsoft-openmpi-3.0.0
-mssql-mlservices-python-9.4.6.523
-mssql-mlservices-packages-py-9.4.6.523
-mssql-mlservices-mlm-py-9.4.6.523
-mssql-mlservices-mml-py-9.4.6.523
+mssql-mlservices-python-9.4.7.64
+mssql-mlservices-packages-py-9.4.7.64
+mssql-mlservices-mlm-py-9.4.7.64
 ```
 
 ## <a name="add-more-rpython-packages"></a>添加更多 R/Python 包 

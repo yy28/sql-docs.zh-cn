@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
@@ -13,12 +12,12 @@ ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f76a4c0d2e9cc3bd2d5591a704491a4bed0ebfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266142"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109797"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>“点击链接型报表”页（报表管理器）
   当您单击报表中所包含的交互式数据时，点击链接型报表显示相关的数据表。 这些报表由报表服务器基于用来创建报表的模型中所包含的信息来生成。 如果您不想使用由报表服务器生成的点击链接型报表，则可以创建自定义报表，将其发布到报表服务器并映射到在模型中定义的交互式数据点。 必须在报表生成器中从同一模型创建自定义报表，然后再发布到报表服务器。 若要将自定义报表映射到模型中的项，请使用报表管理器中的“点击链接型报表”页。  

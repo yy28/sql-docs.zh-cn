@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e73468de8edd2497409c37acb2c00bfaf79ebd2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b54c06d86490c92936d147f2876d663f43d99fac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749414"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071590"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
   通过 Excel Services，您可以指定哪些位置是您在 SharePoint 服务器上打开的工作簿的有效存储库。 这些位置称为“受信任位置”，您可以对您创建的每个受信任位置使用不同的配置设置。 对于部署 PowerPivot for SharePoint 而言，您可以考虑为包含 PowerPivot 工作簿的站点创建一个受信任位置，以便您可以应用最适合进行 PowerPivot 数据访问的设置，同时为场的剩余部分保留默认设置。  

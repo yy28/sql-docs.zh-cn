@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749123"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070934"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>无法刷新工作簿中用于数据连接的数据。 请重试，或与系统管理员联系。 以下连接无法刷新：PowerPivot 数据
   对于包含 PowerPivot 数据的 Excel 工作簿，如果 Excel Services 提交对某一 PowerPivot 服务器的连接请求并且该请求失败，则会返回此错误。  
@@ -55,7 +54,7 @@ ms.locfileid: "62749123"
   
  运行 PowerPivot for SharePoint 的服务器将自动获取更新后的 OLE DB 数据访问接口。 必须对其他服务器（例如运行独立 Excel Services 实例、但在同一台计算机上没有 PowerPivot for SharePoint 的服务器）进行修补才能使用更高版本的客户端库。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。  
   
- **方案 3:域控制器不可用**  
+ **方案 3：域控制器不可用**  
   
  原因可能是域控制器不可用于确认用户标识。 Claims to Windows Token Service 要求域控制器针对每个连接验证 SharePoint 用户的身份。 Claims to Windows Token Service 不使用缓存凭据。 它会验证每个连接的用户标识。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "62749123"
   
  如果您的目标是在脱机状态下使用 PowerPivot for SharePoint，则在计算机上安装域控制器将非常有用。 有关如何脱机使用 PowerPivot 的详细的说明，请参阅博客条目的"使 PowerPivot 服务器断开网络" [ http://www.powerpivotgeek.com ](https://go.microsoft.com/fwlink/?LinkId=184241)。  
   
- **方案 4:服务器不稳定**  
+ **方案 4：服务器不稳定**  
   
  一个或多个服务可能处于不一致的状态。 在某些情况下，运行 IISRESET 将会解决该问题。  
   

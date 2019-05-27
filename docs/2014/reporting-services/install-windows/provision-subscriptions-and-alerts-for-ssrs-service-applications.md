@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Shared Service
@@ -17,12 +16,12 @@ ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 09d7ffed955615aa2ddfbedc812a0c0a3da3706e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 69724baa3790f2b7475369c8f947a4201bcd57f8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064496"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108723"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>用于 SSRS 服务应用程序的设置订阅和警报
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和数据警报需要 SQL Server 代理，还需配置 SQL Server 代理权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则您需要更新或验证权限。 本主题限于 SharePoint 模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并说明使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅来更新 SQL Server 代理权限的三种方式。 对于服务应用程序、msdb 和 master 数据库中的对象，在本主题的步骤中使用的凭据必须具有足够的权限来将执行权限授予 RSExecRole。  

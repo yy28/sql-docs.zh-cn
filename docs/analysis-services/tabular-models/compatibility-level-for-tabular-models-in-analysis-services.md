@@ -1,6 +1,6 @@
 ---
 title: 在 Analysis Services 中表格模型的兼容级别 |Microsoft Docs
-ms.date: 05/14/2019
+ms.date: 05/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
-ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
+ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709127"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175131"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表格模型的兼容性级别
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,8 +60,11 @@ ms.locfileid: "65709127"
   
 ## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>检查 SSMS 中支持的服务器兼容级别  
  在 SSMS 中，右键单击服务器名称 >**属性** > **支持的兼容级别**。  
-  
- 此属性指定的数据库，将在服务器上运行的最高的兼容性级别。 支持的兼容级别为只读，无法更改。  
+
+ 此属性指定的数据库，将在服务器上运行的最高的兼容性级别。 支持的兼容级别为只读，无法更改。
+ 
+> [!NOTE]  
+>  在 SSMS 中，当连接到 SQL Server Analysis Services 服务器、 Azure Analysis Services 服务器或 Power BI Premium 工作区中，支持的兼容级别属性将显示 1200年。 这是一个已知的问题，会在即将发布的 SSMS 中解决更新。 解析时，此属性将显示最高支持的兼容级别。 
   
 ## <a name="see-also"></a>另请参阅  
  [多维数据库的兼容性级别](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

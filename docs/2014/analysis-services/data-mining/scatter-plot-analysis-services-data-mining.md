@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - charts [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5135fa8ed6565096e8e2cf5ff851c3c0c2aced72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3319b72f1c3b37805a653d1f315aa0a3363521a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732994"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082940"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>散点图（Analysis Services - 数据挖掘）
   “散点图”  以图形方式对照显示数据中的实际值与模型预测的值。 其沿 X 轴显示实际值，沿 Y 轴显示预测值。 该图还显示一条显示完美预测的线，在这条线上预测值和实际值完全匹配。 某个点与该条理想 45 度角线的距离指示进行的预测的准确程度。  

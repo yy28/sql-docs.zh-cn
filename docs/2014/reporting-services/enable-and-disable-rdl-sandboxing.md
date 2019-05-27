@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c4bbf82d1bea70659b839405141dc7194d99951e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164872"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109227"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>启用和禁用 RDL 沙盒
   通过 RDL（报表定义语言）沙盒处理功能，您可以在多个用户使用报表服务器的单个 Web 场的情况下检测到和限制单个用户使用的特定类型的资源。 相关的示例是宿主服务方案，在此方案中，您可能维护多个用户（并且可能是不同的公司）使用的报表服务器的单个 Web 场。 作为报表服务器管理员，您可以启用此功能以帮助实现以下目标：  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4eec5e4f93a085ab784135593c139410f5911e1e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729614"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079271"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 课：创建角色
   在本课中，您将创建角色。 角色通过只限作为角色成员的那些 Windows 用户进行访问，提供模型数据库对象和数据的安全性。 每个角色定义有单一权限：无、 读取、 读取和进程、 进程或管理员。 通过使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的“角色管理器”对话框，可在模型创作期间定义角色。 在部署模型后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 管理角色。 若要了解详细信息，请参阅[角色（SSAS 表格）](tabular-models/roles-ssas-tabular.md)。  

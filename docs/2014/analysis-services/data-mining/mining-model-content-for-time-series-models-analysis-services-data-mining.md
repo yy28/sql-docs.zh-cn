@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733581"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083530"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
   所有挖掘模型均使用相同的结构存储其内容。 该结构是根据数据挖掘内容架构行集而定义的。 但在该标准结构中，包含信息的节点以不同方式排列以表示各种类型的树。 本主题介绍在基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的挖掘模型中这些节点的组织方式以及每个节点的含义。  
@@ -336,7 +335,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
 |Forecasting|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
-|Forecasting|T1'000 太平洋： Quantity |TA0000000b | 27 |ARIMA (1,0,3)|  
+|Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
   
  也可使用 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)浏览以上结果。根据这些结果，可以一眼判断出哪些序列是完全线性的，哪些序列具有多个周期性结构，以及所发现的周期是多少。  
   

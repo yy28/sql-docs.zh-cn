@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -18,12 +17,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bf91af4556694ea032dccd8d502e4480fc4c750
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 087322555ade5738ae3b4831488b6aa6e62b44a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733767"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083453"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>挖掘模型（Analysis Services - 数据挖掘）
   “挖掘模型”是通过将算法应用于数据创建的  ，但挖掘模型并不仅仅是算法或元数据容器：它是可应用于新数据以便生成预测和对关系进行推断的数据、统计信息和模式的集合。  

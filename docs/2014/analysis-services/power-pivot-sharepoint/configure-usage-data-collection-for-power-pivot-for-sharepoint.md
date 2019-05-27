@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749472"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071734"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>配置使用情况数据收集 (PowerPivot for SharePoint)
   使用情况数据收集是场级 SharePoint 功能。 PowerPivot for SharePoint 使用并扩展此系统以便在 PowerPivot 管理面板中提供显示 PowerPivot 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 PowerPivot 管理面板中的使用情况数据。  

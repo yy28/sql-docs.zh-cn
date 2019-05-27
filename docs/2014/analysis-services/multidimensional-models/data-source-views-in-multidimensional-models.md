@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services]
@@ -19,12 +18,12 @@ ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c9f4a8c8c968bcd7a633b943ea8c42b08662a50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726811"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076098"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多维模型中的数据源视图
   数据源视图 (DSV) 是关系数据源的抽象，它成为在多维项目中创建的多维数据集和维度的基础。 DSV 旨在让您控制项目中使用的数据结构，并且独立于基础数据源工作（例如，重命名或连接列，而不必直接修改原始数据源）。  

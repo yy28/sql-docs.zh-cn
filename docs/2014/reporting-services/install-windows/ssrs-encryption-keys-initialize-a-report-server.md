@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
@@ -18,12 +17,12 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 38aed7f227c4720f334f6a4791a6f2c61583c0d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144543"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108739"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>初始化报表服务器（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，已初始化的服务器是指可以在报表服务器数据库中加密和解密数据的服务器。 初始化是一项必需的报表服务器操作。 初始化在报表服务器服务第一次启动时发生。 在将报表服务器联接到现有部署，或在恢复进程中手动重新创建密钥时也需要进行初始化。 有关使用加密密钥的方法和原因的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)和[存储加密的报表服务器数据（SSRS 配置管理器）](ssrs-encryption-keys-store-encrypted-report-server-data.md)。  

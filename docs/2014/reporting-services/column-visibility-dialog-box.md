@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.columnvisibility.f1
@@ -14,12 +13,12 @@ ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9045ef92af27409ffa2fba0fe07564e3be037e6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 246189cf3b49212379c5c87f5600388097a2fb11
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266098"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109772"
 ---
 # <a name="column-visibility-dialog-box"></a>“列可见性”对话框
   在报表首次运行时使用 **“列可见性”** 对话框来显示或隐藏选中的列，其他时候可通过此对话框使用另一报表项来切换该列的可见性。  

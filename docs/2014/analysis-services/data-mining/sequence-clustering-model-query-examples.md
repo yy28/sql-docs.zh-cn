@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f5776d2a7523f4d56bb48926a8f0bf0929e87f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732879"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082915"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>顺序分析和聚类分析模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关模型中存储的信息的详细信息，预测查询使用模型中的模式并基于您提供的新数据进行预测。 对于顺序分析和聚类分析模型，内容查询通常会提供所发现的分类的更多详细信息，或这些分类中的转换。 您还可以使用查询来检索有关模型的元数据。  

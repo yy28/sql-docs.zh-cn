@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f2dd3739d481162e7685b7021a120dd5d48e844a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266392"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109709"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
   您在数据警报设计器中创建数据警报定义。 在您保存警报定义后，可以在数据警报设计器中重新打开、编辑和重新保存它们。 有关编辑警报定义的信息，请参阅 [在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md) 和 [在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md)。  

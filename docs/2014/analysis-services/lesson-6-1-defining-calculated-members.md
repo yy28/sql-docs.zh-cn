@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d9411ab88d259718aaa62873e615a62efdd82e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 91dbc92eca754b99a154b062c4f40e5663a4cd9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728916"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078394"
 ---
 # <a name="defining-calculated-members"></a>定义计算成员
   计算成员是基于多维数据集数据、算术运算符、数字和函数组合定义的维度或度量值组成员。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  

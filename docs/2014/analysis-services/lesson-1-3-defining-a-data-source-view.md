@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca6e9661c65098bed1175c7108b18a482b14a542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730326"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079275"
 ---
 # <a name="defining-a-data-source-view"></a>定义数据源视图
   定义了将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中使用的数据源后，下一步通常是定义项目的数据源视图。 数据源视图是元数据的单个统一视图，这些元数据来自数据源在项目中定义的指定表和视图。 通过在数据源视图中存储元数据，可以在开发过程中使用元数据，而无需打开与任何基础数据源的连接。 有关详细信息，请参阅 [多维模型中的数据源视图](multidimensional-models/data-source-views-in-multidimensional-models.md)。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], data sources
@@ -20,12 +19,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a89cb1d06b60d086c139b4d618b7bd716c04616e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c5a73be18977d78be89a45200f7f5ebe621bbf94
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775079"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109498"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   若要在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表中包含数据，必须首先创建“数据源”  和“数据集” 。 本主题解释数据源的类型、如何创建数据源以及与数据源凭据相关的重要信息。 数据源包含数据源类型、连接信息以及要使用的凭据的类型。 有两种类型的数据源：嵌入数据源和共享数据源。 嵌入数据源在报表中定义并只由该报表使用。 共享数据源独立于报表定义并可由多个报表使用。 有关详细信息，请参阅[嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)和[嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  

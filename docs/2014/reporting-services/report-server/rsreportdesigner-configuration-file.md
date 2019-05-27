@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
@@ -14,12 +13,12 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5ba4168f5417260b0857accdb9cf8fb3fa0f3c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190780"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103338"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 配置文件
   RSReportDesigner.config 文件存储有关可用于报表设计器的呈现扩展插件和数据处理扩展插件的设置。 数据处理扩展插件信息存储在 `Data` 元素中。 呈现扩展插件信息存储在 `Render` 元素中。 `Designer` 元素可枚举报表设计器中所用的查询生成器。  
@@ -55,7 +54,7 @@ ms.locfileid: "63190780"
   
 ## <a name="configuration-settings"></a>配置设置  
   
-|设置|描述|  
+|设置|Description|  
 |-------------|-----------------|  
 |`SecureConnectionLevel`|指定 Web 服务连接的安全级别。 有效值的范围为 0 到 3 之间，其中 0 的安全性最低。 有关详细信息，请参阅 [Using Secure Web Service Methods](../report-server-web-service/net-framework/using-secure-web-service-methods.md)。|  
 |`InstanceName`|预览服务器的标识符。 不要修改此值。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.findtabledialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc73bc6fbdbcbeb350bc32681bfd8dae3e01a642
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731202"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081083"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>“查找表”对话框（Analysis Services - 多维数据）
   使用 **中的** “查找表” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，可以在与维度、多维数据集或挖掘结构关联的数据源视图中查找表。 通过执行以下操作可以在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中显示此对话框：  

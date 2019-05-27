@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
@@ -20,12 +19,12 @@ ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc9d003fc4c1f3b3cd32e8f23fe635d56e48555e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726697"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074983"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授予单元数据的自定义访问权限 (Analysis Services)
   单元安全性用于允许或拒绝对多维数据集中度量值数据的访问。 下图显示了作为其角色仅允许访问特定度量值的用户进行连接时，数据透视表中允许和拒绝的度量值的组合。 此示例中， **分销商销售额** 和 **分销商总产品成本** 是通过此角色仅可访问的度量值。 所有其他度量值均被隐式拒绝（以下的下一节“允许访问特定度量值”中提供了用于获得此结果的步骤。）  

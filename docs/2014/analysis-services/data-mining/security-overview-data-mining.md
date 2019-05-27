@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services - data mining], about security
@@ -13,12 +12,12 @@ ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85a208cdc973cf4e54bb0a68020182d41eb798f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733037"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082897"
 ---
 # <a name="security-overview-data-mining"></a>安全性概述（数据挖掘）
   可以在多个级别对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行保护。 您必须保护每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其数据源，以确保只有经过授权的用户具有所选维度、挖掘模型以及数据源的读或读/写权限。 您还必须保护基础数据源以防止未经授权的用户恶意破坏敏感商业信息。 以下主题说明了保护 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的过程。  

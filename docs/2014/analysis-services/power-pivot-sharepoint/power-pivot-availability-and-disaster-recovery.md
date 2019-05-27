@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f64fa8d79f3f44a1f7c62dfe13c931509408d42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1f975fe18b76c4e748d7d2969d20c53b5818f0c3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749772"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071333"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>PowerPivot 可用性和灾难恢复 (SQL Server 2014)
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的可用性和灾难恢复计划主要依赖于 SharePoint 场的设计、不同的组件可接受的停机时间量以及针对 SharePoint 可用性实现的工具和最佳实践。 本主题汇总了各种技术，并包含在为 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署计划可用性和灾难恢复时要考虑的示例拓扑关系图。  

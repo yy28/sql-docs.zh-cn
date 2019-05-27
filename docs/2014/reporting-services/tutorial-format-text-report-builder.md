@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647523"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098902"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式（报表生成器）
   在本教程中，您可以练习以不同方式设置文本格式。 在设置了具有数据源和数据集的空白报表后，您可以选择要完成的步骤。  

@@ -1,7 +1,7 @@
 ---
 title: 返回的 XML 成形过程中的 AUTO 模式试探方法 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,28 +13,31 @@ ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed0035473bf90e2457aa0384b06da5569e2964db
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
+ms.openlocfilehash: b0b366e4b154daa8d1422e25c6abb170323bfb58
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512974"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175376"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>返回的 XML 成形过程中的 AUTO 模式试探方法
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  AUTO 模式根据查询决定返回的 XML 的形式。 在决定嵌套元素的方式时，AUTO 模式试探方法会比较相邻行中的列值。 **ntext**、 **text**、 **image**和 **xml**类型以外的所有类型的列都会进行比较。 **(n)varchar(max)** 和 **varbinary(max)** 类型的列会进行比较。  
+
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+AUTO 模式根据查询决定返回的 XML 的形式。 在决定嵌套元素的方式时，AUTO 模式试探方法会比较相邻行中的列值。 **ntext**、 **text**、 **image**和 **xml**类型以外的所有类型的列都会进行比较。 **(n)varchar(max)** 和 **varbinary(max)** 类型的列会进行比较。  
   
  下面的示例说明了确定生成的 XML 的形式的 AUTO 模式试探方法：  
   
-```  
+```sql
 SELECT T1.Id, T2.Id, T1.Name  
 FROM   T1, T2  
 WHERE ...  
-FOR XML AUTO  
-ORDER BY T1.Id  
+ORDER BY T1.Id
+FOR XML AUTO;
 ```  
   
- 如果未指定表 T1 的键，若要确定新 <`T1`> 元素的开始位置，需要比较 T1 中除 **ntext** **text** **image** 和 **xml** 类型以外的所有列的值。 接下来，假定 **Name** 列的数据类型为 **nvarchar(40)**，SELECT 语句将返回如下行集：  
+ 如果未指定表 T1 的键，若要确定新 <`T1`> 元素的开始位置，需要比较 T1 中除 **ntext** **text** **image** 和 **xml** 类型以外的所有列的值。 接下来，假定 **Name** 列的数据类型为 **nvarchar(40)** ，SELECT 语句将返回如下行集：  
   
 ```  
 T1.Id  T1.Name  T2.Id  
@@ -48,7 +51,7 @@ T1.Id  T1.Name  T2.Id
   
  下面是返回的 XML：  
   
-```  
+```xml
 <T1 Id="1" Name="Andrew">  
     <T2 Id="2" />  
     <T2 Id="3" />  
@@ -60,7 +63,7 @@ T1.Id  T1.Name  T2.Id
   
  现在，假定 Name 列是 **text** 类型。 AUTO 模式试探方法不比较此类型的值， 而是认为这些值不相同。 这将产生如下所示的 XML 生成结果：  
   
-```  
+```xml
 <T1 Id="1" Name="Andrew" >  
   <T2 Id="2" />  
 </T1>  

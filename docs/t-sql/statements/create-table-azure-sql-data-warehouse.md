@@ -12,56 +12,61 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 52628b3742574bc4e3079750526a5424d65012fe
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579659"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574888"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中创建新表。  
- 
+
 若要了解表以及如何使用它们，请参阅 [SQL 数据仓库中的表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)。
 
-注意：本文中有关 SQL 数据仓库的讨论同时适用于 SQL 数据仓库以及并行数据仓库，除非另有说明。 
- 
+> [!NOTE]
+>  本文中有关 SQL 数据仓库的讨论同时适用于 SQL 数据仓库以及并行数据仓库，除非另有说明。
+
  ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-<a name="Syntax"></a>   
-## <a name="syntax"></a>语法  
+<a name="Syntax"></a>
+
+## <a name="syntax"></a>语法
   
 ```  
--- Create a new table. 
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+-- Create a new table.
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
-      { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
+      { column_name <data_type>  [ <column_options> ] } [ ,...n ]
     )  
     [ WITH ( <table_option> [ ,...n ] ) ]  
 [;]  
-   
+
 <column_options> ::=
     [ COLLATE Windows_collation_name ]  
     [ NULL | NOT NULL ] -- default is NULL  
     [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression  ]
   
-<table_option> ::= 
-    {   
-        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
-      | HEAP --default for Parallel Data Warehouse   
-      | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC 
+<table_option> ::=
+    {
+        <cci_option> --default for Azure SQL Data Warehouse
+      | HEAP --default for Parallel Data Warehouse
+      | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
-    { 
-        DISTRIBUTION = HASH ( distribution_column_name ) 
+    {
+        DISTRIBUTION = HASH ( distribution_column_name )
       | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
-    }   
+    }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
-        FOR VALUES ( [ boundary_value [,...n] ] ) )  
+        FOR VALUES ( [ boundary_value [,...n] ] ) )
+
+<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
   
-<data type> ::=   
+<data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
     | datetime  
@@ -88,8 +93,9 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     | uniqueidentifier  
 ```  
 
-<a name="Arguments"></a>   
-## <a name="arguments"></a>参数  
+<a name="Arguments"></a>
+## <a name="arguments"></a>参数
+
  *database_name*  
  将包含新表的数据库的名称。 默认为当前数据库。  
   
@@ -98,10 +104,10 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
   
  *table_name*  
  新表的名称。 若要创建本地临时表，请在表名前加上 #。  有关临时表的说明和指南，请参阅 [Azure SQL 数据仓库中的临时表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)。 
- 
+
  column_name  
  表列的名称。
-   
+
 ### <a name="ColumnOptions"></a> 列选项
 
  `COLLATE` Windows_collation_name  
@@ -118,53 +124,71 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | constraint_name | 约束的可选名称。 该约束名称在数据库中是唯一的。 此名称可以重用于其他数据库。 |
  | constant_expression | 列的默认值。 表达式必须是文本值或一个常数。 例如，允许的常数表达式：`'CA'`、`4`。 禁止使用这些常量表达式：`2+3`、`CURRENT_TIMESTAMP`。 |
   
-
 ### <a name="TableOptions"></a> 表结构选项
+
 有关选择表类型的指南，请参阅[为 Azure SQL 数据仓库中的表编制索引](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)。
   
- `CLUSTERED COLUMNSTORE INDEX`  
-将表存储为聚集列存储索引。 聚集列存储索引应用于所有表数据。 这是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的默认行为。   
+ `CLUSTERED COLUMNSTORE INDEX` 
  
- `HEAP`   
-  将表存储为堆。 这是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的默认行为。  
+将表存储为聚集列存储索引。 聚集列存储索引应用于所有表数据。 这是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的默认行为。
+ 
+ `HEAP`：将表存储为堆。 这是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的默认行为。  
   
  `CLUSTERED INDEX` ( index_column_name [ ,...n ] )  
  将表存储为具有一个或多个键列的聚集索引。 此行为按行存储数据。 在索引中使用 index_column_name 来指定一个或多个键列的名称。  有关详细信息，请参阅常规注释中的行存储表。
  
- `LOCATION = USER_DB`   
- 已弃用此选项。 虽然在语法上可接受，但已不再需要它，而且它也不再影响行为。   
+ `LOCATION = USER_DB`：此选项已遭弃用。 虽然在语法上可接受，但已不再需要它，而且它也不再影响行为。   
   
 ### <a name="TableDistributionOptions"></a> 表分发选项
+
 若要了解如何选择最佳分发方法并使用分布式表，请参阅[在 Azure SQL 数据仓库中分发表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)。
 
-`DISTRIBUTION = HASH` ( distribution_column_name )   
-通过哈希存储在 distribution_column_name 中的值，将每行分配到一个分发。 算法是确定性的。也就是说，它总是将相同的值哈希到相同的分发。  应将分发列定义为 NOT NULL，因为所有包含 NULL 值的行都分配到相同的分发。
+`DISTRIBUTION = HASH` (distribution_column_name)：通过哈希处理 distribution_column_name 中存储的值，将每行都分配到一个分发。 算法是确定性的。也就是说，它总是将相同的值哈希到相同的分发。  应将分发列定义为 NOT NULL，因为所有包含 NULL 值的行都分配到相同的分发。
 
-`DISTRIBUTION = ROUND_ROBIN`   
-以轮循机制在所有分发上均匀地分发行。 这是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的默认行为。
+`DISTRIBUTION = ROUND_ROBIN`：以轮循机制在所有分发上均匀地分发行。 这是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的默认行为。
 
-`DISTRIBUTION = REPLICATE`    
-将表的一个副本存储在每个 Compute 节点上。 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，表存储在每个 Compute 节点上的分发数据库上。 对于 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，表存储在跨 Compute 节点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件组中。 这是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的默认行为。
+`DISTRIBUTION = REPLICATE`：将表的一个副本存储在每个 Compute 节点上。 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，表存储在每个 Compute 节点上的分发数据库上。 对于 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，表存储在跨 Compute 节点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件组中。 这是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的默认行为。
   
 ### <a name="TablePartitionOptions"></a> 表分区选项
 有关使用表分区的指南，请参阅[对 SQL 数据仓库中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
  `PARTITION` ( partition_column_name `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ boundary_value [,...n] ] ))   
 创建一个或多个表分区。 这些分区是水平表切片，可便于向行的子集应用操作，无论表是作为堆、聚集索引还是聚集列存储索引进行存储。 与分发列不同，表分区不确定存储每行的分发。 表分区决定行如何分组并存储在每个分发中。  
- 
+
 | 参数 | 解释 |
 | -------- | ----------- |
 |partition_column_name| 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将用于行分区的列。 此列可以是任何数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 按升序对分区列值进行排序。 在 `RANGE` 规范中，由低到高的排序是从 `LEFT` 到 `RIGHT`。 |  
 | `RANGE LEFT` | 指定属于左侧分区的边界值（较低值）。 默认为“左”。 |
 | `RANGE RIGHT` | 指定属于右侧分区的边界值（较高值）。 | 
 | `FOR VALUES` ( boundary_value [,...n] ) | 指定分区的边界值。 boundary_value 是一个常数表达式。 它不得为 NULL。 它必须匹配或可以隐式转换为 partition_column_name 的数据类型。 无法在隐式转换期间截断它，这样值的大小和确定位数与 partition_column_name 的数据类型不匹配<br></br><br></br>如果你指定 `PARTITION` 子句，但不指定边界值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 会创建包含一个分区的已分区表。 如果适用，稍后可以将表拆分成两个分区。<br></br><br></br>如果指定一个边界值，生成的表格有两个分区；一个用于低于边界值的值，另一个用于高于边界值的值。 如果你将分区移到未分区表中，未分区表会接收数据，但它的元数据中不会有分区边界。| 
- 
+
  请在“示例”部分中查看[创建已分区表](#PartitionedTable)。
 
+### <a name="ordered-clustered-columnstore-index-option-preview"></a>有序聚集列存储索引选项（预览版）
+
+聚集列存储索引是用于在 Azure SQL 数据仓库中创建表的默认索引。  ORDER 规范默认采用 COMPOUND 键。  排序始终为升序。 如果没有指定 ORDER 子句，则不会对列存储进行排序。
+
+在预览版期间，可以运行此查询来检查已启用 ORDER 的一个或多个列。  稍后将提供目录视图，其中包含此类信息和列序号（如果在 ORDER 中指定了多个列的话）。
+
+```sql
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+FROM sys.objects o 
+INNER JOIN sys.columns c ON o.object_id = c.object_id 
+INNER JOIN sys.partitions p ON o.object_id = p.object_id   
+INNER JOIN sys.column_store_segments s 
+    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
+WHERE o.name = 't1' and c.name = 'col1' 
+ORDER BY c.name, s.min_data_id, s.segment_id;
+```
+
 ### <a name="DataTypes"></a> 数据类型
+
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支持最常用的数据类型。 以下是支持的数据类型及其详细信息和存储字节的列表。 要更好地理解数据类型以及如何使用它们，请参阅 [SQL 数据仓库中表的数据类型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)。
 
 有关数据类型转换的表，请参阅 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/) 的“隐式转换”部分。
+
+>[!NOTE]
+>如需了解更多详情，请参阅[日期和时间数据类型和函数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。
 
 `datetimeoffset` [ ( n ) ]  
  n 的默认值为 7。  
@@ -269,7 +293,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  16 字节 GUID。  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  创建表需要 `db_ddladmin` 固定数据库角色的权限，或者：
  - 数据库的 `CREATE TABLE` 权限
  - 将包含表的架构的 `ALTER SCHEMA` 权限。 
@@ -292,11 +316,12 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
 我们建议使用更少的表分区，确保每个列存储索引具有足够的行以充分利用列存储索引的优势。 有关详细信息，请参阅[对 SQL 数据仓库中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和[为 SQL 数据仓库中的表编制索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
-  
- ### <a name="rowstore-table-heap-or-clustered-index"></a>行存储表（堆或聚集索引）  
- 行存储表是以逐行顺序存储的表。 它是堆或聚集索引。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 创建所有包含页压缩的行存储表；此行为不是用户可配置的。   
- 
- ### <a name="columnstore-table-columnstore-index"></a>列存储表（列存储索引）
+### <a name="rowstore-table-heap-or-clustered-index"></a>行存储表（堆或聚集索引）
+
+行存储表是以逐行顺序存储的表。 它是堆或聚集索引。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 创建所有包含页压缩的行存储表；此行为不是用户可配置的。
+
+### <a name="columnstore-table-columnstore-index"></a>列存储表（列存储索引）
+
 列存储表是以逐列顺序存储的表。 列存储索引是管理存储在列存储表中的数据的技术。  聚集列存储索引不影响数据的分发方式，而是影响数据在每个分发中的存储方式。
 
 若要将行存储表更改为列存储表，请删除表上所有现有索引并创建一个聚集列存储索引。 有关示例，请参阅 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。
@@ -305,20 +330,22 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 - [列存储索引版本的功能摘要](https://msdn.microsoft.com/library/dn934994/)
 - [为 SQL 数据仓库中的表编制索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md) 
- 
+
 <a name="LimitationsRestrictions"></a>  
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  无法对分发列定义 DEFAULT 约束。  
   
- ### <a name="partitions"></a>“度量值组”
- 如果使用的是分区，分区列无法使用仅 Unicode 排序规则。 例如，以下语句将失败。  
+### <a name="partitions"></a>“度量值组”
+如果使用的是分区，分区列无法使用仅 Unicode 排序规则。 例如，以下语句将失败。  
   
- `CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))`  
+ ```sql
+CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
+```  
  
  如果 boundary_value 是必须隐式转换为 partition_column_name 中数据类型的文本值，会出现差异。 通过 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 系统视图显示文本值，但转换后的值用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作。 
- 
-  
- ### <a name="temporary-tables"></a>临时表
+
+### <a name="temporary-tables"></a>临时表
+
  不支持以 ## 开头的全局临时表。  
   
  本地临时表具有以下限制和约束：  
@@ -341,38 +368,48 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnCollation"></a> A. 指定一个列排序规则 
  在以下示例中，使用两种不同的列排序规则创建表 `MyTable`。 默认情况下，列 `mycolumn1` 具有默认的排序规则 Latin1_General_100_CI_AS_KS_WS。 列 `mycolumn2` 具有排序规则 Frisian_100_CS_AS。  
   
-```  
+```sql
 CREATE TABLE MyTable   
   (  
     mycolumnnn1 nvarchar,  
     mycolumn2 nvarchar COLLATE Frisian_100_CS_AS )  
 WITH ( CLUSTERED COLUMNSTORE INDEX )  
 ;  
-  
 ```  
   
-### <a name="DefaultConstraint"></a> B. 指定列的 DEFAULT 约束  
+### <a name="DefaultConstraint"></a> B. 指定列的 DEFAULT 约束
+
  以下示例显示了为列指定默认值的语法。 colA 列有一个名为 constraint_colA 的默认约束以及一个默认值 0。  
   
-```  
-  
-CREATE TABLE MyTable   
+```sql
+CREATE TABLE MyTable
   (  
     colA int CONSTRAINT constraint_colA DEFAULT 0,  
-    colB nvarchar COLLATE Frisian_100_CS_AS   
+    colB nvarchar COLLATE Frisian_100_CS_AS
   )  
 WITH ( CLUSTERED COLUMNSTORE INDEX )  
 ;  
-```  
+```
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> C. 创建有序聚集列存储索引
+
+下面的示例展示了如何创建有序聚集列存储索引。 索引按 SHIPDATE 进行排序。
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
 
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>临时表的示例
 
 ### <a name="TemporaryTable"></a> C. 创建本地临时表  
- 下面的示例创建名为“#myTable”的本地临时表。 此表的指定名称包含三个部分（以 # 开头）。   
+ 下面的示例创建名为“#myTable”的本地临时表。 此表的指定名称包含三个部分（以 # 开头）。
   
-```  
-CREATE TABLE AdventureWorks.dbo.#myTable   
+```sql
+CREATE TABLE AdventureWorks.dbo.#myTable
   (  
    id int NOT NULL,  
    lastName varchar(20),  
@@ -381,7 +418,7 @@ CREATE TABLE AdventureWorks.dbo.#myTable
 WITH  
   (   
     DISTRIBUTION = HASH (id),  
-    CLUSTERED COLUMNSTORE INDEX   
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```
@@ -394,17 +431,16 @@ WITH
   
  聚集列存储索引不影响数据的分发方式；数据始终按行分发。 聚集列存储索引影响数据在每个分发中的存储方式。  
   
-```  
-  
-CREATE TABLE MyTable   
+```sql
+  CREATE TABLE MyTable
   (  
     colA int CONSTRAINT constraint_colA DEFAULT 0,  
-    colB nvarchar COLLATE Frisian_100_CS_AS   
+    colB nvarchar COLLATE Frisian_100_CS_AS
   )  
 WITH   
   (   
     DISTRIBUTION = HASH ( colB ),  
-    CLUSTERED COLUMNSTORE INDEX   
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```  
@@ -415,8 +451,8 @@ WITH
 ### <a name="RoundRobin"></a> E. 创建 ROUND_ROBIN 表  
  以下示例创建 ROUND_ROBIN 表，其中包含三列并且没有分区。 数据分布在所有分发中。 该表是使用 CLUSTERED COLUMNSTORE INDEX 创建的，它能提供比堆或行存储聚集索引更好的性能和数据压缩。  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -425,11 +461,12 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> F. 创建哈希分布式表  
+### <a name="HashDistributed"></a> F. 创建哈希分布式表
+
  以下示例创建与上面的示例相同的表。 但对于此表，分发行（位于 `id` 列），而不是像 ROUND_ROBIN 表一样随机分发。 该表是使用 CLUSTERED COLUMNSTORE INDEX 创建的，它能提供比堆或行存储聚集索引更好的性能和数据压缩。  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -445,8 +482,8 @@ WITH
 ### <a name="Replicated"></a> G. 创建已复制的表  
  以下示例创建一个类似于前面示例的已复制表。 将已复制表全部复制到每个 Compute 节点。 通过每个 Compute 节点上的副本，可以减少查询的数据移动。 此示例是使用 CLUSTERED INDEX 进行创建，可实现比堆更好的数据压缩。 堆可能包含的行不够，无法实现理想的 CLUSTERED COLUMNSTORE INDEX 压缩。  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -454,7 +491,7 @@ CREATE TABLE myTable
   )  
 WITH  
   (   
-    DISTRIBUTION = REPLICATE,   
+    DISTRIBUTION = REPLICATE,
     CLUSTERED INDEX (lastName)  
   );  
 ```  
@@ -462,65 +499,68 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>表分区的示例
 
-###  <a name="PartitionedTable"></a> H. 创建已分区表  
+###  <a name="PartitionedTable"></a> H. 创建已分区表
+
  以下示例创建与示例 A 中所示相同的表，并在 `id` 列上添加 RANGE LEFT 分区。 它指定了四个分区边界值，所以有五个分区。  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
     zipCode int)  
-WITH   
-  (   
+WITH
+  (
   
     PARTITION ( id RANGE LEFT FOR VALUES (10, 20, 30, 40 )),  
-    CLUSTERED COLUMNSTORE INDEX      
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```  
   
  在此示例中，数据将分类到以下分区中：  
   
--   分区 1：列 <= 10   
--   分区 2：10 < 列 < = 20   
--   分区 3：20 < 列 < = 30   
--   分区 4：30 < 列 < = 40   
--   分区 5：40 < 列  
+- 分区 1：列 <= 10
+- 分区 2：10 < 列 < = 20
+- 分区 3：20 < 列 < = 30
+- 分区 4：30 < 列 < = 40
+- 分区 5：40 < 列  
   
  如果将此同一个表分区为 RANGE RIGHT 而非 RANGE LEFT（默认），数据将分类到以下分区中：  
   
--   分区 1：列 < 10  
--   分区 2：10 < = 列 < 20   
--   分区 3：20 < = 列 < 30    
--   分区 4：30 < = 列 < 40   
--   分区 5：40 < = 列  
+- 分区 1：列 < 10  
+- 分区 2：10 < = 列 < 20
+- 分区 3：20 < = 列 < 30
+- 分区 4：30 < = 列 < 40
+- 分区 5：40 < = 列  
   
-### <a name="OnePartition"></a> I. 使用一个分区创建已分区表  
+### <a name="OnePartition"></a> I. 使用一个分区创建已分区表
+
  以下示例使用一个分区创建已分区表。 它不指定任何边界值，所以有一个分区。  
   
-```  
+```sql
 CREATE TABLE myTable (  
     id int NOT NULL,  
     lastName varchar(20),  
     zipCode int)  
-WITH   
-    (   
+WITH
+    (
       PARTITION ( id RANGE LEFT FOR VALUES ( )),  
       CLUSTERED COLUMNSTORE INDEX  
     )  
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. 创建具有日期分区的表  
+### <a name="DatePartition"></a> J. 创建具有日期分区的表
+
  以下示例创建一个名为 `myTable` 的新表，并在 `date` 列上进行分区。 使用 RANGE RIGHT 和日期作为边界值，它将在每个分区中放置一个月的数据。  
   
-```  
+```sql
 CREATE TABLE myTable (  
-    l_orderkey      bigint,       
-    l_partkey       bigint,                                             
-    l_suppkey       bigint,                                           
-    l_linenumber    bigint,        
+    l_orderkey      bigint,
+    l_partkey       bigint,
+    l_suppkey       bigint,
+    l_linenumber    bigint,
     l_quantity      decimal(15,2),  
     l_extendedprice decimal(15,2),  
     l_discount      decimal(15,2),  
@@ -533,11 +573,11 @@ CREATE TABLE myTable (
     l_shipinstruct  char(25),  
     l_shipmode      char(10),  
     l_comment       varchar(44))  
-WITH   
-  (   
+WITH
+  (
     DISTRIBUTION = HASH (l_orderkey),  
     CLUSTERED COLUMNSTORE INDEX,  
-    PARTITION ( l_shipdate  RANGE RIGHT FOR VALUES   
+    PARTITION ( l_shipdate  RANGE RIGHT FOR VALUES
       (  
         '1992-01-01','1992-02-01','1992-03-01','1992-04-01','1992-05-01',
         '1992-06-01','1992-07-01','1992-08-01','1992-09-01','1992-10-01',
@@ -551,8 +591,8 @@ WITH
   );  
 ```  
   
-<a name="SeeAlso"></a>    
-## <a name="see-also"></a>另请参阅 
+<a name="SeeAlso"></a>
+## <a name="see-also"></a>另请参阅
  
  [CREATE TABLE AS SELECT（Azure SQL 数据仓库）](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   

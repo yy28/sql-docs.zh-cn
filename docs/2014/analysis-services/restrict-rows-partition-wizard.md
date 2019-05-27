@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.typefilterexpression.f1
@@ -13,12 +12,12 @@ ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b86cfeedd76af51b5f9d8cc4633c73ed9cc17ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748229"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070205"
 ---
 # <a name="restrict-rows-partition-wizard"></a>限制行（分区向导）
   可以使用 **“限制行”** 页，限制从指定表中检索、聚合并包括到分区中的行。  

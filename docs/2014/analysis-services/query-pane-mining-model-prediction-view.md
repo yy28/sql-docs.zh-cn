@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
@@ -13,12 +12,12 @@ ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748369"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070519"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>“查询”窗格（“挖掘模型预测”视图）
   “查询”窗格显示预测查询生成器创建的数据挖掘表达式 (DMX) 语句。 您可以修改这些语句，再单击 **“切换到查询结果视图”** 按钮以返回结果。 如果切换回 **“设计”** 视图，则对语句所做的所有更改都将丢失。  

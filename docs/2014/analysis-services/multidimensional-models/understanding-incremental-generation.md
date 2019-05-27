@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental generation [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 003b56fe3dbfae3f442be6b966f3cdc3008909b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740892"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072683"
 ---
 # <a name="understanding-incremental-generation"></a>了解增量生成
   在生成初始架构后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]更改多维数据集定义和维度定义，然后返回架构生成向导。 向导会更新主题区域数据库和相关数据源视图中的架构以反映所做的更改，并且尽可能保留当前存在于要重新生成的表中的数据。 如果在初始生成之后更改表，则架构生成向导会使用下列规则在可能的情况下保留这些更改：  
