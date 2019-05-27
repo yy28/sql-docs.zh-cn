@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.scriptorganizerpane.f1
@@ -13,12 +12,12 @@ ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93ca134e0e06e5197c680830d67e8220e5c9bf5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747811"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069925"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>脚本组织程序（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“计算”** 选项卡上的 **“脚本组织程序”** 窗格，访问和重新排序指定多维数据集的多维数据集脚本中包含的计算成员、命名集和脚本命令。  

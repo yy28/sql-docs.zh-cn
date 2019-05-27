@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], Excel rendering
@@ -14,21 +13,21 @@ ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5d1ec9b650592be41c8ae2f7043649c91ea78442
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d71c83195c8f91984bbbce95bd00402928fdb36e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164574"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109208"
 ---
 # <a name="excel-device-information-settings"></a>Excel 设备信息设置
   下表列出以 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 格式呈现时的设备信息设置。  
   
-|设置|值|  
+|设置|ReplTest1|  
 |-------------|-----------|  
-|**OmitDocumentMap**|指示是否对于支持文档结构图的报表忽略文档结构图。 默认值是 `false`。|  
-|**OmitFormulas**|指示是否对所呈现报表忽略公式。 默认值为 `false`。|  
-|`SimplePageHeade`rs|指示是否将报表的页眉呈现到 Excel 页眉。 值为 `false` 指示将页眉呈现到工作表的第一行。 默认值是 `false`。|  
+|**OmitDocumentMap**|指示是否对于支持文档结构图的报表忽略文档结构图。 默认值为 `false`。|  
+|**OmitFormulas**|指示是否对所呈现报表忽略公式。 默认值是 `false`。|  
+|`SimplePageHeade`rs|指示是否将报表的页眉呈现到 Excel 页眉。 值为 `false` 指示将页眉呈现到工作表的第一行。 默认值为 `false`。|  
   
 ## <a name="see-also"></a>请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

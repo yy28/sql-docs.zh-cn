@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycontentdatatype.f1
@@ -13,12 +12,12 @@ ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745827"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068156"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>指定的列&#39;s 内容和数据类型 （数据挖掘向导）
   可以使用 **“指定列的内容和数据类型”** 页修改向导已设置的列和内容类型。 向导使用源列的数据类型和所选算法的功能来确定每个列的默认数据和内容类型。  

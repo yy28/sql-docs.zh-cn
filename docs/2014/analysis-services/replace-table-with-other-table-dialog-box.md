@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
@@ -15,12 +14,12 @@ ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748299"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070271"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>“用其他表替换该表”对话框
   可以使用 **中的** “用其他表替换该表” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，用尚未包含在数据源视图中的基础数据源中的表替换数据源视图中的现有表。 通过右键单击**数据源视图设计器**中的“关系图”或“表”窗格中的一个表名，再从“替换表”中选择“使用其他表”，即可显示“用其他表替换该表”对话框。  

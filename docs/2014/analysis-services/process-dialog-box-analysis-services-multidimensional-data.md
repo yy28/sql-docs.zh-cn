@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2739af6b1fdb6630b44ae56d1ab0b83ef5fa4535
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748849"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070748"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>“处理”对话框（Analysis Services - 多维数据）
   可以使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “处理” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象。 在 **中，可以执行以下操作以显示** “处理” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框：  

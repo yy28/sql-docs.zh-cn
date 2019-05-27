@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757968"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067962"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>为 Power View 报表配置报表属性
   在这一补充课程中，您将为 Adventure Works Internet Sales Model 项目设置报表属性。 通过报表属性，最终用户可以更轻松地在 Power View 中选择和显示模型数据。 您还可以设置属性以隐藏特定的列和表，并创建新数据以在图表中使用。  
@@ -165,7 +164,7 @@ ms.locfileid: "62757968"
   
     |“列”|属性|ReplTest1|  
     |------------|--------------|-----------|  
-    |date|数据格式|短日期|  
+    |Date|数据格式|短日期|  
     |Day Number of Week|Hidden|True|  
     |Day Name|按列排序|Day Number of Week|  
     |Day of Week|Hidden|True|  

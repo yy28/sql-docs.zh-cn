@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266059"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109874"
 ---
 # <a name="choose-link-page-report-manager"></a>“选择链接”页（报表管理器）
   使用“选择链接”页可为当前所选链接报表选择要基于的不同报表。 链接报表基于已发布到报表服务器的其他报表。 链接报表使用基础报表的布局和数据，但是其属性页与基础报表不同，以便您可以自定义参数属性、安全设置、名称、说明和位置。  

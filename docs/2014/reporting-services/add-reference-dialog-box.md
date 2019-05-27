@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.addreference.f1
@@ -15,12 +14,12 @@ ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 99094f6e0edc60dfa6ce77474c52f1cf9dfc50fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1990a5feaf4cbf7c4095b39089efb36fbb393755
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231296"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110015"
 ---
 # <a name="add-reference-dialog-box"></a>“添加引用”对话框
   使用 **“添加引用”** 对话框可以向报表添加对自定义程序集或 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 组件的引用。 添加程序集引用后，可以编写表达式或嵌入式自定义代码，其中包含对程序集或组件中的类或方法的完全限制引用。 有关详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) 或[向报表添加程序集引用 (SSRS)](report-design/add-an-assembly-reference-to-a-report-ssrs.md)。  

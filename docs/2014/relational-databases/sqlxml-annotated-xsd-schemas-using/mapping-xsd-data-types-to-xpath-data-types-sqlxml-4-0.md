@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1e74f5d2cfdd80e3d8a348808d9ecd6d8f38219
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8e0e1f4e2914439c380b3bbf7b6339ee28c6879
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228548"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013758"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>将 XSD 数据类型映射到 XPath 数据类型 (SQLXML 4.0)
   针对 XSD 架构执行 XPath 查询且在 `xsd:type` 属性中指定 XSD 类型时，XPath 使用它处理查询时指定的数据类型。  

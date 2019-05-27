@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7148ac75da5ec7184c771c2411750749c15fa192
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746480"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068661"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>“显示表”对话框（Analysis Services - 多维数据）
   使用 **中的** “显示表” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，可以包括与维度、多维数据集或挖掘结构相关联的数据源视图中的表。 通过执行以下操作可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中显示此对话框：  

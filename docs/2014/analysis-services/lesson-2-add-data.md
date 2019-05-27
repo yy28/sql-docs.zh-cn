@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729313"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078964"
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
   在本课程中，您将使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的“表导入向导”连接到 AdventureWorksDW SQL 数据库，选择数据，预览并筛选数据，然后将数据导入到模型工作区中。  
@@ -61,7 +60,7 @@ ms.locfileid: "62729313"
   
     |源名称|友好名称|  
     |-----------------|-------------------|  
-    |DimDate|date|  
+    |DimDate|Date|  
     |DimGeography|Geography|  
     |DimProduct|产品|  
     |DimProductCategory|Product Category|  
@@ -96,7 +95,7 @@ ms.locfileid: "62729313"
   
 4.  通过针对每个表中的以下各列清除复选框，筛选其余的表：  
   
-    |date|  
+    |Date|  
     |----------|  
     |**DateKey**|  
     |**SpanishDayNameOfWeek**|  
