@@ -11,14 +11,18 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7fdf13c7a0a2d318846b1140b26c6e56c2290024
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4648f66c9bc73a3de8bcf1bad68a9ad748718bc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271183"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727213"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   用于 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 Change Data Capture 组件（由 Attunity 提供）可帮助 SSIS 开发人员处理 CDC，并降低 CDC 包的复杂性。  
   
  SSIS CDC 组件设计用于处理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 功能，其中的源表可以是同一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库，也可以是 Oracle 数据库（在使用 Oracle CDC Service for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时）。 支持已分区表。  
@@ -40,7 +44,7 @@ ms.locfileid: "58271183"
 ## <a name="installation"></a>安装  
  本节介绍用于 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的 CDC 组件的安装过程。  
   
- 用于 SSIS 的 CDC 组件与 Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 打包在一起。 SQL Server 功能包下载内容中包含此类组件。 从 [SQL Server 2016 功能包网页](https://go.microsoft.com/fwlink/?LinkId=746297)下载功能包的组件。  
+ 用于 SSIS 的 CDC 组件与用于 Microsoft SQL ServerÂ® 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 打包在一起。 SQL Server 功能包下载内容中包含此类组件。 从 [SQL Server 2016 功能包网页](https://go.microsoft.com/fwlink/?LinkId=746297)下载功能包的组件。  
   
 ### <a name="version-support"></a>版本支持
 

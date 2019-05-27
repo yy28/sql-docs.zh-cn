@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993357"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014992"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>对于 SQL Server 上的大数据群集的发行说明
 
@@ -37,6 +37,7 @@ ms.locfileid: "65993357"
 | 存储增强功能 | 支持不同的存储配置的日志和数据。 此外，已减少的大数据群集的永久性卷声明数。 |
 | 多个计算池实例 | 对多个计算池实例的支持。 |
 | 新池行为和功能 | 默认值现在会将计算池用于存储池和数据池操作**ROUND_ROBIN**仅分发。 数据池现在使用新的新**复制**分布类型，这意味着数据池的所有实例上存在相同的数据。 |
+| 外部表的改进 | HADOOP 数据源的外部表键入现在支持读取的行的大小最多 1 MB。 外部表 （ODBC、 存储池、 数据池） 现在支持行宽度为 SQL Server 表。 |
 
 ### <a name="known-issues"></a>已知问题
 

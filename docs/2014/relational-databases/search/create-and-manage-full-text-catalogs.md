@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2347c97b41852b44ec651ee10300e607755757f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145979"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011473"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
   全文目录是虚拟对象，并不属于任何文件组；它是表示一组全文索引的逻辑概念。  
@@ -43,11 +43,11 @@ ms.locfileid: "48145979"
   
   
 ##  <a name="props"></a> 查看全文目录的属性  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 （例如 FULLTEXTCATALOGPROPERTY） 可用来获取与全文索引相关的各种属性的值。 此信息可用于全文搜索的管理和故障排除。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数（例如 FULLTEXTCATALOGPROPERTY）可用来获取与全文索引相关的各种属性的值。 此信息可用于全文搜索的管理和故障排除。  
   
  下表列出了与全文目录相关的属性。  
   
-|“属性”|Description|函数|  
+|属性|Description|函数|  
 |--------------|-----------------|--------------|  
 |`AccentSensitivity`|区分重音设置。|[FULLTEXTCATALOGPROPERTY](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)|  
 |`ImportStatus`|是否将导入全文目录。|FULLTEXTCATALOGPROPERTY|  

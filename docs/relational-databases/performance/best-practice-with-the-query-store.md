@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e83756e4520cf191f0e15750308ef58e3aa38dd
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542237"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779252"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -247,7 +247,7 @@ FROM sys.database_query_store_options;
   
  如果问题仍然存在，则表明磁盘上的查询存储数据已永久损坏。
  
- 可通过在受影响数据库内部执行 sp_query_store_consistency_check 存储过程来恢复查询存储。
+ 对于 SQL 2017 及更高版本，可通过在受影响的数据库内执行 sp_query_store_consistency_check 存储过程来恢复查询存储。 对于 SQL 2016，需要从查询存储中清除数据，如下所示。
  
  如果没有效果，可在请求读写模式之前尝试清除查询存储。  
   
@@ -339,7 +339,7 @@ WHERE is_forced_plan = 1;
   
 -  跟踪标志 7745 会阻止以下默认行为：在可关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，查询存储将数据写入磁盘。 这意味着已收集但尚未保留到磁盘的查询存储数据将会丢失。 
   
--  跟踪标志 7752 启用了查询存储的异步加载。 这会使数据库变为联机状态，并且在查询存储完全恢复之前执行查询。 默认行为是执行查询存储的同步加载。 默认行为可在恢复查询存储之前防止执行查询，但同时也可在数据集合中防止遗漏任何查询。
+-  跟踪标志 7752 启用了查询存储的异步加载。 这会使数据库变为联机状态，并且在查询存储完全恢复之前执行查询。 默认行为是同步加载查询存储。 默认行为可在恢复查询存储之前防止执行查询，但同时也可在数据集合中防止遗漏任何查询。
 
 > [!IMPORTANT]
 > 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中正在运行的工作负载见解使用查询存储，请尽快安装 [KB 4340759](https://support.microsoft.com/help/4340759) 中的性能可伸缩性修补程序。 

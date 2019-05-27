@@ -11,14 +11,18 @@ ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f0d535dbd5c451a88541dfc3432b9b09a7f6194
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7cb1e51817c4263bdd649ca2f1ea40c0cc968b89
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275839"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728755"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>如何为 CDC 准备 SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 服务要求所有目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例都包含 MSXDBCDC 数据库。 您可以在 CDC 服务配置控制台中使用“准备 SQL Server”操作创建此数据库。只能为每个目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例执行一次此任务。  
   
  下面的内容介绍如何使用 CDC 服务配置控制台为 Oracle 变更数据捕获准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 此过程创建 MSXDBCDC 数据库，并且定义所需的表、存储过程和其他所需项目。  

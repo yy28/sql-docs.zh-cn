@@ -30,19 +30,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 829459fadb58ff24093d422c365089639e7b76b9
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 7a6414ca219cbc2ca871a1100c4ff82570409873
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503823"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580637"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 将行存储表转换为聚集列存储索引，或创建非聚集列存储索引。 使用列存储索引可对 OLTP 工作负载有效地运行实时运营分析，或提高数据仓库工作负载的数据压缩和查询性能。  
   
-> [!NOTE]  
+> [!NOTE]
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以将表创建为聚集列存储索引。   再也不需要先创建行存储表，然后将其转换为聚集列存储索引。  
 
 > [!TIP]
@@ -64,14 +64,15 @@ ms.locfileid: "65503823"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
 CREATE CLUSTERED COLUMNSTORE INDEX index_name  
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]  
+    [ ON <on_option> ] 
+    [ORDER (column [,…n])]  --(Preview) 
 [ ; ]  
   
 --Create a non-clustered columnstore index on a disk-based table.  
@@ -80,7 +81,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
         ( column  [ ,...n ] )  
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]   
+    [ ON <on_option> ]
 [ ; ]  
   
 <with_option> ::=  
@@ -92,9 +93,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
       [ ON PARTITIONS ( { partition_number_expression | range } [ ,...n ] ) ]  
   
 <on_option>::=  
-      partition_scheme_name ( column_name )   
-    | filegroup_name   
-    | "default"   
+      partition_scheme_name ( column_name )
+    | filegroup_name
+    | "default"
   
 <filter_expression> ::=  
       column_name IN ( constant [ ,...n ]  
@@ -102,14 +103,14 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```  
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
-```  
+```
   
 ## <a name="arguments"></a>参数  
 
@@ -124,7 +125,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 所有选项在 Azure SQL 数据库中均可用。
 
-### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX  
+### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX
+
 创建一个聚集列存储索引，并按列压缩和存储其中的所有数据。 该索引包含表中的所有列，并且存储整个表。 如果现有表是堆或聚集索引，则该表会转换为聚集列存储索引。 如果该表已作为聚集列存储索引存储，则会删除并重新生成现有索引。  
   
 *index_name*  
@@ -132,11 +134,14 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 如果该表已具有聚集列存储索引，则可以指定与现有索引相同的名称，也可以使用 DROP EXISTING 选项指定新名称。  
   
-ON [database_name. [schema_name ] . | schema_name . ] *table_name*  
-   指定要作为聚集列存储索引存储的由一部分、两部分或三部分构成的名称。 如果该表是堆或聚集索引，则会将其从行存储转换为列存储。 如果该表已经是列存储，则此语句会重新生成聚集列存储索引。  
+ON [database_name. [schema_name ] . | schema_name . ] *table_name*
+
+指定要作为聚集列存储索引存储的由一部分、两部分或三部分构成的名称。 如果该表是堆或聚集索引，则会将其从行存储转换为列存储。 如果该表已经是列存储，则此语句会重新生成聚集列存储索引。 若要转换为有序聚集列存储索引，现有索引必须是聚集列存储索引。
   
-#### <a name="with-options"></a>WITH 选项  
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+#### <a name="with-options"></a>WITH 选项
+
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+
    `DROP_EXISTING = ON` 指定删除现有的索引，并创建一个新的列存储索引。  
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -156,6 +161,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
        WITH (MAXDOP = 2);
 ```
+
    有关详细信息，请参阅[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
  
 ###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
@@ -742,3 +748,11 @@ WITH ( DROP_EXISTING = ON);
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
+### <a name="f-create-an-ordered-clustered-columnstore-index"></a>F. 创建有序聚集列存储索引
+
+创建按 SHIPDATE 排序的有序聚集列存储索引。
+
+```sql 
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+```

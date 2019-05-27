@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10421"
@@ -13,12 +12,12 @@ ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e5fe086d16728a95b9ee8f2a52878d5a2c4bad4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eb8d81c9c47f00ed84036accf86768d084072c4d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164911"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109493"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>报表生成器中的数据连接、数据源和连接字符串
   为了在报表中包含数据，您需要创建数据连接和数据集。 数据连接包括有关如何访问外部数据源的信息。 数据集包含一个查询命令，用于指定通过使用数据连接要包含哪些数据。  

@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: dcf9d83589b94846778e65392dd2483593f5d3ad
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222141"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65771473"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -537,7 +537,7 @@ GO
 
 ## <a name="examples"></a>示例
 ### <a name="a-creating-a-database-without-specifying-files"></a>A. 创建未指定文件的数据库
-以下示例创建名为 `mytest` 的数据库，并创建相应的主文件和事务日志文件。 因为语句没有 \<filespec> 项，所以主数据库文件的大小为 model 数据库主文件的大小。 事务日志将设置为下列值中的较大者：512 KB 或主数据文件大小的 25%。 因为没有指定 MAXSIZE，文件可以增大到填满所有可用的磁盘空间为止。 此示例演示如何在创建 `mytest` 数据库之前删除名为 `mytest` 的数据库（如果它存在）。
+以下示例创建名为 `mytest` 的数据库，并创建相应的主文件和事务日志文件。 因为语句没有 \<filespec> 项，所以主数据库文件的大小为 model 数据库主文件的大小。 事务日志设置为下面这些值中较大的一个：512KB 或主数据文件大小的 25%。 因为没有指定 MAXSIZE，文件可以增大到填满所有可用的磁盘空间为止。 此示例演示如何在创建 `mytest` 数据库之前删除名为 `mytest` 的数据库（如果它存在）。
 
 ```sql
 USE master;
@@ -1042,7 +1042,7 @@ SQL 数据库服务器上适用于单一数据库和入池数据库的基于 DTU
 
 以下规则适用于 MAXSIZE 和 EDITION 参数：
 
-- 如果指定了 EDITION 但未指定 MAXSIZE，则使用版本的默认值。 例如，如果 EDITION 设置为 Standard 并且未指定 MAXSIZE，则 MAXSIZE 将自动设置为 500 MB。
+- 如果指定了 EDITION 但未指定 MAXSIZE，则使用版本的默认值。 例如，如果 EDITION 设置为 Standard，且未指定 MAXSIZE，那么 MAXSIZE 自动设置为 250MB。
 - 如果 MAXSIZE 和 EDITION 均未指定，则 EDITION 设置为 Standard (S0)，MAXSIZE 设置为 250 GB。
 
 SERVICE_OBJECTIVE     

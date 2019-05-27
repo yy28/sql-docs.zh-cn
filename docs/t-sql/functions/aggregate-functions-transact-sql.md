@@ -19,19 +19,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d0fa6a0ee5b63d098e0feb4a6ace368e145dd57
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 3195259f2ea4c709b0e01011264dedfc88e538af
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801431"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875205"
 ---
 # <a name="aggregate-functions-transact-sql"></a>聚合函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 聚合函数对一组值执行计算，并返回单个值。 除了 `COUNT` 外，聚合函数都会忽略 Null 值。 聚合函数经常与 SELECT 语句的 GROUP BY 子句一起使用。
   
-所有聚合函数均为确定性函数。 换言之，每次使用一组特定的输入值调用聚合函数时，它们所返回的值都是相同的。 有关函数确定性的详细信息，请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可以跟在除 GROUPING 或 GROUPING_ID 函数以外的所有聚合函数的后面。
+所有聚合函数均为确定性函数。 换言之，每次使用一组特定的输入值调用聚合函数时，它们所返回的值都是相同的。 有关函数确定性的详细信息，请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可以跟在除 STRING_AGG、GROUPING 或 GROUPING_ID 函数以外的所有聚合函数后面。
   
 只能在以下位置将聚合函数作为表达式使用：
 -   SELECT 语句的选择列表（子查询或外部查询）。  

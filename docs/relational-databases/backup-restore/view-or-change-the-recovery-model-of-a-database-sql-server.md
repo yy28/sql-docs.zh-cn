@@ -1,7 +1,7 @@
 ---
 title: 查看或更改数据库的恢复模式 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/05/2016
+ms.date: 05/10/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 033c14d1e144811f350f8f29ae18c052cd2ea380
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753506"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560074"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "50753506"
   
   “恢复模式”是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。 **model** 数据库将设置新数据库的默认恢复模式。  
   
-  有关 [恢复模式](recovery-models-sql-server.md)更深入的说明，请参阅由 [MSSQLTips](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 人员提供的 [SQL Server Recovery Models](https://www.mssqltips.com/)（SQL Server 恢复模式）！
+  有关更深入的说明，请参阅[恢复模式](recovery-models-sql-server.md)。
   
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -76,7 +76,7 @@ ms.locfileid: "50753506"
   
 #### <a name="to-view-the-recovery-model"></a>查看恢复模式  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -92,7 +92,7 @@ GO
   
 #### <a name="to-change-the-recovery-model"></a>更改恢复模式  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -103,7 +103,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 建议：在更改恢复模式之后  
+##  <a name="FollowUp"></a> 建议：在更改恢复模式后  
   
 -   **在完整恢复模式和大容量日志恢复模式之间切换后**  
   
@@ -111,13 +111,13 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   在从大容量日志恢复模式切换回完整恢复模式后，备份日志。  
   
-        >**注意：** 备份策略保持不变：继续执行定期数据库备份、日志备份和差异备份。  
+        >**注意**：您的备份策略保持不变：继续执行定期数据库备份、日志备份和差异备份。  
   
 -   **从简单恢复模式切换之后**  
   
     -   切换到完整恢复模式或大容量日志恢复模式之后，立即进行完整数据库备份或差异数据库备份以启动日志链。  
   
-        >**注意：** 到完整或大容量日志恢复模式的切换仅在第一个数据备份之后才生效。  
+        >**注意**：到完整恢复模式或大容量日志恢复模式的切换仅在第一个数据备份之后才生效。  
   
     -   计划安排定期日志备份并相应地更新还原计划。  
   

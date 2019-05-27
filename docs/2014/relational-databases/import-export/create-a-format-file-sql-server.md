@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a63bf2bcad0c5d20f0d37727796746f68708d16f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140581"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012057"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
   当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行大容量的数据导入或导出时，您可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
@@ -59,7 +59,7 @@ ms.locfileid: "63140581"
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|描述|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|指定非 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
@@ -89,7 +89,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|描述|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|指定非 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
@@ -159,7 +159,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|描述|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
@@ -199,7 +199,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|描述|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  

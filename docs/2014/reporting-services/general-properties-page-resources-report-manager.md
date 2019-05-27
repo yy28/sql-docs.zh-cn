@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260673"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109115"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>资源的“常规”属性页（报表管理器）
   使用资源的“常规”属性页可以重命名、删除、移动或替换资源。 页面顶部显示有关添加资源或修改属性的用户的信息。  

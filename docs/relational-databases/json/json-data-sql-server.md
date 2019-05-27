@@ -1,7 +1,7 @@
 ---
 title: 在 SQL Server 中处理 JSON 数据 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/19/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.reviewer: genemi
 ms.technology: ''
@@ -13,16 +13,16 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82df7760fbcf82d6f9699a0adeb95036e64c946e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 442e349da7b8b21363e747910044cbbd537ffa0b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801931"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620611"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 JSON 是一种流行的数据格式，用于在现代 Web 和移动应用程序中交换数据。 JSON 还可用于在日志文件或 Microsoft Azure Cosmos DB 等 NoSQL 数据库中存储非结构化数据。 许多 REST Web 服务以 JSON 文本格式返回结果，或接受采用 JSON 格式的数据。 例如，大多数 Azure 服务（如 Azure 搜索、Azure 存储和 Azure Cosmos DB）都提供返回或使用 JSON 的 REST 终结点。 JSON 也是用于通过 AJAX 调用在网页与 Web 服务器之间交换数据的主要格式。 
 
@@ -30,10 +30,10 @@ SQL Server 中的 JSON 函数使用户能在同一数据库中将 NoSQL 和相�
 
 *JSON 充当 NoSQL 和关系环境之间的桥梁*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
- 
-下面是 JSON 文本的示例： 
- 
-```json 
+
+下面是 JSON 文本的示例：
+
+```json
 [{
     "name": "John",
     "skills": ["SQL", "C#", "Azure"]
@@ -41,7 +41,7 @@ SQL Server 中的 JSON 函数使用户能在同一数据库中将 NoSQL 和相�
     "name": "Jane",
     "surname": "Doe"
 }]
-``` 
+```
  
 通过使用 SQL Server 内置函数和运算符，你可以对 JSON 文本执行以下操作： 
  
@@ -125,7 +125,7 @@ FROM OPENJSON(@json)
   
 **结果**  
   
-|id|firstName|lastName|age|dateOfBirth|  
+|ID|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
@@ -165,7 +165,7 @@ FROM OPENJSON(@json)
 
 **结果**  
   
-|id|firstName|lastName|age|dateOfBirth|技能|  
+|ID|firstName|lastName|age|dateOfBirth|技能|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
 |5|Jane|Smith||2005-11-04T12:00:00|SQL| 
@@ -175,6 +175,10 @@ FROM OPENJSON(@json)
 `OUTER APPLY OPENJSON` 将联接一级实体和子数组，并返回平展后的结果集。 由于 JOIN，将对每个技能重复第二行。
 
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>将 SQL Server 数据转换为 JSON 或导出 JSON
+
+>[!NOTE]
+>不支持将 Azure SQL 数据仓库数据转换为 JSON，也不支持导出 JSON。
+
 通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，可将 SQL Server 数据或 SQL 查询结果的格式设置为 JSON。 使用 FOR JSON 委托从客户端应用程序到 SQL Server 的 JSON 输出格式。 有关详细信息，请参阅[借助 FOR JSON 将查询结果格式化为 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
 以下示例使用带有 FOR JSON 子句的 PATH 模式：  
@@ -330,11 +334,11 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
   
 例如，你可能想要生成符合 OData 规范的 JSON 输出。 Web 服务需要采用以下格式的请求和响应： 
   
--   请求： `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
+- 请求： `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   响应： `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+- 响应： `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
-此 OData URL 代表针对 `id` 为 1 的产品的 ProductID 和 ProductName 列的请求。 可以使用 **FOR JSON** 按 SQL Server 中所需的格式设置输出格式。  
+此 OData URL 代表针对 `ID` 为 1 的产品的 ProductID 和 ProductName 列的请求。 可以使用 **FOR JSON** 按 SQL Server 中所需的格式设置输出格式。  
   
 ```sql  
 SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'

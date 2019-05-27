@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add30d400db0a4ce73313ac5b7c4637bff8adfd9
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658291"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713321"
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "58658291"
   
 -   您可以更快地对一个或多个分区执行维护操作。 这些操作的效率更高，因为它们仅针对这些数据子集，而非整个表。 例如，您可以选择在一个或多个分区中压缩数据，或者重新生成索引的一个或多个分区。  
   
--   您可以根据经常执行的查询类型和硬件配置，提高查询性能。 例如，在两个或更多的已分区表中的分区列相同时，查询优化器可以更快地处理这些表之间的同等联接查询，因为可以联接这些分区本身。  
+-   您可以根据经常执行的查询类型和硬件配置，提高查询性能。 例如，在分区依据列与表联接的列相同时，查询优化器可以更快地处理两个或多个已分区表之间的相等联接查询。 有关详细信息，请参阅下面的[查询](#queries)。
   
 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 针对 I/O 操作执行数据排序时，它会首先按分区对数据进行排序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次访问一个驱动器，这样可能会降低性能。 为了提高数据排序性能，可以通过设置 RAID 将多个磁盘中的分区数据文件条带化。 这样一来，尽管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍按分区对数据进行排序，但它可以同时访问每个分区的所有驱动器。  
   

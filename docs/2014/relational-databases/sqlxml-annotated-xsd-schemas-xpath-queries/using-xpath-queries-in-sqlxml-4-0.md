@@ -12,15 +12,15 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35ae7fec6e2a5800ec82e815b2b7bc3cdc4f8926
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 962d79dbee61fa498a6338c864366ec40ea7c759
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131296"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014565"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>在 SQLXML 4.0 中使用 XPath 查询
   通过 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对带批注的 XSD 架构的支持，您可以对数据库中存储的关系数据创建 XML 视图。 您可以使用 XPath 语言的子集查询由带批注的 XSD 架构创建的 XML 视图。  

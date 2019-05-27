@@ -31,7 +31,7 @@ ms.locfileid: "63252966"
 
 ## <a name="connect-to-postgresql"></a>连接到 PostgreSQL
 
-1. 启动**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
+1. 启动 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
 
 2. 首次启动[!INCLUDE[name-sos](../includes/name-sos-short.md)]**连接**对话框随即打开。 如果**连接**对话框未打开，请单击**服务器**页面中的**新的连接**图标：
 

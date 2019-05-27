@@ -9,17 +9,30 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63243780"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175047"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
 请参阅什么是最新的设备更新为 Microsoft Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.4"></a>
+## <a name="aps-cu74"></a>APS CU7.4
+发布日期-2019 年 5
+
+### <a name="loading-large-rows-with-dwloader"></a>Dwloader 加载大型行
+APS CU7.4 从开始，客户将能够使用新 dwloader 加载到超过 32 KB （32,768 字节为单位） 的表的行。 新 dwloader 支持采用 32768 和 33554432 （以字节为单位） 之间的整数值加载大小大于 32 KB 的行-l 开关。 此开关将分配客户端和服务器上的更多内存并可能会减慢加载加载大型行 （大于 32 KB） 时，仅使用此选项。 您可以下载从新 dwloader[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)。  
+
+### <a name="hdp-30-and-31-support-with-polybase"></a>HDP 3.0 和 3.1 支持使用 PolyBase
+PolyBase AP 上的现在支持 HDP 3.0 和 3.1 利用此更新。 选项 7 用于 HDP 3.x 版本。 有关详细信息，请参阅[PolyBase 连接](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql)页。
+
+### <a name="utf16-file-support-with-polybase"></a>使用 PolyBase 的 UTF16 文件支持
+PolyBase 现在支持读取带分隔符的文本文件中 UTF16 (LE) 编码的。 请参阅[创建外部文件格式](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql)有关安装程序的详细信息。 
+
 <a name="h2-aps-cu7.3"></a>
 ## <a name="aps-cu73"></a>APS CU7.3
 发布日期-2018 年 12 月

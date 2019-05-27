@@ -36,7 +36,7 @@ Set_Expression * Set_Expression
  一个包含两个指定参数的叉积的集。  
   
 ## <a name="remarks"></a>备注  
-  **\* （叉积）** 运算符在功能上等效于[叉积](../mdx/crossjoin-mdx.md)函数。  
+ **\* （叉积）** 运算符在功能上等效于[叉积](../mdx/crossjoin-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示了此运算符的用法。  

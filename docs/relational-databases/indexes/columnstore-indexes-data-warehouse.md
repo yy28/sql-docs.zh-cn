@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cfd16b46ddf4c06c283009ecfa836780c1c2444
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8ceade7d44b5ec708db5355853065ebb1f253166
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412064"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581307"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列存储索引 - 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52412064"
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>通过结合使用非聚集索引和列存储索引来提高性能  
  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，可以在聚集列存储索引上定义非聚集索引。   
   
-### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>示例︰借助非聚集索引提高表查找的效率  
+### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>例如：使用非聚集索引提高表查找的效率  
  若要提高数据仓库中表查找的效率，可以创建专用于运行查询的非聚集索引，这种查询对于表查找的效率最高。 例如，查找匹配值或返回较小范围值的查询对于 B 树索引效果更好，而不是列存储索引。 它们无需通过列存储索引进行完整表扫描，只需通过 B 树索引执行二进制搜索就可以更快地返回正确结果。  
   
 ```sql  
@@ -64,14 +64,14 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>示例︰使用非聚集索引对列存储表实施强制主键约束  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>例如：使用非聚集索引对列存储表强制实施主键约束  
  按照设计，列存储表不允许实施主键约束。 现在可以在列存储表上使用非聚集索引，以强制实施主键约束。 主键等同于非 NULL 列上的唯一约束，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将唯一约束作为非聚集索引实施。 结合这些事实，下面的示例定义了非 NULL 列帐户密钥上的唯一约束。 结果获得非聚集索引，它将主键约束强制实施为非 NULL 列上的唯一约束。  
   
  接下来，将表转换为聚集列存储索引。 在转换期间，非聚集索引仍然存在。 结果获得聚集列存储索引和非聚集索引，强制实施主键约束。 因为在列存储表中的任何更新或插入都会影响非聚集索引，违反唯一约束和非 NULL 的所有操作都将都导致整个操作失败。  
   
  结果获得聚集列存储索引和非聚集索引，在两种索引上都强制实施主键约束。  
   
-```sql 
+```sql
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  

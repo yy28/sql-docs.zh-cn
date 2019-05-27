@@ -18,15 +18,15 @@ helpviewer_keywords:
 - id-prefix annotation [SQLXML]
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 668e26430e97a1e7d34e0e420966b975874224c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fff698fc4eb92dd1bade50274a289f861e07ede0
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717894"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013613"
 ---
 # <a name="other-annotations-sqlxml-40"></a>其他批注 (SQLXML 4.0)
   除本节上文的主题中介绍的批注之外，XML 大容量加载还解释了以下其他批注：  

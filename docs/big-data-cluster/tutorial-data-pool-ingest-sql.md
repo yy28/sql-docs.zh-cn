@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 1cc9093bb6d266bd70fe8f53d96b249bc6680324
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994160"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014951"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程：将数据引入到 TRANSACT-SQL 的 SQL Server 数据池
 
@@ -85,7 +85,7 @@ ms.locfileid: "65994160"
 
 以下步骤将示例 web 点击流数据引入到使用前面步骤中创建的外部表的数据池。
 
-1. 为想要用于将数据插入数据池的查询定义变量。 CTP 2.3 或更早版本，**模型...sp_data_pool_table_insert_data**所需的存储的过程。 CTP 2.4 和更高版本，可以使用`INSERT INTO`语句来查询的结果插入到数据池 ( **web_clickstream_clicks_data_pool**外部表)。
+1. 使用`INSERT INTO`语句来查询的结果插入到数据池 ( **web_clickstream_clicks_data_pool**外部表)。
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool

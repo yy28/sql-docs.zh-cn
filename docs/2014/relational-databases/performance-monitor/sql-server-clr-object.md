@@ -21,7 +21,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "63250713"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server CLR 对象
-   **SQLServer:CLR** 对象提供了计数器来监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的公共语言运行时 (CLR) 的执行。  
+  **SQLServer:CLR** 对象提供了计数器来监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的公共语言运行时 (CLR) 的执行。  
   
  下表说明了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** 计数器。  
   

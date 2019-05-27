@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206323"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718279"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 故障排除
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和 Scale Out Worker 服务之间的通信。 有时，通信会因配置错误、缺少访问权限及其他原因而中断。 可借助本文排查 Scale Out 配置的问题。
 
@@ -120,7 +124,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 “System.ServiceModel.Security.MessageSecurityException:HTTP 请求已使用客户端身份验证方案 'Anonymous' 禁止。”
 
-“System.Net.WebException:远程服务器返回错误：(403) 已禁止。”
+“System.Net.WebException:远程服务器返回了错误：(403) 已禁止。”
 
 ### <a name="solution"></a>解决方案
 1.  如果尚未安装 Scale Out Worker 证书，请将其安装到 Scale Out Master 节点上本地计算机的根证书存储中，然后重启 Scale Out Worker 服务。

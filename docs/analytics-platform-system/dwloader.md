@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157616"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175035"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 命令行加载程序，用于并行数据仓库
 **dwloader**是将表行批量加载到现有表的并行数据仓库 (PDW) 命令行工具。 当加载行，可以将所有行都添加到表的末尾 (*追加模式*或*fastappend 模式*)、 追加新行和更新现有行 (*upsert 模式*)，或删除所有现有的行之前加载，然后将所有行都插入到一个空表 (*重新加载模式*)。  
@@ -111,7 +111,8 @@ dwloader.exe
     [ -E ]  
     [ -m ]  
     [ -N ]  
-    [ -se ]   
+    [ -se ]
+    [ -l ]   
 }  
 ```  
   
@@ -143,7 +144,7 @@ For information about configuring Windows Authentication, see [Security - Config
   
 `rv=25`  
   
-**-S***target_appliance*  
+* *-S***target_appliance*  
 指定 SQL Server PDW 设备，将收到加载的数据。  
   
 *有关 Infiniband 连接*， *target_appliance*指定为 < 设备名称 >-SQLCTL01。 若要配置此命名连接，请参阅[配置无线带宽技术网络适配器](configure-infiniband-network-adapters.md)。  
@@ -156,10 +157,10 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name.* [*schema*].*table_name*  
 目标表的三部分组成的名称。  
   
-**-I***source_data_location*  
+* *-I***source_data_location*  
 若要加载的一个或多个源文件的位置。 每个源文件必须是一个文本文件或使用 gzip 压缩的文本文件。 只有一个源文件可以压缩到每个 gzip 文件。  
   
 若要设置源文件的格式：  
@@ -174,7 +175,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   源数据位置可以是网络路径或加载服务器上的目录的本地路径。  
   
--   若要指定所有文件的目录中，输入目录路径后, 跟 * 通配符字符。  加载程序不会在源数据位置的任何子目录中加载文件... 加载程序错误时的目录中的 gzip 文件存在。  
+-   若要指定所有文件的目录中，输入目录路径后, 跟 * 通配符字符。  加载程序不会从在源数据位置的任何子目录中加载文件。 加载程序错误时的目录中的 gzip 文件存在。  
   
 -   若要指定的目录中的某些文件，请使用字符的组合和 * 通配符。  
   
@@ -219,7 +220,7 @@ For more information about this install option, see [Install dwloader Command-Li
 指定的字符编码类型的数据要从数据文件加载。 选项为 ASCII （默认值）、 UTF8、 UTF16，或 UTF16BE，其中 UTF16 是稍有 endian，UTF16BE 是大字节序。 这些选项是不区分大小写。  
   
 **-t** *field_delimiter*  
-行中每个字段 （列） 为分隔符。 字段分隔符是一个或多个这些 ASCII 转义字符或 ASCII 十六进制值...  
+行中每个字段 （列） 为分隔符。 字段分隔符为一个或多个这些 ASCII 转义字符或 ASCII 十六进制值。  
   
 |“属性”|转义符|十六进制字符|  
 |--------|--------------------|-----------------|  
@@ -368,9 +369,9 @@ dym
 2010 年 3 月 4 日的输入的文件示例：04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*custom_date_format*是一种自定义日期格式 (例如，MM/dd/yyyy) 进行同步后向兼容性。 dwloader 执行不 enfoce 自定义日期格式。 相反，当指定自定义日期格式**dwloader**会将它转换为相应的设置的要求使用 ymd、 ydm、 mdy、 myd、 dym 或 dmy。  
+*custom_date_format*是一种自定义日期格式 (例如，MM/dd/yyyy) 进行同步后向兼容性。 dwloader 不强制实施自定义日期格式。 相反，当指定自定义日期格式**dwloader**会将它转换为相应的设置的要求使用 ymd、 ydm、 mdy、 myd、 dym 或 dmy。  
   
-例如，如果指定-D MM/dd/yyyy，dwloader 需要所有日期输入进行排序的月份第一次，然后年和日然后 (mdy)。 它不会强制 2 字符月、 2 个数字星期日期，以及指定的自定义日期格式的 4 个数字表示的年份。 以下是可从-D MM/dd/yyyy 的日期格式时在输入文件格式设置日期的方式的示例：01/02/2013，Jan.02.2013，2013 年 1 月 2 日  
+例如，如果指定-D MM/dd/yyyy，dwloader 需要所有日期输入进行排序的月份第一次，然后年和日然后 (mdy)。 它不会强制实施 2 个字符几个月、 2 位数字表示日和 4 位数年份解释为指定的自定义日期格式。 以下是可从-D MM/dd/yyyy 的日期格式时在输入文件格式设置日期的方式的示例：01/02/2013，Jan.02.2013，2013 年 1 月 2 日  
   
 有关更全面的格式设置信息，请参阅[数据类型转换规则适用于 dwloader](dwloader-data-type-conversion-rules.md)。  
   
@@ -481,7 +482,10 @@ upsert **-K**  *merge_column* [ ,...*n* ]
 验证目标设备具有有效的 SQL Server PDW 证书从受信任的颁发机构。 用于帮助确保你的数据未被的攻击者劫持并发送到未经授权的位置。 该证书必须已安装在设备上。 安装证书的唯一受支持的方法是，让设备管理员若要使用 Configuration Manager 工具安装。 如果您不确定设备是否已安装受信任的证书要求你设备的管理员。  
   
 **-se**  
-跳过加载空文件。 这还将跳过正在解压缩空 gzip 文件。  
+跳过加载空文件。 这还将跳过正在解压缩空 gzip 文件。
+
+**-l**  
+可用 CU7.4 更新后，指定可以加载的最大行长度 （以字节为单位）。 有效值为 32768 和 33554432 之间的整数。 只能使用在需要时加载大型行 （大于 32 KB），因为这将会分配更多客户端和服务器上的内存。
   
 ## <a name="return-code-values"></a>返回代码值  
 0 （成功） 或其他整数值 （失败）  
@@ -600,7 +604,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-以下脚本代码片段使用 dwloader 将数据加载到 DimAccount 和 DimCurrency 表。 此脚本使用以太网地址。 如果它已使用 InfiniBand，服务器将是 *< appliance_name >*`-SQLCTL01`。  
+以下脚本代码片段使用 dwloader 将数据加载到 DimAccount 和 DimCurrency 表。 此脚本使用以太网地址。 如果它已使用 InfiniBand，服务器将是 *< appliance_name >* `-SQLCTL01`。  
   
 ```  
 set server=10.193.63.134  

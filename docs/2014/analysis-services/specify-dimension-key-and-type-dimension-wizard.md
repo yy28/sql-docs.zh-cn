@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionkeyandtype.f1
@@ -13,12 +12,12 @@ ms.assetid: d7d5db55-36c3-45f6-ade3-29aa516589c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94e34c092b833f6740562e56c3ebbe713ffc2572
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95ff2c99f01361f82b0ec29ee404958ca076d6ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746200"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068393"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>指定维度键和类型（维度向导）
   可以使用“指定维度键和类型”页定义维度的键属性，并指示维度是否为渐变维度 (SCD)。  

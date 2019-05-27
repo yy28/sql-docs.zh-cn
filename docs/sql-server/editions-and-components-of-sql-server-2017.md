@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69d8e217f4554a87348874621709f97309246446
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788094"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560113"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ ms.locfileid: "58788094"
 |AlwaysOn 可用性组<sup>3</sup>|是|否|否|否|否|
 |基本可用性组<sup>4</sup>|否|是|否|否|否|
 |联机页面和文件还原|是|否|否|否|否|
-|联机索引|是|否|否|否|否|
+|联机索引创建和重新生成|是|否|否|否|否|
 |可恢复的联机索引重新生成|是|否|否|否|否|
 |联机架构更改|是|否|否|否|否|
 |快速恢复|是|否|否|否|否|

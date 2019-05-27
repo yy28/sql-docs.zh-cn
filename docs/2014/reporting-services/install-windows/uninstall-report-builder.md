@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 10d6d79587051b78f212c5fbe4a9d866ee0c75e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143930"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108661"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>卸载报表生成器的独立版本（报表生成器）
   可以从控制面板或命令行卸载报表生成器的独立版本。 在未卸载 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 的情况下，无法卸载报表生成器的 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 版本。  

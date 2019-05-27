@@ -38,7 +38,7 @@ ms.locfileid: "63312487"
   
  然后，应用程序将光标置于要更新或删除的行上。 它可以执行此操作通过调用**SQLFetchScroll**检索行集包含所需的行并调用**SQLSetPos**行集游标定位在该行上。 然后，应用程序上的不同语句比正由结果集的语句执行定位的 update 或 delete 语句。 这些语句的语法是：  
   
- **更新***表名称*  
+ **更新** *表名称*  
   
  **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   

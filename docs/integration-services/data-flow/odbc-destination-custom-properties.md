@@ -11,14 +11,18 @@ ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bedbe74352ca317497d731acc0ff542eb0b8bd63
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c1775b42624d755da4642d0c17c277c3b254eb4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272897"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726663"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   下表介绍了 ODBC 目标的自定义属性。 所有属性都可以从 SSIS 属性表达式设置。  
   
 |属性名称|数据类型|描述|  

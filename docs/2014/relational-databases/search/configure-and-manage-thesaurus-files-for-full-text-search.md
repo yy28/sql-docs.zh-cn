@@ -11,15 +11,15 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792259"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011479"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，全文查询可以通过使用同义词库来搜索用户指定的字词的同义词。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*同义词库*为特定语言定义一组同义词。 系统管理员可以定义两种形式的同义词：扩展集和替换集。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。 仅对所有 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 查询以及指定 FORMSOF THESAURUS 子句的任意 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查询执行同义词库匹配操作。  
@@ -77,7 +77,7 @@ ms.locfileid: "52792259"
 ##  <a name="location"></a> 同义词库文件的位置  
  同义词库文件的默认位置为：  
   
- *< SQL_Server_data_files_path >* \MSSQL12。MSSQLSERVER\MSSQL\FTDATA\  
+ *<SQL_Server_data_files_path>* \MSSQL12.MSSQLSERVER\MSSQL\FTDATA\  
   
  该默认位置包含以下文件：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52792259"
   
      同义词库文件的默认文件名采用以下格式：  
   
-     'ts' +\<三个字母的语言缩写形式 > + '.xml'  
+     'ts' + \<three-letter language-abbreviation> + '.xml'  
   
      给定语言的同义词库文件名称是在注册表中的下列值中指定的：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<instance-name>\MSSearch\\<language-abbrev>。  
   

@@ -17,14 +17,18 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8de2ce3e407de132869138a54d5a17559b6308bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 578ff14516eb40aa32e401f06bad9c747e1f24bd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270695"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727126"
 ---
 # <a name="comparing-string-data"></a>比较字符串数据
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   字符串比较是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]执行的许多转换中的重要组成部分，字符串比较也用在变量表达式和属性表达式的求值中。 例如，排序转换比较数据集中的值，从而以升序或降序对数据进行排序。  
   
 ## <a name="configuring-transformations-for-string-comparisons"></a>为字符串比较配置转换  
@@ -64,7 +68,7 @@ ms.locfileid: "58270695"
  还可以为平面文件连接管理器和多平面文件连接管理器指定区域设置。  
   
 ## <a name="setting-comparison-options"></a>设置比较选项  
- 区域设置提供了比较字符串数据的基本规则。 例如，区域设置指定了字母表中每个字母的排序位置。 但是，当执行某些转换的比较时，这些规则可能还不够，不过， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持一组比区域设置比较规则更详尽的高级比较选项。 这些比较选项在列级设置。 例如，利用这些比较选项之一，您可以忽略非空格字符。 此选项的作用是忽略标注字符，如重音符号，对比较来说， "a" 和 "á" 相同。  
+ 区域设置提供了比较字符串数据的基本规则。 例如，区域设置指定了字母表中每个字母的排序位置。 但是，当执行某些转换的比较时，这些规则可能还不够，不过， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持一组比区域设置比较规则更详尽的高级比较选项。 这些比较选项在列级设置。 例如，利用这些比较选项之一，您可以忽略非空格字符。 此选项的作用是忽略重音符等音调符号，这让“a”和“Ã¡”在用于比较目的时是完全相同的。  
   
  下表介绍比较选项和排序样式。  
   
@@ -73,7 +77,7 @@ ms.locfileid: "58270695"
 |忽略大小写|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |忽略假名类型|指定比较是否区分日语的两种假名字符类型：平假名和片假名。 如果设置了此选项，字符串比较会忽略假名类型。|  
 |忽略字符宽度|指定比较是否区分字符的单字节形式和该字符的双字节形式。 如果设置了此选项，字符串比较将把同一字符的单字节形式和双字节形式视为相同。|  
-|忽略非空格字符|指定比较是否区分空格字符和标注字符。 如果设置了此选项，则比较会忽略标注字符。 例如，"å" 与 "a" 相同。|  
+|忽略非空格字符|指定比较是否区分空格字符和标注字符。 如果设置了此选项，则比较会忽略标注字符。 例如，“Ã¥”等于“a”。|  
 |忽略符号|指定比较是否区分字母字符和符号（如空格字符、标点、货币符号和数学符号）。 如果设置了此选项，字符串比较会忽略符号。 例如，" New York" 与 "New York" 相同，"*ABC" 与 "ABC"' 相同。|  
 |将标点作为符号排序|指定比较是否对标点符号排序，并将除了连字符和撇号外的所有标点符号排在字母数字字符之前。 例如，如果设置了此选项，".ABC" 将会排在 "ABC" 前面。|  
   

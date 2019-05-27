@@ -24,14 +24,18 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 045053757464667c4455a652e1eb2081ab63d7b8
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1ca89542cfdeebd9993b86a049c0190e12d16887
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657881"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727107"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本主题针对如何设计 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供建议，以避免出现常见性能问题。 本主题还提供有关可以用于对包的性能进行故障排除的功能和工具的信息。  
   
 ## <a name="configuring-the-data-flow"></a>配置数据流  
@@ -77,7 +81,7 @@ ms.locfileid: "58657881"
  不要将缓冲区大小增加到开始对磁盘进行分页的点。 与未经过优化的缓冲区大小相比，对磁盘进行分页对性能的阻碍作用更大。 若要确定是否在进行分页，可监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 的性能管理单元中的“Buffers spooled”性能计数器。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>将包配置为支持并行执行  
- 并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 为了支持在包中并行执行不同的任务，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用两种属性：MaxConcurrentExecutables 和 EngineThreads。  
+ 并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 为了支持并行执行包中的不同任务，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用两种属性：MaxConcurrentExecutables 和 EngineThreads。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 属性  
  **MaxConcurrentExecutables** 属性是包本身的一个属性。 此属性定义可同时运行的任务的数量。 默认值为 -1，表示物理或逻辑处理器的个数加 2。  

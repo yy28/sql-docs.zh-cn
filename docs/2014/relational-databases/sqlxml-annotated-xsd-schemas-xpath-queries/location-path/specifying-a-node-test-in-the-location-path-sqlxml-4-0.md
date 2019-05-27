@@ -12,15 +12,15 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7450810f45d81dd1530699677a80a052840ed867
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127597"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012667"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路径中指定节点测试 (SQLXML 4.0)
   节点测试指定根据位置步骤选择的节点类型。 每个轴（`child`、`parent`、`attribute` 或 `self`）都具有主要节点类型。 有关`attribute`轴，主要节点类型是 **\<属性 >**。 有关`parent`， `child`，并`self`轴，主要节点类型是 **\<元素 >**。  

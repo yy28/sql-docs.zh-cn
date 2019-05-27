@@ -14,14 +14,18 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: c2073da82b19cc9e8d9d1fdbc87beb9b2ef89595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96be54415e3a2892da2ec892a0e90c02c5365e90
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710615"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727926"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上传任务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Azure SQL DW 上传任务启用 SSIS 包，将表格数据从文件系统或 Azure Blob 存储复制到 Azure SQL 数据仓库 (DW)。
 该任务利用 PolyBase 来改进性能，如 [Azure SQL 数据仓库加载模式和策略](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)一文中所述。
@@ -36,8 +40,8 @@ Azure SQL DW 上传任务启用 SSIS 包，将表格数据从文件系统或 Azu
 
 SourceType 指定源数据存储的类型。 选择下列类型之一：
 
-* FileSystem：源数据位于本地文件系统中。
-* BlobStorage：源数据位于 Azure Blob 存储中。
+* **FileSystem：** 源数据驻留在本地文件系统中。
+* **BlobStorage：** 源数据驻留在 Azure Blob 存储中。
 
 以下是每个源类型的属性。
 

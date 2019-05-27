@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
@@ -13,12 +12,12 @@ ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f18e9c5817de5e98ae21726b235d60d8d31e7d66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747120"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069253"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>选择表和视图（数据源视图向导）(Analysis Services)
   可以使用 **“选择表和视图”** 页，从要包含在数据源视图中的数据源选择表或视图。  

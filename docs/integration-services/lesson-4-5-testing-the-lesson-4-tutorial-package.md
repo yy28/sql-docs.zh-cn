@@ -11,14 +11,18 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 041cf825d92c53afcf138e060cb9cbd335c9f6a1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280951"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721507"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>第 4-5 课：测试第 4 课包
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在运行时，损坏的文件“Currency_BAD.txt”无法在 Currency Key 查找转换中生成匹配项。 由于将 Currency Key 查找的错误输出配置为将失败的行重定向到新的失败的行目标，因此该组件不会失败，并且包会成功地运行。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将所有失败的行写入“ErrorOutput.txt”。  
   

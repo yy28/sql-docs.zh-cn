@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10027"
@@ -13,12 +12,12 @@ ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 788e749d7fbfe62e61bedb57b53c994351427be3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 007740fbbf7a01139a7b3c1a679e1737d2f29a7e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266290"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109577"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>“选择多维数据集”对话框（报表生成器）
   使用 **“选择多维数据集”** 对话框可以选择其他多维数据集作为报表的数据源。 选择其他多维数据集后，查询可能不再有效。  

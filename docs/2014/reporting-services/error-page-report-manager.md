@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc50a5b0516bcbf8221ce3ee130090f66a929c3e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164678"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109223"
 ---
 # <a name="error-page-report-manager"></a>“错误”页（报表管理器）
   使用“错误”页可以查看关于错误情况的详细信息。 在此页上会显示基于服务器的或基于会话的错误。 与特定页面控件有关的验证错误将排成一行显示在该控件旁边。  

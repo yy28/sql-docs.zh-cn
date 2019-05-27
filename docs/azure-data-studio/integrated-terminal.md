@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cfb635287a0baa2d3a9e8f59d9590c278cbf28b2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239350"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010953"
 ---
 # <a name="integrated-terminal"></a>集成的终端
 
@@ -94,17 +94,17 @@ ms.locfileid: "63239350"
 
 以下是在集成终端中快速导航的键盘快捷方式：
 
-Key|Command
----|---
-**Ctrl +'**|显示集成的终端
-**Ctrl + Shift +'**|创建新的终端
-**Ctrl+Up**|向上滚动
-**Ctrl+Down**|向下滚动
-**Ctrl+PageUp**|向上滚动一页
-**Ctrl+PageDown**|向下滚动一页
-**Ctrl+Home**|滚动到顶部
-**Ctrl+End**|滚动到底部
-**Ctrl+K**|清除终端
+|Key|Command|  
+|---|---|  
+|**Ctrl+\`**|显示集成的终端|  
+|**Ctrl+Shift+\`**|创建新的终端|  
+|**Ctrl+Up**|向上滚动|  
+|**Ctrl+Down**|向下滚动|  
+|**Ctrl+PageUp**|向上滚动一页|  
+|**Ctrl+PageDown**|向下滚动一页|  
+|**Ctrl+Home**|滚动到顶部|  
+|**Ctrl+End**|滚动到底部|  
+|**Ctrl+K**|清除终端|  
 
 其他终端命令可用，并且可以绑定到首选的键盘快捷方式。
 

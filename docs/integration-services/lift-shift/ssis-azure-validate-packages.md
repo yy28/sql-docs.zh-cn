@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 434fb03bdb2d93fd5695576ad864df2259a5c972
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aae0735f4dec61ebafa991afb579c32ee560260
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767745"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720277"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>验证部署到 Azure 的 SQL Server Integration Services (SSIS) 包
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 将 SQL Server Integration Services (SSIS) 项目部署到 Azure 服务器上的 SSIS 目录 (SSISDB) 时，包部署向导将在“评审”页面后添加一个额外的验证步骤。 检查项目中的包是否存在可能阻止包在 Azure SSIS Integration Runtime 中按预期运行的已知问题。 然后向导在“验证”页面上显示所有适用的警告。
 
@@ -40,23 +44,23 @@ ms.locfileid: "47767745"
 
 | 连接管理器 | Windows 身份验证 | 文件路径 | UNC 路径 | 主机名 | 提供程序或驱动程序 |
 |--------------------|----------|-----------|-----|-----------|-------------------|
-| Ado                | ✓        |           |     | ✓         | ✓                 |
-| AdoNet             | ✓        |           |     | ✓         | ✓                 |
-| Cache              |          | ✓         | ✓   |           |                   |
-| “导出”              |          | ✓         | ✓   |           |                   |
-| 文件               |          | ✓         | ✓   |           |                   |
-| FlatFile           |          | ✓         | ✓   |           |                   |
-| Ftp                |          |           |     | ✓         |                   |
-| MsOLAP100          |          |           |     | ✓         | ✓                 |
-| MultiFile          |          | ✓         | ✓   |           |                   |
-| MultiFlatFile      |          | ✓         | ✓   |           |                   |
-| OData              | ✓        |           |     | ✓         |                   |
-| Odbc               | ✓        |           |     | ✓         | ✓                 |
-| OleDb              | ✓        |           |     | ✓         | ✓                 |
-| SmoServer          | ✓        |           |     | ✓         |                   |
-| Smtp               | ✓        |           |     | ✓         |                   |
-| SqlMobile          |          | ✓         | ✓   |           |                   |
-| Wmi                | ✓        |           |     |           |                   |
+| Ado                | âœ"        |           |     | âœ"         | âœ"                 |
+| AdoNet             | âœ"        |           |     | âœ"         | âœ"                 |
+| Cache              |          | âœ"         | âœ"   |           |                   |
+| “导出”              |          | âœ"         | âœ"   |           |                   |
+| 文件               |          | âœ"         | âœ"   |           |                   |
+| FlatFile           |          | âœ"         | âœ"   |           |                   |
+| Ftp                |          |           |     | âœ"         |                   |
+| MsOLAP100          |          |           |     | âœ"         | âœ"                 |
+| MultiFile          |          | âœ"         | âœ"   |           |                   |
+| MultiFlatFile      |          | âœ"         | âœ"   |           |                   |
+| OData              | âœ"        |           |     | âœ"         |                   |
+| Odbc               | âœ"        |           |     | âœ"         | âœ"                 |
+| OleDb              | âœ"        |           |     | âœ"         | âœ"                 |
+| SmoServer          | âœ"        |           |     | âœ"         |                   |
+| Smtp               | âœ"        |           |     | âœ"         |                   |
+| SqlMobile          |          | âœ"         | âœ"   |           |                   |
+| Wmi                | âœ"        |           |     |           |                   |
 |||||||
 
 ## <a name="validate-sources-and-destinations"></a>验证源和目标

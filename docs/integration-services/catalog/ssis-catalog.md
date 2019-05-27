@@ -15,14 +15,18 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c338ab2dbbaa5437ef4650f79598b68069317f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283201"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729166"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SSISDB 目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
  
 > [!NOTE]
@@ -172,7 +176,7 @@ ms.locfileid: "58283201"
 |属性名称（**“目录属性”** 对话框）|属性名称（数据库视图）|  
 |---------------------------------------------------------|-------------------------------------|  
 |加密算法名称|ENCRYPTION_ALGORITHM|  
-|定期清理日志|OPERATION_CLEANUP_ENABLED|  
+|定期清理日志|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |保持期(天)|RETENTION_WINDOW|  
 |定期删除旧版本|VERSION_CLEANUP_ENABLED|  
 |每个项目的最大版本数|MAX_PROJECT_VERSIONS|  
@@ -412,7 +416,7 @@ ms.locfileid: "58283201"
   
     ```  
   
-3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅[如何备份数据库 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  在 **中使用** “备份数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框备份 SSISDB 数据库。 有关详细信息，请参阅[操作说明：备份数据库 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
   
 4.  通过执行以下操作，生成 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 脚本。 有关详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)。  
   
@@ -587,7 +591,7 @@ ms.locfileid: "58283201"
   
 ###  <a name="Firsttime"></a> 为 AlwaysOn 配置 SSIS 支持  
   
--   [第 1 步：创建 Integration Services 目录](#Step1)  
+-   [步骤 1：创建 Integration Services 目录](#Step1)  
   
 -   [步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组](#Step2)  
   

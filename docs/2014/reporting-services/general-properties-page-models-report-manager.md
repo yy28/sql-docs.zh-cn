@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260811"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109111"
 ---
 # <a name="general-properties-page-models-report-manager"></a>模型的“常规”属性页（报表管理器）
   使用报表模型的“常规”属性页可以重命名、删除、移动或替换模型定义 (.smdl) 文件。 页面顶部显示了有关创建或修改模型的用户以及发生更改的时间等详细信息。  

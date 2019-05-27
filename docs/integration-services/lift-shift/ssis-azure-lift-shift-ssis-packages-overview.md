@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c9c881cbbefc5fa8fb9f0810a5c8ea26f375a56
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829662"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721470"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>将 SQL Server Integration Services 工作负荷直接迁移到云
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 现在，可将 SQL Server Integration Services (SSIS) 项目、包和工作负荷移到 Azure 云。 在 Azure SQL 数据库的 SSIS 目录 (SSISDB) 或 SQL 数据库托管实例中使用 SQL Server Management Studio (SSMS) 等熟悉的工具来部署、运行和管理 SSIS 项目和包。
 
 ## <a name="benefits"></a>优势
@@ -42,9 +46,9 @@ ms.locfileid: "47829662"
 
 **预配**。 必须先预配 SSIS 目录 (SSISDB) 和 Azure SSIS Integration Runtime，然后才能在 Azure 中部署和运行 SSIS 包。
 
--   若要在 Azure 门户中预配 Azure 上的 SSIS，请执行文章：[在 Azure 数据工厂中预配 Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 中的预配步骤。 
+-   若要在 Azure 门户中预配 Azure 上的 SSIS，请按照本文中的预配步骤操作：[在 Azure 数据工厂中预配 Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。 
 
--   若要使用 PowerShell 预配 Azure 上的 SSIS，请执行此文章中的预配步骤：[在 Azure 数据工厂中使用 PowerShell 预配 Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell)。
+-   若要使用 PowerShell 预配 Azure 上的 SSIS，请按照本文中的预配步骤操作：[使用 PowerShell 在 Azure 数据工厂中预配 Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell)。
 
 仅需设置 Azure-SSIS IR 一次。 此后，可使用 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 等熟悉工具来部署、配置、运行、监视、计划和管理包。
 
@@ -88,7 +92,7 @@ ms.locfileid: "47829662"
 
 ## <a name="deploy-and-run-packages"></a>部署和运行包
 
-若要开始使用，请请阅[在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包](ssis-azure-deploy-run-monitor-tutorial.md)。
+首先，请参阅[教程：在 Azure 中部署和运行 SQL Server Integration Services (SSIS) 包](ssis-azure-deploy-run-monitor-tutorial.md)。
 
 ### <a name="prerequisites"></a>必备条件
 

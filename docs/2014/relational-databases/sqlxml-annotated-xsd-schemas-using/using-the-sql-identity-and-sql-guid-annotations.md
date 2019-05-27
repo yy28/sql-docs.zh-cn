@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], IDENTITY-type columns
 - updategrams [SQLXML], GUID values
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb953042707054a7dbfdee697b986e7e65f7059b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6135f1b46e9b2312f01b9ff7a7ebdd08d2d34a8
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62718004"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013641"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 批注
   您可以指定`sql:identity`并`sql:guid`映射到数据库列中的任何节点上的 XSD 架构中的批注[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 updategram 格式支持 `updg:at-identity` 和 `updg:guid` 属性，而 DiffGram 格式不支持这些属性。 `updg:at-identity` 属性定义在更新 IDENTITY 类型列时的行为。 `updg:guid` 属性使您可以获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 GUID 值，并将其用于 updategram 中。 有关详细信息和工作示例，请参阅[使用 XML Updategram 插入数据&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。  

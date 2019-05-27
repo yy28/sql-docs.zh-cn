@@ -40,22 +40,22 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 70a528bcf2e6f714b4ded8128d3a0757f3016607
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530562"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820800"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   你可以使用“生成和发布脚本向导”创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
 
-有关使用“生成和发布脚本向导”更详细的教程，请参阅[教程：生成脚本向导](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)。
+有关介绍如何使用“生成和发布脚本”向导的更详细教程，请参阅[教程：“生成脚本”向导](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)。
 
 
   
@@ -67,7 +67,7 @@ ms.locfileid: "52530562"
   
  若要将一个数据库发布到 Web 宿主服务，请在该向导的 **“设置脚本编写选项”** 页上选择 **“发布到 Web 服务”** 。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  发布数据库的最小权限是原始数据库上 db_ddladmin 固定数据库角色中的成员身份。 将数据库脚本发布到位于宿主提供程序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的最小权限是目标数据库上 db_ddladmin 固定数据库角色中的成员身份。  
   
  用户还必须提供用户名和密码来访问他们的宿主提供程序帐户，才能使用该向导进行发布。 必须先在宿主提供程序中创建目标数据库，然后才能发布源数据库。 发布将覆盖该现有数据库中的对象。  
@@ -193,7 +193,7 @@ ms.locfileid: "52530562"
   
 -   “编写 USE DATABASE 脚本” - 在脚本中添加 **USE DATABASE** 语句。 若要确保在正确的数据库中创建数据库对象，请包含 **USE DATABASE** 语句。 如果预计脚本将在其他数据库中使用，请选择 **False** 以省略 **USE DATABASE** 语句。 默认值为 **True**。 有关详细信息，请参阅 [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)。  
   
--   “要编写脚本的数据的类型” - 选择应对其编写脚本的目标：“仅限数据”、“仅限架构”或同时针对这两者。 默认值为 **“仅限架构”**。  
+-   **要编写脚本的数据的类型** - 选择应编写脚本的内容：“仅限数据”和/或“仅限架构”。 默认值为 **“仅限架构”**。  
   
  **表/视图选项** - 下列选项仅应用于表或视图的脚本。  
   
@@ -263,7 +263,7 @@ ms.locfileid: "52530562"
   
 11. **脚本绑定** - 在发送到提供程序以供发布的脚本中包括默认值和规则对象。 默认值为 **True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact SQL)](../../t-sql/statements/create-default-transact-sql.md) 和 [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)。  
   
-12. “要发布的数据的类型” - 选择应对其编写脚本的目标：“仅限数据”、“仅限架构”或同时针对这两者。 默认值为 **“架构和数据”**。  
+12. **要发布的数据的类型** - 选择应编写脚本的内容：“仅限数据”和/或“仅限架构”。 默认值为 **“架构和数据”**。  
   
  **发布选项** - 指定是否在发布到 Web 主机提供商时使用事务。  
   
@@ -348,8 +348,8 @@ ms.locfileid: "52530562"
 
 1. 单击“工具”，然后单击“选项”。  
 2. 在“常规脚本选项”中设置：  
-    1. 数据库引擎类型脚本： **Microsoft Azure SQL 数据库**。  
-    2. 数据库引擎版本脚本：**Microsoft Azure SQL 数据仓库版本**。  
+    1. 数据库引擎类型脚本：Microsoft Azure SQL 数据库。  
+    2. 数据库引擎版本的脚本：Microsoft Azure SQL 数据仓库版。  
 3. 单击“确定” 。
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>当 SQL 数据仓库不是默认脚本选项时如何为其生成脚本  
@@ -360,8 +360,8 @@ ms.locfileid: "52530562"
 2. 选择“生成脚本...”。  
 3. 选择你要为其编写脚本的对象。  
 4. 在“脚本选项”中，单击“高级”。 在“常规”下设置：  
-    1. 数据库引擎类型脚本：**Microsoft Azure SQL 数据库**。  
-    2. 数据库引擎版本脚本： **Microsoft Azure SQL 数据仓库版本**。  
+    1. 数据库引擎类型脚本：Microsoft Azure SQL 数据库。  
+    2. 数据库引擎版本的脚本：Microsoft Azure SQL 数据仓库版。  
 5. 单击“保存或发布脚本”，然后单击“完成”。  
 
 步骤 4 中设置的选项将不会被记住。 如果想要记住这些选项，请按照 **如何将默认脚本选项设置为 SQL 数据仓库**中的说明进行操作。  

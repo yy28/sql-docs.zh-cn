@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a3b0bbb6f3220c554675d7fab028db46d2588c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278757"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108404"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 课：添加分组和总计 (Reporting Services)
   向报表中添加分组和总计以便组织和汇总数据。  
@@ -41,13 +40,13 @@ ms.locfileid: "63278757"
   
 2.  如果没有看到**行组**窗格中，右键单击设计图面，然后单击**视图**，然后单击**分组**。  
   
-3.  从**报表数据**窗格中，拖动`Date`字段**行组**窗格。 并将其放置到名为 **(Details)** 的行上面。  
+3.  从“报表数据”窗格将 `Date` 字段拖到“行组”窗格。 并将其放置到名为 **(Details)** 的行上面。  
   
      请注意，行控点中现在有一个方括号，用于显示组。 表现在在垂直点线的两侧各有一个 Date 列。  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  从**报表数据**窗格中，拖动`Order`字段**行组**窗格。 并将其放置到 Date 下面和 **(Details)** 上面。  
+4.  从“报表数据”窗格将 `Order` 字段拖到“行组”窗格。 并将其放置到 Date 下面和 **(Details)** 上面。  
   
      请注意，行控点中现在有两个方括号，用于显示两个组。 现在，此表包含两个`Order`列过。  
   

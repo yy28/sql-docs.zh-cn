@@ -27,7 +27,7 @@ ms.locfileid: "63248913"
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>用于 COM 的 ADO for Visual C++ 语法索引‎
 此索引是对基于 Microsoft Visual ADO 语言参考的交叉引用C++。  
   
- 如果您使用 **#import**指令在应用程序中，标头将生成文件，使您可以使用 Microsoft Visual Basic 类似的语法。 窗体的属性名称**get_**_PropertyName_并**put_**_PropertyName_可以视为如同它们声明为*PropertyName*。 然后可以将属性视为而不是函数的数据成员。  
+ 如果您使用 **#import**指令在应用程序中，标头将生成文件，使您可以使用 Microsoft Visual Basic 类似的语法。 窗体的属性名称**get_** _PropertyName_ 并 **put_** _PropertyName_ 可以视为如同它们声明为 *PropertyName*。 然后可以将属性视为而不是函数的数据成员。  
   
  所有方法、 属性和事件都返回的函数**HRESULT**，其中进行测试以确定是否函数成功执行。  
   

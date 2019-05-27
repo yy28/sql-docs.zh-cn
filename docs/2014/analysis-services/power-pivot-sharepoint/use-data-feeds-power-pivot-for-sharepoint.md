@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748994"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070909"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>使用数据馈送 (PowerPivot for SharePoint)
   数据馈送是从联机数据源生成并流向目标文档或应用程序的一个或多个数据流。 如果使用 PowerPivot for Excel，数据馈送可帮助您将任意数据源中的现有公司或业务数据提取到 Excel 2010 工作簿中的 PowerPivot 窗口中。 将数据馈送导入工作簿后，以后可以在 SharePoint 服务器上计划的任何数据刷新操作中引用该数据馈送。  

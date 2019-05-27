@@ -30,14 +30,18 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277505"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719591"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含可用来在包、容器和任务中执行日志记录的日志提供程序。 通过日志记录可以捕获有关包的运行时信息，从而帮助您在每次运行包时对其进行审核和故障排除。 例如，日志可以捕获运行包的操作员的姓名以及包开始和完成的时间。  
   
  您可以配置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上执行包的过程中出现的日志记录范围。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](#server_logging)。  
@@ -102,7 +106,7 @@ ms.locfileid: "58277505"
 |运算符|启动包的用户的标识。|  
 |SourceName|发生日志事件的容器或任务的名称。|  
 |SourceID|发生日志事件的包、 For 循环容器、Foreach 循环容器、序列容器或任务的唯一标识符。|  
-|ExecutionID|包执行实例的 GUID。<br /><br /> 注意：运行单个包可能会创建具有不同 ExecutionID 元素值的日志项。 例如，当在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行包时，验证阶段可能会创建 ExecutionID 元素与 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]对应的日志项。 但是，执行阶段可能会创建 ExecutionID 元素与 dtshost.exe 对应的日志项。 再比如，当运行包含“执行包”任务的包时，这些任务中的每个任务都会运行子包。 这些子包创建的日志项所具有的 ExecutionID 元素可能不同于父包创建的日志项。|  
+|ExecutionID|包执行实例的 GUID。<br /><br /> 注意：运行一个包可能会创建有不同 ExecutionID 元素值的日志项目。 例如，当在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行包时，验证阶段可能会创建 ExecutionID 元素与 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]对应的日志项。 但是，执行阶段可能会创建 ExecutionID 元素与 dtshost.exe 对应的日志项。 再比如，当运行包含“执行包”任务的包时，这些任务中的每个任务都会运行子包。 这些子包创建的日志项所具有的 ExecutionID 元素可能不同于父包创建的日志项。|  
 |MessageText|与日志项关联的消息。|  
 |DataBytes|日志项特定的字节数组。 此字段的意义因日志项的不同而不同。|  
   
@@ -158,7 +162,7 @@ ms.locfileid: "58277505"
 3.  选择要在日志中捕获的事件以及每个事件的日志架构信息。 有关详细信息，请参阅 [使用保存的配置文件配置日志记录](#saved_config)。  
   
 ### <a name="configuration-of-log-provider"></a>日志提供程序的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  作为在包中实现日志记录的一个步骤来创建和配置日志提供程序。  
   
@@ -528,7 +532,7 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 |日志项|描述|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|指示任务开始运行 DTS 2000 包。|  
-|**ExecuteDTS80PackageTaskEnd**|指示任务已完成。<br /><br /> 注意：任务结束之后，DTS 2000 包可能继续运行。|  
+|**ExecuteDTS80PackageTaskEnd**|指示任务已完成。<br /><br /> 注意：DTS 2000 包可能会在任务结束后继续运行。|  
 |**ExecuteDTS80PackageTaskTaskInfo**|提供有关任务的说明性信息。|  
 |**ExecuteDTS80PackageTaskTaskResult**|报告该任务所运行的 DTS 2000 包的执行结果。|  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
@@ -14,12 +13,12 @@ ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5db9c929c736029c3731443af56d15f3615e45f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 32498fbed24ddab591745ae1d01c5f123e976114
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260870"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109013"
 ---
 # <a name="image-device-information-settings"></a>图像设备信息设置
   下表列出了用于以 IMAGE 格式呈现的设备信息设置。  
@@ -39,7 +38,7 @@ ms.locfileid: "63260870"
 |**PageHeight**|要为报表设置的页高，以英寸为单位。 您必须包含一个整数或小数值，后跟“in”（例如，`11in`）。 此值将覆盖报表的原始设置。|  
 |**PageWidth**|要为报表设置的页宽，以英寸为单位。 您必须包含一个整数或小数值，后跟“in”（例如，`8.5in`）。 此值将覆盖报表的原始设置。|  
 |**PrintDpiX**|输出图像的水平分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
-|**PrintDpiY**|输出图像的垂直分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
+|**PrintDpiY**|输出图像的垂直分辨率。 默认值为 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
 |`StartPage`|要呈现的报表的第一页。 值为 `0` 指示将呈现所有页。 默认值是 `1`。|  
   
 ## <a name="see-also"></a>请参阅  

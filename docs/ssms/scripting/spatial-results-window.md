@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 422114f2a753327f34b105c4c6893b7c3f8d3c2b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3dc51511120b05c8f4a720a911da6c2b6480fb9d
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642711"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821945"
 ---
 # <a name="spatial-results-window"></a>“空间结果”窗口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51642711"
  如果某个查询中仅返回了点实例，则此选项不可用。  
   
  **选择投影**  
- 在下面的一个投影中显示地域数据：Equirectangular、Mercator、Robinson 或 Bonne。  
+ 显示以下四个投影之一中的地理数据：Equirectangular、Mercator、Robinson 或 Bonne。  
   
  此选项不适用于几何图形数据。  
   
