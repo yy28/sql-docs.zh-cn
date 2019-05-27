@@ -23,7 +23,7 @@ ms.locfileid: "63252966"
 
 ## <a name="prerequisites"></a>先决条件
 
-若要完成本快速入门教程，需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，适用于的 PostgreSQL 扩展 [！包括[名称 sos](../includes/name-sos-short.md)，并且有权 PostgreSQL 服务器。
+若要完成本快速入门教程，需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，适用于的 PostgreSQL 扩展 [!INCLUDE[名称 sos](../includes/name-sos-short.md)，并且有权 PostgreSQL 服务器。
 
 - [安装[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
 - [安装适用于 Azure Data Studio PostgreSQL 扩展](postgres-extension.md)。
@@ -31,7 +31,7 @@ ms.locfileid: "63252966"
 
 ## <a name="connect-to-postgresql"></a>连接到 PostgreSQL
 
-1. 启动 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
+1. 启动 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 。
 
 2. 首次启动[!INCLUDE[name-sos](../includes/name-sos-short.md)]**连接**对话框随即打开。 如果**连接**对话框未打开，请单击**服务器**页面中的**新的连接**图标：
 
@@ -54,7 +54,7 @@ ms.locfileid: "63252966"
    | **服务器组** | \<默认\> | 此选项可让你可以将此连接分配到特定服务器组中创建。 | 
    | **名称 （可选）** | *将保留为空* | 此选项可以指定你的服务器的友好名称。 | 
 
-5. 选择“连接”。 
+5. 选择“连接”  。 
 
 在中打开你的服务器成功连接后，**服务器**侧栏。
 
