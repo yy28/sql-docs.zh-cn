@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, managing services
@@ -13,12 +12,12 @@ ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 72719595ac4a5de901c6a470f4639631cb08b10c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774334"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064643"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>管理服务操作指南主题（SQL Server 配置管理器）
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理都是作为服务运行在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统上。 有关服务的详细信息，请参阅 [Manage the Database Engine Services](configure-windows/manage-the-database-engine-services.md)。  

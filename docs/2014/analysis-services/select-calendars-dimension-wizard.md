@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
@@ -13,12 +12,12 @@ ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67e4d316b122f44e207037603354f696446aed3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747659"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069690"
 ---
 # <a name="select-calendars-dimension-wizard"></a>选择日历（维度向导）
   可以使用“选择日历”页，为时间维度创建表示会计、报表、生产或国际标准化组织 (ISO) 8601 日历的其他层次结构。  

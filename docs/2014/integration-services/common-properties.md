@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,12 +19,12 @@ ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab92e158fe5da6312959cc0797ff48e1c44e0080
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62835193"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060963"
 ---
 # <a name="common-properties"></a>通用属性
    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
@@ -159,7 +158,7 @@ ms.locfileid: "62835193"
 |ID|Integer|用于唯一标识输出的值。|  
 |IdentificationString|String|用于标识输出的字符串。|  
 |IsErrorOut|Boolean|指示输出是否为错误输出。|  
-|IsSorted|Boolean|指示输出是否已排序。 默认值为 `False`。<br /><br /> **\*\* 重要\* \*** 的值设置`IsSorted`属性设置为`True`不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
+|IsSorted|Boolean|指示输出是否已排序。 默认值是 `False`。<br /><br /> **\*\* 重要\* \*** 的值设置`IsSorted`属性设置为`True`不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |“属性”|String|输出的名称。|  
 |SynchronousInputID|Integer|与输出同步的输入的 ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
@@ -174,7 +173,7 @@ ms.locfileid: "62835193"
 |ComparisonFlags|Integer|一组标志，用于指定数据类型为 character 的列的比较方式。 有关详细信息，请参阅 [Comparing String Data](data-flow/comparing-string-data.md)。|  
 |Description|String|对输出列的说明。|  
 |ErrorOrTruncationOperation|String|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 具体的值为 `Fail component`、`Ignore failure` 和 `Redirect row`。 默认值为 `Fail component`。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 具体的值为 `Fail component`、`Ignore failure` 和 `Redirect row`。 默认值是 `Fail component`。|  
 |ExternalMetadataColumnID|Integer|分配给输入列的外部元数据列的 ID。|  
 |ID|Integer|用于唯一标识输出列的值。|  
 |IdentificationString|String|用于标识输出列的字符串。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - analyzing system [Upgrade Advisor], review settings
@@ -17,12 +16,12 @@ ms.assetid: 07a4d94b-df0e-4662-9604-221664762ee8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fff4f3a299d813ecc7daf39bf392379b07f1ac38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2384dd7c53c95d460cb1b749472abb2c9010f2c1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141773"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096072"
 ---
 # <a name="confirm-upgrade-advisor-settings"></a>确认升级顾问设置
   在此页上，可以查看所选的升级顾问分析向导选项和您输入的参数。 查看选项和参数后，单击**运行**可启动分析。  
@@ -31,7 +30,7 @@ ms.locfileid: "48141773"
  **升级顾问设置**  
  可查看您为每个组件输入的所有信息和参数以及将应用于整个升级顾问的参数。 报告选项（包括输出目录）将予以列出。  
   
- **将报表发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。这些报表可能包含个人信息。**  
+ **将报告发送给[!INCLUDE[msCoName](../../includes/msconame-md.md)]。这些报表可能包含个人信息。**  
  选择此选项将提交到您的分析[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]团队。 这些信息用于改进将来的版本。  
   
  **查看隐私声明。**  

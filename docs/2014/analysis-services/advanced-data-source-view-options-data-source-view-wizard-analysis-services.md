@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.advancedoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635593"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062847"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>“高级数据源视图选项”对话框（数据源视图向导）(Analysis Services)
   可以使用 **“高级数据源视图选项”** 对话框，进一步控制数据源视图如何从数据源中请求架构和关系以生成视图。  

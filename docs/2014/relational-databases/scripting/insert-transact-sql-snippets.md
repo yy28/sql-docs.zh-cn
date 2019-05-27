@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], snippets
@@ -15,12 +14,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b25f7e9e9c4ade922bbbbf65353eb4444149b429
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c47bc6dc82843159f116b62ff6bc68acf981f4f2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075013"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063961"
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 代码段
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段是一个模板，您可将其作为在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中编写新 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句的起点。  
@@ -45,6 +44,6 @@ ms.locfileid: "48075013"
 3.  双击代码段，或从代码段选择器中选择代码段，然后按 Tab 或 Enter。  
   
 ## <a name="see-also"></a>请参阅  
- [插入外侧 Transact-SQL 代码片段](insert-surround-with-transact-sql-snippets.md)  
+ [插入外侧 Transact-SQL 代码段](insert-surround-with-transact-sql-snippets.md)  
   
   

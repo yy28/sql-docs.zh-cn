@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99321c27fa28d16260ee3b27972d83a8b61cae59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 47f74d4510b46b984eb58706ff4ac159cb8b1352
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898905"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059371"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>在 SSIS 服务器上启用包执行的日志记录
   本过程介绍在执行已经部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的包时，如何设置或更改该包的日志记录级别。 在执行包时设置的日志记录级别优先于使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 配置的包日志记录。 有关详细信息，请参阅 [在 SQL Server Data Tools 中启用包日志记录](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) 。  

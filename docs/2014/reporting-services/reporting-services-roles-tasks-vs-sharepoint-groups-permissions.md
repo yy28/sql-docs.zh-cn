@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -19,12 +18,12 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d845122010c549114b4487d2fca72a28bc226b6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1c56b15a5d6887c3e00047c9a0c3a66f907ef468
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63283494"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102810"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services 中的角色和任务与 SharePoint 组和权限的比较
   本主题将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式下基于角色和任务的授权功能与 SharePoint 产品中的安全功能进行比较。 本主题将比较角色、任务、SharePoint 组、权限级别和权限的术语及特征。  
@@ -59,7 +58,7 @@ ms.locfileid: "63283494"
 ##  <a name="bkmk_compare_roles_groups"></a> 比较本机模式角色与 SharePoint 组  
  下表将在本机模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的预定义角色定义与标准 SharePoint 组进行比较。 如果 SharePoint 组与您需要的特定角色不匹配，可以在 SharePoint 中创建自定义组并分配权限级别。  
   
- **请注意**:可用的默认 SharePoint 组取决于用于创建 SharePoint 站点的站点模板。  
+ **注意**：可用的默认 SharePoint 组取决于用于创建 SharePoint 站点的站点模板。  
   
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 角色|SharePoint 组|  
 |--------------------------------------|-----------------------|  

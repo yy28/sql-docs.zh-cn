@@ -37,16 +37,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e1e25d8d5709f409f504d85f7917b85c1e6f3886
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: b673b21eca837e9ccaacd3a47c819287a854e6f8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828167"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947051"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 
@@ -435,7 +435,7 @@ RESTORE 语句也可用于对全文数据执行替代位置还原、差异还原
 > [!NOTE]
 > 针对使用 Microsoft Azure Blob 存储进行 SQL Server 备份和还原的信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。
 
@@ -810,7 +810,7 @@ RESTORE 操作是异步的，即使客户端连接中断，还原也会继续运
 
 若要还原已加密的数据库，您必须有权访问用于对数据库进行加密的证书或非对称密钥。 如果没有证书或非对称密钥，数据库将无法还原。 因此，只要需要该备份，就必须保留用于对数据库加密密钥进行加密的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 用户必须拥有 CREATE DATABASE 权限，才能运行 RESTORE。
 
@@ -935,7 +935,7 @@ RESTORE HEADERONLY 指定仅返回一个用户数据库备份的标头信息。 
 
 RESTORE HEADERONLY 结果会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 结果之后模式化。 结果具有 50 多列，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 并不使用所有这些列。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 结果中的列的说明，请参阅 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要 **CREATE ANY DATABASE** 权限。
 

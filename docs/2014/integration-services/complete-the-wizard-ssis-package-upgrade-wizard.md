@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.completewizard.f1
@@ -13,12 +12,12 @@ ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d05632fd4546b18e0268307fc6a85a8719eadd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 57fbbf1702109546037fe91872a7a983bc5713bf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834596"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060929"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>完成该向导（SSIS 包升级向导）
   可以使用 **“完成该向导”** 页查看并确认所选的包升级选项。 这是向导的最后一页，您可以返回并更改向导此会话的选项。  

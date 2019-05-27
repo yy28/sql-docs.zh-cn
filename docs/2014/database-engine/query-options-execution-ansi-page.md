@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
@@ -13,12 +12,12 @@ ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bfc25b918c9cca50af6ac7c57bfc0ce1c1b4c3c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773935"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089081"
 ---
 # <a name="query-options-execution-ansi-page"></a>“查询选项”中的“执行”（ANSI 页）
   使用此页可指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 ISO (ANSI) 标准中指定的全部或部分设置运行查询。  

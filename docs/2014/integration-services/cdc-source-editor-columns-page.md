@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.columns.f1
@@ -13,12 +12,12 @@ ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4f1c9a636023e4dc9c5c9ffb69240921e780ed38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836161"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061030"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 源编辑器（“列”页）
   可以使用“CDC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  

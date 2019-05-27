@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - suspended database maintenance plans
@@ -15,19 +14,19 @@ ms.assetid: efac127c-6c81-4c7a-a6c4-9aae5d15545d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 769bc3ad8b330afd81b14aed1340a67c1d7812ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d41763582632a92b3a38bdbd67ee55b65f95b6d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63137591"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095761"
 ---
 # <a name="database-maintenance-plans-superseded"></a>数据库维护计划被取代
     
 ## <a name="component"></a>组件  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  现有数据库维护计划已经过升级并可继续使用。 但是，您无法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建新的数据库维护计划。 若要在对象资源管理器中查看维护计划，请展开“管理”，然后展开“早期”。 您可以通过选择现有数据库维护计划迁移到新的格式**迁移**从任何数据库维护计划的上下文菜单。 由于新维护计划功能不能直接替代数据库维护计划，因此迁移后某些功能可能会丢失。 迁移数据库维护计划不会删除旧计划，因此可以在删除旧计划之前，先将其作为维护计划对其功能进行测试。  
   
  数据库维护计划中不再支持以下功能：  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -15,12 +14,12 @@ ms.assetid: 1b7d6eca-1df1-47df-bbba-0fc485706a95
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82db1c6f36d8b03d2a603c0a616090ec9d3544af
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7f70d1cbb879f8fc91e48478fb820b71b51bfd2d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353992"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094316"
 ---
 # <a name="installing-upgrade-advisor"></a>安装升级顾问
   安装 SQL Server 2014 升级顾问的位置取决于你将分析的内容。 升级顾问支持对除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外的所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件进行远程分析。 如果您不打算扫描的实例[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，可以在任何可以连接到的计算机上安装升级顾问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，且满足[升级顾问的前提条件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)。 如果要扫描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例，则必须在报表服务器上安装升级顾问。  

@@ -1,11 +1,10 @@
 ---
-title: 选项 (文本编辑器：编辑器选项卡和状态栏页） |Microsoft Docs
+title: 选项（“文本编辑器”:编辑器选项卡和状态栏页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
@@ -14,14 +13,14 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844267"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089234"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>选项 (文本编辑器：编辑器选项卡和状态栏页）
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>选项（“文本编辑器”:“编辑器”选项卡和“状态栏”页）
   在 **“编辑器选项卡和状态栏”** 页上，您可以自定义 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查询编辑器显示的信息。 您可以指定在“查询编辑器”窗口的选项卡和状态栏中显示的信息级别，以及状态栏是显示在编辑器窗口的顶部还是底部。  
   
 ## <a name="option-settings-by-editor"></a>通过编辑器进行的选项设置  
