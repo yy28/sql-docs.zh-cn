@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d1932d314e8d2c1eb48526d87246da2051bc3b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890540"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057475"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>多平面文件连接管理器编辑器（“常规”页）
   可以使用 **“多平面文件连接管理器编辑器”** 对话框的 **“常规”** 页，选择一组具有相同数据格式的文件并指定其数据格式。 多平面文件连接使得数据包可以连接到具有相同格式的一组文本文件。  
@@ -73,7 +72,7 @@ ms.locfileid: "62890540"
 |**冒号 {:}**|标题行由冒号分隔。|  
 |**逗号 {,}**|标题行由逗号分隔。|  
 |**制表符 {t}**|标题行由制表符分隔。|  
-|**竖线 {&#124;}。**|标题行由竖线分隔。|  
+|**竖线 {&#124;}**。|标题行由竖线分隔。|  
   
  **要跳过的标题行数**  
  指定要跳过的标题行数（如果有的话）。  

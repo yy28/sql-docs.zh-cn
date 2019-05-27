@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
@@ -13,12 +12,12 @@ ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774961"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089381"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>选项 （查询执行 SQL Server ANSI 页）
   这些 ANSI (ISO) 标准 SET 选项共同定义了用户查询、运行触发器或存储过程执行期间的查询处理环境。 不过，这些 SET 选项并未包括遵守 ISO 标准所需的所有选项。 使用此页可以指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 ISO 标准中指定的全部或部分设置运行查询。 对这些选项所做的更改只应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在“查询”菜单上单击“查询选项”，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中单击右键，再选择“查询选项”。 在 **“查询选项”** 对话框中的 **“执行”** 下，单击 **ANSI**。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.toolbar.f1
@@ -13,12 +12,12 @@ ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0bc20265b2b880a650cc63a4f2d01f3b084483d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794568"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066227"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器的 **“属性关系”** 选项卡上的工具栏执行以下操作：  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -18,12 +17,12 @@ ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11356ea0e7bb5b8388867eab330d0849163b6257
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733347"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083360"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Missing 值（Analysis Services - 数据挖掘）
   正确处理“Missing 值”   是有效建模的重要组成部分。 本节说明什么是 Missing 值，并介绍在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的、用于处理在生成数据挖掘结构和挖掘模型时的 Missing 值的功能。  

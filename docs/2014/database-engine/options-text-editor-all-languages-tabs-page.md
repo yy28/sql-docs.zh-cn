@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a49db54b71f3b7daf0a7a10cc1b4073f1b651fc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844188"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089905"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>选项（“文本编辑器”-“所有语言”-“选项卡”页）
   使用此对话框可以设置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的所有五个编辑器的跳格行为。 若要显示这些选项，请在 **“工具”** 菜单上单击 **“选项”** 。 选择“文本编辑器”文件夹，展开“所有语言”文件夹，再单击“制表符”。  

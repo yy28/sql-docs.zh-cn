@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
@@ -32,12 +31,12 @@ ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc69e3683656c5705e7e82df27b80a8a41cb81a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807359"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065061"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>使用向导创建扩展事件会话（对象资源管理器）
   为了帮助您选择和捕获服务器上的事件，扩展事件包括一个“新建会话”向导，引导您完成创建扩展事件会话所需的步骤。 “新建会话”向导公开大多数扩展事件功能。 通过[“新建会话”对话框](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)，还可以定义捕获、显示和分析数据的扩展事件会话。 “新建会话”对话框公开所有扩展事件功能。  

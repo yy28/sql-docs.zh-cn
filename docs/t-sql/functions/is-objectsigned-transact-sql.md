@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - IS_OBJECTSIGNED function
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e1c26b6e934a929fc04316c4640825ab2f1ec46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dd733ff5de0a45f689a8d768c29453136cba550
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804585"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942907"
 ---
 # <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ IS_OBJECTSIGNED (
 |0|对象已签名，但签名无效。|  
 |1|该对象已签名。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对证书或非对称密钥拥有 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  

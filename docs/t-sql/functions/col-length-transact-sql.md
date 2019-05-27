@@ -18,15 +18,15 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column length [SQL Server]
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07f040e9a44507c698a5a5066036038a1c103312
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cdcb4ff647328e4c217831a416ca512a4e957f0b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541155"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944031"
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ COL_LENGTH ( 'table' , 'column' )
 ```  
   
 ## <a name="arguments"></a>参数  
-**'** table **'**  
+**'** table **'**   
 要确定其列长度信息的表的名称。 table 是 nvarchar 类型的表达式。
   
 ' column '  

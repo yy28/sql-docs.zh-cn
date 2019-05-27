@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.kpi.f1
@@ -13,12 +12,12 @@ ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dde3d1c12dd4f5b037d24030ae9ec96ae9f97dd0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757389"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067513"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>创建和管理 KPI（SSAS 表格）
   本主题介绍如何在表格模型中创建、编辑或删除 KPI（关键绩效指标）。 若要创建 KPI，您选择的计算结果为该 KPI 的基础值的度量值。 然后使用“关键绩效指标”对话框选择计算结果为某一目标值的第二个度量值或绝对值。 之后可以定义状态阈值，这些状态阈值度量基础度量值和目标度量值之间的性能。  

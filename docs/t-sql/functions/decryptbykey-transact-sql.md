@@ -18,15 +18,15 @@ helpviewer_keywords:
 - decryption [SQL Server], symmetric keys
 - DECRYPTBYKEY function
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b380312fb848ab1fc706c180e4748ec0204b8422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55999857db6723d883683345aa4ab57d301b2cf4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673225"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945500"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ varbinary（最大大小为 8,000 个字节）。 如果用于数据加密的对
   
 对称加密和解密的运行速度通常较快，并且对涉及大量数据的操作而言，运行良好。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 该对称密钥必须已经在当前会话中打开。 有关详细信息，请参阅 [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  

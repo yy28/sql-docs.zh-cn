@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - direct system catalog updates [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 221b46c2-c27e-4df8-bd8c-8b990d6d5e98
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc7288bd7c72ce76df69d11c7a9fb0771764fca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c722d1d40d206ab300b4b6c90fdf6648575c356b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856148"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093006"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>删除用于修改系统对象的语句
   升级顾问检测到了用于更新系统目录的语句。 不允许直接更新系统目录。 请修改您的 SQL 脚本，使用正式且有记录的 API。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 96bfbf87789aa1d683b6368f210539a191f7ee95
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926322"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054693"
 ---
 # <a name="use-variables-in-packages"></a>在包中使用变量
   变量是对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的有效补充，而且使用非常灵活。它们可以在包中的对象之间以及父包和子包之间提供通信。 变量还可以用在表达式和脚本中。  

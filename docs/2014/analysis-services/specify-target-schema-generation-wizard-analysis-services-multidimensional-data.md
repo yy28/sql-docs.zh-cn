@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.generationtarget.f1
@@ -13,12 +12,12 @@ ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d27db6fab4536a5f703a1f6b7ba7cc6b5405f817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746151"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068244"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定目标（架构生成向导）（Analysis Services - 多维数据）
   可以使用 **“指定目标”** 页，指定要在其中创建关系架构的数据源视图。  

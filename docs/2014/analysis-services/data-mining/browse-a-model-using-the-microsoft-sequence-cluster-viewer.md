@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Sequence Cluster Viewer
@@ -21,12 +20,12 @@ ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 870e0fb8cb24a62a2914281e58915c7749771213
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689470"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086126"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>使用 Microsoft 序列分类查看器浏览模型
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 序列分类查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是用于探析特定数据的顺序分析算法，这些数据所包含的事件可通过以下路径（又称“序列 ”）联系起来。 有关此算法的详细信息，请参阅 [Microsoft 顺序分析和聚类分析算法](microsoft-sequence-clustering-algorithm.md)。  

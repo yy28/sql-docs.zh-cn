@@ -17,15 +17,15 @@ helpviewer_keywords:
 - IDENT_INCR function
 - identity columns [SQL Server], IDENT_INCR function
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4dc06419f478af56648e312d8ea7bac7481787fa
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e359073f2672f0fd68461398b78dc93b38ed39ec
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290985"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946435"
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

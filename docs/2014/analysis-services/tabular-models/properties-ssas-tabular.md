@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 934ad51c8855b5b4aadd49af628ee8348bf960d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794588"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066704"
 ---
 # <a name="properties-ssas-tabular"></a>属性（SSAS 表格）
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的表格模型项目具有不同的属性，这些属性定义项目、模型、报告和部署的行为。 属性设置以 XML 格式存储于 Model.bim 文件中，但是，本节中描述的所有属性都可以在 **的** “属性” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]窗口中配置。  

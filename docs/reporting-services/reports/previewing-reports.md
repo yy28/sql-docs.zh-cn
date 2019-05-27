@@ -1,21 +1,21 @@
 ---
 title: 预览报表
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 4b7f822e9bc6d3a875f0b0049c68a6d3ee010327
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.openlocfilehash: 6bd9a273347aa2010cf670ea3a87622e92d69f82
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552999"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935890"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>预览 SQL Server Reporting Services (SSRS) 中的报表
 
@@ -43,7 +43,7 @@ ms.locfileid: "53552999"
 > [!NOTE]  
 > 在调试报表之前，必须设置开始项。 例如，如果运行调试模式，浏览器将打开主报表服务器页，而不是预览模式下的报表。 若要设置启动项，请在解决方案资源管理器中右键单击报表项目，再单击“属性”，然后在 StartItem 中选择要显示的报表的名称。  
   
- 若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”**。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
+ 若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”** 。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
   
 ## <a name="publish-to-a-test-server"></a>发布到测试服务器
 

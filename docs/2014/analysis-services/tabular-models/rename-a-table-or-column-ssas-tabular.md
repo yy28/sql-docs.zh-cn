@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.renametableorcolumn.f1
@@ -13,12 +12,12 @@ ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f9a869b4a280f8df44fce4c506c5f77afc7e8f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756635"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066687"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>重命名表或列（SSAS 表格）
   在导入过程中，您可以通过在 **“表导入向导”** 的 **“选择表和视图”** 页中键入 **“友好名称”**，更改表的名称。 如果您通过在 **“表导入向导”** 的 **“指定 SQL 查询”** 页上指定查询来导入数据，也可以更改表和列名。  

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - hash input
 - HASHBYTES
 ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb4a69420f4fc3ac7881b2798ef97fc0b202a31f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: aeb87d4408f1fbe1ba269d8373e8cc648efba55e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429383"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948378"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,13 +43,13 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>参数  
- **'**\<algorithm>**'**  
+ **'** \<algorithm> **'**  
  标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，除 SHA2_256 和 SHA2_512 以外的所有算法都已过时。  
   
  **@input**  
  指定包含要对其执行哈希操作的数据的变量。 @input 为 varchar、nvarchar 或 varbinary。  
   
- **'** input **'**  
+ **'** input **'**   
  指定一个表达式，其计算结果为要对其执行哈希操作的字符或二进制字符串。  
   
  输出符合算法标准：MD2、MD4 和 MD5 为 128 位（16 个字节）；SHA 和 SHA1 为 160 位（20 个字节）；SHA2_256 为 256 位（32 个字节），SHA2_512 为 512 位（64 个字节）。  

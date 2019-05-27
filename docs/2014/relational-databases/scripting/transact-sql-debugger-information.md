@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -18,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf132c55677580a22e57e52a106e3e7c639c3cef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147437"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063431"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL 调试器信息
   每次当调试器对特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句暂停执行时，您可以使用不同调试器窗口来查看当前执行状态。  
@@ -41,7 +40,7 @@ ms.locfileid: "48147437"
 -   在 **“调试”** 工具栏上，单击 **“断点”**，然后选择所需窗口。  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 表达式  
- 表达式是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，其计算结果为单个标量值，例如变量或参数。 左侧的调试器窗口可以显示当前赋给表达式的数据值，这些值最多可在 5 个选项卡或窗口中显示： **“局部变量”、“监视1”**、 **“监视2”**、 **“监视3”** 和 **“监视4”**。  
+ 表达式是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，其计算结果为单个标量值，例如变量或参数。 左侧的调试器窗口可以显示当前赋给表达式的数据值，这些值最多可在 5 个选项卡或窗口中显示：“本地变量”、“监视 1”、“监视 2”、“监视 3”和“监视 4”。  
   
  **“局部变量”** 窗口显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器当前作用域中局部变量的信息。 调试器在代码的不同部分运行时， **“局部变量”** 窗口中列出的表达式集也会发生变化。  
   

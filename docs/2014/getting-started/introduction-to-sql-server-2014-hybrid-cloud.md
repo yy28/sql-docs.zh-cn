@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fccd4169245421dd33cb5f41bac85861679de823
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62772323"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088612"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 混合云简介
  大多数应用程序都面临一些重要挑战，如高效率、商业价值、复杂的硬件配置、大量峰值需求以及遵守行业和公司管理规定。 考虑所有这些因素构建企业级技术非常富有挑战性。 Microsoft 混合云策略为传统的私有云、公共云和混合云环境提供支持，从而克服这些重要挑战。 

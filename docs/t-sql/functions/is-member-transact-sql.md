@@ -24,16 +24,16 @@ helpviewer_keywords:
 - groups [SQL Server], members
 - members [SQL Server], verifying
 ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b7da52e047b004fe4be394c72a784dfe3ccec21
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d45b1d74242476da155e387f8ec00f8e4e23278f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391270"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946974"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** group **'**  
+ **'** group **'**   
 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、
   
  正在检查的 Windows 组的名称；必须采用格式 Domain\\Group。 group 的数据类型为 sysname。  

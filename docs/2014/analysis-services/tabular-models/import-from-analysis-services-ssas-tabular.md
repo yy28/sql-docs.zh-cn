@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b9a21b23-3a06-4ef8-bc06-9c79cdc54870
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a698ddb598c4de51d4c30dde717176027f67e6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757192"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067049"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>从 Analysis Services 导入（SSAS 表格）
   本主题介绍如何通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的“从服务器导入”项目模板从现有的表格模型导入元数据，创建新的表格模型项目。  

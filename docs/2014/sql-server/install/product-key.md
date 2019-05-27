@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2e39bd3f-6246-4b60-9774-0a427ba2a26c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f46f391e905ed8ea0bce4aaa4d692e2b79de4ac7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a7a59c14cbc5fc3bf3742d8a53e8cf3f92076a3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63276479"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093381"
 ---
 # <a name="product-key"></a>产品密钥
   使用“产品密钥”页可以验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例或者指定要安装哪个免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

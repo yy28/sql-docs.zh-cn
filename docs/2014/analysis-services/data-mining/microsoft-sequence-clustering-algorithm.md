@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733688"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083828"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 顺序分析和聚类分析算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]序列聚类分析算法是由提供顺序分析算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 可以使用此算法来研究包含可通过以下路径，链接的事件的数据或*序列*。 该算法通过对相同的顺序进行分组或分类来查找最常见的顺序。 下面是一些数据示例，其中包含可用于数据挖掘的序列，旨在帮助您深入了解常见问题或业务方案：  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
@@ -13,12 +12,12 @@ ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d0e421d6ba1aaf69c04a450d8d93ff1ddf385935
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771773"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061055"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>CDC 源编辑器（“连接管理器”页）
   可以使用“CDC 源编辑器”对话框的“连接管理器”页，为 CDC 源从其中读取更改行的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库（CDC 数据库）选择 ADO.NET 连接管理器。 一旦选择了 CDC 数据库，则需要选择该数据库中的一个捕获表。  

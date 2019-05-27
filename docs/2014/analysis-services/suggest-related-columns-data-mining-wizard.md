@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
@@ -13,12 +12,12 @@ ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757821"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068014"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>提供相关列建议（数据挖掘向导）
   可以使用 **“提供相关列建议”** 页，查看在向导的上一页中选择的 **“建议”** 功能所提供的建议。 将根据与所选“可预测”列的关联预先选择输入列。 如果接受此对话框中的更改，则这些更改将反映在 **“指定定型数据”** 页中。  

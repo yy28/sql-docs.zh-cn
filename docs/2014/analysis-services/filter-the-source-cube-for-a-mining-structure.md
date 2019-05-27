@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - slice cubes [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c7d3208729ec225c25d1616e7a2052245e6ed25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731339"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081152"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>筛选挖掘结构的源多维数据集
   创建基于多维模型 （OLAP 多维数据） 中的数据的挖掘结构时，你可以*切片*挖掘结构所基于的多维数据集。 通过切片操作可创建数据子集，作为用于给挖掘模型定型的数据的一种筛选器。  

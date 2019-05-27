@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [data mining]
@@ -15,12 +14,12 @@ ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77a0c6f2f0100e7e0c0e73ee70bc8705135d259f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722809"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084803"
 ---
 # <a name="data-types-data-mining"></a>数据类型（数据挖掘）
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建挖掘模型或挖掘结构时，必须为挖掘结构中的每一列定义数据类型。 数据类型告知数据挖掘引擎数据源中的数据是数值还是文本以及应如何处理数据。 例如，如果数据源中包含数值数据，则可以指定是将数字作为整数处理还是使用小数位数来处理。  

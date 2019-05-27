@@ -11,14 +11,18 @@ ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69d125ec70ea297edc4e02b9a2ee4b034a88a2c3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 196647a2c4f6dc872ec1aba7bb91d24c8809113c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289563"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722685"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 课：准备创建部署捆绑
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在本课中，将创建支持教程的工作文件夹和环境变量，创建 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，将几个包及其支持文件添加到项目，然后在包中实现配置。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基于项目部署包；因此，作为创建部署捆绑的第一步，必须将所有包和包依赖项集合到一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中。 通常，包括已部署包的其他信息是很有用的：例如，您还将向项目中添加提供此组包的基本文档的自述文件。  
@@ -32,7 +36,7 @@ ms.locfileid: "58289563"
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
--   [第 1 步：创建工作文件夹和环境变量](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+-   [步骤 1：创建工作文件夹和环境变量](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
 -   [步骤 2：创建部署项目](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
@@ -43,7 +47,7 @@ ms.locfileid: "58289563"
 -   [步骤 5：测试更新的包](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
-[第 1 步：创建工作文件夹和环境变量](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+[步骤 1：创建工作文件夹和环境变量](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
   
   

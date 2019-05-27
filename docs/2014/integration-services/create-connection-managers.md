@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
@@ -19,12 +18,12 @@ ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ef2ea7fa43556f0c4f12ee41101aedf396a23382
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a82ef5c249dd1bc15bc91e9ccc502ebffe3f1728
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831995"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060114"
 ---
 # <a name="create-connection-managers"></a>创建连接管理器
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含多种连接管理器以满足连接不同类型的服务器和数据源的任务的需要。 在不同类型的数据存储中提取和加载数据的数据流组件，以及将日志写入服务器、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表或文件的日志提供程序，都使用连接管理器。 例如，具有发送邮件任务的包使用 SMTP 类型的连接管理器来连接到简单邮件传输协议 (SMTP) 服务器。 具有执行 SQL 任务的包可以使用 OLE DB 连接管理器来连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](connection-manager/integration-services-ssis-connections.md)。  

@@ -17,20 +17,20 @@ helpviewer_keywords:
 - status information [SQL Server], FETCH
 - '@@FETCH_STATUS function'
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 353d6e64d11a7365689b5f57aaab3b5ba93de690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b913dc4de858bb8d8bd70cccbd6ed9b7c4143174
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703065"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946084"
 ---
 # <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-此函数返回针对连接当前打开的任何游标发出的最后一条游标 FETCH 语句的状态。  
+此函数将返回最后一条游标 FETCH 语句的状态，该语句可以是针对连接当前打开的任何游标发出的。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47703065"
 |&nbsp;0|FETCH 语句成功。|  
 |-1|FETCH 语句失败或行不在结果集中。|  
 |-2|提取的行不存在。|
-|-9|光标未执行提取操作。|  
+|-9|游标未执行提取操作。|  
   
 ## <a name="remarks"></a>Remarks  
 由于 `@@FETCH_STATUS` 对于在一个连接上的所有游标都是全局性的，所以要谨慎使用。 在执行一条 FETCH 语句后，必须在对另一游标执行另一 FETCH 语句前测试 `@@FETCH_STATUS`。 在此连接上出现任何提取操作之前，`@@FETCH_STATUS` 没有定义。  

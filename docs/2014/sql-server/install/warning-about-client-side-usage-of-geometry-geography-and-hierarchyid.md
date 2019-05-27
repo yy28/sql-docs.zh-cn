@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08b853d57068121fccb4db2341754eea0af7f734
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185856"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091092"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>关于客户端对 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的使用的警告
   程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型，具有已从版本 10.0 升级到版本 11.0。 满足某些条件时，引用此程序集的自定义应用程序可能会失败。  
@@ -24,7 +23,7 @@ ms.locfileid: "63185856"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型，具有已从版本 10.0 升级到版本 11.0。 满足以下条件时，引用此程序集的自定义应用程序可能失败：  
   
 -   移动时自定义应用程序从一台计算机依据[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]到仅计算机上安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是安装，该应用程序将失败，因为的被引用的版本 10.0 **SqlTypes**程序集不存在。 您可能会看到此错误消息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  

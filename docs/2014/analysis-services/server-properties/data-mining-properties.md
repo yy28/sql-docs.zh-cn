@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ClusterCount property
@@ -58,12 +57,12 @@ ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80e7a793973ddbe0e55862d2e68f23e6c7e31dc3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 96106fc8bc50a2a1b19c54a6970eeeb72952d82d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746829"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069061"
 ---
 # <a name="data-mining-properties"></a>数据挖掘属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的数据挖掘服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  

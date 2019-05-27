@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10226"
@@ -159,12 +158,12 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec55d658da67c7d6ef7e9989f310c26ef11a20d3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225081"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105749"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>仪表（报表生成器和 SSRS）
   仪表数据区域是显示数据集中的单个值的一维数据区域。 各仪表始终位于仪表面板内，您可以在仪表面板内添加子仪表或相邻仪表。 可以使用仪表面板在单个仪表面板内创建多个共享公用功能（如筛选、分组或排序）的多个仪表。  

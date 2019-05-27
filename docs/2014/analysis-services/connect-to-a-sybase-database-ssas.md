@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsybasedb.f1
@@ -13,12 +12,12 @@ ms.assetid: b4ebdc57-8b2a-4950-b489-88360e6c82c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01b011ba7b321252f90f74289cfe13a2257f2ea3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0305b7d205b6de84ef72edd481df01e725df826b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680072"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087174"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>连接到 Sybase 数据库 (SSAS)
   **“表导入向导”** 的这一页可用于指定用于连接到 Sybase 数据库的设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

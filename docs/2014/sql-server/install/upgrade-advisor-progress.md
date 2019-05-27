@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], analysis progress status
@@ -18,12 +17,12 @@ ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7efb9258203efcffeb98bf4404faee5f80aff9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63016344"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091555"
 ---
 # <a name="upgrade-advisor-progress"></a>升级顾问进度
   升级顾问分析从对选定的各个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件执行分析的专用分析器开始。 分析组件时，在报告进度**进度**对话框。  

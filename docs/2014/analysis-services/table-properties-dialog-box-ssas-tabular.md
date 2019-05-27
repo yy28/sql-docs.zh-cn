@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.TableProperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 77571ccd-bdba-4e07-af55-465509dc6a33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 783bd1ba103e97e442e61891138090198a5cdd0f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757844"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067853"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>“表属性”对话框（SSAS - 表格）
   可以使用 **中的** “表属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框来查看表格模型数据库中的表的属性。 所有属性为只读属性。  

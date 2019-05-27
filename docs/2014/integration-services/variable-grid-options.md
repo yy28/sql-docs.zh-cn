@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variableoptionswindow.f1
@@ -15,12 +14,12 @@ ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 89828a105e04c54c1bfecda59670a273583998cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766050"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054679"
 ---
 # <a name="variable-grid-options"></a>变量网格选项
   使用 **“变量网格选项”** 对话框，可以选择将在 **“变量”** 窗口中显示的列并选择要应用于变量列表的筛选器。 有关相应变量属性的详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)。  

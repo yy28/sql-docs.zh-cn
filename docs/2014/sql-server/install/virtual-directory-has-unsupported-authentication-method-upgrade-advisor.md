@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - virtual directories [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ca6cfaa5047ea16a4a8f4380fdf2cf150d0967d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 992e0f125d80a4735a356a853dab55439149e7ba
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119637"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091058"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>虚拟目录包含不支持的身份验证方法（升级顾问）
   升级顾问检测到报表管理器或报表服务器虚拟目录上存在不支持的身份验证方法。 升级不支持的身份验证方法包括匿名、摘要式和 .NET Passport 身份验证。  

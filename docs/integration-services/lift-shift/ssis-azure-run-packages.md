@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: e22eb6e805cf7090c38d1d466d09fe8d3614d2a2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 8b91a1572e5c7cd477d8e112b68b8f9a46fb1153
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720592"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012329"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>运行部署在 Azure 中的 SQL Server Integration Services (SSIS) 包
 
@@ -51,11 +51,11 @@ ms.locfileid: "65720592"
 
 在可连接到 Azure SQL 数据库并运行 Transact-SQL 代码的任何环境中，可以通过调用以下存储过程来运行包：
 
-1. **[catalog].[create_execution]**。 有关详细信息，请参阅 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)。
+1. **[catalog].[create_execution]** 。 有关详细信息，请参阅 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)。
 
-2. **[catalog].[set_execution_parameter_value]**。 有关详细信息，请参阅 [catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)。
+2. **[catalog].[set_execution_parameter_value]** 。 有关详细信息，请参阅 [catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)。
 
-3. **[catalog].[start_execution]**. 有关详细信息，请参阅 [catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md)。
+3. **[catalog].[start_execution]** . 有关详细信息，请参阅 [catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md)。
 
 有关详细信息，请参阅以下示例：
 

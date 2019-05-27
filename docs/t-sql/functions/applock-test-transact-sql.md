@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - testing application locks
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6fe1b71d95dd326eedbdf481c68a74d30c052c6f
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: b1619c37bbae6c885862c4749c07a3d5be559565
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980183"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945103"
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 ' database_principal '  
 可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 若要成功调用函数，该函数调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员。
   
-**'** resource_name **'**  
+**'** resource_name **'**   
 由客户端应用程序指定的锁资源名称。 应用程序必须确保唯一的资源名称。 指定的名称经过内部哈希运算后成为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器可内部存储的值。  resource_name 为 nvarchar(255)，无默认值。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何。
   
-**'** lock_mode **'**  
+**'** lock_mode **'**   
 要为特定资源获取的锁模式。 lock_mode 为 nvarchar(32)，无默认值。 *lock_mode* 可具有任意下列值：Shared、Update、IntentShared、IntentExclusive、Exclusive。
   
-**'** lock_owner **'**  
+**'** lock_owner **'**   
 锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 为 nvarchar(32)，值可以是 Transaction（默认值）或 Session。 如果显式指定默认值或 Transaction，则必须从事务中执行 APPLOCK_TEST。
   
 ## <a name="return-types"></a>返回类型

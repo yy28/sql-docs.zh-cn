@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 兼容级别 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583370"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626690"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
@@ -237,9 +237,9 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |将数据库包含设置为部分包含后，验证 `MERGE` 语句的 `OUTPUT` 子句中的 `$action` 字段可能会返回排序规则错误。|`MERGE` 语句的 `$action` 子句返回的值的排序规则是数据库排序规则而非服务器排序规则，因此不会返回排序规则冲突错误。|
 |`SELECT INTO` 语句始终创建单线程插入操作。|`SELECT INTO` 语句可创建并行插入操作。 插入大量行时，并行操作可提高性能。|
 
-## <a name="differences-between-lower-compatibility-levels-and-levels-110-and-120"></a>较低兼容性级别与级别 110 和 120 之间的差异
+## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>低兼容性级别与级别 100 和 110 的区别
 
-本节介绍随兼容性级别 110 引入的新行为。 此部分也适用于级别 120。
+本节介绍随兼容性级别 110 引入的新行为。 此部分还适用于大于 110 的兼容性级别。
 
 |兼容性级别设置为 100 或更低|至少为 110 的兼容性级别设置|
 |--------------------------------------------------|--------------------------------------------------|

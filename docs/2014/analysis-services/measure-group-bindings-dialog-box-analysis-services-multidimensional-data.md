@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.measuregroupbindings.f1
@@ -15,12 +14,12 @@ ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c803d434fac98c6f2397465738599bac5fa1d8ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4d3d04692ac6576e76d2b630fb5cacb4f57db959
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727964"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077860"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>“度量值组绑定”对话框（Analysis Services - 多维数据）
   对于常规维度关系，可以使用“度量值组绑定”对话框创建和修改多维数据集维度中的非粒度属性与度量值组中的列之间的直接关系，并使用“定义关系”对话框为多维数据集维度中的所有属性指定空值处理选项。  

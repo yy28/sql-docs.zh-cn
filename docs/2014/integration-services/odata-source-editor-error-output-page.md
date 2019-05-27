@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.erroroutput.f1
@@ -13,12 +12,12 @@ ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76a14639eb57645849deab4a11ef13a80cad2648
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890529"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057285"
 ---
 # <a name="odata-source-editor-error-output-page"></a>OData 源编辑器（“错误输出”页）
   可以使用 **“OData 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项以及设置错误输出列的属性。  

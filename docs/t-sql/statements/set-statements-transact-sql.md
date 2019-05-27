@@ -25,15 +25,16 @@ ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: caa103139a47214615ec4bb4f78a7268acf45dda
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: bc660aeb0ca4e7b56cae69a8eb294c6681b1765c
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590282"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620328"
 ---
 # <a name="set-statements-transact-sql"></a>SET 语句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程语言提供了一些 SET 语句，这些语句可以更改特定信息的当前会话处理。 SET 语句可分为下表中列出的几个类别。  
   
@@ -44,14 +45,14 @@ ms.locfileid: "56590282"
 |日期和时间语句|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)<br /><br /> [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|  
 |锁定语句|[SET DEADLOCK_PRIORITY](../../t-sql/statements/set-deadlock-priority-transact-sql.md)<br /><br /> [SET LOCK_TIMEOUT](../../t-sql/statements/set-lock-timeout-transact-sql.md)|  
 |杂项语句|[SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)<br /><br /> [SET CURSOR_CLOSE_ON_COMMIT](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)<br /><br /> [SET FIPS_FLAGGER](../../t-sql/statements/set-fips-flagger-transact-sql.md)<br /><br /> [SET IDENTITY_INSERT](../../t-sql/statements/set-identity-insert-transact-sql.md)<br /><br /> [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)<br /><br /> [SET OFFSETS](../../t-sql/statements/set-offsets-transact-sql.md)<br /><br /> [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)|  
-|查询执行语句|[SET ARITHABORT](../../t-sql/statements/set-arithabort-transact-sql.md)<br /><br /> [SET ARITHIGNORE](../../t-sql/statements/set-arithignore-transact-sql.md)<br /><br /> [SET FMTONLY](../../t-sql/statements/set-fmtonly-transact-sql.md)<br /><br /> 请注意：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> [SET NOCOUNT](../../t-sql/statements/set-nocount-transact-sql.md)<br /><br /> [SET NOEXEC](../../t-sql/statements/set-noexec-transact-sql.md)<br /><br /> [SET NUMERIC_ROUNDABORT](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)<br /><br /> [SET PARSEONLY](../../t-sql/statements/set-parseonly-transact-sql.md)<br /><br /> [SET QUERY_GOVERNOR_COST_LIMIT](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)<br /><br /> [SET ROWCOUNT](../../t-sql/statements/set-rowcount-transact-sql.md)<br /><br /> [SET TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md)|  
+|查询执行语句|[SET ARITHABORT](../../t-sql/statements/set-arithabort-transact-sql.md)<br /><br /> [SET ARITHIGNORE](../../t-sql/statements/set-arithignore-transact-sql.md)<br /><br /> [SET FMTONLY](../../t-sql/statements/set-fmtonly-transact-sql.md)<br /> 请注意：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> [SET NOCOUNT](../../t-sql/statements/set-nocount-transact-sql.md)<br /><br /> [SET NOEXEC](../../t-sql/statements/set-noexec-transact-sql.md)<br /><br /> [SET NUMERIC_ROUNDABORT](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)<br /><br /> [SET PARSEONLY](../../t-sql/statements/set-parseonly-transact-sql.md)<br /><br /> [SET QUERY_GOVERNOR_COST_LIMIT](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)<br /><br /> [SET RESULT_SET_CACHING](../../t-sql/statements/set-result-set-caching-transact-sql.md?view=azure-sqldw-latest)（预览版）<br /> 注意：此功能仅适用于 Azure SQL 数据仓库。<br /><br /> [SET ROWCOUNT](../../t-sql/statements/set-rowcount-transact-sql.md)<br /><br /> [SET TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md)|  
 |ISO 设置语句|[SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)<br /><br /> [SET ANSI_NULL_DFLT_OFF](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)<br /><br /> [SET ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)<br /><br /> [SET ANSI_NULLS](../../t-sql/statements/set-ansi-nulls-transact-sql.md)<br /><br /> [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)<br /><br /> [SET ANSI_WARNINGS](../../t-sql/statements/set-ansi-warnings-transact-sql.md)|  
 |统计语句|[SET FORCEPLAN](../../t-sql/statements/set-forceplan-transact-sql.md)<br /><br /> [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md)<br /><br /> [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md)<br /><br /> [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)<br /><br /> [SET STATISTICS IO](../../t-sql/statements/set-statistics-io-transact-sql.md)<br /><br /> [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)<br /><br /> [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)<br /><br /> [SET STATISTICS TIME](../../t-sql/statements/set-statistics-time-transact-sql.md)|  
-|事务语句|[SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)<br /><br /> [SET REMOTE_PROC_TRANSACTIONS](../../t-sql/statements/set-remote-proc-transactions-transact-sql.md)<br /><br /> [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)<br /><br /> [SET XACT_ABORT](../../t-sql/statements/set-xact-abort-transact-sql.md)|  
+|事务语句|[SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)<br /><br /> [SET REMOTE_PROC_TRANSACTIONS](../../t-sql/statements/set-remote-proc-transactions-transact-sql.md)<br /><br /> [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)<br /><br /> [SET XACT_ABORT](../../t-sql/statements/set-xact-abort-transact-sql.md)| 
   
 ## <a name="considerations-when-you-use-the-set-statements"></a>使用 SET 语句时的注意事项  
   
-- 在执行过程中或运行时运行的所有 SET 语句，除了在分析时运行的这些语句之外： 
+- 在执行过程中或运行时运行的所有 SET 语句，除了在分析时运行的这些语句之外：
 
   - SET FIPS_FLAGGER
   - SET OFFSETS
@@ -69,7 +70,7 @@ ms.locfileid: "56590282"
 - 如果 SET 语句使用 ON 和 OFF 时，则可为一个语句指定多个 SET 选项。
   
     > [!NOTE]  
-    >  这不适用与统计相关的 SET 选项。  
+    >  这不适用与统计相关的 SET 选项。
   
      例如，`SET QUOTED_IDENTIFIER, ANSI_NULLS ON` 可将 QUOTED_IDENTIFIER 和 ANSI_NULLS 设置为 ON。  
   
@@ -89,6 +90,7 @@ ms.locfileid: "56590282"
   
 - 针对计算列或索引视图创建并操作索引时，必须将这些 SET 选项设置为 ON：ARITHABORT、CONCAT_NULL_YIELDS_NULL、QUOTED_IDENTIFIER、ANSI_NULLS、ANSI_PADDING 和 ANSI_WARNINGS。 将选项 NUMERIC_ROUNDABORT 设置为 OFF。  
   
-  如果未将以上任一选项设置为要求的值，则对索引视图或带计算列索引的表进行 INSERT、UPDATE、DELETE、DBCC CHECKDB 和 DBCC CHECKTABLE 操作时将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将发出一个错误，并列出所有设置不正确的选项。 同时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对这些表或索引视图运行 SELECT 语句，就好像计算列或视图中不存在索引。  
-  
-  
+  如果未将以上任一选项设置为要求的值，则对索引视图或带计算列索引的表进行 INSERT、UPDATE、DELETE、DBCC CHECKDB 和 DBCC CHECKTABLE 操作时将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将发出一个错误，并列出所有设置不正确的选项。 同时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对这些表或索引视图运行 SELECT 语句，就好像计算列或视图中不存在索引。 
+
+- 如果 SET RESULT_SET_CACHING 设置为 ON，它为当前客户端会话启用结果集缓存功能。   如果已在数据库级别将 Result_set_caching 设置为 OFF，就无法为会话将它设置为 ON。    如果 SET RESULT_SET_CACHING 设置为 OFF，它为当前客户端会话禁用结果集缓存功能。 必须有公共角色的成员身份，才能更改此设置。
+适用范围：Azure SQL 数据仓库 Gen2

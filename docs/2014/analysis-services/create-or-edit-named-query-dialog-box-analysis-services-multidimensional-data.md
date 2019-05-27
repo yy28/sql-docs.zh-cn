@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
@@ -15,12 +14,12 @@ ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cc03192d0deae00b9ace6f70e72ced4883d26b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97f01b0bbf3d1ddc54ea4db2b771723e12d168d7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679765"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086812"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>“创建或编辑命名查询”对话框（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“创建/编辑命名查询”对话框，在数据源视图设计器中创建或编辑命名查询。 可以将命名查询视为表，基于该表可以建立其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象。 可以通过执行以下操作之一显示“创建/编辑命名查询”对话框：  

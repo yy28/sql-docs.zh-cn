@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757245"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067061"
 ---
 # <a name="impersonation-ssas-tabular"></a>模拟（SSAS 表格）
   本主题帮助表格模型作者了解在连接到数据源以便导入和处理（刷新）数据时 Analysis Services 如何使用登录凭据。  

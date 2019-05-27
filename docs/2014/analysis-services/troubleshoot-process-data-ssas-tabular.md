@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756270"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065768"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>数据处理故障排除（SSAS 表格）
   本主题提供有关在使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]创建模型时处理（刷新）模型数据的信息。 它不提供有关处理已部署到 Analysis Services 服务器实例的模型中的数据的信息。 有关处理已部署的模型中的数据的详细信息，请参阅 [在 Analysis Services 中编写管理任务脚本](script-administrative-tasks-in-analysis-services.md)。  

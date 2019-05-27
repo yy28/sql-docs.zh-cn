@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], PowerShell
@@ -16,12 +15,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d2529bc92acf32730b0462edeb7315b60fd046a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 10e7b4c7e2972ed797048dbcaedcaaeec4d682d4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127427"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090519"
 ---
 # <a name="database-engine-scripting"></a>数据库引擎脚本
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell 脚本环境，以管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例和这些实例中的对象。 还可以在与脚本环境非常类似的环境中生成并运行包含 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 Xquery 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。  
@@ -79,6 +78,6 @@ ms.locfileid: "54127427"
   
 ## <a name="see-also"></a>请参阅  
  [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
- [教程：编写 TRANSACT-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教程：编写 Transact-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

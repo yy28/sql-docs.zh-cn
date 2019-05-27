@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e09e00b4c5dcaf355b5a7691413ed2f8f972d5a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890170"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056791"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>执行 SQL 任务中的参数和返回代码
   SQL 语句和存储过程常常使用 `input` 参数、`output` 参数和返回代码。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，执行 SQL 任务支持 `Input`、`Output` 和 `ReturnValue` 参数类型。 应当将 `Input` 类型用于输入参数，将 `Output` 用于输出参数并将 `ReturnValue` 用于返回代码。  

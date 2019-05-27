@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
@@ -14,12 +13,12 @@ ms.assetid: 81df03de-219b-4ec1-b3c6-fb861150346e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6540789cbd05f2a7c5e5b61bf5597221dc3305f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6f06cea141c2812e97459b0427d1ceb248688a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63162477"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095781"
 ---
 # <a name="database-engine-upgrade-issues"></a>数据库引擎升级问题
   本节中的主题介绍可能会影响您升级到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]问题。 这些主题介绍了为减轻这些更改对您环境的影响可以采取的措施。  

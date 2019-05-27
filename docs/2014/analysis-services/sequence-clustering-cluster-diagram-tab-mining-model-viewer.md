@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.diagrams.f1
@@ -13,12 +12,12 @@ ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95763dca9e5a617e3fdc1c4d1d69b45e6679a392
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746779"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069105"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类关系图”选项卡（挖掘模型查看器）
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类关系图”** 选项卡提供顺序分析和聚类分析模型包含的所有分类的图形化视图。  

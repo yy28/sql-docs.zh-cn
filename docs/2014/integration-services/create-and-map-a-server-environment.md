@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isenvprop.variables.f1
@@ -16,12 +15,12 @@ ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d40f86706a8c2b9c3d8815398457073ca7acce0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828741"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060151"
 ---
 # <a name="create-and-map-a-server-environment"></a>创建和映射服务器环境
   创建服务器环境来指定已部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的项目中所含包的运行时值。 您可以随后针对特定包、入口点包或给定项目中的所有包，将环境变量映射到参数。 入口点包通常是执行子包的父包。  

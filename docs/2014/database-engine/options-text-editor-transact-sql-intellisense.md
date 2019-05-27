@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Advanced
@@ -16,12 +15,12 @@ ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5472e7d0c910c03f49425c263293fd721320eba9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd2cf2be2102aeed1c853ce1b9a198c2b196d26a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844346"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089822"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>选项 (文本编辑器-Transact-SQL-IntelliSense)
   您可以使用 **“选项”** 对话框更改 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器的 IntelliSense 设置。 若要显示这些设置，请在“工具”菜单上单击“选项”，依次展开“文本编辑器”文件夹和“Transact-SQL”文件夹，然后单击“高级”。  

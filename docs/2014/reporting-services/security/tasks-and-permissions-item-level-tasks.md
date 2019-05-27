@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 62009c07a7b643a3a9d0a202588f64bded967acb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 878e9a4bff1625042a08ec7e43699fa067dea532
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63460688"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101511"
 ---
 # <a name="item-level-tasks"></a>项级任务
   项级任务是一个权限的集合，并且这些权限是与报表、文件夹、报表模型、资源或共享数据源有关的。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于整个报表服务器站点的系统级任务。 有关详细信息，请参阅 [系统级任务](tasks-and-permissions-system-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅 [Tasks and Permissions](tasks-and-permissions.md)。  

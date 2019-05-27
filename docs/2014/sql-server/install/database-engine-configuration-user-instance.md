@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - database engine configuration
@@ -14,12 +13,12 @@ ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 423573c78c78cb97b83f8709e19a0bfd6d642645
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63162219"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095882"
 ---
 # <a name="database-engine-configuration---user-instance"></a>数据库引擎配置 - 用户实例
   使用 **“用户实例”** 页可以为不具有管理员权限的用户生成单独的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并可以将用户添加到管理员角色中。  

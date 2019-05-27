@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6fcd8ca8-1ceb-457d-9545-096c74e274d7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d14b1bf3200802e9fab359ba3ede9fa295911fe1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760924"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092958"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>修复 Distributed Replay 安装
   修复 Distributed Replay 组件（控制器或客户端）时将执行以下操作：  
@@ -33,7 +32,7 @@ ms.locfileid: "62760924"
   
 2.  选择[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中**卸载或更改程序**窗口中，然后在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]对话框中，单击**修复**。  
   
-3.  按照中的步骤[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]向导中，然后在**选择功能**页上，选择你想要修复，然后单击 Distributed Replay 组件**下一步。**。  
+3.  按照中的步骤[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]向导中，然后在**选择功能**页上，选择你想要修复，然后单击 Distributed Replay 组件**下一步**。  
   
 4.  完成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导以修复选定的 Distributed Replay 功能。  
   

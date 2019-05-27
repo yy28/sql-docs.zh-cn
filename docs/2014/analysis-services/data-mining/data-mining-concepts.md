@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
@@ -25,12 +24,12 @@ ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4217c455433f2fec4ebbe64b77346c54a6d47827
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722973"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085070"
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
   数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  

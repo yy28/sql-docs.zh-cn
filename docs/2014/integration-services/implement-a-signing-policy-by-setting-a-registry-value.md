@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1f0761f0485cea055e2317ca24b2931302431e5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62893196"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058220"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>通过设置注册表值实现签名策略
   使用可选的注册表值可以管理组织用于加载签名包和未签名包的策略。 如果使用此注册表值，则必须在将运行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包以及将强制实施该策略的每台计算机上创建此注册表值。 设置该注册表值后， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将在加载包之前检查或验证签名。  

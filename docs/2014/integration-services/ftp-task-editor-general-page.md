@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b64b1f8511c9d079118881a9862eee11fdb636d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894203"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058424"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 任务编辑器（“常规”页）
   使用 **“FTP 任务编辑器”** 对话框的 **“常规”** 页可以指定连接到与任务通信的 FTP 服务器的 FTP 连接管理器。 您还可以命名和描述 FTP 任务。  

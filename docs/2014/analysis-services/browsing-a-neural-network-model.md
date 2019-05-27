@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -17,12 +16,12 @@ ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4dcb323a309125695df6d3c483f8996d36fdfd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62660174"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088444"
 ---
 # <a name="browsing-a-neural-network-model"></a>浏览神经网络模型
   使用“浏览”打开神经网络或逻辑回归模型时，该模型显示在交互式查看器（类似于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的神经网络模型查看器）中。 该查看器有助于您探索相关性并获取有关该模型和基础数据中各种模式的信息。  

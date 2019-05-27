@@ -17,16 +17,16 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2ba2ae5f22967530a93def3d888b35cc5847ddb7
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701315"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946541"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 数据库函数有哪些？
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "51701315"
 |[游标函数](cursor-functions-transact-sql.md)|返回游标信息。|  
 |[日期和时间数据类型及函数](date-and-time-data-types-and-functions-transact-sql.md)|对日期和时间输入值执行运算，然后返回字符串、数字或日期和时间值。|  
 |[JSON 函数](json-functions-transact-sql.md)|验证、查询或更改 JSON 数据。|  
-|[逻辑函数](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|执行逻辑运算。|  
+|[逻辑函数](logical-functions-choose-transact-sql.md)|执行逻辑运算。|  
 |[数学函数](mathematical-functions-transact-sql.md)|基于作为函数的参数提供的输入值执行运算，然后返回数字值。|  
 |[元数据函数](metadata-functions-transact-sql.md)|返回有关数据库和数据库对象的信息。|  
 |[安全函数](security-functions-transact-sql.md)|返回有关用户和角色的信息。|  
