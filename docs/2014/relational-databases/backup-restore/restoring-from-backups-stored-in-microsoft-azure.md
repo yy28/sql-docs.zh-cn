@@ -27,7 +27,7 @@ ms.locfileid: "62920645"
   
 ### <a name="using-transact-sql"></a>使用 Transact-SQL  
   
--   因为 SQL Server 必须连接外部源才能检索备份文件，所以会使用 SQL 凭据来对存储帐户进行身份验证。 因此，RESTORE 语句需要有 WITH CREDENTIAL 选项。 有关详细信息，请参阅 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+-   因为 SQL Server 必须连接外部源才能检索备份文件，所以会使用 SQL 凭据来对存储帐户进行身份验证。 因此，RESTORE 语句需要有 WITH CREDENTIAL 选项。 有关详细信息，请参阅 [SQL Server 备份和还原使用 Windows Azure Blob 存储服务](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 -   如果你正在使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 管理备份到云中的备份，则可以通过使用 **smart_admin.fn_available_backups** 系统函数，查看存储中的所有可用备份。 此系统函数会在一个表中返回数据库的所有可用备份。 因为结果以表的形式返回，所以您可以对结果进行筛选或排序。 有关详细信息，请参阅[smart_admin.fn_available_backups &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)。  
   
