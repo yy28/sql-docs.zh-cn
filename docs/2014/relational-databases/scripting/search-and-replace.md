@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - match case [SQL Server]
@@ -29,15 +28,15 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 299cb79646ff7d0955ca25343fbe2a7d9c0b1140
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cce96567d465c4b0c10741ac8a10b08902405368
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63135141"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090195"
 ---
 # <a name="search-and-replace"></a>搜索和替换
-  您可以采用几种不同的方法来查找和替换文本。 上**编辑**菜单中，**查找和替换**提供了四个选项：**快速查找**，**快速替换**，**在文件中查找**，或**在文件中替换**。 每个选项均可以打开不同版本的 **“查找和替换”** 对话框。 您还可以通过使用渐进式搜索键盘快捷键在没有对话框的情况下进行搜索。 通过这些技术，您可以控制查找和替换的范围，并选择查看搜索匹配项和替换项的方法。  
+  您可以采用几种不同的方法来查找和替换文本。 在“编辑”菜单上，“查找和替换”提供了四个选项：“快速查找”、“快速替换”、“在文件中查找”或“在文件中替换”。 每个选项均可以打开不同版本的 **“查找和替换”** 对话框。 您还可以通过使用渐进式搜索键盘快捷键在没有对话框的情况下进行搜索。 通过这些技术，您可以控制查找和替换的范围，并选择查看搜索匹配项和替换项的方法。  
   
  搜索和替换文本时应注意以下事项：  
   

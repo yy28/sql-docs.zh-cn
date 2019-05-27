@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.action.f1
@@ -13,12 +12,12 @@ ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62626094"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062961"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>操作窗体编辑器（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡上的“操作窗体编辑器”窗格创建和修改标准操作。  
@@ -63,7 +62,7 @@ ms.locfileid: "62626094"
 |数据集|返回将由客户端应用程序运行和显示的表示多维数据集的多维表达式 (MDX) 语句。|  
 |专有|对于此操作的 **“应用程序”** 设置所关联的客户端应用程序，返回该程序能够解释的专有字符串。|  
 |行集|返回将由客户端应用程序运行和显示的表示表格格式行集的多维表达式 (MDX) 语句。|  
-|。|返回将由客户端应用程序运行的命令字符串。|  
+|声明专用纸|返回将由客户端应用程序运行的命令字符串。|  
 |URL|返回将由客户端应用程序通常使用 Internet 浏览器打开的统一资源定位器 (URL) 字符串。|  
   
  有关操作类型的详细信息，请参阅[操作（Analysis Services - 多维数据）](multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
@@ -104,7 +103,7 @@ ms.locfileid: "62626094"
   
  当“标题是 MDX”设置为 **True** 时，键入返回标题字符串的多维表达式 (MDX)。  
   
- **True**  
+ **标题是 MDX**  
  选择 **False** 表示“标题”包含一个文字字符串，该字符串表示将在客户端应用程序中为该操作显示的标题。  
   
  选择 **True** 表示 **“标题”** 包含一个 MDX 表达式，该表达式返回一个表示将在客户端应用程序中为该操作显示的标题的字符串。 必须在将该操作返回给客户端应用程序之前解析 MDX 表达式。  

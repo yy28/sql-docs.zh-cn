@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.DatabaseProperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f8204913babd9b52caf2edcaa2de8feae76c70d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8361508d678e407be9bed6eb18e8c221364daf61
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732299"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082355"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>“数据库属性”对话框（SSAS - 表格）
   此对话框提供了时间戳和其他说明性信息，以及确定数据库是否使用缓存数据的可自定义属性。 其他可自定义的属性包括更改数据库名称和指定模拟选项。  

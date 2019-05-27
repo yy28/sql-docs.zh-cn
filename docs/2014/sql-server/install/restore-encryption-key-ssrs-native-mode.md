@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
@@ -13,12 +12,12 @@ ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b537f8413ca460d8eb1991bdd71f1a73ac9ceba1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126935"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092521"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>还原加密密钥（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的敏感数据。 为确保您可以继续访问加密数据，请务必创建加密密钥的备份，以备以后因服务帐户发生变化而需要还原它或需要将它作为计划迁移的一部分还原时使用。 本主题概括了如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来还原密钥。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsedim.view.f1
@@ -15,12 +14,12 @@ ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9672408d1a63729f21395184644ca6a92d091e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62640511"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064632"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>浏览器（维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器的 **“浏览器”** 选项卡浏览维度的维度数据和元数据。 如果为当前所选维度启用了维度写回，则使用此视图可以更改该维度的成员数据。  
