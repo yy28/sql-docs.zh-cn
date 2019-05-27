@@ -38,7 +38,7 @@ ms.locfileid: "66102162"
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-     该文件位于*\<驱动器 >:* \Program Files\Microsoft SQL Server\MSRS12。MSSQLSERVER\Reporting Services\ReportServer。  
+     该文件位于 *\<驱动器 >:* \Program Files\Microsoft SQL Server\MSRS12。MSSQLSERVER\Reporting Services\ReportServer。  
   
 2.  查找 <`Authentication`>。  
   

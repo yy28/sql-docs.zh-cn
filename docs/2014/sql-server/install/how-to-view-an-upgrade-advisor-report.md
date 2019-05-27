@@ -31,7 +31,7 @@ ms.locfileid: "66094797"
   
 ### <a name="to-view-a-report"></a>查看报表  
   
-1.  单击**启动**，单击**所有程序**，单击**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**，然后单击**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]升级顾问**。  
+1.  单击**启动**，单击**所有程序**，单击 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**，然后单击 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]升级顾问**。  
   
 2.  在升级顾问起始页上，单击**启动升级顾问报表查看**。  
   

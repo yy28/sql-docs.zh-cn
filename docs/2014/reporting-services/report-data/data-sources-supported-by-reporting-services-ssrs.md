@@ -158,7 +158,7 @@ ms.locfileid: "66107368"
 ###  <a name="Azure"></a> Windows Azure SQL 数据库处理扩展插件  
  数据源类型 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 包装并扩展了 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- 在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 中，与此数据扩展插件关联的图形查询设计器是 [关系查询设计器用户界面](../relational-query-designer-user-interface.md)，而不是用于“Microsoft SQL Server”数据源类型的 [Visual Database Tool 设计器](../../ssms/visual-db-tools/visual-database-tool-designers.md)。  
+ 在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 中，与此数据扩展插件关联的图形查询设计器是 [关系查询设计器用户界面](../relational-query-designer-user-interface.md)，而不是用于“ **Microsoft SQL Server**” 数据源类型的 [Visual Database Tool 设计器](../../ssms/visual-db-tools/visual-database-tool-designers.md)。  
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自动区分**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 并**Microsoft SQL Server**数据源类型，并打开与数据源类型关联的图形查询设计器。  
   

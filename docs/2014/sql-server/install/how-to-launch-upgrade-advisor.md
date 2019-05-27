@@ -27,7 +27,7 @@ ms.locfileid: "66094907"
   
 ### <a name="to-launch-upgrade-advisor"></a>若要启动升级顾问  
   
--   若要启动升级顾问，请单击**启动**，单击**所有程序**，单击**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**，然后单击**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]升级顾问**.  
+-   若要启动升级顾问，请单击**启动**，单击**所有程序**，单击 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**，然后单击 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]升级顾问**.  
   
 ## <a name="see-also"></a>请参阅  
  [运行升级顾问&#40;用户界面&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
