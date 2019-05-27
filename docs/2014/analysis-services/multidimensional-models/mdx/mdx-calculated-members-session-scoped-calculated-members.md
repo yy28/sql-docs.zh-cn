@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - CREATE MEMBER statement
@@ -14,12 +13,12 @@ ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 53d6cc069e316bc399235aafbf59c7586bbdc6c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725391"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074551"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>创建会话作用域的计算成员 (MDX)
   若要创建在整个多维表达式 (MDX) 会话中都可用的计算成员，请使用 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) 语句。 直到 MDX 会话关闭才会删除使用 CREATE MEMBER 语句创建的计算成员。  

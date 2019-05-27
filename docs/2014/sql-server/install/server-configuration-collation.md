@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - collation configuration, SQL Server
@@ -15,12 +14,12 @@ ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62653997"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092292"
 ---
 # <a name="server-configuration---collation"></a>服务器配置 - 排序规则
   可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“服务器配置 – 排序规则”页上修改[!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 排序时所用的排序规则设置。 选择相应选项以匹配其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装或者其他计算机的排序规则设置。  

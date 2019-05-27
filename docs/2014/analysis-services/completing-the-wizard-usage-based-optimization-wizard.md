@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
@@ -13,12 +12,12 @@ ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02628703bebc6b797e3eeada2ea7bb6e467236c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680421"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087561"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>完成向导（基于使用情况的优化向导）
   可以使用 **“完成向导”** 页保存聚合设计，以及将其分配给所选的分区。 您也可以在基于使用情况的优化向导完成设计并保存聚合之后，处理所选分区。  

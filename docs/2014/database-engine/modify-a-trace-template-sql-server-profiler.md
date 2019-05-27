@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
@@ -15,12 +14,12 @@ ms.assetid: b81df2a1-e202-43d8-92b0-0beb145f0116
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1292037036ef32564115cf4d575929abc8b66d47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64c13b9fed062b73de7ab35ef5048ae4b68e5618
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62845650"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089998"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>修改跟踪模板 (SQL Server Profiler)
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]修改跟踪模板。  

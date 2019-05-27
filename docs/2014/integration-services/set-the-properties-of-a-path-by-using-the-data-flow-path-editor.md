@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
@@ -13,12 +12,12 @@ ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cbb4037e44e4e4c906617baf9c40e77019f7e9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62888880"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055725"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>使用数据流路径编辑器设置路径属性
   路径连接两个数据流组件。 数据流必须包含至少两个已连接的数据流组件，才能设置路径属性。 有关详细信息，请参阅 [在数据流中添加或删除组件](data-flow/add-or-delete-a-component-in-a-data-flow.md) 和 [连接数据流中的组件](data-flow/connect-components-in-a-data-flow.md)。  

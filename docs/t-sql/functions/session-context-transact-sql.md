@@ -15,15 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - SESSION_CONTEXT function
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: de4b1ac25cfefe1df9e8e3a0db8d8019d63763bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d875024e6f227c6ba0d65ab0346092c02e860385
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404432"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945234"
 ---
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="return-value"></a>返回值  
  如果未为该键设置值，则为与会话上下文中指定值相关联的值，或者为 NULL。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户都可以读取其会话的会话上下文。  
   
 ## <a name="remarks"></a>Remarks  

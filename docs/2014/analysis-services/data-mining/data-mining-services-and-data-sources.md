@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722890"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084919"
 ---
 # <a name="data-mining-services-and-data-sources"></a>数据挖掘服务和数据源
   数据挖掘需要连接到 SQL Server Analysis Services 实例才能工作。 数据挖掘不需要多维数据集中的数据，建议使用关系源；但是，数据挖掘使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎提供的组件。  
@@ -47,7 +46,7 @@ ms.locfileid: "62722890"
 ### <a name="xmla-listener"></a>XMLA 侦听器  
  XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 文件中的配置设置可用于在其上指定端口[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例所侦听。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：  
   
-|端口|Description|  
+|Port|Description|  
 |----------|-----------------|  
 |2383|默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。|  
 |2382|其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的重定向程序。|  
@@ -78,7 +77,7 @@ ms.locfileid: "62722890"
 -   `AllowAdHocOpenRowsetQueries` 控制对 OLE DB 访问接口、 直接加载到服务器内存空间即席访问。  
   
     > [!IMPORTANT]  
-    >  为了提高安全性，建议您将此属性设置为 `false`。 默认值是 `false`。 但是，即使此属性设置为 `false`，用户仍可以继续创建单独查询，并且可以对允许的数据源使用 OPENQUERY。  
+    >  为了提高安全性，建议您将此属性设置为 `false`。 默认值为 `false`。 但是，即使此属性设置为 `false`，用户仍可以继续创建单独查询，并且可以对允许的数据源使用 OPENQUERY。  
   
 -   **AllowedProvidersInOpenRowset** 指定启用即席访问时的访问接口。 通过输入一个以逗号分隔的 ProgID 列表，您可以指定多个访问接口。  
   

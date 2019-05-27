@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aa5b08a35a2eaf0d82b79145ecacde9d50579ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767299"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057834"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>查找转换编辑器（“常规”页）
   可以使用“查找转换编辑器”对话框的 **“常规”** 页，选择缓存模式，选择连接类型以及指定如何处理没有匹配项的行。  

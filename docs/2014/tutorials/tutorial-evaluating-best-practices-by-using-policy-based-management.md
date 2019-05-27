@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices analyzer
@@ -19,14 +18,14 @@ ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956151"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064429"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>教程：使用基于策略的管理来评估最佳实践
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>教程：使用基于策略的管理来评估最佳做法
   欢迎使用“使用基于策略的管理来评估最佳实践”教程。 本教程适用于熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 但不熟悉基于策略的管理的用户。 基于策略的管理是一个系统，用于定义可用于强制执行网站管理标准的策略。 基于策略的管理包括一组最佳实践策略，这些策略可用于分析某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，以便确定该实例是否满足最佳实践指导原则和建议。  
   
 ## <a name="what-you-will-learn"></a>学习内容  

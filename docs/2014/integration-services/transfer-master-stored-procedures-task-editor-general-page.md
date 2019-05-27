@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferstoredprocedurestask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: fa1abd4c-e2be-427f-be53-860e49c97227
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2eff925b3aa3278c5b662e5848d979f017936ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cab36a851c5ef50f0690e9bc0a1a18676d335e50
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766180"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054920"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>传输主存储过程任务编辑器（“常规”页）
   可以使用 **“传输主存储过程任务编辑器”** 对话框的 **“常规”** 页，对传输主存储过程任务进行命名和说明。 有关此任务的详细信息，请参阅 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], relationships
@@ -14,12 +13,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 47a46bfd482463de2377470cd11186bd3bfbd5db
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701397"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077060"
 ---
 # <a name="define-attribute-relationships"></a>定义属性关系
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，属性是维度的基本构造块。 维度包含一组在属性关系基础上组织而成的属性。  

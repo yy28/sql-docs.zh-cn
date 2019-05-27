@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
@@ -13,12 +12,12 @@ ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e0d945e1fe95fe95d8ed655a0bd6b94e132f3c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb080721ccb3e5b5aef190eda3d1088df09762c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689379"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086066"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>使用 Microsoft 一般内容树查看器浏览模型
   通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般挖掘模型内容查看器，可以查看有关挖掘算法找到的模式的详细信息，以及访问在分析过程中生成的各种统计信息。 信息的数量和类型取决于使用的算法，但可包括以下几类：  

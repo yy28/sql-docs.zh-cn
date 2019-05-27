@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 20e04f8192753b2ca8a5cb48715fac20118df3e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700303"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076341"
 ---
 # <a name="create-a-report-data-source"></a>创建报表数据源
   为了 Power View 可连接到多维模型，您必须在 SharePoint 库中创建一个共享的报表数据源定义（也称为 .rsds 文件）。 该 .rsds 文件指定用于连接到多维模型的 Analysis Services 服务器实例、连接类型、连接字符串以及凭据的名称。 当用户单击 .rsds 时，将在浏览器中打开新的空白 Power View 报表（.rdlx 文件）。  

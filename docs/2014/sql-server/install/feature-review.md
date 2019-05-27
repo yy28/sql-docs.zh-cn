@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9d6407d98bccb62f54443a8a8d1f5b61a093c7c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62761130"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095328"
 ---
 # <a name="feature-review"></a>查看功能
   “查看功能”页是已准备好并且将在完成映像步骤结束时配置并完成的功能的只读列表。 该功能列表在准备映像步骤中选择，并且在完成映像步骤中无法修改。 除了显示的功能外，已准备实例还包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。  

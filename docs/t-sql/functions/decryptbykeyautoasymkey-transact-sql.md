@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DECRYPTBYKEYAUTOASYMSKEY function
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6452ae04f35c81f6ef7beb9d379ad55a056d2021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c82a43c833db36e77eae93a1fe529736e4b4fa4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664061"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945504"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ varbinary（最大大小为 8,000 个字节）。
 ## <a name="remarks"></a>Remarks  
 `DECRYPTBYKEYAUTOASYMKEY` 合并了 `OPEN SYMMETRIC KEY` 和 `DECRYPTBYKEY` 的功能。 在单个操作中，它首先解密对称密钥，然后使用该密钥解密已加密的 ciphertext。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要对对称密钥拥有 `VIEW DEFINITION` 权限以及对非对称密钥拥有 `CONTROL` 权限。  
   
 ## <a name="examples"></a>示例

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4bf6c8146e8f3b5f6222affb3709439c37fc5023
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844158"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089940"
 ---
 # <a name="options-text-editor---file-extension-page"></a>选项（“文本编辑器”-“文件扩展名”页）
   使用“选项”对话框可以指定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何处理具有某些文件扩展名的所有文件。 对于所输入的每一个扩展名，可以选择一个编辑器。 因此，可以选择将在其中打开某种类型文档的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 编辑器。 若要打开文件扩展名选项，请在“工具”菜单上单击“选项”，展开“文本编辑器”，再单击“文件扩展名”。  

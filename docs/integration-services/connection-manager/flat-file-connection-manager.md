@@ -23,14 +23,18 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af7d7dfb72ade1121151feddaeaded0fa9f06fe5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2cf3156597035241398e354e8c80bfebb9c16d67
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274383"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728272"
 ---
 # <a name="flat-file-connection-manager"></a>平面文件连接管理器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   平面文件连接管理器使包可以访问平面文件中的数据。 例如，平面文件源和目标可以使用平面文件连接管理器提取和加载数据。  
   
  平面文件连接管理器只能访问一个文件。 若要引用多个文件，请使用多平面文件连接管理器，而不用平面文件连接管理器。 有关详细信息，请参阅 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
@@ -73,7 +77,7 @@ ms.locfileid: "58274383"
   
  使用平面文件连接管理器和平面文件目标，您可以在运行时使用表达式创建文件名。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
@@ -165,7 +169,7 @@ ms.locfileid: "58274383"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {|}**。|行由竖线分隔。|  
+|**竖线 {&#124;}**。|行由竖线分隔。|  
   
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
@@ -179,7 +183,7 @@ ms.locfileid: "58274383"
 |**冒号 {:}**|列由冒号分隔。|  
 |**逗号 {,}**|列由逗号分隔。|  
 |**制表符 {t}**|列由制表符分隔。|  
-|**竖线 {|}**。|列由竖线分隔。|  
+|**竖线 {&#124;}**。|列由竖线分隔。|  
   
  **“刷新”**  
  通过单击“刷新”查看更改要跳过的分隔符后的效果。 只有在更改其他连接选项之后，此按钮才可见。  
@@ -226,7 +230,7 @@ ms.locfileid: "58274383"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {|}**。|行由竖线分隔。|  
+|**竖线 {&#124;}**。|行由竖线分隔。|  
   
  **重置列**  
  通过单击“重置列”可以删除除原始列之外的所有列。  
@@ -255,7 +259,7 @@ ms.locfileid: "58274383"
 |**TextQualified**|指示文本数据周围是否有文本限定符（例如引号字符）。<br /><br /> True：平面文件中的文本数据是受限定的。 False：平面文件中的文本数据是不受限定的。|  
 |**名称**|提供说明性列名。 如果不输入名称，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动创建名称，格式为“列 0”、“列 1”，依此类推。|  
 |**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。|  
-|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}**。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}**。 列由回车符分隔。<br /><br /> **{LF}**。 列由换行符分隔。<br /><br /> **分号 {;}**。 列由分号分隔。<br /><br /> **冒号 {:}**。 列由冒号分隔。<br /><br /> **逗号 {,}**。 列由逗号分隔。<br /><br /> **制表符 {t}**。 列由制表符分隔。<br /><br /> **竖线 {|}**。 列由竖线分隔。|  
+|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}**。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}**。 列由回车符分隔。<br /><br /> **{LF}**。 列由换行符分隔。<br /><br /> **分号 {;}**。 列由分号分隔。<br /><br /> **冒号 {:}**。 列由冒号分隔。<br /><br /> **逗号 {,}**。 列由逗号分隔。<br /><br /> **制表符 {t}**。 列由制表符分隔。<br /><br /> **竖线 {&#124;}**。 列由竖线分隔。|  
 |**DataPrecision**|指定数字数据的精度。 精度是指数字的位数。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|  
   

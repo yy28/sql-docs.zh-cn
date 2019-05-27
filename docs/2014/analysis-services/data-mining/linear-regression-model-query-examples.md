@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: facd7ddd9f41d214485ea9a062c67cee2b920758
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722229"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084300"
 ---
 # <a name="linear-regression-model-query-examples"></a>线性回归模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，内容查询可能会提供有关回归公式的更多详细信息，而预测查询则可能会告诉您新数据点是否适合模型。 您还可以使用查询来检索有关模型的元数据。  

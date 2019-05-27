@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7b29fcfbe2219c1cf519c75e3aef605fce7c3fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271198"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723674"
 ---
 # <a name="install-integration-services"></a>安装集成服务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了单个安装程序来安装其包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在内的任一组件或所有组件。 使用安装程序，可以在单台计算机上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或将其与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件一起安装。    
     
@@ -119,6 +123,6 @@ ms.locfileid: "58271198"
 
 -   **其他可选组件**。 根据需要，可以从 SQL Server 功能包下载其他第三方组件。
 
-    -   用于 Microsoft SQL Server® 的 Microsoft® Connector for SAP BW。 要获取这些组件，请参阅 [Microsoft® SQL Server® 2017 功能包](https://www.microsoft.com/download/details.aspx?id=55992)。
+    -   用于 Microsoft SQL ServerÂ® 的 MicrosoftÂ® Connector for SAP BW。 若要获取这些组件，请参阅 [MicrosoftÂ® SQL ServerÂ® 2017 功能包](https://www.microsoft.com/download/details.aspx?id=55992)。
 
     -   适用于 Oracle 的 Attunity Microsoft Connector 5.0 和适用于 Teradata 的 Attunity Microsoft Connector 5.0。 要获取这些组件，请参阅 [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)（用于 Oracle 和 Teradata 的 Microsoft Connector v5.0）。

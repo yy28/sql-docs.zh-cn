@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], browsing
@@ -14,12 +13,12 @@ ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2823f88c31fe69c6d39713580ee176d1e3190093
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726741"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075992"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>在维度设计器中浏览维度数据
   可以使用维度设计器中的 **“浏览器”** 视图浏览维度中的数据，可通过 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问维度设计器。  

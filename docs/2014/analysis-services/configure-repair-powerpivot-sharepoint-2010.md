@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 350aadcdd44dcc4424b94792286a7421e2613b2e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680465"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087386"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）
   要配置或修复 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安装，请使用 PowerPivot 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 PowerPivot 配置工具以及用于 SharePoint 2013 的 PowerPivot 配置工具。 本主题介绍用于 SharePoint 2010 的 PowerPivot 配置工具。 有关 SharePoint 2010 的详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2013 &#40;PowerPivot 配置工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。  

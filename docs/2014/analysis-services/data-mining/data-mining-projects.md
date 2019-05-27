@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6370034c90acf91bcf69fc0dee697f48458b7e22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3aa9d5ef81c32f7bb1f4235e4362533f3fac656d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722900"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085058"
 ---
 # <a name="data-mining-projects"></a>数据挖掘项目
   数据挖掘项目是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案的一部分。 在设计过程中，在此项目中创建的对象作为工作区数据库的一部分可用于测试和查询。 当您希望用户能够查询或浏览此项目中的对象时，必须将此项目部署到在多维模型中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  

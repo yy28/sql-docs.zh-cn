@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
@@ -24,12 +23,12 @@ ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726595"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075063"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授予对维度数据的自定义访问权限 (Analysis Services)
   启用对多维数据集的读取访问权限后，可以设置明确允许或拒绝访问维度成员的其他权限（包括包含在度量值维度中的度量值，此维度包含在多维数据集中使用的全部度量值）。 例如，假设有多个经销商类别，您可能想要设置权限以排除某个具体业务类型的数据。 下图是拒绝访问“经销商”维度中“仓库”业务类型的前后对比效果。  

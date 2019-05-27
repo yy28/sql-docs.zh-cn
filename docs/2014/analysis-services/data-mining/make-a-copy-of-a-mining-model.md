@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
@@ -16,12 +15,12 @@ ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dfae5c36cd05f7122645479980517b14bd2c328d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722116"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084221"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>生成挖掘模型的副本
   在要快速创建基于相同数据的多个挖掘模型时，创建挖掘模型的副本将很有用。 在您复制模型后，可以通过更改参数或添加筛选器，编辑新副本。  

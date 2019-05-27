@@ -18,16 +18,16 @@ helpviewer_keywords:
 - LEFT function
 - leftmost character of expression
 ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9ddedb86eabf5462ff4794b951d61655e113d7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fc18f3a2540fd1316078e7e53326d36964c735
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847967"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948674"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

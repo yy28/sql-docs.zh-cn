@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.batchsettingsdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681164"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088253"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>“更改设置”对话框（Analysis Services - 多维数据）
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “更改设置” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，可以更改对 **“处理”** 对话框中所列对象的处理进行控制的设置。 单击 **“处理”** 对话框中的 **“更改设置”** ，将显示 **“更改设置”** 对话框。  

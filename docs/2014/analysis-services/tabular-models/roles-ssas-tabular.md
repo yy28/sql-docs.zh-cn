@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756900"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066631"
 ---
 # <a name="roles-ssas-tabular"></a>角色（SSAS 表格）
   在表格模型中，角色定义模型的成员权限。 每个角色都包含成员（按 Windows 用户名或按 Windows 组）和权限（读取、处理、管理员）。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。  

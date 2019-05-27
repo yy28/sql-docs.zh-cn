@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
@@ -16,12 +15,12 @@ ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033606"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096098"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>配置服务帐户（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中，报表服务器 Web 服务、报表管理器和后台处理应用程序在一个服务内运行。 运行该服务的帐户是在安装过程中定义的，即在“服务标识”页中指定的帐户；但是，如果希望使用不同的帐户或更改密码，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。  

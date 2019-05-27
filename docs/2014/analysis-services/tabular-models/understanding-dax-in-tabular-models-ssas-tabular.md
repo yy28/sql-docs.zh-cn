@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e02123703295d13a0be9bcb74382ce4a7ed9dd66
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756775"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066264"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格模型中的 DAX（SSAS 表格）
   数据分析表达式 (DAX) 是一种公式语言，用于在针对 Microsoft Excel 工作簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目中创建自定义计算。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
@@ -104,8 +103,8 @@ ms.locfileid: "62756775"
 |小数|一个 64 位（八字节）实数 <sup>1、2</sup>|实数是可具有小数位的数字。 实数涵盖很广范围的值：<br /><br /> 从 -1.79E +308 到 -2.23E -308 的负值<br /><br /> 零<br /><br /> 从 2.23E -308 到 1.79E + 308 的正值<br /><br /> 但是，有效位数限制为 17 个小数位。|  
 |Boolean|Boolean|True 或 False 值。|  
 |Text|String|一个 Unicode 字符数据字符串。 可以是字符串，或以文本格式表示的数字或日期。|  
-|date|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
-|货币|货币|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
+|Date|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
+|Currency|Currency|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
 |不可用|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
   
  表格模型还包括 Table 数据类型，作为许多 DAX 函数的输入或输出。 例如，FILTER 函数采用表作为输入，并输出仅包含满足筛选条件的行的另一个表。 通过组合表函数与聚合函数，您可以对动态定义的数据集执行复杂计算。  

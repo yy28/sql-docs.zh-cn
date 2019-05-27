@@ -11,18 +11,22 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 35a3e6612516750e360e1e223e8e323d068daef1
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 51c2efbde3a87c85722022b9114354e8f57d8c9d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420082"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718555"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 Scale Out Master 通过 SSISDB 目录和 Scale Out Master 服务来管理 Scale Out 系统。 
 
-SSISDB 目录可存储 Scale Out Worker、包和执行的所有信息。 它可提供接口，以便在 Scale Out 中启用 Scale Out Worker 和执行包。有关详细信息，请参阅[概览”：设置 Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md) 和[在 Integration Services 中运行包](run-packages-in-integration-services-ssis-scale-out.md)。
+SSISDB 目录可存储 Scale Out Worker、包和执行的所有信息。 它可提供接口，以便在 Scale Out 中启用 Scale Out Worker 和执行包。有关详细信息，请参阅[演练：设置 Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md) 和[在 Integration Services 中运行包](run-packages-in-integration-services-ssis-scale-out.md)。
 
 Scale Out Master 服务是一项 Windows 服务，负责与 Scale Out Worker 的通信。 它通过 HTTPS 返回 Scale Out Worker 上包执行的状态，并对 SSISDB 中的数据进行操作。 
 

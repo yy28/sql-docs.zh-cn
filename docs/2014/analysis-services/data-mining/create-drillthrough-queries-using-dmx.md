@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 42c896ee-e5ee-4017-b66e-31d1fe66d369
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ff75840ba60d8ab93a3adeeeef949263e607b35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722687"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085241"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>使用 DMX 来创建钻取查询
   对于支持钻取的所有模型，可以通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或任何其他支持 DMX 的客户端中创建 DMX 查询来检索事例数据和结构数据。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f4bcc06ca7bf8bcee3cf581ad0c2bec3ba4f9f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0126337fb1f871a4d89354bd65cbfd11932bf5c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794589"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066369"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格模型解决方案部署（SSAS 表格）
   在创作某一表格模型项目后，您必须部署此项目，以便用户通过使用报表客户端应用程序浏览该模型。 本主题介绍在您的环境中部署表格模型解决方案时可使用的各种属性和方法。  

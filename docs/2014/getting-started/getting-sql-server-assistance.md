@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
@@ -42,12 +41,12 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a09293b660bc096f8dc9eacf3986f03950eabfb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838000"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088560"
 ---
 # <a name="getting-sql-server-assistance"></a>获取 SQL Server 帮助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 有以下三个关于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要信息来源：  
@@ -78,7 +77,7 @@ ms.locfileid: "62838000"
   
  下表介绍了这些资源及其目标用户。  
   
-|资源|读者|  
+|Resource|读者|  
 |--------------|--------------|  
 |[SQL Server 开发人员中心](https://msdn.microsoft.com/sqlserver/)|生成 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库、报告系统和商业智能解决方案以及启用其应用程序和网站以使用这些系统的开发人员。|  
 |[XML 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=42458)|其站点和应用程序使用 XML 进行数据存储和操作的网站制作者和应用程序开发人员。|  
@@ -87,7 +86,7 @@ ms.locfileid: "62838000"
 ## <a name="additional-online-information"></a>其他联机信息  
  这些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 网站还提供其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 信息。  
   
-|资源|Description|  
+|Resource|Description|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|提供有关将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作为数据存储和商业智能工具进行评估的售前信息。|  
 |[Microsoft 知识库文章](https://go.microsoft.com/fwlink/?LinkId=42461)|提供由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持人员编写的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 文章的可搜索存储库。|    

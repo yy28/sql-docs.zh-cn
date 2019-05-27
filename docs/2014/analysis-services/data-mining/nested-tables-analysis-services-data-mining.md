@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
@@ -15,12 +14,12 @@ ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733252"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083247"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>嵌套表（Analysis Services – 数据挖掘）
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据必须作为包含在事例表中的一系列事例提供给数据挖掘算法。 但并非所有的事例都可以用一行数据来说明。 例如，一个事例可能派生自两个表：其中一个表包含客户信息，而另一个表包含客户采购信息。 客户信息表中的一位客户可能在客户采购表中有多个采购项目，在这种情况下，很难使用单个行来说明该数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一种用来处理这些事例的独特方法，即使用 *嵌套表*。 下图将阐释嵌套表的概念。  

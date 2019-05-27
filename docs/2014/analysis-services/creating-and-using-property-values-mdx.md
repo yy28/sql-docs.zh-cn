@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - property values [MDX]
@@ -16,12 +15,12 @@ ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679735"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086692"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>创建和使用属性值 (MDX)
   多维表达式 (MDX) 支持维度、级别、成员和单元的内部属性以及用户定义属性。 内部属性为各个单元提供唯一的名称、标题甚至格式和字体大小。 而用户定义属性可以为成员提供几乎所有类型的其他特性。  

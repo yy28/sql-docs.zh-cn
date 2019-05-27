@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Designer
@@ -13,12 +12,12 @@ ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731776"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081778"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>维度设计器（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的维度设计器浏览维度包含的数据，以及修改现有维度的各种属性：特性、层次结构、级别、特性关系和翻译。  

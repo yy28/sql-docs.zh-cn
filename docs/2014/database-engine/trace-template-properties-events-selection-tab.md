@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.eventsselection.f1
@@ -15,12 +14,12 @@ ms.assetid: 5b202457-ab42-4902-8012-7f3f40aa09f5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac74d361758cda8ec0b345b93e542d96c709e586
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d86515646236916a9c651c7fa02923b88b995cd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773453"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089549"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>跟踪模板属性（“事件选择”选项卡）
   使用 **“跟踪模板属性”** 对话框的 **“事件选择”** 选项卡，可以查看、编辑或指定要包含在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 跟踪模板中的事件类和数据列。  

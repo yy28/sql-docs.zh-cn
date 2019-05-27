@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ending batches [SQL Server]
 - GO command
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c6bb6632bfccc0874d77835dcef07fbede1cec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765465"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981659"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 实用工具语句 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ GO
   
  不要将分号用作 GO 后的语句终止符。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  GO 是一个不需任何权限的实用工具命令。 它可以由任何用户执行。  
   
 ```  

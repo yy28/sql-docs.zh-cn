@@ -20,16 +20,16 @@ helpviewer_keywords:
 - verifying backups
 - checking backups
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 169e7372089d7d2374f266d0242775182ab2e490
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e658fb1c3d33e3e5fb4c023109aa7fd4617c7fe2
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241768"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947111"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 语句 - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -117,7 +117,7 @@ FROM <backup_device> [ ,...n ]
 > [!IMPORTANT]  
 >  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 保护备份的最佳做法是将备份磁带存储在安全位置，或者备份到由适当的访问控制列表 (ACL) 保护的磁盘文件。 ACL 应设置在创建备份的根目录下。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，获取有关备份集或备份设备的信息需要具有 CREATE DATABASE 权限。 有关详细信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
  
 ## <a name="examples"></a>示例  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.hideunhidecolumnsdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 5407aee5-6a07-4559-a2ba-2ca00a242f02
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f16095d7473d098745f16943a60f50c104c94cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c506b72f48206f5a68dc10d0b236aa7fb934435
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757114"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067084"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>隐藏或冻结列（SSAS 表格）
   在模型设计器中，如果不想在表中显示某些列，则可以暂时隐藏它们。 隐藏列可为您在屏幕上提供更多空间，以便添加新列或仅使用相关的数据列。 从模型设计器的“列”菜单或者每个列标题的右键单击菜单中，可以隐藏和取消隐藏列。 要在滚动到模型的其他区域时使模型的某一区域可见，可以通过冻结该区域的特定列来锁定它们。  

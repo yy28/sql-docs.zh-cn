@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.scheduleproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaaff2a90f18a4fb7cec3c049945c87fd0a5ed8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63158723"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099741"
 ---
 # <a name="schedule-properties-general-page"></a>计划属性（“常规”页）
   使用此页可查看或修改共享计划。 共享计划可以用于替代报表特定计划或订阅特定计划。 将在保存计划之后应用对计划进行的更改。 对计划进行编辑不会影响当前正在进行的作业。 如果要编辑正在使用的计划，则将允许完成从该计划触发的、当前正在处理的所有报表和订阅。  

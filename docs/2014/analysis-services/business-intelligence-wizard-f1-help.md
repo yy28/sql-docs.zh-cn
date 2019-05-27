@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
@@ -13,12 +12,12 @@ ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b06c909f8661bf1bec2d715a449e565295eb179b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62664253"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088402"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>商业智能向导的 F1 帮助
   可以使用商业智能向导定义商业智能功能，以及设置有关多维数据集和维度的高级选项。 通过该向导可以设置现有对象的属性，创建新的对象，还可以生成多维表达式 (MDX) 脚本，以提供诸如维度智能和货币换算之类的功能。  

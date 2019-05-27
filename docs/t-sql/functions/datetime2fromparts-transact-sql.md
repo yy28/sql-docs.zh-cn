@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - DATETIME2FROMPARTS function
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d923e65f55edc56b2201d455567c924619dc0ad3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d317902a0eefa2c31d0835fb9b7cf28705d5dde
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713535"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945694"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -65,7 +65,7 @@ fractions
 整数表达式，用于指定 `DATETIME2FROMPARTS` 将返回的 datetime2 值的精度。
   
 ## <a name="return-types"></a>返回类型
-**datetime2(** precision **)**
+**datetime2(** precision **)** 
   
 ## <a name="remarks"></a>Remarks  
 `DATETIME2FROMPARTS` 返回完全初始化的 datetime2 值。 如果至少有一个必需参数具有无效值，`DATETIME2FROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIME2FROMPARTS` 返回 NULL。 但是，如果 precision 参数具有 NULL 值，`DATETIME2FROMPARTS` 将引发错误。

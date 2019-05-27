@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.AnalysisServer.AnalysisServicesResulstsGeneral
@@ -13,12 +12,12 @@ ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 80291e4dc4f53fd4818801f05d99ba655a1ff73c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0f5588e897c730663540ba2e4aa1fa60bbb3fe13
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774770"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089318"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>选项 （查询结果 Analysis Server-常规页）
   使用此页可确定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查询的查询结果窗口的默认行为。 若要显示这些设置，请选择“工具”菜单中的“选项”。 在“查询结果”文件夹内，展开“分析服务器”子文件夹，再选择“常规”。  

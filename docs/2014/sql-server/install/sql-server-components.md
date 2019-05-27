@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
@@ -22,12 +21,12 @@ ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 546a9908791972564cd5cf749eb9e189753602c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52045095714bfc2be7e929ed27a26a800c860fe6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098648"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092084"
 ---
 # <a name="sql-server-components"></a>SQL Server 组件
   可以针对已在本地或远程计算机运行升级顾问分析向导[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]安装。 升级前分析的第一步是确定要分析的计算机和组件。  

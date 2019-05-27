@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [Analysis Services], prediction queries
@@ -14,12 +13,12 @@ ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7741d2acf1e26e4e5a424c823a435fb37ff1d71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62705763"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085847"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>为预测查询选择和映射输入数据
   在您根据挖掘模型创建预测时，通常通过向模型馈送新数据来创建预测。 （时序模型是个例外情况，它只能基于历史数据进行预测。）若要向模型提供新数据，您必须确保数据可作为数据源视图的一部分提供。 如果您事先知道哪些数据将用于预测，则可以在用于创建模型的数据源视图中包括这些数据。 否则，您可能需要创建一个新的数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](../multidimensional-models/data-source-views-in-multidimensional-models.md)。  

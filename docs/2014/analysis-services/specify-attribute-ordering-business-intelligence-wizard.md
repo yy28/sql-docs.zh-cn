@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.setordering.f1
@@ -13,12 +12,12 @@ ms.assetid: fc0678fc-e188-4d13-8deb-9daa1281b734
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acecdb460ee61e16a82609b658eb20a2b38f323d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746309"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068534"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>指定属性顺序（商业智能向导）
   可以使用 **“指定属性顺序”** 页指定所选维度中的属性的排序依据属性和排序条件。  

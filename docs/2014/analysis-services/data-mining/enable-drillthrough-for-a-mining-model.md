@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
@@ -14,12 +13,12 @@ ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3847d2cdf4158167a6c05e957183464a846c90f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06ce3967bf9258e9b8f6cd4a28cb28a29a1e0588
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722459"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084534"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>对挖掘模型启用钻取
   如果为挖掘模型启用了钻取，则可以在浏览模型时检索用于创建模型的事例的详细信息。 若要查看这些信息，则您必须拥有必要的权限，且挖掘结构已经过处理。  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4e1fef3fdaad1b7c8a1bd2b82f8ee1f1da8f76d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c25a0cf97c556baad24f475cdf71698e03fa6a25
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130837"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948045"
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ DISTINCT
 *\**  
 指定 `COUNT_BIG` 应对所有行计数，以确定要返回的总表行计数。 `COUNT_BIG(*)` 不采用任何参数，也不支持使用 DISTINCT。 `COUNT_BIG(*)` 不需要“expression”参数，因为根据定义，该函数不使用有关任何特定列的信息。 `COUNT_BIG(*)` 返回指定表中的行数，但保留副本行。 它会单独为每一行计数，包括包含 null 值的行。
   
-OVER **(** [ partition_by_clause ] [ order_by_clause ] **)**  
+OVER **(** [ partition_by_clause ] [ order_by_clause ] **)**   
 “partition_by_clause”将 `FROM` 子句生成的结果集划分为要应用 `COUNT_BIG` 函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 “order_by_clause”确定操作的逻辑顺序。 请参阅 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) 获取详细信息。
   
 ## <a name="return-types"></a>返回类型

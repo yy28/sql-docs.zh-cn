@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3b50c9284610cfa8c35eba21de7723c18729401
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6087d5fa39dd023d13ce3f49fbdfb855f12b921c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795303"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067451"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>创建和管理度量值（SSAS 表格）
   度量值是为用于报表或 Excel 数据透视表（或数据透视图）而创建的公式。 度量值可以基于标准聚合函数，如 COUNT 或 SUM；或者，您可以通过使用 DAX 定义自己的公式。 本主题中的任务说明如何创建和管理通过使用表的度量值网格中的度量值。  

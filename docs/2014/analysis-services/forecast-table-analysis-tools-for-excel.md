@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -16,12 +15,12 @@ ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731860"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081049"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>预测（Excel 表分析工具）
   ![预测的按钮在表分析工具功能区](media/tat-forecast.gif "预测表分析工具功能区中的按钮")  

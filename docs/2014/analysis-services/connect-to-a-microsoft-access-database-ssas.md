@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connaccessdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 9fa81839-dd8b-41d3-915e-c774a707ed53
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36c3f4a6219e615fe2cf11e718bd1ef47869f85a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95d40cc0a6da642fe92f46a86308da348d5cc040
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680132"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087297"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>连接到 Microsoft Access 数据库 (SSAS)
   **“表导入向导”** 的这一页可用于指定用于连接到 Microsoft Access 数据库的设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

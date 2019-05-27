@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a7f41e13024f059677fe7015a3a89e4ff7028258
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843801"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089202"
 ---
 # <a name="options-text-editor---xml---general-page"></a>选项（“文本编辑器”-“XML”-“常规”页）
   使用此对话框可以更改 XML 编辑器（用于编辑 XML 文档）的常规编辑行为。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，展开 **XML** 子文件夹，再单击 **“常规”**。  

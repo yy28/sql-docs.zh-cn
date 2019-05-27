@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.realtime.f1
@@ -13,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757374"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067232"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式（SSAS 表格）
   Analysis Services 能让你检索数据并从表格模型创建报表，通过直接从关系数据库系统检索数据和聚合使用*DirectQuery 模式下*。 本主题介绍仅驻留在内存中的标准表格模型和可查询关系数据源的表格模型之间的差异，并且说明如何创建和部署要在 DirectQuery 模式下使用的模型。  

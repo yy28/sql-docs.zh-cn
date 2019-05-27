@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dataprofileviewer.f1
@@ -16,12 +15,12 @@ ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769983"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059723"
 ---
 # <a name="data-profile-viewer-f1-help"></a>数据配置文件查看器 F1 帮助
   可以使用数据配置文件查看器查看数据事件探查任务的输出。  

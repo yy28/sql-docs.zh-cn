@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733071"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082991"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>数据挖掘解决方案的相关项目
   数据挖掘解决方案中至少要包含数据挖掘项目，该项目定义了数据源、数据源视图、挖掘结构和挖掘模型。 但是，在使用数据挖掘模型做出日常决策时，将数据挖掘与预测分析解决方案的其他部分集成非常重要，其中可包含以下过程和组成部分：  

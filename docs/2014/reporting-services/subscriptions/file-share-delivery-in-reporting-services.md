@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
@@ -14,12 +13,12 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cdc9821d9e1d8b3013b146cba4b509cb744ef9e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62510887"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100911"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的文件共享传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含文件共享传递扩展插件，以便你可以将报表传递到文件夹。 默认情况下会提供文件共享传递扩展插件，并且不需要进行其他配置。 为了成功传递文件，必须设置对共享文件夹的写访问权限。 此外，需要访问报表的用户还必须对共享文件夹具有读取权限。  

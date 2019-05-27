@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
@@ -13,12 +12,12 @@ ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96cee57e82cc9fbb01a43dc1ec13bf0691f737fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185531"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092183"
 ---
 # <a name="service-account-ssrs-native-mode"></a>服务帐户（SSRS 本机模式）
   使用“服务帐户”页可以指定运行报表服务器服务的帐户。 此帐户最初在安装过程中进行配置。 如果要更改此帐户或密码，则可以对其进行修改。 报表服务器 Web 服务、报表管理器和后台处理应用程序都使用此页上指定的服务标识运行。  
