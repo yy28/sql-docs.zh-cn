@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitionfilterexpression.f1
@@ -13,12 +12,12 @@ ms.assetid: 697874d4-3f7a-4126-96f5-37cc8e2ee306
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c26ceea2f6dd8ad136d505269f028f47e0b9b7fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 604a42cc0b3519f1034733e12f72dc1a7c969ce6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748389"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070564"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>查询绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）
   可以使用 **“分区源”** 对话框中的 **“查询绑定”** 选项指定为分区提供数据的查询。 通过从 **“分区源”** 对话框中的 **“绑定类型”** 选项中选择 **“查询绑定”** ，可以显示此窗格。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10541"
@@ -14,12 +13,12 @@ ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 40c592cd753c5c6b4e88fbf66d9b81ebc4aa2fb5
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461870"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108323"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>“地图颜色规则”对话框 -&gt;“常规”
   选择 **“颜色规则属性”** 对话框中的 **“常规”** 可以定义此层上地图元素的颜色选项。 地图元素包括多边形、线条和点。 当您创建了基于空间数据的地图元素和来自数据集字段（或来自空间数据源字段）的分析数据之间的关系后，就可以应用颜色规则。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a6ba0d74b07c21234d7e0f20cb7d9664ee7157f2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144772"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090295"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
   本主题介绍如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询、MDX、DMX 或 XML/A 编辑器。 打开后，每个编辑器窗口都在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的中心窗格中显示为一个选项卡。  
@@ -30,7 +29,7 @@ ms.locfileid: "63144772"
 ### <a name="permissions"></a>权限  
  在代码编辑器中执行的操作会受到为您用于登录的身份验证帐户所授予的权限的约束。 例如，如果您使用 Windows 身份验证打开一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，则无法执行引用您的 Windows 登录帐户无权访问的对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-## <a name="how-to-open-editors"></a>如何：打开的编辑器  
+## <a name="how-to-open-editors"></a>如何：打开编辑器  
  本节介绍如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开各种编辑器。  
   
 ### <a name="using-the-filenew-menu"></a>使用“文件”/“新建”菜单  

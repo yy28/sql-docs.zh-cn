@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Output Window [Transact-SQL]
@@ -14,12 +13,12 @@ ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30c92ad13360d6c675ba95d45c9684cf25e7eba8
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 68ad1919122e2131c548d88edb212302828a15d0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328577"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063456"
 ---
 # <a name="output-window"></a>输出窗口
   此窗口显示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各种功能的状态消息。 输出是从 **调试器、外部工具功能或调试器** “命令窗口” [!INCLUDE[tsql](../../includes/tsql-md.md)] 中运行的命令发送到 **“输出”** 窗口的特殊窗格中。 此外，来自外部工具（例如 .bat 或 .com 文件）且通常在“命令提示符”窗口中显示的输出也在此窗口中显示。  

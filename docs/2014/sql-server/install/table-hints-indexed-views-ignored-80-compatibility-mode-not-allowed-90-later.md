@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - query hints [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 405dfcff-a3a6-4e6d-a53a-ed77bbacdd13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8eb4dfaf6649b80bd430992d5e7ff1d35fc5d7ed
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 69a6bae06b1cb5d7a727ff2582f10bccf1e21ca8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582970"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091804"
 ---
 # <a name="table-hints-in-indexed-view-definitions-are-ignored-in-80-compatibility-mode-and-are-not-allowed-in-90-mode-or-later"></a>在 80 兼容模式中将忽略索引视图定义中的表提示且在 90 或更高的模式中不允许表提示
   在 90 或更高的兼容模式中，不允许索引视图定义中的表提示。 有关详细信息，请参阅中的以下主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书："设计索引的视图，""创建索引视图，"和"查询提示 ([!INCLUDE[tsql](../../includes/tsql-md.md)])。"  

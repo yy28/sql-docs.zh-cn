@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0e20da00-519e-40bb-a7b7-6233a0ec9a06
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 027422aaad1954afb4e30f29f924f2f30b77d31c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473499"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062659"
 ---
 # <a name="aggregations-cube-design"></a>聚合（多维数据集设计）
   可以使用多维数据集设计器中的 **“聚合”** 选项卡创建和修改聚合设计。  
