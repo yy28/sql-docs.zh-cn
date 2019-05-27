@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3e3ef600-9331-453b-80ad-b2d18e6082be
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 536aeb35d871fa2dd13e343cc589649dda45e984
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767209"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057562"
 ---
 # <a name="move-ssis-toolbox-items"></a>移动 SSIS 工具箱项
   新的 SSIS 工具箱包括新的类别和功能，以便根据您的喜好对项进行组织。 工具箱底部的信息窗口提供对所选工具箱项的说明以及指向联机丛书主题的链接。  

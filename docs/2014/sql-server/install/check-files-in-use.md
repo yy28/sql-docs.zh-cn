@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650552"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096533"
 ---
 # <a name="check-files-in-use"></a>检查正在使用的文件
   若要避免在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新后重新启动 Windows，请使用“检查正在使用的文件”页来识别锁定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安装程序所需文件的进程。  
@@ -47,7 +46,7 @@ ms.locfileid: "62650552"
   
 |“属性”|Description|  
 |----------|-----------------|  
-|处理|显示以下进程的全名，该进程正在使用要更新的文件。|  
+|Process|显示以下进程的全名，该进程正在使用要更新的文件。|  
 |类型|显示进程的类型。|  
 |帐户|显示运行进程的帐户。|  
 |进程 ID|显示进程 ID。|  

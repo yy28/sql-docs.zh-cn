@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7361cb5d0e68cfa3f45f46d7f99d68c88c1a556b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63181997"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090822"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>第 4 课：在 Windows Azure 存储中创建数据库
   在本课程中，你将学习如何使用“Windows Azure 中的 SQL Server 数据文件”功能来创建数据库。 注意，开始学习本课之前，必须先学完第 1、2 和 3 课。 第 3 课是一个非常重要的步骤，因为需要将有关 Windows Azure 存储容器及其关联的策略名称和 SAS 密钥的信息存储到 SQL Server 凭据存储区中，然后再开始学习第 4 课。  

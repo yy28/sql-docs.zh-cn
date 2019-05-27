@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.histogram.f1
@@ -15,12 +14,12 @@ ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2db75092ee2504fbd8f36a4bdf8f8e399f4841d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834435"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060711"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>配置数据查看器（“直方图”选项卡）
   可以使用 **“配置数据查看器”** 对话框的 **“直方图”** 选项卡指定要显示的列。 直方图可以按值的分布显示数值列中的数据值。 该图表只反应一个缓冲区的内容。  

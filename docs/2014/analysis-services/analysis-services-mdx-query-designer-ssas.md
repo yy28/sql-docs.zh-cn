@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.asmdxquerydes.f1
@@ -13,12 +12,12 @@ ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0f76c8df695dcb4e49c707409243b6f1aa1d28e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643703"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062509"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX 查询设计器 (SSAS)
   Analysis Services 多维表达式 (MDX) 查询设计器提供了图形用户界面，可帮助你为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源创建 MDX 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动所选多维数据集的成员，以生成可检索要使用的数据的 MDX 查询。  

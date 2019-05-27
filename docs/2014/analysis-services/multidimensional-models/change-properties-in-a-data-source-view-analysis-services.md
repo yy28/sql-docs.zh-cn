@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - friendly names [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1e5bfe2673b599a1da90c940015e5be84b361eb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726831"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076739"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>在数据源视图中更改属性 (Analysis Services)
   在使用数据源视图向导定义数据源视图并将表、视图、命名计算和命名查询添加到数据源视图后，可能需要更改与下列各项相关的属性：  

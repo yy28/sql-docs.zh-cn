@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c3dbf70fe7a50caaaa1a3e80cd5fe7699c7287a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b662b537913847ee2858f933a54f37739d1c5c34
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728688"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078623"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>隐藏和禁用属性层次结构
   默认情况下，将为维度中的每个属性创建一个属性层次结构，并且每个层次结构均可用于确定事实数据的维度。 此层次结构由“全部”级别和包含该层次结构中所有成员的详细级别组成。 正如您已经了解到的，可以将属性组织到用户定义层次结构中，以提供在多维数据集中的导航路径。 在某些环境下，可能需要禁用或隐藏某些属性以及它们的层次结构。 例如，某些属性（如，社会保障号码或身份证号、付费率、出生日期和登录信息）不是用户将要用来维度化多维数据集信息的属性。 而这些信息通常只是作为特定属性成员的详细信息而显示。 您可能需要隐藏这些属性层次结构，使这些属性只在作为特定属性的成员属性时可见。 可能还需要使其他属性的成员（例如，客户名称或邮政编码）只在通过用户层次结构而不是单独通过属性层次结构进行查看时才可见。 这样做的一个理由可能是属性层次结构中不同成员的个数差异太大。 最后，为了改善处理性能，应该禁用用户不用于浏览的属性层次结构。  

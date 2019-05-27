@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
@@ -13,12 +12,12 @@ ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 669fa1fcd9e4802a4d4102120a373dd615741017
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62637007"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062739"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>高级建模（Excel 数据挖掘外接程序）
   可以使用**高级**数据建模选项创建带有参数的自定义数据挖掘结构和模型不同于由向导创建的。 本节中介绍的两个向导可以帮助您创建全新的数据挖掘结构，以及可应用于现有数据挖掘结构的新挖掘模型。  

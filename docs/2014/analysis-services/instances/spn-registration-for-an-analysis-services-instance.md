@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d13d7b7f65ca1f121145815555afa055926c81fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729793"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079573"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   在使用 Kerberos 对客户端和服务标识进行相互身份验证时，服务主体名称 (SPN) 唯一标识 Active Directory 域中的某一服务实例。 SPN 与服务实例运行所基于的登录帐户相关联。  

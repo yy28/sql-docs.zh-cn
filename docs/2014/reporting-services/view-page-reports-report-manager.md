@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d36a9e8b5e4b46283b78f07c27834a79993faeab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647663"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098743"
 ---
 # <a name="view-page-reports-report-manager"></a>报表的“视图”页（报表管理器）
   使用报表的“视图”页可以查看报表。 在报表管理器中最初打开报表时，报表采用 HTML 格式。 HTML 报表包括一个显示在报表顶部的报表工具栏，通过它可以导航报表页、在报表中搜索或将报表导出到不同格式。 下图显示了报表工具栏。  

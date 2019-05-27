@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f790e0cc9193f2f31c7f021c4d4901e7a825fb13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769733"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059243"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 目标编辑器（“连接管理器”页）
   使用 **“Excel 目标编辑器”** 对话框的 **“连接管理器”** 页可以指定数据源信息和预览结果。 Excel 目标将数据加载到 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿中的工作表或指定范围。  

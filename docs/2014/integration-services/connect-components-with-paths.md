@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], connections
@@ -15,12 +14,12 @@ ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 776e3d8c8b8731fb56d51213ffe085c857066cd7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a75a9717345d1d0dc4c2fe30bf7fc441cb91ddc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834019"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060388"
 ---
 # <a name="connect-components-with-paths"></a>使用路径连接组件
   在 **设计器中** “数据流” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡的设计图面上构造包中的数据流。 如果数据流包含两个数据流组件，则可以将源或转换的输出连接到转换或目标的输入，以连接这两个组件。 两个数据流组件之间的连接器称为路径。  

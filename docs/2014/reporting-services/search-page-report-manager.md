@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 66b4e98e08db2799d2038973db815b73ece63f53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237708"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102261"
 ---
 # <a name="search-page-report-manager"></a>“搜索”页（报表管理器）
   使用“搜索结果”页可以查看为报表、链接报表、报表模型、共享数据源、文件夹或资源指定的搜索操作的结果。 搜索结果按字母顺序列出。 您可以按照类型、名称或说明进行排序。  

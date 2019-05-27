@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
@@ -14,17 +13,17 @@ ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29274efcc4bc88c13537d240efcbc9ce4b25ea58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 36def4705f6b2be9d5e1828f920ae41a51477272
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188188"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108089"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 设备信息设置
   下表列出以 PDF 格式呈现报表时的设备信息设置。  
   
-|设置|值|  
+|设置|ReplTest1|  
 |-------------|-----------|  
 |**“列”**|要为报表设置的列数。 此值将覆盖报表的原始设置。|  
 |**ColumnSpacing**|要为报表设置的列间距。 此值将覆盖报表的原始设置。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.generatenamedquerydialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 0f385577-a2e5-4527-ab88-b27e73112591
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec993b67736c8f1d77341ff25b620796dd9a209b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730661"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080904"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>“生成命名查询”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “生成命名查询” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，创建基于图表序列、图表序列值或图表筛选器（从 **“浏览数据”** 对话框的 **“透视图”** 选项卡上显示的表中选择）的命名查询。 单击 **“浏览数据”** 对话框中的 **“生成命名查询”** ，可以显示 **“生成命名查询”** 对话框。  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 44cda6a2ecb8cd81d477c87de0f52a3a9b80b657
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b4e4679a6022a37a72ce7083d3467bbbccd69f45
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920655"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010170"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>启用 FileTable 的先决条件
   介绍如何启用创建和使用 FileTable 的先决条件。  
@@ -54,7 +54,7 @@ ms.locfileid: "62920655"
 ##  <a name="BasicsNTAccess"></a> 在数据库级别启用非事务性访问  
  FileTable 使 Windows 应用程序可以获取 FILESTREAM 数据的 Windows 文件句柄而不需要事务。 为了允许对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的文件进行此非事务性访问，您必须为要包含 FileTable 的每个数据库在数据库级别上指定所需的非事务性访问级别。  
   
-###  <a name="HowToCheckAccess"></a> 如何：检查是否对数据库启用非事务性访问  
+###  <a name="HowToCheckAccess"></a> 如何：检查是否在数据库上启用了非事务性访问  
  查询目录视图 [sys.database_filestream_options (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) 并检查 **non_transacted_access** 和 **non_transacted_access_desc** 列。  
   
 ```sql  
@@ -89,7 +89,7 @@ GO
   
  在 FileTable 文件夹层次结构中，此数据库级目录将成为在实例级别为 FILESTREAM 指定的共享名称的子级以及在数据库中创建的 FileTable 的父级。 有关详细信息，请参阅 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)。  
   
-###  <a name="HowToDirectory"></a> 如何：指定在数据库级别的 Filetable 的目录  
+###  <a name="HowToDirectory"></a> 如何：在数据库级别指定 FileTable 的目录  
  您指定的名称必须在跨数据库级目录的实例中是唯一的。  
   
  **使用 Transact-SQL 指定 FileTable 的目录**  
@@ -128,7 +128,7 @@ GO
  **使用 SQL Server Management Studio 指定 FileTable 的目录**  
  可以在“数据库属性”对话框的“选项”页的“FILESTREAM 目录名称”字段中指定目录名称。 有关此对话框的详细信息，请参阅[数据库属性（选项页）](../databases/database-properties-options-page.md)。  
   
-###  <a name="viewnames"></a> 如何：查看实例的现有目录名称  
+###  <a name="viewnames"></a> 如何：查看实例的现有目录名  
  若要查看该实例的现有目录名称的列表，可查询目录视图 [sys.database_filestream_options (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) 并查看 **filestream_database_directory_name** 列。  
   
 ```sql  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - CSV files [SQL Server]
 - quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0836d835b77241a27dfccc65528e8cda440559c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94bcee6d2b1ed9a9ad81bddcb7351ebea51c0449
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62519281"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011864"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>准备用于大容量导出或导入的数据 (SQL Server)
   本部分讨论计划大容量导出操作时的相关注意事项以及大容量导入操作的要求。  
@@ -67,7 +67,7 @@ ms.locfileid: "62519281"
   
      若要从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro、Visual FoxPro 表 (.dbf) 文件或 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 工作表 (.xls) 文件大容量导入数据，需要将数据转换为 CSV 文件以符合前面的限制条件。 文件扩展名通常将为 .csv。 然后便可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量导入操作中使用 .csv 文件作为数据文件。  
   
-     在 32 位系统上，通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [和 OLE DB Provider for Jet 可以将 CSV 数据导入](/sql/t-sql/functions/openrowset-transact-sql) 表，但是没有大容量导入优化。 通过由位于数据源所在目录的 schema.ini 文件定义的架构，Jet 将文本文件作为表处理。  对于 CSV 数据，schema.ini 文件内的其中一个参数将是“FORMAT=CSVDelimited”。 若要使用此解决方案，需要了解 Jet Test IISAMm 如何工作，例如它的连接字符串语法、schema.ini 用法、注册表设置选项等等。  此信息的最佳来源是 Microsoft Access 帮助和知识库 (KB) 文章。 有关详细信息，请参阅[初始化文本数据源驱动程序](https://go.microsoft.com/fwlink/?LinkId=128503)，[如何使用链接服务器以安全的 Access 数据库的 SQL Server 7.0 分布式查询](https://go.microsoft.com/fwlink/?LinkId=128504)， [HOW TO:使用 Jet OLE DB Provider 4.0 连接到 ISAM 数据库](https://go.microsoft.com/fwlink/?LinkId=128505)，并[如何使用 Jet 提供程序的文本 IIsam 打开带分隔符的文本](https://go.microsoft.com/fwlink/?LinkId=128501)。  
+     在 32 位系统上，通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [和 OLE DB Provider for Jet 可以将 CSV 数据导入](/sql/t-sql/functions/openrowset-transact-sql) 表，但是没有大容量导入优化。 通过由位于数据源所在目录的 schema.ini 文件定义的架构，Jet 将文本文件作为表处理。  对于 CSV 数据，schema.ini 文件内的其中一个参数将是“FORMAT=CSVDelimited”。 若要使用此解决方案，需要了解 Jet Test IISAMm 如何工作，例如它的连接字符串语法、schema.ini 用法、注册表设置选项等等。  此信息的最佳来源是 Microsoft Access 帮助和知识库 (KB) 文章。 有关详细信息，请参阅[初始化文本数据源驱动程序](https://go.microsoft.com/fwlink/?LinkId=128503)、[如何通过链接服务器使用 SQL Server 7.0 分布式查询来查询安全的 Access 数据库](https://go.microsoft.com/fwlink/?LinkId=128504)、[如何使用 Jet OLE DB Provider 4.0 连接到 ISAM 数据库](https://go.microsoft.com/fwlink/?LinkId=128505)，以及[如何使用 Jet Provider 的文本 IIsam 打开带分隔符的文本文件](https://go.microsoft.com/fwlink/?LinkId=128501)。  
   
  此外，将数据文件中的数据大容量导入表还有以下要求：  
   

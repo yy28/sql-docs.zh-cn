@@ -30,15 +30,15 @@ helpviewer_keywords:
 - default database
 - LOGINPROPERTY function
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4135760bb80daa7ffebe01b173fdc8e1c4fd1059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e081af76034b467a84eb6dbf81ab3b884a4440fd
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616795"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949132"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="remarks"></a>Remarks  
  此内置函数返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的密码策略设置的信息。 属性名称不区分大小写，因此 BadPasswordCount 和 badpasswordcount 等属性名称是等效的。 PasswordHash、PasswordHashAlgorithm 和 PasswordLastSetTime 属性值在所有支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置中都可用，但仅当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 上运行并且同时启用了 CHECK_POLICY 和 CHECK_EXPIRATION 时，其他属性才可用。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对登录名具有 VIEW 权限。 请求密码哈希时，还需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

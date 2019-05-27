@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
@@ -14,12 +13,12 @@ ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8e5f34ac12dd76de22e53be72e04d51d0cef8be1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c300945fee14b353e5c3be1b42a59440bdbfd4dd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260847"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109037"
 ---
 # <a name="html-device-information-settings"></a>HTML 设备信息设置
   下表列出了以 HTML 格式呈现时的设备信息设置。  
@@ -38,7 +37,7 @@ ms.locfileid: "63260847"
 |**GetImage (\*)**|为 HTML 查看器用户界面获取一个特定的图标。|  
 |`HTMLFragment`|指示是否创建一个 HTML 片段以取代完整 HTML 文档。 HTML 片段在 TABLE 语句中包含报表内容，并忽略 HTML 和 BODY 元素。 默认值是 `false`。 当使用 SOAP 进行呈现（`HTMLFragment` 属性设置为 `true`）时，将创建包含可用于正确地请求图像的会话信息的 URL。 图像必须为报表服务器数据库中的已上载资源。|  
 |`ImageConsolidation`|指示是否将呈现的图表、地图、仪表和指示器图像合并为一个大图像。 当报表包含许多数据可视化项目时，图像合并有助于改善客户端浏览器中报表的性能。 对于大多数现今的浏览器，默认值均为 `true`。|  
-|**JavaScript**|指示是否在所呈现报表中支持 JavaScript。 默认值为 `true`。|  
+|**JavaScript**|指示是否在所呈现报表中支持 JavaScript。 默认值是 `true`。|  
 |`LinkTarget`|报表中超链接的目标。 可以通过提供的窗口中，名称如目标窗口或框架`LinkTarget` = *window_name*，或可以确定新窗口中使用的目标`LinkTarget`= _blank。 其他有效的目标名称包括 _self、_parent 和 _top。|  
 |**OnlyVisibleStyles(\*)**|指示仅为当前呈现的页生成共享样式。|  
 |`OutlookCompat`|指示是否呈现可改善报表在 Outlook 中的外观的额外元数据。 对于其他应用程序，默认值为 `false`。|  
@@ -46,7 +45,7 @@ ms.locfileid: "63260847"
 |`PrefixId`|在与 `HTMLFragment` 一起使用时，请为已创建的 HTML 碎片中的所有 `ID` 属性添加指定的前缀。|  
 |**ReplacementRoot(\*)**|在 ReportViewer 控件之外呈现时预置在报表中的所有钻取、切换和书签链接之前的字符串。 例如，可使用此设置将用户的单击操作重定向到某个自定义页。|  
 |**ResourceStreamRoot(\*)**|此字符串预置在所有图像资源的 URL 之前，如用于切换或排序的图像。|  
-|**部分**|要呈现的报表的页码。 值为 `0` 指示将呈现报表的所有部分。 默认值是 `1`。|  
+|**部分**|要呈现的报表的页码。 值为 `0` 指示将呈现报表的所有部分。 默认值为 `1`。|  
 |**StreamRoot (\*)**|一个路径，用于添加在由报表服务器返回的 HTML 报表中 IMG 元素的 **src** 属性的值之前。 默认情况下，报表服务器提供此路径。 可以使用此设置为报表中的图像指定根路径（例如， http://\<servername>/resources/companyimages）。|  
 |**StyleStream**|指示是否将样式和脚本创建为单独的流，而不是在文档中创建它们。 默认值是 `false`。|  
 |`Toolbar`|指示是显示还是隐藏工具栏。 此参数的默认值为 `true`。 如果此参数的值为 `false`，将忽略所有剩余的选项（文档结构图除外）。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。<br /><br /> 当您使用 URL 访问以呈现报表时，将呈现报表查看器工具栏。 此工具栏不通过 SOAP API 呈现。 然而，`Toolbar` 设备信息设置影响使用 SOAP `Render` 方法时显示报表的方式。 如果当使用 SOAP 呈现到 HTML 时，此参数的值为 `true`，则只呈现报表的第一部分。 如果值为 `false`，则整个 HTML 报表将呈现为单个 HTML 页。|  

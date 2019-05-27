@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.f1
@@ -13,12 +12,12 @@ ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fdd640d2772773e2acc634fed261b72389f971b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681084"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088292"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>计算（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的“计算”选项卡查看和编辑计算，包括所选多维数据集的计算成员、命名集和多维表达式 (MDX) 脚本命令。  
