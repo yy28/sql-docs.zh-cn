@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10526"
@@ -28,12 +27,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 35860cfd893342d76074b6d49d0417484672030c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 13a67a94f6478c085995142085a93fa85bb27d89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186195"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106706"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当您向报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  
@@ -46,7 +45,7 @@ ms.locfileid: "63186195"
   
  下表列出了 **“地图”** 窗格的工具栏图标：  
   
-|符号|描述|何时使用|  
+|符号|Description|何时使用|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|地图层向导|若要使用向导添加层，请单击 **“新建层向导”**。|  
 |![rs_IconMapAddLayer](../../tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|添加层|若要手动添加层，请单击 **“添加层”**，然后单击要添加的地图层类型。|  
