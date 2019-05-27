@@ -23,15 +23,15 @@ helpviewer_keywords:
 - marked transactions [SQL Server], SAVE TRANSACTION statement
 - duplicate savepoints
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5b3785f3237c2b30cd7d4d4d267a058324604319
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.openlocfilehash: 873a02649eea5fb709f7c61b3c16c4a8141c08ce
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951599"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980281"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 > [!IMPORTANT]  
 >  指定了 savepoint_name 的 ROLLBACK TRANSACTION 语句释放在保存点之后获得的任何锁，但升级和转换除外。 这些锁不会被释放，而且不会转换回先前的锁模式。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  

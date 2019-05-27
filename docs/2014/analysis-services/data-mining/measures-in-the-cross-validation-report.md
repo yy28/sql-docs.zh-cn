@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - root mean square error [data mining]
@@ -17,12 +16,12 @@ ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df327dbf712e82100ea0edb3c2943ade9d6e1b87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30f8daab91172863ba18c6b75529063555b61afc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62721919"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084161"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>交叉验证报表中的度量值
   在交叉验证过程中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构中的数据划分为多个交叉部分，然后对该结构和任何关联的挖掘模型反复进行测试。 基于此分析，它将为该结构和每个模型输出一组标准的准确性度量值。  

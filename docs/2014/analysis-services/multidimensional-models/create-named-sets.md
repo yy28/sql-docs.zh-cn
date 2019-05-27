@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - calculations [Analysis Services], named sets
@@ -15,12 +14,12 @@ ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc94dc4a23e952a81e33d98a1ba0c2cf2c5f9022
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700138"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076141"
 ---
 # <a name="create-named-sets"></a>创建命名集
   命名集是为重复使用而创建的一组维度成员或集表达式，例如用于多维表达式 (MDX) 查询中。 可以通过组合多维数据集数据、算数运算符、数字和函数来创建命名集。 例如，可以创建一个名为“前十位工厂”的命名集，它包含“工厂”维度中具有最高的“产量”度量值的十个成员。 然后最终用户可以在查询中使用“前十位工厂”。 例如，最终用户可以将“前十位工厂”放置在一个坐标轴上，将包含“产量”的“度量值”维度放置在另一个坐标轴上。 有关详细信息，请参阅[多维模型中的计算](calculations-in-multidimensional-models.md)和[在 MDX 中生成命名集 (MDX)](mdx/mdx-named-sets-building-named-sets.md)。  

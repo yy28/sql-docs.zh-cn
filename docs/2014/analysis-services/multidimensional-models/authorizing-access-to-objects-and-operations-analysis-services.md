@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
@@ -20,12 +19,12 @@ ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e19a2faf3bba980ff7329084c073cabb1f696c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726990"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077015"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>授予对对象和操作的访问权限 (Analysis Services)
   非管理用户对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内的多维数据集、维度和挖掘模型的访问权限可通过一个或多个数据库角色的成员身份获得。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员创建这些数据库角色，从而授予对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的读取或读/写权限，然后向每个角色分配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户和组。  

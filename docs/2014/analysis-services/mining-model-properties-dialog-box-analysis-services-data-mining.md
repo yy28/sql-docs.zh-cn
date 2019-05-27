@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.miningmodelproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 8a4f0fa1-afb2-46fd-a713-52ba1887e537
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d7c4a8d59a150e159a5eab99fbedd777a241b58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98d61d019aadeedadc673e1a8860ceb94d2ef96c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703270"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077685"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>“挖掘模型属性”对话框（Analysis Services - 数据挖掘）
   可以使用 **中的** “挖掘模型属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的挖掘模型的属性。 通过右键单击**对象资源管理器**中的挖掘模型，再选择“属性”，即可显示“挖掘模型属性”对话框。  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d272b3ea7efa7800c30518aa2ffb7b43bf7fccb7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280696"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012725"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>创建全文索引时选择语言
   创建全文索引时，需要为索引列指定列级语言。 所指定语言的 [断字符和词干分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md) 将由针对相应列的全文查询使用。 如果要在创建全文索引时选择列语言，有几个事项需要注意。 这些注意事项均与全文引擎如何对文本进行词汇切分再编制其索引有关。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4db6133a486e77369630dc717fab02b3be7f8e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729293"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079002"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>检查多维数据集和维度属性
   在定义多维数据集后，可以使用多维数据集设计器检查结果。 在下面的任务中，您将检查 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目中多维数据集的结构。  

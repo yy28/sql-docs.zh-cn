@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
@@ -14,12 +13,12 @@ ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736785"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073292"
 ---
 # <a name="processing-analysis-services-objects"></a>处理 Analysis Services 对象
   处理影响下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象类型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、多维数据集、维度、度量值组、分区、数据挖掘结构和模型。 对于每个对象，可以指定对象的处理级别，也可以指定“处理默认值”选项以允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择最优的处理级别。 有关每个对象的不同处理等级的详细信息，请参阅[处理选项和设置 (Analysis Services)](processing-options-and-settings-analysis-services.md)。  

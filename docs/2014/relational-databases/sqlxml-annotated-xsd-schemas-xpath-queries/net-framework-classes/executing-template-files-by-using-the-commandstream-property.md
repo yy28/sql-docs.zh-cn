@@ -12,15 +12,15 @@ helpviewer_keywords:
 - templates [SQLXML], SQLXML Managed Classes
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a4347b3cd3f9163eb13f76e1ae22e123b1026c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8f0d753c7e56f4ae90a2b156ee8d521518d0029a
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740677"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010913"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>使用 CommandStream 属性执行模板文件
   此示例说明了如何通过使用 CommandStream 属性 SqlXmlCommand 对象的指定 SQL 或 XPath 查询组成的模板文件。 在此应用程序，FileStreamobject 打开的命令文件，并指定文件流作为执行 CommandStream。  

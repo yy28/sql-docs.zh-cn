@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Source View Wizard
@@ -13,12 +12,12 @@ ms.assetid: 0f5057a3-2d3a-4966-8b61-99c4b8ec3433
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebdb15312f78b624a6bb908baa519da6b920307d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01074111cd4944f9b74137dd371e00343e37f15b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732767"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082508"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>数据源视图向导的 F1 帮助 (Analysis Services)
   使用数据源视图向导可以创建用于 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的以下商业智能项目的数据源视图：  

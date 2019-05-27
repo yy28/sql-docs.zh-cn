@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d7ab0a864d99e3cade96b7715adf7d307ca355c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729471"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079309"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 课：创建新的表格模型项目
   在本课中，您将在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中创建一个新的空白表格模型项目。 创建新项目之后，您可以使用表导入向导开始添加数据。 除了创建新项目之外，本课还简要介绍了 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的表格模型创作环境。  

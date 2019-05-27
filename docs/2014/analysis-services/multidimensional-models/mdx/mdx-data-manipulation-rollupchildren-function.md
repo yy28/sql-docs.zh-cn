@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
@@ -16,12 +15,12 @@ ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699765"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074268"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>使用 RollupChildren 函数 (MDX)
   多维表达式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [用于搜索和替换脚本] 函数汇总到每个子级应用不同的一元运算符的成员的子级，并返回一个数字作为此汇总值。 一元运算符可通过与子成员关联的成员属性提供，也可以是直接提供给函数的字符串表达式。  

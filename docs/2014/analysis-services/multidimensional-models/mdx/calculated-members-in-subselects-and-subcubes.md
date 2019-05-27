@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d4c7b695882605eacd19d61bf6fe2cc71d8a6048
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699841"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074785"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>嵌套 select 和子多维数据集中的计算成员
   在以前的版本中，在嵌套 select 或子多维数据集中不允许使用计算成员。 但从 SQL Server 2008 开始，在连接属性中允许使用和启用计算成员。 此外，在 SQL Server 2008 R2 的嵌套 select 和子多维数据集中，还引入了针对计算成员的一个新行为。  

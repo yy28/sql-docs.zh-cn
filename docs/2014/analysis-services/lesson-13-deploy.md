@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea979963906af46a1d032614ad6b398f70ef3483
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729453"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079142"
 ---
 # <a name="lesson-14-deploy"></a>第 14 课：部署
   在本课中，您将配置部署属性；同时指定在表格模式下运行的 Analysis Services 的部署服务器实例以及为您要部署的模型指定名称。 然后，将模型部署到该实例。 部署此模型之后，用户可以使用报表客户端应用程序连接到该模型。 若要了解详细信息，请参阅[表格模型解决方案部署（SSAS 表格）](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  

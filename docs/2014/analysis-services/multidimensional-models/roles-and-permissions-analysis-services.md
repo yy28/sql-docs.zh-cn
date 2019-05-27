@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], about security
@@ -14,12 +13,12 @@ ms.assetid: bb885447-868b-4686-853c-8241f63d4370
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc36b27bea2c546582cb167046affcc0fbd0d5a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f536ae91cde1301b9499b2d36957d25c877be9c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736581"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073063"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>角色和权限 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供基于角色的授权模型，该模型授予对操作、对象和数据的访问权限。 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例或数据库的所有用户都必须在某一角色范畴内执行操作。  

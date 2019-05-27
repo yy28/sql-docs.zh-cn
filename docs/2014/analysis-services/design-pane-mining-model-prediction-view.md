@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
@@ -13,12 +12,12 @@ ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732123"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081853"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>“设计”窗格（“挖掘模型预测”视图）
   **“设计”** 窗格包含可用于生成数据挖掘预测的预测查询生成器。 您可以设计使用数据源视图中的输入数据表的预测查询来生成大量预测，也可以创建允许您提供各个值的单独预测查询。  

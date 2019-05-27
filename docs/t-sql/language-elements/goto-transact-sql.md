@@ -19,15 +19,15 @@ helpviewer_keywords:
 - statements [SQL Server], skipping
 - GOTO statement
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d171b3907a5fc4b03efba41d4ab1574dc683aeb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29c244eb502a7731f7ff45d0ff586dc49310afdf
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753505"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982296"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ GOTO label
 ## <a name="remarks"></a>Remarks  
  GOTO 可出现在条件控制流语句、语句块或过程中，但它不能跳转到该批以外的标签。 GOTO 分支可跳转到定义在 GOTO 之前或之后的标签。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  GOTO 语句的权限默认情况下授予任何有效用户。  
   
 ## <a name="examples"></a>示例  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680122"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086971"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>复制并粘贴数据（SSAS 表格）
   可以从外部应用程序复制表数据并将它粘贴到模型设计器中的新表或现有表。 从剪贴板粘贴的数据必须是 HTML 格式，例如，从 Excel 或 Word 中复制的数据。 模型设计器将对粘贴数据自动检测并应用数据类型。 您也可以手动修改列的数据类型或显示格式。  

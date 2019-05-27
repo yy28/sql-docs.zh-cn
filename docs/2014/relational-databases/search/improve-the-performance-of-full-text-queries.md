@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353013"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011268"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
   下面列出了有助于提高全文查询性能的建议。  
@@ -48,7 +48,7 @@ ms.locfileid: "53353013"
 -   对于包含选择性关系谓词的应用程序，如果将使用选择性关系谓词和非选择性全文谓词的查询编写成使用查询优化器，则这样的查询可能会有最佳性能。 这将允许查询优化器决定它是否可以利用谓词或范围下推来生成有效的查询计划。 与将关系数据作为全文数据建立索引相比，此方法更简单，通常也更有效。  
   
 ## <a name="related-resources"></a>相关资源  
- [SQL Server 2008 全文搜索：内部机制和增强功能](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 Full-Text Search:Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544)（SQL Server 2008 全文搜索：内部机制和增强功能）  
   
 ## <a name="see-also"></a>请参阅  
  [sys.dm_fts_memory_buffers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

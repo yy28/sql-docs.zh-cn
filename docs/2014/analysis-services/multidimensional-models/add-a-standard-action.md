@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 408f92b86cdfdd148ea11ca49b6ba540b0f4cf86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727401"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077473"
 ---
 # <a name="add-a-standard-action"></a>添加标准操作
   您可以通过在多维数据集设计器中使用“操作”视图，向数据库添加操作。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问该“操作”视图。 在您创建了某一操作后，该操作可在您重新处理相关的多维数据集后供用户使用。 有关详细信息，请参阅 [Processing Analysis Services Objects](processing-analysis-services-objects.md)。  
@@ -53,7 +52,7 @@ ms.locfileid: "62727401"
         |数据集|检索数据集。|  
         |专有|使用除此表列出的这些类型以外的其他接口执行操作。|  
         |行集|检索行集。|  
-        |。|运行 OLE DB 命令。|  
+        |声明专用纸|运行 OLE DB 命令。|  
         |URL|在 Internet 浏览器中显示网页。|  
   
     -   在 **“操作表达式”** 中，创建定义操作的表达式。 表达式的计算结果必须为字符串。 您可以手动键入表达式，或者可以从 **“元数据”** 和 **“函数”** 选项卡中拖动项。  

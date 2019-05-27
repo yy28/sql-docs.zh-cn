@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f7564a37766972782a5c118ced64298b7f4ce076
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209276"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105591"
 ---
 # <a name="managing-report-parts"></a>管理报表部件
   开头[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，报表部件可以发布到报表服务器和重复使用在其他报表中以及由其他用户，如果他们具有适当的权限。  
@@ -52,10 +51,10 @@ ms.locfileid: "63209276"
   
  (*) 表明它是在此版本中新推出的。  
   
-|属性|描述|报表部件<br /><br /> 库搜索条件|  
+|属性|Description|报表部件<br /><br /> 库搜索条件|  
 |--------------|-----------------|---------------------------------------------|  
 |“属性”|这是用户可在报表部件库中搜索的条件之一。|是|  
-|描述|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|是|  
+|Description|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|是|  
 |CreatedBy|将报表部件添加到了报表服务器数据库的用户的 ID。 确切格式取决于身份验证方法。 例如，某些身份验证方法将导致 CreatedBy 和 ModifiedBy 字段中显示完整的“域\用户名”。|是|  
 |CreationDate|最初创建报表部件的日期。<br /><br /> 这是用户可在报表部件库中搜索的条件之一。|是|  
 |ModifiedBy|ModifiedBy 是上次修改报表部件的用户的 ID。|是|  

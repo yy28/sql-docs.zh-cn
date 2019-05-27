@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
@@ -17,12 +16,12 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729065"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077591"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>操作（Analysis Services - 多维数据）
   操作可以具有不同的类型，因而必须相应地进行创建。 操作可为：  
@@ -66,7 +65,7 @@ ms.locfileid: "62729065"
 |专有|使用除此表列出的这些类型以外的其他接口执行操作。|  
 |报告|将基于参数化 URL 的请求提交到报表服务器，并将报表返回到客户端应用程序。|  
 |行集|将行集返回到客户端应用程序。|  
-|。|运行 OLE DB 命令。|  
+|声明专用纸|运行 OLE DB 命令。|  
 |URL|在 Internet 浏览器中显示动态网页。|  
   
 ## <a name="resolving-and-executing-actions"></a>解析并执行操作  

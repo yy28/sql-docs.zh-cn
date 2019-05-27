@@ -1,24 +1,28 @@
 ---
-title: 演练：设置 SQL Server Integration Services Scale Out | Microsoft Docs
+title: 演练：安装 SQL Server Integration Services Scale Out | Microsoft Docs
 description: 本文将引导你完成 SSIS Scale Out 的设置和配置
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4f68e562884073761303b2450956ae4ebaca66ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e566c31f03284660456f7a96f2d19adc32bf4404
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620565"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012938"
 ---
-# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>演练：设置 Integration Services (SSIS) Scale Out
+# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>演练：安装 Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 通过完成以下任务，设置 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out。 
 
 > [!TIP]
@@ -73,7 +77,7 @@ ms.locfileid: "47620565"
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>从命令提示符安装 Scale Out Master
 
-按照[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的说明操作。 执行以下操作，为 Scale Out Master 设置参数：
+按照 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)中的说明操作。 执行以下操作，为 Scale Out Master 设置参数：
  
 1.  将 `IS_Master` 添加到参数 `/FEATURES`
 
@@ -128,7 +132,7 @@ ms.locfileid: "47620565"
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>从命令提示符安装 Scale Out Worker
 
-按照[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的说明操作。 执行以下操作，为 Scale Out Worker 设置参数：
+按照 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)中的说明操作。 执行以下操作，为 Scale Out Worker 设置参数：
 
 1.  将 IS_Worker 添加到参数 `/FEATURES`。
 
@@ -139,13 +143,13 @@ ms.locfileid: "47620565"
     -   `/ISWORKERSVCMASTER`（可选）
     -   `/ISWORKERSVCCERT`（可选）
  
-## <a name="InstallCert"></a> 装 Scale Out Worker 客户端证书
+## <a name="InstallCert"></a> 安装 Scale Out Worker 客户端证书
 
 在 Scale Out Worker 安装期间，将在计算机上自动创建并安装辅助角色证书。 此外，将在 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 之下安装相应的客户端证书 SSISScaleOutWorker.cer。 对于用于对 Scale Out Worker 进行身份验证的 Scale Out Master，必须将此客户端证书添加到具有 Scale Out Master 的本地计算机的根存储中。
   
 要将客户端证书添加到根存储，可双击 .cer 文件，然后单击“证书”对话框中的“安装证书”。 这将打开“证书导入向导”。  
 
-## <a name="Firewall"></a>打开防火墙端口
+## <a name="Firewall"></a> 打开防火墙端口
 
 在 Scale Out Master 计算机上的 Windows 防火墙中，打开在 Scale Out Master 安装期间指定的端口和 SQL Server 端口（默认为 1433）。
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - EXISTING
@@ -15,12 +14,12 @@ ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ceaeac711ed30028dab3bc09827df9b6ae1f0e0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725351"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073969"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING 关键字 (MDX)
   强制在当前上下文中计算所指定的集。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic cell properties [MDX]
@@ -16,12 +15,12 @@ ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a8b302391eb4e7384a54181b102f4ae8f3de522
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700612"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074343"
 ---
 # <a name="using-cell-properties-mdx"></a>使用单元属性 (MDX)
   多维表达式 (MDX) 中的单元属性包含有关多维数据源（如多维数据集）中的单元的内容和格式的信息。  

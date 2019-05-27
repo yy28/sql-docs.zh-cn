@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731754"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081562"
 ---
 # <a name="dmx-templates"></a>DMX 模板
   数据挖掘模板可帮助您快速生成复杂的查询。 虽然 DMX 查询的常规语法具有详细说明，但借助于这些模板，可通过单击并且指向参数和数据源，更轻松地生成查询。  

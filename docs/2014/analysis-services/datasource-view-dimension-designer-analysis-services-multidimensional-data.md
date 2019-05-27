@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
@@ -13,12 +12,12 @@ ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 989b84d027db5dc1f5956aab6e2e4fec84ae6461
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732538"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082349"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>数据源视图（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“数据源视图”** 窗格，查看与所选维度关联的数据源视图中的表和列。 使用此窗格，可以通过将列从 **“数据源视图”** 窗格中拖动到 **“属性”** 窗格或 **“层次结构和级别”** 窗格中，来创建特性、成员属性、层次结构和级别。  

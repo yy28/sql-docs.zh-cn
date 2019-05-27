@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d5d1b3d68038843e15717564e25cb88c181c2bda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729971"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080326"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>使用 SSIS 自动执行 Analysis Services 管理任务
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持您自动执行 DDL 脚本、多维数据集和挖掘模型处理任务以及数据挖掘查询任务。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可被视为控制流和维护任务（这些任务可链接起来以形成顺序和并行执行的数据处理作业）的集合。  

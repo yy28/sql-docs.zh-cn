@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuredialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 86dc9146-cc6d-4cef-b178-9a6b4cf616e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3124f6f173a0e232ad7943188baae0cbbb1bfcd9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743663"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072343"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>“新建度量值”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “新建度量值” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在多维数据集设计器的度量值组中添加新度量值。 通过执行以下操作之一，可以显示 **“新建度量值”** 对话框：  

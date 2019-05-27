@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - slicer axis
@@ -14,12 +13,12 @@ ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 745d7dc7682c06b776dca3df6a69fb8e235c1d27
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12e2d2f543694a1da418f5e8eb4b900eaa123d97
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725331"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074063"
 ---
 # <a name="specifying-the-contents-of-a-slicer-axis-mdx"></a>指定切片器轴的内容 (MDX)
   切片器轴将对多维表达式 (MDX) SELECT 语句返回的数据进行筛选，限定返回的数据，从而只返回与指定成员相关的数据。 可以将其看成是在查询中不可见的多余的轴。 切片器轴是在 MDX 中 SELECT 语句的 WHERE 子句中定义的。  

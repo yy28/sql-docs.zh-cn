@@ -14,12 +14,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 581f6ee7daf4a208072b560c744e680ccfc5009e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3074eb04df91d5284d5943b09a9c7c59bd9ef6f2
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872037"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983153"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中数据库引擎功能的重大更改
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,13 @@ ms.locfileid: "58872037"
   
 -   `sys.fn_virtualfilestats` 的 TimeStamp 列已从 int 扩展到 bigint 数据类型。  
 
--   MD2、MD4、MD5、SHA 和 SHA1 算法在兼容性级别 130 下不可用。 不建议使用 MD2、MD4、MD5、SHA 或 SHA1 哈希算法，但可将数据库兼容性级别的值设置为 130 以下。  
-
 -   在数据库兼容级别 130 以下，通过考虑导致不同转换值的毫秒小数部分，从 **datetime** 到 **datetime2** 数据类型的隐式转换显得更加准确。 只要 datetime 和 datetime2 数据类型之间存在混合比较情况，就需要使用 datetime2 数据类型的隐式转换。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4010261)。
 
 -   数据库兼容性级别为 130 时，在某些数字和日期时间数据类型之间执行隐式转换的操作显示出更高的准确性，并且可能导致不同的转换值。 这包括使用需要计算的函数，例如，`DATEDIFF` 和 `ROUND`。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4010261)。
 
 ## <a name="previous-versions"></a> 先前版本  
 
-有关 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和一些早期版本中重大更改的信息，请参阅”SQL Server 2014 中数据库引擎功能的重大更改”。
+有关 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和一些早期版本中重大更改的信息，请参阅 [SQL Server 2014 中数据库引擎功能的重大更改](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)。
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>较早版本的 SQL Server 的存档文档
 

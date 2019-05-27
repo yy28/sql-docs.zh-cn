@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Wizard
@@ -13,12 +12,12 @@ ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2c5f2d0cb6a12ad4d9c879633c97365d15b0287
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731828"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081661"
 ---
 # <a name="dimension-wizard-f1-help"></a>维度向导的 F1 帮助
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的维度向导，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中创建数据库维度。 创建数据库维度后，可以使用维度设计器修改其属性。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  

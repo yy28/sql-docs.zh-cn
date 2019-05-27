@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitionspane.measuregroupdetail.f1
@@ -13,12 +12,12 @@ ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ffd5b3ff4eb98c96e1832e353e64f1953bd62e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727983"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077908"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>度量值组（“分区”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“分区”** 选项卡上的 **“度量值组”** 窗格，管理与多维数据集中的各个度量值组关联的分区。  

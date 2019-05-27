@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ad91ac53d2ff041c3da32fd9a609e67e8b9d1c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730827"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080353"
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services 实例管理
   Analysis Services 的实例是作为操作系统服务运行的 `msmdsrv.exe` 可执行程序的副本。 每个实例完全独立于同一服务器上的其他实例，且有自己的配置设置、权限、端口、启动帐户、文件存储和服务器模式属性。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
@@ -13,12 +12,12 @@ ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679745"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086619"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>“交叉验证”选项卡（“挖掘准确性图表”视图）
   通过使用交叉验证，可以将挖掘结构分区为交叉部分，并针对每个交叉部分循环定型和测试模型。 您可以指定要将数据划分成多少个折叠，每个折叠反过来会用作测试数据，而其余的数据用于为新模型定型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 然后为每个模型生成一组标准准确性指标。 通过比较为每个交叉部分生成的模型的指标，可以清楚地了解挖掘模型对于整个数据集的可靠程度。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.specifyobject.f1
@@ -13,12 +12,12 @@ ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90773f9a7ccf7e1e34cc81f761b7a9849144d4a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732771"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082380"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>来自现有对象的数据源（数据源向导）(Analysis Services)
   可以使用 **“来自现有对象的数据源”** 页，指定新数据源基于的现有数据源或项目。  

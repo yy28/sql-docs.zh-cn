@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f1a82b21716db66c4eb2676ed51160519f99afd7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120194"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982792"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性组仪表板 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "49120194"
 -   同步模式和状态    
 -   还原日志所需的时间  
   
-##  <a name="before-you-begin"></a>开始之前  
   
-### <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必备条件  
  您必须连接到承载可用性组的主副本或辅助副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（服务器实例）。  
   
-### <a name="security"></a>Security  
-  
-#### <a name="permissions"></a>Permissions  
+ 
+### <a name="permissions"></a>权限  
  需要 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 权限。  
   
 ##  <a name="to-start-the-always-on-dashboard"></a>启动 Always On 仪表板  
@@ -56,12 +54,12 @@ ms.locfileid: "49120194"
   
 2.  展开“AlwaysOn 高可用性”节点，右键单击“可用性组”节点，然后单击“显示面板”。  
   
-###  <a name="change-always-on-dashboard-options"></a>更改 Always On 仪表板选项  
+##  <a name="change-always-on-dashboard-options"></a>更改 Always On 仪表板选项  
  可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“选项”对话框配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 面板行为，使其自动刷新和启用自动定义的 AlwaysOn 策略。  
   
-1.  从 **“工具”** 菜单中，单击 **“选项”**。  
+1.  从 **“工具”** 菜单中，单击 **“选项”** 。  
   
-2.  若要自动刷新面板，在 **“选项”** 对话框中，选择 **“启用自动刷新”**，输入以秒计的刷新间隔，然后输入要重试连接的次数。  
+2.  若要自动刷新面板，在 **“选项”** 对话框中，选择 **“启用自动刷新”** ，输入以秒计的刷新间隔，然后输入要重试连接的次数。  
   
 3.  若要启用用户定义的策略，请选择“启用用户定义的 Always On 策略”。  
   
@@ -191,7 +189,7 @@ ms.locfileid: "49120194"
 >  有关可用性副本的性能计数器的信息，请参阅 [SQL Server，可用性副本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
 ##  <a name="group-by-availability-group-information"></a>按可用性组信息分组  
- 若要对信息进行分组，请单击 **“分组依据”**，并选择下列选项之一：  
+ 若要对信息进行分组，请单击 **“分组依据”** ，并选择下列选项之一：  
   
 -   **可用性副本**    
 -   **可用性数据库** 
@@ -216,8 +214,7 @@ ms.locfileid: "49120194"
     -   对于辅助数据库，指示数据库由于连接问题而未开始日志同步，正被挂起，或者在启动或角色切换过程中正在转换状态。  
   
 -   **正在同步**：
--   
-     在主副本上：   
+- 在主副本上：   
     - 在主数据库上，指示此数据库已做好接受来自辅助数据库的扫描请求的准备。  
     - 在辅助副本上，指示存在为该辅助数据库进行的处于活动状态的数据移动。 
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - translations [Analysis Services], client applications
@@ -17,12 +16,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b94579317abf51f8545bce687ef6a8a882e7233
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730804"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080862"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化提示和最佳实践 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多维  
@@ -69,7 +68,7 @@ ms.locfileid: "62730804"
   
      在中国和新加坡，Microsoft 技术支持部门通常见到的是简体中文，简体中文以拼音作为首选的排序方式。 建议使用的排序规则是 Chinese_PRC（用于 SQL Server 2000）、Chinese_PRC_90（用于 SQL Server 2005）或 Chinese_Simplified_Pinyin_100（用于 SQL Server 2008 和更高版本）。  
   
-     在台湾，它是更常见繁体中文使用建议的排序顺序基于笔画数：Chinese_Taiwan_Stroke （用于 SQL Server 2000)、 Chinese_Taiwan_Stroke_90 （用于 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 （用于 SQL Server 2008 和更高版本）。  
+     在中国台湾地区，它是更常见繁体中文使用建议的排序顺序基于笔画数：Chinese_Taiwan_Stroke （用于 SQL Server 2000)、 Chinese_Taiwan_Stroke_90 （用于 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 （用于 SQL Server 2008 和更高版本）。  
   
      其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在中国澳门，较常使用的是 Chinese_Traditional_Stroke_Count_100（在 SQL Server 2008 和更高版本上）。  
   

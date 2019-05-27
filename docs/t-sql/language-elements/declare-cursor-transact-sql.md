@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801631"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982530"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ FOR UPDATE [OF column_name [,...n]]
   
  在声明游标的 select_statement 中可以使用变量。 游标变量值在声明游标后不发生更改。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  `DECLARE CURSOR` 的权限默认授予对游标中使用的视图、表和列具有 `SELECT` 权限的任何用户。
  
 ## <a name="limitations-and-restrictions"></a>限制和局限

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpiorganizerpane.f1
@@ -13,12 +12,12 @@ ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03395f35d42ee8ec3d4a69345d509432fbcdd485
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729633"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079396"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 组织程序（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器的“KPI”选项卡中的“KPI 组织程序”窗格，访问和重新排列指定的多维数据集中包含的关键绩效指标 (KPI)。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data sources
@@ -17,12 +16,12 @@ ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740903"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072859"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>数据源受支持 (SSAS 多维)
   本主题介绍可以在多维模型中使用的数据源的类型。  

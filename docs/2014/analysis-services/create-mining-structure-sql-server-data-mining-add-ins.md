@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
@@ -13,12 +12,12 @@ ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679901"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086820"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>创建挖掘结构（SQL Server 数据挖掘外接程序）
   ![创建挖掘结构按钮，数据挖掘功能区](media/dmc-createstruct.gif "创建挖掘结构按钮、 数据挖掘功能区")  

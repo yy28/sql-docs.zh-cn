@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - process data option [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b832da95e823966af1c8d259087721119eed85e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe4851712f56acd5d23e8762584968b1cecad03c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736956"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073219"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>处理选项和设置 (Analysis Services)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中处理对象时，您可以选择处理选项以控制每个对象的处理类型。 处理类型因对象而异，并基于自上次处理对象后对象所发生的更改。 如果启用了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择处理方法，则将使用以最少时间将对象返回已完全处理状态的方法。  

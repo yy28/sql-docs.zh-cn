@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.hierarchieslevelspane.f1
@@ -13,12 +12,12 @@ ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 819d073ba286f0674dc3470a7e8d9d6469318b7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730714"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080788"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>层次结构（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“层次结构”** 窗格管理当前所选维度的层次结构和级别。 有关详细信息，请参阅 [创建用户定义层次结构](multidimensional-models/user-defined-hierarchies-create.md)。  

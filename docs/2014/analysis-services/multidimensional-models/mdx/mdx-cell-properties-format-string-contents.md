@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -17,12 +16,12 @@ ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7035fb90d9cc84743fc484e020efd6a19a217a4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b80cfeae2957753cfe96d54dcbe0052e19db741
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725411"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074464"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING 内容 (MDX)
   `FORMAT_STRING` 单元属性格式化 `VALUE` 单元属性以生成 `FORMATTED_VALUE` 单元属性的值。 `FORMAT_STRING` 单元属性可以处理字符串和数字原始值，它对该值应用格式表达式以返回 `FORMATTED_VALUE` 单元属性的格式化值。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  

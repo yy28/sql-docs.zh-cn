@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - filtering rules [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 509f9f08449499e2cf4bd155aa468b165fb9a689
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722479"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084409"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>筛选关联规则模型中的规则
   您可以将筛选与关联模型一起使用来限制结果，使其仅包含您感兴趣的关联。 例如，您可以筛选规则，以便仅显示包含特定产品的规则。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitiondesigner.writebackenabledisable.f1
@@ -13,12 +12,12 @@ ms.assetid: 2d254393-3f0d-4b70-8b98-87159f9f3639
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6682d8ced6b80e12aea783857da548498641ddd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 498d1af6f96791b9ee3912c09a3667e139f30ff0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731499"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081289"
 ---
 # <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>启用 / 禁用写回对话框 (Analysis Services-多维数据)
   可以使用“启用/禁用写回”对话框，为多维数据集中的度量值组启用或禁用写回。 对度量值组启用写回将定义一个写回分区，并为该度量值组创建一个写回表。 对度量值组禁用写回将删除写回分区（但不会删除写回表），以免发生意外数据丢失。 通过执行以下操作可以显示“启用/禁用写回”对话框：  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.drillthrough.f1
@@ -13,12 +12,12 @@ ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731546"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081487"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>“钻取”对话框（挖掘模型查看器）
   在使用数据挖掘设计器的 **“挖掘模型查看器”** 选项卡查看挖掘模型时，可以钻取到有关事例数据的详细信息（假定模型已启用钻取功能）。 而且，如果基础挖掘结构已启用钻取功能，则还可以查看挖掘结构中的列，即使挖掘模型中没有包含这些列也是如此。 在列列表中，结构列的前缀为标签 “Structure”。  

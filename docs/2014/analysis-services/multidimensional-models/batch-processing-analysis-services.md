@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58b0ea08b09e62881de6cef073ae931ecb598978
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701211"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076943"
 ---
 # <a name="batch-processing-analysis-services"></a>批处理 (Analysis Services)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用批处理命令在单个请求中向服务器发送多个处理命令。 通过批处理，您可以控制以什么顺序来处理哪些对象。 此外，批可以作为一系列独立作业运行，也可以作为一个事务运行，如果事务中的某个进程失败，则会导致整批回滚。  

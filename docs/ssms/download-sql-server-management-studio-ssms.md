@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: f5769ea232a554e8dffab197cdb7ac5b09968413
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: a9fbef681f2b6202c973f31c8c7dd4489133556a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65102810"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993923"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,15 +105,11 @@ SSMS 18.0 (GA) 是最新版本的 SQL Server Management Studio。 SSMS 的 18.x 
 
 - 当客户帐户属于多个租户时，“SSIS Integration Runtime 创建向导”仅显示一个租户下的 SQL 数据库。
 
-## <a name="previous-releases"></a>以前的版本
+## <a name="previous-ssms-releases"></a>SSMS 的早期版本
 
 [旧版 SQL Server Management Studio](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
-## <a name="feedback"></a>反馈
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 客户端工具论坛](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
-
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
 ## <a name="see-also"></a>另请参阅
 
@@ -123,5 +119,3 @@ SSMS 18.0 (GA) 是最新版本的 SQL Server Management Studio。 SSMS 的 18.x 
 - [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-如果你有意见或建议，或想报告问题，最好是通过 [UserVoice](https://aka.ms/sqlfeedback) 与 SSMS 团队取得联系。

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729353"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078783"
 ---
-# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>第 3 课：修改度量值、 属性和层次结构
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>第 3 课：修改度量值、属性和层次结构
   在定义初始多维数据集后，即可开始提高多维数据集的有用性和友好性。 您可以通过添加在不同级别支持导航和聚合的层次结构、通过将格式应用于特定的度量值以及通过定义计算和关系，实现上述目的。  
   
 > [!NOTE]  

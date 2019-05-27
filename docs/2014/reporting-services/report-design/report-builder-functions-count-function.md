@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4e1aaede74e9c9aa693a80149eebdc5aabb069ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3009eb9a341cb0881cdade4f927955d953c6fcfb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216217"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105288"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 函数（报表生成器和 SSRS）
   返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。  
@@ -63,7 +62,7 @@ Count(expression, scope, recursive)
   
  示例  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  下面的代码示例显示一个表达式，该表达式为默认作用域和父组作用域计算 `Size` 的非 Null 值数。 该表达式将添加至属于子组 `GroupbySubcategory`的行的某个单元格中。 父组是 `GroupbyCategory`。 该表达式显示 `GroupbySubcategory` （默认作用域）和 `GroupbyCategory` （父组作用域）的结果。  
   
 > [!NOTE]  
