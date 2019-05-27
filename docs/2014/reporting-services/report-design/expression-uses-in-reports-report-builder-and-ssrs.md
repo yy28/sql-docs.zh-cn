@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
@@ -13,12 +12,12 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6f77a2ecf9ed5a985efa4a36f18b9f495c7091f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 13fd93468fafb99a5bd2869c207496b21dcb8174
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240715"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105896"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>在报表中使用表达式（报表生成器和 SSRS）
   可以在整个报表定义中使用表达式来指定或计算以下各项的值：参数、查询、筛选器、报表项属性、分组和排序定义、文本框属性、书签、文档结构图、动态页眉和页脚内容、图像以及动态数据源定义。 本主题提供了一些可在其中使用表达式更改报表内容或外观的示例。 此列表并不全面。 可以在显示表达式 (fx) 按钮的对话框中或在显示“\<Expression...>”的下拉列表中设置表达式的任何属性。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - large reports
@@ -18,12 +17,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9ef488e088a9101e46b3c203ef6f3ca519dc3aec
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946453"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103540"
 ---
 # <a name="report-and-snapshot-size-limits"></a>报表和快照的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理员可以通过本主题提供的信息了解在将报表发布到报表服务器、运行时呈现报表以及将报表保存到文件系统时报表的大小限制。 本主题还提供了有关如何度量报表服务器数据库大小的实践指南，并介绍了快照大小对服务器性能的影响。  

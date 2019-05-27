@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0c84c1c87aa492ebc0643a72de863504eec883c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63154779"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107789"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
   当您创建报表时，经常预览报表以验证报表显示您所需的内容会非常有用。 若要预览报表，请单击 **“运行”**。 报表将在预览模式下呈现。  

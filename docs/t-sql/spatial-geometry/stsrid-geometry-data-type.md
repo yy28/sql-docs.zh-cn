@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STSrid (geometry Data Type)
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 74cbd1d34ba7503881c8c9ab424be67edc02588c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 947d30eeee473388ea457910cafbbf4dc831f4e6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652535"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938238"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ STSrid
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：int  
   
- CLR 类型：SqlInt32  
+ CLR 类型：**SqlInt32**  
   
 ## <a name="examples"></a>示例  
  第一个示例创建 SRID 值为 13 的 geometry 实例并使用 `STSrid` 确认该 SRID。  

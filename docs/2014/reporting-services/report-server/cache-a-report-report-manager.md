@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
@@ -17,12 +16,12 @@ ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 085294763f9e950070ebe1468f3af1b4b9049aad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec41aae3ada2281fab9b75517ecf75def517e1be
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010683"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104239"
 ---
 # <a name="cache-a-report-report-manager"></a>如何缓存一个报表（报表管理器）
   提高性能的一种方法是配置报表的缓存属性。 缓存报表后，会在一段时间内保存已呈现报表的副本。 请求该报表的第一个用户必须等到所有处理全部完成后才能查看报表。 以后在缓存期间请求该报表的用户可以立即查看它，因为处理已经完成。  
@@ -43,7 +42,7 @@ ms.locfileid: "63010683"
   
 6.  选择以下两个缓存选项之一，并配置过期时间：  
   
-    -   若要配置的缓存的副本在特定时间段后过期，请单击**缓存报表的临时副本。在数分钟之后使报表副本过期”**。 键入报表过期所需的分钟数。  
+    -   若要将缓存副本配置为在特定时间段后过期，请单击**缓存报表的临时副本。在数分钟之后使报表副本过期”**。 键入报表过期所需的分钟数。  
   
     -   若要将缓存副本配置为按计划过期，请单击“缓存报表的临时副本。按下列计划使报表副本过期。” 单击 **“配置”**，或选择一个共享计划以控制报表过期时间。  
   

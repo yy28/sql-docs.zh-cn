@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,12 +17,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77ce77a2c42944a881942d4ee953183a68f5bbd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d994fa563870f01f4a9ca8824b5372587eca804b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191179"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103699"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>MSRS 2014 Web Service SharePoint Mode 性能对象和 MSRS 2014 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）
   本主题介绍作为 `MSRS 2014 Web Service SharePoint Mode` SharePoint 模式部署一部分的 `MSRS 2014 Windows Service SharePoint Mode` 性能对象和 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 性能对象的性能计数器。  
@@ -48,7 +47,7 @@ ms.locfileid: "63191179"
   
  下表列出了 `MSRS 2014 Web Service SharePoint Mode` 性能对象中包含的计数器。  
   
-|计数器|描述|  
+|计数器|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|活动会话的数目。 此计数器提供报表执行生成的所有浏览器会话的累积数，而不管这些会话是否仍处于活动状态。<br /><br /> 删除会话记录后，此计数器的计数即会相应减少。 默认情况下，如果会话在 10 分钟之内无任何活动，就会被删除。|  
 |`Cache Hits/Sec`|每秒请求缓存报表的次数。 这些请求是对重新呈现的报表的请求，而不是对直接从缓存处理的报表的请求。 （请参阅本主题稍后部分中的 `Total Cache Hits`。）|  
@@ -78,7 +77,7 @@ ms.locfileid: "63191179"
   
  下表列出了 `MSRS 2014 Windows Service SharePoint mode` 性能对象中包含的计数器。  
   
-|计数器|描述|  
+|计数器|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|存储在报表服务器数据库中的活动会话数。 此计数器提供报表订阅生成的所有可用浏览器会话的累积数，而不管这些会话是否仍处于活动状态。|  
 |`Alerting: event queue length`||  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd13835d00fc86b8acd98bdab33ff2612834c360
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933574"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104232"
 ---
 # <a name="application-domains-for-report-server-applications"></a>报表服务器应用程序的应用程序域
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，报表服务器作为一个包含报表服务器 Web 服务、报表管理器和后台处理应用程序的服务来实现。 每个应用程序都在单个报表服务器进程中其各自的应用程序域中运行。 在大多数情况下，应用程序域是在内部创建、配置和管理的。 但是，如果要研究性能或内存问题并排除服务中断故障，则了解如何针对报表服务器应用程序域执行回收操作会非常有帮助。  

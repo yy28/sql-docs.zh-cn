@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: effd50dc38610b4a3f059df8609cb9279e268b13
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 624681d8f784d3169b1f5e17a34daef99a71459b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461092"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105379"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>呈现行为（报表生成器和 SSRS）
   根据选择的呈现器，呈现报表时，将针对表体及其内容应用特定的规则。 报表项在页面上的呈现方式由以下因素综合确定：  

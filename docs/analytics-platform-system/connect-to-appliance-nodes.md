@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134388"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186796"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>连接到分析平台系统中的设备节点
 此文章介绍了连接到分析平台系统设备的每个节点的各种方法。  
@@ -26,6 +26,9 @@ ms.locfileid: "63134388"
 可直接访问每个设备节点仅在特定应用场景下，由特定用户类型。 下表列出了每个设备节点以及在其下的用户将直接连接到该节点的方案。  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
+
+> [!WARNING]  
+> 更改数据库或表设置，而无需明确许可的产品团队或 AP 客户支持团队的控件或计算节点上可能会导致不支持将 APS 设备。
   
 |||  
 |-|-|  

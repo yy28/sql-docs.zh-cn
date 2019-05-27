@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d0d32084abfb744c2c5f9fdf6f585c7713e3057d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224721"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107209"
 ---
 # <a name="manage-shared-datasets"></a>管理共享数据集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共享数据集从连接到外部数据源的共享数据源中检索数据。 共享数据集提供可共享查询的方法，以便为多个报表提供一组一致的数据。 数据集查询可以包括数据集参数。 您可以配置共享数据集，以便在首次使用时或通过指定计划为特定的参数组合缓存查询结果。 您可以将共享数据集缓存与报表缓存和报表数据馈送结合使用，以便管理对数据源的访问。  

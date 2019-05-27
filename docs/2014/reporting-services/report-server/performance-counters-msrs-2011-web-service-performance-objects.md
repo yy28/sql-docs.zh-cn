@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,12 +17,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7d28e597d36305b9c4df7c8b4a499dc507b1ed31
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 248adc8dcbf3f3c016ff861be124ccde9e461db5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191205"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103705"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 Web Service 和 MSRS 2014 Windows Service 性能对象的性能计数器（本机模式）
   本主题介绍 `MSRS 2014 Web Service` 和 `MSRS 2014 Windows Service` 性能对象的性能计数器  
@@ -50,7 +49,7 @@ ms.locfileid: "63191205"
   
  下表列出了 `MSRS 2014 Web Service` 性能对象中包含的计数器。  
   
-|计数器|描述|  
+|计数器|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|活动会话的数目。 此计数器提供报表执行生成的所有浏览器会话的累积数，而不管这些会话是否仍处于活动状态。<br /><br /> 删除会话记录后，此计数器的计数即会相应减少。 默认情况下，如果会话在 10 分钟之内无任何活动，就会被删除。|  
 |`Cache Hits/Sec`|每秒请求缓存报表的次数。 这些请求是对重新呈现的报表的请求，而不是对直接从缓存处理的报表的请求。 （请参阅本主题稍后部分中的 `Total Cache Hits`。）|  
@@ -80,7 +79,7 @@ ms.locfileid: "63191205"
   
  下表列出了 `MSRS 2014 Windows Service` 性能对象中包含的计数器。  
   
-|计数器|描述|  
+|计数器|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|存储在报表服务器数据库中的活动会话数。 此计数器提供报表订阅生成的所有可用浏览器会话的累积数，而不管这些会话是否仍处于活动状态。|  
 |`Cache Flushes/Sec`|每秒刷新的缓存数。|  

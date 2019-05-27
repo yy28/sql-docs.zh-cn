@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce182fda15373e15baffcda73cc777c2cf154065
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0becc3627ee54158b8beed7c888698c9052ab1b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63207203"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106499"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>向 Tablix 数据区域添加数据（报表生成器和 SSRS）
   若要在表或矩阵中显示报表数据集中的数据，请在每个数据单元中，指定要显示的数据集字段的名称。 可以显示详细信息数据或分组数据。 如果将组添加到表或矩阵中，则会自动添加组值和组数据的行和列。 然后，可以为数据添加小计和总计。  

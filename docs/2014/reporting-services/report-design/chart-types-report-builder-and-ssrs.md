@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10423"
@@ -13,12 +12,12 @@ ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d6b0523bad560c2ca84396562a46d52a91fe0cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185658"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106269"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>图表类型（报表生成器和 SSRS）
   为您要呈现的数据类型选择一种适当的图表类型非常重要。 这将决定数据以图表形式呈现时对数据进行解释的好坏程度。 例如，如果数据集包含许多与图表大小有关的数据点，则使用面积图、折线图或散点图可能会更好地呈现数据集。 有关如何根据所选图表类型准备数据的讨论，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
