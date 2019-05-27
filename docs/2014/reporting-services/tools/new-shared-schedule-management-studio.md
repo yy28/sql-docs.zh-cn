@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newschedule.f1
@@ -13,12 +12,12 @@ ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 082188276dbc91f52be5813dda5b752c4699e9bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 083fa7998e347b3aa3abe7aacbf9585a18047b20
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201090"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100229"
 ---
 # <a name="new-shared-schedule-management-studio"></a>新建共享计划 (Management Studio)
   使用此页可以创建一个共享计划来运行已发布的报表和订阅。 共享计划可以用于替代报表特定计划或订阅特定计划。 集中的计划信息与能够暂停和恢复计划操作的功能是共享计划区别于项特定计划的两个关键功能。  

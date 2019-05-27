@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileconnectionmanager.f1
@@ -15,12 +14,12 @@ ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24793c3edc681ac40ca37c36a1540f3c404b7191
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768333"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058812"
 ---
 # <a name="file-connection-manager-editor"></a>文件连接管理器编辑器
   可以使用 **“文件连接管理器编辑器”** 对话框指定用于连接文件或文件夹的属性。  

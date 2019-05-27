@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1d3e8051c246c6ec5c29df4fc49fd0f242852354
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223132"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101121"
 ---
 # <a name="site-settings-page-report-manager"></a>“站点设置”页（报表管理器）
   使用“站点设置”页可以更改应用程序标题，为报表历史记录限制和报表处理超时值设置服务器范围的默认值，管理系统级角色分配以及管理共享计划。 必须拥有“内容管理员”和“系统管理员”权限才能查看此页。  

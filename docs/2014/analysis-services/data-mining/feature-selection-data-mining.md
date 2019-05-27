@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -22,12 +21,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722389"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084419"
 ---
 # <a name="feature-selection-data-mining"></a>功能选择（数据挖掘）
   *功能选择*是一个术语，通常用于在数据挖掘中描述的工具和技术可用于输入减少到可控大小以便处理和分析。 功能选择意味着不仅*降低基数*，这意味着施加任意或预定义的截断，在生成模型，但还属性，这意味着的选择时可以考虑的属性的数目分析人员或建模工具主动选择或放弃属性基于对分析的可用性。  

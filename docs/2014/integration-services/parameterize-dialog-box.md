@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.parameter.f1
@@ -13,12 +12,12 @@ ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0c6391e739f4a7f2556ad75acf377a2e68db8151
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890024"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056865"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   通过 **“参数化”** 对话框，可以将新参数或现有参数与某个任务的属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。 以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](integration-services-ssis-package-and-project-parameters.md)。  

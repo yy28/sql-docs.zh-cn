@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e111acfbaee8c73d2c105e977f2e8892a012bbea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8c226cc9603aa687616d54fa95ee82c7f2b86792
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825563"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105996"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>在图表中显示包含多个数据区域的序列（报表生成器和 SSRS）
   图表将使用序列中的最小值和最大值计算轴刻度。 图表中的序列包含多个数据区域时，数据点将会变得模糊，在图表中只能轻松地看到少量数据点。 例如，假设报表显示 30 天内的每日销售总额。  

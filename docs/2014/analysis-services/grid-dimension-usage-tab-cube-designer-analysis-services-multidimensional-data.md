@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04ba5a515c83bc17b858d463cd6718db47b07a24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730772"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080810"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>网格（“维度用法”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“维度用法”** 选项卡上的 **“网格”** 窗格，查看和编辑多维数据集维度和度量值组之间的维度关系。 每个维度关系均以网格中的单元来表示，在网格中，度量值组显示为列，而维度则显示为行。  

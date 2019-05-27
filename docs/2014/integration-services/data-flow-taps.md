@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828652"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059909"
 ---
 # <a name="data-flow-taps"></a>数据分流
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 引入了一个新功能，可用来在运行时在包数据流路径上添加数据分流点，并将数据分流点的输出定向到外部文件。 若要使用此功能，您必须使用项目部署工具将 SSIS 项目部署到 SSIS 服务器。 将包部署到服务器之后，需要对 SSISDB 数据库执行 T-SQL 脚本，以便在执行该包之前添加数据分流点。 下面是一个示例方案：  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29ea08478089982f9652154fa0a167d122b2cd34
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 234ebb8b4490d496731e4fb33db8e73a978f7f15
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697466"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107393"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>数据集字段集合（报表生成器和 SSRS）
   数据集字段表示来自数据连接的数据。 字段可以表示数值数据，也可以表示非数值数据。 示例包括销售额、总销售额、客户名称、数据库标识符、URL、图像、空间数据和电子邮件地址。 在设计图面上，字段显示为报表项（如文本框、表和图表）中的表达式。  

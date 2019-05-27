@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b958a1552bf979abfcebd16345768ea2f7f5fed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657434"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099448"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) 
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - indexes [SQL Server], viewing
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b604dfaf700acf82b49934017121aa5749578ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813b88f56d6017a9e20d8bce72925f9ee7ab552b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830095"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944466"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  除非另外注明，否则出现以下情况时将返回 NULL：property 不是有效的属性名称；object_ID 不是有效的对象 ID；object_ID 不是指定属性支持的对象类型；调用方无权查看对象的元数据。  
   
-|“属性”|描述|ReplTest1|  
+|属性|描述|ReplTest1|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|索引的深度。|索引级别数。<br /><br /> NULL = XML 索引或输入无效。|  
 |**IndexFillFactor**|创建索引或最后重新生成索引时使用的填充因子值。|填充因子|  

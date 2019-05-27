@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79a6d9c2d3010043daddab14dcaae51e58914fbb
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 8185534f12c69e03cdb9dc711e9dc12690621d62
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65482768"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054071"
 ---
 # <a name="master-data-services"></a>Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 是针对主数据管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 解决方案。 主数据管理 (MDM) 描述组织为发现和定义数据的非事务列表（其目标是编译可维护的主列表）而付出的努力。 一个 MDM 项目通常包括评估和重构内部业务流程以及实现 MDM 技术。 成功的 MDM 解决方案的结果是可以进行分析的可靠、集中的数据，从而导致更好的业务决策。  

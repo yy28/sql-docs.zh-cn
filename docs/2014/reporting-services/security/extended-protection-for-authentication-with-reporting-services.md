@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 48e798aeb8309060a6f56a8a2ffcdbe0e0166fb9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1ce348edd9b4d4b6260a0eea56fe28656b03985
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242547"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101948"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 针对验证的扩展保护
   扩展保护是针对最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统的一组增强功能。 扩展保护增强了应用程序可用来保护凭据和身份验证的方式。 此功能自身并不直接提供保护机制来防止特定攻击（如凭据转发），但它为诸如 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的应用程序提供了一种基础结构来实施针对验证的扩展保护。  
@@ -114,7 +113,7 @@ ms.locfileid: "63242547"
 |设置|Description|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|指定扩展保护的实行程度。 有效值为 `Off`、`Allow` 和 `Require`。<br /><br /> 默认值是 `Off`。<br /><br /> 值为 `Off` 指定没有渠道绑定或服务绑定验证。<br /><br /> 值为 `Allow` 支持扩展保护，但并不需要此功能。 值为 Allow 时指定：<br /><br /> 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。 实行保护的方式通过设置 `RsWindowsExtendedProtectionScenario` 来确定。<br /><br /> 对于在不支持扩展保护的操作系统上运行的应用程序而言，将允许进行身份验证。<br /><br /> 值为 `Require` 时指定：<br /><br /> 将为在支持扩展保护的操作系统上运行的客户端应用程序实行扩展保护。<br /><br /> 将身份验证**不**允许的应用程序不支持扩展的保护的操作系统上运行。|  
-|`RsWindowsExtendedProtectionScenario`|指定哪些形式的扩展保护进行验证：渠道绑定、 服务绑定，或两者。 有效值为 `Any`、`Proxy` 和 `Direct`。<br /><br /> 默认值是 `Proxy`。<br /><br /> 值为 `Any` 时指定：<br /><br /> - 不要求 Windows NTLM、Kerberos 和 Negotiate 身份验证以及渠道绑定。<br /><br /> - 实行服务绑定。<br /><br /> 值为 `Proxy` 时指定：<br /><br /> - 当存在渠道绑定标记时，使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> - 实行服务绑定。<br /><br /> 值为 `Direct` 时指定：<br /><br /> - 当 CBT 存在、与当前服务之间存在 SSL 连接并且用于 SSL 连接的 CBT 与 NTLM、Kerberos 或 Negotiate 标记的 CBT 匹配时，应使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> - 不实行服务绑定。<br /><br /> <br /><br /> 注意：如果忽略此设置`RsWindowsExtendedProtectionLevel`设置为`OFF`。|  
+|`RsWindowsExtendedProtectionScenario`|指定哪些形式的扩展保护进行验证：渠道绑定、 服务绑定，或两者。 有效值为 `Any`、`Proxy` 和 `Direct`。<br /><br /> 默认值为 `Proxy`。<br /><br /> 值为 `Any` 时指定：<br /><br /> - 不要求 Windows NTLM、Kerberos 和 Negotiate 身份验证以及渠道绑定。<br /><br /> - 实行服务绑定。<br /><br /> 值为 `Proxy` 时指定：<br /><br /> - 当存在渠道绑定标记时，使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> - 实行服务绑定。<br /><br /> 值为 `Direct` 时指定：<br /><br /> - 当 CBT 存在、与当前服务之间存在 SSL 连接并且用于 SSL 连接的 CBT 与 NTLM、Kerberos 或 Negotiate 标记的 CBT 匹配时，应使用 Windows NTLM、Kerberos 和 Negotiate 身份验证。<br /><br /> - 不实行服务绑定。<br /><br /> <br /><br /> 注意：如果忽略此设置`RsWindowsExtendedProtectionLevel`设置为`OFF`。|  
   
  `rsreportserver.config` 配置文件中的示例条目：  
   

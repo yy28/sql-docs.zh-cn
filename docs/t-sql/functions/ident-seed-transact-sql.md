@@ -17,15 +17,15 @@ helpviewer_keywords:
 - seed values [SQL Server]
 - IDENT_SEED function
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef3bfdbb21839bd7f4f60ba1a731e39ec1f42c1f
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 002d4632dbe988fa29e25eb775afe5bd90ffdeea
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079303"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946395"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

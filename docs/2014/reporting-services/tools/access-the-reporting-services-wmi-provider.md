@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - Reporting Services WMI Provider
@@ -20,12 +19,12 @@ ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2b162dca8b51a21be0d7757c5cd2b952bb3ff70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: deeba8dd32d50b2bb31da49e798cd867d5913fa6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217844"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100493"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>访问 Reporting Services WMI 提供程序
   Reporting Services WMI 提供程序公开了两个 WMI 类，用于通过脚本管理本机模式报表服务器实例：  
@@ -33,7 +32,7 @@ ms.locfileid: "63217844"
 > [!IMPORTANT]  
 >  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本开始，只有本机模式报表服务器才支持 WMI 提供程序。 可以使用 SharePoint 管理中心页和 PowerShell 脚本管理 SharePoint 模式报表服务器。  
   
-|类|命名空间|描述|  
+|类|命名空间|Description|  
 |-----------|---------------|-----------------|  
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v11|为客户端提供连接到已安装的报表服务器所需的基本信息。|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v11\Admin|表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。<br /><br /> **\*\* 重要提示 \*\*** 只有拥有管理权限才能访问此类。|  

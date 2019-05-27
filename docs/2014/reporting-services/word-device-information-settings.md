@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Word [Reporting Services]
@@ -14,19 +13,19 @@ ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 628b9775ecd7fa23a7f63f0738b5c39c5cca2d5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ddd145c5073003a8dc189e3ed9b1bbb25dc11d09
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206279"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096931"
 ---
 # <a name="word-device-information-settings"></a>Word 设备信息设置
   下表列出以 [!INCLUDE[ofprword](../includes/ofprword-md.md)] 格式呈现时的设备信息设置。  
   
 |设置|ReplTest1|  
 |-------------|-----------|  
-|`AutoFit`|`False`。 自动调整对于任何 Word 表都设置为 `false`。<br /><br /> `True`。 自动调整对于每个 Word 表都设置为 `true`。<br /><br /> `Never`。 对任何 Word 表均未设置自动调整值并且行为还原为 Word 默认值。<br /><br /> `Default`。 自动调整设置于窄于每个逻辑页上物理绘图区（不包括边距的物理页宽）的表。|  
+|`AutoFit`|`False` 的用户。 自动调整对于任何 Word 表都设置为 `false`。<br /><br /> `True` 的用户。 自动调整对于每个 Word 表都设置为 `true`。<br /><br /> `Never` 的用户。 对任何 Word 表均未设置自动调整值并且行为还原为 Word 默认值。<br /><br /> `Default` 的用户。 自动调整设置于窄于每个逻辑页上物理绘图区（不包括边距的物理页宽）的表。|  
 |`ExpandToggles`|指示可以滚动的所有项是否以其完全展开的状态呈现。 默认值为 `false`。|  
 |`FixedPageWidth`|指示写入 DOC 文件的页宽是否将增大以适合表体中最大页的宽度。 默认值是 `false`。|  
 |**OmitHyperlinks**|指示是否忽略对所有项的超链接操作（如果设置）。 默认值为 `false`|  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a26b183d3024333f5792203e180df395c0301892
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164304"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109183"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>将报表导出为其他文件类型（报表生成器和 SSRS）
   在报表生成器或报表设计器中预览报表时，可以将报表呈现为其他文件格式，如 CSV、图像、PDF、 [!INCLUDE[ofprword](../includes/ofprword-md.md)]或 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]；也可以在查看报表服务器上的报表时呈现报表。 如果希望立即将报表另存为其他文件类型而不将报表发布到报表服务器，或者希望查看报表设计在以特定格式传递给报表读者时的显示效果，则以特定格式呈现报表将非常有用。 在设置订阅或通过电子邮件传递报表时，或者希望保存报表服务器上可用的报表时，呈现报表服务器上的报表将非常有用。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)。  

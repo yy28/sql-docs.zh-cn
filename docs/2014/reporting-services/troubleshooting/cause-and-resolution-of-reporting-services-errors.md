@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
@@ -15,12 +14,12 @@ ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3d742c1b3c81ca995c106591fe7c610251537d5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa98b9f760485b80f4fa4ac74f3b8008dc3bbec3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63181503"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099381"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 错误的原因和解决方法
   本主题包含与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]相关的多个错误的原因和解决方法信息。 本节中的错误消息主题提供对错误消息、可能的原因以及为更正问题可以采取的所有措施的说明。  

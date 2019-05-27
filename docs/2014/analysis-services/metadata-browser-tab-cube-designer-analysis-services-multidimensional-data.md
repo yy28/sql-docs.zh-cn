@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
@@ -13,12 +12,12 @@ ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727943"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077846"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>元数据（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在多维数据集设计器中，可以使用 **“浏览器”** 选项卡上的 **“元数据”** 窗格浏览多维数据集的结构，以查看相关度量值，以及查看和创建维度。 您可以深化到层次结构中，查看可用度量值和 KPI 的列表，并复制对象的完全限定名称。  

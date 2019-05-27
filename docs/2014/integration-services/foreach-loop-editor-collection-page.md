@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
@@ -13,12 +12,12 @@ ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c855cdfbcf622465390e433312d75343242aee50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 10132f54e7ce9cf094cb8fef5f98b1f67c83c7a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894528"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058509"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 循环编辑器（“集合”页）
   可以使用“Foreach 循环编辑器”对话框的“集合”页，指定枚举器类型以及配置枚举器。  
@@ -245,7 +244,7 @@ ms.locfileid: "62894528"
  **“连接”**  
  选择现有 ADO.NET 连接管理器，或单击 **“新建连接...”\<**> 创建新的连接管理器。  
   
- 相关的主题：[ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)、[配置 ADO.NET 连接管理器](configure-ado-net-connection-manager.md)  
+ 相关主题：[ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)、[配置 ADO.NET 连接管理器](configure-ado-net-connection-manager.md)  
   
  **枚举**  
  指定要枚举的 SMO 对象。  
@@ -261,7 +260,7 @@ ms.locfileid: "62894528"
  **Azure 存储连接管理器**  
  选择一个现有的 Azure 存储连接管理器或创建一个新的、引用 Azure 存储帐户的连接管理器。  
   
- 相关的主题：[Azure 存储连接管理器](connection-manager/azure-storage-connection-manager.md)。  
+ 相关主题：[Azure 存储连接管理器](connection-manager/azure-storage-connection-manager.md)。  
   
  **Blob 容器名称**  
  指定包含要枚举的 blob 文件的 blob 容器。  

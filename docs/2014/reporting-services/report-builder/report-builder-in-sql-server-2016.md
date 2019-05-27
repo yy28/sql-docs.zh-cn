@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10428"
@@ -16,12 +15,12 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f03f0f4c210408324ee4a2cae255ba805e0377a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156606"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107711"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014 中的报表生成器
   Report Builder 是一种报表创作环境，适用于喜欢在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 环境下工作的业务用户。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 您可以在报表生成器中预览报表，也可以将报表发布到报表服务器或处于 SharePoint 集成模式下的报表服务器，让其他人可以运行它。  

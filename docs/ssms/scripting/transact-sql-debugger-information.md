@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 051d63bf71870766a0bf74364eee7545970d4393
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fced8436279b5daa2751b0b4708a62b449d0bcd7
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642740"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821834"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 调试器 - 信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51642740"
 -   在 **“调试”** 工具栏上，单击 **“断点”**，然后选择所需窗口。  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 表达式  
- 表达式是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，其计算结果为单个标量值，例如变量或参数。 左侧的调试器窗口可以显示当前赋给表达式的数据值，这些值最多可在 5 个选项卡或窗口中显示： **“局部变量”、“监视1”**、 **“监视2”**、 **“监视3”** 和 **“监视4”**。  
+ 表达式是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，其计算结果为单个标量值，例如变量或参数。 左侧的调试器窗口可以显示当前赋给表达式的数据值，这些值最多可在 5 个选项卡或窗口中显示：“本地变量”、“监视 1”、“监视 2”、“监视 3”和“监视 4”。  
   
  **“局部变量”** 窗口显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器当前作用域中局部变量的信息。 调试器在代码的不同部分运行时， **“局部变量”** 窗口中列出的表达式集也会发生变化。  
   

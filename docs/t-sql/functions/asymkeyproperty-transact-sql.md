@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - ASYMKEYPROPERTY
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dadfaeaf4debeba4b2da3f478b31fcb9bd5d3b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: de7e95ab26102c0b3bbe1e33c57ae9491a5b9a2c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664105"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945888"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ Key_ID
 ## <a name="return-types"></a>返回类型  
 **sql_variant**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要对非对称密钥具有相应的权限，并且调用方对非对称密钥的 VIEW 权限没有被拒绝。 有关非对称密钥权限的详细信息，请参阅 [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。
   
 ## <a name="examples"></a>示例  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
@@ -14,12 +13,12 @@ ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3d00e2180f1d1e49caf7c5680fe8fa2d87579d85
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63462107"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108249"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>“地图纬线属性”对话框 -&gt;“标签”
   使用**MapParallel 属性**对话框可以更改水平网格在地图视区中的标签选项。 根据视区的指定坐标系统，纬线表示以下值之一：  

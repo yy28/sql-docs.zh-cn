@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46d4018e125633319ed6d235873f56720fbe6bc2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a5787a3f5aecd746ac9aafd5850e6109ebcd999
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743315"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090702"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>第 6 课：将数据库从一个源计算机的本地到 Windows Azure 中的目标计算机
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>第 6 课：将数据库从本地源计算机迁移至 Windows Azure 中的目标计算机
   本课假定您已有另一个 SQL Server，它可能位于另一个本地计算机中或位于 Windows Azure 的虚拟机中。 有关如何在 Windows Azure 中创建 SQL Server 虚拟机的信息，请参阅[预配 Windows Azure 上的 SQL Server 虚拟机](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)。 在 Windows Azure 中设置 SQL Server 虚拟机后，确保可在另一计算机中通过 SQL Server Management Studio 连接到此虚拟机中的 SQL Server 实例。  
   
  本课还假定您已完成以下步骤：  

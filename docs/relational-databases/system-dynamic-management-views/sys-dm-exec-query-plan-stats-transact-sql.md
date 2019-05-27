@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 92e5aaf103c1c8d08b8527bf859415686fd5f4f8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: c4d4f58161885519767e299683fe32b5197a045f
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993629"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198220"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -37,7 +37,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 ## <a name="arguments"></a>参数 
 *plan_handle*  
-是一个标记，用于唯一标识已执行的批次查询执行计划，其计划驻留在计划缓存中，或当前正在执行。 *plan_handle*是**varbinary(64)**。   
+是一个标记，用于唯一标识已执行的批次查询执行计划，其计划驻留在计划缓存中，或当前正在执行。 *plan_handle*是**varbinary(64)** 。   
 
 *Plan_handle*可以从以下动态管理对象中获得：  
   
@@ -64,7 +64,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="remarks"></a>备注
 此系统函数是从开始提供[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4。
 
-这是一个选择加入功能，并且需要启用[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 从开始[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.5 然后在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，若要在数据库级别完成此操作，请参阅中的 LAST_QUERY_PLAN_STATS 选项[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
+这是一个选择加入功能，并且需要启用[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 从开始[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.5 中，若要在数据库级别完成此操作，请参阅中的 LAST_QUERY_PLAN_STATS 选项[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
 
 此系统函数工作原理**轻型**查询执行统计信息分析基础结构。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  
 

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165362"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109422"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>“数据源”属性页（报表管理器）
   使用“数据源”属性页可以定义当前报表连接到外部数据源的方式。 您可以覆盖原先与报表一起发布的数据源连接信息。 如果一个报表有多个数据源，则每个数据源在属性页中都有其自己的特定区域。 数据源按照在报表中定义的顺序列出。  

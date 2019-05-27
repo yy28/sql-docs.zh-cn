@@ -18,18 +18,20 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 168022a77687fd8d655b02e975dbe88fbb0bf685
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 340967f5f44b7cbdec4e23dd0cd9a400522bbe8a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803122"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943713"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和时间数据类型及函数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 本主题的各节涵盖了所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数。
 -   [日期和时间数据类型](#DateandTimeDataTypes)  
@@ -96,11 +98,11 @@ ms.locfileid: "56803122"
 |函数|语法|返回值|返回数据类型|确定性|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( year, month, day )|返回表示指定年、月、日的 date 值。|**date**|具有确定性|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( year, month, day, hour, minute, seconds, fractions, precision)|对指定的日期和时间返回 datetime2 值（具有指定精度）。|**datetime2(** precision **)**|具有确定性|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( year, month, day, hour, minute, seconds, fractions, precision)|对指定的日期和时间返回 datetime2 值（具有指定精度）。|**datetime2(** precision **)** |具有确定性|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( year, month, day, hour, minute, seconds, milliseconds)|为指定的日期和时间返回 datetime 值。|**datetime**|具有确定性|  
 |[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( year, month, day, hour, minute, seconds, fractions, hour_offset, minute_offset, precision)|对指定的日期和时间返回 datetimeoffset 值（具有指定的偏移量和精度）。|**datetimeoffset(** precision **)**|具有确定性|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( year, month, day, hour, minute )|为指定的日期和时间返回 smalldatetime 值。|**smalldatetime**|具有确定性|  
-|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( hour, minute, seconds, fractions, precision )|对指定的时间返回 time 值（具有指定精度）。|**time(** precision **)**|具有确定性|  
+|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( hour, minute, seconds, fractions, precision )|对指定的时间返回 time 值（具有指定精度）。|**time(** precision **)** |具有确定性|  
   
 ###  <a name="GetDateandTimeDifference"></a>返回日期和时间差异值的函数
   

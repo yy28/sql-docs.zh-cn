@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10093"
@@ -14,12 +13,12 @@ ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68165234bcafbb91ef30b45b44fbcf4f64d8657e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 906f4527bdca38f4571a2e1686f885a2857e47c3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206864"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106783"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>添加子报表和参数（报表生成器和 SSRS）
   当您希望创建作为多个相关报表的容器的主报表时，可以向报表添加子报表。 子报表是对另一个报表的引用。 若要通过数据值使报表相关联（例如，使多个报表显示同一客户的数据），必须设计参数化报表（例如，显示特定客户详细信息的报表）作为子报表。 向主报表添加子报表时，可以指定传递给子报表的参数。  

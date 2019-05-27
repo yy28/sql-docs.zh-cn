@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10157"
@@ -14,12 +13,12 @@ ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8578b33bb47a6bcf8c38ae091c4e959085c30b06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14fc5556e430cf364b004cd02ebd0278da650867
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720326"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104972"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>指定序列的图表区（报表生成器和 SSRS）
   图表为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个默认图表区。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的图表区的概念。  

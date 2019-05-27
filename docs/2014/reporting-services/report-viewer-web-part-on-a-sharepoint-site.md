@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -16,12 +15,12 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b63b7d6591e7296b5b45349351620595c2b5d02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ba8b23c800718d289b2a7a633d5244261b5ab8a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255497"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103048"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 站点上的报表查看器 Web 部件
   报表查看器 Web 部件是由用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序安装的自定义 Web 部件。 您可以使用该 Web 部件查看、导航、打印和导出配置为在 SharePoint 集成模式下运行的报表服务器上的报表。 报表查看器 Web 部件与由 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器处理的报表定义 (.rdl) 文件关联。 不能将该部件与在其他软件产品中创建的其他报表文档一起使用。  

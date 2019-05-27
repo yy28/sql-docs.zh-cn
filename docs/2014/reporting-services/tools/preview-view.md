@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
@@ -15,12 +14,12 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6a9b3f472d05c8d50a351323a0af794595c83f46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201143"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100107"
 ---
 # <a name="preview-view"></a>“预览”视图
   使用 **“预览”** 视图可以显示呈现的报表。 在预览报表时，报表设计器将在本地运行该报表，并在“预览”视图中显示该报表。 在预览模式下会对报表进行完全处理。 如果报表具有复杂的查询或具有大量数据，则首次查看时，预览可能需要花费几分钟的时间才能完成。 对于只影响报表格式的后续更改，预览使用缓存数据。  

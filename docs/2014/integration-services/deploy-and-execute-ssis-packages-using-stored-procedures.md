@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 611f5c14390e2d30f275f76af21db8eae6fbcb3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 56141595c62e5190bf3ef797059acd602f801ed7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898935"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059604"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用存储过程部署和执行 SSIS 包
   在您配置一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目以便使用项目部署模型时，可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 目录中的存储过程部署该项目并且执行包。 有关项目部署模型的信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。  

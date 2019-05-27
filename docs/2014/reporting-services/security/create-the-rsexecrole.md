@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
@@ -13,12 +12,12 @@ ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a190d82a18f88d38b7e41642a1dd598ebd91215c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3a6bc5ecbd1c59a5dc03f9c28d36d2816e6a8d92
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242860"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102030"
 ---
 # <a name="create-the-rsexecrole"></a>创建 RSExecRole
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用称为 `RSExecRole` 的预定义数据库角色向报表服务器数据库授予报表服务器权限。 `RSExecRole`与报表服务器数据库自动创建角色。 通常，始终不应修改该角色或将其他用户分配给该角色。 但是，将报表服务器数据库移到新的或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]时，必须在 Master 和 MSDB 系统数据库中重新创建该角色。  

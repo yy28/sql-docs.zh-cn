@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
@@ -20,12 +19,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7b7c63e4850d17009992f8749c35d86534c0ee83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6480a8cefee9b71149c61bf952896a739526cf55
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188339"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102499"
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
   报表定义语言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义的 XML 表示形式。 报表定义包含报表的数据检索和布局信息。 RDL 由 XML 元素组成，这些元素符合为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建的 XML 语法。 通过访问报表定义文件中的代码程序集，可以添加您自己的自定义函数，以便控制报表项值、样式和格式。  
@@ -60,7 +59,7 @@ ms.locfileid: "63188339"
 ##  <a name="bkmk_RDL_Types"></a> RDL 类型  
  下表列出了在 RDL 元素和属性中使用的类型。  
   
-|Type|描述|  
+|Type|Description|  
 |----------|-----------------|  
 |`Binary`|具有 Base-64 编码二进制值的属性。|  
 |`Boolean`|以 `true` 或 `false` 作为对象值的属性。 除非另行指定，否则未指定的可选布尔对象的值为 `False`。|  

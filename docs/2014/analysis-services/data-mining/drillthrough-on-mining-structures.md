@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9eb585f756c03388bfe5b280a75b85f57d35394d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722412"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084580"
 ---
 # <a name="drillthrough-on-mining-structures"></a>对挖掘结构的钻取功能
   “钻取” 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  

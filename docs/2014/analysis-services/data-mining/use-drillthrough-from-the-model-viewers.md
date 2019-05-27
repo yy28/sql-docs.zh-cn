@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ad62600c6ae48f156049cdae6078df37de0b330
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732590"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082840"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>从模型查看器使用钻取
   根据模型类型，您可以从数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上的浏览查看器中使用钻取功能，以便浏览在挖掘模型中使用的事例或查看挖掘结构中的其他列。 尽管因为模型中的模式无法直接链接到特定事例，导致许多模型类型不支持钻取功能，但以下模型类型是支持钻取功能的。  

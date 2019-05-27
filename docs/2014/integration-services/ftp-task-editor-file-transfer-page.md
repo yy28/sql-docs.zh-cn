@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.filetransfer.f1
@@ -15,12 +14,12 @@ ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7797245901cd4d01f82995defcf44498fba1e1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894065"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058438"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>FTP 任务编辑器（“文件传输”页）
   可以使用 **“FTP 任务编辑器”** 对话框的 **“文件传输”** 页配置任务执行的 FTP 操作。  

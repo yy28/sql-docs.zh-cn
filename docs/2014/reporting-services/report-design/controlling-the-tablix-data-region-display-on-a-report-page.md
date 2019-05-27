@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6fd4b09947bc10a9e4e960ca1097f807a47c14f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206504"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106212"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）
   本主题介绍 Tablix 数据区域的属性，您可以修改这些属性以便更改在报表中查看 Tablix 数据区域时该数据区域的显示方式。  

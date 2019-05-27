@@ -18,15 +18,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server query notifications], stopping
 - query notifications [SQL Server], subscriptions
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7ba34906f9ff4b2595644d16b2c13ea3b8a63269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb16e1a8abe807149caed9e5b520cae0d8f44c7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713155"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982212"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
   
  如果指定的订阅 ID 不存在，该语句将生成错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  该语句的执行权限只限于 sysadmin 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  

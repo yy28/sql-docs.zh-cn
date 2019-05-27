@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - authentication [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bff2f31eb321a24c184580a6b1565f4dbc76bb1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 34f637ee2d0a8235f21167df78178c4de9292c8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242530"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102049"
 ---
 # <a name="configure-report-manager-to-pass-custom-authentication-cookies"></a>配置报表管理器以便传递自定义身份验证 Cookie
   如果使用的是自定义身份验证扩展插件，则应配置报表管理器以传输自定义身份验证 Cookie。 否则，报表管理器通过特定的 HTTP 请求将 Cookie 传输到报表服务器。 如果要传输其他 Cookie，则必须修改 RSReportServer.Config 文件。  

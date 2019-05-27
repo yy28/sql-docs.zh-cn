@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
@@ -13,12 +12,12 @@ ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 90ee103d7f176ea4a61703450cc250dd517f7481
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cf21cc35bb41837b65d2a2b3c2c946ffae34864f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223151"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101262"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>“共享数据源属性”对话框 -&gt;“凭据”
   在 **“共享数据源属性”** 对话框中选择 **“凭据”** 可以显示和修改凭据以便连接到报表中的共享数据源。 您所提供的凭据用于访问数据源和缓存数据副本以便进行报表预览。 有关如何缓存预览数据的详细信息，请参阅 [预览报表](reports/previewing-reports.md)。 有关凭据的详细信息，请参阅 [指定报表数据源的凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  

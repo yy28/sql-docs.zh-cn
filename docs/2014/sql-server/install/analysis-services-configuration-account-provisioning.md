@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services configuration
@@ -14,12 +13,12 @@ ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 095709115c15e770b8ad54678d4a359ab4b04ac8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 033c1ec1b0ad478e525f3ea9e8f172c5e5e31eef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215155"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096799"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Analysis Services 配置 – 帐户设置
   使用此页可以设置服务器节点，并向要求对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行不受限访问的用户或服务授予管理权限。 安装程序不会自动将本地 Windows 组 BUILTIN\Administrators 添加到要安装的实例的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器管理员角色。 如果您想要将本地管理员组添加到服务器管理员角色，则必须显式指定该组。  

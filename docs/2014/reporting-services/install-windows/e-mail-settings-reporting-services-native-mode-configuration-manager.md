@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.rsconfigtool.emailsettings.f1
@@ -15,12 +14,12 @@ ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca24685a8a13158efdf5e854efbbd92943c0348d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 808ad67429ee49d6b04533863112b4cbb3af2514
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064634"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108879"
 ---
 # <a name="e-mail-settings---configuration-manager-ssrs-native-mode"></a>电子邮件设置 - 配置管理器（SSRS 本机模式）
   使用此页可指定简单邮件传输协议 (SMTP) 设置，这些设置用于启用报表服务器的报表服务器电子邮件传递功能。 可使用报表服务器电子邮件传递扩展插件通过电子邮件订阅来分发报表或报表处理通知。 报表服务器电子邮件传递扩展插件需要使用 SMTP 服务器并在“发件人:”字段中使用电子邮件地址。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
@@ -13,12 +12,12 @@ ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa9537784b4e7118567ddc262aecac3e722432ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62711254"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100343"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>在报表设计器中停靠“报表数据”窗格 (SSRS)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的报表设计器中，“报表数据”窗格显示了可在报表中使用的数据对象的层次结构视图（包括数据源、数据集、字段、参数和图像）。 解决方案资源管理器中显示的共享数据源中可嵌入或引用此视图中的数据源。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
@@ -13,12 +12,12 @@ ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767139"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057319"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 源编辑器（“连接”页）
   可以使用 **“OData 源编辑器”** 对话框的 **“连接”** 页，为 OData 源选择 OData 连接管理器。 通过此页还可以指定集合或资源路径和任何查询选项以指示需要从 OData 源检索的数据。 若要了解有关 OData 源的详细信息，请参阅 [OData Source](data-flow/odata-source.md)。  

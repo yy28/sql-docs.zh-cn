@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.importprojectwizard.f1
@@ -13,12 +12,12 @@ ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33e6400c9076d96cbe9999cc4110b0e3bd5f0902
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767829"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058048"
 ---
 # <a name="import-project-wizard"></a>导入项目向导
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 导入项目向导可以基于现有的项目创建一个新的 Integration Services 项目。 导入已部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目录的项目，或从项目部署文件（扩展名为 .ispac）导入项目。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
@@ -14,12 +13,12 @@ ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 849346f33a3118029a46241644d7f1cce6dc7481
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836246"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061104"
 ---
 # <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
   使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目、包、参数和环境的中心存储区和管理点。  

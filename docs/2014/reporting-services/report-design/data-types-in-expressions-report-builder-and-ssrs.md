@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956103"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106069"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>表达式中的数据类型（报表生成器和 SSRS）
   数据类型表示不同种类的数据，以便能够有效地进行存储和处理。 典型的数据类型包括文本（也称为字符串）、带有小数位和不带小数位的数字、日期和时间以及图像。 报表中的值必须是报表定义语言 (RDL) 数据类型。 在报表中显示某个值时，您可以根据您的喜好设置该值的格式。 例如，表示货币的字段将以浮点数的形式存储在报表定义中，但是可以根据您所选择的格式属性以不同的格式显示该字段。  
@@ -36,7 +35,7 @@ ms.locfileid: "59956103"
 |Integer|默认值：Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
 |DateTime|默认值：DateTime<br /><br /> DateTimeOffset|  
 |float|默认值：双精度<br /><br /> Single、Decimal|  
-|二进制|默认值：Byte[]|  
+|Binary|默认值：Byte[]|  
 |Variant|除了 Byte[] 之外的上述任何值|  
 |VariantArray|Variant 的数组|  
 |可序列化|标记有“可序列化”或者实现 ISerializable 的变量或类型。|  

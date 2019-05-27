@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,18 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 02bbe8ec412c87b9a849f210d4a909eeecf7b5f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d07bedb102ee004c78d727afcf99320d12d68a4
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800035"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014889"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 文件系统任务
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Azure Data Lake Store 文件系统任务允许用户在 [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/) 上执行各种文件系统操作。
 
@@ -32,7 +36,7 @@ Azure Data Lake Store 文件系统任务是[适用于 Azure 的 SQL Server Integ
 
 “操作”属性指定要执行的文件系统操作。 请选择以下操作之一：
 
-- **CopyToADLS：** 将文件上载到 ADLS。
+- **CopyToADLS：** 将文件上传到 ADLS。
 - **CopyFromADLS：** 从 ADLS 下载文件。
 
 ## <a name="configure-the-properties-for-the-operation"></a>配置操作属性
@@ -41,13 +45,13 @@ Azure Data Lake Store 文件系统任务是[适用于 Azure 的 SQL Server Integ
 以下是特定于每种操作的属性：
 
 ### <a name="copytoadls"></a>CopyToADLS
-- **LocalDirectory：** 指定包含待上载文件的本地源目录。
+- **LocalDirectory：** 指定包含待上传文件的本地源目录。
 - **FileNamePattern：** 指定源文件的文件名筛选器。 仅上载名称与指定模式匹配的文件。 支持 `*` 和 `?` 通配符。
-- **SearchRecursively：** 指定是否在源目录中以递归方式搜索要上载的文件。
-- **AzureDataLakeDirectory：** 指定要将文件上载到的 ADLS 目标目录。
-- **FileExpiry：** 指定上载到 ADLS 的文件的到期日期和时间。 将此属性留空表示文件永不过期。
+- **SearchRecursively：** 指定是否要在源目录中以递归方式搜索要上传的文件。
+- **AzureDataLakeDirectory：** 指定要将文件上传到的 ADLS 目标目录。
+- **FileExpiry：** 指定上传到 ADLS 的文件的到期日期和时间。 将此属性留空表示文件永不过期。
 
 ### <a name="copyfromadls"></a>CopyFromADLS
 - **AzureDataLakeDirectory：** 指定包含待下载文件的 ADLS 源目录。
-- **SearchRecursively：** 指定是否在源目录中以递归方式搜索要下载的文件。
+- **SearchRecursively：** 指定是否要在源目录中以递归方式搜索要下载的文件。
 - **LocalDirectory：** 指定要存储已下载文件的目标目录。

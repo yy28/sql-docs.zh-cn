@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7881df645a02e70948d81baa6fd8a029d06ea1b1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756832"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066461"
 ---
 # <a name="tabular-model-data-access"></a>表格模型数据访问
   Analysis Services 中的表格模型数据库可由用于检索多维模型中的数据或元数据的大多数相同的客户端、接口和语言访问。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  

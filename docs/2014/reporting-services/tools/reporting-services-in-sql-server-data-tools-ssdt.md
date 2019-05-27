@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
@@ -13,12 +12,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: af8fd934206361e0abb43a84a9a036772e90fc52
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5c79d078e8a9e2a8928c98c9d7ca56e220e86051
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157286"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099993"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]包含特定于商业智能解决方案的增强功能的环境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供。  
@@ -271,7 +270,7 @@ ms.locfileid: "63157286"
   
 -   控制 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]中的窗口和模式：  
   
-    |描述|键组合|  
+    |Description|键组合|  
     |-----------------|---------------------|  
     |生成选定的项目|Ctrl+Shift+B|  
     |显示“属性”窗口|F4|  
@@ -281,7 +280,7 @@ ms.locfileid: "63157286"
   
 -   控制报表设计图面上的项：  
   
-    |描述|键组合|  
+    |Description|键组合|  
     |-----------------|---------------------|  
     |将焦点从一个报表项移到下一个报表项|Tab|  
     |移动选定的报表项|箭头键|  

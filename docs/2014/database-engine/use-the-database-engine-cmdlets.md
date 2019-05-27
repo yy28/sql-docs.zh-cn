@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Cmdlets [SQL Server], Encode-Sqlname
@@ -23,12 +22,12 @@ ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e2d11a6cb32759d32c95ddf5cd059071ea46eb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 190b8f0ec6ac647ee45a07181af1bd7094199dcb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843201"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088675"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>使用数据库引擎 cmdlet
   Windows PowerShell cmdlet 是单函数命令，通常采用“动词-名词”形式的命名约定，如 **Get-Help** 或 **Set-MachineName**。 用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序提供特定于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的 cmdlet。  

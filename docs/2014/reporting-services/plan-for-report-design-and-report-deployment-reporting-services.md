@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6104bfc97d2f66652ffa9b16e9ff0ae8f9b0550
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188492"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108051"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>报表设计和报表部署的规划 (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了创作和部署报表的多个方法。 使用本主题帮助计划协同工作的报表创作环境和报表服务器。 本主题概述了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 组件对报表定义的支持。 报表定义是用报表定义语言 (RDL) 或客户端报表定义语言 (RDLC) 编写的 XML 文件。 每个报表定义都符合位于该文件开头的特定架构版本的要求。  

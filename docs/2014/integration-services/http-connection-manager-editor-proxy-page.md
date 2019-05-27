@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.httpconnection.proxy.f1
@@ -15,12 +14,12 @@ ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0783f096db469c27a7f820f1a4594673ffe7e48f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62893146"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058263"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 连接管理器编辑器（“代理”页）
   可以使用 **“HTTP 连接管理器编辑器”** 对话框的 **“代理”** 选项卡配置 HTTP 连接管理器以使用代理服务器。 利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。  

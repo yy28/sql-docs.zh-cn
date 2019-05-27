@@ -15,14 +15,18 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f1e05ab7d98bdbcfdb33a3feb82e84498bb4eaf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67b6514534083c05f40b40adcda2bae5c30a4591
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290883"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723638"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  
   
  当遇到不带其说明的错误代码时此列表可能非常有用。 目前该列表中不包括故障排除信息。  
@@ -2125,7 +2129,7 @@ ms.locfileid: "58290883"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|找不到组件 %2 的“%1”值。 找不到该组件的 CurrentVersion 值。 如果该组件没有设置其注册表信息，以在 DTSInfo 部分中包含 CurrentVersion 值，将出现此错误。 组件开发期间会出现此消息；或者，如果组件未正确注册，则在包中使用它时也会出现此消息。|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|缓冲区管理器无法获取临时文件名。|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|缓冲区管理器无法在路径“%1”下创建临时文件。 临时存储区将不再考虑使用该路径。|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告:无法打开全局共享内存以与性能 DLL 通信；数据流性能计数器不可用。  若要解决此问题，请以管理员的身份或在系统控制台上运行此包。|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告：无法打开全局共享内存以与性能 DLL 通信；数据流性能计数器不可用。  若要解决此问题，请以管理员的身份或在系统控制台上运行此包。|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|文件结尾存在不完整的行。|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|在读取标题行时到达了数据文件的结尾。 请确保标题行分隔符和要跳过的标题行数是正确的。|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|无法从 OLE DB 访问接口检索列代码页信息。  如果该组件支持“%1”属性，将使用来自该属性的代码页。  如果当前的字符串代码页值不正确，请更改该属性的值。  如果该组件不支持该属性，将使用来自该组件的区域设置 ID 的代码页。|  

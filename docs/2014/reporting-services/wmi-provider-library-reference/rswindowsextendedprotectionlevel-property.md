@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c3c4fdbf8642715a895e8c345ccd171c53ca3509
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f30e5d2399c643e4bc3be5ade3789280dba610f6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020129"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097010"
 ---
 # <a name="rswindowsextendedprotectionlevel-property-wmi-msreportserverconfigurationsetting"></a>RSWindowsExtendedProtectionLevel 属性 (WMI MSReportServer_ConfigurationSetting)
   返回一个字符串值，该值指示配置报表服务器所支持的保护级别。 该属性为只读。  

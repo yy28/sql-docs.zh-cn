@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
@@ -15,12 +14,12 @@ ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb5490f023a2529d102d9ca505092b7f2bc28fec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1eabb28250699305952d1d0746dc9487a1a25271
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726821"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076721"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>配置 Analysis Services 项目属性 (SSDT)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目是使用特定默认属性定义的，这些属性影响 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的生成和部署。  

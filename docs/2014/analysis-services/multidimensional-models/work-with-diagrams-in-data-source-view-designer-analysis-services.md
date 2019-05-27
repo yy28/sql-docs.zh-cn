@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.diagramorganizerpane.f1
@@ -18,12 +17,12 @@ ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b127b3dac76663e77b7ce0fa4faa76a91628ccc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743653"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072382"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>使用数据源视图设计器中的关系图 (Analysis Services)
   数据源视图 (DSV) 关系图是 DSV 中对象的直观表示形式。 您可以交互使用该关系图以添加、隐藏、删除或修改特定对象。 还可以对同一 DSV 创建多个关系图以特别关注对象的某个子集。  

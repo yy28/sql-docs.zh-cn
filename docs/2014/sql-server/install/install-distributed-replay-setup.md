@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545383"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094629"
 ---
 # <a name="install-distributed-replay-setup"></a>安装 Distributed Replay（安装程序）
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 功能。 在计划安装这些功能的位置时，请考虑以下方面：  
@@ -87,7 +86,7 @@ ms.locfileid: "52545383"
   
     -   若要安装客户端服务，请选择 **“Distributed Replay 客户端”**。  
   
-     **重要**:在你配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
+     **重要**:在您配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
   
     -   域用户帐户  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dc59e8a963f39a3686e7d7cb02cd2e2b17a39783
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646328"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097879"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>SetWindowsServiceIdentity 方法 (WMI MSReportServer_ConfigurationSetting)
   将报表服务器 Windows 服务作为指定的 Windows 用户运行，并授予此帐户足够的文件系统权限以允许操作报表服务器。  

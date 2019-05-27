@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - searches [SQL Server Management Studio], result lists
@@ -16,12 +15,12 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0229e95b6d4bdc4fec8950a5e8e5e155300bfd19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 957b6e46cb8c3b4cc551c616a1b547c3c1cbdeb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63136244"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090157"
 ---
 # <a name="search-documents-using-results-lists"></a>使用结果列表搜索文档
   使用 **“查找和替换”** 对话框，可以搜索和替换项目或解决方案中或文件系统文件夹中的所有文件中的文本（即使这些文件未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开）。 使用 **“查找和替换”** 对话框执行的搜索返回的匹配项将显示在“查找结果 1”和“查找结果 2”窗口中。这样，您可以查看包含匹配项的行中的完全匹配文本。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
@@ -24,12 +23,12 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 135a736f6d0cf0cd5c51cf40b05c95a33d5c435b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63128627"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102484"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>将报表发布到报表服务器
   设计和测试报表或一组报表，可以使用中的内置部署功能后[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]将报表发布到报表服务器。 您可以发布单个报表或报表服务器项目。 发布报表服务器项目是发布多个报表的最简单方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用术语*部署*，而不是术语*发布*。 这两个术语可以互换。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], arithmetic operators
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ab35bbdac79f9c6f9835d50db376b0b19227217
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740427"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012469"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定算数运算符 (SQLXML 4.0)
   以下示例说明如何在 XPath 查询中指定算数运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关该示例架构的信息，请参阅[示例带批注的 XSD 架构的 XPath 示例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  

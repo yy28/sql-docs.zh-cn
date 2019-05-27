@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74f8834ef29e4b5a1cf2b3988585f771cb9d1f1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39c36831838ef222b4c98befded8af55045a86ff
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63016293"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013173"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>应用 XSL 转换（SQLXMLOLEDB 访问接口）
   在此示例 ADO 应用程序中，将执行 SQL 查询并将 XSL 转换应用到结果。 ClientSideXML 属性设置为 True，则强制实施客户端上的行集的处理。 将命令方言设置为 {5d531cb2-e6ed-11d2-b252-00c04f681b71}，因为在模板中指定 SQL 查询且在执行模板时必须指定此方言。 Xsl 属性指定要使用应用转换的 XSL 文件。 基路径属性的值用于搜索 XSL 文件。 如果 xsl 属性的值中指定的路径，路径是相对于基路径属性中指定的路径。  

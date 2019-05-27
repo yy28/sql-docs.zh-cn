@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], configuration files
@@ -16,12 +15,12 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 63d2dff214ed1125450ec319dff4ad7f7dc36990
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f527b192af330f300f37102e00b010f44c82eaab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190903"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103349"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 配置文件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将组件信息存储在注册表和配置文件中，其中配置文件会在安装过程中复制到文件系统。 配置文件包含仅供内部使用的值和用户定义的值的组合。 可以通过安装程序、配置工具、命令行实用工具以及手动编辑配置文件的方式来指定用户定义的值。  
@@ -44,7 +43,7 @@ ms.locfileid: "63190903"
 C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER  
 ```  
   
-|存储位置：|描述|Location|  
+|存储位置：|Description|Location|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|存储功能区的报表服务器服务的配置的设置：报表管理器、 报表服务器 Web 服务和后台处理。 有关每项设置的详细信息，请参阅 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|存储服务器扩展插件的代码访问安全策略。 有关此文件的详细信息，请参阅 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)。|\<Installation directory> \Reporting Services \ReportServer|  
@@ -65,7 +64,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|存储位置：|描述|Location|  
+|存储位置：|Description|Location|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|存储功能区的报表服务器服务的配置的设置：报表管理器、 报表服务器 Web 服务和后台处理。 有关每项设置的详细信息，请参阅 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|存储服务器扩展插件的代码访问安全策略。 有关此文件的详细信息，请参阅 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)。|\<Installation directory> \Reporting Services \ReportServer|  
