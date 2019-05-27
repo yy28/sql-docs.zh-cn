@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - KEY_NAME function
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 59b69687434a1432f087da75d77d93907c02edee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed2b88a38075fe5951340bcc72eb636cab3e251e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745445"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949193"
 ---
 # <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ KEY_NAME ( ciphertext | key_guid )
 ## <a name="returned-types"></a>返回类型  
  **varchar(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，元数据的可见性仅限用户所拥有的安全对象，或用户已获得某些权限的安全对象。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  

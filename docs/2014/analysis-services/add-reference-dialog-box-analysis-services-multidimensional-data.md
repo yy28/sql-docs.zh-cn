@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.addreference.f1
@@ -16,12 +15,12 @@ ms.assetid: 457958c4-6baa-474d-99a0-34c195ceba09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2a44c1f7a37cc7e7e010ea15c72d35255b443e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 541b7371cdc05ee316e9fb9de9f50affc4f14fc7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62632950"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062861"
 ---
 # <a name="add-reference-dialog-box-analysis-services---multidimensional-data"></a>“添加引用”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “添加引用” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在开发项目中添加对 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework 程序集或其他项目的引用。 通过在**解决方案资源管理器**中右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目的“程序集”文件夹，并从上下文菜单中选择“新建程序集引用”，可以显示“添加引用”对话框。  

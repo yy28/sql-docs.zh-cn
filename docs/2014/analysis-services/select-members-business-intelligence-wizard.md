@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.memberconversion.f1
@@ -13,12 +12,12 @@ ms.assetid: 1a147461-d594-41e7-a41d-09d2d003e1e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2d15a32302aa5d7a4ee3ca087944effc017ce8c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7cc66896eb1735d09991644dd49c03b5a94c208d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747510"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069431"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>选择成员（商业智能向导）
   可以使用 **“选择成员”** 页，确定商业智能向导应对哪些成员应用 **“设置货币换算选项”** 页上指定的货币换算功能。  

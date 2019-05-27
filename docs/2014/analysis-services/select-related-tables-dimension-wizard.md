@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.selectrelatedtables.f1
@@ -13,12 +12,12 @@ ms.assetid: 82dbd97a-582c-4f60-8d44-fc52dba7b276
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 836e2fd015cf723bc970cb2ae18705928704b261
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a135df3d3850aebdb9ac6dda08561a7fae21793f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747219"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069293"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>选择相关表（维度向导）
   可以使用“选择相关表”页，将相关表（数据源视图中与主维度表相关的表）包含在维度中。  

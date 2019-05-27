@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
@@ -17,12 +16,12 @@ ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67c1cf99f536b7cc6de0cef3633af19ae88014a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63058126"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092591"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 配置选项 (SSRS)
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中的“Reporting Services 配置”页来指定如何安装和配置报表服务器。 安装选项的可用性取决于您以前在 **“功能选择”** 页选择的选项以及在安装报表服务器的同时是否还安装了 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本地实例。  
@@ -49,7 +48,7 @@ ms.locfileid: "63058126"
 #### <a name="install-only"></a>“仅安装”  
  安装报表服务器程序文件，创建报表服务器服务帐户，并注册报表服务器 Windows Management Instrumentation (WMI) 提供程序。 此安装选项称为“仅文件”安装。 如果不希望使用默认配置，则选择此选项。 如果无法安装默认配置，或安装的是包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]故障转移群集，这将是唯一可用的选项。 有关仅文件安装的详细信息，请参阅[文件安装 (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093)。  
   
- 安装程序完成后，必须先创建报表服务器数据库并配置报表服务器，服务器才可以使用。 若要配置报表服务器并创建数据库，请使用 Reporting Services 配置管理器。 有关详细信息，请参阅[如何：创建报表服务器数据库 (Reporting Services 配置)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094)并[配置报表服务器数据库连接](https://go.microsoft.com/fwlink/?LinkId=199095)(https://go.microsoft.com/fwlink/?LinkId=199095)。  
+ 安装程序完成后，必须先创建报表服务器数据库并配置报表服务器，服务器才可以使用。 若要配置报表服务器并创建数据库，请使用 Reporting Services 配置管理器。 有关详细信息，请参阅[操作说明：创建报表服务器数据库 (Reporting Services 配置)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094)并[配置报表服务器数据库连接](https://go.microsoft.com/fwlink/?LinkId=199095)(https://go.microsoft.com/fwlink/?LinkId=199095)。  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式  
   

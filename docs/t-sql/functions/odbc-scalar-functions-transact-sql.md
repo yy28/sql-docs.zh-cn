@@ -49,16 +49,16 @@ helpviewer_keywords:
 - functions, ODBC WEEK
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0a4fd0f249d65708c316a7cb5ada0b582bebf8d
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f27a13116e1b0e393917c99c30039dce374019b3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760080"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944908"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 标量函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "55760080"
 |CURDATE( ) (ODBC 3.0)|返回当前日期。|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|返回当前本地时间。 time-precision 参数确定返回值的秒精度。|  
 |CURTIME() (ODBC 3.0)|返回当前本地时间。|  
-|DAYNAME( date_exp ) (ODBC 2.0)|返回一个字符串，其中包含 date_exp 的“星期几”部分的数据源特定的星期名称。 例如，对于使用英语的数据源， 返回 Sunday 至 Saturday 或 Sun. 至 Sat.。 对于使用德语的数据源，返回 Sonntag 至 Samstag。|
+|DAYNAME( date_exp ) (ODBC 2.0)|返回一个字符串，其中包含 date_exp 的“星期几”部分的数据源特定的星期名称。 例如，对于使用英语的数据源， 返回 Sunday 到 Saturday 或 Sun. 到 Sat.； 或 Sun. 至 Sat.。 对于使用德语的数据源，返回 Sonntag 至 Samstag。|
 |DAYOFMONTH( date_exp ) (ODBC 1.0)|根据 date_exp 中的月份字段以整数形式返回当月的具体日期。 返回 1 至 31 范围内的值。|  
 |DAYOFWEEK( date_exp ) (ODBC 1.0)|根据 date_exp 中的“周”字段以整数形式返回在该周的天数。 返回 1 至 7 范围内的值，其中 1 表示星期天。|  
 |HOUR( time_exp ) (ODBC 1.0)|根据 time_exp 中的“小时”字段返回具体小时，返回值为 0 到 23 范围内的整数值。|  

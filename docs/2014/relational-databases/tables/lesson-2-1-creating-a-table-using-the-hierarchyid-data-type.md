@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,12 +12,12 @@ ms.assetid: 0d1f361f-336c-4571-99d1-f4813b2d9fc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5af072e27ff1e1c70d6a3035ceb7eb2a1cc2493
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98ce16a3630032001a1191b09b1b0ade13aacb73
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760911"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110121"
 ---
 # <a name="creating-a-table-using-the-hierarchyid-data-type"></a>使用 hierarchyid 数据类型创建表
   下例创建了一个名为 EmployeeOrg 的表，该表包含雇员数据及其报告层次结构。 本例在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中创建该表，但这是可选操作。 为了简化该示例，此表仅包含五列：  

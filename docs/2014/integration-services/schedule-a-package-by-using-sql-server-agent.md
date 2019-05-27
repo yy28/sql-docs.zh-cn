@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 55b872b46b5e0007d0651e190f6698ff0cfb50ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766859"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056231"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>使用 SQL Server 代理计划包
   下面的过程提供了通过使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业步骤运行包来自动执行该包的步骤。  
@@ -56,7 +55,7 @@ ms.locfileid: "62766859"
     |--------------------|-----------------|  
     |**SSIS 目录**|存储在 SSISDB 数据库中的包。 部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中包含的包。|  
     |**SQL Server**|存储在 MSDB 数据库中的包。 可使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务来管理这些包。|  
-    |**SSIS 包存储区**|存储在您计算机上默认文件夹中的包。 默认文件夹为 \<drive>:\Program Files\Microsoft SQL Server\110\DTS\Packages。 可使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务来管理这些包。<br /><br /> 注意：可以指定不同的文件夹，也可以指定由文件系统中的其他文件夹[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务，通过修改的配置文件[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [配置 Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)的早期版本向后兼容。|  
+    |**SSIS 包存储区**|存储在您计算机上默认文件夹中的包。 默认文件夹为 \<drive>:\Program Files\Microsoft SQL Server\110\DTS\Packages。 可使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务来管理这些包。<br /><br /> 注意：可以修改 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的配置文件，从而在文件系统中指定其他一个或多个文件夹，以供 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理。 有关详细信息，请参阅 [配置 Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)的早期版本向后兼容。|  
     |**“文件系统”**|存储在您本地计算机上任意文件夹中的包。|  
   
      **以下各表说明可用于作业步骤的配置选项（具体选项取决于您所选的包源）。**  
@@ -77,7 +76,7 @@ ms.locfileid: "62766859"
     ||**出错时转储**:指定在包执行过程中发生任何错误时是否生成调试转储文件。<br /><br /> 这些文件包含有关包的执行信息，可帮助您解决出现的问题。<br /><br /> 若选择此选项，当在执行过程中出现错误时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会创建一个 .mdmp 文件（二进制文件）和一个 .tmp 文件（文本文件）。 默认情况下，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将这些文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。|  
     ||**32 位运行时**指示是否具有 64 位版本的 64 位计算机上使用 32 位版本的 dtexec 实用工具运行包[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安装代理。<br /><br /> 在特定情况下，您可能需要使用 32 位版本的 dtexec 来运行包，比如在您的包使用在 64 位版本中不可用的本机 OLE DB 访问接口的情况下。 有关详细信息，请参阅 [Integration Services 的 64 位注意事项](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 默认情况下，当您选择 **“SQL Server Integration Services 包”** 作业步骤类型时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理会使用系统自动调用的 dtexec 实用工具版本来运行该包。 系统会根据计算机处理器以及在计算机上运行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理的版本，来调用 32 位或 64 位版本的实用工具。|  
   
-     **包源**：SQL Server、 SSIS 包存储区或文件系统  
+     **包源**：SQL Server、SSIS 包存储或文件系统  
   
      您可以为存储在 SQL Server、SSIS 包存储区或文件系统中的包设置的许多选项都对应于 `dtexec` 命令提示实用工具的命令行选项。 有关该实用工具和命令行选项的详细信息，请参阅 [dtexec 实用工具](packages/dtexec-utility.md)。  
   

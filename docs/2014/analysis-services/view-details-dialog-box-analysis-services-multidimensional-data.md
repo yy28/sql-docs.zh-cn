@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.viewdetailsdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: bb062d9e-0156-4ac4-837d-9a99e5dd5e93
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c6a87ed9157c8a38676bd2984975fe11e9e2e4a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756115"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065446"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>“查看详细信息”对话框（Analysis Services - 多维数据）
   可以使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “查看详细信息” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，查看有关 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的消息或操作的其他详细信息。 您可以通过执行以下操作之一显示 **“查看详细信息”** 对话框：  

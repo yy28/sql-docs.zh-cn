@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -15,12 +14,12 @@ ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 595b6dcddc49b8f8b4ffb13af9c3d4feaf02f3fc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 066f5607ed159b382b156f0d679382881444e9c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403313"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095910"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>创建报表服务器数据库（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **本机模式** 使用两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库存储报表服务器元数据和对象。 一个数据库用于主存储，另一个数据库用于存储临时数据。 这两个数据库一起创建，并按名称绑定。 通过默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，将这两个数据库命名为 `reportserver` 和 `reportservertempdb`。 这两个数据库统称为“报表服务器数据库”或“报表服务器目录”。  
@@ -39,15 +38,15 @@ ms.locfileid: "52403313"
 >  唯一的例外是执行日志视图。 有关详细信息，请参阅[报表服务器执行日志和 ExecutionLog3 视图](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
 ## <a name="ways-to-create-the-report-server-database"></a>创建报表服务器数据库的方式  
- **本机模式：** 您可以按以下方式创建本机模式报表服务器数据库：  
+ **本机模式：** 可以通过以下方式创建本机模式的报表服务器数据库：  
   
--   自动：使用 SQL Server 安装向导中，如果选择默认配置安装选项。 在 SQL Server 安装向导中，这是“报表服务器安装选项”页中的 **“安装和配置”** 。 如果选择 **“仅安装”** 选项，则必须使用 Reporting Services 配置管理器来创建数据库。  
+-   自动：如果选择默认配置安装选项，请使用 SQL Server 安装向导。 在 SQL Server 安装向导中，这是“报表服务器安装选项”页中的 **“安装和配置”** 。 如果选择 **“仅安装”** 选项，则必须使用 Reporting Services 配置管理器来创建数据库。  
   
--   手动：使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器。 如果使用远程 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 来承载该数据库，则必须手动创建报表服务器数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
+-   手动：请使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 如果使用远程 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 来承载该数据库，则必须手动创建报表服务器数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
- **SharePoint 模式：** 报表服务器安装选项页中只有一个用于 SharePoint 模式的选项**仅安装**。 此选项安装所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下方式之一至少创建一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序：  
+ **SharePoint 模式：**“报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项“仅安装”。 此选项安装所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下方式之一至少创建一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序：  
   
--   使用 SharePoint 管理中心创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅的"服务应用程序"部分[步骤 3:创建 Reporting Services 服务应用程序](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)。  
+-   使用 SharePoint 管理中心创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅[步骤 3：创建 Reporting Services 服务应用程序](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)中的“服务应用程序”一节。  
   
 -   使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet 创建服务应用程序和报表服务器数据库。 有关详细信息，请参阅 [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)主题中创建服务应用程序的示例。  
   

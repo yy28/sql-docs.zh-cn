@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columns.f1
@@ -15,12 +14,12 @@ ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3dec5abe4cee6165b0bf9cecb99e26552b5854b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6dad0ca9855cfad8811b1598356ab624ea3fc5ca
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894439"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058727"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>平面文件连接管理器编辑器（“列”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“列”** 页，指定行和列的信息以及预览相应的文件。  
@@ -49,7 +48,7 @@ ms.locfileid: "62894439"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}。**|行由竖线分隔。|  
+|**竖线 {&#124;}**。|行由竖线分隔。|  
   
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
@@ -63,7 +62,7 @@ ms.locfileid: "62894439"
 |**冒号 {:}**|列由冒号分隔。|  
 |**逗号 {,}**|列由逗号分隔。|  
 |**制表符 {t}**|列由制表符分隔。|  
-|**竖线 {|}**。|列由竖线分隔。|  
+|**竖线 {&#124;}**。|列由竖线分隔。|  
   
  **刷新**  
  通过单击“刷新”查看更改要跳过的分隔符后的效果。 只有在更改其他连接选项之后，此按钮才可见。  
@@ -110,7 +109,7 @@ ms.locfileid: "62894439"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}。**|行由竖线分隔。|  
+|**竖线 {&#124;}**。|行由竖线分隔。|  
   
  **重置列**  
  通过单击“重置列”可以删除除原始列之外的所有列。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b58e73b7757e8288ff90f462be1868cb60e3af5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679725"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086825"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>“创建轮询查询”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “创建轮询查询” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在 **“存储选项”** 对话框的 **“通知”** 选项卡中创建轮询查询。 轮询查询通常是返回某个值的单独查询， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以使用该返回值确定是否已对表或其他关系对象进行了更改。 在“存储选项”对话框的“通知”选项卡上的“按计划轮询”选项中，单击该网格的“轮询查询”列上的省略号按钮 (**...**)，可以显示“创建轮询查询”对话框。 有关“存储选项”对话框的“通知”选项卡的详细信息，请参阅[通知（“存储选项”对话框）（Analysis Services - 多维数据）](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)。  

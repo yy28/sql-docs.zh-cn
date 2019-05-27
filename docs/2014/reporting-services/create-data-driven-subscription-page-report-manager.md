@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 625afedabdb376f913d3353e2bda343bba66e3e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265950"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109621"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>“创建数据驱动订阅”页（报表管理器）
   使用“创建数据驱动订阅”页可以生成或修改订阅，每次运行订阅时，都会在订阅服务器数据库中查询订阅信息。 数据驱动订阅使用查询结果来确定订阅的收件人、传递设置和报表参数值。 在运行时，报表服务器将运行一个查询，以获取订阅设置所需的值。 可以使用“创建数据驱动订阅”页来定义查询并将查询值赋予订阅设置。 为数据驱动订阅指定的值和选项分别位于若干个页面上，类似于向导。 总共有七个页面。  

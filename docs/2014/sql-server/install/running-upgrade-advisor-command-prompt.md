@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
@@ -16,12 +15,12 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753279"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092438"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>运行升级顾问（命令提示符）
   使用**UpgradeAdvisorWizardCmd**实用工具从命令提示符运行升级顾问。 可以选择以 XML 格式或以逗号分隔值文件来接收结果。  
