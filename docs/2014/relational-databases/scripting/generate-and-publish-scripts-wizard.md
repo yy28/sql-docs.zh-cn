@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.generatescriptswizard.setscriptingoptions.f1
@@ -43,12 +42,12 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9b3bb00837c4c3e8e6fae187a902d95c54736882
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225443"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063993"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
   你可以使用“生成和发布脚本向导”创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
@@ -193,7 +192,7 @@ ms.locfileid: "63225443"
   
 -   **编写 USE DATABASE 脚本**-添加`USE DATABASE`语句的脚本。 若要确保在正确的数据库中创建数据库对象，请包含 `USE DATABASE` 语句。 如果预计脚本将使用不同的数据库中，选择**False**忽略`USE DATABASE`语句。 默认值为 **True**。 有关详细信息，请参阅 [USE (Transact-SQL)](/sql/t-sql/language-elements/use-transact-sql)。  
   
--   **数据的脚本类型**-选择应编写的脚本：**仅限数据**，**仅限架构**，和 / 或。 默认值为 **“仅限架构”**。  
+-   **要编写脚本的数据的类型** - 选择应编写脚本的内容：“仅限数据”和/或“仅限架构”。 默认值为 **“仅限架构”**。  
   
  **表/视图选项** - 下列选项仅应用于表或视图的脚本。  
   
@@ -261,7 +260,7 @@ ms.locfileid: "63225443"
   
 11. **脚本绑定** - 在发送到提供程序以供发布的脚本中包括默认值和规则对象。 默认值为 **True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact SQL)](/sql/t-sql/statements/create-default-transact-sql) 和 [CREATE RULE (Transact-SQL)](/sql/t-sql/statements/create-rule-transact-sql)。  
   
-12. **要发布的数据类型**-选择应编写的脚本：**仅限数据**，**仅限架构**，和 / 或。 默认值为 **“架构和数据”**。  
+12. **要发布的数据的类型** - 选择应编写脚本的内容：“仅限数据”和/或“仅限架构”。 默认值为 **“架构和数据”**。  
   
  **发布选项** - 指定是否在发布到 Web 主机提供商时使用事务。  
   

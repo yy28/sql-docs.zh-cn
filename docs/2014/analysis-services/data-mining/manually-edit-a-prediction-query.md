@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying prediction queries
@@ -15,12 +14,12 @@ ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d8b561e7bfd1e791dee90d8076fef68f81d2ca8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722019"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084212"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手动编辑预测查询
   在使用预测查询生成器设计查询后，可通过在数据挖掘设计器的 **“挖掘模型预测”** 选项卡上切换到“查询文本”视图来修改查询。 屏幕的底部会出现文本编辑器，显示查询生成器创建的查询。  

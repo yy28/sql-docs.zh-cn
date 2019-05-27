@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
@@ -13,12 +12,12 @@ ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 16ac264f89c541f0a864f8b47ed008fa254f181c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223247"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095418"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>加密密钥（SSRS 本机模式）
   使用“加密密钥”页可以管理用于对报表服务器中数据进行加密和解密的对称密钥。 管理加密密钥是报表服务器配置的一个重要方面。 在创建报表服务器数据库时，自动创建并应用对称密钥。 创建对称密钥的备份副本，以便您可以执行例行的维护操作。 您需要具有对称密钥的有效副本，才可执行以下维护任务：  

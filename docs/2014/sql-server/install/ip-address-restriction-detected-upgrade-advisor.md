@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
@@ -13,12 +12,12 @@ ms.assetid: 9a154455-c68f-4403-a3a7-b90f4d35eecb
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4bbde8eb313d432a7a90cfa7f03c54f4c6aeb06f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec72f58aaa0a10d0fa13860bc39e81b717d0ff89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63301382"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094179"
 ---
 # <a name="ip-address-restriction-detected-upgrade-advisor"></a>检测到 IP 地址限制（升级顾问）
   升级顾问已检测到承载报表服务器或报表管理器虚拟目录的 IIS 网站上存在一个或多个 IP 地址限制。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不为 IP 地址限制提供本机支持。  

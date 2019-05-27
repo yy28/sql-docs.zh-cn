@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2ec8ac0bbb56282474bde4e399eaf1d32b0e1996
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f78c568d467601b2f23ae8952036764ea2b464d8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767339"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057882"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>查找转换编辑器（“高级”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“高级”** 页，配置部分缓存以及修改查找转换的 SQL 语句。  

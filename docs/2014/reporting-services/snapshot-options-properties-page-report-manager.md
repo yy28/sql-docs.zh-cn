@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4a18e523c8d839cc6ec9e0c64c94ad648b1c1d0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62511501"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101163"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>“快照选项”属性页（报表管理器）
   使用“快照选项”属性页可以计划将报表快照添加到报表历史记录的时间，以及设置报表历史记录中存储的报表快照的数量限制。  

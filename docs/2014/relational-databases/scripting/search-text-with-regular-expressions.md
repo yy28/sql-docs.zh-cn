@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vs.regularexpressionbuilder
@@ -17,12 +16,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81df6d31819594611933d3187f1a6f6bcbda46cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63136188"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063769"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
   正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **的** “查找和替换” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“查找内容”** 字段中，可以使用一组特定的正则表达式。  

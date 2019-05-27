@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Parameter Info option [IntelliSense]
@@ -16,12 +15,12 @@ ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0b7c93da6efafc5603b79efc992637ff2d1fd757
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9605062317572bb89e5bd806f2d7babd9d3a09f0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144739"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063919"
 ---
 # <a name="parameter-info-intellisense"></a>参数信息 (IntelliSense)
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 **“参数信息”** 选项可打开一个参数列表，其中提供了有关函数或存储过程所需的参数数目、参数名称和参数类型的信息。 以粗体显示的参数指示键入某个函数或存储过程时所需的下一个参数。  

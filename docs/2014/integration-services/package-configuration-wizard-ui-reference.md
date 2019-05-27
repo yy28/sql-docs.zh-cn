@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
@@ -16,12 +15,12 @@ ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 042f1146295d0a8358a7f89a38929a77e6f761a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767129"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056938"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>包配置向导用户界面参考
   可以使用 **“包配置向导”** 创建在运行时更新 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其对象的属性的配置。 当您在 **“包配置组织程序”** 对话框中添加新配置或者修改现有配置时，将运行该向导。 若要打开 **“包配置组织程序”** 对话框，请在 **上的** SSIS **菜单中选择** “包配置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅 [创建包配置](../../2014/integration-services/create-package-configurations.md)。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.sourcedbfiles.f1
@@ -13,12 +12,12 @@ ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb0f2659323960e58bb70ff2bb36f8367088dd7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ac7d4b590fa5c3efccd16deebf3bafab83b74f6b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766460"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055539"
 ---
 # <a name="source-database-files"></a>源数据库文件
   可以使用 **“源数据库文件”** 对话框查看源服务器上的数据库文件的名称和位置，或者为传输数据库任务指定网络文件共享位置。 有关此任务的详细信息，请参阅 [传输数据库任务](control-flow/transfer-database-task.md)。  

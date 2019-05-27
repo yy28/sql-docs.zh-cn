@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 626f125fff9b0dfb21e617166817fbc618f082a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 606ac348ce4ee7bed65a7bcbe6d7ebbbd0a7f87d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278704"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063801"
 ---
 # <a name="spatial-results-window"></a>“空间结果”窗口
   **“空间结果”** 窗口提供了用于查看空间数据的可视化映射工具。 若要查看空间结果，查询结果中必须包括一个包含几何图形或地域数据的空间列。  
@@ -34,7 +33,7 @@ ms.locfileid: "63278704"
  如果某个查询中仅返回了点实例，则此选项不可用。  
   
  **选择投影**  
- 中的一个投影中显示地域数据：Equirectangular、 Mercator、 Robinson 或 Bonne。  
+ 显示以下四个投影之一中的地理数据：Equirectangular、Mercator、Robinson 或 Bonne。  
   
  此选项不适用于几何图形数据。  
   

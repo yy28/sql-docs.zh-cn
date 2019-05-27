@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], tasks
@@ -19,12 +18,12 @@ ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5ec2030e94abbc568e2ea030c781e904a4ce459d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01cbf00850c5dd57e7ca1575a1a0cb826c009714
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306183"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101460"
 ---
 # <a name="tasks-and-permissions"></a>任务和权限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，“任务”  是指用户或管理员可以执行的操作。 任务是预定义的。 您不能创建自定义任务，也不能以编程方式或通过工具修改所提供的任务。 总共有二十五个任务。 这些任务组成了基于角色的安全性中可用的完整操作集。 部分任务示例包括：“查看报表”、“管理报表”和“管理报表服务器属性”。  

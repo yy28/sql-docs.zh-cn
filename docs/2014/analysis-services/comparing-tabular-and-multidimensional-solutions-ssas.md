@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680817"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087764"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>比较表格和多维解决方案 (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 为数据建模提供两种不同方法：表格和多维。 虽然它们之间有明显的重叠现象，但也有重要的差异，你可以通过差异决定如何继续。 在本主题中，我们提供功能比较，并解释每种方法如何满足常见项目要求。 例如，如果对特定数据源的支持是最重要的因素，则有关数据源的部分有助于指导您决定采用哪种建模方法。  

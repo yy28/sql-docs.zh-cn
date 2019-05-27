@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], deploying
@@ -17,12 +16,12 @@ ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50cd0b4e2336b20ab12b8c5e6fda6615af03abd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722683"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084723"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署数据挖掘解决方案
   数据挖掘过程的最后一步是将模型部署到生产环境中。 部署非常重要，这是因为它使用户可以利用模型，以便执行以任何任务：  

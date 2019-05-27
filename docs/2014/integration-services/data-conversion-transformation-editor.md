@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828606"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060045"
 ---
 # <a name="data-conversion-transformation-editor"></a>数据转换编辑器
   可以使用 **“数据转换编辑器”** 对话框，选择要转换的列和要将列转换成的数据类型以及设置转换属性。  

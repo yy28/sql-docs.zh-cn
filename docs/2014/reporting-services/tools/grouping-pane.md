@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10033"
@@ -16,12 +15,12 @@ ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fe230d9e3ed5259da9decc87e044005184b7d989
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 476815dc8378c1e8ca790091021c1bd3ec95ba9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62711333"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100271"
 ---
 # <a name="grouping-pane"></a>“分组”窗格
   “分组”窗格显示当前所选 Tablix 数据区域的行组和列组。 “分组”窗格对“图表”或“仪表”数据区域不可用。 “分组”窗格由“行组”窗格和“列组”窗格组成。 “分组”窗格有两种模式：默认和高级。 默认模式显示行组和列组的动态成员的层次结构视图。 高级模式同时显示行组和列组的动态及静态成员。 组是来自数据区域显示的报表数据集中的一组命名的数据。 组被组织到包括静态和动态成员的层次结构中。 有关详细信息，请参阅[了解组（报表生成器和 SSRS）](../report-design/understanding-groups-report-builder-and-ssrs.md)。  

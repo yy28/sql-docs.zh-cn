@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d37179fe54d133268732065a51bbd299c2379418
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d80d59759befa0a6d7b601509a99c7cc6e22fbf0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020730"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107758"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用打印控件从浏览器中打印报表（报表生成器和 SSRS）
   虽然浏览器是用于查看报表的最常见的客户端应用程序，但是浏览器的打印功能并不是打印报表的理想选择。 浏览器的打印功能是针对打印网页而设计的。 通常，从浏览器打印的页面包括网页上的所有可见元素，以及标识网页或网站的页眉和页脚信息。 从浏览器打印将会打印当前窗口的内容。 对于多页报表，浏览器最多打印第一页，而且如果报表页超出了打印页的尺寸，打印的内容可能还会减少。  

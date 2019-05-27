@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69885ad9affb87ea160231fa6f6d42d0fef7ea6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62987924"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095865"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>数据库引擎配置 - 帐户设置
   使用此页可以设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式，并添加 Windows 用户或组作为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的管理员。  

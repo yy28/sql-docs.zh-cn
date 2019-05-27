@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
@@ -17,12 +16,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0eaecfdb6e9b3578d1ee4a3bb867c715aa1492e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0d7d34da4f26211075de05e19e223bafd0e9429
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093257"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064104"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查询编辑器编辑 SQLCMD 脚本
   使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，可以将查询作为 SQLCMD 脚本来进行编写和编辑。 当必须处理同一脚本中的 Windows 系统命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，使用的是 SQLCMD 脚本。  

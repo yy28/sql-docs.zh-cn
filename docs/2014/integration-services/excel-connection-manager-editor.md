@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 22ea5f2f087949718e5dbfc8702756e008ee721e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769813"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059271"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 连接管理器编辑器
   使用 **“Excel 连接管理器编辑器”** 对话框可以将连接添加到现有或新的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿文件。  

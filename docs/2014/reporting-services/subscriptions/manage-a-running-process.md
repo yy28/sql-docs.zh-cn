@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
@@ -28,12 +27,12 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 12fa851a8f524bae83017042d01a7c7733225fd7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0c465a50547d8ca45947dc5db5c56221a8a4538
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237799"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100823"
 ---
 # <a name="manage-a-running-process"></a>管理运行中的进程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可监视报表服务器上正在运行的作业的状态。 报表服务器会定期扫描正在进行的作业，并将状态信息写入到报表服务器数据库或针对 SharePoint 模式的服务应用程序数据库中。 如果正在执行以下任意进程，则表明正在处理作业：对远程或本地数据库服务器的查询执行、报表处理以及报表呈现。  

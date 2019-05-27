@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +15,12 @@ ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0ddc29ca163d17a812c14251c60b512828a5b3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890155"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056655"
 ---
 # <a name="path-properties"></a>路径属性
    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
@@ -35,7 +34,7 @@ ms.locfileid: "62890155"
   
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
-|PathAnnotation|Integer（枚举）|用于指示在设计器图面上显示路径时是否应显示批注的值。 可能的值为 `AsNeeded`、`SourceName`、`PathName` 和 `Never`。 默认值是 `AsNeeded`。|  
+|PathAnnotation|Integer（枚举）|用于指示在设计器图面上显示路径时是否应显示批注的值。 可能的值为 `AsNeeded`、`SourceName`、`PathName` 和 `Never`。 默认值为 `AsNeeded`。|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|与路径关联的输入。|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|与路径关联的输出。|  
   

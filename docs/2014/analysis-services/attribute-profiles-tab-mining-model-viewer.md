@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.profiles.f1
@@ -13,12 +12,12 @@ ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c216ce257c513d59a5007637ca4a5642104306f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650668"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063173"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>“属性配置文件”选项卡（挖掘模型查看器）
   可以使用 **“属性配置文件”** 选项卡，来查看 Naive Bayes 模型状态中输入值的分布如何生成结果属性的每个状态。 值的分布会显示为一个彩色直方图且所有分布都以表格格式显示，以便能更轻松地比较值。  

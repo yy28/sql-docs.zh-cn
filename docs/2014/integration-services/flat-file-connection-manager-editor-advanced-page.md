@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columnproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 067bb5a2da9a93bc29e93a3844a29e1a4028c7d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0e6e85161ea95a9494bbaf91338b4ddc559ecbf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768343"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058792"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>平面文件连接管理器编辑器（“高级”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“高级”** 页，设置指定 Integration Services 如何读写平面文件中的数据的属性。 可以更改平面文件中各个列的名称，并设置包括文件中每个列的数据类型和分隔符在内的属性。  
@@ -47,7 +46,7 @@ ms.locfileid: "62768343"
 |**TextQualified**|指示是否被如引号字符的文本限定符字符文本数据。 有效值为<br /><br /> **True**：平面文件中的文本数据是受限定的。<br /><br /> **False**：平面文件中的文本数据是不受限定的。|  
 |**名称**|提供说明性列名。 如果不输入名称，则 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将自动创建名称，格式为“列 0”、“列 1”，依此类推。|  
 |**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
-|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}**。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}**。 列由回车符分隔。<br /><br /> **{LF}**。 列由换行符分隔。<br /><br /> **分号 {;}**。 列由分号分隔。<br /><br /> **冒号 {:}**。 列由冒号分隔。<br /><br /> **逗号 {,}**。 列由逗号分隔。<br /><br /> **制表符 {t}**。 列由制表符分隔。<br /><br /> **竖线 {|}**。 列由竖线分隔。|  
+|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}**。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}**。 列由回车符分隔。<br /><br /> **{LF}**。 列由换行符分隔。<br /><br /> **分号 {;}**。 列由分号分隔。<br /><br /> **冒号 {:}**。 列由冒号分隔。<br /><br /> **逗号 {,}**。 列由逗号分隔。<br /><br /> **制表符 {t}**。 列由制表符分隔。<br /><br /> **竖线 {&#124;}**。 列由竖线分隔。|  
 |**DataPrecision**|指定数字数据的精度。 精度是指数字的位数。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
 |**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|  
   

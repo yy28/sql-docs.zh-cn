@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoints
@@ -13,12 +12,12 @@ ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06342291cc73951043c14c6f29539eaf9f1be689
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e170a2177ceefb0329e85f8fbf252cc62de76469
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745508"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063557"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 断点
   断点指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器在特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句处暂停执行，这样您就可以查看该点的代码元素状态。  

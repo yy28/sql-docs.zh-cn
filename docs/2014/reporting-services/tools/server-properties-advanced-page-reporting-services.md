@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
@@ -13,12 +12,12 @@ ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a4123ea79502821026b80254db4fba7a61e5f565
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63158763"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099658"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
   使用此页可以针对报表服务器设置系统属性。 可通过多种方法来设置系统属性。 此工具提供了一个图形用户界面，您不必编写代码即可设置属性。  
@@ -33,13 +32,13 @@ ms.locfileid: "63158763"
  对用户的“我的报表”文件夹创建安全策略时所用角色的名称。 默认值是 `My Reports Role`。  
   
  **EnableClientPrinting**  
- 确定是否可从报表服务器下载 RSClientPrint ActiveX 控件。 有效的值是`true`和`false`。 默认值为 `true`。 有关此控件所需的其他设置的详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
+ 确定是否可从报表服务器下载 RSClientPrint ActiveX 控件。 有效的值是`true`和`false`。 默认值是 `true`。 有关此控件所需的其他设置的详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
   
  **EnableExecutionLogging**  
  指示报表执行日志记录是否处于启用状态。 默认值是 `true`。 有关报表服务器执行日志的详细信息，请参阅[报表服务器执行日志和 ExecutionLog3 视图](../report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
   
  **ExecutionLogDaysKept**  
- 在执行日志中保留报表执行信息的天数。 此属性的有效值包括 `-1` 到 `2`、`147`、`483` 和 `647`。 如果值为 `-1`，则不从执行日志表中删除项。 默认值为 `60`。  
+ 在执行日志中保留报表执行信息的天数。 此属性的有效值包括 `-1` 到 `2`、`147`、`483` 和 `647`。 如果值为 `-1`，则不从执行日志表中删除项。 默认值是 `60`。  
   
  **SessionTimeout**  
  会话保持活动状态的时间长度（以秒为单位）。 默认值是 `600`。  
@@ -54,10 +53,10 @@ ms.locfileid: "63158763"
  指定所存储的参数能够保存的最大天数。 有效值为 `-1` 以及 `+1` 到 `2,147,483,647`。 默认值为 `180` 天。  
   
  **StoredParametersThreshold**  
- 指定报表服务器可以存储的参数值的最大数目。 有效值为 `-1` 以及 `+1` 到 `2,147,483,647`。 默认值为 `1500`。  
+ 指定报表服务器可以存储的参数值的最大数目。 有效值为 `-1` 以及 `+1` 到 `2,147,483,647`。 默认值是 `1500`。  
   
  **UseSessionCookies**  
- 指示报表服务器与客户端浏览器通信时是否应使用会话 cookie。 默认值是 `true`。  
+ 指示报表服务器与客户端浏览器通信时是否应使用会话 cookie。 默认值为 `true`。  
   
  **ExternalImagesTimeout**  
  确定在连接超时之前，必须对外部映像文件检索的时间长度。默认值是`600`秒。  

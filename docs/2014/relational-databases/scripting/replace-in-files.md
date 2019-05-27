@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Replace in Files dialog box
@@ -13,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1a59377a075d7db189b91543590aee8c2cb0013
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 997df4fb0756bc684c9d2ca3e3d08d074faf8f93
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144434"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063898"
 ---
 # <a name="replace-in-files"></a>在文件中替换
   使用“查找和替换”窗口的 **“在文件中替换”** 选项卡可以在指定文件集的代码中搜索某个字符串或表达式，并且可以更改找到的部分匹配或全部匹配项。 在 **“结果选项”** 中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: f6473409-121a-414d-8fe9-ea9aea6cb7eb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 77d26b41bdb848d487f144b40e86f1c00ad60880
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63297545"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095011"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>升级后，全文搜索将不再允许 OUTPUT INTO 表达式中使用谓词
   当数据库兼容级别设置为 100 或更高时，不允许在 OUTPUT 子句中使用全文谓词。  

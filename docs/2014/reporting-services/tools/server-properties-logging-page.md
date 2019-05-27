@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.logging.f1
@@ -13,12 +12,12 @@ ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 53bf911fa6971f3b3d2567d55e18dfbac27a56aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635118"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099532"
 ---
 # <a name="server-properties-logging-page"></a>服务器属性（“日志记录”页）
   使用此页可以对报表服务器收集的报表执行数据设置限制。 执行数据存储在报表服务器数据库内部。 可以跟踪在本机模式或 SharePoint 集成模式下运行的报表服务器的报表活动。 如果报表服务器是扩展部署的一部分，则报表执行日志会将有关整个部署内所有报表活动的记录保存到一个日志文件中。  

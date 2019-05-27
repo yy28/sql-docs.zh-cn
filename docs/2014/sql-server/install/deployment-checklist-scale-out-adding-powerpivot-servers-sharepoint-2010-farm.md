@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7bef5104038dad251927c6afff613f248f4a6a47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 300337a2cd4d3275a4fe6b9d8ebfc7a133a3a224
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025705"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095560"
 ---
-# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>部署核对清单：通过向 SharePoint 2010 场添加 PowerPivot 服务器来进行扩展
+# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>部署核对清单：通过向 SharePoint 2010 场中添加 PowerPivot 服务器来进行横向扩展
   如果您预期在 SharePoint 场中对 PowerPivot 查询处理有大量请求，则可以通过添加额外的 PowerPivot for SharePoint 实例来无缝地添加新的查询和数据处理支持。  
   
  安装新的实例后，您就有了额外的容量进行 PowerPivot 数据查询或处理 PowerPivot 数据刷新作业。 此外，您也可以选择将每台服务器配置为只处理一种类型的请求：查询或数据刷新。  

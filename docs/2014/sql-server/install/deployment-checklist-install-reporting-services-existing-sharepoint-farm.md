@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27e6b4a1fb9726496ac4ae99a08b2e47a9136562
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 66c366bfe8dbf79d2f392627ad018747357e7da4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63195204"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095680"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>部署核对清单：将 Reporting Services 安装到现有 SharePoint 场中
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 报表服务器可安装到新 SharePoint 场或现有 SharePoint 场。 本主题介绍将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装到现有 SharePoint 场的可能方案和最佳做法。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  在运行安装程序之前，请查看以下信息：  
   
 |步骤|链接|  

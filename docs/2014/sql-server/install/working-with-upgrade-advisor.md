@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], when to use
@@ -15,12 +14,12 @@ ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63154738"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090959"
 ---
 # <a name="working-with-upgrade-advisor"></a>使用升级顾问
   为了帮助确保成功升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，升级顾问提供了一个中央控制台，用于确定升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前要在您的安装中解决的问题。  
@@ -40,7 +39,7 @@ ms.locfileid: "63154738"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|Description|  
 |-----------|-----------------|  
 |[升级顾问概述](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|概要介绍升级过程、升级顾问分析向导以及升级顾问报表查看器。|  
 |[升级顾问操作指南主题](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|提供执行升级顾问常用步骤的说明。|  

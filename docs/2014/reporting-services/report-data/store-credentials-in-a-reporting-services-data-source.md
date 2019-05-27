@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - credentials [Reporting Services]
@@ -16,12 +15,12 @@ ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e80e271d4d6ba1afff54143ad6926a5e5884d3d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 990e5b3c13ced56e78170cb9530f35277174b4cb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720597"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107008"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>在 Reporting Services 数据源中存储凭据
   可以配置存储的凭据， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器可使用这些凭据来访问报表的外部数据。 如果报表在无人参与的状态下运行，则使用存储凭据，例如将报表作为电子邮件发布的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 订阅。 计划或触发报表处理时，报表服务器将检索和使用这些凭据。 本主题向你说明了为本机模式下和 SharePoint 模式下的报表服务器配置存储凭据的过程。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [SQLXML]
 - XSL caching [SQLXML]
 ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c23a208a0276a2a3eb71f493aa7e5ce7fad0928
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79683626400f9ef9b410a182ffd81c862575e57d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62805819"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013234"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL 缓存 (SQLXML 4.0)
   缓存 XSL 样式表可提高性能。 如果 XSL 缓存设置为 ON，则在第一次执行之后，XSL 样式表将保留在内存中；这可以提高后续处理的性能。 默认设置为 ON。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
@@ -14,12 +13,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 530747edf03e9790c2f728ec5485d305da046d08
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209426"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064152"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>语法对的自动匹配
   使用自动匹配语法对功能，可获得有关必须以成对方式进行编码的语法元素是否正确配对的即时反馈。 这种匹配在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中被称为分隔符匹配，在 Analysis Services XMLA 查询编辑器中被称为大括号匹配，而在 MDX 和 DMX 编辑器中则被称为圆括号匹配。  

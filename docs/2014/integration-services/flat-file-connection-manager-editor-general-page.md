@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8282cf7060f106798f2fa482f474bc5e364492ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768313"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058745"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>平面文件连接管理器编辑器（“常规”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“常规”** 页选择文件和数据格式。 使用平面文件连接可以将包连接到文本文件。  
@@ -76,7 +75,7 @@ ms.locfileid: "62768313"
 |**冒号 {:}**|标题行由冒号分隔。|  
 |**逗号 {,}**|标题行由逗号分隔。|  
 |**制表符 {t}**|标题行由制表符分隔。|  
-|**竖线 {&#124;}。**|标题行由竖线分隔。|  
+|**竖线 {&#124;}**。|标题行由竖线分隔。|  
   
  **要跳过的标题行数**  
  指定要跳过的标题行数或初始数据行数（如果有的话）。  

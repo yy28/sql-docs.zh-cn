@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b43d901205e13f4e0e728705e3764512dc26647
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb3e97175b1580b7f149fd3ba0e97584e281ec04
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143679"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090413"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的编辑器支持减少键入的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项，提供对语法信息的快速访问，还可以更加轻松地查看复杂表达式的分隔符。  

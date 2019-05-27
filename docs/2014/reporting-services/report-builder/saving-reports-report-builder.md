@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 01fcf6ef333a9b7c8a5c99630e6e9573f70d8059
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155325"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107633"
 ---
 # <a name="saving-reports-report-builder"></a>保存报表（报表生成器）
   在报表生成器中，可以将报表保存到您有写入权限的报表服务器、SharePoint 库和文件共享区，也可以将其保存到您的计算机。 可以将报表保存到打开报表时的相同位置或将其保存到其他位置，也可以使用新名称将报表保存到相同或不同位置。 默认情况下，将报表重新保存到与其打开位置相同的位置。 保存报表时，真正保存的内容是报表定义，该定义描述了报表布局。 您不是在保存数据。 每次运行报表时，报表数据将刷新，它可能不同于您上次运行报表时的数据。  

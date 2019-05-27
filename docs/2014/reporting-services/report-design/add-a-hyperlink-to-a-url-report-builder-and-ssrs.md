@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206931"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106819"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>向 URL 添加超链接（报表生成器和 SSRS）
   如果您希望用户能在报表中单击链接即可打开浏览器浏览您指定的 URL，则可向报表项添加一个超链接。 超链接既可以是静态 URL，也可以是计算结果为 URL 的表达式。 如果数据库中的某个字段包含 URL，则表达式可以包含该字段，从而为报表提供超链接的动态列表。 您可以向文本框、图像、图表和仪表添加超链接。 必须确保该用户对您提供的 URL 具有访问权限。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -22,12 +21,12 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4135236979beb320c201f635ad353cbe83a261bd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941193"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099811"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
   提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例。  

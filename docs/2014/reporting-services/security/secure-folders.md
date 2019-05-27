@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - high-security folders [Reporting Services]
@@ -16,12 +15,12 @@ ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 338bd9ce47d0cc8ba323677af438793083337bc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 201facc6500339eb8804f3de22d25337dcc07089
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306350"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101706"
 ---
 # <a name="secure-folders"></a>保护文件夹
   文件夹的安全性是保护报表服务器中所有内容的基础。 由于安全性在整个文件夹结构中是可继承的，因此您可以将文件夹层次结构中或大或小的不同部分指定为允许某些类型的访问。  

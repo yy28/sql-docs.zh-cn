@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
@@ -13,18 +12,18 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8480066485cf22c48cebbba738b2c604a50b23c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767699"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057979"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 项目转换向导
   **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。  
   
 > [!NOTE]  
->  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
+>  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [添加、 删除或共享连接管理器在包中](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
  **您希望做什么？**  
   

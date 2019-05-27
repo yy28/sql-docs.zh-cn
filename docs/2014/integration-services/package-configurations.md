@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
@@ -22,18 +21,18 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a2cd70f20297e446971b46fa38bd2f3e8379192e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767119"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056886"
 ---
 # <a name="package-configurations"></a>包配置
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供可用于在运行时更新属性值的包配置。  
   
 > [!NOTE]  
->  配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+>  配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [部署的项目和包](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  配置是添加到已完成包中的属性/值对。 通常，在包开发期间您在包对象上创建包设置属性，然后将配置添加到包中。 当包运行时，它从配置中获取新的属性值。 例如，通过使用配置，您可以更改连接管理器的连接字符串，或者更新变量的值。  
   

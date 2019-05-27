@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10435"
@@ -15,12 +14,12 @@ ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5ba45fa4070a025101d9bf2c06bc69f8aa5d8b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa8ae6d36ddd7c23b48ec65f8fab387e690f1d83
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697802"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107559"
 ---
 # <a name="report-data-pane-report-builder"></a>“报表数据”窗格（报表生成器）
   使用 **“报表数据”** 窗格可以查看报表中当前定义的参数、数据源、数据集、字段集合和图像。 该窗格会显示表示报表中数据的项的层次结构视图。 顶级节点表示内置字段、参数、图像和数据源引用。 展开每个节点可以查看各数据项。 例如，展开某个数据源节点时，会显示为该数据源定义的数据集。 展开数据集时，会显示其字段集合。 将报表项拖至报表设计图面或“分组”窗格可将数据与报表页上选定的报表项相链接。 有关详细信息，请参阅[报表设计视图（报表生成器）](report-builder/report-design-view-report-builder.md)。  

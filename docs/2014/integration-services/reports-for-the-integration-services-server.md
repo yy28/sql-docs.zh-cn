@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
@@ -13,12 +12,12 @@ ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889785"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056435"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 服务器的报表
   在当前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供了标准报告，帮助你监视部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 这些报告有助于您查看包状态和历史记录，并根据需要确定包执行失败的原因。  

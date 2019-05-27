@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dc91e50c96018e14066f6e6cc0ad4625c128b639
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 208c5608037d99b9dc02f1ab7fefd151cd4bdecf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697499"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107427"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
   您可以创建供单个报表使用的嵌入数据集，也可以创建供多个报表使用的保存到报表服务器的共享数据集。 若要创建数据集，必须具有嵌入数据源或共享数据源。  

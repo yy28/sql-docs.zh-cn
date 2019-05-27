@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
@@ -13,12 +12,12 @@ ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f878b194389f81980c924896ae4c2b97da81761
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769953"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059281"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中启用包日志记录
   本过程介绍如何将日志添加到包中，如何配置包级日志记录，以及如何将日志记录配置保存为 XML 文件。 您只能在包级添加日志，但包不必执行日志记录，就可以在包所包括的容器中启用日志记录。  

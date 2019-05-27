@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -19,12 +18,12 @@ ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 703615793c1c9ced7252a03e7597b701c977fbdd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306550"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101811"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>创建、删除或修改角色 (Management Studio)
   Reporting Services 提供了定义对报表服务器的访问级别的预定义角色。 需要访问报表服务器的每个用户或组都通过说明可以执行的任务的角色来进行访问。 这些角色是对作为整体的报表服务器进行定义的。 不能对报表服务器的特定部分改变角色定义，也不能指定根据不同情况以不同的方式使用角色。  

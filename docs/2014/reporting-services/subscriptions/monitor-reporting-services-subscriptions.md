@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -17,12 +16,12 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 998a7823721b8c978e2b8bfd21b6308507a8963c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238305"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100761"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  
@@ -99,7 +98,7 @@ ms.locfileid: "63238305"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|处理|区域|Category|级别|Correlation|消息|  
+|Date|Process|区域|Category|级别|Correlation|消息|  
 |5/21/2014 14:34:06:15|应用池：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|报表服务器电子邮件扩展插件|意外|（空）|**发送邮件时出错。** 异常：System.Net.Mail.SmtpException:邮箱不可用。 服务器响应为：5.7.1 客户端没有为 at System.Net.Mail.DataStopCommand.CheckResponse （SmtpStatusCode statusCode，String serverResponse） 此发件人发送权限 at System.Net.Mail.DataStopCommand.Send (SmtpConnection conn) 在System.Net.Mail.SmtpClient.Send (MailMessage message) at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 监视订阅  

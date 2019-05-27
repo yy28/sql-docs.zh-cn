@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.multiserverresultssettings
@@ -14,12 +13,12 @@ ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99b9192f2bf2b6e1fe00e1b0e367ff254219539c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774061"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089969"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>选项（“查询结果”-“SQL Server”-“多服务器”）
   在同时查询多个服务器时，可使用此页指定显示结果集的选项。 “合并结果”可将所有服务器中的结果集合并为单个结果集。 合并结果时，响应的第一个服务器将设置结果集的架构。 若要合并结果集，查询必须从每个服务器中返回具有相同列名的相同列数。 在合并结果时，如果某个服务器与第一个服务器在返回结果时返回的架构（列计数和列名称）不匹配，则会为该服务器显示一条消息。  

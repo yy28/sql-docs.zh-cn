@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62835183"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060884"
 ---
 # <a name="conditional-split-transformation-editor"></a>有条件拆分转换编辑器
   可以使用 **“有条件拆分转换编辑器”** 对话框创建表达式，设置表达式计算顺序，以及对有条件拆分输出进行命名。 此对话框包含可以用于生成表达式的数学、字符串和日期/时间函数及运算符。 计算结果为 True 的第一个条件确定了行定向到的输出。  

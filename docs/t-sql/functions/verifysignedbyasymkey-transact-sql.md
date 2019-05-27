@@ -20,15 +20,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0b932435b65d7c3638e575b9ee3a86fd709f2985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6044ff3c8626a4daeee30f100082a8884457fc9
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799441"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946288"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ## <a name="remarks"></a>Remarks  
  VerifySignedByAsymKey 使用指定的非对称密钥的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较。 如果值匹配，则确认签名有效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对非对称密钥具有 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  

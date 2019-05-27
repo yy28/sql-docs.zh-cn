@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - discontinued properties [Full-Text Search]
@@ -14,12 +13,12 @@ ms.assetid: 8d9392d9-a9ba-4378-84e4-59f516b67ddb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d6d7467da572d5d0552d400e2c05505c1bc0aaa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267561"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093853"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>修改使用已停用全文搜索属性的存储过程
   为确保存储过程正确执行，应编辑现有过程并删除已删除或已废弃的与全文相关的属性和设置。  

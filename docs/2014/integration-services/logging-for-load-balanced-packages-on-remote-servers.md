@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], remote packages
@@ -13,12 +12,12 @@ ms.assetid: fd571567-b625-4f9a-8b7e-42c5c588b11b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c1da6e0663b5cc996a0af9706123a96c8c26e89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64dec3a89b883d6b3234f65896bb89d3bfde5305
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890669"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057859"
 ---
 # <a name="logging-for-load-balanced-packages-on-remote-servers"></a>远程服务器上的负载平衡包的日志记录
   如果所有子包都使用相同的日志提供程序并且它们全部写入相同的目标，则管理员更容易管理在各个服务器上运行的所有子包的日志。 创建所有子包公用日志文件的一种方式是：将子包配置为“将子包事件记录到 SQL Server 日志提供程序”。 可以将所有包配置为使用相同的数据库、相同的服务器和相同的服务器实例。  

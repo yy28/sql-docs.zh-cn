@@ -1,7 +1,7 @@
 ---
 title: 使用扩展保护连接到数据库引擎 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/21/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7728a43645b2cd177bcc572a392481a7c5aa9510
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774542"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015012"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ ms.locfileid: "59774542"
   
 -   **强行加密**  
   
-     可能的值为 **“打开”** 和 **“关闭”**。 若要使用渠道绑定，“强行加密”  必须设置为“打开” ，所有客户端都将强制进行加密。 如果为 **“关闭”**，则只确保服务绑定。 “强行加密” 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“打开”** 和 **“关闭”** 。 若要使用渠道绑定，“强行加密”  必须设置为“打开” ，所有客户端都将强制进行加密。 如果为 **“关闭”** ，则只确保服务绑定。 “强行加密” 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 -   **扩展保护**  
   
-     可能的值为 **“关闭”**、 **“允许”** 和 **“必需”**。 通过 **扩展保护** 变量，用户可以为每个  实例配置扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别。 “扩展保护” 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“关闭”** 、 **“允许”** 和 **“必需”** 。 通过 **扩展保护** 变量，用户可以为每个  实例配置扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别。 “扩展保护” 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
     -   当设置为 **“关闭”** 时，禁用 **扩展保护** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例将接受来自任何客户端的连接，不管该客户端是否受保护。 **“关闭”** 选项虽与旧的和未打补丁的操作系统兼容，但安全性较差。 当您知道客户端操作系统不支持扩展保护时，请使用此设置。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59774542"
      当多个 SPN 知道一个服务器时，需要 **“接受的 NTLM SPN”** 变量。 当客户端尝试使用服务器不知道的有效 SPN 连接到服务器时，服务绑定将失败。 为避免此问题，用户可以使用 **“接受的 NTLM SPN”** 指定表示服务器的多个 SPN。 **“接受的 NTLM SPN”** 是一系列由分号分隔的 SPN。 例如，若要允许 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，请在“接受的 NTLM SPN”  框中键入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 变量的最大长度为 2048 个字符。 “接受的 NTLM SPN” 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>为数据库引擎启用扩展保护  
- 若要使用 **扩展保护**，服务器和客户端都必须具有支持 **扩展保护**的操作系统，并且必须在操作系统上启用 **扩展保护** 。 有关如何为操作系统启用 **扩展保护** 的详细信息，请参阅 [针对验证的扩展保护](https://support.microsoft.com/kb/968389)。  
+ 若要使用 **扩展保护**，服务器和客户端都必须具有支持 **扩展保护**的操作系统，并且必须在操作系统上启用 **扩展保护** 。 有关如何为操作系统启用 **扩展保护** 的详细信息，请参阅 [针对验证的扩展保护](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。  的某些早期版本的扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在后续的更新中提供。 在服务器计算机上启用 **扩展保护** 之后，使用以下步骤启用 **扩展保护**：  
   
-1.  在 **“开始”** 菜单上，选择 **“所有程序”**，指向 **Microsoft SQL Server** ，再单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单上，选择 **“所有程序”** ，指向 **Microsoft SQL Server** ，再单击 **“SQL Server 配置管理器”** 。  
   
 2.  展开“SQL Server 网络配置”、右键单击“协议”选择“\<_InstanceName>”，然后单击“属性” 。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "59774542"
   
 4.  或者，当多个 SPN 知道一个服务器时，在 **“高级”** 选项卡上按照“设置”部分所述配置 **“接受的 NTLM SPN”** 字段。  
   
-5.  对于渠道绑定，在 **“标志”** 选项卡上，将 **“强行加密”** 设置为 **“打开”**。  
+5.  对于渠道绑定，在 **“标志”** 选项卡上，将 **“强行加密”** 设置为 **“打开”** 。  
   
 6.  重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。  
   

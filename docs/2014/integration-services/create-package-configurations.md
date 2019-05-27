@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, configurations
@@ -19,12 +18,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4bf8041fbac675653bb620d3aca7b1abba21a0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831974"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060169"
 ---
 # <a name="create-package-configurations"></a>创建包配置
   使用 **“包配置组织程序”** 对话框和包配置向导，可以创建包配置。 若要访问这些工具，请在 **中单击** “SSIS” **菜单上的** “包配置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  

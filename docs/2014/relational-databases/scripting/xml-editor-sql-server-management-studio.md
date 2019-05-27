@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editorxml.f1
@@ -18,12 +17,12 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2bf9af55c8ba7660a80dc65fa1f2eb6e322aad4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 28d0de4233147ae0a0dd5f0874d281a4697d93d0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281734"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063199"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 编辑器 (SQL Server Management Studio)
   提供用于处理 XML 架构、ADO.NET 数据集和 XML 文档的一组可视工具。 XML 设计器支持由万维网联合会 (W3C) 定义的 XML 架构定义 (XSD) 语言。 该设计器不支持 DTD（文档类型定义）或其他 XML 架构语言，例如 XDR（XML 数据简化）。  
@@ -82,10 +81,10 @@ ms.locfileid: "63281734"
 ## <a name="data-view"></a>数据视图  
  “数据”视图提供一个可用于修改 .xml 文件的数据网格。 在“数据”视图中只能编辑 XML 文件中的内容（不包括标记和结构）。  
   
- 数据视图中有两个单独的区域：**数据表**并**数据**。 “数据表”区域用于按照嵌套顺序（从最外层到最内层）列出 XML 文件中所定义的关系。 **“数据”** 区域是一个数据网格，会根据“数据表”区域中的所选内容显示数据。  
+ “数据”视图中有两个单独的区域：“数据表”和“数据”。 “数据表”区域用于按照嵌套顺序（从最外层到最内层）列出 XML 文件中所定义的关系。 **“数据”** 区域是一个数据网格，会根据“数据表”区域中的所选内容显示数据。  
   
 > [!NOTE]  
->  新创建的 XML 文件不包含数据，因此不能在“数据”视图中显示。 另外，有一些 XML 文档实例根本不能调用“数据”视图。 尽管 XML 被认为格式正确，如果它不是结构化的数据尝试切换到数据视图时将生成以下消息："尽管本文档的格式正确，它包含了数据视图无法显示的结构。"  
+>  新创建的 XML 文件不包含数据，因此不能在“数据”视图中显示。 另外，有一些 XML 文档实例根本不能调用“数据”视图。 即使系统认为 XML 文件的格式正确，但如果其中的数据不是结构化数据，则在尝试切换到“数据”视图时会生成以下消息：“尽管此文档的格式正确，但它包含数据视图无法显示的结构”。  
   
  在“数据”视图中，您可以：  
   

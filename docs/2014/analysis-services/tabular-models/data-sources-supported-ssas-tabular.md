@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757433"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067383"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>支持的数据源（SSAS 表格）
   本主题介绍可用于表格模型的数据源的类型。  

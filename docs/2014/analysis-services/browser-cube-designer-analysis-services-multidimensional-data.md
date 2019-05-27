@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
@@ -13,12 +12,12 @@ ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4415fedb492eb32c2929c50999cad1542b41ca78
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465451"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064618"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>浏览器（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“浏览器”** 选项卡浏览多维数据集中的维度、度量值和 KPI。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集浏览器已与 MDX 查询设计器集成，并提供图形用户界面来帮助您创建 MDX 查询、筛选器和多维数据集切片，以及在层次结构中深化。  

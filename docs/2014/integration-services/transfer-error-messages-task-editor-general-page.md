@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 648b389adf8af04e0a59365efe8be7108a265435
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62927192"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055075"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>传输错误消息任务编辑器（“常规”页）
   可以使用 **“传输错误消息任务编辑器”** 对话框的 **“常规”** 页，对传输错误消息任务进行命名和说明。 传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用户定义错误消息。 有关此任务的详细信息，请参阅 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)。  

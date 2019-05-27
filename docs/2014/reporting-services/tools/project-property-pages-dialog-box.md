@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.projectpropertypages.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a76281eead6430ca0dafae8671c7990f3c6c2de3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201075"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100043"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
   使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请在“项目”菜单中，单击“\<报表项目名称>属性”。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
@@ -18,12 +17,12 @@ ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 26c555b22ae219eeec9e0b1670f407c2504ac7f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837246"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061974"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>将迭代添加到控制流
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 For 循环容器，此控制流元素使得可以更简便地包含按条件重复包中控制流的循环。 有关详细信息，请参阅 [For 循环容器](control-flow/for-loop-container.md)。  

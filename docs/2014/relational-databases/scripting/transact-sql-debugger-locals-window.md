@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
@@ -13,12 +12,12 @@ ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22090b4bdb1827be4add47ec2f539cde0ea70827
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 503a92349f7b7cfecdd4bd72de507da0a5835f7d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53327397"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063383"
 ---
 # <a name="locals-window"></a>“局部变量”窗口
   **“局部变量”** 窗口显示有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的当前作用域中局部表达式的信息。 此作用域设定为在 **“调用堆栈”** 窗口中选择的当前调用堆栈帧。 只有在调试模式下才可以显示局部表达式。  

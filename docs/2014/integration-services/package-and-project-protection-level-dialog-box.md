@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.packageprotectionlevel.f1
@@ -16,12 +15,12 @@ ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: effe6c8e07ea9303bb77842934afebb7c2e6bec1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767039"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056949"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>“包和项目保护级别”对话框
   可以使用 **“包保护级别”** 对话框更新包的保护级别。 保护级别决定保护包时所使用的方法、密码或用户密钥以及作用域。 可以保护所有数据，也可以只保护敏感数据。  

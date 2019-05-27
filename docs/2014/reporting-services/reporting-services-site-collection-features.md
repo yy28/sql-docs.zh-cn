@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e05ae162-a4b2-489d-9853-d6b09414e632
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9475ee323222b800a9c4b9a86e737fdd161e7a60
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63283591"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102754"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 网站集功能
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式提供了三个 SharePoint 网站集功能。 这些功能支持一般的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式报告环境、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]（用于 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Enterprise Edition 的 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] 外接程序的功能）以及 SharePoint 管理中心的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的管理操作。  

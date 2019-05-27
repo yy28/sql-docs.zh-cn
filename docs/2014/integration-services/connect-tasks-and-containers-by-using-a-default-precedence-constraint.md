@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -16,12 +15,12 @@ ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834049"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060431"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用默认优先约束来连接任务和容器
   优先约束连接两个可执行文件。 可执行文件可以是任何任务，也可以是 For 循环容器、Foreach 循环容器或序列容器。 此过程介绍如何设置优先约束的默认行为，以及如何用默认优先约束来连接可执行文件。  

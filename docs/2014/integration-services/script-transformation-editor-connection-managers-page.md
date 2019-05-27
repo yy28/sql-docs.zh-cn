@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.connections.f1
@@ -15,12 +14,12 @@ ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d83a1a0c8cc9493b2c0703824d7ec02bd840d91
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889240"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056203"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>脚本转换编辑器（“连接管理器”页）
   可以使用 **脚本转换编辑器** 的 **“连接管理器”** 页指定脚本将使用的任何连接。  

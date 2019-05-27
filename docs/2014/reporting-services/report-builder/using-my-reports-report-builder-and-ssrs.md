@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29e7003beeb5daa331a16c572994b4bb1a6ec6d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 410cb4de6b89052493618404df3e595fd6999936
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697886"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107579"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用“我的报表”（报表生成器和 SSRS）
   在配置为本机模式的报表服务器上，“我的报表”文件夹是一个个人工作区，您可以用它来存储和处理自己的报表。 其他报表服务器文件夹都是公用文件夹，通常要求用户具有高级权限才能添加或修改文件夹内容。 相反，“我的报表”文件夹则是用户管理的工作区。 您可以添加或删除报表和文件夹，保存带有个性化设置的链接报表。  

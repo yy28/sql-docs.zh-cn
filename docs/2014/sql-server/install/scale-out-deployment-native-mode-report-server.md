@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
@@ -13,12 +12,12 @@ ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753299"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092433"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>扩展部署（本机模式报表服务器）
   使用 **配置管理器中的** “扩展部署” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 页可以查看扩展部署的初始化状态或将报表服务器联接到扩展部署。 “扩展部署”  是指共享单个报表服务器数据库的两个或多个报表服务器实例。  

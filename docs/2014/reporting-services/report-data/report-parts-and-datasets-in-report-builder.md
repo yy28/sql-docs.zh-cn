@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf9296a798135a8fb7fac8f3919cfca20385004c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720884"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107171"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>报表生成器中的报表部件和数据集
   在报表生成器中，在报表中包含数据的最简单方式是从报表部件库添加报表部件。 报表部件包含它们所依赖的数据集，这些数据集称为 *相关数据集*。 相关数据集基于共享数据源，并且可以是嵌入数据集或共享数据集。  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STY (geometry Data Type)
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b4c8b0a123f2c4151a55813f0fd1025421e3eda3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6744060b9ef3a6500c68d772645f12ecf8f2909
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755294"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935586"
 ---
 # <a name="sty-geometry-data-type"></a>STY（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47755294"
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
   
- CLR 类型：SqlDouble  
+ CLR 类型：**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geometry** 实例为一个点，此属性的值将为 null。 该属性为只读。  

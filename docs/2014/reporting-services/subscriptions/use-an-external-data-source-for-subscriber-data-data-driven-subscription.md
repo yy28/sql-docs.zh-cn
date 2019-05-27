@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriber data sources [Reporting Services]
@@ -18,12 +17,12 @@ ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8314a1d0bdf16a7a320c8a5a7e06558a2bec62c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631840"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100642"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部数据源提供订阅方数据（数据驱动订阅）
   在数据驱动订阅中，动态订阅数据是由从外部数据源检索数据的查询或命令提供的。 可以从满足数据驱动订阅处理要求的任何支持数据源中检索订阅数据。 查询或命令语法必须对随报表服务器安装的数据处理扩展插件有效。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
@@ -13,12 +12,12 @@ ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 341ada76e65676050f9034df65f7a5f28284a3a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62878286"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055672"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>设置任务或容器的属性
   可以使用 **“属性”** 窗口设置任务和容器的大多数属性。 但任务集合的属性以及因过于复杂而无法使用 **“属性”** 窗口设置的属性不在此列。 例如，不能在 **“属性”** 窗口中配置 Foreach 循环容器使用的枚举器。 您必须使用任务或容器编辑器来设置这些复杂的属性。 大多数任务和容器编辑器都有多个节点，而每个节点都包含相关属性。 节点的名称指出了节点所包含属性的主题。  

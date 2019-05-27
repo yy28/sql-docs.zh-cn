@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10134"
@@ -16,12 +15,12 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215071"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104633"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文本框（报表生成器和 SSRS）
   在您考虑一个文本框时，可能要考虑在类似 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint 的图面上包含文本的独立框。 在报表生成器中，某些文本类似上述文本框，它们可显示标题、说明和标签的文字文本，或者基于表达式显示动态文本。 但表或矩阵（tablix 数据区域）中的每个单元也都包含文本框，可以使用您的报表中独立文本框的格式设置方式来设置这些文本框的格式。  

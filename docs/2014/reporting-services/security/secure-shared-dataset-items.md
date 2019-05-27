@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4ff23adeb5d5a73e309bc3cd64e95fa820fa2404
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 29b3430e4a29130c4189fbce1a9a023b7a7f26da
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306513"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101641"
 ---
 # <a name="secure-shared-dataset-items"></a>保护共享数据集项
   在报表服务器上，共享数据集项可由多个报表使用。 您可以对共享数据集加以保护以便控制用户能够访问的程度。 默认情况下，只有是“管理员”内置组的成员的用户才能查看共享数据集、修改属性、启用缓存、创建缓存刷新计划以及删除项。 所有其他用户必须具有为其创建的角色分配才能访问共享数据集。  

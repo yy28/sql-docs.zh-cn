@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
@@ -13,12 +12,12 @@ ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb1838890edb044ca3f1bbe5dfd5ebd3dad51c9d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ed3fbddcf91fe63920b349224a0dde73141c6d75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328687"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063516"
 ---
 # <a name="call-stack-window"></a>“调用堆栈”窗口
   **“调用堆栈”** 窗口显示调用堆栈中的模块以及传递给这些模块的任意参数的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块包括存储过程、函数和触发器。 只有在调试模式下才可以显示调用堆栈。  

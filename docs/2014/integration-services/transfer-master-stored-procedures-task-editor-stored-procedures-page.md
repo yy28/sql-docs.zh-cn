@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferstoredprocedurestask.storedprocedures.f1
@@ -15,12 +14,12 @@ ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1168d12153233a3b904a36e601d9163f34e76b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766260"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054862"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>传输主存储过程任务编辑器（“存储过程”页）
   可以使用“传输主存储过程任务编辑器”对话框的“存储过程”页，指定用于将一个或多个用户定义存储过程从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的 **master** 数据库复制到另一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的 **master** 数据库的属性。 有关此任务的详细信息，请参阅 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)。  

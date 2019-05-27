@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 79205aa8721c46f51b5e51acad326da0b7bfcc59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0e2cb6de46a20f185819f42825576ee529e0198
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63189225"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108058"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
   在安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式时，会安装 PowerShell cmdlet，以便支持 SharePoint 模式下的报表服务器。 这些 cmdlet 涵盖三个功能类别。  
@@ -92,7 +91,7 @@ ms.locfileid: "63189225"
 ###  <a name="bkmk_sharedservice_cmdlets"></a> 共享服务和代理 Cmdlet  
  下表包含用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务的 PowerShell cmdlet。  
   
-|Cmdlet|描述|  
+|Cmdlet|Description|  
 |------------|-----------------|  
 |Install-SPRSService|安装并注册或卸载 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共享服务。 这只能在 SharePoint 模式下具有 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装的计算机上进行。 对于安装，将发生两个操作：<br /><br /> 1)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务安装在场中。<br /><br /> 2)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务实例安装在当前计算机。<br /><br /> 对于卸载，将发生两个操作：<br />1)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]从当前计算机上卸载服务。<br />2)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]从场中卸载服务。<br /><br /> <br /><br /> 注意：如果存在的任何其他计算机场中的具有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务安装，或仍有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]在场中运行服务应用程序，将显示一条警告消息。|  
 |Install-SPRSServiceProxy|安装并注册（或卸载）SharePoint 场中的 Reporting Services 服务代理。|  
@@ -102,7 +101,7 @@ ms.locfileid: "63189225"
 ###  <a name="bkmk_serviceapp_cmdlets"></a> 服务应用程序和代理 Cmdlet  
  下表包含用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序及其关联代理的 PowerShell cmdlet。  
   
-|Cmdlet|描述|  
+|Cmdlet|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|获取一个或多个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序对象。|  
 |New-SPRSServiceApplication|创建一个新的 Reporting Services 服务应用程序及关联的数据库。<br /><br /> LogonType 参数：指定报表服务器是否使用 SSRS 应用程序池帐户或 SQL Server 登录名来访问报表服务器数据库。 该参数可以是下列值之一：<br /><br /> 0 Windows 身份验证<br /><br /> 1 SQL Server<br /><br /> 2 应用程序池帐户（默认值）|  
@@ -122,7 +121,7 @@ ms.locfileid: "63189225"
   
 ###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Reporting Services 自定义功能 Cmdlet  
   
-|Cmdlet|描述|  
+|Cmdlet|Description|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|为指定的 Reporting Services 服务应用程序更新加密密钥并且重新加密其数据。|  
 |Restore-SPRSEncryptionKey|还原以前为 Reporting Services 服务应用程序备份的加密密钥。|  

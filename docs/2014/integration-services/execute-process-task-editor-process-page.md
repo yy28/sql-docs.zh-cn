@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.process.f1
@@ -15,12 +14,12 @@ ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 543ab9724f44e5db1f4532eeadcce79b36de52b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769583"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059033"
 ---
 # <a name="execute-process-task-editor-process-page"></a>执行进程任务编辑器（“进程”页）
   可以使用 **“执行进程任务编辑器”** 对话框的 **“进程”** 页配置执行进程的选项。 这些选项包括要运行的可执行文件、该可执行文件的位置、命令提示符参数以及提供输入及捕获输出的变量。  

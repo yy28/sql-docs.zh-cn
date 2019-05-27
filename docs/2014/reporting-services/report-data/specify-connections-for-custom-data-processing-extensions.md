@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - custom data processing extensions [Reporting Services]
@@ -22,12 +21,12 @@ ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ec3ed5167ee020e892a8fc578ec0088419e24ae8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 734eca26e94b4b879590c889c6c3c479c155c7be
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654837"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107046"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>指定用于自定义数据处理扩展插件的连接
   您可以在报表服务器上创建或使用第三方自定义数据处理扩展插件来增强支持的数据源的数据处理能力，或者支持默认 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中不可用的其他类型的数据源。 对连接的处理会因实现方式的不同而有所不同。 数据处理扩展插件可能具有下列实现方式：  
