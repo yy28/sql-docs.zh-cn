@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 40bfd5e68aa8c27ee0024147eeadc99f0da91ce2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 035cc8b8de493761b79ac391f2f543f96c941507
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63182879"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102872"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服务和服务应用程序
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式的体系结构以 SharePoint 体系结构为基础，并利用 SharePoint 服务和一对多服务应用程序。 创建服务应用程序将使该服务可用并生成服务应用程序数据库。 您可以创建多个 Reporting Services 服务应用程序，但一个服务应用程序已足以用于大多数部署方案。  

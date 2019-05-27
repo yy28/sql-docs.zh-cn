@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5f47bc3b365b2826202eda786afda8407fc77ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 688983b79a39f330e1ab4e44efe8abf6b3df23c4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215268"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105143"
 ---
 # <a name="stdevp-function-report-builder-and-ssrs"></a>StDevP 函数（报表生成器和 SSRS）
   返回在给定作用域上下文中计算的，由表达式指定的所有非 Null 数值的总体标准偏差。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f4c61c346452664557396032cb4ea14f89da66c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216223"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105324"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>聚合函数引用（报表生成器和 SSRS）
   若要在报表中包含聚合值，您可以在表达式中使用内置聚合函数。 数值字段的默认聚合函数是 SUM。 您可以编辑表达式，并使用其他内置聚合函数或指定不同的作用域。 作用域标识要用于计算的一组数据。  
@@ -160,14 +159,14 @@ ms.locfileid: "63216223"
 ##  <a name="TestingforScope"></a> 测试作用域  
  下列内置函数测试报表项的当前上下文，以确定该报表项是否为特定作用域的成员。  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[InScope](report-builder-functions-inscope-function.md)|指示项的当前实例是否在指定的作用域内。|  
   
 ##  <a name="RetrievingRecursiveLevel"></a> 检索递归级别  
  下列内置函数检索处理递归层次结构时的当前级别。 此函数的结果与文本框中的 `Padding` 属性配合使用可以控制递归组可视层次结构的缩进级别。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[级别](report-builder-functions-level-function.md)|返回在递归层次结构中的当前深度级别。|  
   

@@ -17,14 +17,18 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a23c9ece7522d2b7785b77789ba9e87b5ef356c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4a1fe05a5662dad7e674831c5e5b76b9c8c8263
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271624"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65801354"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的目标组件用于将从上游源和转换接收的数据保存到数据源。 目标组件通常通过现有连接管理器连接数据源。  
   
  有关脚本组件的概述，请参阅[使用脚本组件扩展数据流](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
@@ -120,7 +124,7 @@ ms.locfileid: "58271624"
   
 3.  向数据流设计器图面添加新的脚本组件并将其配置为目标。  
   
-4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）此输出应提供 AdventureWorks 示例数据库的 Person.Address 表中的数据，其中至少包含 AddressID 和 City 列。  
+4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （无需任何转换，即可将源直接连接到目标。）此输出应提供 AdventureWorks 示例数据库的 Person.Address 表中的数据，其中至少包含 AddressID 和 City 列。  
   
 5.  打开“脚本转换编辑器”。 在“输入列”页中，选择 **AddressID** 和 **City** 输入列。  
   
@@ -237,7 +241,7 @@ public class ScriptMain:
   
 2.  向数据流设计器图面添加新的脚本组件并将其配置为目标。  
   
-3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）此输出应提供 **AdventureWorks** 示例数据库的 **Person.Address** 表中的数据，而且至少应包含 **AddressID** 和 **City** 列。  
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （无需任何转换，即可将源直接连接到目标。）此输出应提供 **AdventureWorks** 示例数据库的 **Person.Address** 表中的数据，而且至少应包含 **AddressID** 和 **City** 列。  
   
 4.  打开“脚本转换编辑器”。 在“输入列”页中，选择 **AddressID** 和 **City** 列。  
   

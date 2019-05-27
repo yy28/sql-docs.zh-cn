@@ -15,14 +15,18 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 659059130d63dd2f320dcbd9ec0364b249f0889b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877719"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713874"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 本主题介绍 SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中新增或更新的功能。 它还包括在 SQL Server 2016 期限期间在 [Integration Services (SSIS) 的 Azure 功能包](../integration-services/azure-feature-pack-for-integration-services-ssis.md)中添加或更新的功能。  
 
@@ -284,7 +288,7 @@ ms.locfileid: "64877719"
  Excel 连接管理器、Excel 源和 Excel 目标现在显式支持 Excel 2016 数据源。  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 已发布  
- Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016 已作为 SQL Server 2016 功能包的一部分发布。 若要下载功能包的组件，请参阅 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)（Microsoft® SQL Server® 2016 功能包）。
+ 用于 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Connector for SAP BW 已作为 SQL Server 2016 功能包的一部分发布。 若要下载功能包的组件，请参阅 [MicrosoftÂ® SQL ServerÂ® 2016 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。
  
 #### <a name="oracleteradata"></a> 用于 Oracle 和 Teradata 的连接器 v4.0 已发布
 用于 Oracle 和 Teradata 的 Microsoft 连接器 v4.0 已发布。 若要下载该连接器，请参阅 [用于 Oracle 和 Teradata 的 Microsoft 连接器 v4.0](https://www.microsoft.com/download/details.aspx?id=52950)。
@@ -345,7 +349,7 @@ ms.locfileid: "64877719"
  SQL Server 导入和导出向导现在可以从 Azure Blob 存储导入数据，以及将数据保存到其中。 有关详细信息，请参阅[选择数据源（SQL Server 导入和导出向导）](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)和[选择目标（SQL Server 导入和导出向导）](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。 
 
 ####  <a name="CDCOracle"></a> Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016 已发布  
- Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 2016 已作为 SQL Server 2016 功能包的一部分发布。  这些组件现在支持采用经典安装的 Oracle 12c。 （不支持多租户安装）若要下载功能包的组件，请参阅 [Microsoft® SQL Server® 2016 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。  
+ 用于 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 已作为 SQL Server 2016 功能包的一部分发布。  这些组件现在支持采用经典安装的 Oracle 12c。 （不支持多租户安装）若要下载功能包的组件，请参阅 [MicrosoftÂ® SQL ServerÂ® 2016 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。  
   
 ####  <a name="cdc2016"></a> CDC 组件已针对 SQL Server 2016 进行更新  
  CDC（变更数据捕获）的控制任务、源和拆分器转换组件在更新后已与 SQL Server 2016 完全兼容。 没有新功能，行为也没有改变。  

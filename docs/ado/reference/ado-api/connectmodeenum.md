@@ -30,7 +30,7 @@ ms.locfileid: "63309171"
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|指示只读权限。|  
 |**adModeReadWrite**|3|指示读/写权限。|  
-|**adModeRecursive**|0x400000|结合使用与其他*\*ShareDeny\** 值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 将传播到所有子记录的当前的共享限制**记录**。 如果它没有任何影响**记录**不具有任何子级。 如果它用于生成运行时错误**adModeShareDenyNone**仅。 但是，可以使用它与**adModeShareDenyNone**与其他值结合使用时。 例如，可以使用"**adModeRead**或者**adModeShareDenyNone**或者**adModeRecursive**"。|  
+|**adModeRecursive**|0x400000|结合使用与其他 *\*ShareDeny\** 值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 将传播到所有子记录的当前的共享限制**记录**。 如果它没有任何影响**记录**不具有任何子级。 如果它用于生成运行时错误**adModeShareDenyNone**仅。 但是，可以使用它与**adModeShareDenyNone**与其他值结合使用时。 例如，可以使用"**adModeRead**或者**adModeShareDenyNone**或者**adModeRecursive**"。|  
 |**adModeShareDenyNone**|16|允许其他人具有任何权限打开的连接。 读取和写入访问权限都不可以向其他人拒绝。|  
 |**adModeShareDenyRead**|4|防止其他人具有读取权限打开的连接。|  
 |**adModeShareDenyWrite**|8|防止其他人具有写权限打开的连接。|  

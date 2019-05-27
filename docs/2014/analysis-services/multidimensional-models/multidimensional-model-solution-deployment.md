@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
@@ -15,12 +14,12 @@ ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ab19949b3a05040285a11b6988614d34bf5f5ccf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9ec674c1eb64f2e5191df600864fa38aa3da0749
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699164"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073553"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>多维模型解决方案部署
   在完成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的开发后，可以将数据库部署到 Analysis Services 服务器。 Analysis Services 提供六个可能的部署方法，可用于将该数据库移到测试服务器或生产服务器。 按顺序使用此处列出的方法：AMO 自动化、 XMLA、 部署向导中，部署实用工具、 同步向导、 备份和还原。  

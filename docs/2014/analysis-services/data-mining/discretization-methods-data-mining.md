@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
@@ -21,12 +20,12 @@ ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5e984fe2ea57ab175e3224d099f5392f96287c74
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722719"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084639"
 ---
 # <a name="discretization-methods-data-mining"></a>离散化方法（数据挖掘）
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中创建数据挖掘模型时使用的某些算法需要特定的内容类型才能正常运行。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法的输入不能为连续列，并且不能预测连续值。 另外，有些列可能会因包含的值太多而导致算法不易标识数据中据以创建模型的相关模式。  

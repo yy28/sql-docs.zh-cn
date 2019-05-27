@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 14708d286ea11a872a3260f41cae44e05e7fb30c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eb2544db775987ff44e54b10163812ac53620a9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63283404"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102798"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Reporting Services 网站设置和网站功能（SharePoint 模式）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式具有几个网站级自定义功能和可以从“SharePoint 网站设置”页管理的网站功能。 这些设置适用于整个网站并影响所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 必须拥有“内容管理员”和“系统管理员”权限才能查看此页。  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 186294182e39845ce600c04b35804759b61eb0f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63218091"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011322"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>使用语义搜索来查找相似和相关文档
   说明在为统计语义索引配置的列上如何查找相似或相关的文档或文本值，以及如何查找其相似或相关程度的信息。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML AUTO [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84e00a2111b9cfe38ca680ec6c17ada724456878
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5b42d8fd7694aaa3962d049cb0e9663479778958
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503709"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095193"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>在 90 或更高的兼容模式下，FOR XML AUTO 查询返回派生表引用
   当数据库兼容级别设置为 90 或更高时，在 AUTO 模式下执行的 FOR XML 查询将返回针对派生表别名的引用。 当兼容级别设置为 80 时，FOR XML AUTO 查询将返回针对定义派生表的基表的引用。  

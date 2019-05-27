@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: cd2af1f3-cd8b-4651-9e4d-7c4c94353d7e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bed90099c42383ea45ba6ad17459c7e0f6048b8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f049e8a91b072bc49c3c555101fdf9fb1398944c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62638464"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062569"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Analysis Services 设计器和对话框（表格）
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的表格项目创作环境以及 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的表格模型管理工具都包含许多对话框、属性页和向导页。 您可以单击“帮助”按钮或按 F1 键来了解详细信息。  

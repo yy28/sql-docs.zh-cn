@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 017762b9897af951020793fdd02fc34d3209da2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 77f7144231bda8be36334513584df16cf9c0e22b
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920534"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010175"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>为 FILESTREAM 数据创建客户端应用程序
   可以使用 Win32 在 FILESTREAM BLOB 中读取和写入数据。 您需要执行以下步骤：  
@@ -40,7 +40,7 @@ ms.locfileid: "62920534"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) 可返回表示会话当前事务的标记。 应用程序使用此标记可将 FILESTREAM 文件系统流式处理操作绑定到该事务。  
   
--   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 可获取 Win32 文件句柄。 应用程序到流的 FILESTREAM 数据，使用的句柄，然后将该句柄传递给以下 Win32 Api:[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)， [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)， [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)， [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)， [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)，或[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果应用程序使用此句柄来调用任何其他 API，则会返回 ERROR_ACCESS_DENIED 错误。 应用程序应使用 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)来关闭此句柄。  
+-   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 可获取 Win32 文件句柄。 应用程序使用句柄来流式传输 FILESTREAM 数据，然后可以将句柄传递给以下 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果应用程序使用此句柄来调用任何其他 API，则会返回 ERROR_ACCESS_DENIED 错误。 应用程序应使用 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)来关闭此句柄。  
   
  所有 FILESTREAM 数据容器访问都是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务中执行的。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以保持 SQL 数据和 FILESTREAM 数据之间的一致性。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62920534"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
 ###  <a name="handle"></a> 获取 Win32 文件句柄  
- 若要获取 Win32 文件句柄，请调用 OpenSqlFilestream API。 此 API 是从 sqlncli.dll 文件中导出的。 返回的句柄可以传递给以下 Win32 Api 的任何：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)， [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)， [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)， [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)， [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)，或[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 下面的示例说明了如何获取 Win32 文件句柄并使用它在 FILESTREAM BLOB 中读取和写入数据。  
+ 若要获取 Win32 文件句柄，请调用 OpenSqlFilestream API。 此 API 是从 sqlncli.dll 文件中导出的。 返回的句柄可以传递给以下任何 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 下面的示例说明了如何获取 Win32 文件句柄并使用它在 FILESTREAM BLOB 中读取和写入数据。  
   
  [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
   

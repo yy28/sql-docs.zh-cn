@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - syslockinfo
@@ -14,12 +13,12 @@ ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e2fa557efb6f09eae78180390c733f35bdc4a17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214997"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096649"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>对 syslockinfo 和 sp_lock 中的行为的更改
   **syslockinfo**并**sp_lock**可能返回意外的值。 它们还可能返回其他行，而以前的版本**syslockinfo**并**sp_lock**返回最多每个锁资源的两个行。  
@@ -29,7 +28,7 @@ ms.locfileid: "63214997"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，则**rsc_objid**并**rsc_indid**中的列**syslockinfo**并**objid**和**indid**中的列**sp_lock**一致地返回的对象 ID 和索引 id。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，可能会返回值 0。  
   
  在中[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]， **syslockinfo**并**sp_lock**在单个事务中返回最多为任何给定的锁资源的两个行。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，如果启用了锁分区，就可以针对在一个事务中运行的同一资源返回多行。 那里可能最多 N + 1 行返回，其中 N 是 Cpu 的数目。 另外，现在可以针对同一资源显示 GRANTED 和 WAITING 请求，这在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中是不可能实现的。  

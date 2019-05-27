@@ -14,16 +14,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7be26a9819fdaf5b50d6169a4d94d8c7c5b906ee
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669606"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935485"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51669606"
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**，展开包含具有指定索引的表的数据库，再展开 **“表”**。  
+2.  展开 **“数据库”** ，展开包含具有指定索引的表的数据库，再展开 **“表”** 。  
   
 3.  展开要为其创建索引的表。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "51669606"
   
 6.  在“索引类型”下拉列表中，选择“空间”。  
   
-7.  若要指定想为其创建索引的空间数据列，请单击 **“添加”**。  
+7.  若要指定想为其创建索引的空间数据列，请单击 **“添加”** 。  
   
-8.  在“从 \<table name> 中选择列”对话框中，通过选中相应的复选框来选择类型为“geometry”或“geography”的列。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”**。  
+8.  在“从 \<table name> 中选择列”对话框中，通过选中相应的复选框来选择类型为“geometry”或“geography”的列。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”** 。  
   
 9. 请在 **“索引键列”** 网格中验证您的列选择。  
   
-10. 在 **“索引属性”** 对话框的 **“选择页”** 窗格中，单击 **“空间”**。  
+10. 在 **“索引属性”** 对话框的 **“选择页”** 窗格中，单击 **“空间”** 。  
   
 11. 在 **“空间”** 页上，指定要用于索引的空间属性的值。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "51669606"
   
 2.  为索引选择 **geometry** 列或 **geography** 列。  
   
-3.  在 **表设计器** 菜单上，单击 **“空间索引”**。  
+3.  在 **表设计器** 菜单上，单击 **“空间索引”** 。  
   
-4.  在 **“空间索引”** 对话框中，单击 **“添加”**。  
+4.  在 **“空间索引”** 对话框中，单击 **“添加”** 。  
   
 5.  在 **“所选空间索引”** 列表中选择新的索引，然后在右侧的网格中设置空间索引的属性。 有关属性的信息，请参阅[空间索引对话框 (Visual Database Tools)](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)。  
   
@@ -121,13 +121,13 @@ ms.locfileid: "51669606"
   
      此时，将在表设计器中打开该表。  
   
-2.  在 **表设计器** 菜单上，单击 **“空间索引”**。  
+2.  在 **表设计器** 菜单上，单击 **“空间索引”** 。  
   
      **“空间索引”** 对话框随即打开。  
   
 3.  在 **“所选空间索引”** 列中单击要删除的索引。  
   
-4.  单击 **“删除”**。  
+4.  单击 **“删除”** 。  
   
   
 ##  <a name="restrictions"></a> 对空间索引的限制  

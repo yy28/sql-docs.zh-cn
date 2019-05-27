@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
@@ -13,12 +12,12 @@ ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748399"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070537"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>查询和筛选（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   多维数据集设计器中 **“浏览器”** 选项卡的这一区域包含查询和筛选区域，可帮助您从多维数据集中选择用于浏览或查询的数据。 您可以按需添加任意多个多维数据集对象，然后在数据区域中查看结果，或使用“在 Excel 中分析”功能将结果导出到报表，以便演示最终用户将如何查看数据。  

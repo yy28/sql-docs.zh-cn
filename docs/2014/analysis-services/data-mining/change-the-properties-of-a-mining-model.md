@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
@@ -14,12 +13,12 @@ ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689047"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085880"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>更改挖掘模型的属性
   某些挖掘模型属性应用于整个模型，而其他一些模型属性应用于单独的列。 例如，`Drillthrough` 属性就应用于整个模型，它指定事例数据是否应该可用于查询；`Description` 属性也是此类属性。 应用于列的属性包括 `Usage` 和 `ModelingFlags`；它们控制列中的数据在模型内的使用方式。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10008"
@@ -16,12 +15,12 @@ ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1885d796d567d03585ae1ce0b591fb85bbf42658
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97a6c14b9486b2cc82d514bd7a7fa8210bc22204
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63195095"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107937"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>“转换 CRI”对话框（报表生成器）
   该报表包含其中有不受支持的功能的自定义报表项 (CRI)。 CRI 是对报表定义语言 (RDL) 的扩展，它支持用于显示报表中的数据的自定义对象。 CRI 包含由第三方软件供应商提供的设计时和运行时组件。  

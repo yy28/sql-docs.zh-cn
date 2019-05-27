@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.wmiquery.f1
@@ -15,12 +14,12 @@ ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8e4e798100c4cf972949dc91dd7aeb5648a28275
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8367f0ae57df5333808e4dfde25c5676a3bcf1d4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877544"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054361"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>WMI 数据读取器任务编辑器（“WMI 选项”页）
   可以使用“WMI 数据读取器任务编辑器”对话框的“WMI 选项”页，指定 Windows Management Instrumentation 查询语言 (WQL) 查询的源和查询结果的目标。  

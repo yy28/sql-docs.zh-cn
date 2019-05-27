@@ -10,20 +10,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], security
 - FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62874790"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009990"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
   说明用于管理 FileTable 的常见管理任务。  
   
-##  <a name="HowToEnumerate"></a> 如何：获取 Filetable 和相关的对象的列表  
+##  <a name="HowToEnumerate"></a> 如何：获取 FileTable 和相关对象的列表  
  若要获取 FileTable 的列表，请查询下列目录视图之一：  
   
 -   [sys.filetables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   如果在实例级别禁用 FILESTREAM，将看不到该实例上的任何数据库级别目录。  
   
-###  <a name="HowToDisable"></a> 如何：禁用再重新启用数据库级别的非事务性访问权限  
+###  <a name="HowToDisable"></a> 如何：禁用和重新启用数据库级别的非事务性访问权限  
  有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
  **禁用完全非事务性访问权限**  
@@ -106,7 +106,7 @@ ALTER DATABASE database_name
 GO  
 ```  
   
-###  <a name="visible"></a> 如何：确保在数据库中的 Filetable 的可见性  
+###  <a name="visible"></a> 如何：确保数据库中的 FileTable 的可见性  
  当满足以下所有条件时，则可看到数据库级别目录及其下的 FileTable 目录：  
   
 1.  在实例级别启用 FILESTREAM。  
@@ -138,7 +138,7 @@ GO
   
 -   FileTable 目录及其包含的文件和目录将在文件系统中再次可见，且可用于文件 I/O 访问。  
   
-###  <a name="HowToEnableNS"></a> 如何：禁用再重新启用表级别 FileTable Namespace  
+###  <a name="HowToEnableNS"></a> 如何：禁用和重新启用表级别的 FileTable 命名空间  
  使用 **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 选项调用 ALTER TABLE 语句。  
   
  **禁用 FileTable 命名空间**  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> 如何：识别锁 Filetable 持有  
+###  <a name="HowToIdentifyLocks"></a> 如何：确定 FileTable 持有的锁  
  FileTable 持有的大多数锁与应用程序打开的文件相对应。  
   
  **确定打开的文件和关联锁**  

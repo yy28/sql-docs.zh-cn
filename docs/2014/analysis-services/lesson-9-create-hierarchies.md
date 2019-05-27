@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51f8d7b6616f6f14621209561146916cb4b0acd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728113"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078193"
 ---
 # <a name="lesson-10-create-hierarchies"></a>第 10 课：创建层次结构
   在本课中，您将创建层次结构。 层次结构是按级别排列的列的分组；例如，地理层次结构可能具有针对国家/地区、省/市/自治区、县和市的子级别。 层次结构可独立于报表客户端应用程序字段列表中的其他列出现，使客户端用户可以更方便地在报表中导航和包含数据。 若要了解详细信息，请参阅[层次结构（SSAS 表格）](tabular-models/hierarchies-ssas-tabular.md)。  

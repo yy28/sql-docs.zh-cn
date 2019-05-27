@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.copyaggregationdesign.f1
@@ -13,12 +12,12 @@ ms.assetid: 50c26cb1-c294-4f17-8b9e-435fdbd4806d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3731fbb15abe51d010ed2d20a705f5a13c2878d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 11ee89e8849155f905e3908e491184f78a8f08b7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643227"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062233"
 ---
 # <a name="assign-aggregation-design-dialog-box-analysis-services---multidimensional-data"></a>“分配聚合设计”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “分配聚合设计” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，为一个或多个目标分区分配聚合设计。 你可以通过在**对象资源管理器**中右键单击某个分区或聚合设计，然后选择“分配聚合设计”，来显示“分配聚合设计”对话框。  

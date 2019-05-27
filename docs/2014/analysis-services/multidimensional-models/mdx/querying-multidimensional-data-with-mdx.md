@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [Analysis Services], querying
@@ -13,12 +12,12 @@ ms.assetid: e0a5dd60-35a3-4a4f-b36f-52ecea814886
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5bce169a9a18ca10dd8126606ea1f8302969b5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b04669080a9dedd84d3e7c218f6360486076fdc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725201"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073914"
 ---
 # <a name="querying-multidimensional-data-with-mdx"></a>使用 MDX 查询多维数据
   多维表达式 (MDX) 是用于在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中处理和检索多维数据的查询语言。 MDX 基于 XML for Analysis (XMLA) 规范，并带有特定于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的扩展。 MDX 使用由标识符、值、语句、函数和运算符组成的表达式， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 可以通过计算表达式来检索某个对象（如集或成员）或标量值（如字符串或数字）。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], getting assistance
@@ -14,12 +13,12 @@ ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779739"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064833"
 ---
 # <a name="feature-reference-database-engine"></a>功能参考（数据库引擎）
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包括可用于创建、管理和查看数据库对象和数据的若干工具和应用程序。 此外，还有一些工具可用于监视服务器和数据库的性能及排除故障，并可用于启用及禁用功能、服务和网络协议。 本节包含介绍这些工具和应用程序的对话框的一些特定主题。  

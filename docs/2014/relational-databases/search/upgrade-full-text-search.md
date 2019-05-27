@@ -13,15 +13,15 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363639"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010963"
 ---
 # <a name="upgrade-full-text-search"></a>升级全文搜索
   将全文搜索升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是在安装期间以及在附加、还原或使用复制数据库向导复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的数据库文件和全文目录期间执行的。  
@@ -135,9 +135,9 @@ ms.locfileid: "53363639"
   
  **更改服务器实例的全文升级行为**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]设置用户帐户 ：使用**升级\_选项**操作[sp\_fulltext\_服务](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]设置用户帐户 ：使用 [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) 的 upgrade\_option 操作  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** 使用**全文升级选项**的**服务器属性**对话框。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：** 使用“服务器属性”对话框的“全文升级选项”。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
 ##  <a name="Considerations_for_Restore"></a> 有关将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录还原到 的注意事项 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  将全文数据从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一种方法是将完整数据库备份还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

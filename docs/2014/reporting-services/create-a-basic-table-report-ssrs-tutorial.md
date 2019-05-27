@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
@@ -15,12 +14,12 @@ ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266269"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109681"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>创建基本表报表（SSRS 教程）
   本教程旨在帮助您创建基本表报表基于[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库使用报表设计器。 您还可以使用报表生成器或报表向导创建报表。 在本教程中，您将执行以下操作：创建报表项目、设置连接信息、定义查询、添加表数据区域、对某些字段进行分组和汇总以及预览报表。  

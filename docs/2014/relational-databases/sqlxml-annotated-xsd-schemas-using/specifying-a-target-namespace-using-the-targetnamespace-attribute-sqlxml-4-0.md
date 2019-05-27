@@ -16,15 +16,15 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d297b8516cb09db317ba835b49fe41b3e13be9e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228554"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013681"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 属性指定目标命名空间 (SQLXML 4.0)
   编写 XSD 架构，您可以使用 XSD **targetNamespace**特性以指定目标命名空间。 本主题介绍如何在 XSD **targetNamespace**， **elementFormDefault**，并**attributeFormDefault**属性起作用，它们如何影响的 XML 实例生成，以及如何使用命名空间指定 XPath 查询。  

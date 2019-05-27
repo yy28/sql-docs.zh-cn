@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 147daad87bf9ec77d2c686d44d367e85a07ab4c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48b2f38635e77f58388cc6d3b04beedd7fdc470c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63021299"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106623"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>向报表添加 HTML（报表生成器和 SSRS）
   可以使用占位符从数据集中的字段导入 HTML 以在报表中使用。 默认情况下，占位符表示纯文本，因此需要将占位符的标记类型改为 HTML。 有关详细信息，请参阅[将 HTML 导入报表（报表生成器和 SSRS）](importing-html-into-a-report-report-builder-and-ssrs.md)。  

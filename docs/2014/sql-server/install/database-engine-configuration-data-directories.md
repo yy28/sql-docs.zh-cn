@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9b1fa0fc-623b-479a-afc3-4f13bd850487
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b223c3ef9c6b4a8085c6575f827ae5e9e276ad9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bfb62ec0bbd16a2b77e2f05f64d36ef31498a100
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992318"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095903"
 ---
 # <a name="database-engine-configuration---data-directories"></a>数据库引擎配置 - 数据目录
   使用此页面可指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 程序和数据文件的安装位置。 根据安装类型，支持的存储可能包括本地磁盘、共享存储或 SMB 文件服务器。  

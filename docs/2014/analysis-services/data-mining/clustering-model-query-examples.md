@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
@@ -15,12 +14,12 @@ ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715354"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085722"
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
   依据数据挖掘模型创建查询时，可以检索有关模型的元数据，或者创建内容查询以提供有关分析时发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  

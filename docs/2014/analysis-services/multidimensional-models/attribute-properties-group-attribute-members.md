@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - NameColumn property
@@ -23,12 +22,12 @@ ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f7ff454dd4464fab5173c4d0022bd94543c1dad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701750"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077269"
 ---
 # <a name="group-attribute-members-discretization"></a>对属性成员分组（离散化）
   成员组是系统生成的连续维度成员的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以通过名为离散化的进程将属性成员分成若干成员组。 层次结构中的级别或者包含成员组，或者包含成员，但是不能同时包含二者。 业务用户浏览包含成员组的级别时，将看见成员组的名称和单元值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为了支持成员组而生成的成员称为分组成员，看上去与普通成员相同。  

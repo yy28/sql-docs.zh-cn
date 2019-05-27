@@ -12,15 +12,15 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156694"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011758"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
   当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符” 。  

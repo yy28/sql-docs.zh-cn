@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.discrimination.f1
@@ -13,12 +12,12 @@ ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f10fdf70b27f2bcea53ce32a1d64dec65e34893
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650751"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063125"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>“属性对比”选项卡（挖掘模型查看器）
   可以使用 **“属性对比”** 选项卡，比较输入属性的状态并查看这些状态与结果属性相关的方式。 两个所选的可预测属性状态之间差别最大的属性值会首先列出。  

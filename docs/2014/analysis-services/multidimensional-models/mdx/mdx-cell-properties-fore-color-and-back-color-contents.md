@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - FORE_COLOR contents
@@ -19,12 +18,12 @@ ms.assetid: ff8f40cb-2ac4-4fc2-9761-7f1b14c17c8c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17b4bf37eef74824c51a81b97f8b2e5b204df3c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ecd8bb157d7b501d29230c91d87f148ae738ff45
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725421"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074413"
 ---
 # <a name="forecolor-and-backcolor-contents-mdx"></a>FORE_COLOR 和 BACK_COLOR 内容 (MDX)
   `FORE_COLOR` 和 `BACK_COLOR` 单元属性分别以 Microsoft Windows 操作系统红绿蓝 (RGB) 格式存储单元的文本颜色信息和背景颜色信息。  

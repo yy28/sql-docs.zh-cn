@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680443"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087461"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)
   只要您在 Secure Store Service 中创建一个目标应用程序来存储要使用的凭据，PowerPivot 数据刷新作业就可以在任何 Windows 用户帐户下运行。 同样，如果您想要提供的数据库登录名不同于最初用于导入 PowerPivot for Excel 中的数据的数据库登录名，则可以将这些凭据映射到 Secure Store Service 目标应用程序，然后在数据刷新计划中指定该目标应用程序。  

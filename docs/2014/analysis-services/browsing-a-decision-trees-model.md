@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -18,12 +17,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62468714"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064672"
 ---
 # <a name="browsing-a-decision-trees-model"></a>浏览决策树模型
   当你打开分类模型使用**浏览**，模型将显示在一个交互式决策树查看器，类似于[!INCLUDE[msCoName](../includes/msconame-md.md)]决策树查看器中以[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 该查看器将分类结果显示为一个图形，图形设计可以突出将一组数据与其他数据区分开来的条件。 您还可以深化到树的各个子集并检索基础数据。  
