@@ -34,7 +34,7 @@ ms.lasthandoff: 05/22/2019
 ms.locfileid: "66014676"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新数据 (SQLXML 4.0)
-  更新现有数据时，必须指定**\<之前 >** 并**\<后 >** 块。 中指定的元素**\<之前 >** 并**\<后 >** 块描述所需的更改。 Updategram 使用在中指定的元素**\<之前 >** 块来标识数据库中的现有记录。 中的相应元素**\<后 >** 块指示执行更新操作后应如何查找记录的。 中的信息，updategram 创建与匹配的 SQL 语句**\<后 >** 块。 然后，Updategram 使用该语句更新数据库。  
+  更新现有数据时，必须指定 **\<之前 >** 并 **\<后 >** 块。 中指定的元素 **\<之前 >** 并 **\<后 >** 块描述所需的更改。 Updategram 使用在中指定的元素 **\<之前 >** 块来标识数据库中的现有记录。 中的相应元素 **\<后 >** 块指示执行更新操作后应如何查找记录的。 中的信息，updategram 创建与匹配的 SQL 语句 **\<后 >** 块。 然后，Updategram 使用该语句更新数据库。  
   
  以下是 Updategram 的更新操作格式：  
   
@@ -54,21 +54,21 @@ ms.locfileid: "66014676"
 ```  
   
  `<updg:before>`  
- 中的元素**\<之前 >** 块标识数据库表中的现有记录。  
+ 中的元素 **\<之前 >** 块标识数据库表中的现有记录。  
   
  `<updg:after>`  
- 中的元素**\<后 >** 块描述中指定的记录如何**\<之前 >** 块应查找后进行更新。  
+ 中的元素 **\<后 >** 块描述中指定的记录如何 **\<之前 >** 块应查找后进行更新。  
   
- `mapping-schema` 属性用于标识要由 Updategram 使用的映射架构。 如果 updategram 指定映射架构，元素和属性名称中指定**\<之前 >** 并**\<后 >** 块必须与架构中的名称匹配。 该映射架构将这些元素或属性名称映射到数据库表和列名称。  
+ `mapping-schema` 属性用于标识要由 Updategram 使用的映射架构。 如果 updategram 指定映射架构，元素和属性名称中指定 **\<之前 >** 并 **\<后 >** 块必须与架构中的名称匹配。 该映射架构将这些元素或属性名称映射到数据库表和列名称。  
   
  如果 Updategram 不指定架构，则 Updategam 将使用默认映射。 在默认映射，  **\<ElementName >** updategram 映射到数据库表和子元素或属性映射到数据库列中指定。  
   
- 中的元素**\<之前 >** 块必须与数据库中只有一个表行匹配。 如果该元素与多个表行匹配，或与任何表行不匹配，则 updategram 返回错误，并取消整个**\<同步 >** 块。  
+ 中的元素 **\<之前 >** 块必须与数据库中只有一个表行匹配。 如果该元素与多个表行匹配，或与任何表行不匹配，则 updategram 返回错误，并取消整个 **\<同步 >** 块。  
   
- Updategram 可以包括多个**\<同步 >** 块。 每个**\<同步 >** 块均被视为一个事务。 每个**\<同步 >** 块可以有多个**\<之前 >** 并**\<后 >** 块。 例如，如果要更新两个现有记录，则可以指定两个**\<之前 >** 并**\<后 >** 对，一个用于每个要更新的记录。  
+ Updategram 可以包括多个 **\<同步 >** 块。 每个 **\<同步 >** 块均被视为一个事务。 每个 **\<同步 >** 块可以有多个 **\<之前 >** 并 **\<后 >** 块。 例如，如果要更新两个现有记录，则可以指定两个 **\<之前 >** 并 **\<后 >** 对，一个用于每个要更新的记录。  
   
 ## <a name="using-the-updgid-attribute"></a>使用 updg:id 属性  
- 如果在中指定多个元素**\<之前 >** 并**\<后 >** 块，使用`updg:id`特性标记中的行 **\<之前 >** 并**\<后 >** 块。 处理逻辑使用此信息来确定中的什么记录**\<之前 >** 块中的什么记录对**\<后 >** 块。  
+ 如果在中指定多个元素 **\<之前 >** 并 **\<后 >** 块，使用`updg:id`特性标记中的行 **\<之前 >** 并 **\<后 >** 块。 处理逻辑使用此信息来确定中的什么记录 **\<之前 >** 块中的什么记录对 **\<后 >** 块。  
   
  如果存在以下任一情况，则 `updg:id` 属性不是必需属性（尽管推荐使用该属性）：  
   
@@ -76,13 +76,13 @@ ms.locfileid: "66014676"
   
 -   为 Updategram 中的键字段提供了一个或多个特定值。  
   
- 如果是这种情况，updategram 使用在中指定的键列`sql:key-fields`中的元素进行配对**\<之前 >** 并**\<后 >** 块。  
+ 如果是这种情况，updategram 使用在中指定的键列`sql:key-fields`中的元素进行配对 **\<之前 >** 并 **\<后 >** 块。  
   
  如果映射架构未标识键列（通过使用 `sql:key-fields`）或者 Updategram 要更新键列值，则必须指定 `updg:id`。  
   
- 中标识的记录**\<之前 >** 并**\<后 >** 块没有处于相同的顺序。 `updg:id`属性强制中指定的元素之间的关联**\<之前 >** 并**\<后 >** 块。  
+ 中标识的记录 **\<之前 >** 并 **\<后 >** 块没有处于相同的顺序。 `updg:id`属性强制中指定的元素之间的关联 **\<之前 >** 并 **\<后 >** 块。  
   
- 如果指定中的有一个元素**\<之前 >** 块和中的只能有一个相应元素**\<后 >** 阻止，请使用`updg:id`不是必需的。 但是，建议指定 `updg:id` 以避免多义性。  
+ 如果指定中的有一个元素 **\<之前 >** 块和中的只能有一个相应元素 **\<后 >** 阻止，请使用`updg:id`不是必需的。 但是，建议指定 `updg:id` 以避免多义性。  
   
 ## <a name="examples"></a>示例  
  在使用 Updategram 示例之前，请注意以下事项：  
@@ -107,7 +107,7 @@ ms.locfileid: "66014676"
 </ROOT>  
 ```  
   
- 该记录中所述**\<之前 >** 块表示数据库中的当前记录。 Updategram 使用的列的值中指定的所有**\<之前 >** 块来搜索记录。 在该 updategram **\<之前 >** 块仅提供 ContactID 列; 因此，updategram 仅使用值以搜索记录。 如果要将 LastName 值添加到该块，则 Updategram 会同时使用 ContactID 和 LastName 值执行搜索。  
+ 该记录中所述 **\<之前 >** 块表示数据库中的当前记录。 Updategram 使用的列的值中指定的所有 **\<之前 >** 块来搜索记录。 在该 updategram **\<之前 >** 块仅提供 ContactID 列; 因此，updategram 仅使用值以搜索记录。 如果要将 LastName 值添加到该块，则 Updategram 会同时使用 ContactID 和 LastName 值执行搜索。  
   
  在该 updategram **\<后 >** 块提供的 LastName 列值，因为这是正在更改的唯一值。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66014676"
   
 -   它插入名为“Late Morning”的从 10:00AM 开始的新班。  
   
- 在 updategram 中，`updg:id`属性创建中的元素之间的关联**\<之前 >** 并**\<后 >** 块。  
+ 在 updategram 中，`updg:id`属性创建中的元素之间的关联 **\<之前 >** 并 **\<后 >** 块。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -145,7 +145,7 @@ ms.locfileid: "66014676"
 </ROOT>  
 ```  
   
- 请注意如何`updg:id`属性对的第一个实例\<HumanResources.Shift > 中的元素**\<之前 >** 块的第二个实例\<HumanResources.Shift > 中的元素**\<后 >** 块。  
+ 请注意如何`updg:id`属性对的第一个实例\<HumanResources.Shift > 中的元素 **\<之前 >** 块的第二个实例\<HumanResources.Shift > 中的元素 **\<后 >** 块。  
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   
@@ -156,12 +156,12 @@ ms.locfileid: "66014676"
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. 指定多个\<之前 > 和\<后 > 块  
- 若要避免混淆，您可以编写 updategram 示例 B 中使用多个**\<之前 >** 并**\<后 >** 块对。 指定**\<之前 >** 并**\<后 >** 对是指定具有最不易混淆的多个更新的一种方法。 此外，如果每个的**\<之前 >** 并**\<后 >** 块指定最多一个元素，不需要使用`updg:id`属性。  
+ 若要避免混淆，您可以编写 updategram 示例 B 中使用多个 **\<之前 >** 并 **\<后 >** 块对。 指定 **\<之前 >** 并 **\<后 >** 对是指定具有最不易混淆的多个更新的一种方法。 此外，如果每个的 **\<之前 >** 并 **\<后 >** 块指定最多一个元素，不需要使用`updg:id`属性。  
   
 > [!NOTE]  
->  若要形成配对， **\<后 >** 标记必须紧跟在其对应**\<之前 >** 标记。  
+>  若要形成配对， **\<后 >** 标记必须紧跟在其对应 **\<之前 >** 标记。  
   
- 在以下 updategram 中，第一个**\<之前 >** 并**\<后 >** 对将更新白班白班的名称。 第二对将插入新的轮班记录。  
+ 在以下 updategram 中，第一个 **\<之前 >** 并 **\<后 >** 对将更新白班白班的名称。 第二对将插入新的轮班记录。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -193,13 +193,13 @@ ms.locfileid: "66014676"
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="d-specifying-multiple-sync-blocks"></a>D. 指定多个\<同步 > 块  
- 可以指定多个**\<同步 >** updategram 中的块。 每个**\<同步 >** 指定的块是独立的事务。  
+ 可以指定多个 **\<同步 >** updategram 中的块。 每个 **\<同步 >** 指定的块是独立的事务。  
   
- 在以下 updategram 中，第一个**\<同步 >** 块更新 Sales.Customer 表中的记录。 出于简化原因，Updategram 仅指定必需的列值：标识值 (CustomerID) 和要更新的值 (SalesPersonID)。  
+ 在以下 updategram 中，第一个 **\<同步 >** 块更新 Sales.Customer 表中的记录。 出于简化原因，Updategram 仅指定必需的列值：标识值 (CustomerID) 和要更新的值 (SalesPersonID)。  
   
- 第二个**\<同步 >** 块将两条记录添加到 Sales.SalesOrderHeader 表。 对于该表，SalesOrderID 是 IDENTITY 类型的列。 因此，updategram 不指定 SalesOrderID 的值中的每个\<Sales.SalesOrderHeader > 元素。  
+ 第二个 **\<同步 >** 块将两条记录添加到 Sales.SalesOrderHeader 表。 对于该表，SalesOrderID 是 IDENTITY 类型的列。 因此，updategram 不指定 SalesOrderID 的值中的每个\<Sales.SalesOrderHeader > 元素。  
   
- 指定多个**\<同步 >** 块是很有用因为如果第二个**\<同步 >** 块 （事务） 未能将记录添加到 Sales.SalesOrderHeader 表第一个**\<同步 >** 块仍然可以更新 Sales.Customer 表中的客户记录。  
+ 指定多个 **\<同步 >** 块是很有用因为如果第二个 **\<同步 >** 块 （事务） 未能将记录添加到 Sales.SalesOrderHeader 表第一个 **\<同步 >** 块仍然可以更新 Sales.Customer 表中的客户记录。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -263,7 +263,7 @@ ms.locfileid: "66014676"
   
  在 Updategram 中指定的元素和属性将引用映射架构中的元素和属性。  
   
- 以下 XSD 映射架构有**\<客户 >**， **\<顺序 >**，以及 **\<OD >** 将映射到元素数据库中的 Sales.Customer、 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 表。  
+ 以下 XSD 映射架构有 **\<客户 >** ， **\<顺序 >** ，以及 **\<OD >** 将映射到元素数据库中的 Sales.Customer、 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 表。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -316,7 +316,7 @@ ms.locfileid: "66014676"
 </xsd:schema>  
 ```  
   
- 以下 Updategram 指定该映射架构 (UpdategramMappingSchema.xml)。 该 Updategram 在 Sales.SalesOrderDetail 表中为特定顺序添加顺序细节项。 该 updategram 包括嵌套的元素：  **\<OD >** 元素嵌套在**\<顺序 >** 元素。 在映射架构中指定了这两个元素之间的主键/外键关系。  
+ 以下 Updategram 指定该映射架构 (UpdategramMappingSchema.xml)。 该 Updategram 在 Sales.SalesOrderDetail 表中为特定顺序添加顺序细节项。 该 updategram 包括嵌套的元素：  **\<OD >** 元素嵌套在 **\<顺序 >** 元素。 在映射架构中指定了这两个元素之间的主键/外键关系。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -357,7 +357,7 @@ ms.locfileid: "66014676"
   
  由于学生可以注册参加很多课程，而且一种课程可以有很多学生，因此需要用第三个表 Enrollment 表以表示该 M:N 关系。  
   
- 以下 XSD 映射架构通过使用提供的表的 XML 视图**\<学生 >**， **\<课程 >**，以及**\<注册>** 元素。 **IDREFS**属性映射架构中的指定这些元素之间的关系。 **StudentIDList**特性，可以在**\<课程 >** 元素是**IDREFS**类型属性，它引用 Enrollment 表中的 StudentID 列。 同样， **enrolledin 属性**特性，可以在**\<学生 >** 元素是**IDREFS**类型属性，它是指在注册中的 CourseID 列表。  
+ 以下 XSD 映射架构通过使用提供的表的 XML 视图 **\<学生 >** ， **\<课程 >** ，以及 **\<注册>** 元素。 **IDREFS**属性映射架构中的指定这些元素之间的关系。 **StudentIDList**特性，可以在 **\<课程 >** 元素是**IDREFS**类型属性，它引用 Enrollment 表中的 StudentID 列。 同样， **enrolledin 属性**特性，可以在 **\<学生 >** 元素是**IDREFS**类型属性，它是指在注册中的 CourseID 列表。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

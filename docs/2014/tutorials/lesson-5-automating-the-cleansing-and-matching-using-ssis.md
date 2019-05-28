@@ -18,7 +18,7 @@ ms.lasthandoff: 05/09/2019
 ms.locfileid: "65489755"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>第 5 课：使用 SSIS 自动执行清理和匹配
-  第 1 课中生成 Suppliers 知识库和用它来清理第 2 课中的数据和匹配数据中使用该工具第 3 课**DQS 客户端**。 在实际方案中，您可能需要从 DQS 不支持或你想要自动执行清理的源和匹配过程中提取数据，而无需使用**DQS 客户端**工具。 SQL Server Integration Services (SSIS) 具有可用于将来自各种异构源的数据集成的组件和一个 **[DQS 清理转换](https://msdn.microsoft.com/library/ee677619.aspx)** 组件，可调用清理dqs 公开的功能。 目前，DQS 不会公开匹配功能供 SSIS 使用，但你可以使用**[模糊分组转换](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 来确定数据中的重复项。  
+  第 1 课中生成 Suppliers 知识库和用它来清理第 2 课中的数据和匹配数据中使用该工具第 3 课**DQS 客户端**。 在实际方案中，您可能需要从 DQS 不支持或你想要自动执行清理的源和匹配过程中提取数据，而无需使用**DQS 客户端**工具。 SQL Server Integration Services (SSIS) 具有可用于将来自各种异构源的数据集成的组件和一个 **[DQS 清理转换](https://msdn.microsoft.com/library/ee677619.aspx)** 组件，可调用清理dqs 公开的功能。 目前，DQS 不会公开匹配功能供 SSIS 使用，但你可以使用 **[模糊分组转换](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 来确定数据中的重复项。  
   
  您可以使用将数据上载到 MDS**基于实体的临时处理功能**。 在 MDS 中创建实体时，将自动创建相应的临时表和存储过程。 例如，您创建 Supplier 实体时， **stg.supplier_Leaf**表和**stg.udp_Supplier_Leaf**自动创建存储的过程。 您可以使用临时表和过程来创建、更新和删除实体成员。 在本课中，您将为 Supplier 实体创建新实体成员。 要将数据加载到 MDS 服务器中，SSIS 包首先将数据加载到临时表 stg.supplier_Leaf 中，然后触发关联的存储过程 stg.udp_Supplier_Leaf。 请参阅[导入数据](../master-data-services/overview-importing-data-from-tables-master-data-services.md)的更多详细信息。  
   

@@ -29,7 +29,7 @@ ms.locfileid: "66010628"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布尔运算符  
- 此 XPath 查询将返回**\<客户 >** 的上下文节点的子元素**CustomerID**属性值为 13 或 31:  
+ 此 XPath 查询将返回 **\<客户 >** 的上下文节点的子元素**CustomerID**属性值为 13 或 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +41,7 @@ ms.locfileid: "66010628"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 在谓词中，`attribute`是轴和`CustomerID`是节点测试 (如果**CustomerID**是**\<属性 >** 节点，因为 **\<属性 >** 节点是主节点`attribute`轴)。 谓词筛选器**\<客户 >** 元素并返回只有满足条件的谓词中指定。  
+ 在谓词中，`attribute`是轴和`CustomerID`是节点测试 (如果**CustomerID**是 **\<属性 >** 节点，因为 **\<属性 >** 节点是主节点`attribute`轴)。 谓词筛选器 **\<客户 >** 元素并返回只有满足条件的谓词中指定。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>若要测试针对映射架构的 XPath 查询  
   

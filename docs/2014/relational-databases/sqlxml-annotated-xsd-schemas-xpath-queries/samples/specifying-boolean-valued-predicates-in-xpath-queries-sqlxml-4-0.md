@@ -89,13 +89,13 @@ ms.locfileid: "66012454"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定连续和嵌套的谓词  
- 以下查询使用连续谓词显示。 该查询将返回所有**\<客户 >** 同时具有的子元素的上下文节点**SalesPersonID**值为 277 属性和一个**TerritoryID**且值为 3 的属性：  
+ 以下查询使用连续谓词显示。 该查询将返回所有 **\<客户 >** 同时具有的子元素的上下文节点**SalesPersonID**值为 277 属性和一个**TerritoryID**且值为 3 的属性：  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 该查询将返回**\<客户 >** 满足在谓词中指定的两个条件的元素。  
+ 该查询将返回 **\<客户 >** 满足在谓词中指定的两个条件的元素。  
   
  可以指定 `attribute` 轴 (@) 的快捷方式，由于 `child` 轴是默认值，因此可以在查询中省略它：  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66012454"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 以下 XPath 查询说明嵌套谓词的用法。 该查询将返回所有**\<客户 >** 包含的子元素的上下文节点**\<顺序 >** 子元素上至少有一个 **\<顺序 >** 具有元素**SalesPersonID**属性值为 2。  
+ 以下 XPath 查询说明嵌套谓词的用法。 该查询将返回所有 **\<客户 >** 包含的子元素的上下文节点 **\<顺序 >** 子元素上至少有一个 **\<顺序 >** 具有元素**SalesPersonID**属性值为 2。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -166,7 +166,7 @@ ms.locfileid: "66012454"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定顶级谓词  
- 下面的查询返回**\<客户 >** 具有的子元素节点的上下文节点**\<顺序 >** 元素子级。 该查询将位置路径作为顶级谓词进行测试：  
+ 下面的查询返回 **\<客户 >** 具有的子元素节点的上下文节点 **\<顺序 >** 元素子级。 该查询将位置路径作为顶级谓词进行测试：  
   
 ```  
 /child::Customer[child::Order]  

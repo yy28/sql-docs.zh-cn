@@ -35,7 +35,7 @@ ms.locfileid: "66013681"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. 指定目标命名空间  
- 通过使用以下 XSD 架构指定的目标命名空间**xsd: targetnamespace**属性。 架构还设置**elementFormDefault**并**attributeFormDefault**属性值为 **"unqualified"** （这些属性的默认值）。 这是全局声明，并会影响所有局部元素 (**\<顺序 >** 架构中) 和属性 (**CustomerID**， **ContactName**，和**OrderID**架构中)。  
+ 通过使用以下 XSD 架构指定的目标命名空间**xsd: targetnamespace**属性。 架构还设置**elementFormDefault**并**attributeFormDefault**属性值为 **"unqualified"** （这些属性的默认值）。 这是全局声明，并会影响所有局部元素 ( **\<顺序 >** 架构中) 和属性 (**CustomerID**， **ContactName**，和**OrderID**架构中)。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -75,7 +75,7 @@ ms.locfileid: "66013681"
   
  在架构中：  
   
--   **CustomerType**并**OrderType**类型声明是全局的并且因此，包含在该架构的目标命名空间。 因此，当被引用这些类型的声明中**\<客户 >** 元素并将其**\<顺序 >** 子元素，这就关联指定前缀目标命名空间。  
+-   **CustomerType**并**OrderType**类型声明是全局的并且因此，包含在该架构的目标命名空间。 因此，当被引用这些类型的声明中 **\<客户 >** 元素并将其 **\<顺序 >** 子元素，这就关联指定前缀目标命名空间。  
   
 -   **\<客户 >** 元素也包含在架构的目标命名空间，因为它是在架构中的全局元素。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66013681"
   </ROOT>  
 ```  
   
- 以下实例文档定义 urn: MyNamespace 命名空间，并将关联到它的前缀 (y0)。 前缀仅适用于**\<客户 >** 全局元素。 (该元素是全局的因为它被声明为的子 **\<xsd: schema >** 架构中的元素。)  
+ 以下实例文档定义 urn: MyNamespace 命名空间，并将关联到它的前缀 (y0)。 前缀仅适用于 **\<客户 >** 全局元素。 (该元素是全局的因为它被声明为的子 **\<xsd: schema >** 架构中的元素。)  
   
  前缀不应用于局部元素和属性，因为值**elementFormDefault**并**attributeFormDefault**属性设置为 **"unqualified"** 架构中。 请注意， **\<顺序 >** 是局部元素，因为其声明显示为的子 **\<complexType >** 元素，用于定义 **\<CustomerType >** 元素。 同样，属性 (**CustomerID**， **OrderID**，并**ContactName**) 本地，而非全局。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66013681"
     </ROOT>  
     ```  
   
-     在模板中的 XPath 查询返回**\<客户 >** CustomerID 为 1 的客户的元素。 请注意，XPath 查询为查询中的元素（而不是属性）指定命名空间前缀。 （根据架构中的指定，未限定局部属性。）  
+     在模板中的 XPath 查询返回 **\<客户 >** CustomerID 为 1 的客户的元素。 请注意，XPath 查询为查询中的元素（而不是属性）指定命名空间前缀。 （根据架构中的指定，未限定局部属性。）  
   
      为映射架构 (targetNamespace.xml) 指定的目录路径是相对于模板保存目录的相对路径。 也可以指定绝对路径，例如：  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66013681"
   
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 查询](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 如果架构指定了**elementFormDefault**并**attributeFormDefault**属性的值 **"qualified"**，实例文档将具有所有本地限定元素和属性。 可以更改以前的架构，将在这些属性包括 **\<xsd: schema >** 元素，然后重新执行该模板。 由于当前在实例中也限定了这些属性，XPath 查询将改为包括命名空间前缀。  
+ 如果架构指定了**elementFormDefault**并**attributeFormDefault**属性的值 **"qualified"** ，实例文档将具有所有本地限定元素和属性。 可以更改以前的架构，将在这些属性包括 **\<xsd: schema >** 元素，然后重新执行该模板。 由于当前在实例中也限定了这些属性，XPath 查询将改为包括命名空间前缀。  
   
  下面是修改后的 XPath 查询：  
   

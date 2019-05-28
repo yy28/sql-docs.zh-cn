@@ -42,7 +42,7 @@ ms.locfileid: "66013828"
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 对属性指定 sql:hide  
  此示例中的 XSD 架构组成 **\<Person.Contact >** 具有元素**ContactID**， **FirstName**，和**LastName**属性。  
   
- **\<Person.Contact >** 元素属于复杂类型，并因此，将映射到相同的名称 （默认映射） 的表。 所有属性**\<Person.Contact >** 元素均属于简单类型，并将映射到具有在 AdventureWorks 数据库中 Person.Contacttable 相同名称的列。 在架构中，`sql:hide`指定批注**ContactID**属性。 针对此架构指定 XPath 查询时**ContactID**不返回 XML 文档中。  
+ **\<Person.Contact >** 元素属于复杂类型，并因此，将映射到相同的名称 （默认映射） 的表。 所有属性 **\<Person.Contact >** 元素均属于简单类型，并将映射到具有在 AdventureWorks 数据库中 Person.Contacttable 相同名称的列。 在架构中，`sql:hide`指定批注**ContactID**属性。 针对此架构指定 XPath 查询时**ContactID**不返回 XML 文档中。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

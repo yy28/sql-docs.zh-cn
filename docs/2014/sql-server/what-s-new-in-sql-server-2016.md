@@ -27,7 +27,7 @@ ms.locfileid: "63295249"
 # <a name="what39s-new-in-sql-server-2014"></a>什么&#39;SQL Server 2014 中的 s
   本主题总结了中的新增功能的详细的链接[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，并总结了服务包 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  
-**进行试用：**![Azure 虚拟机小](./media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png)有一个 Azure 帐户？  然后转**[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** 启动具有 SQL Server 2014 Service Pack 1 (SP1) 的虚拟机已安装。 
+**进行试用：** ![Azure 虚拟机小](./media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png)有一个 Azure 帐户？  然后转 **[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** 启动具有 SQL Server 2014 Service Pack 1 (SP1) 的虚拟机已安装。 
   
 -   [新增功能&#40;数据库引擎&#41;](../database-engine/whats-new-in-sql-server-2016.md)  
   
@@ -56,9 +56,9 @@ ms.locfileid: "63295249"
 
 ### <a name="performance-and-scalability-improvements"></a>性能和可伸缩性改进 
 -   **自动 Soft NUMA 分区：** 使用[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]实例启动期间启用跟踪标志 8079,sql 时启用 SP2、 自动 Soft NUMA。 在启动期间，启用跟踪标志 8079 后[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 会询问硬件布局和报告每个 NUMA 节点 8 或更多 Cpu 的系统上自动配置 Soft NUMA。 自动的软 NUMA 行为是超线程 （HT/逻辑处理器） 感知。 通过提高侦听器数、缩放和网络与加密功能，其他节点的分区和创建会缩放后台处理。 建议首先测试自动 Soft NUMA 性能工作负荷前将其设为在生产环境中。 [请参阅博客获取详细信息的](https://blogs.msdn.microsoft.com/psssql/2016/03/30/sql-2016-it-just-runs-faster-automatic-soft-numa/)。 
--  **动态内存对象缩放：**[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 动态分区内存对象基于数量的节点和核心以缩放现代硬件上。 动态升级旨在自动分区的线程安全内存对象 (CMEMTHREAD) 成为瓶颈。 未分区内存对象可以动态升级，以便按节点 （数 NUMA 节点数的分区等于）、 分区和内存对象按节点分区可以通过进一步提升 CPU （分区等号的数量进行分区Cpu)。 [请参阅博客获取详细信息的](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/)。
+-  **动态内存对象缩放：** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 动态分区内存对象基于数量的节点和核心以缩放现代硬件上。 动态升级旨在自动分区的线程安全内存对象 (CMEMTHREAD) 成为瓶颈。 未分区内存对象可以动态升级，以便按节点 （数 NUMA 节点数的分区等于）、 分区和内存对象按节点分区可以通过进一步提升 CPU （分区等号的数量进行分区Cpu)。 [请参阅博客获取详细信息的](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/)。
 -  **DBCC CHECK 的 MAXDOP 提示\*命令：** 这项改进解决[connect 反馈 (468694)](https://connect.microsoft.com/SQLServer/feedback/details/468694/maxdop-option-in-dbcc-checkdb)。 你现在可以运行 DBCC CHECKDB 的 sp_configure 值之外的 MAXDOP 设置。 如果 MAXDOP 超出使用资源调控器配置的值，则数据库引擎会使用资源调控器 MAXDOP 值（如 ALTER WORKLOAD GROUP (Transact-SQL) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅[DBCC CHECKDB (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms176064.aspx)。
--   **启用 > 8 TB，缓冲池：**[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 支持 128 TB 的缓冲池使用率的虚拟地址空间。 此改进使 SQL Server 缓冲池以缩放 8 TB 以上现代硬件上。
+-   **启用 > 8 TB，缓冲池：** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 支持 128 TB 的缓冲池使用率的虚拟地址空间。 此改进使 SQL Server 缓冲池以缩放 8 TB 以上现代硬件上。
 -   **SOS_RWLock 旋转锁改进：** SOS_RWLock 是在 SQL 服务器的基本代码的各个位置中使用的同步基元。  顾名思义，代码可以有多个共享 （读取器） 或单 （编写器） 的所有权。 这一改进无需 SOS_RWLock 旋转锁，而是使用类似于内存中 OLTP 的无锁定技术。 进行此更改后，多个线程可以读取由 SOS_RWLock 并行保护，而无需相互阻止和从而提供增强的可伸缩性的数据结构。 在此更改前旋转锁实现允许只有一个线程获取 SOS_RWLock 一次，甚至还可以读取的数据结构。  [请参阅博客获取详细信息的](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)。
 -    **空间本机实现：** 中引入的空间查询性能得到显著提高[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 到本机实现。 有关详细信息，请参阅[知识库文章 KB3107399](https://support.microsoft.com/en-us/kb/3107399)。
 
@@ -77,7 +77,7 @@ ms.locfileid: "63295249"
 -   **用于检索 SQL Server 中的输入的缓冲区的新 DMF:** 现提供用于检索会话/请求 (sys.dm_exec_input_buffer) 的输入缓冲区的新 DMF。 它在功能上等同于 DBCC INPUTBUFFER。 [请参阅博客获取详细信息的](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/)。
 -   **在留住和会被高估内存授予的缓解措施：** 添加了新的查询提示为资源调控器中通过 MIN_GRANT_PERCENT 和 MAX_GRANT_PERCENT。 这可以通过防止内存争用内存授予上限运行查询时利用这些提示。 有关详细信息，请参阅[知识库文章 KB310740](https://support.microsoft.com/en-us/kb/3107401)
 -   **更好的内存授予/使用诊断：** 新的扩展的事件已添加到 SQL Server (query_memory_grant_usage) 中的跟踪功能来跟踪内存授予请求和授予的列表。 这提供更好地跟踪和分析功能以进行故障排除与内存授予的查询执行问题。 有关详细信息，请参阅[知识库文章 KB3107173](https://support.microsoft.com/en-us/kb/3107173)。
--   **Tempdb 溢出的查询执行诊断：**-哈希警告和排序警告现在具有其他列来跟踪物理 I/O 统计信息、 使用的内存和受影响的行。 我们还引入了新的 hash_spill_details 扩展的事件。 现在，你可以跟踪更详尽的信息的哈希和排序警告 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172))。 此改进现在还通过 XML 查询计划为 SpillToTempDbType 复杂类型的新属性的形式公开 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400))。 设置统计信息现在显示了对工作表的统计信息进行排序。 .
+-   **Tempdb 溢出的查询执行诊断：** -哈希警告和排序警告现在具有其他列来跟踪物理 I/O 统计信息、 使用的内存和受影响的行。 我们还引入了新的 hash_spill_details 扩展的事件。 现在，你可以跟踪更详尽的信息的哈希和排序警告 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172))。 此改进现在还通过 XML 查询计划为 SpillToTempDbType 复杂类型的新属性的形式公开 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400))。 设置统计信息现在显示了对工作表的统计信息进行排序。 .
 -   **对于涉及残留谓词下推的查询执行计划的改进了的诊断：** 读取的实际行现在将在查询执行计划，以帮助改进查询性能故障排除报告。 这应抵消单独捕获 SET STATISTICS IO 的需求。 现在可以看到查询计划中残留谓词下推到相关的信息。 有关详细信息，请参阅[知识库文章 KB3107397](https://support.microsoft.com/en-us/kb/3107397)。
 
 

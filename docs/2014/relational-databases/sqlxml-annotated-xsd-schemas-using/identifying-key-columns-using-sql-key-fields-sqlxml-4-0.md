@@ -48,7 +48,7 @@ ms.locfileid: "66013823"
   
  **\<Sql: relationship >** 标记用于指定父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息 **\<sql: relationship >** 不足以唯一标识父表 (Sales.SalesOrderHeader) 中的行。 因此，如果没有 `sql:key-fields` 批注，则生成的层次结构不准确。  
   
- 与`sql:key-fields`上指定**\<顺序 >**、 批注可唯一标识父 （Sales.SalesOrderHeader 表） 中的行和及其子元素出现其父级的下方。  
+ 与`sql:key-fields`上指定 **\<顺序 >** 、 批注可唯一标识父 （Sales.SalesOrderHeader 表） 中的行和及其子元素出现其父级的下方。  
   
  以下是架构：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66013823"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. 指定 sql:key-fields 以便在结果中生成正确的嵌套  
- 在以下架构中，没有使用指定的层次结构**\<sql: relationship >**。 此架构仍然需要指定 `sql:key-fields` 批注才能唯一标识 HumanResources.Employee 表中的雇员。  
+ 在以下架构中，没有使用指定的层次结构 **\<sql: relationship >** 。 此架构仍然需要指定 `sql:key-fields` 批注才能唯一标识 HumanResources.Employee 表中的雇员。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

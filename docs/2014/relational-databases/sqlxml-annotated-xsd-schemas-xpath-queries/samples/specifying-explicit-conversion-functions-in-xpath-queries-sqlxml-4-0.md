@@ -30,7 +30,7 @@ ms.locfileid: "66010701"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 显式转换函数  
  `number()` 函数将参数转换为数字。  
   
- 假设的值**ContactID**为非数值型，下面的查询转换**ContactID**为数字并将它与值 4 进行比较。 然后，查询返回所有**\<员工 >** 的上下文节点的子元素**ContactID** 4 的数字值的属性：  
+ 假设的值**ContactID**为非数值型，下面的查询转换**ContactID**为数字并将它与值 4 进行比较。 然后，查询返回所有 **\<员工 >** 的上下文节点的子元素**ContactID** 4 的数字值的属性：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -79,7 +79,7 @@ ms.locfileid: "66010701"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 显式转换函数  
  `string()` 函数将参数转换为字符串。  
   
- 下面的查询转换**ContactID**为字符串，并进行比较，它与字符串值"4"。 该查询将返回所有**\<员工 >** 的上下文节点的子元素**ContactID**字符串值"4":  
+ 下面的查询转换**ContactID**为字符串，并进行比较，它与字符串值"4"。 该查询将返回所有 **\<员工 >** 的上下文节点的子元素**ContactID**字符串值"4":  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  
