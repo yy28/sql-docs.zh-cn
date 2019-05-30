@@ -1,6 +1,6 @@
 ---
 title: 管理 Reporting Services 本机模式报表服务器 | Microsoft Docs
-ms.date: 03/17/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27588665db387c7812b1779fd71e3002b1b80e36
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: a516be313ddca5edd5d899ca05eeab6b1818b972
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581100"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175193"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 本机模式报表服务器
   本节包含使用 Reporting Services 配置管理器配置本机模式报表服务器实例的过程。  
@@ -36,7 +36,7 @@ ms.locfileid: "65581100"
  说明如何为在使用 Kerberos 身份验证的网络上的域用户帐户下运行的报表服务器手动注册 SPN。  
   
  [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
- 说明如何建立一个或多个用于访问报表服务器 Web 服务和报表管理器的 URL。  
+ 说明如何建立一个或多个用于访问报表服务器 Web 服务和 Web 门户的 URL。  
   
  [创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  提供创建报表服务器数据库的步骤。 此步骤是部署 Reporting Services 安装所必需的步骤。  
@@ -52,7 +52,7 @@ ms.locfileid: "65581100"
  说明如何打开用于报表服务器的入站请求和出站响应的端口。  
   
  [为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- 描述使用 `https://localhost` 连接到报表管理器或报表服务器所需的其他步骤。  
+ 描述使用 `https://localhost` 连接到 Web 门户或报表服务器所需的其他步骤。  
   
  [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  说明如何配置远程报表服务器实例以便可以从其他计算机上连接和配置它。  

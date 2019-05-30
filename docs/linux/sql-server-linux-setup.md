@@ -1,21 +1,22 @@
 ---
-title: Linux 上的 SQL Server 的安装指南 |Microsoft Docs
+title: Linux 上的 SQL Server 的安装指南
+titleSuffix: SQL Server
 description: 安装、 更新和卸载 Linux 上的 SQL Server。 本文介绍如何联机、 脱机和无人参与的方案。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/07/2018
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: fde3465c26d2e148d99976b81e0a01c9fb3395ff
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 4cccab2331a564737112d9fb3efc42e5a6b81ed8
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775509"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265393"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安装指南
 
@@ -40,8 +41,8 @@ Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 和 Ubunt
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [获取 SLES v12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [获取 Ubuntu 16.04](https://www.ubuntu.com/download/server)
-| **Docker 引擎** | 1.8+ | [获取 Docker](https://www.docker.com/products/overview)
+| **Ubuntu** | 16.04 | [获取 Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
+| **Docker 引擎** | 1.8+ | [获取 Docker](https://www.docker.com/get-started)
 
 Microsoft 还支持部署和使用 OpenShift 和 Kubernetes 来管理 SQL Server 容器。
 
@@ -71,9 +72,6 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 
 当您安装或升级 SQL Server 时，可从你配置的 Microsoft 存储库获取最新版本的 SQL Server。 快速入门教程使用 SQL Server 2017 累积更新**CU**存储库。 但您可以改为配置**GDR**存储库或**预览版 (vNext)** 存储库。 存储库以及如何配置它们的详细信息，请参阅[Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
-> [!IMPORTANT]
-> 如果您以前安装的 CTP 或 SQL Server 2017 的 RC 版本，必须删除预览存储库并注册一个常规正式版 (GA)。 有关详细信息，请参阅[Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
-
 ## <a id="platforms"></a> 安装 SQL Server 2017
 
 从命令行，可以在 Linux 上安装 SQL Server 2017。 有关分步说明，请参阅以下快速入门：
@@ -84,11 +82,11 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 - [在 Docker 上运行](quickstart-install-connect-docker.md)
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
+在安装后，请考虑进行其他配置更改，以获得最佳性能。 有关详细信息，请参阅[的性能最佳实践和 Linux 上的 SQL Server 配置准则](sql-server-linux-performance-best-practices.md)。
+
 ## <a id="sqlvnext"></a> 安装 SQL Server 2019 预览版
 
 可以在上一节中使用相同的快速入门链接在 Linux 上安装 SQL Server 2019 预览。 但是，必须注册**预览版 (vNext)** 而不是存储库**CU**存储库。 快速入门教程提供有关如何执行此操作的说明。  
-
-在安装后，请考虑进行其他配置更改，以获得最佳性能。 有关详细信息，请参阅[的性能最佳实践和 Linux 上的 SQL Server 配置准则](sql-server-linux-performance-best-practices.md)。
 
 ## <a id="upgrade"></a> 更新 SQL Server
 
@@ -220,6 +218,7 @@ SQL Server 许可适用于 Linux 和 Windows 相同。 详细了解 SQL Server �
 - [SQL Server 命令行工具](sql-server-linux-setup-tools.md)
 - [SQL Server 代理](sql-server-linux-setup-sql-agent.md)
 - [SQL Server 全文搜索](sql-server-linux-setup-full-text-search.md)
+- [机器学习服务 （R、 Python）](sql-server-linux-setup-machine-learning.md)
 - [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

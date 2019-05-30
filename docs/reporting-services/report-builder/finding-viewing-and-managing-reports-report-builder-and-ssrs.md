@@ -1,6 +1,6 @@
 ---
 title: 查找、查看和管理报表（报表生成器和 SSRS）| Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 05/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -8,29 +8,29 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0dad0840c216bd8aca67acfedb9de6e6aa15c117
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7a93f71f886484d38996a867bebbc6ef32c33c86
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581236"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175623"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>查找、查看和管理报表（报表生成器和 SSRS）
   在报表生成器中，您可以浏览报表服务器或 SharePoint 站点上的文件夹，以便查找报表、共享数据源、模型和其他相关报表项；并且可以浏览您的计算机，以便查找本地报表。 为了便于查找报表，报表生成器维护最近使用的服务器和站点的列表，并提供对您的计算机的文件系统中“桌面”、“我的文档”和“我的电脑”文件夹的直接访问。  
   
- 在报表设计器中，您还可以浏览您的计算机以查找本地报表。 将报表部署到报表服务器或 SharePoint 站点之后，您可以通过使用报表管理器来浏览报表服务器，或是搜索 SharePoint 站点来查找报表。 报表和相关项在部署之后仍在本地可用。  
+ 在报表设计器中，您还可以浏览您的计算机以查找本地报表。 将报表部署到报表服务器或 SharePoint 站点之后，可以通过使用 Web 门户来浏览报表服务器，或搜索 SharePoint 站点来查找报表。 报表和相关项在部署之后仍在本地可用。  
   
 > [!NOTE]  
->  您可以在本地模式中使用报表生成器，也可以在连接到报表服务器的情况下使用报表生成器。 如果您没有与报表服务器的活动连接，则会受到某些限制。  
+> 您可以在本地模式中使用报表生成器，也可以在连接到报表服务器的情况下使用报表生成器。 如果您没有与报表服务器的活动连接，则会受到某些限制。  
   
- 若要从报表生成器找到某一报表服务器或 SharePoint 站点上的一个报表，您必须提供该报表服务器或 SharePoint 站点的 URL。 当您第一次安装报表生成器时，可以指定要使用的 URL。 这是在您保存或打开报表时报表生成器默认连接到的服务器或站点。  
+ 若要从报表生成器找到某一报表服务器或 SharePoint 站点上的一个报表，必须提供该报表服务器或 SharePoint 站点的 URL。 当您第一次安装报表生成器时，可以指定要使用的 URL。 这是在您保存或打开报表时报表生成器默认连接到的服务器或站点。  
   
- 在您创建或更新报表时可以在报表生成器和报表设计器中预览报表；并且可以通过使用报表管理器在报表服务器上查看和管理报表；或者可以在发布报表后通过使用内置的 SharePoint 工具和功能在与 Reporting Services 集成的 SharePoint 站点上查看和管理报表。 有关详细信息，请参阅 [在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md) 和 [预览报表](../../reporting-services/reports/previewing-reports.md)。  
+ 创建或更新报表时可以在报表生成器和报表设计器中预览报表；并且可以通过使用 Web 门户在报表服务器上查看和管理报表；或者可以在发布报表后通过使用内置的 SharePoint 工具和功能在与 Reporting Services 集成的 SharePoint 站点上查看和管理报表。 有关详细信息，请参阅 [在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md) 和 [预览报表](../../reporting-services/reports/previewing-reports.md)。  
   
- 当您在报表生成器和报表设计器中预览报表时，或者在报表管理器或 SharePoint 站点中查看报表时，数据将被刷新，并且报表显示来自该报表使用的数据源的当前数据。 如果您想要查看报表但不刷新其数据，可以将报表历史记录和缓存的数据用于发布的报表。 在报表生成器和报表设计器中预览报表时，您不能使用这些功能。  
+ 在报表生成器和报表设计器中预览报表时，或者在 Web 门户或 SharePoint 站点中查看报表时，数据将被刷新，并且报表显示来自该报表使用的数据源的当前数据。 如果您想要查看报表但不刷新其数据，可以将报表历史记录和缓存的数据用于发布的报表。 在报表生成器和报表设计器中预览报表时，您不能使用这些功能。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="FindingAndViewingReportsRB30"></a> 在报表生成器中查找和查看报表  
  若要查找您要使用的报表或者选择要用于报表中的共享数据源、图像或子报表，请浏览您的计算机、报表服务器上的文件夹或者与 Reporting Services 集成的 SharePoint 站点。  
@@ -49,9 +49,9 @@ ms.locfileid: "65581236"
   
  
 ##  <a name="ViewingAndManagingReportServer"></a> 从报表服务器查看和管理报表  
- 可以使用报表管理器查看和管理报表服务器上的报表。 浏览服务器上的文件夹以找到报表，运行报表以在浏览器中查看它们，并且执行管理任务。  
+ 可以使用 Web 门户查看和管理报表服务器上的报表。 浏览服务器上的文件夹找到报表，运行报表，以在浏览器中查看它们，并且执行管理任务。  
   
- 报表管理器可帮助您完成以下管理任务：  
+ Web 门户可帮助你完成以下管理任务：  
   
 -   查看和更新报表、共享的数据源和其他报表项的属性。  
   
@@ -67,19 +67,15 @@ ms.locfileid: "65581236"
   
  其中的某些任务可能需要由报表服务器的管理员为您完成。 若要了解有关在报表服务器上执行的任务的详细信息，请参阅 [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
- 报表管理器通常包含文件夹、报表、数据源以及“我的报表”文件夹。 “我的报表”是一个个人工作区，您可以使用它来存储和处理自己的报表。 其他报表服务器文件夹都是公用文件夹，通常要求用户具有高级权限才能添加或修改文件夹内容。 您可以在“我的报表”内创建文件夹，以便进一步组织您的报表。  
+Web 门户通常包含文件夹、报表、数据源以及“我的报表”文件夹。 “我的报表”是一个个人工作区，您可以使用它来存储和处理自己的报表。 其他报表服务器文件夹都是公用文件夹，通常要求用户具有高级权限才能添加或修改文件夹内容。 可以在“我的报表”内创建子文件夹，以便进一步组织你的报表。  
   
- 报表管理器在 Reporting Services HTML 查看器中显示报表。 该 HTML 查看器提供了用于在 HTML 中查看报表的框架，并且包括报表工具栏、参数部分、凭据部分和文档映射。 报表工具栏提供了页面导航、缩放、刷新、搜索、导出、打印和数据馈送功能。 在通过 URL 访问报表时，报表工具栏也会在浏览器窗口中显示于报表顶部。 打印功能是可选的，并且必须由管理员启用。 如果启用了打印功能，报表工具栏上将显示一个打印机图标。 以下各图显示了“报表管理器”窗口中的报表工具栏和报表工具栏功能概览。  
+ Web 门户在 Reporting Services HTML 查看器中显示报表。 该 HTML 查看器提供了用于在 HTML 中查看报表的框架，并且包括报表工具栏、参数部分、凭据部分和文档映射。 报表工具栏提供了页面导航、缩放、刷新、搜索、导出、打印和数据馈送功能。 在通过 URL 访问报表时，报表工具栏也会在浏览器窗口中显示于报表顶部。 打印功能是可选的，并且必须由管理员启用。 如果启用了打印功能，报表工具栏上将显示一个打印机图标。 下图显示了 Web 门户中的报表工具栏的特写。  
   
- ![报表管理器中的报表工具栏](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
-“报表管理器”窗口  
+ ![Web 门户中的报表工具栏](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/report-toolbar-in-the-web-portal.png)  
   
- ![报表工具栏](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
-报表工具栏  
+运行报表后，可以将其导出为其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 还可以使用逗号分隔值 (CSV) 呈现扩展插件之类的数据扩展插件导出报表，然后使用 CSV 数据文件作为对其他应用程序的输入。 有关导出报表的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。
   
- 运行报表后，可以将其导出为其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 还可以使用逗号分隔值 (CSV) 呈现扩展插件之类的数据扩展插件导出报表，然后使用 CSV 数据文件作为对其他应用程序的输入。 有关导出报表的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)和[将报表导出为其他文件类型（报表生成器和 SSRS）](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)。  
-  
- 选择和运行报表的最简单方法是打开报表管理器，然后搜索或浏览到要查看的报表。 有关如何打开报表的分步说明，请参阅[打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
+ 选择和运行报表的最简单方法是打开 Web 门户，然后搜索或浏览到要查看的报表。 有关如何打开报表的分步说明，请参阅[打开和关闭报表](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
   
  在运行某一报表后，您可以刷新该报表以查看新数据。  
   
@@ -89,7 +85,7 @@ ms.locfileid: "65581236"
 |选项|结果|  
 |------------|------------|  
 |浏览器窗口上的 **“刷新”** 按钮|显示在会话缓存中存储的报表。 用户打开报表时即会创建会话缓存。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用浏览器会话来保持一致的查看体验。|  
-|![报表工具栏上的浏览器“刷新”按钮](../../reporting-services/media/htmlviewer-refresh.GIF "Browser refresh button on report toolbar")|单击报表工具栏上的 **“刷新”** 按钮时，如果报表是按需运行的，则报表服务器将重新运行查询并更新报表数据。 如果报表已缓存或者为快照，则单击 **“刷新”** 后，将显示存储在报表服务器数据库中的报表。|  
+|![报表工具栏上的浏览器刷新按钮](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/browser-refresh-button-on-report-toolbar.png)|单击报表工具栏上的 **“刷新”** 按钮时，如果报表是按需运行的，则报表服务器将重新运行查询并更新报表数据。 如果报表已缓存或者为快照，则单击 **“刷新”** 后，将显示存储在报表服务器数据库中的报表。|  
 |Ctrl+F5 组合键|产生与单击报表工具栏上的 **“刷新”** 按钮相同的结果。|  
   
   
@@ -100,7 +96,7 @@ ms.locfileid: "65581236"
   
  若要访问应用程序页，请从报表或先前添加到 SharePoint 库的其他报表服务器项的下拉菜单中选择特定于项的操作。 您可能还可以在报表生成器中创建报表、生成模型和设置模型项的安全性，这取决于具体的项以及您拥有的权限。  
   
- 有关 Reporting Services 和 SharePoint 技术的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)中的[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
+ 有关 Reporting Services 和 SharePoint 技术的详细信息，请参阅[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点中查找报表服务器项  
  在您能够设置属性之前，首先必须能够找到项。 报表服务器项总是存储在多个库中或者存储在某个库的一个文件夹内。  
@@ -135,9 +131,9 @@ ms.locfileid: "65581236"
   
  
 ##  <a name="InThisSection"></a> 本节内容  
- 以下主题介绍有关查看和管理报表的其他信息。  
+ 以下文章介绍了有关查看和管理报表的其他信息。  
   
-  [查找、查看和管理报表](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+ [查找、查看和管理报表](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
   
  [使用浏览器查找和查看报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  介绍如何使用 URL 来查找和查看报表。  
@@ -148,6 +144,4 @@ ms.locfileid: "65581236"
 ## <a name="see-also"></a>另请参阅  
  [保存报表（报表生成器）](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [安装和卸载报表生成器](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
-  
-  
+ 

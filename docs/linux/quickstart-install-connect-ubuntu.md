@@ -5,18 +5,18 @@ description: 本快速入门介绍如何在 Ubuntu 上安装 SQL Server 2017 或
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/16/2018
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 5d1294c9219fd14d5e1de363069e25a9bc144a6b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 93b02908a1341af18044c1c8a86dfd2e6024f8f3
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803092"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265365"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门：安装 SQL Server，在 Ubuntu 上创建数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "56803092"
 ::: moniker-end
 
 > [!TIP]
-> 本教程需要用户输入和 Internet 连接。 如果您对[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
+> 本教程需要用户输入和 Internet 连接。 如果想在无人参与或脱机安装过程中，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
 ## <a name="prerequisites"></a>先决条件
 
 您必须具有的 Ubuntu 16.04 计算机**至少 2 GB**的内存。
 
-若要在自己的计算机上安装 Ubuntu，请转到[ https://www.ubuntu.com/download/server ](https://www.ubuntu.com/download/server)。 此外可以在 Azure 中创建 Ubuntu 虚拟机。 请参阅[创建和管理 Linux Vm 使用 Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
+若要在自己的计算机上安装 Ubuntu 16.04，请转到[ http://releases.ubuntu.com/xenial/ ](http://releases.ubuntu.com/xenial/)。 此外可以在 Azure 中创建 Ubuntu 虚拟机。 请参阅[创建和管理 Linux Vm 使用 Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
 
 > [!NOTE]
 > 在此期间，[适用于 Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标不支持 Windows 10。
@@ -97,7 +97,7 @@ ms.locfileid: "56803092"
 5. 配置完成后，请验证服务是否正在运行：
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。
@@ -143,7 +143,7 @@ ms.locfileid: "56803092"
 5. 配置完成后，请验证服务是否正在运行：
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。

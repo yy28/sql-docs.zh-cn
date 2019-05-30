@@ -16,17 +16,17 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534649"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270158"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  进行故障排除时，用于指定订阅服务器上的分发代理应用的下一个事务的日志序列号 (LSN)，从而使代理可以跳过失败的事务。 此存储过程在订阅服务器的订阅数据库中执行。 非 SQL Server 订阅服务器不支持该过程。  
+  在故障排除期间用于指定最后传送的事务使用允许分发代理以开始在下一个事务下提供的日志序列号 (LSN)。 在重新启动，分发代理返回的事务大于此水印 (LSN) 从分发数据库缓存 (msrepl_commands)。 此存储过程在订阅服务器的订阅数据库中执行。 非 SQL Server 订阅服务器不支持该过程。  
   
 > [!CAUTION]  
 >  如果未正确使用此存储过程或指定了错误的 LSN 值，则将导致分发代理还原已应用于订阅服务器的更改，或跳过所有剩余的更改。  
@@ -79,4 +79,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_setsubscriptionxactseqno**。  
   
-  
+## <a name="see-more"></a>查看详细信息
+
+[博客：如何跳过的事务](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

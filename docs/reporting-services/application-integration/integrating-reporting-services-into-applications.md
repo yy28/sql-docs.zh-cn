@@ -1,19 +1,19 @@
 ---
 title: 将 Reporting Services 集成到应用程序中 | Microsoft Docs
-ms.date: 09/18/2018
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bce7e59a66701e519a4f2bc5706bfbec5f88eba2
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 64f4e77a943f1d71fc7655a4a1d36dffafe7afcf
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331467"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175137"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>将 Reporting Services 集成到应用程序中
 
@@ -28,7 +28,7 @@ ms.locfileid: "56331467"
   
 ## <a name="report-server-web-service"></a>报表服务器 Web 服务
 
- 报表服务器 Web 服务是针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 进行开发的主接口。 无论您是开发代码以管理报表目录，还是开发代码以便用支持的格式呈现报表，该 Web 服务都公开所有必需的方法以便将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到您的应用程序中。 报表管理器就是此类应用程序的一个示例，报表管理器随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 一起提供，它使用该 Web 服务管理报表服务器数据库。  
+ 报表服务器 Web 服务是针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 进行开发的主接口。 无论您是开发代码以管理报表目录，还是开发代码以便用支持的格式呈现报表，该 Web 服务都公开所有必需的方法以便将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到您的应用程序中。 Web 门户就是此类应用程序的一个示例，Web 门户随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 一起提供，它使用该 Web 服务管理报表服务器数据库。  
   
 ## <a name="report-viewer-controls-for-visual-studio"></a>用于 Visual Studio 的报表查看器控件
 

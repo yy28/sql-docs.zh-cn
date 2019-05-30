@@ -1,21 +1,22 @@
 ---
-title: 在 Linux 上安装 SQL Server 命令行工具 |Microsoft Docs
+title: 在 Linux 上安装 SQL Server 命令行工具
+titleSuffix: SQL Server
 description: 本文介绍如何在 Linux 上安装 SQL Server 工具。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 20b383929910bf24ef9dc89950f15815afdef3bd
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 86a452237628df8952beaa09277a79b1de507aa1
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801751"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265405"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
@@ -203,25 +204,21 @@ Docker 映像中包含 SQL Server 命令行工具。 如果使用交互式命令
 
 [!INCLUDE[SQL Server Linux offline package installation](../includes/sql-server-linux-offline-package-install-intro.md)]
 
-下表提供了最新工具包的位置：
+1. 首先，找到并复制**mssql 工具**Linux 分发包：
 
-| 工具包 | 版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM 工具包 | 14.0.5.0-1 | [mssql-tools RPM 包](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| SLES RPM 工具包 | 14.0.5.0-1 | [mssql-tools RPM 包](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian 工具包 | 14.0.5.0-1 | [mssql-tools Debian 包](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian 工具包 | 14.0.5.0-1 | [mssql-tools Debian 包](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
+   | Linux 分发版 | **mssql 工具**包位置 |
+   |---|---|
+   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
+   | Ubuntu 16.04 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools) |
 
-这些包依赖于**msodbcsql**，且必须先安装。 **Msodbcsql**程序包还具有一个依赖项上**unixODBC 开发**(RPM) 或**unixodbc 开发人员**(Debian)。 位置**msodbcsql**下表中列出的包：
+1. 此外找到并复制**msodbcsql**包，这是一个依赖项。 **Msodbcsql**包也上具有依赖项**unixODBC 开发**（Red Hat 和 SLES） 或**unixodbc 开发人员**(Ubuntu)。 位置**msodbcsql**下表中列出的包：
 
-| msodbcsql package | 版本 | 下载 |
-|-----|-----|-----|
-| Red Hat RPM msodbcsql 包 | 13.1.6.0-1 | [msodbcsql RPM 包](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| SLES RPM msodbcsql 包 | 13.1.6.0-1 | [msodbcsql RPM 包](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian msodbcsql 包 | 13.1.6.0-1 | [msodbcsql Debian 包](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian msodbcsql 包 | 13.1.6.0-1 | [msodbcsql Debian 包](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
-
-若要手动安装这些包，请按照下列步骤操作：
+   | Linux 分发版 | ODBC 包位置 |
+   |---|---|
+   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
+   | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 
 1. **将下载的包移到 Linux 计算机**。 如果使用另一台计算机下载包，将包移到 Linux 计算机的一种方法是使用**scp**命令。
 
@@ -229,17 +226,17 @@ Docker 映像中包含 SQL Server 命令行工具。 如果使用交互式命令
 
     | 平台 | 包安装命令 |
     |-----|-----|
-    | Red Hat | `sudo yum localinstall msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo yum localinstall mssql-tools-14.0.5.0-1.x86_64.rpm` |
-    | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
-    | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
+    | Red Hat | `sudo yum localinstall msodbcsql-<version>.rpm`<br/>`sudo yum localinstall mssql-tools-<version>.rpm` |
+    | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
+    | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
 1. **解决缺少的依赖项**:你可能在此时缺少依赖项。 如果没有，可以跳过此步骤。 在某些情况下，必须手动查找并安装这些依赖项。
 
     对于 RPM 包，可通过下列命令检查必需的依赖项：
 
     ```bash
-    rpm -qpR msodbcsql-13.1.6.0-1.x86_64.rpm
-    rpm -qpR mssql-tools-14.0.5.0-1.x86_64.rpm
+    rpm -qpR msodbcsql-<version>.rpm
+    rpm -qpR mssql-tools-<version>.rpm
     ```
 
     对于 Debian 包，如果你有权访问已批准存储库包含这些依赖项，最简单的解决方案是使用**apt get**命令：
@@ -254,8 +251,8 @@ Docker 映像中包含 SQL Server 命令行工具。 如果使用交互式命令
     如果此操作对 Debian 包不起作用，可通过下列命令检查必需的依赖项：
 
     ```bash
-    dpkg -I msodbcsql_13.1.6.0-1_amd64.deb | grep "Depends:"
-    dpkg -I mssql-tools_14.0.5.0-1_amd64.deb | grep "Depends:"
+    dpkg -I msodbcsql_<version>_amd64.deb | grep "Depends:"
+    dpkg -I mssql-tools_<version>_amd64.deb | grep "Depends:"
     ```
 
 ## <a name="next-steps"></a>后续步骤

@@ -1,6 +1,6 @@
 ---
 title: 缓存共享数据集 (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 428cb9e75e7023b8abee13927435b74e166baa07
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582220"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175600"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>缓存共享数据集 (SSRS)
   可以将用于共享数据集的查询结果复制到缓存，以便为多个报表提供一致的数据并且缩短数据集查询的响应时间。 与报表类似，您可以在首次使用时或通过指定一个计划，将共享数据集配置为存入缓存。  
@@ -51,7 +51,7 @@ ms.locfileid: "65582220"
   
  在特定参数组合的查询结果处于缓存中时，为进行处理而启动且包括对使用这些参数值的共享数据集的引用的每个报表都将使用缓存的数据。  
   
- 你可以指定数据在缓存中保留多长时间后过期。 有关详细信息，请参阅[共享数据集的“缓存”属性页（报表管理器）](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)。  
+ 你可以指定数据在缓存中保留多长时间后过期。 有关详细信息，请参阅[使用共享数据集](../../reporting-services/work-with-shared-datasets-web-portal.md)。  
   
 ## <a name="preloading-the-cache"></a>预加载缓存  
  您可以通过创建缓存刷新计划预加载缓存。 使用刷新计划，您可以通过特定于项的计划或共享计划来指定刷新缓存的频率。 为了避免同一项有多个缓存条目，您指定的计划应该允许有足够的时间来对外部数据源执行查询处理。 例如，如果查询需要 20 分钟来运行，则刷新计划应大于 20 分钟。 有关更多信息，请参见 [Schedules](../../reporting-services/subscriptions/schedules.md)。  
@@ -68,7 +68,7 @@ ms.locfileid: "65582220"
   
 -   对于共享数据集，您必须具有 ReadPolicy 和 UpdatePolicy 权限。  
   
- 缓存刷新计划同时应用于共享数据集和报表。 有关详细信息，请参阅[缓存刷新选项（报表管理器）](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)。  
+ 缓存刷新计划同时应用于共享数据集和报表。 有关详细信息，请参阅 [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)版本中预加载缓存的唯一方法。  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>导致缓存过期的条件  
  以下条件可能导致共享数据集缓存失效。  
@@ -93,7 +93,7 @@ ms.locfileid: "65582220"
   
  对共享数据集的缓存刷新计划的更新不会影响已在处理的报表。 更新缓存刷新计划仅影响引用共享数据集的报表的将来启动。  
   
-## <a name="see-also"></a>另请参阅  
- [管理共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)  
+## <a name="see-also"></a>另请参阅
   
+ [管理共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)  
   

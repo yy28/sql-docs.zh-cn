@@ -1,7 +1,7 @@
 ---
 title: 使用查询通知 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: native-client
@@ -21,16 +21,16 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 889f791f74d7f28496b763eb942907ab8227ef4d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 23aadd055049052e3302e61e1303ccc5fa4cc62f
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670736"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265452"
 ---
 # <a name="working-with-query-notifications"></a>使用查询通知
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中引入了查询通知。 查询通知建立在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的 Service Broker 基础结构之上，并允许在数据发生更改时向应用程序发送通知。 对提供数据库信息的缓存且需要在源数据发生更改时收到通知的应用程序（如 Web 应用程序）而言，以上功能特别有用。  
@@ -81,7 +81,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查询通知保持为活动状态的秒数。<br /><br /> 默认为 432000 秒（5 天）。 最小值为 1 秒，最大值为 2^31-1 秒。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的消息正文。 消息正文是用户定义的，没有预定义格式。<br /><br /> 默认情况下，该字符串为空。 您可以使用 1 至 2000 个字符指定消息。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 采用 name=value 语法以字符串形式指定这些内容。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 采用 name=value 语法以字符串形式指定这些内容。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为一个空字符串。|  
   
  无论语句是在用户事务中运行还是以自动提交模式运行，或者无论是提交还是回滚运行语句的事务，将始终提交通知订阅。 根据以下任一无效通知条件激发服务器通知：更改基础数据或架构，或者当达到超时期限时（以先发生者为准）。 激发通知后将立即删除通知注册。 因此，在接收通知时，应用程序必须再次订阅通知，以备进一步更新之用。  
   
@@ -135,7 +135,7 @@ RECEIVE * FROM MyQueue
   
  如果发出批处理或存储过程订阅请求，则会针对批处理或存储过程内执行的每个语句发出单独的订阅请求。 EXECUTE 语句不会注册通知，但是会将通知请求发送到已执行的命令。 如果为批处理，则上下文将适用于已执行的语句，并且应用上述相同规则。  
   
- 对于与现有活动订阅具有相同模板、相同参数值、相同通知 ID 和相同传递位置的通知查询，同一用户在相同数据库上下文中再次提交这样的通知查询将续订现有订阅，并重置新指定的超时值。这表示如果针对相同的查询请求通知，则仅发送一个通知。 这将适用于批处理中的重复查询，也适用于存储过程中调用多次的查询。  
+ 提交通知已提交的相同数据库上下文为同一用户具有相同的模板、 相同的参数值、 相同通知 ID 和相同传递位置的现有活动的订阅，查询将续订现有订阅中，重置新指定的超时。这意味着如果针对相同的查询请求通知，则将发送一个通知。 这将适用于批处理中的重复查询，也适用于存储过程中调用多次的查询。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

@@ -1,6 +1,6 @@
 ---
 title: 缓存报表 (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1e6ec452c20aea2df0eb99e4bf0123331d7192
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580443"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175589"
 ---
 # <a name="caching-reports-ssrs"></a>缓存报表 (SSRS)
   报表服务器可以缓存已处理报表的副本，并在用户打开此报表时返回该副本。 对用户而言，可指示报表为缓存副本的唯一证据是报表的运行日期和时间。 如果日期或时间不是当前的日期或时间，并且报表不是快照，则说明该报表是从缓存中检索的。  
@@ -71,9 +71,8 @@ ms.locfileid: "65580443"
  [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Reporting Services 概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [预加载缓存（报表管理器）](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [预加载缓存](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [“计划”](../../reporting-services/subscriptions/schedules.md)   
  [缓存共享数据集 (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [缓存刷新选项（报表管理器）](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

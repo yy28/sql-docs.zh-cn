@@ -1,6 +1,6 @@
 ---
 title: 授予对本机模式报表服务器的权限 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d38bcdb965bc08aa4eb7cad1401bd9d77f42b4ed
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65579825"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175642"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>授予对本机模式报表服务器的权限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的授权和身份验证子系统来确定哪些用户可以在报表服务器上执行操作和访问项。 基于角色的授权将角色分为用户或组可以执行的操作组。 身份验证基于内置的 Windows 身份验证或您提供的自定义身份验证模块。 您对这两种身份验证类型都可以使用预定义或自定义角色。  
@@ -41,9 +41,9 @@ ms.locfileid: "65579825"
   
 2.  明确需要访问报表服务器的用户和组以及访问级别。 应该为大多数用户分配 **“浏览者”** 角色或 **“报表生成者”** 角色。 应该为少量用户分配 **“发布者”** 角色。 应该只为极少数用户分配 **“内容管理员”** 角色。  
   
-3.  对主文件夹（这是报表服务器文件夹层次结构的顶级文件夹），使用报表管理器为需要访问权限的每个用户或组分配角色。  
+3.  对主文件夹（这是报表服务器文件夹层次结构的顶级文件夹），使用 Web 门户为需要访问权限的每个用户或组分配角色。  
   
-4.  在站点级，使用预定义的角色“系统用户”和“系统管理员”在报表管理器的“站点设置”页为每个用户和组创建系统级角色分配。  
+4.  在站点级，使用预定义的角色“系统用户”和“系统管理员”在 Web 门户的“站点设置”页为每个用户和组创建系统级角色分配。  
   
 5.  根据需要为特定文件夹、报表和其他项创建额外的角色分配。 应避免创建大量角色分配。 如果创建过多的角色分配，将很难跟踪每个用户的不同权限级别。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65579825"
 |工具|“任务”|  
 |----------|-----------|  
 |Management Studio - 用于查看、修改、创建和删除角色定义。|[创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|报表管理器 - 用于为用户和组分配角色。|[授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [修改或删除角色分配（报表管理器）](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Web 门户 - 用于为用户和组分配角色。|[授予用户对报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [修改或删除角色分配](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)   

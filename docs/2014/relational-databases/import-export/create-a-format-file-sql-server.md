@@ -12,12 +12,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a63bf2bcad0c5d20f0d37727796746f68708d16f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012057"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265149"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
   当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行大容量的数据导入或导出时，您可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
@@ -34,7 +34,7 @@ ms.locfileid: "66012057"
 ## <a name="creating-a-non-xml-format-file"></a>创建非 XML 格式化文件  
  若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 **format** 选项还需要 **-f** 选项，例如：  
   
- **bcp** _table_or_view_ **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
 >  为区分非 XML 格式化文件，我们建议使用 .fmt 作为文件扩展名，例如 MyTable.fmt。  

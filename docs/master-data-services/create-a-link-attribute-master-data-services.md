@@ -14,21 +14,21 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 050256d488646425cd35580796e0fcfc771bea6d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 7d39dcfa1d3351434a6e35b1b74f7551648f2281
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487301"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354368"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>创建链接属性 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，在希望用户输入超链接作为属性值（例如 https://www.contoso.com）时创建链接属性。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，在希望用户输入超链接作为属性值（例如 `https://www.contoso.com`）时创建链接属性。  
   
 > [!NOTE]  
->  当用户输入链接属性的值时，该字符串必须以 https:// 开头，否则将显示错误。  
+>  当用户输入链接属性的值时，该字符串必须以 https:// 开头，否则将显示错误  。  
   
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
@@ -64,15 +64,15 @@ ms.locfileid: "65487301"
   
 ### <a name="to-create-a-link-attribute"></a>创建链接属性  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体” 。  
+2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体”  。  
   
 3.  在“管理实体”  页上，选择要为其创建属性的实体所在的行。  
   
-4.  单击 **“属性”**。  
+4.  单击 **“属性”** 。  
   
-5.  在“管理属性”  页上，执行下列操作之一，然后单击“添加” 。  
+5.  在“管理属性”  页上，执行下列操作之一，然后单击“添加”  。  
   
     -   如果属性是针对叶成员，则从“成员类型”  列表框选择“叶”  。  
   
@@ -86,15 +86,15 @@ ms.locfileid: "65487301"
   
 8.  在 **“显示像素宽度”** 框中，键入要在 **“资源管理器”** 网格中显示的属性列的宽度。  
   
-9. 从“属性类型”列表中，选择“自由格式”。  
+9. 从“属性类型”  列表中，选择“自由格式”  。  
   
-10. 从 **“数据类型”** 列表中，选择 **“链接”**。  
+10. 从 **“数据类型”** 列表中，选择 **“链接”** 。  
   
 11. 在 **“长度”** 框中，键入允许的最大字符数。  
   
 12. 根据需要，选择 **“启用更改跟踪”** 可以跟踪对属性组的更改。 有关详细信息，请参阅[向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-13. 单击“保存” 。  
+13. 单击“保存”  。  
   
 ## <a name="see-also"></a>请参阅  
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   

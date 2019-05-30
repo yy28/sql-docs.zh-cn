@@ -1,7 +1,7 @@
 ---
 title: sys.dm_sql_referenced_entities (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 05/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,17 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213456"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354399"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定引用实体的定义中按名称引用的每个用户定义实体返回一行。 一个用户定义的实体，调用时创建两个实体之间的依赖关系*被引用的实体*，在另一个用户定义的实体，名为的持久化 SQL 表达式中按名称将显示*引用实体*. 例如，如果存储过程是指定的引用实体，则此函数会返回该存储过程中引用的所有用户定义实体，例如表、视图、用户定义类型 (UDT) 或其他存储过程。  
+个中的指定引用实体的定义中按名称引用的每个用户定义实体返回一行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 一个用户定义的实体，调用时创建两个实体之间的依赖关系*被引用的实体*，在另一个用户定义的实体，名为的持久化 SQL 表达式中按名称将显示*引用实体*. 例如，如果存储过程是指定的引用实体，则此函数会返回该存储过程中引用的所有用户定义实体，例如表、视图、用户定义类型 (UDT) 或其他存储过程。  
   
  可以使用此动态管理函数报告指定的引用实体引用的以下类型的实体：  
   
@@ -48,14 +49,13 @@ ms.locfileid: "53213456"
 -   XML 架构集合  
   
 -   分区函数  
-  
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
-  
+
 ## <a name="syntax"></a>语法  
   
 ```  
 sys.dm_sql_referenced_entities (  
-    ' [ schema_name. ] referencing_entity_name ' , ' <referencing_class> ' )  
+    ' [ schema_name. ] referencing_entity_name ' ,
+    ' <referencing_class> ' )  
   
 <referencing_class> ::=  
 {  
@@ -69,12 +69,12 @@ sys.dm_sql_referenced_entities (
  [ *schema_name*。 ] *referencing_entity_name*  
  是引用实体的名称。 *schema_name*引用类为 OBJECT 时是必需的。  
   
- *schema_name.referencing_entity_name*是**nvarchar(517)**。  
+ *schema_name.referencing_entity_name* is **nvarchar(517)** .  
   
- *< Referencing_class >* :: = {对象 |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
+ *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
  指定的引用实体的类。 每个语句只能指定一个类。  
   
- *< referencing_class >* 是**nvarchar(60)**。  
+ *<referencing_class>* is **nvarchar(60)** .  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -92,13 +92,14 @@ sys.dm_sql_referenced_entities (
 |referenced_class_desc|**nvarchar(60)**|对被引用的实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|指示被引用的实体的架构绑定发生于运行时，因此实体 ID 的解析依赖于调用方的架构。 当被引用的实体为存储过程、扩展存储过程或在 EXECUTE 语句中调用的用户定义函数时，将会出现这种情况。<br /><br /> 1 = 被引用的实体依赖调用方并在运行时解析。 在这种情况下，referenced_id 为 NULL。<br /><br /> 0 = 被引用的实体 ID 不依赖调用方。 对于绑定到架构的引用、显式指定架构名称的跨数据库和跨服务器的引用，始终为 0。 例如，对格式为 `EXEC MyDatabase.MySchema.MyProc` 的实体的引用不依赖于调用方。 但是，格式为 `EXEC MyDatabase..MyProc` 的引用依赖调用方。|  
 |is_ambiguous|**bit**|指示引用不明确，可以在运行时对用户定义函数、 用户定义类型 (UDT) 或类型的列的 xquery 引用解析**xml**。 例如，假定语句 `SELECT Sales.GetOrder() FROM Sales.MySales` 是在存储过程中定义的。 在执行存储过程之前，并不知道 `Sales.GetOrder()` 是 `Sales` 架构中的用户定义函数还是带有名为 `Sales` 的方法、类型为 UDT 且名为 `GetOrder()` 的列。<br /><br /> 1 = 引用的是用户定义函数还是使用用户定义类型 (UDT) 方法的列，这一点是不明确的。<br /><br /> 0 = 引用是明确的，或者在调用函数时可以成功绑定实体。<br /><br /> 对于绑定到架构的引用始终为 0。|  
-|is_selected|**bit**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 选中了对象或列。|  
-|is_updated|**bit**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 修改了对象或列。|  
-|is_select_all|**bit**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 对象用于 SELECT * 子句中（仅限对象级）。|  
-|is_all_columns_found|**bit**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 可以找到对象的所有列依赖关系。<br /><br /> 0 = 找不到对象的列依赖关系。|
-|is_insert_all|**bit**|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 在 INSERT 语句没有列列表 （仅限对象级） 中使用的对象。|  
-|is_incomplete|**bit**|**适用对象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 对象或列已绑定错误并不完整。|
-  
+|is_selected|**bit**|1 = 选中了对象或列。|  
+|is_updated|**bit**|1 = 修改了对象或列。|  
+|is_select_all|**bit**|1 = 对象用于 SELECT * 子句中（仅限对象级）。|  
+|is_all_columns_found|**bit**|1 = 可以找到对象的所有列依赖关系。<br /><br /> 0 = 找不到对象的列依赖关系。|
+|is_insert_all|**bit**|1 = 在 INSERT 语句没有列列表 （仅限对象级） 中使用的对象。<br /><br />SQL Server 2016 中已添加此列。|  
+|is_incomplete|**bit**|1 = 对象或列已绑定错误并不完整。<br /><br />SQL Server 2016 SP2 中新增了此列。|
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="exceptions"></a>Exceptions  
  在满足以下任一条件时将返回空的结果集：  
   
@@ -121,23 +122,24 @@ sys.dm_sql_referenced_entities (
   
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
-|表|是*|用户帐户控制|  
-|“查看”|用户帐户控制|用户帐户控制|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|用户帐户控制|用户帐户控制|  
-|CLR 存储过程|否|用户帐户控制|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|用户帐户控制|用户帐户控制|  
-|CLR 用户定义函数|否|用户帐户控制|  
+|表|是*|是|  
+|“查看”|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
+|CLR 存储过程|否|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
+|CLR 用户定义函数|否|是|  
 |CLR 触发器（DML 和 DDL）|否|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|用户帐户控制|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|用户帐户控制|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|用户帐户控制|否|  
-|扩展存储过程|否|用户帐户控制|  
-|队列|否|用户帐户控制|  
-|同义词|否|用户帐户控制|  
-|类型（别名和 CLR 用户定义类型）|否|用户帐户控制|  
-|XML 架构集合|否|用户帐户控制|  
-|分区函数|否|用户帐户控制|  
-  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
+|扩展存储过程|否|是|  
+|队列|否|是|  
+|同义词|否|是|  
+|类型（别名和 CLR 用户定义类型）|否|是|  
+|XML 架构集合|否|是|  
+|分区函数|否|是|  
+| &nbsp; | &nbsp; | &nbsp; |
+
  \* 仅当它引用时，跟踪表作为引用实体[!INCLUDE[tsql](../../includes/tsql-md.md)]模块、 用户定义类型或 XML 架构集合定义中的计算的列、 CHECK 约束或 DEFAULT 约束。  
   
  ** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
@@ -147,43 +149,65 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. 返回数据库级 DDL 触发器引用的实体  
+### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. 返回数据库级 DDL 触发器引用的实体  
  下面的示例返回数据库级 DDL 触发器 `ddlDatabaseTriggerLog` 引用的实体（表和列）。  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
-    referenced_minor_id, referenced_class_desc  
-FROM sys.dm_sql_referenced_entities ('ddlDatabaseTriggerLog', 'DATABASE_DDL_TRIGGER');  
+SELECT
+        referenced_schema_name,
+        referenced_entity_name,
+        referenced_minor_name,
+        referenced_minor_id,
+        referenced_class_desc
+    FROM
+        sys.dm_sql_referenced_entities (
+            'ddlDatabaseTriggerLog',
+            'DATABASE_DDL_TRIGGER')
+;
 GO  
 ```  
   
-### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. 返回对象引用的实体  
+### <a name="b-return-entities-that-are-referenced-by-an-object"></a>B. 返回的对象引用的实体  
  下面的示例返回用户定义函数 `dbo.ufnGetContactInformation` 引用的实体。  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
-    referenced_minor_id, referenced_class_desc, is_caller_dependent, is_ambiguous  
-FROM sys.dm_sql_referenced_entities ('dbo.ufnGetContactInformation', 'OBJECT');  
+SELECT
+        referenced_schema_name,
+        referenced_entity_name,
+        referenced_minor_name,
+        referenced_minor_id,
+        referenced_class_desc,
+        is_caller_dependent,
+        is_ambiguous
+    FROM
+        sys.dm_sql_referenced_entities (
+            'dbo.ufnGetContactInformation',
+            'OBJECT')
+;
 GO  
 ```  
   
-### <a name="c-returning-column-dependencies"></a>C. 返回列依赖关系  
+### <a name="c-return-column-dependencies"></a>C. 返回列依赖关系  
  下面的示例创建具有定义为列 `Table1` 与 `c` 之和的计算列 `a` 的表 `b`。 然后 `sys.dm_sql_referenced_entities` 视图被调用。 该视图返回两行，每行针对计算列中定义的一列。  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
 GO  
-SELECT referenced_schema_name AS schema_name,  
-    referenced_entity_name AS table_name,  
-    referenced_minor_name AS referenced_column,  
-    COALESCE(COL_NAME(OBJECT_ID(N'dbo.Table1'),referencing_minor_id), 'N/A') AS referencing_column_name  
-FROM sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT');  
+SELECT
+        referenced_schema_name AS schema_name,  
+        referenced_entity_name AS table_name,  
+        referenced_minor_name  AS referenced_column,  
+        COALESCE(
+            COL_NAME(OBJECT_ID(N'dbo.Table1'),
+            referencing_minor_id),
+            'N/A') AS referencing_column_name  
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT')
+;
 GO
 
 -- Remove the table.  
@@ -193,7 +217,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  schema_name table_name referenced_column referencing_column  
  ----------- ---------- ----------------- ------------------  
  dbo         Table1     a                 c  
@@ -204,10 +228,7 @@ GO
  下面的示例删除 `Table1` 并创建 `Table2` 和存储过程 `Proc1`。 该过程引用 `Table2` 以及不存在的表 `Table1`。 视图 `sys.dm_sql_referenced_entities` 和指定为引用实体的存储过程一起运行。 结果集对于 `Table1` 显示一行，对于 `Table2` 显示 3 行。 因为 `Table1` 不存在，所以列依赖关系无法解析，并返回错误 2020。 `is_all_columns_found` 列为 `Table1` 返回 0，指示存在无法发现的列。  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
-    DROP TABLE dbo.Table1;  
+DROP TABLE IF EXISTS dbo.Table1;
 GO  
 CREATE TABLE dbo.Table2 (c1 int, c2 int);  
 GO  
@@ -215,15 +236,19 @@ CREATE PROCEDURE dbo.Proc1 AS
     SELECT a, b, c FROM Table1;  
     SELECT c1, c2 FROM Table2;  
 GO  
-SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name AS referenced_column_name, is_all_columns_found  
-FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
+SELECT
+        referenced_id,
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS referenced_column_name,
+        is_all_columns_found
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  referenced_id table_name   referenced_column_name  is_all_columns_found  
  ------------- ------------ ----------------------- --------------------  
  935674381     Table2       NULL                    1  
@@ -231,29 +256,43 @@ GO
  935674381     Table2       C2                      1  
  NULL          Table1       NULL                    0  
 
- Msg 2020, Level 16, State 1, Line 1The dependencies reported for entity "dbo.Proc1" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity.  Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.
+Msg 2020, Level 16, State 1, Line 1
+The dependencies reported for entity "dbo.Proc1" might not include
+  references to all columns. This is either because the entity
+  references an object that does not exist or because of an error
+  in one or more statements in the entity.  Before rerunning the
+  query, ensure that there are no errors in the entity and that
+  all objects referenced by the entity exist.
  ```
   
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. 演示动态依赖关系维护  
- 下面的示例扩展了示例 D，以显示依赖关系的动态维护。 该示例首先重新创建在示例 D 中删除的 `Table1`。然后 `sys.dm_sql_referenced_entities` 与指定为引用实体的存储过程一起再次运行。 结果集显示返回了两个表及其各自在存储过程中定义的列。 此外，`is_all_columns_found` 列为所有对象和列返回 1。  
-  
+
+此示例 E 假定已运行的示例 D。 示例 E 演示动态维护依赖关系。 该示例将执行以下操作：
+
+1. 重新创建`Table1`，删除在示例 d。
+2. 然后运行`sys.dm_sql_referenced_entities`与指定为引用实体的存储过程再次运行。
+
+结果集显示返回的表和定义存储过程中及其各自的列。 此外，`is_all_columns_found` 列为所有对象和列返回 1。
+
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
 GO   
-SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name as column_name, is_all_columns_found  
-FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
+SELECT
+        referenced_id,
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS column_name,
+        is_all_columns_found
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');
 GO  
 DROP TABLE Table1, Table2;  
 DROP PROC Proc1;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  referenced_id table_name   referenced_column_name  is_all_columns_found  
  ------------- ------------ ----------------------- --------------------  
  935674381     Table2       NULL                    1 
@@ -267,18 +306,24 @@ GO
  
 ### <a name="f-returning-object-or-column-usage"></a>F. 返回对象或列的用法  
  下面的示例返回存储过程 `HumanResources.uspUpdateEmployeePersonalInfo` 的对象和列依赖关系。 此过程更新的列`NationalIDNumber`， `BirthDate,``MaritalStatus`，并`Gender`的`Employee`表基于指定`BusinessEntityID`值。 另一个存储的过程，`upsLogError`中试一试定义...CATCH 块来捕获任何执行错误。 `is_selected`、`is_updated` 和 `is_select_all` 列返回与如何在引用对象中使用这些对象和列有关的信息。 进行了修改的表和列由 is_updated 列中的 1 指示。 仅选择 `BusinessEntityID` 列，既不选择、也不修改存储过程 `uspLogError`。  
-  
-**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
-  
+
 ```sql  
-SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
-FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
-  
+USE AdventureWorks2012;
+GO
+SELECT
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS column_name,
+        is_selected,  is_updated,  is_select_all
+    FROM
+        sys.dm_sql_referenced_entities(
+            'HumanResources.uspUpdateEmployeePersonalInfo',
+            'OBJECT')
+;
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  table_name    column_name         is_selected is_updated is_select_all  
  ------------- ------------------- ----------- ---------- -------------  
  uspLogError   NULL                0           0          0  
