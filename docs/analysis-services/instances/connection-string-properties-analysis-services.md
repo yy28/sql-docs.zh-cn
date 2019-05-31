@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e4b457cc59602c9c4c1fc2306446cbb7f47c173
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.openlocfilehash: 269f90b796a6c7ead0e7801235645b897df70e66
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984118"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413323"
 ---
 # <a name="connection-string-properties-analysis-services"></a>连接字符串属性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52984118"
 |--------------|-----------------|-------------|  
 |**Data Source** 或 **DataSource**|指定服务器实例。 此属性对于所有连接都是必需的。 有效值包括服务器的网络名称或 IP 地址、local 或 localhost（对本地连接）、URL（如果针对 HTTP 或 HTTPS 访问配置了服务器）或本地多维数据集 (.cub) 文件的名称。 <br /><br /> 对于 Azure Analysis Services，有效值`<protocol>://<region>/<servername>`其中，协议是字符串 asazure，区域是创建服务器时所在的 Uri (例如 westus.asazure.windows.net)，服务器名称是在区域内你唯一的服务器的名称。 |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />对于默认实例和端口 (TCP 2383) 为`Data source=AW-SRV01` 。<br /><br /> 对于命名实例 ($Finance) 和固定端口为`Data source=AW-SRV01$Finance:8081` 。<br /><br /> 对于采用默认实例和端口的完全限定的域名为`Data source=AW-SRV01.corp.Adventure-Works.com` 。<br /><br /> 对于服务器的 IP 地址为`Data source=172.16.254.1` ，它绕过 DNS 服务器查找，对于解决连接问题很有用。|  
 |**Initial Catalog** 或 **Catalog**|指定要连接到的 Analysis Services 数据库的名称。 该数据库必须部署在 Analysis Services 上，并且您必须有权连接到它。 此属性对于 AMO 连接是可选的，但是对于 ADOMD.NET 是必需的。|`Initial catalog=AdventureWorks2016`|  
-|**提供程序**|有效值包括 MSOLAP。\<版本 >，其中\<版本 > 为 4、 5、 6 或 7。<br /><br /> -   MSOLAP.4 已在 SQL Server 2008 中发布并再次在 SQL Server 2008 R2 中发布（对于 SQL Server 2008 和 2008 R2，文件名为 msolap100.dll）<br />-   MSOLAP.5 已在 SQL Server 2012 中发布（文件名为 msolap110.dll）<br />-   MSOLAP.6 已在 SQL Server 2014 中发布（文件名为 msolap1200.dll）<br />-   MSOLAP.7 已在 SQL Server 2016 中发布（文件名为 msolap130.dll）<br /><br /> 此属性是可选的。 默认情况下，客户端库从注册表读取 OLE DB 访问接口的当前版本。 仅在需要特定版本的数据提供程序时才需要设置此属性，例如要连接到 SQL Server 2012 实例。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 中发布。 2008 R2 版本支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，有时需要在 SharePoint 服务器上手动安装。 若要区分这些版本，必须检查提供程序的文件属性中的内部版本号：转到 Program files\Microsoft Analysis Services\AS OLEDB\10。 右键单击 msolap110.dll，然后选择“ **属性**”。 单击 **“详细信息”**。 查看文件版本信息。 版本应包括。\<内部版本号 > 适用于 SQL Server 2008 R2。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [用于 Analysis Services 连接的数据提供程序](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)。|`Provider=MSOLAP.7` 用于需要 SQL Server 2016 版本的 Analysis Services OLE DB 提供程序的连接。|  
+|**提供程序**|有效值包括 MSOLAP。\<版本 >，其中\<版本 > 为 4、 5、 6 或 7。<br /><br /> -   MSOLAP.4 已在 SQL Server 2008 中发布并再次在 SQL Server 2008 R2 中发布（对于 SQL Server 2008 和 2008 R2，文件名为 msolap100.dll）<br />-   MSOLAP.5 已在 SQL Server 2012 中发布（文件名为 msolap110.dll）<br />-   MSOLAP.6 已在 SQL Server 2014 中发布（文件名为 msolap1200.dll）<br />-   MSOLAP.7 已在 SQL Server 2016 中发布（文件名为 msolap130.dll）<br /><br /> 此属性是可选的。 默认情况下，客户端库从注册表读取 OLE DB 访问接口的当前版本。 仅在需要特定版本的数据提供程序时才需要设置此属性，例如要连接到 SQL Server 2012 实例。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 中发布。 2008 R2 版本支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，有时需要在 SharePoint 服务器上手动安装。 若要区分这些版本，必须检查提供程序的文件属性中的内部版本号：转到 Program files\Microsoft Analysis Services\AS OLEDB\10。 右键单击 msolap110.dll，然后选择“ **属性**”。 单击 **“详细信息”** 。 查看文件版本信息。 版本应包括。\<内部版本号 > 适用于 SQL Server 2008 R2。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [用于 Analysis Services 连接的数据提供程序](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)。|`Provider=MSOLAP.7` 用于需要 SQL Server 2016 版本的 Analysis Services OLE DB 提供程序的连接。|  
 |**Cube**|多维数据集名称或透视名称。 一个数据库可以包含多个多维数据集和透视。 可以使用多个目标时，在连接字符串上包括多维数据集或透视名称。|`Cube=SalesPerspective` 显示你可以使用 Cube 连接字符串属性指定多维数据集名称或透视名称。|  
   
 ##  <a name="bkmk_auth"></a> 身份验证和安全  
@@ -67,7 +67,7 @@ ms.locfileid: "52984118"
   
 |属性|Description|  
 |--------------|-----------------|  
-|**Application Name**|设置与连接关联的应用程序的名称。 当监视跟踪事件，特别是您具有访问同一数据库的几个应用程序时，此值很有用。 例如，添加应用程序名称 = 'test' 在 SQL Server Profiler 跟踪中，显示连接字符串会导致 'test' 到如以下屏幕截图中所示：<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 此属性的别名包括 **sspropinitAppName**、 **AppName**。 有关详细信息，请参阅 [连接到 SQL Server 时使用 Application Name 参数](http://go.microsoft.com/fwlink/?LinkId=301699)。|  
+|**Application Name**|设置与连接关联的应用程序的名称。 当监视跟踪事件，特别是您具有访问同一数据库的几个应用程序时，此值很有用。 例如，添加应用程序名称 = 'test' 在 SQL Server Profiler 跟踪中，显示连接字符串会导致 'test' 到如以下屏幕截图中所示：<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 此属性的别名包括 **sspropinitAppName**、 **AppName**。 有关详细信息，请参阅[连接到 SQL Server 时使用 Application Name 参数](https://www.connectionstrings.com/use-application-name-sql-server/)。|  
 |**AutoSyncPeriod**|设置客户端和服务器缓存同步的频率（毫秒）。 ADOMD.NET 为具有最小内存开销的常用对象提供客户端缓存。 这有助于减少到服务器的往返次数。 默认值为 10000 毫秒（或 10 秒钟）。 设置为 null 或 0 时，关闭自动同步功能。|  
 |**Character Encoding**|定义如何在请求中对字符编码。 有效值为 Default 或 UTF-8（它们是等效的）和 UTF-16。| 
 |**CommitTimeout**|XMLA 属性。 确定在进行回滚前，当前正在运行的命令的提交阶段需等待的时间（毫秒）。 如果大于 0，则覆盖服务器配置中对应 CommitTimeout 属性的值。 |   
@@ -153,11 +153,11 @@ ms.locfileid: "52984118"
   
  **与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿（.xlsx、.xlsb 或 .xlsm 文件）的 Http(s) 连接**  
   
- `Data Source=<URL>`，其中，URL 是指向已发布到某一 SharePoint 库的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 SharePoint 路径。 例如，`Data Source=http://localhost/Shared Documents/Sales.xlsx`。  
+ `Data Source=<URL>`，其中，URL 是指向已发布到某一 SharePoint 库的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 SharePoint 路径。 例如， `Data Source=http://localhost/Shared Documents/Sales.xlsx` 。  
   
  **与 BI 语义模型连接文件的 Http(s) 连接**  
   
- `Data Source=<URL>` ，其中，URL 是指向 .bism 文件的 SharePoint 路径。 例如，`Data Source=http://localhost/Shared Documents/Sales.bism`。  
+ `Data Source=<URL>` ，其中，URL 是指向 .bism 文件的 SharePoint 路径。 例如， `Data Source=http://localhost/Shared Documents/Sales.bism` 。  
   
  **嵌入的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 连接**  
   

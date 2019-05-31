@@ -10,12 +10,12 @@ manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 758915364784f34b638af0e874873a417662d710
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243581"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413338"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>加入到 Active Directory 域 Linux 主机上的 SQL Server
 
@@ -139,7 +139,7 @@ ping contoso.com
 
 使用以下步骤以加入到 Active Directory 域的 SQL 服务器主机：
 
-1. 使用[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.md)将主机加入 AD 域。 您必须首先安装两者**realmd**和使用 Linux 分发的包管理器在 SQL Server 主机计算机上的 Kerberos 客户端包：
+1. 使用[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join)将主机加入 AD 域。 您必须首先安装两者**realmd**和使用 Linux 分发的包管理器在 SQL Server 主机计算机上的 Kerberos 客户端包：
 
    **RHEL:**
 
@@ -179,7 +179,7 @@ ping contoso.com
 
    SQL Server 使用 SSSD 和 NSS 用于映射到安全标识符 (Sid) 的用户帐户和组。 SSSD 必须配置并运行 SQL server 已成功创建 AD 的登录名。 **realmd**通常执行此操作会自动作为一部分的加入域，但在某些情况下，您必须单独执行此操作。
 
-   有关详细信息，请参阅如何[手动配置 SSSD](https://access.redhat.com/articles/3023951)，并[配置 NSS 用于 SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
+   有关详细信息，请参阅如何[手动配置 SSSD](https://access.redhat.com/articles/3023951)，并[配置 NSS 用于 SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
 
 1. 验证，可以现在从域中，收集有关用户的信息，以及你可以获取作为该用户的 Kerberos 票证。 下面的示例使用**id**， [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)，并[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)此命令。
 

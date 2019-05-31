@@ -19,12 +19,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f8c8ac11c1dada747783a1edaac3d3b1c8b5c795
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.openlocfilehash: 33cc877dfb2b1789aa775981e8377cf66b4ee950
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65836210"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413213"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 联机丛书
 
@@ -33,7 +33,7 @@ ms.locfileid: "65836210"
 SQL Server 2016 和更高版本，记录[此处](https://docs.microsoft.com/sql/sql-server/index)。 SQL Server 2012 和较旧版本中，记录[此处](#previous-versions-gm2014)。 <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
 
  **进行试用：**  
- ![Azure 虚拟机小](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 是否拥有 Azure 帐户？  然后转**[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 启动具有 SQL Server 2014 Service Pack 1 (SP1) 的虚拟机已安装。 SQL Server 2014 (SP1) 的详细信息，请参阅[SQL Server 2014 Service Pack 1 发布信息](https://support.microsoft.com/en-us/kb/3058865)。 
+ ![Azure 虚拟机小](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 是否拥有 Azure 帐户？  然后转 **[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 启动具有 SQL Server 2014 Service Pack 1 (SP1) 的虚拟机已安装。 SQL Server 2014 (SP1) 的详细信息，请参阅[SQL Server 2014 Service Pack 1 发布信息](https://support.microsoft.com/en-us/kb/3058865)。 
   
 ## <a name="sql-server-technologies"></a>SQL Server 技术  
 
@@ -57,7 +57,7 @@ SQL Server 2016 和更高版本，记录[此处](https://docs.microsoft.com/sql/
   
 -   [Microsoft.com 上的 SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [SQL Server 资源中心](https://go.microsoft.com/fwlink/?linkid=218841)  
+-   [SQL Server 资源中心](https://www.microsoft.com/sql-server/sql-server-2017-resources)  
   
 -   [SQL Server 技术中心](https://go.microsoft.com/fwlink/?linkid=28107)  
   
