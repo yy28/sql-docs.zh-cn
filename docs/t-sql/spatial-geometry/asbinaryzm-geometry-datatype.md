@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - AsBinaryZM geometry
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 94d1ee63cf5150dc38351c80543173870018d6d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feafda7b9ed7fd7ca61310df5d29b0330a521d3b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855795"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935957"
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回 geometry 实例的开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式，增加了该实例传递的任何 Z（标高）和 M（度量）值。
+返回 geometry 实例的开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式，增加了该实例传递的任何 Z（标高）和 M（度量）值    。
   
 ## <a name="syntax"></a>语法  
   
@@ -35,9 +35,9 @@ ms.locfileid: "47855795"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)   
   
- CLR 返回类型：SqlBytes  
+ CLR 返回类型：**SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
   

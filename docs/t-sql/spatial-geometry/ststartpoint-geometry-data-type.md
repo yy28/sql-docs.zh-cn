@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STStartPoint (geometry Data Type)
 ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: ff24ccb799c4a0e4b199399a58c1df41c8a4c4bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bf1d079fec6b825ef3ca28e85b17d6880a305d4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629095"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938235"
 ---
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "47629095"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
- 开放地理空间信息联盟 (OGC) 类型：Point  
+ 开放地理空间联盟 (OGC) 类型：**Point**  
   
 ## <a name="remarks"></a>Remarks  
  `STStartPoint()` 等效于 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1)。  

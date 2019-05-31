@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a1cc685ac2851acb52eaedff7507bd0b7997add8
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2308cc29c0cbbee8b72177e573d51239c9f8f5de
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480323"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981164"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中弃用的数据库引擎功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,19 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > 此列表与 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] 列表相同。 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 未宣布弃用或停止使用任何新的数据库引擎功能。
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server 的下一版本中弃用的功能  
-下一版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将弃用以下 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称。 **功能 ID** 值在跟踪事件中作为 ObjectId。  
+下一版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将弃用以下 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称  。 **功能 ID** 值在跟踪事件中作为 ObjectId。  
   
 |类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |备份和还原|仍弃用 RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD。 停止使用 BACKUP { DATABASE &#124; LOG } WITH PASSWORD 和 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD。|无。|BACKUP DATABASE 或 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |兼容级别|从版本 100（[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]）升级。|如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本结束[支持](https://aka.ms/sqllifecycle)，相关数据库兼容性级别将标记为已弃用。 但是，我们将继续支持在任何支持的数据库兼容性级别上认证的应用程序尽可能长的时间，使升级更简单。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|数据库兼容性级别 100|108|  
 |数据库对象|从触发器返回结果集的功能|None|从触发器返回结果|12|  
-|加密|不推荐使用通过 RC4 或 RC4_128 进行加密，并计划在下一个版本中删除这种加密方法。 不推荐使用 RC4 和 RC4_128 解密。|请使用其他加密算法，例如 AES。|不推荐使用的加密算法|253|  
+|加密|不推荐使用通过 RC4 或 RC4_128 进行加密，并计划在下一个版本中删除这种加密方法。 不推荐使用 RC4 和 RC4_128 解密。|请使用其他加密算法，例如 AES。|不推荐使用的加密算法|253|    
+|哈希算法|使用 MD2、MD4、MD5、SHA 和 SHA1 已弃用。|请改用 SHA2_256 或 SHA2_512。 旧算法将继续起作用，但会抛出弃用事件。|弃用的哈希算法|None|  
 |远程服务器|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|用链接服务器替代远程服务器。 sp_addserver 仅可与本地选项一起使用。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |远程服务器|\@\@remserver|用链接服务器替代远程服务器。|None|None|  
 |远程服务器|SET REMOTE_PROC_TRANSACTIONS|用链接服务器替代远程服务器。|SET REMOTE_PROC_TRANSACTIONS|110|  
-|SET 选项|适用于**SET ROWCOUNT** 、 **INSERT**, **UPDATE**语句的 **DELETE** |TOP 关键字|SET ROWCOUNT|109|  
+|SET 选项|适用于**SET ROWCOUNT** 、 **INSERT**, **UPDATE**语句的 **DELETE**|TOP 关键字|SET ROWCOUNT|109|  
 |表提示|不带括号的 HOLDLOCK 表提示。|使用 HOLDLOCK 以及括号。|不带括号的 HOLDLOCK 表提示|167|  
   
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>SQL Server 未来版本中弃用的功能  
@@ -78,8 +79,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |数据类型|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |数据类型|**timestamp** 数据类型的 **rowversion** 语法|**rowversion** 数据类型语法|timestamp|158|  
 |数据类型|在 **timestamp** 列中插入 null 值的功能。|请改用 DEFAULT。|将 NULL 插入 TIMESTAMP 列|179|  
-|数据类型|“text in row”表选项|使用 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 数据类型。 有关详细信息，请参阅 [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|text in row 表选项|9|  
-|数据类型|数据类型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **图像**|使用 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。|数据类型： **text**、 **ntext** 或 **image**|4|  
+|数据类型|“text in row”表选项|使用 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 数据类型。 有关详细信息，请参阅 [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|text in row 表选项|9|  
+|数据类型|数据类型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **图像**|使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。|数据类型： **text**、 **ntext** 或 **image**|4|  
 |数据库管理|sp_attach_db<br /><br /> sp_attach_single_file_db|使用 FOR ATTACH 选项的 CREATE DATABASE 语句。 若要在一个或多个日志文件有新位置的情况下重新生成这些日志文件，请使用 FOR ATTACH_REBUILD_LOG 选项。|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |数据库对象|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE 和 ALTER TABLE 中的 DEFAULT 关键字|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |数据库对象|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE 和 ALTER TABLE 中的 CHECK 关键字|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -99,7 +100,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |扩展存储过程编程|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|请改用 CLR 集成。|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |扩展存储过程|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|使用 CREATE LOGIN<br /><br /> 使用 SERVERPROPERTY 的 DROP LOGIN IsIntegratedSecurityOnly 参数|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|44<br /><br /> 45<br /><br /> 59|  
 |函数|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|哈希算法|MD2、MD4、MD5、SHA 和 SHA1 算法。 不得使用这些算法。|使用 SHA2_256 或 SHA2_512。|弃用的哈希算法||  
 |高可用性|数据库镜像|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> 如果您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本不支持 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]，请使用日志传送。|DATABASE_MIRRORING|267|  
 |索引选项|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |索引选项|选项两侧没有括号的 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 语法。|请重写语句以使用当前语法。|INDEX_OPTION|33|  
@@ -171,7 +171,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SQL 跟踪存储过程、函数和目录视图|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[扩展事件](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
-> **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)**。 如果开发人员已分配 **varbinary(50)** ，当 cookie 在将来的版本中返回大小增量时，应用程序可能需要更改。 尽管这不是不推荐使用的问题，但本主题中提到了，因为应用程序调整都是类似的。 有关详细信息，请参阅 [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。  
+> **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)** 。 如果开发人员已分配 **varbinary(50)** ，当 cookie 在将来的版本中返回大小增量时，应用程序可能需要更改。 尽管这不是不推荐使用的问题，但本主题中提到了，因为应用程序调整都是类似的。 有关详细信息，请参阅 [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中废止的数据库引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  

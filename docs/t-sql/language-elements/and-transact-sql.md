@@ -19,21 +19,21 @@ helpviewer_keywords:
 - AND
 - combining expressions
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ec754bf92dc62650a1f1d7a1d82c07e5a35932e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5629288c66b3d8ae4f93185f35ec1d8cacaf85e6
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818447"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983219"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  合并两个布尔表达式；在两个表达式均为 TRUE 时返回 TRUE。 当语句中使用多个逻辑运算符时，将首先计算 AND 运算符。 可以通过使用括号改变求值顺序。  
+  合并两个布尔表达式；在两个表达式均为 TRUE 时返回 TRUE   。 当语句中使用多个逻辑运算符时，将首先计算 AND 运算符  。 可以通过使用括号改变求值顺序。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>参数  
  *boolean_expression*  
- 返回以下布尔值的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)：TRUE、FALSE 或 UNKNOWN。  
+ 返回以下布尔值的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)：TRUE、FALSE 或 UNKNOWN    。  
   
 ## <a name="result-types"></a>结果类型  
  **Boolean**  
@@ -60,7 +60,7 @@ boolean_expression AND boolean_expression
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|FALSE|UNKNOWN|  
 |**FALSE**|FALSE|FALSE|FALSE|  
-|UNKNOWN|UNKNOWN|FALSE|UNKNOWN|  
+|UNKNOWN |UNKNOWN|FALSE|UNKNOWN|  
   
 ## <a name="examples"></a>示例  
   

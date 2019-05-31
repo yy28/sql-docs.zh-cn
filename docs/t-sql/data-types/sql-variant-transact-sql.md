@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d809a311458cb1fbd3a92243f5daeabd34ebc99b
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013498"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982071"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,26 +42,26 @@ sql_variant
 ```  
   
 ## <a name="remarks"></a>Remarks  
-sql_variant 可以用在列、参数、变量和用户定义函数的返回值中。 借助 sql_variant，这些数据库对象可以支持其他数据类型的值。
+sql_variant 可以用在列、参数、变量和用户定义函数的返回值中  。 借助 sql_variant，这些数据库对象可以支持其他数据类型的值  。
   
-类型为 sql_variant 的列可能包含不同数据类型的行。 例如，定义为 sql_variant 的列可以存储 int、binary 和 char 类型的值。
+类型为 sql_variant 的列可能包含不同数据类型的行  。 例如，定义为 sql_variant 的列可以存储 int、binary 和 char 类型的值     。
   
-sql_variant 的最大长度可以是 8016 个字节。 这包括基类型信息和基类型值。 实际基类型值的最大长度是 8,000 个字节。
+sql_variant 的最大长度可以是 8016 个字节  。 这包括基类型信息和基类型值。 实际基类型值的最大长度是 8,000 个字节。
   
-对于 sql_variant 数据类型，必须先将它转换为其基本数据类型值，然后才能参与诸如加减这类运算。
+对于 sql_variant 数据类型，必须先将它转换为其基本数据类型值，然后才能参与诸如加减这类运算  。
   
-可以为 sql_variant 分配默认值。 该数据类型还可以将 NULL 作为其基础值，但是 NULL 值没有关联的基类型。 此外，sql_variant 不能使用其他 sql_variant 作为其基础类型。
+可以为 sql_variant 分配默认值  。 该数据类型还可以将 NULL 作为其基础值，但是 NULL 值没有关联的基类型。 此外，sql_variant 不能使用其他 sql_variant 作为其基础类型   。
   
-唯一键、主键或外键可能包含类型为 sql_variant 的列，但是，组成指定行的键的数据值的总长度不应大于索引的最大长度。 该最大长度是 900 个字节。
+唯一键、主键或外键可能包含类型为 sql_variant 的列，但是，组成指定行的键的数据值的总长度不应大于索引的最大长度  。 该最大长度是 900 个字节。
   
-一个表可以包含任意多个 sql_variant 列。
+一个表可以包含任意多个 sql_variant 列  。
   
-不能在 CONTAINSTABLE 和 FREETEXTTABLE 中使用 sql_variant。
+不能在 CONTAINSTABLE 和 FREETEXTTABLE 中使用 sql_variant  。
   
-ODBC 不完全支持 sql_variant。 因此，使用 Microsoft OLE DB Provider for ODBC (MSDASQL) 时，sql_variant 列的查询将作为二进制数据返回。 例如，包含字符串数据 'PS2091' 的 sql_variant 列将作为 0x505332303931 返回。
+ODBC 不完全支持 sql_variant  。 因此，使用 Microsoft OLE DB Provider for ODBC (MSDASQL) 时，sql_variant 列的查询将作为二进制数据返回  。 例如，包含字符串数据 'PS2091' 的 sql_variant 列将作为 0x505332303931 返回  。
   
 ## <a name="comparing-sqlvariant-values"></a>比较 sql_variant 值  
-sql_variant 数据类型在用于转换的数据类型层次结构列表中位于顶部。 为了进行 sql_variant 比较，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型层次结构顺序划分为多个数据类型系列。
+sql_variant 数据类型在用于转换的数据类型层次结构列表中位于顶部  。 为了进行 sql_variant 比较，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型层次结构顺序划分为多个数据类型系列  。
   
 |数据类型层次结构|数据类型系列|  
 |---|---|
@@ -90,16 +90,16 @@ sql_variant 数据类型在用于转换的数据类型层次结构列表中位�
 |**binary**|二进制|  
 |**uniqueidentifier**|Uniqueidentifier |  
   
-下列规则适用于 sql_variant 比较：
--   当不同基本数据类型的 sql_variant 值进行比较，而且基本数据类型属于不同的数据类型系列时，则在层次结构图中数据类型系列较高的值被认为在两个值中较大。  
--   当不同基本数据类型的sql_variant 值进行比较，而且基本数据类型属于相同的数据类型系列时，则在层次结构图中基本数据类型较低的值先隐式转换为其他数据类型，然后再进行比较。  
--   在比较“char”、“varchar”、“nchar”或“nvarchar”数据类型的“sql_variant”值时，将首先基于以下条件来比较这些值的排序规则：LCID、LCID 版本、比较标识和排序 ID。 其中的每个条件都按所列出的顺序作为整数值进行比较。 如果所有这些条件都相等，则将按照排序规则来比较实际的字符串值。  
+下列规则适用于 sql_variant 比较  ：
+-   当不同基本数据类型的 sql_variant 值进行比较，而且基本数据类型属于不同的数据类型系列时，则在层次结构图中数据类型系列较高的值被认为在两个值中较大  。  
+-   当不同基本数据类型的sql_variant 值进行比较，而且基本数据类型属于相同的数据类型系列时，则在层次结构图中基本数据类型较低的值先隐式转换为其他数据类型，然后再进行比较  。  
+-   在比较“char”、“varchar”、“nchar”或“nvarchar”数据类型的“sql_variant”值时，将首先基于以下条件来比较这些值的排序规则：      LCID、LCID 版本、比较标识和排序 ID。 其中的每个条件都按所列出的顺序作为整数值进行比较。 如果所有这些条件都相等，则将按照排序规则来比较实际的字符串值。  
   
 ## <a name="converting-sqlvariant-data"></a>转换 sql_variant 数据  
-当处理 sql_variant 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持将其他数据类型的对象隐式转换为 sql_variant 类型。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持从 sql_variant 数据隐式转换为其他数据类型的对象。
+当处理 sql_variant 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持将其他数据类型的对象隐式转换为 sql_variant 类型   。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持从 sql_variant 数据隐式转换为其他数据类型的对象  。
   
 ## <a name="restrictions"></a>限制  
-下表列出了无法使用 sql_variant 存储的值的类型：
+下表列出了无法使用 sql_variant 存储的值的类型  ：
   
 |||  
 |-|-|  
@@ -109,7 +109,9 @@ sql_variant 数据类型在用于转换的数据类型层次结构列表中位�
 |**图像**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**地理**|  
 |**hierarchyid**|**geometry**|  
-|用户定义类型|**datetimeoffset**|  
+|用户定义类型|**datetimeoffset**<sup>1</sup>| 
+
+<sup>1</sup> SQL Server 2012 及更高版本均不限制 datetimeoffset  。
 
 ## <a name="examples"></a>示例  
 
@@ -126,7 +128,7 @@ FROM      tableA
 WHERE      colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]请注意，这三个值中的每一个都是 sql_variant。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]请注意，这三个值中的每一个都是 sql_variant  。  
   
 ```  
 Base Type    Precision    Scale  

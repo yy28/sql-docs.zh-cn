@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STIntersection method
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d1433cbbeb94c3027d8007914a67c113b42a0165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ee84ab21082193c50486f775a22caec4e0dbb4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777005"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936818"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回一个对象，该对象表示一个 geography 实例与另一个 geography 实例的交点。  
+  返回一个对象，该对象表示一个 geography 实例与另一个 geography 实例的交点   。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +38,20 @@ ms.locfileid: "47777005"
 ```  
   
 ## <a name="arguments"></a>参数  
- other_geography  
- 与调用 STIntersection() 的实例进行比较的另一个 geography 实例。  
+ other_geography   
+ 与调用 STIntersection() 的实例进行比较的另一个 geography 实例  。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  返回两个 geography 实例的交集。  
   
- 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则 STIntersection() 始终返回 NULL。  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则 STIntersection() 始终返回 NULL  。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在服务器上返回的可能结果集中可能包含 FullGlobe 实例。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在服务器上返回的可能结果集中可能包含 FullGlobe 实例  。  
   
  只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   

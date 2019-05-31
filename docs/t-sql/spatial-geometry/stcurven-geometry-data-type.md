@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - STCurveN method (geometry)
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 634b91d114753355e765c6e6da96bfc20618e969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b496ecde35917702f1bb976df390c8f5832ac77
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630135"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939008"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回从 geometry 实例中指定的曲线，该实例的数据类型为 LineString、CircularString、CompoundCurve 或 MultiLineString。
+返回从 geometry 实例中指定的曲线，该实例的数据类型为 LineString、CircularString、CompoundCurve 或 MultiLineString      。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +39,9 @@ ms.locfileid: "47630135"
  一个 **int** 表达式，其值介于 1 和 **geometry** 实例中的曲线数之间。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
 ## <a name="exceptions"></a>异常  
  如果 *curve_index* < 1，则引发 `ArgumentOutOfRangeException`。  

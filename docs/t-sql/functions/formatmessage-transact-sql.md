@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e727fa9d1042fc40b70872b948f1723c7eaaddcf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 29c669ec831ffefe3aebe463fa7819e4e16d276a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212366"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948995"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,15 +43,15 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- msg_number  
- 存储在 sys.messages 中的消息的 ID。 如果 msg_number <= 13000，或者此消息不在 sys.messages 中，则返回 NULL。  
+ msg_number   
+ 存储在 sys.messages 中的消息的 ID。 如果 msg_number <= 13000，或者此消息不在 sys.messages 中，则返回 NULL  。  
   
- msg_string  
+ msg_string   
  **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
- 用单引号括起来的字符串，其中包含参数值占位符。 该错误消息最长可以有 2,047 个字符。 如果该消息包含的字符数等于或超过 2,048 个，则只能显示前 2,044 个并添加一个省略号以表示该消息已被截断。 请注意，由于内部存储行为的缘故，代替参数使用的字符数比输出所显示的字符数要多。  有关消息字符串结构及在字符串中使用参数的信息，请参阅 [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md) 中 msg_str 参数的说明。  
+ 用单引号括起来的字符串，其中包含参数值占位符。 该错误消息最长可以有 2,047 个字符。 如果该消息包含的字符数等于或超过 2,048 个，则只能显示前 2,044 个并添加一个省略号以表示该消息已被截断。 请注意，由于内部存储行为的缘故，代替参数使用的字符数比输出所显示的字符数要多。  有关消息字符串结构及在字符串中使用参数的信息，请参阅 [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md) 中 msg_str 参数的说明  。  
   
- param_value  
+ param_value   
  在消息中使用的参数值。 可以是多个参数值。 值的顺序必须与占位符变量在消息中出现的次序相同。 值的最大数目为 20。  
   
 ## <a name="return-types"></a>返回类型  
@@ -78,7 +78,7 @@ SELECT @var1;
   
 ### <a name="b-example-with-a-message-string"></a>B. 带有消息字符串的示例  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  以下示例采用字符串作为输入。  
   

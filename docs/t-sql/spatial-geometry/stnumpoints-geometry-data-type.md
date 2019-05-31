@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STNumPoints (geometry Data Type)
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f135ce5a68cade2180a837562deae0129dc6cbab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eb97aa0ec64552049a33f9483beb5318a39ff48
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683687"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938504"
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回 geometry 实例的每个图形中的点数的总和。  
+  返回 geometry 实例的每个图形中的点数的总和  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,12 +38,12 @@ ms.locfileid: "47683687"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
   
- CLR 返回类型：SqlInt32  
+ CLR 返回类型：**SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- 此方法对  实例说明中的点进行计数。 重复的点将计算在内。 如果此实例为 collection 类型，则此方法返回它的每个元素中的点数的总和。  
+ 此方法对  实例说明中的点进行计数。 重复的点将计算在内。 如果此实例为  collection 类型，则此方法返回它的每个元素中的点数的总和。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `LineString` 实例，并使用 `STNumPoints()` 确定该实例说明中使用的点数。  

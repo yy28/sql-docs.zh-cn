@@ -15,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7db5c3542186c81d33678b9e458495232e9622d5
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 3db06df1676a82e65375483c914671384dd2d3c1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570820"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981191"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的数据库引擎功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,15 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server 的下一版本中弃用的功能
- 下一版 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将不再支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称。 **功能 ID** 值在跟踪事件中作为 ObjectId。  
+ 下一版 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将不再支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 功能名称值在跟踪事件中显示为 ObjectName，而在性能计数器和 `sys.dm_os_performance_counters` 中显示为实例名称  。 **功能 ID** 值在跟踪事件中作为 ObjectId。  
   
 |类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|备份和还原|仍弃用 RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD。 停止使用 BACKUP { DATABASE &#124; LOG } WITH PASSWORD 和 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD。|无。|BACKUP DATABASE 或 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
+|备份和还原|仍弃用 RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD。 停止使用 BACKUP { DATABASE &#124; LOG } WITH PASSWORD 和 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD。|None|BACKUP DATABASE 或 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |兼容级别|从版本 100（[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]）升级。|如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本结束[支持](https://aka.ms/sqllifecycle)，相关数据库兼容性级别将标记为已弃用。 但是，我们将继续支持在任何支持的数据库兼容性级别上认证的应用程序尽可能长的时间，使升级更简单。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|数据库兼容性级别 100|108|  
 |数据库对象|从触发器返回结果集的功能|None|从触发器返回结果|12|  
 |加密|不推荐使用通过 RC4 或 RC4_128 进行加密，并计划在下一个版本中删除这种加密方法。 不推荐使用 RC4 和 RC4_128 解密。|请使用其他加密算法，例如 AES。|不推荐使用的加密算法|253|  
+|哈希算法|使用 MD2、MD4、MD5、SHA 和 SHA1 已弃用。|请改用 SHA2_256 或 SHA2_512。 旧算法将继续起作用，但会抛出弃用事件。|弃用的哈希算法|None|  
 |远程服务器|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|用链接服务器替代远程服务器。 sp_addserver 仅可与本地选项一起使用。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |远程服务器|\@\@remserver|用链接服务器替代远程服务器。|None|None|  
 |远程服务器|SET REMOTE_PROC_TRANSACTIONS|用链接服务器替代远程服务器。|SET REMOTE_PROC_TRANSACTIONS|110|  
@@ -75,8 +76,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |数据类型|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |数据类型|**timestamp** 数据类型的 **rowversion** 语法|**rowversion** 数据类型语法|timestamp|158|  
 |数据类型|在 **timestamp** 列中插入 null 值的功能。|请改用 DEFAULT。|将 NULL 插入 TIMESTAMP 列|179|  
-|数据类型|“text in row”表选项|使用 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 数据类型。 有关详细信息，请参阅 [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|text in row 表选项|9|  
-|数据类型|数据类型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **图像**|使用 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。|数据类型： **text**、 **ntext** 或 **image**|4|  
+|数据类型|“text in row”表选项|使用 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 数据类型。 有关详细信息，请参阅 [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|text in row 表选项|9|  
+|数据类型|数据类型：<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **图像**|使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。|数据类型： **text**、 **ntext** 或 **image**|4|  
 |数据库管理|sp_attach_db<br /><br /> sp_attach_single_file_db|使用 FOR ATTACH 选项的 CREATE DATABASE 语句。 若要在一个或多个日志文件有新位置的情况下重新生成这些日志文件，请使用 FOR ATTACH_REBUILD_LOG 选项。|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |数据库对象|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE 和 ALTER TABLE 中的 DEFAULT 关键字|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |数据库对象|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE 和 ALTER TABLE 中的 CHECK 关键字|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -96,7 +97,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |扩展存储过程编程|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|请改用 CLR 集成。|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |扩展存储过程|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|使用 CREATE LOGIN<br /><br /> 使用 SERVERPROPERTY 的 DROP LOGIN IsIntegratedSecurityOnly 参数|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|44<br /><br /> 45<br /><br /> 59|  
 |函数|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|哈希算法|MD2、MD4、MD5、SHA 和 SHA1 算法在兼容性级别 130 下不可用。|使用 SHA2_256 或 SHA2_512。|弃用的哈希算法||  
 |高可用性|数据库镜像|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> 如果您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本不支持 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]，请使用日志传送。|DATABASE_MIRRORING|267|  
 |索引选项|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |索引选项|选项两侧没有括号的 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 语法。|请重写语句以使用当前语法。|INDEX_OPTION|33|  
@@ -133,7 +133,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SQL Server 代理|**net send** 通知<br /><br /> 寻呼通知|电子邮件通知<br /><br /> 电子邮件通知 |None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|解决方案资源管理器集成到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
 |系统存储过程|sp_db_increased_partitions|无。 默认情况下， [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]提供了对增加的分区的支持。|sp_db_increased_partitions|253|  
-|系统表|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|兼容性视图。 有关详细信息，请参阅[兼容性视图 (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)。<br /><br /> **重要提示：** 兼容性视图不显示 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中新增功能的元数据。 建议将应用程序升级为使用目录视图。 有关详细信息，请参阅[目录视图 (Transact-SQL)](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
+|系统表|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|兼容性视图。 有关详细信息，请参阅[兼容性视图 (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)。<br /><br /> **重要提示：** 兼容性视图不公开 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中引入功能的元数据。 建议将应用程序升级为使用目录视图。 有关详细信息，请参阅[目录视图 (Transact-SQL)](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |系统表|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |系统函数|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |系统视图|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
@@ -162,15 +162,15 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|表提示通过视图间接应用于多语句表值函数 (TVF) 的调用。|无。|间接 TVF 提示|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 语法:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |其他|DB-Library<br /><br /> 用于 C 语言的嵌入式 SQL|尽管 [!INCLUDE[ssDE](../includes/ssde-md.md)] 仍然支持来自使用 DB-Library 和嵌入式 SQL API 的现有应用程序的连接，但它不包括在使用这些 API 的应用程序上进行编程工作所需的文件或文档。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的未来版本将不再支持来自 DB-Library 或嵌入式 SQL 应用程序的连接。 请不要使用 DB-Library 或嵌入式 SQL 来开发新的应用程序。 修改现有应用程序时，请删除 DB-Library 或嵌入式 SQL 的任何依赖项。 请使用 SQLClient 命名空间或诸如 ODBC 的 API，而不使用这些 API。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 不包含运行这些应用程序所需的 DB-Library DLL。 若要运行 DB-Library 或嵌入式 SQL 应用程序，必须有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 6.5 版、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 版或 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]提供的 DB-Library DLL。|None|None|  
-|工具|SQL Server Profiler for Trace Capture|使用 SQL Server Management Studio 中嵌入的扩展事件探查器。|SQL Server 事件探查器|None|  
-|工具|SQL Server Profiler for Trace Replay|[SQL Server 分布式重播](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server 事件探查器|None|  
+|工具|SQL Server Profiler for Trace Capture|使用 SQL Server Management Studio 中嵌入的扩展事件探查器。|SQL Server Profiler|None|  
+|工具|SQL Server Profiler for Trace Replay|[SQL Server 分布式重播](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|None|  
 |跟踪管理对象|Microsoft.SqlServer.Management.Trace 命名空间（包含用于 SQL Server 跟踪和重播对象的 API）|跟踪配置： <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 跟踪读取： <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 跟踪重播：None|||  
 |SQL 跟踪存储过程、函数和目录视图|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[扩展事件](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|
-|SET 选项|适用于**SET ROWCOUNT** 、 **INSERT**, **UPDATE**语句的 **DELETE** |TOP 关键字|SET ROWCOUNT|109|  
+|SET 选项|适用于**SET ROWCOUNT** 、 **INSERT**, **UPDATE**语句的 **DELETE**|TOP 关键字|SET ROWCOUNT|109|  
 
   
 > [!NOTE]  
-> **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)**。 如果开发人员已分配 **varbinary(50)** ，当 cookie 在将来的版本中返回大小增量时，应用程序可能需要更改。 尽管这不是不推荐使用的问题，但本主题中提到了，因为应用程序调整都是类似的。 有关详细信息，请参阅 [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。  
+> **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)** 。 如果开发人员已分配 **varbinary(50)** ，当 cookie 在将来的版本中返回大小增量时，应用程序可能需要更改。 尽管这不是不推荐使用的问题，但本主题中提到了，因为应用程序调整都是类似的。 有关详细信息，请参阅 [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中废止的数据库引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)     

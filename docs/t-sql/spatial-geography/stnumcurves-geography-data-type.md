@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STNumCurves method (geography)
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 210ca8f9a70c2b355a3fa2362fb422bbd68f7302
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b66f623744c33c9fdaff92d45ceb66b975285a1
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753895"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935748"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回一维 geography 实例中的曲线数。  
+  返回一维 geography 实例中的曲线数  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,16 +38,16 @@ ms.locfileid: "47753895"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 一维空间数据类型包括 LineString、CircularString 和 CompoundCurve。 空的一维 geography 实例返回 0。  
+ 一维空间数据类型包括 LineString、CircularString 和 CompoundCurve    。 空的一维 geography 实例返回 0  。  
   
- `STNumCurves`() 仅适用于简单类型，它不适用于 MultiLineString 之类的 geography 集合。 当 geography 实例不是一维数据类型时，将返回 NULL。  
+ `STNumCurves`() 仅适用于简单类型，它不适用于 MultiLineString 之类的 geography 集合   。 当 geography 实例不是一维数据类型时，将返回 NULL   。  
   
- 对于未初始化的 geography 实例，返回 Null。  
+ 对于未初始化的 geography 实例，返回 Null   。  
   
 ## <a name="examples"></a>示例  
   

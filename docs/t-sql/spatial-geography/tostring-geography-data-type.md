@@ -14,22 +14,22 @@ dev_langs:
 helpviewer_keywords:
 - ToString method
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4c02e0b4e92ad8b8811ff05607b06aaf239eb676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92ffac8a5ff50302378a66d78e362b27ee3b8da6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773965"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939196"
 ---
 # <a name="tostring-geography-data-type"></a>ToString（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回 geography 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，增加了该实例传递的任何 Z（标高）和 M（度量）值。  
+  返回 geography 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，增加了该实例传递的任何 Z（标高）和 M（度量）值  。  
   
- 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +39,12 @@ ms.locfileid: "47773965"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)   
   
- CLR 返回类型：SqlString  
+ CLR 返回类型：**SqlString**  
   
 ## <a name="remarks"></a>Remarks  
- 在针对 Null 实例调用时，此方法将返回字符串“Null”。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，服务器上可能的结果集已扩展到 FullGlobe 实例。 此方法将返回与 `AsTextZM()` 相同的值。  
+ 在针对 Null 实例调用时，此方法将返回字符串“Null”。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，服务器上可能的结果集已扩展到 FullGlobe 实例  。 此方法将返回与 `AsTextZM()` 相同的值。  
   
  此方法不精确。  
   

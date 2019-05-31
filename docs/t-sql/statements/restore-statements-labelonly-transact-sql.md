@@ -18,16 +18,16 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9b6b7ba063a25df92335b5727c7c29fcb69a7221
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a4d9aee8f248dfdf9ce259442ae34a5107750610
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241558"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947096"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE 语句 - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -85,7 +85,7 @@ FROM <backup_device>
 |**FamilySequenceNumber**|**int**|此介质簇的序号。|  
 |**MediaFamilyId**|**uniqueidentifier**|媒体簇的唯一标识号。|  
 |**MediaSequenceNumber**|**int**|此介质在介质簇中的序号。|  
-|**MediaLabelPresent**|**tinyint**|介质说明中是否包含：<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁带格式媒体标签<br /><br /> 0 = 媒体描述|  
+|**MediaLabelPresent**|**tinyint**|介质说明中是否包含：<br /><br />  1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁带格式媒体标签<br /><br />  0 = 媒体描述|  
 |**MediaDescription**|**nvarchar(255)**|介质说明（自由格式的文本）或磁带格式介质标签。|  
 |**SoftwareName**|**nvarchar(128)**|写入标签的备份软件名称。|  
 |**SoftwareVendorId**|**int**|写入备份的软件供应商的唯一供应商标识号。|  
@@ -105,7 +105,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 保护备份的最佳做法是将备份磁带存储在安全位置，或者备份到由适当的访问控制列表 (ACL) 保护的磁盘文件。 ACL 应设置在创建备份的根目录下。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，获取有关备份集或备份设备的信息要求具有 CREATE DATABASE 权限。 有关详细信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  

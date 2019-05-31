@@ -17,21 +17,21 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70bfded9597cd7e0d8d8f54ecc3fa636e2d41d3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24bc60e00fa628a0c984302a4d91c806eab09b4b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704877"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949154"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定 float 表达式的自然对数。  
+  返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定 float 表达式的自然对数  。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,27 +51,27 @@ LOG ( float_expression )
   
 ## <a name="arguments"></a>参数  
  *float_expression*  
- float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。  
   
- base  
+ base   
  可选的整型参数，设置对数的底数。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
 ## <a name="return-types"></a>返回类型  
  **float**  
   
 ## <a name="remarks"></a>Remarks  
- 默认情况下，LOG() 返回自然对数。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，可使用可选的 base 参数将对数的底数更改为其他值 。  
+ 默认情况下，LOG() 返回自然对数  。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，可使用可选的 base 参数将对数的底数更改为其他值  。  
   
- 自然对数是底数为 e 的对数，其中 e 是一个无理数常数，约等于 2.718281828**e**。  
+ 自然对数是底数为 e 的对数，其中 e 是一个无理数常数，约等于 2.718281828  **e**。  
   
- 某数指数值的自然对数是该数自身：LOG( EXP( n ) ) = n。 且某数自然对数的指数值是该数自身：EXP( LOG( n ) ) = n。  
+ 数字的指数的自然对数是数字本身：LOG (EXP (n)) = n   。 以及数字的自然对数的指数是数字本身：EXP (LOG (n)) = n   。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 计算某数的对数。  
- 以下示例计算指定 float 表达式的 `LOG`。  
+ 以下示例计算指定 float 表达式的 `LOG`  。  
   
 ```  
 DECLARE @var float = 10;  
@@ -107,7 +107,7 @@ SELECT LOG (EXP (10));
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 计算某数的对数  
- 以下示例计算指定 float 表达式的 `LOG`。  
+ 以下示例计算指定 float 表达式的 `LOG`  。  
   
 ```  
 SELECT LOG(10);  

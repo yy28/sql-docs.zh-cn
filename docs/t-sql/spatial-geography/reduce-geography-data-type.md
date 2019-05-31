@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4862760d8061ad21ac12ad2e2968b5bfde5ad706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b89d42d050c32f10bac8c8796a4bfa4dd9355ba0
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612845"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935789"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回给定 geography 实例的近似值，该值通过对实例运行具有给定公差的 Douglas-Peucker 算法来生成。  
+  返回给定 geography 实例的近似值，该值通过对实例运行具有给定公差的 Douglas-Peucker 算法来生成  。  
   
- 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例   。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,23 +44,23 @@ ms.locfileid: "47612845"
 |||  
 |-|-|  
 |术语|定义|  
-|tolerance|类型为 float 的值。 tolerance 是输入到 Douglas-Peucker 算法的公差。 tolerance 必须为正数。|  
+|tolerance |类型为 float 的值  。 tolerance 是输入到 Douglas-Peucker 算法的公差  。 tolerance 必须为正数  。|  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 对于集合类型，此算法单独作用于包含在该实例中的每个 tolerance。 此算法不修改 Point 实例。  
+ 对于集合类型，此算法单独作用于包含在该实例中的每个 tolerance  。 此算法不修改 Point 实例  。  
   
- 此方法将尝试保留 LineString 实例的终结，但是可能为了保留有效结果而无法实现此目的。  
+ 此方法将尝试保留 LineString 实例的终结，但是可能为了保留有效结果而无法实现此目的  。  
   
- 如果使用负值调用 `Reduce()`，此方法将产生 ArgumentException。 在 `Reduce()` 中使用的公差必须为正数。  
+ 如果使用负值调用 `Reduce()`，此方法将产生 ArgumentException  。 在 `Reduce()` 中使用的公差必须为正数。  
   
- 通过删除除起点和终点之外的所有点，Douglas-Peucker 算法可用于 geography 实例中的每个曲线或圆环。 然后，它再将已删除的点添加回去，从偏离中心最远的点开始，直到所有点与结果的距离都在 tolerance 范围之内。 然后，如果必要，使结果变得有效，因为必须保证有一个有效的结果。  
+ 通过删除除起点和终点之外的所有点，Douglas-Peucker 算法可用于 geography 实例中的每个曲线或圆环  。 然后，它再将已删除的点添加回去，从偏离中心最远的点开始，直到所有点与结果的距离都在 tolerance 范围之内  。 然后，如果必要，使结果变得有效，因为必须保证有一个有效的结果。  
   
- 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此方法已扩展到 FullGlobe 实例。  
+ 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此方法已扩展到 FullGlobe 实例  。  
   
  此方法不精确。  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], ENCRYPTBYKEY function
 - ENCRYPTBYKEY function
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 75dbab8f45c8a617ed0a98829082170dcf85e310
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: e0883513725000588fe53ee31939f331902ba147
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265958"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948881"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,33 +45,33 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ```  
   
 ## <a name="arguments"></a>参数  
- key_GUID  
- 用于加密 cleartext 的密钥的 GUID。 Uniqueidentifier。  
+ key_GUID   
+ 用于加密 cleartext 的密钥的 GUID  。 Uniqueidentifier  。  
   
- 'cleartext'  
+ 'cleartext'   
  要使用密钥加密的数据。  
   
  @cleartext  
- 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含要使用密钥加密的数据。  
+ 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含要使用密钥加密的数据       。  
   
- add_authenticator  
- 指示是否将验证器与 cleartext 一起加密。 在使用验证器时必须为 1。 int。  
+ add_authenticator   
+ 指示是否将验证器与 cleartext 一起加密  。 在使用验证器时必须为 1。 int  。  
   
  @add_authenticator  
- 指示是否将验证器与 cleartext 一起加密。 在使用验证器时必须为 1。 int。  
+ 指示是否将验证器与 cleartext 一起加密  。 在使用验证器时必须为 1。 int  。  
   
- authenticator  
- 从中派生验证器的数据。 sysname。  
+ authenticator   
+ 从中派生验证器的数据。 sysname  。  
   
  @authenticator  
  包含用于派生验证器的数据的变量。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）。  
+ varbinary（最大大小为 8000 个字节）  。  
   
  如果密钥未打开，如果密钥不存在，或者如果密钥是不推荐使用的 RC4 密钥且数据库不处于兼容性级别 110 或更高级别，则返回 NULL。  
  
- 如果 cleartext 值为 NULL，则返回 NULL。
+ 如果 cleartext 值为 NULL，则返回 NULL  。
   
 ## <a name="remarks"></a>Remarks  
  EncryptByKey 使用对称密钥。 该密钥必须打开。 如果在当前会话中已打开该对称密钥，则无需在查询上下文中再次打开它。  

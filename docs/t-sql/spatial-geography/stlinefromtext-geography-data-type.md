@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText method
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 2cf74f1bcb275b932965812d90222b505f6abaa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a35f92c3565ea63c115a4d1ecfd0f09c19fe86a2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642105"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936695"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值。
+从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geography 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值  。
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +38,21 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- linestring_tagged_text  
- 希望返回的 geographyLineString 实例的 WKT 表示形式。 linestring_tagged_text 是一个 nvarchar(max) 表达式。  
+ linestring_tagged_text   
+ 希望返回的 geographyLineString 实例的 WKT 表示形式  。 linestring_tagged_text 是一个 nvarchar(max) 表达式   。  
   
- SRID  
- 一个 int 表达式，表示希望返回的 geographyLineString 实例的空间引用 ID (SRID)。  
+ SRID   
+ 一个 int 表达式，表示希望返回的 geographyLineString 实例的空间引用 ID (SRID)   。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
- OGC 类型：LineString  
+ OGC 类型：**LineString**  
   
 ## <a name="remarks"></a>Remarks  
- 如果输入的格式不正确，此方法将引发 FormatException。  
+ 如果输入的格式不正确，此方法将引发 FormatException  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STLineFromText()` 创建 `geography` 实例。  

@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STCurveToLine method (geography)
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 66bc3e4887fe6762113208b7554fec4b1eccadc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f237da350b47ea0c3141709cd82d083ef509196
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630075"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939192"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回包含圆弧线段的 geography 实例的多边形近似值。  
+  返回包含圆弧线段的 geography 实例的多边形近似值  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +38,18 @@ ms.locfileid: "47630075"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 为 CircularString 或 CompoundCurve 实例返回 LineString 实例。  
+ 为 CircularString 或 CompoundCurve 实例返回 LineString 实例    。  
   
- 为 CurvePolygon 实例返回 Polygon 实例。  
+ 为 CurvePolygon 实例返回 Polygon 实例   。  
   
- 返回不包含 CircularString、CompoundCurve、CurvePolygon 实例的 geography 实例的副本。  
+ 返回不包含 CircularString、CompoundCurve、CurvePolygon 实例的 geography 实例的副本     。  
   
- 与 SQL MM 规范不同，此方法不使用 Z 坐标值计算多边形近似值。 忽略调用 geography 实例中存在的任何 Z 坐标值。  
+ 与 SQL MM 规范不同，此方法不使用 Z 坐标值计算多边形近似值。 忽略调用 geography 实例中存在的任何 Z 坐标值  。  
   
 ## <a name="examples"></a>示例  
  以下示例返回作为 `LineString` 实例的多边形近似值的 `CircularString` 实例。  

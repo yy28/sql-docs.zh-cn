@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STDisjoint
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 57071fc6530f8fdcb6d2a0eab83fea1bf43ac42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 900b264798a8cfc55b38587cf786f2b4effac796
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687320"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937038"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  如果一个 geography 实例与另一个 geography 实例在空间上不相联，则返回 1。 反之，则返回 0。  
+  如果一个 geography 实例与另一个 geography 实例在空间上不相联，则返回 1   。 反之，则返回 0。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +38,18 @@ ms.locfileid: "47687320"
 ```  
   
 ## <a name="arguments"></a>参数  
- other_geography  
- 与对其调用 STDisjoint() 的实例进行比较的其他 geography 实例。  
+ other_geography   
+ 与对其调用 STDisjoint() 的实例进行比较的其他 geography 实例  。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：SqlBoolean  
+ CLR 返回类型：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- 如果两个 geography 实例的点集交集是空的，则这两个实例不相联。  
+ 如果两个 geography 实例的点集交集是空的，则这两个实例不相联  。  
   
- 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STDisjoint()` 来测试两个 `geography` 实例，以查看它们是否在空间上不相联。  

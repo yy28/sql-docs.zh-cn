@@ -19,15 +19,15 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - _ (wildcard - match one character)
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c071df768fa18e153bfac1c2dcd738bbaafa538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0554182b6a18478d917ecf83c8ea4d9ebdb69e23
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781135"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982730"
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_（通配符 - 匹配一个字符）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47781135"
   
 ## <a name="examples"></a>示例  
 
-## <a name="a-simple-example"></a>A：简单示例   
+## <a name="a-simple-example"></a>A:简单示例   
 
 以下示例返回以字母 `m` 开头且第三个字母为 `d` 的所有数据库名称。 下划线字符指定名称的第二个字符可以是任何字母。 `model` 数据库和 `msdb` 数据库均符合此条件。 `master` 数据库则不符合。
 
@@ -66,7 +66,7 @@ FROM Person.Person
 WHERE FirstName LIKE '_an'  
 ORDER BY FirstName;  
 ```  
-## <a name="c-escaping-the-underscore-character"></a>C：对下划线字符进行转义   
+## <a name="c-escaping-the-underscore-character"></a>C:对下划线字符进行转义   
 以下示例会返回 `db_owner`、`db_ddladmin` 等固定数据库角色的名称，但它也会返回 `dbo` 用户。 
 
 ```sql

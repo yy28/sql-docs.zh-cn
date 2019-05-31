@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STMLineFromWKB method
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 723e8f173b36b3b62cf7eece71940affc780da9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bd63a65268053f8f494631151bade48c42ef138
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804847"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936651"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式中返回 geographyMultiLineString 实例。
+从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式中返回 geographyMultiLineString 实例  。
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +38,21 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- WKB_multilinestring  
- 要返回的 geographyMultiLineString 实例的 WKB 表示形式。 WKB_multilinestring 是一个 varbinary (max) 表达式。  
+ WKB_multilinestring   
+ 要返回的 geographyMultiLineString  实例的 WKB 表示形式。 WKB_multilinestring 是一个 varbinary (max) 表达式   。  
   
- SRID  
- 一个 int 表达式，表示希望返回的 geographyMultiLineString 实例的空间引用 ID (SRID)。  
+ SRID   
+ 一个 int 表达式，表示希望返回的 geographyMultiLineString 实例的空间引用 ID (SRID)   。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
- OGC 类型：MultiLineString  
+ OGC 类型：**MultiLineString**  
   
 ## <a name="remarks"></a>Remarks  
- 如果输入的格式不正确，此方法将引发 FormatException。  
+ 如果输入的格式不正确，此方法将引发 FormatException  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STMLineFromWKB()` 创建 `geography` 实例。  

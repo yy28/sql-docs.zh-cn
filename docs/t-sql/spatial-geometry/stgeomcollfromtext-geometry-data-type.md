@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STGeomCollFromText (geometry Data Type)
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a5305ccc5c6a1fa8e6011f3ab87026c03a721b9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 481907eb2bb445e18845f7af453b90cc7591a0be
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817085"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938939"
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geometry 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值。
+从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geometry 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值  。
   
 ## <a name="syntax"></a>语法  
   
@@ -38,16 +38,16 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- geometrycollection_tagged_text  
- 希望返回的 **geometry** 实例的 WKT 表示形式。 geometry_tagged_text 是一个 nvarchar(max) 表达式。  
+ geometrycollection_tagged_text   
+ 希望返回的 **geometry** 实例的 WKT 表示形式。 geometry_tagged_text 是一个 nvarchar(max) 表达式   。  
   
- SRID  
- 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)。  
+ SRID   
+ 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)   。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  `STGeomCollFromText()` 返回的 **geometry** 实例的 OGC 类型设置为相应的 WKT 输入。  

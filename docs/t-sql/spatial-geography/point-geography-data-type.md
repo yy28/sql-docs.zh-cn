@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Point method
 - Point (geography Data Type)
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4de164536b75684d8c019a9f93db4a9b21415650
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddd506ca3e78dd4ad5a12cfb108ca539e094cb4e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759805"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937997"
 ---
 # <a name="point-geography-data-type"></a>Point（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-根据 Point 实例的纬度值和经度值以及空间引用 ID (SRID) 构造一个表示该实例的 geography 实例。
+根据 Point 实例的纬度值和经度值以及空间引用 ID (SRID) 构造一个表示该实例的 geography 实例   。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,19 +39,19 @@ Point ( Lat, Long, SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- Lat  
- 一个 float 表达式，表示正在生成的 Point 的 X 坐标。  
+ Lat   
+ 一个 float 表达式，表示正在生成的 Point 的 X 坐标   。  
   
- Long  
- 一个 float 表达式，表示正在生成的 Point 的 Y 坐标。 有关有效的纬度值和经度值的详细信息，请参阅 [Point](../../relational-databases/spatial/point.md)。  
+ Long   
+ 一个 float 表达式，表示正在生成的 Point 的 Y 坐标   。 有关有效的纬度值和经度值的详细信息，请参阅 [Point](../../relational-databases/spatial/point.md)。  
   
- SRID  
- 一个 int 表达式，表示希望返回的 geography 实例的 SRID。  
+ SRID   
+ 一个 int 表达式，表示希望返回的 geography 实例的 SRID   。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 > [!NOTE]  
 >  Point（地理数据类型）方法的参数具有与 WKT 相反的坐标。  

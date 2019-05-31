@@ -16,21 +16,21 @@ helpviewer_keywords:
 - PERCENTILE_DISC function
 - analytic functions,PERCENTILE_DISC
 ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ae6754923dcb22a64251b351f013069b3a681fb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6a514a1d1e3db96e3943b600b3de17d2184e9955
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291815"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943514"
 ---
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  计算 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中整个行集内或行集的非重复分区内已排序值的特定百分位数。 对于给定的百分位数值 P，PERCENTILE_DISC 在 ORDER BY 子句中对表达式值进行排序。 然后，它返回值，其中给定的最小 CUME_DIST 值（相对于相同的排序规范）大于或等于 P。例如，PERCENTILE_DISC (0.5) 将计算表达式的第 50 百分位数（也即中值）。 PERCENTILE_DISC 根据列值的离散分布来计算百分位数。 结果等于特定列值。  
+  计算 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中整个行集内或行集的非重复分区内已排序值的特定百分位数。 对于给定的百分位数值 P  ，PERCENTILE_DISC 在 ORDER BY 子句中对表达式值进行排序。 然后，它返回值，其中给定的最小 CUME_DIST 值（相对于相同的排序规范）大于或等于 P  。例如，PERCENTILE_DISC (0.5) 将计算表达式的第 50 百分位数（也即中值）。 PERCENTILE_DISC 根据列值的离散分布来计算百分位数。 结果等于特定列值。  
   
  ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,17 +42,17 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
 ```  
   
 ## <a name="arguments"></a>参数  
- literal  
+ literal   
  要计算的百分位数。 该值必须介于 0.0 和 1.0 之间。  
   
- WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC)**  
- 指定要排序的一系列值，并计算百分位数。 仅允许一个 order_by_expression。 默认的排序顺序为升序。 这一系列值可属于可有效进行排序操作的任何数据类型。  
+ WITHIN GROUP (  ORDER BY order_by_expression  [ ASC  | DESC)**  
+ 指定要排序的一系列值，并计算百分位数。 仅允许一个 order_by_expression  。 默认的排序顺序为升序。 这一系列值可属于可有效进行排序操作的任何数据类型。  
   
- OVER ( \<partition_by_clause>)**  
+ OVER (  \<partition_by_clause>)**  
  将 FROM 子句的结果集分为多个分区。 百分位数函数应用于这些分区。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。 无法在 PERCENTILE_DISC 函数中指定 \<ORDER BY 子句> 和 \<rows 或 range 子句>。  
   
 ## <a name="return-types"></a>返回类型  
- 返回类型由 order_by_expression 类型决定。  
+ 返回类型由 order_by_expression 类型决定  。  
   
 ## <a name="compatibility-support"></a>兼容性支持  
  在兼容级别 110 和更高级别中，WITHIN GROUP 是保留关键字。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STWithin (geometry Data Type)
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f06651b5f1da33a9756e46cd438e39541b212ad6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 579f2fd2e4e662bf5f8a060c93f7370af4edb7e7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660245"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935642"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "47660245"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 将与调用 `STWithin()` 的实例进行比较的另一个 geometry 实例。  
+ 将与调用 `STWithin()` 的实例进行比较的另一个 geometry 实例  。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：SqlBoolean  
+ CLR 返回类型：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STWithin()` 来测试两个 `geometry` 实例，以查看第一个实例是否完全包含在第二个实例中。  

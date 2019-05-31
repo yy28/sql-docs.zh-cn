@@ -18,16 +18,16 @@ helpviewer_keywords:
 - type IDs [SQL Server]
 - data types [SQL Server], IDs
 ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f822fc5dc4a115b5277c33c6578b0870137bbdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa09b38956e1eafec844d30e767a986df454283
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658105"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946903"
 ---
 # <a name="typeid-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,8 +43,8 @@ TYPE_ID ( [ schema_name ] type_name )
 ```  
   
 ## <a name="arguments"></a>参数  
- type_name  
- 数据类型的名称。 type_name 的数据类型为 nvarchar。 type_name 可以是系统数据类型或用户定义的数据类型。  
+ type_name   
+ 数据类型的名称。 type_name 的数据类型为 nvarchar   。 type_name 可以是系统数据类型或用户定义的数据类型  。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -87,7 +87,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C. 查找系统数据类型的 TYPE ID  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C:查找系统数据类型的 TYPE ID  
  下面的示例返回 `TYPE ID` 系统数据类型的 `datetime`。  
   
 ```  

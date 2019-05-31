@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - POWER function
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 0003102d607cac065a1168e0c5544a8db2163249
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743172"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943327"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,13 +41,13 @@ POWER ( float_expression , y )
   
 ## <a name="arguments"></a>参数  
  *float_expression*  
- float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。  
   
  *y*  
- 要将 float_expression 提升到的幂。 y 可以是精确或近似数值数据类型类别（bit 数据类型除外）的表达式。  
+ 要将 float_expression 提升到的幂  。 y 可以是精确或近似数值数据类型类别（bit 数据类型除外）的表达式   。  
   
 ## <a name="return-types"></a>返回类型  
- 返回类型取决于 float_expression 的输入类型：
+ 返回类型取决于 float_expression 的输入类型  ：
  
 |输入类型|返回类型|  
 |----------|-----------|  
@@ -84,7 +84,7 @@ Result1                Result2
 ```  
   
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. 使用 POWER 显示数据类型转换的结果  
- 以下示例演示 float_expression 如何保留会返回意外结果的数据类型。  
+ 以下示例演示 float_expression 如何保留会返回意外结果的数据类型  。  
   
 ```  
 SELECT   
@@ -149,7 +149,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D：使用 POWER 返回一个数字的立方  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D:使用 POWER 返回一个数字的立方  
  下例演示将返回 `2.0` 的 3 次幂的 `POWER` 结果。  
   
 ```  

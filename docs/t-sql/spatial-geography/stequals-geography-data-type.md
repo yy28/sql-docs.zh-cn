@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STEquals method
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: dceff73f5af775f6785db8b922d719e005d65a21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e12465bf75cb6619e837ba55eaca09231cc4b5e8
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605525"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936965"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  如果一个 geography 实例表示的点集与另一个 geography 实例表示的点集相同，则返回 1。 否则，返回 0。  
+  如果一个 geography 实例表示的点集与另一个 geography 实例表示的点集相同，则返回 1   。 否则，返回 0。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,16 +38,16 @@ ms.locfileid: "47605525"
 ```  
   
 ## <a name="arguments"></a>参数  
- other_geography  
- 与对其调用 `STEquals()` 的实例进行比较的其他 geography 实例。  
+ other_geography   
+ 与对其调用 `STEquals()` 的实例进行比较的其他 geography 实例  。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：SqlBoolean  
+ CLR 返回类型：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomFromText()` 创建两个等效但又不完全相等的 `geography` 实例，并使用 `STEquals()` 测试它们的等效性。 因为 `LINESTRING` 和 `POINT` 包含在 `POLYGON` 中，所以这两个实例相等。  

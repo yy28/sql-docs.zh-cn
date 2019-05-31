@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: afcd0b1256b42f6f89d979de1e2178d566981a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81222e73df527d5d51a592dd2cabe62384b5f936
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695795"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937320"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回一个 geography 实例，它表示与执行调用的 geography 实例的距离小于或等于 distance 参数的所有点的集合。  
+  返回一个 geography 实例，它表示与执行调用的 geography 实例的距离小于或等于 distance 参数的所有点的集合    。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,37 +38,37 @@ ms.locfileid: "47695795"
 ```  
   
 ## <a name="arguments"></a>参数  
- distance  
+ distance   
  一个 **float**，它表示组成缓冲区的点与 geography 实例之间的最大距离。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="exceptions"></a>异常  
- 以下条件将引发 ArgumentException。  
+ 以下条件将引发 ArgumentException  。  
   
 -   没有为方法传递任何参数，例如，`@g.BufferWithCurves()`  
   
 -   为方法传递了非数值参数，例如，`@g.BufferWithCurves('a')`  
   
--   向方法传递了 NULL，例如，`@g.BufferWithCurves(NULL)`  
+-   向方法传递了 NULL，例如，`@g.BufferWithCurves(NULL)`   
   
 ## <a name="remarks"></a>Remarks  
  下表显示为不同距离值返回的结果。  
   
 |距离值|类型维度|返回的空间类型|  
 |--------------------|---------------------|---------------------------|  
-|距离 < 0|0 或 1|空的 GeometryCollection 实例|  
-|distance \< 0|2 或更大|具有负缓冲区的 CurvePolygon 或 GeometryCollection 实例。<br /><br /> 注意：负缓冲区可能会创建空的 GeometryCollection|
+|距离 < 0|0 或 1|空的 GeometryCollection 实例 |  
+|distance \< 0|2 或更大|具有负缓冲区的 CurvePolygon 或 GeometryCollection 实例   。<br /><br /> 注意：负缓冲区可能会创建空的 GeometryCollection |
 |距离 = 0|所有维度|执行调用的 **geography** 实例的副本|  
-|distance > 0|所有维度|CurvePolygon 或 GeometryCollection 实例|  
+|distance > 0|所有维度|CurvePolygon 或 GeometryCollection 实例  |  
   
 > [!NOTE]  
->  由于 distance 的类型为 float，因此，很小的值可能在计算中等于零。  如果发生这种情况，则会返回执行调用的 geography 实例的副本。  
+>  由于 distance 的类型为 float，因此，很小的值可能在计算中等于零   。  如果发生这种情况，则会返回执行调用的 geography 实例的副本  。  
   
- 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发 `ArgumentException`。  
+ 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发 `ArgumentException`   。  
   
 ## <a name="examples"></a>示例  
   
@@ -89,17 +89,17 @@ ms.locfileid: "47695795"
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. 使用 < 0 的参数值调用 BufferWithCurves()，它返回一个空 GeometryCollection  
- 以下示例显示当 distance 参数等于 -2 时出现的情况：  
+ 以下示例显示当 distance 参数等于 -2 时出现的情况  ：  
   
  ```sql
  DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY`  
+ 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY`   
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 使用 = 0 的参数值调用 BufferWithCurves()  
- 以下示例返回执行调用的 geography 实例的副本：  
+ 以下示例返回执行调用的 geography 实例的副本  ：  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -107,7 +107,7 @@ ms.locfileid: "47695795"
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. 使用极小的非零参数值调用 BufferWithCurves()  
- 以下示例还返回执行调用的 geography 实例的副本：  
+ 以下示例还返回执行调用的 geography 实例的副本  ：  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  

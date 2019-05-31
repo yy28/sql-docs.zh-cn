@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromWKB (geometry Data Type)
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3cf212b35789e339305c9f29b2c1bba01a53474e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0167cb17dfe0f551bcfe5e1ed42d2248d14f6df7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620045"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938547"
 ---
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,18 +38,18 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- WKB_multipolygon  
- 希望返回的 **geometryMultiPolygon** 实例的 WKB 表示形式。 WKB_multipolygon 是一个 varbinary(max) 表达式。  
+ WKB_multipolygon   
+ 希望返回的 **geometryMultiPolygon** 实例的 WKB 表示形式。 WKB_multipolygon 是一个 varbinary(max) 表达式   。  
   
- SRID  
- 一个 int 表达式，表示希望返回的 geometryMultiPolygon 实例的空间引用 ID (SRID)。  
+ SRID   
+ 一个 int 表达式，表示希望返回的 geometryMultiPolygon 实例的空间引用 ID (SRID)   。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
- OGC 类型：MultiPolygon  
+ OGC 类型：**MultiPolygon**  
   
 ## <a name="remarks"></a>Remarks  
   

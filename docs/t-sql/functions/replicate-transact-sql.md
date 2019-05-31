@@ -17,16 +17,16 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a074e7ad5f443a4aaac722b3c15383b6c0078e6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 558d1a1f3d5d0cbb204c5dfd80833ce82a02d0c0
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756945"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945836"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,17 +42,17 @@ REPLICATE ( string_expression ,integer_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
- string_expression  
- 字符串或二进制数据类型的表达式。 string_expression 可以是字符或二进制数据。  
+ string_expression   
+ 字符串或二进制数据类型的表达式。 string_expression 可以是字符或二进制数据  。  
   
 > [!NOTE]  
->  如果 string_expression 的类型不是 varchar(max) 或 nvarchar(max)，则 REPLICATE 将返回值截断为 8000 字节。 若要返回大于 8,000 字节的值，则必须将 string_expression 显式转换为适当的大值数据类型。  
+>  如果 string_expression 的类型不是 varchar(max) 或 nvarchar(max)，则 REPLICATE 将返回值截断为 8000 字节    。 若要返回大于 8,000 字节的值，则必须将 string_expression 显式转换为适当的大值数据类型  。  
   
  *integer_expression*  
- 是任何整数类型的表达式，包括 bigint。 如果 integer_expression 为负，则返回 NULL。  
+ 是任何整数类型的表达式，包括 bigint  。 如果 integer_expression 为负，则返回 NULL  。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与 string_expression 相同的类型。  
+ 返回与 string_expression 相同的类型  。  
   
 ## <a name="examples"></a>示例  
   
@@ -120,7 +120,7 @@ Varchar Column        Char Column
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C. 使用 REPLICATE  
+### <a name="c-using-replicate"></a>C:使用 REPLICATE  
  以下示例在 `ItemCode` 值的前面将 `0` 字符复制四次。  
   
 ```  

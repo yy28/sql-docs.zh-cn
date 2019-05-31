@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geometry)
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 5d265392606722f621d6a10e9d649340824596ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30264ebeef5a398d677abbb2bc380a68c69893d4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824505"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938127"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回包含圆弧线段的 geometry 实例的多边形近似值。
+返回包含圆弧线段的 geometry 实例的多边形近似值  。
   
 ## <a name="syntax"></a>语法  
   
@@ -35,40 +35,40 @@ ms.locfileid: "47824505"
 ```  
   
 ## <a name="arguments"></a>参数  
- tolerance  
- 一个 double 表达式，它定义原始圆弧线段与其线性近似值之间的最大误差。  
+ tolerance   
+ 一个 double 表达式，它定义原始圆弧线段与其线性近似值之间的最大误差  。  
   
  *relative*  
- 一个 bool 表达式，它指示是否使用偏差的相对最大值。 如果将 relative 设置为 false (0)，则为可能具有线性近似值的偏差设置绝对最大值。 如果将 relative 设置为 true (1)，则按 tolerance 参数与空间对象边界框直径的乘积来计算公差。  
+ 一个 bool 表达式，它指示是否使用偏差的相对最大值  。 如果将 relative 设置为 false (0)，则为可能具有线性近似值的偏差设置绝对最大值。 如果将 relative 设置为 true (1)，则按 tolerance 参数与空间对象边界框直径的乘积来计算公差。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
 ## <a name="exceptions"></a>异常  
  设置 tolerance <= 0 将引发 `ArgumentOutOfRange` 异常。  
   
 ## <a name="remarks"></a>Remarks  
- 此方法可以指定结果 LineString 的容错大小。  
+ 此方法可以指定结果 LineString 的容错大小  。  
   
  下表显示了 `CurveToLineWithTolerance()` 为各种类型返回的实例类型。  
   
 |调用实例类型|返回的空间类型|  
 |----------------------------|---------------------------|  
-|空 geometry 实例|空的 GeometryCollection 实例|  
-|Point 和 MultiPoint|Point 实例|  
-|**MultiPoint**|Point 或 MultiPoint 实例|  
-|CircularString、CompoundCurve 或 LineString|LineString 实例|  
-|**MultiLineString**|LineString 或 MultiLineString 实例|  
-|CurvePolygon 和 Polygon|Polygon 实例|  
-|**MultiPolygon**|Polygon 或 MultiPolygon 实例|  
-|具有一个不包含圆弧线段的实例的 GeometryCollection|GeometryCollection 中包含的实例决定了返回的实例类型。|  
-|具有一个一维圆弧线段实例（CircularString、CompoundCurve）的 GeometryCollection|LineString 实例|  
-|具有一个二维圆弧线段实例 (CurvePolygon) 的 GeometryCollection|Polygon 实例|  
-|具有多个一维实例的 GeometryCollection|MultiLineString 实例|  
-|具有多个二维实例的 GeometryCollection|MultiPolygon 实例|  
-|具有多个不同维度的实例的 GeometryCollection|GeometryCollection 实例|  
+|空 geometry 实例|空的 GeometryCollection 实例 |  
+|Point 和 MultiPoint  |Point 实例 |  
+|**MultiPoint**|Point 或 MultiPoint 实例  |  
+|CircularString、CompoundCurve 或 LineString   |LineString 实例 |  
+|**MultiLineString**|LineString 或 MultiLineString 实例  |  
+|CurvePolygon 和 Polygon  |Polygon 实例 |  
+|**MultiPolygon**|Polygon 或 MultiPolygon 实例  |  
+|具有一个不包含圆弧线段的实例的 GeometryCollection |GeometryCollection 中包含的实例决定了返回的实例类型  。|  
+|具有一个一维圆弧线段实例（CircularString、CompoundCurve）的 GeometryCollection   |LineString 实例 |  
+|具有一个二维圆弧线段实例 (CurvePolygon) 的 GeometryCollection  |Polygon 实例 |  
+|具有多个一维实例的 GeometryCollection |MultiLineString 实例 |  
+|具有多个二维实例的 GeometryCollection |MultiPolygon 实例 |  
+|具有多个不同维度的实例的 GeometryCollection |GeometryCollection 实例 |  
   
 ## <a name="examples"></a>示例  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47824505"
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 对于调用 CurvePolygon 实例，将 relative 设置为 true  
- 以下示例使用 `CurvePolygon` 实例调用 `CurveToLineWithTolerance()` 并将 relative 设置为 true：  
+ 以下示例使用 `CurvePolygon` 实例调用 `CurveToLineWithTolerance()` 并将 relative 设置为 true  ：  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 

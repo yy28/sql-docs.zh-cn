@@ -18,16 +18,16 @@ helpviewer_keywords:
 - blank characters [SQL Server]
 - trailing blanks
 ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11bcd447a0361b02bbdffc946fffa3feb11b3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5106ba613c5130350e80abe024ecfafbca572d5
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807105"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945471"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,12 +44,12 @@ RTRIM ( character_expression )
   
 ## <a name="arguments"></a>参数  
  *character_expression*  
- 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
+ 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
   
- character_expression 的数据类型必须可隐式转换为 varchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression。  
+ character_expression 的数据类型必须可隐式转换为 varchar   。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression  。  
   
 ## <a name="return-types"></a>返回类型  
- varchar 或 nvarchar  
+ varchar 或 nvarchar    
   
 ## <a name="examples"></a>示例  
   
@@ -64,7 +64,7 @@ SELECT RTRIM('Removes trailing spaces.   ');
   
   `Removes trailing spaces.`  
   
-### <a name="b-simple-example"></a>B. 简单示例  
+### <a name="b-simple-example"></a>B：简单示例  
  以下示例显示如何使用 `RTRIM` 删除尾随空格。 此时会有另一个字符串连接到第一个字符串，显示空格已删除。  
   
 ```  

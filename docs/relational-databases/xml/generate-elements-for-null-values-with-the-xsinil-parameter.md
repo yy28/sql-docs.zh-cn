@@ -1,7 +1,7 @@
 ---
 title: 使用 XSINIL 参数生成 NULL 值对应的元素 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,18 +16,21 @@ ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9185874d9e7b57b1a7635300fd72850dc6ace366
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f0889de0a7525e0e5a7ea91ba169011aaf4e341a
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512014"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175175"
 ---
 # <a name="generate-elements-for-null-values-with-the-xsinil-parameter"></a>使用 XSINIL 参数生成 NULL 值对应的元素
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  **ELEMENTS** 指令将构造 XML，其中每个列值映射到 XML 中的一个元素。 如果列值为 NULL，则不添加元素。 通过对 ELEMENTS 指令指定可选的 **XSINIL** 参数，可以请求创建 NULL 值对应的元素。 在这种情况下，将为每个 NULL 列值返回一个元素，其 **xsi:nil** 属性被设置为 TRUE。  
+
+**ELEMENTS** 指令将构造 XML，其中每个列值映射到 XML 中的一个元素。 默认情况下，如果列值为 NULL，则不添加元素。 但通过对 ELEMENTS 指令指定可选的 **XSINIL** 参数，可以请求创建 NULL 值对应的元素。 在这种情况下，将为每个 NULL 列值返回一个元素，其 **xsi:nil** 属性被设置为 TRUE。  
   
-## <a name="see-also"></a>另请参阅  
- [将 RAW 模式与 FOR XML 一起使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
+
+[将 RAW 模式与 FOR XML 一起使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)
+
+[SELECT - FOR 子句](../../t-sql/queries/select-for-clause-transact-sql.md)

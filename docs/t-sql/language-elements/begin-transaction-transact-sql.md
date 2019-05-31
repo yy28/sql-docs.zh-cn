@@ -27,16 +27,16 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9c9a6c4debdb401524d4a06828b05e8909ddde51
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802244"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981124"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,20 +66,20 @@ BEGIN { TRAN | TRANSACTION }
 
   
 ## <a name="arguments"></a>参数  
- transaction_name  
+ transaction_name   
  **适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
  
- 分配给事务的名称。 transaction_name 必须符合标识符规则，但标识符所包含的字符数不能大于 32。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
+ 分配给事务的名称。 transaction_name 必须符合标识符规则，但标识符所包含的字符数不能大于 32  。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此  。  
   
- @tran_name_variable  
+ @tran_name_variable   
  **适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
  
- 用户定义的、含有有效事务名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量。 如果传递给该变量的字符多于 32 个，则仅使用前面的 32 个字符；其余的字符将被截断。  
+ 用户定义的、含有有效事务名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量     。 如果传递给该变量的字符多于 32 个，则仅使用前面的 32 个字符；其余的字符将被截断。  
   
- WITH MARK [ 'description' ]  
+ WITH MARK [ 'description' ]   
 **适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
 
-指定在日志中标记事务。 description 是描述该标记的字符串。 在将长于 128 个字符的 description 存储到 msdb.dbo.logmarkhistory 表中之前，先将其截断为 128 个字符。  
+指定在日志中标记事务。 description 是描述该标记的字符串  。 在将长于 128 个字符的 description 存储到 msdb.dbo.logmarkhistory 表中之前，先将其截断为 128 个字符  。  
   
  如果使用了 WITH MARK，则必须指定事务名。 WITH MARK 允许将事务日志还原到命名标记。  
   
@@ -113,7 +113,7 @@ BEGIN TRANSACTION 为发出本语句的连接启动一个本地事务。 根据�
   
  只有当数据库由标记事务更新时，才在事务日志中放置标记。 不修改数据的事务不被标记。  
   
- 在已存在的未标记事务中可以嵌套 BEGIN TRAN new_name WITH MARK。 嵌套后，new_name 便成为事务的标记名，不论是否已为事务提供了名称。 在以下示例中，`M2` 是标记名。  
+ 在已存在的未标记事务中可以嵌套 BEGIN TRAN new_name WITH MARK  。 嵌套后，new_name 便成为事务的标记名，不论是否已为事务提供了名称  。 在以下示例中，`M2` 是标记名。  
   
 ```  
 BEGIN TRAN T1;  
@@ -140,7 +140,7 @@ COMMIT TRAN T1;
   
  "The option is ignored."  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  

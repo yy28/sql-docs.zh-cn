@@ -16,24 +16,24 @@ dev_langs:
 helpviewer_keywords:
 - Filter method
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: abfa42998353d4561ee91cb9104d93dc1cef815b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf00adcfb11249dc2465d2afd7532dc4d4dc093
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714955"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937838"
 ---
 # <a name="filter-geography-data-type"></a>Filter（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  一种方法，可提供一种快速、仅索引相交的方法，用于确定一个 geography 实例是否与另一个 geography 实例相交（假定有可用索引）。  
+  一种方法，可提供一种快速、仅索引相交的方法，用于确定一个 geography 实例是否与另一个 geography 实例相交（假定有可用索引）   。  
   
- 如果 geography 实例与另一个 geography 实例存在相交的可能，则返回 1。 该方法可能产生负正返回，并且确切结果可能是依赖于计划的。 如果 geography 实例之间不存在相交，则返回精确的 0 值（真负返回）。  
+ 如果 geography 实例与另一个 geography 实例存在相交的可能，则返回 1   。 该方法可能产生负正返回，并且确切结果可能是依赖于计划的。 如果 geography 实例之间不存在相交，则返回精确的 0 值（真负返回）  。  
   
- 在无可用索引或未使用索引的情况下，该方法返回的值将与使用相同参数调用 STIntersects() 返回的值相同。  
+ 在无可用索引或未使用索引的情况下，该方法返回的值将与使用相同参数调用 STIntersects() 返回的值相同  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,13 +43,13 @@ ms.locfileid: "47714955"
 ```  
   
 ## <a name="arguments"></a>参数  
- other_geography  
- 与对其调用 Filter() 的实例进行比较的其他 geography 实例。  
+ other_geography   
+ 与对其调用 Filter() 的实例进行比较的其他 geography 实例  。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：SqlBoolean  
+ CLR 返回类型：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  此方法是不具有确定性的方法，而且不精确。  

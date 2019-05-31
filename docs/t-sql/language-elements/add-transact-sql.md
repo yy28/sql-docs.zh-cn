@@ -21,16 +21,16 @@ helpviewer_keywords:
 - plus sign (+)
 - add operator (+)
 ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c975a469075d27f28cddb279b0f9ca2408166b53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eaa8a0a03137600379e24bd93f7017f896bb0048
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698255"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980626"
 ---
 # <a name="-addition-transact-sql"></a>+（加法）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ expression + expression
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 数值类别中任意数据类型（bit 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不能与 date、time、datetime2 或 datetimeoffset 数据类型一起使用。  
+ 数值类别中任意数据类型（bit 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 不能与 date、time、datetime2 或 datetimeoffset 数据类型一起使用     。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
@@ -93,7 +93,7 @@ Start Date                  Add Date
  ```  
   
 ### <a name="c-adding-character-and-integer-data-types"></a>C. 将字符和整数数据类型相加  
- 以下示例通过将字符数据类型转换为 int，将 int 数据类型值与字符值相加。如果 char 字符串中具有无效字符，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 返回一个错误。  
+ 以下示例通过将字符数据类型转换为 int，将 int 数据类型值与字符值相加   。如果 char 字符串中具有无效字符，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 返回一个错误  。  
   
 ```  
 DECLARE @addvalue int;  
@@ -112,7 +112,7 @@ SELECT '125127' + @addvalue;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D. 使用加法运算符计算每个雇员离岗的总小时数  
+### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D:使用加法运算符计算每个雇员离岗的总小时数  
  以下示例通过将休假小时数和病假小时数相加来计算每个雇员离岗的总小时数，并将结果按升序排列。  
   
 ```  

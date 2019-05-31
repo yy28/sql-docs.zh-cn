@@ -17,15 +17,15 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9b590e2a1ba1c3362b86b195c4b1a5fcb7d63bd
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662791"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948980"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 _catalog\_name_  
 包含全文目录名称的表达式。  
   
-property  
+property   
 包含全文目录属性名称的表达式。 下表列出了这些属性，并提供对返回的信息的说明。  
   
 |属性|描述|  
@@ -57,7 +57,7 @@ property
 |**AccentSensitivity**|区分重音设置。<br /><br /> 0 = 不区分重音<br /><br /> 1 = 区分重音|  
 |**IndexSize**|全文目录的逻辑大小 (MB)。 包括语义关键字短语和文档相似性索引的大小。<br /><br /> 有关详细信息，请参阅本主题后面的“备注”。|  
 |**ItemCount**|包括目录中所有全文索引、关键短语索引和文档相似性索引在内的索引项的数量|  
-|**LogSize**|支持它仅仅是为了保持向后兼容。 总是返回 0。<br /><br /> 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 服务全文目录关联的错误日志组合集的大小，以字节为单位。|  
+|**LogSize**|支持它仅仅是为了保持向后兼容。 始终返回 0。<br /><br /> 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 服务全文目录关联的错误日志组合集的大小，以字节为单位。|  
 |**MergeStatus**|指示是否正在进行主合并。<br /><br /> 0 = 未在进行主合并<br /><br /> 1 = 正在进行主合并|  
 |**PopulateCompletionAge**|上一次全文索引填充的完成时间与 01/01/1990 00:00:00 之间的时间差（秒）。<br /><br /> 仅针对完全和增量爬网填充进行了更新。 如果未发生填充，则返回 0。|  
 |**PopulateStatus**|0 = 空闲<br /><br /> 1 = 正在进行完全填充<br /><br /> 2 = 已暂停<br /><br /> 3 = 已中止<br /><br /> 4 = Recovering<br /><br /> 5 = 关闭<br /><br /> 6 = 正在进行增量填充<br /><br /> 7 = 正在生成索引<br /><br /> 8 = 磁盘已满。 已暂停。<br /><br /> 9 = 更改跟踪|  

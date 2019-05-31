@@ -1,7 +1,7 @@
 ---
 title: 从命令提示符安装 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bc2d05b54added3ac8ce57746eb89cbd9d1efd8d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 26c2c1c06da727a063d25520497c4b352ea3837e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537419"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993692"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -191,11 +191,11 @@ ms.locfileid: "58537419"
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值：Install。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值：Install  。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> |禁止显示隐私声明。 使用此标记即表示同意[隐私声明](../../sql-server/sql-server-privacy.md)。  |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python 安装程序控件|/IACCEPTPYTHONLICENSETERMS <br /><br /> 仅在为包含 Anaconda Python 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。|必需，用于确认接受许可条款。| 
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安装程序控件|/IACCEPTROPENLICENSETERMS <br /><br /> 仅在为包含 Microsoft R Open 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。|必需，用于确认接受许可条款。| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python 安装程序控件|/IACCEPTPYTHONLICENSETERMS <br /><br /> 仅在为包含 Anaconda Python 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的  。|必需，用于确认接受许可条款。| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安装程序控件|/IACCEPTROPENLICENSETERMS <br /><br /> 仅在为包含 Microsoft R Open 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的  。|必需，用于确认接受许可条款。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateEnabled<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将包含找到的更新。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateSource<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将获取产品更新的位置。 有效值为可用于搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新的“MU”，这是一个有效的文件夹路径、一个相对路径（例如 `.\MyUpdates` 或一个 UNC 共享）。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将通过 Windows Server Update Services 搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或 Windows Update 服务。|  
@@ -213,7 +213,7 @@ ms.locfileid: "58537419"
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **可选**|指定引擎服务帐户的密码。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **可选**|指定 PolyBase 引擎服务的启动模式：自动（默认）、禁用和手动。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **可选**|使用最少 6 个端口为 PolyBase 服务指定端口范围。 例如：<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False|  
+|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False  |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/PID<br /><br /> **可选**|指定 SQL Server 版本的产品密钥。 如果未指定此参数，则使用 Evaluation。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/Q 或 /QUIET<br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。 /Q 参数会覆盖 /QS 参数的输入。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/QS 或 /QUIETSIMPLE <br /><br /> **可选**|指定安装程序通过 UI 运行并显示进度，但是不接受任何输入或显示任何错误消息。|  
@@ -224,7 +224,7 @@ ms.locfileid: "58537419"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQL Server 代理服务帐户的密码。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCSTARTUPTYPE<br /><br /> **可选**|为 SQL Server 代理服务指定 [启动](#Accounts) 模式。<br /><br /> 支持的值：<br /><br /> **自动**<br /><br /> **禁用**<br /><br /> **手动**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。<br /><br /> 默认值：Latin1_General_CI_AS|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。<br /><br /> 默认值：Latin1_General_CI_AS |  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
@@ -242,18 +242,18 @@ ms.locfileid: "58537419"
 |SQL Server Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定 SQL Server Browser 服务的 [启动](#Accounts) 模式。 支持的值：<br /><br /> **自动**<br /><br /> **禁用**<br /><br /> **手动**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **可选**|为 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装启用运行身份凭据。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA 帐户的密码。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA  帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。<br /><br /> 如果未提供此参数，则支持仅 Windows 身份验证模式。<br /><br /> 支持的值：**SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **可选**|将当前用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定服务器角色。 当安装 Express 版本或使用 /Role=ALLFeatures_WithDefaults 时，可以使用 /ADDCURRENTUSERASSQLADMIN 参数。 有关详细信息，请参阅下面的 /ROLE。<br /><br /> 使用 /ADDCURRENTUSERASSQLADMIN 是可选的，但 /ADDCURRENTUSERASSQLADMIN 或 /SQLSYSADMINACCOUNTS 是必需的。 默认值：<br /><br /> **True** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 对于所有其他版本则为**False** |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **可选**|将当前用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定服务器角色。 当安装 Express 版本或使用 /Role=ALLFeatures_WithDefaults 时，可以使用 /ADDCURRENTUSERASSQLADMIN 参数。 有关详细信息，请参阅下面的 /ROLE。<br /><br /> 使用 /ADDCURRENTUSERASSQLADMIN 是可选的，但 /ADDCURRENTUSERASSQLADMIN 或 /SQLSYSADMINACCOUNTS 是必需的。 默认值：<br /><br /> **True** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 对于所有其他版本则为**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的启动帐户。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQLSVCACCOUNT 的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支持的值：<br /><br /> **自动**<br /><br /> **禁用**<br /><br /> **手动**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员。<br /><br /> 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本，/SQLSYSADMINACCOUNTS 是必需的。 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的各版本，使用 /SQLSYSADMINACCOUNTS 是可选的，但 /SQLSYSADMINACCOUNTS 或 /ADDCURRENTUSERASSQLADMIN 是必需的。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 数据文件的目录。 指定多个目录时，请用空格将目录隔开。 如果指定了多个目录，则 tempdb 数据文件将以轮循机制的方式分布在目录中。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> 重要提示  ：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 数据文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64。 允许的范围：最小值 = 0，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）|  
@@ -261,6 +261,7 @@ ms.locfileid: "58537419"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **可选**|启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的即时文件初始化。 有关安全性和性能注意事项，请参阅 [数据库实例文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。<br /><br /> 默认值：“False”<br /><br /> 可选值：“True”|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=parameter <br /><br /> **可选** 如果在无人参与（无提示）安装时被省略，MAXDOP 将遵循[最大并行度准则](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)。 |指定最大并行度，它确定单个语句在执行期间可以使用的处理器数。 仅从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始可用。 <br /><br /> 默认值遵循[最大并行度准则](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **可选**<br /><br /> **当 FILESTREAMLEVEL 大于 1 时是必需的。**|指定用来存储 FILESTREAM 数据的 Windows 共享的名称。|  
 |SQL Server 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中忽略了此参数。 ServiceSID 用于保护 SQL Server 与全文筛选器后台程序之间的通信。 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 SQL Server 控制管理器来更改服务帐户和启用全文功能。<br /><br /> 默认值：Local Service 帐户|  
@@ -294,7 +295,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值：PrepareImage|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值：PrepareImage |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateEnabled<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
@@ -311,7 +312,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **可选**|指定引擎服务帐户的密码。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **可选**|指定 PolyBase 引擎服务的启动模式：自动（默认）、禁用和手动。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **可选**|使用最少 6 个端口为 PolyBase 服务指定端口范围。 例如：<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False|  
+|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False  |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/Q 或 /QUIET <br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。 /Q 参数会覆盖 /QS 参数的输入。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/QS 或 /QUIETSIMPLE<br /><br /> **可选**|指定安装程序通过 UI 运行并显示进度，但是不接受任何输入或显示任何错误消息。|  
   
@@ -327,7 +328,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值：CompleteImage|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值：CompleteImage |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -340,7 +341,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **可选**|指定引擎服务帐户的密码。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **可选**|指定 PolyBase 引擎服务的启动模式：自动（默认）、禁用和手动。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **可选**|使用最少 6 个端口为 PolyBase 服务指定端口范围。 例如：<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False|  
+|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False  |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/PID<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的产品密钥。 如果未指定此参数，则使用 Evaluation。<br /><br /> **注意：** 如果安装的是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with tools 或 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services，则会预定义 PID。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/Q 或 /QUIET <br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。 /Q 参数会覆盖 /QS 参数的输入。 |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/QS 或 /QUIETSIMPLE<br /><br /> **可选**|指定安装程序通过 UI 运行并显示进度，但是不接受任何输入或显示任何错误消息。|  
@@ -352,7 +353,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |SQL Server Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定 SQL Server Browser 服务的 [启动](#Accounts) 模式。 支持的值：<br /><br /> **自动**<br /><br /> **禁用**<br /><br /> **手动**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **可选**|为 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装启用运行身份凭据。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA 帐户的密码。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA  帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。<br /><br /> 如果未提供此参数，则支持仅 Windows 身份验证模式。<br /><br /> 支持的值：**SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。<br /><br /> 默认值：<br /><br /> `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
@@ -366,7 +367,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64<br /><br /> 允许的范围：最小值 = 0，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 4<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> **重要提示：** tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> **重要提示：** tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数  。 安装程序仅安装 1 个 tempdb 数据文件。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
@@ -430,7 +431,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示修复工作流。<br /><br /> 支持的值：Repair|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示修复工作流。<br /><br /> 支持的值：Repair |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FEATURES<br /><br /> **必需**|指定要修复的 [组件](#Feature) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../database-engine/install-windows/install-sql-server.md)。|  
@@ -438,7 +439,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **可选**|指定引擎服务帐户的密码。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **可选**|指定 PolyBase 引擎服务的启动模式：自动（默认）、禁用和手动。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **可选**|使用最少 6 个端口为 PolyBase 服务指定端口范围。 例如：<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False|  
+|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False  |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/Q 或 /QUIET <br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HIDECONSOLE<br /><br /> **可选**|指定控制台窗口隐藏或关闭。|  
   
@@ -454,15 +455,15 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示重新生成数据库工作流。<br /><br /> 支持的值：Rebuilddatabase|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示重新生成数据库工作流。<br /><br /> 支持的值：Rebuilddatabase |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../database-engine/install-windows/install-sql-server.md)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/Q 或 /QUIET <br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定新的服务器级排序规则。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **在安装实例的过程中指定了 /SECURITYMODE=SQL 时是必需的。**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA 帐户的密码。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **在安装实例的过程中指定了 /SECURITYMODE=SQL 时是必需的。**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA  帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 数据文件的目录。 指定多个目录时，请用空格将目录隔开。 如果指定了多个目录，则 tempdb 数据文件将以轮循机制的方式分布在目录中。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> **注意：** 此参数也被添加到了 RebuildDatabase 方案。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> **重要提示：** tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例会删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> **重要提示：** tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例会删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数  。 安装程序仅安装 1 个 tempdb 数据文件。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 数据文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64<br /><br /> 允许的范围：最小值 = 0，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 4<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
@@ -517,7 +518,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|详细信息|  
 |-----------------------------------------|---------------|-------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集安装工作流：<br /><br /> 支持的值：InstallFailoverCluster|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集安装工作流：<br /><br /> 支持的值：InstallFailoverCluster |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERGROUP<br /><br /> **可选**|指定要用于 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集的资源组的名称。 可以是现有群集组的名称，也可以是新资源组的名称。<br /><br /> 默认值：<br /><br /> SQL Server (\<InstanceName>)|  
@@ -525,7 +526,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **可选**|指定引擎服务帐户的密码。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **可选**|指定 PolyBase 引擎服务的启动模式：自动（默认）、禁用和手动。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **可选**|使用最少 6 个端口为 PolyBase 服务指定端口范围。 例如：<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False|  
+|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False  |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 SQL Server 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateSource*<br /><br /> **可选**|指定 SQL Server 安装程序将获取产品更新的位置。 有效值为可用于搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新的“MU”，这是一个有效的文件夹路径、一个相对路径（例如 .\MyUpdates）或一个 UNC 共享。 默认情况下，SQL Server 安装程序将通过 Windows Server 更新服务搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新或 Windows 更新服务。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -549,7 +550,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |SQL Server 代理|/AGTSVCACCOUNT<br /><br /> **必需**|为 SQL Server 代理服务指定帐户。|  
 |SQL Server 代理|/AGTSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQL Server 代理服务帐户的密码。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。<br /><br /> 默认值：Latin1_General_CI_AS|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。<br /><br /> 默认值：Latin1_General_CI_AS |  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
@@ -558,17 +559,17 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **可选**|指定 MSOLAP 提供程序是否可以在进程中运行。<br /><br /> 默认值：1=启用|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器模式。 群集方案中的有效值为 MULTIDIMENSIONAL 或 TABULAR。 **ASSERVERMODE** 区分大小写。 所有值必须以大写形式表示。 有关有效值的详细信息，请参阅“在表格模式下安装 Analysis Services”。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。<br /><br /> 数据目录必须指定且必须位于共享群集磁盘上。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA 帐户的密码。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA  帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。<br /><br /> 如果未提供此参数，则支持仅 Windows 身份验证模式。<br /><br /> 支持的值：**SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的启动帐户。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQLSVCACCOUNT 的密码。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员  。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 数据文件的目录。 指定多个目录时，请用空格将目录隔开。 如果指定了多个目录，则 tempdb 数据文件将以轮循机制的方式分布在目录中。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> **重要提示：** tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> **重要提示：** tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数  。 安装程序仅安装 1 个 tempdb 数据文件。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 数据文件的初始大小。<br/><br/>默认值 = 8 MB。<br/><br/>最小值 = 8 MB。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64<br /><br /> 允许的范围：最小值 = 0，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。 <br /> 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 4<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
@@ -603,7 +604,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集准备工作流。<br /><br /> 支持的值：PrepareFailoverCluster|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集准备工作流。<br /><br /> 支持的值：PrepareFailoverCluster |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 SQL Server 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
@@ -622,7 +623,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **可选**|指定引擎服务帐户的密码。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **可选**|指定 PolyBase 引擎服务的启动模式：自动（默认）、禁用和手动。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **可选**|使用最少 6 个端口为 PolyBase 服务指定端口范围。 例如：<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False|  
+|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False  |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/PID<br /><br /> **可选**|指定 SQL Server 版本的产品密钥。 如果未指定此参数，<br /><br /> 则使用 Evaluation。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/Q 或 /QUIET <br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。 /Q 参数会覆盖 /QS 参数的输入。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/QS 或 /QUIETSIMPLE <br /><br /> **可选**|指定安装程序通过 UI 运行并显示进度，但是不接受任何输入或显示任何错误消息。|  
@@ -668,7 +669,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集完成工作流。<br /><br /> 支持的值：CompleteFailoverCluster|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集完成工作流。<br /><br /> 支持的值：CompleteFailoverCluster |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERGROUP<br /><br /> **可选**|指定要用于 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集的资源组的名称。 可以是现有群集组的名称，也可以是新资源组的名称。<br /><br /> 默认值：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<InstanceName>)|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -686,7 +687,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必需**|指定新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集的网络名称。 此名称用于在网络中标识新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集实例。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIRMIPDEPENDENCYCHANGE|指示对于多子网故障转移群集，同意将 IP 地址资源依赖关系设置为 OR。 有关详细信息，请参阅[创建新的 SQL Server 故障转移群集（安装程序）](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)。 支持的值：<br /><br /> 0 = False（默认值）<br /><br /> 1 = True|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。<br /><br /> 默认值：Latin1_General_CI_AS|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。<br /><br /> 默认值：Latin1_General_CI_AS |  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
@@ -695,7 +696,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 临时文件的目录。默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **可选**|指定 MSOLAP 提供程序是否可以在进程中运行。<br /><br /> 默认值：1=启用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。<br /><br /> 数据目录必须指定且必须位于共享群集磁盘上。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA 帐户的密码。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA  帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。<br /><br /> 如果未提供此参数，则支持仅 Windows 身份验证模式<br /><br /> 支持的值：**SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
@@ -705,7 +706,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **在“仅文件”模式下可用。**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安装模式。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 数据文件的目录。 指定多个目录时，请用空格将目录隔开。 如果指定了多个目录，则 tempdb 数据文件将以轮循机制的方式分布在目录中。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，无论哪个对所有其他版本来说较低。<br /><br /> **重要提示：** tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，无论哪个对所有其他版本来说较低。<br /><br /> **重要提示：** tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数  。 安装程序仅安装 1 个 tempdb 数据文件。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 数据文件的初始大小。<br/><br/>默认值 = 8 MB。<br/><br/>最小值 = 8 MB。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262144 MB）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64<br /><br /> 允许的范围：最小值 = 0，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。 <br /> 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 4<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
@@ -761,7 +762,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 AddNode 工作流。<br /><br /> 支持的值：AddNode|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 AddNode 工作流。<br /><br /> 支持的值：AddNode |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
@@ -774,7 +775,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **可选**|指定引擎服务帐户的密码。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **可选**|指定 PolyBase 引擎服务的启动模式：自动（默认）、禁用和手动。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **可选**|使用最少 6 个端口为 PolyBase 服务指定端口范围。 例如：<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False|  
+|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False  |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/PID<br /><br /> **可选**|指定 SQL Server 版本的产品密钥。 如果未指定此参数，则使用 Evaluation。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/Q 或 /QUIET <br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。 /Q 参数会覆盖 /QS 参数的输入。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/QS 或 /QUIETSIMPLE <br /><br /> **可选**|指定安装程序通过 UI 运行并显示进度，但是不接受任何输入或显示任何错误消息。|  
@@ -806,7 +807,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 RemoveNode 工作流。<br /><br /> 支持的值：RemoveNode|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 RemoveNode 工作流。<br /><br /> 支持的值：RemoveNode |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
@@ -851,8 +852,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||DQ|复制完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装所需的文件。 在完成 SQL Server 安装后，必须运行 DQSInstaller.exe 文件来完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 有关详细信息，请参阅 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。 这也将安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
 ||PolyBase|安装 PolyBase 组件。|  
 ||AdvancedAnalytics|安装 [SQL Server 2017 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)或 [SQL Server 2016 R Services（数据库内）](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install)。|  
-||SQL_INST_MR |适用于 [SQL Server 2017 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 与 AdvancedAnalytics 配对以安装 R Open 和专有 R 包。|  
-||SQL_INST_MPY|适用于 [SQL Server 2017 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 与 AdvancedAnalytics 配对以安装 Anaconda 和专有 Python 包。|  
+||SQL_INST_MR |适用于 [SQL Server 2017 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 与 AdvancedAnalytics 配对以安装 R Open 和专有 R 包  。|  
+||SQL_INST_MPY|适用于 [SQL Server 2017 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)。 与 AdvancedAnalytics 配对以安装 Anaconda 和专有 Python 包  。|  
 |AS||安装所有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件。|  
 |RS||安装所有的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。|  
 |RS_SHP||安装用于 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。|  

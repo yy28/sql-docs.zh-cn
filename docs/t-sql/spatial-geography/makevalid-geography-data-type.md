@@ -12,24 +12,24 @@ dev_langs:
 helpviewer_keywords:
 - MakeValid method (geography)
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b97058d2c023d07d0c7375beae6fc1c7fe47e229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d60632de0ccc60d2c07f501334a64d31692fed
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783525"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937645"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  将无效的 geography 实例转换为具有有效开放地理空间信息联盟 (OGC) 类型的有效 geography 实例。  
+  将无效的 geography 实例转换为具有有效开放地理空间信息联盟 (OGC) 类型的有效 geography 实例   。  
   
  如果输入对象针对 STIsValid() 返回 False，则 `MakeValid()` 将无效实例转换为有效实例。  
   
- 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,17 +39,17 @@ ms.locfileid: "47783525"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 此方法可能更改 geography 实例的类型。 此外，geography 实例的点可能会略有偏移。 某些方法（如 NumPoint()）产生的结果可能会发生变化。  
+ 此方法可能更改 geography 实例的类型  。 此外，geography 实例的点可能会略有偏移  。 某些方法（如 NumPoint()）产生的结果可能会发生变化。  
   
- 在无效的空间实例与赤道相交且 EnvelopeAngle() = 180 的情况下，将返回 FullGlobe 实例。 `MakeValid()` geography 数据类型方法将以最佳方式尝试返回有效的实例，但不保证结果的准确性或精确性。  
+ 在无效的空间实例与赤道相交且 EnvelopeAngle() = 180 的情况下，将返回 FullGlobe 实例  。 `MakeValid()` geography 数据类型方法将以最佳方式尝试返回有效的实例，但不保证结果的准确性或精确性  。  
   
 > [!NOTE]  
->  无效的对象可以存储在数据库中。 可对无效实例（即 STIsValid() 对其返回 False 的那些实例）执行的方法是用于检查有效性或允许导出的方法：STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM() 和 AsGml()。  
+>  无效的对象可以存储在数据库中。 可对无效实例（即对其 STIsValid() 返回 False 的那些实例）执行的方法是用于检查有效性或允许导出的方法：STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM() 和 AsGml()。  
   
  此方法不精确。  
   

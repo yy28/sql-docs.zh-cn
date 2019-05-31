@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - NumRings method
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6a553dc687ec9f1aef15e1455e80106f3612dd9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad07cdaffd8e7cd207691e218ad8eaabf293b0db
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750565"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937551"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回 Polygon 实例中的总环数。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geography 类型中，由于可以将任何环视为外部环，因此不对外部环和内部环进行区分。  
+  返回 Polygon 实例中的总环数  。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geography 类型中，由于可以将任何环视为外部环，因此不对外部环和内部环进行区分  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,12 +38,12 @@ ms.locfileid: "47750565"
 ```  
   
 ## <a name="return-type"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
   
- CLR 返回类型：SqlInt32  
+ CLR 返回类型：**SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- 如果该实例不是 Polygon 实例，则此方法返回 NULL；如果该实例为空，则将返回 0。 此方法是精确方法。  
+ 如果该实例不是 Polygon 实例，则此方法返回 NULL；如果该实例为空，则将返回 0  。 此方法是精确方法。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个具有两个环的 `Polygon` 实例并确认该实例具有两个环。  

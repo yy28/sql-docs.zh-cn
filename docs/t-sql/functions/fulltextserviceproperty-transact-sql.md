@@ -18,20 +18,20 @@ helpviewer_keywords:
 - services [SQL Server], full-text search properties
 - test
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4fbdc84168ea3c0878924033347ca0c0fff3e514
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5f411b829f55473c71cbdbcbfc91ebf52ebef80e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206156"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946586"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回与全文引擎属性有关的信息。 可以使用 sp_fulltext_service 设置和检索这些属性。  
+  返回与全文引擎属性有关的信息。 可以使用 sp_fulltext_service 设置和检索这些属性  。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,11 +43,11 @@ FULLTEXTSERVICEPROPERTY ('property')
 ```  
   
 ## <a name="arguments"></a>参数  
- property  
+ property   
  包含全文服务级别属性名称的表达式。 下表列出了这些属性，并提供对返回的信息的说明。  
   
 > [!NOTE]
->  未来版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将删除以下属性：ConnectTimeout、DataTimeout 和 ResourceUsage。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
+>  未来版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中将删除以下属性：ConnectTimeout、DataTimeout 和 ResourceUsage    。 应避免在新的开发工作中使用这些属性，并着手修改当前使用上述任意属性的应用程序。  
   
 |属性|ReplTest1|  
 |--------------|-----------|  
@@ -55,7 +55,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 |**ConnectTimeout**|返回 0。 支持它仅仅是为了保持向后兼容。|  
 |**IsFulltextInstalled**|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例中安装全文组件。<br /><br /> 0 = 未安装全文组件。<br /><br /> 1 = 已安装全文组件。<br /><br /> NULL = 输入无效或发生错误。|  
 |**DataTimeout**|返回 0。 支持它仅仅是为了保持向后兼容。|  
-|**LoadOSResources**|指示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是否注册并使用了操作系统断字符和筛选器。 默认情况下，禁用此属性，以防止更新程序因疏忽而对操作系统 (OS) 的行为进行更改。 如果允许使用 OS 资源，则可以访问在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引服务中注册的语言和文档类型的资源，但不能安装特定于实例的资源。 如果允许加载 OS 资源，请确保 OS 资源是受信任的已签名二进制文件；否则，当 VerifySignature 设置为 1 时，将无法加载它们。<br /><br /> 0 = 仅使用特定于此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的筛选器和断字符。<br /><br /> 1 = 加载 OS 筛选器和断字符。|  
+|**LoadOSResources**|指示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是否注册并使用了操作系统断字符和筛选器。 默认情况下，禁用此属性，以防止更新程序因疏忽而对操作系统 (OS) 的行为进行更改。 如果允许使用 OS 资源，则可以访问在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引服务中注册的语言和文档类型的资源，但不能安装特定于实例的资源。 如果允许加载 OS 资源，请确保 OS 资源是受信任的已签名二进制文件；否则，当 VerifySignature 设置为 1 时，将无法加载它们  。<br /><br /> 0 = 仅使用特定于此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的筛选器和断字符。<br /><br /> 1 = 加载 OS 筛选器和断字符。|  
 |**VerifySignature**|指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 服务是否仅加载已签名的二进制文件。 默认情况下，仅加载已签名的可信二进制文件。<br /><br /> 0 = 不检查二进制文件是否已签名。<br /><br /> 1 = 验证是否仅加载了已签名的可信二进制文件。|  
   
 ## <a name="return-types"></a>返回类型  

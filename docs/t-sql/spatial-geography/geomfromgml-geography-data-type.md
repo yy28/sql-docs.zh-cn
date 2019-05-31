@@ -16,24 +16,24 @@ helpviewer_keywords:
 - GeomFromGML (geography Data Type)
 - GeomFromGML method
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e38185e537747c951ad7fb236a3b06837240617a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1d5542501325fb84b31c0133aaa04aa0097c077b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698375"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937830"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-根据地理标记语言 (GML) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的给定表示形式构造 geography 实例。
+根据地理标记语言 (GML) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的给定表示形式构造 geography 实例  。
   
-有关 GML 的详细信息，请参阅以下开放地理空间信息联盟规范：[OGC 规范：地理标记语言](https://go.microsoft.com/fwlink/?LinkId=93629)
+有关 GML 的详细信息，请参阅下面的开放地理空间信息联盟规范：[OGC 规范：地理标记语言](https://go.microsoft.com/fwlink/?LinkId=93629)
   
-这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。
+这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例   。
   
 ## <a name="syntax"></a>语法  
   
@@ -43,21 +43,21 @@ GeomFromGml ( GML_input, SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- GML_input  
+ GML_input   
  XML 输入，GML 将从该输入返回值。  
   
- SRID  
- 一个 int 表达式，表示要返回的 geography 实例的空间引用 ID (SRID)。  
+ SRID   
+ 一个 int 表达式，表示要返回的 geography 实例的空间引用 ID (SRID)   。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 如果输入的格式不正确，此方法将引发 FormatException。  
+ 如果输入的格式不正确，此方法将引发 FormatException  。  
   
- 如果输入包含对跖边缘，此方法将引发 ArgumentException。  
+ 如果输入包含对跖边缘，此方法将引发 ArgumentException  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `GeomFromGml()` 创建 `geography` 实例。  

@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STEndpoint method
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: cbb7249cba8ca5700fdddf0ab8d3bb2f6b7d82ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5202c1c61b7d7531737de828de935a14289a902d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782775"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936995"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndpoint（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回 geography 实例的终点。  
+  返回 geography 实例的终点  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,16 +38,16 @@ ms.locfileid: "47782775"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
- 开放地理空间信息联盟 (OGC) 类型：Point  
+ 开放地理空间联盟 (OGC) 类型：**Point**  
   
 ## <a name="remarks"></a>Remarks  
  STEndPoint() 等效于 [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`。  
   
- 如果针对空 geography 实例调用此方法，则此方法返回 Null。  
+ 如果针对空 geography 实例调用此方法，则此方法返回 Null  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `LineString` 创建 `STGeomFromText()` 实例，并使用 `STEndpoint()` 检索 `LineString` 的终点。  

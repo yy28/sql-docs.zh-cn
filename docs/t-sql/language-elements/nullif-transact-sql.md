@@ -18,16 +18,16 @@ helpviewer_keywords:
 - NULLIF function
 - equivalent expressions [SQL Server]
 ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91af3566777e4c7dd038e42e05e7edb16dcfdcea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d72036caa89cb64b57c59c9ec84c09c6090623ec
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773505"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983168"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,9 +47,9 @@ NULLIF ( expression , expression )
  为任意有效的标量[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回类型与第一个 expression 相同。  
+ 返回类型与第一个 expression 相同  。  
   
- 如果两个表达式不相等，则 NULLIF 返回第一个 expression 的值。 如果表达式相等，则 NULLIF 返回第一个 expression 类型的空值。  
+ 如果两个表达式不相等，则 NULLIF 返回第一个 expression 的值  。 如果表达式相等，则 NULLIF 返回第一个 expression 类型的空值  。  
   
 ## <a name="remarks"></a>Remarks  
  如果两个表达式相等且结果表达式为 NULL，则 NULLIF 等价于 CASE 搜索表达式。  
@@ -112,7 +112,7 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. 返回不包含数据的预算数量  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C:返回不包含数据的预算数量  
  如果 `current_year` 和 `previous_year` 都不包含数据，则以下示例创建 `budgets` 表、加载数据，并使用 `NULLIF` 返回 null。  
   
 ```sql  

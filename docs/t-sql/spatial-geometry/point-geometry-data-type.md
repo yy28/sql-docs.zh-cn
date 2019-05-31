@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - Point (geometry Data Type)
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 798f6193bd872fa28083a0db95abb8524758ab04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d4ddfdf1721b31ddced529682c8a619f8673644
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835785"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937441"
 ---
 # <a name="point-geometry-data-type"></a>Point（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-构造一个 geometry 实例，该实例表示一个根据其 X 和 Y 值以及 SRID 构造的 Point 实例。
+构造一个 geometry 实例，该实例表示一个根据其 X 和 Y 值以及 SRID 构造的 Point 实例   。
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +39,18 @@ Point ( X, Y, SRID )
   
 ## <a name="arguments"></a>参数  
  *X*  
- 一个 float 表达式，表示正在生成的 Point 的 X 坐标。  
+ 一个 float 表达式，表示正在生成的 Point 的 X 坐标   。  
   
  *是*  
- 一个 float 表达式，表示正在生成的 Point 的 Y 坐标。  
+ 一个 float 表达式，表示正在生成的 Point 的 Y 坐标   。  
   
- SRID  
- 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)。  
+ SRID   
+ 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)   。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
   

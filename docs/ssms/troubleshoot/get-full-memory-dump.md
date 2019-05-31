@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: ff78af4ffcfe530ba28d47ec57852486523f859a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822505"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983120"
 ---
 # <a name="get-full-memory-dump"></a>获取完整内存转储
 
@@ -37,7 +37,7 @@ ms.locfileid: "65822505"
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 
-    它应该会提示你接受许可协议，请选择“同意”。
+    它应该会提示你接受许可协议，请选择“同意”  。
 
 4. 启动 SQL Server Management Studio (SSMS)（如果尚未启动的话）。
 
@@ -71,7 +71,7 @@ ms.locfileid: "65822505"
     <PathToProcDumpFolder>\procdump.exe -e 1 -f System.OutOfMemoryException -ma -w ssms.exe
     ```
 
-    它应该会提示你接受许可协议，请选择“同意”。
+    它应该会提示你接受许可协议，请选择“同意”  。
 
 4. 启动 SQL Server Management Studio（如果尚未启动的话）。
 
@@ -88,6 +88,15 @@ ms.locfileid: "65822505"
     * “C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll”
 
 9. 压缩此文件夹。
+
+## <a name="share-the-information"></a>共享信息
+
+1. 若要与 SSMS 团队共享信息，请在 https://aka.ms/sqlfeedback 处记录问题。
+
+2. 然后将收集的内存转储文件共享到可以收集文件的 OneDrive（或等效位置）。
+
+    > [!Important]
+    > 内存转储文件可能包含敏感信息。
 
 ## <a name="next-steps"></a>后续步骤
 

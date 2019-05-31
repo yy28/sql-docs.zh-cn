@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - STWithin method (geography)
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 93715075a2313a53c6b7221deb6a10758e35cf8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b689378475572589558dba1f595c9c3888dc62c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712455"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939144"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  如果 geography 实例在空间上包含在另一个 geography 实例中，则返回 1；否则，返回 0。  
+  如果 geography 实例在空间上包含在另一个 geography 实例中，则返回 1；否则，返回 0   。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,16 +35,16 @@ ms.locfileid: "47712455"
 ```  
   
 ## <a name="arguments"></a>参数  
- other_geography  
- 与对其调用 `STWithin()` 的实例进行比较的其他 geography 实例。  
+ other_geography   
+ 与对其调用 `STWithin()` 的实例进行比较的其他 geography 实例  。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：SqlBoolean  
+ CLR 返回类型：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STWithin()` 来测试两个 `geography` 实例，以查看第一个实例是否完全包含在第二个实例中。  

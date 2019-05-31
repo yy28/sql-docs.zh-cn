@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STUnion (geometry Data Type)
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: aad0cad982f7b13262f89e2fda146d1ae5344c5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fe364e8e1f3ca9d610d95283e8a1957a6d60e31
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639366"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935661"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "47639366"
  与调用 `STUnion()` 的实例形成并集的另一个 **geometry** 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   
 ## <a name="examples"></a>示例  
   

@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - ReorientObject method (geography)
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: cda6f09124127d04c8ded1773feab4e9ffbf2ba9
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: e2945b08eaf0a22c6c83bd412e97c729bedfdfea
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265224"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936351"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回 geography 实例以及互换的内部区域和外部区域。  
+返回 geography 实例以及互换的内部区域和外部区域  。  
   
-这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
+这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例   。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,17 +41,17 @@ ms.locfileid: "56265224"
   
 ## <a name="arguments"></a>参数  
 _地理_  
-对其调用 `ReorientObject()` 的另一个 geography 实例。  
+对其调用 `ReorientObject()` 的另一个 geography 实例  。  
   
 ## <a name="return-value"></a>返回值  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
 CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
-此方法更改 GeometryCollection 中所有 Polygons 的环方向，但不删除或更改给定集合中的任何 Points或 LineStrings。  
+此方法更改 GeometryCollection  中所有 Polygons  的环方向，但不删除或更改给定集合中的任何 Points  或 LineStrings  。  
   
-如果将 GeometryCollection 传递给此方法，则会重新调整集合中的每个实例，但不会重新调整整个集合。  
+如果将 GeometryCollection  传递给此方法，则会重新调整集合中的每个实例，但不会重新调整整个集合。  
   
 ## <a name="examples"></a>示例  
   

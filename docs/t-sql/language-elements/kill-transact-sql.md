@@ -31,16 +31,16 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fd08c2afb3e89fa065570206f4dbfcf4237d0ea
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: f808d73ca9dfd169a69bf399990965039a10c602
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265264"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982139"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,8 +67,8 @@ KILL 'session_id'
 ```  
   
 ## <a name="arguments"></a>参数  
-session ID  
-要结束的进程的会话 ID。 session ID 是在建立连接时为每个用户连接分配的唯一整数 (int)。 在连接期间，会话 ID 值与该连接捆绑在一起。 连接结束时，则释放该整数值，并且可以将它重新分配给新的连接。  
+session ID   
+要结束的进程的会话 ID。 session ID 是在建立连接时为每个用户连接分配的唯一整数 (int)   。 在连接期间，会话 ID 值与该连接捆绑在一起。 连接结束时，则释放该整数值，并且可以将它重新分配给新的连接。  
 以下查询可帮助确定想要终止的 `session_id`：  
  ```sql  
  SELECT conn.session_id, host_name, program_name,
@@ -78,15 +78,15 @@ JOIN sys.dm_exec_connections AS conn
     ON sess.session_id = conn.session_id;
 ```  
   
-UOW  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+UOW   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
-标识分布式事务的工作单元 ID (UOW)。 UOW 是可以从 sys.dm_tran_locks 动态管理视图的 request_owner_guid 列获取的 GUID。 也可以从错误日志中或通过 MS DTC 监视器获取 UOW。 有关监视分布式事务的详细信息，请参阅 MS DTC 文档。  
+标识分布式事务的工作单元 ID (UOW)。 UOW 是可以从 sys.dm_tran_locks 动态管理视图的 request_owner_guid 列获取的 GUID  。 也可以从错误日志中或通过 MS DTC 监视器获取 UOW  。 有关监视分布式事务的详细信息，请参阅 MS DTC 文档。  
   
-使用 KILL UOW 可停止孤立的分布式事务。 这些事务不与任何实际会话 ID 相关联，但与会话 ID =“-2”虚拟关联。 可使标识孤立事务变得更为简单，其方法是查询 sys.dm_tran_locks、sys.dm_exec_sessions 或 sys.dm_exec_requests 动态管理视图中的会话 ID 列。  
+使用 KILL UOW  可停止孤立的分布式事务。 这些事务不与任何实际会话 ID 相关联，但与会话 ID =“-2”虚拟关联。 可使标识孤立事务变得更为简单，其方法是查询 sys.dm_tran_locks、sys.dm_exec_sessions 或 sys.dm_exec_requests 动态管理视图中的会话 ID 列。  
   
 WITH STATUSONLY  
-生成由于更早的 KILL 语句而正在回滚的指定会话 ID 或 UOW 的进度报告。 KILL WITH STATUSONLY 不结束或回滚会话 ID 或 UOW。 此命令只显示当前回滚进度。  
+生成由于更早的 KILL 语句而正在回滚的指定会话 ID  或 UOW  的进度报告。 KILL WITH STATUSONLY 不结束或回滚会话 ID  或 UOW  。 此命令只显示当前回滚进度。  
   
 ## <a name="remarks"></a>Remarks  
 KILL 常用于结束使用锁来阻止其他重要进程的进程。 KILL 还可用于停止执行使用必要系统资源的查询的进程。 无法结束系统进程和运行扩展存储过程的进程。  
@@ -108,11 +108,11 @@ KILL 常用于结束使用锁来阻止其他重要进程的进程。 KILL 还可
 KILL 命令可用于解决有疑问的分布式事务。 这些事务是未解决的分布式事务，它们是由于无计划地重新启动数据库服务器或 MS DTC 协调器而产生的。 有关未决事务的详细信息，请参阅[使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)中的“两阶段提交”一节。  
   
 ## <a name="using-with-statusonly"></a>使用 WITH STATUSONLY  
-如果会话 ID 或 UOW 由于前面的 KILL session ID|UOW 语句而回滚，KILL WITH STATUSONLY 生成报告。 进度报告指出已完成的回滚量（以百分比形式）和估计的剩余时间（以秒为单位）。 报告使用以下格式声明它：  
+如果会话 ID 或 UOW 由于前面的 KILL session ID  |UOW  语句而回滚，KILL WITH STATUSONLY 生成报告。 进度报告指出已完成的回滚量（以百分比形式）和估计的剩余时间（以秒为单位）。 报告使用以下格式声明它：  
   
 `Spid|UOW <xxx>: Transaction rollback in progress. Estimated rollback completion: <yy>% Estimated time left: <zz> seconds`  
   
-如果在 KILL session ID|UOW WITH STATUSONLY 语句运行前会话 ID 或 UOW 的回滚就已完成，那么 KILL session ID|UOW WITH STATUSONLY 返回以下错误：  
+如果在 KILL session ID  |UOW  WITH STATUSONLY 语句运行前会话 ID 或 UOW 的回滚就已完成，那么 KILL session ID  |UOW  WITH STATUSONLY 返回以下错误：  
   
 ```
 "Msg 6120, Level 16, State 1, Line 1"  
@@ -121,9 +121,9 @@ KILL 命令可用于解决有疑问的分布式事务。 这些事务是未解�
 如果没有要回滚的会话 ID 或 UOW，也会生成此错误
 
 
-通过重复不使用 WITH STATUSONLY 选项的同一 KILL session ID|UOW 语句，可以获得相同的状态报告。 不过，不建议这样重复使用选项。 如果在新的 KILL 语句运行前回滚就已完成且会话 ID 已重新分配给新任务，那么重复 KILL session ID 语句可能会停止新进程。 通过指定 WITH STATUSONLY 来阻止新进程停止。  
+通过重复不使用 WITH STATUSONLY 选项的同一 KILL session ID  |UOW  语句，可以获得相同的状态报告。 不过，不建议这样重复使用选项。 如果在新的 KILL 语句运行前回滚就已完成且会话 ID 已重新分配给新任务，那么重复 KILL session ID  语句可能会停止新进程。 通过指定 WITH STATUSONLY 来阻止新进程停止。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** 要求具有 ALTER ANY CONNECTION 权限。 ALTER ANY CONNECTION 包括在 sysadmin 或 processadmin 固定服务器角色的成员身份中。  
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** 需要具有 KILL DATABASE CONNECTION 权限。 服务器级别主体登录名具有 KILL DATABASE CONNECTION。  
@@ -151,7 +151,7 @@ spid 54: Transaction rollback in progress. Estimated rollback completion: 80% Es
 ```  
   
 ### <a name="c-using-kill-to-stop-an-orphaned-distributed-transaction"></a>C. 使用 KILL 停止孤立的分布式事务  
-下面的示例展示了如何停止孤立的分布式事务（会话 ID = -2），其中 UOW 为 `D5499C66-E398-45CA-BF7E-DC9C194B48CF`。  
+下面的示例展示了如何停止孤立的分布式事务（会话 ID = -2），其中 UOW  为 `D5499C66-E398-45CA-BF7E-DC9C194B48CF`。  
   
 ```sql  
 KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';  

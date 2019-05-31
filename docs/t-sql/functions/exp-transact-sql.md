@@ -16,21 +16,21 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3725fccd59dea96571a3f5b1b50338ec2adb2dee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b62046f315c6921a03cdf692561d8336398792ec
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508525"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946094"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回指定的 float 表达式的指数值。  
+  返回指定的 float 表达式的指数值  。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,17 +42,17 @@ EXP ( float_expression )
   
 ## <a name="arguments"></a>参数  
  *float_expression*  
- float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。  
   
 ## <a name="return-types"></a>返回类型  
  **float**  
   
 ## <a name="remarks"></a>Remarks  
- 常量 e (2.718281…) 是自然对数的底数。  
+ 常量 e (2.718281…) 是自然对数的底数  。  
   
- 数字的指数是常量 e 使用该数字进行幂运算。 例如，EXP(1.0) = e^1.0 = 2.71828182845905，而 EXP(10) = e^10 = 22026.4657948067。  
+ 数字的指数是常量 e 使用该数字进行幂运算  。 例如，EXP(1.0) = e^1.0 = 2.71828182845905，而 EXP(10) = e^10 = 22026.4657948067。  
   
- 数字的自然对数的指数是数字本身：EXP (LOG (n)) = n。 数字的指数的自然对数是数字本身：LOG (EXP (n)) = n。  
+ 数字的自然对数的指数是数字本身：EXP (LOG (n)) = n   。 以及数字的指数的自然对数是数字本身：LOG (EXP (n)) = n   。  
   
 ## <a name="examples"></a>示例  
   

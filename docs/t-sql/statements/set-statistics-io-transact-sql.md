@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760120"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983088"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,16 +61,16 @@ SET STATISTICS IO { ON | OFF }
 |**逻辑读取次数**|从数据缓存读取的页数。|  
 |**物理读取次数**|从磁盘读取的页数。|  
 |**预读次数**|为进行查询而放入缓存的页数。|  
-|**lob 逻辑读取次数**|从数据缓存读取的 text、ntext、image 或大值类型（varchar(max)、nvarchar(max)、varbinary(max)）页的数目。|  
-|**lob 物理读取次数**|从磁盘读取的“text”、“ntext”、“image”或大值类型页的数目。|  
-|**lob 预读次数**|为进行查询而放入缓存的“text”、“ntext”、“image”或大值类型页的数目。|  
-  
- SET STATISTICS IO 是在执行或运行时设置，而不是在分析时设置。  
-  
+|**lob 逻辑读取次数**|从数据缓存读取的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页       。|  
+|**lob 物理读取次数**|从磁盘读取的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页       。|  
+|**lob 预读次数**|为进行查询而放入缓存的页数。 包括 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或列存储索引页       。|
+
+ SET STATISTICS IO 是在执行或运行时设置，而不是在分析时设置。
+
 > [!NOTE]  
->  当 Transact-SQL 语句检索 LOB 列时，有些 LOB 检索操作可能需要多次遍历 LOB 树。 这可能会导致 SET STATISTICS IO 报告的次数比预期的逻辑读取次数更高。  
-  
-## <a name="permissions"></a>Permissions  
+> 当 Transact-SQL 语句检索 LOB 列时，有些 LOB 检索操作可能需要多次遍历 LOB 树。 这可能会导致 SET STATISTICS IO 报告的次数比预期的逻辑读取次数更高。
+
+## <a name="permissions"></a>权限  
  若要使用 SET STATISTICS IO，用户必须具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的适当权限。 但不需要 SHOWPLAN 权限。  
   
 ## <a name="examples"></a>示例  

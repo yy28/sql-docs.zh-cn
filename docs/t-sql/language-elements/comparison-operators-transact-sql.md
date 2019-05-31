@@ -18,20 +18,20 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 32310359f0ecd72349a5ebf3a4f0abcc1a72f5bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49b8dbf08dc6611666f90d4127260e49761b7fdb
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653385"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982612"
 ---
 # <a name="comparison-operators-transact-sql"></a>比较运算符 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  比较运算符测试两个表达式是否相同。 除 text、ntext 或 image 数据类型的表达式外，比较运算符可以用于所有其他表达式。 下表列出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 比较运算符。  
+  比较运算符测试两个表达式是否相同。 除 text、ntext 或 image 数据类型的表达式外，比较运算符可以用于所有其他表达式    。 下表列出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 比较运算符。  
   
 |运算符|含义|  
 |--------------|-------------|  
@@ -46,13 +46,13 @@ ms.locfileid: "47653385"
 |[\!>（不大于）](../../t-sql/language-elements/not-greater-than-transact-sql.md)|不大于（非 ISO 标准）|  
   
 ## <a name="boolean-data-type"></a>Boolean 数据类型  
- 具有 Boolean 数据类型的比较运算符的结果。 它有三个值：TRUE、FALSE 和 UNKNOWN。 返回 Boolean 数据类型的表达式称为布尔表达式。  
+ 具有 Boolean 数据类型的比较运算符的结果  。 这有三个值：TRUE、FALSE 和 UNKNOWN。 返回 Boolean 数据类型的表达式称为布尔表达式  。  
   
- 与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不同，Boolean 数据类型不能被指定为表列或变量的数据类型，也不能在结果集中返回。  
+ 与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不同，Boolean 数据类型不能被指定为表列或变量的数据类型，也不能在结果集中返回  。  
   
  当 SET ANSI_NULLS 为 ON 时，带有一个或两个 NULL 表达式的运算符返回 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，除了等于 (=) 和不等于 (<>) 运算符外，相同的规则适用。 当 SET ANSI_NULLS 为 OFF 时，这些运算符将 NULL 视为已知值，等效于任何其他 NULL，且只返回 TRUE 或 FALSE（绝不会返回 UNKNOWN）。  
   
- 在 WHERE 子句中使用数据类型为 Boolean 的表达式，可以筛选出符合搜索条件的行，也可以在控制流语言语句（例如 IF 和 WHILE）中使用这种表达式。例如：  
+ 在 WHERE 子句中使用数据类型为 Boolean 的表达式，可以筛选出符合搜索条件的行，也可以在控制流语言语句（例如 IF 和 WHILE）中使用这种表达式。例如：   
   
 ```  
 -- Uses AdventureWorks  

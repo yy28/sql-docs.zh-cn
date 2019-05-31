@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STPointN method
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 23f5b2e7333873f861165bc7bbf19fbbd56ca733
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 983442f724d4c2090bbface71a793bac71eb9ac7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836615"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936088"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回 geography 实例中的指定点。  
+  返回 geography 实例中的指定点  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +39,21 @@ ms.locfileid: "47836615"
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 一个 int 表达式，其值介于 1 与 geography 实例中的点数之间。  
+ 一个 int 表达式，其值介于 1 与 geography 实例中的点数之间   。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
- 开放地理空间信息联盟 (OGC) 类型：Point  
+ 开放地理空间联盟 (OGC) 类型：**Point**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geography 实例是用户创建的，则 STPointN() 返回由 expression 通过按照点的原始输入顺序对点进行排序而指定的点。  
+ 如果 geography 实例是用户创建的，则 STPointN() 返回由 expression 通过按照点的原始输入顺序对点进行排序而指定的点   。  
   
- 如果 geography 实例是系统构建的，则 STPointN() 返回由 expression 通过按照点的输出顺序对所有点进行排序而指定的点，点的输出顺序为：首先按 geography 实例、然后按实例中的环（如果适用），最后按环中的点。 此顺序是确定的。  
+ 如果 geography 实例是系统构建的，则 STPointN() 返回由 expression 通过按照点的输出顺序对所有点进行排序而指定的点，点的输出顺序为：首先按 geography 实例、然后按实例中的环（如果适用），最后按环中的点    。 此顺序是确定的。  
   
- 如果使用小于 1 的值来调用此方法，则会引发 ArgumentOutOfRangeException。  
+ 如果使用小于 1 的值来调用此方法，则会引发 ArgumentOutOfRangeException  。  
   
  如果使用大于实例中点数的值来调用此方法，则返回 Null。  
   

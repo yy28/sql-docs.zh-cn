@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aad389a5b54918a65b7eedab225c35425e404bf8
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 2de44a8eec9b2cf4428cb40db79f0c08f9a1afbf
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570790"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993471"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,7 @@ SET <optionspec>
    | <hadr_cluster_context>  
    | <buffer_pool_extension>  
    | <soft_numa>  
+   | <memory_optimized>
 }  
   
 <process_affinity> ::=   
@@ -98,8 +99,17 @@ SET <optionspec>
         { size [ KB | MB | GB ] }  
   
 <soft_numa> ::=  
-    SET SOFTNUMA  
+    SOFTNUMA  
     { ON | OFF }  
+
+<memory-optimized> ::=   
+   MEMORY_OPTIMIZED   
+   {   
+     ON 
+   | OFF
+   | [ TEMPDB_METADATA = { ON [(RESOURCE_POOL='resource_pool_name')] | OFF }
+   | [ HYBRID_BUFFER_POOL = { ON | OFF }
+   }  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -186,8 +196,8 @@ HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }
   
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-HADR CLUSTER CONTEXT = { 'remote\_windows\_cluster' | LOCAL }  
-将服务器实例的 HADR 群集上下文切换到指定的 Windows Server 故障转移群集 (WSFC)。 “HADR 群集上下文”用于确定什么 WSFC 管理由服务器实例承载的可用性副本的元数据。 仅在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC r 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更高版本实例的过程中，才使用 SET HADR CLUSTER CONTEXT 选项。  
+HADR CLUSTER CONTEXT = { 'remote\_windows\_cluster' | LOCAL }      
+将服务器实例的 HADR 群集上下文切换到指定的 Windows Server 故障转移群集 (WSFC)。  “HADR 群集上下文”用于确定什么 WSFC 管理由服务器实例承载的可用性副本的元数据。 仅在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC r 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更高版本实例的过程中，才使用 SET HADR CLUSTER CONTEXT 选项。  
   
 只能将 HADR 群集上下文从本地 WSFC 切换到远程 WSFC。 然后可以选择从远程 WSFC 切换回本地 WSFC。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不托管任何可用性副本时，才能将 HADR 群集上下文切换到远程群集。  
   
@@ -245,14 +255,35 @@ OFF
 > 4) 启动 SQL Server 代理实例。  
   
 **详细信息：** 如果在重启 SQL Server 服务之前使用 SET SOFTNUMA 命令运行 ALTER SERVER CONFIGURATION，则在 SQL Server 代理服务停止时，它会运行 T-SQL RECONFIGURE 命令，将 SOFTNUMA 设置还原回执行 ALTER SERVER CONFIGURATION 之前的状态。 
-  
+
+**\<memory_optimized> ::=**
+
+**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本
+
+ON <br>
+启用属于[内存数据库](../../relational-databases/in-memory-database.md)功能的所有实例级功能。 当前这些功能包括[内存优化的 tempdb 元数据](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)和[混合缓冲池](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 需要重启才能生效。
+
+OFF <br>
+禁用属于内存数据库功能系列的所有实例级功能。 需要重启才能生效。
+
+TEMPDB_METADATA = ON | OFF <br>
+仅启用或禁用内存优化的 tempdb 元数据。 需要重启才能生效。 
+
+RESOURCE_POOL='resource_pool_name' <br>
+与 TEMPDB_METADATA = ON 结合使用时，指定须用于 tempdb 的用户定义资源池。 如果未指定，tempdb 将使用默认池。 该池必须已存在。 如果在重新启动服务时池不可用，则 tempdb 将使用默认池。
+
+
+HYBRID_BUFFER_POOL = ON | OFF <br>
+在实例级别启用或禁用混合缓冲池。 需要重启才能生效。
+
+
 ## <a name="general-remarks"></a>一般备注  
 除非另有明确说明，否则此语句不需要重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，则不需要重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集资源。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
 此语句不支持 DDL 触发器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 对于进程关联选项需要 ALTER SETTINGS 权限。 对于诊断日志和故障转移群集属性选项需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限，对于 HADR 群集上下文选项需要 CONTROL SERVER 权限。  
   
 需要拥有针对缓冲池扩展选项的 ALTER SERVER STATE 权限。  
@@ -267,7 +298,9 @@ OFF
 |[设置诊断日志选项](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[设置故障转移群集属性](#Failover)|HealthCheckTimeout|  
 |[更改可用性副本的群集上下文](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[设置缓冲池扩展](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[设置缓冲池扩展](#BufferPoolExtension)|BUFFER POOL EXTENSION| 
+|[设置内存数据库选项](#MemoryOptimized)|MEMORY_OPTIMIZED|
+
   
 ###  <a name="Affinity"></a> 设置进程关联  
 本节中的示例显示如何设置与 CPU 和 NUMA 节点的进程关联。 该示例假定服务器包含 256 个 CPU，这些 CPU 分为四组，每组各有 16 个 NUMA 节点。 线程未分配给任何 NUMA 节点或 CPU。  
@@ -404,7 +437,37 @@ SET BUFFER POOL EXTENSION ON
 GO  
   
 ```  
-  
+
+### <a name="MemoryOptimized"></a> 设置内存数据库选项
+
+**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本
+
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. 使用默认选项启用所有内存数据库功能
+
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
+GO
+```
+
+#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>B. 使用默认资源池启用内存优化的 tempdb 元数据
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
+GO
+```
+
+#### <a name="c-enable-memory-optimized-tempdb-metadata-with-a-user-defined-resource-pool"></a>C. 使用用户定义的资源池启用内存优化的 tempdb 元数据
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+GO
+```
+
+#### <a name="d-enable-hybrid-buffer-pool"></a>D. 启用混合缓冲池
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
+GO
+```
+
+
 ## <a name="see-also"></a>另请参阅  
 [Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)   
 [更改服务器实例的 HADR 群集上下文 (SQL Server)](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   

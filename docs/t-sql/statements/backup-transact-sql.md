@@ -43,16 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c764f90d21300ee5c537265de86a10971d9c0991
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828237"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175309"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ ms.locfileid: "56828237"
 
 ||||
 |---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_ ** &nbsp;|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -186,10 +186,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 DATABASE 指定一个完整数据库备份。 如果指定了一个文件和文件组的列表，则仅备份该列表中的文件和文件组。 在进行完整数据库备份或差异数据库备份的过程中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会备份足够多的事务日志，以便在还原备份时生成一个一致的数据库。
 
-还原由 BACKUP DATABASE（“数据备份”）创建的备份时，将还原整个备份。 只有日志备份才能还原到备份中的特定时间或事务。
+还原由 BACKUP DATABASE（“数据备份”  ）创建的备份时，将还原整个备份。 只有日志备份才能还原到备份中的特定时间或事务。
 
 > [!NOTE]
-> 对 master 数据库，只能执行完整数据库备份。
+> 对 master  数据库，只能执行完整数据库备份。
 
 LOG
 
@@ -200,46 +200,46 @@ LOG
 > [!NOTE]
 > 执行典型日志备份后，如果没有指定 `WITH NO_TRUNCATE` 或 `COPY_ONLY`，某些事务日志记录将变为不活动状态。 一个或多个虚拟日志文件中的所有记录变为不活动状态后，日志将被截断。 如果日志在常规日志备份后未被截断，则可能是某些操作延迟了日志截断。 有关详细信息，请参阅[可能延迟日志截断的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。
 
-{ database\_name | @database\_name\_var } 是备份事务日志、部分数据库或完整的数据库时所用的源数据库。 如果作为变量 (@database\_name\_var) 提供，则可以将此名称指定为字符串常量 (@database\_name\_var=databasename) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量。
+{ database\_name   | @  database\_name\_var  } 是备份事务日志、部分数据库或完整的数据库时所用的源数据库。 如果作为变量 (@  database\_name\_var  ) 提供，则可以将此名称指定为字符串常量 (@  database\_name\_var  =database  name  ) 或指定为字符串数据类型（ntext  或 text  数据类型除外）的变量。
 
 > [!NOTE]
 > 不能备份数据库镜像伙伴关系中的镜像数据库。
 
-\<file_or_filegroup> [ ,...n ] 只能与 BACKUP DATABASE 一起使用，用于指定某个数据库文件或文件组包含在文件备份中，或指定某个只读文件或文件组包含在部分备份中。
+\<file_or_filegroup> [ ,  ...n  ] 只能与 BACKUP DATABASE 一起使用，用于指定某个数据库文件或文件组包含在文件备份中，或指定某个只读文件或文件组包含在部分备份中。
 
-FILE = { logical_file_name | @logical\_file\_name\_var } 文件或变量的逻辑名称，其值等于要包含在备份中的文件的逻辑名称。
+FILE =  { logical_file_name  | @  logical\_file\_name\_var  } 文件或变量的逻辑名称，其值等于要包含在备份中的文件的逻辑名称。
 
-FILEGROUP = { logical\_filegroup\_name | @logical\_filegroup\_name\_var } 文件组或变量的逻辑名称，其值等于要包含在备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。
+FILEGROUP =  { logical\_filegroup\_name   | @  logical\_filegroup\_name\_var  } 文件组或变量的逻辑名称，其值等于要包含在备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。
 
 > [!NOTE]
 > 如果数据库的大小和性能要求使得进行数据库备份不切实际，则应考虑使用文件备份。 NUL 设备可用于测试备份的性能，但不应在生产环境中使用。
 
-n 一个占位符，表示可以在逗号分隔的列表中指定多个文件和文件组。 数量不受限制。
+n  一个占位符，表示可以在逗号分隔的列表中指定多个文件和文件组。 数量不受限制。
 
 有关详细信息，请参阅[完整文件备份](../../relational-databases/backup-restore/full-file-backups-sql-server.md)和[备份文件和文件组](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)。
 
-READ_WRITE_FILEGROUPS [ , FILEGROUP = { logical\_filegroup\_name | @logical\_filegroup\_name\_var } [ ,...n ] ] 指定部分备份。 部分备份包括数据库中的所有读/写文件：主文件组和任何读/写辅助文件组，以及任何指定的只读文件或文件组。
+READ_WRITE_FILEGROUPS [ ,  FILEGROUP = { logical\_filegroup\_name   | @  logical\_filegroup\_name\_var  } [ ,  ...n  ] ] 指定部分备份。 部分备份包括数据库中的所有读/写文件：主文件组和任何读/写辅助文件组，以及任何指定的只读文件或文件组。
 
 READ_WRITE_FILEGROUPS 指定在部分备份中备份所有读/写文件组。 如果数据库是只读的，则 READ_WRITE_FILEGROUPS 仅包括主文件组。
 
 > [!IMPORTANT]
 > 使用 FILEGROUP 而不是 READ_WRITE_FILEGROUPS 显式列出读/写文件组将会创建文件备份。
 
-FILEGROUP = { logical_filegroup_name | @logical\_filegroup\_name\_var } 只读文件组或变量的逻辑名称，其值等于要包含在部分备份中的只读文件组的逻辑名称。 有关详细信息，请参阅本主题前面的“\<file_or_filegroup>”。
+FILEGROUP = { logical_filegroup_name   | @  logical\_filegroup\_name\_var  } 只读文件组或变量的逻辑名称，其值等于要包含在部分备份中的只读文件组的逻辑名称。 有关详细信息，请参阅本主题前面的“\<file_or_filegroup>”。
 
-n 一个占位符，表示可以在逗号分隔的列表中指定多个只读文件组。
+n  一个占位符，表示可以在逗号分隔的列表中指定多个只读文件组。
 
 有关部分备份的详细信息，请参阅[部分备份](../../relational-databases/backup-restore/partial-backups-sql-server.md)。
 
-TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-databases/backup-restore/backup-devices-sql-server.md)集是一个未镜像的媒体集，或者是镜像媒体集中的第一批镜像（为其声明了一个或多个 MIRROR TO 子句）。
+TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-databases/backup-restore/backup-devices-sql-server.md)集是一个未镜像的媒体集，或者是镜像媒体集中的第一批镜像（为其声明了一个或多个 MIRROR TO 子句）   。
 
 \<backup_device>
 
 指定用于备份操作的逻辑备份设备或物理备份设备。
 
-{ logical_device_name | @logical\_device\_name\_var } 适用范围：SQL Server 要将数据库备份到的备份设备的逻辑名称。 逻辑名称必须遵守标识符规则。 如果作为变量 (@logical_device_name_var) 提供，则可以将该备份设备名称指定为字符串常量（@logical\_device\_name\_var= 逻辑备份设备名称）或任何字符串数据类型（ntext 或 text 数据类型除外）的变量。
+{ logical_device_name | @logical\_device\_name\_var } 适用范围：     SQL Server 要将数据库备份到的备份设备的逻辑名称。 逻辑名称必须遵守标识符规则。 如果作为变量 (@logical_device_name_var  ) 提供，则可以将该备份设备名称指定为字符串常量（@logical\_device\_name\_var  =  逻辑备份设备名称）或任何字符串数据类型（ntext  或 text  数据类型除外）的变量。
 
-{ DISK | TAPE | URL} = { 'physical\_device\_name' | @physical\_device\_name\_var | 'NUL' } 适用范围：磁盘、磁带和用于 SQL Server 的 URL。
+{ DISK | TAPE | URL} = { 'physical\_device\_name' | @physical\_device\_name\_var | 'NUL' } 适用范围：        磁盘、磁带和用于 SQL Server 的 URL。
 指定磁盘文件或磁带设备，或者 Microsoft Azure 存储服务。 此 URL 格式用于创建到 Microsoft Azure 存储服务的备份。 有关详细信息和示例，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教程，请参阅[教程：将 SQL Server 备份和还原到 Microsoft Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。
 
 > [!NOTE]
@@ -259,9 +259,9 @@ TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-dat
 > [!NOTE]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 TAPE 选项。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。
 
-n 一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
+n  一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
 
-MIRROR TO \<backup_device> [ ,...n ] 指定一组辅助备份设备（最多三个），其中每个设备都镜像 TO 子句中指定的备份设备。 MIRROR TO 子句和 TO 子句必须指定相同类型和数量的备份设备。 最多可以使用三个 MIRROR TO 子句。
+MIRROR TO \<backup_device> [ ,...n ] 指定一组辅助备份设备（最多三个），其中每个设备都镜像 TO 子句中指定的备份设备   。 MIRROR TO 子句和 TO 子句必须指定相同类型和数量的备份设备。 最多可以使用三个 MIRROR TO 子句。
 
 此选项仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Enterprise 版中可用。
 
@@ -270,20 +270,20 @@ MIRROR TO \<backup_device> [ ,...n ] 指定一组辅助备份设备（最多三�
 
 有关 \<backup_device> 的信息，请参阅本部分前面的“\<backup_device>”。
 
-n 一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。 MIRROR TO 子句中的设备数必须等于 TO 子句中的设备数。
+n  一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。 MIRROR TO 子句中的设备数必须等于 TO 子句中的设备数。
 
 有关详细信息，请参阅本主题后面[备注](#general-remarks)部分中的“镜像媒体集中的媒体簇”。
 
-[ next-mirror-to ] 一个占位符，表示一个 BACKUP 语句除了包含一个 TO 子句外，最多还可包含三个 MIRROR TO 子句。
+[ next-mirror-to  ] 一个占位符，表示一个 BACKUP 语句除了包含一个 TO 子句外，最多还可包含三个 MIRROR TO 子句。
 
 ### <a name="with-options"></a>WITH 选项
 
 指定要用于备份操作的选项。
 
-CREDENTIAL 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。
+CREDENTIAL 适用范围  ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。
 仅在创建到 Microsoft Azure Blob 存储服务的备份时使用。
 
-FILE_SNAPSHOT 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。
+FILE_SNAPSHOT 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）  。
 
 用于在使用 Azure Blob 存储服务存储所有 SQL Server 数据库文件时，创建数据库文件的 Azure 快照。 有关详细信息，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照备份将数据库文件（数据和日志文件）的 Azure 快照保持为一致的状态。 一组一致的 Azure 快照构成备份并记录在备份文件中。 `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` 和 `BACKUP LOG TO URL WITH FILE_SNAPSHOT` 之间的唯一区别是后者会截断事务日志，而前者不会。 借助 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照备份，在完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立备份链时所需的初始完整备份之后，只需单个事务日志备份即可将数据库还原到事务日志备份的时间点。 此外，只需两次事务日志备份即可将数据库还原到两次事务日志备份之间的时间点。
 
@@ -319,7 +319,7 @@ ENCRYPTION 用于指定将备份加密。 可指定加密备份所用的加密�
 > [!NOTE]
 > 若要为还原操作指定备份集，请使用 `FILE = <backup_set_file_number>` 选项。 有关如何指定备份集的详细信息，请参阅 [RESTORE 参数](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 中的“指定备份集”。
 
-COPY_ONLY 指定备份为“仅复制备份”，该备份不影响正常的备份顺序。 仅复制备份是独立于定期计划的常规备份而创建的。 仅复制备份不会影响数据库的总体备份和还原过程。
+COPY_ONLY 指定备份为“仅复制备份”  ，该备份不影响正常的备份顺序。 仅复制备份是独立于定期计划的常规备份而创建的。 仅复制备份不会影响数据库的总体备份和还原过程。
 
 应在出于特殊目的而进行备份的情况下使用仅复制备份，例如在进行联机文件还原前备份日志。 通常，仅复制日志备份仅使用一次即被删除。
 
@@ -328,7 +328,7 @@ COPY_ONLY 指定备份为“仅复制备份”，该备份不影响正常的备�
     > [!IMPORTANT]
     > 如果将 `DIFFERENTIAL` 和 `COPY_ONLY` 一起使用，则忽略 `COPY_ONLY` 并创建差异备份。
 
-- 与 `BACKUP LOG` 一起使用时，`COPY_ONLY` 选项将创建“仅复制日志备份”，该备份不会截断事务日志。 仅复制日志备份对日志链没有任何影响，因此其他日志备份的表现就像仅复制备份不存在一样。
+- 与 `BACKUP LOG` 一起使用时，`COPY_ONLY` 选项将创建“仅复制日志备份”  ，该备份不会截断事务日志。 仅复制日志备份对日志链没有任何影响，因此其他日志备份的表现就像仅复制备份不存在一样。
 
 有关详细信息，请参阅[仅复制备份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
 
@@ -342,41 +342,41 @@ COMPRESSION 显式启用备份压缩。
 
 NO_COMPRESSION 显式禁用备份压缩。
 
-DESCRIPTION = { 'text' | @text\_variable } 指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。
+DESCRIPTION =  { '  text  '   | @  text\_variable  } 指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。
 
-NAME = { backup_set_name | @backup\_set\_var } 指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。
+NAME =  { backup_set_name   | @  backup\_set\_var  } 指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。
 
-{ EXPIREDATE ='date' | RETAINDAYS = days } 指定允许覆盖该备份的备份集的日期。 如果同时使用这两个选项，RETAINDAYS 的优先级别将高于 EXPIREDATE。
+{ EXPIREDATE ='  date  '  | RETAINDAYS =  days  } 指定允许覆盖该备份的备份集的日期。 如果同时使用这两个选项，RETAINDAYS 的优先级别将高于 EXPIREDATE。
 
-如果这两个选项均未指定，则过期日期由 mediaretention 配置设置确定。 有关详细信息，请参阅[服务器配置选项](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。
+如果这两个选项均未指定，则过期日期由 mediaretention  配置设置确定。 有关详细信息，请参阅[服务器配置选项](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。
 
 > [!IMPORTANT]
 > 这些选项仅仅阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 覆盖文件。 用其他方法仍可擦除磁带，而通过操作系统也可以删除磁盘文件。 有关过期验证的详细信息，请参阅本主题中的 SKIP 和 FORMAT。
 
-EXPIREDATE = { 'date' | @date\_var } 指定备份集到期和允许被覆盖的日期。 如果作为变量 (@date\_var) 提供，则该日期必须采用已配置系统日期/时间的格式，并指定为下列类型之一：
+EXPIREDATE =  { '  date  '   | @  date\_var  } 指定备份集到期和允许被覆盖的日期。 如果作为变量 (@date\_var  ) 提供，则该日期必须采用已配置系统日期/时间  的格式，并指定为下列类型之一：
 
-- 字符串常量 (@date\_var = date)
-- 字符串数据类型（ntext 或 text 数据类型除外）的变量
-- smalldatetime
-- datetime 变量
+- 字符串常量 (@date\_var  =  date)
+- 字符串数据类型（ntext  或 text  数据类型除外）的变量
+- smalldatetime 
+- datetime  变量
 
 例如：
 
 - `'Dec 31, 2020 11:59 PM'`
 - `'1/1/2021'`
 
-有关如何指定 datetime 值的信息，请参阅[日期和时间类型](../../t-sql/data-types/date-and-time-types.md)。
+有关如何指定 datetime  值的信息，请参阅[日期和时间类型](../../t-sql/data-types/date-and-time-types.md)。
 
 > [!NOTE]
 > 若要忽略过期日期，请使用 `SKIP` 选项。
 
-RETAINDAYS = { days | @days\_var } 指定必须经过多少天才可以覆盖该备份媒体集。 如果作为变量 (@days\_var) 提供，则必须指定为整数。
+RETAINDAYS =  { days   | @  days\_var  } 指定必须经过多少天才可以覆盖该备份媒体集。 如果作为变量 (@  days\_var  ) 提供，则必须指定为整数。
 
 **媒体集选项**
 
 这些选项作为一个整体对介质集进行操作。
 
-{ NOINIT | INIT } 控制备份操作是追加到还是覆盖备份媒体中的现有备份集。 默认为追加到介质中最新的备份集 (NOINIT)。
+{ NOINIT  | INIT } 控制备份操作是追加到还是覆盖备份媒体中的现有备份集。 默认为追加到介质中最新的备份集 (NOINIT)。
 
 > [!NOTE]
 > 有关 { **NOINIT** | INIT } and { **NOSKIP** | SKIP } 之间交互的信息，请参阅本主题后面的[备注](#general-remarks)。
@@ -394,7 +394,7 @@ INIT 指定应覆盖所有备份集，但是保留媒体标头。 如果指定�
 
 有关详细信息，请参阅 [媒体集、媒体簇和备份集](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。
 
-{ NOSKIP | SKIP } 控制备份操作是否在覆盖媒体中的备份集之前检查它们的过期日期和时间。
+{ NOSKIP  | SKIP } 控制备份操作是否在覆盖媒体中的备份集之前检查它们的过期日期和时间。
 
 > [!NOTE]
 > 有关 { **NOINIT** | INIT } and { **NOSKIP** | SKIP } 之间交互的信息，请参阅本主题后面的“备注”。
@@ -404,7 +404,7 @@ NOSKIP 指示 BACKUP 语句在可以覆盖媒体上的所有备份集之前先�
 SKIP 禁用备份集的过期和名称检查，这些检查一般由 BACKUP 语句执行以防覆盖备份集。 有关 { NOINIT | INIT } 和 { NOSKIP | SKIP } 之间交互的信息，请参阅本主题后面的“备注”。
 若要查看备份集的过期日期，请查询 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 历史记录表的 **expiration_date** 列。
 
-{ NOFORMAT | FORMAT } 指定是否应该在用于此备份操作的卷上写入媒体标头，以覆盖任何现有的媒体标头和备份集。
+{ NOFORMAT  | FORMAT } 指定是否应该在用于此备份操作的卷上写入媒体标头，以覆盖任何现有的媒体标头和备份集。
 
 NOFORMAT 指定备份操作在用于此备份操作的媒体卷上保留现的有媒体标头和备份集。 这是默认行为。
 
@@ -415,11 +415,11 @@ FORMAT 指定创建新的媒体集。 FORMAT 将使备份操作在用于备份�
 
 指定 FORMAT 即表示 `SKIP`；`SKIP` 无需显式声明。
 
-MEDIADESCRIPTION = { text | @text\_variable } 指定媒体集的自由格式文本说明，最多为 255 个字符。
+MEDIADESCRIPTION =  { text  | @  text\_variable  } 指定媒体集的自由格式文本说明，最多为 255 个字符。
 
-MEDIANAME = { media_name | @media\_name\_variable } 指定整个备份媒体集的媒体名称。 介质名称的长度不能多于 128 个字符，如果指定了 `MEDIANAME`，则该名称必须匹配备份卷上已存在的先前指定的介质名称。 如果未指定该选项或指定了 SKIP 选项，将不会对介质名称进行验证检查。
+MEDIANAME =  { media_name   | @  media\_name\_variable  } 指定整个备份媒体集的媒体名称。 介质名称的长度不能多于 128 个字符，如果指定了 `MEDIANAME`，则该名称必须匹配备份卷上已存在的先前指定的介质名称。 如果未指定该选项或指定了 SKIP 选项，将不会对介质名称进行验证检查。
 
-BLOCKSIZE = { blocksize | @blocksize\_variable } 指定物理块大小（以字节为单位）。 支持的大小是 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 字节。 对于磁带设备默认为 65536，其他情况为 512。 通常，由于 BACKUP 自动选择适合于设备的块大小，因此不需要此选项。 显式声明块大小将覆盖自动选择块大小。
+BLOCKSIZE =  { blocksize   | @  blocksize\_variable  } 指定物理块大小（以字节为单位）。 支持的大小是 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 字节。 对于磁带设备默认为 65536，其他情况为 512。 通常，由于 BACKUP 自动选择适合于设备的块大小，因此不需要此选项。 显式声明块大小将覆盖自动选择块大小。
 
 如果要建立一个计划在 CD-ROM 上进行复制和还原的备份，请指定 BLOCKSIZE=2048。
 
@@ -428,14 +428,14 @@ BLOCKSIZE = { blocksize | @blocksize\_variable } 指定物理块大小（以字�
 
 **数据传输选项**
 
-BUFFERCOUNT = { buffercount | @buffercount\_variable } 指定用于备份操作的 I/O 缓冲区总数。 可以指定任何正整数；但是，较大的缓冲区数可能导致由于 Sqlservr.exe 进程中的虚拟地址空间不足而发生“内存不足”错误。
+BUFFERCOUNT =  { buffercount   | @  buffercount\_variable  } 指定用于备份操作的 I/O 缓冲区总数。 可以指定任何正整数；但是，较大的缓冲区数可能导致由于 Sqlservr.exe 进程中的虚拟地址空间不足而发生“内存不足”错误。
 
-缓冲区使用的总计空间由以下内容确定：buffercount/maxtransfersize。
+缓冲区使用的总计空间由以下内容确定：buffercount/maxtransfersize  。
 
 > [!NOTE]
 > 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)博客。
 
-MAXTRANSFERSIZE **=** { maxtransfersize | **@** maxtransfersize\_variable } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。
+MAXTRANSFERSIZE **=** { maxtransfersize   |  **@** maxtransfersize\_variable  } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。
 
 > [!NOTE]
 > 使用 SQL 编写器服务创建备份时，如果数据库已配置 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md)（文件流）或包含[内存优化文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)，则恢复时的 `MAXTRANSFERSIZE` 应大于或等于创建备份时使用的 `MAXTRANSFERSIZE`。
@@ -448,7 +448,7 @@ MAXTRANSFERSIZE **=** { maxtransfersize | **@** maxtransfersize\_variable } 指�
 
 使用这些选项可以确定是否为备份操作启用了备份校验和，以及备份操作是否在遇到错误时停止。
 
-{ NO_CHECKSUM | CHECKSUM } 控制是否启用备份校验和。
+{ NO_CHECKSUM  | CHECKSUM } 控制是否启用备份校验和。
 
 NO_CHECKSUM 显式禁用备份校验和的生成（以及页校验和的验证）。 这是默认行为。
 
@@ -458,7 +458,7 @@ CHECKSUM 如果此选项已启用并且可用，则指定备份操作将验证�
 
 有关详细信息，请参阅[在备份和还原期间可能的媒体错误](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。
 
-{ STOP_ON_ERROR | CONTINUE_AFTER_ERROR } 控制备份操作在遇到页校验和错误后是停止还是继续。
+{ STOP_ON_ERROR | CONTINUE_AFTER_ERROR  } 控制备份操作在遇到页校验和错误后是停止还是继续。
 
 STOP_ON_ERROR 如果未验证页校验和，则指示 BACKUP 失败。 这是默认行为。
 
@@ -474,7 +474,7 @@ RESTART 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始不起作�
 
 **监视选项**
 
-STATS [ = percentage ] 每当另一个百分比完成时显示一条消息，并用于测量进度。 如果省略百分比，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每完成 10% 就显示一条消息。
+STATS [ =  percentage  ] 每当另一个百分比  完成时显示一条消息，并用于测量进度。 如果省略百分比  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每完成 10% 就显示一条消息。
 
 STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 这是指定百分比的近似值；例如，当 STATS=10 时，如果完成进度为 40%，则该选项可能显示 43%。 对于较大的备份集，这不是问题，因为完成百分比在已完成的 I/O 调用之间变化非常缓慢。
 
@@ -530,7 +530,7 @@ STANDBY **=** _standby_file_name_
 
 备份日志的尾部并使数据库处于只读和 STANDBY 状态。 将 STANDBY 子句写入备用数据（执行回滚，但需带进一步还原选项）。 使用 STANDBY 选项等同于 BACKUP LOG WITH NORECOVERY 后跟 RESTORE WITH STANDBY。
 
-使用备用模式需要一个备用文件，该文件由 standby_file_name 指定，其位置存储于数据库的日志中。 如果指定的文件已经存在，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会覆盖该文件；如果指定的文件不存在，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将创建它。 备用文件将成为数据库的一部分。
+使用备用模式需要一个备用文件，该文件由 standby_file_name  指定，其位置存储于数据库的日志中。 如果指定的文件已经存在，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会覆盖该文件；如果指定的文件不存在，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将创建它。 备用文件将成为数据库的一部分。
 
 该文件将保存对回滚所做的更改，如果要在以后应用 RESTORE LOG 操作，则必须反转这些更改。 必须有足够的磁盘空间供备用文件增长，以使备用文件能够包含数据库中由回滚的未提交事务修改的所有不重复的页。
 
@@ -567,7 +567,7 @@ BACKUP LOG 的 NO_TRUNCATE 选项相当于同时指定 COPY_ONLY 和 CONTINUE_AF
     |部分数据库|[部分备份](../../relational-databases/backup-restore/partial-backups-sql-server.md)涵盖读/写文件组，也可能涵盖一个或多个只读文件或文件组。<br /><br /> 或者，每个部分备份都可以充当由一个或多个[差异部分备份](../../relational-databases/backup-restore/differential-backups-sql-server.md)构成的系列的基础。|
     |文件或文件组|[文件备份](../../relational-databases/backup-restore/full-file-backups-sql-server.md)涵盖一个或多个文件或文件组，仅与包含多个文件组的数据库相关。 在简单恢复模式下，文件备份实质上仅限于只读辅助文件组。<br /> 或者，每个文件备份都可以充当由一个或多个[差异文件备份](../../relational-databases/backup-restore/differential-backups-sql-server.md)构成的系列的基础。|
 
-- 在完整恢复模式或大容量日志恢复模式下，常规备份还包括顺序“事务日志备份”（或称“日志备份”），这是必需的备份。 每个日志备份均涵盖创建备份时处于活动状态的事务日志部分，并包括在上次日志备份中没有备份的所有日志记录。
+- 在完整恢复模式或大容量日志恢复模式下，常规备份还包括顺序“事务日志备份”  （或称“日志备份”  ），这是必需的备份。 每个日志备份均涵盖创建备份时处于活动状态的事务日志部分，并包括在上次日志备份中没有备份的所有日志记录。
 
     若要以增加管理开销为代价最大限度地降低工作丢失的风险，您应该安排对日志进行频繁的备份。 在完整备份之间安排差异备份可减少数据还原后需要还原的日志备份数，从而缩短还原时间。
 
@@ -576,7 +576,7 @@ BACKUP LOG 的 NO_TRUNCATE 选项相当于同时指定 COPY_ONLY 和 CONTINUE_AF
     > [!NOTE]
     > 必须创建完整备份，才能创建第一个日志备份。
 
-- “仅复制备份”是特殊用途的完整备份或日志备份，它独立于正常的常规备份顺序。 若要创建仅复制备份，请在 BACKUP 语句中指定 COPY_ONLY 选项。 有关详细信息，请参阅[仅复制备份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
+- “仅复制备份”  是特殊用途的完整备份或日志备份，它独立于正常的常规备份顺序。 若要创建仅复制备份，请在 BACKUP 语句中指定 COPY_ONLY 选项。 有关详细信息，请参阅[仅复制备份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
 
 ### <a name="Tlog_Truncation"></a> 事务日志截断
 
@@ -596,7 +596,7 @@ BACKUP LOG 的 NO_TRUNCATE 选项相当于同时指定 COPY_ONLY 和 CONTINUE_AF
 ### <a name="Backup_Devices_and_Media_Sets"></a> 使用备份设备和媒体集
 
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>条带媒体集（条带集）中的备份设备
-“条带集”是一组磁盘文件，其中的数据划分为若干块并按固定顺序分发。 条带集中使用的备份设备数目必须保持不变（除非以 `FORMAT` 命令重新初始化介质）。
+“条带集”  是一组磁盘文件，其中的数据划分为若干块并按固定顺序分发。 条带集中使用的备份设备数目必须保持不变（除非以 `FORMAT` 命令重新初始化介质）。
 
 下面的示例将 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 数据库的备份写入使用三个磁盘文件的新条带介质集。
 
@@ -689,7 +689,7 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 
 只要操作系统支持数据库的排序规则，就可以在不同的平台之间执行备份操作，即使这些平台使用不同的处理器类型。
 
-对具有单个数据文件且支持[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的数据库使用备份压缩时，建议使用大于 65536 (64 KB) 的 `MAXTRANSFERSIZE` 设置。
+对具有单个数据文件且支持[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的数据库使用备份压缩时，建议使用大于 65536 (64 KB)  的 `MAXTRANSFERSIZE` 设置。
 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，这为 TDE 加密数据库启用优化的压缩算法，该算法先解密页面，然后将其压缩并再次对其进行加密。 如果使用 `MAXTRANSFERSIZE = 65536` (64 KB)，对使用 TDE 加密的数据库执行备份压缩时会直接压缩加密的页面，且可能不会得到良好的压缩比率。 有关详细信息，请参阅[支持 TDE 的数据库的备份压缩](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)。
 
 > [!NOTE]
@@ -724,13 +724,13 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 - [backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)
 - [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)
 
-在执行还原操作时，如果尚未在 msdb 数据库中记录备份集，则可以修改备份历史记录表。
+在执行还原操作时，如果尚未在 msdb  数据库中记录备份集，则可以修改备份历史记录表。
 
 ## <a name="security"></a>Security
 
 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，`PASSWORD` 和 `MEDIAPASSWORD` 选项不可再用于创建备份。 仍可以还原使用密码创建的备份。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。
 
@@ -749,6 +749,7 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 - G. [备份到现有镜像媒体集](#existing_mirrored_media_set)
 - H. [在新的介质集中创建压缩备份](#creating_compressed_backup_new_media_set)
 - I. [备份到 Microsoft Azure Blob 存储服务](#url)
+- J. [跟踪备份语句的进度](#backup_progress)
 
 > [!NOTE]
 > 备份操作指南主题还包含其他示例。 有关详细信息，请参阅[备份概述](../../relational-databases/backup-restore/backup-overview-sql-server.md)。
@@ -895,6 +896,17 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
+### <a name="backup_progress"></a> J. 跟踪备份语句的进度
+
+以下查询返回有关当前正在运行的备份语句的信息：
+```sql
+SELECT query = a.text, start_time, percent_complete,
+    eta = dateadd(second,estimated_completion_time/1000, getdate())
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a
+WHERE r.command LIKE 'BACKUP%'
+```
+
 ## <a name="see-also"></a>另请参阅
 
 - [备份设备](../../relational-databases/backup-restore/backup-devices-sql-server.md)
@@ -919,7 +931,7 @@ WITH STATS = 5;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL 数据库<br />托管实例\*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL 数据库<br />托管实例\*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -968,9 +980,9 @@ DATABASE 指定一个完整数据库备份。 在数据库备份过程中，托�
 > [!IMPORTANT]
 > 在托管实例上创建的数据库备份只能在另一个托管实例上还原。 无法将其还原到 SQL Server 本地实例（类似于无法将 SQL Server 2016 数据库的备份还原到 SQL Server 2012 实例）。
 
-还原由 BACKUP DATABASE（“数据备份”）创建的备份时，将还原整个备份。 若要从 Azure SQL 数据库托管实例自动备份还原，请参阅 [SQL 数据库还原](https://docs.microsoft.com/azure/sql-database/sql-database-restore)
+还原由 BACKUP DATABASE（“数据备份”  ）创建的备份时，将还原整个备份。 若要从 Azure SQL 数据库托管实例自动备份还原，请参阅 [SQL 数据库还原](https://docs.microsoft.com/azure/sql-database/sql-database-restore)
 
-{ database_name | @database\_name\_var } 是备份完整的数据库时所用的源数据库。 如果作为变量 (@database\_name\_var) 提供，则可以将此名称指定为字符串常量 (@database\_name\_var=databasename) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量。
+{ database_name   | @  database\_name\_var  } 是备份完整的数据库时所用的源数据库。 如果作为变量 (@  database\_name\_var  ) 提供，则可以将此名称指定为字符串常量 (@  database\_name\_var  =database  name  ) 或指定为字符串数据类型（ntext  或 text  数据类型除外）的变量。
 
 有关详细信息，请参阅[完整文件备份](../../relational-databases/backup-restore/full-file-backups-sql-server.md)和[备份文件和文件组](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)。
 
@@ -981,7 +993,7 @@ TO URL
 > [!IMPORTANT]
 > 备份到 URL 时，若要备份到多个设备，必须使用共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。
 
-n 一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
+n  一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。
 
 ### <a name="with-optionsspecifies-options-to-be-used-with-a-backup-operation"></a>WITH 选项 指定要用于备份操作的选项
 
@@ -1002,7 +1014,7 @@ ENCRYPTION 用于指定将备份加密。 可指定加密备份所用的加密�
 
 **备份集选项**
 
-COPY_ONLY 指定备份为“仅复制备份”，该备份不影响正常的备份顺序。 仅复制备份是独立于 Azure SQL 数据库自动备份创建的。 有关详细信息，请参阅[仅复制备份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
+COPY_ONLY 指定备份为“仅复制备份”  ，该备份不影响正常的备份顺序。 仅复制备份是独立于 Azure SQL 数据库自动备份创建的。 有关详细信息，请参阅[仅复制备份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
 
 { COMPRESSION | NO_COMPRESSION } 指定是否为此备份执行[备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)，该设置将替代服务器级默认设置。
 
@@ -1014,26 +1026,26 @@ COMPRESSION 显式启用备份压缩。
 
 NO_COMPRESSION 显式禁用备份压缩。
 
-DESCRIPTION = { 'text' | @text\_variable } 指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。
+DESCRIPTION =  { '  text  '   | @  text\_variable  } 指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。
 
-NAME = { backup_set_name | @backup\_set\_var } 指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。
+NAME =  { backup_set_name   | @  backup\_set\_var  } 指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。
 
-MEDIADESCRIPTION = { text | @text\_variable } 指定媒体集的自由格式文本说明，最多为 255 个字符。
+MEDIADESCRIPTION =  { text  | @  text\_variable  } 指定媒体集的自由格式文本说明，最多为 255 个字符。
 
-MEDIANAME = { media_name | @media\_name\_variable } 指定整个备份媒体集的媒体名称。 介质名称的长度不能多于 128 个字符，如果指定了 `MEDIANAME`，则该名称必须匹配备份卷上已存在的先前指定的介质名称。 如果未指定该选项或指定了 SKIP 选项，将不会对介质名称进行验证检查。
+MEDIANAME =  { media_name   | @  media\_name\_variable  } 指定整个备份媒体集的媒体名称。 介质名称的长度不能多于 128 个字符，如果指定了 `MEDIANAME`，则该名称必须匹配备份卷上已存在的先前指定的介质名称。 如果未指定该选项或指定了 SKIP 选项，将不会对介质名称进行验证检查。
 
-BLOCKSIZE = { blocksize | @blocksize\_variable } 指定物理块大小（以字节为单位）。 支持的大小是 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 字节。 对于磁带设备默认为 65536，其他情况为 512。 通常，由于 BACKUP 自动选择适合于设备的块大小，因此不需要此选项。 显式声明块大小将覆盖自动选择块大小。
+BLOCKSIZE =  { blocksize   | @  blocksize\_variable  } 指定物理块大小（以字节为单位）。 支持的大小是 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 字节。 对于磁带设备默认为 65536，其他情况为 512。 通常，由于 BACKUP 自动选择适合于设备的块大小，因此不需要此选项。 显式声明块大小将覆盖自动选择块大小。
 
 **数据传输选项**
 
-BUFFERCOUNT = { buffercount | @buffercount\_variable } 指定用于备份操作的 I/O 缓冲区总数。 可以指定任何正整数；但是，较大的缓冲区数可能导致由于 Sqlservr.exe 进程中的虚拟地址空间不足而发生“内存不足”错误。
+BUFFERCOUNT =  { buffercount   | @  buffercount\_variable  } 指定用于备份操作的 I/O 缓冲区总数。 可以指定任何正整数；但是，较大的缓冲区数可能导致由于 Sqlservr.exe 进程中的虚拟地址空间不足而发生“内存不足”错误。
 
-缓冲区使用的总计空间由以下内容确定：buffercount/maxtransfersize。
+缓冲区使用的总计空间由以下内容确定：buffercount/maxtransfersize  。
 
 > [!NOTE]
 > 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)博客。
 
-MAXTRANSFERSIZE **=** { maxtransfersize | **@** maxtransfersize\_variable } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。
+MAXTRANSFERSIZE **=** { maxtransfersize   |  **@** maxtransfersize\_variable  } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。
 
 > [!NOTE]
 > 对于具有单个数据文件且支持[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的数据库，默认 `MAXTRANSFERSIZE` 为 65536 (64 KB)。 对于非 TDE 加密数据库，使用备份到 DISK 时，默认 `MAXTRANSFERSIZE` 为 1048576 (1 MB)，使用 VDI 或 TAPE.时为 65536 (64 KB)。
@@ -1043,7 +1055,7 @@ MAXTRANSFERSIZE **=** { maxtransfersize | **@** maxtransfersize\_variable } 指�
 
 使用这些选项可以确定是否为备份操作启用了备份校验和，以及备份操作是否在遇到错误时停止。
 
-{ NO_CHECKSUM | CHECKSUM } 控制是否启用备份校验和。
+{ NO_CHECKSUM  | CHECKSUM } 控制是否启用备份校验和。
 
 NO_CHECKSUM 显式禁用备份校验和的生成（以及页校验和的验证）。 这是默认行为。
 
@@ -1053,7 +1065,7 @@ CHECKSUM 如果此选项已启用并且可用，则指定备份操作将验证�
 
 有关详细信息，请参阅[在备份和还原期间可能的媒体错误](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。
 
-{ STOP_ON_ERROR | CONTINUE_AFTER_ERROR } 控制备份操作在遇到页校验和错误后是停止还是继续。
+{ STOP_ON_ERROR | CONTINUE_AFTER_ERROR  } 控制备份操作在遇到页校验和错误后是停止还是继续。
 
 STOP_ON_ERROR 如果未验证页校验和，则指示 BACKUP 失败。 这是默认行为。
 
@@ -1069,7 +1081,7 @@ RESTART 不起作用。 此版本接受该选项，以便与以前版本的 SQL 
 
 **监视选项**
 
-STATS [ = percentage ] 每当另一个百分比完成时显示一条消息，并用于测量进度。 如果省略百分比，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每完成 10% 就显示一条消息。
+STATS [ =  percentage  ] 每当另一个百分比  完成时显示一条消息，并用于测量进度。 如果省略百分比  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每完成 10% 就显示一条消息。
 
 STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 这是指定百分比的近似值；例如，当 STATS=10 时，如果完成进度为 40%，则该选项可能显示 43%。 对于较大的备份集，这不是问题，因为完成百分比在已完成的 I/O 调用之间变化非常缓慢。
 
@@ -1079,9 +1091,9 @@ STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 �
 
 ## <a name="security"></a>Security
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
-默认情况下，为 sysadmin 固定服务器角色以及 db_owner 和 db_backupoperator 固定数据库角色的成员授予 BACKUP DATABASE 权限。
+默认情况下，为 sysadmin 固定服务器角色以及 db_owner 和 db_backupoperator 固定数据库角色的成员授予 BACKUP DATABASE 权限    。
 
 URL 的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。
 
@@ -1104,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
 
 &nbsp;
 
@@ -1141,9 +1153,9 @@ BACKUP DATABASE database_name
 
 ## <a name="arguments"></a>参数
 
-database_name 要在其中创建备份的数据库的名称。 数据库既可以是 master 数据库，也可以是用户数据库。
+database_name  要在其中创建备份的数据库的名称。 数据库既可以是 master 数据库，也可以是用户数据库。
 
-TO DISK = '\\\\UNC_path\\backup_directory' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将写入备份文件的网络路径和目录。 例如，“\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup”。
+TO DISK = '\\\\UNC_path  \\backup_directory  ' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将写入备份文件的网络路径和目录。 例如，“\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup”。
 
 - 备份目录名称的路径必须已存在，并且必须指定为完全限定的通用命名约定 (UNC) 路径。
 - 备份目录 *backup_directory* 在运行备份命令前不得存在。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将创建备份目录。
@@ -1151,11 +1163,11 @@ TO DISK = '\\\\UNC_path\\backup_directory' [!INCLUDE[ssPDW](../../includes/sspdw
 - UNC 路径和备份目录名称的最大长度为 200 个字符。
 - 必须以 IP 地址的形式指定服务器或主机。 不能以主机名称或服务器名称的形式指定。
 
-DESCRIPTION = 'text' 定备份的文字描述。 文本的最大长度为 255 个字符。
+DESCRIPTION = '  text  '  定备份的文字描述。 文本的最大长度为 255 个字符。
 
 描述存储在元数据中，在使用 RESTORE HEADERONLY 还原备份标头时显示。
 
-NAME = 'backup \_name' 指定备份集的名称。 备份名称可以与数据库名称不同。
+NAME = '  backup \_name  '  指定备份集的名称。 备份名称可以与数据库名称不同。
 
 - 名称最长可达 128 个字符。
 - 不能包含路径。
@@ -1172,7 +1184,7 @@ DIFFERENTIAL 指定执行用户数据库的差异备份。 如果省略，默认
 
 `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 要求具有 **BACKUP DATABASE** 权限，或者在 **db_backupoperator** 固定数据库角色中具有成员身份。 添加到 **db_backupoperator** 固定数据库角色的普通用户无法备份 master 数据库。 仅 **sa**、构造管理员或 **sysadmin** 固定服务器角色的成员可备份 master 数据库。
 
@@ -1240,7 +1252,7 @@ BACKUP DATABASE 错误会在以下情况中发生：
 
 在 DATABASE 对象上使用 ExclusiveUpdate 锁。
 
-## <a name="Security"></a> 安全性
+## <a name="Security"></a> Security
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 备份不存储在设备上。 因此，IT 团队负责管理备份安全的所有方面。 例如，这包括管理备份数据的安全、用于存储备份的服务器的安全和将备份服务器连接到 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 设备的网络基础结构的安全。
 

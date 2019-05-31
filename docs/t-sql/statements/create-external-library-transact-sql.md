@@ -1,7 +1,7 @@
 ---
-title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d4c78e14dbf3c594541a1166264cb911a59467d
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 6bfaeb323e940ca2d289ddae58aaf679bed9fffa
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582926"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993719"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "59582926"
 从指定的字节流或文件路径上传 R、Python 或 Java 包文件至数据库。 此语句充当一种通用机制，可供数据库管理员上传任何新的外部语言运行时和 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的 OS 平台所需的项目。 
 
 > [!NOTE]
-> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 CTP 2.4 中支持 Windows 和 Linux 平台上的 R、Python 和 Java。
+> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 CTP 3.0 中支持 Windows 和 Linux 平台上的 R、Python 和外部语言。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 语法
@@ -53,9 +53,7 @@ WITH ( LANGUAGE = <language> )
 
 <client_library_specifier> :: = 
 {
-      '[\\computer_name\]share_name\[path\]manifest_file_name'  
-    | '[local_path\]manifest_file_name'  
-    | '<relative_path_in_external_data_source>'  
+    '[file_path\]manifest_file_name'  
 } 
 
 <library_bits> :: =  
@@ -74,7 +72,7 @@ WITH ( LANGUAGE = <language> )
 {
       'R'
     | 'Python'
-    | 'Java'
+    | <external_language>
 }
 
 ```
@@ -97,9 +95,7 @@ WITH ( LANGUAGE = 'R' )
 
 <client_library_specifier> :: = 
 {
-      '[\\computer_name\]share_name\[path\]manifest_file_name'  
-    | '[local_path\]manifest_file_name'  
-    | '<relative_path_in_external_data_source>'  
+    '[file_path\]manifest_file_name'
 } 
 
 <library_bits> :: =  
@@ -114,7 +110,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-将库添加到作用域为该用户的数据库中。 在特定用户或所有者的上下文中，库名称必须是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库 `ggplot2`。 不过，如果 RUser1 要上传新版 `ggplot2`，第二个实例要么必须以不同方式命名，要么必须替换现有库。 
+将库添加到作用域为该用户的数据库中。 在特定用户或所有者的上下文中，库名称必须是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库 `ggplot2`   。 不过，如果 RUser1  要上传新版 `ggplot2`，第二个实例要么必须以不同方式命名，要么必须替换现有库。 
 
 不能随意分配库名称；库名称应与在外部脚本中加载库时所需的名称相同。
 
@@ -124,7 +120,7 @@ WITH ( LANGUAGE = 'R' )
 
 对于数据库和运行时，数据库所有者所拥有的库均视为全局性的库。 换言之，数据库所有者可以创建库，而这些库包含一组由许多用户共享的公共库或包。 当由用户而不是 `dbo` 用户创建外部库时，该外部库便由该用户专用。
 
-当用户 **RUser1** 执行外部脚本时，`libPath` 值可包含多个路径。 第一个路径始终为数据库所有者创建的共享库的路径。 `libPath` 的第二部分指定包含由 RUser1 单独上传的包的路径。
+当用户 **RUser1** 执行外部脚本时，`libPath` 值可包含多个路径。 第一个路径始终为数据库所有者创建的共享库的路径。 `libPath` 的第二部分指定包含由 RUser1 单独上传的包的路径  。
 
 **file_spec**
 
@@ -156,14 +152,15 @@ WITH ( LANGUAGE = 'R' )
 
 **language**
 
-指定包的语言。 该值可以是 `R`、`Python` 或 `Java`。
+指定包的语言。 值可以是 `R`、`Python` 或[创建的外部语言](create-external-language-transact-sql.md)的名称。
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-对于 R 语言，使用文件时，必须使用 Windows 的 .ZIP 扩展名以压缩存档文件的形式准备包。 在 SQL Server 2017 中，仅支持 Windows 平台。 
+对于 R 语言，使用文件时，必须使用 Windows 的 .ZIP 扩展名以压缩存档文件的形式准备包。 在 SQL Server 2017 中，仅支持 Windows 平台。
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 对于 R 语言，使用文件时，必须使用 .ZIP 扩展名以压缩存档文件的形式准备包。  
 
@@ -176,9 +173,19 @@ WITH ( LANGUAGE = 'R' )
 
 ## <a name="permissions"></a>权限
 
-需要 `CREATE EXTERNAL LIBRARY` 权限。 默认情况下，dbo 用户或担任 db_owner 角色的任何成员都有权创建外部库。 对于其他所有用户，必须使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 语句显式授予他们权限，同时将 CREATE EXTERNAL LIBRARY 指定为特权。
+需要 `CREATE EXTERNAL LIBRARY` 权限。 默认情况下，dbo  用户或担任 db_owner  角色的任何成员都有权创建外部库。 对于其他所有用户，必须使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 语句显式授予他们权限，同时将 CREATE EXTERNAL LIBRARY 指定为特权。
 
-更改库需要单独的权限，`ALTER ANY EXTERNAL LIBRARY`。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在 SQL Server 2019 中，除了“CREATE EXTERNAL LIBRARY”权限之外，用户还需要外部语言的引用权限才能为该外部语言创建外部库。
+
+```sql
+GRANT REFERENCES ON EXTERNAL LANGUAGE::Java to user
+GRANT CREATE EXTERNAL LIBRARY to user
+```
+
+::: moniker-end
+
+更改任何库都需要单独的权限，`ALTER ANY EXTERNAL LIBRARY`。
 
 若要通过使用文件路径创建外部库，用户必须使用经过 Windows 身份验证的登录名或必须是 sysadmin 固定服务器角色的成员。
 
@@ -207,7 +214,7 @@ EXEC sp_execute_external_script
 
 ### <a name="b-installing-packages-with-dependencies"></a>B. 安装具有依赖项的包
 
-如果想要安装的包有任何依赖项，务必要分析第一级和第二级依赖项，并在尝试安装目标包之前，确保所需的所有包都可用。
+如果想要安装的包有任何依赖项，务必要分析第一级和第二级依赖项，并在尝试安装目标包之前，确保所需的所有包都可用  。
 
 例如，假设想要安装新包 `packageA`：
 
@@ -216,7 +223,7 @@ EXEC sp_execute_external_script
 
 若要成功安装 `packageA`，则必须在将 `packageA` 添加到 SQL Server 的同时为 `packageB` 和 `packageC` 创建库。 同时请务必检查所需的包版本。
 
-在实践中，常用包的依赖项通常比简单示例复杂得多。 例如，ggplot2 可能需要超过 30 个包，而这些包可能还需要服务器上没有的其他包。 任何缺少的包或错误的包版本都可能会导致安装失败。
+在实践中，常用包的依赖项通常比简单示例复杂得多。 例如，ggplot2  可能需要超过 30 个包，而这些包可能还需要服务器上没有的其他包。 任何缺少的包或错误的包版本都可能会导致安装失败。
 
 由于仅通过查看程序包清单可能很难确定所有依赖项，因此建议使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 等包，以标识成功完成安装可能需要的所有包。
 

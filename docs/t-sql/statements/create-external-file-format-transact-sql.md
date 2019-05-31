@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 4018857b93a828e5ed756a80ba23f425a26790c8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161636"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175025"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -111,7 +111,7 @@ WITH (
    -   ORC  
    指定优化行纵栏表 (ORC) 格式。 此选项需要外部 Hadoop 群集上的 Hive 版本 0.11 或更高版本。 在 Hadoop 中，ORC 文件格式可提供比 RCFILE 文件格式更好的压缩和性能。
 
-   -   RCFILE（与 SERDE_METHOD = SERDE_method 结合使用）指定记录纵栏表文件格式 (RcFile)。 此选项需要指定 Hive 序列化程序和反序列化程序 (SerDe) 方法。 如果在 Hadoop 中使用 Hive/HiveQL 查询 RC 文件，则此要求是相同的。 请注意，SerDe 方法区分大小写。
+   -   RCFILE（与 SERDE_METHOD = SERDE_method  结合使用）指定记录纵栏表文件格式 (RcFile)。 此选项需要指定 Hive 序列化程序和反序列化程序 (SerDe) 方法。 如果在 Hadoop 中使用 Hive/HiveQL 查询 RC 文件，则此要求是相同的。 请注意，SerDe 方法区分大小写。
 
    使用 PolyBase 支持的两种 SerDe 方法指定 RCFile 的示例。
 
@@ -244,7 +244,7 @@ PolyBase 仅使用自定义日期格式来导入数据。 它不使用自定义�
  将所有缺失值存储为 NULL。 在带分隔符的文本文件中使用 NULL 一词存储的任何 NULL 值都会作为字符串“NULL”导入。
   
    Encoding = {'UTF8' | 'UTF16'}  
- 在 Azure SQL 数据仓库中，PolyBase 可以读取 UTF8 和 UTF16-LE 编码的带分隔符的文本文件。 在 SQL Server 和 PDW 中，PolyBase 不支持读取 UTF16 编码的文件。
+ 在 Azure SQL 数据仓库和 PDW (APS CU7.4) 中，PolyBase 可以读取 UTF8 和 UTF16-LE 编码的带分隔符的文本文件。 在 SQL Server 中，PolyBase 不支持读取 UTF16 编码的文件。
   
  DATA_COMPRESSION = *data_compression_method*  
  为外部数据指定数据压缩方法。 未指定 DATA_COMPRESSION 时，默认值是未压缩的数据。
@@ -305,7 +305,7 @@ PolyBase 仅使用自定义日期格式来导入数据。 它不使用自定义�
 ## <a name="examples"></a>示例  
   
 ### <a name="a-create-a-delimitedtext-external-file-format"></a>A. 创建 DELIMITEDTEXT 外部文件格式  
- 此示例为带分隔符的文本文件创建名为 textdelimited1 的外部文件格式。 为 FORMAT\_OPTIONS 列出的选项指定应使用竖线字符“|”分隔文件中的字段。 文本文件也使用 Gzip 编解码器进行压缩。 如果未指定 DATA\_COMPRESSION，则文本文件未压缩。
+ 此示例为带分隔符的文本文件创建名为 textdelimited1  的外部文件格式。 为 FORMAT\_OPTIONS 列出的选项指定应使用竖线字符“|”分隔文件中的字段。 文本文件也使用 Gzip 编解码器进行压缩。 如果未指定 DATA\_COMPRESSION，则文本文件未压缩。
   
  对于带分隔符的文本文件，数据压缩方法可以是默认编解码器“org.apache.hadoop.io.compress.DefaultCodec”或 Gzip 编解码器“org.apache.hadoop.io.compress.GzipCodec”。
   

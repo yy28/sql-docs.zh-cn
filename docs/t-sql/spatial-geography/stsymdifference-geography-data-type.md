@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STSymDifference (geography Data Type)
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9767a72fea55abb732da9351c3a9c7fb242e5447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc735e71a286d5caca14c7e54b4ea8128feeda2b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825845"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939127"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,18 +38,18 @@ ms.locfileid: "47825845"
 ```  
   
 ## <a name="arguments"></a>参数  
- other_geography  
- 调用 STSymDistance() 的实例以外的另一个 geography 实例。  
+ other_geography   
+ 调用 STSymDistance() 的实例以外的另一个 geography 实例  。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null。  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null  。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能的结果集已扩展到 FullGlobe 实例。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能的结果集已扩展到 FullGlobe 实例  。  
   
  只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   

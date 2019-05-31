@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - STCurveToLine method (geometry)
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d657869e71b93d5cb5d915ab15b2751c88e6eacf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b60bdcb684fdb79fa15febb71d88def7573e04cd
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689415"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939031"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回包含圆弧线段的 geometry 实例的多边形近似值。
+返回包含圆弧线段的 geometry 实例的多边形近似值  。
   
 ## <a name="syntax"></a>语法  
   
@@ -35,20 +35,20 @@ ms.locfileid: "47689415"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- 为空的 geometry 实例变量返回空的 GeometryCollection 实例，为未初始化的 geometry 变量返回 NULL。  
+ 为空的 geometry 实例变量返回空的 GeometryCollection 实例，为未初始化的 geometry 变量返回 NULL     。  
   
  该方法返回的多边形近似值取决于用于调用该方法的 **geometry** 实例：  
   
--   为 CircularString 或 CompoundCurve 实例返回 LineString 实例。  
+-   为 CircularString 或 CompoundCurve 实例返回 LineString 实例    。  
   
--   为 CurvePolygon 实例返回 Polygon 实例。  
+-   为 CurvePolygon 实例返回 Polygon 实例   。  
   
--   如果 geometry 实例不是 CircularString、CompoundCurve 或 CurvePolygon 实例，则返回该实例的副本。 例如，`STCurveToLine` 方法为属于 **Point** 实例的 **geometry** 实例返回 **Point** 实例。  
+-   如果 geometry 实例不是 CircularString、CompoundCurve 或 CurvePolygon 实例，则返回该实例的副本     。 例如，`STCurveToLine` 方法为属于 **Point** 实例的 **geometry** 实例返回 **Point** 实例。  
   
  与 SQL/MM 规范不同，`STCurveToLine` 方法不使用 Z 坐标值来计算多边形近似值。 该方法忽略执行调用的 **geometry** 实例中存在的任何 Z 坐标值。  
   

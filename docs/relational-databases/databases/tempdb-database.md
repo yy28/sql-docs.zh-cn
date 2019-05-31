@@ -2,7 +2,7 @@
 title: tempdb 数据库 | Microsoft Docs
 description: 本主题提供有关在 SQL Server 和 Azure SQL 数据库中配置和使用 tempdb 数据库的详细信息
 ms.custom: P360
-ms.date: 02/14/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,21 +18,21 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65a1afa2bf72c53f2ce656afb7f397dd10be9ef6
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265364"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994240"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-tempdb 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或 SQL 数据库的所有用户使用。 tempdb 用于保留：  
+tempdb 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或 SQL 数据库的所有用户使用  。 tempdb 用于保留：  
   
-- 显式创建的临时用户对象，例如：全局或局部临时表及索引、临时存储过程、表变量、表值函数返回的表或游标。  
-- 由数据库引擎创建的内部对象。 其中包括：
+- 显式创建的临时用户对象  ，例如：全局或局部临时表及索引、临时存储过程、表变量、表值函数返回的表或游标。  
+- 由数据库引擎创建的内部对象  。 其中包括：
   - 用于储存假脱机、游标、排序和临时大型对象 (LOB) 存储的中间结果的工作表。
   - 用于哈希联接或哈希聚合操作的工作文件。
   - 用于创建或重新生成索引等操作（如果指定了 SORT_IN_TEMPDB）的中间排序结果，或者某些 GROUP BY、ORDER BY 或 UNION 查询的中间排序结果。
@@ -43,7 +43,7 @@ tempdb 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVers
   > Azure SQL 数据库单一数据库和弹性池支持存储在 tempdb 中并且作用域为数据库级别的全局临时表和全局临时存储过程。 全局临时表和全局临时存储过程供同一 Azure SQL 数据库中的所有用户会话共享。 其他 Azure SQL 数据库中的用户会话无法访问全局临时表。 有关详细信息，请参阅[数据库作用域内全局临时表（Azure SQL 数据库）](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)与 SQL Server 支持相同的临时对象。
   > 对于 Azure SQL 数据库单一数据库和弹性池，仅 master 数据库和 tempdb 数据库适用。 有关详细信息，请参阅[什么是 Azure SQL 数据库服务器](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)。 有关 Azure SQL 数据库单一数据库和弹性池上下文中 tempdb 的讨论，请参阅 [Azure SQL 数据库单一数据库和弹性池中的 tempdb 数据库](#tempdb-database-in-sql-database)。 对于 Azure SQL 数据库托管实例，所有系统数据库都适用。
 
-- 版本存储区是数据页的集合，它包含支持使用行版本控制的功能所需的数据行。 共有两个版本存储区：公用版本存储区和联机索引生成版本存储区。 版本存储区包含：
+- 版本存储区  是数据页的集合，它包含支持使用行版本控制的功能所需的数据行。 共有两个版本存储区：公用版本存储区和联机索引生成版本存储区。 版本存储区包含：
   - 由使用已提交读（使用行版本控制隔离或快照隔离事务）的数据库中数据修改事务生成的行版本。  
   - 由数据修改事务为实现联机索引操作、多个活动的结果集 (MARS) 以及 AFTER 触发器等功能而生成的行版本。  
   
@@ -51,7 +51,7 @@ tempdb 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVers
   
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server 中 tempdb 的物理属性
 
-下表列出了 SQL Server 中 tempdb 数据和日志文件的初始配置值（基于模型数据库的默认设置）。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
+下表列出了 SQL Server 中 tempdb  数据和日志文件的初始配置值（基于模型数据库的默认设置）。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
   
 |文件|逻辑名称|物理名称|初始大小|文件增长|  
 |----------|------------------|-------------------|------------------|-----------------|  
@@ -145,10 +145,10 @@ tempdb 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVers
 - 添加文件组
 - 备份或还原数据库
 - 更改排序规则。 默认排序规则为服务器排序规则
-- 更改数据库所有者。 tempdb 的所有者是 sa
+- 更改数据库所有者。 tempdb  的所有者是 sa 
 - 创建数据库快照
 - 删除数据库
-- 从数据库中删除 guest 用户
+- 从数据库中删除 guest  用户
 - 启用变更数据捕获
 - 参与数据库镜像
 - 删除主文件组、主数据文件或日志文件
@@ -158,7 +158,7 @@ tempdb 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVers
 - 将数据库设置为 OFFLINE
 - 将数据库或主文件组设置为 READ_ONLY
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 任何用户都可以在 tempdb 中创建临时对象。 用户只能访问自己的对象，除非他们获得更多的权限。 可以撤消对 tempdb 的连接权限以阻止用户使用 tempdb，但是不建议这样做，因为一些例行操作需要使用 tempdb。  
 
@@ -202,19 +202,56 @@ GO
 
 ## <a name="performance-improvements-in-tempdb-for-sql-server"></a>SQL Server 中 tempdb 的性能提高
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，已通过以下方式进一步优化 tempdb 性能：  
+从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，已通过以下方式进一步优化 tempdb  性能：  
   
 - 已缓存的临时表和表变量。 缓存允许删除和创建临时对象的操作非常快速地执行，并减少页分配的争用问题。  
 - 改进了分配页闩锁协议，减少了所用 UP（更新）闩锁的数量。  
-- 减少了 tempdb 的日志记录开销，从而减少了 tempdb 日志文件的磁盘 I/O 带宽消耗。  
-- 在新的实例安装过程中，安装程序会添加多个 tempdb 数据文件。 可以使用“数据库引擎配置”部分中新增的 UI 输入控件和命令行参数 /SQLTEMPDBFILECOUNT 来完成此任务。 默认情况下，安装程序添加的 tempdb 数据文件数为逻辑处理器计数或 8，以较小者为准。  
-- 如果有多个 tempdb 数据文件，那么所有文件都会同时自动增长相同的量，具体取决于增长设置。 不再需要跟踪标志 1117。  
+- 减少了 tempdb 的日志记录开销，从而减少了 tempdb 日志文件的磁盘 I/O 带宽消耗   。  
+- 在新的实例安装过程中，安装程序会添加多个 tempdb 数据文件。 可以使用“数据库引擎配置”  部分中新增的 UI 输入控件和命令行参数 /SQLTEMPDBFILECOUNT 来完成此任务。 默认情况下，安装程序添加的 tempdb 数据文件数为逻辑处理器计数或 8，以较小者为准。  
+- 如果有多个 tempdb  数据文件，那么所有文件都会同时自动增长相同的量，具体取决于增长设置。 不再需要跟踪标志 1117。  
 - **tempdb** 中的所有分配使用统一盘区。 不再需要[跟踪标志 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
 - 对于主文件组，AUTOGROW_ALL_FILES 属性已启用，且不能修改此属性。
 
 要详细了解 tempdb 中的性能改进，请参阅以下博客文章：
 
 [TEMPDB - 文件和跟踪标志以及更新，天哪！](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
+## <a name="memory-optimized-tempdb-metadata"></a>内存优化 TempDB 元数据
+
+对于 SQL Server 上运行的许多工作负载，TempDB 元数据争用历来是可伸缩性的瓶颈。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../in-memory-database.md)功能内存优化 tempdb 元数据，它可有效消除此瓶颈，并为 tempdb 繁重的工作负载解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 要选择加入此新功能，请使用以下脚本：
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+```
+
+此配置更改需要重新启动服务才能生效。
+
+这个实现有一些限制，需要注意：
+
+1. 该功能的打开和关闭不是动态的。 由于需要对 tempdb 结构进行内部更改，因此需要重新启动才能启用或禁用该功能。
+2. 单个事务可能无法访问多个数据库中的内存优化表。  这意味着涉及用户数据库中内存优化表的任何事务都无法访问同一事务中的 TempDB 系统视图。  如果尝试在与用户数据库中内存优化表相同的事务中访问 TempDB 系统视图，将收到以下错误：
+    ```
+    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+    ```
+    例如：
+    ```
+    BEGIN TRAN
+    SELECT *
+    FROM tempdb.sys.tables  -----> Creates a user In-Memory OLTP Transaction on Tempdb
+    INSERT INTO <user database>.<schema>.<mem-optimized table>
+    VALUES (1)  ----> Attempts to create user In-Memory OLTP transaction but will fail
+    COMMIT TRAN
+    ```
+3. 针对内存优化表的查询不支持锁定和隔离提示，因此针对内存优化 TempDB 目录视图的查询将不会遵循锁定和隔离提示。 与 SQL Server 中的其他系统目录视图一样，针对系统视图的所有事务都将处于 READ COMMITTED（或在本例中为 READ COMMITTED SNAPSHOT）隔离。
+4. 启用了内存优化的 tempdb 元数据时，临时表上的列存储索引可能会存在一些问题。 对于此预览版，最好在使用内存优化 tempdb 元数据时避免在临时表上使用列存储索引。
+
+> [!NOTE] 
+> 这些限制仅适用于引用 TempDB 系统视图的情况，如果需要，可在访问用户数据库中内存优化表的同一事务中创建临时表。
+
+可以使用以下 T-SQL 命令验证 TempDB 是否经过内存优化：
+```
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
+```
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 容量规划
 

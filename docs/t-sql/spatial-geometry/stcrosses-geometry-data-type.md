@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STCrosses (geometry Data Type)
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 54f96265aabdbdd491cf2a0b49a0c8a67df999ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7588d3a335785dd80a5b41cd17734b207852faae
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741768"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939039"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "47741768"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 将与调用 `STCrosses()` 的实例进行比较的另一个 geometry 实例。  
+ 将与调用 `STCrosses()` 的实例进行比较的另一个 geometry 实例  。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
- CLR 返回类型：SqlBoolean  
+ CLR 返回类型：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  如果同时满足以下两个条件，则表示两个 **geometry** 实例相交：  
@@ -53,7 +53,7 @@ ms.locfileid: "47741768"
   
 -   交集发生在两个源 **geometry** 实例的内部。  
   
- 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STCrosses()` 来测试两个 `geometry` 实例，以查看它们是否相交。  

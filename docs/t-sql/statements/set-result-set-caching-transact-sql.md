@@ -15,12 +15,12 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cd0141a6fbd21c11f7401fa2c45dae0cc75b983d
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 0b932c1fa3aa8575f8f12ef5f164841788f74c1a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65561490"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948749"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT_SET_CACHING (Transact-SQL)
 
@@ -37,13 +37,15 @@ SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
 ## <a name="remarks"></a>Remarks  
+
+> [!Note]
+> 虽然此功能正在推广到所有区域，但请检查部署到实例的版本以及最新的 [Azure SQL DW 发行说明](/azure/sql-data-warehouse/release-notes-10-0-10106-0)以了解功能可用性。
   
-连接到 master 数据库时，必须运行此命令。  对此数据库设置的更改立即生效。  缓存查询结果集会产生存储成本。 在你为数据库禁用结果缓存后，以前保留的结果缓存会立即从 Azure SQL 数据仓库存储中删除。 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest
-) 中引入了新列 is_result_set_caching_on，用于显示数据库的结果缓存设置。  
+连接到 master 数据库时，必须运行此命令。  对此数据库设置的更改立即生效。  缓存查询结果集会产生存储成本。 在你为数据库禁用结果缓存后，以前保留的结果缓存会立即从 Azure SQL 数据仓库存储中删除。 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest) 中引入了新列 is_result_set_caching_on，用于显示数据库的结果缓存设置。  
 
-ON 指定在 Azure SQL 数据仓库存储中缓存从此数据库返回的查询结果集。
+ON  指定在 Azure SQL 数据仓库存储中缓存从此数据库返回的查询结果集。
 
-OFF 指定不在 Azure SQL 数据仓库存储中缓存从此数据库返回的查询结果集。
+OFF  指定不在 Azure SQL 数据仓库存储中缓存从此数据库返回的查询结果集。
 
 用户可以使用特定的 request_id 来查询 [sys.pdw_request_steps](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql?view=azure-sqldw-latest)，从而判断查询是否已执行且结果集是缓存命中还是缓存失误。 如果结果集是缓存命中，查询结果包含一个具有以下详细信息的步骤：
 

@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STNumGeometries method
 ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 385b2779189c7e73e78676e8160204e0cdd017f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a5cf36976538bc264ec96ea7a3f5835dc9ad9bf
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761225"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935732"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回构成 geography 实例的几何图形的数目。  
+  返回构成 geography 实例的几何图形的数目   。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +38,15 @@ ms.locfileid: "47761225"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int   
   
- CLR 返回类型：SqlInt32  
+ CLR 返回类型：**SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geography 实例不是 MultiPoint、MultiLineString、MultiPolygon 或 GeometryCollection 实例，则此方法返回 1；如果 geography 实例为空，则返回 0。  
+ 如果 geography 实例不是 MultiPoint、MultiLineString、MultiPolygon 或 GeometryCollection 实例，则此方法返回 1；如果 geography 实例为空，则返回 0       。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建一个 `MultiPoint` 实例，并使用 `STNumGeometries()` 来确定该实例包含多少个 geometry。  
+ 下面的示例创建一个 `MultiPoint` 实例，并使用 `STNumGeometries()` 来确定该实例包含多少个 geometry  。  
   
 ```  
 DECLARE @g geography;  

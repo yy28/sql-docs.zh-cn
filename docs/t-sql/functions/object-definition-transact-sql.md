@@ -18,15 +18,15 @@ helpviewer_keywords:
 - displaying source text
 - OBJECT_DEFINITION function
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5cf2cd082156f5f4a889a2912efcceaa9d5f7692
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a681af6603cdb7c69f91222e03b8a5c326ea2ffe
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640063"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944052"
 ---
 # <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="arguments"></a>参数  
  *object_id*  
- 要使用的对象的 ID。 object_id 的数据类型为 int，并假定表示当前数据库上下文中的对象。  
+ 要使用的对象的 ID。 object_id 的数据类型为 int，并假定表示当前数据库上下文中的对象   。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(max)**  
@@ -55,7 +55,7 @@ OBJECT_DEFINITION ( object_id )
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 这意味着，如果用户对对象没有任何权限，则元数据生成的内置函数（如 OBJECT_DEFINITION）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假定 object_id 位于当前数据库上下文中。 对象定义的排序规则始终与调用数据库上下文的排序规则匹配。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假定 object_id 位于当前数据库上下文中  。 对象定义的排序规则始终与调用数据库上下文的排序规则匹配。  
   
  OBJECT_DEFINITION 适用于以下对象类型：  
   
@@ -79,7 +79,7 @@ OBJECT_DEFINITION ( object_id )
   
 -   V = 视图  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定数据库角色的成员隐式具有这些权限。  
   
 ## <a name="examples"></a>示例  

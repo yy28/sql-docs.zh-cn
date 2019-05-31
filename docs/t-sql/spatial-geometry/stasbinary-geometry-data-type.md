@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STAsBinary (geometry Data Type)
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 70cb2b47489146e93c4a5e7181e4a280e80866db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37c935195c740ef03b891f6fb082257422ae412a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648765"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937328"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "47648765"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)   
   
- CLR 返回类型：SqlBytes  
+ CLR 返回类型：**SqlBytes**  
   
 ## <a name="examples"></a>示例  
  以下示例根据文本创建一个从 (0,0) 到 (2,3) 的 `LineString` geometry 实例。 `STAsBinary()` 以 WKB 形式返回结果。  

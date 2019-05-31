@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STEnvelope (geometry Data Type)
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9abd3e8e48e38916da9b5cb7cc3293b27ad66659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: beb560d41f2fdd58382afbd6374da9869225ddb2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663145"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938982"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ STEnvelope ( )
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
- CLR 返回类型：SqlGeometry  
+ CLR 返回类型：**SqlGeometry**  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomFromText()` 创建从 (0,0) 到 (2,3) 的 `LineString` 实例，并使用 `STEnvelope()` 返回 `LineString` 的边界框。  

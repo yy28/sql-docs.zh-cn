@@ -15,21 +15,21 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 20febb0b33e0da08d8620232195e183c7c5162f3
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572820"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981767"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-将先前使用 DECLARE @local_variable 语句创建的指定局部变量设置为指定值。  
+将先前使用 DECLARE @local_variable 语句创建的指定局部变量设置为指定值  。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,28 +67,28 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>参数  
-@ local_variable  
-除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 (@) 开头。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
+@ local_variable    
+除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 (@) 开头  。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
-property_name  
+property_name   
 用户定义类型的属性。  
   
-field_name  
+field_name   
 用户定义类型的公共字段。  
   
-udt_name  
+udt_name   
 公共语言运行时 (CLR) 用户定义类型的名称。  
   
 `{ . | :: }`  
-指定 CLR 用户定义类型的方法。 对于实例（非静态）方法，请使用句点 (**.**)。 对于静态方法，请使用两个冒号 (::)。 若要调用 CLR 用户定义类型的方法、属性或字段，必须对类型具有 EXECUTE 权限。  
+指定 CLR 用户定义类型的方法。 对于实例（非静态）方法，请使用句点 ( **.** )。 对于静态方法，请使用两个冒号 (::)  。 若要调用 CLR 用户定义类型的方法、属性或字段，必须对类型具有 EXECUTE 权限。  
   
-method_name ( argument [ ,... n ] )  
+method_name ( argument [ ,... n ] )        
 用户定义类型的方法，它使用一个或多个参数来修改类型实例的状态。 静态方法必须是公共的。  
   
-@ SQLCLR_local_variable  
+@ SQLCLR_local_variable    
 其类型位于程序集内的变量。 有关详细信息，请参阅[公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)。  
   
-mutator_method  
+mutator_method   
 程序集中可更改对象状态的方法。 SQLMethodAttribute.IsMutator 会应用于此方法。  
   
 `{ += | -= | *= | /= | %= | &= | ^= | |= }`  
@@ -113,10 +113,10 @@ mutator_method
 *expression*  
 任何有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
-cursor_variable  
+cursor_variable   
 游标变量的名称。 如果目标游标变量先前引用了不同游标，则删除先前的引用。  
   
-cursor_name  
+cursor_name   
 使用 DECLARE CURSOR 语句声明的游标名称。  
   
 CURSOR  
@@ -154,7 +154,7 @@ OPTIMISTIC
 TYPE_WARNING  
 指定如果游标从所请求的类型隐式转换为另一种类型，则向客户端发送警告消息。  
   
-FOR select_statement  
+FOR select_statement   
 定义游标结果集的标准 SELECT 语句。 在游标声明的 *select_statement* 中不允许使用关键字 FOR BROWSE 和 INTO。  
   
 如果使用 DISTINCT、UNION、GROUP BY 或 HAVING，或者 *select_list* 中包含聚合表达式，游标将创建为 STATIC。  
@@ -167,14 +167,14 @@ READ ONLY
 禁止通过该游标进行更新。 在 UPDATE 或 DELETE 语句的 WHERE CURRENT OF 子句中不能引用游标。 该选项优先于要更新的游标的默认功能。 该关键字与早期的 READ_ONLY 关键字的不同之处是 READ 和 ONLY 之间是一个空格，而不是下划线。  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-定义游标中可更新的列。 如果提供了 OF column_name [,...n]，则只允许修改列出的列。 如果没有提供列表，则可更新所有列，除非已将游标定义为 READ_ONLY。  
+定义游标中可更新的列。 如果提供了 OF column_name [,...n]，则只允许修改列出的列    。 如果没有提供列表，则可更新所有列，除非已将游标定义为 READ_ONLY。  
   
 ## <a name="remarks"></a>Remarks  
 声明一个变量后，该变量将初始化为 NULL。 使用 SET 语句将一个不是 NULL 的值赋予声明的变量。 给变量赋值的 SET 语句返回单值。 在初始化多个变量时，为每个局部变量使用单独的 SET 语句。  
   
 只能在表达式中使用变量，而不能代替对象名或关键字。 若要构造动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，请使用 EXECUTE。  
   
-SET **@**_cursor_variable_ 的语法规则不包含 LOCAL 和 GLOBAL 关键字。 使用 SET **@**_cursor_variable_ = CURSOR... 语法时，根据“默认使用本地游标数据库”选项的设置，游标将创建为 GLOBAL 或 LOCAL。  
+SET **@** _cursor_variable_ 的语法规则不包含 LOCAL 和 GLOBAL 关键字。 使用 SET **@** _cursor_variable_ = CURSOR... 语法时，根据“默认使用本地游标数据库”选项的设置，游标将创建为 GLOBAL 或 LOCAL。  
   
 即使游标变量引用全局游标，它们也始终是局部变量。 如果游标变量引用全局游标，则该游标既有全局游标引用，也有局部游标引用。 有关详细信息，请参阅示例 C。  
   
@@ -184,8 +184,8 @@ SET **@**_cursor_variable_ 的语法规则不包含 LOCAL 和 GLOBAL 关键字�
   
 不要在 SELECT 语句中使用变量来连接值（即，计算聚合值）。 可能发生了意外查询结果。 因为，SELECT 列表中的所有表达式（包括赋值）不一定对于每个输出行仅执行一次。 有关详细信息，请参阅[此知识库文章](https://support.microsoft.com/kb/287515)。  
   
-## <a name="permissions"></a>Permissions  
-要求具有 public 角色的成员身份。 所有用户都可以使用 SET @local_variable。  
+## <a name="permissions"></a>权限  
+要求具有 public 角色的成员身份。 所有用户都可以使用 SET @local_variable   。  
   
 ## <a name="examples"></a>示例  
   
@@ -289,7 +289,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 通过调用类型的方法为用户定义类型的变量赋值  
-以下示例通过调用类型的 `SetXY` 方法设置用户定义类型 point 的值。  
+以下示例通过调用类型的 `SetXY` 方法设置用户定义类型 point 的值  。  
   
 ```  
 DECLARE @p Point;  

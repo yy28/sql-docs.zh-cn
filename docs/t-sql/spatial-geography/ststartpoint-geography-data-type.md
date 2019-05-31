@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STStartPoint method
 ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 80b78fbd1aff4490ae71198bc86b26926448f6f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2af68b46abc31d7025e0b8b03fa6b18f5e9403c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615925"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939148"
 ---
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回 geography 实例的起点。  
+  返回 geography 实例的起点  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,11 +38,11 @@ ms.locfileid: "47615925"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
- 开放地理空间信息联盟 (OGC) 类型：Point  
+ 开放地理空间联盟 (OGC) 类型：**Point**  
   
 ## <a name="remarks"></a>Remarks  
  STStartPoint() 等效于 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`。  

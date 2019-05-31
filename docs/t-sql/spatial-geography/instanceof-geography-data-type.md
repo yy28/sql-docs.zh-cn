@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - InstanceOf method
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e0ef6816efa98d3e9b2da27525d700fb4eba2501
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 52ec2695b24a2a900e84b6a186802024d47b7613
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852992"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937725"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "56852992"
 **nvarchar(4000)** 字符串，用于指定 **geography** 类型层次结构中公开的 16 个类型之一。  
   
 ## <a name="return-types"></a>返回类型  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
   
 CLR 返回类型：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
 如果 **geography** 实例的类型与指定的类型相同，或者指定的类型是该实例类型的上级，则返回 1；否则，返回 0。  
   
-这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
+这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例   。  
   
 方法的输入必须是以下类型之一：Geometry、Point、Curve、LineString、CircularString、Surface、Polygon、CurvePolygon、**GeometryCollection**、**MultiSurface**、**MultiPolygon、MultiCurve、MultiLineString**、**MultiPoint** 或 **FullGlobe**。  
   

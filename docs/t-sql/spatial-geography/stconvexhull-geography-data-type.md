@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - STConvexHull method (geography)
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6f44a22b200eba0948ceb1bd036d51ceff884442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c823f686909be54890b3c1686da615233c3e9da2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666855"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937129"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回表示 geography 实例的凸包的对象。  
+  返回表示 geography 实例的凸包的对象  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,21 +35,21 @@ ms.locfileid: "47666855"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 针对具有大于 90 度的信封角的 geography 实例返回一个 `FullGlobe` 对象。  
+ 针对具有大于 90 度的信封角的 geography 实例返回一个 `FullGlobe` 对象  。  
   
- 针对空的 geography 实例返回空的 geography 集合。  
+ 针对空的 geography 实例返回空的 geography 集合   。  
   
- 为未初始化的 geography 实例返回 null。  
+ 为未初始化的 geography 实例返回 null   。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 对未初始化的 geography 实例使用 STConvexHull()  
- 以下示例对未初始化的 geography 示例使用 `STConvexHull()`。  
+ 以下示例对未初始化的 geography 示例使用 `STConvexHull()`  。  
   
 ```
  DECLARE @g geography;  
@@ -74,7 +74,7 @@ ms.locfileid: "47666855"
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. 在一个信封角大于 90 度的 geography 实例上查找凸包  
- 以下示例在一个信封角大于 90 度的 geography 实例上使用 `STConvexHull()`。  
+ 以下示例在一个信封角大于 90 度的 geography 实例上使用 `STConvexHull()`  。  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

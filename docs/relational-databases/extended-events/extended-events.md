@@ -1,7 +1,7 @@
 ---
 title: XEvents 概述 - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df39a9a3992fb424bf0f50b2d60548ce0e55ade7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 01ec6f0f6a48fd0d19b6bda98b42afe57abd0a07
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477662"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175664"
 ---
 # <a name="extended-events-overview"></a>扩展事件概述
 
@@ -32,7 +32,7 @@ ms.locfileid: "58477662"
 
 
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件的优点  
- 扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（“新建会话向导”和“新建会话”），以便创建、修改、显示和分析你的会话数据。  
+ 扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（“新建会话向导”  和“新建会话”  ），以便创建、修改、显示和分析你的会话数据。  
   
 ## <a name="extended-events-concepts"></a>扩展事件概念  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件 (Extended Events) 是在现有概念（例如事件或事件使用者）的基础上建立的，它使用了 Windows 事件跟踪的概念并引入了新概念。  
@@ -111,5 +111,4 @@ ms.locfileid: "58477662"
  [监视数据层应用程序](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [扩展事件动态管理视图](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [扩展事件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
-  
-  
+ [XELite:跨平台库，用于从 XEL 文件或实时 SQL 流中读取 XEvent](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)，发布于 2019 年 5 月。  

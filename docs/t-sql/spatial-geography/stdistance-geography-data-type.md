@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDistance method
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 7a1b5a95b5123186ce76a4d8b7c9dde7044fe827
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ae6354623f67003c56c99783e1916b71a80ea3f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688451"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937056"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,19 +41,19 @@ ms.locfileid: "47688451"
 ```  
   
 ## <a name="arguments"></a>参数  
- other_geography  
- 另一个 geography 实例，将度量该实例与调用 STDistance() 的实例之间的距离。 如果 other_geography 是一个空集，则 STDistance() 返回 null。  
+ other_geography   
+ 另一个 geography 实例，将度量该实例与调用 STDistance() 的实例之间的距离  。 如果 other_geography 是一个空集，则 STDistance() 返回 null  。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float   
   
- CLR 返回类型：SqlDouble  
+ CLR 返回类型：**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geography 实例的空间引用 ID (SRID) 不匹配，则 STDistance() 始终返回 null。  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则 STDistance() 始终返回 null  。  
   
 > [!NOTE]  
->  geography 数据类型上用于计算面积或距离的方法将根据在该方法中使用的实例的 SRID 返回不同结果。   有关 SRID 的详细信息，请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
+>  geography 数据类型上用于计算面积或距离的方法将根据在该方法中使用的实例的 SRID 返回不同结果  。   有关 SRID 的详细信息，请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
 ## <a name="examples"></a>示例  
  以下示例查找两个 **geography** 实例之间的距离。  

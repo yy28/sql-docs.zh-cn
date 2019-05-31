@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - STDifference (geography Data Type)
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c4dc5bcc6afb4928004dcf70e353124a2b6f17a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5d32ef391dee55f0b651c6729ccd5e2924e9f3c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644605"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937078"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回一个对象，该对象表示来自一个 geography 实例的点集，该点集在另一个 geography 实例之外。  
+  返回一个对象，该对象表示来自一个 geography  实例的点集，该点集在另一个 geography  实例之外。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,26 +38,26 @@ ms.locfileid: "47644605"
 ```  
   
 ## <a name="arguments"></a>参数  
- other_geography  
- 另一个 geography 实例，指示要从调用 STDifference() 的实例中删除的点。  
+ other_geography   
+ 另一个 geography  实例，指示要从调用 STDifference() 的实例中删除的点。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography   
   
- CLR 返回类型：SqlGeography  
+ CLR 返回类型：**SqlGeography**  
   
 ## <a name="exceptions"></a>异常  
- 如果实例包含对拓边缘，此方法将引发 ArgumentException。  
+ 如果实例包含对拓边缘，此方法将引发 ArgumentException  。  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null。  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null  。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。 此方法不精确。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。 此方法不精确。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-computing-the-difference-between-two-geography-instances"></a>A. 计算两个地理实例之间的差值  
- 以下示例使用 `STDifference()` 计算两个 geography 实例之间的差别。  
+ 以下示例使用 `STDifference()` 计算两个 geography  实例之间的差别。  
   
 ```  
 DECLARE @g geography;  

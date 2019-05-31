@@ -17,16 +17,16 @@ helpviewer_keywords:
 - data types [SQL Server], status information
 - TYPEPROPERTY function
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfd001d10f7f0fd165bd797e84af9a57034676a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 796de66b6fdce95be5fe235219208a504cc8095e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799415"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946824"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,18 +42,18 @@ TYPEPROPERTY (type , property)
 ```  
   
 ## <a name="arguments"></a>参数  
- *type*  
+ *类型*  
  数据类型的名称。  
   
- property  
- 要为数据类型返回的信息类型。 property 可以是下列值之一。  
+ property   
+ 要为数据类型返回的信息类型。 property 可以是下列值之一  。  
   
-|“属性”|描述|返回的值|  
+|属性|描述|返回的值|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|数据类型允许空值。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 找不到数据类型。|  
 |**OwnerId**|类型的所有者。<br /><br /> 注意：架构所有者不一定是类型所有者。|Nonnull = 类型所有者的数据库用户 ID。<br /><br /> NULL = 不支持的类型，或类型 ID 无效。|  
-|**精度**|数据类型的精度。|数字位数或字符个数。<br /><br /> -1 = xml 或大值数据类型<br /><br /> NULL = 找不到数据类型。|  
-|**小数位数**|数据类型的小数位数。|数据类型的小数位的个数。<br /><br /> NULL = 数据类型不是 numeric 或未找到。|  
+|**精度**|数据类型的精度。|数字位数或字符个数。<br /><br /> -1 = xml 或大值数据类型 <br /><br /> NULL = 找不到数据类型。|  
+|**小数位数**|数据类型的小数位数。|数据类型的小数位的个数。<br /><br /> NULL = 数据类型不是 numeric 或未找到  。|  
 |**UsesAnsiTrim**|创建数据类型时 ANSI 填充设置为 ON。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 数据类型找不到，或不是二进制数据类型或字符串数据类型。|  
   
 ## <a name="return-types"></a>返回类型  

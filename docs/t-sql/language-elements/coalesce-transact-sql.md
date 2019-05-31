@@ -18,16 +18,16 @@ helpviewer_keywords:
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab19d51f1032ad251cb1867cbe2326652d174f29
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b44f7d9d37efaac80f018ce2b1c1497230e66e3c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802194"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982687"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,13 +47,13 @@ _expression_
 是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
-返回数据类型优先级最高的 expression 的数据类型。 如果所有表达式都不可为 Null，则结果的类型也不可为 Null。  
+返回数据类型优先级最高的 expression 的数据类型  。 如果所有表达式都不可为 Null，则结果的类型也不可为 Null。  
   
 ## <a name="remarks"></a>Remarks  
 如果所有参数都为 `NULL`，则 `COALESCE` 返回 `NULL`。 至少应有一个 Null 值为 `NULL` 类型。  
   
 ## <a name="comparing-coalesce-and-case"></a>比较 COALESCE 和 CASE  
-`COALESCE` 表达式是 `CASE` 表达式的语法快捷方式。  即查询优化器将代码 `COALESCE`(expression1,...n) 重写为以下 `CASE` 表达式：  
+`COALESCE` 表达式是 `CASE` 表达式的语法快捷方式。  即查询优化器将代码 `COALESCE`(expression1,...n) 重写为以下 `CASE` 表达式   ：  
   
 ```sql  
 CASE  

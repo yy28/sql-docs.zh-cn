@@ -1,7 +1,7 @@
 ---
 title: 带有指定为 data() 的路径的列名 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,18 +13,20 @@ ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64f7044ff5ab003b31296a3293a0f146ac0a26c8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77913ea6358f9a5d1b88de7426144b730b5c74e9
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511434"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175367"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>带有指定为 data() 的路径的列名
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  如果被指定为列名的路径为 data()，则在生成的 XML 中，该值将被作为一个原子值来处理。 如果序列化中的下一项也是一个原子值，则将向 XML 中添加一个空格字符。 这在创建列表类型化元素值和属性值时很有用。 以下查询将检索产品型号 ID、名称和该产品型号中的产品列表。  
+
+如果被指定为列名的路径为 data()，则在生成的 XML 中，该值将被作为一个原子值来处理。 如果序列化中的下一项也是一个原子值，则将向 XML 中添加一个空格字符。 这在创建列表类型化元素值和属性值时很有用。 以下查询将检索产品型号 ID、名称和该产品型号中的产品列表。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductModelID       AS "@ProductModelID",  
@@ -39,14 +41,16 @@ WHERE ProductModelID= 7
 FOR XML PATH('ProductModelData');  
 ```  
   
- 嵌套 SELECT 语句将检索产品 ID 列表。 它指定 data() 作为产品 ID 列名。 由于 PATH 模式为行元素名指定了空字符串，因此不会生成行元素。 相反，将返回值以分配给父级 SELECT 的 <`ProductModelData`> 行元素的 ProductIDs 属性。 结果如下：  
-  
- `<ProductModelData ProductModelID="7"`  
-  
- `ProductModelName="HL Touring Frame"`  
-  
- `ProductIDs="885 887 888 889 890 891 892 893" />`  
-  
+ 嵌套 SELECT 语句将检索产品 ID 列表。 它指定 data() 作为产品 ID 列名。 由于 PATH 模式为行元素名指定了空字符串，因此不会生成行元素。 相反，将返回值以分配给父级 SELECT 的 `<ProductModelData>` 行元素的 ProductIDs 属性。 结果如下：  
+
+```sql
+<ProductModelData
+  ProductModelID="7"
+  ProductModelName="HL Touring Frame"
+  ProductIDs="885 887 888 889 890 891 892 893"
+/>
+```
+
 ## <a name="see-also"></a>另请参阅  
  [将 PATH 模式与 FOR XML 一起使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
