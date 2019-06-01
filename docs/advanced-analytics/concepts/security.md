@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1f19e3322b8aee78fdb5a76a29a719148cc6a0c7
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596568"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454538"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的可扩展性框架的安全性概述
 
@@ -71,7 +71,7 @@ SQL Server 的数据的数据库登录名和角色的安全模式扩展到 R 和
 
 ## <a name="services-used-in-external-processing-launchpad"></a>外部处理 （快速启动板） 中使用的服务
 
-可扩展性框架添加到一个新的 NT 服务[的服务列表](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)在 SQL Server 安装中：[**SQL Server 快速启动板 (MSSSQLSERVER)**](extensibility-framework.md#launchpad)。
+可扩展性框架添加到一个新的 NT 服务[的服务列表](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)在 SQL Server 安装中：[**SQL Server 快速启动板 (MSSSQLSERVER)** ](extensibility-framework.md#launchpad)。
 
 数据库引擎使用 SQL Server Launchpad 服务来实例化的 R 或 Python 会话作为单独的进程。 低特权帐户; 下运行的进程不同于 SQL Server、 快速启动板本身，以及其下执行存储的过程或主机查询的用户标识。 在低特权帐户下的单独进程中运行脚本是对 R 和 Python 在 SQL Server 中的安全性和隔离模型的基础。
 
@@ -111,7 +111,7 @@ SQL Server 的数据的数据库登录名和角色的安全模式扩展到 R 和
 
 若要保护 SQL 服务器上的敏感资源，可以选择定义访问拒绝对访问控制列表 (ACL) **SQLRUserGroup**。 相反，您还可以授予对主机计算机，除了 SQL Server 本身存在的本地数据资源的权限。 
 
-根据设计， **SQLRUserGroup**不具有数据库登录名或任何数据的权限。 在某些情况下，你可能想要创建一个登录名，以允许循环后的连接，尤其是在受信任的 Windows 标识调用用户时。 此功能称为[*隐式身份验证*](#implied-authentication)。 有关详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)。
+根据设计， **SQLRUserGroup**不具有数据库登录名或任何数据的权限。 在某些情况下，你可能想要创建一个登录名，以允许循环后的连接，尤其是在受信任的 Windows 标识调用用户时。 此功能称为[*隐式身份验证*](#implied-authentication)。 有关详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
 
 ## <a name="identity-mapping"></a>标识映射
 
@@ -127,7 +127,7 @@ SQL Server 的数据的数据库登录名和角色的安全模式扩展到 R 和
 
 受信任的连接是从 R 和 Python 脚本，但仅限于与其他配置可正常工作。 在可扩展性体系结构中，R 和 Python 进程下运行辅助角色帐户，从父级继承权限**SQLRUserGroup**。 当连接字符串指定了`Trusted_Connection=True`，辅助角色帐户的标识显示在连接请求时，这是默认情况下，SQL Server 到未知。
 
-若要建立受信任的连接成功，必须创建数据库登录名**SQLRUserGroup**。 这样做之后，任何受信任连接的任何成员**SQLRUserGroup**拥有到 SQL Server 登录权限。 有关分步说明，请参阅[添加到一个数据库登录名的 SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)。
+若要建立受信任的连接成功，必须创建数据库登录名**SQLRUserGroup**。 这样做之后，任何受信任连接的任何成员**SQLRUserGroup**拥有到 SQL Server 登录权限。 有关分步说明，请参阅[添加到一个数据库登录名的 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
 
 受信任的连接不是连接请求的最常用的设计。 当 R 或 Python 脚本指定的连接时，它可以是更常见的是使用 SQL 登录名，或完全指定的用户名和密码，如果连接到 ODBC 数据源。
 
@@ -153,4 +153,4 @@ SQL Server 的数据的数据库登录名和角色的安全模式扩展到 R 和
 
 在本文中，你学习了组件和交互模型的安全体系结构中内置[可扩展性框架](../../advanced-analytics/concepts/extensibility-framework.md)。 本文中所述的关键点包括 R 和 Python，以及如何将用户标识映射到辅助角色帐户的进程隔离的快速启动板、 SQLRUserGroup 和辅助角色帐户的目的。 
 
-作为下一步，请查看有关的说明[授予的权限](../../advanced-analytics/security/user-permission.md)。 对于使用 Windows 身份验证的服务器，则还应查看[添加到一个数据库登录名的 SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)若要了解何时需要额外的配置。
+作为下一步，请查看有关的说明[授予的权限](../../advanced-analytics/security/user-permission.md)。 对于使用 Windows 身份验证的服务器，则还应查看[添加到一个数据库登录名的 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)若要了解何时需要额外的配置。

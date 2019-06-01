@@ -11,18 +11,18 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 05/08/2019
-ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450026"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454733"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的发行说明
 
 **[下载并安装最新版本 ！](download.md)**
 
-## <a name="may-2019"></a>2019 年 5
+## <a name="may-2019"></a>2019 年 5 月
 
 2019 年 5 月 8 日， &nbsp;  /  &nbsp;版本：1.7.0 
 
@@ -101,7 +101,7 @@ ms.locfileid: "65450026"
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 添加**SQL Server 的管理包**扩展包。 | 这使得更轻松地安装 SQL Server 管理员相关扩展。 这包括：<br/>&bull; &nbsp; [SQL Server 代理](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server 导入](sql-server-import-extension.md?view=sql-server-2017) |
+| 添加**SQL Server 的管理包**扩展包。 | 这使得更轻松地安装 SQL Server 管理员相关扩展。 这包括：<br/>&bull; &nbsp; [SQL Server 代理](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server 导入](sql-server-import-extension.md?view=sql-server-2017) |
 | 添加了筛选扩展事件支持 Profiler 扩展中。 | &nbsp; |
 | 添加了另存为 XML 功能，可以将 T-SQL 的结果保存为 XML。 | &nbsp; |
 | 添加了的数据层应用程序向导的改进。 | &bull; &nbsp; 添加了生成脚本按钮<br/>&bull; &nbsp; 添加了的视图，以便在部署过程可能造成数据丢失的警告。 |

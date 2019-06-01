@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c88d4929d40af2dc0e61d5d7261fddb3bac2e74d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65c6afcf3f74e320237c1f345ad643752fde6ae0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506033"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454759"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上使用 R 和 Python 安装 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "62506033"
 若要启用从远程数据科学客户端的访问权限：
 
 1. 在虚拟机上打开“高级安全 Windows 防火墙”。
-2. 选择“出站规则”。
+2. 选择“出站规则”。 
 3. 禁用以下规则：
   
      `Block network access for R local user accounts in SQL Server instance MSSQLSERVER`
@@ -44,7 +44,7 @@ ms.locfileid: "62506033"
 
 如果希望客户端调用服务器需要发出 ODBC 查询作为其机器学习解决方案的一部分，则必须确保快速启动板可以代表远程客户端的 ODBC 调用。 
 
-为此，必须允许 Launchpad 使用的 SQL 辅助角色帐户登录到实例。 有关详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../security/add-sqlrusergroup-to-database.md)。
+为此，必须允许 Launchpad 使用的 SQL 辅助角色帐户登录到实例。 有关详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md)。
 
 <a name="network"></a>
 

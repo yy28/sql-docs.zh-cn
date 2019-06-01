@@ -12,12 +12,12 @@ ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d9f59bde50c325f0694cc6cdd9441d80ea61f02
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 52291c866e00100280c63253ef36b31bd8763948
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66092700"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428984"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>报表服务器状态（SSRS 本机模式）
   使用此页可以查看当前连接的报表服务器实例的有关信息。 此页是报表服务器配置的起始页。 此外还提供了用于配置 URL、服务帐户、报表服务器数据库、报表服务器电子邮件传递、扩展部署和加密密钥的其他页。  
@@ -59,7 +59,7 @@ ms.locfileid: "66092700"
  显示用于存储当前报表服务器实例的应用程序数据的报表服务器数据库的名称。  
   
  **报表服务器模式**  
- 这应始终显示值 **“本机”**。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的配置管理器仅支持本机模式的报表服务器。 如果您看到值 **SharePoint 集成模式**，它可能指示您的本机模式部署未正确配置，您需要连接到本机模式的报表目录。 使用配置管理器的 **“数据库”** 页更改数据库并创建新数据库或连接到现有本机模式的报表服务器数据库目录。  
+ 这应始终显示值 **“本机”** 。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的配置管理器仅支持本机模式的报表服务器。 如果您看到值 **SharePoint 集成模式**，它可能指示您的本机模式部署未正确配置，您需要连接到本机模式的报表目录。 使用配置管理器的 **“数据库”** 页更改数据库并创建新数据库或连接到现有本机模式的报表服务器数据库目录。  
   
  **服务器状态**  
  显示报表服务器服务是否正在运行。  
@@ -72,7 +72,7 @@ ms.locfileid: "66092700"
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Reporting Services 配置管理器&#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Reporting Services 配置管理器&#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

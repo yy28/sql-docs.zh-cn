@@ -10,12 +10,12 @@ ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a9b7c9f241bdf63679db85d7408e696c6f55599
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 61773674412a8b4bdd8b5fa2f8b207de66254dcc
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489726"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429033"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>综合使用 SSIS、MDS 和 DQS 来执行企业信息管理 [教程]
   在企业中管理信息通常涉及集成来自企业和企业之外的信息、清理数据、对数据进行匹配以便删除重复项、标准化数据、丰富数据、使数据符合法律和遵从性要求，以及将数据存储于具有所有必需的安全设置的集中位置。  
@@ -62,9 +62,9 @@ ms.locfileid: "65489726"
   
 5.  安装**Master Data Services 外接程序 excel** （32 位或 64 位基于具有您的计算机上的 Excel 版本） 从[此处](https://www.microsoft.com/download/details.aspx?id=29064)。 若要查找在您的计算机上安装 Excel 的版本，请运行**Excel**，单击**文件**菜单栏，然后单击**帮助**，查看右窗格中的版本。 请注意，您需要安装 Visual Studio 2010 Tools for Office Runtime 安装 Excel 外接程序之前。  
   
-6.  （可选）创建具有的帐户[Windows Azure Marketplace](https://datamarket.azure.com/)。 本教程中的任务之一要求必须拥有**Azure Marketplace** (最初名为**Data Market**) 帐户。 如果需要您可以跳过此任务，继续执行下一任务。  
+6.  （可选）创建具有的帐户[Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/)。 本教程中的任务之一要求必须拥有**Azure Marketplace** (最初名为**Data Market**) 帐户。 如果需要您可以跳过此任务，继续执行下一任务。  
   
-7.  下载 Suppliers.xls 文件[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=271504)。  
+7.  下载 Suppliers.xls 文件[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=50426)。  
   
 8.  DQS 不允许您将清理或匹配结果保存到 Excel 文件，如果您使用的导出**64 位版本的 Excel**。 此问题是一个已知问题。 若要解决此问题，请执行以下操作：  
   

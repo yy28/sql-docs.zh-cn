@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c9b1b4eca18a9d4d8d1819eee399676046cc9d78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a53056f1f169224b222a07a062f6ddd88cb24b81
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503839"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454666"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理和集成 SQL Server 上的机器学习工作负荷
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ R 和 Python 集成变得可通过一系列步骤。 第一个参数是安装程
 作为数据库管理员，可以使用 SQL Server 数据安全性来指定哪些人拥有权限来执行脚本，并在作业中使用的数据进行管理下的相同的安全角色来控制访问通过 T-SQL 查询。 作为系统管理员，你可以显式拒绝**SQLRUserGroup**对通过创建 Acl 在本地服务器上的敏感数据的访问。
 
 >[!NOTE]
-> 默认情况下**SQLRUserGroup**中 SQL Server 本身不具有登录名或权限。 如果数据访问辅助角色帐户需要一个登录名，您必须自行创建它。 专门调用创建一个登录名的方案是在执行中，数据或对数据库引擎实例中的操作支持来自脚本的请求时的用户标识是 Windows 用户和连接字符串指定受信任的用户。 有关详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)。
+> 默认情况下**SQLRUserGroup**中 SQL Server 本身不具有登录名或权限。 如果数据访问辅助角色帐户需要一个登录名，您必须自行创建它。 专门调用创建一个登录名的方案是在执行中，数据或对数据库引擎实例中的操作支持来自脚本的请求时的用户标识是 Windows 用户和连接字符串指定受信任的用户。 有关详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
 
 ## <a name="disable-script-execution"></a>禁用脚本执行
 

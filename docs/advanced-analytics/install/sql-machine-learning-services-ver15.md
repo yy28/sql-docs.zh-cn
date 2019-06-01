@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d549bdc96e09ed0b9b0235ada51274201f1b91a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 43d427129cae773fc17a0d73f57a26144b7cd09f
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994224"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454519"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 机器学习服务安装在 SQL Server 2019 之间的差异  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "65994224"
 
 ## <a name="implied-authentication"></a>隐式身份验证
 
-因为在这之前，其他配置仍需要*隐式身份验证*脚本或代码具有要重新连接到 SQL Server 使用受信任的身份验证以检索数据或资源。 其他配置涉及到创建数据库登录名**SQLRUserGroup**，其唯一的成员现在是而不是多个辅助角色帐户的单个 SQL Server 快速启动板服务帐户。 有关此任务的详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../security/add-sqlrusergroup-to-database.md)。
+因为在这之前，其他配置仍需要*隐式身份验证*脚本或代码具有要重新连接到 SQL Server 使用受信任的身份验证以检索数据或资源。 其他配置涉及到创建数据库登录名**SQLRUserGroup**，其唯一的成员现在是而不是多个辅助角色帐户的单个 SQL Server 快速启动板服务帐户。 有关此任务的详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md)。
 
 
 ## <a name="symbolic-link-created-by-setup"></a>安装程序创建的符号链接

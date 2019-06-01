@@ -14,12 +14,12 @@ ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 066f5607ed159b382b156f0d679382881444e9c8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: e6a5c6544acae62a5a9ed7d2fbafe05bbd0f9f2e
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66095910"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454665"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>创建报表服务器数据库（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **本机模式** 使用两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库存储报表服务器元数据和对象。 一个数据库用于主存储，另一个数据库用于存储临时数据。 这两个数据库一起创建，并按名称绑定。 通过默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，将这两个数据库命名为 `reportserver` 和 `reportservertempdb`。 这两个数据库统称为“报表服务器数据库”或“报表服务器目录”。  
@@ -44,7 +44,7 @@ ms.locfileid: "66095910"
   
 -   手动：请使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 如果使用远程 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 来承载该数据库，则必须手动创建报表服务器数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
- **SharePoint 模式：**“报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项“仅安装”。 此选项安装所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下方式之一至少创建一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序：  
+ **SharePoint 模式：** “报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项“仅安装”  。 此选项安装所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下方式之一至少创建一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序：  
   
 -   使用 SharePoint 管理中心创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅[步骤 3：创建 Reporting Services 服务应用程序](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)中的“服务应用程序”一节。  
   
@@ -72,6 +72,6 @@ ms.locfileid: "66095910"
  创建报表服务器数据库时，请注意并非所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 均可用来承载数据库。 有关详细信息，请参阅的"报表服务器数据库服务器版本要求"部分[SQL Server 2014 各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [Reporting Services 配置管理器&#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Reporting Services 配置管理器&#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)  
   
   

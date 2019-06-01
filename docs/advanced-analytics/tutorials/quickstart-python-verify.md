@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 09b96f6934fec9e24ca4a254a1d14c23327ebe5b
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57577927"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454710"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>快速入门：验证 SQL Server 中是否存在 Python 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +62,7 @@ SQL Server 实例可以是 Azure 虚拟机或本地。 只需注意，外部脚�
 
 首先，排除任何安装问题。 安装后则需要配置才能启用对外部代码库的使用。 请参阅[安装 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。 同样，请确保快速启动板服务正在运行。
 
-您还必须添加 Windows 用户组`SQLRUserGroup`上的实例，以确保快速启动板可以提供 Python 和 SQL Server 之间的通信的登录名。 （同一个组用于这两个 R 和 Python 代码执行）。有关详细信息，请参阅[已启用隐式身份验证](../security/add-sqlrusergroup-to-database.md)。
+您还必须添加 Windows 用户组`SQLRUserGroup`上的实例，以确保快速启动板可以提供 Python 和 SQL Server 之间的通信的登录名。 （同一个组用于这两个 R 和 Python 代码执行）。有关详细信息，请参阅[创建一个登录名为 SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md)。
 
 此外，您可能需要启用已禁用的网络协议或打开防火墙，以便 SQL Server 可以与外部客户端进行通信。 有关详细信息，请参阅[安装程序疑难解答](../common-issues-external-script-execution.md)。
 

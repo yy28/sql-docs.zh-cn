@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_function_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013204"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428950"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "63013204"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|该函数所在的数据库 ID。|  
 |**object_id**|**int**|函数的对象标识号。|  
-|**类型**|**char(2)**|对象的类型： FN = 标量值的函数|  
+|**type**|**char(2)**|对象的类型： FN = 标量值的函数|  
 |**type_desc**|**nvarchar(60)**|对对象类型的说明：SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|这可用于将与中的查询相关联**sys.dm_exec_query_stats**中此函数执行的。|  
 |**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可能与使用**sys.dm_exec_cached_plans**动态管理视图。<br /><br /> 将始终为 0x000 时本机编译的函数查询内存优化表。|  
@@ -68,6 +68,10 @@ ms.locfileid: "63013204"
 |**last_elapsed_time**|**bigint**|所用的时间以微秒为单位，最近完成此函数的执行。|  
 |**min_elapsed_time**|**bigint**|最小运行时间，以微秒为单位，任何已完成此函数的执行。|  
 |**max_elapsed_time**|**bigint**|最大运行时间，以微秒为单位，任何已完成此函数的执行。|  
+|**total_page_server_reads**|**bigint**|自编译后，此函数的执行期间所执行的远程页服务器读取总次数。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|  
+|**last_physical_reads**|**bigint**|上次执行该函数时执行远程页服务器读取次数。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|  
+|**min_physical_reads**|**bigint**|最小的服务器远程页读取数，此函数在单次执行执行单次执行期间。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|  
+|**max_physical_reads**|**bigint**|最大数量的远程页服务器读取，此函数在单次执行执行单次执行期间。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|
   
 ## <a name="permissions"></a>权限  
 
