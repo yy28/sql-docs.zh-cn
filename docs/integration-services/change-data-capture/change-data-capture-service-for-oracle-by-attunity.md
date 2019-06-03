@@ -11,12 +11,12 @@ ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 00cda57e3656bb41031f79647c3e4829dcab4858
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: cbce8f29b2c623102d0e9f7dad749c784a3764ba
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198168"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354349"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity
 
@@ -26,7 +26,8 @@ ms.locfileid: "66198168"
   Oracle CDC 服务是一种 Windows 服务，该服务将扫描 Oracle 事务日志并将对有关 Oracle 表的更改捕获到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改表中。 存储从 Oracle 捕获的更改的 SQL 更改表具有与本机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 变更数据捕获功能使用的更改表相同的类型。 这使得使用这些更改就像使用对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库进行的更改一样简单。  
   
 ## <a name="installation"></a>安装  
- Microsoft Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server 2016 属于 SQL Server 2016 功能包的一部分。 从 [SQL Server 2016 功能包网页](https://go.microsoft.com/fwlink/?LinkId=746297)下载功能包的组件。  
+
+Microsoft Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server 2016 属于 SQL Server 2016 功能包的一部分。 从 [SQL Server 2016 功能包网页](https://go.microsoft.com/fwlink/?LinkId=746297)下载功能包的组件。
   
  Oracle CDC 服务可以安装在对要捕获的源 Oracle 数据库以及目标 CDC 数据库所在的目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例具有访问权限的任何支持的 Windows 计算机上。 CDC 服务不需要 Oracle 数据库或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的本地安装，只需要其支持的客户端。 有关安装所需数据库组件的位置的信息，请参阅本主题中的 **数据库必备组件** 。  
   

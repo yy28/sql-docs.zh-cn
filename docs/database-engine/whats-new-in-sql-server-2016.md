@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 850f0bac65f0c8955c50514145fb0d2998d6139a
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872307"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413609"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>数据库引擎中的新增功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "58872307"
 
 #### <a name="try-it-out"></a>进行试用
 
-- 若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)![下载](../analysis-services/media/download.png "下载")。
+- 若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)![下载](../analysis-services/media/download.png "下载")  。
 
 - 已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 启动装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。
 
@@ -444,7 +444,7 @@ Always On 现在支持加密的数据库。 当你创建新的可用性组、添
 ### <a name="upgrade-advisor"></a>升级顾问
 SQL Server 2016 Upgrade Advisor Preview 是一个独立的工具，可让以前版本的用户针对其 SQL Server 数据库运行一组升级规则，以查明重大更改和行为更改与已弃用的功能，以及为采用新功能（例如 Stretch Database）提供帮助。
 
- 你可以从 [此处](https://www.microsoft.com/download/details.aspx?id=48119) 下载 Upgrade Advisor Preview，也可以使用 Web 平台安装程序来安装它。
+ 你可以从 [此处](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) 下载 Upgrade Advisor Preview，也可以使用 Web 平台安装程序来安装它。
 
 ## <a name="see-also"></a>另请参阅
 [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)

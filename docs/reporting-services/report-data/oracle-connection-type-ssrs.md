@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3dd35c6630c825e5341246170f6e96d61a47de4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1cf0134d4c71111537a9d7c020c03f77d9377fd1
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577893"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413431"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle 连接类型 (SSRS)
 若要在报表中使用来自 Oracle 数据库的数据，您必须拥有一个基于 Oracle 类型的报表数据源的数据集。 此内置数据源类型直接使用 Oracle Data Provider，并且需要 Oracle 客户端软件组件。
 
 若要安装 Oracle 客户端工具，可执行以下操作。
  
-1.  转到 [Oracle 的下载站点](https://www.oracle.com/us/products/tools/index-090165.html)
+1.  转到 [Oracle 的下载站点](https://www.oracle.com/downloads/)
 2.  下载适用于 Windows（64 位服务器，32 位工具）的 ODAC 12c 第 4 版 (12.1.0.2.4)
 3.  安装 Data Provider for .NET 4
   

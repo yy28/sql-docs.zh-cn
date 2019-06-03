@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a6414ca219cbc2ca871a1100c4ff82570409873
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: dd507c2369eeca5ff8779781ec8e6b44a5c91687
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580637"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413529"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -106,8 +106,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-CREATE CLUSTERED COLUMNSTORE INDEX index_name   
-    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
+CREATE CLUSTERED COLUMNSTORE INDEX index_name
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
+    [ORDER (column [,...n] ) ]
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
 ```
@@ -134,7 +135,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 如果该表已具有聚集列存储索引，则可以指定与现有索引相同的名称，也可以使用 DROP EXISTING 选项指定新名称。  
   
-ON [database_name. [schema_name ] . | schema_name . ] *table_name*
+ON [database_name.  [schema_name ] .  | schema_name .  ] *table_name*
 
 指定要作为聚集列存储索引存储的由一部分、两部分或三部分构成的名称。 如果该表是堆或聚集索引，则会将其从行存储转换为列存储。 如果该表已经是列存储，则此语句会重新生成聚集列存储索引。 若要转换为有序聚集列存储索引，现有索引必须是聚集列存储索引。
   
@@ -149,10 +150,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ```
    DROP_EXISTING = OFF（默认值）要求索引名称与现有名称相同。 如果指定的索引名称已存在，则会出错。  
   
-##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = max_degree_of_parallelism  
+##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = max_degree_of_parallelism   
    在索引操作期间覆盖现有的最大并行度服务器配置。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
-   max_degree_of_parallelism 可为以下值：  
+   max_degree_of_parallelism 可为以下值  ：  
    - 1 - 取消生成并行计划。  
    - \>1 - 基于当前系统工作负载，将并行索引操作中使用的最大处理器数限制为指定数量或更少。 例如，当 MAXDOP = 4 时，使用的处理器数为 4 或更少。  
    - 0（默认值） - 根据当前系统工作负荷使用实际的处理器数量或更少数量的处理器。  
@@ -165,7 +166,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    有关详细信息，请参阅[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
  
 ###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
-   对于基于磁盘的表，delay 指定处于关闭状态的增量行组在 SQL Server 可以将它压缩为压缩行组之前，必须保持为增量行组的最小分钟数。 由于基于磁盘的表不对单个行跟踪插入和更新时间，因此 SQL Server 会将该延迟应用于处于关闭状态的增量行组。  
+   对于基于磁盘的表，delay 指定处于关闭状态的增量行组在 SQL Server 可以将它压缩为压缩行组之前，必须保持为增量行组的最小分钟数  。 由于基于磁盘的表不对单个行跟踪插入和更新时间，因此 SQL Server 会将该延迟应用于处于关闭状态的增量行组。  
    默认为 0 分钟。  
    
 ```sql
@@ -198,15 +199,15 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 #### <a name="on-options"></a>ON 选项 
    使用 ON 选项，您可为数据存储指定选项，例如分区架构、特定的文件组或默认文件组。 如果未指定 ON 选项，索引会使用现有表的分区设置或文件组设置。  
   
-   partition_scheme_name ( column_name )   
+   partition_scheme_name ( column_name )      
    指定表的分区方案。 分区方案必须已在数据库中存在。 若要创建分区方案，请参阅 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)。  
  
-   *column_name* 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配。  
+   *column_name* 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配  。  
 
-   filegroup_name  
+   filegroup_name   
    指定用于存储聚集列存储索引的文件组。 如果未指定位置并且表未分区，则索引将与基础表或视图使用相同的文件组。 该文件组必须已存在。  
 
-   "default"  
+   "default"    
    若要对默认文件组创建索引，请使用 "default" 或 [ default ]。  
   
    如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 QUOTED_IDENTIFIER 默认为 ON。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
@@ -214,14 +215,14 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ### <a name="create-nonclustered-columnstore-index"></a>CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
 对存储为堆或聚集索引的行存储表创建内存中非聚集列存储索引。 该索引可以具有经过筛选的条件，并且不需要包含基础表的所有列。 列存储索引需要足够的空间来存储数据副本。 它是可更新的，在基础表发生更改时会进行更新。 聚集索引上的非聚集列存储索引可启用实时分析。  
   
-index_name  
+index_name   
    指定索引的名称。 *index_name* 在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- ( column  [ ,...n ] )  
+ ( column  [ ,...n ] )       
     指定要存储的列。 非聚集列存储索引限定为 1024 个列。  
    每个列都必须采用列存储索引支持的数据类型。 有关受支持数据类型的列表，请参阅[限制和局限](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)。  
 
-ON [database_name. [schema_name ] . | schema_name . ] *table_name*  
+ON [database_name.  [schema_name ] .  | schema_name .  ] *table_name*  
    指定包含该索引的由一部分、两部分或三部分名称组成的表。  
 
 #### <a name="with-options"></a>WITH 选项
@@ -230,10 +231,10 @@ ON [database_name. [schema_name ] . | schema_name . ] *table_name*
   
    DROP_EXISTING = OFF：如果指定的索引名称已存在，则会显示一条错误。 使用 DROP_EXISTING 不能更改索引类型。 在向后兼容的语法中，WITH DROP_EXISTING 等效于 WITH DROP_EXISTING = ON。  
 
-###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = max_degree_of_parallelism  
+###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = max_degree_of_parallelism   
    在索引操作期间覆盖[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
-   max_degree_of_parallelism 可为以下值：  
+   max_degree_of_parallelism 可为以下值  ：  
    - 1 - 取消生成并行计划。  
    - \>1 - 基于当前系统工作负载，将并行索引操作中使用的最大处理器数限制为指定数量或更少。 例如，当 MAXDOP = 4 时，使用的处理器数为 4 或更少。  
    - 0（默认值） - 根据当前系统工作负荷使用实际的处理器数量或更少数量的处理器。  
@@ -280,18 +281,18 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 *partition_scheme_name* **(** _column_name_ **)**  
    指定分区方案，该方案定义要将已分区索引的分区映射到的文件组。 必须通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 使数据库中存在该分区方案。 
-   *column_name* 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配。 column_name 不限于索引定义中的列。 在对列存储索引进行分区时，如果尚未指定分区依据列，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会添加分区依据列作为索引列。  
-   如果未指定 partition_scheme_name 或 filegroup 且该表已分区，则索引会与基础表使用相同分区依据列并被放入同一分区方案中。  
+   *column_name* 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配  。 column_name 不限于索引定义中的列  。 在对列存储索引进行分区时，如果尚未指定分区依据列，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会添加分区依据列作为索引列。  
+   如果未指定 partition_scheme_name 或 filegroup 且该表已分区，则索引会与基础表使用相同分区依据列并被放入同一分区方案中   。  
    分区表的列存储索引必须实现分区对齐。  
    有关分区索引的详细信息，请参阅[已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
 
-filegroup_name  
+filegroup_name   
    指定要对其创建索引的文件组名称。 如果未指定 *filegroup_name* 并且该表未分区，则索引与基础表使用相同的文件组。 该文件组必须已存在。  
  
-"default"  
+"default"    
 为默认文件组创建指定索引。  
   
-在此上下文中，“default”一词不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
+在此上下文中，“default”一词不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示     。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
 ##  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
@@ -333,14 +334,14 @@ filegroup_name
 ##  <a name="LimitRest"></a> 限制和局限  
 
 **列存储索引中的每一列都必须是以下常见业务数据类型之一：** 
--   datetimeoffset [ ( n ) ]  
--   datetime2 [ ( n ) ]  
+-   datetimeoffset [ ( n ) ]   
+-   datetime2 [ ( n ) ]   
 -   DATETIME  
 -   smalldatetime  
 -   日期  
--   time [ ( n ) ]  
--   float [ ( n ) ]  
--   real [ ( n ) ]  
+-   time [ ( n ) ]   
+-   float [ ( n ) ]   
+-   real [ ( n ) ]   
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
@@ -350,15 +351,15 @@ filegroup_name
 -   smallint  
 -   TINYINT  
 -   bit  
--   nvarchar [ ( n ) ] 
+-   nvarchar [ ( n ) ]  
 -   nvarchar(max) （适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和高级层、标准层（S3 及更高），以及所有 VCore 产品/服务层，仅限聚集列存储索引）   
--   nchar [ ( n ) ]  
--   varchar [ ( n ) ]  
+-   nchar [ ( n ) ]   
+-   varchar [ ( n ) ]   
 -   varchar(max) （适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和高级层、标准层（S3 及更高），以及所有 VCore 产品/服务层，仅限聚集列存储索引）
--   char [ ( n ) ]  
--   varbinary [ ( n ) ] 
+-   char [ ( n ) ]   
+-   varbinary [ ( n ) ]  
 -   varbinary(max) （适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和高级层、标准层（S3 及更高）的 Azure SQL 数据库，以及所有 VCore 产品/服务层，仅限聚集列存储索引）
--   binary [ ( n ) ]  
+-   binary [ ( n ) ]   
 -   uniqueidentifier（适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）
   
 如果基础表中包含的某一列的数据类型不受列存储索引支持，则必须从非聚集列存储索引中省略该列。  
@@ -752,7 +753,7 @@ DROP INDEX cci_xdimProduct ON xdimProduct;
 
 创建按 SHIPDATE 排序的有序聚集列存储索引。
 
-```sql 
+```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( SHIPDATE );
 ```

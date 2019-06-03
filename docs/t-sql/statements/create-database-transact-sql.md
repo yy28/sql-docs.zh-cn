@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dcf9d83589b94846778e65392dd2483593f5d3ad
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65771473"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428960"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ ms.locfileid: "65771473"
 
 |||||
 |-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current) | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_ ** &nbsp;| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current) | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -165,15 +165,15 @@ CREATE DATABASE database_snapshot_name
 
 ## <a name="arguments"></a>参数
 
-database_name 新数据库的名称。 数据库名称在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。
+database_name  新数据库的名称。 数据库名称在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。
 
-除非没有为日志文件指定逻辑名称，否则 database_name 最多可以包含 128 个字符。 如果未指定逻辑日志文件名称，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会通过向 database_name 追加后缀来为日志生成 logical_file_name 和 os_file_name。 这会将 *database_name* 限制为 123 个字符，从而使生成的逻辑文件名称不超过 128 个字符。
+除非没有为日志文件指定逻辑名称，否则 database_name 最多可以包含 128 个字符  。 如果未指定逻辑日志文件名称，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会通过向 database_name 追加后缀来为日志生成 logical_file_name 和 os_file_name    。 这会将 *database_name* 限制为 123 个字符，从而使生成的逻辑文件名称不超过 128 个字符。
 
-如果未指定数据文件名称，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会使用 database_name 同时作为 logical_file_name 和 os_file_name。 默认路径从注册表中获得。 可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的“服务器属性”（“数据库设置”页）更改默认路径。 更改默认路径要求重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+如果未指定数据文件名称，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会使用 database_name 同时作为 logical_file_name 和 os_file_name    。 默认路径从注册表中获得。 可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的“服务器属性”（“数据库设置”页）  更改默认路径。 更改默认路径要求重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
 CONTAINMENT = { NONE | PARTIAL }
 
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
 
 指定数据库的包含状态。 NONE = 非包含数据库。 PARTIAL = 部分包含的数据库。
 
@@ -190,7 +190,7 @@ LOG ON
 
 不能对数据库快照指定 LOG ON。
 
-COLLATE collation_name     
+COLLATE collation_name       
 指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果没有指定排序规则，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则分配为数据库的排序规则。 不能对数据库快照指定排序规则名称。
 
 不能使用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 子句指定排序规则名称。 有关如何更改附加数据库的排序规则的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)。
@@ -203,7 +203,7 @@ COLLATE collation_name
 WITH \<option>      
 **\<filestream_options>**
 
-NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL } 适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL } 适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]   。
 
 指定对数据库的非事务性 FILESTREAM 访问的级别。
 
@@ -214,7 +214,7 @@ NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL } 适用于：[!INCLUDE[ssSQL11
 |FULL|启用对 FILESTREAM FileTable 的完全非事务性访问。|
 
 DIRECTORY_NAME = \<directory_name>     
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
 
 与 Windows 兼容的目录名称。 此名称应在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有 Database_Directory 名称中唯一。 无论 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则设置如何，唯一性比较都不区分大小写。 在此数据库中创建 FileTable 之前，应设置此选项。
 
@@ -222,25 +222,25 @@ DIRECTORY_NAME = \<directory_name>
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
 
   有关此选项的完整说明，请参阅[配置“默认全文语言”服务器配置选项](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)。
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
 
   有关此选项的完整说明，请参阅[配置“默认语言”服务器配置选项](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)。
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
 
   有关此选项的完整说明，请参阅[配置“嵌套触发器”服务器配置选项](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)。
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
 
   有关此选项的完整说明，请参阅[“转换干扰词”服务器配置选项](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)。
 
@@ -271,7 +271,7 @@ DIRECTORY_NAME = \<directory_name>
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  指定此选项后，将在位于由存储类内存（NVDIMM-N 永久性内存）支持的磁盘设备的卷上创建事务日志缓冲区 - 也称为持久性日志缓冲区。 有关详细信息，请参阅[使用存储类内存的事务提交延迟加速](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)。 适用于：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及更高版本。
+  指定此选项后，将在位于由存储类内存（NVDIMM-N 永久性内存）支持的磁盘设备的卷上创建事务日志缓冲区 - 也称为持久性日志缓冲区。 有关详细信息，请参阅[使用存储类内存的事务提交延迟加速](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)。 适用于  ：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及更高版本。
 
 FOR ATTACH [ WITH \< attach_database_option > ]     
 指定通过[附加](../../relational-databases/databases/database-detach-and-attach-sql-server.md)一组现有的操作系统文件来创建数据库。 必须有一个指定主文件的 \<filespec> 项。 至于其他 \<filespec> 项，只需要指定与第一次创建数据库或上一次附加数据库时路径不同的文件的那些项即可。 必须有一个 \<filespec> 项指定这些文件。
@@ -348,16 +348,16 @@ FOR ATTACH_REBUILD_LOG 具有以下要求：
 \<filespec>     
 控制文件属性。
 
-NAME logical_file_name     
+NAME logical_file_name      
 指定文件的逻辑名称。 指定 FILENAME 时，需要使用 NAME，除非指定 FOR ATTACH 子句之一。 无法将 FILESTREAM 文件组命名为 PRIMARY。
 
-logical_file_name     
+logical_file_name      
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引用文件时所用的逻辑名称。 *Logical_file_name* 在数据库中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 名称可以是字符或 Unicode 常量，也可以是常规标识符或分隔标识符。
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }      
+FILENAME { **'** _os\_file\_name_ **'**  |  **'** _filestream\_path_ **'** }      
 指定操作系统（物理）文件名称。
 
-'os_file_name'     
+'os_file_name'        
 是创建文件时由操作系统使用的路径和文件名。 文件必须驻留在下列一种设备中：安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地服务器、存储区域网络 [SAN] 或基于 iSCSI 的网络。 执行 CREATE DATABASE 语句前，指定路径必须存在。 有关详细信息，请参阅“备注”部分的“数据库文件和文件组”。
 
 如果为该文件指定了 UNC 路径，则可以设置 SIZE、MAXSIZE 和 FILEGROWTH 参数。
@@ -366,29 +366,29 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }
 
 不应将数据文件放在压缩文件系统中，除非这些文件是只读的辅助文件或数据库是只读的。 日志文件一定不要放在压缩文件系统中。
 
-**'** *filestream_path* **'**      
+**'** *filestream_path* **'**       
 对于 FILESTREAM 文件组，FILENAME 指向将存储 FILESTREAM 数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 C:\MyFiles\MyFilestreamData、C:\MyFiles 必须存在才能运行 ALTER DATABASE，但 MyFilestreamData 文件夹不能存在。
 
 必须在同一语句中创建文件组和文件 (`<filespec>`)。
 
 SIZE 和 FILEGROWTH 属性不适用于 FILESTREAM 文件组。
 
-SIZE size     
+SIZE size       
 指定文件的大小。
 
 将 *os_file_name* 指定为 UNC 路径时，不能指定 SIZE。 SIZE 不适用于 FILESTREAM 文件组。
 
-size     
+size       
 文件的初始大小。
 
 如果没有为主文件提供 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用 model 数据库中主文件的大小。 model 数据库中主文件的默认大小为 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）或 1 MB（对于较早版本）。 如果指定了辅助数据文件或日志文件，但未指定该文件的 *size*，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会以 8 MB（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）或 1 MB（对于较早版本）作为该文件的大小。 为主文件指定的大小至少应与 model 数据库的主文件大小相同。
 
 可以使用千字节 (KB)、兆字节 (MB)、千兆字节 (GB) 或兆兆字节 (TB) 后缀。 默认值为 MB。 指定一个整数，不包含小数位。 *Size* 是一个整数值。 对于大于 2147483647 的值，使用更大的单位。
 
-MAXSIZE max_size     
+MAXSIZE max_size      
 指定文件可增大到的最大大小。 将 *os_file_name* 指定为 UNC 路径时，不能指定 MAXSIZE。
 
-max_size     
+max_size      
 最大的文件大小。 可以使用 KB、MB、GB 和 TB 后缀。 默认值为 MB。 指定一个整数，不包含小数位。 如果未指定 *max_size*，文件将一直增长到磁盘变满为止。 *Max_size* 是一个整数值。 对于大于 2147483647 的值，使用更大的单位。
 
 UNLIMITED    
@@ -397,10 +397,10 @@ UNLIMITED
 > [!NOTE]
 > 为 FILESTREAM 容器指定此选项时，没有最大大小。 它将继续增大，直到磁盘已满。
 
-FILEGROWTH growth_increment    
+FILEGROWTH growth_increment     
 指定文件的自动增量。 文件的 FILEGROWTH 设置不能超过 MAXSIZE 设置。 将 *os_file_name* 指定为 UNC 路径时，不能指定 FILEGROWTH。 FILEGROWTH 不适用于 FILESTREAM 文件组。
 
-growth_increment    
+growth_increment     
 每次需要新空间时为文件添加的空间量。
 
 该值可以 MB、KB、GB、TB 或百分比 (%) 为单位指定。 如果未在数量后面指定 MB、KB 或 %，则默认值为 MB。 如果指定 %，则增量大小为发生增长时文件大小的指定百分比。 指定的大小舍入为最接近的 64 KB 的倍数，最小值为 64 KB。
@@ -418,10 +418,10 @@ growth_increment
 \<filegroup>     
 控制文件组属性。 不能对数据库快照指定文件组。
 
-FILEGROUP filegroup_name     
+FILEGROUP filegroup_name      
 文件组的逻辑名称。
 
-filegroup_name     
+filegroup_name      
 *filegroup_name* 在数据库中必须唯一，并且不能是系统提供的名称 PRIMARY 和 PRIMARY_LOG。 名称可以是字符或 Unicode 常量，也可以是常规标识符或分隔标识符。 名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。
 
 CONTAINS FILESTREAM     
@@ -429,17 +429,17 @@ CONTAINS FILESTREAM
 
 CONTAINS MEMORY_OPTIMIZED_DATA     
 
-适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
 
 指定文件组在文件系统中存储内存优化数据。 有关详细信息，请参阅[内存中 OLTP - 内存中优化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每个数据库只能有一个 MEMORY_OPTIMIZED_DATA 文件组。 有关通过创建文件组来存储内存优化数据的代码示例，请参阅[创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。
 
 DEFAULT     
 指定命名文件组为数据库中的默认文件组。
 
-database_snapshot_name    
+database_snapshot_name     
 新数据库快照的名称。 数据库快照名称必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中唯一，并且必须符合标识符规则。 *database_snapshot_name* 最多可以包含 128 个字符。
 
-ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]    
+ON **(** NAME **=** _logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ]    
 若要创建数据库快照，请在源数据库中指定文件列表。 若要使快照工作，必须分别指定所有数据文件。 但是，日志文件不允许用于数据库快照。 数据库快照不支持 FILESTREAM 文件组。 如果在 CREATE DATABASE ON 子句中包含了 FILESTREAM 数据文件，该语句将失败，并且会引发错误。
 
 有关 NAME 和 FILENAME 以及其值的说明，请参阅等效的 \<filespec> 值的说明。
@@ -447,7 +447,7 @@ ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**'
 > [!NOTE]
 > 创建数据库快照时，不允许使用其他 \<filespec> 选项和关键字 PRIMARY。
 
-AS SNAPSHOT OF source_database_name 指定要创建的数据库为 source_database_name 指定的源数据库的数据库快照。 快照和源数据库必须位于同一实例中。
+AS SNAPSHOT OF source_database_name  指定要创建的数据库为 source_database_name  指定的源数据库的数据库快照。 快照和源数据库必须位于同一实例中。
 
 有关详细信息，请参阅“备注”部分的[数据库快照](#database-snapshots)。
 
@@ -476,14 +476,14 @@ AS SNAPSHOT OF source_database_name 指定要创建的数据库为 source_databa
 - 内存优化数据文件组
 
 ## <a name="database-files-and-filegroups"></a>数据库文件和文件组
-每个数据库至少有两个文件（一个主文件和一个事务日志文件）和一个文件组。 可以为每个数据库指定最多 32,767 个文件和 32,767 个文件组。
+每个数据库至少有两个文件（一个主文件和一个事务日志文件）和一个文件组   。 可以为每个数据库指定最多 32,767 个文件和 32,767 个文件组。
 
 在创建数据库时，请根据数据库中预期的最大数据量，创建尽可能大的数据文件。
 
 建议使用存储区域网络 (SAN)、基于 iSCSI 的网络或本地附加的磁盘来存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库文件，因为该配置使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能和可靠性得到了优化。
 
 ## <a name="database-snapshots"></a>数据库快照
-可以使用 `CREATE DATABASE` 语句创建源数据库的只读静态视图（数据库快照）。 当创建快照时，源数据库已存在，所以数据库快照在事务上与源数据库一致。 源数据库可以具有多个快照。
+可以使用 `CREATE DATABASE` 语句创建源数据库的只读静态视图（数据库快照）   。 当创建快照时，源数据库已存在，所以数据库快照在事务上与源数据库一致。 源数据库可以具有多个快照。
 
 > [!NOTE]
 > 创建数据库快照时，`CREATE DATABASE` 语句不能引用日志文件、脱机文件、还原文件和不存在的文件。
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| **_\*SQL 数据库<br />单一数据库/弹性池\*_** | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\*SQL 数据库<br />单一数据库/弹性池\*_ ** | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -892,18 +892,18 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
   | ( EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
   | SERVICE_OBJECTIVE =
-    { 'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+    { 'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
-      | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
-      | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
-      | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
-      | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
-      | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
-      | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
-      | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
-      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6'
+      | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
+      | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
+      | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
+      | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
+      | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
+      | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
+      | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
 }
 ```
@@ -913,18 +913,18 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
-      { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+      { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
-      | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
-      | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
-      | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
-      | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
-      | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
-      | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
-      | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
-      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6'
+      | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
+      | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
+      | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
+      | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
+      | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
+      | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
+      | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } )
    ]
 [;]
@@ -932,10 +932,10 @@ CREATE DATABASE database_name
 
 ## <a name="arguments"></a>参数
 
-database_name     
+database_name      
 新数据库的名称。 此名称在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上必须唯一，并且必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的标识符规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。
 
-Collation_name     
+Collation_name      
 指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果未指定，则会为数据库分配默认排序规则（即 SQL_Latin1_General_CP1_CI_AS）。
 
 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)。
@@ -956,9 +956,9 @@ MAXSIZE
 指定数据库的最大大小。 MAXSIZE 必须对指定 EDITION（服务层）有效。下面是服务层支持的 MAXSIZE 值和默认值 (D)。
 
 > [!NOTE]
-> MAXSIZE 参数不适用于超大规模服务层中的单一数据库。 超大规模层数据库根据需要而增长，最大 100 TB。 SQL 数据库服务会自动添加存储空间，而无需设置最大大小。
+>  MAXSIZE 参数不适用于超大规模服务层中的单一数据库。 超大规模层数据库根据需要而增长，最大 100 TB。 SQL 数据库服务会自动添加存储空间，而无需设置最大大小。
 
-SQL 数据库服务器上适用于单一数据库和入池数据库的基于 DTU 的模型
+SQL 数据库服务器上适用于单一数据库和入池数据库的基于 DTU 的模型 
 
 |**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|
@@ -1046,7 +1046,7 @@ SQL 数据库服务器上适用于单一数据库和入池数据库的基于 DTU
 - 如果 MAXSIZE 和 EDITION 均未指定，则 EDITION 设置为 Standard (S0)，MAXSIZE 设置为 250 GB。
 
 SERVICE_OBJECTIVE     
-- 针对单一数据库和入池数据库
+- 针对单一数据库和入池数据库 
 
   - 指定性能级别。 服务目标的可用值包括：`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80`。
 
@@ -1064,7 +1064,7 @@ AS COPY OF [source_server_name.]source_database_name
 **适用范围：** 仅限单一数据库和池化数据库。
 将数据库复制到同一台或其他 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器上。
 
-source_server_name      
+source_server_name       
 源数据库所在的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器的名称。 当源数据库和目标数据库位于同一台 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器上时，此参数是可选的。
 
 > [!NOTE]
@@ -1089,7 +1089,7 @@ source_server_name
 
 使用 `CREATE DATABASE` 语句复制数据库是一个异步操作。 因此，在整个复制过程中，不需要与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器建立连接。 `CREATE DATABASE` 语句会在 sys.databases 中的条目创建之后，但是在数据库复制操作完成之前将控制权返还给用户。 换言之，当数据库复制仍在进行时，`CREATE DATABASE` 语句会成功返回。
 
-- 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 服务器上监视复制进程：在 [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) 中查询 `percentage_complete` 或 `replication_state_desc` 列，或在 sys.databases 视图中查询 `state` 列。 可以使用 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 视图，它还会返回数据库操作（包括数据库复制）的状态。
+- 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 服务器上监视复制进程：在 [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) 中查询 `percentage_complete` 或 `replication_state_desc` 列，或在 sys.databases  视图中查询 `state` 列。 可以使用 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 视图，它还会返回数据库操作（包括数据库复制）的状态。
 
 在复制过程成功完成后，目标数据库与源数据库在事务上是一致的。
 
@@ -1194,7 +1194,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| **_\*SQL 数据库<br />托管实例\*_** | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| ** _\*SQL 数据库<br />托管实例\*_ ** | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1214,10 +1214,10 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ## <a name="arguments"></a>参数
 
-database_name       
+database_name        
 新数据库的名称。 此名称在 SQL 服务器上必须唯一，并且必须符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。
 
-Collation_name      
+Collation_name       
 指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果未指定，则会为数据库分配默认排序规则（即 SQL_Latin1_General_CP1_CI_AS）。
 
 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)。
@@ -1261,7 +1261,7 @@ CREATE DATABASE TestDB1;
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)| \*SQL 数据<br />仓库\*| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)| \*SQL 数据<br />仓库\*  | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1294,18 +1294,18 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ## <a name="arguments"></a>参数
 
-database_name       
+database_name        
 新数据库的名称。 此名称在 SQL Server 上必须是唯一的，它可托管 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 数据库和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 数据库，且符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。
 
-collation_name       
+collation_name        
 指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果未指定，则会为数据库分配默认排序规则（即 SQL_Latin1_General_CP1_CI_AS）。
 
 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)。
 
-EDITION     
+EDITION       
 指定数据库的服务层。 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，使用“datawarehouse”。
 
-MAXSIZE      
+MAXSIZE       
 默认为 245,760 GB (240 TB)。
 
 **适用范围：** 已针对计算代系 1 进行优化
@@ -1373,7 +1373,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics Platform<br />System (PDW) \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_ ** |
 
 &nbsp;
 
@@ -1396,43 +1396,43 @@ WITH (
 
 ## <a name="arguments"></a>参数
 
-database_name     
+database_name      
 新数据库的名称。 有关允许的数据库名称的详细信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“对象命名规则”和“保留的数据库名称”。
 
-AUTOGROW = ON | OFF     
-指定此数据库的 replicated_size、distributed_size 和 log_size 参数是否将根据需要自动增加到超出其指定大小。 默认值为 OFF。
+AUTOGROW = ON | OFF      
+指定此数据库的 replicated_size、distributed_size 和 log_size 参数是否将根据需要自动增加到超出其指定大小    。 默认值为 OFF  。
 
-如果 AUTOGROW 为 ON，则 replicated_size、distributed_size 和 log_size 将根据所需（不是在初始指定大小的块中），随需要比已分配存储更多存储的每次数据插入、更新或其他操作增加。
+如果 AUTOGROW 为 ON，则 replicated_size、distributed_size 和 log_size 将根据所需（不是在初始指定大小的块中），随需要比已分配存储更多存储的每次数据插入、更新或其他操作增加    。
 
-如果 AUTOGROW 为 OFF，则大小不会自动增加。 当尝试执行需要将 replicated_size、distributed_size 或 log_size 增加到超过其指定值的操作时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将返回错误。
+如果 AUTOGROW 为 OFF，则大小不会自动增加。 当尝试执行需要将 replicated_size、distributed_size 或 log_size 增加到超过其指定值的操作时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 将返回错误    。
 
-对于所有大小，AUTOGROW 要么都设置为 ON，要么都为 OFF。 例如，不可能对于 log_size 将 AUTOGROW 设置为 ON，对于 replicated_size，却不这样设置。
+对于所有大小，AUTOGROW 要么都设置为 ON，要么都为 OFF。 例如，不可能对于 log_size 将 AUTOGROW 设置为 ON，对于 replicated_size，却不这样设置   。
 
-replicated_size [ GB ]      
-一个正数。 为分配到复制表和每个 Compute 节点上的相应数据的总空间设置大小（整数或十进制 GB）。 有关 replicated_size 的最小和最大要求的信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“最小值和最大值”。
+ replicated_size [ GB ]      
+一个正数。 为分配到复制表和每个 Compute 节点上的相应数据的总空间设置大小（整数或十进制 GB）  。 有关 replicated_size 的最小和最大要求的信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“最小值和最大值”  。
 
 如果 AUTOGROW 为 ON，复制表允许增加到超出限制。
 
-如果 AUTOGROW 为 OFF，那么当用户尝试创建新的复制表、将数据插入到现有复制表或以增加的大小可能会超过 replicated_size 的方式更新现有复制表时，将返回错误。
+如果 AUTOGROW 为 OFF，那么当用户尝试创建新的复制表、将数据插入到现有复制表或以增加的大小可能会超过 replicated_size 的方式更新现有复制表时，将返回错误  。
 
-distributed_size [ GB ]      
-一个正数。 整个设备上分配给分布式表（以及相应数据）的总空间大小（整数或十进制 GB）。 有关 distributed_size 的最小和最大要求的信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“最小值和最大值”。
+ distributed_size [ GB ]      
+一个正数。 整个设备上分配给分布式表（以及相应数据）的总空间大小（整数或十进制 GB）  。 有关 distributed_size 的最小和最大要求的信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“最小值和最大值”  。
 
 如果 AUTOGROW 为 ON，分布式表将可以增加到超出限制。
 
-如果 AUTOGROW 为 OFF，那么当用户尝试创建新的分布式表、将数据插入到现有分布式表或以增加的大小可能会超过 replicated_size 的方式更新现有分布式表时，将返回错误。
+如果 AUTOGROW 为 OFF，那么当用户尝试创建新的分布式表、将数据插入到现有分布式表或以增加的大小可能会超过 replicated_size 的方式更新现有分布式表时，将返回错误  。
 
-log_size [ GB ]      
-一个正数。 整个设备上的事务日志的大小（整数或十进制 GB）。
+ log_size [ GB ]      
+一个正数。 整个设备上的事务日志的大小（整数或十进制 GB）  。
 
-有关 log_size 的最小和最大要求的信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“最小值和最大值”。
+有关 log_size 的最小和最大要求的信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“最小值和最大值”  。
 
 如果 AUTOGROW 为 ON，日志文件将可以增加到超出限制。 使用 [DBCC SHRINKLOG（Azure SQL 数据仓库）](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)语句将日志文件大小减少至初始大小。
 
-如果 AUTOGROW 为 OFF，那么对于在单个计算节点上增加的日志大小可能会超过 log_size 的任何操作，将向用户返回错误。
+如果 AUTOGROW 为 OFF，那么对于在单个计算节点上增加的日志大小可能会超过 log_size 的任何操作，将向用户返回错误  。
 
 ## <a name="permissions"></a>权限
-需要 master 数据库中的 `CREATE ANY DATABASE` 权限，或者 sysadmin 固定服务器角色的成员身份。
+需要 master 数据库中的 `CREATE ANY DATABASE` 权限，或者 sysadmin 固定服务器角色的成员身份  。
 
 以下示例向数据库用户 Fay 提供创建数据库的权限。
 
@@ -1451,11 +1451,11 @@ GO
 
 有关数据库的最小和最大约束的信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“最小值和最大值”。
 
-在创建数据库时，每个 Compute 节点上必须有足够的可用空间来分配以下大小的总和：
+在创建数据库时，每个 Compute 节点上必须有足够的可用空间来分配以下大小的总和  ：
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表的大小为 replicated_table_size。
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表的大小为（distributed_table_size/Compute 节点数量）。
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志的大小为（log_size/Compute 节点数量）。
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表的大小为 replicated_table_size  。
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表的大小为（  distributed_table_size/Compute 节点数量）。
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志的大小为（log_size  /Compute 节点数量）。
 
 ## <a name="locking"></a>锁定
 在 DATABASE 对象上采用共享锁。

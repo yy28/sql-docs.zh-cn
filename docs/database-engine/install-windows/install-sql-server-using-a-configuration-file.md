@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c5127fd5aec582db4f8e574f29cab5cec3809252
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 7a39657a1bc1bfd9909a4c31a028ce4fa7816553
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072205"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454742"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>使用配置文件安装 SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "58072205"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供了基于系统默认值和运行时输入生成配置文件的功能。 可以使用配置文件在整个企业中部署具有相同配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 通过创建一个启动 Setup.exe 的批处理文件，还可以使企业范围内的手动安装得以标准化。 
  
-本文面向 SQL Server 2016 版及更高版本。 有关 SQL Server 较早版本的信息，请参阅[使用配置文件安装 SQL Server 2014](/../../2014/database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。
+本文面向 SQL Server 2016 版及更高版本。 有关 SQL Server 较早版本的信息，请参阅[使用配置文件安装 SQL Server 2014](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014)。
  
 安装程序仅支持通过命令提示符使用配置文件。 下面列出了在使用配置文件时参数的处理顺序：  
   
@@ -83,17 +83,17 @@ FEATURES=SQL,Tools
   
 1. 准备一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并在同一计算机上配置它们。 
   
-    - 从安装中心的“高级”页运行“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”，并捕获准备映像配置文件。 
+    - 从安装中心的  “高级”页运行  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”，并捕获准备映像配置文件。 
   
     - 将同一个准备映像配置文件用作准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例的模板。 
   
-    - 从安装中心的“高级”页运行“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”，以便在计算机上配置准备的实例。 
+    - 从安装中心的  “高级”页运行  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”，以便在计算机上配置准备的实例。 
   
 2. 使用 Windows SysPrep 工具准备操作系统的映像，包括未配置的、已准备的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 
   
-    -   从安装中心的“高级”页运行“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”，并捕获准备映像配置文件。 
+    -   从安装中心的“高级”页运行  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”，并捕获准备映像配置文件。 
   
-    -   从安装中心的“高级”页运行“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”，但在捕获完全的配置文件之后，在“已准备好完成”页上取消它。 
+    -   从安装中心的  “高级”页运行  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”，但在捕获完全的配置文件之后，在  “已准备好完成”页上取消它。 
   
     -   可以将完全的映像配置文件随 Windows 映像一起存储，以便自动执行已准备实例的配置。 
   

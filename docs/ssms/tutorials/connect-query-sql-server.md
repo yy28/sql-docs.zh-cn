@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio'
+Title: 教程：使用 SQL Server Management Studio 连接和查询 SQL Server 实例
 description: 有关使用 SQL Server Management Studio 连接到 SQL Server 实例和运行基本 T-SQL 查询的教程。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,12 +11,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 21f6d4c689a30dc60fc103f7e881ae5499baafa8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 034e0663065003a47245ad71b602ec8bfb256df3
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802493"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454455"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教程：使用 SQL Server Management Studio 连接和查询 SQL Server 实例
 
@@ -37,43 +37,43 @@ ms.locfileid: "56802493"
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 如果不能访问 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
-- Windows：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+-  Windows：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>连接到 SQL Server 实例
 
-1. 启动 SQL Server Management Studio。 首次运行 SSMS 时，系统将打开“连接到服务器”窗口。 如未打开，可以选择“对象资源管理器” > “连接” > “数据库引擎”，将其手动打开。
+1. 启动 SQL Server Management Studio。 首次运行 SSMS 时，系统将打开“连接到服务器”窗口  。 如未打开，可以选择“对象资源管理器”   > “连接”   > “数据库引擎”  ，将其手动打开。
 
     ![对象资源管理器中的“连接”链接](media/connect-query-sql-server/connectobjexp.png)
 
-2. 在“连接到服务器”窗口中，执行以下操作： 
+2. 在“连接到服务器”  窗口中，执行以下操作： 
 
-    - 对于“服务器类型”，选择“数据库引擎”（通常的默认选项）。
-    - 对于“服务器名称”，输入 SQL Server 实例的名称。 （本文使用主机名 NODE5 [NODE5\SQL2016ST] 上的实例名称 SQL2016ST。）如果不知道如何确定 SQL Server 实例的名称，请参阅[使用 SSMS 的其他提示和技巧](ssms-tricks.md#determine-sql-server-name)。  
+    - 对于“服务器类型”  ，选择“数据库引擎”  （通常的默认选项）。
+    - 对于“服务器名称”，输入 SQL Server 实例的名称  。 （本文使用主机名 NODE5 [NODE5\SQL2016ST] 上的实例名称 SQL2016ST。）如果不知道如何确定 SQL Server 实例的名称，请参阅[使用 SSMS 的其他提示和技巧](ssms-tricks.md#determine-sql-server-name)。  
 
     ![“服务器名称”字段与使用 SQL Server 实例的选项](media/connect-query-sql-server/connection2.png)
 
-    - 对于“身份验证”，选择“Windows 身份验证”。 本文使用 Windows 身份验证，但也支持 SQL Server 登录。 如果选择“SQL 登录”，系统将提示你输入用户名和密码。 有关身份验证类型的详细信息，请参阅[连接到服务器（数据库引擎）](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)。
+    - 对于“身份验证”，选择“Windows 身份验证”   。 本文使用 Windows 身份验证，但也支持 SQL Server 登录。 如果选择“SQL 登录”，系统将提示你输入用户名和密码  。 有关身份验证类型的详细信息，请参阅[连接到服务器（数据库引擎）](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)。
 
-    也可以通过选择“选项”来修改其他连接选项。 连接选项的示例包括你要连接到的数据库、连接超时值和网络协议。 本文对所有选项使用默认值。 
+    也可以通过选择“选项”来修改其他连接选项  。 连接选项的示例包括你要连接到的数据库、连接超时值和网络协议。 本文对所有选项使用默认值。 
 
-3. 完成所有字段后，选择“连接”。 
+3. 完成所有字段后，选择“连接”  。 
 
 ### <a name="examples-of-successful-connections"></a>成功连接的示例
-可通过展开和浏览“对象资源管理器”中的对象，验证 SQL Server 连接是否成功。 这些对象可能有所不同，具体取决于要连接到的服务器的类型。 
+可通过展开和浏览“对象资源管理器”中的对象，验证 SQL Server 连接是否成功  。 这些对象可能有所不同，具体取决于要连接到的服务器的类型。 
 
 - 连接到本地 SQL Server，示例中为 NODE5\SQL2016ST：![连接到本地服务器](media/connect-query-sql-server/connect-on-prem.png)
 
 - 连接到 SQL Azure DB，示例中为 msftestserver.database.windows.net：![连接到 SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > 在本教程中，之前已使用 Windows 身份验证连接到本地 SQL Server，但此方法不支持连接到 SQL Azure DB。 因此，此图像显示使用 SQL 身份验证连接到 SQL Azure DB。 有关详细信息，请参阅 [SQL 本地身份验证](../../relational-databases/security/choose-an-authentication-mode.md)和 [SQL Azure 身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access)。 
+  > 在本教程中，之前已使用 Windows 身份验证连接到本地 SQL Server，但此方法不支持连接到 SQL Azure DB  。 因此，此图像显示使用 SQL 身份验证连接到 SQL Azure DB。 有关详细信息，请参阅 [SQL 本地身份验证](../../relational-databases/security/choose-an-authentication-mode.md)和 [SQL Azure 身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management)。 
 
 ## <a name="create-a-database"></a>创建数据库
 按照以下步骤创建一个名为 TutorialDB 的数据库： 
 
-1. 在“对象资源管理器”中右键单击服务器实例，然后选择“新建查询”：
+1. 在“对象资源管理器”中右键单击服务器实例，然后选择“新建查询”  ：
 
    ![“新建查询”链接](media/connect-query-sql-server/newquery.png)
    
@@ -89,22 +89,22 @@ ms.locfileid: "56802493"
    CREATE DATABASE [TutorialDB]
    GO
    ```
-2. 若要执行查询，请选择“执行”（或选择键盘上的 F5）。 
+2. 若要执行查询，请选择“执行”（或选择键盘上的 F5）  。 
 
    ![“执行”命令](media/connect-query-sql-server/execute.png)
   
-    查询完成后，新的 TutorialDB 数据库会显示在“对象资源管理器”内的数据库列表中。 如未显示，请右键单击“数据库”节点，然后选择“刷新”。  
+    查询完成后，新的 TutorialDB 数据库会显示在“对象资源管理器”内的数据库列表中。 如未显示，请右键单击“数据库”节点，然后选择“刷新”   。  
 
 
 ## <a name="create-a-table-in-the-new-database"></a>在新数据库中创建表
-本部分中将在新创建的 TutorialDB 数据库中创建一个表。 由于查询编辑器仍处于 master 数据库的上下文中，因此请执行以下操作，将连接上下文切换到 TutorialDB 数据库： 
+本部分中将在新创建的 TutorialDB 数据库中创建一个表。 由于查询编辑器仍处于 master 数据库的上下文中，因此请执行以下操作，将连接上下文切换到 TutorialDB 数据库   ： 
 
 1. 在数据库下拉列表中，选择所需数据库，如下所示： 
 
    ![更改数据库](media/connect-query-sql-server/changedb.png)
 
-2. 将以下 T-SQL 代码片段粘贴到查询窗口，选择它，再选择“执行”（或选择键盘上的 F5）。  
-   可在查询窗口中替换现有文本或将其追加到末尾。 若要在查询窗口中执行所有文本，请选择“执行”。 若要执行部分文本，请突出显示该部分，然后选择“执行”。  
+2. 将以下 T-SQL 代码片段粘贴到查询窗口，选择它，再选择“执行”（或选择键盘上的 F5）。   
+   可在查询窗口中替换现有文本或将其追加到末尾。 若要在查询窗口中执行所有文本，请选择“执行”  。 若要执行部分文本，请突出显示该部分，然后选择“执行”  。  
   
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -123,10 +123,10 @@ ms.locfileid: "56802493"
    GO
    ```
 
-查询完成后，新的“客户”表会显示在对象资源管理器内的表列表中。 如果未显示该表，请右键单击“对象资源管理器”中的“TutorialDB” > “表”节点并选择“刷新”。
+查询完成后，新的“客户”表会显示在对象资源管理器内的表列表中。 如果未显示该表，请右键单击“对象资源管理器”中的“TutorialDB”   > “表”  节点并选择“刷新”  。
 
 ## <a name="insert-rows-into-the-new-table"></a>将行插入新表
-将一些行插入前面创建的“客户”表。 将以下 T-SQL 代码片段粘贴到查询窗口并选择“执行”来完成此操作： 
+将一些行插入前面创建的“客户”表。 将以下 T-SQL 代码片段粘贴到查询窗口并选择“执行”来完成此操作  ： 
 
 
    ```sql
@@ -144,7 +144,7 @@ ms.locfileid: "56802493"
 ## <a name="query-the-table-and-view-the-results"></a>查询表并查看结果
 查询结果在查询文本窗口下可见。 执行以下步骤，查询“客户”表和查看以前插入的行：  
 
-1. 将以下 T-SQL 代码片段粘贴到查询窗口并选择“执行”： 
+1. 将以下 T-SQL 代码片段粘贴到查询窗口并选择“执行”  ： 
 
    ```sql
    -- Select rows from table 'Customers'
@@ -159,8 +159,8 @@ ms.locfileid: "56802493"
 
      ![用于显示查询结果的三个选项](media/connect-query-sql-server/results.png)
 
-    - 中间的按钮采用“网格视图”显示结果，这是默认选项。 
-    - 第一个按钮将在“文本视图”中显示结果，如下一部分中的图像所示。
+    - 中间的按钮采用“网格视图”显示结果，这是默认选项  。 
+    - 第一个按钮将在“文本视图”中显示结果，如下一部分中的图像所示  。
     - 第三个按钮可将结果保存为默认扩展名是 .rpt 的文件。
 
 ## <a name="verify-your-connection-properties-by-using-the-query-window-table"></a>使用查询窗口表验证连接属性
@@ -171,12 +171,12 @@ ms.locfileid: "56802493"
 
     ![连接属性](media/connect-query-sql-server/connectionproperties.png)
     
-    请注意在此图像中，结果显示在“文本视图”中。 
+    请注意在此图像中，结果显示在“文本视图”中  。 
 
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>更改查询窗口连接到的服务器
 通过执行以下步骤，可以更改当前查询窗口连接到的服务器：
 
-1. 右键单击查询窗口，然后选择“连接” > “更改连接”。 “连接到服务器”窗口将再次打开。
+1. 右键单击查询窗口，然后选择  “连接” >   “更改连接”。 “连接到服务器”  窗口将再次打开。
 2. 更改查询连接到的服务器。 
  
    ![“更改连接”命令](media/connect-query-sql-server/changeconnection.png)

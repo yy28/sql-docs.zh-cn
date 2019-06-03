@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 72f31c6f27590a9b44c0766c5379e90f9666d1a0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718418"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454577"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 
@@ -68,13 +68,13 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 此外，还需为 SSISDB 添加到的可用性组创建可用性组侦听程序。 请参阅[创建或配置可用性组侦听程序](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5.更新 Scale Out Master 服务配置文件
-在主节点和辅助节点上更新 Scale Out Master 服务配置文件 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`。 将 SqlServerName 更新为 [可用性组侦听程序 DNS 名称],[端口]。
+在主节点和辅助节点上更新 Scale Out Master 服务配置文件 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`。 将 SqlServerName 更新为 [可用性组侦听程序 DNS 名称],[端口]   。
 
 ## <a name="6-enable-package-execution-logging"></a>6.启用包执行日志记录
 
-使用登录名 ##MS_SSISLogDBWorkerAgentLogin##（其密码是自动生成的）在 SSISDB 中进行日志记录。 要让日志记录适用于 SSISDB 的所有副本，请执行以下操作
+使用登录名 ##MS_SSISLogDBWorkerAgentLogin##（其密码是自动生成的）在 SSISDB 中进行日志记录  。 要让日志记录适用于 SSISDB 的所有副本，请执行以下操作
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 更改主 SQL Server 上 ##MS_SSISLogDBWorkerAgentLogin## 的密码
+### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 更改主 SQL Server 上 ##MS_SSISLogDBWorkerAgentLogin## 的密码 
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 将该登录名添加到辅助 SQL Server
 
@@ -87,11 +87,11 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 
 ## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7.配置 Windows Server 故障转移群集的 Scale Out Master 服务角色操作
 
-1.  在故障转移群集管理器中，连接到 Scale Out 的群集。选择群集。 在菜单中选择“操作”，然后选择“配置角色”。
+1.  在故障转移群集管理器中，连接到 Scale Out 的群集。选择群集。 在菜单中选择“操作”，然后选择“配置角色”   。
 
-2.  在“高可用性向导”对话框的“选择角色”页中，选择“通用服务”。 在“选择服务”页中，选择 SQL Server Integration Services Scale Out Master 14.0。
+2.  在“高可用性向导”对话框的“选择角色”页中，选择“通用服务”    。 在“选择服务”页中，选择 SQL Server Integration Services Scale Out Master 14.0  。
 
-3.  在“客户端访问点”页中，输入 Scale Out Master 服务的 DNS 主机名。
+3.  在“客户端访问点”页中，输入 Scale Out Master 服务的 DNS 主机名  。
 
     ![HA 向导 1](media/ha-wizard1.PNG)
 
@@ -99,7 +99,7 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 
 在 Azure 虚拟机上，此配置步骤需要额外的步骤。 这些概念和这些步骤的完整解释超出了本文的范围。
 
-1.  必须设置 Azure 域。 Windows Server 故障转移群集要求群集中的所有计算机都是同一个域的成员。 有关详细信息，请参阅[使用 Azure 门户启用 Azure Active Directory 域服务](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started)。
+1.  必须设置 Azure 域。 Windows Server 故障转移群集要求群集中的所有计算机都是同一个域的成员。 有关详细信息，请参阅[使用 Azure 门户启用 Azure Active Directory 域服务](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance)。
 
 2. 必须设置 Azure 负载均衡器。 这是可用性组侦听程序的一项要求。 有关详细信息，请参阅[教程：使用 Azure 门户通过基本负载均衡器将内部流量在各台 VM 之间进行负载均衡](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)。
 

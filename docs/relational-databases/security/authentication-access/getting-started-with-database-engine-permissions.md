@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202656"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454589"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "53202656"
  数据库用户  
  通过在数据库中创建数据库用户并将该数据库用户映射到登录名来授予登录名对数据库的访问权限。 通常，数据库用户名与登录名相同，尽管它不必要相同。 每个数据库用户均映射到单个登录名。 一个登录名只能映射到数据库中的一个用户，但可以映射为多个不同数据库中的数据库用户。  
   
- 也可以创建不具有相应登录名的数据库用户。 这些数据库用户称为“包含的数据库用户” 。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓励使用包含的数据库用户，因为这样可以更轻松地将你的数据库移到另一个服务器。 与登录名类似，包含的数据库用户可以使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+ 也可以创建不具有相应登录名的数据库用户。 这些数据库用户称为“包含的数据库用户”  。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓励使用包含的数据库用户，因为这样可以更轻松地将你的数据库移到另一个服务器。 与登录名类似，包含的数据库用户可以使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
  有 12 种类型的用户，它们在如何进行身份验证以及所表示的人员方面略有差异。 若要查看用户列表，请参阅 [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)。  
   
@@ -126,7 +126,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   如果管理员未正确执行 `DENY SELECT ON OBJECT::OrderStatus TO Sales;` ，则 Ted 作为 Sales 角色的成员将被拒绝 `SELECT` 权限，因为对 Sales 的 `DENY` 将覆盖其个人  `GRANT`。  
   
 > [!NOTE]  
->  可以使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]配置权限。 在对象资源管理器中查找安全对象，右键单击该安全对象，然后单击“属性”。 选择“权限”页  。 有关使用权限页的帮助，请参阅 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
+>  可以使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]配置权限。 在对象资源管理器中查找安全对象，右键单击该安全对象，然后单击“属性”  。 选择“权限”页  。 有关使用权限页的帮助，请参阅 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   
 ## <a name="permission-hierarchy"></a>权限层次结构  
  权限具有父/子层次结构。 也就是说，如果你授予对数据库的 `SELECT` 权限，则该权限包括对数据库中所有（子）架构的 `SELECT` 权限。 如果你授予对架构的 `SELECT` 权限，则该权限包括对架构中所有（子）表和视图的 `SELECT` 权限。 权限是可传递的；也就是说，如果你授予对数据库的 `SELECT` 权限，则该权限包括对所有（子级）架构和所有（孙级）表和视图的 `SELECT` 权限。  
@@ -229,7 +229,9 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  有关可帮助你入门的更多主题，请参阅：  
   
--   [教程：数据库引擎入门](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md)[创建数据库（教程）](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [教程：数据库引擎入门](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+
+-   [创建数据库（教程）](../../../t-sql/lesson-1-creating-database-objects.md)  
   
 -   [教程：SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

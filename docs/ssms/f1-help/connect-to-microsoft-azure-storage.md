@@ -14,24 +14,24 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2bcacf7ab799ef36ab0f28bcc78ad27be2afe67c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2c4381ddbbe0a218b6fc53d8e054017b66068b59
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65102706"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454554"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>连接到 Microsoft Azure 存储
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-可使用“Windows Azure 存储连接”对话框指定存储帐户并验证与 Windows Azure 的连接。  
+可使用“Windows Azure 存储连接”  对话框指定存储帐户并验证与 Windows Azure 的连接。  
   
 ## <a name="options"></a>选项  
-指定有关 Windows Azure 帐户的以下信息，然后单击“下一步”继续。  
+指定有关 Windows Azure 帐户的以下信息，然后单击“下一步”  继续。  
   
 1.  **存储帐户** - 指定存储帐户名称。
 
    >[!NOTE]
-   > 只能连接到[常规用途存储帐户](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services)。 连接到其他类型的存储帐户可能会导致如下错误：
+   > 只能连接到[常规用途存储帐户](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services)。 连接到其他类型的存储帐户可能会导致如下错误：
    >
    >  其中一个 HTTP 标头的值格式不正确。 (Microsoft.SqlServer.StorageClient)。
    >
