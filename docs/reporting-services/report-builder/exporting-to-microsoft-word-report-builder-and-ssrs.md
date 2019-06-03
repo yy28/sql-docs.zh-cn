@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581229"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413562"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
 
@@ -108,18 +108,18 @@ ms.locfileid: "65581229"
 ##  <a name="SquigglyLines"></a> 导出的报表中的波浪线  
  在 Word 中导出和查看时，报表数据或常量可能带有红色或绿色的波浪下划线。 红色波浪线标识拼写错误。 绿色波浪线标识语法错误。 当报表中包含与在 Word 中指定的编辑语言的检查（拼写和语法）不符的词语时，将出现此类波浪线。 例如，在报表以 Word 的西班牙语版本呈现时，英语报表列标题就很可能带有红色的波浪下划线。 发现拼写错误比发现语法错误更常见，因为报表通常仅包含简短文本，而非完整的句子或段落。  
   
- 报表中存在波浪线意味着该报表有错误，但很可能这些错误不是真正的错误。 您可以通过更改报表的校对语言，删除这些波浪线。 若要更改校对语言，请选择报表的内容，然后为这些内容指定适当的语言。 您可以选择所有或部分内容。 在 Word 中，语言选项“设置校对语言”位于“评审”选项卡上的“语言”部分中。在更新内容后，您需要重新保存文档。  
+ 报表中存在波浪线意味着该报表有错误，但很可能这些错误不是真正的错误。 您可以通过更改报表的校对语言，删除这些波浪线。 若要更改校对语言，请选择报表的内容，然后为这些内容指定适当的语言。 您可以选择所有或部分内容。 在 Word 中，语言选项“设置校对语言”位于“评审”选项卡上的“语言”部分中    。在更新内容后，您需要重新保存文档。  
   
  根据您的 Office 程序的语言版本，您所选的语言的校对工具（例如，字典）将在程序中随附，或者在您购买的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 语言包中提供。  
   
  以下主题介绍有关设置 Office 和 Word 选项的其他信息。  
   
--   在“Microsoft Office 语言首选项”或 Word 的“Word 选项”对话框中更改编辑语言。 有关详细信息，请参阅 [在您的 Office 程序中启用其他语言](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)。  
+-   在“Microsoft Office 语言首选项”或 Word 的“Word 选项”对话框中更改编辑语言   。 有关详细信息，请参阅 [在您的 Office 程序中启用其他语言](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)。  
   
 -   添加 Office 语言包，然后更改编辑语言。 有关详细信息，请参阅 [在 Office 程序中启用其他语言](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) 和 [Office 2010 语言选项](https://office.microsoft.com/language/)。  
   
 > [!NOTE]  
->  当在“Microsoft Office 语言首选项”或 Word 的“Word 选项”对话框中更改编辑语言时，更改将应用于所有 Office 程序。  
+>  当在“Microsoft Office 语言首选项”  或 Word 的“Word 选项”  对话框中更改编辑语言时，更改将应用于所有 Office 程序。  
   
 ##  <a name="WordLimitations"></a> Word 限制  
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)]存在以下限制：  
@@ -151,11 +151,11 @@ ms.locfileid: "65581229"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 呈现扩展插件不推荐使用。 有关详细信息，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中不推荐使用的功能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
- 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 有关详细信息，请参阅 [用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](https://go.microsoft.com/fwlink/?LinkID=205622)。  
+ 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 有关详细信息，请参阅 [用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](https://www.microsoft.com/download/details.aspx?id=12439)。  
   
  与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的以前版本的 Word 呈现扩展插件已重命名为 Word 2003。 默认情况下，只提供 Word 呈现扩展插件。 您必须更新 Reporting Services 配置文件，才能使用 Word 2003 呈现扩展插件。 Word 2003 呈现器生成的文件的内容类型为 **application/vnd.ms-word** ，并且文件的文件扩展名为 .doc。  
   
- 在 SQL Server Reporting Services 中，默认的 Word 呈现器是呈现为 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx) 的版本。 这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户和 SharePoint 中“导出”菜单列出的 **Word** 选项。 仅与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的早期版本现在命名为 Word 2003，并且使用该名称在菜单上列出。 **Word 2003** 菜单选项默认不可见，但是，管理员可以通过更新 RSReportServer 配置文件使该选项可见。 若要使用 Word 2003 呈现器从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 导出报表，请更新 RSReportDesigner 配置文件。 但是，使 Word 2003 呈现器可见并不会使其可用于所有方案中。 因为 RSReportServer 配置文件驻留在报表服务器上，所以从中导出报表的工具或产品必须连接到报表服务器才能读取配置文件。 如果在断开连接或本地模式中使用工具或产品，则使 Word 2003 呈现器可见没有任何影响。 **Word 2003** 菜单选项保持不可用。 如果在 RSReportDesigner 配置文件中使 Word 2003 呈现器可见，则 **Word 2003** 菜单选项在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 报表预览中始终可用。  
+ 在 SQL Server Reporting Services 中，默认的 Word 呈现器是呈现为 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx) 的版本。 这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户和 SharePoint 中“导出”  菜单列出的 **Word** 选项。 仅与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的早期版本现在命名为 Word 2003，并且使用该名称在菜单上列出。 **Word 2003** 菜单选项默认不可见，但是，管理员可以通过更新 RSReportServer 配置文件使该选项可见。 若要使用 Word 2003 呈现器从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 导出报表，请更新 RSReportDesigner 配置文件。 但是，使 Word 2003 呈现器可见并不会使其可用于所有方案中。 因为 RSReportServer 配置文件驻留在报表服务器上，所以从中导出报表的工具或产品必须连接到报表服务器才能读取配置文件。 如果在断开连接或本地模式中使用工具或产品，则使 Word 2003 呈现器可见没有任何影响。 **Word 2003** 菜单选项保持不可用。 如果在 RSReportDesigner 配置文件中使 Word 2003 呈现器可见，则 **Word 2003** 菜单选项在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 报表预览中始终可用。  
   
  **Word 2003** 菜单选项在以下方案中始终不可见：  
   
