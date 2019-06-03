@@ -228,6 +228,8 @@
       href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
     - name: Azure SQL DW 上传任务
       href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+    - name: 灵活的文件任务
+      href: ../integration-services/control-flow/flexible-file-task.md
     - name: “备份数据库”任务
       href: ../integration-services/control-flow/back-up-database-task.md
     - name: 大容量插入任务
@@ -406,6 +408,10 @@
   href: ../integration-services/data-flow/azure-data-lake-store-source.md
 - name: Azure Data Lake Store 目标
   href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+- name: 灵活的文件源
+  href: ../integration-services/data-flow/flexible-file-source.md
+- name: 灵活的文件目标
+  href: ../integration-services/data-flow/flexible-file-destination.md
 - name: CDC 流组件
   href: ../integration-services/data-flow/cdc-flow-components.md
   items:
