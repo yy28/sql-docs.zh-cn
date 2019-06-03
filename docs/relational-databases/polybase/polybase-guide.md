@@ -19,19 +19,20 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3520ff79f3bc79107966024a8c28b80ee8b47507
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
+ms.openlocfilehash: 39a5341aaf32e37fe7c7cec3bde436cd0c5ba9d2
+ms.sourcegitcommit: f98a8a9a6def82ddd560150068824d4bbf8f067a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775464"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376183"
 ---
 # <a name="what-is-polybase"></a>什么是 PolyBase？
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
 <!--SQL Server 2016/2017-->
-::: moniker range="= sql-server-2016 || = sql-server-2017"
+::: moniker range="= sql-server-2016 || = sql-server-2017 || >= aps-pdw-2016 || = azure-sqldw-latest"
 
 借助 PolyBase，SQL Server 2016 实例可处理从 Hadoop 中读取数据的 Transact-SQL 查询。 同一查询还可以访问 SQL Server 中的关系表。 借助 PolyBase，同一查询还可以联接 Hadoop 和 SQL Server 中的数据。 在 SQL Server 中，[外部表](../../t-sql/statements/create-external-table-transact-sql.md)或[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)提供对 Hadoop 的连接。
 
@@ -97,20 +98,23 @@ PolyBase 支持在 SQL Server 中使用以下方案：
 
 - **缩放计算资源。** 若要提高查询性能，可以使用 SQL Server [PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。 这使并行数据可以在 SQL Server 实例和 Hadoop 节点之间传输，并为处理外部数据添加计算资源。
 
+<!--SQL Server 2016/2017-->
+::: moniker range="=sql-server-2016||=sql-server-2017"
+
 ## <a name="next-steps"></a>后续步骤
 
 在使用 PolyBase 之前，必须[安装 PolyBase 功能](polybase-installation.md)。 然后，请参阅以下配置指南，具体取决于你的数据源：
-
-<!--SQL Server 2016/2017-->
-::: moniker range="= sql-server-2016 || = sql-server-2017"
 
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob 存储](polybase-configure-azure-blob-storage.md)
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15||=sqlallproducts-allversions"
 
+## <a name="next-steps"></a>后续步骤
+
+在使用 PolyBase 之前，必须[安装 PolyBase 功能](polybase-installation.md)。 然后，请参阅以下配置指南，具体取决于你的数据源：
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob 存储](polybase-configure-azure-blob-storage.md)
 - [SQL Server](polybase-configure-sql-server.md)

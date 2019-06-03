@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DROP EVENT NOTIFICATION statement
 - removing event notifications
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 492ea717df3722e09b42e31cc8acf579658f082b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 852662f66b3989cfec15392218346d792be8b835
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839715"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270216"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  指示将事件通知的作用域应用于当前数据库。 如果在创建事件通知时指定了 DATABASE，则必须指定 DATABASE。  
   
- QUEUE queue_name  
- 指示将事件通知的作用域应用于由 queue_name 指定的队列。 如果在创建事件通知时指定了 QUEUE，则必须指定 QUEUE。 queue_name 为队列名称，该参数也必须指定。  
+ QUEUE queue_name   
+ 指示将事件通知的作用域应用于由 queue_name 指定的队列  。 如果在创建事件通知时指定了 QUEUE，则必须指定 QUEUE。 queue_name 为队列名称，该参数也必须指定  。  
   
 ## <a name="remarks"></a>Remarks  
  如果事件通知在事务中激发并在同一事务中删除，则发送事件通知实例，然后删除事件通知。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要删除作用域为数据库级别的事件通知，用户至少必须是事件通知的所有者，或必须在当前数据库中拥有 ALTER ANY DATABASE EVENT NOTIFICATION 权限。  
   
  若要删除作用域为服务器级别的事件通知，用户至少必须是事件通知的所有者，或必须在服务器中拥有 ALTER ANY EVENT NOTIFICATION 权限。  
