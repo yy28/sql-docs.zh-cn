@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/23/2019
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: dd25f70c7cf3d34a4411cc15802437d97f5f8190
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65980056"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462724"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -93,7 +93,12 @@ ms.locfileid: "65980056"
 |**last_log_bytes_used**|**bigint**|使用上一次执行的查询计划，聚合间隔内的数据库日志中的字节数。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0)。|
 |**min_log_bytes_used**|**bigint**|最小查询计划，聚合间隔内所使用的数据库日志的字节数。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0)。|
 |**max_log_bytes_used**|**bigint**|查询计划，聚合间隔内所使用的数据库日志中的字节的最大数目。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0)。|
-|**stdev_log_bytes_used**|**float**|查询计划，聚合间隔内所使用的数据库日志中的字节数的标准偏差。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0)。|
+|**stdev_log_bytes_used**|**float**|查询计划，聚合间隔内所使用的数据库日志中的字节数的标准偏差。<br/>**注意：** Azure SQL 数据仓库将始终返回零 (0)。|  
+|**avg_page_server_io_reads**|**float**|平均页 server IO 读取数的聚合时间间隔内的查询计划。 （表示为 8 KB 页读取数）。<br><br/>**注意：** 适用于：Azure SQL 数据库的超大规模</br> Azure SQL 数据仓库，Azure SQL DB MI （非超大规模） 将始终返回零 (0)。|
+|**last_page_server_io_reads**|**bigint**|最后一页 server IO 读取次数聚合间隔内的查询计划。 （表示为 8 KB 页读取数）。<br><br/>**注意：** 适用于：Azure SQL 数据库的超大规模 </br> Azure SQL 数据仓库，Azure SQL DB MI （非超大规模） 将始终返回零 (0)。|
+|**min_page_server_io_reads**|**bigint**|最小的页 server IO 读取数的聚合时间间隔内的查询计划。 （表示为 8 KB 页读取数）。<br><br/>**注意：** 适用于：Azure SQL 数据库的超大规模 </br> Azure SQL 数据仓库，Azure SQL DB MI （非超大规模） 将始终返回零 (0)。|
+|**max_page_server_io_reads**|**bigint**|最大页 server IO 读取数聚合间隔内的查询计划。（表示为 8 KB 页读取数）。<br><br/>**注意：** 适用于：Azure SQL 数据库的超大规模 </br> Azure SQL 数据仓库，Azure SQL DB MI （非超大规模） 将始终返回零 (0)。|
+|**stdev_page_server_io_reads**|**float**|页 server IO 读取数的聚合时间间隔内的查询计划的标准偏差。 （表示为 8 KB 页读取数）。<br><br/>**注意：** 适用于：Azure SQL 数据库的超大规模 </br> Azure SQL 数据仓库，Azure SQL DB MI （非超大规模） 将始终返回零 (0)。|
   
 ## <a name="permissions"></a>权限  
  需要**VIEW DATABASE STATE**权限。  

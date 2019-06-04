@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_trigger_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 42fc6848b89c57e6bfab40f1af96013fc73271f6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403532"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462711"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52403532"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|触发器所在的数据库 ID。|  
 |**object_id**|**int**|触发器的对象标识号。|  
-|**类型**|**char(2)**|对象的类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
+|**type**|**char(2)**|对象的类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
 |**Type_desc**|**nvarchar(60)**|对对象类型的说明：<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**sql_handle**|**varbinary(64)**|这可用于将与中的查询相关联**sys.dm_exec_query_stats**从此触发器中执行的。|  
 |**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可能与使用**sys.dm_exec_cached_plans**动态管理视图。|  
@@ -68,6 +68,11 @@ ms.locfileid: "52403532"
 |**last_spills**|**bigint**|页数溢出的上次执行触发器。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**min_spills**|**bigint**|此触发器在单次执行期间曾扩散的页面中最小的数。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**max_spills**|**bigint**|此触发器在单次执行期间曾扩散最大页数。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**total_page_server_reads**|**bigint**|自编译后，此触发器的执行期间所执行的页服务器读取的总数。<br /><br /> **适用对象**：Azure SQL 数据库的超大规模|  
+|**last_page_server_reads**|**bigint**|上次执行触发器时执行的页服务器读取操作数。<br /><br /> **适用对象**：Azure SQL 数据库的超大规模|  
+|**min_page_server_reads**|**bigint**|页服务器的最小数目读取此触发器在单次执行期间已过执行。<br /><br /> **适用对象**：Azure SQL 数据库的超大规模|  
+|**max_page_server_reads**|**bigint**|页服务器的最大数目读取此触发器在单次执行期间已过执行。<br /><br /> **适用对象**：Azure SQL 数据库的超大规模|  
+
   
 ## <a name="remarks"></a>备注  
  在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 若要避免公开此类信息，包含不属于已连接租户的数据的每一行都筛选掉。  
@@ -96,7 +101,7 @@ ORDER BY [total_worker_time] DESC;
 [与执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
 [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
 [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
-[sys.dm_exec_procedure_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
+[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
   

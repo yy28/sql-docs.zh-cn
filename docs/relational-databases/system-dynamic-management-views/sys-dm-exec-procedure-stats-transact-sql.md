@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_procedure_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7f4622eec6b7c5d3a3cc206b43cd31253fe7ee2
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013414"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462662"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "63013414"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|存储过程所在的数据库 ID。|  
 |**object_id**|**int**|存储过程的对象标识号。|  
-|**类型**|**char(2)**|对象的类型：<br /><br /> P = SQL 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> X = 扩展存储过程|  
+|**type**|**char(2)**|对象的类型：<br /><br /> P = SQL 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> X = 扩展存储过程|  
 |**type_desc**|**nvarchar(60)**|对对象类型的说明：<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |**sql_handle**|**varbinary(64)**|这可用于将与中的查询相关联**sys.dm_exec_query_stats**从此存储过程中执行的。|  
 |**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可能与使用**sys.dm_exec_cached_plans**动态管理视图。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
@@ -77,6 +77,10 @@ ms.locfileid: "63013414"
 |**min_spills**|**bigint**|在单次执行期间曾扩散此存储过程的页面的最小数目。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**max_spills**|**bigint**|在单次执行期间曾扩散此存储过程的页面的最大数目。<br /><br /> **适用对象**：从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**pdw_node_id**|**int**|对于此分布的节点标识符。<br /><br />**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|自编译后，此存储过程的执行期间所执行的页服务器读取的总数。<br /><br /> **适用对象**：Azure SQL 数据库的超大规模|  
+|**last_page_server_reads**|**bigint**|上次执行存储的过程时执行的页服务器读取操作数。<br /><br /> **适用对象**：Azure SQL 数据库的超大规模|  
+|**min_page_server_reads**|**bigint**|页服务器的最小数目读取此存储的过程在单次执行期间已过执行。<br /><br /> **适用对象**：Azure SQL 数据库的超大规模|  
+|**max_page_server_reads**|**bigint**|页服务器的最大数目读取此存储的过程在单次执行期间已过执行。<br /><br /> **适用对象**：Azure SQL 数据库的超大规模|  
   
  <sup>1</sup>对于本机编译存储过程启用统计信息收集后，辅助角色收集时间以毫秒为单位。 如果查询执行不到 1 毫秒，则该值将为 0。  
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.openlocfilehash: 935b63a38cbef585c33d2241652f4951189b61b4
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66428950"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462546"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,10 +68,10 @@ ms.locfileid: "66428950"
 |**last_elapsed_time**|**bigint**|所用的时间以微秒为单位，最近完成此函数的执行。|  
 |**min_elapsed_time**|**bigint**|最小运行时间，以微秒为单位，任何已完成此函数的执行。|  
 |**max_elapsed_time**|**bigint**|最大运行时间，以微秒为单位，任何已完成此函数的执行。|  
-|**total_page_server_reads**|**bigint**|自编译后，此函数的执行期间所执行的远程页服务器读取总次数。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|  
-|**last_physical_reads**|**bigint**|上次执行该函数时执行远程页服务器读取次数。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|  
-|**min_physical_reads**|**bigint**|最小的服务器远程页读取数，此函数在单次执行执行单次执行期间。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|  
-|**max_physical_reads**|**bigint**|最大数量的远程页服务器读取，此函数在单次执行执行单次执行期间。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|
+|**total_page_server_reads**|**bigint**|自编译后，此函数的执行期间所执行的页服务器读取总次数。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|  
+|**last_page_server_reads**|**bigint**|上次执行该函数时执行页服务器读取次数。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|  
+|**min_page_server_reads**|**bigint**|最小的页服务器读取数，此函数在单次执行执行单次执行期间。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|  
+|**max_page_server_reads**|**bigint**|最大的页面服务器读取数，此函数在单次执行执行单次执行期间。<br /><br /> **适用于：** Azure SQL 数据库的超大规模。|
   
 ## <a name="permissions"></a>权限  
 

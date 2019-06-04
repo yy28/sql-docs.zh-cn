@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025094"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462653"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "63025094"
   返回当前数据库中每个分区的页和行计数信息。  
   
 > [!NOTE]  
->  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_db_partition_stats**。  
+>  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_db_partition_stats**。 在 sys.dm_pdw_nodes_db_partition_stats partition_id 不同于 Azure SQL 数据仓库在 sys.partitions 目录视图中 partition_id。
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|分区 ID。 在数据库中是唯一的。 这是相同的值**partition_id**中**sys.partitions**目录视图|  
+|**partition_id**|**bigint**|分区 ID。 在数据库中是唯一的。 这是相同的值**partition_id**中**sys.partitions**目录除了 Azure SQL 数据仓库视图。|  
 |**object_id**|**int**|包含该分区的表或索引视图的对象 ID。|  
 |**index_id**|**int**|包含该分区的堆或索引的 ID。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引。<br /><br /> > 1 = 非聚集索引|  
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。|  
 |**in_row_data_page_count**|**bigint**|分区中存储行内数据所用的页数。 如果分区是堆的一部分，则该值为堆中的数据页数。 如果分区是索引的一部分，则该值为叶级别中的页数。 （B 树中的非叶页不包括在计数中。）在任一情况下不包括 IAM （索引分配映射） 页。 对于 xVelocity 内存优化列存储索引，始终为 0。|  
 |**in_row_used_page_count**|**bigint**|用于存储和管理分区中的行内数据的总页数。 此计数包括非叶 B 树页、 IAM 页和中包含的所有页面**in_row_data_page_count**列。 对列存储索引始终为 0。|  
 |**in_row_reserved_page_count**|**bigint**|为存储和管理该分区中的行内数据而保留的总页数，包括已使用的和未使用的页。 对列存储索引始终为 0。|  
-|**lob_used_page_count**|**bigint**|用于存储和管理扩展的行中的页数**文本**， **ntext**，**图像**， **varchar （max)**， **nvarchar(max)**， **varbinary （max)**，和**xml**在分区内的列。 包含 IAM 页。<br /><br /> 用于存储和管理分区中的列存储索引的 LOB 总数。|  
-|**lob_reserved_page_count**|**bigint**|总页面保留用于存储和管理扩展的行数**文本**， **ntext**，**图像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，和**xml**在分区中，而不考虑页面是否正在使用或不列。 包含 IAM 页。<br /><br /> 为存储和管理分区中的列存储索引而保留的 LOB 总数。|  
+|**lob_used_page_count**|**bigint**|用于存储和管理扩展的行中的页数**文本**， **ntext**，**图像**， **varchar （max)** ， **nvarchar(max)** ， **varbinary （max)** ，和**xml**在分区内的列。 包含 IAM 页。<br /><br /> 用于存储和管理分区中的列存储索引的 LOB 总数。|  
+|**lob_reserved_page_count**|**bigint**|总页面保留用于存储和管理扩展的行数**文本**， **ntext**，**图像**， **varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，和**xml**在分区中，而不考虑页面是否正在使用或不列。 包含 IAM 页。<br /><br /> 为存储和管理分区中的列存储索引而保留的 LOB 总数。|  
 |**row_overflow_used_page_count**|**bigint**|中用于存储和管理行溢出的页数**varchar**， **nvarchar**， **varbinary**，以及**sql_variant**列在分区中。 包含 IAM 页。<br /><br /> 对列存储索引始终为 0。|  
 |**row_overflow_reserved_page_count**|**bigint**|总页数保留用于存储和管理行溢出**varchar**， **nvarchar**， **varbinary**，以及**sql_variant**在分区中，而不考虑页面是否正在使用或不列。 包含 IAM 页。<br /><br /> 对列存储索引始终为 0。|  
 |**used_page_count**|**bigint**|用于分区的总页数。 根据计算得出**in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**。|  
