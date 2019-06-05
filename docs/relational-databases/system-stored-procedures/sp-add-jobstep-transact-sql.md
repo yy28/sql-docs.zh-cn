@@ -1,7 +1,7 @@
 ---
 title: sp_add_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,15 +18,16 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afa9128537cf699277385de3b7dce6aabd900191
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494409"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500361"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   在作业中添加步骤（操作）。  
   
@@ -34,8 +35,7 @@ ms.locfileid: "58494409"
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```
 sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'   
      [ , [ @step_id = ] step_id ]   
      { , [ @step_name = ] 'step_name' }   
@@ -71,7 +71,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'` 步骤的名称。 *step_name*是**sysname**，无默认值。  
   
-`[ @subsystem = ] 'subsystem'` 使用的子系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务，才能执行*命令*。 *子系统*是**nvarchar(40)**，可以是下列值之一。  
+`[ @subsystem = ] 'subsystem'` 使用的子系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务，才能执行*命令*。 *子系统*是**nvarchar(40)** ，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -88,7 +88,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**|PowerShell 脚本|  
 |'**TSQL**（默认值）|[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句|  
   
-`[ @command = ] 'command'` 执行的命令**SQLServerAgent**服务通过*子系统*。 *命令*是**nvarchar （max)**，默认值为 NULL。 SQL Server 代理提供标记替换功能；在编写软件程序时，它可提供与变量相同的灵活性。  
+`[ @command = ] 'command'` 执行的命令**SQLServerAgent**服务通过*子系统*。 *命令*是**nvarchar （max)** ，默认值为 NULL。 SQL Server 代理提供标记替换功能；在编写软件程序时，它可提供与变量相同的灵活性。  
   
 > [!IMPORTANT]  
 >  作业步骤中使用的所有标记现在必须附带转义宏，否则，这些作业步骤将会失败。 此外，您现在还必须用括号将标记名称括起来，并在标记语法开头加上美元符号 (`$`)。 例如：  
@@ -98,9 +98,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  有关这些令牌和更新作业步骤以使用新的标记语法的详细信息，请参阅[作业步骤中使用令牌](../../ssms/agent/use-tokens-in-job-steps.md)。  
   
 > [!IMPORTANT]  
->  对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括：A-DBN、A-SVR、A-ERR、A-SEV、A-MSG 和 WMI（属性）。 请注意，在此版本中，对标记的使用扩展至所有警报。  
+>  对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括：A-DBN、A-SVR、A-ERR、A-SEV、A-MSG 和 WMI（属性）         。 请注意，在此版本中，对标记的使用扩展至所有警报。  
 >   
->  如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，并在“警报系统”页上选择“为警报的所有作业响应替换标记”以启用这些标记。  
+>  如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”  ，选择“属性”  ，并在“警报系统”  页上选择“为警报的所有作业响应替换标记”  以启用这些标记。  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *参数*是**ntext**，默认值为 NULL。  
   
@@ -128,7 +128,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_step_id = ] fail_step_id` 该步骤失败时要执行此作业中步骤的 ID 和*fail_action*是**4**。 *fail_step_id*是**int**，默认值为**0**。  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *服务器*是**nvarchar(30)**，默认值为 NULL。  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *服务器*是**nvarchar(30)** ，默认值为 NULL。  
   
 `[ @database_name = ] 'database'` 在其中执行的数据库的名称[!INCLUDE[tsql](../../includes/tsql-md.md)]步骤。 *数据库*是**sysname**，默认值为 NULL，这种情况下**主**使用数据库。 不允许用方括号 ([ ]) 将名称括起来。 对于 ActiveX 作业步骤，*数据库*是该步骤使用的脚本语言的名称。  
   
@@ -140,7 +140,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority` 保留。  
   
-`[ @output_file_name = ] 'file_name'` 在其中保存该步骤的输出文件的名称。 *file_name*是**nvarchar(200)**，默认值为 NULL。 *file_name*可以包含一个或多个下列出的令牌*命令*。 仅上运行的命令中，此参数才有效[!INCLUDE[tsql](../../includes/tsql-md.md)]， **CmdExec**， **PowerShell**， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]子系统。  
+`[ @output_file_name = ] 'file_name'` 在其中保存该步骤的输出文件的名称。 *file_name*是**nvarchar(200)** ，默认值为 NULL。 *file_name*可以包含一个或多个下列出的令牌*命令*。 仅上运行的命令中，此参数才有效[!INCLUDE[tsql](../../includes/tsql-md.md)]， **CmdExec**， **PowerShell**， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]子系统。  
   
 `[ @flags = ] flags` 控制行为的选项。 *标志*是**int**，可以是下列值之一。  
   
@@ -192,14 +192,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  此示例假定`Weekly Sales Data Backup`作业已存在。  
   
-```  
+```sql
 USE msdb;  
 GO  
 EXEC sp_add_jobstep  
     @job_name = N'Weekly Sales Data Backup',  
     @step_name = N'Set database to read only',  
     @subsystem = N'TSQL',  
-    @command = N'ALTER DATABASE SALES SET READ_ONLY',   
+    @command = N'ALTER DATABASE SALES SET READ_ONLY',
     @retry_attempts = 5,  
     @retry_interval = 5 ;  
 GO  
