@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18370885fedb106f02c9b404ea946680aa048b8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 56fff67f882eceec3c07553e5c465da65a69ce65
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911366"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718676"
 ---
 # <a name="provider-errors"></a>提供程序错误
 提供程序错误时，将返回-2147467259 的一个运行时错误。 当您收到此错误时，检查**错误**活动的集合**连接**对象，它将包含一个或多个描述所发生的错误。  

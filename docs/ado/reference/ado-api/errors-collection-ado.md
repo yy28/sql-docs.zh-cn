@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b595baf25a8b0f3982399c384c169c6af3f1cd81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 109b7ff83e6b3f722560dae0a034c4bf37da137f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63253192"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719266"
 ---
 # <a name="errors-collection-ado"></a>错误集合 (ADO)
 包含所有[错误](../../../ado/reference/ado-api/error-object.md)到单个提供程序相关的失败的响应中创建的对象。  
@@ -48,4 +48,4 @@ ms.locfileid: "63253192"
   
 ## <a name="see-also"></a>请参阅  
  [错误对象](../../../ado/reference/ado-api/error-object.md)   
- [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

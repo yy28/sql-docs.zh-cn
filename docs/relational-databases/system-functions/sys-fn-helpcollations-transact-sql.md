@@ -20,29 +20,30 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83c9efd36bbcec788ef18b19552446877c5e36c8
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 157cb3b24d04337c4949e3d6cfe38337895b3bea
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629610"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719425"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   返回所有受支持的排序规则的列表。  
-  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```
 fn_helpcollations ()  
 ```  
   
-## <a name="tables-returned"></a>返回的表  
+## <a name="tables-returned"></a>返回的表
+
  **fn_helpcollations**返回以下信息。  
   
 |列名|数据类型|Description|  
@@ -50,10 +51,10 @@ fn_helpcollations ()
 |“属性”|**sysname**|标准排序规则名称|  
 |Description|**nvarchar(1000)**|排序规则说明|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还支持有限数量（<80 个）的排序规则（称为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则），这些规则是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 Windows 排序规则之前开发的。 仍然支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则只是为了实现向后兼容性，不应将这些排序规则用于新开发工作。 有关 Windows 排序规则的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。 有关排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 此外支持有限的数量 (< 80) 的调用的排序规则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序规则，开发之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的 Windows 排序规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则为了向后兼容，仍受支持，但不应该用于新的开发工作。 有关 Windows 排序规则的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。 有关排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
+## <a name="examples"></a>示例
 
-## <a name="examples"></a>示例  
  以下示例返回以字母 `L` 开头并且是二进制排序规则的所有排序规则名称。  
   
 ```sql  
@@ -63,7 +64,7 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```   
+ ```
  Name                   Description  
  -------------------    ------------------------------------  
  Lao_100_BIN            Lao-100, binary sort  
@@ -75,10 +76,10 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  Lithuanian_100_BIN     Lithuanian-100, binary sort  
   
  (7 row(s) affected)  
- ```    
+ ```
   
-## <a name="see-also"></a>请参阅  
-[COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)   
-[COLLATIONPROPERTY &#40;Transact SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
-[Azure SQL 数据仓库的数据库排序规则支持](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
+## <a name="see-also"></a>请参阅
 
+[COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)   
+[COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
+[Azure SQL 数据仓库的数据库排序规则支持](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

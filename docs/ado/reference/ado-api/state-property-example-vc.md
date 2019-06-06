@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5d3d7b109e46330e6cce2703ac07c2e3f20f550
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2da3fc845b5144cb7b2a0ae6a2cbfc718e4f3c4c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027618"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719067"
 ---
 # <a name="state-property-example-vc"></a>State 属性示例 (VC++)
 此示例使用[状态](../../../ado/reference/ado-api/state-property-ado.md)属性在异步打开连接和异步执行命令时显示一条消息。  

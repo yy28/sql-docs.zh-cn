@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8a79d6e39cb71c7dd7c5e055d9aa71cba23bc9c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248983"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718557"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 (VC++)
 视觉对象C++一节[ADO 事件实例化的语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供了如何实例化 ADO 事件模型的一般说明。 以下是实例化创建的环境中的事件模型的特定示例 **#import**指令。  
@@ -29,7 +29,7 @@ ms.locfileid: "63248983"
   
 -   **#Import**指令解析**typedef**的方法签名的数据类型，并向其基本窗体的修饰符。  
   
--   必须覆盖的纯虚方法以前缀"**raw_**"。  
+-   必须覆盖的纯虚方法以前缀"**raw_** "。  
   
  某些代码只是反映编码样式。  
   

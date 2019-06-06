@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658401"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719368"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>对于 Linux 部署 SQL Server 可用性基础知识
 
@@ -164,7 +163,7 @@ Ubuntu 没有可用性的指南。
 #### <a name="node"></a>节点
 节点是参与群集的服务器。 Pacemaker 群集以本机方式支持最多 16 个节点。 如果未在其他节点上运行 Corosync 但 Corosync 是所必需的可能会超过此数字[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 因此，最大节点数的群集可以具有任何[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-基于的配置为 16; 这是 Pacemaker 限制，并且没有任何与 Ag 或 Fci 所规定的最大限制[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 
 
-#### <a name="resource"></a>资源
+#### <a name="resource"></a>Resource
 WSFC 和 Pacemaker 群集具有资源的概念。 资源是在群集中，如磁盘或 IP 地址的上下文中运行的特定功能。 例如，在 Pacemaker 下 FCI 和可用性组资源可以获取创建。 这不是有别于什么是在 WSFC 中，将出现[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]FCI 的资源或配置可用性组时的可用性组资源但是不完全相同的方式根本不同之处由于[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]与 Pacemaker 集成。
 
 Pacemaker 具有标准版和克隆的资源。 克隆资源是一种是在所有节点上同时运行。 示例是为实现负载均衡的多个节点运行的 IP 地址。 获取为 Fci 创建的任何资源使用标准资源，因为在任何给定时间，只有一个节点可以承载 FCI。

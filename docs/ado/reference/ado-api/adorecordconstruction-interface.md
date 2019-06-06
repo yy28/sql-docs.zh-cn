@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248843"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718165"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 接口
 **ADORecordConstruction**界面用于构造 ADO**记录**从 OLE DB 对象**行**C 中的对象 /C++应用程序。  

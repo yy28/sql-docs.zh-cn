@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b609b8ee65c193c181c4b7583e26f489c78cd8ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 97fc2e4a7c6146b82a48d4dc28d8b86ff94f7cd3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225771"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718995"
 ---
 # <a name="depth-property-ado-md"></a>Depth 属性 (ADO MD)
 指示级别之间的数[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)和层次结构的根。  

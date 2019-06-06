@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f53eec72ed95a453b8343998ef438fded10f87b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d8103da63d91c5d59d1bfc4ac5b738ba8f333d1e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62630661"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719194"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 方法示例 (JScript)
 此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法来检索其中的所有行*Custiomers*表从[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，然后使用生成的数据填充数组。 **GetRows**方法将返回所需的行数少于两种情况下： 任一 if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已达到，或者，如果**GetRows**尝试检索已记录删除由另一个用户。 该函数将返回**False**仅当第二种情况发生。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**GetRowsJS.asp**。  

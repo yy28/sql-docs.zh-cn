@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f60c8d460ae2a7b103f0c8c13e81c5aed3708c58
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472798"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718538"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>在连接对象上作为方法调用存储过程
 就像在关联的打开的本机方法，可以调用存储的过程**连接**对象。 它类似于上调用的命名的命令**连接**对象。  

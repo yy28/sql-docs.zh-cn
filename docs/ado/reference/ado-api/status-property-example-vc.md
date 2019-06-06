@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8848497ed90909079b9c0142bc570f00466110b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6a6d028acaf5d2354c520aed513082945e2fe397
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027530"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719059"
 ---
 # <a name="status-property-example-vc"></a>Status 属性示例 (VC++)
 此示例使用[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示之前发生的批处理更新批处理操作中修改哪些记录。  

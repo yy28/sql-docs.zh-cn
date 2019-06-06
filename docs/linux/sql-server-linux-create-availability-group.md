@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9a9a3d18f1850b563882a2303db8dd28b2916ac4
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 1841b7e38e47ffa1192b19564e1c6596ea9804a3
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542227"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719391"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>创建和配置 Linux 上的 SQL Server 可用性组
 
@@ -325,15 +324,15 @@ sudo systemctl restart mssql-server
 
 2.  在简介对话框中，单击**下一步**。
 
-3.  在指定可用性组选项对话框中，输入可用性组的名称并选择群集类型为 EXTERNAL 或 NONE 下拉列表中。 将部署 Pacemaker 时，应使用外部。 没有为专用方案，例如读取横向扩展。选择的数据库级别运行状况检测选项是可选的。 此选项的详细信息，请参阅[可用性组数据库级别运行状况检测故障转移选项](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 单击“下一步” 。
+3.  在指定可用性组选项对话框中，输入可用性组的名称并选择群集类型为 EXTERNAL 或 NONE 下拉列表中。 将部署 Pacemaker 时，应使用外部。 没有为专用方案，例如读取横向扩展。选择的数据库级别运行状况检测选项是可选的。 此选项的详细信息，请参阅[可用性组数据库级别运行状况检测故障转移选项](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 单击“下一步”  。
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  在选择数据库对话框中，选择将参与可用性组的数据库。 可以将它添加到可用性组之前，每个数据库必须具有完整备份。 单击“下一步” 。
+4.  在选择数据库对话框中，选择将参与可用性组的数据库。 可以将它添加到可用性组之前，每个数据库必须具有完整备份。 单击“下一步”  。
 
 5.  在指定副本对话框中，单击**将副本添加**。
 
-6.  在连接到服务器对话框中，输入 Linux 实例的名称[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]将辅助副本，以及要连接的凭据。 单击 **“连接”**。
+6.  在连接到服务器对话框中，输入 Linux 实例的名称[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]将辅助副本，以及要连接的凭据。 单击 **“连接”** 。
 
 7.  重复前两个步骤将包含仅配置副本或另一个辅助副本的实例。
 
@@ -361,11 +360,11 @@ sudo systemctl restart mssql-server
 
     c.  选择每个 URL，然后从底部，选择可读副本。 进行多选，按住 shift 键或单击拖动。
 
-12. 单击“下一步” 。
+12. 单击“下一步”  。
 
-13. 选择如何将初始化辅助副本。 默认值是使用[自动种子设定](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，这要求在参与可用性组的所有服务器上的同一路径。 您还可以让该向导进行备份、 复制和还原 （第二个选项）;将其加入如果手动备份、 复制和还原数据库副本上的 （第三个选项）;或更高版本将数据库添加 （最后一个选项）。 通过使用证书，如果您手动进行备份并将其复制，需要设置其他副本上备份文件的权限。 单击“下一步” 。
+13. 选择如何将初始化辅助副本。 默认值是使用[自动种子设定](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，这要求在参与可用性组的所有服务器上的同一路径。 您还可以让该向导进行备份、 复制和还原 （第二个选项）;将其加入如果手动备份、 复制和还原数据库副本上的 （第三个选项）;或更高版本将数据库添加 （最后一个选项）。 通过使用证书，如果您手动进行备份并将其复制，需要设置其他副本上备份文件的权限。 单击“下一步”  。
 
-14. 在验证对话框中，如果所有内容不会无法恢复为成功，调查。 一些警告，是可接受和不严重错误，例如如果你没有创建侦听器。 单击“下一步” 。
+14. 在验证对话框中，如果所有内容不会无法恢复为成功，调查。 一些警告，是可接受和不严重错误，例如如果你没有创建侦听器。 单击“下一步”  。
 
 15. 在摘要对话框中，单击**完成**。 现在将开始创建可用性组的过程。
 

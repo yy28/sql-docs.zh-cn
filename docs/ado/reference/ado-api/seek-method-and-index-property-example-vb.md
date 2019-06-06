@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f53fb3258e7eebc54aa0adfad60ff81e83e41bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: db5be65f007a667d23f7d94b3a7ae17eb6d2f36c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315681"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719098"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek 方法和 Index 属性示例 (VB)
 此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[Seek](../../../ado/reference/ado-api/seek-method.md)方法和[索引](../../../ado/reference/ado-api/index-property.md)属性结合使用与给定***员工 ID***、 查找中的员工姓名***员工***Nwind.mdb 数据库表。  

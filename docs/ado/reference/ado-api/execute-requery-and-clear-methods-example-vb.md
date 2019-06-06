@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 11fe5ef40e06772c38390096363903113a28bd46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bda27b7941244ac77de08e81baeb1307c14c60cc
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63071806"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719253"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>执行、 再次查询和清除方法示例 (VB)
 此示例演示**Execute**方法从这两个运行时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[再次查询](../../../ado/reference/ado-api/requery-method.md)方法来检索中的当前数据[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，并[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法以清除的内容[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 (**错误**通过访问集合**连接**的对象[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。)若要运行此过程需要 ExecuteCommand 和 PrintOutput 过程。  

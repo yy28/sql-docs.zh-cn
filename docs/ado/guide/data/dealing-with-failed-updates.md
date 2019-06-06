@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 97a55923043d26c0eb672d7a698d5bf9224f1187
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472369"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718735"
 ---
 # <a name="dealing-with-failed-updates"></a>处理失败的更新
 如果更新由于错误而停止，如何解决这些错误依赖于的性质和错误的严重性和你的应用程序的逻辑。 但是，如果与其他用户共享的数据库，典型的错误是其他人在执行操作之前来修改字段。 这种类型的错误称为冲突。 ADO 检测到这种情况下，会报告错误。  

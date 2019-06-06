@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6597d6a834771872abab75d9be3fbf3127eca539
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065462"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718264"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 属性示例 （VC + +）
 此示例使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)并[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)要显示的定义的大小和实际大小字段的属性。  

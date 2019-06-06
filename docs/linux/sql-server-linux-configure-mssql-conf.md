@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494389"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719402"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -615,7 +614,7 @@ outboundnetworkaccess = 1
 
 以下选项在 Linux 上运行的 SQL Server 实例配置 TLS。
 
-|选项 |Description |
+|Option |Description |
 |--- |--- |
 |**network.forceencryption** |如果为 1，然后[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]强制所有连接进行加密。 默认情况下，此选项为 0。 |
 |**network.tlscert** |证书的绝对路径文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 TLS。 例如： `/etc/ssl/certs/mssql.pem`  证书文件必须是可由 mssql 帐户访问。 Microsoft 建议将访问限制文件使用到`chown mssql:mssql <file>; chmod 400 <file>`。 |

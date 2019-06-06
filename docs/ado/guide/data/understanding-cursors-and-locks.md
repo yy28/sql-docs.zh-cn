@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1a828bbbc42638cddaec609fc101b4cf70f7e356
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228113"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718643"
 ---
 # <a name="understanding-cursors-and-locks"></a>了解游标和锁定
 请务必了解这样您就可以选择应用程序的数据访问要求的最佳和最高效的游标类型游标的工作方式。 不太理想的游标配置可以进行数据访问操作带来痛苦的煎熬。  

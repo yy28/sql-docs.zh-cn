@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8b5dfc7affb2a6db7db0b30fa95087b3e024e00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 980c9620348f6aaa3d96a975a686484ffe36de39
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239837"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718523"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize 属性示例 (JScript)
 此示例使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)属性显示的操作的性能差别执行具有和没有 30 记录缓存。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**CacheSizeJS.asp**。  

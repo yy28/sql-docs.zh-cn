@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea282362853ca25a761f870970a288585a00160e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bc9dc5f19dacfb6fbdab8c2e0dd8278cbc4b97b3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63275896"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719277"
 ---
 # <a name="error-object"></a>错误对象
 包含有关适用于单个操作涉及该提供程序的数据访问错误的详细信息。  
@@ -62,4 +62,4 @@ ms.locfileid: "63275896"
  [Description、 HelpContext、 HelpFile、 NativeError、 数、 源和 SQLState 属性示例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
