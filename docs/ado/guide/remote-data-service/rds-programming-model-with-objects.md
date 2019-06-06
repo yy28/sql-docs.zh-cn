@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2cfba2b659ed03f67d94c2c80812d7712e481f50
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931414"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704482"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 编程模型和对象
 RDS 的目标是获得访问权限并更新数据源通过 IIS 等中介。 编程模型指定来实现此目标所需的活动序列。 对象模型指定其方法和属性会影响编程模型的对象。  

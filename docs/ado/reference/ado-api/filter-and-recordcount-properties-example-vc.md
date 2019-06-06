@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 45839834e25a94d584ac250503de153bf6fb0eb3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631254"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694974"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter 和 RecordCount 属性示例 （VC + +）
 此示例使用[筛选器](../../../ado/reference/ado-api/filter-property.md)以打开一个新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)根据指定条件应用于现有**记录集**。 它使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性，以两者中显示的记录数**记录集**。 若要运行此过程需要 FilterField 函数。  

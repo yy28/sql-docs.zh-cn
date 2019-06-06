@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e72c7714ad5aae30deace933a35f42002ecd3d26
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 518677742431aa2283c1613c7f8e78d25a31e091
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308669"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708451"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ 中的 ADOX 代码示例
 这些主题提供示例代码，以帮助你了解如何使用 ADOX。 使用 Microsoft Visual 中编写所有代码示例C++。  

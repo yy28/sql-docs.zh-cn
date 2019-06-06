@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3f31e5522fdac506e31ffe0bbaa5ad76e3fae87b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719906"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701556"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>附录 A：数据和服务提供商
 本部分解决了三种类型的提供程序： 数据提供程序、 服务提供程序和服务组件。 提供程序分为两类： 提供数据和提供服务。 一个*数据提供程序*拥有其自己的数据，并以表格形式向你的应用程序公开。 一个*服务提供商*对服务生成和使用数据，并增加 ADO 应用程序中的功能进行封装。 此外可以将服务提供商进一步定义作为*服务组件*，其必须与其他服务提供程序或组件一起工作。

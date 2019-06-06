@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cccbbd4d87c930ac38aadd1ec9f58dab26bcce1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 970555ceef08d07aafb506f006652abec2139d6c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062635"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709952"
 ---
 # <a name="axis-object-ado-md"></a>轴对象 (ADO MD)
 表示一个位置或单元，其中包含所选的一个或多个维度成员集的筛选轴。  

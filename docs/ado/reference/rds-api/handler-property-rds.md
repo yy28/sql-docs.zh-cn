@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 642addb5ff03e17b5b36e7baa01ef87661a00b35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6b538767f62a3d80b9cf2cd9b558f14c5de91549
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63276449"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712466"
 ---
 # <a name="handler-property-rds"></a>Handler 属性 (RDS)
 指示服务器端自定义程序 （处理程序） 的功能进行扩展的名称[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，并使用任何参数*处理程序*。  
   
- **适用于：**[DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **适用于：** [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -50,7 +50,7 @@ DataControl.Handler = String
   
  默认处理程序的名称是**MSDFMAP。处理程序**，其默认参数是一个名为的自定义项文件**MSDFMAP。INI**。 使用此属性来调用由服务器管理员创建的备用自定义项文件。  
   
- 设置的替代方法**处理程序**属性是指定一个处理程序和中的参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性; 也就是说，"**处理程序 =** _处理程序名称，parameter1、 parameter2...;_".  
+ 设置的替代方法**处理程序**属性是指定一个处理程序和中的参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性; 也就是说，"**处理程序 =** _处理程序名称，parameter1、 parameter2...;_ ".  
   
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

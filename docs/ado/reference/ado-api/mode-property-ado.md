@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0fc2a9dffe5dc22c1dadfa075b91d8a6b26215de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e821c98f5d390e0eb30dcada9a816c6e29d9d482
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62863674"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707561"
 ---
 # <a name="mode-property-ado"></a>Mode 属性 (ADO)
 指示在中修改数据的可用权限[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[记录](../../../ado/reference/ado-api/record-object-ado.md)，或[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。  

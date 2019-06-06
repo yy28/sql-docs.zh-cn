@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5583f9b2c5093859e9bb5d3fd0eb9444828cb4bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 03d60a00a116f771e3854a4fe1b6b5ec512c0708
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62675858"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704177"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>第 1 步：指定服务器程序（RDS 教程）
 在最一般情况下，使用[rds。DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)对象[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法，以指定默认的服务器程序，[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，或您自己的自定义服务器程序 （业务对象）。 在服务器和服务器程序的引用实例化服务器程序或*代理*，则返回。  

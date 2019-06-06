@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5567bf3cc460aac6abfc2979a14e124bfd9d4cac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5acaaa20667ac13f89b41391c1cc1d567eccf580
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061929"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711664"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 属性 - 动态 (ADO)
 指定用户提供的命令字符串[重新同步](../../../ado/reference/ado-api/resync-method.md)要刷新中命名的表中的数据的方法问题[唯一表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)动态属性。  

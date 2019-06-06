@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2604fdc39789be2e0c86cc7d2cbc6491d55ba1ff
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161654"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701958"
 ---
 # <a name="named-commands"></a>命名命令
 [创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)演示一种方法来执行命令。 还有一种方法： 可以将它命名的命令，，然后调用此命令是直接在命名**连接**对象 (分配给**ActiveConnection**属性**命令**对象)。 分配将名称传递给命名命令意味着**名称**的属性**命令**对象。 例如，  

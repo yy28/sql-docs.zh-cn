@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802937"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702654"
 ---
 # <a name="absolute-and-relative-urls"></a>绝对和相对 URL
 URL 指定存储在本地或网络计算机上的目标的位置。 目标可以是文件、 目录、 HTML 页、 图像、 程序和等等 *。*  
@@ -36,10 +36,10 @@ URL 指定存储在本地或网络计算机上的目标的位置。 目标可以
  *scheme*  
  指定如何*资源*要访问。  
   
- 服务器  
+ 服务器   
  指定的计算机的名称，*资源*所在。  
   
- path  
+ path   
  指定目录指向目标的序列。 如果*资源*是省略，目标是中的最后一个目录*路径*。  
   
  *resource*  
@@ -53,7 +53,7 @@ URL 指定存储在本地或网络计算机上的目标的位置。 目标可以
   
  使用 ADO 2.7 或更高版本中，绝对 URL 还可以定义一个上下文。 例如，当[记录](../../../ado/reference/ado-api/record-object-ado.md)使用绝对 URL，打开对象**连接**隐式创建对象来表示 URL 指定资源。  
   
- 可以指定绝对 URL，用于定义上下文*ActiveConnection*的参数**记录**对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 绝对 URL 还可以指定的值作为"URL**=**"中的关键字**连接**对象[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法*ConnectionString*参数，并[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法*ActiveConnection*参数。  
+ 可以指定绝对 URL，用于定义上下文*ActiveConnection*的参数**记录**对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 绝对 URL 还可以指定的值作为"URL **=** "中的关键字**连接**对象[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法*ConnectionString*参数，并[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法*ActiveConnection*参数。  
   
  此外可以通过打开定义上下文**记录**或**记录集**对象，表示一个目录，因为这些对象已有隐式或显式声明**连接**指定上下文的对象。  
   
@@ -86,7 +86,7 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB 提供程序提供的 URL 方案  
  完全限定 URL 的前导部分是*方案*用于访问 URL 的其余部分标识的资源。 示例包括 HTTP （超文本传输协议） 和 FTP （文件传输协议）。  
   
- ADO 支持 OLE DB 访问接口识别其自己的 URL 方案。 例如， [Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*，* 访问"published"Windows 2000 文件，可以识别现有 HTTP 方案。  
+ ADO 支持 OLE DB 访问接口识别其自己的 URL 方案。 例如， [Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) *，* 访问"published"Windows 2000 文件，可以识别现有 HTTP 方案。  
   
 ## <a name="see-also"></a>请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

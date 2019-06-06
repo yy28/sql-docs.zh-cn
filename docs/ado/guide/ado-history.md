@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e3e491ccb659d8739cb93d72e0c923fce480015
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7fcdee5d45cffb14af2f1e0dc73941689c7fda4d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62695433"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702833"
 ---
 # <a name="ado-features-for-each-release"></a>对于每个版本的 ADO 功能
 
@@ -38,7 +38,7 @@ ms.locfileid: "62695433"
  **Recordset.Open** _，_ **Recordset.Save** _，_ **Stream.SaveToFile** _，和_ **Stream.LoadFromFile** _对仅限物理文件进行操作。_
 现在，这些方法验证文件句柄指向仅限物理文件。
 
- **Recordset.ActiveCommand** _返回错误时调用的 HTML/ASP 页中。_ 
+ **Recordset.ActiveCommand** _返回错误时调用的 HTML/ASP 页中。_
 这可以防止**命令**对象被误用。
 
  _数_**记录集**_返回嵌套_**形状**_命令的上限。_

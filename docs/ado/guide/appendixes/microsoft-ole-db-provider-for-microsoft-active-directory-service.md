@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855182"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702730"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序
 Active Directory 服务接口 (ADSI) 访问接口允许 ADO 连接到通过 ADSI 异类目录服务。 这样，ADO 应用程序只读访问权限对 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目录服务，除了任何符合 LDAP 的目录服务和 Novell 目录服务。 ADSI 本身基于提供程序模型，以便如果没有新的提供程序让访问到另一个目录，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序是自由线程，并支持 Unicode。  

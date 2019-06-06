@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0a72cf80f9fee9c887e7805f3a2a5bd542d7f47c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063093"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702423"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>聚合函数、CALC 函数和 NEW 关键字
 数据整理支持以下函数。 分配给包含的列的一章来操作的名称是*章别名*。  

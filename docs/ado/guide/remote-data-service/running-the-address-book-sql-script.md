@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c77bece1b2ab67cc361f7445240e1a2b1190587
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 366e1a5812b4d8152e5c8965d3059e3a6b2ca1cb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191783"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704194"
 ---
 # <a name="running-the-address-book-sql-script"></a>运行通讯簿 SQL 脚本
 > [!IMPORTANT]
@@ -47,7 +47,7 @@ ms.locfileid: "63191783"
   
 3.  单击**负载 SQL 脚本**并浏览到 c:\Platform SDK\Samples\DataAccess\RDS\AddressBook。  
   
-4.  选择文件 Sampleemp.sql。 单击 **“打开”**。  
+4.  选择文件 Sampleemp.sql。 单击 **“打开”** 。  
   
 5.  单击**执行查询**按钮 （工具栏上的绿色箭头）。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63191783"
   
 4.  单击**负载 SQL 脚本**按钮 （在工具栏上打开的文件夹） 并浏览到 c:\Platform SDK\Samples\DataAccess\RDS\AddressBook。  
   
-5.  选择文件 Sampleemp.sql。 单击 **“打开”**。  
+5.  选择文件 Sampleemp.sql。 单击 **“打开”** 。  
   
 6.  单击**执行查询**按钮 （工具栏上的绿色箭头） 或**F5**。  
   

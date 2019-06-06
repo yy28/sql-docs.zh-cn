@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2deba8c745b29b5bd69432060debad2c585e31b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fe9dc770f537b9b9f8b53461c30b890a4144a821
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242749"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707344"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 方法 (ADO)
 将表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)到另一个位置。  
@@ -54,7 +54,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  可选。 一个**布尔**值，当**True**，指定此操作应为异步。  
   
 ## <a name="return-value"></a>返回值  
- 一个字符串值。 通常情况下，值*目标*返回。 但是，返回的确切值与提供程序相关。  
+ 一个字符串值  。 通常情况下，值*目标*返回。 但是，返回的确切值与提供程序相关。  
   
 ## <a name="remarks"></a>备注  
  值*源*并*目标*不能完全相同; 否则为将发生运行时错误。 至少必须在不同的服务器、 路径和资源的名称。  

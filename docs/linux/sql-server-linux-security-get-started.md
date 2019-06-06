@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: sql-linux
-ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211736"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705205"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 的安全功能演练
 
@@ -172,7 +171,7 @@ WITH (STATE = OFF);
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-使用 AdventureWorks2014;转 ALTER 表 Person.EmailAddress     ALTER 列电子邮件地址    
+USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
@@ -230,7 +229,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 前往  
 
-使用 AdventureWorks2014; 转
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
 WITH ALGORITHM = AES_256  

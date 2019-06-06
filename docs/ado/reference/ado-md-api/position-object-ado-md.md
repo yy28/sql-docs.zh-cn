@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4118adb0b6d23a57926f5ca8c4c933dd3ef3b78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 32f6cea0eb9cf28ee50276968eca996714b96698
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033329"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708782"
 ---
 # <a name="position-object-ado-md"></a>位置对象 (ADO MD)
 表示一组不同维度的一个或多个成员，用于定义沿某个轴的点。  

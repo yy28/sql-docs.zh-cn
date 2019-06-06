@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 356713d24cd4e37014884cf39aa903267d5378b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e8ae20bac37053c8eb70f2d1fda24a5a81fc1999
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315901"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695777"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>连接（ADO for Visual C++ 语法）
 ## <a name="methods"></a>方法  

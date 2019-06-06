@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fdd88251e3d41954dcee6ed3c88612941688cbbb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134411"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707765"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 对象 (RDS)
 将绑定数据查询[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到一个或多个控件 （例如，文本框中，网格控件或组合框） 以显示**记录集**Web 页上的数据。  

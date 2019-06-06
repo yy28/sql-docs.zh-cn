@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 895082ffe456e38ccaf120688e2bf77c1b410344
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fc1a2db077a08b37ddd6143ea7a76ebd257f2a48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63213332"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706482"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls 属性示例 (VB)
 此示例演示[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)的属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码将创建一个新的索引并设置的值**IndexNulls**根据用户输入 （来自名为列表 1 的列表框）。 然后，将**索引**追加到**员工**[表](../../../ado/reference/adox-api/table-object-adox.md)中*Northwind* [目录](../../../ado/reference/adox-api/catalog-object-adox.md)。 新**索引**应用于[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于**员工**表，以及**记录集**打开。 一条新记录添加到**员工**表中，使用**Null**中索引字段的值。 是否显示此新记录的设置决定**IndexNulls**属性。  

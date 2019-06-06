@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0d7a19476a00fb88e0b2195c761993f91b7a5d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b2fe669c521e1d21b46b6eb503f0ca03944e12e9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161789"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702074"
 ---
 # <a name="dynamic-cursors"></a>动态游标
 动态游标检测结果集中，而不考虑是否发生的更改从内部游标或游标以外的其他用户的行所做的所有更改。 所有的 insert、 update 和 delete 语句所做的所有用户都通过游标可见。 动态游标可以检测到的行、 顺序和中的结果集打开游标后的值所做的任何更改。 游标外部所做的更新不可见，直到提交 （除非游标事务隔离级别设置为"未提交"）。  

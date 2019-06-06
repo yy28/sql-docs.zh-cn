@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7261d8b5b72b835c726a268477c44e4d0663f131
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.openlocfilehash: f6364755ee1719a17f4927cfd157b757c6097830
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65376847"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705553"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上配置 SQL Server 容器映像
 
@@ -537,7 +536,7 @@ sudo systemctl start docker
 
 如果 SQL Server 容器无法运行，请尝试下列测试：
 
-- 如果你收到错误，例如**无法在网桥上创建终结点 CONTAINER_NAME。启动代理时出错： 侦听 tcp 0.0.0.0:1433 绑定： 地址已在使用。**，然后尝试将容器端口 1433年映射到已在使用的端口。 在主机上本地运行 SQL Server 时可能发生此错误。 如果启动了两个 SQL Server 容器，并尝试将它们映射到同一主机端口，也可能发生此错误。 如果发生这种情况，使用`-p`参数将容器端口 1433年映射到不同的主机端口。 例如： 
+- 如果你收到错误，例如**无法在网桥上创建终结点 CONTAINER_NAME。启动代理时出错： 侦听 tcp 0.0.0.0:1433 绑定： 地址已在使用。** ，然后尝试将容器端口 1433年映射到已在使用的端口。 在主机上本地运行 SQL Server 时可能发生此错误。 如果启动了两个 SQL Server 容器，并尝试将它们映射到同一主机端口，也可能发生此错误。 如果发生这种情况，使用`-p`参数将容器端口 1433年映射到不同的主机端口。 例如： 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

@@ -8,15 +8,14 @@ ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ab482a9c2a4bce9da7dc2b0a68cae6391759b92
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 29c8dd4ef4898796722e1c54eeaff94afef1c0c6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754449"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705335"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>在 Linux 上配置 SQL Server 复制
 
@@ -72,7 +71,7 @@ ms.locfileid: "52754449"
 
 1. 在 SSMS 连接到的对象资源管理器中的 SQL Server 实例。
 
-1. 右键单击**复制**，然后单击**配置分发...**.
+1. 右键单击**复制**，然后单击**配置分发...** .
 
 1. 按照上的说明**配置分发向导**。
 
@@ -80,13 +79,13 @@ ms.locfileid: "52754449"
 
 若要创建的发布和文章：
 
-1. 在对象资源管理器，单击**复制** > **本地发布**> **新发布...**.
+1. 在对象资源管理器，单击**复制** > **本地发布**> **新发布...** .
 
 1. 按指令**新建发布向导**若要配置的类型的复制和属于该发布的文章。
 
 ### <a name="configure-the-subscription"></a>配置订阅
 
-若要在对象资源管理器中配置的订阅，请单击**复制** > **本地订阅**> **新订阅...**.
+若要在对象资源管理器中配置的订阅，请单击**复制** > **本地订阅**> **新订阅...** .
 
 ### <a name="monitor-replication-jobs"></a>监视复制作业
 

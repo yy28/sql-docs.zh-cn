@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853333"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701326"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概述
 到 ADO 或 RDS 的程序员来说，理想情况下将是一个中的每个数据源公开 OLE DB 接口，以便 ADO 无法直接调用到数据源。 尽管越来越多的数据库供应商实现 OLE DB 接口，但某些数据源是尚未公开这种方式。 但是，可以通过 ODBC 访问大多数系统 （DBMS） 目前所用。
@@ -65,7 +65,7 @@ MSDASQL
 
  提供程序不支持除 ADO 定义的任何特定的连接参数。 但是，该提供程序会将任何非 ADO 连接参数传递到 ODBC 驱动程序管理器。
 
- 因为可以省略**提供程序**参数，可以因此编写等同于同一数据源的 ODBC 连接字符串的 ADO 连接字符串。 使用相同的参数名称 (**驱动程序 =**，**数据库 =**， **DSN =**，依此类推)，值和与您的语法将撰写的 ODBC 连接字符串时。 可以带或不带预定义的数据源名称 (DSN) 或 FileDSN 连接。
+ 因为可以省略**提供程序**参数，可以因此编写等同于同一数据源的 ODBC 连接字符串的 ADO 连接字符串。 使用相同的参数名称 (**驱动程序 =** ，**数据库 =** ， **DSN =** ，依此类推)，值和与您的语法将撰写的 ODBC 连接字符串时。 可以带或不带预定义的数据源名称 (DSN) 或 FileDSN 连接。
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>使用 DSN 或 FileDSN 语法：
 
@@ -84,11 +84,11 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>备注
  如果您使用**DSN**或**FileDSN**，必须定义通过 ODBC 数据源管理器在 Windows 控制面板中。 在 Microsoft Windows 2000 中，ODBC 管理器位于管理工具。 在早期版本的 Windows 中，名为 ODBC 管理器图标**32 位 ODBC**或仅**ODBC**。
 
- 作为设置的替代方法**DSN**，可以指定 ODBC 驱动程序 (**驱动程序 =**)，例如"SQL Server;"服务器名称 (**SERVER =**); 和数据库名称 (**数据库 =**)。
+ 作为设置的替代方法**DSN**，可以指定 ODBC 驱动程序 (**驱动程序 =** )，例如"SQL Server;"服务器名称 (**SERVER =** ); 和数据库名称 (**数据库 =** )。
 
- 此外可以指定用户帐户名 (**UID =**)，以及用户帐户的密码 (**PWD =**) 中的特定于 ODBC 的参数或在标准 ADO 定义*用户*和*密码*参数。
+ 此外可以指定用户帐户名 (**UID =** )，以及用户帐户的密码 (**PWD =** ) 中的特定于 ODBC 的参数或在标准 ADO 定义*用户*和*密码*参数。
 
- 尽管**DSN**定义中已指定了数据库，您可以指定 *数据库*除了参数**DSN**连接到不同的数据库。 它是始终包含一个好办法 *数据库*时使用的参数**DSN**。 这将确保您连接到正确的数据库的，如果自上次检查时间，另一个用户更改了默认的数据库参数**DSN**定义。
+ 尽管**DSN**定义中已指定了数据库，您可以指定  *数据库*除了参数**DSN**连接到不同的数据库。 它是始终包含一个好办法  *数据库*时使用的参数**DSN**。 这将确保您连接到正确的数据库的，如果自上次检查时间，另一个用户更改了默认的数据库参数**DSN**定义。
 
 ## <a name="provider-specific-connection-properties"></a>特定于提供程序的连接属性
  用于 ODBC 的 OLE DB 访问接口将添加到多个属性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)系列**连接**对象。 下表列出了这些属性与在括号中相应的 OLE DB 属性名称。

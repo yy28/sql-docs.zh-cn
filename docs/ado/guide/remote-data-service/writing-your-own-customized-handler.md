@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 58a380336d3b1abc99e00f1f4052cd24a8cc5988
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155910"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699410"
 ---
 # <a name="writing-your-own-customized-handler"></a>编写自己的自定义处理程序
 你可能想要编写自己的处理程序，如果您是 IIS 服务器管理员，并且希望获得的默认的 RDS 支持，但更好地控制用户请求和访问权限。  
@@ -32,7 +32,7 @@ ms.locfileid: "63155910"
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 接口  
  此接口有两个方法**GetRecordset**并**重新连接**。 这两种方法需要[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。  
   
- 这两种方法采用中第一个逗号后显示的自变量"**处理程序 =**"关键字。 例如，`"Handler=progid,arg1,arg2;"`将传递的参数字符串，其中`"arg1,arg2"`，和`"Handler=progid"`将传递 null 参数。  
+ 这两种方法采用中第一个逗号后显示的自变量"**处理程序 =** "关键字。 例如，`"Handler=progid,arg1,arg2;"`将传递的参数字符串，其中`"arg1,arg2"`，和`"Handler=progid"`将传递 null 参数。  
   
 ## <a name="getrecordset-method"></a>GetRecordset 方法  
  此方法将查询数据源，创建一个新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象使用提供的参数。 **记录集**必须使用打开**adLockBatchOptimistic** ，必须以异步方式打开。  

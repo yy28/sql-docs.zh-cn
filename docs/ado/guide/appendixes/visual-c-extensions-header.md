@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9e9d744955faa41b771834095a6cc51233af4bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ac2dbb1b1bd120710909ebe42b362430bae998d6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217663"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701116"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ 扩展标头
 以下标头**icrsint.h**，详细介绍了允许客户端检索中的字段的界面**记录集**到派生类中定义的变量**CADORecordBinding**. 必须指定想要访问每个字段的 ADO 绑定宏。  

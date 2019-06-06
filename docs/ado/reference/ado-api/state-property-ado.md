@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98d3e61b37eb22ebaf793252f49b2b11621abd80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e8a46dd9358b085fb6079f03df88474b72440068
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027672"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711257"
 ---
 # <a name="state-property-ado"></a>State 属性 (ADO)
 指示所有适用的对象，对象的状态是打开还是已关闭。 如果该对象正在执行的异步方法，指示该对象的当前状态是连接、 执行或检索。  

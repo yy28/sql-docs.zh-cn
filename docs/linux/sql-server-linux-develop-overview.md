@@ -7,21 +7,20 @@ manager: craigg
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 9f9175d82102e5c0dbbae2fbc7054459a0710e6e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d3ef46dfbacb1c4cbfe67df555b79fb10ade86d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670877"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705813"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 开发应用程序
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-可以创建连接到并使用从各种编程语言，如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + 的 Linux 上的 SQL Server 的应用程序。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
+您可以创建应用程序连接到 SQL Server Linux 上和使用从各种编程语言，如C#、 Java、 Node.js、 PHP、 Python、 Ruby 和C++。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 

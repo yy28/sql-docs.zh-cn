@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a5dc84c5bacca8951576e572b90fa28a8408e48d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161456"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700722"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>构造分层记录集
 下面的示例演示如何通过使用数据整理语法来定义列的父级、 子级和孙级编制分层记录集而无需基础数据源**记录集**。  

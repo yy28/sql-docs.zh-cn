@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 62fce79d6ee223ee5b039fe914685fdf3bd33c98
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472206"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704805"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>用于 Internet 发布的 OLE DB 提供程序
 ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)并[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象可以在 Microsoft OLE DB 访问接口为 Internet 发布 （Internet 发布提供程序） 访问和处理资源，例如 Web 文件夹或文件由 Microsoft FrontPage 提供服务。 使用 ADO 中，您可以指定的源**记录**， **Stream**，或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)是 url。 你可以然后上传、 下载、 移动、 复制和删除资源，或直接操作资源属性。  

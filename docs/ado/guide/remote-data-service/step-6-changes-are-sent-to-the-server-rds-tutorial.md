@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8bfeb9ad607fc35c055e025fcc67435323d3143e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fa60fd6db3da59de9d833c488811b5921ae53987
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955714"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699310"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步骤 6：将更改发送到服务器（RDS 教程）
 如果**记录集**编辑对象，可以将任何更改 （即，对行进行添加、 更改或删除） 发回服务器。  

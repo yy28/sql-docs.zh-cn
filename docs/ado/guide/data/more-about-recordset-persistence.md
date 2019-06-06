@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 88fcf471b2f853a5e1a874c29d2192c17d23b113
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161581"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701944"
 ---
 # <a name="more-about-recordset-persistence"></a>更多有关记录集暂留的信息
 ADO 记录集对象支持存储的内容**记录集**通过使用文件中的对象及其[保存](../../../ado/reference/ado-api/save-method.md)方法。 永久存储的文件可能位于本地驱动器中，服务器或 Web 上的 URL 作为站点。 更高版本，可以使用还原文件[开放](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**记录集**对象或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cede9be7c484d40c2220fc891779f7dfb6e5a8df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5d68f0e74e4bbfb275cbe23641c72eca4c941559
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028144"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697963"
 ---
 # <a name="filter-property"></a>Filter 属性
 指示数据中的筛选器[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "63028144"
 -   相反，您将构造此筛选器设置为  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   在中**如**子句中，你可以使用通配符开头和结尾的模式。 例如，可以使用`LastName Like '*mit*'`。 或使用**如**只能在模式的末尾使用通配符。 例如，`LastName Like 'Smit*'`。  
+-   在中**如**子句中，你可以使用通配符开头和结尾的模式。 例如，可以使用`LastName Like '*mit*'`。 或使用**如**只能在模式的末尾使用通配符。 例如， `LastName Like 'Smit*'` 。  
   
  筛选器常量使其更轻松地解决个别记录冲突期间通过允许您查看，例如，只有这些记录的批更新模式下受影响在最后一个[UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)方法调用。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63028144"
   
 -   在多个键表中的任何字段上进行了修改。  
   
-下表总结了的效果**adFilterPendingRecords**中筛选和修改的不同组合。 左侧的列显示了可能的修改。 可以在任何非键字段、 单键表中的键字段或任意多个键表中的键字段上进行修改。 最上面一行显示了筛选条件。 筛选可以基于任何非键字段中，单键控的表，或任意多个键表中的键字段中的键字段。 相交单元格显示的结果。 一个**+** 加号意味着该应用**adFilterPendingRecords**导致非空**记录集**。 一个**-** 减号表示空**记录集**。  
+下表总结了的效果**adFilterPendingRecords**中筛选和修改的不同组合。 左侧的列显示了可能的修改。 可以在任何非键字段、 单键表中的键字段或任意多个键表中的键字段上进行修改。 最上面一行显示了筛选条件。 筛选可以基于任何非键字段中，单键控的表，或任意多个键表中的键字段中的键字段。 相交单元格显示的结果。 一个 **+** 加号意味着该应用**adFilterPendingRecords**导致非空**记录集**。 一个 **-** 减号表示空**记录集**。  
   
 ||非键|单个键|多个密钥|
 |-|--------------|----------------|-------------------|

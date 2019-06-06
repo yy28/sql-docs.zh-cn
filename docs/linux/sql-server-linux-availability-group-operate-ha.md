@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a33c18175a03b589f7b431655ff4704356f5eeaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98493c945f4f43e45b1f314f1500eb50a04c8e5a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795995"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713421"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>始终对 Linux 上的可用性组
 
@@ -77,13 +76,13 @@ ms.locfileid: "47795995"
 
    如果可用性组群集类型为`NONE`、 手动故障转移。 请按顺序完成下列步骤：
 
-      A. 以下命令设置到辅助站点的主副本。 替换为`AG1`与可用性组的名称。 承载主副本的 SQL Server 实例上运行 TRANSACT-SQL 命令。
+      a. 以下命令设置到辅助站点的主副本。 替换为`AG1`与可用性组的名称。 承载主副本的 SQL Server 实例上运行 TRANSACT-SQL 命令。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. 以下命令设置为主要副本同步的辅助副本。 SQL Server-承载同步辅助副本的实例的目标实例上运行以下 TRANSACT-SQL 命令。
+      b. 以下命令设置为主要副本同步的辅助副本。 SQL Server-承载同步辅助副本的实例的目标实例上运行以下 TRANSACT-SQL 命令。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa6f29c480244919de71d06cf3d56e672f00c47f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2b492476eadfde4c0c2666096714a8cd0f634db1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240061"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712028"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 属性 (ADO)
 
@@ -47,7 +47,7 @@ ms.locfileid: "63240061"
 - **adApproxPosition**与近似位置。
 
 > [!NOTE]
-> 在 ADO 版本 2.8 和更早版本中，SQLOLEDB 访问接口提取所有记录，使用服务器端游标时，它将返回尽管 **，则返回 True**两个**支持 (adApproxPosition)** 并**支持 (adBookmark)**。
+> 在 ADO 版本 2.8 和更早版本中，SQLOLEDB 访问接口提取所有记录，使用服务器端游标时，它将返回尽管 **，则返回 True**两个**支持 (adApproxPosition)** 并**支持 (adBookmark)** 。
   
 游标类型的**记录集**对象会影响是否可确定记录数。 **RecordCount**属性将返回-1 的只进游标; 对于静态的实际计数或键集游标; 或者为-1 或动态游标，具体取决于数据源的实际计数。
   

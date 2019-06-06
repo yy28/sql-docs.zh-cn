@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a1e7e685e9d3f23d4d1c3317e24f63d7bdac23db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 091c640ab09cf70cff5e6f7ce3d7bf1dc9dd34ab
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180740"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710716"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 指定用于打开选项[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。 可以使用或运算组合的值。  
   
-|常量|ReplTest1|描述|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|此时将打开**Stream**在异步模式下的对象。|  
 |**adOpenStreamFromRecord**|4|标识的内容*源*参数是已打开[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。 默认行为是将视为*源*作为 URL 直接指向树状结构中的节点。 打开与该节点关联的默认流。|  

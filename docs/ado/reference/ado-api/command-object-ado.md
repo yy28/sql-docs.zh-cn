@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab3348906affc9a1c1a4b5471de861831992dc32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 089a261eaea2701354af6082827c12491810b74c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126802"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699002"
 ---
 # <a name="command-object-ado"></a>命令对象 (ADO)
 定义要对数据源执行的特定命令。  
@@ -81,4 +81,4 @@ objCmd(0)
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

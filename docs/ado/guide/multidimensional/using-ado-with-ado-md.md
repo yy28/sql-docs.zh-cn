@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69707e5026497a1f98ab168d71b4e6b286520fbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2fd684e35c9cebf4a91a0b396e2c8b572e1ecf8c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63194900"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699861"
 ---
 # <a name="using-ado-with-ado-md"></a>使用 ADO 与 ADO MD
 ADO 和 ADO MD 相关但独立的对象模型。 ADO 提供的对象用于连接到数据源、 执行命令、 检索表格格式数据和架构元数据以表格格式和查看提供程序错误的信息。 ADO MD 提供用于检索多维数据和查看多维架构元数据的对象。  

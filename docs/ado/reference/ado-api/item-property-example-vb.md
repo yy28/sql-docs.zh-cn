@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 941c6a8cf6c7ed57e0a28d5cb288d92ab8e231c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2bd552b6d364bcfd2ccc9f2b9505c54df38a4fae
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864499"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694736"
 ---
 # <a name="item-property-example-vb"></a>Item 属性示例 (VB)
 此示例演示如何[项](../../../ado/reference/ado-api/item-property-ado.md)属性访问集合的成员。 该示例打开***作者***表的***Pubs***使用参数化命令的数据库。  

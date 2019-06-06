@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ed1a2ec745b1e1ca961c71c81d44ff659789efea
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472643"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700871"
 ---
 # <a name="creating-a-connection-string"></a>创建连接字符串
 连接字符串包含用分号分隔的参数/值对 （即，参数） 的列表。 例如：  

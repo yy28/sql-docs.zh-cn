@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb2938a37f3cb32b4abc61e36029390179b93fe8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e9fe6b7f7a92ec6df78e4eb2d086125b5e9fa957
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911139"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710821"
 ---
 # <a name="supports-method-example-vb"></a>Supports 方法示例 (VB)
 此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法来显示数据集支持的选项，打开不同的游标类型。 若要运行此过程需要 DisplaySupport 过程。  

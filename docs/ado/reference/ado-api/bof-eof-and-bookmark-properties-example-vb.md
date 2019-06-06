@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0ccaa2b12229077d21cd50ce73d55ff287507f0d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316850"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696324"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF 和 Bookmark 属性示例 (VB)
 此示例使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)并[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性，以显示一条消息，如果用户尝试跳过的第一个或最后一个记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)属性，会让用户标记中的记录**记录集**并稍后返回到它。  

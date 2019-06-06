@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 55f5d599ea2399697a0b96cc3d316776179b7562
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62752954"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699583"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 编程模型的详细信息
 RDS 编程模型的关键元素如下：  

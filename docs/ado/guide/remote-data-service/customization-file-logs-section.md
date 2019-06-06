@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71a9130c385032acfad7c0c1040b293486bff525
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d5d64dc151fbd54da17a65e2178b7f38eb6b2834
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214906"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699654"
 ---
 # <a name="customization-file-logs-section"></a>自定义文件 Logs 部分
 **日志**部分包含的日志文件条目，用于指定的操作过程中记录错误的文件的名称**DataFactory**。  
@@ -39,7 +39,7 @@ FileName
   
 ## <a name="remarks"></a>备注  
   
-|组成部分|描述|  
+|组成部分|Description|  
 |----------|-----------------|  
 |**err**|文本字符串，用于指示这是一个日志文件条目。|  
 |*FileName*|完整的路径和文件名的名称。 典型的文件名称是**c:\msdfmap.log**。|  

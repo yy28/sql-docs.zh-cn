@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 601573a34082f386bfee238308a8f97c41743e4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 37d1fe31524d245da2a6bac9b90ab2e680fab450
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239778"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696142"
 ---
 # <a name="chapter-property-ado"></a>Chapter 属性 (ADO)
 获取或设置 OLE DB**章**对象从/上[ADORecordsetConstruction 接口](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)对象。 当你使用**put_Chapter**若要设置**章**对象的行的子集转换为 ADO[记录集对象](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 这将设置当前的章节**行集**对象。 此属性是可读写的。  

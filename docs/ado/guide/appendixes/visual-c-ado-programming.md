@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142966"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702616"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 编程
 ADO API 参考介绍 ADO 应用程序编程接口 (API) 使用 Microsoft Visual Basic 类似的语法的功能。 ADO 程序员的目标的受众是所有用户，但采用不同语言，例如 Visual Basic、 Visual C++ (具有和没有 **#import**指令)，和 Visual J + + 中 （与 ADO/WFC 类包）。  
@@ -65,7 +65,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- 编译器将生成的相应**获取**_-_，**放**-，或**PutRef**_属性_调用基于声明哪些替代语法，并且是否正在属性读取或写入。  
+ 编译器将生成的相应**获取** _-_ ，**放**-，或**PutRef**_属性_调用基于声明哪些替代语法，并且是否正在属性读取或写入。  
   
  **__Declspec(property...)** 编译器指令可以仅声明**获取**，**放**，或**获取**并**放**函数的替代语法。 只读操作只有**获取**声明; 只写操作只有**放置**声明; 操作的同时读取和写入同时具有**获取**和**放置**声明。  
   
@@ -85,7 +85,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- 例如，将值分配到的字段**记录集**对象，名为 **_rs_** 派生自**作者**表**pubs**数据库。 使用**Item()** 属性来访问第三个**字段**的**记录集**对象**字段**（集合编制索引从集合零;假设第三个字段的名称为 **_au\_fname_**)。 然后调用**value （)** 方法**字段**对象来将一个字符串值。  
+ 例如，将值分配到的字段**记录集**对象，名为 **_rs_** 派生自**作者**表**pubs**数据库。 使用**Item()** 属性来访问第三个**字段**的**记录集**对象**字段**（集合编制索引从集合零;假设第三个字段的名称为 **_au\_fname_** )。 然后调用**value （)** 方法**字段**对象来将一个字符串值。  
   
  这可以用来表示在 Visual Basic 中以下四种方法 （最后两个窗体是唯一的 Visual Basic; 其他语言不具有等效项）：  
   

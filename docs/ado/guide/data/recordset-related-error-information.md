@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4f13a77a9f03aa76fccc41a1fa19878dd935db0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ef5f6cc4a262cecc81a8dd72f2d3e3f6a7e2fded
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63187798"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700419"
 ---
 # <a name="recordset-related-error-information"></a>记录集相关错误信息
 在批处理、 过程**状态**的属性**记录集**对象提供有关中的个别记录信息**记录集**。 在批处理更新发生之前**状态**的属性**记录集**反映了有关添加、 更改和删除的记录的信息。 之后**UpdateBatch**已调用**状态**属性指示该操作成功与否。 在记录间移动**记录集**的值**状态**属性更改来描述当前记录的状态。

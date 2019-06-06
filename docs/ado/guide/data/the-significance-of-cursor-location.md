@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7be2574e700e15373d57bf4132ee2c3dd955112b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ed59dc8c4dd2cc53c4ad86992e5b778f0f8b17ac
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228380"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704836"
 ---
 # <a name="the-significance-of-cursor-location"></a>游标位置的重要性
 每个游标使用临时资源来保存其数据。 这些资源可以是内存、 磁盘分页文件、 临时磁盘文件或甚至临时存储在数据库中。 游标被称为*客户端*游标时这些资源都位于客户端计算机上。 游标被称为*服务器端*游标时这些资源位于服务器上。  

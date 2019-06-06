@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184825"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704440"
 ---
 # <a name="working-with-recordsets"></a>使用记录集
 **记录集**对象有内置功能，可用于重新排列结果集中的数据的顺序，根据你提供的条件的特定记录中搜索并且甚至优化那些使用索引的搜索操作。 可使用这些功能是否取决于提供程序以及在某些情况下-例如[索引](../../../ado/reference/ado-api/index-property.md)属性的数据源本身的结构。  
@@ -54,7 +54,7 @@ ms.locfileid: "63184825"
   
  可以为条件指定仅包含单列的名称。 换而言之，此方法不支持多列搜索。  
   
- 比较运算符中的条件可以是"**>**"（大于）、"**\<**"（小于）、"="（等于）"> ="（大于或等于）"< ="（小于或等于）、"<>"（不等于）、 或"LIKE"（模式匹配）。  
+ 比较运算符中的条件可以是" **>** "（大于）、" **\<** "（小于）、"="（等于）"> ="（大于或等于）"< ="（小于或等于）、"<>"（不等于）、 或"LIKE"（模式匹配）。  
   
  条件值可以是字符串、 浮点数或日期。 字符串值是用单引号引起来或"#"（数字符号） 标记分隔 (例如，"状态 = WA"或"状态 = #WA #")。 日期值以"#"（数字符号） 标记 (例如，"start_date > #7/22/97 #")。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63184825"
  星号可以仅在条件字符串末尾或一起开头和末尾条件字符串，使用前面所示。 您不能使用星号作为前导通配符 (* str') 或嵌入式通配符 ('s\*r)。 这会导致错误。  
   
 ### <a name="seek-and-index"></a>查找并编制索引  
- 使用**Seek**方法一起使用**索引**如果基础提供程序上支持索引属性**记录集**对象。 使用[支持](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 方法，以确定基础提供程序是否支持**搜寻**，以及**Supports(adIndex)** 若要确定该提供程序是否支持索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**Seek**并**索引**。)  
+ 使用**Seek**方法一起使用**索引**如果基础提供程序上支持索引属性**记录集**对象。 使用[支持](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** 方法，以确定基础提供程序是否支持**搜寻**，以及**Supports(adIndex)** 若要确定该提供程序是否支持索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**Seek**并**索引**。)  
   
  如果**Seek**不找到所需的行中，没有错误发生，而且行位于末尾处**记录集**。 设置**索引**之前执行此方法所需索引的属性。  
   
@@ -88,12 +88,12 @@ ms.locfileid: "63184825"
   
 -   *FieldName*必须是有效的字段名称，从**记录集**。 如果字段名称包含空格，必须将名称括在方括号中。  
   
--   *运算符*必须是以下值之一： **\<**， **>**， **\< =**， **>=** **<>**， **=**，或者**如**。  
+-   *运算符*必须是以下值之一： **\<** ， **>** ， **\< =** ， **>=** **<>** ， **=** ，或者**如**。  
   
 -   *值*是将与之比较的字段值的值 (例如， `'Smith'`， `#8/24/95#`， `12.345`，或`$50.00`)。 使用字符串使用单引号 （'） 和井号 (`#`) 包含的日期。 对于数字，可以使用小数点、 美元符号和科学记数法。 如果*运算符*是**等**，*值*可以使用通配符。 仅星号 (\*) 和百分号 （%）允许使用通配符字符，并且它们必须是字符串中的最后一个字符。 *值*不能为 null。  
   
     > [!NOTE]
-    >  若要在筛选器中包含单引号 （'）*值*，使用两个单引号来表示一个。 例如，对筛选*O'Malley*，则条件字符串应为`"col1 = 'O''Malley'"`。 若要包含在开头和筛选器值结束的单引号，请将字符串括在井号 （#）。 例如，对筛选 *'1'*，则条件字符串应为`"col1 = #'1'#"`。  
+    >  若要在筛选器中包含单引号 （'）*值*，使用两个单引号来表示一个。 例如，对筛选*O'Malley*，则条件字符串应为`"col1 = 'O''Malley'"`。 若要包含在开头和筛选器值结束的单引号，请将字符串括在井号 （#）。 例如，对筛选 *'1'* ，则条件字符串应为`"col1 = #'1'#"`。  
   
  没有之间没有优先**AND**并**或**。 子句可以在括号内进行分组。 但是，也不能分组子句通过联接**或**然后将组加入到另一个带有一个 AND 子句，如下所示。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63184825"
 ### <a name="filtering-with-a-constant"></a>使用一个常量进行筛选  
  以下常量是可用于筛选**记录集**。  
   
-|常量|描述|  
+|常量|Description|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|用于查看仅受影响的最后一个的记录的筛选器**删除**，**重新同步**， **UpdateBatch**，或者**CancelBatch**调用。|  
 |**adFilterConflictingRecords**|用于查看失败的最后的批处理更新的记录的筛选器。|  

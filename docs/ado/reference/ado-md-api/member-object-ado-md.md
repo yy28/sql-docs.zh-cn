@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f8d11e97fd31745752449c5649e1096d0bb667a8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740077"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709026"
 ---
 # <a name="member-object-ado-md"></a>成员对象 (ADO MD)
 表示在多维数据集，一个级别的成员的成员的级别或沿某个轴的单元集的位置的成员的子级。  

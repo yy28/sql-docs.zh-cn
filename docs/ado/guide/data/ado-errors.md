@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1fe29d28d3d860b7108972abc1e1f20a10de1edc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063033"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701040"
 ---
 # <a name="ado-run-time-errors"></a>ADO 运行时错误
 ADO 错误报告到你的程序为运行时错误。 您的编程语言的错误捕获机制可用于捕获并处理它们。 例如，在 Visual Basic 中，使用**On Error**语句。 视觉对象中C++，这取决于您用来访问 ADO 库的方法。 借助 #import，使用**try catch**块。 否则为C++程序员需要显式检索错误对象通过调用**GetErrorInfo**。 下面的 Visual Basic sub 过程演示了捕获 ADO 错误：

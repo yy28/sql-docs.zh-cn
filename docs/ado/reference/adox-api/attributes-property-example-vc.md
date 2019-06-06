@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4aab3372068a621235da9e26461df29240928440
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3f6da19cdf0ef9ae83e9fd7707403667237e6e78
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184164"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707979"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes 属性示例 (VC++)
 此示例演示[特性](../../../ado/reference/adox-api/attributes-property-adox.md)的属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 将其设置为**adColNullable**允许用户设置的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)为空字符串。 在此情况下，用户可以区分无法知道数据的记录和记录数据中不适用。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58f8bb0cab715df78926b6a4a70027ff25bcba1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 99133d2fbf057efcd32e10d77da2226c8b989948
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248371"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696601"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append 和 CreateParameter 方法示例 (VB)
 此示例使用[追加](../../../ado/reference/ado-api/append-method-ado.md)并[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)执行带有输入参数的存储的过程的方法。  

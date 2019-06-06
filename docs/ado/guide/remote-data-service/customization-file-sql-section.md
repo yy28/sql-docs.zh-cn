@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ba0d8c7ab1294400c19456abf164c6ad6be0dd2e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214754"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704308"
 ---
 # <a name="customization-file-sql-section"></a>自定义文件 SQL 部分
 **Sql**部分可以包含一个新的 SQL 字符串，将客户端的命令字符串。 是否存在任何 SQL 字符串的部分中，将忽略该节。  
@@ -43,10 +43,10 @@ SQL = " "
 ## <a name="syntax"></a>语法  
  替换 SQL 字符串条目的形式：  
   
- **SQL=**   
+ **SQL=**    
  ***sqlString***  
   
-|组成部分|描述|  
+|组成部分|Description|  
 |----------|-----------------|  
 |**SQL**|文本字符串，用于指示这是一个 SQL 部分实体。|  
 |***sqlString***|将客户端的字符串为 SQL 字符串。|  

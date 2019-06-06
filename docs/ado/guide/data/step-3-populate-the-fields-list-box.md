@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f69ab97a522e148d8027042ff7e2c6b09a690424
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062773"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704825"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>步骤 3：填充字段列表框
 若要填充的字段列表框中，将以下代码插入的单击事件处理程序`lstMain`:  

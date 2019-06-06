@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0006957b75d89c6c8ae3455508cc122682cb2d05
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472653"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702144"
 ---
 # <a name="controlling-transactions-ado"></a>控制事务 (ADO)
 ADO 支持事务处理中的连接的帮助**BeginTrans**， **CommitTrans**，并**RollbackTrans**上的方法**连接**对象。 下面的简单代码段说明了实现事务处理在 ADO 中的大致的思路。  

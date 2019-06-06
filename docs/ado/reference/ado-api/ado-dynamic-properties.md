@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2ad6c2804b70011380a12b5b9e0cd1f52fd56398
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249052"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696863"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 动态属性
 可以将动态属性添加到[属性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[命令](../../../ado/reference/ado-api/command-object-ado.md)，或者[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 这些属性的源是哪种数据提供程序，如[OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，或服务提供程序，如[用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)。 请参阅相应的数据提供程序或服务提供程序文档，了解有关特定的动态属性的详细信息。  
@@ -41,7 +41,7 @@ ms.locfileid: "63249052"
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 枚举常量](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [附录 b:ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [附录 B：ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)   

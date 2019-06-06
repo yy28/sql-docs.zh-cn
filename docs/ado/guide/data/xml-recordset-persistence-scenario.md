@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 893921a7100ca22cae219f5a0e88d543499053b1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184836"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699692"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 记录集暂留方案
 在此方案中，将创建记录集对象的内容保存直接向 ASP 响应对象的 Active Server Pages (ASP) 应用程序。  

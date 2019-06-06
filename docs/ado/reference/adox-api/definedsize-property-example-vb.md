@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 11d57cc1e5d880acebb4a44678ec147d24a5582d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 67e0d2f3b98a54cd914739e62536080c3f9cc88f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62661519"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697134"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize 属性示例 (VB)
 此示例演示[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)的属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 该代码将重新定义的 FirstName 列的大小**员工**表的*Northwind*数据库。 然后，在名字的值更改[字段](../../../ado/reference/ado-api/field-object.md)的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于**员工**显示表。 请注意，默认情况下，名字字段将成为使用空格填充后您重新定义**DefinedSize**属性。  

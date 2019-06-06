@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d1466b8f718318d8224ec2c7dcf3e873139fffed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2f84f89b1ace38350261d461993bf6f89bc155c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309158"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698758"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 和 Disconnect 事件 (ADO)
 **ConnectComplete**连接启动后，将调用事件。 **断开连接**连接结束后，将调用事件。  

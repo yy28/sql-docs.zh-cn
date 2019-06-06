@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63407f75c5bee03d24b5b3f69c2ef94cb38e177e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 89a4597cc846db1bb3bb2fac0a79ec8c2090d9d3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315169"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711145"
 ---
 # <a name="source-property-ado-error"></a>Source 属性（ADO 错误）
 指示最初生成错误的应用程序的对象的名称。  
@@ -32,7 +32,7 @@ ms.locfileid: "63315169"
  返回**字符串**值，该值指示对象或应用程序的名称。  
   
 ## <a name="remarks"></a>备注  
- 使用**源**上的属性[错误](../../../ado/reference/ado-api/error-object.md)对象，以确定最初生成错误的应用程序的对象的名称。 这可能是该对象的类名称或以编程方式的 id。 对于在 ADO 中的错误，属性值将为**ADODB。**_ObjectName_，其中*ObjectName*触发错误的对象的名称。 对于 ADOX 和 ADO MD，值将为**ADOX。**_ObjectName_并**ADOMD。**_ObjectName_分别。  
+ 使用**源**上的属性[错误](../../../ado/reference/ado-api/error-object.md)对象，以确定最初生成错误的应用程序的对象的名称。 这可能是该对象的类名称或以编程方式的 id。 对于在 ADO 中的错误，属性值将为**ADODB。** _ObjectName_，其中*ObjectName*触发错误的对象的名称。 对于 ADOX 和 ADO MD，值将为**ADOX。** _ObjectName_并**ADOMD。** _ObjectName_分别。  
   
  基于从的错误文档**源**，[数量](../../../ado/reference/ado-api/number-property-ado.md)，并[说明](../../../ado/reference/ado-api/description-property.md)属性的**错误**对象，您可以编写代码将相应地处理错误。  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 51c616882d3655e1c7b16411c6de8d5bb2fcf94c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f65c479ae7da20f63108ede0972433eda778987e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62511940"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696346"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、 CommitTrans 和 RollbackTrans 方法示例 (VB)
 此示例将更改中的所有心理学书籍的 book 类型***标题***数据库表。 之后[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法启动的事务的隔离对所做的所有更改***标题***表中， [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法保存所做的更改。 可以使用[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法来撤消使用保存的更改[更新](../../../ado/reference/ado-api/update-method.md)方法。  

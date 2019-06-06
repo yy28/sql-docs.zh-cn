@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64262ae52b802398fc2060092a03e7469146f063
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6bd1e02bf406906cc8a893ccee66a408b38510f3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161713"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702064"
 ---
 # <a name="editing-existing-records"></a>编辑现有记录
 若要编辑现有记录，将移动到想要编辑或更改的行**值**你想要更改的字段的属性。 有关详细信息**字段**对象的**值**属性，请参阅[检查数据](../../../ado/guide/data/examining-data.md)。 具体取决于游标类型，将使用**更新**或**UpdateBatch**若要将更改发送回数据源。 有关详细信息，请参阅[更新和保存数据](../../../ado/guide/data/updating-and-persisting-data.md)。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ff7b6ecf919ab83340e49e4395f8c2d1701261d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 09874df6d9e09da8b6dc0df3e9670e4ff130c511
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316283"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695976"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 指定应如何解释命令参数。  
@@ -35,7 +35,7 @@ ms.locfileid: "63316283"
 |**adCmdTable**|2|计算结果**CommandText**为其列都由内部生成的 SQL 查询返回的表名。|  
 |**adCmdStoredProc**|4|计算结果**CommandText**作为存储的过程名称。|  
 |**adCmdUnknown**|8|默认值。 指示命令中的类型**CommandText**属性未知。<br /><br /> ADO 时的命令的类型未知，将经过多次尝试解释**CommandText**。<br /><br /> -   **CommandText**被解释为文本的命令或存储过程调用的定义。 这是相同的行为**adCmdText**。<br />-   **CommandText**是存储过程的名称。 这是相同的行为**adCmdStoredProc**。<br />-   **CommandText**被解释为表的名称。 通过在内部生成的 SQL 查询返回所有列。 这是相同的行为**adCmdTable**。|  
-|**adCmdFile**|256|计算结果**CommandText**作为永久存储的文件名[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 用于**记录集。**[开放](../../../ado/reference/ado-api/open-method-ado-recordset.md)或[再次查询](../../../ado/reference/ado-api/requery-method.md)仅。|  
+|**adCmdFile**|256|计算结果**CommandText**作为永久存储的文件名[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 用于**记录集。** [开放](../../../ado/reference/ado-api/open-method-ado-recordset.md)或[再次查询](../../../ado/reference/ado-api/requery-method.md)仅。|  
 |**adCmdTableDirect**|512|计算结果**CommandText**为所有返回其列的表名。 用于**Recordset.Open**或**再次查询**仅。 若要使用[Seek](../../../ado/reference/ado-api/seek-method.md)方法，**记录集**必须使用打开**adCmdTableDirect**。<br /><br /> 此值不能合并在一起[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值**adAsyncExecute**。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  

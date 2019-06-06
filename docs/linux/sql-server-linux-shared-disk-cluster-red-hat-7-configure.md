@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73dff2be37cade58991078fec4663a9ac351f49b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634006"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712895"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
 
@@ -319,7 +318,7 @@ NFS 服务器上执行以下步骤：
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA 加载项具有 VMWare 和 KVM 的隔离代理。 需要在所有其他虚拟机监控程序上禁用隔离。 不建议在生产环境中禁用隔离代理。 截至时间范围内，有 HyperV 或云环境中的隔离代理。 如果正在运行其中一种配置，您需要禁用隔离。 \**建议不要在生产系统中 ！**
+   > RHEL HA 加载项具有 VMWare 和 KVM 的隔离代理。 需要在所有其他虚拟机监控程序上禁用隔离。 不建议在生产环境中禁用隔离代理。 截至时间范围内，有 HyperV 或云环境中的隔离代理。 如果正在运行其中一种配置，您需要禁用隔离。 \**建议不要在生产系统中 ！* *
 
    以下命令禁用隔离代理。
 

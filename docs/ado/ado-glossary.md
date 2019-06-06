@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6f139965c4235b84c66c460767d5c6d1695b68ba
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298143"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701831"
 ---
 # <a name="ado-glossary-terms"></a>ADO 术语表术语
 本主题定义与 ADO 相关的术语。
@@ -41,7 +41,7 @@ ms.locfileid: "63298143"
 ## <a name="b"></a>B
  在表中的字段和变量之间的绑定条目的映射。 在 ADO VisualC++扩展中，**记录集**字段映射到 C /C++变量。
 
- 位掩码的数字值适用于与其他数字值，通常为参数中的标志选项或返回值的按位值比较。 通常这种比较通过按位逻辑运算符，如**并**并**或者**在 Visual Basic 中**&** 并 **&#124;** 在C++。
+ 位掩码的数字值适用于与其他数字值，通常为参数中的标志选项或返回值的按位值比较。 通常这种比较通过按位逻辑运算符，如**并**并**或者**在 Visual Basic 中 **&** 并 **&#124;** 在C++。
 
  例如，ADO **FieldAttributeEnum**值可以使用为位掩码，以确定字段的特性。 假设你想要确定字段是否可更新。 可以使用以下表达式在 Visual Basic 中对此进行测试：`Field.Attributes AND adFldUpdatable`
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 537e0d3b1408a3cb159a79ad4e256fc8b5cf720f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8f11fb5e227b5b6ebd418775247756da55c359af
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63179818"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712079"
 ---
 # <a name="group-object-adox"></a>组对象 (ADOX)
 表示具有受保护的数据库中的访问权限的组帐户。  

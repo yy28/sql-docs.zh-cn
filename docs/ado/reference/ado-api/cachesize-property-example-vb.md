@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a29180fdaf90d7c9c43441f897820be69a9c009a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 68d12c7e41f58c5cb2d7a4e237b4385d5ccf7382
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239847"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696307"
 ---
 # <a name="cachesize-property-example-vb"></a>CacheSize 属性示例 (VB)
 此示例使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)属性显示的操作的性能差别执行具有和没有 30 记录缓存。  

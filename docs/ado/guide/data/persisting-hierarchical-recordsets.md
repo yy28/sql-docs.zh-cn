@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3382e222a03f7538d3c666c3b85527b487d499f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f25b61ca54b3a4ac15584ecf31874f90787c735d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911510"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700466"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>保留分层记录集
 您可以将保存的分层**记录集**中通过调用 ADTG 或 XML 格式的文件[保存](../../../ado/reference/ado-api/save-method.md)方法。 但是，两个限制应用保存层次结构时**记录集**s 以 XML 格式：如果，则不能保存在 XML 中的层次结构**记录集**包含挂起的更新，且不能保存参数化分层**记录集**。  

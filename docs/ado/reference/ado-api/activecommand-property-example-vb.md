@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75c75540433e077cc5d96bb9b2f0c88c05a62bd6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156433"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704033"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 属性示例 (VB)
 此示例演示[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)属性。  
@@ -93,7 +93,7 @@ End Sub
   
  **ActiveCommandXprint**例程提供仅**记录集**对象，但它必须打印命令文本和参数，用于创建**记录集**。 此可执行，因为**记录集**对象的**ActiveCommand**属性产生关联[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
   
- **命令**对象的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性将生成创建的参数化的命令**记录集**。 **命令**对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合生成命令的参数占位符已替换的值 ("**？**")。  
+ **命令**对象的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性将生成创建的参数化的命令**记录集**。 **命令**对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合生成命令的参数占位符已替换的值 (" **？** ")。  
   
  最后，输出错误消息或作者的名称和 ID。  
   

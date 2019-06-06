@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bf2aab4e9f11ff3dae9852dd80007867fe5a462
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cc95d6ef7e61dcde373a646359d134dce0b3389d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240822"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711944"
 ---
 # <a name="recordset-object-ado"></a>记录集对象 (ADO)
 表示整个记录集的基础表或执行命令的结果中。 任何时候**记录集**对象是指仅为当前记录集内的单个记录。  
@@ -81,4 +81,4 @@ Debug.Print objRs(0)              '  the Value of Item(0).
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [字段集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

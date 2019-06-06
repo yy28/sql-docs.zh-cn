@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: afc9955920784af966ef5d793d76ce251df1bc1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4ef1665bf96688fba5fc7d157b73d2df2fcd2c68
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242668"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705609"
 ---
 # <a name="number-property-ado"></a>Number 属性 (ADO)
 指示唯一标识的数字[错误](../../../ado/reference/ado-api/error-object.md)对象。  
@@ -34,7 +34,7 @@ ms.locfileid: "63242668"
 ## <a name="remarks"></a>备注  
  使用**数**属性来确定发生的错误。 属性的值是对应于错误条件的唯一编号。  
   
- [错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合返回一个 HRESULT，以十六进制格式 (例如，0x80004005) 或长整型值 (例如，2147467259)。 可以由基础组件，如 OLE DB 或甚至 OLE 本身引发这些 Hresult。 有关这些数字的详细信息，请参阅[错误 (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd)中[OLE DB 程序员参考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*。*  
+ [错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合返回一个 HRESULT，以十六进制格式 (例如，0x80004005) 或长整型值 (例如，2147467259)。 可以由基础组件，如 OLE DB 或甚至 OLE 本身引发这些 Hresult。 有关这些数字的详细信息，请参阅[错误 (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd)中[OLE DB 程序员参考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) *。*  
   
 ## <a name="applies-to"></a>适用范围  
  [错误对象](../../../ado/reference/ado-api/error-object.md)  

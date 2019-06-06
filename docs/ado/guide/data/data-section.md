@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472544"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702139"
 ---
 # <a name="data-section"></a>数据部分
 数据部分定义以及任何挂起的更新、 插入或删除的行集的数据。 数据部分可以包含零个或多个行。 它只能包含一个行集，其中行定义的架构中的数据。 此外，如前面提到的则可以省略列不包含任何数据。 如果某个属性或子元素使用的 data 节中，并且未在架构部分中定义该构造，则以无提示方式将其忽略。  
@@ -32,7 +32,7 @@ ms.locfileid: "62472544"
   
  以下字符是保留在 XML 中，并且必须替换为字符实体: {，"，&，\<，>}。  
   
-## <a name="binary"></a>二进制  
+## <a name="binary"></a>Binary  
  二进制数据是用编码 （即，一个字节映射到两个字符、 每半个字节的一个字符）。  
   
 ## <a name="datetime"></a>DateTime  

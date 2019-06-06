@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b95e6f0bd2b702080b3580b8b9eeb80ac5b06e8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c85f6ec6ce130d6bcb10db5f137a16f0cd102475
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063103"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701062"
 ---
 # <a name="alternatives-using-sql-statements"></a>替代方法：使用 SQL 语句
 ADO 还允许使用作为其内置属性和编辑数据的方法的替代命令。 根据您的提供程序，此部分中提到的所有操作也都可将命令传递给您的数据源。 例如，使用 SQL UPDATE 语句来修改数据而无需使用**值**的属性**字段**。 SQL INSERT 语句可用于将新记录添加到数据源，而不是 ADO 方法**AddNew**。 有关 SQL 或您的提供程序的数据操作语言的详细信息，请参阅您的数据源的文档。  

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: fa24fc0f36ab007ea8b16fadf9a9d06dc9c48314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7df0ed46d9ded592a8cebc6571c5ec1e1b1f486
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605847"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705114"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上创建和运行 SQL Server 代理作业
 
@@ -31,7 +30,7 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
 
 Linux 上的 SQL Server 代理的已知问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 完成本教程需要满足以下先决条件：
 
@@ -191,7 +190,7 @@ Linux 上的 SQL Server 代理的已知问题，请参阅[发行说明](sql-serv
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，您学习了如何：
+在本教程中，你将了解：
 
 > [!div class="checklist"]
 > * 在 Linux 上安装 SQL Server 代理

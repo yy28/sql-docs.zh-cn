@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 939cc21d8f89d93dca9249efcad82a85874a00c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 48c6e95a644c643721a7cb1c6f15c5eaf1e5a995
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62509899"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701394"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB 提供程序用于 Internet 发布概述
 Microsoft OLE DB 访问接口用于 Internet 发布允许 ADO 访问由 Microsoft FrontPage 或 Microsoft Internet 信息服务器提供服务的资源。 资源包括 web 源代码文件，例如 HTML 文件或 Windows 2000 web 文件夹。

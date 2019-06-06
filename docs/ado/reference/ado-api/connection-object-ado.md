@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a3b13402f20c149c438aa5a2c678afb068fb0f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 701ced4f5e0ad511f4a1c5b39c9775e285d1f751
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140226"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695786"
 ---
 # <a name="connection-object-ado"></a>连接对象 (ADO)
 表示与数据源的开放连接。  
@@ -100,4 +100,4 @@ cnn. "parameter"
  [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

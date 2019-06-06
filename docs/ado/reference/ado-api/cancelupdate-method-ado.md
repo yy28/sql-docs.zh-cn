@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c9320afb2592a37360d65b4645eb68a999a21db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b53fa2e9d69b39218d846b57070b78ae230d81cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241163"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698812"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate 方法 (ADO)
 取消对当前或新的行进行任何更改[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或[字段](../../../ado/reference/ado-api/fields-collection-ado.md)的集合[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，然后才能调用[更新](../../../ado/reference/ado-api/update-method.md)方法。  

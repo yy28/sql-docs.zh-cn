@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c637d3bcb56a3e2b5e581b3348271f50adb9fd7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d98c465bdf3890cde10a405b7f2d139330fe9c05
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469352"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709502"
 ---
 # <a name="cellset-example-vb"></a>单元集示例 (VB)
 此 Visual Basic 项目演示如何使用 ADO MD 为访问多维数据集数据的基础知识。 显示成员标题的列和行标题，然后显示带格式单元集内的特定单元格的值。  

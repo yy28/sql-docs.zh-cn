@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7726cb0aeeade66870b1b3d175a9489a93bad09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b19713028bcc5569a6a4aace4528e7c725cf7d0e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184945"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704542"
 ---
 # <a name="using-a-connection-object"></a>使用连接对象
 打开之前**连接**对象，必须定义数据源和连接类型的特定信息。 此信息大多数由*ConnectionString*的参数[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)上**连接**对象，或由[ConnectionString属性](../../../ado/reference/ado-api/connectionstring-property-ado.md)上**连接**对象。 连接字符串包含以分号分隔包含在单引号中的值的参数/值对的列表。 例如：  

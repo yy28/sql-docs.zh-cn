@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 249616f2f08b8b8f6138ce13621d26c5f7af9e1e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b17bdd7204ec52ef5a2fc27d7bc364be7f017189
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63213347"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706492"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 指定对象如何继承权限集与[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)。  
   
-|常量|值|描述|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|对象和其他容器所包含的主要对象将继承该条目。|  
 |**adInheritContainers**|2|主要对象所包含的其他容器继承该条目。|  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9508b85bc73ebbec82ad7d3bea5af5148d7c674
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184810"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697931"
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法（ADO 命令）
 执行查询、 SQL 语句或存储的过程中指定[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性[命令对象](../../../ado/reference/ado-api/command-object-ado.md)。  
@@ -53,7 +53,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>备注  
  使用**Execute**方法**命令**对象执行查询中指定**CommandText**属性或**CommandStream**对象的属性。  
   
- 在返回结果**记录集**（默认） 或二进制信息的流。 若要获取的二进制流，请指定**adExecuteStream**中*选项*，然后通过设置提供的流**Command.Properties ("输出 Stream")**。 ADO **Stream**可以指定对象以接收结果，或者可以指定另一个流对象，例如 IIS 响应对象。 如果没有流已指定，然后再调**Execute**与**adExecuteStream**，出现错误。 在从返回流的当前位置**Execute**是特定提供程序。  
+ 在返回结果**记录集**（默认） 或二进制信息的流。 若要获取的二进制流，请指定**adExecuteStream**中*选项*，然后通过设置提供的流**Command.Properties ("输出 Stream")** 。 ADO **Stream**可以指定对象以接收结果，或者可以指定另一个流对象，例如 IIS 响应对象。 如果没有流已指定，然后再调**Execute**与**adExecuteStream**，出现错误。 在从返回流的当前位置**Execute**是特定提供程序。  
   
  如果该命令不返回结果 （例如，SQL 更新查询） 访问接口将返回**Nothing**只要选项**adExecuteNoRecords**指定; 否则执行返回关闭**记录集**。 某些应用程序语言，可忽略此返回值，如果没有**记录集**所需的。  
   

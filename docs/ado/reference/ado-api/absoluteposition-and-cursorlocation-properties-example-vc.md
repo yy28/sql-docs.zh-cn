@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 922ccc2768b317d3ea0dac612bf965def9c7f2e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0c6435ece8cf7da8947f8f1bfe0ec8c8fb1a4b8b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155692"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704062"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition 和 CursorLocation 属性示例 （VC + +）
 此示例演示如何[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性可以跟踪枚举中的所有记录的循环的进度[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性来启用**AbsolutePosition**通过将光标设置为客户端游标的属性。  

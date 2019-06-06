@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 632703a1f7817986a6bc192006ef079af20cfb08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 23ba7235ddd8ea05b7217c88bc76e7bfe50bbd98
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472683"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702387"
 ---
 # <a name="comments-on-hellodata"></a>对 HelloData 的注释
 HelloData 应用程序将指导逐步典型的 ADO 应用程序的基本操作： 获取、 查看、 编辑和更新数据。 当你启动应用程序时，单击第一个按钮**获取数据**。 这将运行**GetData**子例程。  

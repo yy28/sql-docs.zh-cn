@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 29db423235533a0855f268459c6db379c7f7dfca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f07885aaef22da63d1c94e669db17e7536ccc933
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690125"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713346"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
 
@@ -88,7 +87,7 @@ sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/da
 
 1. 启动 SSMS 并连接到 Linux 上的 SQL Server 2017 中的服务器。
 
-1. 在对象资源管理器，右键单击数据库，单击**任务**，然后单击**备份...**.
+1. 在对象资源管理器，右键单击数据库，单击**任务**，然后单击**备份...** .
 
 1. 在中**数据库备份**对话框中，验证参数和选项，然后单击**确定**。
  
@@ -98,13 +97,13 @@ SQL Server 将完成数据库备份。
 
 以下步骤将引导使用 SSMS 完成数据库还原。
 
-1. 在 SSMS 中右键单击**数据库**单击**还原数据库...**. 
+1. 在 SSMS 中右键单击**数据库**单击**还原数据库...** . 
 
 1. 下**源**单击**设备：** ，然后单击省略号 （...）。
 
 1. 找到您的数据库备份文件，然后单击**确定**。 
 
-1. 下**还原计划**，验证备份文件和设置。 单击“确定” 。 
+1. 下**还原计划**，验证备份文件和设置。 单击“确定”  。 
 
 1. SQL Server 将还原数据库。 
 

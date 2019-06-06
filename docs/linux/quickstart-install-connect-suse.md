@@ -8,15 +8,14 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 66d4015f31c08d0d67069147effac15ff5edd8ea
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: f5c0bb63ce7d188a2587d1a44d863a14308da273
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579467"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713578"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入门：安装 SQL Server，在 SUSE Linux Enterprise Server 上创建数据库
 

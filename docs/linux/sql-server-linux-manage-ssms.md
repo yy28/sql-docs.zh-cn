@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: sql-linux
-ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723195"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713153"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>在 Windows 上使用 SQL Server Management Studio 来管理 Linux 上的 SQL Server
 
@@ -65,9 +64,9 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
    | **登录** | 输入数据库服务器上具有访问权限的用户的名称 (例如，默认值**SA**安装过程中创建的帐户)。 |
    | **密码** | 指定的用户输入的密码 (对于**SA**帐户，则此安装过程中创建)。 |
 
-    ![SQL Server Management Studio： 连接到 SQL 数据库服务器](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio:连接到 SQL 数据库服务器](./media/sql-server-linux-manage-ssms/connect.png)
 
-1. 单击 **“连接”**。
+1. 单击 **“连接”** 。
 
     > [!TIP]
     > 如果连接失败，请首先尝试根据错误消息诊断问题。 然后查看[连接故障排除建议](sql-server-linux-troubleshooting-guide.md#connection)。
@@ -93,7 +92,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 1. 单击**Execute**按钮运行查询并查看结果。
 
-   ![成功。 连接到 SQL 数据库服务器： SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![成功。 连接到 SQL 数据库服务器：SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 尽管可以执行几乎任何 Transact SQL 查询使用的管理任务，但 SSMS 是一种图形工具，可更轻松地管理 SQL Server。 以下部分提供使用图形用户界面的一些示例。
 

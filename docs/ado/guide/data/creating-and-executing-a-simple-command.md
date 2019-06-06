@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 644ee0c1ca4baee72a5fd33aeb16843dc7c59795
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6d0bba47aeb801688a1d9d55ee8f667153728162
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472633"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702122"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>创建和执行简单的命令
 一个简单的命令是指未参数化并且需要不暂留。 有三种方法来创建和执行简单的命令。  

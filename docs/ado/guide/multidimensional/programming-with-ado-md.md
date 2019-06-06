@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 79b7f15ed90684e495e20064f092b0ff70b97549
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0b259bcb9228cbc42c2626ce6f750918073af65d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63194885"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699616"
 ---
 # <a name="programming-with-ado-md"></a>使用 ADO MD 进行编程
 若要使用你的开发工具使用 ADO MD，应建立对 ADO MD 类型库的引用。 ADO MD 库的说明是 Microsoft ActiveX 数据对象 （多维） 库。 ADO MD 库文件名称为 msadomd.dll，，程序 ID (ProgID) 为"ADOMD"。 有关如何建立对库的引用的详细信息，请参阅你的开发工具的文档。  

@@ -7,21 +7,20 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: ee4550d9b86c5969bdf930391090e06c54988063
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 42401590745985baa207fa0db3ac9da774041ff4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657902"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713452"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 always On 可用性组故障转移
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在可用性组 (AG) 的上下文中，主角色和辅助可用性副本的角色是通常可互换的过程称为故障转移。 存在三种故障转移形式：自动故障转移（无数据丢失）、计划的手动故障转移（无数据丢失）和强制手动故障转移（可能丢失数据）。最后一种形式通常称为“强制故障转移”。 自动和计划的手动故障转移会保留所有数据。 在可用性副本级别将 AG 故障转移。 也就是说，AG 故障转移到其中一个辅助副本 （当前故障转移目标）。 
+在可用性组 (AG) 的上下文中，主角色和辅助可用性副本的角色是通常可互换的过程称为故障转移。 存在三种故障转移形式：自动故障转移（无数据丢失）、计划的手动故障转移（无数据丢失）和强制手动故障转移（可能丢失数据）。最后一种形式通常称为“强制故障转移”  。 自动和计划的手动故障转移会保留所有数据。 在可用性副本级别将 AG 故障转移。 也就是说，AG 故障转移到其中一个辅助副本 （当前故障转移目标）。 
 
 有关故障转移的背景信息，请参阅[故障转移和故障转移模式](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。
 
@@ -103,7 +102,7 @@ ms.locfileid: "58657902"
 >[!NOTE]
 >自动故障转移不会添加位置约束，因此不需要进行清除。 
 
-详细信息：  
+详细信息：
 - [Red Hat - 管理群集资源](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
 - [Pacemaker-手动移动资源](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
  [SLES 管理指南-资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 

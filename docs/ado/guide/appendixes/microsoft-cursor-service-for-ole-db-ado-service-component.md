@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d8b52f2cf665232c5e16677a257465d020c227c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719834"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702732"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>用于 OLE DB 概述 Microsoft 游标服务
 用于 OLE DB 的 Microsoft 游标服务补充数据访问接口的游标支持函数。 因此，用户可以体验从所有数据提供程序相对统一的功能。

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: cbbd10ce9bc41ef7149f319077030e982ae6fcc0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1f0274a8eb84f9700378d266729afbdc91aebaf1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664596"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713203"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>适用于 Microsoft SQL Server 的连接库和框架
 
@@ -25,7 +24,7 @@ ms.locfileid: "51664596"
 
 下表列出了连接库或*驱动程序*客户端应用程序可以从各种语言连接到并使用 Microsoft SQL Server 运行在本地或云中、 在 Linux、 Windows 或 Docker 上使用和此外为 Azure SQL 数据库和 Azure SQL 数据仓库。 
 
-| “报表” | 平台 | 其他资源 | 下载 | 开始操作 |
+| 语言 | 平台 | 其他资源 | 下载 | 开始操作 |
 | :-- | :-- | :-- | :-- | :-- |
 | C# | Windows、Linux、macOS | [用于 SQL Server 的 Microsoft ADO.NET](https://msdn.microsoft.com/library/mt657768.aspx) | [下载](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
 | Java | Windows、Linux、macOS | [Microsoft JDBC Driver for SQL Server](https://msdn.microsoft.com/library/mt484311.aspx) | [下载](https://go.microsoft.com/fwlink/?LinkId=245496) |  [入门](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)
@@ -37,7 +36,7 @@ ms.locfileid: "51664596"
 
 下表列出了几个示例对象关系映射 (ORM) 框架和 web 框架的客户端应用程序可以使用运行的 Microsoft SQL Server 的本地或云中，在 Linux、 Windows 或 Docker 和 Azure SQL 数据库和Azure SQL 数据仓库。 
 
-| “报表” | 平台 | ORM(s) |
+| 语言 | 平台 | ORM(s) |
 | :-- | :-- | :-- |
 | C# | Windows、Linux、macOS | [实体框架](https://docs.microsoft.com/ef)<br>[Entity Framework Core](https://docs.microsoft.com/ef/core/index) |
 | Java | Windows、Linux、macOS |[Hibernate ORM](https://hibernate.org/orm)|

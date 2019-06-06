@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50cf569f6e0af5e753cca7fba030b8fc2caa4a86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 98a0cc1df12f905cd0d22d05b162983742d0f355
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743123"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710785"
 ---
 # <a name="stayinsync-property"></a>StayInSync 属性
 指示以分层[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，是否对基础的子记录的引用 (即*章*) 当父行位置更改时进行更改。  

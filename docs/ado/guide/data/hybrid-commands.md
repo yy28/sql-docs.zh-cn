@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5313746eaa3d6d687dd5d2f3fddb303829595c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1f4334f31875a946d31041cd6d37998dd50200f1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161401"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702239"
 ---
 # <a name="hybrid-commands"></a>混合命令
 混合命令都是部分参数化的命令。 例如：  

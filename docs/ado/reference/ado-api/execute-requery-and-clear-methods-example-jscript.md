@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96ee3363a5077f6ab8324b7bfb4ca81fa8b781d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: abcc619a47994684edce33b2e5b19f7786f517d4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63070918"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697917"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>执行、 再次查询和清除方法示例 (JScript)
 此示例演示**Execute**方法从这两个运行时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[再次查询](../../../ado/reference/ado-api/requery-method.md)方法来检索中的当前数据[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，并[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法以清除的内容[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 (**错误**通过访问集合**连接**的对象[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。)将文件命名**ExecuteJS.asp**。  

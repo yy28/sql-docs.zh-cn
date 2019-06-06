@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: d16a399ceb6a2c22599d7a95396d49f21e378eef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40b2e50932994644ce5e49237adbef08b825b513
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809735"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705043"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安装 SQL Server 全文搜索
 
@@ -47,7 +46,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-如果需要脱机安装，找到全文搜索包下载[发行说明](sql-server-linux-release-notes.md)。 然后，使用本文所述相同的脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果需要脱机安装，找到全文搜索包下载[发行说明](sql-server-linux-release-notes.md)。 然后执行与文章[安装 SQL Server](sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
 ## <a name="ubuntu">在 Ubuntu 上安装</a>
 
@@ -65,7 +64,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-如果需要脱机安装，找到全文搜索包下载[发行说明](sql-server-linux-release-notes.md)。 然后，使用本文所述相同的脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果需要脱机安装，找到全文搜索包下载[发行说明](sql-server-linux-release-notes.md)。 然后执行与文章[安装 SQL Server](sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
 ## <a name="SLES">在 SLES 上安装</a>
 
@@ -82,13 +81,13 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-如果需要脱机安装，找到全文搜索包下载[发行说明](sql-server-linux-release-notes.md)。 然后，使用本文所述相同的脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果需要脱机安装，找到全文搜索包下载[发行说明](sql-server-linux-release-notes.md)。 然后执行与文章[安装 SQL Server](sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
 ## <a name="supported-languages"></a>支持的语言
 
 全文搜索使用[断字符](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)来确定如何标识基于语言的各个单词。 可以通过查询获取已注册的断字符的列表**sys.fulltext_languages**目录视图。 与 SQL Server 一起安装了以下语言版本的断字符：
 
-| “报表” | 语言 ID |
+| 语言 | 语言 ID |
 |---|---|
 | 非特定语言 | 0 |
 | 阿拉伯语 | 1025 |
@@ -111,7 +110,7 @@ sudo zypper update mssql-server-fts
 | 希腊语 | 1032 |
 | 古吉拉特语 | 1095 |
 | Hebrew | 1037 |
-| Hindi | 1081 |
+| 印地语 | 1081 |
 | 冰岛语 | 1039 |
 | 印度尼西亚语 | 1057 |
 | 意大利语 | 1040 |
@@ -148,7 +147,7 @@ sudo zypper update mssql-server-fts
 
 全文搜索还适用于二进制文件中存储的文本。 但在这种情况下，需要安装一个筛选器来处理文件。 有关筛选器的详细信息，请参阅[配置和管理搜索筛选器](../relational-databases/search/configure-and-manage-filters-for-search.md)。
 
-您可以看到已安装的筛选器的列表，通过调用**sp_help_fulltext_system_components 'filter'**。 对于 SQL Server，将安装以下筛选器：
+您可以看到已安装的筛选器的列表，通过调用**sp_help_fulltext_system_components 'filter'** 。 对于 SQL Server，将安装以下筛选器：
 
 | 组件名称 | 类 ID | 版本 |
 |---|---|---|

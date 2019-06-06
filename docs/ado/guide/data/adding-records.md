@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 87d8358344d75cd6995d43d081abbec7aeaabe1c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294388"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701056"
 ---
 # <a name="adding-records-to-a-recordset"></a>将记录添加到记录集
 使用**AddNew**方法创建并初始化新的记录中的现有**记录集**。 可以使用**支持**方法替换**CursorOptionEnum**的值**adAddNew**以验证是否可以将记录添加到当前**记录集**对象。

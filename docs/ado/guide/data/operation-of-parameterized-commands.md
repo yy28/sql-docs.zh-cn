@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302353"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701863"
 ---
 # <a name="operation-of-parameterized-commands"></a>参数化命令的操作
 如果你正在使用较大的子**记录集**，尤其是相对于父级的大小**记录集**，但需要访问仅在几个子级的章节中，你可能会发现使用更加高效参数化的命令。  

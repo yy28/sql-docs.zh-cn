@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9382835ffc0a92ee572df07aee8cabb8fa762182
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 257d9c604d441d8fae9fb34da5ddfce816336f20
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161592"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702053"
 ---
 # <a name="examining-data"></a>检查数据
 [获取数据](../../../ado/guide/data/getting-data.md)节中说明如何从数据源检索数据，作为一个或多个**记录集**对象。 本部分将讨论**记录集**更多详细信息，包括如何浏览**记录集**并查看其数据。  

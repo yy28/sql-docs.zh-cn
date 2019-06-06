@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01a930bc571e84c6ecfd38ce8415493c90ebd377
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d31b9ff3a60b746309224b0e0f9669cef229f234
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140365"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695953"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 属性 (ADO)
 指示用来建立与数据源的连接的信息。  
@@ -68,4 +68,4 @@ ms.locfileid: "63140365"
 ## <a name="see-also"></a>请参阅  
  [ConnectionString、 ConnectionTimeout 和 State 属性示例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString、 ConnectionTimeout 和 State 属性示例 （VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

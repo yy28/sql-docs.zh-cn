@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bb09e954640554c5375539b4104ab58ae71ddaab
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802667"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700404"
 ---
 # <a name="schema-section"></a>架构部分
 架构部分是必需的。 如前面的示例所示，ADO 写出详细的元数据有关的每个列以保留尽可能多地用于更新的数据值的语义信息。 但是，若要在 XML 中加载，ADO 仅需要列和到其所属的行集的名称。 下面是最小架构的示例：  

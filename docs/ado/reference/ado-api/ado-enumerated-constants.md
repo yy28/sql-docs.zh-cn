@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a13adf7aa1a769f6e63f9686938cb801cd6383fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4d9b2e581bfbce225bd34e78761b9e8ade621172
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249055"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696731"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 枚举常量
 若要帮助调试，ADO 枚举列出每个常量的值。 但是，此值是纯粹是参考性的并且可能从一个版本的 ADO 更改为另一个。 你的代码应仅依赖于不是实际值，每个枚举常量的名称。  
@@ -82,7 +82,7 @@ ms.locfileid: "63249055"
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [附录 b:ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [附录 B：ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)   

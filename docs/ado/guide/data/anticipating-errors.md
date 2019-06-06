@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6e555f00964ae6bdc7eb91a8701f2447d91b37d3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472861"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702411"
 ---
 # <a name="anticipating-errors"></a>预测错误
 错误防护是至少与错误处理一样重要。 此最后一节包含一个应用程序以使不太可能发生的错误而可以采取预防措施的简短列表。  

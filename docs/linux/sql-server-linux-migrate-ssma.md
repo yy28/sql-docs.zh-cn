@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.custom: sql-linux
-ms.openlocfilehash: c3558e4a9ebf8c8ea2c46fbb7925781b6e81f2e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eac6c206fe34af59ba7e5f6e5a7eb2508b842766
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662983"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713222"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>使用 SQL Server 迁移助手自动执行到 Linux 的数据库迁移
 
@@ -40,7 +39,7 @@ SSMA 支持不同的源数据库，包括 Oracle、 MySQL、 Sybase、 DB2 和 L
 
 接下来，请按照[SQL Server Migration Assistant (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx)若要将源数据库迁移到 Linux 上的 SQL Server。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Microsoft 数据迁移博客](https://blogs.msdn.microsoft.com/datamigration)
 - [SQL Server Migration Assistant (SSMA) 博客](https://blogs.msdn.microsoft.com/ssma/)
 

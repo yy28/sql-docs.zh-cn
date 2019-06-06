@@ -7,17 +7,16 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826082"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705667"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密连接到 Linux 上的 SQL Server
 
@@ -68,8 +67,8 @@ TLS 用于加密从客户端应用程序的连接[!INCLUDE[ssNoVersion](../inclu
         - **Ubuntu**:向复制证书```/usr/share/ca-certificates/```重命名为.crt 的扩展插件使用 dpkg 重新配置 ca 证书，使它作为系统 CA 证书。 
         - **RHEL**:向复制证书```/etc/pki/ca-trust/source/anchors/```使用```update-ca-trust```，使它作为系统 CA 证书。
         - **SUSE**:向复制证书```/usr/share/pki/trust/anchors/```使用```update-ca-certificates```，使它作为系统 CA 证书。
-        - Windows：作为当前用户下的证书的.pem 文件-> 导入受信任的根证书颁发机构证书->
-        - **macOS**: 
+        -  Windows：作为当前用户下的证书的.pem 文件-> 导入受信任的根证书颁发机构证书->
+        - **macOS**： 
            - 将复制到证书 ```/usr/local/etc/openssl/certs```
            - 运行以下命令以获取哈希值： ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
            - 重命名为值的证书。 例如： ```mv mssql.pem dc2dd900.0```。 请确保在 dc2dd900.0 ```/usr/local/etc/openssl/certs```
@@ -135,5 +134,5 @@ TLS 用于加密从客户端应用程序的连接[!INCLUDE[ssNoVersion](../inclu
 |--- |--- |
 |由不受信任的颁发机构颁发的证书链。  |当客户端将无法验证 SQL Server 在 TLS 握手期间提供的证书上签名时，将发生此错误。 请确保客户端信任是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]直接，证书或 CA 签名的 SQL Server 证书。 |
 |目标主体名称不正确。  |请确保 SQL Server 的证书公用名称字段匹配客户端的连接字符串中指定的服务器名称。 |  
-|现有连接被远程主机强行关闭。 |客户端不支持所需的 SQL Server 的 TLS 协议版本时，可能发生此错误。 例如，如果[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置为需要 TLS 1.2，请确保你的客户端还支持 TLS 1.2 协议。 |
+|远程主机强行关闭现有连接。 |客户端不支持所需的 SQL Server 的 TLS 协议版本时，可能发生此错误。 例如，如果[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置为需要 TLS 1.2，请确保你的客户端还支持 TLS 1.2 协议。 |
 | | |   

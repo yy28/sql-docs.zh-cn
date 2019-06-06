@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43e615d29c10553ef52f536320266abb3d28f542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0dab0712b05b1ef21f07e86d854f5ee63d388277
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308588"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698451"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、 LockType、 和 EditMode 属性示例 （VC + +）
 此示例演示如何设置[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)并[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性，然后打开才能[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它还显示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)各种条件下的属性。 若要运行此过程需要 EditModeOutput 函数。  
@@ -156,11 +156,11 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-  **之后 AddNew:**   
+  **之后 AddNew:**    
  **EditMode = adEditAdd**  
-**之后更新：**   
+**之后更新：**    
  **EditMode = adEditNone**  
-**后编辑：**   
+**后编辑：**    
  **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>请参阅  
  [CursorType 属性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   

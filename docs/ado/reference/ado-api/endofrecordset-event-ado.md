@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1697197bf9450a6487e70b0257160221e59359f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 414094da95076a7fb3781877645c5d43a03e6a7f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63181015"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698217"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 事件 (ADO)
 **EndOfRecordset**尝试移到末尾的行时调用事件[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

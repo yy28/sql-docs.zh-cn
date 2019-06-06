@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f046a3a33e05228ab5e49116bc46eb9451f43129
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 35efd51d640943c4d5293956a0638fa85ac302f1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642450"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710080"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 和 FieldChangeComplete 事件 (ADO)
 **WillChangeField**挂起操作更改的一个或多个值之前，将调用事件[字段](../../../ado/reference/ado-api/field-object.md)中的对象[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **FieldChangeComplete**的一个或多个值后，将调用事件**字段**对象已更改。  
