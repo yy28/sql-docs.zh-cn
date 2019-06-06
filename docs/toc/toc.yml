@@ -6374,6 +6374,15 @@
                   href: ../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
                 - name: 检查使用数据库邮件发送的电子邮件的状态
                   href: ../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md
+            - name: 故障排除
+              href: ../relational-databases/database-mail/database-mail-general-troubleshooting.md
+              items:
+                - name: 发送测试电子邮件
+                  href: ../relational-databases/database-mail/database-mail-sending-test-email.md
+                - name: 常见错误
+                  href: ../relational-databases/database-mail/database-mail-common-errors.md
+                - name: 邮件已排队，但未送达
+                  href: ../relational-databases/database-mail/database-mail-mail-queued-not-delivered.md
         - name: 数据压缩
           href: ../relational-databases/data-compression/data-compression.md
           items:
@@ -8023,6 +8032,8 @@
           items:
             - name: SQL 注入
               href: ../relational-databases/security/sql-injection.md
+            - name: 功能限制
+              href: ../relational-databases/security/feature-restrictions.md
             - name: TRUSTWORTHY 数据库属性
               href: ../relational-databases/security/trustworthy-database-property.md
             - name: 密码策略
@@ -8724,20 +8735,42 @@
               href: ../ssdt/dac-framework-compatibility.md
     - name: SQL Server Management Studio (SSMS)
       items:
-        - name: 下载
+        - name: 下载 SSMS
           href: ../ssms/download-sql-server-management-studio-ssms.md
         - name: 发行说明
           href: ../ssms/release-notes-ssms.md
         - name: 概述
           items:
-            - name: SSMS
-              items:
-                - name: SQL Server Management Studio (SSMS)
-                  href: ../ssms/sql-server-management-studio-ssms.md
-                - name: SSMS for BI 简介
-                  href: ../ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md
-                - name: 安装非英语版 SSMS
-                  href: ../ssms/install-other-languages.md
+            - name: SQL Server Management Studio (SSMS)
+              href: ../ssms/sql-server-management-studio-ssms.md
+        - name: 快速入门
+          items:
+            - name: 连接并查询 SQL Server
+              href: ../ssms/tutorials/connect-query-sql-server.md
+        - name: 教程
+          items:
+            - name: 编写对象脚本
+              href: ../ssms/tutorials/scripting-ssms.md
+            - name: SSMS 配置
+              href: ../ssms/tutorials/ssms-configuration.md
+        - name: 概念
+          items:
+            - name: SSMS 中的工具窗口
+              href: ../ssms/tool-windows-in-sql-server-management-studio.md
+            - name: 使用 SSMS 生成数据库项目
+              href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
+            - name: 了解 SSMS 窗口管理
+              href: ../ssms/understand-sql-server-management-studio-windows-management.md
+            - name: 使用 SSMS 管理服务器
+              href: ../ssms/administer-servers-with-sql-server-management-studio.md
+            - name: 外部工具的参数
+              href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
+            - name: 向“工具”菜单添加外部工具
+              href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+            - name: SSMS 实用工具
+              href: ../ssms/ssms-utility.md
+            - name: SSMS 键盘快捷方式
+              href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
             - name: SQL Server 代理
               items:
                 - name: SQL Server 代理
@@ -8746,92 +8779,6 @@
                   href: ../ssms/agent/post-download-instructions.md
                 - name: 作业活动监视器
                   href: ../ssms/agent/job-activity-monitor.md
-            - name: 注册服务器
-              items:
-                - name: 注册服务器
-                  href: ../ssms/register-servers/register-servers.md
-            - name: 脚本编写
-              items:
-                - name: 脚本编写
-                  href: ../ssms/scripting/database-engine-scripting.md
-                - name: 查询和文本编辑器
-                  href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
-                - name: 数据库引擎查询编辑器
-                  href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
-                - name: XML 编辑器
-                  href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
-                - name: 配置编辑器
-                  href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
-                - name: 将文件扩展名与代码编辑器关联
-                  href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
-                - name: 更改字体颜色、大小和样式
-                  href: ../ssms/scripting/change-font-color-size-and-style.md
-                - name: 使用 Management Studio 中的“属性”窗口
-                  href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
-                - name: 打开编辑器
-                  href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
-                - name: 管理编辑器和视图模式
-                  href: ../ssms/scripting/manage-the-editor-and-view-mode.md
-                - name: 管理代码格式
-                  href: ../ssms/scripting/manage-code-formatting.md
-                - name: 代码和文本定位
-                  href: ../ssms/scripting/navigate-code-and-text.md
-                - name: 查询编辑器中的颜色编码
-                  href: ../ssms/scripting/color-coding-in-query-editors.md
-        - name: 快速入门
-          items:
-            - name: SSMS
-              items:
-                - name: 连接并查询 SQL Server
-                  href: ../ssms/tutorials/connect-query-sql-server.md
-            - name: 注册服务器
-              items:
-                - name: 新建已注册的服务器
-                  href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
-        - name: 教程
-          items:
-            - name: SSMS
-              items:
-                - name: SQL Server Management Studio
-                  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
-                - name: 连接并查询 SQL Server
-                  href: ../ssms/tutorials/connect-query-sql-server.md
-                - name: 编写对象脚本
-                  href: ../ssms/tutorials/scripting-ssms.md
-                - name: SSMS 中的模板
-                  href: ../ssms/tutorials/templates-ssms.md
-                - name: SSMS 配置
-                  href: ../ssms/tutorials/ssms-configuration.md
-            - name: 注册服务器
-              items:
-                - name: 注册连接的服务器
-                  href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
-                - name: 创建中央管理服务器和服务器组
-                  href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
-                - name: 同时对多个服务器执行语句
-                  href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
-        - name: 概念
-          items:
-            - name: SSMS
-              items:
-                - name: SSMS 中的工具窗口
-                  href: ../ssms/tool-windows-in-sql-server-management-studio.md
-                - name: 使用 SSMS 生成数据库项目
-                  href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
-                - name: 了解 SSMS 窗口管理
-                  href: ../ssms/understand-sql-server-management-studio-windows-management.md
-                - name: 使用 SSMS 管理服务器
-                  href: ../ssms/administer-servers-with-sql-server-management-studio.md
-                - name: 外部工具的参数
-                  href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
-                - name: 向“工具”菜单添加外部工具
-                  href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
-                - name: SSMS 实用工具
-                  href: ../ssms/ssms-utility.md
-                - name: SSMS 键盘快捷方式
-                  href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
-            - name: SQL Server 代理
-              items:
                 - name: 自动化管理任务
                   href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
                 - name: 实现代理安全性
@@ -8938,6 +8885,8 @@
                       href: ../ssms/agent/proxy-account-properties-new-proxy-account-principals-tab.md
             - name: 注册服务器
               items:
+                - name: 注册服务器
+                  href: ../ssms/register-servers/register-servers.md
                 - name: “已注册的服务器”组件的 F1 帮助
                   href: ../ssms/register-servers/registered-servers-f1-help.md
             - name: 脚本编写
@@ -9074,20 +9023,22 @@
                               items:
                                 - name: 生成脚本向导支持的对象
                                   href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-        - name: 操作指南
+        - name: 操作说明
           items:
-            - name: SSMS
+            - name: 安装非英语版 SSMS
+              href: ../ssms/install-other-languages.md
+            - name: 使用 SSMS 中的模板
+              href: ../ssms/tutorials/templates-ssms.md
+            - name: 自定义菜单和快捷键
+              href: ../ssms/customize-menus-and-shortcut-keys.md
+            - name: 在 SQL Server 工具中将 WMI 配置为显示服务器状态
+              href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
+            - name: 配置登录审核
+              href: ../ssms/configure-login-auditing-sql-server-management-studio.md
+            - name: 故障排除
               items:
-                - name: 自定义菜单和快捷键
-                  href: ../ssms/customize-menus-and-shortcut-keys.md
-                - name: 在 SQL Server 工具中将 WMI 配置为显示服务器状态
-                  href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
-                - name: 配置登录审核
-                  href: ../ssms/configure-login-auditing-sql-server-management-studio.md
-                - name: 故障排除
-                  items:
-                    - name: 获取完整内存转储
-                      href: ../ssms/troubleshoot/get-full-memory-dump.md
+                - name: 获取完整内存转储
+                  href: ../ssms/troubleshoot/get-full-memory-dump.md
             - name: SQL Server 代理
               items:
                 - name: 配置
@@ -9334,6 +9285,14 @@
                       href: ../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md
             - name: 注册服务器
               items:
+                - name: 新建已注册的服务器
+                  href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
+                - name: 注册连接的服务器
+                  href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
+                - name: 创建中央管理服务器和服务器组
+                  href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
+                - name: 同时对多个服务器执行语句
+                  href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
                 - name: 查看 SQL Server Management Studio 中已注册的服务器
                   href: ../ssms/register-servers/view-registered-servers-in-sql-server-management-studio.md
                 - name: 删除注册的服务器
@@ -9358,6 +9317,32 @@
                   href: ../ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
             - name: 脚本编写
               items:
+                - name: 脚本编写
+                  href: ../ssms/scripting/database-engine-scripting.md
+                - name: 查询和文本编辑器
+                  href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                - name: 数据库引擎查询编辑器
+                  href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                - name: XML 编辑器
+                  href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+                - name: 配置编辑器
+                  href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
+                - name: 将文件扩展名与代码编辑器关联
+                  href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
+                - name: 更改字体颜色、大小和样式
+                  href: ../ssms/scripting/change-font-color-size-and-style.md
+                - name: 使用 Management Studio 中的“属性”窗口
+                  href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
+                - name: 打开编辑器
+                  href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
+                - name: 管理编辑器和视图模式
+                  href: ../ssms/scripting/manage-the-editor-and-view-mode.md
+                - name: 管理代码格式
+                  href: ../ssms/scripting/manage-code-formatting.md
+                - name: 代码和文本定位
+                  href: ../ssms/scripting/navigate-code-and-text.md
+                - name: 查询编辑器中的颜色编码
+                  href: ../ssms/scripting/color-coding-in-query-editors.md
                 - name: 配置编辑器
                   href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
                 - name: 将文件扩展名与代码编辑器关联
@@ -12070,6 +12055,8 @@
               href: ../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md
             - name: sys.server_role_members
               href: ../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md
+            - name: sys.sql_feature_restrictions
+              href: ../relational-databases/system-catalog-views/sys-sql-feature-restrictions.md
             - name: sys.sql_logins
               href: ../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md
             - name: sys.symmetric_keys
@@ -15923,8 +15910,6 @@
                   href: ../t-sql/functions/col-name-transact-sql.md
                 - name: COLUMNPROPERTY
                   href: ../t-sql/functions/columnproperty-transact-sql.md
-                - name: DATABASE_PRINCIPAL_ID
-                  href: ../t-sql/functions/database-principal-id-transact-sql.md
                 - name: DATABASEPROPERTYEX
                   href: ../t-sql/functions/databasepropertyex-transact-sql.md
                 - name: DB_ID
@@ -16028,6 +16013,8 @@
                   href: ../t-sql/functions/certprivatekey-transact-sql.md
                 - name: CURRENT_USER
                   href: ../t-sql/functions/current-user-transact-sql.md
+                - name: DATABASE_PRINCIPAL_ID
+                  href: ../t-sql/functions/database-principal-id-transact-sql.md
                 - name: HAS_DBACCESS
                   href: ../t-sql/functions/has-dbaccess-transact-sql.md
                 - name: HAS_PERMS_BY_NAME
