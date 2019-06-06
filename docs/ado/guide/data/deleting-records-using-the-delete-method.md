@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a099b033422e7c10214371772edd090f0cc15fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b4798e2658bf23edaf7cd04fb819e26de2a55cc9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472379"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700829"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法删除记录
 使用**删除**方法将当前记录或一组中的记录标记**记录集**对象以备删除。 如果**记录集**对象不允许记录删除，就会出错。 如果要立即更新模式中，删除数据库中立即执行。 如果不能 （由于数据库完整性的冲突，例如） 已成功删除了记录，该记录将保持在编辑模式下调用后面**更新。** 这意味着更新使用必须取消[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)之前移出当前记录 (例如，使用[关闭](../../../ado/reference/ado-api/close-method-ado.md)，[移动](../../../ado/reference/ado-api/move-method-ado.md)，或[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  

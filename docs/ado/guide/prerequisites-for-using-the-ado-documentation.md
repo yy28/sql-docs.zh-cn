@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d778f2e005003a0ab3cb50b6a25823c2d711441f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5d3132a1ac1ca146ecd4920ed907b3489da2354f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63221998"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699593"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>使用 ADO 文档的先决条件
 若要使用此文档，您应具有，最小值，因为大部分指南中的示例用这种语言开发应用程序使用 Microsoft Visual Basic 中，一些经验。 此外，还有一些 Microsoft 视觉对象中编写的示例C++、 Java、 Visual Basic Scripting Edition (VBScript) 和 Microsoft JScript。  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6310afd5fb029a81da8751009297aa1ae76a26aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b5902adad5f9f419b553e4b73c976ae64a4e129f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161496"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700874"
 ---
 # <a name="internet-publishing-scenario"></a>Internet 发布方案
 此代码示例演示如何适用于 Internet 发布的 Microsoft OLE DB 访问接口使用 ADO。 在此方案中，将创建一个使用的 Visual Basic 应用程序**记录集**，**记录**，并**Stream**与已发布对象，以显示资源的内容Internet 发布提供程序。  

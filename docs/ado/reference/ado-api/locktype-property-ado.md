@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05670439a8f14018a999557dd135912e0c2e0159
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a53c6e6e0164b404fdd5b106bae83137d56f319e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864093"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697644"
 ---
 # <a name="locktype-property-ado"></a>LockType 属性 (ADO)
 指示在编辑期间记录上放置锁的类型。  

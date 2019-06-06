@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.custom: sql-linux
-ms.openlocfilehash: bdd59db3c2b034c2cd861501b1690d71770c2500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2443611a63bee3f62ae8225384d79d34dfcb18e0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683055"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705293"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>将数据库和结构化数据迁移到 Linux 上的 SQL Server 
 
@@ -34,7 +33,7 @@ ms.locfileid: "47683055"
 
 - [SQL Server 数据库从 Windows 还原到 Linux](sql-server-linux-migrate-restore-database.md)。
 
-还可以将数据库导入 BACPAC 文件（包含数据库架构和数据的压缩文件）。 如果拥有 BACPAC 文件，可将此文件传输到 Linux 计算机，然后将其导入 SQL Server。 有关详细信息，请参阅以下主题：
+还可以将数据库导入 BACPAC 文件（包含数据库架构和数据的压缩文件）。 如果拥有 BACPAC 文件，可将此文件传输到 Linux 计算机，然后将其导入 SQL Server。 有关详细信息，请参阅下列主题：
 
 - [导出和导入具有 SSMS 或 SqlPackage.exe 的数据库](sql-server-linux-migrate-ssms.md)
 

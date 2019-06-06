@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855847"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701203"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服务概述
 Microsoft OLE DB 访问接口用于 Microsoft 索引服务提供编程的只读访问，以文件系统和 Web 数据由 Microsoft 索引服务编制索引。 ADO 应用程序可以发出 SQL 查询来检索内容和文件属性信息。

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b17fc32998a00d011bfcf305c3ebcdf4d79a76b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c32e63fc0c58d6772396da86adeb5ca434eb7585
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028014"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697593"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和 Mode 属性示例 (VB)
 此示例使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)以打开一个独占的连接，并[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)属性可以打开的事务的执行中的其他事务隔离。  

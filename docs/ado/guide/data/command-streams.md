@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9d1322d872d5e05de4c7f142804fe2f1390b9859
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472693"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700883"
 ---
 # <a name="command-streams"></a>命令流
 ADO 始终支持命令输入中指定的字符串格式**CommandText**属性。 或者，使用 ADO 2.7 或更高版本，还可以使用信息的流的命令输入通过将分配到的流**CommandStream**属性。 可以将分配一个 ADO **Stream**对象或任何支持 COM 的对象**IStream**接口。  

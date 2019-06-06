@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 41b72647af357bc73eb3e9a2f8c3063f2275f6a6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217727"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707186"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 指定对象是否为开放还是闭合，连接到数据源，执行命令，或检索数据。  
   
-|常量|值|描述|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|指示对象已关闭。|  
 |**adStateOpen**|1|指示对象处于打开状态。|  

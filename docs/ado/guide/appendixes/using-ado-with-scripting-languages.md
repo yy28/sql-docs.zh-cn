@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d41d5a0239f11882c135c27fd4af8e817e83b799
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217753"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702764"
 ---
 # <a name="using-ado-with-scripting-languages"></a>配合使用 ADO 与脚本语言
 在脚本编写环境中，可使用 ADO 公开数据通过服务器端脚本。 在此方案中，ADO，基础 OLE DB 提供程序使用，并引用给定的数据存储区所需的任何其他组件安装在运行 Internet 信息服务 (IIS) 的服务器上。 ADO 使用 Active Server Pages (ASP)，是可以生成 HTML，例如脚本中引用的组件。 此 HTML 内容可以通过 HTTP 传递给客户端 Web 浏览器。 通过使用脚本，Web 页可以将操作发送回服务器端脚本，从而允许你更新、 遍历时，或查看特定的数据。  

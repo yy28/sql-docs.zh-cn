@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b784553302bf9df30750f239291ca179ecf6cf74
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188104"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701874"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>检索流中的结果集
 而不是接收结果中的传统**记录集**对象，ADO 改成流检索查询结果。 ADO **Stream**对象 (或其他支持 COM 的对象**IStream**接口，如 ASP**请求**并**响应**对象) 可用于包含这些结果。 此功能的一个用途是检索 XML 格式的结果。 借助 SQL Server，例如，XML 可以返回结果在多个方面，例如使用 SQL SELECT 查询使用 FOR XML 子句或使用 XPath 查询。  

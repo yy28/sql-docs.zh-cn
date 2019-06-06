@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c248afac72fac013759ad80f69dea199756a4010
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 16130f9e96dfc70ef464e3ff48301c9f71c0bb06
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214889"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704332"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>在 IIS 上配置虚拟服务器
 时在 Internet 信息服务 4.0 中创建虚拟服务器，以便配置要使用 RDS 的虚拟服务器需要以下两个额外的步骤：  

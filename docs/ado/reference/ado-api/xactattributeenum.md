@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2098830a06f8e5c2ddc38b12f0c035ec513433ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5bf3c4b8a7cbbee1e384c08746f32d6a7e550ddd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206293"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710134"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
 指定的事务特性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
   
-|常量|ReplTest1|描述|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adXactAbortRetaining**|262144|通过调用执行保留中止[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)为自动启动新事务。 并非所有提供程序支持此行为。|  
 |**adXactCommitRetaining**|131072|通过调用执行保留提交[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)为自动启动新事务。 并非所有提供程序支持此行为。|  

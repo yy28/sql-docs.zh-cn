@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 67dc3f6bb82799382fa2b65754b3645dd735acab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e6d558b64095a4071687ed8edd62d54985015c5d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214820"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699488"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>确保足够的 TempDB 空间
 如果在处理时出现错误[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)需要处理在 Microsoft SQL Server 6.5 空间的对象，您可能需要增加 TempDB 的大小。 (某些查询需要的临时处理空间; 例如，包含 ORDER BY 子句的查询需要排序的**记录集**，这需要一些临时空间。)  

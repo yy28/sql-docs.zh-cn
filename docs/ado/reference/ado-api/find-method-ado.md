@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028128"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697953"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)满足指定的条件的行。 （可选） 可以指定搜索、 起始行和偏移量开始的行的方向。 找到的记录; 如果满足条件，则设置的当前行位置否则，将位置设置为的终点 （或起点）**记录集**。  
@@ -50,7 +50,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="remarks"></a>备注  
  仅包含单列的名称可能中指定*条件*。 此方法不支持多列搜索。  
   
- 中的比较运算符*条件*可能是"**>**"（大于）、"**\<**"（小于）、"="（等于）"> ="（大于或等于）"< ="（小于或等于）、"<>"（不等于），或"like"（模式匹配）。  
+ 中的比较运算符*条件*可能是" **>** "（大于）、" **\<** "（小于）、"="（等于）"> ="（大于或等于）"< ="（小于或等于）、"<>"（不等于），或"like"（模式匹配）。  
   
  中的值*条件*可以是字符串、 浮点数或日期。 字符串值是使用单引号或"#"（数字符号） 标记分隔 (例如，"状态 = WA"或"状态 = #WA #")。 日期值以"#"（数字符号） 标记 (例如，"start_date > #7/22/97 #")。 这些值可以包含小时、 分钟和秒表示时间戳，但不是应包含毫秒或不会发生错误。  
   

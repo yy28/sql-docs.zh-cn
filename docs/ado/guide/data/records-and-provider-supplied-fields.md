@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910461"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700443"
 ---
 # <a name="records-and-provider-supplied-fields"></a>记录和提供程序提供的字段
 当[记录](../../../ado/reference/ado-api/record-object-ado.md)打开对象，其源可以是一种开放的当前行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，绝对 URL 或打开与结合使用的相对 URL[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象.  
@@ -79,4 +79,4 @@ ms.locfileid: "62910461"
   
 ## <a name="see-also"></a>请参阅  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

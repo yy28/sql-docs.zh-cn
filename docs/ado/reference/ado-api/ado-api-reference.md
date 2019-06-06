@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6436ca3b67587751757ae01b4248c1ce8b35722d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065180"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697282"
 ---
 # <a name="ado-api-reference"></a>ADO API 参考
 ADO 文档的此部分包含每个 ADO 对象、 集合、 属性、 动态属性、 方法、 事件和枚举的主题。 此外，它包含一系列 ADO 语法索引以用于 Microsoft VisualC++和 Windows Foundation 类 (WFC)。  
@@ -46,8 +46,8 @@ ADO 文档的此部分包含每个 ADO 对象、 集合、 属性、 动态属�
 -   [ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples.md)  
   
 ## <a name="see-also"></a>请参阅  
- [附录 d:ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+ [附录 D：ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [附录 c:使用 ADO 进行编程](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
- [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)   
+ [附录 C：使用 ADO 进行编程](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
+ [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO 历史记录](../../../ado/guide/ado-history.md)

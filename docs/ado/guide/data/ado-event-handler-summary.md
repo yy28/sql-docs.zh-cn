@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 93790b3df8cb1d78ab2e0988cdc43cbd9af0718c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f1901892b3e48446f3598b24ebb0a529360b9edf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063013"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702642"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 连接和记录集事件
 两个 ADO 对象可以引发事件：[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **ConnectionEvent**上与操作相关系列**连接**对象，并**RecordsetEvent**系列上与操作相关**记录集**对象。

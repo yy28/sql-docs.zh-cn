@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.custom: sql-linux
-ms.openlocfilehash: ca8a5f92c3ee4c9ee1e9e45ec7fd23b8a3341835
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 428af4498fc45a32909e424aecc99b8f6fc3aadb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742385"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705275"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>导出和导入使用 SSMS 或 Windows 上的 SqlPackage.exe 在 Linux 上的数据库
 
@@ -42,7 +41,7 @@ ms.locfileid: "47742385"
 
 5. 默认情况下，将导出数据库中的所有对象。 单击**高级选项卡**，然后选择你想要导出的数据库对象。
 
-6. 单击 **“下一步”** ，然后单击 **“完成”**。
+6. 单击“开始” **“下一步”** ，再单击“属性” **“完成”** 。
 
 *.BACPAC 文件已成功在所选位置创建，并且可以开始将该文件导入目标数据库。
 

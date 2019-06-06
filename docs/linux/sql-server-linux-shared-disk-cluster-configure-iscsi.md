@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9a64460b2d04f1d6957a181657af7255d64cc829
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524911"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705069"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例-iSCSI-Linux 上的 SQL Server
 
@@ -95,7 +94,7 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  在 iSCSI 磁盘上创建物理卷。
 
@@ -320,7 +319,7 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
 
    *    若要测试，请在该文件夹中创建数据库。 如下所示的示例使用 sqlcmd 创建数据库，将上下文切换到它，验证文件存在于 OS 级别，然后删除该临时位置。 可以使用 SSMS。
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    卸载共享 
 

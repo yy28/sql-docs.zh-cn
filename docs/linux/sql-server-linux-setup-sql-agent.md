@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 72a4242373af16ffcdc8f749b899747801d2002c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb2a630dab67875db8a9731fe98895599f3290a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819515"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705056"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安装 SQL Server 代理
 
@@ -67,7 +66,7 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果需要脱机安装，找到 SQL Server 代理包下载[发行说明](sql-server-linux-release-notes.md)。 然后，使用本文所述相同的脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果需要脱机安装，找到 SQL Server 代理包下载[发行说明](sql-server-linux-release-notes.md)。 然后执行与文章[安装 SQL Server](sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
 ### <a name="ubuntu">在 Ubuntu 上安装</a>
 
@@ -87,7 +86,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果需要脱机安装，找到 SQL Server 代理包下载[发行说明](sql-server-linux-release-notes.md)。 然后，使用本文所述相同的脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果需要脱机安装，找到 SQL Server 代理包下载[发行说明](sql-server-linux-release-notes.md)。 然后执行与文章[安装 SQL Server](sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
 ### <a name="SLES">在 SLES 上安装</a>
 
@@ -108,7 +107,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果需要脱机安装，找到 SQL Server 代理包下载[发行说明](sql-server-linux-release-notes.md)。 然后，使用本文所述相同的脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果需要脱机安装，找到 SQL Server 代理包下载[发行说明](sql-server-linux-release-notes.md)。 然后执行与文章[安装 SQL Server](sql-server-linux-setup.md#offline) 所述相同的脱机安装步骤。
 
 ## <a name="next-steps"></a>后续步骤
 有关如何使用 SQL Server 代理来创建、 安排和运行作业的详细信息，请参阅[在 Linux 上运行的 SQL Server 代理作业](sql-server-linux-run-sql-server-agent-job.md)。

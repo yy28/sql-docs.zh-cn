@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63162093"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700634"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData：简单的 ADO 应用程序
 此简单应用程序的四个主要的 ADO 操作每个步骤： 获取、 查看、 编辑和更新数据。 对 Microsoft® SQL Server 附带的 Northwind 示例数据库执行这些操作。 若要专注于 ADO 的基础知识并防止混乱代码，该示例中的错误处理很小。  
@@ -43,7 +43,7 @@ ms.locfileid: "63162093"
   
  ![显示 HelloData VB 应用程序的 Form1](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|控件类型|属性|值|  
+|控件类型|属性|ReplTest1|  
 |------------------|--------------|-----------|  
 |Form|“属性”|Form1|  
 ||高度|6500|  
