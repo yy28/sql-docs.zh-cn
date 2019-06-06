@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df2f7cc5eadce7d4f8f61674f4915ec3b1561e02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 244cf01b2845e7f5ef6729efd9ea7a7cfa6b994c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180968"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695414"
 ---
 # <a name="direction-property"></a>Direction 属性
 指示是否[参数](../../../ado/reference/ado-api/parameter-object.md)表示输入的参数、 输出参数、 输入和输出参数，或如果参数是存储过程的返回值。  

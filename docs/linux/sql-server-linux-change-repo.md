@@ -7,26 +7,25 @@ manager: craigg
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 65147a78fe616f83854b155f903d346aa52d69d5
-ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
+ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56444232"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713333"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置安装和升级 Linux 上的 SQL Server 存储库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-本文介绍如何在 Linux 上配置 SQL Server 2017 和 SQL Server 2019 安装和升级的正确存储库。 在顶部，你当前所选内容是**Red Hat (RHEL)**。
+本文介绍如何在 Linux 上配置 SQL Server 2017 和 SQL Server 2019 安装和升级的正确存储库。 在顶部，你当前所选内容是**Red Hat (RHEL)** 。
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-本文介绍如何在 Linux 上配置 SQL Server 2017 和 SQL Server 2019 安装和升级的正确存储库。 在顶部，你当前所选内容是**SUSE (SLES)**。
+本文介绍如何在 Linux 上配置 SQL Server 2017 和 SQL Server 2019 安装和升级的正确存储库。 在顶部，你当前所选内容是**SUSE (SLES)** 。
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
@@ -51,7 +50,7 @@ ms.locfileid: "56444232"
 
 请务必注意，有两种主要类型的每个分布区的存储库：
 
-- **累积更新 (CU)**:累积更新 (CU) 存储库包含自发行以来为基的 SQL Server 版本和任何 bug 修复或改进的包。 特定于一个发行版本，如 SQL Server 2017 累积更新。 正则频率发布它们。
+- **累积更新 (CU)** :累积更新 (CU) 存储库包含自发行以来为基的 SQL Server 版本和任何 bug 修复或改进的包。 特定于一个发行版本，如 SQL Server 2017 累积更新。 正则频率发布它们。
 
 - **GDR**:GDR 存储库包含自发行以来的基本 SQL Server 版本和仅关键的修复程序和安全更新的包。 这些更新也会添加到下一步的 CU 版本。
 
