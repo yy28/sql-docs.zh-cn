@@ -10,12 +10,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4254c1c47e64013533574345c14518fdc2afcb7c
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: fa7e12e433199f9cef344724ff185abf3fa58586
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993960"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743963"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何装载 S3 分层大数据群集中的 hdfs
 
@@ -51,7 +51,7 @@ ms.locfileid: "65993960"
 1. 使用**kubectl**若要查找的终结点的 IP 地址**控制器 svc 外部**大数据群集中的服务。 寻找**外部 IP**。
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
 1. 登录方式**mssqlctl**控制器终结点的外部 IP 地址使用你的群集用户名和密码：

@@ -19,14 +19,14 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 manager: craigg
-ms.openlocfilehash: a177d3bcb81e17bb3a3accf6e1fade02132a58fa
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: 1a2123c3da5945fb42184631e43fe27d83972375
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66213758"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744027"
 ---
-# <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex （Azure SQL 数据库）
+# <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 返回快照在 15 秒间隔过去 30 分钟的资源池统计信息为 Azure SQL 数据库。
@@ -78,7 +78,7 @@ ms.locfileid: "66213758"
 
 ## <a name="permissions"></a>权限
 
-此视图需要拥有 VIEW DATABASE STATE 权限。
+此视图需要 VIEW SERVER STATE 权限。
 
 ## <a name="remarks"></a>备注
 

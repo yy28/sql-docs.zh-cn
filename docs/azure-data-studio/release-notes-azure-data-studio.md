@@ -10,17 +10,46 @@ ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 05/08/2019
-ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.date: 06/06/2019
+ms.openlocfilehash: 6e2d4ff6e300290381f75ff4ab984743d7ea106e
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454733"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749147"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的发行说明
 
 **[下载并安装最新版本 ！](download.md)**
+
+## <a name="june-2019"></a>2019 年 6 月
+
+2019 年 6 月 6 日&nbsp;  /  &nbsp;版本：1.8.0 
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 版本的中央管理服务器 (CMS) 扩展 | 中央管理服务器存储组织到一个或多个中央管理服务器组的 SQL Server 实例的列表。 用户可以连接到其自己现有的 CMS 服务器和管理其服务器，如添加和删除服务器。 若要了解详细信息，可以阅读[此处](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| 版本的 Windows 的数据库管理工具扩展 | 此扩展将启动两个从 Azure Data Studio 的 SQL Server Management Studio 中最常用的体验。 用户可以在多个不同对象 （例如数据库、 表、 列、 视图和的详细信息） 上右键单击并选择要查看 SSMS 中该对象的属性对话框的属性。 此外，用户可以在数据库上右键单击并选择生成脚本以启动知名 SSMS 生成脚本向导。 
+| 架构比较的改进 | &bull; &nbsp; 添加了排除/包括选项 <br/>&bull; &nbsp; 正在生成之后生成脚本将打开脚本 <br/>&bull; &nbsp; 删除双滚动条  <br/>&bull; &nbsp; 格式设置和布局方面的改进 <br/>&bull; &nbsp; 可以找到完整更改[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
+| 已移动到自己的选项卡的消息部分 | 当用户运行 SQL 查询时，结果和消息将是堆叠面板上。 现在它们都在单独的选项卡，如在 SSMS 中的一个面板中。 |
+| SQL Notebook 改进 | &bull; &nbsp; 用户现在可以选择在笔记本中使用其自己的 Python 3 或 Anaconda 安装 <br/>&bull; &nbsp; 多个稳定性 + 适合/完成修复&bull;&nbsp;查看改进的完整列表[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| Visual Studio 代码可能会发布合并 1.34 | 可以找到最新改进[此处](https://code.visualstudio.com/updates/v1_34) |
+| 已解决的 bug 和问题。 | 请参阅[Bug 和问题，在 GitHub 上的](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知问题
+- 用于 Windows 的数据库管理工具扩展
+    - 无法启动从断开连接的服务器节点的属性
+    - 无法启动 Azure 服务器的属性
+    - 并非所有对象都具有属性对话框
+    - 对话框需要很长时间才能启动
+    - 启动具有某些类型的连接 （如 AAD) 的服务器错误
+- 笔记本
+    - [5838](https://github.com/microsoft/azuredatastudio/issues/5838)允许用户使用系统 Python 笔记本
+- 架构比较
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804)架构比较任务显示默认不执行任何操作可以取消上下文菜单
 
 ## <a name="may-2019"></a>2019 年 5 月
 
@@ -32,8 +61,8 @@ ms.locfileid: "66454733"
 | :----- | :------ |
 | 版本的架构比较扩展 | 架构比较是一项的已知功能在 SQL Server Data Tools (SSDT)，以及其主要用例是比较和可视化之间数据库和.dacpac 文件的差异，并执行操作来使它们相同。 |
 | 移动到输出窗口的任务视图 | 用户现在可以在输出窗口中的任务视图中查看长时间运行任务，例如备份、 还原和架构比较的状态
-| 添加了欢迎页 | &bull; &nbsp; 常见操作的链接等新查询，将新文件中，新的 Notebook <br/>&bull; &nbsp; 文档和 Github 链接 |
-| SQL Notebook 改进 | &bull; &nbsp; Markdown 呈现改进，包括说明和表的更好地支持 <br/>&bull; &nbsp; 工具栏的可用性改进 <br/>&bull; &nbsp; Markdown 链接，了解受信任笔记本不再需要 Cmd/Ctrl + 单击和可直接单击 <br/>&bull; &nbsp; 在关闭笔记本，并减少错误，同时启动多个 notebook 时清理 Jupyter 进程中的改进 <br/>&bull; &nbsp; 在同一个数据库运行 2 个 notebook 时不会发生 SQL 笔记本连接，以便确保错误的改进 <br/>&bull; &nbsp; 自动滚动到当前正在执行的单元格时单击运行单元格按钮从工具栏中的 notebook 的改进 <br/>&bull; &nbsp; 一般的稳定性和性能改进 |
+| 添加了欢迎页 | &bull; &nbsp; 常见操作的链接等新查询，将新文件中，新的 Notebook <br/>&bull; &nbsp; 文档和 GitHub 链接 |
+| SQL Notebook 改进 | &bull; &nbsp; Markdown 呈现改进，包括说明和表的更好地支持 <br/>&bull; &nbsp; 工具栏的可用性改进 <br/>&bull; &nbsp; Markdown 链接，了解受信任笔记本不再需要 Cmd/Ctrl + 单击和可直接单击 <br/>&bull; &nbsp; 在关闭笔记本，并减少错误，同时启动多个 notebook 时清理 Jupyter 进程中的改进 <br/>&bull; &nbsp; 在同一个数据库运行 2 个 notebook 时不会发生 SQL 笔记本连接，以便确保错误的改进 <br/>&bull; &nbsp; 对笔记本自动滚动到当前正在执行的单元格时单击运行单元格按钮从工具栏中的改进 <br/>&bull; &nbsp; 一般的稳定性和性能改进 |
 | 已解决的 bug 和问题。 | 请参阅[Bug 和问题，在 GitHub 上的](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1)。 |
 | &nbsp; | &nbsp; |
 

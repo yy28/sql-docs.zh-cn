@@ -9,12 +9,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 48ba1bfe2a90fdb1ea2464d404ba851a8ca30992
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774770"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743985"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 大数据群集入门
 
@@ -39,7 +39,7 @@ ms.locfileid: "64774770"
 
 作为一系列相互关联中托管的容器部署大数据群集[Kubernetes](https://kubernetes.io/docs/home)。 你可以托管在不同的方式中的 Kubernetes。 即使你已有现有的 Kubernetes 环境，应查看大数据群集的相关的要求。
 
-- **Azure Kubernetes 服务 (AKS)**:AKS，可部署在 Azure 中托管的 Kubernetes 群集。 只能管理和维护的代理节点。 通过 AKS，您无需预配群集的硬件。 它也很容易使用大数据群集[部署脚本](quickstart-big-data-cluster-deploy.md)创建 AKS 群集和部署大数据群集在一个步骤中的。 有关将 AKS 用于大数据群集的详细信息，请参阅[用于 SQL Server 2019 大数据群集 （预览版） 部署中配置 Azure Kubernetes 服务](deploy-on-aks.md)。
+- **Azure Kubernetes 服务 (AKS)** :AKS，可部署在 Azure 中托管的 Kubernetes 群集。 只能管理和维护的代理节点。 通过 AKS，您无需预配群集的硬件。 它也很容易使用大数据群集[部署脚本](quickstart-big-data-cluster-deploy.md)创建 AKS 群集和部署大数据群集在一个步骤中的。 有关将 AKS 用于大数据群集的详细信息，请参阅[用于 SQL Server 2019 大数据群集 （预览版） 部署中配置 Azure Kubernetes 服务](deploy-on-aks.md)。
 
 - **多台计算机**:此外可以将 Kubernetes 部署到多台 Linux 计算机，可以是物理服务器或虚拟机。 [Kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)工具可用来创建 Kubernetes 群集。 如果已有想要用于大数据群集的现有基础结构，此方法适用。 有关使用详细信息**kubeadm**部署大数据群集，请参阅[配置用于 SQL Server 2019 大数据群集 （预览版） 部署多台计算机上的 Kubernetes](deploy-with-kubeadm.md)。
 
@@ -51,7 +51,7 @@ ms.locfileid: "64774770"
 
 - 如果您要部署到开发测试环境，你可以选择使用之一[默认配置](deployment-guidance.md#deploy)提供**mssqlctl**。
 
-- 若要自定义部署，可以创建并使用您自己[部署配置文件](deployment-guidance.md#configfile)。 
+- 若要自定义部署，可以创建并使用您自己[部署配置文件](deployment-guidance.md#configfile)。
 
 - 对于完全无人参与安装，可以在环境变量中传递的所有其他设置。 有关详细信息，请参阅[无人参与的部署](deployment-guidance.md#unattended)。
 

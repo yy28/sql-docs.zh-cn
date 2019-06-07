@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: d247d50b40129d47600de6fb2d943d7e1e1ac777
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994056"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743995"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>连接到 SQL Server 大数据群集使用 Azure Data Studio
 
@@ -37,14 +37,17 @@ ms.locfileid: "65994056"
 1. 从命令行中，查找使用以下命令在主实例的 IP:
 
    ```
-   kubectl get svc master-svc-external -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > 大数据群集名称默认为**mssql 群集**除非自定义部署配置文件中的名称。 有关详细信息，请参阅[配置的大数据群集部署设置](deployment-custom-configuration.md#clustername)。
 
 1. 在 Azure Data Studio，按**F1** > **新连接**。
 
 1. 在中**连接类型**，选择**Microsoft SQL Server**。
 
-1. 键入 SQL Server 主实例中的 IP 地址**服务器名称**(例如：**\<IP 地址\>、 31433**)。
+1. 键入 SQL Server 主实例中的 IP 地址**服务器名称**(例如： **\<IP 地址\>、 31433**)。
 
 1. 输入 SQL 登录名**用户名**并**密码**。
 

@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.openlocfilehash: a385a2691d37bf31186a3530e91bdf937ac4dc05
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462793"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744201"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -82,7 +82,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Azure 区域** | 新的 AKS 群集的 Azure 区域 (默认**westus**)。 |
    | **机大小** | [虚拟机大小](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)要用于 AKS 群集中的节点 (默认**Standard_L8s**)。 |
    | **辅助角色节点** | 在 AKS 群集中的辅助角色节点数 (默认**1**)。 |
-   | **群集名称** | 在 AKS 群集和大数据群集的名称。 仅大小写字母数字字符，且没有空格，必须是群集的名称。 (默认**sqlbigdata**)。 |
+   | **群集名称** | 在 AKS 群集和大数据群集的名称。 大数据群集的名称必须仅小写字母数字字符，不留空格。 (默认**sqlbigdata**)。 |
    | **密码** | 有关控制器、 HDFS/Spark 网关和主实例密码 (默认**MySQLBigData2019**)。 |
    | **控制器用户** | 控制器用户的用户名 (默认值：**管理员**)。 |
 
@@ -118,7 +118,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="inspect-the-cluster"></a>检查群集
 
-在部署期间，随时可以使用 kubectl 或群集管理门户来检查状态和运行大数据群集有关的详细信息。
+在部署期间任何时候，可以使用**kubectl**或**mssqlctl**要检查的状态和运行大数据群集有关的详细信息。
 
 ### <a name="use-kubectl"></a>使用 kubectl
 
@@ -127,42 +127,32 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 1. 运行以下命令以获取整个群集的状态摘要：
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > 如果未更改的大数据群集名称，该脚本将默认为**sqlbigdata**。
 
 1. 检查 kubernetes 服务和以下及其内部和外部终结点**kubectl**命令：
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. 此外可以检查状态的 kubernetes pod 使用以下命令：
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. 了解有关使用以下命令特定 pod 的详细信息：
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
 > 有关如何监视和排查部署问题的更多详细信息，请参阅[监视和故障排除 SQL Server 大数据群集](cluster-troubleshooting-commands.md)。
-
-### <a name="use-the-cluster-administration-portal"></a>使用群集管理门户
-
-控制器 pod 运行后，你可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`mgmtproxy-svc-external`(例如： **https://\<ip 地址\>: 30777/门户**)。 用于登录到门户的凭据匹配的值**控制器用户**并**密码**你在部署脚本中指定。
-
-可以获取的 IP 地址**mgmtproxy svc 外部**服务通过在 bash 或 cmd 窗口中运行以下命令：
-
-```bash
-kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-```
-
-> [!NOTE]
-> 在 CTP 3.0 中，您会看到一条安全警告时访问网页，因为大数据群集当前正在使用自动生成的 SSL 证书。
 
 ## <a name="connect-to-the-cluster"></a>连接到群集
 

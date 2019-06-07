@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: c4c6cb2032949131277d5baa126f2895255fd18b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994051"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743953"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>使用 curl 在 SQL Server 大数据群集上将数据加载到 HDFS
 
@@ -25,14 +25,14 @@ ms.locfileid: "65994051"
 
 ## <a name="obtain-the-service-external-ip"></a>获取服务的外部 IP
 
-在完成部署，并且其访问权限将经历 Knox 启动 WebHDFS。 通过名为的 Kubernetes 服务公开的 Knox 终结点**网关 svc 外部**。  若要创建要上传/下载文件的必要 WebHDFS URL，需要**网关 svc 外部**服务外部的 IP 地址和群集的名称。 可以获取**网关 svc 外部**服务外部的 IP 地址通过运行以下命令：
+在完成部署，并且其访问权限将经历 Knox 启动 WebHDFS。 通过名为的 Kubernetes 服务公开的 Knox 终结点**网关 svc 外部**。  若要创建要上传/下载文件的必要 WebHDFS URL，需要**网关 svc 外部**服务外部的 IP 地址和大数据群集的名称。 可以获取**网关 svc 外部**服务外部的 IP 地址通过运行以下命令：
 
 ```bash
-kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> `<cluster name>`下面是你在部署配置文件中指定群集的名称。 默认名称是`mssql-cluster`。
+> `<big data cluster name>`下面是你在部署配置文件中指定群集的名称。 默认名称是`mssql-cluster`。
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>构造用于访问 WebHDFS 的 URL
 

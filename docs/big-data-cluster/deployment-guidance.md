@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993987"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743932"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -92,8 +92,10 @@ kubectl config view
 mssqlctl cluster create
 ```
 
-> [!TIP]
-> 在此示例中，系统会提示输入不是默认配置，如密码的一部分的任何设置。 请注意，Docker 信息向你由 Microsoft 提供的 SQL Server 2019 一部分[早期采用计划](https://aka.ms/eapsignup)。
+在此方案中，系统会提示输入不是默认配置，如密码的一部分的任何设置。 请注意，Docker 信息向你由 Microsoft 提供的 SQL Server 2019 一部分[早期采用计划](https://aka.ms/eapsignup)。
+
+> [!IMPORTANT]
+> 大数据群集的默认名称是**mssql 群集**。 务必知道，才能运行任何这一点**kubectl**指定与 Kubernetes 命名空间的命令`-n`参数。
 
 ## <a id="customconfig"></a> 自定义配置
 
@@ -220,8 +222,11 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 1. 部署后，通过查看以下的外部 IP 输出查找控制器终结点的 IP 地址**kubectl**命令：
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > 如果在部署期间未更改默认名称，使用`-n mssql-cluster`在前一命令中。 **mssql 群集**是大数据群集的默认名称。
 
 1. 登录到大数据群集**mssqlctl 登录**。 设置 **-控制器终结点**控制器终结点的外部 IP 地址的参数。
 
@@ -267,7 +272,7 @@ minikube ip
 不管平台如何在 Kubernetes 群集上运行，若要获取针对的群集，运行以下命令部署的所有服务终结点：
 
 ```bash
-kubectl get svc -n <your-cluster-name>
+kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="connect"></a> 连接到群集

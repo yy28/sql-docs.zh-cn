@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: f4520fe88844fcece48ca397041e0e1b8845519c
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014992"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744152"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>对于 SQL Server 上的大数据群集的发行说明
 
@@ -33,11 +33,11 @@ ms.locfileid: "66014992"
 
 | 新增功能或更新 | 详细信息 |
 |:---|:---|
-| **mssqlctl** updates | 多个**mssqlctl** [命令和参数更新](../big-data-cluster/reference-mssqlctl.md)。 这包括的更新**mssqlctl 登录**命令，现在以对控制器用户名和终结点为目标。 |
-| 存储增强功能 | 支持不同的存储配置的日志和数据。 此外，已减少的大数据群集的永久性卷声明数。 |
-| 多个计算池实例 | 对多个计算池实例的支持。 |
-| 新池行为和功能 | 默认值现在会将计算池用于存储池和数据池操作**ROUND_ROBIN**仅分发。 数据池现在使用新的新**复制**分布类型，这意味着数据池的所有实例上存在相同的数据。 |
-| 外部表的改进 | HADOOP 数据源的外部表键入现在支持读取的行的大小最多 1 MB。 外部表 （ODBC、 存储池、 数据池） 现在支持行宽度为 SQL Server 表。 |
+| mssqlctl 更新  | 多个 mssqlctl [命令和参数更新](../big-data-cluster/reference-mssqlctl.md)  。 这包括对“mssqlctl login”命令的更新，该命令现在以控制器用户名和终结点为目标  。 |
+| 存储增强功能 | 支持日志和数据的不同存储配置。 此外，减少了大数据群集的持久卷声明数。 |
+| 多个计算池实例 | 支持多个计算池实例。 |
+| 新池行为和功能 | 现在，默认情况下，计算池仅用于“ROUND_ROBIN”分发中的存储池和数据池操作  。 数据池现在可以使用新的新“REPLICATED”分发类型，这意味着同一数据在所有数据池实例上都有  。 |
+| 外部表的改进 | HADOOP 数据源类型的外部表现在支持读取最大 1 MB 的行。 外部表（ODBC、存储池、数据池）现在支持与 SQL Server 表一样宽的行。 |
 
 ### <a name="known-issues"></a>已知问题
 
@@ -135,7 +135,7 @@ ms.locfileid: "66014992"
 | 部署配置文件 | 使用默认和自定义[部署配置 JSON 文件](deployment-guidance.md#configfile)进行大数据群集部署，而不是使用环境变量。 |
 | 提示的部署 | `mssqlctl cluster create` 现在会提示进行默认部署的任何必要设置。 |
 | 服务终结点和 Pod 名称更改 | 以下外部终结点已更改名称：<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| mssqlctl 的改进 | 使用 mssqlctl [列出外部终结点](deployment-guidance.md#endpoints)，并通过 `--version` 参数检查 mssqlctl 的版本。 |
+| mssqlctl 的改进  | 使用 mssqlctl [列出外部终结点](deployment-guidance.md#endpoints)，并通过 `--version` 参数检查 mssqlctl 的版本   。 |
 | 脱机安装 | 对于脱机的大数据群集部署的指南。 |
 | HDFS 分层的改进 | S3 分层、 装入缓存和 OAuth 支持 ADLS 第 2 代。 |
 | 新`mssql`Spark SQL Server 连接器 | |
@@ -221,10 +221,10 @@ ms.locfileid: "66014992"
 | 新增功能或更新 | 详细信息 |
 |:---|:---|
 | 关于 GPU 支持在 Spark 中使用 TensorFlow 运行深度学习的指南。 | [部署具有 GPU 支持的大数据群集并运行 TensorFlow](spark-gpu-tensorflow.md)。 |
-| 默认情况下，不再继续创建数据源 SqlDataPool 和 SqlStoragePool。 | 请根据需要手动创建它们。 查看[已知问题](#externaltablesctp24)。 |
+| 默认情况下，不再继续创建数据源 SqlDataPool 和 SqlStoragePool   。 | 请根据需要手动创建它们。 查看[已知问题](#externaltablesctp24)。 |
 | 数据池的 `INSERT INTO SELECT` 支持。 | 有关示例，请参阅[教程：使用 Transact-SQL 将数据引入 SQL Server 数据池](tutorial-data-pool-ingest-sql.md)。 |
-| `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 选项。 | 强制或禁用查询外部表的计算池的使用。 例如，`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`。 |
-| 更新的 AKS 部署建议。 | 当在 AKS 上评估大数据群集时，我们现在建议使用大小为 Standard_L8s 的单个节点。 |
+| `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 选项。 | 强制或禁用查询外部表的计算池的使用。 例如， `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` 。 |
+| 更新的 AKS 部署建议。 | 当在 AKS 上评估大数据群集时，我们现在建议使用大小为 Standard_L8s 的单个节点  。 |
 | Spark 运行时升级到 Spark 2.4。 | |
 
 ### <a name="known-issues"></a>已知问题
@@ -354,14 +354,14 @@ make: *** [deploy-clean] Error 2
 | 在 IntelliJ 中的大数据群集上提交 Spark 作业。 | [在 IntelliJ 中的 SQL Server 大数据群集上提交 Spark 作业](spark-submit-job-intellij-tool-plugin.md) |
 | 用于应用程序部署和群集管理的常见 CLI。 | [如何在 SQL Server 2019 大数据群集（预览版）上部署应用](big-data-cluster-create-apps.md) |
 | 将应用程序部署到大数据群集的 VS Code 扩展。 | [如何使用 VS Code 将应用程序部署到 SQL Server 大数据群集](app-deployment-extension.md) |
-| 对 mssqlctl 工具命令用法的更改。 | 有关更多详细信息，请参阅 [mssqlctl 的已知问题](#mssqlctlctp23)。 |
+| 对 mssqlctl 工具命令用法的更改  。 | 有关更多详细信息，请参阅 [mssqlctl 的已知问题](#mssqlctlctp23)。 |
 | 在大数据群集中使用 Sparklyr | [在 SQL Server 2019 大数据群集中使用 Sparklyr](sparklyr-from-RStudio.md) |
 | 通过 **HDFS 分层**将兼容 HDFS 的外部存储装入大数据群集。 | 请参阅 [HDFS 分层](hdfs-tiering.md)。 |
 | SQL Server 主实例和 HDFS/Spark 网关的新的统一连接体验。 | 请参阅 [SQL Server 主实例和 HDFS/Spark 网关](connect-to-big-data-cluster.md)。 |
-| 使用 mssqlctl cluster delete 命令删除群集现在仅删除属于大数据群集的命名空间中的对象。 | 不会删除命名空间。 但是，在早期版本中，此命令会删除整个命名空间。 |
-| 安全性终结点名称已更改并合并。 | service-security-lb 和 service-security-nodeport 已合并到 endpoint-security 终结点中。 |
-| 代理终结点名称已更改并合并。 | service-proxy-lb 和 service-proxy-nodeport 已合并到 endpoint-service-proxy 终结点中。 |
-| 控制器终结点名称已更改并合并。 | service-mssql-controller-lb 和 service-mssql-controller-nodeport 已合并到 endpoint-controller 终结点中。 |
+| 使用 mssqlctl cluster delete 命令删除群集现在仅删除属于大数据群集的命名空间中的对象  。 | 不会删除命名空间。 但是，在早期版本中，此命令会删除整个命名空间。 |
+| 安全性终结点名称已更改并合并  。 | service-security-lb 和 service-security-nodeport 已合并到 endpoint-security 终结点中    。 |
+| 代理终结点名称已更改并合并  。 | service-proxy-lb 和 service-proxy-nodeport 已合并到 endpoint-service-proxy 终结点中    。 |
+| 控制器终结点名称已更改并合并  。 | service-mssql-controller-lb 和 service-mssql-controller-nodeport 已合并到 endpoint-controller 终结点中    。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
@@ -497,7 +497,7 @@ make: *** [deploy-clean] Error 2
 群集管理门户不显示 SQL Server 主实例的终结点。 若要查找的主实例的 IP 地址和端口，请使用以下**kubectl**命令：
 
 ```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 ```
 
 #### <a name="external-tables"></a>外部表

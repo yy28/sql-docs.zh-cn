@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473518"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743828"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 大数据群集
 
@@ -71,7 +71,7 @@ ms.locfileid: "63473518"
    | <KNOX_PASSWORD> | HDFS/Spark 网关的密码。 |
 
    > [!TIP]
-   > 使用[kubectl](cluster-troubleshooting-commands.md)以查找 SQL Server 主实例和 Knox 的 IP 地址。 运行`kubectl get svc -n <your-cluster-name>`并查看主实例的外部 IP 地址 (**master svc 外部**) 和 Knox (**网关 svc 外部**)。
+   > 使用[kubectl](cluster-troubleshooting-commands.md)以查找 SQL Server 主实例和 Knox 的 IP 地址。 运行`kubectl get svc -n <your-big-data-cluster-name>`并查看主实例的外部 IP 地址 (**master svc 外部**) 和 Knox (**网关 svc 外部**)。 群集的默认名称是**mssql 群集**。
 
 1. 运行启动脚本。
 
@@ -107,7 +107,7 @@ ms.locfileid: "63473518"
    | <KNOX_PASSWORD> | HDFS/Spark 网关的密码。 |
 
    > [!TIP]
-   > 使用[kubectl](cluster-troubleshooting-commands.md)以查找 SQL Server 主实例和 Knox 的 IP 地址。 运行`kubectl get svc -n <your-cluster-name>`并查看主实例的外部 IP 地址 (**master svc 外部**) 和 Knox (**网关 svc 外部**)。
+   > 使用[kubectl](cluster-troubleshooting-commands.md)以查找 SQL Server 主实例和 Knox 的 IP 地址。 运行`kubectl get svc -n <your-big-data-cluster-name>`并查看主实例的外部 IP 地址 (**master svc 外部**) 和 Knox (**网关 svc 外部**)。 群集的默认名称是**mssql 群集**。
 
 1. 运行启动脚本。
 
