@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421184"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462511"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>在 SQL Server 中计划内存中 OLTP 功能的应用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "55421184"
 
 对于 Azure SQL 数据库云服务中托管的数据库，所选的服务层会影响允许数据库使用的活动内存量。 应计划使用警报监视数据库的内存使用。 有关详细信息，请参阅：
 
-- 查看[定价层](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)的内存中 OLTP 存储限制
+- 查看[定价层](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)的内存中 OLTP 存储限制
 - [监视内存中 OLTP 存储](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>内存优化表变量
@@ -104,7 +104,7 @@ ms.locfileid: "55421184"
 
 可通过使用.dacpac 文件就地更新由 SSDT 管理的数据库。 在 SSDT 中，可指定在 .dacpac 文件中编码的架构进行的更改。
 
-在类型为数据库的 Visual Studio 项目的上下文中，处理 .dacpac 文件。
+在类型为数据库的  Visual Studio 项目的上下文中，处理 .dacpac 文件。
 
 - [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)和 .dacpac 文件
 
@@ -214,19 +214,19 @@ ms.locfileid: "55421184"
 
 #### <a name="hash-indexes"></a>哈希索引
 
-在使用“**=**”运算符按其确切的主键值访问特定行时，哈希索引是速度最快的格式。
+在使用“ **=** ”运算符按其确切的主键值访问特定行时，哈希索引是速度最快的格式。
 
-- 如果用于哈希索引，则不精确的运算符（例如，“!=”、“>”或“BETWEEN”）将损害性能。
+- 如果用于哈希索引，则不精确的运算符（例如，“!=”、“>”或“BETWEEN”）将损害性能    。
 
 - 如果键值重复率变得过高，则哈希索引可能不是最佳选择。
 
-- 请勿低估哈希索引可能需要的 bucket 的数量，以避免在单个 bucket 内出现长链。 有关详细信息，请参阅：
+- 请勿低估哈希索引可能需要的 bucket  的数量，以避免在单个 bucket 内出现长链。 有关详细信息，请参阅：
     - [内存优化表的哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
 
 
 #### <a name="nonclustered-columnstore-indexes"></a>非聚集列存储索引
 
-内存优化表提供高吞吐量的典型业务事务数据，在范例中，调用联机事务处理或 OLTP。 列存储索引提供高吞吐量的聚合和称为 Analytics 的类似处理。 过去几年，可用于满足 OLTP 和 Analytics 需求的最好的方法是提供具有大量数据移动和一定程度数据重复的单独的表。 现可采用更简单的 **混合解决方案** ：提供基于内存优化表的列存储索引。
+内存优化表提供高吞吐量的典型业务事务数据，在范例中，调用联机事务处理  或 OLTP  。 列存储索引提供高吞吐量的聚合和称为 Analytics  的类似处理。 过去几年，可用于满足 OLTP 和 Analytics 需求的最好的方法是提供具有大量数据移动和一定程度数据重复的单独的表。 现可采用更简单的 **混合解决方案** ：提供基于内存优化表的列存储索引。
 
 
 - 可在基于磁盘的表中生成 [列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md) ，甚至是聚集索引。 但不能在内存优化表上聚集列存储索引。
@@ -294,7 +294,7 @@ SQL Server 2016 中：
 - 错误号为 41839。 （SQL Server 2014 中的错误号是 41301。）
 
 
-通过将重试逻辑添加到脚本中，可使 Transact-SQL 脚本更可靠（针对可能的事务错误）。 频繁调用 UPDATE 和 DELETE 时，或者另一个表的外键引用内存优化表时，重试逻辑很有可能会有帮助。 有关详细信息，请参阅：
+通过将重试逻辑  添加到脚本中，可使 Transact-SQL 脚本更可靠（针对可能的事务错误）。 频繁调用 UPDATE 和 DELETE 时，或者另一个表的外键引用内存优化表时，重试逻辑很有可能会有帮助。 有关详细信息，请参阅：
 
 - [具有内存优化表的事务](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
 - [内存优化表的事务依赖限制 - 错误 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)

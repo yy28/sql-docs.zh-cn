@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8fe968185f05c7a48415e5e158a20f4dc61b28c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 683aea4066c0b27db295cc07db31ecd07fb33245
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142189"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798082"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance 的 Azure 数据 Studio （预览版）
 Azure Data Studio 现在提供了一种方法来创建您正在从事的.csv 和.tsv 文件的快速可视化效果。 这包括在你的 SQL Server 2019 大数据群集中的本地文件或 HDFS 上的文件。 如果想要具有快速查看数据，并了解这怎么回事，此扩展插件十分有用。 我们使用从 Microsoft Research，可以生成数据的就地可视化效果称为 SandDance 的技术。

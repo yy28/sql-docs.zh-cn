@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc6d99faaf68c64bd54f4b10ff729b6d2381d9ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 48dbf8caf5a38e228d6c11e6b5917693adc24176
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852115"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795412"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>手动故障转移数据库镜像会话 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "47852115"
   
 1.  连接至主体服务器实例，在 **对象资源管理器** 窗格中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**，再选择要进行故障转移的数据库。  
+2.  展开 **“数据库”** ，再选择要进行故障转移的数据库。  
   
-3.  右键单击数据库，选择 **“任务”**，再单击 **“镜像”**。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择 **“任务”** ，再单击 **“镜像”** 。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
-4.  单击 **“故障转移”**。  
+4.  单击 **“故障转移”** 。  
   
      将显示一个确认框。  主体服务器将开始尝试使用 Windows 身份验证连接到镜像服务器。 如果 Windows 身份验证无效，主体服务器将显示 **“连接到服务器”** 对话框。 如果镜像服务器使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请选择 **“身份验证”** 框中的 **“SQL Server 身份验证”** 。 在 **“登录名”** 文本框中，指定连接镜像服务器时使用的登录帐户，然后在 **“密码”** 文本框中指定该帐户的密码。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47852115"
      如果故障转移失败，将显示一条错误消息，并且该对话框保持打开状态。  
   
     > [!IMPORTANT]  
-    >  如果打开“镜像”页后修改了某些属性，将不保存这些更改。  
+    >  如果打开“镜像”  页后修改了某些属性，将不保存这些更改。  
   
      对话框将自动关闭。  
   

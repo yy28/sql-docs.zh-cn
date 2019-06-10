@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0668e22c751d8cfe37987e0454e6f9ad1ecd476d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: e6bf8b95fc0d039054b407b12d70c737dce214ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480380"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802186"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理复合域中的数据
 
@@ -42,7 +42,7 @@ ms.locfileid: "65480380"
   
  请考虑下面的示例：有一个复合域 Product，该复合域有三个单独的域：ProductName、CompanyName 和 ProductVersion。 创建以下明确的跨域规则：  
   
- 如果域名“CompanyName”值包含“Microsoft”，域名“ProductName”值等于“Office”，“ProductVersion”值等于“2010”，那么域名“ProductName”值等于“Microsoft Office 2010”。  
+ 如果域名“CompanyName”值包含“Microsoft”，域名“ProductName”值等于“Office”，“ProductVersion”值等于“2010”，那么域名“ProductName”值等于“Microsoft Office 2010”     。  
   
  当此跨域规则运行时，源数据 (ProductName) 将在清理活动后进行如下更正：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "65480380"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目时，这个明确的跨域规则更改可信度为 100% 的数据，并且“原因”列显示以下消息：已根据规则“\<Cross-Domain Rule Name>”更正。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)。  
+ 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”** ，该列将显示正确的数据。 在清理数据质量项目时，这个明确的跨域规则更改可信度为 100% 的数据，并且“原因”列显示以下消息  ：已根据规则“\<Cross-Domain Rule Name>”更正  。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)。  
   
 > [!NOTE]  
 >  明确的跨域规则将不适用于附加到引用数据服务的复合域。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c1a3a18900159d6073c3054fb2ab12500ccb24c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 90b23afd0fb30ca2d1a50f48a05ac9c7e12800e7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776691"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794591"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>从日志传送配置中删除辅助数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47776691"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除日志传送辅助数据库，请使用：**  
   
@@ -43,9 +43,9 @@ ms.locfileid: "47776691"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  日志传送存储过程要求 **sysadmin** 固定服务器角色中的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -54,13 +54,13 @@ ms.locfileid: "47776691"
   
 1.  连接到当前是日志传送主服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并展开该实例。  
   
-2.  展开“数据库”，右键单击日志传送主数据库，再单击“属性”。  
+2.  展开“数据库”  ，右键单击日志传送主数据库，再单击“属性”  。  
   
-3.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
+3.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
 4.  在 **“辅助服务器实例和数据库”** 下，单击要删除的数据库。  
   
-5.  单击 **“删除”**。  
+5.  单击 **“删除”** 。  
   
 6.  单击 **“确定”** 更新配置。  
   

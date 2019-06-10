@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b11894150e184233b985dcfd21002175b1d9555
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 7ea5095fcec5681ea54a07bbcf8c41255d66db87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255922"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780269"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用故障转移可用性组向导 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍了如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。 可用性组在可用性副本级别进行故障转移。 如果故障转移到一个处于 SYNCHRONIZED 状态的辅助副本，则向导将执行计划的手动故障转移（不会造成数据丢失）。 如果故障转移到一个处于 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 状态的次要副本，则向导将执行强制的手动故障转移（这也称为“强制故障转移”，可能造成数据丢失）。 这两种形式的手动故障转移均会将您所连接的辅助副本转换为主角色。 计划的手动故障转移当前会将先前的主副本转换为辅助角色。 在强制故障转移之后，一旦先前的主副本联机，它就会转换为辅助角色。  
+  本主题介绍了如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。 可用性组在可用性副本级别进行故障转移。 如果故障转移到一个处于 SYNCHRONIZED 状态的辅助副本，则向导将执行计划的手动故障转移（不会造成数据丢失）。 如果故障转移到一个处于 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 状态的次要副本，则向导将执行强制的手动故障转移（这也称为“强制故障转移”，可能造成数据丢失）  。 这两种形式的手动故障转移均会将您所连接的辅助副本转换为主角色。 计划的手动故障转移当前会将先前的主副本转换为辅助角色。 在强制故障转移之后，一旦先前的主副本联机，它就会转换为辅助角色。  
 
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  在你首次执行计划的手动故障转移之前，请参阅 [执行可用性组的计划手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
@@ -44,9 +44,9 @@ ms.locfileid: "54255922"
   
 -   必须连接到承载当前可用的可用性副本的服务器实例。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -54,23 +54,23 @@ ms.locfileid: "54255922"
   
 1.  在对象资源管理器中，连接到承载需要进行故障转移的可用性组的辅助副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
-3.  若要启动故障转移可用性组向导，请右键单击你要进行故障转移的可用性组，然后选择“故障转移”。  
+3.  若要启动故障转移可用性组向导，请右键单击你要进行故障转移的可用性组，然后选择“故障转移”  。  
   
 4.  **“简介”** 页面所显示的信息取决于是否有任何辅助副本可用于计划的故障转移。 如果此页面显示“**执行此可用性组的计划故障转移**”，则您可在不造成数据丢失的情况下对可用性组进行故障转移。  
   
-5.  在“选择新主要副本”页上，在你选择将成为新的主要副本的次要副本（即故障转移目标）之前，你可查看当前主要副本和 WSFC 仲裁的状态。 对于计划的手动故障转移，确保选择其 **“故障转移就绪”** 值为“**无数据丢失**”的辅助副本。 对于强制故障转移的所有可能的故障转移目标，此值将为“数据丢失，警告(#)”，其中 # 指示给定次要副本存在的警告数。 若要查看给定故障转移目标的警告，请单击其“故障转移就绪”值。  
+5.  在“选择新主要副本”  页上，在你选择将成为新的主要副本的次要副本（即故障转移目标  ）之前，你可查看当前主要副本和 WSFC 仲裁的状态。 对于计划的手动故障转移，确保选择其 **“故障转移就绪”** 值为“**无数据丢失**”的辅助副本。 对于强制故障转移的所有可能的故障转移目标，此值将为“数据丢失，警告(#)”，其中 # 指示给定次要副本存在的警告数     。 若要查看给定故障转移目标的警告，请单击其“故障转移就绪”值。  
   
      有关详细信息，请参阅本主题后面的 [“选择新主副本”页](#SelectNewPrimaryReplica)。  
   
 6.  在 **“连接到副本”** 页上，连接到故障转移目标。 有关详细信息，请参阅本主题后面的 [“连接到副本”页](#ConnectToReplica)。  
   
-7.  如果您正在执行强制故障转移，则向导将显示 **“确认可能丢失数据”** 页。 若要继续执行故障转移，则必须选择 **“单击此处以确认故障转移可能丢失数据”**。 有关详细信息，请参阅本主题后面的[“确认可能丢失数据”页](#ConfirmPotentialDataLoss)。  
+7.  如果您正在执行强制故障转移，则向导将显示 **“确认可能丢失数据”** 页。 若要继续执行故障转移，则必须选择 **“单击此处以确认故障转移可能丢失数据”** 。 有关详细信息，请参阅本主题后面的[“确认可能丢失数据”页](#ConfirmPotentialDataLoss)。  
   
 8.  在 **“摘要”** 页上，查看故障转移到选定的辅助副本的含义。  
   
-     如果您满意所做的选择，可以选择单击 **“脚本”** 以创建向导将执行的步骤的脚本。 然后，若要将可用性组故障转移到选定的辅助副本，请单击 **“完成”**。  
+     如果您满意所做的选择，可以选择单击 **“脚本”** 以创建向导将执行的步骤的脚本。 然后，若要将可用性组故障转移到选定的辅助副本，请单击 **“完成”** 。  
   
 9. **“进度”** 页将显示对可用性组进行故障转移的进度。  
   

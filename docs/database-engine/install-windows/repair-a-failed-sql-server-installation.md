@@ -10,13 +10,13 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 41103374bdef2d292bfd5c3e22e3fab093309f42
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ad2f10d767bc71cfdf3fc3e26cfe7a65354ea5b9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606777"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794787"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>修复失败的 SQL Server 安装
 
@@ -56,7 +56,7 @@ ms.locfileid: "51606777"
   
 2. 安装必备组件并进行系统验证之后，安装程序会显示“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心”页。 
   
-3. 单击左侧导航区域中的“维护”，然后单击“修复”启动修复操作。 
+3. 单击左侧导航区域中的“维护”  ，然后单击“修复”  启动修复操作。 
   
    >[!TIP]  
    > 如果使用“开始”菜单启动了安装中心，您将需要在此时提供安装介质的位置。 
@@ -65,9 +65,9 @@ ms.locfileid: "51606777"
   
 5. 在“选择实例”页上选择要修复的实例，然后单击 **“下一步”** 继续操作。 
   
-6. 将运行修复规则以验证修复操作。 若要继续，请单击 **“下一步”**。 
+6. 将运行修复规则以验证修复操作。 若要继续，请单击 **“下一步”** 。 
   
-7. “准备修复”页指示修复操作已准备就绪，可以继续。 若要继续，请单击 **“修复”**。 
+7. “准备修复”页指示修复操作已准备就绪，可以继续。 若要继续，请单击 **“修复”** 。 
   
 8. “修复进度”页显示修复操作的状态。 “完成”页指示修复操作已完成。 
   

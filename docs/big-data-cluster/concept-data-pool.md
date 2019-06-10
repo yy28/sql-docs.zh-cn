@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 本指南介绍了 SQL Server 2019 大数据群集中的数据池。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8345ae06280458e7fa479ad95ffa20383e429267
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ba296a504ae4a6656941c408e7b7a0c96a83c97d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860118"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783088"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中的数据池有哪些？
 

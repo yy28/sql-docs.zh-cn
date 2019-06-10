@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5866e70945e7a507c0a8887abf006858d37c2bf0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309395"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798010"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 导入扩展 （预览版）
 
@@ -28,7 +28,6 @@ SQL Server 导入扩展 （预览版） 将 SQL 表转换为.txt 和.csv 文件�
 ## <a name="install-the-sql-server-import-extension"></a>安装 SQL Server 导入扩展
 
 1. 若要開啟擴充管理員及存取可用的擴充功能，選取 [擴充功能] 圖示，或選取**檢視**功能表中的**擴充功能**。
-
 2. 选择要查看其详细信息的可用扩展。
 
    ![导入扩展管理器](media/sql-server-import-extension/import-wizard-install.png)

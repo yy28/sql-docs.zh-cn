@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: 206a0fe9ae945267483cf7ee2ccec08eda2696c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a360c86edc08916f1e28157a54503f64c152dec7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63154597"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794393"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>为数据迁移助手配置设置
 
@@ -142,6 +142,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 ```
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据迁移助手下载](https://www.microsoft.com/download/details.aspx?id=53595)

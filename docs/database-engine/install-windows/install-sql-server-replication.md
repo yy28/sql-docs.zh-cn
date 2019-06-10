@@ -16,13 +16,13 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 5fbfc888698149c960f4555a5ec88e9483e46a9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8bfb3281923fb3ebfa22bd8dfc5dec8f1423ec49
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609225"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794922"
 ---
 # <a name="install-sql-server-replication"></a>安装 SQL Server 复制
 
@@ -38,7 +38,7 @@ ms.locfileid: "47609225"
 ## <a name="installing-replication-by-using-setup"></a>使用安装程序安装复制  
 **在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
-- 若要安装包括复制管理对象 (RMO) 在内的复制组件，请在安装向导的“功能选择”页上选择“SQL Server 复制”。  
+- 若要安装包括复制管理对象 (RMO) 在内的复制组件，请在安装向导的  “功能选择”页上选择  “SQL Server 复制”。  
   
 ## <a name="installing-replication-from-the-command-prompt"></a>从命令提示符安装复制  
  **在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  

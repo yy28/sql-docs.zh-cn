@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 659143a0ca0ce93ba553a36eb6e32a75b5a2d2ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e7b2f03c4d8aa7b0b5f34f0390656afbceb16f89
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626785"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794574"
 ---
 # <a name="remove-log-shipping-sql-server"></a>删除日志传送 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47626785"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除日志传送，请使用：**  
   
@@ -41,9 +41,9 @@ ms.locfileid: "47626785"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  日志传送存储过程要求 **sysadmin** 固定服务器角色中的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -52,9 +52,9 @@ ms.locfileid: "47626785"
   
 1.  连接到当前是日志传送主服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并展开该实例。  
   
-2.  展开“数据库”，右键单击日志传送主数据库，再单击“属性”。  
+2.  展开“数据库”  ，右键单击日志传送主数据库，再单击“属性”  。  
   
-3.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
+3.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
 4.  清除 **“将此数据库启用为日志传送配置中的主数据库”** 复选框。  
   

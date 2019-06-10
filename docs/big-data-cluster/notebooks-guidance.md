@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 本文介绍如何在 Azure Data Studio 连接到 SQL Server 2019 大数据群集中运行的 Jupyter 笔记本。
 author: achatter
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
-ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
+ms.openlocfilehash: e4b24b70a427e7ac3e3f058b1db332b899729034
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65462052"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802815"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 预览版中使用笔记本
 
@@ -158,7 +158,7 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 
 选择`PySpark Kernel`和在下面的代码中的单元格类型。
 
-单击 **“运行”**。
+单击 **“运行”** 。
 
 Spark 应用程序启动，并返回以下输出：
 

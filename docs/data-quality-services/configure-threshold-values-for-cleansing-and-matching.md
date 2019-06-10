@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: af1623d3fe6aa5f3784994a68b72c411c3a19f7d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 6c89f673f7fae82c451021724c07db8b66239e32
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486397"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793873"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>配置清理和匹配活动的阈值
 
@@ -41,7 +41,7 @@ ms.locfileid: "65486397"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“配置”**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“配置”** 。  
   
 3.  接下来，单击 **“常规设置”** 选项卡。通过此选项卡可以为清理活动以及匹配活动指定阈值。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "65486397"
   
 5.  若要为匹配活动指定阈值，请在 **“匹配”** 区域下的 **“最低记录分数”** 框中指定一个值。 此值表示一条记录要被视为另一条记录的匹配项的最低分数。 默认值为 80%。  
   
-6.  单击 **“关闭”**。  
+6.  单击 **“关闭”** 。  
   
   

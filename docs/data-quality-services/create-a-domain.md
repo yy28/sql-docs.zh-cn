@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8522ece96543fa9ca5ae743079f955524e5967c2
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 0f580d8181030cba996e18b25e60b0dc9f1309af
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480590"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785684"
 ---
 # <a name="create-a-domain"></a>创建域
 
@@ -89,7 +89,7 @@ ms.locfileid: "65480590"
   
 8.  如果数据类型为 **String**，则选择 **“禁用语法错误算法”** 可填充域而不会检查字符串值是否存在语法错误。  
   
-9. 单击“确定” 。  
+9. 单击“确定”  。  
   
 10. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   

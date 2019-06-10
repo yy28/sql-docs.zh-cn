@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: feed1ad23a72ef00d264994373e0ef23f4d1c8bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 9f3c6d70d107e5afbd168fc5152e3d46d150debf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203476"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802992"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>确定对主要副本的更改在 Always On 可用性组的次要副本上未得到反映的原因
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "53203476"
   
  此外，检查 [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 和 [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 这两个性能对象也很有用。将这两个值相乘，可得到最后一秒中等待清除流控制所花费的时间。 流控制等待时间越长，发送速率越低。  
   
- 下表列出了诊断网络延迟和吞吐量的有用指标。 可以使用其他 Windows 工具（如 ping.exe）来评估网络利用率。  
+ 下表列出了诊断网络延迟和吞吐量的有用指标。 可以使用其他 Windows 工具（如 ping.exe）来评估网络利用率  。  
   
 -   DMV [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   

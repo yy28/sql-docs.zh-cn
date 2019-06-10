@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: affc717019c031445fc19b429ba0c96186088e59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4fd4e32c928ed046f449392a078af0158efed283
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612885"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795263"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>数据库镜像会话期间的角色切换 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在数据库镜像会话上下文中，通常可以使用一个称为“角色切换” 的过程来互换主体角色和镜像角色。 在角色切换中，镜像服务器充当主体服务器的“故障转移伙伴  ”，接管主体角色，恢复其数据库副本并使其联机以作为新的主体数据库。 以前的主体服务器将作为镜像角色（如果可用），并且其数据库将成为新的镜像数据库。 在可能的情况下，这些角色可以来回切换，以应对多次失败或满足管理的需要。  
+  在数据库镜像会话上下文中，通常可以使用一个称为“角色切换”  的过程来互换主体角色和镜像角色。 在角色切换中，镜像服务器充当主体服务器的“故障转移伙伴  ”，接管主体角色，恢复其数据库副本并使其联机以作为新的主体数据库。 以前的主体服务器将作为镜像角色（如果可用），并且其数据库将成为新的镜像数据库。 在可能的情况下，这些角色可以来回切换，以应对多次失败或满足管理的需要。  
   
 > [!NOTE]  
 >  本主题假定您熟悉数据库镜像运行模式。 有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
@@ -69,9 +69,9 @@ ms.locfileid: "47612885"
   
 ||高性能|没有见证服务器的高安全性模式|具有见证服务器的高安全性模式|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|自动故障转移 (automatic failover)|否|否|用户帐户控制|  
-|手动故障转移 (manual failover)|否|是|用户帐户控制|  
-|强制服务|用户帐户控制|是|否|  
+|自动故障转移 (automatic failover)|否|否|是|  
+|手动故障转移 (manual failover)|否|是|是|  
+|强制服务|是|是|否|  
   
  在角色切换之后，某些元数据必须存在于伙伴双方上，以确保所有的数据库用户均可访问新的主体数据库。 此外，必须对新的主体服务器创建备份作业，以确保数据库继续进行定期备份。 有关详细信息，请参阅[角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "47612885"
 >  当发生故障转移时，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器准备就绪但尚未提交的事务被认为在数据库故障转移后已中止。  
   
 ###  <a name="DisableAutoSSMS"></a> 禁用自动故障转移 (SQL Server Management Studio)  
- 打开“数据库属性镜像”页，并通过选择下列选项之一更改操作模式：  
+ 打开“数据库属性镜像”  页，并通过选择下列选项之一更改操作模式：  
   
 -   **不带自动故障转移功能的高安全(同步)**  
   
@@ -244,7 +244,7 @@ ms.locfileid: "47612885"
   
  ![可能会丢失数据的强制服务](../../database-engine/database-mirroring/media/dbm-forced-service.gif "可能会丢失数据的强制服务")  
   
- 在图中，原始主体服务器 **Partner_A**不可用于镜像服务器 **Partner_B**，从而导致镜像数据库断开连接。 确定 **Partner_A** 不可用于客户端之后，数据库管理员对 **Partner_B** 进行强制服务，这可能会造成数据丢失。 **Partner_B** 变为主体服务器，并在数据库公开（也就是未镜像）的情况下运行。 此时，客户端可以重新连接到 **Partner_B**。  
+ 在图中，原始主体服务器 **Partner_A**不可用于镜像服务器 **Partner_B**，从而导致镜像数据库断开连接。 确定 **Partner_A** 不可用于客户端之后，数据库管理员对 **Partner_B** 进行强制服务，这可能会造成数据丢失。 **Partner_B** 变为主体服务器，并在数据库公开  （也就是未镜像）的情况下运行。 此时，客户端可以重新连接到 **Partner_B**。  
   
  当 **Partner_A** 变得可用时，它会重新连接到新的主体服务器，从而重新加入会话并担当镜像角色。 镜像会话便会立即挂起，而尚未同步新的镜像数据库。 会话挂起之后，数据库管理员可以确定是恢复会话，还是在极特殊情况下删除镜像并尝试对以前主体数据库中的数据进行补救。 在此事例中，数据库管理员选择恢复镜像。 此时， **Partner_A** 接管镜像服务器的角色并将以前的主体数据库回滚到上次成功同步事务的时间点；如果在强制服务之前，未将所有提交的事务写入镜像服务器上的磁盘，则这些事务将丢失。 然后，**Partner_A** 通过应用自以前镜像服务器变为新主体服务器以来对新主体数据库所做的所有更改，前滚新的镜像数据库。  
   
@@ -314,7 +314,7 @@ ms.locfileid: "47612885"
   
 ## <a name="see-also"></a>另请参阅  
  [估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [数据库镜像期间可能出现的故障](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [将客户端连接到数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [完整数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

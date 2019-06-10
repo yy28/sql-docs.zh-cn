@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+manager: jroth
+ms.openlocfilehash: af00a85aa1515ae5d43e6842fede00880bf9a573
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620394"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800760"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门：使用 SQL Server 连接和查询 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入门显示如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到SQL Server，然后使用Transact-SQL（T-SQL）语句创建[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程中使用的*TutorialDB*。
@@ -30,13 +30,13 @@ ms.locfileid: "65620394"
 如果您无权访问SQL Server，请从以下链接中选择您的平台（确保记住您的SQL登录名和密码！）：
 - [Windows - 下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [macOS - 在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux-下载 SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -您只需按照创建和查询数据的步骤进行操作即可。
+- [Linux-下载 SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -您只需按照创建和查询数据的步骤进行操作即可。 
 
 
 ## <a name="connect-to-a-sql-server"></a>连接到 SQL Server
 
    
-1. 启动**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
+1. 启动 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 。
 1. 首次运行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**欢迎**应打开页面。 如果没有看到**欢迎**页上，选择**帮助** > **欢迎**。 选择**新的连接**以打开**连接**窗格：
    
    ![新的连接图标](media/quickstart-sql-server/new-connection-icon.png)
@@ -48,7 +48,7 @@ ms.locfileid: "65620394"
     - **用户名：** SQL Server 的用户名称  
     - **密码：** SQL 服务器的密码  
     - **数据库名称：** 将此字段留空 
-    - **服务器组：**\<默认\>  
+    - **服务器组：** \<默认\>  
 
    ![新连接屏幕](media/quickstart-sql-server/new-connection-screen.png)
 

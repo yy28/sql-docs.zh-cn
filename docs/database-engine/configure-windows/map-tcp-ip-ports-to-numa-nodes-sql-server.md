@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40834c6e6ce705b025e2d4b0b3b3ec974bfebd49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b5179b48634aae9a55e2670ddb0a0055861ffa31
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783285"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783259"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>将 TCP IP 端口映射到 NUMA 节点 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "47783285"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>将 TCP/IP 端口映射到 NUMA 节点  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server 网络配置”，然后单击 \<实例名> 的“协议”。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server 网络配置”，然后单击 \<实例名> 的“协议”    。  
   
-2.  在详细信息窗格中，双击“TCP/IP”。  
+2.  在详细信息窗格中，双击“TCP/IP”  。  
   
-3.  在 **“IP 地址”** 选项卡（要配置的 IP 地址的相应部分）的 **“TCP 端口”** 框中，在端口号后面的方括号里添加 NUMA 节点标识符。 例如，对于 TCP 端口 1500 和节点 0、2 和 5，使用 **1500[37]** 或 **1500[0x25]**。  
+3.  在 **“IP 地址”** 选项卡（要配置的 IP 地址的相应部分）的 **“TCP 端口”** 框中，在端口号后面的方括号里添加 NUMA 节点标识符。 例如，对于 TCP 端口 1500 和节点 0、2 和 5，使用 **1500[37]** 或 **1500[0x25]** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [软件 NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)  

@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+manager: jroth
+ms.openlocfilehash: 9325820ea71c94bb1e43828998ebbf810fb11c10
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801991"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775259"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>启动、停止、暂停、继续、重启 SQL Server 服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "56801991"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件是作为 Windows 服务运行的可执行程序。 作为 Windows 服务运行的程序可以继续运行，而不在计算机屏幕上显示任何活动。  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务**  
- 作为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的可执行进程。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以是默认实例（每台计算机只有一个），也可以是多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)]命名实例中的一个。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器确定在计算机上安装哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 默认实例（如果安装）作为 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** 列出。 命名实例（如果安装）作为 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)** 列出。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装为 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)**。  
+ 作为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的可执行进程。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以是默认实例（每台计算机只有一个），也可以是多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)]命名实例中的一个。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器确定在计算机上安装哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 默认实例（如果安装）作为 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** 列出。 命名实例（如果安装）作为 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)** 列出。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装为 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** 。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务**  
  一种 Windows 服务，可执行计划的管理任务（称为作业和警报）。 有关详细信息，请参阅 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -115,9 +115,9 @@ ms.locfileid: "56801991"
   
 -   在群集上运行时， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务最好使用群集管理器来管理。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，只有本地管理员组的成员能够启动、停止、暂停、继续或重新启动服务。 若要向管理员之外的用户授予管理服务的权限，请参阅 [如何授予用户管理 Windows Server 2003 中的服务的权限](https://support.microsoft.com/kb/325349)。 （此过程在其他 Windows 版本上是类似的。）  
   
  使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN [!INCLUDE[tsql](../../includes/tsql-md.md)]**命令停止** 需要 **sysadmin** 或 **serveradmin** 固定服务器角色的成员资格并且不可转让。  
@@ -126,7 +126,7 @@ ms.locfileid: "56801991"
   
 #### <a name="starting-includessnoversionincludesssnoversion-mdmd-configuration-manager"></a>启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
      因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。 以下是在 C 盘安装 Windows 的情况下最新的四个版本的路径。  
   
@@ -141,11 +141,11 @@ ms.locfileid: "56801991"
   
 1.  使用上面的说明启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
-2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”**。  
+2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”** 。  
   
-3.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的左窗格中，单击 **“SQL Server 服务”**。  
+3.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的左窗格中，单击 **“SQL Server 服务”** 。  
   
-4.  在结果窗格中，右键单击 **SQL Server (MSSQLServer)** 或某个命名实例，然后单击“启动”、“停止”、“暂停”、“继续”或“重启”。  
+4.  在结果窗格中，右键单击 **SQL Server (MSSQLServer)** 或某个命名实例，然后单击“启动”  、“停止”  、“暂停”  、“继续”  或“重启”  。  
   
 5.  单击 **“确定”** 关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
@@ -156,11 +156,11 @@ ms.locfileid: "56801991"
   
 1.  使用上面的说明启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
-2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”**。  
+2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”** 。  
   
-3.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的左窗格中，单击 **“SQL Server 服务”**。  
+3.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的左窗格中，单击 **“SQL Server 服务”** 。  
   
-4.  在结果窗格中，右键单击命名实例的 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“浏览器”** 或者“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (MSSQLServer)”或“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (<instance_name>)”，然后单击“开始”、“停止”、“暂停”、“恢复”或“重启”。  
+4.  在结果窗格中，右键单击命名实例的 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“浏览器”** 或者“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (MSSQLServer)”  或“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (<instance_name>)”  ，然后单击“开始”  、“停止”  、“暂停”  、“恢复”  或“重启”  。  
   
 5.  单击 **“确定”** 关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
@@ -171,21 +171,21 @@ ms.locfileid: "56801991"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>启动、停止、暂停、继续或重新启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，右键单击要启动的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后单击“启动”、“停止”、“暂停”、“继续”或“重启”。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，右键单击要启动的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后单击“启动”  、“停止”  、“暂停”  、“继续”  或“重启”  。  
   
-     或者，在“已注册的服务器”中，右键单击要启动的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，指向“服务控制”，然后单击“启动”、“停止”、“暂停”、“继续”或“重启”。  
+     或者，在“已注册的服务器”中，右键单击要启动的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，指向“服务控制”  ，然后单击“启动”  、“停止”  、“暂停”  、“继续”  或“重启”  。  
   
-2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”**。  
+2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”** 。  
   
-3.  系统提示是否要执行该操作时，请单击 **“是”**。  
+3.  系统提示是否要执行该操作时，请单击 **“是”** 。  
   
 #### <a name="to-start-stop-or-restart-the-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>启动、停止或重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，右键单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“代理”** ，然后单击“启动”、“停止”或“重启”。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，右键单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“代理”** ，然后单击“启动”  、“停止”  或“重启”  。  
   
-2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”**。  
+2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”** 。  
   
-3.  系统提示是否要执行该操作时，请单击 **“是”**。  
+3.  系统提示是否要执行该操作时，请单击 **“是”** 。  
   
 ##  <a name="CommandPrompt"></a> 在命令提示符窗口中使用 net 命令  
  可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 命令启动、停止或暂停 **、** 服务。  
@@ -202,13 +202,13 @@ ms.locfileid: "56801991"
   
 ###  <a name="dbNamed"></a> 启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   在命令提示符下，输入下列命令之一。 将 \<instancename> 替换为要管理的实例的名称。  
+-   在命令提示符下，输入下列命令之一。 将 \<instancename> 替换为要管理的实例的名称  。  
   
-     **net start "SQL Server (** instancename **)"**  
+     **net start "SQL Server (**  instancename **)"**  
   
      -或 -  
   
-     **net start MSSQL$** instancename  
+     **net start MSSQL$** instancename   
   
 ###  <a name="dbStartup"></a> 使用启动选项启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -237,7 +237,7 @@ ms.locfileid: "56801991"
   
 -   在命令提示符下，输入下列命令之一。 将 *instancename* 替换为要管理的实例的名称。  
   
-     **net start “SQL Server 代理(** instancename **)”**  
+     **net start “SQL Server 代理(**  instancename **)”**  
   
      -或 -  
   

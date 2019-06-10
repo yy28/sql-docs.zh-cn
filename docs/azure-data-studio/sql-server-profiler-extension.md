@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: b883883cbe201de32020e86ca2cd38746caf46be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 92c662a05334731d66891e85e7501e38da438e03
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309676"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798003"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 扩展 （预览版）
 
@@ -34,7 +34,6 @@ SQL Server Profiler 扩展 （预览版） 提供了简单的 SQL Server 跟踪�
 ## <a name="install-the-sql-server-profiler-extension"></a>安装 SQL Server Profiler 扩展
 
 1. 若要開啟擴充管理員及存取可用的擴充功能，選取 [擴充功能] 圖示，或選取**檢視**功能表中的**擴充功能**。
-
 2. 选择要查看其详细信息的可用扩展。
 
    ![探查器扩展管理器](media/extensions/sql-server-profiler-extension/profiler-extension.png)

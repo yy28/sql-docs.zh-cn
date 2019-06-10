@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 91a1e59f46d99c4011fff59d0a6ff64caac4a250
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+manager: jroth
+ms.openlocfilehash: a254795952d11c6827a5f70afa3d1202e660e01f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407627"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794158"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>配置 max text repl size 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **max text repl size** 选项指定使用单个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句可以向已复制列或已捕获列添加的 **text****ntext****varchar(max)****nvarchar(max)****varbinary(max)****xml** 和 **image** 数据的最大大小（以字节为单位）。 默认值为 65536 个字节。 值为 -1 表示除了数据类型指定的限制之外，没有大小限制。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **max text repl size** 选项指定使用单个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句可以向已复制列或已捕获列添加的 **text** **ntext** **varchar(max)** **nvarchar(max)** **varbinary(max)** **xml** 和 **image** 数据的最大大小（以字节为单位）。 默认值为 65536 个字节。 值为 -1 表示除了数据类型指定的限制之外，没有大小限制。  
   
  **本主题内容**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "56407627"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置 max text repl size 选项之后](#FollowUp)  
+-   **跟进：** [在配置 max text repl size 选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -47,16 +47,16 @@ ms.locfileid: "56407627"
   
 -   此选项适用于事务复制和变更数据捕获。 当将服务器配置为具有事务复制功能和变更数据捕获功能时，指定的值将适用于这两项功能。 快照复制和合并复制将会忽略此选项。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>配置 max text repl size 选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“高级”** 节点。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "56407627"
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>配置 max text repl size 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `max text repl size` 选项的值配置为 `-1`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `max text repl size` 选项的值配置为 `-1`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

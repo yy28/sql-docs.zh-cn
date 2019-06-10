@@ -24,20 +24,20 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 50c62db9ef3d635f8486285aef75f6e3d9bfc06c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0c976f3a2200294ca2a0577e01b9bd60084794d7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534841"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794668"
 ---
 # <a name="about-log-shipping-sql-server"></a>关于日志传送 (SQL Server)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用日志传送，可以自动将“主服务器”实例上“主数据库”内的事务日志备份发送到单独“辅助服务器”实例上的一个或多个“辅助数据库”。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器 ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用日志传送，可以自动将“主服务器”  实例上“主数据库”  内的事务日志备份发送到单独“辅助服务器”  实例上的一个或多个“辅助数据库”  。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器  ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
   
  **本主题内容：**  
   
@@ -119,7 +119,7 @@ ms.locfileid: "52534841"
 ### <a name="a-typical-log-shipping-configuration"></a>典型日志传送配置  
  下图显示了具有主服务器实例、三个辅助服务器实例和一个监视服务器实例的日志传送配置。 此图阐释了备份作业、复制作业以及还原作业所执行步骤，如下所示：  
   
-1.  主服务器实例执行备份作业以在主数据库上备份事务日志。 然后，该服务器实例将日志备份放入主日志备份文件（此文件将被发送到备份文件夹中）。  在这个图中，备份文件夹位于共享目录“备份共享”中。  
+1.  主服务器实例执行备份作业以在主数据库上备份事务日志。 然后，该服务器实例将日志备份放入主日志备份文件（此文件将被发送到备份文件夹中）。  在这个图中，备份文件夹位于共享目录“备份共享”中  。  
   
 2.  全部三个辅助服务器实例都执行其各自的复制作业，以将主日志备份文件复制到它本地的目标文件夹中。  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 9dfc37d9dfb4cac8c30debf29890e2369cd8785b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042436"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798145"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "59042436"
 > [!IMPORTANT]  
 >  另外，确保已正确配置了您的环境以连接到可用性组。 有关详细信息，请参阅 [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
-###  <a name="ComputerRecommendations"></a> 针对承载可用性副本的计算机的建议（Windows 系统）  
+##  <a name="ComputerRecommendations"></a> 针对承载可用性副本的计算机的建议（Windows 系统）  
   
 -   **的系统：** 对于给定的可用性组，所有可用性副本都应在可处理同样的工作负荷的相当的系统上运行。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59042436"
   
 3.  使用 **Get-ClusterResource** cmdlet 查找网络名称资源，然后使用 **Set-ClusterParameter** cmdlet 设置 **HostRecordTTL** 值，如下所示：  
   
-     Get-ClusterResource “\<NetworkResourceName>” | Set-ClusterParameter HostRecordTTL \<TimeInSeconds>  
+     Get-ClusterResource “\<NetworkResourceName>” | Set-ClusterParameter HostRecordTTL \<TimeInSeconds>    
   
      下面的 PowerShell 示例为名为 `SQL Network Name (SQL35)` 的网络名称资源将 HostRecordTTL 设置为 300 秒。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "59042436"
   
 
 ##  <a name="ServerInstance"></a> SQL Server 实例先决条件和限制  
- 每个可用性组均要求称作“可用性副本” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的一组故障转移伙伴，它们由  的实例承载。 给定的服务器实例可以是独立实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI)。  
+  每个可用性组均要求称作“可用性副本” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的一组故障转移伙伴，它们由  的实例承载。 给定的服务器实例可以是独立实例  或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例  (FCI)。  
   
  **本节内容：**  
   
@@ -175,7 +175,7 @@ ms.locfileid: "59042436"
 |任务|所需的权限|  
 |----------|--------------------------|  
 |创建数据库镜像端点|要求具有 CREATE ENDPOINT 权限，或者具有 **sysadmin** 固定服务器角色的成员身份。  此外，还要求 CONTROL ON ENDPOINT 权限。 有关详细信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。|  
-|启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|要求本地计算机上“管理员”组中的成员身份以及对 WSFC 的完全控制。|  
+|启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|要求本地计算机上“管理员”组中的成员身份以及对 WSFC 的完全控制  。|  
   
 ###  <a name="RelatedTasksSI"></a> 相关任务（服务器实例）  
   
@@ -213,15 +213,15 @@ ms.locfileid: "59042436"
 > [!NOTE]  
 > 故障转移群集实例支持群集共享卷 (CSV)。 有关 CSV 的详细信息，请参阅 [了解故障转移群集中的群集共享卷](https://technet.microsoft.com/library/dd759255.aspx)。  
   
--   FCI 的群集节点仅可以托管给定可用性组的一个副本：如果在 FCI 上添加可用性副本，作为 FCI 的可能所有者的 WSFC 节点不能托管同一个可用性组的另一个副本。  若要避免可能出现的冲突，建议配置故障转移群集实例的可能所有者。 这将阻止可能会导致单个 WSFC 尝试在同一可用性组上同时承载两个可用性副本的情况的发生。
+-   FCI 的群集节点仅可以托管给定可用性组的一个副本  ：如果在 FCI 上添加可用性副本，作为 FCI 的可能所有者的 WSFC 节点不能托管同一个可用性组的另一个副本。  若要避免可能出现的冲突，建议配置故障转移群集实例的可能所有者。 这将阻止可能会导致单个 WSFC 尝试在同一可用性组上同时承载两个可用性副本的情况的发生。
   
      此外，其他每个副本都必须由驻留在同一个 Windows Server 故障转移群集中其他群集节点上的 SQL Server 2016 实例托管。 唯一的例外是在迁移到另一个群集时，一个可用性组可能会暂时跨两个群集。 
 
   >[!WARNING]
-  > 使用故障转移群集管理器将托管可用性组的故障转移群集实例移动到已在托管同一个可用性组副本的节点，可能会导致可用性组副本丢失，使其无法在目标节点上重新联机。 故障转移群集的单个节点不能托管同一个可用性组的多个副本。 有关如何发生这种情况以及如何恢复的详细信息，请参阅博客[在可用性组中意外删除副本](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)。 
+  > 使用故障转移群集管理器将托管可用性组的故障转移群集实例  移动到已  在托管同一个可用性组副本的节点，可能会导致可用性组副本丢失，使其无法在目标节点上重新联机。 故障转移群集的单个节点不能托管同一个可用性组的多个副本。 有关如何发生这种情况以及如何恢复的详细信息，请参阅博客[在可用性组中意外删除副本](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)。 
 
   
--   FCI 不支持可用性组自动故障转移：FCI 不支持通过可用性组来自动进行故障转移，因此只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
+-   FCI 不支持可用性组自动故障转移  ：FCI 不支持通过可用性组来自动进行故障转移，因此只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
   
 -   **更改 FCI 网络名称：** 如果你需要更改托管可用性副本的 FCI 的网络名称，则需要从副本的可用性组中删除它，然后将它添加回可用性组中。 您不能删除主副本，因此，如果您在重命名承载主副本的 FCI，则应故障转移到某一辅助副本，然后删除之前的主副本并将其添加回去。 请注意，重命名 FCI 可能会更改其数据库镜像端点的 URL。 当您添加副本时，请确保指定当前端点的 URL。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "59042436"
   
 ###  <a name="RestrictionsAG"></a> 限制（可用性组）  
   
--   可用性副本必须由一个 WSFC 的不同节点承载：对于某个给定可用性组，可用性副本必须由在同一 WSFC 的不同节点上运行的服务器实例承载。 唯一的例外是在迁移到另一个群集时，一个可用性组可能会暂时跨两个群集。  
+-   可用性副本必须由一个 WSFC 的不同节点承载  ：对于某个给定可用性组，可用性副本必须由在同一 WSFC 的不同节点上运行的服务器实例承载。 唯一的例外是在迁移到另一个群集时，一个可用性组可能会暂时跨两个群集。  
   
     > [!NOTE]  
     >  同一物理计算机上的多个虚拟机可分别为同一可用性组承载可用性副本，因为每个虚拟机都充当一个单独的计算机。  
@@ -267,7 +267,7 @@ ms.locfileid: "59042436"
   
 -   **可用性副本：** 每个可用性组都支持一个主副本和最多八个辅助副本。 所有副本都可在异步提交模式下运行，或最多三个副本可在同步提交模式下运行（具有两个同步辅助副本的一个主副本）。  
   
--   每台计算机的可用性组和可用性数据库的最大数目：可以在计算机（VM 或物理机）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 已测试每台物理计算机多达 10 个 AG 和 100 个数据库，但这不是绑定限制。 根据服务器上的硬件规范和工作负载，可以在 SQL Server 的实例上放置更多数据库和可用性组。 系统过载的信号可能包括但不限于工作线程用尽、可用性组系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
+-   每台计算机的可用性组和可用性数据库的最大数目  ：可以在计算机（VM 或物理机）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 已测试每台物理计算机多达 10 个 AG 和 100 个数据库，但这不是绑定限制。 根据服务器上的硬件规范和工作负载，可以在 SQL Server 的实例上放置更多数据库和可用性组。 系统过载的信号可能包括但不限于工作线程用尽、可用性组系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
   
 -   **不要使用故障转移群集管理器来操作可用性组：**  
   
@@ -356,11 +356,11 @@ ms.locfileid: "59042436"
   
 -   如果辅助数据库的文件路径（包括驱动器号）不同于相应主数据库的路径，则以下限制适用：  
   
-    -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：不支持“完全”选项（在[选择初始数据同步页](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md)页面上），  
+    -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：  不支持“完全”选项（在[选择初始数据同步页](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md)页面上），   
   
     -   **RESTORE WITH MOVE：** 若要创建辅助数据库，在承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上数据库文件必须是 RESTORED WITH MOVE。  
   
-    -   对添加文件操作的影响：以后针对主要副本的添加文件操作在辅助数据库上可能会失败。 此失败可能导致辅助数据库暂停。 而这又会导致辅助副本进入“非同步”状态。  
+    -   对添加文件操作的影响  ：以后针对主要副本的添加文件操作在辅助数据库上可能会失败。 此失败可能导致辅助数据库暂停。 而这又会导致辅助副本进入“非同步”状态。  
   
         > [!NOTE]  
         >  有关如何处理失败的添加文件操作的详细信息，请参阅[添加文件操作失败的故障排除（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)。  

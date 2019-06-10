@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 996bf79c296ff11c708c687f5a084d73b0bcde95
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63152505"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794327"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析创建的数据迁移助手使用 Power BI 的合并的评估报表
 
@@ -60,7 +60,7 @@ ms.locfileid: "63152505"
 
    ![编辑查询菜单上，数据源设置](../dma/media/DataSourceSettings.png)
 
-1. 选择**更改源...**，然后键入服务器和数据库的值。
+1. 选择**更改源...** ，然后键入服务器和数据库的值。
 
    ![更改源、 服务器和数据库](../dma/media/ChangeSource.png)
 
@@ -118,7 +118,7 @@ ms.locfileid: "63152505"
 
 ![Azure 功能奇偶校验报表](../dma/media/AzureFeaturesParityReport.png)
 
-使用此报表突出显示 *实例级别功能* 不受 Azure SQL 数据库 V12。
+使用此报表突出显示*实例级别功能*不受 Azure SQL 数据库 V12。
 
 当在漏斗图中选择一项功能时，在底部的数据列出了实例和数据库功能不受支持的。 在以下示例中，选择此功能：**可用性组配置不支持始终在 Azure SQL 数据库中** 。  
 
@@ -137,7 +137,7 @@ ms.locfileid: "63152505"
 
 ![只读数据库不能为升级问题](../dma/media/ReadOnlyDatabases.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据迁移助手概述](../dma/dma-overview.md)
 

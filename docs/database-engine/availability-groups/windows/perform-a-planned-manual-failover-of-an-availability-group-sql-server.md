@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 674af28b550a7c40837755a301f2c0c2594c8486
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212156"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798185"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的计划手动故障转移 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主题说明如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行手动故障转移而不丢失数据（计划的手动故障转移）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移类似于所有 AlwaysOn 可用性组的故障转移，将次要副本转换为主要角色。 故障转移同时会将先前的主要副本转换为次要角色。  
+本主题说明如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行手动故障转移而不丢失数据（计划的手动故障转移  ）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移类似于所有 AlwaysOn 可用性组的故障转移，将次要副本转换为主要角色。 故障转移同时会将先前的主要副本转换为次要角色。  
   
 仅当主要副本和目标次要副本在同步提交模式下运行且当前同步时，才支持计划的手动故障转移。 计划的手动故障转移暂留辅助数据库中的所有数据，这些数据库加入目标次要副本上的可用性组。 将以前的主要副本转换为次要角色后，其数据库将成为辅助数据库。 然后它们开始与新的主数据库同步。 在将其全部转换为 SYNCHRONIZED 状态之后，新的辅助副本将变成适于充当将来计划的手动故障转移的目标。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "53212156"
 -   目标次要副本当前必须与主要副本同步。 此次要副本上的所有辅助数据库都必须已联接到可用性组。 它们还必须与自己对应的主数据库同步（即本地辅助数据库必须为 SYNCHRONIZED）。 
   
     > [!TIP] 
-    >  要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 动态管理视图中的 **is_failover_ready** 列。 或查看 [AlwaysOn 组仪表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的“故障转移就绪”列。 
+    >  要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 动态管理视图中的 **is_failover_ready** 列。 或查看 [AlwaysOn 组仪表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的“故障转移就绪”  列。 
 -   只有目标辅助副本支持该任务。 您必须连接到承载目标辅助副本的服务器实例。 
   
-###  <a name="Security"></a> 安全性 
+###  <a name="Security"></a> Security 
   
-####  <a name="Permissions"></a> Permissions 
+####  <a name="Permissions"></a> 权限 
  需要具有针对可用性组的 ALTER AVAILABILITY GROUP 权限。 还要求具备 CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。 
   
 ##  <a name="SSMSProcedure"></a>使用 SQL Server Management Studio 
@@ -66,7 +66,7 @@ ms.locfileid: "53212156"
   
 2. 依次展开 **“AlwaysOn 高可用性”** 节点和 **“可用性组”** 节点。 
   
-3. 右键单击要进行故障转移的可用性组，然后选择“故障转移”。 
+3. 右键单击要进行故障转移的可用性组，然后选择“故障转移”  。 
   
 4. “故障转移可用性组向导”随即启动。 有关详细信息，请参阅[使用故障转移可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)。 
   
@@ -79,7 +79,7 @@ ms.locfileid: "53212156"
   
      ALTER AVAILABILITY GROUP *group_name* FAILOVER 
   
-     在该语句中，group_name 是可用性组的名称。 
+     在该语句中，group_name  是可用性组的名称。 
   
      以下示例将 *MyAg* 可用性组手动故障转移到连接的次要副本： 
   
@@ -90,14 +90,14 @@ ms.locfileid: "53212156"
 ##  <a name="PowerShellProcedure"></a>使用 PowerShell 
  对可用性组执行手动故障转移： 
   
-1. 将目录 (cd) 更改为托管目标次要副本的服务器实例。 
+1. 将目录 (cd  ) 更改为托管目标次要副本的服务器实例。 
   
 2. 使用 **Switch-SqlAvailabilityGroup** cmdlet。 
   
     > [!NOTE] 
     >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] cmdlet。 有关详细信息，请参阅[获取有关 SQL Server PowerShell 的帮助](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。 
   
-     下面的示例将 MyAg 可用性组手动故障转移到具有指定路径的次要副本： 
+     下面的示例将 MyAg  可用性组手动故障转移到具有指定路径的次要副本： 
   
     ```  
     Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg  

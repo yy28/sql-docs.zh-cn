@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5a4257b8ef9977f3673e961855c7dc48b9abb064
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: d1dbd724cca4025d34b673e3181ff7be3fdb9c89
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487334"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776613"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>从 .dqs 文件导入知识库
 
@@ -44,27 +44,27 @@ ms.locfileid: "65487334"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建知识库”**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建知识库”** 。  
   
 3.  输入该知识库的名称。  
   
-4.  单击 **“知识库创建自”** 的向下箭头，然后选择 **“自 DQS 文件导入”**。  
+4.  单击 **“知识库创建自”** 的向下箭头，然后选择 **“自 DQS 文件导入”** 。  
   
-5.  对于 **“选择数据文件”**，单击 **“浏览”**。  
+5.  对于 **“选择数据文件”** ，单击 **“浏览”** 。  
   
-6.  在 **“从数据文件导入”** 对话框中，转到包含要导入的 .dqs 文件的文件夹，然后单击该文件的名称。 单击 **“打开”**。  
+6.  在 **“从数据文件导入”** 对话框中，转到包含要导入的 .dqs 文件的文件夹，然后单击该文件的名称。 单击 **“打开”** 。  
   
 7.  验证 **“域”** 列表中显示正确的知识库和域。  
   
-8.  选择要执行的活动，然后单击 **“创建”**。  
+8.  选择要执行的活动，然后单击 **“创建”** 。  
   
-9. 在 **“导入知识库”** 对话框中，验证状态行是否指示导入已完成。 单击“确定” 。  
+9. 在 **“导入知识库”** 对话框中，验证状态行是否指示导入已完成。 单击“确定”  。  
   
-10. 完成知识发现、域管理或需要执行的匹配策略任务，然后单击 **“完成”**。  
+10. 完成知识发现、域管理或需要执行的匹配策略任务，然后单击 **“完成”** 。  
   
 11. 单击 **“发布”** 发布知识库中的知识，或单击 **“否”** 不发布知识。  
   
-12. 如果您发布知识库，则单击 **“确定”**。  
+12. 如果您发布知识库，则单击 **“确定”** 。  
   
 13. 在 Data Quality Services 主页中，验证该知识库是否列在 **“最近的知识库”** 下。  
   

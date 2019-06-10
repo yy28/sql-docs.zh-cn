@@ -12,28 +12,28 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d19f811faffda3584287ec29a4e4c03349586949
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: c08b28bfd888345e1fa5a88ef2a0e3d8aa912ac7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214808"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798242"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>选项（SQL Server AlwaysOn、“面板”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“选项”对话框的“SQL Server AlwaysOn 面板”页配置 AlwaysOn 面板。  
+  使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“选项”对话框的“SQL Server AlwaysOn 面板”页配置 AlwaysOn 面板。    
   
  **若要访问此页，请执行以下操作：**  
   
- 在“工具”菜单上，单击“选项”，展开 **SQL Server AlwaysOn** 文件夹，然后单击“面板”。  
+ 在“工具”  菜单上，单击“选项”  ，展开 **SQL Server AlwaysOn** 文件夹，然后单击“面板”  。  
   
 ## <a name="on-this-page"></a>在此页上  
  **启用自动刷新。**  
  单击此选项可以启用自动刷新。 相应的选项包括：  
   
--   “刷新时间间隔（秒）”字段显示仪表板刷新的秒数。 默认值为 30。 启用自动刷新时，您可以编辑此字段以更改刷新间隔。  
+-   “刷新时间间隔（秒）”  字段显示仪表板刷新的秒数。 默认值为 30。 启用自动刷新时，您可以编辑此字段以更改刷新间隔。  
   
 -   **“连接重试次数”** 显示面板尝试连接到承载着面板所监视的可用性组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的次数。 默认值为 65535。 启用自动刷新时，您可以编辑此字段以更改连接重试次数。  
   

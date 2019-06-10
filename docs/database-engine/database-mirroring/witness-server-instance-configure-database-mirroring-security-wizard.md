@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6f1ff26d20e549d3bba46409a3a85cee326e1d35
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e8d038947ac511d9b271fc5b4e07ffabcc47cc96
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215724"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795064"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>见证服务器实例（配置数据库镜像安全向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "53215724"
   
 ## <a name="options"></a>选项  
  **见证服务器实例**  
- 如果已指定见证服务器实例（在“数据库属性”对话框的“镜像”页中），则将显示该实例（有关详细信息，请参阅[数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)）。  
+ 如果已指定见证服务器实例（在  “数据库属性”对话框的  “镜像”页中），则将显示该实例（有关详细信息，请参阅[数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)）。  
   
  否则，此列表框显示当前服务器的名称。 请注意，见证服务器实例不能与主体或镜像服务器实例相同。  
   
  **“连接”**  
- 如果尚未指定见证服务器实例，请单击“连接”。 这将显示 **“连接到服务器”** 对话框，在其中可以指定服务器实例并建立连接。  
+ 如果尚未指定见证服务器实例，请单击  “连接”。 这将显示 **“连接到服务器”** 对话框，在其中可以指定服务器实例并建立连接。  
   
- 如果已经指定实例，但向导缺少一个具有足够权限检查端点存在性的连接，请单击 **“连接”**。 这将显示“连接到服务器”对话框，其中列出了你预先选择的服务器实例，而且此时你已无法更换该实例。 指定具有足够权限的域帐户，并连接到服务器实例。  
+ 如果已经指定实例，但向导缺少一个具有足够权限检查端点存在性的连接，请单击 **“连接”** 。 这将显示“连接到服务器”  对话框，其中列出了你预先选择的服务器实例，而且此时你已无法更换该实例。 指定具有足够权限的域帐户，并连接到服务器实例。  
   
 > [!NOTE]  
 >  与服务器实例建立连接时，配置数据库镜像安全向导将使用 **“连接到服务器”** 对话框中提供的凭据。 这些凭据与镜像会话的凭据不同，镜像会话使用启动帐户（其中服务器实例作为服务运行）的凭据。  

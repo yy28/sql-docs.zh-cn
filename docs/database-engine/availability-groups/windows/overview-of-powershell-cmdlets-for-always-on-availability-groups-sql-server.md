@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b4f60098f7410b847e2a420ef899e4abc8b2ef94
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 87e18202c821ee56c403150af246dfbc21ef207d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203766"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798213"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Always On 可用性组的 PowerShell Cmdlet 概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,22 +29,6 @@ ms.locfileid: "53203766"
   
 > [!NOTE]  
 >  一旦成功启动某操作，PowerShell cmdlet 即告完成。 这并不表示要执行的工作（例如可用性组的故障转移）已经完成。 对一系列操作编写脚本时，您可能必须检查这些操作的状态，并等待这些操作完成。  
-  
- 本主题介绍了用于执行下列各组任务的 cmdlet：  
-  
--   [为 Always On 可用性组配置服务器实例](#ConfiguringServerInstance)  
-  
--   [备份和还原数据库和事务日志](#BnRcmdlets)  
-  
--   [创建和管理可用性组](#DeployManageAGs)  
-  
--   [创建和管理可用性组侦听器](#AGlisteners)  
-  
--   [创建和管理可用性副本](#DeployManageARs)  
-  
--   [添加和管理可用性数据库](#DeployManageDbs)  
-  
--   [监视可用性组的运行状况](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  有关描述如何使用 cmdlet 来执行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 任务的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 联机丛书中的主题列表，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)的“相关任务”一节。  
@@ -67,7 +51,7 @@ ms.locfileid: "53203766"
 |[**Restore-SqlDatabase**](/powershell/module/sqlserver/restore-sqldatabase)|还原备份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载辅助副本的服务器实例）<br /><br />
 
   >[!Important]
-  >准备辅助数据库时，必须在每个 Restore-SqlDatabase 命令中使用 -NoRecovery 参数。 
+  >准备辅助数据库时，必须在每个 Restore-SqlDatabase 命令中使用 -NoRecovery 参数   。 
   
  有关使用这些 cmdlet 来准备辅助数据库的信息，请参阅[为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   

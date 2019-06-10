@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 了解有关 SQL Server 2019 大数据群集 （预览版），在 Kubernetes 上运行并提供 HDFS 数据以及关系的向外缩放选项。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860249"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801888"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>什么是 SQL Server 大数据群集？
 
@@ -61,7 +61,7 @@ SQL Server 大数据群集启用 AI 和机器学习的数据存储在 HDFS 存�
 
 [群集管理员门户](cluster-admin-portal.md)是群集中将显示状态和运行状况的 pod 的 web 界面。 它还提供用于日志分析和监视仪表板的链接到其他仪表板。
 
-Azure Data Studio 可用于大数据群集上执行各种任务。 这新启用**SQL Server 2019 扩展 （预览版）**。 此扩展提供了：
+Azure Data Studio 可用于大数据群集上执行各种任务。 这新启用**SQL Server 2019 扩展 （预览版）** 。 此扩展提供了：
 
 - 有关常见管理任务的内置代码段。
 - 浏览 HDFS，功能将文件上传、 预览文件，并创建目录。

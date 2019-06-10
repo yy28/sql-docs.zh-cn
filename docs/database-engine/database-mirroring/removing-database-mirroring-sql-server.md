@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc62b55409456fbe44cc978e14f6d767f714b50b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0fc3f9e0c52223d15a1343df8a25d988532ae612
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666205"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795236"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ead50c19fa0729f136ed2806bcb4030cc7e3b852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f75d66d6966a365a7b343a2e3c21427807a3acab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770235"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794566"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>查看日志传送报告 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "47770235"
   
 1.  连接到监视服务器、主服务器或辅助服务器。  
   
-2.  在对象资源管理器中，右键单击服务器实例，依次指向“报表”和“标准报表”。  
+2.  在对象资源管理器中，右键单击服务器实例，依次指向“报表”  和“标准报表”  。  
   
-3.  单击 **“事务日志传送状态”**。  
+3.  单击 **“事务日志传送状态”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [监视日志传送 (Transact-SQL)](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
