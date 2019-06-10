@@ -8189,16 +8189,20 @@
               href: ../azure-data-studio/sql-server-2019-extension.md
             - name: SQL Server 代理（预览版）
               href: ../azure-data-studio/sql-server-agent-extension.md
+            - name: SQL Server 中央管理服务器扩展（预览版）
+              href: ../azure-data-studio/sql-server-cms-extension.md
             - name: SQL Server dacpac 扩展（预览版）
               href: ../azure-data-studio/sql-server-dacpac-extension.md
             - name: SQL Server 导入（预览版）
               href: ../azure-data-studio/sql-server-import-extension.md
             - name: SQL Server Profiler（预览版）
               href: ../azure-data-studio/sql-server-profiler-extension.md
-            - name: SandDance 扩展（预览版）
-              href: ../azure-data-studio/sanddance-extension.md
+            - name: 架构比较扩展（预览版）
+              href: ../azure-data-studio/schema-compare-extension.md
             - name: PowerShell 扩展
               href: ../azure-data-studio/powershell-extension.md
+            - name: SandDance 扩展（预览版）
+              href: ../azure-data-studio/sanddance-extension.md
         - name: 扩展构建
           items:
             - name: 扩展性概述
@@ -9367,8 +9371,6 @@
               href: ../powershell/sql-server-powershell.md
             - name: SQL Server 管理对象 (SMO)
               href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
-            - name: Transact-SQL 引用（数据库引擎）
-              href: ../t-sql/language-reference.md
             - name: SSMS 环境
               items:
                 - name: SSMS 环境
@@ -15006,7 +15008,7 @@
           href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
         - name: systranschemas (T-SQL)
           href: ../relational-databases/system-views/systranschemas-transact-sql.md
-    - name: Transact-SQL (T-SQL)
+    - name: Transact-SQL (T-SQL) 参考
       displayName: tsql
       href: ../t-sql/language-reference.md
       items:

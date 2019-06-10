@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7cdcffb40c1c0e15a1be56a4484edade6b5f1463
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+manager: jroth
+ms.openlocfilehash: 7abd7c83f5f6259ad9415f1e790088f98567f06c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955978"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767453"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "56955978"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尽力使 DAC 连接成功，但在非常特殊的情况下也可能会出现连接失败。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。   
   
 ## <a name="connecting-with-dac"></a>使用 DAC 连接  
  默认情况下，只能从服务器上运行的客户端建立连接。 不允许进行网络连接，除非它们是使用带 [remote admin connections 选项](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)的 sp_configure 存储过程配置的。  
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 角色的成员可以使用 DAC 进行连接。  
   
- 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 还可以将前缀 admin: 连接到格式为 sqlcmd -S admin:<instance_name> 的实例名。 也可以通过连接到 admin:\<instance_name>，从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器启动 DAC。  
+ 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 还可以将前缀 **admin:** 连接到格式为 **sqlcmd -S admin:<*instance_name*>** 的实例名。 也可以通过连接到 **admin:\<*instance_name*>** ，从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器启动 DAC。  
   
 ## <a name="restrictions"></a>限制  
  由于 DAC 仅用于在极少数情况下诊断服务器问题，因此对连接有一些限制：  
@@ -76,7 +76,7 @@ ms.locfileid: "56955978"
   
 -   基本 DBCC 命令，例如 [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)、[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)、[DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) 和 [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)。 请勿运行需要消耗大量资源的命令，如 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) 或 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL\<spid> 命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL\<spid>  命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
   
     -   请通过查询 `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`来验证 SPID 是否已被实际终止。 如果没有返回任何行，则表明会话已被终止。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "56955978"
   
  DAC 端口由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时动态分配。 当连接到默认实例时，DAC 会避免在连接时对 SQL Server Browser 服务使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解决协议 (SSRP) 请求。 它先通过 TCP 端口 1434 进行连接。 如果失败，则通过 SSRP 调用来获取端口。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器没有侦听 SSRP 请求，则连接请求将返回错误。 若要了解 DAC 所侦听的端口号，请参阅错误日志。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为接受远程管理连接，则必须使用显式端口号启动 DAC：  
   
- sqlcmd -S tcp:\<server>,\<port>  
+ sqlcmd -S tcp:\<server>,\<port>    
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志列出了 DAC 的端口号，默认情况下为 1434。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为只接受本地 DAC 连接，请使用以下命令和环回适配器进行连接：  
   
