@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 577b1afce1fc90db91beb29ff0e7e9a1f1a87cde
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: e70d480171ff6ff29590ee70bfff1509af94c8a4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487543"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776574"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>从 .dqs 文件导入域
 
@@ -46,9 +46,9 @@ ms.locfileid: "65487543"
   
 3.  单击 **“从数据文件导入域”** 图标。  
   
-4.  在 **“从数据文件导入”** 对话框中，转到要从中导入文件的文件夹，选中该文件（DQS 文件类型），然后单击 **“打开”**。  
+4.  在 **“从数据文件导入”** 对话框中，转到要从中导入文件的文件夹，选中该文件（DQS 文件类型），然后单击 **“打开”** 。  
   
-5.  在 **“导入域”** 对话框中，单击 **“确定”**。  
+5.  在 **“导入域”** 对话框中，单击 **“确定”** 。  
   
     > [!NOTE]  
     >  仅当您要从中导入的 .dqs 文件仅包含一个单一域或一个复合域（包含多个单个域）时，导入操作才会成功。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fa750d7cba97b0b81f74232c7d617846d62951cb
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 76c3cc2b3165ce1d607fa3896c187ebd5ec1e87b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487367"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769022"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>将域导出到 .dqs 文件
 
@@ -49,11 +49,11 @@ ms.locfileid: "65487367"
   
 3.  在 **“域管理”** 页（任意选项卡处于“选中”状态）中，在 **“域”** 列表中选择单一域或复合域。  
   
-4.  单击域列表上方的 **“导出知识库数据”** 图标，然后单击 **“导出域”**。 或者，还可以在 **“域”** 列表中右键单击域，指向 **“导出”**，然后单击 **“导出域”**。  
+4.  单击域列表上方的 **“导出知识库数据”** 图标，然后单击 **“导出域”** 。 或者，还可以在 **“域”** 列表中右键单击域，指向 **“导出”** ，然后单击 **“导出域”** 。  
   
-5.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留默认名称，将“DQS 数据文件 (\*.dqs)”保留为“另存为”类型，然后单击“保存”。  
+5.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留默认名称，将“DQS 数据文件 (\*.dqs)”保留为“另存为”类型，然后单击“保存”     。  
   
-6.  在 **“导出域”** 对话框中，验证该对话框中的状态行是否指示导出已完成。 单击“确定” 。  
+6.  在 **“导出域”** 对话框中，验证该对话框中的状态行是否指示导出已完成。 单击“确定”  。  
   
 ##  <a name="FollowUp"></a> 跟进：将域导出到 .dqs 文件后  
  将域导出到 .dqs 文件后，您可以将该域导入到另一个知识库。  

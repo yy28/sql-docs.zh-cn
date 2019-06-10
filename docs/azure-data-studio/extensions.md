@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7cff38bc9c6a0738cea6ae2f713aa60f04c9de0d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: b2ed90bc8760cf31bda9685e66abe7bcef29536e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105053"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770973"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充功能
 
@@ -28,7 +28,6 @@ ms.locfileid: "65105053"
 ## <a name="add-azure-data-studio-extensions"></a>添加 Azure Data Studio 扩展
 
 1. 若要開啟擴充管理員及存取可用的擴充功能，選取 [擴充功能] 圖示，或選取**檢視**功能表中的**擴充功能**。
-
 2. 选择要查看其详细信息的可用扩展。
 
    ![扩展管理器](media/extensions/extension-manager.png)

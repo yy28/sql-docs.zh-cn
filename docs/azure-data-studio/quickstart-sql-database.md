@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+manager: jroth
+ms.openlocfilehash: efff2a0ac451afb869451735545be6cc50ad15f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620352"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778288"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入门：使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]进行连接和查询 Azure SQL 数据库
 
@@ -51,13 +51,13 @@ ms.locfileid: "65620352"
    | **身份验证** | SQL 登录名| 本教程使用 SQL 身份验证。 |
    | **用户名** | 服务器管理员帐户用户名 | 从用来创建服务器的帐户用户名。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户密码 | 从用来创建服务器的帐户密码。 |
-   | **是否保存密码？** |  是或否 | 选择**是**如果不想每次都输入密码。 |
+   | **是否保存密码？** | 是或否 | 选择**是**如果不想每次都输入密码。 |
    | **数据库名称** | *将保留为空* | 仅连接到这里的服务器。 |
    | **服务器组** | 选择<Default> | 可以将此字段设置为你创建的特定服务器组。 | 
 
    ![新的连接图标](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 选择“连接”。
+3. 选择“连接”  。
 
 4. 如果你的服务器的防火墙规则允许 Azure Data Studio，若要连接，没有**创建新的防火墙规则**窗体将打开。 完成窗体以创建新的防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
