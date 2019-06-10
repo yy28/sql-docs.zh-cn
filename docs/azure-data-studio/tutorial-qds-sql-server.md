@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfd48e17e4d9216d0b0bd23c3395acfd69516c67
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 10795ae2e1836e018e103a51cb7bea718ec9299f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089689"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797931"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教程：添加*五个最慢的查询*示例小组件设为数据库仪表板
 
@@ -129,7 +129,7 @@ ms.locfileid: "65089689"
 
 ## <a name="view-insight-details-for-more-information"></a>查看见解的详细信息的详细信息
 
-1. 若要查看见解小组件的其他信息，请单击省略号 (**...**)，然后选择右上角**显示详细信息**。
+1. 若要查看见解小组件的其他信息，请单击省略号 ( **...** )，然后选择右上角**显示详细信息**。
 2. 若要显示的项的更多详细信息，请选择中的任意项**图表数据**列表。
 
    ![了解详细信息对话框](./media/tutorial-qds-sql-server/insight-details-dialog.png)
