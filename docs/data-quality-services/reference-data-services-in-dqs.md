@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1a788a9d860f03e4a7ded3bb8d8f494debfcae01
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 998b07cdd8bbe2e01d2b550526b900e254b933e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487830"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787995"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -67,7 +67,7 @@ ms.locfileid: "65487830"
   
 2.  **将知识库中的域/复合域映射到引用数据服务**：将域/复合域映射到步骤 1 中订阅/添加的相应引用数据服务。  
   
-3.  **对数据质量项目中的“清理”活动使用映射域**：在为“清理”活动创建数据质量项目时，请选择包含在步骤 2 中映射到引用数据服务的域/复合域的知识库，然后执行清理活动。  
+3.  **对数据质量项目中的“清理”活动使用映射域**：在为“清理”活动创建数据质量项目时，请选择包含在步骤 2 中映射到引用数据服务的域/复合域的知识库，然后执行清理活动  。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

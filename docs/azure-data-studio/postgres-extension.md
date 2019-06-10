@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-manager: craigg
-ms.openlocfilehash: e25dd1c244766e1409e14747722fe53b3583c9a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f21aaa210303e88fb0f08b362277a81c1f9a5515
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63252837"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778373"
 ---
 # <a name="postgresql-extension-preview"></a>ibanPostgreSQL 扩展（预览版）
 
@@ -42,7 +42,7 @@ PostgreSQL 扩展 （预览版），可连接到、 查询和开发适用于 Pos
 
 2. 在搜索栏中键入 postgresql。 选择的 PostgreSQL 扩展。
 
-3. 选择“安装”。 安装后，选择**重新加载**激活 Azure Data Studio 中的扩展。
+3. 选择“安装”  。 安装后，选择**重新加载**激活 Azure Data Studio 中的扩展。
 
 
 ## <a name="next-steps"></a>后续步骤

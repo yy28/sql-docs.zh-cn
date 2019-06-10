@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 63641dd5b9d9a1e53d68f3be2ae4d5a57cfc1db6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: da99a24ab6729e78220aeed3d18819e7b075603f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015109"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794439"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>查看分析报告中数据库实验助手
 
@@ -28,7 +28,7 @@ ms.locfileid: "66015109"
 
 在 DEA，选择菜单图标。 在展开的菜单中，选择**分析报表**旁边清单图标以打开分析报告窗口。
 
-下**分析报表**，输入运行了分析的数据库的 SQL Server 的计算机的名称。 选择“连接”。 
+下**分析报表**，输入运行了分析的数据库的 SQL Server 的计算机的名称。 选择“连接”  。 
 
 ![连接到现有报表](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
