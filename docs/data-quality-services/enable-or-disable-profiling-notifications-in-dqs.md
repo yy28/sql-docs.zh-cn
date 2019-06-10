@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 22fe475935fdf1a17ac979b32aa6feb77459fa8d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 06e8ddba956c5d6a02ef71457b876f41a797ce64
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487708"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769075"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>在 DQS 中启用或禁用事件探查通知
 
@@ -39,12 +39,12 @@ ms.locfileid: "65487708"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“配置”**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“配置”** 。  
   
 3.  接下来，单击 **“常规设置”** 选项卡。  
   
 4.  取消选中或选中 **“启用通知”** 复选框，以便为 DQS 中的各种活动禁用或启用事件探查通知。  
   
-5.  单击 **“关闭”**。  
+5.  单击 **“关闭”** 。  
   
   

@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: 本文介绍如何使用 Azure 数据 Studio 中的 PROSE 代码加速器来自动生成的常见数据整理任务代码。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935334"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770778"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE 代码 Accelerator 数据 Wrangling
 
