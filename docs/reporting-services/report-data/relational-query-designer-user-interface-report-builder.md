@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d4525674b66a7c9258be78947c5489e3f04bfb2
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 3c6df0bccb7af1d99df2bce82f4211de17f1356a
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571236"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499579"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>关系查询设计器用户界面（报表生成器）
   报表生成器和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器同时提供了图形查询设计器和基于文本的查询设计器，帮助你创建查询，以指定要从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 中为报表数据集检索的数据。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
@@ -78,7 +78,7 @@ ms.locfileid: "65571236"
   
      使用“报表数据”窗格可查看报表数据集的字段集合。 这些字段表示当您查看报表时可在表、图表及其他报表项中显示的数据。  
   
--   **分组和聚合** ：在查询中切换是否使用分组和聚合。 如果您在添加分组和聚合后禁用分组和聚合功能，则将删除所添加的分组和聚合。 文本“(无)”表示没有使用任何分组和聚合。 如果您再次启用分组和聚合功能，则将还原之前的分组和聚合。  
+-   **分组和聚合** ：在查询中切换是否使用分组和聚合。 如果您在添加分组和聚合后禁用分组和聚合功能，则将删除所添加的分组和聚合。 文本“(无)”表示没有使用任何分组和聚合  。 如果您再次启用分组和聚合功能，则将还原之前的分组和聚合。  
   
 -   **删除字段** ：删除所选的字段。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "65571236"
   
 -   **编辑字段** ：打开 **“编辑相关字段”** 对话框，您可以在其中添加和修改表之间的关系。 在左表和右表中选择要联接的字段。 可以将左表和右表中的多个字段联接起来，以便在一个关系中指定多个联接条件。 联接左表和右表的两个字段的名称不必相同。 联接字段的数据类型必须兼容。  
   
--   **删除关系**  删除所选的关系。  
+-   **删除关系**  删除所选的关系。   
   
 -   **上移** 和 **下移** ：在 **“关系”** 列表中向上或向下移动关系。 关系在查询中的放置顺序会影响到查询结果。 关系将按其在 **“关系”** 列表中的显示顺序添加到查询中。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "65571236"
   
 -   **左表** ：显示联接关系中第一个表的名称。  
   
--   **联接类型** ：显示自动生成的查询中所使用的 SQL JOIN 语句的类型。 默认情况下，如果检测到外键约束，将会使用 INNER JOIN。 其他联接类型可以为 LEFT JOIN 或 RIGHT JOIN。 如果不应用所有这些联接类型，则 **“联接类型”** 列将显示 **“无关”**。 不会为无关表创建 CROSS JOIN 联接；相反，您必须通过联接左表和右表中的列来手动创建关系。 有关 JOIN 的类型的详细信息，请参阅 msdn.microsoft.com 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=141687) 中的“JOIN Fundamentals”（JOIN 基础知识）。  
+-   **联接类型** ：显示自动生成的查询中所使用的 SQL JOIN 语句的类型。 默认情况下，如果检测到外键约束，将会使用 INNER JOIN。 其他联接类型可以为 LEFT JOIN 或 RIGHT JOIN。 如果不应用所有这些联接类型，则 **“联接类型”** 列将显示 **“无关”** 。 不会为无关表创建 CROSS JOIN 联接；相反，您必须通过联接左表和右表中的列来手动创建关系。 有关 JOIN 的类型的详细信息，请参阅 msdn.microsoft.com 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=141687) 中的“JOIN Fundamentals”（JOIN 基础知识）。  
   
 -   **右表** ：显示联接关系中第二个表的名称。  
   
@@ -189,12 +189,12 @@ ms.locfileid: "65571236"
 |**运行查询**|运行查询。 “查询结果”窗格显示结果集。|  
   
 ## <a name="understanding-automatically-generated-queries"></a>了解自动生成的查询  
- 当您在“数据库视图”窗格中选择表和列或存储过程及视图时，查询设计器将从数据库架构中检索主键与外键的基本关系。 通过分析这些关系，查询设计器会检测到两个表之间的关系并将联接添加到查询中。 然后，您即可通过添加分组和聚合、添加或更改关系并添加筛选器来修改查询。 若要查看显示要从中检索数据的列、表之间的联接以及任何分组或聚合的查询文本，请单击 **“编辑为文本”**。  
+ 当您在“数据库视图”窗格中选择表和列或存储过程及视图时，查询设计器将从数据库架构中检索主键与外键的基本关系。 通过分析这些关系，查询设计器会检测到两个表之间的关系并将联接添加到查询中。 然后，您即可通过添加分组和聚合、添加或更改关系并添加筛选器来修改查询。 若要查看显示要从中检索数据的列、表之间的联接以及任何分组或聚合的查询文本，请单击 **“编辑为文本”** 。  
   
 ## <a name="text-based-query-designer"></a>基于文本的查询设计器  
- 若要最大限度地控制查询，请使用基于文本的查询设计器。 若要切换到基于文本的查询设计器，请在工具栏中单击“编辑为文本”。 在基于文本的查询设计器中编辑查询之后，就不能再使用关系查询设计器了。 随后，查询将始终在基于文本的查询设计器中打开。 有关详细信息，请参阅[基于文本的查询设计器用户界面（报表生成器）](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
+ 若要最大限度地控制查询，请使用基于文本的查询设计器。 若要切换到基于文本的查询设计器，请在工具栏中单击“编辑为文本”  。 在基于文本的查询设计器中编辑查询之后，就不能再使用关系查询设计器了。 随后，查询将始终在基于文本的查询设计器中打开。 有关详细信息，请参阅[基于文本的查询设计器用户界面（报表生成器）](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [查询设计器（报表生成器）](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [查询设计工具 (SSRS)](query-design-tools-ssrs.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71a78c0e5b7adf88835ff9f4ebf2a6f859fec0fb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577633"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500235"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>为报表服务器注册服务主体名称 (SPN)
   如果要在使用 Kerberos 协议进行相互身份验证的网络中部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并且将报表服务器服务配置为以域用户帐户身份运行，则必须为报表服务器服务创建服务主体名称 (SPN)。  
@@ -40,7 +40,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
  **HTTP** 为服务类。 报表服务器 Web 服务在 HTTP.SYS 中运行。 在为 HTTP 创建 SPN 时，将同时对在 HTTP.SYS（包括承载在 IIS 中的应用程序）中运行的位于同一台计算机上的所有 Web 应用程序授予基于该域用户帐户的票证。 如果这些服务在其他帐户下运行，则身份验证请求将失败。 为避免此问题，请务必将所有 HTTP 应用程序配置为在同一帐户下运行，或考虑为每个应用程序创建主机头，然后为每个主机头单独创建一个 SPN。 配置主机标头时，无论 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置如何都必须更改 DNS。  
   
- 为 \<computername> 和 \<domainname> 指定的值可标识托管报表服务器的计算机的唯一网络地址。 此地址可以是本地主机名，或者完全限定的域名 (FQDN)。 如果只有一个域，可从命令行中省略 \<domainname>。 \<domain-user-account> 是报表服务器服务运行时所使用的用户帐户以及必须注册 SPN 的用户帐户。  
+ 为 \<computername> 和 \<domainname> 指定的值可标识托管报表服务器的计算机的唯一网络地址   。 此地址可以是本地主机名，或者完全限定的域名 (FQDN)。 如果只有一个域，可从命令行中省略 \<domainname>  。 \<domain-user-account  > 是报表服务器服务运行时所使用的用户帐户以及必须注册 SPN 的用户帐户。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>为域用户帐户注册 SPN  
   
@@ -67,7 +67,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 7.  添加 `<RSWindowsNegotiate/>` 作为该部分的第一个项，以启用 Kerberos。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置服务帐户（SSRS 配置管理器）](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+ [配置服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

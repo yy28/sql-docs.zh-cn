@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e75f732fc44ee339cb3d9d47518627f264cb8cc
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: 8f5f520be226d74c2c6530aacee7916aa381dc06
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671333"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778145"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的发行说明
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-本文列出了 Microsoft JDBC Driver for SQL Server 的版本。 对于每个发行版本，将对所做的更改进行命名和说明。
+本文列出了 Microsoft JDBC Driver for SQL Server  的版本。 对于每个发行版本，将对所做的更改进行命名和说明。
 
 ## <a name="722"></a>7.2.2
 
@@ -44,23 +44,23 @@ ms.locfileid: "59671333"
 > 
 > 我们建议更新项目以使用 7.2.2 版本 jar。 有关详细信息，请查看 [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) 和 [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2) 的发行说明。
 
-### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory 托管服务标识 (MSI) 身份验证
+### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory 托管服务标识  (MSI) 身份验证
 
 | MSI 更改 | 详细信息 |
 | :--------- | :------ |
-| 支持 Active Directory 托管服务标识 (MSI) 身份验证模式。 | 此身份验证模式适用于支持“标识”功能的 Azure 资源。<br/><br/>两种类型的托管系统标识 (MSI) 均受驱动程序支持，可获取用于建立安全连接的 accessToken。 |
+| 支持 Active Directory 托管服务标识 (MSI) 身份验证模式。 | 此身份验证模式适用于支持“标识”功能的 Azure 资源。<br/><br/>两种类型的托管系统标识 (MSI) 均受驱动程序支持，可获取用于建立安全连接的 accessToken  。 |
 | 使用此身份验证模式的更多详细信息以及示例应用程序。 | 请参阅[使用 Azure Active Directory 身份验证进行连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>引入开放服务网关协议 (OSGi) 支持
+### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>引入开放服务网关协议  (OSGi) 支持
 
 | OSGi 更改 | 详细信息 |
 | :---------- | :------ |
-| 添加了 DataSourceFactory 实现。 | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory` |
-| 添加了 Activator 实现。 | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
+| 添加了  DataSourceFactory 实现。 | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory` |
+| 添加了  Activator 实现。 | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-sqlservererror-apis"></a>引入 SQLServerError API
+### <a name="introduces-sqlservererror-apis"></a>引入  SQLServerError API
 
 | 错误 API 更改 | 详细信息 |
 | :--------------- | :------ |
@@ -68,21 +68,21 @@ ms.locfileid: "59671333"
 | 其他详细信息。 | 请参阅[处理错误](../../connect/jdbc/handling-errors.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>更新了用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J) 版本 1.6.3
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>更新了用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)  版本 1.6.3
 
 | ADAL4J 更改 | 详细信息 |
 | :------------ | :------ |
 | 已将 ADAL4J 上的 Maven 依赖项更新为版本 1.6.3。 | &nbsp; |
-| 引入了“适用于 AutoRest 的 Java 客户端运行时”作为 Maven 依赖项版本 1.6.5。 | &nbsp; |
+| 引入了“适用于 AutoRest 的 Java 客户端运行时”  作为 Maven 依赖项版本 1.6.5。 | &nbsp; |
 | 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>更新了 Microsoft Azure Key Vault SDK for Java 版本 1.2.0
+### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>更新了 Microsoft Azure Key Vault SDK for Java  版本 1.2.0
 
 | Key Vault SDK 更改 | 详细信息 |
 | :------------------- | :------ |
-| 已将 Microsoft Azure Key Vault SDK for Java 的 Maven 依赖项更新为版本 1.2.0。 | &nbsp; |
-| 引入了 Microsoft Azure SDK for Key Vault WebKey 作为 Maven 依赖项（版本 1.2.0）。 | &nbsp; |
+| 已将 Microsoft Azure Key Vault SDK for Java  的 Maven 依赖项更新为版本 1.2.0。 | &nbsp; |
+| 引入了 Microsoft Azure SDK for Key Vault WebKey  作为 Maven 依赖项（版本 1.2.0）。 | &nbsp; |
 | 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 

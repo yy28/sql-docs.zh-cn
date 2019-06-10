@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a7614848f5f52148ff5e4769c1e4dbfc5be9fe28
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571144"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499936"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>在报表服务器上配置 Windows 身份验证
   默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接受指定 Negotiate 或 NTLM 身份验证的请求。 如果部署中包括使用这些安全提供程序的客户端应用程序和浏览器，则可以使用这些默认值，而无需附加配置。 如果要使用不同的安全提供程序来获取 Windows 集成安全性（例如，如果要直接使用 Kerberos）或者修改了默认值并且要还原原始设置，则可以使用本主题中的信息来指定报表服务器上的身份验证设置。  
@@ -25,7 +25,7 @@ ms.locfileid: "65571144"
   
  同时，必须满足下列附加要求：  
   
--   RSReportServer.config 文件必须具有设置为 RSWindowsNegotiate、RSWindowsKerberos 或 RSWindowsNTLM 的 AuthenticationType。 默认情况下，如果报表服务器服务帐户是 NetworkService 或 LocalSystem，则 RSReportServer.config 文件包含 **RSWindowsNegotiate** 设置；否则使用 **RSWindowsNTLM** 设置。 如果拥有仅使用 Kerberos 身份验证的应用程序，则可以添加 **RSWindowsKerberos** 。  
+-   RSReportServer.config 文件必须具有设置为 RSWindowsNegotiate、RSWindowsKerberos 或 RSWindowsNTLM 的 AuthenticationType     。 默认情况下，如果报表服务器服务帐户是 NetworkService 或 LocalSystem，则 RSReportServer.config 文件包含 **RSWindowsNegotiate** 设置；否则使用 **RSWindowsNTLM** 设置。 如果拥有仅使用 Kerberos 身份验证的应用程序，则可以添加 **RSWindowsKerberos** 。  
   
     > [!IMPORTANT]  
     >  如果将报表服务器服务配置为在域用户帐户下运行，并且没有为该帐户注册服务主体名称 (SPN)，使用 **RSWindowsNegotiate** 将导致 Kerberos 身份验证错误。 有关详细信息，请参阅本主题中的 [连接到报表服务器时纠正 Kerberos 身份验证错误](#proxyfirewallRSWindowsNegotiate) 。  
@@ -51,7 +51,7 @@ ms.locfileid: "65571144"
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-2.  查找 \<Authentication>。  
+2.  查找 \<Authentication>  。  
   
 3.  复制以下最能满足您需要的一个 XML 结构。 可以按任意顺序指定 **RSWindowsNegotiate**、 **RSWindowsNTLM**和 **RSWindowsKerberos** 。 如果要对连接而非每一单个请求进行身份验证，则应启用身份验证持久性。 在身份验证持久性下，在连接期间将允许所有要求身份验证的请求。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "65571144"
           </AuthenticationTypes>  
     ```  
   
-4.  将其粘贴在 \<> 的现有条目上。  
+4.  将其粘贴在 \<> 的现有条目上  。  
   
      注意，不能将 **Custom** 与 **RSWindows** 类型一起使用。  
   
@@ -124,13 +124,13 @@ ms.locfileid: "65571144"
   
  如果启用了 Kerberos 日志记录，则可以检测到该错误。 另一错误症状是多次提示您输入凭据，然后您看到一个空的浏览器窗口。  
   
- 可以通过从配置文件中删除 < RSWindowsNegotiate /> 并重新尝试建立连接来确认你遇到了 Kerberos 身份验证错误。  
+ 可以通过从配置文件中删除 < RSWindowsNegotiate  /> 并重新尝试建立连接来确认你遇到了 Kerberos 身份验证错误。  
   
  确认遇到该问题之后，可以采用下列方法解决它：  
   
 -   在域用户帐户下为报表服务器服务注册 SPN。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
--   将服务帐户更改为在网络服务等内置帐户下运行。 内置帐户将 HTTP SPN 映射到将计算机联网时定义的 Host SPN。 有关详细信息，请参阅[配置服务帐户（SSRS 配置管理器）](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)。  
+-   将服务帐户更改为在网络服务等内置帐户下运行。 内置帐户将 HTTP SPN 映射到将计算机联网时定义的 Host SPN。 有关详细信息，请参阅[配置服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。
   
 -   使用 NTLM。 通常，NTLM 将在 Kerberos 身份验证失败时发挥作用。 若要使用 NTLM，从 RSReportServer.config 文件中删除 **RSWindowsNegotiate** 并验证仅指定了 **RSWindowsNTLM** 。 如果选择此方法，则可以继续将域用户帐户用于报表服务器服务（即使没有为其定义 SPN）。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "65571144"
 ###### <a name="lan-and-proxy-settings-on-the-client"></a>客户端上的 LAN 和代理设置  
  在 Internet Explorer 中设置的 LAN 和代理设置可以确定是否在 Kerberos 上选择 NTLM。 但是，由于各组织的 LAN 和代理设置会有所不同，因此不可能准确确定造成 Kerberos 身份验证错误的设置。 例如，您的组织可能会强制实施将 URL 从 Intranet URL 转换为通过 Internet 连接解析的完全限定域名 URL 的代理设置。 如果将不同的身份验证提供程序用于不同类型的 URL，则您可能会发现原本预计会失败的某些连接竟然成功了。  
   
- 如果遇到您认为因身份验证失败而引起的连接错误，则可以尝试其他 LAN 与代理设置的组合来隔离该问题。 在 Internet Explorer 中，LAN 和代理设置位于“局域网 (LAN) 设置”对话框中，可以通过单击“Internet 选项”的“连接”选项卡上的“LAN 设置”打开该对话框。  
+ 如果遇到您认为因身份验证失败而引起的连接错误，则可以尝试其他 LAN 与代理设置的组合来隔离该问题。 在 Internet Explorer 中，LAN 和代理设置位于“局域网 (LAN) 设置”  对话框中，可以通过单击“Internet 选项”  的“连接”  选项卡上的“LAN 设置”  打开该对话框。  
   
 ## <a name="external-resources"></a>外部资源  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f9b0a0bed30c936065cb262e34db4764345e846
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573138"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500463"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -89,11 +89,11 @@ ms.locfileid: "65573138"
   
 -   基础数据访问接口版本（可选）：某些数据源类型支持多种数据访问接口。 它们可能是同一访问接口的不同版本，或由第三方提供的某一数据访问接口类型的不同实现。 在您配置了数据源后，访问接口名称会频繁出现在连接字符串中。 此列解答问题：“选择了数据源类型后，我要在 **“连接属性”** 对话框中选择哪种数据访问接口？”  
   
--   数据源 \<platform>：得到数据处理扩展插件或数据访问接口支持的目标数据源的数据源平台。 此列解答问题：“此数据处理扩展插件或数据访问接口能否从这类平台上的数据源中检索数据？”  
+-   数据源 \<platform>：得到数据处理扩展插件或数据访问接口支持的目标数据源的数据源平台  。 此列解答问题：“此数据处理扩展插件或数据访问接口能否从这类平台上的数据源中检索数据？”  
   
 -   数据源的版本：DPE 或数据访问接口支持的目标数据源的版本。 此列解答问题：“此数据处理扩展插件或数据访问接口能否从此版本的数据源检索数据？”  
   
--   RS \<platform>：可在其中安装自定义 DPE 或数据提供程序的报表服务器平台和报表创作客户端平台。 任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装都会包含内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]数据处理扩展插件。 自定义数据处理扩展插件或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口必须针对特定平台进行本机编译。 此列解答问题：“此数据处理扩展插件或数据访问接口能否安装在这类平台上？”  
+-   RS \<platform>：可在其中安装自定义 DPE 或数据提供程序的报表服务器平台和报表创作客户端平台  。 任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装都会包含内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]数据处理扩展插件。 自定义数据处理扩展插件或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口必须针对特定平台进行本机编译。 此列解答问题：“此数据处理扩展插件或数据访问接口能否安装在这类平台上？”  
   
 ###  <a name="DataSourcesTable"></a> 数据源的类型  
   
@@ -132,7 +132,7 @@ ms.locfileid: "65573138"
 > [!NOTE]
 >  目前不支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据处理扩展插件。  
   
- 有关报表生成器支持的数据处理扩展插件的详细信息，请参阅 msdn.microsoft.com 上 [报表生成器文档](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 中的 [报表生成器中的数据连接、数据源和连接字符串](https://go.microsoft.com/fwlink/?LinkId=154494) 。  
+ 有关报表生成器支持的数据处理扩展插件的详细信息，请参阅 msdn.microsoft.com 上 [报表生成器文档](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 中的 [报表生成器中的数据连接、数据源和连接字符串](https://go.microsoft.com/fwlink/?LinkId=154494) 。  
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server 数据处理扩展插件  
  数据源类型 **Microsoft SQL Server** 包装并扩展了 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此数据处理扩展插件针对基于 x86 和 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]的平台进行了本机编译并在这些平台上运行。  
@@ -148,9 +148,9 @@ ms.locfileid: "65573138"
 ###  <a name="Azure"></a> Microsoft Azure SQL 数据库处理扩展插件  
  数据源类型 **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 包装并扩展了适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序。  
   
- 在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 中，与此数据扩展插件关联的图形查询设计器是关系查询设计器，而不是用于“Microsoft SQL Server”数据源类型的 Visual Database Tool 设计器。  
+ 在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 中，与此数据扩展插件关联的图形查询设计器是关系查询设计器，而不是用于“Microsoft SQL Server”数据源类型的 Visual Database Tool 设计器  。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自动区分 Microsoft SQL Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 与 Microsoft SQL Server 数据源类型，并打开与该数据源类型关联的图形查询设计器。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自动区分 Microsoft SQL Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 与 Microsoft SQL Server 数据源类型，并打开与该数据源类型关联的图形查询设计器   。  
   
  如果您在图形模式下使用该查询设计器，则会分析查询并可能将其重写。 基于文本的查询设计器也可用于编写查询。 如果希望控制用于查询的精确 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，请使用基于文本的查询设计器。   
   
@@ -173,7 +173,7 @@ ms.locfileid: "65573138"
  您还可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源创建模型。  
   
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
- OLE DB 数据处理扩展插件要求根据要在报表中使用的数据源的版本来选择一个附加数据访问接口层。 如果您未选择特定数据访问接口，系统将提供一个默认接口。 请通过“连接属性”对话框（可通过“数据源”或“共享数据源”对话框中的“编辑”按钮访问）选择特定数据访问接口。  
+ OLE DB 数据处理扩展插件要求根据要在报表中使用的数据源的版本来选择一个附加数据访问接口层。 如果您未选择特定数据访问接口，系统将提供一个默认接口。 请通过“连接属性”对话框（可通过“数据源”或“共享数据源”对话框中的“编辑”按钮访问）选择特定数据访问接口   。  
   
  有关 OLE DB 关联查询设计器详细信息，请参阅 [图形查询设计器用户界面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。 有关 OLE DB 访问接口特定支持的详细信息，请参阅 [知识库中的](https://support.microsoft.com/default.aspx/kb/811241) Visual Studio .NET 设计器工具支持 OLE DB 访问接口特定信息 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
@@ -225,7 +225,7 @@ ms.locfileid: "65573138"
  [返回数据源表](#DataSourcesTable)  
   
 ###  <a name="OracleClient"></a> Oracle 数据处理扩展插件  
- 选择数据源类型 Oracle 时，即选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件，该扩展直接使用 Oracle 数据提供程序，而不再经过 System.Data.OracleClient 这一步。 若要从 Oracle 数据库中检索报表数据，您的管理员必须安装 Oracle 客户端工具。 该客户端应用程序版本必须为 11g 或更高版本。 这些工具必须安装在报表创作客户端上以便预览报表，同时还应安装在报表服务器上以便查看发布的报表。  
+ 选择数据源类型 Oracle 时，即选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件，该扩展直接使用 Oracle 数据提供程序，而不再经过 System.Data.OracleClient 这一步  。 若要从 Oracle 数据库中检索报表数据，您的管理员必须安装 Oracle 客户端工具。 该客户端应用程序版本必须为 11g 或更高版本。 这些工具必须安装在报表创作客户端上以便预览报表，同时还应安装在报表服务器上以便查看发布的报表。  
  
 若要安装 Oracle 客户端工具，可执行以下操作。
  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f2262386eaa44f4cda6ca72e17f1f0aba65894c1
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: f605121be80ecef94f5a4412d23869cfd17c6ca6
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175643"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500311"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>配置和管理报表服务器（SSRS 本机模式）
   本文总结了可用于配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的方法。 它还包含一个主题列表，其中所列的主题说明了如何配置特定的组件、功能或服务器功能。 若要配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，您可以：  
@@ -47,7 +47,7 @@ ms.locfileid: "66175643"
  [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  介绍如何修改报表服务器用于连接到报表服务器数据库的连接字符串。  
   
- [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Reporting Services 中的电子邮件传递](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
  介绍如何配置报表服务器，以便通过电子邮件来分发报表。  
   
  [配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  

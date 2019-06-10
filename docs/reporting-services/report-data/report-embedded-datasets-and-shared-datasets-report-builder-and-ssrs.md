@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 093652067f436c83ae46d3cb3053cc93747579db
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 87686f4200acf4e4db1666a59b562482c76d0960
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571182"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500292"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  
@@ -52,7 +52,7 @@ ms.locfileid: "65571182"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Overview"></a> 了解报表数据集和查询  
- 报表数据集包含在外部数据源上运行并且指定要检索的数据的查询命令。 为了生成该查询命令，您使用与外部数据源的数据扩展插件相关联的查询设计器。 在查询设计器中，您可以运行该查询命令并查看结果集。 该结果集是一个矩形行集，它具有列名以及在每一行中值的数目都相同的行。 不支持层次结构数据（也称作“不规则层次结构” ）。 列名以数据集字段列表的形式保存在报表定义中。  
+ 报表数据集包含在外部数据源上运行并且指定要检索的数据的查询命令。 为了生成该查询命令，您使用与外部数据源的数据扩展插件相关联的查询设计器。 在查询设计器中，您可以运行该查询命令并查看结果集。 该结果集是一个矩形行集，它具有列名以及在每一行中值的数目都相同的行。 不支持层次结构数据（也称作“不规则层次结构”  ）。 列名以数据集字段列表的形式保存在报表定义中。  
   
  在您向报表中添加数据集后，在“报表数据”窗格中将字段从其字段集合拖到表、图表以及用于设计报表布局的其他报表项中。 有关使用字段的详细信息，请参阅 [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "65571182"
  还可以使用参数和排序表达式的组合，使用户能够选择为报表中的数据选择排序顺序。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 ### <a name="grouping-data-in-a-dataset"></a>对数据集中的数据进行分组  
- 不能对数据集中的数据进行分组。 若要聚合数据集中的数据，您可以编辑查询命令以便在为报表检索数据前计算聚合。 这些聚合值称为“服务器聚合” 。 在表达式中，若要将这些值标识为预先计算的聚合，请使用聚合函数。 有关详细信息，请参阅 [Aggregate 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
+ 不能对数据集中的数据进行分组。 若要聚合数据集中的数据，您可以编辑查询命令以便在为报表检索数据前计算聚合。 这些聚合值称为“服务器聚合”  。 在表达式中，若要将这些值标识为预先计算的聚合，请使用聚合函数。 有关详细信息，请参阅 [Aggregate 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
   
 ##  <a name="Parameters"></a> 使用参数和数据集  
  对于包含查询变量的嵌入数据集查询，可以自动创建查询参数和相应的报表参数。 在报表运行时，报表参数的值将链接到数据集查询参数。 这样，在外部数据源上运行的查询命令将包括为报表参数指定的值。 通过报表参数，用户可以选择他们要在报表中看到的数据。 可在“数据集属性”对话框 ->“参数”页中查看查询参数和报表参数的链接方式。  
@@ -219,7 +219,7 @@ ms.locfileid: "65571182"
   
 ## <a name="see-also"></a>另请参阅  
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

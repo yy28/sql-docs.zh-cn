@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8bea2da3329bce5ffa6adaf4be57109ac7c801dc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 6b4936ef2889d433985d4ff0206d72722300ac91
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581109"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500520"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
   在报表中，数据集表示通过对外部数据源运行查询而返回的报表数据。 共享数据集发布在报表服务器上，可由多个报表使用。 你可以创建数据集，以便与他人共享。 在共享数据集设计窗口中，你可以选择共享数据源，指定共享数据集的属性，在查询设计器中创建查询。  
@@ -31,7 +31,7 @@ ms.locfileid: "65581109"
 > [!NOTE]  
 >  共享数据集必须基于共享数据源。 如果你需要的数据源不可用，则需要在报表服务器上创建一个数据源。 有关详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
- 有关详细信息，请参阅 [数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 有关详细信息，请参阅 [数据连接、数据源和连接字符串](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ### <a name="dataset"></a>数据集  
  使用 **“Set 选项”** 按钮可以设置共享数据集属性。 其中包括：  
@@ -86,7 +86,7 @@ ms.locfileid: "65581109"
   
   
 ##  <a name="Save"></a> 保存共享数据集  
- 若要保存生成的查询，请在 **“报表生成器”** 按钮上单击 **“保存”** 或 **“另存为”**。 导航到报表服务器上的相应文件夹，然后保存共享数据集定义。 在您将共享数据集保存到报表服务器后，其他用户才能使用此共享数据集。  
+ 若要保存生成的查询，请在 **“报表生成器”** 按钮上单击 **“保存”** 或 **“另存为”** 。 导航到报表服务器上的相应文件夹，然后保存共享数据集定义。 在您将共享数据集保存到报表服务器后，其他用户才能使用此共享数据集。  
   
   
 ## <a name="see-also"></a>另请参阅  

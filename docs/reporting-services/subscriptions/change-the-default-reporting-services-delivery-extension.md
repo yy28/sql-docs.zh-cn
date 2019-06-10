@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de3fe01573e9719ef63b09735c2701789582d7c3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578403"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500405"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>更改默认 Reporting Services 传递扩展插件
   你可以通过修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置设置，来更改显示在订阅定义页的“传递方式”  列表中的默认传递扩展插件。 例如，你可以修改该配置，以便在用户创建新订阅时，文件共享传递（而非电子邮件传递）默认处于选中状态。 你还可以更改传递扩展插件在用户界面中的排列顺序。  
@@ -94,7 +94,7 @@ ms.locfileid: "65578403"
   
 #### <a name="configure-the-default-delivery-extension"></a>配置默认传递扩展插件  
   
-1.  打开“SharePoint Management Shell” 。  
+1.  打开“SharePoint Management Shell”  。  
   
 2.  如果你已经知道 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的名称，则可以跳过此步骤。 使用以下 PowerShell，将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序列在 SharePoint 场中。  
   
@@ -114,18 +114,4 @@ ms.locfileid: "65578403"
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 中的文件共享传递](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
- [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
-  
-<!-- TODO:
-The above See Also link to the old MSDN at...
-https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83
 
-...is redirected to the following Docs link, for SQL Server 2014...
-
-https://docs.microsoft.com/sql/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager?view=sql-server-2014
-
-...So if I was not presently resolving conflicts with public repo PR, related to private repo PR 7827,
-the better fix would be to replace the whole MSDN link with the newer Docs link (to which the older MSDN link is redirected).
-Maybe later someone can perform this replacement, and under docs/reporting-services/ there are multiple similar replacement opportunities.
-GeneMi , 2018/10/25
--->

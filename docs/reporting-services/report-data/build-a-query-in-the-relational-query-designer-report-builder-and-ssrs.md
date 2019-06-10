@@ -10,12 +10,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/25/2019
-ms.openlocfilehash: 67b64a85a8f36fc7c370129ce8524e131a91f6a1
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 400e96771d54e090e9e3b2bc03967d26b50a6590
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573247"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500488"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在关系查询设计器中生成查询（报表生成器和 SSRS）
 
@@ -46,7 +46,7 @@ ms.locfileid: "65573247"
   
 ### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>在报表设计视图中为嵌入数据集生成查询  
   
-1.  打开查询设计器。 在“报表数据”窗格中，右键单击该数据集，然后单击“查询”。  
+1.  打开查询设计器。 在“报表数据”窗格中，右键单击该数据集，然后单击“查询”  。  
   
      将打开与数据源关联的查询设计器。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "65573247"
   
 1.  在关系查询设计器中，确认您已选择字段且这些字段显示在 **“所选字段”** 窗格中。  
   
-2.  在“应用的筛选器”窗格工具栏中，单击 **“添加筛选器”**。 此时将显示一个新的筛选器行。  
+2.  在“应用的筛选器”窗格工具栏中，单击 **“添加筛选器”** 。 此时将显示一个新的筛选器行。  
   
-3.  在“字段名称”中，单击以显示字段的下拉列表，然后单击要作为筛选依据的字段名称。 例如，若要按数量进行筛选，则单击包含项数的字段。  
+3.  在“字段名称”中，单击以显示字段的下拉列表，然后单击要作为筛选依据的字段名称  。 例如，若要按数量进行筛选，则单击包含项数的字段。  
   
-4.  在“运算符”中，单击以显示运算符的下拉列表，然后选择要在筛选器中使用的比较运算符。  
+4.  在“运算符”中，单击以显示运算符的下拉列表，然后选择要在筛选器中使用的比较运算符  。  
   
 5.  在 **“值”** 中，键入要作为筛选依据的值。 例如，若要针对大于 100 的数量进行筛选，则键入 100。  
   
@@ -84,17 +84,17 @@ ms.locfileid: "65573247"
   
 ### <a name="to-view-a-query-result-set"></a>查看查询结果集  
   
-1.  在查询设计器工具栏中，单击“运行查询(!)”。  
+1.  在查询设计器工具栏中，单击“运行查询(!)”  。  
   
     > [!NOTE]  
-    >  查询设计器使用设计时凭据运行查询并检索结果集。 有关详细信息，请参阅 [在报表生成器中指定凭据](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+    >  查询设计器使用设计时凭据运行查询并检索结果集。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)  
   
  查询在数据源上运行并在“查询结果”窗格中返回示例数据。  
   
 ## <a name="see-also"></a>另请参阅  
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [查询设计器（报表生成器）](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
+ [查询设计工具 (SSRS)](query-design-tools-ssrs.md)   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [共享数据集设计视图（报表生成器）](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   

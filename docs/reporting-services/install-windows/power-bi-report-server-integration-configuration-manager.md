@@ -1,24 +1,24 @@
 ---
 title: Power BI 报表服务器集成（配置管理器）| Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: c99eb7091cd72be40f2acb45e5e7bebf8a71526e
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506554"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499609"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 报表服务器集成（配置管理器）
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的“Power BI 集成”页用于向所需的 Azure Active Directory (AD) 托管租户注册报表服务器，以允许报表服务器用户将支持的报表项固定到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板。 有关可以固定的支持项目列表，请参阅 [将 Reporting Services 项目固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的“Power BI 集成”  页用于向所需的 Azure Active Directory (AD) 托管租户注册报表服务器，以允许报表服务器用户将支持的报表项固定到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板。 有关可以固定的支持项目列表，请参阅 [将 Reporting Services 项目固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
 
 ## <a name="bkmk_requirements"></a> Power BI 集成的要求
 
@@ -50,22 +50,22 @@ ms.locfileid: "59506554"
 
 1. 选择 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成页。
 
-2. 单击“注册 Power BI”。
+2. 单击“注册 Power BI”  。
 
     >[!Note]
     > 确保端口 443 未被阻止。
 
 3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登录对话框中，键入用于登录 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]的凭据。
 
-4. 注册完成后，“Power BI 注册详细信息”部分将记下 Azure 租户 ID 和重定向 URL。  URL 用作 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板登录和通信过程的一部分，以回传给已注册的报表服务器。
+4. 注册完成后，“Power BI 注册详细信息”部分将记下 Azure 租户 ID 和重定向 URL  。  URL 用作 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板登录和通信过程的一部分，以回传给已注册的报表服务器。
 
-5. 选择“结果”窗口中的“复制”按钮，以将注册详细信息复制到 Windows 剪贴板，这样你便可以将它们保存起来供以后参考。
+5. 选择“结果”  窗口中的“复制”  按钮，以将注册详细信息复制到 Windows 剪贴板，这样你便可以将它们保存起来供以后参考。
 
 ## <a name="bkmk_unregister"></a> 注销 Power BI
 
 **注销：** 从 Azure Active Directory 注销报表服务器，会导致下面的结果：
 
-- “我的设置”链接在 Web 门户菜单栏中不再可见。
+- “我的设置”链接在 Web 门户菜单栏中不再可见  。
 
 - 已固定的报表项仍固定在仪表板中，但将不再更新仪表板上的磁贴。
 
@@ -73,23 +73,23 @@ ms.locfileid: "59506554"
 
     **无法加载此订阅的传递扩展插件**
 
-从配置管理器的“Power BI”页中，选择“注销 Power BI”按钮。
+从配置管理器的“Power BI”  页中，选择“注销 Power BI”  按钮。
 
 ##  <a name="bkmk_updateregistration"></a> 更新注册
 
 如果你的报表服务器的配置已更改，请使用“更新注册”  。 例如，如果你想要添加或删除用户用于浏览 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]的 URL。
 
-- 请在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中，选择“Web 门户 URL”
+- 请在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中，选择“Web 门户 URL” 
 
-     选择“高级”。
+     选择“高级”  。
 
-- 选择“添加”为 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 添加新 HTTP 标识 ，然后选择“确定”。
+- 选择“添加”为 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 添加新 HTTP 标识 ，然后选择“确定”   。
 
      [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 图标将发生更改以指示已更改服务器配置。  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 
-- 在“Power BI 集成”页上，单击“更新注册”。
+- 在“Power BI 集成”  页上，单击“更新注册”  。
 
-     系统将提示你登录到 Azure AD。 刷新该页面后，你将看到在“重定向 URL” 中列出新 URL。
+     系统将提示你登录到 Azure AD。 刷新该页面后，你将看到在“重定向 URL”  中列出新 URL。
 
 ##  <a name="bkmk_integration_process"></a> Power BI 集成和固定处理摘要
 
@@ -97,7 +97,7 @@ ms.locfileid: "59506554"
 
  **集成：**
 
-1. 在配置管理器中，选择“在 Power BI 中注册”按钮时，系统将提示登录到 Azure Active Directory。
+1. 在配置管理器中，选择“在 Power BI 中注册”按钮时，系统将提示登录到 Azure Active Directory。 
 
 2. 已在托管租户中注册 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 客户端应用。
 
@@ -113,7 +113,7 @@ ms.locfileid: "59506554"
 
 1. 用户可以预览 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 中的报表，并且当用户首次单击从 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 中固定报表项时，
 
-2. 他们将被重定向到 Azure AD 登录页。 用户也可以从[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]“我的设置”页登录。 当用户登录到 Azure 托管租户时，便在 Azure 帐户和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 权限之间建立了一种关系。  有关详细信息，请参阅 [我的 Power BI 集成（网站门户）设置](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
+2. 他们将被重定向到 Azure AD 登录页。 用户也可以从[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]“我的设置”  页登录。 当用户登录到 Azure 托管租户时，便在 Azure 帐户和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 权限之间建立了一种关系。  有关详细信息，请参阅 [我的 Power BI 集成（网站门户）设置](../my-settings-for-power-bi-integration-web-portal.md)。
 
 3. 用户安全令牌返回到报表服务器。
 
@@ -125,7 +125,7 @@ ms.locfileid: "59506554"
 
 7. 创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅以管理仪表板磁贴上报表项的计划刷新。 订阅使用用户登录时创建的安全令牌。
 
-     令牌适于 90 天，此后用户需要再次登录以创建新的用户令牌。 令牌过期后，已固定的磁贴仍将显示在仪表板上，但不再刷新数据。  用于已固定项的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅将出错，直到创建新的用户令牌。 请参阅 [我的 Power BI 集成（网站门户）设置](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 了解有关详细信息。
+     令牌适于 90 天，此后用户需要再次登录以创建新的用户令牌  。 令牌过期后，已固定的磁贴仍将显示在仪表板上，但不再刷新数据。  用于已固定项的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅将出错，直到创建新的用户令牌。 请参阅 [我的 Power BI 集成（网站门户）设置](../my-settings-for-power-bi-integration-web-portal.md)。 了解有关详细信息。
 
 用户第二次固定某一项时，跳过步骤 1-4，改为从 ReportServer 数据库和流中检索应用 ID 和 URL，然后继续执行步骤 5。
 
@@ -153,7 +153,7 @@ ms.locfileid: "59506554"
 
 ## <a name="next-steps"></a>后续步骤
 
-[我的 Power BI 集成设置](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[适用于 Power BI 集成的“我的设置”（Web 门户）](../my-settings-for-power-bi-integration-web-portal.md)  
 [将 Reporting Services 项目固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 [Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 

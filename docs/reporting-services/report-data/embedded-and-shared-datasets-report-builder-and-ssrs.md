@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a802faa9ba493e835e53f104e885b848d5a730cf
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: a3add572d240cc09a33f083d9f86a3791afd18c5
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573151"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500439"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>嵌入数据集和共享数据集（报表生成器和 SSRS）
   在报表中，数据集表示通过对外部数据源运行查询而返回的报表数据。 数据集依赖于包含有关外部数据源的信息的数据连接。 数据本身并不包含在报表定义中。 数据集包含查询命令、字段集合、参数、筛选器以及数据选项（包括区分大小写和排序规则）。 有两种类型的数据集：  
@@ -61,7 +61,7 @@ ms.locfileid: "65573151"
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

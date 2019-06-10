@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a516be313ddca5edd5d899ca05eeab6b1818b972
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 26b5bdacbdcf799ffc6c22113ebaec4fce2293b4
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175193"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499587"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 本机模式报表服务器
   本节包含使用 Reporting Services 配置管理器配置本机模式报表服务器实例的过程。  
@@ -29,7 +29,7 @@ ms.locfileid: "66175193"
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  提供启动 Reporting Services 配置工具的步骤。  
   
- [配置服务帐户（SSRS 配置管理器）](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
+ [配置服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  说明如何为报表服务器服务指定帐户和密码信息。  
   
  [为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "66175193"
  [配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供配置多个报表服务器以共享报表服务器数据库的步骤。  
   
- [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Reporting Services 中的电子邮件传递](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   
  提供有关配置报表服务器以进行电子邮件分发的步骤。  
   
  [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  

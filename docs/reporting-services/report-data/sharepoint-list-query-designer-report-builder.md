@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0750d924922087cde824085e954d59427c568bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65575369"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500051"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 列表查询设计器（报表生成器）
   报表生成器和报表设计器同时提供了图形查询设计器和基于文本的查询设计器，帮助你创建查询，以指定要从 SharePoint 站点中为报表数据集检索的数据。 使用图形查询设计器可以浏览 SharePoint 列表元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询、修改查询或键入查询命令。 您还可以从文件或报表中导入现有的查询。  
@@ -93,6 +93,6 @@ ms.locfileid: "65575369"
 |**显示隐藏字段**|在显示字段还是隐藏字段之间切换，这些字段是由 SharePoint 自动生成的（如用于 SharePoint 链接项的 ProgId 和 Level），但通常不在报表中使用。 隐藏这些字段可使字段列表更短且易于使用。|  
   
 ## <a name="see-also"></a>另请参阅  
- [查询设计器（报表生成器）](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [查询设计工具 (SSRS)](query-design-tools-ssrs.md)  
   
   
