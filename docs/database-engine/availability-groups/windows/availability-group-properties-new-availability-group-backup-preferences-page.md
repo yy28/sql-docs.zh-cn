@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 49288df6eb302dd3991e9b69b50de14a030a86b6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 275b48491ddf5c868e467043c57c64e0936e36d7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207334"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761830"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性组属性：新建可用性组（“备份首选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "53207334"
  承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
   
  **备份优先级(最低 = 1，最高 = 100)**  
- 指定相对于同一可用性组中的其他副本，在此副本上执行备份的优先级。 该值是范围 0..100 中的整数。 1 表示最低优先级，100 表示最高优先级。 如果“备份优先级”= 1，则仅在当前没有更高优先级的可用性副本可用时，才选择此可用性副本来执行备份。  
+ 指定相对于同一可用性组中的其他副本，在此副本上执行备份的优先级。 该值是范围 0..100 中的整数。 1 表示最低优先级，100 表示最高优先级。 如果“备份优先级”  = 1，则仅在当前没有更高优先级的可用性副本可用时，才选择此可用性副本来执行备份。  
   
  **排除副本**  
  如果从不希望选择此可用性副本来执行备份，请选择此选项。 例如，这对于您永远不希望备份故障转移到的远程可用性副本十分有用。  

@@ -16,44 +16,25 @@ helpviewer_keywords:
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 637c4a984876ad401fb2a757ac4d76ea833a5222
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1c8c5fe88e1b3c95abd435558b0565960ba25ebf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213546"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801021"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>从可用性组中删除辅助数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 从 AlwaysOn 可用性组中删除辅助数据库。  
+   
   
--   **开始之前：**  
-  
-     [先决条件](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **若要删除辅助数据库，请使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **跟进：**[从可用性组中删除辅助数据库之后](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> 先决条件和限制  
+##  <a name="Prerequisites"></a> 先决条件和限制  
   
 -   只有辅助副本支持该任务。 您必须连接到承载要从中删除数据库的辅助副本的服务器实例。  
   
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> Permissions  
+ 
+##  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,7 +42,7 @@ ms.locfileid: "53213546"
   
 1.  在对象资源管理器中，连接到承载您要从中删除一个或多个辅助数据库的辅助副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
 3.  选择可用性组，然后展开 **“可用性数据库”** 节点。  
   
@@ -71,9 +52,9 @@ ms.locfileid: "53213546"
   
     -   若要删除单个数据库，请在 **“对象资源管理器”** 窗格或 **“对象资源管理器详细信息”** 窗格中选中该数据库。  
   
-5.  右键单击选定的一个或多个数据库，然后在命令菜单中选择“删除辅助数据库”。  
+5.  右键单击选定的一个或多个数据库，然后在命令菜单中选择“删除辅助数据库”  。  
   
-6.  在 **“从可用性组删除数据库”** 对话框中，要删除所有列出的数据库，则单击 **“确定”**。 如果您不想删除所有列出的数据库，请单击 **“取消”**。  
+6.  在 **“从可用性组删除数据库”** 对话框中，要删除所有列出的数据库，则单击 **“确定”** 。 如果您不想删除所有列出的数据库，请单击 **“取消”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **从可用性组中删除辅助数据库**  

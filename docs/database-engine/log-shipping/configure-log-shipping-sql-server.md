@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d19670ec51172fc704d0387664f0c484315c7be7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.openlocfilehash: 4ed8568dd53d02df3e0788b79d0b9240f47dbe5f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105977"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794634"
 ---
 # <a name="configure-log-shipping-sql-server"></a>配置日志传送 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,17 +60,17 @@ ms.locfileid: "65105977"
   
 #### <a name="to-configure-log-shipping"></a>配置日志传送  
   
-1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击 **“属性”**。  
+1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击 **“属性”** 。  
   
-2.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
+2.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
 3.  选中 **“将此数据库启用为日志传送配置中的主数据库”** 复选框。  
   
-4.  在 **“事务日志备份”** 下，单击 **“备份设置”**。  
+4.  在 **“事务日志备份”** 下，单击 **“备份设置”** 。  
   
 5.  在 **“备份文件夹的网络路径”** 框中，键入为事务日志备份文件夹创建的共享的网络路径。  
   
-6.  “如果备份文件夹位于主服务器上，则在备份文件夹中键入本地路径”框。 （如果备份文件夹不在主服务器上，此框可以保留为空。）  
+6.  “如果备份文件夹位于主服务器上，则在备份文件夹中键入本地路径”框  。 （如果备份文件夹不在主服务器上，此框可以保留为空。）  
   
     > [!IMPORTANT]  
     >  如果主服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户运行在本地系统帐户下，则必须在主服务器上创建备份文件夹，并指定该文件夹的本地路径。  
@@ -79,11 +79,11 @@ ms.locfileid: "65105977"
   
 8.  请注意 **“备份作业”** 下的 **“计划”** 框中列出的备份计划。 如果想要为安装自定义计划，则单击 **“计划”** 并根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为：“使用默认服务器设置”、“压缩备份”或“不压缩备份”。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为：“使用默认服务器设置”、“压缩备份”或“不压缩备份”    。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
 10. 单击 **“确定”** 中配置日志传送。  
   
-11. 在 **“辅助服务器实例和数据库”** 下，单击 **“添加”**。  
+11. 在 **“辅助服务器实例和数据库”** 下，单击 **“添加”** 。  
   
 12. 单击 **“连接”** ，连接到要用作辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "65105977"
   
 17. 在 **“还原”** 选项卡上的 **“还原备份时的数据库状态”** 下，选择 **“无恢复模式”** 或 **“备用模式”** 选项。  
     > [!IMPORTANT]  
-    > 当主服务器和辅助服务器的版本相同时，仅选择“备用模式”。 当辅助服务器的主版本高于主服务器时，仅允许“无恢复模式”
+    >  当主服务器和辅助服务器的版本相同时，仅选择“备用模式”。 当辅助服务器的主版本高于主服务器时，仅允许“无恢复模式” 
   
 18. 如果选择了 **“备用模式”** 选项，请选择是否要在进行还原操作时从辅助数据库断开用户连接。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "65105977"
   
 22. 单击 **“确定”** 中配置日志传送。  
   
-23. 在 **“监视服务器实例”** 下，选中 **“使用监视服务器实例”** 复选框，然后单击 **“设置”**。  
+23. 在 **“监视服务器实例”** 下，选中 **“使用监视服务器实例”** 复选框，然后单击 **“设置”** 。  
   
     > [!IMPORTANT]  
     >  若要监视此日志传送配置，必须现在添加监视服务器。 若要以后添加监视服务器，则需要先删除此日志传送配置，然后将其替换为包含监视服务器的新配置。  
@@ -123,7 +123,7 @@ ms.locfileid: "65105977"
   
 26. 在 **“历史记录保持期”** 下，选择想要保留日志传送历史记录的时间长度。  
   
-27. 单击“确定” 。  
+27. 单击“确定”  。  
   
 28. 在 **“数据库属性”** 对话框中，单击 **“确定”** 开始配置进程。  
   

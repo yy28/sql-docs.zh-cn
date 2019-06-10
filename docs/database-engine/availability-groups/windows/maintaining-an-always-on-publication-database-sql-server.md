@@ -13,26 +13,18 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+manager: jroth
+ms.openlocfilehash: 557bd9828979a4f2e0913e827b05f3805e9b4ef9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300144"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799269"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>将复制的发布服务器数据库作为 Always On 可用性组的一部分管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题将探讨使用 AlwaysOn 可用性组时维护发布数据库的特殊注意事项。  
-  
- **本主题内容：**  
-  
--   [在可用性组中维护已发布的数据库](#MaintainPublDb)  
-  
--   [从可用性组中删除已发布的数据库](#RemovePublDb)  
-  
--   [相关任务](#RelatedTasks)  
   
 ##  <a name="MaintainPublDb"></a> 在可用性组中维护已发布的数据库  
  维护 AlwaysOn 发布数据库与维护标准的发布数据库基本相同，需要注意以下事项：  
@@ -122,7 +114,7 @@ ms.locfileid: "54300144"
 ## <a name="see-also"></a>另请参阅  
  [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  
   
   
