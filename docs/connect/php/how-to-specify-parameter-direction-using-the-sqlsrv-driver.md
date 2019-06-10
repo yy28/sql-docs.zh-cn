@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64c73b14f0195441979891f626976648b56d583d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 33613a90ee21069b2ef7d2f9908ed13bd4f040e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642365"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799681"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序指定参数方向
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47642365"
     > [!NOTE]  
     > 已初始化或更新为 **null**、 **DateTime**的变量或流类型无法用作输出参数。  
   
-3.  使用第 2 步中的 PHP 变量创建或更新参数值数组，这些参数值按顺序对应于 Transact-SQL 字符串中的参数占位符。 在该数组中指定每个参数的方向。 每个参数的方向确定方法为以下两种方法之一：默认方法（用于输入参数），或使用 SQLSRV_PARAM_\* 常数（用于输出和双向参数）。 例如，以下代码将 *$employeeId* 参数指定为输入参数，并将 *$usedVacationHours* 参数指定为双向参数：  
+3.  使用第 2 步中的 PHP 变量创建或更新参数值数组，这些参数值按顺序对应于 Transact-SQL 字符串中的参数占位符。 在该数组中指定每个参数的方向。 每个参数的方向确定方法为以下两种方法之一：默认方法（用于输入参数），或使用 SQLSRV_PARAM_\*  常数（用于输出和双向参数）。 例如，以下代码将 *$employeeId* 参数指定为输入参数，并将 *$usedVacationHours* 参数指定为双向参数：  
   
     ```  
     $params = array(  
@@ -86,5 +86,5 @@ ms.locfileid: "47642365"
 ## <a name="see-also"></a>另请参阅  
 [如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[如何： 检索输入和输出参数使用 SQLSRV 驱动程序](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[如何：使用 SQLSRV 驱动程序检索输入和输出参数](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

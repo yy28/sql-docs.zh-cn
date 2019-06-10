@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7031a7d2a3a260d9ffb29f8651d04d874cf84f76
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 405a8d9d63db1f295e4a4fd95ede4c5ff1950877
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860418"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793656"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>为 Always On 可用性组配置只读路由
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,31 +33,9 @@ ms.locfileid: "58860418"
 
 > [!NOTE]  
 >  有关如何配置可读次要副本的信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+
   
--   **开始之前：**  
-  
-     [先决条件](#Prerequisites)  
-  
-     [为支持只读路由，您需要配置哪些副本属性？](#RORReplicaProperties)  
-  
-     [安全性](#Security)  
-  
--   **若要配置只读路由，可使用：**  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-    > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]不支持配置只读路由。  
-  
--   **跟进：**[配置只读路由之后](#FollowUp)  
-  
--   [相关任务](#RelatedTasks)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a> 先决条件  
   
 -   可用性组必须拥有可用性组侦听器。 有关详细信息，请参阅 [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
@@ -67,11 +45,11 @@ ms.locfileid: "58860418"
 
 -   如果使用 SQL 登录名，请确保帐户配置正确无误。 有关详细信息，请参阅[管理可用性组中数据库的登录名和作业 (SQL Server)](logins-and-jobs-for-availability-group-databases.md)。
   
-###  <a name="RORReplicaProperties"></a> 为支持只读路由，您需要配置哪些副本属性？  
+##  <a name="RORReplicaProperties"></a> 为支持只读路由，您需要配置哪些副本属性？  
   
 -   对于要支持只读路由的每个可读次要副本，你需要指定 *只读路由 URL*。 此 URL 仅在本地副本在辅助角色下运行时起作用。 必须根据需要在逐个副本的基础上指定只读路由 URL。 每个只读路由 URL 都用于将读意向请求路由到一个特定的可读辅助副本。 通常，向每个可读辅助副本分配一个只读路由 URL。  
   
-     有关计算可用性副本的只读路由 URL 的信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://web.archive.org/web/20170512023255/ https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
+     有关计算可用性副本的只读路由 URL 的信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://web.archive.org/web/20170512023255/https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   对于要在其作为主要副本时支持只读路由的每个可用性副本，都需要指定一个 *只读路由列表*。 一个给定的只读路由列表仅在本地副本在主角色下运行时才起作用。 必须根据需要在逐个副本的基础上指定此列表。 通常，每个只读路由列表中将包含各只读路由 URL，并且在列表的末尾具有本地副本的 URL。  
   
@@ -81,9 +59,7 @@ ms.locfileid: "58860418"
 > [!NOTE]  
 >  有关可用性组侦听程序的信息，以及只读路由的详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> 权限  
   
 |任务|权限|  
 |----------|-----------------|  
@@ -101,7 +77,7 @@ ms.locfileid: "58860418"
   
     -   若要配置辅助角色的只读路由，请在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 SECONDARY_ROLE 选项，如下所示：  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **')**  
   
          只读路由 URL 的参数如下所示：  
   
@@ -119,7 +95,7 @@ ms.locfileid: "58860418"
   
     -   若要配置主角色的只读路由，请在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 PRIMARY_ROLE 选项，如下所示：  
   
-         PRIMARY_ROLE ( READ_ONLY_ROUTING_LIST =('server' [ ,...n ] ))  
+         PRIMARY_ROLE ( READ_ONLY_ROUTING_LIST =('server' [ ,...n ] ))         
   
          其中， *server* 标识一个托管可用性组中的只读次要副本的服务器实例。  
   
@@ -189,13 +165,13 @@ GO
   
 2.  在将可用性副本添加到可用性组中时，使用 **New-SqlAvailabilityReplica** cmdlet。 在修改现有可用性副本时，使用 **Set-SqlAvailabilityReplica** cmdlet。 相关参数如下：  
   
-    -   若要为辅助角色配置只读路由，请指定 **ReadonlyRoutingConnectionUrl"**_url_**"** 参数。  
+    -   若要为辅助角色配置只读路由，请指定 **ReadonlyRoutingConnectionUrl"** _url_ **"** 参数。  
   
          其中， *url* 是当路由到副本时要用于建立只读连接的连接完全限定域名 (FQDN) 和端口。 例如：  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          有关详细信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)。  
   
-    -   若要为主要角色配置连接访问，请指定 **ReadonlyRoutingList"**_server_**"** [ **,**...*n* ]，其中， *server* 标识一个托管可用性组中的只读次要副本的服务器实例。 例如：  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   若要为主要角色配置连接访问，请指定 **ReadonlyRoutingList"** _server_ **"** [ **,** ...*n* ]，其中， *server* 标识一个托管可用性组中的只读次要副本的服务器实例。 例如：  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  您必须先设置副本的只读路由 URL，然后才能为其配置只读路由列表。  

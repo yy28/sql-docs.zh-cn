@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99bdc51c54850927aa51b32318ff2b859ead49e3
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+manager: jroth
+ms.openlocfilehash: 5d20cba8eb5e6b9cd5a6c30142ac3b06d2ad57af
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227319"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782770"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-将数据从参数流发送至服务器。 每次调用 sqlsrv_send_stream_data 时，最多可以发送八千字节 (8K) 的数据。  
+将数据从参数流发送至服务器。 每次调用 sqlsrv_send_stream_data  时，最多可以发送八千字节 (8K) 的数据。  
   
 > [!NOTE]  
 > 默认情况下，当执行查询时，所有流数据都将发送到服务器。 如果未更改此默认行为，则无需使用 **sqlsrv_send_stream_data** 来向服务器发送流数据。 有关更改默认行为的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)的“参数”部分。  

@@ -1,18 +1,18 @@
 ---
 title: Claims to Windows Token Service (c2WTS) 和 Reporting Services | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d5a771bc28d4c6a6f248925d329fa708c4135f8d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 8d53445544c360250ed35c322e2fc4078559bbbe
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397151"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454569"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) 和 Reporting Services
 
@@ -48,13 +48,13 @@ C2WTS 创建的令牌将仅用于约束委派（对特定服务的约束）以�
 
 1. 配置 C2WTS 服务域帐户。 
 
-    最佳做法是 C2WTS 应在其自己的域标识下运行。
+    最佳做法是 C2WTS 应在其自己的域标识下运行。 
 
-    * 创建一个 Active Directory 帐户，并将该帐户注册为 SharePoint Server 中的托管帐户。 若要了解有关托管帐户的详细信息，请参阅 [Sharepoint 中的托管帐户](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/)
+    * 创建一个 Active Directory 帐户，并将该帐户注册为 SharePoint Server 中的托管帐户。 若要了解有关托管帐户的详细信息，请参阅 [Sharepoint 中的托管帐户](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/)
    
     * 配置 C2WTS 服务以通过“SharePoint 管理中心 > 安全性 > 配置服务帐户 > Windows 服务 - Windows Token Service 声明”使用托管帐户
 
-    将 C2WTS 服务帐户添加到将使用 C2WTS 的每个服务器上的本地管理员组。 对于报表查看器 Web 部件，这是 Web 前端 (WFE) 服务器。 对于 SharePoint 集成模式，这是运行 Reporting Services 服务的应用程序服务器。
+    将 C2WTS 服务帐户添加到将使用 C2WTS 的每个服务器上的本地管理员组。 对于报表查看器 Web 部件，这是 Web 前端 (WFE) 服务器  。 对于 SharePoint 集成模式，这是运行 Reporting Services 服务的应用程序服务器  。
     * 在“本地策略 > 用户权限分配”下的本地安全策略中授予 C2WTS 帐户以下权限：
         * 以操作系统方式操作
         * 在身份验证后模拟客户端
@@ -66,31 +66,31 @@ C2WTS 创建的令牌将仅用于约束委派（对特定服务的约束）以�
     该帐户需要具有协议转换的约束委派，并且需要相应权限以便委派给需要与之通信的服务（即 SQL Server 数据库引擎、SQL Server Analysis Services）。 要配置委派，可使用 Active Directory 用户和计算机管理单元，并且需要成为域管理员。
 
     > [!IMPORTANT]
-    > 无论在委派选项卡上为 C2WTS 服务帐户配置何种设置，都需要与正在使用的主服务帐户匹配。 对于报表查看器 Web 部件，这是 SharePoint Web 应用程序的服务帐户。 对于 SharePoint 集成模式，这是 Reporting Services 服务帐户。
+    > 无论在委派选项卡上为 C2WTS 服务帐户配置何种设置，都需要与正在使用的主服务帐户匹配。 对于报表查看器 Web 部件，这是 SharePoint Web 应用程序的服务帐户  。 对于 SharePoint 集成模式，这是 Reporting Services 服务帐户  。
     >
     > 例如，如果允许将 C2WTS 服务帐户委派给 SQL 服务，则需要对 SharePoint 集成模式的 Reporting Services 服务帐户执行相同操作。
 
     * 右键单击各服务帐户并且打开“属性”对话框。 在该对话框中，单击 **“委派”** 选项卡。
 
-        只有在对象具有分配给它的服务主体名 (SPN) 的情况下，“委派”选项卡才可见。 C2WTS 不要求在 C2WTS 帐户上具有 SPN；但如果没有 SPN，“委派”选项卡将不可见。 配置约束委派的另一个方法是使用 **ADSIEdit**之类的实用工具。
+        只有在对象具有分配给它的服务主体名 (SPN) 的情况下，“委派”选项卡才可见。 C2WTS 不要求在 C2WTS 帐户上具有 SPN；但如果没有 SPN，“委派”选项卡将不可见  。 配置约束委派的另一个方法是使用 **ADSIEdit**之类的实用工具。
 
     * “委派”选项卡上的主要配置选项如下：
 
-        * 选择“仅信任此用户对指定服务的委派”
-        * 选择“使用任何身份验证协议”
+        * 选择“仅信任此用户对指定服务的委派” 
+        * 选择“使用任何身份验证协议” 
 
-    * 选择“添加”以添加要委派的服务。
+    * 选择  “添加”以添加要委派的服务。
 
-    * 选择“用户或计算机...&#42;”并输入托管服务的帐户。 例如，如果在名为 sqlservice 的帐户下运行 SQL Server，则输入 `sqlservice`。 
-      对于报表查看器 Web 部件，这是 Reporting Services（本机模式）实例的服务帐户。
+    * 选择“用户或计算机...&#42;”并输入托管服务的帐户  。 例如，如果在名为 sqlservice 的帐户下运行 SQL Server，则输入 `sqlservice`  。 
+      对于报表查看器 Web 部件  ，这是 Reporting Services（本机模式）实例的服务帐户。
 
-    * 选择服务列表。 将显示该帐户可用的 SPN。 如果在该帐户上没有看到列出的服务，则它可能已丢失或放置在不同的帐户上。 可以使用 SetSPN 实用工具调整 SPN。 对于报表查看器 Web 部件，将看到[报表查看器 Web 部件配置](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration)中配置的 http SPN。
+    * 选择服务列表。 将显示该帐户可用的 SPN。 如果在该帐户上没有看到列出的服务，则它可能已丢失或放置在不同的帐户上。 可以使用 SetSPN 实用工具调整 SPN。 对于报表查看器 Web 部件  ，将看到[报表查看器 Web 部件配置](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration)中配置的 http SPN。
 
     * 选择“确定”以退出对话框。
 
-3. 配置 C2WTS“AllowedCallers”。
+3. 配置 C2WTS“AllowedCallers”  。
 
-    C2WTS 需要在配置文件 C2WTShost.exe.config 中显式列出的“调用方”标识。C2WTS 不接受来自系统中所有验证了身份的用户的请求，除非配置为这样做。 在此情况下，“调用方”是 WSS_WPG Windows 组。 C2WTShost.exe.confi 文件保存在以下位置：
+    C2WTS 需要在配置文件 C2WTShost.exe.config 中显式列出的“调用方”标识  。C2WTS 不接受来自系统中所有验证了身份的用户的请求，除非配置为这样做。 在此情况下，“调用方”是 WSS_WPG Windows 组。 C2WTShost.exe.confi 文件保存在以下位置：
 
     在 SharePoint 管理中心为 C2WTS 服务更改服务帐户，会将该帐户添加到 WSS_WPG 组中。
 
@@ -113,6 +113,6 @@ C2WTS 创建的令牌将仅用于约束委派（对特定服务的约束）以�
     </configuration>
     ```
 
-4. 通过 SharePoint 管理中心，在“管理服务器上的服务”页上，启动（如果已启动，则停止并启动）Claims to Windows Token Service。 应在将执行操作的服务器上启动该服务。 例如，如果你有一个作为 WFE 的服务器，并且有另一个作为应用程序服务器的服务器（该服务器正在运行 SQL Server Reporting Services 共享服务），则只需在该应用程序服务器上启动 C2WTS。 如果在运行报表查看器 Web 部件，则仅 WFE 服务器上需要 C2WTS。
+4. 通过 SharePoint 管理中心，在“管理服务器上的服务”  页上，启动（如果已启动，则停止并启动）Claims to Windows Token Service。 应在将执行操作的服务器上启动该服务。 例如，如果你有一个作为 WFE 的服务器，并且有另一个作为应用程序服务器的服务器（该服务器正在运行 SQL Server Reporting Services 共享服务），则只需在该应用程序服务器上启动 C2WTS。 如果在运行报表查看器 Web 部件，则仅 WFE 服务器上需要 C2WTS。
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

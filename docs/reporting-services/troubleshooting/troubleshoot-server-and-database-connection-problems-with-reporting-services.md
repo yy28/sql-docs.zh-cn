@@ -1,6 +1,6 @@
 ---
 title: Reporting Services 的服务器和数据库连接问题疑难解答 | Microsoft Docs
-ms.date: 02/28/2016
+ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e44d8dde3f93a946a25cc8fe269a26f70a7432a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: eda9f349cf53d77af14df10c842c9619fb6d370a
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574119"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403175"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services 的服务器和数据库连接问题疑难解答
 使用本主题可以排除在连接到报表服务器时所遇到的故障。 本主题还提供了与错误消息有关的信息。 有关数据源配置和配置报表服务器连接信息的详细信息，请参阅 [指定报表数据源的凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 和 [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "65574119"
 在连接到 SQL Server 时，在默认的设置下 SQL Server 不允许远程连接可能会导致此失败。 （提供程序：命名管道提供程序，错误：40 - 无法打开到 SQL Server 的连接）。 此错误由托管报表服务器数据库的数据库引擎实例返回。 大多数情况下，出现此错误的原因是 SQL Server 服务停止。 或者，如果使用的是具有高级服务的 SQL Server Express 或命名实例，那么，当报表服务器 URL 或报表服务器数据库的连接字符串不正确时，将发生此错误。 若要解决这些问题，请执行以下操作：  
   
 * 验证 SQL Server (**MSSQLSERVER**) 服务是否正在运行。 在托管数据库引擎实例的计算机上，依次单击“开始”、“管理工具”和“服务”，然后滚动到 SQL Server (**MSSQLSERVER**)。 如果未启动，请右键单击该服务，选择“属性”，在“启动类型”中选择“自动”，然后依次单击“应用”、“启动”和“确定”。   
-* 确保报表服务器 URL 和报表服务器数据库连接字符串正确。 如果 Reporting Services 或数据库引擎作为命名实例安装，则在安装过程中创建的默认连接字符串将包括相应的实例名称。 例如，如果在名为 DEVSRV01 的服务器上安装了具有高级服务的 SQL Server Express 的默认实例，则报表管理器 URL 将为 DEVSRV01\Reports$SQLEXPRESS。 此外，连接字符串中的数据库服务器名称将类似于 DEVSRV01\SQLEXPRESS。 有关 SQL Server Express 的 URL 和数据源连接字符串的详细信息，请参阅 [具有高级服务的 SQL Server Express 中的 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)。 若要验证报表服务器数据库的连接字符串，请启动 Reporting Services 配置工具并查看“数据库安装”页。  
+* 确保报表服务器 URL 和报表服务器数据库连接字符串正确。 如果 Reporting Services 或数据库引擎作为命名实例安装，则在安装过程中创建的默认连接字符串将包括相应的实例名称。 例如，如果在名为 DEVSRV01 的服务器上安装了具有高级服务的 SQL Server Express 的默认实例，则 Web 门户 URL 将为 DEVSRV01\Reports$SQLEXPRESS。 此外，连接字符串中的数据库服务器名称将类似于 DEVSRV01\SQLEXPRESS。 有关 SQL Server Express 的 URL 和数据源连接字符串的详细信息，请参阅 [具有高级服务的 SQL Server Express 中的 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)。 若要验证报表服务器数据库的连接字符串，请启动 Reporting Services 配置工具并查看“数据库安装”页。  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>无法进行连接。 请确保服务器正在运行。  
 此错误由 ADOMD.NET 提供程序返回。 有多种原因可导致发生此错误。 如果已将服务器指定为“localhost”，请尝试改为指定服务器名称。 如果无法为新连接分配内存，也会发生此错误。 有关详细信息，请参阅 [知识库文章 912017 - 连接到 SQL Server 2005 Analysis Services 实例时收到错误消息：](https://support.microsoft.com/kb/912017)。  
@@ -46,11 +46,11 @@ ms.locfileid: "65574119"
 若要解决此错误，您可以将连接字符串修改为使用服务器名称，也可针对服务启用 TCP/IP。 请执行下列步骤启用 TCP/IP：  
   
 1. 启动 SQL Server 配置管理器。  
-2. 展开“SQL Server 网络配置” 。  
-3. 选择“MSSQLSERVER 的协议” 。  
-4. 右键单击“TCP/IP” ，并选择“启用” 。  
-5. 选择“SQL Server 服务” 。  
-6. 右键单击“SQL Server (MSSQLSERVER)” ，并选择“重新启动” 。  
+2. 展开“SQL Server 网络配置”  。  
+3. 选择“MSSQLSERVER 的协议”  。  
+4. 右键单击“TCP/IP”  ，并选择“启用”  。  
+5. 选择“SQL Server 服务”  。  
+6. 右键单击“SQL Server (MSSQLSERVER)”  ，并选择“重新启动”  。  
   
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>在 Management Studio 中连接报表服务器时出现 WMI 错误  
 默认情况下，Management Studio 使用 Reporting Services Windows Management Instrumentation (WMI) 提供程序来建立与报表服务器的连接。 如果未正确安装 WMI 提供程序，在尝试连接到报表服务器时将遇到以下错误：  
@@ -59,7 +59,7 @@ ms.locfileid: "65574119"
   
 若要解决此错误，请重新安装该软件。 对于所有其他情况，作为临时解决方法，可以通过 SOAP 端点连接到报表服务器：  
   
-* 在 Management Studio 中的“连接到服务器”  对话框中，在“服务器名称” 中键入报表服务器的 URL。 默认情况下，它是 `https://<your server name>/reportserver`。 如果使用的是具有高级服务的 SQL Server 2008 Express 版本，则为 `https://<your server name>/reportserver$sqlexpress`。  
+* 在 Management Studio 中的“连接到服务器”  对话框中，在“服务器名称”  中键入报表服务器的 URL。 默认情况下，它是 `https://<your server name>/reportserver`。 如果使用的是具有高级服务的 SQL Server 2008 Express 版本，则为 `https://<your server name>/reportserver$sqlexpress`。  
   
 若要解决该错误以便可以使用 WMI 提供程序进行连接，则应运行安装程序以修复 Reporting Services 或重新安装 Reporting Services。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65574119"
   
 如果没有将托管报表服务器数据库的数据库引擎实例配置为启用远程连接，也会发生此错误。 在某些 SQL Server 版本中，默认情况下将启用远程连接。 若要验证是否已在你使用的 SQL Server 数据库引擎实例上启用远程连接，请运行 SQL Server 配置管理器工具。 必须同时启用 TCP/IP 和命名管道。 报表服务器同时使用这两种协议。 有关如何启用远程连接的说明，请参阅 [配置用于远程管理的报表服务器](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)中的“如何配置与报表服务器数据库的远程连接”部分。  
   
-如果此错误还包含以下文本，则说明用于运行数据库引擎实例的帐户的密码已过期：“与服务器建立连接时出错。 在连接到 SQL Server 时，在默认的设置下 SQL Server 不允许远程连接可能会导致此失败。 （**访问接口: SQL Server 网络接口，错误: 26 - 定位指定的服务器/实例时出错）。**” 若要解决此错误，请重置密码。   
+如果此错误还包含以下文本，则说明用于运行数据库引擎实例的帐户的密码已过期：“与服务器建立连接时出错。 在连接到 SQL Server 时，在默认的设置下 SQL Server 不允许远程连接可能会导致此失败。 （**访问接口: SQL Server 网络接口，错误: 26 - 定位指定的服务器/实例时出错）。** ” 若要解决此错误，请重置密码。   
   
 ## <a name="rpc-server-is-not-listening"></a>“RPC 服务器未在监听”  
 报表服务器服务对某些操作使用远程过程调用 (RPC) 服务器。 如果遇到“RPC 服务器未在监听”错误，请验证报表服务器服务是否正在运行。  

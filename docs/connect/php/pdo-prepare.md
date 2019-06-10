@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7eac30ff1391ba5c56099cf7c59fa89b1368f115
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.openlocfilehash: 605a2564bff66a3cf8de4c8c8abb92b101e5b2d6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105879"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762033"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 #### <a name="parameters"></a>Parameters
 $*statement*：包含 SQL 语句的字符串。
 
-key_pair：包含属性名称和值的数组。 有关详细信息，请参阅“备注”部分。
+key_pair：包含属性名称和值的数组  。 有关详细信息，请参阅“备注”部分。
 
 ## <a name="return-value"></a>返回值
 如果成功，则返回 PDOStatement 对象。 如果失败，则返回 PDOException 对象或 False，具体取决于 `PDO::ATTR_ERRMODE` 的值。
@@ -40,7 +40,7 @@ key_pair：包含属性名称和值的数组。 有关详细信息，请参阅�
 ## <a name="remarks"></a>Remarks
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 在执行已准备的语句之前不会对其进行评估。
 
-下表列出可能的 key_pair 值。
+下表列出可能的 key_pair 值  。
 
 |Key|描述|
 |-------|---------------|

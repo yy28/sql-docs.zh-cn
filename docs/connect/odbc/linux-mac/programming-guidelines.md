@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042366"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798748"
 ---
 # <a name="programming-guidelines"></a>编程指南
 
@@ -102,7 +102,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 |ISO-8859-13|拉丁语 - 7|
 |ISO-8859-15|拉丁语 - 9|
 
-连接后，驱动程序将检测加载它的进程的当前区域设置。 如果驱动程序使用上述一种编码，则驱动程序会将该编码用于 SQLCHAR（窄字符）数据；否则，默认使用 UTF-8。 默认情况下，由于所有进程都在“C”区域设置中启动（并因此导致驱动程序默认为 UTF-8），如果应用程序需要使用上述一种编码，则它应在连接前使用 setlocale 函数设置适当的区域设置：可显式指定所需的区域设置，或通过使用空字符串（例如，`setlocale(LC_ALL, "")`）来使用环境的区域设置。
+连接后，驱动程序将检测加载它的进程的当前区域设置。 如果驱动程序使用上述一种编码，则驱动程序会将该编码用于 SQLCHAR（窄字符）数据；否则，默认使用 UTF-8。 默认情况下，由于所有进程都在“C”区域设置中启动（并因此导致驱动程序默认为 UTF-8），如果应用程序需要使用上述一种编码，则它应在连接前使用 setlocale 函数设置适当的区域设置：可显式指定所需的区域设置，或通过使用空字符串（例如，`setlocale(LC_ALL, "")`）来使用环境的区域设置  。
 
 因此，在编码为 UTF-8 的典型 Linux 或 Mac 环境中，从 ODBC Driver 13 或 13.1 升级的 ODBC Driver 17 用户将不会察觉到任何差异。 但是，通过 `setlocale()` 使用上述列表中非 UTF-8 编码的应用程序需要对传入/传出驱动程序的数据使用该编码，而不是 UTF-8。
 
@@ -110,7 +110,7 @@ SQLWCHAR 数据必须是 UTF-16LE (Little Endian)。
 
 使用 SQLBindParameter 绑定输入参数时，如果指定了 SQL_VARCHAR 等窄字符 SQL 类型，则驱动程序会将提供的数据从客户端编码转换为默认（通常为代码页 1252）[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 编码。 对于输出参数，驱动程序将从与数据关联的排序规则信息中指定的编码转换为客户端编码。 但是，数据可能会丢失 - 无法以目标编码表示的源编码字符将转换为问号（“?”）。
 
-要在绑定输入参数时避免此类数据丢失，请指定一种 Unicode SQL 字符类型，例如 SQL_NVARCHAR。 在这种情况下，驱动程序将从客户端编码转换为 UTF-16，该编码可表示所有 Unicode 字符。 此外，服务器上的目标列或参数也必须是 Unicode 类型（nchar、nvarchar 和 ntext）或带有排序规则/编码的其他类型，这可以表示原始源数据的所有字符。 为避免输出参数丢失数据，请指定 Unicode SQL 类型和 Unicode C 类型 (SQL_C_WCHAR)（使驱动程序以 UTF-16 形式返回数据）或窄 C 类型，并确保客户端编码可以表示源数据的所有字符（可始终使用 UTF-8 实现这一目的）。
+要在绑定输入参数时避免此类数据丢失，请指定一种 Unicode SQL 字符类型，例如 SQL_NVARCHAR。 在这种情况下，驱动程序将从客户端编码转换为 UTF-16，该编码可表示所有 Unicode 字符。 此外，服务器上的目标列或参数也必须是 Unicode 类型（nchar、nvarchar 和 ntext）或带有排序规则/编码的其他类型，这可以表示原始源数据的所有字符    。 为避免输出参数丢失数据，请指定 Unicode SQL 类型和 Unicode C 类型 (SQL_C_WCHAR)（使驱动程序以 UTF-16 形式返回数据）或窄 C 类型，并确保客户端编码可以表示源数据的所有字符（可始终使用 UTF-8 实现这一目的）。
 
 有关排序规则和编码的详细信息，请参阅[排序规则和 Unicode 支持](../../../relational-databases/collations/collation-and-unicode-support.md)。
 
@@ -120,7 +120,7 @@ Windows 与 Linux 和 macOS 上的几个版本的 iconv 库之间存在一些编
 
 ## <a name="additional-notes"></a>其他说明  
 
-1.  可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证和 主机,端口建立专用管理员连接 (DAC)。 首先，Sysadmin 角色成员需要发现 DAC 端口。 请参阅[用于数据库管理员的诊断连接](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)来了解如何操作。 例如，如果 DAC 端口为 33000，可以使用 `sqlcmd` 连接它，如下所示：  
+1.  可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证和 主机,端口建立专用管理员连接 (DAC)  。 首先，Sysadmin 角色成员需要发现 DAC 端口。 请参阅[用于数据库管理员的诊断连接](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)来了解如何操作。 例如，如果 DAC 端口为 33000，可以使用 `sqlcmd` 连接它，如下所示：  
 
     ```
     sqlcmd -U <user> -P <pwd> -S <host>,33000

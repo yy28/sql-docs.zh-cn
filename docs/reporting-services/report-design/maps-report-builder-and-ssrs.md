@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 28faf7047d9ba66116e15b4aa41307d90beacd2f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: c03db76d1c8ad67bf9db43c1b4acfa728396b703
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580108"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428970"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
   若要针对地理背景实现业务数据的可视化，可以向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加地图。 您选择的地图类型取决于您要在报表中传达的信息。 您可以添加只显示位置的地图、气泡地图（气泡大小随着某地区的家庭数量而变化）、标记地图（标记样式随每个商店盈利情况最好的产品而变化）或线条地图（显示商店之间的路线）。  
@@ -57,7 +57,7 @@ ms.locfileid: "65580108"
  若要对地图上的数据实现可视化效果，分析数据与空间数据必须具有某种关系。 当空间数据和分析数据来自同一个源时，关系是已知的。 当空间数据和分析数据来自不同源时，必须指定匹配字段以使它们相关。  
   
 ### <a name="spatial-data"></a>空间数据  
- 空间数据由一系列坐标组成。 来自数据源的空间数据可以是单个点、多个点、单一线条、多个线条或一组多边形。 每组坐标定义一个“地图元素” ，例如，表示国家/地区轮廓的多边形、表示道路的线条或表示市县所在位置的点。  
+ 空间数据由一系列坐标组成。 来自数据源的空间数据可以是单个点、多个点、单一线条、多个线条或一组多边形。 每组坐标定义一个“地图元素”  ，例如，表示国家/地区轮廓的多边形、表示道路的线条或表示市县所在位置的点。  
   
  空间数据基于以下坐标系之一：  
   
@@ -70,10 +70,10 @@ ms.locfileid: "65580108"
 #### <a name="sources-of-spatial-data"></a>空间数据的来源  
  支持以下空间数据源：  
   
--   **地图库报表。** 空间数据嵌入在位于地图库中的报表内。 默认情况下，地图库安装在下面的位置：\<drive>:\Program Files\Microsoft SQL Server\Report Builder \MapGallery。  
+-   **地图库报表。** 空间数据嵌入在位于地图库中的报表内。 默认情况下，地图库安装在下面的位置：\<drive>  :\Program Files\Microsoft SQL Server\Report Builder \MapGallery。  
   
     > [!NOTE]  
-    >  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([https://www.census.gov/](https://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
+    >  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([https://www.census.gov/](https://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取关于 TIGER/Line 形状文件的详细信息，请转到 [TIGER/Line 形状文件和 TIGER/Line 文件技术文档](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
   
 -   **ESRI 形状文件。** ESRI 形状文件包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式的数据。 ESRI 形状文件指一组文件。 .shp 文件中的数据指定地理或几何形状。 .dbf 文件中的数据提供形状的属性。 若要在设计视图中查看地图或从报表服务器运行地图，这两个文件必须位于同一个文件夹中。 当您从本地文件系统上的 .shp 文件添加空间数据时，空间数据将嵌入到报表中。 若要在运行时动态检索空间数据，请将形状文件上载到您的报表服务器中，然后将它们指定为空间数据源。 有关详细信息，请参阅 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)（查找用于地图的 ESRI 形状文件）。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "65580108"
   
 -   **嵌入的数据。** 从嵌入报表的地图层中的地图元素检索示例数据。  
   
--   **链接到 ESRI 形状文件。** 如果提供了 ESRI 形状文件 (.shp) 和支持文件 (.dbf)，则从形状文件中加载示例数据。 否则，报表处理器生成示例数据并显示消息 **“没有可用的空间数据”**。  
+-   **链接到 ESRI 形状文件。** 如果提供了 ESRI 形状文件 (.shp) 和支持文件 (.dbf)，则从形状文件中加载示例数据。 否则，报表处理器生成示例数据并显示消息 **“没有可用的空间数据”** 。  
   
--   **SQL Server 空间数据。** 如果数据源可用且凭据有效，则从数据库的空间数据中加载示例数据。 否则，报表处理器生成示例数据并显示消息 **“没有可用的空间数据”**。  
+-   **SQL Server 空间数据。** 如果数据源可用且凭据有效，则从数据库的空间数据中加载示例数据。 否则，报表处理器生成示例数据并显示消息 **“没有可用的空间数据”** 。  
   
 #### <a name="embedding-spatial-data-in-the-report-definition"></a>在报表定义中嵌入空间数据  
  与分析数据不同，您可以选择在报表定义中嵌入地图层的空间数据。 当您嵌入空间数据时，您将嵌入在地图层中使用的地图元素。  
@@ -114,7 +114,7 @@ ms.locfileid: "65580108"
  当为层指定规则并选择分析数据字段时，如果数据类型为数值，则报表处理器将自动使用默认函数 Sum 来计算地图元素的聚合值。 如果字段不是数值，则不指定聚合函数，而是使用隐式聚合函数 First。 若要更改默认表达式，请针对层的规则更改选项。 有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ### <a name="match-fields"></a>匹配字段  
- 若要将分析数据与层上的地图元素相关，必须指定“匹配字段” 。 可以使用匹配字段在地图元素与分析数据之间建立关系。 可以使用一个或多个字段来进行匹配，只要它们能够为每个空间位置指定唯一的分析值。  
+ 若要将分析数据与层上的地图元素相关，必须指定“匹配字段”  。 可以使用匹配字段在地图元素与分析数据之间建立关系。 可以使用一个或多个字段来进行匹配，只要它们能够为每个空间位置指定唯一的分析值。  
   
  例如，对于气泡大小随市县人口数发生变化的气泡图，需要下面的数据：  
   
@@ -137,7 +137,7 @@ ms.locfileid: "65580108"
  在本例中，只靠市县名称不足以唯一标识人口数。 例如，在美国有多个市县的名称为 Albany。 若要指定特定市县，必须指定地区以及市县名称。  
   
 ##  <a name="Viewport"></a> 了解地图视区  
- 在为报表指定地图数据之后，可以通过指定地图“视区” 来限制地图的显示区域。 默认情况下，视区为整个地图的区域。 若要裁剪地图，可以指定中心、缩放级别以及最大和最小坐标，以定义要在报表中包含的区域。 若要改进地图在报表中的显示，可以将图例、距离刻度和色阶移到视区之外。 下图显示一个视区：  
+ 在为报表指定地图数据之后，可以通过指定地图“视区”  来限制地图的显示区域。 默认情况下，视区为整个地图的区域。 若要裁剪地图，可以指定中心、缩放级别以及最大和最小坐标，以定义要在报表中包含的区域。 若要改进地图在报表中的显示，可以将图例、距离刻度和色阶移到视区之外。 下图显示一个视区：  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   

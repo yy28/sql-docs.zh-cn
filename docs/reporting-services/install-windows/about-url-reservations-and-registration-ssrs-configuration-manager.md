@@ -9,14 +9,14 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0e835d14bfb2684685f95f65dd1a16e7e4edb55e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 640407e68b146e399dc478b17a91c351b23fe306
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814110"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454505"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 预留和注册（SSRS 配置管理器）
   Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 预留。 URL 预留定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，将定义报表服务器 Web 服务和报表管理器的 URL 预留。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为你创建 URL 预留：  
@@ -64,7 +64,7 @@ ms.locfileid: "51814110"
  如果在默认配置中安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，安装程序将为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]保留 URL。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中定义 URL 预留时，也可以接受这些默认值。 如果安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 或安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作为命名实例，则默认 URL 将包含实例名称。  
   
 > [!IMPORTANT]  
->  实例字符为下划线字符 (**_**)。  
+>  实例字符为下划线字符 ( **_** )。  
   
  URL 预留包含一个端口号。 以下操作系统将允许多个 Web 应用程序共享一个端口：  
   
@@ -90,10 +90,9 @@ ms.locfileid: "51814110"
 |SQL Server Express|Web 门户|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services URL 的身份验证和服务标识  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留指定了报表服务器服务的服务帐户。 运行服务的帐户用于为运行在同一实例上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序创建的所有 URL。 报表服务器实例的服务标识存储在 RSReportServer.config 文件中。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留显示 URL 预留的帐户。 虚拟服务帐户用于为运行在同一实例上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序创建的所有 URL。
   
- 服务帐户没有默认值。 但是，在安装过程中需要指定服务帐户，即使以“仅文件”模式安装服务器，也会在 RSReportServer.config 中的 **URLReservation** 中指定服务帐户。 服务帐户的有效值包括域用户帐户、 **LocalSystem**或 **NetworkService**。  
-  
+ 
  因为默认安全性为 **RSWindowsNegotiate**，所以匿名访问已禁用。 对于 Intranet 访问，报表服务器 URL 使用网络计算机名称。 如果要为 Internet 连接配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，必须使用其他设置。 有关身份验证的详细信息，请参阅 [联机丛书中的](../../reporting-services/security/authentication-with-the-report-server.md) 使用报表服务器进行身份验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="URLlocalAdmin"></a> 用于本地管理的 URL  
