@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a06a4f8bf7474cd2379886dc78cbdddc6a05cab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: dbfa8c5acd998fed28546baf8b16af09d3abae07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545386"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787705"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>“选择初始数据同步”页（AlwaysOn 可用性组向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  使用 AlwaysOn“选择初始数据同步”页可为新的辅助数据库的初始数据同步指示你的首选项。 此页为三个向导所共有：[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
+  使用 AlwaysOn“选择初始数据同步”  页可为新的辅助数据库的初始数据同步指示你的首选项。 此页为三个向导所共有：[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
   
- 可能的选项包括“自动种子设定”、“完整的数据库和日志备份”、“仅联接”或“跳过初始数据同步”。 选择“自动种子设定”、“完整”、或“仅联接”之前，请确保环境符合先决条件。  
+ 可能的选项包括“自动种子设定”、“完整的数据库和日志备份”、“仅联接”或“跳过初始数据同步”     。 选择“自动种子设定”、“完整”、或“仅联接”之前，请确保环境符合先决条件    。  
     
 ##  <a name="Recommendations"></a> 建议  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52545386"
  SQL Server 自动为此组中的每个数据库创建次要副本。 自动种子设定要求数据和日志文件路径在参与此组的每个 SQL Server 实例上均相同。 可在 [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] 及更高版本中使用。 请参阅[自动初始化 AlwaysOn 可用性组](automatically-initialize-always-on-availability-group.md)。
 
 ##  <a name="Full"></a>完整的数据库和日志备份 
- 对于每个主数据库，“完整的数据库和日志备份”选项将在一个工作流中执行以下若干操作：创建主数据库的完整备份和日志备份、通过在托管次要副本的每个服务器实例上还原这些备份来创建对应的辅助数据库，以及将每个辅助数据库联接到可用性组。  
+ 对于每个主数据库，“完整的数据库和日志备份”选项将在一个工作流中执行以下若干操作：创建主数据库的完整备份和日志备份、通过在托管次要副本的每个服务器实例上还原这些备份来创建对应的辅助数据库，以及将每个辅助数据库联接到可用性组  。  
   
  仅当您的环境符合使用完全初始数据同步的以下先决条件且您希望该向导自动启动数据同步时，才选择此选项。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52545386"
   
  **如果满足先决条件**  
   
- 如果完全满足这些先决条件并且需要向导执行完整初始数据同步，请选择“完整的数据库和日志备份”选项并指定网络共享。 这将导致向导创建每个所选数据库的完整的数据库和日志备份，并将这些备份放置于您指定的网络共享上。 然后，在承载新的辅助副本之一的每个服务器实例上，该向导将通过使用 RESTORE WITH NORECOVERY 还原备份以创建辅助数据库。 创建每个辅助数据库之后，该向导将新的辅助数据库加入可用性组中。 加入辅助数据库后，将在该数据库上启动数据同步。  
+ 如果完全满足这些先决条件并且需要向导执行完整初始数据同步，请选择“完整的数据库和日志备份”选项并指定网络共享  。 这将导致向导创建每个所选数据库的完整的数据库和日志备份，并将这些备份放置于您指定的网络共享上。 然后，在承载新的辅助副本之一的每个服务器实例上，该向导将通过使用 RESTORE WITH NORECOVERY 还原备份以创建辅助数据库。 创建每个辅助数据库之后，该向导将新的辅助数据库加入可用性组中。 加入辅助数据库后，将在该数据库上启动数据同步。  
   
  **指定所有副本可访问的共享网络位置**  
  若要创建和还原备份，该向导要求您指定一个网络共享。 用于在承载可用性副本的每个服务器实例上启动 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帐户必须对网络共享具有读写文件系统权限。  
@@ -78,7 +78,7 @@ ms.locfileid: "52545386"
 ##  <a name="Joinonly"></a> “仅加入”  
  仅当每个承载可用性组的辅助副本的服务器实例上已存在新的辅助数据库时，才选择此选项。 有关准备辅助数据库的信息，请参阅本主题后面的 [手动准备辅助数据库](#PrepareSecondaryDbs)。  
   
- 如果您选择 **“仅加入”**，则该向导将尝试将每个现有辅助数据库加入可用性组中。  
+ 如果您选择 **“仅加入”** ，则该向导将尝试将每个现有辅助数据库加入可用性组中。  
   
 ## <a name="Skip"></a> “跳过初始数据同步”  
  如果您希望自行执行每个主数据库的数据库备份和日志备份，并将它们还原到每个承载辅助副本的服务器实例，则选择此选项。 退出向导后，您需要加入每个辅助副本上的每个辅助数据库。  

@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dde0a65630c5c8c543cd2f6fe9edfa0063d8dc04
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: 4fa7c613c98b01ecda5e535928c7e381beef8aa6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671393"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775719"
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "59671393"
   
 需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的选项最初只在 value 列中显示更改后的值。 在重新启动后，新值将出现在 value 列和 value_in_use 列中。  
   
-但有些选项需要在重新启动服务器后，新的配置值才能生效。 如果设置了新值并在没有重新启动服务器的情况下运行 sp_configure，则新值将出现在配置选项的“value”列中，而不是出现在“value_in_use”列中。 重新启动服务器之后，新值出现在“value_in_use”列中。  
+但有些选项需要在重新启动服务器后，新的配置值才能生效。 如果设置了新值并在没有重新启动服务器的情况下运行 sp_configure，则新值将出现在配置选项的“value”列中，而不是出现在“value_in_use”列中。   重新启动服务器之后，新值出现在“value_in_use”列中。   
   
 自配置选项是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据系统需要进行调整的选项。 大多数情况下，这使您无需手动设置值。 这方面的例子包括 **最小服务器内存** 、 **最大服务器内存** 和用户连接选项。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "59671393"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) （A，SC）|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> （对于 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 1024；对于 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 2048。） **注意：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位操作系统支持的最新版本。|0<br /><br /> 归零操作会根据处理器的数量自动配置最大工作线程数，可以使用公式（256 + (\<处理器数> -4) * 8）来计算 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的线程数，使用公式（512 + (\<处理器数> -4) * 8）来计算 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的线程数。 **注意：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位操作系统支持的最新版本。|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> （对于 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 1024；对于 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 2048。） **注意：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位操作系统支持的最新版本。|0<br /><br /> 归零操作会根据处理器的数量自动配置最大工作线程数，可以使用公式（256 + (\<处理器数> -4) * 8）来计算 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的线程数，使用公式（512 + (\<处理器数> -4) * 8）来计算 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的线程数   。 **注意：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位操作系统支持的最新版本。|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) （A，RR）|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) （A，SC）|0|2147483647|0|  

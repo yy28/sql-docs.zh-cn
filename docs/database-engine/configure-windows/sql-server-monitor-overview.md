@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 767c8f3eb96182fad541cac224759e065ae4ac3a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 8e53116f762763daac818ff52ae38b0f3841c55b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131265"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775457"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 监视器概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "54131265"
 > [!NOTE]  
 >  有关这些监视器的详细信息，请参阅 [监视复制](../../relational-databases/replication/monitor/monitoring-replication.md) 和 [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
   
 -   复制监视器  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54131265"
  以下菜单选项适用于 SQL Server 监视器。  
   
  **File**  
- 此菜单包含“退出”命令。  
+ 此菜单包含“退出”  命令。  
   
  **操作**  
  包含在导航树中所选节点的上下文菜单。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bfb0b56bba45d5e4622076f1d38bec2f4aca97a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1d025a77cace9d8bbcdd746c2e6a193f23efd34d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211726"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772587"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>为 Always On 可用性组生成和分析 CLUSTER.LOG
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,21 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 ## <a name="always-on-log-verbosity"></a>Always On 日志详细级别  
  可以增加可用性组的 CLUSTER.LOG 中日志的详细级别。 若要修改详细级别，请执行下列步骤：  
   
-1.  从“开始”菜单中打开“故障转移群集管理器”。  
+1.  从“开始”菜单中打开“故障转移群集管理器”   。  
   
-2.  展开群集和“服务和应用程序”节点，然后单击可用性组名称。  
+2.  展开群集和“服务和应用程序”节点，然后单击可用性组名称  。  
   
-3.  在“详细信息”窗格中，右键单击可用性组资源，然后单击“属性”。  
+3.  在“详细信息”窗格中，右键单击可用性组资源，然后单击“属性”  。  
   
 4.  单击 **“属性”** 选项卡。  
   
-5.  修改“VerboseLogging”属性。 默认情况下，VerboseLogging 设置为 `0`，它会报告信息、警告和错误。 可以将“VerboseLogging”从 `0` 设置为 `2`。  
+5.  修改“VerboseLogging”属性  。 默认情况下，VerboseLogging 设置为 `0`，它会报告信息、警告和错误  。 可以将“VerboseLogging”从 `0` 设置为 `2`  。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
-7.  再次右键单击可用性组资源，然后单击“使此资源脱机”。  
+7.  再次右键单击可用性组资源，然后单击“使此资源脱机”  。  
   
-8.  再次右键单击可用性组资源，然后单击“将此资源联机”。  
+8.  再次右键单击可用性组资源，然后单击“将此资源联机”  。  
   
 ## <a name="availability-group-resource-events"></a>可用性组资源事件  
  下表显示了可在 CLUSTER.LOG 中看到的不同种类的事件，这些事件与可用性组资源有关。 有关 WSFC 中资源宿主子系统 (RHS) 和资源控制监视器 (RCM) 的详细信息，请参阅 [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)（Windows Server 2008 故障转移群集中的资源宿主子系统 (RHS)）。  
@@ -72,11 +72,11 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  若要将可用性组与其他群集资源 DLL（包括其他可用性组）隔离，请执行以下操作以在单独的 rhs.exe 进程内运行 hadrres.dll：  
   
-1.  打开注册表编辑器并导航到以下项：HKEY_LOCAL_MACHINE\Cluster\Resources。 此项包含所有资源的关键值，每个关键值具有不同的 GUID。  
+1.  打开注册表编辑器并导航到以下项  ：HKEY_LOCAL_MACHINE\Cluster\Resources。 此项包含所有资源的关键值，每个关键值具有不同的 GUID。  
   
-2.  查找包含与可用性组名称相匹配的“名称”值的资源关键字。  
+2.  查找包含与可用性组名称相匹配的“名称”值的资源关键字  。  
   
-3.  将“SeparateMonitor”值更改为“1”。  
+3.  将“SeparateMonitor”值更改为“1”   。  
   
 4.  在 WSFC 集群中重启可用性组的集群服务。  
   

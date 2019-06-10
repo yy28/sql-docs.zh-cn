@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 4430352babb69c58930755cf4ddae0e70b9d5a02
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015123"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794452"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>重播的跟踪将在数据库实验助手
 
@@ -65,10 +65,10 @@ ms.locfileid: "66015123"
 ### <a name="replay-a-trace"></a>重播跟踪
 
 1.  **跟踪文件名**:输入跟踪文件名称。
-1.  **最大文件大小 (MB)**:输入跟踪文件滚动更新大小值。 默认值为 200 MB。 可以输入自定义值。
+1.  **最大文件大小 (MB)** :输入跟踪文件滚动更新大小值。 默认值为 200 MB。 可以输入自定义值。
 1.  **用于存储重播跟踪输出路径**:输入输出.trc 文件的路径。
 1.  **SQL Server 实例名称**:输入要重播跟踪的 SQL Server 实例的名称。
-1.  选择“开始”。
+1.  选择“开始”  。
 
 如果您输入的信息是有效的启动分布式重播过程。 否则，不正确的信息文本 boses 是以红色突出显示。 请确保你输入的值是否正确，然后选择**启动**。
 

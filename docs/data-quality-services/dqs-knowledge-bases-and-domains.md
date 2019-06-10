@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 91e8be0b2c07a846c2ff52f548e364eb0a536028
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 201b9aee27b8a9e267c51588b5178c7c2c6394b1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487352"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796653"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知识库和域
 
@@ -69,7 +69,7 @@ ms.locfileid: "65487352"
 ### <a name="case-insensitivity-in-dqs"></a>DQS 中不区分大小写  
  DQS 中的值不区分大小写。 这意味着当 DQS 执行知识发现、域管理或匹配时，它不区分值的大小写。 如果您在值管理系统中添加的值仅与另一个值在大小写上不同，系统将认为这是同一个值，而非同义词。 如果仅在大小写上有区别的两个值在匹配过程中进行比较，系统将认为这是完全匹配。  
   
- 不过，您可以在清理结果中控制导出的值的大小写。 为此，需要设置“将输出格式设置为”域属性（请参阅[设置域属性](../data-quality-services/set-domain-properties.md)）或在导出清理结果时使用“标准化输出”复选框（请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)）。  
+ 不过，您可以在清理结果中控制导出的值的大小写。 为此，需要设置“将输出格式设置为”域属性（请参阅[设置域属性](../data-quality-services/set-domain-properties.md)）或在导出清理结果时使用“标准化输出”复选框（请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)）   。  
   
 ##  <a name="Domains"></a> 域管理  
  通过域管理，数据专员可以以交互方式更改和增加计算机辅助的知识发现活动生成的元数据。 您所做的每个更改针对某个知识库域。 在域管理活动中，可以执行以下操作：  

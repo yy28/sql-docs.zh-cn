@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3f1fe2b0079d761a0fc599377ee82714227cdb73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a20b27bd5a3c8b22171bf61ef6ebfda2725c5fc0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724315"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774688"
 ---
 # <a name="database-mirroring-history"></a>数据库镜像历史记录
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "47724315"
 |**镜像状态**|数据库的状态：<br /><br /> 已断开连接<br /><br /> 正在挂起故障转移<br /><br /> 挂起<br /><br /> 已同步<br /><br /> 正在同步<br /><br /> Unknown|  
 |**见证服务器连接**|见证服务器连接在数据库镜像会话中的状态，即连接或已断开连接。 如果没有见证服务器，则该值为 NULL。|  
 |**未发送日志**|主体服务器实例上的发送队列中的未发送日志的大小（以 KB 计）。|  
-|**发送时间**|主体服务器实例将当前位于发送队列中的日志发送到镜像服务器实例所需的近似时间量（发送速率）。 由于传入事务的速率变化很大，因此发送日志的时间只是一个估计值。 但是，发送速率对于粗略估计手动故障转移所需的时间非常有用。|  
+|**发送时间**|主体服务器实例将当前位于发送队列中的日志发送到镜像服务器实例所需的近似时间量（发送速率  ）。 由于传入事务的速率变化很大，因此发送日志的时间只是一个估计值。 但是，发送速率对于粗略估计手动故障转移所需的时间非常有用。|  
 |**发送速率**|将事务发送到镜像服务器实例的速率（以 KB/秒计）。|  
 |**新事务速率**|将传入事务输入到主体服务器日志的速率（以 KB/秒计）。 若要判断镜像是否落后、停滞或赶上，可将值与 **“发送时间”** 值进行比较。|  
 |**最早的未发送事务**|发送队列中最早的未发送事务的保留时间。 事务保留时间指示在将事务发送到镜像服务器实例之前将其保留的分钟数。 该值有助于测量数据丢失的可能性（以时间计）。|  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: babb02e4-3521-4b75-b5df-e09205594375
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f459f96ba44811997d33f592892d759389c4666a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8f4e4af185f92d831be52bb714e05a848505ff2b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796796"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767651"
 ---
 # <a name="determine-whether-the-database-engine-is-installed-and-started"></a>确定是否已安装并启动数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47796796"
   
 #### <a name="how-to-view-and-start-the-database-engine-by-using-sql-server-configuration-manager"></a>如何使用 SQL Server 配置管理器查看和启动数据库引擎  
   
-1.  单击 **“开始”**，依次指向 **“所有程序”**、 **Microsoft SQL Server**、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  单击 **“开始”** ，依次指向 **“所有程序”** 、 **Microsoft SQL Server**、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
      如果在 **“开始”** 菜单中没有这些项，则不能正确安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 运行安装程序以安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。  
   
-2.  在 **SQL Server 配置管理器**的左窗格中，单击 **“SQL Server 服务”**。 此时右窗格列出多项与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相关的服务。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已安装，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务将作为 **SQL Server (MSSQLSERVER)** 列出（如果它是默认实例）；如果 **作为命名实例安装，则该服务将作为**\<*SQL Server (*>**instance_name**) [!INCLUDE[ssDE](../../includes/ssde-md.md)] 列出。 除非更改实例名称，否则将 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装为具有名称 **SQLEXPRESS**的命名实例。 绿色的三角形图标指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在运行。 红色的正方形图标指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]已停止。  
+2.  在 **SQL Server 配置管理器**的左窗格中，单击 **“SQL Server 服务”** 。 此时右窗格列出多项与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相关的服务。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已安装，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务将作为 **SQL Server (MSSQLSERVER)** 列出（如果它是默认实例）；如果 **作为命名实例安装，则该服务将作为**\<*SQL Server (* >**instance_name**) [!INCLUDE[ssDE](../../includes/ssde-md.md)] 列出。 除非更改实例名称，否则将 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装为具有名称 **SQLEXPRESS**的命名实例。 绿色的三角形图标指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在运行。 红色的正方形图标指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]已停止。  
   
-3.  若要启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]，请在右窗格中，右键单击 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，再单击“启动”。  
+3.  若要启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]，请在右窗格中，右键单击 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，再单击“启动”  。  
   
 > [!NOTE]  
 >  安装过程中，用户可以选择安装程序文件和数据库文件的位置。 如果用户接受默认位置，文件将安装到 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] 和 C:\Program Files\Microsoft SQL Server\MSSQL.*x*，其中 *x* 为编号。  

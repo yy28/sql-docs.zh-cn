@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5ea236bb633c2d37b1c0299bea90cc047e9c16c6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: a3a6393ff2f2ed5317e63fe0d8979c9b5ddda2ab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480425"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785485"
 ---
 # <a name="create-term-based-relations"></a>创建基于字词的关系
 
@@ -68,7 +68,7 @@ ms.locfileid: "65480425"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [创建知识库](../data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”** 。 有关详细信息，请参阅 [创建知识库](../data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  域管理在 Data Quality Service 客户端页面中执行，该页面包含用于单独域管理操作的五个选项卡。 它不是一个向导驱动的过程；任何管理操作都可以单独执行。  
@@ -94,7 +94,7 @@ ms.locfileid: "65480425"
   
     6.  通过在 **“查找”** 文本框中输入一个或多个数字，可以在“关系”表中查找一个值。 该字符串的匹配项将会突出显示。 使用向上箭头和向下箭头可以移到表中该字符串的不同实例。  
   
-    7.  **拼写检查器**：如果“值”或“更正为”列中的值有红色的波浪下划线，则表示拼写检查器建议更正该值。 右键单击带下划线的值，然后选择由拼写检查器提供的建议值之一。 或者，您可以单击快捷菜单中的 **“添加”** ，以继续使用原始值。 有关详细信息，请参阅 [使用 DQS 拼写检查器](../data-quality-services/use-the-dqs-speller.md) 和 [设置域属性](../data-quality-services/set-domain-properties.md)。  
+    7.  **拼写检查器**：如果“值”或“更正为”列中的值有红色的波浪下划线，则表示拼写检查器建议更正该值   。 右键单击带下划线的值，然后选择由拼写检查器提供的建议值之一。 或者，您可以单击快捷菜单中的 **“添加”** ，以继续使用原始值。 有关详细信息，请参阅 [使用 DQS 拼写检查器](../data-quality-services/use-the-dqs-speller.md) 和 [设置域属性](../data-quality-services/set-domain-properties.md)。  
   
         > [!NOTE]  
         >  若要使用拼写检查器，您或者可以在 **“域属性”** 页中启用它，或者如果已在 **“域属性”** 页中禁用它，则可以在 **“基于字词的关系”** 页中单击 **“启用/禁用拼写检查器”** 图标以便在该页上启用它。  

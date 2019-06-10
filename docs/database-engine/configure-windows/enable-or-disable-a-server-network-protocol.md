@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d41ee42e17dc8f501749599e56ab31e01ba6f85d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: 55b104222d746e3d10641ecf61b7059e519f0717
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591731"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803245"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>启用或禁用服务器网络协议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +50,15 @@ ms.locfileid: "53591731"
   
 #### <a name="to-enable-a-server-network-protocol"></a>启用服务器网络协议  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在  配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
   
-2.  在控制台窗格中，单击“\<实例名称> 的协议”。  
+2.  在控制台窗格中，单击“\<实例名称>  的协议”  。  
   
-3.  在细节窗格中，右键单击要更改的协议，再单击“启用”  或“禁用” 。  
+3.  在细节窗格中，右键单击要更改的协议，再单击“启用”  或“禁用”  。  
   
-4.  在控制台窗格中，单击“SQL Server 服务”。  
+4.   在控制台窗格中，单击“SQL Server 服务”。  
   
-5.  在细节窗格中，右键单击“SQL Server (\<实例名称>)”，然后单击“重启”停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
+5.  在细节窗格中，右键单击“SQL Server  (\<实例名称>  )”  ，然后单击“重启”  停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   
@@ -68,7 +68,7 @@ ms.locfileid: "53591731"
   
 2.  可以从任务栏启动 Windows PowerShell，也可以通过依次单击“开始”、“所有程序”、“附件”、“Windows PowerShell”、“Windows PowerShell”来启动。  
   
-3.  通过输入“sqlps”导入“Import-Module “sqlps””模块。  
+3.  通过输入“sqlps”导入“Import-Module “sqlps””模块   。  
   
 4.  执行以下语句以启用 TCP 和 Named Pipes 协议。 `<computer_name>` 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]替换为运行  的计算机的名称。 `MSSQLSERVER` 如果您在配置命名实例，请将  替换为该实例的名称。  
   

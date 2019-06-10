@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1ba4de5a3ed59e13e87c0fc9094d1571975467e9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 8ffc550212a8dd4237c9129cf7a5c1ea2244aa12
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201796"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783779"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>“添加 IP 地址”对话框 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "53201796"
 >  **“添加 IP 地址”** 对话框并不验证该 IP 地址。 该对话框也不会阻止您为已经添加到可用性组侦听器的子网继续添加其他子网地址。  
   
  **取消**  
- 单击以取消所做选择，并返回“新的可用性组侦听程序”对话框或“侦听程序”选项卡，不为任何子网添加静态 IP 地址。  
+ 单击以取消所做选择，并返回“新的可用性组侦听程序”  对话框或“侦听程序”  选项卡，不为任何子网添加静态 IP 地址。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   

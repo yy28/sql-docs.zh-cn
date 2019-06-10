@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 592b581ae4981e42bea2f6bf6f9135018917b002
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63152393"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794360"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>将本地 SQL Server 或 Azure Vm 上的 SQL Server 迁移到 Azure SQL 数据库使用数据迁移助手
 
@@ -34,7 +34,7 @@ ms.locfileid: "63152393"
 
 2. 将源类型设置为**SQL Server**和目标服务器类型为**Azure SQL 数据库**。
 
-3. 选择“创建”。
+3. 选择“创建”  。
 
    ![创建迁移项目](../dma/media/NewCreate1.png)
 
@@ -49,7 +49,7 @@ ms.locfileid: "63152393"
 
     ![选择源服务器](../dma/media/select-source-server.png)
 
-3. 选择“连接”。
+3. 选择“连接”  。
 
 4. 选择要迁移到 Azure SQL 数据库的单一源数据库。
 
@@ -71,7 +71,7 @@ ms.locfileid: "63152393"
 
      ![选择目标服务器](../dma/media/select-target-server.png)
 
-3. 选择“连接”。
+3. 选择“连接”  。
 
 4. 选择要迁移到单个目标数据库。
 
@@ -119,7 +119,7 @@ ms.locfileid: "63152393"
 
    ![迁移状态](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据迁移助手 (DMA)](../dma/dma-overview.md)
 - [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)

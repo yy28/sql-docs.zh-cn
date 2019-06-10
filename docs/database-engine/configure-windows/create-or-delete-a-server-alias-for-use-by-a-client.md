@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b3d6e457d6ef07ff5401e2d6fe97241db9ca84cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0f13aaf724ef2b02b6f2ce844e2c6f19cdcd1359
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704425"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767622"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>创建或删除供客户端使用的服务器别名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47704425"
   
 #### <a name="to-create-an-alias"></a>创建别名  
   
-1.  在 SQL Server 配置管理器中，展开“SQL Server Native Client 配置”，右键单击“别名”，再单击“新建别名”。  
+1.  在 SQL Server 配置管理器中，展开“SQL Server Native Client 配置”  ，右键单击“别名”  ，再单击“新建别名”  。  
   
 2.  在 **“别名”** 框中，键入别名。 当客户端应用程序进行连接时，它们使用该名称。  
   
@@ -39,15 +39,15 @@ ms.locfileid: "47704425"
   
 4.  在 **“协议”** 框中，选择用于该别名的协议。 选择某个协议，将可选属性框的标题更改为“端口号”、“管道名称”或“连接字符串”。  
   
- 对于创建自己的连接字符串的程序员来说， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器帮助介绍的连接字符串颇为有用。 若要访问此信息，请在 **“新建别名”** 对话框中按 F1，或单击 **“帮助”**。  
+ 对于创建自己的连接字符串的程序员来说， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器帮助介绍的连接字符串颇为有用。 若要访问此信息，请在 **“新建别名”** 对话框中按 F1，或单击 **“帮助”** 。  
   
 > [!NOTE]  
 >  如果配置的别名正与错误的服务器或实例进行连接，则请禁用并重新启用相关联的网络协议。 这样做会清除缓存的连接信息，从而允许客户端进行正确连接。  
   
 #### <a name="to-delete-an-alias"></a>删除别名  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开 **“SQL Server Native Client 配置”**，然后单击 **“别名”**。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开 **“SQL Server Native Client 配置”** ，然后单击 **“别名”** 。  
   
-2.  在“详细信息”窗格中，右键单击要删除的别名，然后单击“删除”。  
+2.  在“详细信息”窗格中，右键单击要删除的别名，然后单击“删除”  。  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+manager: jroth
+ms.openlocfilehash: cd2f8de0af5078816d4034dc9ba23bcc7ab647b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832079"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799258"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>为 Always On 可用性组准备辅助数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ ms.locfileid: "55832079"
   
 -   准备辅助数据库之前，我们强烈建议您挂起针对可用性组中数据库的计划日志备份，直到完成辅助副本的初始化。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  备份数据库时， [TRUSTWORTHY 数据库属性](../../../relational-databases/security/trustworthy-database-property.md) 设置为 OFF。 因此，在新还原的数据库中，TRUSTWORTHY 始终为 OFF。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)。  
   
  如果服务器实例上不存在要还原的数据库，则 RESTORE 语句要求 CREATE DATABASE 权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](../../../t-sql/statements/restore-statements-transact-sql.md)备份。  
@@ -80,7 +80,7 @@ ms.locfileid: "55832079"
   
 3.  在承载辅助副本的服务器实例上，依次还原主数据库的完整数据库备份（还可以选择还原差异备份）以及所有后续的日志备份。  
   
-     在“RESTORE DATABASE 选项”页上，选择“不对数据库执行任何操作，不回滚未提交的事务”**。可以还原其他事务日志。(RESTORE WITH NORECOVERY)**。  
+     在“RESTORE DATABASE 选项”页上，选择“不对数据库执行任何操作，不回滚未提交的事务”  **。可以还原其他事务日志。(RESTORE WITH NORECOVERY)** 。  
   
      如果主数据库与辅助数据库的文件路径不同，例如，如果主数据库位于驱动器“F:”，但承载辅助副本的服务器实例缺少 F: 驱动器，请在 WITH 语句中包括 MOVE 选项。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "55832079"
         GO  
         ```  
   
-5.  还原完整备份之后，必须在主数据库中创建日志备份。 例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句将日志备份到名为 E:\MyDB1_log.trn 的备份文件：  
+5.  还原完整备份之后，必须在主数据库中创建日志备份。 例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句将日志备份到名为 E:\MyDB1_log.trn 的备份文件  ：  
   
     ```  
     BACKUP LOG MyDB1   
@@ -204,7 +204,7 @@ ms.locfileid: "55832079"
   
 6.  在将数据库联接到辅助副本之前，必须应用必要的日志备份（以及所有后续日志备份）。  
   
-     例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句还原 C:\MyDB1.trn 中的第一个日志：  
+     例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句还原 C:\MyDB1.trn 中的第一个日志  ：  
   
     ```  
     RESTORE LOG MyDB1   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: craigg
-ms.openlocfilehash: 672473c4e4cfaf5314f53ae7d3a351cb82a93e6d
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+manager: jroth
+ms.openlocfilehash: f424e8e799c7550ff426a7b4c2a2022fe4b0c4bb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875182"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794364"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在本地 SQL Server 升级到 SQL Server 或使用数据迁移助手的 Azure Vm 上的 SQL Server
 
@@ -34,7 +34,7 @@ ms.locfileid: "65875182"
 
 2. 将源和目标服务器类型设置为**SQL Server**如果要在本地 SQL Server 升级到更高版本的本地 SQL 服务器。
 
-3. 选择“创建”。
+3. 选择“创建”  。
 
    ![创建迁移项目](../dma/media/NewCreate.png)
 
@@ -50,7 +50,7 @@ ms.locfileid: "65875182"
 
 5. 建议通过选择加密连接**对连接进行加密**中**连接属性**部分。
 
-6. 单击“下一步” 。
+6. 单击“下一步”  。
 
    ![指定源和目标页](../dma/media/SourceTarget.png)
 

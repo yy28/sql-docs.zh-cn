@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 608106f70ab12353efd0f5315e4edd0951df7273
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5304bd107c5aa41a2c0be30d7576f4f782d19820
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642515"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777775"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>恢复可用性数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,38 +31,19 @@ ms.locfileid: "47642515"
 > [!NOTE]  
 >  挂起和恢复 AlwaysOn 辅助数据库并不直接影响主数据库的可用性。 但是，暂停某一辅助数据库可能会在恢复这个暂停的辅助数据库之前影响主数据库的冗余和故障转移功能。 这与数据库镜像相反，在数据库镜像中，在恢复镜像前镜像状态在镜像数据库和主数据库上都挂起。 挂起 AlwaysOn 主数据库将挂起所有相应辅助数据库上的数据移动，并且在恢复主数据库前针对该数据库的冗余和故障转移功能将停止。  
   
--   **开始之前：**  
   
-     [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
-  
--   **若要恢复辅助数据库，请使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   [相关任务](#RelatedTasks)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-### <a name="limitations-and-restrictions"></a>限制和局限  
+## <a name="limitations-and-restrictions"></a>限制和局限  
  RESUME 命令只要被承载目标数据库的副本接受后就返回，但是实际上继续数据库以异步方式发生。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a> 先决条件  
   
--   您必须连接到承载要恢复的数据库的服务器实例。  
-  
--   可用性组必须联机。  
-  
+-   您必须连接到承载要恢复的数据库的服务器实例。    
+-   可用性组必须联机。    
 -   主数据库必须处于联机状态且可用。  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
@@ -72,13 +53,13 @@ ms.locfileid: "47642515"
   
 1.  在对象资源管理器中，连接到承载要恢复的数据库所在的可用性副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
 3.  展开该可用性组。  
   
-4.  展开“可用性数据库”节点，右键单击该数据库，然后单击“恢复数据移动”。  
+4.  展开“可用性数据库”  节点，右键单击该数据库，然后单击“恢复数据移动”  。  
   
-5.  在 **“恢复数据移动”** 对话框中，单击 **“确定”**。  
+5.  在 **“恢复数据移动”** 对话框中，单击 **“确定”** 。  
   
 > [!NOTE]  
 >  若要恢复此副本位置上的其他数据库，请对每个数据库重复执行步骤 4 和 5。  

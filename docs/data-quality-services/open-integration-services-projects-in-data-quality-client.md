@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ea719c85026c110329092a5dd243e84a1e1ef78c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 0d31536e59004786acf85828ad256c2ed197c2bf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488248"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788012"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在数据质量客户端中打开 Integration Services 项目
 
@@ -47,19 +47,19 @@ ms.locfileid: "65488248"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“打开数据质量项目”**。 将出现 **“打开项目”** 屏幕。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“打开数据质量项目”** 。 将出现 **“打开项目”** 屏幕。  
   
 3.  在 **“打开项目”** 屏幕上，可以通过以下方式之一标识 Integration Services 项目：  
   
-    1.  **项目名称**：Integration Services 项目使用以下命名术语列出：“Package.DQS Cleansing_\<DATE>\<TIME>_{GUID}”。 每次成功地在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中运行同一个包，就会在“打开项目”屏幕中列出一个新项目。   
+    1.  **项目名称**：Integration Services 项目使用以下命名术语列出：“Package.DQS Cleansing_\<DATE>\<TIME>_{GUID}”。  每次成功地在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中运行同一个包，就会在“打开项目”屏幕中列出一个新项目。   
   
-    2.  **项目类型**：在“打开项目”屏幕中，Integration Services 项目具有 SSIS 作为项目类型。  
+    2.  **项目类型**：在“打开项目”屏幕中，Integration Services 项目具有 SSIS 作为项目类型   。  
   
-     选择一个项目，然后单击 **“下一步”**。  
+     选择一个项目，然后单击 **“下一步”** 。  
   
-4.  Integration Services 项目将打开并进入交互式清理阶段（**“管理和查看结果”** 选项卡）。 您可以对 Integration Services 项目中的数据执行交互式清理。 有关“管理和查看结果”选项卡的详细信息，请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的[交互式清理阶段](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Interactive)。  
+4.  Integration Services 项目将打开并进入交互式清理阶段（ **“管理和查看结果”** 选项卡）。 您可以对 Integration Services 项目中的数据执行交互式清理。 有关“管理和查看结果”选项卡的详细信息，请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的[交互式清理阶段](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Interactive)  。  
   
-5.  单击 **“下一步”** 以转到 **“导出”** 选项卡，您可以在此处将处理后的数据导出到以下任一位置：SQL Server 数据库中的新表、.csv 文件或 Excel 文件。 有关“导出”选项卡的详细信息，请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的[导出阶段](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Export)  
+5.  单击 **“下一步”** 以转到 **“导出”** 选项卡，您可以在此处将处理后的数据导出到以下任一位置：SQL Server 数据库中的新表、.csv 文件或 Excel 文件。 有关“导出”选项卡的详细信息，请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的[导出阶段](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Export)   
   
 6.  导出数据后，单击 **“完成”** 以关闭 Integration Services 项目。  
 

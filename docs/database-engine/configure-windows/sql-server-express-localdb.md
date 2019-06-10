@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 53b55ce0449dfd4eb415ee49ac29ac3cb493e111
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779507"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794113"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -34,10 +34,10 @@ LocalDB 安装将复制启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenovers
 
 ## <a name="try-it-out"></a>进行试用： 
 
-- 若要下载并安装 SQL Server Express LocalDB，请转到 **[SQL Server 下载](https://www.microsoft.com/sql-server/sql-server-downloads)**。 LocalDB 是在安装过程中选择的一项功能，可在下载该介质时使用。 如果下载介质，则选择“Express Advanced”或“LocalDB”包。 在 Visual Studio 安装程序中，可将 SQL Server Express LocalDB 作为 .NET 桌面开发工作负载的一部分安装，也可作为单独组件安装。
+- 若要下载并安装 SQL Server Express LocalDB，请转到 **[SQL Server 下载](https://www.microsoft.com/sql-server/sql-server-downloads)** 。 LocalDB 是在安装过程中选择的一项功能，可在下载该介质时使用。 如果下载介质，则选择“Express Advanced”  或“LocalDB”包。 在 Visual Studio 安装程序中，可将 SQL Server Express LocalDB 作为 .NET 桌面开发工作负载的一部分安装，也可作为单独组件安装   。
 
  >[!TIP]
- > 此外，还可将 LocalDB 作为 Visual Studio 的一部分安装。 在 Visual Studio 安装过程中，选择 .NET 桌面开发工作负载，其中包括 SQL Server Express LocalDB。
+ > 此外，还可将 LocalDB 作为 Visual Studio 的一部分安装。 在 Visual Studio 安装过程中，选择 .NET 桌面开发工作负载，其中包括 SQL Server Express LocalDB  。
 
 - 已经拥有 Azure 帐户？ [开始使用](https://azure.microsoft.com/services/virtual-machines/sql-server/)并启动装有 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虚拟机。
 
@@ -45,7 +45,7 @@ LocalDB 安装将复制启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenovers
 
 通过安装向导或使用 SqlLocalDB.msi 程序安装 LocalDB。 LocalDB 是安装 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 时的一个选项。 
  
-在安装过程中，在“功能选择/共享功能”页上选择 LocalDB。 对于每个主要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本，只能存在一个 LocalDB 二进制文件的安装。 可以启动多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程，并且这些进程都将使用相同的二进制文件。 作为 LocalDB 启动的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例与 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 具有相同限制。
+在安装过程中，在“功能选择/共享功能”  页上选择 LocalDB。 对于每个主要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本，只能存在一个 LocalDB 二进制文件的安装。 可以启动多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程，并且这些进程都将使用相同的二进制文件。 作为 LocalDB 启动的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例与 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 具有相同限制。
 
 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 的实例通过 `SqlLocalDB.exe` 实用工具进行托管。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 应该用于代替已弃用的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 用户实例功能。
 
@@ -77,7 +77,7 @@ LocalDB 支持两种类型的实例：自动实例和命名实例。
 
 - LocalDB 的自动实例是公共的。 系统自动为用户创建和管理此类实例，并可由任何应用程序使用。 安装在用户计算机上的每个 LocalDB 版本都存在一个自动 LocalDB 实例。 自动 LocalDB 实例提供无缝的实例管理。 无需创建实例；它可以自动执行工作。 此功能使得应用程序可以轻松地安装和迁移到另一台计算机。 如果目标计算机已安装指定版本的 LocalDB，则目标计算机也提供此版本的自动 LocalDB 实例。 自动 LocalDB 实例具有属于保留命名空间的特殊实例名称模式。 自动实例可以防止名称与 LocalDB 的命名实例发生冲突。 自动实例的名称为 **MSSQLLocalDB**。
 
-- LocalDB 的命名实例是专用的。 这些命名实例由负责创建和管理该实例的单个应用程序所拥有。 命名实例提供与其他实例的隔离，并可以通过减少与其他数据库用户的资源争用来提高性能。 命名实例必须由用户通过 LocalDB 管理 API 显式创建，或者通过托管应用程序的 app.config 文件隐式创建（尽管托管应用程序也会在需要时使用 API）。 LocalDB 的每个命名实例都具有关联的 LocalDB 版本，指向相应的 LocalDB 二进制文件集。 LocalDB 的命名实例为 sysname 数据类型并且可具有最多 128 个字符。 （这不同于常规的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例，此类命名实例将名称限制为 16 个 ASCII 字符的常规 NetBIOS 名称。）LocalDB 实例名称可包含在文件名内合法的任何 Unicode 字符。使用自动实例名称的命名实例将成为自动实例。
+- LocalDB 的命名实例是专用的。 这些命名实例由负责创建和管理该实例的单个应用程序所拥有。 命名实例提供与其他实例的隔离，并可以通过减少与其他数据库用户的资源争用来提高性能。 命名实例必须由用户通过 LocalDB 管理 API 显式创建，或者通过托管应用程序的 app.config 文件隐式创建（尽管托管应用程序也会在需要时使用 API）。 LocalDB 的每个命名实例都具有关联的 LocalDB 版本，指向相应的 LocalDB 二进制文件集。 LocalDB 的命名实例为 sysname  数据类型并且可具有最多 128 个字符。 （这不同于常规的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例，此类命名实例将名称限制为 16 个 ASCII 字符的常规 NetBIOS 名称。）LocalDB 实例名称可包含在文件名内合法的任何 Unicode 字符。使用自动实例名称的命名实例将成为自动实例。
 
 不同的计算机用户可具有同名的实例。 每个实例都是以不同的用户身份运行的不同的进程。
 
@@ -123,7 +123,7 @@ REM Gather information about the instance of LocalDB
 |实例管道名称|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
->如果应用程序使用早于 .NET 4.0.2 的版本，则必须直接连接到 LocalDB 的命名管道。 实例管道名称值为 LocalDB 的实例正在侦听的命名管道。 LOCALDB# 之后的实例管道名称部分将在每次启动 LocalDB 实例时更改。 若要通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 连接到 LocalDB 实例，请在“连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]”对话框的“服务器名称”框中键入实例管道名称。 在自定义程序中，可以通过使用类似于 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");` 的连接字符串建立与 LocalDB 实例的连接
+>如果应用程序使用早于 .NET 4.0.2 的版本，则必须直接连接到 LocalDB 的命名管道。 实例管道名称值为 LocalDB 的实例正在侦听的命名管道。 LOCALDB# 之后的实例管道名称部分将在每次启动 LocalDB 实例时更改。 若要通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 连接到 LocalDB 实例，请在“连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]”  对话框的“服务器名称”  框中键入实例管道名称。 在自定义程序中，可以通过使用类似于 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");` 的连接字符串建立与 LocalDB 实例的连接
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>连接到 LocalDB 的共享实例
 

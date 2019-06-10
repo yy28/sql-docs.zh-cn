@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+manager: jroth
+ms.openlocfilehash: c08bd2303f08470fd7a7cab65c5fd669ca36d9be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226554"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789526"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>对 Always On 可用性组的操作问题的基于策略的管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "54226554"
  提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。  
   
  可用性组 (availability group)  
- 一个容器，用于一组共同实现故障转移的离散用户数据库（被称为可用性数据库）。  
+ 一个容器，用于一组共同实现故障转移的离散用户数据库（被称为可用性数据库）  。  
   
  可用性副本  
- 可用性组的实例化，该可用性组由特定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载，该实例维护属于该可用性组的每个可用性数据库的本地副本。  存在两种类型的可用性副本：一个“主副本” 和一至四个“辅助副本”。 承载给定可用性组的可用性副本的服务器实例必须位于单个 Windows Server 故障转移群集 (WSFC) 群集的不同节点上。  
+ 可用性组的实例化，该可用性组由特定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载，该实例维护属于该可用性组的每个可用性数据库的本地副本。  存在两种类型的可用性副本：一个“主副本”  和一至四个“辅助副本”。 承载给定可用性组的可用性副本的服务器实例必须位于单个 Windows Server 故障转移群集 (WSFC) 群集的不同节点上。  
   
  可用性数据库 (availability database)  
- 属于可用性组的数据库。 对于每个可用性数据库，可用性组将保留一个读写副本（主数据库）和一个到四个只读副本（辅助数据库）。  
+ 属于可用性组的数据库。 对于每个可用性数据库，可用性组将保留一个读写副本（主数据库  ）和一个到四个只读副本（辅助数据库  ）。  
   
  AlwaysOn 面板  
  一个 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 面板，该面板针对可用性组的运行状况提供了一目了然的视图。 有关详细信息，请参阅本主题后面的 [AlwaysOn 面板](#Dashboard)。  
@@ -49,7 +49,7 @@ ms.locfileid: "54226554"
 ##  <a name="Always OnPBM"></a> 预定义策略和问题  
  下表概述了预定义策略。  
   
-|策略名称|问题|类别&#42;|方面|  
+|策略名称|问题| 类别&#42;|方面|  
 |-----------------|-----------|--------------------|-----------|  
 |WSFC 群集状态|[WSFC 群集服务处于脱机状态](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|严重|SQL Server 实例|  
 |可用性组联机状态|[可用性组处于脱机状态](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|严重|可用性组 (availability group)|  
@@ -67,7 +67,7 @@ ms.locfileid: "54226554"
 |可用性数据库数据同步状态|[可用性数据库的数据同步状态不正常](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性数据库|  
   
 > [!IMPORTANT]
->  &#42; 对于 Always On 策略，类别名称作为 ID 使用。 更改 AlwaysOn 类别的名称将会破坏其运行状况评价功能。 因此，请不要修改 AlwaysOn 类别的名称。  
+>  &#42; 对于 Always On 策略，类别名称作为 ID 使用  。 更改 AlwaysOn 类别的名称将会破坏其运行状况评价功能。 因此，请不要修改 AlwaysOn 类别的名称。  
   
 ##  <a name="Dashboard"></a> AlwaysOn 面板  
  AlwaysOn 面板针对可用性组运行状况为你提供一目了然的视图。 AlwaysOn 面板包括以下功能：  
@@ -78,7 +78,7 @@ ms.locfileid: "54226554"
   
 -   提供故障排除方案的启动点。  
   
--   对于给定的操作问题，在“策略评估结果”对话框中填入有关特定 AlwaysOn 运行状况策略违反情况的信息和指向更新帮助的链接。  
+-   对于给定的操作问题，在  “策略评估结果”对话框中填入有关特定 AlwaysOn 运行状况策略违反情况的信息和指向更新帮助的链接。  
   
 -   提供一个运行状况扩展事件查看器，用于显示以前的特定于 AlwaysOn 的问题的事件。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54226554"
 ##  <a name="ExtendHealthModel"></a> 扩展 AlwaysOn 运行状况模型  
  扩展 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 运行状况模型只是创建您自己的用户定义策略，并基于您正在监视的对象类型将其放入特定类别。  在更改了一些设置后，AlwaysOn 面板将自动评估你自己的用户定义策略以及 AlwaysOn 预定义策略。  
   
- 用户定义策略可以使用任何可用的 PBM 方面，包括那些由 AlwaysOn 预定义策略使用的方面（请参阅本主题前面的 [预定义策略和问题](#Always OnPBM)）。 服务器 Facet 提供下列用于监视 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 运行状况的属性：（IsHadrEnabled 和 HadrManagerStatus）。 服务器 Facet 还提供下列用于监视 WSFC 群集配置的策略：ClusterQuorumType 和 ClusterQuorumState。  
+ 用户定义策略可以使用任何可用的 PBM 方面，包括那些由 AlwaysOn 预定义策略使用的方面（请参阅本主题前面的 [预定义策略和问题](#Always OnPBM)）。 服务器 Facet 提供下列用于监视 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 运行状况的属性：（IsHadrEnabled 和 HadrManagerStatus）   。 服务器 Facet 还提供下列用于监视 WSFC 群集配置的策略：ClusterQuorumType 和 ClusterQuorumState   。  
   
  有关详细信息，请参阅 [AlwaysOn 运行状况模型第 2 部分 - 扩展运行状况模型](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) （SQL Server AlwaysOn 团队博客）。  
   

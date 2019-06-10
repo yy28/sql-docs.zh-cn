@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5aa0a3672edcf788b2a5d485a0e23d87409c3534
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 551e66805dc53f7113aeb0260716967bb8a78486
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480406"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780457"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>将域或复合域附加到引用数据
 
@@ -33,9 +33,9 @@ ms.locfileid: "65480406"
 > [!WARNING]  
 >  当将域映射到引用数据服务架构中的列时，附加到引用数据服务的复合域会出现在域下拉列表中。 不要将复合域映射到引用数据服务中的列；只需将复合域内的各个域映射到引用数据服务架构中的相应列。 否则，将导致错误。  
   
- 如果您应该选择使用某一引用数据服务，则引用数据服务架构可能具有一个必须映射到适当域的必填列。 引用数据架构中的必填列使用“(M)”与列名称区分开来。 例如，“AddressLine”是“Melissa Data - Address Data”中的必填架构列，而“CompanyName”是“Digital Trowel Inc. - Us companies and professional data for SQL users”中的必填架构列。  
+ 如果您应该选择使用某一引用数据服务，则引用数据服务架构可能具有一个必须映射到适当域的必填列。 引用数据架构中的必填列使用“(M)”与列名称区分开来。 例如，“AddressLine”是“Melissa Data - Address Data”中的必填架构列，而“CompanyName”是“Digital Trowel Inc. - Us companies and professional data for SQL users”中的必填架构列     。  
   
- 在本主题中，我们将创建 4 个域：Address Line、City、State 和 Zip。在复合域 Address Verification 之下，将该复合域附加到 Melissa Data - Address Check 引用数据服务，然后将复合域内的各个域映射到引用数据服务架构中的相应列。  
+ 在本主题中，我们将创建 4 个域：Address Line、City、State 和 Zip。在复合域 Address Verification 之下，将该复合域附加到 Melissa Data - Address Check 引用数据服务，然后将复合域内的各个域映射到引用数据服务架构中的相应列       。  
   
 ## <a name="before-you-begin"></a>开始之前  
   
@@ -51,13 +51,13 @@ ms.locfileid: "65480406"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，在 **“知识库管理”** 下，单击 **“新建知识库”**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，在 **“知识库管理”** 下，单击 **“新建知识库”** 。  
   
-3.  在 **“新建知识库”** 屏幕上，为新的知识库键入名称，单击 **“域管理”** 活动，然后单击 **“创建”**。  
+3.  在 **“新建知识库”** 屏幕上，为新的知识库键入名称，单击 **“域管理”** 活动，然后单击 **“创建”** 。  
   
-4.  在 **“域管理”** 屏幕中，单击 **“创建域”** 图标以创建一个域。 创建以下 4 个域：Address Line、City、State 和 Zip。  
+4.  在 **“域管理”** 屏幕中，单击 **“创建域”** 图标以创建一个域。 创建以下 4 个域：Address Line、City、State 和 Zip     。  
   
-5.  单击 **“创建复合域”** 图标以便创建一个复合域。 在 **“创建复合域”** 对话框中，在 **“复合域名称”** 框中键入 **Address Verification** ，并且在该复合域中包括在步骤 3 中创建的所有域。 单击“确定” 。  
+5.  单击 **“创建复合域”** 图标以便创建一个复合域。 在 **“创建复合域”** 对话框中，在 **“复合域名称”** 框中键入 **Address Verification** ，并且在该复合域中包括在步骤 3 中创建的所有域。 单击“确定”  。  
   
 6.  在左侧的 **“域”** 窗格中，通过单击 **Address Verification**选择该复合域，然后单击右侧的 **“引用数据”** 选项卡。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65480406"
   
 8.  在 **“联机引用数据提供程序目录”** 对话框中：  
   
-    1.  在“DataMarket Data Quality Services”下，选中“Melissa Data - Address”复选框。  
+    1.  在“DataMarket Data Quality Services”下，选中“Melissa Data - Address”复选框   。  
   
     2.  将 Melissa Data - Address Check 引用数据服务的列映射到适当的域（Address Line、City、State 和 Zip）。 您通过在 **“RDS 架构”** 列中选择某一引用数据服务列，然后在 **“域”** 列中选择适当的域，映射这些列。 若要在表中添加更多的行，请单击 **“添加架构项”** 图标。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65480406"
         > [!NOTE]  
         >  -   在 **“联机引用数据提供程序目录”** 对话框中， **DataMarket Data Quality Services** 节点将显示已在 Microsoft Azure 市场中订阅的所有引用数据服务提供程序。 如果您已在 DQS 中配置了直接联机第三方引用数据服务提供程序，则它们将显示在称作 **“第三方直接联机提供程序”** 的另一个节点下（现在未提供，因为没有在 DQS 中配置直接联机第三方引用数据服务提供程序）。  
   
-9. 您将返回到 **“引用数据”** 选项卡。在“提供程序设置”区域中，根据需要更改下面框中的值：  
+9. 您将返回到 **“引用数据”** 选项卡。在“提供程序设置”区域中，根据需要更改下面框中的值：   
   
     -   **自动更正阈值**：将自动通过其置信度高于此域值的引用数据服务进行更正。 以相应百分比值的小数表示形式输入一个值。 例如，对于 90% 输入 0.9。  
   

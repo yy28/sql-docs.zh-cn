@@ -13,29 +13,28 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+manager: jroth
+ms.openlocfilehash: 510331bd244ced57494566c9508485d5dd4c90e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306164"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789440"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>使用自动种子设定初始化 AlwaysOn 可用性组的辅助副本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在 SQL Server 2012 和 2014 中，初始化 SQL Server Always On 可用性组中的次要副本的唯一方法是使用备份、复制和还原。 SQL Server 2016 引入了用于初始化次要副本的新功能“自动种子设定”。 自动种子设定使用日志流传输将使用 VDI 的备份流式传输到使用所配置终结点的可用性组的每个数据库的次要副本。 最初创建可用性组或将数据库添加到可用性组时，可以使用此新功能。 支持 AlwaysOn 可用性组的所有 SQL Server 版本都支持自动种子设定，并可与传统可用性组和[分布式可用性组](distributed-availability-groups.md)一起使用。
+在 SQL Server 2012 和 2014 中，初始化 SQL Server Always On 可用性组中的次要副本的唯一方法是使用备份、复制和还原。 SQL Server 2016 引入了用于初始化次要副本的新功能“自动种子设定”  。 自动种子设定使用日志流传输将使用 VDI 的备份流式传输到使用所配置终结点的可用性组的每个数据库的次要副本。 最初创建可用性组或将数据库添加到可用性组时，可以使用此新功能。 支持 AlwaysOn 可用性组的所有 SQL Server 版本都支持自动种子设定，并可与传统可用性组和[分布式可用性组](distributed-availability-groups.md)一起使用。
 
-## <a name="considerations"></a>注意事项
+## <a name="security"></a>Security
 
-使用自动种子设定的注意事项包括：
+安全性权限根据要初始化的副本类型而有所不同：
 
-* [对主要副本的性能和事务日志影响](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [磁盘布局](#disklayout)
-* [安全性](#security)
+* 对于传统可用性组，必须向次要副本上的可用性组授予权限，因为它已联接到可用性组。 在 Transact-SQL 中，使用命令 `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`。
+* 对于分布式可用性组（其中正在创建的副本的数据库位于第二个可用性组的主要副本上），无需额外的权限，因为它已是主要副本。
+* 对于分布式可用性组的第二个可用性组上的次要副本，必须使用命令 `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`。 将从第二个可用性组的主要副本对此次要副本进行种子设定。
 
-
-### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>对主要副本的性能和事务日志影响
+## <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>对主要副本的性能和事务日志影响
 
 自动种子设定是否可用于初始化次要副本具体取决于数据库大小、网络速度，以及主要副本和次要副本之间的距离。 例如，假定：
 
@@ -49,7 +48,7 @@ ms.locfileid: "53306164"
 
 自动种子设定可以使用压缩，但它默认处于禁用状态。 启用压缩可减少网络带宽并可能加快进程速度，但代价是增加处理器开销。 若要在自动种子设定过程中使用压缩，请启用跟踪标志 9567 - 请参阅[调整可用性组的压缩](tune-compression-for-availability-group.md)。
 
-### <a name = "disklayout"></a>磁盘布局
+## <a name = "disklayout"></a>磁盘布局
 
 在 SQL Server 2016 及之前版本中，自动种子设定将在其中创建数据库的文件夹必须已经存在，并且与主要副本上的路径相同。 
 
@@ -81,13 +80,6 @@ ms.locfileid: "53306164"
 
 若要恢复到 SQL Server 2016 和之前版本的行为，请启用跟踪标志 9571。 有关如何启用跟踪标志的信息，请参阅 [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)。
 
-### <a name="security"></a>Security
-
-安全性权限根据要初始化的副本类型而有所不同：
-
-* 对于传统可用性组，必须向次要副本上的可用性组授予权限，因为它已联接到可用性组。 在 Transact-SQL 中，使用命令 `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`。
-* 对于分布式可用性组（其中正在创建的副本的数据库位于第二个可用性组的主要副本上），无需额外的权限，因为它已是主要副本。
-* 对于分布式可用性组的第二个可用性组上的次要副本，必须使用命令 `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`。 将从第二个可用性组的主要副本对此次要副本进行种子设定。
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>使用自动种子设定创建可用性组
 

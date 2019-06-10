@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bf0e948dd5f6e6334e9eb66b4e395bad5fde52c
-ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
+manager: jroth
+ms.openlocfilehash: 2608097cb5b0ca626c8776c6a7312552a181342d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "63049000"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780183"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>查看可用性副本属性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "63049000"
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
 3.  展开可用性副本所属的可用性组，然后展开 **“可用性副本”** 节点。  
   
-4.  右键单击要查看其属性的可用性副本，然后选择“属性”命令。  
+4.  右键单击要查看其属性的可用性副本，然后选择“属性”  命令。  
   
 5.  在 **“可用性副本属性”** 对话框中，使用 **“常规”** 页查看该副本的属性。 如果连接到主副本，您可以更改下列属性：可用性模式、故障转移模式、主角色的连接访问权限、辅助角色（可读取的辅助副本）的读取访问权限以及会话超时值。 有关详细信息，请参阅[可用性副本属性（“常规”页）](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md)。  
 

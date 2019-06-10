@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+manager: jroth
+ms.openlocfilehash: 5a77e2382b95bffff43c6a404baef44f09b41395
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450086"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803456"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "65450086"
 -   在故障转移 AG 前，请验证故障转移目标的同步状态为 SYNCHRONIZED。  
 
   > [!WARNING]
-  > 将 SQL Server 的新实例或新版本安装到安装了旧版 SQL Server 的服务器可能会无意中“导致旧版 SQL Server 托管的任何可用性组中断。” 这是因为在安装 SQL Server 实例或版本期间，SQL Server 高可用性模块 (RHS.EXE) 会升级。 这会导致服务器上主要角色中的现有可用性组暂时中断。 因此，强烈建议在将较新版本的 SQL Server 安装到已托管具有可用性组的旧版 SQL Server 系统时执行以下操作之一：
+  > 将 SQL Server 的新实例或新版本安装到安装了旧版 SQL Server 的服务器可能会无意中“导致旧版 SQL Server 托管的任何可用性组中断。”  这是因为在安装 SQL Server 实例或版本期间，SQL Server 高可用性模块 (RHS.EXE) 会升级。 这会导致服务器上主要角色中的现有可用性组暂时中断。 因此，强烈建议在将较新版本的 SQL Server 安装到已托管具有可用性组的旧版 SQL Server 系统时执行以下操作之一：
   > - 在维护时段内安装新版本的 SQL Server。 
   > - 将可用性组故障转移到次要副本，这样在安装新 SQL Server 实例期间它便不再是主要副本。 
   

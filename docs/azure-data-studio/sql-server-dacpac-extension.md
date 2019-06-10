@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 383a7b2bbd6e8ebaab5f1e66b10a10c9584800ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 70b06749d1cbecc2127c70fee28b60f49583d5ce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309228"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797985"
 ---
 # <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 扩展（预览版）
 
@@ -39,7 +39,6 @@ ms.locfileid: "63309228"
 ## <a name="install-the-sql-server-dacpac-extension"></a>安装 SQL Server dacpac 扩展
 
 1. 若要開啟擴充管理員及存取可用的擴充功能，選取 [擴充功能] 圖示，或選取**檢視**功能表中的**擴充功能**。
-
 2. 选择 SQL Server dacpac 扩展，然后单击**安装**。
 1. 選取**重新載入**啟用該擴充功能 （只有第一次安裝擴充功能時需要）。
 2. 透過滑鼠右鍵點選伺服器或資料庫並點選**管理**，瀏覽您的管理儀表板。

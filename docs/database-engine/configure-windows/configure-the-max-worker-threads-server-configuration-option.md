@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 2865144d47dd316204d088cb98c9c0c99b71334e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429333"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767720"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>配置 max worker threads 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "59429333"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置“最大工作线程”选项之后](#FollowUp)  
+-   **跟进：** [在配置“最大工作线程”选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59429333"
   
 -   如果所有工作线程因为长时间运行的查询而处于活动状态， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能停止响应，直到一个工作线程完成并变成可用。 虽然这不是缺点，但有时用户可能并不希望如此。 如果进程显示为停止响应并且不再处理新查询，则将使用专用管理员连接 (DAC) 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并关闭此进程。 为避免此种情况发生，请增大最大工作线程数。  
   
- “最大工作线程数”服务器配置选项不会限制系统中可能生成的所有线程。 可用性组、Service Broker、锁管理器或其他任务所需的线程在此限制之外生成。 如果超过了配置的线程数，下列查询提供有关已生成附加线程的系统任务的信息。  
+ “最大工作线程数”  服务器配置选项不会限制系统中可能生成的所有线程。 可用性组、Service Broker、锁管理器或其他任务所需的线程在此限制之外生成。 如果超过了配置的线程数，下列查询提供有关已生成附加线程的系统任务的信息。  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -104,17 +104,17 @@ ms.locfileid: "59429333"
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 权限  
- 默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要使用两个参数执行 sp_configure 来更改配置选项或运行 `RECONFIGURE` 语句，用户必须拥有 `ALTER SETTINGS` 服务器级别权限。 `ALTER SETTINGS` 权限由 sysadmin 和 serveradmin 固定服务器角色隐式拥有。  
+ 默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要使用两个参数执行 sp_configure  来更改配置选项或运行 `RECONFIGURE` 语句，用户必须拥有 `ALTER SETTINGS` 服务器级别权限。 `ALTER SETTINGS` 权限由 sysadmin  和 serveradmin  固定服务器角色隐式拥有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>配置 max worker threads 选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“处理器”** 节点。  
   
-3.  在“最大工作线程数”框中，键入或选择一个介于 128 到 32767 之间的值。  
+3.  在“最大工作线程数”框中，键入或选择一个介于 128 到 32767 之间的值  。  
   
 > [!TIP]
 > 使用 **max worker threads** 选项配置可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的工作线程数。 **max worker threads** 的默认设置适用于大多数系统。 不过，根据您的系统配置，有时将 **max worker threads** 设置为较小的值会提高性能。
@@ -126,9 +126,9 @@ ms.locfileid: "59429333"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `max worker threads` 选项的值配置为 `900`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `max worker threads` 选项的值配置为 `900`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

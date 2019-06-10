@@ -1,7 +1,7 @@
 ---
 title: 位运算符 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2017
+ms.date: 06/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c99a195bba8a81aeb9f962732365f79ee07516ab
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: 8fd4a6fe9ba55aa3e30f0df94721c7aeeef225fa
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65981308"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506423"
 ---
 # <a name="bitwise-operators-transact-sql"></a>位运算符 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,19 +49,19 @@ ms.locfileid: "65981308"
 * [^=（位异或赋值）](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
 * [~（位非）](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
- 位运算符的操作数可以是整数或二进制字符串数据类型类别中的任何数据类型（image 数据类型除外），但两个操作数不能同时是二进制字符串数据类型类别中的某种数据类型。 下表显示所支持的操作数数据类型。  
+ 位运算符的操作数可以是整数或二进制字符串数据类型类别中的任何数据类型（image 数据类型除外），但两个操作数不能同时是二进制字符串数据类型类别中的某种数据类型  。 下表显示所支持的操作数数据类型。  
   
 |左操作数|右操作数|  
 |------------------|-------------------|  
-|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|int、smallint 或 tinyint|  
-|[bit](../../t-sql/data-types/bit-transact-sql.md)|int、smallint、tinyint 或 bit|  
-|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary|  
-|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary|  
-|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary|  
-|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|int、smallint 或 tinyint|  
+|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|int、smallint 或 tinyint   |  
+|[bit](../../t-sql/data-types/bit-transact-sql.md)|int、smallint、tinyint 或 bit    |  
+|[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary     |  
+|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary     |  
+|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary     |  
+|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|int、smallint、tinyint、binary 或 varbinary     |  
+|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|int、smallint 或 tinyint   |  
   
 ## <a name="see-also"></a>另请参阅  
  [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
-  
+ [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)

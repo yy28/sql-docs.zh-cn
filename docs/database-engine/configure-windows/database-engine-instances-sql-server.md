@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bc07937bb9e554d2e052fd12cf0c157519c02368
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807935"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799076"
 ---
 # <a name="database-engine-instances-sql-server"></a>数据库引擎实例 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47807935"
 |介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 来捕获传入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的应用程序请求的跟踪。 可在以后为活动（例如性能测试或问题诊断）重播这些跟踪。|[SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |介绍变更数据捕获 (CDC) 和更改跟踪功能以及如何使用这些功能来跟踪数据库中的数据更改。|[跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |介绍如何使用日志文件查看器来查找和查看不同日志（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作业历史记录、SQL Server 日志和 Windows 事件日志）中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误和消息。|[日志文件查看器](../../relational-databases/logs/log-file-viewer.md)|  
-|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问来分析数据库并为解决潜在的性能问题提出建议。|[数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问来分析数据库并为解决潜在的性能问题提出建议。|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |介绍在不接受标准连接时，生产数据库管理员如何与实例建立诊断连接。|[用于数据库管理员的诊断连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)|  
 |介绍如何使用不推荐使用的远程服务器功能来从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的一个实例访问另一个实例。 此功能的首选机制是链接服务器。|[远程服务器](../../database-engine/configure-windows/remote-servers.md)|  
 |介绍 Service Broker 的消息传递和应用程序排队功能，并提供指向 Service Broker 文档的指针。|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  

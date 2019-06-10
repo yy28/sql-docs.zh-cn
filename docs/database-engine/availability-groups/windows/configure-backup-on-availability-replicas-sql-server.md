@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6016d1feff6d66fa7ef93fc99b04f20eda88970
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: f4c5a8a94da47f5961d2034a76b6195420b3f8f2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133219"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793801"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>配置 AlwaysOn 可用性组的次要副本备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,36 +33,13 @@ ms.locfileid: "54133219"
 > [!NOTE]  
 >  有关次要副本备份的介绍，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
--   **开始之前：**  
-  
-     [先决条件](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **若要配置辅助副本备份，可使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **跟进：**[配置次要副本备份之后](#FollowUp)  
-  
--   [获取有关备份首选项设置的信息](#ForInfoAboutBuPref)  
-  
--   [相关内容](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a> 先决条件  
  您必须连接到承载主副本的服务器实例。  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
   
-|任务|Permissions|  
+|任务|权限|  
 |----------|-----------------|  
 |创建可用性组时配置辅助副本备份|需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 |修改可用性组或可用性副本|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
@@ -72,7 +49,7 @@ ms.locfileid: "54133219"
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后单击服务器名称以便展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
 3.  单击要为其配置备份首选项的可用性组，然后选择 **“属性”** 命令。  
   
@@ -90,7 +67,7 @@ ms.locfileid: "54133219"
      指定备份应该始终在主副本上发生。 如果您需要在对辅助副本运行备份时不支持的备份功能，例如创建差异备份，此选项将很有用。  
   
     > [!IMPORTANT]  
-    >  如果你计划使用日志传送为可用性组准备任何辅助数据库，请将自动备份首选项设置为“主要”，直到准备好所有辅助数据库并将其联接到可用性组。  
+    >  如果你计划使用日志传送为可用性组准备任何辅助数据库，请将自动备份首选项设置为“主要”  ，直到准备好所有辅助数据库并将其联接到可用性组。  
   
      **任何副本**  
      指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
@@ -104,12 +81,12 @@ ms.locfileid: "54133219"
      承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
   
      **备份优先级(最低 = 1，最高 = 100)**  
-     指定相对于同一可用性组中的其他副本，在此副本上执行备份的优先级。 该值是范围 0..100 中的整数。 1 表示最低优先级，100 表示最高优先级。 如果“备份优先级”= 1，则仅在当前没有更高优先级的可用性副本可用时，才选择此可用性副本来执行备份。  
+     指定相对于同一可用性组中的其他副本，在此副本上执行备份的优先级。 该值是范围 0..100 中的整数。 1 表示最低优先级，100 表示最高优先级。 如果“备份优先级”  = 1，则仅在当前没有更高优先级的可用性副本可用时，才选择此可用性副本来执行备份。  
   
      **排除副本**  
      如果从不希望选择此可用性副本来执行备份，请选择此选项。 例如，这对于您永远不希望备份故障转移到的远程可用性副本十分有用。  
   
-7.  若要提交更改，请单击 **“确定”**。  
+7.  若要提交更改，请单击 **“确定”** 。  
   
  **用于访问“备份首选项”页的其他方法**  
   
@@ -152,7 +129,7 @@ ms.locfileid: "54133219"
      指定备份应该始终在主副本上发生。 如果您需要在对辅助副本运行备份时不支持的备份功能，例如创建差异备份，此选项将很有用。  
   
     > [!IMPORTANT]  
-    >  如果你计划使用日志传送为可用性组准备任何辅助数据库，请将自动备份首选项设置为“主要”，直到准备好所有辅助数据库并将其联接到可用性组。  
+    >  如果你计划使用日志传送为可用性组准备任何辅助数据库，请将自动备份首选项设置为“主要”  ，直到准备好所有辅助数据库并将其联接到可用性组。  
   
      **SecondaryOnly**  
      指定备份应该永远不会在主副本上执行。 如果主副本是唯一的联机副本，则备份应不会发生。  

@@ -16,12 +16,12 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9d1cc86315446a7744693a39105ea5e542f6885
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 3c9a7827c70f99db24c50704f2591b8288124d45
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65724394"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469675"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用脚本组件增强错误输出
 
@@ -48,21 +48,21 @@ ms.locfileid: "65724394"
   
 3.  将错误输出从上游组件连接到新脚本组件。  
   
-4.  打开“脚本转换编辑器”，在“脚本”页中，为 **ScriptLanguage** 属性选择脚本语言。  
+4.  打开“脚本转换编辑器”  ，在“脚本”  页中，为 **ScriptLanguage** 属性选择脚本语言。  
   
-5.  单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，并添加下面的示例代码。  
+5.  单击“编辑脚本”  打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，并添加下面的示例代码。  
   
 6.  关闭 VSTA。  
   
-7.  在脚本转换编辑器的“输入列”页中，选择 ErrorCode 列和 ErrorColumn 列。  
+7.  在脚本转换编辑器的“输入列”  页中，选择 ErrorCode 列和 ErrorColumn 列。  
   
-8.  在“输入和输出”页中，添加两个新列。  
+8.  在“输入和输出”  页中，添加两个新列。  
   
     -   添加一个名为 **ErrorDescription** 的 **String** 类型的新输出列。 将新列的默认长度提高到 255 以支持长消息。  
   
     -   添加另一个名为 **ColumnName** 的 **String** 类型的新输出列。 将新列的默认长度提高到 255 以支持长值。  
   
-9. 关闭“脚本转换编辑器”。  
+9. 关闭“脚本转换编辑器”  。  
   
 10. 将脚本组件的输出附加到合适的目标。 对于即席测试，平面文件目标是最容易配置的。  
   
@@ -80,9 +80,12 @@ Public Class ScriptMain      ' VB
 
         If componentMetaData130 IsNot Nothing Then
 
-            If 0 = Row.ErrorColumn Then
+            If Row.ErrorColumn = 0 Then
                 ' 0 means no specific column is identified by ErrorColumn, this time.
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint."
+            ELSE If Row.ErrorColumn = -1 Then
+                ' -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables."
             Else
                 Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)
             End If
@@ -106,6 +109,11 @@ public class ScriptMain:      // C#
             if (Row.ErrorColumn == 0)
             {
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint.";
+            }
+            // -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+            else if (Row.ErrorColumn == -1)
+            {
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables.";
             }
             else
             {

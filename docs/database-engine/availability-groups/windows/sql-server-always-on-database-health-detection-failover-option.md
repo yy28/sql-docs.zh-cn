@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bb2a0c9582fcf5e0092ef23009b9270a7b0d010
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+manager: jroth
+ms.openlocfilehash: 979061055a0d48af7c2eec809e3499a1e672ec9d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419962"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777575"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性组数据库级别运行状况检测故障转移选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,20 +37,20 @@ ms.locfileid: "54419962"
 
 ### <a name="enabling-database-level-health-detection"></a>启用数据库级别运行状况检测
 
-尽管通常建议使用“数据库运行状况”选项，但此选项“默认处于禁用状态”，目的是与以前版本的默认设置保持后向兼容。
+尽管通常建议使用“数据库运行状况”选项，但此选项“默认处于禁用状态”，目的是与以前版本的默认设置保持后向兼容  。
 
 可通过几种简单的方式来启用数据库级别运行状况检测设置：
 
-1. 在 SQL Server Management Studio 中，连接到 SQL Server 数据库引擎。 使用“对象资源管理器”窗口，右键单击“AlwaysOn 高可用性”节点，然后运行“新建可用性组向导”。 勾选“指定名称”页面上的“数据库级别运行状况检测”复选框。 然后完成向导中的其余页面。
+1. 在 SQL Server Management Studio 中，连接到 SQL Server 数据库引擎。 使用“对象资源管理器”窗口，右键单击“AlwaysOn 高可用性”节点，然后运行“新建可用性组向导”  。 勾选“指定名称”页面上的“数据库级别运行状况检测”复选框  。 然后完成向导中的其余页面。
 
    ![AlwaysOn“启用数据库运行状况”复选框](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
 
-2. 在 SQL Server Management Studio 中查看现有可用性组的“属性”。 连接到 SQL Server。 使用“对象资源管理器”窗口，展开“AlwaysOn 高可用性”节点。 展开可用性组。 右键单击该可用性组，然后选择“属性”。 勾选“数据库级别运行状况检测”选项，然后单击“确定”或编写更改脚本。
+2. 在 SQL Server Management Studio 中查看现有可用性组的“属性”  。 连接到 SQL Server。 使用“对象资源管理器”窗口，展开“AlwaysOn 高可用性”节点。 展开可用性组。 右键单击该可用性组，然后选择“属性”。 勾选“数据库级别运行状况检测”选项，然后单击“确定”或编写更改脚本  。
 
    ![Alwayson 可用性组属性数据库级别运行状况检测](../../../database-engine/availability-groups/windows/media/always-on-ag-properties-database-level-health-detection.png)
 
 
-3. 用于执行 CREATE AVAILABILITY GROUP 的 Transact-SQL 语法。 DB_FAILOVER 参数接受值 ON 或 OFF。
+3. 用于执行 CREATE AVAILABILITY GROUP 的 Transact-SQL 语法  。 DB_FAILOVER 参数接受值 ON 或 OFF。
 
    ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
@@ -63,7 +63,7 @@ ms.locfileid: "54419962"
         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
     ```
 
-4. 用于执行 ALTER AVAILABILITY GROUP 的 Transact-SQL 语法。 DB_FAILOVER 参数接受值 ON 或 OFF。
+4. 用于执行 ALTER AVAILABILITY GROUP 的 Transact-SQL 语法  。 DB_FAILOVER 参数接受值 ON 或 OFF。
 
    ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
@@ -116,7 +116,7 @@ dmv 输出示例：
 >
 >**2016-04-25 12:20:21.15 spid79      错误:41653，严重性:21，状态:1。**
 >
->**2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”遇到错误(错误类型:2 'DB_SHUTDOWN')，导致可用性组“Contoso-ag”发生故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。
+>**2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”遇到错误(错误类型:2 'DB_SHUTDOWN')，导致可用性组“Contoso-ag”发生故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。**
 >
 >2016-04-25 12:20:21.17 spid79      数据库“AutoHa-Sample”的状态信息 - 强化的 Lsn:“(34:664:1)”    提交 LSN:“(34:656:1)”    提交时间:“Apr 25 2016 12:19PM”
 >
@@ -128,7 +128,7 @@ dmv 输出示例：
 
 ### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>扩展事件 sqlserver.availability_replica_database_fault_reporting
 
-从 SQL Server 2016 开始，定义了一个新的扩展事件，该事件通过数据库级别运行状况检测触发。  事件名称为 sqlserver.availability_replica_database_fault_reporting
+从 SQL Server 2016 开始，定义了一个新的扩展事件，该事件通过数据库级别运行状况检测触发。  事件名称为 sqlserver.availability_replica_database_fault_reporting 
 
 此 XEvent 仅在主要副本上触发。 检测到可用性组中托管的数据库存在数据库级别运行状况问题时会触发此 XEvent。
 

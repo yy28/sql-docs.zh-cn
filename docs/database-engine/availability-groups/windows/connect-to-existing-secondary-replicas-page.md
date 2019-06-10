@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 40350310858415cd7e5451bbd2f99e9d00ddbf4a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211226"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793570"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>连接到现有次要副本页 - Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "53211226"
  显示将承载可用性副本的服务器实例的名称。  
   
  **连接为**  
- 显示在建立了连接后连接到服务器实例的帐户。 如果此页对于某一给定的服务器实例显示 **“未连接”**，则您将需要单击 **“连接”** 或 **“全部连接”** 按钮。  
+ 显示在建立了连接后连接到服务器实例的帐户。 如果此页对于某一给定的服务器实例显示 **“未连接”** ，则您将需要单击 **“连接”** 或 **“全部连接”** 按钮。  
   
  **“连接”**  
  如果此服务器实例正基于与您将需要连接到的其他服务器实例不同的帐户运行，则单击此选项。  

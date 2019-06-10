@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3074eb04df91d5284d5943b09a9c7c59bd9ef6f2
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+manager: jroth
+ms.openlocfilehash: b2fda344839ee7d885a11313d088140738dfb640
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65983153"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803408"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中数据库引擎功能的重大更改
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "65983153"
   
 ##  <a name="SQL15"></a> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中的重大更改  
   
--   `sys.dm_io_virtual_file_stats` 的 sample_ms 列已从 int 扩展到 bigint 数据类型。  
+-   `sys.dm_io_virtual_file_stats` 的 sample_ms  列已从 int  扩展到 bigint  数据类型。  
   
--   `sys.fn_virtualfilestats` 的 TimeStamp 列已从 int 扩展到 bigint 数据类型。  
+-   `sys.fn_virtualfilestats` 的 TimeStamp  列已从 int  扩展到 bigint  数据类型。  
 
 -   在数据库兼容级别 130 以下，通过考虑导致不同转换值的毫秒小数部分，从 **datetime** 到 **datetime2** 数据类型的隐式转换显得更加准确。 只要 datetime 和 datetime2 数据类型之间存在混合比较情况，就需要使用 datetime2 数据类型的隐式转换。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4010261)。
 

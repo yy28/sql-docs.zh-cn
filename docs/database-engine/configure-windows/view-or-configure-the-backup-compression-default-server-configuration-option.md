@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f37e036444bd0302e62339275d45942b62f9b375
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+manager: jroth
+ms.openlocfilehash: 7670b7f7ac2d80f596c3a192eb23fbf2b9e94a6d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756702"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775111"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>查看或配置 backup compression default 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "57756702"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置 backup compression default 选项之后](#FollowUp)  
+-   **跟进：** [在配置 backup compression default 选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -58,20 +58,20 @@ ms.locfileid: "57756702"
   
 -   磁盘备份设备和磁带备份设备都支持备份压缩。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-configure-the-backup-compression-default-option"></a>查看或配置备份压缩默认值选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“数据库设置”** 节点。  
   
-3.  在“备份和还原” 下，“压缩备份”  显示了 **backup compression default** 选项的当前设置。 该设置确定压缩备份的服务器级默认设置，如下所示：  
+3.  在“备份和还原”  下，“压缩备份”  显示了 **backup compression default** 选项的当前设置。 该设置确定压缩备份的服务器级默认设置，如下所示：  
   
     -   如果未选中 **“压缩备份”** 框，在默认情况下将不压缩新备份。  
   
@@ -83,11 +83,11 @@ ms.locfileid: "57756702"
   
 #### <a name="to-view-the-backup-compression-default-option"></a>查看 backup compression default 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例查询 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 目录视图以确定 `backup compression default`的值。 值为 0 表示禁用备份压缩功能，值为 1 表示启用备份压缩功能。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例查询 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 目录视图以确定 `backup compression default`的值。 值为 0 表示禁用备份压缩功能，值为 1 表示启用备份压缩功能。  
   
 ```sql  
 SELECT value   
@@ -98,11 +98,11 @@ GO
   
 #### <a name="to-configure-the-backup-compression-default-option"></a>配置 backup compression default 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明了如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将服务器实例配置为在默认情况下创建压缩备份。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明了如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将服务器实例配置为在默认情况下创建压缩备份。  
   
 ```sql  
 EXEC sp_configure 'backup compression default', 1 ;  

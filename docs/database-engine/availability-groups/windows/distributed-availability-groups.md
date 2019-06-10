@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 076d1522ccb34aed7cccabd8ec1ec8369eb4e595
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860738"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765834"
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 分布式可用性组是 SQL Server 2016 中引入的一种新功能，作为现有 Always On 可用性组功能的一种变体。 本文阐明了分布式可用性组的某些特性，并对现有 [SQL Server 文档](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)进行了补充。
 
 > [!NOTE]
-> “DAG”不是 Distributed Availability Group（分布式可用性组）的正式缩写，因为此缩写已用于 Exchange Database Availability Group（数据库可用性组）功能。 此 Exchange 功能与 SQL Server 可用性组或分布式可用性组无关。
+> “DAG”不是 Distributed Availability Group（分布式可用性组）  的正式缩写，因为此缩写已用于 Exchange Database Availability Group（数据库可用性组）功能。 此 Exchange 功能与 SQL Server 可用性组或分布式可用性组无关。
 
 若要配置分布式可用性组，请参阅[配置分布式可用性组](configure-distributed-availability-groups.md)。
 
@@ -42,7 +42,7 @@ ms.locfileid: "58860738"
 
 ![分布式可用性组的高级视图](./media/distributed-availability-group/dag-01-high-level-view-distributed-ag.png)
 
-可以在分布式可用性组中将数据移动配置为同步或异步。 但是，与传统可用性组相比，分布式可用性组中的数据移动略有不同。 尽管每个可用性组都具有主要副本，但只有一个数据库副本加入可以接受插入、更新和删除的分布式可用性组。 如下图所示，AG 1 为主要可用性组。 其主要副本将事务发送到 AG 1 的次要副本和 AG 2 的主要副本。 AG 2 的主要副本也称为转发器。 转发器是分布式可用性组中的次要可用性组中的主要副本。 转发器从主要可用性组中的主要副本接收事务，并将其转发到它自己的可用性组中的次要副本。  然后，转发器将更新 AG 2 的次要副本。 
+可以在分布式可用性组中将数据移动配置为同步或异步。 但是，与传统可用性组相比，分布式可用性组中的数据移动略有不同。 尽管每个可用性组都具有主要副本，但只有一个数据库副本加入可以接受插入、更新和删除的分布式可用性组。 如下图所示，AG 1 为主要可用性组。 其主要副本将事务发送到 AG 1 的次要副本和 AG 2 的主要副本。 AG 2 的主要副本也称为转发器  。 转发器是分布式可用性组中的次要可用性组中的主要副本。 转发器从主要可用性组中的主要副本接收事务，并将其转发到它自己的可用性组中的次要副本。  然后，转发器将更新 AG 2 的次要副本。 
 
 ![分布式可用性组及其数据移动](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 

@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f5b52d54d60361b7572490da766b29eb5691efc0
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+manager: jroth
+ms.openlocfilehash: 1be7f5b9fdc53f013908dc22464c28cbc219bd78
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620343"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795579"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>管理服务器和见解小组件中使用的数据库 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

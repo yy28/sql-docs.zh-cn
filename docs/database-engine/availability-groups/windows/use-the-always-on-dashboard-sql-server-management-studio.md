@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f1a82b21716db66c4eb2676ed51160519f99afd7
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+manager: jroth
+ms.openlocfilehash: c150f329f41098755a47ebd7395ba83d6a33aaa0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982792"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769006"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性组仪表板 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ ms.locfileid: "65982792"
   
 1.  在对象资源管理器中，连接到要运行 AlwaysOn 面板的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
   
-2.  展开“AlwaysOn 高可用性”节点，右键单击“可用性组”节点，然后单击“显示面板”。  
+2.  展开“AlwaysOn 高可用性”  节点，右键单击“可用性组”  节点，然后单击“显示面板”  。  
   
 ##  <a name="change-always-on-dashboard-options"></a>更改 Always On 仪表板选项  
- 可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“选项”对话框配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 面板行为，使其自动刷新和启用自动定义的 AlwaysOn 策略。  
+ 可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“选项”  对话框配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 面板行为，使其自动刷新和启用自动定义的 AlwaysOn 策略。  
   
 1.  从 **“工具”** 菜单中，单击 **“选项”** 。  
   
 2.  若要自动刷新面板，在 **“选项”** 对话框中，选择 **“启用自动刷新”** ，输入以秒计的刷新间隔，然后输入要重试连接的次数。  
   
-3.  若要启用用户定义的策略，请选择“启用用户定义的 Always On 策略”。  
+3.  若要启用用户定义的策略，请选择“启用用户定义的 Always On 策略”  。  
   
 ##  <a name="availability-group-summary"></a>可用性组摘要  
  可用性组屏幕为所连接服务器实例承载其副本的每个可用性组都显示一行摘要。 此窗格显示以下列。  
@@ -80,7 +80,7 @@ ms.locfileid: "65982792"
 -   **手动**。 指示没有副本处于自动故障转移模式。  
   
  **问题**  
- 单击“问题”链接可打开针对某一问题的故障排除文档。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 Always On 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 单击“问题”  链接可打开针对某一问题的故障排除文档。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 Always On 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
 > [!TIP]  
 >  单击列标题可按可用性组的名称、主实例、故障转移模式或问题对可用性组信息进行排序。  
@@ -106,7 +106,7 @@ ms.locfileid: "65982792"
   
 ##  <a name="AvReplicaDetails"></a> 可用性副本详细信息  
 
-连接到主要副本时，“可用性副本详细信息”会显示可用性组中所有副本中的信息。 连接到次要副本时，显示内容仅显示已连接副本中的信息。  
+连接到主要副本时，“可用性副本详细信息”会显示可用性组中所有副本中的信息  。 连接到次要副本时，显示内容仅显示已连接副本中的信息。  
 
 **“可用性副本”** 窗格显示以下列：  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65982792"
  承载可用性副本的服务器实例的名称。 默认情况下显示此列。  
   
  **角色**  
- 指示可用性副本的当前角色，即“主”或“辅助”。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。 默认情况下显示此列。  
+ 指示可用性副本的当前角色，即“主”  或“辅助”  。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。 默认情况下显示此列。  
   
  **故障转移模式**  
  显示为副本配置的故障转移模式。 可能的故障转移模式值包括：  
@@ -253,7 +253,7 @@ ms.locfileid: "65982792"
  有关所有 AlwaysOn 策略问题的列表，请参阅[针对 Always On 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **已挂起**  
- 指示数据库“已挂起”还是“已恢复”。 默认情况下隐藏此值。  
+ 指示数据库“已挂起”  还是“已恢复”  。 默认情况下隐藏此值。  
   
  **挂起原因**  
  指示已挂起状态的原因。 默认情况下隐藏此值。  
@@ -262,7 +262,7 @@ ms.locfileid: "65982792"
  指示主副本和辅助副本中最后一个事务日志记录的时间差异。 如果主副本失败，则丢失该时间窗口内的所有事务日志记录。 默认情况下隐藏此值。  
   
  **估计的恢复时间（秒）**  
- 指示重做追赶时间所需的时间（秒）。 追赶时间是次要副本要与主要副本保持同步所需的时间。 默认情况下隐藏此值。  
+ 指示重做追赶时间所需的时间（秒）。 追赶时间  是次要副本要与主要副本保持同步所需的时间。 默认情况下隐藏此值。  
   
  **同步性能（秒）**  
  指示主副本与辅助副本之间的同步所需的时间（秒）。 默认情况下隐藏此值。  
@@ -329,7 +329,7 @@ ms.locfileid: "65982792"
 ## <a name="always-on-availability-group-latency-reports"></a>Always On 可用性组延迟报表
 可用性组延迟报表是内置于可用性组仪表板中的报表工具，可在 [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) 版本中使用。 此功能提供了易于理解的报表，其中详细说明了在日志传输过程的各个阶段所花费的时间。 这提供了一种在同步过程中缩小潜在延迟原因搜索范围的方法。 
 
-SQL 代理运行数据收集，且必须在主要副本和至少一个次要副本上启用。 右键单击 SQL Server Management Studio“对象资源管理器”中的“可用性组”>“报表”>“标准报表”来查看报表。  
+SQL 代理运行数据收集，且必须在主要副本和至少一个次要副本上启用。 右键单击 SQL Server Management Studio“对象资源管理器”中的“可用性组”>“报表”>“标准报表”来查看报表  。  
 
 有关详细信息，请参阅 [Always On 可用性组延迟报表](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/)。
 

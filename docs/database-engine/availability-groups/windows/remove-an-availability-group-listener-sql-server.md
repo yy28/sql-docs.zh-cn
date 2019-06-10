@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3fb1c490f8a20da4df987c003a4aa1d89619ed94
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+manager: jroth
+ms.openlocfilehash: 67648accafa07d3814e066f7202f9e8d273ffee7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "62826245"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800997"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>删除可用性组侦听器 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "62826245"
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后单击服务器名称以便展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
 3.  展开可用性组节点，然后展开 **“可用性组侦听器”** 节点。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62826245"
  要删除的侦听器的名称。  
   
  **结果**  
- 将显示一个链接，提示 **“成功”** 或 **“错误”**，可单击该链接查看详细信息。  
+ 将显示一个链接，提示 **“成功”** 或 **“错误”** ，可单击该链接查看详细信息。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **删除可用性组侦听器**  
@@ -64,7 +64,7 @@ ms.locfileid: "62826245"
   
 2.  按如下所示使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 语句：  
   
-     ALTER AVAILABILITY GROUP group_name REMOVE LISTENER 'dns_name'  
+     ALTER AVAILABILITY GROUP group_name REMOVE LISTENER 'dns_name'      
   
      其中， *group_name* 是可用性组的名称， *dns_name* 是可用性组侦听器的 DNS 名称。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+manager: jroth
+ms.openlocfilehash: 2963dd3f867b4080d383f51dc9f41baf0a1733ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566556"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793737"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>配置分布式 Always On 可用性组  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ GO
 ## <a name="create-first-availability-group"></a>创建第一个可用性组
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一个群集上创建主要可用性组  
-在第一个 Windows Server 故障转移群集 (WSFC) 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。 主可用性组的主要副本在分布式可用性组中称为全局主要副本。 Server1 是此示例中的全局主要副本。        
+在第一个 Windows Server 故障转移群集 (WSFC) 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。 主可用性组的主要副本在分布式可用性组中称为全局主要副本  。 Server1 是此示例中的全局主要副本。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -82,7 +82,7 @@ GO
 ```  
   
 >[!NOTE]
->上述示例使用直接的种子设定，其中 SEEDING_MODE 设置为 AUTOMATIC，用于副本和分布式可用性组。 此配置将设置次要副本和次要可用性组自动填充，而无需手动备份和还原主要数据库。  
+>上述示例使用直接的种子设定，其中 SEEDING_MODE 设置为 AUTOMATIC，用于副本和分布式可用性组   。 此配置将设置次要副本和次要可用性组自动填充，而无需手动备份和还原主要数据库。  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>将次要副本联接到主要可用性组  
 任何次要副本都必须使用 **JOIN** 选项联接到具有 **ALTER AVAILABILITY GROUP** 的可用性组。 因为在此示例中使用了直接的种子设定，因此也必须调用具有  **GRANT CREATE ANY DATABASE** 选项的 **ALTER AVAILABILITY GROUP** 。 此设置允许可用性组创建数据库并开始从主要副本自动进行种子设定。  
@@ -112,7 +112,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>创建第二个可用性组  
- 然后，在第二个 WSFC 上创建次要可用性组 `ag2`。 在这种情况下，不会指定数据库，因为它会自动从主要可用性组进行种子设定。  辅助可用性组的主要副本在分布式可用性组中称为转发器。 在此示例中，server3 是转发器。 
+ 然后，在第二个 WSFC 上创建次要可用性组 `ag2`。 在这种情况下，不会指定数据库，因为它会自动从主要可用性组进行种子设定。  辅助可用性组的主要副本在分布式可用性组中称为转发器  。 在此示例中，server3 是转发器。 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>在第一个群集上创建分布式可用性组  
- 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`。  
+ 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`  。  
   
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
@@ -223,7 +223,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 以下 Transact-SQL 示例演示了对名为 `distributedag` 的分布式可用性组进行故障转移的详细步骤：
 
-1. 通过在全局主要副本和转发器上同时运行以下代码，将分布式可用性组设置为同步提交。   
+1. 通过在全局主要副本和转发器上同时  运行以下代码，将分布式可用性组设置为同步提交。   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -288,7 +288,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
     FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
     WHERE drs.group_id = ag.group_id; 
     ```  
-    当 synchronization_state_desc 为 `SYNCHRONIZED` 且两个可用性组的 **end_of_log_lsn** 相同时，可用性组即可进行故障转移。 
+    当 synchronization_state_desc 为 `SYNCHRONIZED` 且两个可用性组的 **end_of_log_lsn** 相同时，可用性组即可进行故障转移  。 
 
 1. 从主要可用性组故障转移到次要可用性组。 在托管次要可用性组的主要副本的 SQL Server 上运行以下命令。 
 

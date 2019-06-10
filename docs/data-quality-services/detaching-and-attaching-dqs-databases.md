@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9067825db57574385e925d28e1b7badf049831df
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: c4f56ac8334be617e800c388158074f801f4aa98
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480225"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777705"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>分离数据库和附加 DQS 数据库
 
@@ -46,13 +46,13 @@ ms.locfileid: "65480225"
 -   您必须具有 DQS_MAIN 数据库的 dqs_administrator 角色，才能终止 DQS 中任何正在运行的活动或停止任何正在运行的过程。  
   
 ##  <a name="Detach"></a> 分离 DQS 数据库  
- 在您使用 SQL Server Management Studio 分离 DQS 数据库时，分离后的文件将保留在您的计算机上，并且可以重新附加到同一个 SQL Server 实例上，也可以移到其他服务器上并附加其上。 DQS 数据库文件通常位于 Data Quality Services 计算机上的以下位置：C:\Program Files\Microsoft SQL Server\MSSQL13.<Instance_Name>\MSSQL\DATA。  
+ 在您使用 SQL Server Management Studio 分离 DQS 数据库时，分离后的文件将保留在您的计算机上，并且可以重新附加到同一个 SQL Server 实例上，也可以移到其他服务器上并附加其上。 DQS 数据库文件通常位于 Data Quality Services 计算机上的以下位置：C:\Program Files\Microsoft SQL Server\MSSQL13.<Instance_Name>  \MSSQL\DATA。  
   
 1.  启动 Microsoft SQL Server Management Studio 并连接到适当的 SQL Server 实例。  
   
 2.  在“对象资源管理器”中，展开 **“数据库”** 节点。  
   
-3.  右键单击 **DQS_MAIN** 数据库，指向 **“任务”**，再单击 **“分离”**。 将出现 **“分离数据库”** 对话框。  
+3.  右键单击 **DQS_MAIN** 数据库，指向 **“任务”** ，再单击 **“分离”** 。 将出现 **“分离数据库”** 对话框。  
   
 4.  选中 **“删除”** 列下的复选框，然后单击 **“确定”** 以便分离 DQS_MAIN 数据库。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "65480225"
   
 1.  启动 Microsoft SQL Server Management Studio 并连接到适当的 SQL Server 实例。  
   
-2.  在对象资源管理器中，右键单击 **“数据库”**，然后单击 **“附加”**。 将出现 **“附加数据库”** 对话框。  
+2.  在对象资源管理器中，右键单击 **“数据库”** ，然后单击 **“附加”** 。 将出现 **“附加数据库”** 对话框。  
   
-3.  若要指定要附加的数据库，请单击 **“添加”**。 **“定位数据库文件”** 对话框将出现。  
+3.  若要指定要附加的数据库，请单击 **“添加”** 。 **“定位数据库文件”** 对话框将出现。  
   
 4.  选择数据库驻留的磁盘驱动器，然后展开目录树以便找到并选择该数据库的 .mdf 文件。 例如，对于 DQS_MAIN 数据库：  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65480225"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  **“数据库详细信息”** （下部）窗格将显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)。  
+5.  **“数据库详细信息”** （下部）窗格将显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)  。  
   
 6.  单击 **“确定”** 将附加该 DQS_MAIN 数据库。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "65480225"
   
 8.  在还原 DQS_MAIN 数据库后您还必须在接下来的步骤中运行 Transact-SQL 语句，否则，在您尝试通过使用数据质量客户端应用程序连接到数据质量服务器时系统将会显示错误消息，并且您将无法连接。 但是，如果您只是附加 DQS_PROJECTS 或 DQS_STAGING_DATA 数据库，而不是 DQS_MAIN，则不需要执行步骤 9 和 10。  
   
-     若要运行 Transact-SQL 语句，请在对象资源管理器中，右键单击服务器，然后单击 **“新建查询”**。  
+     若要运行 Transact-SQL 语句，请在对象资源管理器中，右键单击服务器，然后单击 **“新建查询”** 。  
   
 9. 在“查询编辑器”窗口中，复制以下 SQL 语句：  
   

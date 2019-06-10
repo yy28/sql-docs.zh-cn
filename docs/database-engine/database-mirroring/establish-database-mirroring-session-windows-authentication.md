@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a33e5f09ee0bda2bb1967b90902e47663f1846be
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 5138ee8249ab3841cafdf4e9de600d0e812c3e0c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522322"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795453"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>建立数据库镜像会话 - Windows 身份验证
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ ms.locfileid: "52522322"
   
 1.  连接到主体服务器实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**，再选择要镜像的数据库。  
+2.  展开 **“数据库”** ，再选择要镜像的数据库。  
   
-3.  右键单击数据库，选择 **“任务”**，再单击 **“镜像”**。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择 **“任务”** ，再单击 **“镜像”** 。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
 4.  若要开始配置镜像，请单击 **“配置安全性”** 按钮以启动配置数据库镜像安全向导。  
   
     > [!NOTE]  
     >  在数据库镜像会话期间，仅可使用此向导添加或更改见证服务器实例。  
   
-5.  配置数据库镜像安全向导将在每个服务器实例上自动创建数据库镜像端点（如果不存在任何端点），并在与服务器实例角色（**“主体”**、 **“镜像服务器”** 或 **“见证服务器”**）相对应的字段中输入服务器网络地址。  
+5.  配置数据库镜像安全向导将在每个服务器实例上自动创建数据库镜像端点（如果不存在任何端点），并在与服务器实例角色（ **“主体”** 、 **“镜像服务器”** 或 **“见证服务器”** ）相对应的字段中输入服务器网络地址。  
   
     > [!IMPORTANT]  
     >  创建端点时，配置数据库镜像安全向导始终使用 Windows 身份验证。 在将此向导与基于证书的身份验证配合使用之前，必须已在每个服务器实例上始终将镜像端点配置为使用证书。 此外，此向导的 **“服务帐户”** 对话框中的所有字段必须保持为空。 有关创建数据库镜像终结点以使用证书的信息，请参阅[ CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)。  
@@ -73,12 +73,12 @@ ms.locfileid: "52522322"
   
     -   已指定主体服务器实例和镜像服务器实例的完全限定的 TCP 地址（在 **“服务器网络地址”** 部分）。  
   
-    -   如果运行模式设置为 **“带自动故障转移功能的高安全(同步)”**，则还需指定见证服务器实例的完全限定的 TCP 地址。  
+    -   如果运行模式设置为 **“带自动故障转移功能的高安全(同步)”** ，则还需指定见证服务器实例的完全限定的 TCP 地址。  
   
 8.  在镜像开始后，您可以更改运行模式，并可以通过单击 **“确定”** 来保存更改。 注意，仅当先指定了见证服务器地址时，才能利用自动故障转移切换到高安全模式。  
   
     > [!NOTE]  
-    >  若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。 如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”字段。  
+    >  若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。 如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”  字段。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

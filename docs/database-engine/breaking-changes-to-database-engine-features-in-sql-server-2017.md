@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9b38a4358eb5ac7c0ab05ac7e2175c22011cea66
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 61fb2e329b60468ece3f87eeacefb7490908dba4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528948"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802576"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-includesssqlv14-mdincludessssqlv14-mdmd"></a>[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 中数据库引擎功能的重大更改
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52528948"
   
 ## <a name="breaking-changes-in-includesssqlv14-mdincludessssqlv14-mdmd-includessdeincludesssde-mdmd"></a>[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 中的重大更改  
   
--  CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 引入叫做 `clr strict security` 的 `sp_configure` 选项（该选项以 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 开头）以增强 CLR 程序集的安全性。 默认情况下启用 clr 严格安全性，并将 `SAFE` 和 `EXTERNAL_ACCESS` CLR 程序集视为标记为 `UNSAFE`。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 禁用 `clr strict security` 后，使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管的代码以及获取“sysadmin”特权。 启用严格安全性后，未签名的任何程序集都将加载失败。 此外，如果数据库具有 `SAFE` 或 `EXTERNAL_ACCESS` 程序集，则 `RESTORE` 或 `ATTACH DATABASE` 语句可以完成，但程序集可能加载失败。   
+-  CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 引入叫做 `clr strict security` 的 `sp_configure` 选项（该选项以 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 开头）以增强 CLR 程序集的安全性。 默认情况下启用 clr 严格安全性，并将 `SAFE` 和 `EXTERNAL_ACCESS` CLR 程序集视为标记为 `UNSAFE`。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 禁用 `clr strict security` 后，使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管的代码以及获取“sysadmin”  特权。 启用严格安全性后，未签名的任何程序集都将加载失败。 此外，如果数据库具有 `SAFE` 或 `EXTERNAL_ACCESS` 程序集，则 `RESTORE` 或 `ATTACH DATABASE` 语句可以完成，但程序集可能加载失败。   
   若要加载程序集，必须更改或删除并重新创建每个程序集，以便使用证书或非对称密钥对程序集进行签名，这样的证书或密钥具有与服务器上的 `UNSAFE ASSEMBLY` 权限相应的登录名。 有关详细信息，请参阅 [CLR 严格安全性](../database-engine/configure-windows/clr-strict-security.md)。 
 
 ## <a name="previous-versions"></a> 先前版本  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6197649ed7548919a8659977c3b3550429840f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 35786f1c468e5f4c90e5615d64d527a1df673f00
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207526"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789395"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>使用自动种子设定初始化 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ FROM sys.dm_hadr_automatic_seeding
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
 
-total_disk_io_wait_time_ms 列和 total_network_wait_time_ms 列可用于确定自动种子设定过程中的性能瓶颈。 这两列还显示在 hadr_physical_seeding_progress 扩展事件中。
+total_disk_io_wait_time_ms 列和 total_network_wait_time_ms 列可用于确定自动种子设定过程中的性能瓶颈   。 这两列还显示在 hadr_physical_seeding_progress 扩展事件中  。
 
 **total_disk_io_wait_time_ms** 表示在磁盘上等待时备份/还原线程所花费的时间。 该值从种子设定操作开始时逐渐累积。 如果磁盘还未准备好读取或写入备份流，则备份/还原线程转换为睡眠状态，并通过每秒唤醒一次来检查磁盘是否准备就绪。
         
@@ -236,7 +236,7 @@ GO
 
 ### <a name="other-troubleshooting-considerations"></a>其他故障排除注意事项
 
-监视自动种子设定
+监视自动种子设定 
 
 对当前正在运行的自动种子设定过程查询 `sys.dm_hadr_physical_seeding_stats` 。 对于每个数据库，该视图都将返回一行。 例如：
 

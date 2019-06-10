@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0aa939d36a97f6d4b7f0587bd06470189b91ff3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+manager: jroth
+ms.openlocfilehash: 39967c68efa3f514759c3c7c910674f62097e3ce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017989"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783857"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>配置远程数据存档服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
