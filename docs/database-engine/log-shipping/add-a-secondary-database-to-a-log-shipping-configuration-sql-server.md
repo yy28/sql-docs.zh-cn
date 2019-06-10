@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d91061db6626f70d765a6c5fb98d3371cb5b085
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 48f99b048474372ead6cdcef1f6988418b93c5b6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672895"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794656"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>向日志传送配置添加辅助数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47672895"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要添加日志传送辅助数据库，请使用：**  
   
@@ -42,20 +42,20 @@ ms.locfileid: "47672895"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  日志传送存储过程要求 **sysadmin** 固定服务器角色中的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>添加日志传送辅助数据库  
   
-1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”。  
+1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”  。  
   
-2.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
+2.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
-3.  在 **“辅助服务器实例和数据库”** 下，单击 **“添加”**。  
+3.  在 **“辅助服务器实例和数据库”** 下，单击 **“添加”** 。  
   
 4.  单击 **“连接”** ，连接到要用作辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   

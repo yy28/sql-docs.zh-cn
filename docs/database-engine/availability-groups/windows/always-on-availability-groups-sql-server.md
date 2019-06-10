@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b369247fccdac3407670b5edc63c0f5490fac23e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+manager: jroth
+ms.openlocfilehash: da54f2ab1795fabf8e6df5504ee89f74d6a17252
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775552"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796973"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 可用性组：高可用性和灾难恢复解决方案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组”  针对一组离散的用户数据库（称为“可用性数据库” ，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组”  针对一组离散的用户数据库（称为“可用性数据库”  ，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
   
  可用性组在可用性副本级别进行故障转移。 故障转移不是由诸如因数据文件丢失而使数据库成为可疑数据库、删除数据库或事务日志损坏等此类数据库问题导致的。  
  
@@ -44,9 +44,9 @@ ms.locfileid: "64775552"
   
 -   支持替代可用性模式，如下所示：  
   
-    -   异步提交模式。 此可用性模式是一种灾难恢复解决方案，适合于可用性副本的分布距离较远的情况。  
+    -   异步提交模式  。 此可用性模式是一种灾难恢复解决方案，适合于可用性副本的分布距离较远的情况。  
   
-    -   同步提交模式。 此可用性模式相对于性能而言更强调高可用性和数据保护，为此付出的代价是事务延迟时间增加。 一个给定的可用性组可支持最多三个同步提交可用性副本（包括当前主副本）。  
+    -   同步提交模式  。 此可用性模式相对于性能而言更强调高可用性和数据保护，为此付出的代价是事务延迟时间增加。 一个给定的可用性组可支持最多三个同步提交可用性副本（包括当前主副本）。  
   
      有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。 
 
@@ -62,7 +62,7 @@ ms.locfileid: "64775552"
   
      通过使用活动辅助功能，可更好地利用辅助硬件资源，从而提高 IT 效率并降低成本。 此外，通过将读意向应用程序和备份作业转移到辅助副本，有助于提高针对主副本的性能。  
   
--   支持每个可用性组的可用性组侦听器。 “可用性组侦听程序”是一个服务器名称，客户端可连接到此服务器以访问 AlwaysOn 可用性组的主要副本或次要副本中的数据库。 可用性组侦听器将传入连接定向到主副本或只读辅助副本。 侦听器在可用性组故障转移后提供快速应用程序故障转移。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)概念。  
+-   支持每个可用性组的可用性组侦听器。 “可用性组侦听程序”  是一个服务器名称，客户端可连接到此服务器以访问 AlwaysOn 可用性组的主要副本或次要副本中的数据库。 可用性组侦听器将传入连接定向到主副本或只读辅助副本。 侦听器在可用性组故障转移后提供快速应用程序故障转移。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)概念。  
   
 -   支持灵活的故障转移策略以便更好地控制可用性组故障转移。 有关详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)概念。  
   
@@ -91,28 +91,28 @@ ms.locfileid: "64775552"
     -   PowerShell cmdlet。 有关详细信息，请参阅： [AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)。  
   
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
- 可用性组  
- 一个容器，用于一组共同实现故障转移的数据库（“可用性数据库”）。  
+ 可用性组   
+ 一个容器，用于一组共同实现故障转移的数据库（“可用性数据库”  ）。  
   
- 可用性数据库  
- 属于可用性组的数据库。 对于每个可用性数据库，可用性组将保留一个读写副本（“主数据库”）和一个到八个只读副本（“辅助数据库”）。  
+ 可用性数据库   
+ 属于可用性组的数据库。 对于每个可用性数据库，可用性组将保留一个读写副本（“主数据库”  ）和一个到八个只读副本（“辅助数据库”  ）。  
   
- 主数据库  
+ 主数据库   
  可用性数据库的读写副本。  
   
- 辅助数据库  
+ 辅助数据库   
  可用性数据库的只读副本。  
   
- 可用性副本  
+ 可用性副本   
  可用性组的实例化，该可用性组由特定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载，并维护属于该可用性组的每个可用性数据库的本地副本。 存在两种类型的可用性副本：一个 *主副本* 和一至八个 *辅助副本*。  
   
- 主要副本  
+ 主要副本   
  使主数据库可用于来自客户端的读写连接并用于将每个主数据库的事务日志记录发送到每个辅助副本的可用性副本。  
   
- 次要副本  
+ 次要副本   
  维护各可用性数据库的辅助副本的可用性副本，充当可用性组的潜在故障转移目标。 或者，辅助副本可以支持对辅助数据库进行只读访问，并支持对辅助数据库创建备份。  
   
- 可用性组侦听器  
+ 可用性组侦听器   
  一个服务器名称，客户端可连接到此服务器以访问 AlwaysOn 可用性组的主要副本或次要副本中的数据库。 可用性组侦听器将传入连接定向到主副本或只读辅助副本。  
   
 > [!NOTE]  

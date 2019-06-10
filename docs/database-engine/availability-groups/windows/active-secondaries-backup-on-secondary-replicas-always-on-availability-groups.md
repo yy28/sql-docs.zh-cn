@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 40fa3d6f3464c92a16e27a2a8bdddbf664909504
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 5b74fc36a3a6e53e0b7f00438f013218b0d76344
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209436"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801347"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>卸载可用性组次要副本的支持备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,7 @@ ms.locfileid: "53209436"
 > [!NOTE]  
 >  在可用性组的主数据库或辅助数据库上不允许 RESTORE 语句。  
   
--   [支持的备份类型](#SupportedBuTypes)  
-  
--   [配置运行备份作业的位置](#WhereBuJobsRun)  
-  
--   [相关任务](#RelatedTasks)  
-  
+ 
 ##  <a name="SupportedBuTypes"></a> 辅助副本上支持的备份类型  
   
 -   **BACKUP DATABASE** 在次要副本上执行时仅支持数据库、文件或文件组的仅复制完整备份。 请注意，仅复制备份不影响日志链，也不清除差异位图。  
@@ -57,7 +52,7 @@ ms.locfileid: "53209436"
 ##  <a name="WhereBuJobsRun"></a> 配置运行备份作业的位置  
  在辅助副本上执行备份以减轻主生产服务器的备份工作负荷非常有好处。 但是，对辅助副本执行备份会显著增加用于确定应在何处运行备份作业的过程的复杂性。 要解决这个问题，请按如下所示配置备份作业运行的位置：  
   
-1.  配置可用性组以便指定要对其执行备份的可用性副本。 有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md) 中的 AUTOMATED_BACKUP_PREFERENCE 和 BACKUP_PRIORITY 参数。  
+1.  配置可用性组以便指定要对其执行备份的可用性副本。 有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md) 中的 AUTOMATED_BACKUP_PREFERENCE 和 BACKUP_PRIORITY 参数   。  
   
 2.  为承载作为执行备份候选的可用性副本的每个服务器实例上的每个可用性数据库都创建编写了脚本的备份作业。 有关详细信息，请参阅“跟进：配置次要副本备份之后”部分，见[配置可用性副本备份 (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。  
   

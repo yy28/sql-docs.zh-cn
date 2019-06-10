@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 60144c2b3283621d6365a3016b4f1d436319b05a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7577a95f08b4e960fc3f5dfdeb356cd7434d73
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807225"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795158"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>数据库镜像端点 (SQL Server)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  若要参与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像，服务器实例需要有自己专用的“数据库镜像端点” 。 此端点用途特殊，专门用于接收来自其他服务器实例的这些连接。 在某一给定服务器实例上，与任何其他服务器实例的每个 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像连接都使用单个数据库镜像端点。  
+  若要参与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像，服务器实例需要有自己专用的“数据库镜像端点”  。 此端点用途特殊，专门用于接收来自其他服务器实例的这些连接。 在某一给定服务器实例上，与任何其他服务器实例的每个 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像连接都使用单个数据库镜像端点。  
   
  数据库镜像端点使用传输控制协议 (TCP) 在参与数据库镜像会话或承载可用性副本的服务器实例之间发送和接收消息。 数据库镜像端点在唯一的 TCP 端口号上进行侦听。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47807225"
   
   
 ##  <a name="ServerNetworkAddress"></a> 服务器网络地址  
- 服务器实例的网络地址（其“服务器网络地址”或“终结点 URL”）包含其端点的端口号，以及主机的系统名称和域名。 端口号唯一标识特定的服务器实例。  
+ 服务器实例的网络地址（其“服务器网络地址”  或“终结点 URL”  ）包含其端点的端口号，以及主机的系统名称和域名。 端口号唯一标识特定的服务器实例。  
   
  下图具体说明了如何将同一服务器上的两个服务器实例进行唯一标识。 两个服务器实例的服务器网络地址均包含相同的系统名称 `MYSYSTEM`和域名 `Adventure-Works.MyDomain.com`。 若要使系统能够路由到服务器实例的连接，服务器网络地址需要包括与特定服务器实例的镜像端点相关联的端口号。  
   

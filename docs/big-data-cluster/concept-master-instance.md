@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 本指南介绍了 SQL Server 2019 大数据群集 （预览版） 中的 SQL Server 主实例。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6c3a9a425d5de55e7018c9e33b37a8e3d1a8e1c5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860678"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783077"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集中的主实例？
 

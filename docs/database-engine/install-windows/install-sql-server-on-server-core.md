@@ -10,13 +10,13 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 3eb1ff10fbf0af49cd698537af915378cc1ddb87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306215"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794924"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
 
@@ -290,9 +290,9 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
   
 1.  在服务器上，启动任务管理器。  
   
-2.  在 **“应用程序”** 选项卡上，单击 **“新建任务”**。  
+2.  在 **“应用程序”** 选项卡上，单击 **“新建任务”** 。  
   
-3.  在 **“创建新任务”** 对话框上的 **“打开”** 字段中键入 **sqlps.exe** ，然后单击 **“确定”**。 这将打开 **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 窗口。  
+3.  在 **“创建新任务”** 对话框上的 **“打开”** 字段中键入 **sqlps.exe** ，然后单击 **“确定”** 。 这将打开 **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 窗口。  
   
 4.  在 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 窗口中，运行以下脚本以启用 TCP/IP 协议：  
   
@@ -324,7 +324,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 如果您无意中关闭了命令提示符，可以使用以下步骤启动一个新的命令提示符：  
  
 1.  按 Ctrl+Shift+Esc 以显示任务管理器。  
-2.  在 **“应用程序”** 选项卡上，单击 **“新建任务”**。  
+2.  在 **“应用程序”** 选项卡上，单击 **“新建任务”** 。  
 3.  在“创建新任务”  对话框上的“打开”  字段中键入 **cmd** ，然后 [!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
 ## <a name="see-also"></a>另请参阅  

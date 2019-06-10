@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a6199feac8ec213d10a43cef4687096df0bc0bc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f8ddb88c264df2c1d2b3918994bf0ea8c81a3b4b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693319"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786891"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity I/O mask 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,17 +51,17 @@ ms.locfileid: "47693319"
   
  关联 I/O 模式中某一位的值为 1，则指定相应的 CPU 可执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 操作；值为 0，则指定相应的 CPU 未安排任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 操作。 如果将所有位设置为零或不指定**关联 I/O 掩码**，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘 I/O 将由任何可处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程的 CPU 执行。  
   
- 因为设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“关联 I/O 掩码”选项是一项专用操作，所以建议只在需要时使用。 大多数情况下，Windows 2000 或 Windows Server 2003 的默认关联就可以提供最佳性能。  
+ 因为设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“关联 I/O 掩码”  选项是一项专用操作，所以建议只在需要时使用。 大多数情况下，Windows 2000 或 Windows Server 2003 的默认关联就可以提供最佳性能。  
   
- 指定**关联 I/O 掩码**选项后，必须将其与**关联掩码**配置选项一起使用。 请勿在“关联 I/O 掩码”开关和“关联掩码”选项中启用相同的 CPU。 每个 CPU 对应的位必须处于下列三种状态之一：  
+ 指定**关联 I/O 掩码**选项后，必须将其与**关联掩码**配置选项一起使用。 请勿在“关联 I/O 掩码”  开关和“关联掩码”  选项中启用相同的 CPU。 每个 CPU 对应的位必须处于下列三种状态之一：  
   
--   在“关联 I/O 掩码”选项和“关联掩码”选项中均为 0。  
+-   在“关联 I/O 掩码”  选项和“关联掩码”  选项中均为 0。  
   
--   在“关联 I/O 掩码”选项中为 1，在“关联掩码”选项中为 0。  
+-   在“关联 I/O 掩码”  选项中为 1，在“关联掩码”  选项中为 0。  
   
--   在“关联 I/O 掩码”选项中为 0，在“关联掩码”选项中为 1。  
+-   在“关联 I/O 掩码”  选项中为 0，在“关联掩码”  选项中为 1。  
   
- “关联 I/O 掩码”选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当“显示高级选项”设置为 1 时，才可以更改**关联 I/O 掩码**。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，重新配置“关联 I/O 掩码”选项要求重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+ “关联 I/O 掩码”  选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当“显示高级选项”  设置为 1 时，才可以更改**关联 I/O 掩码**。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，重新配置“关联 I/O 掩码”  选项要求重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 > [!CAUTION]  
 >  请不要在 Windows 操作系统中配置 CPU 关联后，还在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置关联掩码。 这些设置实现的效果相同，如果配置不一致，则可能会得到意外的结果。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最好使用 **中的** sp_configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项配置 CPU 关联。  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7024f4214388f77edc2f97e402db8da71e9c857c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 8b255f03070bffb289184a1dbf6ec9fdedbbec4a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205253"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799516"
 ---
 # <a name="clr-strict-security"></a>CLR 严格安全性   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53205253"
 > [!IMPORTANT]
 >  启用严格安全性后，未签名的任何程序集都将加载失败。 必须更改或删除并重新创建每个程序集，以便使用具有相应登录名（该登录名对应于服务器上的 `UNSAFE ASSEMBLY` 权限）的证书或非对称密钥对程序集进行签名。
 
-## <a name="permissions"></a>Permissions 
+## <a name="permissions"></a>权限 
 
 ### <a name="to-change-this-option"></a>更改此选项  
 要求具有 `CONTROL SERVER` 权限，或者具有 `sysadmin` 固定服务器角色的成员身份。

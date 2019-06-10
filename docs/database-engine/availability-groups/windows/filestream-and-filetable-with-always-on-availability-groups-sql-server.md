@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f27403dcce14e657915abe3d8a98f886dd7cc9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7619712d0445182d0ded0d7d544bd23f2cee8e90
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214858"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800778"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>将 FILESTREAM 和 FileTable 与 AlwaysOn 可用性组一起使用
 
@@ -32,16 +32,6 @@ ms.locfileid: "53214858"
  支持所有 FILESTREAM 功能。 故障转移后，FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
   
  支持部分 FileTable 功能。 故障转移后，FileTable 数据在主副本上是可访问的，但是在可读辅助副本上不可访问。  
-  
- **本主题内容：**  
-  
--   [先决条件](#Prerequisites)  
-  
--   [为 FILESTREAM 和 FileTable 访问使用虚拟网络名称 (VNN)](#vnn)  
-  
--   [相关任务](#RelatedTasks)  
-  
--   [相关内容](#RelatedContent)  
   
 ##  <a name="Prerequisites"></a> 先决条件  
   

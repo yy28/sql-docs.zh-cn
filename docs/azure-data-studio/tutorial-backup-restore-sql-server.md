@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 5550a1151ed0fb71a769e7990d9cd47b3e9b0e47
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 93f38f8e703aabc765d3badc91393eb130081c99
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089695"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797970"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>备份和还原数据库使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "65089695"
 
 2. 选择**备份文件**中**从还原**字段。 
 
-3. **從還原**欄位中選取*備份檔案*。 
+3. **從還原**欄位中選取*備份檔案*。
 
 3. 在**目的地**區段的**目標資料庫**欄位中輸入 **TutorialDB_Restored**，以將備份檔案還原至新的資料庫。
 

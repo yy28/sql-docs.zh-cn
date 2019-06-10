@@ -5,18 +5,18 @@ description: 本文介绍了 SQL Server 2019 大数据群集 （预览版） 的
 author: nelgson
 ms.author: negust
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ebe1ef0a9a0337af29a09018bcc2e0150d676879
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: a71c4fb8902bb016de0d5ee607f955db61d94901
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860108"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783069"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 大数据群集的安全性概念
 

@@ -15,51 +15,29 @@ helpviewer_keywords:
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4bacb15ea7932cdbe533ee9c4a3ff1be4a65ef9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: cde3691b20ff9a674a64e4f7f997a8919594c93a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201916"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801005"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>从可用性组中删除辅助副本 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明了如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 从 AlwaysOn 可用性组中删除次要副本。  
+ 
+   
+##  <a name="Restrictions"></a> 限制和局限  
   
--   **开始之前：**  
-  
-     [限制和局限](#Restrictions)  
-  
-     [先决条件](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **若要删除辅助副本，请使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **跟进：**[在删除次要副本之后](#PostBestPractices)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Restrictions"></a> 限制和局限  
-  
--   只有主副本支持该任务。  
-  
+-   只有主副本支持该任务。    
 -   从可用性组中仅可删除辅助副本。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+## <a name="Prerequisites"></a> 先决条件  
   
 -   您必须连接到承载可用性组的主副本的服务器实例。  
   
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -67,7 +45,7 @@ ms.locfileid: "53201916"
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
 3.  选择可用性组，然后展开 **“可用性副本”** 节点。  
   
@@ -77,9 +55,9 @@ ms.locfileid: "53201916"
   
     -   若要删除单个副本，请在 **“对象资源管理器”** 窗格或 **“对象资源管理器详细信息”** 窗格中选中此副本。  
   
-5.  右键单击选定的一个或多个次要副本，然后在命令菜单中选择“从可用性组中删除”。  
+5.  右键单击选定的一个或多个次要副本，然后在命令菜单中选择“从可用性组中删除”  。  
   
-6.  在 **“从可用性组删除辅助副本”** 对话框中，要删除所有列出的辅助副本，请单击 **“确定”**。 如果您不想删除所有列出的副本，请单击 **“取消”**。  
+6.  在 **“从可用性组删除辅助副本”** 对话框中，要删除所有列出的辅助副本，请单击 **“确定”** 。 如果您不想删除所有列出的副本，请单击 **“取消”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **删除辅助副本**  
@@ -88,11 +66,11 @@ ms.locfileid: "53201916"
   
 2.  按如下所示使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 语句：  
   
-     ALTER AVAILABILITY GROUP group_name REMOVE REPLICA ON 'instance_name' [,...n]  
+     ALTER AVAILABILITY GROUP group_name  REMOVE REPLICA ON 'instance_name  ' [,...n  ]  
   
-     其中，group_name 为可用性组的名称，instance_name 为该次要副本所在的服务器实例。  
+     其中，group_name  为可用性组的名称，instance_name  为该次要副本所在的服务器实例。  
   
-     下面的示例将次要副本从 *MyAG* 可用性组中删除。 目标次要副本位于名为 COMPUTER02 的计算机上的服务器实例（名为 HADR_INSTANCE）上。  
+     下面的示例将次要副本从 *MyAG* 可用性组中删除。 目标次要副本位于名为 COMPUTER02  的计算机上的服务器实例（名为 HADR_INSTANCE  ）上。  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  

@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f98f6be4502254910b5c144f08a95181ccf1b2a7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143863"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800272"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入门：使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]进行连接和查询 Azure SQL 数据仓库中的数据
 
@@ -48,7 +48,7 @@ ms.locfileid: "63143863"
    | **身份验证** | SQL 登录名| 在本教程中使用 SQL 身份验证。 |
    | **用户名** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
-   | **是否保存密码？** |  是或否 | 如果您不想要每次都输入密码，请选择是。 |
+   | **是否保存密码？** | 是或否 | 如果您不想要每次都输入密码，请选择是。 |
    | **数据库名称** | *将保留为空* | 要连接到的数据库的名称。 |
    | **服务器组** | 选择<Default> | 如果你创建服务器组，您可以设置为特定的服务器组。 | 
 

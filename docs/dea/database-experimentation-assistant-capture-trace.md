@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 822f8d02a9bcaa27a405acdc351646fd63560880
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015173"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794498"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>捕获的跟踪将在数据库实验助手
 
@@ -39,8 +39,8 @@ ms.locfileid: "66015173"
     - **SQL Server 实例名称**:输入运行你想要捕获的服务器跟踪的 SQL Server 的计算机的名称。
     - **数据库名称**:输入在其上开始数据库跟踪数据库的名称。 如果不指定数据库，在服务器上的所有数据库上捕获跟踪。
     - **跟踪文件名**:输入捕获的跟踪文件的名称。
-    - **最大文件大小 (MB)**:选择文件滚动更新大小。 根据需要在你选择的文件大小创建新文件。 建议滚动更新大小为 200 MB。
-    - **持续时间 （以分钟为单位）**:选择你想跟踪捕获运行的时间 （以分钟为单位） 的长度。
+    - **最大文件大小 (MB)** :选择文件滚动更新大小。 根据需要在你选择的文件大小创建新文件。 建议滚动更新大小为 200 MB。
+    - **持续时间 （以分钟为单位）** :选择你想跟踪捕获运行的时间 （以分钟为单位） 的长度。
     - **用于存储输出跟踪文件路径**:选择跟踪文件的目标路径。 
 
     > [!NOTE]

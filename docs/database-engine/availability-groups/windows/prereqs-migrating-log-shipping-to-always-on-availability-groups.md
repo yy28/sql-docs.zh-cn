@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f5dc6b48ece6318cdd1ab15e6bccd86401b05e2a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 7261b155c8dffa1d39a9e4354e03fb0cc7a8d1ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214718"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798163"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>将日志传送转换为 Always On 可用性组的先决条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,15 +29,6 @@ ms.locfileid: "53214718"
 > [!NOTE]  
 >  您可将可用性组中的任何主数据库或辅助数据库（可能可读）配置为日志传送主数据库。  
   
- **本主题内容：**  
-  
--   [可用性组先决条件](#AGPrereqsRealAddress)  
-  
--   [日志传送先决条件](#LogShipPrereqs)  
-  
--   [相关任务](#RelatedTasks)  
-  
--   [相关内容](#RelatedContent)  
   
 ##  <a name="AGPrereqsRealAddress"></a> 可用性组先决条件  
  若要允许备份作业在可用性组的主要副本上运行，请使用下列 AlwaysOn 可用性组备份设置：  
@@ -110,7 +101,7 @@ ms.locfileid: "53214718"
   
      [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server 客户咨询团队白皮书](https://sqlcat.com/)  
+     [SQL Server 客户咨询团队白皮书](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

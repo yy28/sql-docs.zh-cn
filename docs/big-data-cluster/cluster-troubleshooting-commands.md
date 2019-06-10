@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 本文提供了用于监视和故障排除 SQL Server 2019 大数据群集 （预览版） 的有用命令。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994082"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800739"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>监视和故障排除 SQL Server 大数据群集
 
@@ -242,7 +242,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> 如果收到以下错误：*无法侦听端口 8001:所有侦听器都未能创建具有以下错误：无法创建侦听器：错误侦听 tcp4 127.0.0.1:8001: > 绑定：通常情况下允许的每个套接字地址 （协议/网络地址/端口） 只有一个使用情况。无法创建侦听器：错误侦听 tcp6： 地址 [[:: 1]]: 8001： 缺少中的端口 > 解决错误：无法在任何请求的端口上侦听: [{8001 9090}]*，请确保您没有启动仪表板已从另一个窗口。
+> 如果收到以下错误：*无法侦听端口 8001:所有侦听器都未能创建具有以下错误：无法创建侦听器：错误侦听 tcp4 127.0.0.1:8001: > 绑定：通常情况下允许的每个套接字地址 （协议/网络地址/端口） 只有一个使用情况。无法创建侦听器：错误侦听 tcp6： 地址 [[:: 1]]: 8001： 缺少中的端口 > 解决错误：无法在任何请求的端口上侦听: [{8001 9090}]* ，请确保您没有启动仪表板已从另一个窗口。
 
 在浏览器上启动仪表板中，可能会由于在 AKS 群集中，默认情况下启用的 RBAC 权限警告和仪表板使用的服务帐户没有足够的权限访问的所有资源时 (例如， *禁止 pod:用户"系统： serviceaccount:kube-系统： kubernetes 的仪表板"无法列出命名空间"default"中的 pod*)。 运行以下命令，为提供必要的权限来`kubernetes-dashboard`，然后重新启动仪表板：
 

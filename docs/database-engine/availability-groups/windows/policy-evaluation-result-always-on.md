@@ -13,25 +13,19 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 907be803cc448a5b8424adf4e968cb4520c52cd3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 23c32528e590b0484082cd74429cdf472907fba1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201926"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798199"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>策略评估结果页（Always On 仪表板）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  使用 AlwaysOn 面板的“策略评估结果”页查看当前的所有策略问题。  
-  
- **本主题内容：**  
-  
--   [对话框选项](#Options)  
-  
--   [相关任务](#RelatedTasks)  
-  
+  使用 AlwaysOn 面板的“策略评估结果”  页查看当前的所有策略问题。  
+    
 ##  <a name="Options"></a> 对话框选项  
  **检测到的问题**  
  为每个检测到的问题显示一行。 与问题相关联的图标提供可视指示器，以便按如下所示指示这一问题的严重性：  
