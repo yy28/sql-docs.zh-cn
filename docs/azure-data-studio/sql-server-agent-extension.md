@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 077a3ae072c8a9f680162de5eb1813c15b1e7199
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c21cab43211e168802e8acd94d4664124182b2de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309310"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798044"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server 代理扩展 （预览版）
 
@@ -30,7 +30,6 @@ SQL Server 代理扩展 （预览版） 是用于管理和故障排除 SQL 代�
 ## <a name="install-the-sql-server-agent-extension"></a>安装 SQL Server 代理扩展
 
 1. 若要開啟擴充管理員及存取可用的擴充功能，選取 [擴充功能] 圖示，或選取**檢視**功能表中的**擴充功能**。
-
 2. 选择要查看其详细信息的可用扩展。
 
    ![安装代理](media/extensions/sql-server-agent-extension/install-sql-agent.png)

@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 1d10e3c4e9c1e1b2a6ce316902d4f70bbfac3740
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+manager: jroth
+ms.openlocfilehash: 743bf6f78fa84f628a20bed23af0ace8cf23d06f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748470"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798019"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>中央管理服务器的 SQL Server 扩展 （预览版）
 中央管理服务器扩展，用户可以存储组织到一个或多个组的 SQL Server 实例的列表。 使用 CMS 组执行的操作，将作用于的服务器组中的所有服务器。

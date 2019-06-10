@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3d227d308ba05a4c9336e2f5dcb728e85c18d7ed
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2a158ecd0223f7483494e4b28068c4634874e11d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089706"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797942"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教程：使用 TRANSACT-SQL 编辑器来创建数据库对象， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -55,7 +55,7 @@ ms.locfileid: "65089706"
 
    ![快速搜索小组件](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 编辑**电子邮件**列中的第一行，类型*orlando0@adventure-works.com*，然后按**Enter**以保存更改。
+1. 编辑**电子邮件**列中的第一行，类型 *orlando0@adventure-works.com* ，然后按**Enter**以保存更改。
 
    ![编辑数据](./media/tutorial-sql-editor/edit-data.png)
 
@@ -183,7 +183,7 @@ ms.locfileid: "65089706"
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用将查询结果保存为 JSON，以便测试 setCustomer 存储过程
 
-*SetCustomer*在上一节中创建的存储的过程需要 JSON 数据传递到*@json_val*参数。 本部分演示如何获取少量格式正确的 JSON 传递到参数，以便可以测试存储的过程。
+*SetCustomer*在上一节中创建的存储的过程需要 JSON 数据传递到 *@json_val* 参数。 本部分演示如何获取少量格式正确的 JSON 传递到参数，以便可以测试存储的过程。
 
 1. 在中**服务器**右键单击侧栏*dbo。客户*表，然后单击**选择前 1000年行**。
 

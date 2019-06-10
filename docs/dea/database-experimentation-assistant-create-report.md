@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 2d0e07e069754e961b290b33d77cb30b522c367f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015153"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794474"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>在数据库实验助手中创建分析报表
 
@@ -36,7 +36,7 @@ ms.locfileid: "66015153"
 
 输入或选择以下信息：
 
-- **报表名称**:输入您的报表的名称。 使用报表名称同时 a 和 B 数据库。 例如：*A （或 B）* + *报表名称* + *唯一标识符*。 
+- **报表名称**:输入您的报表的名称。 使用报表名称同时 a 和 B 数据库。 例如：*A （或 B）*  + *报表名称* + *唯一标识符*。 
 - **服务器名称**：输入想要包括在 A，在服务器计算机的名称 B 和分析数据库。
 - **SQL Server 实例名称**:输入要用于报表的 SQL Server 实例的名称。
 - **对于源服务器的跟踪**:输入 SQL Server (2008 R2) 的第一个跟踪 (.trc) 文件。

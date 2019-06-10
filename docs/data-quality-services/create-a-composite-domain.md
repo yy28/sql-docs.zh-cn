@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 531dc66411fc6d63751497a34b96417e9e51c9b1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: ef9a9a2ed3d91c3ce870580f35f09f069e9ef04a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486441"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793819"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
 
@@ -71,7 +71,7 @@ ms.locfileid: "65486441"
   
 6.  在 **“域列表”** 中，选择将成为复合域一部分的域，然后单击右箭头将它们移至 **“复合域中的域”** 表中。  
   
-7.  单击“确定” 。  
+7.  单击“确定”  。  
   
 ##  <a name="CompositeDomainProperties"></a> 设置复合域属性  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65486441"
   
 2.  在 **“域列表”** 中，选择将成为复合域一部分的域，然后单击右箭头将它们移至 **“复合域中的域”** 表中。 这是可添加到您创建的复合域中的单一域列表。 只能使用已创建但尚未添加到现有复合域中的那些单一域。 无法将单一域添加到知识库中的多个复合域，并且一个复合域无法添加到另一个复合域中。  
   
-3.  单击 **“高级”**。  
+3.  单击 **“高级”** 。  
   
 4.  请为 **“分析方法”** 选择下列选项之一：  
   
@@ -87,9 +87,9 @@ ms.locfileid: "65486441"
   
     -   **按顺序**：根据复合域中域的顺序分析字段的值。 第一个值将加入第一个域中，第二个值加入第二个域中，依此类推。  
   
-    -   **分隔符**：根据在勾选“分隔符”后显示的单选按钮中选择的分隔符分析该字段的值。 可以是 **“制表符”**、 **“分号”**、 **“逗号”**、 **“空格”** 或 **“其他”**。 如果选择 **“其他”**，则输入将作为分隔符的值。  
+    -   **分隔符**：根据在勾选“分隔符”后显示的单选按钮中选择的分隔符分析该字段的值。 可以是 **“制表符”** 、 **“分号”** 、 **“逗号”** 、 **“空格”** 或 **“其他”** 。 如果选择 **“其他”** ，则输入将作为分隔符的值。  
   
-5.  如果您为分析方法选择了 **“分隔符”** ，还可以选择 **“基于知识的分析”**。 有关详细信息，请参阅 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
+5.  如果您为分析方法选择了 **“分隔符”** ，还可以选择 **“基于知识的分析”** 。 有关详细信息，请参阅 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
   
 6.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
