@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dcf52d8c69c59ca7318a2a20ce82ab2a8217c9c4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: a7ad04719883f6674d3656d56ce8df6519c0d29e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480437"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761846"
 ---
 # <a name="create-a-linked-domain"></a>创建链接域
 
@@ -51,9 +51,9 @@ ms.locfileid: "65480437"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [创建知识库](../data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”** 。 有关详细信息，请参阅 [创建知识库](../data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../data-quality-services/open-a-knowledge-base.md)。  
   
-3.  从 **“域管理”** 页上的 **“域列表”** 中，右键单击您要将新域链接到的域，然后单击 **“创建链接域”**。  
+3.  从 **“域管理”** 页上的 **“域列表”** 中，右键单击您要将新域链接到的域，然后单击 **“创建链接域”** 。  
   
     > [!NOTE]  
     >  没有专门用于创造链接域的图标。 您只能使用上下文菜单中的命令。  
@@ -84,9 +84,9 @@ ms.locfileid: "65480437"
   
 -   您可以更改链接域的名称和说明。  
   
--   若要更改 **“数据类型”**、 **“使用前导值”** 或 **“将输出格式设置为”** 属性，请选择链接到的域，然后在该域的 **“域属性”** 选项卡中更改这些设置。 您不能在链接域的属性中更改这些设置。 有关详细信息，请参阅 [创建域](../data-quality-services/create-a-domain.md)。  
+-   若要更改 **“数据类型”** 、 **“使用前导值”** 或 **“将输出格式设置为”** 属性，请选择链接到的域，然后在该域的 **“域属性”** 选项卡中更改这些设置。 您不能在链接域的属性中更改这些设置。 有关详细信息，请参阅 [创建域](../data-quality-services/create-a-domain.md)。  
   
--   可以针对链接域或它链接到的域更改“域管理”页的 **“引用数据”**、 **“域规则”**、 **“域值”** 和 **“基于字词的关系”** 选项卡中的设置，并且这些更改将被另一个域继承。  
+-   可以针对链接域或它链接到的域更改“域管理”页的 **“引用数据”** 、 **“域规则”** 、 **“域值”** 和 **“基于字词的关系”** 选项卡中的设置，并且这些更改将被另一个域继承。  
   
  链接域具有以下特征：  
   
