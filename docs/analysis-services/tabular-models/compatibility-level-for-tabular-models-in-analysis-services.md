@@ -1,6 +1,6 @@
 ---
 title: 在 Analysis Services 中表格模型的兼容级别 |Microsoft Docs
-ms.date: 05/23/2019
+ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 19c69aa1a1ab27e7498d3c9d6a0d52c25b9f0020
+ms.sourcegitcommit: c2a5bed031b14f66562f792a3afaefab8c759fda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175131"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826828"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表格模型的兼容性级别
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
-  *兼容性级别*指的是特定于版本的 Analysis Services 引擎中的行为。 例如，对于 DirectQuery 和表格对象元数据有不同的实现根据兼容性级别。 在常规应选择你的服务器支持的最新兼容性级别。
+  *兼容性级别*指的是功能和功能增强功能，同时将 Analysis Services 引擎和表格模型元数据。 在常规应选择你的服务器支持的最新兼容性级别。 
 
   **最新的受支持的兼容性级别是 1400** 
   
 在 1400年兼容级别中的主要功能包括：
 
 *  新的基础结构的数据连接和导入表格模型支持 TOM Api 和 TMSL 脚本。 这使对 Azure Blob 存储等其他数据源的支持。 其他数据源将包含在后续更新。
-*  数据转换，并通过使用在 SSDT 中的获取数据和 M 表达式的数据混合功能。
-*  度量值现在支持使用启用 BI 工具 （如 Microsoft Excel) 向下钻取到详细数据聚合报表中的 DAX 表达式的详细信息行属性。 例如，当最终用户查看某个区域和月份的销售总额，他们可以查看关联的订单详细信息。 
+*  数据转换，并通过使用 SQL Server Data Tools (SSDT) 中的获取数据和 M 表达式的数据混合功能。
+*  度量值现在支持使用启用 BI 的 DAX 表达式的详细信息行属性工具如 Microsoft Excel 向下钻取到详细聚合报表中的数据。 例如，当用户查看某个区域和月份的销售总额，他们可以查看关联的订单详细信息。 
 *  表和列名称，以及其中的数据的对象级安全性。
 *  不规则层次结构的增强的支持。
 *  性能和监视改进。
@@ -35,6 +35,8 @@ ms.locfileid: "66175131"
   
 ## <a name="supported-compatibility-levels-by-version"></a>版本支持的兼容级别
   
+较低的兼容性级别支持向后兼容性。 
+
 |||  
 |-|-|- 
 |**兼容级别**|**服务器版本**| 
@@ -44,7 +46,7 @@ ms.locfileid: "66175131"
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017 *，SQL Server 2016、 SQL Server 2014、 SQL Server 2012 SP1、 SQL Server 2012| 
 
-\* 在 SQL Server 2017 中已弃用 1100年和 1103年兼容级别。
+\* 在 SQL Server 2017 及更高版本，不推荐使用 1100年和 1103年兼容级别。
   
 ## <a name="set-compatibility-level"></a>设置兼容级别 
  在创建新的表格模型项目时在 SQL Server Data Tools (SSDT)，可以指定兼容性级别上**表格模型设计器**对话框。 
