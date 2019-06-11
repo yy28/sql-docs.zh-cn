@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 表格模型中的计算组 |Microsoft Docs
-ms.date: 06/05/2019
+ms.date: 06/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58e845965bb9cd4eeba46ad30193c79b436da569
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719860"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822692"
 ---
 # <a name="calculation-groups-preview"></a>计算组 （预览）
  
-[!INCLUDE[ssas-appliesto-sql2019](../../includes/ssas-appliesto-sql2019.md)]
+[!INCLUDE[ssas-appliesto-sql2019-aas](../../includes/ssas-appliesto-sql2019-aas.md)]
 
-计算组可以显著减少冗余的度量值数由分组为常见的度量值表达式*计算项*。 在 1470年和更高版本在 SQL Server Analysis Services 2019 表格模型支持计算组[兼容性级别](compatibility-level-for-tabular-models-in-analysis-services.md)。 1470 兼容性级别模型正处于**预览版**。  
+计算组可以显著减少冗余的度量值数由分组为常见的度量值表达式*计算项*。 Azure Analysis Services 中支持计算组和 SQL Server Analysis Services 2019 表格模型在 1470年及更高版本[兼容性级别](compatibility-level-for-tabular-models-in-analysis-services.md)。 1470 兼容性级别模型正处于**预览版**。  
 
 本文介绍以下内容： 
 
