@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: security"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31282041abe538bd51ba4b1367f70cd3c5fa3d5b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030788"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822370"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>通过使用已注册的服务器执行按需评估
+
   您可以通过使用已注册的服务器对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例执行最佳实践策略的按需评估。 您可以使用本地服务器组或中央管理服务器。  
   
 > [!NOTE]  
@@ -34,7 +35,7 @@ ms.locfileid: "56030788"
   
 ### <a name="to-evaluate-best-practices-policies-against-a-server-group"></a>对于服务器组执行最佳实践策略  
   
-1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”** 。  
   
 2.  展开**数据库引擎**，然后展开**本地服务器组**，或**中央管理服务器**，取决于你的配置。  
   
@@ -47,13 +48,13 @@ ms.locfileid: "56030788"
   
     -   若要评估的策略对特定服务器或服务器组，展开**本地服务器组**或中央管理服务器名称，右键单击服务器或你想要评估其策略，然后单击服务器组**评估策略**。  
   
-4.  在中**评估策略**对话框旁边**源**框中，单击省略号 (**...**) 按钮。  
+4.  在中**评估策略**对话框旁边**源**框中，单击省略号 ( **...** ) 按钮。  
   
 5.  在中**选择源**对话框中，您可以选择**文件**或**Server**作为要评估的策略文件的源。 如果单击**Server**，可以执行任何以前导入到本地或远程服务器上的基于策略的管理的最佳实践策略的按需评估。 您将在本教程中，单击**文件**，然后选择你想要评估的单独的策略文件。 为此，请按照下列步骤进行操作：  
   
     1.  单击**文件**。  
   
-    2.  下一步**文件**，单击省略号 (**...**) 按钮。  
+    2.  下一步**文件**，单击省略号 ( **...** ) 按钮。  
   
     3.  选择要评估，然后依次的一个或多个.xml 策略文件**打开**。  
   

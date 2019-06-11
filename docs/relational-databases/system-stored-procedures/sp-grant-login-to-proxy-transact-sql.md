@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8dfacac19be656187925e8646a60fc3014f94d42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+author: VanMSFT
+manager: jrothj
+ms.openlocfilehash: 81aeb41fdf7c8c17d5035347d384e7175bbd891b
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62656802"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822666"
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   授予安全主体数据库访问代理的权限。  
@@ -35,7 +37,6 @@ ms.locfileid: "62656802"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sp_grant_login_to_proxy   
      { [ @login_name = ] 'login_name'   
      | [ @fixed_server_role = ] 'fixed_server_role'   
@@ -44,15 +45,15 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @login_name = ] 'login_name'` 要授予访问权限的登录名。 *Login_name*是**nvarchar(256)**，默认值为 NULL。 之一**@login_name**， **@fixed_server_role**，或者**@msdb_role**必须指定，或存储的过程将失败。  
+`[ @login_name = ] 'login_name'` 要授予访问权限的登录名。 *Login_name*是**nvarchar(256)** ，默认值为 NULL。 之一 **@login_name** ， **@fixed_server_role** ，或者 **@msdb_role** 必须指定，或存储的过程将失败。  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` 要授予访问权限的固定的服务器角色。 *Fixed_server_role*是**nvarchar(256)**，默认值为 NULL。 之一**@login_name**， **@fixed_server_role**，或者**@msdb_role**必须指定，或存储的过程将失败。  
+`[ @fixed_server_role = ] 'fixed_server_role'` 要授予访问权限的固定的服务器角色。 *Fixed_server_role*是**nvarchar(256)** ，默认值为 NULL。 之一 **@login_name** ， **@fixed_server_role** ，或者 **@msdb_role** 必须指定，或存储的过程将失败。  
   
-`[ @msdb_role = ] 'msdb_role'` 中的数据库角色**msdb**数据库授予访问权限。 *Msdb_role*是**nvarchar(256)**，默认值为 NULL。 之一**@login_name**， **@fixed_server_role**，或者**@msdb_role**必须指定，或存储的过程将失败。  
+`[ @msdb_role = ] 'msdb_role'` 中的数据库角色**msdb**数据库授予访问权限。 *Msdb_role*是**nvarchar(256)** ，默认值为 NULL。 之一 **@login_name** ， **@fixed_server_role** ，或者 **@msdb_role** 必须指定，或存储的过程将失败。  
   
-`[ @proxy_id = ] id` 要授予访问权限的代理标识符。 *Id*是**int**，默认值为 NULL。 之一**@proxy_id**或**@proxy_name**必须指定，否则存储的过程将失败。  
+`[ @proxy_id = ] id` 要授予访问权限的代理标识符。 *Id*是**int**，默认值为 NULL。 之一 **@proxy_id** 或 **@proxy_name** 必须指定，否则存储的过程将失败。  
   
-`[ @proxy_name = ] 'proxy_name'` 要授予访问权限的代理的名称。 *Proxy_name*是**nvarchar(256)**，默认值为 NULL。 之一**@proxy_id**或**@proxy_name**必须指定，否则存储的过程将失败。  
+`[ @proxy_name = ] 'proxy_name'` 要授予访问权限的代理的名称。 *Proxy_name*是**nvarchar(256)** ，默认值为 NULL。 之一 **@proxy_id** 或 **@proxy_name** 必须指定，否则存储的过程将失败。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -66,7 +67,7 @@ sp_grant_login_to_proxy
 ## <a name="examples"></a>示例  
  以下示例允许登录名`adventure-works\terrid`为使用代理`Catalog application proxy`。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

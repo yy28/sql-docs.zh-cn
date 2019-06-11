@@ -7,14 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
-ms.openlocfilehash: 323f555337afa56b51ded0fb303f58960a52f310
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: lle
+author: lrtoyou1223
+ms.openlocfilehash: d86d71a3d62ca94eed2da5ad91fbdd60ee4989f4
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250190"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822987"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>任务 3：从 Excel 文件导入域值
+
   在此任务中，导入的值**状态**域从 Excel 文件的工作表。  
   
 1.  单击**状态**中的域**域列表**。  
@@ -36,6 +39,6 @@ ms.locfileid: "63250190"
      ![对域值显示仅将新的复选框](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-03.jpg "对域值显示仅将新的复选框")  
   
 ## <a name="next-step"></a>下一步  
- [任务 4:设置域规则](../../2014/tutorials/task-4-setting-domain-rules.md)  
+ [任务 4：设置域规则](../../2014/tutorials/task-4-setting-domain-rules.md)  
   
   

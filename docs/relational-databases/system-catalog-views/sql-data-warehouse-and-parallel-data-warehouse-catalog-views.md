@@ -8,18 +8,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
-aauthor: ronortloff
-ms.author: rortloff
-manager: craigg
+aauthor: julieMSFT
+ms.author: jrasnick
+manager: jroth
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e4e84dc262cd03de74433c2e713b3a7b4cda0faa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: ef736003be3c07fb1e48520fbaf2186181735427
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583281"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822341"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL 数据仓库和并行数据仓库目录视图
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
  本主题列出了[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]目录视图。  
@@ -66,7 +67,7 @@ ms.locfileid: "59583281"
 [sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (Preview)
 
 > [!Note]
-> 可以在 SQL 数据仓库 Gen2 上预览工作负荷分类。 工作负荷管理分类和重要性 preview 适用于具有 2019 年 4 月 9 日，或更高版本的发布日期的生成。  用户应避免使用版本早于此日期执行工作负荷管理测试。  若要确定是否在生成工作负荷管理支持，请运行 select @@version时连接到 SQL 数据仓库实例。
+> 可以在 SQL 数据仓库 Gen2 上预览工作负荷分类。 工作负荷管理分类和重要性预览适用于发布日期为 2019 年 4 月 9 日或更晚的内部版本。  用户应避免使用早于此日期的内部版本进行工作负荷管理测试。  若要确定内部版本是否支持工作负荷管理，请在连接到 SQL 数据仓库实例时运行 select @@version。
  
 ## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 目录视图  
  以下目录视图将应用于[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]仅：

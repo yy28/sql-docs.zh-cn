@@ -9,24 +9,25 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-author: hirokib
-ms.author: elbutter
+author: julieMSFT
+ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b7bb600d4eda0f91be025baee7c6ecd35f99c9da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 399f08e0ebf09ea90c358ae5667b5031ef0cb099
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715864"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822517"
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-对于 columnstore 索引中的每列包括一行。  
+对于 columnstore 索引中的每列包括一行。
 
 | 列名                 | 数据类型  | Description                                                  |
-| --------------------------- | ---------- | ------------------------------------------------------------ |
+| :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | 指示分区 ID。 是在数据库中唯一。     |
 | **hobt_id**                 | **bigint** | 具有此 columnstore 索引的表的堆或 B 树 (hobt) 的 ID。 |
 | **column_id**               | **int**    | 列存储列的 ID。                                |
@@ -44,10 +45,11 @@ ms.locfileid: "62715864"
 | **null_value**              | **bigint** | 用于表示 Null 的值。                               |
 | **on_disk_size**            | **bigint** | 段大小（字节）。                                    |
 | **pdw_node_id**             | **int**    | 唯一标识符[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点。 |
+| &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-加入 sys.pdw_nodes_column_store_segments 和其他系统表来确定每个逻辑表的列存储段的数目。 
+加入 sys.pdw_nodes_column_store_segments 和其他系统表来确定每个逻辑表的列存储段的数目。
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -75,17 +77,16 @@ GROUP BY    sm.name
 ,           nc.column_id  
 ORDER BY    table_nm
 ,           nc.column_id
-,           sm.name
+,           sm.name ;
 ```
 
-## <a name="permissions"></a>权限  
- 需要 VIEW SERVER STATE 权限。  
+## <a name="permissions"></a>权限
 
-## <a name="see-also"></a>请参阅  
- [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+需要 VIEW SERVER STATE 权限  。
 
-  
+## <a name="see-also"></a>请参阅
 
+[SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
+[sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+[sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 820ebc7e2bd79d0c321e327a2e5713151f3e24f3
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527919"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822480"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   删除映射到本地登录名的远程登录名，该登录名用于针对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地服务器执行远程存储过程。  
@@ -37,7 +39,6 @@ ms.locfileid: "58527919"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sp_dropremotelogin [ @remoteserver = ] 'remoteserver'   
      [ , [ @loginame = ] 'login' ]   
      [ , [ @remotename = ] 'remote_name' ]  
@@ -46,7 +47,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="arguments"></a>参数  
 `[ @remoteserver = ] 'remoteserver'` 是映射到要从中删除远程登录名的远程服务器的名称。 *remoteserver*是**sysname**，无默认值。 *remoteserver*必须已经存在。  
   
-`[ @loginame = ] 'login'` 是与远程服务器相关联的本地服务器上的可选登录名。 login 的数据类型为 sysname，默认值为 NULL。 *登录名*必须已经存在，如果指定。  
+`[ @loginame = ] 'login'` 是与远程服务器相关联的本地服务器上的可选登录名。 login 的数据类型为 sysname，默认值为 NULL   。 *登录名*必须已经存在，如果指定。  
   
 `[ @remotename = ] 'remote_name'` 是映射到的远程登录名的可选名称*登录名*时从远程服务器登录。 *remote_name*是**sysname**，默认值为 NULL。  
   
@@ -70,21 +71,21 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. 删除远程服务器的所有远程登录  
  以下示例删除远程服务器 `ACCOUNTS` 的条目，因此将删除本地服务器中的登录和远程服务器中远程登录之间的所有映射。  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
 ### <a name="b-dropping-a-login-mapping"></a>B. 删除登录映射  
  以下示例删除一个映射的条目，该条目将来自远程服务器 `ACCOUNTS` 的远程登录映射到本地登录 `Albert`。  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';  
 ```  
   
 ### <a name="c-dropping-a-remote-user"></a>C. 删除远程用户  
  以下示例删除远程服务器 `Chris` 上的远程登录 `ACCOUNTS`。该远程服务器被映射到本地登录 `salesmgr`。  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   

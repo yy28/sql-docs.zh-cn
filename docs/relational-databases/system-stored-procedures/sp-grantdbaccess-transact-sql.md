@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_grantdbaccess
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
+author: VanMSFT
 manager: craigg
-ms.openlocfilehash: cb77f5d8bda6b05794499faa6e6e04d1fafa53ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 285f1c5f2ab868bbf21db80e68ebbf5d71100f14
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62636441"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822610"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   将数据库用户添加到当前数据库。  
@@ -37,7 +39,6 @@ ms.locfileid: "62636441"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sp_grantdbaccess [ @loginame = ] 'login'  
     [ , [ @name_in_db = ] 'name_in_db' [ OUTPUT ] ]  
 ```  
@@ -45,7 +46,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ## <a name="arguments"></a>参数  
 `[ @loginame = ] 'login_ '` 是 Windows 组，Windows 登录名的名称或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名映射到新的数据库用户。 Windows 组和 Windows 登录名的名称必须用在窗体中的 Windows 域名限定*域*\\*登录名*; 例如， **LONDON\Joeb**。 登录名不能已映射到数据库中的用户。 *登录名*是**sysname**，无默认值。  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` 是新的数据库用户的名称。 *name_in_db*是输出变量，其数据类型为**sysname**，和默认值为 NULL。 如果未指定，否则*登录名*使用。 如果指定为 OUTPUT 变量，其值为 NULL， **@name_in_db**设置为*登录*。 *name_in_db*必须已存在当前数据库中。  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` 是新的数据库用户的名称。 *name_in_db*是输出变量，其数据类型为**sysname**，和默认值为 NULL。 如果未指定，否则*登录名*使用。 如果指定为 OUTPUT 变量，其值为 NULL， **@name_in_db** 设置为*登录*。 *name_in_db*必须已存在当前数据库中。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -61,7 +62,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ## <a name="examples"></a>示例  
  下面的示例使用`CREATE USER`若要添加的 Windows 登录名的数据库用户`Edmonds\LolanSo`到当前数据库。 新用户名为 `Lolan`。 这是创建数据库用户的首选方法。  
   
-```  
+```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  
 GO  
 ```  

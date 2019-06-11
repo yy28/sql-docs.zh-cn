@@ -20,14 +20,15 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ea972558da077dd984ce2ef30c99e1b46b0e5c4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65983009"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822761"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使服务器实例从指定 LCID 的语言的对应同义词库文件中分析并加载数据。 在更新同义词库文件后，此存储过程非常有用。 执行**sp_fulltext_load_thesaurus_file**导致重新编译使用具有指定 LCID 的同义词库的全文查询。  
@@ -37,7 +38,6 @@ ms.locfileid: "65983009"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]   
 ```  
   
@@ -45,7 +45,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  映射某种语言的区域设置标识符 (LCID) 的整数，您要为该语言加载同义词库 XML 定义。 若要获取服务器实例可用的语言的 Lcid，请使用[sys.fulltext_languages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)目录视图。  
   
- **@loadOnlyIfNotLoaded** = *action*  
+ **@loadOnlyIfNotLoaded**  = *action*  
  指定是否即使在同义词库文件已加载的情况下也将它加载到内部同义词库表中。 *操作*是之一：  
   
 |ReplTest1|定义|  
@@ -74,23 +74,19 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. 即使在同义词库文件已加载的情况下也加载它  
  下面的示例分析并加载英语同义词库文件。  
   
-```  
-EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
-GO  
+```sql
+EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 ```  
   
 ### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>B. 只有在同义词库文件尚未加载的情况下才加载它  
  下面的示例分析并加载阿拉伯语同义词库文件（除非它已经加载）。  
   
+```sql
+EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 ```  
-EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;  
-GO  
-```  
-  
-## <a name="see-also"></a>请参阅  
- [FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [配置和管理全文搜索同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)  
-  
-  
+
+## <a name="see-also"></a>请参阅
+
+[FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
+[系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+[为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)

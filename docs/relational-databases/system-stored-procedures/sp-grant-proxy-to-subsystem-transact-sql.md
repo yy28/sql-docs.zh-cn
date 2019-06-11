@@ -15,16 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_proxy_to_subsystem
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
+author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+manager: jroth
+ms.openlocfilehash: c31c10dc5c0917286e6621fedc91f08c8d385555
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528129"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822621"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   授权代理访问子系统。  
@@ -34,7 +36,6 @@ ms.locfileid: "58528129"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sp_grant_proxy_to_subsystem  
      { [ @proxy_id = ] proxy_id | [ @proxy_name = ] 'proxy_name' },  
      { [ @subsystem_id = ] subsystem_id | [ @subsystem_name = ] 'subsystem_name' }  
@@ -60,6 +61,7 @@ sp_grant_proxy_to_subsystem
 |**10**|Analysis Services 命令|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包执行|  
 |**12**|PowerShell 脚本|  
+| &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'` 若要授予访问权限的子系统的名称。 **Subsystem_name**是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
   
@@ -76,6 +78,7 @@ sp_grant_proxy_to_subsystem
 |**ANALYSISCOMMAND**|Analysis Services 命令|  
 |**Dts**|SSIS 包执行|  
 |**PowerShell**|PowerShell 脚本|  
+| &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>备注  
  授权代理访问子系统将不更改代理中指定的主体服务器的权限。  
@@ -88,7 +91,7 @@ sp_grant_proxy_to_subsystem
 ### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. 按 ID 授权访问子系统  
  以下示例授权代理 `Catalog application proxy` 访问 ActiveX Scripting 子系统。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -101,7 +104,7 @@ GO
 ### <a name="b-granting-access-to-a-subsystem-by-name"></a>B. 按名称授权访问子系统。  
  以下示例授权代理 `Catalog application proxy` 访问 SSIS 包执行子系统。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

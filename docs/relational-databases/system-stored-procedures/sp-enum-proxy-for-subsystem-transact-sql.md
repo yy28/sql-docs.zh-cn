@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
+author: VanMSFT
 manager: craigg
-ms.openlocfilehash: 5beab3dc255e5679191dd6ea5d05bfdd98bef6ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d521a16fa7c18e67e1929cb0e38aecf862d6c18a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62723809"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822639"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理访问子系统所需的权限。  
@@ -34,7 +36,6 @@ ms.locfileid: "62723809"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sp_enum_proxy_for_subsystem  
     [ @proxy_id = ] proxy_id,  
     [ @proxy_name = ] 'proxy_name',  
@@ -62,6 +63,7 @@ sp_enum_proxy_for_subsystem
 |**subsystem_name**|**sysname**|子系统的名称。|  
 |**proxy_id**|**int**|代理服务器标识号。|  
 |**proxy_name**|**sysname**|代理服务器的名称。|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>备注  
  如果不提供任何参数， **sp_enum_proxy_for_subsystem**列出为每个子系统的实例中的所有代理有关的信息。  
@@ -80,7 +82,7 @@ sp_enum_proxy_for_subsystem
 ### <a name="a-listing-all-associations"></a>A. 列出所有关联  
  以下示例列出了在当前实例的代理和子系统之间建立的所有权限。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -91,7 +93,7 @@ GO
 ### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B. 确定代理是否有权访问特定的子系统  
  如果代理 `Catalog application proxy` 有权访问 `ActiveScripting` 子系统，则以下示例将返回一行。 否则，该示例将返回空结果集。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

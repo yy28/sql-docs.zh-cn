@@ -16,18 +16,19 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-auauthor: pmasl
+author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65944241"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822363"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在应用后返回的最终词汇切分结果给定[断字符](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)，[同义词库](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)，并[非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)组合到查询字符串输入。 此词语切分结果等效于全文引擎针对指定查询字符串的输出。  
@@ -37,7 +38,6 @@ ms.locfileid: "65944241"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)  
 ```  
   
@@ -69,7 +69,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |关键字 (keyword)|**varbinary(128)**|断字符返回的给定关键字的十六进制表示形式。 该表示形式用于存储全文索引的关键字。 此值不是用户可读，但它对于相关给定的关键字输出返回的返回内容的一个全文索引的索引，如其他动态管理视图很有用[sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)和[sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 表示指示文件或数据集的末尾的特殊字符。|  
-|group_id|**int**|包含一个整数值，用于区分从中生成给定字词的逻辑组。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 生成以下英语 group_id 值：<br /><br /> 1:“服务器”<br />2:DB<br />3:DB|  
+|group_id|**int**|包含一个整数值，用于区分从中生成给定字词的逻辑组。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 生成以下英语 group_id 值：<br /><br /> 1：“服务器”<br />2:DB<br />3:DB|  
 |phrase_id|**int**|包含一个整数值，用于区别断字符给出复合词（如 full-text）替代形式的情况。 有时，如果存在复合词（“multi-millon”），断字符将给出替代形式。 这些替代形式（短语）有时需要加以区别。<br /><br /> 例如，'`multi-million`' 生成以下英语 phrase_id 值：<br /><br /> 1 表示 `multi`<br />1 表示 `million`<br />2 表示 `multimillion`|  
 |occurrence|**int**|指示分析结果中每个字词的顺序。 例如，对于短语“`SQL Server query processor`”，occurrence 会包含该英语短语中字词的以下 occurrence 值：<br /><br /> 1 表示 `SQL`<br />2 表示 `Server`<br />为 3 `query`<br />4 `processor`|  
 |special_term|**nvarchar(4000)**|包含有关断字符给出的字词特征的信息，可以是以下值之一：<br /><br /> Exact match<br /><br /> Noise word<br /><br /> End of Sentence<br /><br /> End of paragraph<br /><br /> End of Chapter|  
@@ -136,7 +136,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
  禁用了重音区分。  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
@@ -147,7 +147,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0,
   
  禁用了重音区分。  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS revenue" ', 1033, 77, 0);  
 ```  
   
@@ -158,7 +158,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
   
  示例指定了法语的 LCID `1036`，以及用户定义的非索引字表的 ID `5`。 启用了重音区分。  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   

@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/04/2017
+ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f725ca776fcc65828c7f72b4e3c2b042d0203b71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1460ef53098a9cdd7cf8bb1672c45cfd27adff57
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62742043"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822735"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   提供有关当前数据库中的列存储索引的所有当前行组级信息。  
@@ -42,7 +43,7 @@ ms.locfileid: "62742043"
 |**partition_number**|**int**|保存的表分区的 ID *row_group_id*。 您可以使用 partition_number 将此 DMV 联接到 sys.partitions。|  
 |**row_group_id**|**int**|此行组的 ID。 对于已分区表，这是在分区中是唯一的。<br /><br /> 对于内存中结尾为-1。|  
 |**delta_store_hobt_id**|**bigint**|增量存储中的行组的 hobt_id。<br /><br /> 如果在增量存储行组不为 NULL。<br /><br /> 对于内存中表的结尾为 NULL。|  
-|State|**tinyint**|关联的 ID 号*state_description*。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 逻辑删除<br /><br /> 压缩是适用于内存中表的唯一状态。|  
+|State |**tinyint**|关联的 ID 号*state_description*。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 逻辑删除<br /><br /> 压缩是适用于内存中表的唯一状态。|  
 |**state_desc**|**nvarchar(60)**|行组状态的说明：<br /><br /> 正在生成不可见的行组。 例如： <br />列存储中的行组是不可见，而在压缩数据。 完成压缩后的元数据开关更改列存储行的状态的组中不可见压缩，并从已关闭的增量存储行组的逻辑删除状态。<br /><br /> 打开的接受新行的增量存储行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 已关闭-包含的最大行数和正在等待元组搬运者进程压缩到列存储的增量存储区中的行组。<br /><br /> 压缩的列存储压缩和存储在列存储中的行组。<br /><br /> 逻辑删除的行组之前为增量存储中，不能使用。|  
 |**total_rows**|**bigint**|存储在行组中的物理行数。 对于压缩的行组，这包括标记为删除的行。|  
 |**deleted_rows**|**bigint**|以物理方式存储在压缩的行组标记为删除的行数。<br /><br /> 增量存储区中的行组为 0。|  
@@ -55,7 +56,8 @@ ms.locfileid: "62742043"
 |**generation**|BIGINT|与此行组相关联的行组生成。|  
 |**created_time**|datetime2|创建此行组时的时钟时间。<br /><br /> NULL-表示内存中表的列存储索引。|  
 |**closed_time**|datetime2|此行已关闭时的时钟时间。<br /><br /> NULL-表示内存中表的列存储索引。|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="results"></a>结果  
  返回当前数据库中的每个行组的一行。  
   
@@ -80,7 +82,7 @@ SELECT i.object_id,
     i.index_id,   
     i.type_desc,   
     CSRowGroups.*,  
-    100*(ISNULL(deleted_rows,0))/total_rows AS 'Fragmentation'  
+    100*(ISNULL(deleted_rows,0))/NULLIF(total_rows,0) AS 'Fragmentation'
 FROM sys.indexes AS i  
 JOIN sys.dm_db_column_store_row_group_physical_stats AS CSRowGroups  
     ON i.object_id = CSRowGroups.object_id AND i.index_id = CSRowGroups.index_id   

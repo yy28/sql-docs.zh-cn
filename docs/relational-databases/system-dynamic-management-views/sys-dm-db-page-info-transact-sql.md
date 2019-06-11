@@ -16,18 +16,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_page_info dynamic management view
-author: ''
+author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03d284ad2dc8ac41e13ca6c90b38a65297ec7fcd
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62507709"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822245"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 在数据库中返回有关某一页的信息。  该函数将返回一行，其中包含标头信息的页面，其中包括`object_id`， `index_id`，和`partition_id`。  在大多数情况下，此函数取代了使用 `DBCC PAGE` 的需要。

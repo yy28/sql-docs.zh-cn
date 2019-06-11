@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-authors: MightyPen
+author: MightyPen
 manager: craigg
-ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b743b1b02a911c9132eab4a90c1f35b781895df2
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62629522"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822981"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>检索数字数据的 SQL\_数值\_结构
 
@@ -35,7 +35,7 @@ ms.locfileid: "62629522"
 SQL\_数值\_结构定义 sqltypes.h 头文件中，如下所示：
 
 
-``` C
+```c
 #define SQL_MAX_NUMERIC_LEN    16
 typedef struct tagSQL_NUMERIC_STRUCT
 {
@@ -64,7 +64,7 @@ typedef struct tagSQL_NUMERIC_STRUCT
 >
 > Microsoft 提供的这些代码示例"按原样"没有任何种类的担保，任何明示或暗示的保证，包括但不是限于对适销性和/或适用于某种特定用途的默示保证。
 
-``` C
+```c
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -217,7 +217,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ### <a name="interim-results"></a>临时结果：
 
 
-```
+```console
 //  C  ==> 12 * 1    =     12
 //  7  ==> 07 * 16   =    112
 //  2  ==> 02 * 256  =    512
@@ -240,7 +240,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 实现从小 endian 模式转换为缩放后的整数代码。 它是由应用程序开发人员实现此功能。 下面的代码示例是只是许多可能的方式之一。
 
 
-``` C
+```c
 long strtohextoval()
 {
     long val=0,value=0;
@@ -283,7 +283,7 @@ long strtohextoval()
 用于运行此程序的 ODBC 驱动程序必须支持 ODBC 3.0 功能。
 
 
-``` C
+```c
 #include <windows.h>
 #include <sql.h>
 #include <sqlext.h>

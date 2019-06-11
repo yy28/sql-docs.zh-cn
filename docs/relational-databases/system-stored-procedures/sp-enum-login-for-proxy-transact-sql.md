@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535579"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822638"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出安全主体服务器和代理服务器之间的关联。  
@@ -34,7 +36,6 @@ ms.locfileid: "58535579"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sp_enum_login_for_proxy  
     [ @name = ] 'name'  
     [ @proxy_id = ] id,  
@@ -42,7 +43,7 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'` 名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主体、 登录名、 服务器角色或**msdb**列出代理的数据库角色。 名称是**nvarchar(256)**，默认值为 NULL。  
+`[ @name = ] 'name'` 名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主体、 登录名、 服务器角色或**msdb**列出代理的数据库角色。 名称是**nvarchar(256)** ，默认值为 NULL。  
   
 `[ @proxy_id = ] id` 要列出信息的代理代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
   
@@ -59,6 +60,7 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|代理服务器的名称。|  
 |**名称**|**sysname**|关联的安全主体服务器的名称。|  
 |**flag**|**int**|安全主体服务器的类型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名<br /><br /> **1** = 固定的系统角色<br /><br /> **2** = 中的数据库角色**msdb**|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>备注  
  如果不提供任何参数， **sp_enum_login_for_proxy**列出了每个代理有关的实例中的所有登录名的信息。  
@@ -77,7 +79,7 @@ sp_enum_login_for_proxy
 ### <a name="a-listing-all-associations"></a>A. 列出所有关联  
  以下示例列出了在当前实例的登录和代理之间建立的所有权限。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -88,7 +90,7 @@ GO
 ### <a name="b-listing-proxies-for-a-specific-login"></a>B. 列出特定登录的代理  
  以下示例列出了登录 `terrid` 有权访问的代理。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

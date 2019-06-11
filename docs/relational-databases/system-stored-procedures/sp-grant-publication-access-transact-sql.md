@@ -14,15 +14,17 @@ helpviewer_keywords:
 - sp_grant_publication_access
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c86bf467eb83e372b7c90375ae95d659c98532a4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 76871b93dc05f68f5678833c81ee7426e7f8f950
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534000"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822591"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   将登录名添加到发布的访问列表中。 在发布服务器上对发布数据库执行此存储的过程。  
@@ -32,7 +34,6 @@ ms.locfileid: "58534000"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'login'   
     [ , [ @reserved = ] 'reserved' ]  
 ```  

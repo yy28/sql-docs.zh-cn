@@ -1,7 +1,7 @@
 ---
 title: PDW 防火墙配置的分析平台系统 |Microsoft 文档
 description: SQL Server PDW 配置管理器中的防火墙页，可启用或禁用防火墙规则，允许或阻止访问分析平台系统设备上的特定端口。
-aauthor: mzaman1
+author: mzaman1
 manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,14 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62639531"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822430"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>分析平台系统中的并行数据仓库防火墙配置
+
 **防火墙**页上的 SQL Server PDW 配置管理器，可启用或禁用防火墙规则，允许或阻止访问分析平台系统设备上的特定端口。  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>若要管理端口和防火墙规则的设备节点  
@@ -45,6 +46,7 @@ ms.locfileid: "62639531"
 |SQL Server PDW 负载控制流的 Windows 凭据|8002|CTL|  
 |_Kerberos|88|AD01 和 AD02，|  
 |_ldap|389|AD01 和 AD02|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="internal-ports"></a>内部端口  
 以下端口由 PDW 用于内部通信，但未打开用于来自外部 PDW 设备的连接。  
@@ -58,10 +60,12 @@ ms.locfileid: "62639531"
 |故障转移状态 （引擎）|15001|CMP|  
 |动态 （临时） 端口范围|20000-65535|CTL CMP|  
 |SQL Server 端口范围 (TDS)|1433, 1500-1508|CTL CMP|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 > [!NOTE]  
 > 创建外部表或外部数据源将使用默认的 TCP 端口 8020。 这些语句可以配置为改为使用其他端口。 Hortonworks JOB_TRACKER_LOCATION 默认端口为 50300。 与其他系统和工具集成可能需要其他端口。  
   
 <!-- MISSING LINKS ## See Also  
-[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)  -->  
+[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)
+-->
   
