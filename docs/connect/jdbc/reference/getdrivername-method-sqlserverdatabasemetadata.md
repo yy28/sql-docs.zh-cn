@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b94c20b6f01941b2b45ccd09988f49d4a33912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 87221173fc919244eca5a9df153ac1975f6d12ac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639745"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767159"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>getDriverName 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +36,13 @@ public java.lang.String getDriverName()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含 JDBC 驱动程序名称的 String。  
+ 包含 JDBC 驱动程序名称的 String  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getDriverName 方法由 java.sql.DatabaseMetaData 接口中的 getDriverName 方法指定。  
+ 此 getUserName 方法是由 java.sql.DatabaseMetaData 接口中的 getUserName 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

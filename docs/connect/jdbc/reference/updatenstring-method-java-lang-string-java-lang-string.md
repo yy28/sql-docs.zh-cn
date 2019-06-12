@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b59df324948ff1d8745fc104fd9c4f7ffebd5b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a6451896913876c3694a72e877c449109c61ac0b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834375"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776683"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  通过指定的列标签使用字符串值更新指定列。  
+  通过指定的列标签使用字符串值更新指定列  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,9 +34,9 @@ public void updateNString(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parameters  
  *columnLabel*  
   
- 一个包含列标签的字符串。  
+ 一个包含列标签的字符串  。  
   
- *n 字符串的结尾*  
+ *nString*  
   
  一个**字符串**对象。  
   
@@ -46,7 +46,7 @@ public void updateNString(java.lang.String columnLabel,
 ## <a name="remarks"></a>Remarks  
  此 updateNString 方法由 java.sql.ResultSet 接口中的 updateNString 方法指定。  
   
- 此方法将传递 Java**字符串**到所选**nchar**， **nvarchar （max)**， **ntext**，并**xml**列。 在其他数据类型列上使用此方法会引发异常。  
+ 此方法将传递 Java**字符串**到所选**nchar**， **nvarchar （max)** ， **ntext**，并**xml**列。 在其他数据类型列上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateNString 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

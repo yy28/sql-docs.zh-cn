@@ -12,13 +12,13 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 3309e0b5e878f4923faf31069ae1e29220fdbd97
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 2e4291d32de1b18edb65560e21d16c76eb692f3d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416246"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769544"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>增强的日期和时间类型的大容量复制更改（OLE DB）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52416246"
 ## <a name="character-data-files"></a>字符数据文件  
  在字符数据文件中，日期和时间值表示的"数据格式： 字符串和文字"部分中所述[OLE DB 日期和时间改进的数据类型支持](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)用于 OLE DB。  
   
- 在本机数据文件中，四个新类型的日期和时间值表示为其 TDS 表示形式且小数位数为 7 位（因为这是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持的最大小数位数并且 bcp 数据文件不存储这些列的小数位数）。 对于现有 datetime 和 smalldatetime 类型或其表格格式数据流 (TDS) 表示形式的存储没有变化。  
+ 在本机数据文件中，四个新类型的日期和时间值表示为其 TDS 表示形式且小数位数为 7 位（因为这是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持的最大小数位数并且 bcp 数据文件不存储这些列的小数位数）。 对于现有 datetime 和 smalldatetime 类型或其表格格式数据流 (TDS) 表示形式的存储没有变化   。  
   
  针对 OLE DB 的不同存储类型的存储大小如下：  
   

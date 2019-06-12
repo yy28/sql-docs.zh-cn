@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6b8f759a-ce5d-41b2-b6cc-24a3ab299f1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a24749da4854146d42a8515879aabd91d6c4258
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 94267286c253015e0720a6ca930292de6421b8fa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811765"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778476"
 ---
 # <a name="updateclob-method-javalangstring-javaioreader-long"></a>updateClob 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,11 +35,11 @@ public void updateClob(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parameters  
  *columnLabel*  
   
- 一个包含列标签的字符串。  
+ 一个包含列标签的字符串  。  
   
- reader  
+ reader   
   
- 一个读取器对象。  
+ 一个 Reader 对象。  
   
  *length*  
   
@@ -49,7 +49,7 @@ public void updateClob(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateClob 方法由 java.sql.ResultSet 接口中的 updateClob 方法指定。  
+ 此 getNClob 方法是由 java.sql.ResultSet 接口中的 getNClob 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

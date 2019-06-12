@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cda48c7e-9ce1-42c4-8fba-f6641cecb093
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 911236962aac0c4bc6ad9640a7813367143df62a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 96b2f76ef208a92c014fe86c79914d659aff3d7d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795675"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765556"
 ---
 # <a name="rollback-method-sqlserverconnection"></a>rollback 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47795675"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[rollback ()](../../../connect/jdbc/reference/rollback-method.md)|撤消在当前事务中所做的所有更改并释放当前由此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象保留的任何数据库锁。|  
 |[rollback (java.sql.Savepoint)](../../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md)|撤消在设置给定 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 对象后所做的所有更改。|  

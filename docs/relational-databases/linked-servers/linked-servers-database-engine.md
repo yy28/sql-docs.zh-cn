@@ -1,7 +1,7 @@
 ---
 title: 链接服务器（数据库引擎）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/29/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -20,16 +20,24 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f9e1a278e51c2ace53932fcc48ef3759baa307d
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 28ac0ac6b125d394633a601d7f45d7608a22ce06
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512722"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354376"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  配置链接服务器以支持 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之外对 OLE DB 数据源执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 和 Excel。 链接服务器具有以下优点：  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+  通过链接服务器，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)可从远程数据源中读取数据，并针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之外的 OLE DB 数据源等远程数据库服务器执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel 和 Azure CosmosDB。
+
+> [!NOTE]
+> [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 Azure SQL 数据库托管实例中提供链接服务器。 Azure SQL 数据库单一实例和弹性池中未启用链接服务器。 这些是部分[可在此处查找到的托管实例中的约束](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers)。 
+
+## <a name="when-to-use-linked-servers"></a>何时使用链接服务器？
+
+  通过链接服务器，能够实现可在其他数据库中提取和更新数据的分布式数据库。 对于需要实现数据库分片的场景，它们是很好的解决方案，让你无需创建自定义应用程序代码或从远程数据源直接加载。 链接服务器具有以下优点：  
   
 -   能够访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之外的数据。  
   
@@ -48,7 +56,7 @@ ms.locfileid: "51512722"
   
 “OLE DB 访问接口”  是管理特定数据源并与其交互的 DLL。 “OLE DB 数据源”  标识可通过 OLE DB 访问的特定数据库。 虽然通过链接服务器定义查询的数据源通常是数据库，但 OLE DB 访问接口对各种文件和文件格式仍可用。 这些文件和文件格式包括文本文件、电子表格数据和全文内容搜索的结果。  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 访问接口 (PROGID: SQLNCLI11) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的正式 OLE DB 访问接口。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序 (PROGID:SQLNCLI11) 是适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的官方 OLE DB 提供程序。  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式查询旨在与任何实现所需 OLE DB 接口的 OLE DB 访问接口一起使用。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和特定访问接口进行过测试。  
@@ -80,9 +88,9 @@ ms.locfileid: "51512722"
   
 -   通过运行 **sp_dropserver**删除链接服务器定义。 还可以使用此存储过程删除远程服务器。  
   
-还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”，选择“新建”，再选择“链接服务器”。 通过右键单击链接服务器名称并选择“删除”，可以删除链接服务器定义。  
+还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”  ，选择“新建”  ，再选择“链接服务器”  。 通过右键单击链接服务器名称并选择“删除”  ，可以删除链接服务器定义。  
   
- 对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 这个四部分名称格式应为 _linked\_server\_name.catalog_**.**_schema_**.**_object\_name_。  
+ 对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 这个四部分名称格式应为 _linked\_server\_name.catalog_ **.** _schema_ **.** _object\_name_。  
   
 > [!NOTE]  
 > 可以定义链接服务器指回（环回）到在其上定义它们的服务器。 当在单服务器网络中测试使用分布式查询的应用程序时，环回服务器是很有用的。 环回链接服务器专用于测试，许多操作（如分布式事务）不支持该服务器。  

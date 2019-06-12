@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a4b2cdefeecc56c331224cd7453e861defafb8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687953"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761625"
 ---
 # <a name="working-with-a-connection"></a>使用连接
 
@@ -40,7 +40,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 此技术将通过使用驱动程序列表中第一个可以与给定 URL 成功连接的可用驱动程序，创建数据库连接。
 
 > [!NOTE]  
-> 使用 sqljdbc4.jar 类库时，应用程序无需使用 Class.forName 方法显式注册或加载驱动程序。 当调用驱动程序管理器类的 getConnection 方法时，相应的驱动程序会从已注册的 JDBC 驱动程序集中找到。 有关详细信息，请参阅“使用 JDBC Driver”。
+> 使用 sqljdbc4.jar 类库时，应用程序无需使用 Class.forName 方法显式注册或加载驱动程序。 调用 DriverManager 类的 getConnection 方法时，会从已注册的 JDBC 驱动程序集中找到相应的驱动程序。 有关详细信息，请参阅“使用 JDBC Driver”。
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>使用 SQLServerDriver 类创建连接
 
@@ -112,7 +112,7 @@ String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;
 String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"
 ```
 
-## <a name="closing-a-connection"></a>关闭连接
+## <a name="closing-a-connection"></a>打开连接
 
 可以通过调用 SQLServerConnection 类的 [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md) 方法显式地关闭数据库连接，如下所示：
 

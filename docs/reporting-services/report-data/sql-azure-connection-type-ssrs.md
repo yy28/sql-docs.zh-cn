@@ -1,8 +1,8 @@
 ---
 title: SQL Azure 连接类型 (SSRS) | Microsoft Docs
 description: SQL Azure 连接数据扩展插件支持多值参数、服务器聚合，以及与连接字符串分开管理的凭据。
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c096ce1edd6069cfa27185ee3146444a6a9872b
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 02c3f95e00243a78fe2db70c587625e5a14d570d
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331517"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500181"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 连接类型 (SSRS)
 
@@ -42,9 +42,9 @@ ms.locfileid: "56331517"
 Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;  
 ```
   
-此外，使用“数据源属性”对话框，还可以提供凭据，如用户名和密码。 `User Id` 和 `Password` 选项自动追加到连接字符串；无需将它们作为连接字符串的一部分键入其中。  
+此外，使用“数据源属性”  对话框，还可以提供凭据，如用户名和密码。 `User Id` 和 `Password` 选项自动追加到连接字符串；无需将它们作为连接字符串的一部分键入其中。  
   
-有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ## <a name="Credentials"></a> 凭据
 
@@ -58,7 +58,7 @@ Windows 身份验证（集成安全性）不受支持。 如果试图使用 Wind
   
 - 不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅 msdn.microsoft.com 上 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中的[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+有关详细信息，请参阅[数据连接、 数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[指定凭据和连接信息的报表数据源](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="Query"></a> 查询
 
@@ -99,7 +99,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```
 
-单击工具栏上的 **“运行”** 按钮 (**!**) 可以运行查询并显示结果集。  
+单击工具栏上的 **“运行”** 按钮 ( **!** ) 可以运行查询并显示结果集。  
   
 若要参数化此查询，请添加一个查询参数。 例如，将 WHERE 子句更改为下面的内容：  
 
@@ -185,7 +185,7 @@ WHERE EmployeeID = (@EmpID)
 [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
 提供访问报表数据的概述。  
   
-[报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+[报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 提供有关数据连接和数据源的信息。  
   
 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

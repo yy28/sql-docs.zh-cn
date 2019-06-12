@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 60ec0499-1c2a-4476-9e32-03b9d698fe54
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 67d1f492ab25fec963042bea2195e209fcd988ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1f6ba2d9d74d20da50808fa3a25989a7a0550094
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631415"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777021"
 ---
 # <a name="getdatetimeoffset-sqlserverresultset"></a>getDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "47631415"
 |[getDateTimeOffset (java.lang.string)](../../../connect/jdbc/reference/getdatetimeoffset-java-lang-string-sqlserverresultset.md)|在给定参数索引的情况下，检索指定列的值作为 Java 编程语言中的 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)对象。|  
   
 ## <a name="see-also"></a>另请参阅  
- [setDateTimeOffset&#40;int，java.sql.DateTimeOffset&#41; &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setdatetimeoffset-int-java-sql-datetimeoffset-sqlserverstatement.md)  
+ [setDateTimeOffset&#40;int, java.sql.DateTimeOffset&#41; &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setdatetimeoffset-int-java-sql-datetimeoffset-sqlserverstatement.md)  
   
   

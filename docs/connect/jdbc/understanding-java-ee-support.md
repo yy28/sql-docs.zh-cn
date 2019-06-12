@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7d7d1867c8c6d9311736124cf74e30b748a9de68
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: bd082fbbc6aadbbef2ec8778b61a68c659949e74
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671223"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788471"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支持
 
@@ -28,15 +28,15 @@ ms.locfileid: "59671223"
   
 ## <a name="driver-name"></a>驱动程序名称
 
-驱动程序类名称为 com.microsoft.sqlserver.jdbc.SQLServerDriver。 对于 JDBC Driver 4.1、4.2 和 6.0，驱动程序包含在 sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 文件中。
+驱动程序类名称为 com.microsoft.sqlserver.jdbc.SQLServerDriver  。 对于 JDBC Driver 4.1、4.2 和 6.0，驱动程序包含在 sqljdbc.jar  、sqljdbc4.jar  、sqljdbc41.jar  或 sqljdbc42.jar  文件中。
 
-对于 JDBC Driver 6.2，驱动程序包含在 mssql-jdbc-6.2.2.jre7.jar 或 mssql-jdbc-6.2.2.jre8.jar 中。
+对于 JDBC Driver 6.2，驱动程序包含在 mssql-jdbc-6.2.2.jre7.jar  或 mssql-jdbc-6.2.2.jre8.jar  中。
 
-对于 JDBC Driver 6.4，驱动程序包含在 mssql-jdbc-6.4.0.jre7.jar、mssql-jdbc-6.4.0.jre8.jar 或 mssql-jdbc-6.4.0.jre9.jar 中。
+对于 JDBC Driver 6.4，驱动程序包含在 mssql-jdbc-6.4.0.jre7.jar  、mssql-jdbc-6.4.0.jre8.jar  或 mssql-jdbc-6.4.0.jre9.jar  中。
 
-对于 JDBC Driver 7.0，驱动程序包含在 mssql-jdbc-7.0.0.jre8.jar 或 mssql-jdbc-7.0.0.jre10.jar 中。
+对于 JDBC Driver 7.0，驱动程序包含在 mssql-jdbc-7.0.0.jre8.jar  或 mssql-jdbc-7.0.0.jre10.jar  中。
 
-对于 JDBC Driver 7.2，驱动程序包含在 mssql-jdbc-7.2.2.jre8.jar 或 mssql-jdbc-7.2.2.jre11.jar 中。
+对于 JDBC Driver 7.2，驱动程序包含在 mssql-jdbc-7.2.2.jre8.jar  或 mssql-jdbc-7.2.2.jre11.jar  中。
   
 只要使用 JDBC DriverManager 类加载驱动程序，就会使用此类名称。 另外，只要在任何驱动程序配置中必须指定驱动程序的类名称，则也将用到它。 例如，配置 Java EE 应用程序服务器内的数据源可能要求输入驱动程序类名称。  
   

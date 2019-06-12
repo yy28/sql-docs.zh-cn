@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 02c2443d-44e1-4f16-a0d5-08d197838214
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5520e84dc049a3aa395e62b4df94331d50fd8d63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 71467c99e486e04ea9ba707821ed011ecdd61f13
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711355"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765106"
 ---
 # <a name="setasciistream-method-int-javaioinputstream"></a>setAsciiStream 方法 (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定的参数编号设置为给定的 java.io.InputStream 对象。  
+  将指定的参数编号设置为给定的 InputStream 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ public final void setAsciiStream(int parameterIndex,
 #### <a name="parameters"></a>Parameters  
  *parameterIndex*  
   
- 指示参数编号的 int。  
+ 指示参数编号的 int  。  
   
  *x*  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c1de9804-1f27-4854-8985-3385fadcbebb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a22148e21a8a4efd451bb7dac2a9a05ea2873229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 05007c8145cc9c5b01b5513a34a5dcbcdfc9fe80
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806107"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763702"
 ---
 # <a name="getclob-method-javalangstring-sqlserverresultset"></a>getClob 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public java.sql.Clob getClob(java.lang.String colName)
 #### <a name="parameters"></a>Parameters  
  *colName*  
   
- 一个包含列名的字符串。  
+ 一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  Clob 对象。  
@@ -47,7 +47,7 @@ public java.sql.Clob getClob(java.lang.String colName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getClob 方法由 java.sql.ResultSet 接口中的 getClob 方法指定。  
+ 此 getNClob 方法是由 java.sql.ResultSet 接口中的 getNClob 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)   

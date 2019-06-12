@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 27bfc5a5654042be3dde68a2a03c1dd4e6a6d4a3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042246"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801756"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,15 +27,15 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
   
 ## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>使用集成身份验证从 ODBC 应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-可以启用 Kerberos 集成身份验证，方法是在 SQLDriverConnect 或 SQLConnect 的连接字符串中指定 Trusted_Connection=yes。 例如：  
+可以启用 Kerberos 集成身份验证，方法是在 SQLDriverConnect 或 SQLConnect 的连接字符串中指定 Trusted_Connection=yes    。 例如：  
 
 ```
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-使用 DSN 连接时，还可以向 `odbc.ini` 中的 DSN 条目添加 Trusted_Connection=yes。
+使用 DSN 连接时，还可以向 `odbc.ini` 中的 DSN 条目添加 Trusted_Connection=yes  。
   
-`sqlcmd` 的 `-E` 选项和 `bcp` 的 `-T` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用 bcp 进行连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
+`sqlcmd` 的 `-E` 选项和 `bcp` 的 `-T` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用 bcp 进行连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)   。
 
 确保要连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的客户端主体已使用 Kerberos KDC 进行身份验证。
   
@@ -65,7 +65,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时需使用系统帐户，并且 Linux 上未提供相关功能来模拟安全上下文。 因此，需要更多信息来确定用户。
   
-若要代表用户（而非系统帐户）审核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的活动，应用程序必须使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE AS。  
+若要代表用户（而非系统帐户）审核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的活动，应用程序必须使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE AS  。  
   
 若要提高应用程序性能，应用程序可以将连接池与集成身份验证和审核结合使用。 但是，合并连接池、集成身份验证和审核会带来安全风险，因为 unixODBC 驱动程序管理器允许不同的用户重复使用已入池的连接。 有关详细信息，请参阅 [ODBC 连接池](http://www.unixodbc.org/doc/conn_pool.html)。  
 
@@ -120,7 +120,7 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-如果 Linux 或 macOS 计算机配置为结合使用动态主机配置协议 (DHCP) 和 Windows DHCP 服务器（提供要使用的 DNS 服务器），则可以使用 dns_lookup_kdc=true。 现在，可以通过发出命令 `kinit alias@YYYY.CORP.CONTOSO.COM` 来使用 Kerberos 登录域。 传递给 `kinit` 的参数区分大小写，并且配置为在域中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机必须添加用户 `alias@YYYY.CORP.CONTOSO.COM` 才能进行登录。 现在，可以使用信任连接（连接字符串中的 Trusted_Connection=YES、bcp -T 或 sqlcmd -E）。  
+如果 Linux 或 macOS 计算机配置为结合使用动态主机配置协议 (DHCP) 和 Windows DHCP 服务器（提供要使用的 DNS 服务器），则可以使用 dns_lookup_kdc=true  。 现在，可以通过发出命令 `kinit alias@YYYY.CORP.CONTOSO.COM` 来使用 Kerberos 登录域。 传递给 `kinit` 的参数区分大小写，并且配置为在域中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机必须添加用户 `alias@YYYY.CORP.CONTOSO.COM` 才能进行登录。 现在，可以使用信任连接（连接字符串中的 Trusted_Connection=YES、bcp -T 或 sqlcmd -E）    。  
   
 必须关闭 Linux 或 macOS 计算机上的时间和 Kerberos 密钥发行中心 (KDC) 上的时间。 确保系统时间已正确设置，例如通过使用网络时间协议 (NTP)。  
 

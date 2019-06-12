@@ -20,13 +20,13 @@ helpviewer_keywords:
 - modifying passwords
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e59c536a369dd1d68e6f3af2b02b2032aa81c3b8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fdf5afb7cc9eea9beed43726d3c107c9fde9b6e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605888"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777885"
 ---
 # <a name="changing-passwords-programmatically"></a>以编程方式更改密码
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,14 +57,14 @@ ms.locfileid: "51605888"
  SQL Server 的 OLE DB 驱动程序支持密码过期，但用户界面和以编程方式。  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 用户界面密码过期  
- 适用于 SQL Server 的 OLE DB 驱动程序支持通过更改“SQL Server 登录”对话框来处理密码过期的情况。 如果将 DBPROP_INIT_PROMPT 的值设置为 DBPROMPT_NOPROMPT，则在密码已过期的情况下初始连接尝试将失败。  
+ 适用于 SQL Server 的 OLE DB 驱动程序支持通过更改“SQL Server 登录”对话框来处理密码过期的情况  。 如果将 DBPROP_INIT_PROMPT 的值设置为 DBPROMPT_NOPROMPT，则在密码已过期的情况下初始连接尝试将失败。  
   
- 如果 DBPROP_INIT_PROMPT 已设置为任何其他值，则无论密码是否已过期，用户都会看到“SQL Server 登录”对话框。 用户可单击“选项”按钮，再选中“更改密码”进行更改。  
+ 如果 DBPROP_INIT_PROMPT 已设置为任何其他值，则无论密码是否已过期，用户都会看到“SQL Server 登录”对话框  。 用户可单击“选项”按钮，再选中“更改密码”进行更改   。  
   
- 如果用户单击“确定”且密码已过期，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会提示用户使用“更改 SQL Server 密码”对话框输入并确认新密码。  
+ 如果用户单击“确定”且密码已过期，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会提示用户使用“更改 SQL Server 密码”对话框输入并确认新密码  。  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>OLE DB 提示行为和锁定的帐户  
- 连接尝试可能会由于帐户被锁定而失败。 如果在显示“SQL Server 登录”对话框后发生此情况，则向用户显示服务器错误消息，且连接尝试中止。 如果在显示“更改 SQL Server 密码”对话框后用户输入错误的旧密码值，也会出现这种情况。 在这种情况下，将显示相同的错误消息，并且连接尝试将中止。  
+ 连接尝试可能会由于帐户被锁定而失败。 如果在显示“SQL Server 登录”对话框后发生此情况，则向用户显示服务器错误消息，且连接尝试中止  。 如果在显示“更改 SQL Server 密码”对话框后用户输入错误的旧密码值，也会出现这种情况  。 在这种情况下，将显示相同的错误消息，并且连接尝试将中止。  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>OLE DB 连接池、密码过期和锁定的帐户  
  当连接在连接池中仍处于活动状态时，帐户可能被锁定或其密码可能已过期。 服务器会在以下两种情况下检查密码是否已过期以及帐户是否已锁定。 第一种情况是首次创建连接时。 第二种情况是从相应池中获取相应连接以重置连接时。  
@@ -86,7 +86,7 @@ ms.locfileid: "51605888"
   
  请注意，只要设置“旧密码”属性，访问接口就会假定正在尝试更改密码，除非还指定了 Windows 身份验证，这种情况下 Windows 身份验证始终优先。  
   
- 如果使用 Windows 身份验证，则指定旧密码会产生 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED（具体取决于是将旧密码指定为 REQUIRED 还是 OPTIONAL），并且在 dwStatus 中返回 DBPROPSTATUS_CONFLICTINGBADVALUE 的状态值。 在调用 IDBInitialize::Initialize 时进行检测。  
+ 如果使用 Windows 身份验证，则指定旧密码会产生 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED（具体取决于是将旧密码指定为 REQUIRED 还是 OPTIONAL），并且在 dwStatus 中返回 DBPROPSTATUS_CONFLICTINGBADVALUE 的状态值  。 在调用 IDBInitialize::Initialize 时进行检测  。  
   
  如果更改密码的尝试意外失败，则服务器将返回错误代码 18468。 将从连接尝试返回标准的 OLEDB 错误。  
   

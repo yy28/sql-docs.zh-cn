@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f406fc77ab1fa4dc544a4de735e1125a9bb3560
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 77fb9b25594f2367ec52d75e0232371866b63a71
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65575529"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500093"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  
@@ -48,7 +48,7 @@ ms.locfileid: "65575529"
   
  不支持存储的凭据和提示的凭据。 注意，如果禁用 Windows 集成安全性，则无法使用它来检索数据。 如果指定了存储凭据或提示凭据，则会在执行时发生错误。  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 有关详细信息，请参阅[数据连接、 数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[指定凭据和连接信息的报表数据源](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ##  <a name="Query"></a> 查询  
  查询指定了要为报表数据集检索哪些数据。 查询的结果集中的列填充数据集的字段集合。 报表仅处理查询检索的第一个结果集。  
@@ -120,7 +120,7 @@ ms.locfileid: "65575529"
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>检索 XML Web 服务数据的要求  
  XML 数据处理扩展插件不能检测架构。 因此，您必须通过某种方式来发现哪些 SOAP 方法将检索所需数据。 您还必须了解 Web 服务用于其数据的寻址方案或命名空间。  
   
- 对于 Web 服务，可以提供用于指定调用方法或 SOAP 操作的 \<Query> 元素。 如果 XML 数据源具有可产生要用于报表的数据的层次结构，则可以将查询留空并使用默认查询。 查询运行时检索的 XML 元素节点值和属性将映射到在报表中使用的数据集字段。  
+ 对于 Web 服务，可以提供用于指定调用方法或 SOAP 操作的 \<Query> 元素  。 如果 XML 数据源具有可产生要用于报表的数据的层次结构，则可以将查询留空并使用默认查询。 查询运行时检索的 XML 元素节点值和属性将映射到在报表中使用的数据集字段。  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>检索 XML 文档数据的要求  
  使用 http 协议时，服务器必须返回 XML 数据，或者 XML 数据必须嵌入 XML **Query** 元素中。 如果您使用 http 协议直接引用 XML 文档，则文档的扩展名必须为 .xml。  
@@ -156,7 +156,7 @@ ms.locfileid: "65575529"
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

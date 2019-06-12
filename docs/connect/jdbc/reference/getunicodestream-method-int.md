@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22cbe0cd66c3f22249a8171115a3c11c59a30ee9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fe3352ef2bffaed6151e163d5054b03a05c53418
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610235"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765923"
 ---
 # <a name="getunicodestream-method-int"></a>getUnicodeStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,9 +39,9 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
  InputStream 对象。  
@@ -50,7 +50,7 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getUnicodeString 方法由 java.sql.ResultSet 接口中的 getUnicodeString 方法指定。  
+ 此 getString方法是由 java.sql.ResultSet 接口中的 getString 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getUnicodeStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   

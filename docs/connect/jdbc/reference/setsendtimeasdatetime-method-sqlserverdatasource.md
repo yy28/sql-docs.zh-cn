@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 705a0494-b5e2-43db-940a-1b8cec550cdb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad4f7e8cee834619985be1ab140bc39698215060
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 92ffcfe235d33158fb26552c74c13d9533a11781
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798235"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767820"
 ---
 # <a name="setsendtimeasdatetime-method-sqlserverdatasource"></a>setSendTimeAsDatetime 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,10 +35,10 @@ public void setSendTimeAsDatetime(boolean sendTimeAsDateTime)
 #### <a name="parameters"></a>Parameters  
  *sendTimeAsDateTime*  
   
- 一个布尔值。 如果设置为 true，java.sql.Time 值将作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 类型发送到服务器。 如果设置为 false，java.sql.Time 值将作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] time 类型发送到服务器。  
+ 一个布尔值。 如果设置为 true，java.sql.Time 值将作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 类型发送到服务器  。 如果设置为 false，java.sql.Time 值将作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] time 类型发送到服务器  。  
   
 ## <a name="remarks"></a>Remarks  
- [SQLServerDataSource.getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md) 返回“sendTimeAsDatetime”连接属性的设置。  
+ [SQLServerDataSource.getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md) 返回“sendTimeAsDatetime”连接属性的设置  。  
   
  有关详细信息**sendTimeAsDatetime**连接属性，请参阅[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62892cebe5c3c709cedee94b620b2c0e4cfeb258
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 802172caef018224403544aad5c3c4fd53778305
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737028"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775973"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证连接
 
@@ -27,7 +27,7 @@ ms.locfileid: "55737028"
 可以使用 Azure Active Directory (AAD) 身份验证，这是连接到 Azure SQL 数据库 v12 的一种机制使用 Azure Active Directory 中的标识。 使用 Azure Active Directory 身份验证以集中管理数据库用户的标识且作为 SQL Server 身份验证的一种替代方法使用。 JDBC 驱动程序，可在要连接到 Azure SQL DB 的 JDBC 连接字符串中指定 Azure Active Directory 凭据。 有关如何配置 Azure Active Directory 身份验证信息，请访问[连接到 SQL 数据库使用 Azure Active Directory 身份验证](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 
 
 若要 SQL Server 的 Microsoft JDBC 驱动程序中支持 Azure Active Directory 身份验证的连接属性为：
-*   身份验证使用此属性以指示要用于连接的 SQL 身份验证方法。 可能的值有： 
+*   身份验证使用此属性以指示要用于连接的 SQL 身份验证方法  。 可能的值有： 
     * **ActiveDirectoryMSI**
         * 驱动程序版本起，支持**7.2 版**，`authentication=ActiveDirectoryMSI`可用于使用启用了"Identity"支持连接到 Azure SQL 数据库/数据仓库从 Azure 资源内。 （可选） **msiClientId**还可以在此身份验证模式下，必须包含的托管服务标识来将其用于获取客户端 ID 以及连接/数据源属性中指定**accessToken**用于建立连接。
     * **ActiveDirectoryIntegrated**
@@ -39,7 +39,7 @@ ms.locfileid: "55737028"
     * **NotSpecified**
         * 使用`authentication=NotSpecified`或将其保留为默认值，这些身份验证方法均不需要时。
 
-*   **/AccessToken:** 使用此连接属性连接到 SQL 数据库使用的访问令牌。 仅可以在驱动程序管理器类中使用 getconnection （） 方法的属性参数设置 accessToken。 它不能在连接 URL 中使用。  
+*   **accessToken**： 使用此连接属性连接到 SQL 数据库使用的访问令牌。 仅可以在驱动程序管理器类中使用 getconnection （） 方法的属性参数设置 accessToken。 它不能在连接 URL 中使用。  
 
 有关详细信息，请参阅身份验证属性[连接属性设置](../../connect/jdbc/setting-the-connection-properties.md)页。  
 
@@ -164,7 +164,7 @@ You have successfully logged on as: <your domain user name>
 #### <a name="windows"></a>Windows
 附带了 JDK `kinit`，可以用于获取 TGT 从密钥分发中心 (KDC) 域加入计算机与 Azure Active Directory 联合。
 
-##### <a name="step-1-ticket-granting-ticket-retrieval"></a>步骤 1：票证授予票证检索
+##### <a name="step-1-ticket-granting-ticket-retrieval"></a>步骤 1： 票证授予票证检索
 - **在上运行**: Windows
 - **操作**：
   - 使用命令`kinit username@DOMAIN.COMPANY.COM`从 KDC 获取 TGT，然后它将提示您输入您的域密码。
@@ -178,8 +178,8 @@ You have successfully logged on as: <your domain user name>
 ##### <a name="requirements"></a>要求
 访问 Windows 已加入域的计算机来查询在 Kerberos 域控制器。
 
-##### <a name="step-1-find-kerberos-kdc"></a>步骤 1：查找 Kerberos KDC
-- 运行于Windows 命令行
+##### <a name="step-1-find-kerberos-kdc"></a>步骤 1： 查找 Kerberos KDC
+- 运行于Windows 命令行 
 - **操作**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` （其中"DOMAIN.COMPANY.COM"映射到域的名称）
 - **示例输出**
   ```
@@ -190,9 +190,9 @@ You have successfully logged on as: <your domain user name>
   ```
 - **若要提取的信息**DC 名称，在这种情况下 `co1-red-dc-33.domain.company.com`
 
-##### <a name="step-2-configuring-kdc-in-krb5conf"></a>步骤 2：在 krb5.conf 中配置 KDC
+##### <a name="step-2-configuring-kdc-in-krb5conf"></a>步骤 2： 配置 KDC 中 krb5.conf
 - **在上运行**: Linux/Mac
-- **操作**：编辑所选的编辑器中 /etc/krb5.conf。 配置下列密钥
+- **操作**： 编辑所选的编辑器中 /etc/krb5.conf。 配置下列密钥
   ```
   [libdefaults]
     default_realm = DOMAIN.COMPANY.COM
@@ -207,7 +207,7 @@ You have successfully logged on as: <your domain user name>
 > [!NOTE]
 >  域必须在全大写形式。
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>步骤 3：测试的票证授予票证检索
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>步骤 3： 测试票证授予票证检索
 - **在上运行**: Linux/Mac
 - **操作**：
   - 使用命令`kinit username@DOMAIN.COMPANY.COM`从 KDC 获取 TGT，然后它将提示您输入您的域密码。

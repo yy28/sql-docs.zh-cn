@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3cd97e796235e47ed1f3003ec5973fd6d6dda61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0e90f4d2ea8b98d2ecef237f04f5fe290a512c92
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614901"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765902"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>getUDTs 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,15 +44,15 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 一个包含目录名称的字符串。  
+ 一个包含目录名称的字符串  。  
   
  *schemaPattern*  
   
- 一个包含架构名称模式的字符串。  
+ 一个包含架构名称模式的字符串  。  
   
  *typeNamePattern*  
   
- 一个包含类型名称模式的 String。  
+ 一个包含类型名称模式的 String  。  
   
  *types*  
   

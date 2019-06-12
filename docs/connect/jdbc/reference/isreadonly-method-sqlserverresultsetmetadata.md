@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab66f9568985c5814b203edecb634a9cbc430b83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a3cbf45389bd7cb87f724b0ff1db9b2b24e66c8d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845295"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768900"
 ---
 # <a name="isreadonly-method-sqlserverresultsetmetadata"></a>isReadOnly 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public boolean isReadOnly(int column)
 #### <a name="parameters"></a>Parameters  
  *column*  
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 如果列为只读，则为 true。 否则为 **false**。  
+ 如果列为只读，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

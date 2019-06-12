@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e3c40921343f7b762c6e844ecb2eb45581da28c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5b8f304d7681d3df4ae4c6f065a6128beb5822d9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597396"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769398"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>针对 OLE DB 日期和时间改进的数据类型支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "47597396"
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |日期|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
+|time|DBTYPE_DBTIME2|msoledbsql.h|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|msoledbsql.h|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>数据格式：字符串和文字  
@@ -76,7 +76,7 @@ ms.locfileid: "47597396"
   
  已对以下现有 OLE DB 结构的实现进行了修改，以支持新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 日期和时间数据类型。 不过未更改定义。  
   
--   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 double。 完整的部件是自 1899 年 12 月 30 日以来的天数和小数部分是一天的小部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
+-   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 double  。 完整的部件是自 1899 年 12 月 30 日以来的天数和小数部分是一天的小部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
   
 -   DBTYPE_DBDATE  
   
@@ -179,8 +179,8 @@ enum SQLVARENUM {
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|日期||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
-|DBTYPE_DBTIME2|time(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
-|DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
+|DBTYPE_DBTIME2| time(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
+|DBTYPE_DBTIMESTAMPOFFSET| datetimeoffset(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
   
  当应用程序指定了在 DBTYPE_DBTIMESTAMP *wType*，它会重写到映射**datetime2**通过提供中的类型名称*pwszTypeName*。 如果**datetime**指定，则*bScale*必须为 3。 如果**smalldatetime**指定，则*bScale*必须为 0。 如果*bScale*与不一致*wType*并*pwszTypeName*，则返回 DB_E_BADSCALE。  
   

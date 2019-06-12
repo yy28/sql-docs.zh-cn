@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70a19f97f3949fd43b0fba86b876f0da606a114b
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+manager: jroth
+ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159105"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770270"
 ---
 # <a name="building-the-connection-url"></a>创建连接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,18 +27,18 @@ ms.locfileid: "52159105"
   
  其中：  
   
--   jdbc:sqlserver://（必需）称为子协议，且为常数。  
+-   jdbc:sqlserver://（必需）称为子协议，且为常数  。  
   
--   serverName（可选）是要连接到的服务器的地址。 它可以是 DNS 或 IP 地址，也可以是本地计算机地址 localhost 或 127.0.0.1。 如果未在连接 URL 中指定服务器名称，则必须在属性集中指定。  
+-   serverName（可选）是要连接到的服务器的地址  。 它可以是 DNS 或 IP 地址，也可以是本地计算机地址 localhost 或 127.0.0.1。 如果未在连接 URL 中指定服务器名称，则必须在属性集中指定。  
   
--   instanceName（可选）是 serverName 上要连接到的实例。 如果未指定，则会连接到默认实例。  
+-   instanceName（可选）是 serverName 上要连接到的实例  。 如果未指定，则会连接到默认实例。  
   
--   portNumber（可选）是 serverName 上要连接到的端口。 默认值为 1433。 如果使用默认端口，则无需在 URL 中指定端口及其前面的“:”。  
+-   portNumber（可选）是 serverName 上要连接到的端口  。 默认值为 1433。 如果使用默认端口，则无需在 URL 中指定端口及其前面的“:”。  
   
     > [!NOTE]  
     >  若要获得最佳连接性能，应在连接到指定实例时设置 portNumber。 这将避免为了确定端口号而与服务器进行往返通讯。 如果同时使用 portNumber 和 instanceName，则会优先使用 portNumber，而忽略 instanceName。  
   
--   property（可选）是一个或多个选项连接属性。 有关详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 可指定该列表中的任何属性。 属性只能用分号（“;”）分隔，且不允许重复。  
+-   property（可选）是一个或多个选项连接属性  。 有关详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 可指定该列表中的任何属性。 属性只能用分号（“;”）分隔，且不允许重复。  
   
 > [!CAUTION]  
 >  出于安全考虑，应避免根据用户输入的内容创建连接 URL。 只应在 URL 中指定服务器名称和驱动程序。 对于用户名和密码值，请使用连接属性集。 有关 JDBC 应用程序中安全性的详细信息，请参阅[保护 JDBC 驱动程序应用程序](../../connect/jdbc/securing-jdbc-driver-applications.md)。  
@@ -74,7 +74,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>指定的多个 SQL Server 实例  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在每台服务器上安装多个数据库实例。 每个实例都由一个专用名称所标识。 若要连接到指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，可以使用指定实例的端口号（首选），也可将实例名指定为 JDBC URL 属性或 datasource 属性。 如果未指定实例名属性或端口号属性，则会创建与默认实例的连接。 请参阅以下示例：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在每台服务器上安装多个数据库实例。 每个实例都由一个专用名称所标识。 若要连接到指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，可以使用指定实例的端口号（首选），也可将实例名指定为 JDBC URL 属性或 datasource 属性  。 如果未指定实例名属性或端口号属性，则会创建与默认实例的连接。 请参阅以下示例：  
   
  若要使用端口号，请执行下列操作：  
   
@@ -97,7 +97,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  sqljdbc_auth.dll 文件的安装位置如下：  
   
- \<*安装目录*> \sqljdbc_\<*版本*>\\<*语言*> \auth\  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
   
  有关受支持的任何操作系统[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)中新增功能的说明[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]的允许连接到应用程序使用和类型 4 Kerberos 集成身份验证的数据库。  
   
@@ -109,7 +109,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
 ## <a name="connecting-with-ipv6-addresses"></a>通过 IPv6 地址进行连接  
- JDBC 驱动程序支持结合使用 IPv6 地址以及连接属性集合和 serverName 连接字符串属性。 连接字符串不支持在 IPv6 地址中使用初始 serverName 值，如 jdbc:sqlserver://serverName。 使用 serverName 的名称而不是原始 IPv6 地址将适用于连接中的所有情况。 以下实例提供了详细信息。  
+ JDBC 驱动程序支持结合使用 IPv6 地址以及连接属性集合和 serverName 连接字符串属性。 连接字符串不支持在 IPv6 地址中使用初始 serverName 值，如 jdbc:sqlserver://serverName   。 使用 serverName 的名称而不是原始 IPv6 地址将适用于连接中的所有情况  。 以下实例提供了详细信息。  
   
  **使用 serverName 属性**  
   

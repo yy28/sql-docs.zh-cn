@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe04b5fbe8d5bd0ab16ca81fc503ac72ff7a1966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d5d1d7e62709af773ca251a389c8cfaa4981ce58
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787396"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797052"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>使用 SQLSRV 驱动程序以流的形式检索数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "47787396"
   
 2.  使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 在结果集中移动到下一行。  
   
-3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 从行中检索字段。 通过将 SQLSRV_PHPTYPE_STREAM(<encoding>) 用作函数调用中的第三个函数，指定数据将以流的形式进行检索。 此表列出了用于指定编码及其描述符的常量：  
+3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 从行中检索字段。 通过将 SQLSRV_PHPTYPE_STREAM(<encoding>) 用作函数调用中的第三个函数，指定数据将以流的形式进行检索  。 此表列出了用于指定编码及其描述符的常量：  
   
     |SQLSRV 常量|描述|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|数据以原始字节流的形式从服务器返回，无需执行编码或转换。|  
-    |SQLSRV_ENC_CHAR|数据以在系统上设置的 Windows 区域设置代码页中指定的 8 位字符的形式返回。 任何多字节字符或未映射到此代码页中的字符都会替换为单字节问号 (?) 字符。|  
+    |SQLSRV_ENC_CHAR|数据以在系统上设置的 Windows 区域设置的代码页中指定的 8 位字符的形式返回。 任何多字节字符或未映射到此代码页中的字符都会替换为单字节问号 (?) 字符。|  
   
 > [!NOTE]  
 > 某些数据类型默认情况下以流的形式返回。 有关详细信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  

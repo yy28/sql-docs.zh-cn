@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 625d64d3-6e7c-41c2-912a-38fdf6695922
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9bd82cc6b6de3fed5acfe9fd496e457f2cef381
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: af922c074a303f73b157cd8fb744e5b0ca315393
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736858"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772446"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>再分发 Microsoft JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "55736858"
   
  [Microsoft SQL Server JDBC 驱动程序 4.0 的再分发许可](https://msdn.microsoft.com/sqlserver/jj589698)  
   
- 注意：Microsoft 使用 Microsoft 帐户进行安全的身份验证和注册。 通过 Microsoft 帐户注册获得 SQL Server JDBC 驱动程序的再分发权利时，系统将提示你提供一些信息，以作为安全个人资料的一部分。  
+ 注意： Microsoft 使用 Microsoft 帐户进行安全的身份验证和注册。 通过 Microsoft 帐户注册获得 SQL Server JDBC 驱动程序的再分发权利时，系统将提示你提供一些信息，以作为安全个人资料的一部分。  
   
  如果你没有已，你可以获取[Microsoft 帐户](https://signup.live.com/)  
   

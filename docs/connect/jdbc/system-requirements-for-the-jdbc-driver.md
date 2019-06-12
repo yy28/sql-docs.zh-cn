@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15a9fad13498b27ddd426c2226809cbbac2e9bee
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: 244f5383add437b8bd4985045bd9edc8538805e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671213"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798293"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驱动程序的系统要求
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "59671213"
   
  从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，Java 数据库连接 (JDBC) 规范 API 的JDBC 驱动程序支持扩展为包括 JDBC 4.0 API。 已在 Java 开发工具包 (JDK) 6.0 和 Java 运行时环境 (JRE) 6.0 中引入了 JDBC 4.0 API。 JDBC 4.0 是 JDBC 3.0 API 的超集。
   
- 当你在 Windows 和 UNIX 操作系统上部署 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 时，你必须分别使用安装包 sqljdbc_\<version>_enu.exe 和 sqljdbc_\<version>_enu.tar.gz。 有关如何部署 JDBC 驱动程序的详细信息，请参阅[部署 JDBC 驱动程序](../../connect/jdbc/deploying-the-jdbc-driver.md)主题。  
+ 当你在 Windows 和 UNIX 操作系统上部署 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 时，你必须分别使用安装包 sqljdbc_\<version>_enu.exe 和 sqljdbc_\<version>_enu.tar.gz   。 有关如何部署 JDBC 驱动程序的详细信息，请参阅[部署 JDBC 驱动程序](../../connect/jdbc/deploying-the-jdbc-driver.md)主题。  
 
 **Microsoft JDBC Driver 7.2 for SQL Server：**  
 
-  JDBC Driver 7.2 在每个安装包内有两个 JAR 类库：mssql-jdbc-7.2.2.jre8.jar 和 mssql-jdbc-7.2.2.jre11.jar。
+  JDBC Driver 7.2 在每个安装包内有两个 JAR 类库：mssql-jdbc-7.2.2.jre8.jar  和 mssql-jdbc-7.2.2.jre11.jar  。
 
   JDBC Driver 7.2 适用于各种主要 Java 虚拟机，且受到这些虚拟机的支持，但仅在 OpenJDK 8.0、OpenJDK 11.0、Azul Zulu JRE 8.0 和 Azul Zulu JRE 11.0 上经过测试。
   
@@ -68,7 +68,7 @@ ms.locfileid: "59671213"
  
 **Microsoft JDBC Driver 7.0 for SQL Server：**  
 
-  JDBC Driver 7.0 在每个安装包中包含两个 JAR 类库：mssql-jdbc-7.0.0.jre8.jar 和 mssql-jdbc-7.0.0.jre10.jar。
+  JDBC Driver 7.0 在每个安装包中包含两个 JAR 类库：mssql-jdbc-7.0.0.jre8.jar  和 mssql-jdbc-7.0.0.jre10.jar  。
 
   JDBC Driver 7.0 专门适用于各种主要 Java 虚拟机且受到这些虚拟机的支持，但仅在 OpenJDK 8.0 和 10.0 上经过测试。
   
@@ -92,7 +92,7 @@ ms.locfileid: "59671213"
   
 **Microsoft JDBC Driver 6.4 for SQL Server：**  
 
-  JDBC Driver 6.4 在每个安装包中包含三个 JAR 类库：mssql-jdbc-6.4.0.jre7.jar、mssql-jdbc-6.4.0.jre8.jar 和 mssql-jdbc-6.4.0.jre9.jar。
+  JDBC Driver 6.4 在每个安装包中包含三个 JAR 类库：mssql-jdbc-6.4.0.jre7.jar  、mssql-jdbc-6.4.0.jre8.jar  和 mssql-jdbc-6.4.0.jre9.jar  。
 
   JDBC Driver 6.4 专门适用于各种主要 Java 虚拟机且受到这些虚拟机的支持，但仅在 OpenJDK 7.0、8.0 和 9.0 上经过测试。
   
@@ -116,7 +116,7 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
 
 **Microsoft JDBC Driver 6.2 for SQL Server：**  
   
-  JDBC Driver 6.2 在每个安装包中包含两个 JAR 类库：mssql-jdbc-6.2.2.jre7.jar 和 mssql-jdbc-6.2.2.jre8.jar。 
+  JDBC Driver 6.2 在每个安装包中包含两个 JAR 类库：mssql-jdbc-6.2.2.jre7.jar  和 mssql-jdbc-6.2.2.jre8.jar  。 
   
  JDBC Driver 6.2 专门适用于各种主要 Java 虚拟机且受到这些虚拟机的支持，但仅在 Sun JRE 5.0、6.0、7.0 和 8.0 上经过测试。
   
@@ -139,7 +139,7 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
 
  **Microsoft JDBC Driver 6.0 and 4.2 for SQL Server：**  
   
-  JDBC Drivers 6.0 和 4.2 的每个安装包中都有两个 JAR 类库：sqljdbc41.jar 和 sqljdbc42.jar。 
+  JDBC Drivers 6.0 和 4.2 的每个安装包中都有两个 JAR 类库：sqljdbc41.jar  和 sqljdbc42.jar  。 
   
  DBC Drivers 6.0 和 4.2 专门适用于各种主要 Java 虚拟机且受到这些虚拟机的支持，但仅在 Sun JRE 5.0、6.0、7.0 和 8.0 上经过测试。
   
@@ -152,11 +152,11 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
   
  **Microsoft JDBC Driver 4.1 for SQL Server：**  
   
- JDBC Driver 4.1 的每个安装包中都有一个 JAR 类库：sqljdbc41.jar。  
+ JDBC Driver 4.1 的每个安装包中都有一个 JAR 类库：sqljdbc41.jar  。  
     
 |JAR|描述|  
 |---------|-----------------|  
-|sqljdbc41.jar|sqljdbc41.jar 类库提供对 JDBC 4.0 API 的支持。 它包含 JDBC 4.0 驱动程序的所有功能以及 JDBC 4.0 API 方法。 JDBC 4.1 不受支持（引发异常“SQLFeatureNotSupportedException”）。<br /><br /> sqljdbc41.jar 类库要求使用 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 和 5.0 上的 sqljdbc41.jar 引发异常。<br /><br /> 
+|sqljdbc41.jar|sqljdbc41.jar 类库提供对 JDBC 4.0 API 的支持  。 它包含 JDBC 4.0 驱动程序的所有功能以及 JDBC 4.0 API 方法。 JDBC 4.1 不受支持（引发异常“SQLFeatureNotSupportedException”）。<br /><br /> sqljdbc41.jar 类库要求使用 Java Runtime Environment (JRE) 7.0。  使用 JRE 6.0 和 5.0 上的 sqljdbc41.jar  引发异常。<br /><br /> 
   
  JDBC 驱动程序专门适用于各种主要 Java 虚拟机且受到这些虚拟机的支持，但是在 Sun JRE 5.0、6.0 和 7.0 上测试的。
   

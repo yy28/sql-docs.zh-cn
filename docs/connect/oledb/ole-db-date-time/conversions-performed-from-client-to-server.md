@@ -12,13 +12,13 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 625b8c6503378341596523d7f1887129c38d6a19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827010"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769311"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>在客户端和服务器之间执行的转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,16 +67,16 @@ ms.locfileid: "47827010"
 |11|秒的小数部分的位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> 但是，如果源类型为 DBTIMESTAMP 且秒的小数部分为零，则不会生成秒的小数部分位数或小数点。 此行为确保使用早期 OLE DB 访问接口开发的应用程序的向后兼容性。<br /><br /> 列大小为 ~0 则表示 OLE DB 的大小不受限制（即 9 位数，除非应用 DBTIMESTAMP 的三位数规则）。|  
 |12|将保留 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的 DBTYPE_DATE 转换语义。 秒的小数部分被截断为零。|  
 |13|将保留 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的 DBTYPE_FILETIME 转换语义。 如果使用 Windows FileTimeToSystemTime API，秒的小数部分精度则限制为 1 毫秒。|  
-|14|将保留 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的 smalldatetime 转换语义。 秒设置为零。|  
-|15|将保留 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的 datetime 转换语义。 秒舍入为最接近的 1/300 秒。|  
+|14|将保留 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的 **smalldatetime** 转换语义。 秒设置为零。|  
+|15|将保留 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的 **datetime** 转换语义。 秒舍入为最接近的 1/300 秒。|  
 |16|嵌入 SSVARIANT 客户端结构的指定类型值的转换行为与未嵌入 SSVARIANT 客户端结构的相同类型和相同值的行为相同。|  
   
 ||||  
 |-|-|-|  
 |类型|长度（以字符为单位）|小数位数|  
-|DBTIME2|8, 10..18|0，1..9|  
-|DBTIMESTAMP|19, 21..29|0，1..9|  
-|DBTIMESTAMPOFFSET|26, 28..36|0，1..9|  
+|DBTIME2|8, 10..18|0,1..9|  
+|DBTIMESTAMP|19, 21..29|0,1..9|  
+|DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
 ## <a name="see-also"></a>另请参阅  
  [绑定和转换 (OLE DB)](../../oledb/ole-db-date-time/conversions-ole-db.md)  

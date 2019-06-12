@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 59a975e8-bea8-42fe-8f34-5f18f2bbd415
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd2b58566a427d1666ba42cfafa69074f6780da5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b250b6dc7f0b9322a3e0c638042c4d8077186f96
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717465"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787542"
 ---
 # <a name="getobject-method-javalangstring-sqlserverresultset"></a>getObject 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public java.lang.Object getObject(java.lang.String columnName)
 #### <a name="parameters"></a>Parameters  
  *columnName*  
   
- 一个包含列名的字符串。  
+ 一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- Object 值。  
+ Object 值  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

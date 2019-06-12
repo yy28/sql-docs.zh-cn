@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ad914ce3b446ce9c660f96caa1c0548b7ed2944d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 8592d3dfc16f0dd9d13a6445f0d8290f9ad507e4
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65576688"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499620"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
 
@@ -75,15 +75,15 @@ ms.locfileid: "65576688"
   
 1. **“参数”窗格** 报表查看器工具栏显示各个参数的提示和默认值。 可以在参数窗格中自定义参数布局。 有关详细信息，请参阅 [自定义报表中的参数窗格（报表生成器）](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中所创建的移动报表中使用。  
   
-2. **@SalesDate 参数**参数 @SalesDate 的数据类型为 DateTime。 文本框旁边会显示“选择日期”提示。 若要修改日期，请在文本框中键入新日期或使用日历控件。  
+2. **@SalesDate 参数**参数 @SalesDate 的数据类型为 DateTime  。 文本框旁边会显示“选择日期”提示。 若要修改日期，请在文本框中键入新日期或使用日历控件。  
   
-3. **@ShowAll 参数**参数 @ShowAll 的数据类型为 Boolean。 使用单选按钮指定 **True** 或 **False**。  
+3. **@ShowAll 参数**参数 @ShowAll 的数据类型为 Boolean  。 使用单选按钮指定 **True** 或 **False**。  
   
 4. **“显示或隐藏参数区域”控点** 在报表查看器工具栏上，单击此箭头可显示或隐藏参数窗格。  
   
-5. **@CategoryQuota 参数**参数 @CategoryQuota 的数据类型为 Float，因此它采用数值。  @CategoryQuota 设置为允许多个值。  
+5. **@CategoryQuota 参数**参数 @CategoryQuota 的数据类型为 Float，因此它采用数值  。  @CategoryQuota 设置为允许多个值。  
   
-6. **查看报表** 输入参数值之后，单击“查看报表”可运行报表。 如果所有参数都具有默认值，则报表会在第一次查看时自动运行。  
+6. **查看报表** 输入参数值之后，单击“查看报表”  可运行报表。 如果所有参数都具有默认值，则报表会在第一次查看时自动运行。  
   
 ## <a name="bkmk_Create_Parameters"></a> 创建参数
 
@@ -157,9 +157,9 @@ ms.locfileid: "65576688"
 |Visible|选择此选项可在报表运行时在其顶部显示报表参数。 此选项允许用户在运行时选择参数值。|  
 |Hidden|选择此选项可隐藏已发布报表中的报表参数。 报表参数值仍可在报表 URL、订阅定义或报表服务器中进行设置。|  
 |内部|选择此选项可以隐藏报表参数。 在已发布报表中，只能在报表定义中查看报表参数。|  
-|可用值|如果已为参数指定可用值，则有效值将始终作为下拉列表显示。 例如，如果为 **DateTime** 参数提供了可用值，则在参数窗格中将显示日期下拉列表而不是显示日历控件。<br /><br /> 为了确保值列表在报表与子报表中是一致的，可以在数据源中设置一个选项，使用单个事务处理与数据源关联的数据集中的所有查询。<br /><br /> **安全说明** 在任何包含数据类型为 Text 的参数的报表中，请务必使用可用值列表（也称为有效值列表），并确保任何运行该报表的用户仅具有查看该报表中数据所必需的权限。 有关详细信息，请参阅 [安全性（报表生成器）](../../reporting-services/report-builder/security-report-builder.md)中所创建的移动报表中使用。|  
+|可用值|如果已为参数指定可用值，则有效值将始终作为下拉列表显示。 例如，如果为 **DateTime** 参数提供了可用值，则在参数窗格中将显示日期下拉列表而不是显示日历控件。<br /><br /> 为了确保值列表在报表与子报表中是一致的，可以在数据源中设置一个选项，使用单个事务处理与数据源关联的数据集中的所有查询。<br /><br /> **安全说明** 在任何包含数据类型为 Text 的参数的报表中，请务必使用可用值列表（也称为有效值列表），并确保任何运行该报表的用户仅具有查看该报表中数据所必需的权限  。 有关详细信息，请参阅 [安全性（报表生成器）](../../reporting-services/report-builder/security-report-builder.md)中所创建的移动报表中使用。|  
 |默认值|设置来自查询或静态列表的默认值。<br /><br /> 如果每个参数均具有默认值，则报表将在第一次查看时自动运行。|  
-|高级|设置报表定义属性 **UsedInQuery**，该值指示此参数是直接还是间接影响报表中的数据。<br /><br /> **自动确定何时刷新**<br /> 当您希望报表处理器来确定该值的设置时选择此选项。 如果报表处理器发现数据集查询具有对此参数的直接或间接引用，或者报表具有子报表，则该值为 **True** 。<br /><br /> **始终刷新**<br /> 当报表参数直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 **UsedInQuery** 设置为 True。<br /><br /> **从不刷新**<br /> 当报表参数未直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 **UsedInQuery** 设置为 False。<br /><br /> **注意** 应慎重使用“从不刷新”。 在报表服务器上， **UsedInQuery** 用于帮助控制报表数据和所呈现报表的高速缓存选项，以及控制快照报表的参数选项。 如果您未正确设置 **“从不刷新”** ，可能导致对不正确的报表数据或报表进行高速缓存，或者导致快照报表具有不一致的数据。 有关详细信息，请参阅[报表定义语言 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)。|  
+|高级|设置报表定义属性 **UsedInQuery**，该值指示此参数是直接还是间接影响报表中的数据。<br /><br /> **自动确定何时刷新**<br /> 当您希望报表处理器来确定该值的设置时选择此选项。 如果报表处理器发现数据集查询具有对此参数的直接或间接引用，或者报表具有子报表，则该值为 **True** 。<br /><br /> **始终刷新**<br /> 当报表参数直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 **UsedInQuery** 设置为 True。<br /><br /> **从不刷新**<br /> 当报表参数未直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 **UsedInQuery** 设置为 False。<br /><br /> **注意** 应慎重使用“从不刷新”  。 在报表服务器上， **UsedInQuery** 用于帮助控制报表数据和所呈现报表的高速缓存选项，以及控制快照报表的参数选项。 如果您未正确设置 **“从不刷新”** ，可能导致对不正确的报表数据或报表进行高速缓存，或者导致快照报表具有不一致的数据。 有关详细信息，请参阅[报表定义语言 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)。|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> 数据集查询  
  若要筛选数据集查询中的数据，可以通过指定结果集中要包含或排除的值，来包含一个限制检索到的数据的限制子句。  
@@ -168,7 +168,7 @@ ms.locfileid: "65576688"
   
 -   对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，不同的数据源支持不同的参数语法。 支持范围包括在查询中按位置或名称标识的参数。 有关详细信息，请参阅[报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md) 中针对特定外部数据源类型的相关主题。 在关系查询设计器中，必须为筛选器选择参数选项，才能创建参数化查询。 有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
   
--   对于基于多维数据源（例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase）的查询，可以指定是否创建基于查询设计器中您指定的筛选器的参数。 有关详细信息，请参阅[查询设计器（报表生成器）](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)中与数据扩展插件对应的查询设计器主题。  
+-   对于基于多维数据源（例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase）的查询，可以指定是否创建基于查询设计器中您指定的筛选器的参数。 有关详细信息，请参阅[查询设计器（报表生成器）](../report-data/query-design-tools-ssrs.md)中与数据扩展插件对应的查询设计器主题。  
   
 ##  <a name="bkmk_Manage_Parameters"></a> 已发布报表的参数管理  
  当您设计报表时，报表参数保存在报表定义中。 当您发布报表时，报表参数与报表定义分开保存和管理。  
@@ -196,7 +196,7 @@ ms.locfileid: "65576688"
 ##  <a name="bkmk_Parameters_Subscription"></a> 订阅参数  
  您可以定义按需订阅或快照订阅，可以指定在订阅处理过程中所用的参数值。  
   
--   按需运行报表。  对于按需报表，你可以指定不同于每个参数（该报表所列的参数）的已发布值的参数值。 例如，假设有一个 Call Service 报表使用 *Time Period* 参数返回当前日、周或月的客户服务请求。 如果报表的默认参数值设置为“今天”，则订阅可以使用不同的参数值（例如，“周”或“月”）以生成包含每周或每月数字的报表。  
+-   按需运行报表  。  对于按需报表，你可以指定不同于每个参数（该报表所列的参数）的已发布值的参数值。 例如，假设有一个 Call Service 报表使用 *Time Period* 参数返回当前日、周或月的客户服务请求。 如果报表的默认参数值设置为“今天”  ，则订阅可以使用不同的参数值（例如，“周”  或“月”  ）以生成包含每周或每月数字的报表。  
   
 -   **快照。**  对于快照，订阅必须使用为快照定义的参数值。 您的订阅不能覆盖为快照定义的参数值。 例如，假设您要订阅作为报表快照运行的西部地区销售报表，并且该快照指定 **Western** 作为区域参数值。 在这种情况下，如果创建对此报表的订阅，则必须在订阅中使用参数值 **Western** 。 若要提供忽略参数的可见说明，则应将订阅页上的参数字段设置为只读字段。  
   

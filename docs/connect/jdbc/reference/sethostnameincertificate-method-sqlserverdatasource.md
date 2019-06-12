@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 012073c9d1f8f3646c9bea5fd35cb12e0e0343c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cde4c07a6a611fd6cd97324c46eae1e2ddc379ce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601776"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764368"
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>setHostNameInCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setHostNameInCertificate(java.lang.String hostNameInCertificate)
 #### <a name="parameters"></a>Parameters  
  *hostNameInCertificate*  
   
- 一个包含主机名的字符串。  
+ 一个包含主机名的字符串  。  
   
 ## <a name="remarks"></a>Remarks  
  当使用 SSL 对通信层加密时，将使用 hostNameInCertificate 值来验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 证书。 默认值为 null。  

@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10959976eb6c3c9908d7f5953a8a2edb1c1328c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: caad7bed9eab964193f0c5ec6734a1dc097b26ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654906"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761525"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>updateObject 方法 (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的列名称和小数位数使用 Object 值更新指定的列。  
+  根据给定的列名称和小数位数使用 Object  值更新指定的列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,11 +40,11 @@ public void updateObject(java.lang.String columnName,
 #### <a name="parameters"></a>Parameters  
  *columnName*  
   
- 一个包含列名的字符串。  
+ 一个包含列名的字符串  。  
   
- obj  
+ obj   
   
- Object 值。  
+ Object 值  。  
   
  *scale*  
   
@@ -54,7 +54,7 @@ public void updateObject(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateObject 方法由 java.sql.ResultSet 接口中的 updateObject 方法指定。  
+ 此 getObject 方法是由 java.sql.ResultSet 接口中的 getObject 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateObject 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   

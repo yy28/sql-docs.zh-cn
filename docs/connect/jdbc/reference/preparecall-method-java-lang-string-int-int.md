@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6df80276995f7a58d51f4e1ea52539ab9eb6a66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 79340619e65fdcfd0bb076697ef6fa63cfb45c03
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597595"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771091"
 ---
 # <a name="preparecall-method-javalangstring-int-int"></a>prepareCall 方法 (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,15 +40,15 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 #### <a name="parameters"></a>Parameters  
  *sql*  
   
- 包含 SQL 语句的 String。  
+ 包含 SQL 语句的 String  。  
   
  *resultSetType*  
   
- 指示结果集类型的 int。  
+ 指示结果集类型的 int  。  
   
  *resultSetConcurrency*  
   
- 指示结果集并发类型的 int。  
+ 指示结果集并发类型的 int  。  
   
 ## <a name="return-value"></a>返回值  
  一个 CallableStatement 对象。  

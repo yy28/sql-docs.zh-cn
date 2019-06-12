@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd2395d063b8e4b5f9f237d49f5011e8630124d9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1906db6af5e73905b26d5e62394221ce790ec47b
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65572317"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500424"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 连接类型 (SSRS)
   若要在报表中包含来自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的数据扩展插件，让你可以从 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源检索多维数据。  
@@ -27,7 +27,7 @@ ms.locfileid: "65572317"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- 有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="Credentials"></a> 凭据  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 有关详细信息，请参阅[数据连接、 数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[指定凭据和连接信息的报表数据源](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> 查询  
@@ -73,7 +73,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>预定义的字段属性  
- 通常受多个数据访问接口支持并出现在报表数据集的基础 MDX 查询中的预定义字段属性。 例如，MDX 维度属性 MEMBER_UNIQUE_NAME 映射到预定义报表数据集字段属性 **UniqueName**。 若要在文本框中包含唯一名称值，请使用表达式 `=Fields!`*\<FieldName>*`.UniqueName`。  
+ 通常受多个数据访问接口支持并出现在报表数据集的基础 MDX 查询中的预定义字段属性。 例如，MDX 维度属性 MEMBER_UNIQUE_NAME 映射到预定义报表数据集字段属性 **UniqueName**。 若要在文本框中包含唯一名称值，请使用表达式 `=Fields!` *\<FieldName>* `.UniqueName`。  
   
  下表提供了可以用于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的预定义字段属性的列表。  
   
@@ -90,7 +90,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>自定义属性  
- 为某个数据访问接口所支持并出现在报表数据集的基础 MDX 查询中的自定义字段属性，但这些属性不作为该数据集的字段出现在报表“数据集”窗格中。 例如， **Long Names** 是为某个维度级别定义的成员属性。 若要在文本框中包含该值，请使用表达式 `=Fields!`*\<FieldName>*`("Long Names")`。 表达式中的字段名区分大小写。  
+ 为某个数据访问接口所支持并出现在报表数据集的基础 MDX 查询中的自定义字段属性，但这些属性不作为该数据集的字段出现在报表“数据集”窗格中。 例如， **Long Names** 是为某个维度级别定义的成员属性。 若要在文本框中包含该值，请使用表达式 `=Fields!` *\<FieldName>* `("Long Names")`。 表达式中的字段名区分大小写。  
   
  可以使用以下语法在表达式中引用自定义扩展属性：  
   
@@ -125,7 +125,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

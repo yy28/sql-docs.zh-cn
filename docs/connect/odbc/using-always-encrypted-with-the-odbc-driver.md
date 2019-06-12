@@ -7,14 +7,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: ab53bcc4885ab91c3c9d022ffc3ba3bd72e2c5be
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198037"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801734"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "65198037"
 
 ### <a name="enabling-always-encrypted-in-an-odbc-application"></a>在 ODBC 应用程序中启用 Always Encrypted
 
-若要同时启用参数加密和结果集加密列解密，最简单的方法是将 `ColumnEncryption` 连接字符串关键字的值设置为“Enabled”。 以下是启用 Always Encrypted 的连接字符串示例：
+若要同时启用参数加密和结果集加密列解密，最简单的方法是将 `ColumnEncryption` 连接字符串关键字的值设置为“Enabled”  。 以下是启用 Always Encrypted 的连接字符串示例：
 
 ```
 SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
@@ -96,7 +96,7 @@ CREATE TABLE [dbo].[Patients](
 
 - 插入到数据库列（包括加密列）中的值将作为绑定参数传递（请参阅 [SQLBindParameter 函数](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)）。 在将值发送到非加密列时，可以选择使用参数（强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，必须使用该参数。 若将插入 SSN 或 BirthDate 列的值传递为嵌入查询声明的文本，查询将失败，因为驱动程序不会尝试加密或处理查询中的文本。 因此，服务器会因为与加密列不兼容而拒绝它们。
 
-- 将插入 SSN 列的参数的 SQL 类型设置为映射 char SQL Server 数据类型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`) 的 SQL_CHAR。 如果将该参数的类型设置为映射到 nchar 的 SQL_WCHAR，查询将失败，因为 Always Encrypted 不支持从加密 nchar 值到加密 char 值的服务器端转换。 有关数据类型映射的信息，请参阅 [ODBC 程序员参考 - 附录 D：数据类型](https://msdn.microsoft.com/library/ms713607.aspx)。
+- 将插入 SSN 列的参数的 SQL 类型设置为映射 char SQL Server 数据类型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`) 的 SQL_CHAR。  如果将该参数的类型设置为映射到 nchar 的 SQL_WCHAR，查询将失败，因为 Always Encrypted 不支持从加密 nchar 值到加密 char 值的服务器端转换。  有关数据类型映射的信息，请参阅 [ODBC 程序员参考 - 附录 D：数据类型](https://msdn.microsoft.com/library/ms713607.aspx)。
 
 ```
     SQL_DATE_STRUCT date;
@@ -268,11 +268,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 `SQLSetPos` API 允许应用程序使用已绑定 SQLBindCol 的缓冲区更新结果集中的行，并更新到之前拉取行数据的位置。 由于加密固定长度类型的非对称填充行为，在更新行中的其他列时，可能会意外更改这些列的数据。 使用 AE 时，若值小于缓冲区大小，将填充固定长度字符值。
 
-要忽略不作为 `SQLBulkOperations` 的一部分更新的列，或在将 `SQLSetPos` 用于基于游标的更新时，请使用 `SQL_COLUMN_IGNORE` 标记，以缓解此行为。  应忽略应用程序不直接修改的所有列，以提高性能，并避免截断绑定到小于其实际 (DB) 大小的缓冲区的列。 有关详细信息，请参阅 [SQLSetPos 函数参考](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)。
+要忽略不作为 `SQLBulkOperations` 的一部分更新的列，或在将 `SQLSetPos` 用于基于游标的更新时，请使用 `SQL_COLUMN_IGNORE` 标记，以缓解此行为。  应忽略应用程序不直接修改的所有列，以提高性能，并避免截断绑定到小于其实际 (DB) 大小的缓冲区的列。  有关详细信息，请参阅 [SQLSetPos 函数参考](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)。
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults 和 SQLDescribeCol
 
-应用程序的程序可以调用 [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx)来返回有关所准备声明中的列的元数据。  启用 Always Encrypted 后，如果在调用 `SQLDescribeCol` 之前先调用 `SQLMoreResults`，这样会导致调用 [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)，并无法正确返回加密列的纯文本元数据。 请先在预定义的声明上调用 `SQLDescribeCol`，然后再调用 *。*`SQLMoreResults`
+应用程序的程序可以调用 [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx)来返回有关所准备声明中的列的元数据。  启用 Always Encrypted 后，如果在调用 `SQLDescribeCol` 之前先调用 `SQLMoreResults`，这样会导致调用 [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)，并无法正确返回加密列的纯文本元数据。  请先在预定义的声明上调用 `SQLDescribeCol`，然后再调用 *。* `SQLMoreResults`
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>控制 Always Encrypted 对性能的影响
 
@@ -507,7 +507,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 #### <a name="reading-data-from-a-provider"></a>从提供程序读取数据
 
-使用 `SQLGetConnectAttr` 属性调用 `SQL_COPT_SS_CEKEYSTOREDATA` 后，将从上次写入到的提供程序读取数据“包”。 若不存在这样的提供程序，将出现“函数序列错误”。 如有必要，建议密钥存储提供程序实施者支持 0 字节大小的“虚拟写入”，以在不造成其他负面影响的情况下选择读取操作提供程序。
+使用 `SQLGetConnectAttr` 属性调用 `SQL_COPT_SS_CEKEYSTOREDATA` 后，将从上次写入到的提供程序读取数据“包”。  若不存在这样的提供程序，将出现“函数序列错误”。 如有必要，建议密钥存储提供程序实施者支持 0 字节大小的“虚拟写入”，以在不造成其他负面影响的情况下选择读取操作提供程序。
 
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
@@ -539,11 +539,11 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 在 ODBC Driver 17.3 for SQL Server 之前，无法使用 SQLPutData 部分发送要插入或比较的数据。 只能使用包含完整数据的缓冲区执行一次 SQLPutData 调用。 若要将长数据插入加密列，请使用输入数据文件利用批量复制 API 完成，具体步骤如下节所述。
 
 ### <a name="encrypted-money-and-smallmoney"></a>加密的 money 和 smallmoney
-参数无法面向加密的 money 或 smallmoney 列，因为没有映射这些类型的特定 ODBC 数据类型，从而会引发操作数类型冲突错误。
+参数无法面向加密的 money 或 smallmoney 列，因为没有映射这些类型的特定 ODBC 数据类型，从而会引发操作数类型冲突错误。  
 
 ## <a name="bulk-copy-of-encrypted-columns"></a>批量复制加密列
 
-自 ODBC Driver 17 for SQL Server 起，支持将 [SQL 批量复制函数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)和 bcp 实用工具与 Always Encrypted 结合使用。 可使用批量复制 (bcp_&#42;) API 和 bcp 实用工具插入和检索纯文本（用于插入时将加密，用于检索时将解密）和已加密文本（已转换的逐字字符串）。
+自 ODBC Driver 17 for SQL Server 起，支持将 [SQL 批量复制函数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)和 bcp 实用工具与 Always Encrypted 结合使用。  可使用批量复制 (bcp_&#42;) API 和 bcp 实用工具插入和检索纯文本（用于插入时将加密，用于检索时将解密）和已加密文本（已转换的逐字字符串）  。
 
 - 若要检索使用 varbinary(max) 格式的已加密文本（如用于批量加载到其他数据库），请以不使用 `ColumnEncryption` 选项的方式连接（或将其设置为 `Disabled`），并执行 BCP OUT 操作。
 
@@ -551,13 +551,13 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 - 若要插入使用 varbinary(max) 格式的已加密文本（如前面检索到的内容），请将 `BCPMODIFYENCRYPTED` 选项设置为 TRUE，并执行 BCP IN 操作。 请确保目标列的 CEK 与已加密文本的初始获取位置的 CEK 相同，以便生成的数据可解密。
 
-在使用 bcp 实用工具时，若要控制  **设置，请使用 -D 选项，并指定包含所需值的 DSN。**`ColumnEncryption` 若要插入已加密文本，请确保启用了用户的 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 设置。
+在使用 bcp 实用工具时，若要控制  **设置，请使用 -D 选项，并指定包含所需值的 DSN。** `ColumnEncryption` 若要插入已加密文本，请确保启用了用户的 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 设置。
 
 下表汇总了作用于加密列时的操作：
 
 |`ColumnEncryption`|BCP 方向|描述|
 |----------------|-------------|-----------|
-|`Disabled`|OUT（面向客户端）|检索已加密文本。 观察到的数据类型为 varbinary(max)。|
+|`Disabled`|OUT（面向客户端）|检索已加密文本。 观察到的数据类型为 varbinary(max)。 |
 |`Enabled`|OUT（面向客户端）|检索纯文本。 驱动程序将解密列数据。|
 |`Disabled`|IN（面向服务器）|插入已加密文本。 它专门用于在无需解密加密数据的情况下以不透明方式移动加密数据。 若未为用户设置 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 选项，或未为连接句柄设置 BCPMODIFYENCRYPTED，操作将失败。 有关详细信息，请参阅下文。|
 |`Enabled`|IN（面向服务器）|插入纯文本。 驱动程序将加密列数据。|

@@ -15,25 +15,25 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 871887e2896f2594dddda18d2ab342d4c222612a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711195"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778052"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>结合使用 ADO 和适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  要利用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的新功能，例如多个活动结果集 (MARS)、查询通知、用户定义类型 (UDT) 或新的 xml 数据类型，使用 ActiveX Data Objects (ADO) 的现有应用程序应使用适用于 SQL Server 的 OLE DB 驱动程序作为数据访问提供程序。  
+  要利用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的新功能，例如多个活动结果集 (MARS)、查询通知、用户定义类型 (UDT) 或新的 xml 数据类型，使用 ActiveX Data Objects (ADO) 的现有应用程序应使用适用于 SQL Server 的 OLE DB 驱动程序作为数据访问提供程序  。  
   
- 要让 ADO 能够使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 最新版的新功能，适用于 SQL Server 的 OLE DB 驱动程序进行了一些增强，扩展了 OLE DB 的核心功能。 借助这些增强功能，ADO 应用程序可使用更新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，还可使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的两个数据类型（xml 和 udt）。 通过这些增强功能，还可探索对 varchar、nvarchar 和 varbinary 数据类型的强化。 适用于 SQL Server 的 OLE DB 驱动程序将 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化属性添加到 DBPROPSET_SQLSERVERDBINIT 属性集供 ADO 应用程序使用，从而通过与 ADO 兼容的方式公开新的数据类型。 此外，SQL Server 的 OLE DB 驱动程序还定义了名为的新连接字符串关键字**DataTypeCompatibility** ，设置连接字符串中。  
+ 要让 ADO 能够使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 最新版的新功能，适用于 SQL Server 的 OLE DB 驱动程序进行了一些增强，扩展了 OLE DB 的核心功能。 借助这些增强功能，ADO 应用程序可使用更新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，还可使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的两个数据类型（xml 和 udt）   。 通过这些增强功能，还可探索对 varchar、nvarchar 和 varbinary 数据类型的强化    。 适用于 SQL Server 的 OLE DB 驱动程序将 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化属性添加到 DBPROPSET_SQLSERVERDBINIT 属性集供 ADO 应用程序使用，从而通过与 ADO 兼容的方式公开新的数据类型。 此外，SQL Server 的 OLE DB 驱动程序还定义了名为的新连接字符串关键字**DataTypeCompatibility** ，设置连接字符串中。  
 
 > [!NOTE]  
->  现有 ADO 应用程序可以使用 SQLOLEDB 访问接口来访问和更新 XML、UDT 以及大型值文本和二进制字段值。 新的更大型的 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型分别作为 ADO 类型 adLongVarChar、adLongVarWChar 和 adLongVarBinary 返回。 XML 列作为 adLongVarChar 返回，而 UDT 列作为 adVarBinary 返回。 但是，如果使用 OLE DB 驱动程序的 SQL Server (MSOLEDBSQL) 而不是 SQLOLEDB，您需要确保设置**DataTypeCompatibility**关键字为"80"，以便新的数据类型能正确映射到 ADO 数据类型。  
+>  现有 ADO 应用程序可以使用 SQLOLEDB 访问接口来访问和更新 XML、UDT 以及大型值文本和二进制字段值。 新的更大型的 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型分别作为 ADO 类型 adLongVarChar、adLongVarWChar 和 adLongVarBinary 返回       。 XML 列作为 adLongVarChar 返回，而 UDT 列作为 adVarBinary 返回   。 但是，如果使用 OLE DB 驱动程序的 SQL Server (MSOLEDBSQL) 而不是 SQLOLEDB，您需要确保设置**DataTypeCompatibility**关键字为"80"，以便新的数据类型能正确映射到 ADO 数据类型。  
 
 ## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>通过 ADO 启用适用于 SQL Server 的 OLE DB 驱动程序  
  ADO 应用程序需要在其连接字符串中实现下列关键字，才能使用适用于 SQL Server 的 OLE DB 驱动程序：  
@@ -42,7 +42,7 @@ ms.locfileid: "47711195"
 
 -   `DataTypeCompatibility=80`  
 
- 有关详细信息的 ado 连接字符串关键字支持 OLE DB 驱动程序对于 SQL Server，请参阅[OLE DB 驱动程序适用于 SQL Server 连接字符串关键字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
+ 有关适用于 SQL Server 的 OLE DB 驱动程序中连接字符串关键字的详细信息，请参阅[结合使用连接字符串关键字与适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
 
  下例创建了一个 ADO 连接字符串，它完全启用以结合适用于 SQL Server 的 OLE DB 驱动程序一起使用，包括启用 MARS 功能：  
 
@@ -62,7 +62,7 @@ con.Open
  以下部分提供如何使用 ADO 与 OLE DB 驱动程序适用于 SQL Server 的示例。  
 
 ### <a name="retrieving-xml-column-data"></a>检索 XML 列数据  
- 本例中，使用记录集从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AdventureWorks 示例数据库中的 XML 列检索并显示数据。  
+ 本例中，使用记录集从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AdventureWorks 示例数据库中的 XML 列检索并显示数据  。  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -98,7 +98,7 @@ Set con = Nothing
 >  XML 列不支持记录集筛选。 如果使用，将返回错误。  
 
 ### <a name="retrieving-udt-column-data"></a>检索 UDT 列数据  
- 在该示例中，使用 Command 对象执行返回 UDT 的 SQL 查询，并更新 UDT 数据，然后将新数据插入数据库中。 该示例假定已在数据库中注册 Point UDT。  
+ 在该示例中，使用 Command 对象执行返回 UDT 的 SQL 查询，并更新 UDT 数据，然后将新数据插入数据库中  。 该示例假定已在数据库中注册 Point UDT  。  
 
 ```  
 Dim con As New ADODB.Connection  

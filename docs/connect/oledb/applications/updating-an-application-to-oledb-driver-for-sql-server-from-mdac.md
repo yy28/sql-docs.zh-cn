@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: edd075f24e1acaef4bb83485a8b7b2faef874d06
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 72f4406c4da07a1ddec422f09512dfe7cb28a028
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524478"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778092"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>将应用程序从 MDAC 更新到适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52524478"
 
 -   适用于 SQL Server 的 OLE DB 驱动程序支持仅使用连接字符串属性来配置客户端网络库。 如果需要更完整的网络库配置，您必须使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器。  
 
--   MDAC 连接字符串允许通过布尔值 (**，则返回 true**) 用于**Trusted_Connection**关键字。 SQL Server 连接字符串用于 OLE DB 驱动程序必须使用**是**或**没有**。  
+-   MDAC 连接字符串允许通过布尔值 ( **，则返回 true**) 用于**Trusted_Connection**关键字。 SQL Server 连接字符串用于 OLE DB 驱动程序必须使用**是**或**没有**。  
 
 -   警告和错误已发生小的改动。 现在，服务器返回的警告和错误在传递给适用于 SQL Server 的 OLE DB 驱动程序时会保留相同的严重性。 如果要依赖于捕获特定的警告和错误，则应当确保已经全面测试了应用程序。  
 
@@ -69,11 +69,11 @@ ms.locfileid: "52524478"
 
 -   当 OLE DB 驱动程序适用于 SQL Server 连接到[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]和更高版本，服务器错误 16947 会作为 sql_error 返回返回。 定位更新无法更新行或定位删除无法删除行时，会出现此错误。 当 MDAC 连接到任何版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，服务器错误 16947 会作为警告 (SQL_SUCCESS_WITH_INFO) 返回。  
 
--   适用于 SQL Server 的 OLE DB 驱动程序实现 IDBDataSourceAdmin 接口（是一个以前未实现的可选 OLE DB 接口），但只实现了此可选接口的 CreateDataSource 方法。 [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   适用于 SQL Server 的 OLE DB 驱动程序实现 IDBDataSourceAdmin 接口（是一个以前未实现的可选 OLE DB 接口），但只实现了此可选接口的 CreateDataSource 方法   。 [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
 
 -   在 TABLE_TYPE 设置为 SYNONYM 的情况下，适用于 SQL Server 的 OLE DB 驱动程序返回 TABLES 和 TABLE_INFO 架构行集中的同义词。  
 
--   数据类型 varchar(max)、nvarchar(max)、varbinary(max)、xml、udt 或其他大型对象类型的返回值不能返回到早于 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的客户端版本。 如果想要将这些类型用作返回值，则必须使用适用于 SQL Server OLE DB 驱动程序。  
+-   数据类型 varchar(max)、nvarchar(max)、varbinary(max)、xml、udt 或其他大型对象类型的返回值不能返回到早于 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的客户端版本      。 如果想要将这些类型用作返回值，则必须使用适用于 SQL Server OLE DB 驱动程序。  
 
 -   MDAC 允许在手动事务和隐式事务启动时执行以下语句，但适用于 SQL Server 的 OLE DB 驱动程序不允许。 这些语句必须以自动提交模式执行。  
 
@@ -91,7 +91,7 @@ ms.locfileid: "52524478"
 
 -   MDAC 应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的数据类型将显示为与 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 兼容的数据类型，如下表所示。  
 
-    |SQL Server 2005 类型|SQL Server 2000 类型|  
+    |SQL Server 2005 类型|SQL Server 2005 类型|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  

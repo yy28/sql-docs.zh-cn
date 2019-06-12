@@ -20,13 +20,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, library files
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 528f55ba4a95da2f7e68de47ad25f88eae3af668
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: b188649e138dddfc7dd4fd9fe974d6ccf28cc904
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744417"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777960"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>使用适用于 SQL Server 的 OLE DB 驱动程序头文件和库文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "56744417"
  OLE DB 应用程序，用于 SQL Server 的 OLE DB 驱动程序只需引用 msoledbsql.h。 如果应用程序使用 MDAC (SQLOLEDB) 和适用于 SQL Server 的 OLE DB 驱动程序，则可同时引用 sqloledb.h 和 msoledbsql.h，但必须先引用 sqloledb.h。  
   
 ## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>SQL Server 标头文件使用 OLE DB 驱动程序  
- 若要为 SQL Server 标头文件使用 OLE DB 驱动程序，必须使用**包括**在 C/c + + 编程代码内的语句。 以下部分介绍如何在 OLE DB 应用程序中执行此操作。  
+ 若要为 SQL Server 标头文件使用 OLE DB 驱动程序，必须使用**包括**语句包含在你的 C /C++编程代码。 以下部分介绍如何在 OLE DB 应用程序中执行此操作。  
   
 > [!NOTE]  
->  OLE DB 驱动程序的 SQL Server 标头和库文件只能是编译使用 Visual Studio c + + 2012年或更高版本。  
+>  仅可使用 Visual Studio 编译的 SQL Server 标头和库文件，OLE DB 驱动程序C++2012年或更高版本。  
   
 ### <a name="ole-db"></a>OLE DB  
  若要使用 SQL Server OLE DB 应用程序，使用以下编程代码行中的标头文件，OLE DB 驱动程序：  

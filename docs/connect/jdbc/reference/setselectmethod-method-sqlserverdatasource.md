@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7934276d-5ac9-4cbc-a2a0-2c65c93733ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 629c92aaf5ffb23976ad2e4ff2377cc53f87120d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c48aabcb618ba16c0769210903318b0d386d941d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842555"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767853"
 ---
 # <a name="setselectmethod-method-sqlserverdatasource"></a>setSelectMethod 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setSelectMethod(java.lang.String selectMethod)
 #### <a name="parameters"></a>Parameters  
  *selectMethod*  
   
- 一个包含默认游标类型的 String 值。  
+ 一个包含默认游标类型的 String  值。  
   
 ## <a name="remarks"></a>Remarks  
  selectMethod 是用于结果集的默认游标类型。 当处理大型结果集且不想在客户端的内存中存储整个结果集时，此属性很有用。 通过将属性设置为“cursor”，可以创建可一次提取更小数据块区的服务器端游标。 如果未设置 selectMethod 属性，[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md) 将返回默认值“direct”。  
