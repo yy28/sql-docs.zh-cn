@@ -128,7 +128,7 @@ ms.locfileid: "65980809"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. 指定 sql:key-fields 以便在结果中生成正确的嵌套  
- 在以下架构中，没有使用指定的层次结构**\<sql: relationship >**。 此架构仍需指定**sql:key-字段**批注才能唯一标识 HumanResources.Employee 表中的雇员。  
+ 在以下架构中，没有使用指定的层次结构 **\<sql: relationship >** 。 此架构仍需指定**sql:key-字段**批注才能唯一标识 HumanResources.Employee 表中的雇员。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

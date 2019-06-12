@@ -148,7 +148,7 @@ ms.locfileid: "65980998"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 将 XML 元素映射到 XML 数据类型列  
- 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Production.ProductModel >** 元素属于复杂类型，映射到具有相同名称在数据库中表。 **ProductModelID**属性属于简单类型，并因此，将映射到具有相同名称的列。 此示例和上一示例的唯一区别在于**\<说明 >** 元素映射到使用的列**xml**数据类型使用**xsd:anyType**类型。  
+ 在本示例中，由于不使用批注，因此还会发生默认映射。 **\<Production.ProductModel >** 元素属于复杂类型，映射到具有相同名称在数据库中表。 **ProductModelID**属性属于简单类型，并因此，将映射到具有相同名称的列。 此示例和上一示例的唯一区别在于 **\<说明 >** 元素映射到使用的列**xml**数据类型使用**xsd:anyType**类型。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
