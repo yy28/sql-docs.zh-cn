@@ -1,6 +1,6 @@
 ---
 title: 创建链接报表 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reports
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 19a78d5909d62054903a61d18c89d975cde1befe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571612"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506642"
 ---
 # <a name="create-a-linked-report"></a>创建链接报表
   链接报表是提供对现有报表的访问点的报表服务器项。 从概念上说，它与用于运行程序或打开文件的程序快捷方式类似。  
@@ -26,26 +26,26 @@ ms.locfileid: "65571612"
   
  虽然链接报表通常基于参数化报表，但并不一定需要使用参数化报表。 每当您想使用不同的设置部署现有报表时，都可以创建链接报表。  
   
-### <a name="to-create-a-linked-report"></a>创建链接报表  
+## <a name="to-create-a-linked-report"></a>创建链接报表  
   
-1.  在报表管理器中，导航到包含想要链接到的报表的文件夹，然后打开选项菜单并单击 **“创建链接报表”**。  
+1. 在 web 门户中，导航到所需的报表，右键单击它并选择**管理**从下拉列表菜单。
+
+2. 上**管理<reportname>** 页上，选择**创建链接的报表**。  
   
-2.  键入新链接报表的名称。 根据需要，可以键入说明。  
+3. 键入新链接报表的名称。 输入可选说明。  
   
-3.  若要为报表选择不同的文件夹，请单击 **“更改位置”**。 单击要使用的文件夹，或者在 **“位置”** 框中键入文件夹名称。 [!INCLUDE[clickOK](../../includes/clickok-md.md)] 如果没有选择不同的文件夹，则将在当前文件夹（链接报表所基于的报表的存储位置）中创建链接报表。  
+4. 若要选择不同的报表的文件夹，选择右侧的省略号按钮 （...）***位置***。  导航到新文件夹的报表并选择**选择**。 如果不选择其他文件夹，在当前文件夹中创建链接的报表。  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 将打开链接报表。  
+5. 选择“创建”  。 创建链接的报表。  
+
+6. 下**高级**，选择不同**报表超时**如果需要，则值为，然后选择**应用**以保存所做的更改。
   
      链接报表的图标与报表服务器管理的其他项不同。 下面的图标表示链接报表：  
   
      ![链接报表图标](../../reporting-services/report-server/media/hlp-16linked.gif "链接报表图标")  
   
 ## <a name="see-also"></a>另请参阅  
- [打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [“新建链接报表”页（报表管理器）](https://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [“选择项位置”页（报表管理器）](https://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [报表的“常规”属性页（报表管理器）](https://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
- [Reporting Services 概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+ [打开和关闭报表&#40;web 门户&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+ [Reporting Services 概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)  
+ [报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)
   

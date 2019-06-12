@@ -1,6 +1,6 @@
 ---
 title: 为报表和共享数据集处理设置超时值 (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a0a28974b50d5230c962a19bc19630a55dbef48
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580961"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506440"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>为报表和共享数据集处理设置超时值 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以通过指定超时值来限制使用系统资源的方式。 报表服务器支持两种类型的超时值：  
   
--   嵌入数据集查询超时值，即报表服务器等待数据库响应的秒数。 此值在报表中定义。  
+- 嵌入数据集查询超时值，即报表服务器等待数据库响应的秒数。 此值在报表中定义。  
   
--   共享数据集查询超时值，即报表服务器等待数据库响应的秒数。 该值是共享数据集定义的一部分，并且可在您在报表服务器上管理共享数据集时进行管理。  
+- 共享数据集查询超时值，即报表服务器等待数据库响应的秒数。 该值是共享数据集定义的一部分，并且可在您在报表服务器上管理共享数据集时进行管理。  
   
--   报表执行超时值，即在停止前报表可持续处理的最大秒数。 此值在系统级定义。 可以针对不同的报表采用不同的设置。  
+- 报表执行超时值，即在停止前报表可持续处理的最大秒数。 此值在系统级定义。 可以针对不同的报表采用不同的设置。  
   
  大多数超时错误出现在查询处理期间。 如果遇到超时错误，请尝试增大查询超时值。 确保将报表执行超时值调整为比查询超时值更大的值。时间段必须足以完成查询和报表处理。  
   
@@ -50,12 +50,11 @@ ms.locfileid: "65580961"
  请注意，如果指定的超时值小于 60 秒，且报表处理的开始时间和完成时间均发生在报表服务器未对正在运行的作业进行计算的空闲时间段，则报表可以完全执行。 例如，如果将报表的超时值设置为 10 秒，而运行报表需要 20 秒，并且报表处理开始于 60 秒周期的前期，则报表可以完全处理。  
   
 > [!NOTE]  
->  可在 RSReportServer.config 文件中设定 **RunningRequestsDbCycle** 设置，以更改计算作业运行频率的频率。  
+> 可在 RSReportServer.config 文件中设定 **RunningRequestsDbCycle** 设置，以更改计算作业运行频率的频率。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+ [报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)  
   
