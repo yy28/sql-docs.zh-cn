@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: a025d124-3634-49fa-8bb5-e9b98f2d5de3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dca56a83f46664c8a4f059c37210122c798faf50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ff1732e9ea7d146fdd129dc86030039afbf97444
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667975"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776720"
 ---
 # <a name="updatenclob-method-javalangstring-javasqlnclob"></a>updateNClob 方法 (java.lang.String, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 NClob 值更新指定列。  
+  使用 NClob  值更新指定列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ public void updateNClob(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parameters  
  *columnLabel*  
   
- 指示列标签的字符串。  
+ 指示列标签的字符串  。  
   
  *x*  
   
@@ -44,9 +44,9 @@ public void updateNClob(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateNClob 方法由 java.sql.ResultSet 接口中的 updateNClob 方法指定。  
+ 此 getNClob 方法是由 java.sql.ResultSet 接口中的 getNClob 方法指定的。  
   
- 此方法仅支持**nvarchar （max)**， **ntext**，并**xml**列。 在任何其他数据类型上使用此方法会引发异常。  
+ 此方法仅支持**nvarchar （max)** ， **ntext**，并**xml**列。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateNClob 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

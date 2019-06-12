@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f61427cdc3a71ebba5c6d511c3a5c8068b44c496
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6e374dd44d25a40953662cada81f6cc3d949f97c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778745"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771097"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,15 +40,15 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 #### <a name="parameters"></a>Parameters  
  *sCatalog*  
   
- 一个包含目录名称的字符串。 对此参数提供 Null 值指示无需使用目录名称。  
+ 一个包含目录名称的字符串  。 对此参数提供 Null 值指示无需使用目录名称。  
   
  *sSchema*  
   
- 一个包含架构名称模式的字符串。 对此参数提供 Null 值指示无需使用架构名称。  
+ 一个包含架构名称模式的字符串  。 对此参数提供 Null 值指示无需使用架构名称。  
   
  *proc*  
   
- 一个包含过程名称模式的字符串。  
+ 一个包含过程名称模式的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
@@ -69,7 +69,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 |NUM_INPUT_PARAMS|**int**|保留以供将来使用，当前返回 -1 值。|  
 |NUM_OUTPUT_PARAMS|**int**|保留以供将来使用，当前返回 -1 值。|  
 |NUM_RESULT_SETS|**int**|保留以供将来使用，当前返回 -1 值。|  
-|REMARKS|**String**|过程列的说明。<br /><br /> <br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
+|REMARKS|**String**|过程列的说明。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
 |PROCEDURE_TYPE|**smallint**|存储过程的类型。 可以为下列值之一：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  

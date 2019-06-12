@@ -1,6 +1,6 @@
 ---
 title: ReportingServicesService 配置文件 | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78156832d2e66d95e4a9868bef2336c4769d9bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581330"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506634"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 配置文件
 
@@ -26,8 +26,13 @@ ms.locfileid: "65581330"
 ReportingServicesService.exe.config 文件包含配置跟踪的设置信息。  
   
 ## <a name="file-location"></a>文件位置  
- 此文件位于 \Reporting Services\Report Server\Bin 文件夹。  
-  
+此文件可能位于以下路径之一：  
+
+``` Paths  
+\Reporting Services\Report Server\Bin  
+\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\bin  
+```  
+ 
 ## <a name="editing-guidelines"></a>编辑指南  
  您可以对此文件进行修改，重命名日志文件或提高/降低跟踪级别。 请不要修改任何其他设置。 有关说明，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
@@ -86,7 +91,6 @@ ReportingServicesService.exe.config 文件包含配置跟踪的设置信息。
 |**运行时**|指定支持与早期版本的向后兼容性的配置设置。 运行时设置用于将指向早期版本的 Microsoft.ReportingServices.Interfaces 的请求重定向到新版本。<br /><br /> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 产品文档对本节中的所有配置设置都进行了说明。 有关详细信息，请在 MSDN 网站上或在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文档中搜索“运行时架构设置”。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
+[Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+[报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

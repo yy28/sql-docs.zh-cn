@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a80e7c63a92863abdbcbba0475fe74f05a3c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 18aef50a23c7452e371abb30e6897b3ec11b48f3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799095"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796110"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序处理错误和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-默认情况下，SQLSRV 驱动程序会将警告视为错误；对生成错误或警告的 sqlsrv 函数的调用将返回 false。 本主题演示如何关闭此默认行为以及如何分别处理警告与错误。  
+默认情况下，SQLSRV 驱动程序会将警告视为错误；对生成错误或警告的 sqlsrv 函数的调用将返回 false   。 本主题演示如何关闭此默认行为以及如何分别处理警告与错误。  
   
 > [!NOTE]  
 > 有一些例外情况，即将警告视为错误的默认行为。 对应于 SQLSTATE 值 01000、01001、01003 和 01S02 的警告决不会被视为错误。  
   
 ## <a name="example"></a>示例  
-以下代码示例使用两个用户定义的函数（即 DisplayErrors 和 DisplayWarnings）来处理错误和警告。 该示例演示如何通过执行以下操作分别处理警告和错误：  
+以下代码示例使用两个用户定义的函数（即 DisplayErrors  和 DisplayWarnings  ）来处理错误和警告。 该示例演示如何通过执行以下操作分别处理警告和错误：  
   
 1.  关闭将警告视为错误的默认行为。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "47799095"
   
 4.  显示每个员工的剩余休假小时数。  
   
-在首次调用 sqlsrv 函数 ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)) 过程中，警告将被视为错误。 因为警告添加到了错误集合中，因此不需要分别检查警告和错误。 但是，在后续调用 **sqlsrv** 函数过程中，不会将警告视为错误，因此必须准确地检查警告和错误。  
+在首次调用 sqlsrv  函数 ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)) 过程中，警告将被视为错误。 因为警告添加到了错误集合中，因此不需要分别检查警告和错误。 但是，在后续调用 **sqlsrv** 函数过程中，不会将警告视为错误，因此必须准确地检查警告和错误。  
   
 另请注意，该示例代码在每次调用 **sqlsrv** 函数之后检查错误。 这是建议做法。  
   
-该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。 当针对新安装的 AdventureWorks 数据库运行该示例时，它将产生三条警告和两个错误。 前两条警告是连接到数据库时就会发出的标准警告。 之所以出现第三条警告是因为员工的可用休假小时数更新为小于零的值。 发生错误的原因是员工的可用休假小时数更新为小于 40 小时的值，这与表中的约束条件冲突。  
+此示例假定本地计算机上已安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。 当针对新安装的 AdventureWorks 数据库运行该示例时，它将产生三条警告和两个错误。 前两条警告是连接到数据库时就会发出的标准警告。 之所以出现第三条警告是因为员工的可用休假小时数更新为小于零的值。 发生错误的原因是员工的可用休假小时数更新为小于 40 小时的值，这与表中的约束条件冲突。  
   
 ```  
 <?php  

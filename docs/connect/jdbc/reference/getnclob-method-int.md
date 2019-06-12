@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 10dfa251-9408-469e-ae2a-1acf3917cf47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d55e65eba2f83f1ba8ae65ff110e2456958a719
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ff8d01b6f8d4350a2782e9660baab3d043d83582
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812347"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784447"
 ---
 # <a name="getnclob-method-int"></a>getNClob 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索指定 JDBC NCLOB 参数作为 Java 编程语言中的 NClob 对象的值。  
+  检索指定 JDBC NCLOB  参数作为 Java 编程语言中的 NClob 对象的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ public java.sql.NClob getNClob(int parameterIndex)
 #### <a name="parameters"></a>Parameters  
  *parameterIndex*  
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
  ANClobobject。  

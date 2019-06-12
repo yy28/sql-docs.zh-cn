@@ -1,5 +1,5 @@
 ---
-title: PDO::quote |Microsoft Docs
+title: PDO::quote | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b14ce7da2a7cb7fbc59de41fc7a651c6e67c86c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: b08ead32ba3c31f8f928c6e6dda051df1204073c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604728"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762022"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>Parameters  
 $*string*：要用引号括起来的字符串。  
   
-$parameter_type：指示数据类型的可选（整数）符号。  默认值为 PDO::PARAM_STR。  
+$parameter_type：指示数据类型的可选（整数）符号  。  默认值为 PDO::PARAM_STR。  
   
 ## <a name="return-value"></a>返回值  
 可传递到 SQL 语句的用引号括起来的字符串，或 False（如果失败）。  

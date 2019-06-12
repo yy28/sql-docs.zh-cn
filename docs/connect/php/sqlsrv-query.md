@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a4c504228d94fb8642bb024128f4a8079d64a610
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+manager: jroth
+ms.openlocfilehash: f04a41647f9d7bfb20551896fb1717dd8d200a98
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582820"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802383"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,9 +40,9 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 #### <a name="parameters"></a>Parameters  
 *$conn*：与已准备的语句相关联的连接资源。  
   
-$tsql：对应于已准备的语句的 Transact-SQL 表达式。  
+$tsql：对应于已准备的语句的 Transact-SQL 表达式  。  
   
-$params [可选]：对应于参数化查询中参数的值的阵列。 该阵列的每个元素可以是以下项之一：
+$params [可选]：对应于参数化查询中参数的值的阵列   。 该阵列的每个元素可以是以下项之一：
   
 -   文字值。  
   
@@ -59,17 +59,17 @@ $params [可选]：对应于参数化查询中参数的值的阵列。 该阵列
     |元素|描述|  
     |-----------|---------------|  
     |*$value*|参数值、PHP 变量或通过引用传递的 PHP 变量。|  
-    |*$direction*[可选]|用于指示参数方向的以下 **SQLSRV_PARAM_\*** 常量之一：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 默认值为 SQLSRV_PARAM_IN。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
-    |*$phpType*[可选]|SQLSRV_PHPTYPE_\* 常量，用于指定返回的值的 PHP 数据类型。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
-    |*$sqlType*[可选]|SQLSRV_SQLTYPE_\* 常量，用于指定输入值的 SQL Server 数据类型。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$direction*[可选]|用于指示参数方向的以下 **SQLSRV_PARAM_\*** 常量之一：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 默认值为 SQLSRV_PARAM_IN  。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$phpType*[可选]|SQLSRV_PHPTYPE_\* 常量，用于指定返回的值的 PHP 数据类型  。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$sqlType*[可选]|SQLSRV_SQLTYPE_\* 常量，用于指定输入值的 SQL Server 数据类型  。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
   
-$options [可选]：关联阵列，用于设置查询属性。 它是也受 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) 支持的相同键列表。
+$options [可选]：关联阵列，用于设置查询属性  。 它是也受 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) 支持的相同键列表。
   
 ## <a name="return-value"></a>返回值  
-语句资源。 如果无法创建和/或执行语句，将返回 false。  
+语句资源。 如果无法创建和/或执行语句，将返回 false  。  
   
 ## <a name="remarks"></a>Remarks  
-sqlsrv_query 函数非常适合一次性查询，并且应该是执行查询的默认选项，除非出现特殊情况。 此函数提供了一个简化的方法，以便使用最少的代码来执行查询。 sqlsrv_query 函数可用于语句准备和语句执行，还可用于执行参数化查询。  
+sqlsrv_query 函数非常适合一次性查询，并且应该是执行查询的默认选项，除非出现特殊情况  。 此函数提供了一个简化的方法，以便使用最少的代码来执行查询。 sqlsrv_query 函数可用于语句准备和语句执行，还可用于执行参数化查询  。  
   
 有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
@@ -77,7 +77,7 @@ sqlsrv_query 函数非常适合一次性查询，并且应该是执行查询的�
 在下面的示例中，向 AdventureWorks 数据库的 *Sales.SalesOrderDetail* 表格中插入单个行。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 > [!NOTE]  
-> 尽管下面的示例使用 INSERT 语句来演示将 sqlsrv_query 用于执行一次性语句，但是上述概念适用于所有 Transact-SQL 语句。  
+> 尽管下面的示例使用 INSERT 语句来演示将 sqlsrv_query 用于执行一次性语句，但是上述概念适用于所有 Transact-SQL 语句  。  
   
 ```  
 <?php  
@@ -121,7 +121,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>示例  
-下面的示例将更新 AdventureWorks 数据库的 Sales.SalesOrderDetail 表格中的字段。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
+下面的示例将更新 AdventureWorks 数据库的 Sales.SalesOrderDetail 表格中的字段  。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  

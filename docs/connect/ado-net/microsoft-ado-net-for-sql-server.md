@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a15fc702c5f7b3907441a237f5765b19ea41a14d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602277"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770656"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>用于 SQL Server 的 Microsoft ADO.NET
 
-![下载向下箭头线圈出](../../ssdt/media/download.png)[下载 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[下载 ODBC 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET 是用于 .NET 语言的核心数据访问技术。 使用 System.Data.SqlClient 命名空间从其他供应商访问 SQL Server 或提供程序以访问其存储空间。 使用 System.Data.Odbc 或 System.Data.Oledb 从使用其他数据访问技术的 .NET 语言访问数据。 当需要在客户端应用程序中的脱机数据缓存时，请使用 System.Data.Dataset。 它还提供本地暂留和 XML 功能，这些功能对于 Web 服务很有用。  
   
@@ -42,7 +42,7 @@ ADO.NET 是用于 .NET 语言的核心数据访问技术。 使用 System.Data.S
 ## <a name="more-samples"></a>更多示例  
 * [ADO.NET 代码示例](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [在 Windows 上的.NET Framework 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [在 macOS 上入门.NET Core](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
-* [在 Ubuntu 上的.NET Core 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
+* [在 macOS 上实现 .NET Core 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
+* [在 macOS 上实现 .NET Core 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
 * [Red Hat Enterprise Linux (RHEL) 上的.NET Core 入门](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

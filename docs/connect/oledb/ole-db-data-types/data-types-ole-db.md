@@ -15,20 +15,20 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: c4dfe5f61d13b79f9f4b7ad3053ad10ca49f5c81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9eaa809532c97b534480ac752c19756cb550b26b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803055"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769479"
 ---
 # <a name="data-types-ole-db"></a>数据类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  若要使用适用于 SQL Server 的 OLE DB 驱动程序执行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句和处理结果，必须了解绑定行集中的参数或列时以及当适用于 SQL Server 的 OLE DB 驱动程序使用 ITableDefinition 接口在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建表时，此访问接口是如何将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型映射到 OLE DB 数据类型的。  
+  若要使用适用于 SQL Server 的 OLE DB 驱动程序执行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句和处理结果，必须了解绑定行集中的参数或列时以及当适用于 SQL Server 的 OLE DB 驱动程序使用 ITableDefinition 接口在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建表时，此访问接口是如何将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型映射到 OLE DB 数据类型的  。  
   
 ## <a name="in-this-section"></a>本节内容  
   

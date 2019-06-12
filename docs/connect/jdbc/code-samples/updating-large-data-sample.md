@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 03ce063437879db5c93ca83e512dc5f807bba40e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d178f847ae9de2ca8ec9af07433c88b950fddc2f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611735"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769801"
 ---
 # <a name="updating-large-data-sample"></a>更新大型数据的示例
 
@@ -35,19 +35,19 @@ ms.locfileid: "47611735"
 要运行此示例应用程序，将需要访问 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库。 还需将 classpath 设置为包含 sqljdbc4.jar 文件。 如果 classpath 缺少 sqljdbc4.jar 项，示例应用程序将引发“找不到类”的常见异常。 有关如何设置 classpath 的详细信息，请参阅[使用 JDBC 驱动程序](../../../connect/jdbc/using-the-jdbc-driver.md)。
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供四个类库文件：sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 此示例使用 [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法，这两个方法是在 JDBC 4.0 API 中引入的，用于访问特定于驱动程序的响应缓冲方法。 为了编译和运行此示例，您需要对 JDBC 4.0 提供支持的 sqljdbc4.jar 类库。 若要选择哪个 JAR 文件的详细信息，请参阅[JDBC 驱动程序的系统要求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供四个类库文件：sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 此示例使用 [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法，这两个方法是在 JDBC 4.0 API 中引入的，用于访问特定于驱动程序的响应缓冲方法。 为了编译和运行此示例，您需要对 JDBC 4.0 提供支持的 sqljdbc4.jar 类库。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。
 
 ## <a name="example"></a>示例
 
 在下面的示例中，示例代码建立与 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 数据库的连接。 接下来，示例代码创建一个 Statement 对象并使用 [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法来检查 Statement 对象是否是指定的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 类的包装。 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法用于访问特定于驱动程序的响应缓冲方法。
 
-接下来，示例代码使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法将响应缓冲模式设置为“adaptive”，并演示如何获取自适应缓冲模式。
+接下来，示例代码使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法将响应缓冲模式设置为“adaptive”，并演示如何获取自适应缓冲模式  。
 
 然后，它运行 SQL 语句，并将自己返回的数据放入可更新的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象中。
 
 最后，示例代码将循环访问结果集中的数据行。 如果找到空的文档摘要，将结合使用 [updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) 和 [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法来更新数据行，并再次将它保存到数据库中。 如果已有数据，将使用 [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法来显示部分数据。
 
-驱动程序的默认行为是“adaptive”。 但是，对于只进的可更新结果集，以及当结果集中的数据大于应用程序内存时，应用程序必须使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法显式设置自适应缓冲模式。
+驱动程序的默认行为是“adaptive”  。 但是，对于只进的可更新结果集，以及当结果集中的数据大于应用程序内存时，应用程序必须使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法显式设置自适应缓冲模式。
 
 [!code[JDBC#UsingAdaptiveBuffering3](../../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]
 

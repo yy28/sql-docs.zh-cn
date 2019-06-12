@@ -22,22 +22,69 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 70487916496caa4cb2fba5a472262d22c7c123bd
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ebad80ec47c9d66e4079c76c1ca06e805ca259ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154652"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775408"
 ---
-# <a name="sql-server-service-broker"></a>SQL Server Service Broker
+# <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中的消息和队列应用程序提供本机支持。 这使开发人员可以更轻松地创建使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 组件在完全不同的数据库之间进行通信的复杂应用程序。 开发人员可以使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 轻松生成可靠的分布式应用程序。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)] 为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中的消息传递和队列提供本机支持。 开发人员可轻松创建通过 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 组件在不同数据库之间通信的复杂应用程序，也可构建分发式应用程序和可靠的应用程序。  
   
- 使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的应用程序开发人员无需编写复杂的内部通信和消息，即可跨多个数据库分发数据工作负荷。 因为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会处理会话上下文中的通信路径，所以这就减少了开发和测试工作。 同时还提高了性能。 例如，支持网站的前端数据库可以记录信息，并发送处理密集型任务以便在后端数据库中进行排队。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 确保在事务上下文中管理所有任务，以确保可靠性和技术一致性。  
+## <a name="when-to-use-service-broker"></a>何时使用 Service Broker
+
+ 使用 Service Broker 组件实现本机数据库内异步消息处理功能。 使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的应用程序开发人员无需编写复杂的内部通信和消息，即可跨多个数据库分发数据工作负荷。 由 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 处理对话上下文中的通信路径，因此 Service Broker 可减少开发和测试工作。 同时还提高了性能。 例如，支持网站的前端数据库可以记录信息，并发送处理密集型任务以便在后端数据库中进行排队。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 确保在事务上下文中管理所有任务，以确保可靠性和技术一致性。  
   
+## <a name="overview"></a>概述
+
+  Service Broker 是一种消息传递框架，可用于创建本机数据库内面向服务的应用程序。 与在查询生命周期期间不断从表中读取数据的经典查询处理功能不同，面向服务的应用程序中提供可交换消息的数据库服务。 每个服务都有一个队列，消息在处理之前都排在队列中。
+  
+![Service broker](media/service-broker.png)
+  
+  可使用 Transact-SQL `RECEIVE` 命令或通过每次消息到达队列时都要调用的激活过程来提取队列中的消息。
+  
+### <a name="creating-services"></a>创建服务
+ 
+  通过使用 [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md) Transact SQL 语句创建数据库服务。 可将服务与通过 [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md) 语句创建的消息队列相关联：
+  
+```sql
+CREATE QUEUE dbo.ExpenseQueue;
+GO
+CREATE SERVICE ExpensesService
+    ON QUEUE dbo.ExpenseQueue; 
+```
+
+### <a name="sending-messages"></a>发送消息
+  
+  使用 [SEND](../../t-sql/statements/send-transact-sql.md) Transact-SQL 语句在服务之间的对话上发送消息。 对话是通过 `BEGIN DIALOG` Transact-SQL 语句在服务之间建立的信道。 
+  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+
+BEGIN DIALOG @dialog_handle  
+FROM SERVICE ExpensesClient  
+TO SERVICE 'ExpensesService';  
+  
+SEND ON CONVERSATION @dialog_handle (@Message) ;  
+```
+   消息将发送到 `ExpenssesService` 并置于 `dbo.ExpenseQueue` 中。 由于没有与此队列关联的激活过程，因此在有人读取消息之前，该消息将保留在队列中。
+
+### <a name="processing-messages"></a>处理消息
+
+   可使用标准 `SELECT` 查询选择放置在队列中的消息。 `SELECT` 语句将不修改队列，也不删除消息。 要读取和拉取队列中的消息，可使用 [RECEIVE](../../t-sql/statements/receive-transact-sql.md) Transact-SQL 语句。
+
+```sql
+RECEIVE conversation_handle, message_type_name, message_body  
+FROM ExpenseQueue; 
+```
+
+  处理队列中的所有消息之后，应使用 [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md) Transact-SQL 语句关闭对话。
+
 ## <a name="where-is-the-documentation-for-service-broker"></a>Service Broker 文档在哪里？  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的参考文档位于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文档中。 本参考文档包含以下各节：  
   

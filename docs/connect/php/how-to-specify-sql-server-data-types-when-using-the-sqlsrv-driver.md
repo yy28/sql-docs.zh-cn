@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce11cfca3416796f24299c722c65e755d64f4d4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5d4727029dbb1ba4fbfdbdd10abf6b1cd0812790
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643845"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799663"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>如何：在使用 SQLSRV 驱动程序时指定 SQL Server 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47643845"
   
 3.  构建要在准备或执行查询时使用的 *$params* 数组。 请注意，在指定 SQL Server 数据类型时， *$params* 数组的每个元素必须也是一个数组。  
   
-4.  通过将相应的 SQLSRV_SQLTYPE_&#42; 常量用作 $params 数组的每个子数组中的第四个参数，指定所需的 SQL Server 数据类型。 有关 SQLSRV_SQLTYPE_&#42; 常量的完整列表，请参阅[常量 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 SQLTYPE 部分。 例如，在下列代码中， *$changeDate*、 *$rate*和 *$payFrequency* 分别指定为 **$params**数组中的 SQL Server 类型 **datetime**、 **money** 和 *tinyint* 。 因为没有为 *$employeeId* 指定任何 SQL Server 类型，并且该类型初始化为一个整数，所以将使用默认的 SQL Server 类型 **integer** 。  
+4.  通过将相应的 SQLSRV_SQLTYPE_&#42;  常量用作 $params  数组的每个子数组中的第四个参数，指定所需的 SQL Server 数据类型。 有关 SQLSRV_SQLTYPE_&#42;  常量的完整列表，请参阅[常量 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 SQLTYPE 部分。 例如，在下列代码中， *$changeDate*、 *$rate*和 *$payFrequency* 分别指定为 **$params**数组中的 SQL Server 类型 **datetime**、 **money** 和 *tinyint* 。 因为没有为 *$employeeId* 指定任何 SQL Server 类型，并且该类型初始化为一个整数，所以将使用默认的 SQL Server 类型 **integer** 。  
   
     ```  
     $employeeId = 5;  
@@ -55,7 +55,7 @@ ms.locfileid: "47643845"
     ```  
   
 ## <a name="example"></a>示例  
-以下示例将数据插入 AdventureWorks 数据库的 HumanResources.EmployeePayHistory 表中。 为 *$changeDate*、 *$rate*和 *$payFrequency* 参数指定 SQL Server 类型。 将默认 SQL Server 类型用于 *$employeeId* 参数。 若要验证数据是否已成功插入，请检索和显示相同的数据。  
+以下示例将数据插入 AdventureWorks 数据库的 HumanResources.EmployeePayHistory 表中  。 为 *$changeDate*、 *$rate*和 *$payFrequency* 参数指定 SQL Server 类型。 将默认 SQL Server 类型用于 *$employeeId* 参数。 若要验证数据是否已成功插入，请检索和显示相同的数据。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   

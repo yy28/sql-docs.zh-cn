@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e991ad5b1b88798604f4c8ba6486af3d739c96c1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 5e8a26089f1774de5a28a4ce7b4d750798792762
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041876"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801745"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "59041876"
 
 ODBC 是以 C 和 C++ for SQL Server 编写的用于应用程序的主要本机数据访问 API。 大多数数据源都有适用的 ODBC 驱动程序。 其他可以使用 ODBC 的语言包括 COBOL、Perl、PHP 和 Python。 ODBC 广泛用于数据集成方案。
 
-ODBC 驱动程序附带 [sqlcmd](../../tools/sqlcmd-utility.md) 和 [bcp](../../tools/bcp-utility.md) 等工具。 使用 sqlcmd 实用工具可以运行 Transact-SQL 语句、系统过程和 SQL 脚本。 bcp 实用工具可以在 Microsoft SQL Server 实例和用户指定格式的数据文件间大批量复制数据。 使用 bcp 实用工具可以将大量新行导入 SQL Server 表，或将表数据导出到数据文件。  
+ODBC 驱动程序附带 [sqlcmd](../../tools/sqlcmd-utility.md)  和 [bcp](../../tools/bcp-utility.md)  等工具。 使用 sqlcmd  实用工具可以运行 Transact-SQL 语句、系统过程和 SQL 脚本。 bcp  实用工具可以在 Microsoft SQL Server 实例和用户指定格式的数据文件间大批量复制数据。 使用 bcp  实用工具可以将大量新行导入 SQL Server 表，或将表数据导出到数据文件。  
 
 ## <a name="code-example-in-c"></a>C++ 中的代码示例
 
@@ -52,8 +52,8 @@ ODBC 驱动程序附带 [sqlcmd](../../tools/sqlcmd-utility.md) 和 [bcp](../../
 
 - [安装驱动程序](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [连接到 SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-- [使用 bcp 连接](../../connect/odbc/linux-mac/connecting-with-bcp.md)
-- [使用 sqlcmd 进行连接](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
+- [使用 bcp 连接  ](../../connect/odbc/linux-mac/connecting-with-bcp.md)
+- [使用 sqlcmd 进行连接  ](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [数据访问跟踪](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 - [常见问题解答](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [安装驱动程序管理器](../../connect/odbc/linux-mac/installing-the-driver-manager.md)

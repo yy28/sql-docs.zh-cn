@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: cff3ad26-0b6c-4d98-8deb-e89217486d79
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 396e474ed07195dfdb8ecb4f3405338c86346bf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 99055d4b27e3d91f23abb40359529cca1e39c307
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734635"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765705"
 ---
 # <a name="getbyte-method-int"></a>getByte 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的参数索引检索指定参数作为 byte 值的值。  
+  根据给定的参数索引检索指定参数作为 byte 值  的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +36,12 @@ public byte getByte(int index)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- 索引  
+ 索引   
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个 byte 值。  
+ 一个 byte 值  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

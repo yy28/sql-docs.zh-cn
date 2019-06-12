@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9eca16e0908bac5134d459414cbd43ee19a4665a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 19c732a38c5237811f4f2219292ab4589018f4e8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724955"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769408"
 ---
 # <a name="conversions-ole-db"></a>转换 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "47724955"
   
 -   格式**datetime**并**datetimeoffset**字符串是：  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[。*9999999*] [为*hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
--   时间字符串的格式为：  
+-   时间字符串的格式为  ：  
   
-     hh:mm:ss[.9999999]  
+     hh:mm:ss[.9999999]      
   
 -   格式**日期**字符串是：  
   
-     yyyy-mm-dd  
+     yyyy-mm-dd     
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 的早期版本实现了 OLE 转换，以防标准转换失败。 SQL Server 的 OLE DB 驱动程序遵循相同的行为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端。 因此，SQL Server 的 OLE DB 驱动程序由执行某些转换不同于 OLE DB 规范。  

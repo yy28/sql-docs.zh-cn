@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b81937878a4c9e733b6a7c23a6156221c356e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: df92d111897336fdcb40fad59cb5aafec3a52b6f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860638"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803361"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用大容量复制
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft SQL Server 包含一个名为 bcp 的受欢迎的命令行实用工具，以便将较大文件快速大容量复制到 SQL Server 数据库的表或视图中。 SQLServerBulkCopy 类允许你采用 Java 编写可提供类似功能的代码解决方案。 还有其他方法可将数据加载到 SQL Server 表（例如，INSERT 语句）中，但 SQLServerBulkCopy 提供的性能优势明显超过它们。  
+Microsoft SQL Server 包含一个名为 bcp 的受欢迎的命令行实用工具，以便将较大文件快速大容量复制到 SQL Server 数据库的表或视图中  。 SQLServerBulkCopy 类允许你采用 Java 编写可提供类似功能的代码解决方案。 还有其他方法可将数据加载到 SQL Server 表（例如，INSERT 语句）中，但 SQLServerBulkCopy 提供的性能优势明显超过它们。  
   
 SQLServerBulkCopy 类可用于只将数据写入 SQL Server 表。 但数据源并不局限于 SQL Server；可以使用任何数据源，只要数据可以使用 ResultSet、RowSet 或 ISQLServerBulkRecord 实现进行读取即可。  
   
@@ -124,17 +124,17 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 1. 连接到源服务器并获取要复制的数据。 如果可从 ResultSet 对象或 ISQLServerBulkRecord 实现检索数据，则数据还可以来自其他源。  
   
-2. 连接到目标服务器（除非希望 SQLServerBulkCopy 为你建立连接）。  
+2. 连接到目标服务器（除非希望 SQLServerBulkCopy 为你建立连接）  。  
   
-3. 创建 SQLServerBulkCopy 对象，通过 setBulkCopyOptions 设置任何必要的属性。  
+3. 创建 SQLServerBulkCopy 对象，通过 setBulkCopyOptions 设置任何必要的属性  。  
   
-4. 调用 setDestinationTableName 方法以指示用于大容量插入操作的目标表。  
+4. 调用 setDestinationTableName 方法以指示用于大容量插入操作的目标表  。  
   
-5. 调用 writeToServer 方法之一。  
+5. 调用 writeToServer 方法之一  。  
   
-6. 可以通过 setBulkCopyOptions 更新属性，并再次调用 writeToServer（如有必要）。  
+6. 可以通过 setBulkCopyOptions 更新属性，并再次调用 writeToServer（如有必要）   。  
   
-7. 调用 close，或将大容量复制操作包装在 try-with-resources 语句内。  
+7. 调用 close，或将大容量复制操作包装在 try-with-resources 语句内  。  
   
 > [!CAUTION]  
 > 我们建议使源列与目标列数据类型相匹配。 如果数据类型不匹配，则 SQLServerBulkCopy 会尝试将每个源值转换为目标数据类型。 转换可能会影响性能，也可能会导致意外错误。 例如，在多数情况下，Double 数据类型可转换为 Decimal 数据类型，但并非总是如此。  
@@ -362,9 +362,9 @@ public class BulkCopyMultiple {
 
 下面的应用程序演示了非事务大容量复制操作在操作中途遇到错误时将发生什么情况。  
   
-在示例中，源表和目标表均包含名为 ProductID 的标识列。 该代码首先通过删除所有行，然后插入知道其 ProductID 存在于源表中的一行，准备目标表。 默认情况下，在目标表中为添加的每个行生成一个标识列的新值。 在此示例中，在打开连接时设置某个选项，该选项用于强制执行大容量加载过程以改为使用源表中的标识值。  
+在示例中，源表和目标表均包含名为 ProductID 的标识列  。 该代码首先通过删除所有行，然后插入知道其 ProductID 存在于源表中的一行，准备目标表  。 默认情况下，在目标表中为添加的每个行生成一个标识列的新值。 在此示例中，在打开连接时设置某个选项，该选项用于强制执行大容量加载过程以改为使用源表中的标识值。  
   
-执行大容量复制操作，并将 BatchSize 属性设置为 10。 当操作遇到无效行时，将引发异常。 在此第一个示例中，大容量复制操作是非事务的。 将提交在发生错误之前复制的所有批；将回滚包含重复项的批，并且在处理任何其他批之前中止大容量复制操作。  
+执行大容量复制操作，并将 BatchSize 属性设置为 10  。 当操作遇到无效行时，将引发异常。 在此第一个示例中，大容量复制操作是非事务的。 将提交在发生错误之前复制的所有批；将回滚包含重复项的批，并且在处理任何其他批之前中止大容量复制操作。  
   
 > [!NOTE]  
 > 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
@@ -455,12 +455,12 @@ public class BulkCopyNonTransacted {
 
 ### <a name="performing-a-dedicated-build-copy-operation-in-a-transaction"></a>在事务中执行专用的生成复制操作 
 
-默认情况下，大容量复制操作是其自己的事务。 当想要执行专用的大容量复制操作时，请使用连接字符串创建 SQLServerBulkCopy 的新实例。 在此方案中，将创建大容量复制操作，然后提交或回滚该事务。 可以在 SQLServerBulkCopyOptions 中显式指定 UseInternalTransaction 选项，以便使大容量复制操作在其自己的事务中以显式方式执行，从而导致每批大容量复制操作在单独的事务中执行。  
+默认情况下，大容量复制操作是其自己的事务。 当想要执行专用的大容量复制操作时，请使用连接字符串创建 SQLServerBulkCopy 的新实例。 在此方案中，将创建大容量复制操作，然后提交或回滚该事务。 可以在 SQLServerBulkCopyOptions 中显式指定 UseInternalTransaction 选项，以便使大容量复制操作在其自己的事务中以显式方式执行，从而导致每批大容量复制操作在单独的事务中执行   。  
   
 > [!NOTE]  
 > 因为不同批在不同的事务中执行，因此如果在大容量复制操作期间出现错误，将回滚当前批中的所有行，但之前批中的行将保留在数据库中。  
   
-在 BulkCopyNonTransacted 中指定 UseInternalTransaction 选项时，大容量复制操作将包含在较大的外部事务中。 发生主键冲突错误时，将回滚整个事务，并且不会向目标表添加任何行。
+在 BulkCopyNonTransacted 中指定 UseInternalTransaction 选项时，大容量复制操作将包含在较大的外部事务中   。 发生主键冲突错误时，将回滚整个事务，并且不会向目标表添加任何行。
 
 ```java
 SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
@@ -473,7 +473,7 @@ copyOptions.setUseInternalTransaction(true);
 
 可以将已启用事务的 Connection 对象作为参数传递在 SQLServerBulkCopy 构造函数中。 在这种情况下，大容量复制操作在现有事务中执行，并且不对事务状态进行任何更改（即，既不提交也不中止该事务）。 这允许应用程序将大容量复制操作包含在带有其他数据库操作的事务中。 如果由于出现错误需要回滚整个大容量复制操作，或者如果大容量复制应作为可以回滚的较大过程的一部分执行，你可以在大容量复制操作之后随时对 Connection 对象执行回滚。  
   
-下面的应用程序与 BulkCopyNonTransacted 类似，但有一个例外：在此示例中，大容量复制操作包含在较大的外部事务中。 发生主键冲突错误时，将回滚整个事务，并且不会向目标表添加任何行。
+下面的应用程序与 BulkCopyNonTransacted  类似，但有一个例外：在此示例中，大容量复制操作包含在较大的外部事务中。 发生主键冲突错误时，将回滚整个事务，并且不会向目标表添加任何行。
 
 > [!NOTE]  
 > 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
@@ -573,19 +573,19 @@ public class BulkCopyExistingTransactions {
 > [!IMPORTANT]  
 > 除非已按[表设置](../../ssms/download-sql-server-management-studio-ssms.md)中所述创建了工作表来获得该表，否则将不会运行此示例。  
   
-1. 打开 SQL Server Management Studio 并连接到带有 AdventureWorks 数据库的 SQL Server。  
+1. 打开 SQL Server Management Studio 并连接到带有 AdventureWorks 数据库的 SQL Server  。  
   
-2. 展开数据库，右键单击“AdventureWorks 数据库”，再依次选择“任务”和“导出数据”...  
+2. 展开数据库，右键单击“AdventureWorks 数据库”，再依次选择“任务”  和“导出数据”  ...  
   
-3. 对于数据源，请选择允许你连接到 SQL Server（例如 SQL Server Native Client 11.0）的“数据源”、检查配置，然后选择“下一步”  
+3. 对于数据源，请选择允许你连接到 SQL Server（例如 SQL Server Native Client 11.0）的“数据源”、检查配置，然后选择“下一步”    
   
-4. 对于目标，请选择“平面文件目标”并输入含有目标的“文件名”（例如，C:\Test\TestBulkCSVExample.csv）。 检查“格式”是否已分隔，“文本限定符”是否为无，并启用“在第一个数据行中显示列名称”，然后选择“下一步”  
+4. 对于目标，请选择“平面文件目标”并输入含有目标的“文件名”（例如，C:\Test\TestBulkCSVExample.csv）   。 检查“格式”是否已分隔，“文本限定符”是否为无，并启用“在第一个数据行中显示列名称”，然后选择“下一步”      
   
-5. 依次选择“编写查询以指定要传输的数据”和“下一步”。  输入你的 SQL 语句 SELECT ProductID, Name, ProductNumber FROM Production.Product 并选择“下一步”  
+5. 依次选择“编写查询以指定要传输的数据”和“下一步”   。  输入你的 SQL 语句  SELECT ProductID, Name, ProductNumber FROM Production.Product 并选择“下一步”   
   
-6. 检查配置：可以将行分隔符保留为 {CR}{LF}，并将列分隔符保留为逗号 {,}。  选择“编辑映射”，并检查每个列的数据“类型”是否正确（例如，整数用于 ProductID，而 Unicode 字符串则用于其他列）。  
+6. 检查配置：可以将行分隔符保留为 {CR}{LF}，并将列分隔符保留为逗号 {,}。  选择“编辑映射”  ，并检查每个列的数据“类型”  是否正确（例如，整数用于 ProductID，而 Unicode 字符串则用于其他列）。  
   
-7. 跳到“完成”，并运行导出。  
+7. 跳到“完成”，并运行导出  。  
 
 ```java
 import java.sql.Connection;
@@ -657,9 +657,9 @@ public class BulkCopyCSV {
 
 从 Microsoft JDBC Driver 6.0 for SQL Server 开始，Always Encrypted 列支持大容量复制。  
   
-根据大容量复制选项以及源和目标表的加密类型，JDBC 驱动程序可以透明地解密并加密数据，或者按原样发送加密数据。 例如，将加密列的数据大容量复制到未加密列时，驱动程序会透明地解密数据，然后将其发送给 SQL Server。 同样，将未加密列（或者 CSV 文件）的数据大容量复制到加密列时，驱动程序会透明地加密数据，然后将其发送给 SQL Server。 如果源和目标均已加密，则根据 allowEncryptedValueModifications 大容量复制选项，驱动程序将按原样发送数据，或解密数据并在将其发送到 SQL Server 之前再次对其进行加密。  
+根据大容量复制选项以及源和目标表的加密类型，JDBC 驱动程序可以透明地解密并加密数据，或者按原样发送加密数据。 例如，将加密列的数据大容量复制到未加密列时，驱动程序会透明地解密数据，然后将其发送给 SQL Server。 同样，将未加密列（或者 CSV 文件）的数据大容量复制到加密列时，驱动程序会透明地加密数据，然后将其发送给 SQL Server。 如果源和目标均已加密，则根据 allowEncryptedValueModifications 大容量复制选项，驱动程序将按原样发送数据，或解密数据并在将其发送到 SQL Server 之前再次对其进行加密  。  
   
-有关详细信息，请参阅下面的 allowEncryptedValueModifications 大容量复制选项，和[结合使用 JDBC Driver 和 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。  
+有关详细信息，请参阅下面的 allowEncryptedValueModifications 大容量复制选项，和[结合使用 JDBC Driver 和 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  。  
   
 > [!IMPORTANT]  
 > 将 CSV 文件中的数据大容量复制到加密列时 Microsoft JDBC Driver 6.0 for SQL Server 的限制：  
@@ -724,7 +724,7 @@ SQLServerBulkCopy 类可用于只将数据写入 SQL Server 表。 但数据源�
 | Boolean UseInternalTransaction           | 当指定后，每批大容量复制操作将在事务中进行。 如果 SQLServerBulkCopy 使用现有连接（由构造函数指定），将引发 SQLServerException。  如果 SQLServerBulkCopy 已创建专用连接，将启用事务。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False - 没有事务                                               |
 | Int BatchSize                            | 每批中的行数。 在每批结束时，会将批中的行发送到服务器。<br /><br /> 当处理完 BatchSize 行或没有要发送到目标数据源的更多行时，即表示批已完成。  在已声明 SQLServerBulkCopy 实例而 UseInternalTransaction 选项不生效的情况下，会将行发送到服务器 BatchSize 行一次，但不执行任何与事务相关的操作。 如果 UseInternalTransaction 有效，每批行作为单独的事务插入。                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0 - 指示每个 writeToServer 操作是单个批    |
 | Int BulkCopyTimeout                      | 操作在多少秒内完成才不算超时。值为 0 表示没有限制；大容量复制将无限期等待。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60 秒。                                                          |
-| Boolean allowEncryptedValueModifications | Microsoft JDBC Driver 6.0 for SQL Server（或更高版本）提供该选项。<br /><br /> 指定后，allowEncryptedValueModifications 即可在表或数据库之间大容量复制加密数据，无需解密数据。 通常，应用程序将从一个表中的加密列中选择数据并且无需密该数据（应用将连接到其列加密设置关键字设置为禁用的数据库），然后会使用此选项批量插入数据，这些数据仍然是加密的。 有关详细信息，请参阅[对 JDBC 驱动程序使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。<br /><br /> 指定 allowEncryptedValueModifications 时需谨慎，因为这可能会导致损坏数据库，因为驱动程序不会检查数据是否确实已加密，也不会检查是否使用与目标列相同的加密类型、算法和密钥对数据进行了正确加密。 |
+| Boolean allowEncryptedValueModifications | Microsoft JDBC Driver 6.0 for SQL Server（或更高版本）提供该选项。<br /><br /> 指定后，allowEncryptedValueModifications 即可在表或数据库之间大容量复制加密数据，无需解密数据  。 通常，应用程序将从一个表中的加密列中选择数据并且无需密该数据（应用将连接到其列加密设置关键字设置为禁用的数据库），然后会使用此选项批量插入数据，这些数据仍然是加密的。 有关详细信息，请参阅[对 JDBC 驱动程序使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。<br /><br /> 指定 allowEncryptedValueModifications  时需谨慎，因为这可能会导致损坏数据库，因为驱动程序不会检查数据是否确实已加密，也不会检查是否使用与目标列相同的加密类型、算法和密钥对数据进行了正确加密。 |
   
  getters 和 setters：  
   

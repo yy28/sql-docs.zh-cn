@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a4f307efedd62a1fcc923a2e61da8636a89e40bb
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: f53fc932ced3c5a4e002c9938a9af6a2b8d410e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042376"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798774"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驱动程序对高可用性和灾难恢复的支持
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -42,21 +42,21 @@ Linux 和 macOS 的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/
 
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接
 
-当连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性组侦听程序或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 故障转移群集实例时，应始终指定 MultiSubnetFailover=Yes。 MultiSubnetFailover 会为 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的所有可用性组和故障转移群集实例启用更快速的故障转移。 MultiSubnetFailover 还可以显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行连接。 在子网故障转移期间，驱动程序会主动重试 TCP 连接。
+当连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性组侦听程序或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 故障转移群集实例时，应始终指定 MultiSubnetFailover=Yes  。 MultiSubnetFailover 会为 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的所有可用性组和故障转移群集实例启用更快速的故障转移  。 MultiSubnetFailover 还可以显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行连接。 在子网故障转移期间，驱动程序会主动重试 TCP 连接。
 
-**MultiSubnetFailover** 连接属性指示将在可用性组或故障转移群集实例中部署应用程序。 驱动程序会通过尝试连接到所有的 IP 地址，从而连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 当与 MultiSubnetFailover=Yes连接时，客户端将以比操作系统默认的 TCP 重新传输间隔更快的速度重新尝试建立 TCP 连接。 **MultiSubnetFailover=Yes** 会在 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例的故障转移之后进行更快速的重新连接。 MultiSubnetFailover=Yes 同时适用于单子网和多子网可用性组和故障转移群集实例。  
+**MultiSubnetFailover** 连接属性指示将在可用性组或故障转移群集实例中部署应用程序。 驱动程序会通过尝试连接到所有的 IP 地址，从而连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 当与 MultiSubnetFailover=Yes连接时，客户端将以比操作系统默认的 TCP 重新传输间隔更快的速度重新尝试建立 TCP 连接  。 **MultiSubnetFailover=Yes** 会在 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例的故障转移之后进行更快速的重新连接。 MultiSubnetFailover=Yes 同时适用于单子网和多子网可用性组和故障转移群集实例  。  
 
 连接到可用性组侦听程序或故障转移群集实例后，请使用 **MultiSubnetFailover=Yes** 。 否则，应用程序性能可能会受到负面影响。
 
 在连接到可用性组或故障转移群集实例中的服务器时，请注意以下事项：
   
--   指定 MultiSubnetFailover=Yes 以在连接到单子网或多子网可用性组时提高性能。
+-   指定 MultiSubnetFailover=Yes 以在连接到单子网或多子网可用性组时提高性能  。
 
 -   在连接字符串中将可用性组的可用性组侦听程序指定为服务器。
   
 -   不能连接到配置了超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。
 
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证或 Kerberos 身份验证都可以用于 MultiSubnetFailover=Yes，并且不会影响应用程序的行为。
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证或 Kerberos 身份验证都可以用于 MultiSubnetFailover=Yes，并且不会影响应用程序的行为  。
 
 -   你可以提高 **loginTimeout** 的值以调整故障转移时间并减少应用程序的连接重试尝试。
 
@@ -96,8 +96,8 @@ Linux 和 macOS 的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/
   
 |函数|描述|  
 |------------|---------------|  
-|[SQLConnect 函数](../../../odbc/reference/syntax/sqlconnect-function.md)|SQLConnect 通过数据源名称 (DSN) 或连接属性同时支持 ApplicationIntent 和 MultiSubnetFailover。|  
-|[SQLDriverConnect 函数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|SQLDriverConnect 通过 DSN、连接字符串关键字或连接属性支持 ApplicationIntent 和 MultiSubnetFailover。|
+|[SQLConnect 函数](../../../odbc/reference/syntax/sqlconnect-function.md)|SQLConnect 通过数据源名称 (DSN) 或连接属性同时支持 ApplicationIntent 和 MultiSubnetFailover    。|  
+|[SQLDriverConnect 函数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|SQLDriverConnect 通过 DSN、连接字符串关键字或连接属性支持 ApplicationIntent 和 MultiSubnetFailover    。|
   
 ## <a name="see-also"></a>另请参阅  
 

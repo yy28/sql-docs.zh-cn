@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 517ce61f011de7cf5915c88895b9795b08767b20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9960ce0cdb07f6ea259023966e245eb7b1f333a3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761559"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764899"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setAutoCommit(boolean value)
 #### <a name="parameters"></a>Parameters  
  *value*  
   
- true 可启用连接的自动提交模式，false 可禁用该模式。  
+ true  可启用连接的自动提交模式，false  可禁用该模式。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -50,7 +50,7 @@ public void setAutoCommit(boolean value)
   
  语句执行完毕或下次运行开始时（以二者中先发生的为准）都会执行提交操作。 对于返回 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的语句，该语句在检索完结果集中的最后一行或结果集关闭后即告完成。 对于更复杂的情况，单个语句可能会在输出参数值之外返回多个结果。 在这些情况下，检索完所有结果和输出参数值后将执行提交操作。  
   
- 如果自动提交模式设置为 false，则 JDBC 驱动程序将在每次提交后隐式启动新事务。  
+ 如果自动提交模式设置为 false  ，则 JDBC 驱动程序将在每次提交后隐式启动新事务。  
   
 > [!NOTE]  
 >  如果在事务处理过程中调用此方法，将提交此事务。  

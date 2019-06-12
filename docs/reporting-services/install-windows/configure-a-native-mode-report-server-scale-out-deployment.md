@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b1ca1f19741002cee1ca9025582c6436f1522a5
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503044"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500583"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>配置本机模式报表服务器扩展部署
 
@@ -105,48 +105,48 @@ An error occurred within the report server database.  This may be due to a conne
   
 3.  将报表服务器连接到用于第一个报表服务器实例的数据库：  
   
-    1.  选择“数据库”打开“数据库”页。  
+    1.  选择“数据库”打开“数据库”页  。  
   
-    2.  选择“更改数据库”。  
+    2.  选择“更改数据库”  。  
   
-    3.  选择“选择现有报表服务器数据库”。  
+    3.  选择“选择现有报表服务器数据库”  。  
   
     4.  键入承载您要使用的报表服务器数据库的 SQL Server 数据库引擎实例的服务器名称。 此服务器必须是上述说明中连接到的服务器。  
   
-    5.  选择“测试连接”，然后选择“下一步”。  
+    5.  选择“测试连接”，然后选择“下一步”   。  
   
-    6.  在“报表服务器数据库”中，选择为第一个报表服务器创建的数据库，然后选择“下一步”。 默认名称为 ReportServer。 请勿选择 ReportServerTempDB；它仅用于在处理报表时存储临时数据。 如果数据库列表为空，请重复前四个步骤以建立服务器连接。  
+    6.  在“报表服务器数据库”中，选择为第一个报表服务器创建的数据库，然后选择“下一步”   。 默认名称为 ReportServer。 请勿选择 ReportServerTempDB；它仅用于在处理报表时存储临时数据。 如果数据库列表为空，请重复前四个步骤以建立服务器连接。  
   
-    7.  在“凭据”页中，选择报表服务器将用于连接到报表服务器数据库的帐户类型和凭据。 可以使用与第一个报表服务器实例相同的凭据，也可以使用其他凭据。 选择“下一步” 。  
+    7.  在“凭据”页中，选择报表服务器将用于连接到报表服务器数据库的帐户类型和凭据。 可以使用与第一个报表服务器实例相同的凭据，也可以使用其他凭据。 选择“下一步”  。  
   
-    8.  选择“摘要”，然后选择“完成”。  
+    8.  选择“摘要”，然后选择“完成”   。  
   
-4.  配置报表服务器“Web 服务 URL”。 先不要测试该 URL。 在报表服务器联接到扩展部署后，该 URL 才会解析。  
+4.  配置报表服务器“Web 服务 URL”  。 先不要测试该 URL。 在报表服务器联接到扩展部署后，该 URL 才会解析。  
   
-5.  配置“Web 门户 URL”。 先不要测试 URL，也不要试图验证部署。 报表服务器在联接到扩展部署后才可用。  
+5.  配置“Web 门户 URL”  。 先不要测试 URL，也不要试图验证部署。 报表服务器在联接到扩展部署后才可用。  
   
 ## <a name="to-join-the-second-report-server-instance-to-the-scale-out-deployment"></a>将第二个报表服务器实例联接到扩展部署  
   
 1.  打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到第一个报表服务器实例。 由于已将第一个报表服务器初始化为执行可逆加密操作，因此它可用于将其他报表服务器实例联接到扩展部署。  
   
-2.  单击“扩展部署”打开“扩展部署”页。 您会看到两个条目，分别对应于连接到报表服务器数据库的两个报表服务器实例。 第一个报表服务器实例应已联接。 第二个报表服务器应在“等待联接”。 如果您在自己的部署中没有看到类似的条目，请确认您已连接到已配置和初始化为使用报表服务器数据库的第一个报表服务器。  
+2.  单击“扩展部署”打开“扩展部署”页  。 您会看到两个条目，分别对应于连接到报表服务器数据库的两个报表服务器实例。 第一个报表服务器实例应已联接。 第二个报表服务器应在“等待联接”。 如果您在自己的部署中没有看到类似的条目，请确认您已连接到已配置和初始化为使用报表服务器数据库的第一个报表服务器。  
   
      ![“扩展部署”页的部分屏幕快照](../../reporting-services/install-windows/media/scaloutscreen.gif "“扩展部署”页的部分屏幕快照")  
   
-3.  在“扩展部署”页上，选择等待联接部署的报表服务器实例，然后选择“添加服务器”。  
+3.  在“扩展部署”页上，选择等待联接部署的报表服务器实例，然后选择“添加服务器”  。  
   
     > [!NOTE]  
     >  **问题：** 尝试将一个 Reporting Services 报表服务器实例联接到横向扩展部署时，可能遇到类似“拒绝访问”的错误消息。  
     >   
     >  **解决方法：** 从第一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥并将该密钥还原到第二个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 然后将第二个服务器联接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署。  
   
-4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器，然后单击“Web 服务 URL”或“Web 门户 URL”。  
+4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器，然后单击“Web 服务 URL”或“Web 门户 URL”   。  
   
  如果计划在负载平衡服务器群集中运行报表服务器，则需要进行额外配置。 有关详细信息，请参阅 [在网络负载平衡群集上配置报表服务器](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
 
 ## <a name="next-steps"></a>后续步骤
 
-[配置服务帐户](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+[配置服务帐户](configure-the-report-server-service-account-ssrs-configuration-manager.md)
 [配置 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [配置报表服务器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   

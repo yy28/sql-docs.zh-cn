@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef5c7aee0daef073ff22494162d8024201b2f97c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0b13f081338e26aaa33306998d3e562088609a6a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600818"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770515"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "51600818"
   在 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中，更新了跟踪功能（[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)），以便更易于将客户端事件与诊断信息关联，如连接失败可查看服务器的连接环形缓冲区和扩展事件日志中的应用程序性能信息。 有关读取扩展事件日志的信息，请参阅[查看事件会话数据](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx)。  
   
 ## <a name="details"></a>详细信息  
- 对于连接操作，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将发送一个客户端连接 ID。 如果连接失败，可以访问连接环形缓冲区（[在 SQL Server 2008 中使用连接环形缓冲区解决连接问题](https://go.microsoft.com/fwlink/?LinkId=207752)），查找 ClientConnectionID 字段并获取有关连接失败的诊断信息。 仅当发生错误时，才在环形缓冲区中记录客户端连接 ID。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 是 16 字节的 GUID。 如果将 client_connection_id 操作添加到扩展事件会话中的事件，则还可以在扩展事件目标输出中找到客户端连接 ID。 如果需要进一步的客户端驱动程序诊断帮助，可以启用跟踪并重新运行连接命令，查看跟踪中的 ClientConnectionID 字段。  
+ 对于连接操作，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将发送一个客户端连接 ID。 如果连接失败，可以访问连接环形缓冲区（[在 SQL Server 2008 中使用连接环形缓冲区解决连接问题](https://go.microsoft.com/fwlink/?LinkId=207752)），查找 ClientConnectionID 字段并获取有关连接失败的诊断信息  。 仅当发生错误时，才在环形缓冲区中记录客户端连接 ID。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 是 16 字节的 GUID。 如果将 client_connection_id 操作添加到扩展事件会话中的事件，则还可以在扩展事件目标输出中找到客户端连接 ID  。 如果需要进一步的客户端驱动程序诊断帮助，可以启用跟踪并重新运行连接命令，查看跟踪中的 ClientConnectionID 字段  。  
   
  可以获取客户端连接 ID 以编程方式通过使用[ISQLServerConnection 接口](../../connect/jdbc/reference/isqlserverconnection-interface.md)。 该连接 ID 还存在于任何与连接相关的异常中。  
   

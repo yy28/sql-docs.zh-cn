@@ -18,13 +18,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726895"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768600"
 ---
 # <a name="data-source-objects-ole-db"></a>数据源对象 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47726895"
 
   适用于 SQL Server 的 OLE DB 驱动程序将数据源一词用于 OLE DB 接口集，这些接口用于建立指向某一数据存储的链接，例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是用于 SQL Server 使用者的 OLE DB 驱动程序的第一个任务。  
   
- 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 SQL Server 的 OLE DB 驱动程序的 CLSID 是 C/c + + GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 将解析为正确的符号引用 msoledbsql.h 文件中 progid)。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例。  
+ 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 SQL Server 的 OLE DB 驱动程序的 CLSID 是 C /C++ GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 将解析为正确的符号引用 msoledbsql.h 文件中 progid)。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例  。  
   
  OLE DB 驱动程序适用于 SQL Server 是一个进程内服务器。 适用于 SQL Server 的 OLE DB 驱动程序对象的实例使用 CLSCTX_INPROC_SERVER 宏创建，以便指示可执行上下文。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47726895"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- 此示例使用类标识符宏来创建适用于 SQL Server 的 OLE DB 驱动程序数据源对象并获取对其 IDBInitialize 接口的引用。  
+ 此示例使用类标识符宏来创建适用于 SQL Server 的 OLE DB 驱动程序数据源对象并获取对其 IDBInitialize 接口的引用  。  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -76,7 +76,7 @@ else
   
  在成功创建适用于 SQL Server 的 OLE DB 驱动程序数据源对象的实例后，使用者应用程序可通过初始化数据源和创建会话来继续。 OLE DB 会话提供允许数据访问和操作的接口。  
   
- 适用于 SQL Server 的 OLE DB 驱动程序使与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的指定实例的首次连接成为成功的数据源初始化的一部分。 只要保持对数据源初始化接口的引用，或者在调用 IDBInitialize::Uninitialize 方法前，这一连接会一直保持。  
+ 适用于 SQL Server 的 OLE DB 驱动程序使与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的指定实例的首次连接成为成功的数据源初始化的一部分。 只要保持对数据源初始化接口的引用，或者在调用 IDBInitialize::Uninitialize 方法前，这一连接会一直保持  。  
   
 ## <a name="in-this-section"></a>本节内容  
   

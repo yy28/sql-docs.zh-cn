@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: query |Microsoft Docs'
+title: PDO::query | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928c1ad5a9b181e791d30332bc7af9d6ed47a0aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600507"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761983"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>Parameters  
 *$statement*：要执行的 SQL 语句。  
   
-$fetch_style：有关如何执行该查询的可选说明。 有关更多详细信息，请参阅“备注”部分。PDO::query 中的  $fetch_style 可以替换为 PDO::fetch 中的 $fetch_style。  
+$fetch_style：有关如何执行该查询的可选说明  。 有关更多详细信息，请参阅“备注”部分。PDO::query 中的  $fetch_style 可以替换为 PDO::fetch 中的 $fetch_style   。  
   
 ## <a name="return-value"></a>返回值  
 如果调用成功，PDO::query 将返回一个 PDOStatement 对象。 如果调用失败，PDO::query 将引发一个 PDOException 对象或者返回 False，具体取决于 PDO::ATTR_ERRMODE 的设置。  
@@ -46,12 +46,12 @@ PDOException。
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT 还会影响 PDO::exec 的行为；有关详细信息，请参阅 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。  
   
-可以为 fetch_style 指定以下选项。  
+可以为 fetch_style 指定以下选项  。  
   
 |style|描述|  
 |---------|---------------|  
-|PDO::FETCH_COLUMN, num|在指定列中查询数据。 表中的第一列为列 0.|  
-|PDO::FETCH_CLASS, 'classname', array( arglist )|创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
+|PDO::FETCH_COLUMN, num |在指定列中查询数据。 表中的第一列为列 0.|  
+|PDO::FETCH_CLASS, 'classname', array( arglist )  |创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
 |Pdo:: FETCH_CLASS，*classname*|给现有类中的属性分配列名称。|  
   
 在再次调用 PDO::query 之前，请调用 PDOStatement::closeCursor 以释放与 PDOStatement 对象相关联的数据库资源。  
@@ -119,7 +119,7 @@ $stmt = null;
 ```
 
 ## <a name="example"></a>示例
-此代码示例演示如何创建的表[sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)类型，并提取插入的数据。
+此代码示例演示如何创建 [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 类型的表并提取插入的数据。
 
 ```
 <?php
@@ -156,7 +156,7 @@ try {
 ?>
 ```
 
-将预期的输出：
+预期的输出为：
 
 ```
 Array

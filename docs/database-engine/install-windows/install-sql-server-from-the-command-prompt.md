@@ -84,13 +84,13 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 26c2c1c06da727a063d25520497c4b352ea3837e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+manager: jroth
+ms.openlocfilehash: 8c8dd90ae08cae3f62be07443af5bdae68cfee2b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993692"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794963"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -213,7 +213,7 @@ ms.locfileid: "65993692"
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **可选**|指定引擎服务帐户的密码。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **可选**|指定 PolyBase 引擎服务的启动模式：自动（默认）、禁用和手动。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **可选**|使用最少 6 个端口为 PolyBase 服务指定端口范围。 例如：<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 支持的值：True、False  |  
+|PolyBase|/PBSCALEOUT<br /><br /> **可选**|指定是否将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例用作 PolyBase 扩展计算组的一部分。 如果要配置包含头节点的 PolyBase 扩展计算组，请使用此选项。 支持的值：True、False  |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/PID<br /><br /> **可选**|指定 SQL Server 版本的产品密钥。 如果未指定此参数，则使用 Evaluation。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/Q 或 /QUIET<br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。 /Q 参数会覆盖 /QS 参数的输入。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/QS 或 /QUIETSIMPLE <br /><br /> **可选**|指定安装程序通过 UI 运行并显示进度，但是不接受任何输入或显示任何错误消息。|  
@@ -276,7 +276,7 @@ ms.locfileid: "65993692"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户的密码。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
 |Python/机器学习服务（数据库内）|MPYCACHEDIRECTORY|保留供将来使用。 使用 %TEMP% 存储 Python .CAB 文件，以便在没有 Internet 连接的计算机上安装。 |  
-|R/机器学习服务（数据库内）|MRCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server（独立版）或 R 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)安装 R 组件时，通常使用此设置。|  
+|R/机器学习服务（数据库内）|MRCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server（独立版）或 R 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)安装 R 组件时，通常使用此设置。|  
   
 ###### <a name="sample-syntax"></a>示例语法：  
  安装新的具有 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、复制和全文搜索组件的独立实例并启用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的即时文件初始化。 

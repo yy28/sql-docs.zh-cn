@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27ee52e2dd8acb976d732baa76d32a0401ba445d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 39d50008ac35e592b97ad17726a419c61b2a30e7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666085"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767405"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>getTimestamp 方法 (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
 #### <a name="parameters"></a>Parameters  
  *名称*  
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
  *cal*  
   
@@ -52,9 +52,9 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getTimestamp 方法由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定。  
+ 此 getTime 方法是由 java.sql.CallableStatement 接口中的 getTime 方法指定的。  
   
- 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 列返回值。  
+ 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 列返回值   。  
   
 ## <a name="see-also"></a>另请参阅  
  [getTimestamp 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

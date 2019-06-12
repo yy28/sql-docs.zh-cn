@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4c4ffead9ca22f1ef72784deb1970ff92e79761
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 52e2f0336c2c4bfbe6b14ce116c0888844afc000
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834075"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784720"
 ---
 # <a name="getncharacterstream-method-javalangstring-sqlserverresultset"></a>getNCharacterStream 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
  一个包含列标签的 String。  
   
 ## <a name="return-value"></a>返回值  
- 一个读取器对象。  
+ 一个 Reader 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -44,7 +44,7 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
 ## <a name="remarks"></a>Remarks  
  此 getNCharacterStream 方法由 java.sql.ResultSet 接口中的 getNCharacterStream 方法指定。  
   
- 此方法可以用于检索的值**nvarchar**， **nchar**， **nvarchar （max)**， **ntext**，或**xml**的当前行中的列[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。 如果尝试使用此方法检索其他数据类型的值，则会引发异常。  
+ 此方法可以用于检索的值**nvarchar**， **nchar**， **nvarchar （max)** ， **ntext**，或**xml**的当前行中的列[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。 如果尝试使用此方法检索其他数据类型的值，则会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [getNCharacterStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

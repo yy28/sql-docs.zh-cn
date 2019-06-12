@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574888"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413328"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 
@@ -36,7 +36,7 @@ ms.locfileid: "65574888"
 
 ## <a name="syntax"></a>语法
   
-```  
+```
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -100,17 +100,17 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  将包含新表的数据库的名称。 默认为当前数据库。  
   
  *schema_name*  
- 表的架构。 可选择指定架构。 如果是空白，将使用默认架构。  
+ 表的架构。 可选择指定架构  。 如果是空白，将使用默认架构。  
   
  *table_name*  
  新表的名称。 若要创建本地临时表，请在表名前加上 #。  有关临时表的说明和指南，请参阅 [Azure SQL 数据仓库中的临时表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)。 
 
- column_name  
+ column_name   
  表列的名称。
 
 ### <a name="ColumnOptions"></a> 列选项
 
- `COLLATE` Windows_collation_name  
+ `COLLATE` Windows_collation_name   
  指定表达式的排序规则。 此排序规则必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 Windows 排序规则之一。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 Windows 排序规则列表，请参阅 [Windows 排序规则名称 (Transact-SQL)](windows-collation-name-transact-sql.md)/)。  
   
  `NULL` | `NOT NULL`  
@@ -121,8 +121,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
  | 参数 | 解释 |
  | -------- | ----------- |
- | constraint_name | 约束的可选名称。 该约束名称在数据库中是唯一的。 此名称可以重用于其他数据库。 |
- | constant_expression | 列的默认值。 表达式必须是文本值或一个常数。 例如，允许的常数表达式：`'CA'`、`4`。 禁止使用这些常量表达式：`2+3`、`CURRENT_TIMESTAMP`。 |
+ | constraint_name  | 约束的可选名称。 该约束名称在数据库中是唯一的。 此名称可以重用于其他数据库。 |
+ | constant_expression  | 列的默认值。 表达式必须是文本值或一个常数。 例如，允许的常数表达式：`'CA'`、`4`。 禁止使用这些常量表达式：`2+3`、`CURRENT_TIMESTAMP`。 |
   
 ### <a name="TableOptions"></a> 表结构选项
 
@@ -134,8 +134,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  
  `HEAP`：将表存储为堆。 这是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的默认行为。  
   
- `CLUSTERED INDEX` ( index_column_name [ ,...n ] )  
- 将表存储为具有一个或多个键列的聚集索引。 此行为按行存储数据。 在索引中使用 index_column_name 来指定一个或多个键列的名称。  有关详细信息，请参阅常规注释中的行存储表。
+ `CLUSTERED INDEX` ( index_column_name [ ,...n ] )    
+ 将表存储为具有一个或多个键列的聚集索引。 此行为按行存储数据。 在索引中使用 index_column_name 来指定一个或多个键列的名称  。  有关详细信息，请参阅常规注释中的行存储表。
  
  `LOCATION = USER_DB`：此选项已遭弃用。 虽然在语法上可接受，但已不再需要它，而且它也不再影响行为。   
   
@@ -143,7 +143,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 若要了解如何选择最佳分发方法并使用分布式表，请参阅[在 Azure SQL 数据仓库中分发表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)。
 
-`DISTRIBUTION = HASH` (distribution_column_name)：通过哈希处理 distribution_column_name 中存储的值，将每行都分配到一个分发。 算法是确定性的。也就是说，它总是将相同的值哈希到相同的分发。  应将分发列定义为 NOT NULL，因为所有包含 NULL 值的行都分配到相同的分发。
+`DISTRIBUTION = HASH` (distribution_column_name  )：通过哈希处理 distribution_column_name  中存储的值，将每行都分配到一个分发。 算法是确定性的。也就是说，它总是将相同的值哈希到相同的分发。  应将分发列定义为 NOT NULL，因为所有包含 NULL 值的行都分配到相同的分发。
 
 `DISTRIBUTION = ROUND_ROBIN`：以轮循机制在所有分发上均匀地分发行。 这是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的默认行为。
 
@@ -152,26 +152,26 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ### <a name="TablePartitionOptions"></a> 表分区选项
 有关使用表分区的指南，请参阅[对 SQL 数据仓库中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
- `PARTITION` ( partition_column_name `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ boundary_value [,...n] ] ))   
+ `PARTITION` ( partition_column_name `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ boundary_value [,...n] ] ))      
 创建一个或多个表分区。 这些分区是水平表切片，可便于向行的子集应用操作，无论表是作为堆、聚集索引还是聚集列存储索引进行存储。 与分发列不同，表分区不确定存储每行的分发。 表分区决定行如何分组并存储在每个分发中。  
 
 | 参数 | 解释 |
 | -------- | ----------- |
-|partition_column_name| 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将用于行分区的列。 此列可以是任何数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 按升序对分区列值进行排序。 在 `RANGE` 规范中，由低到高的排序是从 `LEFT` 到 `RIGHT`。 |  
+|partition_column_name | 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将用于行分区的列。 此列可以是任何数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 按升序对分区列值进行排序。 在 `RANGE` 规范中，由低到高的排序是从 `LEFT` 到 `RIGHT`。 |  
 | `RANGE LEFT` | 指定属于左侧分区的边界值（较低值）。 默认为“左”。 |
 | `RANGE RIGHT` | 指定属于右侧分区的边界值（较高值）。 | 
-| `FOR VALUES` ( boundary_value [,...n] ) | 指定分区的边界值。 boundary_value 是一个常数表达式。 它不得为 NULL。 它必须匹配或可以隐式转换为 partition_column_name 的数据类型。 无法在隐式转换期间截断它，这样值的大小和确定位数与 partition_column_name 的数据类型不匹配<br></br><br></br>如果你指定 `PARTITION` 子句，但不指定边界值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 会创建包含一个分区的已分区表。 如果适用，稍后可以将表拆分成两个分区。<br></br><br></br>如果指定一个边界值，生成的表格有两个分区；一个用于低于边界值的值，另一个用于高于边界值的值。 如果你将分区移到未分区表中，未分区表会接收数据，但它的元数据中不会有分区边界。| 
+| `FOR VALUES` ( boundary_value [,...n] )   | 指定分区的边界值。 boundary_value 是一个常数表达式  。 它不得为 NULL。 它必须匹配或可以隐式转换为 partition_column_name 的数据类型  。 无法在隐式转换期间截断它，这样值的大小和确定位数与 partition_column_name  的数据类型不匹配<br></br><br></br>如果你指定 `PARTITION` 子句，但不指定边界值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 会创建包含一个分区的已分区表。 如果适用，稍后可以将表拆分成两个分区。<br></br><br></br>如果指定一个边界值，生成的表格有两个分区；一个用于低于边界值的值，另一个用于高于边界值的值。 如果你将分区移到未分区表中，未分区表会接收数据，但它的元数据中不会有分区边界。| 
 
  请在“示例”部分中查看[创建已分区表](#PartitionedTable)。
 
 ### <a name="ordered-clustered-columnstore-index-option-preview"></a>有序聚集列存储索引选项（预览版）
 
-聚集列存储索引是用于在 Azure SQL 数据仓库中创建表的默认索引。  ORDER 规范默认采用 COMPOUND 键。  排序始终为升序。 如果没有指定 ORDER 子句，则不会对列存储进行排序。
+聚集列存储索引是用于在 Azure SQL 数据仓库中创建表的默认索引。  ORDER 规范默认采用 COMPOUND 键。  排序始终为升序。 如果没有指定 ORDER 子句，则不会对列存储进行排序。 由于排序过程的原因，与具有无序聚集列存储索引的表相比，具有有序聚集列存储索引的表的数据加载时间可能更长。 如果加载数据时需要更多的 tempdb 空间，你可以减少每个插入的数据量。
 
 在预览版期间，可以运行此查询来检查已启用 ORDER 的一个或多个列。  稍后将提供目录视图，其中包含此类信息和列序号（如果在 ORDER 中指定了多个列的话）。
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
 FROM sys.objects o 
 INNER JOIN sys.columns c ON o.object_id = c.object_id 
 INNER JOIN sys.partitions p ON o.object_id = p.object_id   
@@ -190,13 +190,13 @@ ORDER BY c.name, s.min_data_id, s.segment_id;
 >[!NOTE]
 >如需了解更多详情，请参阅[日期和时间数据类型和函数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。
 
-`datetimeoffset` [ ( n ) ]  
- n 的默认值为 7。  
+`datetimeoffset` [ ( n ) ]   
+ n 的默认值为 7  。  
   
- `datetime2` [ ( n ) ]  
-与 `datetime` 相同，只不过可以指定秒小数的数值。 n 的默认值为 `7`。  
+ `datetime2` [ ( n ) ]   
+与 `datetime` 相同，只不过可以指定秒小数的数值。 n 的默认值为 `7`  。  
   
-|n 值|精度|小数位数|  
+|n 值 |精度|小数位数|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -216,32 +216,32 @@ ORDER BY c.name, s.min_data_id, s.segment_id;
  `date`  
  根据公历，使用最多 10 个字符的年、月和日来存储日期。 存储大小为 3 个字节。 日期存储为整数。  
   
- `time` [ ( n ) ]  
- n 的默认值为 `7`。  
+ `time` [ ( n ) ]   
+ n 的默认值为 `7`  。  
   
- `float` [ ( n ) ]  
- 用于表示浮点数值数据的近似数值数据类型。 浮点数据为近似值；也就是说，并非数据类型范围内的所有值都能精确地表示。 n 指定用于存储科学记数法中 `float` 尾数的字节数。 n 表示精度和存储大小。 如果指定了 n，它必须是介于 `1` 和 `53` 之间的某个值。 n 的默认值为 `53`。  
+ `float` [ ( n ) ]   
+ 用于表示浮点数值数据的近似数值数据类型。 浮点数据为近似值；也就是说，并非数据类型范围内的所有值都能精确地表示。 n 指定用于存储科学记数法中 `float` 尾数的字节数  。 n  表示精度和存储大小。 如果指定了 n，它必须是介于 `1` 和 `53` 之间的某个值  。 n 的默认值为 `53`  。  
   
-| n 值 | 精度 | 存储大小 |  
+| n 值  | 精度 | 存储大小 |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 位数  | 4 个字节      |  
 | 25-53  | 15 位数 | 8 字节      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将 n 视为下列两个可能值之一。 如果 `1`<= n <= `24`，将 n 视为 `24`。 如果 `25` <= n <= `53`，将 n 视为 `53`。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将 n 视为下列两个可能值之一  。 如果 `1`<= n <= `24`，将 n 视为 `24`   。 如果 `25` <= n <= `53`，将 n 视为 `53`   。  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` 数据类型从 `1` 到 `53` 之间的所有 n 值均符合 ISO 标准。 double precision 的同义词是 `float(53)`。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` 数据类型从 `1` 到 `53` 之间的所有 n 值均符合 ISO 标准  。 double precision 的同义词是 `float(53)`。  
   
- `real` [ ( n ) ]  
+ `real` [ ( n ) ]   
  real 的定义与 float 相同。 `real` 的 ISO 同义词为 `float(24)`。  
   
- `decimal` [ ( precision [ , scale ] ) ] | `numeric` [ ( precision [ , scale ] ) ]  
+ `decimal` [ ( precision [ , scale ] ) ] | `numeric` [ ( precision [ , scale ] ) ]      
  存储固定的精度和小数位数。  
   
  *精度*  
  最多可以存储的十进制数字的总位数，包括小数点左边和右边的位数。 该精度的取值范围必须为 `1` 到最大精度 `38`。 默认精度为 `18`。  
   
  *scale*  
- 小数点右边可以存储的十进制数字的最大位数。 小数位数的取值范围必须为 `0` 到精度。 只有指定了精度，才能指定小数位数。 默认确定位数为 `0`；因此，`0` <= 确定位数 <= 精度。 最大存储大小基于精度而变化。  
+ 小数点右边可以存储的十进制数字的最大位数。 小数位数的取值范围必须为 `0` 到精度   。 只有指定了精度，才能指定小数位数   。 默认确定位数为 `0`；因此，`0` <= 确定位数   <= 精度  。 最大存储大小基于精度而变化。  
   
 | 精度 | 存储字节数  |  
 | ---------: |-------------: |  
@@ -271,23 +271,23 @@ ORDER BY c.name, s.min_data_id, s.segment_id;
  `bit`  
  可以取值为 `1`、`0` 或 `NULL 的 integer 数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 可优化 bit 列的存储。 如果表中的 bit 列为 8 列或更少，这些列作为 1 个字节存储。 如果 bit 列为 9 到 16 列，这些列作为 2 个字节存储，以此类推。  
   
- `nvarchar` [ ( n | `max` ) ]  -- `max` 仅适用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
- 可变长度 Unicode 字符数据。 n 的取值范围为 1 至 4,000。 `max` 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小（以字节为单位）是所输入字符个数的两倍 + 2 个字节。 已输入数据的长度可以为 0 个字符。  
+ `nvarchar` [ ( n | `max` ) ]  -- `max` 仅适用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  。  
+ 可变长度 Unicode 字符数据。 n 的取值范围为 1 至 4,000  。 `max` 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小（以字节为单位）是所输入字符个数的两倍 + 2 个字节。 已输入数据的长度可以为 0 个字符。  
   
- `nchar` [ ( n ) ]  
- 固定长度 Unicode 字符数据，长度为 n 个字节。 n 的取值范围必须为 `1` 到 `4000`。 存储大小为 n 字节的两倍。  
+ `nchar` [ ( n ) ]   
+ 固定长度 Unicode 字符数据，长度为 n 个字节  。 n 的取值范围必须为 `1` 到 `4000`  。 存储大小为 n  字节的两倍。  
   
- `varchar` [ ( n  | `max` ) ]  -- `max` 仅适用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。   
- 可变长度非 Unicode 字符数据，长度为 n 个字节。 n 的取值范围必须为 `1` 到 `8000`。 `max` 指示最大存储大小为 2 ^31-1 个字节 (2 GB)。存储大小是输入数据的实际长度 + 2 个字节。  
+ `varchar` [ ( n  | `max` ) ]  -- `max` 仅适用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  。   
+ 可变长度非 Unicode 字符数据，长度为 n 个字节  。 n 的取值范围必须为 `1` 到 `8000`  。 `max` 指示最大存储大小为 2 ^31-1 个字节 (2 GB)。存储大小是输入数据的实际长度 + 2 个字节。  
   
- `char` [ ( n ) ]  
- 固定长度非 Unicode 字符数据，长度为 n 个字节。 n 的取值范围必须为 `1` 到 `8000`。 存储大小为 n 字节。 n 的默认值为 `1`。  
+ `char` [ ( n ) ]   
+ 固定长度非 Unicode 字符数据，长度为 n 个字节  。 n 的取值范围必须为 `1` 到 `8000`  。 存储大小为 n 字节  。 n 的默认值为 `1`  。  
   
- `varbinary` [ ( n  | `max` ) ]  -- `max` 仅适用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
- 可变长度二进制数据。 n 的取值范围为 `1` 到 `8000`。 `max` 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小是输入数据的实际长度加 2 个字节。 n 的默认值为 7。  
+ `varbinary` [ ( n  | `max` ) ]  -- `max` 仅适用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  。  
+ 可变长度二进制数据。 n 的取值范围为 `1` 到 `8000`  。 `max` 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小是输入数据的实际长度加 2 个字节。 n 的默认值为 7  。  
   
- `binary` [ ( n ) ]  
- 固定长度二进制数据，长度为 n 个字节。 n 的取值范围为 `1` 到 `8000`。 存储大小为 n 字节。 n 的默认值为 `7`。  
+ `binary` [ ( n ) ]   
+ 固定长度二进制数据，长度为 n 个字节  。 n 的取值范围为 `1` 到 `8000`  。 存储大小为 n 字节  。 n 的默认值为 `7`  。  
   
  `uniqueidentifier`  
  16 字节 GUID。  
@@ -342,7 +342,7 @@ ORDER BY c.name, s.min_data_id, s.segment_id;
 CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
 ```  
  
- 如果 boundary_value 是必须隐式转换为 partition_column_name 中数据类型的文本值，会出现差异。 通过 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 系统视图显示文本值，但转换后的值用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作。 
+ 如果 boundary_value 是必须隐式转换为 partition_column_name 中数据类型的文本值，会出现差异   。 通过 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 系统视图显示文本值，但转换后的值用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作。 
 
 ### <a name="temporary-tables"></a>临时表
 

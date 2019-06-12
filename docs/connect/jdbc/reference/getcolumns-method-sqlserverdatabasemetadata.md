@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 51d9188328c8053188a52f6d96ab900916c11b94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2a3f536c180106ed29ae5758433d2f59bb7a8b47
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733645"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763391"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,19 +41,19 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 一个包含目录名称的字符串。  
+ 一个包含目录名称的字符串  。  
   
  *schema*  
   
- 一个包含架构名称模式的字符串。  
+ 一个包含架构名称模式的字符串  。  
   
  *table*  
   
- 一个包含表名称模式的字符串。  
+ 一个包含表名称模式的字符串  。  
   
  *col*  
   
- 一个包含列名称模式的字符串。  
+ 一个包含列名称模式的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
@@ -66,10 +66,10 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  由 getColumns 方法返回的结果集将包含以下信息：  
   
-|名称|类型|描述|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|目录名称。|  
-|TABLE_SCHEM|**String**|表架构名称。|  
+|TABLE_SCHEM|**String**|表架构。|  
 |TABLE_NAME|**String**|表名称。|  
 |COLUMN_NAME|**String**|列名称。|  
 |DATA_TYPE|**smallint**|来自 java.sql.Types 的 SQL 数据类型。|  
@@ -122,7 +122,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  COLUMN_SIZE 列具有以下更改：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|返回 JDBC Driver 2.0 中的类型 |返回 JDBC Driver 3.0 中的类型 |  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|返回 JDBC Driver 2.0 中的类型|返回 JDBC Driver 3.0 中的类型|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647（数据库元数据）|  
 |xml|1073741823|2147483647（数据库元数据）|  
@@ -134,13 +134,13 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  BUFFER_LENGTH 列具有以下更改：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|返回 JDBC Driver 2.0 中的类型 |返回 JDBC Driver 3.0 中的类型 |  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|返回 JDBC Driver 2.0 中的类型|返回 JDBC Driver 3.0 中的类型|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |大于 8 kB 的用户定义类型||2147483647|  
   
  TYPE_NAME 列具有以下更改：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|返回 JDBC Driver 2.0 中的类型 |返回 JDBC Driver 3.0 中的类型 |  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|返回 JDBC Driver 2.0 中的类型|返回 JDBC Driver 3.0 中的类型|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
 |varbinary(max)|图像|varbinary|  

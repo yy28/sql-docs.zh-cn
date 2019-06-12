@@ -1,7 +1,7 @@
 ---
 title: 用于 Integration Services (SSIS) 的Azure 功能包 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 003cfeefbea35d635264793555d771c5fddcead0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 29e30a8a7da41bcb7c75c61ef5ed78d0e3096536
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65729415"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403168"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 
@@ -28,7 +28,7 @@ ms.locfileid: "65729415"
 
 用于 Azure 的 SQL Server Integration Services (SSIS) 功能包是一个扩展包，可为 SSIS 提供本页面上列出的组件，用于连接到 Azure 服务、在 Azure 与本地数据源之间传输数据以及处理 Azure 中存储的数据。
 
-[![下载用于 Azure 的 SSIS 功能包](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798)下载
+[![下载用于 Azure 的 SSIS 功能包](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798)下载 
 
 - 对于 SQL Server 2017 - [用于 Azure 的 Microsoft SQL Server 2017 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=54798)
 - 对于 SQL Server 2016 - [用于 Azure 的 Microsoft SQL Server 2016 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=49492)
@@ -72,6 +72,8 @@ ms.locfileid: "65729415"
 
     -   [Azure SQL DW 上传任务](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [灵活的文件任务](../integration-services/control-flow/flexible-file-task.md)
+
 -   数据流组件
 
     -   [Azure Blob 源](../integration-services/data-flow/azure-blob-source.md)
@@ -82,7 +84,11 @@ ms.locfileid: "65729415"
     
     -   [Azure Data Lake Store 目标](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob 和 Azure Data Lake Store 文件枚举器。 请参阅 [Foreach 循环容器](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+    -   [灵活的文件源](../integration-services/data-flow/flexible-file-source.md)
+
+    -   [灵活的文件目标](../integration-services/data-flow/flexible-file-destination.md)
+
+-   Azure Blob、Azure Data Lake Store 和 Data Lake Storage Gen2 文件枚举器。 请参阅 [Foreach 循环容器](../integration-services/control-flow/foreach-loop-container.md)
 
 ## <a name="scenario-processing-big-data"></a>方案：处理大数据
  使用 Azure Connector 可完成以下大数据处理工作：
