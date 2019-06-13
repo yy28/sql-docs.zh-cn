@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583220"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033387"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>快速入门：处理输入和输出在 SQL Server 中使用 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +56,9 @@ SELECT * FROM PythonTestData
 
 让我们看一下默认的 sp_execute_external_script 的输入和输出变量：`InputDataSet`和`OutputDataSet`。
 
-1. 作为 R 脚本的输入，可以从表获取数据。 运行下面的语句。 它从表中获取数据，使 R 运行时，通过一次往返过程并返回具有列名称的值*NewColName*。
+1. 作为 Python 脚本的输入，可以从表获取数据。 运行下面的语句。 它从表中获取数据、 使通过 Python 运行时，一次往返过程并返回具有列名称的值*NewColName*。
 
-    由查询返回的数据传递给 R 运行时，将数据返回到 SQL 数据库作为数据帧。 WITH RESULT SETS 子句定义为 SQL 数据库返回的数据的表的架构。
+    由查询返回的数据传递到 Python 运行时，将数据返回到 SQL 数据库作为 pandas 数据帧。 WITH RESULT SETS 子句定义为 SQL 数据库返回的数据的表的架构。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +72,7 @@ SELECT * FROM PythonTestData
 
     ![返回表中的数据的 Python 脚本输出](./media/python-output-pythontestdata.png)
 
-2. 让我们来更改输入或输出变量的名称。 上述脚本使用了默认的输入和输出变量名称， _InputDataSet_并_OutputDataSet_。 若要定义与关联的输入的数据_InputDatSet_，则使用*@input_data_1*变量。
+2. 让我们来更改输入或输出变量的名称。 上述脚本使用了默认的输入和输出变量名称， _InputDataSet_并_OutputDataSet_。 若要定义与关联的输入的数据_InputDataSet_，则使用 *@input_data_1* 变量。
 
     在此脚本中，存储过程的输出和输入的变量名称已更改为*SQL_out*并*SQL_in*:
 
@@ -92,7 +92,7 @@ SELECT * FROM PythonTestData
 
     `WITH RESULT SETS`语句在 SQL Server 中定义的数据使用的架构。 需要提供 SQL 兼容的数据类型为从 Python 返回每个列。 可以使用的架构定义来提供新的列名称也不需要使用 Python data.frame 中的列名称。
 
-3. 此外可以生成使用 Python 脚本的值，并保留中的输入的查询字符串_@input_data_1_保留为空。
+3. 此外可以生成使用 Python 脚本的值，并保留中的输入的查询字符串 _@input_data_1_ 保留为空。
 
     ```sql
     EXECUTE sp_execute_external_script
