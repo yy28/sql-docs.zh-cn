@@ -1,7 +1,7 @@
 ---
 title: XEvents 概述 - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ec6f0f6a48fd0d19b6bda98b42afe57abd0a07
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 0ea8f2a0202793380d80c09694a2a844e6859af9
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175664"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744013"
 ---
 # <a name="extended-events-overview"></a>扩展事件概述
 
@@ -103,7 +103,10 @@ ms.locfileid: "66175664"
 |介绍如何将扩展事件和 Windows 事件跟踪配合使用来监视系统活动。|[使用扩展事件监视系统活动](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 | 为扩展事件使用目录视图和动态管理视图 (DMV) | [SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
-  
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>Azure SQL 数据库的代码示例可能有所不同
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
 ## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [DAC 对 SQL Server 对象和版本的支持](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
@@ -111,4 +114,5 @@ ms.locfileid: "66175664"
  [监视数据层应用程序](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [扩展事件动态管理视图](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [扩展事件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
- [XELite:跨平台库，用于从 XEL 文件或实时 SQL 流中读取 XEvent](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)，发布于 2019 年 5 月。  
+ [XELite:跨平台库，用于从 XEL 文件或实时 SQL 流中读取 XEvent](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)，发布于 2019 年 5 月。   
+ [读取 SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent)2019 年 6 月发布。

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 中的新增功能 | Microsoft Docs
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad10f03e426298d3785feeba132979e647cb1a98
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
+ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198200"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810281"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -53,12 +53,14 @@ ms.locfileid: "66198200"
 
 | 新增功能或更新 | 详细信息 |
 |:---|:---|
+|SQL Server 语言扩展 - [Java 语言扩展](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|[Microsoft SQL Server 用于 Java 的 Microsoft 扩展性 SDK](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) 目前是开源的，可[在 GitHub 上获取](https://github.com/microsoft/sql-server-language-extensions)。|
 |注册外部语言|新的 DDL `CREATE EXTERNAL LANGUAGE` 在 SQL Server 中注册外部语言，如 Java。 请参阅 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md)。 |
 |为 Java 提供更多数据类型支持|请参阅 [Java 数据类型](../language-extensions/how-to/java-to-sql-data-types.md)。|
 |查询存储的自定义捕获策略|启用后，在新的“查询存储捕获策略”设置下有额外可用的查询存储配置，可用于微调特定服务器中的数据收集。 有关详细信息，请参阅 [ALTER DATABASE SET 选项](../t-sql/statements/alter-database-transact-sql-set-options.md)。|
 |[内存数据库](../relational-databases/in-memory-database.md)添加了新的 DDL 语法来控制混合缓冲池。 <sup>2</sup>|使用[混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md)，可以在需要时直接访问位于永久性内存 (PMEM) 设备上数据库文件中的数据库页。|
 |新的内存数据库功能，添加了内存优化 tempdb 元数据。|请参阅[内存优化 TempDB 元数据](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
 |链接服务器支持 UTF-8 字符编码。 |[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md) |
+|SQL Server 安装程序包括 MaxDOP 建议，请遵循有案可稽的指导原则。 |[配置 max degree of parallelism 服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats` 返回更多有关查询计划的并行度和内存授予的信息。 |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
 
@@ -171,7 +173,7 @@ ms.locfileid: "66198200"
 |改进了间接检查点可伸缩性。 |[改进了间接检查点可伸缩性](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |现支持将 UTF-8 字符编码与 BIN2 排序规则 (`UTF8_BIN2`) 结合使用。 |[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md) |
 |在图形数据库中，在边缘约束上定义级联删除操作。 |[边缘约束](../relational-databases/tables/graph-edge-constraints.md) |
-|通过新的数据库范围配置启用或禁用 `LIGHTWEIGHT_QUERY_PROFILING`。 |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
+|通过新的数据库范围配置启用或禁用 `LIGHTWEIGHT_QUERY_PROFILING`。 |[`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp) |
 | &nbsp; | &nbsp; |
 
 ### <a name="tools"></a>工具
@@ -433,7 +435,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> 在 Azure SQL DB 中利用该功能不需要此语法，该功能[在公共预览期间按请求启用](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period)。 启用后，该功能默认为打开状态。
+> 在 Azure SQL DB 中利用该功能不需要此语法，该功能[在公共预览期间按请求启用](/azure/sql-database/sql-database-accelerated-database-recovery)。 启用后，该功能默认为打开状态。
 
 如果有易于受到大型事务影响的关键数据库，请在预览期间试用此功能。 向 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 团队](<https://aka.ms/sqlfeedback>)提供反馈。
 

@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2016 的各版本和支持的功能 | Microsoft Docs
-ms.custom: ''
-ms.date: 05/24/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/29/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -29,21 +29,22 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
+- CPSA
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12b7a440b8f100ff383deda7ad5c1dbc4c8a4578
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cb908e8ff5af27e58fa97da1ce6b6626c8ed91db
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658431"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701620"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-本主题详细介绍 SQL Server 各个版本支持的功能。  目前，SQL Server 2017 各个版本支持的功能没有任何更改。  
+本主题详细介绍 SQL Server 各个版本支持的功能。 目前，SQL Server 2017 各个版本支持的功能没有任何更改。  
   
 根据应用程序的需要，安装要求会有所不同。 不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能够满足单位和个人独特的性能、运行时以及价格要求。 安装哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件还取决于您的具体需要。 下面各节将帮助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的不同版本和可用组件中做出最佳选择。  
 
@@ -59,7 +60,7 @@ ms.locfileid: "58658431"
     
 > [![从评估中心下载](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[从评估中心下载 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
 > 
-> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)[启动已安装 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp2-ws2016)   
+> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)[启动已安装 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp2-ws2016)    
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 版本  
  下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的各个版本。 
@@ -68,14 +69,15 @@ ms.locfileid: "58658431"
 |---------------------------------------|----------------|  
 |Enterprise|作为高级版本，[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise 版提供了全面的高端数据中心功能，性能极为快捷、虚拟化不受限制，还具有端到端的商业智能，可为关键任务工作负荷提供较高服务级别，支持最终用户访问深层数据。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard 版提供了基本数据管理和商业智能数据库，使部门和小型组织能够顺利运行其应用程序并支持将常用开发工具用于内部部署和云部署，有助于以最少的 IT 资源获得高效的数据库管理。|  
-|Web|对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 版本是一项总拥有成本较低的选择。|  
+|Web|对于 Web 主机托管服务提供商和 Web VAP 而言，[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 版本是一项总拥有成本较低的选择，它可针对从小规模到大规模 Web 资产等内容提供可伸缩性、经济性和可管理性能力。|  
 |开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建 [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 和测试应用程序的人员的理想之选。|  
-|Express 版本|Express 版本是入门级的免费数据库，是学习和构建桌面及小型服务器数据驱动应用程序的理想选择。 它是独立软件供应商、开发人员和热衷于构建客户端应用程序的人员的最佳选择。 如果您需要使用更高级的数据库功能，则可以将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 无缝升级到其他更高端的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是 Express 的一种轻型版本，该版本具备所有可编程性功能，但在用户模式下运行，并且具有快速的零配置安装和必备组件要求较少的特点。|  
+|Express 版本|Express 版本是入门级的免费数据库，是学习和构建桌面及小型服务器数据驱动应用程序的理想选择。 它是独立软件供应商、开发人员和热衷于构建客户端应用程序的人员的最佳选择。 如果您需要使用更高级的数据库功能，则可以将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 无缝升级到其他更高端的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是 Express 的一种轻量级版本，它具备 Express 的所有可编程性功能，但在用户模式下运行，还具有零配置快速安装和必备组件要求较少的特点。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于 Internet 服务器  
  在 Internet 服务器（如运行 Internet Information Services (IIS) 的服务器）上通常都会安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端工具。 客户端工具包括连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的应用程序所使用的客户端连接组件。  
   
-> **注意**：尽管可以在运行 IIS 的计算机上安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，但这种做法通常只用于仅包含一台服务器计算机的小型网站。 大多数网站都将其中间层 IIS 系统安装在一台服务器上或服务器群集中，将数据库安装在另外一个服务器或服务器联合体上。  
+> [!NOTE]
+> 尽管可以在运行 IIS 的计算机上安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，但这种做法通常只用于仅包含一台服务器计算机的小型网站。 大多数网站都将其中间层 IIS 系统安装在一台服务器上或服务器群集中，将数据库安装在另外一个服务器或服务器联合体上。  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于客户端/服务器应用程序  
  在运行直接连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的客户端/服务器应用程序的计算机上，只能安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]客户端组件。 如果要在数据库服务器上管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，或者打算开发 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 应用程序，那么客户端组件安装也是一个不错的选择。  
@@ -112,9 +114,9 @@ ms.locfileid: "58658431"
 
 **开发人员版和评估版**  
 有关开发人员版和评估版支持的功能，请参阅下表中列出的 SQL Server Enterprise Edition 功能。
-有关已添加到 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 开发人员版的功能的列表，请参阅 [SQL Server 2016 SP1 版本](https://aka.ms/uw6cw4)。  
 
-开发人员版仍仅继续支持适用于 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) 的一个客户端。 
+
+开发人员版仍然仅支持一个 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) 客户端。 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Scale Limits  
   
@@ -131,7 +133,7 @@ ms.locfileid: "58658431"
   
 <sup>1</sup> 对于 Enterprise Edition 配合基于服务器 + 客户端访问许可证 (CAL) 的许可（对新协议不可用），每个 SQL Server 实例的内核数上限为 20。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
-<sup>2</sup> 适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。 
+<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。 
 
 ##  <a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -159,7 +161,7 @@ ms.locfileid: "58658431"
 
 <sup>2</sup> 有关基本可用性组的详细信息，请参阅 [基本可用性组](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。  
 
-<sup>3</sup> 适用于 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。
+<sup>3</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。 
   
 ##  <a name="RDBMSSP"></a> RDBMS Scalability and Performance  
   
@@ -175,20 +177,20 @@ ms.locfileid: "58658431"
 |Resource Governor|是|否|否|否|否|  
 |已分区表并行度|是|否|否|否|否|
 |多个 Filestream 容器|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|
-|NUMA 感知、大型页内存和缓冲区数组分配|是|否<sup>4</sup>|否|否|否|
+|NUMA 感知的大型页内存和缓冲区数组分配|是|否<sup>4</sup>|否|否|否|
 |缓冲池扩展|是|是|否|否|否|
-|IO 资源调控|是|否|否|否|否|
+|I/O 资源调控|是|否|否|否|否|
 |预读|是|否|否|否|否|
 |高级扫描|是|否|否|否|否|
 |延迟持续性|是|是|是|是|是|
 
 <sup>1</sup> 内存中 OLTP 数据大小和列存储段缓存限制为“规模限制”部分中的版本所指定的内存量。 最大并行度是有限的。 对于 Standard Edition，索引生成的进程并行度 (DOP) 限制为 2 DOP，对于 Web 和 Express Edition，索引生成的进程并行度 (DOP) 限制为 1 DOP。 这是指在基于磁盘的表和内存优化表上创建的列存储索引。
 
-<sup>2</sup> 适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。 
+<sup>2</sup>适用于[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]SP1 作为跨版本创建常见的可编程性图面区域 (CPSA) 的一部分。  
 
 <sup>3</sup> LocalDB 安装选项中不包括此功能。
 
-<sup>4</sup>SQL Server Standard Edition 和基于 CAL 的许可能够限制 SQL Server Standard 可使用的处理器数，但 SQL Server Standard 为 NUMA 感知。 
+<sup>4</sup> SQL Server Standard Edition 和基于 CAL 的许可能够限制 SQL Server Standard 可使用的处理器数，但 SQL Server Standard 为 NUMA 感知。 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |功能|Enterprise|Standard|Web|Express|Express with Advanced Services|  
@@ -204,7 +206,8 @@ ms.locfileid: "58658431"
 |包含的数据库|是|是|是|是|是| 
 |备份加密|是|是|否|否|否|  
 
-<sup>1</sup> 适用于 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。  
+<sup>1</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。      
+
 ##  <a name="Replication"></a> Replication  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
@@ -264,7 +267,7 @@ ms.locfileid: "58658431"
   
  <sup>1</sup> 有关详细信息，请参阅 [使用 SysPrep 安装 SQL Server 的注意事项](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
  
-<sup>2</sup> 适用于 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。 
+<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。      
   
 ##  <a name="DevTools"></a> Development Tools  
   
@@ -302,7 +305,7 @@ ms.locfileid: "58658431"
 
 <sup>1</sup> 具有多个计算节点的 Scale out 需要一个头节点。
 
-<sup>2</sup> 适用于 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1。
+<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。     
   
 ## <a name="IS"></a> Integration Services
 
@@ -324,7 +327,8 @@ ms.locfileid: "58658431"
 |针对已分区表和索引的并行查询处理|是|否|否|否|否|   
 |全局批处理集成|是|否|否|否|否| 
 
-<sup>1</sup> 适用于 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1。  
+<sup>1</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。     
+
 ##  <a name="SSAS"></a> Analysis Services  
   
 有关 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 各个版本支持的 Analysis Services 功能的信息，请参阅 [SQL Server 各个版本支持的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。 
@@ -379,7 +383,6 @@ ms.locfileid: "58658431"
 > [![Download SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 的产品规格](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [安装 SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   

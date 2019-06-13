@@ -15,18 +15,20 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c758edb6bd51ce82affccae78c796437d7a688fc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1df493defd8a85c6d360dd224cdcec99b5732150
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559370"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506614"
 ---
 # <a name="database-mail"></a>数据库邮件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  数据库邮件是从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中发送电子邮件的企业解决方案。 通过使用数据库邮件，数据库应用程序可以向用户发送电子邮件。 邮件中可以包含查询结果，还可以包含来自网络中任何资源的文件。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  数据库邮件是一种从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)发送电子邮件的企业解决方案。 通过使用数据库邮件，数据库应用程序可以向用户发送电子邮件。 邮件中可以包含查询结果，还可以包含来自网络中任何资源的文件。  
   
-  
+> [!NOTE] 
+> 数据库邮件可在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中使用，但不可在 Azure SQL 数据库单一实例和弹性池中使用。 
+
 ##  <a name="Benefits"></a> 使用数据库邮件的优点  
  数据库邮件旨在实现可靠性、灵活性、安全性和兼容性。  
   
@@ -42,25 +44,25 @@ ms.locfileid: "51559370"
   
 ### <a name="scalability"></a>可伸缩性  
   
--   后台传递：数据库邮件提供后台（或异步）传递。 调用 **sp_send_dbmail** 发送消息时，数据库邮件可以向 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列中添加请求。 存储过程将立即返回。 外部电子邮件组件将接收请求并传递电子邮件。  
+-   后台传递：数据库邮件提供后台（或异步）传递功能。 调用 **sp_send_dbmail** 发送消息时，数据库邮件可以向 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列中添加请求。 存储过程将立即返回。 外部电子邮件组件将接收请求并传递电子邮件。  
   
--   多个配置文件：数据库邮件允许您在一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中创建多个配置文件。 另外，您也可以选择发送邮件时数据库邮件使用的配置文件。  
+-   多个配置文件：借助数据库邮件，可在一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中创建多个配置文件。 另外，您也可以选择发送邮件时数据库邮件使用的配置文件。  
   
--   多个帐户：每个配置文件都可以包含多个故障转移帐户。 您可以配置包含不同帐户的不同配置文件以跨多台电子邮件服务器分发电子邮件。  
+-   多个帐户：每个配置文件均可包含多个故障转移帐户。 您可以配置包含不同帐户的不同配置文件以跨多台电子邮件服务器分发电子邮件。  
   
--   64 位兼容性：数据库邮件完全可以用于采用 64 位安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   64 位兼容性：数据库邮件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 64 位安装上完全受支持。  
   
 ### <a name="security"></a>Security  
   
--   默认为关闭：为了减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的外围应用，默认情况下，禁用数据库邮件存储过程。  
+-   默认关闭：为减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的外围应用，默认禁用数据库邮件存储过程。  
   
 -   邮件安全性：若要发送数据库邮件，您必须是 **msdb** 数据库中的 **DatabaseMailUserRole** 数据库角色的成员。  
   
 -   配置文件安全性：数据库邮件增强了邮件配置文件的安全性。 您可以选择对数据库邮件配置文件具有访问权限的 **msdb** 数据库用户或组， 并可以为 **msdb**中的任一特定用户或所有用户授予访问权限。 专用配置文件用于限制指定用户的访问权限。 公共配置文件可供数据库中的所有用户使用。  
   
--   附件大小调控器：数据库邮件增强了对附件文件大小的可配置限制。 可以使用 [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) 存储过程更改此限制。  
+-   附件大小调控器：数据库邮件对附件文件大小强制实施可配置的限制。 可以使用 [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) 存储过程更改此限制。  
   
--   禁止的文件扩展名：数据库邮件维护一个禁止的文件扩展名列表。 用户无法附加扩展名为列表中某个扩展名的文件。 可以使用 sysmail_configure_sp 更改该列表。  
+-   禁用的文件扩展名：数据库邮件维护着一个包含禁用的文件扩展名的列表。 用户无法附加扩展名为列表中某个扩展名的文件。 可以使用 sysmail_configure_sp 更改该列表。  
   
 -   数据库邮件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎服务帐户下运行。 若要将文件夹中的文件附加到电子邮件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎帐户应有权访问该文件所在的文件夹。  
   
@@ -70,9 +72,9 @@ ms.locfileid: "51559370"
   
 -   日志记录。 数据库邮件将电子邮件活动记录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Microsoft Windows 应用程序事件日志和 **msdb** 数据库的表中。  
   
--   审核：数据库邮件将发送的邮件和附件的副本保留在 **msdb** 数据库中。 您可以轻松地审核数据库邮件的使用情况并检查保留的邮件。  
+-   审核：数据库邮件将发送的邮件和附件的副本保留在 msdb 数据库中  。 您可以轻松地审核数据库邮件的使用情况并检查保留的邮件。  
   
--   支持 HTML：数据库邮件允许您以 HTML 格式发送电子邮件。  
+-   支持 HTML：可通过数据库邮件以 HTML 格式发送电子邮件。  
   
   
 ##  <a name="VisualElement"></a> 数据库邮件体系结构  
@@ -114,7 +116,7 @@ ms.locfileid: "51559370"
 -   计划任务成功完成或未完成（例如，数据库备份或复制事件）。 例如，如果在月底的处理过程中出现错误，就可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理邮件通知操作员。  
   
   
-##  <a name="RelatedContent"></a> 数据库邮件组件主题  
+##  <a name="RelatedContent"></a> 另请参阅  
   
 -   [数据库邮件配置对象](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   
