@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 331e062c86a65ce2be8fca4d07620156bab0a5e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813629"
 ---
 # <a name="configure-client-protocols"></a>配置客户端协议
@@ -40,7 +40,7 @@ ms.locfileid: "62813629"
   
 ###  <a name="EnableDisable"></a>启用或禁用客户端协议  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server Native Client 配置”，右键单击“客户端协议”，再单击“属性”。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server Native Client 配置”  ，右键单击“客户端协议”  ，再单击“属性”  。  
   
 2.  单击 **“禁用的协议”** 框中的协议，再单击 **“启用”** 来启用协议。  
   
@@ -48,16 +48,16 @@ ms.locfileid: "62813629"
   
 ###  <a name="ChangeDefault"></a>更改客户端计算机的默认协议或协议顺序  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server Native Client 配置”，右键单击“客户端协议”，再单击“属性”。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server Native Client 配置”  ，右键单击“客户端协议”  ，再单击“属性”  。  
   
 2.  在 **“启用的协议”** 框中，单击 **“上移”** 或 **“下移”** 更改尝试连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时尝试使用的协议的顺序。 **“启用的协议”** 框中最上面的协议是默认协议。  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以为服务器别名配置和默认客户端网络库创建注册表项。 但是，该应用程序并不安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端网络库或网络协议。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端网络库是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间安装的；网络协议则是在安装 Microsoft Windows 的过程中进行安装的（或者通过“控制面板”中的“网络”安装）。 在安装 Windows 的过程中可能不会安装特定的网络协议。 有关安装这些网络协议的详细信息，请参阅供应商文档。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以为服务器别名配置和默认客户端网络库创建注册表项。 但是，该应用程序并不安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端网络库或网络协议。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端网络库是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间安装的；网络协议则是在安装 Microsoft Windows 的过程中进行安装的（或者通过“控制面板”  中的“网络”  安装）。 在安装 Windows 的过程中可能不会安装特定的网络协议。 有关安装这些网络协议的详细信息，请参阅供应商文档。  
   
 ###  <a name="Configure"></a>将客户端配置为使用 TCP/IP  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server Native Client 配置”，右键单击“客户端协议”，再单击“属性”。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server Native Client 配置”  ，右键单击“客户端协议”  ，再单击“属性”  。  
   
 2.  尝试连接到 SQL Server 时，单击 **“启用的协议”** 框中的向上或向下箭头可以更改尝试协议的顺序。 **“启用的协议”** 框中最上面的协议是默认协议。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224610"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>浏览市场篮模型（数据挖掘中级教程）
@@ -57,7 +57,7 @@ ms.locfileid: "63224610"
   
      默认情况下，该图会以所有节点都可见这种形式显示。 复杂模型中可能有很多节点，使得每个节点都显得很小。  
   
-3.  单击**+** 登录查看器的右下角并按下鼠标按钮，在关系图上平移。  
+3.  单击 **+** 登录查看器的右下角并按下鼠标按钮，在关系图上平移。  
   
 4.  在查看器的左侧，拖动下，将其从移动滑块**的所有链接**（默认值） 到滑块控件的底部。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "63224610"
 ##  <a name="bkmk_Rules"></a> 规则选项卡  
  **规则**选项卡显示与算法发现的规则相关的以下信息。  
   
--   **概率：***可能性*的规则，定义为给定左侧项的右侧项的概率。  
+-   **概率：** *可能性*的规则，定义为给定左侧项的右侧项的概率。  
   
 -   **重要性：** 规则的有用性的度量值。 值越大则意味着规则越有用。  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 170cbfffde1b28d60617f0e0166ca9f8e31f5fb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200181"
 ---
 # <a name="data-type-usage"></a>数据类型用法
@@ -42,7 +42,7 @@ ms.locfileid: "63200181"
 |**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Tinyint**数据类型是无符号。 一个**tinyint**列将绑定到数据类型为 SQL_C_UTINYINT 的变量，默认情况下。|  
 |别名数据类型|连接到的实例时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.2*x*，ODBC 驱动程序未显式声明列的为 null 性的列定义中添加 NULL。 因此，将忽略在别名数据类型的定义中存储的为 Null 性。<br /><br /> 连接到的实例时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.2*x*，具有基础数据的别名数据类型的列的类型**char**或**二进制**并不为 null 性为声明创建的数据类型为**varchar**或**varbinary**。 [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md)， [SQLColumns](../native-client-odbc-api/sqlcolumns.md)，和[SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md)返回 SQL_VARCHAR 或 SQL_VARBINARY 作为数据类型为这些列。 不对从这些列检索的数据进行填充。 **注意：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]6.5 和更早版本。|  
 |LONG 数据类型|*执行时数据*参数都被限制为 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 数据类型。|  
-|大值类型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将公开**varchar （max)**， **varbinary （max)**，并且**nvarchar （max)** 为 SQL_VARCHAR、 SQL_VARBINARY 和 SQL_ 类型WVARCHAR （分别） 的 Api，接受或返回 ODBC SQL 数据类型。|  
+|大值类型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将公开**varchar （max)** ， **varbinary （max)** ，并且**nvarchar （max)** 为 SQL_VARCHAR、 SQL_VARBINARY 和 SQL_ 类型WVARCHAR （分别） 的 Api，接受或返回 ODBC SQL 数据类型。|  
 |用户定义类型 (UDT)|UDT 列被映射为 SQL_SS_UDT。 如果使用 UDT 的 ToString() 或 ToXMLString() 方法或者通过 CAST/CONVERT 函数，在 SQL 语句中将 UDT 列显式映射到另一种类型，则在结果集中该列的类型将反映该列被转换成的实际类型。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序只能绑定到 UDT 列作为二进制文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅支持在 SQL_SS_UDT 和 SQL_C_BINARY 数据类型之间的转换。|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动将 XML 转换为 Unicode 文本。 XML 类型将映射为 SQL_SS_XML。|  
   

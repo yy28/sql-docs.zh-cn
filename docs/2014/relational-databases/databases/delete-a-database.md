@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871909"
 ---
 # <a name="delete-a-database"></a>删除数据库
@@ -45,7 +45,7 @@ ms.locfileid: "62871909"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[删除某个数据库之后](#FollowUp)  
+-   **跟进：** [删除某个数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -76,9 +76,9 @@ ms.locfileid: "62871909"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**，右键单击要删除的数据库，再单击 **“删除”**。  
+2.  展开 **“数据库”** ，右键单击要删除的数据库，再单击 **“删除”** 。  
   
-3.  确认选择了正确数据库，然后单击 **“确定”**。  
+3.  确认选择了正确数据库，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -86,9 +86,9 @@ ms.locfileid: "62871909"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例删除 `Sales` 和 `NewSales` 数据库。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例删除 `Sales` 和 `NewSales` 数据库。  
   
 ```sql  
 USE master ;  

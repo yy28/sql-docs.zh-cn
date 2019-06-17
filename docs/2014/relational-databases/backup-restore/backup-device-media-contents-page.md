@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876689"
 ---
 # <a name="backup-device-media-contents-page"></a>备份设备（“介质内容”页）
@@ -58,7 +58,7 @@ ms.locfileid: "62876689"
 |标题|值|  
 |------------|------------|  
 |**名称**|备份集的名称。|  
-|**类型**|备份对象：数据库、 文件、 或*\<保留为空 >* （对于事务日志）。|  
+|**类型**|备份对象：数据库、 文件、 或 *\<保留为空 >* （对于事务日志）。|  
 |**组件**|执行的备份类型：完整、 差异备份或事务日志。|  
 |**Server**|执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例名。|  
 |**“数据库”**|已备份数据库的名称。|  
