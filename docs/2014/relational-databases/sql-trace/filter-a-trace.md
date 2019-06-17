@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714714"
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
@@ -137,7 +137,7 @@ ms.locfileid: "62714714"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup>如果跟踪中的事件**osql**实用程序或**sqlcmd**实用程序，始终追加**%** 上的筛选器到**TextData**数据列。  
+ <sup>1</sup>如果跟踪中的事件**osql**实用程序或**sqlcmd**实用程序，始终追加 **%** 上的筛选器到**TextData**数据列。  
   
  SQL 跟踪作为一种安全预防措施，会自动从跟踪中省略任何影响密码的、与安全相关的存储过程。 此安全机制不可配置，并且始终有效。 此机制阻止有权跟踪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的所有活动的用户捕获密码。  
   

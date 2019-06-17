@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642675"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能： 结果和资源
@@ -58,7 +58,7 @@ ms.locfileid: "62642675"
 6. 控制台输出也被定向到输出目录中的文件。
 7. 测试脚本将在这些文件，以运行计算的平均时间处理时间。
 
-例如，以下结果是从单个测试的时间。 主要关注的时间是“总读取时间”（IO 时间）和“转换时间”（设置计算进程所产生的开销）。
+例如，以下结果是从单个测试的时间。 主要关注的时间是“总读取时间”（IO 时间）和“转换时间”（设置计算进程所产生的开销）。  
 
 **示例计时**
 
@@ -145,7 +145,7 @@ metric time pct
 |           | 6      | 3.47 秒 |              |
 |           |        |              | 3.5075       |
 
-“平衡”电源选项：
+“平衡”电源选项： 
 
 | 测试名称 | 运行 \# | 占用时间 | 平均时间 |
 |-----------|--------|--------------|--------------|

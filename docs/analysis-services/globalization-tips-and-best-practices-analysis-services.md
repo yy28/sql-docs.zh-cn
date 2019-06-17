@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57031c75e9433981b45419348ab2d5c0745edbfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659482"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化提示和最佳实践 (Analysis Services)
@@ -51,7 +51,7 @@ ms.locfileid: "62659482"
   
      在中国和新加坡，Microsoft 技术支持部门通常见到的是简体中文，简体中文以拼音作为首选的排序方式。 建议使用的排序规则是 Chinese_PRC（用于 SQL Server 2000）、Chinese_PRC_90（用于 SQL Server 2005）或 Chinese_Simplified_Pinyin_100（用于 SQL Server 2008 和更高版本）。  
   
-     在台湾，它是更常见繁体中文使用建议的排序顺序基于笔画数：Chinese_Taiwan_Stroke （用于 SQL Server 2000)、 Chinese_Taiwan_Stroke_90 （用于 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 （用于 SQL Server 2008 和更高版本）。  
+     在中国台湾地区，它是更常见繁体中文使用建议的排序顺序基于笔画数：Chinese_Taiwan_Stroke （用于 SQL Server 2000)、 Chinese_Taiwan_Stroke_90 （用于 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 （用于 SQL Server 2008 和更高版本）。  
   
      其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在中国澳门，较常使用的是 Chinese_Traditional_Stroke_Count_100（在 SQL Server 2008 和更高版本上）。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62659482"
   
 -   将 `Locale Identifier=1036` 添加到连接字符串。 保存并关闭该文件。  
   
--   打开 Excel |“数据” | “现有连接”。 在列表中筛选此计算机上的连接文件。 查找 Adventure Works 的连接（仔细查看名称；你可能发现不止一个）。 打开该连接。  
+-   打开 Excel |“数据”   | “现有连接”  。 在列表中筛选此计算机上的连接文件。 查找 Adventure Works 的连接（仔细查看名称；你可能发现不止一个）。 打开该连接。  
   
      你会看到 Adventure Works 示例数据库的法语翻译。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "62659482"
   
  在 Management Studio 中，你可以指定服务器连接上的区域设置标识符。  
   
--   在对象资源管理器|“连接”  |  | 中，单击“其他连接参数” **Additional ion Parameters** 选项卡。  
+-   在对象资源管理器|“连接”   |    |   中，单击“其他连接参数” **Additional ion Parameters** 选项卡。  
   
--   输入 `Local Identifier=1036` ，然后单击 “连接”。  
+-   输入 `Local Identifier=1036` ，然后单击  “连接”。  
   
 -   对 Adventure Works 数据库执行 MDX 查询。 查询结果应为法语翻译。  
   

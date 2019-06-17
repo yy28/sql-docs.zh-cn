@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62661849"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具窗口
@@ -26,9 +26,9 @@ ms.locfileid: "62661849"
 |||  
 |-|-|  
 |**工具**|**用途**|  
-|[对象资源管理器](object/object-explorer.md)|浏览服务器、创建和定位对象、管理数据源以及查看日志。 可以从“视图”菜单访问该工具。|  
-|[解决方案资源管理器](solution/solution-explorer.md)|在称为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 脚本的项目中存储并组织脚本及相关连接信息。 可以将几个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 脚本存储为解决方案，并使用源代码管理工具管理随时间演进的脚本。 可以从“视图”菜单访问该工具。|  
-|[模板资源管理器](template/template-explorer.md)|基于现有模板创建查询。 还可以创建自定义查询，或改变现有模板以使它适合您自己的需要。 可以从“视图”菜单访问该工具。|  
+|[对象资源管理器](object/object-explorer.md)|浏览服务器、创建和定位对象、管理数据源以及查看日志。 可以从“视图”  菜单访问该工具。|  
+|[解决方案资源管理器](solution/solution-explorer.md)|在称为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 脚本的项目中存储并组织脚本及相关连接信息。 可以将几个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 脚本存储为解决方案，并使用源代码管理工具管理随时间演进的脚本。 可以从“视图”  菜单访问该工具。|  
+|[模板资源管理器](template/template-explorer.md)|基于现有模板创建查询。 还可以创建自定义查询，或改变现有模板以使它适合您自己的需要。 可以从“视图”  菜单访问该工具。|  
 |[动态帮助](sql-server-management-studio-ssms.md)|单击组件或类型代码时，显示相关帮助主题的列表。|  
   
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具可以一起工作。 例如，您可以：  

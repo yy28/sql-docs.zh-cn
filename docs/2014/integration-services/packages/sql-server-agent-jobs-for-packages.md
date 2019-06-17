@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767169"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
@@ -48,9 +48,9 @@ ms.locfileid: "62767169"
  可以通过设置通知选项来增强作业，如指定在作业完成时向某个操作员发送电子邮件或添加警报。 有关详细信息，请参阅 [“警报”](../../ssms/agent/alerts.md)。  
   
 ##  <a name="packages"></a> Scheduling Integration Services Packages  
- 在您创建一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业以便计划 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包后，必须至少添加一个步骤，并将该步骤的类型设置为 **“SQL Server Integration Services 包”**。 一个作业可以包括多个步骤，并且每个步骤可以运行不同的包。  
+ 在您创建一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业以便计划 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包后，必须至少添加一个步骤，并将该步骤的类型设置为 **“SQL Server Integration Services 包”** 。 一个作业可以包括多个步骤，并且每个步骤可以运行不同的包。  
   
- 从作业步骤中运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包类似于使用 **dtexec**(dtexec.exe) 和 **DTExecUI**(dtexecui.exe) 实用工具运行包。 可以在“新建作业步骤”对话框中设置运行时选项，而不是使用命令行选项或“执行包实用工具”对话框来设置包的运行时选项。 有关运行包的选项的详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。  
+ 从作业步骤中运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包类似于使用 **dtexec**(dtexec.exe) 和 **DTExecUI**(dtexecui.exe) 实用工具运行包。 可以在“新建作业步骤”  对话框中设置运行时选项，而不是使用命令行选项或“执行包实用工具”  对话框来设置包的运行时选项。 有关运行包的选项的详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。  
   
  有关详细信息，请参阅 [使用 SQL Server 代理计划包](../schedule-a-package-by-using-sql-server-agent.md)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62767169"
   
      **若要使用日志文件查看器，请执行下列操作。**  
   
-    1.  右键单击对象资源管理器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业，然后单击“查看历史记录”。  
+    1.  右键单击对象资源管理器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业，然后单击“查看历史记录”  。  
   
     2.  在 **“日志文件摘要”** 框中，找到 **“消息”** 列中标有 **“作业失败”** 消息的作业执行。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62767169"
   
     4.  右键单击 SSISDB，依次指向“报表”和“标准报表”，然后单击“所有执行”。  
   
-    5.  在 **“所有执行”** 报告的 **ID** 列中，找到该执行 ID。 单击 **“概述”**、 **“所有消息”** 或 **“执行性能”** ，查看有关此包执行的信息。  
+    5.  在 **“所有执行”** 报告的 **ID** 列中，找到该执行 ID。 单击 **“概述”** 、 **“所有消息”** 或 **“执行性能”** ，查看有关此包执行的信息。  
   
          有关“概述”、“所有消息”和“执行性能”报告的详细信息，请参阅 [Reports for the Integration Services Server](../reports-for-the-integration-services-server.md)。  
   

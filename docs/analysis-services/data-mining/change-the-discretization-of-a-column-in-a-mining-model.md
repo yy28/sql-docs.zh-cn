@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a85b645562ce39f19c15191b6b1d3ba4a7fb332
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670430"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>更改挖掘模型中列的离散化
@@ -24,7 +24,7 @@ ms.locfileid: "62670430"
   
 ### <a name="to-display-the-properties-for-a-mining-model-column"></a>显示挖掘模型列的属性  
   
-1.  在数据挖掘设计器的“挖掘模型”选项卡中，右键单击包含挖掘模型名称的列标题，或者网格中包含挖掘算法名称的行，然后选择“属性”。  
+1.  在数据挖掘设计器的“挖掘模型”选项卡中，右键单击包含挖掘模型名称的列标题，或者网格中包含挖掘算法名称的行，然后选择“属性”。    
   
      **“属性”** 窗口将显示与挖掘模型相关联的所有属性。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62670430"
 2.  在中**属性**窗口中，单击文本框旁边的<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>，然后选择以下值之一：**自动**， **EqualAreas**，或**群集**。  
   
     > [!NOTE]  
-    >  如果列的用法设置为 **Ignore**，则列的“属性”窗口将为空白。  
+    >  如果列的用法设置为 **Ignore**，则列的“属性”  窗口将为空白。  
   
      在设计器中选择一个不同的元素后，新值即生效。  
   

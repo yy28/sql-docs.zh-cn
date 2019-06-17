@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62675675"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>卸载 Analytics Platform System 修补程序 
@@ -26,17 +26,17 @@ ms.locfileid: "62675675"
   
 -   有权访问管理控制台来监视设备分析平台系统登录名。  
   
--   域管理员帐户登录到<em>< appliance_domain ></em>**-HST01**节点。  
+-   域管理员帐户登录到<em>< appliance_domain ></em> **-HST01**节点。  
   
 -   知识库文章编号，为了使修补程序以卸载。  
   
 ## <a name="HowToUninstallPDW"></a>若要卸载 SQL Server PDW 修补程序  
   
-1.  登录到<em>< appliance_domain ></em>**-HST01**节点作为 Fabric 域管理员。  
+1.  登录到<em>< appliance_domain ></em> **-HST01**节点作为 Fabric 域管理员。  
   
 2.  使用运行方式管理员选项打开命令提示符。  
   
-3.  将目录更改为`C:\PDWINST\Patches\<kbarticle>\media`其中*<kbarticle>* 是为了使修补程序的知识库文章编号，以卸载。  
+3.  将目录更改为`C:\PDWINST\Patches\<kbarticle>\media`其中 *<kbarticle>* 是为了使修补程序的知识库文章编号，以卸载。  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  

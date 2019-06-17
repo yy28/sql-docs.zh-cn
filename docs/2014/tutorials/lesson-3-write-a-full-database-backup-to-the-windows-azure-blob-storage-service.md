@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653676"
 ---
 # <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>第 3 课：将完整数据库备份写入到 Windows Azure Blob 存储服务
@@ -27,9 +27,9 @@ ms.locfileid: "62653676"
   
 2.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的实例。  
   
-3.  在标准菜单栏上，单击 **“新建查询”**。  
+3.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-4.  将以下示例复制并粘贴到查询窗口中，根据需要进行修改，然后单击 **“执行”**。  
+4.  将以下示例复制并粘贴到查询窗口中，根据需要进行修改，然后单击 **“执行”** 。  
   
     ```  
     BACKUP DATABASE[AdventureWorks2012]   

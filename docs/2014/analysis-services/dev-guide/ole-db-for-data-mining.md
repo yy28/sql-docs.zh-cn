@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7662514939526bd8cdc12d19e5b53e3a4a2f913d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62732032"
 ---
 # <a name="ole-db-for-data-mining"></a>OLE DB for Data Mining
@@ -25,7 +25,7 @@ ms.locfileid: "62732032"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 扩展了该规范，包括添加新的架构行集、在现有架构行集中添加列以及向数据挖掘扩展插件 (DMX) 语言添加用于创建和管理挖掘结构的语法。  
   
- **有关详细信息：**[数据挖掘架构行集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)，[创建挖掘结构&#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)， [ALTER 挖掘结构&#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx)，[删除挖掘结构&#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
+ **有关详细信息：** [数据挖掘架构行集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)，[创建挖掘结构&#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)， [ALTER 挖掘结构&#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx)，[删除挖掘结构&#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   

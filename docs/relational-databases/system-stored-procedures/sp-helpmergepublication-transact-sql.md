@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660798"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -43,17 +43,17 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication**=** ] **'**_publication_**'**  
- 发布的名称。 *发布*是**sysname**，默认值为**%**，它返回当前数据库中所有合并发布的相关信息。  
+ [ @publication **=** ] **'** _publication_ **'**  
+ 发布的名称。 *发布*是**sysname**，默认值为 **%** ，它返回当前数据库中所有合并发布的相关信息。  
   
  [ @found **=** ] **'***找到***'** 输出  
  用于指示返回行的标志。 *找到*是**int**而且是 OUTPUT 参数，默认值为 NULL。 **1**指示已找到发布。 **0**指示找不到该发布。  
   
- [ @publication_id**=**] **'***publication_id***'** OUTPUT  
+ [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
  发布的标识号。 *publication_id*是**uniqueidentifier**而且是 OUTPUT 参数，默认值为 NULL。  
   
- [ @reserved **=**] **'***保留***’**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *保留*是**nvarchar(20)**，默认值为 NULL。  
+ [ @reserved **=** ] **'***保留***’**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *保留*是**nvarchar(20)** ，默认值为 NULL。  
   
  [ @publisher **=** ] **'***发布服务器***’**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  

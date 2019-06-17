@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 53637fb3ae70cd73e1bbf1cb95a8a4ca3775b812
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666444"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "62666444"
 |**column_id**|**int**|列存储列的 ID。|  
 |**dictionary_id**|**int**|字典的 ID。|  
 |**version**|**int**|字典格式的版本。|  
-|**类型**|**int**|字典类型：<br /><br /> 1-哈希字典包含**int**值<br /><br /> 2-不使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 4-哈希字典包含**float**值|  
+|**type**|**int**|字典类型：<br /><br /> 1-哈希字典包含**int**值<br /><br /> 2-不使用<br /><br /> 3-包含字符串值的哈希字典<br /><br /> 4-哈希字典包含**float**值|  
 |**last_id**|**int**|字典中的最后一个数据 ID。|  
 |**entry_count**|**bigint**|字典中的条目数。|  
 |**on_disc_size**|**bigint**|字典大小（以字节为单位）。|  

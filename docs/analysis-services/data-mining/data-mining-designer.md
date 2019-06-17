@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 25eea114d105ec445e91b5bebbbe74e1d0f846f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650357"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
@@ -40,7 +40,7 @@ ms.locfileid: "62650357"
 ## <a name="mining-models-tab"></a>“挖掘模型”选项卡  
  使用 **“挖掘模型”** 选项卡可管理现有的挖掘模型以及创建新模型。 挖掘模型始终基于现有挖掘结构。  
   
- 在“挖掘模型”选项卡中，可以更改算法类型、添加或删除与模型结构关联的列、调整算法特定的列属性、指定挖掘模型列用法以及调整与挖掘模型关联的算法参数。 还可以将挖掘结构与所选模型或所有关联模型一起处理。  
+ 在“挖掘模型”  选项卡中，可以更改算法类型、添加或删除与模型结构关联的列、调整算法特定的列属性、指定挖掘模型列用法以及调整与挖掘模型关联的算法参数。 还可以将挖掘结构与所选模型或所有关联模型一起处理。  
   
  有关使用挖掘模型的详细信息，请参阅下列主题：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62650357"
  [测试和验证任务和操作指南（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>“挖掘模型预测”选项卡  
- “挖掘模型预测”选项卡包含预测查询生成器，可以使用此生成器创建数据挖掘扩展插件 (DMX) 预测查询。 该选项卡包含用于指定挖掘模型和输入表、将挖掘模型中的列映射到输入表中的列、向查询中添加函数以及为各个列指定条件的工具。  
+ “挖掘模型预测”  选项卡包含预测查询生成器，可以使用此生成器创建数据挖掘扩展插件 (DMX) 预测查询。 该选项卡包含用于指定挖掘模型和输入表、将挖掘模型中的列映射到输入表中的列、向查询中添加函数以及为各个列指定条件的工具。  
   
  设计查询后，可以使用该选项卡中的不同视图来显示查询结果并手动修改查询。 还可以将查询结果保存到数据库中的表。  
   

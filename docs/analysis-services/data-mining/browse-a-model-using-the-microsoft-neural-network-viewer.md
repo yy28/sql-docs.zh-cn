@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 280e8fa3702868ff36c799443b87b0827a962a89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676089"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>使用 Microsoft 神经网络查看器浏览模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 神经网络查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建可分析多个输入和输出的分类和回归挖掘模型，它对于开放的分析和浏览十分有用。 有关此算法的详细信息，请参阅 [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 神经网络查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建可分析多个输入和输出的分类和回归挖掘模型，它对于开放的分析和浏览十分有用。 有关此算法的详细信息，请参阅 [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)。  
   
  在您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络查看器浏览某一模型时，通常会选择某个目标属性和状态，然后使用该查看器来查看输入属性是如何影响结果的。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62676089"
 ###  <a name="BKMK_Inputs"></a> 输入  
  使用 **“输入”** 选项卡可以选择模型用作输入的属性及属性值。 该查看器打开时，默认设置是包含所有属性。 在此默认视图中，模型将选择哪些属性值是要显示的最重要的属性值。  
   
- 若要选择输入属性，请在“输入”网格的“属性”列内部单击，再从下拉列表中选择一个属性。 （该列表中只包含在该模型中包含的属性。）  
+ 若要选择输入属性，请在“输入”  网格的“属性”  列内部单击，再从下拉列表中选择一个属性。 （该列表中只包含在该模型中包含的属性。）  
   
  第一个非重复值出现在 **“值”** 列下。 单击默认值将显示一个包含关联属性的所有可能状态的列表。 可以选择要调查的状态。 可以根据需要选择多个属性。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62676089"
  [返回页首](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> 变量  
- 中的网格**变量**选项卡包含以下各列：**特性**，**值**， **Favors [value 1]**，并且**Favors [value 2]**。 默认情况下，这些列按“Favors [value 1]”强度进行排序。 单击列标题将更改所选列的排序顺序。  
+ 中的网格**变量**选项卡包含以下各列：**特性**，**值**， **Favors [value 1]** ，并且**Favors [value 2]** 。 默认情况下，这些列按“Favors [value 1]”  强度进行排序。 单击列标题将更改所选列的排序顺序。  
   
  属性右侧的条表示指定输入属性状态所倾向的输出属性状态。 条的大小则表示输出状态倾向于输入状态的程度。  
   

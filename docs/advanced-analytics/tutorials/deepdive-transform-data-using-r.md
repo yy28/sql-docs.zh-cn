@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 8a339d52b04b297227e28833ea490f615ed268f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641109"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R （SQL Server 和 RevoScaleR 教程） 转换数据
@@ -37,7 +37,7 @@ ms.locfileid: "62641109"
 从**引导**包，请使用函数**inv.logit**，它可以计算 logit 的反函数。 也就是说，**inv.logit** 函数将 logit 转换为范围在 [0，1] 之间的概率。
 
 > [!TIP] 
-> 获取此范围的预测值的另一种方法是在对 rxPredict 的最初调用中将 type 参数设为 **response**。
+> 获取此范围的预测值的另一种方法是在对 rxPredict  的最初调用中将 type  参数设为 **response**。
 
 1. 首先，创建要为表的数据的数据源`ccScoreOutput`。
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721605"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>配置拓扑（对等复制）
@@ -33,7 +33,7 @@ ms.locfileid: "62721605"
 |设计图面|显示其他界面元素。 若要添加元素，请右键单击设计图面。|  
 |![拓扑中的第一个节点](media/p2pwizard-firstnode.gif "拓扑中的第一个节点")|拓扑中的原始节点。 可使用来自原始节点的发布数据库副本初始化新节点。|  
 |![我们具有其完整信息的节点](media/p2pwizard-complete.gif "我们具有其完整信息的节点")或更高版本，复制具有其完整信息。 若要指定配置选项，请右键单击此节点。|  
-|![我们具有其不完整信息的节点](media/p2pwizard-incomplete.gif "我们具有其不完整信息的节点")|复制具有其不完整信息的节点。 若要指定配置选项，请右键单击此节点。 复制具有的信息不完整，原因为以下之一：<br /><br /> 节点运行的是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例，该实例没有存储向导所需的所有元数据。<br /><br /> 节点运行的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更高版本，但是复制无法从此节点检索订阅信息。 针对此情况进行故障排除：<br />-请确保在节点上的数据库处于联机状态，并且您可以通过使用相同的凭据连接到的节点的分发代理连接到它。<br />-请确保日志读取器代理并连接到的节点的所有分发代理正在运行。<br />-请确保设置刷新超时足够长以收集所有拓扑信息。 若要设置超时，请右键单击设计图面，然后单击 **“设置刷新超时”**。|  
+|![我们具有其不完整信息的节点](media/p2pwizard-incomplete.gif "我们具有其不完整信息的节点")|复制具有其不完整信息的节点。 若要指定配置选项，请右键单击此节点。 复制具有的信息不完整，原因为以下之一：<br /><br /> 节点运行的是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例，该实例没有存储向导所需的所有元数据。<br /><br /> 节点运行的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更高版本，但是复制无法从此节点检索订阅信息。 针对此情况进行故障排除：<br />-请确保在节点上的数据库处于联机状态，并且您可以通过使用相同的凭据连接到的节点的分发代理连接到它。<br />-请确保日志读取器代理并连接到的节点的所有分发代理正在运行。<br />-请确保设置刷新超时足够长以收集所有拓扑信息。 若要设置超时，请右键单击设计图面，然后单击 **“设置刷新超时”** 。|  
 |灰色箭头线|两个节点之间的连接。 若要添加连接，请右键单击要连接的节点之一。 若要删除某连接，请右键单击该连接。<br /><br /> 如果箭头线上只有一个箭头，则表明复制拥有的其中一个节点的信息不完整。|  
   
 ### <a name="options-for-the-design-surface"></a>设计图面选项  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c2739e301baf843f61c62e72e7ce7520d0445b73
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721263"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>在同步期间执行脚本（复制 Transact-SQL 编程）
@@ -32,7 +32,7 @@ ms.locfileid: "62721263"
   
 2.  将此脚本文件保存到此发布的快照代理能访问的位置。  
   
-3.  在发布服务器上，对发布数据库执行 [sp_addscriptexec (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)。 指定 **@publication**，为 **@scriptfile**指定步骤 2 中创建的具有完整 UNC 路径的脚本文件名称，并为 **@skiperror**指定下列值之一：  
+3.  在发布服务器上，对发布数据库执行 [sp_addscriptexec (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)。 指定 **@publication** ，为 **@scriptfile** 指定步骤 2 中创建的具有完整 UNC 路径的脚本文件名称，并为 **@skiperror** 指定下列值之一：  
   
     -   **0** - 如果遇到错误，代理将停止执行脚本。  
   

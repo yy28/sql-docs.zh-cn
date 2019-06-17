@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 2ed5d6e7ef3b0d6e8ac5ebaa3533c6bebce5e856
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641096"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>创建一个数据库和权限 （SQL Server 和 RevoScaleR 教程）
@@ -39,9 +39,9 @@ ms.locfileid: "62641096"
 
 ## <a name="create-a-login"></a>创建登录名
   
-1. 单击“新建查询”，然后将数据库上下文更改为 master 数据库。
+1. 单击“新建查询”  ，然后将数据库上下文更改为 master 数据库。
   
-2. 在新的“查询”窗口中，运行以下命令以创建用户帐户并将其分配到本教程中使用的数据库。 如有需要，请务必更改数据库名称。
+2. 在新的“查询”  窗口中，运行以下命令以创建用户帐户并将其分配到本教程中使用的数据库。 如有需要，请务必更改数据库名称。
 
 3. 若要验证该登录名，请选择新的数据库，展开**安全**，然后展开**用户**。
   

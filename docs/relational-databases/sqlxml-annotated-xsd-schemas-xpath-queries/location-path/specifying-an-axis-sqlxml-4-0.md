@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5f35aaa9009d07e4dad6f7c5309d9f2bb6c23ea4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719958"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定轴 (SQLXML 4.0)
@@ -36,7 +36,7 @@ ms.locfileid: "62719958"
   
      包含上下文节点的子级。  
   
-     以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<客户 >** 子级：  
+     以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择 **\<客户 >** 子级：  
   
     ```  
     child::Customer  
@@ -48,7 +48,7 @@ ms.locfileid: "62719958"
   
      包含上下文节点的父级。  
   
-     下面的 XPath 表达式选择所有**\<客户 >** 的父级**\<顺序 >** 子级：  
+     下面的 XPath 表达式选择所有 **\<客户 >** 的父级 **\<顺序 >** 子级：  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -70,7 +70,7 @@ ms.locfileid: "62719958"
   
      包含上下文节点本身。  
   
-     下面的 XPath 表达式选择当前节点，如果它是**\<顺序 >** 节点：  
+     下面的 XPath 表达式选择当前节点，如果它是 **\<顺序 >** 节点：  
   
     ```  
     self::Order  

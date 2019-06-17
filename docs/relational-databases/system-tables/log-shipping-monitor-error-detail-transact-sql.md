@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e0228072bee91f96e816a1d0f369f85fa486728
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719598"
 ---
 # <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "62719598"
 |**sequence_number**|**int**|一个增量数字，指示跨多个记录的错误信息的正确顺序。|  
 |**log_time**|**datetime**|创建记录的日期和时间。|  
 |**log_time_utc**|**datetime**|创建记录的日期和时间，使用通用协调时间表示。|  
-|message|**nvarchar**|消息正文。|  
+|message |**nvarchar**|消息正文。|  
 |**源 (source)**|**nvarchar**|错误消息或事件的源。|  
 |**help_url**|**nvarchar**|可从中找到更多错误信息的 URL（如果有）。|  
   

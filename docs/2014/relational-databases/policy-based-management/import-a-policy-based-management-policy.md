@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e4978471f25c1bf38d841e11f560a6bd99dac53e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705312"
 ---
 # <a name="import-a-policy-based-management-policy"></a>导入基于策略的管理策略
@@ -48,16 +48,16 @@ ms.locfileid: "62705312"
   
 #### <a name="to-import-a-policy-instance"></a>导入策略实例  
   
-1.  在“对象资源管理器” 中，单击加号以展开新导入的策略实例要存储到的服务器。  
+1.  在“对象资源管理器”  中，单击加号以展开新导入的策略实例要存储到的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”**。  
+3.  单击加号以便展开 **“策略管理”** 。  
   
-4.  右键单击“策略”文件夹，然后选择“导入策略”。  
+4.  右键单击“策略”  文件夹，然后选择“导入策略”  。  
   
-5.  在“导入”对话框中，键入该文件的路径和名称；或者使用“浏览”按钮 (**...**) 查找包含策略的 XML 文件，然后选择该文件。 有关 **“导入”** 对话框中可用选项的详细信息，请参阅 [Import Policies Dialog Box](import-policies-dialog-box.md)。  
+5.  在“导入”  对话框中，键入该文件的路径和名称；或者使用“浏览”按钮 ( **...** ) 查找包含策略的 XML 文件，然后选择该文件。 有关 **“导入”** 对话框中可用选项的详细信息，请参阅 [Import Policies Dialog Box](import-policies-dialog-box.md)。  
   
-6.  完成后，单击 **“确定”**。  
+6.  完成后，单击 **“确定”** 。  
   
   

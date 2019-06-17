@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c67744ea3862185b59d1a0af3e1bb144eba57e23
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670976"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>更改数据挖掘查询的超时值
@@ -26,9 +26,9 @@ ms.locfileid: "62670976"
   
 ### <a name="configure-the-time-out-value-for-data-mining-queries"></a>配置数据挖掘查询的超时值  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，从 **“工具”** 菜单中选择 **“选项”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，从 **“工具”** 菜单中选择 **“选项”** 。  
   
-2.  在 **“选项”** 窗格中，展开 **“商业智能设计器”**。  
+2.  在 **“选项”** 窗格中，展开 **“商业智能设计器”** 。  
   
 3.  单击 **“查询超时值”** 文本框，然后键入一个秒数值。  
   

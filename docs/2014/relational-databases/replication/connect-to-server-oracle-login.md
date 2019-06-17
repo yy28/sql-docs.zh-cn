@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fddf6045921fa14e09aaff918f84125eb907e9ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721739"
 ---
 # <a name="connect-to-server-oracle-login"></a>连接到服务器 (Oracle)，登录名
@@ -29,7 +29,7 @@ ms.locfileid: "62721739"
  Oracle 发布服务器的透明网络底层 (TNS)，是在配置分发服务器上安装的 Oracle 客户端软件期间指定的。  
   
  **身份验证**  
- 选择 **“Oracle 标准身份验证”** （建议）或 **“Windows 身份验证”**。 如果选择了 **“Windows 身份验证”**，则：  
+ 选择 **“Oracle 标准身份验证”** （建议）或 **“Windows 身份验证”** 。 如果选择了 **“Windows 身份验证”** ，则：  
   
 -   必须将 Oracle 服务器配置为允许使用 Windows 凭据进行连接。 有关详细信息，请参阅 Oracle 文档。  
   

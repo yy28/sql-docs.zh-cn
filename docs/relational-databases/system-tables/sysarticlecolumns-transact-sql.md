@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714184"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62714184"
 |**colid**|**smallint**|标识项目中的列。|  
 |**is_udt**|**bit**|表示列是否为用户定义数据类型 (UDT) 列。 值为**1**指示 UDT 列。|  
 |**is_xml**|**bit**|指示列是否**xml**列。 值为**1** ，则指示 xml 列。|  
-|**is_max**|**bit**|指示列是否为大值数据类型列**varchar （max)**， **nvarchar （max)**，并**varbinary （max)**。 值为**1**指示大型值列。|  
+|**is_max**|**bit**|指示列是否为大值数据类型列**varchar （max)** ， **nvarchar （max)** ，并**varbinary （max)** 。 值为**1**指示大型值列。|  
   
 ## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660773"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
@@ -60,7 +60,7 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  若要查看特定作业，或者*job_id*或*job_name*必须指定。  同时省略*job_id*并*job_name*返回有关所有作业的信息。
   
-`[ @job_aspect = ] 'job_aspect'` 要显示的作业属性。 *job_aspect*是**varchar(9)**，默认值为 NULL，并且可以是下列值之一。  
+`[ @job_aspect = ] 'job_aspect'` 要显示的作业属性。 *job_aspect*是**varchar(9)** ，默认值为 NULL，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -70,11 +70,11 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|作业步骤信息|  
 |**目标**|目标信息|  
   
-`[ @job_type = ] 'job_type'` 要在报表中包括的作业类型。 *job_type*是**varchar(12)**，默认值为 NULL。 *job_type*可以是**本地**或**多服务器**。  
+`[ @job_type = ] 'job_type'` 要在报表中包括的作业类型。 *job_type*是**varchar(12)** ，默认值为 NULL。 *job_type*可以是**本地**或**多服务器**。  
   
 `[ @owner_login_name = ] 'login_name'` 作业的所有者的登录名。 *login_name*是**sysname**，默认值为 NULL。  
   
-`[ @subsystem = ] 'subsystem'` 子系统的名称。 *子系统*是**nvarchar(40)**，默认值为 NULL。  
+`[ @subsystem = ] 'subsystem'` 子系统的名称。 *子系统*是**nvarchar(40)** ，默认值为 NULL。  
   
 `[ @category_name = ] 'category'` 类别的名称。 *类别*是**sysname**，默认值为 NULL。  
   
@@ -92,13 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|挂起。|  
 |**7**|正在执行完成操作。|  
   
-`[ @date_comparator = ] 'date_comparison'` 要在比较中使用的比较运算符*date_created*并*date_modified*。 *date_comparison*是**char （1)**，可以为 = \<，或 >。  
+`[ @date_comparator = ] 'date_comparison'` 要在比较中使用的比较运算符*date_created*并*date_modified*。 *date_comparison*是**char （1)** ，可以为 = \<，或 >。  
   
 `[ @date_created = ] date_created` 创建作业的日期。 *date_created*是**datetime**，默认值为 NULL。  
   
 `[ @date_last_modified = ] date_modified` 上次修改作业的日期。 *date_modified*是**datetime**，默认值为 NULL。  
   
-`[ @description = ] 'description_pattern'` 作业的说明。 *description_pattern*是**nvarchar(512)**，默认值为 NULL。 *description_pattern*可以包括模式匹配的 SQL Server 通配符字符。  
+`[ @description = ] 'description_pattern'` 作业的说明。 *description_pattern*是**nvarchar(512)** ，默认值为 NULL。 *description_pattern*可以包括模式匹配的 SQL Server 通配符字符。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -139,7 +139,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|作业具有的作业步骤数。|  
 |**has_schedule**|**int**|作业具有的作业计划数。|  
 |**has_target**|**int**|作业具有的目标服务器数。|  
-|**类型**|**int**|作业的类型。<br /><br /> 1 = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业有没有目标服务器。|  
+|**type**|**int**|作业的类型。<br /><br /> 1 = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业有没有目标服务器。|  
   
  如果*job_id*或*job_name*指定，则**sp_help_job**返回作业步骤、 作业计划及作业目标服务器的这些额外的结果集。  
   
@@ -157,7 +157,7 @@ sp_help_job { [ @job_id = ] job_id
 |**on_success_step_id**|**int**|如果**on_success_action**是**4**，这表示要执行的下一个步骤。|  
 |**on_fail_action**|**nvarchar(4000)**|步骤失败时所采取的操作。 值均为适用于**on_success_action**。|  
 |**on_fail_step_id**|**int**|如果**on_fail_action**是**4**，这表示要执行的下一个步骤。|  
-|服务器|**sysname**|保留。|  
+|服务器 |**sysname**|保留。|  
 |**database_name**|**sysname**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，这是将在其中执行命令的数据库。|  
 |**database_user_name**|**sysname**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，这是命令执行时所在的数据库用户上下文。|  
 |**retry_attempts**|**int**|在认定步骤已经失败之前，应该对命令进行重试的最大次数（如果命令没有成功）。|  

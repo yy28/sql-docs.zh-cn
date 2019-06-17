@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0785e7b7d394177efee3ae12cb6d0e2f7d8cb5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645510"
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
@@ -43,7 +43,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @loginame = ] 'login'` 是 Windows 用户或从中撤销访问权限组的名称。 *登录名*必须包括域名，例如 **[ADVWKS\sylvester1]**。 *登录名* 是 **sysname** ，无默认值。  
+`[ @loginame = ] 'login'` 是 Windows 用户或从中撤销访问权限组的名称。 *登录名*必须包括域名，例如 **[ADVWKS\sylvester1]** 。 *登录名* 是 **sysname** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

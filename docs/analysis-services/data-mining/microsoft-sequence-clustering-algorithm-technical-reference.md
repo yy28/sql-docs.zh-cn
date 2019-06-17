@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724886"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 顺序分析和聚类分析算法技术参考
@@ -35,7 +35,7 @@ ms.locfileid: "62724886"
   
  Microsoft 顺序分析和聚类分析算法支持在模型中使用其他非序列属性。 这意味着将会将这些非序列属性与序列属性组合起来，创建具有相似属性的事例分类，就像典型的聚类分析模型中一样。  
   
- 与典型的聚类分析模型相比，顺序分析和聚类分析模型通常会创建更多的分类。 因此，Microsoft 顺序分析和聚类分析算法会执行“群集分解” ，以基于序列属性和其他属性分离群集。  
+ 与典型的聚类分析模型相比，顺序分析和聚类分析模型通常会创建更多的分类。 因此，Microsoft 顺序分析和聚类分析算法会执行“群集分解”  ，以基于序列属性和其他属性分离群集。  
   
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>顺序分析和聚类分析模型中的功能选择  
  生成序列时不会调用功能选择，但会在聚类分析阶段应用功能选择。  
@@ -130,7 +130,7 @@ ms.locfileid: "62724886"
   
 ## <a name="remarks"></a>备注  
   
--   将 [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 函数用于序列预测。 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持序列预测，请参阅[SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+-   将 [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 函数用于序列预测。 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持序列预测，请参阅[SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不支持使用预测性模型标记语言 (PMML) 来创建挖掘模型。  
   

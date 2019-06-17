@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667365"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>缓存、刷新和复制监视器性能
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器旨在有效地监视生产系统中的大量计算机。 系统定期对复制监视器用来执行计算和收集数据的查询进行缓存和刷新。 缓存可减少在复制监视器中查看不同页时所需的查询和计算次数，并可很好地满足多个用户的监视需要。  
   
- 缓存刷新由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业“用于分发的复制监视刷新器” 进行处理。 作业是连续运行的，但缓存刷新计划取决于上次刷新后等待的特定时间：  
+ 缓存刷新由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业“用于分发的复制监视刷新器”  进行处理。 作业是连续运行的，但缓存刷新计划取决于上次刷新后等待的特定时间：  
   
 -   如果上次创建缓存后，有个代理历史记录更改，则等待时间没有的最小值：4 秒或创建上一个缓存所用的时间。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62667365"
   
 -   默认情况下，从复制监视器启动的详细信息窗口不自动刷新，但与正在同步的合并订阅相关的窗口除外。 如果指定详细信息窗口自动刷新，则它们的刷新速率与复制监视器主窗口相同。  
   
--   所有窗口都可以手动刷新，方法是按 F5 或右键单击复制监视器树中的节点，再单击 **“刷新”**。 手动刷新会强制刷新缓存。  
+-   所有窗口都可以手动刷新，方法是按 F5 或右键单击复制监视器树中的节点，再单击 **“刷新”** 。 手动刷新会强制刷新缓存。  
   
  有关详细信息，请参阅[刷新复制监视器中的数据](refresh-data-in-replication-monitor.md)。  
   

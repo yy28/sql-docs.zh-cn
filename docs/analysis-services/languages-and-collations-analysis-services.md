@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62634922"
 ---
 # <a name="languages-and-collations-analysis-services"></a>语言和排序规则 (Analysis Services)
@@ -66,7 +66,7 @@ ms.locfileid: "62634922"
   
 -   0x0407 或 1031 为“德语（德国）”   
   
--   0x0416 或 1046 为“葡萄牙语（巴西）” 。  
+-   0x0416 或 1046 为“葡萄牙语（巴西）”  。  
   
  要查看更完整的列表，请参阅 [Microsoft 分配的语言 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)。 有关详细背景，请参阅 [编码和代码页](/globalization/encoding/encoding-overview)。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "62634922"
   
  你可使用 SQL Server Management Studio 或 AMO PowerShell 更改服务器级别的默认语言或排序规则。 或者，可以修改 **\<语言>** 并 **\<CollationName>** 设置在 msmdsrv.ini 文件中，指定语言的 LCID。  
   
-1.  在 Management Studio 中，右键单击服务器名 |“属性” | “语言/排序规则”。  
+1.  在 Management Studio 中，右键单击服务器名 |“属性”   | “语言/排序规则”  。  
   
-2.  选择排序选项。 要选择  “二进制”或 “二进制 2”，首先清除 “区分重音”复选框。  
+2.  选择排序选项。 要选择  “二进制”或  “二进制 2”，首先清除  “区分重音”复选框。  
   
      注意：排序规则和语言是完全独立的设置。 如果你更改其中一个设置，不会筛选另一个的值以显示共同的组合。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62634922"
   
  在使用 XMLA 修改现有数据库前，请确保你不会引入数据库和用于创建数据库的源文件之间的差异。 例如，你可能需要使用 XMLA 快速更改语言和排序规则进行概念证明测试，但然后跟踪源文件的更改（请参见 [更改多维数据集上的语言或排序规则](#bkmk_cube)），使用现有的操作程序重新部署解决方案。  
   
-1.  在 Management Studio 中，右键单击数据库 |**“编写数据库脚本为”** | **“ALTER To”** | “新建查询编辑器窗口”。  
+1.  在 Management Studio 中，右键单击数据库 | **“编写数据库脚本为”**  |  **“ALTER To”**  | “新建查询编辑器窗口”  。  
   
 2.  用其他值搜索和替换现有语言或排序规则。  
   

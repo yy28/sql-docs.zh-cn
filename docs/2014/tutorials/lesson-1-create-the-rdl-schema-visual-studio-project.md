@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678515"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>第 1 课：创建 RDL 架构 Visual Studio 项目
@@ -57,7 +57,7 @@ ms.locfileid: "62678515"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 在解决方案资源管理器中将显示你的项目的折叠的视图。  
   
-7.  在“项目”菜单上，单击“添加现有项”。  
+7.  在“项目”  菜单上，单击“添加现有项”  。  
   
 8.  导航到的位置，.cs 或.vb 文件生成，然后选择该文件，然后依次**添加**。  
   

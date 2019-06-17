@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd4c6f3729d4d090854a48a65ce6d6a2465a98e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721207"
 ---
 # <a name="filter-settings"></a>筛选器设置
@@ -27,7 +27,7 @@ ms.locfileid: "62721207"
  选择要对其进行筛选的列的名称。 您可以使筛选器基于一个或多个列。  
   
  **“等于”**  
- 为筛选器选择一个运算符，例如 **“小于或等于”**。  
+ 为筛选器选择一个运算符，例如 **“小于或等于”** 。  
   
  **“值1”** 和 **“值2”**  
  为筛选器输入或选择一个值。 大多数运算符只要求在 **“值1”** 列中提供值，但 **“介于”** 和 **“不介于”** 运算符还要求在 **“值2”** 列中提供值。  

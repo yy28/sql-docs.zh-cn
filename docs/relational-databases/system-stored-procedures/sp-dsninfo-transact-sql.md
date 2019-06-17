@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724012"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
@@ -42,9 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dsn = ] 'dsn'` 是 ODBC DSN 或 OLE DB 链接服务器的名称。 *dsn*是**varchar （128)**，无默认值。  
+`[ @dsn = ] 'dsn'` 是 ODBC DSN 或 OLE DB 链接服务器的名称。 *dsn*是**varchar （128)** ，无默认值。  
   
-`[ @infotype = ] 'info_type'` 是要返回类型。 如果*info_type*未指定或指定为 NULL，则返回所有信息类型。 *info_type*是**varchar （128)**，默认值为 NULL，并且可以是下列值之一。  
+`[ @infotype = ] 'info_type'` 是要返回类型。 如果*info_type*未指定或指定为 NULL，则返回所有信息类型。 *info_type*是**varchar （128)** ，默认值为 NULL，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -53,9 +53,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|指定数据库名。|  
 |**SQL_SUBSCRIBER**|指定数据源可以是订阅服务器。|  
   
-`[ @login = ] 'login'` 是为数据源的登录名。 如果数据源包括登录名，则指定 NULL 或忽略该参数。 *登录名*是**varchar （128)**，默认值为 NULL。  
+`[ @login = ] 'login'` 是为数据源的登录名。 如果数据源包括登录名，则指定 NULL 或忽略该参数。 *登录名*是**varchar （128)** ，默认值为 NULL。  
   
-`[ @password = ] 'password'` 是的登录名的密码。 如果数据源包括登录名，则指定 NULL 或忽略该参数。 *密码*是**varchar （128)**，默认值为 NULL。  
+`[ @password = ] 'password'` 是的登录名的密码。 如果数据源包括登录名，则指定 NULL 或忽略该参数。 *密码*是**varchar （128)** ，默认值为 NULL。  
   
 `[ @dso_type = ] dso_type` 是数据源类型。 *dso_type*是**int**，可以是下列值之一。  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724062"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
@@ -60,13 +60,13 @@ sp_create_removable
   
 `[ @syslogical = ] 'syslogical'` 是包含系统目录表的逻辑名称。 *syslogical*是**sysname**。  
   
-`[ @sysphysical = ] 'sysphysical'` 是的物理名称。 其中包含存放系统目录表的文件的完全限定路径。 *sysphysical*是**nvarchar(260)**。  
+`[ @sysphysical = ] 'sysphysical'` 是的物理名称。 其中包含存放系统目录表的文件的完全限定路径。 *sysphysical*是**nvarchar(260)** 。  
   
 `[ @syssize = ] syssize` 是的大小，以兆字节为单位，存放系统目录表。 *syssize*是**int**。所需的最低*syssize*为 1。  
   
 `[ @loglogical = ] 'loglogical'` 是包含事务日志的逻辑名称。 *loglogical*是**sysname**。  
   
-`[ @logphysical = ] 'logphysical'` 是的物理名称。 其中包含存放事务日志的文件的完全限定路径。 *logphysical*是**nvarchar(260)**。  
+`[ @logphysical = ] 'logphysical'` 是的物理名称。 其中包含存放事务日志的文件的完全限定路径。 *logphysical*是**nvarchar(260)** 。  
   
 `[ @logsize = ] logsize` 是的大小，以兆字节为单位，包含事务日志。 *logsize*是**int**。所需的最低*logsize*为 1。  
   
@@ -74,7 +74,7 @@ sp_create_removable
   
  必须有 1 到 16 个数据文件。 通常，如果预计数据库很大，必须分布在多个磁盘上，则创建多个数据文件。  
   
-`[ @dataphysical1 = ] 'dataphysical'` 是的物理名称。 其中包括包含数据表的文件的完全限定路径。 *dataphysical*是**nvarchar(260)**。  
+`[ @dataphysical1 = ] 'dataphysical'` 是的物理名称。 其中包括包含数据表的文件的完全限定路径。 *dataphysical*是**nvarchar(260)** 。  
   
 `[ @datasize1 = ] 'datasize'` 是的大小，以兆字节为单位，包含数据表。 *datasize*是**int**。所需的最低*datasize*为 1。  
   

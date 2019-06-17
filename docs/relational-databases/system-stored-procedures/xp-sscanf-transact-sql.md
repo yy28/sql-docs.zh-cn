@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 82aedab7b83cadd43ac649837ef848b8a8471613
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62644936"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
@@ -49,7 +49,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  *format*  
  是一个带格式的字符串类似于 C 语言支持的功能**sscanf**函数。 目前仅支持 %s 格式参数。  
   
- argument  
+ argument   
  是**varchar**变量设置为相应的值*格式*参数。  
   
  *n*  

@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a424ccb4d7b83e854d036b0ad05168d5150203af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62690441"
 ---
 # <a name="syssysfulltextcatalogs-transact-sql"></a>sys.sysfulltextcatalogs (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62690441"
 |**ftcatid**|**smallint**|全文目录的标识符。|  
 |**名称**|**sysname**|用户指定的全文目录名。|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|path|nvarchar(260)|用户指定的根路径。<br /><br /> NULL = 未指定路径。 使用默认（安装）路径。|  
+|path |nvarchar(260) |用户指定的根路径。<br /><br /> NULL = 未指定路径。 使用默认（安装）路径。|  
   
 ## <a name="see-also"></a>请参阅  
  [系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

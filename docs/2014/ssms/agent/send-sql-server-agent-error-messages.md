@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666784"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
@@ -64,10 +64,10 @@ ms.locfileid: "62666784"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要通过 net send 从其发送错误消息的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的服务器。  
   
-2.  右键单击“SQL Server 代理”，然后选择“属性”。  
+2.  右键单击“SQL Server 代理”  ，然后选择“属性”  。  
   
-3.  在中**SQL Server 代理属性-**_server_name_对话框中的**错误日志**上**常规**页上，键入用户名称或你想要发送错误的计算机名称中的消息**Net send 收件人**框。  
+3.  在中**SQL Server 代理属性-** _server_name_对话框中的**错误日志**上**常规**页上，键入用户名称或你想要发送错误的计算机名称中的消息**Net send 收件人**框。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
   
