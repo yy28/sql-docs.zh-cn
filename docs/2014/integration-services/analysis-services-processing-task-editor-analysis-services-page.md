@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6a114cba7caa1fa223f21de2aa8cc4a85979fe1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061471"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 处理任务编辑器（Analysis Services 页）
@@ -38,12 +38,12 @@ ms.locfileid: "66061471"
   
 ## <a name="options"></a>选项  
  **Analysis Services 连接管理器**  
- 从列表中选择现有的 Analysis Services 连接管理器，或单击“新建”以创建新的连接管理器。  
+ 从列表中选择现有的 Analysis Services 连接管理器，或单击  “新建”以创建新的连接管理器。  
   
  **新建**  
  创建新的 Analysis Services 连接管理器。  
   
- **相关主题：**[Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **相关主题：** [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **对象列表**  
  |属性|Description|  
@@ -57,12 +57,12 @@ ms.locfileid: "66061471"
  将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象添加到列表中。  
   
  **删除**  
- 选择对象，再单击“删除”。  
+ 选择对象，再单击“删除”  。  
   
  **影响分析**  
  对所选对象进行影响分析。  
   
- **相关主题：**[“影响分析”对话框（Analysis Services - 多维数据）](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **相关主题：** [“影响分析”对话框（Analysis Services - 多维数据）](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **批设置摘要**  
  |属性|Description|  
@@ -76,7 +76,7 @@ ms.locfileid: "66061471"
  **更改设置**  
  更改处理选项以及对维度键中错误的处理方式。  
   
- **相关主题：**[“更改设置”对话框（Analysis Services - 多维数据）](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **相关主题：** [“更改设置”对话框（Analysis Services - 多维数据）](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085722"
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
@@ -204,7 +204,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
  [返回页首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query6"></a> 示例查询 6:查找分类的对比因子  
- 使用**分类查看器**的“分类对比”选项卡，可以轻松地将一个分类与另一个分类进行比较，或者将一个分类与其余所有事例（分类的补充）进行比较。  
+ 使用**分类查看器**的“分类对比”  选项卡，可以轻松地将一个分类与另一个分类进行比较，或者将一个分类与其余所有事例（分类的补充）进行比较。  
   
  但是，创建查询来返回这些信息很复杂，您可能需要在客户端上进行一些额外的处理来存储临时结果并比较两个或更多查询的结果。 作为一种快捷方式，可以使用系统存储过程。  
   

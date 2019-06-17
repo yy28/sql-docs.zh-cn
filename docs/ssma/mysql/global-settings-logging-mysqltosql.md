@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 225d0cd15aa170edc146eda0615a708ab0fe3ce2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63195151"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>全局设置（日志记录）(MySQLToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "63195151"
 **消息级别**  
 下以下选项将可用**消息级别**:  
   
-|Option|描述|  
+|Option|Description|  
 |----------|---------------|  
 |**[所有类别]**|用于设置以下选项中的所有日志记录级别。|  
 |**Collector**|收集有关源架构的元数据并将其保存到项目。|  
@@ -51,7 +51,7 @@ ms.locfileid: "63195151"
 |**调试**|将所有消息，包括调试消息，向日志都写入。|  
   
 **日志文件路径**  
-文件路径和名称的 SSMA 日志文件。 若要指定其他名称，单击当前路径，然后单击浏览 (**...**) 按钮。  
+文件路径和名称的 SSMA 日志文件。 若要指定其他名称，单击当前路径，然后单击浏览 ( **...** ) 按钮。  
   
 **日志文件大小**  
 日志文件以 kb 为单位的最大大小。 最小大小为 10 KB。 默认大小为 10240 KB。  

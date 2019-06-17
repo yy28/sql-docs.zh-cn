@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632767"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>时间和日期函数（Visual FoxPro ODBC 驱动程序）
@@ -61,7 +61,7 @@ ms.locfileid: "62632767"
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- 在此语法中， **d**指示*值*是中的某个日期*年-月-日*格式和**ts**指示*值*是在一个时间戳*年-月-日： 分： 秒*[。*f...*] 格式。 日期和时间戳数据的速记语法如下所示：  
+ 在此语法中， **d**指示*值*是中的某个日期*年-月-日*格式和**ts**指示*值*是在一个时间戳*年-月-日： 分： 秒*[。*f...* ] 格式。 日期和时间戳数据的速记语法如下所示：  
   
 ```  
 {d 'value'}  

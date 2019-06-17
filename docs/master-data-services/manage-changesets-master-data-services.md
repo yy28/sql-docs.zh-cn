@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2edb8e994b43e5704d88417384e547e0cd0a183f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489548"
 ---
 # <a name="manage-changesets-master-data-services"></a>管理变更集 (Master Data Services)
@@ -36,9 +36,9 @@ ms.locfileid: "65489548"
   
 ## <a name="to-manage-the-changesets"></a>管理变更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器” 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器”  。  
   
-2.  单击“变更集” 。 此时，系统会针对你选择的模型和版本显示你可以管理的所有变更集。  
+2.  单击“变更集”  。 此时，系统会针对你选择的模型和版本显示你可以管理的所有变更集。  
   
 3.  单击“应用”  ，查看变更集详细信息。  
   

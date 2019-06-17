@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 855a2fc8c6ff5a1cb9cee1db7504e0dd309113b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2868fb92161b5e3458e5c5e0dc72ebdef074b3e7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727445"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796322"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>isValid 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,10 +33,10 @@ public boolean isValid(int timeout)
 #### <a name="parameters"></a>Parameters  
  *timeout*  
   
- 一个指定为验证连接而等待的秒数的整数。  
+ 一个指定为验证连接而等待的秒数的整数  。  
   
 ## <a name="return-value"></a>返回值  
- 如果连接有效，则为 true；如果连接无效或在超时之前无法确定连接是否有效，则为 false。  
+ 如果连接有效，则为 true  ；如果连接无效或在超时之前无法确定连接是否有效，则为 false  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

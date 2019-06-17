@@ -24,10 +24,10 @@ helpviewer_keywords:
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: a47b311af70c58c36c8c467115c277f300092376
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014424"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "66014424"
 
 |列名|数据类型|Description|
 |-----------------|---------------|-----------------|  
-|class|**int**|标识的类的分类在其存在的项|  
+|class |**int**|标识的类的分类在其存在的项|  
 |**class_desc**|**varchar(16)**|分类在其存在的项的类的说明|  
 |**major_id**|**int**|分类在其存在的项的 ID。 < b \>< b\>如果 class 为 0，则 major_id 始终是 0。<br>如果 class 为 1、2 或 7，则 major_id 为 object_id。|  
 |**minor_id**|**int**|分类存在于其上，根据其类进行解释的项的辅助 ID。<br><br>如果类 = 1，minor_id 是 column_id (如果列)、 0 (如果对象)。<br>如果 class = 2，则 minor_id 为 parameter_id。<br>如果类 = 7，minor_id 为 index_id。 |  
-|label|**sysname**|分配敏感度分类的标签 （用户可读）|  
+|label |**sysname**|分配敏感度分类的标签 （用户可读）|  
 |**label_id**|**sysname**|与标签，这是信息保护系统等 Azure 信息保护 (AIP) 可以使用关联的 ID|  
 |**information_type**|**sysname**|敏感度分类分配的信息类型 （用户可读）|  
 |**information_type_id**|**sysname**|可以使用通过信息保护系统等 Azure 信息保护 (AIP) 的信息类型与关联的 ID|  

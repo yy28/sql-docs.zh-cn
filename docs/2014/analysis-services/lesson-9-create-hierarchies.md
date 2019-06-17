@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078193"
 ---
 # <a name="lesson-10-create-hierarchies"></a>第 10 课：创建层次结构
   在本课中，您将创建层次结构。 层次结构是按级别排列的列的分组；例如，地理层次结构可能具有针对国家/地区、省/市/自治区、县和市的子级别。 层次结构可独立于报表客户端应用程序字段列表中的其他列出现，使客户端用户可以更方便地在报表中导航和包含数据。 若要了解详细信息，请参阅[层次结构（SSAS 表格）](tabular-models/hierarchies-ssas-tabular.md)。  
   
- 若要创建层次结构，可使用“关系图视图”中的模型设计器。 在数据视图的模型设计器中不支持创建和管理层次结构。  
+ 若要创建层次结构，可使用“关系图视图”  中的模型设计器。 在数据视图的模型设计器中不支持创建和管理层次结构。  
   
  估计的时间才能完成本课程中：**20 分钟**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66078193"
   
 #### <a name="to-create-hierarchies-in-the-date-table"></a>在 Date 表中创建层次结构  
   
-1.  在模型设计器中，右键单击“Date”表，然后单击“创建层次结构”。  
+1.  在模型设计器中，右键单击“Date”  表，然后单击“创建层次结构”  。  
   
 2.  将该层次结构重命名为 **Calendar**。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078193"
     |Month Calendar|Month|  
     |Day Of Month|Day|  
   
-4.  在“Date”表中，重复上述步骤，创建“Fiscal”层次结构，包括以下各列：  
+4.  在“Date”  表中，重复上述步骤，创建“Fiscal”  层次结构，包括以下各列：  
   
     |“列”|重命名为：|  
     |------------|----------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "66078193"
     |Month Calendar|Month|  
     |Day Of Month|Day|  
   
-5.  最后，在“Date”表中，重复上述步骤，创建“Production Calendar”层次结构，包括以下各列：  
+5.  最后，在“Date”  表中，重复上述步骤，创建“Production Calendar”  层次结构，包括以下各列：  
   
     |“列”|重命名为：|  
     |------------|----------------|  

@@ -2,17 +2,17 @@
 title: 快速启动板服务和外部脚本执行的 SQL Server 机器学习服务的常见问题
 ms.prod: sql
 ms.technology: ''
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: bddc2d2e4021ee0df196078b47e3ecbba96833b6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509694"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140203"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>使用快速启动板服务和 SQL Server 中的外部脚本执行常见的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "58509694"
 
 但是，在组织中实施更严格限制性安全策略的情况，此组所需的权限可能已被手动删除，或者它们可能会自动吊销策略。 如果已移除的权限，快速启动板可以不再连接到 SQL Server 和 SQL Server 不能调用外部运行时。
 
-若要解决此问题，请确保组 **SQLRUserGroup** 拥有系统权限“允许本地登录”。
+若要解决此问题，请确保组 **SQLRUserGroup** 拥有系统权限“允许本地登录”。 
 
 有关详细信息，请参阅[配置 Windows 服务帐户和权限](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
 
@@ -89,9 +89,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 - 生成的错误[!INCLUDE[rsql_launchpad](../includes/rsql-launchpad-md.md)]服务：
 
-    * 无法初始化启动器 RLauncher.dll
+    * 无法初始化启动器 RLauncher.dll 
 
-    * 未注册任何启动器 dll！
+    * 未注册任何启动器 dll！ 
 
     * *安全日志指示帐户 NT 服务无法登录*
 
@@ -185,7 +185,7 @@ EXEC sp_execute_external_script @language = N'R',
 若要解决此问题，必须重新安装到 SQL Server 实例库包。
 
 >[!NOTE]
->如果已升级为使用 Microsoft R 的最新版本的 SQL Server 2016 的实例，则默认库位置会不同。 有关详细信息，请参阅[使用 SqlBindR 升级 R Services 的实例](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+>如果已升级为使用 Microsoft R 的最新版本的 SQL Server 2016 的实例，则默认库位置会不同。 有关详细信息，请参阅[使用 SqlBindR 升级 R Services 的实例](install/upgrade-r-and-python.md)。
 
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>由于不匹配的 Dll 而关闭的快速启动板
 
@@ -212,7 +212,7 @@ EXEC sp_execute_external_script @language = N'R',
 > * SQL Server 2016 SP1 和 CU1:[SQL Server 的累积更新 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)。
 > * SQL Server 2016 RTM、 累积更新 3 和这[修补程序](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)，这是按需提供。
 
-使用 R 的兼容性，SQL Server 2016 R Services （数据库） 所需位置安装该功能以支持通过使用短文件名创建的驱动器*8dot3 表示法*。 8.3 文件名也称为*短文件名*，并用与早期版本的 Microsoft Windows 或作为长文件名的替代方法的兼容性。
+使用 R 的兼容性，SQL Server 2016 R Services （数据库） 所需位置安装该功能以支持通过使用短文件名创建的驱动器*8dot3 表示法*。 8\.3 文件名也称为*短文件名*，并用与早期版本的 Microsoft Windows 或作为长文件名的替代方法的兼容性。
 
 如果要安装 R 的卷不支持短文件名，从 SQL Server 启动 R 的进程可能无法再找到正确的可执行文件，并快速启动板将不会启动。
 

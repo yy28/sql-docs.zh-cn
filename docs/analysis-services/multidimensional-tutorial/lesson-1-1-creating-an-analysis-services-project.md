@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4576072cd24d17551d087c7be879fddf22636f5c
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403859"
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>课程 1-1-创建 Analysis Services 项目
@@ -30,7 +30,7 @@ ms.locfileid: "65403859"
   
     您将注意到在对话框底部生成了默认项目名称、位置和默认解决方案名称。 默认情况下，将为解决方案创建新的目录。  
   
-3.  将项目名称更改为 **Analysis Services Tutorial**，这也将更改“解决方案名称”  框，然后单击“确定” 。  
+3.  将项目名称更改为 **Analysis Services Tutorial**，这也将更改“解决方案名称”  框，然后单击“确定”  。  
   
 您已经基于 **“Analysis Services 多维和数据挖掘项目”** 模板，在同样命名为 **Analysis Services Tutorial** 的新解决方案中成功创建了 **Analysis Services Tutorial**项目。  
   

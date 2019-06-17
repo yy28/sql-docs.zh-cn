@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8009dcd369327941004fe220782c38d5602b4dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900299"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合并联接转换扩展数据集
@@ -42,7 +42,7 @@ ms.locfileid: "62900299"
 6.  在 **“合并联接转换编辑器”** 对话框的 **“联接类型”** 列表中，选择要用的联接类型。  
   
     > [!NOTE]  
-    >  如果选择了“左外部联接”类型，那么可以单击“交换输入”来切换输入，将左外部联接转换为右外部联接。  
+    >  如果选择了“左外部联接”  类型，那么可以单击“交换输入”  来切换输入，将左外部联接转换为右外部联接。  
   
 7.  将左输入中的列拖动到右输入中的列，以指定联接列。 如果这些列名称相同，则可以选中 **“联接键”** 复选框，合并联接转换将自动创建联接。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62900299"
   
 9. 还可以更新 **“输出别名”** 列中的输出列名称。  
   
-10. 单击“确定” 。  
+10. 单击“确定”  。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

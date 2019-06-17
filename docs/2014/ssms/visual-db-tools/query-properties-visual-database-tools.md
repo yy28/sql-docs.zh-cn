@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011480"
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63011480"
   
 ## <a name="options"></a>选项  
  **标识类别**  
- 展开此项可显示“名称”属性。  
+ 展开此项可显示“名称”  属性。  
   
  **名称**  
  显示当前查询的名称。 无法在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中更改。  
@@ -60,24 +60,24 @@ ms.locfileid: "63011480"
  指定当前查询中所有表的全部列都将包含在结果集中。 选择此选项等效于在 SQL 语句的 SELECT 关键字后指定星号 (*) 代替单个列名。  
   
  **查询参数列表**  
- 显示查询参数。 若要编辑这些参数，请单击相应属性，再单击该属性右侧的省略号 (…)。 （仅适用于一般性的 OLE DB。）  
+ 显示查询参数。 若要编辑这些参数，请单击相应属性，再单击该属性右侧的省略号 (…)  。 （仅适用于一般性的 OLE DB。）  
   
  **SQL 注释**  
- 显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)。 您的注释可以包含查询使用者和使用时间等信息。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本的数据库。）  
+ 显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)  。 您的注释可以包含查询使用者和使用时间等信息。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本的数据库。）  
   
  **Top 规范类别**  
- 展开此项可显示“Top”、“百分比”、“表达式”和“With Ties”属性的属性。  
+ 展开此项可显示“Top”  、“百分比”  、“表达式”  和“With Ties”  属性的属性。  
   
  **(最前面)**  
- 指定查询将包括 TOP 子句，该子句只返回结果集中的前 n  行或前百分之 n 行。 默认情况下，查询将在结果集中返回前 10 行。  
+ 指定查询将包括 TOP 子句，该子句只返回结果集中的前 n  行或前百分之 n  行。 默认情况下，查询将在结果集中返回前 10 行。  
   
  使用此框可更改返回的行数或指定不同的百分比值。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或更高版本。）  
   
  **表达式**  
- 指定查询将返回的行数或行数百分比。 如果将“百分比”设置为“是”，此数字表示查询将返回的行数百分比；如果将“百分比”设置为“否”，则此数字表示要返回的行数。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本。）  
+ 指定查询将返回的行数或行数百分比。 如果将“百分比”  设置为“是”，此数字表示查询将返回的行数百分比；如果将“百分比”  设置为“否”，则此数字表示要返回的行数。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本。）  
   
  **百分比**  
- 指定查询将只返回结果集中的前百分之 n 的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本。）  
+ 指定查询将只返回结果集中的前百分之 n  的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本。）  
   
  **With Ties**  
  指定视图将包括 WITH TIES 子句。 如果视图包含 ORDER BY 子句和基于百分比的 TOP 子句，WITH TIES 将非常有用。 如果设置了该选项，并且百分比截止位置在一组行的中间，且这些行在 ORDER BY 子句中具有相同的值，则视图将会扩展，以包含所有这样的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本。）  

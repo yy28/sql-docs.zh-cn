@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 199096efcdf9212e19e1055f1276079eddfb1a75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62469364"
 ---
 # <a name="create-a-calculated-table"></a>创建计算的表 
@@ -33,7 +33,7 @@ ms.locfileid: "62469364"
   
 2.  切换到数据视图。 不能在关系图视图中创建计算表。  
   
-3.  选择“表” > “新建计算表”。  
+3.  选择“表”   > “新建计算表”  。  
   
 4.  键入或粘贴一个 DAX 表达式（请参见以下内容获取一些想法）。  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2562f3931f98c040bb3dc475e3863bb6396dbbf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62664343"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation 事件类
@@ -32,7 +32,7 @@ ms.locfileid: "62664343"
 |**DatabaseID**|`int`|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**EventClass**|`int`|捕获的事件类的类型。 对于 **Broker:Activation** ，始终为 **163**。|27|否|  
 |**EventSequence**|`int`|此事件的序列号。|51|否|  
-|**EventSubClass**|`nvarchar`|此事件报告的特定操作。 可以是以下值之一：<br /><br /> **启动**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已启动激活存储过程。<br /><br /> **结束**:激活存储过程已正常退出。<br /><br /> **中止**:激活存储过程因错误而退出。|21|否|  
+|**EventSubClass**|`nvarchar`|此事件报告的特定操作。 可以是以下值之一：<br /><br /> **启动**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已启动激活存储过程。<br /><br /> **已结束**：激活存储过程已正常退出。<br /><br /> **已终止**：激活存储过程因出现错误而退出。|21|否|  
 |**HostName**|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IntegerData**|`int`|此队列的活动任务数。|25|否|  
 |**IsSystem**|`int`|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|否|  

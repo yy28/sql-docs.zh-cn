@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d2ea7906-2d10-438d-aa51-f576eea923c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f3953763dc1b8a0d24e4c335b5b465c49707174
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 13ea4a88b4b7a233695e134ef79daccd608d5813
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784155"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773210"
 ---
 # <a name="setuser-method-sqlserverdatasource"></a>setUser 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,9 +36,9 @@ public void setUser(java.lang.String user)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- user  
+ user   
   
- 一个包含用户名的字符串。  
+ 一个包含用户名的字符串  。  
   
 ## <a name="remarks"></a>Remarks  
  setUser 方法设置将用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用户名。 如果未设置用户名值，[getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) 方法则返回默认值 Null。  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 48c9955733672699e16cb4a00e28fa2f59717b80
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600467"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797088"
 ---
 # <a name="support-for-localdb"></a>支持 LocalDB
 
@@ -31,7 +31,7 @@ LocalDB 是轻型版本，其中[!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 -   使用**sqllocaldb.exe 我**发现的默认实例的名称。
 
--   使用 AttachDBFilename 连接字符串关键字指定服务器应附加的数据库文件。 使用 AttachDBFilename 时，如果没有使用 Database 连接字符串关键字指定数据库的名称，则在应用程序关闭时，该数据库将从 LocalDB 实例中删除。
+-   使用 AttachDBFilename 连接字符串关键字指定服务器应附加的数据库文件  。 使用 AttachDBFilename 时，如果没有使用 Database 连接字符串关键字指定数据库的名称，则在应用程序关闭时，该数据库将从 LocalDB 实例中删除   。
 
 -   在连接字符串中指定 LocalDB 实例。 例如，下面是一个 SQLSRV 连接字符串示例：
 

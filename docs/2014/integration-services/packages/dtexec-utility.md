@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62890181"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
@@ -84,11 +84,11 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> 执行的阶段  
  该实用工具的执行过程经历四个阶段。 这些阶段如下所列：  
   
-1.  命令选项确定阶段：命令提示符读取选项和已指定的参数的列表。 如果遇到 **/?** 或 **/HELP** 选项，则会跳过所有后续阶段。  
+1.  命令溯源阶段：命令提示符读取选项列表和已指定的参数。 如果遇到 **/?** 或 **/HELP** 选项，则会跳过所有后续阶段。  
   
 2.  包加载阶段：指定的包`/SQL`， **/file**，或`/DTS`加载选项。  
   
-3.  配置阶段：按此顺序处理各个选项：  
+3.  配置阶段：按以下顺序处理各个选项：  
   
     -   设置包标志、变量和属性的选项。  
   
@@ -307,31 +307,31 @@ dtexec /option [value] [/option [value]]...
   
     -   文本文件：  
   
-        -   ProgID:DTS.LogProviderTextFile.1  
+        -   ProgID：DTS.LogProviderTextFile.1  
   
         -   ClassID：{59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
     -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]设置用户帐户 ：  
   
-        -   ProgID:DTS.LogProviderSQLProfiler.1  
+        -   ProgID：DTS.LogProviderSQLProfiler.1  
   
         -   ClassID：{5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置用户帐户 ：  
   
-        -   ProgID:DTS.LogProviderSQLServer.1  
+        -   ProgID：DTS.LogProviderSQLServer.1  
   
         -   ClassID：{6AA833A1-E4B2-4431-831B-DE695049DC61}  
   
     -   Windows 事件日志：  
   
-        -   ProgID:DTS.LogProviderEventLog.1  
+        -   ProgID：DTS.LogProviderEventLog.1  
   
         -   ClassID：{97634F75-1DC7-4F1F-8A4C-DAF0E13AAA22}  
   
     -   XML 文件：  
   
-        -   ProgID:DTS.LogProviderXMLFile.1  
+        -   ProgID：DTS.LogProviderXMLFile.1  
   
         -   ClassID：{AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   

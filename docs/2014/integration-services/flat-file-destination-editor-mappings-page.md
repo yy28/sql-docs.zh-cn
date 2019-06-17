@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058680"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>平面文件目标编辑器（“映射”页）
@@ -34,7 +34,7 @@ ms.locfileid: "66058680"
  查看可用目标列的列表。 使用拖放操作将可用目标列映射到输入列。  
   
  **输入列**  
- 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”** 列表来更改映射。 选择“\<ignore>”可以将该列排除在输出之外。  
+ 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”** 列表来更改映射。 选择“\<ignore>”可以将该列排除在输出之外  。  
   
  **目标列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  

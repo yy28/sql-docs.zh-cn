@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f76a48481066ff30bbd5a825d477d0e6309abaca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204970"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>停止查询 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63204970"
   
 ### <a name="to-stop-a-query"></a>停止查询  
   
--   右键单击[“结果”窗格](visual-database-tools.md)中的任意位置，在显示的快捷菜单中指向“窗格”，再单击“清除结果”。  
+-   右键单击[“结果”窗格](visual-database-tools.md)中的任意位置，在显示的快捷菜单中指向“窗格”  ，再单击“清除结果”  。  
   
 ## <a name="see-also"></a>请参阅  
  [清除查询结果&#40;可视化数据库工具&#41;](clear-query-results-visual-database-tools.md)   

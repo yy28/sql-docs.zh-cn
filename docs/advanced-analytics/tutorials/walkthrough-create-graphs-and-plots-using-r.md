@@ -3,17 +3,17 @@ title: 使用 SQL 和 R 函数的 SQL Server 机器学习创建图形和绘图
 description: 本教程演示如何在 SQL Server 上使用 R 语言函数创建图形和绘图。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0ed226a4c11c002d048572f58a75c0c04bdf936c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b988105733d8e3a9ee2edae344947cbf9d377e5d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513164"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140390"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R （演练） 创建图形和绘图
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "58513164"
     + 当开头的行`plot`运行时，呈现的数据序列化回复到本地 R 环境，以便您可以在 R 客户端中查看它。
 
     > [!NOTE]
-    > 如果 Azure 虚拟机中使用 SQL Server，可能在此时会遇到错误。 在 Azure 中的默认防火墙规则阻止网络访问权限由 R 代码时，就会出错。 有关如何修复此错误的详细信息，请参阅[Azure VM 上安装机器学习 （R) Services](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)。
+    > 如果 Azure 虚拟机中使用 SQL Server，可能在此时会遇到错误。 在 Azure 中的默认防火墙规则阻止网络访问权限由 R 代码时，就会出错。 有关如何修复此错误的详细信息，请参阅[Azure VM 上安装机器学习 （R) Services](../install/sql-machine-learning-azure-virtual-machine.md)。
 
 4. 下图显示了输出绘图。 出租车打车位置已作为红色的点添加到地图中。 您的图像看起来会有所不同，具体取决于多少个位置在您使用的数据源中。
 

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15e0ff764637869428945ab3eb4b6c44b055b436
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 304d63f7822990c4d8e4a9c0787c9e688c222580
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728195"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799626"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>setPortNumber 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setPortNumber(int portNumber)
 #### <a name="parameters"></a>Parameters  
  *portNumber*  
   
- 一个 int 值，此值包含端口号。  
+ 一个 int 值，此值包含端口号  。  
   
 ## <a name="remarks"></a>Remarks  
  此端口号是打开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的套接字连接时使用的 TCP/IP 端口号。 如果未设置 portNumber 属性，[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) 方法将返回默认值 1433。  

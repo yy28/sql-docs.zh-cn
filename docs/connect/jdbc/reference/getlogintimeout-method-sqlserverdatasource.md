@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26a7c8e0cc876c8d13e9beb621354cead2f6296c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ec8d033bc6d9bc451eaa606a00881bd4e533aa97
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708575"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793168"
 ---
 # <a name="getlogintimeout-method-sqlserverdatasource"></a>getLoginTimeout 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public int getLoginTimeout()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个表示要等待的秒数的 int 值。  
+ 一个表示要等待的秒数的 int  值。  
   
 ## <a name="remarks"></a>Remarks  
  如果应用程序未明确指定超时值，则此方法会返回 15 秒的默认值。  

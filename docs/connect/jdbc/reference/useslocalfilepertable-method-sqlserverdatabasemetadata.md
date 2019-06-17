@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0930b4af05fc693126602b7002a457cb7dc3e10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ac94bcab076912437e00f24e9f6acababcf01902
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597575"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788889"
 ---
 # <a name="useslocalfilepertable-method-sqlserverdatabasemetadata"></a>usesLocalFilePerTable 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean usesLocalFilePerTable()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果为每个表使用一个文件，则为 true。 否则为 **false**。  
+ 如果为每个表使用一个文件，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659508"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>缩放并发执行的 SQL Server 机器学习服务中的外部脚本的
@@ -47,11 +47,11 @@ ms.locfileid: "62659508"
 
 与每个用户帐户关联的密码是随机生成的，但在创建帐户后，你可以更改这些密码。
 
-1. 打开 SQL Server 配置管理器并选择“SQL Server 服务”。
+1. 打开 SQL Server 配置管理器并选择“SQL Server 服务”。 
 2. 双击 SQL Server Launchpad 服务并停止该服务（如果正在运行）。
-3.  在“服务”选项卡上，确保“启动模式”设置为“自动”。 快速启动板未运行时，无法启动外部脚本。
-4.  单击“高级”选项卡，然后根据需要编辑“外部用户计数”的值。 此设置将控制多少不同的 SQL 用户可以运行外部脚本并发会话。 默认值为 20 个帐户。 用户的最大数目为 100。
-5. （可选）如果组织中的策略要求定期更改密码，可将选项“重置外部用户密码”设置为“是”。 这样，便会重新生成 Launchpad 为用户帐户维护的已加密密码。 有关详细信息，请参阅[实施密码策略](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy)。
+3.  在“服务”选项卡上，确保“启动模式”设置为“自动”。  快速启动板未运行时，无法启动外部脚本。
+4.  单击“高级”选项卡，然后根据需要编辑“外部用户计数”的值。   此设置将控制多少不同的 SQL 用户可以运行外部脚本并发会话。 默认值为 20 个帐户。 用户的最大数目为 100。
+5. （可选）如果组织中的策略要求定期更改密码，可将选项“重置外部用户密码”设置为“是”。   这样，便会重新生成 Launchpad 为用户帐户维护的已加密密码。 有关详细信息，请参阅[实施密码策略](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy)。
 6.  重新启动 Launchpad 服务。
 
 ## <a name="managing-workloads"></a>管理工作负荷

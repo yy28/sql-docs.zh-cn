@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796543"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @alert_name = ] 'alert_name'` 警报的名称。 *alert_name* is **nvarchar(128)**. 如果*alert_name*是未指定，则返回有关所有警报的信息。  
+`[ @alert_name = ] 'alert_name'` 警报的名称。 *alert_name* is **nvarchar(128)** . 如果*alert_name*是未指定，则返回有关所有警报的信息。  
   
 `[ @order_by = ] 'order_by'` 要用于生成的结果排序顺序。 *order_by*是**sysname**，默认值为 N '*名称*。  
   
@@ -58,7 +58,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 当**@legacy_format**是**0**， **sp_help_alert**生成以下结果集。  
+ 当 **@legacy_format** 是**0**， **sp_help_alert**生成以下结果集。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -68,7 +68,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|定义警报的消息错误号。 (通常与中的错误号相对应**sysmessages**表)。 如果使用严重性定义警报， **message_id**是**0**或为 NULL。|  
-|severity|**int**|严重级别 (从**9**通过**25**， **110**， **120**， **130**，或**140**)它定义警报。|  
+|severity |**int**|严重级别 (从**9**通过**25**， **110**， **120**， **130**，或**140**)它定义警报。|  
 |**enabled**|**tinyint**|警报当前是否已启用的状态 (**1**) 或不 (**0**)。 不发送未启用的警报。|  
 |**delay_between_responses**|**int**|警报两次响应之间的等待间隔（秒）。|  
 |**last_occurrence_date**|**int**|上次出现警报的日期。|  
@@ -90,9 +90,9 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将始终为“[Uncategorized]”。|  
 |**wmi_namespace**|**sysname**|如果**类型**是**3**，此列显示 WMI 事件的命名空间。|  
 |**wmi_query**|**nvarchar(512)**|如果**类型**是**3**，此列显示 WMI 事件查询。|  
-|**类型**|**int**|事件类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
+|**type**|**int**|事件类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
   
- 当**@legacy_format**是**1**， **sp_help_alert**生成以下结果集。  
+ 当 **@legacy_format** 是**1**， **sp_help_alert**生成以下结果集。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -102,7 +102,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|定义警报的消息错误号。 (通常与中的错误号相对应**sysmessages**表)。 如果使用严重性定义警报， **message_id**是**0**或为 NULL。|  
-|severity|**int**|严重级别 (从**9**通过**25**， **110**， **120**， **130**，或 1**40**)它定义警报。|  
+|severity |**int**|严重级别 (从**9**通过**25**， **110**， **120**， **130**，或 1**40**)它定义警报。|  
 |**enabled**|**tinyint**|警报当前是否已启用的状态 (**1**) 或不 (**0**)。 不发送未启用的警报。|  
 |**delay_between_responses**|**int**|警报两次响应之间的等待间隔（秒）。|  
 |**last_occurrence_date**|**int**|上次出现警报的日期。|  
@@ -122,7 +122,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 的用户。|  
 |**performance_condition**|**nvarchar(512)**|如果**类型**是**2**，此列显示性能条件的定义。 如果**类型**是**3**，此列显示 WMI 事件查询。 否则，该列为 NULL。|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 将始终为 **[未分类]** 为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
-|**类型**|**int**|警报类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
+|**type**|**int**|警报类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
   
 ## <a name="remarks"></a>备注  
  **sp_help_alert**必须从运行**msdb**数据库。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605777"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798263"
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51605777"
  以下各部分介绍了可记录的日志记录级别和类别，并提供了有关如何在应用程序中启用跟踪的信息。  
   
 ## <a name="logging-levels"></a>日志记录级别  
- 创建的每条日志消息都有相关联的日志记录级别。 日志记录级别决定了日志消息的重要性，该重要性由 java.util.logging 中的 Level 类定义。 启用一个级别的日志记录还会启用所有较高级别的日志记录。 本节介绍公共日志记录类别和内部日志记录类别的日志记录级别。 有关日志记录类别的详细信息，请参阅本文的“日志记录类别”部分。  
+ 创建的每条日志消息都有相关联的日志记录级别。 日志记录级别决定了日志消息的重要性，该重要性由 java.util.logging 中的 Level 类定义  。 启用一个级别的日志记录还会启用所有较高级别的日志记录。 本节介绍公共日志记录类别和内部日志记录类别的日志记录级别。 有关日志记录类别的详细信息，请参阅本文的“日志记录类别”部分。  
   
  下表逐一介绍了公共日志记录类别每个可用的日志记录级别。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "51605777"
 |TDS.Channel|该类别跟踪 SQL Server 对 TCP 通信通道的操作。 记录的消息包括套接字的打开和关闭以及读取和写入。 还跟踪与 SQL Server 建立安全套接字层 (SSL) 连接的相关消息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINE、FINER 或 FINEST 才能启用。|  
 |TDS.Writer|该类别跟踪对 TDS 信道的写入。 请注意，只跟踪写入的长度，不跟踪内容。 该类别还跟踪将关注信号发送给服务器以取消语句的执行时出现的问题。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
 |TDS.Reader|该类别跟踪 FINEST 级别 TDS 信道的某些读取操作。 在 FINEST 级别，跟踪可能非常详细。 在 WARNING 和 SEVERE 级别，该类别跟踪在驱动程序关闭连接之前，驱动程序何时从 SQL Server 收到无效的 TDS 协议。<br /><br /> 该类别只有通过将日志记录级别设置为 FINER 和 FINEST 才能启用。|  
-|TDS.Command|该类别跟踪低级状态切换以及与执行 TDS 命令（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行、ResultSet 游标获取、提交等）关联的其他信息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
+|TDS.Command|该类别跟踪低级状态转换以及与执行 TDS 命令（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行、ResultSet 游标获取、提交等）关联的其他信息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
 |TDS.TOKEN|该类别仅记录 TDS 包内的标记，不如 TDS.DATA 类别详细。 它只有通过将日志记录级别设置为 FINEST 才能启用。<br /><br /> 在 FINEST 级别，当 TDS 标记在响应中进行处理时，此类别对其进行跟踪。 在 SEVERE 级别，该类别跟踪何时遇到无效的 TDS 标记。|  
 |SQLServerDatabaseMetaData|在 [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  
 |SQLServerResultSetMetaData|在 [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  

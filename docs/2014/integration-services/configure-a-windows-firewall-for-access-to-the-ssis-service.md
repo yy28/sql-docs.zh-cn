@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060845"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>为访问 SSIS 服务配置 Windows 防火墙
@@ -63,26 +63,26 @@ ms.locfileid: "66060845"
   
 #### <a name="to-configure-a-firewall-using-the-windowsfirewall-dialog-box"></a>使用“Windows 防火墙”对话框配置防火墙  
   
-1.  在“控制面板”中，双击“Windows 防火墙”。  
+1.  在“控制面板”中，双击“Windows 防火墙”  。  
   
-2.  在 **“Windows 防火墙”** 对话框中，单击 **“例外”** 选项卡，再单击 **“添加程序”**。  
+2.  在 **“Windows 防火墙”** 对话框中，单击 **“例外”** 选项卡，再单击 **“添加程序”** 。  
   
-3.  在“添加程序”对话框中单击“浏览”，导航到 Program Files\Microsoft SQL Server\100\DTS\Binn 文件夹，单击 MsDtsSrvr.exe，然后单击“打开”。 单击 **“确定”** 关闭 **“添加程序”** 对话框。  
+3.  在“添加程序”  对话框中单击“浏览”  ，导航到 Program Files\Microsoft SQL Server\100\DTS\Binn 文件夹，单击 MsDtsSrvr.exe，然后单击“打开”  。 单击 **“确定”** 关闭 **“添加程序”** 对话框。  
   
-4.  在 **“例外”** 选项卡上，单击 **“添加端口”**。  
+4.  在 **“例外”** 选项卡上，单击 **“添加端口”** 。  
   
-5.  在“添加端口”对话框中，键入 **RPC(TCP/135)** 或在“名称”框中键入另一个描述性名称，在“端口号”框中键入 **135**，然后选择“TCP”。  
+5.  在“添加端口”  对话框中，键入 **RPC(TCP/135)** 或在“名称”  框中键入另一个描述性名称，在“端口号”  框中键入 **135**，然后选择“TCP”  。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务始终使用端口 135。 您不能指定其他端口。  
   
 6.  在 **“添加端口”** 对话框中，可以选择单击 **“更改范围”** 来修改默认的作用范围。  
   
-7.  在“更改范围”对话框中，选择“我的网络（仅子网）”或键入自定义列表，然后单击“确定”。  
+7.  在“更改范围”  对话框中，选择“我的网络（仅子网）”  或键入自定义列表，然后单击“确定”  。  
   
-8.  若要关闭 **“添加端口”** 对话框，请单击 **“确定”**。  
+8.  若要关闭 **“添加端口”** 对话框，请单击 **“确定”** 。  
   
-9. 若要关闭 **“Windows 防火墙”** 对话框，请单击 **“确定”**。  
+9. 若要关闭 **“Windows 防火墙”** 对话框，请单击 **“确定”** 。  
   
     > [!NOTE]  
     >  为了配置 Windows 防火墙，此过程使用“控制面板”中的 **“Windows 防火墙”** 项。 **“Windows 防火墙”** 项仅可为当前网络位置配置文件配置防火墙。 但你也可使用 **netsh** 命令行工具或名为高级安全 Windows 防火墙的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (MMC) 管理单元来配置 Windows 防火墙。 有关这些工具的详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770843"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目标编辑器（“连接管理器”页）
@@ -29,7 +29,7 @@ ms.locfileid: "62770843"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 SAP BW 目标。  
+2.  在“数据流”  选项卡上，双击 SAP BW 目标。  
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
@@ -39,10 +39,10 @@ ms.locfileid: "62770843"
 >  如果您不知道配置目标所需的所有值，可能需要询问您的 SAP 管理员。  
   
  **SAP BW 连接管理器**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 使用“SAP BW 连接管理器”对话框创建新的连接管理器。  
+ 使用“SAP BW 连接管理器”  对话框创建新的连接管理器。  
   
  **测试加载**  
  对要使用您选择的设置加载零行的加载进程进行测试。  
@@ -70,7 +70,7 @@ ms.locfileid: "62770843"
  输入 InfoPackage 关联的逻辑系统的名称。  
   
  **查找**  
- 使用“查找 InfoPackage”对话框查找 InfoPackage。 有关此对话框的详细信息，请参阅 [Look Up InfoPackage](look-up-infopackage.md)。  
+ 使用“查找 InfoPackage”  对话框查找 InfoPackage。 有关此对话框的详细信息，请参阅 [Look Up InfoPackage](look-up-infopackage.md)。  
   
 ### <a name="rfc-destination-options"></a>RFC 目标选项  
  您无需事先知道并输入这些值。 使用 **“查找”** 按钮查找和选择合适的 RFC 目标。 选定 RFC 目标后，组件会为这些选项输入合适的值。  
@@ -85,7 +85,7 @@ ms.locfileid: "62770843"
  输入与 RFC 目标关联的程序 ID。  
   
  **查找**  
- 使用“查找 RFC 目标”对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](look-up-rfc-destination.md)。  
+ 使用“查找 RFC 目标”  对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](look-up-rfc-destination.md)。  
   
 ### <a name="create-sap-bw-objects-options"></a>创建 SAP BW 对象选项  
  **选择 对象类型**  

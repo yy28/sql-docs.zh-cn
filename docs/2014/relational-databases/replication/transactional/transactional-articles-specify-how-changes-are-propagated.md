@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655672"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>指定如何传播事务项目的更改
@@ -37,13 +37,13 @@ ms.locfileid: "62655672"
 ## <a name="default-and-custom-stored-procedures"></a>默认和自定义存储过程  
  默认情况下，复制为每个表项目创建的三个过程为：  
   
--   **sp_MSins_\<** *tablename* **>**，用于处理插入。  
+-   **sp_MSins_\<** *tablename* **>** ，用于处理插入。  
   
--   **sp_MSupd_\<** *tablename* **>**，用于处理更新。  
+-   **sp_MSupd_\<** *tablename* **>** ，用于处理更新。  
   
--   **sp_MSdel_\<** *tablename* **>**，用于处理删除。  
+-   **sp_MSdel_\<** *tablename* **>** ，用于处理删除。  
   
- 过程中使用的 \<tablename>**** 取决于如何将项目添加到发布中，以及订阅数据库是否包含名称相同但所有者不同的表。  
+ 过程中使用的 \<tablename> **** 取决于如何将项目添加到发布中，以及订阅数据库是否包含名称相同但所有者不同的表。  
   
  所有这些过程都可以替换为在将项目添加到发布中时指定的自定义过程。 自定义过程用于应用程序需要自定义逻辑的情况，例如在订阅服务器上更新行时将数据插入审核表。 有关指定自定义存储过程的详细信息，请参阅上面列出的“如何”主题。  
   

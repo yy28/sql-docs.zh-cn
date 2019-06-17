@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62686221"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "62686221"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|名称[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，全文索引或 SQL Server 代理服务。 不可为 null。|  
-|startup_type|**int**|指示服务的启动模式。 以下是可能的值和其相应的说明。<br /><br /> 0：其他<br />1:其他<br />2:自动<br />3:Manual<br />4:禁用<br /><br /> 可以为 Null。|  
+|startup_type|**int**|指示服务的启动模式。 以下是可能的值和其相应的说明。<br /><br /> 0：其他<br />1：其他<br />2:自动<br />3:Manual<br />4:禁用<br /><br /> 可以为 Null。|  
 |startup_desc|**nvarchar(256)**|描述服务的启动模式。 以下是可能的值和其相应的说明。<br /><br /> 其他：其他 （引导启动）<br />其他：其他 （系统启动）<br />自动：自动启动<br />手动：按需启动<br />已禁用：禁用<br /><br /> 不可为 null。|  
-|status|**int**|指示服务的当前状态。 以下是可能的值和其相应的说明。<br /><br /> 1:已停止<br />2:其他 （启动挂起）<br />3:其他 （停止挂起）<br />4:正在运行<br />5:其他 （继续挂起）<br />6:其他 （暂停挂起）<br />7:已暂停<br /><br /> 可以为 Null。|  
+|status|**int**|指示服务的当前状态。 以下是可能的值和其相应的说明。<br /><br /> 1：已停止<br />2:其他 （启动挂起）<br />3:其他 （停止挂起）<br />4:正在运行<br />5:其他 （继续挂起）<br />6:其他 （暂停挂起）<br />7:已暂停<br /><br /> 可以为 Null。|  
 |status_desc|**nvarchar(256)**|描述服务的当前状态。 以下是可能的值和其相应的说明。<br /><br /> 已停止：服务已停止。<br />其他 （启动操作挂起）：该服务正在启动。<br />其他 （停止操作挂起）：服务正在停止。<br />运行：服务正在运行。<br />其他 （继续挂起的操作）：此服务处于挂起状态。<br />其他 （暂停挂起）：服务正在暂停。<br />已暂停：服务已暂停。<br /><br /> 不可为 null。|  
 |process_id|**int**|服务的进程 ID。 不可为 null。|  
 |last_startup_time|**datetimeoffset(7)**|上次启动服务的日期和时间。 可以为 Null。|  
@@ -45,7 +45,7 @@ ms.locfileid: "62686221"
 |filename|**nvarchar(256)**|服务可执行文件的路径和文件名。 不可为 null。|  
 |is_clustered|**nvarchar(1)**|指示是否将服务安装为群集服务器的资源。 不可为 null。|  
 |cluster_nodename|**nvarchar(256)**|安装此服务的群集节点的名称。 可以为 Null。|
-|instant_file_initialization_enabled|**nvarchar(1)**|指定是否为启用即时文件初始化[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务。<br /><br />Y = 为服务启用即时文件初始化。<br /><br />N = 为服务禁用即时文件初始化。<br /><br /> 可以为 Null。<br /><br /> **注意：** 不适用于 SQL Server 代理之类的其他服务。<br /><br /> **适用范围：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (从开始[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4，并[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
+|instant_file_initialization_enabled|**nvarchar(1)**|指定是否为启用即时文件初始化[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务。<br /><br />Y = 为服务启用即时文件初始化。<br /><br />N = 为服务禁用即时文件初始化。<br /><br /> 可以为 Null。<br /><br /> **注意：** 不适用于 SQL Server 代理之类的其他服务。<br /><br /> **适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (从开始[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4，并[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
 
 ## <a name="security"></a>安全性  
   

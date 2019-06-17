@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061603"
 ---
 # <a name="analysis-of-data-flow"></a>数据流分析
   可以使用[catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`数据库视图分析包的数据流。 此视图在每当数据流组件将数据发送到下游组件时显示一行。 这些信息可用来进一步了解发送到每个组件的行。  
   
 > [!NOTE]  
->  日志记录级别必须设置为“详细”，才能通过 catalog.execution_data_statistics 视图捕获信息。  
+>  日志记录级别必须设置为“详细”  ，才能通过 catalog.execution_data_statistics 视图捕获信息。  
   
  以下示例显示在包的组件之间发送的行数。  
   

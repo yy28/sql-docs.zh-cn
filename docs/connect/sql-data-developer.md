@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42c28c1852c5d9c2e931973413a7671ed77b9e6a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 62b84b7be01389cffd45175003066283ac14a7a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578287"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800794"
 ---
 # <a name="sql-data-developer"></a>SQL 数据开发人员
 使用 Microsoft SQL 数据平台，要在移动设备和桌面系统对 web 服务器、 企业服务器和云之间创建以数据为中心的解决方案。  

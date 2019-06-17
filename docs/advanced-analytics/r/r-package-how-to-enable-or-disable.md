@@ -3,17 +3,17 @@ title: 启用或禁用远程 R 包管理的 SQL Server 机器学习服务
 description: 启用 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内） 上的远程 R 包管理
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/10/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee52fd9b7a116156f794303b828a83e9b06de6ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4ce25830c3899ca0973fafe30c86489bfcdc949a
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641808"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140499"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>启用或禁用 SQL Server 的远程包管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,4 +98,4 @@ ms.locfileid: "62641808"
 
 + [使用 RevoScaleR 安装新的 R 包](use-revoscaler-to-manage-r-packages.md)
 + [安装 R 包的提示](packages-installed-in-user-libraries.md)
-+ [默认包](installing-and-managing-r-packages.md)
++ [默认包](../package-management/default-packages.md)

@@ -3,17 +3,17 @@ title: 设置 R 开发的 SQL Server 机器学习服务的数据科学客户端
 description: 远程连接到 SQL Server 的开发工作站上安装本地 R 库和工具。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b18844e6899615ac978e63cefa6c712f8f194ea
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641915"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140349"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>设置 SQL Server 上的 R 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -199,9 +199,9 @@ N/A
 
 使用时[RStudio](https://www.rstudio.com/)，可以配置要使用的 R 库和对应于远程 SQL 服务器上的可执行文件的环境。
 
-1. 检查 SQL Server 上安装 R 包版本。 有关详细信息，请参阅[获取 R 包信息](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)。
+1. 检查 SQL Server 上安装 R 包版本。 有关详细信息，请参阅[获取 R 包信息](../package-management/installed-package-information.md)。
 
-1. 安装 Microsoft R 客户端或独立服务器选项，以添加 RevoScaleR 和其他 R 包，包括 SQL Server 实例使用的基础 R 发行版之一。 选择在同一版本级别或更低 （包是向后兼容） 的服务器上提供相同的包版本。 有关版本信息，请参阅这篇文章中映射的版本：[升级 R 和 Python 组件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+1. 安装 Microsoft R 客户端或独立服务器选项，以添加 RevoScaleR 和其他 R 包，包括 SQL Server 实例使用的基础 R 发行版之一。 选择在同一版本级别或更低 （包是向后兼容） 的服务器上提供相同的包版本。 有关版本信息，请参阅这篇文章中映射的版本：[升级 R 和 Python 组件](../install/upgrade-r-and-python.md)。
 
 1. 在 RStudio 中，[更新 R 路径](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R)以指向提供 RevoScaleR、 Microsoft R Open，以及其他 Microsoft 包的 R 环境。 
 

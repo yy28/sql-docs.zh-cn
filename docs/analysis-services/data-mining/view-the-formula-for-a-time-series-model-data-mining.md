@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0aaa1be07dcd5857585e7db3dbd4a78a44d41ff3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659704"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>查看时序模型的公式（数据挖掘）
@@ -22,7 +22,7 @@ ms.locfileid: "62659704"
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>查看时序模型的 ARTXP 回归公式  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，选择要查看的时序模型，然后单击 **“浏览”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，选择要查看的时序模型，然后单击 **“浏览”** 。  
   
      --或者--  
   
@@ -30,24 +30,24 @@ ms.locfileid: "62659704"
   
 2.  单击 **“模型”** 选项卡。  
   
-3.  如果模型包含多个树，请从“树”下拉列表中选择一个树。  
+3.  如果模型包含多个树，请从“树”  下拉列表中选择一个树。  
   
     > [!NOTE]  
     >  您有多个数据序列时，模型将始终包含多个树。 但是，您在 **“时序查看器”** 中看到的树的数目却不像在 [Microsoft 一般内容树查看器](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)中所看到的那么多。 这是因为时序查看器会将每个数据序列的 ARIMA 和 ARTXP 信息结合到单个表示形式中。  
   
 4.  单击树中的任一叶节点。  
   
-     标记为 **“数据序列”** 的节点始终为叶节点并且可包含公式。 如果“(全部)”节点没有子节点，则它也可包含一个公式。  
+     标记为 **“数据序列”** 的节点始终为叶节点并且可包含公式。 如果“(全部)”  节点没有子节点，则它也可包含一个公式。  
   
-5.  如果未显示“挖掘图例”，请右键单击该节点，然后选择“显示图例”。  
+5.  如果未显示“挖掘图例”  ，请右键单击该节点，然后选择“显示图例”  。  
   
-     ARTXP 公式将在 **“挖掘图例”** 的前半部分显示为 **“树节点公式”**。  
+     ARTXP 公式将在 **“挖掘图例”** 的前半部分显示为 **“树节点公式”** 。  
   
      ![在图例中查看时序公式](../../analysis-services/data-mining/media/ssdm-timeserieslegend.png "在图例中查看时序公式")  
   
 ### <a name="to-view-the-arima-formula-for-a-time-series-model"></a>查看时序模型的 ARIMA 公式  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，选择要查看的时序模型，然后单击 **“浏览”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，选择要查看的时序模型，然后单击 **“浏览”** 。  
   
      --或者--  
   
@@ -55,16 +55,16 @@ ms.locfileid: "62659704"
   
 2.  单击 **“模型”** 选项卡。  
   
-3.  如果模型包含多个树，请从“树”下拉列表中选择一个树。  
+3.  如果模型包含多个树，请从“树”  下拉列表中选择一个树。  
   
     > [!NOTE]  
     >  当有多个数据序列时，模型将始终包含多个树。  
   
 4.  单击树中的任一叶节点。  
   
-     ARIMA 公式将在 **“挖掘图例”** 的后半部分显示为 **“ARIMA 公式”**。  
+     ARIMA 公式将在 **“挖掘图例”** 的后半部分显示为 **“ARIMA 公式”** 。  
   
-5.  如果未显示“挖掘图例”，请右键单击该节点，然后选择“显示图例”。  
+5.  如果未显示“挖掘图例”  ，请右键单击该节点，然后选择“显示图例”  。  
   
 ### <a name="to-get-the-coefficients-and-terms-for-the-equation"></a>获取公式的系数和术语  
   

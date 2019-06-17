@@ -3,22 +3,22 @@ title: R 语言和 Python 功能集成的 SQL Server 机器学习服务
 description: R 语言和 Python 在 SQL Server 中，与用于数据科学和统计建模、 机器学习模型，预测分析、 数据可视化效果和的详细信息的关系数据集成功能。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2018
+ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf7d8a7cddcfbe0d47d4808f82abc0a47efade2c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 921ffc0188623335ac7e7206a02095cc11469327
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512445"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140331"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 中机器学习服务 （R、 Python）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017机器学习服务是数据库引擎实例的加载项，用于在 SQL Server 上执行 R 和 Python 代码。 功能包括[Microsoft R 和 Python 包](#components)用于高性能预测分析和机器学习。 代码在可扩展性框架中运行，与核心引擎进程隔离，但完全可用于关系数据（作为存储过程、包含 R 或 Python 语句的 T-SQL 脚本或包含 T-SQL 的 R 或 Python 代码）。 
+机器学习服务是用于执行数据库内 R 和 Python 脚本的 SQL Server 的一项功能。 功能包括[Microsoft R 和 Python 包](#components)用于高性能预测分析和机器学习。 可以在通过存储过程，其中包含 R 和 Python 语句的 T-SQL 脚本的 R 和 Python 脚本中使用关系数据或 R 和 Python 代码包含的 T-SQL。
 
 如果以前使用过[SQL Server 2016 R Services](r/sql-server-r-services.md)、 SQL Server 2017 中的机器学习服务是与更新版本的基本 R，RevoScaleR，MicrosoftML，R 支持，下一代和 2016 版本中引入的其他库。 
 
@@ -44,7 +44,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 | 组件 | Description |
 |-----------|-------------|
 | SQL Server Launchpad服务 | 管理外部R和Python运行时与数据库引擎实例之间通信的服务。 |
-| R 包 | [**RevoScaleR**](r/ref-r-revoscaler.md)是主库的此库中的可缩放。此库中的函数是使用最广泛的函数。 在这些库中可以找到数据转换和操作、统计摘要、可视化以及许多形式的建模和分析。 此外，这些库中的函数可自动在可用内核之间分配工作负荷以进行并行处理，并且能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)**](r/ref-r-microsoftml.md)添加了机器学习算法，用于创建用于文本分析、图像分析和情绪分析的自定义模型。 <br/>[**sqlRUtils**](r/ref-r-sqlrutils.md)提供了帮助函数，用于将R脚本放入T-SQL存储过程，向数据库注册存储过程，以及从R开发环境运行存储过程。<br/>[**olapR** ](r/ref-r-olapr.md)是用于构建还是在 R 脚本中执行 MDX 查询。|
+| R 包 | [**RevoScaleR**](r/ref-r-revoscaler.md)是主库的此库中的可缩放。此库中的函数是使用最广泛的函数。 在这些库中可以找到数据转换和操作、统计摘要、可视化以及许多形式的建模和分析。 此外，这些库中的函数可自动在可用内核之间分配工作负荷以进行并行处理，并且能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)** ](r/ref-r-microsoftml.md)添加了机器学习算法，用于创建用于文本分析、图像分析和情绪分析的自定义模型。 <br/>[**sqlRUtils**](r/ref-r-sqlrutils.md)提供了帮助函数，用于将R脚本放入T-SQL存储过程，向数据库注册存储过程，以及从R开发环境运行存储过程。<br/>[**olapR** ](r/ref-r-olapr.md)是用于构建还是在 R 脚本中执行 MDX 查询。|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) 是 Microsoft 提供的 R 的开源分发版。其中包括包和解释器。 请始终使用安装程序安装的 MRO 版本。 |
 | R 工具 | R 控制台窗口和命令提示符是 R 分发版中的标准工具。  |
 | R 示例和脚本 |  开源 R 和 RevoScaleR 包中包含内置数据集，以便你可以使用预安装的数据创建和运行脚本。 |
@@ -140,7 +140,7 @@ SQL Server 2017 机器学习服务是 SQL Server 2016 R 服务的下一代，增
 | SQL Server 2016 R Services （数据库内） | R Server 9.1  | 2017 年 7 月  |
 | SQL Server 2016 R Server （独立版）  |  R Server 9.1 | 2017 年 7 月 |
 
-有关按发布排列的包版本，请参阅[升级 R 和 Python 组件](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map)中的版本地图。
+有关按发布排列的包版本，请参阅[升级 R 和 Python 组件](install/upgrade-r-and-python.md#version-map)中的版本地图。
 
 ## <a name="portability-and-related-products"></a>可移植性和相关产品
 

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049716"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
 `[ @owner_name = ] 'owner_name'` 是表的名称。 *owner_name*是**sysname**，默认值为 NULL。  
   
-`[ @filter_clause = ] 'filter_clause'` 指定控制应将新加载数据的哪些行添加到合并跟踪表的筛选器子句。 *filter_clause*是**nvarchar(4000)**，默认值为 NULL。 如果*filter_clause*是**null**，所有大容量加载的行已添加。  
+`[ @filter_clause = ] 'filter_clause'` 指定控制应将新加载数据的哪些行添加到合并跟踪表的筛选器子句。 *filter_clause*是**nvarchar(4000)** ，默认值为 NULL。 如果*filter_clause*是**null**，所有大容量加载的行已添加。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

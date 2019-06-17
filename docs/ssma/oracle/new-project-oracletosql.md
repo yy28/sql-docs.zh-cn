@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acfc9cc5593001e3a9a918abe788494b1b7fd405
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209833"
 ---
 # <a name="new-project-oracletosql"></a>新建项目 (OracleToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63209833"
 **名称**  
 输入项目的名称。 SSMA 会追加文件扩展名。  
   
-**位置**  
+**Location**  
 输入或浏览到文件夹或网络位置来保存该项目。  
   
 **迁移到**  

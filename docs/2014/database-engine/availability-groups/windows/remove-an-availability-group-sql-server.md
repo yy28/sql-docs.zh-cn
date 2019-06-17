@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d3ed68462736058ae386d8b5b6ad874f6fde8c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813964"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>删除可用性组 (SQL Server)
@@ -72,13 +72,13 @@ ms.locfileid: "62813964"
   
 3.  此步骤取决于您是要删除多个可用性组还是只删除一个可用性组，如下所示：  
   
-    -   若要删除多个可用性组（其主要副本位于连接的服务器实例上），请使用“对象资源管理器详细信息”窗格查看和选择要删除的所有可用性组。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](use-object-explorer-details-to-monitor-availability-groups.md)。  
+    -   若要删除多个可用性组（其主要副本位于连接的服务器实例上），请使用“对象资源管理器详细信息”  窗格查看和选择要删除的所有可用性组。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](use-object-explorer-details-to-monitor-availability-groups.md)。  
   
     -   若要删除单个可用性组，请在 **“对象资源管理器”** 窗格或 **“对象资源管理器详细信息”** 窗格中选择它。  
   
-4.  右键单击所选的可用性组，然后选择“删除”命令。  
+4.  右键单击所选的可用性组，然后选择“删除”  命令。  
   
-5.  在 **“删除可用性组”** 对话框中，若要删除所有列出的可用性组，请单击 **“确定”**。 如果您不想删除所有列出的可用性组，请单击 **“取消”**。  
+5.  在 **“删除可用性组”** 对话框中，若要删除所有列出的可用性组，请单击 **“确定”** 。 如果您不想删除所有列出的可用性组，请单击 **“取消”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **删除可用性组**  

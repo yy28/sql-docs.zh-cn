@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3c8eda71783e7211011bd6f67d9acf638c8946a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062523"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
@@ -61,7 +61,7 @@ ms.locfileid: "66062523"
 |表格实例和数据库|支持本地和远程管理。<br /><br /> 有关详细信息，请参阅 》 2011 年 8 月博客[管理表格模型使用 PowerShell](https://go.microsoft.com/fwlink/?linkID=227685)。|  
 |PowerPivot for SharePoint 实例和数据库|有限支持。 您可以使用 HTTP 连接和 SQLAS 提供程序查看实例和数据库信息。<br /><br /> 但是，不支持使用 cmdlet。 切勿使用 Analysis Services PowerShell 备份和还原内存中 PowerPivot 数据库，也不应添加或删除角色、处理数据或运行任意 XMLA 脚本。<br /><br /> 出于配置目的，PowerPivot for SharePoint 具有单独提供的内置 PowerShell 支持。 有关详细信息，请参阅[powerpivot for SharePoint 的 PowerShell 参考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。|  
 |与本地多维数据集的本机连接<br /><br /> "Data Source=c:\backup\test.cub"|不提供支持。|  
-|与 SharePoint 中的 BI 语义模型 (.bism) 连接文件的 HTTP 连接<br /><br /> "Data Source=http://server/shared_docs/name.bism"|不提供支持。|  
+|与 SharePoint 中的 BI 语义模型 (.bism) 连接文件的 HTTP 连接<br /><br /> "Data Source=http://server/shared_docs/name.bism "|不提供支持。|  
 |与 PowerPivot 数据库的嵌入式连接<br /><br /> "Data Source=$Embedded$"|不提供支持。|  
 |Analysis Services 存储过程中的本地服务器环境<br /><br /> "Data Source=*"|不提供支持。|  
   
@@ -203,7 +203,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  HTTP 连接将非常有用，如果配置为使用本主题中的说明的 HTTP 访问你的服务器：[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- 假定服务器 URL 的 http://localhost/olap/msmdpump.dll，连接可能如下所示：  
+ 假定服务器 URL 的 http://localhost/olap/msmdpump.dll ，连接可能如下所示：  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

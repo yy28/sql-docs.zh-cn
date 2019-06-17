@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62942970"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的转义序列
@@ -47,9 +47,9 @@ ms.locfileid: "62942970"
  转义序列进行识别和分析由驱动程序，它的转义序列替换为特定于 DBMS 的语法。 有关转义序列语法的详细信息，请参阅[ODBC 转义序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附录 c： 驱动器中SQL 语法。  
   
 > [!NOTE]  
->  在 ODBC 2。*x*，这是标准的转义序列语法： **-(\*供应商 (**_供应商名称_**)，产品 (** _产品名称_**)**_扩展_  **\*)-**  
+>  在 ODBC 2。*x*，这是标准的转义序列语法： **-(\*供应商 (** _供应商名称_ **)，产品 (** _产品名称_ **)** _扩展_  **\*)-**  
 >   
->  此语法中，除了速记形式语法定义的窗体： **{**_扩展_**}**  
+>  此语法中，除了速记形式语法定义的窗体： **{** _扩展_ **}**  
 >   
 >  在 ODBC 3。*x*、 转义序列的长格式已被弃用，并以独占方式使用的简写形式。  
   

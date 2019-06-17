@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768433"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解脚本组件对象模型
@@ -113,11 +113,11 @@ public override void PreExecute()
 #### <a name="what-the-bufferwrapper-project-item-provides"></a>BufferWrapper 项目项提供的内容  
  对于已配置的每个输入，`BufferWrapper` 项目项包含从 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 派生并且与输入同名的类。 每个输入缓冲区类包含以下属性、函数和方法：  
   
--   每个所选输入列的已命名类型化取值函数属性。 这些属性是只读或读/写的，取决于在“脚本转换编辑器”的“输入列”页中为该列指定的“使用类型”。  
+-   每个所选输入列的已命名类型化取值函数属性。 这些属性是只读或读/写的，取决于在“脚本转换编辑器”的“输入列”页中为该列指定的“使用类型”    。  
   
--   每个所选输入列的 \<column>_IsNull 属性。 此属性也是只读或读/写的，取决于为该列指定的“使用类型”。  
+-   每个所选输入列的 \<column>_IsNull 属性  。 此属性也是只读或读/写的，取决于为该列指定的“使用类型”  。  
   
--   为每个已配置的输出使用 DirectRowTo\<outputbuffer> 方法。 在将行筛选到位于同一 `ExclusionGroup` 中的多个输出之一时，将使用这些方法。  
+-   为每个已配置的输出使用 DirectRowTo\<outputbuffer> 方法  。 在将行筛选到位于同一 `ExclusionGroup` 中的多个输出之一时，将使用这些方法。  
   
 -   一个 `NextRow` 函数，用于获取下一个输入行，以及一个 `EndOfRowset` 函数，用于确定最后一个数据缓冲区是否已经处理。 使用在 `UserComponent` 基类中实现的输入处理方法时，通常不需要这些函数。 下一节提供有关 `UserComponent` 基类的详细信息。  
   
@@ -126,16 +126,16 @@ public override void PreExecute()
   
 -   `ProcessInput` 方法的重写实现。 这是数据流引擎在运行时继调用 `PreExecute` 方法后调用的下一个方法，该方法可被调用多次。 `ProcessInput` 将处理传送到 **\<inputbuffer > _ProcessInput**方法。 然后 `ProcessInput` 方法检查是否已到达输入缓冲区的末尾，如果已到达缓冲区末尾，则调用可重写的 `FinishOutputs` 方法和私有 `MarkOutputsAsFinished` 方法。 然后 `MarkOutputsAsFinished` 方法对最后一个输出缓冲区调用 `SetEndOfRowset`。  
   
--   \<inputbuffer>_ProcessInput 方法的可重写实现。 此默认实现只是遍历每个输入行并调用 \<inputbuffer>_ProcessInputRow。  
+-   \<inputbuffer>_ProcessInput 方法的可重写实现  。 此默认实现只是遍历每个输入行并调用 \<inputbuffer>_ProcessInputRow  。  
   
--   \<inputbuffer>_ProcessInputRow 方法的可重写实现。 默认实现为空。 通常会重写此方法以编写自定义数据处理代码。  
+-   \<inputbuffer>_ProcessInputRow 方法的可重写实现  。 默认实现为空。 通常会重写此方法以编写自定义数据处理代码。  
   
 #### <a name="what-your-custom-code-should-do"></a>自定义代码应执行的操作  
  可以使用以下方法在 `ScriptMain` 类中处理输入：  
   
--   重写 \<inputbuffer>_ProcessInputRow 以便在每个输入行通过时处理其中的数据。  
+-   重写 \<inputbuffer>_ProcessInputRow 以便在每个输入行通过时处理其中的数据  。  
   
--   仅当你在遍历输入行时必须执行附加操作时，才重写 \<inputbuffer>_ProcessInput。 （例如，必须测试 `EndOfRowset`，以便在所有行都处理完毕后进行其他一些操作。）调用 \<inputbuffer>_ProcessInputRow，执行行处理。  
+-   仅当你在遍历输入行时必须执行附加操作时，才重写 \<inputbuffer>_ProcessInput  。 （例如，必须测试 `EndOfRowset`，以便在所有行都处理完毕后进行其他一些操作。）调用 \<inputbuffer>_ProcessInputRow，执行行处理  。  
   
 -   如果必须在关闭输出之前对输出进行一些操作，请重写 `FinishOutputs`。  
   
@@ -149,7 +149,7 @@ public override void PreExecute()
   
 -   每个输出列的已命名类型化只写取值函数属性。  
   
--   只写**\<列 > _IsNull**属性可用于将列的值设置为每个所选的输出列`null`。  
+-   只写 **\<列 > _IsNull**属性可用于将列的值设置为每个所选的输出列`null`。  
   
 -   一个 `AddRow` 方法，用于将空的新行添加到输出缓冲区。  
   

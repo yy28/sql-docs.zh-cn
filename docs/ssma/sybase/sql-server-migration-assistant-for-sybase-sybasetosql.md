@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 82de3d69201a26980936172b2b08dcda9900b7a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63214522"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>SQL Server Migration Assistant for Sybase (SybaseToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63214522"
   
 ## <a name="contents"></a>目录  
   
-|部分|描述|  
+|部分|Description|  
 |-----------|---------------|  
 |[什么是适用于 Sybase 的 SSMA 中的新增功能&#40;SybaseToSQL&#41;](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|列出了对 SSMA 版本的更改。|  
 |[安装 SSMA for Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|包含为正在运行的计算机上安装 SSMA for Sybase 客户端和所需的组件提供的先决条件和说明的主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。|  

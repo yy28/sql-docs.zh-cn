@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856136"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>向表中添加列（数据库引擎）
@@ -52,7 +52,7 @@ ms.locfileid: "62856136"
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>用表设计器向表中插入列  
   
-1.  在“对象资源管理器”中，右键单击要为其添加列的表，再选择“设计”。  
+1.  在“对象资源管理器”  中，右键单击要为其添加列的表，再选择“设计”  。  
   
 2.  单击 **“列名”** 列中的第一个空单元。  
   
@@ -61,14 +61,14 @@ ms.locfileid: "62856136"
 4.  按 Tab 键转到 **“数据类型”** 单元格，再从下拉列表中选择数据类型。 它也是必需设置的值，如果您没有作出选择，它将被赋以默认值。  
   
     > [!NOTE]  
-    >  可以在“选项”对话框中的“数据库工具”之下更改默认值。  
+    >  可以在“选项”  对话框中的“数据库工具”  之下更改默认值。  
   
 5.  在 **“列属性”** 选项卡上继续定义任何其他列属性。  
   
     > [!NOTE]  
-    >  列属性的默认值在你创建新列时添加，但你可以在“列属性”选项卡中更改这些值。  
+    >  列属性的默认值在你创建新列时添加，但你可以在“列属性”  选项卡中更改这些值。  
   
-6.  在你添加完列后，从“文件”  菜单中，选择“保存” _table name_。  
+6.  在你添加完列后，从“文件”  菜单中，选择“保存”  _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,9 +76,9 @@ ms.locfileid: "62856136"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  下面的示例将两列添加到表 `dbo.doc_exa`中。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  下面的示例将两列添加到表 `dbo.doc_exa`中。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
