@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484714"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>任务 17：查看由 SSIS 包创建的 DQS 清理项目
@@ -38,15 +38,15 @@ ms.locfileid: "65484714"
   
 8.  在主页面中的**DQS 客户端**，单击**打开数据质量项目**中**数据质量项目**窗格。  
   
-9. 在项目列表中，选择由 SSIS DQS 清理组件创建的项目。 项目的名称应采用格式：**CleanseAndCurate.Cleanse Supplier Data.GUID (红色）**。 可能需要对基于列表进行排序**创建日期**列，并寻找最新记录。  
+9. 在项目列表中，选择由 SSIS DQS 清理组件创建的项目。 项目的名称应采用格式：**CleanseAndCurate.Cleanse Supplier Data.GUID (红色）** 。 可能需要对基于列表进行排序**创建日期**列，并寻找最新记录。  
   
-10. 单击“下一步” 。  
+10. 单击“下一步”  。  
   
 11. **管理和查看结果**页应非常熟悉交互式清理在本教程前面部分中一样。  
   
 12. 查看清理结果。 在下一页中，您还可以执行交互式清理，并将结果导出到 Excel 文件或数据库中。  
   
-13. 单击“下一步” 。 在此**导出**页上，您可以将结果导出到 excel 文件，CSV 文件或 SQL 数据库。  
+13. 单击“下一步”  。 在此**导出**页上，您可以将结果导出到 excel 文件，CSV 文件或 SQL 数据库。  
   
 14. 单击**完成**以完成活动。  
   

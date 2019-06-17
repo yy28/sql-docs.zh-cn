@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891756"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>第 1 步：创建新的 Integration Services 项目
@@ -29,21 +29,21 @@ ms.locfileid: "62891756"
   
 ### <a name="to-create-a-new-integration-services-project"></a>创建新的 Integration Services 项目  
   
-1.  在 **“开始”** 菜单上，依次指向 **“所有程序”**、 **Microsoft SQL Server**，再单击 **SQL Server Data Tools**。  
+1.  在 **“开始”** 菜单上，依次指向 **“所有程序”** 、 **Microsoft SQL Server**，再单击 **SQL Server Data Tools**。  
   
-2.  在“文件”菜单中，指向“新建”，再单击“项目”，以创建一个新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
+2.  在“文件”  菜单中，指向“新建”  ，再单击“项目”  ，以创建一个新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-3.  在“新建项目”对话框中，展开“已安装的模板”下的“商业智能”节点，并在“模板”窗格中选择“Integration Services 项目”。  
+3.  在“新建项目”  对话框中，展开“已安装的模板”  下的“商业智能”  节点，并在“模板”  窗格中选择“Integration Services 项目”  。  
   
-4.  在“名称”框中，将默认名称更改为 **SSIS Tutorial**。 或者，清除“创建解决方案的目录”复选框。  
+4.  在“名称”  框中，将默认名称更改为 **SSIS Tutorial**。 或者，清除“创建解决方案的目录”  复选框。  
   
-5.  接受默认位置，或单击“浏览”，以浏览并找到要使用的文件夹。 在“项目位置”对话框中，单击文件夹，再单击“选择文件夹”。  
+5.  接受默认位置，或单击“浏览”  ，以浏览并找到要使用的文件夹。 在“项目位置”  对话框中，单击文件夹，再单击“选择文件夹”  。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
      默认情况下，将创建一个名为 **Package.dtsx** 的空包，并将该包添加到项目中的“SSIS 包”之下。  
   
-7.  在“解决方案资源管理器”工具栏中，右键单击“Package.dtsx”，再单击“重命名”，将默认包重命名为 **Lesson 1.dtsx**。  
+7.  在“解决方案资源管理器”  工具栏中，右键单击“Package.dtsx”  ，再单击“重命名”  ，将默认包重命名为 **Lesson 1.dtsx**。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 2：添加和配置平面文件连接管理器](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  

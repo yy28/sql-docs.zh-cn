@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b63d1cf4-dc1b-4e35-9a56-50436642eaaf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b655449b2b15e7fbf1f31f7045bc5f0051951a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a242499204215f0d8ecdb16698bcc0fe07377db3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681115"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794258"
 ---
 # <a name="setlogintimeout-method-sqlserverdatasource"></a>setLoginTimeout 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setLoginTimeout(int loginTimeout)
 #### <a name="parameters"></a>Parameters  
  *loginTimeout*  
   
- 一个表示要等待的秒数的 int 值。 零表示该超时为默认系统超时，默认情况下指定为 15 秒。  
+ 一个表示要等待的秒数的 int  值。 零表示该超时为默认系统超时，默认情况下指定为 15 秒。  
   
 ## <a name="remarks"></a>Remarks  
  此 setLoginTimeout 方法由 javax.sql.DataSource 接口中的 setLoginTimeout 方法指定。  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 97cc4c9955b64583571a63fa72df4663c1acd812
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479155"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>使属性组对用户可见 (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "65479155"
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>使属性组对用户可见  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
 2.  上**模型视图**页上，从菜单栏中，依次指向**管理**然后单击**属性组**。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65479155"
   
 9. 单击用户或中的组**可用**框，然后单击**添加**箭头。 若要全部添加，请单击 **“全部添加”** 箭头。  
   
-10. 单击“保存” 。  
+10. 单击“保存”  。  
   
 ## <a name="see-also"></a>请参阅  
  [属性组 (Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)   

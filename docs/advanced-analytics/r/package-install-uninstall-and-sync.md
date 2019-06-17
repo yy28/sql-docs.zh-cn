@@ -3,17 +3,17 @@ title: 从文件系统-SQL Server 机器学习服务的 R 包同步
 description: 使用文件系统上安装较新版本更新 SQL Server 上的 R 库。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 57677e8d7573411be2e77baa7ffd8564ec9cbeb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6782acd011242cfd9b8ed4fe24a11fba85e932c
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642740"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140520"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>适用于 SQL Server 的 R 包同步
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +46,7 @@ RevoScaleR SQL Server 2017 中包括的版本包括同步文件系统和实例�
 
 此功能非常适用于 SQL Server 2017 CTP 2 或更高版本。
 
-可以通过升级要使用 Microsoft R 的最新版本的实例向 SQL Server 2016 的实例中添加此功能有关详细信息，请参阅[使用 SqlBindR.exe 升级 SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+可以通过升级要使用 Microsoft R 的最新版本的实例向 SQL Server 2016 的实例中添加此功能有关详细信息，请参阅[使用 SqlBindR.exe 升级 SQL Server R Services](../install/upgrade-r-and-python.md)。
 
 ### <a name="enable-the-package-management-feature"></a>启用包管理功能
 
@@ -69,7 +69,7 @@ RevoScaleR SQL Server 2017 中包括的版本包括同步文件系统和实例�
 
 + 若要将包标记为同步**专用**，管理员或包的所有者必须运行此函数，并必须是私有的包。
 
-+ 若要同步代表其他用户的包，所有者必须 bhe 隶属**db_owner**数据库角色。
++ 若要同步代表其他用户的包，所有者必须是属于**db_owner**数据库角色。
 
 ## <a name="how-package-synchronization-works"></a>包同步工作原理
 

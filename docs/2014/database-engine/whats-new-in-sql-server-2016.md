@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62843437"
 ---
 # <a name="what39s-new-database-engine"></a>什么&#39;s 新 （数据库引擎）
@@ -157,10 +157,10 @@ ms.locfileid: "62843437"
 ##  <a name="Security"></a> 安全性改进  
   
 ### <a name="connect-any-database-permission"></a>CONNECT ANY DATABASE 权限  
- 新的服务器级权限。 将 CONNECT ANY DATABASE 授予某个登录名，该登录名必须连接到当前存在的所有数据库和将来可能创建的任何新数据库。 不要在任何数据库中授予超过连接的任何权限。 结合**SELECT ALL USER SECURABLES**或`VIEW SERVER STATE`以允许审核进程查看所有数据或所有数据库状态的实例上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 新的服务器级权限。 将 CONNECT ANY DATABASE 授予某个登录名，该登录名必须连接到当前存在的所有数据库和将来可能创建的任何新数据库。  不要在任何数据库中授予超过连接的任何权限。 结合**SELECT ALL USER SECURABLES**或`VIEW SERVER STATE`以允许审核进程查看所有数据或所有数据库状态的实例上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
 ### <a name="impersonate-any-login-permission"></a>IMPERSONATE ANY LOGIN 权限  
- 新的服务器级权限。 授予后，当连接到数据库时，允许中间层进程模拟连接到它的客户端帐户。 被拒绝时，高特权的登录名可以阻止模拟其他登录名。 例如，可通过模拟其他登录名来阻止具有 CONTROL SERVER 权限的登录名。  
+ 新的服务器级权限。 授予后，当连接到数据库时，允许中间层进程模拟连接到它的客户端帐户。 被拒绝时，高特权的登录名可以阻止模拟其他登录名。 例如，可通过模拟其他登录名来阻止具有 CONTROL SERVER 权限的登录名。   
   
 ### <a name="select-all-user-securables-permission"></a>SELECT ALL USER SECURABLES 权限  
  新的服务器级权限。 授予后，作者等登录名可以查看用户可连接到的所有数据库中的数据。  

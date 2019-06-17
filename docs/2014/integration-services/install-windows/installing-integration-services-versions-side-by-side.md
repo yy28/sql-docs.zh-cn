@@ -13,12 +13,12 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3bc3c5ca8209c3b04aabdfc7fb27e7ce014121e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 903afa9ef25afcba7818862bc73dc33bf677b47a
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62892913"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140821"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>互操作性和共存 (Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 可与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services 并存。  
@@ -28,7 +28,7 @@ ms.locfileid: "62892913"
   
 |功能|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|开发环境|[以前版本的 SQL Server Data Tools （SSDT 和 SSDT-BI）](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools-Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools for Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools-Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|开发环境|[以前版本的 SQL Server Data Tools （SSDT 和 SSDT-BI）](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools-Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools for Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools-Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
 |管理环境|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |msdb 中用于存储包的主系统表|sysssispackages|sysssispackages|sysssispackages|  
 |用于运行包的主命令提示实用工具|**dtexec** (dtexec.exe)，2014 版|**dtexec** (dtexec.exe), 2012 版|**dtexec** (dtexec.exe), 2008 版|  
@@ -62,6 +62,6 @@ ms.locfileid: "62892913"
   
      对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]实例，不能从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例导入包，也不能将包导出到该实例。  
   
--   **运行包**。 可以使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 实用工具或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 **dtexec** Integration Services 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services 包。 每当 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 工具加载在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中开发的包时，该工具都会在内存中将包临时转换为 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 使用的包格式。 如果 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 包存在导致无法成功转换的问题，则在解决这些问题之前， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 工具将无法运行该包。 有关详细信息，请参阅 [Upgrade Integration Services Packages](upgrade-integration-services-packages.md)。  
+-   **运行包**。 可以使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 实用工具或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 **dtexec** Integration Services 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services 包。 每当 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 工具加载在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中开发的包时，该工具都会在内存中将包临时转换为 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 使用的包格式。 如果 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 包存在导致无法成功转换的问题，则在解决这些问题之前， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 工具将无法运行该包。 有关详细信息，请参阅 [升级 Integration Services 包](upgrade-integration-services-packages.md)。  
   
   

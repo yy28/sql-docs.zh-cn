@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983064"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
@@ -48,14 +48,14 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @tabname = ] 'qualified_table_name'` 是一个或两个部分组成的表名。 表必须在当前数据库中。 表必须具有全文索引。 *qualified_table_name*是**nvarchar(517)**，无默认值。  
+`[ @tabname = ] 'qualified_table_name'` 是一个或两个部分组成的表名。 表必须在当前数据库中。 表必须具有全文索引。 *qualified_table_name*是**nvarchar(517)** ，无默认值。  
   
 `[ @colname = ] 'column_name'` 中的列的名称*qualified_table_name*。 该列必须为字符**varbinary （max)** 或**映像**列且不能为计算的列。 *column_name*是**sysname**，无默认值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建全文索引的文本数据存储中的列**varbinary （max)** 或**映像**数据类型。 不对图像和图片进行索引。  
   
-`[ @action = ] 'action'` 是要执行的操作。 *操作*是**varchar （20)**，无默认值可以是以下值之一。  
+`[ @action = ] 'action'` 是要执行的操作。 *操作*是**varchar （20)** ，无默认值可以是以下值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

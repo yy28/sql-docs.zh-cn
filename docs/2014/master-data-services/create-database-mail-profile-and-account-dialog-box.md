@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483270"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>“创建数据库邮件配置文件和帐户”对话框（主数据服务配置管理器）
@@ -40,7 +40,7 @@ ms.locfileid: "65483270"
 |**电子邮件地址**|键入帐户电子邮件地址的名称。 这是发送该电子邮件的地址，该地址必须采用 *email_name*@*domain_name*的格式。 电子邮件地址示例为 sales@contoso.com。|  
 |**显示名称**|可选设置。 键入由此帐户发送的电子邮件上显示的名称。 显示名称的一个例子是 Contoso Sales Group。|  
 |**答复电子邮件地址**|可选设置。 键入用于答复由此帐户发送的电子邮件的电子邮件地址。 一个示例答复电子邮件地址为 admin@contoso.com。|  
-|**SMTP 服务器**|键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 SMTP 服务器格式示例`smtp.` *< company_name >*`.com`。 如需相关帮助，请询问您的邮件管理员。|  
+|**SMTP 服务器**|键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 SMTP 服务器格式示例`smtp.` *< company_name >* `.com`。 如需相关帮助，请询问您的邮件管理员。|  
 |**端口号**|键入此帐户的 SMTP 服务器的端口号。 默认 SMTP 端口为 25。|  
 |**此服务器要求安全连接(SSL)**|使用安全套接字层 (SSL) 加密通信。|  
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 32171c1bf82b0a46fd5a70c1ace2cb2004675e9d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484191"
 ---
 # <a name="create-a-collection-master-data-services"></a>创建集合 (Master Data Services)
@@ -40,11 +40,11 @@ ms.locfileid: "65484191"
   
 2.   从“版本”列表中，选择某一版本。  
   
-3.  单击 **“资源管理器”**。  
+3.  单击 **“资源管理器”** 。  
   
-4.  从菜单栏中，指向“集合”，然后单击“entity_name”。  
+4.  从菜单栏中，指向“集合”  ，然后单击“entity_name”  。  
   
-5.  单击 **“添加集合”**。  
+5.  单击 **“添加集合”** 。  
   
 6.  在 **“详细信息”** 选项卡上的 **“名称”** 框中，键入集合的名称。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65484191"
   
 8.  还可以在 **“说明”** 框中键入对集合的说明。  
   
-9. 单击“确定” 。  
+9. 单击“确定”  。  
   
 ## <a name="next-steps"></a>后续步骤  
   

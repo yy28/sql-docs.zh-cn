@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127003"
 ---
 # <a name="ssms-utility"></a>Ssms 实用工具
@@ -51,32 +51,32 @@ ms.locfileid: "63127003"
  *solutionfile*  
  指定要打开的解决方案。 该参数必须包含解决方案文件的完整路径。  
   
- [**-S** _servername_]  
+ [ **-S** _servername_]  
  服务器名称  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
  数据库名称  
   
- [**-U** _username_]  
+ [ **-U** _username_]  
  通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证进行连接时的用户名  
   
- [**-P** _password_]  
+ [ **-P** _password_]  
  通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证进行连接时的密码  
   
- [**-E**]  
+ [ **-E**]  
  使用 Windows 身份验证进行连接  
   
- [**-nosplash**]  
+ [ **-nosplash**]  
  阻止 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 在打开时显示初始屏幕。 在带宽有限的情况下，通过终端服务连接到运行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的计算机上时，使用此选项。 该参数不区分大小写，并且可放在其他参数前后  
   
- [**-log**_[filename]?_]  
+ [ **-log** _[filename]?_ ]  
  将 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 活动记录到指定的文件中以便进行故障排除  
   
- [**-?**]  
+ [ **-?** ]  
  显示命令行帮助  
   
 ## <a name="remarks"></a>备注  
- 上述所有开关都是可选的，并用空格分隔，但文件用逗号分隔。 如果不指定任何开关，则 **Ssms** 将按照“工具”菜单的“选项”设置中指定的方式打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 例如，如果“环境/常规”页的“启动时”选项指定了“打开新查询窗口”，**Ssms** 则会在打开时显示一个空白的查询编辑器。  
+ 上述所有开关都是可选的，并用空格分隔，但文件用逗号分隔。 如果不指定任何开关，则 **Ssms** 将按照“工具”  菜单的“选项”  设置中指定的方式打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 例如，如果“环境/常规”  页的“启动时”  选项指定了“打开新查询窗口”  ，**Ssms** 则会在打开时显示一个空白的查询编辑器。  
   
  **-log** 开关必须出现在命令行的末尾，位于所有其他开关的后面。 文件名参数是可选的。 如果指定了一个文件名，并且该文件不存在，则创建该文件。 如果无法创建该文件（例如，由于没有足够的写访问权限），日志将改为写入非本地化的 APPDATA 位置（见下文）。 如果未指定该文件名参数，则两个文件将写入当前用户的非本地化的应用程序数据文件夹。 SQL Server 的非本地化的应用程序数据文件夹可以从 APPDATA 环境变量中找到。 例如，对于 SQL Server 2012，文件夹为 \<system drive>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\\。 默认情况下，这两个文件分别命名为 ActivityLog.xml 和 ActivityLog.xsl。 前者包含活动日志数据，后者是一种 XML 样式表，提供了更方便的方法来查看 XML 文件。 按照下列步骤操作，在默认 XML 查看器（如 Internet Explorer）中查看日志文件：依次单击“开始”和“运行...”，在提供的字段中键入“\<system drive>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml”，再按 Enter。  
   

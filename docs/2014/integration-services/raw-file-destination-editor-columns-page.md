@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056581"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>原始文件目标编辑器（“列”页）
@@ -34,7 +34,7 @@ ms.locfileid: "66056581"
   
 1.  将原始文件目标添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]包。  
   
-2.  右键单击该组件，然后单击 **“编辑”**。  
+2.  右键单击该组件，然后单击 **“编辑”** 。  
   
 ##  <a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **访问模式**  

@@ -13,20 +13,20 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8443504fdbd79d73273436c376743021bafa73e3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 4a0691795bdca0ec24b307362c6b2137c5741362
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203497"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791265"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 执行存储过程并处理输出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 IMultipleResults::GetResult 返回 DB_S_NORESULT 时或 IMultipleResults 接口完全释放时（以二者中先发生的为准）可用。  
+  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 IMultipleResults::GetResult 返回 DB_S_NORESULT 时或 IMultipleResults 接口完全释放时（以二者中先发生的为准）可用   。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 对它们加密。  
@@ -35,15 +35,15 @@ ms.locfileid: "53203497"
   
 1.  构造使用 RPC 转义序列的 SQL 语句。  
   
-2.  调用 ICommandWithParameters::SetParameterInfo 方法以向访问接口描述参数。 在 PARAMBINDINFO 结构数组中填写参数信息。  
+2.  调用 ICommandWithParameters::SetParameterInfo 方法以向访问接口描述参数  。 在 PARAMBINDINFO 结构数组中填写参数信息。  
   
 3.  通过使用 DBBINDING 结构数组创建一组绑定（每个参数创建者一个）。  
   
-4.  通过创建定义的参数的取值函数**iaccessor:: Createaccessor**方法。 CreateAccessor 从一组绑定创建取值函数。  
+4.  通过创建定义的参数的取值函数**iaccessor:: Createaccessor**方法。 CreateAccessor 从一组绑定创建取值函数  。  
   
 5.  填写 DBPARAMS 结构。  
   
-6.  调用 Execute 命令（在这种情况下是调用存储过程）。  
+6.  调用 Execute 命令（在这种情况下是调用存储过程）  。  
   
 7.  处理行集，并使用释放**irowset:: Release**方法。  
   

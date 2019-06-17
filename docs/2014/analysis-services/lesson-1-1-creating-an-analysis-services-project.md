@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079362"
 ---
 # <a name="creating-an-analysis-services-project"></a>创建 Analysis Services 项目
@@ -22,13 +22,13 @@ ms.locfileid: "66079362"
   
 ### <a name="to-create-a-new-analysis-services-project"></a>创建新的 Analysis Services 项目  
   
-1.  单击 **“开始”**，依次指向 **“所有程序”** 和 **Microsoft SQL Server 2012**，然后单击 **SQL Server Data Tools**。  
+1.  单击 **“开始”** ，依次指向 **“所有程序”** 和 **Microsoft SQL Server 2012**，然后单击 **SQL Server Data Tools**。  
   
      将打开 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 开发环境。  
   
-2.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的起始页上，单击 **“新建项目”**。  
+2.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的起始页上，单击 **“新建项目”** 。  
   
-3.  在 **“新建项目”** 对话框中，在 **“安装的模板”** 窗格中展开 **“商业智能”**，然后选择 **Analysis Services**。 选择 **“Analysis Services 多维和数据挖掘项目”** 模板。  
+3.  在 **“新建项目”** 对话框中，在 **“安装的模板”** 窗格中展开 **“商业智能”** ，然后选择 **Analysis Services**。 选择 **“Analysis Services 多维和数据挖掘项目”** 模板。  
   
      您将注意到在对话框底部生成了默认项目名称、位置和默认解决方案名称。 默认情况下，将为解决方案创建新的目录。  
   

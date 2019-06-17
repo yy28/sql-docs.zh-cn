@@ -16,18 +16,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519117"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
-  对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  
+  对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能  。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距  。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  
   
  通过客户端打印功能，可以避开用户计算机上的浏览器打印设置，改用报表的页面尺寸、边距、表头文本和表尾文本来创建打印输出，从而控制和提高 HTML 报表的打印输出质量。 该打印控件通过读取报表的属性值来设置页大小和边距。  
   
- 开发人员如果想要在第三方工具栏或查看器中启用客户端打印功能，可以通过 RSClientPrint COM 对象访问该 ActiveX 控件。 该控件可以自由分发。 下表列出了使用该控件的建议：  
+ 开发人员如果想要在第三方工具栏或查看器中启用客户端打印功能，可以通过 RSClientPrint COM 对象访问该 ActiveX 控件  。 该控件可以自由分发。 下表列出了使用该控件的建议：  
   
 -   使用该控件提高基于 Web 的报表的打印质量。 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 兼容的任何编程语言或脚本指定对象。 该控件不用于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 窗体应用程序。  
   
@@ -42,26 +42,26 @@ ms.locfileid: "62519117"
 -   查阅有关图像 (EMF) 呈现的联机丛书主题，以了解如何呈现页面以供打印预览和输出。  
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 概述  
- 该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 该控件打包为 CAB 文件。 “打印”对话框中的文本已本地化为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中支持的所有语言。 RSPrintClient ActiveX 控件使用图像呈现扩展插件 (EMF) 打印报表。 使用以下的 EMF 设备信息：StartPage、 EndPage、 MarginBottom、 MarginLeft、 MarginTop、 MarginRight、 PageHeight 和 PageWidth。 不支持图像呈现的其他设备信息设置。  
+ 该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 该控件打包为 CAB 文件。 “打印”对话框中的文本已本地化为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中支持的所有语言  。 RSPrintClient ActiveX 控件使用图像呈现扩展插件 (EMF) 打印报表  。 使用以下的 EMF 设备信息：StartPage、 EndPage、 MarginBottom、 MarginLeft、 MarginTop、 MarginRight、 PageHeight 和 PageWidth。 不支持图像呈现的其他设备信息设置。  
   
 ### <a name="language-support"></a>语言支持  
- 该打印控件可以提供不同语言的用户界面文本，接受符合不同度量系统标准的输入值。 所用的语言和度量系统由 Culture 和 UICulture 属性确定。 这两个属性都接受 LCID 值。 如果为所支持语言的变体语言指定 LCID，则会应用最接近的匹配语言。 如果不支持指定的 LCID，并且没有最接近的匹配 LCID，则会应用英语（美国）。  
+ 该打印控件可以提供不同语言的用户界面文本，接受符合不同度量系统标准的输入值。 所用的语言和度量系统由 Culture 和 UICulture 属性确定   。 这两个属性都接受 LCID 值。 如果为所支持语言的变体语言指定 LCID，则会应用最接近的匹配语言。 如果不支持指定的 LCID，并且没有最接近的匹配 LCID，则会应用英语（美国）。  
   
 ## <a name="using-rsclientprint-in-code"></a>在代码中使用 RSClientPrint  
- RSClientPrint 对象用于以编程方式获取对 ActiveX 控件及其方法和属性的访问权。 该控件为打印预览提供了一个模式对话框。  
+ RSClientPrint 对象用于以编程方式获取对 ActiveX 控件及其方法和属性的访问权  。 该控件为打印预览提供了一个模式对话框。  
   
 ### <a name="specifying-default-values"></a>指定默认值  
- 可使用报表的边距和页值初始化“打印”对话框。 默认情况下，使用报表定义中的值初始化“打印”对话框。 您可以使用这些默认值，也可以通过设置对象属性来指定不同的值。  
+ 可使用报表的边距和页值初始化“打印”对话框  。 默认情况下，使用报表定义中的值初始化“打印”对话框  。 您可以使用这些默认值，也可以通过设置对象属性来指定不同的值。  
   
- 所有尺寸都是以毫米为单位进行设置的。 如果将 Culture 和 UICulture 设置为不使用公制度量单位的区域，则在运行时会进行度量换算。  
+ 所有尺寸都是以毫米为单位进行设置的。 如果将 Culture 和 UICulture 设置为不使用公制度量单位的区域，则在运行时会进行度量换算   。  
   
- 若要了解哪些值用于页面尺寸和边距，可以使用 GetProperties 方法检索默认值：  
+ 若要了解哪些值用于页面尺寸和边距，可以使用 GetProperties 方法检索默认值  ：  
   
--   PageHeight 和 PageWidth 用于指定默认的页高和页宽。 在启动该打印控件时，将使用这些属性值选择可用于当前所选打印机的最接近的纸张大小。 如果 PageWidth 大于 PageHeight，方向将设置为“横向”。 否则，方向设置为“纵向”。  
+-   PageHeight 和 PageWidth 用于指定默认的页高和页宽   。 在启动该打印控件时，将使用这些属性值选择可用于当前所选打印机的最接近的纸张大小。 如果 PageWidth 大于 PageHeight，方向将设置为“横向”   。 否则，方向设置为“纵向”。  
   
--   默认情况下，LeftMargin、RightMargin、TopMargin 和 BottomMargin 均设置为 12.2 毫米。  
+-   默认情况下，LeftMargin、RightMargin、TopMargin 和 BottomMargin 均设置为 12.2 毫米     。  
   
- 这些属性存储在报表服务器上的 Item 属性集合中。 每次更新报表定义时，都将覆盖这些值。  
+ 这些属性存储在报表服务器上的 Item 属性集合中  。 每次更新报表定义时，都将覆盖这些值。  
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 属性  
   
@@ -100,16 +100,16 @@ ms.locfileid: "62519117"
 -   05662494-ACF9-446A-BE4C-7D3F7EA7F62F  
   
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient 对 Print 方法的支持  
- RSClientPrint 对象支持用于启动“打印”对话框的 Print 方法。 Print 方法具有以下参数。  
+ RSClientPrint 对象支持用于启动“打印”对话框的 Print 方法   。 Print 方法具有以下参数  。  
   
 |参数|I/O|类型|Description|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|指定报表服务器虚拟目录 (例如， https://adventure-works/reportserver)。|  
+|ServerPath|In|String|指定报表服务器虚拟目录 (例如， https://adventure-works/reportserver) 。|  
 |ReportPathParameters|In|String|指定报表在报表服务器文件夹命名空间中的全名，包括参数。 对报表的检索是通过 URL 访问进行的。 例如:"/ AdventureWorks Sample Reports/Employee Sales 摘要 & EmpID = 1234年"|  
 |ReportName|In|String|报表的简称（在上面的示例中，简称为 Employee Sales Summary）。 它显示在“打印”对话框和打印队列中。|  
   
 ### <a name="example"></a>示例  
- 下面的 HTML 示例显示如何在 JavaScript 中指定 .cab 文件、Print 方法和属性：  
+ 下面的 HTML 示例显示如何在 JavaScript 中指定 .cab 文件、Print 方法和属性  ：  
   
  `<BODY onload="Print()">`  
   

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 38b04dc1e7cf9d6bcb6a098faaffd4d53fb1fac3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481089"
 ---
 # <a name="set-domain-properties"></a>设置域属性
@@ -49,7 +49,7 @@ ms.locfileid: "65481089"
  一旦创建了一个域后，就可以更改该域名或说明。 对于知识库而言，域名必须唯一。 说明最多可以有 256 个字符。  
   
 ###  <a name="Type"></a> 数据类型  
- 创建域时，请在域中选择以下数据类型的值之一：“String”（默认值）、“Date”、“Integer”或“Decimal”。 在创建了域之后，可以查看数据类型，但不能更改数据类型。 为某个域选择的数据类型将定义可映射到该域的源数据的类型。 对于 DQS 中四个域数据类型支持的数据类型的相关信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+ 创建域时，请在域中选择以下数据类型的值之一：“String”（默认值）、“Date”、“Integer”或“Decimal”     。 在创建了域之后，可以查看数据类型，但不能更改数据类型。 为某个域选择的数据类型将定义可映射到该域的源数据的类型。 对于 DQS 中四个域数据类型支持的数据类型的相关信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
 ###  <a name="Leading"></a> 使用前导值  
  选中此复选框可指定将输出一组同义词中的前导值，而非是其同义词的值。 取消选择 **“使用前导值”** 可指定每个同义词值以其正确或更正形式输出，并且不会被其组的前导值替换。  
@@ -78,7 +78,7 @@ ms.locfileid: "65481089"
  英语为默认语言。 将 **“语言”** 属性设置为 **“其他”** 将为该域禁用拼写检查器。  
   
 > [!TIP]  
->  如果您的语言未列在 **“语言”** 下拉列表中，则必须选择 **“其他”**。 这可确保 DQS 根据域中可用的知识（域规则、域值、TBR、匹配规则），清理和消除未列出的语言数据的重复项。  
+>  如果您的语言未列在 **“语言”** 下拉列表中，则必须选择 **“其他”** 。 这可确保 DQS 根据域中可用的知识（域规则、域值、TBR、匹配规则），清理和消除未列出的语言数据的重复项。  
   
 ###  <a name="Speller"></a> 启用拼写检查器  
  如果数据类型是 **String**，则单击可为该域启用 DQS 拼写检查器。 拼写检查器仅适用于数据类型为字符串的域。 **“启用拼写检查器”** 复选框使拼写检查器仅适用于与该复选框相关联的单一域。 该复选框不适用于复合域。  

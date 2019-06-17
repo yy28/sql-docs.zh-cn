@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: b7e8210d-a724-4bae-832a-ae4c63031c9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60378c751c2c8bacf96d7eace297eeca144f8869
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 05fa0ddce61d853f0a25ba0fb1c183c1248c5bc0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800965"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784954"
 ---
 # <a name="truncate-method-sqlservernclob"></a>truncate 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将 NCLOB 截断至指定长度。  
+  将 NCLOB  截断至指定长度。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,9 +31,9 @@ public void truncate(long len)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- len  
+ len   
   
- 将 NCLOB 值截断至的长度（以字符数表示）。  
+ 将 NCLOB  值截断至的长度（以字符数表示）。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

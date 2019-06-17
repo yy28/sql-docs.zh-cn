@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020054"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库
@@ -30,7 +30,7 @@ ms.locfileid: "63020054"
   
 ## <a name="switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>使用 Management Studio 以交互方式切换数据库的读/写模式  
   
-1.  在对象资源管理器中，右键单击数据库并选择“属性”。  
+1.  在对象资源管理器中，右键单击数据库并选择  “属性”。  
   
      记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63020054"
   
 4.  在对象资源管理器中右键单击**数据库**文件夹，然后选择**附加...**  
   
-5.  在 **“文件夹”** 文本框中，键入数据库文件夹的原始位置。 或者，可以使用浏览按钮 (**...**) 以查找数据库文件夹。  
+5.  在 **“文件夹”** 文本框中，键入数据库文件夹的原始位置。 或者，可以使用浏览按钮 ( **...** ) 以查找数据库文件夹。  
   
 6.  针对该数据库选择读写模式。  
   
@@ -89,7 +89,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
 ## <a name="switch-the-readwrite-mode-to-a-database-by-script-using-xmla"></a>使用 XMLA 借助于脚本切换数据库的读/写模式  
  以下说明适用于兼容模式 1050、1100 或 1103 下的多维数据库和表格数据库。  
   
-1.  在对象资源管理器中，右键单击数据库并选择“属性”。  
+1.  在对象资源管理器中，右键单击数据库并选择  “属性”。  
   
      记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
   

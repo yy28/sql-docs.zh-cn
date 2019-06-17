@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0767cdbd57a481ebe82993f3be4ae3e8e1738c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ab17d9e60752b1aea747b03947d235b7d5f91605
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683195"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801805"
 ---
 # <a name="national-character-set-support"></a>区域字符集支持
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47683195"
 > [!NOTE]  
 >  要在应用程序中使用这些方法，必须将 classpath 设置为包含 sqljdbc4.jar 文件。  
   
- 若要以 Unicode 格式发送 String 参数，应用程序应使用新的 JDBC 4.0 区域字符方法；如果使用非区域字符方法，则应将“sendStringParametersAsUnicode”连接属性设置为“true”。 建议尽可能使用新的 JDBC 4.0 区域字符方法。 有关详细信息**sendStringParametersAsUnicode**连接属性，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
+ 若要以 Unicode 格式发送 String 参数，应用程序应使用新的 JDBC 4.0 区域字符方法；如果使用非区域字符方法，则应将“sendStringParametersAsUnicode”  连接属性设置为“true”  。 建议尽可能使用新的 JDBC 4.0 区域字符方法。 有关详细信息**sendStringParametersAsUnicode**连接属性，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

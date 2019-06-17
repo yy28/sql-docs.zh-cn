@@ -16,13 +16,13 @@ helpviewer_keywords:
 - rowsets [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d854a6e49428cdeef5b9c0b6899707522958d416
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 214e1b82f0ba25c34f28bf22d69d83cf45fe0c38
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736255"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801672"
 ---
 # <a name="rowsets"></a>行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "47736255"
 
   行集是一组包含数据列的行。 行集是使所有 OLE DB 数据访问接口能够以表格形式公开结果集数据的中心对象。  
   
- 使用者使用 IDBCreateSession::CreateSession 方法创建会话之后，该使用者可以对会话使用 IOpenRowset 或 IDBCreateCommand 接口创建行集。 SQL Server 的 OLE DB 驱动程序支持这两个接口。 下面描述这两种方法。  
+ 使用者使用 IDBCreateSession::CreateSession 方法创建会话之后，该使用者可以对会话使用 IOpenRowset 或 IDBCreateCommand 接口创建行集    。 SQL Server 的 OLE DB 驱动程序支持这两个接口。 下面描述这两种方法。  
   
--   可调用 IOpenRowset::OpenRowset 方法来创建行集。  
+-   可调用 IOpenRowset::OpenRowset 方法来创建行集  。  
   
-     这等同于通过单个表创建行集。 该方法打开并返回行集，其中包括单个基表中的所有行。 OpenRowset 的一个参数是表 ID，它标识从其创建该行集的表。  
+     这等同于通过单个表创建行集。 该方法打开并返回行集，其中包括单个基表中的所有行。 OpenRowset 的一个参数是表 ID，它标识从其创建该行集的表  。  
   
--   可调用 IDBCreateCommand::CreateCommand 方法来创建命令对象。  
+-   可调用 IDBCreateCommand::CreateCommand 方法来创建命令对象  。  
   
      命令对象执行提供程序所支持的命令。 通过适用于 SQL Server 的 OLE DB 驱动程序，使用者可指定任何 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，例如 SELECT 语句或对存储过程的调用。 使用命令对象创建行集的步骤如下：  
   
-    1.  使用者在会话中调用 IDBCreateCommand::CreateCommand 方法，以获得一个命令对象，并请求该命令对象的 ICommandText 接口。 此 ICommandText 接口设置并检索实际的命令文本。 使用者通过调用 ICommandText::SetCommandText 方法填充文本命令。  
+    1.  使用者在会话中调用 IDBCreateCommand::CreateCommand 方法，以获得一个命令对象，并请求该命令对象的 ICommandText 接口   。 此 ICommandText 接口设置并检索实际的命令文本  。 使用者通过调用 ICommandText::SetCommandText 方法填充文本命令  。  
   
-    2.  用户调用该命令的 ICommand::Execute 方法。 执行命令时生成的行集对象包含该命令产生的结果集。  
+    2.  用户调用该命令的 ICommand::Execute 方法  。 执行命令时生成的行集对象包含该命令产生的结果集。  
   
- 使用者可以使用 ICommandProperties 接口获得或设置 ICommand::Execute 接口执行命令后返回的行集的属性。 最经常请求的属性是行集必须支持的接口。 除了接口以外，使用者还可以请求能够修改行集或接口行为的属性。  
+ 使用者可以使用 ICommandProperties 接口获得或设置 ICommand::Execute 接口执行命令后返回的行集的属性   。 最经常请求的属性是行集必须支持的接口。 除了接口以外，使用者还可以请求能够修改行集或接口行为的属性。  
   
- 使用者用 IRowset::Release 方法释放行集。 释放行集时，将释放由该行集的使用者持有的任何行控点。 释放行集时，不会释放取值函数。 即使存在 IAccessor 接口，仍必须释放它。  
+ 使用者用 IRowset::Release 方法释放行集  。 释放行集时，将释放由该行集的使用者持有的任何行控点。 释放行集时，不会释放取值函数。 即使存在 IAccessor 接口，仍必须释放它  。  
   
 ## <a name="in-this-section"></a>本节内容  
   

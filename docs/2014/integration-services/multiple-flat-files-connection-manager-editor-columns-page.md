@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057499"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>多平面文件连接管理器编辑器（“列”页）
@@ -48,7 +48,7 @@ ms.locfileid: "66057499"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}**。|行由竖线分隔。|  
+|**竖线 {&#124;}** 。|行由竖线分隔。|  
   
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
@@ -62,10 +62,10 @@ ms.locfileid: "66057499"
 |**冒号 {:}**|列由冒号分隔。|  
 |**逗号 {,}**|列由逗号分隔。|  
 |**制表符 {t}**|列由制表符分隔。|  
-|**竖线 {&#124;}**。|列由竖线分隔。|  
+|**竖线 {&#124;}** 。|列由竖线分隔。|  
   
  **重置列**  
- 通过单击“重置列”可以删除除原始列之外的所有列。  
+ 通过单击“重置列”  可以删除除原始列之外的所有列。  
   
 ### <a name="format--fixed-width"></a>格式 = 固定宽度  
  **字体**  
@@ -78,7 +78,7 @@ ms.locfileid: "66057499"
  为各列添加分隔符之前，先指定行的长度。 或者，拖动预览窗口中的垂直线，以标记行尾。 行宽值将自动更新。  
   
  **重置列**  
- 通过单击“重置列”可以删除除原始列之外的所有列。  
+ 通过单击“重置列”  可以删除除原始列之外的所有列。  
   
 ### <a name="format--ragged-right"></a>格式 = 右边未对齐  
   
@@ -103,10 +103,10 @@ ms.locfileid: "66057499"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}**。|行由竖线分隔。|  
+|**竖线 {&#124;}** 。|行由竖线分隔。|  
   
  **重置列**  
- 通过单击“重置列”可以删除除原始列之外的所有列。  
+ 通过单击“重置列”  可以删除除原始列之外的所有列。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

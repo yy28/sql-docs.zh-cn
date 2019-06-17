@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996292"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
@@ -46,11 +46,11 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @defname = ] 'default'` 是由 CREATE DEFAULT 创建的默认值的名称。 *默认值*是**nvarchar(776)**，无默认值。  
+`[ @defname = ] 'default'` 是由 CREATE DEFAULT 创建的默认值的名称。 *默认值*是**nvarchar(776)** ，无默认值。  
   
-`[ @objname = ] 'object_name'` 是的表和列或别名数据类型默认值是要绑定的名称。 *object_name*是**nvarchar(776)** ，无默认值。 *object_name*不能使用定义**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**，或 CLR用户定义类型。  
+`[ @objname = ] 'object_name'` 是的表和列或别名数据类型默认值是要绑定的名称。 *object_name*是**nvarchar(776)** ，无默认值。 *object_name*不能使用定义**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ， **xml**，或 CLR用户定义类型。  
   
- 如果*object_name*是名称的一部分，则按别名数据类型进行解析。 如果是由两个或三部分名称，首先解析为表和列;并且，如果此解析失败，则将它解析为别名数据类型。 默认情况下，别名数据类型的现有列继承*默认*，除非默认值已经直接绑定到列。 默认值不能绑定到**文本**， **ntext**，**图像**， **varchar （max)**， **nvarchar （max)**，**varbinary （max)**， **xml**，**时间戳**，或 CLR 用户定义类型列、 具有 IDENTITY 属性的列、 计算的列，已具有 DEFAULT 约束。  
+ 如果*object_name*是名称的一部分，则按别名数据类型进行解析。 如果是由两个或三部分名称，首先解析为表和列;并且，如果此解析失败，则将它解析为别名数据类型。 默认情况下，别名数据类型的现有列继承*默认*，除非默认值已经直接绑定到列。 默认值不能绑定到**文本**， **ntext**，**图像**， **varchar （max)** ， **nvarchar （max)** ，**varbinary （max)** ， **xml**，**时间戳**，或 CLR 用户定义类型列、 具有 IDENTITY 属性的列、 计算的列，已具有 DEFAULT 约束。  
   
 > [!NOTE]  
 >  *object_name*可以包含方括号 **[]** 作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  

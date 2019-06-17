@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: b7078ca7-fd2a-4474-ab29-989ae28c77e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: caa1c4eb870f37e7c8bc9e2eb244f8be0ae9abe6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 904c3d1f1138cdffb338c9d4ed8d42f8875db3c8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691875"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793112"
 ---
 # <a name="getlong-method-int"></a>getLong 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定参数索引的情况下，检索指定参数的值作为 Java 编程语言中的 long。  
+  在给定参数索引的情况下，检索指定参数的值作为 Java 编程语言中的 long  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,9 +36,9 @@ public long getLong(int index)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- 索引  
+ 索引   
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
  一个**长**值。  

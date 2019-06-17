@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084519"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>编辑用于挖掘结构的数据源视图
@@ -26,7 +26,7 @@ ms.locfileid: "66084519"
   
 ### <a name="to-access-data-source-view-designer-from-the-mining-structure-tab-in-data-mining-designer"></a>从数据挖掘设计器的“挖掘结构”选项卡访问数据源视图设计器  
   
--   右键单击“数据源视图”窗格，然后选择“编辑数据源视图”。  
+-   右键单击“数据源视图”  窗格，然后选择“编辑数据源视图”  。  
   
      此时将在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的一个新选项卡中打开数据源视图设计器。  
   

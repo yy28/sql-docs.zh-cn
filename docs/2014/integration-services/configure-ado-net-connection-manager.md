@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060840"
 ---
 # <a name="configure-adonet-connection-manager"></a>配置 ADO.NET 连接管理器
@@ -34,10 +34,10 @@ ms.locfileid: "66060840"
  查看所选 ADO.NET 数据连接的属性和值。  
   
  **新建**  
- 通过使用“连接管理器”对话框创建 ADO.NET 数据连接。  
+ 通过使用“连接管理器”对话框创建 ADO.NET 数据连接。   
   
  **删除**  
- 选择某个连接，然后可以使用“删除”按钮将其删除。  
+ 选择某个连接，然后可以使用“删除”按钮将其删除。   
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)  

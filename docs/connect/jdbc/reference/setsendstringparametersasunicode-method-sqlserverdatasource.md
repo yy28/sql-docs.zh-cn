@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 49198d63-76cb-4843-8d04-e49b1fbb6916
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b630f2bbe44f4484364aa1b99ea987c8888554c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 56d6fb5c6c9b7ac8224d8d7f42c379110520c557
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637815"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791736"
 ---
 # <a name="setsendstringparametersasunicode-method-sqlserverdatasource"></a>setSendStringParametersAsUnicode 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  设置指示是否启用以 UNICODE 格式将字符串参数发送到服务器的 boolean 值。  
+  设置指示是否启用以 UNICODE 格式将字符串参数发送到服务器的 boolean  值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,12 +36,12 @@ public void setSendStringParametersAsUnicode(boolean sendStringParametersAsUnico
 ```  
   
 #### <a name="parameters"></a>Parameters  
- sendStringParametersAsUnicode  
+ sendStringParametersAsUnicode   
   
- 如果以 UNICODE 格式将字符串参数发送到服务器，则为 true。 否则为 **false**。  
+ 如果以 UNICODE 格式将字符串参数发送到服务器，则为 true  。 否则为 **false**。  
   
 ## <a name="remarks"></a>Remarks  
- 如果 sendStringParametersAsUnicode 属性设置为 true（默认值），字符串参数便会以 UNICODE 格式发送到服务器。 如果 sendStringParametersAsUnicode 设置为 false，字符串参数便会以 ASCII/MBCS 格式（而非 UNICODE 格式）发送到服务器。 如果 sendStringParametersAsUnicode 属性未设置，[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md) 返回默认值 true。  
+ 如果 sendStringParametersAsUnicode 属性设置为 true  （默认值），字符串参数便会以 UNICODE 格式发送到服务器。 如果 sendStringParametersAsUnicode 设置为 false  ，字符串参数便会以 ASCII/MBCS 格式（而非 UNICODE 格式）发送到服务器。 如果 sendStringParametersAsUnicode 属性未设置，[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md) 返回默认值 true  。  
   
  有关 sendStringParametersAsUnicode 连接属性的详细信息，请参阅[连接属性设置](../../../connect/jdbc/setting-the-connection-properties.md)。  
   

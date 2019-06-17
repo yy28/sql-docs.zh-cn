@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63313891"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>创建时序预测（数据挖掘中级教程）
@@ -172,7 +172,7 @@ ms.locfileid: "63313891"
   
 3.  在中**表名称**列中，键入新的临时表名，如**Test Predictions**。  
   
-4.  单击“保存” 。  
+4.  单击“保存”  。  
   
     > [!NOTE]  
     >  若要查看您创建的表，请创建与您保存数据的实例的数据库引擎的连接，然后创建查询。  

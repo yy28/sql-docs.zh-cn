@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 66671c88d3cf2cec018da1450ce8564853a3e3f1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487796"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>删除派生层次结构 (Master Data Services)
@@ -39,17 +39,17 @@ ms.locfileid: "65487796"
   
 ### <a name="to-delete-a-derived-hierarchy"></a>删除派生层次结构  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  从菜单栏中，指向“管理”，然后单击“派生层次结构”。  
+2.  从菜单栏中，指向“管理”  ，然后单击“派生层次结构”  。  
   
 3.  在 **“派生层次结构维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
 4.  为您要删除的派生层次结构选择行。  
   
-5.  单击 **“删除”**。  
+5.  单击 **“删除”** 。  
   
-6.  在确认对话框中，单击 **“确定”**。  
+6.  在确认对话框中，单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [创建派生层次结构 (Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   

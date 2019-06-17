@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de123b3c6c8f0105a7280c87a4983fadc657ad93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4ff1033816bef4bc4234693628ae49158e3752c9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795605"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792610"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public final int getMaxFieldSize()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示列可包含的最大字节数的 int；如果没有限制，则为 0。  
+ 指示列可包含的最大字节数的 int  ；如果没有限制，则为 0。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

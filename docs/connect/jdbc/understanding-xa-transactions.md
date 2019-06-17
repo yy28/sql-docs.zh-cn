@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: e61d9fbb562bda9ea400024598b1c7107ce5542e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736938"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788428"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 
@@ -72,21 +72,21 @@ ms.locfileid: "55736938"
 
 ### <a name="running-the-ms-dtc-service"></a>运行 MS DTC 服务
 
-在服务管理器中，MS DTC 服务应标记为“自动”，以确保其在启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务时运行。 若要为 XA 事务启用 MS DTC，必须执行以下步骤：  
+在服务管理器中，MS DTC 服务应标记为“自动”，以确保其在启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务时运行  。 若要为 XA 事务启用 MS DTC，必须执行以下步骤：  
   
 在 Windows Vista 和更高版本上：  
   
-1. 单击“开始”按钮，在“开始搜索”框中键入 dcomcnfg，然后按 Enter 打开“组件服务”。 也可以在“开始搜索”框中键入 %windir%\system32\comexp.msc 打开“组件服务”。  
+1. 单击“开始”按钮，在“开始搜索”框中键入 dcomcnfg，然后按 Enter 打开“组件服务”     。 也可以在“开始搜索”框中键入 %windir%\system32\comexp.msc 打开“组件服务”   。  
   
 2. 依次展开“组件服务”、“计算机”、“我的电脑”和“分布式事务处理协调器”。  
   
-3. 右键单击“本地 DTC”，再选择“属性”。  
+3. 右键单击“本地 DTC”，再选择“属性”   。  
   
-4. 单击“本地 DTC 属性”对话框上的“安全”选项卡。  
+4. 单击“本地 DTC 属性”对话框上的“安全”选项卡   。  
   
-5. 选中“启用 XA 事务”复选框，然后单击“确定”。 这将导致 MS DTC 服务重启。
+5. 选中“启用 XA 事务”复选框，然后单击“确定”   。 这将导致 MS DTC 服务重启。
   
-6. 再次单击“确定”以关闭“属性”对话框，然后关闭“组件服务”。  
+6. 再次单击“确定”以关闭“属性”对话框，然后关闭“组件服务”    。  
   
 7. 停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后重新启动，确保它与 MS DTC 更改同步。  
 
@@ -111,14 +111,14 @@ ms.locfileid: "55736938"
   
 2. 打开将参与分布式事务处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的 Binn 目录。 选择 sqljdbc_xa.dll 程序集。
 
-    - 在 Windows Vista 或更高版本上：右键单击 sqljdbc_xa.dll，然后选择“属性”。 然后单击“详细信息”选项卡。“文件版本”字段显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上当前安装的 sqljdbc_xa.dll 的版本。  
+    - 在 Windows Vista 或更高版本上：右键单击 sqljdbc_xa.dll，然后选择“属性”。 然后单击“详细信息”选项卡  。“文件版本”字段显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上当前安装的 sqljdbc_xa.dll 的版本  。  
   
 3. 按照下一节的代码示例所示设置日志记录功能。 在输出日志文件中搜索“服务器 XA DLL 版本:...”这一短语。  
 
 ### <a name="BKMK_ServerSide"></a>为自动回滚尚未准备好的事务配置服务器端超时设置  
 
 > [!WARNING]  
-> 此服务器端选项是适用于 SQL Server 的 Microsoft JDBC Driver 4.2（和更高版本）附带的新功能。 若要获取更新的行为，请确保服务器上的 sqljdbc_xa.dll 已更新。 有关设置客户端超时的详细信息，请参阅 [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  
+> 此服务器端选项是适用于 SQL Server 的 Microsoft JDBC Driver 4.2（和更高版本）附带的新功能。 要获取更新后的行为，务必更新服务器上的 sqljdbc_xa.dll。 有关设置客户端超时的详细信息，请参阅 [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  
 
 有两个注册表设置（DWORD 值）来控制分布式事务的超时行为：  
   
@@ -160,7 +160,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
 > [!IMPORTANT]  
 > 你应在维护时段内或在未处理任何 MS DTC 事务时升级 sqljdbc_xa.dll。
   
-1. 卸载使用 sqljdbc_xa.dll[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**DBCC sqljdbc_xa （免费）**。  
+1. 卸载使用 sqljdbc_xa.dll[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**DBCC sqljdbc_xa （免费）** 。  
   
 2. 将新 sqljdbc_xa.dll 从 JDBC 驱动程序安装目录复制到每台要参与分布式事务的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的 Binn 目录中。  
   

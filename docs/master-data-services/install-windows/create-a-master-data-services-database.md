@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 77cf9410542f7924db804183d69a00fcba856946
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485833"
 ---
 # <a name="create-a-master-data-services-database"></a>创建 Master Data Services 数据库
@@ -32,9 +32,9 @@ ms.locfileid: "65485833"
   
 1.  打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  在左窗格中单击 **“数据库配置”**。  
+2.  在左窗格中单击 **“数据库配置”** 。  
   
-3.  在 **“数据库配置”** 页上，单击 **“创建数据库”**。  
+3.  在 **“数据库配置”** 页上，单击 **“创建数据库”** 。  
   
 4.  完成 **“创建数据库”** 向导来创建和配置数据库。 有关向导中的用户界面 (UI) 选项的信息，请参阅[创建数据库向导（Master Data Services 配置管理器）](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)。  
   

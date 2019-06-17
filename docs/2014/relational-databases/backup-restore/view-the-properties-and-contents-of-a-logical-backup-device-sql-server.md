@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e593a5d64b6a1b009a68c434fe9ce1a32cb2de20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921066"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>查看逻辑备份设备的属性和内容 (SQL Server)
@@ -56,13 +56,13 @@ ms.locfileid: "62921066"
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“服务器对象”**，然后展开 **“备份设备”**。  
+2.  展开 **“服务器对象”** ，然后展开 **“备份设备”** 。  
   
-3.  单击设备并右键单击“属性”，将打开“备份设备”对话框。  
+3.  单击设备并右键单击“属性”  ，将打开“备份设备”  对话框。  
   
 4.  **“常规”** 页将显示设备名称和目标，目标为磁带设备或者文件路径。  
   
-5.  在 **“选择页”** 窗格中，单击 **“介质内容”**。  
+5.  在 **“选择页”** 窗格中，单击 **“介质内容”** 。  
   
 6.  以下属性面板中将显示右侧窗格：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62921066"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  使用 [RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql) 语句。 此示例返回有关 `AdvWrks2008R2Backup` 逻辑备份设备的信息。  
   

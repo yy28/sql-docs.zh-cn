@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2eabec895a0b56d396d5848c8f418451e0afb7
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537678"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 函数
@@ -50,7 +50,7 @@ SQLRETURN SQLConnect(
   
 ## <a name="arguments"></a>参数  
  *ConnectionHandle*  
- [输入]连接句柄。  
+ [输入] 连接句柄。  
   
  *ServerName*  
  [输入]数据源名称。 数据可能不位于该程序，在同一台计算机上，也可以在网络上的某个位置的另一台计算机上。 有关应用程序如何选择数据源的信息，请参阅[选择数据源或驱动程序](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)。  

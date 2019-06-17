@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9153a2d07653872ca6ce1f90e39c90f32da21fba
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082515"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>数据源视图设计器（Analysis Services - 多维数据）
@@ -28,9 +28,9 @@ ms.locfileid: "66082515"
   
  打开 **数据源视图设计器** ：  
   
--   双击“解决方案资源管理器”中的某个数据源视图。  
+-   双击“解决方案资源管理器”  中的某个数据源视图。  
   
--   在“解决方案资源管理器”中右键单击某个数据源视图，选择“打开”或“视图设计器”。  
+-   在“解决方案资源管理器”  中右键单击某个数据源视图，选择“打开”或“视图设计器”   。  
   
  **数据源视图设计器** 包含一个工具栏、一个显示 DSV 中对象及关系的图表、一个按字母顺序列出表和命名查询的表窗格，以及用于创建和查看 DSV 的特定图表的“关系图组织程序”窗格。 您可以通过右键单击某个表或关系来访问上下文相关命令。  
   

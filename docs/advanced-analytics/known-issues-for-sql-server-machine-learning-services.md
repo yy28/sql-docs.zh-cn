@@ -2,17 +2,17 @@
 title: R 语言和 Python 集成-SQL Server 机器学习服务的已知的问题
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
-ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
+ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64906165"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140726"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>机器学习服务中的已知的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -136,7 +136,7 @@ SQL Server 2016 计算上下文中运行 R 代码时，它们可能会看到以�
 + 通过使用安装向导的上的客户端计算机上安装 R Server （独立版） [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]。
 + 使用安装了 Microsoft R Server[单独的 Windows 安装程序](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
 
-若要确保服务器和客户端使用相同的版本可能需要使用_绑定_、 受支持的 Microsoft R Server 9.0 和更高版本升级 SQL Server 2016 实例中的 R 组件。 若要确定是否支持升级为提供有关你的 R Services 版本，请参阅[实例的 R Services 使用 SqlBindR.exe 升级](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+若要确保服务器和客户端使用相同的版本可能需要使用_绑定_、 受支持的 Microsoft R Server 9.0 和更高版本升级 SQL Server 2016 实例中的 R 组件。 若要确定是否支持升级为提供有关你的 R Services 版本，请参阅[实例的 R Services 使用 SqlBindR.exe 升级](install/upgrade-r-and-python.md)。
 
 **适用范围：** SQL Server 2016 R Services，使用 R Server 9.0.0 版或更早版本
 

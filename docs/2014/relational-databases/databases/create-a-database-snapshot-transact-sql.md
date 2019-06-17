@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762345"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>创建数据库快照 (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "62762345"
   
      [最佳做法：命名数据库快照](#Naming)  
   
--   **若要创建数据库快照，请使用：**[Transact-SQL](#TsqlProcedure)  
+-   **若要创建数据库快照，请使用：** [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -122,7 +122,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     其中，source_database_name 是源数据库，logical_file_name 是引用该文件时在 SQL Server 中使用的逻辑名称，os_file_name 是创建该文件时操作系统使用的路径和文件名，database_snapshot_name 是将数据库恢复到的快照的名称。 有关该语法的完整描述，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)。  
+     其中，source_database_name  是源数据库，logical_file_name  是引用该文件时在 SQL Server 中使用的逻辑名称，os_file_name  是创建该文件时操作系统使用的路径和文件名，database_snapshot_name  是将数据库恢复到的快照的名称。 有关该语法的完整描述，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)。  
   
     > [!NOTE]  
     >  创建数据库快照时，CREATE DATABASE 语句中不允许有日志文件、脱机文件、还原文件和不起作用的文件。  

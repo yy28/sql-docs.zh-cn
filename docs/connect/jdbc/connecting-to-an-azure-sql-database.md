@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306125"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789324"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>连接到 Azure SQL 数据库
 
@@ -41,7 +41,7 @@ ms.locfileid: "58306125"
 
 - TCP 层出现空闲，在此情形下，任意数量的网络设备都可以删除连接。  
 
-- SQL Azure 网关出现空闲，在此情形下，可能会发生 TCP keepalive 消息（使连接从 TCP 的角度看不再空闲），但在 30 分钟内没有活动的查询。 在这种情况下，网关将确定 TDS 连接处于空闲状态已有 30 分钟，因此将中止连接。  
+- SQL Azure 网关出现空闲，在此情形下，可能会发生 TCP keepalive 消息（使连接从 TCP 的角度看不再空闲），但在 30 分钟内没有活动的查询  。 在这种情况下，网关将确定 TDS 连接处于空闲状态已有 30 分钟，因此将中止连接。  
   
 为了避免网络组件删除空闲连接，应在加载驱动程序的操作系统上设置以下注册表设置（或非 Windows 的等效设置）：  
   
@@ -81,7 +81,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密要求设置 hostNameInCertificate
 
-之前的版本 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，连接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，则应指定**hostNameInCertificate**如果你指定 **encrypt=true** （如果在连接中的服务器名称字符串是*短名称*。*domainName*，将**hostNameInCertificate**属性设置为\*。*domainName*。)。 此属性是可选自版本 7.2 的驱动程序。
+之前的版本 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，连接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，则应指定**hostNameInCertificate**如果你指定**加密 = true** （如果在连接中的服务器名称字符串是*短名称*。*domainName*，将**hostNameInCertificate**属性设置为\*。*domainName*。)。 此属性是可选自版本 7.2 的驱动程序。
 
 例如：
 

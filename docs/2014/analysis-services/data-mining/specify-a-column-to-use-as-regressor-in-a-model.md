@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082913"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定用作回归量的列
@@ -26,15 +26,15 @@ ms.locfileid: "66082913"
   
 ### <a name="how-to-create-a-simple-linear-regression-model"></a>如何创建简单线性回归模型  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 **解决方案资源管理器**中，展开 **“挖掘结构”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 **解决方案资源管理器**中，展开 **“挖掘结构”** 。  
   
 2.  双击 Call Center.dmm 以在设计器中将其打开。  
   
-3.  从 **“挖掘模型”** 菜单中，选择 **“新建挖掘模型”**。  
+3.  从 **“挖掘模型”** 菜单中，选择 **“新建挖掘模型”** 。  
   
-4.  对于算法，选择 **“Microsoft 线性回归”**。 对于名称，键入“呼叫中心回归”。   
+4.  对于算法，选择 **“Microsoft 线性回归”** 。 对于名称，键入“呼叫中心回归”。   
   
-5.  在 **“挖掘模型”** 选项卡中，按如下所示更改列用法。 不在以下列表中的所有列都应设置为 **“忽略”**（如果尚未设置它们）。  
+5.  在 **“挖掘模型”** 选项卡中，按如下所示更改列用法。 不在以下列表中的所有列都应设置为 **“忽略”** （如果尚未设置它们）。  
   
      FactCallCenterID**键**  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66082913"
   
      AverageTimePerIssue**输入**  
   
-6.  从 **“挖掘模型”** 菜单上，选择 **“设置模型参数”**。  
+6.  从 **“挖掘模型”** 菜单上，选择 **“设置模型参数”** 。  
   
-7.  对于参数 FORCE_REGRESSOR，在“值”列中，键入用方括号括起来的列名称，各名称之间用逗号分隔，如下所示：  
+7.  对于参数 FORCE_REGRESSOR，在“值”列中，键入用方括号括起来的列名称，各名称之间用逗号分隔，如下所示：   
   
     ```  
     [Average Time Per Issue],[Total Operators]  
@@ -55,7 +55,7 @@ ms.locfileid: "66082913"
     > [!NOTE]  
     >  算法将自动检测哪些列是最佳回归量。 在您想要确保某一列包括在最终的公式中时，只需强制回归量。  
   
-8.  从 **“挖掘模型”** 菜单中，选择 **“处理模型”**。  
+8.  从 **“挖掘模型”** 菜单中，选择 **“处理模型”** 。  
   
      在查看器中，该模型将表示为包含递归公式的单个节点。 您可以在 **“挖掘图例”** 中查看该公式，或者可以通过使用查询提取公式的系数。  
   

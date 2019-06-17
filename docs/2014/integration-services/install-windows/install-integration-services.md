@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 678b14b224f994c834630a398767fee1ea360870
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768193"
 ---
 # <a name="install-integration-services"></a>安装集成服务
@@ -66,7 +66,7 @@ ms.locfileid: "62768193"
   
      选择 **集成服务** 可安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务并可在设计环境之外运行包。  
   
-     若要进行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]以及用于开发和管理包的工具和文档的完整安装，请同时选择 **集成服务** 及以下 **“共享功能”**：  
+     若要进行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]以及用于开发和管理包的工具和文档的完整安装，请同时选择 **集成服务** 及以下 **“共享功能”** ：  
   
     -   **SQL Server Data Tools** ，以便安装用于设计包的工具。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62768193"
      很多数据仓库解决方案还要求安装其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，例如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
     > [!NOTE]  
-    >  如果选择了可在安装向导的“功能选择”页上选择进行安装的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，则会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的部分子集。 这些组件对特定任务是有用的，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能将受到限制。 例如， **“数据库引擎服务”** 选项将安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 **“SQL Server Data Tools”** 选项将安装在设计包时所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，但不会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，并且不能在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]之外运行包。 为确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 **“功能选择”** 页上选择“ **集成服务** ”。  
+    >  如果选择了可在安装向导的“功能选择”页上选择进行安装的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，则会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的部分子集  。 这些组件对特定任务是有用的，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能将受到限制。 例如， **“数据库引擎服务”** 选项将安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 **“SQL Server Data Tools”** 选项将安装在设计包时所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，但不会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，并且不能在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]之外运行包。 为确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 **“功能选择”** 页上选择“ **集成服务** ”。  
   
      **在 64 位计算机上安装** 在 64 位计算机上安装，选择 **集成服务** ，则只安装 64 位运行时和工具。 如果必须以 32 位模式来运行包，还必须选择其他选项以安装 32 位运行时和工具：  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62768193"
 ## <a name="understanding-the-integration-services-service"></a>了解 Integration Services 服务  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。  
   
- 如果在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] “功能选择” **页上选择“** 集成服务 **”选项，则会安装** 服务。 如果接受 **“服务器配置”** 页上的默认设置，则会启用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，且 **“启动类型”** 为 **“自动”**。  
+ 如果在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] “功能选择” **页上选择“** 集成服务 **”选项，则会安装** 服务。 如果接受 **“服务器配置”** 页上的默认设置，则会启用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，且 **“启动类型”** 为 **“自动”** 。  
   
  在一台计算机上可以只安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的一个实例。 该服务并不特定于具体的数据库引擎实例。 可使用运行该服务的计算机的名称连接到该服务。  
   

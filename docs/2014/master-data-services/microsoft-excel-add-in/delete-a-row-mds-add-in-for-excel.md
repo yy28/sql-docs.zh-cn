@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482683"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>删除行（用于 Excel 的 MDS 外接程序）
@@ -34,9 +34,9 @@ ms.locfileid: "65482683"
   
 1.  通过单击行标题来选择要删除的一整行。  
   
-2.  在 **“发布并验证”** 组中，单击 **“删除”**。  
+2.  在 **“发布并验证”** 组中，单击 **“删除”** 。  
   
-3.  在确认对话框中，单击 **“是”**。  
+3.  在确认对话框中，单击 **“是”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [发布数据&#40;MDS add-in for Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  

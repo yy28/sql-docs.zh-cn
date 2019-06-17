@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7375dff31cb9cd0f092315b9a53e57e2f0ecd1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632287"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "62632287"
 |**update_mode**|**tinyint**|更新模式：<br /><br /> **0** = 只读。<br /><br /> **1** = 立即更新。|  
 |**loopback_detection**|**bit**|适用于作为双向事务复制拓扑的一部分的订阅。 环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **0** = 发送回。<br /><br /> **1** = 不发回。|  
 |**queued_reinit**|**bit**|指定是否将项目标记为初始化或重新初始化。 值为**1**指定订阅的项目标记为初始化或重新初始化。|  
-|**nosync_type**|**tinyint**|订阅初始化的类型：<br /><br /> **0** = 自动 （快照）<br /><br /> **1** = 仅支持复制<br /><br /> **2** = 使用备份初始化<br /><br /> **3** = 从日志序列号 (LSN) 初始化<br /><br /> 有关详细信息，请参阅**@sync_type**参数[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。|  
+|**nosync_type**|**tinyint**|订阅初始化的类型：<br /><br /> **0** = 自动 （快照）<br /><br /> **1** = 仅支持复制<br /><br /> **2** = 使用备份初始化<br /><br /> **3** = 从日志序列号 (LSN) 初始化<br /><br /> 有关详细信息，请参阅 **@sync_type** 参数[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。|  
 |**srvname**|**sysname**|订阅服务器的名称。|  
   
 ## <a name="see-also"></a>请参阅  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470885"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "62470885"
 |**event_category_id**|**int**|保留供将来使用。|  
 |**event_id**|**int**|保留供将来使用。|  
 |**message_id**|**int**|用户定义的消息 ID 或对引用**sysmessages**触发此警报的消息。|  
-|severity|**int**|触发此警报的严重级别。|  
+|severity |**int**|触发此警报的严重级别。|  
 |**enabled**|**tinyint**|警报的状态：<br /><br /> **0** = 已禁用。<br /><br /> **1** = 启用。|  
 |**delay_between_responses**|**int**|此警报的两个通知间的等待时间（以秒为单位）。|  
 |**last_occurrence_date**|**int**|警报的上次发生（日期）。|  
@@ -67,7 +67,7 @@ ms.locfileid: "62470885"
 |Decimal | BINARY | 含义 |
 |------|------|------|
 |0 |0000 |没有消息 |
-|1 |0001 |电子邮件 |
+|1 |0001 |email |
 |2 |0010 |寻呼机 (pager) |
 |3 |0011 |页导航和电子邮件 |
 |4 |0100 |Net send |

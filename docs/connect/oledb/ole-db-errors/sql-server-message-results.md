@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB error handling, SQL Server message results
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: be796d00763c4004be121ae6ee25ef849d871cc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9098994ac5349fa9747c952e66eb902231956a5c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619065"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802851"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 消息结果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47619065"
   
  SQL Server 的 OLE DB 驱动程序返回 S_OK，并具有一个或多个信息性消息之后执行多个[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句或使用者执行的 SQL Server 成员函数用于 OLE DB 驱动程序。  
   
- 在每次执行成员函数之后，不论返回代码的值如何、是否存在返回的 IRowset 或 IMultipleResults 接口引用或受影响的行数是多少，允许动态指定查询文本的适用于 SQL Server 的 OLE DB 驱动程序使用者都应检查错误接口。  
+ 在每次执行成员函数之后，不论返回代码的值如何、是否存在返回的 IRowset 或 IMultipleResults 接口引用或受影响的行数是多少，允许动态指定查询文本的适用于 SQL Server 的 OLE DB 驱动程序使用者都应检查错误接口   。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误](../../oledb/ole-db-errors/errors.md)  

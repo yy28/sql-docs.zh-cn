@@ -15,25 +15,25 @@ apitype: Assembly
 ms.assetid: 9e3c51bc-7285-4f28-92c8-cfa05e49da9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bc8b2b05e795299836c479d50aca91e8675975e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 339f5cb3876df2eb9da0052c8d9e714c919a509f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655671"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796675"
 ---
 # <a name="getshort-method-sqlservercallablestatement"></a>getShort 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索指定参数作为 Java 编程语言中的 short 的值。  
+  检索指定参数作为 Java 编程语言中的 short  的值。  
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
-|[getShort (int)](../../../connect/jdbc/reference/getshort-method-int.md)|在给定参数索引的情况下，检索指定参数的值作为 Java 编程语言中的 short。|  
-|[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string.md)|在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的 short。|  
+|[getShort (int)](../../../connect/jdbc/reference/getshort-method-int.md)|在给定参数索引的情况下，检索指定参数的值作为 Java 编程语言中的 short  。|  
+|[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string.md)|在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的 short  。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

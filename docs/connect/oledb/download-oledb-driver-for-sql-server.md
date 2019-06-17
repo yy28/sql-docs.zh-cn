@@ -5,24 +5,27 @@ ms.date: 05/13/2019
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
-ms.openlocfilehash: 0405d869ef60c06fe1f6ed6dd38544a5b8020fc9
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: c2a784a291bb7517f1c4a2cf867306388849f21f
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620211"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822719"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>下载适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## <a name="windows"></a>Windows
+
 以下版本的适用于 SQL Server 的 Microsoft OLE DB 驱动程序可供下载：
- * [适用于 SQL Server 的 Microsoft OLE DB 驱动程序 18.2.2](https://go.microsoft.com/fwlink/?linkid=871294)
+
+- [适用于 SQL Server 的 Microsoft OLE DB 驱动程序 18.2.2](https://go.microsoft.com/fwlink/?linkid=871294)
 
 ## <a name="see-also"></a>另请参阅
+
 [Microsoft OLE DB Driver for SQL Server 发行说明](release-notes-for-oledb-driver-for-sql-server.md)  
 [适用于 SQL Server 的 OLE DB 驱动程序的系统要求](system-requirements-for-oledb-driver-for-sql-server.md)  
 [何时使用适用于 SQL Server 的 OLE DB 驱动程序](when-to-use-oledb-driver-for-sql-server.md)  

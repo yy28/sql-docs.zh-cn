@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63306528"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>创建表别名 (Visual Database Tools)
@@ -35,9 +35,9 @@ ms.locfileid: "63306528"
   
 1.  将表或表值对象添加到查询中。  
   
-2.  在“关系图”窗格中，右键单击要为其创建别名的对象，然后从快捷菜单中选择“属性”。  
+2.  在“关系图”  窗格中，右键单击要为其创建别名的对象，然后从快捷菜单中选择“属性”  。  
   
-3.  在“属性”窗口的“别名”字段中输入别名。  
+3.  在“属性”  窗口的“别名”  字段中输入别名。  
   
 ## <a name="see-also"></a>请参阅  
  [向查询添加表&#40;可视化数据库工具&#41;](add-tables-to-queries-visual-database-tools.md)   

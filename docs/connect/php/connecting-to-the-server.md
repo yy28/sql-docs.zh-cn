@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58357c0316f5b439d3dbac00a79547bd799e27bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 47a894b93a0228782e48116dc3bcc2272e4264c2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601955"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795819"
 ---
 # <a name="connecting-to-the-server"></a>连接到服务器
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本部分中的主题介绍使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的选项和过程。  
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可以使用 Windows 身份验证或使用 SQL Server 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 默认情况下，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 尝试使用 Windows 身份验证连接到服务器。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可以使用 Windows 身份验证或使用 SQL Server 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 默认情况下， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 尝试使用 Windows 身份验证连接到服务器。  
 
 ## <a name="in-this-section"></a>本节内容  
 
