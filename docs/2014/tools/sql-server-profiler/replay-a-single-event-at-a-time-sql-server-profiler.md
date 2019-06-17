@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c36aafe3a01a48f7623fa1d2871428ee3bea390
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240470"
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>每次重播一个事件 (SQL Server Profiler)
@@ -30,13 +30,13 @@ ms.locfileid: "63240470"
   
      请确保打开的跟踪文件或跟踪表包含重播所需的事件类。 有关详细信息，请参阅 [Replay Requirements](replay-requirements.md)。  
   
-2.  在 **“重播”** 菜单上，单击 **“步骤”**，然后连接到要在其上重播跟踪的服务器实例。  
+2.  在 **“重播”** 菜单上，单击 **“步骤”** ，然后连接到要在其上重播跟踪的服务器实例。  
   
-3.  在 **“重播配置”** 对话框中，验证设置，再单击 **“确定”**。 有关指定“重播配置”对话框中的设置的详细信息，请参阅 [重播跟踪文件 (SQL Server Profiler)](replay-a-trace-file-sql-server-profiler.md) 或 [重播跟踪表 (SQL Server Profiler)](replay-a-trace-table-sql-server-profiler.md)。  
+3.  在 **“重播配置”** 对话框中，验证设置，再单击 **“确定”** 。 有关指定“重播配置”  对话框中的设置的详细信息，请参阅 [重播跟踪文件 (SQL Server Profiler)](replay-a-trace-file-sql-server-profiler.md) 或 [重播跟踪表 (SQL Server Profiler)](replay-a-trace-table-sql-server-profiler.md)。  
   
 4.  若要重播第一个事件，请单击 **“重播配置”** 对话框中的 **“确定”** 。  
   
-5.  若要重播后续事件，请在 **“重播”** 菜单上，单击 **“步骤”**，或按 F10。 对每个事件重复单击 **“步骤”** 或按 F10。  
+5.  若要重播后续事件，请在 **“重播”** 菜单上，单击 **“步骤”** ，或按 F10。 对每个事件重复单击 **“步骤”** 或按 F10。  
   
 ## <a name="see-also"></a>请参阅  
  [重播跟踪](replay-traces.md)   

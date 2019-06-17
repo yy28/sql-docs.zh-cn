@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f68e51be75e84226dd0b1fd3e578fa4031eda04
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403519"
 ---
 # <a name="lesson-8-create-perspectives"></a>第 8 课：创建透视
@@ -36,7 +36,7 @@ ms.locfileid: "65403519"
   
 1.  单击**模型**菜单 >**透视** > **创建和管理**。  
   
-2.  在“透视”对话框中，单击“新建透视”。  
+2.  在“透视”  对话框中，单击“新建透视”  。  
   
 3.  双击**新的透视**列标题，然后重命名**Internet Sales**。  
   

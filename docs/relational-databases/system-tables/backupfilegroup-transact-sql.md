@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645187"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
@@ -40,8 +40,8 @@ ms.locfileid: "62645187"
 |**名称**|**sysname**|文件组的名称。|  
 |**filegroup_id**|**int**|文件组的 ID；在数据库中唯一。 对应于**data_space_id**中**sys.filegroups**。|  
 |**filegroup_guid**|**uniqueidentifier**|文件组的全局唯一标识符。 可以为 NULL。|  
-|**类型**|**char(2)**|内容类型，可为下列类型之一：<br /><br /> FG =“行”文件组<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件组|  
-|**type_desc**|**nvarchar(60)**|函数类型的说明，可为下列值之一：<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
+|**type**|**char(2)**|内容类型，可为下列类型之一：<br /><br /> FG =“行”文件组<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件组|  
+|**type_desc**|**nvarchar(60)**|函数类型的说明，可为下列值之一：<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
 |**is_default**|**bit**|默认文件组，在 CREATE TABLE 或 CREATE INDEX 中未指定文件组时使用。|  
 |**is_readonly**|**bit**|1 = 文件组为只读文件组。|  
 |**log_filegroup_guid**|**uniqueidentifier**|可以为 NULL。|  

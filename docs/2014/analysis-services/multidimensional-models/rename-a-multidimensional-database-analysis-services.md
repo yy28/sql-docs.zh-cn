@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28ec21d4cb0cda01852316c1198bd68df3058ffc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073151"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>重命名多维数据库 (Analysis Services)
@@ -26,7 +26,7 @@ ms.locfileid: "66073151"
   
 1.  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，直接连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
   
-2.  在解决方案资源管理器中，右键单击该数据库，再单击“编辑数据库”。  
+2.  在解决方案资源管理器中，右键单击该数据库，再单击“编辑数据库”  。  
   
 3.  在 **“数据库名称”** 文本框中，更改数据库名称。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66073151"
   
 1.  打开 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。  
   
-2.  在解决方案资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，再单击“属性”。  
+2.  在解决方案资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，再单击“属性”  。  
   
 3.  在 **“属性页”** 对话框中，单击 **“配置属性”** 部分中的 **“部署”** 。  
   

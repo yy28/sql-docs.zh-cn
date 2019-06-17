@@ -2,17 +2,17 @@
 title: 使用用户库-SQL Server 机器学习服务中安装的 R 包的提示
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee5dc9dc8b1730f26bada915d739f164a884801d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642282"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140503"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>在 SQL Server 中使用 R 包的提示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ R 包通常依赖于多个其他包，其中一些可能不可用的实例使用
 
 如果你之前修改的计算机上，在 R 环境安装任何内容之前，确保 R 环境变量`.libPath`使用只是一个路径。
 
-此路径应指向实例的 R_SERVICES 文件夹。 有关详细信息，包括如何确定已安装的包，请参阅[SQL Server 中的默认 R 和 Python 包](installing-and-managing-r-packages.md)。
+此路径应指向实例的 R_SERVICES 文件夹。 有关详细信息，包括如何确定已安装的包，请参阅[SQL Server 中的默认 R 和 Python 包](../package-management/default-packages.md)。
 
 ## <a name="new-to-sql-server"></a>刚接触 SQL Server
 
@@ -73,7 +73,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 + 更新代码以删除对 R 包或 R 库的路径直接引用。 
 
-+ 知道哪些包库是与实例相关联。 有关详细信息，请参阅[SQL Server 中的默认 R 和 Python 包](installing-and-managing-r-packages.md)。
++ 知道哪些包库是与实例相关联。 有关详细信息，请参阅[SQL Server 中的默认 R 和 Python 包](../package-management/default-packages.md)。
 
 ## <a name="see-also"></a>另请参阅
 

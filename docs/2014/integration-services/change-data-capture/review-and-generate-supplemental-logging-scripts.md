@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68aa51facd21ec09be78e6ad0996131a9ee3cc5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835334"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>查看和生成补充日志记录脚本
-  使用“脚本”选项卡可对 Oracle 源数据库运行或重新运行一个设置补充日志记录的脚本。  
+  使用“脚本”  选项卡可对 Oracle 源数据库运行或重新运行一个设置补充日志记录的脚本。  
   
  在运行脚本前，请选择以下选项之一：  
   

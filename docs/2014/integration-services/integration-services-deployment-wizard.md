@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058008"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 部署向导
@@ -35,7 +35,7 @@ ms.locfileid: "66058008"
 4.  **部署/结果**-部署项目，并显示结果。  
   
 ## <a name="select-source"></a>选择源  
- 若要部署你创建的项目部署文件，选择**项目部署文件**并输入.ispac 文件的路径或单击**浏览**若要查找在[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]项目文件夹。 若要部署位于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目录中的项目，请选择 **“Integration Services 目录”**，然后输入目录中指向该项目的服务器名称和路径。  
+ 若要部署你创建的项目部署文件，选择**项目部署文件**并输入.ispac 文件的路径或单击**浏览**若要查找在[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]项目文件夹。 若要部署位于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目录中的项目，请选择 **“Integration Services 目录”** ，然后输入目录中指向该项目的服务器名称和路径。  
   
  如果在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中启动该向导，则默认情况下该向导选择打开的项目作为源并跳过此步骤。 若要返回到此步骤并选择不同的源，请单击**上一步**或单击**选择源**的左窗格中。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66058008"
 ## <a name="deployresults"></a>部署/结果  
  当您单击**部署**从**评审**页上，该项目部署并**结果**页将显示每个操作成功与否。 如果操作失败，单击 **“结果”** 列中的 **“失败”** 可以显示错误说明。 单击**保存报表...** 将结果保存到 XML 文件。  
   
- 单击“关闭”以退出向导。  
+ 单击“关闭”以退出向导  。  
   
 ## <a name="see-also"></a>请参阅  
  [将项目部署到 Integration Services 服务器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   

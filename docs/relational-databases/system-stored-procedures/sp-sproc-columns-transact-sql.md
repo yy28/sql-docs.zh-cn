@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032740"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -47,15 +47,15 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @procedure_name = ] 'name'` 是用于返回目录信息的名称。 *名称*是**nvarchar (** 390 **)**，默认值为 %，表示当前数据库中的所有表。 支持通配符模式匹配。  
+`[ @procedure_name = ] 'name'` 是用于返回目录信息的名称。 *名称*是**nvarchar (** 390 **)** ，默认值为 %，表示当前数据库中的所有表。 支持通配符模式匹配。  
   
-`[ @procedure_owner = ] 'owner'` 是该过程的名称。 *所有者*是**nvarchar (** 384 **)**，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认过程可见性规则将应用。  
+`[ @procedure_owner = ] 'owner'` 是该过程的名称。 *所有者*是**nvarchar (** 384 **)** ，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认过程可见性规则将应用。  
   
  如果当前用户拥有具有指定名称的过程，则返回有关该过程的信息。 如果*所有者*未指定并且当前用户不是具有指定名称的过程**sp_sproc_columns**查找具有指定名称，由数据库所有者拥有的过程。 如果存在该过程，则返回有关该过程的列信息。  
   
 `[ @procedure_qualifier = ] 'qualifier'` 过程限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*qualifier.owner.name*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此参数表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
-`[ @column_name = ] 'column_name'` 仅包含一列和所需的目录信息的只有一列时使用。 *column_name*是**nvarchar (** 384 **)**，默认值为 NULL。 如果*column_name*是省略，则返回所有列。 支持通配符模式匹配。 为了达到最佳的互操作性，网关客户端应只采用 ISO 标准模式匹配（% 和 _ 通配符）。  
+`[ @column_name = ] 'column_name'` 仅包含一列和所需的目录信息的只有一列时使用。 *column_name*是**nvarchar (** 384 **)** ，默认值为 NULL。 如果*column_name*是省略，则返回所有列。 支持通配符模式匹配。 为了达到最佳的互操作性，网关客户端应只采用 ISO 标准模式匹配（% 和 _ 通配符）。  
   
 `[ @ODBCVer = ] 'ODBCVer'` 正在使用的 ODBC 版本。 *ODBCVer*是**int**，默认值为 2，指示 ODBC 2.0 版。 有关 ODBC 2.0 版和 ODBC 3.0 版之间差别的详细信息，请参阅 ODBC **SQLProcedureColumns** ODBC 3.0 版规范  
   
@@ -82,8 +82,8 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**可以为 NULL**|**smallint**|指定为空性：<br /><br /> 1 = 可创建允许空值的数据类型。<br /><br /> 0 = 不允许空值。|  
 |**REMARKS**|**varchar(** 254 **)**|对过程列的说明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
 |**COLUMN_DEF**|**nvarchar(** 4000 **)**|列的默认值。|  
-|**SQL_DATA_TYPE**|**smallint**|显示在 SQL 数据类型的值**类型**的描述符字段。 此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外。 该列始终返回值。|  
-|**SQL_DATETIME_SUB**|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码。 对于数据类型以外**datetime**和 ISO**间隔**，此字段为 NULL。|  
+|**SQL_DATA_TYPE**|**smallint**|显示在 SQL 数据类型的值**类型**的描述符字段。 此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外    。 该列始终返回值。|  
+|**SQL_DATETIME_SUB**|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码      。 对于数据类型以外**datetime**和 ISO**间隔**，此字段为 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|以字节为单位的最大长度**字符**或**二进制**数据类型列。 对于所有其他数据类型，此列返回 NULL。|  
 |**ORDINAL_POSITION**|**int**|列在表中的序号位置。 表中的第一列为 1。 该列始终返回值。|  
 |**IS_NULLABLE**|**varchar(254)**|表中的列的为 Null 性。 根据 ISO 规则确定为 Null 性。 遵从 ISO 标准的 DBMS 不能返回空字符串。<br /><br /> 如果列可包含 NULL，则显示 YES；如果列不能包含 NULL，则显示 NO。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 该列返回的值与 NULLABLE 列返回的值不同。|  

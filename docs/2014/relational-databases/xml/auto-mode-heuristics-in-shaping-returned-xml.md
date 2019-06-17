@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91fa97c61734f378163fdac9adf1918caefabc7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288904"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>返回的 XML 成形过程中的 AUTO 模式试探方法
@@ -32,7 +32,7 @@ FOR XML AUTO
 ORDER BY T1.Id  
 ```  
   
- 如果未指定表 T1 的键，若要确定新 <`T1`> 元素的开始位置，需要比较 T1 中除 **ntext** **text** **image** 和 **xml** 类型以外的所有列的值。 接下来，假定 **Name** 列的数据类型为 **nvarchar(40)**，SELECT 语句将返回如下行集：  
+ 如果未指定表 T1 的键，若要确定新 <`T1`> 元素的开始位置，需要比较 T1 中除 **ntext** **text** **image** 和 **xml** 类型以外的所有列的值。 接下来，假定 **Name** 列的数据类型为 **nvarchar(40)** ，SELECT 语句将返回如下行集：  
   
 ```  
 T1.Id  T1.Name  T2.Id  

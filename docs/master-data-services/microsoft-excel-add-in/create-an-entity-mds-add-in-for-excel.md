@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea995a4d0f188db2e958b3020da9646a6b069a21
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488236"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>创建实体（用于 Excel 的 MDS 外接程序）
@@ -53,7 +53,7 @@ ms.locfileid: "65488236"
   
 2.  选择要将新实体加载到的单元。  
   
-3.  在 **“主数据”** 选项卡上的 **“生成模型”** 组中，单击 **“创建实体”**。  
+3.  在 **“主数据”** 选项卡上的 **“生成模型”** 组中，单击 **“创建实体”** 。  
   
 4.  如果系统提示您连接到某一 MDS 存储库，则进行连接。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "65488236"
   
 11. 可选。 从 **“名称”** 列表中，选择包含每个成员的名称的列。  
   
-12. 单击“确定” 。 在已成功创建该实体后，将显示一个新的标题行，单元将突出显示，并且工作表名称将更新以匹配该实体名称。  
+12. 单击“确定”  。 在已成功创建该实体后，将显示一个新的标题行，单元将突出显示，并且工作表名称将更新以匹配该实体名称。  
   
 ## <a name="next-steps"></a>后续步骤  
   
--   若要查看发生的错误，请在 **“发布并验证”** 组中单击 **“显示状态”**。 将显示 ValidationStatus 和 InputStatus 列。 有关详细信息，请参阅[验证数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
+-   若要查看发生的错误，请在 **“发布并验证”** 组中单击 **“显示状态”** 。 将显示 ValidationStatus 和 InputStatus 列。 有关详细信息，请参阅[验证数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
   
 -   确认属性以您期望的数据类型创建。  
   

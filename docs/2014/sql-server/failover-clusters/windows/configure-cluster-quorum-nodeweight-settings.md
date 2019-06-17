@@ -14,18 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: efd73d5b433deeb21b1f3469882a3f0e5dbe7c2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049520"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>配置群集仲裁 NodeWeight 设置
   本主题说明如何配置 Windows Server 故障转移群集 (WSFC) 群集中成员节点的 NodeWeight 设置。 在仲裁投票期间，使用 NodeWeight 设置来支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的灾难恢复和多子网方案。  
   
--   **开始之前：**[先决条件](#Prerequisites)、[安全性](#Security)  
+-   **开始之前：** [先决条件](#Prerequisites)、[安全性](#Security)  
   
--   **若要查看仲裁 NodeWeight 设置，请使用：**[使用 Powershell](#PowerShellProcedure)，[使用 Cluster.exe](#CommandPromptProcedure)  
+-   **若要查看仲裁 NodeWeight 设置，请使用：** [使用 Powershell](#PowerShellProcedure)，[使用 Cluster.exe](#CommandPromptProcedure)  
   
 -   [相关内容](#RelatedContent)  
   

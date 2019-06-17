@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6135c1d2cbf1291465e1346f71010b8befe6f7b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046380"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>将连接字符串关键字用于 SQL Server Native Client
@@ -51,7 +51,7 @@ ms.locfileid: "63046380"
 |关键字|Description|  
 |-------------|-----------------|  
 |`Addr`|“Address”的同义词。|  
-|`Address`|运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。 `Address` 通常是服务器的网络名称，也可以是诸如管道、IP 地址或 TCP/IP 端口和套接字地址之类的其他名称。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> 在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 时，`Address` 的值优先于传递到 ODBC 连接字符串中的 `Server` 的值。 还请注意，`Address=;` 将连接到在 `Server` 关键字中指定的服务器，而 `Address= ;, Address=.;`、`Address=localhost;` 和 `Address=(local);` 都会导致连接到本地服务器。<br /><br /> `Address` 关键字的完整语法如下所示：<br /><br /> [*protocol*`:`]*Address*[`,`*port &#124;\pipe\pipename*]<br /><br /> *协议*可以是`tcp`(TCP/IP) `lpc` （共享内存） 或`np`（命名管道）。 有关协议的详细信息，请参阅[配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果既没有*协议*也不`Network`指定关键字，则[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置管理器。<br /><br /> “port”是指定服务器上所要连接到的端口。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。|  
+|`Address`|运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。 `Address` 通常是服务器的网络名称，也可以是诸如管道、IP 地址或 TCP/IP 端口和套接字地址之类的其他名称。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> 在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 时，`Address` 的值优先于传递到 ODBC 连接字符串中的 `Server` 的值。 还请注意，`Address=;` 将连接到在 `Server` 关键字中指定的服务器，而 `Address= ;, Address=.;`、`Address=localhost;` 和 `Address=(local);` 都会导致连接到本地服务器。<br /><br /> `Address` 关键字的完整语法如下所示：<br /><br /> [*protocol*`:`]*Address*[`,`*port &#124;\pipe\pipename*]<br /><br /> *协议*可以是`tcp`(TCP/IP) `lpc` （共享内存） 或`np`（命名管道）。 有关协议的详细信息，请参阅[配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果既没有*协议*也不`Network`指定关键字，则[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置管理器。<br /><br /> “port”是指定服务器上所要连接到的端口  。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。|  
 |`AnsiNPW`|如果是“yes”，则驱动程序使用 ANSI 定义的行为来处理 NULL 比较、字符数据填充、警告和 NULL 串联。 如果是“no”，则不公开 ANSI 定义的行为。 有关 ANSI NPW 行为的详细信息，请参阅[效果的 ISO 选项](../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md)。|  
 |`APP`|应用程序调用的名称[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) （可选）。 如果指定，此值存储在**master.dbo.sysprocesses**列**program_name**并返回由[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)和[a p p _](/sql/t-sql/functions/app-name-transact-sql)函数。|  
 |`ApplicationIntent`|连接到服务器时声明应用程序工作负荷类型。 可能值为 `ReadOnly` 和 `ReadWrite`。 例如：ApplicationIntent=ReadOnly<br /><br /> 默认值为 `ReadWrite`。 有关详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对本机客户端的支持[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[SQL Server 本机客户端支持对高可用性和灾难恢复](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
@@ -77,7 +77,7 @@ ms.locfileid: "63046380"
 |`QuotedId`|如果是“yes”，则 QUOTED_IDENTIFIERS 对连接设置为 ON，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用关于 SQL 语句中引号方法的 ISO 规则。 如果是“no”，则 QUOTED_IDENTIFIERS 对连接设置为 OFF。 然后，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 遵循关于 SQL 语句中引号用法的早期 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 规则。 有关详细信息，请参阅[效果的 ISO 选项](../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md)。|  
 |`Regional`|如果是“yes”，则在将货币、日期和时间数据转换为字符数据时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将使用客户端设置。 该转换是单向的；驱动程序不会识别其中非 ODBC 标准格式的日期字符串或货币值；例如，在 INSERT 或 UPDATE 语句中使用的参数。 如果是“no”，则驱动程序使用 ODBC 标准字符串来表示转换为字符数据的货币、日期和时间数据。|  
 |`SaveFile`|如果连接成功则在其中保存当前连接的属性的 ODBC 数据源文件的名称。|  
-|`Server`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 该值必须是服务器的网络名称、IP 地址或者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器别名。<br /><br /> `Address` 关键字将覆盖 `Server` 关键字。<br /><br /> 通过指定以下条件之一，可连接到本地服务器的默认实例：<br /><br /> -   `Server=;`<br />-   `Server=.;`<br />-   `Server=(local);`<br />-   `Server=(localhost);`<br />-   **Server=(localdb)\\** _instancename_ `;`<br /><br /> 有关 LocalDB 的支持的详细信息，请参阅[SQL Server 本机客户端支持对 LocalDB](../features/sql-server-native-client-support-for-localdb.md)。<br /><br /> 若要指定的命名的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，将追加 **\\** _InstanceName_。<br /><br /> 如果不指定服务器，则与本地计算机上的默认实例建立连接。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> `Server` 关键字的完整语法如下所示：<br /><br /> `Server=`[*protocol*`:`]*Server*[`,`*port*]<br /><br /> *协议*可以是`tcp`(TCP/IP) `lpc` （共享内存） 或`np`（命名管道）。<br /><br /> 以下示例将指定一个命名管道：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此行指定 named pipes 协议、本地计算机上的一个命名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称 (`MSSQL$MYINST01`)，以及命名管道的默认名称 (`sql/query`)。<br /><br /> 如果既没有*协议*也不`Network`指定关键字，则[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置管理器。<br /><br /> “port”是指定服务器上所要连接到的端口。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。<br /><br /> 在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 时，对于传递到 ODBC 连接字符串中 `Server` 的值，将忽略其前面的空格。|  
+|`Server`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 该值必须是服务器的网络名称、IP 地址或者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器别名。<br /><br /> `Address` 关键字将覆盖 `Server` 关键字。<br /><br /> 通过指定以下条件之一，可连接到本地服务器的默认实例：<br /><br /> -   `Server=;`<br />-   `Server=.;`<br />-   `Server=(local);`<br />-   `Server=(localhost);`<br />-   **Server=(localdb)\\** _instancename_ `;`<br /><br /> 有关 LocalDB 的支持的详细信息，请参阅[SQL Server 本机客户端支持对 LocalDB](../features/sql-server-native-client-support-for-localdb.md)。<br /><br /> 若要指定的命名的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，将追加 **\\** _InstanceName_。<br /><br /> 如果不指定服务器，则与本地计算机上的默认实例建立连接。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> `Server` 关键字的完整语法如下所示：<br /><br /> `Server=`[*protocol*`:`]*Server*[`,`*port*]<br /><br /> *协议*可以是`tcp`(TCP/IP) `lpc` （共享内存） 或`np`（命名管道）。<br /><br /> 以下示例将指定一个命名管道：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此行指定 named pipes 协议、本地计算机上的一个命名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称 (`MSSQL$MYINST01`)，以及命名管道的默认名称 (`sql/query`)。<br /><br /> 如果既没有*协议*也不`Network`指定关键字，则[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置管理器。<br /><br /> “port”是指定服务器上所要连接到的端口  。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。<br /><br /> 在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 时，对于传递到 ODBC 连接字符串中 `Server` 的值，将忽略其前面的空格。|  
 |`ServerSPN`|服务器的 SPN。 默认值为空字符串。 空字符串导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用驱动程序生成的默认 SPN。|  
 |`StatsLog_On`|如果是“yes”，则启用对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序性能数据的捕获。 如果是“no”，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序性能数据在连接上不可用。|  
 |`StatsLogFile`|用于记录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序性能统计信息的文件的完整路径和文件名。|  
@@ -100,19 +100,19 @@ ms.locfileid: "63046380"
   
 -   **IDataInitialize::GetDataSource**  
   
- 在第一种情况下，通过在 DBPROPSET_DBINIT 属性集中设置属性 DBPROP_INIT_PROVIDERSTRING，可以用访问接口字符串初始化连接属性。 在第二种情况下，可以将初始化字符串传递到 IDataInitialize::GetDataSource 方法以初始化连接属性。 两种方法都初始化相同的 OLE DB 连接属性，但使用不同的关键字集合。 IDataInitialize::GetDataSource 所使用的关键字集合至少是初始化属性组内的属性的说明。  
+ 在第一种情况下，通过在 DBPROPSET_DBINIT 属性集中设置属性 DBPROP_INIT_PROVIDERSTRING，可以用访问接口字符串初始化连接属性。 在第二种情况下，可以将初始化字符串传递到 IDataInitialize::GetDataSource 方法以初始化连接属性  。 两种方法都初始化相同的 OLE DB 连接属性，但使用不同的关键字集合。 IDataInitialize::GetDataSource 所使用的关键字集合至少是初始化属性组内的属性的说明  。  
   
  将对应的 OLE DB 属性设置为某个默认值或显式设置为某个值的任何提供程序字符串设置，OLE DB 属性值将覆盖提供程序字符串中的设置。  
   
- 通过 DBPROP_INIT_PROVIDERSTRING 值在访问接口字符串中所设置的布尔属性要使用值“yes”和“no”进行设置。 通过使用 IDataInitialize::GetDataSource 在初始化字符串中设置的布尔属性是使用值“true”和“false”进行设置的。  
+ 通过 DBPROP_INIT_PROVIDERSTRING 值在访问接口字符串中所设置的布尔属性要使用值“yes”和“no”进行设置。 通过使用 IDataInitialize::GetDataSource 在初始化字符串中设置的布尔属性是使用值“true”和“false”进行设置的  。  
   
- 使用 IDataInitialize::GetDataSource 的应用程序也可以使用由 IDBInitialize::Initialize 使用的关键字，但仅用于没有默认值的属性。 如果应用程序在初始化字符串中同时使用 IDataInitialize::GetDataSource 关键字和 IDBInitialize::Initialize 关键字，则使用 IDataInitialize::GetDataSource 关键字设置。 强烈建议应用程序不要在 IDataInitialize:GetDataSource 连接字符串中使用 IDBInitialize::Initialize 关键字，因为在未来的版本中可能不保留该行为。  
+ 使用 IDataInitialize::GetDataSource 的应用程序也可以使用由 IDBInitialize::Initialize 使用的关键字，但仅用于没有默认值的属性   。 如果应用程序在初始化字符串中同时使用 IDataInitialize::GetDataSource 关键字和 IDBInitialize::Initialize 关键字，则使用 IDataInitialize::GetDataSource 关键字设置    。 强烈建议应用程序不要在 IDataInitialize:GetDataSource 连接字符串中使用 IDBInitialize::Initialize 关键字，因为在未来的版本中可能不保留该行为   。  
   
- **注意：** 通过 IDataInitialize::GetDataSource 传递的连接字符串将转换为属性并且通过 IDBProperties::SetProperties 应用。 如果组件服务在 IDBProperties::GetPropertyInfo 中找到了属性说明，则此属性将作为独立属性应用。 否则，它将通过 DBPROP_PROVIDERSTRING 属性应用。 例如，如果您指定连接字符串**数据源 = server1;Server = server2**，`Data Source`将设置为一个属性，但`Server`将进入提供程序字符串。  
+ **注意：** 通过 IDataInitialize::GetDataSource 传递的连接字符串将转换为属性并且通过 IDBProperties::SetProperties 应用   。 如果组件服务在 IDBProperties::GetPropertyInfo 中找到了属性说明，则此属性将作为独立属性应用  。 否则，它将通过 DBPROP_PROVIDERSTRING 属性应用。 例如，如果您指定连接字符串**数据源 = server1;Server = server2**，`Data Source`将设置为一个属性，但`Server`将进入提供程序字符串。  
   
  如果指定访问接口特定的属性相同的多个实例，则使用第一个属性的第一个值。  
   
- 将 IDBInitialize::Initialize 和 DBPROP_INIT_PROVIDERSTRING 配合使用的 OLE DB 应用程序所使用的连接字符串具有以下语法：  
+ 将 IDBInitialize::Initialize 和 DBPROP_INIT_PROVIDERSTRING 配合使用的 OLE DB 应用程序所使用的连接字符串具有以下语法  ：  
   
  `connection-string ::= empty-string[;] | attribute[;] | attribute; connection-string`  
   
@@ -161,7 +161,7 @@ ms.locfileid: "63046380"
 |`UseProcForPrepare`|SSPROP_INIT_USEPROCFORPREP|不推荐使用该关键字，并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口将忽略其设置。|  
 |`WSID`|SSPROP_INIT_WSID|工作站标识符。|  
   
- 使用 IDataInitialize::GetDataSource 的 OLE DB 应用程序所使用的连接字符串有以下语法：  
+ 使用 IDataInitialize::GetDataSource 的 OLE DB 应用程序所使用的连接字符串有以下语法  ：  
   
  `connection-string ::= empty-string[;] | attribute[;] | attribute; connection-string`  
   
@@ -183,7 +183,7 @@ ms.locfileid: "63046380"
   
  如果某一连接字符串具有下表所列的多个属性，将使用最后一个属性的值。  
   
- 下表对可能与 IDataInitialize::GetDataSource 配合使用的关键字进行了说明：  
+ 下表对可能与 IDataInitialize::GetDataSource 配合使用的关键字进行了说明  ：  
   
 |关键字|初始化属性|Description|  
 |-------------|-----------------------------|-----------------|  
@@ -216,9 +216,9 @@ ms.locfileid: "63046380"
  **注意**：在连接字符串中，“旧密码”属性会设置 SSPROP_AUTH_OLD_PASSWORD，它是当前密码（可能已过期），通过访问接口字符串属性无法获取该密码。  
   
 ## <a name="activex-data-objects-ado-connection-string-keywords"></a>ActiveX 数据对象 (ADO) 连接字符串关键字  
- ADO 应用程序设置 ADODBConnection 对象的 ConnectionString 属性，或提供连接字符串作为 ADODBConnection 对象的 Open 方法的参数。  
+ ADO 应用程序设置 ADODBConnection 对象的 ConnectionString 属性，或提供连接字符串作为 ADODBConnection 对象的 Open 方法的参数     。  
   
- ADO 应用程序还可以使用由 OLE DB IDBInitialize::Initialize 方法使用的关键字，但仅针对没有默认值的属性。 如果应用程序在初始化字符串中同时使用这些 ADO 关键字和 IDBInitialize::Initialize 关键字，则使用 ADO 关键字设置。 强烈建议应用程序仅使用 ADO 连接字符串关键字。  
+ ADO 应用程序还可以使用由 OLE DB IDBInitialize::Initialize 方法使用的关键字，但仅针对没有默认值的属性  。 如果应用程序在初始化字符串中同时使用这些 ADO 关键字和 IDBInitialize::Initialize 关键字，则使用 ADO 关键字设置  。 强烈建议应用程序仅使用 ADO 连接字符串关键字。  
   
  ADO 使用的连接字符串有以下语法：  
   

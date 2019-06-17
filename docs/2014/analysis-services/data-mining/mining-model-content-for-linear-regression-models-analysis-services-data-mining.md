@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083641"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
@@ -141,7 +141,7 @@ ms.locfileid: "66083641"
 ## <a name="remarks"></a>备注  
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法创建模型时，数据挖掘引擎创建决策树模型的特殊实例，并提供约束树的参数，将树约束为在单个节点中包含所有定型数据。 将标记所有连续输入并将其视为潜在回归量，但仅将适合数据的回归量作为回归量保留在最终模型中。 分析过程要么为每个回归量各生成一个回归公式，要么根本不生成任何回归公式。  
   
- 你可以在“挖掘图例”中查看完整的回归公式，方法是在 [Microsoft 树查看器](browse-a-model-using-the-microsoft-tree-viewer.md)中单击“(全部)”节点。  
+ 你可以在“挖掘图例”中查看完整的回归公式，方法是在 [Microsoft 树查看器](browse-a-model-using-the-microsoft-tree-viewer.md)中单击“(全部)”节点。    
   
  此外，在创建包括连续可预测属性的决策树模型时，有时树具有的回归节点会共享回归树节点的属性。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "66083641"
 |年龄|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
- NODE_DISTRIBUTION 表包含多个行，每个行按变量进行分组。 前两个行的值类型始终为 1 和 3，用于描述目标属性。 后续行提供有关特定“回归量”的公式的详细信息。 回归量是与输出变量具有线性关系的输入变量。 您可以拥有多个回归量，并且每个回归量将针对系数 (VALUETYPE = 7)、得分 (VALUETYPE = 8) 和统计信息 (VALUETYPE = 9) 包含单独的行。 最后，表还具有一个包含公式的截距 (VALUETYPE = 11) 的行。  
+ NODE_DISTRIBUTION 表包含多个行，每个行按变量进行分组。 前两个行的值类型始终为 1 和 3，用于描述目标属性。  后续行提供有关特定“回归量”的公式的详细信息。 回归量是与输出变量具有线性关系的输入变量。 您可以拥有多个回归量，并且每个回归量将针对系数 (VALUETYPE = 7)、得分 (VALUETYPE = 8) 和统计信息 (VALUETYPE = 9) 包含单独的行。 最后，表还具有一个包含公式的截距 (VALUETYPE = 11) 的行。  
   
 ### <a name="elements-of-the-regression-formula"></a>回归公式的元素  
  NODE_DISTRIBUTION 嵌套表将回归公式的每个元素包含在一个单独的行中。 示例结果的前两行数据包含有关可预测属性 **Yearly Income**的信息，该属性建立了依赖变量的模型。 SUPPORT 列显示支持该属性的以下两种状态的事例计数： **Yearly Income** 值可用或缺少 **Yearly Income** 值。  
@@ -178,7 +178,7 @@ ms.locfileid: "66083641"
  回归量统计信息 (VALUETYPE = 9) 是其事例具有相应值的属性的平均值。 ATTRIBUTE_VALUE 列包含平均值自身，而 VARIANCE 列包含平均值偏差的总和。  
   
 #### <a name="intercept"></a>截距  
- 通常，回归公式中的“截距”(VALUETYPE = 11) 或“残差”指示当输入属性为 0 时可预测属性的值。 在大多数情况下都不可能发生这种情况，该情况可能产生不够直观的结果。  
+ 通常，回归公式中的“截距”(VALUETYPE = 11) 或“残差”指示当输入属性为 0 时可预测属性的值。   在大多数情况下都不可能发生这种情况，该情况可能产生不够直观的结果。  
   
  例如，在根据年龄预测收入的模型中，了解 0 岁时的收入毫无用处。 在现实生活中，了解与平均值有关的人类行为通常更有用。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 修改了截距，以便说明每个回归量与平均值的关系。  
   

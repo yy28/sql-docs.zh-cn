@@ -3,17 +3,17 @@ title: 升级和安装常见问题解答 (FAQ) 的 SQL Server 机器学习服务
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
 manager: cgronlun
-ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642314"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140369"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 机器学习或 R Server 的升级和安装常见问题解答
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "62642314"
 
 - 在早期版本的 SQL Server 2016 R Services，包含的工作目录的驱动器上需要 8dot3 表示法。 如果安装的预发行版本，则升级到 SQL Server 2016 Service Pack 1 应修复此问题。 此要求不适用于版本后 SP1。
 
-- 目前，无法安装[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]故障转移群集上。 不过，SQL Server 2019 预览确实提供故障转移支持，如果想要评估测试环境中的此 capablity。 有关详细信息，请参阅[What's New](../what-s-new-in-sql-server-machine-learning-services.md)。
+- 目前，无法安装[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]故障转移群集上。 不过，SQL Server 2019 预览确实提供故障转移支持，如果想要评估测试环境中的此功能。 有关详细信息，请参阅[What's New](../what-s-new-in-sql-server-machine-learning-services.md)。
 
 - Azure VM 上可能需要一些额外的配置。 例如，您可能需要创建防火墙例外，以支持远程访问。
 
@@ -63,7 +63,7 @@ SQL Server 2016 的早期发行版本无法在没有 internet 连接的脱机安
 + [使用安装向导升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 你可以升级只是机器学习组件使用名为绑定的过程： 
-+ [使用 SqlBindR 升级机器学习组件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [使用 SqlBindR 升级机器学习组件](../install/upgrade-r-and-python.md)
 
 ### <a name="end-of-support-for-in-place-upgrades-from-prerelease-versions"></a>结束对从预发行版本的就地升级支持
 
@@ -95,11 +95,11 @@ SQL Server 2016 的早期发行版本无法在没有 internet 连接的脱机安
 
 如果安装了 Microsoft R Server 的预发布版本，必须先卸载它，才能升级到较新版本。
 
-1.  在“控制面板” 中，单击“添加或删除程序” ，然后选择 `Microsoft SQL Server 2016 <version number>`。
+1.  在“控制面板”  中，单击“添加或删除程序”  ，然后选择 `Microsoft SQL Server 2016 <version number>`。
 
-2.  在具有“添加” 、“修复” 或“删除”  组件选项的对话框中，选择“删除” 。
+2.  在具有“添加”  、“修复”  或“删除”  组件选项的对话框中，选择“删除”  。
   
-3.  在“选择功能”  页面上的“共享功能” 下，选择“R Server（独立版）” 。 单击“下一步” ，然后单击“完成”  ，卸载所选组件。
+3.  在“选择功能”  页面上的“共享功能”  下，选择“R Server（独立版）”  。 单击“下一步”  ，然后单击“完成”  ，卸载所选组件。
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services 和 R Server （独立版）-同时错误 
 
@@ -123,7 +123,7 @@ SQL Server 2016 的早期发行版本无法在没有 internet 连接的脱机安
 
 3. 重新启动服务器。
 
-4. 运行 SQL Server 安装程序，并添加 R Services （数据库内） 功能仅。 不要选择**R Server （独立版）**。
+4. 运行 SQL Server 安装程序，并添加 R Services （数据库内） 功能仅。 不要选择**R Server （独立版）** 。
 
 通常情况下，我们建议你不要安装 R Services （数据库内） 和 R Server （独立版） 在同一台计算机上。 但是，如果服务器具有足够的容量，你可能会发现 R Server 独立版可作为开发工具。 另一种情形是，您需要使用的 R Server 操作化功能，但同时想要访问 SQL Server 数据，而不移动数据。
 

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9f022f0ed2ba9b7bc320407526af0c12ce4073b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483923"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>向版本分配标志 (Master Data Services)
@@ -37,9 +37,9 @@ ms.locfileid: "65483923"
   
 ### <a name="to-assign-a-flag-to-a-version"></a>向版本分配标志  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
   
-2.  在“管理版本”页上，在与你要分配标志的版本相对应的行中，双击“标志”列中的单元格。  
+2.  在“管理版本”  页上，在与你要分配标志的版本相对应的行中，双击“标志”  列中的单元格。  
   
 3.  从列表中，选择要分配的标志。  
   

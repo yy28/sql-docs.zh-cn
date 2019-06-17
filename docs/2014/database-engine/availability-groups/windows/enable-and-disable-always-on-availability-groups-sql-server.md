@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9fc5fc211d0f0c843ad16fb377fad2082bcf02c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791933"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>启用和禁用 AlwaysOn 可用性组 (SQL Server)
@@ -73,7 +73,7 @@ ms.locfileid: "62791933"
 ###  <a name="SSMS1Procedure"></a> 使用 SQL Server Management Studio  
  **若要确定是否已启用 AlwaysOn 可用性组**  
   
-1.  在“对象资源管理器”中，右键单击服务器实例，再单击“属性”。  
+1.  在“对象资源管理器”中，右键单击服务器实例，再单击“属性”  。  
   
 2.  在 **“服务器属性”** 对话框中，单击 **“常规”** 页。 **“启用 HADR”** 属性显示以下值之一：  
   
@@ -129,15 +129,15 @@ ms.locfileid: "62791933"
   
 1.  连接到承载要启用 AlwaysOn 可用性组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的 Windows Server 故障转移群集 (WSFC) 节点。  
   
-2.  在“开始”  菜单上，依次指向“所有程序” 、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、“配置工具” ，然后单击“SQL Server 配置管理器” 。  
+2.  在“开始”  菜单上，依次指向“所有程序”  、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、“配置工具”  ，然后单击“SQL Server 配置管理器”  。  
   
-3.  在中**SQL Server 配置管理器**，单击**SQL Server Services**，右键单击 SQL Server (**<*`instance name`*>)**，其中**< *`instance name`* >** 是你想要启用 AlwaysOn 可用性组的本地服务器实例的名称和单击**属性。**  
+3.  在中**SQL Server 配置管理器**，单击**SQL Server Services**，右键单击 SQL Server ( **< *`instance name`* >)** ，其中 **< *`instance name`* >** 是你想要启用 AlwaysOn 可用性组的本地服务器实例的名称和单击**属性。**  
   
 4.  选择 **“AlwaysOn 高可用性”** 选项卡。  
   
 5.  验证 **Windows 故障转移群集名称**字段包含本地故障转移群集的名称。 如果此字段为空，则此服务器实例当前不支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 原因包括本地计算机不是群集节点、WSFC 群集已关闭或此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 不支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
   
-6.  选中 **“启用 AlwaysOn 可用性组”** 复选框，然后单击 **“确定”**。  
+6.  选中 **“启用 AlwaysOn 可用性组”** 复选框，然后单击 **“确定”** 。  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器保存您的更改。 然后，必须手动重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。 这使您可以选择最适合您的业务要求的重新启动时间。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务重新启动时，将启用 AlwaysOn 且 `IsHadrEnabled` 服务器属性将设置为 1。  
   
@@ -176,7 +176,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
     -   [PowerShell](#PScmd3Procedure)  
   
--   **跟进：**[在禁用 AlwaysOn 之后](#FollowUp)  
+-   **跟进：** [在禁用 AlwaysOn 之后](#FollowUp)  
   
 > [!IMPORTANT]  
 >  一次只能在一个服务器实例上禁用 AlwaysOn。 在禁用 AlwaysOn 可用性组之后，一直等待直到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务已重新启动，然后才继续在另一个服务器实例上操作。  
@@ -193,11 +193,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  连接到承载要禁用 AlwaysOn 可用性组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的 Windows Server 故障转移群集 (WSFC) 节点。  
   
-2.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+2.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-3.  在中**SQL Server 配置管理器**，单击**SQL Server Services**，右键单击 SQL Server (**<*`instance name`*>)**，其中**< *`instance name`* >** 是你想要禁用 AlwaysOn 可用性组的本地服务器实例的名称和单击**属性**。  
+3.  在中**SQL Server 配置管理器**，单击**SQL Server Services**，右键单击 SQL Server ( **< *`instance name`* >)** ，其中 **< *`instance name`* >** 是你想要禁用 AlwaysOn 可用性组的本地服务器实例的名称和单击**属性**。  
   
-4.  在“AlwaysOn 高可用性”选项卡上，取消选中“启用 AlwaysOn 可用性组”  复选框，然后单击“确定” 。  
+4.  在“AlwaysOn 高可用性”  选项卡上，取消选中“启用 AlwaysOn 可用性组”  复选框，然后单击“确定”  。  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器保存您的更改并重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务重新启动时，将禁用 AlwaysOn 且 `IsHadrEnabled` 服务器属性将设置为 0 以指示禁用 AlwaysOn 可用性组。  
   

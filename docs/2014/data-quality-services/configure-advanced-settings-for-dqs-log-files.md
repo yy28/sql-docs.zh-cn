@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480977"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
@@ -47,7 +47,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 1.  启动 Microsoft SQL Server Management Studio 并连接到适当的 SQL Server 实例。  
   
-2.  在“对象资源管理器”中，右键单击服务器，再单击 **“新建查询”**。  
+2.  在“对象资源管理器”中，右键单击服务器，再单击 **“新建查询”** 。  
   
 3.  在“查询编辑器”窗口中，复制以下 SQL 语句：  
   

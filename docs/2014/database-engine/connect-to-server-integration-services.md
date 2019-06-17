@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808698"
 ---
 # <a name="connect-to-server-integration-services"></a>连接到服务器 (Integration Services)
@@ -30,7 +30,7 @@ ms.locfileid: "62808698"
  选择要连接到的服务器。 默认情况下，显示上次连接到的服务器实例。  
   
 > [!NOTE]  
->  不要使用*\<服务器名 >*\\*\<实例名 >*，因为[!INCLUDE[ssIS](../includes/ssis-md.md)]不支持计算机上的多个实例。  
+>  不要使用 *\<服务器名 >* \\ *\<实例名 >* ，因为[!INCLUDE[ssIS](../includes/ssis-md.md)]不支持计算机上的多个实例。  
   
  **身份验证**  
  只有 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证可用于 [!INCLUDE[ssIS](../includes/ssis-md.md)]。 Windows 身份验证模式允许用户通过 Windows 用户帐户进行连接。  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a301857168f7da4040df0195bc25c0ab54861eb7
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63460151"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>“添加表”对话框（数据库设计器）(Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63460151"
  添加所选的一个或多个表。  
   
 > [!NOTE]  
->  如果希望将多个表添加到关系图中，可以将其全部选定，再单击“添加”。 或者，也可以双击要添加的每个表，然后在完成后单击“关闭”。  
+>  如果希望将多个表添加到关系图中，可以将其全部选定，再单击“添加”  。 或者，也可以双击要添加的每个表，然后在完成后单击“关闭”  。  
   
  **关闭**  
  关闭对话框而不再添加表。  

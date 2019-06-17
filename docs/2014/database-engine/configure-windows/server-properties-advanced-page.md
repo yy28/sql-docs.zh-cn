@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 998d42d262e3f980b4b35ed82b26904399d6b33c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809378"
 ---
 # <a name="server-properties-advanced-page"></a>服务器属性（“高级”页）
@@ -87,7 +87,7 @@ ms.locfileid: "62809378"
 > [!NOTE]  
 >  也可以使用 [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)upgrade_option 操作来设置全文升级选项。  
   
- 将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加、还原或复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于 **全文升级选项** 服务器属性的设置。 如果将升级选项设置为“导入”或“重新生成”，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+ 将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加、还原或复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于 **全文升级选项** 服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”  时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”  属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
  **最大文本复制大小**  
  指定可通过单个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句添加到复制列或捕获列的 `text`、`ntext`、`varchar(max)`、`nvarchar(max)`、`xml` 和 `image` 数据的最大大小（按字节计）。 对设置的更改将立即生效。 有关详细信息，请参阅 [配置 max text repl size 服务器配置选项](configure-the-max-text-repl-size-server-configuration-option.md)。  

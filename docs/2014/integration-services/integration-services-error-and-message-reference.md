@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892655"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
@@ -229,8 +229,8 @@ ms.locfileid: "62892655"
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|无法打开文件“%1”进行写操作。 该文件可能是只读的，或者您没有适当的权限。|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|没有与执行此查询相关联的结果行集。 未正确指定结果。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|没有正确生成调试转储文件。 hresult 为 0x%1!8.8X!。|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|指定的 URL 无效。 如果服务器或代理 URL 为空或格式不正确，会发生这种情况。 有效的 URL 格式的形式为 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 无效。 如果指定了 http 和 https 之外的其他方案，或者该 URL 的格式不正确，会发生这种情况。 有效的 URL 格式的形式为 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath。|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|指定的 URL 无效。 如果服务器或代理 URL 为空或格式不正确，会发生这种情况。 有效的 URL 格式的形式为 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath 。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 无效。 如果指定了 http 和 https 之外的其他方案，或者该 URL 的格式不正确，会发生这种情况。 有效的 URL 格式的形式为 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath 。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|无法建立与服务器 %1 的连接。 如果该服务器不存在，或代理设置不正确，会出现此错误。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|与服务器的连接已重置或终止。 请稍后再试。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|对“%1”的登录尝试失败。 如果提供的登录凭据不正确，会出现此错误。 请验证登录凭据。|  

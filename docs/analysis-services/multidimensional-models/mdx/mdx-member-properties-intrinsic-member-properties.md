@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740244"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成员属性-内部成员属性
@@ -32,7 +32,7 @@ ms.locfileid: "62740244"
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供程序可能支持其他内部成员属性。 有关其他访问接口支持的内部成员属性的详细信息，请参阅这些访问接口附带的文档。  
   
 ## <a name="types-of-member-properties"></a>成员属性的类型  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持以下两种类型的内部成员属性：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持以下两种类型的内部成员属性：  
   
  上下文相关的成员属性  
  这些成员属性必须在特定层次结构或级别的上下文中使用，用于为指定维度或级别的每个成员提供值。  
@@ -99,7 +99,7 @@ ms.locfileid: "62740244"
 |**IS_DATAMEMBER**|一个指示成员是否为数据成员的布尔值。|  
 |**IS_PLACEHOLDERMEMBER**|用来指明成员是否为占位符的布尔值。|  
 |**KEYx**|成员键，其中 x 是成员键的序号，起始值为零。 KEY0 可用于组合键和非组合键。<br /><br /> 如果键不是组合键，则 KEY0 与 **Key**等效。<br /><br /> 对于组合键，KEY0、KEY1、KEY2 等共同构成了组合键。 您可以在查询中独立引用它们以返回组合键的该部分。 例如，指定 KEY0 返回组合键的第一部分，指定 KEY1 返回组合键的下一部分等等。<br /><br /> 请注意， **KEYx** 可以在上下文中使用，也可以不带上下文使用。 因此，它显示在两个列表中。<br /><br /> 有关如何使用此成员属性的示例，请参阅[简单的 MDX 小组件：Key0、 Key1、 Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
-|**LCID** x|区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
+|**LCID** x |区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
 |**LEVEL_NUMBER**|成员距层次结构的根的距离。 根级别为零。|  
 |**LEVEL_UNIQUE_NAME**|成员所属的级别的唯一名称。 对于通过限定生成唯一名称的访问接口，此名称的各组成部分之间用分隔符分隔。|  
 |**MEMBER_CAPTION**|与成员相关的标签或标题。 标题主要用于显示目的。 如果不存在标题，查询将返回 **MEMBER_NAME**。|  

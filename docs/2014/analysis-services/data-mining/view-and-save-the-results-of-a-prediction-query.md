@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082712"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>查看和保存预测查询的结果
@@ -35,7 +35,7 @@ ms.locfileid: "66082712"
   
 ### <a name="save-the-results-of-a-prediction-query-to-a-table"></a>将预测查询的结果保存到表  
   
-1.  在数据挖掘设计器中，同 **“挖掘模型预测”** 选项卡工具栏上的 **“保存查询结果”**。  
+1.  在数据挖掘设计器中，同 **“挖掘模型预测”** 选项卡工具栏上的 **“保存查询结果”** 。  
   
      此时将打开 **“保存数据挖掘查询结果”** 对话框。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66082712"
   
 4.  如果希望将表添加到数据源视图中，请从 **“添加到数据源视图”** 中选择数据源视图。  
   
-5.  单击“保存” 。  
+5.  单击“保存”  。  
   
     > [!WARNING]  
     >  如果目标不支持分层行集，则可以向结果中添加 FALTTENED 关键字以另存为平面表。  
