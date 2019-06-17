@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11c4a53fc29e23a41ac2d7f16109bd41a0cc34c1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484832"
 ---
 # <a name="add-a-user-master-data-services"></a>添加用户 (Master Data Services)
@@ -34,15 +34,15 @@ ms.locfileid: "65484832"
   
 ### <a name="to-add-a-user"></a>添加用户  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”** 。  
   
-2.  在 **“用户”** 页上，单击 **“添加用户”**。  
+2.  在 **“用户”** 页上，单击 **“添加用户”** 。  
   
-3.  输入该用户的名称，名称之前应放置 Active Directory 域名或服务器计算机的名称，例如 domain\\user_name 或 computer\user_name。  
+3.  输入该用户的名称，名称之前应放置 Active Directory 域名或服务器计算机的名称，例如 domain  \\user_name  或 computer\user_name  。  
   
-4.  或者单击 **“检查名称”**。  
+4.  或者单击 **“检查名称”** 。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 ## <a name="next-steps"></a>后续步骤  
   

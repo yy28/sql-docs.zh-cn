@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c843a74b831315c98deda9a9d6fb0c3a463bc5c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083406"
 ---
 # <a name="mining-structure-columns"></a>挖掘结构列
@@ -59,7 +59,7 @@ ms.locfileid: "66083406"
 |说明挖掘结构列中包含的每个数据类型可用的内容类型。 内容类型依赖于数据类型。 内容类型在模型级别上分配，确定模型如何使用列数据。|[内容类型（数据挖掘）](content-types-data-mining.md)|  
 |介绍嵌套表的概念，并说明如何将嵌套表作为挖掘结构列添加到数据源。|[已分类列（数据挖掘）](classified-columns-data-mining.md)|  
 |列出和说明可以对挖掘结构列设置的分布属性，以指定列中值的预期分布。|[列分布（数据挖掘）](column-distributions-data-mining.md)|  
-|说明离散化的概念（有时称为“装箱”），并说明 Analysis Services 提供的将连续数值数据离散化的方法。|[离散化方法（数据挖掘）](discretization-methods-data-mining.md)|  
+|说明离散化的概念（有时称为“装箱”  ），并说明 Analysis Services 提供的将连续数值数据离散化的方法。|[离散化方法（数据挖掘）](discretization-methods-data-mining.md)|  
 |说明可对挖掘结构列设置的建模标志。|[建模标志（数据挖掘）](modeling-flags-data-mining.md)|  
 |说明已分类列，可以使用这种特殊列类型将一个挖掘结构列与另一个挖掘结构列关联。|[已分类列（数据挖掘）](classified-columns-data-mining.md)|  
 |了解如何添加和修改挖掘结构列。|[挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)|  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109902"
 ---
 # <a name="choose-item-location-page-report-manager"></a>“选择项位置”页（报表管理器）
@@ -52,7 +52,7 @@ ms.locfileid: "66109902"
 4.  在 **“常规”** 选项卡的属性页中，单击 **“更改位置”** 以打开“选择项位置”页。  
   
 ## <a name="options"></a>选项  
- **位置**  
+ **Location**  
  指定用来包含所创建项的文件夹的名称。 您可以键入全名，也可以使用树视图导航到想要使用的文件夹。  
   
  **树视图**  

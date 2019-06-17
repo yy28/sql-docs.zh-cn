@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f12b66fd895b7a7b90103fd1bed1eb51597c669a
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483168"
 ---
 # <a name="delete-a-model-master-data-services"></a>删除模型 (Master Data Services)
@@ -35,17 +35,17 @@ ms.locfileid: "65483168"
   
 ### <a name="to-delete-a-model"></a>删除模型  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“模型”**。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“模型”** 。  
   
 3.  上**模型维护**页上，选择你想要删除的模型的行。  
   
 4.  单击**删除所选的模型**。  
   
-5.  在确认对话框中，单击 **“确定”**。  
+5.  在确认对话框中，单击 **“确定”** 。  
   
-6.  在附加确认对话框中，单击 **“确定”**。  
+6.  在附加确认对话框中，单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [模型 (Master Data Services)](../../2014/master-data-services/models-master-data-services.md)   

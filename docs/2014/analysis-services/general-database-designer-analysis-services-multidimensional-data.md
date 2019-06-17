@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081084"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>常规（数据库设计器）（Analysis Services - 多维数据）
@@ -28,7 +28,7 @@ ms.locfileid: "66081084"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目。  
   
-2.  在“解决方案资源管理器”中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目，单击“编辑数据库”，然后单击“常规”选项卡。  
+2.  在“解决方案资源管理器”  中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目，单击“编辑数据库”  ，然后单击“常规”  选项卡。  
   
 ## <a name="basic-options"></a>基本选项  
  展开 **“基本”** 部分可以修改数据库的基本信息。 本部分包含以下选项：  
@@ -37,7 +37,7 @@ ms.locfileid: "66081084"
  显示数据库的名称。  
   
 > [!NOTE]  
->  若要重命名该数据库，请在“解决方案资源管理器”中，右键单击相应的项目，然后单击“属性”。 在数据库的 **“属性页”** 对话框的 **“部署”** 页上，将 **“数据库”** 属性的值更改为新的数据库名称。  
+>  若要重命名该数据库，请在“解决方案资源管理器”  中，右键单击相应的项目，然后单击“属性”  。 在数据库的 **“属性页”** 对话框的 **“部署”** 页上，将 **“数据库”** 属性的值更改为新的数据库名称。  
   
  **说明**  
  输入对数据库的说明。  
@@ -48,7 +48,7 @@ ms.locfileid: "66081084"
  **语言**  
  为指定事务选择语言。  
   
- 若要向网格中添加一个新的翻译，请单击**\<添加新翻译 >**。  
+ 若要向网格中添加一个新的翻译，请单击 **\<添加新翻译 >** 。  
   
  **已翻译的标题**  
  以翻译的相应语言键入数据库的标题。 如果为空，将使用默认的数据库标题。  
@@ -67,7 +67,7 @@ ms.locfileid: "66081084"
  **名称**  
  键入帐户类型的名称。  
   
- 若要添加新的帐户类型，请单击**\<添加新帐户类型 >**。  
+ 若要添加新的帐户类型，请单击 **\<添加新帐户类型 >** 。  
   
  **别名**  
  设置帐户类型的默认名称，以供商业智能向导使用。 如果此列为空，则将使用默认的 **“名称”** 列。  

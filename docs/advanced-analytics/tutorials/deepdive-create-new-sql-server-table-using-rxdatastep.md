@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 1fb3f83cd3bbd39e3af4936ce8dfb8f16bad82d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641460"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>新 SQL Server 使用 rxDataStep 创建表 （SQL Server 和 RevoScaleR 教程）
@@ -41,7 +41,7 @@ XDF 格式是为高维数据开发的 XML 标准，通过使用本机文件格�
     rxSetComputeContext("local")
     ```
   
-2. 使用 RxXdfData 函数定义新数据源对象。 若要定义 XDF 数据源，请指定数据文件的路径。  
+2. 使用 RxXdfData  函数定义新数据源对象。 若要定义 XDF 数据源，请指定数据文件的路径。  
 
     可以指定使用文本变量文件的路径。 但是，在这种情况下，没有方便的快捷方式，就是使用**rxGetOption**函数，并从示例数据目录获取文件 (AirlineDemoSmall.xdf)。
   
@@ -65,7 +65,7 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
 
 > [!NOTE]
 > 
-> 你是否注意将数据加载到 XDF 文件时不需要调用任何其他函数，并可立即对该数据调用 rxGetVarInfo？ 这是因为 XDF 是针对的默认临时存储方法**RevoScaleR**。 除了 XDF 文件**rxGetVarInfo**函数现在支持多个源类型。
+> 你是否注意将数据加载到 XDF 文件时不需要调用任何其他函数，并可立即对该数据调用 rxGetVarInfo  ？ 这是因为 XDF 是针对的默认临时存储方法**RevoScaleR**。 除了 XDF 文件**rxGetVarInfo**函数现在支持多个源类型。
 
 ## <a name="move-contents-to-sql-server"></a>将内容移动到 SQL Server
 

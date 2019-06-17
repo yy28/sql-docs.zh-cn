@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108390"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 课：创建数据筛选器
@@ -41,7 +41,7 @@ ms.locfileid: "66108390"
   
 4.  在中**表达式**字段中，单击`ProductID`从下拉列表。 筛选器即应用于此列。  
   
-5.  单击等号 (**=**) 中的运算符**运算符**下拉列表。  
+5.  单击等号 ( **=** ) 中的运算符**运算符**下拉列表。  
   
 6.  单击表达式按钮旁边**值**字段中，单击**参数**中**类别**区域中，然后再双击`productid`中**值**区域。 **设置表达式：值**字段现在应包含类似于表达式 **= 参数 ！ 产品 id。值**。  
   

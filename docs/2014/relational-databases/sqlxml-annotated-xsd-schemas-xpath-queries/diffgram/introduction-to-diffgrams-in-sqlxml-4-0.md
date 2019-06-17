@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013018"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0 中的 DiffGrams 简介
@@ -57,7 +57,7 @@ ms.locfileid: "66013018"
  DiffGram 处理逻辑将忽略此可选块。  
   
 ## <a name="diffgram-annotations"></a>DiffGram 批注  
- 在 DiffGram 命名空间中定义这些批注 **"urn： 架构-microsoft-com:xml-diffgram-01"**:  
+ 在 DiffGram 命名空间中定义这些批注 **"urn： 架构-microsoft-com:xml-diffgram-01"** :  
   
  **id**  
  使用此特性中的元素进行配对 **\<之前 >** 并且 **\<DataInstance >** 块。  

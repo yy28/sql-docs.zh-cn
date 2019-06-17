@@ -19,10 +19,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138794"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>创建和管理项目 (AccessToSQL)
@@ -60,7 +60,7 @@ SSMA 启动而不加载默认项目。 若要将数据从到 Access 数据库迁
   
 **若要创建新项目**  
   
-1.  在“文件”菜单中，选择“新建项目”。  
+1.  在“文件”菜单中，选择“新建项目”。    
   
     此时将显示“新建项目”  对话框。  
   
@@ -90,7 +90,7 @@ SSMA 会创建项目文件。 现在可以执行的下一步[添加一个或多�
   
         正在保存元数据可能需要几分钟的时间。 如果您不想要现在保存元数据，则选择任何复选框。  
   
-    2.  单击“保存” 。  
+    2.  单击“保存”  。  
   
         SSMA 会分析访问架构，并将元数据保存到项目文件。  
   

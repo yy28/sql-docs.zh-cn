@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54afa3bf0df1c0c4df3865ab28e7b085bb032919
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e2c0e9f7589f58a1ef3c1cc5ee4026dd9eea5076
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623645"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798566"
 ---
 # <a name="using-parameter-metadata"></a>使用参数元数据
 
@@ -33,8 +33,8 @@ ms.locfileid: "47623645"
 > [!NOTE]  
 > SQLServerParameterMetaData 类使用预定义语句时，有一些限制。
 >
-> 使用 Microsoft JDBC Driver 6.0 for SQL Server（或更高版本）：在使用 SQL Server 2008 或 2008 R2 时，JDBC 驱动程序支持 SELECT、DELETE、INSERT 和 UPDATE 语句，前提是这些语句不包含子查询和/或联接。
+> 使用 Microsoft JDBC Driver 6.0 for SQL Server（或更高版本）：在使用 SQL Server 2008 或 2008 R2 时，JDBC 驱动程序支持 SELECT、DELETE、INSERT 和 UPDATE 语句，前提是这些语句不包含子查询和/或联接  。
 
 在使用 SQL Server 2008 或 2008 R2 时，SQLServerParameterMetaData 类也不支持 MERGE 查询。 对于 SQL Server 2012 和较高版本，支持带有复杂查询的参数元数据。
 
-不支持的加密列的参数元数据检索。 使用 Microsoft JDBC Driver 4.1 for SQL Server 或 Microsoft JDBC Driver 4.2 for SQL Server：JDBC 驱动程序支持 SELECT、DELETE、INSERT 和 UPDATE 语句，前提是这些语句不包含子查询和/或联接。 SQLServerParameterMetaData 类也不支持合并查询。
+不支持的加密列的参数元数据检索。 使用 Microsoft JDBC Driver 4.1 for SQL Server 或 Microsoft JDBC Driver 4.2 for SQL Server：JDBC 驱动程序支持 SELECT、DELETE、INSERT 和 UPDATE 语句，前提是这些语句不包含子查询和/或联接  。 SQLServerParameterMetaData 类也不支持合并查询。

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e700942f9cebc08241cf4e159dceedc7d515a94
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480118"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>向更改跟踪组添加属性 (Master Data Services)
@@ -38,7 +38,7 @@ ms.locfileid: "65480118"
   
 ### <a name="to-add-attributes-to-a-change-tracking-group"></a>向更改跟踪组添加属性  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
 2.  上**模型资源管理器**页上，从菜单栏中，依次指向**管理**然后单击**实体**。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65480118"
   
 4.  为您要跟踪其属性值的实体选择行。  
   
-5.  单击 **“编辑所选实体”**。  
+5.  单击 **“编辑所选实体”** 。  
   
 6.  在 **“编辑实体”** 页上：  
   
@@ -60,9 +60,9 @@ ms.locfileid: "65480118"
   
 8.  在 **“更改跟踪组”** 框中，键入该组的编号。  
   
-9. 单击 **“保存属性”**。  
+9. 单击 **“保存属性”** 。  
   
-10. 在 **“实体维护”** 页上，单击 **“保存实体”**。  
+10. 在 **“实体维护”** 页上，单击 **“保存实体”** 。  
   
 11. 对于您要在组中包括的所有属性重复此过程。 对于该组中的每个属性，使用相同的更改跟踪组编号。  
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922432"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "62922432"
   
  如果数据库启动过程中出现问题，恢复将失败且数据库被标记为 SUSPECT。 如果可以将问题隔离到单个文件或多个文件，则数据库管理员可以使文件脱机并尝试重新启动数据库。 若要使文件脱机，可以使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 语句：  
   
- ALTER DATABASE *database_name* MODIFY FILE (名称 **='*`filename`***、 脱机)  
+ ALTER DATABASE *database_name* MODIFY FILE (名称 **=' *`filename`* **、 脱机)  
   
  如果数据库成功启动，则任何包含脱机文件的文件组将保持脱机状态。  
   
