@@ -13,18 +13,18 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3399262b9ea80c789f81b7b4e745b6c8f32d11f1
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012912"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836385"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > 有关导入和导出向导的相关内容，请参阅 [SQL Server 导入和导出向导](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 
-利用导入平面文件向导可以轻松地将数据从平面文件 (.csv, .txt) 复制到目标。 本概述描述了使用此向导的原因、查找此向导的方法，以及可遵循的简单示例。
+利用导入平面文件向导可以轻松地将数据从平面文件 (.csv, .txt) 复制到数据库中的新表。 本概述描述了使用此向导的原因、查找此向导的方法，以及可遵循的简单示例。
 
 ## <a name="why-would-i-use-this-wizard"></a>为什么使用此向导？
 创建此向导的目的在于利用称为 Program Synthesis using Examples 的智能框架改善当前的导入体验 ([PROSE](https://microsoft.github.io/prose/))。 对于没有专业领域知识的用户来说，导入数据通常是一项复杂、易于出错并且乏味的任务。 此向导尽可能简化导入流程，只需要选择输入文件和唯一的表名称，PROSE 框架就会处理剩余的事情。

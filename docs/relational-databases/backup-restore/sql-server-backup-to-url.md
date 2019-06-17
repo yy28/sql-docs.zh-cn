@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4992e50f3daeb7d131e8cfb98be3700366550f3f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
+ms.sourcegitcommit: 90b0e0a524df1d1dac18251397973ffd1eb6515f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582830"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046690"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "59582830"
 ###  <a name="security"></a> 安全性  
  以下是备份到 Microsoft Azure Blob 存储服务或从该服务还原时的安全注意事项和要求。  
   
--   为 Microsoft Azure Blob 存储服务创建容器时，我们建议你将访问权限设置为“私有” 。 将访问权限设置为“私有”后，只允许可提供对 Windows Azure 帐户进行身份验证所需的信息的用户或帐户进行访问。  
+-   为 Microsoft Azure Blob 存储服务创建容器时，我们建议你将访问权限设置为“私有”  。 将访问权限设置为“私有”后，只允许可提供对 Windows Azure 帐户进行身份验证所需的信息的用户或帐户进行访问。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求将 Microsoft Azure 帐户名称和访问密钥身份验证或共享访问签名和访问令牌存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据中。 在执行备份或还原操作时，将使用此信息对 Microsoft Azure 帐户进行身份验证。  
   
--   用于发出 BACKUP 或 RESTORE 命令的用户帐户应属于具有“更改任意凭据”权限的 **db_backup 操作员**数据库角色。  
+-   用于发出 BACKUP 或 RESTORE 命令的用户帐户应属于具有“更改任意凭据”  权限的 **db_backup 操作员**数据库角色。  
   
 ###  <a name="intorkeyconcepts"></a> 关键组件和概念简介  
  以下两节介绍 Microsoft Azure Blob 存储服务以及在备份到 Microsoft Azure Blob 存储服务或从该服务还原时使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 了解这些组件和它们之间的交互对于执行备份到 Microsoft Azure Blob 存储服务或从中还原很重要。  
@@ -87,7 +87,7 @@ ms.locfileid: "59582830"
   
  以下是一个示例 URL 值：http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>。 HTTPS 不是必需的，但建议这样做。  
   
- **凭据：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。 在这里， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原进程使用凭据对 Microsoft Azure Blob 存储服务及其容器和 blob 对象进行身份验证。 凭据存储存储帐户名称和存储帐户 **访问密钥** 值或容器 URL 及其共享访问签名令牌。 创建凭据后，BACKUP/RESTORE 语句的语法确定 blob 的类型和所需的凭据。  
+ **凭据：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。 在这里， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原进程使用凭据对 Microsoft Azure Blob 存储服务及其容器和 blob 对象进行身份验证。 凭据存储存储帐户名称和存储帐户 **访问密钥** 值或容器 URL 及其共享访问签名令牌。 创建凭据后，BACKUP/RESTORE 语句的语法确定 blob 的类型和所需的凭据。  
   
  有关如何创建共享访问签名的示例，请参阅本主题后面的 [创建共享访问签名](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) 示例；有关如何创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据的示例，请参阅本主题后面的 [创建凭据](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 示例。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "59582830"
   
 -   不支持备份到高级存储。  
   
--   SQL Server 将使用页 blob 支持的最大备份大小限制为 1 TB。 并将使用块 blob 支持的最大备份大小限制为 200 MB 左右（50,000 块 * 4 MB MAXTRANSFERSIZE）。 块 blob 支持条带化，因而支持更大的备份大小。  
+-   SQL Server 将使用页 blob 支持的最大备份大小限制为 1 TB。 并将使用块 blob 支持的最大备份大小限制为 200 GB 左右（50,000 块 * 4 MB MAXTRANSFERSIZE）。 块 blob 支持条带化，因而支持更大的备份大小。  
   
 -   可使用 TSQL、SMO, PowerShell cmdlet、SQL Server Management Studio 备份或还原向导发出备份或还原语句。   
   
@@ -214,11 +214,11 @@ ms.locfileid: "59582830"
   
  以下步骤介绍为了能够备份到 Microsoft Azure 存储而对 SQL Server Management Studio 中的“备份数据库”任务做出的更改：  
   
-1.  在“对象资源管理器”中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
+1.  在“对象资源管理器”  中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 
-2.  展开“数据库”，右键单击所需数据库，指向“任务”，然后单击“备份...”。
+2.  展开“数据库”  ，右键单击所需数据库，指向“任务”  ，然后单击“备份...”  。
   
-3.  在“常规”页上，“目标”部分中，**URL**选项在“备份到：”下拉列表中可用。  **URL**选项用于向 Microsoft Azure 存储创建备份。 单击“添加”，“选择备份目标”对话框将打开：
+3.  在“常规”  页上，“目标”  部分中，**URL**选项在“备份到：”  下拉列表中可用。  **URL**选项用于向 Microsoft Azure 存储创建备份。 单击  “添加”，  “选择备份目标”对话框将打开：
    
     1.  **Azure 存储容器：** 用于存储备份文件的 Microsoft Azure 存储容器名称。  从下拉列表中选择一个现有容器或手动输入该容器。 
   
@@ -229,9 +229,9 @@ ms.locfileid: "59582830"
     4.  **新建容器：** 用于注册没有共享访问签名的现有容器。  请参阅 [连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
   
 > [!NOTE] 
->  “添加”单个媒体集支持多个备份文件和存储容器。
+>  “添加”  单个媒体集支持多个备份文件和存储容器。
   
- 选择 **URL** 作为目标后，将禁用“媒体选项”页中的某些选项。  以下主题详细介绍“备份数据库”对话框：  
+ 选择 **URL** 作为目标后，将禁用“媒体选项”  页中的某些选项。  以下主题详细介绍“备份数据库”对话框：  
   
  [备份数据库（“常规”页）](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   
@@ -242,7 +242,7 @@ ms.locfileid: "59582830"
  [创建凭据 - 向 Azure 存储进行身份验证](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> 使用维护计划向导将 SQL Server 备份到 URL  
- 与之前介绍的备份任务类似，SQL Server Management Studio 中的维护计划向导包括 **URL** 作为一个目标选项，以及 SQL 凭据等备份到 Microsoft Azure 存储所需的其他支持对象。 它具有相同的功能。有关详细信息，请参阅 [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 中的“定义备份任务”部分。  
+ 与之前介绍的备份任务类似，SQL Server Management Studio 中的维护计划向导包括 **URL** 作为一个目标选项，以及 SQL 凭据等备份到 Microsoft Azure 存储所需的其他支持对象。 它具有相同的功能。有关详细信息，请参阅 [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 中的“定义备份任务”部分  。  
   
 > [!NOTE]  
 >  若要使用共享访问令牌创建条带备份集、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份或 SQL 凭据，则必须在维护计划向导中使用 Transact-SQL、Powershell 或 C#，而不是备份任务。  
@@ -250,13 +250,13 @@ ms.locfileid: "59582830"
 ##  <a name="RestoreSSMS"></a> 使用 SQL Server Management Studio 从 Microsoft Azure 存储还原  
 “还原数据库”任务包括 **URL** 作为要从其还原的设备。  以下步骤描述如何使用还原任务从 Microsoft Azure Blob 存储服务进行还原： 
   
-1.  右键单击“数据库”，然后选择“还原数据库...”。 
+1.  右键单击“数据库”  ，然后选择“还原数据库...”  。 
   
-2.  在“常规”页上，在“源”部分下选择“设备”。
+2.  在“常规”  页上，在“源”  部分下选择“设备”  。
   
-3.  单击“浏览 (...)”按钮以打开“选择备份设备”对话框。 
+3.  单击“浏览 (...)”按钮以打开“选择备份设备”  对话框。 
 
-4.  从“备份媒体类型:”下拉列表中选择 **URL**。  单击“添加”可打开“选择备份文件位置”对话框。
+4.  从“备份媒体类型:”  下拉列表中选择 **URL**。  单击“添加”  可打开“选择备份文件位置”  对话框。
 
     1.  **Azure 存储容器：** 包含备份文件的 Microsoft Azure 存储容器的完全限定名称。  从下拉列表中选择一个现有容器或手动输入该完全限定容器名称。
       
@@ -264,7 +264,7 @@ ms.locfileid: "59582830"
       
     3.  **添加：** 用于注册没有共享访问签名的现有容器。  请参阅 [连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
       
-    4.  **确定：** SQL Server 使用所提供的 SQL 凭据信息连接到 Microsoft Azure 存储，然后打开“在 Microsoft Azure 上定位备份文件”对话框。 此页上显示位于存储容器中的备份文件。 选择要用于还原的文件，然后单击 **“确定”**。 此操作将返回“选择备份设备”对话框，而单击此对话框上的“确定”将返回“还原”主对话框，从中将可完成还原。 
+    4.  **确定：** SQL Server 使用所提供的 SQL 凭据信息连接到 Microsoft Azure 存储，然后打开“在 Microsoft Azure 上定位备份文件”对话框  。 此页上显示位于存储容器中的备份文件。 选择要用于还原的文件，然后单击 **“确定”** 。 此操作将返回“选择备份设备”  对话框，而单击此对话框上的“确定”  将返回“还原”  主对话框，从中将可完成还原。 
   
      [还原数据库（“常规”页）](../../relational-databases/backup-restore/restore-database-general-page.md)  
   

@@ -23,6 +23,92 @@
           href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
         - name: SQL Server 2016 中 SQL Server Reporting Services 的行为更改
           href: ../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
+- name: 教程
+  items:
+    - name: 报表设计器教程
+      items:
+        - name: 报表设计器教程概述
+          href: ../reporting-services/reporting-services-tutorials-ssrs.md
+        - name: 创建基本表报表（SSRS 教程）
+          href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
+          items:
+            - name: 第 1 课：创建报表服务器项目
+              href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
+            - name: 第 2 课：指定连接信息
+              href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
+            - name: 第 3 课：为表报表定义数据集
+              href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
+            - name: 第 4 课：将表添加到报表
+              href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
+            - name: 第 5 课：设置报表格式
+              href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
+            - name: 第 6 课：添加分组和总计
+              href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
+        - name: 创建数据驱动订阅（SSRS 教程）
+          href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
+          items:
+            - name: 第 1 课：创建示例订阅服务器数据库
+              href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
+            - name: 第 2 课：修改报表数据源属性
+              href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
+            - name: 第 3 课：定义数据驱动订阅
+              href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
+        - name: 使用 ReportViewer 创建带有参数的钻取 (RDLC) 报表（SSRS 教程）
+          href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
+          items:
+            - name: 第 1 课：创建新网站
+              href: ../reporting-services/lesson-1-create-a-new-web-site.md
+            - name: 第 2 课：定义用于父报表的数据连接和数据表
+              href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
+            - name: 第 3 课：使用报表向导设计父报表
+              href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
+            - name: 第 4 课：定义用于子报表的数据连接和数据表
+              href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
+            - name: 第 5 课：使用报表向导设计子报表
+              href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
+            - name: 第 6 课：向应用程序添加 ReportViewer 控件
+              href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
+            - name: 第 7 课：在父报表上添加钻取操作
+              href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
+            - name: 第 8 课：创建数据筛选器
+              href: ../reporting-services/lesson-8-create-a-data-filter.md
+            - name: 第 9 课：生成并运行应用程序
+              href: ../reporting-services/lesson-9-build-and-run-the-application.md
+    - name: 报表生成器教程
+      href: ../reporting-services/report-builder-tutorials.md
+      items:
+        - name: 教程：脱机创建快速图表报表
+          href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
+        - name: 教程先决条件
+          href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
+        - name: 获取数据连接的备选方法（报表生成器）
+          href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
+        - name: 教程：创建基本表报表
+          href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
+        - name: 教程：创建矩阵报表
+          href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
+        - name: 教程：创建自由格式的报表
+          href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
+        - name: 教程：设置文本格式（报表生成器）
+          href: ../reporting-services/tutorial-format-text-report-builder.md
+        - name: 教程：向报表添加柱形图（报表生成器）
+          href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
+        - name: 教程：向报表添加饼图（报表生成器）
+          href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
+        - name: 教程：向报表添加条形图（报表生成器）
+          href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
+        - name: 教程：向报表添加迷你图（报表生成器）
+          href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
+        - name: 教程：向报表添加 KPI
+          href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
+        - name: 教程：地图报表
+          href: ../reporting-services/tutorial-map-report-report-builder.md
+        - name: 教程：向报表添加参数（报表生成器）
+          href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
+        - name: 教程：创建钻取报表和主报表
+          href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
+        - name: 教程：表达式简介
+          href: ../reporting-services/tutorial-introducing-expressions.md
 - name: 规划
   items:
     - name: 选择 BI 工具进行分析和报告
@@ -31,115 +117,121 @@
       href: ../reporting-services/browser-support-for-reporting-services-and-power-view.md
     - name: 报表设计和报表部署规划
       href: ../reporting-services/plan-for-report-design-and-report-deployment-reporting-services.md
+    - name: 规划报表
+      href: ../reporting-services/report-design/planning-a-report-report-builder.md
+    - name: 报表设计提示
+      href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
     - name: SQL Server 各版本中的 Reporting Services 功能
       href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: 安装 Reporting Services 2017
-  href: ../reporting-services/install-windows/install-reporting-services.md
+- name: 安装 Reporting Services
   items:
-    - name: 查找 Reporting Services 2017 的产品密钥
-      href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
-- name: 在本机模式下安装 Reporting Services 2016
-  href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
-  items:
-    - name: 执行 Reporting Services 的“仅文件”安装
-      href: ../reporting-services/install-windows/files-only-installation-reporting-services.md
-    - name: 并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）
-      href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
-    - name: 在 SQL Server 故障转移群集中承载报表服务器数据库
-      href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-    - name: Reporting Services 配置管理器（本机节点）
-      href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+    - name: 安装 Reporting Services 2017
+      href: ../reporting-services/install-windows/install-reporting-services.md
       items:
-        - name: 配置报表服务器服务帐户（SSRS 配置管理器）
-          href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-        - name: 配置报表服务器 URL（SSRS 配置管理器）
-          href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
+        - name: 查找 Reporting Services 2017 的产品密钥
+          href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
+    - name: 在本机模式下安装 Reporting Services 2016
+      href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
+      items:
+        - name: 执行 Reporting Services 的“仅文件”安装
+          href: ../reporting-services/install-windows/files-only-installation-reporting-services.md
+        - name: 并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）
+          href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
+        - name: 在 SQL Server 故障转移群集中承载报表服务器数据库
+          href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
+        - name: Reporting Services 配置管理器（本机节点）
+          href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
           items:
-            - name: 关于 URL 预留和注册（SSRS 配置管理器）
-              href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-            - name: 配置 URL（SSRS 配置管理器）
-              href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-            - name: URL 预留语法（SSRS 配置管理器）
-              href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-            - name: 配置文件中的 URL（SSRS 配置管理器）
-              href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-            - name: 多实例报表服务器部署的 URL 预留（SSRS 配置管理器）
-              href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
-        - name: 创建数据库
-          href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
-        - name: 创建本机模式数据库
-          href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
-        - name: 配置报表服务器数据库连接
-          href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
-        - name: 电子邮件设置 - Reporting Services 本机模式（配置管理器）
-          href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-        - name: 配置无人参与的执行帐户（SSRS 配置管理器）
-          href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
-        - name: SSRS 加密密钥 - 管理加密密钥
-          href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
-          items:
-            - name: SSRS 加密密钥 - 初始化报表服务器
-              href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
-            - name: SSRS 加密密钥 - 存储加密的报表服务器数据
-              href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
-            - name: SSRS 加密密钥 - 备份和还原
-              href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
-            - name: SSRS 加密密钥 - 删除并重新创建
-              href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
-            - name: SSRS 加密密钥 - 扩展部署的添加和删除
-              href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
-        - name: 订阅设置和文件共享帐户（配置管理器）
-          href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-        - name: 配置本机模式报表服务器扩展部署（SSRS 配置管理器）
-          href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
-        - name: Power BI 集成
-          href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
-- name: 在 SharePoint 模式下安装 Reporting Services 2016
-  href: ../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
-  items:
-    - name: 支持的 SharePoint 和 Reporting Services 服务器及外接程序的组合 (SQL Server 2016)
-      href: ../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
-    - name: 用于 SharePoint 的 SSRS 外接程序的位置
-      href: ../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
-    - name: 在 SharePoint 模式下安装第一个报表服务器
-      href: ../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md
-    - name: 安装或卸载用于 SharePoint 的 Reporting Services 外接程序
-      href: ../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
-    - name: 向场中添加另一个报表服务器（SSRS 扩展）
-      href: ../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
-    - name: 向场中添加另一个 Reporting Services Web 前端
-      href: ../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
-    - name: 为 Reporting Services 服务应用程序配置电子邮件
-      href: ../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
-    - name: 用于 SSRS 服务应用程序的设置订阅和警报
-      href: ../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
-    - name: Claims to Windows Token Service (c2WTS) 和 SSRS
-      href: ../reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md
-- name: 在命令提示符处安装 Reporting Services
-  href: ../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
-- name: 安装报表生成器
-  href: ../reporting-services/install-windows/install-report-builder.md
-- name: 卸载报表生成器
-  href: ../reporting-services/install-windows/uninstall-report-builder.md
-- name: Verify a Reporting Services Installation
-  href: ../reporting-services/install-windows/verify-a-reporting-services-installation.md
-- name: 排除 Reporting Services 安装故障
-  href: ../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md
-- name: Upgrade and Migrate Reporting Services
-  href: ../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
-  items:
-    - name: 迁移 Reporting Services 安装（本机模式）
-      href: ../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
-    - name: 迁移 Reporting Services 安装（SharePoint 模式）
-      href: ../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
-    - name: 本机到 SharePoint 迁移 (SSRS)
-      href: ../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
-    - name: 升级报表服务器数据库
-      href: ../reporting-services/install-windows/upgrade-a-report-server-database.md
-    - name: Upgrade Reports
-      href: ../reporting-services/install-windows/upgrade-reports.md
-    - name: Reporting Services 的备份和还原操作
-      href: ../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
+            - name: 配置报表服务器服务帐户（SSRS 配置管理器）
+              href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+            - name: 配置报表服务器 URL（SSRS 配置管理器）
+              href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
+              items:
+                - name: 关于 URL 预留和注册（SSRS 配置管理器）
+                  href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+                - name: 配置 URL（SSRS 配置管理器）
+                  href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+                - name: URL 预留语法（SSRS 配置管理器）
+                  href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+                - name: 配置文件中的 URL（SSRS 配置管理器）
+                  href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+                - name: 多实例报表服务器部署的 URL 预留（SSRS 配置管理器）
+                  href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+            - name: 创建数据库
+              href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
+            - name: 创建本机模式数据库
+              href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+            - name: 配置报表服务器数据库连接
+              href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+            - name: 电子邮件设置 - Reporting Services 本机模式（配置管理器）
+              href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+            - name: 配置无人参与的执行帐户（SSRS 配置管理器）
+              href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+            - name: SSRS 加密密钥 - 管理加密密钥
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+              items:
+                - name: SSRS 加密密钥 - 初始化报表服务器
+                  href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+                - name: SSRS 加密密钥 - 存储加密的报表服务器数据
+                  href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+                - name: SSRS 加密密钥 - 备份和还原
+                  href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+                - name: SSRS 加密密钥 - 删除并重新创建
+                  href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+                - name: SSRS 加密密钥 - 扩展部署的添加和删除
+                  href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+            - name: 订阅设置和文件共享帐户（配置管理器）
+              href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
+            - name: 配置本机模式报表服务器扩展部署（SSRS 配置管理器）
+              href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+            - name: Power BI 集成
+              href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
+    - name: 在 SharePoint 模式下安装 Reporting Services 2016
+      href: ../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
+      items:
+        - name: 支持的 SharePoint 和 Reporting Services 服务器及外接程序的组合 (SQL Server 2016)
+          href: ../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
+        - name: 用于 SharePoint 的 SSRS 外接程序的位置
+          href: ../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
+        - name: 在 SharePoint 模式下安装第一个报表服务器
+          href: ../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md
+        - name: 安装或卸载用于 SharePoint 的 Reporting Services 外接程序
+          href: ../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+        - name: 向场中添加另一个报表服务器（SSRS 扩展）
+          href: ../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
+        - name: 向场中添加另一个 Reporting Services Web 前端
+          href: ../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
+        - name: 为 Reporting Services 服务应用程序配置电子邮件
+          href: ../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
+        - name: 用于 SSRS 服务应用程序的设置订阅和警报
+          href: ../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
+        - name: Claims to Windows Token Service (c2WTS) 和 SSRS
+          href: ../reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md
+    - name: 在命令提示符处安装 Reporting Services
+      href: ../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
+    - name: 安装报表生成器
+      href: ../reporting-services/install-windows/install-report-builder.md
+    - name: 卸载报表生成器
+      href: ../reporting-services/install-windows/uninstall-report-builder.md
+    - name: Verify a Reporting Services Installation
+      href: ../reporting-services/install-windows/verify-a-reporting-services-installation.md
+    - name: 排除 Reporting Services 安装故障
+      href: ../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md
+    - name: Upgrade and Migrate Reporting Services
+      href: ../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
+      items:
+        - name: 迁移 Reporting Services 安装（本机模式）
+          href: ../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
+        - name: 迁移 Reporting Services 安装（SharePoint 模式）
+          href: ../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
+        - name: 本机到 SharePoint 迁移 (SSRS)
+          href: ../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
+        - name: 升级报表服务器数据库
+          href: ../reporting-services/install-windows/upgrade-a-report-server-database.md
+        - name: Upgrade Reports
+          href: ../reporting-services/install-windows/upgrade-reports.md
+        - name: Reporting Services 的备份和还原操作
+          href: ../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
 - name: Web 门户
   href: ../reporting-services/web-portal-ssrs-native-mode.md
   items:
@@ -157,133 +249,136 @@
       href: ../reporting-services/working-with-kpis-in-reporting-services.md
     - name: 我的 Power BI 集成设置
       href: ../reporting-services/my-settings-for-power-bi-integration-web-portal.md
-- name: Reporting Services 报表服务器本机模式概述
-  href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
-- name: 配置和管理报表服务器（SSRS 本机模式）
-  href: ../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md
+- name: 报表服务器本机模式
   items:
-    - name: 配置报表服务器
-      href: ../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md
-    - name: 配置 Web 门户
-      href: ../reporting-services/report-server/configure-web-portal.md
-    - name: 管理 Reporting Services 本机模式报表服务器
-      href: ../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md
+    - name: 报表服务器本机模式概述
+      href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
+    - name: 比较 SSRS 报表服务器
+      href: ../reporting-services/report-server-sharepoint/reporting-services-report-server.md
+    - name: 配置和管理报表服务器（SSRS 本机模式）
+      href: ../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md
       items:
-        - name: Configure a Firewall for Report Server Access
-          href: ../reporting-services/report-server/configure-a-firewall-for-report-server-access.md
-        - name: 为本地管理配置本机模式报表服务器 (SSRS)
-          href: ../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md
-        - name: 配置报表服务器以进行远程管理
-          href: ../reporting-services/report-server/configure-a-report-server-for-remote-administration.md
-        - name: 在网络负载平衡群集上配置报表服务器
-          href: ../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md
-        - name: 启用远程错误 (Reporting Services)
-          href: ../reporting-services/report-server/enable-remote-errors-reporting-services.md
-        - name: 为报表服务器注册服务主体名称 (SPN)
-          href: ../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md
-        - name: 打开或关闭 Reporting Services 功能
-          href: ../reporting-services/report-server/turn-reporting-services-features-on-or-off.md
-        - name: 启用报表服务器以允许进行 Power BI 移动访问
-          href: ../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md
-- name: 报表服务器内容管理（SSRS 本机模式）
-  href: ../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md
-  items:
-    - name: 创建、删除或修改文件夹（Web 门户）
-      href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
-    - name: 创建、删除或修改文件夹
-      href: ../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md
-    - name: 移动或删除项
-      href: ../reporting-services/report-server/move-or-delete-an-item-report-manager.md
-    - name: 将文件上载到文件夹
-      href: ../reporting-services/report-server/upload-files-to-a-folder.md
-    - name: 更新资源
-      href: ../reporting-services/report-server/update-a-resource-report-manager.md
-- name: 启动和停止报表服务器服务
-  href: ../reporting-services/report-server/start-and-stop-the-report-server-service.md
-- name: 报表服务器应用程序的应用程序域
-  href: ../reporting-services/report-server/application-domains-for-report-server-applications.md
-- name: 启用和禁用 Reporting Services 的客户端打印
-  href: ../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md
-- name: 启用和禁用“我的报表”
-  href: ../reporting-services/report-server/enable-and-disable-my-reports.md
-- name: 重命名报表服务器计算机
-  href: ../reporting-services/report-server/rename-a-report-server-computer.md
-- name: 报表服务器数据库（SSRS 本机模式）
-  href: ../reporting-services/report-server/report-server-database-ssrs-native-mode.md
-  items:
-    - name: 管理报表服务器数据库（SSRS 本机模式）
-      href: ../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md
-    - name: 将报表服务器数据库移至其他计算机（SSRS 本机模式）
-      href: ../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md
-- name: 配置文件
-  href: ../reporting-services/report-server/reporting-services-configuration-files.md
-  items:
-    - name: RsReportServer.config Configuration File
-      href: ../reporting-services/report-server/rsreportserver-config-configuration-file.md
-    - name: ReportingServicesService 配置文件
-      href: ../reporting-services/report-server/reportingservicesservice-configuration-file.md
-    - name: RSReportDesigner 配置文件
-      href: ../reporting-services/report-server/rsreportdesigner-configuration-file.md
-    - name: 修改 Reporting Services 配置文件 (RSreportserver.config)
-      href: ../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md
-- name: Reporting Services 日志文件和来源
-  href: ../reporting-services/report-server/reporting-services-log-files-and-sources.md
-  items:
-    - name: 报表服务器 ExecutionLog 和 ExecutionLog3 视图
-      href: ../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md
-    - name: SharePoint ULS 日志
-      href: ../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md
-    - name: 报表服务器服务跟踪日志
-      href: ../reporting-services/report-server/report-server-service-trace-log.md
-    - name: 报表服务器 HTTP 日志
-      href: ../reporting-services/report-server/report-server-http-log.md
-    - name: Windows 应用程序日志
-      href: ../reporting-services/report-server/windows-application-log.md
-    - name: 验证报表运行情况
-      href: ../reporting-services/report-server/verifying-a-report-run.md
-- name: 性能、快照、缓存 (Reporting Services)
-  href: ../reporting-services/report-server/performance-snapshots-caching-reporting-services.md
-  items:
-    - name: 监视报表服务器性能
-      href: ../reporting-services/report-server/monitoring-report-server-performance.md
+        - name: 配置报表服务器
+          href: ../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md
+        - name: 配置 Web 门户
+          href: ../reporting-services/report-server/configure-web-portal.md
+        - name: 管理 Reporting Services 本机模式报表服务器
+          href: ../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md
+          items:
+            - name: Configure a Firewall for Report Server Access
+              href: ../reporting-services/report-server/configure-a-firewall-for-report-server-access.md
+            - name: 为本地管理配置本机模式报表服务器 (SSRS)
+              href: ../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md
+            - name: 配置报表服务器以进行远程管理
+              href: ../reporting-services/report-server/configure-a-report-server-for-remote-administration.md
+            - name: 在网络负载平衡群集上配置报表服务器
+              href: ../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md
+            - name: 启用远程错误 (Reporting Services)
+              href: ../reporting-services/report-server/enable-remote-errors-reporting-services.md
+            - name: 为报表服务器注册服务主体名称 (SPN)
+              href: ../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md
+            - name: 打开或关闭 Reporting Services 功能
+              href: ../reporting-services/report-server/turn-reporting-services-features-on-or-off.md
+            - name: 启用报表服务器以允许进行 Power BI 移动访问
+              href: ../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md
+    - name: 报表服务器内容管理（SSRS 本机模式）
+      href: ../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md
       items:
-        - name: MSRS 2011 Web Service 和 MSRS 2011 Windows Service 性能对象的性能计数器（本机模式）
-          href: ../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md
-        - name: MSRS 2011 Web Service SharePoint Mode 性能对象和 MSRS 2011 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）
-          href: ../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
-        - name: 'ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器'
-          href: ../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md
-    - name: 设置报表处理属性
-      href: ../reporting-services/report-server/set-report-processing-properties.md
-    - name: 为报表服务器应用程序配置可用内存
-      href: ../reporting-services/report-server/configure-available-memory-for-report-server-applications.md
-    - name: 为报表和共享数据集处理设置超时值 (SSRS)
-      href: ../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md
-    - name: 处理大型报表
-      href: ../reporting-services/report-server/process-large-reports.md
-    - name: 报表和快照的大小限制
-      href: ../reporting-services/report-server/report-and-snapshot-size-limits.md
-    - name: 缓存报表
-      href: ../reporting-services/report-server/caching-reports-ssrs.md
-    - name: 缓存共享数据集
-      href: ../reporting-services/report-server/cache-shared-datasets-ssrs.md
-    - name: 预加载缓存
-      href: ../reporting-services/report-server/preload-the-cache-report-manager.md
-    - name: 如何缓存一个共享数据集
-      href: ../reporting-services/report-server/cache-a-shared-dataset.md
-    - name: 如何缓存一个报表
-      href: ../reporting-services/report-server/cache-a-report-report-manager.md
-    - name: 创建、修改和删除报表历史记录中的快照
-      href: ../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md
-    - name: 向报表历史记录添加快照
-      href: ../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md
-    - name: 创建报表历史记录
-      href: ../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md
-- name: Reporting Services 报表服务器概述
-  href: ../reporting-services/report-server-sharepoint/reporting-services-report-server.md
-- name: 报表服务器 (SharePoint)
-  href: ../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md
+        - name: 创建、删除或修改文件夹（Web 门户）
+          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
+        - name: 创建、删除或修改文件夹
+          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md
+        - name: 移动或删除项
+          href: ../reporting-services/report-server/move-or-delete-an-item-report-manager.md
+        - name: 将文件上载到文件夹
+          href: ../reporting-services/report-server/upload-files-to-a-folder.md
+        - name: 更新资源
+          href: ../reporting-services/report-server/update-a-resource-report-manager.md
+    - name: 启动和停止报表服务器服务
+      href: ../reporting-services/report-server/start-and-stop-the-report-server-service.md
+    - name: 报表服务器应用程序的应用程序域
+      href: ../reporting-services/report-server/application-domains-for-report-server-applications.md
+    - name: 启用和禁用 Reporting Services 的客户端打印
+      href: ../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md
+    - name: 启用和禁用“我的报表”
+      href: ../reporting-services/report-server/enable-and-disable-my-reports.md
+    - name: 重命名报表服务器计算机
+      href: ../reporting-services/report-server/rename-a-report-server-computer.md
+    - name: 报表服务器数据库（SSRS 本机模式）
+      href: ../reporting-services/report-server/report-server-database-ssrs-native-mode.md
+      items:
+        - name: 管理报表服务器数据库（SSRS 本机模式）
+          href: ../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md
+        - name: 将报表服务器数据库移至其他计算机（SSRS 本机模式）
+          href: ../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md
+    - name: 配置文件
+      href: ../reporting-services/report-server/reporting-services-configuration-files.md
+      items:
+        - name: RsReportServer.config Configuration File
+          href: ../reporting-services/report-server/rsreportserver-config-configuration-file.md
+        - name: ReportingServicesService 配置文件
+          href: ../reporting-services/report-server/reportingservicesservice-configuration-file.md
+        - name: RSReportDesigner 配置文件
+          href: ../reporting-services/report-server/rsreportdesigner-configuration-file.md
+        - name: 修改 Reporting Services 配置文件 (RSreportserver.config)
+          href: ../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md
+    - name: Reporting Services 日志文件和来源
+      href: ../reporting-services/report-server/reporting-services-log-files-and-sources.md
+      items:
+        - name: 报表服务器 ExecutionLog 和 ExecutionLog3 视图
+          href: ../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md
+        - name: SharePoint ULS 日志
+          href: ../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md
+        - name: 报表服务器服务跟踪日志
+          href: ../reporting-services/report-server/report-server-service-trace-log.md
+        - name: 报表服务器 HTTP 日志
+          href: ../reporting-services/report-server/report-server-http-log.md
+        - name: Windows 应用程序日志
+          href: ../reporting-services/report-server/windows-application-log.md
+        - name: 验证报表运行情况
+          href: ../reporting-services/report-server/verifying-a-report-run.md
+    - name: 性能、快照、缓存 (Reporting Services)
+      href: ../reporting-services/report-server/performance-snapshots-caching-reporting-services.md
+      items:
+        - name: 监视报表服务器性能
+          href: ../reporting-services/report-server/monitoring-report-server-performance.md
+          items:
+            - name: MSRS 2011 Web Service 和 MSRS 2011 Windows Service 性能对象的性能计数器（本机模式）
+              href: ../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md
+            - name: MSRS 2011 Web Service SharePoint Mode 性能对象和 MSRS 2011 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）
+              href: ../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
+            - name: 'ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器'
+              href: ../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md
+        - name: 设置报表处理属性
+          href: ../reporting-services/report-server/set-report-processing-properties.md
+        - name: 为报表服务器应用程序配置可用内存
+          href: ../reporting-services/report-server/configure-available-memory-for-report-server-applications.md
+        - name: 为报表和共享数据集处理设置超时值 (SSRS)
+          href: ../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md
+        - name: 处理大型报表
+          href: ../reporting-services/report-server/process-large-reports.md
+        - name: 报表和快照的大小限制
+          href: ../reporting-services/report-server/report-and-snapshot-size-limits.md
+        - name: 缓存报表
+          href: ../reporting-services/report-server/caching-reports-ssrs.md
+        - name: 缓存共享数据集
+          href: ../reporting-services/report-server/cache-shared-datasets-ssrs.md
+        - name: 预加载缓存
+          href: ../reporting-services/report-server/preload-the-cache-report-manager.md
+        - name: 如何缓存一个共享数据集
+          href: ../reporting-services/report-server/cache-a-shared-dataset.md
+        - name: 如何缓存一个报表
+          href: ../reporting-services/report-server/cache-a-report-report-manager.md
+        - name: 创建、修改和删除报表历史记录中的快照
+          href: ../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md
+        - name: 向报表历史记录添加快照
+          href: ../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md
+        - name: 创建报表历史记录
+          href: ../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md
+- name: 报表服务器 SharePoint 模式
   items:
+    - name: 报表服务器 SharePoint 概述
+      href: ../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md
     - name: SharePoint 服务和服务应用程序
       href: ../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md
       items:
@@ -325,32 +420,39 @@
           href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
         - name: 用于报表查看器 Web 部件的 SharePoint 网站设置
           href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
-- name: 高可用性
-  href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
-- name: 启用和禁用 RDL 沙盒
-  href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
-- name: 配置 Reporting Services 以使用使用者可选名称
-  href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
+    - name: 高可用性
+      href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
+    - name: 启用和禁用 RDL 沙盒
+      href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
+    - name: 配置 Reporting Services 以使用使用者可选名称
+      href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: 固定到 Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
-- name: SQL Server 中的报表生成器概述
-  href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
-- name: 启动报表生成器
-  href: ../reporting-services/report-builder/start-report-builder.md
+- name: Reporting Services (SSRS) 中的报表生成器
   items:
-    - name: 设置报表生成器的默认选项
-      href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
-- name: 教程：脱机创建快速图表报表
-  href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
-- name: 报表设计视图
-  href: ../reporting-services/report-builder/report-design-view-report-builder.md
-  items:
-    - name: 在报表生成器中预览报表
-      href: ../reporting-services/report-builder/previewing-reports-in-report-builder.md
-- name: 共享数据集设计视图
-  href: ../reporting-services/report-builder/shared-dataset-design-view-report-builder.md
-- name: 键盘快捷键
-  href: ../reporting-services/report-builder/keyboard-shortcuts-report-builder.md
+    - name: SQL Server 中的报表生成器概述
+      href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
+    - name: 启动报表生成器
+      href: ../reporting-services/report-builder/start-report-builder.md
+      items:
+        - name: 设置报表生成器的默认选项
+          href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
+    - name: 报表设计视图
+      href: ../reporting-services/report-builder/report-design-view-report-builder.md
+      items:
+        - name: 在报表生成器中预览报表
+          href: ../reporting-services/report-builder/previewing-reports-in-report-builder.md
+    - name: 共享数据集设计视图
+      href: ../reporting-services/report-builder/shared-dataset-design-view-report-builder.md
+    - name: 键盘快捷键
+      href: ../reporting-services/report-builder/keyboard-shortcuts-report-builder.md
+    - name: 保存报表
+      href: ../reporting-services/report-builder/saving-reports-report-builder.md
+      items:
+        - name: 将报表保存到报表服务器
+          href: ../reporting-services/report-builder/save-reports-to-a-report-server-report-builder.md
+        - name: 将报表保存到 SharePoint 库
+          href: ../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md
 - name: 查找、查看和管理报表
   href: ../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md
   items:
@@ -360,8 +462,524 @@
       href: ../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
     - name: “转换 CRI”对话框
       href: ../reporting-services/report-builder/convert-cri-dialog-box-report-builder.md
-- name: 隐藏项（报表生成器和 SSRS）
-  href: ../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md
+- name: 报表设计
+  items:
+    - name: 隐藏项（报表生成器和 SSRS）
+      href: ../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md
+    - name: 报表、报表部件和报表定义
+      href: ../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
+    - name: 数据区域和地图
+      href: ../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md
+    - name: 表、矩阵和列表
+      href: ../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md
+      items:
+        - name: 表
+          href: ../reporting-services/report-design/tables-report-builder-and-ssrs.md
+        - name: 创建矩阵
+          href: ../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md
+        - name: 创建带列表的发票和表单
+          href: ../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
+        - name: Tablix 数据区域
+          href: ../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md
+          items:
+            - name: Tablix 数据区域
+              href: ../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md
+            - name: Tablix 数据区域单元、行和列
+              href: ../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md
+        - name: 准备要在 Tablix 数据区域中显示的数据
+          href: ../reporting-services/report-design/preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md
+        - name: 向 Tablix 数据区域添加数据
+          href: ../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md
+        - name: 利用 Tablix 数据区域的灵活性
+          href: ../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md
+        - name: 控制 Tablix 数据区域在报表页上的显示
+          href: ../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md
+        - name: 控制行标题和列标题
+          href: ../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md
+        - name: 了解组
+          href: ../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md
+        - name: 创建递归层次结构组
+          href: ../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md
+        - name: 添加详细信息组
+          href: ../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md
+        - name: 向组或 Tablix 数据区域添加总计
+          href: ../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md
+        - name: 更改单元中的项
+          href: ../reporting-services/report-design/change-an-item-within-a-cell-report-builder-and-ssrs.md
+        - name: 更改行高或列宽
+          href: ../reporting-services/report-design/change-row-height-or-column-width-report-builder-and-ssrs.md
+        - name: 插入或删除列
+          href: ../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md
+        - name: 插入或删除行
+          href: ../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md
+        - name: 合并数据区域中的单元
+          href: ../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md
+        - name: 创建一个递归层次结构组
+          href: ../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md
+        - name: 在数据区域中添加或删除组
+          href: ../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md
+        - name: 与组一起显示组头和组尾
+          href: ../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md
+        - name: 创建递阶报表
+          href: ../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md
+        - name: 添加、移动或删除表、矩阵或列表
+          href: ../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md
+    - name: 报表部件
+      items:
+        - name: 报表部件简介
+          href: ../reporting-services/report-design/report-parts-report-builder-and-ssrs.md
+        - name: 发布和重新发布报表部件（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md
+        - name: 浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md
+        - name: 报表设计器中的报表部件
+          href: ../reporting-services/report-design/report-parts-in-report-designer-ssrs.md
+        - name: 管理报表部件
+          href: ../reporting-services/report-design/managing-report-parts.md
+    - name: 图表
+      href: ../reporting-services/report-design/charts-report-builder-and-ssrs.md
+      items:
+        - name: 向报表添加图表（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md
+        - name: 图表类型（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/chart-types-report-builder-and-ssrs.md
+          items:
+            - name: 更改图表类型（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md
+            - name: 面积图（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/area-charts-report-builder-and-ssrs.md
+            - name: 条形图（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md
+            - name: 柱形图（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/column-charts-report-builder-and-ssrs.md
+            - name: 折线图（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/line-charts-report-builder-and-ssrs.md
+            - name: 饼图（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md
+            - name: 极坐标图（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md
+            - name: 范围图（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/range-charts-report-builder-and-ssrs.md
+            - name: 散点图（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md
+            - name: 形状图（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md
+            - name: 股价图（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md
+            - name: Reporting Services 中的树形图和旭日图
+              href: ../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md
+        - name: 设置图表格式（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md
+          items:
+            - name: 设置图表上序列颜色的格式（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md
+              items:
+                - name: 对多个形状图指定一致的颜色（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md
+                - name: 使用调色板定义图表上的颜色（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md
+                - name: 通过添加条带线突出显示图表数据（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md
+            - name: 设置图表上轴标签的格式（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md
+              items:
+                - name: 将轴标签的格式设置为日期或货币（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md
+                - name: 图表中的位置标签（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md
+                - name: 指定轴间隔（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md
+                - name: 在图表中添加或删除边距（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md
+                - name: 指定对数刻度（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md
+            - name: 图表图例 - 格式设置
+              href: ../reporting-services/report-design/chart-legend-formatting-report-builder.md
+            - name: 图表图例 - 隐藏项
+              href: ../reporting-services/report-design/chart-legend-hide-items-report-builder.md
+            - name: 图表图例 - 更改项文本
+              href: ../reporting-services/report-design/chart-legend-change-item-text-report-builder.md
+            - name: 设置图表上数据点的格式（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md
+              items:
+                - name: 在序列上显示工具提示（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md
+                - name: 在饼图外显示数据点标签（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md
+                - name: 在饼图上显示百分比值（报表生成器和 SSRS）
+                  href: ../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md
+            - name: 图表效果 - 3D、棱台和其他
+              href: ../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md
+            - name: 图表效果 - 添加 3D 效果
+              href: ../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md
+            - name: 图表效果 - 添加棱台、浮雕或纹理
+              href: ../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md
+            - name: 向图表添加边框（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md
+            - name: 从饼图顶部开始绘制饼图值（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs.md
+        - name: 图表中的空和 Null 数据点（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md
+          items:
+            - name: 向图表添加空点（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md
+        - name: 在图表中显示包含多个数据区域的序列（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md
+          items:
+            - name: 在图表中添加刻度分隔线（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md
+        - name: 图表中的多个序列（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md
+          items:
+            - name: 指定序列的图表区（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/specify-a-chart-area-for-a-series-report-builder-and-ssrs.md
+            - name: 在辅助轴上绘制数据（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md
+        - name: 将多个数据区域链接到同一数据集（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md
+          items:
+            - name: 在矩阵和图表中显示相同数据
+              href: ../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md
+        - name: 在图表中添加或删除组（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md
+        - name: 向图表添加移动平均线（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md
+        - name: 收集饼图上的小切片（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md
+        - name: 图表故障排除（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md
+    - name: 迷你图和数据条
+      href: ../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md
+      items:
+        - name: 添加迷你图和数据条（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md
+        - name: 在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md
+    - name: 仪表
+      href: ../reporting-services/report-design/gauges-report-builder-and-ssrs.md
+      items:
+        - name: 设置仪表刻度格式
+          href: ../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md
+        - name: 设置仪表指针的格式
+          href: ../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md
+        - name: 设置仪表范围格式
+          href: ../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md
+        - name: 向报表添加仪表
+          href: ../reporting-services/report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md
+        - name: 设置仪表的最小值或最大值
+          href: ../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md
+    - name: 指示器
+      href: ../reporting-services/report-design/indicators-report-builder-and-ssrs.md
+      items:
+        - name: 添加或删除指示器
+          href: ../reporting-services/report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md
+        - name: 更改指示器图标和指示器集
+          href: ../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md
+        - name: 设置和配置度量单位
+          href: ../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md
+        - name: 设置同步作用域
+          href: ../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md
+        - name: 使用表达式指定指示器的大小
+          href: ../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
+        - name: 在仪表面板中包括指示器和仪表
+          href: ../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
+    - name: 地图
+      href: ../reporting-services/report-design/maps-report-builder-and-ssrs.md
+      items:
+        - name: 规划地图报表
+          href: ../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md
+        - name: 地图向导和地图层向导
+          href: ../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md
+        - name: 自定义地图或地图层的数据和显示
+          href: ../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md
+        - name: 按规则和分析数据更改多边形、线条和点的显示方式
+          href: ../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md
+        - name: 添加、更改或删除地图或地图层
+          href: ../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md
+        - name: 更改地图图例、色阶和关联的规则
+          href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
+        - name: 向地图添加自定义位置
+          href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
+        - name: 报表故障排除：地图报表
+          href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
+    - name: 图像、文本框、矩形和线条
+      href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
+      items:
+        - name: 文本框（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md
+          items:
+            - name: 添加、移动或删除文本框（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md
+            - name: 设置文本框方向（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md
+            - name: 允许文本框扩大或收缩（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md
+        - name: 矩形和线条（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md
+          items:
+            - name: 添加矩形或容器（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md
+            - name: 添加和修改线条（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md
+            - name: 向报表添加边框（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md
+        - name: 图像（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/images-report-builder-and-ssrs.md
+          items:
+            - name: 添加外部图像（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md
+            - name: 在报表中嵌入图像（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md
+            - name: 添加背景图像（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md
+            - name: 添加数据绑定图像（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md
+    - name: 设置报表项的格式
+      href: ../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md
+      items:
+        - name: 设置文本和占位符的格式（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md
+          items:
+            - name: 设置文本框中文本的格式（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md
+        - name: 将 HTML 导入报表（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md
+          items:
+            - name: 向报表添加 HTML（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md
+        - name: 设置数字和日期的格式（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md
+        - name: 设置线条、颜色和图像的格式（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md
+        - name: 设置报表或文本框的区域设置
+          href: ../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md
+    - name: 报表参数
+      items:
+        - name: 报表参数概述
+          href: ../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md
+        - name: 报表参数概念
+          href: ../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md
+        - name: 添加、更改或删除报表参数
+          href: ../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md
+        - name: 为报表参数添加、更改或删除可用值
+          href: ../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md
+        - name: 为报表参数添加、更改或删除默认值
+          href: ../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md
+        - name: 更改报表参数的顺序
+          href: ../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md
+        - name: 向报表添加级联参数
+          href: ../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md
+        - name: 将多值参数添加到报表
+          href: ../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md
+        - name: 设置已发布报表的参数
+          href: ../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md
+        - name: 自定义报表中的参数窗格
+          href: ../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md
+    - name: 对数据进行筛选、分组和排序
+      href: ../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md
+      items:
+        - name: 组表达式示例
+          href: ../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md
+        - name: 筛选器公式示例
+          href: ../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md
+        - name: 添加数据集筛选器、数据区域筛选器和组筛选器
+          href: ../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md
+        - name: 添加筛选器
+          href: ../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md
+        - name: 对数据区域中的数据进行排序
+          href: ../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md
+        - name: 常用筛选器
+          href: ../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md
+        - name: “分组”窗格
+          href: ../reporting-services/report-design/grouping-pane-report-builder.md
+    - name: 钻取、深化、子报表和嵌套数据区域
+      href: ../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md
+      items:
+        - name: 钻取报表（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md
+          items:
+            - name: 在报表中添加钻取操作（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md
+        - name: 子报表（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/subreports-report-builder-and-ssrs.md
+          items:
+            - name: 添加子报表和参数（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md
+        - name: 深化操作（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md
+          items:
+            - name: 为项添加展开或折叠操作（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md
+        - name: 嵌套数据区域（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md
+        - name: 指定外部项的路径（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md
+    - name: 表达式
+      href: ../reporting-services/report-design/expressions-report-builder-and-ssrs.md
+      items:
+        - name: 添加表达式
+          href: ../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md
+        - name: 表达式示例
+          href: ../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md
+        - name: 在报表中使用表达式
+          href: ../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md
+        - name: 总计、聚合和内置集合的表达式作用域
+          href: ../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md
+        - name: 报表设计器的表达式中的自定义代码和程序集引用
+          href: ../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md
+          items:
+            - name: 向报表添加程序集引用
+              href: ../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md
+            - name: 向报表添加代码
+              href: ../reporting-services/report-design/add-code-to-a-report-ssrs.md
+        - name: 表达式引用
+          href: ../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md
+          items:
+            - name: 报表生成器函数 - 聚合函数参考
+              href: ../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md
+              items:
+                - name: 报表生成器函数 - 聚合函数
+                  href: ../reporting-services/report-design/report-builder-functions-aggregate-function.md
+                - name: 报表生成器函数 - Avg 函数
+                  href: ../reporting-services/report-design/report-builder-functions-avg-function.md
+                - name: 报表生成器函数 - Count 函数
+                  href: ../reporting-services/report-design/report-builder-functions-count-function.md
+                - name: 报表生成器函数 - CountDistinct 函数
+                  href: ../reporting-services/report-design/report-builder-functions-countdistinct-function.md
+                - name: 报表生成器函数 - CountRows 函数
+                  href: ../reporting-services/report-design/report-builder-functions-countrows-function.md
+                - name: 报表生成器函数 - First 函数
+                  href: ../reporting-services/report-design/report-builder-functions-first-function.md
+                - name: 报表生成器函数 - InScope 函数
+                  href: ../reporting-services/report-design/report-builder-functions-inscope-function.md
+                - name: 报表生成器函数 - Last 函数
+                  href: ../reporting-services/report-design/report-builder-functions-last-function.md
+                - name: 报表生成器函数 - Level 函数
+                  href: ../reporting-services/report-design/report-builder-functions-level-function.md
+                - name: 报表生成器函数 - Lookup 函数
+                  href: ../reporting-services/report-design/report-builder-functions-lookup-function.md
+                - name: 报表生成器函数 - LookupSet 函数
+                  href: ../reporting-services/report-design/report-builder-functions-lookupset-function.md
+                - name: 报表生成器函数 - Max 函数
+                  href: ../reporting-services/report-design/report-builder-functions-max-function.md
+                - name: 报表生成器函数 - Min 函数
+                  href: ../reporting-services/report-design/report-builder-functions-min-function.md
+                - name: 报表生成器函数 - Multilookup 函数
+                  href: ../reporting-services/report-design/report-builder-functions-multilookup-function.md
+                - name: 报表生成器函数 - Previous 函数
+                  href: ../reporting-services/report-design/report-builder-functions-previous-function.md
+                - name: 报表生成器函数 - RowNumber 函数
+                  href: ../reporting-services/report-design/report-builder-functions-rownumber-function.md
+                - name: 报表生成器函数 - RunningValue 函数
+                  href: ../reporting-services/report-design/report-builder-functions-runningvalue-function.md
+                - name: 报表生成器函数 - StDev 函数
+                  href: ../reporting-services/report-design/report-builder-functions-stdev-function.md
+                - name: 报表生成器函数 - StDevP 函数
+                  href: ../reporting-services/report-design/report-builder-functions-stdevp-function.md
+                - name: 报表生成器函数 - Sum 函数
+                  href: ../reporting-services/report-design/report-builder-functions-sum-function.md
+                - name: 报表生成器函数 - Union 函数
+                  href: ../reporting-services/report-design/report-builder-functions-union-function.md
+                - name: 报表生成器函数 - Var 函数
+                  href: ../reporting-services/report-design/report-builder-functions-var-function.md
+                - name: 报表生成器函数 - VarP 函数
+                  href: ../reporting-services/report-design/report-builder-functions-varp-function.md
+            - name: 表达式中的数据类型
+              href: ../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md
+            - name: 表达式中的常量
+              href: ../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md
+            - name: 表达式中的运算符
+              href: ../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md
+            - name: 表达式中的内置集合
+              href: ../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md
+              items:
+                - name: 内置集合 - 全局和用户引用
+                  href: ../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md
+                - name: 内置集合 - 参数集合引用
+                  href: ../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md
+                - name: 内置集合 - 数据集字段集合引用
+                  href: ../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md
+                - name: 内置集合 - 数据源和数据集引用
+                  href: ../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md
+                - name: 内置集合 - 报表和组变量引用
+                  href: ../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md
+                - name: 内置集合 - 报表项集合引用
+                  href: ../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md
+    - name: 交互式排序、文档结构图和链接
+      href: ../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
+      items:
+        - name: 交互式排序（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md
+          items:
+            - name: 向表或矩阵添加交互式排序（报表生成器和 SSRS）
+              href: ../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md
+        - name: 向 URL 添加超链接（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md
+        - name: 向报表添加书签（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md
+        - name: 创建文档结构图（报表生成器和 SSRS）
+          href: ../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md
+    - name: 页面布局和呈现方式
+      href: ../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md
+      items:
+        - name: 呈现行为
+          href: ../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md
+          items:
+            - name: 呈现数据区域
+              href: ../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md
+            - name: 呈现报表项
+              href: ../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md
+            - name: 呈现数据
+              href: ../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md
+        - name: Reporting Services 中的分页方式
+          href: ../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md
+        - name: 页眉和页脚
+          href: ../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md
+        - name: 控制分页符、标题、列和行
+          href: ../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md
+        - name: 添加分页符
+          href: ../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md
+        - name: 在多个页中显示行标题和列标题
+          href: ../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
+        - name: 添加或删除页眉或页脚
+          href: ../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
+        - name: 在滚动报表时保持标题可见
+          href: ../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
+        - name: 显示页码或其他报表属性
+          href: ../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
+        - name: 隐藏第一页或最后一页的页眉或页脚
+          href: ../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md
+- name: Reporting Services 报表
+  items:
+    - name: Reporting Services 报表概述
+      href: ../reporting-services/reports/reporting-services-reports-ssrs.md
+    - name: 发布数据源和报表
+      href: ../reporting-services/reports/publishing-data-sources-and-reports.md
+      items:
+        - name: 预览报表
+          href: ../reporting-services/reports/previewing-reports.md
+        - name: 将报表发布到报表服务器
+          href: ../reporting-services/reports/publishing-reports-to-a-report-server.md
+        - name: 将报表发布到 SharePoint 库
+          href: ../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md
+        - name: 将共享数据源发布到 SharePoint 库
+          href: ../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md
+    - name: 报表定义语言
+      href: ../reporting-services/reports/report-definition-language-ssrs.md
+    - name: 查找报表定义架构版本
+      href: ../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md
+    - name: 在报表中查找文本、数字或日期
+      href: ../reporting-services/reports/find-text-numbers-or-dates-in-a-report.md
+    - name: 配置报表的执行属性
+      href: ../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md
+    - name: 限制报表历史记录
+      href: ../reporting-services/reports/limit-report-history-report-manager.md
+    - name: 打开和关闭报表
+      href: ../reporting-services/reports/open-and-close-a-report-report-manager.md
+    - name: 上载文件或报表
+      href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
+    - name: 创建链接报表
+      href: ../reporting-services/reports/create-a-linked-report.md
 - name: Export Reports
   href: ../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md
   items:
@@ -398,935 +1016,403 @@
       href: ../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md
     - name: 打印报表（SharePoint 模式下的 Reporting Services）
       href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
-- name: 保存报表
-  href: ../reporting-services/report-builder/saving-reports-report-builder.md
+- name: SSRS 中的报表数据
   items:
-    - name: 将报表保存到报表服务器
-      href: ../reporting-services/report-builder/save-reports-to-a-report-server-report-builder.md
-    - name: 将报表保存到 SharePoint 库
-      href: ../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md
-- name: Security
-  href: ../reporting-services/report-builder/security-report-builder.md
-- name: 词汇表（报表生成器）
-  href: ../reporting-services/report-builder/glossary-report-builder.md
-- name: 规划报表
-  href: ../reporting-services/report-design/planning-a-report-report-builder.md
-- name: 报表设计提示
-  href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
-- name: 报表创作概念
-  href: ../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md
-  items:
-    - name: 报表、报表部件和报表定义
-      href: ../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
-    - name: 数据区域和地图
-      href: ../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md
-    - name: 报表参数概念
-      href: ../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md
-- name: 表、矩阵和列表
-  href: ../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md
-  items:
-    - name: 表
-      href: ../reporting-services/report-design/tables-report-builder-and-ssrs.md
-    - name: 创建矩阵
-      href: ../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md
-    - name: 创建带列表的发票和表单
-      href: ../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
-    - name: Tablix 数据区域
-      href: ../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md
+    - name: SSRS 中的报告数据概述
+      href: ../reporting-services/report-data/report-data-ssrs.md
+    - name: Reporting Services 支持的数据源
+      href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
+    - name: 数据连接、数据源和连接字符串（报表生成器和 SSRS）
+      href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
+    - name: 添加和验证数据连接
+      href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
+    - name: 创建、修改和删除共享数据源
+      href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
+    - name: 创建和修改嵌入的数据源
+      href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
+    - name: 转换数据源
+      href: ../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md
+    - name: 来自外部源的数据
       items:
-        - name: Tablix 数据区域
-          href: ../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md
-        - name: Tablix 数据区域单元、行和列
-          href: ../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md
-    - name: 准备要在 Tablix 数据区域中显示的数据
-      href: ../reporting-services/report-design/preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md
-    - name: 向 Tablix 数据区域添加数据
-      href: ../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md
-    - name: 利用 Tablix 数据区域的灵活性
-      href: ../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md
-    - name: 控制 Tablix 数据区域在报表页上的显示
-      href: ../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md
-    - name: 控制行标题和列标题
-      href: ../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md
-    - name: 了解组
-      href: ../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md
-    - name: 创建递归层次结构组
-      href: ../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md
-    - name: 添加详细信息组
-      href: ../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md
-    - name: 向组或 Tablix 数据区域添加总计
-      href: ../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md
-    - name: 更改单元中的项
-      href: ../reporting-services/report-design/change-an-item-within-a-cell-report-builder-and-ssrs.md
-    - name: 更改行高或列宽
-      href: ../reporting-services/report-design/change-row-height-or-column-width-report-builder-and-ssrs.md
-    - name: 插入或删除列
-      href: ../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md
-    - name: 插入或删除行
-      href: ../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md
-    - name: 合并数据区域中的单元
-      href: ../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md
-    - name: 创建一个递归层次结构组
-      href: ../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md
-    - name: 在数据区域中添加或删除组
-      href: ../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md
-    - name: 与组一起显示组头和组尾
-      href: ../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md
-    - name: 创建递阶报表
-      href: ../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md
-    - name: 添加、移动或删除表、矩阵或列表
-      href: ../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md
-- name: 报表部件
-  href: ../reporting-services/report-design/report-parts-report-builder-and-ssrs.md
-  items:
-    - name: 发布和重新发布报表部件（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md
-    - name: 浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md
-- name: 图表
-  href: ../reporting-services/report-design/charts-report-builder-and-ssrs.md
-  items:
-    - name: 向报表添加图表（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md
-    - name: 图表类型（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/chart-types-report-builder-and-ssrs.md
-      items:
-        - name: 更改图表类型（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md
-        - name: 面积图（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/area-charts-report-builder-and-ssrs.md
-        - name: 条形图（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md
-        - name: 柱形图（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/column-charts-report-builder-and-ssrs.md
-        - name: 折线图（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/line-charts-report-builder-and-ssrs.md
-        - name: 饼图（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md
-        - name: 极坐标图（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md
-        - name: 范围图（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/range-charts-report-builder-and-ssrs.md
-        - name: 散点图（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md
-        - name: 形状图（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md
-        - name: 股价图（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md
-        - name: Reporting Services 中的树形图和旭日图
-          href: ../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md
-    - name: 设置图表格式（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md
-      items:
-        - name: 设置图表上序列颜色的格式（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md
+        - name: 从外部数据源中添加数据
+          href: ../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md
+        - name: SQL Server 连接类型
+          href: ../reporting-services/report-data/sql-server-connection-type-ssrs.md
+        - name: 针对 MDX 的 Analysis Services 连接类型
+          href: ../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md
           items:
-            - name: 对多个形状图指定一致的颜色（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md
-            - name: 使用调色板定义图表上的颜色（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md
-            - name: 通过添加条带线突出显示图表数据（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md
-        - name: 设置图表上轴标签的格式（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md
+            - name: Analysis Services 数据库的扩展字段属性
+              href: ../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md
+        - name: Power Pivot 连接类型
+          href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
+        - name: SharePoint 列表连接类型
+          href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
+        - name: SQL Azure 连接类型
+          href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
+        - name: OLE DB 连接类型
+          href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md
+        - name: SQL Server Parallel Data Warehouse 连接类型
+          href: ../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md
+        - name: Teradata 连接类型
+          href: ../reporting-services/report-data/teradata-connection-type-ssrs.md
+        - name: Oracle 连接类型
+          href: ../reporting-services/report-data/oracle-connection-type-ssrs.md
+        - name: SAP NetWeaver BI 连接类型
+          href: ../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md
+        - name: Hyperion Essbase 连接类型
+          href: ../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md
+        - name: ODBC 连接类型
+          href: ../reporting-services/report-data/odbc-connection-type-ssrs.md
+        - name: XML 连接类型
+          href: ../reporting-services/report-data/xml-connection-type-ssrs.md
           items:
-            - name: 将轴标签的格式设置为日期或货币（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md
-            - name: 图表中的位置标签（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md
-            - name: 指定轴间隔（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md
-            - name: 在图表中添加或删除边距（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md
-            - name: 指定对数刻度（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md
-        - name: 图表图例 - 格式设置
-          href: ../reporting-services/report-design/chart-legend-formatting-report-builder.md
-        - name: 图表图例 - 隐藏项
-          href: ../reporting-services/report-design/chart-legend-hide-items-report-builder.md
-        - name: 图表图例 - 更改项文本
-          href: ../reporting-services/report-design/chart-legend-change-item-text-report-builder.md
-        - name: 设置图表上数据点的格式（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md
+            - name: 用于 XML 报表数据的 XML 查询语法
+              href: ../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md
+            - name: 用于 XML 报表数据的元素路径语法
+              href: ../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md
+        - name: 针对 DMX 的 Analysis Services 连接类型
+          href: ../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md
           items:
-            - name: 在序列上显示工具提示（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md
-            - name: 在饼图外显示数据点标签（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md
-            - name: 在饼图上显示百分比值（报表生成器和 SSRS）
-              href: ../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md
-        - name: 图表效果 - 3D、棱台和其他
-          href: ../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md
-        - name: 图表效果 - 添加 3D 效果
-          href: ../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md
-        - name: 图表效果 - 添加棱台、浮雕或纹理
-          href: ../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md
-        - name: 向图表添加边框（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md
-        - name: 从饼图顶部开始绘制饼图值（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs.md
-    - name: 图表中的空和 Null 数据点（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md
-      items:
-        - name: 向图表添加空点（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md
-    - name: 在图表中显示包含多个数据区域的序列（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md
-      items:
-        - name: 在图表中添加刻度分隔线（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md
-    - name: 图表中的多个序列（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md
-      items:
-        - name: 指定序列的图表区（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/specify-a-chart-area-for-a-series-report-builder-and-ssrs.md
-        - name: 在辅助轴上绘制数据（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md
-    - name: 将多个数据区域链接到同一数据集（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md
-      items:
-        - name: 在矩阵和图表中显示相同数据
-          href: ../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md
-    - name: 在图表中添加或删除组（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md
-    - name: 向图表添加移动平均线（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md
-    - name: 收集饼图上的小切片（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md
-    - name: 图表故障排除（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md
-- name: 迷你图和数据条
-  href: ../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md
-  items:
-    - name: 添加迷你图和数据条（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md
-    - name: 在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md
-- name: 仪表
-  href: ../reporting-services/report-design/gauges-report-builder-and-ssrs.md
-  items:
-    - name: 设置仪表刻度格式
-      href: ../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md
-    - name: 设置仪表指针的格式
-      href: ../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md
-    - name: 设置仪表范围格式
-      href: ../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md
-    - name: 向报表添加仪表
-      href: ../reporting-services/report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md
-    - name: 设置仪表的最小值或最大值
-      href: ../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md
-- name: 指示器
-  href: ../reporting-services/report-design/indicators-report-builder-and-ssrs.md
-  items:
-    - name: 添加或删除指示器
-      href: ../reporting-services/report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md
-    - name: 更改指示器图标和指示器集
-      href: ../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md
-    - name: 设置和配置度量单位
-      href: ../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md
-    - name: 设置同步作用域
-      href: ../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md
-    - name: 使用表达式指定指示器的大小
-      href: ../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
-    - name: 在仪表面板中包括指示器和仪表
-      href: ../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
-- name: 地图
-  href: ../reporting-services/report-design/maps-report-builder-and-ssrs.md
-  items:
-    - name: 规划地图报表
-      href: ../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md
-    - name: 地图向导和地图层向导
-      href: ../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md
-    - name: 自定义地图或地图层的数据和显示
-      href: ../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md
-    - name: 按规则和分析数据更改多边形、线条和点的显示方式
-      href: ../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md
-    - name: 添加、更改或删除地图或地图层
-      href: ../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md
-    - name: 更改地图图例、色阶和关联的规则
-      href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
-    - name: 向地图添加自定义位置
-      href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
-    - name: 报表故障排除：地图报表
-      href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
-- name: 图像、文本框、矩形和线条
-  href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
-  items:
-    - name: 文本框（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md
-      items:
-        - name: 添加、移动或删除文本框（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md
-        - name: 设置文本框方向（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md
-        - name: 允许文本框扩大或收缩（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md
-    - name: 矩形和线条（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md
-      items:
-        - name: 添加矩形或容器（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md
-        - name: 添加和修改线条（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md
-        - name: 向报表添加边框（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md
-    - name: 图像（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/images-report-builder-and-ssrs.md
-      items:
-        - name: 添加外部图像（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md
-        - name: 在报表中嵌入图像（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md
-        - name: 添加背景图像（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md
-        - name: 添加数据绑定图像（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md
-- name: 设置报表项的格式
-  href: ../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md
-  items:
-    - name: 设置文本和占位符的格式（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md
-      items:
-        - name: 设置文本框中文本的格式（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md
-    - name: 将 HTML 导入报表（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md
-      items:
-        - name: 向报表添加 HTML（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md
-    - name: 设置数字和日期的格式（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md
-    - name: 设置线条、颜色和图像的格式（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md
-    - name: 设置报表或文本框的区域设置
-      href: ../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md
-- name: 报表参数
-  href: ../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md
-  items:
-    - name: 添加、更改或删除报表参数
-      href: ../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md
-    - name: 为报表参数添加、更改或删除可用值
-      href: ../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md
-    - name: 为报表参数添加、更改或删除默认值
-      href: ../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md
-    - name: 更改报表参数的顺序
-      href: ../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md
-    - name: 向报表添加级联参数
-      href: ../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md
-    - name: 将多值参数添加到报表
-      href: ../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md
-    - name: 设置已发布报表的参数
-      href: ../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md
-    - name: 自定义报表中的参数窗格
-      href: ../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md
-- name: 对数据进行筛选、分组和排序
-  href: ../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md
-  items:
-    - name: 组表达式示例
-      href: ../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md
-    - name: 筛选器公式示例
-      href: ../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md
-    - name: 添加数据集筛选器、数据区域筛选器和组筛选器
-      href: ../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md
-    - name: 添加筛选器
-      href: ../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md
-    - name: 对数据区域中的数据进行排序
-      href: ../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md
-    - name: 常用筛选器
-      href: ../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md
-    - name: “分组”窗格
-      href: ../reporting-services/report-design/grouping-pane-report-builder.md
-- name: 钻取、深化、子报表和嵌套数据区域
-  href: ../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md
-  items:
-    - name: 钻取报表（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md
-      items:
-        - name: 在报表中添加钻取操作（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md
-    - name: 子报表（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/subreports-report-builder-and-ssrs.md
-      items:
-        - name: 添加子报表和参数（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md
-    - name: 深化操作（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md
-      items:
-        - name: 为项添加展开或折叠操作（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md
-    - name: 嵌套数据区域（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md
-    - name: 指定外部项的路径（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md
-- name: 表达式
-  href: ../reporting-services/report-design/expressions-report-builder-and-ssrs.md
-  items:
-    - name: 添加表达式
-      href: ../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md
-    - name: 表达式示例
-      href: ../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md
-    - name: 在报表中使用表达式
-      href: ../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md
-    - name: 总计、聚合和内置集合的表达式作用域
-      href: ../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md
-    - name: 报表设计器的表达式中的自定义代码和程序集引用
-      href: ../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md
-      items:
-        - name: 向报表添加程序集引用
-          href: ../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md
-        - name: 向报表添加代码
-          href: ../reporting-services/report-design/add-code-to-a-report-ssrs.md
-    - name: 表达式引用
-      href: ../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md
-      items:
-        - name: 报表生成器函数 - 聚合函数参考
-          href: ../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md
+            - name: 从数据挖掘模型检索数据 (DMX)
+              href: ../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md
+        - name: 数据处理扩展插件和 .NET Framework 数据访问接口
+          href: ../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md
           items:
-            - name: 报表生成器函数 - 聚合函数
-              href: ../reporting-services/report-design/report-builder-functions-aggregate-function.md
-            - name: 报表生成器函数 - Avg 函数
-              href: ../reporting-services/report-design/report-builder-functions-avg-function.md
-            - name: 报表生成器函数 - Count 函数
-              href: ../reporting-services/report-design/report-builder-functions-count-function.md
-            - name: 报表生成器函数 - CountDistinct 函数
-              href: ../reporting-services/report-design/report-builder-functions-countdistinct-function.md
-            - name: 报表生成器函数 - CountRows 函数
-              href: ../reporting-services/report-design/report-builder-functions-countrows-function.md
-            - name: 报表生成器函数 - First 函数
-              href: ../reporting-services/report-design/report-builder-functions-first-function.md
-            - name: 报表生成器函数 - InScope 函数
-              href: ../reporting-services/report-design/report-builder-functions-inscope-function.md
-            - name: 报表生成器函数 - Last 函数
-              href: ../reporting-services/report-design/report-builder-functions-last-function.md
-            - name: 报表生成器函数 - Level 函数
-              href: ../reporting-services/report-design/report-builder-functions-level-function.md
-            - name: 报表生成器函数 - Lookup 函数
-              href: ../reporting-services/report-design/report-builder-functions-lookup-function.md
-            - name: 报表生成器函数 - LookupSet 函数
-              href: ../reporting-services/report-design/report-builder-functions-lookupset-function.md
-            - name: 报表生成器函数 - Max 函数
-              href: ../reporting-services/report-design/report-builder-functions-max-function.md
-            - name: 报表生成器函数 - Min 函数
-              href: ../reporting-services/report-design/report-builder-functions-min-function.md
-            - name: 报表生成器函数 - Multilookup 函数
-              href: ../reporting-services/report-design/report-builder-functions-multilookup-function.md
-            - name: 报表生成器函数 - Previous 函数
-              href: ../reporting-services/report-design/report-builder-functions-previous-function.md
-            - name: 报表生成器函数 - RowNumber 函数
-              href: ../reporting-services/report-design/report-builder-functions-rownumber-function.md
-            - name: 报表生成器函数 - RunningValue 函数
-              href: ../reporting-services/report-design/report-builder-functions-runningvalue-function.md
-            - name: 报表生成器函数 - StDev 函数
-              href: ../reporting-services/report-design/report-builder-functions-stdev-function.md
-            - name: 报表生成器函数 - StDevP 函数
-              href: ../reporting-services/report-design/report-builder-functions-stdevp-function.md
-            - name: 报表生成器函数 - Sum 函数
-              href: ../reporting-services/report-design/report-builder-functions-sum-function.md
-            - name: 报表生成器函数 - Union 函数
-              href: ../reporting-services/report-design/report-builder-functions-union-function.md
-            - name: 报表生成器函数 - Var 函数
-              href: ../reporting-services/report-design/report-builder-functions-var-function.md
-            - name: 报表生成器函数 - VarP 函数
-              href: ../reporting-services/report-design/report-builder-functions-varp-function.md
-        - name: 表达式中的数据类型
-          href: ../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md
-        - name: 表达式中的常量
-          href: ../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md
-        - name: 表达式中的运算符
-          href: ../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md
-        - name: 表达式中的内置集合
-          href: ../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md
+            - name: 注册标准 .NET Framework 数据访问接口
+              href: ../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md
+    - name: 报表数据集
+      items:
+        - name: 报表数据集概述
+          href: ../reporting-services/report-data/report-datasets-ssrs.md
+        - name: 查询设计工具
+          href: ../reporting-services/report-data/query-design-tools-ssrs.md
           items:
-            - name: 内置集合 - 全局和用户引用
-              href: ../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md
-            - name: 内置集合 - 参数集合引用
-              href: ../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md
-            - name: 内置集合 - 数据集字段集合引用
-              href: ../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md
-            - name: 内置集合 - 数据源和数据集引用
-              href: ../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md
-            - name: 内置集合 - 报表和组变量引用
-              href: ../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md
-            - name: 内置集合 - 报表项集合引用
-              href: ../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md
-- name: 交互式排序、文档结构图和链接
-  href: ../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
+            - name: 在关系查询设计器中生成查询
+              href: ../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md
+            - name: 将查询参数与报表参数相关联
+              href: ../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
+            - name: 在 Analysis Services 的 MDX 查询设计器中定义参数
+              href: ../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md
+            - name: Analysis Services DMX 查询设计器用户界面
+              href: ../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md
+            - name: Analysis Services MDX 查询设计器用户界面
+              href: ../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md
+            - name: 图形查询设计器用户界面
+              href: ../reporting-services/report-data/graphical-query-designer-user-interface.md
+            - name: 关系查询设计器用户界面
+              href: ../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md
+            - name: Hyperion Essbase 查询设计器用户界面
+              href: ../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md
+            - name: SAP NetWeaver BI 查询设计器用户界面
+              href: ../reporting-services/report-data/sap-netweaver-bi-query-designer-user-interface.md
+            - name: SharePoint 列表查询设计器
+              href: ../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md
+            - name: 基于文本的查询设计器用户界面
+              href: ../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md
+        - name: 嵌入数据集和共享数据集
+          href: ../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md
+        - name: 创建共享数据集或嵌入数据集
+          href: ../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md
+        - name: 报表生成器中的报表部件和数据集
+          href: ../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md
+        - name: 管理共享数据集
+          href: ../reporting-services/report-data/manage-shared-datasets.md
+        - name: 在“报表数据”窗格中添加、编辑和刷新字段
+          href: ../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md
+        - name: 向数据集添加筛选器
+          href: ../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md
+        - name: 为多维数据的参数值显示隐藏的数据集
+          href: ../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md
+        - name: 为数据区域设置“无数据”消息
+          href: ../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
+        - name: 数据集字段集合
+          href: ../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md
+        - name: “数据集属性”对话框 -&gt;“选项”
+          href: ../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md
+        - name: “数据集属性”对话框 ->“参数”
+          href: ../reporting-services/report-data/dataset-properties-dialog-box-parameters.md
+        - name: “数据集属性”对话框 -&gt;“查询”
+          href: ../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md
+        - name: 报表的嵌入数据集和共享数据集
+          href: ../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
+- name: SQL Server 移动报表
   items:
-    - name: 交互式排序（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md
+    - name: 使用 SQL Server 移动报表发布服务器创建移动报表
+      href: ../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md
+    - name: SQL Server 移动报表：端到端演练
+      href: ../reporting-services/mobile-reports/sql-server-mobile-reports-end-to-end-walk-through.md
+    - name: 创建 Reporting Services 移动报表
+      href: ../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md
+    - name: Design first or data first when creating in Reporting Services mobile reports
+      href: ../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md
+    - name: Data for Reporting Services mobile reports
+      href: ../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md
       items:
-        - name: 向表或矩阵添加交互式排序（报表生成器和 SSRS）
-          href: ../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md
-    - name: 向 URL 添加超链接（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md
-    - name: 向报表添加书签（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md
-    - name: 创建文档结构图（报表生成器和 SSRS）
-      href: ../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md
-- name: 页面布局和呈现方式
-  href: ../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md
+        - name: 使用模拟数据
+          href: ../reporting-services/mobile-reports/work-with-simulated-data-in-reporting-services-mobile-reports.md
+        - name: Get data from shared datasets
+          href: ../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md
+        - name: Prepare data for Reporting Services mobile reports
+          href: ../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md
+        - name: 为 Reporting Services 移动报表准备 Excel 数据
+          href: ../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md
+        - name: 保留移动报表中 Analysis Services 数据的日期格式
+          href: ../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md
+    - name: 将参数添加到移动报表
+      href: ../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md
+      items:
+        - name: 打开具有特定的查询字符串参数的移动报表
+          href: ../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md
+    - name: 添加从某个移动报表到其他移动报表或 URL 的钻取
+      href: ../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md
+    - name: 使用钻取功能创建选项卡式移动报表 | Reporting Services 移动报表
+      href: ../reporting-services/mobile-reports/create-a-tabbed-mobile-report-by-using-drillthrough.md
+    - name: 将导航器添加到移动报表
+      href: ../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md
+    - name: 将视觉对象添加到移动报表
+      href: ../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md
+      items:
+        - name: 在移动报表中按列或行对数据进行分组
+          href: ../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md
+    - name: 向移动报表添加数据网格（表）
+      href: ../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md
+    - name: 向移动报表添加仪表 | Reporting Services
+      href: ../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md
+    - name: 为手机或平板电脑设计移动报表
+      href: ../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md
+    - name: Maps in Reporting Services mobile reports
+      href: ../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md
+      items:
+        - name: Custom maps in Reporting Services mobile reports
+          href: ../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md
+        - name: 向 Reporting Services 移动报表添加自定义地图
+          href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
+- name: Reporting Services 安全性和保护
   items:
-    - name: 呈现行为
-      href: ../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md
+    - name: Security
+      href: ../reporting-services/report-builder/security-report-builder.md
+    - name: Reporting Services 安全性和保护概述
+      href: ../reporting-services/security/reporting-services-security-and-protection.md
+    - name: Reporting Services 针对验证的扩展保护
+      href: ../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md
+    - name: 针对报表服务器的身份验证
+      href: ../reporting-services/security/authentication-with-the-report-server.md
       items:
-        - name: 呈现数据区域
-          href: ../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md
-        - name: 呈现报表项
-          href: ../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md
-        - name: 呈现数据
-          href: ../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md
-    - name: Reporting Services 中的分页方式
-      href: ../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md
-    - name: 页眉和页脚
-      href: ../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md
-    - name: 控制分页符、标题、列和行
-      href: ../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md
-    - name: 添加分页符
-      href: ../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md
-    - name: 在多个页中显示行标题和列标题
-      href: ../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
-    - name: 添加或删除页眉或页脚
-      href: ../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
-    - name: 在滚动报表时保持标题可见
-      href: ../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
-    - name: 显示页码或其他报表属性
-      href: ../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
-    - name: 隐藏第一页或最后一页的页眉或页脚
-      href: ../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md
-- name: 报表设计器中的报表部件
-  href: ../reporting-services/report-design/report-parts-in-report-designer-ssrs.md
-- name: 管理报表部件
-  href: ../reporting-services/report-design/managing-report-parts.md
-- name: Reporting Services 报表概述
-  href: ../reporting-services/reports/reporting-services-reports-ssrs.md
-- name: 发布数据源和报表
-  href: ../reporting-services/reports/publishing-data-sources-and-reports.md
+        - name: 在报表服务器上配置 Windows 身份验证
+          href: ../reporting-services/security/configure-windows-authentication-on-the-report-server.md
+        - name: 在报表服务器上配置基本身份验证
+          href: ../reporting-services/security/configure-basic-authentication-on-the-report-server.md
+        - name: 在报表服务器上配置自定义身份验证或窗体身份验证
+          href: ../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md
+        - name: 配置 Web 门户以传递自定义身份验证 Cookie
+          href: ../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md
+    - name: 角色和权限
+      href: ../reporting-services/security/roles-and-permissions-reporting-services.md
+      items:
+        - name: 授予用户对报表服务器的访问权限
+          href: ../reporting-services/security/grant-user-access-to-a-report-server.md
+        - name: 授予对本机模式报表服务器的权限
+          href: ../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md
+          items:
+            - name: 安全对象
+              href: ../reporting-services/security/securable-items.md
+            - name: 任务和权限
+              href: ../reporting-services/security/tasks-and-permissions.md
+            - name: 任务和权限 - 项级任务
+              href: ../reporting-services/security/tasks-and-permissions-item-level-tasks.md
+            - name: 任务和权限 - 系统级任务
+              href: ../reporting-services/security/tasks-and-permissions-system-level-tasks.md
+            - name: 创建和管理角色分配
+              href: ../reporting-services/security/create-and-manage-role-assignments.md
+            - name: 保护文件夹
+              href: ../reporting-services/security/secure-folders.md
+            - name: 保护报表和资源
+              href: ../reporting-services/security/secure-reports-and-resources.md
+            - name: 保护共享数据源项
+              href: ../reporting-services/security/secure-shared-data-source-items.md
+            - name: 保护共享数据集项
+              href: ../reporting-services/security/secure-shared-dataset-items.md
+            - name: 保护“我的报表”
+              href: ../reporting-services/security/secure-my-reports.md
+            - name: 创建 RSExecRole
+              href: ../reporting-services/security/create-the-rsexecrole.md
+            - name: 角色定义
+              href: ../reporting-services/security/role-definitions.md
+            - name: 角色定义 - 创建、删除或修改
+              href: ../reporting-services/security/role-definitions-create-delete-or-modify.md
+            - name: 角色定义 - 预定义角色
+              href: ../reporting-services/security/role-definitions-predefined-roles.md
+            - name: 角色分配
+              href: ../reporting-services/security/role-assignments.md
+            - name: 角色分配 - 修改或删除
+              href: ../reporting-services/security/role-assignments-modify-or-delete.md
+        - name: 在 SharePoint 站点上授予对报表服务器项的权限
+          href: ../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md
+          items:
+            - name: 将 Windows SharePoint Services 中的内置安全性用于报表服务器项
+              href: ../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
+            - name: Reporting Services 中的角色和任务与 SharePoint 组和权限的比较
+              href: ../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
+            - name: 报表服务器项的 SharePoint 站点和列表权限参考
+              href: ../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md
+            - name: 在 SharePoint Web 应用程序中设置报表服务器操作的权限
+              href: ../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
+            - name: 在 SharePoint 站点上为报表服务器项设置权限
+              href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
+    - name: 配置本机模式报表服务器上的 SSL 连接
+      href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
+- name: 报表订阅
   items:
-    - name: 预览报表
-      href: ../reporting-services/reports/previewing-reports.md
-    - name: 将报表发布到报表服务器
-      href: ../reporting-services/reports/publishing-reports-to-a-report-server.md
-    - name: 将报表发布到 SharePoint 库
-      href: ../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md
-    - name: 将共享数据源发布到 SharePoint 库
-      href: ../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md
-- name: 报表定义语言
-  href: ../reporting-services/reports/report-definition-language-ssrs.md
-- name: 查找报表定义架构版本
-  href: ../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md
-- name: 在报表中查找文本、数字或日期
-  href: ../reporting-services/reports/find-text-numbers-or-dates-in-a-report.md
-- name: 配置报表的执行属性
-  href: ../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md
-- name: 限制报表历史记录
-  href: ../reporting-services/reports/limit-report-history-report-manager.md
-- name: 打开和关闭报表
-  href: ../reporting-services/reports/open-and-close-a-report-report-manager.md
-- name: 上载文件或报表
-  href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
-- name: 创建链接报表
-  href: ../reporting-services/reports/create-a-linked-report.md
-- name: SSRS 中的报告数据概述
-  href: ../reporting-services/report-data/report-data-ssrs.md
-- name: Reporting Services 支持的数据源
-  href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
-- name: 数据连接、数据源和连接字符串（报表生成器和 SSRS）
-  href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
-- name: 添加和验证数据连接
-  href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
-- name: 创建、修改和删除共享数据源
-  href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
-- name: 创建和修改嵌入的数据源
-  href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
-- name: 转换数据源
-  href: ../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md
-- name: 从外部数据源中添加数据
-  href: ../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md
+    - name: SSRS 计划概述
+      href: ../reporting-services/subscriptions/schedules.md
+    - name: 'Create, Modify, and Delete Schedules'
+      href: ../reporting-services/subscriptions/create-modify-and-delete-schedules.md
+    - name: 暂停和恢复共享计划
+      href: ../reporting-services/subscriptions/pause-and-resume-shared-schedules.md
+    - name: 更改报表服务器上的时区和时钟设置
+      href: ../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md
+    - name: 管理运行中的进程
+      href: ../reporting-services/subscriptions/manage-a-running-process.md
+    - name: 订阅和传递
+      href: ../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md
+      items:
+        - name: Reporting Services 中的电子邮件传递
+          href: ../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md
+        - name: 创建和管理 SharePoint 模式报表服务器的订阅
+          href: ../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md
+          items:
+            - name: Reporting Services 中的 SharePoint 库传递
+              href: ../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md
+        - name: 创建和管理本机模式报表服务器的订阅
+          href: ../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md
+          items:
+            - name: 使用我的订阅（本机模式报表服务器）
+              href: ../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md
+        - name: Reporting Services 中的文件共享传递
+          href: ../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md
+        - name: 禁用或暂停报表和订阅处理
+          href: ../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md
+        - name: 数据驱动订阅
+          href: ../reporting-services/subscriptions/data-driven-subscriptions.md
+          items:
+            - name: 创建、修改和删除数据驱动订阅
+              href: ../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md
+            - name: 使用外部数据源提供订阅方数据
+              href: ../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md
+        - name: 监视 Reporting Services 订阅
+          href: ../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md
+        - name: 更改默认 Reporting Services 传递扩展插件
+          href: ../reporting-services/subscriptions/change-the-default-reporting-services-delivery-extension.md
+        - name: Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
+          href: ../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md
+- name: Reporting Services 工具
   items:
-    - name: SQL Server 连接类型
-      href: ../reporting-services/report-data/sql-server-connection-type-ssrs.md
-    - name: 针对 MDX 的 Analysis Services 连接类型
-      href: ../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md
+    - name: Reporting Services 工具概述
+      href: ../reporting-services/tools/reporting-services-tools.md
+    - name: SQL Server Data Tools 中的 Reporting Services
+      href: ../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md
       items:
-        - name: Analysis Services 数据库的扩展字段属性
-          href: ../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md
-    - name: Power Pivot 连接类型
-      href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
-    - name: SharePoint 列表连接类型
-      href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
-    - name: SQL Azure 连接类型
-      href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
-    - name: OLE DB 连接类型
-      href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md
-    - name: SQL Server Parallel Data Warehouse 连接类型
-      href: ../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md
-    - name: Teradata 连接类型
-      href: ../reporting-services/report-data/teradata-connection-type-ssrs.md
-    - name: Oracle 连接类型
-      href: ../reporting-services/report-data/oracle-connection-type-ssrs.md
-    - name: SAP NetWeaver BI 连接类型
-      href: ../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md
-    - name: Hyperion Essbase 连接类型
-      href: ../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md
-    - name: ODBC 连接类型
-      href: ../reporting-services/report-data/odbc-connection-type-ssrs.md
-    - name: XML 连接类型
-      href: ../reporting-services/report-data/xml-connection-type-ssrs.md
+        - name: 使用报表设计器设计报表
+          href: ../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+          items:
+            - name: 向报表项目中添加新报表或现有报表
+              href: ../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md
+        - name: SQL Server Data Tools 中的部署和版本支持
+          href: ../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+        - name: '用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) '
+          href: ../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md
+        - name: 设置部署属性
+          href: ../reporting-services/tools/set-deployment-properties-reporting-services.md
+        - name: 在报表设计器中停靠“报表数据”窗格
+          href: ../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md
+        - name: 报表设计器的 F1 帮助
+          href: ../reporting-services/tools/report-designer-f1-help.md
+          items:
+            - name: 文档大纲
+              href: ../reporting-services/tools/document-outline.md
+            - name: “设计”视图
+              href: ../reporting-services/tools/design-view.md
+            - name: “预览”视图
+              href: ../reporting-services/tools/preview-view.md
+            - name: “分组”窗格
+              href: ../reporting-services/tools/grouping-pane.md
+            - name: “项目属性页”对话框
+              href: ../reporting-services/tools/project-property-pages-dialog-box.md
+            - name: “Reporting Services 登录”对话框 (SSRS)
+              href: ../reporting-services/tools/reporting-services-login-dialog-box-ssrs.md
+    - name: SQL Server Management Studio 中的 Reporting Services
+      href: ../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md
       items:
-        - name: 用于 XML 报表数据的 XML 查询语法
-          href: ../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md
-        - name: 用于 XML 报表数据的元素路径语法
-          href: ../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md
-    - name: 针对 DMX 的 Analysis Services 连接类型
-      href: ../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md
+        - name: 设置报表服务器属性
+          href: ../reporting-services/tools/set-report-server-properties-management-studio.md
+        - name: 在 Management Studio 中连接到报表服务器
+          href: ../reporting-services/tools/connect-to-a-report-server-in-management-studio.md
+        - name: 删除项
+          href: ../reporting-services/tools/delete-an-item-management-studio.md
+        - name: Management Studio 中报表服务器的 F1 帮助
+          href: ../reporting-services/tools/report-server-in-management-studio-f1-help.md
+          items:
+            - name: 取消报表服务器作业
+              href: ../reporting-services/tools/cancel-report-server-jobs-management-studio.md
+            - name: 删除目录项
+              href: ../reporting-services/tools/delete-catalog-items-management-studio.md
+            - name: 作业属性
+              href: ../reporting-services/tools/job-properties-management-studio.md
+            - name: 新建共享计划
+              href: ../reporting-services/tools/new-shared-schedule-management-studio.md
+            - name: 新建系统角色
+              href: ../reporting-services/tools/new-system-role-management-studio.md
+            - name: 新建用户角色
+              href: ../reporting-services/tools/new-user-role-management-studio.md
+            - name: 计划属性（“常规”页）
+              href: ../reporting-services/tools/schedule-properties-general-page.md
+            - name: 计划属性（“报表”页）
+              href: ../reporting-services/tools/schedule-properties-reports-page.md
+            - name: 服务器属性（“常规”页）
+              href: ../reporting-services/tools/report-server-properties-general-page.md
+            - name: 服务器属性（“执行”页）
+              href: ../reporting-services/tools/server-properties-execution-page.md
+            - name: 服务器属性（“历史记录”页）
+              href: ../reporting-services/tools/server-properties-history-page.md
+            - name: 服务器属性（“日志记录”页）
+              href: ../reporting-services/tools/server-properties-logging-page.md
+            - name: 服务器属性（“安全性”页）
+              href: ../reporting-services/tools/server-properties-security-page-reporting-services.md
+            - name: 服务器属性（“高级”页）
+              href: ../reporting-services/tools/server-properties-advanced-page-reporting-services.md
+            - name: 系统角色属性
+              href: ../reporting-services/tools/system-role-properties-management-studio.md
+            - name: 用户角色属性
+              href: ../reporting-services/tools/user-role-properties-management-studio.md
+    - name: 报表生成器创作环境
+      href: ../reporting-services/tools/report-builder-authoring-environment-ssrs.md
+    - name: 脚本编写和带 Reporting Services 的 PowerShell
+      href: ../reporting-services/tools/scripting-and-powershell-with-reporting-services.md
       items:
-        - name: 从数据挖掘模型检索数据 (DMX)
-          href: ../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md
-    - name: 数据处理扩展插件和 .NET Framework 数据访问接口
-      href: ../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md
+        - name: 使用 rs.exe 实用工具和 Web 服务编写脚本
+          href: ../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md
+          items:
+            - name: 设置 Reporting Services 脚本文件的格式
+              href: ../reporting-services/tools/format-a-reporting-services-script-file.md
+            - name: 运行 Reporting Services 脚本文件
+              href: ../reporting-services/tools/run-a-reporting-services-script-file.md
+        - name: 为部署和管理任务编写脚本
+          href: ../reporting-services/tools/script-deployment-and-administrative-tasks.md
+        - name: 用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本
+          href: ../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+        - name: 访问 Reporting Services WMI 提供程序
+          href: ../reporting-services/tools/access-the-reporting-services-wmi-provider.md
+    - name: 报表服务器命令提示实用工具
+      href: ../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md
       items:
-        - name: 注册标准 .NET Framework 数据访问接口
-          href: ../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md
-- name: 管理报表数据源
-  href: ../reporting-services/report-data/manage-report-data-sources.md
-- name: 为报表数据源指定凭据和连接信息
-  href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
-- name: 在 Reporting Services 数据源中存储凭据
-  href: ../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md
-- name: 从 SharePoint 站点更新报表数据源的凭据
-  href: ../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md
-- name: 指定用于自定义数据处理扩展插件的连接
-  href: ../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md
-- name: 将报表或模型绑定到共享数据源
-  href: ../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md
-- name: 配置报表的数据源属性
-  href: ../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md
-- name: 将 Office 数据连接 (.odc) 用于报表
-  href: ../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md
-- name: “报表数据”窗格
-  href: ../reporting-services/report-data/report-data-pane.md
-- name: 报表数据集
-  href: ../reporting-services/report-data/report-datasets-ssrs.md
-  items:
-    - name: 查询设计工具
-      href: ../reporting-services/report-data/query-design-tools-ssrs.md
-      items:
-        - name: 在关系查询设计器中生成查询
-          href: ../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md
-        - name: 将查询参数与报表参数相关联
-          href: ../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
-        - name: 在 Analysis Services 的 MDX 查询设计器中定义参数
-          href: ../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md
-        - name: Analysis Services DMX 查询设计器用户界面
-          href: ../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md
-        - name: Analysis Services MDX 查询设计器用户界面
-          href: ../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md
-        - name: 图形查询设计器用户界面
-          href: ../reporting-services/report-data/graphical-query-designer-user-interface.md
-        - name: 关系查询设计器用户界面
-          href: ../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md
-        - name: Hyperion Essbase 查询设计器用户界面
-          href: ../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md
-        - name: SAP NetWeaver BI 查询设计器用户界面
-          href: ../reporting-services/report-data/sap-netweaver-bi-query-designer-user-interface.md
-        - name: SharePoint 列表查询设计器
-          href: ../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md
-        - name: 基于文本的查询设计器用户界面
-          href: ../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md
-    - name: 嵌入数据集和共享数据集
-      href: ../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md
-    - name: 创建共享数据集或嵌入数据集
-      href: ../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md
-    - name: 报表生成器中的报表部件和数据集
-      href: ../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md
-    - name: 管理共享数据集
-      href: ../reporting-services/report-data/manage-shared-datasets.md
-    - name: 在“报表数据”窗格中添加、编辑和刷新字段
-      href: ../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md
-    - name: 向数据集添加筛选器
-      href: ../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md
-    - name: 为多维数据的参数值显示隐藏的数据集
-      href: ../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md
-    - name: 为数据区域设置“无数据”消息
-      href: ../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
-    - name: 数据集字段集合
-      href: ../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md
-    - name: “数据集属性”对话框 -&gt;“选项”
-      href: ../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md
-    - name: “数据集属性”对话框 ->“参数”
-      href: ../reporting-services/report-data/dataset-properties-dialog-box-parameters.md
-    - name: “数据集属性”对话框 -&gt;“查询”
-      href: ../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md
-    - name: 报表的嵌入数据集和共享数据集
-      href: ../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
-- name: 使用 SQL Server 移动报表发布服务器创建移动报表
-  href: ../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md
-- name: SQL Server 移动报表：端到端演练
-  href: ../reporting-services/mobile-reports/sql-server-mobile-reports-end-to-end-walk-through.md
-- name: 创建 Reporting Services 移动报表
-  href: ../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md
-- name: Design first or data first when creating in Reporting Services mobile reports
-  href: ../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md
-- name: Data for Reporting Services mobile reports
-  href: ../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md
-  items:
-    - name: 使用模拟数据
-      href: ../reporting-services/mobile-reports/work-with-simulated-data-in-reporting-services-mobile-reports.md
-    - name: Get data from shared datasets
-      href: ../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md
-    - name: Prepare data for Reporting Services mobile reports
-      href: ../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md
-    - name: 为 Reporting Services 移动报表准备 Excel 数据
-      href: ../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md
-    - name: 保留移动报表中 Analysis Services 数据的日期格式
-      href: ../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md
-- name: 将参数添加到移动报表
-  href: ../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md
-  items:
-    - name: 打开具有特定的查询字符串参数的移动报表
-      href: ../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md
-- name: 添加从某个移动报表到其他移动报表或 URL 的钻取
-  href: ../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md
-- name: 使用钻取功能创建选项卡式移动报表 | Reporting Services 移动报表
-  href: ../reporting-services/mobile-reports/create-a-tabbed-mobile-report-by-using-drillthrough.md
-- name: 将导航器添加到移动报表
-  href: ../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md
-- name: 将视觉对象添加到移动报表
-  href: ../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md
-  items:
-    - name: 在移动报表中按列或行对数据进行分组
-      href: ../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md
-- name: 向移动报表添加数据网格（表）
-  href: ../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md
-- name: 向移动报表添加仪表 | Reporting Services
-  href: ../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md
-- name: 为手机或平板电脑设计移动报表
-  href: ../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md
-- name: Maps in Reporting Services mobile reports
-  href: ../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md
-  items:
-    - name: Custom maps in Reporting Services mobile reports
-      href: ../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md
-    - name: 向 Reporting Services 移动报表添加自定义地图
-      href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
-- name: Reporting Services 安全性和保护概述
-  href: ../reporting-services/security/reporting-services-security-and-protection.md
-- name: Reporting Services 针对验证的扩展保护
-  href: ../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md
-- name: 针对报表服务器的身份验证
-  href: ../reporting-services/security/authentication-with-the-report-server.md
-  items:
-    - name: 在报表服务器上配置 Windows 身份验证
-      href: ../reporting-services/security/configure-windows-authentication-on-the-report-server.md
-    - name: 在报表服务器上配置基本身份验证
-      href: ../reporting-services/security/configure-basic-authentication-on-the-report-server.md
-    - name: 在报表服务器上配置自定义身份验证或窗体身份验证
-      href: ../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md
-    - name: 配置 Web 门户以传递自定义身份验证 Cookie
-      href: ../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md
-- name: 角色和权限
-  href: ../reporting-services/security/roles-and-permissions-reporting-services.md
-  items:
-    - name: 授予用户对报表服务器的访问权限
-      href: ../reporting-services/security/grant-user-access-to-a-report-server.md
-    - name: 授予对本机模式报表服务器的权限
-      href: ../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md
-      items:
-        - name: 安全对象
-          href: ../reporting-services/security/securable-items.md
-        - name: 任务和权限
-          href: ../reporting-services/security/tasks-and-permissions.md
-        - name: 任务和权限 - 项级任务
-          href: ../reporting-services/security/tasks-and-permissions-item-level-tasks.md
-        - name: 任务和权限 - 系统级任务
-          href: ../reporting-services/security/tasks-and-permissions-system-level-tasks.md
-        - name: 创建和管理角色分配
-          href: ../reporting-services/security/create-and-manage-role-assignments.md
-        - name: 保护文件夹
-          href: ../reporting-services/security/secure-folders.md
-        - name: 保护报表和资源
-          href: ../reporting-services/security/secure-reports-and-resources.md
-        - name: 保护共享数据源项
-          href: ../reporting-services/security/secure-shared-data-source-items.md
-        - name: 保护共享数据集项
-          href: ../reporting-services/security/secure-shared-dataset-items.md
-        - name: 保护“我的报表”
-          href: ../reporting-services/security/secure-my-reports.md
-        - name: 创建 RSExecRole
-          href: ../reporting-services/security/create-the-rsexecrole.md
-        - name: 角色定义
-          href: ../reporting-services/security/role-definitions.md
-        - name: 角色定义 - 创建、删除或修改
-          href: ../reporting-services/security/role-definitions-create-delete-or-modify.md
-        - name: 角色定义 - 预定义角色
-          href: ../reporting-services/security/role-definitions-predefined-roles.md
-        - name: 角色分配
-          href: ../reporting-services/security/role-assignments.md
-        - name: 角色分配 - 修改或删除
-          href: ../reporting-services/security/role-assignments-modify-or-delete.md
-    - name: 在 SharePoint 站点上授予对报表服务器项的权限
-      href: ../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md
-      items:
-        - name: 将 Windows SharePoint Services 中的内置安全性用于报表服务器项
-          href: ../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
-        - name: Reporting Services 中的角色和任务与 SharePoint 组和权限的比较
-          href: ../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
-        - name: 报表服务器项的 SharePoint 站点和列表权限参考
-          href: ../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md
-        - name: 在 SharePoint Web 应用程序中设置报表服务器操作的权限
-          href: ../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
-        - name: 在 SharePoint 站点上为报表服务器项设置权限
-          href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
-- name: 配置本机模式报表服务器上的 SSL 连接
-  href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
-- name: SSRS 计划概述
-  href: ../reporting-services/subscriptions/schedules.md
-- name: 'Create, Modify, and Delete Schedules'
-  href: ../reporting-services/subscriptions/create-modify-and-delete-schedules.md
-- name: 暂停和恢复共享计划
-  href: ../reporting-services/subscriptions/pause-and-resume-shared-schedules.md
-- name: 更改报表服务器上的时区和时钟设置
-  href: ../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md
-- name: 管理运行中的进程
-  href: ../reporting-services/subscriptions/manage-a-running-process.md
-- name: 订阅和传递
-  href: ../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md
-  items:
-    - name: Reporting Services 中的电子邮件传递
-      href: ../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md
-    - name: 创建和管理 SharePoint 模式报表服务器的订阅
-      href: ../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md
-      items:
-        - name: Reporting Services 中的 SharePoint 库传递
-          href: ../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md
-    - name: 创建和管理本机模式报表服务器的订阅
-      href: ../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md
-      items:
-        - name: 使用我的订阅（本机模式报表服务器）
-          href: ../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md
-    - name: Reporting Services 中的文件共享传递
-      href: ../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md
-    - name: 禁用或暂停报表和订阅处理
-      href: ../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md
-    - name: 数据驱动订阅
-      href: ../reporting-services/subscriptions/data-driven-subscriptions.md
-      items:
-        - name: 创建、修改和删除数据驱动订阅
-          href: ../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md
-        - name: 使用外部数据源提供订阅方数据
-          href: ../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md
-    - name: 监视 Reporting Services 订阅
-      href: ../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md
-    - name: 更改默认 Reporting Services 传递扩展插件
-      href: ../reporting-services/subscriptions/change-the-default-reporting-services-delivery-extension.md
-    - name: Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
-      href: ../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md
-- name: Reporting Services 工具概述
-  href: ../reporting-services/tools/reporting-services-tools.md
-- name: SQL Server Data Tools 中的 Reporting Services
-  href: ../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md
-  items:
-    - name: 使用报表设计器设计报表
-      href: ../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md
-      items:
-        - name: 向报表项目中添加新报表或现有报表
-          href: ../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md
-    - name: SQL Server Data Tools 中的部署和版本支持
-      href: ../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md
-    - name: '用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) '
-      href: ../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md
-    - name: 设置部署属性
-      href: ../reporting-services/tools/set-deployment-properties-reporting-services.md
-    - name: 在报表设计器中停靠“报表数据”窗格
-      href: ../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md
-    - name: 报表设计器的 F1 帮助
-      href: ../reporting-services/tools/report-designer-f1-help.md
-      items:
-        - name: 文档大纲
-          href: ../reporting-services/tools/document-outline.md
-        - name: “设计”视图
-          href: ../reporting-services/tools/design-view.md
-        - name: “预览”视图
-          href: ../reporting-services/tools/preview-view.md
-        - name: “分组”窗格
-          href: ../reporting-services/tools/grouping-pane.md
-        - name: “项目属性页”对话框
-          href: ../reporting-services/tools/project-property-pages-dialog-box.md
-        - name: “Reporting Services 登录”对话框 (SSRS)
-          href: ../reporting-services/tools/reporting-services-login-dialog-box-ssrs.md
-- name: SQL Server Management Studio 中的 Reporting Services
-  href: ../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md
-  items:
-    - name: 设置报表服务器属性
-      href: ../reporting-services/tools/set-report-server-properties-management-studio.md
-    - name: 在 Management Studio 中连接到报表服务器
-      href: ../reporting-services/tools/connect-to-a-report-server-in-management-studio.md
-    - name: 删除项
-      href: ../reporting-services/tools/delete-an-item-management-studio.md
-    - name: Management Studio 中报表服务器的 F1 帮助
-      href: ../reporting-services/tools/report-server-in-management-studio-f1-help.md
-      items:
-        - name: 取消报表服务器作业
-          href: ../reporting-services/tools/cancel-report-server-jobs-management-studio.md
-        - name: 删除目录项
-          href: ../reporting-services/tools/delete-catalog-items-management-studio.md
-        - name: 作业属性
-          href: ../reporting-services/tools/job-properties-management-studio.md
-        - name: 新建共享计划
-          href: ../reporting-services/tools/new-shared-schedule-management-studio.md
-        - name: 新建系统角色
-          href: ../reporting-services/tools/new-system-role-management-studio.md
-        - name: 新建用户角色
-          href: ../reporting-services/tools/new-user-role-management-studio.md
-        - name: 计划属性（“常规”页）
-          href: ../reporting-services/tools/schedule-properties-general-page.md
-        - name: 计划属性（“报表”页）
-          href: ../reporting-services/tools/schedule-properties-reports-page.md
-        - name: 服务器属性（“常规”页）
-          href: ../reporting-services/tools/report-server-properties-general-page.md
-        - name: 服务器属性（“执行”页）
-          href: ../reporting-services/tools/server-properties-execution-page.md
-        - name: 服务器属性（“历史记录”页）
-          href: ../reporting-services/tools/server-properties-history-page.md
-        - name: 服务器属性（“日志记录”页）
-          href: ../reporting-services/tools/server-properties-logging-page.md
-        - name: 服务器属性（“安全性”页）
-          href: ../reporting-services/tools/server-properties-security-page-reporting-services.md
-        - name: 服务器属性（“高级”页）
-          href: ../reporting-services/tools/server-properties-advanced-page-reporting-services.md
-        - name: 系统角色属性
-          href: ../reporting-services/tools/system-role-properties-management-studio.md
-        - name: 用户角色属性
-          href: ../reporting-services/tools/user-role-properties-management-studio.md
-- name: 报表生成器创作环境
-  href: ../reporting-services/tools/report-builder-authoring-environment-ssrs.md
-- name: 脚本编写和带 Reporting Services 的 PowerShell
-  href: ../reporting-services/tools/scripting-and-powershell-with-reporting-services.md
-  items:
-    - name: 使用 rs.exe 实用工具和 Web 服务编写脚本
-      href: ../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md
-      items:
-        - name: 设置 Reporting Services 脚本文件的格式
-          href: ../reporting-services/tools/format-a-reporting-services-script-file.md
-        - name: 运行 Reporting Services 脚本文件
-          href: ../reporting-services/tools/run-a-reporting-services-script-file.md
-    - name: 为部署和管理任务编写脚本
-      href: ../reporting-services/tools/script-deployment-and-administrative-tasks.md
-    - name: 用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本
-      href: ../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
-    - name: 访问 Reporting Services WMI 提供程序
-      href: ../reporting-services/tools/access-the-reporting-services-wmi-provider.md
-- name: 报表服务器命令提示实用工具
-  href: ../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md
-  items:
-    - name: rskeymgmt 实用工具
-      href: ../reporting-services/tools/rskeymgmt-utility-ssrs.md
-    - name: rsconfig 实用工具
-      href: ../reporting-services/tools/rsconfig-utility-ssrs.md
-    - name: RS.exe 实用工具 (SSRS)
-      href: ../reporting-services/tools/rs-exe-utility-ssrs.md
-- name: 如何查找并启动 Reporting Services 工具
-  href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+        - name: rskeymgmt 实用工具
+          href: ../reporting-services/tools/rskeymgmt-utility-ssrs.md
+        - name: rsconfig 实用工具
+          href: ../reporting-services/tools/rsconfig-utility-ssrs.md
+        - name: RS.exe 实用工具 (SSRS)
+          href: ../reporting-services/tools/rs-exe-utility-ssrs.md
+    - name: 如何查找并启动 Reporting Services 工具
+      href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: 数据警报 (SharePoint)
   href: ../reporting-services/reporting-services-data-alerts.md
   items:
@@ -1394,200 +1480,202 @@
       href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
     - name: 删除主体配置文件
       href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
-- name: WMI 提供程序库引用概述
-  href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
-- name: MSReportServer_Instance 类
-  href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-class.md
+- name: WMI 提供程序库引用
   items:
-    - name: MSReportServer_Instance 成员
-      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md
-    - name: MSReportServer_Instance 属性
-      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties.md
+    - name: WMI 提供程序库引用概述
+      href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
+    - name: MSReportServer_Instance 类
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-class.md
       items:
-        - name: MSReportServer_Instance 属性 - EditionID
-          href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md
-        - name: MSReportServer_Instance 属性 - EditionName
-          href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md
-        - name: MSReportServer_Instance 属性 - InstanceID
-          href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md
-        - name: MSReportServer_Instance 属性 - InstanceName
-          href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md
-        - name: MSReportServer_Instance 属性 - IsSharePointIntegrated
-          href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md
-        - name: MSReportServer_Instance 属性 - Version
-          href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md
-    - name: MSReportServer_Instance 方法
-      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods.md
+        - name: MSReportServer_Instance 成员
+          href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md
+        - name: MSReportServer_Instance 属性
+          href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties.md
+          items:
+            - name: MSReportServer_Instance 属性 - EditionID
+              href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md
+            - name: MSReportServer_Instance 属性 - EditionName
+              href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md
+            - name: MSReportServer_Instance 属性 - InstanceID
+              href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md
+            - name: MSReportServer_Instance 属性 - InstanceName
+              href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md
+            - name: MSReportServer_Instance 属性 - IsSharePointIntegrated
+              href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md
+            - name: MSReportServer_Instance 属性 - Version
+              href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md
+        - name: MSReportServer_Instance 方法
+          href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods.md
+          items:
+            - name: MSReportServer_Instance 方法 - GetReportServerUrls
+              href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md
+    - name: MSReportServer_ConfigurationSetting 类
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md
       items:
-        - name: MSReportServer_Instance 方法 - GetReportServerUrls
-          href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md
-- name: MSReportServer_ConfigurationSetting 类
-  href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md
-  items:
-    - name: MSReportServer_ConfigurationSetting 成员
-      href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md
-    - name: MSReportServer_ConfigurationSetting 属性
-      href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md
-      items:
-        - name: ConfigurationSetting 属性 - ConnectionPoolSize
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md
-        - name: ConfigurationSetting 属性 - DatabaseLogonAccount
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md
-        - name: ConfigurationSetting 属性 - DatabaseLogonTimeout
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontimeout.md
-        - name: ConfigurationSetting 属性 - DatabaseLogonType
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md
-        - name: ConfigurationSetting 属性 - DatabaseName
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databasename.md
-        - name: ConfigurationSetting 属性 - DatabaseQueryTimeout
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databasequerytimeout.md
-        - name: ConfigurationSetting 属性 - DatabaseServerName
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaseservername.md
-        - name: ConfigurationSetting 属性 - InstallationID
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-installationid.md
-        - name: ConfigurationSetting 属性 - InstanceName
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-instancename.md
-        - name: ConfigurationSetting 属性 - IsInitialized
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md
-        - name: ConfigurationSetting 属性 - IsSharePointIntegrated
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-issharepointintegrated.md
-        - name: ConfigurationSetting 属性 - IsWebServiceEnabled
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-iswebserviceenabled.md
-        - name: ConfigurationSetting 属性 - IsWindowsServiceEnabled
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-iswindowsserviceenabled.md
-        - name: ConfigurationSetting 属性 - MachineAccountIdentity
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-machineaccountidentity.md
-        - name: ConfigurationSetting 属性 - PathName
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-pathname.md
-        - name: ConfigurationSetting 属性 - SecureConnectionLevel
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-secureconnectionlevel.md
-        - name: ConfigurationSetting 属性 - SenderEmailAddress
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-senderemailaddress.md
-        - name: ConfigurationSetting 属性 - SendUsingSMTPServer
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-sendusingsmtpserver.md
-        - name: ConfigurationSetting 属性 - SMTPServer
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-smtpserver.md
-        - name: ConfigurationSetting 属性 - UnattendedExecutionAccount
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-unattendedexecutionaccount.md
-        - name: ConfigurationSetting 属性 - Version
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-version.md
-        - name: ConfigurationSetting 属性 - VirtualDirectoryReportManager
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-virtualdirectoryreportmanager.md
-        - name: ConfigurationSetting 属性 - VirtualDirectoryReportServer
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-virtualdirectoryreportserver.md
-        - name: ConfigurationSetting 属性 - WindowsServiceIdentityActual
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-windowsserviceidentityactual.md
-        - name: ConfigurationSetting 属性 - WindowsServiceIdentityConfigured
-          href: ../reporting-services/wmi-provider-library-reference/windowsserviceidentityconfigured-property.md
-        - name: ConfigurationSetting 属性 - RSWindowsExtendedProtectionLevel
-          href: ../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionlevel-property.md
-        - name: ConfigurationSetting 属性 - RSWindowsExtendedProtectionScenario
-          href: ../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionscenario-property.md
-    - name: MSReportServer_ConfigurationSetting 方法
-      href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md
-      items:
-        - name: ConfigurationSetting 方法 - BackupEncryptionKey
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md
-        - name: ConfigurationSetting 方法 - CreateSSLCertificateBinding
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md
-        - name: ConfigurationSetting 方法 - DeleteEncryptedInformation
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptedinformation.md
-        - name: ConfigurationSetting 方法 - DeleteEncryptionKey
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md
-        - name: ConfigurationSetting 方法 - GenerateDatabaseCreationScript
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md
-        - name: ConfigurationSetting 方法 - GenerateDatabaseRightsScript
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md
-        - name: ConfigurationSetting 方法 - GenerateDatabaseUpgradeScript
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md
-        - name: ConfigurationSetting 方法 - GetAdminSiteUrl
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-getadminsiteurl.md
-        - name: ConfigurationSetting 方法 - GetDatabaseVersionDisplayName
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-getdatabaseversiondisplayname.md
-        - name: ConfigurationSetting 方法 - InitializeReportServer
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-initializereportserver.md
-        - name: ConfigurationSetting 方法 - ListInstalledSharePointVersions
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listinstalledsharepointversions.md
-        - name: ConfigurationSetting 方法 - ListIPAddresses
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listipaddresses.md
-        - name: ConfigurationSetting 方法 - ListReportServersInDatabase
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listreportserversindatabase.md
-        - name: ConfigurationSetting 方法 - ListReservedURLs
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listreservedurls.md
-        - name: ConfigurationSetting 方法 - ListSSLCertificateBindings
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificatebindings.md
-        - name: ConfigurationSetting 方法 - ListSSLCertificates
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificates.md
-        - name: ConfigurationSetting 方法 - ReencryptSecureInformation
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-reencryptsecureinformation.md
-        - name: ConfigurationSetting 方法 - RemoveSSLCertificateBinding
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removesslcertificatebinding.md
-        - name: ConfigurationSetting 方法 - RemoveUnattendedExecutionAccount
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removeunattendedexecutionaccount.md
-        - name: ConfigurationSetting 方法 - RemoveURL
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removeurl.md
-        - name: ConfigurationSetting 方法 - ReserveURL
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md
-        - name: ConfigurationSetting 方法 - RestoreEncryptionKey
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-restoreencryptionkey.md
-        - name: ConfigurationSetting 方法 - SetDatabaseConnection
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabaseconnection.md
-        - name: ConfigurationSetting 方法 - SetDatabaseLogonTimeout
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabaselogontimeout.md
-        - name: ConfigurationSetting 方法 - SetDatabaseQueryTimeout
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabasequerytimeout.md
-        - name: ConfigurationSetting 方法 - SetEmailConfiguration
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setemailconfiguration.md
-        - name: ConfigurationSetting 方法 - SetSecureConnectionLevel
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md
-        - name: ConfigurationSetting 方法 - SetServiceState
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setservicestate.md
-        - name: ConfigurationSetting 方法 - SetUnattendedExecutionAccount
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setunattendedexecutionaccount.md
-        - name: ConfigurationSetting 方法 - SetVirtualDirectory
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md
-        - name: ConfigurationSetting 方法 - SetWindowsServiceIdentity
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md
-        - name: ConfigurationSetting 方法 - SetExtendedProtectionSettings
-          href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md
+        - name: MSReportServer_ConfigurationSetting 成员
+          href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md
+        - name: MSReportServer_ConfigurationSetting 属性
+          href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md
+          items:
+            - name: ConfigurationSetting 属性 - ConnectionPoolSize
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md
+            - name: ConfigurationSetting 属性 - DatabaseLogonAccount
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md
+            - name: ConfigurationSetting 属性 - DatabaseLogonTimeout
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontimeout.md
+            - name: ConfigurationSetting 属性 - DatabaseLogonType
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md
+            - name: ConfigurationSetting 属性 - DatabaseName
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databasename.md
+            - name: ConfigurationSetting 属性 - DatabaseQueryTimeout
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databasequerytimeout.md
+            - name: ConfigurationSetting 属性 - DatabaseServerName
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaseservername.md
+            - name: ConfigurationSetting 属性 - InstallationID
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-installationid.md
+            - name: ConfigurationSetting 属性 - InstanceName
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-instancename.md
+            - name: ConfigurationSetting 属性 - IsInitialized
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md
+            - name: ConfigurationSetting 属性 - IsSharePointIntegrated
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-issharepointintegrated.md
+            - name: ConfigurationSetting 属性 - IsWebServiceEnabled
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-iswebserviceenabled.md
+            - name: ConfigurationSetting 属性 - IsWindowsServiceEnabled
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-iswindowsserviceenabled.md
+            - name: ConfigurationSetting 属性 - MachineAccountIdentity
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-machineaccountidentity.md
+            - name: ConfigurationSetting 属性 - PathName
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-pathname.md
+            - name: ConfigurationSetting 属性 - SecureConnectionLevel
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-secureconnectionlevel.md
+            - name: ConfigurationSetting 属性 - SenderEmailAddress
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-senderemailaddress.md
+            - name: ConfigurationSetting 属性 - SendUsingSMTPServer
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-sendusingsmtpserver.md
+            - name: ConfigurationSetting 属性 - SMTPServer
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-smtpserver.md
+            - name: ConfigurationSetting 属性 - UnattendedExecutionAccount
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-unattendedexecutionaccount.md
+            - name: ConfigurationSetting 属性 - Version
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-version.md
+            - name: ConfigurationSetting 属性 - VirtualDirectoryReportManager
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-virtualdirectoryreportmanager.md
+            - name: ConfigurationSetting 属性 - VirtualDirectoryReportServer
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-virtualdirectoryreportserver.md
+            - name: ConfigurationSetting 属性 - WindowsServiceIdentityActual
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-windowsserviceidentityactual.md
+            - name: ConfigurationSetting 属性 - WindowsServiceIdentityConfigured
+              href: ../reporting-services/wmi-provider-library-reference/windowsserviceidentityconfigured-property.md
+            - name: ConfigurationSetting 属性 - RSWindowsExtendedProtectionLevel
+              href: ../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionlevel-property.md
+            - name: ConfigurationSetting 属性 - RSWindowsExtendedProtectionScenario
+              href: ../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionscenario-property.md
+        - name: MSReportServer_ConfigurationSetting 方法
+          href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md
+          items:
+            - name: ConfigurationSetting 方法 - BackupEncryptionKey
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md
+            - name: ConfigurationSetting 方法 - CreateSSLCertificateBinding
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md
+            - name: ConfigurationSetting 方法 - DeleteEncryptedInformation
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptedinformation.md
+            - name: ConfigurationSetting 方法 - DeleteEncryptionKey
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md
+            - name: ConfigurationSetting 方法 - GenerateDatabaseCreationScript
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md
+            - name: ConfigurationSetting 方法 - GenerateDatabaseRightsScript
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md
+            - name: ConfigurationSetting 方法 - GenerateDatabaseUpgradeScript
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md
+            - name: ConfigurationSetting 方法 - GetAdminSiteUrl
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-getadminsiteurl.md
+            - name: ConfigurationSetting 方法 - GetDatabaseVersionDisplayName
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-getdatabaseversiondisplayname.md
+            - name: ConfigurationSetting 方法 - InitializeReportServer
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-initializereportserver.md
+            - name: ConfigurationSetting 方法 - ListInstalledSharePointVersions
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listinstalledsharepointversions.md
+            - name: ConfigurationSetting 方法 - ListIPAddresses
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listipaddresses.md
+            - name: ConfigurationSetting 方法 - ListReportServersInDatabase
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listreportserversindatabase.md
+            - name: ConfigurationSetting 方法 - ListReservedURLs
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listreservedurls.md
+            - name: ConfigurationSetting 方法 - ListSSLCertificateBindings
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificatebindings.md
+            - name: ConfigurationSetting 方法 - ListSSLCertificates
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificates.md
+            - name: ConfigurationSetting 方法 - ReencryptSecureInformation
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-reencryptsecureinformation.md
+            - name: ConfigurationSetting 方法 - RemoveSSLCertificateBinding
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removesslcertificatebinding.md
+            - name: ConfigurationSetting 方法 - RemoveUnattendedExecutionAccount
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removeunattendedexecutionaccount.md
+            - name: ConfigurationSetting 方法 - RemoveURL
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removeurl.md
+            - name: ConfigurationSetting 方法 - ReserveURL
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md
+            - name: ConfigurationSetting 方法 - RestoreEncryptionKey
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-restoreencryptionkey.md
+            - name: ConfigurationSetting 方法 - SetDatabaseConnection
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabaseconnection.md
+            - name: ConfigurationSetting 方法 - SetDatabaseLogonTimeout
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabaselogontimeout.md
+            - name: ConfigurationSetting 方法 - SetDatabaseQueryTimeout
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabasequerytimeout.md
+            - name: ConfigurationSetting 方法 - SetEmailConfiguration
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setemailconfiguration.md
+            - name: ConfigurationSetting 方法 - SetSecureConnectionLevel
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md
+            - name: ConfigurationSetting 方法 - SetServiceState
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setservicestate.md
+            - name: ConfigurationSetting 方法 - SetUnattendedExecutionAccount
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setunattendedexecutionaccount.md
+            - name: ConfigurationSetting 方法 - SetVirtualDirectory
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md
+            - name: ConfigurationSetting 方法 - SetWindowsServiceIdentity
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md
+            - name: ConfigurationSetting 方法 - SetExtendedProtectionSettings
+              href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md
 - name: 排除 Reporting Services 故障
-  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services.md
-- name: 错误和事件参考
-  href: ../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md
   items:
-    - name: Reporting Services 错误的原因和解决方法
-      href: ../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md
+    - name: 错误和事件参考
+      href: ../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md
       items:
-        - name: rsAccessedDenied - Reporting Services 错误
-          href: ../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md
-        - name: rsInternalError - Reporting Services 错误
-          href: ../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md
-        - name: rsModelGenerationError - Reporting Services 错误
-          href: ../reporting-services/troubleshooting/rsmodelgenerationerror-reporting-services-error.md
-        - name: rsProcessingError - Reporting Services 错误
-          href: ../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md
-        - name: rsServerConfigurationError - Reporting Services 错误
-          href: ../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md
-        - name: rrRenderingError - Reporting Services 错误
-          href: ../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md
-        - name: 报表服务器 Windows 服务 (MSSQLServer) 107
-          href: ../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md
-- name: 排查 Reporting Services 报表问题
-  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md
-- name: 对 Reporting Services 订阅和传递进行故障排除
-  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md
-- name: 解决 Reporting Services 报表设计问题
-  href: ../reporting-services/troubleshooting/troubleshoot-report-design-issues-with-reporting-services.md
-- name: 排查与 Reporting Services 报表相关的数据检索问题
-  href: ../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md
-- name: 排除 Reporting Services 报表处理故障
-  href: ../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md
-- name: 排查 Reporting Services 报表呈现问题
-  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md
-- name: 对在本机模式报表服务器上发布或查看报表进行故障排除
-  href: ../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md
-- name: Reporting Services 的服务器和数据库连接问题疑难解答
-  href: ../reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services.md
+        - name: Reporting Services 错误的原因和解决方法
+          href: ../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md
+          items:
+            - name: rsAccessedDenied - Reporting Services 错误
+              href: ../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md
+            - name: rsInternalError - Reporting Services 错误
+              href: ../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md
+            - name: rsModelGenerationError - Reporting Services 错误
+              href: ../reporting-services/troubleshooting/rsmodelgenerationerror-reporting-services-error.md
+            - name: rsProcessingError - Reporting Services 错误
+              href: ../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md
+            - name: rsServerConfigurationError - Reporting Services 错误
+              href: ../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md
+            - name: rrRenderingError - Reporting Services 错误
+              href: ../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md
+            - name: 报表服务器 Windows 服务 (MSSQLServer) 107
+              href: ../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md
+    - name: 排查 Reporting Services 报表问题
+      href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md
+    - name: 对 Reporting Services 订阅和传递进行故障排除
+      href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md
+    - name: 解决 Reporting Services 报表设计问题
+      href: ../reporting-services/troubleshooting/troubleshoot-report-design-issues-with-reporting-services.md
+    - name: 排查与 Reporting Services 报表相关的数据检索问题
+      href: ../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md
+    - name: 排除 Reporting Services 报表处理故障
+      href: ../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md
+    - name: 排查 Reporting Services 报表呈现问题
+      href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md
+    - name: 对在本机模式报表服务器上发布或查看报表进行故障排除
+      href: ../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md
+    - name: Reporting Services 的服务器和数据库连接问题疑难解答
+      href: ../reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services.md
 - name: 开发人员
   items:
     - name: REST API
@@ -1860,84 +1948,3 @@
           href: ../reporting-services/rgdi-device-information-settings.md
     - name: HTML 查看器和报表工具栏
       href: ../reporting-services/html-viewer-and-the-report-toolbar.md
-- name: 教程
-  href: ../reporting-services/reporting-services-tutorials-ssrs.md
-  items:
-    - name: 创建基本表报表（SSRS 教程）
-      href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
-      items:
-        - name: 第 1 课：创建报表服务器项目
-          href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-        - name: 第 2 课：指定连接信息
-          href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-        - name: 第 3 课：为表报表定义数据集
-          href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-        - name: 第 4 课：将表添加到报表
-          href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-        - name: 第 5 课：设置报表格式
-          href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-        - name: 第 6 课：添加分组和总计
-          href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
-    - name: 创建数据驱动订阅（SSRS 教程）
-      href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
-      items:
-        - name: 第 1 课：创建示例订阅服务器数据库
-          href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-        - name: 第 2 课：修改报表数据源属性
-          href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-        - name: 第 3 课：定义数据驱动订阅
-          href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
-    - name: 使用 ReportViewer 创建带有参数的钻取 (RDLC) 报表（SSRS 教程）
-      href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
-      items:
-        - name: 第 1 课：创建新网站
-          href: ../reporting-services/lesson-1-create-a-new-web-site.md
-        - name: 第 2 课：定义用于父报表的数据连接和数据表
-          href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-        - name: 第 3 课：使用报表向导设计父报表
-          href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-        - name: 第 4 课：定义用于子报表的数据连接和数据表
-          href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
-        - name: 第 5 课：使用报表向导设计子报表
-          href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-        - name: 第 6 课：向应用程序添加 ReportViewer 控件
-          href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
-        - name: 第 7 课：在父报表上添加钻取操作
-          href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
-        - name: 第 8 课：创建数据筛选器
-          href: ../reporting-services/lesson-8-create-a-data-filter.md
-        - name: 第 9 课：生成并运行应用程序
-          href: ../reporting-services/lesson-9-build-and-run-the-application.md
-    - name: 报表生成器教程
-      href: ../reporting-services/report-builder-tutorials.md
-      items:
-        - name: 教程先决条件
-          href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
-        - name: 获取数据连接的备选方法（报表生成器）
-          href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 教程：创建基本表报表
-          href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: 教程：创建矩阵报表
-          href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: 教程：创建自由格式的报表
-          href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 教程：设置文本格式（报表生成器）
-          href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: 教程：向报表添加柱形图（报表生成器）
-          href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: 教程：向报表添加饼图（报表生成器）
-          href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: 教程：向报表添加条形图（报表生成器）
-          href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: 教程：向报表添加迷你图（报表生成器）
-          href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 教程：向报表添加 KPI
-          href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: 教程：地图报表
-          href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: 教程：向报表添加参数（报表生成器）
-          href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: 教程：创建钻取报表和主报表
-          href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
-        - name: 教程：表达式简介
-          href: ../reporting-services/tutorial-introducing-expressions.md

@@ -1,7 +1,7 @@
 ---
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326498"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836352"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>参数  
  Key_name  
- 指定在数据库中识别该对称密钥的唯一名称。 临时密钥的名称应当以数字符号 (#) 开头。 例如，#temporaryKey900007。 您不能创建名称以多个 # 开头的对称密钥。 您不能使用 EKM 提供程序创建临时对称密钥。  
+ 指定在数据库中识别该对称密钥的唯一名称。 当 key_name 以一个数字符号 (#) 为开头时指定临时密钥。 例如，#temporaryKey900007。 您不能创建名称以多个 # 开头的对称密钥。 您不能使用 EKM 提供程序创建临时对称密钥。  
   
  AUTHORIZATION owner_name  
  指定将拥有此密钥的数据库用户或应用程序角色的名称。  
@@ -151,7 +151,7 @@ CREATE SYMMETRIC KEY key_name
 > [!WARNING]  
 >  RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可以通过任何兼容级别对使用 RC4 或 RC4_128 加密的材料进行解密。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 ALTER ANY SYMMETRIC KEY 权限。 如果指定了 AUTHORIZATION，则要求对数据库用户具有 IMPERSONATE 权限，或者对应用程序角色具有 ALTER 权限。 如果使用证书或非对称密钥进行加密，则要求对证书或非对称密钥具有 VIEW DEFINITION 权限。 只有 Windows 登录名、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和应用程序角色才能拥有对称密钥。 其他组和角色不能拥有对称密钥。  
   
 ## <a name="examples"></a>示例  
@@ -181,7 +181,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 使用可扩展密钥管理 (EKM) 设备创建对称密钥  
- 下面的示例使用一个名为 `MySymKey` 的提供程序和一个密钥名称 `MyEKMProvider` 创建一个名为 `KeyForSensitiveData` 的对称密钥。 该示例向 `User1` 授权，并假定系统管理员已在 `MyEKMProvider` 中注册了名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的提供程序。  
+ 下面的示例使用一个名为 `MySymKey` 的提供程序和一个密钥名称 `MyEKMProvider` 创建一个名为 `KeyForSensitiveData` 的对称密钥。 该示例向 `User1` 授权，并假定系统管理员已在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册了名为 `MyEKMProvider` 的提供程序。  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  

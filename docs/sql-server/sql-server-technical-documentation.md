@@ -33,7 +33,7 @@ ms.locfileid: "66744165"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [请分享你有关 SQL 文档中心页的反馈 ！](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
+> [请分享你对 SQL Docs 中心页的反馈！](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数据库管理系统 (ODBMS) 领域处于领先水平。 本文档可帮助你在 Windows 和 Linux 上安装、配置和使用 SQL Server。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。

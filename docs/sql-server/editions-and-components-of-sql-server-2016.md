@@ -60,7 +60,7 @@ ms.locfileid: "66701620"
     
 > [![从评估中心下载](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[从评估中心下载 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
 > 
-> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)[启动已安装 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp2-ws2016)    
+> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)[启动已安装 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp2-ws2016)   
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 版本  
  下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的各个版本。 
@@ -177,16 +177,16 @@ ms.locfileid: "66701620"
 |Resource Governor|是|否|否|否|否|  
 |已分区表并行度|是|否|否|否|否|
 |多个 Filestream 容器|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|
-|NUMA 感知的大型页内存和缓冲区数组分配|是|否<sup>4</sup>|否|否|否|
+|可识别 NUMA 的大型页内存和缓冲区数组分配|是|否<sup>4</sup>|否|否|否|
 |缓冲池扩展|是|是|否|否|否|
-|I/O 资源调控|是|否|否|否|否|
+|I/O 资源治理|是|否|否|否|否|
 |预读|是|否|否|否|否|
 |高级扫描|是|否|否|否|否|
 |延迟持续性|是|是|是|是|是|
 
 <sup>1</sup> 内存中 OLTP 数据大小和列存储段缓存限制为“规模限制”部分中的版本所指定的内存量。 最大并行度是有限的。 对于 Standard Edition，索引生成的进程并行度 (DOP) 限制为 2 DOP，对于 Web 和 Express Edition，索引生成的进程并行度 (DOP) 限制为 1 DOP。 这是指在基于磁盘的表和内存优化表上创建的列存储索引。
 
-<sup>2</sup>适用于[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]SP1 作为跨版本创建常见的可编程性图面区域 (CPSA) 的一部分。  
+<sup>2</sup> 作为跨版本创建常见可编程性外围应用 (CPSA) 的一部分，适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。  
 
 <sup>3</sup> LocalDB 安装选项中不包括此功能。
 

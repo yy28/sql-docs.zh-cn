@@ -41,7 +41,7 @@ ms.locfileid: "66506593"
 |最小日志记录|内存优化表不支持最小日志记录。 有关最小日志记录的详细信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md) 和[在批量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。|  
 |更改跟踪|无法在包含内存中 OLTP 对象的数据库上启用更改跟踪。 |
 | DDL 触发器 | 内存中 OLTP 表或本机编译的模块不支持数据库级别和服务器级别的 DDL 触发器。 |  
-| 变更数据捕获 (CDC) | SQL Server 2017 CU15 及更高版本支持在具有内存优化表的数据库上启用 CDC。 这是仅适用于数据库和数据库中的任何磁盘上的表。 在更低版本的 SQL Server 中，CDC 不能与具有内存优化表的数据库一起使用，因为它在内部使用 DROP TABLE 的 DDL 触发器。 |  
+| 变更数据捕获 (CDC) | SQL Server 2017 CU15 及更高版本支持在具有内存优化表的数据库上启用 CDC。 这仅适用于数据库和数据库中的任何磁盘上表。 在更低版本的 SQL Server 中，CDC 不能与具有内存优化表的数据库一起使用，因为它在内部使用 DROP TABLE 的 DDL 触发器。 |  
 | 纤程模式 | 内存优化表不支持纤程模式：<br /><br />如果启用纤程模式，则不能创建具有内存优化文件组的数据库，也不能向现有数据库添加内存优化文件组。<br /><br />如果有包含内存优化文件组的数据库，可以启用纤程模式。 不过，启用纤程模式需要重新启动服务器。 在这种情况下，具有内存优化文件组的数据库将无法恢复。 随后将看到一条错误消息，建议禁用纤程模式，以使用具有内存优化文件组的数据库。<br /><br />如果启用纤程模式，附加和还原具有内存优化文件组的数据库会失败。 数据库将标记为可疑。<br /><br />有关详细信息，请参阅 [lightweight pooling 服务器配置选项](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)。 |  
 |Service Broker 的限制|无法访问本机编译存储过程中的队列。<br /><br /> 无法在访问内存优化表的事务中访问远程数据库中的队列。|  
 |在订阅服务器上复制|支持对订阅服务器上的内存优化表进行事务复制，不过有一些限制。 有关详细信息，请参阅 [复制到内存优化表订阅服务器](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)|  
@@ -54,8 +54,8 @@ ms.locfileid: "66506593"
 
 |数据库|Allowed|描述|  
 |---------------|-------------|-----------------|  
-| 用户数据库、模型和 msdb   。 | 否 | 多数情况下，不支持跨数据库查询和事务  。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外   。 此时，master 数据库可进行只读访问  。 |
-| 资源数据库和 tempdb   | 是 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制   。
+| 用户数据库、模型和 msdb。 | 否 | 多数情况下，不支持跨数据库查询和事务。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外。 此时，master 数据库可进行只读访问。 |
+| 资源数据库和 tempdb | 是 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制。
 
 
 ## <a name="scenarios-not-supported"></a>不支持的方案  
@@ -64,8 +64,8 @@ ms.locfileid: "66506593"
   
 - 访问内存优化表的查询上的键集和动态游标。 这些游标将降级为静态和只读的。  
   
-- 不支持使用 MERGE INTO 目标（其中目标是内存优化表）    。
-    - 内存优化表支持 MERGE USING 源   。  
+- 不支持使用 MERGE INTO 目标（其中目标是内存优化表）。
+    - 内存优化表支持 MERGE USING 源。  
   
 - 不支持 ROWVERSION (TIMESTAMP) 数据类型。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。
   
@@ -81,7 +81,7 @@ ms.locfileid: "66506593"
     - 不支持 PBM 的仅阻止并记录模式。 当服务器上存在此类策略时，可能会使内存中 OLTP DDL 无法成功执行。 支持“按需”和“按计划”模式。  
 
 - 内存中 OLTP 不支持数据库包含（[包含的数据库](../../relational-databases/databases/contained-databases.md)）。
-    - 支持 contained database authentication。 但是，在动态管理视图 (DMV) dm_db_uncontained_entities 中，所有内存中 OLTP 对象都被标记为“breaking containment”  。
+    - 支持 contained database authentication。 但是，在动态管理视图 (DMV) dm_db_uncontained_entities 中，所有内存中 OLTP 对象都被标记为“breaking containment”。
 
   
 ## <a name="see-also"></a>另请参阅  

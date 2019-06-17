@@ -32,7 +32,7 @@ ms.locfileid: "66744013"
 
 
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件的优点  
- 扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（“新建会话向导”  和“新建会话”  ），以便创建、修改、显示和分析你的会话数据。  
+ 扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（“新建会话向导”和“新建会话”），以便创建、修改、显示和分析你的会话数据。  
   
 ## <a name="extended-events-concepts"></a>扩展事件概念  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件 (Extended Events) 是在现有概念（例如事件或事件使用者）的基础上建立的，它使用了 Windows 事件跟踪的概念并引入了新概念。  
@@ -115,4 +115,4 @@ ms.locfileid: "66744013"
  [扩展事件动态管理视图](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [扩展事件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
  [XELite:跨平台库，用于从 XEL 文件或实时 SQL 流中读取 XEvent](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)，发布于 2019 年 5 月。   
- [读取 SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent)2019 年 6 月发布。
+ [读取 SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent)，发布于 2019 年 6 月。

@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: a754607e4eb3af99216e5a11e9af50730279040e
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775027"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836379"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,12 +62,12 @@ ms.locfileid: "64775027"
     
 |选项|描述|    
 |------------|-----------------|    
-|区分大小写 (_CS)|区分大写字母和小写字母。 如果选择此项，排序时小写字母将在其对应的大写字母之前。 如果未选择此选项，则排序规则将不区分大小写。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将大写字母和小写字母视为相同。 通过指定 _CI，可以显式选择不区分大小写。|    
-|区分重音 (_AS)|区分重音字符和非重音字符。 例如，“a”和“ấ”视为不同字符。 如果未选择此选项，则排序规则将不区分重音。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将字母的重音形式和非重音形式视为相同。 通过指定 _AI，可以显式选择不区分重音。|    
-|区分假名 (_KS)|区分日语中的两种假名字符类型：平假名和片假名。 如果未选择此选项，则排序规则将不区分假名。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将平假名字符和片假名字符视为相同。 省略此选项是指定不区分假名的唯一方法。|    
-|区分全半角 (_WS)|区分全角字符和半角字符。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在排序时将同一字符的全角和半角形式视为相同。 省略此选项是指定不区分全半角的唯一方法。|    
-|区分变体选择符 (_VSS) | 区分 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]中首次引入的日语排序规则 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中不同的象形变体选择符。 变体序列包含基本字符加上其他变体选择符。 如果未选择 _VSS 选项，排序规则不区分变体选择符，并且在比较中不考虑变体选择符。 也就是说，出于排序的考虑，SQL Server 会将具有不同变体选择符但基于相同基本字符的字符视为相同。 另请参阅  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)（Unicode 象形变体数据库） <br/><br/> 全文搜索索引中不支持区分变体选择符 (_VSS) 排序规则。 全文搜索索引仅支持区分重音 (_AS)、区分假名 (_KS) 和区分全半角 (_WS) 选项。 SQL Server XML 和 CLR 引擎不支持变体选择符 (_VSS)。
-|UTF-8 (_UTF8)|启用要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的 UTF-8 编码数据。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会对适用的数据类型使用默认的非 Unicode 编码格式。| 
+|区分大小写 (\_CS)|区分大写字母和小写字母。 如果选择此项，排序时小写字母将在其对应的大写字母之前。 如果未选择此选项，则排序规则将不区分大小写。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将大写字母和小写字母视为相同。 通过指定 \_CI，可以显式选择不区分大小写。|    
+|区分重音 (\_AS)|区分重音字符和非重音字符。 例如，“a”和“ấ”视为不同字符。 如果未选择此选项，则排序规则将不区分重音。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将字母的重音形式和非重音形式视为相同。 通过指定 \_AI，可以显式选择不区分重音。|    
+|区分假名 (\_KS)|区分日语中的两种假名字符类型：平假名和片假名。 如果未选择此选项，则排序规则将不区分假名。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将平假名字符和片假名字符视为相同。 省略此选项是指定不区分假名的唯一方法。|    
+|区分全半角 (\_WS)|区分全角字符和半角字符。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在排序时将同一字符的全角和半角形式视为相同。 省略此选项是指定不区分全半角的唯一方法。|    
+|区分变体选择符 (\_VSS) | 区分 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]中首次引入的日语排序规则 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中不同的象形变体选择符。 变体序列包含基本字符加上其他变体选择符。 如果未选择 \_VSS 选项，排序规则不区分变体选择符，并且在比较中不考虑变体选择符。 也就是说，出于排序的考虑，SQL Server 会将具有不同变体选择符但基于相同基本字符的字符视为相同。 另请参阅  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)（Unicode 象形变体数据库） <br/><br/> 全文搜索索引中不支持区分变体选择符 (\_VSS) 排序规则。 全文搜索索引仅支持区分重音 (\_AS)、区分假名 (\_KS) 和区分全半角 (\_WS) 选项。 SQL Server XML 和 CLR 引擎不支持 (\_VSS) 变体选择符。
+|UTF-8 (\_UTF8)|启用要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的 UTF-8 编码数据。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会对适用的数据类型使用默认的非 Unicode 编码格式。| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下排序规则集：    
     

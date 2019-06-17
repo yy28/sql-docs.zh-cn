@@ -1,7 +1,7 @@
 ---
 title: 跟踪标志 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9e204faee33deba95a53906f473bf909e182785e
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 31bfc7ef9761ac40b56af9b733a29fbb12bc586e
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583440"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822958"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -57,7 +57,7 @@ ms.locfileid: "59583440"
 |**661**|禁用虚影记录删除进程。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/920093)。<br /><br />**作用域**：仅全局|
 |**692**|将数据大容量加载到堆或聚集索引时禁用快速插入。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，默认情况下会启用快速插入，以便在数据库处于简单或大容量日志恢复模式时，利用最低限度记录来优化插入新页面的记录的插入性能。 启用快速插入后，每个大容量加载批次都会绕过现有盘区的分配查找获得新盘区，从而提供可用空间来优化插入性能。<br /><br /> 启用快速插入后，批次较小的大容量加载会导致对象占用的未用空间增加，因此建议每次都使用较大的批次，以便完全填充盘区。 如果增加批次大小不可行，此跟踪标记可以帮助减少以性能为代价保留的未用空间。 <br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 及更高内部版本。<br /><br />**作用域**：全局或会话|
 |**715**|为没有非聚集索引的堆中的大容量加载操作启用表锁。 启用此跟踪标志时，大容量加载操作会在将数据大容量复制到表中时获取大容量更新锁（BU 锁）。 大容量更新锁（BU 锁）允许多个线程将数据并发地大容量加载到同一表中，同时防止其他不进行数据大容量加载的进程访问该表。<br /><br />该行为与以下行为类似：用户在执行大容量加载时显式指定 TABLOCK 提示，或为给定表启用大容量加载的 sp_tableoption 表锁。 但是，启用此跟踪标志后，该行为将变成默认行为，无需进行任何查询或数据库更改。<br /><br />**作用域：** 全局或会话|
-|**834**|对缓冲池使用 Microsoft Windows 大型页分配。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3210239)。<br /><br />注意：如果正在使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的列存储索引功能，则不建议启用跟踪标志 834。<br /><br />**作用域**：仅全局|
+|**834**|对缓冲池、列存储和内存中表使用大型页分配。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3210239)。<br /><br />**注意：** 启用时，大型页内存模型会在实例启动时预分配所有 SQLOS 内存，并且不会将该内存返回到操作系统。<br /><br />**注意：** 如果正在使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的列存储索引功能，则不建议启用跟踪标志 834。<br /><br />**作用域**：仅全局|
 |**845**|当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务帐户启用了“锁定内存页”特权时，启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标准 SKU 上的锁定页。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/970070)以及[“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)文档页。<br /><br />注意：从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，将为标准 SKU 默认启用此行为，并且不得使用跟踪标志 845。<br /><br />**作用域**：仅全局|
 |**902**|安装累积更新或 Service Pack 时不执行数据库升级脚本。 如果在脚本升级模式下遇到错误，建议联系 Microsoft SQL 客户服务和支持 (CSS) 获取进一步指导。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2163980)。<br /><br />警告：此跟踪标志用于在脚本升级模式下对失败更新进行故障排除，不支持在生产环境中连续运行该标志。 需要成功执行数据库升级脚本才能完整安装累积更新和 Service Pack。 不这样做可能会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例出现意外问题。<br /><br />**作用域**：仅全局|
 |**1117**|当文件组中的某个文件达到自动增长阈值时，文件组中的所有文件都会增长。<br /><br />注意：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 选项控制，跟踪标志 1117 不再有效。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。<br /><br />**作用域：** 仅全局|
@@ -81,7 +81,7 @@ ms.locfileid: "59583440"
 |**2390**|为升序键或未知键启用自动生成的快速统计信息（直方图修正）。 如果设置了跟踪标志 2390，并且将前导统计信息列标记为升序或未知，则会在查询编译时调整用于估计基数的直方图。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2801413)。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />注意：此跟踪标志不适用于 CE 版本 120 或更高版本。 请改用跟踪标志 4139。<br /><br />**作用域**：全局、会话或查询|
 |**2422**|当超过 Resource Governor REQUEST_MAX_CPU_TIME_SEC 配置设置的最长时间时，允许 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中止请求。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4038419)。<br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：全局|
 |**2430**|启用备用锁类清除。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2754301)。<br /><br />**作用域**：仅全局| 
-|**2451**|在 sys.dm_exec_query_plan_stats 中启用最后一个实际执行计划的等效项。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 及更高版本。<br /><br />**作用域**：仅全局|  
+|**2451**|在 sys.dm_exec_query_plan_stats 中启用最后一个实际执行计划的等效项。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 及更高版本。<br /><br />**注意：** 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 起，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 LAST_QUERY_PLAN_STATS 选项。<br /><br />**作用域**：仅全局|  
 |**2453**|当足够数量的行发生更改时，允许表变量触发重新编译。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2952444)。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询|
 |**2467**|启用备用并行工作线程分配策略（基于哪个节点具有最少分配的线程）。 有关详细信息，请参阅[并行查询处理](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。 请参阅[配置最大工作线程服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)，了解有关配置最大工作线程服务器选项的信息。<br /><br />注意：并行查询度 (DOP) 必须适用于要使用的此备用策略的单个节点，或改为使用默认线程分配策略。 使用跟踪标志时，不建议执行指定 DOP 多于单个节点中的计划程序数的查询，因为这会干扰指定 DOP 低于或等于单个节点中的计划程序数的查询。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：仅全局|
 |**2469**|为已分区列存储索引中的 `INSERT INTO ... SELECT` 启用备用 Exchange。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3204769)。<br /><br />**作用域**：全局、会话或查询|
