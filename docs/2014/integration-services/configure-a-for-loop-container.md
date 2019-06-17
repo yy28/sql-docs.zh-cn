@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe51deb631f0c3d794bdce3f05af61b5e030d5e3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060831"
 ---
 # <a name="configure-a-for-loop-container"></a>配置 For 循环容器
@@ -27,7 +27,7 @@ ms.locfileid: "66060831"
   
 ### <a name="to-configure-the-for-loop-container"></a>配置 For 循环容器  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，双击 For 循环容器，打开“For 循环编辑器”。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，双击 For 循环容器，打开“For 循环编辑器”  。  
   
 2.  根据需要，修改 For 循环容器的名称和说明。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66060831"
   
 6.  根据需要，单击 **“表达式”** ，并在 **“表达式”** 页上为 For 循环容器的属性创建属性表达式。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
   
-7.  单击 **“确定”** ，关闭 **“For 循环编辑器”**。  
+7.  单击 **“确定”** ，关闭 **“For 循环编辑器”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [For 循环容器](control-flow/for-loop-container.md)   

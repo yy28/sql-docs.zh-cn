@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011670"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "66011670"
 |**bcp**|**-c**|将导致**bcp**实用工具使用字符数据。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|在批量导入数据时使用字符格式。|  
   
- <sup>1</sup>加载字符 (**-c**) 到与早期版本的兼容的格式数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端，使用 **-V**切换。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ <sup>1</sup>加载字符 ( **-c**) 到与早期版本的兼容的格式数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端，使用 **-V**切换。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  有关详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079575"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用动态管理视图 (DMV) 监视 Analysis Services
@@ -86,7 +86,7 @@ Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAM
   
  您可以使用支持 MDX 或 DMX 查询的任何客户端应用程序，包括 SQL Server Management Studio、Reporting Services 报表和 PerformancePoint 面板。  
   
- 若要从 Management Studio 运行 DMV 查询，请连接到您要查询的实例，然后单击 **“新建查询”**。 您可以从 MDX 或 DMX 查询窗口运行查询。  
+ 若要从 Management Studio 运行 DMV 查询，请连接到您要查询的实例，然后单击 **“新建查询”** 。 您可以从 MDX 或 DMX 查询窗口运行查询。  
   
 ##  <a name="bkmk_ref"></a> DMV 参考  
  并不是所有的架构行集都具有 DMV 接口。 若要返回可使用 DMV 查询的所有架构行集的列表，请运行以下查询。  

@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11ee89e8849155f905e3908e491184f78a8f08b7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062233"
 ---
 # <a name="assign-aggregation-design-dialog-box-analysis-services---multidimensional-data"></a>“分配聚合设计”对话框（Analysis Services - 多维数据）
-  可以使用 **中的** “分配聚合设计” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，为一个或多个目标分区分配聚合设计。 你可以通过在**对象资源管理器**中右键单击某个分区或聚合设计，然后选择“分配聚合设计”，来显示“分配聚合设计”对话框。  
+  可以使用 **中的** “分配聚合设计” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，为一个或多个目标分区分配聚合设计。 你可以通过在**对象资源管理器**中右键单击某个分区或聚合设计，然后选择“分配聚合设计”，来显示“分配聚合设计”对话框   。  
   
 ## <a name="options"></a>选项  
   

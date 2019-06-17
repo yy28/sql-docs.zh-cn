@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994306"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -121,9 +121,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` 为合并代理停止的时间安排，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
   
-`[ @job_login = ] 'job_login'` 是[!INCLUDE[msCoName](../../includes/msconame-md.md)]生成使用参数化的行筛选器订阅的快照时快照代理运行的 Windows 帐户。 *job_login*是**nvarchar(257)**，默认值为 NULL。  
+`[ @job_login = ] 'job_login'` 是[!INCLUDE[msCoName](../../includes/msconame-md.md)]生成使用参数化的行筛选器订阅的快照时快照代理运行的 Windows 帐户。 *job_login*是**nvarchar(257)** ，默认值为 NULL。  
   
-`[ @job_password = ] 'job_password'` 使用参数化的行筛选器在其下运行快照代理生成订阅的快照时的 Windows 帐户的密码。 *job_password*是**nvarchar(257)**，默认值为 NULL。  
+`[ @job_password = ] 'job_password'` 使用参数化的行筛选器在其下运行快照代理生成订阅的快照时的 Windows 帐户的密码。 *job_password*是**nvarchar(257)** ，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  

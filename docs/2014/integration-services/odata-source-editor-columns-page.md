@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057342"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 源编辑器（“列”页）
-  使用“OData 源编辑器”对话框的“列”页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  
+  使用“OData 源编辑器”  对话框的“列”  页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  
   
 ## <a name="options"></a>选项  
  **可用外部列**  

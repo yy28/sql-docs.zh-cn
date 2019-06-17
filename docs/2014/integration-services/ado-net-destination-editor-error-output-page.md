@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061769"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 目标编辑器（“错误输出”页）
@@ -28,9 +28,9 @@ ms.locfileid: "66061769"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 目标的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 ADO NET 目标。  
+2.  在“数据流”  选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”** 中，单击 **“错误输出”**。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“错误输出”** 。  
   
 ## <a name="options"></a>选项  
  **输入或输出**  
@@ -42,7 +42,7 @@ ms.locfileid: "66061769"
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](data-flow/error-handling-in-data.md)  
   
  **截断**  
  未使用。  

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065492"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>“用户选择”对话框（Analysis Services - 多维数据）
-  可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“用户选择”对话框，为基于使用情况的优化向导选择筛选查询日志中存储的查询时针对的用户。  
+  可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的  “用户选择”对话框，为基于使用情况的优化向导选择筛选查询日志中存储的查询时针对的用户。  
   
- 若要打开“用户选择”对话框，请在基于使用情况的优化向导的“指定查询条件”页中，针对“用户”选项单击省略号 (...) 按钮。  
+ 若要打开“用户选择”对话框，请在基于使用情况的优化向导的“指定查询条件”页中，针对“用户”选项单击省略号 (...) 按钮。     
   
 ## <a name="options"></a>选项  
  **选择用户**  

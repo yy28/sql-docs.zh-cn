@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070971"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此工作簿包含一个或多个用于刷新外部数据的查询。
@@ -39,17 +39,17 @@ ms.locfileid: "66070971"
   
  还可以更改配置设置，以便不再发生刷新时警告：  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”** 。  
   
-2.  单击 **“Excel Services 应用程序”**。  
+2.  单击 **“Excel Services 应用程序”** 。  
   
-3.  单击 **“受信任文件位置”**。  
+3.  单击 **“受信任文件位置”** 。  
   
 4.  单击 **http://** 或者要配置的位置。  
   
 5.  在“外部数据”中，取消选中 **“数据刷新时警告”** 复选框。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
  此外，您还可以为包含 PowerPivot 工作簿的站点创建新的受信任位置，然后仅修改该站点的配置设置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   

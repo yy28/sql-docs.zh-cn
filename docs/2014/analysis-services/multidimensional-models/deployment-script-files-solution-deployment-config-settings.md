@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8addba32560e136f68e538240f4fce01f826355e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075269"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>为解决方案部署指定配置设置
@@ -42,7 +42,7 @@ ms.locfileid: "66075269"
 ## <a name="modifying-the-configuration-settings-for-deployment"></a>修改部署的配置设置  
  在某些情况下，您可能需要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用不同的配置设置中存储项目\<*项目名称*>.configsettings 文件。 例如，最好更改一个或多个数据源的连接字符串，或需要为特定的分区或度量值组指定存储位置。  
   
- 若要修改分区和角色中的部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目，则必须更改此信息内的\<*项目名称*>.configsettings 文件中，如下面的过程中所述。 无法更改项目中的分区和角色设置，因为*\<项目名称 >* **属性页**中的对话框[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不显示这些选项。  
+ 若要修改分区和角色中的部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目，则必须更改此信息内的\<*项目名称*>.configsettings 文件中，如下面的过程中所述。 无法更改项目中的分区和角色设置，因为 *\<项目名称 >* **属性页**中的对话框[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不显示这些选项。  
   
 > [!NOTE]  
 >  配置设置可应用于所有对象，也可仅应用于新创建的对象。 仅当要将其他对象部署到以前部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中，并且不希望覆盖现有对象时，才将配置设置应用于新创建的对象。 若要指定配置设置应用于所有对象还是仅新创建的设置此选项\<*项目名称*>.deploymentoptions 文件。 有关详细信息，请参阅 [指定分区和角色部署选项](deployment-script-files-partition-and-role-deployment-options.md)。  

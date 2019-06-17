@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997045"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
@@ -52,7 +52,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` 是要更改的名称。 *属性*是**sysname**，无默认值。  
   
-`[ @value = ] 'value'` 是指定的属性的新值。 *值*是**nvarchar(1000)**，无默认值。  
+`[ @value = ] 'value'` 是指定的属性的新值。 *值*是**nvarchar(1000)** ，无默认值。  
   
  下表说明项目的属性和这些属性的值。  
   
@@ -85,7 +85,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_changemergefilter**合并复制中使用。  
   
- 更改对合并项目的筛选需要重新创建快照（如果存在快照）。 通过设置执行此操作**@force_invalidate_snapshot**到**1**。 而且，如果该项目有订阅，则需要重新初始化订阅。 这是通过设置**@force_reinit_subscription**到**1**。  
+ 更改对合并项目的筛选需要重新创建快照（如果存在快照）。 通过设置执行此操作 **@force_invalidate_snapshot** 到**1**。 而且，如果该项目有订阅，则需要重新初始化订阅。 这是通过设置 **@force_reinit_subscription** 到**1**。  
   
  若要使用逻辑记录，发布和项目必须满足许多要求。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   

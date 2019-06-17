@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017163"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
@@ -52,17 +52,17 @@ ms.locfileid: "63017163"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开您想要在其中编辑作业类别的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
-3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
+3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”** 。  
   
-4.  在“管理作业类别” _server_name_ 对话框中，选择要编辑的作业类别，然后单击“查看作业” 。  
+4.  在“管理作业类别”  _server_name_ 对话框中，选择要编辑的作业类别，然后单击“查看作业”  。  
   
 5.  选中 **“显示所有作业”** 复选框。  
   
-6.  若要向类别中添加作业，请在主网格中选中与作业对应的 **“选择”** 列中的复选框。 若要从类别中删除作业，请清除该框。 完成后，单击 **“确定”**。  
+6.  若要向类别中添加作业，请在主网格中选中与作业对应的 **“选择”** 列中的复选框。 若要从类别中删除作业，请清除该框。 完成后，单击 **“确定”** 。  
   
-7.  关闭“管理作业类别” _server_name_ 对话框。  
+7.  关闭“管理作业类别”  _server_name_ 对话框。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -70,9 +70,9 @@ ms.locfileid: "63017163"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- adding a new job category to the "NightlyBackups" job  

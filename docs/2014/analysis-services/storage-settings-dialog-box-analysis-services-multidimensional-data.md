@@ -14,22 +14,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068028"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>“存储设置”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “存储设置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，为维度、多维数据集、度量值组或分区设置主动缓存、存储和通知设置。 在 **中可以通过执行以下操作之一显示** “存储设置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框：  
   
--   单击省略号按钮 (**...**) 用于`ProactiveCaching`维度、 多维数据集、 度量值组或分区中的属性值**属性**窗口中的[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+-   单击省略号按钮 ( **...** ) 用于`ProactiveCaching`维度、 多维数据集、 度量值组或分区中的属性值**属性**窗口中的[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
--   在 **多维数据集设计器** 的 **“分区”** 选项卡中展开某个度量值组，再单击 **“存储设置”**。  
+-   在 **多维数据集设计器** 的 **“分区”** 选项卡中展开某个度量值组，再单击 **“存储设置”** 。  
   
--   在 **多维数据集设计器** 的 **“分区”** 选项卡中展开某个度量值组并在网格中选择该度量值组的分区，再单击 **“存储设置”**。  
+-   在 **多维数据集设计器** 的 **“分区”** 选项卡中展开某个度量值组并在网格中选择该度量值组的分区，再单击 **“存储设置”** 。  
   
--   在 **多维数据集设计器** 的 **“分区”** 选项卡中展开某个度量值组并在网格中选择该度量值组的分区，然后在 **多维数据集设计器** 的 **“分区”** 选项卡上的 **“工具栏”** 窗格中单击 **“存储设置”**。  
+-   在 **多维数据集设计器** 的 **“分区”** 选项卡中展开某个度量值组并在网格中选择该度量值组的分区，然后在 **多维数据集设计器** 的 **“分区”** 选项卡上的 **“工具栏”** 窗格中单击 **“存储设置”** 。  
   
 ## <a name="options"></a>选项  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66068028"
 ||**预定的 MOLAP**<br /><br /> 选择此设置可以使用以下的存储和主动缓存设置：|MOLAP 存储模式<br /><br /> 启用主动缓存<br /><br /> 定期更新缓存，重新生成间隔为 1 天|  
 ||**MOLAP**<br /><br /> 选择此设置可以使用以下的存储和主动缓存设置：|MOLAP 存储模式|  
 |**自定义设置**|选择此项可以显式地设置存储模式、主动缓存和通知选项。||  
-|**选项**|单击此项可显示 **“存储选项”** 对话框，以显式地设置存储模式、主动缓存和通知选项。 有关“存储选项”对话框的详细信息，请参阅[“存储选项”对话框（Analysis Services - 多维数据）](storage-options-dialog-box-analysis-services-multidimensional-data.md)。||  
+|**选项**|单击此项可显示 **“存储选项”** 对话框，以显式地设置存储模式、主动缓存和通知选项。 有关  “存储选项”对话框的详细信息，请参阅[“存储选项”对话框（Analysis Services - 多维数据）](storage-options-dialog-box-analysis-services-multidimensional-data.md)。||  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

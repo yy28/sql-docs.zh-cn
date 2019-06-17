@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068168"
 ---
 # <a name="specify-source-information-partition-wizard"></a>指定源信息（分区向导）
   可以使用 **“指定源信息”** 页，选择要在其中创建分区的度量值组以及该分区的数据源视图和筛选表。  
   
 > [!CAUTION]  
->  如果在其他分区所使用的“可用表”中指定了表，则必须在“限制行”页上提供查询，否则多维数据集中的数据可能会发生重复。  
+>  如果在其他分区所使用的“可用表”  中指定了表，则必须在“限制行”  页上提供查询，否则多维数据集中的数据可能会发生重复。  
   
 ## <a name="options"></a>选项  
  **度量值组**  
@@ -33,10 +33,10 @@ ms.locfileid: "66068168"
  选择包含此分区的源表的数据源或数据源视图。 默认情况下，将选择该度量值组使用的数据源视图。  
   
  **筛选器表**  
- 键入字符串，用于按表名对“可用表”中显示的表进行限制。  
+ 键入字符串，用于按表名对“可用表”  中显示的表进行限制。  
   
  **查找表**  
- 选择此项可以刷新“可用表”中表的列表，如果在“筛选表”中指定了字符串，则可以进一步限制该列表。  
+ 选择此项可以刷新“可用表”  中表的列表，如果在“筛选表”  中指定了字符串，则可以进一步限制该列表。  
   
  **可用表**  
  选择要用作分区的源表的表。 **分区向导** 将为 **“可用表”** 中所选的每一个表创建一个分区。  

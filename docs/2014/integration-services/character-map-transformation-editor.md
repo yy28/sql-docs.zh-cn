@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060975"
 ---
 # <a name="character-map-transformation-editor"></a>字符映射表转换编辑器
-  可以使用“字符映射表转换编辑器”对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
+  可以使用“字符映射表转换编辑器”  对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
   
  若要了解有关字符映射表转换的详细信息，请参阅 [Character Map Transformation](data-flow/transformations/character-map-transformation.md)。  
   

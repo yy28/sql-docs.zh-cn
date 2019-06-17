@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066639"
 ---
 # <a name="restore-from-powerpivot"></a>从 PowerPivot 还原
@@ -43,7 +43,7 @@ ms.locfileid: "66066639"
   
 3.  在 **“还原目标”** 中的“ **还原数据库”** 中，键入新数据库或现有数据库的名称。 如果不指定名称，则使用工作簿的名称。  
   
-4.  在 **“存储位置”** 中，单击 **“浏览”**，然后选择数据库的存储位置。  
+4.  在 **“存储位置”** 中，单击 **“浏览”** ，然后选择数据库的存储位置。  
   
 5.  在 **“选项”** 中，选中 **“包括安全信息”** 。 在从 PowerPivot 工作簿还原时，此设置不适用。  
   

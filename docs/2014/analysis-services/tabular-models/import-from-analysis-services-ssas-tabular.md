@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067049"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>从 Analysis Services 导入（SSAS 表格）
@@ -25,15 +25,15 @@ ms.locfileid: "66067049"
   
 #### <a name="to-create-a-new-model-by-importing-metadata-from-an-existing-model"></a>通过从现有模型中导入元数据来创建新的模型  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，在 **“文件”** 菜单上，单击 **“新建”** ，然后单击 **“项目”** 。  
   
-2.  在 **“新建项目”** 对话框中，在 **“已安装的模板”** 下，单击 **“商业智能”**，然后单击 **“从服务器导入”**。  
+2.  在 **“新建项目”** 对话框中，在 **“已安装的模板”** 下，单击 **“商业智能”** ，然后单击 **“从服务器导入”** 。  
   
-3.  在 **“名称”** 中，键入项目的名称，然后指定位置和解决方案名称，再单击 **“确定”**。  
+3.  在 **“名称”** 中，键入项目的名称，然后指定位置和解决方案名称，再单击 **“确定”** 。  
   
 4.  在 **“从 Analysis Services 导入”** 对话框的 **“服务器名称”** 中，指定包含您要导入的模型元数据的 Analysis Services 服务器的名称。  
   
-5.  在 **“数据库名称”** 中，选择包含您要导入的模型元数据的表格模型数据库，然后单击 **“确定”**。  
+5.  在 **“数据库名称”** 中，选择包含您要导入的模型元数据的表格模型数据库，然后单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [项目属性（SSAS 表格）](properties-ssas-tabular.md)  

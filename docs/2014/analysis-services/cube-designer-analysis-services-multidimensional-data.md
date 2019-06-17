@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086609"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>多维数据集设计器（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的**多维数据集设计器**，编辑现有多维数据集的各种属性，包括多维数据集中包含的度量值组和度量值、多维数据集维度和维度关系、计算、关键绩效指标 (KPI)、操作、分区、透视和翻译，还可以浏览多维数据集中包含的数据。 通过执行以下操作可以显示 **“多维数据集设计器”** 对话框：  
   
--   在“解决方案资源管理器”中右键单击某个多维数据集，然后从上下文菜单中选择“打开”或“视图设计器”。  
+-   在“解决方案资源管理器”中右键单击某个多维数据集，然后从上下文菜单中选择“打开”或“视图设计器”。     
   
--   在“解决方案资源管理器”中双击某个多维数据集。  
+-   在“解决方案资源管理器”中双击某个多维数据集。   
   
  **多维数据集设计器** 包含以下选项卡：  
   

@@ -15,23 +15,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089721"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - 重播配置（基本重播选项）
   在 **“重播配置”** 对话框中，使用 **“基本重播配置”** 页可以指定如何重播跟踪文件或表。  
   
- 若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”**，然后连接到要重播跟踪的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。  
+ 若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”** ，然后连接到要重播跟踪的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。  
   
 ## <a name="options"></a>选项  
  **重播服务器**  
  显示要连接用来重播的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。  
   
  **更改...**  
- 启动“连接到服务器”对话框以连接到另一台服务器。  
+ 启动“连接到服务器”  对话框以连接到另一台服务器。  
   
  **保存到文件**  
  将重播结果保存到文件。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 将显示标准文件对话框，您可以在该对话框中指定文件的保存位置。  

@@ -13,29 +13,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064532"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>“查找远程文件夹”对话框（Analysis Services - 多维数据）
-   **“查找远程文件夹”** 对话框显示为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例定义的可用日志和数据文件夹的列表。 您可以选择列出的文件夹，也可以根据需要指定其他文件夹。 通过执行下列步骤之一，可以显示 **“查找远程文件夹”** 对话框：  
+  **“查找远程文件夹”** 对话框显示为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例定义的可用日志和数据文件夹的列表。 您可以选择列出的文件夹，也可以根据需要指定其他文件夹。 通过执行下列步骤之一，可以显示 **“查找远程文件夹”** 对话框：  
   
--   在分区向导中，在“处理位置和存储位置”页上单击省略号按钮 (**...**)。  
+-   在分区向导中，在“处理位置和存储位置”  页上单击省略号按钮 ( **...** )。  
   
--   在“还原数据库”对话框的“分区”页上，单击“选择其他位置”选项内“目标文件夹”列中的省略号按钮 (**...**)。  
+-   在“还原数据库”  对话框的“分区”  页上，单击“选择其他位置”  选项内“目标文件夹”  列中的省略号按钮 ( **...** )。  
   
--   在“远程分区 - 高级设置”对话框中，单击“分区列表”选项内“还原文件夹”列中的省略号按钮 (**...**)。  
+-   在“远程分区 - 高级设置”  对话框中，单击“分区列表”  选项内“还原文件夹”  列中的省略号按钮 ( **...** )。  
   
--   在同步数据库向导中的“为本地分区指定位置”页或“为远程分区指定位置”页上，单击“位置”选项内“目标文件夹”列中的省略号按钮 (**...**)。  
+-   在同步数据库向导中的“为本地分区指定位置”  页或“为远程分区指定位置”  页上，单击“位置”  选项内“目标文件夹”  列中的省略号按钮 ( **...** )。  
   
 ## <a name="options"></a>选项  
  **选择的文件夹**  
- 选择一个文件夹，以将“所选路径”设置为所需路径。  
+ 选择一个文件夹，以将“所选路径”  设置为所需路径。  
   
  **所选的路径**  
- 键入以修改从“选择文件夹”中选定的路径，或选择一个“选择文件夹”中没有列出的文件夹。  
+ 键入以修改从“选择文件夹”  中选定的路径，或选择一个“选择文件夹”  中没有列出的文件夹。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

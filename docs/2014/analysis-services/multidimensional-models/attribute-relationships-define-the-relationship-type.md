@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d30cc8f7dd64af79617c2f4ffd06e584f3c6e85
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077079"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>定义属性关系的关系类型
@@ -30,10 +30,10 @@ ms.locfileid: "66077079"
   
 1.  在维度设计器中，打开要操作的维度，然后单击 **“属性关系”** 选项卡。  
   
-2.  在关系图或“属性关系”窗格中，右键单击该属性关系，单击“关系类型”，然后单击“柔性”或“刚性”。  
+2.  在关系图或“属性关系”窗格中，右键单击该属性关系，单击“关系类型”，然后单击“柔性”或“刚性”。      
   
     > [!NOTE]  
-    >  若要显示“属性关系”窗格，请单击工具栏上的“显示列表视图”。  
+    >  若要显示“属性关系”  窗格，请单击工具栏上的“显示列表视图”  。  
   
      在柔性关系中，成员之间的关系会随时间而变化。 在刚性关系中，成员之间的关系不随时间而变化。  
   

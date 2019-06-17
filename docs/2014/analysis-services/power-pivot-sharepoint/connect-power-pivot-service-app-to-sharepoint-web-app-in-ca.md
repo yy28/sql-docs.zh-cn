@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071681"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>将 PowerPivot 服务应用程序连接到管理中心中的 SharePoint Web 应用程序
@@ -34,28 +34,28 @@ ms.locfileid: "66071681"
   
  若要将 PowerPivot 服务应用程序添加到该列表中，您既可以在创建应用程序时添加，也可以在之后采用以下步骤添加。  
   
-1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“配置服务应用程序关联”**。  
+1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“配置服务应用程序关联”** 。  
   
-2.  在“应用程序代理组”中，单击 **“默认值”**。  
+2.  在“应用程序代理组”中，单击 **“默认值”** 。  
   
 3.  选中 PowerPivot 服务应用程序旁边的复选框（由类型名称 `PowerPivot Service Application Proxy` 指示）。 如果有多个 PowerPivot 服务应用程序，请只选择一个。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
 ##  <a name="custom"></a> 添加 PowerPivot 服务应用程序自定义服务关联列表  
  默认组可由自定义列表替换。 自定义列表是专门为单个 SharePoint Web 应用程序创建的。 它覆盖默认组，并且仅使用场管理员或服务管理员指定的服务关联来替换它。 如果您创建了多个 PowerPivot 服务应用程序，则必须使用自定义列表指定要使用的应用程序。 自定义列表不能由其他 Web 应用程序重用。 它仅适用于为其创建的 Web 应用程序。  
   
-1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“管理 Web 应用程序”**。  
+1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“管理 Web 应用程序”** 。  
   
 2.  选择应用程序（例如 SharePoint -80）。  
   
-3.  在“Web 应用程序”的“管理”中，单击 **“服务连接”**。  
+3.  在“Web 应用程序”的“管理”中，单击 **“服务连接”** 。  
   
-4.  在“编辑以下连接组”中，选择“[custom]”。  
+4.  在“编辑以下连接组”  中，选择“[custom]”  。  
   
 5.  选中您要使用的每个服务应用程序连接旁边的复选框。 如果您有多个 PowerPivot 服务应用程序（由设置为 `PowerPivot Service Application Proxy` 的类型指示），请确保仅选择一个。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 ## <a name="see-also"></a>请参阅  
  [创建并在管理中心配置 PowerPivot 服务应用程序](create-and-configure-power-pivot-service-application-in-ca.md)   

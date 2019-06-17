@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959617"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
@@ -43,15 +43,15 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @article_resolver = ] 'article_resolver'` 指定要注销的自定义业务逻辑的名称。 *article_resolver*是**nvarchar(255)**，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
+`[ @article_resolver = ] 'article_resolver'` 指定要注销的自定义业务逻辑的名称。 *article_resolver*是**nvarchar(255)** ，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 中指定的自定义业务逻辑的名称与关联的 COM 对象的 CLSID 值*article_resolver*参数。 *resolver_clsid*是**nvarchar （50)**，默认值为 NULL。  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 中指定的自定义业务逻辑的名称与关联的 COM 对象的 CLSID 值*article_resolver*参数。 *resolver_clsid*是**nvarchar （50)** ，默认值为 NULL。  
   
 `[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` 指定要注册的自定义业务逻辑的类型。 *is_dotnet_assembly*是**位**，默认值为 0。 **1**指示正在注册的自定义业务逻辑是业务逻辑处理程序程序集;**0**指示它是一个 COM 组件。  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 是实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name*是**nvarchar(255)**，默认值为 NULL。  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 是实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name*是**nvarchar(255)** ，默认值为 NULL。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 是替代的类名称<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>实现业务逻辑处理程序。 *dotnet_class_name*是**nvarchar(255)**，默认值为 NULL。  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 是替代的类名称<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>实现业务逻辑处理程序。 *dotnet_class_name*是**nvarchar(255)** ，默认值为 NULL。  
   
 `[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 未从发布服务器调用该存储过程时使用此参数。 如果未指定，则假定本地服务器是发布服务器。  
   

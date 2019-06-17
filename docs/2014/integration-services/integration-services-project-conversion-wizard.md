@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057979"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 项目转换向导
@@ -52,31 +52,31 @@ ms.locfileid: "66057979"
 ##  <a name="open_dialog"></a> 打开“Integration Services 项目转换向导”  
  执行下列操作之一以打开 **“Integration Services 项目转换”** 向导。  
   
--   在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”。  
+-   在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”  。  
   
--   从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”节点并选择“导入包”。  
+-   从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”  节点并选择“导入包”  。  
   
  根据您是从 **还是从** 运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，该向导将执行不同的转换任务。 有关详细信息，请参阅 [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
   
 ##  <a name="locate"></a> 设置“查找包”页上的选项  
   
 > [!NOTE]  
->  只有在从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]运行该向导时，“查找包”页才可用。  
+>  只有在从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]运行该向导时，“查找包”  页才可用。  
   
- 在“源”下拉列表中选择“文件系统”时，该页显示以下选项。 当包驻留在文件系统中时选择此选项。  
+ 在“源”下拉列表中选择“文件系统”时，该页显示以下选项   。 当包驻留在文件系统中时选择此选项。  
   
  **文件夹**  
- 键入包路径，或通过单击“浏览”导航到该包。  
+ 键入包路径，或通过单击“浏览”  导航到该包。  
   
- 在“源”下拉列表中选择“SSIS 包存储区”时，该页显示以下选项。 有关包存储区的详细信息，请参阅[包管理（SSIS 服务）](service/package-management-ssis-service.md)。  
+ 在“源”下拉列表中选择“SSIS 包存储区”时，该页显示以下选项   。 有关包存储区的详细信息，请参阅[包管理（SSIS 服务）](service/package-management-ssis-service.md)。  
   
  **Server**  
  键入服务器名称或选择该服务器。  
   
  **文件夹**  
- 键入包路径，或通过单击“浏览”导航到该包。  
+ 键入包路径，或通过单击“浏览”  导航到该包。  
   
- 在“源”下拉列表中选择“Microsoft SQL Server”时，该页显示以下选项。 当包驻留在 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中时选择此选项。  
+ 在“源”下拉列表中选择“Microsoft SQL Server”时，该页显示以下选项   。 当包驻留在 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中时选择此选项。  
   
  **Server**  
  键入服务器名称或选择该服务器。  
@@ -94,7 +94,7 @@ ms.locfileid: "66057979"
  使用 SQL Server 身份验证时，提供密码。  
   
  **文件夹**  
- 键入包路径，或通过单击“浏览”导航到该包。  
+ 键入包路径，或通过单击“浏览”  导航到该包。  
   
 ##  <a name="selectPackages"></a> 设置“选择包”页上的选项  
  **包名称**  
@@ -110,7 +110,7 @@ ms.locfileid: "66057979"
  显示与包关联的密码。 密码文本将被隐藏。  
   
  **应用于所选内容**  
- 单击以将“密码”文本框中的密码应用于一个或多个所选包。  
+ 单击以将“密码”  文本框中的密码应用于一个或多个所选包。  
   
  **刷新**  
  刷新包的列表。  
@@ -119,10 +119,10 @@ ms.locfileid: "66057979"
  在此页上，指定新的项目部署文件 (.ispac) 的名称和路径或者选择一个现有文件。  
   
 > [!NOTE]  
->  只有在从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 运行该向导时，“选择目标”页才可用。  
+>  只有在从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 运行该向导时，“选择目标”  页才可用。  
   
  **输出路径**  
- 键入部署文件的路径，或通过单击“浏览”导航到该文件。  
+ 键入部署文件的路径，或通过单击“浏览”  导航到该文件。  
   
  **项目名称**  
  键入项目名称。  
@@ -136,7 +136,7 @@ ms.locfileid: "66057979"
 ##  <a name="projectProperties"></a> 设置“指定项目属性”页上的选项  
   
 > [!NOTE]  
->  只有在从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]运行该向导时，“指定项目属性”页才可用。  
+>  只有在从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]运行该向导时，“指定项目属性”  页才可用。  
   
  **项目名称**  
  列出项目名称。  
@@ -219,7 +219,7 @@ ms.locfileid: "66057979"
  **“设置参数详细信息”** 对话框还列出参数值的数据类型和参数的来源。  
   
 ##  <a name="review"></a> 设置“检查”页上的选项  
- 使用“检查”页可以确认为项目转换选择的选项。  
+ 使用“检查”页可以确认为项目转换选择的选项  。  
   
  **上一篇**  
  单击以更改选项。  

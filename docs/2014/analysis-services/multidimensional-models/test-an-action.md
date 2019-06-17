@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d2ba009efa61cd4694ca0d008d8885ae7ae6c48
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072804"
 ---
 # <a name="test-an-action"></a>测试操作
@@ -22,9 +22,9 @@ ms.locfileid: "66072804"
   
 ### <a name="to-test-an-action"></a>测试操作  
   
-1.  打开包含要测试的操作的多维数据库，然后在 **“视图”** 下，单击 **“浏览器”**。  
+1.  打开包含要测试的操作的多维数据库，然后在 **“视图”** 下，单击 **“浏览器”** 。  
   
-2.  将目标对象拖到 **“将列字段拖至此处”** 或 **“将行字段拖至此处”**。  
+2.  将目标对象拖到 **“将列字段拖至此处”** 或 **“将行字段拖至此处”** 。  
   
 3.  在视图窗格中，右键单击该操作所附加到的对象（如单元）。 操作名称将出现在上下文菜单中。  
   

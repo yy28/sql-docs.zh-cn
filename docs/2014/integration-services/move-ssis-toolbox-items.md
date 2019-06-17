@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057562"
 ---
 # <a name="move-ssis-toolbox-items"></a>移动 SSIS 工具箱项
@@ -24,20 +24,20 @@ ms.locfileid: "66057562"
   
 1.  在 SSIS 工具箱中右键单击某一项，然后单击以下项之一：  
   
-    -   移动到收藏夹  
+    -   移动到收藏夹   
   
-    -   移动到公共  
+    -   移动到公共   
   
-    -   移动到其他来源  
+    -   移动到其他来源   
   
-    -   移动到其他目标  
+    -   移动到其他目标   
   
-    -   移动到其他转换  
+    -   移动到其他转换   
   
-    -   移动到其他任务  
+    -   移动到其他任务   
   
 ### <a name="to-refresh-the-ssis-toolbox"></a>刷新 SSIS 工具箱  
   
-1.  右键单击 SSIS 工具箱，然后单击“刷新工具箱”。  
+1.  右键单击 SSIS 工具箱，然后单击“刷新工具箱”  。  
   
   

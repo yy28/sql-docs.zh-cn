@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083474"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>挖掘模型查看器任务和操作指南
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器包含几种可用于浏览挖掘模型的工具。 下列主题提供了有关如何完成与使用设计器中的“挖掘模型查看器”选项卡具体相关的任务的分步说明。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器包含几种可用于浏览挖掘模型的工具。 下列主题提供了有关如何完成与使用设计器中的“挖掘模型查看器”  选项卡具体相关的任务的分步说明。  
   
 ## <a name="in-this-section"></a>本节内容  
   

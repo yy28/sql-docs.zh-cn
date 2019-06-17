@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998311"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -89,7 +89,7 @@ sp_addsubscription [ @publication = ] 'publication'
  用于放置复制数据的目标数据库的名称。 *destination_db*是**sysname**，默认值为 NULL。 为 NULL 时， *destination_db*设置为发布数据库的名称。 对于 Oracle 发布服务器*destination_db*必须指定。 对于非 SQL Server 订阅服务器，（默认目标） 的值指定为*destination_db*。  
   
  [ @sync_type=] '*sync_type*'  
- 订阅同步类型。 *sync_type*是**nvarchar(255)**，可以是下列值之一：  
+ 订阅同步类型。 *sync_type*是**nvarchar(255)** ，可以是下列值之一：  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -111,13 +111,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|订阅需要进行初始化。 当设置此选项的值*sync_type*是自动的。|  
   
  [ @subscription_type=] '*subscription_type*'  
- 是订阅的类型。 *subscription_type*是**nvarchar(4)**，使用默认值为 push。 可以为 push 或 pull。 推送订阅的分发代理驻留在分发服务器上，而请求订阅的分发代理程序驻留在订阅服务器。 *subscription_type*可以为 pull，以创建为发布服务器识别的命名的请求订阅。 有关详细信息，请参阅[订阅发布](../../relational-databases/replication/subscribe-to-publications.md)。  
+ 是订阅的类型。 *subscription_type*是**nvarchar(4)** ，使用默认值为 push。 可以为 push 或 pull。 推送订阅的分发代理驻留在分发服务器上，而请求订阅的分发代理程序驻留在订阅服务器。 *subscription_type*可以为 pull，以创建为发布服务器识别的命名的请求订阅。 有关详细信息，请参阅[订阅发布](../../relational-databases/replication/subscribe-to-publications.md)。  
   
 > [!NOTE]  
 >  匿名订阅无需使用此存储过程。  
   
  [ @update_mode=] '*update_mode*'  
- 已更新的类型。*update_mode*是**nvarchar(30)**，可以是下列值之一。  
+ 已更新的类型。*update_mode*是**nvarchar(30)** ，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -130,7 +130,7 @@ sp_addsubscription [ @publication = ] 'publication'
  请注意，在是否要订阅的发布允许 DTS 不允许的值同步事务和 queued 的 tran。  
   
  [ @loopback_detection=] '*loopback_detection*'  
- 指定分发代理是否将从订阅服务器发起的事务发送回该订阅服务器。 *loopback_detection*是**nvarchar(5)**，可以是下列值之一。  
+ 指定分发代理是否将从订阅服务器发起的事务发送回该订阅服务器。 *loopback_detection*是**nvarchar(5)** ，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -197,13 +197,13 @@ sp_addsubscription [ @publication = ] 'publication'
  停止安排分发代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
  [ @optional_command_line=] '*optional_command_line*'  
- 要执行的可选命令提示符。 *optional_command_line*是**nvarchar(4000)**，默认值为 NULL。  
+ 要执行的可选命令提示符。 *optional_command_line*是**nvarchar(4000)** ，默认值为 NULL。  
   
  [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- 是否可以通过同步订阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同步管理器。 *enabled_for_syncmgr* 是 **nvarchar(5)**，默认值为 FALSE。 如果为 false，则表示订阅没有在 Windows 同步管理器中注册。 如果为 true，则表示订阅已向 Windows 同步管理器注册，因而可以在不启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的情况下同步。 Oracle 发布服务器不支持。  
+ 是否可以通过同步订阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同步管理器。 *enabled_for_syncmgr* 是 **nvarchar(5)** ，默认值为 FALSE。 如果为 false，则表示订阅没有在 Windows 同步管理器中注册。 如果为 true，则表示订阅已向 Windows 同步管理器注册，因而可以在不启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的情况下同步。 Oracle 发布服务器不支持。  
   
  [ @offloadagent= ] '*remote_agent_activation*'  
  指定可远程激活代理。 *remote_agent_activation*是**位**默认值为 0。  
@@ -224,7 +224,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  如果满足以下条件，则必须指定密码*dts_package_name*指定。  
   
  [ @dts_package_location= ] '*dts_package_location*'  
- 指定包位置。 *dts_package_location*是**nvarchar(12)**，默认值为分发服务器。 包的位置可以是 distributor 或 subscriber。  
+ 指定包位置。 *dts_package_location*是**nvarchar(12)** ，默认值为分发服务器。 包的位置可以是 distributor 或 subscriber。  
   
  [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -236,7 +236,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  *发布服务器*不能为指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
  [ @backupdevicetype= ] '*backupdevicetype*'  
- 指定从备份初始化订阅服务器时使用的备份设备的类型。 *backupdevicetype*是**nvarchar(20)**，可以是下列值之一：  
+ 指定从备份初始化订阅服务器时使用的备份设备的类型。 *backupdevicetype*是**nvarchar(20)** ，可以是下列值之一：  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -247,7 +247,7 @@ sp_addsubscription [ @publication = ] 'publication'
  *backupdevicetype*时，才使用*sync_method*设置为 initialize_with_backup 时。  
   
  [ @backupdevicename= ] '*backupdevicename*'  
- 指定从备份初始化订阅服务器时使用的设备的名称。 *backupdevicename*是**nvarchar(1000)**，默认值为 NULL。  
+ 指定从备份初始化订阅服务器时使用的设备的名称。 *backupdevicename*是**nvarchar(1000)** ，默认值为 NULL。  
   
  [ @mediapassword= ] '*mediapassword*'  
  指定介质集的密码（如果在格式化介质时设置了密码）。 *mediapassword*是**sysname**，默认值为 NULL。  
@@ -261,7 +261,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @fileidhint= ] *fileidhint*  
  标识要还原的备份集的序号值。 *fileidhint*是**int**，默认值为 NULL。  
   
- [ @unload=] *卸载*   
+ [ @unload=] *卸载*  
  指定在从备份进行的初始化完成后是否应取出磁带备份设备。 *卸载*是**位**，默认值为 1。 1 指定磁带应卸载。 *卸载*时，才使用*backupdevicetype*为磁带。  
   
  [ @subscriptionlsn= ] *subscriptionlsn*  

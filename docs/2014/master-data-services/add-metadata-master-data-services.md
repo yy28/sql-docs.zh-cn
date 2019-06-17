@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054292"
 ---
 # <a name="add-metadata-master-data-services"></a>添加元数据 (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "66054292"
   
 -   有关**元数据**模型，您必须具有**添加**对你想要添加的元数据实体或叶成员类型的权限。  
   
--   版本的状态必须是 **“打开”**。  
+-   版本的状态必须是 **“打开”** 。  
   
 ### <a name="to-add-metadata"></a>添加元数据  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66054292"
   
 2.   从“版本”列表中，选择某一版本。  
   
-3.  单击 **“资源管理器”**。  
+3.  单击 **“资源管理器”** 。  
   
 4.  从菜单栏中，指向**实体**然后单击你想要添加的元数据实体。  
   

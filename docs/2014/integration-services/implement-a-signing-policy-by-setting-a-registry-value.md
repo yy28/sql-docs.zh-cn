@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058220"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>通过设置注册表值实现签名策略
@@ -26,7 +26,7 @@ ms.locfileid: "66058220"
   
 -   “有效签名”  是一个可以成功读取的签名。  
   
--   “无效签名”是一个解密的校验和（由私钥加密的包代码的单向哈希）与在加载 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的过程中计算的解密校验和不相符的签名。  
+-   “无效签名”  是一个解密的校验和（由私钥加密的包代码的单向哈希）与在加载 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的过程中计算的解密校验和不相符的签名。  
   
 -   “可信签名”  是一个使用由受信任的根证书颁发机构签名的数字证书创建的签名。 该设置不要求签名者出现在可信发布服务器的用户列表中。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "66058220"
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>实现包的签名策略  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。  
+1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
 2.  在运行对话框中，键入`Regedit`，然后单击**确定**。  
   
 3.  找到注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS。  
   
-4.  右键单击“MSDTS”，指向“新建”，然后单击“DWORD 值”。  
+4.  右键单击“MSDTS”  ，指向“新建”  ，然后单击“DWORD 值”  。  
   
 5.  将新值的名称更新为 `BlockedSignatureStates`。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "66058220"
   
 7.  在 **“编辑 DWORD 值”** 对话框中，键入值 0、1、2 或 3。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
-9. 在 **“文件”** 菜单中，单击 **“退出”**。  
+9. 在 **“文件”** 菜单中，单击 **“退出”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [安全性概述 (Integration Services)](security/security-overview-integration-services.md)   

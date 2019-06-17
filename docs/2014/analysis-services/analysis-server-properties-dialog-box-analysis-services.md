@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062614"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>“分析服务器属性”对话框 (Analysis Services)
-  可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“分析服务器属性”对话框，为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例设置常规、语言/排序规则和安全设置。 通过在“对象资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，再从上下文菜单中选择“属性”，可以显示“分析服务器属性”对话框。 **“分析服务器属性”** 对话框包含下列属性。  
+  可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“分析服务器属性”  对话框，为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例设置常规、语言/排序规则和安全设置。 通过在“对象资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，再从上下文菜单中选择“属性”，可以显示“分析服务器属性”    对话框。 **“分析服务器属性”** 对话框包含下列属性。  
   
 ## <a name="information-properties"></a>信息属性  
  使用此页可查看服务器模式、版本和兼容性级别。 每个实例均在表格或多维服务器模式下进行安装，且能够加载表格或多维模型。 如果您需要支持这两种模式，则必须安装两个实例。  
@@ -71,15 +71,15 @@ ms.locfileid: "66062614"
      如果未选择此选项，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将遵循字典中定义的相关语言或字母表的排序和比较规则。  
   
     > [!NOTE]  
-    >  如果选择此选项，将会禁用“区分大小写”、“区分重音”、“区分假名”和“区分全半角”选项。  
+    >  如果选择此选项，将会禁用“区分大小写”、“区分重音”、“区分假名”和“区分全半角”选项     。  
   
 -   **“二进制 2”** 用于根据为每个字符定义的位模式对 Unicode 数据进行排序和比较。 二进制排序顺序区分大小写，即先小写字母后大写字母，并区分重音。 这是最快的排序顺序。  
   
--   “区分大小写”用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分大小写字母。  
+-   “区分大小写”  用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分大小写字母。  
   
      如果未选择此选项， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将认为大写字母和小写字母是一样的。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不会定义是否排序或字母与大写字母**区分大小写**未选中。  
   
--   “区分重音”用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分重音和非重音字符。 例如，“a”和“á”将被视为不同的字符。  
+-   “区分重音”  用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分重音和非重音字符。 例如，“a”和“á”将被视为不同的字符。  
   
      如果未选择此选项，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将字母的重音形式和非重音形式视为相同。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66062614"
   
      如果未选择此选项，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将平假名字符和片假名字符视为相同。  
   
--   “区分全半角”用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分以单字节字符（半角）和双字节字符（全角）表示的相同字符。  
+-   “区分全半角”  用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分以单字节字符（半角）和双字节字符（全角）表示的相同字符。  
   
      如果未选择此选项，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将同一字符的单字节形式和双字节形式视为相同。  
   

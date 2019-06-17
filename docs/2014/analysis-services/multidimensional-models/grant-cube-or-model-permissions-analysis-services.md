@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075024"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授予多维数据集或模型权限 (Analysis Services)
@@ -42,7 +42,7 @@ ms.locfileid: "66075024"
   
 2.  在“对象资源管理器”中打开“数据库”  文件夹并选择一个数据库。  
   
-3.  右键单击“角色”，然后选择“新角色”。 请注意，角色在数据库级别创建并应用于其范围内的对象。 你无法在数据库之间共享角色。  
+3.  右键单击“角色”，然后选择“新角色”。   请注意，角色在数据库级别创建并应用于其范围内的对象。 你无法在数据库之间共享角色。  
   
 4.  在“常规”  窗格中输入名称和（可选）描述。 此窗格也包含多个数据库权限，如完全控制、处理数据库和读取定义。 查询多维数据集或表格模型不需要这些权限。 有关这些权限的详细信息，请参阅[授予数据库权限 (Analysis Services)](grant-database-permissions-analysis-services.md)。  
   
@@ -60,15 +60,15 @@ ms.locfileid: "66075024"
   
 1.  在中**多维数据集**窗格中，选择多维数据集，并单击`Read`或**读/写**访问。  
   
-     `Read` 权限已经足以进行多数操作。 “读/写”仅用于回写，而非处理。 有关此功能的详细信息，请参阅 [Set Partition Writeback](set-partition-writeback.md) 。  
+     `Read` 权限已经足以进行多数操作。 “读/写”  仅用于回写，而非处理。 有关此功能的详细信息，请参阅 [Set Partition Writeback](set-partition-writeback.md) 。  
   
      请注意，你可以选择多个多维数据集以及“创建角色”对话框中的其他可选对象。 授予对多维数据集的权限也就授予了对与此多维数据集关联的维度和透视的权限。 无需手动添加此多维数据集中已存在的对象。  
   
      如果要根据对象或用户改变授权，例如：要使某些度量值不可用，可以用原子方式允许或拒绝对特定对象（甚至对单元）的访问权限。 有关详细信息，请参阅[授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 和[授予单元数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)。  
   
-2.  此时，单击“确定” 后，此角色的所有成员均具有对这些多维数据集的访问权限，权限级别为你所指定。  
+2.  此时，单击“确定”  后，此角色的所有成员均具有对这些多维数据集的访问权限，权限级别为你所指定。  
   
-     请注意，在“多维数据集”  窗格上，你可以通过“钻取和本地多维数据集” 向用户授予从服务器多维数据集创建本地多维数据集的权限，或者通过“钻取”  权限仅允许钻取。  
+     请注意，在“多维数据集”  窗格上，你可以通过“钻取和本地多维数据集”  向用户授予从服务器多维数据集创建本地多维数据集的权限，或者通过“钻取”  权限仅允许钻取。  
   
      最后，此窗格使你可以授予对该多维数据集的“处理数据库”  权限，从而给予此角色所有成员处理此多维数据集的能力。 由于处理通常是受限操作，我们建议将此任务交由管理员来完成，或为此任务专门定义单独的角色。 有关处理权限最佳做法的详细信息，请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66075024"
     > [!NOTE]  
     >  如果你是一名 Analysis Services 管理员，管理员权限将与具有较低权限的角色相结合，这使得单独测试角色权限变得困难。 要简化测试，我们建议使用分配给正在测试的角色的帐户，打开 SSMS 的第二个实例。  
   
-2.  按住 Shift 键并右键单击 **Excel** 快捷方式，以便访问“以其他用户身份运行”选项。 输入一个具有此角色成员身份的 Windows 用户或组帐户。  
+2.  按住 Shift 键并右键单击 **Excel** 快捷方式，以便访问“以其他用户身份运行”  选项。 输入一个具有此角色成员身份的 Windows 用户或组帐户。  
   
 3.  Excel 打开时，使用“数据”选项卡连接到 Analysis Services。 由于你是作为不同的 Windows 用户运行 Excel，因此“使用 Windows 身份验证”  选项是测试角色时应使用的正确凭据类型。 如果需要此步骤的帮助，请参阅[从客户端应用程序进行连接 (Analysis Services)](../instances/connect-from-client-applications-analysis-services.md)。  
   
@@ -91,9 +91,9 @@ ms.locfileid: "66075024"
   
      从 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 重新部署一个项目将覆盖任何不是在项目内定义的角色或角色成员身份。 在重新部署后重新生成角色和角色成员身份的最快方式是通过脚本。  
   
-2.  在 SSMS 中，导航到“角色”文件夹，右键单击一个现有角色。  
+2.  在 SSMS 中，导航到“角色”文件夹，右键单击一个现有角色。   
   
-3.  选择“编写角色脚本为” | “CREATE TO” | “文件”。   
+3.  选择“编写角色脚本为” | “CREATE TO” | “文件”。     
   
 4.  以 .xmla 文件扩展名保存文件。 要测试脚本，删除当前角色，在 SSMS 中打开文件，按 F5 执行该脚本。  
   

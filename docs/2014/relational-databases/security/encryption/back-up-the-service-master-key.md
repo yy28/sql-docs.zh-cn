@@ -13,10 +13,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 23d4a24811c545bc69b41cb43bfc3f6b957eddf6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011533"
 ---
 # <a name="back-up-the-service-master-key"></a>备份服务主密钥
@@ -59,9 +59,9 @@ ms.locfileid: "63011533"
   
 5.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-6.  在标准菜单栏上，单击 **“新建查询”**。  
+6.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-7.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+7.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Creates a backup of the "AdventureWorks2012" master key.  

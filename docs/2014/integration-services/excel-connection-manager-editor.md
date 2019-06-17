@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059271"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 连接管理器编辑器
@@ -37,7 +37,7 @@ ms.locfileid: "66059271"
 >  **Excel 目标编辑器**自动创建该 Excel 文件，选择时**Excel 连接**指向新/不存在文件，然后单击**新建**为**Excel 工作表的名称**。  
   
  **“浏览”**  
- 使用“打开”对话框可以导航到 Excel 文件所在的文件夹或要创建新文件的文件夹。  
+ 使用“打开”对话框可以导航到 Excel 文件所在的文件夹或要创建新文件的文件夹  。  
   
  **Excel 版本**  
  指定用于创建文件的 Microsoft Excel 的版本。  

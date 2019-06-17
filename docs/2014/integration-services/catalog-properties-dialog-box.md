@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061104"
 ---
 # <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
@@ -39,7 +39,7 @@ ms.locfileid: "66061104"
   
 2.  连接到 Microsoft SQL Server 数据库引擎。  
   
-3.  在对象资源管理器中，展开“Integration Services”节点，右键单击“SSISDB”，然后单击“属性”。  
+3.  在对象资源管理器中，展开“Integration Services”  节点，右键单击“SSISDB”  ，然后单击“属性”  。  
   
 ##  <a name="options"></a> 配置选项  
   

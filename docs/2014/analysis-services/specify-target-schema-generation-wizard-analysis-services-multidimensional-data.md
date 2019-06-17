@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068244"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定目标（架构生成向导）（Analysis Services - 多维数据）
@@ -30,13 +30,13 @@ ms.locfileid: "66068244"
  键入新的数据源视图的名称。  
   
 > [!NOTE]  
->  只有在选中“创建新的数据源视图”时，才启用此选项。  
+>  只有在选中“创建新的数据源视图”  时，才启用此选项。  
   
  **数据源**  
  选择将与新数据源视图相关联的数据源。  
   
 > [!NOTE]  
->  只有在选中“创建新的数据源视图”时，才启用此选项。  
+>  只有在选中“创建新的数据源视图”  时，才启用此选项。  
   
  **新建**  
  单击此项，将显示数据源向导并可以定义与新数据源视图相关联的新数据源。  

@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011840"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定字段长度 (SQL Server)
   字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如，`int` 数据类型占 4 个字节。 如果指示前缀长度为 0 **bcp**命令将提示你输入字段长度、 默认字段长度以及字段长度对包含的数据文件中的数据存储的影响`char`数据。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示输入字段长度  
- 如果某个交互式 **bcp** 命令包含不带格式化文件开关 (**-f**) 或数据格式开关（**-n**、**-c**、**-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的字段长度，如下所示：  
+ 如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f**) 或数据格式开关（ **-n**、 **-c**、 **-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的字段长度，如下所示：  
   
  `Enter length of field <field_name> [<default>]:`  
   

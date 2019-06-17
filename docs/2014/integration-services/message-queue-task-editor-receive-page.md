@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057665"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>消息队列任务编辑器（“接收”页）
-  可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] 消息队列 (MSMQ) 消息。  
+  可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] 消息队列 (MSMQ) 消息   。  
   
  若要了解此任务，请参阅 [Message Queue Task](control-flow/message-queue-task.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66057665"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
  **SaveFileAs**  
- 键入要使用的文件的路径，或单击省略号按钮 (…) 后再定位到该文件。  
+ 键入要使用的文件的路径，或单击省略号按钮 (…) 后再定位到该文件。   
   
  **Overwrite**  
  指示在保存数据文件消息的内容时是否覆盖现有文件中的数据。 默认值为 `False`。  
@@ -71,9 +71,9 @@ ms.locfileid: "66057665"
   
 #### <a name="filter--from-package"></a>Filter = 来源包  
  **Identifier**  
- 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。  
+ 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。   
   
- **相关主题：**[选择包](control-flow/select-a-package.md)  
+ **相关主题：** [选择包](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
  **Filter**  
@@ -85,9 +85,9 @@ ms.locfileid: "66057665"
 |**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
   
  **变量**  
- 键入变量名称，或单击“\<新建变量…>”，然后配置新的变量。  
+ 键入变量名称，或单击“\<新建变量…>”，然后配置新的变量。   
   
- **相关主题：**[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：** [添加变量](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>Filter 动态选项  
   
@@ -97,9 +97,9 @@ ms.locfileid: "66057665"
   
 #### <a name="filter--from-package"></a>Filter = 来源包  
  **Identifier**  
- 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。  
+ 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。   
   
- **相关主题：**[选择包](control-flow/select-a-package.md)  
+ **相关主题：** [选择包](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
  **比较**  
@@ -113,7 +113,7 @@ ms.locfileid: "66057665"
 |**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
   
  **CompareString**  
- 除非将 **Compare** 选项设置为“无”，否则请提供与消息进行比较的字符串。  
+ 除非将 **Compare** 选项设置为“无”  ，否则请提供与消息进行比较的字符串。  
   
 ### <a name="messagetype--string-message-to-variable"></a>MessageType = 变量的字符串消息  
  **比较**  
@@ -127,12 +127,12 @@ ms.locfileid: "66057665"
 |**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
   
  **CompareString**  
- 除非将 **Compare** 选项设置为“无”，否则请提供与消息进行比较的字符串。  
+ 除非将 **Compare** 选项设置为“无”  ，否则请提供与消息进行比较的字符串。  
   
  **变量**  
- 键入保存接收到的消息的变量名，或单击“\<新建变量…>”，然后配置新的变量。  
+ 键入保存接收到的消息的变量名，或单击“\<新建变量…>”，然后配置新的变量。   
   
- **相关主题：**[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：** [添加变量](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068903"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中配置服务器属性
@@ -46,9 +46,9 @@ ms.locfileid: "66068903"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-     在对象资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，再单击“属性”。 随即出现“常规”页，显示更为常用的属性。  
+     在对象资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，再单击  “属性”。 随即出现“常规”页，显示更为常用的属性。  
   
-2.  若要查看更多属性，请选中该页底部的“显示高级(全部)属性”复选框。  
+2.  若要查看更多属性，请选中该页底部的  “显示高级(全部)属性”复选框。  
   
      只有表格模式服务器和多维模式服务器才支持修改服务器属性。 如果安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，请始终使用默认值，除非 Microsoft 产品支持工程师另有说明。  
   

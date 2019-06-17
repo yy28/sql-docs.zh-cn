@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060232"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
@@ -25,7 +25,7 @@ ms.locfileid: "66060232"
   
  通过首先配置创建部署实用工具的生成过程，然后生成 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，可以为该项目创建一个包部署实用工具。 在生成项目时，将自动包括项目中的所有包和包配置。 若要部署其他文件（如项目的自述文件），请将这些文件放在 **项目的** “杂项” [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 文件夹中。 当生成项目时，也会自动包括这些文件。  
   
- 您可以按照不同的方式配置每个项目部署。 在生成项目和创建包部署实用工具之前，您可以设置部署实用工具的属性，自定义项目中包的部署方法。 例如，您可以指定在部署项目时是否可以更新包配置。 若要访问 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的属性，请右键单击该项目，再单击“属性”。  
+ 您可以按照不同的方式配置每个项目部署。 在生成项目和创建包部署实用工具之前，您可以设置部署实用工具的属性，自定义项目中包的部署方法。 例如，您可以指定在部署项目时是否可以更新包配置。 若要访问 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的属性，请右键单击该项目，再单击  “属性”。  
   
  下表列出了部署实用工具属性。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "66060232"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开包含要为其创建包部署实用工具的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的解决方案。  
   
-2.  右键单击该项目，再单击“属性”。  
+2.  右键单击该项目，再单击“属性”  。  
   
-3.  在“\<project name> 属性页”对话框中，单击“部署实用工具”。  
+3.  在“\<project name> 属性页”对话框中，单击“部署实用工具”   。  
   
 4.  若要部署包时更新包配置，请设置**AllowConfigurationChanges**到`True`。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "66060232"
   
 6.  还可以通过修改 `DeploymentOutputPath` 属性来更新部署实用工具的位置。  
   
-7.  单击“确定” 。  
+7.  单击“确定”  。  
   
-8.  在解决方案资源管理器中，右键单击该项目，再单击“生成”。  
+8.  在解决方案资源管理器中，右键单击该项目，再单击  “生成”。  
   
 9. 在 **“输出”** 窗口中查看生成进度和生成错误。  
   

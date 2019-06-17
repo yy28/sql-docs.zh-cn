@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074780"
 ---
 # <a name="linked-measure-groups"></a>链接度量值组
@@ -57,7 +57,7 @@ ms.locfileid: "66074780"
   
 2.  在解决方案资源管理器中，双击要向其添加链接度量值组的多维数据集。 此步骤在多维数据集设计器中打开多维数据集。  
   
-3.  在多维数据集设计器中的“度量值”窗格或“维度”窗格上，右键单击任一窗格中的任何位置，然后选择“新建链接对象”。 这会启动链接对象向导。  
+3.  在多维数据集设计器中的“度量值”窗格或“维度”窗格上，右键单击任一窗格中的任何位置，然后选择“新建链接对象”  。 这会启动链接对象向导。  
   
 4.  在第一页上，指定数据源。 此步骤建立原始度量值组的位置。 默认值是当前数据库中的当前多维数据集，不过也可以选择其他 Analysis Services 数据库。  
   

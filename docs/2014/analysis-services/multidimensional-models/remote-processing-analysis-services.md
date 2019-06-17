@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073206"
 ---
 # <a name="remote-processing-analysis-services"></a>远程处理 (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66073206"
   
 1.  在将用于安排处理的计算机上，启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-2.  右键单击数据库，选择“处理”，指向“脚本”，然后选择“将操作脚本保存到‘新建查询’窗口”。 随后将在查询窗口中显示用于调用处理的命令。  
+2.  右键单击数据库，选择“处理”，指向“脚本”，然后选择“将操作脚本保存到‘新建查询’窗口”。    随后将在查询窗口中显示用于调用处理的命令。  
   
 3.  单击“确认”  以开始处理。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66073206"
   
 1.  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]连接到远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-2.  右键单击服务器名称，单击“属性”，然后单击“安全”。  
+2.  右键单击服务器名称，单击“属性”，然后单击“安全”。    
   
 3.  单击“添加”  以添加 SQL Server 代理帐户。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "66073206"
   
 1.  在 Management Studio 中，连接到本地数据库引擎实例。 SQL Server 代理是对象资源管理器中的最后一项。 如有必要，请启动该服务。  
   
-2.  右键单击“作业”，单击“新建作业”，然后输入名称。  
+2.  右键单击“作业”，单击“新建作业”，然后输入名称。    
   
 3.  在“步骤”中，单击“新建”  ，然后输入名称。  
   
-4.  在“类型”中，选择“SQL Server Analysis Services 命令” 。  
+4.  在“类型”中，选择“SQL Server Analysis Services 命令”  。  
   
 5.  在“服务器”中，输入远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66073206"
   
 #### <a name="run-the-job"></a>运行作业  
   
-1.  在用于运行作业的计算机上，确认作业可执行基本操作。 在“对象资源管理器”中的“SQL Server 代理”下，展开“作业”，右键单击刚刚创建的作业，然后单击“作业开始步骤”。 随后立即启动该作业。 可在 SQL Server Profiler 中监视进度。  
+1.  在用于运行作业的计算机上，确认作业可执行基本操作。 在“对象资源管理器”中的“SQL Server 代理”下，展开“作业”，右键单击刚刚创建的作业，然后单击“作业开始步骤”。   随后立即启动该作业。 可在 SQL Server Profiler 中监视进度。  
   
 2.  最后一步，修改该作业，使其按您定义的计划运行，并添加管理作业所需的任何警报或通知。 可能还要细化处理脚本，或在作业中创建多个步骤以独立处理各个对象。  
   

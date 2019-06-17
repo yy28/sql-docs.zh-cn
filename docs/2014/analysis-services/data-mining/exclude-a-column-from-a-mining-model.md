@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70049092909b625a1f304f16f153bf4287d5bcdf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084558"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>从挖掘模型中排除列
@@ -30,7 +30,7 @@ ms.locfileid: "66084558"
   
 1.  在 **中的数据挖掘设计器的** “挖掘模型” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡中，在有关的挖掘模型下，选择与要排除的列相对应的单元。  
   
-2.  从下拉列表框中选择“忽略”。  
+2.  从下拉列表框中选择“忽略”  。  
   
 ## <a name="see-also"></a>请参阅  
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)  

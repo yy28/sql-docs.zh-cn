@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe356d15c0602f33ec9c59ee463a69783686899b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066152"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -55,11 +55,11 @@ ms.locfileid: "66066152"
   
 |Option|Description|  
 |------------|-----------------|  
-|**处理**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。 有关“处理”对话框的详细信息，请参阅[处理对话框（Analysis Services - 多维数据）](process-dialog-box-analysis-services-multidimensional-data.md)。|  
-|**更改用户**|单击此项可以显示 **“安全上下文”** 对话框，以便更改在 **“浏览器”** 选项卡上所使用的用户和角色。有关“安全上下文”对话框的详细信息，请参阅[“安全上下文”对话框（Analysis Services - 多维数据）](security-context-dialog-box-analysis-services-multidimensional-data.md)。|  
+|**处理**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。 有关“处理”  对话框的详细信息，请参阅[处理对话框（Analysis Services - 多维数据）](process-dialog-box-analysis-services-multidimensional-data.md)。|  
+|**更改用户**|单击此项可以显示 **“安全上下文”** 对话框，以便更改在 **“浏览器”** 选项卡上所使用的用户和角色。有关“安全上下文”  对话框的详细信息，请参阅[“安全上下文”对话框（Analysis Services - 多维数据）](security-context-dialog-box-analysis-services-multidimensional-data.md)。|  
 |**重新连接**|如果 **“浏览器”** 选项卡会话由于连接丢失或超时而断开，单击此项可将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] “计算” **选项卡重新连接到包含多维数据集的** 实例和数据库。|  
 |**刷新**|单击此项可以刷新 **“元数据”** 和 **“报表”** 窗格。|  
-|**升序排序**|单击此项可以按 **“语言”** 中指定语言的升序顺序，对 **“报表”** 窗格中的所选行的同级成员进行排序。<br /><br /> **注意** 只有在“报表”窗格中选择了单元时，才会启用此选项。|  
+|**升序排序**|单击此项可以按 **“语言”** 中指定语言的升序顺序，对 **“报表”** 窗格中的所选行的同级成员进行排序。<br /><br /> **注意** 只有在“报表”  窗格中选择了单元时，才会启用此选项。|  
 |**降序排序**|单击此项可以按 **“语言”** 中指定语言的降序顺序，对 **“报表”** 窗格中的所选行的同级成员进行排序。<br /><br /> 注意：启用此选项仅当中的单元格**报表**窗格中选择。|  
 |**自动筛选器**|单击此项可以自动筛选 **“结果”** 窗格中的结果。|  
 |**显示仅顶部/底部**|选择一个值或百分比，基于所选度量值在 **“报表”** 窗格中只显示最前面或最后面指定数量或百分比的单元。<br /><br /> 有关此选项的详细信息，请参阅 [TopCount (MDX)](/sql/mdx/topcount-mdx)、[TopPercent (MDX)](/sql/mdx/toppercent-mdx)、[BottomCount (MDX)](/sql/mdx/bottomcount-mdx) 和 [BottomPercent (MDX)](/sql/mdx/bottompercent-mdx)。|  
@@ -69,6 +69,6 @@ ms.locfileid: "66066152"
 |**清除结果**|单击此项可以清除 **“报表”** 窗格中的结果。|  
 |**命令和选项**|单击此项可以显示 **“命令和选项”** 对话框，并编辑 **“报表”** 窗格中 Microsoft Office 11.0 数据透视表控件的高级属性。 有关 **“命令和选项”** 对话框的详细信息，请参阅 Microsoft Office 文档。|  
 |**Perspective**|选择用于在 **“元数据”** 和 **“报表”** 窗格中查看数据和元数据的透视。<br /><br /> 若要在不使用透视的情况下查看多维数据集，请选择多维数据集名称。|  
-|**语言**|选择用于在 **“元数据”** 和 **“报表”** 窗格中查看数据和元数据的语言。<br /><br /> 若要使用默认语言查看多维数据集，请选择 **“默认值”**。|  
+|**语言**|选择用于在 **“元数据”** 和 **“报表”** 窗格中查看数据和元数据的语言。<br /><br /> 若要使用默认语言查看多维数据集，请选择 **“默认值”** 。|  
   
   

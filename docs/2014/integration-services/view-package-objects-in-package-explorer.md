@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b48b7b4f106b7be318777d6041c5574f9d6c3039
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054510"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>在包资源管理器中查看包对象
@@ -30,17 +30,17 @@ ms.locfileid: "66054510"
   
 2.  单击 **“包资源管理器”** 选项卡。  
   
-3.  若要查看 **“变量”**、 **“优先约束”**、 **“事件处理程序”**、 **“连接管理器”**、 **“日志提供程序”** 或 **“可执行文件”** 文件夹的内容，请展开每个相应的文件夹。  
+3.  若要查看 **“变量”** 、 **“优先约束”** 、 **“事件处理程序”** 、 **“连接管理器”** 、 **“日志提供程序”** 或 **“可执行文件”** 文件夹的内容，请展开每个相应的文件夹。  
   
 4.  根据包的结构，展开所有次级文件夹。  
   
 #### <a name="to-view-package-object-properties"></a>查看包对象属性  
   
--   右键单击对象，再单击“属性”，打开“属性”窗口。  
+-   右键单击对象，再单击“属性”  ，打开“属性”  窗口。  
   
 #### <a name="to-delete-an-object-in-a-package"></a>删除包中的对象  
   
--   右键单击对象，再单击“删除”。  
+-   右键单击对象，再单击“删除”  。  
   
 ## <a name="see-also"></a>请参阅  
  [查看包对象](view-package-objects.md)  

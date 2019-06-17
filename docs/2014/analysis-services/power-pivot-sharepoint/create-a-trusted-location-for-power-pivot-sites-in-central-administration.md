@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54c06d86490c92936d147f2876d663f43d99fac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071590"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -36,13 +36,13 @@ ms.locfileid: "66071590"
   
 ##  <a name="create"></a> 为 PowerPivot 数据访问创建受信任的位置  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”** 。  
   
 2.  单击“Excel Services 服务应用程序”。  
   
-3.  单击 **“受信任文件位置”**。  
+3.  单击 **“受信任文件位置”** 。  
   
-4.  单击 **“添加受信任文件位置”**。  
+4.  单击 **“添加受信任文件位置”** 。  
   
 5.  输入包含 PowerPivot 库的站点的 URL。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "66071590"
   
 8.  在“工作簿属性”中，将 **“工作簿最大大小”** 设置为 **50**。 这会将工作簿文件大小的上限调整到用于文件上载到父 Web 应用程序的上限。 如果您的工作簿大小超过 50 MB，则必须进一步增加该文件大小限制。 有关详细信息，请参阅[配置最大文件上传大小&#40;PowerPivot for SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。  
   
-9. 在“外部数据”中，确认“允许外部数据”设置为 **“受信任的数据连接库和嵌入连接”**。 此设置是工作簿中 PowerPivot 数据访问所必需的。  
+9. 在“外部数据”中，确认“允许外部数据”设置为 **“受信任的数据连接库和嵌入连接”** 。 此设置是工作簿中 PowerPivot 数据访问所必需的。  
   
 10. 还在“外部数据”中，对于“刷新时警告”，取消选中 **“启用刷新警告”** 的复选框。 取消选中该复选框将允许 PowerPivot 库跳过例行的警告消息，而显示工作簿的预览图像。  
   
-11. 单击“确定” 。  
+11. 单击“确定”  。  
   
 ## <a name="see-also"></a>请参阅  
  [PowerPivot 库](../../2014-toc/books-online-for-sql-server-2014.md)   

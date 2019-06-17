@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015878"
 ---
 # <a name="modify-a-stored-procedure"></a>修改存储过程
     
 ##  <a name="Top"></a> 本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改存储过程。  
   
--   **开始之前：**[限制和局限](#Restrictions)、[安全性](#Security)  
+-   **开始之前：** [限制和局限](#Restrictions)、[安全性](#Security)  
   
--   **若要更改过程，使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要更改过程，使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -53,17 +53,17 @@ ms.locfileid: "63015878"
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**、过程所属的数据库以及 **“可编程性”**。  
+2.  展开 **“数据库”** 、过程所属的数据库以及 **“可编程性”** 。  
   
-3.  展开“存储过程”，右键单击要修改的过程，再单击“修改”。  
+3.  展开“存储过程”  ，右键单击要修改的过程，再单击“修改”  。  
   
 4.  修改存储过程的文本。  
   
-5.  若要测试语法，请在“查询”  菜单上单击“分析” 。  
+5.  若要测试语法，请在“查询”  菜单上单击“分析”  。  
   
-6.  若要将修改信息保存到过程定义中，请在 **“查询”** 菜单上单击 **“执行”**。  
+6.  若要将修改信息保存到过程定义中，请在 **“查询”** 菜单上单击 **“执行”** 。  
   
-7.  若要将更新的过程定义另存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，请在 **“文件”** 菜单上单击 **“另存为”**。 接受该文件名或将其替换为新的名称，再单击 **“保存”**。  
+7.  若要将更新的过程定义另存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，请在 **“文件”** 菜单上单击 **“另存为”** 。 接受该文件名或将其替换为新的名称，再单击 **“保存”** 。  
   
 > [!IMPORTANT]  
 >  验证所有用户的输入。 验证前请勿连接用户输入。 绝对不要执行根据尚未验证的用户输入构造的命令。  
@@ -73,9 +73,9 @@ ms.locfileid: "63015878"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**，然后展开过程所属的数据库。 或者，在工具栏上，从可用数据库列表中选择该数据库。 对于此示例，选择 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。  
+2.  展开 **“数据库”** ，然后展开过程所属的数据库。 或者，在工具栏上，从可用数据库列表中选择该数据库。 对于此示例，选择 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。  
   
-3.  在 **“文件”** 菜单上，单击 **“新建查询”**。  
+3.  在 **“文件”** 菜单上，单击 **“新建查询”** 。  
   
 4.  复制以下示例并将其粘贴到查询编辑器中。 此示例创建 `uspVendorAllInfo` 过程，该过程返回 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 数据库中所有供应商的名称、所提供的产品、信用等级以及可用性。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "63015878"
   
     ```  
   
-5.  在 **“文件”** 菜单上，单击 **“新建查询”**。  
+5.  在 **“文件”** 菜单上，单击 **“新建查询”** 。  
   
 6.  复制以下示例并将其粘贴到查询编辑器中。 该示例修改 `uspVendorAllInfo` 过程。 将删除 EXECUTE AS CALLER 子句并且将过程的主体修改为只返回那些提供指定产品的供应商。 `LEFT` 和 `CASE` 函数自定义结果集的外观。  
   
@@ -134,9 +134,9 @@ ms.locfileid: "63015878"
   
     ```  
   
-7.  若要将修改信息保存到过程定义中，请在 **“查询”** 菜单上单击 **“执行”**。  
+7.  若要将修改信息保存到过程定义中，请在 **“查询”** 菜单上单击 **“执行”** 。  
   
-8.  若要将更新的过程定义另存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，请在 **“文件”** 菜单上单击 **“另存为”**。 接受该文件名或将其替换为新的名称，再单击 **“保存”**。  
+8.  若要将更新的过程定义另存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，请在 **“文件”** 菜单上单击 **“另存为”** 。 接受该文件名或将其替换为新的名称，再单击 **“保存”** 。  
   
 9. 若要运行修改的存储过程，请执行以下示例。  
   

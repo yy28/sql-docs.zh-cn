@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062894"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>操作（多维数据集设计器）（Analysis Services - 多维数据）
@@ -27,19 +27,19 @@ ms.locfileid: "66062894"
  使用该工具栏可以执行此选项卡上的一般操作。有关此窗格的详细信息，请参阅[工具栏&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **操作组织程序**  
- 使用窗体视图中的“操作组织程序”窗格，可以按排序格式显示多维数据集所包含的操作。 有关此窗格的详细信息，请参阅[操作组织程序&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用窗体视图中的“操作组织程序”窗格，可以按排序格式显示多维数据集所包含的操作。  有关此窗格的详细信息，请参阅[操作组织程序&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **计算工具**  
  使用窗体视图中的 **“计算工具”** 窗格，可以显示可用于多维数据集的元数据、函数和工具。 有关此窗格的详细信息，请参阅[计算工具&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **操作窗体编辑器**  
- 使用窗体视图中的“操作窗体编辑器”窗格，可以编辑多维数据集所包含的标准操作。 有关此窗格的详细信息，请参阅[操作窗体编辑器&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用窗体视图中的“操作窗体编辑器”窗格，可以编辑多维数据集所包含的标准操作。  有关此窗格的详细信息，请参阅[操作窗体编辑器&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **钻取操作窗体编辑器**  
- 使用“钻取操作窗体编辑器”窗格，可以编辑多维数据集所包含的钻取操作。 有关此窗格的详细信息，请参阅[钻取操作窗体编辑器&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用“钻取操作窗体编辑器”窗格，可以编辑多维数据集所包含的钻取操作。  有关此窗格的详细信息，请参阅[钻取操作窗体编辑器&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **报表操作窗体编辑器**  
- 使用“报表操作窗体编辑器”窗格，可以编辑多维数据集所包含的报表操作。 有关此窗格的详细信息，请参阅[报表操作窗体编辑器&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用“报表操作窗体编辑器”窗格，可以编辑多维数据集所包含的报表操作。  有关此窗格的详细信息，请参阅[报表操作窗体编辑器&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [操作&#40;Analysis Services-多维数据&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

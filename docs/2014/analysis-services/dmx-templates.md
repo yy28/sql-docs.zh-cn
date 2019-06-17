@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081562"
 ---
 # <a name="dmx-templates"></a>DMX 模板
@@ -42,7 +42,7 @@ ms.locfileid: "66081562"
   
      但要注意，如果在使用查询编辑器时切换视图，则上一视图中的所有信息都将被清除。 更改视图前，请将 DMX 语句复制并粘贴到一个单独的文件中，保存好您的工作结果。  
   
-8.  单击 **“完成”**。 在中**选择目标**对话框框中，指定要保存的结果。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  单击 **“完成”** 。 在中**选择目标**对话框框中，指定要保存的结果。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  如果已成功执行语句，发送到服务器的 DMX 语句也会记录在**跟踪**窗口。 有关如何使用跟踪功能的详细信息，请参阅[Trace &#40;Excel 数据挖掘客户端&#41;](trace-data-mining-client-for-excel.md)。  
