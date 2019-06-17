@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067401"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>创建和管理表格模型分区（SSAS 表格）
@@ -31,7 +31,7 @@ ms.locfileid: "66067401"
 -   [删除分区](#bkmk_delete)  
   
 ## <a name="tasks"></a>“任务”  
- 若要为已部署的表格模型数据库创建和管理分区，您可以使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 若要查看“分区”对话框，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击某一表，然后单击“分区”。  
+ 若要为已部署的表格模型数据库创建和管理分区，您可以使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 若要查看“分区”对话框，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击某一表，然后单击“分区”。    
   
 ###  <a name="bkmk_create_new"></a> 创建新分区  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66067401"
   
 3.  在 **“SQL 语句”** 中，将定义您想要在分区中包含的列和任何子句的 SQL 查询语句键入或粘贴到查询窗口中。  
   
-4.  若要验证语句，请单击 **“检查语法”**。  
+4.  若要验证语句，请单击 **“检查语法”** 。  
   
 ###  <a name="bkmk_copy"></a> 复制分区  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66067401"
   
 2.  在 **“分区名称”** 中，键入分区的新名称。  
   
-3.  在 **“SQL 语句”**，编辑 SQL 查询语句。  
+3.  在 **“SQL 语句”** ，编辑 SQL 查询语句。  
   
 ###  <a name="bkmk_merge"></a> 合并两个或更多分区  
   

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5f2f1aa1dd763675d50ff9ea1961d6036c3ee73f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485420"
 ---
 # <a name="business-rule-examples-master-data-services"></a>业务规则示例 (Master Data Services)
@@ -151,10 +151,10 @@ Else
   
   
 **在示例模型中查看业务规则示例**  
-1. 导航在安装 MDS 之后设置的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 网站，然后单击“系统管理”框。   
+1. 导航在安装 MDS 之后设置的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 网站，然后单击“系统管理”  框。   
 有关设置 Web 站点的说明，请参阅 [Master Data Services 的安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)。  
-2. 单击包含业务规则的示例模型（如以上表所列），然后单击“实体”。  
-3. 单击应用规则的实体（如以下表所列），然后单击“业务规则”。  
+2. 单击包含业务规则的示例模型（如以上表所列），然后单击“实体”  。  
+3. 单击应用规则的实体（如以下表所列），然后单击“业务规则”  。  
 4. 单击要查看的业务规则的名称。 UI 将展开，以显示 **If**、 **Then** 和 **Else** 语句。  
   
  

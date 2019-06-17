@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771623"
 ---
 # <a name="set-parameter-value-dialog-box"></a>设置参数值对话框
@@ -36,7 +36,7 @@ ms.locfileid: "62771623"
   
 3.  展开 **“SSISDB”** 节点。  
   
-4.  右键单击包或项目，单击“配置”，然后单击“参数”选项卡或“连接管理器”选项卡中的省略号按钮。  
+4.  右键单击包或项目，单击“配置”  ，然后单击“参数”  选项卡或“连接管理器”  选项卡中的省略号按钮。  
   
 ##  <a name="option"></a> 配置选项  
  **参数**  

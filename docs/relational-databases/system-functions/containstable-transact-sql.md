@@ -35,10 +35,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 534d1457f984c496b416edae421ab0f52c619eeb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097289"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
@@ -119,31 +119,31 @@ CONTAINSTABLE
   
  *表*不能指定服务器名称和不能对链接服务器的查询中使用。  
   
- column_name  
- 是为进行全文搜索而编制了索引的一个或多个列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型。  
+ column_name   
+ 是为进行全文搜索而编制了索引的一个或多个列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型           。  
   
  *column_list*  
- 指示可以指定多个列（以逗号分隔）。 column_list 必须用括号括起来。 除非指定 language_term，否则 column_list 中所有列的语言必须相同。  
+ 指示可以指定多个列（以逗号分隔）。 column_list 必须用括号括起来  。 除非指定 language_term，否则 column_list 中所有列的语言必须相同   。  
   
  \*  
- 指定所有全文都索引中的列*表*应该用于搜索给定的搜索条件。 除非指定 language_term，否则表的所有列的语言必须相同。  
+ 指定所有全文都索引中的列*表*应该用于搜索给定的搜索条件。 除非指定 language_term，否则表的所有列的语言必须相同  。  
   
- LANGUAGE language_term  
- 是其资源将用于断字、 词干分析、 同义词库和干扰词的语言 (或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 删除，因为查询的一部分。 此参数是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素。 如果未指定值，则使用该列的全文语言。  
+ LANGUAGE language_term   
+ 是其资源将用于断字、 词干分析、 同义词库和干扰词的语言 (或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 删除，因为查询的一部分。 此参数是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素  。 如果未指定值，则使用该列的全文语言。  
   
  如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在对这种列进行查询时，指定 *LANGUAGE**language_term* 可增大找到有效匹配项的可能性。  
   
- 当指定为字符串， *language_term*对应于**别名**中列的值[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图。  字符串必须用单引号引起来，如 'language_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
+ 当指定为字符串， *language_term*对应于**别名**中列的值[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图。  字符串必须用单引号引起来，如 'language_term'  。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID  。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值  。 十六进制值不能超过八位（包括前导零在内）。  
   
  如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
   
- 如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term。  
+ 如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term  。  
   
  *top_n_by_rank*  
  指定仅*n*最高排名的匹配项，按降序返回。 仅适用于整数值， *n*，指定。 如果 *top_n_by_rank* 与其他参数组合使用，则查询返回的行数可能会少于实际与所有谓词都匹配的行数。 *top_n_by_rank*允许您通过调取仅最相关的命中项来提高查询性能。  
   
  <contains_search_condition>  
- 指定要在 column_name 中搜索的文本和匹配条件。 有关搜索条件的信息，请参阅[包含&#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)。  
+ 指定要在 column_name 中搜索的文本和匹配条件  。 有关搜索条件的信息，请参阅[包含&#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)。  
   
 ## <a name="remarks"></a>备注  
  全文谓词和函数作用于 FROM 谓词所示的单个表。 若要对多个表进行搜索，请在 FROM 子句中使用联接表，以搜索由两个或更多个表的乘积构成的结果集。  

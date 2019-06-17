@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 95acff9d1b80560294758045c449c1c6c6790c27
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62759995"
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "62759995"
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|连接的标识符。 可以为 NULL。|  
 |**transport_stream_id**|**uniqueidentifier**|标识符的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此连接用于 TCP/IP 通信的网络接口 (SNI) 连接。 可以为 NULL。|  
-|State|**smallint**|连接的当前状态。 可以为 NULL。 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已关闭|  
+|State |**smallint**|连接的当前状态。 可以为 NULL。 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已关闭|  
 |**state_desc**|**nvarchar(60)**|连接的当前状态。 可以为 NULL。 可能的值：<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|打开连接的日期和时间。 可以为 NULL。|  
 |**login_time**|**datetime**|连接登录成功的日期和时间。 可以为 NULL。|  

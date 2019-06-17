@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26b3bedcd92729f2573cf82f944258f77faf14b2
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488934"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>应用业务规则（用于 Excel 的 MDS 外接程序）
@@ -36,7 +36,7 @@ ms.locfileid: "65488934"
   
 ### <a name="to-apply-business-rules"></a>应用业务规则  
   
-1.  在 **“发布并验证”** 组中，单击 **“应用规则”**。  
+1.  在 **“发布并验证”** 组中，单击 **“应用规则”** 。  
   
     > [!NOTE]  
     >  一次验证的成员（行）的数目取决于 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]中的设置。 有关详细信息，请参阅 [Business Rule Settings](../../master-data-services/system-settings-master-data-services.md#BusinessRules)。  

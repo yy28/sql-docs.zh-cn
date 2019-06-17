@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 49032dd9c8f57f1bb822720ae431098e911fbed1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483878"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>更改实体名称 (Master Data Services)
@@ -34,15 +34,15 @@ ms.locfileid: "65483878"
   
 ### <a name="to-change-an-entity-name"></a>更改实体名称  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”**。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”** 。  
   
 3.  在 **“实体维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
 4.  单击包含您要更改其名称的实体所对应的行。  
   
-5.  单击 **“编辑所选实体”**。  
+5.  单击 **“编辑所选实体”** 。  
   
 6.  在中**实体名称**框中，键入实体的更新的名称。  
   

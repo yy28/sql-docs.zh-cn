@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 23d018a8d551a5c3a7f2978339b6cf7612f378fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253278"
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>连接到 Azure SQL DB (MySQLToSQL)
@@ -58,7 +58,7 @@ ms.locfileid: "63253278"
   
 6.  SSMA 建议加密的连接到 SQL Azure。  
   
-7.  单击 **“连接”**。  
+7.  单击 **“连接”** 。  
   
 > [!IMPORTANT]  
 > 适用于 MySQL 的 SSMA 不支持连接到**主**SQL Azure 中的数据库。  

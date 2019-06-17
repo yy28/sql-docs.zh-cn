@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef717625e94b95559a6ae8bba57b0b82043fbc42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705442"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>删除基于策略的管理策略
@@ -47,12 +47,12 @@ ms.locfileid: "62705442"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”**。  
+3.  单击加号以便展开 **“策略管理”** 。  
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要删除的策略，然后选择“删除”。  
+5.  右键单击要删除的策略，然后选择“删除”  。  
   
-6.  在 **“删除对象”** 对话框中，确保已选择正确的条件，然后单击 **“确定”**。  
+6.  在 **“删除对象”** 对话框中，确保已选择正确的条件，然后单击 **“确定”** 。  
   
   

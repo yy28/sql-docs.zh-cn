@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 067781fd998c9e7763fe3a9f2befacab59687250
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287170"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>创建变量值文件 (OracleToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "63287170"
   
 > [!NOTE]  
 > 1.  变量名称是作为前缀和后缀，以 $ （美元） 符号。 如果变量未分配的变量值文件中的值，将导致停止控制台执行过程的脚本文件的分析过程中遇到错误。  
-> 2.  转义符 **$** 是 **$$**。 如果参数的变量或静态值的值将包含 **$** （美元） 符号，然后 **$$** 必须指定将其视为字符而不是一个变量。  
+> 2.  转义符 **$** 是 **$$** 。 如果参数的变量或静态值的值将包含 **$** （美元） 符号，然后 **$$** 必须指定将其视为字符而不是一个变量。  
 > 3.  出于可维护性目的，可以在声明变量`'variable-group'`元素的逻辑分隔的用户定义的变量。  此元素的使用情况不是必需的。  
   
 **示例：**  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5f1297927510fe6f0f5b15ac185316687326ce6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482753"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>刷新数据（用于 Excel 的 MDS 外接程序）
@@ -40,7 +40,7 @@ ms.locfileid: "65482753"
 > -   刷新时，将删除 MDS 管理的单元上的注释。  
   
 ## <a name="how-to-refresh-mds-managed-data"></a>如何刷新 MDS 管理的数据  
- 在功能区上的 **“连接并加载”** 组中， **“刷新”** 按钮提供两个选项： **“全部刷新”** 和 **“刷新所选内容”**。 功能区按钮的默认操作是 **“全部刷新”**。 若要使用服务器的值刷新整个工作表，请单击 **“刷新”** 按钮或选择 **“全部刷新”** 选项。 若要仅刷新工作表中的部分单元格，请选择这些单元格（必须是一个连续选择的单元格区域），然后选择“刷新所选内容”选项。  
+ 在功能区上的 **“连接并加载”** 组中， **“刷新”** 按钮提供两个选项： **“全部刷新”** 和 **“刷新所选内容”** 。 功能区按钮的默认操作是 **“全部刷新”** 。 若要使用服务器的值刷新整个工作表，请单击 **“刷新”** 按钮或选择 **“全部刷新”** 选项。 若要仅刷新工作表中的部分单元格，请选择这些单元格（必须是一个连续选择的单元格区域），然后选择“刷新所选内容”选项  。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

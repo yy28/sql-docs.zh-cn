@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 686c3f487207a430136feac2588e4b4b2dda9b1f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477000"
 ---
 # <a name="create-an-entity-master-data-services"></a>创建实体 (Master Data Services)
@@ -38,11 +38,11 @@ ms.locfileid: "65477000"
   
 ### <a name="to-create-an-entity"></a>创建实体  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，从网格中选择要为其创建实体的模型，然后单击“实体” 。  
+2.  在“管理模型”  页上，从网格中选择要为其创建实体的模型，然后单击“实体”  。  
   
-3.  在“管理实体”  页上，单击“添加” 。  
+3.  在“管理实体”  页上，单击“添加”  。  
   
 4.  在“名称”  框中，键入实体的名称。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "65477000"
      如果不填写此字段，则会使用实体名称。  
   
     > [!TIP]  
-    >  使用模型名称作为临时表名称的一部分，例如 Modelname_Entityname。 这便于在数据库中查找表。 有关临时表的详细信息，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。
+    >  使用模型名称作为临时表名称的一部分，例如 Modelname_Entityname  。 这便于在数据库中查找表。 有关临时表的详细信息，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。
     > [!TIP]
     > 若要使用临时表的默认命名，但另一模型中有同名实体，MDS 会自动将标识符（例如 _1、_2）追加到临时表名称中。
   
-7.  对于“事务日志类型”字段，请在下拉列表中选择事务日志类型。  
+7.  对于“事务日志类型”  字段，请在下拉列表中选择事务日志类型。  
   
      有关详细信息，请参阅[更改实体事务日志类型 (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65477000"
   
 9. 可选。 选择“启用数据压缩”  复选框。 默认情况下，系统将打开行压缩。 有关详细信息，请参阅 [Data Compression](../relational-databases/data-compression/data-compression.md)。  
   
-10. 单击“保存” 。  
+10. 单击“保存”  。  
   
 ## <a name="grid-columns"></a>网格列  
  对于创建的每个实体，系统都会在网格中添加一行（其中包含十三列）。 下面介绍了这些列。  

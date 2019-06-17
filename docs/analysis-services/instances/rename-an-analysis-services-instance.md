@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec5f84d40c3ba0628ea111502dd2be41cc7d346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635945"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重命名 Analysis Services 实例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  可以使用随 Management Studio （Web 安装）一起安装的“重命名实例”工具，重命名 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的现有实例。  
+  可以使用随 Management Studio （Web 安装）一起安装的“重命名实例”  工具，重命名 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的现有实例。  
   
 > [!IMPORTANT]  
 >  重命名该实例时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具将以提升的权限运行，更新与该实例关联的 Windows 服务名称、安全帐户和注册表项。 为确保执行这些操作，请务必以本地系统管理员身份运行此工具。  
@@ -30,13 +30,13 @@ ms.locfileid: "62635945"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>重命名 Analysis Services 的实例  
   
-1.  从 C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio 启动“实例重命名”工具 **asinstancerename.exe**。  
+1.  从 C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio 启动“实例重命名”  工具 **asinstancerename.exe**。  
   
 2.  在 **“重命名实例”** 对话框中，从 **“要重命名的实例”** 列表中选择要重命名的实例。  
   
 3.  在 **“新实例名”** 框中，输入实例的新名称。  
   
-4.  验证用户名和密码是否正确，然后单击 **“重命名”**。  
+4.  验证用户名和密码是否正确，然后单击 **“重命名”** 。  
   
      在名称更改过程中，Analysis Services 实例将会停止并重新启动。  
   

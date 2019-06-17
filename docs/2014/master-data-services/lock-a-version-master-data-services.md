@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e38a4c75ad6cf8c65d7120e0eb98163f7ee0fccc
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482874"
 ---
 # <a name="lock-a-version-master-data-services"></a>锁定版本 (Master Data Services)
@@ -33,17 +33,17 @@ ms.locfileid: "65482874"
   
 -   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
--   版本的状态必须是 **“打开”**。  
+-   版本的状态必须是 **“打开”** 。  
   
 ### <a name="to-lock-a-version"></a>锁定版本  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
   
 2.  在 **“管理版本”** 页上，选择要锁定的版本对应的行。  
   
-3.  单击 **“锁定”**。  
+3.  单击 **“锁定”** 。  
   
-4.  在确认对话框中，单击 **“确定”**。  
+4.  在确认对话框中，单击 **“确定”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   

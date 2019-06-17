@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63237995"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
-  使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
+  使用“MSSQLSERVER 属性”  对话框上的“服务”  选项卡查看或指定下列选项。  
   
 ## <a name="options"></a>选项  
  **二进制路径**  
@@ -52,6 +52,6 @@ ms.locfileid: "63237995"
 -   已禁用：无法启动此服务。  
   
  **状态**  
- 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
   
   

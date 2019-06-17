@@ -21,10 +21,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a5846f45a2919bf5d2de2e94e205bfd59b0fe94
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737427"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔值谓词 (SQLXML 4.0)
@@ -92,13 +92,13 @@ ms.locfileid: "62737427"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定连续和嵌套的谓词  
- 以下查询使用连续谓词显示。 该查询将返回所有**\<客户 >** 同时具有的子元素的上下文节点**SalesPersonID**值为 277 属性和一个**TerritoryID**且值为 3 的属性：  
+ 以下查询使用连续谓词显示。 该查询将返回所有 **\<客户 >** 同时具有的子元素的上下文节点**SalesPersonID**值为 277 属性和一个**TerritoryID**且值为 3 的属性：  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 该查询将返回**\<客户 >** 满足在谓词中指定的两个条件的元素。  
+ 该查询将返回 **\<客户 >** 满足在谓词中指定的两个条件的元素。  
   
  快捷方式**特性**轴 (@)，还可以指定和由于**子**轴是默认值，可以在查询中省略它：  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62737427"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 以下 XPath 查询说明嵌套谓词的用法。 该查询将返回所有**\<客户 >** 包含的子元素的上下文节点**\<顺序 >** 子元素上至少有一个 **\<顺序 >** 具有元素**SalesPersonID**属性值为 2。  
+ 以下 XPath 查询说明嵌套谓词的用法。 该查询将返回所有 **\<客户 >** 包含的子元素的上下文节点 **\<顺序 >** 子元素上至少有一个 **\<顺序 >** 具有元素**SalesPersonID**属性值为 2。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -169,7 +169,7 @@ ms.locfileid: "62737427"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定顶级谓词  
- 下面的查询返回**\<客户 >** 具有的子元素节点的上下文节点**\<顺序 >** 元素子级。 该查询将位置路径作为顶级谓词进行测试：  
+ 下面的查询返回 **\<客户 >** 具有的子元素节点的上下文节点 **\<顺序 >** 元素子级。 该查询将位置路径作为顶级谓词进行测试：  
   
 ```  
 /child::Customer[child::Order]  

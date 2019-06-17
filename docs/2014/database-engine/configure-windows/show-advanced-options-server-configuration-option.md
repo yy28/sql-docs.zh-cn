@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a9ba0dc47b64c537a6d218dc55fdee1c2f0cac83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808868"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>show advanced options 服务器配置选项
-  “显示高级选项”选项用来显示 **sp_configure** 系统存储过程高级选项。 当“显示高级选项”设置为 1 时，可以使用 **sp_configure** 列出高级选项。 默认值为 0。  
+   “显示高级选项”选项用来显示 **sp_configure** 系统存储过程高级选项。 当“显示高级选项”  设置为 1 时，可以使用 **sp_configure** 列出高级选项。 默认值为 0。  
   
  该设置将立即生效，无需重新启动服务器。  
   

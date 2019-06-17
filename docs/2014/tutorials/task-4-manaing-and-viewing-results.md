@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489456"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>任务 4：管理和查看报表
@@ -52,7 +52,7 @@ ms.locfileid: "65489456"
   
     1.  请注意， **A.Datum Corp.** 更正为**A.Datum Corporation**并**原因**设置为**基于字词的关系。A.datum Corporation**是 dqs 已知的域值，因为它在知识发现过程中发现。 因此，DQS 会**100%信任**此更正。  
   
-    2.  请注意， **Lazy Country Storex**更正为**Lazy Country Store**，**置信度级别**设置为**100%**，和**原因**设置为**域值**。 在知识发现过程中，设置**Lazy Country Storex**视为与错误**Lazy Country Store**作为**更正**，因此 DQS **100%确信**有关进行此项更改。  
+    2.  请注意， **Lazy Country Storex**更正为**Lazy Country Store**，**置信度级别**设置为**100%** ，和**原因**设置为**域值**。 在知识发现过程中，设置**Lazy Country Storex**视为与错误**Lazy Country Store**作为**更正**，因此 DQS **100%确信**有关进行此项更改。  
   
     3.  DQS 不熟悉的其他值在列表中，但找到使用这些值的更正**拼写检查器**并提出了合适的更正。 DQS 是**并非 100%** 信任这些更改，但置信度高于 80%，这是进行更改，因此 DQS 建议进行这些更改的阈值级别。  
   
@@ -87,6 +87,6 @@ ms.locfileid: "65489456"
 25. 单击**下一步**若要切换到**导出**页。  
   
 ## <a name="next-step"></a>下一步  
- [任务 5:将清理结果保存到 Excel 文件导出](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [任务 5：将清理结果保存到 Excel 文件导出](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

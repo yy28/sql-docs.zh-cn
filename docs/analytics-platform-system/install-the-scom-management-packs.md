@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63215536"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>针对分析平台系统中安装 SQL Server Operations Manager (SCOM) 管理包
@@ -47,11 +47,11 @@ System Center Operations Manager 必须已安装并正在运行。 SQL Server PD
   
     ![选择安装文件夹](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  单击 **“安装”**。  
+4.  单击 **“安装”** 。  
   
     ![确认已安装](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  单击 **“关闭”**。  
+5.  单击 **“关闭”** 。  
   
     ![单击关闭](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -67,11 +67,11 @@ System Center Operations Manager 必须已安装并正在运行。 SQL Server PD
   
     ![选择安装文件夹](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  单击 **“安装”**。  
+4.  单击 **“安装”** 。  
   
     ![确认已安装](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  单击 **“关闭”**。  
+5.  单击 **“关闭”** 。  
   
     ![安装完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

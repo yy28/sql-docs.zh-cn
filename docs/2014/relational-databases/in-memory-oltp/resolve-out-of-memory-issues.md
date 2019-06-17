@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468345"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
@@ -24,12 +24,12 @@ ms.locfileid: "62468345"
   
 |主题|概述|  
 |-----------|--------------|  
-| [解决 OOM 导致的数据库还原故障](#resolve-database-restore-failures-due-to-oom) |收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，数据库 '\<databaseName>' 的还原操作失败”时应采取的操作。|  
+| [解决 OOM 导致的数据库还原故障](#resolve-database-restore-failures-due-to-oom) |收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，数据库 '  \<databaseName>  ' 的还原操作失败”时应采取的操作。|  
 | [消除工作负荷的低内存或 OOM 情况的影响](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|发现内存不足问题对性能产生负面影响时应采取的操作。|  
-| [在提供足够内存时，解决由于内存不足导致的页分配失败问题](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，不允许对数据库 '\<databaseName>' 进行页分配”时应采取的操作。 ……”当可用内存足以进行操作时。|  
+| [在提供足够内存时，解决由于内存不足导致的页分配失败问题](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |收到错误消息“由于资源池 '\<resourcePoolName>  ' 内存不足，不允许对数据库 '\<databaseName>  ' 进行页分配”时应采取的操作。 ……”当可用内存足以进行操作时。|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>解决 OOM 导致的数据库还原故障  
- 当您尝试还原数据库时可能会收到错误消息："还原的数据库操作失败*\<databaseName >* 由于资源池内存不足*\<resourcePoolName >*'。"必须先通过使更多内存可用来解决内存不足问题，然后才能成功还原数据库。  
+ 当您尝试还原数据库时可能会收到错误消息："还原的数据库操作失败 *\<databaseName >* 由于资源池内存不足 *\<resourcePoolName >* '。"必须先通过使更多内存可用来解决内存不足问题，然后才能成功还原数据库。  
   
  若要解决 OOM 导致的还原故障，请使用以下任何或所有方法以便增加可用内存，来暂时增加可用于恢复操作的内存。  
   
@@ -135,7 +135,7 @@ GO
 > 请参阅主题[最佳实践：在虚拟机环境中使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)有关详细信息。  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>在提供足够内存时，解决由于内存不足导致的页分配失败问题  
- 如果收到错误消息"不允许为数据库分配页面 '*\<databaseName >* 由于资源池内存不足*\<resourcePoolName >*'. 请参阅<https://go.microsoft.com/fwlink/?LinkId=330673>有关详细信息。" ，这可能是因为禁用了资源调控器。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
+ 如果收到错误消息"不允许为数据库分配页面 ' *\<databaseName >* 由于资源池内存不足 *\<resourcePoolName >* '. 请参阅<https://go.microsoft.com/fwlink/?LinkId=330673>有关详细信息。" ，这可能是因为禁用了资源调控器。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
   
  若要解决此问题，您需要启用资源调控器。  
   

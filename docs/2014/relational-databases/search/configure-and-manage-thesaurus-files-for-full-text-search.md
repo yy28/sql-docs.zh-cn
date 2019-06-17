@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011479"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
@@ -29,7 +29,7 @@ ms.locfileid: "66011479"
   
 -   标注字符设置  
   
-     对于给定的同义词库，所有搜索模式可以都是敏感或不区分标注如波形符 (**~**)，锐音符标记 (**??**)，或变音符号 (**??**) (即*重音区分*或*不区分重音*)。 例如，假设您指定的模式"自助餐厅??" 替换为全文查询中的其他模式。 全文搜索同义词库是不区分重音，如果替换模式"咖啡馆??" 和"咖啡厅"。 如果同义词库是区分重音，全文搜索将替换仅模式"自助餐厅??"。 默认情况下，同义词库不区分重音。  
+     对于给定的同义词库，所有搜索模式可以都是敏感或不区分标注如波形符 ( **~** )，锐音符标记 ( **??** )，或变音符号 ( **??** ) (即*重音区分*或*不区分重音*)。 例如，假设您指定的模式"自助餐厅??" 替换为全文查询中的其他模式。 全文搜索同义词库是不区分重音，如果替换模式"咖啡馆??" 和"咖啡厅"。 如果同义词库是区分重音，全文搜索将替换仅模式"自助餐厅??"。 默认情况下，同义词库不区分重音。  
   
 -   扩展集  
   

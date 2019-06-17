@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137452"
 ---
 # <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>第 5 课：生成神经网络模型和逻辑回归模型 （数据挖掘中级教程）
@@ -28,7 +28,7 @@ ms.locfileid: "63137452"
   
  [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 业务部门正在开展旨在提高客户对呼叫中心满意度的计划。 他们雇用了一位供应商来管理呼叫中心并报告有关呼叫中心工作效率的指标，同时请您分析该供应商提供的一些初步数据。 他们想知道是否会有任何值得关注的发现。 特别是，他们想知道这些数据是否间接显示了人员配备的任何问题或改进客户满意度的方式。  
   
- 该数据集很小，只包括 30 天内呼叫中心的运转情况。 数据跟踪每个班次的操作员新手和有经验操作员的人数、来电数、订单数以及必须解决的问题数、客户等待某人回电话的平均时间。 数据还包含基于“挂断率” 的服务质量指标，它反映客户不满意的程度。  
+ 该数据集很小，只包括 30 天内呼叫中心的运转情况。 数据跟踪每个班次的操作员新手和有经验操作员的人数、来电数、订单数以及必须解决的问题数、客户等待某人回电话的平均时间。 数据还包含基于“挂断率”  的服务质量指标，它反映客户不满意的程度。  
   
  因为您事先对将显示的数据没有任何期望，您决定使用神经网络模型来探查可能的相关性。 神经网络模型通常用于探查，因为该模型能够分析多个输入和输出之间的复杂关系。  
   

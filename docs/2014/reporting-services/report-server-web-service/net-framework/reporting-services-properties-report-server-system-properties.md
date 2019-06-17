@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 935e60e0dadb55268fc31d92592d21b0c1df41cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63260827"
 ---
 # <a name="report-server-system-properties"></a>报表服务器系统属性
@@ -27,13 +27,13 @@ ms.locfileid: "63260827"
   
 |属性|Description|  
 |--------------|-----------------|  
-|SiteName|在用户界面上显示的报表服务器站点的名称。 默认值是 `Microsoft Report Server`。 此属性可以是空字符串。 最大长度为 8,000 个字符。|  
+|SiteName|在用户界面上显示的报表服务器站点的名称。 默认值为 `Microsoft Report Server`。 此属性可以是空字符串。 最大长度为 8,000 个字符。|  
 |SystemSnapshotLimit|为报表存储的快照的最大数目。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则无快照限制。|  
 |SystemReportTimeout|在报表服务器命名空间中托管的所有报表的默认报表处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则处理期间命名空间中的报表不会超时。 默认值是 `1800`。|  
 |UseSessionCookies|指示报表服务器与客户端浏览器通信时是否应使用会话 cookie。 默认值是 `true`。|  
-|SessionTimeout|会话保持活动状态的时间长度（以秒为单位）。 默认值为 `600`。|  
+|SessionTimeout|会话保持活动状态的时间长度（以秒为单位）。 默认值是 `600`。|  
 |EnableMyReports|指示是否启用“我的报表”功能。 值为 `true` 表示已启用该功能。|  
-|MyReportsRole|对用户的“我的报表”文件夹创建安全策略时所用角色的名称。 默认值为 `My Reports Role`。|  
+|MyReportsRole|对用户的“我的报表”文件夹创建安全策略时所用角色的名称。 默认值是 `My Reports Role`。|  
 |EnableExecutionLogging|指示报表执行日志记录是否处于启用状态。 默认值是 `true`。|  
 |ExecutionLogDaysKept|在执行日志中保留报表执行信息的天数。 此属性的有效值包括 `0` 到 `2`、`147`、`483` 和 `647`。 如果值为 `0`，则不从执行日志表中删除项。 默认值为 `60`。|  
 |SnapshotCompression|定义如何压缩快照。 默认值是 `SQL`。 有效值如下：<br /><br /> `SQL` = 在存储到报表服务器数据库中时压缩快照。 这是当前的行为。<br /><br /> **None** = 不压缩快照。<br /><br /> `All` = 针对所有的存储选项（包括报表服务器数据库或文件系统）压缩快照。|  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62899940"
 ---
 # <a name="xml-source"></a>XML 源
@@ -69,7 +69,7 @@ ms.locfileid: "62899940"
   
  XML 源支持多个常规输出和多个错误输出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含“XML 源编辑器”对话框，可用于配置 XML 源。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含“XML 源编辑器”  对话框，可用于配置 XML 源。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   

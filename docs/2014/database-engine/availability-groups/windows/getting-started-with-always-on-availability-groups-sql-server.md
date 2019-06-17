@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 03758f4ac1a88a6ed3e704d72deb1727c30ebccb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814275"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组入门 (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "62814275"
 |任务|链接|  
 |----------|----------|  
 |修改可用性组的 [灵活的故障转移策略](flexible-automatic-failover-policy-availability-group.md) ，以便控制导致自动故障转移的条件。 此策略仅适用于可进行自动故障转移的情况。|[配置可用性组的灵活的故障转移策略](configure-flexible-automatic-failover-policy.md)|  
-|执行计划的手动故障转移或强制的手动故障转移（可能有数据丢失），通常称作“强制故障转移”。 有关详细信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](failover-and-failover-modes-always-on-availability-groups.md)。|[执行计划的手动故障转移](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [执行强制的手动故障转移](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
+|执行计划的手动故障转移或强制的手动故障转移（可能有数据丢失），通常称作“强制故障转移”  。 有关详细信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](failover-and-failover-modes-always-on-availability-groups.md)。|[执行计划的手动故障转移](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [执行强制的手动故障转移](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |使用一组预定义策略，以便查看某一可用性组及其副本和数据库的运行状况。|[使用基于策略的管理查看可用性组的运行状况](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [使用 AlwaysOn 组面板](use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |添加或删除辅助副本。|[添加辅助副本](add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [删除辅助副本](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
 |挂起或恢复可用性数据库。 暂停某一辅助数据库会保持在其当前时间点，直到您恢复该数据库。|[挂起数据库](suspend-an-availability-database-sql-server.md)<br /><br /> [恢复数据库](resume-an-availability-database-sql-server.md)|  
@@ -82,17 +82,17 @@ ms.locfileid: "62814275"
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|**“对象资源管理器详细信息”** 窗格显示有关您连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例所承载的可用性组的基本信息。<br /><br /> 提示：使用此窗格，可以选择多个可用性组、 副本或数据库，并以执行常规管理任务对选定的对象;例如，从可用性组中删除多个可用性副本或数据库。|[使用“对象资源管理器详细信息”来监视可用性组](use-object-explorer-details-to-monitor-availability-groups.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|**“属性”** 对话框使您能够查看可用性组、副本或侦听器的属性，并在某些情况下可更改这些属性的值。|[可用性组属性](view-availability-group-properties-sql-server.md)<br /><br /> [可用性副本属性](view-availability-replica-properties-sql-server.md)<br /><br /> [可用性组侦听器属性](view-availability-group-listener-properties-sql-server.md)|  
 |系统监视器|**SQLServer:Availability Replica** 性能对象包含性能计数器，可报告可用性副本的相关信息。|[SQL Server，可用性副本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|系统监视器|**SQLServer:Database Replica** 性能对象包含性能计数器，可报告给定次要副本上的辅助数据库的相关信息。<br /><br /> SQL Server 中的 **SQLServer:Databases** 对象包含用于监视事务日志活动（但不仅限于此）的性能计数器。 以下计数器是特别适用于监视可用性数据库上的事务日志活动：“日志刷新写入时间(毫秒)”、“日志刷新次数/秒”、“日志池缓存失误数/秒”、“日志池磁盘读取数/秒”和“日志池请求数/秒”。|[SQL Server - 数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server，Databases 对象](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|系统监视器|**SQLServer:Database Replica** 性能对象包含性能计数器，可报告给定次要副本上的辅助数据库的相关信息。<br /><br /> SQL Server 中的 **SQLServer:Databases** 对象包含用于监视事务日志活动（但不仅限于此）的性能计数器。 以下计数器是特别适用于监视可用性数据库上的事务日志活动：“日志刷新写入时间(毫秒)”、“日志刷新次数/秒”、“日志池缓存失误数/秒”、“日志池磁盘读取数/秒”和“日志池请求数/秒”      。|[SQL Server - 数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server，Databases 对象](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   **视频-AlwaysOn 简介：**[Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 1 部分：介绍下一代高可用性解决方案）  
+-   **视频-AlwaysOn 简介：** [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 1 部分：介绍下一代高可用性解决方案）  
   
--   **视频的深入了解 AlwaysOn:**[Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+-   **视频的深入了解 AlwaysOn:** [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **白皮书：**[Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **白皮书：** [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   **博客：**[SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
+-   **博客：** [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组&#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   

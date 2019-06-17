@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185393"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>第 6 课：创建和使用预测 （数据挖掘基础教程）

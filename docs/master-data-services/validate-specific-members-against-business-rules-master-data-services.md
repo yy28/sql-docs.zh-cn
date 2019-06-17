@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5b0d7a9965d1453441384b09690be7ac97a7f36c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484966"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>针对业务规则验证特定成员 (Master Data Services)
@@ -39,9 +39,9 @@ ms.locfileid: "65484966"
   
 ### <a name="to-apply-business-rules-selectively"></a>有选择地应用业务规则  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型”下拉列表中，选择某一模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型”  下拉列表中，选择某一模型。  
   
-2.  从“版本”下拉列表中，选择某一版本。  
+2.  从“版本”  下拉列表中，选择某一版本。  
   
 3.  单击“资源管理器”选项卡。   
   

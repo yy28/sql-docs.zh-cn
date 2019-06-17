@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659835"
 ---
 # <a name="make-a-target-server"></a>设置目标服务器
@@ -48,7 +48,7 @@ ms.locfileid: "62659835"
 ###  <a name="Security"></a> 安全性  
  如果分布式作业的步骤与某个代理相关联，则该作业将在目标服务器上该代理帐户的上下文下运行。 请确保满足以下条件，否则与代理关联的作业步骤将不会从主服务器下载到目标服务器上：  
   
--   主服务器注册表子项**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) 设置为 1 (true)。 默认情况下，此子项设置为 0 (False)。  
+-   主服务器注册表子项 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) 设置为 1 (true)。 默认情况下，此子项设置为 0 (False)。  
   
 -   目标服务器上已存在与运行作业步骤的主服务器代理帐户同名的代理帐户。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62659835"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”，指向“多服务器管理”，然后单击“使其成为目标服务器”。 **“目标服务器向导”** 会指导您完成生成目标服务器的过程。  
+2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，然后单击“使其成为目标服务器”  。 **“目标服务器向导”** 会指导您完成生成目标服务器的过程。  
   
 3.  从 **“选择主服务器”** 页中，选择此目标服务器将从中接收作业的主服务器。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "62659835"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
   
     ```  
     USE msdb ;  

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a19029a98daa5411f0e915b62f3c7556cafad97a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655682"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad (OLE DB) 大容量复制数据
@@ -27,7 +27,7 @@ ms.locfileid: "62655682"
   
  通过将特定于 SQLOLEDB 提供程序的属性 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE，使用者将其对大容量复制的需要通知 SQLOLEDB。 通过在数据源上设置该属性，使用者创建 SQLOLEDB 会话。 新会话允许使用者访问 `IRowsetFastLoad`。  
   
- 可以参考完整示例，该示例演示了使用 `IRowsetFastLoad` 将记录大容量复制到表中的过程。 在此示例中，将 10 条记录添加到表 IRFLTable 中。 需要在数据库中创建表 IRFLTable。  
+ 可以参考完整示例，该示例演示了使用 `IRowsetFastLoad` 将记录大容量复制到表中的过程。 在此示例中，将 10 条记录添加到表 IRFLTable 中  。 需要在数据库中创建表 IRFLTable  。  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   

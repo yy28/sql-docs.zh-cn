@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484685"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>任务 12：发现知识（知识发现）
@@ -58,7 +58,7 @@ ms.locfileid: "65484685"
   
      ![域值和更正为值](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "域值和更正为值")  
   
-13. 单击 **“完成”**。  
+13. 单击 **“完成”** 。  
   
 14. 上**SQL Server Data Quality Services**对话框中，单击**发布**。  
   

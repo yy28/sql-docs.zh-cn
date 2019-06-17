@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d81fdef23f1d35997aaddce8d6e61e5ce51f76dc
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488894"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>合并数据（用于 Excel 的 MDS 外接程序）
@@ -32,7 +32,7 @@ ms.locfileid: "65488894"
   
 ### <a name="to-combine-non-managed-data-into-an-mds-managed-sheet"></a>将非托管数据合并到 MDS 管理的工作表  
   
-1.  在包含 MDS 管理的数据的工作表上，在 **“发布并验证”** 组中，单击 **“合并数据”**。  
+1.  在包含 MDS 管理的数据的工作表上，在 **“发布并验证”** 组中，单击 **“合并数据”** 。  
   
 2.  在 **“合并数据”** 对话框中的 **“要与 MDS 数据组合的范围”** 文本框旁，单击图标。 该对话框将收缩。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65488894"
   
 6.  对于为 MDS 实体列出的列，选择 **“相应列”** 下的列。 所有 MDS 列都不需要相应列。  
   
-7.  单击 **“合并”**。 **SOURCE** 列将显示，指示数据是来自 MDS 还是外部源。  
+7.  单击 **“合并”** 。 **SOURCE** 列将显示，指示数据是来自 MDS 还是外部源。  
   
 ## <a name="next-steps"></a>后续步骤  
   

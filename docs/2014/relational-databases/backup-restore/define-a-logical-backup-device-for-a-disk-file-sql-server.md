@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ae32391bd2f10525b89015272d11bcdb6468298
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877826"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>为磁盘文件定义逻辑备份设备 (SQL Server)
@@ -65,17 +65,17 @@ ms.locfileid: "62877826"
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开“服务器对象”，然后右键单击“备份设备”。  
+2.  展开“服务器对象”  ，然后右键单击“备份设备”  。  
   
-3.  单击 **“新建备份设备”**。 将打开 **“备份设备”** 对话框。  
+3.  单击 **“新建备份设备”** 。 将打开 **“备份设备”** 对话框。  
   
 4.  输入设备名称。  
   
 5.  若要确定目标位置，请单击 **“文件”** 并指定该文件的完整路径。  
   
-6.  若要定义新设备，请单击 **“确定”**。  
+6.  若要定义新设备，请单击 **“确定”** 。  
   
- 若要备份至此新设备，请将该设备添加到“备份数据库”（“常规”）对话框中的“备份到：”字段。 有关详细信息，请参阅 [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)中创建差异数据库备份。  
+ 若要备份至此新设备，请将该设备添加到“备份数据库”  （“常规”  ）对话框中的“备份到：”  字段。 有关详细信息，请参阅 [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)中创建差异数据库备份。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -83,9 +83,9 @@ ms.locfileid: "62877826"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) 为磁盘文件定义逻辑备份设备。 下面的示例以物理名称 `mydiskdump`添加名为 `c:\dump\dump1.bak`的磁盘备份设备。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) 为磁盘文件定义逻辑备份设备。 下面的示例以物理名称 `mydiskdump`添加名为 `c:\dump\dump1.bak`的磁盘备份设备。  
   
 ```sql  
 USE AdventureWorks2012 ;  

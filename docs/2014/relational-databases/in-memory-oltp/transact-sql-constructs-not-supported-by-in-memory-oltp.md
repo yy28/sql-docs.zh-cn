@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155300"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
@@ -46,10 +46,10 @@ ms.locfileid: "63155300"
 ## <a name="memory-optimized-tables"></a>内存优化表  
  下表列出可在涉及内存优化表的错误消息文本中显示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和关键字，以及用于解决问题的更正操作。  
   
-|类型|名称|解决方法|  
+|类型|“属性”|解决方法|  
 |----------|----------|----------------|  
 |功能|ON|内存优化的表不能放置在文件组或分区方案上。 从 `CREATE TABLE` 语句删除 ON 子句。|  
-|数据类型|数据类型名称|不支持所示的数据类型。 使用支持的数据类型之一替换该类型。 有关详细信息，请参阅[支持的数据类型](supported-data-types-for-in-memory-oltp.md)。|  
+|数据类型|数据类型名称 |不支持所示的数据类型。 使用支持的数据类型之一替换该类型。 有关详细信息，请参阅[支持的数据类型](supported-data-types-for-in-memory-oltp.md)。|  
 |功能|计算列|内存优化的表不支持计算列。 从 `CREATE TABLE` 语句删除计算列。|  
 |功能|复制|内存优化表不支持复制。|  
 |功能|FILESTREAM|内存优化的表列不支持 FILESTREAM 存储。 从列定义中删除 `FILESTREAM` 关键字。|  
@@ -98,7 +98,7 @@ ms.locfileid: "63155300"
 ## <a name="nonclustered-hash-indexes"></a>非聚集哈希索引  
  下表列出可在涉及非聚集哈希索引的错误消息文本中显示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和关键字，以及用于解决问题的更正操作。  
   
-|类型|名称|解决方法|  
+|类型|“属性”|解决方法|  
 |----------|----------|----------------|  
 |Option|ASC/DESC|非聚集哈希索引不排序。 从索引键定义中删除关键字 `ASC` 和 `DESC`。|  
   
@@ -180,7 +180,7 @@ ms.locfileid: "63155300"
 |聚合函数|*聚合函数*|不支持此子句。 有关本机编译的存储过程中聚合函数的详细信息，请参阅 [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)。|  
 |排名函数|*排名函数*|本机编译的存储过程中不支持排名函数。 从过程定义中删除它们。|  
 |函数|*函数*|不支持此函数。 从本机编译的存储过程中删除它。|  
-|。|*Statement*|不支持此语句。 从本机编译的存储过程中删除它。|  
+|声明专用纸|*Statement*|不支持此语句。 从本机编译的存储过程中删除它。|  
 |功能|MIN 和 MAX 用于二进制和字符串|聚合函数 `MIN` 和 `MAX` 不能用于本机编译的存储过程中的字符和二进制字符串值。|  
 |功能|不带聚合函数的 GROUP BY|在本机编译的存储过程中，当查询具有 `GROUP BY` 子句时，该查询也必须在 SELECT 或 HAVING 子句中使用聚合函数。 向查询中添加聚合函数。|  
 |功能|GROUP BY ALL|在本机编译的存储过程中，不能将 ALL 与 GROUP BY 子句一起使用。 从 GROUP BY 子句中删除 ALL。|  

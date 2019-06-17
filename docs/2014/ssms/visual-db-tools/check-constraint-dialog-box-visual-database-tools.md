@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067453"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>“CHECK 约束”对话框 (Visual Database Tools)
-  如果在表设计器中右键单击表定义网格，再单击“CHECK 约束”，则会显示此对话框。 此对话框包含附加到数据库中表的非唯一约束的一组属性。 应用于唯一约束的属性则包含在“索引/键”对话框中。  
+  如果在表设计器中右键单击表定义网格，再单击“CHECK 约束”  ，则会显示此对话框。 此对话框包含附加到数据库中表的非唯一约束的一组属性。 应用于唯一约束的属性则包含在“索引/键”  对话框中。  
   
 > [!NOTE]  
 >  如果表是为复制发布的，则必须使用 Transact-SQL 语句 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 或 SQL Server 管理对象 (SMO) 对架构进行更改。 使用表设计器或数据库关系图设计器更改架构后，会尝试删除并重新创建表。 由于您不能删除已发布的对象，因此架构更改将失败。  
@@ -36,22 +36,22 @@ ms.locfileid: "63067453"
  从表中移除选定的约束。 若要取消添加 CHECK 约束，请使用此按钮来移除约束。  
   
  **常规类别**  
- 展开此项可显示“表达式”属性字段。  
+ 展开此项可显示“表达式”  属性字段。  
   
  **表达式**  
  显示选定的 CHECK 约束的表达式。 对于新约束，必须先输入表达式，然后才能退出此框。 您还可以编辑现有的 CHECK 约束。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
  **标识类别**  
- 展开此项可显示“名称”和“说明”的属性。  
+ 展开此项可显示“名称”  和“说明”  的属性。  
   
  **名称**  
  显示选定的 CHECK 约束的名称。 若要更改此约束的名称，请直接在属性字段键入文本。  
   
  **说明**  
- 描述此 CHECK 约束。 既可以在属性字段中键入内容来编辑说明，也可以单击属性字段右侧显示的省略号按钮(…)，然后在“说明属性”对话框中编辑说明。  
+ 描述此 CHECK 约束。 既可以在属性字段中键入内容来编辑说明，也可以单击属性字段右侧显示的省略号按钮(…)，然后在“说明属性”对话框中编辑说明   。  
   
  **表设计器类别**  
- 展开此项可显示“在创建或重新启用时检查现有数据”、“强制用于 INSERT 和 UPDATE”和“强制用于复制”的属性。  
+ 展开此项可显示“在创建或重新启用时检查现有数据”  、“强制用于 INSERT 和 UPDATE”  和“强制用于复制”  的属性。  
   
  **在创建或重新启用时检查现有数据**  
  指定是否根据约束验证所有预先存在的数据（创建约束前存在于表中的数据）。  

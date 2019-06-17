@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54896093b887985fc658e823f7d277347a70f0ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724968"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
@@ -38,7 +38,7 @@ ms.locfileid: "62724968"
 -   分析多个输入和相对较少的输出之间的复杂关系的任何预测模型  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建由多至三层节点（有时称为神经元）组成的网络。 这些层分别是输入层、隐藏层和输出层。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建由多至三层节点（有时称为神经元  ）组成的网络。 这些层分别是输入层  、隐藏层  和输出层  。  
   
  **输入的层：** 输入的节点定义数据挖掘模型和及其概率的所有输入的属性的值。  
   

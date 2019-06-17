@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2bcbdacd6d08a6139975c20bb8f1d5010195375b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479357"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保护主数据管理器 Web 应用程序
@@ -36,22 +36,22 @@ ms.locfileid: "65479357"
   
 2.  在 **“连接”** 窗格中的 **“站点”** 的下面，单击承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的站点。  
   
-3.  在 **“操作”** 窗格中，单击 **“绑定”**。  
+3.  在 **“操作”** 窗格中，单击 **“绑定”** 。  
   
-4.  单击 **“添加”**。  
+4.  单击 **“添加”** 。  
   
 5.  从列表中选择 **https**。  
   
 6.  选择 SSL 证书。  
   
-7.  单击“确定” 。  
+7.  单击“确定”  。  
   
-8.  可选。 若要删除 HTTP 以便用户只能使用 HTTPS 访问站点，请单击含有 **http**的行。 单击 **“删除”** ，然后在确认对话框上单击 **“是”**。  
+8.  可选。 若要删除 HTTP 以便用户只能使用 HTTPS 访问站点，请单击含有 **http**的行。 单击 **“删除”** ，然后在确认对话框上单击 **“是”** 。  
   
     > [!IMPORTANT]  
     >  您必须在删除 HTTP 后更改 basicHttp 和 wsHttpBinding 配置。  
   
-9. 若要关闭 **“站点绑定”** 对话框，请单击 **“关闭”**。  
+9. 若要关闭 **“站点绑定”** 对话框，请单击 **“关闭”** 。  
   
 10. 现在，打开 web.config 文件从*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services\WebApplication。  
   

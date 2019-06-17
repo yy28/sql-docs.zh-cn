@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831879"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
@@ -133,10 +133,10 @@ ms.locfileid: "62831879"
  使用 **“数据事件探查任务编辑器”** 配置数据事件探查任务。 此编辑器有以下两页：  
   
  [“常规”页](../general-page-of-integration-services-designers-options.md)  
- 在“常规”页上，可指定输出文件或变量。 还可以选择 **“快速配置文件”** 对任务进行快速配置，以便使用默认的设置来计算配置文件。 有关详细信息，请参阅 [单个表快速配置文件窗体（数据事件探查任务）](data-profiling-task.md)。  
+ 在“常规”  页上，可指定输出文件或变量。 还可以选择 **“快速配置文件”** 对任务进行快速配置，以便使用默认的设置来计算配置文件。 有关详细信息，请参阅 [单个表快速配置文件窗体（数据事件探查任务）](data-profiling-task.md)。  
   
  [“配置文件请求”页](data-profiling-task-editor-profile-requests-page.md)  
- 在“配置文件请求”页上，可指定数据源，选择要计算的数据配置文件并对其进行配置。 有关可以配置的各种配置文件的详细信息，请参阅以下主题：  
+ 在“配置文件请求”  页上，可指定数据源，选择要计算的数据配置文件并对其进行配置。 有关可以配置的各种配置文件的详细信息，请参阅以下主题：  
   
 -   [候选键配置文件请求选项（数据事件探查任务）](candidate-key-profile-request-options-data-profiling-task.md)  
   

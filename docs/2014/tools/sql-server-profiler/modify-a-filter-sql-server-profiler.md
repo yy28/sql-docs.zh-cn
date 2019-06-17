@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db6d6220fbb0f756b539e63dc2496d9ddb46d9f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63228495"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>修改筛选器 (SQL Server Profiler)
@@ -26,7 +26,7 @@ ms.locfileid: "63228495"
   
 ### <a name="to-modify-a-filter"></a>修改筛选器  
   
-1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，打开要修改的跟踪筛选器的模板。 在 **“文件”** 菜单上，单击 **“模板”**，然后选择 **“编辑模板”**。  
+1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，打开要修改的跟踪筛选器的模板。 在 **“文件”** 菜单上，单击 **“模板”** ，然后选择 **“编辑模板”** 。  
   
 2.  在 **“跟踪模板属性”** 对话框的 **“常规”** 选项卡中，选择 **“选择模板名称”** 列表中的一个模板。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63228495"
   
      **“事件选择”** 选项卡包含一个网格控件。 网格控件是包含所有可跟踪事件类的表。 每个事件类在表中占一行。 事件类可能略有不同，这取决于所连接服务器的类型和版本。 事件类由网格的“事件” **“事件”** 列进行标识，并按事件类别进行分组。 其余列则列出每个事件类可以返回的数据列。  
   
-4.  单击 **“列筛选器”**。  
+4.  单击 **“列筛选器”** 。  
   
 5.  在 **“编辑筛选器”** 对话框中，单击要编辑的比较运算符旁边的值，然后键入新值或删除一个值。 此外，还可以添加其他筛选器。  
   

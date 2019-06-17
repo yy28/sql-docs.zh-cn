@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 70f328da53f2d346fe58f3416b0a3a0c331eb74c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479985"
 ---
 # <a name="copy-a-version-master-data-services"></a>复制版本 (Master Data Services)
@@ -32,16 +32,16 @@ ms.locfileid: "65479985"
   
 ### <a name="to-copy-a-version"></a>复制版本  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
   
 2.  在 **“管理版本”** 页上，选择要复制的版本对应的行。  
   
     > [!NOTE]  
     >  根据 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的设置，您可能只能复制状态为 **“已提交”** 的版本。 有关详细信息，请参阅[系统设置 (Master Data Services)](../../2014/master-data-services/system-settings-master-data-services.md)。  
   
-3.  单击 **“复制”**。  
+3.  单击 **“复制”** 。  
   
-4.  在确认对话框中，单击 **“确定”**。  
+4.  在确认对话框中，单击 **“确定”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   

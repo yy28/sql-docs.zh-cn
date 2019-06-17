@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822771"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>添加带有嵌套表的数据源视图（数据挖掘中级教程）
@@ -45,9 +45,9 @@ ms.locfileid: "62822771"
   
      系统将打开数据源视图向导。  
   
-2.  在“欢迎使用数据源视图向导”页中，单击“下一步”。  
+2.  在“欢迎使用数据源视图向导”  页中，单击“下一步”  。  
   
-3.  上**选择数据源**页面上，在**关系数据源**，选择[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]在数据挖掘基础教程中创建的数据源。 单击“下一步” 。  
+3.  上**选择数据源**页面上，在**关系数据源**，选择[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]在数据挖掘基础教程中创建的数据源。 单击“下一步”  。  
   
 4.  上**选择表和视图**页上，选择以下表，然后单击右箭头以将其包含在新的数据源视图：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62822771"
   
     -   `vAssocSeqLineItems`  
   
-5.  单击“下一步” 。  
+5.  单击“下一步”  。  
   
 6.  上**完成向导**页上，默认情况下，数据源视图命名为[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]。 将名称更改为`Orders`，然后单击**完成**。  
   

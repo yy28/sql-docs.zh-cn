@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789107"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>“进度”页（AlwaysOn 可用性组向导）
@@ -42,7 +42,7 @@ ms.locfileid: "62789107"
 |结果|Description|  
 |------------|-----------------|  
 |**错误**|指示此步骤操作遇到了错误。 单击该链接可显示一个描述该错误的消息对话框。|  
-|**正在进行（** 完成百分比 **）**|指示操作正在发生，并且估计此步骤已完成的百分比。|  
+|**正在进行（** 完成百分比 **）** |指示操作正在发生，并且估计此步骤已完成的百分比。|  
 |**成功**|指示此步骤操作已成功完成。|  
   
  **更少详细信息**  

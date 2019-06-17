@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773864"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>借助 Azure SQL 数据库实现透明数据加密
@@ -52,19 +52,19 @@ ms.locfileid: "62773864"
   
 1.  访问在 Azure 门户[ https://portal.azure.com ](https://portal.azure.com)和使用你的 Azure 管理员或参与者帐户登录。  
   
-2.  在左侧的标题中，单击“浏览” ，然后单击“SQL 数据库” 。  
+2.  在左侧的标题中，单击“浏览”  ，然后单击“SQL 数据库”  。  
   
 3.  选择左侧窗格中“SQL 数据库”  之后，单击用户数据库。  
   
-4.  在数据库边栏选项卡中，单击“所有设置” 。  
+4.  在数据库边栏选项卡中，单击“所有设置”  。  
   
 5.  在“设置”  边栏选项卡中，单击“透明数据加密（预览）”  部分打开“透明数据加密预览”  边栏选项卡。 如果尚未注册 TDE 预览，则将在完成注册前禁用数据加密设置。  
   
-6.  单击“预览条款” 。  
+6.  单击“预览条款”  。  
   
 7.  阅读预览条款，如果同意条款，选择**透明数据 encryptionPreview 条款**复选框，然后依次**确定**页面底部附近。 返回到**数据 encryptionPREVIEW**边栏选项卡，其中**数据加密**现在应启用按钮。  
   
-8.  在“数据加密预览”  边栏选项卡中，将“数据加密”  按钮移动为“开” ，然后单击“保存”  （在页面顶部）以应用设置。 “加密状态”  将粗略估计透明数据加密的进度。  
+8.  在“数据加密预览”  边栏选项卡中，将“数据加密”  按钮移动为“开”  ，然后单击“保存”  （在页面顶部）以应用设置。 “加密状态”  将粗略估计透明数据加密的进度。  
   
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")  
   
@@ -122,15 +122,15 @@ ms.locfileid: "62773864"
   
 1.  访问在 Azure 门户[ https://portal.azure.com ](https://portal.azure.com)和使用你的 Azure 管理员或参与者帐户登录。  
   
-2.  在左侧的标题中，单击“浏览” ，然后单击“SQL 数据库” 。  
+2.  在左侧的标题中，单击“浏览”  ，然后单击“SQL 数据库”  。  
   
 3.  选择左侧窗格中“SQL 数据库”  之后，单击用户数据库。  
   
-4.  在数据库边栏选项卡中，单击“所有设置” 。  
+4.  在数据库边栏选项卡中，单击“所有设置”  。  
   
 5.  在“设置”  边栏选项卡中，单击“透明数据加密（预览）”  部分打开“透明数据加密预览”  边栏选项卡。  
   
-6.  在“透明数据加密预览”  边栏选项卡中，将“数据加密”  按钮移动为“关” ，然后单击“保存”  （在页面顶部）以应用设置。 “加密状态”  将粗略估计透明数据解密的进度。  
+6.  在“透明数据加密预览”  边栏选项卡中，将“数据加密”  按钮移动为“关”  ，然后单击“保存”  （在页面顶部）以应用设置。 “加密状态”  将粗略估计透明数据解密的进度。  
   
      此外，还可以通过使用查询工具（如 [!INCLUDE[ssSDS](../includes/sssds-md.md)] ）作为具有“查看数据库状态” [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]**权限的数据库用户连接到** ，以便监视解密进度。 查询`encryption_state`的列[sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)视图。  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450011"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -41,14 +41,14 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>参数  
  *progid*  
- 要创建的 OLE 对象的编程标识符 (ProgID)。 此字符串说明该 OLE 对象的类，采用以下格式：**'**_OLEComponent_**。**_对象_  
+ 要创建的 OLE 对象的编程标识符 (ProgID)。 此字符串说明该 OLE 对象的类，采用以下格式： **'** _OLEComponent_ **。** _对象_   
   
  *OLEComponent*是 OLE 自动化服务器的组件名称和*对象*是 OLE 对象的名称。 指定的 OLE 对象必须有效，并且必须支持**IDispatch**接口。  
   
  例如，SQLDMO。SQLServer 是 SQL DMO 的 ProgID **SQLServer**对象。 SQL-DMO 具有的组件名称为 SQLDMO， **SQLServer**对象是否有效，并且 （如所有 SQL-DMO 对象） **SQLServer**对象支持**IDispatch**。  
   
  *clsid*  
- 要创建的 OLE 对象的类标识符 (CLSID)。 此字符串说明该 OLE 对象的类，采用以下格式： **{**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}**。 指定的 OLE 对象必须有效，并且必须支持**IDispatch**接口。  
+ 要创建的 OLE 对象的类标识符 (CLSID)。 此字符串说明该 OLE 对象的类，采用以下格式： **{** _nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_ **}** 。 指定的 OLE 对象必须有效，并且必须支持**IDispatch**接口。  
   
  例如，{00026BA1-0000-0000-C000-000000000046} 是 SQL-DMO 的 CLSID **SQLServer**对象。  
   

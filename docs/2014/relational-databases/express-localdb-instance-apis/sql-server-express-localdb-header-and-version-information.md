@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128698"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 标头信息和版本信息
@@ -44,7 +44,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- 在此注册表项之下有一个项列表，每个项对应于计算机上安装的每个 LocalDB。 每个这些密钥的名称格式的 LocalDB 版本号*\<主版本 >*。*\<次要版本 >* (例如，为项[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]项命名为 12.0)。 在每个版本项之下都有一个 `InstanceAPIPath` 名称-值对，用于定义指向随该版本一起安装的 SQLUserInstance.dll 文件的完全路径。 下面的示例显示一个安装了 LocalDB 版本 11.0 和 12.0 的计算机的注册表项：  
+ 在此注册表项之下有一个项列表，每个项对应于计算机上安装的每个 LocalDB。 每个这些密钥的名称格式的 LocalDB 版本号 *\<主版本 >* 。 *\<次要版本 >* (例如，为项[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]项命名为 12.0)。 在每个版本项之下都有一个 `InstanceAPIPath` 名称-值对，用于定义指向随该版本一起安装的 SQLUserInstance.dll 文件的完全路径。 下面的示例显示一个安装了 LocalDB 版本 11.0 和 12.0 的计算机的注册表项：  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\12.0]  

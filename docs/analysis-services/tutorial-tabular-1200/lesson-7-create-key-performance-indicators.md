@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21767c239ed3498e0e593e221203b1cde3b7ae69
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403869"
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>第 7 课：创建关键绩效指标
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在本课中，您将创建关键绩效指标 (KPI)。 KPI 用于根据“目标”值度量由“基础”度量值定义的值（也可以是由度量值或绝对值定义的值）的性能。 在报表客户端应用程序中，KPI 可以向业务专业人士提供一种快速简便的方法，使他们了解业务绩效的摘要或确定趋势。 若要了解详细信息，请参阅[Kpi](../tabular-models/kpis-ssas-tabular.md)。  
+在本课中，您将创建关键绩效指标 (KPI)。 KPI 用于根据“目标”  值度量由“基础”  度量值定义的值（也可以是由度量值或绝对值定义的值）的性能。 在报表客户端应用程序中，KPI 可以向业务专业人士提供一种快速简便的方法，使他们了解业务绩效的摘要或确定趋势。 若要了解详细信息，请参阅[Kpi](../tabular-models/kpis-ssas-tabular.md)。  
   
 估计的时间才能完成本课程中：**15 分钟**  
   
@@ -48,14 +48,14 @@ ms.locfileid: "65403869"
   
 7.  在左侧（低）滑块字段中，输入 **1**，然后在右侧（高）滑块字段中，输入 **1.07**。  
   
-8.  在“选择图标样式”中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型。
+8.  在“选择图标样式”  中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型。
   
     ![as-tabular-lesson7-kpi](media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
     > 请注意**说明**可用图标样式下方的标签。 用于为要使其更易于识别在客户端应用程序中的各种 KPI 元素输入说明。  
   
-9. 单击“确定”以完成 KPI。  
+9. 单击“确定”  以完成 KPI。  
   
     在度量值网格中，注意图标旁边**InternetCurrentQuarterSalesPerformance**度量值。 此图标表示此度量值充当 KPI 的基本值。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "65403869"
   
 4.  在关键绩效指标 (KPI) 对话框中，在**目标**选择**绝对值**，然后键入**1.25**。   
   
-5.  在“定义状态阈值”中，滑动左侧（低）滑块字段，直到此字段显示 **0.8**，然后滑动右侧（高）滑块字段，直到此字段显示 **1.03**。  
+5.  在“定义状态阈值”  中，滑动左侧（低）滑块字段，直到此字段显示 **0.8**，然后滑动右侧（高）滑块字段，直到此字段显示 **1.03**。  
   
-6.  在“选择图标样式”中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型，然后单击“确定”。  
+6.  在“选择图标样式”  中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型，然后单击“确定”  。  
   
 ## <a name="whats-next"></a>下一步是什么？
 请转到下一课：[第 8 课：创建透视](lesson-8-create-perspectives.md)。

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0a03a530c83cdf492eb7c4c0fcc000a6343c9a97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754914"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "62754914"
   
 ### <a name="to-establish-a-witness"></a>建立见证服务器  
   
-1.  在见证服务器实例上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果只将该服务器实例用于数据库镜像会话中的见证服务器，你可以为终结点分配见证服务器角色 (ROLE**=** WITNESS)。 如果要将该服务器实例用于其他数据库镜像会话中的伙伴，请将端点的角色分配为 ALL。  
+1.  在见证服务器实例上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果只将该服务器实例用于数据库镜像会话中的见证服务器，你可以为终结点分配见证服务器角色 (ROLE **=** WITNESS)。 如果要将该服务器实例用于其他数据库镜像会话中的伙伴，请将端点的角色分配为 ALL。  
   
      若要执行 SET WITNESS 语句，数据库镜像会话必须已启动（在伙伴之间），并且见证服务器端点的 STATE 必须设置为 STARTED。  
   
@@ -52,17 +52,17 @@ ms.locfileid: "62754914"
   
 3.  连接到主体服务器并执行下面的语句：  
   
-     ALTER DATABASE <database_name> SET WITNESS **=** <server_network_address>  
+     ALTER DATABASE <database_name>  SET WITNESS **=** <server_network_address>   
   
-     其中，<database_name> 是要镜像的数据库的名称（此名称在两个伙伴上相同），<server_network_address> 是见证服务器实例的服务器网络地址。  
+     其中，<database_name>  是要镜像的数据库的名称（此名称在两个伙伴上相同），  <server_network_address> 是见证服务器实例的服务器网络地址。  
   
      服务器网络地址的语法如下：  
   
-     TCP **://**\<_system-address>_**:**\<*port>*  
+     TCP **://** \<_system-address>_ **:** \<*port>*  
   
-     其中，\<system-address> 是明确标识目标计算机系统的字符串，\<port> 是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
+     其中，\<system-address>  是明确标识目标计算机系统的字符串，\<port>  是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
   
-     例如，在主体服务器实例上，下面的 ALTER DATABASE 语句设置见证服务器。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER3（见证服务器系统的名称），见证服务器的数据库镜像终结点使用的端口为 `7022`：  
+     例如，在主体服务器实例上，下面的 ALTER DATABASE 语句设置见证服务器。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER3（见证服务器系统的名称），见证服务器的数据库镜像终结点使用的端口为 `7022`  ：  
   
     ```  
     ALTER DATABASE AdventureWorks   

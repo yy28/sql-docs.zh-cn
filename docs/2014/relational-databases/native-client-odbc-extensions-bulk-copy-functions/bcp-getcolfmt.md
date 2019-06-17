@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689086"
 ---
 # <a name="bcpgetcolfmt"></a>bcp_getcolfmt
@@ -57,10 +57,10 @@ pcbLen
  *hdbc*  
  是大容量复制启用 ODBC 连接句柄。  
   
- field  
+ field   
  要检索其属性的列编号。  
   
- property  
+ property   
  属性常量之一。  
   
  *pValue*  
