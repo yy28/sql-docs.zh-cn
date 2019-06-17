@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150652"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
@@ -46,21 +46,21 @@ ms.locfileid: "63150652"
   
 #### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>通过 Windows“开始”菜单启动数据库引擎优化顾问  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”** 和 **“性能工具”**，然后单击 **“数据库引擎优化顾问”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 **“Microsoft SQL Server”** 和 **“性能工具”** ，然后单击 **“数据库引擎优化顾问”** 。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中启动数据库引擎优化顾问  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **中的** 菜单中，单击 **“数据库引擎优化顾问”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **中的** 菜单中，单击 **“数据库引擎优化顾问”** 。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>在 SQL Server Management Studio 查询编辑器中启动数据库引擎优化顾问  
   
 1.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 脚本文件。 有关详细信息，请参阅[查询和文本编辑器 (SQL Server Management Studio)](../scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
-2.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中选择一个查询，或选择整个脚本，右键单击选定的内容，再选择“在数据库引擎优化顾问中分析查询”。 此时将打开数据库引擎优化顾问图形用户界面，并将该脚本作为 XML 文件工作负荷导入。 可以指定会话名称和优化选项，以将选定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询作为工作负荷进行优化。  
+2.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中选择一个查询，或选择整个脚本，右键单击选定的内容，再选择  “在数据库引擎优化顾问中分析查询”。 此时将打开数据库引擎优化顾问图形用户界面，并将该脚本作为 XML 文件工作负荷导入。 可以指定会话名称和优化选项，以将选定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询作为工作负荷进行优化。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-profiler"></a>在 SQL Server Profiler 中启动数据库引擎优化顾问  
   
-1.  在 SQL Server Profiler 的 **“工具”** 菜单中，单击 **“数据库引擎优化顾问”**。  
+1.  在 SQL Server Profiler 的 **“工具”** 菜单中，单击 **“数据库引擎优化顾问”** 。  
   
 ##  <a name="Create"></a> 创建工作负荷  
  工作负荷是对要优化的一个或多个数据库执行的一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 数据库引擎优化顾问将分析这些工作负荷以便建议要使用的索引或分区策略来改善服务器的查询性能。  
@@ -90,11 +90,11 @@ ms.locfileid: "63150652"
   
 1.  使用下列方法之一启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ：  
   
-    -   在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **Microsoft SQL Server**、 **“性能工具”**，然后单击 **SQL Server Profiler**。  
+    -   在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 **Microsoft SQL Server**、 **“性能工具”** ，然后单击 **SQL Server Profiler**。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，单击 **“工具”** 菜单，然后单击 **“SQL Server Profiler”**。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，单击 **“工具”** 菜单，然后单击 **“SQL Server Profiler”** 。  
   
-2.  按照下面介绍的步骤，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“优化”模板来创建跟踪文件或表：  
+2.  按照下面介绍的步骤，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  “优化”模板来创建跟踪文件或表：  
   
     -   [创建跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -150,7 +150,7 @@ ms.locfileid: "63150652"
   
 3.  选择 **“计划缓存”** 作为工作负荷选项。 数据库引擎优化顾问将从计划缓存中选择前 1,000 个事件用于分析。  
   
-4.  选择要优化的数据库，或者可选择从 **“选择的表”** 中为每个数据库选择一个或多个表。 若要包括所有数据库的缓存项，请从 **“优化选项”** 中单击 **“高级选项”** ，然后选中 **“包括来自所有数据库的计划缓存事件”**。  
+4.  选择要优化的数据库，或者可选择从 **“选择的表”** 中为每个数据库选择一个或多个表。 若要包括所有数据库的缓存项，请从 **“优化选项”** 中单击 **“高级选项”** ，然后选中 **“包括来自所有数据库的计划缓存事件”** 。  
   
 5.  选中 **“保存优化日志”** 以保存优化日志的副本。 如果不希望保存优化日志的副本，请清除该复选框。  
   
@@ -158,16 +158,16 @@ ms.locfileid: "63150652"
   
 6.  单击 **“优化选项”** 选项卡，从列出的选项中进行选择。  
   
-7.  单击 **“开始分析”**。  
+7.  单击 **“开始分析”** 。  
   
      如果希望停止已经启动的优化会话，请在 **“操作”** 菜单上选择以下选项之一：  
   
-    -   选择“停止分析（并提供建议）”将停止优化会话，并提示你选择是否希望数据库引擎优化顾问根据目前已完成的分析来生成建议。  
+    -   选择  “停止分析（并提供建议）”将停止优化会话，并提示你选择是否希望数据库引擎优化顾问根据目前已完成的分析来生成建议。  
   
     -   选择 **“停止分析”** 将停止优化会话而不生成任何建议。  
   
 > [!NOTE]  
->  不支持暂停数据库引擎优化顾问。 如果在单击“停止分析”或“停止分析（并提供建议）”工具栏按钮之后单击“开始分析”工具栏按钮，数据库引擎优化顾问将启动新的优化会话。  
+>  不支持暂停数据库引擎优化顾问。 如果在单击“停止分析”或“停止分析（并提供建议）”工具栏按钮之后单击“开始分析”工具栏按钮，数据库引擎优化顾问将启动新的优化会话。     
   
 ##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>使用工作负荷文件或表作为输入来优化数据库  
   
@@ -188,7 +188,7 @@ ms.locfileid: "63150652"
     database_name.schema_name.table_name  
     ```  
   
-     若要搜索工作负荷文件或表，请单击 **“浏览”**。 数据库引擎优化顾问假定工作负荷文件是滚动更新文件。 有关滚动更新文件的详细信息，请参阅 [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md)。  
+     若要搜索工作负荷文件或表，请单击 **“浏览”** 。 数据库引擎优化顾问假定工作负荷文件是滚动更新文件。 有关滚动更新文件的详细信息，请参阅 [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md)。  
   
      使用跟踪表作为工作负荷时，该表必须存在于数据库引擎优化顾问正在优化的同一台服务器上。 如果您创建的跟踪表在其他服务器上，则必须将其移到数据库引擎优化顾问准备优化的服务器上才能用作工作负荷。  
   
@@ -204,12 +204,12 @@ ms.locfileid: "63150652"
   
      如果希望停止已经启动的优化会话，请在 **“操作”** 菜单上选择以下选项之一：  
   
-    -   选择“停止分析（并提供建议）”将停止优化会话，并提示你选择是否希望数据库引擎优化顾问根据目前已完成的分析来生成建议。  
+    -   选择  “停止分析（并提供建议）”将停止优化会话，并提示你选择是否希望数据库引擎优化顾问根据目前已完成的分析来生成建议。  
   
     -   选择 **“停止分析”** 将停止优化会话而不生成任何建议。  
   
 > [!NOTE]  
->  不支持暂停数据库引擎优化顾问。 如果在单击“停止分析”或“停止分析（并提供建议）”工具栏按钮之后单击“开始分析”工具栏按钮，数据库引擎优化顾问将启动新的优化会话。  
+>  不支持暂停数据库引擎优化顾问。 如果在单击“停止分析”或“停止分析（并提供建议）”工具栏按钮之后单击“开始分析”工具栏按钮，数据库引擎优化顾问将启动新的优化会话。     
   
 ###  <a name="dta"></a> 使用 dta 实用工具  
  [dta 实用工具](../../tools/dta/dta-utility.md) 提供了一个命令提示符可执行文件，可以用来优化数据库。 该实用工具使您能够在批处理文件和脚本中使用数据库引擎优化顾问的功能。 **dta** 实用工具使用计划缓存项、跟踪文件、跟踪表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本作为工作负荷。 它还将使用符合数据库引擎优化顾问 XML 架构的 XML 输入，有关该架构的详细信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=43100)。  
@@ -234,7 +234,7 @@ ms.locfileid: "63150652"
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  若要修改用于分析的事件数，请指定“–n”选项。 以下示例将缓存项数提高到 2,000。  
+2.  若要修改用于分析的事件数，请指定“–n”选项。  以下示例将缓存项数提高到 2,000。  
   
     ```  
     dta -E -D DatabaseName -ip -n 2000-s SessionName1  
@@ -327,13 +327,13 @@ ms.locfileid: "63150652"
  使用此对话框可以为数据库引擎优化顾问指定常规配置参数。  
   
  **启动时**  
- 指定数据库引擎优化顾问在启动时应执行的操作：以不连接数据库的方式打开、显示“新建连接”对话框、显示新会话或者加载上次已加载的会话。  
+ 指定数据库引擎优化顾问在启动时应执行的操作：以不连接数据库的方式打开、显示  “新建连接”对话框、显示新会话或者加载上次已加载的会话。  
   
  **更改字体**  
  指定由数据库引擎优化顾问表使用的显示字体。  
   
  **最近使用的列表中的项数**  
- 指定在“文件”菜单的“最近使用的会话”和“最近使用的文件”下显示的会话数或文件数。  
+ 指定在  “文件”菜单的  “最近使用的会话”和  “最近使用的文件”下显示的会话数或文件数。  
   
  **记住我上次设置的优化选项**  
  在会话之间保留优化选项。 默认为选中状态。 如果清除此复选框，则总是使用数据库引擎优化顾问默认值启动。  
@@ -374,10 +374,10 @@ database_name.owner_name.table_name
   
 1.  在查询编辑器中键入查询并突出显示该查询。  
   
-2.  右键单击突出显示的查询，并单击“在数据库引擎优化顾问中分析查询”。  
+2.  右键单击突出显示的查询，并单击  “在数据库引擎优化顾问中分析查询”。  
   
  **查找工作负荷文件或查找工作负荷表**  
- 选择“文件”或“表”作为工作负荷源时，请使用此浏览按钮选择目标。  
+ 选择  “文件”或  “表”作为工作负荷源时，请使用此浏览按钮选择目标。  
   
  **预览 XML 工作负荷**  
  查看从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中导出的 XML 格式的工作负荷。  
@@ -388,7 +388,7 @@ database_name.owner_name.table_name
  **选择要优化的数据库和表**  
  指定要优化的数据库和表。 若要指定所有数据库，请选中 **“名称”** 列标题中的复选框。 若要指定特定数据库，请选中数据库名称旁的复选框。 默认情况下，选定数据库的所有表都自动包括在优化会话中。 如果要使优化会话不包括某些表，请单击 **“选定的表”** 列中的箭头，再清除不希望优化的表旁边的复选框。  
   
- “所选表”下箭头  
+  “所选表”下箭头  
  展开表列表以允许选择个别表进行优化。  
   
  **“保存优化日志”**  
@@ -407,7 +407,7 @@ database_name.owner_name.table_name
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问在分析期间会占用系统资源。 使用 **“限制优化时间”** 会在对服务器上预期的高工作负荷进行优化之前停止优化。  
   
  **“高级选项”**  
- 使用“高级优化选项”对话框可以配置有关最大空间、最大键列数和联机索引的建议设置。  
+ 使用  “高级优化选项”对话框可以配置有关最大空间、最大键列数和联机索引的建议设置。  
   
  **定义建议所用的最大空间(MB)**  
  键入数据库引擎优化顾问建议的供物理设计结构使用的最大空间量。  
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  只包括添加索引视图建议。 不会为聚集和非聚集索引提供建议。  
   
  **包括筛选的索引**  
- 包括用来添加筛选索引的建议。 如果选择下列物理设计结构之一，则此选项可用：索引和索引视图、索引或非聚集索引。  
+ 包括用来添加筛选索引的建议。 如果选择下列物理设计结构之一，则此选项可用：索引和索引视图、索引或非聚集索引    。  
   
  **“索引”**  
  只包括添加聚集和非聚集索引建议。 不会为索引视图提供建议。  
@@ -483,7 +483,7 @@ database_name.owner_name.table_name
   
  如果希望停止已经启动的优化会话，请在 **“操作”** 菜单上选择以下选项之一：  
   
--   选择“停止分析（并提供建议）”将停止优化会话，并提示你选择是否希望数据库引擎优化顾问根据目前已完成的分析来生成建议。  
+-   选择  “停止分析（并提供建议）”将停止优化会话，并提示你选择是否希望数据库引擎优化顾问根据目前已完成的分析来生成建议。  
   
 -   选择 **“停止分析”** 将停止优化会话而不生成任何建议。  
   
@@ -503,7 +503,7 @@ database_name.owner_name.table_name
  包含操作步骤返回的所有消息。  
   
  **优化日志**  
- 包含与此优化会话有关的信息。 若要打印此日志，请右键单击此日志，再单击“打印”。  
+ 包含与此优化会话有关的信息。 若要打印此日志，请右键单击此日志，再单击  “打印”。  
   
 ## <a name="see-also"></a>请参阅  
  [查看和使用数据库引擎优化顾问的输出](database-engine-tuning-advisor.md)   

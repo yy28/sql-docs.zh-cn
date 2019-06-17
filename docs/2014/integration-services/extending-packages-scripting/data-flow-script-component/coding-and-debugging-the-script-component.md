@@ -22,21 +22,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd4153aaaf0fdffe32ce48db872a43cb5dbb84c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894791"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
-  在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。 打开“脚本转换编辑器”后，组件将进入元数据设计模式，你可以在该模式下配置元数据并设置组件属性。 在元数据设计模式下，设置脚本组件的属性并配置输入和输出后，可以切换到代码设计模式，以编写自定义脚本。 有关元数据设计模式和代码设计模式的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)。  
+  在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。 打开“脚本转换编辑器”后，组件将进入元数据设计模式，你可以在该模式下配置元数据并设置组件属性  。 在元数据设计模式下，设置脚本组件的属性并配置输入和输出后，可以切换到代码设计模式，以编写自定义脚本。 有关元数据设计模式和代码设计模式的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)。  
   
 ## <a name="writing-the-script-in-code-design-mode"></a>在代码设计模式下编写脚本  
   
 ### <a name="script-component-development-environment"></a>脚本组件开发环境  
- 若要编写脚本，请在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”以打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和对象浏览器。  
+ 若要编写脚本，请在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”以打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE    。 VSTA IDE 包含 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 环境的所有标准功能，如具有颜色编码的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 编辑器、IntelliSense 和对象浏览器。  
   
- 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本转换编辑器”中设置 ScriptLanguage 属性可指定脚本语言。 如果您倾向于使用其他编程语言，则可以用您选择的语言开发自定义程序集，然后通过脚本组件中的代码调用其功能。  
+ 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本转换编辑器”中设置 ScriptLanguage 属性可指定脚本语言   。 如果您倾向于使用其他编程语言，则可以用您选择的语言开发自定义程序集，然后通过脚本组件中的代码调用其功能。  
   
  您在脚本组件中创建的脚本存储在包定义中。 由于没有单独的脚本文件， 因此，使用脚本组件不会影响包部署。  
   
@@ -156,10 +156,10 @@ public class ScriptMain : UserComponent
  您添加的所有项在包中都将持久化。  
   
 #### <a name="references-in-the-script-component-project"></a>脚本组件项目中的引用  
- 在“项目资源管理器”中右键单击脚本任务项目，然后单击“添加引用”，可以添加对托管程序集的引用。 有关详细信息，请参阅[引用脚本解决方案中的其他程序集](../referencing-other-assemblies-in-scripting-solutions.md)。  
+ 在“项目资源管理器”中右键单击脚本任务项目，然后单击“添加引用”，可以添加对托管程序集的引用   。 有关详细信息，请参阅[引用脚本解决方案中的其他程序集](../referencing-other-assemblies-in-scripting-solutions.md)。  
   
 > [!NOTE]  
->  可以在“类视图”或“项目资源管理器”中查看 VSTA IDE 中的项目引用。 这些窗口都可以从“视图”菜单中打开。 可以从“项目”菜单、“项目资源管理器”或“类视图”添加新引用。  
+>  可以在“类视图”或“项目资源管理器”中查看 VSTA IDE 中的项目引用   。 这些窗口都可以从“视图”菜单中打开  。 可以从“项目”菜单、“项目资源管理器”或“类视图”添加新引用    。  
   
 ## <a name="interacting-with-the-package-in-the-script-component"></a>与脚本组件中的包进行交互  
  您在脚本组件中编写的自定义脚本可通过自动生成的基类中的强类型取值函数来访问和使用包含包中的变量和连接管理器。 但是，若要使这些变量和连接管理器可用于您的脚本，您必须先对它们进行配置，然后才可进入代码设计模式。 还可以从脚本组件代码引发事件并执行日志记录。  
@@ -186,7 +186,7 @@ public class ScriptMain : UserComponent
   
 -   中断执行并通过使用显示模式消息`MessageBox.Show`中的方法**System.Windows.Forms**命名空间。 （调试过程结束后，请删除此代码。）  
   
--   引发信息性消息、警告和错误的事件。 FireInformation、FireWarning 和 FireError 方法可在 Visual Studio“输出”窗口中显示事件说明。 但是，FireProgress、Console.Write 和 Console.WriteLine 方法在“输出”窗口中不显示任何信息。 FireProgress 事件的消息显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的“进度”选项卡中。 有关详细信息，请参阅[在脚本组件中引发事件](../../data-flow/transformations/script-component.md)。  
+-   引发信息性消息、警告和错误的事件。 FireInformation、FireWarning 和 FireError 方法可在 Visual Studio“输出”窗口中显示事件说明  。 但是，FireProgress、Console.Write 和 Console.WriteLine 方法在“输出”窗口中不显示任何信息  。 FireProgress 事件的消息显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的“进度”选项卡中  。 有关详细信息，请参阅[在脚本组件中引发事件](../../data-flow/transformations/script-component.md)。  
   
 -   将事件或用户定义的消息记录到已启用的日志记录提供程序中。 有关详细信息，请参阅[脚本组件中的日志记录](logging-in-the-script-component.md)。  
   

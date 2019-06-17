@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 113f73bd363ca866f45e439eb5d599b177a910ce
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054150"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>为显式层次结构和集合启用实体 (Master Data Services)
@@ -34,21 +34,21 @@ ms.locfileid: "66054150"
   
 ### <a name="to-enable-an-entity-for-explicit-hierarchies-and-collections"></a>为显式层次结构和集合启用实体  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”**。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”** 。  
   
 3.  在 **“实体维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
 4.  为您要更新的实体选择行。  
   
-5.  单击 **“编辑所选实体”**。  
+5.  单击 **“编辑所选实体”** 。  
   
 6.  从**启用显式层次结构和集合**列表中，选择**是**。  
   
 7.  在中**显式层次结构名称**框中，键入显式层次结构的名称。  
   
-8.  也可以取消选中“强制的层次结构”复选框，以便将层次结构创建为非强制的层次结构。  
+8.  也可以取消选中“强制的层次结构”  复选框，以便将层次结构创建为非强制的层次结构。  
   
 9. 单击**保存实体**。  
   

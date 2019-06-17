@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5b6c7ff7a5ac2539bc6732d68522bb361d6b1b0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670619"
 ---
 # <a name="uninstall-reporting-services"></a>卸载 Reporting Services
@@ -47,7 +47,7 @@ ms.locfileid: "62670619"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是实例功能，因此不在 Windows“控制面板”的“程序和功能”中列出。 卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式：  
   
-1.  在 Windows“控制面板”中，单击 **“程序和功能”**。  
+1.  在 Windows“控制面板”中，单击 **“程序和功能”** 。  
   
 2.  在 **“程序和功能”** 中，选择 **Microsoft SQL Server 2012**。  
   

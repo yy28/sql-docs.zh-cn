@@ -3,17 +3,17 @@ title: 设置 Python 开发的 SQL Server 机器学习数据科学客户端
 description: 设置远程连接到 SQL Server 机器学习服务与 Python 配合使用 Python 在本地环境 （Jupyter Notebook 或 PyCharm）。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c0ca592d98f9bb69586c537006fd14d4230b661b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642781"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140637"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>设置 SQL Server 机器学习服务的 Python 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ SSMS 是单独的下载，适用于创建和运行 SQL Server，包括那些包�
 
   + [https://aka.ms/mls-py](https://aka.ms/mls-py) 安装版本 9.2.1 Microsoft Python 程序包。 此版本对应于默认 SQL Server 2017 实例。 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 安装版本 9.3 的 Microsoft Python 包。 此版本是更好的选择，如果远程 SQL Server 2017 实例[绑定到机器学习服务器 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 安装版本 9.3 的 Microsoft Python 包。 此版本是更好的选择，如果远程 SQL Server 2017 实例[绑定到机器学习服务器 9.3](../install/upgrade-r-and-python.md)。
 
 2. 使用提升的管理员权限打开 PowerShell 窗口 (右键单击**以管理员身份运行**)。
 
@@ -107,7 +107,7 @@ Anaconda 包含的 Jupyter 笔记本。 下一步，创建一个 notebook 并运
 
 3. 输入`import revoscalepy`并运行到加载特定于 Microsoft 的库的命令。
 
-4. 输入并运行`print(revoscalepy.__version__)`要返回的版本信息。 应会看到 9.2.1 或 9.3.0。 可以使用与这些版本之一[服务器上的 revoscalepy](../r/determine-which-packages-are-installed-on-sql-server.md#get-package-vers)。 
+4. 输入并运行`print(revoscalepy.__version__)`要返回的版本信息。 应会看到 9.2.1 或 9.3.0。 可以使用与这些版本之一[服务器上的 revoscalepy](../package-management/installed-package-information.md)。 
 
 4. 输入一系列更复杂的语句。 此示例生成汇总统计信息使用[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)对本地数据集。 其他函数获取示例数据的位置，并创建本地.xdf 文件的数据源对象。
 

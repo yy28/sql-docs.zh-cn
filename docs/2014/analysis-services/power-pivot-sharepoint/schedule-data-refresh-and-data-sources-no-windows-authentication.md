@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071159"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>计划数据刷新和不支持 Windows 身份验证的数据源 (PowerPivot for SharePoint)
@@ -46,11 +46,11 @@ ms.locfileid: "66071159"
   
 ## <a name="to-create-a-target-application-id-that-uses-windows-authentication"></a>创建使用 Windows 身份验证的目标应用程序 ID  
   
-1.  在 SharePoint 管理中心中，单击 **“管理服务应用程序”**。  
+1.  在 SharePoint 管理中心中，单击 **“管理服务应用程序”** 。  
   
 2.  单击 Secure Store Service 应用程序的名称。  
   
-3.  在 **“管理”** 页上，单击 **“新建”**。 ![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application")  
+3.  在 **“管理”** 页上，单击 **“新建”** 。 ![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application")  
   
 4.  在 **“创建新的安全存储区目标应用程序”** 页上，配置下列值：  
   
@@ -64,23 +64,23 @@ ms.locfileid: "66071159"
   
     -   **目标应用程序页 URL:** 无。  
   
-5.  单击“下一步” 。  
+5.  单击“下一步”  。  
   
 6.  在“凭据”页上，将 **“Windows 用户名”** 和 **“Windows 密码”** 这两个字段的名称和类型都保留为默认值。  
   
-7.  单击“下一步” 。  
+7.  单击“下一步”  。  
   
 8.  在 **“成员资格设置”** 页上，添加至少一个 **“目标应用程序管理员”** ，然后添加需要目标应用程序的访问权限的成员。  
   
-9. 单击“确定” 。  
+9. 单击“确定”  。  
   
 10. 一个新的目标应用程序 ID 会添加到列表中。 选择目标应用程序 ID，然后单击**设置凭据**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")。  
   
-11. 键入 Windows 用户名和 Windows 密码，然后单击 **“确定”**。  
+11. 键入 Windows 用户名和 Windows 密码，然后单击 **“确定”** 。  
   
 ## <a name="to-create-a-target-application-id-that-uses-oracle-credentials"></a>创建使用 Oracle 凭据的目标应用程序 ID  
   
-1.  在 SharePoint 管理中心中，单击 **“管理服务应用程序”**。  
+1.  在 SharePoint 管理中心中，单击 **“管理服务应用程序”** 。  
   
 2.  单击 Secure Store Service 应用程序的名称。  
   
@@ -98,23 +98,23 @@ ms.locfileid: "66071159"
   
     -   **目标应用程序页 URL:** 无。  
   
-5.  单击“下一步” 。  
+5.  单击“下一步”  。  
   
 6.  上**凭据**页上，将第一个字段名称更改为`Oracle User ID`并将更改**字段类型**到`User Name`。  
   
      将第二个字段名称更改为`Oracle Password`并**字段类型**到`Password`。  
   
-7.  单击“下一步” 。  
+7.  单击“下一步”  。  
   
 8.  在 **“成员资格设置”** 页上，添加至少一个 **“目标应用程序管理员”** ，然后添加需要目标应用程序的访问权限的成员。  
   
-9. 单击“确定” 。  
+9. 单击“确定”  。  
   
 10. 一个新的目标应用程序 ID 会添加到列表中。 选择目标应用程序 ID，然后单击**设置凭据**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")。  
   
-11. 键入 Oracle 用户 ID 和 Oracle 密码，然后单击 **“确定”**。  
+11. 键入 Oracle 用户 ID 和 Oracle 密码，然后单击 **“确定”** 。  
   
- 有关详细信息，请参阅"为 SQL Server 身份验证创建目标应用程序中[使用安全存储区与 SQL Server 身份验证 (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx)。  
+ 有关详细信息，请参阅"为 SQL Server 身份验证创建目标应用程序中[使用安全存储区与 SQL Server 身份验证 (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx) 。  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>若要配置 PowerPivot 服务应用程序  
   
@@ -132,25 +132,25 @@ ms.locfileid: "66071159"
   
 1.  浏览到 PowerPivot 库中的工作簿，然后单击**管理数据刷新**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")。  
   
-2.  如果出现 **“数据刷新历史记录”** 页，单击 **“配置计划”**。  
+2.  如果出现 **“数据刷新历史记录”** 页，单击 **“配置计划”** 。  
   
-3.  单击 **“启用”**。  
+3.  单击 **“启用”** 。  
   
-4.  单击 **“也尽快刷新”**。  
+4.  单击 **“也尽快刷新”** 。  
   
-5.  在 **“凭据”** 节中，单击 **“使用管理员配置的数据刷新帐户”**。  
+5.  在 **“凭据”** 节中，单击 **“使用管理员配置的数据刷新帐户”** 。  
   
-6.  清除 **“所有数据源”**。  
+6.  清除 **“所有数据源”** 。  
   
-7.  针对使用 Oracle 数据的数据源，选择 **“刷新”** 。 在 Microsoft Excel 的 **“数据”**-&gt; **“连接”**-&gt; **“属性”** 菜单中，可以更改此数据源的名称。  
+7.  针对使用 Oracle 数据的数据源，选择 **“刷新”** 。 在 Microsoft Excel 的 **“数据”** -&gt; **“连接”** -&gt; **“属性”** 菜单中，可以更改此数据源的名称。  
   
-8.  在数据源下，选择 **“使用默认计划”**。  
+8.  在数据源下，选择 **“使用默认计划”** 。  
   
-9. 选择 **“使用在 Secure Store Service (SSS) 中保存的凭据连接以登录数据源。在 SSS ID 框中输入用于查找凭据的 ID”**。  
+9. 选择 **“使用在 Secure Store Service (SSS) 中保存的凭据连接以登录数据源。在 SSS ID 框中输入用于查找凭据的 ID”** 。  
   
 10. 在中**ID:** 框中，键入`OracleAuthentication`。  
   
-11. 单击“确定” 。  
+11. 单击“确定”  。  
   
      如果出现类似以下的错误消息： `The provided Secure Store target application is either incorrectly configured or does not exist`。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "66071159"
     -   确认已为该目标应用程序设置凭据。  
   
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>使用新身份验证信息来验证数据刷新  
- 单击 **“确定”** 时，将出现 **“刷新历史记录”** 页。 数分钟内，刷新历史记录中应会出现一个新项，因为在上述步骤中选中了 **“也尽快刷新”**。 **PowerPivot 数据刷新计时器作业**的计时器作业默认值是 1 分钟。 如果刷新历史记录中未出现新项，请等待数分钟，然后刷新浏览器。 如果仍未出现新项，请确认计时器作业的当前值。  
+ 单击 **“确定”** 时，将出现 **“刷新历史记录”** 页。 数分钟内，刷新历史记录中应会出现一个新项，因为在上述步骤中选中了 **“也尽快刷新”** 。 **PowerPivot 数据刷新计时器作业**的计时器作业默认值是 1 分钟。 如果刷新历史记录中未出现新项，请等待数分钟，然后刷新浏览器。 如果仍未出现新项，请确认计时器作业的当前值。  
   
 ## <a name="more-information"></a>详细信息  
   

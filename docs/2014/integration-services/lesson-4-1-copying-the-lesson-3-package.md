@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3a765f23b4bfcdd4d8f0ff84ac8d363424882bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767441"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>第 1 步：复制第 3 课包
@@ -22,33 +22,33 @@ ms.locfileid: "62767441"
   
 ### <a name="to-create-the-lesson-4-package"></a>创建 Lesson 4 包  
   
-1.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 尚未打开，请单击“开始”，依次指向“所有程序”和“Microsoft SQL Server”，然后单击“SQL Server Data Tools”。  
+1.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 尚未打开，请单击“开始”  ，依次指向“所有程序”  和“Microsoft SQL Server”  ，然后单击“SQL Server Data Tools”  。  
   
-2.  在“文件”菜单中，依次单击“打开”和“项目/解决方案”，选择“SSIS Tutorial”，单击“打开”，然后双击“SSIS Tutorial.sln”。  
+2.  在“文件”  菜单中，依次单击“打开”  和“项目/解决方案”  ，选择“SSIS Tutorial”  ，单击“打开”  ，然后双击“SSIS Tutorial.sln”  。  
   
-3.  在解决方案资源管理器中，右键单击“Lesson 3.dtsx”，然后单击“复制”。  
+3.  在解决方案资源管理器中，右键单击“Lesson 3.dtsx”  ，然后单击“复制”  。  
   
-4.  在解决方案资源管理器中，右键单击“SSIS 包”，然后单击“粘贴”。  
+4.  在解决方案资源管理器中，右键单击“SSIS 包”  ，然后单击“粘贴”  。  
   
      默认情况下，复制的包命名为 Lesson 4.dtsx。  
   
-5.  在解决方案资源管理器中，双击“Lesson 4.dtsx”打开此包。  
+5.  在解决方案资源管理器中，双击“Lesson 4.dtsx”  打开此包。  
   
-6.  右键单击“控制流”选项卡背景的任意位置，然后单击“属性”。  
+6.  右键单击“控制流”  选项卡背景的任意位置，然后单击“属性”  。  
   
 7.  在属性窗口中，更新`Name`属性设置为`Lesson 4`。  
   
-8.  单击对应的框**ID**属性，然后在列表中，单击**\<生成新 ID >**。  
+8.  单击对应的框**ID**属性，然后在列表中，单击 **\<生成新 ID >** 。  
   
 ### <a name="to-add-the-completed-lesson-3-package"></a>添加已完成的 Lesson 3 包  
   
 1.  依次打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 SSIS Tutorial 项目。  
   
-2.  在解决方案资源管理器中，右键单击“SSIS 包”，然后单击“添加现有包”。  
+2.  在解决方案资源管理器中，右键单击“SSIS 包”  ，然后单击“添加现有包”  。  
   
-3.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。  
+3.  在“添加现有包的副本”  对话框的“包位置”  中，选择“文件系统”  。  
   
-4.  单击浏览 (…) 按钮，导航到计算机上的“Lesson 3.dtsx”，然后单击“打开”。  
+4.  单击浏览 (…) 按钮，导航到计算机上的“Lesson 3.dtsx”，然后单击“打开”   。  
   
      要下载此教程的所有课程包，请执行以下操作：  
   

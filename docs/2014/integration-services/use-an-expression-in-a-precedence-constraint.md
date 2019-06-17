@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 672d9c363f64037f5f40f51fc7c6cb1c4c3bc674
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054750"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>在优先约束中使用表达式
@@ -31,13 +31,13 @@ ms.locfileid: "66054750"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  在“控制流”选项卡的设计图面上双击优先约束。 **“优先约束编辑器”** 将打开。  
+4.  在“控制流”选项卡的设计图面上双击优先约束。  **“优先约束编辑器”** 将打开。  
   
-5.  在 **“求值运算”** 列表中选择 **“表达式”**、 **“表达式和约束”** 或者 **“表达式或约束”** 。  
+5.  在 **“求值运算”** 列表中选择 **“表达式”** 、 **“表达式和约束”** 或者 **“表达式或约束”** 。  
   
 6.  在 **“表达式”** 文本框中键入表达式，或启动表达式生成器来创建表达式。  
   
-7.  若要验证表达式语法，请单击 **“测试”**。  
+7.  若要验证表达式语法，请单击 **“测试”** 。  
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

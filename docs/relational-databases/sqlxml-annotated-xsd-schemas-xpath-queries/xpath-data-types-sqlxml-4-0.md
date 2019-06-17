@@ -30,10 +30,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678063"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
@@ -74,7 +74,7 @@ ms.locfileid: "62678063"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行针对节点集的位置选择：例如，XPath 查询 `Customer[3]` 意味着第三个客户；但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支持此类型的位置选择。 因此，节点-设置-到-**字符串**或节点的设置-到-**数**未实现 XPath 规范所述的转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“任何”语义，而 XPath 规范指定“第一个”语义。 例如，基于 W3C XPath 规范，XPath 查询`Order[OrderDetail/@UnitPrice > 10.0]`的第一个选择以下顺序**OrderDetail**具有**UnitPrice**大于 10.0。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此 XPath 查询选择以下任何顺序**OrderDetail**具有**UnitPrice**大于 10.0。  
   
- 转换为**布尔**产生存在测试; 因此，XPath 查询`Products[@Discontinued=true()]`等效于 SQL 表达式"Products.Discontinued is not null"，非 SQL 表达式"Products.Discontinued = 1"。 若要使查询等效于后者的 SQL 表达式，第一次节点-将该集转换为非**布尔**类型，如**数**。 例如，`Products[number(@Discontinued) = true()]`。  
+ 转换为**布尔**产生存在测试; 因此，XPath 查询`Products[@Discontinued=true()]`等效于 SQL 表达式"Products.Discontinued is not null"，非 SQL 表达式"Products.Discontinued = 1"。 若要使查询等效于后者的 SQL 表达式，第一次节点-将该集转换为非**布尔**类型，如**数**。 例如， `Products[number(@Discontinued) = true()]` 。  
   
  因为如果运算符对于节点集中任一节点为 TRUE，则大多数运算符均定义为 TRUE；所以，在节点集为空时，这些运算的计算结果始终为 FALSE。 因此，如果 A 为空，则 `A = B` 和 `A != B` 均为 FALSE，并且 `not(A=B)` 和 `not(A!=B)` 均为 TRUE。  
   

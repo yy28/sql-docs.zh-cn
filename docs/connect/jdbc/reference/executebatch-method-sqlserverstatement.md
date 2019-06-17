@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fb034f63-2532-4da8-a1b0-bc125734585a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbe50ae21da22b7b05d8d52d6de0e6305a8917ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f9a4a93ccd16fccd90db0a5bb5e4e234ea3a939a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643967"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802302"
 ---
 # <a name="executebatch-method-sqlserverstatement"></a>executeBatch 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public int[] executeBatch()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个包含更新计数的 int 数组。  
+ 一个包含更新计数的 int 数组。   
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

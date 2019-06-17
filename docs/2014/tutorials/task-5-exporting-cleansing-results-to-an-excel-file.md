@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489123"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>任务 5：将清理结果导出到 Excel 文件
@@ -42,7 +42,7 @@ ms.locfileid: "65489123"
   
     3.  搜索**Los Angeles**看到**状态**设置为**CA**。  
   
-    4.  确认没有术语**Co.**， **Corp.**，并**Inc.**。  
+    4.  确认没有术语**Co.** ， **Corp.** ，并**Inc.** 。  
   
     5.  删除**地址验证**列从电子表格并保存 excel 文件。 此额外列对应于“地址验证”复合域。  
   

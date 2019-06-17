@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62889780"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
@@ -96,7 +96,7 @@ ms.locfileid: "62889780"
 |运算符|启动包的用户的标识。|  
 |SourceName|发生日志事件的容器或任务的名称。|  
 |SourceID|发生日志事件的包、 For 循环容器、Foreach 循环容器、序列容器或任务的唯一标识符。|  
-|ExecutionID|包执行实例的 GUID。<br /><br /> 注意：运行单个包可能会使用不同的 ExecutionID 元素值中创建日志条目。 例如，当在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行包时，验证阶段可能会创建 ExecutionID 元素与 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]对应的日志项。 但是，执行阶段可能会创建 ExecutionID 元素与 dtshost.exe 对应的日志项。 再比如，当运行包含“执行包”任务的包时，这些任务中的每个任务都会运行子包。 这些子包创建的日志项所具有的 ExecutionID 元素可能不同于父包创建的日志项。|  
+|ExecutionID|包执行实例的 GUID。<br /><br /> 注意：运行一个包可能会创建有不同 ExecutionID 元素值的日志项目。 例如，当在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行包时，验证阶段可能会创建 ExecutionID 元素与 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]对应的日志项。 但是，执行阶段可能会创建 ExecutionID 元素与 dtshost.exe 对应的日志项。 再比如，当运行包含“执行包”任务的包时，这些任务中的每个任务都会运行子包。 这些子包创建的日志项所具有的 ExecutionID 元素可能不同于父包创建的日志项。|  
 |MessageText|与日志项关联的消息。|  
 |DataBytes|日志项特定的字节数组。 此字段的意义因日志项的不同而不同。|  
   

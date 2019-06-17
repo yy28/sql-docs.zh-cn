@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b03669df3fdfadec0f06f5bd964a16827d1aff2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e328e3b90c12b26162ea352e995eb603bae73090
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604229"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802254"
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > 必须执行语句，才可以检索结果。 有关执行语句的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 和 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)。  
   
-row [可选]：下面的值之一，用于指定要在使用可滚动游标的结果集中访问的行：  
+row  [可选]：下面的值之一，用于指定要在使用可滚动游标的结果集中访问的行：  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -59,7 +59,7 @@ row [可选]：下面的值之一，用于指定要在使用可滚动游标的�
   
 有关这些值的详细信息，请参阅 [指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。  
   
-offset [可选]：结合使用 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 以指定要检索的行。 结果集中的第一个记录为 0。  
+offset [可选]：结合使用 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 以指定要检索的行  。 结果集中的第一个记录为 0。  
   
 ## <a name="return-value"></a>返回值  
 如果已成功检索结果集的下一行，将返回 **True** 。 如果结果集中没有更多结果，将返回 **null** 。 如果出现错误，将返回 **False** 。  

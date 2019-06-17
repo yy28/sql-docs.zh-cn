@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916763"
 ---
 # <a name="rename-a-database"></a>重命名数据库
@@ -37,7 +37,7 @@ ms.locfileid: "62916763"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在重命名数据库之后](#FollowUp)  
+-   **跟进：** [在重命名数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62916763"
   
 2.  确保没有任何用户正在使用数据库，然后[将数据库设置为单用户模式](set-a-database-to-single-user-mode.md)。  
   
-3.  展开“数据库”，右键单击要重命名的数据库，然后单击“重命名”。  
+3.  展开“数据库”  ，右键单击要重命名的数据库，然后单击“重命名”  。  
   
-4.  输入新的数据库名称，然后单击 **“确定”**。  
+4.  输入新的数据库名称，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -68,9 +68,9 @@ ms.locfileid: "62916763"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将 `AdventureWorks2012` 数据库的名称更改为 `Northwind`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将 `AdventureWorks2012` 数据库的名称更改为 `Northwind`。  
   
 ```sql  
 USE master;  

@@ -15,10 +15,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62504785"
 ---
 # <a name="glossary"></a>词汇表
@@ -466,8 +466,8 @@ ms.technology:
 |取消排队 (dequeue)|从队列中删除。|  
 |派生列 (derived column)|通过对转换输入列应用表达式来创建新列值的转换。|  
 |反序列化 (deserialization)|以应用程序可使用的对象形式将来自序列存储格式的对象转换为二进制格式的过程。 此过程在使用 Get 客户端 API 从缓存群集检索对象时发生。|  
-|目标|将数据加载到数据存储区或创建内存中数据集的 SSIS 数据流组件。|  
-|目标|提供自己的当前知识、从源提供程序接受变更列表，检测该列表与自己的项之间是否有冲突并将变更应用到自己的数据存储的一种同步提供程序。|  
+|destination|将数据加载到数据存储区或创建内存中数据集的 SSIS 数据流组件。|  
+|destination|提供自己的当前知识、从源提供程序接受变更列表，检测该列表与自己的项之间是否有冲突并将变更应用到自己的数据存储的一种同步提供程序。|  
 |目标适配器 (destination adapter)|用来向数据存储区中加载数据的数据流组件。|  
 |目标提供程序 (destination provider)|提供自己的当前知识、从源提供程序接受变更列表，检测该列表与自己的项之间是否有冲突并将变更应用到自己的数据存储的一种同步提供程序。|  
 |检测 (detect)|发现任何情况。|  
@@ -967,7 +967,7 @@ ms.technology:
 |消息窗格 (Messages pane)|选项卡的一种，用来承载执行 TSQL 查询后从 SQL Server 返回的消息。|  
 |消息处理应用程序编程接口 (Messaging Application Programming Interface)|一种消息传递体系结构，使多个应用程序可以跨各种硬件平台与多个消息传递系统进行交互。 MAPI 建立在组件对象模型 (COM) 基础之上。|  
 |元数据|有关数据的属性或结构的信息（它们不是数据所包含的值的组成部分）。|  
-|方法|在面向对象的编程中，一个在调用时执行任务的命名代码块。|  
+|method|在面向对象的编程中，一个在调用时执行任务的命名代码块。|  
 |Microsoft 消息队列 (Microsoft Message Queuing)|一种 Microsoft 技术，使在不同时间运行的应用程序能够跨异构网络和可能临时脱机的系统进行通信。|  
 |Microsoft 顺序分析和聚类分析算法 (Microsoft Sequence Clustering algorithm)|综合了顺序分析和聚类分析的算法，它标识以相似方式排序的事件在一个序列中的聚类。 聚类可用于根据已知特性预测事件在一个序列中的可能排序方式。|  
 |Microsoft SharePoint Foundation 使用情况数据导入|将使用情况日志导入日志数据库的 SharePoint Foundation 的默认计时器作业。|  

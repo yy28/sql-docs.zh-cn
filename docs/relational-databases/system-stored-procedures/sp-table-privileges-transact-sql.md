@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62688371"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
@@ -44,10 +44,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>参数  
  [ @table_name= ] '*table_name*'  
- 用来返回目录信息的表。 *table_name*是**nvarchar (** 384 **)**，无默认值。 支持通配符模式匹配。  
+ 用来返回目录信息的表。 *table_name*是**nvarchar (** 384 **)** ，无默认值。 支持通配符模式匹配。  
   
  [ @table_owner= ] '*table_owner*'  
- 是用来返回目录信息的表所有者。 *table_owner*是**nvarchar (** 384 **)**，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
+ 是用来返回目录信息的表所有者。 *table_owner*是**nvarchar (** 384 **)** ，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
   
  如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程使用指定的表查找*table_name*归数据库所有者。 如果存在，则返回该表的列。  
   

@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012008"
 ---
 # <a name="create-a-credential"></a>创建凭据
@@ -26,7 +26,7 @@ ms.locfileid: "63012008"
   
  凭据是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证用户在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]外部的身份标识。 主要用于执行具有 EXTERNAL_ACCESS 权限集的程序集中的代码。 当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证用户需要访问域资源（例如存储备份的文件位置）时，也可以使用凭据。  
   
- 可以将一个凭据同时映射到多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名。 一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名一次只能映射到一个凭据。 在创建凭据之后，可以使用“登录属性”（“常规”页）将登录名映射到凭据。  
+ 可以将一个凭据同时映射到多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名。 一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名一次只能映射到一个凭据。 在创建凭据之后，可以使用“登录属性”  （“常规”页）将登录名映射到凭据。  
   
  **本主题内容**  
   
@@ -61,17 +61,17 @@ ms.locfileid: "63012008"
   
 1.  在对象资源管理器中，展开“安全性”  文件夹。  
   
-2.  右键单击“凭据”文件夹，然后选择“新建凭据…”。  
+2.  右键单击“凭据”文件夹，然后选择“新建凭据…”   。  
   
 3.  在 **“新建凭据”** 对话框中的 **“凭据名称”** 框中，键入凭据的名称。  
   
-4.  在“标识”框中，键入用于传出连接的帐户名称（在离开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的上下文时）。 通常为 Windows 用户帐户，但标识可以为其他类型的帐户。  
+4.  在“标识”  框中，键入用于传出连接的帐户名称（在离开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的上下文时）。 通常为 Windows 用户帐户，但标识可以为其他类型的帐户。  
   
-     或者，单击省略号“(…)”打开“选择用户或组”对话框。  
+     或者，单击省略号“(…)”打开“选择用户或组”对话框   。  
   
 5.  在 **“密码”** 和 **“确认密码”** 框中，键入 **“标识”** 框中指定的帐户的密码。 如果 **“标识”** 为 Windows 用户帐户，则密码为 Windows 密码。 如果不需要密码， **“密码”** 可为空。  
   
-6.  选择“使用加密提供程序”将凭据设置为由可扩展的密钥管理 (EKM) 提供程序验证。 有关详细信息，请参阅[可扩展的密钥管理 (EKM)](../encryption/extensible-key-management-ekm.md)  
+6.  选择“使用加密提供程序”  将凭据设置为由可扩展的密钥管理 (EKM) 提供程序验证。 有关详细信息，请参阅[可扩展的密钥管理 (EKM)](../encryption/extensible-key-management-ekm.md)  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -81,9 +81,9 @@ ms.locfileid: "63012008"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Creates the credential called "AlterEgo.".   

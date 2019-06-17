@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995677"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
@@ -46,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rulename = ] 'rule'` 是由 CREATE RULE 语句创建的规则的名称。 *规则*是**nvarchar(776)**，无默认值。  
+`[ @rulename = ] 'rule'` 是由 CREATE RULE 语句创建的规则的名称。 *规则*是**nvarchar(776)** ，无默认值。  
   
-`[ @objname = ] 'object_name'` 是表和列或别名数据类型的规则是绑定。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列。 无法将规则绑定到计算列。  
+`[ @objname = ] 'object_name'` 是表和列或别名数据类型的规则是绑定。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列         。 无法将规则绑定到计算列。  
   
  *object_name*是**nvarchar(776)** ，无默认值。 如果*object_name*是名称的一部分，则按别名数据类型进行解析。 如果是由两部分或三部分组成的名称，则首先按表和列进行解析；如果解析失败，则按别名数据类型进行解析。 默认情况下，别名数据类型的现有列继承*规则*除非规则已经直接绑定到列。  
   

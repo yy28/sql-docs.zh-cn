@@ -20,16 +20,16 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1cef52f066a07032240d17f88297b02ba3f7e5fb
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65995115"
 ---
 # <a name="sysexternallanguages-transact-sql"></a>sys.external_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-此目录视图提供了一系列数据库中的外部语言。 **R**并**Python**是保留的名称，没有外部语言可以创建具有这些特定的名称。
+此目录视图提供了一系列数据库中的外部语言。 “R”和“Python”是保留名称，不能使用这些特定名称创建外部语言   。
 
 ## <a name="sysexternallanguages"></a>sys.external_languages
 

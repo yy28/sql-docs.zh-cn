@@ -80,7 +80,7 @@
       items:
         - name: 保存包的副本
           href: save-copy-of-package.md
-        - name: '保存一个包副本 '
+        - name: 保存一个包副本
           href: save-a-copy-of-a-package.md
         - name: 将包保存到文件系统
           href: save-a-package-to-the-file-system.md

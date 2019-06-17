@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eabb28250699305952d1d0746dc9487a1a25271
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076721"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>配置 Analysis Services 项目属性 (SSDT)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目是使用特定默认属性定义的，这些属性影响 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的生成和部署。  
   
- 若要更改项目属性，请右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目对象，再单击“属性”。 或者，您可以单击“项目”菜单上的 **“属性”** 。  
+ 若要更改项目属性，请右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目对象，再单击“属性”  。 或者，您可以单击“项目”菜单上的 **“属性”** 。  
   
 ## <a name="property-description"></a>属性说明  
  下表说明每个项目的属性，列出其默认值，并提供有关更改属性值的信息。  

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689066"
 ---
 # <a name="bcpinit"></a>bcp_init
@@ -91,7 +91,7 @@ eDirection
   
 -   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件中的列序号位置必须与数据库表中的列序号位置相同。 从复制时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp_exec**将基于数据库表中的列的序号位置的数据。  
   
--   如果数据库数据类型长度是可变的 (例如， **varbinary(22)**) 或数据库列可以包含 null 值，如果数据文件中的数据作为前缀长度 /null 指示符。 指示符的宽度因数据类型和大容量复制的版本而异。  
+-   如果数据库数据类型长度是可变的 (例如， **varbinary(22)** ) 或数据库列可以包含 null 值，如果数据文件中的数据作为前缀长度 /null 指示符。 指示符的宽度因数据类型和大容量复制的版本而异。  
   
  若要更改数据文件指定的数据格式值，请调用[bcp_columns](bcp-columns.md)并[bcp_colfmt](bcp-colfmt.md)。  
   

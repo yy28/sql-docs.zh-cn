@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635884"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="arguments"></a>参数  
 `[ @server = ] 'server'` 是哪些报告信息的服务器。 当*服务器*未指定，则有关中的所有服务器的报表**master.sys.servers**。 *服务器*是**sysname**，默认值为 NULL。  
   
-`[ @optname = ] 'option'` 说明服务器的选项。 *选项*是**varchar (** 35 **)**，默认值为 NULL，并且必须是下列值之一。  
+`[ @optname = ] 'option'` 说明服务器的选项。 *选项*是**varchar (** 35 **)** ，默认值为 NULL，并且必须是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**使用远程排序规则**|使用远程列的排序规则而不使用本地服务器的排序规则。|  
   
-`[ @show_topology = ] 'show_topology'` 是指定服务器与其他服务器的关系。 *show_topology*是**varchar (** 1 **)**，默认值为 NULL。 如果*show_topology*不等于**t**或为 NULL， **sp_helpserver**返回结果集部分中列出的列。 如果*show_topology*等于**t**，除了列出的结果集中的列**sp_helpserver**也会返回**topx**和**topy**信息。  
+`[ @show_topology = ] 'show_topology'` 是指定服务器与其他服务器的关系。 *show_topology*是**varchar (** 1 **)** ，默认值为 NULL。 如果*show_topology*不等于**t**或为 NULL， **sp_helpserver**返回结果集部分中列出的列。 如果*show_topology*等于**t**，除了列出的结果集中的列**sp_helpserver**也会返回**topx**和**topy**信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）。  
