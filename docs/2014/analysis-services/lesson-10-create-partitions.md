@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079203"
 ---
 # <a name="lesson-11-create-partitions"></a>第 11 课：创建分区
@@ -29,9 +29,9 @@ ms.locfileid: "66079203"
   
 #### <a name="to-create-partitions-in-the-internet-sales-table"></a>在 Internet Sales 表中创建分区  
   
-1.  在模型设计器中，依次单击“Internet Sales”表、“表”菜单和“分区”。  
+1.  在模型设计器中，依次单击“Internet Sales”  表、“表”  菜单和“分区”  。  
   
-     “分区管理器”对话框将打开。  
+     “分区管理器”  对话框将打开。  
   
 2.  在中**分区管理器**对话框中**分区**，单击**Internet Sales**分区。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "66079203"
     > [!TIP]  
     >  在继续执行下一步之前，您将注意到“表预览”窗口中的列名显示模型表中包含的、但其列名来自源中的这些列（已勾选）。 这是因为“表预览”窗口显示源表（而非模型表）中的列。  
   
-4.  选择位于预览窗口右侧上方的“查询编辑器”按钮。  
+4.  选择位于预览窗口右侧上方的“查询编辑器”  按钮。  
   
      因为您希望分区只包含特定期间内的那些行，所以您必须包含 WHERE 子句。 您只能通过使用 SQL 语句创建 WHERE 子句。  
   
-5.  在“SQL 语句”字段中，通过粘贴以下语句替换现有语句：  
+5.  在“SQL 语句”  字段中，通过粘贴以下语句替换现有语句：  
   
     ```  
     SELECT   
@@ -77,7 +77,7 @@ ms.locfileid: "66079203"
   
      本语句指定分区应包含以下行中的所有数据：对于这些行，OrderDate 对应于在 WHERE 子句中指定的 2005 日历年。  
   
-6.  单击 **“验证”**。  
+6.  单击 **“验证”** 。  
   
      请注意，此时将显示一条警告，指出某些列在源中不存在。 这是因为在[第 3 课：重命名列](rename-columns.md)，重命名这些列的 Internet Sales 表中的模型，使其不同于在源中这些相同列。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66079203"
   
 #### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>若要为 Internet Sales 表中的 2007 年创建分区  
   
-1.  在“分区管理器”对话框中，单击“复制”。  
+1.  在“分区管理器”  对话框中，单击“复制”  。  
   
 2.  在中**分区名称**，类型`Internet Sales 2007`。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66079203"
   
 #### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>若要为 Internet Sales 表中的 2008 年创建分区  
   
-1.  在“分区管理器”对话框中，单击“新建”。  
+1.  在“分区管理器”  对话框中，单击“新建”  。  
   
 2.  在中**分区名称**，类型`Internet Sales 2008`。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66079203"
   
 #### <a name="to-create-a-partition-for-the-2009-year-in-the-internet-sales-table"></a>在 Internet Sales 表中为 2009 年份创建分区  
   
-1.  在“分区管理器”对话框中，单击“新建”。  
+1.  在“分区管理器”  对话框中，单击“新建”  。  
   
 2.  在中**分区名称**，类型`Internet Sales 2009`。  
   
@@ -136,17 +136,17 @@ ms.locfileid: "66079203"
     ```  
   
 ## <a name="process-partitions"></a>处理分区  
- 在“分区管理器”对话框中，请注意，对于刚才创建的每个新分区，分区名称旁边会有一个星号 (**\***)。 这指示尚未处理（刷新）分区。 当您创建新分区时，您应运行“处理分区”或“处理表”操作以刷新这些分区中的数据。  
+ 在“分区管理器”  对话框中，请注意，对于刚才创建的每个新分区，分区名称旁边会有一个星号 ( **\*** )。 这指示尚未处理（刷新）分区。 当您创建新分区时，您应运行“处理分区”或“处理表”操作以刷新这些分区中的数据。  
   
 #### <a name="to-process-internet-sales-partitions"></a>处理 Internet Sales 分区  
   
-1.  单击“确定”关闭“分区管理器”对话框。  
+1.  单击“确定”  关闭“分区管理器”  对话框。  
   
-2.  在模型设计器中，单击“Internet Sales”表，然后单击“模型”菜单，指向“处理”（刷新），然后单击“处理分区”。  
+2.  在模型设计器中，单击“Internet Sales”  表，然后单击“模型”  菜单，指向“处理”  （刷新），然后单击“处理分区”  。  
   
-3.  在“处理分区”对话框中，确认“模式”已设置为“处理默认值”。  
+3.  在“处理分区”  对话框中，确认“模式”  已设置为“处理默认值”  。  
   
-4.  在“处理”列中选中所创建的全部五个分区的复选框，然后单击“确定”。  
+4.  在“处理”  列中选中所创建的全部五个分区的复选框，然后单击“确定”  。  
   
      如果系统提示您输入模拟凭据，则输入您在第 2 课的第 6 步中指定的 Windows 用户名和密码。  
   

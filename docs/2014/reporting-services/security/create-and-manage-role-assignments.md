@@ -17,16 +17,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102001"
 ---
 # <a name="create-and-manage-role-assignments"></a>创建和管理角色分配
   “  角色分配”是确定用户或组是否可以访问特定报表服务器项或执行操作的安全策略。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。  
   
- 角色分配的作用域为“  项级”或“ 系统级”。  
+ 角色分配的作用域为“  项级”或“  系统级”。  
   
 -   项级角色分配总是在报表服务器文件夹层次结构中的特定项或分支的上下文中创建。 您需要导航到具体的文件夹或项，才能为其创建角色分配。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66102001"
  一次只能修改一个角色分配。 您不能通过执行全局搜索-替换操作来更改角色定义名称或角色分配设置，也不能通过这种方式查找包括特定用户或组的所有角色分配。  
   
 ## <a name="deleting-a-role-assignment"></a>删除角色分配  
- 若要删除角色分配，请选择要删除的每个角色分配旁边的复选框，然后单击 **“删除”**。 另一种删除角色分配的方法是单击 **“恢复到父级安全设置”**。 当单击此按钮后，将删除项的现有角色分配，并改用通过父项提供的角色分配。  
+ 若要删除角色分配，请选择要删除的每个角色分配旁边的复选框，然后单击 **“删除”** 。 另一种删除角色分配的方法是单击 **“恢复到父级安全设置”** 。 当单击此按钮后，将删除项的现有角色分配，并改用通过父项提供的角色分配。  
   
 ## <a name="see-also"></a>请参阅  
  [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)   

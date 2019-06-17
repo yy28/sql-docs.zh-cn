@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157242"
 ---
 # <a name="supported-sql-server-features"></a>支持的 SQL Server 功能
@@ -39,7 +39,7 @@ ms.locfileid: "63157242"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server 管理对象支持](sql-server-management-objects-support-for-in-memory-oltp.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server Management Studio 支持](sql-server-management-studio-support-for-in-memory-oltp.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的用户。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server Management Studio 支持](sql-server-management-studio-support-for-in-memory-oltp.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell。 有关详细信息，请参阅 [SQL Server PowerShell 概述](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "63157242"
   
  除若干例外情况，一般不支持跨数据库事务。 下表介绍支持的情况和相应的限制。 （另请参阅 [跨数据库查询](cross-database-queries.md)。）  
   
-|数据库|Allowed|描述|  
+|数据库|Allowed|Description|  
 |---------------|-------------|-----------------|  
 |用户数据库、模型和 msdb|否|不支持跨数据库查询和事务。<br /><br /> 访问内存优化表和本机编译存储过程的查询和事务无法访问其他数据库，但系统数据库 master（只读访问）和 tempdb 除外。|  
 |资源数据库和 tempdb|是|除了单用户数据库外，仅使用资源数据库和 tempdb 的跨数据库事务亦不受限制。|  

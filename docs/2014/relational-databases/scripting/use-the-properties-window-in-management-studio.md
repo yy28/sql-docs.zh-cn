@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9095bb81099c2e84d087cb92991c0a1757376ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063252"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>使用 Management Studio 中的“属性”窗口
@@ -42,7 +42,7 @@ ms.locfileid: "66063252"
   
 ### <a name="to-view-the-properties-of-a-showplan-operator"></a>查看 Showplan 运算符的属性  
   
-1.  在 **“查询”** 菜单上，单击 **“包括实际的执行计划”**。  
+1.  在 **“查询”** 菜单上，单击 **“包括实际的执行计划”** 。  
   
 2.  在 SQL 查询编辑器中，键入并执行一个查询。  
   

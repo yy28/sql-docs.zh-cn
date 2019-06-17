@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: e55093c83e9a306a06235d6bb613dac78d4677ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642302"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用来自 OLAP 多维数据集的数据
@@ -38,15 +38,15 @@ MDX 中，多维表达式的缩写，是用于查询多维数据集使用的语�
 
 + *切片*是通过使用来自单个维度的值，采用多维数据集的子集。
 
-+ 通过指定多个维度上值的范围，“切块”创建子多维数据集。
++ 通过指定多个维度上值的范围，“切块”  创建子多维数据集。
 
-+ “向下钻取”从摘要导航到详细信息。
++ “向下钻取”  从摘要导航到详细信息。
 
-+ “向上钻取”从详细信息移动到较高级别的聚合。
++ “向上钻取”  从详细信息移动到较高级别的聚合。
 
-+ “汇总”总结某个维度上的数据。
++ “汇总”  总结某个维度上的数据。
 
-+ “透视”旋转多维数据集或数据选择。
++ “透视”  旋转多维数据集或数据选择。
 
 ## <a name="how-to-use-olapr-to-create-mdx-queries"></a>如何使用 olapR 创建 MDX 查询
 

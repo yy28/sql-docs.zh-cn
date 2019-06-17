@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db132a4a4cf6e8c2b73067220a5ed91a5316afef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075186"
 ---
 # <a name="dimension-attribute-properties-reference"></a>维度特性属性参考
@@ -28,7 +28,7 @@ ms.locfileid: "66075186"
 |`AttributeHierarchyDisplayFolder`|标识向最终用户显示关联的特性层次结构的文件夹。|  
 |`AttributeHierarchyEnabled`|确定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是否为特性生成特性层次结构。 如果未启用特性层次结构，则不能在用户定义的层次结构中使用该特性，也不能在多维表达式 (MDX) 语句中引用该特性层次结构。|  
 |`AttributeHierarchyOptimizedState`|确定应用于属性层次结构的优化级别。 默认情况下，特性层次结构处于 `FullyOptimized` 状态，也就是说 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为特性层次结构生成索引以提高查询性能。 另一个选项 `NotOptimized` 表示没有为该特性层次结构生成索引。 使用`NotOptimized`很有用，如果属性层次结构用于查询，之外的其他用途，因为没有其他索引会为特性生成。 特性层次结构的其他用途可用于帮助对另一个特性进行排序。|  
-|`AttributeHierarchyOrdered`|确定关联的属性层次结构是否已排序。 默认值是 `True`。 但是，如果某特性层次结构将不用于查询，则您可以通过将该属性的值更改为 `False` 来节省处理时间。|  
+|`AttributeHierarchyOrdered`|确定关联的属性层次结构是否已排序。 默认值为 `True`。 但是，如果某特性层次结构将不用于查询，则您可以通过将该属性的值更改为 `False` 来节省处理时间。|  
 |`AttributeHierarchyVisible`|确定属性层次结构是否对客户端应用程序可见。 默认值是 `True`。 但是，如果某特性层次结构将不用于查询，则您可以通过将该属性的值更改为 `False` 来节省处理时间。|  
 |`CustomRollupColumn`|指定定义自定义汇总公式的列。|  
 |`CustomRollupPropertiesColumn`|指定包含自定义汇总公式的属性的列。|  
@@ -39,7 +39,7 @@ ms.locfileid: "66075186"
 |`EstimatedCount`|指定该特性的估计成员数。 在运行聚合设计向导之前，该值默认为零。 您可以允许向导对记录数目进行计数，也可以输入一个估计值。 如果您知道成员数目并且希望减少在数据库中查询计数所需的时间，则可以手动输入值。 如果正在使用生产数据的测试子集，则可以使用生产数据的计数，从而针对生产数据而不是测试数据来优化聚合设计。|  
 |`GroupingBehavior`|一个用户定义的值，可为客户端应用程序提供如何对特性进行分组的提示。|  
 |`ID`|包含维度的唯一标识符 (ID)。|  
-|`InstanceSelection`|向客户端应用程序提供提示，建议应该如何根据列表中预期的项数来显示项列表。 可用选项如下所示：<br /><br /> **None** 对客户端应用程序不提供提示。 这是默认值。<br /><br /> **DropDown** 项数很少，足以在下拉列表中显示。<br /><br /> **List** 项数太多，无法在下拉中显示，但不需要进行筛选。<br /><br /> **FilteredList** 项数太多，需要用户进行筛选，然后才能显示。<br /><br /> **MandatoryFilter** 项数太多，必须一直使用筛选才能显示。|  
+|`InstanceSelection`|向客户端应用程序提供提示，建议应该如何根据列表中预期的项数来显示项列表。 可用选项如下所示：<br /><br /> **None** 对客户端应用程序不提供提示。 这是默认值。<br /><br /> **DropDown** 项数很少，足以在下拉列表中显示。<br /><br /> **List** 项数太多，无法在下拉  中显示，但不需要进行筛选。<br /><br /> **FilteredList** 项数太多，需要用户进行筛选，然后才能显示。<br /><br /> **MandatoryFilter** 项数太多，必须一直使用筛选才能显示。|  
 |`IsAggregatable`|指定是否可以聚合特性成员的值。 默认值为 `True`，表示特性层次结构将包含“(全部)”级别。 如果该属性的值为 `False`，则此特性层次结构不包含“(全部)”级别。|  
 |`KeyColumns`|包含表示特性键的一个或多个列，这些列是数据源视图的基础关系表中与该特性绑定在一起的列。 除非为 `NameColumn` 属性指定一个值，否则，将为用户显示每个成员该列的值。|  
 |`MemberNamesUnique`|确定特性层次结构中的成员名称是否必须唯一。|  

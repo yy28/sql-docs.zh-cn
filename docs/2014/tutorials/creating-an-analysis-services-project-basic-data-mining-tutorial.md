@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62855187"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>创建 Analysis Services 项目（数据挖掘基础教程）
@@ -38,11 +38,11 @@ ms.locfileid: "62855187"
   
 1.  打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **“文件”** 菜单上，指向 **“新建”**，然后选择 **“项目”**。  
+2.  在 **“文件”** 菜单上，指向 **“新建”** ，然后选择 **“项目”** 。  
   
 3.  确保已选中 **“项目类型”** 窗格中的 **“商业智能项目”** 。  
   
-4.  在 **“模板”** 窗格中选择 **“Analysis Services 多维和数据挖掘项目”**。  
+4.  在 **“模板”** 窗格中选择 **“Analysis Services 多维和数据挖掘项目”** 。  
   
 5.  在中**名称**框中，将新项目命名`BasicDataMining`。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "62855187"
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored"></a>更改存储数据挖掘对象的实例  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，选择 **“项目”** 菜单中的 **“属性”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，选择 **“项目”** 菜单中的 **“属性”** 。  
   
-2.  在 **“属性页”** 窗格左侧的 **“配置属性”** 下，单击 **“部署”**。  
+2.  在 **“属性页”** 窗格左侧的 **“配置属性”** 下，单击 **“部署”** 。  
   
 3.  在 **“属性页”** 窗格右侧的 **“目标”** 下，确保 **“服务器”** 名称为 **localhost**。 如果使用的是其他实例，请键入该实例的名称。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65426162fc7cd7ada9e66c591420ac64040a4391
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108553"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>第 1 课：创建新网站
@@ -24,7 +24,7 @@ ms.locfileid: "66108553"
   
 1.  打开 Microsoft Visual Studio 2010 或 Microsoft Visual Studio 2012。  
   
-2.  在“文件”菜单上，指向“新建”，然后选择“网站”。  
+2.  在“文件”菜单上，指向“新建”，然后选择“网站”    。  
   
 3.  在中**新的 Web 站点**对话框中**已安装的模板**窗格中，选择**Visual C#** ，然后选择**ASP.NET web 站点**。  
   

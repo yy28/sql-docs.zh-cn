@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056828"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>包安装向导 UI 参考
@@ -56,7 +56,7 @@ ms.locfileid: "66056828"
  **配置文件**  
  通过从列表中选择文件，可以编辑配置文件的内容。  
   
- **相关主题：**[创建包配置](../../2014/integration-services/create-package-configurations.md)  
+ **相关主题：** [创建包配置](../../2014/integration-services/create-package-configurations.md)  
   
  **路径**  
  查看要配置的属性的路径。  
@@ -118,7 +118,7 @@ ms.locfileid: "66056828"
  指定包及其依赖关系要复制到的路径和文件夹。  
   
  **“浏览”**  
- 使用“查找文件夹”对话框找到目标文件夹。  
+ 使用“查找文件夹”  对话框找到目标文件夹。  
   
  **Next**  
  转到向导的下一页。  
@@ -148,7 +148,7 @@ ms.locfileid: "66056828"
  **包路径**  
  指定逻辑文件夹的名称，或者输入 "/" 作为默认文件夹。  
   
- 若要在“SSIS 包”对话框中选择该文件夹，请单击“浏览(...)”。但是，该对话框不提供用来选择默认文件夹的方法。 如果要使用默认文件夹，则必须在该文本框中输入 "/"。  
+ 若要在“SSIS 包”  对话框中选择该文件夹，请单击“浏览(...)”。但是，该对话框不提供用来选择默认文件夹的方法。 如果要使用默认文件夹，则必须在该文本框中输入 "/"。  
   
 > [!NOTE]  
 >  如果没有输入有效的包路径，则会出现下面的错误消息：“一个或多个参数无效。”  
@@ -166,7 +166,7 @@ ms.locfileid: "66056828"
  可以使用 **“完成包安装向导”** 页查看包安装结果的摘要。 此页提供了如所部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的名称、已安装的包、配置文件和安装位置等之类的详细信息。  
   
  **“完成”**  
- 单击“完成”即可退出该向导。  
+ 单击“完成”  即可退出该向导。  
   
 ## <a name="see-also"></a>请参阅  
  [打包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  

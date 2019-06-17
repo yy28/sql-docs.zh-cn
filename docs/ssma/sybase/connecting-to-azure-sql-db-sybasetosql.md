@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ac8b97e36338a280b6f78a0e6bb73eeab882655d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63297474"
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>连接到 Azure SQL DB (SybaseToSQL)
@@ -55,7 +55,7 @@ ms.locfileid: "63297474"
   
 6.  SSMA 建议加密的连接到 Azure SQL DB。  
   
-7.  单击 **“连接”**。  
+7.  单击 **“连接”** 。  
   
 > [!IMPORTANT]  
 > 适用于 Sybase 的 SSMA 不支持连接到**主**Azure SQL DB 中的数据库。  

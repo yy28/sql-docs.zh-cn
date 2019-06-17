@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65961372"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>顺序分析和聚类分析模型的挖掘模型内容
@@ -21,7 +21,7 @@ ms.locfileid: "65961372"
   本主题介绍使用 Microsoft 顺序分析和聚类分析算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>了解顺序分析和聚类分析模型的结构  
- 顺序分析和聚类分析模型具有表示该模型及其元数据的单一父节点 (NODE_TYPE = 1)。 标记为“(全部)”的父节点具有相关的序列节点 (NODE_TYPE = 13)，用于列出在定型数据中检测到的所有转换。  
+ 顺序分析和聚类分析模型具有表示该模型及其元数据的单一父节点 (NODE_TYPE = 1)。 标记为“(全部)”  的父节点具有相关的序列节点 (NODE_TYPE = 13)，用于列出在定型数据中检测到的所有转换。  
   
  ![序列聚类分析模型的结构](../../analysis-services/data-mining/media/modelcontent-seqclust.gif "序列聚类分析模型的结构")  
   
@@ -192,7 +192,7 @@ ORDER BY Count(*) DESC
   
 2.  在顺序分析和聚类分析查看器中，单击 **“状态转换”** 选项卡。  
   
-3.  在“分类”下拉列表中，确保选中“总体(全部)”。  
+3.  在“分类”  下拉列表中，确保选中“总体(全部)”  。  
   
 4.  将窗格左侧的滑动条一直移动到顶部，以显示所有链接。  
   
@@ -221,7 +221,7 @@ ORDER BY Count(*) DESC
   
 6.  返回到“节点标题”窗格，展开 **“分类 16 的序列级别”** 节点（如果尚未展开）。  
   
-7.  在其子节点中查找 **“序列状态 20 的转换行”**。 单击该转换节点。  
+7.  在其子节点中查找 **“序列状态 20 的转换行”** 。 单击该转换节点。  
   
 8.  NODE_DISTRIBUTION 嵌套表包含下列产品和概率。 请将其与顺序分析和聚类分析查看器的 **“状态转换”** 选项卡中的结果进行比较。  
   

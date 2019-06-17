@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102399"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>上载文件或报表（报表管理器）
@@ -38,13 +38,13 @@ ms.locfileid: "66102399"
   
 2.  在报表管理器中，导航到 **“内容”** 页。 导航到要向其中添加项的文件夹。  
   
-3.  单击 **“上载文件”**。  
+3.  单击 **“上载文件”** 。  
   
 4.  单击 **“浏览”** 以选择要上载的文件。 可以上载报表定义文件、图像、文档或任何要在报表服务器上可用的文件。  
   
 5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符: ; ? : \@ & = + , $ / * \< > |.  
   
-6.  若要用新项替换现有项，请选择 **“如果该项已存在，则覆盖该项”**。  
+6.  若要用新项替换现有项，请选择 **“如果该项已存在，则覆盖该项”** 。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

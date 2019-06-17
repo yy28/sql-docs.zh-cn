@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061746"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目标编辑器（“映射”页）
@@ -28,9 +28,9 @@ ms.locfileid: "66061746"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 目标的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 ADO NET 目标。  
+2.  在“数据流”  选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”** 中，单击 **“映射”**。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“映射”** 。  
   
 ## <a name="options"></a>选项  
  **可用输入列**  
@@ -40,7 +40,7 @@ ms.locfileid: "66061746"
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看选定的输入列。 可以通过选择“\<忽略>”以从输出中排除列来移除映射。  
+ 查看选定的输入列。 可以通过选择“\<忽略>”  以从输出中排除列来移除映射。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对其进行映射。  

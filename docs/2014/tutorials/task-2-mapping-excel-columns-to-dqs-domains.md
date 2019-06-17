@@ -11,15 +11,15 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484706"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>任务 2：将 Excel 列映射到 DQS 域
     
-1.  在“映射”  页中，为“数据源”  选择“Excel 文件” 。  
+1.  在“映射”  页中，为“数据源”  选择“Excel 文件”  。  
   
 2.  单击**浏览**，选择**Suppliers.xlsx**，然后单击**打开**。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "65484706"
 6.  单击**下一步**若要切换到**清理**页。  
   
 ## <a name="next-step"></a>下一步  
- [任务 3:对照 Suppliers 知识库清理数据](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+ [任务 3：对照 Suppliers 知识库清理数据](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

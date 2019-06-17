@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019300"
 ---
 # <a name="define-partitions-in-directquery-models"></a>在 DirectQuery 模型中定义分区
@@ -44,19 +44,19 @@ ms.locfileid: "63019300"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的模型设计器中，单击包含已分区表的表（选项卡）。  
   
-2.  单击 **“表”** 菜单，然后单击 **“分区”**。  
+2.  单击 **“表”** 菜单，然后单击 **“分区”** 。  
   
-3.  在“分区管理器”中，作为当前直接查询分区的分区由分区名称上的前缀 **(DirectQuery)** 指示。  
+3.  在“分区管理器”中，作为当前直接查询分区的分区由分区名称上的前缀 **(DirectQuery)** 指示。   
   
-     从 **“分区”** 列表中选择一个不同的分区，然后单击 **“设置为 DirectQuery”**。 在选择当前 DirectQuery 分区时 **“设置为 DirectQuery”** 按钮未启用，并且在尚未为直接查询模式启用模型时不可见。  
+     从 **“分区”** 列表中选择一个不同的分区，然后单击 **“设置为 DirectQuery”** 。 在选择当前 DirectQuery 分区时 **“设置为 DirectQuery”** 按钮未启用，并且在尚未为直接查询模式启用模型时不可见。  
   
-4.  如果需要，请更改处理选项，然后单击 **“确定”**。  
+4.  如果需要，请更改处理选项，然后单击 **“确定”** 。  
   
 #### <a name="change-the-directquery-partition-for-a-deployed-tabular-model"></a>更改已部署表格模型的 DirectQuery 分区  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的对象资源管理器中，打开模型数据库。  
   
-2.  展开“表”节点，右键单击已分区表，然后选择“分区”。  
+2.  展开“表”节点，右键单击已分区表，然后选择“分区”。    
   
      为用于 DirectQuery 模式而指定的分区在分区名称上具有前缀 (DirectQuery)。  
   

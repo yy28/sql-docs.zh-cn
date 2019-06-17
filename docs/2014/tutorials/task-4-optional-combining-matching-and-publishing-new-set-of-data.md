@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489274"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>任务 4（可选）：组合、匹配和发布新数据集
@@ -78,7 +78,7 @@ ms.locfileid: "65489274"
   
 22. 将工作表列映射到域，如下表中所示。  
   
-    |工作表列|域|  
+    |工作表列|Domain|  
     |----------------------|------------|  
     |Code（您上载了 Supplier ID 作为 MDS 中 Supplier 实体的代码）|Supplier ID|  
     |Name（您上载了 Supplier Name 作为 MDS 中 Supplier 实体的名称）|Supplier Name|  
@@ -88,13 +88,13 @@ ms.locfileid: "65489274"
   
 24. 输入**70%** 作为**权重**有关**Supplier Name**并**30%** 作为**权重**为**联系人电子邮件**图中所示。  
   
-25. 单击“确定” 。  
+25. 单击“确定”  。  
   
 26. 匹配过程应与该供应商标识一个重复**代码：S1**。  
   
      ![Excel-匹配结果](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel-匹配结果")  
   
-27. 选择**重复的行 （橙色）**，右键单击，然后单击**删除**删除的行。  
+27. 选择**重复的行 （橙色）** ，右键单击，然后单击**删除**删除的行。  
   
 28. 删除**CLUSTER_ID**列，因为您不再需要它。  
   
@@ -111,6 +111,6 @@ ms.locfileid: "65489274"
 34. 现在，关闭**Book1-Microsoft Excel**窗口而不保存该文件。  
   
 ## <a name="next-step"></a>下一步  
- [任务 5:从 Excel 中创建基于域的属性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [任务 5：从 Excel 中创建基于域的属性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

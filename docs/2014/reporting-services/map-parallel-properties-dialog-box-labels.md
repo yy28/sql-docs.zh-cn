@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108249"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>“地图纬线属性”对话框 -&gt;“标签”
@@ -31,13 +31,13 @@ ms.locfileid: "66108249"
   
 ## <a name="options"></a>选项  
  **Interval**  
- 键入以度为单位的整数值，指定纬线之间的间隔。 默认情况下，选择 **“自动”** 。 如果将此选项设置为 **“自动”**，则值将由地图数据集中的数据决定。  
+ 键入以度为单位的整数值，指定纬线之间的间隔。 默认情况下，选择 **“自动”** 。 如果将此选项设置为 **“自动”** ，则值将由地图数据集中的数据决定。  
   
  **显示标签**  
  选择此选项可以显示纬线的标签。  
   
  **放置**  
- 选择标签相对于视区的显示位置（顶部、中心和底部）。 默认位置为 **“近端”**。  
+ 选择标签相对于视区的显示位置（顶部、中心和底部）。 默认位置为 **“近端”** 。  
   
 -   **近端** 在顶部显示标签。  
   

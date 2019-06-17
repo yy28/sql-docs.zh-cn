@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982869"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Azure 服务器的完全限定的地址。  
   
--   如果提供的值**@database_name**，但指定的数据库不是已启用延伸的则你必须提供的值**@server_address**。  
+-   如果提供的值 **@database_name** ，但指定的数据库不是已启用延伸的则你必须提供的值 **@server_address** 。  
   
--   如果提供的值**@database_name**，并且指定的数据库是已启用延伸的则无需提供的值**@server_address**。 如果提供的值**@server_address**、 存储的过程会将其忽略和使用现有 Azure 服务器已与已启用延伸的数据库相关联。  
+-   如果提供的值 **@database_name** ，并且指定的数据库是已启用延伸的则无需提供的值 **@server_address** 。 如果提供的值 **@server_address** 、 存储的过程会将其忽略和使用现有 Azure 服务器已与已启用延伸的数据库相关联。  
   
  @azure_username = N'*azure_username*  
  远程 Azure 服务器的用户名。  

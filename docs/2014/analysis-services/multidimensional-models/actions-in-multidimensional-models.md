@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077495"
 ---
 # <a name="actions-in-multidimensional-models"></a>多维模型中的操作
@@ -31,7 +31,7 @@ ms.locfileid: "66077495"
  选择用于标识操作的名称。  
   
  **操作目标**  
- 选择操作所附加到的对象。 一般情况下，在客户端应用程序中，当最终用户选中了目标对象后就会显示该操作；但是，最终用户的何种行为会导致操作的显示，取决于客户端应用程序。 对于 **“目标类型”**，请从以下对象中选择：  
+ 选择操作所附加到的对象。 一般情况下，在客户端应用程序中，当最终用户选中了目标对象后就会显示该操作；但是，最终用户的何种行为会导致操作的显示，取决于客户端应用程序。 对于 **“目标类型”** ，请从以下对象中选择：  
   
 -   属性成员  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66077495"
 |声明专用纸|运行 OLE DB 命令。|  
 |URL|在 Internet 浏览器中显示可变页。|  
   
- 对于 **“操作表达式”**，请指定运行操作时所传递的参数。 该语法的计算结果必须为字符串，并且必须包含以 MDX 编写的表达式。 例如，MDX 表达式可以指示该语法所包含的多维数据集的一部分。 MDX 表达式在传递参数之前得到取值。 MDX 生成器也可以帮助生成 MDX 表达式。  
+ 对于 **“操作表达式”** ，请指定运行操作时所传递的参数。 该语法的计算结果必须为字符串，并且必须包含以 MDX 编写的表达式。 例如，MDX 表达式可以指示该语法所包含的多维数据集的一部分。 MDX 表达式在传递参数之前得到取值。 MDX 生成器也可以帮助生成 MDX 表达式。  
   
  **附加属性**  
  选择属性。 下表总结了可用的属性。  
@@ -82,7 +82,7 @@ ms.locfileid: "66077495"
 >  必须使用 Analysis Services 脚本语言 (ASSL) 或分析管理对象 (AMO)，才能定义 HTML 和命令行操作类型。 有关详细信息，请参阅 [Action 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)、[Type 元素 (Action) (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 和 [AMO OLAP 高级对象的编程](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)。  
   
 ## <a name="creating-a-reporting-action"></a>创建报表操作  
- 报表服务器会对基于 URL 的报表请求作出响应。 若要创建报表操作，请在 **“多维数据集”** 菜单上单击 **“新建报表操作”**。 下面是特定于报表操作的选项。  
+ 报表服务器会对基于 URL 的报表请求作出响应。 若要创建报表操作，请在 **“多维数据集”** 菜单上单击 **“新建报表操作”** 。 下面是特定于报表操作的选项。  
   
  **报表服务器**  
  下表说明的属性是为报表服务器指定的。  
@@ -94,7 +94,7 @@ ms.locfileid: "66077495"
 |**报表格式**|HTML5、HTML3、Excel 或 PDF。|  
   
  **参数(可选)**  
- 创建操作时，参数将作为 URL 字符串的一部分发送到服务器。 它们包括 **“参数名称”** 和 **“参数值”**，后者是 MDX 表达式。  
+ 创建操作时，参数将作为 URL 字符串的一部分发送到服务器。 它们包括 **“参数名称”** 和 **“参数值”** ，后者是 MDX 表达式。  
   
  报表服务器 URL 的构造如下所示：  
   
@@ -118,7 +118,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
 ```  
   
 ## <a name="creating-a-drillthrough-action"></a>创建钻取操作  
- 钻取操作由行集操作定义，它将作为钻取语句返回到客户端应用程序。 操作目标是度量值组的成员。 若要创建新的钻取操作，请在 **“多维数据集”** 菜单上单击 **“新建钻取操作”**。 下面是特定于钻取操作的选项：  
+ 钻取操作由行集操作定义，它将作为钻取语句返回到客户端应用程序。 操作目标是度量值组的成员。 若要创建新的钻取操作，请在 **“多维数据集”** 菜单上单击 **“新建钻取操作”** 。 下面是特定于钻取操作的选项：  
   
  **钻取列**  
  选择一个或多个维度以及每个维度的、由该操作返回到客户端应用程序的钻取列。  

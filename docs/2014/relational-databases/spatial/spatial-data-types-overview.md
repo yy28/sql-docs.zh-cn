@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9ae74640557f7906ed237341d147926eb3296614
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014049"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
@@ -30,7 +30,7 @@ ms.locfileid: "66014049"
 >  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括对空间数据类型的改进），请下载白皮书 [SQL Server Code-Named "Denali" 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ##  <a name="objects"></a> 空间数据对象  
- `geometry` 和 `geography` 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种“可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例由区分它们作为其父级数据类型派生的某些属性`Points`， **LineStrings，CircularStrings**， `CompoundCurves`， `Polygons`，`CurvePolygons`或作为多个`geometry`或`geography`实例中`GeometryCollection`。 `Geography` 类型具有附加实例类型 `FullGlobe`。  
+ `geometry` 和 `geography` 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种  “可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例由区分它们作为其父级数据类型派生的某些属性`Points`， **LineStrings，CircularStrings**， `CompoundCurves`， `Polygons`，`CurvePolygons`或作为多个`geometry`或`geography`实例中`GeometryCollection`。 `Geography` 类型具有附加实例类型 `FullGlobe`。  
   
  下图描述了 `geometry` 和 `geometry` 数据类型所基于的 `geography` 层次结构。 可实例化类型的`geometry`和`geography`以蓝色表示。  
   

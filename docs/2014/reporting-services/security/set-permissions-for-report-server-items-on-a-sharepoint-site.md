@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c8c0e8f0714efb337d78d4440938dcb5a332fcf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101556"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）
@@ -33,17 +33,17 @@ ms.locfileid: "66101556"
   
 ### <a name="to-set-permissions-on-an-individual-report-model-or-data-source"></a>对单个报表、模型或数据源设置权限  
   
-1.  如果库尚未打开，请在“快速启动”上单击其名称。 如果未显示库的名称，请单击 **“查看所有网站内容”**，然后单击库的名称。  
+1.  如果库尚未打开，请在“快速启动”上单击其名称。 如果未显示库的名称，请单击 **“查看所有网站内容”** ，然后单击库的名称。  
   
 2.  指向报表、报表模型或共享数据源文件。  
   
-3.  单击向下箭头，并在菜单上单击 **“管理权限”**。  
+3.  单击向下箭头，并在菜单上单击 **“管理权限”** 。  
   
-4.  在 **“操作”** 菜单上，单击 **“编辑权限”**，然后单击 **“确定”** 以确认此操作。  
+4.  在 **“操作”** 菜单上，单击 **“编辑权限”** ，然后单击 **“确定”** 以确认此操作。  
   
-5.  若要为尚未拥有文件使用权限的用户或组授予权限，请单击 **“新建”**，然后单击 **“添加用户”**。  
+5.  若要为尚未拥有文件使用权限的用户或组授予权限，请单击 **“新建”** ，然后单击 **“添加用户”** 。  
   
-6.  若要删除或修改现有用户或组的权限，请单击用户或组旁边的复选框，单击 **“操作”**，然后单击 **“删除用户权限”** 或 **“编辑用户权限”**。  
+6.  若要删除或修改现有用户或组的权限，请单击用户或组旁边的复选框，单击 **“操作”** ，然后单击 **“删除用户权限”** 或 **“编辑用户权限”** 。  
   
 ### <a name="to-set-permissions-that-enable-model-item-security"></a>设置启用模型项安全性的权限  
   
@@ -53,23 +53,23 @@ ms.locfileid: "66101556"
   
 3.  指向模型。  
   
-4.  单击该模型旁边的向下箭头，并单击 **“管理权限”**。  
+4.  单击该模型旁边的向下箭头，并单击 **“管理权限”** 。  
   
-5.  单击 **“操作”**。  
+5.  单击 **“操作”** 。  
   
-6.  单击 **“编辑权限”**。 单击“确定” 。  
+6.  单击 **“编辑权限”** 。 单击“确定”  。  
   
-7.  单击 **“新建”**。  
+7.  单击 **“新建”** 。  
   
-8.  单击 **“添加用户”**。  
+8.  单击 **“添加用户”** 。  
   
 9. 在“用户/组”中输入用户帐户。  
   
-10. 选择 **“直接授予用户权限”**。  
+10. 选择 **“直接授予用户权限”** 。  
   
-11. 单击 **“完全控制”**。  
+11. 单击 **“完全控制”** 。  
   
-12. 单击“确定” 。 用户具备管理特定模型权限的能力后，便可以打开模型并在模型内编辑权限。  
+12. 单击“确定”  。 用户具备管理特定模型权限的能力后，便可以打开模型并在模型内编辑权限。  
   
 ## <a name="see-also"></a>请参阅  
  [将 Windows SharePoint Services 中的内置安全性用于报表服务器项](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   

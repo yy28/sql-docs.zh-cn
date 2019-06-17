@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62843096"
 ---
 # <a name="solution-explorer-source-control"></a>解决方案资源管理器源代码管理
@@ -39,7 +39,7 @@ ms.locfileid: "62843096"
   
 1.  安装源代码管理提供程序的客户端部分。  
   
-2.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 **“工具”** 菜单中，单击 **“选项”**。  
+2.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 **“工具”** 菜单中，单击 **“选项”** 。  
   
 3.  在中**选项**对话框框中，展开**源代码管理**，然后单击**插件选择**页。  
   

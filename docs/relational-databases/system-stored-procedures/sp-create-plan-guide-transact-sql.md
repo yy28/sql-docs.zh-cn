@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507314"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
@@ -67,7 +67,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  指示*statement_text*的上下文中显示[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程、 标量函数、 多语句表值函数或[!INCLUDE[tsql](../../includes/tsql-md.md)]DML 触发器在当前数据库中的。  
   
  SQL  
- 指示*statement_text*独立语句或批处理的可提交到上下文中显示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过任何机制。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句提交由公共语言运行时 (CLR) 对象或扩展存储的过程，或使用 EXEC N'*sql_string*，在服务器上的批次处理，并因此，应将标识为\@类型**=**  'SQL'。 如果指定了 SQL 查询提示 PARAMETERIZATION {FORCED |不能指定简单}\@提示参数。  
+ 指示*statement_text*独立语句或批处理的可提交到上下文中显示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过任何机制。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句提交由公共语言运行时 (CLR) 对象或扩展存储的过程，或使用 EXEC N'*sql_string*，在服务器上的批次处理，并因此，应将标识为\@类型 **=**  'SQL'。 如果指定了 SQL 查询提示 PARAMETERIZATION {FORCED |不能指定简单}\@提示参数。  
   
  TEMPLATE  
  指示计划指南应用于任何查询进行参数化到窗体中所示*statement_text*。 如果指定了 TEMPLATE，仅 PARAMETERIZATION {FORCED |简单} 查询提示可以指定\@提示参数。 有关 TEMPLATE 计划指南的详细信息，请参阅[通过使用计划指南指定查询参数化行为](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
@@ -77,9 +77,9 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  用于计划指南以匹配应用程序中，通过提交的批处理*batch_tex*t 必须提供相同的格式字符的字符，提交到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不会执行内部转换来帮助完成该匹配。 有关详细信息，请参阅“备注”部分。  
   
- [*schema_name*。]*object_name*指定的名称[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程、 标量函数、 多语句表值函数或[!INCLUDE[tsql](../../includes/tsql-md.md)]包含的 DML 触发器*statement_text*. 如果*schema_name*未指定，则*schema_name*使用当前用户的架构。 如果指定了 NULL 并且\@类型 = 'SQL'，值\@module_or_batch 设置的值为\@stmt。如果\@类型 = 模板 **'**， \@module_or_batch 必须为 NULL。  
+ [*schema_name*。]*object_name*指定的名称[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程、 标量函数、 多语句表值函数或[!INCLUDE[tsql](../../includes/tsql-md.md)]包含的 DML 触发器*statement_text*. 如果*schema_name*未指定，则*schema_name*使用当前用户的架构。 如果指定了 NULL 并且\@类型 = 'SQL'，值\@module_or_batch 设置的值为\@stmt。如果\@类型 = 模板 **'** ， \@module_or_batch 必须为 NULL。  
   
- [ \@params = ]{ N'*\@parameter_name data_type* [ ,*...n* ]' | NULL }  
+ [ \@params = ]{ N' *\@parameter_name data_type* [ , *...n* ]' | NULL }  
  指定的定义中嵌入的所有参数*statement_text*。 \@params 应用仅在下列任一条件为 true 时：  
   
 -   \@类型 = 'SQL' 或 'TEMPLATE'。 如果 'TEMPLATE'， \@params 不能为 NULL。  
@@ -88,8 +88,8 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *\@parameter_name data_type*提交到完全相同的格式必须提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用 sp_executesql 或参数化语句之后内部提交。 有关详细信息，请参阅“备注”部分。 如果批处理不包含参数，则必须指定 NULL。 大小\@params 仅受可用的服务器内存。  
   
- [\@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
- N'OPTION (*query_hint* [ ,*...n* ] )  
+ [\@hints = ]{ N'OPTION (*query_hint* [ , *...n* ] )' | N'*XML_showplan*' | NULL }  
+ N'OPTION (*query_hint* [ , *...n* ] )  
  指定要附加到匹配的查询的 OPTION 子句\@stmt。\@提示必须是语法上相同 SELECT 语句中的 OPTION 子句，并且可以包含任何有效的查询提示序列。  
   
  N'*XML_showplan*'  
@@ -101,7 +101,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  指示查询的 OPTION 子句中指定的任何现有提示不应用于该查询。 有关详细信息，请参阅[OPTION 子句&#40;TRANSACT-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)。  
   
 ## <a name="remarks"></a>备注  
- sp_create_plan_guide 的参数必须以显示的顺序提供。 为 **sp_create_plan_guide**的参数提供值时，必须显式指定所有的参数名称，或全部都不指定。 例如，如果**\@名称 =** 指定了，则 **\@stmt =** ， **\@类型 =**，依此类推，还必须指定。 同样，如果**\@名称 =** 省略并仅提供参数值，也必须省略其余的参数名称，并提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
+ sp_create_plan_guide 的参数必须以显示的顺序提供。 为 **sp_create_plan_guide**的参数提供值时，必须显式指定所有的参数名称，或全部都不指定。 例如，如果 **\@名称 =** 指定了，则 **\@stmt =** ， **\@类型 =** ，依此类推，还必须指定。 同样，如果 **\@名称 =** 省略并仅提供参数值，也必须省略其余的参数名称，并提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
   
  您可以为相同的查询和批处理或模块创建多个 OBJECT 或 SQL 计划指南。 但是，在任何给定的时间只能启用一个计划指南。  
   
@@ -113,15 +113,15 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 >  计划指南不适用于每个 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 计划指南在任何版本中可见。 包含计划指南的数据库可以附加到任何版本。 将数据库还原或附加到升级版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后，计划指南保持不变。 执行服务器升级后，应验证每个数据库中计划指南的性能。  
   
 ## <a name="plan-guide-matching-requirements"></a>符合要求的计划指南  
- 是否有指定的计划指南\@类型 = 'SQL' 或\@类型 = 'TEMPLATE' 若要成功匹配的查询的值*batch_text*并 *\@parameter_name data_type* [,*...n* ] 必须由应用程序提交其对相同的格式提供。 这表示必须完全按照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 编译器接收批处理文本的方式来提供批处理文本。 若要捕获实际的批处理和参数文本，可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 有关详细信息，请参阅[使用 SQL Server Profiler 创建和测试计划指南](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)。  
+ 是否有指定的计划指南\@类型 = 'SQL' 或\@类型 = 'TEMPLATE' 若要成功匹配的查询的值*batch_text*并 *\@parameter_name data_type* [, *...n* ] 必须由应用程序提交其对相同的格式提供。 这表示必须完全按照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 编译器接收批处理文本的方式来提供批处理文本。 若要捕获实际的批处理和参数文本，可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 有关详细信息，请参阅[使用 SQL Server Profiler 创建和测试计划指南](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)。  
   
  当\@类型 = 'SQL' 并\@module_or_batch 设置为 NULL，则\@module_or_batch 设置的值为\@stmt。这意味着，对于值*statement_text*必须提供完全相同的格式字符的字符，提交到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不会执行内部转换来帮助完成该匹配。  
   
- 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的值匹配*statement_text*到*batch_text*并 *\@parameter_name data_type* [，*...n* ]，或者如果\@类型 = **'** 对象，向内相应查询的文本*object_name*，将不考虑以下字符串元素：  
+ 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的值匹配*statement_text*到*batch_text*并 *\@parameter_name data_type* [， *...n* ]，或者如果\@类型 = **'** 对象，向内相应查询的文本*object_name*，将不考虑以下字符串元素：  
   
 -   字符串内部的空白字符（制表符、空格、回车符或换行符）。  
   
--   注释 (**--** 或**/ \* \* /**)。  
+-   注释 ( **--** 或 **/ \* \* /** )。  
   
 -   尾随分号  
   

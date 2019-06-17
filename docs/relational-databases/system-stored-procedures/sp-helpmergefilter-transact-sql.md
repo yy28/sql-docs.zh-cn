@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62502798"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
-`[ @article = ] 'article'` 是的名称。 *文章*是**sysname**，默认值为**%**，这会返回所有项目的名称。  
+`[ @article = ] 'article'` 是的名称。 *文章*是**sysname**，默认值为 **%** ，这会返回所有项目的名称。  
   
-`[ @filtername = ] 'filtername'` 是要返回其信息的筛选器的名称。 *filtername*是**sysname**，默认值为**%**，表示返回有关项目或发布上定义的所有筛选器的信息。  
+`[ @filtername = ] 'filtername'` 是要返回其信息的筛选器的名称。 *filtername*是**sysname**，默认值为 **%** ，表示返回有关项目或发布上定义的所有筛选器的信息。  
   
 ## <a name="result-sets"></a>结果集  
   

@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205263"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>创建 SQL Server Native Client ODBC 驱动程序应用程序
@@ -66,7 +66,7 @@ ms.locfileid: "63205263"
   
 -   执行大容量复制操作  
   
--   管理大型数据 (**varchar （max)**， **nvarchar （max)**，并**varbinary （max)** 列) 操作  
+-   管理大型数据 (**varchar （max)** ， **nvarchar （max)** ，并**varbinary （max)** 列) 操作  
   
 -   在配置数据库镜像时使用重新连接逻辑以便于故障转移  
   

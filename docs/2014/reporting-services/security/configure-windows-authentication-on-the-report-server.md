@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102122"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>在报表服务器上配置 Windows 身份验证
@@ -198,7 +198,7 @@ ms.locfileid: "66102122"
 ###### <a name="lan-and-proxy-settings-on-the-client"></a>客户端上的 LAN 和代理设置  
  在 Internet Explorer 中设置的 LAN 和代理设置可以确定是否在 Kerberos 上选择 NTLM。 但是，由于各组织的 LAN 和代理设置会有所不同，因此不可能准确确定造成 Kerberos 身份验证错误的设置。 例如，您的组织可能会强制实施将 URL 从 Intranet URL 转换为通过 Internet 连接解析的完全限定域名 URL 的代理设置。 如果将不同的身份验证提供程序用于不同类型的 URL，则您可能会发现原本预计会失败的某些连接竟然成功了。  
   
- 如果遇到您认为因身份验证失败而引起的连接错误，则可以尝试其他 LAN 与代理设置的组合来隔离该问题。 在 Internet Explorer 中，LAN 和代理设置位于“局域网 (LAN) 设置”对话框中，可以通过单击“Internet 选项”的“连接”选项卡上的“LAN 设置”打开该对话框。  
+ 如果遇到您认为因身份验证失败而引起的连接错误，则可以尝试其他 LAN 与代理设置的组合来隔离该问题。 在 Internet Explorer 中，LAN 和代理设置位于“局域网 (LAN) 设置”  对话框中，可以通过单击“Internet 选项”  的“连接”  选项卡上的“LAN 设置”  打开该对话框。  
   
 ## <a name="external-resources"></a>外部资源  
   

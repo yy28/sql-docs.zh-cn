@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108892"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>配置无人参与的执行帐户（SSRS 配置管理器）
@@ -44,9 +44,9 @@ ms.locfileid: "66108892"
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到要配置的报表服务器实例。 有关说明，请参阅 [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在“执行帐户”页上，选择 **“指定执行帐户”**。  
+2.  在“执行帐户”页上，选择 **“指定执行帐户”** 。  
   
-3.  键入帐户和密码，再次键入密码，然后单击 **“应用”**。  
+3.  键入帐户和密码，再次键入密码，然后单击 **“应用”** 。  
   
 ### <a name="using-rsconfig-utility"></a>使用 RSCONFIG 实用工具  
  设置帐户的另一种方法是使用 **rsconfig** 实用工具。 若要指定帐户，请使用 **rsconfig** 的 **-e**参数。 为 **rsconfig** 指定 **-e** 参数可强制该实用工具将帐户信息写入到配置文件中。 您无需指定 RSreportserver.config 的路径。请按照以下步骤来配置该帐户。  
@@ -57,7 +57,7 @@ ms.locfileid: "66108892"
   
 3.  键入以下命令，为本地报表服务器实例配置该帐户：  
   
-     rsconfig -e -u\<域/用户名> -p\<密码>  
+     rsconfig -e -u\<域/用户名> -p\<密码>   
   
  **rsconfig -e** 支持其他参数。 若要获取有关语法的详细信息和查看命令示例，请参阅 SQL Server 联机丛书中的 [rsconfig 配置工具 (SSRS)](../tools/rsconfig-utility-ssrs.md)。  
   
@@ -90,16 +90,16 @@ ms.locfileid: "66108892"
   
 2.  在“执行帐户”页上，确认已选中 **“指定执行帐户”** 。  
   
-3.  键入新帐户或密码，再次键入密码，然后单击 **“应用”**。  
+3.  键入新帐户或密码，再次键入密码，然后单击 **“应用”** 。  
   
 ## <a name="how-to-delete-the-unattended-report-processing-account"></a>无人参与的报表处理帐户的删除方法  
  如果您不需要使用该帐户，则可以将其删除以避免日常的帐户维护任务。  
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到要配置的报表服务器实例。  
   
-2.  在“执行帐户”页上，清除 **“指定执行帐户”**。  
+2.  在“执行帐户”页上，清除 **“指定执行帐户”** 。  
   
-3.  单击 **“应用”**。  
+3.  单击 **“应用”** 。  
   
  将从 RSReportServer.config 文件中删除此帐户的信息。  
   

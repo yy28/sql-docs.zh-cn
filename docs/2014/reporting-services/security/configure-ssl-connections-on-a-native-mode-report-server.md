@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102119"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>配置本机模式报表服务器上的 SSL 连接
@@ -52,13 +52,13 @@ ms.locfileid: "66102119"
   
 1.  启动 Reporting Services 配置工具，然后连接到报表服务器。  
   
-2.  单击 **“Web 服务 URL”**。  
+2.  单击 **“Web 服务 URL”** 。  
   
 3.  展开 SSL 证书列表。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在本地存储区中检测服务器身份验证证书。 如果已安装证书，但在列表中看不到该证书，则可能需要重新启动服务。 可以使用 Reporting Services 配置工具中 **“报表服务器状态”** 页的 **“停止”** 和 **“启动”** 按钮重新启动服务。  
   
 4.  选择证书。  
   
-5.  单击 **“应用”**。  
+5.  单击 **“应用”** 。  
   
 6.  单击该 URL，验证其是否有效。  
   
@@ -66,13 +66,13 @@ ms.locfileid: "66102119"
   
  报表管理器和报表服务器 Web 服务的 URL 预留都是单独配置的。 如果还要将报表管理器配置为通过 SSL 加密的通道进行访问，请继续执行以下步骤：  
   
-1.  单击 **“报表管理器 URL”**。  
+1.  单击 **“报表管理器 URL”** 。  
   
-2.  单击 **“高级”**。  
+2.  单击 **“高级”** 。  
   
-3.  在 **“报表管理器的多个 SSL 标识”** 中，单击 **“添加”**。  
+3.  在 **“报表管理器的多个 SSL 标识”** 中，单击 **“添加”** 。  
   
-4.  选择证书，再单击 **“确定”**，然后单击 **“应用”**。  
+4.  选择证书，再单击 **“确定”** ，然后单击 **“应用”** 。  
   
 5.  单击该 URL，验证其是否有效。  
   

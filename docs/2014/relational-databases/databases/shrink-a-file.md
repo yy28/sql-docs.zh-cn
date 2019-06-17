@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871204"
 ---
 # <a name="shrink-a-file"></a>收缩文件
@@ -70,13 +70,13 @@ ms.locfileid: "62871204"
   
 2.  展开 **“数据库”** ，再右键单击要收缩的数据库。  
   
-3.  依次指向 **“任务”** 和 **“收缩”**，再单击 **“文件”**。  
+3.  依次指向 **“任务”** 和 **“收缩”** ，再单击 **“文件”** 。  
   
      **“数据库”**  
      显示所选数据库的名称。  
   
      **文件类型**  
-     选择文件的文件类型。 可用的选项包括 **“数据”** 和 **“日志”** 文件。 默认选项为 **“数据”**。 选择不同的文件组类型，其他字段中的选项会相应地发生更改。  
+     选择文件的文件类型。 可用的选项包括 **“数据”** 和 **“日志”** 文件。 默认选项为 **“数据”** 。 选择不同的文件组类型，其他字段中的选项会相应地发生更改。  
   
      **文件组**  
      在与以上所选的 **“文件类型”** 相关联的文件组列表中选择文件组。 选择不同的文件组，其他字段中的选项会相应地发生更改。  
@@ -121,7 +121,7 @@ ms.locfileid: "62871204"
   
      选中此选项后，将指定文件中的所有数据移至同一文件组中的其他文件中。 然后就可以删除空文件。 此选项与执行包含 EMPTYFILE 选项 DBCC SHRINKFILE 相同。  
   
-9. 单击“确定” 。  
+9. 单击“确定”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -129,9 +129,9 @@ ms.locfileid: "62871204"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) 将 `UserDB` 数据库中名为 `DataFile1` 的数据文件的大小收缩到 7 MB。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) 将 `UserDB` 数据库中名为 `DataFile1` 的数据文件的大小收缩到 7 MB。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   

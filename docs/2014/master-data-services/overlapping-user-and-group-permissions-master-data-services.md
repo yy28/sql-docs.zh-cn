@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478888"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重叠的用户和组权限（主数据服务）
@@ -37,7 +37,7 @@ ms.locfileid: "65478888"
  这些规则应用到 **“模型”** 和 **“层次结构成员”** 选项卡。 先为每个选项卡确定权限，再将权限进行组合。 有关详细信息，请参阅[如何确定权限 (Master Data Services)](how-permissions-are-determined-master-data-services.md)  
   
 > [!NOTE]  
->  可以在用户界面中查看用户和组的重叠权限的解决方法。 “模型”和“层次结构成员”选项卡都具有下拉列表，可以从中选择“有效”，查看有效权限。  
+>  可以在用户界面中查看用户和组的重叠权限的解决方法。 “模型”  和“层次结构成员”  选项卡都具有下拉列表，可以从中选择“有效”  ，查看有效权限。  
   
 ## <a name="example-1"></a>示例 1  
  ![mds_conc_user_group_ex_1](../../2014/master-data-services/media/mds-conc-user-group-ex-1.gif "mds_conc_user_group_ex_1")  
@@ -50,7 +50,7 @@ ms.locfileid: "65478888"
   
  组 2 具有**只读**对 Product 实体的权限。  
   
- 结果：用户对 Product 实体的有效权限是“更新”。  
+ 结果：用户对 Product 实体的有效权限是“更新”  。  
   
 ## <a name="example-2"></a>示例 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -63,7 +63,7 @@ ms.locfileid: "65478888"
   
  组 2 对 Product 实体具有 **“拒绝”** 权限。  
   
- 结果：用户对 Product 实体的有效权限是“拒绝”。  
+ 结果：用户对 Product 实体的有效权限是“拒绝”  。  
   
 ## <a name="example-3"></a>示例 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -76,7 +76,7 @@ ms.locfileid: "65478888"
   
  组 2 具有**只读**的一组层次结构节点中的成员的权限。  
   
- 结果：用户对这些成员的有效权限是“更新”。  
+ 结果：用户对这些成员的有效权限是“更新”  。  
   
 ## <a name="see-also"></a>请参阅  
  [如何确定权限 (Master Data Services)](how-permissions-are-determined-master-data-services.md)   

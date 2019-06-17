@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4a038fcc9db891b2c0a0155ffa2aba39d2f3759
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768663"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>使用脚本组件创建源
@@ -31,54 +31,54 @@ ms.locfileid: "62768663"
  脚本组件及其生成的基础结构代码可以大大简化自定义数据流组件的开发过程。 但要了解脚本组件的工作原理，熟悉自定义数据流组件的开发步骤很有帮助。 请参阅[开发自定义数据流组件](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)部分，特别是主题[开发自定义源组件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)。  
   
 ## <a name="getting-started-with-a-source-component"></a>开始一个源组件  
- 向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“数据流”窗格添加脚本组件时，“选择脚本组件类型”对话框将打开并提示你选择“源”、“目标”或“转换”脚本。 在此对话框中选择“源”。  
+ 向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“数据流”窗格添加脚本组件时，“选择脚本组件类型”对话框将打开并提示你选择“源”、“目标”或“转换”脚本  。 在此对话框中选择“源”  。  
   
 ## <a name="configuring-a-source-component-in-metadata-design-mode"></a>在元数据设计模式下配置源组件  
- 选择创建源组件后，可使用“脚本转换编辑器”配置该组件。 有关详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
+ 选择创建源组件后，可使用“脚本转换编辑器”配置该组件  。 有关详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
   
- 数据流源组件没有输入，支持一个或多个输出。 在编写自定义脚本之前，必须在元数据设计模式下完成的一个步骤是使用“脚本转换编辑器”配置组件的输出。  
+ 数据流源组件没有输入，支持一个或多个输出。 在编写自定义脚本之前，必须在元数据设计模式下完成的一个步骤是使用“脚本转换编辑器”配置组件的输出  。  
   
- 还可以在“脚本转换编辑器”的“脚本”页上设置 ScriptLanguage 属性来指定脚本语言。  
+ 还可以在“脚本转换编辑器”的“脚本”页上设置 ScriptLanguage 属性来指定脚本语言    。  
   
 > [!NOTE]  
->  若要设置脚本组件和脚本任务的默认脚本语言，请使用“选项”对话框的“常规”页上的“脚本语言”选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
+>  若要设置脚本组件和脚本任务的默认脚本语言，请使用“选项”对话框的“常规”页上的“脚本语言”选项    。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
 ### <a name="adding-connection-managers"></a>添加连接管理器  
- 源组件通常使用现有连接管理器连接将其中的数据加载到数据流的数据源。 在“脚本转换编辑器”的“连接管理器”页中，单击“添加”以添加适当的连接管理器。  
+ 源组件通常使用现有连接管理器连接将其中的数据加载到数据流的数据源。 在“脚本转换编辑器”  的“连接管理器”  页中，单击“添加”  以添加适当的连接管理器。  
   
  但是，连接管理器只是一个封装和存储连接特定类型数据源必需信息的便利单元。 您必须编写自己的自定义代码才能加载或保存数据，并且才有可能打开和关闭与数据源的连接。  
   
  有关如何在脚本组件中使用连接管理器的常规信息，请参阅[在脚本组件中连接数据源](../extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)。  
   
- 有关“脚本转换编辑器”的“连接管理器”页的详细信息，请参阅[脚本转换编辑器（“连接管理器”页）](../script-transformation-editor-connection-managers-page.md)。  
+ 有关“脚本转换编辑器”  的“连接管理器”  页的详细信息，请参阅[脚本转换编辑器（“连接管理器”页）](../script-transformation-editor-connection-managers-page.md)。  
   
 ### <a name="configuring-outputs-and-output-columns"></a>配置输出和输出列  
- 源组件没有输入，支持一个或多个输出。 在“脚本转换编辑器”的“输入和输出”页中，已默认创建一个输出，但是还没有创建任何输出列。 在编辑器的这一页，可能需要或希望配置以下各项。  
+ 源组件没有输入，支持一个或多个输出。 在“脚本转换编辑器”的“输入和输出”页中，已默认创建一个输出，但是还没有创建任何输出列   。 在编辑器的这一页，可能需要或希望配置以下各项。  
   
--   必须为每个输出手动添加和配置输出列。 为每个输出选择“输出列”文件夹，然后使用“添加列”和“删除列”按钮管理源组件的每个输出的输出列。 随后，将使用在自动生成的代码中创建的类型化取值函数属性，在脚本中通过您在此处指定的名称来引用输出列。  
+-   必须为每个输出手动添加和配置输出列。 为每个输出选择“输出列”文件夹，然后使用“添加列”和“删除列”按钮管理源组件的每个输出的输出列   。 随后，将使用在自动生成的代码中创建的类型化取值函数属性，在脚本中通过您在此处指定的名称来引用输出列。  
   
--   您可能希望创建一个或多个附加输出，如包含意外值的行的模拟错误输出。 使用“添加输出”和“删除输出”按钮可以管理源组件的输出。 所有输入行都定向到所有可用输出，除非您还为以下一些输出的 `ExclusionGroup` 属性指定了相同的非零值，您要在这些输出中将每一行只定向到共享同一 `ExclusionGroup` 值的输出之一。 用于标识 `ExclusionGroup` 的所选特定整数值没有特殊要求。  
+-   您可能希望创建一个或多个附加输出，如包含意外值的行的模拟错误输出。 使用“添加输出”和“删除输出”按钮可以管理源组件的输出   。 所有输入行都定向到所有可用输出，除非您还为以下一些输出的 `ExclusionGroup` 属性指定了相同的非零值，您要在这些输出中将每一行只定向到共享同一 `ExclusionGroup` 值的输出之一。 用于标识 `ExclusionGroup` 的所选特定整数值没有特殊要求。  
   
     > [!NOTE]  
-    >  当您不希望输出所有行时，还可以对单个输出使用非零 `ExclusionGroup` 属性值。 但是，在这种情况下，必须为希望发送给输出的每一行显式调用 DirectRowTo\<outputbuffer> 方法。  
+    >  当您不希望输出所有行时，还可以对单个输出使用非零 `ExclusionGroup` 属性值。 但是，在这种情况下，必须为希望发送给输出的每一行显式调用 DirectRowTo\<outputbuffer> 方法  。  
   
 -   您可以为输出指定一个友好名称。 随后，将使用在自动生成的代码中创建的类型化取值函数属性，在脚本中通过输出的名称来引用输出。  
   
 -   通常，同一 `ExclusionGroup` 中的多个输出具有相同的输出列。 但是，如果要创建模拟的错误输出，则可能要添加多个列来存储错误信息。 有关数据流引擎如何处理错误行的信息，请参阅[在数据流组件中使用错误输出](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)。 但是，在脚本组件中，必须编写您自己的代码以便使用适当的错误信息填充这些附加列。 有关详细信息，请参阅[模拟脚本组件的错误输出](../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
   
- 有关“脚本转换编辑器”的“输入和输出”页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../script-transformation-editor-inputs-and-outputs-page.md)。  
+ 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>添加变量  
  如果有要在脚本中使用其值的任何现有变量，则可以添加在`ReadOnlyVariables`并`ReadWriteVariables`属性字段上**脚本**页**脚本转换编辑器**.  
   
- 在属性字段中输入多个变量时，请用逗号将变量名隔开。 此外可以输入多个变量，通过单击省略号 (**...**) 按钮旁边`ReadOnlyVariables`并`ReadWriteVariables`属性字段和中的选择变量**选择变量**对话框。  
+ 在属性字段中输入多个变量时，请用逗号将变量名隔开。 此外可以输入多个变量，通过单击省略号 ( **...** ) 按钮旁边`ReadOnlyVariables`并`ReadWriteVariables`属性字段和中的选择变量**选择变量**对话框。  
   
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../script-transformation-editor-script-page.md)。  
+ 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../script-transformation-editor-script-page.md)   。  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>在代码设计模式下编写源组件脚本  
- 为组件配置完元数据后，可以打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 编写自定义脚本的代码。 若要打开 VSTA，请在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”。 可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 编写你的脚本，具体取决于为 ScriptLanguage 属性选择的脚本语言。  
+ 为组件配置完元数据后，可以打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 编写自定义脚本的代码。 若要打开 VSTA，请在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”    。 可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 编写你的脚本，具体取决于为 ScriptLanguage 属性选择的脚本语言  。  
   
  有关适用于使用脚本组件创建的所有组件类型的重要信息，请参阅[脚本组件的编码和调试](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
@@ -125,16 +125,16 @@ ms.locfileid: "62768663"
   
 2.  向数据流设计器图面添加新的脚本组件并将其配置为源。  
   
-3.  打开“脚本转换编辑器”。 在“输入和输出”页中，用更具说明性的名称（如 MyAddressOutput）重命名默认输出，然后添加并配置两个输出列 AddressID 和 City。  
+3.  打开“脚本转换编辑器”  。 在“输入和输出”页中，用更具说明性的名称（如 MyAddressOutput）重命名默认输出，然后添加并配置两个输出列 AddressID 和 City     。  
   
     > [!NOTE]  
-    >  确保将 City 输出列的数据类型更改为 DT_WSTR。  
+    >  确保将 City 输出列的数据类型更改为 DT_WSTR  。  
   
-4.  在“连接管理器”页中，添加或创建 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器，并以诸如 MyADONETConnection 的名称命名。  
+4.  在“连接管理器”页中，添加或创建 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器，并以诸如 MyADONETConnection 的名称命名   。  
   
-5.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本。 然后关闭脚本开发环境和“脚本转换编辑器”。  
+5.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本   。 然后关闭脚本开发环境和“脚本转换编辑器”  。  
   
-6.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件，该组件需要 AddressID 和 City 列。 然后将源组件连接到目标。 （您可以将源直接连接到目标，而不经任何转换。）在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，以创建目标表：  
+6.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件，该组件需要 AddressID 和 City 列   。 然后将源组件连接到目标。 （无需任何转换，即可将源直接连接到目标。）在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，以创建目标表：  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -261,13 +261,13 @@ ms.locfileid: "62768663"
   
 3.  向数据流设计器图面添加新的脚本组件并将其配置为源。  
   
-4.  打开“脚本转换编辑器”。 在“输入和输出”页中，用更具说明性的名称（如 MyAddressOutput）重命名默认输出。 添加并配置两个输出列 AddressID 和 City。  
+4.  打开“脚本转换编辑器”  。 在“输入和输出”页中，用更具说明性的名称（如 MyAddressOutput）重命名默认输出   。 添加并配置两个输出列 AddressID 和 City   。  
   
-5.  在“连接管理器”页中，添加或创建平面文件连接管理器，并以说明性的名称命名，如 MyFlatFileSrcConnectionManager。  
+5.  在“连接管理器”页中，添加或创建平面文件连接管理器，并以说明性的名称命名，如 MyFlatFileSrcConnectionManager   。  
   
-6.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本。 然后关闭脚本开发环境和“脚本转换编辑器”。  
+6.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本   。 然后关闭脚本开发环境和“脚本转换编辑器”  。  
   
-7.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将源组件连接到目标。 （您可以将源直接连接到目标，而不经任何转换。）在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，以创建目标表：  
+7.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将源组件连接到目标。 （无需任何转换，即可将源直接连接到目标。）在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，以创建目标表：  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

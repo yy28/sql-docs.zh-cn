@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312487"
 ---
 # <a name="positioned-update-and-delete-statements"></a>定位更新和删除语句
@@ -34,7 +34,7 @@ ms.locfileid: "63312487"
   
  [**WHERE** *search-condition*]  
   
- **有关 UPDATE OF** [*列名*[**，** *列名称*]...]  
+ **有关 UPDATE OF** [*列名*[ **，** *列名称*]...]  
   
  然后，应用程序将光标置于要更新或删除的行上。 它可以执行此操作通过调用**SQLFetchScroll**检索行集包含所需的行并调用**SQLSetPos**行集游标定位在该行上。 然后，应用程序上的不同语句比正由结果集的语句执行定位的 update 或 delete 语句。 这些语句的语法是：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63312487"
   
  **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
+ [ **,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *游标名称*  
   

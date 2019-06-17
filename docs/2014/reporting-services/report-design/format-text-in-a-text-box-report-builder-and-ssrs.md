@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 976130697e759fa4231ad73113d0970e345dbb3a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105869"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>设置文本框中文本的格式（报表生成器和 SSRS）
@@ -25,11 +25,11 @@ ms.locfileid: "66105869"
   
 ### <a name="to-combine-multiple-formats-in-a-text-box"></a>在一个文本框中组合多种格式  
   
-1.  在 **“插入”** 选项卡上，单击 **“文本框”**。 单击设计图面，然后拖动鼠标根据所需大小创建一个文本框。  
+1.  在 **“插入”** 选项卡上，单击 **“文本框”** 。 单击设计图面，然后拖动鼠标根据所需大小创建一个文本框。  
   
 2.  在文本框内，选择要为其设置格式的文本。  
   
-3.  右键单击所选文本，然后单击“文本属性”。  
+3.  右键单击所选文本，然后单击“文本属性”  。  
   
 4.  设置格式设置选项。 例如，在 **“常规”** 选项卡上：  
   
@@ -41,27 +41,27 @@ ms.locfileid: "66105869"
   
          **HTML**  ：将所选文本显示为 HTML。 如果占位符的表达式值包含有效的 HTML 标记，则这些标记将呈现为 HTML。 有关详细信息，请参阅[将 HTML 导入报表（报表生成器和 SSRS）](importing-html-into-a-report-report-builder-and-ssrs.md)。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 6.  对要为其设置格式的其余文本，重复步骤 2 到步骤 5。  
   
 ### <a name="to-format-text-and-placeholders-differently-in-the-same-text-box"></a>在同一文本框中以不同方式设置文本和占位符的格式  
   
-1.  在 **“插入”** 选项卡上，单击 **“列表”**。 单击设计图面，然后拖动鼠标根据所需大小创建一个文本框。 此时将打开 **“数据集属性”** 对话框。 可以使用共享数据集或嵌入在报表中的数据集。 有关详细信息，请单击[“数据集属性”对话框 ->“查询”（报表生成器）](../report-data/dataset-properties-dialog-box-query-report-builder.md)或[“数据集属性”对话框 ->“查询”](../dataset-properties-dialog-box-query.md)。  
+1.  在 **“插入”** 选项卡上，单击 **“列表”** 。 单击设计图面，然后拖动鼠标根据所需大小创建一个文本框。 此时将打开 **“数据集属性”** 对话框。 可以使用共享数据集或嵌入在报表中的数据集。 有关详细信息，请单击[“数据集属性”对话框 ->“查询”（报表生成器）](../report-data/dataset-properties-dialog-box-query-report-builder.md)或[“数据集属性”对话框 ->“查询”](../dataset-properties-dialog-box-query.md)。  
   
-2.  在 **“插入”** 选项卡上，单击 **“文本框”**。 在列表中单击，然后拖动鼠标根据所需大小创建一个文本框。  
+2.  在 **“插入”** 选项卡上，单击 **“文本框”** 。 在列表中单击，然后拖动鼠标根据所需大小创建一个文本框。  
   
-3.  在文本框中键入一个标签，如 My Field:。  
+3.  在文本框中键入一个标签，如 My Field:  。  
   
 4.  将字段从数据集拖到文本框中。 此时将为您的字段创建一个占位符。  
   
-5.  对于基本格式设置，请选择占位符文本，然后在 **“开始”** 选项卡上的 **“字体”** 组中，单击其中一个格式设置选项。例如，单击“加粗”按钮。  
+5.  对于基本格式设置，请选择占位符文本，然后在 **“开始”** 选项卡上的 **“字体”** 组中，单击其中一个格式设置选项。例如，单击“加粗”  按钮。  
   
-     要获得更多格式设置选项，请右键单击占位符文本，然后单击“占位符属性”。  
+     要获得更多格式设置选项，请右键单击占位符文本，然后单击“占位符属性”  。  
   
-6.  单击“确定” 。 在报表设计视图中，文本框应包含“**My Field**: [*FieldName*]”，其中 *FieldName* 是你的字段的名称。  
+6.  单击“确定”  。 在报表设计视图中，文本框应包含“**My Field**: [*FieldName*]”，其中 *FieldName* 是你的字段的名称。  
   
-7.  单击 **“运行”**。  
+7.  单击 **“运行”** 。  
   
  列表会将字段中的每个值重复一次，每次重复时， *FieldName* 占位符都会由数据集中该字段的值替换。  
   

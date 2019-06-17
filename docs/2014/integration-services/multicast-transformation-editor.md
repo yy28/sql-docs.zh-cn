@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057621"
 ---
 # <a name="multicast-transformation-editor"></a>多播转换编辑器
@@ -31,7 +31,7 @@ ms.locfileid: "66057621"
  在左侧选择输出可以在右侧的表中查看其属性。  
   
  **属性**  
- 除了“名称”和“说明”外，所有列出的输出属性都是只读的。  
+ 除了“名称”  和“说明”  外，所有列出的输出属性都是只读的。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

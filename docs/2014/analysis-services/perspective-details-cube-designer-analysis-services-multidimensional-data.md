@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072062"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>透视详细信息（“透视”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -30,7 +30,7 @@ ms.locfileid: "66072062"
  显示可以包含在透视中的多维数据集中的对象类型或属性名称。  
   
  **透视名称**  
- 显示属性值，并显示“透视名称”列所表示的透视中是否包含多维数据集对象。 将为多维数据集中每一个透视列出 **“透视名称”** 列。  
+ 显示属性值，并显示“透视名称”  列所表示的透视中是否包含多维数据集对象。 将为多维数据集中每一个透视列出 **“透视名称”** 列。  
   
  在所选透视的多维数据集的 **“名称”** 属性的单元中，键入透视的名称。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66072062"
  选择要包含在透视中的对象。  
   
 ## <a name="context-menu"></a>上下文菜单  
- 右键单击“透视详细信息”窗格中显示的透视中的任一单元，可以从所显示的上下文菜单中访问以下选项：  
+ 右键单击“透视详细信息”  窗格中显示的透视中的任一单元，可以从所显示的上下文菜单中访问以下选项：  
   
 |Option|Description|  
 |------------|-----------------|  

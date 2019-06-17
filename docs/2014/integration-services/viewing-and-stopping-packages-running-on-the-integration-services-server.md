@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054598"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>查看和停止在 Integration Services 服务器上运行的包
@@ -50,7 +50,7 @@ ms.locfileid: "66054598"
  请参阅 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间及其类。  
   
 ## <a name="viewing-the-history-of-packages-that-have-run"></a>查看已运行的包的历史记录  
- 若要查看在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中已运行的包的历史记录，请使用 **“全部执行”** 报表。 有关“全部执行”报表和其他标准报表的详细信息，请参阅 [Integration Services 服务器的报告](../../2014/integration-services/reports-for-the-integration-services-server.md)。  
+ 若要查看在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中已运行的包的历史记录，请使用 **“全部执行”** 报表。 有关“全部执行”  报表和其他标准报表的详细信息，请参阅 [Integration Services 服务器的报告](../../2014/integration-services/reports-for-the-integration-services-server.md)。  
   
  有关可用于查看正在运行的包的历史记录的其他方法的信息，请参阅以下主题。  
   

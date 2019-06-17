@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 719e4dc2e934ac430ab4910612265d4b3532ed14
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085725"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>选择用于测试挖掘模型的列
@@ -30,7 +30,7 @@ ms.locfileid: "66085725"
   
 -   其他类型的挖掘模型，如聚类分析模型执行操作并不一定具有可预测属性。 除非聚类分析模型具有可预测属性，否则无法测试它们。  
   
--   若要创建散点图或度量回归模型的准确性，则需选择连续可预测属性作为结果。 在这种情况下，您不能指定目标值。 如果要创建散点图之外的任何内容，则基础挖掘结构列的内容类型还必须为 **“离散”** 或 **“离散化”**。  
+-   若要创建散点图或度量回归模型的准确性，则需选择连续可预测属性作为结果。 在这种情况下，您不能指定目标值。 如果要创建散点图之外的任何内容，则基础挖掘结构列的内容类型还必须为 **“离散”** 或 **“离散化”** 。  
   
 -   如果选择离散属性作为可预测结果，则还可以指定一个目标值，或者可以将 **“预测值”** 字段留空。 如果包括**预测值**，图表将只度量模型的有效性在预测目标值。 如果不指定目标结果，则会度量模型预测所有结果的准确性。  
   

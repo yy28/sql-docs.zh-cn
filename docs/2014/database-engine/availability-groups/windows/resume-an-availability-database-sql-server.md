@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b85a2b6e7d574c1752eba84d1bfc2bce8dbafc6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788714"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>恢复可用性数据库 (SQL Server)
@@ -77,9 +77,9 @@ ms.locfileid: "62788714"
   
 3.  展开该可用性组。  
   
-4.  展开“可用性数据库”节点，右键单击该数据库，然后单击“恢复数据移动”。  
+4.  展开“可用性数据库”  节点，右键单击该数据库，然后单击“恢复数据移动”  。  
   
-5.  在 **“恢复数据移动”** 对话框中，单击 **“确定”**。  
+5.  在 **“恢复数据移动”** 对话框中，单击 **“确定”** 。  
   
 > [!NOTE]  
 >  若要恢复此副本位置上的其他数据库，请对每个数据库重复执行步骤 4 和 5。  

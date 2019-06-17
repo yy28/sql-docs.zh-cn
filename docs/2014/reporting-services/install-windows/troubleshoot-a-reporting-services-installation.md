@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a27cbad6803c2106c0af4cbe4060e72cc8ee970
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108669"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>排除 Reporting Services 安装故障
@@ -212,13 +212,13 @@ ms.locfileid: "66108669"
   
 1.  打开注册表编辑器：  
   
-    1.  单击 **“开始”**，再单击 **“运行”**。  
+    1.  单击 **“开始”** ，再单击 **“运行”** 。  
   
     2.  在中**运行**对话框中**打开**框中，键入`regedit`。  
   
 2.  在注册表编辑器中，选择以下注册表项： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance`  
   
-3.  右键单击“性能”节点，指向“新建”，然后单击“多字符串值”。  
+3.  右键单击“性能”  节点，指向“新建”  ，然后单击“多字符串值”  。  
   
 4.  类型`Counter Names`，然后按 ENTER。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "66108669"
   
 6.  导航到以下注册表项： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance`  
   
-7.  右键单击“性能”节点，指向“新建”，然后单击“多字符串值”。  
+7.  右键单击“性能”  节点，指向“新建”  ，然后单击“多字符串值”  。  
   
 8.  类型`Counter Names`，然后按 ENTER。  
   
@@ -277,6 +277,6 @@ ms.locfileid: "66108669"
   
 -   [论坛：SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![SharePoint 设置](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 设置](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) 。  
   
   

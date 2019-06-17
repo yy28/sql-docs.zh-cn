@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e49b37a6f344b7fc6c45c9767a05c7f7d5bfe6e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087319"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>连接到 Microsoft Excel 文件 (SSAS)
-  **“表导入向导”** 的这一页可用于连接到在本地计算机上存储的 Microsoft Excel 文件。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
+  **“表导入向导”** 的这一页可用于连接到在本地计算机上存储的 Microsoft Excel 文件。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”** 。  
   
  若要连接到 Microsoft Excel 文件，必须在计算机上安装适当的 ACE 访问接口。 有关详细信息，请参阅[数据源支持（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66087319"
  导航至 Excel 文件可用的位置。  
   
  **高级**  
- 通过使用“设置高级属性”对话框设置附加的连接属性。  
+ 通过使用“设置高级属性”  对话框设置附加的连接属性。  
   
  **使用第一行作为列标题**  
  指定是否要使用第一个数据行作为目标表的列标题。  

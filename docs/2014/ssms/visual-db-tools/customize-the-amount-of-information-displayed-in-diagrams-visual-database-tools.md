@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270561"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>自定义关系图中显示的信息量 (Visual Database Tools)
@@ -49,9 +49,9 @@ ms.locfileid: "63270561"
   
 1.  右键单击数据库关系图设计器中的表。  
   
-2.  在快捷菜单中，指向“表视图”，再单击“修改自定义”。  
+2.  在快捷菜单中，指向“表视图”  ，再单击“修改自定义”  。  
   
-3.  在“列选择”对话框中，选择从“表视图”菜单中选择“自定义”时将要显示的属性。  
+3.  在“列选择”  对话框中，选择从“表视图”  菜单中选择“自定义”  时将要显示的属性。  
   
 ## <a name="see-also"></a>请参阅  
  [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  

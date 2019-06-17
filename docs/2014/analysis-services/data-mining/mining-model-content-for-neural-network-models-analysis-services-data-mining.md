@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083587"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）
@@ -37,7 +37,7 @@ ms.locfileid: "66083587"
   
 -   第一个节点 (NODE_TYPE = 18) 始终表示输入层的顶端节点。 在该顶端节点下，您可以找到包含实际输入属性及其值的输入节点 (NODE_TYPE = 21)。  
   
--   每个后续节点各包含一个不同的“子网”(NODE_TYPE = 17)。 每个子网始终包含一个隐藏层 (NODE_TYPE = 19) 以及该子网的输出层 (NODE_TYPE = 20)。  
+-   每个后续节点各包含一个不同的“子网”  (NODE_TYPE = 17)。 每个子网始终包含一个隐藏层 (NODE_TYPE = 19) 以及该子网的输出层 (NODE_TYPE = 20)。  
   
  ![神经网络模型内容结构](../media/modelcontentstructure-nn.gif "的神经网络模型内容结构")  
   

@@ -13,18 +13,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 953fc5b7c203faa8fa6a9820993a3d0fd7a7de40
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014831"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML Updategram 的指导原则和限制 (SQLXML 4.0)
   在使用 XML updategram 时，请记住以下事项：  
   
--   如果将 updategram 用于只具有单对的插入操作**\<之前 >** 并**\<后 >** 块**\<之前>** 块可省略。 反之，在删除操作**\<后 >** 块可省略。  
+-   如果将 updategram 用于只具有单对的插入操作 **\<之前 >** 并 **\<后 >** 块 **\<之前>** 块可省略。 反之，在删除操作 **\<后 >** 块可省略。  
   
--   如果具有多个使用 updategram **\<之前 >** 并**\<后 >** 中的块**\<同步 >** 标记，同时**\<之前 >** 块并**\<后 >** 块都必须指定到窗体**\<之前 >** 和**\<后 >** 对。  
+-   如果具有多个使用 updategram **\<之前 >** 并 **\<后 >** 中的块 **\<同步 >** 标记，同时 **\<之前 >** 块并 **\<后 >** 块都必须指定到窗体 **\<之前 >** 和 **\<后 >** 对。  
   
 -   updategram 中的更新适用于 XML 架构提供的 XML 视图。 因此，为使默认映射成功，必须在 updategram 中指定架构文件名；或者，如果未提供文件名，则元素名称和属性名称必须匹配数据库中的表名和列名。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66014831"
   
 -   Updategram 不允许在更新期间将 `image` 类型数据作为参数传递。  
   
--   二进制大型对象 (BLOB) 类型等`text/ntext`和映像不应在**\<之前 >** 时阻止使用 updategram，因为这将使它们用在并发控制。 由于 BLOB 类型的比较限制，这可能导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 出现问题。 例如，在 WHERE 子句中使用 LIKE 关键字比较 `text` 数据类型的列；不过，对于数据大小大于 8K 的 BLOB 类型，比较将失败。  
+-   二进制大型对象 (BLOB) 类型等`text/ntext`和映像不应在 **\<之前 >** 时阻止使用 updategram，因为这将使它们用在并发控制。 由于 BLOB 类型的比较限制，这可能导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 出现问题。 例如，在 WHERE 子句中使用 LIKE 关键字比较 `text` 数据类型的列；不过，对于数据大小大于 8K 的 BLOB 类型，比较将失败。  
   
--   由于 BLOB 类型的比较限制，`ntext` 数据中的特殊字符可能导致 SQLXML 4.0 出现问题。 例如，使用"[Serializable]"中的**\<之前 >** 块中执行并发检查的列使用时，如果在 updategram`ntext`类型时将失败并显示以下 SQLOLEDB 错误说明：  
+-   由于 BLOB 类型的比较限制，`ntext` 数据中的特殊字符可能导致 SQLXML 4.0 出现问题。 例如，使用"[Serializable]"中的 **\<之前 >** 块中执行并发检查的列使用时，如果在 updategram`ntext`类型时将失败并显示以下 SQLOLEDB 错误说明：  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

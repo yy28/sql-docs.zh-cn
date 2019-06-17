@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87aca78d68921b2f90cde68d52eff06df7044a4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832889"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制任务自定义属性
@@ -23,7 +23,7 @@ ms.locfileid: "62832889"
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
 |连接|ADO.NET 连接|与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 数据库的 ADO.NET 连接，用于访问更改表和 CDC 状态（如果存储于相同数据库中）。<br /><br /> 该连接必须是指向为 CDC 启用的并且所选更改表位于其中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接。|  
-|TaskOperation|Integer（枚举）|CDC 控制任务的所选操作。 可能值为 **“标记初始加载开始”**、 **“标记初始加载结束”**、 **“标记 CDC 状态”**、 **“获取正在处理范围”**、 **“标记已处理范围”** 和 **“重置 CDC 状态”**。<br /><br /> 如果在 **CDC（即，不是 Oracle）上工作时选择**MarkCdcStart **、** MarkInitialLoadStart **或** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则在连接管理器中指定的用户必须是  **db_owner** 或 **sysadmin**。<br /><br /> 有关这些操作的详细信息，请参阅 [CDC Control Task Editor](../cdc-control-task-editor.md) 和 [CDC Control Task](cdc-control-task.md)。|  
+|TaskOperation|Integer（枚举）|CDC 控制任务的所选操作。 可能值为 **“标记初始加载开始”** 、 **“标记初始加载结束”** 、 **“标记 CDC 状态”** 、 **“获取正在处理范围”** 、 **“标记已处理范围”** 和 **“重置 CDC 状态”** 。<br /><br /> 如果在 **CDC（即，不是 Oracle）上工作时选择**MarkCdcStart **、** MarkInitialLoadStart **或** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则在连接管理器中指定的用户必须是  **db_owner** 或 **sysadmin**。<br /><br /> 有关这些操作的详细信息，请参阅 [CDC Control Task Editor](../cdc-control-task-editor.md) 和 [CDC Control Task](cdc-control-task.md)。|  
 |OperationParameter|String|目前用于 **MarkCdcStart** 操作。 此参数允许特定操作所需的附加输入。 例如， **MarkCdcStart** 操作所需的 LSN 编号|  
 |StateVariable|String|存储当前 CDC 上下文的 CDC 状态的 SSIS 包变量。 该 CDC 控制任务将状态读取和写入到 **StateVariable** ，并且不会加载它或将它存储到持久性存储区，除非选择了 **AutomaticStatePersistence** 。 请参阅 [定义状态变量](../data-flow/define-a-state-variable.md)。|  
 |AutomaticStatePersistence|Boolean|该 CDC 控制任务从 CDC 状态包变量读取 CDC 状态。 执行某一操作后，该 CDC 控制任务将更新 CDC 状态包变量的值。 **AutomaticStatePersistence** 属性向 CDC 控制任务指出谁在两次运行 SSIS 包之间负责持久化 CDC 状态值。<br /><br /> 在此属性为 **true**时，该 CDC 控制任务自动从状态表加载 CDC 状态变量的值。 在该 CDC 控制任务更新 CDC 状态变量的值时，它还在相同的状态 **table.stores**中更新其值、在特殊表中更新该状态并且更新状态变量。 开发人员可以控制哪些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库包含该状态表及其名称。 此状态表的结构是预定义的。<br /><br /> 在为 **false**时，该 CDC 控制任务不持久化其值。 在为 true 时，该 CDC 控制任务在一个特殊的表中存储状态并更新 StateVariable。<br /><br /> 默认值是 **true**，指示会自动更新状态持久化。|  

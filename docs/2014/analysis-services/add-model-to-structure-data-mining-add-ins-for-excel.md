@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062876"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>将模型添加到结构（Excel 数据挖掘外接程序）
@@ -44,7 +44,7 @@ ms.locfileid: "66062876"
   
 4.  我们建议您单击**参数**按钮以打开**算法参数**对话框框和自定义该算法的参数。 此选项是创建自定义挖掘模型的最简便方法。  
   
-5.  单击“下一步” 。  
+5.  单击“下一步”  。  
   
 6.  在中**选择的列**对话框中，查看列的列表，并如有必要，将列的用法更改为下列值之一：  
   

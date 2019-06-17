@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011549"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
@@ -29,7 +29,7 @@ ms.locfileid: "66011549"
   
  每个表只允许有一个全文索引。 若要对某个表创建全文索引，该表必须具有一个唯一且非 Null 的列。 你可以对以下类型的列创建全文索引：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)`，从而可对这些列进行全文搜索。 对数据类型为 `varbinary`、`varbinary(max)`、`image` 或 `xml` 的列创建全文索引需要您指定类型列。 *类型列*是用来存储每行中文档的文件扩展名（.doc、.pdf、xls 等）的表列。  
   
- 创建和维护全文索引的过程称为“填充”（也称为“爬网”）。 有三种类型的全文索引填充：完全填充、基于更改跟踪的填充和基于时间戳的增量式填充。 有关详细信息，请参阅 [填充全文索引](populate-full-text-indexes.md)。  
+ 创建和维护全文索引的过程称为“填充”  （也称为“爬网”  ）。 有三种类型的全文索引填充：完全填充、基于更改跟踪的填充和基于时间戳的增量式填充。 有关详细信息，请参阅 [填充全文索引](populate-full-text-indexes.md)。  
   
 ##  <a name="tasks"></a> 常见任务  
  **若要创建全文索引**  
@@ -49,7 +49,7 @@ ms.locfileid: "66011549"
 ##  <a name="structure"></a> 全文索引结构  
  对全文索引的结构的良好了解将帮助您了解全文引擎的工作方式。 本主题使用 **中的** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 表的以下摘录部分作为示例表。 此摘录部分仅显示该表的两个列（ **DocumentID** 列和 **Title** 列）和三行。  
   
- 对于本示例，我们假定已对“标题”列创建全文索引。  
+ 对于本示例，我们假定已对“标题”  列创建全文索引。  
   
 |DocumentID|标题|  
 |----------------|-----------|  
@@ -57,7 +57,7 @@ ms.locfileid: "66011549"
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
- 例如，下表（显示 Fragment 1）描述对“Document”表的“Title”列创建的全文索引的内容。 与该表呈现的信息相比，全文索引包含更多信息。 该表是全文索引的逻辑表示形式，并且仅为演示目的提供。 行以压缩格式存储，以优化磁盘的使用。  
+ 例如，下表（显示 Fragment 1）描述对“Document”  表的“Title”  列创建的全文索引的内容。 与该表呈现的信息相比，全文索引包含更多信息。 该表是全文索引的逻辑表示形式，并且仅为演示目的提供。 行以压缩格式存储，以优化磁盘的使用。  
   
  注意，数据已从原始文档倒排。 发生数据倒排是因为关键字映射到文档 ID。 因此，全文索引通常称为倒排索引。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66011549"
   
  **Keyword** 列包含在创建索引时提取的单个标记的表示形式。 断字符可确定组成标记的词。  
   
- “ColId” 列包含的值对应于已建立全文索引的特定列。  
+ “ColId”  列包含的值对应于已建立全文索引的特定列。  
   
  `DocId`列包含八字节整数映射到全文索引表中的特定全文键值的值。 如果全文键不是整数数据类型，则需要此映射。 在这种情况下，全文索引之间的映射键值和`DocId`值保留在单独的表名为 DocId Mapping 表。 若要查询这些映射，请使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系统存储过程。 若要满足搜索条件，则上述表中的 DocId 值需要与 DocId Mapping 表联接，以便从所查询的基表中检索行。 如果基表的全文键值是整数类型，则该值直接充当 DocId，而不需要映射。 因此，使用整数全文键值有助于优化全文查询。  
   

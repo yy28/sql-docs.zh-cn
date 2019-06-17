@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065768"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>数据处理故障排除（SSAS 表格）
@@ -63,13 +63,13 @@ ms.locfileid: "66065768"
   
 1.  在模型设计器中，选择包含要了解其源的数据的表。  
   
-2.  单击 **“表”** 菜单，然后单击 **“表属性”**。  
+2.  单击 **“表”** 菜单，然后单击 **“表属性”** 。  
   
 3.  在 **“编辑表属性”** 对话框中，记下为 **“连接名称”** 列出的值。  
   
-4.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 **“模型”** 菜单上，单击 **“现有连接”**。  
+4.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 **“模型”** 菜单上，单击 **“现有连接”** 。  
   
-5.  在 **“现有连接”** 对话框中，选择具有您在步骤 3 中找到的名称的数据源，然后单击 **“编辑”**。  
+5.  在 **“现有连接”** 对话框中，选择具有您在步骤 3 中找到的名称的数据源，然后单击 **“编辑”** 。  
   
 6.  在 **“编辑连接”** 对话框中查看连接信息，如数据库名称、文件路径或报表路径。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66065768"
   
 1.  在模型设计器中，选择包含要了解其刷新日期的数据的表。  
   
-2.  单击 **“表”** 菜单，然后单击 **“表属性”**。  
+2.  单击 **“表”** 菜单，然后单击 **“表属性”** 。  
   
 3.  在 **“编辑表属性”** 对话框中， **“最后刷新时间”** 显示刷新表的最后日期。  
   

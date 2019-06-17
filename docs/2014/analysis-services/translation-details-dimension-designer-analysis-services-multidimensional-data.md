@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065844"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>翻译详细信息（“翻译”选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -55,7 +55,7 @@ ms.locfileid: "66065844"
      `Caption` 属性  
   
  **\<Language>**  
- 在所选语言中键入或选择维度对象的属性值。 单击省略号按钮 (**...**) 可打开其他对话框，具体取决于所编辑的属性：  
+ 在所选语言中键入或选择维度对象的属性值。 单击省略号按钮 ( **...** ) 可打开其他对话框，具体取决于所编辑的属性：  
   
 -   `NamingTemplate` 属性  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66065844"
      显示[“翻译属性数据”对话框（Analysis Services - 多维数据）](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)。  
   
 ## <a name="shortcut-menu"></a>快捷菜单  
- 右键单击“翻译详细信息”窗格中的翻译，所显示的快捷菜单中以下选项可用：  
+ 右键单击“翻译详细信息”窗格中的翻译，所显示的快捷菜单中以下选项可用：   
   
  **新建翻译**  
  选择此项将显示 **“选择语言”** 对话框并创建一个新翻译。 该翻译将在 **“翻译详细信息”** 网格中显示为一个新列。  
@@ -78,19 +78,19 @@ ms.locfileid: "66065844"
 >  只有右键单击一个要删除其中翻译的单元后，才可启用该选项。  
   
  **新建标题列**  
- 在“翻译详细信息”网格中修改属性时，选择此项将显示“翻译属性数据”对话框，并可以定义新的标题列。 若要启用此选项，必须在 **“翻译详细信息”** 网格中选择了属性的翻译列中的某个单元。  
+ 在“翻译详细信息”网格中修改属性时，选择此项将显示“翻译属性数据”对话框，并可以定义新的标题列。   若要启用此选项，必须在 **“翻译详细信息”** 网格中选择了属性的翻译列中的某个单元。  
   
 > [!NOTE]  
 >  只有右键单击一个单元删除属性的翻译列后，才可启用该选项。  
   
  **编辑标题列**  
- 在“翻译详细信息”网格中修改属性时，选择此项将显示“翻译属性数据”对话框，并可以修改现有标题列。  
+ 在“翻译详细信息”网格中修改属性时，选择此项将显示“翻译属性数据”对话框，并可以修改现有标题列。    
   
 > [!NOTE]  
->  只有在“翻译详细信息”网格中选择了包含属性标题列的翻译列中的某个单元时，才会启用该选项。  
+>  只有在“翻译详细信息”  网格中选择了包含属性标题列的翻译列中的某个单元时，才会启用该选项。  
   
  **删除标题列**  
- 选择此项将删除在“翻译详细信息”网格中所选属性的标题列。  
+ 选择此项将删除在“翻译详细信息”网格中所选属性的标题列。   
   
 > [!NOTE]  
 >  只有右键单击翻译列中包含属性标题列的单元时，才可启用该选项。  

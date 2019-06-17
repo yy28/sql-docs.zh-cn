@@ -13,32 +13,32 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089009"
 ---
 # <a name="query-options-results-grid-page"></a>“查询选项”中的“结果”（“网格”页）
   使用此页可以指定以网格格式显示查询结果集的选项。  
   
 ## <a name="options"></a>选项  
- 在结果集中包括查询  
+ 在结果集中包括查询   
  将查询文本作为结果集的一部分返回。  
   
- 复制或保存结果时包括列标题  
+ 复制或保存结果时包括列标题   
  将结果复制到剪贴板或保存到文件时，包括列标题。 如果希望保存或复制的结果数据只有数据而没有列标题，请清除此复选框。  
   
- 执行后放弃结果  
+ 执行后放弃结果   
  当屏幕显示接收到查询结果之后，通过放弃查询结果来释放内存。  
   
- 在单独选项卡中显示结果  
+ 在单独选项卡中显示结果   
  在新文档窗口中显示结果集，而不是在查询文档窗口的底部显示。  
   
- 执行查询后切换到“结果”选项卡  
+ 执行查询后切换到“结果”选项卡   
  自动将屏幕焦点设置到结果集。  
   
- 检索的最多字符数  
+ 检索的最多字符数   
  **非 XML 数据**：  
   
  输入一个介于 1 到 65535 之间的数字以指定每个单元中显示的最大字符数。  
@@ -50,7 +50,7 @@ ms.locfileid: "66089009"
   
  选择 **1 MB**、 **2 MB**或 **5 MB**。 选择 **“无限制”** 将检索所有字符。  
   
- 重置为默认值  
+ 重置为默认值   
  将此页上的所有值重置为原始默认值。  
   
   
