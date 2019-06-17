@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509930"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>查看数据刷新历史记录 (Power Pivot for SharePoint)
@@ -45,7 +45,7 @@ ms.locfileid: "62509930"
   
 2.  选择工作簿，然后单击显示在右侧的向下箭头。  
   
-3.  选择“管理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新”。  
+3.  选择“管理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新”  。  
   
  将出现历史记录页，其中显示当前 Excel 工作簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的所有刷新活动的完整记录。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62509930"
 |项|Description|  
 |----------|-----------------|  
 |“属性”|指定包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿的文件名。|  
-|当前状态|值包括 **“已计划”**、 **“正在刷新”**、 **“成功”** 或 **“失败”**。<br /><br /> 当您首次创建计划时，将显示 **“已计划”** 。 在首次运行数据刷新后，将不再显示此状态消息。<br /><br /> **“正在刷新”** 表示正在进行数据刷新。 请求位于进程队列中或当前正在服务器上运行。<br /><br /> **“成功”** 表示最后一个数据刷新操作已完成，并且已将更新的工作簿签回到 SharePoint 库中。<br /><br /> **“失败”** 表示最后一个数据刷新操作未成功。 刷新的数据未保存。 工作簿与开始刷新数据之前包含相同的数据。|  
+|当前状态|值包括 **“已计划”** 、 **“正在刷新”** 、 **“成功”** 或 **“失败”** 。<br /><br /> 当您首次创建计划时，将显示 **“已计划”** 。 在首次运行数据刷新后，将不再显示此状态消息。<br /><br /> **“正在刷新”** 表示正在进行数据刷新。 请求位于进程队列中或当前正在服务器上运行。<br /><br /> **“成功”** 表示最后一个数据刷新操作已完成，并且已将更新的工作簿签回到 SharePoint 库中。<br /><br /> **“失败”** 表示最后一个数据刷新操作未成功。 刷新的数据未保存。 工作簿与开始刷新数据之前包含相同的数据。|  
 |最近成功刷新|指定成功完成最后一次数据刷新的日期。|  
 |下次计划刷新|指定计划进行的下一次数据刷新的日期。<br /><br /> **“配置计划”** 链接将您引向计划定义页。 如果你对工作簿具有“参与讨论”权限，可以单击此链接，以查看和修改控制工作簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的无人参与数据刷新的计划信息。|  
 |Started|在历史记录详细信息部分中， **“已启动”** 表示实际的处理时间。 实际的处理时间可能与您计划的时间不同。 当服务器上有足够的内存时，将开始处理。 如果服务器很忙，处理过程可能在您指定的开始时间之后的若干小时才开始。|  

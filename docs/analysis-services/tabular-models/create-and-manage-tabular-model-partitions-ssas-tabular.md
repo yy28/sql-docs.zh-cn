@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472289"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>创建和管理表格模型分区
@@ -26,7 +26,7 @@ ms.locfileid: "62472289"
 >
   
 ## <a name="tasks"></a>“任务”  
- 若要为已部署的表格模型数据库创建和管理分区，您可以使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 若要查看“分区”对话框，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击某一表，然后单击“分区”。  
+ 若要为已部署的表格模型数据库创建和管理分区，您可以使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 若要查看“分区”对话框，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击某一表，然后单击“分区”。    
   
 ###  <a name="bkmk_create_new"></a> 创建新分区  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62472289"
   
 3.  在中**查询语句**，键入或粘贴 SQL 或 M 查询语句定义的列和任何你想要包括到查询窗口在分区中的子句。  
   
-4.  若要验证语句，请单击 **“检查语法”**。  
+4.  若要验证语句，请单击 **“检查语法”** 。  
   
 ###  <a name="bkmk_copy"></a> 复制分区  
   
