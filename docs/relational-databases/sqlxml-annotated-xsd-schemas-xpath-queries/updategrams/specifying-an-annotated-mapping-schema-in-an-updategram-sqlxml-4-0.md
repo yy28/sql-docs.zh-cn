@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025498"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 updategram 中指定带批注的映射架构 (SQLXML 4.0)
@@ -39,9 +39,9 @@ ms.locfileid: "63025498"
 >  本文档假定您熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的模板和映射架构支持。 有关详细信息，请参阅[带批注的 XSD 架构简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 有关使用 XDR 的旧版应用程序，请参阅[带批注的 XDR 架构&#40;在 SQLXML 4.0 中不推荐使用&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="dealing-with-data-types"></a>处理数据类型  
- 如果架构指定了**图像**，**二进制**，或**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型 (通过**sql: datatype**)，而不指定 XML 数据类型，updategram 则假定 XML 数据类型是**二进制 base64**。 如果你的数据**bin.base**类型，则必须显式指定类型 (**dt:type=bin.base**或**类型 ="xsd: hexbinary"**)。  
+ 如果架构指定了**图像**，**二进制**，或**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型 (通过**sql: datatype**)，而不指定 XML 数据类型，updategram 则假定 XML 数据类型是**二进制 base64**。 如果你的数据**bin.base**类型，则必须显式指定类型 (**dt:type=bin.base**或**类型 ="xsd: hexbinary"** )。  
   
- 如果架构指定了**dateTime**，**日期**，或**时间**XSD 数据类型，则还必须指定相应[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型使用**sql: datatype ="dateTime"**。  
+ 如果架构指定了**dateTime**，**日期**，或**时间**XSD 数据类型，则还必须指定相应[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型使用**sql: datatype ="dateTime"** 。  
   
  处理的参数时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**资金**类型，则必须显式指定**sql: datatype ="money"** 映射架构中的相应节点上。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63025498"
 </xsd:schema>  
 ```  
   
- 以下 updategram 在 Sales.Customer 表中插入一条记录，并使用前面的映射架构将此数据正确映射到表。 请注意，updategram 使用相同的元素名称， **\<客户 >**，如在架构中定义。 这是强制性的，因为 updategram 会指定特定的架构。  
+ 以下 updategram 在 Sales.Customer 表中插入一条记录，并使用前面的映射架构将此数据正确映射到表。 请注意，updategram 使用相同的元素名称， **\<客户 >** ，如在架构中定义。 这是强制性的，因为 updategram 会指定特定的架构。  
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63025498"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用在映射架构中指定的父子关系插入记录  
  架构元素可以相互关联。 **\<Sql: relationship >** 元素指定架构元素之间的父-子关系。 此信息用于更新具有主键/外键关系的相应表。  
   
- 以下映射架构 (SampleSchema.xml) 由两个元素组成**\<顺序 >** 并 **\<OD >**:  
+ 以下映射架构 (SampleSchema.xml) 由两个元素组成 **\<顺序 >** 并 **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -157,7 +157,7 @@ ms.locfileid: "63025498"
 </xsd:schema>  
 ```  
   
- 以下 updategram 使用此 XSD 架构添加新的订单详细记录 (**\<OD >** 中的元素 **\<后 >** 块) 为订单 43860。 **映射架构**属性用于在 updategram 中指定的映射架构。  
+ 以下 updategram 使用此 XSD 架构添加新的订单详细记录 ( **\<OD >** 中的元素 **\<后 >** 块) 为订单 43860。 **映射架构**属性用于在 updategram 中指定的映射架构。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -276,7 +276,7 @@ ms.locfileid: "63025498"
 </xsd:schema>  
 ```  
   
- 在此示例中，XSD 架构包含 **\<客户 >** 并 **\<顺序 >** 元素，并指定两个元素之间的父-子关系。 它标识**\<顺序 >** 与父元素和**\<客户 >** 作为子元素。  
+ 在此示例中，XSD 架构包含 **\<客户 >** 并 **\<顺序 >** 元素，并指定两个元素之间的父-子关系。 它标识 **\<顺序 >** 与父元素和 **\<客户 >** 作为子元素。  
   
  updategram 处理逻辑使用父子关系相关信息来确定将记录插入到表中的顺序。 在此示例中，updategram 逻辑首先尝试向 Ord 表插入记录 (因为 **\<顺序 >** 父级)，然后尝试向 Cust 表插入记录 (因为 **\<客户 >** 的子级)。 但是，鉴于数据库表架构中包含的主键/外键信息，此插入操作将导致在数据库中的外键冲突，继而导致插入失败。  
   

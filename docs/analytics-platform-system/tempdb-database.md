@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 7e11f4eff980358f4b4906f8a100cfc509d19dd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63156959"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>并行数据仓库中的 tempdb 数据库
@@ -84,7 +84,7 @@ SQL Server PDW 执行临时表和永久表相同的操作，除非明确声明�
   
 ## <a name="RelatedTasks"></a>相关的任务  
   
-|“任务”|描述|  
+|“任务”|Description|  
 |---------|---------------|  
 |将在创建表**tempdb**。|可以使用 CREATE TABLE 和 CREATE TABLE AS SELECT 语句创建一个用户的临时表。 有关详细信息，请参阅[CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)并[CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)。|  
 |查看列表中的现有表**tempdb**。|`SELECT * FROM tempdb.sys.tables;`|  

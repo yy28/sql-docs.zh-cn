@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719506"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
@@ -40,7 +40,7 @@ sys.dm_db_log_info ( database_id )
 
 ## <a name="arguments"></a>参数  
  *database_id* |NULL |默认值  
- 是数据库的 ID。 database_id 的数据类型为 int。有效输入包括数据库、 NULL 或默认的 ID 号。 默认值为 NULL。 NULL 和 DEFAULT 是当前数据库的上下文中的等效值。
+ 是数据库的 ID。 database_id 的数据类型为 int   。有效输入包括数据库、 NULL 或默认的 ID 号。 默认值为 NULL。 NULL 和 DEFAULT 是当前数据库的上下文中的等效值。
  
  指定 NULL 可返回当前数据库的 VLF 信息。
 
@@ -60,7 +60,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |奇偶校验[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。在内部用于确定在 VLF 日志的结尾。|
 |vlf_first_lsn|**nvarchar(48)** |[日志序列号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)中的第一个日志记录[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
 |vlf_create_lsn|**nvarchar(48)** |[日志序列号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)创建的日志记录[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
-|vlf_encryptor_thumbprint|**varbinary(20)**| 适用范围：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 显示 VLF 的加密程序的指纹使用加密 VLF[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)，否则为 NULL。 |
+|vlf_encryptor_thumbprint|**varbinary(20)**| 适用范围：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]  <br><br> 显示 VLF 的加密程序的指纹使用加密 VLF[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)，否则为 NULL。 |
 
 ## <a name="remarks"></a>备注
 `sys.dm_db_log_info`动态管理函数将替换`DBCC LOGINFO`语句。    

@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b602695720e0d6567e44e4fbe8fd06b6d496a6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63130591"
 ---
 # <a name="data-source-objects-ole-db"></a>数据源对象 (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 接口用于建立指向数据存储区，如集使用数据源一词[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是第一个任务的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端使用者。  
   
- 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 CLSID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口是 C /C++ GUID CLSID_SQLNCLI10 (符号 SQLNCLI_CLSID 将解析为正确 progid 您引用的 sqlncli.h 文件中)。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例。  
+ 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 CLSID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口是 C /C++ GUID CLSID_SQLNCLI10 (符号 SQLNCLI_CLSID 将解析为正确 progid 您引用的 sqlncli.h 文件中)。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例  。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是进程内服务器。 实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 CLSCTX_INPROC_SERVER 宏以指示可执行上下文创建 Native Client OLE DB 提供程序对象。  
   
@@ -71,7 +71,7 @@ else
   
  成功创建的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口数据源对象，使用者应用程序可以继续通过初始化数据源并创建会话。 OLE DB 会话提供允许数据访问和操作的接口。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的指定实例的首次连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作为成功的数据源初始化的一部分。 只要保持对数据源初始化接口的引用，或者在调用 IDBInitialize::Uninitialize 方法前，这一连接会一直保持。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的指定实例的首次连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作为成功的数据源初始化的一部分。 只要保持对数据源初始化接口的引用，或者在调用 IDBInitialize::Uninitialize 方法前，这一连接会一直保持  。  
   
 ## <a name="in-this-section"></a>本节内容  
   

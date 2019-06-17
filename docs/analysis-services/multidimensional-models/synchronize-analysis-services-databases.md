@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019995"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
@@ -64,7 +64,7 @@ ms.locfileid: "63019995"
   
 -   选择安全级别以及要从源实例和数据库复制到目标实例的成员身份信息。  
   
--   选择是立即同步，还是将同步数据库向导生成的 XML for Analysis (XMLA)“同步”命令保存到脚本文件中，以便以后同步。  
+-   选择是立即同步，还是将同步数据库向导生成的 XML for Analysis (XMLA)“同步”  命令保存到脚本文件中，以便以后同步。  
   
  默认情况下，向导同步除现有安全组中的成员身份以外的所有数据和元数据。 您还可以在同步数据和元数据时复制所有安全设置或忽略所有安全设置。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63019995"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到将运行目标数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 例如，如果要将数据库部署到生产服务器，则在生产服务器上运行该向导。  
   
-2.  在对象资源管理器中，右键单击“数据库”文件夹，然后单击“同步”。  
+2.  在对象资源管理器中，右键单击“数据库”  文件夹，然后单击“同步”  。  
   
 3.  指定源服务器和源数据库。 在“选择要同步的数据库”页上，在 **“源服务器”** 和 **“源数据库”** 中键入源服务器和源数据库的名称。 例如，如果从测试环境部署到生产服务器，则源是临时服务器上的数据库。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63019995"
      **目标文件夹**  
      显示要在其中同步本地分区的目标 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的文件夹名称。 如果该列包含值“(Default)”，则目标实例的默认位置应包含本地分区。  
   
-     单击省略号 (**...**) 按钮可显示“查找远程文件夹”对话框，通过该对话框可以指定所选位置中存储的本地分区应同步到其中的目标实例上的文件夹。  
+     单击省略号 ( **...** ) 按钮可显示“查找远程文件夹”  对话框，通过该对话框可以指定所选位置中存储的本地分区应同步到其中的目标实例上的文件夹。  
   
     > [!NOTE]  
     >  对于源实例的默认位置中存储的本地分区，无法更改此列。  
@@ -134,17 +134,17 @@ ms.locfileid: "63019995"
      显示包含远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。  
   
      **源文件夹**  
-     显示包含远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的文件夹名称。 如果该列包含值“(Default)”，则“源服务器”中显示的实例的默认位置将包含远程分区。  
+     显示包含远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的文件夹名称。 如果该列包含值“(Default)”，则“源服务器”  中显示的实例的默认位置将包含远程分区。  
   
      **“目标服务器”**  
-     显示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称，应在其中同步“源服务器”和“源文件夹”中指定的位置所存储的远程分区。  
+     显示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称，应在其中同步“源服务器”  和“源文件夹”  中指定的位置所存储的远程分区。  
   
-     单击省略号 (**...**) 按钮可显示“连接管理器” 对话框，并指定应在其中同步所选位置中存储的远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
+     单击省略号 ( **...** ) 按钮可显示“连接管理器”  对话框，并指定应在其中同步所选位置中存储的远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
      **目标文件夹**  
      显示要在其中同步远程分区的目标 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的文件夹名称。 如果该列包含值“(Default)”，则目标实例的默认位置应包含远程分区。  
   
-     单击省略号 (**...**) 按钮可显示“查找远程文件夹” 对话框，通过该对话框可以指定所选位置中存储的远程分区应同步到其中的目标实例上的文件夹。  
+     单击省略号 ( **...** ) 按钮可显示“查找远程文件夹”  对话框，通过该对话框可以指定所选位置中存储的远程分区应同步到其中的目标实例上的文件夹。  
   
      **大小**  
      显示该位置中存储的远程分区的估计大小。  

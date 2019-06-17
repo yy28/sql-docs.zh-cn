@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815748"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)
@@ -32,13 +32,13 @@ ms.locfileid: "62815748"
  [AlwaysOn 可用性组](always-on-availability-groups-sql-server.md)提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。  
   
  可用性组 (availability group)  
- 一个容器，用于一组共同实现故障转移的离散用户数据库（被称为可用性数据库）。  
+ 一个容器，用于一组共同实现故障转移的离散用户数据库（被称为可用性数据库）  。  
   
  可用性副本  
- 可用性组的实例化，该可用性组由特定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载，该实例维护属于该可用性组的每个可用性数据库的本地副本。  存在两种类型的可用性副本：一个“主副本” 和一至四个“辅助副本”。 承载给定可用性组的可用性副本的服务器实例必须位于单个 Windows Server 故障转移群集 (WSFC) 群集的不同节点上。  
+ 可用性组的实例化，该可用性组由特定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载，该实例维护属于该可用性组的每个可用性数据库的本地副本。  存在两种类型的可用性副本：一个“主副本”  和一至四个“辅助副本”。 承载给定可用性组的可用性副本的服务器实例必须位于单个 Windows Server 故障转移群集 (WSFC) 群集的不同节点上。  
   
  可用性数据库 (availability database)  
- 属于可用性组的数据库。 对于每个可用性数据库，可用性组将保留一个读写副本（主数据库）和一个到四个只读副本（辅助数据库）。  
+ 属于可用性组的数据库。 对于每个可用性数据库，可用性组将保留一个读写副本（主数据库  ）和一个到四个只读副本（辅助数据库  ）。  
   
  AlwaysOn 面板  
  一个 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 面板，该面板针对可用性组的运行状况提供了一目了然的视图。 有关详细信息，请参阅本主题后面的 [AlwaysOn 面板](#Dashboard)。  
@@ -46,7 +46,7 @@ ms.locfileid: "62815748"
 ##  <a name="AlwaysOnPBM"></a> 预定义策略和问题  
  下表概述了预定义策略。  
   
-|策略名称|问题|类别**<sup>*</sup>**|方面|  
+|策略名称|问题|类别 **<sup>*</sup>**|方面|  
 |-----------------|-----------|------------------------------|-----------|  
 |WSFC 群集状态|[WSFC 群集服务处于脱机状态](wsfc-cluster-service-is-offline.md)。|严重|SQL Server 实例|  
 |可用性组联机状态|[可用性组处于脱机状态](availability-group-is-offline.md)。|严重|可用性组 (availability group)|  

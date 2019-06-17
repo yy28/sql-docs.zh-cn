@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc3e113ab9ace64cac0d41cb34bdec1c44355e48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032995"
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
@@ -58,7 +58,7 @@ ms.locfileid: "63032995"
 |**offload_server**|**sysname**|指定用于远程激活的服务器所在的网络的名称。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|指定保存快照文件的文件夹的路径。|  
 |**use_web_sync**|**bit**|指定能否通过 HTTP 同步订阅。 值为**1**表示启用此功能。|  
-|**internet_url**|nvarchar(260)|表示 Web 同步的复制侦听器所在位置的 URL。|  
+|**internet_url**|nvarchar(260) |表示 Web 同步的复制侦听器所在位置的 URL。|  
 |**internet_login**|**sysname**|合并代理连接到承载 Web 同步使用的 Web 服务器时使用的登录名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**internet_password**|**nvarchar(524)**|合并代理连接到承载 Web 同步使用的 Web 服务器时使用的登录名的密码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**internet_security_mode**|**int**|连接到其中的值承载 Web 同步的 Web 服务器时使用的身份验证模式**1**表示 Windows 身份验证，值为**0**意味着[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  

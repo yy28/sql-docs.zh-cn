@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200358"
 ---
 # <a name="log-long-running-queries-odbc"></a>记录长时间运行的查询 (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "63200358"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>使用 ODBC 管理器记录长时间运行的查询  
   
-1.  在中**Control Panel**，双击**管理工具**，然后双击**数据源 (ODBC)**。 （或者，也可以从命令提示符处运行 odbcad32.exe。）  
+1.  在中**Control Panel**，双击**管理工具**，然后双击**数据源 (ODBC)** 。 （或者，也可以从命令提示符处运行 odbcad32.exe。）  
   
 2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡。  
   

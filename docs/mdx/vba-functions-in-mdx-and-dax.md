@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251551"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函数
@@ -51,7 +51,7 @@ ms.locfileid: "63251551"
 |CurDir|不支持||  
 |CVar|仅 MDX||  
 |CVErr|不支持||  
-|date|仅 MDX|**警告**DAX 实现同名的不同函数; DATE (Year，Month，Day) 函数，用于从给定参数生成一个 date 类型值|  
+|Date|仅 MDX|**警告**DAX 实现同名的不同函数; DATE (Year，Month，Day) 函数，用于从给定参数生成一个 date 类型值|  
 |DateAdd|仅 MDX|**警告**DAX 实现同名的不同函数; DATEADD (\<日期 >，< number_of_intervals >\<间隔 >) 函数，用于移动从给定的日期由数量的给定时间间隔|  
 |DateDiff]|仅 MDX||  
 |DatePart|仅 MDX||  

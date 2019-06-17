@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62704918"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>“方面属性”对话框，“依赖策略”页
@@ -30,7 +30,7 @@ ms.locfileid: "62704918"
  选中标记指示当前启用了策略。 如果未启用策略，则为空。  
   
  **历史记录**  
- 单击“查看历史记录”超链接可显示执行历史记录报表。  
+ 单击“查看历史记录”  超链接可显示执行历史记录报表。  
   
  **创建时间**  
  策略的创建日期。  

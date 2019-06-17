@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62792002"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>“连接到现有的次要副本”页（添加副本向导和添加数据库向导）
@@ -28,7 +28,7 @@ ms.locfileid: "62792002"
  显示将承载可用性副本的服务器实例的名称。  
   
  **连接为**  
- 显示在建立了连接后连接到服务器实例的帐户。 如果此页对于某一给定的服务器实例显示 **“未连接”**，则您将需要单击 **“连接”** 或 **“全部连接”** 按钮。  
+ 显示在建立了连接后连接到服务器实例的帐户。 如果此页对于某一给定的服务器实例显示 **“未连接”** ，则您将需要单击 **“连接”** 或 **“全部连接”** 按钮。  
   
  **“连接”**  
  如果此服务器实例正基于与您将需要连接到的其他服务器实例不同的帐户运行，则单击此选项。  

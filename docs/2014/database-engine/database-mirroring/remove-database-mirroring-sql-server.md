@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754680"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
@@ -40,20 +40,20 @@ ms.locfileid: "62754680"
   
 2.  展开 **“数据库”** 并选择数据库。  
   
-3.  右键单击数据库，选择“任务”，再单击“镜像”。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择“任务”  ，再单击“镜像”  。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
-4.  在 **“选择页”** 窗格中，单击 **“镜像”**。  
+4.  在 **“选择页”** 窗格中，单击 **“镜像”** 。  
   
-5.  若要删除镜像，请单击 **“删除镜像”**。 此时，将显示一个提示，要求您进行确认。 如果单击 **“是”**，会话将停止，并从数据库中删除镜像。  
+5.  若要删除镜像，请单击 **“删除镜像”** 。 此时，将显示一个提示，要求您进行确认。 如果单击 **“是”** ，会话将停止，并从数据库中删除镜像。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 若要删除数据库镜像，请使用 **“数据库属性”**， 即使用 **“数据库属性”** 对话框的 **“镜像”** 页。  
+ 若要删除数据库镜像，请使用 **“数据库属性”** ， 即使用 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
 #### <a name="to-remove-database-mirroring"></a>删除数据库镜像  
   
 1.  为任一镜像伙伴连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  发出以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
