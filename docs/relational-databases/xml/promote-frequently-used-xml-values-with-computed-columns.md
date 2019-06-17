@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939041"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   为 XML 列创建触发器以维护属性表。 在触发器中，执行下列操作之一：  
   
-    -   使用 **xml** 数据类型方法（如 **nodes()** 和 **value()**）来插入和删除属性表的行。  
+    -   使用 **xml** 数据类型方法（如 **nodes()** 和 **value()** ）来插入和删除属性表的行。  
   
     -   在公共语言运行时 (CLR) 中创建流式表值函数来插入和删除属性表的行。  
   

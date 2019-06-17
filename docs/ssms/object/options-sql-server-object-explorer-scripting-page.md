@@ -15,36 +15,36 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: bd09972eaebba893ac92198c9b953392e383f9e4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095724"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>选项（SQL Server 对象资源管理器 -“脚本”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此页可设置脚本选项，以应用于**对象资源管理器**中对象上下文菜单上的以下命令：  
   
--   用于用户表和视图的“编辑”命令。  
+-   用于用户表和视图的“编辑”  命令。  
   
--   用于用户创建对象的“生成 <object> 脚本”命令。  
+-   用于用户创建对象的“生成 <object> 脚本”  命令。  
   
--   用于用户创建对象的“修改”命令。  
+-   用于用户创建对象的“修改”  命令。  
   
--   本页也可用于设置“生成 SQL Server 脚本向导”的脚本选项默认值。  
+-   本页也可用于设置“生成 SQL Server 脚本向导”  的脚本选项默认值。  
   
 ## <a name="remarks"></a>Remarks  
-“编辑”和“修改”命令产生的结果可能与相同选项设置的“生成 <object> 脚本”命令产生的结果不同。 “编辑”和“修改”命令用于在查询编辑器会话期间修改当前数据库中的对象。 “生成 <object> 脚本”命令用于生成一个脚本，这样以后便可使用此脚本创建对象。  
+“编辑”  和“修改”  命令产生的结果可能与相同选项设置的“生成 <object> 脚本”  命令产生的结果不同。 “编辑”  和“修改”  命令用于在查询编辑器会话期间修改当前数据库中的对象。 “生成 <object> 脚本”  命令用于生成一个脚本，这样以后便可使用此脚本创建对象。  
   
 ## <a name="options"></a>选项  
 通过从每个选项右侧列表中的可用设置中进行选择，可以指定脚本选项。  
   
 ### <a name="general-scripting-options"></a>常规脚本选项  
 **分隔各条语句**  
-使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要更改**查询编辑器**，选择“工具”/“选项”/“查询执行”/“SQL Server”/“常规”/“批处理分隔符”。 默认值为 False。 有关详细信息，请参阅 [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)。  
+使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要更改**查询编辑器**，选择“工具”  /“选项”  /“查询执行”  /“SQL Server”  /“常规”  /“批处理分隔符”  。 默认值为 False。 有关详细信息，请参阅 [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)。  
   
 **包含说明性标头**  
-通过将每个对象的脚本分隔为多个部分以向脚本添加说明性注释。 默认值为 True。 有关详细信息，请参阅 [/*...*/ (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)。  
+通过将每个对象的脚本分隔为多个部分以向脚本添加说明性注释。 默认值为 True。 有关详细信息，请参阅 [/ *...* / (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)。  
   
 **包括启用 vardecimal 压缩**  
 包含 vardecimal 存储选项。 默认值为 False。 有关详细信息，请参阅 [sp_db_vardecimal_storage_format (Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542)。  

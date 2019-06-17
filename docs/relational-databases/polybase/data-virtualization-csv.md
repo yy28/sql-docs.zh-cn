@@ -11,19 +11,19 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: dab04f5c544e84c5763b8101cb166741463d460a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65993935"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>将外部表向导与 CSV 文件一起使用
 
-SQL Server 2019 还允许从 HDFS 中的 CSV 文件虚拟化数据。  此过程允许将数据保留在其原始位置，但可以虚拟化 SQL Server 实例中的数据，以便可以对这些数据进行查询，如同 SQL Server 中的任何其他表一样。 此功能将最大限度地减少对 ETL 进程的需要。 可以使用 Polybase 连接器。 有关数据虚拟化的详细信息，请参阅 [PolyBase 入门](polybase-guide.md)文档。
+SQL Server 2019 还允许从 HDFS 中的 CSV 文件虚拟化数据。  此过程允许将数据保留在其原始位置，但可以虚拟化  SQL Server 实例中的数据，以便可以对这些数据进行查询，如同 SQL Server 中的任何其他表一样。 此功能将最大限度地减少对 ETL 进程的需要。 可以使用 Polybase 连接器。 有关数据虚拟化的详细信息，请参阅 [PolyBase 入门](polybase-guide.md)文档。
 
 ## <a name="prerequisite"></a>先决条件
 
-自 CTP 2.4 起，数据池和存储池外部数据源默认不会再创建在大数据群集中。 在使用向导之前，请使用以下 Transact-SQL 查询在目标数据库中创建默认 SqlStoragePool 外部数据源。 请确保首先将查询的上下文更改为目标数据库。
+自 CTP 2.4 起，数据池和存储池外部数据源默认不会再创建在大数据群集中。 在使用向导之前，请使用以下 Transact-SQL 查询在目标数据库中创建默认 SqlStoragePool 外部数据源  。 请确保首先将查询的上下文更改为目标数据库。
 
 ```sql
   -- Create default data sources for SQL Big Data Cluster
@@ -38,13 +38,13 @@ SQL Server 2019 还允许从 HDFS 中的 CSV 文件虚拟化数据。  此过程
 
 ## <a name="launch-the-external-table-wizard"></a>启动外部表向导
 
-使用 IP 地址连接到 HDFS 根。 在对象资源管理器中展开元素。 然后选择一个要将其中的数据虚拟化到现有 SQL Server 实例的 CSV。 右键单击文件，然后从上下文菜单中选择“从 CSV 文件中创建外部表”。 还可以从 HDFS 中的文件夹中的 CSV 文件创建外部表（如果文件夹下的这些文件遵循相同架构）。 这将允许在文件夹级别虚拟化数据，而无需处理单个文件，并获得组合数据的联接结果集。 这将启动虚拟化数据向导。 也可以通过键入 Ctrl+Shift+P（在 Windows 中）和 Cmd+Shift+P（在 Mac 中），从命令面板启动虚拟化数据向导。
+使用 IP 地址连接到 HDFS 根。 在对象资源管理器中展开元素。 然后选择一个要将其中的数据虚拟化到现有 SQL Server 实例的 CSV。 右键单击文件，然后从上下文菜单中选择“从 CSV 文件中创建外部表”  。 还可以从 HDFS 中的文件夹中的 CSV 文件创建外部表（如果文件夹下的这些文件遵循相同架构）。 这将允许在文件夹级别虚拟化数据，而无需处理单个文件，并获得组合数据的联接结果集。 这将启动虚拟化数据向导。 也可以通过键入 Ctrl+Shift+P（在 Windows 中）和 Cmd+Shift+P（在 Mac 中），从命令面板启动虚拟化数据向导。
 
 ![虚拟化数据向导](media/data-virtualization/csv-virtualize-data-wizard.png)
 
 ## <a name="connect-to-a-sql-server-master-instance"></a>连接到 SQL Server 主实例
 
-可以在此处使用 IP、端口和凭据信息指定要连接到的 SQL 主实例。 可以通过“活动 SQL Server 连接”下拉框访问之前保存的连接。 
+可以在此处使用 IP、端口和凭据信息指定要连接到的 SQL 主实例。 可以通过“活动 SQL Server 连接”下拉框访问之前保存的连接  。 
 > [!NOTE]
 >如果使用的是已保存的连接，则其他字段将被阻止
 
@@ -77,7 +77,7 @@ SQL Server 2019 还允许从 HDFS 中的 CSV 文件虚拟化数据。  此过程
 
 ## <a name="summary"></a>“摘要”
 
-此步骤提供所选对象的摘要。 它提供 SQL 主实例和建议的外部表信息。 在此步骤中，可以选择“生成脚本”（这会在 T-SQL 中编写语法脚本以创建外部数据源）或“创建”（这会创建外部数据源对象）。
+此步骤提供所选对象的摘要。 它提供 SQL 主实例和建议的外部表信息。 在此步骤中，可以选择“生成脚本”（这会在 T-SQL 中编写语法脚本以创建外部数据源）或“创建”（这会创建外部数据源对象）   。
 
 ![“摘要”屏幕](media/data-virtualization/csv-virtualize-data-summary.png)
 
@@ -85,7 +85,7 @@ SQL Server 2019 还允许从 HDFS 中的 CSV 文件虚拟化数据。  此过程
 
 ![外部数据源](media/data-virtualization/csv-external-data-sources.png)
 
-如果单击“生成脚本”，你将看到为创建外部数据源对象生成的 T-SQL 查询。
+如果单击“生成脚本”  ，你将看到为创建外部数据源对象生成的 T-SQL 查询。
 
 ![生成脚本](media/data-virtualization/csv-generated-script.png)
 

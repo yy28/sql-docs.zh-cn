@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb5e1789416ee134ce59fbc3ef107f1165ce76ad
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175697"
 ---
 # <a name="columns-with-a-name"></a>具有名称的列
@@ -37,7 +37,7 @@ ms.locfileid: "66175697"
 -   一列具有不同的名称。  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>列名以 at 符号 (\@) 开头  
- 如果列名以 at 符号 (\@) 开头且不包含斜线标记 (/)，就会创建包含相应列值的 `row` 元素的属性。 例如，下面的查询返回包含两列（\@PmId 和 Name）的行集。 在生成的 XML 中，会向相应的 `row` 元素添加 PmId 属性并为其分配 ProductModelID 值。  
+ 如果列名以 at 符号 (\@) 开头且不包含斜线标记 (/)，就会创建包含相应列值的 `row` 元素的属性。 例如，下面的查询返回包含两列（\@PmId 和 Name）的行集。 在生成的 XML 中，会向相应的 `row` 元素添加 PmId 属性并为其分配 ProductModelID 值  。  
   
 ```sql
 SELECT ProductModelID as "@PmId",  
@@ -128,7 +128,7 @@ WHERE  E.EmployeeID = C.ContactID  AND
 FOR XML PATH;
 ```  
   
- 列名用作在 PATH 模式中构造 XML 时的路径。 包含雇员 ID 值的列名以“\@”开头。因此，向 `row` 元素添加 EmpID 属性。 其他所有列的列名中均包含指明层次结构的斜杠标记 (/)。 在生成的 XML 中，`row` 元素下包含 `EmpName` 子元素，而 `EmpName` 子元素包含 `First`、`Middle` 和 `Last` 子元素。  
+ 列名用作在 PATH 模式中构造 XML 时的路径。 包含雇员 ID 值的列名以“\@”开头。因此，向 `row` 元素添加 EmpID 属性  。 其他所有列的列名中均包含指明层次结构的斜杠标记 (/)。 在生成的 XML 中，`row` 元素下包含 `EmpName` 子元素，而 `EmpName` 子元素包含 `First`、`Middle` 和 `Last` 子元素。  
   
 ```xml
 <row EmpID="1">  

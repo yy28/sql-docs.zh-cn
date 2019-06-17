@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66836352"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -70,41 +70,41 @@ CREATE SYMMETRIC KEY key_name
 ```  
   
 ## <a name="arguments"></a>参数  
- Key_name  
- 指定在数据库中识别该对称密钥的唯一名称。 当 key_name 以一个数字符号 (#) 为开头时指定临时密钥。 例如，#temporaryKey900007。 您不能创建名称以多个 # 开头的对称密钥。 您不能使用 EKM 提供程序创建临时对称密钥。  
+ Key_name   
+ 指定在数据库中识别该对称密钥的唯一名称。 当  key_name 以一个数字符号 (#) 为开头时指定临时密钥。 例如，#temporaryKey900007。  您不能创建名称以多个 # 开头的对称密钥。 您不能使用 EKM 提供程序创建临时对称密钥。  
   
- AUTHORIZATION owner_name  
+ AUTHORIZATION owner_name   
  指定将拥有此密钥的数据库用户或应用程序角色的名称。  
   
- FROM PROVIDER provider_name  
+ FROM PROVIDER provider_name   
  指定可扩展密钥管理 (EKM) 提供程序和名称。 该密钥不是从 EKM 设备中导出的。 必须先使用 CREATE PROVIDER 语句定义此提供程序。 有关创建外部密钥提供程序的详细信息，请参阅[可扩展密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- KEY_SOURCE **='**_pass\_phrase_**'**  
+ KEY_SOURCE **='** _pass\_phrase_ **'**  
  指定从中派生密钥的通行短语。  
   
- IDENTITY_VALUE **='**_identity\_phrase_**'**  
+ IDENTITY_VALUE **='** _identity\_phrase_ **'**  
  指定一个标识短语，将根据该短语生成 GUID 以标记使用临时密钥加密的数据。  
   
- PROVIDER_KEY_NAME **='**_key\_name\_in\_provider_**'**  
+ PROVIDER_KEY_NAME **='** _key\_name\_in\_provider_ **'**  
  指定在可扩展密钥管理提供程序中引用的名称。  
   
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- CREATION_DISPOSITION = CREATE_NEW  
+ CREATION_DISPOSITION = CREATE_NEW   
  在可扩展的密钥管理设备上创建新密钥。  如果密钥已存在于设备上，该语句将失败，并显示错误。  
   
- CREATION_DISPOSITION = OPEN_EXISTING  
+ CREATION_DISPOSITION = OPEN_EXISTING   
  将一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对称密钥映射到现有的可扩展密钥管理密钥。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，则此参数默认为 CREATE_NEW。  
   
- certificate_name  
+ certificate_name   
  指定将用于对对称密钥进行加密的证书的名称。 该证书必须已存在于数据库中。  
   
- ' password '  
- 指定一个密码，从该密码派生出用来保护对称密钥的 TRIPLE_DES 密钥。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 始终使用强密码。  
+ ' password '     
+ 指定一个密码，从该密码派生出用来保护对称密钥的 TRIPLE_DES 密钥。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求  。 始终使用强密码。  
   
  *symmetric_key_name*  
  指定用于对要创建的密钥进行加密的对称密钥。 指定的密钥必须已存在于数据库中，并且必须打开。  
@@ -144,7 +144,7 @@ CREATE SYMMETRIC KEY key_name
 -   使用 ALGORITHM = TRIPLE_DES_3KEY 创建的对称密钥使用的是具有 192 位密钥的 TRIPLE DES。  
 -   使用 ALGORITHM = TRIPLE_DES 创建的对称密钥使用的是具有 128 位密钥的 TRIPLE DES。  
   
- 不推荐使用 RC4 算法：  
+ 不推荐使用 RC4 算法：   
   
  对不同数据块重复使用相同的 RC4 或 RC4_128 KEY_GUID 会产生相同的 RC4 密钥，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会自动提供 salt。 重复使用相同的 RC4 密钥是已知错误，将导致加密非常不可靠。 因此，不推荐使用 RC4 和 RC4_128 关键字。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   

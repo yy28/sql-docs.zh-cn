@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73871d69a8fbdc56b2359aa888cbc08e572a6107
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716915"
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference（SSISDB 数据库）
@@ -39,23 +39,23 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name  
- 正在引用环境的项目的文件夹名称。 *folder_name* 为 **nvarchar(128)**。  
+ [ @folder_name = ] folder_name   
+ 正在引用环境的项目的文件夹名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [ @project_name = ] project_name  
- 正在引用环境的项目的名称。 *project_name* 为 **nvarchar(128)**。  
+ [ @project_name = ] project_name   
+ 正在引用环境的项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
- [ @environment_name = ] environment_name  
- 被引用环境的名称。 environment_name 为 nvarchar(128)。  
+ [ @environment_name = ] environment_name   
+ 被引用环境的名称。 environment_name 为 nvarchar(128)   。  
   
- [ @reference_location = ] reference_location  
- 指示环境是可以位于与项目相同的文件夹中（相对引用），还是位于其他文件夹中（绝对引用）中。 使用值 `R` 指示相对引用。 使用值 `A` 指示绝对引用。 reference_location 为 char(1)。  
+ [ @reference_location = ] reference_location   
+ 指示环境是可以位于与项目相同的文件夹中（相对引用），还是位于其他文件夹中（绝对引用）中。 使用值 `R` 指示相对引用。 使用值 `A` 指示绝对引用。 reference_location 为 char(1)   。  
   
- [ @environment_folder_name = ] environment_folder_name  
- 被引用的环境所在的文件夹的名称。 此值对于绝对引用是必需的。 environment_folder_name 为 nvarchar(128)。  
+ [ @environment_folder_name = ] environment_folder_name   
+ 被引用的环境所在的文件夹的名称。 此值对于绝对引用是必需的。 environment_folder_name 为 nvarchar(128)   。  
   
- [ @reference_id = ] reference_id  
- 返回新引用的唯一标识符。 此参数可选。 reference_id 为 bigint。  
+ [ @reference_id = ] reference_id   
+ 返回新引用的唯一标识符。 此参数可选。 reference_id 为 bigint   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -81,7 +81,7 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 -   用户没有相应的权限  
   
--   通过使用 reference_location 参数中的 `A` 字符指定绝对引用，而未使用 environment_folder_name 参数指定该文件夹的名称。  
+-   通过使用 reference_location 参数中的 `A` 字符指定绝对引用，而未使用 environment_folder_name 参数指定该文件夹的名称   。  
   
 ## <a name="remarks"></a>Remarks  
  项目可以具有相对或绝对的环境引用。 相对引用通过名称引用环境，并要求它与项目位于相同文件夹中。 绝对引用通过名称和文件夹引用环境，可能引用与项目不在同一文件夹中的环境。 项目可以引用多个环境。  

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d24a66ce59b3908a04e3ab7719265fbef3c96f58
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503211"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
@@ -96,10 +96,10 @@ identifier
 ```  
   
 ##  <a name="Arguments"></a> 参数  
- index_name  
+ index_name   
  要创建的新索引的名称。 索引名称在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- \<table_object> 是包含要建立索引的 XML 列的表。 使用以下格式之一：  
+  \<table_object> 是包含要建立索引的 XML 列的表。 使用以下格式之一：  
   
 -   `database_name.schema_name.table_name`  
   
@@ -109,12 +109,12 @@ identifier
   
 -   `table_name`  
   
- xml_column_name  
+ xml_column_name   
  XML 列的名称，该列中包含要建立索引的路径。  
   
- [WITH XMLNAMESPACES (\<xmlnamespace_list>)] 是要建立索引的路径使用的命名空间的列表。 有关 WITH XMLNAMESPACES 子句的语法的信息，请参阅 [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md)。  
+ [WITH XMLNAMESPACES (  \<xmlnamespace_list>  )] 是要建立索引的路径使用的命名空间的列表。 有关 WITH XMLNAMESPACES 子句的语法的信息，请参阅 [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md)。  
   
- (\<promoted_node_path_list>) 是要使用可选优化提示建立索引的路径列表。 有关可以在 CREATE 或 ALTER 语句中指定的路径和优化提示的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
+ (\<promoted_node_path_list>) 是要使用可选优化提示建立索引的路径列表   。 有关可以在 CREATE 或 ALTER 语句中指定的路径和优化提示的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
   
  有关通过 *\<* index_options> 获取索引选项的信息，请参阅 [CREATE XML INDEX（选择性 XML 索引）](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   

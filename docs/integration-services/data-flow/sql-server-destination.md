@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: becd2493929fb12ddcec6a0623dec7c46f7b5a2d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726343"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目标
@@ -128,22 +128,22 @@ ms.locfileid: "65726343"
   
 ### <a name="options"></a>选项  
  **“无缓存”**  
- 从列表中选择现有连接，或通过单击“新建”创建一个新连接。  
+ 从列表中选择现有连接，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”对话框创建新的连接。  
+ 通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
   
  **使用表或视图**  
- 从列表中选择现有的表或视图，或单击“新建”创建新的连接。  
+ 从列表中选择现有的表或视图，或单击“新建”  创建新的连接。  
   
  **新建**  
- 通过使用“创建表”对话框创建一个新表。  
+ 通过使用“创建表”  对话框创建一个新表。  
   
 > [!NOTE]  
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **预览**  
- 使用“预览查询结果”对话框预览结果。 预览最多可以显示 200 行。  
+ 使用“预览查询结果”  对话框预览结果。 预览最多可以显示 200 行。  
   
 ## <a name="sql-destination-editor-mappings-page"></a>SQL 目标编辑器（“映射”页）
   可以使用 **“SQL 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
@@ -184,19 +184,19 @@ ms.locfileid: "65726343"
  指定要插入的第一行。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”窗口、“高级编辑器”和对象模型中使用 -1。  
+>  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”  窗口、“高级编辑器”  和对象模型中使用 -1。  
   
  **末行**  
  指定要插入的最后一行。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”窗口、“高级编辑器”和对象模型中使用 -1。  
+>  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”  窗口、“高级编辑器”  和对象模型中使用 -1。  
   
  **最大错误数**  
  指定在大容量插入任务停止之前可以发生的错误数量。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”窗口、“高级编辑器”和对象模型中使用 -1。  
+>  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”  窗口、“高级编辑器”  和对象模型中使用 -1。  
   
  **超时**  
  指定在大容量插入任务因超时而停止之前等待的秒数。  

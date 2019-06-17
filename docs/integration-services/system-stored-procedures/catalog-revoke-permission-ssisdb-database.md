@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41946fdf50ec72d7c81340dd40c99447a9dbbf40
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715972"
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission（SSISDB 数据库）
@@ -41,7 +41,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>参数  
  [ @object_type = ] *object_type*  
- 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。*object_type* 为 **smallint**_。_  
+ 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。*object_type* 为 **smallint** _。_  
   
  [ @object_id = ] *object_id*  
  安全对象的唯一标识符 (ID)。 *object_id* 为 **bigint**。  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1c9e39e4ccec7ab54229a8bbd0bf51b1d751207
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726671"
 ---
 # <a name="odata-source"></a>OData 源
@@ -74,12 +74,12 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
   
 ### <a name="static-options"></a>静态选项  
  **OData 连接管理器**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  选择或创建连接管理器以后，对话框会显示连接管理器所使用的 OData 协议版本。  
   
  **新建**  
- 通过使用“OData 连接管理器编辑器”对话框创建新的连接管理器。  
+ 通过使用“OData 连接管理器编辑器”  对话框创建新的连接管理器。  
   
  **使用集合或资源路径**  
  指定从源选择数据的方法。  
@@ -96,7 +96,7 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
  基于在此对话框中选择的选项显示只读馈送 URL。  
   
  **预览**  
- 通过使用“预览”对话框预览结果。 **“预览”** 最多可以显示 20 行。  
+ 通过使用“预览”  对话框预览结果。 **“预览”** 最多可以显示 20 行。  
   
 ### <a name="dynamic-options"></a>动态选项  
   
@@ -109,7 +109,7 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
  键入资源路径。 例如：Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>OData 源编辑器（“列”页）
-  使用“OData 源编辑器”对话框的“列”页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  
+  使用“OData 源编辑器”  对话框的“列”  页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  
   
 ### <a name="options"></a>选项  
  **可用外部列**  
@@ -129,12 +129,12 @@ OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTi
  查看数据源的名称。  
   
  **列**  
- 查看在“OData 源编辑器”对话框中“Connection Manager”页上选择的外部（源）列。  
+ 查看在“OData 源编辑器”  对话框中“Connection Manager”  页上选择的外部（源）列。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  

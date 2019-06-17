@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 74099a8611c9c81b54619e1fc071b63a5d22777a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722900"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>第 1-9 课：测试第 1 课包
@@ -48,11 +48,11 @@ ms.locfileid: "65722900"
   
 ## <a name="run-the-lesson-1-package"></a>运行第 1 课包  
   
-1.  在“调试”菜单中，选择“启动调试”。  
+1.  在“调试”菜单中，选择“启动调试”   。  
   
-    包开始运行，结果有 1097 行被成功添加到 AdventureWorksDW2012 中的 NewFactCurrencyRate 事实数据表中。 若要验证此结果，请选择“数据流”选项卡。
+    包开始运行，结果有 1097 行被成功添加到 AdventureWorksDW2012 中的 NewFactCurrencyRate 事实数据表中   。 若要验证此结果，请选择“数据流”选项卡  。
   
-2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”。  
+2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”   。  
   
 ## <a name="go-to-next-lesson"></a>转到下一课
 [第 2 课：使用 SSIS 添加循环](../integration-services/lesson-2-adding-looping-with-ssis.md)  

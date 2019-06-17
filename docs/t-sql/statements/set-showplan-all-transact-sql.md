@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ef59fc6349a588bbb58515614d6d977253d213a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733976"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62816845"
 ---
 # <a name="set-showplanall-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,16 +82,16 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  *开销单位是基于内部时间度量，而不是时钟时间。 它们用于确定某个计划与其他相计划相比的相对开销。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要使用 SET SHOWPLAN_ALL，必须对执行 SET SHOWPLAN_ALL 的语句具有足够的执行权限，还必须对所有包含被引用对象的所有数据库具有 SHOWPLAN 权限。  
   
- 对于 SELECT、INSERT、UPDATE、DELETE、EXEC stored_procedure 和 EXEC user_defined_function 语句，若要生成显示计划，用户必须：  
+ 对于 SELECT、INSERT、UPDATE、DELETE、EXEC stored_procedure 和 EXEC user_defined_function 语句，若要生成显示计划，用户必须   ：  
   
 -   具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。  
   
 -   对于包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句引用的对象（如表、视图等）的所有数据库，具有 SHOWPLAN 权限。  
   
- 对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。  
+ 对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限  。  
   
 ## <a name="examples"></a>示例  
  下面两个语句使用了 SET SHOWPLAN_ALL 设置，以显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询中分析和优化索引的方法。  

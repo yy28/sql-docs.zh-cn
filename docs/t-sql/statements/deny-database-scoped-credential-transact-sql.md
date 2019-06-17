@@ -21,11 +21,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f58fa15ba67cfcf84a35f130fa70eff0d981c0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63017737"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY 数据库作用域凭据 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对数据库作用域凭据拒绝的权限。 如下所列。  
   
- ON DATABASE SCOPED CREDENTIAL ::credential_name  
+ ON DATABASE SCOPED CREDENTIAL ::credential_name    
  指定对其拒绝权限的数据库作用域凭据。 需要使用作用域限定符“::”。  
   
- database_principal  
+ database_principal   
  指定要对其拒绝权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -75,7 +75,7 @@ DENY permission  [ ,...n ]
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal  
+ denying_principal   
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -105,7 +105,7 @@ DENY permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库作用域凭据具有 CONTROL 权限。 如果使用 AS 子句，则指定的主体必须拥有数据库作用域凭据。  
   
 ## <a name="see-also"></a>另请参阅  

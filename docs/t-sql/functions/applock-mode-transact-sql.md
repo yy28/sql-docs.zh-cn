@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e532985c10c5fd53e4f041a2c72b675efc9d8794
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945074"
 ---
 # <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
@@ -42,14 +42,14 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 ```  
   
 ## <a name="arguments"></a>参数  
-'database_principal'  
-可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 若要成功调用函数，该函数调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员。
+'database_principal'   
+可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 若要成功调用函数，该函数调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员  。
   
-'resource_name'  
-由客户端应用程序指定的锁资源名称。 应用程序必须确保唯一的资源名称。 指定的名称经过内部哈希运算后成为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器可内部存储的值。 resource_name 为 nvarchar(255)，无默认值。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何。
+'resource_name'   
+由客户端应用程序指定的锁资源名称。 应用程序必须确保唯一的资源名称。 指定的名称经过内部哈希运算后成为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器可内部存储的值。 resource_name 为 nvarchar(255)，无默认值   。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何  。
   
-'lock_owner'  
-锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 为 nvarchar(32)，值可以是 Transaction（默认值）或 Session。
+'lock_owner'   
+锁的所有者，它是请求锁时所指定的 lock_owner 值  。 lock_owner 为 nvarchar(32)，值可以是 Transaction（默认值）或 Session     。
   
 ## <a name="return-types"></a>返回类型
 **nvarchar(32)**

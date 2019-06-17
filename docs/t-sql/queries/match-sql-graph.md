@@ -19,11 +19,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0296f915e0731bac9e7a714fa1e307bd2cda86b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606245"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62504631"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ MATCH (<graph_search_pattern>)
 ```
 
 ## <a name="arguments"></a>参数  
-graph_search_pattern  
+graph_search_pattern   
 指定图形中的搜索模式或遍历路径。 此模式使用 ASCII 图表语法来遍历图形中的路径。 模式将按照所提供的箭头方向通过边缘从一个节点转到另一个节点。 括号内提供边缘名或别名。 节点名称或别名显示在箭头两端。 模式中，箭头可以指向两个方向中的任意一个方向。
 
-node_alias  
+node_alias   
 FROM 子句中提供的节点表的名称或别名。
 
-edge_alias  
+edge_alias   
 FROM 子句中提供的边缘表的名称或别名。
 
 

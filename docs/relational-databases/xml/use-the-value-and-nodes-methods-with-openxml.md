@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4dabca94aba07a2d41a70bbee5343fe1eeb61658
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704648"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>将 value() 和 nodes() 方法用于 OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   你可以在 **SELECT** 子句中对 **xml** 数据类型使用多个 **value()** 方法以生成所提取值的行集。 **nodes()** 方法为可用于其他查询的每个所选节点生成一个内部引用。 生成行集时，如果行集有多个列且用于生成行集的路径表达式比较复杂，结合使用 **nodes()** 和 **value()** 方法可能会更有效。  
   
- **nodes()** 方法生成特殊的 **xml** 数据类型的实例，每个实例都将其上下文设置为不同的选定节点。 这种 XML 实例支持 **query()**、**value()**、**nodes()** 和 **exist()** 方法，并可在 **count(\*)** 聚合中使用。 所有其他用法都会导致错误。  
+ **nodes()** 方法生成特殊的 **xml** 数据类型的实例，每个实例都将其上下文设置为不同的选定节点。 这种 XML 实例支持 **query()** 、**value()** 、**nodes()** 和 **exist()** 方法，并可在 **count(\*)** 聚合中使用。 所有其他用法都会导致错误。  
   
 ## <a name="example-using-nodes"></a>例如：使用 nodes()  
  假定您希望提取作者的名字和姓氏，而名字不是“David”。 此外，您希望提取该信息作为一个包含两列 FirstName 和 LastName 的行集。 通过使用 **nodes()** 方法和 **value()** 方法便可以完成该操作，如下所示：  

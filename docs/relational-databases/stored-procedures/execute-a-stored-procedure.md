@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0557a0ebec0b742088dc6240022f5622e679d8f8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62960011"
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,21 +122,21 @@ ms.locfileid: "56803252"
   
     2.  阻止过程在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时执行。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  有关详细信息，请参阅 [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md) 和 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  有关详细信息，请参阅 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)中执行存储过程。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>执行存储过程  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”** 。  
   
-2.  展开所需的数据库，然后依次展开 **“可编程性”** 和 **“存储过程”**。  
+2.  展开所需的数据库，然后依次展开 **“可编程性”** 和 **“存储过程”** 。  
   
-3.  右键单击所需的用户定义存储过程，然后单击“执行存储过程”。  
+3.  右键单击所需的用户定义存储过程，然后单击“执行存储过程”  。  
   
 4.  在 **“执行过程”** 对话框中，为每个参数指定一个值以及它是否应传递 Null 值。  
   
@@ -155,17 +155,17 @@ ms.locfileid: "56803252"
      **ReplTest1**  
      在调用过程时键入参数的值。  
   
-5.  若要执行存储过程，请单击 **“确定”**。  
+5.  若要执行存储过程，请单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>执行存储过程  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何执行应有一个参数的存储过程。 该示例执行 `uspGetEmployeeManagers` 存储过程，并将值  `6` 指定为 `@EmployeeID` 参数。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例演示如何执行应有一个参数的存储过程。 该示例执行 `uspGetEmployeeManagers` 存储过程，并将值  `6` 指定为 `@EmployeeID` 参数。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -176,11 +176,11 @@ GO
   
 #### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>设置或清除过程自动执行  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 设置过程自动执行。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例演示如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 设置过程自动执行。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -192,11 +192,11 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 #### <a name="to-stop-a-procedure-from-executing-automatically"></a>阻止过程自动执行  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 阻止过程自动执行。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 阻止过程自动执行。  
   
 ```sql  
 USE AdventureWorks2012;  

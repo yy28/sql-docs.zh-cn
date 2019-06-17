@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 452cec6a4cfcf5f1f85a4e05f6522007851a31ca
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095533"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>创建 SQL Server 代理的代理帐户
@@ -63,7 +63,7 @@ ms.locfileid: "65095533"
   
 #### <a name="Permissions"></a>Permissions  
   
--   只有 **sysadmin** 固定服务器角色的成员才有权创建、修改或删除代理帐户。 必须将不属于 sysadmin 固定服务器角色成员的用户添加到 msdb 数据库中的以下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色之一，才能使用代理：SQLAgentUserRole、SQLAgentReaderRole 或 SQLAgentOperatorRole。  
+-   只有 **sysadmin** 固定服务器角色的成员才有权创建、修改或删除代理帐户。 必须将不属于 sysadmin 固定服务器角色成员的用户添加到 msdb 数据库中的以下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色之一，才能使用代理   ：SQLAgentUserRole、SQLAgentReaderRole 或 SQLAgentOperatorRole    。  
   
 -   如果除了代理之外还需要创建凭据，则需要 **ALTER ANY CREDENTIAL** 权限。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "65095533"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要在 SQL Server 代理上创建代理的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
-3.  右键单击“代理”文件夹，然后选择“新建代理”。  
+3.  右键单击“代理”  文件夹，然后选择“新建代理”  。  
   
 4.  在 **“新建代理帐户”** 对话框的 **“常规”** 页中，在 **“代理名称”** 框中输入代理帐户的名称。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65095533"
   
 8.  在 **“主体”** 页上，添加或删除登录名或角色，以授予或删除对代理帐户的访问权限。  
   
-9. 完成后，单击 **“确定”**。  
+9. 完成后，单击 **“确定”** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -95,9 +95,9 @@ ms.locfileid: "65095533"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- creates credential CatalogApplicationCredential  

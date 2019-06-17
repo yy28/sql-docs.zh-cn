@@ -26,11 +26,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5f852bcf9a1cf195df6ebf05738cc63536ee4941
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588101"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62687112"
 ---
 # <a name="set-index-options"></a>设置索引选项
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "53588101"
   
 -   通过使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING，可以在重新生成索引时设置下列选项：PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP 和 DROP_EXISTING（仅 CREATE INDEX）。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -72,17 +72,17 @@ ms.locfileid: "53588101"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要修改索引属性的表，然后选择“设计”。  
+3.  右键单击你要修改索引属性的表，然后选择“设计”  。  
   
-4.  在“表设计器”菜单上，单击“索引/键”。  
+4.  在“表设计器”  菜单上，单击“索引/键”  。  
   
 5.  选择要修改的索引。 其属性将显示在主网格中。  
   
 6.  更改任意属性的设置以自定义索引。  
   
-7.  单击 **“关闭”**。  
+7.  单击 **“关闭”** 。  
   
-8.  在“文件”菜单上，选择“保存”以保存 _table_name_。  
+8.  在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在对象资源管理器中修改索引的属性  
   
@@ -94,13 +94,13 @@ ms.locfileid: "53588101"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要修改其属性的索引，然后选择“属性”。  
+5.  右键单击要修改其属性的索引，然后选择“属性”  。  
   
-6.  在 **“选择页”** 下，选择 **“选项”**。  
+6.  在 **“选择页”** 下，选择 **“选项”** 。  
   
 7.  更改任意属性的设置以自定义索引。  
   
-8.  若要添加、删除或更改索引列的位置，请从“索引属性 - index_name”对话框中选择“常规”页。 有关详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)  
+8.  若要添加、删除或更改索引列的位置，请从“索引属性 -  index_name”  对话框中选择“常规”  页。 有关详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -108,9 +108,9 @@ ms.locfileid: "53588101"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -142,9 +142,9 @@ ms.locfileid: "53588101"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
      [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/set-index-options_1.sql)]  
   

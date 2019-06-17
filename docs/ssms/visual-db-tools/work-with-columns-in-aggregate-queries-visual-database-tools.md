@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8a5c8d11835de375adc6994edb0c26ac0991afc8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104947"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在聚合查询中使用列 (Visual Database Tools)
@@ -38,11 +38,11 @@ ms.locfileid: "65104947"
   
 向“条件”窗格的“筛选器”列中输入搜索条件时，查询和视图设计器将遵循以下规则：  
   
--   如果没有显示网格的“分组依据”列（因为尚未指定聚合查询），则搜索条件将放入 WHERE 子句中。  
+-   如果没有显示网格的“分组依据”  列（因为尚未指定聚合查询），则搜索条件将放入 WHERE 子句中。  
   
--   如果已在聚合查询中，并在“分组依据”列中选择了 **Where** 选项，则搜索条件被放入 WHERE 子句中。  
+-   如果已在聚合查询中，并在“分组依据”  列中选择了 **Where** 选项，则搜索条件被放入 WHERE 子句中。  
   
--   如果“分组依据”列包含 **Where** 以外的任何值，则搜索条件将放入 HAVING 子句中。  
+-   如果“分组依据”  列包含 **Where** 以外的任何值，则搜索条件将放入 HAVING 子句中。  
   
 ## <a name="using-the-having-and-where-clauses"></a>使用 HAVING 和 WHERE 子句  
 以下原则描述如何在聚合查询的搜索条件中引用列。 通常，可以在搜索条件中使用列来筛选要汇总的行（WHERE 子句）或确定要在最终输出中显示的分组结果（HAVING 子句）。  

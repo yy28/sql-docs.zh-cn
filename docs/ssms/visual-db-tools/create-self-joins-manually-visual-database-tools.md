@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ad4abd99364ec906cb61a37b8e7f47c7095e2081
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090053"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手动创建自联接 (Visual Database Tools)
@@ -116,9 +116,9 @@ Cheryl Carson       Abraham Bennet
   
     查询和视图设计器将通过为表名添加一个顺序号来为第二个实例分配别名。 此外，查询和视图设计器会在“关系图”窗格内表或表值对象的两个实例之间创建一条联接线。  
   
-3.  右键单击联接线，再从快捷菜单中选择“属性”。  
+3.  右键单击联接线，再从快捷菜单中选择“属性”  。  
   
-4.  在“属性”窗口中，单击“联接条件和类型”，再单击该属性右侧的省略号 (…)。  
+4.  在“属性”窗口中，单击“联接条件和类型”，再单击该属性右侧的省略号 (…)   。  
   
 5.  在[“联接”对话框](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)中，根据需要更改两个主键间的比较运算符。 例如，可将运算符更改为小于 (<)。  
   

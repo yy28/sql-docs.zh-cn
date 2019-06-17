@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b68fcc0cffada1ac895548a0c6858f0bde76fe6c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714487"
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions（SSISDB 数据库）
@@ -49,7 +49,7 @@ ms.locfileid: "65714487"
   
 -   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色中的成员资格。  
+-   sysadmin 服务器角色中的成员资格  。  
   
 > [!NOTE]  
 >  将实施行级安全性；只显示您有权查看的行。  

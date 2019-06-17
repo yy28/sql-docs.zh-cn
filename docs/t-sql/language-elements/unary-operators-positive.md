@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6b37c60fa27af53949803c2077ba0736bf5de7e1
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981017"
 ---
 # <a name="unary-operators---positive"></a>一元运算符 - 正
@@ -52,7 +52,7 @@ ms.locfileid: "65981017"
   
 ## <a name="arguments"></a>参数  
  *numeric_expression*  
- 具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。  
   
 ## <a name="result-types"></a>结果类型  
  返回 *numeric_expression*的数据类型。  

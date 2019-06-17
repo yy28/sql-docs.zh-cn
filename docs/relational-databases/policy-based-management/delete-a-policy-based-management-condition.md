@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8c8ecf331904ff58415807de9a16c3575778aa46
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63009114"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>删除基于策略的管理条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51512087"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除条件，请使用：**  
   
@@ -36,9 +36,9 @@ ms.locfileid: "51512087"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -49,12 +49,12 @@ ms.locfileid: "51512087"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”**。  
+3.  单击加号以便展开 **“策略管理”** 。  
   
 4.  单击加号以便展开 **“条件”** 文件夹。  
   
-5.  右键单击要删除的条件，然后选择“删除”。  
+5.  右键单击要删除的条件，然后选择“删除”  。  
   
-6.  在 **“删除对象”** 对话框中，确保已选择正确的条件，然后单击 **“确定”**。  
+6.  在 **“删除对象”** 对话框中，确保已选择正确的条件，然后单击 **“确定”** 。  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5f187d7efb44997cf53a4064daee4a83206a82
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728583"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
@@ -86,13 +86,13 @@ ms.locfileid: "65728583"
   
 1.  在 **设计器的** “控制流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上，向包中添加一个执行 SQL 任务。  
   
-2.  打开 **“执行 SQL 任务编辑器”**，在编辑器的 **“常规”** 页上，选择以下选项：  
+2.  打开 **“执行 SQL 任务编辑器”** ，在编辑器的 **“常规”** 页上，选择以下选项：  
   
-    1.  对于 **ResultSet**，选择 **“单行”**。  
+    1.  对于 **ResultSet**，选择 **“单行”** 。  
   
     2.  配置到源数据库的有效连接。  
   
-    3.  对于 **SQLSourceType**，选择 **“直接输入”**。  
+    3.  对于 **SQLSourceType**，选择 **“直接输入”** 。  
   
     4.  对于 **SQLStatement**，输入以下 SQL 语句：  
   
@@ -110,7 +110,7 @@ ms.locfileid: "65728583"
 ## <a name="next-step"></a>下一步  
  计算变更范围的起始点和结束点之后，下一步就是确定变更数据是否已准备就绪。  
   
- **下一个主题：**[确定变更数据是否已准备就绪](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+ **下一个主题：** [确定变更数据是否已准备就绪](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   

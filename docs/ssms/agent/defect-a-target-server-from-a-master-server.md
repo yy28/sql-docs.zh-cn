@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1f4efd1610d6cf2fdca1c2f1c6ab992452c5211d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096717"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>将目标服务器从主服务器脱离
@@ -60,7 +60,7 @@ ms.locfileid: "65096717"
   
 1.  在 **对象资源管理器**中，展开配置为目标服务器的服务器。  
   
-2.  右键单击 **“SQL Server 代理”**，指向 **“多服务器管理”**，然后单击 **“脱离”**。  
+2.  右键单击 **“SQL Server 代理”** ，指向 **“多服务器管理”** ，然后单击 **“脱离”** 。  
   
 3.  单击 **“是”** 确认要从主服务器脱离此目标服务器。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "65096717"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
 ```  
 sp_msx_defect ;  

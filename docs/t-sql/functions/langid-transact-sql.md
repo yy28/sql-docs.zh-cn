@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1229280457532877224f39c5baf172331681abde
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948736"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "65948736"
  **smallint**  
   
 ## <a name="remarks"></a>Remarks  
- 若要查看有关语言设置的信息（包括语言 ID 号），可不带指定参数运行 sp_helplanguage。  
+ 若要查看有关语言设置的信息（包括语言 ID 号），可不带指定参数运行 sp_helplanguage  。  
   
 ## <a name="examples"></a>示例  
  以下示例将当前会话的语言设置为 `Italian`，然后使用 `@@LANGID` 返回意大利语的 ID。  

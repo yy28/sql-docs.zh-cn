@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f036866a41376b2ee37076ac311b7dbe3f3d56e4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726537"
 ---
 # <a name="raw-file-custom-properties"></a>原始文件自定义属性
@@ -31,7 +31,7 @@ ms.locfileid: "65726537"
   
 |属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer（枚举）|用来访问原始数据的模式。 可能的值为“文件名”(0) 和“来自变量的文件名”(1)。 默认值为“文件名”(0)。|  
+|AccessMode|Integer（枚举）|用来访问原始数据的模式。 可能的值为“文件名”  (0) 和“来自变量的文件名”  (1)。 默认值为“文件名”  (0)。|  
 |FileName|String|源文件的路径和文件名。|  
   
  原始文件源的输出和输出列没有自定义属性。  
@@ -46,9 +46,9 @@ ms.locfileid: "65726537"
   
 |属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer（枚举）|一个值，指定 FileName 属性是包含文件名还是包含变量（包含文件名）名。 选项为“文件名”(0) 和“来自变量的文件名”(1)。|  
+|AccessMode|Integer（枚举）|一个值，指定 FileName 属性是包含文件名还是包含变量（包含文件名）名。 选项为  “文件名”(0) 和“来自变量的文件名”  (1)。|  
 |FileName|String|原始文件目标要写入的文件的名称。|  
-|WriteOption|Integer（枚举）|一个指定原始文件目标是否删除具有相同名称的现有文件的值。 选项为“始终创建”(0)、“创建一次”(1)、“截断和追加”(3)、“追加”(2)。 此属性的默认值为“始终创建”(0)。|  
+|WriteOption|Integer（枚举）|一个指定原始文件目标是否删除具有相同名称的现有文件的值。 选项为“始终创建”(0)、“创建一次”(1)、“截断和追加”(3)、“追加”(2)。     此属性的默认值为“始终创建”(0)  。|  
   
 > [!NOTE]  
 >  追加操作要求追加数据的元数据与文件中已有数据的元数据匹配。  

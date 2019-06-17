@@ -1,6 +1,6 @@
 ---
 title: AT TIME ZONE (Transact-SQL) | Microsoft Docs
-ms.date: 11/16/2016
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,19 +17,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= sqlallproducts-allversions
-ms.openlocfilehash: ea975f49b5333c2ada88569d6ae3e6d84fac64e8
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: f366514d23a2de7180eb84d12997434f9414c427
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65981107"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836358"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  将 inputdate 转换为目标时区中相应的 datetimeoffset 值。 如果所提供的 inputdate 没有偏移信息，则函数应用时区偏移时会假设 inputdate 值位于目标时区中。 如果 inputdate 是作为 datetimeoffset 值提供的，则 AT TIME ZONE 子句会使用时区转换规则将其转换到目标时区中。  
+  将 inputdate  转换为目标时区中相应的 datetimeoffset  值。 如果所提供的 inputdate 没有偏移信息，则函数应用时区偏移时会假设 inputdate 值位于目标时区中   。 如果 inputdate 是作为 datetimeoffset 值提供的，则 AT TIME ZONE 子句会使用时区转换规则将其转换到目标时区中    。  
   
- AT TIME ZONE 实现依赖于 Windows 机制来跨时区转换 datetime 值。  
+  AT TIME ZONE 实现依赖于 Windows 机制来跨时区转换 datetime  值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,22 +40,22 @@ inputdate AT TIME ZONE timezone
 ```  
   
 ## <a name="arguments"></a>参数  
- inputdate  
- 一个表达式，可解析为 smalldatetime、datetime、datetime2 或 datetimeoffset 值。  
+  inputdate  
+ 一个表达式，可解析为 smalldatetime、datetime、datetime2 或 datetimeoffset 值     。  
   
- timezone  
+  timezone  
  目标时区的名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 依赖存储在 Windows 注册表中的时区。 计算机上安装的时区存储于以下注册表配置单元中：**KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**。 已安装的时区列表也会通过 [sys.time_zone_info (Transact-SQL)](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 视图公开。  
   
 ## <a name="return-types"></a>返回类型  
- 返回 datetimeoffset 的数据类型。  
+ 返回 datetimeoffset 的数据类型  。  
   
 ## <a name="return-value"></a>返回值  
- 目标时区中的 datetimeoffset 值。  
+ 目标时区中的 datetimeoffset  值。  
   
 ## <a name="remarks"></a>Remarks  
- AT TIME ZONE 应用特定规则来转换 smalldatetime、datetime 和 datetime2 数据类型中的输入值，这些值位于受 DST 更改影响的区间：  
+ AT TIME ZONE 应用特定规则来转换 smalldatetime、datetime 和 datetime2 数据类型中的输入值，这些值位于受 DST 更改影响的区间     ：  
   
--   如果将时钟向前拨，将当地时间出现与时钟调整持续时间相等的时差。 此持续时间通常为 1 小时，但它也可以是 30 或 45 分钟，具体取决于所在的时区。 落入该时差范围的时间点会按 DST 更改后的偏移量进行转换。  
+-   如果将时钟向前拨，将当地时间出现与时钟调整持续时间相等的时差。 此持续时间通常为 1 小时，但它也可以是 30 或 45 分钟，具体取决于所在的时区。 落入该时差范围的时间点会按 DST 更改后的偏移量进行转换  。  
   
     ```  
     /*  
@@ -86,7 +86,7 @@ inputdate AT TIME ZONE timezone
   
     ```  
   
-- 如果将时钟向后拨，则 2 个小时的本地时间将有 1 个小时的重叠。  在这种情况下，落入重叠范围的时间点会使用时钟更改之前的偏移量来调整：  
+- 如果将时钟向后拨，则 2 个小时的本地时间将有 1 个小时的重叠。  在这种情况下，落入重叠范围的时间点会使用时钟更改之前的偏移量来调整  ：  
   
     ```  
     /*  
@@ -118,14 +118,14 @@ inputdate AT TIME ZONE timezone
   
     ```  
 
-由于某些信息（例如时区规则）是在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 之外维护的，并且偶尔会发生变化，因此 AT TIME ZONE 函数被归类为非确定性函数。 
+由于某些信息（例如时区规则）是在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 之外维护的，并且偶尔会发生变化，因此 AT TIME ZONE 函数被归类为非确定性函数  。 
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. 将目标时区偏移量添加到 datetime 而不提供偏移信息  
- 当已知同一时区中已提供原始 datetime 值时，使用 AT TIME ZONE 基于时区规则添加偏移量：  
+ 当已知同一时区中已提供原始 datetime  值时，使用 AT TIME ZONE  基于时区规则添加偏移量：  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
@@ -137,21 +137,20 @@ FROM Sales.SalesOrderHeader;
 ### <a name="b-convert-values-between-different-time-zones"></a>B. 在不同时区之间转换值  
  以下示例在不同时区之间转换值：  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
 SELECT SalesOrderID, OrderDate,   
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,  
-    OrderDate AT TIME ZONE 'Pacific Standard Time'   
-    AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
+    OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
 FROM Sales.SalesOrderHeader;  
 ```  
   
 ### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. 使用本地时区查询时态表  
  以下示例演示从时态表中选择数据。  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   

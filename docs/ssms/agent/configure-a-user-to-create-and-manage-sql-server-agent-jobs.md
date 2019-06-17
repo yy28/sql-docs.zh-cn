@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1f161c586f190edc73ad538b2a0b9da4bc9d9421
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105851"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
@@ -32,9 +32,9 @@ ms.locfileid: "65105851"
 
 本主题介绍如何对用户进行配置以创建或执行 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。  
   
--   **开始之前：**[安全性](#Security)  
+-   **开始之前：** [安全性](#Security)  
   
--   **若要配置用户以创建和管理 SQL Server 代理作业，请使用：**[SQL Server Management Studio](#SSMS)  
+-   **若要配置用户以创建和管理 SQL Server 代理作业，请使用：** [SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>开始之前  
   
@@ -51,9 +51,9 @@ ms.locfileid: "65105851"
   
 1.  在 **对象资源管理器**中，展开某个服务器。  
   
-2.  展开 **“安全性”**，然后展开 **“登录名”**。  
+2.  展开 **“安全性”** ，然后展开 **“登录名”** 。  
   
-3.  右键单击要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的登录帐户，然后选择“属性”。  
+3.  右键单击要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的登录帐户，然后选择“属性”  。  
   
 4.  在 **“登录属性”** 对话框的 **“用户映射”** 页上，选择包含 **msdb**的行。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "65105851"
   
 1.  在 **对象资源管理器**中，展开某个服务器。  
   
-2.  展开 **“SQL Server 代理”**。  
+2.  展开 **“SQL Server 代理”** 。  
   
-3.  右键单击“代理”，再选择“新建代理”。  
+3.  右键单击“代理”  ，再选择“新建代理”  。  
   
 4.  在 **“新建代理帐户”** 对话框的 **“常规”** 页上，指定新代理的代理名称、凭据名称和说明。 请注意，在创建 SQL Server 代理的代理帐户之前，必须先创建一个凭据。 有关创建凭据的详细信息，请参阅[如何：创建凭据 (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) 和 [CREATE CREDENTIAL (Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)。  
   

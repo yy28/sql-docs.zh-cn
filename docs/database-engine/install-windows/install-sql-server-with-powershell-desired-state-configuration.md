@@ -12,15 +12,15 @@ author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031703"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63221968"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>使用 PowerShell Desired State Configuration 安装 SQL Server
 
-你是否曾经历过下述情况：使用 SQL Server 安装界面时，只是选择相同的按钮，输入相同的信息，而没有多加考虑？ 虽然安装已完成，但却忘了在 sysadmin 角色中指定 DBA 组。 然后，必须执行以下操作：
+你是否曾经历过下述情况：使用 SQL Server 安装界面时，只是选择相同的按钮，输入相同的信息，而没有多加考虑？ 虽然安装已完成，但却忘了在 sysadmin 角色中指定 DBA 组  。 然后，必须执行以下操作：
 * 进入单用户模式。
 * 添加适当的用户或组。
 * 在多用户模式下重新启动 SQL Server。
@@ -30,13 +30,13 @@ ms.locfileid: "54031703"
 
 请阅读 [PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview)。 通过使用 DSC，可以构建一个能在成百上千个服务器上重复使用的配置模板。 根据构建，可能需要调整几个安装参数。 但这并不是最重要的问题，因为你可以保持所有标准设置不变。 这消除了忘记输入重要参数的可能性。
 
-本文将使用 SqlServerDsc DSC 资源探索 Windows Server 2016 上 SQL Server 2017 独立实例的初始设置。 预先了解一些有关 DSC 的知识大有好处，因为我们不会探索 DSC 的工作原理。
+本文将使用 SqlServerDsc DSC 资源探索 Windows Server 2016 上 SQL Server 2017 独立实例的初始设置  。 预先了解一些有关 DSC 的知识大有好处，因为我们不会探索 DSC 的工作原理。
 
 本演练需要以下项：
 
 - 运行 Windows Server 2016 的计算机。
 - SQL Server 2017 安装介质。
-- SqlServerDsc DSC 资源。
+- SqlServerDsc DSC 资源  。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -47,7 +47,7 @@ ms.locfileid: "54031703"
 可使用 [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet 从 [PowerShell 库](https://www.powershellgallery.com/)下载 [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC 资源。 
 
 > [!NOTE]
-> 安装模块时，需确保“以管理员身份”运行 PowerShell。
+> 安装模块时，需确保“以管理员身份”运行 PowerShell  。
 
 ```PowerShell
 Install-Module -Name SqlServerDsc
@@ -90,7 +90,7 @@ Import-DscResource -ModuleName SqlServerDsc
 
 #### <a name="net-framework"></a>.NET Framework
 
-SQL Server 依赖于 .NET Framework。 因此我们需要确保在安装 SQL Server 前安装它。 WindowsFeature 资源用于安装 Net-Framework-45-Core Windows 功能：
+SQL Server 依赖于 .NET Framework。 因此我们需要确保在安装 SQL Server 前安装它。 WindowsFeature 资源用于安装 Net-Framework-45-Core Windows 功能   ：
 
 ```PowerShell
 WindowsFeature 'NetFramework45'
@@ -102,19 +102,19 @@ WindowsFeature 'NetFramework45'
 
 #### <a name="sqlsetup"></a>SqlSetup
 
-SqlSetup 资源用于告知 DSC 如何安装 SQL Server。 基本安装所需的参数如下所示：
+SqlSetup 资源用于告知 DSC 如何安装 SQL Server  。 基本安装所需的参数如下所示：
 
-- InstanceName。 实例的名称。 使用 MSSQLSERVER 作为默认实例。
-- **Features**。 要安装的功能。 在此示例中，我们仅安装 SQLEngine 功能。
+- InstanceName  。 实例的名称。 使用 MSSQLSERVER 作为默认实例  。
+- **Features**。 要安装的功能。 在此示例中，我们仅安装 SQLEngine 功能  。
 - **SourcePath**。 SQL 安装介质的路径。 在此示例中，我们将 SQL 安装介质存储在 `C:\SQL2017` 中。 网络共享可最大程度减少服务器上使用的空间。
-- **SQLSysAdminAccounts**。 要成为 sysadmin 角色成员的用户或组。 在此示例中，我们授予本地管理员组 sysadmin 访问权限。 
+- **SQLSysAdminAccounts**。 要成为 sysadmin 角色成员的用户或组  。 在此示例中，我们授予本地管理员组 sysadmin 访问权限  。 
 
 > [!NOTE]
 > 不建议在高安全性环境中使用此配置。
 
-有关 SqlSetup 上可用参数的完整列表和说明，请参阅 [SqlServerDsc GitHub 存储库](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup)。
+有关 SqlSetup 上可用参数的完整列表和说明，请参阅 [SqlServerDsc GitHub 存储库](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup)  。
 
-SqlSetup 资源仅安装 SQL Server，但不维护所应用的设置。 例如在安装时指定 SQLSysAdminAccounts 的情况。 管理员可以在 sysadmin 角色中添加或删除登录。 但 SqlSetup 资源不会受到影响。 如果希望 DSC 强制执行 sysadmin 角色的成员身份，请使用 [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) 资源。
+SqlSetup 资源仅安装 SQL Server，但不维护所应用的设置   。 例如在安装时指定 SQLSysAdminAccounts  的情况。 管理员可以在 sysadmin 角色中添加或删除登录  。 但 SqlSetup 资源不会受到影响  。 如果希望 DSC 强制执行 sysadmin 角色的成员身份，请使用 [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) 资源  。
 
 #### <a name="finish-configuration"></a>完成配置
 
@@ -159,11 +159,11 @@ Configuration SQLInstall
 SQLInstall
 ```
 
-在工作目录中创建一个名为 SQLInstall 的目录。 该目录包含一个名为 localhost.mof 的文件。 检查显示已编译的 DSC 配置的 MOF 的内容。
+在工作目录中创建一个名为 SQLInstall 的目录  。 该目录包含一个名为 localhost.mof 的文件  。 检查显示已编译的 DSC 配置的 MOF 的内容。
 
 ### <a name="deploy-the-configuration"></a>部署配置
 
-若要启动 SQL Server 的 DSC 部署，请调用 Start-DscConfiguration cmdlet。 为 cmdlet 提供了以下参数：
+若要启动 SQL Server 的 DSC 部署，请调用 Start-DscConfiguration cmdlet  。 为 cmdlet 提供了以下参数：
 
 - **Path**。 包含要部署的 MOF 文档的文件夹的路径。 示例为 `C:\SQLInstall`。
 - **Wait**。 等待配置作业完成。
@@ -174,13 +174,13 @@ SQLInstall
 Start-DscConfiguration -Path C:\SQLInstall -Wait -Force -Verbose
 ```
 
-随着配置的应用，详细输出将显示所发生的情况。 只要没有引发任何错误（红色文本），那么当屏幕上出现“操作‘调用 CimMethod’完成”时，应安装 SQL Server。
+随着配置的应用，详细输出将显示所发生的情况。 只要没有引发任何错误（红色文本），那么当屏幕上出现“操作‘调用 CimMethod’完成”时，应安装 SQL Server  。
 
 ## <a name="validate-installation"></a>验证安装
 
 ### <a name="dsc"></a>DSC
 
-[Test-DscConfiguration](https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlet 可以确定服务器的当前状态是否符合所需状态。 在此情况下，状态为 SQL Server 安装。 Test-DscConfiguration 的结果应为“True”：
+[Test-DscConfiguration](https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlet 可以确定服务器的当前状态是否符合所需状态。 在此情况下，状态为 SQL Server 安装。 Test-DscConfiguration 的结果应为“True”   ：
 
 ```PowerShell
 PS C:\> Test-DscConfiguration

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f93d078f9491a6105a7e96c4e443f14bae936bbb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104894"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>对查询结果中的行进行分组 (Visual Database Tools)
@@ -56,9 +56,9 @@ GROUP BY pub_id, type
   
 1.  通过将要汇总的表添加到“关系图”窗格中来启动查询。  
   
-2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”列。  
+2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”  列。  
   
-3.  将要分组的一列或多列添加到“条件”窗格中。 如果希望列显示在查询输出中，请确保为输出选中了“输出”列。  
+3.  将要分组的一列或多列添加到“条件”窗格中。 如果希望列显示在查询输出中，请确保为输出选中了“输出”  列。  
   
     查询和视图设计器将在 SQL 窗格内的语句中添加 GROUP BY 子句。 例如，SQL 语句可能类似以下形式：  
   
@@ -70,7 +70,7 @@ GROUP BY pub_id, type
   
 4.  将要聚合的一列或多列添加到“条件”窗格中。 确保将该列标记为输出。  
   
-5.  在要进行聚合的列的“分组依据”网格单元格中，选择适当的聚合函数。  
+5.  在要进行聚合的列的“分组依据”  网格单元格中，选择适当的聚合函数。  
   
     查询及视图设计器将自动为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅 [创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   

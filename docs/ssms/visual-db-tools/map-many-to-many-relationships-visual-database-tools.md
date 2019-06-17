@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6abe574ebfbe031d4a5ee1aa90698b566a4f84da
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096656"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>映射多对多关系 (Visual Database Tools)
@@ -34,9 +34,9 @@ ms.locfileid: "65096656"
   
 1.  在数据库关系图中，添加要在它们之间创建多对多关系的表。  
   
-2.  右键单击关系图，然后从快捷菜单中选择“新建表”创建第三个表。 该表将成为联接表。  
+2.  右键单击关系图，然后从快捷菜单中选择“新建表”  创建第三个表。 该表将成为联接表。  
   
-3.  在“选择名称”对话框中，更改系统分配的表名。 例如，`titles` 表和 `authors` 表之间的联接表现在命名为 `titleauthors`。  
+3.  在“选择名称”  对话框中，更改系统分配的表名。 例如，`titles` 表和 `authors` 表之间的联接表现在命名为 `titleauthors`。  
   
 4.  将其他两个表中的主键列复制到联接表中。 与任何其他表一样，您可以向此表中添加其他列。  
   

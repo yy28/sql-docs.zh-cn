@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a5115d9c66dd7baf091635b06ff413aa8c4ca736
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716897"
 ---
 # <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder（SSISDB 数据库）
@@ -34,11 +34,11 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
 ```  
   
 ## <a name="arguments"></a>参数  
- [@folder_name =] folder_name  
- 新文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
+ [@folder_name =] folder_name   
+ 新文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [@folder_name =] folder_id  
- 文件夹的唯一标识符 (ID)。 folder_id 为 bigint。  
+ [@folder_name =] folder_id   
+ 文件夹的唯一标识符 (ID)。 folder_id 为 bigint   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  返回文件夹标识符。  

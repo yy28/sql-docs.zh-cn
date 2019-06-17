@@ -22,16 +22,16 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b4c60ef0df71cdc88b8d78b8a6662b43b5856652
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944996"
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-一个函数，返回以弧度表示的角，其正弦为指定的 float 表达式。 也称为反正弦。
+一个函数，返回以弧度表示的角，其正弦为指定的 float 表达式  。 也称为反正弦  。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,13 +43,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>参数  
 *float_expression*  
-float 类型或可隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 仅介于 -1.00 到 1.00 之间的值有效。 对于超出此范围的值，将返回 NULL 且 ASIN 将报告域错误。
+float 类型或可隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 仅介于 -1.00 到 1.00 之间的值有效。 对于超出此范围的值，将返回 NULL 且 ASIN 将报告域错误。
   
 ## <a name="return-types"></a>返回类型
 **float**
   
 ## <a name="examples"></a>示例  
-此示例采用 float 表达式并返回指定角的 ASIN 值。
+此示例采用 float 表达式并返回指定角的 ASIN 值  。
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   

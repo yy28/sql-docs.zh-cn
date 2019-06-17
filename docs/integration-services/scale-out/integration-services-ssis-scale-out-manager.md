@@ -11,10 +11,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: c384881ffdc02af219de417434d882d41d34c1ef
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718764"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
@@ -32,7 +32,7 @@ Scale Out Manager 是一种管理工具，可用于在单一应用中管理完�
 ### <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1.从 SQL Server Management Studio 打开 Scale Out Manager
 打开 SQL Server Management Studio (SSMS) 并连接到 Scale Out Master 的 SQL Server 实例。
 
-在对象资源管理器中，右键单击“SSISDB”，并选择“管理 Scale Out”。
+在对象资源管理器中，右键单击“SSISDB”，并选择“管理 Scale Out”   。
 
 ![管理 Scale Out](media/manage-scale-out.PNG)
 
@@ -41,7 +41,7 @@ Scale Out Manager 是一种管理工具，可用于在单一应用中管理完�
 
 ### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2.通过运行 ManagementTool.exe 打开 Scale Out Manager
 
-在 `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management` 下找到 `ManagementTool.exe`。 右键单击“ManagementTool.exe”并选择“以管理员身份运行”。 
+在 `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management` 下找到 `ManagementTool.exe`。 右键单击“ManagementTool.exe”并选择“以管理员身份运行”   。 
 
 打开 Scale Out Manager 后，输入 Scale Out Master 的 SQL Server 实例名称并与其建立连接，以便管理 Scale Out 环境。
 
@@ -51,24 +51,24 @@ Scale Out Manager 是一种管理工具，可用于在单一应用中管理完�
 在 Scale Out Manager 中，可执行以下操作：
 
 ### <a name="enable-scale-out"></a>启用 Scale Out
-连接到 SQL Server 后，如果未启用 Scale Out，可以选择“启用”来启用它。
+连接到 SQL Server 后，如果未启用 Scale Out，可以选择“启用”来启用它  。
 
 ![在门户中启用 Scale Out](media/portal-enable-scale-out-new.PNG) 
 
 ### <a name="view-scale-out-master-status"></a>查看 Scale Out Master 状态
-Scale Out Master 的状态显示在“仪表板”页上。
+Scale Out Master 的状态显示在“仪表板”页上  。
 
 ![门户仪表板](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>查看 Scale Out Worker 状态
-Scale Out Master 的状态显示在“Worker 管理器”页上。 可选择每个辅助角色来查看单个状态。
+Scale Out Master 的状态显示在“Worker 管理器”页上  。 可选择每个辅助角色来查看单个状态。
 
 ![门户中的 Worker 管理器](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>添加 Scale Out Worker
-要添加 Scale Out Worker，请选择 Scale Out Worker 列表底部的“+”。 
+要添加 Scale Out Worker，请选择 Scale Out Worker 列表底部的“+”  。 
 
-输入要添加的 Scale Out Worker 的计算机名，然后单击“验证”。 Scale Out Manager 会检查当前用户是否有权访问 Scale Out Master 和 Scale Out Worker 计算机上的证书存储
+输入要添加的 Scale Out Worker 的计算机名，然后单击“验证”  。 Scale Out Manager 会检查当前用户是否有权访问 Scale Out Master 和 Scale Out Worker 计算机上的证书存储
 
 ![连接 Worker](media/connect-worker-new.PNG)
 
@@ -90,16 +90,16 @@ Scale Out Master 的状态显示在“Worker 管理器”页上。 可选择每�
 
 ![门户中的添加确认 2](media/portal-add-confirm2-new.PNG)
 
-选择“确认”复选框，然后选择“确定”开始添加 Scale Out Worker。
+选择“确认”复选框，然后选择“确定”开始添加 Scale Out Worker   。
 
 ### <a name="delete-a-scale-out-worker"></a>删除 Scale Out Worker
-要删除 Scale Out Worker，请选择 Scale Out Worker 并选择 Scale Out Worker 列表底部的“-”。
+要删除 Scale Out Worker，请选择 Scale Out Worker 并选择 Scale Out Worker 列表底部的“-”  。
 
 ### <a name="enable-or-disable-a-scale-out-worker"></a>启用或禁用 Scale Out Worker
-要启用或禁用 Scale Out Worker，请选择 Scale Out Worker 并选择“启用 Worker”或“禁用 Worker”。 如果辅助角色不在脱机状态，则 Scale Out Manager 中显示的辅助角色状态会发生相应更改。
+要启用或禁用 Scale Out Worker，请选择 Scale Out Worker 并选择“启用 Worker”或“禁用 Worker”   。 如果辅助角色不在脱机状态，则 Scale Out Manager 中显示的辅助角色状态会发生相应更改。
 
 ## <a name="edit-a-scale-out-worker-description"></a>编辑 Scale Out Worker 描述
-要编辑 Scale Out Worker 的描述，请选择 Scale Out Worker 并选择“编辑”。 完成编辑描述后，请选择“保存”。
+要编辑 Scale Out Worker 的描述，请选择 Scale Out Worker 并选择“编辑”  。 完成编辑描述后，请选择“保存”  。
 
 ![在门户中保存 Worker](media/portal-save-worker-new.PNG)
 

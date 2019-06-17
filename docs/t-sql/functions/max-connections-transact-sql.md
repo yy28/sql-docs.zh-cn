@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: afa109292950aff8565484673e9fe50af0b1b1a4
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948286"
 ---
 # <a name="x40x40maxconnections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "65948286"
 ## <a name="remarks"></a>Remarks  
  实际允许的用户连接数还依赖于所安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本以及应用程序和硬件的限制。  
   
- 若要重新配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以减少允许的连接数，请使用 sp_configure。  
+ 若要重新配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以减少允许的连接数，请使用 sp_configure  。  
   
 ## <a name="examples"></a>示例  
  以下示例显示如何返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的最大用户连接数。 此示例假定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 没有针对更少的用户连接进行重新配置。  

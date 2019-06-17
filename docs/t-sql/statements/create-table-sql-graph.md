@@ -34,10 +34,10 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e61c1dc4501dfdfe45d10b2fda4434be2f35e7b2
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503115"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE（SQL 图形）
@@ -64,14 +64,14 @@ CREATE TABLE
 ## <a name="arguments"></a>参数  
 本文档仅列出与 SQL 图形相关的参数。 有关受支持参数的完整列表和说明，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
- database_name    
- 要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称。 如果未指定，则 database_name 默认为当前数据库。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限。  
+ database_name     
+ 要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称  。 如果未指定，则 database_name 默认为当前数据库  。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限  。  
   
- schema_name    
+ schema_name     
  新表所属架构的名称。  
   
  *table_name*    
- 是节点或边界表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 除了本地临时表名（以单个数字符号 (#) 为前缀的名称）不能超过 116 个字符外，table_name 最多可包含 128 个字符。  
+ 是节点或边界表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 除了本地临时表名（以单个数字符号 (#) 为前缀的名称）不能超过 116 个字符外，table_name 最多可包含 128 个字符  。  
   
  NODE   
  创建节点表。

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8835ff0bb35cb514ba506506b232174565ff3791
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705173"
 ---
 # <a name="publication-peer-to-peer-replication"></a>发布（对等复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47707145"
   
 ## <a name="options"></a>选项  
  **发布服务器**  
- 显示连接的服务器。 若要连接到不同的服务器，请选择 **“查找 SQL Server 发布服务器”**。  
+ 显示连接的服务器。 若要连接到不同的服务器，请选择 **“查找 SQL Server 发布服务器”** 。  
   
  **数据库和发布**  
  显示特定服务器上的所有数据库，该服务器至少包含一个为对等复制而启用的发布。 选择一个发布以继续。  

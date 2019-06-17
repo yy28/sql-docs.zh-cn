@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28f2c5ecd2e25e9e3bbdd59cd8ea79b58b756cb7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726910"
 ---
 # <a name="error-handling-in-data"></a>数据中的错误处理
@@ -73,12 +73,12 @@ ms.locfileid: "65726910"
  **错误**  
  如果适用，指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截断**  
  如果适用，指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Description**  
  查看操作的说明。  
@@ -92,7 +92,7 @@ ms.locfileid: "65726910"
 ## <a name="errors-are-either-failures-or-truncations"></a>错误为失败或截断  
  错误属于两个类别之一：错误或截断。  
   
- **“错误”**。 错误指示确定的失败，并且生成 NULL 结果。 此类错误可以包括数据转换错误或表达式计算错误。 例如，尝试将包含字母字符的字符串转换为数字将导致错误。 数据转换、表达式计算和对变量、属性和数据列的表达式结果分配可能会由于非法转换和不兼容的数据类型而失败。 有关详细信息，请参阅[转换 (SSIS 表达式)](../../integration-services/expressions/cast-ssis-expression.md)、[表达式中的 Integration Services 数据类型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)和 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
+ **“错误”** 。 错误指示确定的失败，并且生成 NULL 结果。 此类错误可以包括数据转换错误或表达式计算错误。 例如，尝试将包含字母字符的字符串转换为数字将导致错误。 数据转换、表达式计算和对变量、属性和数据列的表达式结果分配可能会由于非法转换和不兼容的数据类型而失败。 有关详细信息，请参阅[转换 (SSIS 表达式)](../../integration-services/expressions/cast-ssis-expression.md)、[表达式中的 Integration Services 数据类型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)和 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  **截断**。 截断的严重程度小于错误。 截断生成的结果可能是有用的甚至是所希望的。 您可以将截断视为错误或可接受的情况。 例如，如果将 15 个字符的字符串插入只有一个字符宽度的列，您可以截断该字符串。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "65726910"
   
  如果没有相应的错误说明和列名，这两个数值可能没有多大用处。 下面是一些用于获取错误说明和列名的方法。  
   
--   可以通过将“数据查看器”附加到错误输出查看错误说明和列名。 在 SSIS 设计器中，右键单击通向错误输出的红色箭头，然后选择“启用数据查看器”。  
+-   可以通过将“数据查看器”附加到错误输出查看错误说明和列名。 在 SSIS 设计器中，右键单击通向错误输出的红色箭头，然后选择“启用数据查看器”。   
   
 -   可以通过启用日志记录并选择 **DiagnosticEx** 事件来查找列名称。 此事件将数据流列映射写入日志。 然后可以在此列映射中从其标识符查找列名称。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。 有关日志记录的详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   

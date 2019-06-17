@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79756562767943d89efd199007941cf9bf29b702
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716169"
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project（SSISDB 数据库）
@@ -34,24 +34,24 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name  
- 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
+ [ @folder_name = ] folder_name   
+ 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)   。  
   
- [ @project_name = ] project_name  
- 项目的名称。 project_name 为 nvarchar(128)。  
+ [ @project_name = ] project_name   
+ 项目的名称。 project_name 为 nvarchar(128)   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 该项目的二进制流作为 varbinary(MAX) 返回。 如果找不到文件夹或项目，则不返回任何结果。  
+ 该项目的二进制流作为 varbinary(MAX) 返回  。 如果找不到文件夹或项目，则不返回任何结果。  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   ssis_admin 数据库角色的成员资格   
   
 -   **sysadmin** 服务器角色的成员资格  
   

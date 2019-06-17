@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 20253a1bb82bba8b11b24eafbc1c26010abdeb27
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714681"
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters（SSISDB 数据库）
@@ -42,7 +42,7 @@ ms.locfileid: "65714681"
 |default_value|**sql_variant**|服务器上当前使用的默认值。|  
 |value_type|**char(1)**|指示参数值的类型。 当 parameter_value 为文本值时，此字段显示 `V`；当该值通过引用环境对象来分配时，此字段显示 `R`。|  
 |value_set|**bit**|如果值为 `1`，则已分配参数值。 如果值为 `0`，则尚未分配参数值。|  
-|referenced_variable_name|**nvarchar(128)**|分配给参数值的环境变量的名称。 默认值为 NULL。|  
+|referenced_variable_name|**nvarchar(128)**|分配给参数值的环境变量的名称。 默认值为 NULL  。|  
 |validation_status|**char(1)**|标识为仅供参考。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
 |last_validation_time|**datetimeoffset(7)**|标识为仅供参考。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65714681"
   
 -   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色中的成员资格。  
+-   sysadmin 服务器角色中的成员资格  。  
   
  将实施行级安全性；只显示您有权查看的行。  
   

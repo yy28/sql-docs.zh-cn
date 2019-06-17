@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: afb1f780509968536b12c60bc50c4d7e3f537c49
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717400"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>使用 Transact-SQL 运行来自 SSMS 的 SSIS 包
@@ -46,8 +46,8 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 要在 Azure SQL 数据库上运行包，请获取连接到 SSIS 目录数据库 (SSISDB) 所需的连接信息。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
 
 1. 登录到 [Azure 门户](https://portal.azure.com/)。
-2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库。 
-3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上。 
+2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库   。 
+3. 在数据库的“概述”  页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上  。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
 
 ## <a name="connect-to-the-ssisdb-database"></a>连接到 SSISDB 数据库
@@ -56,7 +56,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 
 1. 打开 SQL Server Management Studio。
 
-2. 在“连接到服务器”对话框中，输入以下信息：
+2. 在“连接到服务器”对话框中，输入以下信息  ：
 
    | 设置       | 建议的值 | 详细信息 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -66,14 +66,14 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
    | **登录** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
 
-3.  单击 **“连接”**。 对象资源管理器窗口在 SSMS 中打开。
+3.  单击 **“连接”** 。 对象资源管理器窗口在 SSMS 中打开。
 
-4. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”，查看 SSIS 目录数据库中的对象。
+4. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”，查看 SSIS 目录数据库中的对象   。
 
 ## <a name="run-a-package"></a>运行包
 运行以下 Transact-SQL 代码以便运行 SSIS 包。
 
-1.  在 SSMS 中，打开新的查询窗口并粘贴以下代码。 （此代码是由 SSMS “执行包”对话框中的“脚本”选项生成的代码。）
+1.  在 SSMS 中，打开新的查询窗口并粘贴以下代码。 （此代码是由 SSMS “执行包”  对话框中的“脚本”  选项生成的代码。）
 
 2.  为系统更新 `catalog.create_execution` 存储过程中的参数值。
 
@@ -81,7 +81,7 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 
 4.  运行该脚本。
 
-5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目。
+5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目  。
 
 ```sql
 Declare @execution_id bigint

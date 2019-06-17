@@ -20,11 +20,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62930872"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 排序规则名称 (Transact-SQL)
 
@@ -53,29 +53,29 @@ CollationDesignator_<ComparisonStyle>
 指定 Windows 排序规则使用的基本排序规则。 基本排序规则包括以下内容：
 
 - 指定按字典排序时应用的排序和比较规则。 排序规则基于字母表或语言。
-- 用于存储 varchar数据 的代码页。
+- 用于存储 varchar  数据 的代码页。
 
 以下是一些示例：
 
 - Latin1\_General 或法语：都使用代码页 1252。
 - 土耳其语：使用代码页 1254。
 
-CaseSensitivity  
-CI 指定不区分大小写，CS 指定区分大小写。
+CaseSensitivity   
+CI 指定不区分大小写，CS 指定区分大小写   。
 
 *AccentSensitivity*  
-AI 指定不区分重音，AS 指定区分重音。
+AI 指定不区分重音，AS 指定区分重音   。
 
-KanatypeSensitive  
-省略此选项指定不区分假名类型，KS 指定区分假名类型。
+KanatypeSensitive   
+省略此选项指定不区分假名类型，KS 指定区分假名类型  。
 
-WidthSensitivity  
-省略此选项指定不区分全半角，WS 指定区分全半角。
+WidthSensitivity   
+省略此选项指定不区分全半角，WS 指定区分全半角  。
 
-VariationSelectorSensitivity  
+VariationSelectorSensitivity   
 - **适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 起 
 
-- 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器。
+- 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器  。
 
 **UTF8**  
 - **适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   

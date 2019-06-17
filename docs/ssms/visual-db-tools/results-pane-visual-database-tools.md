@@ -24,15 +24,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ec20772c86ca651262c5e45821869bd61beb50c1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099237"
 ---
 # <a name="results-pane-visual-database-tools"></a>“结果”窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-“结果”窗格显示最近执行的 SELECT 查询的结果。 （其他类型查询的结果会在消息框中显示。）若要打开“结果”窗格，请打开或创建一个查询或视图，或者返回某个表的数据。 如果默认情况下不显示“结果”窗格，请在 **“查询设计器”** 菜单中，指向 **“窗格”**，再单击 **“结果”**。  
+“结果”窗格显示最近执行的 SELECT 查询的结果。 （其他类型查询的结果会在消息框中显示。）若要打开“结果”窗格，请打开或创建一个查询或视图，或者返回某个表的数据。 如果默认情况下不显示“结果”窗格，请在 **“查询设计器”** 菜单中，指向 **“窗格”** ，再单击 **“结果”** 。  
   
 ## <a name="what-you-can-do-in-the-results-pane"></a>可以在“结果”窗格中执行的操作  
   

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fbd30a8b0e112d74bf9bd0d009592d753688fadd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099542"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>演练：扩展数据库项目部署以修改部署计划
@@ -60,19 +60,19 @@ ms.locfileid: "65099542"
   
 2.  将文件“Class1.cs”重命名为“SqlRestartableScriptContributor.cs”。  
   
-3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”。  
+3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”  。  
   
-4.  在“框架”选项卡上，选择“System.ComponentModel.Composition”。  
+4.  在“框架”选项卡上，选择“System.ComponentModel.Composition”  。  
   
-5.  单击“浏览”并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies 目录，选择 Microsoft.SqlServer.TransactSql.ScriptDom.dll，然后单击“确定”。  
+5.  单击“浏览”  并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies  目录，选择 Microsoft.SqlServer.TransactSql.ScriptDom.dll  ，然后单击“确定”  。  
   
-6.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”。 单击“浏览”，并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin 文件夹。 选择“Microsoft.SqlServer.Dac.dll”、“Microsoft.SqlServer.Dac.Extensions.dll”和“Microsoft.Data.Tools.Schema.Sql.dll”条目，并单击“添加”，然后单击“确定”。  
+6.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”  。 单击“浏览”  ，并导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin  文件夹。 选择“Microsoft.SqlServer.Dac.dll”  、“Microsoft.SqlServer.Dac.Extensions.dll”  和“Microsoft.Data.Tools.Schema.Sql.dll”  条目，并单击“添加”  ，然后单击“确定”  。  
   
 接下来，开始向类中添加代码。  
   
 #### <a name="to-define-the-sqlrestartablescriptcontributor-class"></a>定义 SqlRestartableScriptContributor 类  
   
-1.  在代码编辑器中，更新 class1.cs 文件以匹配以下 using 语句：  
+1.  在代码编辑器中，更新 class1.cs 文件以匹配以下 using  语句：  
   
     ```csharp  
     using System;  
@@ -619,23 +619,23 @@ ms.locfileid: "65099542"
   
 #### <a name="to-sign-and-build-the-assembly"></a>生成程序集并对其进行签名  
   
-1.  在“项目”菜单上，单击“MyOtherDeploymentContributor 属性”。  
+1.  在“项目”  菜单上，单击“MyOtherDeploymentContributor 属性”  。  
   
 2.  单击“签名”  选项卡。  
   
-3.  单击“对程序集签名” 。  
+3.  单击“对程序集签名”  。  
   
-4.  在“选择强名称密钥文件”中，单击 **<New>**。  
+4.  在“选择强名称密钥文件”  中，单击 **<New>** 。  
   
-5.  在“创建强名称密钥”  对话框的“密钥文件名称” 中，键入“MyRefKey” 。  
+5.  在“创建强名称密钥”  对话框的“密钥文件名称”  中，键入“MyRefKey”  。  
   
 6.  （可选）可以为强名称密钥文件指定密码。  
   
-7.  单击“确定” 。  
+7.  单击“确定”  。  
   
-8.  在“文件”  菜单上，单击“全部保存” 。  
+8.  在“文件”  菜单上，单击“全部保存”  。  
   
-9. 在“生成”  菜单上，单击“生成解决方案” 。  
+9. 在“生成”  菜单上，单击“生成解决方案”  。  
   
     接下来，您必须安装程序集，以便在部署 SQL 项目时加载该程序集。  
   
@@ -646,7 +646,7 @@ ms.locfileid: "65099542"
   
 1.  接下来，您要将程序集信息复制到 Extensions 目录中。 Visual Studio 在启动后将识别 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录和子目录中的任何扩展文件，并使其可供使用。  
   
-2.  将 MyOtherDeploymentContributor.dll 程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
+2.  将 MyOtherDeploymentContributor.dll  程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
   
 ## <a name="TestDeploymentContributor"></a>运行或测试部署参与者  
 若要运行或测试部署参与者，您必须执行以下任务：  
@@ -707,11 +707,11 @@ ms.locfileid: "65099542"
   
     1.  打开 Visual Studio 并打开包含您的 SQL 项目的解决方案。  
   
-    2.  在解决方案资源管理器中右键单击项目，并选择“发布…”选项。  
+    2.  在解决方案资源管理器中右键单击项目，并选择“发布…”选项  。  
   
     3.  设置要发布到的服务器和数据库的名称。  
   
-    4.  从对话框底部的选项中选择“生成脚本”。 这将创建可用于部署的脚本。 我们将检查此脚本以验证是否已添加 IF 语句以使脚本可重新启动。  
+    4.  从对话框底部的选项中选择“生成脚本”  。 这将创建可用于部署的脚本。 我们将检查此脚本以验证是否已添加 IF 语句以使脚本可重新启动。  
   
     5.  查看生成的部署脚本。 在标记为“预先部署脚本模板”的节的前面，您将看到类似于下列 Transact-SQL 语法的内容：  
   
@@ -780,7 +780,7 @@ ms.locfileid: "65099542"
 > [!NOTE]  
 > 若要使用定义的 DeploymentContributors 属性成功部署从项目生成的 dacpacs，则必须在将使用的计算机上安装包含部署参与者的 DLL。 这是因为这些 DLL 已标记为成功完成部署所需的项。  
 >   
-> 若要避开此要求，请从 .sqlproj 文件中排除部署参与者。 相反，请将 SqlPackage 与 AdditionalDeploymentContributors 参数结合使用来指定参与者在部署期间运行。 这在您仅希望在特定情况下（如部署到特定服务器）使用参与者时会很有用。  
+> 若要避开此要求，请从 .sqlproj 文件中排除部署参与者。 相反，请将 SqlPackage 与 AdditionalDeploymentContributors  参数结合使用来指定参与者在部署期间运行。 这在您仅希望在特定情况下（如部署到特定服务器）使用参与者时会很有用。  
   
 ## <a name="next-steps"></a>Next Steps  
 您可以在执行部署计划前尝试对该计划进行其他类型的修改。 您可能需要进行的其他类型的修改包括：  

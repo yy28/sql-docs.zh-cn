@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1f35db71f46a6b6147a6a2758878c25b890ab9ca
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503703"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
@@ -41,7 +41,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
 ```  
   
 ## <a name="arguments"></a>参数  
- IF EXISTS  
+ IF EXISTS   
  **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  只有在序列已存在时才对其进行有条件地删除。  
@@ -52,8 +52,8 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
  *schema_name*  
  序列对象所属架构的名称。  
   
- sequence_name  
- 要删除的序列的名称。 类型为 sysname。  
+ sequence_name   
+ 要删除的序列的名称。 类型为 sysname  。  
   
 ## <a name="remarks"></a>Remarks  
  在生成编号后，序列对象与其生成的编号之间没有延续关系，因此可以删除序列对象，即使生成的编号仍在使用。  

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a67815d20a1275d8ae77042c89f76189748d336
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713727"
 ---
 # <a name="debugging-data-flow"></a>调试数据流
@@ -77,7 +77,7 @@ ms.locfileid: "65713727"
   你可以使用 [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **SSISDB** 数据库视图分析包的数据流。 此视图在每当数据流组件将数据发送到下游组件时显示一行。 这些信息可用来进一步了解发送到每个组件的行。  
   
 > [!NOTE]  
->  日志记录级别必须设置为“详细”，才能通过 catalog.execution_data_statistics 视图捕获信息。  
+>  日志记录级别必须设置为“详细”  ，才能通过 catalog.execution_data_statistics 视图捕获信息。  
   
  以下示例显示在包的组件之间发送的行数。  
   
@@ -136,7 +136,7 @@ order by source_component_name desc
   
 5.  在 **“配置错误输出”** 对话框中，为组件输入中的每列在 **“错误”** 列和 **“截断”** 列中选择一个操作。  
   
-6.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
+6.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”** 。  
   
 #### <a name="to-add-an-error-output-using-the-editor-dialog-box-for-the-component"></a>使用组件的编辑器对话框添加错误输出  
   
@@ -148,17 +148,17 @@ order by source_component_name desc
   
 4.  双击要在其中配置错误输出的数据流组件，然后根据不同组件，执行下列步骤之一：  
   
-    -   单击 **“配置错误输出”**。  
+    -   单击 **“配置错误输出”** 。  
   
-    -   单击 **“错误输出”**。  
+    -   单击 **“错误输出”** 。  
   
 5.  为每列设置 **“错误”** 选项。  
   
 6.  为每列设置 **“截断”** 选项。  
   
-7.  单击“确定” 。  
+7.  单击“确定”  。  
   
-8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
+8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”** 。  
   
 ### <a name="configuring-error-output-columns"></a>配置错误输出列  
  若要配置错误输出列，必须使用 **“高级编辑器”** 对话框中的 **“输入属性和输出属性”** 选项卡。  
@@ -171,9 +171,9 @@ order by source_component_name desc
   
 3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，单击 **“数据流”** 选项卡。  
   
-4.  右键单击要配置其错误输出列的组件，再单击“显示高级编辑器”。  
+4.  右键单击要配置其错误输出列的组件，再单击“显示高级编辑器”  。  
   
-5.  单击“输入和输出属性”选项卡并展开“\<组件名称> 错误输出”，然后展开“输出列”。  
+5.  单击“输入和输出属性”  选项卡并展开“\<组件名称> 错误输出”  ，然后展开“输出列”  。  
   
 6.  单击某列，然后更新其属性。  
   
@@ -182,7 +182,7 @@ order by source_component_name desc
   
 7.  单击“确定” **。**  
   
-8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
+8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”** 。  
 
 ## <a name="add_viewer"></a> 将数据查看器添加到数据流
   本主题介绍如何在数据流中添加和配置数据查看器。 数据查看器可以显示在两个数据流组件之间移动的数据。 例如，数据查看器可以显示在数据流中的转换修改数据之前从数据源中提取的数据。  
@@ -203,20 +203,20 @@ order by source_component_name desc
   
 4.  单击要将数据查看器附加到其数据流的数据流任务，然后单击 **“数据流”** 选项卡。  
   
-5.  右键单击两个数据流组件之间的路径，然后单击“编辑”。  
+5.  右键单击两个数据流组件之间的路径，然后单击“编辑”。   
   
-6.  在 **“常规”** 页上，可以查看和编辑路径属性。 例如，从“路径批注”下拉列表中，你可以选择要在路径旁边显示的批注。  
+6.  在 **“常规”** 页上，可以查看和编辑路径属性。 例如，从“路径批注”下拉列表中，你可以选择要在路径旁边显示的批注。   
   
 7.  在 **“元数据”** 页上，您可以查看列元数据并将元数据复制到剪贴板。  
   
-8.  在 **“数据查看器”** 页上，单击 **“启用数据查看器”**。  
+8.  在 **“数据查看器”** 页上，单击 **“启用数据查看器”** 。  
   
 9. 在“要显示的列”区域中，选择要在数据查看器中显示的列。 默认情况下，所有可用列都处于选定状态并在 **“已显示的列”** 列表中列出。 选择不希望使用的列，然后单击向左键，将它们移到 **“未使用的列”** 列表中。  
   
     > [!NOTE]  
     >  在网格中，表示 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值显示为 ISO 8601 格式字符串，空间分隔符将替代 **T** 分隔符。 表示 DT_DATE 和 DT_FILETIME 数据类型的值包括七位秒小数。 因为 DT_FILETIME 数据类型仅存储三位秒小数，网格会将其余四位显示为零。 表示 DT_DBTIMESTAMP 数据类型的值包含三位秒小数。 对于表示 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值，秒小数的数字位数与为列数据类型指定的小数位数对应。 有关 ISO 8601 格式的详细信息，请参阅 [Date and Time Formats](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)。 有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-10. 单击“确定” 。  
+10. 单击“确定”  。  
 
 ## <a name="data-flow-taps"></a>数据分流
  运行时，可在包的数据流路径上添加数据分流点，并将数据分流点的输出定向到外部文件。 若要使用此功能，您必须使用项目部署工具将 SSIS 项目部署到 SSIS 服务器。 将包部署到服务器之后，需要对 SSISDB 数据库执行 T-SQL 脚本，以便在执行该包之前添加数据分流点。 下面是一个示例方案：  
@@ -240,13 +240,13 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  您可以不键入 SQL 语句，而是通过执行以下步骤来生成执行包脚本：  
   
-1.  右键单击“Package.dtsx”，然后单击“执行”。  
+1.  右键单击“Package.dtsx”  ，然后单击“执行”  。  
   
 2.  单击 **“脚本”** 工具栏按钮以生成脚本。  
   
 3.  现在，在 start_execution 调用的前面添加 add_data_tap 语句。  
   
- add_data_tap 存储过程的 task_package_path 参数对应于 Visual Studio 中数据流任务的 PackagePath 属性。 在 Visual Studio 中，右键单击“数据流任务”，然后单击“属性”启动“属性”窗口。  请记下 **PackagePath** 属性的值，以将其用作 add_data_tap 存储过程调用的 task_package_path 参数值。  
+ add_data_tap 存储过程的 task_package_path 参数对应于 Visual Studio 中数据流任务的 PackagePath 属性。 在 Visual Studio 中，右键单击“数据流任务”  ，然后单击“属性”  启动“属性”窗口。  请记下 **PackagePath** 属性的值，以将其用作 add_data_tap 存储过程调用的 task_package_path 参数值。  
   
  add_data_tap 存储过程的 dataflow_path_id_string 参数对应于您要添加数据分流点的数据流路径的 IdentificationString 属性。 若要获取 dataflow_path_id_string，请单击数据流路径（数据流中任务间的箭头），并记下“属性”窗口中 **IdentificationString** 属性的值。  
   

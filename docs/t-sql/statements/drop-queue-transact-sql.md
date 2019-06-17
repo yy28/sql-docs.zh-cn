@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 297ef4c06b88d02e3c1a28829c7223d49c8ecee6
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503706"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
@@ -49,12 +49,12 @@ DROP QUEUE <object>
   
 ## <a name="arguments"></a>参数  
  *database_name*  
- 数据库的名称，此数据库包含要删除的队列。 如果未提供 database_name，则默认为当前数据库。  
+ 数据库的名称，此数据库包含要删除的队列。 如果未提供 database_name，则默认为当前数据库  。  
   
- schema_name（对象）  
- 架构的名称，此架构拥有要删除的队列。 如果未提供 schema_name，则默认为当前用户的默认架构。  
+ schema_name（对象）   
+ 架构的名称，此架构拥有要删除的队列。 如果未提供 schema_name，则默认为当前用户的默认架构  。  
   
- queue_name  
+ queue_name   
  要删除的队列的名称。  
   
 ## <a name="remarks"></a>Remarks  

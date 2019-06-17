@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 63491a3ba15f9a52e7180597bce7f6295927961f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096404"
 ---
 # <a name="job-activity-monitor"></a>作业活动监视器
@@ -28,14 +28,14 @@ ms.locfileid: "65096404"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此页可以查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的当前活动。 单击“筛选器”可以限制显示的作业。 “代理作业活动”网格是只读的。 单击列标题可以对网格进行排序。 若要修改作业，请双击该作业以打开“作业属性”对话框。 右键单击网格中的作业，可以启动作业以运行其所有作业步骤，在特定作业步骤处启动作业，禁用或启用作业，刷新作业，删除作业，查看作业的历史记录以及查看作业属性。 单击“刷新”可以将网格更新为当前信息。  
+使用此页可以查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的当前活动。 单击“筛选器”  可以限制显示的作业。 “代理作业活动”  网格是只读的。 单击列标题可以对网格进行排序。 若要修改作业，请双击该作业以打开“作业属性”  对话框。 右键单击网格中的作业，可以启动作业以运行其所有作业步骤，在特定作业步骤处启动作业，禁用或启用作业，刷新作业，删除作业，查看作业的历史记录以及查看作业属性。 单击“刷新”  可以将网格更新为当前信息。  
   
 ## <a name="options"></a>选项  
 **名称**  
 作业的名称。  
   
 **已启用**  
-说明作业是已启用（“是”）还是未启用（“否”）。  
+说明作业是已启用（“是”  ）还是未启用（“否”  ）。  
   
 **状态***  
 作业的当前状态。  
@@ -53,16 +53,16 @@ ms.locfileid: "65096404"
 分配给作业的作业类别。  
   
 **可运行**  
-在作业可以运行时为“是”；在作业无法运行时为“否”。 如果作业没有步骤或没有目标服务器，则无法运行该作业。  
+在作业可以运行时为“是”  ；在作业无法运行时为“否”  。 如果作业没有步骤或没有目标服务器，则无法运行该作业。  
   
 **已计划**  
-在作业已分配给作业计划时为“是”；在作业没有计划时为“否”。  
+在作业已分配给作业计划时为“是”  ；在作业没有计划时为“否”  。  
   
 *只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 固定服务器角色和服务器管理员组的成员才能看到此列中的值。 SQLAgentOperatorRole 角色的成员不能看到此列中的值。  
   
 #### <a name="to-open-the-job-activity-monitor"></a>打开作业活动监视器  
   
--   在“对象资源管理器”中，展开服务器，展开“SQL Server 代理”，右键单击“作业活动监视器”，再单击“查看作业活动”。  
+-   在“对象资源管理器”  中，展开服务器，展开“SQL Server 代理”  ，右键单击“作业活动监视器”  ，再单击“查看作业活动”  。  
   
 ## <a name="see-also"></a>另请参阅  
 [监视作业活动](../../ssms/agent/monitor-job-activity.md)  

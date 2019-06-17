@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3f2d77bc9eaab5b49933b672bbb0cba27b816538
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983216"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
@@ -42,12 +42,12 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>参数  
  GLOBAL  
- 指定 cursor_name 是指全局游标。  
+ 指定 cursor_name 是指全局游标  。  
   
- cursor_name  
- 打开的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标。  
+ cursor_name   
+ 打开的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标    。  
   
- cursor_variable_name  
+ cursor_variable_name   
  与打开的游标关联的游标变量的名称。  
   
 ## <a name="examples"></a>示例  

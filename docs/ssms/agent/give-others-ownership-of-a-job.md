@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d6b4715618634f6bc24bbc79eeb785cb2e71a76a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096514"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
@@ -31,7 +31,7 @@ ms.locfileid: "65096514"
 
 本主题介绍如何将 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的所有权重新指派给另一用户。  
   
--   **开始之前：**[限制和局限](#Restrictions)、[安全性](#Security)  
+-   **开始之前：** [限制和局限](#Restrictions)、[安全性](#Security)  
   
 -   **若要将作业所有权授予其他人，请使用：**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "65096514"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，再展开“作业”，右键单击相应作业，然后单击“属性”。  
+2.  展开“SQL Server 代理”  ，再展开“作业”  ，右键单击相应作业，然后单击“属性”  。  
   
 3.  在 **“所有者”** 列表中，选择一个登录名。 您必须是系统管理员才可以更改作业的所有者。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65096514"
   
 1.  在对象资源管理器中，连接到数据库引擎实例，然后展开该实例。  
   
-2.  在工具栏上，单击 **“新建查询”**。  
+2.  在工具栏上，单击 **“新建查询”** 。  
   
 3.  在查询窗口中，输入以下使用 [sp_manage_jobs_by_login (TRANSACT-SQL)](https://msdn.microsoft.com/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) 系统存储过程的语句。 以下示例将所有作业从 `danw` 重新分配给 `françoisa`。  
   

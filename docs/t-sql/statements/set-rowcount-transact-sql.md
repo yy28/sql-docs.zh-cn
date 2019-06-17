@@ -29,11 +29,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 539cc61e73d56d4e1de8a1710294f760d109d5d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774155"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62816970"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>参数  
- number | @number_var  
+ number | @number_var    
  在停止特定查询之前要处理的行数（整数）。  
   
 ## <a name="remarks"></a>Remarks  
@@ -65,7 +65,7 @@ SET ROWCOUNT { number | @number_var }
   
  SET ROWCOUNT 的设置是在执行时或运行时设置，而不是在分析时设置。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  

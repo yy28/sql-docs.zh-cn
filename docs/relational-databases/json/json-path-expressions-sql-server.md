@@ -15,11 +15,11 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: afa7622b5d8b71949018091862a70bc638b48c80
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025918"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716574"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路径表达式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "56025918"
 ## <a name="parts-of-a-path-expression"></a>路径表达式的各部分
  路径表达式由两部分组成。  
   
-1.  可选的[路径模式](#PATHMODE)，其值为 lax 或 strict。  
+1.  可选的[路径模式](#PATHMODE)，其值为 lax 或 strict   。  
   
 2.  [路径](#PATH) 本身。  
 
 ##  <a name="PATHMODE"></a> Path mode  
  在路径表达式的开头，可以选择指定关键字 **lax** 或 **strict**来声明路径模式。 默认值为 **lax**。  
   
--   在 lax 模式下，如果路径表达式包含错误，函数将返回空值。 例如，如果请求值 $.name，但 JSON 文本不包含 name 键，函数将返回 null，但不会引发错误。  
+-   在 lax 模式下，如果路径表达式包含错误，函数将返回空值  。 例如，如果请求值 $.name，但 JSON 文本不包含 name 键，函数将返回 null，但不会引发错误   。  
   
--   在 strict 模式下，如果路径表达式包含错误，函数将引发错误。  
+-   在 strict 模式下，如果路径表达式包含错误，函数将引发错误  。  
 
 以下查询显式指定路径表达式中的 `lax` 模式。
 
@@ -98,7 +98,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |$|{ "people": [ { "name":"John",  "surname":"Doe" },<br />   { "name":"Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>内置函数如何处理重复的路径  
- 如果 JSON 文本包含重复属性，例如，同一级别上有两个同名的键，JSON_VALUE 和 JSON_QUERY 函数将仅返回第一个与路径匹配的值。 若要分析包含重复键的 JSON 对象并返回所有值，请使用 OPENJSON，如下面的示例中所示。  
+ 如果 JSON 文本包含重复属性，例如，同一级别上有两个同名的键，JSON_VALUE 和 JSON_QUERY 函数将仅返回第一个与路径匹配的值   。 若要分析包含重复键的 JSON 对象并返回所有值，请使用 OPENJSON，如下面的示例中所示  。  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)

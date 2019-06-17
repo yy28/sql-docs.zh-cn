@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87c1456360542797ed5fe80029236663f11c1aa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644825"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515891"
 ---
 # <a name="delete-primary-keys"></a>删除主键
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47644825"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具删除主键：**  
   
@@ -42,31 +42,31 @@ ms.locfileid: "47644825"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>使用对象资源管理器删除主键约束  
   
-1.  在对象资源管理器中，展开包含主键的表，再展开 **“键”**。  
+1.  在对象资源管理器中，展开包含主键的表，再展开 **“键”** 。  
   
-2.  右键单击该键，然后选择“删除”。  
+2.  右键单击该键，然后选择“删除”  。  
   
-3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”**。  
+3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”** 。  
   
 #### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>使用表设计器删除主键约束  
   
-1.  在对象资源管理器中，右键单击具有主键的表，再单击“设计”。  
+1.  在对象资源管理器中，右键单击具有主键的表，再单击“设计”  。  
   
-2.  在表网格中右键单击包含主键的行，再选择“删除主键”以将该设置从启用切换到禁用。  
+2.  在表网格中右键单击包含主键的行，再选择“删除主键”  以将该设置从启用切换到禁用。  
   
     > [!NOTE]  
     >  若要撤消此操作，请关闭该表而不保存更改。 若要撤消删除主键操作，就无法避免丢失对表做出的所有其他更改。  
   
-3.  在“文件”菜单上，单击“保存”以保存表名。  
+3.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -74,9 +74,9 @@ ms.locfileid: "47644825"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例首先标识主键约束的名称，然后删除该约束。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例首先标识主键约束的名称，然后删除该约束。  
   
     ```  
     USE AdventureWorks2012;  

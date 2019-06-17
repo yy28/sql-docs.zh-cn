@@ -16,11 +16,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 038075269ccaabfa7c27ef946f1cff2704c164e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520529"
 ---
 # <a name="change-column-order-in-a-table"></a>更改表中的列顺序
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47753728"
   
 #### <a name="to-change-the-column-order"></a>更改列顺序  
   
-1.  在“对象资源管理器”中，右键单击包含要重新排序的列的表，再单击“设计”。  
+1.  在“对象资源管理器”  中，右键单击包含要重新排序的列的表，再单击“设计”  。  
   
 2.  选择要重新排序的列名称左侧的框。  
   

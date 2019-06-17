@@ -34,10 +34,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7db64289b031851629c0627bd324eba752fd8554
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503477"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -137,18 +137,18 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  WITH \<common_table_expression>  
  指定在 INSERT 语句作用域内定义的临时命名结果集（也称为公用表表达式）。 结果集源自 SELECT 语句。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- TOP (expression) [ PERCENT ]  
+ TOP (expression) [ PERCENT ]   
  指定将插入的随机行的数目或百分比。 *expression* 可以是行数或行的百分比。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
   
  INTO  
  一个可选的关键字，可以将它用在 INSERT 和目标表之间。  
   
- server_name  
+ server_name   
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 表或视图所在的链接服务器的名称。 server_name 可以指定为[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)名称，或通过使用 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数。  
+ 表或视图所在的链接服务器的名称。 server_name 可以指定为[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)名称，或通过使用 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数  。  
   
- 如果将 server_name 指定为链接服务器，则需要 database_name 和 schema_name。 如果使用 OPENDATASOURCE 指定 server_name，则 database_name 和 schema_name 可能不适用于所有数据源，并且受到访问远程对象的 OLE DB 访问接口的性能的限制。  
+ 如果将 server_name 指定为链接服务器，则需要 database_name 和 schema_name    。 如果使用 OPENDATASOURCE 指定 server_name，则 database_name 和 schema_name 可能不适用于所有数据源，并且受到访问远程对象的 OLE DB 访问接口的性能的限制    。  
   
  *database_name*  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -158,19 +158,19 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  *schema_name*  
  表或视图所属架构的名称。  
   
- table_or view_name  
+ table_or view_name   
  要接收数据的表或视图的名称。  
   
  [表](../../t-sql/data-types/table-transact-sql.md)变量在其作用域内可用作 INSERT 语句中的表源。  
   
- table_or_view_name 引用的视图必须可更新，并且只在该视图的 FROM 子句中引用一个基表。 例如，多表视图中的 INSERT 必须使用只引用一个基表中的各列的 column_list。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
+ table_or_view_name 引用的视图必须可更新，并且只在该视图的 FROM 子句中引用一个基表  。 例如，多表视图中的 INSERT 必须使用只引用一个基表中的各列的 column_list  。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
- rowset_function_limited  
+ rowset_function_limited   
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数。 使用这些函数受到访问远程对象的 OLE DB 访问接口的性能的限制。  
   
- WITH ( \<table_hint_limited> [... n ] )  
+ WITH ( \<table_hint_limited> [... n  ] )  
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。  
   
  不允许 READPAST、NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
@@ -181,43 +181,43 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  对作为 INSERT 语句目标的表指定 TABLOCK 提示与指定 TABLOCKX 提示具有相同的效果。 对表采用排他锁。  
   
  (*column_list*)  
- 要在其中插入数据的一列或多列的列表。 必须用括号将 column_list 括起来，并且用逗号进行分隔。  
+ 要在其中插入数据的一列或多列的列表。 必须用括号将 column_list 括起来，并且用逗号进行分隔  。  
   
- 如果某列不在 column_list 中，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须能够基于该列的定义提供一个值；否则不能加载行。 如果列满足下面的条件，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将自动为列提供值：  
+ 如果某列不在 column_list 中，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须能够基于该列的定义提供一个值；否则不能加载行  。 如果列满足下面的条件，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将自动为列提供值：  
   
 -   具有 IDENTITY 属性。 使用下一个增量标识值。  
   
 -   有默认值。 使用列的默认值。  
   
--   具有 timestamp 数据类型。 使用当前的时间戳值。  
+-   具有 timestamp 数据类型  。 使用当前的时间戳值。  
   
 -   可以为 Null。 使用 Null 值。  
   
 -   是计算列。 使用计算值。  
   
-当向标识列中插入显式值时，必须使用 column_list，并且表的 SET IDENTITY_INSERT 选项必须为 ON。  
+当向标识列中插入显式值时，必须使用 column_list，并且表的 SET IDENTITY_INSERT 选项必须为 ON  。  
   
 OUTPUT 子句  
  将插入行作为插入操作的一部分返回。 结果可返回到处理应用程序或插入到表或表变量中以供进一步处理。  
   
- 引用本地分区视图、分布式分区视图或远程表的 DML 语句或包含 execute_statement 的 INSERT 语句都不支持 [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)。 包含 \<dml_table_source> 子句的 INSERT 语句中不支持 OUTPUT INTO 子句。 
+ 引用本地分区视图、分布式分区视图或远程表的 DML 语句或包含 execute_statement 的 INSERT 语句都不支持 [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)  。 包含 \<dml_table_source> 子句的 INSERT 语句中不支持 OUTPUT INTO 子句。 
   
  VALUES  
- 引入要插入的数据值的一个或多个列表。 对于 column_list（如果已指定）或表中的每个列，都必须有一个数据值。 必须用圆括号将值列表括起来。  
+ 引入要插入的数据值的一个或多个列表。 对于 column_list（如果已指定）或表中的每个列，都必须有一个数据值  。 必须用圆括号将值列表括起来。  
   
- 如果值列表中的各值与表中各列的顺序不相同，或者未包含表中各列的值，则必须使用 column_list 显式指定存储每个传入值的列。  
+ 如果值列表中的各值与表中各列的顺序不相同，或者未包含表中各列的值，则必须使用 column_list 显式指定存储每个传入值的列  。  
   
  您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行构造函数（又称为表值构造函数）在一个 INSERT 语句中指定多个行。 行构造函数包含一个 VALUES 子句和多个括在圆括号中且以逗号分隔的值列表。 有关详细信息，请参阅[表值构造函数 (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)。  
   
  DEFAULT  
- 强制[!INCLUDE[ssDE](../../includes/ssde-md.md)]加载为列定义的默认值。 如果某列并不存在默认值，并且该列允许 Null 值，则插入 NULL。 对于使用 timestamp 数据类型定义的列，插入下一个时间戳值。 DEFAULT 对标识列无效。  
+ 强制[!INCLUDE[ssDE](../../includes/ssde-md.md)]加载为列定义的默认值。 如果某列并不存在默认值，并且该列允许 Null 值，则插入 NULL。 对于使用 timestamp 数据类型定义的列，插入下一个时间戳值  。 DEFAULT 对标识列无效。  
   
  *expression*  
  一个常量、变量或表达式。 表达式不能包含 EXECUTE 语句。  
   
- 当引用 Unicode 字符数据类型 nchar、nvarchar 和 ntext 时，“expression”应采用大写字母“N”作为前缀。 如果未指定“N”，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将字符串转换为与数据库或列的默认排序规则相对应的代码页。 此代码页中没有的字符都将丢失。  
+ 当引用 Unicode 字符数据类型 nchar  、nvarchar  和 ntext  时，“expression”应采用大写字母“N”作为前缀  。 如果未指定“N”，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将字符串转换为与数据库或列的默认排序规则相对应的代码页。 此代码页中没有的字符都将丢失。  
   
- derived_table  
+ derived_table   
  任何有效的 SELECT 语句，它返回将加载到表中的数据行。 SELECT 语句不能包含公用表表达式 (CTE)。  
   
  *execute_statement*  
@@ -225,11 +225,11 @@ OUTPUT 子句
   
  不能在 INSERT…EXEC 语句中指定 EXECUTE 语句的 RESULT SETS 选项。  
   
- 如果 execute_statement 使用 INSERT，则每个结果集必须与表或 column_list 中的列兼容。  
+ 如果 execute_statement 使用 INSERT，则每个结果集必须与表或 column_list 中的列兼容   。  
   
- 可以使用 execute_statement 对同一服务器或远程服务器执行存储过程。 执行远程服务器中的过程，并将结果集返回到本地服务器并加载到本地服务器的表中。 在分布式事务中，当连接启用了多个活动结果集 (MARS) 时，无法针对环回链接服务器发出 execute_statement。  
+ 可以使用 execute_statement 对同一服务器或远程服务器执行存储过程  。 执行远程服务器中的过程，并将结果集返回到本地服务器并加载到本地服务器的表中。 在分布式事务中，当连接启用了多个活动结果集 (MARS) 时，无法针对环回链接服务器发出 execute_statement  。  
   
- 如果 execute_statement 使用 READTEXT 语句返回数据，则每个 READTEXT 语句最多可以返回 1 MB (1024 KB) 的数据。 execute_statement 还可以用于扩展过程。 execute_statement 插入由扩展过程的主线程返回的数据，但不插入主线程以外的线程的输出。  
+ 如果 execute_statement 使用 READTEXT 语句返回数据，则每个 READTEXT 语句最多可以返回 1 MB (1024 KB) 的数据  。 execute_statement 还可以用于扩展过程  。 execute_statement 插入由扩展过程的主线程返回的数据，但不插入主线程以外的线程的输出  。  
   
  不能将表值参数指定为 INSERT EXEC 语句的目标；但是，可以将它指定为 INSERT EXEC 字符串或存储过程中的源。 有关详细信息，请参阅[使用表值参数（数据引擎）](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
@@ -286,7 +286,7 @@ OUTPUT 子句
  指定在二进制数据流上载操作期间空列应该保留 null 值。 有关详细信息，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
  KILOBYTES_PER_BATCH = kilobytes_per_batch  
- 将每个批处理中数据的近似千字节数 (KB) 指定为 kilobytes_per_batch。 有关详细信息，请参阅 [BULK INSERT (Transact SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
+ 将每个批处理中数据的近似千字节数 (KB) 指定为 kilobytes_per_batch  。 有关详细信息，请参阅 [BULK INSERT (Transact SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
  ROWS_PER_BATCH =*rows_per_batch*  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -339,7 +339,7 @@ OUTPUT 子句
 ## <a name="data-types"></a>数据类型  
  插入行时，考虑以下数据类型行为：  
   
--   如果将值加载到 char、varchar 或 varbinary 数据类型的列中，则尾随空格（对于 char 和 varchar 为空格，对于 varbinary 为零）的填充或截断由创建表时为该列定义的 SET ANSI_PADDING 设置确定。 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
+-   如果将值加载到 char、varchar 或 varbinary 数据类型的列中，则尾随空格（对于 char 和 varchar 为空格，对于 varbinary 为零）的填充或截断由创建表时为该列定义的 SET ANSI_PADDING 设置确定       。 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
      下表显示了 SET ANSI_PADDING OFF 的默认操作。  
   
@@ -349,11 +349,11 @@ OUTPUT 子句
     |**varchar**|删除最后的非空格字符后面的尾随空格，而对于只由空格组成的字符串，一直删除到只留下一个空格。|  
     |**varbinary**|删除尾随的零。|  
   
--   如果将一个空字符串 (' ') 加载到数据类型为 varchar 或 text 的列，则默认操作是加载一个零长度的字符串。  
+-   如果将一个空字符串 (' ') 加载到数据类型为 varchar 或 text 的列，则默认操作是加载一个零长度的字符串   。  
   
--   将 Null 值插入到 text 或 image 列不创建有效的文本指针，也不预分配 8 KB 的文本页。  
+-   将 Null 值插入到 text 或 image 列不创建有效的文本指针，也不预分配 8 KB 的文本页   。  
   
--   使用 uniqueidentifier 数据类型创建的列存储特殊格式的 16 字节二进制值。 与标识列不同，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不为 uniqueidentifier 数据类型的列自动生成值。 在插入操作过程中，可以将 uniqueidentifier 数据类型的变量和 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 格式的字符串常量（包括连字符在内共 36 个字符，其中 x 表示从 0 到 9 或从 a 到 f 的十六进制数字）用于 uniqueidentifier 列。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 是 uniqueidentifier 变量或列的有效值。 使用 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 函数获取全局唯一 ID (GUID)。  
+-   使用 uniqueidentifier 数据类型创建的列存储特殊格式的 16 字节二进制值  。 与标识列不同，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不为 uniqueidentifier 数据类型的列自动生成值  。 在插入操作过程中，可以将 uniqueidentifier 数据类型的变量和 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 格式的字符串常量（包括连字符在内共 36 个字符，其中 x 表示从 0 到 9 或从 a 到 f 的十六进制数字）用于 uniqueidentifier 列     。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 是 uniqueidentifier 变量或列的有效值  。 使用 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 函数获取全局唯一 ID (GUID)。  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>将值插入到用户定义类型列中  
  可以通过以下方法将值插入到用户定义的类型列中：  
@@ -408,9 +408,9 @@ OUTPUT 子句
 ### <a name="permissions"></a>权限  
  需要对目标表具有 INSERT 权限。  
   
- 默认情况下，将 INSERT 权限授予 sysadmin 固定服务器角色成员、db_owner 和 db_datawriter 固定数据库角色成员以及表所有者。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户。  
+ 默认情况下，将 INSERT 权限授予 sysadmin 固定服务器角色成员、db_owner 和 db_datawriter 固定数据库角色成员以及表所有者    。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户    。  
   
- 若要使用 OPENROWSET 函数 BULK 选项执行 INSERT，必须是 sysadmin 固定服务器角色成员或 bulkadmin 固定服务器角色成员。  
+ 若要使用 OPENROWSET 函数 BULK 选项执行 INSERT，必须是 sysadmin 固定服务器角色成员或 bulkadmin 固定服务器角色成员   。  
   
 ##  <a name="InsertExamples"></a> 示例  
   
@@ -429,7 +429,7 @@ OUTPUT 子句
  本节中的示例说明了使用最低要求的语法的 INSERT 语句的基本功能。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 插入单行数据  
- 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Production.UnitMeasure` 表中插入一行。 该表中的各列是 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由于提供了所有列的值并按表中各列的顺序列出这些值，因此不必在列列表中指定列名  
+ 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Production.UnitMeasure` 表中插入一行。 该表中的各列是 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由于提供了所有列的值并按表中各列的顺序列出这些值，因此不必在列列表中指定列名   
   
 ```sql
 INSERT INTO Production.UnitMeasure  
@@ -446,7 +446,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 ```  
   
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. 按与表列顺序不同的顺序插入数据  
- 下面的示例使用列列表显式指定插入到每个列中的值。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Production.UnitMeasure` 表中的列顺序为 `UnitMeasureCode`、`Name`、`ModifiedDate`；但这些列的列出顺序与 column_list 中的顺序不同。  
+ 下面的示例使用列列表显式指定插入到每个列中的值。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Production.UnitMeasure` 表中的列顺序为 `UnitMeasureCode`、`Name`、`ModifiedDate`；但这些列的列出顺序与 column_list 中的顺序不同  。  
   
 ```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
@@ -455,10 +455,10 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 ```  
   
 ###  <a name="ColumnValues"></a> 处理列值  
- 本节中的示例说明将值插入列中的方法，这些列是使用 IDENTITY 属性或 DEFAULT 值定义的列，或者是用 uniqueidentifer 之类的数据类型定义的列，或者是用户定义类型列。  
+ 本节中的示例说明将值插入列中的方法，这些列是使用 IDENTITY 属性或 DEFAULT 值定义的列，或者是用 uniqueidentifer 之类的数据类型定义的列，或者是用户定义类型列  。  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 将数据插入其列具有默认值的表  
- 下面的示例演示了如何将行插入到包含自动生成值或具有默认值的列的表中。 `Column_1` 是一个计算列，它通过将一个字符串与插入 `column_2` 的值进行串联，自动生成一个值。 `Column_2` 是用默认约束定义的。 如果没有为该列指定值，将使用默认值。 `Column_3` 是使用 rowversion 数据类型定义的，它自动生成一个唯一的、递增的二进制数字。 `Column_4` 不自动生成值。 如果没有为该列指定值，将插入 NULL。 INSERT 语句插入一些行，这些行只有部分列包含值。 在最后一个 INSERT 语句中，未指定列，只通过使用 DEFAULT VALUES 子句插入了默认值。  
+ 下面的示例演示了如何将行插入到包含自动生成值或具有默认值的列的表中。 `Column_1` 是一个计算列，它通过将一个字符串与插入 `column_2` 的值进行串联，自动生成一个值。 `Column_2` 是用默认约束定义的。 如果没有为该列指定值，将使用默认值。 `Column_3` 是使用 rowversion 数据类型定义的，它自动生成一个唯一的、递增的二进制数字  。 `Column_4` 不自动生成值。 如果没有为该列指定值，将插入 NULL。 INSERT 语句插入一些行，这些行只有部分列包含值。 在最后一个 INSERT 语句中，未指定列，只通过使用 DEFAULT VALUES 子句插入了默认值。  
   
 ```sql
 CREATE TABLE dbo.T1   
@@ -717,7 +717,7 @@ GO
  本节中的示例说明如何通过使用[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[行集函数](../../t-sql/functions/rowset-functions-transact-sql.md)引用一个远程目标表，向该表插入行。  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. 通过使用链接服务器向远程表插入数据  
- 下面的示例将行插入一个远程表中。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分。  
+ 下面的示例将行插入一个远程表中。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分  。  
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -759,7 +759,7 @@ GO
 ```  
   
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. 通过使用 OPENDATASOURCE 函数向远程表插入数据  
- 下面的示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数向远程表插入一行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称。  
+ 下面的示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数向远程表插入一行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称   。  
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -874,7 +874,7 @@ FROM OPENROWSET (
 #### <a name="s-using-the-tablock-hint-to-specify-a-locking-method"></a>S. 使用 TABLOCK 提示指定锁定方法  
  下面的示例指定对 Production.Location 表采用排他 (X) 锁，并保持到 INSERT 语句结束。  
   
-适用范围：[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
+适用范围：[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]  。  
   
 ```sql
 INSERT INTO Production.Location WITH (XLOCK)  

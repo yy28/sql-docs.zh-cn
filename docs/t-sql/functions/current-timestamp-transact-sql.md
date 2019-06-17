@@ -33,16 +33,16 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 272c072a082f6343aa6ef5cf4e216dc2b9c44f83
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944508"
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-此函数返回当前数据库系统时间戳，返回值的类型为 datetime，并且不含数据库时区偏移量。 `CURRENT_TIMESTAMP` 从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统中获得此值。
+此函数返回当前数据库系统时间戳，返回值的类型为 datetime，并且不含数据库时区偏移量  。 `CURRENT_TIMESTAMP` 从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统中获得此值。
   
 > [!NOTE]  
 >  `SYSDATETIME` 和 `SYSUTCDATE` 采用秒的小数部分精度度量，因此其精度比 `GETDATE` 和 `GETUTCDATE` 的精度更高。 `SYSDATETIMEOFFSET` 函数包含系统时区偏移量。 可向任意日期和时间类型的变量分配 `SYSDATETIME`、`SYSUTCDATE` 和 `SYSDATETIMEOFFSET`。  
@@ -66,7 +66,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以在能引用 datetime 表达式的所有位置引用 `CURRENT_TIMESTAMP`。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以在能引用 datetime 表达式的所有位置引用 `CURRENT_TIMESTAMP`  。
   
 `CURRENT_TIMESTAMP` 是非确定性函数。 引用该列的视图和表达式无法进行索引。
   

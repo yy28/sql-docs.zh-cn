@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd700f44bb1b2a3fc42a964c87ce7a8891ac91b8
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944984"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
@@ -40,11 +40,11 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 ```  
   
 ## <a name="arguments"></a>参数  
-assembly_name  
+assembly_name   
 程序集的名称。
   
-property_name  
-要检索其有关信息的属性的名称。 property_name 可以具有下列值之一：
+property_name   
+要检索其有关信息的属性的名称。 property_name 可以具有下列值之一  ：
   
 |ReplTest1|描述|  
 |---|---|

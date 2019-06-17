@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: bdab377da65fc9dd4068a5d3fc67eecf48655405
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098096"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>协调数据库关系图与已修改的数据库 (Visual Database Tools)
@@ -34,11 +34,11 @@ ms.locfileid: "65098096"
   
 1.  保存数据库关系图。  
   
-    如果以前未保存过关系图，请在“保存新的数据库关系图”对话框中为该关系图键入名称，再选择“确定”。  
+    如果以前未保存过关系图，请在“保存新的数据库关系图”  对话框中为该关系图键入名称，再选择“确定”  。  
   
-2.  “保存”对话框会列出在保存关系图时将受到影响的表。 选择“是”继续执行操作。  
+2.  “保存”  对话框会列出在保存关系图时将受到影响的表。 选择“是”  继续执行操作。  
   
-3.  “检测到数据库更改”对话框将列出已修改并将进行更改以与关系图匹配的对象。 选择“是”以保存该关系图并接受更改列表。  
+3.  “检测到数据库更改”  对话框将列出已修改并将进行更改以与关系图匹配的对象。 选择“是”  以保存该关系图并接受更改列表。  
   
     > [!NOTE]  
     > 如果您的关系图中包含已在数据库中删除的表和列，那么当您保存关系图时，数据库中只会重新创建其定义。 此过程无法还原删除这些对象之前存在于这些对象中的任何数据。  
@@ -49,7 +49,7 @@ ms.locfileid: "65098096"
   
 2.  在对象资源管理器中右键单击该关系图。  
   
-3.  在快捷菜单中单击“刷新”。  
+3.  在快捷菜单中单击“刷新”  。  
   
 4.  重新打开该关系图。  
   

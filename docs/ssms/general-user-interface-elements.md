@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cf52fc972fbaca8ad9de558d8a515f1f927c33d8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65093838"
 ---
 # <a name="general-user-interface-elements"></a>常规用户界面元素
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-“编辑器”、“属性”窗口以及“工具箱”是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的一些基本元素。  
+“编辑器”  、“属性”  窗口以及“工具箱”  是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的一些基本元素。  
   
 ## <a name="in-this-section"></a>本节内容  
 [“关于”对话框](../ssms/about-dialog-box.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "65093838"
 介绍 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何在文档窗口中承载 Web 浏览器。  
   
 [外部工具对话框](../ssms/external-tools-dialog-box.md)  
-允许用户将不属于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的工具添加到“工具”菜单中。  
+允许用户将不属于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的工具添加到“工具”  菜单中。  
   
 [属性窗口 (Management Studio)](../ssms/properties-window-management-studio.md)  
 允许用户查看编辑器和设计器中所选对象的属性和事件。 还允许用户编辑和查看文件、项目和解决方案的属性。 在“属性”窗口中可以对某些属性进行编辑。  

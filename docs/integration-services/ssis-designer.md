@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c03218101637767dbaf6e5abe2132eb3c0f332da
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717919"
 ---
 # <a name="ssis-designer"></a>SSIS 设计器
@@ -60,13 +60,13 @@ ms.locfileid: "65717919"
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器不依赖于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务（即管理和监视包的服务），而且在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中创建或修改包也不需要该服务处于运行状态。 但是，如果在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器打开的情况下停止该服务，则您无法再打开 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器提供的对话框，并且可能收到“RPC 服务器不可用”的错误消息。 若要重置 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器并继续对包进行操作，就必须关闭设计器，退出 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然后重新打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目和包。  
   
 ## <a name="undo-and-redo"></a>撤消和重做  
- 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中撤消或重做最多 20 个操作。 对于包，可以在“控制流”、“数据流”、“事件处理程序”和“参数”选项卡以及“变量”窗口中进行撤消/重做。 对于项目，可以在“项目参数”窗口中进行撤消/重做。  
+ 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中撤消或重做最多 20 个操作。 对于包，可以在“控制流”  、“数据流”  、“事件处理程序”  和“参数”  选项卡以及“变量”  窗口中进行撤消/重做。 对于项目，可以在“项目参数”  窗口中进行撤消/重做。  
   
- 不能撤消/重做对新的“SSIS 工具箱”所做的更改。  
+ 不能撤消/重做对新的“SSIS 工具箱”所做的更改  。  
   
  使用组件编辑器更改组件时，可以将更改作为一个组来撤消和重做，而不是撤消和重做单个更改。 更改组在撤消和重做下拉列表中显示为单个操作。  
   
- 若要撤消操作，请单击撤消工具栏按钮、“编辑/撤消”菜单项，或按 Ctrl+Z。 若要恢复操作，请单击恢复工具栏按钮、“编辑/恢复”菜单项或按 CTRL + Y。若要撤消和恢复多项操作，可以单击相应工具栏按钮旁边的箭头，在下拉列表中选中多项操作，然后在该列表中单击。  
+ 若要撤消操作，请单击撤消工具栏按钮、“编辑/撤消”  菜单项，或按 Ctrl+Z。 若要恢复操作，请单击恢复工具栏按钮、“编辑/恢复”  菜单项或按 CTRL + Y。若要撤消和恢复多项操作，可以单击相应工具栏按钮旁边的箭头，在下拉列表中选中多项操作，然后在该列表中单击。  
   
 ## <a name="parts-of-the-ssis-designer"></a>SSIS 设计器的部件  
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器有五个永久选项卡：其中四个选项卡分别用于生成包控制流、数据流、参数和事件处理程序，另外一个选项卡用于查看包的内容。 运行时将出现第六个选项卡，显示包在运行时的执行进度以及完成后的执行结果。  
@@ -136,7 +136,7 @@ ms.locfileid: "65717919"
   
  通过将表示源、转换和目标的图形对象从 **“工具箱”** 拖至 **“数据流”** 选项卡的设计图面，再连接这些对象以创建确定转换运行顺序的路径，即可创建数据流。  
   
- 右键单击某个路径，再单击“数据查看器”，可以添加数据查看器来查看每个数据流对象前后的数据。  
+ 右键单击某个路径，再单击“数据查看器”  ，可以添加数据查看器来查看每个数据流对象前后的数据。  
   
  您还可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器从 **“数据流”** 选项卡中添加以下功能：  
   
@@ -157,19 +157,19 @@ ms.locfileid: "65717919"
  选择事件处理程序的类型。 通过从 **“工具箱”** 中拖动相应项即可创建事件处理程序。  
   
  **删除**  
- 选择一个事件处理程序，再通过单击“删除”将其从包中删除。  
+ 选择一个事件处理程序，再通过单击“删除”  将其从包中删除。  
   
- 单击此处为可执行文件 \<可执行文件名称\> 创建 \<事件处理程序名称\>  
+ 单击此处为可执行文件 \<可执行文件名称\> 创建 \<事件处理程序名称\>   
  单击此项可创建事件处理程序。  
   
  通过将代表 [!INCLUDE[ssIS](../includes/ssis-md.md)] 任务和容器的图形对象从 **“工具箱”** 拖至 **“事件处理程序”** 选项卡的设计图面，再通过使用优先约束定义其运行顺序来连接这些对象，即可创建控制流。  
   
- 此外，通过右键单击设计图面，然后在菜单上单击“添加批注”，以添加批注。  
+ 此外，通过右键单击设计图面，然后在菜单上单击“添加批注”  ，以添加批注。  
  
 ## <a name="package-explorer-tab"></a>“包资源管理器”选项卡
 可以使用 **设计器的** “包资源管理器” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡查看包中的所有元素的层次结构视图，这些元素包括：配置、连接、事件处理程序、可执行对象（例如任务和容器）、日志提供程序、优先约束和变量。 如果包中包含数据流任务， **“包资源管理器”** 选项卡将包括一个包含数据流组件的层次结构视图的节点。  
   
- 可以右键单击某个包元素，再单击“属性”，以在“属性”窗口中显示该元素的属性；或者，也可以右键单击某个包元素，再单击“删除”，以删除该元素。 
+ 可以右键单击某个包元素，再单击“属性”，以在“属性”窗口中显示该元素的属性；或者，也可以右键单击某个包元素，再单击“删除”，以删除该元素。    
  
 ## <a name="progress-tab"></a>“进度”选项卡
 在 **中运行** 包时，可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] “进度” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]选项卡查看该包的执行进度。 **“进度”** 选项卡将列出以下内容：验证和执行该包及其可执行文件的开始时间、完成时间和已用时间；包的所有信息和警告；进度通知；包是否成功或失败以及在执行包的过程中生成的所有错误信息。  

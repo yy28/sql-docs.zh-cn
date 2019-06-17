@@ -38,10 +38,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 5e8cc30ef8ce51a08ce12ed28b7c03bec0fc124d
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774838"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
@@ -115,7 +115,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> 如果有列存储索引，请参阅[在克隆数据库上使用列存储索引优化查询的注意事项](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294)对列存储索引进行更新，然后再运行 DBCC CLONEDATABASE 命令。  自 SQL Server 2019 起，上文中所述的手动步骤将不再是必需的，因为 **DBCC CLONEDATABASE** 命令会自动收集此信息。
+> 如果有列存储索引，请参阅[在克隆数据库上使用列存储索引优化查询的注意事项](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294)对列存储索引进行更新，然后再运行 DBCC CLONEDATABASE 命令  。  自 SQL Server 2019 起，上文中所述的手动步骤将不再是必需的，因为 **DBCC CLONEDATABASE** 命令会自动收集此信息。
 
 <a name="ctp23"></a>
 

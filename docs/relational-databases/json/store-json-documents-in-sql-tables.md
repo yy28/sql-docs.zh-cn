@@ -11,11 +11,11 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.openlocfilehash: 385ae3aafb58d012e6473abc0fe4b8f8f5d40eb6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033248"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705971"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>在 SQL Server 或 SQL 数据库中存储 JSON 文档
 SQL Server 和 Azure SQL 数据库包含可使用标准 SQL 语言分析 JSON 文档的本机 JSON 函数。 现在可在 SQL Server 或 SQL 数据库中存储 JSON 文档并查询 JSON 数据，操作与在 NoSQL 数据库中类似。 本文介绍在 SQL Server 或 SQL 数据库中存储 JSON 文档的相关选项。
@@ -56,7 +56,7 @@ SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.durat
  ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
-可使用任意 T-SQL 函数和查询子句来查询 JSON 文档。 SQL Server 和 SQL 数据库不会在可以用来分析 JSON 文档的查询中引入任意约束。 可通过 `JSON_VALUE` 函数从 JSON 文档中提取值，并在查询中使用该值，如同使用任何其他值一样。
+可使用任意 T-SQL 函数和查询子句来查询 JSON 文档  。 SQL Server 和 SQL 数据库不会在可以用来分析 JSON 文档的查询中引入任意约束。 可通过 `JSON_VALUE` 函数从 JSON 文档中提取值，并在查询中使用该值，如同使用任何其他值一样。
 
 能够使用大量 T-SQL 查询语法是 SQL Server 和 SQL 数据库与经典 NoSQL 数据库的主要区别 - 在 Transact-SQL 中，可能有需要处理 JSON 数据的任何函数。
 
@@ -134,7 +134,7 @@ create table WebSite.Logs (
 ) with (memory_optimized=on)
 ```
 
-若要最大化性能，请将 JSON 值强制转换为用于保留属性值的最小可能类型。 在前面的示例中，使用的是 tinyint。
+若要最大化性能，请将 JSON 值强制转换为用于保留属性值的最小可能类型。 在前面的示例中，使用的是 tinyint  。
 
 还可将更新 JSON 文档的 SQL 查询放置在存储过程中，以获得本机编译的优势。 例如：
 

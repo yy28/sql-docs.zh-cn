@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57be9c0aabc429e1c9a6d3e148ab5a11461f2d32
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943247"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
@@ -44,11 +44,11 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- 'character_string'  
- Unicode 字符数据构成的字符串。 character_string 是 sysname，且最多具有 128 个字符。 超过 128 个字符的输入将返回 NULL。  
+ 'character_string'   
+ Unicode 字符数据构成的字符串。 character_string 是 sysname，且最多具有 128 个字符   。 超过 128 个字符的输入将返回 NULL。  
   
- 'quote_character'  
- 用作分隔符的单字符字符串。 可以是单引号 (')、左方括号或右方括号 ([])、双引号 (")、左圆括号或右圆括号 (())、大于或小于符号 (><)、左大括号或右大括号 ({}) 或反引号 (\`)。 如果提供了不可接受的字符，则返回 NULL。 如果未指定 quote_character，则使用方括号。  
+ 'quote_character'   
+ 用作分隔符的单字符字符串。 可以是单引号 (')、左方括号或右方括号 ([])、双引号 (")、左圆括号或右圆括号 (())、大于或小于符号 (><)、左大括号或右大括号 ({}) 或反引号 (\`)        。 如果提供了不可接受的字符，则返回 NULL。 如果未指定 quote_character，则使用方括号  。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(258)**  

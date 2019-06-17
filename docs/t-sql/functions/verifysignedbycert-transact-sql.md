@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: adbc2e1862a783c0452519054e839261d08709d9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946227"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
@@ -46,14 +46,14 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ```  
   
 ## <a name="arguments"></a>参数  
- Cert_ID  
- 数据库中证书的 ID。 Cert_ID 的数据类型为 int。  
+ Cert_ID   
+ 数据库中证书的 ID。 Cert_ID 的数据类型为 int   。  
   
- signed_data  
- 类型为 nvarchar、char、varchar 或 nchar 的变量，上述类型包含已使用证书进行签名的数据。  
+ signed_data   
+ 类型为 nvarchar、char、varchar 或 nchar 的变量，上述类型包含已使用证书进行签名的数据     。  
   
- signature  
- 附加到已签名数据中的签名。 signature 的数据类型为 varbinary。  
+ signature   
+ 附加到已签名数据中的签名。 signature 的数据类型为 varbinary   。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -61,7 +61,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
  如果已签名的数据未更改，则返回 1；否则返回 0。  
   
 ## <a name="remarks"></a>Remarks  
- VerifySignedBycert 使用指定证书的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较。 如果值匹配，则确认签名有效。  
+ VerifySignedBycert 使用指定证书的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较  。 如果值匹配，则确认签名有效。  
   
 ## <a name="permissions"></a>权限  
  需要对证书拥有 VIEW DEFINITION 权限。  

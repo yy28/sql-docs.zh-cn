@@ -17,22 +17,22 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9a59362473ad977da4a29ab03bdd158da7825425
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098142"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>从查询中删除列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-如果不希望再在查询中使用某列，则可以可移除该列。 如果执行此操作，“查询和视图设计器”将从选择列表、排序规范、搜索条件、“SQL”窗格以及所有分组规范中删除对该列的引用。  
+如果不希望再在查询中使用某列，则可以可移除该列。 如果执行此操作，“查询和视图设计器”将从选择列表、排序规范、搜索条件、“SQL”窗格  以及所有分组规范中删除对该列的引用。  
   
 > [!NOTE]  
 > 如果只希望从“选择”查询的输出中移除某列，则可以直接从输出中移除该列，而不必同时从查询中移除该列。 有关详细信息，请参阅[从查询结果中删除列 (Visual Database Tools)](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)  
   
 ### <a name="to-remove-a-column-from-the-query"></a>从查询中移除列  
   
--   在“条件”窗格中，选择包含要移除的列的网格行，然后按 Delete。  
+-   在“条件”  窗格中，选择包含要移除的列的网格行，然后按 Delete。  
   
     -或 -  
   

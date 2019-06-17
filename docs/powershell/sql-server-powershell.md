@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9c5354f0a94dc8ec3cccc66f751124554554357
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411727"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672356"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -23,27 +23,27 @@ ms.locfileid: "50411727"
 **[安装 SQL Server PowerShell](download-sql-server-ps-module.md)**
 
 > [!NOTE]
-> SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新。 最新的 PowerShell 模块是 SqlServer 模块。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能。  
-> 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer 模块。
-> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)。
+> SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS   。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新  。 最新的 PowerShell 模块是 SqlServer 模块  。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能   。  
+> 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS   。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer  模块。
+> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)  。
 
 **为什么模块从 SQLPS 更改为 SqlServer？**
 
-要发送 SQL PowerShell 更新，必须更改 SQL PowerShell 模块的标识和名为 SQLPS.exe 的包装器。 由于此更改，现存在两种 SQL PowerShell 模块：SqlServer 模块和 SQLPS 模块。  
+要发送 SQL PowerShell 更新，必须更改 SQL PowerShell 模块的标识和名为 SQLPS.exe  的包装器。 由于此更改，现存在两种 SQL PowerShell 模块：SqlServer 模块和 SQLPS 模块   。  
 
 **若导入 SQLPS 模块，请更新 PowerShell 脚本。**
 
-如果具有任何运行 `Import-Module -Name SQLPS` 的 PowerShell 脚本，并希望利用新的提供程序功能和新的 cmdlet，则必须将它们更改为 `Import-Module -Name SqlServer`。 新模块会安装到 `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` 文件夹。 因此，不需要更新 $env:PSModulePath 变量。 如果脚本使用名为 SqlServer 的第三方或社区版本模块，请使用 Prefix 参数以避免名称冲突。
+如果具有任何运行 `Import-Module -Name SQLPS` 的 PowerShell 脚本，并希望利用新的提供程序功能和新的 cmdlet，则必须将它们更改为 `Import-Module -Name SqlServer`。 新模块会安装到 `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` 文件夹。 因此，不需要更新 $env:PSModulePath 变量。 如果脚本使用名为 SqlServer 的第三方或社区版本模块，请使用 Prefix 参数以避免名称冲突  。
 
 SQL Server 代理使用的模块不做任何更改。 因此，类型 PowerShell 的作业步骤使用 SQLPS 模块。 有关详细信息，请参阅[如何使用 SQL Server 代理运行 PowerShell](run-windows-powershell-steps-in-sql-server-agent.md)。
 
 
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell 组件  
-SqlServer 模块加载两个 Windows PowerShell 管理单元：  
+SqlServer  模块加载两个 Windows PowerShell 管理单元：  
   
 -   一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序（允许使用类似于文件系统路径的简单导航机制）。 您可以生成类似于文件系统路径的路径，在该路径中，驱动器与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象模型关联，节点基于对象模型类。 然后，你可以使用熟悉的命令（如 **cd** 和 **dir** ），按照在命令提示符窗口中导航文件夹的类似方式导航路径。 可以使用其他命令（如 **ren** 或 **del**）对路径中的节点执行操作。  
   
--   一组 cmdlet，它支持运行包含 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 XQuery 语句的 sqlcmd 脚本等操作。  
+-   一组 cmdlet，它支持运行包含 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 XQuery 语句的 sqlcmd 脚本等操作  。  
   
   
 ## <a name="sql-server-versions"></a>SQL Server 版本  

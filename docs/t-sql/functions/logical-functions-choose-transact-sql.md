@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 07eb130323be8fe507e574d5cca85f5105091e1b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949172"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>逻辑函数 - CHOOSE (Transact-SQL)
@@ -40,12 +40,12 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- 索引  
+ 索引   
  一个整数表达式，表示其后的项列表的从 1 开始的索引。  
   
- 如果提供的索引值具有 int 之外的数值数据类型，则该值将隐式转换为整数。 如果索引值超出了值数组的界限，则 CHOOSE 返回 Null。  
+ 如果提供的索引值具有 int 之外的数值数据类型，则该值将隐式转换为整数  。 如果索引值超出了值数组的界限，则 CHOOSE 返回 Null。  
   
- val_1 … val_n  
+ val_1 … val_n   
  任何数据类型的逗号分隔的值列表。  
   
 ## <a name="return-types"></a>返回类型  

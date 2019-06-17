@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8620c5d309342b6337027581e5bda6b70459a48f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980351"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
@@ -51,7 +51,7 @@ RETURN [ integer_expression ]
  返回的整数值。 存储过程可向执行调用的过程或应用程序返回一个整数值。  
   
 ## <a name="return-types"></a>返回类型  
- 可以选择返回 int。  
+ 可以选择返回 int  。  
   
 > [!NOTE]  
 >  除非另外说明，否则所有系统存储过程都将返回一个 0 值。 此值表示成功，非 0 值表示失败。  

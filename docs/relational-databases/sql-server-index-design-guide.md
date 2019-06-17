@@ -24,11 +24,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872327"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985163"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "58872327"
 ##  <a name="Basics"></a> 索引设计基础知识  
  索引是与表或视图关联的磁盘上或内存中结构，可以加快从表或视图中检索行的速度。 索引包含由表或视图中的一列或多列生成的键。 对于磁盘上索引，这些键存储在某个结构（B 树）中，使 SQL Server 可以快速高效地找到与键值关联的行。  
 
- 索引在逻辑上以组织为包含行和列的表存储数据；在物理上以按行数据格式（称为行存储<sup>1</sup>），或以按列数据格式（称为[列存储](#columnstore_index)）存储数据。  
+ 索引在逻辑上以组织为包含行和列的表存储数据；在物理上以按行数据格式（称为行存储<sup>1</sup>），或以按列数据格式（称为[列存储](#columnstore_index)）存储数据   。  
     
  为数据库及其工作负荷选择正确的索引是一项需要在查询速度与更新所需开销之间取得平衡的复杂任务。 如果索引较窄，或者说索引关键字中只有很少的几列，则需要的磁盘空间和维护开销都较少。 而另一方面，宽索引可覆盖更多的查询。 您可能需要试验若干不同的设计，才能找到最有效的索引。 可以添加、修改和删除索引而不影响数据库架构或应用程序设计。 因此，应试验多个不同的索引而无需犹豫。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查询优化器可在大多数情况下可靠地选择最高效的索引。 总体索引设计策略应为查询优化器提供可供选择的多个索引，并依赖查询优化器做出正确的决定。 这在多种情况下可减少分析时间并获得良好的性能。 若要查看查询优化器对特定查询使用的索引，请在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“查询”菜单上选择“包括实际的执行计划”。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查询优化器可在大多数情况下可靠地选择最高效的索引。 总体索引设计策略应为查询优化器提供可供选择的多个索引，并依赖查询优化器做出正确的决定。 这在多种情况下可减少分析时间并获得良好的性能。 若要查看查询优化器对特定查询使用的索引，请在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“查询”  菜单上选择“包括实际的执行计划”  。  
   
  不要总是将索引的使用等同于良好的性能，或者将良好的性能等同于索引的高效使用。 如果只要使用索引就能获得最佳性能，那查询优化器的工作就简单了。 但事实上，不正确的索引选择并不能获得最佳性能。 因此，查询优化器的任务是只在索引或索引组合能提高性能时才选择它，而在索引检索有碍性能时则避免使用它。  
 
@@ -116,14 +116,14 @@ ms.locfileid: "58872327"
   
 -   评估查询类型以及如何在查询中使用列。 例如，在完全匹配查询类型中使用的列就适合用于非聚集索引或聚集索引。
 
-<a name="sargable"></a><sup>1</sup> “SARGable”一词在关系数据库中指的是一个搜索可论证的谓词，它可以利用一个索引来加快查询的执行过程。
+<a name="sargable"></a><sup>1</sup> “SARGable”一词在关系数据库中指的是一个搜索可论证    的谓词，它可以利用一个索引来加快查询的执行过程。
   
 ### <a name="column-considerations"></a>列注意事项  
  设计索引时，应考虑以下列准则：  
   
 -   对于聚集索引，请保持较短的索引键长度。 另外，对唯一列或非空列创建聚集索引可以使聚集索引获益。  
   
--   无法指定 **ntext**、 **text**、 **image**、 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)** 数据类型的列为索引键列。 不过， **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 和 **xml** 数据类型的列可以作为非键索引列参与非聚集索引。 有关详细信息，请参阅本指南中的 [具有包含列的索引](#Included_Columns)。  
+-   无法指定 **ntext**、 **text**、 **image**、 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据类型的列为索引键列。 不过， **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 和 **xml** 数据类型的列可以作为非键索引列参与非聚集索引。 有关详细信息，请参阅本指南中的 [具有包含列的索引](#Included_Columns)。  
   
 -   **xml** 数据类型的列只能在 XML 索引中用作键列。 有关详细信息，请参阅 [XML 索引 (SQL Server)](../relational-databases/xml/xml-indexes-sql-server.md)。 SQL Server 2012 SP1 引入了称作选择性 XML 索引的一种新的 XML 索引。 这个新的索引可提高 SQL Server 中针对作为 XML 存储的数据的查询性能，从而通过降低索引本身的存储成本来加快大型 XML 数据工作负荷的索引编制和改进可伸缩性。 有关详细信息，请参阅[选择性 XML 索引 (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
@@ -246,7 +246,7 @@ ON Purchasing.PurchaseOrderDetail
   
  聚集索引在 [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)中有一行，其中，索引使用的每个分区的 **index_id** = 1。 默认情况下，聚集索引有单个分区。 当聚集索引有多个分区时，每个分区都有一个包含该特定分区相关数据的 B 树结构。 例如，如果聚集索引有四个分区，就有四个 B 树结构，每个分区中有一个 B 树结构。  
   
- 根据聚集索引中的数据类型，每个聚集索引结构将有一个或多个分配单元，将在这些单元中存储和管理特定分区的相关数据。 每个聚集索引的每个分区中至少有一个 IN_ROW_DATA 分配单元。 如果聚集索引包含大型对象 (LOB) 列，则它的每个分区中还会有一个 LOB_DATA 分配单元。 如果聚集索引包含的变量长度列超过 8,060 字节的行大小限制，则它的每个分区中还会有一个 ROW_OVERFLOW_DATA 分配单元。  
+ 根据聚集索引中的数据类型，每个聚集索引结构将有一个或多个分配单元，将在这些单元中存储和管理特定分区的相关数据。 每个聚集索引的每个分区中至少有一个 IN_ROW_DATA 分配单元。 如果聚集索引包含大型对象 (LOB) 列，则它的每个分区中还会有一个 LOB_DATA 分配单元  。 如果聚集索引包含的变量长度列超过 8,060 字节的行大小限制，则它的每个分区中还会有一个 ROW_OVERFLOW_DATA 分配单元  。  
   
  数据链内的页和行将按聚集索引键值进行排序。 所有插入操作都在所插入行中的键值与现有行中的排序顺序相匹配时执行。  
   
@@ -278,8 +278,8 @@ ON Purchasing.PurchaseOrderDetail
 
     > [!TIP]
     > 如果没有另行指定，在创建[主键](../relational-databases/tables/create-primary-keys.md)约束时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会创建一个[聚集索引](#Clustered)来支持该约束。
-    > 虽然可使用 [uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md) 来强制实施作为主键的唯一性，但它不是有效的聚集键。
-    > 如果使用 uniqueidentifier 作为主键，建议将其创建为非聚集索引，然后使用另一列（如 `IDENTITY`）创建聚集索引。   
+    > 虽然可使用 [uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md) 来强制实施作为主键的唯一性，但它不是有效的聚集键  。
+    > 如果使用 uniqueidentifier 作为主键，建议将其创建为非聚集索引，然后使用另一列（如 `IDENTITY`）创建聚集索引  。   
   
 -   按顺序被访问  
   
@@ -321,7 +321,7 @@ ON Purchasing.PurchaseOrderDetail
   
 对于索引使用的每个分区，非聚集索引在 **index_id** >1 的 [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) 中都有对应的一行。 默认情况下，一个非聚集索引有单个分区。 如果一个非聚集索引有多个分区，则每个分区都有一个包含该特定分区的索引行的 B 树结构。 例如，如果一个非聚集索引有四个分区，那么就有四个 B 树结构，每个分区中一个。  
   
-根据非聚集索引中数据类型的不同，每个非聚集索引结构会有一个或多个分配单元，在其中存储和管理特定分区的数据。 每个非聚集索引至少有一个针对每个分区的 IN_ROW_DATA 分配单元（存储索引 B 树页）。 如果非聚集索引包含大型对象 (LOB) 列，则还有一个针对每个分区的 LOB_DATA 分配单元。 此外，如果非聚集索引包含的可变长度列超过 8,060 字节的行大小限制，则还有一个针对每个分区的 ROW_OVERFLOW_DATA 分配单元。  
+根据非聚集索引中数据类型的不同，每个非聚集索引结构会有一个或多个分配单元，在其中存储和管理特定分区的数据。 每个非聚集索引至少有一个针对每个分区的 IN_ROW_DATA 分配单元（存储索引 B 树页）  。 如果非聚集索引包含大型对象 (LOB) 列，则还有一个针对每个分区的 LOB_DATA 分配单元  。 此外，如果非聚集索引包含的可变长度列超过 8,060 字节的行大小限制，则还有一个针对每个分区的 ROW_OVERFLOW_DATA 分配单元  。  
   
 下图说明了单个分区中的非聚集索引结构。  
 
@@ -464,7 +464,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   一页上能容纳的索引行将更少。 这样会使 I/O 增加并降低缓存效率。  
   
--   需要更多的磁盘空间来存储索引。 特别是，将 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 或 **xml** 数据类型添加为非键索引列会显著增加磁盘空间要求。 这是因为列值被复制到了索引叶级别。 因此，它们既驻留在索引中，也驻留在基表中。  
+-   需要更多的磁盘空间来存储索引。 特别是，将 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 或 **xml** 数据类型添加为非键索引列会显著增加磁盘空间要求。 这是因为列值被复制到了索引叶级别。 因此，它们既驻留在索引中，也驻留在基表中。  
   
 -   索引维护可能会增加对基础表或索引视图执行修改、插入、更新或删除操作所需的时间。  
   
@@ -645,23 +645,23 @@ WHERE b = CONVERT(Varbinary(4), 1);
 掌握这些基础知识可以更轻松地理解其他介绍如何有效使用列存储索引的文章。
 
 #### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>数据存储使用列存储索引和行存储压缩
-在提到列存储索引时，我们使用术语“行存储”和“列存储”来强调数据存储的格式。 列存储索引使用这两种类型的存储。
+在提到列存储索引时，我们使用术语“行存储”  和“列存储”  来强调数据存储的格式。 列存储索引使用这两种类型的存储。
 
  ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
 
-- “列存储”是在逻辑上组织为包含行和列的表、在物理上以按列数据格式存储的数据。
+- “列存储”  是在逻辑上组织为包含行和列的表、在物理上以按列数据格式存储的数据。
   
   列存储索引使用列存储格式以物理方式存储大部分数据。 使用列存储格式时，数据将以列的形式压缩和解压缩。 不需要解压缩每个行中未由查询请求的其他值。 这样，便可以快速扫描大型表的整个列。 
 
-- “行存储”是在逻辑上组织为包含行和列的表、在物理上以按行数据格式存储的数据。 这是存储关系表数据（如堆或聚集 B 树索引）的传统方法。
+- “行存储”  是在逻辑上组织为包含行和列的表、在物理上以按行数据格式存储的数据。 这是存储关系表数据（如堆或聚集 B 树索引）的传统方法。
 
   列存储索引还使用称为增量存储的行存储格式以物理方式存储某些行。 增量存储（也称为增量行组）是数量太少，不符合压缩到列存储中的条件的行的保存位置。 每个增量行组作为聚集 B 树索引实现。 
 
-- 增量存储是数量太少，无法压缩到列存储中的行的保存位置。 增量存储以行存储格式存储行。 
+- 增量存储是数量太少，无法压缩到列存储中的行的保存位置  。 增量存储以行存储格式存储行。 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>针对行组和列段执行操作
 
-列存储索引将行分组成可管理的单元。 其中每个单元称为一个行组。 为提供最佳性能，行组中的行数大到能够提高压缩率，同时又小到能够从内存中操作受益。
+列存储索引将行分组成可管理的单元。 其中每个单元称为一个行组  。 为提供最佳性能，行组中的行数大到能够提高压缩率，同时又小到能够从内存中操作受益。
 
 例如，列存储索引针对行组执行以下操作：
 
@@ -670,9 +670,9 @@ WHERE b = CONVERT(Varbinary(4), 1);
 * 在 `ALTER INDEX ... REBUILD` 操作期间创建新行组。
 * 在动态管理视图 (DMV) 中报告行组运行状况和碎片。
 
-增量存储由一个或多个名为“增量行组”的行组构成。 每个增量行组是一个聚集 B 树索引，用于存储较小的大容量加载和插入操作，直到行组包含 1,048,576 行或者重新生成了索引。  当增量行组包含 1,048,576 行时，将被标记为已关闭，等待名为 tuple-mover 的进程将它压缩到列存储中。 
+增量存储由一个或多个名为“增量行组”的行组构成  。 每个增量行组是一个聚集 B 树索引，用于存储较小的大容量加载和插入操作，直到行组包含 1,048,576 行或者重新生成了索引。  当增量行组包含 1,048,576 行时，将被标记为已关闭，等待名为 tuple-mover 的进程将它压缩到列存储中。 
 
-每个列在每个行组中都有自身的一些值。 这些值称为“列段”。 每个行组包含表中每个列的一个列段。 每个列在每个行组中有一个列段。
+每个列在每个行组中都有自身的一些值。 这些值称为“列段”  。 每个行组包含表中每个列的一个列段。 每个列在每个行组中有一个列段。
 
 ![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
  
@@ -706,9 +706,9 @@ WHERE b = CONVERT(Varbinary(4), 1);
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>可以在同一个表中组合列存储索引和行存储索引
 非聚集索引包含基础表中部分或全部行与列的副本。 索引将定义为表的一个或多个列，并具有一个用于筛选行的可选条件。 
 
-从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，可以对行存储表创建可更新的非聚集列存储索引。 列存储索引将存储数据的副本，因此你需要提供额外的存储。 但是，列存储索引中的数据压缩成的大小比行存储表所需的大小更小。  如果采取这种做法，你可以同时对列存储索引以及行存储索引上的事务运行分析。 当行存储表中的数据更改时，列存储将会更新，因此这两个索引适用于相同的数据。  
+从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，可以对行存储表创建可更新的非聚集列存储索引  。 列存储索引将存储数据的副本，因此你需要提供额外的存储。 但是，列存储索引中的数据压缩成的大小比行存储表所需的大小更小。  如果采取这种做法，你可以同时对列存储索引以及行存储索引上的事务运行分析。 当行存储表中的数据更改时，列存储将会更新，因此这两个索引适用于相同的数据。  
   
-从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，可以对一个列存储索引使用一个或多个非聚集行存储索引。 这样，便可以针对基础列存储上执行有效的表查找。 其他选项也可供使用。 例如，可以通过在行存储表中使用 UNIQUE 约束来强制主键约束。 由于不唯一的值无法插入行存储表，SQL Server 无法将值插入列存储。  
+从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，可以对一个列存储索引使用一个或多个非聚集行存储索引  。 这样，便可以针对基础列存储上执行有效的表查找。 其他选项也可供使用。 例如，可以通过在行存储表中使用 UNIQUE 约束来强制主键约束。 由于不唯一的值无法插入行存储表，SQL Server 无法将值插入列存储。  
  
 ### <a name="performance-considerations"></a>性能注意事项 
 
@@ -752,7 +752,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 - 多个索引键可能映射到同一个哈希 Bucket。
 - 哈希函数经过均衡处理，这意味着索引键值在哈希桶上的分布通常符合泊松分布或钟型曲线分布，而不是平坦的线性分布。
 - 泊松分布并非均匀分布。 索引键值并非均匀地分布在哈希 Bucket中。
-- 如果两个索引键映射到同一哈希桶，则产生哈希冲突。 大量哈希冲突可影响读取操作的性能。 现实的目标是 30% 的桶包含两个不同的键值。
+- 如果两个索引键映射到同一哈希桶，则产生哈希冲突  。 大量哈希冲突可影响读取操作的性能。 现实的目标是 30% 的桶包含两个不同的键值。
   
 下图汇总了哈希索引和桶的交互作用。  
   
@@ -784,9 +784,9 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
 哈希索引的性能为：  
   
-- 当 `WHERE` 子句中的谓词为哈希索引键的每一列指定确切值时表现极好。 如果有不等谓词，则哈希索引将恢复为扫描。 
-- 当 `WHERE` 子句中的谓词查找索引键中的一系列值时表现不佳。  
-- 当 `WHERE` 子句中的谓词为双列哈希索引键的第一列规定了一个特定值，但没有为该键的其他列指定值时表现不佳。  
+- 当 `WHERE` 子句中的谓词为哈希索引键的每一列指定确切值时表现极好  。 如果有不等谓词，则哈希索引将恢复为扫描。 
+- 当 `WHERE` 子句中的谓词查找索引键中的一系列值时表现不佳  。  
+- 当 `WHERE` 子句中的谓词为双列哈希索引键的第一列规定了一个特定值，但没有为该键的其他列指定值时表现不佳   。  
 
 > [!TIP]
 > 谓词必须包括哈希索引键中的所有列。 哈希索引需要键（哈希）才能仔细查找索引。 如果索引键由两列组成，但 `WHERE` 子句仅提供第一列，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 没有完整的键可进行哈希运算。 这将产生索引扫描查询计划。

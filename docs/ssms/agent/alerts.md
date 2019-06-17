@@ -25,10 +25,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8332f52a9b5826c1b45788aa359652b6d3803c83
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104526"
 ---
 # <a name="alerts"></a>Alerts
@@ -81,7 +81,7 @@ ms.locfileid: "65104526"
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定事件的事件消息中包含特定文本字符串时发出警报。 例如，可以定义警报来响应包含特定表名或特定约束的消息。  
   
 ## <a name="selecting-a-performance-condition"></a>选择性能条件  
-可以指定警报来响应特定的性能条件。 在这种情况下，需要指定要监视的性能计数器、警报的阈值以及警报发生时计数器必须执行的操作。 若要设置性能条件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”或“警报属性”对话框中的“常规”页上定义下列项：  
+可以指定警报来响应特定的性能条件。 在这种情况下，需要指定要监视的性能计数器、警报的阈值以及警报发生时计数器必须执行的操作。 若要设置性能条件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”  或“警报属性”  对话框中的“常规”  页上定义下列项：  
   
 -   **对象**  
   
@@ -97,15 +97,15 @@ ms.locfileid: "65104526"
   
 -   **计数器** 和 **值**  
   
-    警报的阈值和导致警报的行为。 阈值是数字。 行为是下列之一：“低于”、“等于”或“大于”指定的值。 **值**是描述性能条件计数器的数字。 例如，若要为性能对象 **SQLServer:Locks** 设置在 **Lock Wait Time** 超过 30 分钟时要发生的警报，则可以选择“大于”并“指定 30 作为值”。  
+    警报的阈值和导致警报的行为。 阈值是数字。 行为是下列之一：“低于”  、“等于”  或“大于”  指定的值。 **值**是描述性能条件计数器的数字。 例如，若要为性能对象 **SQLServer:Locks** 设置在 **Lock Wait Time** 超过 30 分钟时要发生的警报，则可以选择“大于”  并“指定 30 作为值”  。  
   
-    又如，可以为性能对象 **SQLServer:Transactions** 指定在 **tempdb** 中的可用空间低于 1000 KB 时发出警报。 若要这样设置，应当选择计数器 **Free space in tempdb (KB)**、“小于”和“值”**1000**。  
+    又如，可以为性能对象 **SQLServer:Transactions** 指定在 **tempdb** 中的可用空间低于 1000 KB 时发出警报。 若要这样设置，应当选择计数器 **Free space in tempdb (KB)** 、“小于”  和“值”  **1000**。  
   
     > [!NOTE]  
     > 性能数据被周期性地采样，这会在达到阈值与发出性能警报之间造成短暂的延迟（几秒钟）。  
   
 ## <a name="selecting-a-wmi-event"></a>选择 WMI 事件  
-可以指定发出警报来响应特定的 WMI 事件。 若要选择 WMI 事件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”或“警报属性”对话框中的“常规”页上定义下列内容：  
+可以指定发出警报来响应特定的 WMI 事件。 若要选择 WMI 事件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”  或“警报属性”  对话框中的“常规”  页上定义下列内容：  
   
 -   **Namespace**  
   

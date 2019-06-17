@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd843cfe70aeaaac866398339e35089615eb44a2
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326688"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62961219"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,37 +57,37 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 ```  
   
 ## <a name="arguments"></a>参数  
- audit_specification_name  
+ audit_specification_name   
  审核规范的名称。  
   
- audit_name  
+ audit_name   
  应用此规范的审核的名称。  
   
- audit_action_specification  
+ audit_action_specification   
  一个或多个数据库级别可审核操作的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- audit_action_group_name  
+ audit_action_group_name   
  一个或多个数据库级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- class  
+ class   
  安全对象上的类名（如果适用）。  
   
- securable  
+ securable   
  应用审核操作或审核操作组的数据库中的表、视图或其他安全对象。 有关详细信息，请参阅 [Securables](../../relational-databases/security/securables.md)。  
   
  *column*  
  安全对象上的列名（如果适用）。  
   
- principal  
+ principal   
  应用审核操作或审核操作组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主体的名称。 有关详细信息，请参阅[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
   
- WITH ( STATE = { ON | OFF } )  
+ WITH ( STATE = { ON | OFF } )     
  允许或禁止审核收集此审核规范的记录。 审核规范状态更改必须在用户事务之外进行，并且从 ON 转换到 OFF 时，审核规范的同一语句中不能有其他更改。  
   
 ## <a name="remarks"></a>Remarks  
  数据库审核规范是驻留在给定数据库中的非安全对象。 必须将审核规范的状态设置为 OFF 选项，以便更改数据库审核规范。 使用 STATE=OFF 以外的任何选项启用审核后，如果执行 ALTER DATABASE AUDIT SPECIFICATION，将接收到错误消息。 有关详细信息，请参阅 [tempdb Database](../../relational-databases/databases/tempdb-database.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有 ALTER ANY DATABASE AUDIT 权限的用户可以更改数据库审核规范并将其绑定到任何审核。  
   
  创建数据库审核规范后，具有 CONTROL SERVER 或 ALTER ANY DATABASE AUDIT 权限的主体、sysadmin 帐户或对审核具有明确访问权限的主体即可查看该规范。  

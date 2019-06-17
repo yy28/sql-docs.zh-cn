@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 783eb070efcbafa2b8ec3685d66b080c420cc768
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946791"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 触发器函数 (Transact-SQL)
@@ -57,14 +57,14 @@ UPDATE ( column )
 ## <a name="remarks"></a>Remarks  
  UPDATE() 返回 TRUE，不考虑 INSERT 或 UPDATE 尝试是否成功。  
   
- 若要测试对多个列执行的 INSERT 或 UPDATE 操作，请在第一个操作后指定单独的 UPDATE(column) 子句。 通过使用 COLUMNS_UPDATED，也可以为 INSERT 或 UPDATE 操作测试多个列。 这会返回一个位模式，指示插入或更新的列。  
+ 若要测试对多个列执行的 INSERT 或 UPDATE 操作，请在第一个操作后指定单独的 UPDATE(column) 子句  。 通过使用 COLUMNS_UPDATED，也可以为 INSERT 或 UPDATE 操作测试多个列。 这会返回一个位模式，指示插入或更新的列。  
   
  在 INSERT 操作中，IF UPDATE 将返回 TRUE 值，因为这些列插入了显式值或隐式 (NULL) 值。  
   
 > [!NOTE]  
->  IF UPDATE(column) 子句的功能等同于 IF、IF...ELSE 或 WHILE 子句，并且可以使用 BEGIN...END 语句块。 有关详细信息，请参阅[控制流语言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
+>  IF UPDATE(column) 子句的功能等同于 IF、IF...ELSE 或 WHILE 子句，并且可以使用 BEGIN...END 语句块  。 有关详细信息，请参阅[控制流语言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
   
- 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器主体中的任意位置使用 UPDATE(column)。  
+ 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器主体中的任意位置使用 UPDATE(column)  。  
  
 如果将触发器应用于列，`UPDATED` 值将返回为 `true` 或 `1`，即使列值保持不变也是如此。 这是有意为之，并且触发器应实现确定是否允许插入/更新/删除操作的业务逻辑。 
   

@@ -17,17 +17,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716114"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>创建服务器审核规范和数据库审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和数据库审核规范。  
   
- “ 审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 *数据库级别审核规范* 对象属于审核。 针对每个审核，您可以为每个 SQL Server 数据库创建一个数据库审核规范。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+ “  审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 *数据库级别审核规范* 对象属于审核。 针对每个审核，您可以为每个 SQL Server 数据库创建一个数据库审核规范。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
  **本主题内容**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "52539156"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建服务器审核规范和数据库审核规范，请使用：**  
   
@@ -52,9 +52,9 @@ ms.locfileid: "52539156"
   
  数据库审核规范位于创建它们的数据库（ **tempdb** 系统数据库除外）中。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 -   具有 ALTER ANY DATABASE AUDIT 权限的用户可以创建数据库审核规范并将其绑定到任何审核。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "52539156"
   
 1.   在对象资源管理器中，展开“安全性”文件夹。  
   
-2.  右键单击“审核”文件夹，然后选择“新建审核…”。有关详细信息，请参阅 [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
+2.  右键单击“审核”文件夹，然后选择“新建审核…”   。有关详细信息，请参阅 [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
   
-3.  在完成选项选择后，请单击 **“确定”**。  
+3.  在完成选项选择后，请单击 **“确定”** 。  
   
 #### <a name="to-create-a-database-level-audit-specification"></a>创建数据库级别审核规范  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52539156"
   
 2.  展开 **“安全性”** 文件夹。  
   
-3.  右键单击“数据库审核规范”文件夹，然后选择“新建数据库审核规范…”。  
+3.  右键单击“数据库审核规范”文件夹，然后选择“新建数据库审核规范…”   。  
   
      **“创建数据库审核规范”** 对话框中提供了以下选项。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "52539156"
      指定要捕获的数据库级别审核操作组和审核操作。 有关数据库级别审核操作组和审核操作的列表以及它们所包含事件的说明，请参阅 [SQL Server 审核操作组和操作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
      **对象架构**  
-     显示具有指定“对象名称”的对象的架构。  
+     显示具有指定“对象名称”  的对象的架构。  
   
      **Object Name**  
      要审核的对象的名称。 这仅适用于审核操作，而不适用于审核组。  
@@ -104,7 +104,7 @@ ms.locfileid: "52539156"
      **省略号 (...)**  
      打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
   
-4.  在完成选项选择后，请单击 **“确定”**。  
+4.  在完成选项选择后，请单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -112,9 +112,9 @@ ms.locfileid: "52539156"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE master ;  
@@ -133,9 +133,9 @@ ms.locfileid: "52539156"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例创建名为 `Audit_Pay_Tables` 的服务器审核规范，该规范针对 `dbo` 表，基于上面定义的服务器审核对用户 `HumanResources.EmployeePayHistory` 发出的 SELECT 和 INSERT 语句进行审核。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例创建名为 `Audit_Pay_Tables` 的服务器审核规范，该规范针对 `dbo` 表，基于上面定义的服务器审核对用户 `HumanResources.EmployeePayHistory` 发出的 SELECT 和 INSERT 语句进行审核。  
   
     ```  
     USE AdventureWorks2012 ;   

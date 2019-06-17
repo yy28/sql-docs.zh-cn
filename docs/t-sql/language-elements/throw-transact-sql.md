@@ -20,10 +20,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e3838b8144baaaa21d1ae5d9d813bded8a161bd6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981507"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -43,14 +43,14 @@ THROW [ { error_number | @local_variable },
 ```  
   
 ## <a name="arguments"></a>参数  
- error_number  
- 表示异常的常量或变量。 error_number 为 int，并且必须大于或等于 50000 且小于或等于 2147483647。  
+ error_number   
+ 表示异常的常量或变量。 error_number 为 int，并且必须大于或等于 50000 且小于或等于 2147483647   。  
   
- message  
- 描述异常的字符串或变量。 message 为 nvarchar(2048)。  
+ message   
+ 描述异常的字符串或变量。 message 为 nvarchar(2048)   。  
   
- State  
- 在 0 到 255 之间的常量或变量，指示与消息关联的状态。 state 为 tinyint。  
+ State   
+ 在 0 到 255 之间的常量或变量，指示与消息关联的状态。 state 为 tinyint   。  
   
 ## <a name="remarks"></a>Remarks  
  THROW 语句前的语句必须后跟分号 (;) 语句终止符。  
@@ -66,9 +66,9 @@ THROW [ { error_number | @local_variable },
   
 |RAISERROR 语句|THROW 语句|  
 |-------------------------|---------------------|  
-|如果将 msg_id 传递给 RAISERROR，则必须在 sys.messages 中定义 ID。|无需在 sys.messages 中定义 error_number 参数。|  
-|msg_str 参数可以包含 printf 格式设置样式。|message 参数不接受 printf 样式的格式设置。|  
-|severity 参数指定异常的严重性。|没有 severity 参数。 始终将异常严重性设置为 16。|  
+|如果将 msg_id 传递给 RAISERROR，则必须在 sys.messages 中定义 ID  。|无需在 sys.messages 中定义 error_number 参数  。|  
+|msg_str 参数可以包含 printf 格式设置样式   。|message 参数不接受 printf 样式的格式设置   。|  
+|severity 参数指定异常的严重性  。|没有 severity 参数  。 始终将异常严重性设置为 16。|  
   
 ## <a name="examples"></a>示例  
   
@@ -119,7 +119,7 @@ END CATCH;
  ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. 使用带 THROW 的 FORMATMESSAGE  
- 下面的示例说明如何使用带 `FORMATMESSAGE` 的 `THROW` 函数来引发自定义错误消息。 该示例首先使用 `sp_addmessage` 创建用户定义的错误消息。 因为 THROW 语句不允许像 RAISERROR 那样替换 message 参数中的参数，因此使用 FORMATMESSAGE 函数传递错误消息 60000 所要求的三个参数值。  
+ 下面的示例说明如何使用带 `FORMATMESSAGE` 的 `THROW` 函数来引发自定义错误消息。 该示例首先使用 `sp_addmessage` 创建用户定义的错误消息。 因为 THROW 语句不允许像 RAISERROR 那样替换 message 参数中的参数，因此使用 FORMATMESSAGE 函数传递错误消息 60000 所要求的三个参数值  。  
   
 ```sql  
 EXEC sys.sp_addmessage  

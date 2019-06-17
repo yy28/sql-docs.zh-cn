@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0cd037a82b7c164e4c36ae5016824b08680b0bd
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820961"
 ---
 # <a name="complete-word-intellisense"></a>完成单词 (IntelliSense)
@@ -30,11 +30,11 @@ ms.locfileid: "65820961"
   
  有四种方式可用来调用完成单词功能：  
   
--   在 **“编辑”** 菜单中，指向 **IntelliSense**，然后单击 **“完成单词”**。  
+-   在 **“编辑”** 菜单中，指向 **IntelliSense**，然后单击 **“完成单词”** 。  
   
 -   按 Alt+ 向右键。  
   
--   右键单击文本编辑器，然后单击“完成单词”。  
+-   右键单击文本编辑器，然后单击“完成单词”  。  
   
 -   单击 **“文本编辑器”** 工具栏上的 **“完成单词”** 按钮。  
   

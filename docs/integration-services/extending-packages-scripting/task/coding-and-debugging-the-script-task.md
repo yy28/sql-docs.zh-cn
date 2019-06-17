@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84e76dba19f57024e22b459927624bcd0207e95d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724124"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
@@ -34,19 +34,19 @@ ms.locfileid: "65724124"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  在“脚本任务编辑器”中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  
+  在“脚本任务编辑器”  中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  
   
 ## <a name="script-task-development-environment"></a>脚本任务开发环境  
  脚本任务将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 用作脚本自身的开发环境。  
   
- 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。  
+ 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”  中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。  
   
  您在脚本任务中创建的脚本存储在包定义中。 由于没有单独的脚本文件， 因此，使用脚本任务不会影响包部署。  
   
 > [!NOTE]  
 >  在设计包和调试脚本时，脚本代码将临时写入项目文件。 在文件中存储敏感信息会埋下安全隐患，因此建议您不要在脚本代码中包含敏感信息，如密码。  
   
- 默认情况下，Option Strict 在 IDE 中处于禁用状态。  
+ 默认情况下，Option Strict 在 IDE 中处于禁用状态  。  
   
 ## <a name="script-task-project-structure"></a>脚本任务项目结构  
  创建或修改包含在脚本任务中的脚本时，VSTA 会打开一个空的新项目或重新打开现有项目。 创建此 VSTA 项目不会影响包的部署，因为项目保存在包文件内；脚本任务不会创建其他文件。  
@@ -205,10 +205,10 @@ To open Help, press F1.
  脚本任务项目可包含默认的 **ScriptMain** 项以外的项。 您可以向项目添加类、模块和代码。 您还可以使用文件夹来组织项组。 您添加的所有项在包中都将持久化。  
   
 ### <a name="references-in-the-script-task-project"></a>脚本任务项目中的引用  
- 在“项目资源管理器”中右键单击脚本任务项目，然后单击“添加引用”，可以添加对托管程序集的引用。 有关详细信息，请参阅[引用脚本解决方案中的其他程序集](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)。  
+ 在“项目资源管理器”中右键单击脚本任务项目，然后单击“添加引用”，可以添加对托管程序集的引用   。 有关详细信息，请参阅[引用脚本解决方案中的其他程序集](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)。  
   
 > [!NOTE]  
->  可以在“类视图”或“项目资源管理器”中查看 VSTA IDE 中的项目引用。 这些窗口都可以从“视图”菜单中打开。 可以从“项目”菜单、“项目资源管理器”或“类视图”添加新引用。  
+>  可以在“类视图”或“项目资源管理器”中查看 VSTA IDE 中的项目引用   。 这些窗口都可以从“视图”菜单中打开  。 可以从“项目”菜单、“项目资源管理器”或“类视图”添加新引用    。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>在脚本任务中与包进行交互  
  脚本任务使用全局 **Dts** 对象（<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类的一个实例）及其成员与包含包和 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时进行交互。  

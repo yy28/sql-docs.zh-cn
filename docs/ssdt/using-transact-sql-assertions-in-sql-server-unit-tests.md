@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102005"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用 Transact-SQL 断言
@@ -26,15 +26,15 @@ ms.locfileid: "65102005"
 ## <a name="using-transact-sql-assertions"></a>使用 Transact-SQL 断言  
 在决定是使用 Transact\-SQL 断言还是测试条件来验证数据之前，应考虑以下几点。  
   
--   性能。 与首先将数据移动到客户端计算机并在本地处理这些数据相比，在服务器上运行 Transact\-SQL 断言的速度要更快。  
+-    性能。 与首先将数据移动到客户端计算机并在本地处理这些数据相比，在服务器上运行 Transact\-SQL 断言的速度要更快。  
   
--   语言熟悉程度。 你可能更愿意根据你当前的专业知识来选择具体语言，因此选择 Transact\-SQL 断言、Visual C\# 或 Visual Basic 测试条件。  
+-   语言熟悉程度  。 你可能更愿意根据你当前的专业知识来选择具体语言，因此选择 Transact\-SQL 断言、Visual C\# 或 Visual Basic 测试条件。  
   
--   复杂验证。 在某些情况下，你可以在 Visual C\# 或 Visual Basic 中生成更复杂的测试，并在客户端上验证测试。  
+-   复杂验证  。 在某些情况下，你可以在 Visual C\# 或 Visual Basic 中生成更复杂的测试，并在客户端上验证测试。  
   
--   简单性。 使用预先定义的测试条件通常比在 Transact\-SQL 中撰写等效脚本更为简单。  
+-   简单性  。 使用预先定义的测试条件通常比在 Transact\-SQL 中撰写等效脚本更为简单。  
   
--   旧验证库。 如果已有执行验证的代码，则可以将其用于 SQL Server 单元测试，而不使用测试条件。  
+-   旧验证库  。 如果已有执行验证的代码，则可以将其用于 SQL Server 单元测试，而不使用测试条件。  
   
 ## <a name="mark-unit-test-methods-with-the-expected-exception"></a>使用预期异常标记单元测试方法  
 若要用预期异常来标记 SQL Server 单元测试方法，请添加以下属性：  
@@ -66,7 +66,7 @@ ms.locfileid: "65102005"
   
 可以通过在 Transact\-SQL 脚本中使用 RAISERROR 语句来在服务器上直接使用 Transact\-SQL 断言。 其语法为：  
   
-RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)  
+RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)   
   
 其中：  
   
