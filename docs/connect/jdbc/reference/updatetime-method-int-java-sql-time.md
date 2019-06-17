@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fa7a3ca5-1111-4480-97ca-65b632aa1e5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43256aa2725a56286ce083b613092421bdd15274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7c5b8d73641e787906c52f32f705dc32ef26d261
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809945"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802687"
 ---
 # <a name="updatetime-method-int-javasqltime"></a>updateTime 方法 (int, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,9 +37,9 @@ public void updateTime(int index,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- 索引  
+ 索引   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
  *x*  
   

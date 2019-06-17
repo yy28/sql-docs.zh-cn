@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6dc2acb8239c8c4002094ffb6003cb1b9a5fe40e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 099ffb2203397bd02b91af68651ccb42a23e2b5b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768955"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802957"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>适用于 SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47768955"
   
 -   使用**sqllocaldb.exe 我**发现的默认实例的名称。  
   
--   使用 AttachDBFilename 连接字符串关键字指定服务器应附加的数据库文件。 使用 AttachDBFilename 时，如果没有使用 Database 连接字符串关键字指定数据库的名称，则在应用程序关闭时，该数据库将从 LocalDB 实例中删除。  
+-   使用 AttachDBFilename 连接字符串关键字指定服务器应附加的数据库文件  。 使用 AttachDBFilename 时，如果没有使用 Database 连接字符串关键字指定数据库的名称，则在应用程序关闭时，该数据库将从 LocalDB 实例中删除   。  
   
 -   在您的连接字符串中指定 LocalDB 实例：  
   

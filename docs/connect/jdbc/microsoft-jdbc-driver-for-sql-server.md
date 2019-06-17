@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f28175eab5219a6181bf241fc60fec576a6ef50
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+manager: jroth
+ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405717"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801838"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server
 
@@ -28,7 +28,7 @@ ms.locfileid: "54405717"
   
 ## <a name="getting-started"></a>入门  
 
-* [第 1 步：配置用于 Java 开发的开发环境](step-1-configure-development-environment-for-java-development.md)  
+* [步骤 1：配置用于 Java 开发的开发环境](step-1-configure-development-environment-for-java-development.md)  
 * [步骤 2：创建用于 Java 开发的 SQL 数据库](step-2-create-a-sql-database-for-java-development.md)  
 * [步骤 3：使用 Java 连接到 SQL 的概念证明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5424315950e33bda642b4c0e39474b3a87a63fbd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 596c7b648d0d6812859fc688657dfba4f7567b1e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602167"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799665"
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51602167"
     有关用于指定 PHP 数据类型的常量的信息，请参阅[常量（icrosoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 PHPTYPE 部分。  
   
 ## <a name="example"></a>示例  
-以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 在每个返回行中，ReviewDate 字段以字符串形式进行检索，Comments 字段以流形式进行检索。 通过使用 PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) 函数显示流数据。  
+以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 在每个返回行中，  ReviewDate 字段以字符串形式进行检索，Comments  字段以流形式进行检索。 通过使用 PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) 函数显示流数据。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
@@ -98,9 +98,9 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-在该示例中，以字符串形式检索第二个字段 (ReviewDate) 会保留精确到毫秒的 SQL Server DATETIME 数据类型。 默认情况下，将 SQL Server DATETIME 数据类型作为 PHP DateTime 对象进行检索，但无法精确到毫秒。  
+在该示例中，以字符串形式检索第二个字段 (ReviewDate  ) 会保留精确到毫秒的 SQL Server DATETIME 数据类型。 默认情况下，将 SQL Server DATETIME 数据类型作为 PHP DateTime 对象进行检索，但无法精确到毫秒。  
   
-出于演示目的，以流形式检索第四个字段 (Comments)。 默认情况下，将 SQL Server 数据类型 nvarchar(3850) 作为字符串进行检索，大多数情况下都可接受此方式。  
+出于演示目的，以流形式检索第四个字段 (Comments  )。 默认情况下，将 SQL Server 数据类型 nvarchar(3850) 作为字符串进行检索，大多数情况下都可接受此方式。  
   
 > [!NOTE]  
 > [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) 函数提供了在执行查询之前获取字段信息（包括类型信息）的方法。  

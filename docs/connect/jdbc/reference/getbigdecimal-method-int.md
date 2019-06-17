@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: f74030d8-3789-463b-b414-2eb01cef8a30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 796abf5116ef5641cb00c2f77a3f54bd93cd6ec8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ff967fd9b18af25b7212fc9a8ba5f5c7db67cff2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809825"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799894"
 ---
 # <a name="getbigdecimal-method-int"></a>getBigDecimal 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的参数索引，检索指定参数作为全精度的 java.math.BigDecimal 的值。  
+  根据给定的参数索引，检索指定参数的值作为全精度的 java.math.BigDecimal。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,9 +36,9 @@ public java.math.BigDecimal getBigDecimal(int index)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- 索引  
+ 索引   
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
  一个 BigDecimal 对象。  

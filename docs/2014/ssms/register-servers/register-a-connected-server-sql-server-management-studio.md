@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80dbd927f0a1b008e48fda7fcbd4a7e75b7fbaf8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63191943"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>注册连接的服务器 (SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "63191943"
   
 #### <a name="to-register-a-connected-server"></a>注册连接的服务器  
   
-1.  在对象资源管理器中，右键单击已经连接的服务器，然后单击“注册”。  
+1.  在对象资源管理器中，右键单击已经连接的服务器，然后单击“注册”  。  
   
      **服务器名称**  
      输入要为已注册服务器使用的名称。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 注册本地或远程服务器，您可以存储服务器连接信息以供将来连接时使用。 此字段默认使用连接到服务器时所输入的服务器名称。 您可以保留此服务器名称，也可以输入其他便于使用的服务器名称。  
@@ -47,7 +47,7 @@ ms.locfileid: "63191943"
      选择要保存服务器注册的服务器组。  
   
      **新建组**  
-     单击此项可启动“新建组”对话框，使用该对话框可以为已注册的服务器创建新的服务器组。  
+     单击此项可启动“新建组”  对话框，使用该对话框可以为已注册的服务器创建新的服务器组。  
   
      **保存**  
      单击此项可保存已输入的信息并创建已注册的服务器。  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187052"
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
@@ -69,9 +69,9 @@ ms.locfileid: "63187052"
  指定要运行的 PowerShell 命令块，块必须用大括号 {} 括起来。 *Script_block*仅当指定`sqlps`实用程序称为眖**PowerShell**或另一个`sqlps`实用工具会话。 *Argument_array* 是 PowerShell 变量的数组，包含 *script_block*中 PowerShell 命令的参数。  
   
  *字符串* [ *command_parameters* ]  
- 指定包含要运行的 PowerShell 命令的字符串。 使用格式 **"& {*`command`*}"**。 引号指示一个字符串，并调用运算符 (&) 的原因`sqlps`实用工具来运行该命令。  
+ 指定包含要运行的 PowerShell 命令的字符串。 使用格式 **"& { *`command`* }"** 。 引号指示一个字符串，并调用运算符 (&) 的原因`sqlps`实用工具来运行该命令。  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  显示 `sqlps` 实用工具选项的语法摘要。  
   
 ## <a name="remarks"></a>备注  

@@ -19,20 +19,20 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9c491180eaf101ef3495ed015252b0fad60ef222
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8fd98f67a35985474d73225db7991aeeafb9119e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743111"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801584"
 ---
 # <a name="tables-and-indexes"></a>表和索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  适用于 SQL Server 的 OLE DB 驱动程序公开 IIndexDefinition 和 ITableDefinition 接口，使使用者能够创建、更改和删除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表和索引。 表和索引定义是否有效取决于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本。  
+  适用于 SQL Server 的 OLE DB 驱动程序公开 IIndexDefinition 和 ITableDefinition 接口，使使用者能够创建、更改和删除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表和索引   。 表和索引定义是否有效取决于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本。  
   
  创建或删除表和索引的功能取决于使用者应用程序用户的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 访问权限。 删除表的功能还可以通过是否存在声明性引用完整性约束或其他因素进行进一步限制。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47743111"
   
 |属性 ID|描述|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|类型：VT_BSTR<br /><br /> R/W：写<br /><br /> 默认值：Null<br /><br /> 说明：该属性只能在 ITableDefinition 中使用。 该属性中指定的字符串可在创建 [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)<br /><br /> 语句时使用。|  
+|SSPROP_COL_COLLATIONNAME|类型：VT_BSTR<br /><br /> R/W：写<br /><br /> 默认值：Null<br /><br /> 说明：该属性只能在 ITableDefinition 中使用  。 该属性中指定的字符串可在创建 [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)<br /><br /> 语句时使用。|  
   
 ## <a name="in-this-section"></a>本节内容  
   
