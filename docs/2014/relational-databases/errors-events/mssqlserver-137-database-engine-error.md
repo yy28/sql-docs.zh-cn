@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62915684"
 ---
 # <a name="mssqlserver137"></a>MSSQLSERVER_137
@@ -33,7 +33,7 @@ ms.locfileid: "62915684"
 |消息正文|必须声明标量变量 "%.*ls"。|  
   
 ## <a name="explanation"></a>解释  
- 如果未首先声明某个变量就在 SQL 脚本中使用它，则会出现此错误。 在下面的示例中，由于未声明 **@mycol**，因此针对 SET 和 SELECT 语句都将返回 137 错误。  
+ 如果未首先声明某个变量就在 SQL 脚本中使用它，则会出现此错误。 在下面的示例中，由于未声明 **@mycol** ，因此针对 SET 和 SELECT 语句都将返回 137 错误。  
   
  SET @mycol = 'ContactName';  
   

@@ -30,10 +30,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035416"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 实用工具
@@ -123,7 +123,7 @@ ms.locfileid: "63035416"
   
  1 = 使用 NTFS 压缩  
   
- **/B** [**+**]*start_time*  
+ **/B** [ **+** ]*start_time*  
  按照以下格式指定开始收集诊断数据的日期和时间：  
   
  YYYYMMDD_HH:MM:SS  
@@ -138,7 +138,7 @@ ms.locfileid: "63035416"
   
  请注意， **SQLdiag** 使用运行实用工具的计算机上的本地时间。  
   
- **/E** [**+**]*stop_time*  
+ **/E** [ **+** ]*stop_time*  
  按照以下格式指定停止收集诊断数据的日期和时间：  
   
  YYYYMMDD_HH:MM:SS  
@@ -358,9 +358,9 @@ SQLDIAG START /A Instance1
  通过在命令行中指定 **/A** SQLdiag_application_name **，可以在同一台计算机上运行多个**_SQLdiag_ 实例。 这对于同时从同一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例收集不同诊断信息集的操作会很有用。 例如，可以将 **SQLdiag** 命名实例配置为连续执行轻型数据收集。 然后，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中出现特定问题，则可以运行默认 **SQLdiag** 实例以收集该问题的诊断信息，也可以收集 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客户支持服务部门要求你收集用以诊断问题的诊断信息集。  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>从群集 SQL Server 实例中收集诊断数据  
- **SQLdiag** 支持从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断数据。 要从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息，请确保已在配置文件 SQLDiag.Xml 中为 \<Machine> 元素的 name 属性指定了 "."，并且命令行中未指定 /G 参数。 默认情况下，将在配置文件中为 **name** 属性指定 **"."** ，并禁用 **/G** 参数。 通常，在从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息时，无需编辑配置文件或更改命令行参数。  
+ **SQLdiag** 支持从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断数据。 要从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息，请确保已在配置文件 SQLDiag.Xml 中为 \<Machine> 元素的 name 属性指定了 "."，并且命令行中未指定 /G 参数     。 默认情况下，将在配置文件中为 **name** 属性指定 **"."** ，并禁用 **/G** 参数。 通常，在从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息时，无需编辑配置文件或更改命令行参数。  
   
- 如果将 **"."** 指定为计算机名称，则 **SQLdiag** 会检测到它正在群集中运行，同时从该群集中安装的所有虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中检索诊断信息。 如果只希望从计算机上运行的其中一个虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息，请在 SQLDiag.Xml 中为 \<Machine> 元素的 name 属性指定该虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 如果将 **"."** 指定为计算机名称，则 **SQLdiag** 会检测到它正在群集中运行，同时从该群集中安装的所有虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中检索诊断信息。 如果只希望从计算机上运行的其中一个虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息，请在 SQLDiag.Xml 中为 \<Machine> 元素的 name 属性指定该虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]   。  
   
 > [!NOTE]  
 >  若要从群集 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 实例中收集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 跟踪信息，必须在群集中启用管理共享 (ADMIN$)。  

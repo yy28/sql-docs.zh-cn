@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721157"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 课：为复制创建 Windows 帐户
@@ -35,31 +35,31 @@ ms.locfileid: "62721157"
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-publisher"></a>在发布服务器上为复制代理创建本地 Windows 帐户  
   
-1.  在发布服务器上，从“控制面板”的“管理工具”中打开“计算机管理”。  
+1.  在发布服务器上，从“控制面板”的“管理工具”  中打开“计算机管理”  。  
   
-2.  在“系统工具”中，展开“本地用户和组”。  
+2.  在“系统工具”  中，展开“本地用户和组”  。  
   
-3.  右键单击“用户”，然后单击“新建用户”。  
+3.  右键单击“用户”  ，然后单击“新建用户”  。  
   
 4.  输入`repl_snapshot`中**用户名**框中，提供密码和其他相关信息，然后单击**创建**来创建 repl_snapshot 帐户。  
   
 5.  重复上述步骤创建 repl_logreader、repl_distribution 和 repl_merge 帐户。  
   
-6.  单击 **“关闭”**。  
+6.  单击 **“关闭”** 。  
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>在订阅服务器上为复制代理创建本地 Windows 帐户  
   
-1.  在订阅服务器上，从“控制面板”的“管理工具”中打开“计算机管理”。  
+1.  在订阅服务器上，从“控制面板”的“管理工具”  中打开“计算机管理”  。  
   
-2.  在“系统工具”中，展开“本地用户和组”。  
+2.  在“系统工具”  中，展开“本地用户和组”  。  
   
-3.  右键单击“用户”，然后单击“新建用户”。  
+3.  右键单击“用户”  ，然后单击“新建用户”  。  
   
 4.  输入`repl_distribution`中**用户名**框中，提供密码和其他相关信息，然后单击**创建**来创建 repl_distribution 帐户。  
   
 5.  重复上述步骤创建 repl_merge 帐户。  
   
-6.  单击 **“关闭”**。  
+6.  单击 **“关闭”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
  您已经成功地为复制代理创建了 Windows 帐户。 接下来，您将配置快照文件夹。 请参阅[第 2 课：准备快照文件夹](lesson-2-preparing-the-snapshot-folder.md)。  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 942a0be0503cd728defb6800a516b0cb0c85c13f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856834"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>创建新的基于策略的管理条件
@@ -43,15 +43,15 @@ ms.locfileid: "62856834"
   
 #### <a name="to-create-a-condition"></a>创建条件  
   
-1.  在“对象资源管理器”中，单击加号以展开你要在其中创建基于策略的管理条件的服务器。  
+1.  在“对象资源管理器”  中，单击加号以展开你要在其中创建基于策略的管理条件的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”**。  
+3.  单击加号以便展开 **“策略管理”** 。  
   
 4.  单击加号以便展开 **“方面”** 文件夹。  
   
-5.  右键单击要在其中创建新条件的方面，然后选择“新建条件”。  
+5.  右键单击要在其中创建新条件的方面，然后选择“新建条件”  。  
   
 6.  在 **“创建新条件”** 对话框的 **“名称”** 框中，键入新条件的名称。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "62856834"
   
 8.  在 **“表达式”** 下，通过在 **“字段”** 框中选择一个方面属性及与其关联的运算符和值，构造条件表达式。 在添加多个表达式时，可使用 **And** 或 **Or**来联接这些表达式。 有关此对话框中可用选项的详细信息，请参阅[“创建新条件”或“打开条件”对话框，“常规”页](../../integration-services/general-page-of-integration-services-designers-options.md)、[“创建新条件”或“打开条件”对话框，“说明”页](create-new-condition-or-open-condition-dialog-box-description-page.md)和[“高级编辑(条件)”对话框](advanced-edit-condition-dialog-box.md)。  
   
-9. 完成后，单击 **“确定”**。  
+9. 完成后，单击 **“确定”** 。  
   
   

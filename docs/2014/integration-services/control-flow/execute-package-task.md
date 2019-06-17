@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831906"
 ---
 # <a name="execute-package-task"></a>执行包任务
@@ -41,10 +41,10 @@ ms.locfileid: "62831906"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含执行工作流操作的任务，如执行可执行文件和批处理文件。 有关详细信息，请参阅 [Execute Process Task](execute-process-task.md)。  
   
 ## <a name="running-packages"></a>运行包  
- “执行包”任务可运行与父包一起包含在同一个项目中的子包。 您可以通过将 **ReferenceType** 属性设置为 **“项目引用”**，然后设置 **PackageNameFromProjectReference** 属性，从项目中选择子包。  
+ “执行包”任务可运行与父包一起包含在同一个项目中的子包。 您可以通过将 **ReferenceType** 属性设置为 **“项目引用”** ，然后设置 **PackageNameFromProjectReference** 属性，从项目中选择子包。  
   
 > [!NOTE]  
->  “ReferenceType”选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”。 有关转换的详细信息，请参阅[将项目部署到 Integration Services 服务器](../deploy-projects-to-integration-services-server.md)。  
+>  “ReferenceType”  选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”  。 有关转换的详细信息，请参阅[将项目部署到 Integration Services 服务器](../deploy-projects-to-integration-services-server.md)。  
   
  执行包任务也可以运行存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库中的包和存储在文件系统中的包。 此任务使用 OLE DB 连接管理器连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或者使用文件连接管理器访问文件系统。 有关详细信息，请参阅 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md) 和 [Flat File Connection Manager](../connection-manager/flat-file-connection-manager.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62831906"
   
  而有时您则希望父包和子包作为一个单元一起失败，或者您可能不希望引发其他进程的额外开销。 例如，如果子进程失败，而包的父进程中的后续处理取决于子进程的成功，则子包应当在父包的进程中运行。  
   
- 默认情况下，执行包任务的 ExecuteOutOfProcess 属性设置为`False`，并在与父包相同的进程中运行子包。 如果将此属性设置为 `True`，则在单独的进程中运行子包。  这可能减慢子包的启动。 此外，如果将属性设置为 `True`，则不能在仅工具安装中调试包。 必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [安装 Integration Services](../install-windows/install-integration-services.md)  
+ 默认情况下，执行包任务的 ExecuteOutOfProcess 属性设置为`False`，并在与父包相同的进程中运行子包。 如果将此属性设置为 `True`，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将属性设置为 `True`，则不能在仅工具安装中调试包。 必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [安装 Integration Services](../install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>扩展事务  
  父包使用的事务可扩展到子包；因此，两个包都执行的工作可以提交或回滚。 例如，取决于子包执行的数据库插入，父包执行的数据库插入可以提交或回滚，反之亦然。 有关详细信息，请参阅 [Inherited Transactions](../inherited-transactions.md)。  
@@ -97,7 +97,7 @@ ms.locfileid: "62831906"
  有关详细信息，请参阅 [在子包中使用变量和参数的值](../use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
   
 ### <a name="accessing-parent-package-variables"></a>访问父包变量  
- 子包可以通过使用脚本任务访问父包变量。 在“脚本任务编辑器”的“脚本”页上输入父包变量的名称时，不要在变量名称中包括“用户:”。 否则，子包在运行父包时找不到该变量。 有关使用脚本任务访问父包变量的详细信息，请参阅此博客文章[SSIS:访问父包中的变量](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)。  
+ 子包可以通过使用脚本任务访问父包变量。 在“脚本任务编辑器”的“脚本”页上输入父包变量的名称时，不要在变量名称中包括“用户:”    。 否则，子包在运行父包时找不到该变量。 有关使用脚本任务访问父包变量的详细信息，请参阅此博客文章[SSIS:访问父包中的变量](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)。  
   
 ## <a name="configuring-the-execute-package-task"></a>配置执行包任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  

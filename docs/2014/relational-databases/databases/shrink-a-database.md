@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916941"
 ---
 # <a name="shrink-a-database"></a>收缩数据库
@@ -67,9 +67,9 @@ ms.locfileid: "62916941"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“数据库”，再右键单击要收缩的数据库。  
+2.  展开  “数据库”，再右键单击要收缩的数据库。  
   
-3.  指向 **“任务”**，指向 **“收缩”**，然后单击 **“数据库”**。  
+3.  指向 **“任务”** ，指向 **“收缩”** ，然后单击 **“数据库”** 。  
   
      **“数据库”**  
      显示所选数据库的名称。  
@@ -86,7 +86,7 @@ ms.locfileid: "62916941"
      **收缩后文件中的最大可用空间**  
      输入在数据库收缩后数据库文件中剩余可用空间的最大百分比。 值可以介于 0 和 99 之间。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -94,9 +94,9 @@ ms.locfileid: "62916941"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此实例使用 [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) 减少 `UserDB` 数据库中数据文件和日志文件的大小并允许数据库中有 `10` ％ 的可用空间。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此实例使用 [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) 减少 `UserDB` 数据库中数据文件和日志文件的大小并允许数据库中有 `10` ％ 的可用空间。  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   

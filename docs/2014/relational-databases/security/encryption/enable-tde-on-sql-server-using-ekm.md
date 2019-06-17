@@ -16,10 +16,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e55afa78d82c19d9a6a09226c537ca95f65105ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011510"
 ---
 # <a name="enable-tde-using-ekm"></a>使用 EKM 启用 TDE
@@ -77,9 +77,9 @@ ms.locfileid: "63011510"
   
 3.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-4.  在标准菜单栏上，单击 **“新建查询”**。  
+4.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-5.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+5.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Enable advanced options.  

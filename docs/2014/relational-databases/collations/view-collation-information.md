@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918698"
 ---
 # <a name="view-collation-information"></a>查看排序规则信息
@@ -35,28 +35,28 @@ ms.locfileid: "62918698"
   
 1.  在“对象资源管理器”中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  右键单击该实例，然后选择“属性”。  
+2.  右键单击该实例，然后选择“属性”  。  
   
  **使用对象资源管理器查看数据库的排序规则设置**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开“数据库”，右键单击数据库，然后选择“属性”。  
+2.  展开“数据库”  ，右键单击数据库，然后选择“属性”  。  
   
  **使用对象资源管理器查看列的排序规则设置**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  依次展开 **“数据库”**、数据库和 **“表”**。  
+2.  依次展开 **“数据库”** 、数据库和 **“表”** 。  
   
-3.  展开包含该列的表，然后展开 **“列”**。  
+3.  展开包含该列的表，然后展开 **“列”** 。  
   
-4.  右键单击该列并选择“属性”。 如果排序规则属性为空，则该列不是字符数据类型。  
+4.  右键单击该列并选择“属性”  。 如果排序规则属性为空，则该列不是字符数据类型。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看服务器的排序规则设置**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
   
 2.  在查询窗口中，输入以下使用 SERVERPROPERTY 系统函数的语句。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62918698"
   
  **查看 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
   
 2.  在查询窗口中，输入以下使用 SERVERPROPERTY 系统函数的语句。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62918698"
   
  **查看数据库的排序规则设置**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
   
 2.  在查询窗口中，输入以下使用 sys.databases 系统目录视图的语句。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62918698"
   
  **查看列的排序规则设置**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
   
 2.  在查询窗口中，输入以下使用 sys.columns 系统目录视图的语句。  
   

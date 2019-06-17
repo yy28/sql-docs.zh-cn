@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876505"
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
@@ -29,7 +29,7 @@ ms.locfileid: "62876505"
   
  按照以下步骤向本地磁盘创建数据库的加密备份。 本例使用一个名为 MyTestDB 的用户数据库。  
   
-1.  **创建 master 数据库的数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
+1.  **创建 master 数据库的数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”** 。  
   
     ```  
     -- Creates a database master key.   
@@ -41,7 +41,7 @@ ms.locfileid: "62876505"
   
     ```  
   
-2.  **创建备份证书：** 在 master 数据库中创建备份证书。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+2.  **创建备份证书：** 在 master 数据库中创建备份证书。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
     ```  
     Use Master  
@@ -52,7 +52,7 @@ ms.locfileid: "62876505"
   
     ```  
   
-3.  **备份数据库：** 指定加密算法和要使用证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  **备份数据库：** 指定加密算法和要使用证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -88,7 +88,7 @@ ms.locfileid: "62876505"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **创建数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
+2.  **创建数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”** 。  
   
     ```  
     -- Creates a database master key.  
@@ -111,7 +111,7 @@ ms.locfileid: "62876505"
   
     ```  
   
-4.  **备份数据库：** 指定加密算法和要使用的证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+4.  **备份数据库：** 指定加密算法和要使用的证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

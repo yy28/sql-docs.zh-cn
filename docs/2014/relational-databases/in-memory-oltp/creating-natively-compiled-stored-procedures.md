@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63071802"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>创建本机编译的存储过程
@@ -53,11 +53,11 @@ go
   
  在代码示例中，`NATIVE_COMPILATION` 指示此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程是本机编译的存储过程。 以下选项是必需的：  
   
-|Option|描述|  
+|Option|Description|  
 |------------|-----------------|  
 |`SCHEMABINDING`|本机编译存储过程必须绑定到其引用的对象的架构。 这意味着不能删除该过程的表引用。 过程中引用的表必须包括其架构名称和通配符 (\*) 查询中不允许。 此版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的本机编译存储过程仅支持 `SCHEMABINDING`。|  
 |`EXECUTE AS`|本机编译的存储过程不支持 `EXECUTE AS CALLER`，这是默认执行上下文。 因此，需要指定执行上下文。 选项`EXECUTE AS OWNER`， `EXECUTE AS`*用户*，和`EXECUTE AS SELF`支持。|  
-|`BEGIN ATOMIC`|本机编译的存储过程正文必须由恰好一个原子块构成。 原子块确保存储过程的原子执行。 如果在活动事务的上下文外调用该过程，它将开始一个新事务，这个新事务在原子块的末尾提交。 本机编译存储过程中的原子块具有两个必需的选项：<br /><br /> `TRANSACTION ISOLATION LEVEL`。 请参阅[事务隔离级别](../../database-engine/transaction-isolation-levels.md)有关支持的隔离级别。<br /><br /> `LANGUAGE`。 存储过程的语言必须设置为可用语言或语言别名之一。|  
+|`BEGIN ATOMIC`|本机编译的存储过程正文必须由恰好一个原子块构成。 原子块确保存储过程的原子执行。 如果在活动事务的上下文外调用该过程，它将开始一个新事务，这个新事务在原子块的末尾提交。 本机编译存储过程中的原子块具有两个必需的选项：<br /><br /> `TRANSACTION ISOLATION LEVEL` 的用户。 请参阅[事务隔离级别](../../database-engine/transaction-isolation-levels.md)有关支持的隔离级别。<br /><br /> `LANGUAGE` 的用户。 存储过程的语言必须设置为可用语言或语言别名之一。|  
   
  通过 `EXECUTE AS` 进行模拟可能会导致 `EXECUTE AS` 和 Windows 登录名出错。 如果用户帐户使用 Windows 身份验证，则用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务帐户与 Windows 登录名所在的域之间必须存在完全信任。 如果不是完全信任，在创建本机编译存储过程，则会返回以下错误消息：消息 15404，无法获取有关 Windows NT 组/用户 username，错误代码 0x5 的信息。  
   

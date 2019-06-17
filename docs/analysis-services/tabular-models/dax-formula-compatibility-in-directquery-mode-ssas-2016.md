@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019233"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式下的 DAX 公式兼容性 
@@ -107,7 +107,7 @@ ms.locfileid: "63019233"
 -   在比较中以及在与 EXACT、AND、OR、 &amp;&amp;或 || 结合使用时，布尔值始终被当作逻辑值。  
   
 **从字符串转换为布尔值**  
-在内存中和 DirectQuery 模型中，只允许转换为布尔值从以下这些字符串： **""** （空字符串）， **"true"**， **"false"**; 其中一个空字符串强制转换为 false 值。  
+在内存中和 DirectQuery 模型中，只允许转换为布尔值从以下这些字符串： **""** （空字符串）， **"true"** ， **"false"** ; 其中一个空字符串强制转换为 false 值。  
   
 将任何其他字符串转换为布尔数据类型会导致错误。  
   

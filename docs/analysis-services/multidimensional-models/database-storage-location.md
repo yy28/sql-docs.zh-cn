@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0544e7e7d552098806d4c3d93751631d03520139
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714794"
 ---
 # <a name="database-storage-location"></a>数据库存储位置
@@ -34,7 +34,7 @@ ms.locfileid: "62714794"
  **DbStorageLocation** 指定了所有数据库数据和元数据文件所在的文件夹，而 **StorageLocation** 指定了多维数据集的一个或多个分区所在的文件夹。 **StorageLocation** 可以独立于 **DbStorageLocation**进行设置。 这是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 根据预期的结果做出的决定，很多时候一个属性或另一个属性的使用会重叠。  
   
 ## <a name="dbstoragelocation-usage"></a>DbStorageLocation 用法  
- **DbStorageLocation** 数据库属性用作“分离/附加”数据库命令序列、“备份/还原”数据库命令序列或“同步”数据库命令中的“创建”数据库命令的一部分。 更改 **DbStorageLocation** 数据库属性被认为是数据库对象的结构更改。 这意味着必须重新创建所有元数据并且重新处理数据。  
+ **DbStorageLocation** 数据库属性用作   “分离/附加”数据库命令序列、   “备份/还原”数据库命令序列或“同步”  数据库命令中的“创建”  数据库命令的一部分。 更改 **DbStorageLocation** 数据库属性被认为是数据库对象的结构更改。 这意味着必须重新创建所有元数据并且重新处理数据。  
   
 > [!IMPORTANT]  
 >  不应使用 **Alter** 命令更改数据库存储位置。 相反，我们建议使用一系列 **Detach**/**Attach** 数据库命令（请参阅 [移动 Analysis Services 数据库](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)、 [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)）。  

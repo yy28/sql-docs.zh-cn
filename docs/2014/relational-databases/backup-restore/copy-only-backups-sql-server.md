@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922128"
 ---
 # <a name="copy-only-backups-sql-server"></a>仅复制备份 (SQL Server)
@@ -52,14 +52,14 @@ ms.locfileid: "62922128"
   
 -   对于仅复制完整备份：  
   
-     BACKUP DATABASE *database_name* TO\<备份设备*>*  ...使用 COPY_ONLY...  
+     BACKUP DATABASE *database_name* TO\<备份设备 *>*  ...使用 COPY_ONLY...  
   
     > [!NOTE]  
     >  使用 DIFFERENTIAL 选项指定时，COPY_ONLY 不起作用。  
   
 -   对于仅复制日志备份：  
   
-     BACKUP LOG *database_name* TO  *\<* 备份设备*>*  ...使用 COPY_ONLY...  
+     BACKUP LOG *database_name* TO  *\<* 备份设备 *>*  ...使用 COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   

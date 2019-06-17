@@ -3,24 +3,24 @@ title: 安装新的 Python 语言包-SQL Server 机器学习
 description: 将新的 Python 包添加到 SQL Server 2017 机器学习服务 （数据库内） 和机器学习服务器 （独立版）。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/10/2018
+ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cc83ed8500e93147163e3166b895c7333b4222cd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 0c6c4384dd6c02e35fe77a6fb2bfc4017a445b1b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510294"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140720"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安装新的 Python 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何在 SQL Server 2017 机器学习服务的实例上安装新的 Python 包。 一般情况下，安装新的包的过程是类似于在标准的 Python 环境。 但是，执行一些其他步骤是必需的如果服务器不具有 internet 连接。
 
-有关包的位置和安装路径的详细信息，请参阅[获取 R 或 Python 包信息](../r/determine-which-packages-are-installed-on-sql-server.md)。
+有关包的位置和安装路径的详细信息，请参阅[获取 R 或 Python 包信息](../package-management/installed-package-information.md)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -50,7 +50,7 @@ ms.locfileid: "58510294"
 
 + 如果没有 internet 访问的服务器上安装 Python 包，必须 WHL 文件下载到另一台计算机，然后将其复制到服务器。
 
-    例如，在单独的计算机，你可以下载的 WHL 文件从该站点[ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然后将文件复制`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 计算机上的本地文件夹。
+    例如，在单独的计算机，你可以下载的 WHL 文件从该站点[ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然后将文件复制`cntk-2.1-cp35-cp35m-win_amd64.whl` 到 SQL Server 计算机上的本地文件夹。
 
 + SQL Server 2017 使用 Python 3.5。 
 

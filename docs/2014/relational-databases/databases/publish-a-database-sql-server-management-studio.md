@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b11aa11f942e6f0f801de36c7d15e17cae4141b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916617"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>发布数据库 (SQL Server Management Studio)
@@ -30,11 +30,11 @@ ms.locfileid: "62916617"
   
 #### <a name="to-publish-a-database-to-a-web-service"></a>将数据库发布到 Web 服务  
   
-1.  在对象资源管理器中，展开“数据库”，右键单击某个数据库，指向“任务”，然后单击“生成和发布脚本”。 按照向导中的步骤，创建用于发布的数据库对象的脚本。  
+1.  在对象资源管理器中，展开“数据库”  ，右键单击某个数据库，指向“任务”  ，然后单击“生成和发布脚本”  。 按照向导中的步骤，创建用于发布的数据库对象的脚本。  
   
 2.  在 **“选择对象”** 页上，选择要发布到 Web 宿主服务的对象。  
   
-3.  在 **“设置脚本编写选项”** 页中，选择 **“发布到 Web 服务”**。  
+3.  在 **“设置脚本编写选项”** 页中，选择 **“发布到 Web 服务”** 。  
   
     1.  在 **“提供程序”** 框中，指定 Web 服务的提供程序。 如果您尚未配置 Web 宿主提供程序，请选择 **“管理提供程序”** ，然后使用 **“管理提供程序”** 对话框来为您的 Web 服务配置一个提供程序。  
   

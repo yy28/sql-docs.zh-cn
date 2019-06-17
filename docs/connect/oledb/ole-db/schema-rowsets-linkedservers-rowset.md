@@ -13,22 +13,22 @@ helpviewer_keywords:
 - enumerating data sources [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9fe4ab1b6fd245bdb7ac0bd08acb0564742e1188
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7d2eedc7d8036bfa8507179b97c53e9977f0b5ae
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694933"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795940"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>架构行集 - LINKEDSERVERS 行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源。  
+  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源  。  
   
- LINKEDSERVERS 行集包含以下列。  
+ LINKEDSERVERS 行集包含以下列  。  
   
 |列名|类型指示符|描述|  
 |-----------------|--------------------|-----------------|  

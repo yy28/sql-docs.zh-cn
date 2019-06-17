@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_5245 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 5245 (Database Engine error)
 ms.assetid: 6005c9ec-ccdd-4def-9eb4-37cdb599ddb3
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 30b37236b321fc90372914f2af48a652d41fbe03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62913595"
 ---
 # <a name="mssqlserver5245"></a>MSSQLSERVER_5245
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>详细信息  
   
 |||  
@@ -34,8 +33,9 @@ ms.locfileid: "62913595"
 |消息正文|对象 ID O_ID （对象 'NAME'）：由于超过了锁请求超时期限，DBCC 无法获取此对象上的锁。 已跳过此对象，不会处理它。|  
   
 ## <a name="explanation"></a>解释  
-在 DBCC 等待指定对象的表锁时，出现锁超时。  
+ 在 DBCC 等待指定对象的表锁时，出现锁超时。  
   
 ## <a name="user-action"></a>用户操作  
-重新运行 DBCC 命令。  
+ 重新运行 DBCC 命令。  
+  
   

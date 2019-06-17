@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62902434"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
@@ -222,7 +222,7 @@ ms.locfileid: "62902434"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
-|DT_CY|smallmoney、money|smallmoney、money|货币||||  
+|DT_CY|smallmoney、money|smallmoney、money|Currency||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date (Transact-SQL)](/sql/t-sql/data-types/date-transact-sql)|[date (Transact-SQL)](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
@@ -248,7 +248,7 @@ ms.locfileid: "62902434"
 |DT_WSTR|nchar、nvarchar、sql_variant、xml|char、varchar、nchar、nvarchar、sql_variant、xml|LongText|CHAR、ROWID、VARCHAR2、NVARCHAR2、NCHAR|GRAPHIC、VARGRAPHIC|GRAPHIC、VARGRAPHIC|  
 |DT_IMAGE|image|image|LongBinary|LONG RAW、BLOB、LOBLOCATOR、BFILE、VARGRAPHIC、LONG VARGRAPHIC、用户定义|CHAR () FOR BIT DATA、VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA、VARCHAR () FOR BIT DATA、BLOB|  
 |DT_NTEXT|ntext|text、ntext||LONG、CLOB、NCLOB、NVARCHAR、TEXT|LONG VARCHAR、NCHAR、NVARCHAR、TEXT|LONG VARCHAR、DBCLOB、NCHAR、NVARCHAR、TEXT|  
-|DT_TEXT|Text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA、CLOB|  
+|DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA、CLOB|  
   
  有关在数据流中映射数据类型的信息，请参阅 [在数据流中使用数据类型](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   

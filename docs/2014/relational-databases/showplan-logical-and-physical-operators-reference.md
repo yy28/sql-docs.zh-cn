@@ -136,10 +136,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e4e45de57f4ea1ea88b72df7190e5ec8c3a1f768
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627087"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
@@ -155,11 +155,11 @@ ms.locfileid: "62627087"
   
  物理运算符初始化、收集数据，然后关闭。 具体来讲，物理运算符可以响应下列三种方法调用：  
   
--   **Init()**：Init() 方法使物理运算符初始化自身并设置所有需要的数据结构。 尽管一个物理运算符通常只接收一次 **Init()** 调用，但也可以接收许多次调用。  
+-   **Init()** ：Init() 方法使物理运算符初始化自身并设置所有需要的数据结构  。 尽管一个物理运算符通常只接收一次 **Init()** 调用，但也可以接收许多次调用。  
   
--   **GetNext()**：GetNext() 方法使物理运算符获得数据的第一行或后续行。 物理运算符可以不接收 **GetNext()** 调用，也可以接收许多次调用。  
+-   **GetNext()** ：GetNext() 方法使物理运算符获得数据的第一行或后续行  。 物理运算符可以不接收 **GetNext()** 调用，也可以接收许多次调用。  
   
--   **Close()**：Close() 方法使物理运算符执行某些清除操作，然后关闭。 一个物理运算符只接收一个 **Close()** 调用。  
+-   **Close()** ：Close() 方法使物理运算符执行某些清除操作，然后关闭  。 一个物理运算符只接收一个 **Close()** 调用。  
   
  **GetNext()** 方法返回一个数据行，它的调用次数作为 **ActualRows** 显示在使用 SET STATISTICS PROFILE ON 或 SET STATISTICS XML ON 生成的显示计划输出中。 有关这些 SET 选项的详细信息，请参阅 [SET STATISTICS PROFILE (Transact-SQL)](/sql/t-sql/statements/set-statistics-profile-transact-sql) 和 [SET STATISTICS XML (Transact-SQL)](/sql/t-sql/statements/set-statistics-xml-transact-sql)。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "62627087"
 |![Clustered Index Update 运算符图标](../../2014/database-engine/media/clustered-index-update-32x.gif "Clustered Index Update 运算符图标")|`Clustered Index Update`|`Clustered Index Update`运算符用于更新中指定的聚集索引中的输入的行`Argument`列。如果 WHERE:() 存在谓词，那些满足此谓词更新的行。 如果存在 SET:() 谓词，则将每个更新的列设置为该值。 如果存在 DEFINE:() 谓词，则列出此运算符定义的值。 可以在 SET 子句中、该运算符内的其他位置和该查询内的其他位置引用这些值。 `Clustered Index Update` 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Collapse 运算符图标](../../2014/database-engine/media/collapse-32x.gif "Collapse 运算符图标")|`Collapse`|`Collapse` 运算符用于优化更新处理。 执行更新时，可以将该更新操作拆分（使用 `Split` 运算符）成为删除和插入操作。 `Argument`列中包含 GROUP BY:() 子句指定的键列列表。 如果查询处理器遇到删除和插入相同键值的相邻行，则会用一个更有效的更新操作替换这些单独的操作。 `Collapse` 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Columnstore Index Scan](../../2014/database-engine/media/columnstoreindexscan.gif "Columnstore Index Scan")|`Columnstore Index Scan`|`Columnstore Index Scan`运算符扫描在指定的列存储索引`Argument`列的查询执行计划。|  
-|![Compute Scalar 运算符图标](../../2014/database-engine/media/compute-scalar-32x.gif "Compute Scalar 运算符图标")|`Compute Scalar`|`Compute Scalar`运算符会求值的表达式来生成计算标量值。 该值可以返回给用户、在查询中的其他位置引用或二者皆可。 例如，在筛选谓词或联接谓词中就会出现二者皆可的情况。 `Compute Scalar` 既是一个逻辑运算符，也是一个物理运算符。<br /><br /> `Compute Scalar` 在通过 SET STATISTICS XML 生成的显示计划中显示的运算符可能不包含`RunTimeInformation`元素。 在图形显示计划中，当已在 **中选中**“包括实际的执行计划” **选项时，**“实际行” **、** “实际重新绑定次数” **和** “实际重绕次数” **可能不会出现在** “属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]窗口中。 当出现这种情况时，意味着虽然编译过的查询计划中使用了这些运算符，但在运行时查询计划中，它们的作用是由其他运算符实现的。 另外，请注意，SET STATISTICS PROFILE 生成的显示计划输出中的执行数等于 SET STATISTICS XML 生成的显示计划中的重新绑定次数和重绕次数的总和。|  
+|![Compute Scalar 运算符图标](../../2014/database-engine/media/compute-scalar-32x.gif "Compute Scalar 运算符图标")|`Compute Scalar`|`Compute Scalar`运算符会求值的表达式来生成计算标量值。 该值可以返回给用户、在查询中的其他位置引用或二者皆可。 例如，在筛选谓词或联接谓词中就会出现二者皆可的情况。 `Compute Scalar` 既是一个逻辑运算符，也是一个物理运算符。<br /><br /> `Compute Scalar` 在通过 SET STATISTICS XML 生成的显示计划中显示的运算符可能不包含`RunTimeInformation`元素。 在图形显示计划中，当已在 **中选中**“包括实际的执行计划” **选项时，** “实际行” **、** “实际重新绑定次数” **和** “实际重绕次数” **可能不会出现在** “属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]窗口中。 当出现这种情况时，意味着虽然编译过的查询计划中使用了这些运算符，但在运行时查询计划中，它们的作用是由其他运算符实现的。 另外，请注意，SET STATISTICS PROFILE 生成的显示计划输出中的执行数等于 SET STATISTICS XML 生成的显示计划中的重新绑定次数和重绕次数的总和。|  
 |![Concatenation 运算符图标](../../2014/database-engine/media/concatenation-32x.gif "Concatenation 运算符图标")|**Concatenation**|**Concatenation** 运算符扫描多个输入，并返回每个扫描的行。 **Concatenation** 通常用于实现 [!INCLUDE[tsql](../includes/tsql-md.md)] UNION ALL 结构。 **Concatenation** 物理运算符有两个或多个输入，有一个输出。 Concatenation 将行从第一个输入流复制到输出流，然后对其他输入流重复进行此操作。 **Concatenation** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Constant Scan 运算符图标](../../2014/database-engine/media/constant-scan-32x.gif "Constant Scan 运算符图标")|`Constant Scan`|`Constant Scan`运算符将一个或多个常量行引入到查询。 一个`Compute Scalar`之后经常使用运算符`Constant Scan`将列添加到生成的行`Constant Scan`运算符。|  
 |![Convert（数据库引擎）语言元素图标](../../2014/database-engine/media/convert-32x.gif "Convert（数据库引擎）语言元素图标")|`Convert`|`Convert` 运算符将标量数据类型转换为另一种类型。 `Convert` 是一个语言元素。|  
@@ -219,7 +219,7 @@ ms.locfileid: "62627087"
 |![Fetch Query 游标运算符图标](../../2014/database-engine/media/fetch-query-32x.gif "Fetch Query 游标运算符图标")|`Fetch Query`|当对游标发出提取命令时，`Fetch Query` 运算符将检索行。|  
 |![Filter（数据库引擎）运算符图标](../../2014/database-engine/media/filter-32x.gif "Filter（数据库引擎）运算符图标")|**Filter**|**筛选器**运算符扫描输入，并返回满足要求的显示中的筛选器表达式 （谓词） 的行`Argument`列。|  
 |None|`Flow Distinct`|`Flow Distinct` 逻辑运算符用于通过扫描输入来删除重复项。 而`Distinct`运算符生成任何输出前使用所有的输入**FlowDistinct**运算符返回每一行，因为它从输入获得 （除非该行是一个重复，这种情况下它将被丢弃）。|  
-|None|`Full Outer Join`|`Full Outer Join` 逻辑运算符从第一个（顶端）输入中与第二个（底端）输入相联接的行中返回每个满足联接谓词的行。 它还可以从下列输入返回行：<br /><br /> - 在第二个输入中没有匹配项的第一个输入。<br /><br /> - 在第一个输入中没有匹配项的第二个输入。<br /><br /> <br /><br /> 不包含匹配值的输入将作为空值返回。 `Full Outer Join` 是一个逻辑运算符。|  
+|None|`Full Outer Join`|`Full Outer Join` 逻辑运算符从第一个（顶端）输入中与第二个（底端）输入相联接的行中返回每个满足联接谓词的行。 它还可以从下列输入返回行：<br /><br /> \- 在第二个输入中没有匹配项的第一个输入。<br /><br /> \- 在第一个输入中没有匹配项的第二个输入。<br /><br /> <br /><br /> 不包含匹配值的输入将作为空值返回。 `Full Outer Join` 是一个逻辑运算符。|  
 |![Gather Streams 并行度运算符图标](../../2014/database-engine/media/parallelism-32x.gif "Gather Streams 并行度运算符图标")|**Gather Streams**|**Gather Streams** 运算符仅用在并行查询计划中。 **Gather Streams** 运算符处理几个输入流并通过组合这几个输入流生成单个记录输出流。 记录的内容和格式不会改变。 如果此运算符保留顺序，则所有的输入流都必须有序。 如果输出已经排序，`Argument`列包含一个 ORDER BY:() 谓词和正在排序的列的名称。 **Gather Streams** 是一个逻辑运算符。|  
 |![Hash Match 运算符图标](../../2014/database-engine/media/hash-match-32x.gif "Hash Match 运算符图标")|`Hash Match`|`Hash Match` 运算符通过计算其生成输入中每行的哈希值生成哈希表。 HASH:() 谓词以及用于创建哈希值的列的列表将出现在`Argument`列。 然后，该谓词为每个探测行（如果适用）计算哈希值（使用相同的哈希函数）并在哈希表内查找匹配项。 如果存在残留谓词 (由剩余:() 中标识`Argument`列)，行才能被视为匹配项必须还满足该谓词。 行为取决于所执行的逻辑操作：<br /><br /> 对于联接，使用第一个（顶端）输入生成哈希表，使用第二个（底端）输入探测哈希表。 按联接类型规定的模式输出匹配项（或不匹配项）。 如果多个联接使用相同的联接列，这些操作将分组为一个哈希组。<br /><br /> 对于非重复或聚合运算符，使用输入生成哈希表（删除重复项并计算聚合表达式）。 生成哈希表时，扫描该表并输出所有项。<br /><br /> 对于 union 运算符，使用第一个输入生成哈希表（删除重复项）。 使用第二个输入（它必须没有重复项）探测哈希表，返回所有没有匹配项的行，然后扫描该哈希表并返回所有项。<br /><br /> <br /><br /> `Hash Match` 是一个物理运算符。|  
 |![If 语言元素图标](../../2014/database-engine/media/if-32x.gif "If 语言元素图标")|`If`|`If` 运算符执行基于表达式的有条件处理。 `If` 是一个语言元素。|  

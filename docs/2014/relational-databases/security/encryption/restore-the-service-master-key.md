@@ -14,10 +14,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011552"
 ---
 # <a name="restore-the-service-master-key"></a>还原服务主密钥
@@ -62,9 +62,9 @@ ms.locfileid: "63011552"
   
 2.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-3.  在标准菜单栏上，单击 **“新建查询”**。  
+3.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-4.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+4.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Restores the service master key from a backup file.  

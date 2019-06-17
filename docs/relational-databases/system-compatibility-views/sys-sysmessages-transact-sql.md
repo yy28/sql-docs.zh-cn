@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cb13b8e57b69c814f18c414dbc345e307d80085c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63018692"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "63018692"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**error**|**int**|唯一错误号。|  
-|severity|**tinyint**|错误的严重级别。|  
+|severity |**tinyint**|错误的严重级别。|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**description**|**nvarchar(255)**|对参数占位符错误的解释。|  
 |**msglangid**|**smallint**|系统消息组 ID。|  

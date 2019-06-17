@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d5f15222caab52732dff3d6c5faf37b11d4a057
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192915"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>客户端协议 - Shared Memory 属性（“协议”选项卡）
@@ -25,7 +25,7 @@ ms.locfileid: "63192915"
   
 ## <a name="options"></a>选项  
  **已启用**  
- 可能的值为“是”和“否”。  
+ 可能的值为“是”  和“否”  。  
   
 ## <a name="see-also"></a>请参阅  
  [选择网络协议](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  

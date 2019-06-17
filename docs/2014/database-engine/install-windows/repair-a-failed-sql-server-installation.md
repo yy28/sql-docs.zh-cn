@@ -1,5 +1,5 @@
 ---
-title: 删除 SQL Server 2014 安装 |Microsoft Docs
+title: 修复 SQL Server 2014 安装 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cea01c7e32248354cf745ed56186d246636d5b28
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774941"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046666"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>删除 SQL Server 2014 安装
   可以在以下情况下使用修复操作：  
@@ -52,7 +52,7 @@ ms.locfileid: "62774941"
   
 2.  安装必备组件并进行系统验证之后，安装程序会显示“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心”页。  
   
-3.  单击左侧导航区域中的“维护”，然后单击“修复”启动修复操作。  
+3.  单击左侧导航区域中的“维护”  ，然后单击“修复”  启动修复操作。  
   
     > [!TIP]  
     >  如果使用“开始”菜单启动了安装中心，您将需要在此时提供安装介质的位置。  
@@ -61,9 +61,9 @@ ms.locfileid: "62774941"
   
 5.  在“选择实例”页上选择要修复的实例，然后单击 **“下一步”** 继续操作。  
   
-6.  将运行修复规则以验证修复操作。 若要继续，请单击 **“下一步”**。  
+6.  将运行修复规则以验证修复操作。 若要继续，请单击 **“下一步”** 。  
   
-7.  “准备修复”页指示修复操作已准备就绪，可以继续。 若要继续，请单击 **“修复”**。  
+7.  “准备修复”页指示修复操作已准备就绪，可以继续。 若要继续，请单击 **“修复”** 。  
   
 8.  “修复进度”页显示修复操作的状态。 “完成”页指示修复操作已完成。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071654"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>创建与表格模型数据库的 BI 语义模型连接
@@ -70,9 +70,9 @@ ms.locfileid: "66071654"
   
 1.  在 SQL Server Management Studio 中，连接到 Analysis Services 实例。  
   
-2.  右键单击服务器名称并选择“属性”。  
+2.  右键单击服务器名称并选择“属性”  。  
   
-3.  单击 **“安全性”**，然后单击 **“添加”**。 输入用于运行服务应用程序的 Windows 用户帐户。  
+3.  单击 **“安全性”** ，然后单击 **“添加”** 。 输入用于运行服务应用程序的 Windows 用户帐户。  
   
      您可以使用管理中心来确定标识。 在“安全性”部分中，打开 **“配置服务帐户”** 可查看与用于各应用程序的服务应用程序池关联的 Windows 帐户，然后，按照本主题中提供的说明执行，以便向帐户授予管理权限。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "66071654"
   
 #### <a name="assign-role-membership"></a>分配角色成员身份  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例，再在对象资源管理器中展开数据库，然后展开 **“角色”**。 您应看到已定义的角色。 如果角色不存在，请与模型作者联系并请求添加或角色。 必须先重新部署模型，然后角色才会显示在 Management Studio 中。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例，再在对象资源管理器中展开数据库，然后展开 **“角色”** 。 您应看到已定义的角色。 如果角色不存在，请与模型作者联系并请求添加或角色。 必须先重新部署模型，然后角色才会显示在 Management Studio 中。  
   
-2.  右键单击角色，然后选择“属性”。  
+2.  右键单击角色，然后选择“属性”  。  
   
 3.  在“成员身份”页中，添加要求访问权限的 Windows 组和用户帐户。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66071654"
   
 3.  设置 **“服务器”** 和 **“数据库”** 属性。 如果您不确定数据库名称，则使用 SQL Server Management Studio 可以查看在服务器上部署的数据库的列表。  
   
-     “服务器名称”为服务器的网络名称、IP 地址或完全限定域名（例如，myserver.mydomain.corp.adventure-works.com）。 如果服务器作为命名实例安装，则以 computername\instancename 格式输入服务器名称。  
+     “服务器名称”  为服务器的网络名称、IP 地址或完全限定域名（例如，myserver.mydomain.corp.adventure-works.com）。 如果服务器作为命名实例安装，则以 computername\instancename 格式输入服务器名称。  
   
      **数据库** 必须为服务器上当前可用的表格数据库。 不要指定其他 BI 语义模型连接文件、Office 数据连接 (.odc) 文件、Analysis Services OLAP 数据库或 PowerPivot 工作簿。 若要获取数据库名称，您可以使用 Management Studio 连接到服务器并查看可用数据库的列表。 使用数据库的属性页以确保您拥有正确的名称。  
   
@@ -117,27 +117,27 @@ ms.locfileid: "66071654"
   
  您必须是网站所有者才能更改权限。  
   
-1.  在“网站操作”中，单击 **“网站权限”**。  
+1.  在“网站操作”中，单击 **“网站权限”** 。  
   
 2.  单击“创建组”  并将新组命名为 **BISM Users**。  
   
-3.  选择 **“读取”** 权限级别，然后单击 **“创建”**。  
+3.  选择 **“读取”** 权限级别，然后单击 **“创建”** 。  
   
 4.  在“人员和组”中选择 **BISM Users** 。  
   
-5.  指向“新建”，单击 **“添加用户”**，然后添加用户或组帐户。  
+5.  指向“新建”，单击 **“添加用户”** ，然后添加用户或组帐户。  
   
      此时，这些用户和组将拥有对整个网站的“读取”权限，包括从网站级别继承权限的所有库和列表。 如果这些权限太高，则可以选择从特定的库、列表或项中删除此组。  
   
  若要选择性地删除项目级别的权限，请执行以下操作：  
   
-1.  在库中选择一个文档。 单击右下箭头，然后单击 **“管理权限”**。  
+1.  在库中选择一个文档。 单击右下箭头，然后单击 **“管理权限”** 。  
   
-2.  默认情况下，项会继承权限。 若要更改此库中的单个文档的权限，请单击 **“停止继承权限”**。  
+2.  默认情况下，项会继承权限。 若要更改此库中的单个文档的权限，请单击 **“停止继承权限”** 。  
   
-3.  选中 “BISM 用户”旁的复选框。  
+3.  选中  “BISM 用户”旁的复选框。  
   
-4.  单击 **“删除用户权限”**。  
+4.  单击 **“删除用户权限”** 。  
   
 ##  <a name="bkmk_next"></a> 后续步骤  
  创建了 BI 语义模型连接并且确保其安全后，可以将该连接指定为数据源。 有关详细信息，请参阅 [在 Excel 或 Reporting Services 中使用 BI 语义模型连接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)。  

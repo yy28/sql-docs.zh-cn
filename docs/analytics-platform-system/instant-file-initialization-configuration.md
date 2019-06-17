@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298124"
 ---
 # <a name="instant-file-initialization-configuration"></a>即时文件初始化配置
@@ -29,13 +29,13 @@ ms.locfileid: "63298124"
   
 1.  在备份服务器上打开**本地安全策略**应用程序 (`secpol.msc`)。  
   
-2.  在左侧窗格中，展开“本地策略” ，然后单击“用户权限指派” 。  
+2.  在左侧窗格中，展开“本地策略”  ，然后单击“用户权限指派”  。  
   
-3.  在右侧窗格中，双击“执行卷维护任务”。  
+3.  在右侧窗格中，双击“执行卷维护任务”  。  
   
 4.  单击“添加用户或组”  ，添加用于备份的任何用户帐户。  
   
-5.  单击“应用” ，然后关闭所有“本地安全策略”  对话框。  
+5.  单击“应用”  ，然后关闭所有“本地安全策略”  对话框。  
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>若要启用或禁用即时文件初始化  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63298124"
     > [!WARNING]  
     > 当关闭即时文件初始化时，功能上文所述的安全注意事项可能仍适用于启用即时文件初始化的同时删除的文件。  
   
-4.  单击 **“应用”**。 下次重新启动设备服务，更改将传播到整个 SQL Server PDW 上的 SQL Server 实例。 若要立即重新启动设备服务，请参阅[PDW 服务状态&#40;Analytics Platform System&#41;](pdw-services-status.md)。  
+4.  单击 **“应用”** 。 下次重新启动设备服务，更改将传播到整个 SQL Server PDW 上的 SQL Server 实例。 若要立即重新启动设备服务，请参阅[PDW 服务状态&#40;Analytics Platform System&#41;](pdw-services-status.md)。  
   
 5.  你可能想要重复作为上面所述的步骤**备份帐户添加权限**若要删除**执行卷维护任务**权限。  
   

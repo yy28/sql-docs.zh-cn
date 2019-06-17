@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ef12745bf1fb99a4f7371167d435427f74a1ce6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 640cd9bfd39b272e7829cc25b51ee50a82176a65
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65576665"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037872"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>报表、报表部件和报表定义（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用各种术语来描述不同状态的分页报表，包括初始定义、发布的报表以及显示给用户查看的报表。  
@@ -63,8 +63,7 @@ ms.locfileid: "65576665"
  订阅报表，这样报表将以您指定的输出格式传递到电子邮件收件箱或文件共享位置。 报表的默认呈现格式为 HTML 4.0。 除了 HTML 之外，报表还可以用多种输出格式呈现，其中包括 Excel、Word、XML、PDF、TIFF 和 CSV。 与发布的报表一样，无法编辑呈现的报表，也不能将其保存回报表服务器。 有关详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md) [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

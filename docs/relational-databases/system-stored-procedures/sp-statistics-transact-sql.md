@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004208"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
@@ -53,13 +53,13 @@ sp_statistics [ @table_name = ] 'table_name'
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的索引。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程使用指定的表查找*名称*归数据库所有者。 如果存在这样的表，则返回该表的索引。  
   
-`[ @table_qualifier = ] 'qualifier'` 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此参数表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+`[ @table_qualifier = ] 'qualifier'` 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (_限定符_ **。** _所有者_ **。** _名称_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此参数表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
 `[ @index_name = ] 'index_name'` 是索引名称。 *index_name*是**sysname**，默认值为 %。 支持通配符模式匹配。  
   
-`[ @is_unique = ] 'is_unique'` 是是否只有唯一索引 (如果**Y**) 返回。 *is_unique*是**char （1)**，默认值为**N**。  
+`[ @is_unique = ] 'is_unique'` 是是否只有唯一索引 (如果**Y**) 返回。 *is_unique*是**char （1)** ，默认值为**N**。  
   
-`[ @accuracy = ] 'accuracy'` 是的基数和页准确性的统计信息级别。 *准确性*是**char （1)**，默认值为**Q**。指定**E**以确保以便基数和页是准确的则更新统计信息。  
+`[ @accuracy = ] 'accuracy'` 是的基数和页准确性的统计信息级别。 *准确性*是**char （1)** ，默认值为**Q**。指定**E**以确保以便基数和页是准确的则更新统计信息。  
   
  该值**E** (SQL_ENSURE) 要求驱动程序无条件地检索统计信息。  
   

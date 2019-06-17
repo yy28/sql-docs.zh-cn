@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd6d04b186c68b128ad35ec5e5bd8b92ad1541c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035650"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>移除或删除项或项目
@@ -28,9 +28,9 @@ ms.locfileid: "63035650"
   
 1.  在解决方案资源管理器中，选择想要移除的项目项。  
   
-2.  在“编辑”菜单上，单击“删除”。  
+2.  在“编辑”  菜单上，单击“删除”  。  
   
-3.  在确认对话框中，单击“删除”以从项目中删除项。  
+3.  在确认对话框中，单击“删除”  以从项目中删除项。  
   
  已移除的项仍存在于文件系统中。 因此，您可以将已移除的项添加到各自的初始解决方案或其他解决方案中。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "63035650"
   
 1.  在解决方案资源管理器中，选择想要移除的项目。  
   
-2.  在“编辑”菜单上，单击“删除”。  
+2.  在“编辑”  菜单上，单击“删除”  。  
   
-3.  在确认对话框中，单击“确定”以从解决方案中删除项目。  
+3.  在确认对话框中，单击“确定”  以从解决方案中删除项目。  
   
  您可以永久删除项目，但是必须先从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案中移除对该项目的所有引用，然后再使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 资源管理器从存储区中永久删除关联的文件。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63035650"
   
 2.  在 Windows 资源管理器中，找到并选中与所要删除的项目或项相关联的文件。  
   
-3.  在“文件”菜单上，单击“删除”。  
+3.  在“文件”  菜单上，单击“删除”  。  
   
 ## <a name="see-also"></a>请参阅  
  [解决方案资源管理器](solution-explorer.md)   

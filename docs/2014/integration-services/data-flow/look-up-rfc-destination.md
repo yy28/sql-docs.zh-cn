@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4badd9c961f5a0d7ca2d3e32185a7ab742628d97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901776"
 ---
 # <a name="look-up-rfc-destination"></a>查找 RFC 目标
@@ -29,13 +29,13 @@ ms.locfileid: "62901776"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 源或目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 SAP BW 源或目标。  
+2.  在“数据流”  选项卡上，双击 SAP BW 源或目标。  
   
 3.  在 **“SAP BW 源编辑器”** 或 **SAP BW 目标编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
 4.  在 **“连接管理器”** 页上的 **“RFC 目标”** 组框中，单击 **“查找”** 显示 **“查找 RFC 目标”** 对话框。  
   
-     在“SAP BW 源编辑器”中，仅当“执行模式”为“P - 触发进程链”或“W - 等待通知”时，“RFC 目标”组框才会显示。  
+     在“SAP BW 源编辑器”  中，仅当“执行模式”  为“P - 触发进程链”  或“W - 等待通知”  时，“RFC 目标”  组框才会显示。  
   
 ## <a name="options"></a>选项  
  **目标**  

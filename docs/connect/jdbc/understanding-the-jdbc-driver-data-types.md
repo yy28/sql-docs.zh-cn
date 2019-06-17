@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c3712370fef840e8bf265850d9ad4dbd946a52b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+manager: jroth
+ms.openlocfilehash: 4fcb982a613fe914aa0f0c3de556b8d19faa1bbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905007"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782510"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>了解 JDBC 驱动程序数据类型
 
@@ -38,7 +38,7 @@ JDBC 类型系统负责调解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 | [了解数据类型的差异](../../connect/jdbc/understanding-data-type-differences.md)                                                 | 描述不同 JDBC 驱动程序数据类型之间的差异。                                                                                                                                                                                                    |
 | [了解数据类型转换](../../connect/jdbc/understanding-data-type-conversions.md)                                                 | 描述当使用 getter 和 setter 方法时如何处理数据类型转换。                                                                                                                                                                                  |
 | [区域字符集支持](../../connect/jdbc/national-character-set-support.md)                                                           | 介绍对区域字符集类型的支持。                                                                                                                                                                                                          |
-| [支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)                                                                                 | 介绍 SQLXML 接口。 此外还说明了如何使用 SQLXML Java 数据类型在关系数据库中读取和写入 XML 数据。                                                                                                             |
+| [支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)                                                                                 | 介绍 SQLXML 接口。 此外还说明了如何使用 SQLXML Java 数据类型在关系数据库中读取和写入 XML 数据  。                                                                                                             |
 | [包装和接口](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | 论述具有允许应用程序服务器创建类代理的 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的方法和常量的接口，还论述对 `java.sql.Wrapper` 接口的支持。 |
   
 ## <a name="see-also"></a>另请参阅

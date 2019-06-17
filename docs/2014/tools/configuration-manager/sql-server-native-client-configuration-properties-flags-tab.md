@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bf95081d3c4657dd147e06ae54d413dd96c4c18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028287"
 ---
 # <a name="sql-server-native-client-configuration-properties-flags-tab"></a>SQL Server Native Client 配置属性（“标志”选项卡）
@@ -27,10 +27,10 @@ ms.locfileid: "63028287"
  使用 SSL 请求连接。  
   
  **信任服务器证书**  
- 当设置为“否”时，客户端进程将尝试验证服务器证书。 客户端和服务器均必须拥有公共证书颁发机构颁发的证书。 如果客户端计算机上没有证书，或如果验证证书失败，则连接将终止。  
+ 当设置为  “否”时，客户端进程将尝试验证服务器证书。 客户端和服务器均必须拥有公共证书颁发机构颁发的证书。 如果客户端计算机上没有证书，或如果验证证书失败，则连接将终止。  
   
- 当设置为“是”时，客户端不会验证服务器证书，而是使用自签名证书。  
+ 当设置为  “是”时，客户端不会验证服务器证书，而是使用自签名证书。  
   
- 仅在“强制协议加密” 设置为“是”  时，才可使用“信任服务器证书” 。  
+ 仅在“强制协议加密”  设置为“是”  时，才可使用“信任服务器证书”  。  
   
   

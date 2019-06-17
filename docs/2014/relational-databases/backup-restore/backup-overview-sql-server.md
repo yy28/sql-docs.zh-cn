@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922118"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62922118"
  数据库的备份。 完整数据库备份表示备份完成时的整个数据库。 差异数据库备份只包含自最近完整备份以来对数据库所做的更改。  
   
  [差异备份 (differential backup)](full-database-backups-sql-server.md)  
- 基于完整数据库或部分数据库以及一组数据文件或文件组的最新完整备份的数据备份（差异基准），仅包含自差异基准以来发生了更改的数据区。  
+ 基于完整数据库或部分数据库以及一组数据文件或文件组的最新完整备份的数据备份（  差异基准），仅包含自差异基准以来发生了更改的数据区。  
   
  部分差异备份仅记录自上一次部分备份（称为“差异基准”）以来文件组中发生更改的数据区。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62922118"
  **备份介质术语和定义**  
   
  [备份设备](backup-devices-sql-server.md)  
- 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Microsoft Azure Blob 存储服务，并且使用 **URL** 格式来指定备份文件的目标和名称。 有关详细信息，请参阅 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Microsoft Azure Blob 存储服务，并且使用 **URL** 格式来指定备份文件的目标和名称。 有关详细信息，请参阅 [SQL Server 备份和还原使用 Windows Azure Blob 存储服务](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  [备份介质](media-sets-media-families-and-backup-sets-sql-server.md)  
  已写入一个或多个备份的一个或多个磁带或磁盘文件。  

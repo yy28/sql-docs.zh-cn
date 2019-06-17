@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6449b073adb406d15f41cfe02d477a05ad8b0b31
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065489"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>使用 TCP IP 创建有效的连接字符串
   若要使用 TCP/IP 来创建有效的连接字符串，必须执行以下操作：  
   
--   指定 **“别名”**。  
+-   指定 **“别名”** 。  
   
 -   在 **“服务器”** 框中，输入可以使用 **PING** 实用工具连接到的服务器名称或可以使用 **PING** 实用工具连接到的 IP 地址。 对于命名实例，请追加实例名称。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63065489"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完全支持 Internet 协议版本 4 (IPv4) 和 Internet 协议版本 6 (IPv6)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器接受 IPv4 和 IPv6 格式的 IP 地址。 有关 IPv6 的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“使用 IPv6 进行连接”。  
   
 ## <a name="connecting-to-the-local-server"></a>连接到本地服务器  
- 当连接与客户端运行在同一台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，可以使用 `(local)` 作为服务器名称。 由于上述方法不明确，因此不建议使用，但是当客户端运行在已知的计算机上时，该方法还是有用的。 例如，当为断开连接的移动用户（如销售人员，其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将运行在便携式计算机上并存储相应的项目数据）创建应用程序时，连接到 `(local)` 的客户端就可以始终与运行在便携式计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保持连接。 可以使用词语 `localhost` 或句点 (**.**) 来取代 `(local)`。  
+ 当连接与客户端运行在同一台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，可以使用 `(local)` 作为服务器名称。 由于上述方法不明确，因此不建议使用，但是当客户端运行在已知的计算机上时，该方法还是有用的。 例如，当为断开连接的移动用户（如销售人员，其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将运行在便携式计算机上并存储相应的项目数据）创建应用程序时，连接到 `(local)` 的客户端就可以始终与运行在便携式计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保持连接。 可以使用词语 `localhost` 或句点 ( **.** ) 来取代 `(local)`。  
   
 ## <a name="verifying-your-connection-protocol"></a>验证连接协议  
  以下查询将返回当前连接所使用的协议。  
@@ -166,7 +166,7 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  有关以 sqlcmd 参数的形式指定网络协议的信息，请参阅“如何：连接到数据库引擎使用 sqlcmd.exe"中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+>  有关以 sqlcmd  参数的形式指定网络协议的信息，请参阅“如何：连接到数据库引擎使用 sqlcmd.exe"中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 Shared Memory 协议创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921801"
 ---
 # <a name="file-restores-simple-recovery-model"></a>文件还原（简单恢复模式）
@@ -35,18 +35,18 @@ ms.locfileid: "62921801"
   
 -   脱机文件还原  
   
-     在“脱机文件还原” 中，还原已损坏的文件或文件组时，数据库处于脱机状态。 还原顺序结束时，数据库将联机。  
+     在“脱机文件还原”  中，还原已损坏的文件或文件组时，数据库处于脱机状态。 还原顺序结束时，数据库将联机。  
   
      所有版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都支持脱机文件还原。  
   
 -   联机文件还原  
   
-     在“联机文件还原” 中，如果数据库在还原时处于联机状态，则该数据库在文件还原过程中将保持联机状态。 不过，各文件组中如果有文件正在被还原，则该文件组在还原操作过程中将处于脱机状态。 恢复脱机文件组中的所有文件之后，该文件组将自动变为联机状态。  
+     在“联机文件还原”  中，如果数据库在还原时处于联机状态，则该数据库在文件还原过程中将保持联机状态。 不过，各文件组中如果有文件正在被还原，则该文件组在还原操作过程中将处于脱机状态。 恢复脱机文件组中的所有文件之后，该文件组将自动变为联机状态。  
   
      有关联机页和文件还原支持的信息，请参阅 [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  如果希望数据库脱机以进行文件还原，请在开始还原顺序之前执行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 语句以使数据库脱机：ALTER DATABASE database_name SET OFFLINE。  
+    >  如果希望数据库脱机以进行文件还原，请在开始还原顺序之前执行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 语句以使数据库脱机：ALTER DATABASE database_name SET OFFLINE  。  
   
 
   
@@ -62,13 +62,13 @@ ms.locfileid: "62921801"
   
  该还原序列仅包含两个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。 第一个语句还原辅助文件（即文件 `A`），这是使用 WITH NORECOVERY 还原的。 第二项操作是还原其他两个文件（ `B` 和 `C` ），这两个文件是使用 WITH RECOVERY 从不同的备份设备还原的：  
   
-1.  RESTORE DATABASE *database* FILE **=**_name_of_file_A_  
+1.  RESTORE DATABASE *database* FILE **=** _name_of_file_A_  
   
      FROM *file_backup_of_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=**_name_of_file_B_**,**_name_of_file_C_  
+2.  RESTORE DATABASE *database* FILE **=** _name_of_file_B_ **,** _name_of_file_C_  
   
      FROM *file_backup_of_files_B_and_C*  
   

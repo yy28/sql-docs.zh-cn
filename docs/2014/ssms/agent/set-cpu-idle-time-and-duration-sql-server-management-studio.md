@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0a355108635799d03c2859b6c47eaaf8acc87dc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185556"
 ---
 # <a name="set-cpu-idle-time-and-duration-sql-server-management-studio"></a>设置 CPU 空闲时间和持续时间 (SQL Server Management Studio)
@@ -32,13 +32,13 @@ ms.locfileid: "63185556"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”，再单击“属性”，然后选择“高级”页。  
+2.  右键单击“SQL Server 代理”  ，再单击“属性”  ，然后选择“高级”  页。  
   
 3.  在 **“空闲 CPU 条件”** 下，执行下列操作：  
   
-    -   选中 **“定义空闲 CPU 条件”**。  
+    -   选中 **“定义空闲 CPU 条件”** 。  
   
-    -   在“CPU 平均使用率低于”（对于所有 CPU 而言）框中指定百分比。 此选项设置 CPU 必须低于什么使用率级别才能变为空闲状态。  
+    -   在“CPU 平均使用率低于”  （对于所有 CPU 而言）框中指定百分比。 此选项设置 CPU 必须低于什么使用率级别才能变为空闲状态。  
   
     -   在 **“并且保持低于此级别”** 框中指定秒数。 此选项设置 CPU 最小使用率必须保持多长时间 CPU 才能变为空闲状态。  
   

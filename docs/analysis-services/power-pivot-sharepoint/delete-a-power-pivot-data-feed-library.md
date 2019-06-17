@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5faff360ee314ae35632e9fc8578d6bd71436b3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62467590"
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>删除 Power Pivot 数据馈送库
@@ -24,15 +24,15 @@ ms.locfileid: "62467590"
   
 ### <a name="delete-a-data-feed-library"></a>删除数据馈送库  
   
-1.  单击 **“网站操作”**。  
+1.  单击 **“网站操作”** 。  
   
-2.  单击 **“网站设置”**。  
+2.  单击 **“网站设置”** 。  
   
-3.  在“网站管理”下单击 **“网站库和列表”**。  
+3.  在“网站管理”下单击 **“网站库和列表”** 。  
   
 4.  单击**自定义"\<库名称 >"**  
   
-5.  在“权限和管理”下单击 **“删除此库”**。  
+5.  在“权限和管理”下单击 **“删除此库”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [Power Pivot 数据馈送](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74bc5fcd815550199f0e298e232e93e4840a3003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b5f065983f8c2af9cb368147bda83a2e24987caa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712367"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789050"
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,9 +36,9 @@ public boolean ownDeletesAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *type*  
+ *类型*  
   
- 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
+ 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一  ：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  TYPE_FORWARD_ONLY  
@@ -59,7 +59,7 @@ public boolean ownDeletesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- 如果删除操作可见，则为 true。 否则为 **false**。  
+ 如果删除操作可见，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

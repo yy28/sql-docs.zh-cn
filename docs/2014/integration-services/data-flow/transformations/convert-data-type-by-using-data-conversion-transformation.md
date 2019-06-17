@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 13faac66894298c4d08cd40a1eab9d3d823fd0ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900841"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>使用数据转换将数据转换为其他数据类型
@@ -36,7 +36,7 @@ ms.locfileid: "62900841"
   
 5.  双击此数据转换。  
   
-6.  在“数据转换编辑器”对话框的“可用输入列”表中，选中位于要转换其数据类型的列旁边的复选框。  
+6.  在“数据转换编辑器”对话框的“可用输入列”表中，选中位于要转换其数据类型的列旁边的复选框   。  
   
     > [!NOTE]  
     >  可以将多个数据转换应用到一个输入列。  
@@ -45,11 +45,11 @@ ms.locfileid: "62900841"
   
 8.  在 **“数据类型”** 列表中，选择列的新数据类型。 默认数据类型为输入列的数据类型。  
   
-9. 也可以根据所选数据类型更新 **“长度”**、 **“精度”**、 **“小数位数”** 和 **“代码页”** 列的值。  
+9. 也可以根据所选数据类型更新 **“长度”** 、 **“精度”** 、 **“小数位数”** 和 **“代码页”** 列的值。  
   
-10. 若要配置错误输出，请单击 **“配置错误输出”**。 有关详细信息，请参阅 [在数据流组件中配置错误输出](../../configure-an-error-output-in-a-data-flow-component.md)。  
+10. 若要配置错误输出，请单击 **“配置错误输出”** 。 有关详细信息，请参阅 [在数据流组件中配置错误输出](../../configure-an-error-output-in-a-data-flow-component.md)。  
   
-11. 单击“确定” 。  
+11. 单击“确定”  。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

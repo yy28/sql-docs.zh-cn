@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472842"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>预测关联（数据挖掘中级教程）
@@ -39,7 +39,7 @@ ms.locfileid: "62472842"
   
 2.  在中**挖掘模型**窗格中，单击**选择模型**。 （如果已选择正确的模型，则可跳过此步骤和下一步骤。）  
   
-3.  在中**选择挖掘模型**对话框框中，展开表示挖掘结构的节点**关联**，然后选择模型**关联**。 单击“确定” 。  
+3.  在中**选择挖掘模型**对话框框中，展开表示挖掘结构的节点**关联**，然后选择模型**关联**。 单击“确定”  。  
   
      现在，可以忽略“输入”窗格。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "62472842"
   
 1.  在中**挖掘模型**菜单中，选择**单独查询**同样，若要清除的复选标记。  
   
-2.  出现一条错误消息警告您单独查询将丢失。 单击 **“是”**。  
+2.  出现一条错误消息警告您单独查询将丢失。 单击 **“是”** 。  
   
      输入对话框的名称将更改为**选择输入表**。  
   

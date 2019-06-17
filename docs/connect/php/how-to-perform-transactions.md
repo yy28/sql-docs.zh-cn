@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de25969712c8b91494aeccfea120bbe4350cbcde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ee3e77677a3ae52fb112ae8a280e91086a483875
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641615"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796090"
 ---
 # <a name="how-to-perform-transactions"></a>如何：执行事务
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,11 +50,11 @@ PDO_SQLSRV 驱动程序提供以下三种方法来执行事务：
   
 2.  检查每次查询（事务的一部分）是成功还是失败。  
   
-3.  在适当情况下，使用 **sqlsrv_commit**开始事务。 否则，使用 **sqlsrv_rollback**开始事务。 在调用 sqlsrv_commit 或 sqlsrv_rollback 后，驱动程序将返回到自动提交模式。  
+3.  在适当情况下，使用 **sqlsrv_commit**开始事务。 否则，使用 **sqlsrv_rollback**开始事务。 在调用 sqlsrv_commit 或 sqlsrv_rollback 后，驱动程序将返回到自动提交模式   。  
   
     默认情况下，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 处于自动提交模式。 这意味着，除非使用 **sqlsrv_begin_transaction**开始事务。  
   
-    如果未使用 sqlsrv_commit 提交显式事务，在关闭脚本的连接或终止后，将回退显式事务。  
+    如果未使用 sqlsrv_commit 提交显式事务，在关闭脚本的连接或终止后，将回退显式事务  。  
   
     不要使用嵌入式 Transact-SQL 来执行事务。 例如，不要以 Transact-SQL 查询的方式执行包含“BEGIN TRANSACTION”的语句来开始某一事务。 使用嵌入式 Transact-SQL 执行事务时，无法保证出现预期的事务行为。  
   

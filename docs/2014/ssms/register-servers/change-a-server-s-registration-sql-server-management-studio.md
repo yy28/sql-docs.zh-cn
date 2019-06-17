@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0db222683d16a2347d6aefc8f2c54a80e10f611c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760751"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>更改服务器的注册信息 (SQL Server Management Studio)
@@ -27,9 +27,9 @@ ms.locfileid: "62760751"
   
 #### <a name="to-change-a-servers-registration"></a>更改服务器注册  
   
-1.  在已注册的服务器中，右键单击某台服务器，再单击“属性”。  
+1.  在已注册的服务器中，右键单击某台服务器，再单击“属性”  。  
   
-2.  在 **“编辑服务器注册属性”** 对话框中，修改服务器信息、登录信息或连接属性，再单击 **“保存”**。  
+2.  在 **“编辑服务器注册属性”** 对话框中，修改服务器信息、登录信息或连接属性，再单击 **“保存”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [注册服务器](register-servers.md)  

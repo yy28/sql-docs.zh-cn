@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff1ba97de1c7698a1f2fde73b8ba8d592d8fccab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662078"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>选项对话框的 F1 帮助
-  本节包含可通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“工具”菜单上“选项”调用的对话框的 F1 帮助。  
+  本节包含可通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“工具”  菜单上“选项”  调用的对话框的 F1 帮助。  
   
  [选项&#40;设计器 Analysis Services 设计器-常规&#41;](options-designers-analysis-services-designers-general.md)  
   

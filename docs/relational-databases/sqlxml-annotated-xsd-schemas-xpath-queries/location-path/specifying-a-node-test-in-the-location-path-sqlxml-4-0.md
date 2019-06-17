@@ -18,31 +18,31 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 15d5389f9a16d676aa5d644b030455d4c63adf7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720001"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路径中指定节点测试 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  节点测试指定根据位置步骤选择的节点类型。 每个轴 (**子**，**父**，**特性**，或者**自助**) 具有主要节点类型。 有关**特性**轴，主要节点类型是**\<属性 >**。 有关**父**，**子**，并**自助**轴，主要节点类型是**\<元素 >**。  
+  节点测试指定根据位置步骤选择的节点类型。 每个轴 (**子**，**父**，**特性**，或者**自助**) 具有主要节点类型。 有关**特性**轴，主要节点类型是 **\<属性 >** 。 有关**父**，**子**，并**自助**轴，主要节点类型是 **\<元素 >** 。  
   
 > [!NOTE]  
 >  不支持通配符节点测试 *（例如 `child::*`）。  
   
 ## <a name="node-test-example-1"></a>节点测试：示例 1  
- 位置路径`child::Customer`中选择**\<客户 >** 上下文节点的子元素。  
+ 位置路径`child::Customer`中选择 **\<客户 >** 上下文节点的子元素。  
   
- 在本示例中，`child` 是轴，`Customer` 是节点测试。 主要节点类型**子**轴是**\<元素 >**。 因此，如果节点测试为 TRUE **\<客户 >** 节点是**\<元素 >** 节点。 如果上下文节点没有**\<客户 >** 子级，则返回空节点集。  
+ 在本示例中，`child` 是轴，`Customer` 是节点测试。 主要节点类型**子**轴是 **\<元素 >** 。 因此，如果节点测试为 TRUE **\<客户 >** 节点是 **\<元素 >** 节点。 如果上下文节点没有 **\<客户 >** 子级，则返回空节点集。  
   
 ## <a name="node-test-example-2"></a>节点测试：示例 2  
  位置路径`attribute::CustomerID`中选择**CustomerID**上下文节点的属性。  
   
- 在示例中，`attribute`是轴和`CustomerID`是节点测试。 主要节点类型**特性**轴是**\<属性 >**。 因此，如果节点测试为 TRUE **CustomerID**是**\<属性 >** 节点。 如果上下文节点没有**CustomerID**，返回空节点集。  
+ 在示例中，`attribute`是轴和`CustomerID`是节点测试。 主要节点类型**特性**轴是 **\<属性 >** 。 因此，如果节点测试为 TRUE **CustomerID**是 **\<属性 >** 节点。 如果上下文节点没有**CustomerID**，返回空节点集。  
   
 > [!NOTE]  
->  在此实现中的 XPath，如果定位步骤所引用的**\<元素 >** 或**\<属性 >** 不在生成错误的架构中声明的类型。 这与 MSXML 中的 XPath 实现不同，在 MSXML 中返回空节点集。  
+>  在此实现中的 XPath，如果定位步骤所引用的 **\<元素 >** 或 **\<属性 >** 不在生成错误的架构中声明的类型。 这与 MSXML 中的 XPath 实现不同，在 MSXML 中返回空节点集。  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>轴的缩写语法  
  支持以下位置路径的缩写语法：  

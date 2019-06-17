@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033614"
 ---
 # <a name="create-statistics"></a>创建统计信息
@@ -67,9 +67,9 @@ ms.locfileid: "63033614"
   
 3.  单击加号以便展开您要创建新统计信息的表。  
   
-4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”。  
+4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”   。  
   
-     以下属性将显示在“新建表 table_name 的统计信息”对话框的“常规”页面上。  
+     以下属性将显示在“新建表  table_name 的统计信息”  对话框的“常规”  页面上。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -113,12 +113,12 @@ ms.locfileid: "63033614"
      **更新这些列的统计信息**  
      选中此项后将在对话框关闭时更新统计信息。  
   
-     以下属性将显示在“新建表 table_name 的统计信息”对话框的“筛选器”页面上。  
+     以下属性将显示在“新建表  table_name 的统计信息”  对话框的“筛选器”  页面上。  
   
      **筛选表达式**  
      定义要将哪些数据行包含在筛选的统计信息中。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  在“新建表 table_name 的统计信息”对话框中，在“常规”页面上，单击“添加”。  
+5.  在“新建表  table_name 的统计信息”  对话框中，在“常规”  页面上，单击“添加”  。  
   
      **“选择列”** 对话框中显示以下属性： 此信息为只读信息。  
   
@@ -137,9 +137,9 @@ ms.locfileid: "63033614"
      **Allow NULLs**  
      指示列是否接受空值。  
   
-6.  在 **“选择列”** 对话框中，选中要为其创建统计信息的每个列旁边的复选框，然后单击 **“确定”**。  
+6.  在 **“选择列”** 对话框中，选中要为其创建统计信息的每个列旁边的复选框，然后单击 **“确定”** 。  
   
-7.  在“新建表 table_name 的统计信息”对话框中，单击“确定”。  
+7.  在“新建表  table_name 的统计信息”  对话框中，单击“确定”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -147,9 +147,9 @@ ms.locfileid: "63033614"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;   

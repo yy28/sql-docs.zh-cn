@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 75290c6b877c3bb10cd42fbb10f1c087310791d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472247"
 ---
 # <a name="restore-from-power-pivot"></a>从 Power Pivot 还原
@@ -35,13 +35,13 @@ ms.locfileid: "62472247"
   
 ### <a name="to-restore-from-power-pivot"></a>从 Power Pivot 还原  
   
-1.  在 SSMS 中要还原到的 Active Directory 实例中，右键单击“数据库”，然后单击“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 还原”。  
+1.  在 SSMS 中要还原到的 Active Directory 实例中，右键单击“数据库”，然后单击“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 还原”。    
   
-2.  在“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 还原”对话框中“还原源”的“备份文件”中，单击“浏览”，然后选择要从其中还原的 .abf 或 .xslx 文件。  
+2.  在“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 还原”对话框中“还原源”的“备份文件”中，单击“浏览”，然后选择要从其中还原的 .abf 或 .xslx 文件。      
   
 3.  在 **“还原目标”** 中的“ **还原数据库”** 中，键入新数据库或现有数据库的名称。 如果不指定名称，则使用工作簿的名称。  
   
-4.  在 **“存储位置”** 中，单击 **“浏览”**，然后选择数据库的存储位置。  
+4.  在 **“存储位置”** 中，单击 **“浏览”** ，然后选择数据库的存储位置。  
   
 5.  在 **“选项”** 中，选中 **“包括安全信息”** 。 在从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿还原时，此设置不适用。  
   

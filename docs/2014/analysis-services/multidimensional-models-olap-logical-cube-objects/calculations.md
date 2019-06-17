@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702685"
 ---
 # <a name="calculations"></a>“新建命名集”
@@ -45,7 +45,7 @@ ms.locfileid: "62702685"
  若要创建计算的成员，请使用**计算**s 选项卡，多维数据集设计器中的。 有关详细信息，请参阅[创建计算成员](../multidimensional-models/create-calculated-members.md)  
   
 ## <a name="named-sets"></a>命名集  
- 命名集是返回集的 CREATE SET MDX 语句表达式。 MDX 表达式保存为在多维数据集定义的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 创建命名集的目的是为了重用多维表达式 (MDX) 查询。 使用命名集，业务用户可以简化查询，并针对复杂、常用的集表达式使用集名称而不是集表达式。 **相关的主题：**[创建命名集](../multidimensional-models/create-named-sets.md)  
+ 命名集是返回集的 CREATE SET MDX 语句表达式。 MDX 表达式保存为在多维数据集定义的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 创建命名集的目的是为了重用多维表达式 (MDX) 查询。 使用命名集，业务用户可以简化查询，并针对复杂、常用的集表达式使用集名称而不是集表达式。 **相关的主题：** [创建命名集](../multidimensional-models/create-named-sets.md)  
   
 ## <a name="script-commands"></a>脚本命令  
  脚本命令是一个 MDX 脚本，是多维数据集定义的一部分。 使用脚本命令，您可以执行几乎所有的受多维数据集的 MDX 支持的操作，例如，确定将计算仅应用于多维数据集的一部分的作用域。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，MDX 脚本可以应用到整个多维数据集或多维数据集的脚本执行中的特定点上的特定部分。 默认脚本命令（CALCULATE 语句）会基于默认作用域使用聚合数据来填充多维数据集中的单元。  

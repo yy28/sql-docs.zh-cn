@@ -15,13 +15,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 5e509014412bb89995602141d596ff34fa7f3572
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744427"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795857"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的系统要求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "56744427"
 ## <a name="data-type-compatibility-for-client-versions"></a>客户端版本的数据类型兼容性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和适用于 SQL Server 的 OLE DB 驱动程序将新数据类型映射到与下级客户端相兼容的较旧的数据类型，如下表所示。  
 
- OLE DB 和 ADO 应用程序可以使用**DataTypeCompatibility**使用 OLE DB 驱动程序用于与旧的数据类型一起运行的 SQL Server 的连接字符串关键字。 如果 DataTypeCompatibility=80，OLE DB 客户端将使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 表格格式数据流 (TDS) 版本而不是 TDS 版本进行连接。 也就是说，对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和较新的数据类型，将由服务器而不是适用于 SQL Server 的 OLE DB 驱动程序执行下级转换。 此外，这还意味着，连接中的可用功能将被限制为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 功能集。 尽可能早地对 API 调用中使用新数据类型或功能的尝试进行检测，将错误返回给调用应用程序，而不是尝试将无效的请求传递给服务器。   
+ OLE DB 和 ADO 应用程序可以使用**DataTypeCompatibility**使用 OLE DB 驱动程序用于与旧的数据类型一起运行的 SQL Server 的连接字符串关键字。 如果 DataTypeCompatibility=80，OLE DB 客户端将使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 表格格式数据流 (TDS) 版本而不是 TDS 版本进行连接  。 也就是说，对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和较新的数据类型，将由服务器而不是适用于 SQL Server 的 OLE DB 驱动程序执行下级转换。 此外，这还意味着，连接中的可用功能将被限制为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 功能集。 尽可能早地对 API 调用中使用新数据类型或功能的尝试进行检测，将错误返回给调用应用程序，而不是尝试将无效的请求传递给服务器。   
 
 
  IDBInfo::GetKeywords 将始终返回的关键字列表，在连接上的服务器版本相对应，不受**DataTypeCompatibility**。  

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52f1bdf9e748625e1310210c98beeb4401a5dd81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920695"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>使用 Windows Azure Blob 存储服务进行 SQL Server 备份和还原
@@ -27,7 +27,7 @@ ms.locfileid: "62920695"
     > [!NOTE]  
     >  对于版本低于 SQL Server 2014 的 SQL Server，可使用外接程序“SQL Server 备份到 Windows Azure 工具”快速而轻松地向 Windows Azure 存储创建备份。 有关详细信息，请参阅 [下载中心](https://go.microsoft.com/fwlink/?LinkID=324399)。  
   
--   **让 SQL Server 管理向 Windows Azure 备份：** 配置 SQL Server 以管理备份策略和计划备份为单个数据库或多个数据库，或在实例级别设置默认值。 此功能被称为**[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**。 有关详细信息请参阅[SQL Server 托管备份到 Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更高版本中提供此功能。  
+-   **让 SQL Server 管理向 Windows Azure 备份：** 配置 SQL Server 以管理备份策略和计划备份为单个数据库或多个数据库，或在实例级别设置默认值。 此功能被称为 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 。 有关详细信息请参阅[SQL Server 托管备份到 Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更高版本中提供此功能。  
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>将 Windows Azure Blob 服务用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处  
   

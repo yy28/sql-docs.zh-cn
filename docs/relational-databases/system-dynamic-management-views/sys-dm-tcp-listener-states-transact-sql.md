@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45c634b2a5ab057fd9c2ae878e544a6b7d84f7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960021"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
@@ -42,9 +42,9 @@ ms.locfileid: "62960021"
 |**ip_address**|**nvarchar(48)**|处于联机状态且当前正在侦听的侦听器 IP 地址。 同时允许 IPv4 和 IPv6 地址。 如果某个侦听器拥有这两类地址，则分开列出这些地址。 IPv4 通配符显示为"0.0.0.0"。 IPv6 通配符显示为"::"。<br /><br /> 不可为 null。|  
 |**is_ipv4**|**bit**|IP 地址的类型<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|侦听器正在侦听的端口号。 不可为 null。|  
-|**类型**|**tinyint**|侦听器类型，可为下列值之一：<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = 数据库镜像<br /><br /> 不可为 null。|  
+|**type**|**tinyint**|侦听器类型，可为下列值之一：<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = 数据库镜像<br /><br /> 不可为 null。|  
 |**type_desc**|**nvarchar(20)**|说明**类型**、 一个的：<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> 不可为 null。|  
-|State|**tinyint**|可用性组侦听器的状态，可为下列值之一：<br /><br /> 1 = 联机。 侦听器正在侦听并处理请求。<br /><br /> 2 = 等待重新启动。 侦听器处于脱机状态，等待重新启动。<br /><br /> 如果可用性组侦听器正在侦听服务器实例所侦听的端口，这两个侦听器始终具有相同状态。<br /><br /> 不可为 null。<br /><br /> 注意：此列中的值来自 TSD_listener 对象。 列不支持脱机状态，因为 TDS_listener 脱机时，它无法查询状态。|  
+|State |**tinyint**|可用性组侦听器的状态，可为下列值之一：<br /><br /> 1 = 联机。 侦听器正在侦听并处理请求。<br /><br /> 2 = 等待重新启动。 侦听器处于脱机状态，等待重新启动。<br /><br /> 如果可用性组侦听器正在侦听服务器实例所侦听的端口，这两个侦听器始终具有相同状态。<br /><br /> 不可为 null。<br /><br /> 注意：此列中的值来自 TSD_listener 对象。 列不支持脱机状态，因为 TDS_listener 脱机时，它无法查询状态。|  
 |**state_desc**|**nvarchar(16)**|说明**状态**、 一个的：<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> 不可为 null。|  
 |**start_time**|**datetime**|指示启动侦听器时的时间戳。 不可为 null。|  
   

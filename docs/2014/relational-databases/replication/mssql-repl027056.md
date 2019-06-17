@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd6f1d63b0de5e8ce0fda7ab4fbc727c70f67bbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022734"
 ---
 # <a name="mssqlrepl027056"></a>MSSQL_REPL027056
@@ -48,7 +48,7 @@ ms.locfileid: "63022734"
   
 2.  为发布保持期指定尽可能低的设置。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)。  
   
-3.  在维护合并复制过程中，应不定期检查与合并复制关联的系统表的增长：MSmerge_contents、MSmerge_genhistory，以及 MSmerge_tombstone、MSmerge_current_partition_mappings，以及 MSmerge_past_partition_mappings。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../indexes/indexes.md)。  
+3.  在维护合并复制过程中，应不定期检查与合并复制关联的系统表的增长：MSmerge_contents、MSmerge_genhistory，以及 MSmerge_tombstone、MSmerge_current_partition_mappings，以及 MSmerge_past_partition_mappings      。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../indexes/indexes.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  

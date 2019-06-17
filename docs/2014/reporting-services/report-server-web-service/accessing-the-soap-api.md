@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012267"
 ---
 # <a name="accessing-the-soap-api"></a>访问 SOAP API
@@ -53,11 +53,11 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
 |URL 元素|Description|  
 |-----------------|-----------------|  
-|服务器|报表服务器部署到的服务器的名称。|  
-|reportserver|包含 XML Web 服务的文件夹的名称。 此名称在设置期间配置。|  
-|\<终结点名称>.asmx|Web 服务端点的名称。|  
+|服务器 |报表服务器部署到的服务器的名称。|  
+|reportserver |包含 XML Web 服务的文件夹的名称。 此名称在设置期间配置。|  
+|\<终结点名称>.asmx |Web 服务端点的名称。|  
   
- 有关 WSDL 格式的详细信息，请参阅万维网联合会 (W3C) WSDL 规范，网址为 http://www.w3.org/TR/wsdl。  
+ 有关 WSDL 格式的详细信息，请参阅万维网联合会 (W3C) WSDL 规范，网址为 http://www.w3.org/TR/wsdl 。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 Web 服务和 .NET Framework 生成应用程序](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

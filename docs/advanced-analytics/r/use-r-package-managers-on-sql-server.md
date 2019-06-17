@@ -3,17 +3,17 @@ title: 使用 R 包管理器-SQL Server 机器学习服务
 description: 使用标准 R 命令，如 install.packages 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内）。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6012fb1a3376c00a64239e0fbf10115b8a4367d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2582d519893fac3a49ce997674980d2d58d5cf32
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642270"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140777"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>使用 R 包管理器在 SQL Server 上安装 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "62642270"
 
 ## <a name="install-a-package-using-rgui"></a>使用 RGui 安装包
 
-1. [确定实例库的位置](installing-and-managing-r-packages.md)。 导航到安装的 R 工具的文件夹。 例如，SQL Server 2017 默认实例的默认路径如下所示： `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [确定实例库的位置](../package-management/default-packages.md)。 导航到安装的 R 工具的文件夹。 例如，SQL Server 2017 默认实例的默认路径如下所示： `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. 右键单击 RGui.exe，然后选择**以管理员身份运行**。 如果您没有所需的权限，请与数据库管理员联系并提供所需的包的列表。
 

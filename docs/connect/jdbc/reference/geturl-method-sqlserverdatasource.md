@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dd0d5d2c-91fe-4b0f-a162-69d898ba176e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a0f4a7e90ee115470715cf7474a4d05be7a86158
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c075c9190f8299335b8a1ff55ac81096f726711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755933"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779699"
 ---
 # <a name="geturl-method-sqlserverdatasource"></a>getURL 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.lang.String getURL()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个包含 URL 的 String。  
+ 一个包含 URL 的字符串  。  
   
 ## <a name="remarks"></a>Remarks  
  出于安全原因，请不要在提供给 [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 方法的 URL 中包括密码。 这是因为：第三方 Java 应用程序服务器经常会在其数据源配置用户界面中显示为 URL 属性设置的值。 请改用 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) 方法设置密码值。 Java 应用程序服务器不会在配置用户界面中显示在其数据源中设置的密码。  

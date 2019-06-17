@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033616"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>设置目标服务器的轮询间隔
   本主题介绍如何设置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理刷新从主服务器到目标服务器的信息的频率。 作业是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的一系列指定操作。 多服务器作业是主服务器在一台或多台目标服务器上运行的作业。  
   
--   **开始之前：**[安全性](#Security)  
+-   **开始之前：** [安全性](#Security)  
   
--   **若要设置目标服务器，使用的轮询间隔：**[SQL Server Management Studio](#SSMS)、[Transact-SQL](#TSQL)  
+-   **要设置目标服务器的轮询间隔，请使用**：[SQL Server Management Studio](#SSMS)、[Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  每个目标服务器一次只能运行一个相同作业的实例。 每台目标服务器会定期轮询主服务器，下载分配给目标服务器的任何新作业的一个副本，然后断开连接。 目标服务器在本地运行作业，然后重新连接到主服务器以上载作业结果状态。  
@@ -42,11 +42,11 @@ ms.locfileid: "63033616"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“管理目标服务器”。  
+2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，再单击“管理目标服务器”  。  
   
-3.  在 **“目标服务器状态”** 选项卡上，单击 **“发布指令”**。  
+3.  在 **“目标服务器状态”** 选项卡上，单击 **“发布指令”** 。  
   
-4.  在 **“指令类型”** 列表中，选择 **“设置轮询间隔”**。  
+4.  在 **“指令类型”** 列表中，选择 **“设置轮询间隔”** 。  
   
 5.  在 **“轮询间隔”** 框中，输入介于 10 到 28,800 之间的秒数，目标服务器必须在经过该秒数后才会轮询主服务器。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63033616"
   
 1.  在对象资源管理器中，连接到数据库引擎实例，然后展开该实例。  
   
-2.  在工具栏上，单击 **“新建查询”**。  
+2.  在工具栏上，单击 **“新建查询”** 。  
   
 3.  在查询窗口中，使用[sp_post_msx_operation &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)系统存储过程来设置目标服务器的轮询间隔。  
   

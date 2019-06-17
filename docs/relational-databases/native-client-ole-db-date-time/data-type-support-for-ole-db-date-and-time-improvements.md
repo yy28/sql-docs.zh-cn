@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 24661690a0252b1018e2ddc52ba99a44cb5cedbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63029050"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>针对 OLE DB 日期和时间改进的数据类型支持
@@ -76,7 +76,7 @@ ms.locfileid: "63029050"
   
  已对以下现有 OLE DB 结构的实现进行了修改，以支持新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型。 不过未更改定义。  
   
--   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 double。 完整的部件是自 1899 年 12 月 30 日以来的天数和小数部分是一天的小部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
+-   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 double  。 完整的部件是自 1899 年 12 月 30 日以来的天数和小数部分是一天的小部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
   
 -   DBTYPE_DBDATE  
   

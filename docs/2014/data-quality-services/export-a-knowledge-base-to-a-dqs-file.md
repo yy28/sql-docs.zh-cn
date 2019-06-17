@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d1b2e20347cafb4717880de8fd224950f76b036
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480736"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>将知识库导出到 .dqs 文件
@@ -40,11 +40,11 @@ ms.locfileid: "65480736"
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，在域管理活动中打开知识库。  
   
-3.  在“域管理”页（选择了任一选项卡）中，单击域列表上方的 **“导出知识库数据”** 图标，然后单击 **“导出知识库”**。 或者，您还可以在 **“域”** 列表中右键单击，将鼠标指针悬停在 **“导出”** 之上，然后单击 **“导出知识库”**。  
+3.  在“域管理”页（选择了任一选项卡）中，单击域列表上方的 **“导出知识库数据”** 图标，然后单击 **“导出知识库”** 。 或者，您还可以在 **“域”** 列表中右键单击，将鼠标指针悬停在 **“导出”** 之上，然后单击 **“导出知识库”** 。  
   
-4.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留知识库名称，将“DQS 数据文件 (\*.dqs)”保留为“另存为”类型，然后单击“保存”。  
+4.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留知识库名称，将“DQS 数据文件 (\*.dqs)”保留为“另存为”类型，然后单击“保存”     。  
   
-5.  在 **“导出知识库”** 对话框中，验证状态行是否指示导出已完成。 单击“确定” 。  
+5.  在 **“导出知识库”** 对话框中，验证状态行是否指示导出已完成。 单击“确定”  。  
   
 ##  <a name="FollowUp"></a> 跟进：将域导出到 .dqs 文件后  
  将知识库导出到 .dqs 文件后，您可以将知识库导入到同一个 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] （使用新名称）或导入到另一个 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]中。  

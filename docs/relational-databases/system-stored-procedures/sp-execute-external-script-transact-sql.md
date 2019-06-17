@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531039"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046711"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -78,9 +78,9 @@ sp_execute_external_script
  **@language** = N'*语言*  
  指示脚本语言。 *语言*是**sysname**。  具体取决于你的 SQL Server 版本，有效的值为 R (SQL Server 2016 及更高版本)、 Python (SQL Server 2017 及更高版本) 和 Java （SQL Server 2019 预览版）。 
   
- **@script** = N'*脚本*指定为参数或变量的输入的外部语言脚本。 *脚本*是**nvarchar （max)**。  
+ **@script** = N'*脚本*指定为参数或变量的输入的外部语言脚本。 *脚本*是**nvarchar （max)** 。  
 
-`[ @input_data_1 =  N'input_data_1' ]` 指定使用的窗体中的外部脚本的输入的数据[!INCLUDE[tsql](../../includes/tsql-md.md)]查询。 数据类型*input_data_1*是**nvarchar （max)**。
+`[ @input_data_1 =  N'input_data_1' ]` 指定使用的窗体中的外部脚本的输入的数据[!INCLUDE[tsql](../../includes/tsql-md.md)]查询。 数据类型*input_data_1*是**nvarchar （max)** 。
 
 `[ @input_data_1_name = N'input_data_1_name' ]` 指定用于表示定义的查询变量的名称@input_data_1。 外部脚本的变量中的数据类型取决于语言。 对于 R，则输入的变量是数据帧。 对于 Python，输入必须为表格。 *input_data_1_name*是**sysname**。  默认值是*InputDataSet*。  
 
@@ -124,7 +124,7 @@ sp_execute_external_script
 
  在 SQL Server 2019 目前处于公共预览状态，可以设置两个其他参数，使对已分区数据，其中分区都基于一个或更多的列提供的自然地细分为逻辑分区的数据集创建和使用的建模仅在脚本执行。 年龄、 性别、 地理区域、 日期或时间，对于包含重复值的列是几个示例都适用于已分区的数据集。
  
- 两个参数是**input_data_1_partition_by_columns**并**input_data_1_order_by_columns**，第二个参数用于结果集进行排序。 作为输入传递的参数`sp_execute_external_script`与外部脚本执行一次每个分区。 有关详细信息和示例，请参阅[教程：创建基于分区的模型](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)。
+ 两个参数是**input_data_1_partition_by_columns**并**input_data_1_order_by_columns**，第二个参数用于结果集进行排序。 作为输入传递的参数`sp_execute_external_script`与外部脚本执行一次每个分区。 有关详细信息和示例，请参阅[教程：创建基于分区的模型](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition)。
 
  可以通过指定并行执行脚本`@parallel=1`。 如果输入的查询可并行化，则应设置`@parallel=1`作为你的参数的一部分`sp_execute_external_script`。 默认情况下，查询优化器将在操作`@parallel=1`对表具有 256 个以上的行，但如果你想要显式处理这种情况，此脚本包括作为演示参数。
 

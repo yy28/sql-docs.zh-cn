@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917079"
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
@@ -30,7 +30,7 @@ ms.locfileid: "62917079"
  指定下列模式之一来恢复数据库：**完整**、**大容量日志**或**简单**。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)。  
   
  **兼容级别**  
- 指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值有  **SQL Server 2014 (120)**、  **SQL Server 2012 (110)** 和 **SQL Server 2008 (100)**。 当 SQL Server 2005 数据库升级到 SQL Server 2014 时，该数据库的兼容级别将从 90 更改为 100。  在 SQL Server 2014 中不支持 90 兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
+ 指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值有  **SQL Server 2014 (120)** 、  **SQL Server 2012 (110)** 和 **SQL Server 2008 (100)** 。 当 SQL Server 2005 数据库升级到 SQL Server 2014 时，该数据库的兼容级别将从 90 更改为 100。  在 SQL Server 2014 中不支持 90 兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
   
  **包含类型**  
  指定无或部分以便指定这是否为包含数据库。 有关包含的数据库的详细信息，请参阅 [Contained Databases](contained-databases.md)。 服务器属性 **“启用包含的数据库”** 必须首先设置为 **TRUE** ，然后才能将某个数据库配置为包含数据库。  

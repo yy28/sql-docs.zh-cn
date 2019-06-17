@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917202"
 ---
 # <a name="database-object-extended-properties-page"></a>数据库对象（“扩展属性”页）
@@ -33,7 +33,7 @@ ms.locfileid: "62917202"
  查看或指定对象的扩展属性。 每个扩展属性都由与该对象关联的元数据的名称/值对组成。  
   
  **“浏览”按钮**  
- 单击“值”后面的浏览 (…) 按钮可打开“扩展属性对话框的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。  
+ 单击“值”后面的浏览 (…) 按钮可打开“扩展属性对话框的值”对话框   。 在这一较大的范围中键入或查看扩展属性的值。  
   
  **删除**  
  删除所选扩展属性。  

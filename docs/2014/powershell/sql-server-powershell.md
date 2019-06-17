@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922581"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
@@ -38,7 +38,7 @@ ms.locfileid: "62922581"
 |----------------------|-----------|  
 |介绍用于运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件、打开 PowerShell 会话和加载 `sqlps` 模块的首选机制。 `sqlps` 模块在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet 以及该提供程序和 cmdlet 使用的 SQL Server 管理对象 (SMO) 程序集中加载。|[导入 SQLPS 模块](../database-engine/import-the-sqlps-module.md)|  
 |介绍如何仅加载 SMO 程序集而不加载提供程序或 cmdlet。|[在 Windows PowerShell 中加载 SMO 程序集](load-the-smo-assemblies-in-windows-powershell.md)|  
-|介绍如何通过右键单击“对象资源管理器”中的节点来运行 Windows PowerShell 会话。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 启动 Windows PowerShell 会话，加载 `sqlps` 模块，并将 SQL Server 提供程序路径设置为选定的对象。|[从 SQL Server Management Studio 中运行 Windows PowerShell](run-windows-powershell-from-sql-server-management-studio.md)|  
+|介绍如何通过右键单击“对象资源管理器”  中的节点来运行 Windows PowerShell 会话。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 启动 Windows PowerShell 会话，加载 `sqlps` 模块，并将 SQL Server 提供程序路径设置为选定的对象。|[从 SQL Server Management Studio 中运行 Windows PowerShell](run-windows-powershell-from-sql-server-management-studio.md)|  
 |介绍如何创建运行 Windows PowerShell 脚本的 SQL Server 代理作业步骤。 然后，可以将作业安排在特定时间或响应事件时运行。|[在 SQL Server 代理中运行 Windows PowerShell 步骤](run-windows-powershell-steps-in-sql-server-agent.md)|  
 |介绍如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序浏览 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的层次结构。|[SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)|  
 |介绍如何使用指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 操作（如运行 [!INCLUDE[ssDE](../includes/ssde-md.md)] 脚本）的 [!INCLUDE[tsql](../includes/tsql-md.md)] cmdlet。|[使用数据库引擎 cmdlet](../database-engine/use-the-database-engine-cmdlets.md)|  

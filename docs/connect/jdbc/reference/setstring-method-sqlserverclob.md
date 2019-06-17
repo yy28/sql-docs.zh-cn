@@ -15,22 +15,22 @@ apitype: Assembly
 ms.assetid: e329de08-7624-4cf6-9da7-350584e87011
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a270b9bd1aa9edd39c55484404e6af6d127cad01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0951d7b831c8453e20c2521265af94ddd56f1063
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694015"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773396"
 ---
 # <a name="setstring-method-sqlserverclob"></a>setString 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将给定的 String 写入 CLOB（从给定位置开始）。  
+  将给定的 String  写入 CLOB（从给定位置开始）。  
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[setString (long, java.lang.String)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string.md)|将给定的字符串写入 CLOB（从给定位置开始）。|  
 |[setString (long, java.lang.String, int, int)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int.md)|根据给定的偏移量和长度，将给定的字符串写入 CLOB（从给定的位置开始）。|  

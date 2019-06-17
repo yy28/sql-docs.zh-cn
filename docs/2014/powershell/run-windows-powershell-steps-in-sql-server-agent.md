@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922889"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server 代理中运行 Windows PowerShell 步骤
   使用 SQL Server 代理可以在计划时间运行 SQL Server PowerShell 脚本。  
   
-1.  **开始之前：**[限制和局限](#LimitationsRestrictions)  
+1.  **开始之前：** [限制和局限](#LimitationsRestrictions)  
   
-2.  **若要从 SQL Server 代理运行 PowerShell，请使用：**[PowerShell 作业步骤](#PShellJob)、[命令提示符作业步骤](#CmdExecJob)  
+2.  **若要从 SQL Server 代理运行 PowerShell，请使用：** [PowerShell 作业步骤](#PShellJob)、[命令提示符作业步骤](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>开始之前  
  共有多种类型的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业步骤。 每种类型都与用来实现特定环境（如复制代理或命令提示环境）的子系统关联。 您可以对 Windows PowerShell 脚本进行编码，然后使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理将这些脚本包括在按计划时间运行或者为了响应 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件而运行的作业中。 可以使用命令提示作业步骤或 PowerShell 作业步骤运行 Windows PowerShell 脚本。  
@@ -39,11 +39,11 @@ ms.locfileid: "62922889"
 ##  <a name="PShellJob"></a> 创建 PowerShell 作业步骤  
  **创建 PowerShell 作业步骤**  
   
-1.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅 [创建作业](../ssms/agent/create-jobs.md)。  
+1.  展开“SQL Server 代理”  ，创建一个新作业或右键单击一个现有作业，再单击“属性”  。 有关创建作业的详细信息，请参阅 [创建作业](../ssms/agent/create-jobs.md)。  
   
-2.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
+2.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”** 。  
   
-3.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”**。  
+3.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
   
 4.  在 **“类型”** 列表中单击 **PowerShell**。  
   
@@ -56,13 +56,13 @@ ms.locfileid: "62922889"
 ##  <a name="CmdExecJob"></a> 创建命令提示作业步骤  
  **创建 CmdExec 作业步骤**  
   
-1.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅 [创建作业](../ssms/agent/create-jobs.md)。  
+1.  展开“SQL Server 代理”  ，创建一个新作业或右键单击一个现有作业，再单击“属性”  。 有关创建作业的详细信息，请参阅 [创建作业](../ssms/agent/create-jobs.md)。  
   
-2.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
+2.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”** 。  
   
-3.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”**。  
+3.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
   
-4.  在 **“类型”** 列表中，选择 **“操作系统(CmdExec)”**。  
+4.  在 **“类型”** 列表中，选择 **“操作系统(CmdExec)”** 。  
   
 5.  在 **“运行身份”** 列表中，选择具有作业将使用的凭据的代理帐户。 默认情况下，CmdExec 作业步骤在 SQL Server 代理服务帐户的上下文中运行。  
   

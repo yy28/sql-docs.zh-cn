@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920792"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
@@ -197,7 +197,7 @@ GO
  提交事务后，本示例将应用 ALTER WORKLOAD GROUP 或 ALTER RESOURCE POOL 语句中请求的配置更改。  
   
 > [!IMPORTANT]  
->  以下示例使用示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的用户名，该用户是在“示例 A：设置登录名和用户 (Transact-SQL)” domain_name`\MAX_CPU` 中创建的。 将此用户名替换为您计划在创建低优先级压缩备份时使用的登录名的用户名。  
+>  以下示例使用示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的用户名，该用户是在“示例 A：设置登录名和用户 (Transact-SQL)” domain_name`\MAX_CPU` 中创建的  。 将此用户名替换为您计划在创建低优先级压缩备份时使用的登录名的用户名。  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -251,7 +251,7 @@ WHERE session_id > 50;
 GO  
 ```  
   
- 在“结果”窗格中，“名称”列应列出你在分类器函数中指定的工作负荷组名称的一个或多个会话。  
+ 在“结果”窗格中，“名称”列应列出你在分类器函数中指定的工作负荷组名称的一个或多个会话  。  
   
 > [!NOTE]  
 >  有关此 SELECT 语句调用的动态管理视图的信息，请参阅 [sys.dm_exec_sessions (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) 和 [sys.dm_resource_governor_workload_groups (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)。  

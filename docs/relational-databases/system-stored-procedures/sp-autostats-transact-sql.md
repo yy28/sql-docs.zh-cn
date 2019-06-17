@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995686"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
@@ -45,7 +45,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @tblname = ] 'table_or_indexed_view_name'` 表的名称或索引视图，以对其显示 AUTO_UPDATE_STATISTICS 选项。 *table_or_indexed_view_name* is **nvarchar(776)**, with no default.  
+`[ @tblname = ] 'table_or_indexed_view_name'` 表的名称或索引视图，以对其显示 AUTO_UPDATE_STATISTICS 选项。 *table_or_indexed_view_name* is **nvarchar(776)** , with no default.  
   
 `[ @flagc = ] 'stats_value'` 更新 AUTO_UPDATE_STATISTICS 选项为下列值之一：  
   
@@ -53,7 +53,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  **OFF** = OFF  
   
- 当*stats_flag*是未指定，显示当前 AUTO_UPDATE_STATISTICS 设置。 *stats_value*是**varchar(10)**，默认值为 NULL。  
+ 当*stats_flag*是未指定，显示当前 AUTO_UPDATE_STATISTICS 设置。 *stats_value*是**varchar(10)** ，默认值为 NULL。  
   
 `[ @indname = ] 'statistics_name'` 是要显示或更新 AUTO_UPDATE_STATISTICS 选项上的统计信息的名称。 若要显示索引的统计信息，您可以使用索引的名称；索引及其相应统计信息对象具有相同的名称。  
   

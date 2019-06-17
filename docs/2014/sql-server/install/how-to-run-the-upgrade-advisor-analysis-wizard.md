@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1464b55724e4305f2833ddce34e27170c7afd484
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094831"
 ---
 # <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>如何：运行升级顾问分析向导
@@ -29,7 +29,7 @@ ms.locfileid: "66094831"
   
 1.  在升级顾问起始页上，单击**启动升级顾问分析向导**。  
   
-2.  上**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件**页上，输入要扫描中的服务器的名称**服务器名称**框中，然后依次**检测**。 输入服务器名称时应遵守以下原则：  
+2.  上 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件**页上，输入要扫描中的服务器的名称**服务器名称**框中，然后依次**检测**。 输入服务器名称时应遵守以下原则：  
   
     -   若要扫描非群集实例，请输入计算机名称。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66094831"
     > [!WARNING]  
     >  升级顾问不支持到未设置为使用标准端口 (1433) 进行客户端连接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接。 如果要连接到不使用标准端口 (1433) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用 IP 地址和端口创建一个别名。 有关配置客户端协议和创建别名的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，请参阅[配置客户端协议](../../database-engine/configure-windows/configure-client-protocols.md)。  
     >   
-    >  如果还没有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装在运行升级顾问的计算机上，单击**启动**，然后运行`cliconfg`。 这将打开**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端网络实用工具**对话框。 使用**别名**选项卡来创建的别名。  
+    >  如果还没有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装在运行升级顾问的计算机上，单击**启动**，然后运行`cliconfg`。 这将打开 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端网络实用工具**对话框。 使用**别名**选项卡来创建的别名。  
   
 3.  查看检测到的组件列表，根据需要，修改所选内容，然后单击**下一步**。  
   

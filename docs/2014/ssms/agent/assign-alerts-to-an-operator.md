@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473208"
 ---
 # <a name="assign-alerts-to-an-operator"></a>向操作员分配警报
@@ -62,17 +62,17 @@ ms.locfileid: "62473208"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要向其分配警报的操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要为其分配警报的操作员，再选择“属性”，然后选择“通知”页。  
+4.  右键单击要为其分配警报的操作员，再选择“属性”  ，然后选择“通知”  页。  
   
-5.  在“operator_name 属性”对话框的“选择页”下，选择“通知”。  
+5.  在“operator_name 属性”   对话框的“选择页”  下，选择“通知”  。  
   
-6.  在 **“按以下方式查看发送给此用户的通知”** 下，选择 **“警报”** 查看发送给此操作员的警报列表或选择 **“作业”** 查看向此操作员发送通知的作业列表。 选择一个或多个以下的复选框来根据需要定义每个通知的通知方法：**电子邮件**，**寻呼**，或**Net send**。  
+6.  在 **“按以下方式查看发送给此用户的通知”** 下，选择 **“警报”** 查看发送给此操作员的警报列表或选择 **“作业”** 查看向此操作员发送通知的作业列表。 选中下列一个或多个复选框来根据需要定义每个通知的通知方法：“电子邮件”、“寻呼机”或“Net Send”    。  
   
-7.  完成后，单击 **“确定”**。  
+7.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -80,9 +80,9 @@ ms.locfileid: "62473208"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert)  

@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_8621 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 8621 (Database Engine error)
 ms.assetid: 67f59865-becd-4999-8bb0-90aedd7effbf
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4aa55a321f4eea99643ec39cbf5b72682ec7929
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62912868"
 ---
 # <a name="mssqlserver8621"></a>MSSQLSERVER_8621
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>详细信息  
   
 |||  
@@ -34,10 +33,11 @@ ms.locfileid: "62912868"
 |消息正文|查询处理器在优化查询时堆栈空间不足。 请简化查询。|  
   
 ## <a name="explanation"></a>解释  
-出错的最可能原因是扩展查询的大小。 在每个视图的定义、计算列、[!INCLUDE[tsql](../../includes/tsql-md.md)] 函数和它引用的公用表表达式以及级联操作（如更新辅助索引、视图和触发器）方面，扩展查询将替换原始查询。  
+ 出错的最可能原因是扩展查询的大小。 在每个视图的定义、计算列、[!INCLUDE[tsql](../../includes/tsql-md.md)] 函数和它引用的公用表表达式以及级联操作（如更新辅助索引、视图和触发器）方面，扩展查询将替换原始查询。  
   
-很可能查询在某个维度中很大；例如，视图定义所引用的表数，或者很大的标量表达式。  
+ 很可能查询在某个维度中很大；例如，视图定义所引用的表数，或者很大的标量表达式。  
   
 ## <a name="user-action"></a>用户操作  
-通过沿最大维度将该查询分解为多个查询，对其进行简化。 首先删除实际上不需要的任何查询元素，然后尝试添加临时表并将该查询拆分为两个查询。  仅将查询的一部分移动到子查询、函数或公用表表达式是不够的，因为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编译器会将它们重新组合在一起。  
+ 通过沿最大维度将该查询分解为多个查询，对其进行简化。 首先删除实际上不需要的任何查询元素，然后尝试添加临时表并将该查询拆分为两个查询。  仅将查询的一部分移动到子查询、函数或公用表表达式是不够的，因为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编译器会将它们重新组合在一起。  
+  
   

@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cda57aaa1271182540ed83acc9d21856f7c1f013
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ab00d886cb8d30dbf61ed4de4d9911b42a4dd584
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727465"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796150"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序配置错误和警告处理
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本主题介绍如何配置 SQLSRV 驱动程序来处理错误和警告。  
   
-默认情况下，SQLSRV 驱动程序会将警告视为错误；对生成错误或警告的 sqlsrv 函数的调用将返回 false。 若要禁用此行为，请使用 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 函数。 在以下代码行包括在脚本的开端时，仅生成警告（无错误）的 sqlsrv 函数不会返回 false：  
+默认情况下，SQLSRV 驱动程序会将警告视为错误；对生成错误或警告的 sqlsrv 函数的调用将返回 false   。 若要禁用此行为，请使用 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 函数。 在以下代码行包括在脚本的开端时，仅生成警告（无错误）的 sqlsrv 函数不会返回 false   ：  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   

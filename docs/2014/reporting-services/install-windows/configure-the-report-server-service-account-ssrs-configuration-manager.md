@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261073"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
@@ -100,7 +100,7 @@ ms.locfileid: "63261073"
   
 3. 在 Reporting Services 部分中，单击**授予数据库访问权限**。  
   
-4. 单击“确定” 。 将出现“输入凭据”对话框。  
+4. 单击“确定”  。 将出现“输入凭据”对话框。  
   
 5. 输入用户凭据，该用户必须是报表服务器所在的计算机上本地管理员组的成员。 这些凭据将用于一次性连接到报表服务器计算机以便检索服务帐户信息。 在 SharePoint 数据库中将对为每个服务帐户创建的数据库登录名进行更新。  
   

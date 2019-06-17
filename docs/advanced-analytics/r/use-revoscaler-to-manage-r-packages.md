@@ -2,24 +2,24 @@
 title: 如何使用 RevoScaleR 函数来查找或安装 R 包的 SQL Server 机器学习服务
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d5ba43e913f91ab93f80249cae3d0c8cf8e1740
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642338"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140412"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函数来查找或 SQL Server 上安装 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 RevoScaleR 9.0.1 和更高版本包括 SQL Server 计算上下文的 R 包管理函数。 远程，非管理员可以使用这些函数在 SQL Server 上安装包，而无需直接访问服务器。
 
-SQL Server 2017 机器学习服务已包括 RevoScaleR 的较新版本。 SQL Server 2016 R Services 的客户必须执行[组件升级](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)获取 RevoScaleR 包管理功能。 有关说明如何检索包版本和内容，请参阅[获取包信息](determine-which-packages-are-installed-on-sql-server.md)。
+SQL Server 2017 机器学习服务已包括 RevoScaleR 的较新版本。 SQL Server 2016 R Services 的客户必须执行[组件升级](../install/upgrade-r-and-python.md)获取 RevoScaleR 包管理功能。 有关说明如何检索包版本和内容，请参阅[获取包信息](../package-management/installed-package-information.md)。
 
 ## <a name="revoscaler-functions-for-package-management"></a>包管理的 RevoScaleR 函数
 
@@ -38,7 +38,7 @@ SQL Server 2017 机器学习服务已包括 RevoScaleR 的较新版本。 SQL Se
 
 + [启用 SQL Server 上的远程 R 包管理](r-package-how-to-enable-or-disable.md)
 
-+ RevoScaleR 版本必须是客户端和服务器环境上相同。 有关详细信息，请参阅[获取包信息](determine-which-packages-are-installed-on-sql-server.md)。
++ RevoScaleR 版本必须是客户端和服务器环境上相同。 有关详细信息，请参阅[获取包信息](../package-management/installed-package-information.md)。
 
 + 若要连接到服务器和数据库，以及运行 R 命令的权限。 必须是允许你指定的实例和数据库上安装包的数据库角色的成员。
 
@@ -212,4 +212,4 @@ exec sp_execute_external_script
 + [启用远程 R 包管理](r-package-how-to-enable-or-disable.md)
 + [同步 R 包](package-install-uninstall-and-sync.md)
 + [安装 R 包的提示](packages-installed-in-user-libraries.md)
-+ [默认包](installing-and-managing-r-packages.md)
++ [默认包](../package-management/default-packages.md)

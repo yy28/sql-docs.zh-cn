@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916705"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
@@ -31,7 +31,7 @@ ms.locfileid: "62916705"
   
      [安全性](#Security)  
   
--   **若要将数据库恢复到数据库快照，请使用：**[Transact-SQL](#TsqlProcedure)  
+-   **若要将数据库恢复到数据库快照，请使用：** [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62916705"
   
      恢复操作要求对源数据库具有 RESTORE DATABASE 权限。 若要恢复数据库，请使用下列 Transact-SQL 语句：  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
   
      其中， *database_name* 是源数据库的名称， *database_snapshot_name* 是要将数据库恢复到的快照的名称。 注意，必须在此语句中指定快照名称而非备份设备。  
   

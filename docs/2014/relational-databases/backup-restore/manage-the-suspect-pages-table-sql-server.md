@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921950"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
@@ -124,11 +124,11 @@ ms.locfileid: "62921950"
   
 #### <a name="to-manage-the-suspectpages-table"></a>管理 suspect_pages 表  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”** 。  
   
-2.  依次展开“系统数据库” 、“msdb” 、“表” 和“系统表” 。  
+2.  依次展开“系统数据库”  、“msdb”  、“表”  和“系统表”  。  
   
-3.  展开“dbo.suspect_pages”  ，然后右键单击“编辑前 200 行” 。  
+3.  展开“dbo.suspect_pages”  ，然后右键单击“编辑前 200 行”  。  
   
 4.  在查询窗口中，编辑、更新或删除所需的行。  
   
@@ -138,9 +138,9 @@ ms.locfileid: "62921950"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例将删除 `suspect_pages` 表中的一些行。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此示例将删除 `suspect_pages` 表中的一些行。  
   
 ```  
 -- Delete restored, repaired, or deallocated pages.  

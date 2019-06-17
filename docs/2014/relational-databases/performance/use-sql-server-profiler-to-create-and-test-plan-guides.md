@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150490"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>使用 SQL Server Profiler 创建和测试计划指南
@@ -57,7 +57,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 4.  单击与该查询对应的 **SQL:BatchStarting** 事件。  
   
-5.  右键单击并选择“提取事件数据”。  
+5.  右键单击并选择“提取事件数据”  。  
   
     > [!IMPORTANT]  
     >  不要尝试通过从事件探查器跟踪窗口的下窗格中选中批处理文本来复制它。 这可能会导致所创建的计划指南与原始批处理不匹配。  
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  在记事本中打开该批处理文本文件，将文本复制到复制和粘贴缓冲区。  
   
-8.  创建计划指南，并将复制的文本粘贴到为 **@stmt**参数指定的引号 ( **@stmt** ) 内。 必须通过在前面再加上其他单引号来转义 **@stmt** 参数中的任何单引号。 插入这些单引号时务必小心，不要添加或删除任何其他字符。 例如，日期文本 **'** 20000101 **'** 必须分隔为 **''** 20000101 **''**。  
+8.  创建计划指南，并将复制的文本粘贴到为 **@stmt**参数指定的引号 ( **@stmt** ) 内。 必须通过在前面再加上其他单引号来转义 **@stmt** 参数中的任何单引号。 插入这些单引号时务必小心，不要添加或删除任何其他字符。 例如，日期文本 **'** 20000101 **'** 必须分隔为 **''** 20000101 **''** 。  
   
  下面是该计划指南：  
   
@@ -83,7 +83,7 @@ EXEC sp_create_plan_guide
 ## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 测试计划指南  
  若要验证计划指南是否与查询匹配，请执行以下步骤：  
   
-1.  启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪，确保已选中 **Showplan XML** 事件类型（位于“性能”节点下）。  
+1.  启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪，确保已选中 **Showplan XML** 事件类型（位于“性能”  节点下）。  
   
 2.  使应用程序运行查询。  
   

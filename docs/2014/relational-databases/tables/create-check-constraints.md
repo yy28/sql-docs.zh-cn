@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736197"
 ---
 # <a name="create-check-constraints"></a>创建 CHECK 约束
@@ -49,9 +49,9 @@ ms.locfileid: "62736197"
   
 #### <a name="to-create-a-new-check-constraint"></a>创建新的 CHECK 约束  
   
-1.  在“对象资源管理器”中，展开要为其添加 CHECK 约束的表，右键单击“约束”，然后单击“新建约束”。  
+1.  在  “对象资源管理器”中，展开要为其添加 CHECK 约束的表，右键单击  “约束”，然后单击  “新建约束”。  
   
-2.  在“CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 (…)。  
+2.  在“CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 (…)    。  
   
 3.  在 **“CHECK 约束表达式”** 对话框中，键入 CHECK 约束的 SQL 表达式。 例如，若要将 `SellEndDate` 表的 `Product` 列中的条目限制为大于等于 `SellStartDate` 列中的日期的值，或者为 NULL 值，则键入：  
   
@@ -68,9 +68,9 @@ ms.locfileid: "62736197"
     > [!NOTE]  
     >  确保将任何非数字约束值包含在单引号 (') 中。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
-5.  在“标识”类别中，您可以更改 CHECK 约束的名称并且为该约束添加说明（扩展属性）。  
+5.  在  “标识”类别中，您可以更改 CHECK 约束的名称并且为该约束添加说明（扩展属性）。  
   
 6.  在 **“表设计器”** 类别中，您可以设置何时强制约束。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62736197"
     |在此表上发生复制操作时强制约束|**强制用于复制**|  
     |在此表中插入或更新行时强制约束|**强制用于 INSERT 和 UPDATE**|  
   
-7.  单击 **“关闭”**。  
+7.  单击 **“关闭”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -88,9 +88,9 @@ ms.locfileid: "62736197"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     ALTER TABLE dbo.DocExc   

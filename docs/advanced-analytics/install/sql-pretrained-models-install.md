@@ -3,17 +3,17 @@ title: 安装预先定型的机器学习模型的 SQL Server 机器学习
 description: 将预先训练的情绪分析和图像特征化的模型添加到 SQL Server 2017 机器学习服务 （R 或 Python） 或 SQL Server 2016 R Services。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fe0cfc855f1a231654c3e31ec3924d9754ef4970
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 002713c8c3eb92a33cbb1461eaacb8a0d63a5c3f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745408"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140745"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安装预先定型的机器学习模型的 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "62745408"
 
 + [SQL Server 2017 机器学习服务](sql-machine-learning-services-windows-install.md)包括机器学习库的两种语言版本，因此无需采取进一步操作即可满足此先决条件。 由于存在库，因此可以使用本文介绍的 PowerShell 脚本将预先训练的模型添加到这些库中。
 
-+ [SQL Server 2016 R Services](sql-r-services-windows-install.md)（仅限R）不包含随时可用的 [MicrosoftML 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)。 要添加 MicrosoftML，必须执行[组件升级](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。 组件升级的一个优点是你可以同时添加预先训练的模型，这使得无需运行 PowerShell 脚本。 但是，如果已经升级但是第一次升级时未添加预先训练的模型，则可以按照本文所述运行 PowerShell 脚本。 它适用于两个版本的 SQL Server。 在此之前，请确认 MicrosoftML 库在 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library 中。
++ [SQL Server 2016 R Services](sql-r-services-windows-install.md)（仅限R）不包含随时可用的 [MicrosoftML 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)。 要添加 MicrosoftML，必须执行[组件升级](../install/upgrade-r-and-python.md)。 组件升级的一个优点是你可以同时添加预先训练的模型，这使得无需运行 PowerShell 脚本。 但是，如果已经升级但是第一次升级时未添加预先训练的模型，则可以按照本文所述运行 PowerShell 脚本。 它适用于两个版本的 SQL Server。 在此之前，请确认 MicrosoftML 库在 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library 中。
 
 
 <a name="file-location"></a>
@@ -209,6 +209,6 @@ R 和 Python 模型的安装路径如下所示：
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)
 + [SQL Server 2017 机器学习服务](sql-machine-learning-services-windows-install.md)
-+ [升级 SQL Server 实例中的 R 和 Python 组件](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [升级 SQL Server 实例中的 R 和 Python 组件](../install/upgrade-r-and-python.md)
 + [适用于 R 的 MicrosoftML 包](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [用于 Python 的 microsoftml 包](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997034"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
@@ -241,7 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  若要查看为给定配置文件中定义了哪些参数，请运行**sp_help_agent_profile**并记下*profile_name*与关联*profile_id*。 具有相应*profile_id*，接下来运行**sp_help_agent_parameters**使用的*profile_id*若要查看与该配置文件关联的参数。 参数可以通过执行添加到配置文件[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
-`[ @parameter_value = ] 'parameter_value'` 是该参数的新值。 *parameter_value*是**nvarchar(255)**，无默认值。  
+`[ @parameter_value = ] 'parameter_value'` 是该参数的新值。 *parameter_value*是**nvarchar(255)** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
