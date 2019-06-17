@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad210f91d00f9e692c8ee20fef01a808a01501c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198199"
 ---
 # <a name="data-source-specification-subkeys"></a>数据源规范子项
@@ -27,9 +27,9 @@ ms.locfileid: "63198199"
   
  值的格式为下表中所示。 仅将驱动程序的值是必需的。  
   
-|名称|数据类型|数据|  
+|“属性”|数据类型|数据|  
 |----------|---------------|----------|  
-|描述|REG_SZ|*description*|  
+|Description|REG_SZ|*description*|  
 |驱动程序|REG_SZ|*driver-DLL-path*|  
 |TranslationDLL|REG_SZ|*translator-DLL-path*|  
 |TranslationName|REG_SZ|*translator-name*|  

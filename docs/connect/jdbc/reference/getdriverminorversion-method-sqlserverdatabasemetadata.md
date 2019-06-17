@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: adb6ae29-025e-4ab3-a6e4-133fc29fb98b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c802aee792d06eb1336385229ac1d1eb33a4b1b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f59a574317b6f08aff66cd9abab42183b2fdba35
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736055"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780879"
 ---
 # <a name="getdriverminorversion-method-sqlserverdatabasemetadata"></a>getDriverMinorVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public int getDriverMinorVersion()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示 JDBC 驱动程序次版本的 int。  
+ 指示 JDBC 驱动程序次版本的 int  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

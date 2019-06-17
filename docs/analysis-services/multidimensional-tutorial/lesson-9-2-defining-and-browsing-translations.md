@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dfa0021eb23620c4950949094e661f100aa4ac6f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403479"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lesson 9-2-定义和浏览翻译
@@ -25,101 +25,101 @@ ms.locfileid: "65403479"
   
 ## <a name="specifying-translations-for-the-date-dimension-metadata"></a>为“日期”维度元数据指定翻译  
   
-1.  打开“日期”维度的维度设计器，然后单击“翻译”选项卡。  
+1.  打开“日期”  维度的维度设计器，然后单击“翻译”  选项卡。  
   
     每个维度对象的元数据将以默认语言显示。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 教程多维数据集中的默认语言为英语。  
   
-2.  在“翻译”选项卡的工具栏上，单击“新建翻译”按钮。  
+2.  在“翻译”  选项卡的工具栏上，单击“新建翻译”  按钮。  
   
-    语言列表将出现在“选择语言”对话框中。  
+    语言列表将出现在“选择语言”  对话框中。  
   
-3.  单击“西班牙语(西班牙)”，然后单击“确定”。  
+3.  单击“西班牙语(西班牙)”  ，然后单击“确定”  。  
   
     将显示一个新列，在其中您可以将要翻译的元数据对象定义为用西班牙语翻译。 在本教程中，仅翻译了少数对象来举例说明此过程。  
   
-4.  在“翻译”选项卡的工具栏上，单击“新建翻译”按钮，在“选择语言”对话框中单击“法语(法国)”，然后单击“确定”。  
+4.  在“翻译”  选项卡的工具栏上，单击“新建翻译”  按钮，在“选择语言”  对话框中单击“法语(法国)”  ，然后单击“确定”  。  
   
     将出现另一个语言列，您将在其中定义法语翻译。  
   
-5.  在“日期”维度的“标题”对象行中，在“西班牙语(西班牙)”翻译列中键入 **Fecha**，并在“法语(法国)”翻译列中键入 **Temps**。  
+5.  在“日期”  维度的“标题”  对象行中，在“西班牙语(西班牙)”  翻译列中键入 **Fecha**，并在“法语(法国)”  翻译列中键入 **Temps**。  
   
-6.  在“月份名称”属性的“标题”对象行中，在“西班牙语(西班牙)”翻译列中键入 **Mes del Año**，并在“法语(法国)”翻译列中键入 **Mois d'Année**。  
+6.  在“月份名称”  属性的“标题”  对象行中，在“西班牙语(西班牙)”  翻译列中键入 **Mes del Año**，并在“法语(法国)”  翻译列中键入 **Mois d'Année**。  
   
-    请注意，当你输入这些翻译，省略号 (**...**) 显示。 单击此省略号可以指定为属性层次结构的每个成员提供翻译的基础表中的列。  
+    请注意，当你输入这些翻译，省略号 ( **...** ) 显示。 单击此省略号可以指定为属性层次结构的每个成员提供翻译的基础表中的列。  
   
-7.  单击省略号 (**...**) 用于**西班牙语 （西班牙）** 翻译**月份名称**属性。  
+7.  单击省略号 ( **...** ) 用于**西班牙语 （西班牙）** 翻译**月份名称**属性。  
   
-    “翻译属性数据”对话框将出现。  
+    “翻译属性数据”  对话框将出现。  
   
-8.  在“翻译列”列表中，选择“SpanishMonthName”，如下图所示。  
+8.  在“翻译列”  列表中，选择“SpanishMonthName”  ，如下图所示。  
   
     ![数据翻译属性对话框](../media/l9-translations-4.gif "翻译属性数据对话框")  
   
-9. 单击**确定**，然后单击省略号 (**...**) 用于**法语 （法国）** 翻译**月份名称**属性。  
+9. 单击**确定**，然后单击省略号 ( **...** ) 用于**法语 （法国）** 翻译**月份名称**属性。  
   
-10. 在“翻译列”列表中，选择“FrenchMonthName”，然后单击“确定”。  
+10. 在“翻译列”  列表中，选择“FrenchMonthName”  ，然后单击“确定”  。  
   
     此过程中的步骤阐释了为维度对象和成员定义元数据翻译的过程。  
   
 ## <a name="specifying-translations-for-the-analysis-services-tutorial-cube-metadata"></a>为 Analysis Services 教程多维数据集元数据指定翻译  
   
-1.  请切换到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后切换到“翻译”选项卡。  
+1.  请切换到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后切换到“翻译”  选项卡。  
   
     每个多维数据集对象的元数据将以默认语言显示，如下图所示。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 教程多维数据集中的默认语言为英语。  
   
     ![默认语言在选项卡中的翻译](../media/l9-translations-5.gif "默认在选项卡中的翻译的语言")  
   
-2.  在“翻译”选项卡的工具栏上，单击“新建翻译”按钮。  
+2.  在“翻译”  选项卡的工具栏上，单击“新建翻译”  按钮。  
   
-    语言列表将出现在“选择语言”对话框中。  
+    语言列表将出现在“选择语言”  对话框中。  
   
-3.  选择“西班牙语(西班牙)”，然后单击“确定”。  
+3.  选择“西班牙语(西班牙)”  ，然后单击“确定”  。  
   
     将显示一个新列，在其中您可以将要翻译的元数据对象定义为用西班牙语翻译。 在本教程中，仅翻译了少数对象来举例说明此过程。  
   
-4.  在“翻译”选项卡的工具栏上，单击“新建翻译”按钮，在“选择语言”对话框中选择“法语(法国)”，然后单击“确定”。  
+4.  在“翻译”  选项卡的工具栏上，单击“新建翻译”  按钮，在“选择语言”  对话框中选择“法语(法国)”  ，然后单击“确定”  。  
   
     将出现另一个语言列，您将在其中定义法语翻译。  
   
-5.  在“日期”维度的“标题”对象行中，在“西班牙语(西班牙)”翻译列中键入 **Fecha**，并在“法语(法国)”翻译列中键入 **Temps**。  
+5.  在“日期”  维度的“标题”  对象行中，在“西班牙语(西班牙)”  翻译列中键入 **Fecha**，并在“法语(法国)”  翻译列中键入 **Temps**。  
   
-6.  在“Internet Sales”度量值组的“标题”对象行中，在“西班牙语(西班牙)”翻译列中键入 **Ventas del lnternet**，并在“法语(法国)”翻译列中键入 **Ventes D'Internet**。  
+6.  在“Internet Sales”  度量值组的“标题”  对象行中，在“西班牙语(西班牙)”  翻译列中键入 **Ventas del lnternet**，并在“法语(法国)”  翻译列中键入 **Ventes D'Internet**。  
   
-7.  在“Internet Sales-Sales Amount”度量值的“标题”对象行中，在“西班牙语(西班牙)”翻译列中键入 **Cantidad de las Ventas del Internet**，并在“法语(法国)”翻译列中键入 **Quantité de Ventes d'Internet**。  
+7.  在“Internet Sales-Sales Amount”度量值的“标题”  对象行中，在“西班牙语(西班牙)”  翻译列中键入 **Cantidad de las Ventas del Internet**，并在“法语(法国)”  翻译列中键入 **Quantité de Ventes d'Internet**。  
   
     此过程中的步骤阐释了为多维数据集对象定义元数据翻译的过程。  
   
 ## <a name="browsing-the-cube-by-using-translations"></a>使用翻译浏览多维数据集  
   
-1.  在“生成”菜单上，单击“部署 Analysis Services 教程”。  
+1.  在“生成”  菜单上，单击“部署 Analysis Services 教程”  。  
   
-2.  成功完成部署后，请切换到“浏览器”选项卡，然后单击“重新连接”。  
+2.  成功完成部署后，请切换到“浏览器”  选项卡，然后单击“重新连接”  。  
   
-3.  从“数据”窗格中删除所有层次结构和度量值，然后从“透视”列表中选择“[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial”。  
+3.  从“数据”  窗格中删除所有层次结构和度量值，然后从“透视”  列表中选择“[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial”。  
   
-4.  在“元数据”窗格中，展开“度量值”，然后展开“Internet Sales”。  
+4.  在“元数据”窗格中，展开“度量值”  ，然后展开“Internet Sales”  。  
   
-    请注意，“Internet Sales-Sales Amount”度量值将以英文形式出现在此度量值组中。  
+    请注意，“Internet Sales-Sales Amount”  度量值将以英文形式出现在此度量值组中。  
   
-5.  在工具栏上，选择“语言”列表中的“西班牙语(西班牙)”。  
+5.  在工具栏上，选择“语言”  列表中的“西班牙语(西班牙)”  。  
   
-    注意，“元数据”窗格中的项将重新填充。 重新填充“元数据”窗格中的项之后，注意“Internet 销售额”度量值将不再出现在“Internet 销售”显示文件夹中。 而是以西班牙语形式出现在名为“Ventas del lnternet”的新显示文件夹中，如下图所示。  
+    注意，“元数据”窗格中的项将重新填充。 重新填充“元数据”窗格中的项之后，注意“Internet 销售额”度量值将不再出现在“Internet 销售”显示文件夹中。 而是以西班牙语形式出现在名为“Ventas del lnternet”  的新显示文件夹中，如下图所示。  
   
     ![元数据窗格中 Repopulated](../media/l9-translations-6.gif "Repopulated 元数据窗格")  
   
-6.  在“元数据”窗格中，右键单击“Cantidad de las Ventas del Internet”，然后选择“添加到查询”。  
+6.  在“元数据”窗格中，右键单击“Cantidad de las Ventas del Internet”  ，然后选择“添加到查询”  。  
   
-7.  在“元数据”窗格中，依次展开“Fecha”和“Fecha.Calendar Date”，右键单击“Fecha.Calendar Date”，然后选择“添加到筛选器”。  
+7.  在“元数据”窗格中，依次展开“Fecha”  和“Fecha.Calendar Date”  ，右键单击“Fecha.Calendar Date”  ，然后选择“添加到筛选器”  。  
   
-8.  在“筛选器”窗格中，选择“CY 2007”作为筛选表达式。  
+8.  在“筛选器”  窗格中，选择“CY 2007”  作为筛选表达式。  
   
-9. 在“元数据”窗格中，右键单击“Mes del Ano”，然后选择“添加到查询”。  
+9. 在“元数据”窗格中，右键单击“Mes del Ano”  ，然后选择“添加到查询”  。  
   
     注意，月份名称将以西班牙语显示，如下图所示。  
   
     ![在数据窗格中的月份名称西班牙语](../media/l9-translations-7.gif "在西班牙语中在数据窗格中的月份名称")  
   
-10. 在工具栏上，选择“语言”列表中的“法语(法国)”。  
+10. 在工具栏上，选择“语言”  列表中的“法语(法国)”  。  
   
     注意，月份名称现在将以法语显示，并且度量值名称现在也以法语显示。  
   

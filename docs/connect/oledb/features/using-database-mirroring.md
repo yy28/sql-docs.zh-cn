@@ -17,13 +17,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, database mirroring
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9a6804b68680600f9db9690929236d9f6128bc9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: eba70e8a4ee641b4bccb54f67f37015a0edbd434
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614475"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802896"
 ---
 # <a name="using-database-mirroring"></a>使用数据库镜像
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "47614475"
   
  数据库镜像是按数据库实现的，它在备用服务器上保留一份 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 产品数据库的副本。 该服务器根据数据库镜像会话的配置和状态，充当热备用或温备用服务器。 热备用服务器支持快速故障转移且不会丢失已提交事务，温备用服务器支持强制服务（可能丢失数据）。  
   
- 产品数据库称为“主体数据库”，备份副本称为“镜像数据库”。 主体数据库和镜像数据库必须位于单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（服务器实例）中，并且应位于单独的计算机中（如果可能）。  
+ 产品数据库称为“主体数据库”，备份副本称为“镜像数据库”   。 主体数据库和镜像数据库必须位于单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（服务器实例）中，并且应位于单独的计算机中（如果可能）。  
   
- 生产服务器实例称为“主体服务器”，而备用服务器实例称为“镜像服务器”，两个实例相互通信。 主体服务器和镜像服务器在数据库镜像会话中充当伙伴。 如果主体服务器失败，镜像服务器可以通过称为“故障转移”的过程将其数据库转为主体数据库。 例如，Partner_A 和 Partner_B 是两个伙伴服务器，主体数据库最初位于作为主体服务器的 Partner_A 中，镜像数据库位于作为镜像服务器的 Partner_B 中。 如果 Partner_A 脱机，Partner_B 上的数据库可以进行故障转移，成为当前的主体数据库。 当 Partner_A 重新加入镜像会话时，该服务器变为镜像服务器，并且其数据库变为镜像数据库。  
+ 生产服务器实例称为“主体服务器”，而备用服务器实例称为“镜像服务器”，两个实例相互通信   。 主体服务器和镜像服务器在数据库镜像会话中充当伙伴  。 如果主体服务器失败，镜像服务器可以通过称为“故障转移”的过程将其数据库转为主体数据库  。 例如，Partner_A 和 Partner_B 为两个伙伴服务器，主数据库最初位于主服务器 Partner_A 上，镜像数据库位于镜像服务器 Partner_B 上。 如果 Partner_A 脱机，则 Partner_B 上的数据库便可通过故障转移而成为当前主数据库。 Partner_A 重新加入镜像会话后，它将成为镜像服务器，而其数据库将成为镜像数据库。  
   
  备用数据库镜像配置提供不同级别的性能和数据安全，并支持不同形式的故障转移。 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "47614475"
 >  此外，服务器名称不区分大小写，而数据库名称区分大小写。 因此，应确保在 DSN 和连接字符串中使用相同的大小写。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序  
- 适用于 SQL Server 的 OLE DB 驱动程序通过连接和连接字符串属性支持数据库镜像。 已向 DBPROPSET_SQLSERVERDBINIT 属性集添加 SSPROP_INIT_FAILOVERPARTNER 属性，FailoverPartner 关键字是 DBPROP_INIT_PROVIDERSTRING 的新连接字符串属性。 有关详细信息，请参阅[OLE DB 驱动程序适用于 SQL Server 连接字符串关键字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
+ 适用于 SQL Server 的 OLE DB 驱动程序通过连接和连接字符串属性支持数据库镜像。 已向 DBPROPSET_SQLSERVERDBINIT 属性集添加 SSPROP_INIT_FAILOVERPARTNER 属性，FailoverPartner 关键字是 DBPROP_INIT_PROVIDERSTRING 的新连接字符串属性  。 有关详细信息，请参阅[OLE DB 驱动程序适用于 SQL Server 连接字符串关键字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
   
- 只要加载访问接口，故障转移缓存就会一直保留，直到调用 CoUninitialize 或应用程序引用由适用于 SQL Server 的 OLE DB 驱动程序管理的某一对象（如数据源对象）为止。  
+ 只要加载访问接口，故障转移缓存就会一直保留，直到调用 CoUninitialize 或应用程序引用由适用于 SQL Server 的 OLE DB 驱动程序管理的某一对象（如数据源对象）为止  。  
   
  有关 OLE DB 驱动程序用于数据库镜像的 SQL Server 支持的详细信息，请参阅[初始化和授权属性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
  

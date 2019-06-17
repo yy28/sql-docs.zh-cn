@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761577"
 ---
 # <a name="create-tables-database-engine"></a>创建表（数据库引擎）
@@ -56,7 +56,7 @@ ms.locfileid: "62761577"
   
 2.  在 **“对象资源管理器”** 中，展开 **“数据库”** 节点，然后展开将包含新表的数据库。  
   
-3.  在对象资源管理器中，右键单击数据库的“表”节点，然后单击“新建表”。  
+3.  在对象资源管理器中，右键单击数据库的“表”节点，然后单击“新建表”   。  
   
 4.  键入列名，选择数据类型，并选择各个列是否允许空值，如下图所示。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62761577"
   
 5.  若要为某个列指定更多属性，例如标识或计算列值，请单击该列，然后在列属性选项卡中，选择适当的属性。 有关列属性的详细信息，请参阅[表列属性 (SQL Server Management Studio)](table-column-properties-sql-server-management-studio.md)。  
   
-6.  若要将某个列指定为主键，请右键单击该列，然后选择“设置主键”。 有关详细信息，请参阅 [Create Primary Keys](../tables/create-primary-keys.md)。  
+6.  若要将某个列指定为主键，请右键单击该列，然后选择“设置主键”  。 有关详细信息，请参阅 [Create Primary Keys](../tables/create-primary-keys.md)。  
   
 7.  若要创建外键关系、CHECK 约束或索引，请在“表设计器”窗格中右键单击，然后从列表中选择一个对象，如下图中所示。  
   
@@ -72,15 +72,15 @@ ms.locfileid: "62761577"
   
      有关这些对象的详细信息，请参阅 [Create Foreign Key Relationships](../tables/create-foreign-key-relationships.md)、 [Create Check Constraints](../tables/create-check-constraints.md) 和 [Indexes](../indexes/indexes.md)。  
   
-8.  默认情况下，该表包含在 **dbo** 架构中。 若要为该表指定不同架构，请在“表设计器”窗格中右键单击，然后选择“属性”，如下图中所示。 从“架构”下拉列表中选择适当的架构。  
+8.  默认情况下，该表包含在 **dbo** 架构中。 若要为该表指定不同架构，请在“表设计器”窗格中右键单击，然后选择“属性”  ，如下图中所示。 从“架构”  下拉列表中选择适当的架构。  
   
      ![Specifyatableschema](../../database-engine/media/specifyatableschema.gif "Specifyatableschema")  
   
      有关架构的详细信息，请参阅 [Create a Database Schema](../security/authentication-access/create-a-database-schema.md)。  
   
-9. 从“文件”菜单中，选择“保存表名”。  
+9. 从“文件”  菜单中，选择“保存表名”   。  
   
-10. 在 **“选择名称”** 对话框中，为该表键入一个名称，再单击 **“确定”**。  
+10. 在 **“选择名称”** 对话框中，为该表键入一个名称，再单击 **“确定”** 。  
   
 11. 若要查看这个新表，请在 **“对象资源管理器”** 中展开 **“表”** 节点，然后按 **F5** 刷新对象列表。 该新表将显示在表列表中。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "62761577"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     CREATE TABLE dbo.PurchaseOrderDetail  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7f4ebdc95ec105b4905ae9886abc59afe68a1f40
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834135"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800495"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步骤 3：使用 Node.js 连接到 SQL 的概念证明
 
@@ -98,7 +98,7 @@ ms.locfileid: "47834135"
   
 ## <a name="step-3-insert-a-row"></a>步骤 3： 插入行  
   
-在此示例中您将了解如何执行[插入](../../t-sql/statements/insert-transact-sql.md)语句，传递参数以保护应用程序免遭[SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+此示例展示了如何安全执行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
   
   
 ```javascript  

@@ -47,7 +47,7 @@ ms.locfileid: "66775973"
 ## <a name="client-setup-requirements"></a>客户端安装程序要求
 有关**ActiveDirectoryMSI**身份验证，以下组件必须安装在客户端计算机上：
 * Java 8 或更高版本
-* 7.2 （或更高版本） 的 Microsoft JDBC 驱动程序适用于 SQL Server
+* 7\.2 （或更高版本） 的 Microsoft JDBC 驱动程序适用于 SQL Server
 * 客户端环境必须是 Azure 资源，并且必须启用"标识"功能支持。
 * 表示 Azure 资源的系统分配的托管标识或用户分配的托管标识或您的 MSI 所属的组之一的包含的数据库用户必须存在于目标数据库，并且必须具有 CONNECT 权限。
 

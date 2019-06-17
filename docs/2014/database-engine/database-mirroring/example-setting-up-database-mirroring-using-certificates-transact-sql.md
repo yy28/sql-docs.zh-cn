@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806748"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例如：设置数据库镜像使用证书 (Transact SQL)
@@ -257,7 +257,7 @@ ms.locfileid: "62806748"
     ```  
   
     > [!NOTE]  
-    >  如果你想要在具有自动故障转移功能的高安全性模式下运行，将事务安全性设置为 FULL （默认设置） 和执行第二个 SET PARTNER 后尽快添加见证服务器 **'*`partner_server`*'** 语句。 注意，必须首先为出站连接和入站连接配置见证服务器。  
+    >  如果你想要在具有自动故障转移功能的高安全性模式下运行，将事务安全性设置为 FULL （默认设置） 和执行第二个 SET PARTNER 后尽快添加见证服务器 **' *`partner_server`* '** 语句。 注意，必须首先为出站连接和入站连接配置见证服务器。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   

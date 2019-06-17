@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f467bfe19eb01f0771e747c0c6da1d2527174ef5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2baeb3fcebeac4f95a1c3d63ca8752275b2ac0e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613385"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775683"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>getCharacterStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47613385"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[getCharacterStream 方法 &#40;&#41;](../../../connect/jdbc/reference/getcharacterstream-method.md)|将 Clob 数据作为 java.io.Reader 对象或字符流返回。|  
 |[getCharacterStream 方法 &#40;long, long&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long.md)|将 Clob 数据作为 java.io.Reader 对象返回，或作为具有指定位置和长度的字符流返回。|  

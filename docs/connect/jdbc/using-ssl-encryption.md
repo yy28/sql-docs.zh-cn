@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1453daf6bf9e806a4b3ac79ae8c9a322e5bd0bac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2cb0e7789e5b75aeed1f8e7bcbe50e25925606da
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771509"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798576"
 ---
 # <a name="using-ssl-encryption"></a>使用 SSL 加密
 
@@ -28,7 +28,7 @@ ms.locfileid: "47771509"
   
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了一个基础结构，以便根据用户指定的连接属性以及服务器和客户端设置，在特定的连接上启用和禁用加密。 用户可以指定证书存储区位置和密码、要用于验证证书的主机名以及何时对通信通道进行加密。  
   
-启用 SSL 加密将增强在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例与应用程序之间通过网络传输的数据的安全性。 但是，启用加密的确会降低性能。  
+启用 SSL 加密将增强通过网络在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例与应用程序之间传输的数据的安全性。 但是，启用加密的确会降低性能。  
   
 本节中的各个主题介绍此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 版本如何支持 SSL 加密（包括新的连接属性）以及如何在客户端配置信任存储区。  
   

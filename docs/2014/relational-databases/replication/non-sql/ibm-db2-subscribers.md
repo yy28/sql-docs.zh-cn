@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022205"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -39,11 +39,11 @@ ms.locfileid: "63022205"
   
 2.  为订阅服务器创建连接字符串。 可以在任何文本编辑器中创建连接字符串，但是建议您使用数据访问工具来创建。 在数据访问工具中创建字符串：  
   
-    1.  依次单击 **“开始”**、 **“程序”**、 **“Microsoft OLE DB Provider for DB2”**、 **“数据访问工具”**。  
+    1.  依次单击 **“开始”** 、 **“程序”** 、 **“Microsoft OLE DB Provider for DB2”** 、 **“数据访问工具”** 。  
   
     2.  在 **“数据访问工具”** 中，按照步骤提供 DB2 服务器的相关信息。 当使用此工具完成操作后，就创建了一个包含相关连接字符串的通用数据链接 (UDL)（复制实际使用的不是 UDL，而是连接字符串）。  
   
-    3.  访问连接字符串：右键单击数据访问工具中的 UDL 并选择 **“显示连接字符串”**。  
+    3.  访问连接字符串：右键单击数据访问工具中的 UDL 并选择 **“显示连接字符串”** 。  
   
      连接字符串类似于（使用换行符是为了方便阅读）：  
   

@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473140"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>企业范围的自动化管理
-  跨多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的自动化管理称为“多服务器管理”。 使用多服务器管理可以执行下列操作：  
+  跨多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的自动化管理称为“多服务器管理”  。 使用多服务器管理可以执行下列操作：  
   
 -   管理两台或多台服务器。  
   

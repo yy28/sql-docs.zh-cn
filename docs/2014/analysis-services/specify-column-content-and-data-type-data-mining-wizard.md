@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068471"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>指定列内容和数据类型（数据挖掘向导）
@@ -24,7 +24,7 @@ ms.locfileid: "66068471"
   
  数据类型指定列中所包含数据的类型的更多详细信息，以及在定型过程中将如何使用数据。 某些内容类型需要某种特定的数据类型，反过来也是这样。 根据创建挖掘模型时所使用的算法，可能还需要指定特定数据类型。 有关挖掘模型和结构中的内容类型和数据类型的信息，请参阅[内容类型（数据挖掘）](data-mining/content-types-data-mining.md)。  
   
- **有关详细信息：**[挖掘结构&#40;Analysis Services-数据挖掘&#41;](data-mining/mining-structures-analysis-services-data-mining.md)，[挖掘模型列](data-mining/mining-model-columns.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)， [创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：** [挖掘结构&#40;Analysis Services-数据挖掘&#41;](data-mining/mining-structures-analysis-services-data-mining.md)，[挖掘模型列](data-mining/mining-model-columns.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)， [创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **挖掘模型结构**  

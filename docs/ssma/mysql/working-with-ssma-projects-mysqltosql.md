@@ -16,10 +16,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287853"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>处理 SSMA 项目 (MySQLToSQL)
@@ -68,7 +68,7 @@ SSMA 进行转换和加载数据库、 迁移数据，和与 MySQL 和 SQL Serve
   
 ##### <a name="to-create-a-new-project"></a>创建新项目的步骤  
   
-1.  选择**新的项目**从**文件**菜单。 此时将显示“新建项目”  对话框。 在“文件”菜单中，选择“新建项目”。 此时将显示“新建项目”  对话框。  
+1.  选择**新的项目**从**文件**菜单。 此时将显示“新建项目”  对话框。 在“文件”菜单中，选择“新建项目”。   此时将显示“新建项目”  对话框。  
   
 2.  在中**名称**框中，输入你的项目的名称。  
   
@@ -106,7 +106,7 @@ SSMA 会创建项目文件。
   
 1.  为每个数据库的状态显示**元数据缺少**，选择数据库名称旁边的复选框。 正在保存元数据可能需要几分钟的时间。 如果您不想要现在保存元数据，则选择任何复选框。  
   
-2.  单击“保存” 。  
+2.  单击“保存”  。  
   
 SSMA 将 MySQL 架构中分析并将元数据保存到项目文件。  
   

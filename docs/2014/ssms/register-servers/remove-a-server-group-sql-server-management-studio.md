@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 446705799f117c23786799789657e9fa89f9fa39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62956023"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>删除服务器组 (SQL Server Management Studio)
@@ -30,9 +30,9 @@ ms.locfileid: "62956023"
   
 #### <a name="to-remove-a-server-group"></a>删除服务器组  
   
-1.  在“已注册的服务器”中，右键单击某个服务器组，然后单击“删除”。  
+1.  在“已注册的服务器”中，右键单击某个服务器组，然后单击“删除”  。  
   
-2.  在 **“确认删除”** 对话框中，单击 **“是”**。  
+2.  在 **“确认删除”** 对话框中，单击 **“是”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [移动已注册的服务器或已注册的服务器组 (SQL Server Management Studio)](move-a-registered-server-or-registered-server-group.md)  

@@ -3,24 +3,24 @@ title: 数据库内分析中使用 R 的 SQL Server 机器学习的教程
 description: 了解如何将嵌入 R 编程语言在 SQL Server 存储过程和 T-SQL 函数中的代码。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a631339980eae7640617f14b161e024a2f27a769
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511214"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140753"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>教程：SQL 开发人员的 R 数据分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在为 SQL 程序员提供本教程中，了解有关 R 集成的生成和部署的基于 R 的机器学习解决方案： 使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 您将使用 T-SQL、 SQL Server Management Studio，并使用 [机器学习服务] 的数据库引擎实例 ([机器学习服务](../install/sql-machine-learning-services-windows-install.md)和 R 语言支持
 
-本教程向您介绍一种数据建模工作流中使用的 R 函数。 步骤包括数据探索、 构建和训练二元分类模型和模型部署。 将生成该模型预测某个行程是否可能会导致基于时间、 上移动，距离和上车位置的提示。 
+本教程向您介绍一种数据建模工作流中使用的 R 函数。 步骤包括数据探索、 构建和训练二元分类模型和模型部署。 将生成该模型预测某个行程是否可能会导致基于时间、 行程，距离和上车位置的提示。 
 
 在本教程中使用的 R 代码的所有包装在存储过程创建并在 Management Studio 中运行。
 
@@ -55,7 +55,7 @@ ms.locfileid: "58511214"
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)或[使用启用了 R 的 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [R 库](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [R 库](../package-management/installed-package-information.md)
 
 + [权限](../security/user-permission.md)
 

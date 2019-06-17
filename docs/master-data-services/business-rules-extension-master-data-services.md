@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 64f77ccc8a1e4fdc6bb2aa35aa2b4d4d7b0d5de0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485370"
 ---
 # <a name="business-rules-extension-master-data-services"></a>业务规则扩展 (Master Data Services)
@@ -82,37 +82,37 @@ CREATE PROCEDURE [usr].[YourAction]
   
 ## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>创建业务规则，以将用户定义脚本用作条件或操作  
   
-1.  在主数据管理器中，单击“系统管理” 。  
+1.  在主数据管理器中，单击“系统管理”  。  
   
-2.  在菜单栏中，指向“管理”  ，然后单击“业务规则” 。  
+2.  在菜单栏中，指向“管理”  ，然后单击“业务规则”  。  
   
-3.  在“业务规则”页上，从“模型”下拉列表中选择某一模型。  
+3.  在“业务规则”页上，从“模型”下拉列表中选择某一模型。    
   
-4.  从“实体”下拉列表中选择一个实体。  
+4.  从“实体”  下拉列表中选择一个实体。  
   
 5.  从“成员类型”  下拉列表中，选择要应用业务规则的成员类型。  
   
-6.  单击 **“添加”**。  
+6.  单击 **“添加”** 。  
   
 7.  执行以下操作以将用户定义脚本创建为条件。  
   
     1.  在“If”  块下，单击“添加”按钮  。 此时将显示一个面板。  
   
-    2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。  
+    2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。    
   
     3.  将显示用户定义函数的所有参数。  
   
     4.  向每个参数赋值  
   
-    5.  单击“保存” 。  
+    5.  单击“保存”  。  
   
 8.  执行以下操作以将用户定义脚本用作操作。  
   
     1.  在“Then”  块下，单击“添加”按钮  。 此时将显示一个面板。  
   
-    2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。  
+    2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。    
   
-    3.  单击“保存” 。  
+    3.  单击“保存”  。  
   
 ## <a name="see-also"></a>请参阅  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63072362"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
@@ -85,7 +85,7 @@ ms.locfileid: "63072362"
   
  将对其收集数据的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（探查对象）的版本应与配置管理数据仓库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本相同，或低于后者。  
   
-1.  在对象资源管理器中，展开 **“管理”**。  
+1.  在对象资源管理器中，展开 **“管理”** 。  
   
 2.  右键单击**数据收集**，然后选择**任务**，然后**配置管理数据仓库**。 **配置管理数据仓库向导**开始。  
   

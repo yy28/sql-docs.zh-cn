@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017754"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
@@ -42,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @objname = ] 'name'` 是中的任何对象名称**sysobjects**或中的任何用户定义数据类型**systypes**表。 *名称*是**nvarchar (** 776 **)**，默认值为 NULL。 不能接受数据库名称。  两个或三个部分的名称必须进行分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
+`[ @objname = ] 'name'` 是中的任何对象名称**sysobjects**或中的任何用户定义数据类型**systypes**表。 *名称*是**nvarchar (** 776 **)** ，默认值为 NULL。 不能接受数据库名称。  两个或三个部分的名称必须进行分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
    
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -93,7 +93,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar(** 128 **)**|列名称。|  
         |**类型**|**nvarchar(** 128 **)**|列数据类型。|  
         |**计算**|**varchar(** 35 **)**|指示是否计算列中的值：是或否。|  
-        |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意：如果列数据类型是大值类型 (**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**)，将的值显示为-1。|  
+        |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意：如果列数据类型是大值类型 (**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或者**xml**)，将的值显示为-1。|  
         |**Prec**|**char(** 5 **)**|列精度。|  
         |**小数位数**|**char(** 5 **)**|列小数位数。|  
         |**可以为 Null**|**varchar(** 35 **)**|指示列中是否允许 NULL 值：是或否。|  

@@ -26,20 +26,16 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bae9ec6ddd1d3098c04dc1afaaebc189ae079959
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65821096"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836323"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。
-
-> [!NOTE]
-> ssbdiagnose 实用工具不再与最新版本的 SQL Server Management Studio (SSMS) 18.0 一起安装。 若要安装最新版本的 ssbdiagnose，请安装 [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791)。
-> 未来版本中将修复需要安装以前版本的 SSMS 才能获得最新 ssbdiagnose 这一点。 SSMS 18.x 与 17.x 版本并行运行，因此两个版本都可安装在同一计算机上。
 
 ## <a name="syntax"></a>语法  
   
@@ -206,7 +202,7 @@ WHERE database_id = DB_ID();
  会话 ID 在 **sys.conversation_endpoints** 目录视图的 **conversation_id** 列中报告。  
   
  **-TIMEOUT** _timeout_interval_  
- 指定运行 **RUNTIME** 报告的秒数。 如果未指定 **-TIMEOUT** ，则运行时报告的运行时间不限。 **-TIMEOUT** 仅用于 **RUNTIME** 报告，而不用于 **CONFIGURATION** 报告。 如果未指定 -TIMEOUT 或要在超时间隔到期之前结束运行时报告，请按 Ctrl + C 退出 ssbdiagnose**-**。 *timeout_interval* 必须是介于 1 和 2,147,483,647 之间的数字。  
+ 指定运行 **RUNTIME** 报告的秒数。 如果未指定 **-TIMEOUT** ，则运行时报告的运行时间不限。 **-TIMEOUT** 仅用于 **RUNTIME** 报告，而不用于 **CONFIGURATION** 报告。 如果未指定 -TIMEOUT 或要在超时间隔到期之前结束运行时报告，请按 Ctrl + C 退出 ssbdiagnose   **-** 。 *timeout_interval* 必须是介于 1 和 2,147,483,647 之间的数字。  
   
  **\<runtimeconnectionoptions>**  
  指定数据库的连接信息，该数据库包含与受监视的会话元素关联的服务。 如果所有服务都位于同一数据库中，则只需指定一个 **CONNECT TO** 子句。 如果各服务位于不同的数据库中，必须为每个数据库提供一个 **CONNECT TO** 子句。 如果未指定 **runtimeconnectionoptions** ，则 **ssbdiagnose** 使用 **baseconnectionoptions**中的连接信息。  
@@ -225,7 +221,7 @@ WHERE database_id = DB_ID();
   
  如果 **-E** 和 **-U** 都未指定，则 **ssbdiagnose** 将使用 SQLCMDUSER 环境变量的值。 如果 SQLCMDUSER 也未设置，则 **ssbdiagnose** 会尝试使用 Windows 身份验证模式，基于运行 **ssbdiagnose**的用户的 Windows 帐户进行连接。  
   
- 如果将 **-U** 选项与 **-E** 选项一起使用，将生成错误消息。 如果 -U 选项后跟多个参数，便会生成错误消息并退出程序。  
+ 如果将 **-U** 选项与 **-E** 选项一起使用，将生成错误消息。 如果 -U  选项后跟多个参数，便会生成错误消息并退出程序。  
   
  **-P** _password_  
  指定 **-U** 登录 ID 的密码。 密码是区分大小写的。 如果使用了 **-U** 选项而未使用 **-P** 选项，则 **ssbdiagnose** 将使用 SQLCMDPASSWORD 环境变量的值。 如果 SQLCMDPASSWORD 也未设置，则 **ssbdiagnose** 会提示用户输入密码。  
@@ -249,7 +245,7 @@ WHERE database_id = DB_ID();
  **baseconnetionoptions** _server_name_[\\*instance_name*]  
  指定承载要分析的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例。  
   
- 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的命名实例的 _server\_name_\\_instance\_name_。 如果未指定 **-S** ，则 **ssbdiagnose** 将使用 SQLCMDSERVER 环境变量的值。 如果 SQLCMDSERVER 也未设置，则 **ssbdiagnose** 将连接到本地计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例。  
+ 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的命名实例的 _server\_name_\\  _instance\_name_。 如果未指定 **-S** ，则 **ssbdiagnose** 将使用 SQLCMDSERVER 环境变量的值。 如果 SQLCMDSERVER 也未设置，则 **ssbdiagnose** 将连接到本地计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例。  
   
  **-S** _database_name_  
  指定承载要分析的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务的数据库。 如果该数据库不存在，将生成错误消息。 如果未指定 **-d** ，则默认为登录帐户的默认数据库属性中指定的数据库。  

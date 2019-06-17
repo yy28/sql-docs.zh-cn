@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558218b4cff8e9d4ce100a92135f0fee4e0e09c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62786765"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>配置填充因子服务器配置选项
@@ -36,7 +36,7 @@ ms.locfileid: "62786765"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置填充因子选项之后](#FollowUp)  
+-   **跟进：** [在配置填充因子选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62786765"
   
 #### <a name="to-configure-the-fill-factor-option"></a>配置填充因子选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“数据库设置”** 节点。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "62786765"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `fill factor` 选项的值设置为 `100`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `fill factor` 选项的值设置为 `100`。  
   
 ```sql  
 Use AdventureWorks2012;  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060415"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>连接到远程 Integration Services 服务器（SSIS 服务）
@@ -42,12 +42,12 @@ ms.locfileid: "66060415"
   
 3.  在 **“服务器类型”** 列表中选择 **Integration Services** 。  
   
-4.  在“服务器名称”文本框中键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的名称。  
+4.  在“服务器名称”  文本框中键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的名称。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务是不特定于实例的。 通过使用正运行 Integration Services 服务的计算机的名称连接到该服务。  
   
-5.  单击 **“连接”**。  
+5.  单击 **“连接”** 。  
   
 > [!NOTE]  
 >  **“查找服务器”** 对话框中不显示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的远程实例。 此外， **“连接到服务器”** 对话框中的 **“连接选项”** 选项卡上的选项不适用于 **连接（该选项卡在单击** “选项” [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 按钮后显示）。  
@@ -57,19 +57,19 @@ ms.locfileid: "66060415"
   
 #### <a name="to-configure-rights-for-remote-users-on-windows-server-2003-or-windows-xp"></a>在 Windows Server 2003 或 Windows XP 上配置远程用户的权限  
   
-1.  如果用户不是本地 Administrators 组的成员，请将用户添加至 Distributed COM Users 组。 可以从“管理工具”菜单访问“计算机管理”MMC 管理单元完成此操作。  
+1.  如果用户不是本地 Administrators 组的成员，请将用户添加至 Distributed COM Users 组。 可以从“管理工具”  菜单访问“计算机管理”MMC 管理单元完成此操作。  
   
-2.  打开“控制面板”，双击“管理工具”，然后双击“组件服务”以启动组件服务 MMC 管理单元。  
+2.  打开“控制面板”，双击“管理工具”  ，然后双击“组件服务”  以启动组件服务 MMC 管理单元。  
   
-3.  展开控制台左侧窗格中的 **“组件服务”** 节点。 展开 **“计算机”** 节点，展开 **“我的电脑”**，然后单击 **“DCOM 配置”** 节点。  
+3.  展开控制台左侧窗格中的 **“组件服务”** 节点。 展开 **“计算机”** 节点，展开 **“我的电脑”** ，然后单击 **“DCOM 配置”** 节点。  
   
 4.  选中 **“DCOM 配置”** 节点，然后在可以配置的应用程序列表中选择“SQL Server Integration Services 11.0”。  
   
-5.  右键单击 SQL Server Integration Services 11.0，然后选择“属性”。  
+5.  右键单击 SQL Server Integration Services 11.0，然后选择“属性”  。  
   
 6.  在 **“SQL Server Integration Services 11.0 属性”** 对话框中，选择 **“安全性”** 选项卡。  
   
-7.  在 **“启动和激活权限”** 下，选择 **“自定义”**，然后单击 **“编辑”** 以打开 **“启动权限”** 对话框。  
+7.  在 **“启动和激活权限”** 下，选择 **“自定义”** ，然后单击 **“编辑”** 以打开 **“启动权限”** 对话框。  
   
 8.  在 **“启动权限”** 对话框中，添加或删除用户，并为适当的用户和组分配相应的权限。 可用的权限为“本地启动”、“远程启动”、“本地激活”和“远程激活”。 启动权限可授予或拒绝启动和停止服务的权限；激活权限可授予或拒绝连接到服务的权限。  
   
@@ -85,11 +85,11 @@ ms.locfileid: "66060415"
   
 1.  在命令提示符下运行 **dcomcnfg.exe** 。  
   
-2.  在 **“分布式 COM 配置属性”** 对话框的 **“应用程序”** 页上，选择“SQL Server Integration Services 11.0”，再单击 **“属性”**。  
+2.  在 **“分布式 COM 配置属性”** 对话框的 **“应用程序”** 页上，选择“SQL Server Integration Services 11.0”，再单击 **“属性”** 。  
   
 3.  选择 **“安全性”** 页。  
   
-4.  使用两个单独的对话框来分别配置 **“访问权限”** 和 **“启动权限”**。 您无法区分远程访问和本地访问 - 访问权限包括了本地访问和远程访问，启动权限也包括了本地启动和远程启动。  
+4.  使用两个单独的对话框来分别配置 **“访问权限”** 和 **“启动权限”** 。 您无法区分远程访问和本地访问 - 访问权限包括了本地访问和远程访问，启动权限也包括了本地启动和远程启动。  
   
 5.  关闭对话框和 **dcomcnfg.exe**。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66060415"
 ## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>默认情况下，SSIS 服务不支持委派  
 默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务不支持委派凭据，或有时称为双跃点的功能。 在此方案中，你在客户端计算机上工作， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务在第二台计算机上运行和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在第三台计算机上运行。 首先， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 成功地将你的凭据从客户端计算机传递到第二台计算机上， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务正在这台计算机上运行。 但是，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务不能将你的凭据从第二台计算机委派到正在运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的第三台计算机上。
 
-可通过将“信任此用户对任何服务的委派(仅 Kerberos)”的权限授予 SQL Server 服务帐户（它将 Integration Services 服务 (ISServerExec.exe) 作为子进程启动），从而启用凭据委派。 在授予此权限之前，请考虑它是否符合组织的安全要求。
+可通过将“信任此用户对任何服务的委派(仅 Kerberos)”  的权限授予 SQL Server 服务帐户（它将 Integration Services 服务 (ISServerExec.exe) 作为子进程启动），从而启用凭据委派。 在授予此权限之前，请考虑它是否符合组织的安全要求。
 
 有关详细信息，请参阅 [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)（获取跨域 Kerberos 和委派使用 SSIS 包）。
   

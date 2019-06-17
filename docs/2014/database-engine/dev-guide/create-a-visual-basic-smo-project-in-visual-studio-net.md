@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753332"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>在 Visual Studio .NET 中创建 Visual Basic SMO 项目
@@ -30,7 +30,7 @@ ms.locfileid: "62753332"
   
 1.  启动 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]（或 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]）。  
   
-2.  在“文件”菜单中，单击“新建项目”。 此时将显示“新建项目”  对话框。  
+2.  在“文件”菜单中，单击“新建项目”。   此时将显示“新建项目”  对话框。  
   
 3.  在中**项目类型**对话框中，选择**Visual Basic**，然后选择**Windows**。 在中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安装的模板窗格中，选择**控制台应用程序。**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62753332"
   
 5.  单击**确定**加载[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]控制台应用程序模板。  
   
-6.  在“项目”菜单中，选择“添加引用”。 此时将显示“添加引用”对话框。  
+6.  在“项目”菜单中，选择“添加引用”。   此时将显示“添加引用”对话框。   
   
 7.  单击**浏览**，在 C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies 文件夹中，找到 SMO 程序集，然后选择以下文件。 这些文件是构建一个 SMO 应用程序至少需要的文件：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62753332"
   
      Microsoft.SqlServer.ServiceBrokerEmum.dll  
   
-9. 单击 **“打开”**。  
+9. 单击 **“打开”** 。  
   
 10. 上**视图**菜单上，单击**代码**。 或者选择 Module1.vb 窗口以显示代码窗口。  
   

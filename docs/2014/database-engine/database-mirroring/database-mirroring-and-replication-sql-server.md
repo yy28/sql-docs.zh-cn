@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807446"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>数据库镜像和复制 (SQL Server)
@@ -75,7 +75,7 @@ ms.locfileid: "62807446"
   
     -   将 **@working_directory** 参数的值设置为主体数据库使用的快照文件夹。  
   
-4.  为“-PublisherFailoverPartner”代理参数指定镜像名称。 下列代理在故障转移后需要使用此代理参数来标识镜像：  
+4.  为“-PublisherFailoverPartner”代理参数指定镜像名称  。 下列代理在故障转移后需要使用此代理参数来标识镜像：  
   
     -   快照代理（对于所有发布）  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62807446"
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     建议将“-PublisherFailoverPartner”添加到代理配置文件，然后在配置文件中指定镜像名称。 例如，如果您通过存储过程配置复制，请执行以下操作：  
+     建议将“-PublisherFailoverPartner”添加到代理配置文件，然后在配置文件中指定镜像名称  。 例如，如果您通过存储过程配置复制，请执行以下操作：  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

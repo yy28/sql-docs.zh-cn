@@ -30,10 +30,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760618"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>添加和删除访问数据库文件 (AccessToSQL)
@@ -85,7 +85,7 @@ ms.locfileid: "62760618"
   
     可以使用**全**并**清除所有**要选择或清除所有数据库的列表顶部的按钮。 可以按住 CTRL 键选择多个数据库，或按住 SHIFT 键以选择范围的数据库。  
   
-7.  单击“下一步” 。  
+7.  单击“下一步”  。  
   
 8.  在验证页上，单击**完成**。  
   

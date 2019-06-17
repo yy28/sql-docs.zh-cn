@@ -13,20 +13,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774911"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>新建或编辑服务器注册（“常规”选项卡）（Analysis Services – 多维数据）
   在注册 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例时，使用此选项卡可以指定选项。  
   
- 若要访问此页，请在“已注册的服务器”中，在“已注册的服务器”工具栏上单击 **Analysis Services**，右键单击任意已注册的服务器组（例如 **Analysis Services**），指向“新建”，再单击“服务器注册”。  
+ 若要访问此页，请在“已注册的服务器”中，在“已注册的服务器”工具栏上单击 **Analysis Services**，右键单击任意已注册的服务器组（例如 **Analysis Services**），指向“新建”  ，再单击“服务器注册”  。  
   
 ## <a name="options"></a>选项  
  **服务器类型**  
- 从“已注册的服务器”中注册某服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
+ 从“已注册的服务器”中注册某服务器时，“服务器类型”  框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
   
  **服务器名称**  
  选择要连接到的服务器实例。 默认情况下，显示上次连接到的服务器实例。  
@@ -50,7 +50,7 @@ ms.locfileid: "62774911"
  输入服务器的说明（可选）。  
   
  **测试**  
- 单击此项可测试与“服务器名称”中所选服务器的连接。  
+ 单击此项可测试与“服务器名称”  中所选服务器的连接。  
   
  **保存**  
  单击此项可保存已注册服务器的设置。  

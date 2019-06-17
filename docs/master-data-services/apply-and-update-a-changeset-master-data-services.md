@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 710fb8783b0313a6dd46273ce1821e425f7814d3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483985"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>应用并更新变更集 (Master Data Services)
@@ -36,19 +36,19 @@ ms.locfileid: "65483985"
   
 ## <a name="to-apply-and-update-a-changeset"></a>应用并更新变更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器” 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器”  。  
   
 2.  单击“实体”菜单中的某个实体  。  
   
-3.  在右窗格中，选择“变更集”，然后双击你想要查看或更改的变更集。  
+3.  在右窗格中，选择“变更集”  ，然后双击你想要查看或更改的变更集。  
   
-4.  单击 **“应用”**。  
+4.  单击 **“应用”** 。  
   
      挂起的更改应用于网格中的实体成员。 挂起的更改会突出显示。  
   
      创建、删除和更新成员会导致变更集发生变化。  
   
-5.  若要还原挂起的更改，右键单击“变更集”窗格中的网格，然后单击“还原”。  
+5.  若要还原挂起的更改，右键单击“变更集”  窗格中的网格，然后单击“还原”  。  
   
 ## <a name="next-steps"></a>后续步骤  
  [确认或提交变更 (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  

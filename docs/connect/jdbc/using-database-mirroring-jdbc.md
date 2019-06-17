@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4478c2799ddc23ce647c607466e0206f72ccf7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2914adb0a69c680624365b7fe0af23f9615f6f05
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638636"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798663"
 ---
 # <a name="using-database-mirroring-jdbc"></a>使用数据库镜像 (JDBC)
 
@@ -26,9 +26,9 @@ ms.locfileid: "47638636"
 
 数据库镜像是按数据库实现的，它在备用服务器上保留一份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品数据库的副本。 该服务器根据数据库镜像会话的配置和状态，充当热备用或温备用服务器。 热备份服务器支持不会丢失任何已提交事务的快速故障转移，暖备份服务器支持强制服务（可能会丢失数据）。
 
-产品数据库称为“主体”数据库，备份副本称为“镜像”数据库。 主体数据库和镜像数据库必须位于不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（服务器实例）中，如果可能，它们应位于不同的计算机中。
+产品数据库称为“主体”数据库，备份副本称为“镜像”数据库   。 主体数据库和镜像数据库必须位于不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（服务器实例）中，如果可能，它们应位于不同的计算机中。
 
-生产服务器实例（称为主服务器）与备份服务器实例（称为镜像服务器）进行通信。 主服务器和镜像服务器充当数据库镜像会话中的伙伴。 如果主体服务器失败，镜像服务器可以通过称为“故障转移”的过程将其数据库转为主体数据库。 例如，Partner_A 和 Partner_B 是两个伙伴服务器，主体数据库最初位于作为主体服务器的 Partner_A 中，镜像数据库位于作为镜像服务器的 Partner_B 中。 如果 Partner_A 脱机，Partner_B 上的数据库可以进行故障转移，成为当前的主体数据库。 当 Partner_A 重新加入镜像会话时，该服务器变为镜像服务器，并且其数据库变为镜像数据库。
+生产服务器实例（称为主服务器）与备份服务器实例（称为镜像服务器）进行通信。 主服务器和镜像服务器充当数据库镜像会话中的伙伴。 如果主体服务器失败，镜像服务器可以通过称为“故障转移”的过程将其数据库转为主体数据库  。 例如，Partner_A 和 Partner_B 为两个伙伴服务器，主数据库最初位于主服务器 Partner_A 上，镜像数据库位于镜像服务器 Partner_B 上。 如果 Partner_A 脱机，则 Partner_B 上的数据库便可通过故障转移而成为当前主数据库。 Partner_A 重新加入镜像会话后，它将成为镜像服务器，而其数据库将成为镜像数据库。
 
 如果 Partner_A 服务器发生了无法恢复的损坏，则可将 Partner_C 服务器联机，充当 Partner_B（此时为主服务器）的镜像服务器。 然而，在这种情况下，客户端应用程序必须包含编程逻辑，以确保更新连接字符串属性，来反映数据库镜像配置中使用的新服务器名称。 否则，连接该服务器将失败。
 

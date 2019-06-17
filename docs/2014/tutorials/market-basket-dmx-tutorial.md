@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185641"
 ---
 # <a name="market-basket-dmx-tutorial"></a>市场篮 DMX 教程
@@ -45,7 +45,7 @@ ms.locfileid: "63185641"
   
  本教程的目的是提供将在自定义应用程序中使用的 DMX 查询。  
   
- **详细信息：**[数据挖掘解决方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **详细信息：** [数据挖掘解决方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>挖掘结构和挖掘模型  
  开始创建 DMX 语句之前，了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用来创建挖掘模型的主要对象十分重要。 *挖掘结构*是一种数据结构，它定义从中生成挖掘模型的数据域。 单个挖掘结构可以包含多个*挖掘模型*共享同一个域。 挖掘模型可向挖掘结构所代表的数据应用挖掘模型算法。  

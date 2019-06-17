@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705b1a8438e4d8d4d193c30d0237467ea977abda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049492"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>配置 FailureConditionLevel 属性设置
   使用 FailureConditionLevel 属性可以设置 AlwaysOn 故障转移群集实例 (FCI) 进行故障转移或重新启动的条件。 对此属性的更改会立即应用，而无需重新启动 Windows Server 故障转移群集 (WSFC) 服务或 FCI 资源。  
   
--   **开始之前：**[FailureConditionLevel 属性设置](#Restrictions)，[安全](#Security)  
+-   **开始之前：** [FailureConditionLevel 属性设置](#Restrictions)，[安全](#Security)  
   
 -   **若要配置 FailureConditionLevel 属性设置，请使用** [PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
@@ -73,7 +73,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 2.  展开 **“服务和应用程序”** ，然后选择 FCI。  
   
-3.  右键单击“其他资源”下的“SQL Server 资源”，然后从菜单中选择“属性”。 此时将打开 SQL Server 资源 **“属性”** 对话框。  
+3.  右键单击“其他资源”  下的“SQL Server 资源”  ，然后从菜单中选择“属性”  。 此时将打开 SQL Server 资源 **“属性”** 对话框。  
   
 4.  选择 **“属性”** 选项卡，为 **FaliureConditionLevel** 属性输入所需的值，然后单击 **“确定”** 以应用更改。  
   

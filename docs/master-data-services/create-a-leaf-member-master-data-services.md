@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 43108a02bb4eace9fda31fd8cdd1c75cefaadcc1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487480"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>创建叶成员 (Master Data Services)
@@ -45,11 +45,11 @@ ms.locfileid: "65487480"
   
 2.  如果您是用户，则从 **“版本”** 列表中选择某一打开的版本。 如果您是管理员，则从 **“版本”** 列表中选择某一状态为打开或已锁定的版本。  
   
-3.  单击 **“资源管理器”**。  
+3.  单击 **“资源管理器”** 。  
   
 4.  从菜单栏中，指向 **“实体”** ，然后单击您要将成员添加到的实体的名称。  
   
-5.  单击 **“添加成员”**。  
+5.  单击 **“添加成员”** 。  
   
 6.  在 **“详细信息”** 窗格中，填写字段。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "65487480"
   
 7.  可选。  在“批注”框中，键入有关添加成员原因的注释。 有权访问成员的所有用户都可以查看批注。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
 ## <a name="see-also"></a>请参阅  
  [创建合并成员 (Master Data Services)](../master-data-services/create-a-consolidated-member-master-data-services.md)   

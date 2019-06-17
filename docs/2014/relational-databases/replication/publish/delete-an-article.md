@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960865"
 ---
 # <a name="delete-an-article"></a>删除项目
@@ -35,13 +35,13 @@ ms.locfileid: "62960865"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>从快照或事务发布中删除项目  
   
-1.  执行 [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) 以从由 **@publication** 指定的发布中删除由 **@article** 指定的项目。 将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot**。  
+1.  执行 [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) 以从由 **@publication** 指定的发布中删除由 **@article** 指定的项目。 将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot** 。  
   
 2.  （可选）若要从数据库完全删除已发布的对象，请在发布服务器上对发布数据库执行 `DROP <objectname>` 命令。  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>从合并发布删除项目  
   
-1.  执行 [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 以从由 **@publication** 指定的发布中删除由 **@article** 指定的项目。 如有必要，可将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot** 并将 **@force_invalidate_snapshot** 的值指定为 **@force_reinit_subscription**。  
+1.  执行 [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 以从由 **@publication** 指定的发布中删除由 **@article** 指定的项目。 如有必要，可将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot** 并将 **@force_invalidate_snapshot** 的值指定为 **@force_reinit_subscription** 。  
   
 2.  （可选）若要从数据库完全删除已发布的对象，请在发布服务器上对发布数据库执行 `DROP <objectname>` 命令。  
   

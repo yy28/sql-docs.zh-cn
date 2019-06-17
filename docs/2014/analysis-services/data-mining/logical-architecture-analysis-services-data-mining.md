@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084269"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>逻辑体系结构（Analysis Services - 数据挖掘）
@@ -65,7 +65,7 @@ ms.locfileid: "66084269"
   
  处理模型时，存储在挖掘结构缓存中的定型数据用于基于数据的统计属性和算法及其参数定义的试探方法生成模式。 这称为“定型  ”模型。  
   
- 定型的结果是一组汇总数据，包含在“模型内容” 中，它描述找到的模式并提供生成预测的规则。 有关详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
+ 定型的结果是一组汇总数据，包含在“模型内容”  中，它描述找到的模式并提供生成预测的规则。 有关详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
  在有限事例中，还可以将模型的逻辑结构导出到一个文件，该文件根据标准格式（预测建模标记语言 PMML）表示模型公式和数据绑定。 可以将此逻辑结构导入其他使用 PMML 的系统，然后所述的模型就可以用于预测了。 有关详细信息，请参阅 [了解 DMX Select 语句](/sql/dmx/understanding-the-dmx-select-statement)。  
   

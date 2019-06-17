@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678499"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>第 1 课：创建自行车购买者挖掘结构
@@ -96,7 +96,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
-2.  在中**连接到服务器**对话框中，对于**服务器类型**，选择**Analysis Services**。 在中**服务器名称**，类型`LocalHost`，或键入的实例名称[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]想要连接到本课程中。 单击 **“连接”**。  
+2.  在中**连接到服务器**对话框中，对于**服务器类型**，选择**Analysis Services**。 在中**服务器名称**，类型`LocalHost`，或键入的实例名称[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]想要连接到本课程中。 单击 **“连接”** 。  
   
 3.  在**对象资源管理器**，右键单击该实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，依次指向**新查询**，然后单击**DMX**打开**查询编辑器**和新的空白查询。  
   

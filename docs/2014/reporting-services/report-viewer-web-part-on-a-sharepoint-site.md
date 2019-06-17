@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba8b23c800718d289b2a7a633d5244261b5ab8a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103048"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 站点上的报表查看器 Web 部件
@@ -40,7 +40,7 @@ ms.locfileid: "66103048"
 ## <a name="web-part-components"></a>Web 部件组件  
  视图区域以 HTML 格式显示报表。 根据 Web 部件的配置方式，视图区域可能会最大化以整页模式显示报表，或者可能与相邻窗格和工具栏共享可用空间。  
   
- 工具栏提供页面导航、搜索、缩放和导出功能，以便您能以其他应用程序格式查看报表。 它还提供可选的打印功能，可为 HTML 报表提供分页打印输出并能更改页面布局和边距设置。 工具栏上的 **“操作”**, **“使用报表生成器打开”**、“订阅”、 **“导出”** 和 **“打印”** 。 页面导航和缩放控件直接位于工具栏上。  
+ 工具栏提供页面导航、搜索、缩放和导出功能，以便您能以其他应用程序格式查看报表。 它还提供可选的打印功能，可为 HTML 报表提供分页打印输出并能更改页面布局和边距设置。 工具栏上的 **“操作”** , **“使用报表生成器打开”** 、“订阅”、 **“导出”** 和 **“打印”** 。 页面导航和缩放控件直接位于工具栏上。  
   
 > [!NOTE]  
 >  您不能自定义工具栏，除非编写代码来执行此操作，但可以设置属性以全部或部分隐藏工具栏的控件。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af0449f10bb83ac55fe89809e7f62162d011d3c8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7126c36e098b724b3c0920e384c95e75a2181e37
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601217"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799168"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,11 +31,11 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$fetch_style：指定行数据的格式的（整数）符号。 有关值的列表，请参阅 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 。 PDO::FETCH_COLUMN 也允许使用。 PDO::FETCH_BOTH 是默认值。  
+$fetch_style：指定行数据的格式的（整数）符号  。 有关值的列表，请参阅 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 。 PDO::FETCH_COLUMN 也允许使用。 PDO::FETCH_BOTH 是默认值。  
   
-$column_index：表示当 $fetch_style 为 PDO::FETCH_COLUMN 时要返回的列的整数值。 0 是默认值。  
+$column_index：表示当 $fetch_style 为 PDO::FETCH_COLUMN 时要返回的列的整数值   。 0 是默认值。  
   
-$ctor_args：当 $fetch_style 为 PDO::FETCH_CLASS 或 PDO::FETCH_OBJ 时，类构造函数的参数数组。  
+$ctor_args：当 $fetch_style 为 PDO::FETCH_CLASS 或 PDO::FETCH_OBJ 时，类构造函数的参数数组   。  
   
 ## <a name="return-value"></a>返回值  
 结果集中的其余行的数组，或 False（如果方法调用失败）。  

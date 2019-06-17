@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ca07fcfe446b2bb4cb841ae0f0275fd7073c6e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0b34712a1b535195174c6fec5ae8ace1dc10380a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658659"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783405"
 ---
 # <a name="settruststorepassword-method-sqlserverdatasource"></a>setTrustStorePassword 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setTrustStorePassword(java.lang.String trustStorePassword)
 #### <a name="parameters"></a>Parameters  
  *trustStorePassword*  
   
- 包含用于检查 trustStore 数据完整性的密码的 String。  
+ 包含用于检查 trustStore 数据完整性的密码的 String  。  
   
 ## <a name="remarks"></a>Remarks  
  可随 trustStore 属性同时指定 trustStorePassword 属性，并使用其值来检查 trustStore 文件的完整性。  

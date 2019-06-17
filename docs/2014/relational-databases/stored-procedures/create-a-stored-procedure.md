@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63016044"
 ---
 # <a name="create-a-stored-procedure"></a>创建存储过程
   本主题介绍了如何通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 语句来创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。  
   
 ##  <a name="Top"></a>   
--   **开始之前：**[权限](#Permissions)  
+-   **开始之前：** [权限](#Permissions)  
   
--   **要创建该过程，请使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **要创建该过程，请使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Permissions  
  需要在数据库中有 CREATE PROCEDURE 权限，对在其中创建过程的架构有 ALTER 权限。  
@@ -44,11 +44,11 @@ ms.locfileid: "63016044"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  依次展开 **“数据库”**、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库和 **“可编程性”**。  
+2.  依次展开 **“数据库”** 、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库和 **“可编程性”** 。  
   
-3.  右键单击“存储过程”，再单击“新建存储过程”。  
+3.  右键单击“存储过程”  ，再单击“新建存储过程”  。  
   
-4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”**。  
+4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。  
   
 5.  在 **“指定模板参数的值”** 对话框中，输入下列所示的参数值。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63016044"
     |@Datatype_For_Param2|`nvarchar`(50)|  
     |Default_Value_For_Param2|NULL|  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 7.  在 **“查询编辑器”** 中，使用以下语句替换 SELECT 语句：  
   
@@ -76,15 +76,15 @@ ms.locfileid: "63016044"
         AND EndDate IS NULL;  
     ```  
   
-8.  若要测试语法，请在 **“查询”** 菜单上，单击 **“分析”**。 如果返回错误消息，则请将这些语句与上述信息进行比较，并视需要进行更正。  
+8.  若要测试语法，请在 **“查询”** 菜单上，单击 **“分析”** 。 如果返回错误消息，则请将这些语句与上述信息进行比较，并视需要进行更正。  
   
-9. 若要创建该过程，请在 **“查询”** 菜单上单击 **“执行”**。 该过程作为数据库中的对象创建。  
+9. 若要创建该过程，请在 **“查询”** 菜单上单击 **“执行”** 。 该过程作为数据库中的对象创建。  
   
-10. 若要查看在对象资源管理器中列出的过程，请右键单击“存储过程”，然后选择“刷新”。  
+10. 若要查看在对象资源管理器中列出的过程，请右键单击“存储过程”  ，然后选择“刷新”  。  
   
-11. 若要运行该过程，请在对象资源管理器中右键单击存储过程名称 **HumanResources.uspGetEmployeesTest**，然后选择“执行存储过程”。  
+11. 若要运行该过程，请在对象资源管理器中右键单击存储过程名称 **HumanResources.uspGetEmployeesTest**，然后选择“执行存储过程”  。  
   
-12. 在“执行过程”窗口中，输入 Margheim 作为参数 @LastName 的值，并输入值 Diane 作为参数 @FirstName 的值。  
+12. 在“执行过程”  窗口中，输入 Margheim 作为参数 @LastName 的值，并输入值 Diane 作为参数 @FirstName 的值。  
   
 > [!WARNING]  
 >  验证所有用户的输入。 验证前请勿连接用户输入。 绝对不要执行根据尚未验证的用户输入构造的命令。  
@@ -94,9 +94,9 @@ ms.locfileid: "63016044"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  从 **“文件”** 菜单中，单击 **“新建查询”**。  
+2.  从 **“文件”** 菜单中，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将使用其他过程名称创建与上述相同的存储过程。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将使用其他过程名称创建与上述相同的存储过程。  
   
     ```  
     USE AdventureWorks2012;  
@@ -115,7 +115,7 @@ ms.locfileid: "63016044"
   
     ```  
   
-4.  若要运行该过程，请将以下示例复制并粘贴到一个新的查询窗口中，然后单击 **“执行”**。 请注意，将显示指定参数值的不同方法。  
+4.  若要运行该过程，请将以下示例复制并粘贴到一个新的查询窗口中，然后单击 **“执行”** 。 请注意，将显示指定参数值的不同方法。  
   
     ```  
     EXECUTE HumanResources.uspGetEmployeesTest2 N'Ackerman', N'Pilar';  
