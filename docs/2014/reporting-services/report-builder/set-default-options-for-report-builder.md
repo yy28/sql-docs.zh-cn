@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107619"
 ---
-# <a name="report-builder-options-dialog-box-settings-report-builder"></a>“报表生成器选项”对话框 -&amp;gt;“设置”（报表生成器）
+# <a name="report-builder-options-dialog-box-settings-report-builder"></a>“报表生成器选项”对话框 -&gt;“设置”（报表生成器）
   单击**报表生成器**按钮，然后单击**选项**为显示最近使用的文件和连接设置选项。 您也可以更改默认报表服务器，如果没有默认报表服务器则可以添加一个。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
@@ -34,10 +34,10 @@ ms.locfileid: "66107619"
  不需要重新启动报表生成器，此设置就能生效。  
   
  **显示此数量的最近的站点和服务器**  
- 指定显示在“打开报表”和“存为报表”对话框中的最近使用的站点和连接的数量。  
+ 指定显示在“打开报表”  和“存为报表”  对话框中的最近使用的站点和连接的数量。  
   
  **显示此数量的最近的共享数据集和数据源连接**  
- 指定显示在“数据集属性”对话框和数据区域向导“选择数据源的连接”页中的最近的共享数据集和数据源连接的数量。  
+ 指定显示在“数据集属性”  对话框和数据区域向导“选择数据源的连接”  页中的最近的共享数据集和数据源连接的数量。  
   
  **显示此数量的最近的文档**  
  指定在单击“报表生成器”按钮后显示的最近用过的文档的数量。  

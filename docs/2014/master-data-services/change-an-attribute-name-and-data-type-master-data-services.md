@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: de5cc28bfd034001c7bc18da9d934277e01935a8
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484054"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>更改属性名称 (Master Data Services)
@@ -31,15 +31,15 @@ ms.locfileid: "65484054"
   
 ### <a name="to-change-an-attribute-name"></a>若要更改属性名称  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”**。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”** 。  
   
 3.  在 **“实体维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
 4.  单击包含您要更改其名称的属性的实体所在行。  
   
-5.  单击 **“编辑所选实体”**。  
+5.  单击 **“编辑所选实体”** 。  
   
 6.  上**编辑实体**页上，单击你想要更改的名称的属性。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65484054"
   
 8.  在 **“名称”** 框中，键入属性的新名称。 有关不可用作属性名称的单词列表，请参阅[保留字 (Master Data Services)](reserved-words-master-data-services.md)。  
   
-9. 单击 **“保存属性”**。  
+9. 单击 **“保存属性”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [创建文本属性 (Master Data Services)](create-a-text-attribute-master-data-services.md)   

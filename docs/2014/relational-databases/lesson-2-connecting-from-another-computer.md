@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144808"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
@@ -39,16 +39,16 @@ ms.locfileid: "63144808"
   
 #### <a name="how-to-enable-tcpip-connections-from-another-computer"></a>如何从其他计算机启用 TCP/IP 连接  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
     > [!NOTE]  
     >  您可能同时拥有 32 位和 64 位选项。  
   
-2.  在中**SQL Server 配置管理器**，展开**SQL Server 网络配置**，然后单击**协议**  _\<InstanceName>_。  
+2.  在中**SQL Server 配置管理器**，展开**SQL Server 网络配置**，然后单击**协议**  _\<InstanceName>_ 。  
   
      默认实例（未命名实例）作为 **MSSQLSERVER**列出。 如果您已经安装了某个命名实例，则您提供的名称将会列出。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 作为 **SQLEXPRESS**安装，除非你在安装过程中更改了该名称。  
   
-3.  在协议列表中，右键单击要启用的协议 (**TCP/IP**)，再单击“启用”。  
+3.  在协议列表中，右键单击要启用的协议 (**TCP/IP**)，再单击“启用”  。  
   
     > [!NOTE]  
     >  对网络协议进行更改后，必须重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务；但此操作是在下一任务中完成的。  
@@ -61,19 +61,19 @@ ms.locfileid: "63144808"
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>配置 SQL Server 以侦听特定端口  
   
-1.  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server 网络配置”，然后单击要配置的服务器实例。  
+1.  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server 网络配置”  ，然后单击要配置的服务器实例。  
   
 2.  在右窗格中，双击 **TCP/IP**。  
   
-3.  在“TCP/IP 属性”对话框中，单击“IP 地址”选项卡。  
+3.  在“TCP/IP 属性”  对话框中，单击“IP 地址”  选项卡。  
   
-4.  在 **IPAll** 部分的“TCP 端口”框中，键入可用的端口号。 对于本教程中，我们将使用`49172`。  
+4.  在 **IPAll** 部分的“TCP 端口”  框中，键入可用的端口号。 对于本教程中，我们将使用`49172`。  
   
-5.  单击“确定”关闭对话框，然后单击表明必须重新启动服务的警告上的“确定”。  
+5.  单击“确定”  关闭对话框，然后单击表明必须重新启动服务的警告上的“确定”  。  
   
-6.  在左窗格中，单击 **“SQL Server 服务”**。  
+6.  在左窗格中，单击 **“SQL Server 服务”** 。  
   
-7.  在右窗格中，右键单击 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，再单击“重新启动”。 当[!INCLUDE[ssDE](../includes/ssde-md.md)]重新启动时，它将侦听端口`49172`。  
+7.  在右窗格中，右键单击 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，再单击“重新启动”  。 当[!INCLUDE[ssDE](../includes/ssde-md.md)]重新启动时，它将侦听端口`49172`。  
   
 ##  <a name="firewall"></a> 在防火墙中打开端口  
  防火墙系统有助于阻止对计算机资源进行未经授权的访问。 若要在防火墙打开时从其他计算机连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，必须打开防火墙的端口。  
@@ -85,19 +85,19 @@ ms.locfileid: "63144808"
   
 #### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access-windows-7"></a>打开 Windows 防火墙的端口以进行 TCP 访问 (Windows 7)  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**，键入 **WF.msc**，然后单击 **“确定”**。  
+1.  在 **“开始”** 菜单上，单击 **“运行”** ，键入 **WF.msc**，然后单击 **“确定”** 。  
   
-2.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，然后在操作窗格中单击“新建规则”。  
+2.  在“高级安全 Windows 防火墙”  的左窗格中，右键单击“入站规则”  ，然后在操作窗格中单击“新建规则”  。  
   
-3.  在 **“规则类型”** 对话框中，选择 **“端口”**，然后单击 **“下一步”**。  
+3.  在 **“规则类型”** 对话框中，选择 **“端口”** ，然后单击 **“下一步”** 。  
   
-4.  在 **“协议和端口”** 对话框中，选择 **TCP**。 选择“特定本地端口”，然后键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的端口号。 为默认实例键入 1433。 类型`49172`如果要配置命名的实例，并在上一任务中配置了固定的端口。 单击“下一步” 。  
+4.  在 **“协议和端口”** 对话框中，选择 **TCP**。 选择“特定本地端口”  ，然后键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的端口号。 为默认实例键入 1433。 类型`49172`如果要配置命名的实例，并在上一任务中配置了固定的端口。 单击“下一步”  。  
   
-5.  在 **“操作”** 对话框中，选择 **“允许连接”**，然后单击 **“下一步”**。  
+5.  在 **“操作”** 对话框中，选择 **“允许连接”** ，然后单击 **“下一步”** 。  
   
-6.  在 **“配置文件”** 对话框中，选择在您想要连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]时描述计算机连接环境的任何配置文件，然后单击 **“下一步”**。  
+6.  在 **“配置文件”** 对话框中，选择在您想要连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]时描述计算机连接环境的任何配置文件，然后单击 **“下一步”** 。  
   
-7.  在 **“名称”** 对话框中，输入此规则的名称和说明，再单击 **“完成”**。  
+7.  在 **“名称”** 对话框中，输入此规则的名称和说明，再单击 **“完成”** 。  
   
  有关配置防火墙，包括 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]说明的详细信息，请参阅 [为数据库引擎访问配置 Windows 防火墙](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。 有关默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
@@ -110,12 +110,12 @@ ms.locfileid: "63144808"
   
 1.  在另一台包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端工具的计算机中，使用授权的帐户进行登录以连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，然后打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
-2.  在“连接到服务器”对话框中，确认是否已在“服务器类型”框中选中“数据库引擎”。  
+2.  在“连接到服务器”  对话框中，确认是否已在“服务器类型”  框中选中“数据库引擎”  。  
   
-3.  在“服务器名称”框中，键入 **tcp:** 以便指定协议，后跟计算机名称、逗号以及端口号。 为了连接到默认实例，端口 1433 为隐式端口并可省略；因此，请键入 **tcp:**_<computer_name>_。 在命名实例的示例中，请键入 **tcp:**_<computer_name>_**,49172**。  
+3.  在“服务器名称”  框中，键入 **tcp:** 以便指定协议，后跟计算机名称、逗号以及端口号。 为了连接到默认实例，端口 1433 为隐式端口并可省略；因此，请键入 **tcp:** _<computer_name>_ 。 在命名实例的示例中，请键入 **tcp:** _<computer_name>_ **,49172**。  
   
     > [!NOTE]  
-    >  如果你在“服务器名称”框中省略 **tcp:**，则客户端将按照在客户端配置中指定的顺序依次尝试所有启用的协议。  
+    >  如果你在“服务器名称”  框中省略 **tcp:** ，则客户端将按照在客户端配置中指定的顺序依次尝试所有启用的协议。  
   
 4.  在中**身份验证**框中，确认**Window 身份验证**，然后单击**Connect**。  
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63194914"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 编辑器 (Visual Database Tools)
@@ -38,7 +38,7 @@ ms.locfileid: "63194914"
   
 -   提供有用的编辑功能，包括剪切、复制、粘贴和拖动操作。  
   
--   更改编辑器的行为（在“工具”菜单中选择“选项”）以修改虚空格、自动换行、行号和制表符大小。  
+-   更改编辑器的行为（在“工具”  菜单中选择“选项”  ）以修改虚空格、自动换行、行号和制表符大小。  
   
 -   帮助管理调试断点。  
   

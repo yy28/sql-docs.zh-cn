@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 335bdd657c0aa2f687d89f31dfcdd45d757e0cbd
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484817"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>向更改跟踪组添加属性 (Master Data Services)
@@ -42,13 +42,13 @@ ms.locfileid: "65484817"
   
 ### <a name="to-add-attributes-to-a-change-tracking-group"></a>向更改跟踪组添加属性  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体” 。  
+2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体”  。  
   
 3.  在“管理实体”  页上，选择要为其创建属性的实体所在的行。  
   
-4.  单击 **“属性”**。  
+4.  单击 **“属性”** 。  
   
 5.  在“管理属性”  页上，执行下列操作之一。  
   
@@ -58,15 +58,15 @@ ms.locfileid: "65484817"
   
     -   如果是集合的属性，请从“成员类型”  列表框中选择“集合”  。  
   
-6.  选择要编辑的属性所在的行，然后单击“编辑” 。  
+6.  选择要编辑的属性所在的行，然后单击“编辑”  。  
   
 7.  选中 **“启用更改跟踪”** 复选框。  
   
 8.  在 **“更改跟踪组”** 框中，键入该组的编号。  
   
-9. 单击 **“保存属性”**。  
+9. 单击 **“保存属性”** 。  
   
-     对于已编辑的属性，网格中的“启用更改跟踪组”列会变成“是(组: 输入的组号)”。  
+     对于已编辑的属性，网格中的“启用更改跟踪组”  列会变成“是(组: 输入的组号)”  。  
   
 10. 对于您要在组中包括的所有属性重复此过程。 对于该组中的每个属性，使用相同的更改跟踪组编号。  
   

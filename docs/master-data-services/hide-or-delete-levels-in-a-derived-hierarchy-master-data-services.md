@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b1d39db15c118a3f76bfc99d2236c644d71082f1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484268"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>隐藏或删除派生层次结构中的级别 (Master Data Services)
@@ -36,21 +36,21 @@ ms.locfileid: "65484268"
   
 ### <a name="to-hide-or-delete-levels-in-a-derived-hierarchy"></a>隐藏或删除派生层次结构中的级别  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  从菜单栏中，指向“管理”，然后单击“派生层次结构”。  
+2.  从菜单栏中，指向“管理”  ，然后单击“派生层次结构”  。  
   
 3.  在 **“派生层次结构维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
 4.  为您要编辑的派生层次结构选择行。  
   
-5.  单击 **“编辑”**。  
+5.  单击 **“编辑”** 。  
   
 6.  在 **“当前级别”** 窗格中：  
   
-    -   若要隐藏级别，请单击除顶部或底部之外的级别。 从 **“可见”** 列表中，选择 **“否”**。 然后，单击 **“保存所选层次结构项”**。  
+    -   若要隐藏级别，请单击除顶部或底部之外的级别。 从 **“可见”** 列表中，选择 **“否”** 。 然后，单击 **“保存所选层次结构项”** 。  
   
-    -   若要删除顶部级别，请单击 **“删除所选层次结构项”**。 在确认对话框中，单击 **“确定”**。 只能删除顶部级别。  
+    -   若要删除顶部级别，请单击 **“删除所选层次结构项”** 。 在确认对话框中，单击 **“确定”** 。 只能删除顶部级别。  
   
 ## <a name="see-also"></a>请参阅  
     

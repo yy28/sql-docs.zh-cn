@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7be0980dcb50a861dd94a925070772b8d4ddb83e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484327"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>自动生成 Code 属性值 (Master Data Services)
@@ -35,17 +35,17 @@ ms.locfileid: "65484327"
   
 ### <a name="to-automatically-generate-code-values"></a>自动生成 Code 值  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，选择包含要编辑的实体的模型行，然后单击“实体” 。  
+2.  在“管理模型”  页上，选择包含要编辑的实体的模型行，然后单击“实体”  。  
   
-3.  在“管理实体”  页上，选择要为其生成代码的实体行，然后单击“编辑” 。  
+3.  在“管理实体”  页上，选择要为其生成代码的实体行，然后单击“编辑”  。  
   
 4.  选中 **“自动创建代码值”** 复选框。  
   
 5.  在 **“起始”** 框中，键入开始递增的数字。 如果成员已存在，则将基于最大的现有值设置 Code。 例如，如果最大的现有 Code 值为 299，则下一个成员的 Code 值将设置为 300。  
   
-6.  单击“保存” 。  
+6.  单击“保存”  。  
   
 ## <a name="see-also"></a>请参阅  
  [自动创建代码 (Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)   

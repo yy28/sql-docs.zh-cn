@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63208416"
 ---
 # <a name="paradox-data-types"></a>Paradox 数据类型
@@ -54,7 +54,7 @@ ODBC Paradox 驱动程序将 Paradox 数据类型映射为 ODBC SQL 数据类型
   
  下表显示有关 Paradox 数据类型的限制。  
   
-|数据类型|描述|  
+|数据类型|Description|  
 |---------------|-----------------|  
 |字母数字|创建零的字母数字列或未指定的长度实际上返回一个 255 字节的列。|  
 |BYTES|如果您具有 Paradox5 驱动程序的二进制列中插入 NULL，则将它更改为 0。|  

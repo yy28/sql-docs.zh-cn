@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63244658"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>处理 SSMA 项目 (DB2ToSQL)
@@ -96,7 +96,7 @@ SSMA 进行转换和加载数据库对象、 迁移数据，和与 DB2 同步 SS
   
         正在保存元数据可能需要几分钟的时间。 如果您不希望保存元数据，不选中任何复选框。  
   
-    2.  单击“保存”按钮。  
+    2.  单击“保存”  按钮。  
   
         SSMA 会分析 DB2 架构并将元数据保存到项目文件。  
   

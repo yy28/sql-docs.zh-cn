@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8f18e047b11bee4093ce7a6e494c1ae1bf3d0ada
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483387"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>排除业务规则 (Master Data Services)
@@ -31,9 +31,9 @@ ms.locfileid: "65483387"
   
 ### <a name="to-exclude-a-business-rule"></a>排除业务规则  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
+2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”** 。  
   
 3.  在 **“业务规则维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "65483387"
   
 5.  从**成员类型**列表中，选择一种类型的成员。  
   
-6.  从 **“属性”** 列表中，选择某一属性或保持默认值 **“全部”**。  
+6.  从 **“属性”** 列表中，选择某一属性或保持默认值 **“全部”** 。  
   
 7.  在网格中，在业务规则所对应的行选择中的复选框**排除**列。 中的值**状态**列为**待排除**。  
   
-8.  单击 **“发布业务规则”**。  
+8.  单击 **“发布业务规则”** 。  
   
-9. 在确认对话框中，单击 **“确定”**。 中的值**状态**列为**排除**。  
+9. 在确认对话框中，单击 **“确定”** 。 中的值**状态**列为**排除**。  
   
 ## <a name="see-also"></a>请参阅  
  [删除业务规则 (Master Data Services)](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   

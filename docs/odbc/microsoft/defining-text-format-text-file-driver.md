@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240382"
 ---
 # <a name="defining-text-format-text-file-driver"></a>定义文本格式（文本文件驱动程序）
@@ -44,4 +44,4 @@ ms.locfileid: "63240382"
 |**删除**|删除所选的列。|  
 |**扫描的行数**|设置列和列数据类型取决于现有数据时，安装程序或驱动程序将扫描的行数。<br /><br /> 您可以输入介于 1 到 32767 之间的要扫描的行数。 此值默认为 25 如果中的选定项的格式**表**列表不以前定义的此对话框。 （限制以外的数字将返回错误。）|  
 |**表**|包含列表中选择的目录中的所有文件**文本安装**与指定扩展名的列表匹配的对话框。<br /><br /> 时\<默认值 > 选择时，以下项之一为 true 中的表属性的值和**表**组写入的 Schema.ini （接触 Schema.ini 中的没有其他项）：<br /><br /> -无 Schema.ini 中指定的目录。<br />Schema.ini 文件存在，但在一个文本文件 （扩展名为指定） 的目录中的 Schema.ini 没有部分。<br />的文本文件部分存在于 Schema.ini，但响应正文为空。<br /><br /> 当\<默认值 > 选择，则**列**禁用组。|  
-|宽度|对于 CHAR 或 LONGCHAR 列，可以更改列的宽度。 默认为 1，如果格式中的选定项的宽度**表**列表不以前定义的此对话框。<br /><br /> 对于其他数据类型，区分控件处于禁用状态并不显示任何值。|
+|宽度 |对于 CHAR 或 LONGCHAR 列，可以更改列的宽度。 默认为 1，如果格式中的选定项的宽度**表**列表不以前定义的此对话框。<br /><br /> 对于其他数据类型，区分控件处于禁用状态并不显示任何值。|

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450107"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -69,7 +69,7 @@ sp_OAMethod objecttoken , methodname
   
  若要获取输出参数，返回值*参数*必须是相应的数据类型的本地变量和**输出**必须指定。 如果指定常数参数，或如果**输出**未指定，则任何返回输出参数的值将被忽略。  
   
- 如果指定， *parametername*必须是名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]命名参数。 请注意， **@**_parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]本地变量。 At 符号 (**@**) 中删除，并且*parametername*传递给 OLE 对象作为参数名称。 指定了所有位置参数后，才能指定命名参数。  
+ 如果指定， *parametername*必须是名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]命名参数。 请注意， **@** _parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]本地变量。 At 符号 ( **@** ) 中删除，并且*parametername*传递给 OLE 对象作为参数名称。 指定了所有位置参数后，才能指定命名参数。  
   
  *n*  
  指示可以指定多个参数的占位符。  

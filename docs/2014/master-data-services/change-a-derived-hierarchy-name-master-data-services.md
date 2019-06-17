@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5a8bec1ab4bd19fdf11310fb467035eab1ac34b4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483612"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>更改派生层次结构名称 (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65483612"
   
 ### <a name="to-change-a-derived-hierarchy-name"></a>更改派生层次结构名称  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
 2.  上**模型视图**页上，从菜单栏中，依次指向**管理**然后单击**派生层次结构**。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65483612"
   
 7.  在 **“派生层次结构名称”** 框中，键入层次结构的更新的名称。  
   
-8.  单击 **“保存派生层次结构”**。  
+8.  单击 **“保存派生层次结构”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   

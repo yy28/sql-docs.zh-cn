@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086793"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>创建测试集（数据挖掘向导）
@@ -34,7 +34,7 @@ ms.locfileid: "66086793"
   
 -   如果尝试预测的值存储在嵌套表中，则无法对数据进行分区。  
   
- **有关详细信息：**[测试和验证&#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)，[数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **有关详细信息：** [测试和验证&#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)，[数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>选项  
  **测试数据的百分比**  

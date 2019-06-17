@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a70d58caba2b2a443f0017c52611331e9257972
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157476"
 ---
 # <a name="configure-parallel-index-operations"></a>配置并行索引操作
@@ -51,7 +51,7 @@ ms.locfileid: "63157476"
   
 -   MAXDOP 索引选项只为指定此选项的查询覆盖 max degree of parallelism 配置选项。 下表列出了可为 max degree of parallelism 配置选项和 MAXDOP 索引选项指定的有效整数值。  
   
-    |值|Description|  
+    |ReplTest1|Description|  
     |-----------|-----------------|  
     |0|指定服务器根据当前系统工作负荷确定所使用的 CPU 数目。 这是默认值，还是推荐设置。|  
     |1|取消生成并行计划。 操作将以串行方式执行。|  
@@ -90,13 +90,13 @@ ms.locfileid: "63157476"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要为其设置最大并行度的索引，然后选择“属性”。  
+5.  右键单击要为其设置最大并行度的索引，然后选择“属性”  。  
   
-6.  在 **“选择页”** 下，选择 **“选项”**。  
+6.  在 **“选择页”** 下，选择 **“选项”** 。  
   
-7.  选择 **“最大并行度”**，然后输入 1 和 64 之间的某个值。  
+7.  选择 **“最大并行度”** ，然后输入 1 和 64 之间的某个值。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -104,9 +104,9 @@ ms.locfileid: "63157476"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;   
@@ -124,9 +124,9 @@ ms.locfileid: "63157476"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

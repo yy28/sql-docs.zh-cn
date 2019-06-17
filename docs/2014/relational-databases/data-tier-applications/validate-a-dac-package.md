@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917862"
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
   最好在生产中部署 DAC 包之前查看其内容，并且在升级现有 DAC 之前验证升级操作。 当部署的包并非您的组织开发时更需要这样做。  
   
-1.  **开始之前：**[先决条件](#Prerequisites)  
+1.  **开始之前：** [先决条件](#Prerequisites)  
   
-2.  若要升级 DAC，请使用：[查看 DAC 的内容](#ViewDACContents)、[查看数据库更改](#ViewDBChanges)、[查看升级操作](#ViewUpgradeActions)、[比较 DAC](#CompareDACs)  
+2.  若要升级 DAC，请使用：  [查看 DAC 的内容](#ViewDACContents)、[查看数据库更改](#ViewDBChanges)、[查看升级操作](#ViewUpgradeActions)、[比较 DAC](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 先决条件  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 使用来自未知源或不可信源的 DAC 前，请在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的独立测试实例上部署它，对数据库运行 [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)，然后检查数据库中的代码，例如存储过程或其他用户定义的代码。  
@@ -39,17 +39,17 @@ ms.locfileid: "62917862"
   
  **在 SQL Server 开发工具中查看 DAC**  
   
-1.  打开“文件”菜单，选择“新建”，然后选择“项目…”。  
+1.  打开“文件”菜单，选择“新建”，然后选择“项目…”    。  
   
-2.  选择 **SQL Server** 项目模板，然后指定 **“名称”**、 **“位置”** 和 **“解决方案名称”**。  
+2.  选择 **SQL Server** 项目模板，然后指定 **“名称”** 、 **“位置”** 和 **“解决方案名称”** 。  
   
-3.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“属性…”。  
+3.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“属性…”   。  
   
-4.  在“项目设置” 选项卡上的“输出类型”部分中，选中“数据层应用程序（.dacpac 文件）”复选框，然后关闭属性对话框。  
+4.  在“项目设置”  选项卡上的“输出类型”  部分中，选中“数据层应用程序（.dacpac 文件）”  复选框，然后关闭属性对话框。  
   
-5.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“导入数据层应用程序…”。  
+5.  在“解决方案资源管理器”中，右键单击该项目节点，然后选择“导入数据层应用程序…”   。  
   
-6.  使用“解决方案资源管理器”可打开该 DAC 中的所有文件，例如服务器选择策略以及预部署和部署后脚本。  
+6.  使用“解决方案资源管理器”  可打开该 DAC 中的所有文件，例如服务器选择策略以及预部署和部署后脚本。  
   
 7.  使用 **“架构视图”** 可查看架构中的所有对象，特别是查看对象（例如函数或存储过程）中的代码。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62917862"
   
  **使用向导查看数据库更改**  
   
-1.  运行“升级数据层应用程序”向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
+1.  运行“升级数据层应用程序”  向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
   
 2.  在 **“检测更改”** 页上，查看已对数据库进行的更改的报告。  
   
@@ -111,7 +111,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
  **使用向导报告升级操作**  
   
-1.  运行“升级数据层应用程序”向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
+1.  运行“升级数据层应用程序”  向导，指定当前部署的 DAC 和包含新版本 DAC 的 DAC 包。  
   
 2.  对 **“摘要”** 页上，查看升级操作的报告。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106441"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>内置的全局和用户引用（报表生成器和 SSRS）
@@ -74,7 +74,7 @@ ms.locfileid: "66106441"
   
 |**成员**|**类型**|**说明**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|运行报表的用户的语言。 例如，`en-US`。|  
+|`Language`|`String`|运行报表的用户的语言。 例如， `en-US` 。|  
 |`UserID`|`String`|运行报表的用户的 ID。 如果您使用的是 Windows 身份验证，则此值为当前用户的域帐户。 此值由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安全扩展插件确定，此插件可以使用 Windows 身份验证，也可以使用自定义身份验证。|  
   
  有关在报表中支持多种语言的详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 联机丛书 [中的](https://go.microsoft.com/fwlink/?LinkId=120955)文档中的“多语言或全局部署的解决方案设计注意事项”。  

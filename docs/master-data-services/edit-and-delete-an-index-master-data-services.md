@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b938ee83469579e5440697205856de32ea41ea1f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487028"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>编辑和删除索引 (Master Data Services)
@@ -33,15 +33,15 @@ ms.locfileid: "65487028"
   
  **编辑索引**  
   
-1.  在主数据管理器中，单击“系统管理” 。  
+1.  在主数据管理器中，单击“系统管理”  。  
   
-2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体” 。  
+2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体”  。  
   
 3.  在“管理实体”  页上，从网格中选择包含要编辑的索引的实体。  
   
-4.  单击“索引” 。  
+4.  单击“索引”  。  
   
-5.  在“管理索引”  页上，选择你想要编辑的索引，然后单击“编辑” 。  
+5.  在“管理索引”  页上，选择你想要编辑的索引，然后单击“编辑”  。  
   
 6.  在“名称”  框中，键入索引的更新名称。  
   
@@ -49,19 +49,19 @@ ms.locfileid: "65487028"
   
 8.  通过从列表中添加和删除属性来编辑分配的属性列表。  
   
-9. 单击“保存” 。  
+9. 单击“保存”  。  
   
  **删除索引**  
   
-1.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体” 。  
+1.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体”  。  
   
 2.  在“管理实体”  页上，从网格中选择包含要删除的索引的实体。  
   
-3.  单击“索引” 。  
+3.  单击“索引”  。  
   
-4.  在“管理索引”  页上，选择你想要删除的索引，然后单击“删除” 。  
+4.  在“管理索引”  页上，选择你想要删除的索引，然后单击“删除”  。  
   
-5.  在确认消息框中，单击“确定” 。  
+5.  在确认消息框中，单击“确定”  。  
   
 ## <a name="see-also"></a>请参阅  
  [创建索引 (Master Data Services)](../master-data-services/create-an-index-master-data-services.md)   

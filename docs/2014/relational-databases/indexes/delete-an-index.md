@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 092d6e9432f22ef43a155d2a7d3ff03299bcd131
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162310"
 ---
 # <a name="delete-an-index"></a>删除索引
@@ -62,9 +62,9 @@ ms.locfileid: "63162310"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要删除的索引，然后选择“删除”。  
+5.  右键单击要删除的索引，然后选择“删除”  。  
   
-6.  在 **“删除对象”** 对话框中，确认正确的索引位于 **“要重删除的对象”** 网格中，然后单击 **“确定”**。  
+6.  在 **“删除对象”** 对话框中，确认正确的索引位于 **“要重删除的对象”** 网格中，然后单击 **“确定”** 。  
   
 #### <a name="to-delete-an-index-using-table-designer"></a>使用表设计器删除索引  
   
@@ -74,15 +74,15 @@ ms.locfileid: "63162310"
   
 3.  右键单击包含您要删除的索引的表，然后单击“设计”。  
   
-4.  在“表设计器”菜单上，单击“索引/键”。  
+4.  在“表设计器”  菜单上，单击“索引/键”  。  
   
-5.  在“索引/键”对话框中，选择要删除的索引。  
+5.  在“索引/键”  对话框中，选择要删除的索引。  
   
-6.  单击 **“删除”**。  
+6.  单击 **“删除”** 。  
   
-7.  单击 **“关闭”**。  
+7.  单击 **“关闭”** 。  
   
-8.  在“文件”菜单上，选择“保存”以保存 _table_name_。  
+8.  在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -90,9 +90,9 @@ ms.locfileid: "63162310"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

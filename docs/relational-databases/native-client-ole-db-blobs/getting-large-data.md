@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8dc42531a8e0cfcc844939ca86639ad68cebcd09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62738011"
 ---
 # <a name="getting-large-data"></a>获取大型数据
@@ -38,7 +38,7 @@ ms.locfileid: "62738011"
   
 -   ICommand::Execute  
   
- 如果 DBPROP_ACCESSORDER 属性 （在行集属性组） 设置为值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS，使用者应提取单个行中调用数据的**GetNextRows**方法由于不缓冲 BLOB 数据。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据。  
+ 如果 DBPROP_ACCESSORDER 属性 （在行集属性组） 设置为值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS，使用者应提取单个行中调用数据的**GetNextRows**方法由于不缓冲 BLOB 数据。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据  。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不会检索大型数据从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]请求之前要执行此操作由使用者。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
   

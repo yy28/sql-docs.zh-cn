@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199083"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>使用 SQLGetData 检索输出参数
@@ -30,7 +30,7 @@ ODBC 3.8 之前应用程序可以仅检索具有绑定的输出缓冲区的查�
  此功能可由 ODBC 3.8 应用程序或重新编译 ODBC 3.x 和 ODBC 2.x 应用程序，以及这些应用程序必须有支持检索输出参数使用的 ODBC 3.8 驱动程序**SQLGetData**和 ODBC 3.8 驱动程序管理器。 有关如何启用旧的应用程序使用 ODBC 的新功能的信息，请参阅[兼容性矩阵](../../../odbc/reference/develop-app/compatibility-matrix.md)。  
   
 ## <a name="usage-example"></a>用法示例  
- 例如，请考虑执行存储的过程， **{调用 sp_f(?,?)}**，其中两个参数绑定为 SQL_PARAM_OUTPUT_STREAM，而存储的过程未返回结果集 （本主题中稍后您会发现更复杂的方案）：  
+ 例如，请考虑执行存储的过程， **{调用 sp_f(?,?)}** ，其中两个参数绑定为 SQL_PARAM_OUTPUT_STREAM，而存储的过程未返回结果集 （本主题中稍后您会发现更复杂的方案）：  
   
 1.  对于每个参数，调用**SQLBindParameter**与*InputOutputType*设置为 SQL_PARAM_OUTPUT_STREAM 并*ParameterValuePtr*设置为的令牌，如参数数目指向数据的指针或指向应用程序用于绑定输入的参数的结构的指针。 此示例将使用的标记为参数序号。  
   

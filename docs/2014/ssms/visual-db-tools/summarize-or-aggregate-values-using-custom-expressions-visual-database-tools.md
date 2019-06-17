@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b679eac51bf6fd51d10a88816017f2b767a69041
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204638"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>使用自定义表达式汇总或聚合值 (Visual Database Tools)
@@ -31,11 +31,11 @@ ms.locfileid: "63204638"
   
 1.  为查询指定组。 有关详细信息，请参阅[对查询结果中的行进行分组 (Visual Database Tools)](visual-database-tools.md)。  
   
-2.  移动到“条件”窗格中的空白行，然后在“列”列中键入表达式。  
+2.  移动到“条件”窗格中的空白行，然后在“列”  列中键入表达式。  
   
      [查询和视图设计器](query-and-view-designer-tools-visual-database-tools.md)将自动为表达式分配列别名，以在查询输出中创建有用的列标题。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
-3.  在表达式的“分组依据”列中，选择“表达式”。  
+3.  在表达式的“分组依据”  列中，选择“表达式”  。  
   
 4.  运行查询。  
   

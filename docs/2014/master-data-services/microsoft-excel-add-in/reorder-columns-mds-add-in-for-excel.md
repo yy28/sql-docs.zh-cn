@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7d14023208ddb9cac2eb5c2f3c3c2770f2363dc7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478941"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>对列重新排序（用于 Excel 的 MDS 外接程序）
@@ -33,13 +33,13 @@ ms.locfileid: "65478941"
   
 2.  在 **“主数据资源管理器”** 窗格中，选择所需模型和版本。 随之填充实体列表。  
   
-    -   如果 **“主数据资源管理器”** 窗格不可见，请在 **“连接并加载”** 组中，单击 **“显示资源管理器”**。  
+    -   如果 **“主数据资源管理器”** 窗格不可见，请在 **“连接并加载”** 组中，单击 **“显示资源管理器”** 。  
   
     -   如果 **“主数据资源管理器”** 窗格被禁用，则是因为现有工作表中已包含 MDS 管理的数据。 若要启用该窗格，请打开一个新工作表。  
   
 3.  在 **“主数据资源管理器”** 窗格中，单击一个实体。  
   
-4.  在 **“连接并加载”** 组中，单击 **“筛选器”**。  
+4.  在 **“连接并加载”** 组中，单击 **“筛选器”** 。  
   
 5.  在 **“筛选器”** 对话框 **“列”** 部分的属性列表中，单击要移动的属性。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65478941"
   
 7.  对于每个属性重复步骤 7，直到从上到下的顺序表示您想在工作表中呈现的从左到右的顺序。  
   
-8.  单击 **“加载数据”**。 工作表将使用 MDS 管理的数据填充，且列按您指定的顺序显示。  
+8.  单击 **“加载数据”** 。 工作表将使用 MDS 管理的数据填充，且列按您指定的顺序显示。  
   
 ## <a name="see-also"></a>请参阅  
  [加载数据&#40;MDS add-in for Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bff66ca0f644f862b7cdcfb534b55c4e8ebdd888
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104093"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
@@ -37,7 +37,7 @@ ms.locfileid: "66104093"
 |----------|-----------------|----------------------|  
 |1|在将 Reporting Services 安装在 NLB 群集内的服务器节点上之前，请检查扩展部署的要求。|[配置本机模式报表服务器扩展部署&#40;SSRS 配置管理器&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书|  
 |2|配置 NLB 群集并验证它是否正常工作。<br /><br /> 确保将主机标头名称映射到 NLB 群集的虚拟服务器 IP。 主机标头名称用在报表服务器 URL 中，它比 IP 地址便于记忆和键入。|有关详细信息，请参阅您运行的 Windows 操作系统版本的 Windows Server 产品文档。|  
-|3|将主机标头的 NetBIOS 和完全限定域名 (FQDN) 添加到 Windows 注册表中存储的 **BackConnectionHostNames** 列表中。 使用中的步骤**方法 2:指定主机名**中[KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861)，但进行以下调整。 该 KB 文章的**步骤 7** 指出“退出注册表编辑器，然后重新启动 IISAdmin 服务”。 改为重新启动计算机以确保更改生效。<br /><br /> 例如，如果主机标头名称 \<MyServer> 是 Windows 计算机名称“contoso”的虚拟名称，可以将该 FQDN 形式作为“contoso.domain.com”引用。 需要将主机标头名称 (MyServer) 与 FQDN 名称 (contoso.domain.com) 一起添加到 **BackConnectionHostNames**的列表中。|如果您的服务器环境涉及本地计算机上的 NTLM 身份验证并且造成环回连接，则此步骤是必需的。<br /><br /> 如果出现这种情况，将会出现报表管理器和报表服务器之间的请求失败，错误号为 401（未经授权）。|  
+|3|将主机标头的 NetBIOS 和完全限定域名 (FQDN) 添加到 Windows 注册表中存储的 **BackConnectionHostNames** 列表中。 使用中的步骤**方法 2:指定主机名**中[KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861) ，但进行以下调整。 该 KB 文章的**步骤 7** 指出“退出注册表编辑器，然后重新启动 IISAdmin 服务”。 改为重新启动计算机以确保更改生效。<br /><br /> 例如，如果主机标头名称 \<MyServer> 是 Windows 计算机名称“contoso”的虚拟名称，可以将该 FQDN 形式作为“contoso.domain.com”引用。 需要将主机标头名称 (MyServer) 与 FQDN 名称 (contoso.domain.com) 一起添加到 **BackConnectionHostNames**的列表中。|如果您的服务器环境涉及本地计算机上的 NTLM 身份验证并且造成环回连接，则此步骤是必需的。<br /><br /> 如果出现这种情况，将会出现报表管理器和报表服务器之间的请求失败，错误号为 401（未经授权）。|  
 |4|在已是 NLB 群集一部分的节点上以“仅文件”模式安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并为扩展部署配置报表服务器实例。<br /><br /> 所配置的扩展部署将不响应那些定向到虚拟服务器 IP 的请求。 在配置视图状态验证之后，会在以后的步骤中将扩展部署配置为使用虚拟服务器 IP。|[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|配置视图状态验证。<br /><br /> 为了达到最佳效果，请在配置扩展部署之后、配置报表服务器实例以使用虚拟服务器 IP 之前执行此步骤。 通过先配置视图状态验证，可以避免在用户试图访问交互式报表时出现有关状态验证失败的异常。|本主题中的[如何配置视图状态验证](#ViewState) 。|  
 |6|将 `Hostname` 和 `UrlRoot` 配置为使用 NLB 群集的虚拟服务器 IP。|本主题中的[如何配置 Hostname 和 UrlRoot](#SpecifyingVirtualServerName) 。|  
@@ -81,7 +81,7 @@ ms.locfileid: "66104093"
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-2.  查找**\<服务 >** 部分，并将以下信息添加到配置文件中，替换`Hostname`值替换为 NLB 服务器的虚拟服务器名称：  
+2.  查找 **\<服务 >** 部分，并将以下信息添加到配置文件中，替换`Hostname`值替换为 NLB 服务器的虚拟服务器名称：  
   
     ```  
     <Hostname>virtual_server</Hostname>  
@@ -96,7 +96,7 @@ ms.locfileid: "66104093"
 6.  对于扩展部署中的每个报表服务器，在其相应的 RSReportServer.config 文件中重复上述步骤。  
   
 ##  <a name="Verify"></a> 验证报表服务器访问权限  
- 验证是否可以通过虚拟服务器名称来访问横向扩展部署 (例如， https://MyVirtualServerName/reportserver和 https://MyVirtualServerName/reports)。  
+ 验证是否可以通过虚拟服务器名称来访问横向扩展部署 (例如， https://MyVirtualServerName/reportserver 和 https://MyVirtualServerName/reports) 。  
   
  通过查看报表服务器日志文件或检查 RS 执行日志（该执行日志表包含的 **InstanceName** 列可以显示处理特定请求的实例名称），可以检查哪个节点实际处理报表。 有关详细信息，请参阅 [联机丛书中的](../report-server/reporting-services-log-files-and-sources.md) Reporting Services 日志文件和源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

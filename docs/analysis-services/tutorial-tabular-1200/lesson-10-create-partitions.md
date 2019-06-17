@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dce53a4b4ae5a64a898eec2b30921fe7a7f2e242
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404249"
 ---
 # <a name="lesson-10-create-partitions"></a>第 10 课：创建分区
@@ -76,7 +76,7 @@ ms.locfileid: "65404249"
   
     此语句指定分区应包含以下行中的所有数据：对于这些行，OrderDate 对应于在 WHERE 子句中指定的 2010 日历年。  
   
-6.  单击 **“验证”**。  
+6.  单击 **“验证”** 。  
   
   
 #### <a name="to-create-a-partition-for-the-2011-year"></a>为 2011 年份创建分区  
@@ -133,13 +133,13 @@ ms.locfileid: "65404249"
   
 3.  在处理分区对话框中，验证是否**模式下**设置为**处理默认值**。  
   
-4.  在“处理”列中选中所创建的全部五个分区的复选框，然后单击“确定”。  
+4.  在“处理”  列中选中所创建的全部五个分区的复选框，然后单击“确定”  。  
 
     ![as-tabular-lesson10-process-partitions](media/as-tabular-lesson10-process-partitions.png)
   
     如果系统提示输入模拟凭据，则输入 Windows 用户名和第 2 课中指定的密码。  
   
-    “数据处理”对话框将出现，并显示每个分区的处理详细信息。 您将注意到对于每个分区转移了不同的行数。 这是因为，每个分区值包含您在 SQL 语句的 WHERE 子句中指定的年份的那些行。 完成处理后，继续操作并关闭“数据处理”对话框。  
+    “数据处理”  对话框将出现，并显示每个分区的处理详细信息。 您将注意到对于每个分区转移了不同的行数。 这是因为，每个分区值包含您在 SQL 语句的 WHERE 子句中指定的年份的那些行。 完成处理后，继续操作并关闭“数据处理”对话框。  
   
     ![as-tabular-lesson10-process-complete](media/as-tabular-lesson10-process-complete.png)
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c20a0367612aee48c1a58e9cde8ba1a44d3fafc
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404799"
 ---
 # <a name="lesson-13-deploy"></a>第 13 课：部署
@@ -43,7 +43,7 @@ ms.locfileid: "65404799"
   
 4.  在中**模型名称**属性中，键入**Adventure Works Internet Sales Model**。  
   
-5.  验证所做的选择，然后单击“确定”。  
+5.  验证所做的选择，然后单击“确定”  。  
   
 #### <a name="to-deploy-the-adventure-works-internet-sales-tabular-model"></a>部署 Adventure Works Internet Sales 表格模型  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65404799"
     
     ![aas-deploy-status](media/aas-deploy-status.png)
   
-3. 成功完成部署后，继续操作并单击“关闭”。  
+3. 成功完成部署后，继续操作并单击“关闭”  。  
   
 ## <a name="conclusion"></a>结束语  
 祝贺你！ 您完成创作和部署第一个 Analysis Services 表格模型。 本教程已帮助指导您完成了创建表格模型的最常见任务。 既然已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 来管理此模型、创建进程脚本和备份计划。 用户现在还可以连接到在模型中使用的报告的客户端应用程序，例如 Microsoft Excel 或 Power BI。  

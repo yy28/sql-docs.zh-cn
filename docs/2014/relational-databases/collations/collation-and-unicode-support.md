@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918960"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
@@ -53,7 +53,7 @@ ms.locfileid: "62918960"
 |------------|-----------------|  
 |区分大小写 (_CS)|区分大写字母和小写字母。 如果选择此项，排序时小写字母将在其对应的大写字母之前。 如果不选择此选项，则排序规则将不区分大小写。 即 SQL Server 在排序时将大写字母和小写字母视为相同。 通过指定 _CI，可以显式选择不区分大小写。|  
 |区分重音 (_AS)|区分重音字符和非重音字符。 例如，a 不等于???。 如果未选择此选项，则排序规则将不区分重音。 即 SQL Server 在排序时将重音字符和非重音字符视为相同。 通过指定 _AI，可以显式选择不区分重音。|  
-|区分假名 (_KS)|区分两种类型的日语假名字符：平假名和片假名。 如果未选择此选项，则排序规则将不区分假名。 即 SQL Server 在排序时将平假名字符和片假名字符视为相同。 省略此选项是指定不区分假名的唯一方法。|  
+|区分假名 (_KS)|区分日语中的两种假名字符类型：平假名和片假名。 如果未选择此选项，则排序规则将不区分假名。 即 SQL Server 在排序时将平假名字符和片假名字符视为相同。 省略此选项是指定不区分假名的唯一方法。|  
 |区分全半角 (_WS)|区分全角字符和半角字符。 如果未选择此选项，SQL Server 在排序时将把同一字符的全角和半角形式视为相同。 省略此选项是指定不区分全半角的唯一方法。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下排序规则集：  
@@ -105,7 +105,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ###  <a name="Code_Page_Defn"></a> Code Page  
- 代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集”。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。  
+ 代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集”   。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。  
   
   
 ###  <a name="Sort_Order_Defn"></a> Sort Order  
@@ -144,7 +144,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Supplementary_Characters"></a> 增补字符  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的数据类型，例如`nchar`和`nvarchar`来存储 Unicode 数据。 这些数据类型使用名为 *UTF-16*的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个连续的 16 位字。 这些字符称为“增补字符” ，两个连续的 16 位字称为“代理项对” 。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的数据类型，例如`nchar`和`nvarchar`来存储 Unicode 数据。 这些数据类型使用名为 *UTF-16*的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个连续的 16 位字。 这些字符称为“增补字符”  ，两个连续的 16 位字称为“代理项对”  。  
   
  如果使用增补字符：  
   
