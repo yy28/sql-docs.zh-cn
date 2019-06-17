@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9692b27e2c9c366808ba70ca9bd7ff0c14771bf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62867331"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role 事件类
   当向数据库中添加角色或从中删除角色时，将发生 **Audit Add Role** 事件类。 此事件类用于 **sp_addrole** 和 **sp_droprole** 存储过程。  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中可能会删除此事件类。 建议使用 **Audit Database Principal Management** 事件类。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中可能会删除此事件类。 建议使用 **Audit Database Principal Management** 事件类。  
   
 ## <a name="audit-add-role-event-class-data-columns"></a>Audit Add Role 事件类的数据列  
   

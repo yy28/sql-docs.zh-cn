@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8064fcc088c7ae9e7dd96c5c132b1246fe0ae2db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670161"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>更改挖掘结构的属性
@@ -30,7 +30,7 @@ ms.locfileid: "62670161"
   
 ### <a name="to-change-the-properties-of-a-mining-structure"></a>更改挖掘结构的属性  
   
-1.  在数据挖掘设计器中的“挖掘结构”选项卡上，右键单击挖掘结构或挖掘结构中的一列，然后选择“属性”。  
+1.  在数据挖掘设计器中的“挖掘结构”  选项卡上，右键单击挖掘结构或挖掘结构中的一列，然后选择“属性”  。  
   
      此时将在屏幕右侧打开 **“属性”** 窗口（如果该窗口尚未可见）。  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2d799eff20ebe060fd68e0c55015f4c401edfff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736314"
 ---
 # <a name="change-column-order-in-a-table"></a>更改表中的列顺序
@@ -38,7 +38,7 @@ ms.locfileid: "62736314"
   
 #### <a name="to-change-the-column-order"></a>更改列顺序  
   
-1.  在“对象资源管理器”中，右键单击包含要重新排序的列的表，再单击“设计”。  
+1.  在“对象资源管理器”  中，右键单击包含要重新排序的列的表，再单击“设计”  。  
   
 2.  选择要重新排序的列名称左侧的框。  
   

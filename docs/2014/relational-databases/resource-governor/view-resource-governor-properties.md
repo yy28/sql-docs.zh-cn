@@ -15,18 +15,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209684"
 ---
 # <a name="view-resource-governor-properties"></a>查看资源调控器属性
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的“资源调控器属性”页创建或配置资源调控器实体（如资源池和工作负荷组）。  
   
-1.  **开始之前：**[权限](#Permissions)  
+1.  **开始之前：** [权限](#Permissions)  
   
-2.  **若要查看资源调控器属性，请使用：**[资源调控器属性页](#ViewRGProp)  
+2.  **若要查看资源调控器属性，请使用：** [资源调控器属性页](#ViewRGProp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  除了查看资源调控器实体的属性外，还可以使用 **“资源调控器属性”** 页执行多个配置任务。 有关详细信息，请参阅以下主题：  
@@ -57,13 +57,13 @@ ms.locfileid: "63209684"
 ##  <a name="ViewRGProp"></a> 查看资源调控器属性页  
  **若要查看资源调控器属性，请使用资源调控器属性页 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器”，然后单击“属性”，这将打开“资源调控器属性”页。  
+2.  右键单击“资源调控器”  ，然后单击“属性”  ，这将打开“资源调控器属性”页  。  
   
 3.  有关该页中的字段的说明，请参阅 [资源调控器属性](#RGProp)。  
   
-4.  若要保存任何更改，请单击 **“确定”**。  
+4.  若要保存任何更改，请单击 **“确定”** 。  
   
 ##  <a name="RGProp"></a> 资源调控器属性  
  **分类器函数名称**  
@@ -73,7 +73,7 @@ ms.locfileid: "63209684"
  通过选中或清除复选框来启用或禁用资源调控器。  
   
  **资源池**  
- 通过使用提供的网格创建或更改资源池配置。 此网格使用预定义的内部和默认池的信息进行填充。 通过单击池中某行的第一列来选择要处理的池。 若要创建新的资源池，请单击带星号 (&#42;) 前缀的行。  
+ 通过使用提供的网格创建或更改资源池配置。 此网格使用预定义的内部和默认池的信息进行填充。 通过单击池中某行的第一列来选择要处理的池。 若要创建新的资源池，请单击带星号 (&#42;) 前缀的行  。  
   
  **名称**  
  指定资源池的名称。  
@@ -93,7 +93,7 @@ ms.locfileid: "63209684"
  有关详细信息，请参阅[创建资源池&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)。  
   
  **资源池的工作负荷组**  
- 通过使用提供的网格创建或更改工作负荷组配置。 此网格使用预定义的内部和默认组的信息进行填充。 通过单击池中某行的第一列来选择要处理的组。 若要创建新的工作组，请单击带星号 (&#42;) 前缀的行。  
+ 通过使用提供的网格创建或更改工作负荷组配置。 此网格使用预定义的内部和默认组的信息进行填充。 通过单击池中某行的第一列来选择要处理的组。 若要创建新的工作组，请单击带星号 (&#42;) 前缀的行  。  
   
  **名称**  
  指定工作负荷组的名称。  

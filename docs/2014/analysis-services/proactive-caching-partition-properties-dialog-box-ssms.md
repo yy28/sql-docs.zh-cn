@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070706"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>主动缓存（“分区属性”对话框）(SSMS)
-  对于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的多维数据集，可以在 SQL Server Management Studio 中使用“分区属性”对话框的“主动缓存”页，为其度量值组中的分区设置存储和主动缓存属性。  
+  对于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的多维数据集，可以在 SQL Server Management Studio 中使用“分区属性”对话框的“主动缓存”页，为其度量值组中的分区设置存储和主动缓存属性。    
   
 ## <a name="options"></a>选项  
  **标准设置**  
@@ -43,7 +43,7 @@ ms.locfileid: "66070706"
  选择此项可以显式地设置存储模式、主动缓存和通知选项。  
   
  **选项**  
- 单击此项可显示 **“存储选项”** 对话框，以显式地设置存储模式、主动缓存和通知选项。 有关“存储选项”对话框的详细信息，请参阅[“存储选项”对话框（Analysis Services - 多维数据）](storage-options-dialog-box-analysis-services-multidimensional-data.md)。  
+ 单击此项可显示 **“存储选项”** 对话框，以显式地设置存储模式、主动缓存和通知选项。 有关  “存储选项”对话框的详细信息，请参阅[“存储选项”对话框（Analysis Services - 多维数据）](storage-options-dialog-box-analysis-services-multidimensional-data.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [主动缓存&#40;分区&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   

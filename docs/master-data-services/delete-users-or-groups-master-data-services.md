@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 66ecbfa946b894b3dcfad9befb63f30645f9c77d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478093"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>删除用户或组 (Master Data Services)
@@ -44,15 +44,15 @@ ms.locfileid: "65478093"
   
 ### <a name="to-delete-users-or-groups"></a>删除用户或组  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”** 。  
   
-2.  若要删除某一用户，请保持在 **“用户”** 页上。 若要删除某一组，请从菜单栏中单击“管理组”。  
+2.  若要删除某一用户，请保持在 **“用户”** 页上。 若要删除某一组，请从菜单栏中单击“管理组”  。  
   
 3.  在网格中，选择你要删除的用户或组所对应的行。  
   
-4.  单击 **“删除所选用户”** 或 **“删除所选组”**。  
+4.  单击 **“删除所选用户”** 或 **“删除所选组”** 。  
   
-5.  在确认对话框中，单击 **“确定”**。  
+5.  在确认对话框中，单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  

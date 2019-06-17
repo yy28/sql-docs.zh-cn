@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: bc104680f8acad6f54a8a0625257332971f38742
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775734"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>表达式（报表生成器和 SSRS）
@@ -57,7 +57,7 @@ ms.locfileid: "64775734"
 
 您可以使用表达式来指定许多报表项属性的值。 最常见的属性是文本框和占位符文本的值。 通常，如果某一文本框只包含一个表达式，则该表达式是文本框属性的值。 如果某一文本框包含多个表达式，则每个表达式都是该文本框中占位符文本的值。  
 
-默认情况下，表达式作为“简单表达式”  或“复杂表达式” 出现在报表设计图面上。  
+默认情况下，表达式作为“简单表达式”  或“复杂表达式”  出现在报表设计图面上。  
 
 -   **简单** ：包含对内置集合中单个项（例如，数据集字段、参数或内置字段）的引用的简单表达式。 在设计图面上，简单表达式将出现在括号中。 例如， `[FieldName]` 将对应于基础表达式 `=Fields!FieldName.Value`。 当您创建报表布局并且将项从“报表数据”窗格拖到设计图面时，系统将自动为您创建简单表达式。 有关表示不同内置集合的符号的详细信息，请参阅 [了解简单表达式中的前缀符号](#DisplayText)。  
 

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922879"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
@@ -64,7 +64,7 @@ ms.locfileid: "62922879"
  例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
   
  \@*PropertyName*  
- 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database 类的 IsAnsiNull 属性指定 \@IsAnsiNull。  
+ 指定与  “对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database  类的 IsAnsiNull  属性指定 \@IsAnsiNull。  
   
  \@*BooleanPropertyName*=true()  
  枚举指定的布尔属性设置为 TRUE 的所有对象。  
@@ -72,7 +72,7 @@ ms.locfileid: "62922879"
  \@*BooleanPropertyName*=false()  
  枚举指定的布尔属性设置为 FALSE 的所有对象。  
   
- contains(\@StringPropertyName, 'PatternString')  
+ contains(\@StringPropertyName  , 'PatternString  ')  
  枚举指定的字符串属性中包含“*PatternString*”中指定的一组字符（至少出现一次）的所有对象。  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -93,7 +93,7 @@ ms.locfileid: "62922879"
   
  可以按照存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的任何日期格式，计算以此格式指定的日期。  
   
- is_null(\@PropertyName)  
+ is_null(\@PropertyName  )  
  枚举指定属性的值为 NULL 的所有对象。  
   
  not(\<*PropertyExpression*>)  
@@ -104,7 +104,7 @@ ms.locfileid: "62922879"
   
  查询表达式必须以对服务器对象的绝对引用开头。 不允许使用以 / 开头的相对表达式。 查询表达式中指定的对象的顺序必须遵循相关对象模型中集合对象的层次结构。 例如，引用 Microsoft.SqlServer.Management.Smo 命令空间中对象的查询表达式必须从服务器节点开始，接下来才是数据库节点等。  
   
- 如果没有为对象指定 *\<FilterExpression>*，将枚举该节点的所有对象。  
+ 如果没有为对象指定 *\<FilterExpression>* ，将枚举该节点的所有对象。  
   
 ## <a name="uniform-resource-names-urn"></a>统一资源名称 (URN)  
  URN 是查询表达式的子集。 每个 URN 形成对单个对象的完全限定引用。 典型的 URN 使用 Name 属性来标识每个节点的单个对象。 例如，该 URN 引用一个特定列：  

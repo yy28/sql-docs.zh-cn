@@ -21,10 +21,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f6f4fec0762f1208af800d7070319924f02f0fcb
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980962"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 创建常量元素 (SQLXML 4.0)
@@ -36,7 +36,7 @@ ms.locfileid: "65980962"
   
 -   将顶级元素添加到 XML 文档。 XML 要求为文档提供一个顶级元素（根元素）。  
   
--   创建容器元素，如**\<订单 >** 包装所有订单的元素。  
+-   创建容器元素，如 **\<订单 >** 包装所有订单的元素。  
   
  **Sql： 是常量**批注可以添加到 **\<complexType >** 元素。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "65980962"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 以添加容器元素  
- 在此带批注的 XSD 架构中，  **\<CustomerOrders >** 通过指定定义为常量元素**sql： 是常量**属性值为 1。 因此，  **\<CustomerOrders >** 未映射到任何数据库表或列。 此常量元素组成**\<顺序 >** 子元素。  
+ 在此带批注的 XSD 架构中，  **\<CustomerOrders >** 通过指定定义为常量元素**sql： 是常量**属性值为 1。 因此，  **\<CustomerOrders >** 未映射到任何数据库表或列。 此常量元素组成 **\<顺序 >** 子元素。  
   
- 尽管 **\<CustomerOrders >** 未映射到任何数据库表或列，它仍然会出现在生成的 XML 作为一个容器元素，其中包含**\<顺序 >** 子元素。  
+ 尽管 **\<CustomerOrders >** 未映射到任何数据库表或列，它仍然会出现在生成的 XML 作为一个容器元素，其中包含 **\<顺序 >** 子元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8496eee2134d9f89163fce6b6ad3ef07ba49b1af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63276801"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>查看筛选器信息 (SQL Server Profiler)
@@ -28,9 +28,9 @@ ms.locfileid: "63276801"
   
 ### <a name="to-view-filter-information"></a>查看筛选器信息  
   
-1.  打开跟踪文件、跟踪表或 SQL 脚本，在 **“文件”** 菜单上，单击 **“属性”**。 如果要编辑跟踪模板或创建新跟踪，请跳过此步骤。  
+1.  打开跟踪文件、跟踪表或 SQL 脚本，在 **“文件”** 菜单上，单击 **“属性”** 。 如果要编辑跟踪模板或创建新跟踪，请跳过此步骤。  
   
-2.  在“事件选择”选项卡上，右键单击要查看的筛选器的数据列名称，然后单击“编辑列筛选器”。  
+2.  在“事件选择”  选项卡上，右键单击要查看的筛选器的数据列名称，然后单击“编辑列筛选器”  。  
   
 3.  在 **“编辑筛选器”** 对话框中，展开筛选器比较运算符以查看为指定的标准分配的值。 对要查看筛选器信息的所有列，重复步骤 2 和步骤 3。  
   

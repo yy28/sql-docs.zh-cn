@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30f8daab91172863ba18c6b75529063555b61afc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084161"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>交叉验证报表中的度量值
@@ -30,10 +30,10 @@ ms.locfileid: "66084161"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还为挖掘模型显示一组详细的度量值。 这些度量值依赖于模型类型以及要分析的属性的类型：例如，是离散的还是连续的。  
   
- 本节提供“交叉验证”报表中包含的度量值列表以及各度量值的含义。 有关如何计算各度量值的详细信息，请参阅[交叉验证公式](cross-validation-formulas.md)。  
+ 本节提供“交叉验证”  报表中包含的度量值列表以及各度量值的含义。 有关如何计算各度量值的详细信息，请参阅[交叉验证公式](cross-validation-formulas.md)。  
   
 ## <a name="list-of-measures-in-the-cross-validation-report"></a>交叉验证报表中度量值的列表  
- 下表列出了交叉验证报表中出现的度量值。 这些度量值按测试类型进行分组，测试类型在下表的左侧列中提供。 右侧列列出了度量值在报表中出现时的名称，并且简要解释了其含义。  
+ 下表列出了交叉验证报表中出现的度量值。 这些度量值按测试类型进行分组，测试类型在下表的左侧列中提供  。 右侧列列出了度量值在报表中出现时的名称，并且简要解释了其含义。  
   
 |测试类型|度量值和说明|  
 |---------------|-------------------------------|  

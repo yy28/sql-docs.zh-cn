@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea6e37603ae997c218db196c14fe7831bef95e81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871226"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>将数据库设置为单用户模式
@@ -61,13 +61,13 @@ ms.locfileid: "62871226"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  右键单击要更改的数据库，再单击“属性”。  
+2.  右键单击要更改的数据库，再单击“属性”  。  
   
 3.  在 **“数据库属性”** 对话框中，单击 **“选项”** 页。  
   
-4.  在 **“限制访问”** 选项中，选择 **“单用户”**。  
+4.  在 **“限制访问”** 选项中，选择 **“单用户”** 。  
   
-5.  如果其他用户连接到数据库，将出现 **“打开的连接”** 消息。 若要更改属性并关闭所有其他连接，请单击 **“是”**。  
+5.  如果其他用户连接到数据库，将出现 **“打开的连接”** 消息。 若要更改属性并关闭所有其他连接，请单击 **“是”** 。  
   
  还可以使用此过程将数据库设置为“多用户”访问或“限制”访问。 有关此“限制访问”选项的详细信息，请参阅[数据库属性（选项页）](database-properties-options-page.md)。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "62871226"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将数据库设置为 `SINGLE_USER` 模式，以获得独占访问权。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。在第一个 `WITH ROLLBACK IMMEDIATE` 语句中指定终止选项 `ALTER DATABASE` 。 这将导致所有未完成事务都将被回滚，并将立刻断开 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 示例数据库的所有其他连接。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将数据库设置为 `SINGLE_USER` 模式，以获得独占访问权。 然后，该示例将 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 数据库的状态设置为 `READ_ONLY` ，并将对数据库的访问权返回给所有用户。在第一个 `WITH ROLLBACK IMMEDIATE` 语句中指定终止选项 `ALTER DATABASE` 。 这将导致所有未完成事务都将被回滚，并将立刻断开 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 示例数据库的所有其他连接。  
   
  [!code-sql[DatabaseDDL#AlterDatabase8](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase8)]  
   

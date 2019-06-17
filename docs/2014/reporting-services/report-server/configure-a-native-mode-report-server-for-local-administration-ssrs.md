@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d1725e49ce825d3d57a3b41857e26a3843fbfc7c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104191"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>为本地管理配置本机模式报表服务器 (SSRS)
@@ -73,41 +73,41 @@ ms.locfileid: "66104191"
   
 ###  <a name="bkmk_site_settings"></a> 浏览器中“受信任的站点”设置  
   
-1.  使用“以管理员的身份运行”权限打开一个浏览器窗口。 从 **“开始”** 菜单上，单击 **“所有程序”**，右键单击 **Internet Explorer**，然后选择 **“以管理员的身份运行”**。  
+1.  使用“以管理员的身份运行”权限打开一个浏览器窗口。 从 **“开始”** 菜单上，单击 **“所有程序”** ，右键单击 **Internet Explorer**，然后选择 **“以管理员的身份运行”** 。  
   
 2.  单击 **“允许”** 以继续。  
   
 3.  在 URL 地址中，输入报表管理器 URL。 有关说明，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
-4.  单击 **“工具”**。  
+4.  单击 **“工具”** 。  
   
-5.  单击 **“Internet 选项”**。  
+5.  单击 **“Internet 选项”** 。  
   
-6.  单击 **“安全性”**。  
+6.  单击 **“安全性”** 。  
   
-7.  单击 **“受信任的站点”**。  
+7.  单击 **“受信任的站点”** 。  
   
-8.  单击 **“站点”**。  
+8.  单击 **“站点”** 。  
   
 9. 添加 `http://<your-server-name>`。  
   
 10. 如果不将 HTTPS 用于默认站点，请清除 **“对该区域中的所有站点要求服务器验证(https:)”** 复选框。  
   
-11. 单击 **“添加”**。  
+11. 单击 **“添加”** 。  
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ###  <a name="bkmk_configure_folder_settings"></a> 报表管理器文件夹设置  
   
-1.  在报表管理器的主页上，单击 **“文件夹设置”**。  
+1.  在报表管理器的主页上，单击 **“文件夹设置”** 。  
   
-2.  在“文件夹设置”页中，单击 **“安全性”**。  
+2.  在“文件夹设置”页中，单击 **“安全性”** 。  
   
-3.  单击 **“新建角色分配”**。  
+3.  单击 **“新建角色分配”** 。  
   
 4.  在“组或用户名”  字段中，按以下格式键入 Windows 用户帐户： `<domain>\<user>`。  
   
-5.  选择 **“内容管理员”**。  
+5.  选择 **“内容管理员”** 。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -120,36 +120,36 @@ ms.locfileid: "66104191"
     > [!TIP]  
     >  **注意：** 如果没有看到**站点设置**选项，请关闭并重新打开你的浏览器并浏览到报表管理器中使用管理权限。  
   
-3.  单击 **“安全性”**。  
+3.  单击 **“安全性”** 。  
   
-4.  单击 **“新建角色分配”**。  
+4.  单击 **“新建角色分配”** 。  
   
 5.  在“组或用户名”  字段中，按以下格式键入 Windows 用户帐户： `<domain>\<user>`。  
   
-6.  选择 **“系统管理员”**。  
+6.  选择 **“系统管理员”** 。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 8.  关闭报表管理器。  
   
-9. 重新在 Internet Explorer 中打开报表管理器，但不使用 **“以管理员的身份运行”**。  
+9. 重新在 Internet Explorer 中打开报表管理器，但不使用 **“以管理员的身份运行”** 。  
   
 ##  <a name="bkmk_configure_ssms"></a> 为本地报表服务器管理配置 SQL Server Management Studio (SSMS)  
  默认情况下，您不能访问在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供的所有报表服务器属性，除非您使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
  **配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 角色属性和角色分配，以便您无需每次都使用提升的权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ：  
   
--   从 **“开始”** 菜单上，依次单击 **“所有程序”** 和 **SQL Server 2014**，右键单击 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**，然后单击 **“以管理员的身份运行”**。  
+-   从 **“开始”** 菜单上，依次单击 **“所有程序”** 和 **SQL Server 2014**，右键单击 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** ，然后单击 **“以管理员的身份运行”** 。  
   
 -   连接到您的本地 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器。  
   
--   在 **“安全性”** 节点中，单击 **“系统角色”**。  
+-   在 **“安全性”** 节点中，单击 **“系统角色”** 。  
   
--   右键单击 **“系统管理员”** ，然后单击 **“属性”**。  
+-   右键单击 **“系统管理员”** ，然后单击 **“属性”** 。  
   
--   在 **“系统角色属性”** 页中，选择 **“查看报表服务器属性”**。 选择您要与系统管理员角色的成员相关联的任何其他属性。  
+-   在 **“系统角色属性”** 页中，选择 **“查看报表服务器属性”** 。 选择您要与系统管理员角色的成员相关联的任何其他属性。  
   
--   单击“确定” 。  
+-   单击“确定”  。  
   
 -   关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
@@ -166,15 +166,15 @@ ms.locfileid: "66104191"
   
  **在每次打开 SSDT 时使用提升的权限运行：**  
   
-1.  从开始屏幕中，键入`sql server`，然后右击**SQL Server Data Tools for Visual Studio**。 单击 **“以管理员身份运行”**。  
+1.  从开始屏幕中，键入`sql server`，然后右击**SQL Server Data Tools for Visual Studio**。 单击 **“以管理员身份运行”** 。  
   
      **或者**，在较早的操作系统上：  
   
-     从 **“开始”** 菜单上，依次单击 **“所有程序”** 和 **SQL Server 2014**，右键单击 **“SQL Server Data Tools”**，然后单击 **“以管理员的身份运行”**。  
+     从 **“开始”** 菜单上，依次单击 **“所有程序”** 和 **SQL Server 2014**，右键单击 **“SQL Server Data Tools”** ，然后单击 **“以管理员的身份运行”** 。  
   
-2.  单击 **“继续”**。  
+2.  单击 **“继续”** 。  
   
-3.  单击 **“运行程序”**。  
+3.  单击 **“运行程序”** 。  
   
  现在，您应该能够将报表和其他项部署到本地报表服务器上了。  
   

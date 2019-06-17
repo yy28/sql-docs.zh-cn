@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241243"
 ---
 # <a name="display-size"></a>显示大小
@@ -39,7 +39,7 @@ ms.locfileid: "63241243"
 |SQL_FLOAT SQL_DOUBLE|24 (一个符号，15 位、 小数点、 字母*E*，一个符号和 3 位数字)。|  
 |所有二进制类型 [a]|定义或最大 （适用于变量类型） 的列的长度乘以 2。 （每个二进制字节表示的 2 位十六进制数中）。|  
 |SQL_TYPE_DATE|10 (日期格式的日期*年-月-日*)。|  
-|SQL_TYPE_TIME|8 (格式的时间*hh: mm:*)<br /><br /> - 或 -<br /><br /> 9 + *s* (格式的时间*hh: mm:*[....fff]，其中*s*秒的小数部分精度)。|  
+|SQL_TYPE_TIME|8 (格式的时间*hh: mm:* )<br /><br /> - 或 -<br /><br /> 9 + *s* (格式的时间*hh: mm:* [....fff]，其中*s*秒的小数部分精度)。|  
 |SQL_TYPE_TIMESTAMP|19 (对于中的时间戳*年-月-日 hh: mm:* 格式)<br /><br /> - 或 -<br /><br /> 20 + *s* (对于中的时间戳*年-月-日： 分： 秒*[.fff...] 格式，其中*s*秒的小数部分精度)。|  
 |所有时间间隔数据类型|请参阅[间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)。|  
 |SQL_GUID|36 (中的字符数*aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*格式|  

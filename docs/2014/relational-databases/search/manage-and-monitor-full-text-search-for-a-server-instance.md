@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011171"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
@@ -34,9 +34,9 @@ ms.locfileid: "66011171"
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>查看和更改全文搜索的服务器属性  
   
-1.  在“对象资源管理器”中，右键单击服务器，再单击“属性”。  
+1.  在“对象资源管理器”中，右键单击服务器，再单击“属性”  。  
   
-2.  在“服务器属性”对话框中，单击“高级”页以查看有关全文搜索的服务器信息。 全文属性如下所示：  
+2.  在“服务器属性”  对话框中，单击“高级”  页以查看有关全文搜索的服务器信息。 全文属性如下所示：  
   
     -   **默认全文语言**  
   

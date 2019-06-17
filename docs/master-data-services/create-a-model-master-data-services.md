@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5c55db7072020f715882912b46cac0e9219cbbf9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477057"
 ---
 # <a name="create-a-model-master-data-services"></a>创建模型 (Master Data Services)
@@ -36,27 +36,27 @@ ms.locfileid: "65477057"
   
 ### <a name="to-create-a-model"></a>创建模型  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“模型”**。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“模型”** 。  
   
-3.  在“管理模型”  页上，单击“添加” 。 面板将会在右侧显示。  
+3.  在“管理模型”  页上，单击“添加”  。 面板将会在右侧显示。  
   
 4.  在“名称”  框中，键入模型的名称。  
   
-5.  （可选）在“说明”字段中，输入模型说明。  
+5.  （可选）在“说明”  字段中，输入模型说明。  
   
-6.  在“日志保留天数”  字段中，选择一个选项来保留日志数据。 默认值是“系统设置” ，指示值继承自 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的系统设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
+6.  在“日志保留天数”  字段中，选择一个选项来保留日志数据。 默认值是“系统设置”  ，指示值继承自 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的系统设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
-     若要替代系统设置且不删除事务日志数据，请选择“否” 。 若要仅保留今日的日志数据并截断之前所有天数的日志数据，请选择“是”并将“天数”字段设置为 0。 若要保留特定天数的日志数据，请选择“是”  并将“天数”  字段设置为相应天数。  
+     若要替代系统设置且不删除事务日志数据，请选择“否”  。 若要仅保留今日的日志数据并截断之前所有天数的日志数据，请选择“是”并将“天数”字段设置为 0   。 若要保留特定天数的日志数据，请选择“是”  并将“天数”  字段设置为相应天数。  
   
 7.  或者，选择 **“使用与模型相同的名称创建实体”** 可以使用与模型相同的名称创建实体。  
   
-8.  单击 **“保存模型”**。  
+8.  单击 **“保存模型”** 。  
   
  对于创建的每个模型，系统都会在网格中添加一行（其中包含八列）。 八个列是：  
   
--   **状态**：模型状态。 单击“保存模型”按钮后，系统会显示![正在更新](../master-data-services/media/mds-model-status-updating.png "Updating")图像，表示模型正在更新。 如果创建或编辑模型时出现错误，系统会显示![错误](../master-data-services/media/mds-model-status-error.png "Error")图像。 否则，如果状态为“正常”，会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "“确定”") 图像。  
+-   **状态**：模型状态。 单击“保存模型”按钮后，系统会显示![正在更新](../master-data-services/media/mds-model-status-updating.png "Updating")图像，表示模型正在更新  。 如果创建或编辑模型时出现错误，系统会显示![错误](../master-data-services/media/mds-model-status-error.png "Error")图像。 否则，如果状态为“正常”，会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "“确定”") 图像。  
   
 -   **名称**：模型名称。  
   

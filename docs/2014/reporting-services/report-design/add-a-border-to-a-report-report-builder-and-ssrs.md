@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1cf33c00dc9bf0b2fbf588fea9793e0deabfc2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106883"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>向报表添加边框（报表生成器和 SSRS）
@@ -27,14 +27,14 @@ ms.locfileid: "66106883"
   
 ### <a name="to-add-a-border-to-a-report"></a>向报表添加边框  
   
-1.  右键单击页眉中任何项的外部，然后单击“页眉属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框、上边框和右边框。  
+1.  右键单击页眉中任何项的外部，然后单击“页眉属性”  。 在 **“边框”** 选项卡上，添加所需样式的左边框、上边框和右边框。  
   
     > [!NOTE]  
     >  如果不在报表中使用标头，然后就可以只是表体周围的边框或您可以添加从标头**插入**选项卡。  
   
-2.  右键单击设计图面上任何项外部的主体，然后单击“主体属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框和右边框。  
+2.  右键单击设计图面上任何项外部的主体，然后单击“主体属性”  。 在 **“边框”** 选项卡上，添加所需样式的左边框和右边框。  
   
-3.  右键单击页脚中任何项的外部，然后单击“页脚属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框、下边框和右边框。  
+3.  右键单击页脚中任何项的外部，然后单击“页脚属性”  。 在 **“边框”** 选项卡上，添加所需样式的左边框、下边框和右边框。  
   
 ## <a name="see-also"></a>请参阅  
  [矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)  

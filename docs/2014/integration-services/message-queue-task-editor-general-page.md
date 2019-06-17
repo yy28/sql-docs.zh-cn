@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cdd3c2e8e903de90871b096d24cda17fe490d1d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057633"
 ---
 # <a name="message-queue-task-editor-general-page"></a>消息队列任务编辑器（“常规”页）
@@ -40,12 +40,12 @@ ms.locfileid: "66057633"
  指示是否使用消息队列（也称为 MSMQ）的 2000 格式。 默认值为 `False`。  
   
  **MSMQConnection**  
- 选择现有 MSMQ 连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
+ 选择现有 MSMQ 连接管理器，或单击“\<新建连接...>”  以创建新的连接管理器。  
   
  **相关主题**：[MSMQ 连接管理器](connection-manager/msmq-connection-manager.md)、[MSMQ 连接管理器编辑器](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
  **Message**  
- 指定消息队列任务是发送消息还是接收消息。 如果选择了 **“发送消息”**，则该对话框的左窗格将列出“发送”页；如果选择了 **“接收消息”**，则将列出“接收”页。 默认情况下，此值设置为 **“发送消息”**。  
+ 指定消息队列任务是发送消息还是接收消息。 如果选择了 **“发送消息”** ，则该对话框的左窗格将列出“发送”页；如果选择了 **“接收消息”** ，则将列出“接收”页。 默认情况下，此值设置为 **“发送消息”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

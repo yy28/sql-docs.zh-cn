@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
 ms.openlocfilehash: 11441e0866904742985c55d535e8398802b206fa
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775041"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
@@ -178,7 +178,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 如果在文本框中包含日期或数字，应使用文本框的 Format 属性来应用格式设置，而不`Format`内文本框中的函数。  
 
--   `Right`， `Len`，并`InStr`函数可用于返回子字符串，例如，修整*域*\\*用户名*到不仅仅是用户名。 下面的表达式从名为 User 的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
+-   `Right`， `Len`，并`InStr`函数可用于返回子字符串，例如，修整*域*\\*用户名*到不仅仅是用户名。 下面的表达式从名为 User  的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  

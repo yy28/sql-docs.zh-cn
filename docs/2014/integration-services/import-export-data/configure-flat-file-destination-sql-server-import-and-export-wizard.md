@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62893028"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>配置平面文件目标（SQL Server 导入和导出向导）
@@ -42,7 +42,7 @@ ms.locfileid: "62893028"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}。**|行由竖线分隔。|  
+|**竖线 {&#124;}** 。|行由竖线分隔。|  
   
  **列分隔符**  
  从列分隔符的列表中进行选择。  
@@ -56,7 +56,7 @@ ms.locfileid: "62893028"
 |**冒号 {:}**|列由冒号分隔。|  
 |**逗号 {,}**|列由逗号分隔。|  
 |**制表符 {t}**|列由制表符分隔。|  
-|**竖线 {&#124;}。**|列由竖线分隔。|  
+|**竖线 {&#124;}** 。|列由竖线分隔。|  
   
  **预览**  
  在中查看**预览数据**对话框结果的所选的格式设置选项中为目标平面文件。  

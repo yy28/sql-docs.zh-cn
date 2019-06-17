@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a1477f934dfa8a23fa5498124b74c9a150b24a33
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480075"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>分配模型对象权限 (Master Data Services)
@@ -35,23 +35,23 @@ ms.locfileid: "65480075"
   
 ### <a name="to-assign-model-object-permissions"></a>分配模型对象权限  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”** 。  
   
 2.  在 **“用户”** 或 **“组”** 页上，选择要编辑的用户或组所对应的行。  
   
-3.  单击 **“编辑所选用户”**。  
+3.  单击 **“编辑所选用户”** 。  
   
 4.  单击 **“模型”** 选项卡。  
   
 5.  也可以从 **“模型”** 列表中选择某一模型。  
   
-6.  单击 **“编辑”**。  
+6.  单击 **“编辑”** 。  
   
 7.  展开树，单击要向其分配权限的模型对象。  
   
 8.  从菜单中选择**只读**，**更新**，或**拒绝**。  
   
-9. 单击“保存” 。  
+9. 单击“保存”  。  
   
 ## <a name="next-steps"></a>后续步骤  
   

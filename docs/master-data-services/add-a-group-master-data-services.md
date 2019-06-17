@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 236596354139971c6fcceebff759a57f807cdefa
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484865"
 ---
 # <a name="add-a-group-master-data-services"></a>添加组 (Master Data Services)
@@ -34,17 +34,17 @@ ms.locfileid: "65484865"
   
 ### <a name="to-add-a-group"></a>添加组  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”** 。  
   
-2.  在 **“用户”** 页上，从菜单栏中，单击 **“管理组”**。  
+2.  在 **“用户”** 页上，从菜单栏中，单击 **“管理组”** 。  
   
-3.  单击 **“添加组”**。  
+3.  单击 **“添加组”** 。  
   
 4.  输入该组的名称，组名之前应放置 Active Directory 域名或服务器计算机的名称，例如 *domain\group_name* 或 *computer\group_name*。  
   
-5.  或者单击 **“检查名称”**。  
+5.  或者单击 **“检查名称”** 。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
     > [!NOTE]  
     >  当用户第一次访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]时，将用户的名称添加到 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户列表。  

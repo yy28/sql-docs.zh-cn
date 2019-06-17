@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721451"
 ---
 # <a name="disable-publishing-and-distribution"></a>禁用发布和分发
@@ -63,7 +63,7 @@ ms.locfileid: "62721451"
   
 1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到要禁用的发布服务器或分发服务器，然后展开该服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，再单击 **“禁用发布和分发”**。  
+2.  右键单击 **“复制”** 文件夹，再单击 **“禁用发布和分发”** 。  
   
 3.  完成禁用发布和分发向导中的步骤。  
   

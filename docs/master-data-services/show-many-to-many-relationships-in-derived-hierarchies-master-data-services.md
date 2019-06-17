@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488062"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>显示派生层次结构中的多对多关系 (Master Data Services)
@@ -41,9 +41,9 @@ ms.locfileid: "65488062"
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
- 请注意，在上面的屏幕截图中， **Employee** 实体显示在“当前级别”  下方的中间位置，作为唯一级别。 派生层次结构右侧的“预览”  只是显示了 **Employee** 实体的所有成员列表。 左侧的“可用级别”部分将显示除当前顶部级别 (**Employee**) 外可能会添加的级别。 大多数这些级别都是 **Employee** 实体上基于域的属性 (DBA)，包括 **Department** DBA。  
+ 请注意，在上面的屏幕截图中， **Employee** 实体显示在“当前级别”  下方的中间位置，作为唯一级别。 派生层次结构右侧的“预览”  只是显示了 **Employee** 实体的所有成员列表。 左侧的“可用级别”  部分将显示除当前顶部级别 (**Employee**) 外可能会添加的级别。 大多数这些级别都是 **Employee** 实体上基于域的属性 (DBA)，包括 **Department** DBA。  
   
- 从 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 开始，便提供了一种可用于创建 M2M 关系模型的新级别类型，例如：Class（通过 ClassRegistration.Student 映射）。 级别名称比其他名称更为详细，用以反映明确描述映射关系所需的额外信息。 将此级别拖放到“当前级别”部分中的 **Employee** 级别  ：  
+ 从 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 开始，便提供了一种可用于创建 M2M 关系模型的新级别类型，例如：Class（通过 ClassRegistration.Student 映射）  。 级别名称比其他名称更为详细，用以反映明确描述映射关系所需的额外信息。 将此级别拖放到“当前级别”部分中的 **Employee** 级别  ：  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -57,11 +57,11 @@ ms.locfileid: "65488062"
   
  映射实体 **ClassRegistration** 的成员未在派生层次结构内的任何位置显示。 它们只用于定义层次结构中父级和子级成员之间的关系。  
   
- 可以通过修改映射实体成员来编辑 M2M 关系，具体做法是执行以下任一操作。 M2M 关系在“派生层次结构资源管理器”页为只读。  
+ 可以通过修改映射实体成员来编辑 M2M 关系，具体做法是执行以下任一操作。 M2M 关系在“派生层次结构资源管理器”  页为只读。  
   
--   使用 Excel 中的 Master Data Services 外接程序或通过使用数据暂存修改“实体资源管理器”页上的映射实体成员。  
+-   使用 Excel 中的 Master Data Services 外接程序或通过使用数据暂存修改“实体资源管理器”  页上的映射实体成员。  
   
--   拖放“派生层次结构资源管理器” 页中各父级之间的子节点。  
+-   拖放“派生层次结构资源管理器”  页中各父级之间的子节点。  
   
      此方法可修改现有的成员（如可能）并根据需要添加新成员。 将不会删除现有成员。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65488062"
 ### <a name="M2MSample"></a> 示例模型中的 M2M 关系  
 有关 M2M 关系的演示，请查看 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]附带的 Customer 示例模型中的 Region Climate 派生层次结构。   
   
-如下图中所示，对此关系进行建模的级别名称是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate（通过 RegionClimate.Region 进行映射）**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** 显示按照与区域关联的气候类型分组的区域。 这是 M2M 关系，因为存在与多个气候（父级）关联的区域（子成员）。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 与 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 关联。  
+如下图中所示，对此关系进行建模的级别名称是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate（通过 RegionClimate.Region 进行映射）** 。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** 显示按照与区域关联的气候类型分组的区域。 这是 M2M 关系，因为存在与多个气候（父级）关联的区域（子成员）。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 与 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 关联。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   

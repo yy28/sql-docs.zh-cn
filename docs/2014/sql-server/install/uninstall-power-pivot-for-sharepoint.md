@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9397dd268d767fd8c4bad9056455c21b9be65398
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62989861"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>卸载 PowerPivot for SharePoint
@@ -66,7 +66,7 @@ ms.locfileid: "62989861"
 ##  <a name="bkmk_remove"></a> 步骤 2：从 SharePoint 删除功能和解决方案  
  使用 PowerPivot 配置工具从 SharePoint 中删除 PowerPivot 服务和应用程序。  
   
--   你必须是场管理员、Analysis Services 实例上的服务器管理员和场的配置数据库上的“db_owner”。  
+-   你必须是场管理员、Analysis Services 实例上的服务器管理员和场的配置数据库上的“db_owner”  。  
   
 -   使用适合 SharePoint 版本的配置工具版本。 不能对 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 安装使用这两个工具。  
   
@@ -78,15 +78,15 @@ ms.locfileid: "62989861"
   
     -   **PowerPivot 配置工具**  
   
-2.  选择 **“删除功能、服务、应用程序和解决方案”** ，然后单击 **“确定”**。  
+2.  选择 **“删除功能、服务、应用程序和解决方案”** ，然后单击 **“确定”** 。  
   
-3.  也可以将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”** 和 **“退出”** 命令。  
+3.  也可以将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”** 、 **“运行”** 和 **“退出”** 命令。  
   
 4.  检查任务列表中的每个操作，了解每个操作的作用。  
   
      在 **“PowerPivot 服务应用程序”** 中，您可以选择删除与服务应用程序相关联的应用程序数据。 应用程序数据是随服务应用程序创建的 SQL Server 数据库，目的在于存储数据刷新计划、数据库实例信息、使用情况数据，以及 PowerPivot for SharePoint 所使用的其他数据。 它并不存储用户文件，如 PowerPivot 工作簿。 除非您有特定原因要保留应用程序数据（例如，您有与数据刷新或数据访问相关的数据保留策略），否则您可以删除应用程序数据库，而不删除 SharePoint 用户创建或保存的任何文件。  
   
-     若要删除该数据库，请依次选择 **“删除 PowerPivot 服务应用程序”** 和 **“删除与此服务应用程序相关联的应用程序数据”**。  
+     若要删除该数据库，请依次选择 **“删除 PowerPivot 服务应用程序”** 和 **“删除与此服务应用程序相关联的应用程序数据”** 。  
   
 5.  或者，检查 **“输出”** 选项卡或 **“脚本”** 选项卡中的详细信息。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62989861"
   
 6.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。  
   
-7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当你单击“运行”时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场。 是否继续?”  
+7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后， **“运行”** 才可用。 当你单击“运行”  时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场。 是否继续?”  
   
 8.  单击 **“是”** 继续操作。  
   
@@ -120,7 +120,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  检查现有部署的以下信息：“类型”是收回或部署，“文件”为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+3.  检查现有部署的以下信息：“类型”是收回或部署，“文件”为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp   。  
   
 4.  对于部署或收回与 PowerPivot 解决方案，将复制的 GUID 值**JobId**然后将其粘贴到以下命令 （使用的标记、 复制和粘贴命令外壳的编辑菜单上复制该 GUID）：  
   
@@ -128,7 +128,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
-5.  通过依次单击 **“验证”** 和 **“运行”**，在该配置工具中重试该任务。  
+5.  通过依次单击 **“验证”** 和 **“运行”** ，在该配置工具中重试该任务。  
   
  或者，您可以使用 PowerShell 从场中删除功能和解决方案。 有关详细信息，请参阅[powerpivot for SharePoint 的 PowerShell 参考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
   
@@ -137,11 +137,11 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  可以卸载部分安装而不影响已安装的其他 SQL Server 实例（或同一实例中的功能）。 例如，可以卸载 PowerPivot for SharePoint 而保留安装的其他组件，例如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或数据库引擎。  
   
-1.  从程序列表中选择“Microsoft SQL Server 2014 (64 位)”。  
+1.  从程序列表中选择“Microsoft SQL Server 2014 (64 位)”  。  
   
-2.  单击“卸载/更改”。  
+2.  单击“卸载/更改”。   
   
-3.  单击 **“删除”**。 这将启动 SQL Server 安装程序。  
+3.  单击 **“删除”** 。 这将启动 SQL Server 安装程序。  
   
      您可以从安装程序中选择 **PowerPivot** 实例，然后选择 **“Analysis Services”** 和 **“Analysis Services SharePoint 集成”** ，这样就可以只删除该功能，而保留其他功能。  
   
@@ -181,7 +181,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      相反，PowerPivot 系统服务自动生成的单独目标应用程序将在卸载 PowerPivot 时被自动删除。  
   
-4.  在控制面板中，单击 **“程序”**，然后单击 **“卸载程序”** 。卸载不再使用的任何 Analysis Services 客户端库。 在您卸载 PowerPivot for SharePoint 时，将不删除 Analysis Services ADOMD.NET 和 Microsoft SQL Server Analysis Management Objects。 因为这些库可能由使用 Analysis Services 数据的其他程序使用，所以，SQL Server 安装程序将不会自动卸载它们。 如果不再需要，您必须单独卸载这些客户端库。  
+4.  在控制面板中，单击 **“程序”** ，然后单击 **“卸载程序”** 。卸载不再使用的任何 Analysis Services 客户端库。 在您卸载 PowerPivot for SharePoint 时，将不删除 Analysis Services ADOMD.NET 和 Microsoft SQL Server Analysis Management Objects。 因为这些库可能由使用 Analysis Services 数据的其他程序使用，所以，SQL Server 安装程序将不会自动卸载它们。 如果不再需要，您必须单独卸载这些客户端库。  
   
      除非您在执行故障排除或者安装说明明确指示您进行卸载，否则，不要卸载 SQL Server Reporting Services SharePoint 2010 外接程序。 该 Reporting Services 外接程序由 Access Services 使用。 它是由 SharePoint 产品准备工具安装的，并且应保留在系统上以便支持 SharePoint 所需的功能。  
   

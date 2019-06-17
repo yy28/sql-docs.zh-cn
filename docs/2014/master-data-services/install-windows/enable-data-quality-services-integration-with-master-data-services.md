@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5cf9a81134af8d6e90a1b869f8cc011a17a4b93a
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482925"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>实现 Data Quality Services 与 Master Data Services 的集成
@@ -30,13 +30,13 @@ ms.locfileid: "65482925"
   
 1.  打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  在左窗格中单击 **“Web 配置”**。  
+2.  在左窗格中单击 **“Web 配置”** 。  
   
 3.  在 **“Web 配置”** 页上，选择网站和 Web 应用程序。  
   
-4.  在 **“启用 DQS 集成”** 部分中，单击 **“启用与 Data Quality Services 的集成”**。  
+4.  在 **“启用 DQS 集成”** 部分中，单击 **“启用与 Data Quality Services 的集成”** 。  
   
-5.  在确认对话框中，单击 **“确定”**。  
+5.  在确认对话框中，单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [用于 Excel 的 MDS 外接程序中的数据质量匹配](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   

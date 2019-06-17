@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065881"
 ---
 # <a name="translations-analysis-services"></a>翻译 (Analysis Services)
@@ -49,7 +49,7 @@ ms.locfileid: "66065881"
   
 3.  找到 dimDate、dimProduct、dimProductCategory 或 dimProductSubcateogry。 所有这些维度均包含月份、每周天数、产品名称、类别名称等已翻译成员的属性。  
   
-4.  右键单击任一字段并选择“浏览数据” 。 你将看到每个成员的英语、西班牙语和法语翻译。  
+4.  右键单击任一字段并选择“浏览数据”  。 你将看到每个成员的英语、西班牙语和法语翻译。  
   
  日期、时间和货币的格式不通过翻译实现。 若要根据客户端的区域设置动态提供区域特定的格式，请使用货币换算向导和 `FormatString` 属性。 有关详细信息，请参阅 [货币换算 (Analysis Services)](currency-conversions-analysis-services.md) 和 [FormatString 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "66065881"
   
 3.  要将属性绑定到提供已翻译值的列：  
   
-    1.  仍然是在维度设计器 |“翻译” ，添加一个新翻译。 选择语言。 页面上将出现新的一列来接受已翻译的值。  
+    1.  仍然是在维度设计器 |“翻译”  ，添加一个新翻译。 选择语言。 页面上将出现新的一列来接受已翻译的值。  
   
-    2.  将光标置于与其中一个属性相邻的空单元格中。 该属性不能为密钥，但所有其他属性均可选。 你会看到一个内含一个点的小按钮。 单击该按钮以打开“翻译属性数据对话框” 。  
+    2.  将光标置于与其中一个属性相邻的空单元格中。 该属性不能为密钥，但所有其他属性均可选。 你会看到一个内含一个点的小按钮。 单击该按钮以打开“翻译属性数据对话框”  。  
   
     3.  为标题输入一个翻译。 这在目标语言中用作数据标签，例如，在 PivotTable 字段列表中用作字段名。  
   

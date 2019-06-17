@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35399614c69d63f3d7daae2a64f670d7ccfbaef0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021656"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>发布信息，警告（快照发布，SQL Server 2005 及更高版本）
@@ -29,7 +29,7 @@ ms.locfileid: "63021656"
 -   定义与警告关联的警报。  
   
 ## <a name="warnings-thresholds-and-alerts"></a>警告、阈值和警报  
- 默认情况下，复制监视器会为未初始化的订阅显示警告：在包含订阅信息的页的“状态”  列中，显示“未初始化的订阅”  状态作为警告。 对于快照发布，您也可以通过设置选项 **“如果订阅将在阈值内过期，则发出警告”**，指定在订阅即将过期时发出警告。 如果达到或超过指定的阈值，订阅状态将显示为 **“即将过期/已过期”** （除非需要显示更高优先级的问题）。  
+ 默认情况下，复制监视器会为未初始化的订阅显示警告：在包含订阅信息的页的“状态”  列中，显示“未初始化的订阅”  状态作为警告。 对于快照发布，您也可以通过设置选项 **“如果订阅将在阈值内过期，则发出警告”** ，指定在订阅即将过期时发出警告。 如果达到或超过指定的阈值，订阅状态将显示为 **“即将过期/已过期”** （除非需要显示更高优先级的问题）。  
   
  除了在复制监视器中显示警告之外，达到阈值也可以触发警报。 通过单击 **“配置警报”** 并在 **“配置复制警报”** 对话框中提供信息，可以定义警报。  
   

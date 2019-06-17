@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: be894aa43636cc81c9dbd462cb8b5aff55dbcd84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769263"
 ---
 # <a name="-equal-ssis-expression"></a>==（等于）（SSIS 表达式）
@@ -52,7 +52,7 @@ expression1 == expression2
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
   
--   **“日期”、“时间”或“日期/时间”**：expression1 和 expression2 的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **“日期”、“时间”或“日期/时间”** ：expression1  和 expression2  的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  
@@ -81,7 +81,7 @@ expression1 == expression2
   
 -   **Binary** ： *expression1* 和 *expression2* 的计算结果必须为 DT_BYTES 数据类型。  
   
--   **BLOB**：expression1 和 expression2 的计算结果必须为同一个二进制大型对象块 (BLOB) 数据类型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB**：expression1 和 expression2 的计算结果必须为同一个二进制大型对象块 (BLOB) 数据类型：   DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  有关数据类型的详细信息，请参阅 [Integration Services Data Types](../data-flow/integration-services-data-types.md)。  
   

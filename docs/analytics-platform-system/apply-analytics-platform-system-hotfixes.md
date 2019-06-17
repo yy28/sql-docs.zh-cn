@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019042"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>应用 Analytics Platform System 修补程序
@@ -32,7 +32,7 @@ ms.locfileid: "63019042"
   
 -   有权访问管理控制台监视设备状态分析平台系统登录名。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Fabric 域管理员帐户连接到的知识 _< 域名 >_**-HST01**节点。  
+-   Fabric 域管理员帐户连接到的知识 _< 域名 >_ **-HST01**节点。  
   
 ## <a name="HowToInstallPDW"></a>若要应用 Analytics Platform System 修补程序  
 与 Microsoft 更新中，不同的分析平台系统软件修补程序不通过 WSUS 处理。 在具有不同的工作流，并通过运行修补程序包安装。  

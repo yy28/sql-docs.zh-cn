@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997820"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -45,7 +45,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 是要更改的给定发布服务器的属性。 *属性*是**sysname**可以是下列值之一。  
   
-`[ @value = ] 'value'` 为给定属性的值。 *值*是**nvarchar(255)**，默认值为 NULL。  
+`[ @value = ] 'value'` 为给定属性的值。 *值*是**nvarchar(255)** ，默认值为 NULL。  
   
 `[ @storage_connection_string = ] 'storage_connection_string'` SQL 数据库托管实例需要的、 应与 Azure SQL 数据库存储卷的访问密钥相匹配。 
 

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921183"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>将数据库还原到新位置 (SQL Server)
@@ -81,7 +81,7 @@ ms.locfileid: "62921183"
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  右键单击“数据库”，然后单击“还原数据库”。 **“还原数据库”** 对话框随即打开。  
+2.  右键单击“数据库”，然后单击“还原数据库”   。 **“还原数据库”** 对话框随即打开。  
   
 3.  在 **“常规”** 页上，使用 **“源”** 部分指定要还原的备份集的源和位置。 选择以下选项之一：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62921183"
   
     1.  **“设备”**  
   
-         单击“浏览”按钮 (**...**) 以打开“选择备份设备”对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”**。  
+         单击“浏览”按钮 ( **...** ) 以打开“选择备份设备”  对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”** 。  
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "62921183"
   
 6.  在 **“要还原的备份集”** 网格中，选择要还原的备份。 此网格将显示对于指定位置可用的备份。 默认情况下，系统会推荐一个恢复计划。 若要覆盖建议的恢复计划，可以更改网格中的选择。 当取消选择某个早期备份时，将自动取消选择那些需要还原该早期备份才能进行的备份。  
   
-     有关“用于还原的备份集”网格中的列的信息，请参阅[还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)。  
+     有关“用于还原的备份集”  网格中的列的信息，请参阅[还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)。  
   
-7.  若要指定数据库文件的新位置，请选择 **“文件”** 页，然后单击 **“将所有文件重新定位到文件夹”**。 为 **“数据文件的文件夹”** 和 **“日志文件的文件夹”** 提供一个新位置。 有关该网格的详细信息，请参阅[还原数据库（“文件”页）](restore-database-files-page.md)。  
+7.  若要指定数据库文件的新位置，请选择 **“文件”** 页，然后单击 **“将所有文件重新定位到文件夹”** 。 为 **“数据文件的文件夹”** 和 **“日志文件的文件夹”** 提供一个新位置。 有关该网格的详细信息，请参阅[还原数据库（“文件”页）](restore-database-files-page.md)。  
   
 8.  在 **“选项”** 页上，根据要求调整选项。 有关这些选项的详细信息，请参阅[还原数据库（“选项”页）](restore-database-options-page.md)。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "62921183"
   
      有关详细信息，请参阅 [RESTORE 参数 (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql) 中的“指定备份集”。  
   
-     移动 **'*`logical_file_name_in_backup`*'** TO **'*`operating_system_file_name`*'** [ `,`...*n* ]  
+     移动 **' *`logical_file_name_in_backup`* '** TO **' *`operating_system_file_name`* '** [ `,`...*n* ]  
      指定由 *logical_file_name_in_backup* 指定的数据或日志文件将还原到 *operating_system_file_name*指定的位置。 请为每个要从备份集还原到新位置的逻辑文件指定 MOVE 语句。  
   
     |Option|Description|  

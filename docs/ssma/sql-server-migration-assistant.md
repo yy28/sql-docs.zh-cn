@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240226"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
@@ -47,7 +47,7 @@ SSMA 支持以下目标版本。
 - Azure SQL Database
 - Azure SQL 数据仓库 * *
 
-* * 仅适用于 Oracle 的 SSMA 支持此目标。
+\* * 仅适用于 Oracle 的 SSMA 支持此目标。
  
 ## <a name="downloads"></a>下载
 - [适用于 Access 的 SSMA](https://aka.ms/ssmaforaccess)

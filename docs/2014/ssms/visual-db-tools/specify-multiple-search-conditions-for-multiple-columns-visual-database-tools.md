@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204944"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>为多个列指定多个搜索条件 (Visual Database Tools)
@@ -39,9 +39,9 @@ ms.locfileid: "63204944"
   
 1.  在[“条件”窗格](visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在要搜索的第一个列的“筛选器”列中，指定第一个条件。  
+2.  在要搜索的第一个列的“筛选器”  列中，指定第一个条件。  
   
-3.  在要搜索的第二个数据列的 **Or...** 列中，指定第二个条件，将“筛选器”列保留为空白。  
+3.  在要搜索的第二个数据列的 **Or...** 列中，指定第二个条件，将“筛选器”  列保留为空白。  
   
      查询和视图设计器将创建包含 OR 条件的 WHERE 子句，如下所示：  
   
@@ -55,15 +55,15 @@ ms.locfileid: "63204944"
 4.  对每个要添加的其他条件重复第 2 和第 3 步。 对每个新条件使用不同的 **Or...** 列。  
   
 ## <a name="specifying-an-and-condition"></a>指定 AND 条件  
- 若要使用由 AND 链接的条件搜索不同的数据列，请将所有条件都放在网格的“筛选器”列中。  
+ 若要使用由 AND 链接的条件搜索不同的数据列，请将所有条件都放在网格的“筛选器”  列中。  
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>为两个不同的列指定 AND 条件  
   
 1.  在 [“条件”窗格](visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在要搜索的第一个数据列的“筛选器”列中，指定第一个条件。  
+2.  在要搜索的第一个数据列的“筛选器”  列中，指定第一个条件。  
   
-3.  在第二个数据列的“筛选器”列中，指定第二个条件。  
+3.  在第二个数据列的“筛选器”  列中，指定第二个条件。  
   
      查询和视图设计器将创建包含 AND 条件的 WHERE 子句，如下所示：  
   

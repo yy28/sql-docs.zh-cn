@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cede183f39ed7aca5bfe6bc7f0226c96da6ca84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245657"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>配置登录审核 (SQL Server Management Studio)
@@ -38,10 +38,10 @@ ms.locfileid: "63245657"
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，使用对象资源管理器连接至 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例。  
   
-2.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”。  
+2.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”  。  
   
-3.  在“安全性”页上的“登录名审核”下，单击所需选项，然后关闭“服务器属性”页。  
+3.  在“安全性”  页上的“登录名审核”  下，单击所需选项，然后关闭“服务器属性”  页。  
   
-4.  在对象资源管理器中，右键单击服务器名称，然后单击“重启”。  
+4.  在对象资源管理器中，右键单击服务器名称，然后单击“重启”  。  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 20c8ef211fe32d1459704c963c525a6cc9235d4a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810657"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client-sql-server-configuration-manager"></a>创建或删除供客户端使用的服务器别名（SQL Server 配置管理器）
@@ -29,7 +29,7 @@ ms.locfileid: "62810657"
   
 #### <a name="to-create-an-alias"></a>创建别名  
   
-1.  在 SQL Server 配置管理器中，展开“SQL Server Native Client 配置”，右键单击“别名”，再单击“新建别名”。  
+1.  在 SQL Server 配置管理器中，展开“SQL Server Native Client 配置”  ，右键单击“别名”  ，再单击“新建别名”  。  
   
 2.  在 **“别名”** 框中，键入别名。 当客户端应用程序进行连接时，它们使用该名称。  
   
@@ -37,15 +37,15 @@ ms.locfileid: "62810657"
   
 4.  在 **“协议”** 框中，选择用于该别名的协议。 选择某个协议，将可选属性框的标题更改为“端口号”、“管道名称”或“连接字符串”。  
   
- 对于创建自己的连接字符串的程序员来说， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器帮助介绍的连接字符串颇为有用。 若要访问此信息，请在 **“新建别名”** 对话框中按 F1，或单击 **“帮助”**。  
+ 对于创建自己的连接字符串的程序员来说， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器帮助介绍的连接字符串颇为有用。 若要访问此信息，请在 **“新建别名”** 对话框中按 F1，或单击 **“帮助”** 。  
   
 > [!NOTE]  
 >  如果配置的别名正与错误的服务器或实例进行连接，则请禁用并重新启用相关联的网络协议。 这样做会清除缓存的连接信息，从而允许客户端进行正确连接。  
   
 #### <a name="to-delete-an-alias"></a>删除别名  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开 **“SQL Server Native Client 配置”**，然后单击 **“别名”**。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开 **“SQL Server Native Client 配置”** ，然后单击 **“别名”** 。  
   
-2.  在“详细信息”窗格中，右键单击要删除的别名，然后单击“删除”。  
+2.  在“详细信息”窗格中，右键单击要删除的别名，然后单击“删除”  。  
   
   

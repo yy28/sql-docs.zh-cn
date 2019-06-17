@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650366"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) 事件类
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，将发生 Showplan Text (Unencoded) 事件类。 除了事件信息被格式化为字符串而不是二进制数据之外，此事件类与 Showplan Text 事件类相同。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，将发生 Showplan Text (Unencoded) 事件类。 除了事件信息被格式化为字符串而不是二进制数据之外，此事件类与 Showplan Text 事件类相同。  
   
  所包含的信息是 Showplan All、Showplan XML 或 Showplan XML Statistics Profile 事件类中可用信息的子集。  
   

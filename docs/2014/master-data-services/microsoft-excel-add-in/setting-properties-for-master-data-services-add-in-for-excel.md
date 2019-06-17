@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a041133bf26865404da6a883992176b19e837c78
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479066"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>设置用于 Excel 的 Master Data Services 外接程序的属性
   用于 Excel 的 Master Data Services 外接程序设置确定将 MDS 中的数据加载到 Excel 外接程序的方式和将 Excel 外接程序中的数据发布到 MDS 的方式。  
   
- 若要设置 Excel 外接程序，请打开“Excel”，单击“主数据”菜单，然后单击“设置”。 具有对 Excel 的访问权限的任何人都可以更改这些设置。 这些设置适用于打开了 Excel 的计算机。  
+ 若要设置 Excel 外接程序，请打开“Excel”  ，单击“主数据”  菜单，然后单击“设置”  。 具有对 Excel 的访问权限的任何人都可以更改这些设置。 这些设置适用于打开了 Excel 的计算机。  
   
 ## <a name="excel-add-in-settings"></a>Excel 外接程序设置  
   

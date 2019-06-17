@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070183"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>“结果”窗格（“挖掘模型预测”视图）
@@ -24,13 +24,13 @@ ms.locfileid: "66070183"
   
 ## <a name="options"></a>选项  
  **切换到查询设计视图**  
- 单击此项可以在“设计”、“查询”和“结果”窗格之间切换。  
+ 单击此项可以在“设计”  、“查询”  和“结果”  窗格之间切换。  
   
  **保存查询结果**  
- 打开“保存数据挖掘查询结果”对话框。  
+ 打开“保存数据挖掘查询结果”  对话框。  
   
  **单独查询**  
- 用于创建单独查询。 “选择输入表”表由“单独查询输入”表替换。 如果切换到单独查询，则当前预测查询的结果将会丢失。  
+ 用于创建单独查询。 “选择输入表”  表由“单独查询输入”  表替换。 如果切换到单独查询，则当前预测查询的结果将会丢失。  
   
  **刷新查询结果**  
  重新处理预测查询。  

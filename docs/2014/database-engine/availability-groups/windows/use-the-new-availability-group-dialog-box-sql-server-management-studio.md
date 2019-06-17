@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fda7911dc9e62741ba846e8a166bb0e3312f3425
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788059"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用“新建可用性组”对话框 (SQL Server Management Studio)
-  本主题包含有关如何使用 **的** “新建可用性组” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 对话框在为 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实例上创建 AlwaysOn 可用性组的信息。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
+  本主题包含有关如何使用 **的** “新建可用性组” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 对话框在为 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实例上创建 AlwaysOn 可用性组的信息。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本”  ）的形式进行故障转移。  
   
 > [!NOTE]  
 >  有关可用性组的简介，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。  
@@ -64,7 +64,7 @@ ms.locfileid: "62788059"
   
 2.  展开 **“AlwaysOn 高可用性”** 节点。  
   
-3.  右键单击“可用性组”节点，然后选择“新建可用性组”。  
+3.  右键单击  “可用性组”节点，然后选择  “新建可用性组”。  
   
 4.  此命令将打开 **“新建可用性组”** 对话框。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "62788059"
     > [!TIP]  
     >  如果添加了副本但是无法连接到主机服务器实例，可以删除该副本并添加新副本。 有关详细信息，请参阅[将辅助副本从可用性组删除 (SQL Server)](remove-a-secondary-replica-from-an-availability-group-sql-server.md) 和[将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-8.  在对话框的 **“选择页”** 窗格中，单击 **“备份首选项”**。 然后，在 **“备份首选项”** 页上，指定应基于副本角色执行备份的位置并将备份优先级分配给将承载此可用性组的可用性副本的每个服务器实例。 有关详细信息，请参阅[可用性组属性：新的可用性组&#40;备份首选项页&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
+8.  在对话框的 **“选择页”** 窗格中，单击 **“备份首选项”** 。 然后，在 **“备份首选项”** 页上，指定应基于副本角色执行备份的位置并将备份优先级分配给将承载此可用性组的可用性副本的每个服务器实例。 有关详细信息，请参阅[可用性组属性：新的可用性组&#40;备份首选项页&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
   
-9. 若要创建可用性组，请单击 **“确定”**。 这将导致对话框验证指定的数据库是否满足先决条件的要求。  
+9. 若要创建可用性组，请单击 **“确定”** 。 这将导致对话框验证指定的数据库是否满足先决条件的要求。  
   
-     要退出对话框而不创建可用性组，请单击 **“取消”**。  
+     要退出对话框而不创建可用性组，请单击 **“取消”** 。  
   
 ##  <a name="FollowUp"></a> 跟进：使用新建可用性组对话框创建可用性组后  
   

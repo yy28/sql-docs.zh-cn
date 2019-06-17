@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061030"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 源编辑器（“列”页）
-  可以使用“CDC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
+  可以使用“CDC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列   。  
   
  若要了解有关 CDC 源的详细信息，请参阅 [CDC Source](data-flow/cdc-source.md)。  
   
@@ -29,9 +29,9 @@ ms.locfileid: "66061030"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，打开具有 CDC 源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 CDC 源。  
+2.  在“数据流”  选项卡上，双击 CDC 源。  
   
-3.  在 **“CDC 源编辑器”** 中，单击 **“列”**。  
+3.  在 **“CDC 源编辑器”** 中，单击 **“列”** 。  
   
 ## <a name="options"></a>选项  
  **可用外部列**  

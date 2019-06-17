@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b6643499ac9df8bcfcb663baa5e9c0e5db19045e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035576"
 ---
 # <a name="rename-solutions-and-project-items"></a>重命名解决方案和项目项
@@ -32,9 +32,9 @@ ms.locfileid: "63035576"
   
 1.  在解决方案资源管理器中，选择要重命名的解决方案或项目项。  
   
-2.  在 **“视图”** 菜单上，单击 **“属性窗口”**。  
+2.  在 **“视图”** 菜单上，单击 **“属性窗口”** 。  
   
-3.  在“属性”窗口中，编辑“(名称)”属性。  
+3.  在“属性”窗口中，编辑“(名称)”  属性。  
   
 ## <a name="see-also"></a>请参阅  
  [解决方案资源管理器](solution-explorer.md)  

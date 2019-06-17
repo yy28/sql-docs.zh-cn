@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013223"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -41,7 +41,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>参数  
  *plan_handle*  
- 用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询计划。 *plan_handle*是**varbinary(64)**。 可以从获取的计划句柄[sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)动态管理视图。  
+ 用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询计划。 *plan_handle*是**varbinary(64)** 。 可以从获取的计划句柄[sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)动态管理视图。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -137,7 +137,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |STATIC|2048|  
 |FAST_FORWARD|4096|  
 |IN PLACE|8192|  
-|FOR select_statement|16384|  
+|FOR select_statement |16384|  
   
 ## <a name="examples"></a>示例  
   

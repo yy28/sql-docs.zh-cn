@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b824b240c6801317b16ac84820e0fc82054875b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63193019"
 ---
 # <a name="wildcard-components-and-content-validation"></a>通配符组成部分和内容验证
@@ -27,7 +27,7 @@ ms.locfileid: "63193019"
   
 -   属性通配符组成部分。 这些组成部分通过 **\<xsd:anyAttribute>** 元素表示。  
   
- 这两个通配符元素（**\<xsd:any>** 和 **\<xsd:anyAttribute>**）都支持 **processContents** 属性的使用。 这将允许您指定特定的值，该值指示 XML 应用程序如何处理与这些通配符元素关联的文档内容的验证。 以下是不同的值及其作用：  
+ 这两个通配符元素（ **\<xsd:any>** 和 **\<xsd:anyAttribute>** ）都支持 **processContents** 属性的使用。 这将允许您指定特定的值，该值指示 XML 应用程序如何处理与这些通配符元素关联的文档内容的验证。 以下是不同的值及其作用：  
   
 -   **strict** 值指定对内容进行完整的验证。  
   

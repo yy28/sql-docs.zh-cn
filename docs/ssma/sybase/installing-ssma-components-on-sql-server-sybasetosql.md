@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6121c75390e7493052a16b2e898eac69283e41ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63294573"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server 上安装 SSMA 组件 (SybaseToSQL)
@@ -88,7 +88,7 @@ SSMA 扩展包添加了数据库， **sysdb**并**ssmatesterdb_syb**，为指定
   
 -   **stop_agent_process**  
   
-你将数据迁移到每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业。 这些作业将命名为**ssma_syb 数据迁移包 {GUID}**，而在中可见[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs 文件夹中。  
+你将数据迁移到每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业。 这些作业将命名为**ssma_syb 数据迁移包 {GUID}** ，而在中可见[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs 文件夹中。  
   
 ## <a name="sybase-providers"></a>Sybase 提供程序  
 从 ASE 到迁移数据时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure，直接在 ASE 之间迁移数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure。 它不会通过 SSMA 因为这将会减慢数据迁移。  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2cd892ad41beba2b5715b3a7186ae5e44bb7911
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63206354"
 ---
 # <a name="about-sql-server-analysis-services"></a>关于 SQL Server Analysis Services
@@ -43,7 +43,7 @@ Analysis Services 现已推出两个不同的平台：
 - [开发人员文档](analysis-services-developer-documentation.md)
 - [技术参考](https://docs.microsoft.com/bi-reference/)
 
-#### <a name="see-also"></a>请参阅
+#### <a name="see-also"></a>另请参阅
 
 [Azure Analysis Services 文档](https://docs.microsoft.com/azure/analysis-services/)
 [SQL Server 文档](../sql-server/sql-server-technical-documentation.md)

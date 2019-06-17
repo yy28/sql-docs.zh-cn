@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059576"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
@@ -46,7 +46,7 @@ ms.locfileid: "66059576"
   
              您可以在该向导的 **“选择目标”** 页中选择一个现有文件或创建一个新文件。  
   
-             若要在转换项目时升级包文件，请从 **运行** “Integration Services 项目转换向导” [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 若要单独从项目转换中升级包文件，请从 **中运行** “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，然后运行 **“SSIS 包升级向导”**。 如果单独升级包文件，请确保您保存了这些更改。 否则，在您将项目转换为项目部署模型时，将不会转换对包的任何未保存的更改。  
+             若要在转换项目时升级包文件，请从 **运行** “Integration Services 项目转换向导” [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 若要单独从项目转换中升级包文件，请从 **中运行** “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，然后运行 **“SSIS 包升级向导”** 。 如果单独升级包文件，请确保您保存了这些更改。 否则，在您将项目转换为项目部署模型时，将不会转换对包的任何未保存的更改。  
   
      有关包升级的详细信息，请参阅 [升级 Integration Services 包](install-windows/upgrade-integration-services-packages.md) 和 [使用 SSIS 包升级向导升级 Integration Services 包](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
@@ -56,21 +56,21 @@ ms.locfileid: "66059576"
   
 ##  <a name="convert"></a> 将项目转换为项目部署模型  
   
-1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”。  
+1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”  。  
   
      -或-  
   
-     从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”节点并选择“导入包”。  
+     从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”  节点并选择“导入包”  。  
   
 2.  完成向导。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md)。  
   
 ##  <a name="deploy"></a> 将项目部署到 Integration Services 服务器  
   
-1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]并打开项目，然后从 **“项目”** 菜单，选择 **“部署”** 以便启动 **“Integration Services 部署向导”**。  
+1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]并打开项目，然后从 **“项目”** 菜单，选择 **“部署”** 以便启动 **“Integration Services 部署向导”** 。  
   
      -或-  
   
-     在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的对象资源管理器中，展开 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > SSISDB 节点，并查找想要部署的项目的项目文件夹。 右键单击“项目”文件夹，然后单击“部署项目”。  
+     在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的对象资源管理器中，展开 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > SSISDB  节点，并查找想要部署的项目的项目文件夹。 右键单击“项目”  文件夹，然后单击“部署项目”  。  
   
      -或-  
   

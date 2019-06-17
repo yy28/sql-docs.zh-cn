@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072107"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>分区（“还原数据库”对话框）（Analysis Services - 多维数据）
@@ -30,7 +30,7 @@ ms.locfileid: "66072107"
   
  **若要显示还原数据库对话框中的分区页**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”文件夹或**对象资源管理器**中的数据库，单击“还原”，然后在“选择页”下单击“分区”。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”  文件夹或**对象资源管理器**中的数据库，单击“还原”  ，然后在“选择页”  下单击“分区”  。  
   
 ## <a name="options"></a>选项  
  **脚本**  
@@ -66,7 +66,7 @@ ms.locfileid: "66072107"
 |**分区**|显示本地分区的名称。|  
 |**大小(MB)**|显示本地分区的大小 (MB)。|  
 |**原始文件夹**|显示存储本地分区的原始文件夹的名称。|  
-|**还原文件夹**|键入本地分区的还原文件夹的名称，或单击省略号按钮 (**...**) 以显示“查找远程文件夹”对话框，再选择要使用的文件夹的路径。 有关“查找远程文件夹”对话框的详细信息，请参阅[“查找远程文件夹”对话框（Analysis Services - 多维数据）](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)。|  
+|**还原文件夹**|键入本地分区的还原文件夹的名称，或单击省略号按钮 ( **...** ) 以显示“查找远程文件夹”  对话框，再选择要使用的文件夹的路径。 有关“查找远程文件夹”  对话框的详细信息，请参阅[“查找远程文件夹”对话框（Analysis Services - 多维数据）](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)。|  
   
  **还原远程分区**  
  选择此选项可以还原在远程备份文件中存储的远程分区。  
@@ -80,8 +80,8 @@ ms.locfileid: "66072107"
 |------------|-----------------|  
 |**Server**|显示管理远程分区的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的名称。|  
 |**数据源**|显示备份文件中数据源的名称，该数据源代表包含远程分区的数据库。|  
-|**备份文件**|键入要使用的远程备份文件的完整路径和文件名，或单击省略号按钮 (**...**) 以显示“定位数据库文件”对话框，再选择要使用的远程备份文件的路径和文件名。 有关“定位数据库文件”对话框的详细信息，请参阅[“定位数据库文件”对话框（Analysis Services - 多维数据）](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。|  
-|**...**|单击此按钮可以显示“远程分区 - 高级设置”对话框，以便修改用于还原远程分区的高级选项，例如数据源的连接字符串。 有关“远程分区 - 高级设置”对话框的详细信息，请参阅[对话框（Analysis Services - 多维数据）](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)。|  
+|**备份文件**|键入要使用的远程备份文件的完整路径和文件名，或单击省略号按钮 ( **...** ) 以显示“定位数据库文件”  对话框，再选择要使用的远程备份文件的路径和文件名。 有关“定位数据库文件”  对话框的详细信息，请参阅[“定位数据库文件”对话框（Analysis Services - 多维数据）](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。|  
+|**...**|单击此按钮可以显示“远程分区 - 高级设置”  对话框，以便修改用于还原远程分区的高级选项，例如数据源的连接字符串。 有关“远程分区 - 高级设置”  对话框的详细信息，请参阅[对话框（Analysis Services - 多维数据）](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)。|  
   
 ## <a name="see-also"></a>请参阅  
  [“还原数据库”对话框（Analysis Services - 多维数据）](restore-database-dialog-box-analysis-services-multidimensional-data.md)   

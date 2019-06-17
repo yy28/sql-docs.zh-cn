@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 957fcd77a6443cf2e23be8965a68823085db870c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762200"
 ---
 # <a name="disable-check-constraints-for-replication"></a>对复制禁用 CHECK 约束
@@ -41,11 +41,11 @@ ms.locfileid: "62762200"
   
 1.  在 **“对象资源管理器”** 中，展开具有要修改的 CHECK 约束的表，再展开 **“约束”** 文件夹。  
   
-2.  右键单击要修改的 CHECK 约束，然后单击 **“修改”**。  
+2.  右键单击要修改的 CHECK 约束，然后单击 **“修改”** 。  
   
-3.  在 **“CHECK 约束”** 对话框中的 **“表设计器”**，对 **“强制用于复制”** 选择 **“否”** 值。  
+3.  在 **“CHECK 约束”** 对话框中的 **“表设计器”** ，对 **“强制用于复制”** 选择 **“否”** 值。  
   
-4.  单击 **“关闭”**。  
+4.  单击 **“关闭”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -53,9 +53,9 @@ ms.locfileid: "62762200"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 第一个示例创建包含一个 IDENTITY 列的表和表中的一个 CHECK 约束。 然后，该示例删除该约束，并通过指定 NOT FOR REPLICATION 子句重新创建约束。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 第一个示例创建包含一个 IDENTITY 列的表和表中的一个 CHECK 约束。 然后，该示例删除该约束，并通过指定 NOT FOR REPLICATION 子句重新创建约束。  
   
     ```  
     USE AdventureWorks2012;  

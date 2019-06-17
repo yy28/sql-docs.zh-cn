@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774651"
 ---
 # <a name="upgrade-master-data-services"></a>升级 Master Data Services
@@ -42,11 +42,11 @@ ms.locfileid: "62774651"
   
  如果您选择安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和早期版本的 SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 在同一计算机上可以这样做是因为这些文件安装在不同的位置。  
   
--   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\120\Master Data Services 中。  
+-   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\120\Master Data Services 中。  
   
--   在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\110\Master Data Services 中。  
+-   在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\110\Master Data Services 中。  
   
--   在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\Master Data Services 中。  
+-   在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\Master Data Services 中。  
   
  若要执行此任务，请完成以下步骤：  
   
@@ -54,9 +54,9 @@ ms.locfileid: "62774651"
   
     1.  打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
   
-    2.  在左窗格中，单击 **“安装”**。  
+    2.  在左窗格中，单击 **“安装”** 。  
   
-    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”。  
+    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”  。  
   
     4.  在 **“功能选择”** 页上，选择 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 和要安装的任何其他功能。  
   
@@ -69,23 +69,23 @@ ms.locfileid: "62774651"
         > [!IMPORTANT]  
         >  若要升级 MDS 数据库架构，您必须以在创建 MDS 数据库时指定的管理员帐户登录。 在 MDS 数据库的 mdm.tblUser 中，此用户的 **ID** 值为 **1**。 有关更改此用户的信息，请参阅[更改系统管理员帐户&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)。  
   
-    2.  在左窗格中单击 **“数据库配置”**。  
+    2.  在左窗格中单击 **“数据库配置”** 。  
   
     3.  在右窗格中，单击**选择数据库**指定的信息和你[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]数据库实例。  
   
-    4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”**。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
+    4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”** 。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
   
 3.  升级完成时，创建一个 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序。  
   
     1.  打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-    2.  在左窗格中单击 **“Web 配置”**。  
+    2.  在左窗格中单击 **“Web 配置”** 。  
   
     3.  在右窗格中，从 **“网站”** 列表选择以下选项之一：  
   
-        -   **“默认网站”**，然后单击 **“创建应用程序”**。  
+        -   **“默认网站”** ，然后单击 **“创建应用程序”** 。  
   
-        -   **“创建新站点”**。 创建网站时，将自动创建新的 Web 应用程序。  
+        -   **“创建新站点”** 。 创建网站时，将自动创建新的 Web 应用程序。  
   
         > [!IMPORTANT]  
         >  在 SQL Server 2014 版 Master Data Services 配置管理器中，您可以选择 SQL Server 早期版本（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）的现有 MDS Web 应用程序。 您不能选择现有 Web 应用程序，而是必须为 MDS 创建一个 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序。 否则，在您尝试将 Web 应用程序与升级的 MDS 数据库关联时，您会收到错误，指出无法访问请求的页面，因为该页的相关配置数据无效。  
@@ -94,11 +94,11 @@ ms.locfileid: "62774651"
   
 4.  现在将新 Web 应用程序与已升级的 MDS 数据库关联。  
   
-    1.  在 **“将应用程序与数据库相关联”** 部分中，单击 **“选择”**。  
+    1.  在 **“将应用程序与数据库相关联”** 部分中，单击 **“选择”** 。  
   
     2.  选择 MDS 数据库。  
   
-    3.  单击 **“应用”**。  
+    3.  单击 **“应用”** 。  
   
 ##  <a name="engine"></a> 升级（升级数据库引擎）  
  在此方案中，您同时将数据库引擎和 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 应用程序从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 SQL Server 2012 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -111,23 +111,23 @@ ms.locfileid: "62774651"
   
     1.  打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
   
-    2.  在左窗格中，单击 **“安装”**。  
+    2.  在左窗格中，单击 **“安装”** 。  
   
     3.  在右窗格中，单击**从 SQL Server 2005 中，SQL Server 2008、 SQL Server 2008 R2 或 SQL Server 2012 升级**。  
   
     4.  完成向导。  
   
-3.  **有关[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]仅**:在升级完成后，添加**[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 功能。  
+3.  **有关[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]仅**:在升级完成后，添加 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 功能。  
   
     1.  打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
   
-    2.  在左窗格中，单击 **“安装”**。  
+    2.  在左窗格中，单击 **“安装”** 。  
   
-    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”。  
+    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”  。  
   
     4.  上**安装类型**页的向导中，选择**向现有实例添加功能**选项，并选择安装 MDS 数据库的实例。  
   
-    5.  上**功能选择**页面上，在**共享功能**，选择**[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**。  
+    5.  上**功能选择**页面上，在**共享功能**，选择 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 。  
   
     6.  完成向导。  
   
@@ -138,25 +138,25 @@ ms.locfileid: "62774651"
         > [!IMPORTANT]  
         >  若要升级 MDS 数据库架构，您必须以在创建 MDS 数据库时指定的管理员帐户登录。 在 MDS 数据库的 mdm.tblUser 中，此用户的 **ID** 值为 **1**。 有关更改此用户的信息，请参阅[更改系统管理员帐户&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)。  
   
-    2.  在左窗格中单击 **“数据库配置”**。  
+    2.  在左窗格中单击 **“数据库配置”** 。  
   
     3.  在右窗格中，单击**选择数据库**并指定数据库实例的信息。  
   
-    4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”**。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
+    4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”** 。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
   
-    5.  单击 **“应用”**。  
+    5.  单击 **“应用”** 。  
   
 5.  升级完成时，创建一个 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序。  
   
     1.  打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-    2.  在左窗格中单击 **“Web 配置”**。  
+    2.  在左窗格中单击 **“Web 配置”** 。  
   
     3.  在右窗格中，从 **“网站”** 列表选择以下选项之一：  
   
-        -   **“默认网站”**，然后单击 **“创建应用程序”**。  
+        -   **“默认网站”** ，然后单击 **“创建应用程序”** 。  
   
-        -   **“创建新站点”**。 创建网站时，将自动创建新的 Web 应用程序。  
+        -   **“创建新站点”** 。 创建网站时，将自动创建新的 Web 应用程序。  
   
         > [!IMPORTANT]  
         >  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版 Master Data Services 配置管理器中，您可以选择 SQL Server 早期版本（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）的现有 MDS Web 应用程序。 您不能选择现有 Web 应用程序，而是必须为 MDS 创建一个 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序。 否则，在您尝试将 Web 应用程序与升级的 MDS 数据库关联时，您会收到错误，指出无法访问请求的页面，因为该页的相关配置数据无效。  
@@ -165,22 +165,22 @@ ms.locfileid: "62774651"
   
 6.  现在将新 Web 应用程序与已升级的 MDS 数据库关联。  
   
-    1.  在 **“将应用程序与数据库相关联”** 部分中，单击 **“选择”**。  
+    1.  在 **“将应用程序与数据库相关联”** 部分中，单击 **“选择”** 。  
   
     2.  选择 MDS 数据库。  
   
-    3.  单击 **“应用”**。  
+    3.  单击 **“应用”** 。  
   
 ##  <a name="twocomputer"></a> 在两台计算机上执行升级的方案  
  此方案涉及升级在两台计算机上安装 SQL Server 的系统：一台计算机安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，另一台计算机安装 SQL Server 2008 R2 或 SQL Server 2012。  
   
  如果安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，您将继续分别使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 在一台计算机上承载 MDS 数据库。 但是，必须升级 MDS 数据库的架构，然后使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序来访问 MDS 数据库。 MDS 数据库不再可以由 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Web 应用程序访问。  
   
--   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\120\Master Data Services 中。  
+-   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\120\Master Data Services 中。  
   
--   在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\110\Master Data Services 中。  
+-   在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\110\Master Data Services 中。  
   
--   在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\Master Data Services 中。  
+-   在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\Master Data Services 中。  
   
  若要执行此任务，请完成以下步骤：  
   
@@ -188,9 +188,9 @@ ms.locfileid: "62774651"
   
     1.  打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
   
-    2.  在左窗格中，单击 **“安装”**。  
+    2.  在左窗格中，单击 **“安装”** 。  
   
-    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”。  
+    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”  。  
   
     4.  在 **“功能选择”** 页上，选择 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 和要安装的任何其他功能。  
   
@@ -203,23 +203,23 @@ ms.locfileid: "62774651"
         > [!IMPORTANT]  
         >  若要升级 MDS 数据库架构，您必须以在创建 MDS 数据库时指定的管理员帐户登录。 在 MDS 数据库的 mdm.tblUser 中，此用户的 **ID** 值为 **1**。 有关更改此用户的信息，请参阅[更改系统管理员帐户&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)。  
   
-    2.  在左窗格中单击 **“数据库配置”**。  
+    2.  在左窗格中单击 **“数据库配置”** 。  
   
     3.  在右窗格中，单击**选择数据库**指定的信息和你[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]数据库实例的其他计算机上，如果[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]安装在另一台计算机上。  
   
-    4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”**。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
+    4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”** 。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
   
 3.  升级完成时，创建一个 SQL Server 2014 Web 应用程序。  
   
     1.  打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-    2.  在左窗格中单击 **“Web 配置”**。  
+    2.  在左窗格中单击 **“Web 配置”** 。  
   
     3.  在右窗格中，从 **“网站”** 列表选择以下选项之一：  
   
-        -   **“默认网站”**，然后单击 **“创建应用程序”**。  
+        -   **“默认网站”** ，然后单击 **“创建应用程序”** 。  
   
-        -   **“创建新站点”**。 创建网站时，将自动创建新的 Web 应用程序。  
+        -   **“创建新站点”** 。 创建网站时，将自动创建新的 Web 应用程序。  
   
         > [!IMPORTANT]  
         >  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版 Master Data Services 配置管理器中，您可以选择 SQL Server 早期版本（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）的现有 MDS Web 应用程序。 您不能选择现有 Web 应用程序，而是必须为 MDS 创建一个 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序。 否则，在您尝试将 Web 应用程序与升级的 MDS 数据库关联时，您会收到错误，指出无法访问请求的页面，因为该页的相关配置数据无效。  
@@ -228,20 +228,20 @@ ms.locfileid: "62774651"
   
 4.  现在将 Web 应用程序与已升级的 MDS 数据库关联。  
   
-    1.  在 **“将应用程序与数据库相关联”** 部分中，单击 **“选择”**。  
+    1.  在 **“将应用程序与数据库相关联”** 部分中，单击 **“选择”** 。  
   
     2.  选择 MDS 数据库。  
   
-    3.  单击 **“应用”**。  
+    3.  单击 **“应用”** 。  
   
 ##  <a name="restore"></a> 通过从备份还原数据库升级  
  在此方案中，[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 与 SQL Server 2008 R2 或 SQL Server 2012 安装在同一台或两台不同的计算机上。 另外，在升级前，在低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 的版本上备份数据库，必须还原该数据库。  
   
--   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\120\Master Data Services 中。  
+-   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\120\Master Data Services 中。  
   
--   在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\110\Master Data Services 中。  
+-   在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\110\Master Data Services 中。  
   
--   在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中，默认情况下这些文件安装在驱动器:\Program Files\Microsoft SQL Server\Master Data Services 中。  
+-   在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中，默认情况下这些文件安装在驱动器  :\Program Files\Microsoft SQL Server\Master Data Services 中。  
   
  若要执行此任务，请完成以下步骤：  
   
@@ -249,9 +249,9 @@ ms.locfileid: "62774651"
   
     1.  打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
   
-    2.  在左窗格中，单击 **“安装”**。  
+    2.  在左窗格中，单击 **“安装”** 。  
   
-    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”。  
+    3.  在右窗格中，单击“全新 SQL Server 独立安装或向现有安装添加功能”  。  
   
     4.  在 **“功能选择”** 页上，选择 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 和要安装的任何其他功能。  
   
@@ -266,23 +266,23 @@ ms.locfileid: "62774651"
         > [!IMPORTANT]  
         >  若要升级 MDS 数据库架构，您必须以在创建 MDS 数据库时指定的管理员帐户登录。 在 MDS 数据库的 mdm.tblUser 中，此用户的 **ID** 值为 **1**。 有关更改此用户的信息，请参阅[更改系统管理员帐户&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)。  
   
-    2.  在左窗格中单击 **“数据库配置”**。  
+    2.  在左窗格中单击 **“数据库配置”** 。  
   
     3.  在右窗格中，单击**选择数据库**指定的信息和你[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]数据库实例。  
   
-    4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”**。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
+    4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”** 。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
   
 4.  升级完成时，创建一个 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序。  
   
     1.  打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-    2.  在左窗格中单击 **“Web 配置”**。  
+    2.  在左窗格中单击 **“Web 配置”** 。  
   
     3.  在右窗格中，从 **“网站”** 列表选择以下选项之一：  
   
-        -   **“默认网站”**，然后单击 **“创建应用程序”**。  
+        -   **“默认网站”** ，然后单击 **“创建应用程序”** 。  
   
-        -   **“创建新站点”**。 创建网站时，将自动创建新的 Web 应用程序。  
+        -   **“创建新站点”** 。 创建网站时，将自动创建新的 Web 应用程序。  
   
         > [!IMPORTANT]  
         >  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版 Master Data Services 配置管理器中，您可以选择 SQL Server 早期版本（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）的现有 MDS Web 应用程序。 您不能选择现有 Web 应用程序，而是必须为 MDS 创建一个 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序。 否则，在您尝试将 Web 应用程序与升级的 MDS 数据库关联时，您会收到错误，指出无法访问请求的页面，因为该页的相关配置数据无效。  
@@ -291,11 +291,11 @@ ms.locfileid: "62774651"
   
 5.  现在将新 Web 应用程序与已升级的 MDS 数据库关联。  
   
-    1.  在 **“将应用程序与数据库相关联”** 部分中，单击 **“选择”**。  
+    1.  在 **“将应用程序与数据库相关联”** 部分中，单击 **“选择”** 。  
   
     2.  选择 MDS 数据库。  
   
-    3.  单击 **“应用”**。  
+    3.  单击 **“应用”** 。  
   
 ## <a name="troubleshooting"></a>疑难解答  
  **问题：** 当打开[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]显示 web 应用程序中，"客户端版本不兼容的数据库版本"错误消息。  

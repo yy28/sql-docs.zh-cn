@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62688794"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
@@ -52,7 +52,7 @@ cbRow
  *hdbc*  
  支持大容量复制的 ODBC 连接句柄。  
   
- property  
+ property   
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
  *pField*  
@@ -75,7 +75,7 @@ cbRow
   
  bcp_setbulkmode 是使用的替代方法[bcp_setcolfmt](bcp-setcolfmt.md)并[bcp_columns](bcp-columns.md)，其仅可让你可以指定每个函数调用某一列的格式。  
   
- 下表列出了 property 参数的常量。  
+ 下表列出了 property 参数的常量  。  
   
 |属性|Description|  
 |--------------|-----------------|  

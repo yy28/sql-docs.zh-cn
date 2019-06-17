@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808248"
 ---
 # <a name="continue-with-restore"></a>继续还原
-  使用 **“继续还原”** 对话框可指示是否要还原到下一个备份集。 若要延迟还原操作（例如，需要更换磁带），请待您做好继续操作的准备后再单击 **“确定”**。  
+  使用 **“继续还原”** 对话框可指示是否要还原到下一个备份集。 若要延迟还原操作（例如，需要更换磁带），请待您做好继续操作的准备后再单击 **“确定”** 。  
   
  单击 **“否”** 将终止还原顺序，但是会将数据库保持在还原状态。 若要在以后继续执行还原操作，请使用相应的 **“还原数据库”** 或 **“还原事务日志”** 任务。  
   

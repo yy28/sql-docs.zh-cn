@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bfa4d13e82bd82bd08d2d3338e51feb0382ca094
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484973"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>针对业务规则验证版本 (Master Data Services)
@@ -41,21 +41,21 @@ ms.locfileid: "65484973"
   
 -   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   版本的状态必须是 **“打开”** 或 **“已锁定”**。  
+-   版本的状态必须是 **“打开”** 或 **“已锁定”** 。  
   
 -   在 **“验证版本”** 页上，存在的成员必须具有并非 **“验证已成功”** 的其他状态。  
   
 ### <a name="to-validate-a-version"></a>验证版本  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
   
-2.  在 **“管理版本”** 页上，从菜单栏中，单击 **“验证版本”**。  
+2.  在 **“管理版本”** 页上，从菜单栏中，单击 **“验证版本”** 。  
   
 3.  在 **“验证版本”** 页上，选择要验证的模型和版本。  
   
-4.  单击 **“验证”**。  
+4.  单击 **“验证”** 。  
   
-5.  在确认对话框中，单击 **“确定”**。  
+5.  在确认对话框中，单击 **“确定”** 。  
   
     > [!NOTE]  
     >  一旦不再显示进度指示器，则表明该版本已完成验证。  

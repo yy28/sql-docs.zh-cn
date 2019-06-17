@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641024"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、时间和时间戳文本
@@ -29,9 +29,9 @@ ms.locfileid: "62641024"
   
 |*literal-type*|含义|设置格式的*值*|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*yyyy*-*mm*-*dd*|  
+|**d**|Date|*yyyy*-*mm*-*dd*|  
 |**t**|时间 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|时间戳|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*][1]|  
+|**ts**|时间戳|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ][1]|  
   
  [1] 的数字文本，其中包含秒组成部分的时间戳间隔中小数点右侧位数是依赖于的秒精度，因为 SQL_DESC_PRECISION 描述符字段中包含。 (有关详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
   

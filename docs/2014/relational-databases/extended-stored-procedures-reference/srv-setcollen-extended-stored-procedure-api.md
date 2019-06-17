@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d4b3ab8f1e956ee68585ecdc3e12ae605d52ab38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745668"
 ---
 # <a name="srvsetcollen-extended-stored-procedure-api"></a>srv_setcollen（扩展存储过程 API）
@@ -52,25 +52,25 @@ len
 ```  
   
 ## <a name="arguments"></a>参数  
- srvproc  
+ srvproc   
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
  *column*  
  指示指定其数据长度的列的编号。 列的编号从 1 开始。  
   
- len  
+ len   
  指示列数据的长度（以字节为单位）。 长度为 0 表示列数据值为 Null。  
   
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 必须首先使用 srv_describe 定义行的每个列。 列数据长度通过对 srv_describe 或 srv_setcollen 的最后一次调用进行设置。 如果某一行长度可变的数据（以 Null 值结束的数据）发生更改，必须使用 srv_setcollen 将该数据设置为新的长度，然后才能调用 srv_sendrow。 对于允许 Null 值的列，必须已调用 srv_describe，并将 desttype 设置为允许 Null 值的数据类型（如 SRVINTN），NULL 数据的指定方法是：调用 srv_setcollen 并将 len 设置为 0。 不能使用扩展存储过程 API 指定长度为零的数据。  
+ 必须首先使用 srv_describe 定义行的每个列  。 列数据长度通过对 srv_describe 或 srv_setcollen 的最后一次调用进行设置   。 如果某一行长度可变的数据（以 Null 值结束的数据）发生更改，必须使用 srv_setcollen 将该数据设置为新的长度，然后才能调用 srv_sendrow   。 对于允许 Null 值的列，必须已调用 srv_describe，并将 desttype 设置为允许 Null 值的数据类型（如 SRVINTN），NULL 数据的指定方法是：调用 srv_setcollen 并将 len 设置为 0     。 不能使用扩展存储过程 API 指定长度为零的数据。  
   
- 请注意，当列数据类型的长度可变时，则不检查 len。 如果调用固定长度的列，该函数则返回 FAIL。  
+ 请注意，当列数据类型的长度可变时，则不检查 len  。 如果调用固定长度的列，该函数则返回 FAIL。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>请参阅  
  [srv_describe（扩展存储过程 API）](srv-describe-extended-stored-procedure-api.md)  

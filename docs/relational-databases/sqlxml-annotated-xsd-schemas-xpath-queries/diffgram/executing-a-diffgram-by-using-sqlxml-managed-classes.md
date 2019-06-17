@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5f3a9b9197862f6bcaf947edc27080dba52b568f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63045064"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML 托管类执行 DiffGram
@@ -55,7 +55,7 @@ ms.locfileid: "63045064"
 </ROOT>  
 ```  
   
- **\<之前 >** 块包括 **\<客户 >** 元素 (**diffgr: id ="Customer1"**)。 **\<DataInstance >** 块包括相应 **\<客户 >** 元素具有相同 **id**。**\<客户 >** 中的元素 **\<NewDataSet >** 还指定了 **diffgr: haschanges ="modified"**。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果**diffgr: haschanges**属性未指定，DiffGram 处理逻辑将忽略此元素，则不执行任何更新。  
+ **\<之前 >** 块包括 **\<客户 >** 元素 (**diffgr: id ="Customer1"** )。 **\<DataInstance >** 块包括相应 **\<客户 >** 元素具有相同 **id**。 **\<客户 >** 中的元素 **\<NewDataSet >** 还指定了 **diffgr: haschanges ="modified"** 。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果**diffgr: haschanges**属性未指定，DiffGram 处理逻辑将忽略此元素，则不执行任何更新。  
   
  以下是 C# 教程应用程序代码演示如何使用 SQLXML 托管类执行上面的 DiffGram 和更新两个表 (Cust、 Ord) 还将创建在**tempdb**数据库。  
   

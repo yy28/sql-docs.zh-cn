@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 371f9d2d8785c830b5f7e5adc9669441433cd511
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403779"
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4 3-自动属性成员分组
@@ -35,19 +35,19 @@ ms.locfileid: "65403779"
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-customer-dimension"></a>为“客户”维度中的属性层次结构成员分组  
   
-1.  在解决方案资源管理器中，双击“维度”文件夹中的“客户”，打开“客户”维度的维度设计器。  
+1.  在解决方案资源管理器中，双击“维度”文件夹中的“客户”，打开“客户”维度的维度设计器。    
   
-2.  在“数据源视图”窗格中，右键单击 Customer 表，再单击“浏览数据”。  
+2.  在“数据源视图”窗格中，右键单击 Customer 表，再单击“浏览数据”。     
   
     注意，**YearlyIncome** 列的值的范围。 如果未启用成员分组，这些值将成为**年收入**属性层次结构的成员。  
   
-3.  关闭“浏览 Customer 表”选项卡。  
+3.  关闭“浏览 Customer 表”  选项卡。  
   
-4.  在“属性”窗格中，选择“年收入”。  
+4.  在“属性”  窗格中，选择“年收入”  。  
   
 5.  在“属性”窗口中，将 **DiscretizationMethod** 属性的值更改为 **Automatic**，将 **DiscretizationBucketCount** 属性的值更改为 **5**。  
   
-    下图显示了修改后的“年收入”属性。  
+    下图显示了修改后的“年收入”  属性。  
   
     ![修改属性 Yearly Income](../media/l4-discretizationmethod-1.gif "修改 Yearly Income 属性")  
   
@@ -55,41 +55,41 @@ ms.locfileid: "65403779"
   
 1.  切换到“雇员”维度的维度设计器。  
   
-2.  在“数据源视图”窗格中，右键单击 **Employee** 表，再单击“浏览数据”。  
+2.  在“数据源视图”  窗格中，右键单击 **Employee** 表，再单击“浏览数据”  。  
   
     注意 **SickLeaveHours** 列和 **VacationHours** 列的值。  
   
-3.  关闭“浏览 Employee 表”选项卡。  
+3.  关闭“浏览 Employee 表”  选项卡。  
   
-4.  在“属性”窗格中，选择“病假时间”。  
+4.  在“属性”  窗格中，选择“病假时间”  。  
   
 5.  在“属性”窗口中，将 **DiscretizationMethod** 属性的值更改为 **Clusters**，将 **DiscretizationBucketCount** 属性的值更改为 **5**。  
   
-6.  在“属性”窗格中，选择“休假时间”。  
+6.  在“属性”窗格中，选择“休假时间”。    
   
 7.  在“属性”窗口中，将 **DiscretizationMethod** 属性的值更改为 **Equal Areas**，将 **DiscretizationBucketCount** 属性的值更改为 **5**。  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>浏览已修改的属性层次结构  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”   。  
   
-2.  成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后单击“浏览”选项卡上的“重新连接”。  
+2.  成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后单击“浏览”  选项卡上的“重新连接”  。  
   
-3.  单击 Excel 图标，然后单击“启用”。  
+3.  单击 Excel 图标，然后单击“启用”  。  
   
-4.  将“Internet 销售-销售额”度量值拖到数据透视表字段列表的“值”区域。  
+4.  将“Internet 销售-销售额”  度量值拖到数据透视表字段列表的“值”区域。  
   
-5.  在字段列表中，展开“产品”维度，再将“产品型号系列”用户层次结构拖到字段列表的“行标签”区域。  
+5.  在字段列表中，展开“产品”  维度，再将“产品型号系列”  用户层次结构拖到字段列表的“行标签”  区域。  
   
-6.  展开字段列表的“客户”维度，再展开“人口统计”显示文件夹，然后将“年收入”属性层次结构拖到“列标签”区域。  
+6.  展开字段列表的“客户”  维度，再展开“人口统计”  显示文件夹，然后将“年收入”  属性层次结构拖到“列标签”  区域。  
   
-    “年收入”属性层次结构的成员现在已分为六个存储桶，其中包括一个用于年收入未知的客户的销量的存储桶。 并非所有的存储桶都会显示出来。  
+    “年收入”  属性层次结构的成员现在已分为六个存储桶，其中包括一个用于年收入未知的客户的销量的存储桶。 并非所有的存储桶都会显示出来。  
   
-7.  从列区域删除“年收入”属性层次结构，从“值”区域中删除“Internet 销售-销售额”度量值。  
+7.  从列区域删除“年收入”  属性层次结构，从“值”  区域中删除“Internet 销售-销售额”  度量值。  
   
-8.  将“分销商销售-销售额”度量值添加到数据区域。  
+8.  将“分销商销售-销售额”  度量值添加到数据区域。  
   
-9. 在字段列表中，展开“雇员”维度，展开“组织”，然后将“病假时间”拖到“列标签”。  
+9. 在字段列表中，展开“雇员”  维度，展开“组织”  ，然后将“病假时间”  拖到“列标签”  。  
   
     注意，所有销售是由两个组中的其中一个组的雇员完成的。 另注意，病假时数为 32 - 42 小时的雇员完成的销售比病假时间为 20 - 31 小时的雇员完成的销售多得多。  
   
@@ -97,23 +97,23 @@ ms.locfileid: "65403779"
   
     ![按雇员病假划分销售保留小时](../media/l4-discretizationmethod-2.gif "按雇员病假划分销售保留小时")  
   
-10. 从“数据”窗格的列区域删除“病假时间”属性层次结构。  
+10. 从“数据”  窗格的列区域删除“病假时间”  属性层次结构。  
   
-11. 将“休假时间”添加到“数据”窗格的列区域。  
+11. 将“休假时间”  添加到“数据”  窗格的列区域。  
   
     注意，根据等区域分组方法，显示了两个组。 其他三个组因不包含数据值而被隐藏。  
   
 ## <a name="modifying-grouping-properties-and-reviewing-the-effect-of-the-changes"></a>修改分组属性并检查更改的效果  
   
-1.  切换到“雇员”维度的维度设计器，然后在“属性”窗格中选择“休假时间”。  
+1.  切换到“雇员”  维度的维度设计器，然后在“属性”  窗格中选择“休假时间”  。  
   
 2.  在“属性”窗口中，将 **DiscretizationBucketCount** 属性值更改为 **10**。  
   
-3.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
+3.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”   。  
   
 4.  成功完成部署后，切换回 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial 多维数据集的多维数据集设计器。  
   
-5.  在“浏览器”选项卡上单击“重新连接”，单击 Excel 图标，然后重新构建数据透视表，以便可以查看对分组方法的更改的效果：  
+5.  在“浏览器”  选项卡上单击“重新连接”  ，单击 Excel 图标，然后重新构建数据透视表，以便可以查看对分组方法的更改的效果：  
   
     1.  将“分销商销售-销售额”拖到值  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65403779"
   
     3.  将产品型号系列拖到行  
   
-    请注意，现在有三组具有“休假时间”属性的成员，这些成员都有产品销售值。 （其他七个组包含没有销售数据的成员。）  
+    请注意，现在有三组具有“休假时间”  属性的成员，这些成员都有产品销售值。 （其他七个组包含没有销售数据的成员。）  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [隐藏和禁用属性层次结构](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  

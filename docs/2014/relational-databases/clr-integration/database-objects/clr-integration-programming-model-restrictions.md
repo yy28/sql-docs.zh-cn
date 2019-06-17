@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873816"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 集成编程模型限制
@@ -37,7 +37,7 @@ ms.locfileid: "62873816"
   
 -   程序集是受支持的程序集之一。 有关详细信息，请参阅[支持的.NET Framework 库](supported-net-framework-libraries.md)。  
   
--   正在使用`CREATE ASSEMBLY FROM` *\<位置 >，* 中提供了所有引用的程序集和其依赖项并*\<位置 >*。  
+-   正在使用`CREATE ASSEMBLY FROM` *\<位置 >，* 中提供了所有引用的程序集和其依赖项并 *\<位置 >* 。  
   
 -   正在使用`CREATE ASSEMBLY FROM` *\<字节...>，* 和所有引用指定通过空格分隔的字节。  
   

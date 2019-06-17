@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891680"
 ---
 # <a name="step-1-copying-the-deployment-bundle"></a>第 1 步：复制部署捆绑
@@ -28,9 +28,9 @@ ms.locfileid: "62891680"
   
      如果使用的是默认位置，则部署捆绑是 Deployment Tutorial 文件夹内的 Bin\Deployment 文件夹。  
   
-2.  右键单击 Deployment 文件夹，再单击“复制”。  
+2.  右键单击 Deployment 文件夹，再单击“复制”  。  
   
-3.  在目标计算机上找到要向其复制该文件夹的公共共享，再单击“粘贴”。  
+3.  在目标计算机上找到要向其复制该文件夹的公共共享，再单击“粘贴”  。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 2：运行包安装向导](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  

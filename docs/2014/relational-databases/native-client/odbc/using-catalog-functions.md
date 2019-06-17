@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667375"
 ---
 # <a name="using-catalog-functions"></a>使用目录函数
@@ -43,7 +43,7 @@ ms.locfileid: "62667375"
   
      返回链接服务器包含的目录的列表。  
   
- 链接的服务器名称和目录名称后, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持使用由两部分组成的名称的目录中的获取信息_linked_server_name_**。**_目录_有关*CatalogName*对以下 odbc 目录函数：  
+ 链接的服务器名称和目录名称后, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持使用由两部分组成的名称的目录中的获取信息_linked_server_name_ **。** _目录_有关*CatalogName*对以下 odbc 目录函数：  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62667375"
   
 -   **SQLTables**  
   
- 由两部分_linked_server_name_**。**_目录_还支持*FKCatalogName*并*PKCatalogName*上[SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)。  
+ 由两部分_linked_server_name_ **。** _目录_还支持*FKCatalogName*并*PKCatalogName*上[SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)。  
   
  使用 SQLLinkedServers 和 SQLLinkedCatalogs 需要以下文件：  
   

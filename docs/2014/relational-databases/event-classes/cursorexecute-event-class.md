@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663503"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 事件类
-  **CursorExecute** 事件类描述发生在应用程序编程接口 (API) 游标中的游标执行事件。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在由游标准备事件创建的执行计划中创建并填充游标时，发生游标执行事件。  
+  **CursorExecute** 事件类描述发生在应用程序编程接口 (API) 游标中的游标执行事件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在由游标准备事件创建的执行计划中创建并填充游标时，发生游标执行事件。  
   
  将 **CursorExecute** 事件类包括在记录游标性能的跟踪中。 如果 **CursorExecute** 事件类包含在跟踪中，它引起的开销量取决于跟踪期间对数据库使用游标的频率。 如果广泛使用游标，则跟踪可能会显著地降低性能。  
   

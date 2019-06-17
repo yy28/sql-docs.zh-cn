@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a768b1e05bc123aecec4175ed6f66f6d920e1806
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63295259"
 ---
 # <a name="print-query-results-visual-database-tools"></a>打印查询结果 (Visual Database Tools)
@@ -31,11 +31,11 @@ ms.locfileid: "63295259"
   
 1.  选择要打印的列或行。  
   
-2.  使用“复制”命令将它们移动到剪贴板中。  
+2.  使用“复制”  命令将它们移动到剪贴板中。  
   
 3.  切换到要用于打印结果的 Windows 程序。  
   
-4.  使用“粘贴”命令从剪贴板中取出查询结果。  
+4.  使用“粘贴”  命令从剪贴板中取出查询结果。  
   
 5.  设置格式，然后打印结果。  
   
