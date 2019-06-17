@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808719"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>连接到服务器（“登录”页）(Reporting Services)
@@ -26,7 +26,7 @@ ms.locfileid: "62808719"
   
 ## <a name="options"></a>选项  
  **服务器类型**  
- 从对象资源管理器进行服务器注册时，请选择要连接到何种类型的服务器： [!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 对话框的其余部分只显示适用于所选服务器类型的选项。 从“已注册的服务器”注册某服务器时，“服务器类型”框是只读的，并且与“已注册的服务器”组件中显示的服务器类型匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，从“已注册的服务器”工具栏中选择[!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。  
+ 从对象资源管理器进行服务器注册时，请选择要连接到何种类型的服务器： [!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 对话框的其余部分只显示适用于所选服务器类型的选项。 从“已注册的服务器”注册某服务器时，“服务器类型”  框是只读的，并且与“已注册的服务器”组件中显示的服务器类型匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，从“已注册的服务器”工具栏中选择[!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。  
   
  **服务器名称**  
  您要连接到的报表服务器实例的服务器模式决定了必须输入的值。  
@@ -42,10 +42,10 @@ ms.locfileid: "62808719"
  使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 凭据连接到报表服务器实例。  
   
  **基本身份验证**  
- 如果将 Reporting Services 安装配置为使用基本身份验证，则使用“基本身份验证”进行连接。  
+ 如果将 Reporting Services 安装配置为使用基本身份验证，则使用“基本身份验证”  进行连接。  
   
  **窗体身份验证**  
- 如果将 Reporting Services 安装配置为使用自定义身份验证扩展插件，则使用“窗体身份验证”进行连接。  
+ 如果将 Reporting Services 安装配置为使用自定义身份验证扩展插件，则使用“窗体身份验证”  进行连接。  
   
  **用户名**  
  输入用于连接的登录名。 只有在选择了 **“基本身份验证”** 或 **“窗体身份验证”** 时，此选项才可用。  
@@ -54,7 +54,7 @@ ms.locfileid: "62808719"
  输入用户名的密码。 只有在选择了 **“基本身份验证”** 或 **“窗体身份验证”** 时，此选项才可编辑。  
   
  **记住密码**  
- 存储已经输入的密码。 仅当单击“选项”时才显示此选项，而且仅当选择了使用“基本身份验证”或“窗体身份验证”进行连接时，它才是可编辑的。  
+ 存储已经输入的密码。 仅当单击“选项”  时才显示此选项，而且仅当选择了使用“基本身份验证”  或“窗体身份验证”  进行连接时，它才是可编辑的。  
   
  **“连接”**  
  连接到所选服务器。  

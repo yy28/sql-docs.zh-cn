@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5e85a3685804fa834c9a92887a46c72b7cb69a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811311"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled 服务器配置选项
@@ -47,7 +47,7 @@ GO
 ```  
   
 ## <a name="configuring"></a>配置  
- 如果将 **default trace enabled** 选项设置为 1，可启用“默认跟踪” 。 此选项的默认设置为 1 (ON)。 值为 0 时将关闭跟踪。  
+ 如果将 **default trace enabled** 选项设置为 1，可启用“默认跟踪”  。 此选项的默认设置为 1 (ON)。 值为 0 时将关闭跟踪。  
   
  **default trace enabled** 选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当 **show advanced options** 设置为 1 时才能更改 **default trace enabled** 选项。 该设置将立即生效，无需重新启动服务器。  
   

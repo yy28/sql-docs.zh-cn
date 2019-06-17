@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd25682f12ce0a3ddad5e8f135d82aaf08115762
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086252"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>向结构中添加挖掘模型（Analysis Services - 数据挖掘）
@@ -55,7 +55,7 @@ ms.locfileid: "66086252"
      根据模型类型，可预测列可能必须为特定的数据类型：例如，线性回归模型需要数字列作为预测值；Naïve Bayes 算法需要离散值（并且所有输入也必须是离散的）。  
   
 ## <a name="specifying-column-content"></a>指定列内容  
- 对于某些列，可能还需要指定“列内容” 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘中，每个数据列的“内容类型”属性都通知算法应如何处理该列中的数据。 例如，如果数据包括一个“收入”列，则您必须通过将内容类型设置为“连续”来指定该列包含连续数。 但是，您还可以通过将内容类型设置为“离散化”并选择指定存储桶的准确数目，来指定“收入”列中的数分成存储桶。 您可以创建以不同方式处理列的不同模型：例如，您可能尝试使用一种模型将客户分成三个年龄组，而另一个模型则将客户分成 10 个年龄组。  
+ 对于某些列，可能还需要指定“列内容”  。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘中，每个数据列的“内容类型”属性都通知算法应如何处理该列中的数据。 例如，如果数据包括一个“收入”列，则您必须通过将内容类型设置为“连续”来指定该列包含连续数。 但是，您还可以通过将内容类型设置为“离散化”并选择指定存储桶的准确数目，来指定“收入”列中的数分成存储桶。 您可以创建以不同方式处理列的不同模型：例如，您可能尝试使用一种模型将客户分成三个年龄组，而另一个模型则将客户分成 10 个年龄组。  
   
 ## <a name="see-also"></a>请参阅  
  [挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)   

@@ -1,4 +1,4 @@
-- name: 'SQL Server 安装 '
+- name: SQL Server 安装
   href: installation-for-sql-server.md
 - name: 计划 SQL Server 安装
   href: ../../sql-server/install/planning-a-sql-server-installation.md

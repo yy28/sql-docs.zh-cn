@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9ebad419585de0136708ea85e522f890dceac38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835573"
 ---
 # <a name="edit-the-oracle-database-properties"></a>编辑 Oracle 数据库属性
@@ -34,11 +34,11 @@ ms.locfileid: "62835573"
  正使用 Oracle 数据库的计算机的 Oracle 连接字符串。 此字段是只读的，不能编辑此信息。 其原因在于，对连接字符串的某些更改可能会将 Oracle CDC 实例完全指向其他 Oracle 数据库，从而破坏在 **cdc.xdbcdc_config** 表中存储的 CDC 实例状态。 如果需要较小的更改，您可以使用 SQL Server Management Studio 直接在配置表中更改连接字符串。  
   
  **Oracle 日志挖掘身份验证**  
- 若要为包含日志挖掘器的 Oracle 数据库输入身份验证凭据，请在“身份验证”下选择以下选项之一：  
+ 若要为包含日志挖掘器的 Oracle 数据库输入身份验证凭据，请在“身份验证”  下选择以下选项之一：  
   
 -   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**：如果选择此选项，则必须在连接到的 Oracle 数据库中为用户键入“用户名”和“密码”。  
+-   **Oracle 身份验证**：如果选择此选项，则必须在连接到的 Oracle 数据库中为用户键入“用户名”和“密码”   。  
   
  您可以在查看器中查看 Oracle 数据库属性。 在使用查看器时，信息是只读的。 查看器还在表中包括捕获列的列表。 有关如何访问查看器的信息，请参阅 [How to Manage a CDC Instance](manage-a-cdc-instance.md)。  
   

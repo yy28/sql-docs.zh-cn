@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bacf8f0c891e595a775a5e279c5341f3ca0944b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796060"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @objname = ] 'table'` 是将返回的约束信息的表。 对于当前数据库而言，指定的表必须位于本地。 *表*是**nvarchar(776)**，无默认值。  
+`[ @objname = ] 'table'` 是将返回的约束信息的表。 对于当前数据库而言，指定的表必须位于本地。 *表*是**nvarchar(776)** ，无默认值。  
   
-`[ @nomsg = ] 'no_message'` 是一个可选参数，输出表名称。 *no_message*是**varchar(5)**，默认值为**msg**。**nomsg**取消打印。  
+`[ @nomsg = ] 'no_message'` 是一个可选参数，输出表名称。 *no_message*是**varchar(5)** ，默认值为**msg**。**nomsg**取消打印。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

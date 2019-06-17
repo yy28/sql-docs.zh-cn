@@ -11,10 +11,10 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775641"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升级 PowerPivot for SharePoint
@@ -64,11 +64,11 @@ ms.locfileid: "62775641"
   
 1.  在以 SharePoint 模式运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的后端服务器上运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安装程序。 如果服务器承载 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的多个实例，请至少升级 **POWERPIVOT** 实例。 以下列表概述了与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 升级相关的安装向导步骤：  
   
-    1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中单击 **“安装”**。  
+    1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中单击 **“安装”** 。  
   
-    2.  单击“从 SQL Server 升级...”。  
+    2.  单击“从 SQL Server 升级...”  。  
   
-    3.  在 **“选择实例”** 页上，选择 **POWERPIVOT** 实例名，然后单击 **“下一步”**。  
+    3.  在 **“选择实例”** 页上，选择 **POWERPIVOT** 实例名，然后单击 **“下一步”** 。  
   
     4.  有关详细信息，请参阅[升级到使用 SQL Server 2014 安装向导&#40;安装程序&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62775641"
   
     2.  启动时，该配置工具会检查 PowerPivot 场解决方案和 PowerPivot Web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较旧版本，你将看到消息"**已检测到较新版本的 PowerPivot 解决方案文件。请选择升级选项以升级场**。” 单击“确定”  关闭系统验证消息。  
   
-    3.  单击 **“升级功能、服务、应用程序和解决方案”**，然后单击 **“确定”**。  
+    3.  单击 **“升级功能、服务、应用程序和解决方案”** ，然后单击 **“确定”** 。  
   
     4.  查看左侧窗格任务列表中的操作，并排除您不希望该工具执行的所有操作。 默认情况下包括所有操作。 若要删除某个操作，请在左侧任务列表中选择此操作，然后在 **“参数”** 页上清除 **“在任务列表中包括此操作”** 复选框。  
   
@@ -98,12 +98,12 @@ ms.locfileid: "62775641"
   
          “脚本”选项卡显示 PowerShell cmdlet，或引用该工具将运行的 PowerShell 脚本文件。  
   
-    6.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。 如果“验证” 可用，你可能修改了某个输入值（例如 Excel 服务应用程序名称），或是该工具可能已确定无法执行某个操作。 如果无法执行某个操作，您必须排除它，或修复导致该操作被标记为无效的基本条件。  
+    6.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。 如果“验证”  可用，你可能修改了某个输入值（例如 Excel 服务应用程序名称），或是该工具可能已确定无法执行某个操作。 如果无法执行某个操作，您必须排除它，或修复导致该操作被标记为无效的基本条件。  
   
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当你单击“运行”时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场 **。是否继续?**”。  
+    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后， **“运行”** 才可用。 当你单击“运行”  时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场 **。是否继续?** ”。  
   
     8.  单击 **“是”** 继续操作。  
   
@@ -154,11 +154,11 @@ ms.locfileid: "62775641"
   
 7.  **运行 PowerPivot 配置工具**在 SharePoint 中运行 SQL Server Analysis Services (PowerPivot) 服务，以升级解决方案和 Web services 的第一个 SharePoint 应用程序服务器上。 不能使用管理中心执行此步骤。  
   
-    1.  在 **“开始”** 菜单中，指向 **“所有程序”**，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** 和 **“PowerPivot 配置工具”**。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
+    1.  在 **“开始”** 菜单中，指向 **“所有程序”** ，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** 和 **“PowerPivot 配置工具”** 。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
   
     2.  启动时，该配置工具会检查 PowerPivot 场解决方案和 PowerPivot Web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较旧版本，你将看到消息"较新版本的 PowerPivot 解决方案文件具有已检测到。 请选择升级选项以升级场。” 单击“确定”  关闭消息框。  
   
-    3.  单击 **“升级功能、服务、应用程序和解决方案”**，然后单击 **“确定”** 继续操作。  
+    3.  单击 **“升级功能、服务、应用程序和解决方案”** ，然后单击 **“确定”** 继续操作。  
   
     4.  出现以下警告："PowerPivot 管理面板中的工作簿将要升级到最新版本。 您对现有工作簿进行的所有定制都将丢失。 是否继续?”  
   
@@ -176,12 +176,12 @@ ms.locfileid: "62775641"
   
          “脚本”选项卡显示 PowerShell cmdlet，或引用该工具将运行的 PowerShell 脚本文件。  
   
-    7.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。 如果“验证” 可用，你可能修改了某个输入值（例如 Excel 服务应用程序名称），或是该工具可能已确定无法执行某个操作。 如果无法执行某个操作，您必须排除它，或修复导致该操作被标记为无效的基本条件。  
+    7.  单击 **“验证”** 可检查每个操作是否有效。 如果 **“验证”** 不可用，这意味着所有操作都适用于您的系统。 如果“验证”  可用，你可能修改了某个输入值（例如 Excel 服务应用程序名称），或是该工具可能已确定无法执行某个操作。 如果无法执行某个操作，您必须排除它，或修复导致该操作被标记为无效的基本条件。  
   
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当你单击“运行”时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场。 是否继续?”  
+    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后， **“运行”** 才可用。 当你单击“运行”  时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场。 是否继续?”  
   
     9. 单击 **“是”** 继续操作。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "62775641"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  检查现有部署的以下信息：“类型”是收回或部署，“文件”为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+    2.  检查现有部署的以下信息：“类型”是收回或部署，“文件”为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp   。  
   
     3.  对于部署或收回与 PowerPivot 解决方案，将复制的 GUID 值**JobId**然后将其粘贴到以下命令 （使用的标记、 复制和粘贴命令外壳的编辑菜单上复制该 GUID）：  
   
@@ -211,7 +211,7 @@ ms.locfileid: "62775641"
         Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
-    4.  通过依次单击 **“验证”** 和 **“运行”**，在该配置工具中重试该任务。  
+    4.  通过依次单击 **“验证”** 和 **“运行”** ，在该配置工具中重试该任务。  
   
      对于其他所有错误，请查看 ULS 日志。 有关详细信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。  
   
@@ -246,9 +246,9 @@ Get-PowerPivotSystemService
   
 1.  导航到 **实例的** Bin [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 文件夹。 例如 `C:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\bin`。  
   
-2.  右键单击 `msmdsrv.exe` 并选择“属性”。  
+2.  右键单击 `msmdsrv.exe` 并选择“属性”  。  
   
-3.  单击 **“详细信息”**。  
+3.  单击 **“详细信息”** 。  
   
 4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文件版本应为 12.00。\<主版本 >。\<次版本 >。  
   
@@ -283,11 +283,11 @@ Get-PowerPivotSystemService
 ### <a name="verify-the-msolap-data-provider-version-on-sharepoint"></a>验证 SharePoint 上的 MSOLAP 数据访问接口版本  
  使用以下指令来检查 Excel Services 信任的 Analysis Services OLE DB 访问接口版本。 您必须是场或服务应用程序管理员，才能检查 Excel Services 信任的数据访问接口设置。  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”** 。  
   
 2.  单击 Excel Services 服务应用程序的名称，例如 **ExcelServiceApp1**。  
   
-3.  单击 **“受信任的数据访问接口”**。 您应看到 MSOLAP.5 (Microsoft OLE DB Provider for OLAP Services 11.0)。 如果升级了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装，您还将看到先前版本的 MSOLAP.4。  
+3.  单击 **“受信任的数据访问接口”** 。 您应看到 MSOLAP.5 (Microsoft OLE DB Provider for OLAP Services 11.0)。 如果升级了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装，您还将看到先前版本的 MSOLAP.4。  
   
 4.  有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)。  
   
@@ -324,9 +324,9 @@ Get-PowerPivotSystemService
   
 2.  启动 PowerPivot 配置工具。  
   
-3.  单击 **“升级功能、服务、应用程序和解决方案”**，然后单击 **“确定”**。  
+3.  单击 **“升级功能、服务、应用程序和解决方案”** ，然后单击 **“确定”** 。  
   
-4.  查看在升级任务中包含的操作，然后单击 **“验证”**。  
+4.  查看在升级任务中包含的操作，然后单击 **“验证”** 。  
   
 5.  单击 **“运行”** 以便应用操作。  
   
