@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32e78feae791788e0aad87079546ea8c7d49e734
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046492"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>向 SQL Server 表添加列
@@ -29,13 +29,13 @@ ms.locfileid: "63046492"
   
 -   如果 DBPROP_COL_AUTOINCREMENT 为 VARIANT_TRUE，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE。  
   
--   如果相应列是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] timestamp 数据类型定义的，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE。  
+-   如果相应列是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] timestamp 数据类型定义的，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE  。  
   
 -   对于任何其他列定义，DBPROP_COL_NULLABLE 都必须为 VARIANT_TRUE。  
   
- 在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串。 pTableID 的 eKind 成员必须是 DBKIND_NAME。  
+ 在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串    。 pTableID 的 eKind 成员必须是 DBKIND_NAME   。  
   
- 在 uName 联合（位于 DBCOLUMNDESC 参数 pColumnDesc 的 dbcid 成员中）的 pwszName 成员中，将新列的名称指定为 Unicode 字符串。 eKind 成员必须为 DBKIND_NAME。  
+ 在 uName 联合（位于 DBCOLUMNDESC 参数 pColumnDesc 的 dbcid 成员中）的 pwszName 成员中，将新列的名称指定为 Unicode 字符串     。 eKind 成员必须为 DBKIND_NAME  。  
   
 ## <a name="see-also"></a>请参阅  
  [表和索引](tables-and-indexes.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0ab2eaab547e582df30375a4caadbc96a11f4396
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 540a7c3edc188ce3297284ece7300c5673dc2dfb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603077"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799156"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$column_number：一个可选整数，指示从零开始的列号。 默认值为 0（该行的第一列）。  
+ $column_number：一个可选整数，指示从零开始的列号。 默认值为 0（该行的第一列）。  
   
 ## <a name="return-value"></a>返回值  
 一列或 false（如果没有更多的行）。  

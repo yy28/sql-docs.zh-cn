@@ -22,7 +22,7 @@ ms.locfileid: "66772446"
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 ## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-64-70-and-72-driver"></a>再分发 Microsoft JDBC 4.1、 4.2、 6.0、 6.2、 6.4、 7.0 和 7.2 驱动程序
-可以重新分发 JDBC 驱动程序 4.1、 4.2、 6.0、 6.2、 6.4、 7.0 和 7.2。 4.1、 4.2、 6.0、 6.2、 6.4、 许可协议中，请查看"可分发代码"子句 7.0 和 7.2 版本的驱动程序。
+可以重新分发 JDBC 驱动程序 4.1、 4.2、 6.0、 6.2、 6.4、 7.0 和 7.2。 4\.1、 4.2、 6.0、 6.2、 6.4、 许可协议中，请查看"可分发代码"子句 7.0 和 7.2 版本的驱动程序。
     
 ## <a name="register-to-redistribute-the-microsoft-jdbc-40-driver"></a>注册以再分发 Microsoft JDBC 4.0 驱动程序  
  Microsoft JDBC 4.0 驱动程序需要注册之前重新分发它。 单击下面的链接，查看 4.0 版驱动程序的许可协议。  如果需要，可以打印并保留一份许可协议留作记录。  

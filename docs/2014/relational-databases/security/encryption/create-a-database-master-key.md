@@ -13,10 +13,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: be6b5614258d5fc2941d3355c680138f59d873f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655309"
 ---
 # <a name="create-a-database-master-key"></a>创建数据库主密钥
@@ -45,9 +45,9 @@ ms.locfileid: "62655309"
   
 2.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-3.  在标准菜单栏上，单击 **“新建查询”**。  
+3.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-4.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+4.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Creates a database master key for the "AdventureWorks2012" database.   

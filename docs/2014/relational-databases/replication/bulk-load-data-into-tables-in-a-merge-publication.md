@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09e535057fcf573dfa189b7e5fdc0e0df06e5d4a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721759"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>将数据大容量加载到合并发布中的表（复制 Transact-SQL 编程）
@@ -34,6 +34,6 @@ ms.locfileid: "62721759"
   
     -   使用 FIRE_TRIGGERS 选项执行大容量复制。  
   
-    -   对插入数据的数据库执行 [sp_addtabletocontents (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql)。 为 **@table_name**。  
+    -   对插入数据的数据库执行 [sp_addtabletocontents (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql)。 为 **@table_name** 。  
   
   

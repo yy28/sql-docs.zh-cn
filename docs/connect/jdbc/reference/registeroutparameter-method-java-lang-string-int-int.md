@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8bddc557-4526-4843-9804-05dc83c8832d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f80c1fd12f7259820ad094d466bb3f8f132b2c94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 36f8300ade9c8b514f4c1efdee9848fafb8b5683
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635505"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802073"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-int"></a>registerOutParameter 方法 (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public void registerOutParameter(java.lang.String s,
 #### <a name="parameters"></a>Parameters  
  *s*  
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
  *sqlType*  
   
@@ -48,7 +48,7 @@ public void registerOutParameter(java.lang.String s,
   
  *scale*  
   
- 一个 int 值，此值指示要放在小数点右边的位数。  
+ 一个 int 值，此值指示要放在小数点右边的位数  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f4fcc8f39f668422189780f89da0935f21444173
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184251"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>导出跟踪模板 (SQL Server Profiler)
@@ -26,13 +26,13 @@ ms.locfileid: "63184251"
   
 ### <a name="to-export-a-trace-template"></a>导出跟踪模板  
   
-1.  在 **“文件”** 菜单上，指向 **“模板”**，然后单击 **“导出模板”**。  
+1.  在 **“文件”** 菜单上，指向 **“模板”** ，然后单击 **“导出模板”** 。  
   
-2.  在“选择模板名称”对话框中，从“选择模板名称”列表中选择要导出的模板，然后单击“确定”。  
+2.  在“选择模板名称”  对话框中，从“选择模板名称”  列表中选择要导出的模板，然后单击“确定”  。  
   
      将显示 **“另存为”** 对话框。  
   
-3.  输入所导出模板文件的文件名，然后单击 **“保存”**。  
+3.  输入所导出模板文件的文件名，然后单击 **“保存”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [创建跟踪模板 (SQL Server Profiler)](create-a-trace-template-sql-server-profiler.md)   

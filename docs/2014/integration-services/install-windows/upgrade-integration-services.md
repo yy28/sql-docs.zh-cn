@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768063"
 ---
 # <a name="upgrade-integration-services"></a>升级 Integration Services
@@ -50,7 +50,7 @@ ms.locfileid: "62768063"
 ## <a name="upgrading-integration-services"></a>升级 Integration Services  
  可以通过使用下列方法之一来进行升级：  
   
--   运行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装程序，然后选择选项**从 SQL Server 2005 中，SQL Server 2008 或 SQL Server 2008 R2 升级**，或**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**。  
+-   运行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装程序，然后选择选项**从 SQL Server 2005 中，SQL Server 2008 或 SQL Server 2008 R2 升级**，或 **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** 。  
   
 -   运行**setup.exe**命令提示符处，并指定`/ACTION=upgrade`选项。 有关详细信息，请参阅部分中，"安装脚本[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，"中[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62768063"
   
 -   为了控制对包的访问，将新建三个固定的数据库级角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator。 系统不会删除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色 db_dtsadmin、db_dtsltduser 和 db_dtsoperator，而是将其作为对应的新角色的成员。  
   
--   如果[!INCLUDE[ssIS](../../includes/ssis-md.md)]包存储区 (即，由管理的文件系统位置[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务) 是下的默认位置**\SQL Server\90**， **\SQL Server\100**，或者**\SQL Server\110**将这些包移动到下的新默认位置**\SQL Server\120**。  
+-   如果[!INCLUDE[ssIS](../../includes/ssis-md.md)]包存储区 (即，由管理的文件系统位置[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务) 是下的默认位置 **\SQL Server\90**， **\SQL Server\100**，或者 **\SQL Server\110**将这些包移动到下的新默认位置 **\SQL Server\120**。  
   
 -   更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置文件以指向升级后的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   

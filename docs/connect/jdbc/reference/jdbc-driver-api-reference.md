@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f311458a8fb6b58f22a1ca4c23fa8d1f36dddc51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b635cfc7ecbe3e658a364a214d5c7cf744095492
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773785"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803218"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC 驱动程序 API 参考
 
@@ -36,7 +36,7 @@ JavaDoc.io 已从版本 6.0 开始我们 JDBC 参考文档。
 
 #### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>仅旧版 JDBC 文档就在文档上
 
-JDBC API 参考文档上的以下文章**https://docs.microsoft.com/sql/connect/jdbc/reference/** JDBC 类更新为新版本时将不再更新。 但是，此处的文章包含 JDBC 4.1 和 4.2 的版本的所有引用。
+JDBC API 参考文档上的以下文章 **https://docs.microsoft.com/sql/connect/jdbc/reference/** JDBC 类更新为新版本时将不再更新。 但是，此处的文章包含 JDBC 4.1 和 4.2 的版本的所有引用。
 
 JDBC 版本 6.0 和某些更高版本中，文档也是此处。 但对于任何版本 6.0 或更高版本，请使用 JavaDoc.io 网站。
 
@@ -86,7 +86,7 @@ JDBC 版本 6.0 和某些更高版本中，文档也是此处。 但对于任何
   
 ## <a name="classes"></a>类  
   
-|类名|描述|  
+|类名称|描述|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|表示 microsoft.sql.DateTimeOffset 类型的对象。|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|表示二进制大型对象 (BLOB)。|  

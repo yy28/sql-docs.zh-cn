@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894588"
 ---
 # <a name="using-variables-in-the-script-task"></a>在脚本任务中使用变量
@@ -35,7 +35,7 @@ ms.locfileid: "62894588"
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 类的 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 属性的类型为 `Object`。 由于脚本任务启用了 `Option Strict`，因此在使用 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 属性之前，必须先将其转换为适当的类型。  
   
- 可以在“脚本任务编辑器”中向 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 列表添加现有变量，以使它们可用于自定义脚本。 请注意，变量名称区分大小写。 在脚本内，您可以通过 `Dts` 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 属性访问这两种类型的变量。 使用 `Value` 属性可以从单个变量读取数据或向其中写入数据。 脚本任务在脚本读取和修改变量的值时，透明地管理锁定。  
+ 可以在“脚本任务编辑器”中向 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 列表添加现有变量，以使它们可用于自定义脚本  。 请注意，变量名称区分大小写。 在脚本内，您可以通过 `Dts` 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 属性访问这两种类型的变量。 使用 `Value` 属性可以从单个变量读取数据或向其中写入数据。 脚本任务在脚本读取和修改变量的值时，透明地管理锁定。  
   
  在代码中使用某个变量之前，可以使用 <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> 属性返回的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 方法来检查该变量是否存在。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62894588"
 ## <a name="using-the-script-task-within-a-foreach-loop-container"></a>在 Foreach 循环容器中使用脚本任务  
  当脚本任务在 Foreach 循环容器内重复运行时，脚本通常需要使用枚举器中当前项的内容。 例如，使用 Foreach 文件枚举器时，脚本需要知道当前文件名；使用 Foreach ADO 枚举器时，脚本需要知道当前数据行中各列的内容。  
   
- Foreach 循环容器与脚本任务之间的这种通信可以通过变量实现。 在“Foreach 循环编辑器”的“变量映射”页中，可以向单个枚举项返回的每个数据项分配变量。 例如，Foreach 文件枚举器仅返回索引 0 处的一个文件名，因此只需要一个变量映射，而在每行中返回多个数据列的枚举器需要将不同的变量映射到要在脚本任务中使用的每一列。  
+ Foreach 循环容器与脚本任务之间的这种通信可以通过变量实现。 在“Foreach 循环编辑器”的“变量映射”页中，可以向单个枚举项返回的每个数据项分配变量   。 例如，Foreach 文件枚举器仅返回索引 0 处的一个文件名，因此只需要一个变量映射，而在每行中返回多个数据列的枚举器需要将不同的变量映射到要在脚本任务中使用的每一列。  
   
  已向变量映射完枚举的项后，则必须添加到映射的变量`ReadOnlyVariables`上的属性**脚本**页**脚本任务编辑器**以使其可供你脚本。 有关在 Foreach 循环容器中处理文件夹中的图像文件的脚本任务示例，请参阅[使用脚本任务处理图像](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)。  
   

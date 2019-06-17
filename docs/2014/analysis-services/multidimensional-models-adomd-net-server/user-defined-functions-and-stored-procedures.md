@@ -1,19 +1,26 @@
 ---
 title: 用户定义的函数和存储过程 |Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: adomd
-ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+ms.topic: reference
+helpviewer_keywords:
+- stored procedures [ADOMD.NET]
+- ADOMD.NET, user defined functions
+- user defined functions [ADOMD.NET]
+- ADOMD.NET, UDFs
+- ADOMD.NET, stored procedures
+ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
-manager: kfile
+ms.author: owend
+manager: craigg
 ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727853"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>用户定义函数和存储过程
@@ -86,7 +93,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ### <a name="applying-a-filter-to-a-tuple"></a>对元组应用筛选器  
  下面的示例中定义了一个 UDF，该 UDF 使用一个集，并使用 Expression 对象对集中的每个元组应用筛选器。 所有符合筛选条件的元组都将被添加到返回的集中。  
   
- [!code-cs[Adomd.NetServer#FilterSet](../../analysis-services/multidimensional-models-adomd-net-server/codesnippet/csharp/user-defined-functions-a_1.cs)]  
+ [!code-csharp[Adomd.NetServer#FilterSet](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#filterset)]  
   
  下面的 MDX 示例调用了上面的示例，该 MDX 示例从集中筛选名称以“A”开头的市县。  
   
@@ -99,6 +106,6 @@ From [Adventure Works]
 ## <a name="stored-procedure-example"></a>存储过程示例  
  在下面的示例中，基于 MDX 的存储过程使用 AMO 来为 Internet 销售创建分区（如果需要）。  
   
- [!code-cs[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../analysis-services/multidimensional-models-adomd-net-server/codesnippet/csharp/user-defined-functions-a_2.cs)]  
+ [!code-csharp[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#createinternetsalesmeasuregrouppartitions)]  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767639"
 ---
 # <a name="step-4-adding-package-configurations"></a>步骤 4：添加包配置
@@ -36,22 +36,22 @@ ms.locfileid: "62767639"
   
 2.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，在控制流设计图面背景中的任意位置单击。  
   
-3.  在 **SSIS** 菜单上，单击 **“包配置”**。  
+3.  在 **SSIS** 菜单上，单击 **“包配置”** 。  
   
-4.  在“包配置管理器”对话框中，选择“启用包配置”（如果尚未选择），再单击“添加”。  
+4.  在“包配置管理器”对话框中，选择“启用包配置”（如果尚未选择），再单击“添加”。     
   
-5.  在包配置向导的欢迎页中，单击“下一步”。  
+5.  在包配置向导的欢迎页中，单击“下一步”  。  
   
 6.  在选择配置类型页上选择**XML 配置文件**中**配置类型**列表中，选择**配置位置存储在一个环境变量**选项，然后键入`DataTransfer,`或选择**DataTransfer**列表中的环境变量。  
   
     > [!NOTE]  
     >  为了使该环境变量在列表中可用，您最好在添加该变量后重新启动计算机。 如果不希望重新启动计算机，则可以键入该环境变量的名称。  
   
-7.  单击“下一步” 。  
+7.  单击“下一步”  。  
   
-8.  在“完成向导”页上，在“配置名称”框中键入“DataTransfer EV Configuration”，在“预览”窗格中查看配置内容，然后单击“完成”。  
+8.  在“完成向导”页上，在“配置名称”框中键入“DataTransfer EV Configuration”，在“预览”窗格中查看配置内容，然后单击“完成”。      
   
-9. 关闭“包配置管理器”对话框。  
+9. 关闭“包配置管理器”对话框。   
   
 ### <a name="to-create-the-xml-configuration-for-the-datatransfer-package"></a>为 DataTransfer 包创建 XML 配置  
   
@@ -59,27 +59,27 @@ ms.locfileid: "62767639"
   
 2.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，在控制流设计图面背景中的任意位置单击。  
   
-3.  在 **SSIS** 菜单上，单击 **“包配置”**。  
+3.  在 **SSIS** 菜单上，单击 **“包配置”** 。  
   
-4.  在“包配置管理器”对话框中，选中“启用包配置”复选框，然后单击“添加”。  
+4.  在“包配置管理器”对话框中，选中“启用包配置”复选框，然后单击“添加”。    
   
-5.  在包配置向导的欢迎页中，单击“下一步”。  
+5.  在包配置向导的欢迎页中，单击“下一步”  。  
   
-6.  在“选择配置类型”页上，选择“配置类型”列表中的“XML 配置文件”后，单击“浏览”。  
+6.  在“选择配置类型”页上，选择“配置类型”列表中的“XML 配置文件”后，单击“浏览”。     
   
-7.  在“选择配置文件位置”对话框中，导航到 C:\DeploymentTutorial，在“文件名”框中键入“DataTransferConfig”，然后单击“保存”。  
+7.  在“选择配置文件位置”对话框中，导航到 C:\DeploymentTutorial，在“文件名”框中键入“DataTransferConfig”，然后单击“保存”。      
   
-8.  在“选择配置类型”页上，单击“下一步”。  
+8.  在“选择配置类型”页上，单击“下一步”。   
   
-9. 在“选择要导出的属性”页上，依次展开“DataTransfer”、“连接管理器”、“部署 Tutorial 日志”和“属性”，然后选中“连接字符串”复选框。  
+9. 在“选择要导出的属性”页上，依次展开“DataTransfer”、“连接管理器”、“部署 Tutorial 日志”和“属性”，然后选中“连接字符串”复选框。   
   
-10. 在“连接管理器”内，展开“NewCustomers”后，选中“连接字符串”复选框。  
+10. 在“连接管理器”内，展开“NewCustomers”后，选中“连接字符串”复选框。   
   
-11. 单击“下一步” 。  
+11. 单击“下一步”  。  
   
-12. 在“完成向导”页上，在“配置名称”框中键入“DataTransfer 配置”，查看配置的内容，然后单击“完成”。  
+12. 在“完成向导”页上，在“配置名称”框中键入“DataTransfer 配置”，查看配置的内容，然后单击“完成”。     
   
-13. 在“包配置管理器”对话框中，验证是否第一个列出“DataTransfer EV 配置”，第二个列出“DataTransfer 配置”，然后单击“关闭”。  
+13. 在“包配置管理器”对话框中，验证是否第一个列出“DataTransfer EV 配置”，第二个列出“DataTransfer 配置”，然后单击“关闭”。    
   
 ### <a name="to-create-indirect-configuration-for-the-loadxmldata-package"></a>为 LoadXMLData 包创建间接配置  
   
@@ -87,20 +87,20 @@ ms.locfileid: "62767639"
   
 2.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，在控制流设计图面背景中的任意位置单击。  
   
-3.  在 **SSIS** 菜单上，单击 **“包配置”**。  
+3.  在 **SSIS** 菜单上，单击 **“包配置”** 。  
   
-4.  在“包配置管理器”对话框中，单击“添加”。  
+4.  在“包配置管理器”对话框中，单击“添加”。    
   
-5.  在包配置向导的欢迎页中，单击“下一步”。  
+5.  在包配置向导的欢迎页中，单击“下一步”  。  
   
 6.  在选择配置类型页上选择**XML 配置文件**中**配置类型**列表中，选择**配置位置存储在一个环境变量**选项，请键入`LoadXMLData`或选择`LoadXMLData`列表中的环境变量。  
   
     > [!NOTE]  
     >  为了使该环境变量在列表中可用，您最好在添加该变量后重新启动计算机。  
   
-7.  单击“下一步” 。  
+7.  单击“下一步”  。  
   
-8.  在“完成向导”页上，在“配置名称”框中键入“LoadXMLData EV 配置”，查看配置的内容，然后单击“完成”。  
+8.  在“完成向导”页上，在“配置名称”框中键入“LoadXMLData EV 配置”，查看配置的内容，然后单击“完成”。     
   
 ### <a name="to-create-the-xml-configuration-for-the-loadxmldata-package"></a>为 LoadXMLData 包创建 XML 配置  
   
@@ -108,25 +108,25 @@ ms.locfileid: "62767639"
   
 2.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，在控制流设计图面背景中的任意位置单击。  
   
-3.  在 **SSIS** 菜单上，单击 **“包配置”**。  
+3.  在 **SSIS** 菜单上，单击 **“包配置”** 。  
   
-4.  在“包配置管理器”对话框中，选中“启用包配置”复选框，然后单击“添加”。  
+4.  在“包配置管理器”对话框中，选中“启用包配置”复选框，然后单击“添加”。    
   
-5.  在包配置向导的欢迎页中，单击“下一步”。  
+5.  在包配置向导的欢迎页中，单击“下一步”  。  
   
-6.  在“选择配置类型”页上，选择“配置类型”列表中的“XML 配置文件”，然后单击“浏览”。  
+6.  在“选择配置类型”页上，选择“配置类型”列表中的“XML 配置文件”，然后单击“浏览”。     
   
-7.  在“选择配置文件位置”对话框中，导航到 C:\DeploymentTutorial，在“文件名”框中键入“LoadXMLDataConfig”，然后单击“保存”。  
+7.  在“选择配置文件位置”对话框中，导航到 C:\DeploymentTutorial，在“文件名”框中键入“LoadXMLDataConfig”，然后单击“保存”。      
   
-8.  在“选择配置类型”页上，单击“下一步”。  
+8.  在“选择配置类型”页上，单击“下一步”。   
   
-9. 在“选择要导出的属性”页上，依次展开“LoadXMLData”、“可执行文件”、“加载 XML 数据”和“属性”，然后选中“[XMLSource].[XMLData]”和“[XMLSource].[XMLSchemaDefinition]”复选框。  
+9. 在“选择要导出的属性”页上，依次展开“LoadXMLData”、“可执行文件”、“加载 XML 数据”和“属性”，然后选中“[XMLSource].[XMLData]”和“[XMLSource].[XMLSchemaDefinition]”复选框。    
   
-10. 单击“下一步” 。  
+10. 单击“下一步”  。  
   
-11. 在“完成向导”页上，在“配置名称”框中键入“LoadXMLData 配置”，查看配置的内容，然后单击“完成”。  
+11. 在“完成向导”页上，在“配置名称”框中键入“LoadXMLData 配置”，查看配置的内容，然后单击“完成”。     
   
-12. 在“包配置管理器”对话框中，验证是否第一个列出“LoadXMLData EV 配置”，第二个列出“LoadXMLData 配置”，然后单击“关闭”。  
+12. 在“包配置管理器”对话框中，验证是否第一个列出“LoadXMLData EV 配置”，第二个列出“LoadXMLData 配置”，然后单击“关闭”。    
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 5：测试更新的包](../integration-services/lesson-1-5-testing-the-updated-packages.md)  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0b39605d4c1867d166ce3b6878de47273ad2072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162353"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>将目标服务器从主服务器脱离
@@ -53,7 +53,7 @@ ms.locfileid: "63162353"
   
 1.  在 **对象资源管理器**中，展开配置为目标服务器的服务器。  
   
-2.  右键单击 **“SQL Server 代理”**，指向 **“多服务器管理”**，然后单击 **“脱离”**。  
+2.  右键单击 **“SQL Server 代理”** ，指向 **“多服务器管理”** ，然后单击 **“脱离”** 。  
   
 3.  单击 **“是”** 确认要从主服务器脱离此目标服务器。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "63162353"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
 ```  
 sp_msx_defect ;  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb18bc37f63b74981fcccbcb889bd80dcb816d12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273154"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>创建数据源（数据挖掘基础教程）
@@ -44,13 +44,13 @@ ms.locfileid: "63273154"
   
 7.  在中**选择或输入数据库名称**列表中，选择[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]，然后单击**确定**。  
   
-8.  单击“下一步” 。  
+8.  单击“下一步”  。  
   
 9. 上**模拟信息**页上，单击**使用服务帐户**，然后单击**下一步**。  
   
      上**完成向导**页上，请注意，默认情况下，数据源名为 Adventure Works DW 2012。  
   
-10. 单击 **“完成”**。  
+10. 单击 **“完成”** 。  
   
      新数据源 Adventure Works DW 2012 将显示**数据源**在解决方案资源管理器中的文件夹。  
   

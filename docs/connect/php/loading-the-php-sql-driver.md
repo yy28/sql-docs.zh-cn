@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 4b2f02fc81b969f8633a5a951483745c1d2635b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744607"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799635"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>加载 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -81,7 +81,7 @@ extension_dir = "c:\PHP\ext"
 > [!NOTE]  
 > 若要确定驱动程序是否已成功加载，请运行可调用 [phpinfo()](https://php.net/manual/en/function.phpinfo.php) 的脚本。  
   
-有关 php.ini 指令的详细信息，请参阅[核心 php.ini 指令说明](https://php.net/manual/en/ini.core.php)。  
+有关 php.ini 指令的详细信息，请参阅[核心 php.ini 指令说明](https://php.net/manual/en/ini.core.php)  。  
   
 ## <a name="see-also"></a>另请参阅  
 [开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

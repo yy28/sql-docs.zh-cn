@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157110"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用基于策略的管理来管理服务器
@@ -75,7 +75,7 @@ ms.locfileid: "63157110"
     -   **更改时: 禁止**。 这种自动模式使用 DDL 触发器来防止违反策略。  
   
         > [!IMPORTANT]  
-        >  如果禁用了嵌套触发器服务器配置选项，“更改时: 禁止”将不会正常工作。 基于策略的管理依靠 DDL 触发器来检测和回滚不符合使用此评估模式的策略的 DDL 操作。 删除基于策略的管理 DDL 触发器或禁用嵌套触发器将导致此评估模式失败或意外执行。  
+        >  如果禁用了嵌套触发器服务器配置选项，  “更改时: 禁止”将不会正常工作。 基于策略的管理依靠 DDL 触发器来检测和回滚不符合使用此评估模式的策略的 DDL 操作。 删除基于策略的管理 DDL 触发器或禁用嵌套触发器将导致此评估模式失败或意外执行。  
   
     -   **更改时: 仅记录**。 当做出相关更改时，这种自动模式使用事件通知对策略进行评估。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "63157110"
 |介绍如何验证服务器实例、数据库、服务器对象或数据库对象符合策略。|[评估来自对象的基于策略的管理策略](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [从基于策略的管理策略评估该策略](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [定期评估基于策略的管理策略](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |介绍如何查看基于策略的管理方面状态并将其复制到文件中。|[使用基于策略的管理方面](working-with-policy-based-management-facets.md)|  
 |提供一组可以作为最佳实践策略导入的策略文件，然后介绍如何针对包含实例、实例对象、数据库或数据库对象的目标集评估策略。|[使用基于策略的管理来监视和强制执行最佳做法](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
-|提供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“策略管理”节点的 F1 帮助主题。|[策略管理节点&#40;对象资源管理器&#41;](../../ssms/object/object-explorer.md)|  
+|提供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“策略管理”  节点的 F1 帮助主题。|[策略管理节点&#40;对象资源管理器&#41;](../../ssms/object/object-explorer.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [基于策略的管理视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  

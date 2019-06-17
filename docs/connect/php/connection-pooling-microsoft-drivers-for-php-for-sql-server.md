@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6dc56d020af182d657ec2766d996601e5442686
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: de58a006717a64d400e40ba2126eebcdb138aa3f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624985"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796233"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>连接池 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47624985"
   
 ## <a name="enablingdisabling-connection-pooling"></a>启用/禁用连接池
 ### <a name="windows"></a>Windows
-可以将连接字符串中的 ConnectionPooling 属性值设置为 false 或 0，强制驱动程序新建连接，而不是在连接池中查找等效连接。  
+可以将连接字符串中的 ConnectionPooling  属性值设置为 false  或 0，强制驱动程序新建连接，而不是在连接池中查找等效连接。  
   
-如果在连接字符串中省略了 ConnectionPooling 属性，或将此属性值设置为 true 或 1，那么仅当连接池中没有等效连接时，驱动程序才会新建连接。  
+如果在连接字符串中省略了 ConnectionPooling  属性，或将此属性值设置为 true  或 1，那么仅当连接池中没有等效连接时，驱动程序才会新建连接。  
   
 有关其他连接属性的信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。  
 ### <a name="linux-and-macos"></a>Linux 和 macOS

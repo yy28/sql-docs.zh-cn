@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721679"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
@@ -42,9 +42,9 @@ ms.locfileid: "62721679"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”**。  
+3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”** 。  
   
-4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。  
+4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。    
   
  快照代理生成快照后，将显示一条消息，例如“[100%] 已生成 17 个项目的快照”。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "62721679"
   
 1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器。  
   
-2.  右键单击要为其生成快照的发布，再单击 **“生成快照”**。  
+2.  右键单击要为其生成快照的发布，再单击 **“生成快照”** 。  
   
-3.  若要查看快照代理的状态，请单击 **“代理”** 选项卡。有关更多详细信息，请右键单击网格中的快照代理，再单击 **“查看详细信息”**。  
+3.  若要查看快照代理的状态，请单击 **“代理”** 选项卡。有关更多详细信息，请右键单击网格中的快照代理，再单击 **“查看详细信息”** 。  
   
 #### <a name="to-apply-a-snapshot"></a>应用快照  
   
@@ -82,9 +82,9 @@ ms.locfileid: "62721679"
   
     -   **@job_login，用于指定**快照代理在分发服务器上运行时所用的 Windows 身份验证凭据。  
   
-    -   **@job_password**，为提供的 Windows 凭据的密码。  
+    -   **@job_password** ，为提供的 Windows 凭据的密码。  
   
-    -   （可选）如果代理在连接到发布服务器时将使用 SQL Server 身份验证，则将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 。 在这种情况下，您还必须为 **@publisher_login** 和 **@publisher_password**。  
+    -   （可选）如果代理在连接到发布服务器时将使用 SQL Server 身份验证，则将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 。 在这种情况下，您还必须为 **@publisher_login** 和 **@publisher_password** 。  
   
     -   （可选）快照代理作业的同步计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   
@@ -119,13 +119,13 @@ ms.locfileid: "62721679"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **@publisher_security_mode**  
+    -   **-PublisherSecurityMode** =  **@publisher_security_mode**  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例演示如何创建事务发布，并为新的发布添加快照代理作业（使用 **sqlcmd** 脚本变量）。 此示例还启动该作业。  

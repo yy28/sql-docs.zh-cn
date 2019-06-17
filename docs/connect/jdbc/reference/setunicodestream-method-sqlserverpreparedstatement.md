@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0a413e83-e0a4-41f8-9fe0-33ce4d368ee4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 88b5cc280dad46ceedee621b4d4f8aeb008f131c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 450450774bc5e0897150ea049deb5423d2304881
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700885"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783389"
 ---
 # <a name="setunicodestream-method-sqlserverpreparedstatement"></a>setUnicodeStream 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public final void setUnicodeStream(int n,
 #### <a name="parameters"></a>Parameters  
  *n*  
   
- 指示参数编号的 int。  
+ 指示参数编号的 int  。  
   
  *x*  
   

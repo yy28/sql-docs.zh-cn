@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e7c8cb2230a7b6923514f0928b844f72c216d58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253573"
 ---
 # <a name="configure-sql-server-agent"></a>配置 SQL Server 代理
@@ -62,16 +62,16 @@ ms.locfileid: "63253573"
   
 #### <a name="to-configure-sql-server-agent"></a>配置 SQL Server 代理  
   
-1.  单击 **“开始”** 按钮，然后在 **“开始”**  菜单上，单击 **“控制面板”**。  
+1.  单击 **“开始”** 按钮，然后在 **“开始”**  菜单上，单击 **“控制面板”** 。  
   
-2.  在“控制面板”中，依次单击 **“系统和安全”**、 **“管理工具”**、 **“本地安全策略”**。  
+2.  在“控制面板”中，依次单击 **“系统和安全”** 、 **“管理工具”** 、 **“本地安全策略”** 。  
   
 3.  在“本地安全策略”中，单击尖括号以展开 **“本地策略”** 文件夹，然后单击 **“用户权限指派”** 文件夹。  
   
-4.  右键单击要配置用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限，并选择“属性”。  
+4.  右键单击要配置用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限，并选择“属性”  。  
   
-5.  在权限的属性对话框中，验证列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理运行的帐户。 如果没有列出，请单击 **“添加用户或组”**，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “选择用户、计算机、服务帐户或组” **对话框中输入运行** 代理的帐户，然后单击 **“确定”**。  
+5.  在权限的属性对话框中，验证列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理运行的帐户。 如果没有列出，请单击 **“添加用户或组”** ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “选择用户、计算机、服务帐户或组” **对话框中输入运行** 代理的帐户，然后单击 **“确定”** 。  
   
-6.  为要添加到使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理运行的每个权限重复此操作。 完成后，单击 **“确定”**。  
+6.  为要添加到使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理运行的每个权限重复此操作。 完成后，单击 **“确定”** 。  
   
   

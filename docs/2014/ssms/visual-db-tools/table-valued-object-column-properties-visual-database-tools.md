@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204541"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>表值对象（列）属性 (Visual Database Tools)
-  在查询设计器和视图设计器的“关系图”窗格中选择表值对象中的列时，将显示这些属性。  
+  在查询设计器和视图设计器的“关系图”  窗格中选择表值对象中的列时，将显示这些属性。  
   
 > [!NOTE]  
 >  本主题中的属性按类别排序，而不是按字母顺序排序。  
@@ -29,13 +29,13 @@ ms.locfileid: "63204541"
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。  
   
  **标识类别**  
- 展开此项可显示“名称”属性。  
+ 展开此项可显示“名称”  属性。  
   
  **名称**  
  显示所选列的名称。  
   
  **查询设计器类别**  
- 展开此项可显示“允许 Null 值”、“排序规则”、“数据类型”、“长度”、“精度”、“确定位数”和“大小”属性。  
+ 展开此项可显示“允许 Null 值”  、“排序规则”  、“数据类型”  、“长度”  、“精度”  、“确定位数”  和“大小”  属性。  
   
  **允许 Null 值**  
  显示列的数据类型是否允许空值。  
@@ -50,7 +50,7 @@ ms.locfileid: "63204541"
  显示所选列的数据类型允许的字符数或位数。 此属性仅可用于基于字符的数据类型。  
   
 > [!NOTE]  
->  有关以字节为单位的大小信息，请参阅下面的“大小”属性。  
+>  有关以字节为单位的大小信息，请参阅下面的“大小”  属性。  
   
  **精度**  
  显示数值数据类型所允许的最大位数。 对于非数值数据类型，此属性显示 **0** 。  

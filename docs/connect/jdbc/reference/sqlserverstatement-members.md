@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e1f3b9c38aa5866561d146016d0a457cb506bc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 07935ce3af347cf88666865068540a27bbec2c9b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643145"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796930"
 ---
 # <a name="sqlserverstatement-members"></a>SQLServerStatement 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47643145"
   
 ## <a name="inherited-fields"></a>继承的字段  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |java.sql.Statement|CLOSE_ALL_RESULTS、CLOSE_CURRENT_RESULT、EXECUTE_FAILED、KEEP_CURRENT_RESULT、NO_GENERATED_KEYS、RETURN_GENERATED_KEYS、SUCCESS_NO_INFO|  
   
 ## <a name="methods"></a>方法  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|将给定的 SQL 命令添加至此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的当前命令列表。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|取消当前正由此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象运行的 SQL 语句。|  
@@ -74,7 +74,7 @@ ms.locfileid: "47643145"
 |[setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md)|将任何 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象可包含的最大行数限制设置为给定的数目。|  
 |[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|请求语句入池或不入池。|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|将驱动程序等待 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象运行的秒数设置为给定的秒数。|  
-|[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|将此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的响应缓冲模式设置为不区分大小写的“String full”或“adaptive”。|  
+|[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|将此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的响应缓冲模式设置为不区分大小写的“String full”  或“adaptive”  。|  
 |[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)|返回一个实现指定接口的对象，从而允许访问特定于 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的方法。|  
   
 ## <a name="inherited-methods"></a>继承的方法  

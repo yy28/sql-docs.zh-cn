@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 52a7931ffe5ffb80f0ca376318e8b50a8e21e6d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ddd79fe975905baa5fb8cab945d6069be611adc3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745595"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802978"
 ---
 # <a name="setescapeprocessing-method-sqlserverstatement"></a>setEscapeProcessing 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public final void setEscapeProcessing(boolean enable)
 #### <a name="parameters"></a>Parameters  
  *enable*  
   
- 如果为 true，表示启用转义处理功能。 否则为 **false**。  
+ 如果为 true  ，表示启用转义处理功能。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

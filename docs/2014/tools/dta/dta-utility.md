@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670686"
 ---
 # <a name="dta-utility"></a>dta 实用工具
@@ -105,7 +105,7 @@ ms.locfileid: "62670686"
 dta -D database_name1, database_name2...  
 ```  
   
- 此外，也可以对各个数据库名称使用 -D 参数，从而指定多个数据库。例如：  
+ 此外，也可以对各个数据库名称使用 -D  参数，从而指定多个数据库。例如：  
   
 ```  
 dta -D database_name1 -D database_name2... n  
@@ -148,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |参数|默认值|  
 |---------------|-------------------|  
-|*database_name*|使用 -D 选项指定的 database_name|  
+|*database_name*|使用 -D  选项指定的 database_name |  
 |*owner_name*|**dbo**<br /><br /> 注意： *owner_name*必须是**dbo**。 如果指定了其他值，则 **dta** 执行将失败并返回错误。|  
 |*table_name*|None|  
   
@@ -202,22 +202,22 @@ dta -d AdventureWorks2012 ...
  为优化会话指定一个数字标识符。 如果未指定，则 **dta** 将生成一个 ID 号。 可以使用此标识符查看现有优化会话的信息。 如果不指定 **-ID**值，则必须用 **-s**指定会话名。  
   
  **-ip**  
- 指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可使用 -n 选项更改此值。  
+ 指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可使用 -n  选项更改此值。  
   
  **-ipf**  
- 指定计划高速缓存可用作工作负荷。 分析所有数据库的前 1000 个计划缓存事件。 可使用 -n 选项更改此值。  
+ 指定计划高速缓存可用作工作负荷。 分析所有数据库的前 1000 个计划缓存事件。 可使用 -n  选项更改此值。  
   
  **-if** _workload_file_  
  指定用作优化输入的工作负荷文件的路径和文件名。 该文件必须采用下列格式之一：.trc（SQL Server Profiler 跟踪文件）、.sql（SQL 文件）或 .log（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 跟踪文件）。 必须指定一个工作负荷文件或一个工作负荷表。  
   
  **-it** _workload_trace_table_name_  
- 指定包含用于优化的工作负荷跟踪的表名。 如果使用表，则用以下格式指定其名称：[*database_name*]**.**[*owner_name*]**.**_table_name_。  
+ 指定包含用于优化的工作负荷跟踪的表名。 如果使用表，则用以下格式指定其名称：[*database_name*] **.** [*owner_name*] **.** _table_name_。  
   
  下表显示了每个参数的默认值：  
   
 |参数|默认值|  
 |---------------|-------------------|  
-|*database_name*|使用 -D 选项指定的 database_name|  
+|*database_name*|使用 -D  选项指定的 database_name |  
 |*owner_name*|**dbo**。|  
 |*table_name*|无。|  
   
@@ -316,14 +316,14 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- 此参数是在命令提示符中输入表列表 (**-Tl**) 的替代方式。 如果使用了 **-Tl**，请不要使用表列表文件 ( **-Tf**)。 如果同时使用这两个参数， **dta** 将失败并返回错误。  
+ 此参数是在命令提示符中输入表列表 ( **-Tl**) 的替代方式。 如果使用了 **-Tl**，请不要使用表列表文件 ( **-Tf**)。 如果同时使用这两个参数， **dta** 将失败并返回错误。  
   
  如果省略 **-Tf** 和 **-Tl** 参数，则将考虑对指定数据库中的所有用户表进行优化。  
   
  **-Tl** _table_list_  
  在命令提示符中指定要优化的一组表。 各表名间用逗号分隔。 如果使用 **-D** 参数只指定一个数据库，则无需使用数据库名限定表名。 在其他情况下，使用以下格式的完全限定名： *database_name.schema_name.table_name* ，每个表都必须使用此格式。  
   
- 此参数是使用表列表文件 (**-Tf**) 的替代方法。 如果同时使用 **-Tl** 和 **-Tf** ，则 **dta** 将失败并返回错误。  
+ 此参数是使用表列表文件 ( **-Tf**) 的替代方法。 如果同时使用 **-Tl** 和 **-Tf** ，则 **dta** 将失败并返回错误。  
   
  **-U** _login_id_  
  指定用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登录 ID。  

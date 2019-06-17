@@ -21,13 +21,13 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d65583e80dc367e974e68a70dc36990b4a80278d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7139e6a80e05fbe3671acc9246d42a1354da714f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602707"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796040"
 ---
 # <a name="working-with-query-notifications"></a>使用查询通知
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ CREATE SERVICE myService ON QUEUE myQueue
  SQL Server 的 OLE DB 驱动程序支持基于行集修改的使用者通知。 使用者在行集修改的每个阶段以及在尝试执行任何更改时接收通知。  
   
 > [!NOTE]  
->  使用 ICommand::Execute 向服务器传递通知查询是向适用于 SQL Server 的 OLE DB 驱动程序订阅查询通知的唯一有效方式。  
+>  使用 ICommand::Execute 向服务器传递通知查询是向适用于 SQL Server 的 OLE DB 驱动程序订阅查询通知的唯一有效方式  。  
   
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 属性集  
  为通过 OLE DB 支持查询通知，适用于 SQL Server 的 OLE DB 驱动程序向 DBPROPSET_SQLSERVERROWSET 属性集添加了以下新属性。  
@@ -82,7 +82,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查询通知保持为活动状态的秒数。<br /><br /> 默认为 432000 秒（5 天）。 最小值为 1 秒，最大值为 2^31-1 秒。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的消息正文。 消息正文是用户定义的，没有预定义格式。<br /><br /> 默认情况下，该字符串为空。 您可以使用 1 至 2000 个字符指定消息。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 采用 name=value 语法以字符串形式指定这些内容。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 采用 name=value 语法以字符串形式指定这些内容   。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|  
   
  无论语句是在用户事务中运行还是以自动提交模式运行，或者无论是提交还是回滚运行语句的事务，将始终提交通知订阅。 根据以下任一无效通知条件激发服务器通知：更改基础数据或架构，或者当达到超时期限时（以先发生者为准）。 激发通知后将立即删除通知注册。 因此，在接收通知时，应用程序必须再次订阅通知，以备进一步更新之用。  
   

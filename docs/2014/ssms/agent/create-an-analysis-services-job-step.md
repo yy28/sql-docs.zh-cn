@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 832e49db5221c2e978cac584e8f1e406d33be30f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63134798"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
@@ -60,13 +60,13 @@ ms.locfileid: "63134798"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅[创建作业](create-jobs.md)。  
+2.  展开“SQL Server 代理”  ，创建一个新作业或右键单击一个现有作业，再单击“属性”  。 有关创建作业的详细信息，请参阅[创建作业](create-jobs.md)。  
   
-3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页面，再单击 **“新建”**。  
+3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页面，再单击 **“新建”** 。  
   
-4.  在 **“新建作业步骤”** 对话框中，键入作业 **“步骤名称”**。  
+4.  在 **“新建作业步骤”** 对话框中，键入作业 **“步骤名称”** 。  
   
-5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 命令”**。  
+5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 命令”** 。  
   
 6.  在 **“运行身份”** 列表中，选择为使用 Analysis Services 命令子系统而定义的代理。 如果用户是 **sysadmin** 固定服务器角色的成员，还可以选择 **“SQL Agent 服务帐户”** 运行此作业步骤。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "63134798"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅 [创建作业](create-jobs.md)。  
+2.  展开“SQL Server 代理”  ，创建一个新作业或右键单击一个现有作业，再单击“属性”  。 有关创建作业的详细信息，请参阅 [创建作业](create-jobs.md)。  
   
-3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
+3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”** 。  
   
-4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”**。  
+4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
   
-5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 查询”**。  
+5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 查询”** 。  
   
 6.  在 **“运行身份”** 列表中，选择为使用 Analysis Services 查询子系统而定义的代理。 如果用户是 **sysadmin** 固定服务器角色的成员，还可以选择 **“SQL Agent 服务帐户”** 运行此作业步骤。  
   
@@ -102,9 +102,9 @@ ms.locfileid: "63134798"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
   
@@ -141,9 +141,9 @@ ms.locfileid: "63134798"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
   

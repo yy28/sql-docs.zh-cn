@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670573"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>启用和禁用变更数据捕获 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "62670573"
  有关启用数据库的示例，请参阅 Enable Database for Change Data Capture 模板。  
   
 > [!IMPORTANT]  
->  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”**，单击 **“模板资源管理器”**，然后选择 **“SQL Server 模板”**。 **Change Data Capture** 为一个子文件夹。 在此文件夹下，您会找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
+>  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”** ，单击 **“模板资源管理器”** ，然后选择 **“SQL Server 模板”** 。 **Change Data Capture** 为一个子文件夹。 在此文件夹下，您会找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
   
 ```sql  
 -- ====  
@@ -55,7 +55,7 @@ GO
  有关禁用数据库的示例，请参阅 Disable Database for Change Data Capture 模板。  
   
 > [!IMPORTANT]  
->  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”**，单击 **“模板资源管理器”**，然后单击 **“SQL Server 模板”**。 **“变更数据捕获”** 为子文件夹，在该文件夹中您将找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
+>  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”** ，单击 **“模板资源管理器”** ，然后单击 **“SQL Server 模板”** 。 **“变更数据捕获”** 为子文件夹，在该文件夹中您将找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
   
 ```sql  
 -- =======  
@@ -78,7 +78,7 @@ GO
   
  `A filegroup to contain the change table.`  
   
- 默认情况下，更改表位于数据库的默认文件组中。 希望控制各个更改表放置位置的数据库所有者可以使用 *@filegroup_name* 参数为与该捕获实例相关的更改表指定一个特定的文件组。 指定的文件组必须已存在。 通常建议将更改表置于独立于源表的文件组中。 请参阅`Enable a Table Specifying Filegroup Option`的示例演示如何使用模板*@filegroup_name*参数。  
+ 默认情况下，更改表位于数据库的默认文件组中。 希望控制各个更改表放置位置的数据库所有者可以使用 *@filegroup_name* 参数为与该捕获实例相关的更改表指定一个特定的文件组。 指定的文件组必须已存在。 通常建议将更改表置于独立于源表的文件组中。 请参阅`Enable a Table Specifying Filegroup Option`的示例演示如何使用模板 *@filegroup_name* 参数。  
   
 ```sql  
 -- =========  

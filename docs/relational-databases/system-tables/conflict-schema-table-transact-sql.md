@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471076"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
@@ -37,12 +37,12 @@ ms.locfileid: "62471076"
 |__$originator_id|**int**|发起冲突更改的节点的 ID。 有关 Id 的列表，执行[sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)。|  
 |__$origin_datasource|**int**|发起冲突更改的节点。|  
 |__$tranid|**nvarchar (40)**|在 __$origin_datasource 中应用的冲突更改的日志序列号 (LSN)。|  
-|__$conflict_type|**int**|冲突类型，可以是下列值之一：<br /><br /> 1:更新失败，因为本地行进行了更改的另一个更新，或已删除并随后重新插入。<br /><br /> 2:更新失败，因为已删除了本地行。<br /><br /> 3:删除失败，因为本地行进行了更改的另一个更新，或已删除并随后重新插入。<br /><br /> 4:删除失败，因为已删除了本地行。<br /><br /> 5:插入失败，因为已插入了本地行，或它已插入并随后更新。|  
+|__$conflict_type|**int**|冲突类型，可以是下列值之一：<br /><br /> 1：更新失败，因为本地行进行了更改的另一个更新，或已删除并随后重新插入。<br /><br /> 2:更新失败，因为已删除了本地行。<br /><br /> 3:删除失败，因为本地行进行了更改的另一个更新，或已删除并随后重新插入。<br /><br /> 4:删除失败，因为已删除了本地行。<br /><br /> 5:插入失败，因为已插入了本地行，或它已插入并随后更新。|  
 |__$is_winner|**bit**|指示该表中的行是否为冲突入选方，这意味着将其应用于本地节点。|  
 |__$pre_version|**varbinary (32)**|发起冲突更改的数据库的版本。|  
 |__$reason_code|**int**|冲突的解决代码。 可以是以下值之一：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 有关详细信息，请参阅 **__ reason_text**。|  
 |__$reason_text|**nvarchar (720)**|冲突的解决情况。 可以是以下值之一：<br /><br /> 已解决 (1)<br /><br /> 未解决 (2)<br /><br /> 未知 (0)|  
-|__$update_bitmap|**varbinary(** *n* **)**. 各不相同大小，具体取决于内容。|一个位图，指示在发生更新-更新冲突的情况下更新的列。|  
+|__$update_bitmap|**varbinary(** *n* **)** . 各不相同大小，具体取决于内容。|一个位图，指示在发生更新-更新冲突的情况下更新的列。|  
 |__$inserted_date|**datetime**|将冲突行插入此表中的日期和时间。|  
 |__$row_id|**timestamp**|与导致冲突的行关联的行版本。|  
 |__$change_id|**二进制文件 (8)**|对于本地行，该值等于与本地行发生冲突的传入行的 __$row_id。 对于传入行，该值为 NULL。|  

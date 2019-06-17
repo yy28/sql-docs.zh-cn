@@ -1,14 +1,13 @@
 ---
 title: 保存更改 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.file.close.f1
+- sql12.swb.file.close.f1
 - VS.SaveChangesDlg
 helpviewer_keywords:
 - Save Changes dialog box
@@ -17,28 +16,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78a7f93dc2d906f86a83f1cfd2518b39cd73c9e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62510019"
 ---
 # <a name="save-changes"></a>保存更改
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-注意，只有单击“是”之后才会保存对所列项的更改。  
+  注意，只有单击“是”  之后才会保存对所列项的更改。  
   
-在关闭解决方案、维护计划或其他打开的文件时，可能会显示此对话框。  
+ 在关闭解决方案、维护计划或其他打开的文件时，可能会显示此对话框。  
   
 ### <a name="to-display-the-save-changes-dialog-box"></a>显示“保存更改”对话框  
   
--   打开一个新文件，在“文件”菜单上单击“关闭”。  
+-   打开一个新文件，在“文件”  菜单上单击“关闭”  。  
   
-对以前保存的项的更改会自动保存到其在存储区中的相应保存位置。 如果尚未保存项，则将显示“文件另存为”对话框，提示你指定新的保存位置。  
+ 对以前保存的项的更改会自动保存到其在存储区中的相应保存位置。 如果尚未保存项，则将显示“文件另存为”  对话框，提示你指定新的保存位置。  
   
 ## <a name="options"></a>选项  
-**是否保存对下列各项的更改?**  
-将保存所选项。 可以选中和清除项。  
+ **是否保存对下列各项的更改?**  
+ 将保存所选项。 可以选中和清除项。  
   
 > [!NOTE]  
-> 在保存时，只需指定对象名，而不必同时指定架构名和对象名。  
+>  在保存时，只需指定对象名，而不必同时指定架构名和对象名。  
+  
   

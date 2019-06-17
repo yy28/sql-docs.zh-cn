@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3eb5c384-6751-4d50-be23-0c2ccc35593c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e661a6ed2dbc3f6503ca566ea8052edde735e415
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d22447f58578646b7e383ebc524e2c1d8e6f077a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804825"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802094"
 ---
 # <a name="registeroutparameter-method-int-int-javalangstring"></a>registerOutParameter 方法 (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,9 +38,9 @@ public void registerOutParameter(int index,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- 索引  
+ 索引   
   
- 一个 int 值，此值指示参数的序号位置。  
+ 一个 int 值，此值指示参数的序号位置  。  
   
  *sqlType*  
   
@@ -48,7 +48,7 @@ public void registerOutParameter(int index,
   
  *typeName*  
   
- 一个包含完全限定的 SQL 类型名称的字符串。  
+ 一个包含完全限定的 SQL 类型名称的字符串  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bedea60c8bc356ff18b687123799977d83f308c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62816730"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组 (SQL Server)
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组”  针对一组离散的用户数据库（称为“可用性数据库” ，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组”  针对一组离散的用户数据库（称为“可用性数据库”  ，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
   
  可用性组在可用性副本级别进行故障转移。 故障转移不是由诸如因数据文件丢失而使数据库成为可疑数据库、删除数据库或事务日志损坏等此类数据库问题导致的。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "62816730"
   
 -   支持替代可用性模式，如下所示：  
   
-    -   异步提交模式。 此可用性模式是一种灾难恢复解决方案，适合于可用性副本的分布距离较远的情况。  
+    -   异步提交模式  。 此可用性模式是一种灾难恢复解决方案，适合于可用性副本的分布距离较远的情况。  
   
-    -   同步提交模式。 此可用性模式相对于性能而言更强调高可用性和数据保护，为此付出的代价是事务延迟时间增加。 一个给定的可用性组可支持最多三个同步提交可用性副本（包括当前主副本）。  
+    -   同步提交模式  。 此可用性模式相对于性能而言更强调高可用性和数据保护，为此付出的代价是事务延迟时间增加。 一个给定的可用性组可支持最多三个同步提交可用性副本（包括当前主副本）。  
   
      有关详细信息，请参阅[可用性模式;Always On 可用性组;](availability-modes-always-on-availability-groups.md).  
   
@@ -85,10 +85,10 @@ ms.locfileid: "62816730"
   
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
  可用性组 (availability group)  
- 一个容器，用于一组共同实现故障转移的数据库（“可用性数据库”）。  
+ 一个容器，用于一组共同实现故障转移的数据库（“可用性数据库”  ）。  
   
  可用性数据库 (availability database)  
- 属于可用性组的数据库。 对于每个可用性数据库，可用性组将保留一个读写副本（“主数据库”）和一个到八个只读副本（“辅助数据库”）。  
+ 属于可用性组的数据库。 对于每个可用性数据库，可用性组将保留一个读写副本（“主数据库”  ）和一个到八个只读副本（“辅助数据库”  ）。  
   
  主数据库 (primary database)  
  可用性数据库的读写副本。  

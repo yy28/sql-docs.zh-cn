@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042873"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>第 3 课：处理时序结构和模型
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>第 3 课：准备时序结构和模型
   在本课程中，您将使用[INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)语句处理挖掘结构和挖掘模型创建的时序。  
   
  处理挖掘结构时，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将读取源数据并生成支持挖掘模型的结构。 您必须始终在首次创建挖掘模型和结构时对它进行处理。 如果使用 INSERT INTO 指定挖掘结构，该语句将处理挖掘结构及其关联的所有挖掘模型。  

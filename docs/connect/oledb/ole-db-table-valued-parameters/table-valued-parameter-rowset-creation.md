@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, rowset creation
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 2b8e85b4ebfa679dda4e980df54cd11a06b1946d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4f894ae19a421b759870ceb597291b33fc1d2dec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805395"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801101"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>创建表值参数行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "47805395"
 ## <a name="static-scenario"></a>静态方案  
  当已知的类型信息时，使用者使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 来实例化表值参数对应的表值参数行集对象。  
   
- *Guid*字段 (*pTableID*参数) 包含特殊 GUID (CLSID_ROWSET_TVP)。 pwszName 成员包含使用者要实例化的表值参数类型的名称。 eKind 字段将设置为 DBKIND_GUID_NAME。 使用特殊 SQL 语句时此名称是必需时，使用过程调用时可选。  
+ *Guid*字段 (*pTableID*参数) 包含特殊 GUID (CLSID_ROWSET_TVP)。 pwszName 成员包含使用者要实例化的表值参数类型的名称  。 eKind 字段将设置为 DBKIND_GUID_NAME  。 使用特殊 SQL 语句时此名称是必需时，使用过程调用时可选。  
   
  对于聚合，使用者传递*pUnkOuter*参数控制的 IUnknown。  
   
- 表值参数行集对象属性只读，因此使用者无需在 rgPropertySets 中设置任何属性。  
+ 表值参数行集对象属性只读，因此使用者无需在 rgPropertySets 中设置任何属性  。  
   
- 对于每个 DBCOLUMNDESC 结构中的 rgPropertySets 成员，使用者可为每列指定附加属性。 这些属性属于 DBPROPSET_SQLSERVERCOLUMN 属性集。 它们支持您为每一列指定计算设置和默认设置。 它们还支持现有列属性，如为空性和标识。  
+ 对于每个 DBCOLUMNDESC 结构中的 rgPropertySets 成员，使用者可为每列指定附加属性  。 这些属性属于 DBPROPSET_SQLSERVERCOLUMN 属性集。 它们支持您为每一列指定计算设置和默认设置。 它们还支持现有列属性，如为空性和标识。  
   
  要从表值参数行集对象中检索相应的信息，使用者应使用 IRowsetInfo::GetProperties。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47805395"
   
  在此方案中，访问接口代表使用者从服务器获取有关表值参数行集对象的类型信息。  
   
- *PTableID*并*pUnkOuter*应按照静态方案设置参数。 然后，适用于 SQL Server 的 OLE DB 驱动程序从服务器中获取类型信息（列信息和约束），并通过 ppRowset 参数返回表值参数行集对象。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
+ *PTableID*并*pUnkOuter*应按照静态方案设置参数。 然后，适用于 SQL Server 的 OLE DB 驱动程序从服务器中获取类型信息（列信息和约束），并通过 ppRowset 参数返回表值参数行集对象  。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
   
 ## <a name="see-also"></a>另请参阅  
  [表值参数 (OLE DB)](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

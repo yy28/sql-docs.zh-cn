@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a160da53ddc8a634953fc7f7b75028075ce3d691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696706"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783267"
 ---
 # <a name="working-with-data-types-jdbc"></a>使用数据类型 (JDBC)
 
@@ -36,7 +36,7 @@ ms.locfileid: "47696706"
 |主题|描述|  
 |-----------|-----------------|  
 |[基本数据类型示例](../../connect/jdbc/basic-data-types-sample.md)|说明如何使用结果集的 getter 方法来检索基本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型值，以及如何使用结果集的 update 方法来更新这些值。|  
-|[SQLXML 数据类型示例](../../connect/jdbc/sqlxml-data-type-sample.md)|说明如何在关系数据库中存储 XML 数据，如何从数据库中检索 XML 数据，以及如何使用 SQLXML Java 数据类型分析 XML 数据。|  
+|[SQLXML 数据类型示例](../../connect/jdbc/sqlxml-data-type-sample.md)|说明如何在关系数据库中存储 XML 数据，如何从数据库中检索 XML 数据，以及如何使用 SQLXML Java 数据类型分析 XML 数据  。|  
 |[空间数据类型示例](../../connect/jdbc/spatial-data-types-sample.md)|介绍如何存储和检索数据与空间数据类型 Geometry 和 Geography 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库的**Geometry**并**Geography**定义的 Microsoft JDBC 驱动程序的 Java 类型。|
 
 ## <a name="see-also"></a>另请参阅

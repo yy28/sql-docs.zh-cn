@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 051f2ed14e8218a3909a43052f08e0e339138dab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894801"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
@@ -44,7 +44,7 @@ ms.locfileid: "62894801"
  下列主题提供有关脚本组件的详细信息。  
   
  [在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)  
- 在“脚本转换编辑器”中配置的属性会影响脚本组件代码的功能和性能。  
+ 在“脚本转换编辑器”中配置的属性会影响脚本组件代码的功能和性能  。  
   
  [的编码和调试脚本组件](coding-and-debugging-the-script-component.md  
  可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 开发环境来开发包含在脚本组件中的脚本。  

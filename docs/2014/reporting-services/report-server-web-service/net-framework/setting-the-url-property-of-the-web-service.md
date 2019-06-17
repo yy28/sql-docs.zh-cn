@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62520283"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>设置 Web 服务的 Url 属性
-  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序中，随时可以修改应用程序当前指向的报表服务器 Web 服务的基 URL。 为此，只需设置服务对象的“Url”属性。 例如：  
+  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序中，随时可以修改应用程序当前指向的报表服务器 Web 服务的基 URL。 为此，只需设置服务对象的“Url”  属性。 例如：  
   
 ```vb  
 Dim rs As New ReportingService2010()  

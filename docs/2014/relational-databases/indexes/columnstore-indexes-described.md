@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155520"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -105,10 +105,10 @@ ms.locfileid: "63155520"
  *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。  
   
  列存储  
- “列存储”是在逻辑上组织为包含行和列的表、在物理上以按列数据格式存储的数据。  
+ “列存储”  是在逻辑上组织为包含行和列的表、在物理上以按列数据格式存储的数据。  
   
  行存储  
- “行存储”是在逻辑上组织为包含行和列的表、在物理上以按行数据格式存储的数据。 这是存储关系表数据的传统方法。  
+ “行存储”  是在逻辑上组织为包含行和列的表、在物理上以按行数据格式存储的数据。 这是存储关系表数据的传统方法。  
   
  行组和列段  
  为获得高性能和高压缩率，列存储索引将表划分为由行构成的组，称为行组，然后以按列形式压缩每个行组。 行组中的行数必须足够大，以提高压缩率，同时又小到能够受益于内存中操作。  
@@ -117,7 +117,7 @@ ms.locfileid: "63155520"
  一个*行组*是同时压缩为列存储格式的行的组。  
   
  列段  
- “列段”是来自行组内的数据列。  
+ “列段”  是来自行组内的数据列。  
   
 -   每个行组通常可包含的最大行数是 1,048,576 行。  
   

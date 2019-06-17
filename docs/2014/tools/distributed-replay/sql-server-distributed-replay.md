@@ -14,21 +14,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a131d7607c798faed2e99a6e03713095bb6bb60f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150105"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server 分布式重播
-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能可帮助您评估即将进行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升级的影响。 您还可以使用它来帮助评估硬件和操作系统升级以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 优化的影响。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能可帮助您评估即将进行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升级的影响。 您还可以使用它来帮助评估硬件和操作系统升级以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 优化的影响。  
   
 ## <a name="benefits-of-distributed-replay"></a>分布式重播的优点  
  与 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]类似，您可以使用分布式重播针对升级后的测试环境重播捕获的跟踪。 与 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]不同的是，分布式重播并不仅限于从单台计算机重播工作负荷。  
   
  与 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 相比，分布式重播提供了一个更具伸缩性的解决方案。 使用分布式重播，您可以从多台计算机重播工作负荷，并更好地模拟关键任务型工作负荷。  
   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能可以从多台计算机重播跟踪数据，并模拟关键任务型工作负荷。 可使用分布式重播进行应用程序兼容性测试、性能测试或容量规划。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能可以从多台计算机重播跟踪数据，并模拟关键任务型工作负荷。 可使用分布式重播进行应用程序兼容性测试、性能测试或容量规划。  
   
 ## <a name="when-to-use-distributed-replay"></a>何时使用分布式重播  
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 和分布式重播在功能上有些重复。  
@@ -41,7 +41,7 @@ ms.locfileid: "63150105"
   
 |Tool|使用场景|  
 |----------|---------------|  
-|[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]|您希望在单台计算机上使用传统的重播机制。 特别是，你需要逐行调试功能，如“步骤”、“运行至光标处”和“切换断点”命令。<br /><br /> 您要重播 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 跟踪。|  
+|[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]|您希望在单台计算机上使用传统的重播机制。 特别是，你需要逐行调试功能，如“步骤”  、“运行至光标处”  和“切换断点”  命令。<br /><br /> 您要重播 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 跟踪。|  
 |分布式重播|您要评估应用程序兼容性。 例如，您要测试 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和操作系统升级方案、硬件升级或索引优化。<br /><br /> 捕获的跟踪中的并发率过高，以致于单个重播客户端不足以对其进行模拟。|  
   
 ## <a name="distributed-replay-concepts"></a>分布式重播概念  

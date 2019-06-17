@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63158019"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>内存中 OLTP（内存中优化）
@@ -65,7 +65,7 @@ ms.locfileid: "63158019"
 ## <a name="in-this-section"></a>本节内容  
  本节提供有关以下概念的信息：  
   
-|主题|描述|  
+|主题|Description|  
 |-----------|-----------------|  
 |[使用内存优化表的要求](memory-optimized-tables.md)|讨论使用内存优化的表的硬件和软件要求及指导原则。|  
 |[在 VM 环境下使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|讨论内容包括在虚拟化环境中使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 。|  

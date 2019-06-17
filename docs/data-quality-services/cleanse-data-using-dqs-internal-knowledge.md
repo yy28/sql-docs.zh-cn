@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: 0c56f5c2386f06c6ae35269dc62f82431ce0936b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802175"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS（内部）知识清理数据

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd49c3264857a92a9ca029a25894a5afdbeab381
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760992"
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>对 INSERT 和 UPDATE 语句禁用 CHECK 约束
@@ -50,11 +50,11 @@ ms.locfileid: "62760992"
   
 1.  在 **“对象资源管理器”** 中，展开具有约束的表，再展开 **“约束”** 文件夹。  
   
-2.  右键单击该约束，再选择 **“修改”**。  
+2.  右键单击该约束，再选择 **“修改”** 。  
   
 3.  在 **“表设计器”** 下的网格中，单击 **“强制用于 INSERT 和 UPDATE”** ，然后从下拉菜单中选择 **“否”** 。  
   
-4.  单击 **“关闭”**。  
+4.  单击 **“关闭”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -62,9 +62,9 @@ ms.locfileid: "62760992"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
     ```  
     USE AdventureWorks2012;  

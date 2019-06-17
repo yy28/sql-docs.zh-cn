@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670470"
 ---
 # <a name="delete-queries-visual-database-tools"></a>删除查询 (Visual Database Tools)
@@ -27,16 +27,16 @@ ms.locfileid: "62670470"
   
 ### <a name="to-permanently-delete-a-query"></a>永久删除查询  
   
-1.  在“视图”菜单中，选择“解决方案资源管理器”。  
+1.  在“视图”  菜单中，选择“解决方案资源管理器”。  
   
 2.  在解决方案资源管理器中，选择要永久删除的查询。  
   
-3.  右键单击该查询，然后在快捷菜单中单击“删除”。  
+3.  右键单击该查询，然后在快捷菜单中单击“删除”  。  
   
-4.  在“Microsoft SQL Server Management Studio”对话框中，单击“删除”。  
+4.  在“Microsoft SQL Server Management Studio”  对话框中，单击“删除”  。  
   
 > [!NOTE]  
->  如果希望从项目中移除查询而不删除它，请单击“移除”。 可以在以后右键单击查询文件夹然后选择“添加项”来查找并重新添加该查询。  
+>  如果希望从项目中移除查询而不删除它，请单击“移除”  。 可以在以后右键单击查询文件夹然后选择“添加项”  来查找并重新添加该查询。  
   
 ## <a name="see-also"></a>请参阅  
  [清除查询结果&#40;可视化数据库工具&#41;](visual-database-tools.md)   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 - MARS [SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 37a2a695e93d8783e6fd0c88319fed9eda55d8cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545481"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802871"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用多个活动的结果集 (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52545481"
   
  MARS 支持在单一连接中交错执行多个请求。 即：它允许运行批处理，并且在执行过程中还允许执行其他请求。 不过请注意，MARS 是从交错执行而不是从并行执行的角度定义的。  
   
- MARS 基础结构允许以交错方式执行多个批处理，尽管只能在定义完善的时间点切换执行。 此外，多数语句必须在同一批处理内以原子方式运行。 向客户端返回行的语句（有时称为“收获点”）在完成前可以交错执行，同时向客户端发送行，例如：  
+ MARS 基础结构允许以交错方式执行多个批处理，尽管只能在定义完善的时间点切换执行。 此外，多数语句必须在同一批处理内以原子方式运行。 向客户端返回行的语句（有时称为“收获点”）在完成前可以交错执行，同时向客户端发送行，例如  ：  
   
 -   SELECT  
   
@@ -114,7 +114,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
  SQL Server （从 2016年开始） 具有列存储索引支持 MARS。 SQL Server 2014 将 MARS 用于具有列存储索引的表的只读连接。    但是，SQL Server 2014 不支持将 MARS 用于具有列存储索引的表中的并发数据操作语言 (DML) 操作。 发生这种情况时，SQL Server 会终止连接并中止事务。   SQL Server 2012 具有只读列存储索引和 MARS 不适用于它们。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序  
- 适用于 SQL Server 的 OLE DB 驱动程序通过添加 SSPROP_INIT_MARSCONNECTION 数据源初始化属性（在 DBPROPSET_SQLSERVERDBINIT 属性集中实现）支持 MARS。 此外，还添加了新的连接字符串关键字 MarsConn。 它接受 **，则返回 true**或**false**值;**false**是默认值。  
+ 适用于 SQL Server 的 OLE DB 驱动程序通过添加 SSPROP_INIT_MARSCONNECTION 数据源初始化属性（在 DBPROPSET_SQLSERVERDBINIT 属性集中实现）支持 MARS。 此外，还添加了新的连接字符串关键字 MarsConn  。 它接受 **，则返回 true**或**false**值;**false**是默认值。  
   
  数据源属性 DBPROP_MULTIPLECONNECTIONS 默认为 VARIANT_TRUE。 这意味着访问接口将生成多个连接以支持多个并发命令和行集对象。 启用 MARS 后，适用于 SQL Server 的 OLE DB 驱动程序可以在单个连接上支持多个命令和行集对象，所以默认情况下 MULTIPLE_CONNECTIONS 设置为 VARIANT_FALSE。  
   

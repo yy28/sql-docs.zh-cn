@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760829"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>导出 Access 清单 (AccessToSQL)
@@ -56,7 +56,7 @@ SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 
   
 1.  打开 access 的 SSMA。  
   
-2.  在“文件”菜单中，选择“新建项目”。  
+2.  在“文件”菜单中，选择“新建项目”。    
   
     此时将显示“新建项目”  对话框。  
   
@@ -91,7 +91,7 @@ SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 
   
     可以使用**全**并**清除所有**要选择或清除所有数据库的列表顶部的按钮。 此外可以按住 CTRL 键来选择多个行，或按住 SHIFT 键以选择范围的行。  
   
-7.  单击“下一步” 。  
+7.  单击“下一步”  。  
   
 8.  在验证页上，单击**完成**。  
   
@@ -103,7 +103,7 @@ SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 
   
 2.  在连接对话框中，输入或选择的实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-    -   如果要连接到本地计算机上的默认实例，则可以输入**localhost**或句点 (**。**)。  
+    -   如果要连接到本地计算机上的默认实例，则可以输入**localhost**或句点 ( **。** )。  
   
     -   如果要连接到另一台计算机上的默认实例，输入的计算机的名称。  
   

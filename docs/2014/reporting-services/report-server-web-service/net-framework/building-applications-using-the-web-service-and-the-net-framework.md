@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62520338"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
@@ -32,7 +32,7 @@ ms.locfileid: "62520338"
   
  报表服务器 Web 服务客户端是使用简单对象访问协议 (SOAP) 消息与报表服务器通信的任何组件或应用程序。  
   
- 要使用 .NET Framework 创建报表服务器 Web 服务，请按照以下基本步骤进行操作：  
+ 要使用 .NET Framework 创建报表服务器 Web 服务，请按照以下基本步骤进行操作  ：  
   
 1.  创建 Web 服务的代理类。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62520338"
 |[设置 Web 服务的 Url 属性](setting-the-url-property-of-the-web-service.md)|说明在创建 Web 引用之后，如何以编程方式将 Web 服务代理定向到新的服务器 URL。|  
 |[提供 Web 服务方法参数](supplying-web-service-method-arguments.md)|介绍如何调用 Web 服务方法并提供方法参数。|  
 |[省略可选 Web 服务对象的值](omitting-values-for-optional-web-service-objects.md)|介绍如何忽略可选 Web 服务对象的值。|  
-|[使用安全 Web 服务方法](using-secure-web-service-methods.md)|介绍 SecureConnectionLevel 设置以及它影响 Reporting Services SOAP API 使用的方式。|  
+|[使用安全 Web 服务方法](using-secure-web-service-methods.md)|介绍 SecureConnectionLevel 设置以及它影响 Reporting Services SOAP API 使用的方式  。|  
 |[将设备信息设置传递给呈现扩展插件](passing-device-information-settings-to-rendering-extensions.md)|介绍用于将报表呈现为不同格式的设备信息设置。|  
 |[Reporting Services 传递扩展插件设置](reporting-services-delivery-extension-settings.md)|介绍用于通过报表服务器电子邮件传递报表的设置。|  
 |[使用 Reporting Services SOAP 标头](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|说明如何在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中使用 SOAP 标头。|  

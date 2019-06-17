@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745538"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>对结构数据使用钻取（数据挖掘基础教程）
@@ -40,11 +40,11 @@ ms.locfileid: "62745538"
   
 4.  从 **“查看器”** 列表中，选择“Microsoft 树查看器”。 这将强制使用新的筛选条件刷新查看器。 然后，找到**Age > = 34 和 < 41**节点，右键单击该节点。  
   
-5.  选择 **“钻取”**，然后选择 **“模型和结构列”** 以打开 **“钻取”** 窗口。  
+5.  选择 **“钻取”** ，然后选择 **“模型和结构列”** 以打开 **“钻取”** 窗口。  
   
 6.  滚动到 **Structure.Date First Purchase** 列以查看旧自行车的购买日期。  
   
-7.  若要将数据复制到剪贴板，请右键单击表中的任何行，并选择“全部复制”。  
+7.  若要将数据复制到剪贴板，请右键单击表中的任何行，并选择“全部复制”  。  
   
  恭喜您！您已经完成了数据挖掘基础教程。 既然您已经熟练掌握了数据挖掘工具，我们建议您同时完成数据挖掘中级教程，中级教程将演示如何创建用于预测、市场篮分析以及顺序分析和聚类分析的模型。  
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088090fe1572c0a7fd2f1165c7bf1cd6f7eb6839
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020256"
 ---
 # <a name="identifying-execution-state"></a>标识执行状态
@@ -27,7 +27,7 @@ ms.locfileid: "63020256"
   
  会话管理涉及将 HTTP 请求与从同一个会话生成的其他先前请求相关。 如果没有会话管理，则由于 HTTP 协议的无连接和无状态性质，因此这些请求将与报表服务器 Web 服务无关。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不公开会话状态的总体概念，例如，由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 公开的这类概念。 然而，当执行报表时，报表服务器以 execution 的形式维护方法调用之间的状态。 执行允许用户通过多种方式与报表交互 - 包括从报表服务器加载报表，为报表设置凭据和参数，以及呈现报表。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不公开会话状态的总体概念，例如，由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 公开的这类概念。 然而，当执行报表时，报表服务器以 execution 的形式维护方法调用之间的状态  。 执行允许用户通过多种方式与报表交互 - 包括从报表服务器加载报表，为报表设置凭据和参数，以及呈现报表。  
   
  当客户端与报表服务器通信时，它们使用执行来管理报表查看和用户在报表中导航到其他页的过程，以及显示或隐藏报表的各个部分。 对于客户端应用程序正在运行的每个报表，都存在一个唯一执行。  
   

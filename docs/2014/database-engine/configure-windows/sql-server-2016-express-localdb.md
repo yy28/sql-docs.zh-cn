@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62756986"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -30,7 +30,7 @@ ms.locfileid: "62756986"
  安装的主要方法`LocalDB`是使用 SqlLocalDB.msi 程序。 `LocalDB` 安装的任何 SKU 时，是一个选项[!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]。 选择`LocalDB`上**功能选择**安装过程中的页[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 可以有只能安装一个`LocalDB`对于每个主要的二进制文件[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]版本。 可以启动多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程，并且这些进程都将使用相同的二进制文件。 实例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]作为启动`LocalDB`具有相同的限制 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
   
 ## <a name="description"></a>Description  
- `LocalDB`安装程序使用 SqlLocalDB.msi 程序安装在计算机上的所需文件。 安装后，`LocalDB`的实例[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]可以创建和打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 数据库的系统数据库文件存储于用户本地 AppData 路径中，这个路径通常是隐藏的。 例如 **C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**。 用户数据库文件存储在用户指定的位置，通常为 **C:\Users\\<user\>\Documents\\** 文件夹中的某个位置。  
+ `LocalDB`安装程序使用 SqlLocalDB.msi 程序安装在计算机上的所需文件。 安装后，`LocalDB`的实例[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]可以创建和打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 数据库的系统数据库文件存储于用户本地 AppData 路径中，这个路径通常是隐藏的。 例如 **C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** 。 用户数据库文件存储在用户指定的位置，通常为 **C:\Users\\<user\>\Documents\\** 文件夹中的某个位置。  
   
  有关详细信息，包括有关`LocalDB`在应用程序，请参阅[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]文档[本地数据概述](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)，[演练：创建 SQL Server LocalDB 数据库](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)，和[演练：连接到 SQL Server LocalDB 数据库 （Windows 窗体） 中的数据](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62756986"
 ## <a name="starting-localdb-and-connecting-to-localdb"></a>启动 LocalDB 和连接到 LocalDB  
   
 ### <a name="connecting-to-the-automatic-instance"></a>连接到自动实例  
- 若要使用的最简单方法`LocalDB`是连接到由当前用户拥有使用连接字符串的自动实例 **"Server = (localdb) \MSSQLLocalDB;Integrated Security = true"**。 若要使用文件名连接到特定数据库，则使用类似于 **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf"** 的连接字符串进行连接。  
+ 若要使用的最简单方法`LocalDB`是连接到由当前用户拥有使用连接字符串的自动实例 **"Server = (localdb) \MSSQLLocalDB;Integrated Security = true"** 。 若要使用文件名连接到特定数据库，则使用类似于 **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf"** 的连接字符串进行连接。  
   
 > [!NOTE]  
 >  首次在计算机上的用户尝试连接到`LocalDB`，必须将同时创建并启动该自动实例。 创建实例所用的额外时间可能会导致连接尝试失败并且具有超时消息。 在发生此情况时，等待几秒钟以便让创建过程完成，然后再次连接。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7ec1d24d-f732-44f3-9608-734ce2df4489
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 745cf48f25419897442789d1ebd54d2c412dc157
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d22f6c235650abb5c1f8893a97353adbea2b7ac8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711325"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800373"
 ---
 # <a name="setnclob-method-sqlserverpreparedstatement"></a>setNClob 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47711325"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[setNClob 方法 &#40;int, java.sql.NClob&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-sql-nclob.md)|将指定参数设置为指定的 java.sql.NClob 对象。|  
 |[setNClob 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader.md)|将指定参数设置为指定的 java.io.Reader 对象。|  

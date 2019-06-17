@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9dff36847a6c03a300209427fae5a20d1ffea206
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: eebd7b1b56f0c6b4dd1d9187be2393368d91bc24
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644217"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769922"
 ---
 # <a name="reading-large-data-with-stored-procedures-sample"></a>使用存储过程读取大型数据的示例
 
@@ -35,7 +35,7 @@ ms.locfileid: "47644217"
 要运行此示例应用程序，将需要访问 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库。 此外，还将 classpath 设置为包含 mssql-jdbc jar 文件。 有关如何设置 classpath 的详细信息，请参阅[使用 JDBC 驱动程序](../../../connect/jdbc/using-the-jdbc-driver.md)。
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供要使用的 mssql-jdbc 类库文件，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 若要选择哪个 JAR 文件的详细信息，请参阅[JDBC 驱动程序的系统要求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供要使用的 mssql-jdbc 类库文件，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。
 
 在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库中创建以下存储过程：
 

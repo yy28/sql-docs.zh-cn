@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62919646"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>使用 DataAdapter 更新 UDT 列

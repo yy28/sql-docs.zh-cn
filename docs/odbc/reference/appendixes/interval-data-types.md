@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188898"
 ---
 # <a name="interval-data-types"></a>间隔数据类型
@@ -42,7 +42,7 @@ ms.locfileid: "63188898"
   
  有 13 间隔 SQL 数据类型和 13 间隔 C 数据类型。 每个间隔 C 数据类型使用相同的结构，SQL_INTERVAL_STRUCT，以包含数据间隔。 (有关详细信息，请参阅下一部分中， [C 间隔结构](../../../odbc/reference/appendixes/c-interval-structure.md)。)SQL 数据类型的详细信息，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md); 有关 C 数据类型的详细信息，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
-|类型标识符|类|描述|  
+|类型标识符|类|Description|  
 |---------------------|-----------|-----------------|  
 |MONTH|年月|两个日期之间的月数。|  
 |YEAR|年月|两个日期之间的年数。|  

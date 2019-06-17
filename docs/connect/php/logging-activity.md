@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf960ec912f51c5a39f8d07366174e1c0cd4f7b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600183"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800261"
 ---
 # <a name="logging-activity"></a>日志记录活动
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ PHP 在初始化时读取配置文件并将数据存储在缓存中；它还提�
 > 可以在 php.ini 文件中配置日志文件的位置。  
   
 ### <a name="turning-logging-on"></a>启用日志记录  
-还可以通过使用 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 函数为 LogSubsystems 设置指定一个值来启用日志记录。 例如，以下代码行配置驱动程序以针对连接记录活动：  
+还可以通过使用 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 函数为 LogSubsystems  设置指定一个值来启用日志记录。 例如，以下代码行配置驱动程序以针对连接记录活动：  
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN);`  
   
@@ -71,11 +71,11 @@ PHP 在初始化时读取配置文件并将数据存储在缓存中；它还提�
 |SQLSRV_LOG_SYSTEM_STMT (4)|对语句活动启用日志记录。|  
 |SQLSRV_LOG_SYSTEM_UTIL (8)|对错误函数活动（例如 handle_error 和 handle_warning）启用日志记录。|  
   
-可以使用 OR 逻辑运算符 (|) 一次为 LogSubsystems 设置来设置多个值。 例如，以下代码行同时对连接和语句活动启用日志记录：  
+可以使用 OR 逻辑运算符 (|) 一次为 LogSubsystems  设置来设置多个值。 例如，以下代码行同时对连接和语句活动启用日志记录：  
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN | SQLSRV_LOG_SYSTEM_STMT);`  
   
-此外，还可以通过在 php.ini 文件中为 LogSubsystems 设置指定整数值来启用日志记录。 例如，向 php.ini 文件中的 `[sqlsrv]` 部分添加以下行将对连接活动启用日志记录：  
+此外，还可以通过在 php.ini 文件中为 LogSubsystems  设置指定整数值来启用日志记录。 例如，向 php.ini 文件中的 `[sqlsrv]` 部分添加以下行将对连接活动启用日志记录：  
   
 `sqlsrv.LogSubsystems = 2`  
   
@@ -89,7 +89,7 @@ PHP 在初始化时读取配置文件并将数据存储在缓存中；它还提�
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_WARNING);`  
   
 > [!NOTE]  
-> LogSeverity 的默认设置为 SQLSRV_LOG_SEVERITY_ERROR。 如果启用了日志记录，但未为 **LogSeverity** 指定任何设置，将仅记录错误。  
+> LogSeverity  的默认设置为 SQLSRV_LOG_SEVERITY_ERROR  。 如果启用了日志记录，但未为 **LogSeverity** 指定任何设置，将仅记录错误。  
   
 下表描述了可用作 **LogSeverity** 设置的值的常量：  
   
@@ -100,12 +100,12 @@ PHP 在初始化时读取配置文件并将数据存储在缓存中；它还提�
 |SQLSRV_LOG_SEVERITY_WARNING (2)|指定记录警告。|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|指定记录通知。|  
   
-可以使用 OR 逻辑运算符 (|) 一次为 LogSeverity 设置来设置多个值。 例如，以下代码行指定应记录错误和警告：  
+可以使用 OR 逻辑运算符 (|) 一次为 LogSeverity  设置来设置多个值。 例如，以下代码行指定应记录错误和警告：  
   
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_ERROR | SQLSRV_LOG_SEVERITY_WARNING);`  
   
 > [!NOTE]  
-> 为 LogSeverity 设置指定值不会启用日志记录。 你必须通过为 LogSubsystems 设置指定值来启用日志记录，然后通过为 LogSeverity设置值来指定所记录内容的严重性级别。  
+> 为 LogSeverity  设置指定值不会启用日志记录。 你必须通过为 LogSubsystems  设置指定值来启用日志记录，然后通过为 LogSeverity  设置值来指定所记录内容的严重性级别。  
   
 你还可以在 php.ini 文件中使用整数值来为 **LogSeverity** 设置指定一个设置。 例如，向 php.ini 文件中的 `[sqlsrv]` 部分添加以下行仅会对警告启用日志记录：  
   

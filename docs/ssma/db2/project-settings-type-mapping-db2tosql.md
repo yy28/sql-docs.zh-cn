@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270008"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>项目设置 （类型映射） (DB2ToSQL)
@@ -48,7 +48,7 @@ ms.locfileid: "63270008"
 **删除**  
 单击以从映射列表中删除所选的数据类型映射。  
   
-重置为默认值  
+重置为默认值   
 单击以重置为 SSMA 默认值的类型映射列表。  
   
 ## <a name="default-type-mappings"></a>默认类型映射  
@@ -73,7 +73,7 @@ ms.locfileid: "63270008"
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
 |Decimal|float[53]|  
-|双精度|float[53]|  
+|double precision|float[53]|  
 |FLOAT|float[53]|  
 |ssNoversion|ssNoversion|  
 |integer|ssNoversion|  
@@ -133,7 +133,7 @@ ms.locfileid: "63270008"
 |Decimal|decimal[38][0]|  
 |decimal[\*..\*]|decimal[\*][0]|  
 |decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
-|双精度|float[53]|  
+|double precision|float[53]|  
 |FLOAT|float[53]|  
 |float[\*..53]|float[\*]|  
 |float[54..\*]|float[53]|  
@@ -143,7 +143,7 @@ ms.locfileid: "63270008"
 |原始长时间|varbinary(max)|  
 |长时间原始 [\*...8000]|varbinary[\*]|  
 |长时间原始 [8001...\*]|varbinary(max)|  
-|长 varchar|varchar(max)|  
+|long varchar|varchar(max)|  
 |long[\*..8000]|varchar[\*]|  
 |long[8001..\*]|varchar(max)|  
 |national char|NCHAR|  
@@ -207,7 +207,7 @@ ms.locfileid: "63270008"
 |Decimal|decimal[38][0]|  
 |decimal[\*..\*]|decimal[\*][0]|  
 |decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
-|双精度|float[53]|  
+|double precision|float[53]|  
 |float|float[53]|  
 |float[\*..53]|float[\*]|  
 |float[54..\*]|float[53]|  
