@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832604"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>列模式信息配置文件请求选项（数据事件探查任务）
@@ -69,7 +69,7 @@ ms.locfileid: "62832604"
  同一术语可属于多个标记。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“列模式配置文件请求”**， **“请求属性”** 窗格显示下列选项组：  
+ 对于 **“列模式配置文件请求”** ， **“请求属性”** 窗格显示下列选项组：  
   
 -   **Data**，它包含 **TableOrView** 选项和 **Column** 选项  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62832604"
   
 #### <a name="column-options"></a>Column 选项  
  **IsWildCard**  
- 指定是否已选择通配符 **(\*)**。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
+ 指定是否已选择通配符 **(\*)** 。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
   
  **ColumnName**  
  显示所选列的名称。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项空白。 此选项是只读的。  
@@ -123,7 +123,7 @@ ms.locfileid: "62832604"
  指示模式是否应区分大小写。 此选项的默认值为 **False**。  
   
  **“分隔符”**  
- 列出标记化文本时应视为与词之间的空格等效的字符。 在默认情况下，“分隔符”列表包含下列字符：空格、水平制表符 (\t)、换行符 (\n) 和回车符 (\r)。 可以指定其他分隔符，但不能删除默认分隔符。  
+ 列出标记化文本时应视为与词之间的空格等效的字符。 在默认情况下，“分隔符”  列表包含下列字符：空格、水平制表符 (\t)、换行符 (\n) 和回车符 (\r)。 可以指定其他分隔符，但不能删除默认分隔符。  
   
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
   

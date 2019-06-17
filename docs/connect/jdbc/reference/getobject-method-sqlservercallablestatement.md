@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5184b8711f5ddd91bdef37479df6b18e13626ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d69be8fd30d5a47b8e11dde5d043285470c1aed6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729885"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787498"
 ---
 # <a name="getobject-method-sqlservercallablestatement"></a>getObject 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47729885"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[getObject (int)](../../../connect/jdbc/reference/getobject-method-int.md)|根据给定的参数索引，检索指定参数的值作为 Java 编程语言中的一个对象。|  
 |[getObject (int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map.md)|通过使用给定的 Map 对象，在给定参数索引的情况下检索指定参数的值作为 Java 编程语言中的对象。|  

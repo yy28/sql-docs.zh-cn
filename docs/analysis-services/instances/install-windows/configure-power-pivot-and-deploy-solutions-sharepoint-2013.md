@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 079988eb037ebeffbbbe6cae053e241518e41c81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054554"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2013)
@@ -42,11 +42,11 @@ ms.locfileid: "63054554"
   
  以安装了 SharePoint 的帐户登录或将安装帐户配置为 SharePoint 管理中心网站的主管理员。  
   
-1.  在“开始”菜单中，单击“所有程序”，然后依次单击 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、“配置工具”和“[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2013 配置”。 只有在本地服务器上安装了 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 后，才会列出工具。  
+1.  在“开始”  菜单中，单击“所有程序”  ，然后依次单击 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、“配置工具”  和  “[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2013 配置”。 只有在本地服务器上安装了 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 后，才会列出工具。  
   
-2.  单击“配置或修复 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint”，然后单击“确定”。  
+2.  单击“配置或修复 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint”  ，然后单击“确定”  。  
   
-3.  该工具将运行验证以验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的当前状态和完成配置所需的步骤。 将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”** 和 **“退出”** 命令。  
+3.  该工具将运行验证以验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的当前状态和完成配置所需的步骤。 将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”** 、 **“运行”** 和 **“退出”** 命令。  
   
 4.  在 **“参数”** 选项卡上：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63054554"
   
 5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个详细信息，请参阅部分"输入值用于配置中的服务器[配置或修复 Power Pivot for SharePoint 2010 （Power Pivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)本主题中。  
   
-6.  您还可以删除不想在此时处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”**，然后清除 **“在任务列表中包括此操作”** 复选框。  
+6.  您还可以删除不想在此时处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”** ，然后清除 **“在任务列表中包括此操作”** 复选框。  
   
 7.  单击 **“验证”** 以便检查该工具是否有足够的信息来处理列表中的操作。 如果看到验证错误，请单击左窗格中的警告查看验证错误的详细信息。 更正任何验证错误，然后再次单击 **“验证”** 。  
   
@@ -73,15 +73,15 @@ ms.locfileid: "63054554"
 ##  <a name="bkmk_verify_powerpivot"></a> 验证 Power Pivot 配置  
  **服务：**  
   
-1.  在管理中心的“系统设置”中，单击 **“管理服务器上的服务”**。  
+1.  在管理中心的“系统设置”中，单击 **“管理服务器上的服务”** 。  
   
-2.  验证“SQL Server Analysis Services”和“SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系统服务”是否已启动。  
+2.  验证  “SQL Server Analysis Services”和  “SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系统服务”是否已启动。  
   
  **场功能：**  
   
-1.  在管理中心的“系统设置”中，单击 **“管理场功能”**。  
+1.  在管理中心的“系统设置”中，单击 **“管理场功能”** 。  
   
-2.  验证 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 集成功能**状态为“活动”。  
+2.  验证 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 集成功能**状态为“活动”  。  
   
  **网站集功能：**  
   
@@ -89,15 +89,15 @@ ms.locfileid: "63054554"
   
      单击**设置**![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")，然后单击**站点设置**。  
   
-     单击 **“网站集功能”**。  
+     单击 **“网站集功能”** 。  
   
-2.  确认**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 针对网站集的功能集成**状态为“活动”。  
+2.  确认 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 针对网站集的功能集成**状态为“活动”  。  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序：**  
   
-1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“管理服务应用程序”**。  
+1.  在“管理中心”的 **“应用程序管理”** 中，单击 **“管理服务应用程序”** 。  
   
-2.  确认服务应用程序状态为 **“已启动”**。 默认名称为**默认的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序”**。  
+2.  确认服务应用程序状态为 **“已启动”** 。 默认名称为**默认的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序”** 。  
   
      单击服务应用程序的名称，以便打开 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板以使服务应用程序打开。 第一次使用时，面板要花几分钟的加载时间。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "63054554"
 ##  <a name="bkmk_troubleshoot_issues"></a> 解决问题  
  为了协助解决问题，最好验证诊断日志记录已启用。  
   
-1.  在 SharePoint 管理中心中，单击 **“监视”** ，然后单击 **“配置使用情况和运行状况数据收集”**。  
+1.  在 SharePoint 管理中心中，单击 **“监视”** ，然后单击 **“配置使用情况和运行状况数据收集”** 。  
   
 2.  确认选择了 **“启用使用情况数据收集”** 。  
   
@@ -124,9 +124,9 @@ ms.locfileid: "63054554"
   
 4.  确认选择了 **“启用运行状况数据收集”** 。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
- 有关故障排除数据刷新的详细信息，请参阅[故障排除 Power Pivot 数据刷新](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 有关故障排除数据刷新的详细信息，请参阅[故障排除 Power Pivot 数据刷新](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) 。  
   
  有关配置工具的详细信息，请参阅 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

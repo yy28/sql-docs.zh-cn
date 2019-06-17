@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782275"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>启用“锁定内存页”选项 (Windows)
@@ -29,19 +29,19 @@ ms.locfileid: "62782275"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>启用“锁定内存页”选项  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。 在中**开放**框中，键入`gpedit.msc`。  
+1.  在 **“开始”** 菜单上，单击 **“运行”** 。 在中**开放**框中，键入`gpedit.msc`。  
   
-2.  在 **“本地组策略编辑器”** 控制台上，展开 **“计算机配置”**，再展开 **“Windows 设置”**。  
+2.  在 **“本地组策略编辑器”** 控制台上，展开 **“计算机配置”** ，再展开 **“Windows 设置”** 。  
   
-3.  展开 **“安全设置”**，再展开 **“本地策略”**。  
+3.  展开 **“安全设置”** ，再展开 **“本地策略”** 。  
   
 4.  选择 **“用户权利指派”** 文件夹。  
   
      细节窗格中随即显示出策略。  
   
-5.  在该窗格中，双击“锁定内存页”。  
+5.  在该窗格中，双击“锁定内存页”  。  
   
-6.  在“本地安全设置 - 锁定内存中的页”对话框中，单击“添加用户或组”。  
+6.  在“本地安全设置 - 锁定内存中的页”对话框中，单击“添加用户或组”   。  
   
 7.  在 **“选择用户、服务帐户或组”** 对话框中，添加有权运行 sqlservr.exe 的帐户。  
   

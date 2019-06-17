@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8c9664baa2803bbab4282b6897d49f0ddb1831
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62812704"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>配置托管备份 (SQL Server Management Studio)
@@ -58,7 +58,7 @@ ms.locfileid: "62812704"
  对 `smart_admin.sp_set_instance_backup` 和 `smart_admin.sp_backup_master_switch` 的`EXECUTE` 权限。  
   
 ## <a name="configure-includesssmartbackupincludesss-smartbackup-mdmd-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
- 从**对象资源管理器**，展开**管理**节点，然后右键单击**托管备份**。 选择 **“配置”**。 这将打开 **“托管备份”** 对话框。  
+ 从**对象资源管理器**，展开**管理**节点，然后右键单击**托管备份**。 选择 **“配置”** 。 这将打开 **“托管备份”** 对话框。  
   
  检查**启用托管备份**选项，并指定配置值：  
   

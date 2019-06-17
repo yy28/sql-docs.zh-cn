@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788125"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62788125"
   
      [安全性](#Security)  
   
--   **要添加副本，请使用：**[添加 Azure 副本向导 (SQL Server Management Studio)](#SSMSProcedure)  
+-   **要添加副本，请使用：** [添加 Azure 副本向导 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果您从未向可用性组添加任何可用性副本，请参阅"服务器实例"和"可用性组和副本"部分中的[先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "62788125"
   
 2.  在登录页面上，登录您的 Windows Azure 订阅。 登录后，向导会在您的本地计算机上安装管理证书。 下次使用此向导时会自动加载此管理证书。 如果您下载了多个管理证书，可以单击 **“...”** 按钮选择要使用的证书。  
   
-3.  然后单击 **“连接”** 连接到您的订阅。 连接后，下拉列表用 Windows Azure 参数进行填充，例如 **“虚拟网络”** 和 **“虚拟网络子网”**。  
+3.  然后单击 **“连接”** 连接到您的订阅。 连接后，下拉列表用 Windows Azure 参数进行填充，例如 **“虚拟网络”** 和 **“虚拟网络子网”** 。  
   
 4.  为将承载新辅助副本的 Windows Azure 虚拟机指定设置：  
   

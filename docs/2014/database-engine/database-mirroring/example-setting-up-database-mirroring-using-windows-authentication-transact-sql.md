@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d52e94eb98bfe4e22a2acb879a393d289baf00bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806822"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>例如：设置数据库镜像使用 Windows 身份验证 (Transact SQL)
@@ -48,9 +48,9 @@ GO
   
 |初始镜像角色|宿主系统|域用户帐户|  
 |----------------------------|-----------------|-------------------------|  
-|主体|PARTNERHOST1|\<Mydomain>\\<dbousername\>|  
-|镜像|PARTNERHOST5|\<Mydomain>\\<dbousername\>|  
-|Witness|WITNESSHOST4|\<Somedomain>\\<witnessuser\>|  
+|主体|PARTNERHOST1|\<Mydomain>\\<dbousername\> |  
+|镜像|PARTNERHOST5|\<Mydomain>\\<dbousername\> |  
+|Witness|WITNESSHOST4|\<Somedomain>\\<witnessuser\> |  
   
 1.  在主体服务器实例（PARTNERHOST1 中的默认实例）上创建端点。  
   

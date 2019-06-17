@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 39f875041963cc8d48b2dcf70515c99042cdb8fb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094439"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>在 SharePoint 服务器上安装 Analysis Services OLE DB 访问接口
@@ -63,13 +63,13 @@ ms.locfileid: "66094439"
   
 1.  在承载 Excel Services 的应用程序服务器上，运行 SQL Server 安装程序。  
   
-2.  在“安装”页上，选择 **“全新 SQL Server 独立安装或向现有安装添加功能”**。  
+2.  在“安装”页上，选择 **“全新 SQL Server 独立安装或向现有安装添加功能”** 。  
   
-3.  在“安装类型”页上，选择 **“执行 SQL Server 2012 的全新安装”**。  
+3.  在“安装类型”页上，选择 **“执行 SQL Server 2012 的全新安装”** 。  
   
-4.  在“设置角色”页上，选择 **“SQL Server 功能安装”**。  
+4.  在“设置角色”页上，选择 **“SQL Server 功能安装”** 。  
   
-5.  在 **“功能选择”** 页中，单击 **“客户端工具连接”**。 此选项将安装 **Microsoft.AnalysisServices.Xmla.dll**  
+5.  在 **“功能选择”** 页中，单击 **“客户端工具连接”** 。 此选项将安装 **Microsoft.AnalysisServices.Xmla.dll**  
   
      不要选择任何其他功能。  
   
@@ -79,13 +79,13 @@ ms.locfileid: "66094439"
   
 #### <a name="verify-msolap5-is-a-trusted-provider"></a>验证 MSOLAP.5 是受信任的访问接口。  
   
-1.  在“管理中心”中，单击 **“管理服务应用程序”**，然后单击 Excel Services 服务应用程序。  
+1.  在“管理中心”中，单击 **“管理服务应用程序”** ，然后单击 Excel Services 服务应用程序。  
   
-2.  单击 **“受信任的数据访问接口”**。  
+2.  单击 **“受信任的数据访问接口”** 。  
   
 3.  验证 MSOLAP.5 显示在列表中。 根据您配置 PowerPivot for SharePoint 的不同方式，MSOLAP.5 可能已受信任。 如果您使用了 PowerPivot 配置工具但是之后从任务列表中排除了此操作，MSOLAP.5 将不被 Excel Services 信任，现在需要手动添加。  
   
-4.  如果未列出 MSOLAP，请单击 **“添加受信任的数据访问接口”**。  
+4.  如果未列出 MSOLAP，请单击 **“添加受信任的数据访问接口”** 。  
   
 5.  在“访问接口 ID”中，键入 `MSOLAP.5`。  
   
@@ -97,9 +97,9 @@ ms.locfileid: "66094439"
   
 1.  转到 Program files\Microsoft Analysis Services\AS OLEDB\110。  
   
-2.  右键单击 msolap110.dll，然后选择 **“属性”**。  
+2.  右键单击 msolap110.dll，然后选择 **“属性”** 。  
   
-3.  单击 **“详细信息”**。  
+3.  单击 **“详细信息”** 。  
   
 4.  查看文件版本信息。 版本包括 11.00.<buildnumber&gt。\<内部版本号 >。  
   
@@ -113,11 +113,11 @@ ms.locfileid: "66094439"
   
 1.  浏览至 [Microsoft® SQL Server® 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)  
   
-2.  单击 **“安装说明”**。  
+2.  单击 **“安装说明”** 。  
   
 3.  请参阅"Microsoft Analysis Services OLE DB 提供程序的 Microsoft SQL Server 2012 SP1"部分。 下载该文件并开始安装。  
   
-4.  在 **“功能选择”** 页，选择 **“用于 SQL Server 的 Analysis Services OLE DB 访问接口”**。 取消选择其他组件并完成安装。 SpPowerPivot.msi 的详细信息，请参阅[安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
+4.  在 **“功能选择”** 页，选择 **“用于 SQL Server 的 Analysis Services OLE DB 访问接口”** 。 取消选择其他组件并完成安装。 SpPowerPivot.msi 的详细信息，请参阅[安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
 5.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](https://technet.microsoft.com/library/hh758436.aspx)。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66094439"
   
 2.  此外，您可以检查文件版本。  
   
-     转到 `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`。 右键单击 **msolap100.dll** 并选择 **“属性”**。 单击 **“详细信息”**。  
+     转到 `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`。 右键单击 **msolap100.dll** 并选择 **“属性”** 。 单击 **“详细信息”** 。  
   
      查看文件版本信息。 版本应包括。\<内部版本号 >。  
   
