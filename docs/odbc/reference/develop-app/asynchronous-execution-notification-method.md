@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288521"
 ---
 # <a name="asynchronous-execution-notification-method"></a>异步执行（通知方法）
@@ -42,7 +42,7 @@ ODBC 允许连接和语句操作的异步的执行。 应用程序线程可以�
   
 |应用程序的 ODBC 版本|驱动程序管理器版本|驱动程序版本|行为|  
 |------------------------------|----------------------------|--------------------|--------------|  
-|新的应用程序的任何 ODBC 版本|ODBC 3.81|3.80 ODBC 驱动程序|如果该驱动程序支持此功能，应用程序可以使用此功能，否则驱动程序管理器就会出错。|  
+|新的应用程序的任何 ODBC 版本|ODBC 3.81|3\.80 ODBC 驱动程序|如果该驱动程序支持此功能，应用程序可以使用此功能，否则驱动程序管理器就会出错。|  
 |新的应用程序的任何 ODBC 版本|ODBC 3.81|Pre-ODBC 3.80 驱动程序|如果该驱动程序不支持此功能，则驱动程序管理器会出错。|  
 |新的应用程序的任何 ODBC 版本|Pre-ODBC 3.81|Any|当应用程序使用此功能时，旧的驱动程序管理器将考虑为驱动程序特定属性的新特性和驱动程序应出错。新的驱动程序管理器不会将这些属性传递给驱动程序。|  
   

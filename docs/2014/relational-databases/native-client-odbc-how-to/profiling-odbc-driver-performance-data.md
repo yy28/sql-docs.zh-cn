@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200303"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>配置驱动程序性能数据 (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "63200303"
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>使用 ODBC 管理器记录驱动程序性能数据  
   
-1.  在中**Control Panel**，双击**管理工具**，然后双击**数据源 (ODBC)**。 或者，可以调用 odbcad32.exe。  
+1.  在中**Control Panel**，双击**管理工具**，然后双击**数据源 (ODBC)** 。 或者，可以调用 odbcad32.exe。  
   
 2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡。  
   

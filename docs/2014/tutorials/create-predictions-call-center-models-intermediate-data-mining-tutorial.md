@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63217868"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>为呼叫中心模型创建预测（数据挖掘中级教程）
@@ -37,7 +37,7 @@ ms.locfileid: "63217868"
   
 5.  展开挖掘结构 Call Center Default，选中神经网络模型 Call Center - LR。  
   
-6.  从 **“挖掘模型”** 菜单中选择 **“单独查询”**。  
+6.  从 **“挖掘模型”** 菜单中选择 **“单独查询”** 。  
   
      **单独查询输入**出现对话框，请使用列映射到挖掘模型中的列。  
   
@@ -112,11 +112,11 @@ ms.locfileid: "63217868"
   
 2.  在中**挖掘模型**窗格中，单击**选择模型**中, 选择 Call Center-LR 从可用模型列表。  
   
-3.  从**挖掘模型**菜单上，清除选项**单独查询**。 将警告您单独查询输入将丢失。 单击 **“确定”**。  
+3.  从**挖掘模型**菜单上，清除选项**单独查询**。 将警告您单独查询输入将丢失。 单击“确定”  。  
   
      **单独查询输入**替换为对话框**选择输入表**对话框。  
   
-4.  单击“选择事例表” 。  
+4.  单击“选择事例表”  。  
   
 5.  在中**选择表**对话框中，从列表中的数据源的 selectShifts。 在中**表/视图名称**列表中，选择 Shifts for Call Center （它可能会自动选择），并单击**确定。**  
   

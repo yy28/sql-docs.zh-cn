@@ -19,7 +19,7 @@
           href: ../report-data/query-design-tools-ssrs.md
     - name: SQL Server Data Tools 中的部署和版本支持
       href: deployment-and-version-support-in-sql-server-data-tools-ssrs.md
-    - name: '用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) '
+    - name: 用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS)
       href: url-examples-for-items-on-a-report-server-sharepoint-mode.md
     - name: 设置部署属性
       href: set-deployment-properties-reporting-services.md

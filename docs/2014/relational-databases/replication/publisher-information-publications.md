@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63462514"
 ---
 # <a name="sql-server-replication-publisher-information-dialog-box"></a>SQL Server 复制发布服务器信息对话框
@@ -25,11 +25,11 @@ ms.locfileid: "63462514"
 ## <a name="options"></a>选项  
  若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序  。  
   
--   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序  。  
   
--   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行  。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63462514"
  状态值 **“‘严重’状态下的性能”** 与事务订阅和合并订阅相关；只有设置阈值后，才可以显示该值。 有关性能度量和设置阈值的信息，请参阅[使用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)和[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **发布**  
- 每个发布的名称，格式为 PublicationDatabaseName:PublicationName。  
+ 每个发布的名称，格式为 PublicationDatabaseName:  PublicationName。  
   
  **订阅**  
  每个发布的订阅数量。  
@@ -66,7 +66,7 @@ ms.locfileid: "63462514"
  **“当前平均性能”** 和 **“当前最差的性能”**  
  仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 发布的所有订阅各自的平均性能率和最差性能率。 这些比率是基于复制监视器最近取得的度量值，并不反映某段时间内的订阅性能。  
   
- 对于事务复制，复制监视器仅为定义了性能阈值的发布显示值。 如果没有为发布定义性能阈值，则此列将显示 **“未启用”**。 对于合并复制，在通过同一类型的连接（拨号或 LAN）进行了五次同步、并且每次同步所做的更改为 50 处或更多处之后，复制监视器将会显示值。 如果所做更改为 50 处或更多处的同步次数少于五次，或最近一次同步所做的更改少于 50 处，则此列为空白。  
+ 对于事务复制，复制监视器仅为定义了性能阈值的发布显示值。 如果没有为发布定义性能阈值，则此列将显示 **“未启用”** 。 对于合并复制，在通过同一类型的连接（拨号或 LAN）进行了五次同步、并且每次同步所做的更改为 50 处或更多处之后，复制监视器将会显示值。 如果所做更改为 50 处或更多处的同步次数少于五次，或最近一次同步所做的更改少于 50 处，则此列为空白。  
   
  性能等级可以为以下值之一：  
   

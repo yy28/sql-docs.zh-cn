@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312618"
 ---
 # <a name="set-the-startup-options"></a>设置启动选项
@@ -24,23 +24,23 @@ ms.locfileid: "63312618"
   
 #### <a name="to-configure-startup-options"></a>配置启动选项  
   
-1.  在“工具”  菜单上，单击“选项” 。  
+1.  在“工具”  菜单上，单击“选项”  。  
   
-2.  展开“环境”，然后单击“启动”。 在“启动时”列表中，检查以下选项：  
+2.  展开“环境”  ，然后单击“启动”  。 在“启动时”  列表中，检查以下选项：  
   
-    -   “打开对象资源管理器”。 这是默认选项。  
+    -   “打开对象资源管理器”  。 这是默认选项。  
   
-    -   “打开新查询窗口”。  
+    -   “打开新查询窗口”  。  
   
-    -   “打开对象资源管理器和新查询”。  
+    -   “打开对象资源管理器和新查询”  。  
   
-    -   “打开对象资源管理器和活动监视器”。  
+    -   “打开对象资源管理器和活动监视器”  。  
   
-    -   “打开空环境”。  
+    -   “打开空环境”  。  
   
-3.  单击首选选项，然后单击“确定”。  
+3.  单击首选选项，然后单击“确定”  。  
   
-     请注意可能感兴趣的其他选项，例如“在对象资源管理器中隐藏系统对象”。  
+     请注意可能感兴趣的其他选项，例如“在对象资源管理器中隐藏系统对象”  。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [还原默认的 SQL Server Management Studio 配置](lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)  

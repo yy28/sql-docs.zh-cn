@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8aaa92f02d1b26e23aad3c9ccffe52cd886ac2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240118"
 ---
 # <a name="view-project-properties"></a>视图项目属性
@@ -27,7 +27,7 @@ ms.locfileid: "63240118"
   
 1.  在解决方案资源管理器中，选择一个项目。  
   
-2.  如果未打开“属性”窗口，请单击“视图”菜单上的“属性窗口”。  
+2.  如果未打开“属性”窗口，请单击“视图”  菜单上的“属性窗口”  。  
   
 3.  在“属性”窗口中查看项目的属性。  
   

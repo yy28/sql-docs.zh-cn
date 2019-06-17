@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: eacbb1a8-ac9a-4f44-832e-ae0af476522e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99d7412a9864fc4a720ba48630e4c469db353c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a31abfb17d613512651b8cfd7d7de92ee268beed
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842795"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768365"
 ---
 # <a name="ownupdatesarevisible-method-sqlserverdatabasemetadata"></a>ownUpdatesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean othersUpdatesAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *type*  
+ *类型*  
   
  指示结果集类型的整数，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
   
@@ -59,7 +59,7 @@ public boolean othersUpdatesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- 如果更新操作可见，则为 true。 否则为 **false**。  
+ 如果更新操作可见，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

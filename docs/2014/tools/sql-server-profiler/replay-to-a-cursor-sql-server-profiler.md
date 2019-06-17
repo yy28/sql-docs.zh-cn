@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7c4c4b9d2e2e07c53f850fe545d803fa411dbbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63267492"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>重播至光标处 (SQL Server Profiler)
@@ -32,9 +32,9 @@ ms.locfileid: "63267492"
   
 2.  在跟踪窗口中，单击一个事件。  
   
-3.  在 **“重播”** 菜单上，单击 **“运行至光标处”**，然后连接到要重播跟踪的服务器。  
+3.  在 **“重播”** 菜单上，单击 **“运行至光标处”** ，然后连接到要重播跟踪的服务器。  
   
-4.  在 **“重播配置”** 对话框中，验证设置，再单击 **“确定”**。  
+4.  在 **“重播配置”** 对话框中，验证设置，再单击 **“确定”** 。  
   
      重播将开始，并在第一次到达光标处时暂停。  
   

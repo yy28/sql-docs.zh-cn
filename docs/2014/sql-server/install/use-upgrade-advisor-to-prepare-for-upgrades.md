@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce60db3b720b046c44d7507d3164c2f2e6c9173f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091256"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>使用升级顾问来准备升级
@@ -74,7 +74,7 @@ ms.locfileid: "66091256"
   
  安装升级顾问后，可以将其打开**启动**菜单：  
   
--   单击**启动**，依次指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然后单击**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]升级顾问**。  
+-   单击**启动**，依次指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然后单击 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]升级顾问**。  
   
  有关详细信息，请参阅升级顾问下载和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发行说明中包括的 Upgrade Advisor 文档。  
   

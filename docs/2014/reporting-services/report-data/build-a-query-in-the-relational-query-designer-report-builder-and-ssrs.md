@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107439"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在关系查询设计器中生成查询（报表生成器和 SSRS）
@@ -45,7 +45,7 @@ ms.locfileid: "66107439"
   
 ### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>在报表设计视图中为嵌入数据集生成查询  
   
-1.  打开查询设计器。 在“报表数据”窗格中，右键单击该数据集，然后单击“查询”。  
+1.  打开查询设计器。 在“报表数据”窗格中，右键单击该数据集，然后单击“查询”  。  
   
      将打开与数据源关联的查询设计器。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "66107439"
   
 1.  在关系查询设计器中，确认您已选择字段且这些字段显示在 **“所选字段”** 窗格中。  
   
-2.  在“应用的筛选器”窗格工具栏中，单击 **“添加筛选器”**。 此时将显示一个新的筛选器行。  
+2.  在“应用的筛选器”窗格工具栏中，单击 **“添加筛选器”** 。 此时将显示一个新的筛选器行。  
   
-3.  在“字段名称”中，单击以显示字段的下拉列表，然后单击要作为筛选依据的字段名称。 例如，若要按数量进行筛选，则单击包含项数的字段。  
+3.  在“字段名称”中，单击以显示字段的下拉列表，然后单击要作为筛选依据的字段名称  。 例如，若要按数量进行筛选，则单击包含项数的字段。  
   
-4.  在“运算符”中，单击以显示运算符的下拉列表，然后选择要在筛选器中使用的比较运算符。  
+4.  在“运算符”中，单击以显示运算符的下拉列表，然后选择要在筛选器中使用的比较运算符  。  
   
 5.  在 **“值”** 中，键入要作为筛选依据的值。 例如，若要针对大于 100 的数量进行筛选，则键入 100。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107439"
   
 ### <a name="to-view-a-query-result-set"></a>查看查询结果集  
   
-1.  在查询设计器工具栏中，单击“运行查询(!)”。  
+1.  在查询设计器工具栏中，单击“运行查询(!)”  。  
   
     > [!NOTE]  
     >  查询设计器使用设计时凭据运行查询并检索结果集。 有关详细信息，请参阅 [在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aded187be089b3c1af004bd6f7e88d75780b9f22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187595"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 运算符参考 (MDX)
@@ -23,7 +23,7 @@ ms.locfileid: "63187595"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|Description|  
 |-----------|-----------------|  
 |[--（注释）(MDX)](../mdx/comment-mdx-operator-reference.md)|表示用户提供的注释文本。|  
 |[- &#40;Except&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)|执行一个集运算，以返回两个集之间的不同项并删除重复成员。|  

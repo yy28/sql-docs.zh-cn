@@ -11,14 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63136438"
 ---
 # <a name="save-trace-results-to-a-file"></a>将跟踪结果保存到文件
-  可以将跟踪结果保存到文件中。 跟踪文件是写入跟踪结果的文件。 跟踪文件可以位于本地目录（如 C:\\foldername\\filename.trc）中，也可以位于在网络目录（如 \\\computername\sharename\filename.trc）中。  
+  可以将跟踪结果保存到文件中。 跟踪文件是写入跟踪结果的文件。 跟踪文件可以位于本地目录（如 C:\\foldername  \\filename.trc  ）中，也可以位于在网络目录（如 \\\computername\sharename\filename.trc）中。  
   
  可以使用跟踪文件执行下列操作：  
   

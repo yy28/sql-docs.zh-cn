@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250273"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>SQL Server 复制订阅属性 
@@ -39,7 +39,7 @@ ms.locfileid: "63250273"
   
 ### <a name="options-for-all-subscriptions"></a>用于所有订阅的选项  
  **安全性**  
- 单击 **“代理进程帐户”** 行，再单击属性按钮 (**...**)，可以更改在分发服务器上运行分发代理或合并代理时所使用的帐户。 若要更改分发代理或合并代理在建立与订阅服务器的连接时所使用的帐户，请单击 **“订阅服务器连接”**，再单击属性按钮 (**...**)。  
+ 单击 **“代理进程帐户”** 行，再单击属性按钮 ( **...** )，可以更改在分发服务器上运行分发代理或合并代理时所使用的帐户。 若要更改分发代理或合并代理在建立与订阅服务器的连接时所使用的帐户，请单击 **“订阅服务器连接”** ，再单击属性按钮 ( **...** )。  
   
  有关每个代理所需权限的详细信息，请参阅 [Replication Agent Security Model](security/replication-agent-security-model.md)。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63250273"
   
 ### <a name="options-for-merge-subscriptions"></a>用于合并订阅的选项  
  **分区定义(HOST_NAME)**  
- 对于使用参数化筛选器的发布，合并复制的计算结果的两个系统函数 （或两者如果筛选器引用这两个函数） 一个期间同步，以确定订阅服务器应接收的数据：SUSER_SNAME() 或 HOST_NAME()。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
+ 对于使用参数化筛选器的发布，合并复制的计算结果的两个系统函数 （或两者如果筛选器引用这两个函数） 一个期间同步，以确定订阅服务器应接收的数据：SUSER_SNAME() 或 HOST_NAME()   。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
   
  **“订阅类型”** 和 **“优先级”**  
  显示订阅是客户端订阅还是服务器订阅（在创建订阅后不能更改）。 服务器订阅可以将数据重新发布到其他订阅服务器，并可以为服务器订阅分配冲突解决优先级。  
@@ -60,7 +60,7 @@ ms.locfileid: "63250273"
  如果在新建订阅向导中选择了服务器订阅类型，则会为该订阅服务器分配一个在冲突解决过程中使用的优先级。  
   
  **交互式解决冲突**  
- 确定是否使用交互式冲突解决程序用户界面解决合并同步过程中的冲突。 这需要将 **“使用 Windows 同步管理器”** 的值设置为 **“启用”**。 有关详细信息，请参阅 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
+ 确定是否使用交互式冲突解决程序用户界面解决合并同步过程中的冲突。 这需要将 **“使用 Windows 同步管理器”** 的值设置为 **“启用”** 。 有关详细信息，请参阅 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
 
 
 ## <a name="subscriber-properties"></a>订阅服务器属性
@@ -96,11 +96,11 @@ ms.locfileid: "63250273"
  确定是否可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步管理器同步此订阅。  
   
  **安全性**  
- 单击 **“代理进程帐户”** 行，再单击属性按钮 (**...**)，可以更改在订阅服务器上运行分发代理或合并代理时所使用的帐户。 与连接有关的安全选项取决于订阅类型：  
+ 单击 **“代理进程帐户”** 行，再单击属性按钮 ( **...** )，可以更改在订阅服务器上运行分发代理或合并代理时所使用的帐户。 与连接有关的安全选项取决于订阅类型：  
   
--   对于对事务发布的订阅：若要更改分发代理在连接到分发服务器时所使用的帐户，请单击 **“分发服务器连接”**，再单击属性按钮 (**...**)。    
--   对于对事务发布的立即更新订阅：除了上面所述的分发服务器连接，通过单击 **“发布服务器连接”**，再单击属性按钮 (**...**)，还可以更改用于从订阅服务器向发布服务器传播更改的方法。  
--   对于对合并发布的订阅：请单击 **“发布服务器连接”**，再单击属性按钮 (**...**)。  
+-   对于对事务发布的订阅：若要更改分发代理在连接到分发服务器时所使用的帐户，请单击 **“分发服务器连接”** ，再单击属性按钮 ( **...** )。    
+-   对于对事务发布的立即更新订阅：除了上面所述的分发服务器连接，通过单击 **“发布服务器连接”** ，再单击属性按钮 ( **...** )，还可以更改用于从订阅服务器向发布服务器传播更改的方法。  
+-   对于对合并发布的订阅：请单击 **“发布服务器连接”** ，再单击属性按钮 ( **...** )。  
   
  有关每个代理所需权限的详细信息，请参阅 [Replication Agent Security Model](security/replication-agent-security-model.md)。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "63250273"
   
 ### <a name="options-for-merge-subscriptions"></a>用于合并订阅的选项  
  **分区定义(HOST_NAME)**  
- 对于使用参数化筛选器的发布，合并复制的计算结果的两个系统函数 （或两者如果筛选器引用这两个函数） 一个期间同步，以确定订阅服务器应接收的数据：SUSER_SNAME() 或 HOST_NAME()。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
+ 对于使用参数化筛选器的发布，合并复制的计算结果的两个系统函数 （或两者如果筛选器引用这两个函数） 一个期间同步，以确定订阅服务器应接收的数据：SUSER_SNAME() 或 HOST_NAME()   。 默认情况下， **HOST_NAME()** 返回运行合并代理的计算机的名称，但可以在新建订阅向导中覆盖此值。 有关参数化筛选器和覆盖 **HOST_NAME()** 的详细信息，请参阅 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
   
  **“订阅类型”** 和 **“优先级”**  
  显示订阅是客户端订阅还是服务器订阅（在创建订阅后不能更改）。 服务器订阅可以将数据重新发布到其他订阅服务器，并可以为服务器订阅分配冲突解决优先级。  
@@ -118,7 +118,7 @@ ms.locfileid: "63250273"
  如果在新建订阅向导中选择了服务器订阅类型，则会为该订阅服务器分配一个在冲突解决过程中使用的优先级。  
   
  **交互式解决冲突**  
- 确定是否使用交互式冲突解决程序用户界面解决合并同步过程中的冲突。 这需要将 **“使用 Windows 同步管理器”** 的值设置为 **“启用”**。 有关详细信息，请参阅 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
+ 确定是否使用交互式冲突解决程序用户界面解决合并同步过程中的冲突。 这需要将 **“使用 Windows 同步管理器”** 的值设置为 **“启用”** 。 有关详细信息，请参阅 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
   
  **Web 同步**  
  **“使用 Web 同步”** 确定是否连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 服务器以同步订阅。 只有在为 Web 同步启用了发布时，此选项才可用。 有关详细信息，请参阅 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)。  
@@ -126,7 +126,7 @@ ms.locfileid: "63250273"
  对于 **“使用 Web 同步”** ，如果选择 **True**，则请执行以下操作：  
   
 -   在 **“Web 服务器地址”** 中输入 IIS 服务器的完整地址。   
--   单击 **“Web 服务器连接”** 行，再单击属性按钮 (**...**)，以设置或更改订阅服务器连接到 IIS 服务器时所使用的帐户。   
+-   单击 **“Web 服务器连接”** 行，再单击属性按钮 ( **...** )，以设置或更改订阅服务器连接到 IIS 服务器时所使用的帐户。   
 -   必要时更改 **“Web 服务器超时值”** 。 超时值是指表示 Web 同步请求在多长时间之后过期的时间长度（秒）。  
   
  有关配置的详细信息，请参阅 [Configure Web Synchronization](configure-web-synchronization.md)。  

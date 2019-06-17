@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1718ef034b6650dde246f8c0bc3d4e5f02f2f2ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298051"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>移动注册服务器或注册服务器组 (SQL Server Management Studio)
@@ -30,9 +30,9 @@ ms.locfileid: "63298051"
   
 #### <a name="to-move-a-registered-server-or-server-group"></a>移动注册服务器或服务器组  
   
-1.  在注册服务器中，右键单击某服务器或服务器组，再单击“移动到”。  
+1.  在注册服务器中，右键单击某服务器或服务器组，再单击  “移动到”。  
   
-2.  在 **“移动服务器注册”** 对话框中，展开服务器组列表，单击您要显示的服务器或服务器组的节点，再单击 **“确定”**。  
+2.  在 **“移动服务器注册”** 对话框中，展开服务器组列表，单击您要显示的服务器或服务器组的节点，再单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [注册服务器](register-servers.md)   

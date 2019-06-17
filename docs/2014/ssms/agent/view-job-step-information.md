@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245924"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
@@ -51,11 +51,11 @@ ms.locfileid: "63245924"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  依次展开“SQL Server 代理”和“作业”，右键单击包含要查看的作业步骤的作业，再单击“属性”。  
+2.  依次展开“SQL Server 代理”  和“作业”  ，右键单击包含要查看的作业步骤的作业，再单击“属性”  。  
   
 3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页。  
   
-4.  单击要查看的作业步骤，再单击 **“编辑”**。  
+4.  单击要查看的作业步骤，再单击 **“编辑”** 。  
   
 5.  在 **“作业步骤属性”** 对话框的 **“常规”** 页上，可以查看作业步骤的类型和用途。  
   

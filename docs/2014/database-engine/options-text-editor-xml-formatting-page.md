@@ -11,18 +11,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089848"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>选项（“文本编辑器”-“XML”-“格式”页）
 
-使用此对话框，可以为 XML 编辑器指定格式设置。 可从“工具”菜单访问“选项”对话框。  
+使用此对话框，可以为 XML 编辑器指定格式设置。 可从“工具”  菜单访问“选项”  对话框。  
   
 > [!NOTE]  
-> 从“选项”对话框依次选择“文本编辑器”文件夹、“XML”文件夹和“格式”选项后，这些设置将可用。  
+> 从“选项”  对话框依次选择“文本编辑器”  文件夹、“XML”  文件夹和“格式”  选项后，这些设置将可用。  
   
 ## <a name="attributes"></a>特性  
  **保留手动属性格式化**  

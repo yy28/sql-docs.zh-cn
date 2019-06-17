@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128765"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
@@ -51,11 +51,11 @@ ms.locfileid: "63128765"
   
 -   ALTER ANY \<*Server Securable*>，其中 *Server Securable* 可为任何服务器安全对象。  
   
-     授予创建、更改或删除“服务器安全对象” 的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
+     授予创建、更改或删除“服务器安全对象”  的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
   
 -   ALTER ANY \<*Database Securable*>，其中 *Database Securable* 可为数据库级别的任何安全对象。  
   
-     授予创建、更改或删除“数据库安全对象” 的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
+     授予创建、更改或删除“数据库安全对象”  的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
   
 -   TAKE OWNERSHIP  
   
@@ -71,11 +71,11 @@ ms.locfileid: "63128765"
   
 -   CREATE \<*服务器安全对象*>  
   
-     授予被授权者创建“服务器安全对象” 的权限。  
+     授予被授权者创建“服务器安全对象”  的权限。  
   
 -   CREATE \<*数据库安全对象*>  
   
-     授予被授权者创建“数据库安全对象” 的权限。  
+     授予被授权者创建“数据库安全对象”  的权限。  
   
 -   CREATE \<*包含架构的安全对象*>  
   

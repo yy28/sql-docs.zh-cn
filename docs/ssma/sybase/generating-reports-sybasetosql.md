@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: bb377e36f73bad59da35fabc2f6e9189544230e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126290"
 ---
 # <a name="generating-reports-sybasetosql"></a>生成报告 (SybaseToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "63126290"
   
 使用以下过程生成的报告：  
   
-1.  指定**摘要-报表-向其写入**参数。 相关的报表，存储作为文件的名称 （如果指定） 或指定的文件夹中。 文件名称是系统预定义的下, 表中所述**&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
+1.  指定**摘要-报表-向其写入**参数。 相关的报表，存储作为文件的名称 （如果指定） 或指定的文件夹中。 文件名称是系统预定义的下, 表中所述 **&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
   
     报表 vis 即命令是：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63126290"
 ```  
   
 ### <a name="synchronize-target"></a>同步目标：  
-该命令**同步目标**已**报表-到错误**参数，它指定为同步操作的错误报告的位置。 然后，按名称的文件**TargetSynchronizationReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
+该命令**同步目标**已**报表-到错误**参数，它指定为同步操作的错误报告的位置。 然后，按名称的文件**TargetSynchronizationReport&lt;n&gt;。XML**创建在指定的位置，其中 **&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
   
 **注意：** 如果未指定文件夹路径，报表-错误-到参数将成为的命令同步的目标的可选属性。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "63126290"
 -   fail-script  
   
 ### <a name="refresh-from-database"></a>刷新从数据库：  
-该命令**从数据库刷新**已**报表-到错误**参数，它指定刷新操作的错误报告的位置。 然后，按名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
+该命令**从数据库刷新**已**报表-到错误**参数，它指定刷新操作的错误报告的位置。 然后，按名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中 **&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
   
 **注意：** 如果未指定文件夹路径，报表-错误-到参数将成为的命令同步的目标的可选属性。  
   

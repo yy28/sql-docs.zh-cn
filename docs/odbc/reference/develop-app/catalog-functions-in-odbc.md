@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84c870d45cc487fc9ec5497e43b764bd4187d2f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63217618"
 ---
 # <a name="catalog-functions-in-odbc"></a>ODBC 中的目录函数
 ODBC 包含以下目录函数：  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |**SQLTables**|返回数据源中的目录、 架构、 表或表类型的列表。|  
 |**SQLColumns**|一个或多个表中返回的列的列表。|  

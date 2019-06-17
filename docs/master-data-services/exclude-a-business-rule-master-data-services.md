@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6f5cfa2b6bb4566f42dfe7f5049cb9d55282f8d4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484001"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>排除业务规则 (Master Data Services)
@@ -35,25 +35,25 @@ ms.locfileid: "65484001"
   
 ### <a name="to-exclude-a-business-rule"></a>排除业务规则  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
+2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”** 。  
   
 3.  在“业务规则”  页上，从“模型”  下拉列表中选择一个模型。  
   
 4.  从  “实体”下拉列表中选择一个实体。  
   
-5.  从“成员类型”列表中选择一个成员类型。  
+5.  从“成员类型”  列表中选择一个成员类型。  
   
-6.  在网格中，选择要排除的业务规则所对应的行并单击“编辑” 。  
+6.  在网格中，选择要排除的业务规则所对应的行并单击“编辑”  。  
   
-7.  选中“已排除”复选框。  
+7.  选中“已排除”复选框。   
   
-8.  单击“保存” 。  
+8.  单击“保存”  。  
   
-9. 单击“全部发布” 。  
+9. 单击“全部发布”  。  
   
-10. 在确认对话框中，单击 **“确定”**。 “业务规则状态”  列中的值为“已排除”状态  ，“已排除”  列为“是” 。  
+10. 在确认对话框中，单击 **“确定”** 。 “业务规则状态”  列中的值为“已排除”状态  ，“已排除”  列为“是”  。  
   
 ## <a name="see-also"></a>请参阅  
  [删除业务规则 (Master Data Services)](../master-data-services/delete-a-business-rule-master-data-services.md)   

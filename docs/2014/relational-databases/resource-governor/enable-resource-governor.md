@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63216023"
 ---
 # <a name="enable-resource-governor"></a>启用资源调控器
   默认情况下，资源调控器处于关闭状态。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 启用资源调控器。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   若要启用 Resource Governor，请使用：[对象资源管理器](#RGOnObjEx)、[Resource Governor 属性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
+-   若要启用 Resource Governor，请使用：  [对象资源管理器](#RGOnObjEx)、[Resource Governor 属性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  启用资源调控器会产生下列结果：  
@@ -44,18 +44,18 @@ ms.locfileid: "63216023"
 ##  <a name="RGOnObjEx"></a> 使用对象资源管理器启用资源调控器  
  **使用对象资源管理器启用资源调控器**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器” ，再单击“启用” 。  
+2.  右键单击“资源调控器”  ，再单击“启用”  。  
   
 ##  <a name="RGOnProp"></a> 使用资源调控器属性启用资源调控器  
  **使用“资源调控器属性”页启用资源调控器**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器”  ，然后单击“属性” ，这将打开“资源调控器属性”页  。  
+2.  右键单击“资源调控器”  ，然后单击“属性”  ，这将打开“资源调控器属性”页  。  
   
-3.  单击 **“启用资源调控器”** 复选框，再单击 **“确定”**。  
+3.  单击 **“启用资源调控器”** 复选框，再单击 **“确定”** 。  
   
 ##  <a name="RGOnTSQL"></a> 使用 Transact-SQL 启用资源调控器  
  **使用 Transact-SQL 启用资源调控器**  

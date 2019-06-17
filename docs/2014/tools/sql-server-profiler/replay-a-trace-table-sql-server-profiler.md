@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240489"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>重播跟踪表 (SQL Server Profiler)
@@ -29,9 +29,9 @@ ms.locfileid: "63240489"
   
 1.  请打开需要重播的包含事件类的跟踪表。  
   
-2.  在 **“重播”** 菜单上，单击 **“开始”**，然后连接到要重播跟踪的服务器实例。  
+2.  在 **“重播”** 菜单上，单击 **“开始”** ，然后连接到要重播跟踪的服务器实例。  
   
-3.  在 **“重播配置”** 对话框的 **“基本重播选项”** 选项卡上，指定 **“重播服务器”**。 单击 **“更改”** 以更改 **“重播服务器”** 框中显示的服务器。  
+3.  在 **“重播配置”** 对话框的 **“基本重播选项”** 选项卡上，指定 **“重播服务器”** 。 单击 **“更改”** 以更改 **“重播服务器”** 框中显示的服务器。  
   
 4.  根据需要，选择下列目标位置之一以在其中保存重播：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63240489"
   
     -   **保存到表**，该选项指定保存重播的数据库表。  
   
-5.  选择“按跟踪的顺序重播事件”或“使用多个线程重播事件”。 下表列出了这些设置之间的差异。  
+5.  选择“按跟踪的顺序重播事件”  或“使用多个线程重播事件”  。 下表列出了这些设置之间的差异。  
   
     |Option|Description|  
     |------------|-----------------|  
@@ -48,15 +48,15 @@ ms.locfileid: "63240489"
   
 6.  选择 **“显示重播结果”** 以在重播时查看结果。  
   
-7.  （可选）单击“高级重播选项”选项卡来指定下列选项：  
+7.  （可选）单击“高级重播选项”  选项卡来指定下列选项：  
   
-    -   若要重播所有服务器进程 ID (SPID)，请选择“重播系统 SPID”。  
+    -   若要重播所有服务器进程 ID (SPID)，请选择“重播系统 SPID”  。  
   
-    -   若要仅重播属于特定 SPID 的进程，请选择 **“仅重播一个 SPID”**。 在“要重播的 SPID”框中，键入 SPID。  
+    -   若要仅重播属于特定 SPID 的进程，请选择 **“仅重播一个 SPID”** 。 在“要重播的 SPID”  框中，键入 SPID。  
   
-    -   若要重播特定时间段内发生的事件，请选择 **“按日期和时间限制重播”**。 为“开始时间”和“结束时间”选择日期和时间，以指定要在重播中包括的时间段。  
+    -   若要重播特定时间段内发生的事件，请选择 **“按日期和时间限制重播”** 。 为“开始时间”  和“结束时间”  选择日期和时间，以指定要在重播中包括的时间段。  
   
-    -   若要控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在重播期间管理进程的方式，请配置 **“Health Monitor 选项”**。  
+    -   若要控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在重播期间管理进程的方式，请配置 **“Health Monitor 选项”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [运行 SQL Server Profiler 所需的权限](sql-server-profiler.md)   

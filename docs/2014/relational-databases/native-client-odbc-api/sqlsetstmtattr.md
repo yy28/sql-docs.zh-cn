@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188684"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
@@ -48,7 +48,7 @@ ms.locfileid: "63188684"
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  SQL_SOPT_SS_CURSOR 属性指定驱动程序是否将在游标上使用特定于驱动程序的性能选项。 [SQLGetData](sqlgetdata.md)设置这些选项时，不允许。 默认设置为 SQL_CO_OFF。 *ValuePtr*的值为类型为 SQLLEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|默认值。 禁用快速只进、 只读游标和自动提取，启用**SQLGetData**对只进、 只读游标。 将 SQL_SOPT_SS_CURSOR_OPTIONS 设置为 SQL_CO_OFF 时，游标类型将不会发生更改。 也就是说，快速只进游标将保持为快速只进游标。 若要更改的游标类型，该应用程序必须现在设置不同的游标类型使用`SQLSetStmtAttr`/SQL_ATTR_CURSOR_TYPE。|  
 |SQL_CO_FFO|启用快速只进、 只读游标，禁用**SQLGetData**对只进、 只读游标。|  
@@ -62,7 +62,7 @@ ms.locfileid: "63188684"
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 属性确定是立即准备还是延迟，直到该语句**SQLExecute**， [SQLDescribeCol](sqldescribecol.md)或[SQLDescribeParam](sqldescribeparam.md)执行。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和早期版本中，将忽略此属性（没有延迟的准备）。 *ValuePtr*的值为类型为 SQLLEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_DP_ON|默认值。 在调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)，将延迟语句准备，直到**SQLExecute**称为或元属性操作 (**SQLDescribeCol**或**SQLDescribeParam**) 执行。|  
 |SQL_DP_OFF|准备的语句就立即**SQLPrepare**执行。|  
@@ -72,7 +72,7 @@ ms.locfileid: "63188684"
   
  *ValuePtr*的值为类型为 SQLLEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|默认值。 驱动程序不能将日期、时间和货币数据转换为使用客户端区域设置的字符串。|  
 |SQL_RE_ON|驱动程序在将日期、时间和货币数据转换为字符串数据时使用客户端区域设置。|  
@@ -87,7 +87,7 @@ ms.locfileid: "63188684"
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  SQL_SOPT_SS_TEXTPTR_LOGGING 属性用于切换的包含的列上的操作的日志记录**文本**或**映像**数据。 *ValuePtr*的值为类型为 SQLLEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|禁用执行的操作的日志记录**文本**并**映像**数据。|  
 |SQL_TL_ON|默认值。 启用日志记录执行的操作**文本**并**映像**数据。|  
@@ -95,7 +95,7 @@ ms.locfileid: "63188684"
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  SQL_SOPT_SS_HIDDEN_COLUMNS 属性在结果集中公开隐含在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 语句中的列。 默认情况下，驱动程序不公开这些列。 *ValuePtr*的值为类型为 SQLLEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|默认值。 结果集中不显示 FOR BROWSE 列。|  
 |SQL_HC_ON|公开 FOR BROWSE 列。|  
@@ -129,7 +129,7 @@ ms.locfileid: "63188684"
   
  SQL_SOPT_SS_NAME_SCOPE 的类型为 SQLULEN。  
   
-|*ValuePtr*值|描述|  
+|*ValuePtr*值|Description|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|默认值。<br /><br /> 当使用表值参数时，指示应返回实际表的元数据。<br /><br /> SQLColumns 使用稀疏列功能时，将返回不是成员的稀疏的列`column_set`。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|指示应用程序需要表类型的元数据，而不是实际表（目录函数应返回表类型的元数据）。 然后，应用程序将传递作为表值参数的 TYPE_NAME *TableName*参数。|  

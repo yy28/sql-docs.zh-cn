@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2efc74fa2ba84335fcb5e03b42125fb9c6782f43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164117"
 ---
 # <a name="implementing-a-data-processing-extension"></a>实现数据处理扩展插件
@@ -36,16 +36,16 @@ ms.locfileid: "63164117"
  介绍如何为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件分配命名空间以及如何将数据处理扩展插件编译成库 DLL。  
   
  [为数据处理扩展插件实现 Connection 类](implementing-a-connection-class-for-a-data-processing-extension.md)  
- 介绍连接的属性以及如何为数据处理扩展插件实现你自己的 Connection 类。  
+ 介绍连接的属性以及如何为数据处理扩展插件实现你自己的 Connection 类  。  
   
  [为数据处理扩展插件实现 Command 类](implementing-a-command-class-for-a-data-processing-extension.md)  
- 介绍命令的属性以及如何为数据处理扩展插件实现你自己的 Command 类。  
+ 介绍命令的属性以及如何为数据处理扩展插件实现你自己的 Command 类  。  
   
  [为数据处理扩展插件实现 DataReader 类](implementing-a-datareader-class-for-a-data-processing-extension.md)  
- 介绍数据读取器的属性以及如何为数据处理扩展插件实现自己的 DataReader 类。  
+ 介绍数据读取器的属性以及如何为数据处理扩展插件实现自己的 DataReader 类  。  
   
  [将外部数据集用于 Reporting Services](using-an-external-dataset-with-reporting-services.md)  
- 介绍如何向报表服务器公开自定义 DataSet 对象以供使用。  
+ 介绍如何向报表服务器公开自定义 DataSet 对象以供使用  。  
   
  [部署数据处理扩展插件](deploying-a-data-processing-extension.md)  
  介绍如何部署数据处理扩展插件。  

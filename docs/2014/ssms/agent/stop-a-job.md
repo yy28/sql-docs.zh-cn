@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f334834ff1deecebbc719ec71fb8348c13e4f68e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245808"
 ---
 # <a name="stop-a-job"></a>Stop a Job
@@ -55,9 +55,9 @@ ms.locfileid: "63245808"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，再展开 **“作业”**，右键单击要停止的作业，再单击 **“停止作业”**。  
+2.  展开 **“SQL Server 代理”** ，再展开 **“作业”** ，右键单击要停止的作业，再单击 **“停止作业”** 。  
   
-3.  若要停止多个作业，请右键单击 **“作业活动监视器”**，然后单击 **“查看作业活动”**。 在作业活动监视器中，选择要停止的作业，右键单击所选内容，然后单击 **“停止作业”**。  
+3.  若要停止多个作业，请右键单击 **“作业活动监视器”** ，然后单击 **“查看作业活动”** 。 在作业活动监视器中，选择要停止的作业，右键单击所选内容，然后单击 **“停止作业”** 。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -65,9 +65,9 @@ ms.locfileid: "63245808"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- stops a job named Weekly Sales Data Backup  

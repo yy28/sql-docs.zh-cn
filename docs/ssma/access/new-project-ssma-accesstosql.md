@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: af3859f5e402dce2854cce02439ff6cb26529f46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299507"
 ---
 # <a name="new-project-ssma-accesstosql"></a>新项目 (SSMA) (AccessToSQL)
@@ -27,7 +27,7 @@ ms.locfileid: "63299507"
   
 输入项目的名称。 SSMA 会追加文件扩展名。  
   
-**位置**  
+**Location**  
   
 输入或浏览到文件夹或网络位置来保存该项目。  
   

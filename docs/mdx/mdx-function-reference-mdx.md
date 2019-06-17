@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e38d37eae107c713ced69857898c604a77af297
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187604"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 函数参考 (MDX)
@@ -25,13 +25,13 @@ ms.locfileid: "63187604"
   
 ## <a name="array-functions"></a>数组函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[SetToArray &#40;MDX&#41;](../mdx/settoarray-mdx.md)|将一个或多个集转换为数组，以便在用户定义函数中使用。|  
   
 ## <a name="hierarchy-functions"></a>层次结构函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[Hierarchy &#40;MDX&#41;](../mdx/hierarchy-mdx.md)|返回包含指定的成员或级别的层次结构。|  
 |[维度&#40;MDX&#41;](../mdx/dimension-mdx.md)|返回包含指定的成员、级别或层次结构的维度。|  
@@ -39,14 +39,14 @@ ms.locfileid: "63187604"
   
 ## <a name="level-functions"></a>级别函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[Level &#40;MDX&#41;](../mdx/level-mdx.md)|返回成员的级别。|  
 |[级别&#40;MDX&#41;](../mdx/levels-mdx.md)|返回由数值表达式指定在维度或层次结构中的位置的级别，或返回由字符串表达式指定名称的级别。|  
   
 ## <a name="logical-functions"></a>逻辑函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[IsAncestor &#40;MDX&#41;](../mdx/isancestor-mdx.md)|返回一个指定成员是否为另一个指定成员的祖先。|  
 |[IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)|返回表达式的计算结果是否为空单元值。|  
@@ -56,7 +56,7 @@ ms.locfileid: "63187604"
   
 ## <a name="member-functions"></a>成员函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[祖先&#40;MDX&#41;](../mdx/ancestor-mdx.md)|返回某个成员在指定级别或距离上的祖先。|  
 |[ClosingPeriod &#40;MDX&#41;](../mdx/closingperiod-mdx.md)|返回某个成员在指定级别上的后代中的最后一个同级。|  
@@ -84,7 +84,7 @@ ms.locfileid: "63187604"
   
 ## <a name="numeric-functions"></a>数值函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)|返回一个标量值，该标量值由对指定集的元组的度量值聚合而得，或通过使用指定的数值表达式对指定集的元组计算而得（可选）。|  
 |[Avg &#40;MDX&#41;](../mdx/avg-mdx.md)|返回对所指定集计算所得的度量值的平均值，或可选数值表达式对所指定集求得的平均值。|  
@@ -127,7 +127,7 @@ ms.locfileid: "63187604"
   
 ## <a name="set-functions"></a>集函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|返回通过将计算成员添加到指定集而生成的集。|  
 |[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)|返回包含所指定维度、层次结构或级别的所有成员（包括计算成员）的集。|  
@@ -183,7 +183,7 @@ ms.locfileid: "63187604"
   
 ## <a name="string-functions"></a>字符串函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[CalculationPassValue (MDX)](../mdx/calculationpassvalue-mdx.md)|返回用 MDX 表达式对多维数据集的指定计算传递求得的值。|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|将空单元值合并成数字或字符串并返回合并后的值。|  
@@ -200,14 +200,14 @@ ms.locfileid: "63187604"
   
 ## <a name="subcube-functions"></a>子多维数据集函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[此 (MDX)](../mdx/this-mdx.md)|返回当前的子多维数据集。|  
 |[离开&#40;MDX&#41;](../mdx/leaves-mdx.md)|返回指定维度、成员或元组中的叶成员集。|  
   
 ## <a name="tuple-functions"></a>元组函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[Current &#40;MDX&#41;](../mdx/current-mdx.md)|返回迭代过程中集内的当前元组。|  
 |[Item &#40;Tuple&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|返回某个集中的元组。|  
@@ -216,7 +216,7 @@ ms.locfileid: "63187604"
   
 ## <a name="other-functions"></a>其他函数  
   
-|函数|描述|  
+|函数|Description|  
 |--------------|-----------------|  
 |[错误&#40;MDX&#41;](../mdx/error-mdx.md)|引发错误，根据需要可以选择提供指定的错误消息。|  
   

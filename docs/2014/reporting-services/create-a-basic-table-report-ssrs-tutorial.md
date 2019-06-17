@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109681"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>创建基本表报表（SSRS 教程）
@@ -32,7 +32,7 @@ ms.locfileid: "66109681"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库引擎。  
   
--   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。  有关详细信息，请参阅[Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).。 有关支持的详细信息[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]示例数据库和示例代码[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，请参阅[数据库和示例概述](https://go.microsoft.com/fwlink/?LinkId=110391)CodePlex 网站上。  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。  有关详细信息，请参阅[Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471). 。 有关支持的详细信息[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]示例数据库和示例代码[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，请参阅[数据库和示例概述](https://go.microsoft.com/fwlink/?LinkId=110391)CodePlex 网站上。  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 的用户。  
   
