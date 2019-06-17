@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056791"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>执行 SQL 任务中的参数和返回代码
@@ -45,7 +45,7 @@ ms.locfileid: "66056791"
 -   [配置参数和返回代码中执行 SQL 任务编辑器](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> 使用参数名称和标记  
- 执行 SQL 任务使用不同的连接类型时，SQL 命令的语法使用不同的参数标记。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器类型要求，SQL 命令必须使用格式为 \@varParameter 的参数标记，而 OLE DB 连接类型则要求使用问号 (?) 参数标记。  
+ 执行 SQL 任务使用不同的连接类型时，SQL 命令的语法使用不同的参数标记。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器类型要求，SQL 命令必须使用格式为 \@varParameter  的参数标记，而 OLE DB 连接类型则要求使用问号 (?) 参数标记。  
   
  在变量与参数之间的映射中可以用作参数名的名称也因连接管理器类型而异。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器类型使用前缀为 \@ 的用户定义的名称，而 OLE DB 连接管理器类型则要求使用从 0 开始的序数数值作为参数名。  
   

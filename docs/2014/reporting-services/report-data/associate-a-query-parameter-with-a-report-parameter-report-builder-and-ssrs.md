@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 697a8bbfa77a8afcabfdf00deef93620ff607233
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107467"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>将查询参数与报表参数相关联（报表生成器和 SSRS）
@@ -30,10 +30,10 @@ ms.locfileid: "66107467"
   
 ### <a name="to-associate-a-query-parameter-with-a-report-parameter"></a>将查询参数与报表参数相关联  
   
-1.  在“报表数据”窗格中，右键单击数据集，再单击“数据集属性”，然后单击“参数”。  
+1.  在“报表数据”窗格中，右键单击数据集，再单击“数据集属性”  ，然后单击“参数”  。  
   
     > [!NOTE]  
-    >  如果“报表数据”窗格不可见，请单击“视图”菜单上的“报表数据”。  
+    >  如果“报表数据”窗格不可见，请单击“视图”  菜单上的“报表数据”  。  
   
 2.  在 **“参数名称”** 列中，查找查询参数的名称。 将基于查询自动填充参数名称。 每次更改查询时，都会检查查询是否有新的查询参数。 手动创建的查询参数不会随着查询的更改而变化。  
   

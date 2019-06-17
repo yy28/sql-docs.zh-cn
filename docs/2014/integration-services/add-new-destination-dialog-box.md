@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa37f7c80f2aa3c371ad823bb7c22ee2ad4819ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061863"
 ---
 # <a name="add-new-destination-dialog-box"></a>“添加新目标”对话框
@@ -26,7 +26,7 @@ ms.locfileid: "66061863"
 |Option|Description|  
 |------------|-----------------|  
 |类型|选择要连接到的目标的类型。|  
-|连接管理器|选择现有连接管理器或单击“\<新建>”创建新的连接管理器。|  
+|连接管理器|选择现有连接管理器或单击“\<新建>”创建新的连接管理器  。|  
 |仅显示已安装项|指定是否要仅查看安装的目标。|  
 |“确定”|单击以保存您的更改，并打开任何后续对话框来配置其他选项。|  
   

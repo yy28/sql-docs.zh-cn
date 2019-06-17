@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069098"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类配置文件”选项卡（挖掘模型查看器）
-  “Microsoft 顺序分析和聚类分析查看器”中的“分类剖面图”提供每个分类中包含的序列的具有颜色编码的视图。  
+  “Microsoft 顺序分析和聚类分析查看器”  中的“分类剖面图”  提供每个分类中包含的序列的具有颜色编码的视图。  
   
  可以使用此顺序分析和聚类分析模型视图，来快速查看模型所找到的序列的分组方式。 您将对长序列的数目和短序列的数目一目了然。 还可以单击分类并显示 **“挖掘图例”** ，来准确了解每个序列中的各种颜色所表示的状态。  
   
- **有关详细信息：**[Microsoft 序列聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)，[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **有关详细信息：** [Microsoft 序列聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)，[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -34,7 +34,7 @@ ms.locfileid: "66069098"
  选择一个包含在当前挖掘结构中的挖掘模型以进行查看。 挖掘模型将在其关联的查看器中打开。  
   
  **Viewer**  
- 选择用于浏览选定挖掘模型的查看器。 您可以使用自定义查看器或 **“Microsoft 一般内容树查看器”**。 还可以使用插件查看器（如果有）。  
+ 选择用于浏览选定挖掘模型的查看器。 您可以使用自定义查看器或 **“Microsoft 一般内容树查看器”** 。 还可以使用插件查看器（如果有）。  
   
  **显示图例**  
  选择此选项可显示一个图例，该图例说明了分类剖面图中显示的颜色与状态的文本值之间的相关性。  
@@ -51,10 +51,10 @@ ms.locfileid: "66069098"
   
 -   **\<属性名称 >.samples**:此行中的直方图显示代表每个分类的项的序列。 在 DMX 术语中，它们是每个分类的示例事例。  
   
--   **\<属性名称 >**:此行中的直方图介绍分类包含的所有项及其总体分布。 在 **“挖掘图例”** 可见时单击直方图，这将显示每个项的数值  
+-   **\<属性名称 >** :此行中的直方图介绍分类包含的所有项及其总体分布。 在 **“挖掘图例”** 可见时单击直方图，这将显示每个项的数值  
   
  **状态**  
- 此列在图表中是可选的，并且可以选择“显示图例”选项来显示或删除它。 **“状态”** 列就对应的分类直方图中的哪种颜色表示哪种状态提供了指导。  
+ 此列在图表中是可选的，并且可以选择“显示图例”  选项来显示或删除它。 **“状态”** 列就对应的分类直方图中的哪种颜色表示哪种状态提供了指导。  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

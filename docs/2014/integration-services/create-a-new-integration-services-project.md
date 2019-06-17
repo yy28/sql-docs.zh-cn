@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060216"
 ---
 # <a name="create-a-new-integration-services-project"></a>创建新的 Integration Services 项目
@@ -29,7 +29,7 @@ ms.locfileid: "66060216"
   
 1.  打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。  
+2.  在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。  
   
 3.  在 **“新建项目”** 对话框中，从 **“模板”** 窗格选择 **“Integration Services 项目”** 模板。  
   
@@ -39,14 +39,14 @@ ms.locfileid: "66060216"
   
      解决方案名称被自动更新，以匹配项目名称。  
   
-5.  若要为解决方案文件创建单独的文件夹，请选择 **“创建解决方案的目录”**。 这是默认选项。  
+5.  若要为解决方案文件创建单独的文件夹，请选择 **“创建解决方案的目录”** 。 这是默认选项。  
   
 6.  如果计算机上安装了源代码管理软件，请选择 **“添加到源代码管理”**  ，以将项目与源代码管理关联起来。  
   
 7.  如果源代码管理软件是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe， **“Visual SourceSafe 登录”** 对话框就会打开。 在 **“Visual SourceSafe 登录”** 对话框中，提供用户名、密码和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 数据库的名称。 单击 **“浏览”** 查找数据库。  
   
     > [!NOTE]  
-    >  若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”菜单上的“选项”，然后展开“源代码管理”节点。  
+    >  若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”  菜单上的“选项”  ，然后展开“源代码管理”  节点。  
   
 8.  单击**确定**若要向其添加解决方案**解决方案资源管理器**r 并将项目添加到解决方案。  
   

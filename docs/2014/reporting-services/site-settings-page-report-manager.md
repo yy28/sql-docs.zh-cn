@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101121"
 ---
 # <a name="site-settings-page-report-manager"></a>“站点设置”页（报表管理器）
@@ -30,7 +30,7 @@ ms.locfileid: "66101121"
   
 1.  打开报表管理器。  
   
-2.  单击页面顶部的 **“站点设置”**。 这会打开该站点的“常规属性”页。  
+2.  单击页面顶部的 **“站点设置”** 。 这会打开该站点的“常规属性”页。  
   
      **注意：** 如果没有看到**站点设置**选项菜单中，您没有所需的权限，有关详细信息，请参阅的"站点设置"部分[为本地管理配置本机模式报表服务器&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   

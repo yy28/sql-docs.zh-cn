@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013846"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和属性到表和列的显式映射 (SQLXML 4.0)
@@ -58,9 +58,9 @@ ms.locfileid: "66013846"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 批注  
- 在此示例中，XSD 架构包含的**\<联系人 >** 包含复杂类型元素 **\<FName >** 并 **\<LName >** 子元素和**ContactID**属性。  
+ 在此示例中，XSD 架构包含的 **\<联系人 >** 包含复杂类型元素 **\<FName >** 并 **\<LName >** 子元素和**ContactID**属性。  
   
- `sql:relation`批注映射**\<联系人 >** 到 AdventureWorks 数据库中的 Person.Contact 表的元素。 `sql:field`批注映射 **\<FName >** FirstName 列的元素和 **\<LName >** 的 LastName 列的元素。  
+ `sql:relation`批注映射 **\<联系人 >** 到 AdventureWorks 数据库中的 Person.Contact 表的元素。 `sql:field`批注映射 **\<FName >** FirstName 列的元素和 **\<LName >** 的 LastName 列的元素。  
   
  用于指定任何批注**ContactID**属性。 这导致将属性默认映射为具有相同名称的列。  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069214"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>选择（“分区属性”对话框）(SSMS)
@@ -26,7 +26,7 @@ ms.locfileid: "66069214"
  **网格**  
  显示包含所选分区的度量值组的分区。  
   
- 选择要在 **“常规”**、 **“主动缓存”** 或 **“错误配置”** 页中查看其属性的分区。  
+ 选择要在 **“常规”** 、 **“主动缓存”** 或 **“错误配置”** 页中查看其属性的分区。  
   
  该网格包含以下列：  
   

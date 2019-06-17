@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061179"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>缓存转换编辑器（“映射”页）
@@ -33,12 +33,12 @@ ms.locfileid: "66061179"
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作将可用输入列映射到目标列。  
   
- 还可以用键盘通过以下方法将输入列映射到目标列：突出显示 **“可用输入列”** 表中的某一列，按菜单键，然后选择 **“通过匹配名称映射项”**。  
+ 还可以用键盘通过以下方法将输入列映射到目标列：突出显示 **“可用输入列”** 表中的某一列，按菜单键，然后选择 **“通过匹配名称映射项”** 。  
   
  **可用目标列**  
  查看可用目标列的列表。 使用拖放操作将可用目标列映射到输入列。  
   
- 还可以用键盘通过以下方法将输入列映射到目标列：突出显示 **“可用目标列”** 表中的某一列，按菜单键，然后选择 **“通过匹配名称映射项”**。  
+ 还可以用键盘通过以下方法将输入列映射到目标列：突出显示 **“可用目标列”** 表中的某一列，按菜单键，然后选择 **“通过匹配名称映射项”** 。  
   
  **输入列**  
  查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”** 列表来更改映射。  

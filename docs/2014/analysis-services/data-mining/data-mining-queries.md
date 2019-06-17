@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084973"
 ---
 # <a name="data-mining-queries"></a>数据挖掘查询
@@ -95,7 +95,7 @@ ms.locfileid: "66084973"
   
  以下列表汇总了可在查询中使用的函数：  
   
--   **通用预测函数：**`Predict`函数是多态的这意味着它可以处理所有模型类型。 该函数将自动检测要使用的模型类型，并提示您输入其他参数。 有关详细信息，请参阅[预测 (DMX)](/sql/dmx/predict-dmx)。  
+-   **通用预测函数：** `Predict`函数是多态的这意味着它可以处理所有模型类型。 该函数将自动检测要使用的模型类型，并提示您输入其他参数。 有关详细信息，请参阅[预测 (DMX)](/sql/dmx/predict-dmx)。  
   
     > [!WARNING]  
     >  并非所有模型都用于进行预测。 例如，可以创建不具有可预测属性的聚类分析模型。 但是，即使模型不具有可预测属性，您也可以创建返回模型中其他类型的有用信息的预测查询。  
@@ -126,7 +126,7 @@ ms.locfileid: "66084973"
   
      例如，在使用聚类分析模型时，您可以使用 `PredictCaseLikelihood` 函数来返回与某个特定事例和分类关联的可能性分数。 但是，如果您创建了线性回归模型，则可能更愿意检索系数和截距，可使用内容查询做到这一点。  
   
--   **模型内容函数：***内容*的所有模型表示以标准化格式，可使用简单查询检索信息。 可以使用 DMX 创建针对模型内容的查询。 还可以通过使用数据挖掘架构行集来获取某种类型的模型内容。  
+-   **模型内容函数：** *内容*的所有模型表示以标准化格式，可使用简单查询检索信息。 可以使用 DMX 创建针对模型内容的查询。 还可以通过使用数据挖掘架构行集来获取某种类型的模型内容。  
   
      在模型内容中，返回的表中的每个行或节点的含义是不同的，具体取决于用于生成模型的算法的类型以及列的数据类型。 有关详细信息，请参阅 [内容查询（数据挖掘）](content-queries-data-mining.md)。  
   

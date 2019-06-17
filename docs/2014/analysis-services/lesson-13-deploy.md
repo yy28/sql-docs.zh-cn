@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079142"
 ---
 # <a name="lesson-14-deploy"></a>第 14 课：部署
@@ -29,9 +29,9 @@ ms.locfileid: "66079142"
   
 #### <a name="to-configure-deployment-properties"></a>配置部署属性  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“解决方案资源管理器”中，右键单击“Adventure Works Internet Sales Tabular Model”项目，然后在上下文菜单中单击“属性”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“解决方案资源管理器”  中，右键单击“Adventure Works Internet Sales Tabular Model”  项目，然后在上下文菜单中单击“属性”  。  
   
-2.  在“AW Internet Sales Tabular Model 属性页”对话框中，在“部署服务器”下的“服务器”属性中，键入在表格模式下运行的 Analysis Services 实例的名称。 这将是您的模型将被部署到的实例。  
+2.  在“AW Internet Sales Tabular Model 属性页”  对话框中，在“部署服务器”  下的“服务器”  属性中，键入在表格模式下运行的 Analysis Services 实例的名称。 这将是您的模型将被部署到的实例。  
   
     > [!IMPORTANT]  
     >  您必须对远程 Analysis Services 实例具有管理员权限，才能将模型部署到该实例。  
@@ -45,11 +45,11 @@ ms.locfileid: "66079142"
   
 5.  在中**多维数据集**名称属性中，键入`Adventure Works Internet Sales Model`。  
   
-6.  验证所做的选择，然后单击“确定”。  
+6.  验证所做的选择，然后单击“确定”  。  
   
 #### <a name="to-deploy-the-adventure-works-internet-sales-tabular-model"></a>部署 Adventure Works Internet Sales 表格模型  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“生成”菜单，然后单击“部署 AW Internet Sales Tabular Model”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“生成”  菜单，然后单击“部署 AW Internet Sales Tabular Model”  。  
   
      “部署”对话框将出现，并且显示模型中包括的元数据和每个表的部署状态。  
   

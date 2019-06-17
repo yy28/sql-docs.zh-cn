@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012353"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>客户端与服务器端 XML 格式 (SQLXML 4.0)
@@ -179,7 +179,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 如果在服务器上执行 XML 格式设置 (**客户端侧 xml ="0"**)，可以返回 dbobject 查询中的实际表和列 （即使您已经指定了别名） 返回名称的列使用别名。 例如，以下模板执行一个查询，并在服务器上执行 XML 格式设置 (**客户端侧 xml**未指定选项和**在客户端运行**不选择选项虚拟根目录）。 该查询还指定了 AUTO 模式（而不是客户端 NESTED 模式）。  
+ 如果在服务器上执行 XML 格式设置 (**客户端侧 xml ="0"** )，可以返回 dbobject 查询中的实际表和列 （即使您已经指定了别名） 返回名称的列使用别名。 例如，以下模板执行一个查询，并在服务器上执行 XML 格式设置 (**客户端侧 xml**未指定选项和**在客户端运行**不选择选项虚拟根目录）。 该查询还指定了 AUTO 模式（而不是客户端 NESTED 模式）。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

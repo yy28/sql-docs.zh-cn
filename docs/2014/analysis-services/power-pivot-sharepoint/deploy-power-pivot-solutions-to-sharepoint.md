@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b568790f9a61c01054d4a7225e4a2dbf9a39887
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071509"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>将 PowerPivot 解决方案部署到 SharePoint
@@ -98,26 +98,26 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 ##  <a name="deployUI"></a> 步骤 3：将 PowerPivot Web 应用程序解决方案部署到其他 Web 应用程序  
  在上一个任务中，您将 Powerpivotwebapp.wsp 部署到了管理中心。 在本节中，您可以在支持 PowerPivot 数据访问的每个现有 Web 应用程序上都部署 powerpivotwebapp.wsp。 如果您在以后添加更多的 Web 应用程序，请确保对于这些附加的 Web 应用程序都重复执行此步骤。  
   
-1.  在管理中心的“系统设置”中，单击 **“管理场解决方案”**。  
+1.  在管理中心的“系统设置”中，单击 **“管理场解决方案”** 。  
   
-2.  单击 **“powerpivotwebapp.wsp”**。  
+2.  单击 **“powerpivotwebapp.wsp”** 。  
   
-3.  单击 **“部署解决方案”**。  
+3.  单击 **“部署解决方案”** 。  
   
-4.  在中**部署到？**，选择你想要添加 PowerPivot 功能支持的 SharePoint web 应用程序。  
+4.  在中**部署到？** ，选择你想要添加 PowerPivot 功能支持的 SharePoint web 应用程序。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 6.  对也要支持 PowerPivot 数据访问的其他 SharePoint Web 应用程序重复此过程。  
   
 ##  <a name="retract"></a> 重新部署或收回解决方案  
  尽管 SharePoint 管理中心提供解决方案收回，但您无需收回 powerpivotwebapp.wsp 文件，除非您在系统地排除安装或修补程序部署问题。  
   
-1.  在 SharePoint 2010 管理中心的“系统设置”中，单击 **“管理场解决方案”**。  
+1.  在 SharePoint 2010 管理中心的“系统设置”中，单击 **“管理场解决方案”** 。  
   
 2.  单击 **Powerpivotwebapp.wsp**。  
   
-3.  单击 **“收回解决方案”**。  
+3.  单击 **“收回解决方案”** 。  
   
  如果遇到回溯场解决方案的服务器部署问题，您可以通过运行重新部署**修复**PowerPivot 配置工具中的选项。 应优先通过工具进行修复操作，因为这样只需执行较少的步骤。 有关详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。  
   

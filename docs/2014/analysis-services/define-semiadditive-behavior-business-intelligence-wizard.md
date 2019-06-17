@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081995"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>定义半累加行为（商业智能向导）
-  可以使用“定义半累加性行为”页启用或禁用针对度量值的半累加行为。 半累加行为确定多维数据集所包含的度量值在一定时间维度内如何聚合。  
+  可以使用“定义半累加性行为”  页启用或禁用针对度量值的半累加行为。 半累加行为确定多维数据集所包含的度量值在一定时间维度内如何聚合。  
   
 > [!NOTE]  
 >  除了可用于标准版本的 LastChild 之外，其他的半累加行为仅可用于商业智能或企业版本。 此外，由于半累加性行为是只针对度量值而不针对维度定义的，如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中右键单击维度启动了商业智能向导，将不会看到此页。  
@@ -59,7 +59,7 @@ ms.locfileid: "66081995"
 |`Sum`|使用 `Sum` 函数聚合。|  
   
 > [!NOTE]  
->  只有在选择了“为各个成员定义半累加性行为”之后，才会应用对此选项所做的选择。  
+>  只有在选择了“为各个成员定义半累加性行为”  之后，才会应用对此选项所做的选择。  
   
 ## <a name="see-also"></a>请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   

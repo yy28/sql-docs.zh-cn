@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065430"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>警告（数据库设计器）（Analysis Services - 多维数据）
-  使用“警告”选项卡可以全局查看和解除规则，并可以查看和重新启用已解除的警告的特定实例。 **警告**选项卡显示两个网格：**设计警告规则**并**已解除的警告**。  
+  使用“警告”  选项卡可以全局查看和解除规则，并可以查看和重新启用已解除的警告的特定实例。 **警告**选项卡显示两个网格：**设计警告规则**并**已解除的警告**。  
   
  **若要显示警告选项卡**  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目。  
   
-2.  在**解决方案资源管理器**中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目，单击“编辑数据库”，然后单击“警告”选项卡。  
+2.  在**解决方案资源管理器**中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目，单击“编辑数据库”  ，然后单击“警告”  选项卡。  
   
 ## <a name="design-warning-rules-grid"></a>“设计警告规则”网格  
  **“设计警告规则”** 网格显示所有设计警告规则。 此网格还控制对数据库所启用的规则。 若要启用或禁用某个警告规则，请选中或清除其复选框。  
@@ -43,7 +43,7 @@ ms.locfileid: "66065430"
  （可选）允许用户键入注释，对解除警告的原因进行解释。  
   
 ## <a name="dismissed-warnings-grid"></a>“解除的警告”网格  
- **“解除的警告”** 网格显示所有已从 **“错误列表”** 解除的特定警告。 若要重新启用某个警告，请在网格中选择该警告，然后单击“重新启用”。  
+ **“解除的警告”** 网格显示所有已从 **“错误列表”** 解除的特定警告。 若要重新启用某个警告，请在网格中选择该警告，然后单击“重新启用”  。  
   
  **“解除的警告”** 网格包含以下内容：  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66065430"
  重新启用选定的警告。  
   
 > [!NOTE]  
->  如果对象包含警告，但是该对象处于无效状态或已从项目中手动删除，则列表中该警告的旁边会出现错误图标。 若要解除该警告，请选择它，然后单击“重新启用”。  
+>  如果对象包含警告，但是该对象处于无效状态或已从项目中手动删除，则列表中该警告的旁边会出现错误图标。 若要解除该警告，请选择它，然后单击“重新启用”  。  
   
 ## <a name="see-also"></a>请参阅  
  [关闭警告对话框&#40;Analysis Services-多维数据&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   

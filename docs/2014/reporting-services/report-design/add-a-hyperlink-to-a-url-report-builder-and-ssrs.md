@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106819"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>向 URL 添加超链接（报表生成器和 SSRS）
@@ -34,11 +34,11 @@ ms.locfileid: "66106819"
   
 ### <a name="to-add-a-hyperlink"></a>添加超链接  
   
-1.  在报表设计视图中，右键单击要添加链接的文本框、图像或图表，然后单击 **“属性”**。  
+1.  在报表设计视图中，右键单击要添加链接的文本框、图像或图表，然后单击 **“属性”** 。  
   
-2.  在“属性”对话框中，单击 **“操作”**。  
+2.  在“属性”对话框中，单击 **“操作”** 。  
   
-3.  选择 **“转到 URL”**。 其他部分将显示在此选项的对话框中。  
+3.  选择 **“转到 URL”** 。 其他部分将显示在此选项的对话框中。  
   
 4.  在 **“选择 URL”** 中，键入或选择某一 URL 或者计算结果为某一 URL 的表达式，或者单击下拉箭头并单击包含 URL 的字段的名称。  
   

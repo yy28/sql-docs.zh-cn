@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082682"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>查看或更改建模标志（数据挖掘）
@@ -28,9 +28,9 @@ ms.locfileid: "66082682"
   
 1.  在 SQL Server Design Studio 中，打开解决方案资源管理器，然后双击挖掘结构。  
   
-2.  若要设置 NOT NULL 建模标志，请单击 **“挖掘结构”** 选项卡。若要设置 REGRESSOR 或 MODEL_EXISTENCE_ONLY 标志，请单击“挖掘模型”选项卡。  
+2.  若要设置 NOT NULL 建模标志，请单击 **“挖掘结构”** 选项卡。若要设置 REGRESSOR 或 MODEL_EXISTENCE_ONLY 标志，请单击“挖掘模型”  选项卡。  
   
-3.  右键单击要查看或更改的列，然后选择“属性”。  
+3.  右键单击要查看或更改的列，然后选择“属性”  。  
   
 4.  若要添加新的建模标志，请单击 **“建模标志”** 属性旁边的文本框，然后选择要使用的建模标志的复选框。  
   

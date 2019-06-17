@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099448"
 ---
-# <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) 
+# <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS)
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  
   
  SharePoint 站点使用的 Web 地址与本机模式下的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的地址不同。 SharePoint 站点 Web 层次结构包括 SharePoint Web 应用程序、一个顶级站点和多个可选子站点以及库。 您必须知道如何创建 URL 地址，该地址指定 SharePoint 服务器以及 SharePoint 站点层次结构中的位置（您要在该位置发布报表或相关项）。  
@@ -33,7 +33,7 @@ ms.locfileid: "66099448"
   
 |Object|Description|  
 |------------|-----------------|  
-|SharePoint Web 应用程序|SharePoint Web 应用程序可以作为独立的服务器安装，也可以在包含许多虚拟服务器的场中安装。 Web 应用程序具有 URL（例如，http:*//servername*）并且可以包含多个站点。|  
+|SharePoint Web 应用程序|SharePoint Web 应用程序可以作为独立的服务器安装，也可以在包含许多虚拟服务器的场中安装。 Web 应用程序具有 URL（例如，http: *//servername*）并且可以包含多个站点。|  
 |站点|站点为 Web 应用程序的父站点或子站点。|  
 |SharePoint 库|库包含文档或文件夹。 库或库中的文件夹是仅有的可用来存储报表、报表模型、共享数据源和外部图像的站点对象。|  
 |项|可以在 URL 中引用的报表服务器项包括报表或子报表的报表定义、报表模型、共享数据源或外部图像。|  
@@ -44,14 +44,14 @@ ms.locfileid: "66099448"
 ### <a name="url-for-a-sharepoint-server"></a>SharePoint 服务器的 URL  
  从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 向报表服务器部署报表服务器或报表模型项目时，必须使用 SharePoint 服务器的 URL。  
   
- 若要找到要使用的服务器的名称，请打开一个浏览器并找到要发布报表的 SharePoint 库。 服务器名称紧接在协议前缀之后，例如 http:*//servername*。  
+ 若要找到要使用的服务器的名称，请打开一个浏览器并找到要发布报表的 SharePoint 库。 服务器名称紧接在协议前缀之后，例如 http: *//servername*。  
   
- 不支持使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 代理端点。 代理端点包含一个端口号，例如 http:*//servername:8080/reportserver*。  
+ 不支持使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 代理端点。 代理端点包含一个端口号，例如 http: *//servername:8080/reportserver*。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 服务器站点或子站点的 URL  
  部署报表或报表数据源时，必须使用 SharePoint 站点和子站点的 URL（如果有）。 在该 URL 中，站点名紧接在服务器名之后，例如 http://*servername/site* 或 http://*servername/site/subsite*。  
   
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 应用程序中，站点和子站点经常对应于主站点上的选项卡。 若要找到站点名或子站点名，请单击 **“主文件夹”**，然后单击 **“所有网站内容”**。 滚动到底部并查找 **“站点和工作区”**。 站点列表将显示在此部分中。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 应用程序中，站点和子站点经常对应于主站点上的选项卡。 若要找到站点名或子站点名，请单击 **“主文件夹”** ，然后单击 **“所有网站内容”** 。 滚动到底部并查找 **“站点和工作区”** 。 站点列表将显示在此部分中。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 库的 URL  
  向 SharePoint 库中部署报表或相关项时，必须使用 SharePoint 库的 URL。 要用于库的 URL 根据所使用的 SharePoint 版本而不同。  
@@ -60,7 +60,7 @@ ms.locfileid: "66099448"
   
  在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如， http://*servername/site/* Documents。  
   
- 若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口。 文件地址中包含发布操作所需的 URL 值。  
+ 若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口   。 文件地址中包含发布操作所需的 URL 值。  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>SharePoint 站点上的项的完全限定 URL  
  始终通过完全限定的 URL 对存储在 SharePoint 库中的项进行寻址，这种完全限定的 URL 以 Web 应用程序开头 (http://*server*) 作为根节点，并以所引用的文件名结束。  

@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4edd0b6e3928a2bc3a280403a87eda5bb797e620
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099483"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教程：如何查找并启动 Reporting Services 工具 (SSRS)
@@ -68,7 +68,7 @@ ms.locfileid: "66099483"
   
      **Or**  
   
-     单击 **“开始”**，然后依次单击 **“程序”**、“ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]”、 **“配置工具”**、 **“Reporting Services 配置管理器”**。  
+     单击 **“开始”** ，然后依次单击 **“程序”** 、“ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]”、 **“配置工具”** 、 **“Reporting Services 配置管理器”** 。  
   
      此时将出现 **“选择报表服务器安装实例”** 对话框，可以选择要配置的报表服务器实例。  
   
@@ -78,13 +78,13 @@ ms.locfileid: "66099483"
   
 3.  在 **在stance Name**中，选择要配置的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 实例。 列表中只显示 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
   
-4.  单击 **“连接”**。  
+4.  单击 **“连接”** 。  
   
 5.  若要验证是否已启动工具，请将您的结果与下图进行比较：  
   
      ![Reporting Services 配置工具](../media/rs-ui-reportserverconfigkatmai.gif "Reporting Services 配置工具")  
   
- **后续步骤：**[配置和管理报表服务器（SSRS 本机模式）](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [Reporting Services 配置管理器（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ **后续步骤：** [配置和管理报表服务器（SSRS 本机模式）](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [Reporting Services 配置管理器（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 ##  <a name="bkmk_report_manager"></a> 报表管理器 （本机模式）  
  使用[报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)可设置权限、 管理订阅和计划，以及处理报表。 也可以使用报表管理器来查看报表。  
@@ -103,7 +103,7 @@ ms.locfileid: "66099483"
   
 4.  如果本地报表服务器上运行报表管理器，请参阅[为本地管理配置本机模式报表服务器&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
- **后续步骤：**[配置报表管理器&#40;本机模式&#41;](../report-server/configure-web-portal.md)。  
+ **后续步骤：** [配置报表管理器&#40;本机模式&#41;](../report-server/configure-web-portal.md)。  
   
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
  报表服务器管理员可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来管理报表服务器及其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组件服务器。 有关详细信息，请参阅 [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)。  
@@ -116,7 +116,7 @@ ms.locfileid: "66099483"
   
      **Or**  
   
-     依次单击“开始” 、“所有程序” 、“ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]”和“SQL Server Management Studio” 。 此时，将显示 **“连接到服务器”** 对话框。  
+     依次单击“开始”  、“所有程序”  、“ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]”和“SQL Server Management Studio”  。 此时，将显示 **“连接到服务器”** 对话框。  
   
 2.  如果没有出现 **“连接到服务器”** 对话框，请在 **“对象资源管理器”** 中单击 **“连接”** ，然后选择 **Reporting Services**。  
   
@@ -124,24 +124,24 @@ ms.locfileid: "66099483"
   
 4.  在 **“服务器名称”** 列表中，选择一个报表服务器实例。 本地实例将显示在列表中。 您还可以键入远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。  
   
-5.  单击 **“连接”**。 可以扩展根节点以设置服务器属性，修改角色定义或关闭报表服务器功能。  
+5.  单击 **“连接”** 。 可以扩展根节点以设置服务器属性，修改角色定义或关闭报表服务器功能。  
   
 ##  <a name="bkmk_ssdt"></a> 具有报表设计器和报表向导的 SQL Server Data Tools  
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 提供了报表设计器 - Business Intelligence for Visual Studio 2012。 该工具中的设计图面包括用于访问报表创作功能的选项卡式窗口、向导和菜单。 选择报表服务器项目或者报表服务器向导模板后，该报表设计器工具即可用。 若要了解详细信息，请参阅 [SQL Server Data Tools 中的 Reporting Services (SSDT)](reporting-services-in-sql-server-data-tools-ssdt.md)。  
   
 #### <a name="to-start-report-designer"></a>启动报表设计器  
   
-1.  从 Windows“开始”屏幕，键入 **“data”** ，然后在 **“应用程序”** 搜索结果中，单击 **“SQL Server Data Tools for Visual Studio 2012”**。  
+1.  从 Windows“开始”屏幕，键入 **“data”** ，然后在 **“应用程序”** 搜索结果中，单击 **“SQL Server Data Tools for Visual Studio 2012”** 。  
   
      **Or**  
   
-     单击**启动**，依次指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]，然后单击**SQL Server Data Tools (SSDT)**。  
+     单击**启动**，依次指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]，然后单击**SQL Server Data Tools (SSDT)** 。  
   
-2.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。  
+2.  在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。  
   
-3.  在 **“项目类型”** 列表中，单击 **“商业智能项目”**。  
+3.  在 **“项目类型”** 列表中，单击 **“商业智能项目”** 。  
   
-4.  在 **“模板”** 列表中，单击 **“报表服务器项目”**。 下图显示了对话框中显示的项目模板的外观：  
+4.  在 **“模板”** 列表中，单击 **“报表服务器项目”** 。 下图显示了对话框中显示的项目模板的外观：  
   
      ![“新建项目模板”对话框](../media/rs-ui-newrsproject.gif "“新建项目模板”对话框")  
   
@@ -160,7 +160,7 @@ ms.locfileid: "66099483"
   
 1.  在 Web 浏览器中，键入报表服务器的报表管理器 URL。 默认情况下，该 URL 为 http://\<*servername*>/reports。 报表管理器随之打开。  
   
-2.  单击 **“报表生成器”**。  
+2.  单击 **“报表生成器”** 。  
   
      报表生成器将打开，您随后可以在报表服务器上创建报表或打开报表。  
   
@@ -180,19 +180,19 @@ ms.locfileid: "66099483"
   
 2.  打开库。  
   
-3.  在 **“新建”** 菜单中单击 **“报表生成器报表”**。  
+3.  在 **“新建”** 菜单中单击 **“报表生成器报表”** 。  
   
      报表生成器将打开，您随后可以在报表服务器上创建报表或打开报表。  
   
 #### <a name="to-start-report-builder-stand-alone"></a>启动独立版报表生成器  
   
-1.  在 Windows“开始”屏幕上，键入 **“report builder”** ，然后单击 **“Report Builder 3.0”**。  
+1.  在 Windows“开始”屏幕上，键入 **“report builder”** ，然后单击 **“Report Builder 3.0”** 。  
   
      **Or**  
   
-     在“开始”菜单上，依次单击 **“所有程序”** 和 **“Microsoft SQL Server 2014 报表生成器”**。  
+     在“开始”菜单上，依次单击 **“所有程序”** 和 **“Microsoft SQL Server 2014 报表生成器”** 。  
   
-2.  单击 **“报表生成器”**。  
+2.  单击 **“报表生成器”** 。  
   
      报表生成器将打开，您可以创建或打开报表了。  
   

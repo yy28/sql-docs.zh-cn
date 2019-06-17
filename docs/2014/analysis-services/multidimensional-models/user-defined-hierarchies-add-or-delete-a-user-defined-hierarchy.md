@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072590"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>添加或删除用户定义层次结构
-  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，可以从维度设计器中的“维度结构”选项卡上的维度中添加或删除用户定义的层次结构。  
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，可以从维度设计器中的“维度结构”  选项卡上的维度中添加或删除用户定义的层次结构。  
   
  在添加用户定义的层次结构后，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中实例化此层次结构并且处理维度之前，用户无法使用此层次结构。 有关详细信息，请参阅[多维模型数据库&#40;SSAS&#41; ](multidimensional-model-databases-ssas.md)并[多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66072590"
   
      该维度会在维度设计器的 **“维度结构”** 选项卡上打开。  
   
-2.  将要在用户定义的层次结构中使用的属性从“属性”窗格拖至“层次结构”窗格。  
+2.  将要在用户定义的层次结构中使用的属性从“属性”  窗格拖至“层次结构”  窗格。  
   
 3.  拖动其他属性以在用户定义层次结构中建立级别。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "66072590"
   
 ### <a name="to-remove-a-user-defined-hierarchy-from-a-dimension"></a>从维度中删除用户定义层次结构  
   
--   在“维度结构” 选项卡上的“层次结构”窗格中，单击要删除的用户定义的层次结构。 在工具栏上，单击 **“删除”**。  
+-   在“维度结构”  选项卡上的“层次结构”  窗格中，单击要删除的用户定义的层次结构。 在工具栏上，单击 **“删除”** 。  
   
      - 或 -  
   
--   在“层次结构”窗格中右键单击要删除的用户定义的层次结构，然后单击“删除”。  
+-   在“层次结构”  窗格中右键单击要删除的用户定义的层次结构，然后单击“删除”  。  
   
      - 或 -  
   

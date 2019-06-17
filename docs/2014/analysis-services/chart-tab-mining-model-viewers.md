@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088179"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>“图表”选项卡（挖掘模型查看器）
   可以使用 **“图表”** 窗格，显示定型时序模型时使用的历史数据以及预测值。 图表的垂直轴表示序列的值；水平轴表示时间。 点线表示对未来的预测。  
   
- **有关详细信息：**[Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)，[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **有关详细信息：** [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)，[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -44,7 +44,7 @@ ms.locfileid: "66088179"
  缩小图表以在屏幕中容纳整个图表。  
   
  **Abs**  
- 在两个图表视图之间切换：在默认视图中，将相对于总体分布为数字绘制图形（以百分比形式表示）。 如果您单击 **“Abs”**，则会将数字作为绝对值绘制图形。  
+ 在两个图表视图之间切换：在默认视图中，将相对于总体分布为数字绘制图形（以百分比形式表示）。 如果您单击 **“Abs”** ，则会将数字作为绝对值绘制图形。  
   
  **将图表复制到剪贴板**  
  将整个图表复制到剪贴板。  

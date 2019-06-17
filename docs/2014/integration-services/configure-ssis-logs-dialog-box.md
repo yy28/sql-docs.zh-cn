@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060601"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>“配置 SSIS 日志”对话框
@@ -57,7 +57,7 @@ ms.locfileid: "66060601"
  如果容器为灰色，而您想要设置该容器的日志记录选项，请单击对应复选框两次。 第一次单击将清除该复选框，第二次单击将选中该复选框，这样您就可以选择要使用的日志提供程序以及要记录的信息。  
   
 ##  <a name="provider"></a> 配置“提供程序和日志”选项卡上的选项  
- 可以使用“配置 SSIS 日志”对话框的“提供程序和日志”选项卡，创建和配置用于捕获运行时事件的日志。  
+ 可以使用“配置 SSIS 日志”  对话框的“提供程序和日志”  选项卡，创建和配置用于捕获运行时事件的日志。  
   
 ### <a name="options"></a>选项  
  **提供程序类型**  
@@ -67,18 +67,18 @@ ms.locfileid: "66060601"
  将指定类型的日志添加到包的日志提供程序集合中。  
   
  **名称**  
- 通过使用复选框，可以为在“配置 SSIS 日志”对话框的“容器”窗格中选择的容器或任务启用或禁用日志。 名称字段是可编辑的。 可以使用提供程序的默认名称，也可以键入唯一的描述性名称。  
+ 通过使用复选框，可以为在“配置 SSIS 日志”  对话框的“容器”  窗格中选择的容器或任务启用或禁用日志。 名称字段是可编辑的。 可以使用提供程序的默认名称，也可以键入唯一的描述性名称。  
   
  **说明**  
  说明字段是可编辑的。 可以单击该字段，然后修改日志的默认说明。  
   
  **Configuration**  
- 在列表中选择一个现有的连接管理器或单击\<“新建连接...”> 以创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
+ 在列表中选择一个现有的连接管理器或单击\<“新建连接...”>  以创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
   
  相关主题：[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)管理器、[文件连接管理器](connection-manager/file-connection-manager.md)  
   
  **删除**  
- 选择一个日志提供程序，然后单击“删除”。  
+ 选择一个日志提供程序，然后单击“删除”  。  
   
 ##  <a name="detail"></a> 配置“详细信息”选项卡上的选项  
  可以使用 **“配置 SSIS 日志”** 对话框的 **“详细信息”** 选项卡，指定要启用日志记录的事件以及要记录的详细信息。 所选的信息适用于包中的所有日志提供程序。 例如，无法将一些信息写入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，而在文本文件中写入另外一些信息。  

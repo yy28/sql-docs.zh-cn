@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058359"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊分组转换编辑器（“列”选项卡）
@@ -37,7 +37,7 @@ ms.locfileid: "66058359"
  选择是否在转换的输出中包含输入列。 用于分组的所有列将自动复制到输出中。 通过选中此列可以包含其他列。  
   
  **输入列**  
- 选择先前在“可用输入列”列表中选中的一个输入列。  
+ 选择先前在“可用输入列”  列表中选中的一个输入列。  
   
  **输出别名**  
  为相应的输出列输入一个描述性名称。 默认情况下，输出列名称与输入列名称相同。  

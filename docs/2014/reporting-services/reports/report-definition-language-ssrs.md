@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6480a8cefee9b71149c61bf952896a739526cf55
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102499"
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66102499"
   
  例如，此架构包含 RDL 元素 `ReportParameters`，它为复杂类型 `ReportParametersType`。 根据约定，元素的复杂类型是元素名称后跟单词 `Type`。 `ReportParameters` 元素可由 `Report` 元素（复杂类型）包含，并可以包含 `ReportParameter` 元素。 `ReportParameterType` 是只能为下列值之一的简单类型：`Boolean`、`DateTime`、`Integer`、`Float` 或 `String`。 有关 XML 架构数据类型的详细信息，请参阅 [XML Schema Part 2:Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)（XML 架构第 2 部分：数据类型第二版）。  
   
- 可在 ReportDefinition.xsd 文件中找到 RDL XSD，该文件位于产品 CD-ROM 的 Extras 文件夹中。 此外，还可通过以下 URL 在报表服务器上获取： http://servername/reportserver/reportdefinition.xsd。  
+ 可在 ReportDefinition.xsd 文件中找到 RDL XSD，该文件位于产品 CD-ROM 的 Extras 文件夹中。 此外，还可通过以下 URL 在报表服务器上获取： http://servername/reportserver/reportdefinition.xsd 。  
   
 ##  <a name="bkmk_Creating_RDL"></a> 创建 RDL  
  由于 RDL 的开放式和可扩展特性，可以创建基于其 XML 架构生成 RDL 的各种工具和应用程序。  

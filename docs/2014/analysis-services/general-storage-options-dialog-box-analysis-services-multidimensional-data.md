@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c7ddd5311232ae12b3eb9f66adc0cd1f5714b32
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081011"
 ---
 # <a name="general-storage-options-dialog-box-analysis-services---multidimensional-data"></a>常规（“存储选项”对话框）（Analysis Services - 多维数据）
@@ -31,7 +31,7 @@ ms.locfileid: "66081011"
 |----------|----------------|  
 |**存储模式**|选择对象要使用的存储模式。<br /><br /> **MOLAP**<br /> 对象使用多维 OLAP (MOLAP) 存储。<br /><br /> **HOLAP**<br /> 对象使用混合 OLAP (HOLAP) 存储。<br /><br /> **ROLAP**<br /> 对象使用关系 OLAP (ROLAP) 存储。|  
 |**启用了主动缓存**|启用主动缓存。<br /><br /> 注意：如果未选择此选项，所有选项除外**存储模式**处于禁用状态。|  
-|**当数据更改时更新缓存**|使用在 **“通知”** 选项卡中选择的通知方法，可以在收到通知时更新对象的 MOLAP 映像。 有关“通知”选项卡的详细信息，请参阅[通知（“存储选项”对话框）（Analysis Services - 多维数据）](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)。<br /><br /> 注意：将禁用此选项，除非**启用了主动缓存**处于选中状态。|  
+|**当数据更改时更新缓存**|使用在 **“通知”** 选项卡中选择的通知方法，可以在收到通知时更新对象的 MOLAP 映像。 有关“通知”选项卡的详细信息，请参阅[通知（“存储选项”对话框）（Analysis Services - 多维数据）](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)。 <br /><br /> 注意：将禁用此选项，除非**启用了主动缓存**处于选中状态。|  
 |**指定静默间隔时间**|设置在主动缓存开始为对象创建新的 MOLAP 映像之前，对象处于无任何活动状态的最小时间间隔和时间单位。<br /><br /> 注意：将禁用此选项，除非**当数据更改时更新缓存**处于选中状态。|  
 |**静默覆盖间隔**|设置在收到对象的通知之后，不管当前对象的活动状态如何，主动缓存开始为对象创建新的 MOLAP 映像之前的最大时间间隔和时间单位。 在达到此间隔后接收的通知不会取消此间隔所触发的 MOLAP 映像进程。<br /><br /> 注意：将禁用此选项，除非**当数据更改时更新缓存**处于选中状态。 另请注意，如果，不应设置此选项**存储模式**设置为**HOLAP**。|  
 |**放弃过时的缓存**|指定开始创建新的 MOLAP 缓存和删除现有 MOLAP 缓存之间间隔的时间段。<br /><br /> 注意：将禁用此选项，除非**启用了主动缓存**处于选中状态。 另请注意，如果，不应设置此选项**存储模式**设置为 HOLAP。|  

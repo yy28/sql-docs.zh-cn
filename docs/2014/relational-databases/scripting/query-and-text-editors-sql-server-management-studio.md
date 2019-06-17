@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063882"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查询和文本编辑器 (SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "66063882"
  用于在编辑器中的文本或代码的左侧显示行号。 您可以导航到特定行号。  
   
  **自动换行**  
- 将较长的文本行或代码行以多行显示，以便您查看行中的所有内容。 在执行或打印文本时，自动换行选项不会影响文本的显示方式。 可以从 **“工具”**、 **“选项”** 对话框（位于“文本编辑器”页、“所有语言”页、“常规”页或特定编辑器页上）中打开自动换行。  
+ 将较长的文本行或代码行以多行显示，以便您查看行中的所有内容。 在执行或打印文本时，自动换行选项不会影响文本的显示方式。 可以从 **“工具”** 、 **“选项”** 对话框（位于“文本编辑器”页、“所有语言”页、“常规”页或特定编辑器页上）中打开自动换行。  
   
 ## <a name="code-editor-components"></a>代码编辑器组件  
  除了与文本和 XML 编辑器共享的功能之外，代码编辑器还包含以下功能：  
@@ -65,7 +65,7 @@ ms.locfileid: "66063882"
  此窗口用于查看查询结果。 该窗口可以在网格或文本中显示结果，或者可将结果定向到某个文件。 结果网格能以单独的选项卡式窗口的形式显示。  
   
  **IntelliSense**  
- 在编辑器的“编辑”菜单上，指向“IntelliSense”，以查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项。  
+ 在编辑器的“编辑”  菜单上，指向“IntelliSense”  ，以查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项。  
   
  **颜色编码**  
  为每种类型的语法元素显示不同颜色，以提高复杂语句的可读性。  

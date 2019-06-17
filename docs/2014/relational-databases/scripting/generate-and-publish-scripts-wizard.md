@@ -43,18 +43,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b3bb00837c4c3e8e6fae187a902d95c54736882
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063993"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
-  你可以使用“生成和发布脚本向导”创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
+  你可以使用“生成和发布脚本向导”  创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
   
-1.  **开始之前：**[发布到某一托管服务](#PubHostSvc)，[权限](#Permissions)  
+1.  **开始之前：** [发布到某一托管服务](#PubHostSvc)，[权限](#Permissions)  
   
-2.  **要生成或发布脚本，请使用：**[生成和发布脚本向导](#GenPubScriptWiz)  
+2.  **要生成或发布脚本，请使用：** [生成和发布脚本向导](#GenPubScriptWiz)  
   
 ## <a name="before-you-begin"></a>开始之前  
  源和目标数据库可以位于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或者运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或更新版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例上。  
@@ -74,7 +74,7 @@ ms.locfileid: "66063993"
   
 1.  在 **对象资源管理器**中，展开包含要为其编写脚本的数据库的实例的节点。  
   
-2.  指向 **“任务”**，然后单击 **“生成脚本”**。  
+2.  指向 **“任务”** ，然后单击 **“生成脚本”** 。  
   
 3.  完成向导对话框：  
   
@@ -99,11 +99,11 @@ ms.locfileid: "66063993"
 ###  <a name="Introduction"></a> “简介”页  
  本页介绍用于生成或发布脚本的步骤。  
   
- **不再显示此页** - 下次启动“生成和发布脚本向导”时跳过此页。  
+ **不再显示此页** - 下次启动“生成和发布脚本向导”  时跳过此页。  
   
- “下一步 >” - 进入“选择方法”页。  
+ “下一步 >”  - 进入“选择方法”  页。  
   
- “取消” - 结束向导，而不从数据库中生成或发布脚本。  
+ “取消”  - 结束向导，而不从数据库中生成或发布脚本。  
   
 ###  <a name="ChooseObjects"></a> “选择对象”页  
  使用此页可选择要包含在该向导生成的脚本中的对象。 在以下向导页中，您可以选择将这些脚本保存到您选择的位置，或者使用它们将数据库对象和数据发布到安装了 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)的远程 Web 宿主提供程序。  
@@ -121,13 +121,13 @@ ms.locfileid: "66063993"
 ###  <a name="SetScriptOpt"></a> “设置脚本编写选项”页  
  使用此页可以指定您是否希望向导将脚本保存到您选择的位置或者是否要使用它们将数据库对象发布到远程 Web 宿主提供程序。 若要发布，您必须有权访问通过使用 Database Publishing Services Web 服务安装的 Web 服务。  
   
- **选项** - 如果您希望向导将脚本保存到您选择的位置，则选择 **“将脚本保存到特定位置”**。 您以后可以对数据库引擎的实例或者对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]运行这些脚本。 如果您希望向导将数据库对象发布到远程 Web 宿主提供程序，请选择 **“发布到 Web 服务”**。  
+ **选项** - 如果您希望向导将脚本保存到您选择的位置，则选择 **“将脚本保存到特定位置”** 。 您以后可以对数据库引擎的实例或者对 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]运行这些脚本。 如果您希望向导将数据库对象发布到远程 Web 宿主提供程序，请选择 **“发布到 Web 服务”** 。  
   
  **将脚本保存到特定位置**保存一个或多个。Transact SQL 脚本文件复制到你指定的位置。  
   
 -   **高级** - 显示出 **“高级脚本编写选项”** 对话框，您可在其中选择用于生成脚本的高级选项。  
   
--   **保存到文件** - 将脚本保存到一个或多个 .sql 文件。 单击浏览 (…) 按钮可以指定文件的名称和位置。 如果已存在同名的文件，请选中 **“覆盖现有文件”** 复选框以替换该文件。 单击 **“单个文件”** 或 **“每个对象一个文件”** 可以指定生成脚本的方式。 单击 **“Unicode 文本”** 或 **“ANSI 文本”** 可以指定应在脚本中使用的文本的类型。  
+-   **保存到文件** - 将脚本保存到一个或多个 .sql 文件。 单击浏览 (…) 按钮可以指定文件的名称和位置  。 如果已存在同名的文件，请选中 **“覆盖现有文件”** 复选框以替换该文件。 单击 **“单个文件”** 或 **“每个对象一个文件”** 可以指定生成脚本的方式。 单击 **“Unicode 文本”** 或 **“ANSI 文本”** 可以指定应在脚本中使用的文本的类型。  
   
 -   **保存到剪贴板** - 将 Transact-SQL 脚本保存到剪贴板。  
   
@@ -172,11 +172,11 @@ ms.locfileid: "66063993"
   
 -   **脚本绑定** - 为绑定默认值和规则对象生成脚本。 默认值为 **False**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact SQL)](/sql/t-sql/statements/create-default-transact-sql) 和 [CREATE RULE (Transact-SQL)](/sql/t-sql/statements/create-rule-transact-sql)。  
   
--   “编写排序规则脚本” - 在脚本中包括排序规则信息。 默认值为 **False**。 有关详细信息，请参阅 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)。  
+-   “编写排序规则脚本”  - 在脚本中包括排序规则信息。 默认值为 **False**。 有关详细信息，请参阅 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)。  
   
 -   **编写默认值脚本** - 在表列中包括用于设置默认值的默认对象。 默认值为 **True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact-SQL)](/sql/t-sql/statements/create-default-transact-sql)。  
   
--   “编写 DROP 和 CREATE 脚本” - 值为“编写脚本”时，将包括[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句以创建对象。 值为 **“编写 DROP 脚本”** 时，将包括 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句以删除对象。 值为 **“编写 DROP 和 CREATE 脚本”** 时，对于为其编写脚本的每个对象，脚本中将包括 [!INCLUDE[tsql](../../../includes/tsql-md.md)] DROP 语句，随后是 CREATE 语句。 默认值为 **“编写 CREATE 脚本”**。  
+-   “编写 DROP 和 CREATE 脚本”  - 值为“编写脚本”  时，将包括[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句以创建对象。 值为 **“编写 DROP 脚本”** 时，将包括 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句以删除对象。 值为 **“编写 DROP 和 CREATE 脚本”** 时，对于为其编写脚本的每个对象，脚本中将包括 [!INCLUDE[tsql](../../../includes/tsql-md.md)] DROP 语句，随后是 CREATE 语句。 默认值为 **“编写 CREATE 脚本”** 。  
   
 -   **编写扩展属性脚本** - 如果对象具有扩展属性，则在脚本中包括扩展属性。 默认值为 **True**。  
   
@@ -188,11 +188,11 @@ ms.locfileid: "66063993"
   
 -   **编写对象级权限脚本** - 包括在数据库中的对象上设置权限的脚本。 默认值为 **False**。  
   
--   **编写统计信息脚本**-当设置为**统计信息脚本**，此选项将包括`CREATE STATISTICS`语句以重新创建该对象的统计信息。 **“编写统计信息和直方图脚本”** 选项还会创建直方图信息。 默认值为 **“不编写统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
+-   **编写统计信息脚本**-当设置为**统计信息脚本**，此选项将包括`CREATE STATISTICS`语句以重新创建该对象的统计信息。 **“编写统计信息和直方图脚本”** 选项还会创建直方图信息。 默认值为 **“不编写统计信息脚本”** 。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
 -   **编写 USE DATABASE 脚本**-添加`USE DATABASE`语句的脚本。 若要确保在正确的数据库中创建数据库对象，请包含 `USE DATABASE` 语句。 如果预计脚本将使用不同的数据库中，选择**False**忽略`USE DATABASE`语句。 默认值为 **True**。 有关详细信息，请参阅 [USE (Transact-SQL)](/sql/t-sql/language-elements/use-transact-sql)。  
   
--   **要编写脚本的数据的类型** - 选择应编写脚本的内容：“仅限数据”和/或“仅限架构”。 默认值为 **“仅限架构”**。  
+-   **要编写脚本的数据的类型** - 选择应编写脚本的内容：“仅限数据”  和/或“仅限架构”  。 默认值为 **“仅限架构”** 。  
   
  **表/视图选项** - 下列选项仅应用于表或视图的脚本。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "66063993"
   
 -   **编写 check 约束脚本**-添加`CHECK`约束的脚本。 默认值为 **True**。 `CHECK` 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
--   “编写数据压缩选项的脚本” - 如果在源数据库或源数据库中的表上配置了编写数据压缩选项的脚本选项，则编写数据压缩选项的脚本。 有关详细信息，请参阅 [Data Compression](../data-compression/data-compression.md)。 默认值为 **False**。  
+-   “编写数据压缩选项的脚本”  - 如果在源数据库或源数据库中的表上配置了编写数据压缩选项的脚本选项，则编写数据压缩选项的脚本。 有关详细信息，请参阅 [Data Compression](../data-compression/data-compression.md)。 默认值为 **False**。  
   
 -   **编写外键脚本** - 将外键添加到脚本中。 默认值为 **True**。 外键可指示和强制保持表间的关系。  
   
@@ -244,7 +244,7 @@ ms.locfileid: "66063993"
   
 3.  **发布默认值** - 在表列中包括用于设置默认值的默认对象。 默认值为 **True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact-SQL)](/sql/t-sql/statements/create-default-transact-sql)。  
   
-4.  “发布依赖对象” - 发布在执行所选对象的脚本时必须存在的任何对象。 默认值为 **True**。  
+4.  “发布依赖对象”  - 发布在执行所选对象的脚本时必须存在的任何对象。 默认值为 **True**。  
   
 5.  **发布扩展属性** - 如果对象具有扩展属性，则在发送到提供程序以供发布的脚本中包含扩展属性。 默认值为 **True**。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "66063993"
   
 7.  **发布对象级权限** - 包括数据库中的选定对象上的权限。 默认值为 **False**。  
   
-8.  **发布统计信息**-当设置为**发布统计信息**，包括`CREATE STATISTICS`语句以重新创建该对象的统计信息。 **“发布统计信息和直方图”** 选项还会创建直方图信息。 默认值为 **“不发布统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
+8.  **发布统计信息**-当设置为**发布统计信息**，包括`CREATE STATISTICS`语句以重新创建该对象的统计信息。 **“发布统计信息和直方图”** 选项还会创建直方图信息。 默认值为 **“不发布统计信息脚本”** 。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
 9. **发布 vardecimal 选项**-启用`vardecimal`时在源数据库表上启用目标数据库表上的表格格式。 默认值为 **True**。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "66063993"
   
 11. **脚本绑定** - 在发送到提供程序以供发布的脚本中包括默认值和规则对象。 默认值为 **True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact SQL)](/sql/t-sql/statements/create-default-transact-sql) 和 [CREATE RULE (Transact-SQL)](/sql/t-sql/statements/create-rule-transact-sql)。  
   
-12. **要发布的数据的类型** - 选择应编写脚本的内容：“仅限数据”和/或“仅限架构”。 默认值为 **“架构和数据”**。  
+12. **要发布的数据的类型** - 选择应编写脚本的内容：“仅限数据”  和/或“仅限架构”  。 默认值为 **“架构和数据”** 。  
   
  **发布选项** - 指定是否在发布到 Web 主机提供商时使用事务。  
   
@@ -284,7 +284,7 @@ ms.locfileid: "66063993"
   
 8.  **发布更改跟踪** - 如果在源数据库或源数据库中的表上启用了“发布更改跟踪”选项，则在发布过程中包括更改跟踪。 默认值为 **False**。 有关详细信息，请参阅[关于更改跟踪 (SQL Server)](../track-changes/about-change-tracking-sql-server.md)。  
   
-9. “发布数据压缩选项” - 如果在源数据库或源数据库中的表上配置了发布数据压缩选项，则在发布过程中包括数据压缩选项。 默认值为 **True**。 有关详细信息，请参阅 [Data Compression](../data-compression/data-compression.md)。  
+9. “发布数据压缩选项”  - 如果在源数据库或源数据库中的表上配置了发布数据压缩选项，则在发布过程中包括数据压缩选项。 默认值为 **True**。 有关详细信息，请参阅 [Data Compression](../data-compression/data-compression.md)。  
   
 ###  <a name="ProvConfig"></a> “提供程序配置”页  
  使用此对话框可以查看或修改宿主提供程序设置。 可以使用此对话框执行以下操作：  
@@ -305,7 +305,7 @@ ms.locfileid: "66063993"
   
  **保存密码** - 进行加密，并将密码保存在本地计算机上。  
   
- “可用数据库” - 为宿主提供程序配置的数据库以升序列出，格式为： *server_name*。*database_name*.  
+ “可用数据库”  - 为宿主提供程序配置的数据库以升序列出，格式为： *server_name*。*database_name*.  
   
  **新建** - 打开 **“数据库”** 配置对话框，然后添加一个新的数据库。  
   
@@ -320,7 +320,7 @@ ms.locfileid: "66063993"
  **取消** - 撤消在此对话框中做的所有更改并返回到向导。  
   
 ###  <a name="Summary"></a> 摘要页  
- 此页汇总了您在此向导中所选的选项。 若要更改某个选项，请单击 **“上一步”**。 若要开始生成将保存或发布的脚本，请单击 **“下一步”**。  
+ 此页汇总了您在此向导中所选的选项。 若要更改某个选项，请单击 **“上一步”** 。 若要开始生成将保存或发布的脚本，请单击 **“下一步”** 。  
   
  **检查所做选择** - 显示您在向导的每一页中所做的选择。 展开某个节点可看到在相应页中选择的选项。  
   
@@ -333,7 +333,7 @@ ms.locfileid: "66063993"
   
  **取消** - 单击此项可在完成处理前或出错时关闭向导。  
   
- “完成” - 单击此项可在完成处理后或出错时关闭向导。  
+ “完成”  - 单击此项可在完成处理后或出错时关闭向导。  
   
 ## <a name="see-also"></a>请参阅  
  [安装 SMO](../server-management-objects-smo/installing-smo.md)   

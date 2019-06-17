@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106099"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自定义地图或地图层的数据和显示（报表生成器和 SSRS）
@@ -69,7 +69,7 @@ ms.locfileid: "66106099"
   
 -   通过指定阴影，提供具有深度的错觉。  
   
- 若要更改这些选项，请右键单击“地图”，然后更改选项。  
+ 若要更改这些选项，请右键单击“地图”，然后更改选项。   
   
  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66106099"
   
 -   分辨率和简化。 对于线条和多边形，在绘制时间与轮廓详细程度之间选择平衡。  
   
- 若要更改这些选项，请右键单击地图视区，然后使用[地图视区属性”对话框 -&gt;“常规”](../map-viewport-properties-dialog-box-general.md)页和相关页。   
+ 若要更改这些选项，请右键单击地图视区，然后使用[地图视区属性”对话框 -&gt;“常规”](../map-viewport-properties-dialog-box-general.md)页和相关页。  
   
 
   
@@ -125,7 +125,7 @@ ms.locfileid: "66106099"
  有关层的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ##  <a name="DataGrouping"></a> 更改层的数据分组  
- 您可以自定义为您自己的形状聚合空间数据的方式。 若要设置某一层的组属性，请在“地图”窗格中选择该层，并且在该层的“属性”窗格中，单击“组”，然后单击省略号 (…) 以便打开“组”属性。 在该对话框中，您可以指定组表达式、创建组变量并且筛选用于分组的数据。  
+ 您可以自定义为您自己的形状聚合空间数据的方式。 若要设置某一层的组属性，请在“地图”窗格中选择该层，并且在该层的“属性”窗格中，单击“组”，然后单击省略号 (…) 以便打开“组”属性  。 在该对话框中，您可以指定组表达式、创建组变量并且筛选用于分组的数据。  
   
  组表达式指定如何为层上的每个地图元素聚合与空间数据具有一定关系的分析数据。 默认情况下，组表达式是为空间数据与分析数据之间的关系指定的一组匹配字段。 例如，对于显示某个国家或地区的城市位置和人口规模的气泡地图，匹配字段必须包括城市名称 [City] 和区域名称 [Region]，因为可能有多个城市具有相同的名称。 相应的组表达式包括两个字段：[City] 和 [Region]。  
   

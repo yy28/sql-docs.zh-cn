@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b7d4b7abc3070aa712316995c1d924fd73cbe8e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105779"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上刻度的格式（报表生成器和 SSRS）
@@ -26,7 +26,7 @@ ms.locfileid: "66105779"
   
  在已包含一个刻度的仪表上添加第二个刻度时，第一个刻度的外观属性将克隆到第二个刻度上。  
   
- 通过右键单击刻度标签或刻度线然后选择“径向刻度属性”或“线性刻度属性”，可以设置刻度的属性。 每个仪表类型至少包含一个具有相同属性集的刻度。 此外，每个仪表类型还包含其特有的属性：  
+ 通过右键单击刻度标签或刻度线然后选择“径向刻度属性”或“线性刻度属性”，可以设置刻度的属性   。 每个仪表类型至少包含一个具有相同属性集的刻度。 此外，每个仪表类型还包含其特有的属性：  
   
 -   在径向仪表中，可以指定径向刻度的半径、开始角度和扫描角度。  
   

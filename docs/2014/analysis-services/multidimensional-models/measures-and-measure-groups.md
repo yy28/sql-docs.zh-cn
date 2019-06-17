@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073668"
 ---
 # <a name="measures-and-measure-groups"></a>度量值和度量值组
@@ -48,7 +48,7 @@ ms.locfileid: "66073668"
   
  度量值与上下文相关，在上下文的数值数据上运行，该上下文由碰巧包含在查询中的任何维度成员确定。 例如，计算的度量值**分销商销售**将受`Sum`运算符，并且将每个维度成员包括在查询中添加的销售额。 无论查询指定单个产品、 汇总到一个类别，还是按时间或地域进行切分，该度量值都应生成对查询中所含维度有效的操作。  
   
- 在此示例中，“分销商销售”沿“销售区域”层次结构聚合为各种级别。  
+ 在此示例中，“分销商销售”沿“销售区域”层次结构聚合为各种级别   。  
   
  ![数据透视表的度量值和维度标注](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "度量值和维度调出的数据透视表")  
   

@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075063"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授予对维度数据的自定义访问权限 (Analysis Services)
@@ -56,11 +56,11 @@ ms.locfileid: "66075063"
   
 ## <a name="basic-dimension-security"></a>基本维度安全性  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”，然后单击某个数据库角色（或创建一个新的数据库角色）。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”  ，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
      此角色应已具有对多维数据集的读取访问权限。 如果需要此步骤的帮助信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)。  
   
-2.  在“维度数据” | “基本”上，选择要设置权限的维度。  
+2.  在“维度数据”   | “基本”  上，选择要设置权限的维度。  
   
 3.  选择属性层次结构。 并非所有属性都可用。 只有那些具有“AttributeHierarchyEnabled”  的属性才出现在  “属性层次结构”列表中。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66075063"
 >  检查先决条件，了解如何标识可能中断角色安全性的度量值。  
   
 ## <a name="advanced-dimension-security"></a>高级维度安全性  
- 如果您具备 MDX 专业知识，另一种方法则是编写 MDX 表达式，设置允许或拒绝访问的成员的标准。 依次单击“创建角色” | “维度数据” | “高级”来提供脚本。  
+ 如果您具备 MDX 专业知识，另一种方法则是编写 MDX 表达式，设置允许或拒绝访问的成员的标准。 依次单击“创建角色”   | “维度数据”   | “高级”  来提供脚本。  
   
  可以使用 MDX 生成器编写 MDX 语句。 有关详细信息，请参阅 [MDX 生成器（Analysis Services -多维数据）](../mdx-builder-analysis-services-multidimensional-data.md)。 **“高级”** 选项卡包含以下选项：  
   

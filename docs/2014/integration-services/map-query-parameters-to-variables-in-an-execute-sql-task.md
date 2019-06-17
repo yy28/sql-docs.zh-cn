@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057799"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在执行 SQL 任务中将查询参数映射到变量
@@ -47,7 +47,7 @@ ms.locfileid: "66057799"
   
     -   在 SQLStatement 属性中使用直接输入并键入 SQL 命令。  
   
-    -   使用直接输入，单击 **“生成查询”**，然后使用查询生成器提供的图形工具创建 SQL 命令。  
+    -   使用直接输入，单击 **“生成查询”** ，然后使用查询生成器提供的图形工具创建 SQL 命令。  
   
     -   使用文件连接，然后引用包含该 SQL 命令的文件。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "66057799"
   
      有关在存储过程中使用参数的示例，请参阅 [执行 SQL 任务中的参数和返回代码](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
   
-7.  单击 **“参数映射”**。  
+7.  单击 **“参数映射”** 。  
   
-8.  若要添加参数映射，请单击 **“添加”**。  
+8.  若要添加参数映射，请单击 **“添加”** 。  
   
 9. 在 **“参数名称”** 框中提供名称。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66057799"
     > [!IMPORTANT]  
     >  参数映射的顺序必须与参数在 SQL 语句中出现的顺序相同。  
   
-14. 单击“确定” 。  
+14. 单击“确定”  。  
   
 ## <a name="see-also"></a>请参阅  
  [执行 SQL 任务](control-flow/execute-sql-task.md)   

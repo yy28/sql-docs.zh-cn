@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057033"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>OLE DB 源编辑器（“列”页）
-  可以使用“OLE DB 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
+  可以使用“OLE DB 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列   。  
   
  若要了解有关 OLE DB 源的详细信息，请参阅 [OLE DB Source](data-flow/ole-db-source.md)。  
   

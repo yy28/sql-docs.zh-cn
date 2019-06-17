@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e642034d445e52485874c71df110bff81b9c1aaf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096939"
 ---
 # <a name="xml-device-information-settings"></a>XML 设备信息设置
@@ -33,7 +33,7 @@ ms.locfileid: "66096939"
 |`OmitSchema`|指示是否从 XML 中忽略架构位置。 该位置为 SchemaLocation 属性。 OmitSchema 的默认值依赖于 OmitNamespace 的值：<br /><br /> 如果 OmitNamespace = False，则默认 OmitSchema = `False`。 用户可以通过设置 OmitSchema = True，覆盖该默认值。<br /><br /> 如果 OmitNamespace = True，则 OmitSchema 将起到 `True` 的作用，无论为 OmitShema 显式配置的值如何。|  
 |**编码**|.NET Framework 支持的字符编码的 Internet 编号分配机构 (IANA) 名称。 默认值是 `UTF-8`。 其他值的示例包括 ASCII、UTF-7 和 UTF-16。|  
 |**FileExtension**|所生成的文件使用的文件扩展名。|  
-|**架构**|指示是否呈现 XML 架构定义 (XSD) 或是否呈现实际 XML 数据。 值为 `true` 指示将呈现 XML 架构。 默认值为 `false`。|  
+|**架构**|指示是否呈现 XML 架构定义 (XSD) 或是否呈现实际 XML 数据。 值为 `true` 指示将呈现 XML 架构。 默认值是 `false`。|  
   
 ## <a name="see-also"></a>请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

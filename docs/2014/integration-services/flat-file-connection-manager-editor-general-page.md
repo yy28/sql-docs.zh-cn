@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058745"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>平面文件连接管理器编辑器（“常规”页）
@@ -61,7 +61,7 @@ ms.locfileid: "66058745"
  指定要使用的文本限定符。 例如，可以指定文本字段必须用引号括起来。  
   
 > [!NOTE]  
->  选择文本限定符之后，不能重新选择“无”选项。 键入 **None** 以取消选择文本限定符。  
+>  选择文本限定符之后，不能重新选择“无”  选项。 键入 **None** 以取消选择文本限定符。  
   
  **标题行分隔符**  
  从标题行的分隔符列表中选择，或输入分隔符文本。  
@@ -75,7 +75,7 @@ ms.locfileid: "66058745"
 |**冒号 {:}**|标题行由冒号分隔。|  
 |**逗号 {,}**|标题行由逗号分隔。|  
 |**制表符 {t}**|标题行由制表符分隔。|  
-|**竖线 {&#124;}**。|标题行由竖线分隔。|  
+|**竖线 {&#124;}** 。|标题行由竖线分隔。|  
   
  **要跳过的标题行数**  
  指定要跳过的标题行数或初始数据行数（如果有的话）。  

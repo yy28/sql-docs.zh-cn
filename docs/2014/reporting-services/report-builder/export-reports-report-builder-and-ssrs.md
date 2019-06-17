@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d8b4fe6e791f84f0949b0657b890c79db99dfbf9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107949"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>导出报表（报表生成器和 SSRS）
@@ -73,14 +73,14 @@ ms.locfileid: "66107949"
 |Atom|数据|Atom 呈现扩展插件将从报表生成与 Atom 兼容的数据馈送。 数据馈送是可读的，并可以与可使用与 Atom 兼容的数据馈送的应用程序（如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端）进行交换。<br /><br /> 输出为一个 Atom 服务文档，该文档列出报表中可用的数据馈送。 为报表中的每个数据区域至少创建一个数据馈送。 根据数据区域的类型以及数据区域显示的数据，可以生成多个数据馈送。<br /><br /> 有关详细信息，请参阅 [基于报表生成数据馈送（报表生成器和 SSRS）](generating-data-feeds-from-reports-report-builder-and-ssrs.md)中处理数据。|  
   
 ##  <a name="ExportingReport"></a> 导出报表  
- 若要导出某个报表，请在报表管理器或报表生成器中运行该报表，然后从“导出”下拉列表中选择一种格式。 系统会提示您选择保存还是打开文件。 如果您选择 **“打开”**，将根据您选择的呈现格式在关联的应用程序中打开该报表。 （例如，当您选择 **Excel** 时，该报表便会在 Excel 中打开）。 如果您选择 **“保存”**，则保存该报表。 例如，如果导出到 Excel，则将报表保存为 .xls 文件。 为本地计算机定义的文件关联确定对于特定的呈现格式将使用哪一个应用程序。 有关详细信息，请参阅[将报表导出为其他文件类型&#40;报表生成器和 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)。  
+ 若要导出某个报表，请在报表管理器或报表生成器中运行该报表，然后从“导出”下拉列表中选择一种格式。 系统会提示您选择保存还是打开文件。 如果您选择 **“打开”** ，将根据您选择的呈现格式在关联的应用程序中打开该报表。 （例如，当您选择 **Excel** 时，该报表便会在 Excel 中打开）。 如果您选择 **“保存”** ，则保存该报表。 例如，如果导出到 Excel，则将报表保存为 .xls 文件。 为本地计算机定义的文件关联确定对于特定的呈现格式将使用哪一个应用程序。 有关详细信息，请参阅[将报表导出为其他文件类型&#40;报表生成器和 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)。  
   
  报表服务器按报表在当前用户会话中的原样导出报表。 如果在您打开报表时或报表显示的数据发生更改时，有人发布了该报表的更新版本，则不会更新已导出的报表。  
   
  当以不同的格式导出报表时，报表分页可能会受到影响。 预览报表时，您查看的是遵循软分页规则的 HTML 呈现扩展插件呈现的报表效果。 将报表导出为其他文件格式（如 Adobe Acrobat (PDF)）时，分页是根据物理页大小进行的，这遵循的是硬分页规则。 还可以用您添加到报表的逻辑分页符来分隔各页，但页的实际长度会因您使用的呈现器类型而异。 若要更改报表的分页情况，必须了解您选择的呈现扩展插件的分页行为。 您可能需要针对此呈现扩展插件调整报表布局的设计。 有关详细信息，请参阅[页面布局和呈现方式（报表生成器和 SSRS）](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)。  
   
 ##  <a name="GeneratingDataFeedsFromReport"></a> 从报表生成数据馈送  
- 若要从某个报表生成数据馈送，请在报表管理器中运行该报表，然后单击报表管理器工具栏上的 **“生成数据馈送”** 图标。 系统会提示您选择保存还是打开文件。 如果您选择 **“打开”**，则将在应用程序中打开与 .atomsvc 文件扩展名关联的 Atom 服务文档。 如果您选择 **“保存”**，则将该文档另存为 .atomsvc 文件。 默认情况下，该文件的名称即为报表的名称。 您可以将此名称更改为一个更有意义的名称。  
+ 若要从某个报表生成数据馈送，请在报表管理器中运行该报表，然后单击报表管理器工具栏上的 **“生成数据馈送”** 图标。 系统会提示您选择保存还是打开文件。 如果您选择 **“打开”** ，则将在应用程序中打开与 .atomsvc 文件扩展名关联的 Atom 服务文档。 如果您选择 **“保存”** ，则将该文档另存为 .atomsvc 文件。 默认情况下，该文件的名称即为报表的名称。 您可以将此名称更改为一个更有意义的名称。  
   
  将该 Atom 服务文档保存到计算机上。 稍后，您可以将其上载到报表服务器或另一个服务器上以供他人使用。 有关详细信息，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](generating-data-feeds-from-reports-report-builder-and-ssrs.md)和[从报表生成数据馈送（报表生成器和 SSRS）](generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   

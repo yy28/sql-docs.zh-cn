@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 948bf1fd8145da9db9d0e0b81beabb8e7b3efaf2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109253"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>在警报设计器中编辑数据警报
@@ -33,7 +33,7 @@ ms.locfileid: "66109253"
   
 ### <a name="to-edit-a-data-alert-definition-in-data-alert-designer"></a>在数据警报设计器中编辑数据警报定义  
   
-1.  在数据警报管理器中，右键单击要编辑的数据警报定义，然后单击“编辑”。  
+1.  在数据警报管理器中，右键单击要编辑的数据警报定义，然后单击“编辑”  。  
   
      该警报定义将在数据警报设计器中打开。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66109253"
     > [!NOTE]  
     >  不能选择其他数据馈送。 若要使用不同的数据馈送，则必须创建一个新的数据警报定义。  
   
-3.  单击“保存” 。  
+3.  单击“保存”  。  
   
     > [!NOTE]  
     >  如果报表已更改并且从该报表生成的数据馈送已更改，则警报定义将不再有效。 在发生以下情况之一时警报定义将不再有效：警报定义在其规则中引用的列从报表中删除、或更改了数据类型、或删除或移动了报表。 您可以打开无效的警报定义，但在其根据报表数据馈送所基于的当前版本变为有效之前无法重新保存。 若要深入了解如何从报表中生成数据馈送，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  

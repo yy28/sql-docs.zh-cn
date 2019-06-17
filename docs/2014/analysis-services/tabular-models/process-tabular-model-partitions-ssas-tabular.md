@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4cabfe4f0d28bb74ae1fae0b84de758e7dca565
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066824"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>处理表格模型分区（SSAS 表格）
@@ -22,7 +22,7 @@ ms.locfileid: "66066824"
   
 ###  <a name="bkmk_create_new"></a> 处理分区  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击包含要处理的分区的表，然后单击“分区”。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击包含要处理的分区的表，然后单击“分区”  。  
   
 2.  在 **“分区”** 对话框的 **“分区”** 中，单击“处理”按钮。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66066824"
     |**处理清除**|删除分区中的所有数据。|  
     |**处理添加**|以增量方式用新数据更新分区。|  
   
-4.  在 **“处理”** 复选框列中，选择要用所选模式处理的分区，然后单击 **“确定”**。  
+4.  在 **“处理”** 复选框列中，选择要用所选模式处理的分区，然后单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [表格模型分区（SSAS 表格）](partitions-ssas-tabular.md)   

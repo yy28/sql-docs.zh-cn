@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056689"
 ---
 # <a name="precedence-constraint-editor"></a>优先约束编辑器
@@ -26,16 +26,16 @@ ms.locfileid: "66056689"
   
 ## <a name="options"></a>选项  
  **求值运算**  
- 指定优先约束使用的求值运算。 运算包括：“约束”、“表达式”、“表达式和约束”和“表达式或约束”。  
+ 指定优先约束使用的求值运算。 运算包括：“约束”  、“表达式”  、“表达式和约束”  和“表达式或约束”  。  
   
  **ReplTest1**  
- 指定约束值：“成功”、“失败”或“完成”。  
+ 指定约束值：“成功”  、“失败”  或“完成”  。  
   
 > [!NOTE]  
->  优先约束线的含义：绿色表示“成功”，突出显示表示“失败”，蓝色表示“完成”。  
+>  优先约束线的含义：绿色表示“成功”，突出显示表示“失败”，蓝色表示“完成”    。  
   
  **表达式**  
- 如果使用运算“表达式”、“表达式和约束”或“表达式或约束”，则键入一个表达式或启动表达式生成器来创建表达式。 表达式的计算结果必须为布尔值。  
+ 如果使用运算“表达式”  、“表达式和约束”  或“表达式或约束”  ，则键入一个表达式或启动表达式生成器来创建表达式。 表达式的计算结果必须为布尔值。  
   
  **测试**  
  验证表达式。  

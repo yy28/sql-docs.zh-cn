@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59a6bb7d661e7761e2c28259bf8d95ae05545fa1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072078"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>分区（多维数据集设计器）（Analysis Services - 多维数据）
@@ -29,6 +29,6 @@ ms.locfileid: "66072078"
  使用工具栏可以执行该选项卡上的常见操作。  
   
  **度量值组**  
- 使用“度量值组”窗格可以为多维数据集中的每个度量值组创建和修改分区。  
+ 使用“度量值组”  窗格可以为多维数据集中的每个度量值组创建和修改分区。  
   
   

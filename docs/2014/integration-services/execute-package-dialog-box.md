@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059188"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
@@ -51,7 +51,7 @@ ms.locfileid: "66059188"
   
 4.  展开包含您要运行的包的文件夹。  
   
-5.  右键单击该包，然后单击“执行”。  
+5.  右键单击该包，然后单击“执行”  。  
   
 ##  <a name="general"></a> 设置“常规”页上的选项  
  选择 **“环境”** 以便指定适用于运行的包的环境。  
@@ -65,7 +65,7 @@ ms.locfileid: "66059188"
 ##  <a name="advanced"></a> 设置“高级”选项卡上的选项  
  使用“高级”选项卡可以管理属性和其他包设置。  
   
- “添加”、“编辑”、“删除”  
+ “添加”  、“编辑”  、“删除”   
  单击以便添加、编辑或删除某一属性。  
   
  **日志记录级别**  
@@ -78,6 +78,6 @@ ms.locfileid: "66059188"
  指定包将在 32 位系统上执行。  
   
 ##  <a name="script"></a> 编写“执行包”对话框中选项的脚本  
- 在您处于 **“执行包”** 对话框中时，还可以使用工具栏上的 **“脚本”** 按钮为您编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码。 生成的脚本使用与你在“执行包”对话框中选择的相同选项调用存储过程 [catalog.start_execution（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)。 该脚本出现在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的新脚本窗口中。  
+ 在您处于 **“执行包”** 对话框中时，还可以使用工具栏上的 **“脚本”** 按钮为您编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码。 生成的脚本使用与你在“执行包”  对话框中选择的相同选项调用存储过程 [catalog.start_execution（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)。 该脚本出现在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的新脚本窗口中。  
   
   

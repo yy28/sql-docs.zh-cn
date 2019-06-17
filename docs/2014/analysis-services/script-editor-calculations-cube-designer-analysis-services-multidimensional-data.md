@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069969"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>脚本编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
-  在多维数据集设计器中，可以使用“计算”选项卡上的“脚本编辑器”窗格修改脚本命令的表达式（在窗体视图中），或修改整个多维数据集脚本（在脚本视图中）。  
+  在多维数据集设计器中，可以使用“计算”选项卡上的“脚本编辑器”窗格修改脚本命令的表达式（在窗体视图中），或修改整个多维数据集脚本（在脚本视图中）   。  
   
 ## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  
-|**表达式**|为在“元数据”窗格（对于窗体视图）或整个多维数据集脚本（对于脚本视图）中选择的脚本命令键入多维表达式 (MDX) 表达式和语句。<br /><br /> 将所选元素从 **“计算工具”** 窗格拖至此选项中，可包含所选元素的 MDX 语法。|  
+|**表达式**|为在“元数据”窗格（对于窗体视图）或整个多维数据集脚本（对于脚本视图）中选择的脚本命令键入多维表达式 (MDX) 表达式和语句  。<br /><br /> 将所选元素从 **“计算工具”** 窗格拖至此选项中，可包含所选元素的 MDX 语法。|  
   
 ## <a name="see-also"></a>请参阅  
  [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)   

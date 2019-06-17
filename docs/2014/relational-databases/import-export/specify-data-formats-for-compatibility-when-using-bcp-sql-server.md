@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011829"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "66011829"
   
 -   前缀长度  
   
-     当以本机格式将数据大容量导出到数据文件时，为使文件存储空间最为紧凑，`bcp` 命令将在每个字段前面使用一个或多个字符来指示字段的长度。 这些字符称为“长度前缀字符” 。 有关详细信息，请参阅 [使用 bcp 指定数据文件中的前缀长度 (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)。  
+     当以本机格式将数据大容量导出到数据文件时，为使文件存储空间最为紧凑，`bcp` 命令将在每个字段前面使用一个或多个字符来指示字段的长度。 这些字符称为“长度前缀字符”  。 有关详细信息，请参阅 [使用 bcp 指定数据文件中的前缀长度 (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)。  
   
 -   字段长度  
   
@@ -56,10 +56,10 @@ ms.locfileid: "66011829"
   
 -   字段终止符  
   
-     对于字符数据字段，可以选择使用终止字符标记数据文件中每个字段的结尾（使用“字段终止符”）以及每行的结尾（使用“行终止符”）。 终止符是为读取数据文件的程序提供的一种方法，用于指出一个字段或行的结束位置和另一个字段或行的开始位置。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。  
+     对于字符数据字段，可以选择使用终止字符标记数据文件中每个字段的结尾（使用“字段终止符”  ）以及每行的结尾（使用“行终止符”  ）。 终止符是为读取数据文件的程序提供的一种方法，用于指出一个字段或行的结束位置和另一个字段或行的开始位置。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。  
   
 ##  <a name="FieldSpecificPrompts"></a> 字段特定的提示概述  
- 如果某个交互式`bcp`命令包含**中**或**出**选项，但不包含格式化文件开关 (**-f**) 或数据格式开关 （**-n**， **-c**， **-w**，或者 **-N**)，源或目标表中的每个列，该命令提示输入上述每个在打开的特性。 在每个提示中，`bcp` 命令都根据表列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型提供一个默认值。 接受所有提示的默认值生成的结果与在命令行指定本机格式 (**-n**) 生成的结果相同。 每个提示都会显示一个用方括号括起来的默认值：[*default*]。 按 Enter 即接受显示的默认值。 若要指定与默认值不同的值，请在提示符下输入新值。  
+ 如果某个交互式`bcp`命令包含**中**或**出**选项，但不包含格式化文件开关 ( **-f**) 或数据格式开关 （ **-n**， **-c**， **-w**，或者 **-N**)，源或目标表中的每个列，该命令提示输入上述每个在打开的特性。 在每个提示中，`bcp` 命令都根据表列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型提供一个默认值。 接受所有提示的默认值生成的结果与在命令行指定本机格式 ( **-n**) 生成的结果相同。 每个提示都会显示一个用方括号括起来的默认值：[*default*]。 按 Enter 即接受显示的默认值。 若要指定与默认值不同的值，请在提示符下输入新值。  
   
 ### <a name="example"></a>示例  
  以下示例使用 `bcp` 命令以交互方式将 `HumanResources.myTeam` 表中的数据大容量导出到 `myTeam.txt` 文件中。 在运行该示例之前，必须创建此表。 有关该表和如何创建该表的信息，请参阅 [HumanResources.myTeam 示例表 (SQL Server)](humanresources-myteam-sample-table-sql-server.md)。  

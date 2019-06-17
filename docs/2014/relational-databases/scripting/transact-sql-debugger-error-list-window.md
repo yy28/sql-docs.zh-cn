@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f7649875faf636d2bbc78834c13d4b5b1b99e72
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063435"
 ---
 # <a name="error-list-window-management-studio"></a>“错误列表”窗口 (Management Studio)
-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“错误列表”** 用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“错误列表”** 用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
   
 ## <a name="features-of-the-error-list"></a>“错误列表”的功能  
  **“错误列表”** 提供下列功能：  
@@ -39,9 +39,9 @@ ms.locfileid: "66063435"
 -   关闭某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件的选项卡后，与该文件相关的错误将从 **“错误列表”** 中删除。  
   
 ## <a name="working-with-the-error-list"></a>使用“错误列表”  
- 若要显示 **“错误列表”**，请执行下列操作之一：  
+ 若要显示 **“错误列表”** ，请执行下列操作之一：  
   
--   在 **“视图”** 菜单上单击 **“错误列表”**。  
+-   在 **“视图”** 菜单上单击 **“错误列表”** 。  
   
 -   使用键盘快捷键 CTRL+\\和 CTRL+E。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66063435"
  有时候错误会同时在上述两个位置列出。 例如，某脚本文件可能存在已在 **“错误列表”** 中列出的语法错误。 如果在纠正此错误之前执行了该脚本，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 分析器会检测到相同的错误情形并在 **“消息”** 选项卡中返回此错误消息。  
   
 > [!NOTE]  
->  “错误列表”仅显示来源于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的错误，而不显示来源于 MDX、DMX 或 XML/A 编辑器的错误。 所有 MDX、DMX 和 XML/A 错误均显示在这些编辑器的“消息”选项卡中。  
+>  “错误列表”  仅显示来源于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的错误，而不显示来源于 MDX、DMX 或 XML/A 编辑器的错误。 所有 MDX、DMX 和 XML/A 错误均显示在这些编辑器的“消息”  选项卡中。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **“错误列表”** 后，将在以下列中显示相关信息：  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26fa80cc770d4bee9163ec18c21b35bd8c807bde
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086985"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>“连接属性”对话框（SSAS - 表格）
@@ -38,6 +38,6 @@ ms.locfileid: "66086985"
 |**隔离**|有效值为 ReadCommitted 或 Snapshot。 有关详细信息，请参阅 [Isolation 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/isolation-element-assl)。|  
 |**查询超时值**|指定一段时间（以秒为单位），在这段时间过后试图检索数据时发生超时。|  
 |**托管提供程序**|指定托管访问接口的名称。 如果数据源连接使用本机 OLE DB 访问接口，则此值为空。|  
-|**模拟信息**|指定在处理或刷新数据时用于数据库连接的模拟帐户、针对关系数据存储区（通过 DirectQuery）运行的查询、外部绑定、远程分区以及从目标到源的数据库同步。<br /><br /> 有效值包括 Analysis Services 服务帐户或一组特定的 Windows 凭据。 不要指定 **“使用当前用户的凭据”** 或 **“继承”**。 表格模型数据库不支持这些凭据选项。|  
+|**模拟信息**|指定在处理或刷新数据时用于数据库连接的模拟帐户、针对关系数据存储区（通过 DirectQuery）运行的查询、外部绑定、远程分区以及从目标到源的数据库同步。<br /><br /> 有效值包括 Analysis Services 服务帐户或一组特定的 Windows 凭据。 不要指定 **“使用当前用户的凭据”** 或 **“继承”** 。 表格模型数据库不支持这些凭据选项。|  
   
   

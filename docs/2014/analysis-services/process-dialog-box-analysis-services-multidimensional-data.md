@@ -13,24 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070748"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>“处理”对话框（Analysis Services - 多维数据）
   可以使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “处理” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象。 在 **中，可以执行以下操作以显示** “处理” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框：  
   
--   在“解决方案资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目、多维数据集、维度或挖掘结构，然后选择“处理”。  
+-   在“解决方案资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目、多维数据集、维度或挖掘结构，然后选择“处理”   。  
   
--   在 **多维数据集设计器** 的所有页、 **维度设计器**的所有页或 **数据挖掘模型设计器**的 **“挖掘结构”** 和 **“挖掘模型”** 页上，从工具栏中选择 **“处理”**。  
+-   在 **多维数据集设计器** 的所有页、 **维度设计器**的所有页或 **数据挖掘模型设计器**的 **“挖掘结构”** 和 **“挖掘模型”** 页上，从工具栏中选择 **“处理”** 。  
   
--   在“数据挖掘模型设计器”的“挖掘模型”页中，右键单击某个挖掘模型，然后选择“处理挖掘结构和所有模型”或“处理模型”。  
+-   在“数据挖掘模型设计器”的“挖掘模型”页中，右键单击某个挖掘模型，然后选择“处理挖掘结构和所有模型”或“处理模型”     。  
   
  在 **SQL Server Management Studio** 中，可以通过执行以下操作显示 **“处理”** 对话框：  
   
--   在“对象资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库、多维数据集、度量值组、分区、维度、挖掘结构或挖掘模型，然后选择“处理”。  
+-   在“对象资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库、多维数据集、度量值组、分区、维度、挖掘结构或挖掘模型，然后选择“处理”   。  
   
 ## <a name="options"></a>选项  
  **对象列表**  
@@ -46,19 +46,19 @@ ms.locfileid: "66070748"
  选择要对所选对象执行的处理类型。 有关可用处理选项的详细信息，请参阅[多维模型对象处理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  **设置**  
- 对于多维数据集、度量值组或分区，在“处理选项”中选择“处理增量”时，会显示“配置”超链接。 单击 **“配置”** 可启动 **“增量更新”** 对话框。 有关“增量更新”对话框的详细信息，请参阅[“增量更新”对话框（Analysis Services - 多维数据）](incremental-update-dialog-box-analysis-services-multidimensional-data.md)。  
+ 对于多维数据集、度量值组或分区，在“处理选项”中选择“处理增量”时，会显示“配置”超链接    。 单击 **“配置”** 可启动 **“增量更新”** 对话框。 有关“增量更新”  对话框的详细信息，请参阅[“增量更新”对话框（Analysis Services - 多维数据）](incremental-update-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **删除**  
- 单击此项可从“对象列表”中删除所选项。  
+ 单击此项可从  “对象列表”中删除所选项。  
   
  **影响分析**  
- 单击此项可打开“影响分析”对话框，并显示将被处理任务影响的对象。 有关“影响分析”对话框的详细信息，请参阅[“影响分析”对话框（Analysis Services - 多维数据）](impact-analysis-dialog-box-analysis-services-multidimensional-data.md)。  
+ 单击此项可打开“影响分析”  对话框，并显示将被处理任务影响的对象。 有关  “影响分析”对话框的详细信息，请参阅[“影响分析”对话框（Analysis Services - 多维数据）](impact-analysis-dialog-box-analysis-services-multidimensional-data.md)。  
   
 > [!NOTE]  
->  当在“更改设置”对话框中选中“处理影响的对象”选项时，将禁用此选项。  
+>  当在“更改设置”对话框中选中“处理影响的对象”选项时，将禁用此选项   。  
   
  **更改设置**  
- 单击此项可打开“更改设置”对话框，并更改用于控制所选对象的处理方式的设置，包括批处理设置、写回设置、维度键错误设置。 有关“更改设置”对话框的详细信息，请参阅[“更改设置”对话框（Analysis Services - 多维数据）](change-settings-dialog-box-analysis-services-multidimensional-data.md)。  
+ 单击此项可打开  “更改设置”对话框，并更改用于控制所选对象的处理方式的设置，包括批处理设置、写回设置、维度键错误设置。 有关“更改设置”  对话框的详细信息，请参阅[“更改设置”对话框（Analysis Services - 多维数据）](change-settings-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **运行**  
  单击此项可处理对象。  
