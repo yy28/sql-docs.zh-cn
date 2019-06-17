@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b83978f35dadff86e231b93b836c7ffdd1e0f08
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 11fa40f3cdeb93463f3e5f66975e83e5d12dd6d4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676045"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797730"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "56676045"
 'ReturnDatesAsStrings'=>true
 ```
 
-默认值是 false，这意味着 smalldatetime、datetime、date、time、datetime2 和 datetimeoffset 类型将返回为 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象。 如果在语句级别上设置此选项，它将覆盖连接级别设置。
+默认值是 false  ，这意味着 smalldatetime  、datetime  、date  、time  、datetime2  和 datetimeoffset  类型将返回为 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象。 如果在语句级别上设置此选项，它将覆盖连接级别设置。
 
 PDO_SQLSRV 驱动程序默认情况下返回以字符串形式的日期和时间类型。 若要检索这些作为 PHP DateTime 对象，请参阅[如何： 检索日期和时间类型作为 PHP Datetime 对象使用 PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 

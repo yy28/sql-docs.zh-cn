@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811248"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
@@ -62,11 +62,11 @@ ms.locfileid: "62811248"
   
 -   **强行加密**  
   
-     可能的值为 **“打开”** 和 **“关闭”**。 若要使用渠道绑定，“强行加密”  必须设置为“打开” ，所有客户端都将强制进行加密。 如果为 **“关闭”**，则只确保服务绑定。 **“强行加密”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“打开”** 和 **“关闭”** 。 若要使用渠道绑定，“强行加密”  必须设置为“打开”  ，所有客户端都将强制进行加密。 如果为 **“关闭”** ，则只确保服务绑定。 **“强行加密”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 -   **扩展保护**  
   
-     可能的值为 **“关闭”**、 **“允许”** 和 **“必需”**。 通过 **扩展保护** 变量，用户可以为每个  实例配置扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别。 **“扩展保护”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“关闭”** 、 **“允许”** 和 **“必需”** 。 通过 **扩展保护** 变量，用户可以为每个  实例配置扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别。 **“扩展保护”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
     -   当设置为 **“关闭”** 时，禁用 **扩展保护** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例将接受来自任何客户端的连接，不管该客户端是否受保护。 **“关闭”** 选项虽与旧的和未打补丁的操作系统兼容，但安全性较差。 当您知道客户端操作系统不支持扩展保护时，请使用此设置。  
   
@@ -83,15 +83,15 @@ ms.locfileid: "62811248"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。  的某些早期版本的扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在后续的更新中提供。 在服务器计算机上启用 **扩展保护** 之后，使用以下步骤启用 **扩展保护**：  
   
-1.  在 **“开始”** 菜单上，选择 **“所有程序”**，指向 **Microsoft SQL Server** ，再单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单上，选择 **“所有程序”** ，指向 **Microsoft SQL Server** ，再单击 **“SQL Server 配置管理器”** 。  
   
-2.  展开“SQL Server 网络配置” 、右键单击“  *\<**>*，然后单击“属性” 。  
+2.  展开“SQL Server 网络配置”  、右键单击“  *\<* *>* ，然后单击“属性”  。  
   
 3.  对于渠道绑定和服务绑定，同时在 **“高级”** 选项卡上将 **“扩展保护”** 设置为适当的设置。  
   
 4.  或者，当多个 SPN 知道一个服务器时，在 **“高级”** 选项卡上按照“设置”部分所述配置 **“接受的 NTLM SPN”** 字段。  
   
-5.  对于渠道绑定，在 **“标志”** 选项卡上，将 **“强行加密”** 设置为 **“打开”**。  
+5.  对于渠道绑定，在 **“标志”** 选项卡上，将 **“强行加密”** 设置为 **“打开”** 。  
   
 6.  重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。  
   

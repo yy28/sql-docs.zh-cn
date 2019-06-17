@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26ab429a5f2abeda9a811e85dc5113121380e999
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892472"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services (SSIS) 项目
@@ -74,7 +74,7 @@ ms.locfileid: "62892472"
  当您创建新项目时 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将自动创建解决方案，但您也可创建空解决方案，然后再添加项目。  
   
 > [!NOTE]  
->  默认情况下，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建新 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目时， **“项目资源管理器”** 窗格不会显示解决方案。 若要更改此默认行为，请在 **“工具”** 菜单上单击 **“选项”**。 在 **“选项”** 对话框中，展开 **“项目和解决方案”**，然后单击 **“常规”**。 在 **“常规”** 页上，选择 **“总是显示解决方案”**。  
+>  默认情况下，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建新 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目时， **“项目资源管理器”** 窗格不会显示解决方案。 若要更改此默认行为，请在 **“工具”** 菜单上单击 **“选项”** 。 在 **“选项”** 对话框中，展开 **“项目和解决方案”** ，然后单击 **“常规”** 。 在 **“常规”** 页上，选择 **“总是显示解决方案”** 。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [在解决方案中添加或删除 Integration Services 项目](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743083"
 ---
 # <a name="use-aggregate-functions"></a>使用聚合函数
@@ -62,7 +62,7 @@ ms.locfileid: "62743083"
   
  此类分析无需限制为两个维度。 事实上，非重复计数度量值可以由多维数据集中的任何维度组合进行分隔和切片，这些维度组合包括具有计数成员的维度。  
   
- 对成员进行计数的非重复计数度量值基于事实数据表中的外键列。 （即，度量值的“源列”属性标识此列。）此列联接标识由非重复计数度量值进行计数的成员的维度表列。  
+ 对成员进行计数的非重复计数度量值基于事实数据表中的外键列。 （即，度量值的“源列”  属性标识此列。）此列联接标识由非重复计数度量值进行计数的成员的维度表列。  
   
 ## <a name="see-also"></a>请参阅  
  [度量值和度量值组](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   

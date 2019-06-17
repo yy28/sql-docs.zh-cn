@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c99d0772-b26c-492c-a643-2813b5429993
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26af6202dd56daeabb432b090c13c7db7c346c79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e017453713347ff3c3dc5696fb0a4c63315413aa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767875"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799915"
 ---
 # <a name="getbigdecimal-method-int-int-sqlserverresultset"></a>getBigDecimal 方法 (int, int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +40,13 @@ public java.math.BigDecimal getBigDecimal(int columnIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
  *scale*  
   
- 指示小数点右边的位数的 int。  
+ 指示小数点右边的位数的 int  。  
   
 ## <a name="return-value"></a>返回值  
  一个 BigDecimal 对象。  

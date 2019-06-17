@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774581"
 ---
 # <a name="configure-log-shipping-sql-server"></a>配置日志传送 (SQL Server)
@@ -59,13 +59,13 @@ ms.locfileid: "62774581"
   
 #### <a name="to-configure-log-shipping"></a>配置日志传送  
   
-1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击 **“属性”**。  
+1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击 **“属性”** 。  
   
-2.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
+2.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
 3.  选中 **“将此数据库启用为日志传送配置中的主数据库”** 复选框。  
   
-4.  在 **“事务日志备份”** 下，单击 **“备份设置”**。  
+4.  在 **“事务日志备份”** 下，单击 **“备份设置”** 。  
   
 5.  在 **“备份文件夹的网络路径”** 框中，键入为事务日志备份文件夹创建的共享的网络路径。  
   
@@ -78,11 +78,11 @@ ms.locfileid: "62774581"
   
 8.  请注意 **“备份作业”** 下的 **“计划”** 框中列出的备份计划。 如果想要为安装自定义计划，则单击 **“计划”** 并根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，您可以通过选择以下选项之一来控制日志备份的备份压缩行为：**使用默认服务器设置**，**压缩备份**，或**不压缩备份**。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为：“使用默认服务器设置”、“压缩备份”或“不压缩备份”    。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
 10. 单击 **“确定”** 中配置日志传送。  
   
-11. 在 **“辅助服务器实例和数据库”** 下，单击 **“添加”**。  
+11. 在 **“辅助服务器实例和数据库”** 下，单击 **“添加”** 。  
   
 12. 单击 **“连接”** ，连接到要用作辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62774581"
   
 22. 单击 **“确定”** 中配置日志传送。  
   
-23. 在 **“监视服务器实例”** 下，选中 **“使用监视服务器实例”** 复选框，然后单击 **“设置”**。  
+23. 在 **“监视服务器实例”** 下，选中 **“使用监视服务器实例”** 复选框，然后单击 **“设置”** 。  
   
     > [!IMPORTANT]  
     >  若要监视此日志传送配置，必须现在添加监视服务器。 若要以后添加监视服务器，则需要先删除此日志传送配置，然后将其替换为包含监视服务器的新配置。  
@@ -120,7 +120,7 @@ ms.locfileid: "62774581"
   
 26. 在 **“历史记录保持期”** 下，选择想要保留日志传送历史记录的时间长度。  
   
-27. 单击“确定” 。  
+27. 单击“确定”  。  
   
 28. 在 **“数据库属性”** 对话框中，单击 **“确定”** 开始配置进程。  
   

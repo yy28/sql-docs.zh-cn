@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8134b7a69df7254ce3609ddce24a15293c47efd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779729"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
@@ -192,9 +192,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
 1.  在运行 Windows Server 2008 R2 Server Core SP1 的计算机上，启动任务管理器。  
   
-2.  在 **“应用程序”** 选项卡上，单击 **“新建任务”**。  
+2.  在 **“应用程序”** 选项卡上，单击 **“新建任务”** 。  
   
-3.  在 **“创建新任务”** 对话框上的 **“打开”** 字段中键入 **sqlps.exe** ，然后单击 **“确定”**。 这将打开 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 窗口。  
+3.  在 **“创建新任务”** 对话框上的 **“打开”** 字段中键入 **sqlps.exe** ，然后单击 **“确定”** 。 这将打开 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 窗口。  
   
 4.  在 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 窗口中，运行以下脚本以启用 TCP/IP 协议：  
   
@@ -228,7 +228,7 @@ $Tcp
 |[dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)|用于配置和执行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[dtutil 实用工具](../../integration-services/dtutil-utility.md)|用于管理 SSIS 包。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[osql 实用工具](../../tools/osql-utility.md)|您可以在命令提示符下输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、系统过程和脚本文件。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlagent90 应用程序](../../tools/sqlagent90-application.md)|用于在命令提示符下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。|\<驱动器>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<instance_name>\MSSQL\Binn|  
+|[sqlagent90 应用程序](../../tools/sqlagent90-application.md)|用于在命令提示符下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。|\<驱动器>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<instance_name>\MSSQL\Binn |  
 |[sqlcmd Utility](../../tools/sqlcmd-utility.md)|您可以在命令提示符下输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、系统过程和脚本文件。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SQLdiag 实用工具](../../tools/sqldiag-utility.md)|用于为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户服务和支持部门收集诊断信息。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlmaint 实用工具](../../tools/sqlmaint-utility.md)|用于执行在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中创建的数据库维护计划。|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.MSSQLSERVER\MSSQL\Binn|  

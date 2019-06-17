@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5a785f7c208d8543f9ec3a27d34b34f7a918
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724365"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797772"
 ---
 # <a name="data-source-wizard-screen-4"></a>数据源向导屏幕 4
 
@@ -48,7 +48,7 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 ### <a name="save-long-running-queries-to-the-log-file"></a>将长时间运行的查询保存到日志文件
 
-指定驱动程序记录任何时间超出“长查询时间”值的查询。 长时间运行的查询将记录到指定文件中。 若要指定一个日志文件，可以在此框中键入完整的路径和文件名，也可以单击“浏览”，在现有文件目录中导航选择一个日志文件。
+指定驱动程序记录任何时间超出“长查询时间”  值的查询。 长时间运行的查询将记录到指定文件中。 若要指定一个日志文件，可以在此框中键入完整的路径和文件名，也可以单击“浏览”  ，在现有文件目录中导航选择一个日志文件。
 
 ### <a name="long-query-time-milliseconds"></a>长查询时间(毫秒)
 
@@ -56,7 +56,7 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 ### <a name="log-odbc-driver-statistics-to-the-log-file"></a>将 ODBC 驱动程序统计信息记录到日志文件
 
-指定记录的统计信息。 统计信息将记录到指定的文件中。 若要指定一个日志文件，可以在此框中键入完整的路径和文件名，也可以单击“浏览”，在现有文件目录中导航选择一个日志文件。
+指定记录的统计信息。 统计信息将记录到指定的文件中。 若要指定一个日志文件，可以在此框中键入完整的路径和文件名，也可以单击“浏览”  ，在现有文件目录中导航选择一个日志文件。
 
 统计信息日志是一个制表符分隔文件，可以在 Microsoft Excel 或支持制表符分隔文件的任何其他应用程序中进行分析。
 
@@ -72,7 +72,7 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 单击此按钮可返回到向导的上一页。
 
-### <a name="finish"></a>完成
+### <a name="finish"></a>“完成”
 
 如果在此屏幕上指定的信息已完成，可以单击**完成**。 使用此向导中，其他屏幕上指定的所有属性创建 DSN，并提供机会来测试新创建的 DSN。
 

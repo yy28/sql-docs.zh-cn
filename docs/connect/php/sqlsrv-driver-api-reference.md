@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 87b04db9a25df8ddf7329ef3d2f0142875296c63
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0c763cf3a1822548b1e107ecc7d619d8ef44d0a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601207"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803919"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 驱动程序 API 参考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中，SQLSRV 驱动程序的 API 名称为 **sqlsrv**。 所有 sqlsrv 函数都以 sqlsrv_ 开头，后跟谓词或名词。 后跟谓词的函数可执行特定操作，后跟名词的函数可返回特定形式的元数据。  
+在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中，SQLSRV 驱动程序的 API 名称为 **sqlsrv**。 所有 sqlsrv  函数都以 sqlsrv_  开头，后跟谓词或名词。 后跟谓词的函数可执行特定操作，后跟名词的函数可返回特定形式的元数据。  
   
 ## <a name="in-this-section"></a>本节内容  
 SQLSRV 驱动程序包含以下函数：  

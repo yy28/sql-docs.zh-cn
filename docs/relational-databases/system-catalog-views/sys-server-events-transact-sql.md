@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce3ad077a62d79518d45c53596fb4334a4498434
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013330"
 ---
 # <a name="sysserverevents-transact-sql"></a>sys.server_events (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "63013330"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|要激发的服务器级事件通知或服务器级 DDL 触发器的 ID。|  
-|**类型**|**int**|导致激发事件通知或 DDL 触发器的事件的类型。|  
+|**type**|**int**|导致激发事件通知或 DDL 触发器的事件的类型。|  
 |**type_desc**|**nvarchar(60)**|对导致激发 DDL 触发器或事件通知的事件的说明。|  
 |**event_group_type**|**int**|要对其创建触发器或事件通知的事件组，如果未对事件组中创建触发器或事件通知，则为 Null。|  
 |**event_group_type_desc**|**nvarchar(60)**|要对其创建触发器或事件通知的事件组的说明，如果未对事件组创建触发器或事件通知，则为 Null。|  

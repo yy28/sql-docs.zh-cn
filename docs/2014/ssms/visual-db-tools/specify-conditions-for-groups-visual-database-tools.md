@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc0f9319e4d598548111b44b1a10542773a7daa4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049137"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>为组指定条件 (Visual Database Tools)
@@ -36,7 +36,7 @@ ms.locfileid: "63049137"
   
 2.  如果条件要基于的列不在“[条件](criteria-pane-visual-database-tools.md)”窗格中，请添加该列。 （大多数情况下，该条件所涉及的列已经是组或汇总列。）不能使用未包含在聚合函数或 GROUP BY 子句中的列。  
   
-3.  在“筛选器”列中，指定要对组应用的条件。  
+3.  在“筛选器”  列中，指定要对组应用的条件。  
   
      [查询和视图设计器](query-and-view-designer-tools-visual-database-tools.md)将自动在“[SQL 窗格](sql-pane-visual-database-tools.md)”的语句中创建 HAVING 子句，如下例所示：  
   

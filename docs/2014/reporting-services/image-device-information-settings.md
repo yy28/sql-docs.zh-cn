@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32498fbed24ddab591745ae1d01c5f123e976114
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109013"
 ---
 # <a name="image-device-information-settings"></a>图像设备信息设置
@@ -38,7 +38,7 @@ ms.locfileid: "66109013"
 |**PageHeight**|要为报表设置的页高，以英寸为单位。 您必须包含一个整数或小数值，后跟“in”（例如，`11in`）。 此值将覆盖报表的原始设置。|  
 |**PageWidth**|要为报表设置的页宽，以英寸为单位。 您必须包含一个整数或小数值，后跟“in”（例如，`8.5in`）。 此值将覆盖报表的原始设置。|  
 |**PrintDpiX**|输出图像的水平分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
-|**PrintDpiY**|输出图像的垂直分辨率。 默认值为 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
+|**PrintDpiY**|输出图像的垂直分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
 |`StartPage`|要呈现的报表的第一页。 值为 `0` 指示将呈现所有页。 默认值是 `1`。|  
   
 ## <a name="see-also"></a>请参阅  

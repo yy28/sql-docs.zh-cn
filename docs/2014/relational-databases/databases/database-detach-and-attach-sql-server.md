@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762418"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>数据库分离和附加 (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "62762418"
 > [!NOTE]  
 >  如果附加的主数据文件是只读的，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假定数据库也是只读的。  
   
- 当加密的数据库首次附加到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，数据库所有者必须通过执行以下语句打开数据库主密钥：打开主密钥解密密码 = **'*`password`***。 我们建议通过执行以下语句启用自动解密该密钥：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 有关详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql) 和 [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql)。  
+ 当加密的数据库首次附加到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，数据库所有者必须通过执行以下语句打开数据库主密钥：打开主密钥解密密码 = **' *`password`* **。 我们建议通过执行以下语句启用自动解密该密钥：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 有关详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql) 和 [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql)。  
   
  附加日志文件的要求在某些方面取决于数据库是读写的还是只读的，如下所示：  
   

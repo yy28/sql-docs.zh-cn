@@ -12,13 +12,13 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 64930811074de1beb3c86ef5502c139394213096
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 248a3a681bb7d52d54e7e052539aa9257f6bca03
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600030"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785927"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>枚举 OLE DB 数据源 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51600030"
   
 5.  通过调用提取的行**irowset:: Getnextrows**。  
   
-6.  通过调用 IRowset::GetData 从行集中该行的副本检索数据，然后处理这些数据。  
+6.  通过调用 IRowset::GetData 从行集中该行的副本检索数据，然后处理这些数据  。  
   
 ## <a name="example"></a>示例  
  使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  

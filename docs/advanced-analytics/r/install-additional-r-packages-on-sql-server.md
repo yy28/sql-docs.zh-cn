@@ -3,17 +3,17 @@ title: 安装新的 R 语言包-SQL Server 机器学习服务
 description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内）
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: fb8e5512a9b623a3e97d80289b928d66314f9d72
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994211"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140590"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安装新的 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ R 开发人员习惯于创建所需位于中心位置的库是否仍受限的包
 
 例如，下面的过程描述现在，若要获取的正确版本[FISHalyseR](https://bioconductor.org/packages/release/bioc/html/FISHalyseR.html)请假设该计算机有权访问 internet 的包。
 
-1.  在“包存档”列表中，查找“Windows 二进制文件”版本。
+1.  在“包存档”列表中，查找“Windows 二进制文件”版本。  
 
 2.  右键单击的链接。ZIP 文件，然后选择**目标另存为**。
 
@@ -88,8 +88,7 @@ R 和 Python 功能包括在多个 Microsoft 产品，所有这些无法同时�
 
 如果除了数据库内分析 （SQL Server 2017 机器学习服务和 SQL Server 2016 R Services） 中安装 SQL Server 2017 Microsoft Machine Learning Server （独立版） 或 SQL Server 2016 R Server （独立版），您的计算机具有单独每个重复项的所有 R 的工具和库使用 R 的的安装。
 
-安装到 r_server LIBRARY 库的包仅由独立服务器和 SQL Server （数据库内） 实例无法访问。 始终使用`R_SERVICES`库安装你想要使用 SQL Server 上数据库中的包时。 有关路径的详细信息，请参阅[包库位置](installing-and-managing-r-packages.md#package-library-location)。
-
+安装到 r_server LIBRARY 库的包仅由独立服务器和 SQL Server （数据库内） 实例无法访问。 始终使用`R_SERVICES`库安装你想要使用 SQL Server 上数据库中的包时。 有关路径的详细信息，请参阅[包库位置](../package-management/default-packages.md)。
 
 ## <a name="see-also"></a>另请参阅
 

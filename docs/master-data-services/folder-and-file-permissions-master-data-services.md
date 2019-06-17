@@ -16,23 +16,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 39052fc5c90650ec55f3620fe9bfec99151e5539
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483846"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>文件夹和文件权限 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，文件夹和文件将安装在您为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能指定的安装路径处的文件系统中。 如果你使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能的默认安装路径，则 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的安装路径为驱动器:\Program Files\Microsoft SQL Server\130\Master Data Services。 尽管您可以更改共享功能安装路径，但要注意从父文件夹继承的权限以及为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]显式设置的权限。  
+  在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，文件夹和文件将安装在您为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能指定的安装路径处的文件系统中。 如果你使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能的默认安装路径，则 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的安装路径为驱动器  :\Program Files\Microsoft SQL Server\130\Master Data Services。 尽管您可以更改共享功能安装路径，但要注意从父文件夹继承的权限以及为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]显式设置的权限。  
   
 ## <a name="inherited-permissions"></a>继承的权限  
- **Microsoft SQL Server** 文件夹、 **Master Data Services** 文件夹以及大多数子文件夹和文件从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序中指定的父文件夹继承权限。 如果选择默认安装位置，则继承其权限的父文件夹是驱动器:\Program Files。 下表描述针对 **“程序文件”** 的默认权限。  
+ **Microsoft SQL Server** 文件夹、 **Master Data Services** 文件夹以及大多数子文件夹和文件从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序中指定的父文件夹继承权限。 如果选择默认安装位置，则继承其权限的父文件夹是驱动器  :\Program Files。 下表描述针对 **“程序文件”** 的默认权限。  
   
 > [!NOTE]  
->  如果修改针对“程序文件”的默认权限，或者选择不同的安装位置，则 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 文件夹和文件将相应继承其父文件夹的权限，并且这些权限可能不同于在下表中描述的权限。  
+>  如果修改针对“程序文件”  的默认权限，或者选择不同的安装位置，则 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 文件夹和文件将相应继承其父文件夹的权限，并且这些权限可能不同于在下表中描述的权限。  
   
 ###### <a name="program-files-default-permissions"></a>程序文件默认权限  
   

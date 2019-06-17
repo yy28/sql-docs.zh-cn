@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a2834652d7a14199ccc4914091a2c8c8b7a99801
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017781"
 ---
 # <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
@@ -58,7 +58,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  包含 NULL 值的属性未包含在 XML 返回集中。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`sp_help_spatial_geometry_index_xml`若要调查的空间索引**SIndx_SpatialTable_geometry_col2**表上定义**geometry_col**中的给定的查询示例 **@qs**. 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
+ 下面的示例使用`sp_help_spatial_geometry_index_xml`若要调查的空间索引**SIndx_SpatialTable_geometry_col2**表上定义**geometry_col**中的给定的查询示例 **@qs** . 此示例在一个显示了所选属性的名称和值的 XML 片段中返回指定索引的核心属性。  
   
  [XQuery](../../xquery/xquery-basics.md)然后返回特定属性的结果集上运行。  
   

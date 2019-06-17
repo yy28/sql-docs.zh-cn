@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 28e8334aa0dfb9c35abbb915ece778961abd84ef
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485335"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>更改版本标志名称 (Master Data Services)
@@ -37,13 +37,13 @@ ms.locfileid: "65485335"
   
 ### <a name="to-change-a-version-flag-name"></a>更改版本标志名称  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
   
-2.  在 **“管理版本”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“标志”**。  
+2.  在 **“管理版本”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“标志”** 。  
   
 3.  在 **“管理版本标志”** 页的 **“模型”** 字段中，选择某一模型。  
   
-4.  在网格中的标志名称行中，双击“名称”字段。  
+4.  在网格中的标志名称行中，双击“名称”  字段。  
   
 5.  键入标志的新名称。  
   

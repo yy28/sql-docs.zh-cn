@@ -1,20 +1,20 @@
 ---
 title: 发行说明 (SSRS) 2017年及更高版本 |Microsoft Docs
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283288"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037851"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 及更高版本的发行说明
 
@@ -86,7 +86,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | 如果 pageHeight 小于 0.5 英寸，则文本大小不会缩放。 | &nbsp; |
 | 它与 CRM 一起使用时，则将发生死锁的 SSRS 目录数据库中。 | &nbsp; |
 | 在报表中向下滚动时，垂直对齐的列标题不能正确显示。 | &nbsp; |
-| 添加到 SCOM 报表角色的用户已被阻止访问 SSRS Web 门户。 | &nbsp; |
+| 添加到 System Center Operations Manager 报表角色的用户具有阻止到 SSRS web 门户的访问权限。 | &nbsp; |
 | 到 pdf 文件未能正确导出泰语字符。 | &nbsp; |
 | 浏览器角色行为更改。 | &nbsp; |
 | rc:Toolbar=false 在 Express Edition 中不起作用。 | &nbsp; |
@@ -111,7 +111,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | 链接报表中的报表参数可见性在用户编辑它的属性后还原。 | &nbsp; |
 | URL 参数 rc:Toolbar = false 在 Express edition 中不起作用。 | &nbsp; |
 | 表达式采用 cangrow 文本框属性设置为 false 结果中未显示的值。 | &nbsp; |
-| 为安装程序中的产品密钥添加了“了解更多”链接。 | &nbsp; |
+| 为安装程序中的产品密钥添加了“了解更多”链接。  | &nbsp; |
 | 使用自定义表单身份验证的 Web 门户忽略弹性到期 Cookie。 | &nbsp; |
 | “导出到 Word”导致行高度不等（如果行内容为空的话）。 | &nbsp; |
 | &nbsp; | &nbsp; |

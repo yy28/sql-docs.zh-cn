@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1284a15e16465962e2ce2c286bfb2897bb297622
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483353"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>创建日期属性 (Master Data Services)
@@ -37,23 +37,23 @@ ms.locfileid: "65483353"
   
 ### <a name="to-create-a-date-attribute"></a>创建日期属性  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”**。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”** 。  
   
 3.  在 **“实体维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
 4.  为您要为其创建属性的实体选择行。  
   
-5.  单击 **“编辑所选实体”**。  
+5.  单击 **“编辑所选实体”** 。  
   
 6.  在 **“编辑实体”** 页上：  
   
-    -   如果属性是针对叶成员的，则在 **“叶成员属性”** 窗格中，单击 **“添加叶属性”**。  
+    -   如果属性是针对叶成员的，则在 **“叶成员属性”** 窗格中，单击 **“添加叶属性”** 。  
   
-    -   如果属性是针对合并成员的，则在 **“合并成员属性”** 窗格中，单击 **“添加合并属性”**。  
+    -   如果属性是针对合并成员的，则在 **“合并成员属性”** 窗格中，单击 **“添加合并属性”** 。  
   
-    -   如果属性是针对集合的，则在 **“集合属性”** 窗格中，单击 **“添加集合属性”**。  
+    -   如果属性是针对集合的，则在 **“集合属性”** 窗格中，单击 **“添加集合属性”** 。  
   
 7.  在 **“添加属性”** 页上，选择 **“自由格式”** 选项。  
   
@@ -61,15 +61,15 @@ ms.locfileid: "65483353"
   
 9. 在 **“显示像素宽度”** 框中，键入要在 **“资源管理器”** 网格中显示的属性列的宽度。  
   
-10. 从 **“数据类型”** 列表中，选择 **“DateTime”**。  
+10. 从 **“数据类型”** 列表中，选择 **“DateTime”** 。  
   
 11. 从 **“输入掩码”** 列表中，选择用于日期的格式。  
   
 12. 根据需要，选择 **“启用更改跟踪”** 可以跟踪对属性组的更改。 有关详细信息，请参阅[向更改跟踪组添加属性 (Master Data Services)](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-13. 单击 **“保存属性”**。  
+13. 单击 **“保存属性”** 。  
   
-14. 在 **“实体维护”** 页上，单击 **“保存实体”**。  
+14. 在 **“实体维护”** 页上，单击 **“保存实体”** 。  
   
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>显示日期时间值的时间部分  
  若要使用户界面显示日期时间值的时间部分，您必须为该属性选择一个适当的输入掩码。 对于日期时间属性没有内置的此类掩码，但您可以添加一个新掩码以便显示时间。 为此，在存储内置掩码的 MDS 数据库的 mdm.tblList 表中添加一行。 此行应具有以下各值：  

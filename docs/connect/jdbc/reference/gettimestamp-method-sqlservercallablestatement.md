@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fca2d35f-266b-4dc7-9aa9-30a17ee2ecec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f754cf22b4418554b2eb2dafbb27123eb20b041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a4f4403990d148536c6ce15f4e9e7c86c95f4f7f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654974"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786331"
 ---
 # <a name="gettimestamp-method-sqlservercallablestatement"></a>getTimestamp 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47654974"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[getTimestamp (int)](../../../connect/jdbc/reference/gettimestamp-method-int.md)|根据给定的参数索引，检索指定参数的值作为 Java 编程语言中的 java.sql.Timestamp 对象。|  
 |[getTimestamp (int, java.util.Calendar)](../../../connect/jdbc/reference/gettimestamp-method-int-java-util-calendar.md)|根据给定参数索引，使用 Calendar 对象检索指定参数作为采用 Java 编程语言的 java.sql.Timestamp 对象的值。|  
-|[getTimestamp (java.lang.String)](../../../connect/jdbc/reference/gettimestamp-method-java-lang-string.md)|根据给定的参数名称，检索指定参数作为 Java 编程语言中的 java.sql.Timestamp 对象的值。|  
+|[getTimestamp (java.lang.String)](../../../connect/jdbc/reference/gettimestamp-method-java-lang-string.md)|根据给定的参数名称，检索指定参数的值作为 Java 编程语言中的 java.sql.Timestamp 对象。|  
 |[getTimestamp (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/gettimestamp-method-java-lang-string-java-util-calendar.md)|根据给定参数名称，使用 Calendar 对象检索指定参数作为采用 Java 编程语言的 java.sql.Timestamp 对象的值。|  
   
 ## <a name="see-also"></a>另请参阅  

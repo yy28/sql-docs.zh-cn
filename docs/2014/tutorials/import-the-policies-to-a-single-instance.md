@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865096"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>将策略导入到单个实例
@@ -31,7 +31,7 @@ ms.locfileid: "62865096"
   
 3.  右键单击**策略**，然后单击**导入策略**。  
   
-4.  在中**导入**对话框旁边**要导入文件**框中，单击省略号 (**...**) 按钮。  
+4.  在中**导入**对话框旁边**要导入文件**框中，单击省略号 ( **...** ) 按钮。  
   
 5.  在中**查找**列表中，浏览到包含最佳实践策略的以下文件夹：  
   

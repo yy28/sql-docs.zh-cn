@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767379"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>第 2 步：创建损坏的文件
@@ -45,13 +45,13 @@ ms.locfileid: "62767379"
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>验证是否将在运行时发生错误  
   
-1.  在 **“调试”** 菜单中，单击 **“启动调试”**。  
+1.  在 **“调试”** 菜单中，单击 **“启动调试”** 。  
   
      在数据流第三次迭代时，Lookup Currency Key 转换将尝试处理 Currency_BAD.txt 文件，并且该转换将失败。 转换失败将导致整个包失败。  
   
-2.  在 **“调试”** 菜单中，单击 **“停止调试”**。  
+2.  在 **“调试”** 菜单中，单击 **“停止调试”** 。  
   
-3.  在设计图面上，单击“执行结果”选项卡。  
+3.  在设计图面上，单击“执行结果”  选项卡。  
   
 4.  浏览日志，确认是否发生了以下未处理的错误：  
   

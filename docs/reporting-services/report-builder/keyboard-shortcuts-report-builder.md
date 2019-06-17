@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f84f5331946a5887f833f7e579eb078a8854662
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581189"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037860"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>键盘快捷键（报表生成器）
   在报表生成器中创建和编辑分页的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，可以使用 Windows 环境提供的用于导航的所有快捷键。 您可以从多个标准键盘映射方案中选择。  
@@ -92,6 +92,5 @@ ms.locfileid: "65581189"
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [词汇表（报表生成器）](../../reporting-services/report-builder/glossary-report-builder.md)  
-  
+
   

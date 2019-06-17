@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, encryption
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 41aa355de39aabc266e798b6870a8f43ceca4110
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 108aef449d80fa01e88fac29e6058754626b6aed
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814717"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802884"
 ---
 # <a name="using-encryption-without-validation"></a>使用不带验证的加密
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,23 +33,23 @@ ms.locfileid: "47814717"
 
 自签名的证书并不保证安全。 加密的握手基于 NT LAN Manager (NTLM)。 强烈建议预配 SQL Server 上的安全连接性可验证的证书。 传输安全层 (TLS) 可以进行安全仅使用证书验证。
 
-应用程序还可以通过使用连接字符串关键字或连接属性请求对所有网络流量加密。 将访问接口字符串用于 IDbInitialize::Initialize 时，OLE DB 中的关键字为“Encrypt”；将初始化字符串用于 IDataInitialize 时，ADO 和 OLE DB 中的关键字为“Use Encryption for Data”。 这也可以通过配置[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 Configuration Manager**强制协议加密**选项，并通过配置客户端为请求加密的连接。 默认情况下，对某一连接的所有网络流量加密要求在服务器上设置证书。 通过设置你的客户端信任的服务器上的证书，你可能会变得很容易受到人为干预攻击。 如果部署服务器上的可验证证书，请确保将信任该证书有关的客户端设置更改为 FALSE。
+应用程序还可以通过使用连接字符串关键字或连接属性请求对所有网络流量加密。 将访问接口字符串用于 IDbInitialize::Initialize 时，OLE DB 中的关键字为“Encrypt”；将初始化字符串用于 IDataInitialize 时，ADO 和 OLE DB 中的关键字为“Use Encryption for Data”   。 这也可以通过配置[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 Configuration Manager**强制协议加密**选项，并通过配置客户端为请求加密的连接。 默认情况下，对某一连接的所有网络流量加密要求在服务器上设置证书。 通过设置你的客户端信任的服务器上的证书，你可能会变得很容易受到人为干预攻击。 如果部署服务器上的可验证证书，请确保将信任该证书有关的客户端设置更改为 FALSE。
 
 有关连接字符串关键字的信息，请参阅[将连接字符串关键字用于适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md )。  
   
- 若要在服务器上未设置证书时启用加密，可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器设置“强制协议加密”和“信任服务器证书”选项。 在这种情况下，如果服务器上未设置可验证的证书，加密将使用不带验证的自签名服务器证书。  
+ 若要在服务器上未设置证书时启用加密，可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器设置“强制协议加密”和“信任服务器证书”选项   。 在这种情况下，如果服务器上未设置可验证的证书，加密将使用不带验证的自签名服务器证书。  
   
- 应用程序还可以使用 "TrustServerCertificate" 关键字或与其关联的连接属性确保执行加密。 应用程序设置从不会降低 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端配置管理器设置的安全级别，相反还可能提高安全级别。 例如，如果没有为客户端设置“强制协议加密”，应用程序可能自行请求加密。 甚至是在未设置服务器证书的情况下，为保证加密，应用程序也可能请求加密和 "TrustServerCertificate"。 不过，如果在客户端配置中未启用 "TrustServerCertificate"，则仍需要已设置的服务器证书。 下表介绍了各种情况：  
+ 应用程序还可以使用 "TrustServerCertificate" 关键字或与其关联的连接属性确保执行加密。 应用程序设置从不会降低 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端配置管理器设置的安全级别，相反还可能提高安全级别。 例如，如果没有为客户端设置“强制协议加密”，应用程序可能自行请求加密  。 甚至是在未设置服务器证书的情况下，为保证加密，应用程序也可能请求加密和 "TrustServerCertificate"。 不过，如果在客户端配置中未启用 "TrustServerCertificate"，则仍需要已设置的服务器证书。 下表介绍了各种情况：  
   
 |“强制协议加密”客户端设置|“信任服务器证书”客户端设置|连接字符串/连接属性加密/对数据使用加密|连接字符串/连接属性信任服务器证书|结果|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
 |否|N/A|否（默认值）|忽略|无加密。|  
-|否|N/A|用户帐户控制|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|否|N/A|用户帐户控制|用户帐户控制|始终加密，但可能使用自签名的服务器证书。|  
-|用户帐户控制|否|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|用户帐户控制|用户帐户控制|否（默认值）|忽略|始终加密，但可能使用自签名的服务器证书。|  
-|用户帐户控制|是|用户帐户控制|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|用户帐户控制|是|是|用户帐户控制|始终加密，但可能使用自签名的服务器证书。|  
+|否|N/A|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|否|N/A|是|是|始终加密，但可能使用自签名的服务器证书。|  
+|是|否|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|是|是|否（默认值）|忽略|始终加密，但可能使用自签名的服务器证书。|  
+|是|是|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|是|是|是|是|始终加密，但可能使用自签名的服务器证书。|  
 ||||||
 
 > [!CAUTION]

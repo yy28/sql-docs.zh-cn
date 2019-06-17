@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022018"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>发布信息，所有订阅（合并发布）
@@ -25,11 +25,11 @@ ms.locfileid: "63022018"
 ## <a name="options"></a>选项  
  有关订阅的详细信息及相关任务，请右键单击相应订阅所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序  。  
   
--   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序  。  
   
--   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行  。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -59,14 +59,14 @@ ms.locfileid: "63022018"
   
 -   未同步  
   
- 如果给定的订阅处于多种状态，该排序顺序还决定将要显示哪个值。 例如，如果某个订阅包含错误并且即将过期，“状态”  列将显示“错误” 。  
+ 如果给定的订阅处于多种状态，该排序顺序还决定将要显示哪个值。 例如，如果某个订阅包含错误并且即将过期，“状态”  列将显示“错误”  。  
   
- 状态值 **“‘严重’状态下的性能”**、 **“长时间运行的合并”**、 **“即将过期/已过期”** 和 **“未初始化的订阅”** 都是警告。 当显示警告时， **“状态”** 列还可显示是否正在同步代理。 例如，状态可能为 **“同步，‘严重’状态下的性能”**。  
+ 状态值 **“‘严重’状态下的性能”** 、 **“长时间运行的合并”** 、 **“即将过期/已过期”** 和 **“未初始化的订阅”** 都是警告。 当显示警告时， **“状态”** 列还可显示是否正在同步代理。 例如，状态可能为 **“同步，‘严重’状态下的性能”** 。  
   
  只有在设置了阈值时，才会显示状态值 **“即将过期/已过期”** 和 **“长时间运行的合并”** 。 只有在使用相同的连接类型（拨号或 LAN）对订阅进行五次同步后，才会显示状态值 **“‘严重’状态下的性能”** 。 有关性能度量和设置阈值的信息，请参阅[使用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)和[在复制监视器中设置阈值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **订阅**  
- 每个订阅的名称，格式为：SubscriberName:SubscriptionDatabaseName。  
+ 每个订阅的名称，格式为：SubscriberName:  SubscriptionDatabaseName。  
   
  **友好名称**  
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 每个订阅的说明。 此说明是在 **“订阅属性”** 对话框中输入的，或是用 **@description** 或 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) 的 [@description](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)。 用户通常将说明用作订阅的“友好名称”或别名。  

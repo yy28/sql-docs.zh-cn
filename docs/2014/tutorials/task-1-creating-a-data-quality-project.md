@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484903"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>任务 1：创建数据质量项目
@@ -33,6 +33,6 @@ ms.locfileid: "65484903"
      ![新的数据质量项目页-清理所选](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "选择新的数据质量项目页-清理")  
   
 ## <a name="next-step"></a>下一步  
- [任务 2:将 Excel 列映射到 DQS 域](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
+ [任务 2：将 Excel 列映射到 DQS 域](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
   
   

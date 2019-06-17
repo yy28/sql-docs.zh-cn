@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806821"
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱组件的 F1 帮助
@@ -26,14 +26,14 @@ ms.locfileid: "62806821"
 **工具箱**或可以拖动和删除或复制并粘贴到代码编辑器图标拖动到设计视图的图面中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 ## <a name="using-the-toolbox"></a>使用工具箱  
- 工具箱是一个滑动树控件，其行为与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 资源管理器非常类似，但是没有网格线或连接线。 可以同时展开“工具箱”的多个片段（称为“选项卡”），并且可以在“工具箱”窗口内滚动查看整个树的内容。 若要展开“工具箱”的任何选项卡，请单击其名称旁边的加号 (**+**)。 若要折叠展开的选项卡，请单击其名称旁边的减号 (**-**)。  
+ 工具箱是一个滑动树控件，其行为与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 资源管理器非常类似，但是没有网格线或连接线。 可以同时展开“工具箱”  的多个片段（称为“选项卡”），并且可以在“工具箱”  窗口内滚动查看整个树的内容。 若要展开“工具箱”  的任何选项卡，请单击其名称旁边的加号 ( **+** )。 若要折叠展开的选项卡，请单击其名称旁边的减号 ( **-** )。  
   
  每次返回到编辑器或设计器时， **“工具箱”** 都将自动滚动到最近选择的选项卡和项。 将焦点切换到其他编辑器或设计器时， **“工具箱”** 中的当前选择也会随之切换。  
   
 ## <a name="customizing-the-toolbox"></a>自定义工具箱  
  重新排列选项卡内的项以及向 **“工具箱”** 添加自定义选项卡和项是很容易的。  
   
- 若要添加或删除 **“工具箱”** 项，请在 **“工具”** 菜单上，单击 **“选择工具箱项”**。 只有 **“维护任务”** 可用于 **“工具箱”** 图标。 并不是所有组件都始终可用。 例如，维护任务仅在创建维护计划时可用。  
+ 若要添加或删除 **“工具箱”** 项，请在 **“工具”** 菜单上，单击 **“选择工具箱项”** 。 只有 **“维护任务”** 可用于 **“工具箱”** 图标。 并不是所有组件都始终可用。 例如，维护任务仅在创建维护计划时可用。  
   
 ## <a name="see-also"></a>请参阅  
  [使用工具箱](../../ssms/use-the-toolbox.md)   

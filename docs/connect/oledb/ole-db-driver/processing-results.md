@@ -15,13 +15,13 @@ helpviewer_keywords:
 - results [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 247e8f72099fa79e60a42e45b9a67b16f3591803
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5fce78dbbda3978d066d2fe68131526d8a0731aa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772486"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796001"
 ---
 # <a name="processing-results"></a>处理结果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "47772486"
 
   如果行集对象是由执行命令或直接从访问接口生成的，则使用者需要检索和访问行集中的数据。  
   
- 行集是启用用于公开数据以表格形式的 SQL Server 的 OLE DB 驱动程序的核心对象。 从概念上说，行集是指其中的每行都拥有列数据的行的集合。 行集对象可提供如下接口：IRowset（包含按顺序从行集提取行的方法）、IAccessor（允许定义一组列绑定来说明将表格格式数据绑定到使用者程序变量的方式）、IColumnsInfo（提供有关行集中列的信息）以及 IRowsetInfo（提供有关行集的信息）。  
+ 行集是启用用于公开数据以表格形式的 SQL Server 的 OLE DB 驱动程序的核心对象。 从概念上说，行集是指其中的每行都拥有列数据的行的集合。 行集对象可提供如下接口：IRowset（包含按顺序从行集提取行的方法）、IAccessor（允许定义一组列绑定来说明将表格格式数据绑定到使用者程序变量的方式）、IColumnsInfo（提供有关行集中列的信息）以及 IRowsetInfo（提供有关行集的信息）     。  
   
- 使用者可以调用 IRowset::GetData 方法将行集中的一行数据检索到缓冲区中。 在调用 GetData 之前，使用者使用一组 DBBINDING 结构来描述缓冲区。 每个绑定都说明了行集中的列在使用者缓冲区中的存储方式并包含以下内容：  
+ 使用者可以调用 IRowset::GetData 方法将行集中的一行数据检索到缓冲区中  。 在调用 GetData 之前，使用者使用一组 DBBINDING 结构来描述缓冲区  。 每个绑定都说明了行集中的列在使用者缓冲区中的存储方式并包含以下内容：  
   
 -   应用绑定的列（或参数）的序号。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47772486"
   
  获取数据时，访问接口将使用每个绑定中的信息来确定从使用者缓冲区的何处以及如何检索数据。 设置使用者缓冲区中的数据时，访问接口将使用每个绑定中的信息来确定在使用者缓冲区的何处以及如何返回数据。  
   
- 指定 DBBINDING 结构后，将创建取值函数 (IAccessor::CreateAccessor)。 取值函数是一个绑定集合，可用于获取或设置使用者缓冲区中的数据。  
+ 指定 DBBINDING 结构后，将创建取值函数 (IAccessor::CreateAccessor)  。 取值函数是一个绑定集合，可用于获取或设置使用者缓冲区中的数据。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建适用于 SQL Server 的 OLE DB 驱动程序应用程序](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   

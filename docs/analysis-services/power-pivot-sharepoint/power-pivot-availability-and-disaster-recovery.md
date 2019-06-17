@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 96b8703f18f7867ed57101f33e2ec1c4d31b35c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62956772"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 可用性和灾难恢复
@@ -47,7 +47,7 @@ ms.locfileid: "62956772"
   
 -   **(3)** Excel Calculation Services 在每台应用程序服务器上运行，并允许服务应用程序跨多台应用程序服务器运行。 因此，如果单一应用程序服务器处于脱机状态改，则 Excel Calculation Services 仍将可用。  
   
--   **(4)** 和 **(6)** SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在 SharePoint 场的外部服务器上运行，这包括 Windows Service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**。 所有这些实例都注册到 Excel Services 中 **(3)**。 Excel Services 管理向 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器请求的负载平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 体系结构使您能够拥有多台 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器，以便能根据需要轻松添加多个实例。 有关详细信息，请参阅 [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)。  
+-   **(4)** 和 **(6)** SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在 SharePoint 场的外部服务器上运行，这包括 Windows Service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 。 所有这些实例都注册到 Excel Services 中 **(3)** 。 Excel Services 管理向 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器请求的负载平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 体系结构使您能够拥有多台 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器，以便能根据需要轻松添加多个实例。 有关详细信息，请参阅 [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)。  
   
 -   **(5)** 用于内容、配置和应用程序数据库的 SQL Server 数据库。 这包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库。 您的 DR 计划应包括数据库层。 在此设计中，数据库在 **(4)** 某个 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例所在的服务器上运行。 **(4)** 和 **(5)** 还可以位于不同的服务器上。  
   

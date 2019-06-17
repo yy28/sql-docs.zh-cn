@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61a5e8c1e3dad99318f14a49f1386757a4ebabe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873438"
 ---
 # <a name="enable-or-disable-data-collection"></a>启用或禁用数据收集
@@ -48,13 +48,13 @@ ms.locfileid: "62873438"
   
 1.  在对象资源管理器中，展开 **“管理”** 节点。  
   
-2.  右键单击“数据收集”，然后单击“启用数据收集”。  
+2.  右键单击“数据收集”  ，然后单击“启用数据收集”  。  
   
 #### <a name="to-disable-the-data-collector"></a>禁用数据收集器  
   
 1.  在对象资源管理器中，展开 **“管理”** 节点。  
   
-2.  右键单击“数据收集”，然后单击“禁用数据收集”。  
+2.  右键单击“数据收集”，然后单击“禁用数据收集”   。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -62,9 +62,9 @@ ms.locfileid: "62873438"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql) 启用数据收集器。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql) 启用数据收集器。  
   
 ```sql  
 USE msdb;  
@@ -76,9 +76,9 @@ EXEC dbo.sp_syscollector_enable_collector ;
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql) 禁用数据收集器。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql) 禁用数据收集器。  
   
 ```sql  
 USE msdb;  

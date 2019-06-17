@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62664082"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件类
@@ -45,7 +45,7 @@ ms.locfileid: "62664082"
 |**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |**NTUserName**|**nvarchar**|拥有生成此事件的连接的用户的名称。|6|是|  
 |**ObjectName**|**nvarchar**|会话另一方的服务名称和远程数据库用来连接至此数据库的连接字符串。|34|否|  
-|**RoleName**|**nvarchar**|接收此消息的端点的角色。 取下列值之一。<br /><br /> **发起方**:<br />                  接收端点为会话的发起方。<br /><br /> **目标**:<br />                  接收端点为会话的目标。|38|否|  
+|**RoleName**|**nvarchar**|接收此消息的端点的角色。 取下列值之一。<br /><br /> **发起者**：<br />                  接收端点为会话的发起方。<br /><br /> **目标**：<br />                  接收端点为会话的目标。|38|否|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
 |**Severity**|**int**|导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除消息的错误的严重性。|29|否|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  

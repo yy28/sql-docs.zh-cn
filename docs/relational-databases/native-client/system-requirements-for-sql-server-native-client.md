@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 147679798418dceb7de94ec8dbcc8489ad6fda3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026667"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系统要求
@@ -62,7 +62,7 @@ ms.locfileid: "63026667"
 ## <a name="data-type-compatibility-for-client-versions"></a>客户端版本的数据类型兼容性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 将新数据类型映射到与下级客户端相兼容的较旧的数据类型，如下表所示。  
   
- OLE DB 和 ADO 应用程序可以使用**DataTypeCompatibility**连接字符串关键字用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端的较旧的数据类型。 如果 DataTypeCompatibility=80，OLE DB 客户端将使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 表格格式数据流 (TDS) 版本而不是 TDS 版本进行连接。 也就是说，对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和较新的数据类型，将由服务器而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 执行下级转换。 此外，这还意味着，连接中的可用功能将被限制为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 功能集。 尽可能早地对 API 调用中使用新数据类型或功能的尝试进行检测，将错误返回给调用应用程序，而不是尝试将无效的请求传递给服务器。  
+ OLE DB 和 ADO 应用程序可以使用**DataTypeCompatibility**连接字符串关键字用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端的较旧的数据类型。 如果 DataTypeCompatibility=80，OLE DB 客户端将使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 表格格式数据流 (TDS) 版本而不是 TDS 版本进行连接  。 也就是说，对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和较新的数据类型，将由服务器而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 执行下级转换。 此外，这还意味着，连接中的可用功能将被限制为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 功能集。 尽可能早地对 API 调用中使用新数据类型或功能的尝试进行检测，将错误返回给调用应用程序，而不是尝试将无效的请求传递给服务器。  
   
  没有任何**DataTypeCompatibility**用于 ODBC 的控件。  
   

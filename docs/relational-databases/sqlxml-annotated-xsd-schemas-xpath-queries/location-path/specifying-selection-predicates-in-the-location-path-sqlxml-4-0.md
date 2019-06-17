@@ -20,10 +20,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720030"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>在位置路径中指定选择谓词 (SQLXML 4.0)
@@ -36,13 +36,13 @@ ms.locfileid: "62720030"
 >  有关此 XPath 实现限制的信息和它与 W3C 规范之间的差异，请参阅[使用 XPath 查询简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
   
 ## <a name="selection-predicate-example-1"></a>选择谓词：示例 1  
- 以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<客户 >** 子元素具有**CustomerID**值 ALFKI 的属性：  
+ 以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择 **\<客户 >** 子元素具有**CustomerID**值 ALFKI 的属性：  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- 在此 XPath 查询中，`child` 和 `attribute` 是轴名称。 `Customer` 是节点测试 (如果`Customer`是**\<元素节点 >**，这是因为**\<元素 >** 是的主要节点类型`child`轴)。 `attribute::CustomerID="ALFKI"` 是谓词。 在谓词中，`attribute`是轴和`CustomerID`是节点测试 (如果**CustomerID**是上下文节点的属性，因为**\<属性 >** 的主体节点类型**特性**轴)。  
+ 在此 XPath 查询中，`child` 和 `attribute` 是轴名称。 `Customer` 是节点测试 (如果`Customer`是 **\<元素节点 >** ，这是因为 **\<元素 >** 是的主要节点类型`child`轴)。 `attribute::CustomerID="ALFKI"` 是谓词。 在谓词中，`attribute`是轴和`CustomerID`是节点测试 (如果**CustomerID**是上下文节点的属性，因为 **\<属性 >** 的主体节点类型**特性**轴)。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62720030"
 ```  
   
 ## <a name="selection-predicate-example-2"></a>选择谓词：示例 2  
- 以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<顺序 >** 孙级**SalesOrderID**属性具有值 1:  
+ 以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择 **\<顺序 >** 孙级**SalesOrderID**属性具有值 1:  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
@@ -66,17 +66,17 @@ ms.locfileid: "62720030"
 ```  
   
 ## <a name="selection-predicate-example-3"></a>选择谓词：示例 3  
- 以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择**\<客户 >** 具有一个或多个子级的 **\<ContactName >** 子级：  
+ 以下 XPath 表达式 （位置路径） 从所有当前上下文节点选择 **\<客户 >** 具有一个或多个子级的 **\<ContactName >** 子级：  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- 此示例假定 **\<ContactName >** 子元素的**\<客户 >** 元素在 XML 文档中，被称为*元素为中心的映射*在带批注的 XSD 架构。  
+ 此示例假定 **\<ContactName >** 子元素的 **\<客户 >** 元素在 XML 文档中，被称为*元素为中心的映射*在带批注的 XSD 架构。  
   
- 在此 XPath 表达式中，`child` 是轴名称。 `Customer` 是节点测试 (如果`Customer`是**\<元素 >** 节点，因为**\<元素 >** 是的主要节点类型`child`轴)。 `child::ContactName` 是谓词。 在谓词中，`child`是轴和`ContactName`是节点测试 (如果`ContactName`是**\<元素 >** 节点)。  
+ 在此 XPath 表达式中，`child` 是轴名称。 `Customer` 是节点测试 (如果`Customer`是 **\<元素 >** 节点，因为 **\<元素 >** 是的主要节点类型`child`轴)。 `child::ContactName` 是谓词。 在谓词中，`child`是轴和`ContactName`是节点测试 (如果`ContactName`是 **\<元素 >** 节点)。  
   
- 此表达式仅返回**\<客户 >** 具有的元素子级的上下文节点 **\<ContactName >** 元素子级。  
+ 此表达式仅返回 **\<客户 >** 具有的元素子级的上下文节点 **\<ContactName >** 元素子级。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   
@@ -85,13 +85,13 @@ Customer[ContactName]
 ```  
   
 ## <a name="selection-predicate-example-4"></a>选择谓词：示例 4  
- 以下 XPath 表达式选择**\<客户 >** 上下文节点不具有元素子级 **\<ContactName >** 元素子级：  
+ 以下 XPath 表达式选择 **\<客户 >** 上下文节点不具有元素子级 **\<ContactName >** 元素子级：  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- 此示例假定 **\<ContactName >** 子元素的**\<客户 >** 中不需要在 XML 文档和联系人姓名字段中的元素数据库。  
+ 此示例假定 **\<ContactName >** 子元素的 **\<客户 >** 中不需要在 XML 文档和联系人姓名字段中的元素数据库。  
   
  在本示例中，`child` 是轴。 `Customer` 是节点测试 (如果`Customer`是\<元素 > 节点)。 `not(child::ContactName)` 是谓词。 在谓词中，`child`是轴和`ContactName`是节点测试 (如果`ContactName`是\<元素 > 节点)。  
   
@@ -102,13 +102,13 @@ Customer[not(ContactName)]
 ```  
   
 ## <a name="selection-predicate-example-5"></a>选择谓词：示例 5  
- 以下 XPath 表达式选择从当前上下文节点所有**\<客户 >** 具有子级的**CustomerID**属性：  
+ 以下 XPath 表达式选择从当前上下文节点所有 **\<客户 >** 具有子级的**CustomerID**属性：  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- 在此示例中，`child`是轴和`Customer`是节点测试 (如果`Customer`是\<元素 > 节点)。 `attribute::CustomerID` 是谓词。 在谓词中，`attribute`是轴和`CustomerID`是谓词 (如果`CustomerID`是**\<属性 >** 节点)。  
+ 在此示例中，`child`是轴和`Customer`是节点测试 (如果`Customer`是\<元素 > 节点)。 `attribute::CustomerID` 是谓词。 在谓词中，`attribute`是轴和`CustomerID`是谓词 (如果`CustomerID`是 **\<属性 >** 节点)。  
   
  使用缩写语法，还可以将该 XPath 查询指定为：  
   

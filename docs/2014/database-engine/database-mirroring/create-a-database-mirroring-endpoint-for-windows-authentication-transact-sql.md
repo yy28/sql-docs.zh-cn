@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755295"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "62755295"
   
  **本主题内容**  
   
--   **开始之前：**[安全性](#Security)  
+-   **开始之前：** [安全性](#Security)  
   
--   若要创建数据库镜像端点，请使用：[Transact-SQL](#TsqlProcedure)  
+-   若要创建数据库镜像端点，请使用：  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62755295"
   
 1.  连接至要为其创建数据库镜像端点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  使用以下语句确定数据库镜像端点是否已经存在：  
   
@@ -65,37 +65,37 @@ ms.locfileid: "62755295"
   
 4.  若要使用 Transact-SQL 创建使用 Windows 身份验证的端点，请使用 CREATE ENDPOINT 语句。 该语句采用以下常规形式：  
   
-     CREATE ENDPOINT \<endpointName>  
+     CREATE ENDPOINT \<endpointName>   
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = \<listenerPortList> )  
+     AS TCP ( LISTENER_PORT = \<listenerPortList>  )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = WINDOWS [ \<authorizationMethod> ]  
+     [ AUTHENTICATION = WINDOWS  [ \<authorizationMethod>  ]  
   
      ]  
   
-     [ [**,**] ENCRYPTION = **REQUIRED**  
+     [ [ **,** ] ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { \<algorithm> } ]  
+     [ ALGORITHM { \<algorithm>  } ]  
   
      ]  
   
-     [,] ROLE = \<role>  
+     [,  ] ROLE = \<role>   
   
      )  
   
      其中  
   
-    -   \<endpointName> 是服务器实例的数据库镜像终结点的唯一名称。  
+    -   \<endpointName>  是服务器实例的数据库镜像终结点的唯一名称。  
   
     -   STARTED 指定端点启动并开始侦听连接。 数据库镜像端点创建后通常处于 STARTED 状态。 另外，可以启动处于 STOPPED 状态（默认值）或 DISABLED 状态中的会话。  
   
-    -   \<listenerPortList> 是需要服务器在其上侦听数据库镜像消息的单一端口号 (nnnn)。 只允许使用 TCP，指定任何其他协议都会导致发生错误。  
+    -   \<listenerPortList> 是需要服务器在其上侦听数据库镜像消息的单一端口号 (nnnn)   。 只允许使用 TCP，指定任何其他协议都会导致发生错误。  
   
          每个计算机系统一次只能使用一个端口号。 在创建端点时，数据库镜像端点可以使用本地系统上任何可用的端口。 若要识别出系统上 TCP 端点当前使用的端口，请使用以下 Transact-SQL 语句：  
   
@@ -118,14 +118,14 @@ ms.locfileid: "62755295"
   
          如果端点要求加密，则对于其他端点，必须将 ENCRYPTION 设置为 SUPPORTED 或 REQUIRED。  
   
-    -   \<algorithm> 提供为终结点指定加密标准的选项。 值*\<算法 >* 可以是以下某个算法或这些算法的组合：RC4、 AES、 AES RC4 或 RC4 AES。  
+    -   \<algorithm>  提供为终结点指定加密标准的选项。 值 *\<算法 >* 可以是以下某个算法或这些算法的组合：RC4、 AES、 AES RC4 或 RC4 AES。  
   
          AES RC4 指定此端点协商加密算法，但优先使用 AES 算法。 RC4 AES 指定此端点协商加密算法，但优先使用 RC4 算法。 如果两个端点都指定了这两种算法，但顺序不同，则接受连接的端点入选。  
   
         > [!NOTE]  
         >  不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。  
   
-    -   \<role> 定义服务器可以执行的一个或多个角色。 必须指定 ROLE。 不过，该端点的角色仅针对数据库镜像。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，该端点的角色将被忽略。  
+    -   \<role>  定义服务器可以执行的一个或多个角色。 必须指定 ROLE。 不过，该端点的角色仅针对数据库镜像。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，该端点的角色将被忽略。  
   
          若要让服务器实例对于一个数据库镜像会话执行一个角色，对于另一个会话执行另一个角色，请指定 ROLE = ALL。 若要让服务器实例限于执行伙伴角色或见证角色，请分别指定 ROLE = PARTNER 或 ROLE = WITNESS。  
   

@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026575"
 ---
 # <a name="choosing-an-sql-grammar"></a>选择 SQL 语法
 可以在构造 SQL 语句时使用的第一个决定是要使用的语法。 除了可从各种标准主体，例如 Open Group、 ANSI 和 ISO 语法几乎每个 DBMS 供应商定义其自己的语法，其中每个稍有不同标准。  
   
- [附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，介绍了所有 ODBC 驱动程序必须都支持的最小 SQL 语法。 此语法是 SQL-92 的入门级的子集。 驱动程序可能支持其他语法，以符合中间、 完整或通过 SQL-92 FIPS 127-2 过渡级别定义。 有关详细信息，请参阅[SQL 最低语法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)附录 c： 驱动器中SQL 语法和 SQL-92。  
+ [附录 C：SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，介绍了所有 ODBC 驱动程序必须都支持的最小 SQL 语法。 此语法是 SQL-92 的入门级的子集。 驱动程序可能支持其他语法，以符合中间、 完整或通过 SQL-92 FIPS 127-2 过渡级别定义。 有关详细信息，请参阅[SQL 最低语法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)附录 c： 驱动器中SQL 语法和 SQL-92。  
   
  此外定义了附录 C*转义序列*包含等外部联接中，通常可用的语言功能的标准语法，不包括在 SQL-92 语法。 有关详细信息，请参阅[ODBC 转义序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附录 c： 驱动器中SQL 语法，并[转义序列](../../../odbc/reference/develop-app/escape-sequences.md)，在本部分中更高版本。  
   

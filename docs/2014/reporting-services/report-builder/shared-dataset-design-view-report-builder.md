@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107589"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
@@ -91,7 +91,7 @@ ms.locfileid: "66107589"
 
   
 ##  <a name="Save"></a> 保存共享数据集  
- 若要保存生成的查询，请在 **“报表生成器”** 按钮上单击 **“保存”** 或 **“另存为”**。 导航到报表服务器上的相应文件夹，然后保存共享数据集定义。 在您将共享数据集保存到报表服务器后，其他用户才能使用此共享数据集。  
+ 若要保存生成的查询，请在 **“报表生成器”** 按钮上单击 **“保存”** 或 **“另存为”** 。 导航到报表服务器上的相应文件夹，然后保存共享数据集定义。 在您将共享数据集保存到报表服务器后，其他用户才能使用此共享数据集。  
   
 
   

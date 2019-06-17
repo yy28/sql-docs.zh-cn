@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f040c9907574bba718827999bb9c0fbb432a0bd0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761436"
 ---
 # <a name="delete-tables-database-engine"></a>删除表（数据库引擎）
@@ -67,9 +67,9 @@ ms.locfileid: "62761436"
   
 1.  在对象资源管理器中选择要删除的表。  
   
-2.  右键单击该表，再从快捷菜单中选择“删除”。  
+2.  右键单击该表，再从快捷菜单中选择“删除”  。  
   
-3.  此时，将显示一个消息框，提示您确认删除。 单击 **“是”**。  
+3.  此时，将显示一个消息框，提示您确认删除。 单击 **“是”** 。  
   
     > [!NOTE]  
     >  删除一个表将自动移除与该表之间的所有关系。  
@@ -80,9 +80,9 @@ ms.locfileid: "62761436"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     DROP TABLE dbo.PurchaseOrderDetail;  

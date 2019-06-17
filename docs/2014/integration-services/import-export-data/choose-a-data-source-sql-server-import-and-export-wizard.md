@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62893592"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>选择数据源（SQL Server 导入和导出向导）
@@ -55,7 +55,7 @@ ms.locfileid: "62893592"
  从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库列表中选择。  
   
  **刷新**  
- 通过单击“刷新”，还原可用数据库的列表。  
+ 通过单击“刷新”  ，还原可用数据库的列表。  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>数据源 = .NET Framework Data Provider for SQL Server  
  此页显示用于 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据访问接口的选项列表，按字母顺序排列。 下表列出了最重要的选项。  
@@ -83,10 +83,10 @@ ms.locfileid: "62893592"
 >  选择**Microsoft Excel**仅当你想要连接到数据源使用 Excel 2003 或更早版本。 若要连接到数据源使用 Excel 2007，选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 访问接口**，单击**属性**，然后在**所有**选项卡**数据链接属性**对话框框中，输入`Excel 12.0`的值作为**扩展属性**。  
   
  **Excel 文件路径**  
- 指定要从其中导入数据的电子表格的路径和文件名。 例如， **C:\MyData.xls， \\\Sales\Database\Northwind.xls**。 或单击 **“浏览”**。  
+ 指定要从其中导入数据的电子表格的路径和文件名。 例如， **C:\MyData.xls， \\\Sales\Database\Northwind.xls**。 或单击 **“浏览”** 。  
   
  **“浏览”**  
- 通过使用“打开”对话框定位电子表格。  
+ 通过使用“打开”  对话框定位电子表格。  
   
  **Excel 版本**  
  选择存储源数据的 Excel 的版本。  
@@ -100,10 +100,10 @@ ms.locfileid: "62893592"
 >  选择**Microsoft Access**仅当你想要连接到使用 Access 2003 的数据库，或更早版本。 若要连接到使用 Access 2007 数据库，请选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 访问接口**相反。  
   
  **文件名**  
- 指定要从其中导入数据的数据库文件的路径和文件名。 例如，**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb**。 或单击 **“浏览”**。  
+ 指定要从其中导入数据的数据库文件的路径和文件名。 例如，**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb**。 或单击 **“浏览”** 。  
   
  **“浏览”**  
- 通过使用“打开”对话框定位数据库文件。  
+ 通过使用“打开”  对话框定位数据库文件。  
   
  **用户名**  
  当工作组信息文件与数据库关联时，为数据库连接指定一个有效的用户名。  

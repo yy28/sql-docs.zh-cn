@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810418"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
@@ -43,7 +43,7 @@ ms.locfileid: "62810418"
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 角色的成员可以使用 DAC 进行连接。  
   
- 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 你还可以连接前缀`admin:`格式的实例名**sqlcmd-Sadmin:**_< 实例名称 >。_ 此外可以启动从 DAC[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]通过连接到查询编辑器`admin:` \< *instance_name*>。  
+ 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 你还可以连接前缀`admin:`格式的实例名**sqlcmd-Sadmin:** _< 实例名称 >。_ 此外可以启动从 DAC[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]通过连接到查询编辑器`admin:` \< *instance_name*>。  
   
 ## <a name="restrictions"></a>限制  
  由于 DAC 仅用于在极少数情况下诊断服务器问题，因此对连接有一些限制：  
@@ -76,7 +76,7 @@ ms.locfileid: "62810418"
   
 -   基本 DBCC 命令，例如 DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS`,` 和 DBCC SQLPERF。 请勿运行需要消耗大量资源的命令，如 **DBCC** CHECKDB、DBCC DBREINDEX 或 DBCC SHRINKDATABASE。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL\<spid> 命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL\<spid>  命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
   
     -   请通过查询 `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`来验证 SPID 是否已被实际终止。 如果没有返回任何行，则表明会话已被终止。  
   

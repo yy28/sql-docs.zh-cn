@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 340d03ba8d0c5a66d89937627ab9389fc49abcae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807691"
 ---
 # <a name="calculation-context"></a>计算上下文
@@ -27,7 +27,7 @@ ms.locfileid: "62807691"
   
 1.  FROM 子句（如果适用）- 此子句可指定整个多维数据集，或以 SELECT 语句的形式指定子多维数据集。  
   
-2.  WHERE 子句（如果适用）- 此子句也称为“切片器轴”，可在其上指定集、元组或成员以限制查询在列轴或行轴上返回成员。 从概念上来说，未在列轴或行轴上显式指定的每个属性层次结构的默认成员均是切片器轴的一部分。  
+2.  WHERE 子句（如果适用）- 此子句也称为“切片器轴”  ，可在其上指定集、元组或成员以限制查询在列轴或行轴上返回成员。 从概念上来说，未在列轴或行轴上显式指定的每个属性层次结构的默认成员均是切片器轴的一部分。  
   
     > [!NOTE]  
     >  在切片器轴和其他轴上指定特定属性的单元坐标时，函数中指定的坐标可能优先确定轴上的集的成员。 [Filter (MDX)](../../../mdx/filter-mdx.md) 和 [Order (MDX)](../../../mdx/order-mdx.md) 函数是这类函数的示例 - 你可以按属性成员（通过 WHERE 子句或 FROM 子句中的 SELECT 语句排除在计算上下文之外）对结果进行筛选或排序。  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814053"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)
@@ -109,7 +109,7 @@ ms.locfileid: "62814053"
     ```  
   
     > [!NOTE]  
-    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请使用 [sp_update_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) 的 @enabled 选项。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
+    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请使用 [sp_update_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) 的 @enabled 选项  。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
   
 -   **向 AlwaysOn 主数据库副本中添加 CDC 角色**  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62814053"
   
      可用性组侦听器名称或显式节点名称都可用来查找辅助副本。 如果使用可用性组侦听器名称，则会将访问定向到任何合适的辅助副本。  
   
-     当`sp_addlinkedserver`用于创建链接的服务器以访问辅助副本时， *@datasrc*参数用于可用性组侦听器名称或显式服务器名称，并 *@provstr*参数用于指定只读意向。  
+     当`sp_addlinkedserver`用于创建链接的服务器以访问辅助副本时， *@datasrc* 参数用于可用性组侦听器名称或显式服务器名称，并 *@provstr* 参数用于指定只读意向。  
   
     ```  
     EXEC sp_addlinkedserver   

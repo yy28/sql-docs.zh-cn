@@ -3,17 +3,17 @@ title: MicrosoftML R 函数库的 SQL Server 机器学习服务
 description: 在 SQL Server 2016 R Services 和的 SQL Server 2017 机器学习服务中的 MicrosoftML 函数库介绍
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641821"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140487"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML （SQL Server 中的 R 库）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "62641821"
 
 中的函数**MicrosoftML**是可封装在存储过程的 R 代码中调用。 大多数开发人员构建**MicrosoftML**解决方案本地，然后将完成的 R 代码迁移到存储过程作为部署练习。
 
-**MicrosoftML**包为 R 是已安装"--现成的"SQL Server 2017 中。 如果升级 R 组件的实例，它是还可与 SQL Server 2016 一起使用：[使用绑定的 SQL Server 实例升级](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+**MicrosoftML**包为 R 是已安装"--现成的"SQL Server 2017 中。 如果升级 R 组件的实例，它是还可与 SQL Server 2016 一起使用：[使用绑定的 SQL Server 实例升级](../install/upgrade-r-and-python.md)
 
 默认情况下不加载包。 第一步中，加载**MicrosoftML**包，然后再加载**RevoScaleR**您是否需要使用远程计算上下文或相关的连接或数据源对象。 然后，引用所需的各个函数。
 

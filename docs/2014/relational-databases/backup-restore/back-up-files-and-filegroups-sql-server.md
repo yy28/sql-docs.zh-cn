@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62923007"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>备份文件和文件组 (SQL Server)
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份文件和文件组。 当数据库大小和性能要求使完整数据库备份显得不切实际，则可以创建文件备份。 文件备份包含一个或多个文件（或文件组）中的所有数据。 有关文件备份的详细信息，请参阅 [完整文件备份 (SQL Server)](full-file-backups-sql-server.md) 和 [差异备份 (SQL Server)](differential-backups-sql-server.md)。  
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份文件和文件组。 当数据库大小和性能要求使完整数据库备份显得不切实际，则可以创建文件备份。 文件备份  包含一个或多个文件（或文件组）中的所有数据。 有关文件备份的详细信息，请参阅 [完整文件备份 (SQL Server)](full-file-backups-sql-server.md) 和 [差异备份 (SQL Server)](differential-backups-sql-server.md)。  
   
  **本主题内容**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62923007"
   
 -   不允许在显式或隐式事务中使用 BACKUP 语句。  
   
--   在简单恢复模式下，必须一起备份所有读/写文件。 这有助于确保将数据库还原到一致的时点。 请使用 READ_WRITE_FILEGROUPS 选项，而不是逐个指定每个读/写文件或文件组。 此选项用于备份数据库中的所有读/写文件组。 通过指定 READ_WRITE_FILEGROUPS 创建的备份称为部分备份。 有关详细信息，请参阅[部分备份 (SQL Server)](partial-backups-sql-server.md)。  
+-   在简单恢复模式下，必须一起备份所有读/写文件。 这有助于确保将数据库还原到一致的时点。 请使用 READ_WRITE_FILEGROUPS 选项，而不是逐个指定每个读/写文件或文件组。 此选项用于备份数据库中的所有读/写文件组。 通过指定 READ_WRITE_FILEGROUPS 创建的备份称为部分备份  。 有关详细信息，请参阅[部分备份 (SQL Server)](partial-backups-sql-server.md)。  
   
 -   有关限制的详细信息，请参阅 [备份概述 (SQL Server)](backup-overview-sql-server.md)。  
   
@@ -71,15 +71,15 @@ ms.locfileid: "62923007"
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
+2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击数据库，指向“任务”，再单击“备份”。 将出现 **“备份数据库”** 对话框。  
+3.  右键单击数据库，指向“任务”  ，再单击“备份”  。 将出现 **“备份数据库”** 对话框。  
   
 4.  在 **“数据库”** 列表中，验证数据库名称。 您也可以从列表中选择其他数据库。  
   
-5.  在 **“备份类型”** 列表中，选择 **“完整”** 或 **“差异”**。  
+5.  在 **“备份类型”** 列表中，选择 **“完整”** 或 **“差异”** 。  
   
-6.  对于 **“备份组件”** 选项，单击 **“文件和文件组”**。  
+6.  对于 **“备份组件”** 选项，单击 **“文件和文件组”** 。  
   
 7.  在 **“选择文件和文件组”** 对话框中，选择要备份的文件和文件组。 可以选择一个或多个单个文件，也可以复选文件组的框，从而自动选择该文件组中的所有文件。  
   
@@ -89,16 +89,16 @@ ms.locfileid: "62923007"
   
 10. 指定备份集的过期时间：  
   
-    -   若要让备份集在特定天数之后过期，请单击“之后”（默认选项）。 然后，输入备份集自创建后到过期日之间的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
+    -   若要让备份集在特定天数之后过期，请单击“之后”  （默认选项）。 然后，输入备份集自创建后到过期日之间的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
   
-         默认值在 **“服务器属性”** 对话框（位于 **“数据库设置”** 页上）的 **“默认备份媒体保持期(天)”** 选项中设置。 若要访问此选项，请在对象资源管理器中右键单击服务器名称，并选择“属性”，然后选择“数据库设置”页。  
+         默认值在 **“服务器属性”** 对话框（位于 **“数据库设置”** 页上）的 **“默认备份媒体保持期(天)”** 选项中设置。 若要访问此选项，请在对象资源管理器中右键单击服务器名称，并选择“属性”，然后选择“数据库设置”  页。  
   
-    -   若要使备份集在特定日期过期，请单击 **“在”**，并输入备份集的过期日期。  
+    -   若要使备份集在特定日期过期，请单击 **“在”** ，并输入备份集的过期日期。  
   
-11. 通过单击 **“磁盘”** 或 **“磁带”**，选择备份目标的类型。 若要选择包含单个介质集的多个磁盘驱动器或磁带机（最多为 64 个）的路径，请单击 **“添加”**。 所选路径将显示在 **“备份到”** 列表中。  
+11. 通过单击 **“磁盘”** 或 **“磁带”** ，选择备份目标的类型。 若要选择包含单个介质集的多个磁盘驱动器或磁带机（最多为 64 个）的路径，请单击 **“添加”** 。 所选路径将显示在 **“备份到”** 列表中。  
   
     > [!NOTE]  
-    >  若要删除备份目标，请选择该备份目标并单击 **“删除”**。 若要查看备份目标的内容，请选择该备份目标并单击 **“内容”**。  
+    >  若要删除备份目标，请选择该备份目标并单击 **“删除”** 。 若要查看备份目标的内容，请选择该备份目标并单击 **“内容”** 。  
   
 12. 若要查看或选择高级选项，请在 **“选择页”** 窗格中单击 **“选项”** 。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62923007"
   
     -   **备份到现有介质集**  
   
-         对于此选项，请单击 **“追加到现有备份集”** 或 **“覆盖所有现有备份集”**。 有关备份到现有媒体集的信息，请参阅[媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)。  
+         对于此选项，请单击 **“追加到现有备份集”** 或 **“覆盖所有现有备份集”** 。 有关备份到现有媒体集的信息，请参阅[媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)。  
   
          或者选择 **“检查介质集名称和备份集过期时间”** ，以使备份操作对介质集和备份集的过期日期和时间进行验证。  
   
@@ -122,12 +122,12 @@ ms.locfileid: "62923007"
   
     -   **完成后验证备份**。  
   
-    -   **“写入介质前检查校验和”** 和 **“出现校验和错误时继续”**（可选）。 有关校验和的详细信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](possible-media-errors-during-backup-and-restore-sql-server.md)。  
+    -   **“写入介质前检查校验和”** 和 **“出现校验和错误时继续”** （可选）。 有关校验和的详细信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
 15. 如果备份到磁带驱动器（如同 **“常规”** 页的 **“目标”** 部分指定的一样），则 **“备份后卸载磁带”** 选项处于活动状态。 单击此选项可以启用 **“卸载前倒带”** 选项。  
   
     > [!NOTE]  
-    >  除非备份的是事务日志（如同“常规”页的“备份类型”部分中指定的一样），否则“事务日志”部分中的选项处于不活动状态。  
+    >  除非备份的是事务日志（如同“常规”  页的“备份类型”  部分中指定的一样），否则“事务日志”  部分中的选项处于不活动状态。  
   
 16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中 **“压缩备份”** 来压缩备份，并且可以通过选中 **“不压缩备份”** 来防止压缩备份。  
   
@@ -151,20 +151,20 @@ ms.locfileid: "62923007"
   
      BACKUP DATABASE *database*  
   
-     { FILE **=** logical_file_name | FILEGROUP **=** logical_filegroup_name } [ **,**...f ]  
+     { FILE **=** logical_file_name  | FILEGROUP **=** logical_filegroup_name  } [ **,** ...f  ]  
   
-     TO backup_device [ **,**...*n* ]  
+     TO backup_device  [ **,** ...*n* ]  
   
-     [ WITH with_options [ **,**...*o* ] ] ;  
+     [ WITH with_options  [ **,** ...*o* ] ] ;  
   
     |Option|“说明”|  
     |------------|-----------------|  
     |*database*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
-    |FILE **=** logical_file_name|指定要包含在文件备份中的文件的逻辑名称。|  
-    |FILEGROUP **=** logical_filegroup_name|指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
-    |[ **,**...*f* ]|表示可以指定多个文件和文件组的占位符。 不限制文件或文件组的数量。|  
-    |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。|  
-    |WITH with_options [ **,**...*o* ]|您也可以指定一个或多个附加选项，如 DIFFERENTIAL。<br /><br /> 注意：差异文件备份需要以完整文件备份为基础。 有关详细信息，请参阅[创建差异数据库备份 (SQL Server)](create-a-differential-database-backup-sql-server.md)。|  
+    |FILE **=** logical_file_name |指定要包含在文件备份中的文件的逻辑名称。|  
+    |FILEGROUP **=** logical_filegroup_name |指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
+    |[ **,** ...*f* ]|表示可以指定多个文件和文件组的占位符。 不限制文件或文件组的数量。|  
+    |*backup_device* [ **,** ...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。|  
+    |WITH with_options  [ **,** ...*o* ]|您也可以指定一个或多个附加选项，如 DIFFERENTIAL。<br /><br /> 注意：差异文件备份需要以完整文件备份为基础。 有关详细信息，请参阅[创建差异数据库备份 (SQL Server)](create-a-differential-database-backup-sql-server.md)。|  
   
 2.  在完整恢复模式下，还必须备份事务日志。 若要使用一整套文件的完整备份来还原数据库，您还必须拥有足够的日志备份，以便涵盖从第一个文件备份开始的所有文件备份。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)中准备镜像数据库。  
   

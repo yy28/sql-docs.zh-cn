@@ -19,14 +19,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921790"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>恢复数据库但不还原数据 (Transact-SQL)
-  通常，恢复数据库之前，将还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的所有数据。 但是，还原操作可以恢复数据库而不实际还原备份；例如，恢复那些与数据库一致的只读文件时。 这称为仅恢复还原。 当脱机数据已与数据库一致且只需变为可用时，仅恢复还原操作将完成恢复数据库并使数据联机。  
+  通常，恢复数据库之前，将还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的所有数据。 但是，还原操作可以恢复数据库而不实际还原备份；例如，恢复那些与数据库一致的只读文件时。 这称为仅恢复还原  。 当脱机数据已与数据库一致且只需变为可用时，仅恢复还原操作将完成恢复数据库并使数据联机。  
   
  仅恢复还原可以针对整个数据库或一个或多个文件或文件组进行。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62921790"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  FROM =\<backup_device> 子句不用于仅恢复还原，因为不需要任何备份。  
+>  FROM =\<backup_device>   子句不用于仅恢复还原，因为不需要任何备份。  
   
  **示例**  
   
@@ -63,7 +63,7 @@ RESTORE DATABASE AdventureWorks2012
   
  仅恢复文件还原的 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语法是：  
   
- RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY  
+ RESTORE DATABASE *database_name* { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ }[ **,** ...*n* ] WITH RECOVERY  
   
  **示例**  
   

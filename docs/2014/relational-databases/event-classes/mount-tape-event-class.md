@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63023447"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 事件类
@@ -47,7 +47,7 @@ ms.locfileid: "63023447"
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
-|TextData|`ntext`|物理设备名称 [ ( 逻辑设备名称 ) ]。 仅当在 sys.backup_devices 目录视图中定义了逻辑设备名称时，它才会显示出来。|1|是|  
+|TextData|`ntext`|物理设备名称  [ ( 逻辑设备名称  ) ]。 仅当在 sys.backup_devices 目录视图中定义了逻辑设备名称时，它才会显示出来。|1|是|  
   
 ## <a name="see-also"></a>请参阅  
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012365"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件类
@@ -37,7 +37,7 @@ ms.locfileid: "63012365"
 |**错误**|**int**|给定事件的错误号。 通常是 **sys.messages** 目录视图中存储的错误号。|31|是|  
 |**EventClass**|**int**|事件类型 = 58。|27|否|  
 |**EventSequence**|**int**|给定事件在请求中的顺序。|51|否|  
-|**EventSubClass**|**int**|事件子类的类型：<br /><br /> 1:同步; 创建/更新的统计信息**TextData**列指示哪些统计信息，以及是否创建或更新它们。<br /><br /> 2:异步统计信息更新;作业在排队等候。<br /><br /> 3:异步统计信息更新;作业的开始。<br /><br /> 4:异步统计信息更新;作业已完成。|21|是|  
+|**EventSubClass**|**int**|事件子类的类型：<br /><br /> 1：同步; 创建/更新的统计信息**TextData**列指示哪些统计信息，以及是否创建或更新它们。<br /><br /> 2:异步统计信息更新;作业在排队等候。<br /><br /> 3:异步统计信息更新;作业的开始。<br /><br /> 4:异步统计信息更新;作业已完成。|21|是|  
 |**GroupID**|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |**HostName**|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IndexID**|**int**|受事件影响的对象上的索引/统计信息项 ID。 若要确定对象的索引 ID，请使用 **sys.indexes** 目录视图的 **index_id** 列。|24|是|  
@@ -55,7 +55,7 @@ ms.locfileid: "63012365"
 |**SPID**|**int**|发生该事件的会话的 ID。|12|是|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |**成功**|**int**|0 = 错误。<br /><br /> 1 = 成功。<br /><br /> 2 = 因服务器中止而跳过 (MSDE)。|23|是|  
-|**TextData**|**ntext**|此列的内容取决于统计信息是同步更新的 (**EventSubClass** 1) 还是异步更新的（**EventSubClass** 2、3 或 4）：<br /><br /> 1:列出了哪些统计信息已更新/创建<br /><br /> 2、 3 或 4:为 NULL。**IndexID**的统计信息更新的索引/统计信息 id 填充列。|1|是|  
+|**TextData**|**ntext**|此列的内容取决于统计信息是同步更新的 (**EventSubClass** 1) 还是异步更新的（**EventSubClass** 2、3 或 4）：<br /><br /> 1：列出了哪些统计信息已更新/创建<br /><br /> 2、 3 或 4:为 NULL。**IndexID**的统计信息更新的索引/统计信息 id 填充列。|1|是|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  
 |**类型**|**int**|作业类型。|57|是|  
   

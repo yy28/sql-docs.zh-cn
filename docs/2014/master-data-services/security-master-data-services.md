@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 80be0aea6705ed98fd12ea3481af59e289b94604
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482576"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65482576"
   
 -    在“资源管理器”功能区域中访问数据的用户。  
   
--   可以在“资源管理器”之外的区域中执行管理任务的用户。 这些用户称为[管理员 (Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)。  
+-    可以在“资源管理器”之外的区域中执行管理任务的用户。 这些用户称为[管理员 (Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="how-to-set-security"></a>如何设置安全性  
  要在 MDS 中授予用户或组访问数据或功能的权限，您必须分配：  

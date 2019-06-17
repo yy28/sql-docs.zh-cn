@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620607"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037837"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server 中的报表生成器
 
@@ -81,7 +81,7 @@ ms.locfileid: "65620607"
  [规划报表（报表生成器）](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  提供在开始生成报表之前应当考虑哪些情况的信息。  
   
- [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)  
  定义在整个 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 文档中使用的重要概念。  
   
  [报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)  

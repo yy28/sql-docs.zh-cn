@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62834639"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 设计器控制台简介
@@ -56,7 +56,7 @@ ms.locfileid: "62834639"
   
 -   Oracle 11.x 客户端  
   
- **请注意**:必须使用此软件根据所安装的 Oracle CDC 设计器控制台的 32 位或 64 位版本。  
+ **注意**：必须使用此软件根据所安装的 Oracle CDC 设计器控制台的 32 位或 64 位版本。  
   
  Oracle CDC 设计器控制台使用 Oracle ODBC 提供程序与源 Oracle 数据库通信。  
   

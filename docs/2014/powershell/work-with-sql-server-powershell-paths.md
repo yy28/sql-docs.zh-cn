@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01542ee3219a7fda68330d19b88161de25f14329
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922912"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL ServerPowerShell 路径
@@ -22,7 +22,7 @@ ms.locfileid: "62922912"
   
 1.  [开始之前](#BeforeYouBegin)  
   
-2.  **若要运行路径节点：**[列出方法和属性](#ListPropMeth)，[使用方法和属性](#UsePropMeth)  
+2.  **若要运行路径节点：** [列出方法和属性](#ListPropMeth)，[使用方法和属性](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  在导航到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供程序路径中的节点之后，可以执行两种类型的操作：  

@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0992e3a956a2b498d92186fa91c0ed4fbddf6102
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762046"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>在数据库引擎 PowerShell 中管理身份验证
   默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件在连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例时使用 Windows 身份验证。 您可以通过定义 PowerShell 虚拟驱动器，或者通过为 `-Username` 指定 `-Password` 和 `Invoke-Sqlcmd` 参数，使用 SQL Server 身份验证。  
   
-1.  **开始之前：**[权限](#Permissions)  
+1.  **开始之前：** [权限](#Permissions)  
   
-2.  **若要设置身份验证，使用：**[虚拟驱动器](#SQLAuthVirtDrv)，[调用 Sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **若要设置身份验证，使用：** [虚拟驱动器](#SQLAuthVirtDrv)，[调用 Sqlcmd](#SQLAuthInvSqlCmd)  
   
 ##  <a name="Permissions"></a> Permissions  
  您可以在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例中执行的所有操作都受到授予用于连接到该实例的身份验证凭据的权限的控制。 默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 和 cmdlet 将使用其运行所基于的 Windows 帐户来建立与 [!INCLUDE[ssDE](../includes/ssde-md.md)]的 Windows 身份验证连接。  
