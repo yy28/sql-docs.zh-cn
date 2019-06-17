@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 954e8b2a2f36ccab1cff97174089560913291074
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770388"
 ---
 # <a name="row-sampling-transformation"></a>行抽样转换
@@ -47,7 +47,7 @@ ms.locfileid: "62770388"
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在“百分比抽样转换编辑器”对话框中设置的属性的详细信息，请参阅[行抽样转换编辑器（“抽样”页）](../../row-sampling-transformation-editor-sampling-page.md)。  
+ 有关可以在“百分比抽样转换编辑器”  对话框中设置的属性的详细信息，请参阅[行抽样转换编辑器（“抽样”页）](../../row-sampling-transformation-editor-sampling-page.md)。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

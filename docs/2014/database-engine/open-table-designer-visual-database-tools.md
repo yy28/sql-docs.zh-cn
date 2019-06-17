@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774180"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>打开表设计器 (Visual Database Tools)
@@ -29,18 +29,18 @@ ms.locfileid: "62774180"
   
 ### <a name="open-a-new-table"></a>打开新表  
   
-1.  在对象资源管理器中，右键单击数据库的“表”节点，再单击“新建表”。  
+1.  在对象资源管理器中，右键单击数据库的“表”节点，再单击“新建表”  。  
   
-     此时，将在主菜单上添加“表设计器”菜单，并打开设计器窗格。  
+     此时，将在主菜单上添加“表设计器”  菜单，并打开设计器窗格。  
   
 > [!NOTE]  
 >  如果已连接到 SQL Azure 数据库，则新的表选项将启动一个创建表模板脚本。 编辑相关参数，然后运行此脚本以创建一个新表。 有关详细信息，请参阅 [SQL Azure 概述](/azure/sql-database/sql-database-technical-overview)。  
   
 ### <a name="open-an-existing-table"></a>打开现有表  
   
-1.  在对象资源管理器中，右键单击数据库的“表”节点下的表，再单击“修改”。  
+1.  在对象资源管理器中，右键单击数据库的“表”节点下的表，再单击“修改”  。  
   
-     此时，将在主菜单上添加“表设计器”菜单，并在设计器窗格中打开此表。  
+     此时，将在主菜单上添加“表设计器”  菜单，并在设计器窗格中打开此表。  
   
 ## <a name="see-also"></a>请参阅  
  [设计表&#40;可视化数据库工具&#41;](../ssms/visual-db-tools/visual-database-tools.md)   

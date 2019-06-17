@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87ada4ef6cf9266720ac0c9742440d0d60345c88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827961"
 ---
 # <a name="create-infosource-for-master-data"></a>“创建主数据的 InfoSource”
@@ -29,13 +29,13 @@ ms.locfileid: "62827961"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 SAP BW 目标。  
+2.  在“数据流”  选项卡上，双击 SAP BW 目标。  
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
-4.  在 **“连接管理器”** 页的 **“创建 SAP BW 对象”** 组框中，选择 **“InfoSource”**，然后单击 **“创建”**。  
+4.  在 **“连接管理器”** 页的 **“创建 SAP BW 对象”** 组框中，选择 **“InfoSource”** ，然后单击 **“创建”** 。  
   
-5.  在 **“创建 InfoSource”** 对话框中，选择 **“主数据”**，然后单击 **“确定”**。  
+5.  在 **“创建 InfoSource”** 对话框中，选择 **“主数据”** ，然后单击 **“确定”** 。  
   
 ## <a name="options"></a>选项  
  **InfoObject 名称**  
@@ -47,7 +47,7 @@ ms.locfileid: "62827961"
  在您选择 InfoObject 后，组件会将选定 InfoObject 的名称填充在 **“InfoObject 名称”** 文本框中。  
   
  **新建**  
- 新建 InfoObject。 此选项可打开“新建 InfoObject”对话框，您可在其中创建新的 InfoObject。 有关此对话框的详细信息，请参阅 [Create New InfoObject](create-new-infoobject.md)。  
+ 新建 InfoObject。 此选项可打开“新建 InfoObject”对话框，您可在其中创建新的 InfoObject  。 有关此对话框的详细信息，请参阅 [Create New InfoObject](create-new-infoobject.md)。  
   
  创建 InfoObject 后，组件会将新 InfoObject 的名称填充在 **“InfoObject 名称”** 文本框中。  
   

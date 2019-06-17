@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62790656"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>AlwaysOn 客户端连接 (SQL Server)
@@ -37,13 +37,13 @@ ms.locfileid: "62790656"
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|是|是|是|是|是|  
 |SQL Native Client 11.0 OLEDB|否|是|是|否|否|  
-|ADO.NET 与.NET Framework 4.0 和连接性修补程序**<sup>*</sup>**|是|是|是|是|是|  
-|ADO.NET 与.NET Framework 3.5 SP1 和连接性修补程序 **<sup>**</sup>**|是|是|是|是|是|  
+|ADO.NET 与.NET Framework 4.0 和连接性修补程序 **<sup>*</sup>**|是|是|是|是|是|  
+|ADO.NET 与.NET Framework 3.5 SP1 和连接性修补程序 **<sup>** </sup>**|是|是|是|是|是|  
 |Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|是|  
   
  **<sup>*</sup>**  下载.NET Framework 4.0 的 ADO.NET 连接性修补程序： [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211)。  
   
- **<sup>**</sup>* * 下载连接性修补程序适用于使用.NET Framework 3.5 SP1: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347)。  
+ **<sup>** </sup>* * 下载连接性修补程序适用于使用.NET Framework 3.5 SP1: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347)。  
   
 > [!IMPORTANT]  
 >  要连接到一个可用性组侦听器，客户端必须使用 TCP 连接字符串。  

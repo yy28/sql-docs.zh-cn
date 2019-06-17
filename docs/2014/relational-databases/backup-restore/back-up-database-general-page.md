@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877054"
 ---
 # <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
@@ -25,7 +25,7 @@ ms.locfileid: "62877054"
  有关基本备份概念的详细信息，请参阅 [备份概述 (SQL Server)](backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”  按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本。  
   
  **使用 SQL Server Management Studio 创建备份**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62877054"
  选择创建仅复制备份。 *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](copy-only-backups-sql-server.md)。  
   
 > [!NOTE]  
->  选择“差异”选项时，无法创建仅复制备份。  
+>  选择“差异”  选项时，无法创建仅复制备份。  
   
  **备份组件**  
  选择要备份的数据库组件。 如果在 **“备份类型”** 列表中选择了 **“事务日志”** ，则不会激活此选项。  
@@ -74,7 +74,7 @@ ms.locfileid: "62877054"
 |||  
 |-|-|  
 |**“数据库”**|指定备份整个数据库。|  
-|**文件和文件组**|指定要备份的文件和/或文件组。<br /><br /> 选择此选项，打开 **“选择文件和文件组”** 对话框。 在选择要备份的文件组或文件并单击“确定” 后，所选内容将显示在“文件组和文件”  框中。|  
+|**文件和文件组**|指定要备份的文件和/或文件组。<br /><br /> 选择此选项，打开 **“选择文件和文件组”** 对话框。 在选择要备份的文件组或文件并单击“确定”  后，所选内容将显示在“文件组和文件”  框中。|  
   
 ### <a name="destination"></a>目标  
  “目标”  面板中的选项允许您为备份操作指定备份设备的类型，并查找现有的逻辑或物理备份设备。  
@@ -94,10 +94,10 @@ ms.locfileid: "62877054"
  显示的下一组选项会取决于所选目标的类型。 如果您选择“磁盘”或“磁带”，则会显示以下选项。  
   
  **“添加”**  
- 将文件或设备添加到“备份到”列表中。 最多可以同时向本地磁盘或远程磁盘上的 64 个设备进行备份。 若要指定远程磁盘上的文件，请使用完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。  
+ 将文件或设备添加到“备份到”  列表中。 最多可以同时向本地磁盘或远程磁盘上的 64 个设备进行备份。 若要指定远程磁盘上的文件，请使用完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。  
   
  **删除**  
- 从“备份到”列表中删除一个或多个当前所选的设备。  
+ 从“备份到”  列表中删除一个或多个当前所选的设备。  
   
  **目录**  
  显示所选设备的介质内容。  
@@ -111,7 +111,7 @@ ms.locfileid: "62877054"
  选择可用于对 Windows Azure 存储进行身份验证的 SQL 凭据。 如果没有可使用的现有 SQL 凭据，则单击 **“创建”** 按钮可创建新的 SQL 凭据。  
   
 > [!IMPORTANT]  
->  单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅中的示例代码中[若要创建凭据](../security/authentication-access/create-a-credential.md#Credential)主题，以使用 TRANSACT-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”**，依次选择 **“新建”** 和 **“凭据”**。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
+>  单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅中的示例代码中[若要创建凭据](../security/authentication-access/create-a-credential.md#Credential)主题，以使用 TRANSACT-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”** ，依次选择 **“新建”** 和 **“凭据”** 。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
   
  **Azure 存储容器**  
  指定 Windows Azure 存储容器的名称  

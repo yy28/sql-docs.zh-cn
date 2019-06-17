@@ -29,10 +29,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082803"
 ---
 # <a name="testing-and-validation-data-mining"></a>测试和验证（数据挖掘）
@@ -67,11 +67,11 @@ ms.locfileid: "66082803"
   
 -   筛选模型以便定型和测试同一源数据的不同组合。  
   
--   测量“提升”  和“增长” 。 “提升图”  是将使用数据挖掘模型获得的改进与随机推测进行对比时，可视化所获得改进的方法。  
+-   测量“提升”  和“增长”  。 “提升图”  是将使用数据挖掘模型获得的改进与随机推测进行对比时，可视化所获得改进的方法。  
   
--   执行数据集的交叉验证  
+-   执行数据集的交叉验证   
   
--   生成“分类矩阵” 。 这些图在表中对准确和不准确的推测进行排序，以便可以快速方便地衡量模型预测目标值的准确程度。  
+-   生成“分类矩阵”  。 这些图在表中对准确和不准确的推测进行排序，以便可以快速方便地衡量模型预测目标值的准确程度。  
   
 -   创建“散点图”  以评估回归公式的拟合度。  
   

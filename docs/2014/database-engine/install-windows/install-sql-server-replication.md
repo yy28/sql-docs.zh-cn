@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fd70d208960af1f121795bfdf8a657ceaf59f21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775290"
 ---
 # <a name="install-sql-server-replication"></a>安装 SQL Server 复制
@@ -34,7 +34,7 @@ ms.locfileid: "62775290"
 ## <a name="installing-replication-by-using-setup"></a>使用安装程序安装复制  
  **在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
--   若要安装包括复制管理对象 (RMO) 在内的复制组件，请在安装向导的“功能选择”页上选择“SQL Server 复制”。  
+-   若要安装包括复制管理对象 (RMO) 在内的复制组件，请在安装向导的  “功能选择”页上选择  “SQL Server 复制”。  
   
 ## <a name="installing-replication-from-the-command-prompt"></a>从命令提示符安装复制  
  **在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  

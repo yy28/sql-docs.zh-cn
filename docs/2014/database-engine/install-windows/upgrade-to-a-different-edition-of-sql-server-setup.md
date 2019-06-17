@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774571"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>升级到 SQL Server 2014 的另一版本（安装）
@@ -43,23 +43,23 @@ ms.locfileid: "62774571"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 在根文件夹中，双击 setup.exe 或者从配置工具中启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  若要将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的现有实例升级到另一版本，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心中单击 **“维护”**，然后选择 **“版本升级”**。  
+2.  若要将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的现有实例升级到另一版本，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心中单击 **“维护”** ，然后选择 **“版本升级”** 。  
   
 3.  如果需要使用安装程序支持文件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将安装它们。 如果安装程序指示您重新启动计算机，请在继续操作之前重新启动。  
   
-4.  系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”**。  
+4.  系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”** 。  
   
 5.  在“产品密钥”页上，选择相应的单选按钮，这些按钮指示您是升级到免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)并[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
   
-6.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 若要继续，请单击 **“下一步”**。 若要结束安装程序，请单击 **“取消”**。  
+6.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 若要继续，请单击 **“下一步”** 。 若要结束安装程序，请单击 **“取消”** 。  
   
 7.  在“选择实例”页上指定要升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 8.  在版本升级操作开始之前，“版本升级规则”页会验证您的计算机配置。  
   
-9. “准备升级版本”页显示您在安装过程中指定的安装选项的树视图。 若要继续，请单击 **“升级”**。  
+9. “准备升级版本”页显示您在安装过程中指定的安装选项的树视图。 若要继续，请单击 **“升级”** 。  
   
-10. 在版本升级过程中，需要重新启动服务以便接受新设置。 版本升级完成后，“完成”页会提供指向版本升级摘要日志文件的链接。 若要关闭该向导，请单击 **“关闭”**。  
+10. 在版本升级过程中，需要重新启动服务以便接受新设置。 版本升级完成后，“完成”页会提供指向版本升级摘要日志文件的链接。 若要关闭该向导，请单击 **“关闭”** 。  
   
 11. “完成”页会提供指向安装日志文件摘要以及其他重要说明的链接。  
   

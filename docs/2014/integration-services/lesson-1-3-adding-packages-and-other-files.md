@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892074"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>步骤 3：添加包和其他文件
@@ -43,29 +43,29 @@ ms.locfileid: "62892074"
   
 ### <a name="to-add-packages-to-the-deployment-tutorial-project"></a>将包添加到 Deployment Tutorial 项目  
   
-1.  如果 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 尚未打开，请单击“开始”，依次指向“所有程序”和“Microsoft SQL Server”，再单击“SQL Server Data Tools”。  
+1.  如果 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 尚未打开，请单击“开始”  ，依次指向“所有程序”  和“Microsoft SQL Server”  ，再单击“SQL Server Data Tools”  。  
   
-2.  在“文件”菜单上，依次单击“打开”、“项目/解决方案”、“Deployment Tutorial”文件夹，然后再次单击“打开”，最后双击“Deployment Tutorial.sln”。  
+2.  在“文件”  菜单上，依次单击“打开”  、“项目/解决方案”  、“Deployment Tutorial”  文件夹，然后再次单击“打开”  ，最后双击“Deployment Tutorial.sln”  。  
   
-3.  在解决方案资源管理器中，右键单击“Deployment Tutorial”，再单击“添加”，然后单击“现有包”。  
+3.  在解决方案资源管理器中，右键单击“Deployment Tutorial”，再单击“添加”  ，然后单击“现有包”  。  
   
-4.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。  
+4.  在“添加现有包的副本”  对话框的“包位置”  中，选择“文件系统”  。  
   
-5.  单击“浏览(…)”按钮，导航到 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages，选择“DataTransfer.dtsx”，再单击“打开”。  
+5.  单击“浏览(…)”按钮，导航到 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages，选择“DataTransfer.dtsx”，再单击“打开”    。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 7.  重复步骤 3-6，但这一次添加的是 LoadXMLData.dtsx（它位于 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages 中）。  
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>将辅助文件添加到 Deployment Tutorial 项目  
   
-1.  在解决方案资源管理器中，右键单击“Deployment Tutorial”，再单击“添加”，然后单击“现有项”。  
+1.  在解决方案资源管理器中，右键单击“Deployment Tutorial”，再单击“添加”  ，然后单击“现有项”  。  
   
-2.  在“添加现有项 - Deployment Tutorial”对话框中，导航到 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data，选择 orders.xml、orders.xsd 和 NewCustomers.txt，再单击“添加”。  
+2.  在“添加现有项 - Deployment Tutorial”  对话框中，导航到 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data，选择 orders.xml、orders.xsd 和 NewCustomers.txt，再单击“添加”  。  
   
-3.  在“添加现有项 - Deployment Tutorial”对话框中，导航到 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\，选择 Readme.txt，再单击“添加”。  
+3.  在“添加现有项 - Deployment Tutorial”  对话框中，导航到 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\，选择 Readme.txt，再单击“添加”  。  
   
-4.  在“文件”菜单上，单击“全部保存”。  
+4.  在“文件”菜单上，单击“全部保存”  。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 4：添加包配置](../integration-services/lesson-1-4-adding-package-configurations.md)  

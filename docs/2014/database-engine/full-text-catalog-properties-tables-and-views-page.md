@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779188"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>全文目录属性（“表和视图”页）
@@ -46,7 +46,7 @@ ms.locfileid: "62779188"
 |**可用列**|显示进行全文索引的所有列。 若要向全文索引中添加列，请选中相应的复选框。|  
 |**断字符语言**|显示断字符的语言。|  
 |**数据类型列**|列出了存储的文档类型中列出的列的表中的列的名称**可用的列**列是否`varbinary(max)`或`image`列。|  
-|**统计语义**|选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../relational-databases/search/semantic-search-sql-server.md)。<br /><br /> 如果您在选择 **“统计语义”** 前选择某一 **“语言”**，并且所选语言没有关联的语义语言模型，则 **“统计语义”** 复选框将被禁用。 如果你在选择“语言”前选择“统计语义”，则下拉组合框中提供的语言将限制为存在语义语言模型支持的那些语言。|  
+|**统计语义**|选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../relational-databases/search/semantic-search-sql-server.md)。<br /><br /> 如果您在选择 **“统计语义”** 前选择某一 **“语言”** ，并且所选语言没有关联的语义语言模型，则 **“统计语义”** 复选框将被禁用。 如果你在选择  “语言”前选择  “统计语义”，则下拉组合框中提供的语言将限制为存在语义语言模型支持的那些语言。|  
   
 ## <a name="track-changes"></a>跟踪更改  
   

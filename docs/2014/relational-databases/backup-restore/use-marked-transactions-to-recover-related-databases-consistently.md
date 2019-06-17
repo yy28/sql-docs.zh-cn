@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877066"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）
   本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
- 在对两个或更多数据库（“相关数据库” ）进行相关更新时，可以使用事务标记将它们恢复到逻辑上一致的点。 但是，此恢复将丢失在作为恢复点的标记之后提交的所有事务。 只有您在测试相关数据库或不介意丢失近期提交的事务时，标记事务才适用。  
+ 在对两个或更多数据库（“相关数据库”  ）进行相关更新时，可以使用事务标记将它们恢复到逻辑上一致的点。 但是，此恢复将丢失在作为恢复点的标记之后提交的所有事务。 只有您在测试相关数据库或不介意丢失近期提交的事务时，标记事务才适用。  
   
  在每个相关数据库中定期标记相关事务将在数据库中建立一系列公用恢复点。 事务标记将记录在事务日志中并包括在日志备份中。 发生灾难时，可以将各数据库还原到相同的事务标记，从而将它们恢复到一致的点。  
   

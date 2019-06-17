@@ -16,10 +16,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787755"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>对全文搜索的重大更改
@@ -38,7 +38,7 @@ ms.locfileid: "62787755"
   
 |功能|应用场景|SQL Server 2005|SQL Server 2008 及更高版本|  
 |-------------|--------------|---------------------|----------------------------------------|  
-|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)与用户定义类型 (Udt)|全文键为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户定义类型，例如，`MyType = char(1)`。|返回键的类型是为用户定义类型指定的类型。<br /><br /> 在示例中，这将是**char （1)**。|返回键的类型是用户定义类型。 在示例中，这将是**MyType**。|  
+|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)与用户定义类型 (Udt)|全文键为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户定义类型，例如，`MyType = char(1)`。|返回键的类型是为用户定义类型指定的类型。<br /><br /> 在示例中，这将是**char （1)** 。|返回键的类型是用户定义类型。 在示例中，这将是**MyType**。|  
 |*top_n_by_rank*参数 (的 CONTAINSTABLE 和[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)]语句)|*top_n_by_rank*使用 0 作为参数的查询。|失败并显示一个错误消息，说明您必须使用一个大于零的值。|成功，返回零行。|  
 |CONTAINSTABLE 和**ItemCount**|在它将更改推入 MSSearch 之前从基表中删除行。|CONTAINSTABLE 返回虚影记录。 **ItemCount**不会更改。|CONTAINSTABLE 不返回任何虚影记录。|  
 |**ItemCount**|表包含 Null 文档或类型列。|除了索引文档，文档为 null 或 null 类型，不会计入**ItemCount**值。|仅索引的文档中计**ItemCount**值。|  

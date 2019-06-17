@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62772238"
 ---
 # <a name="add-copy-of-existing-package"></a>添加现有包的副本
@@ -41,7 +41,7 @@ ms.locfileid: "62772238"
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
  **包路径**  
- 键入包的路径，或单击浏览按钮 (…) 并查找要复制的包。  
+ 键入包的路径，或单击浏览按钮 (…) 并查找要复制的包  。  
   
 ## <a name="see-also"></a>请参阅  
  [保存包的副本](../../2014/integration-services/save-copy-of-package.md)   

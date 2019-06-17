@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62999308"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>选项 （SQL Server 对象资源管理器的命令）
@@ -30,7 +30,7 @@ ms.locfileid: "62999308"
   
      在 Visual Database Tools 中打开填充了 200 行数据的表。  
   
- 可使用“常规脚本选项”对话框更改要打开的行数。  
+ 可使用“常规脚本选项”  对话框更改要打开的行数。  
   
 ## <a name="general-scripting-options"></a>常规脚本选项  
  **选择 Top 的值\<n > 条审核记录的命令**  

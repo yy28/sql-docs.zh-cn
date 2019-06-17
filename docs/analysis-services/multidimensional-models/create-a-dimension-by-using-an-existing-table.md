@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70291e20f318830ca8cf83d48b5ee2e21f5cc6ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62866899"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用现有表创建维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导通过现有表创建维度。 在维度向导的 **“选择创建方法”** 页上选择 **“使用现有表”** 选项可执行此操作。 选择此选项后，向导将基于现有数据源视图中的维度表、维度表中的列以及表中各列之间的任何关系构建维度结构。 该向导从源表和相关表中抽取样本数据。 此数据用于定义基于维度表中的列的属性列，以及定义属性的层次结构（称为“用户定义”的层次结构）。 使用维度向导创建维度后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导通过现有表创建维度。 在维度向导的 **“选择创建方法”** 页上选择 **“使用现有表”** 选项可执行此操作。 选择此选项后，向导将基于现有数据源视图中的维度表、维度表中的列以及表中各列之间的任何关系构建维度结构。 该向导从源表和相关表中抽取样本数据。 此数据用于定义基于维度表中的列的属性列，以及定义属性的层次结构（称为“用户定义”  的层次结构）。 使用维度向导创建维度后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  
   
  如果您要使用现有表来创建维度，则维度向导将指导您执行以下操作：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62866899"
 ## <a name="defining-account-intelligence"></a>定义帐户智能  
   
 > [!NOTE]  
->  仅当在向导的“选择维度属性”页上定义“帐户类型”维度属性时，维度向导才显示此步骤。  
+>  仅当在向导的“选择维度属性”  页上定义“帐户类型”  维度属性时，维度向导才显示此步骤。  
   
  使用 **“定义帐户智能”** 页可创建“帐户”类型的维度。 若要创建“帐户”类型的维度，必须将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持的标准帐户类型映射到维度中帐户类型属性的成员。 服务器使用这些映射为每种类型的帐户数据提供单独的聚合函数和别名。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62866899"
   
 -   **“源表帐户类型”** 列，列出来自数据源表的帐户类型。  
   
--   “内置帐户类型”列，列出服务器支持的相应标准帐户类型。 如果源数据使用标准名称，则向导会自动将源类型映射为服务器类型，然后使用此信息填充“内置帐户类型”列。 如果服务器不映射帐户类型或您希望更改映射，可以从“内置帐户类型”列的列表中选择其他类型。  
+-   “内置帐户类型”  列，列出服务器支持的相应标准帐户类型。 如果源数据使用标准名称，则向导会自动将源类型映射为服务器类型，然后使用此信息填充“内置帐户类型”  列。 如果服务器不映射帐户类型或您希望更改映射，可以从“内置帐户类型”  列的列表中选择其他类型。  
   
 > [!NOTE]  
 >  如果向导创建“帐户”维度时未映射帐户类型，则在创建维度后可使用商用智能向导配置这些映射。 有关详细信息，请参阅 [向维度中添加帐户智能](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md)。  

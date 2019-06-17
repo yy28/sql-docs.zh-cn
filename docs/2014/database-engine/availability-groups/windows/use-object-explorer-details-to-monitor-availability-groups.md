@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788320"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)
@@ -29,9 +29,9 @@ ms.locfileid: "62788320"
 > [!NOTE]  
 >  有关使用“对象资源管理器详细信息”窗格的信息，请参阅 [对象资源管理器详细信息窗格](../../../ssms/object/object-explorer-details-pane.md)。  
   
--   **开始之前：**[先决条件](#Prerequisites)  
+-   **开始之前：** [先决条件](#Prerequisites)  
   
--   **若要监视可用性组，使用：**[SQL Server Management Studio](#SSMSProcedure)  
+-   **若要监视可用性组，使用：** [SQL Server Management Studio](#SSMSProcedure)  
   
 -   **对象资源管理器详细信息：**  
   
@@ -49,13 +49,13 @@ ms.locfileid: "62788320"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **监视可用性组、可用性副本和可用性数据库**  
   
-1.  在“视图”菜单上单击 **“对象资源管理器详细信息”**，或按 **F7** 键。  
+1.  在“视图”菜单上单击 **“对象资源管理器详细信息”** ，或按 **F7** 键。  
   
 2.  在对象资源管理器中，连接到要在其上监视可用性组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，然后单击服务器名称以展开服务器树。  
   
 3.  依次展开 **“AlwaysOn 高可用性”** 节点和 **“可用性组”** 节点。  
   
-4.  **“对象资源管理器详细信息”** 窗格显示所连接的服务器实例为其承载副本的所有可用性组。 对于每个可用性组，“服务器实例(主)”列都显示当前承载主要副本的服务器实例的名称。  若要显示有关给定的可用性组的详细信息，请在对象资源管理器中选择它。  
+4.  **“对象资源管理器详细信息”** 窗格显示所连接的服务器实例为其承载副本的所有可用性组。 对于每个可用性组，“服务器实例(主)”  列都显示当前承载主要副本的服务器实例的名称。  若要显示有关给定的可用性组的详细信息，请在对象资源管理器中选择它。  
   
 5.  **“对象资源管理器详细信息”** 窗格随后显示此可用性组的 **“可用性副本”** 和 **“可用性数据库”** 节点：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62788320"
  **“可用性组”** 详细信息屏幕显示以下列：  
   
  **名称**  
- 列出所选可用性组的“可用性副本”、“可用性数据库”和“可用性组”侦听器等文件夹。  
+ 列出所选可用性组的“可用性副本”、“可用性数据库”和“可用性组”侦听器等文件夹。     
   
 ##  <a name="AvReplicaDetails"></a> 可用性副本详细信息  
  **“可用性副本”** 详细信息屏幕显示以下列：  
@@ -80,7 +80,7 @@ ms.locfileid: "62788320"
  显示承载可用性副本的服务器实例的名称，以及指示该服务器实例与本地服务器实例的当前连接状态的图标。  
   
  **角色**  
- 指示可用性副本的当前角色，即“主”或“辅助”。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。  
+ 指示可用性副本的当前角色，即“主”  或“辅助”  。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。  
   
  **辅助角色中的连接模式**  
  指示给定的可用性副本（正在执行辅助角色，也就是充当辅助副本）的数据库是否可以接受来自客户端的连接。  

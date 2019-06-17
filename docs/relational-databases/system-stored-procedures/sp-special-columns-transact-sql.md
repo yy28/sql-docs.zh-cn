@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004160"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
@@ -59,16 +59,16 @@ sp_special_columns [ @table_name = ] 'table_name'
  表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*qualifier.owner.name*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
  [ @col_type=] '*col_type*'  
- 是列类型。 *col_type*是**char (** 1 **)**，默认值为。 键入 R 返回最优列集，该对象通过检索的列，允许中指定的任意一行要进行唯一标识表。 列可以是为此目的专门设计的伪列，也可以是表的某个唯一索引的一个或多个列。 如果列类型为 V，则返回指定表中的列（如果有）。如果有事务更新了行中的某个值，则数据源将自动更新返回的列。  
+ 是列类型。 *col_type*是**char (** 1 **)** ，默认值为。 键入 R 返回最优列集，该对象通过检索的列，允许中指定的任意一行要进行唯一标识表。 列可以是为此目的专门设计的伪列，也可以是表的某个唯一索引的一个或多个列。 如果列类型为 V，则返回指定表中的列（如果有）。如果有事务更新了行中的某个值，则数据源将自动更新返回的列。  
   
  [ @scope=] '*scope*'  
- ROWID 要求的最小作用域。 *作用域*是**char (** 1 **)**，默认值为 t。 作用域为 C 指定 ROWID 只有位于该行上时才有效。 如果作用域为 T，则指定 ROWID 对该事务有效。  
+ ROWID 要求的最小作用域。 *作用域*是**char (** 1 **)** ，默认值为 t。 作用域为 C 指定 ROWID 只有位于该行上时才有效。 如果作用域为 T，则指定 ROWID 对该事务有效。  
   
  [ @nullable=] '*nullable*'  
- 指示特殊列能否接受 Null 值。 *可以为 null*是**char (** 1 **)**，默认值为 u。 O 指定特殊列不允许 null 值。 如果值为 U，则指定列可以部分为 Null 值。  
+ 指示特殊列能否接受 Null 值。 *可以为 null*是**char (** 1 **)** ，默认值为 u。 O 指定特殊列不允许 null 值。 如果值为 U，则指定列可以部分为 Null 值。  
   
  [ @ODBCVer=] '*ODBCVer*'  
- 所使用的 ODBC 版本。 *ODBCVer*是**int (** 4 **)**，默认值为 2。 这指示 ODBC 版本 2.0。 有关 ODBC 2.0 版和 ODBC 3.0 版之间差别的详细信息，请参阅 ODBC 3.0 版的 ODBC SQLSpecialColumns 规范。  
+ 所使用的 ODBC 版本。 *ODBCVer*是**int (** 4 **)** ，默认值为 2。 这指示 ODBC 版本 2.0。 有关 ODBC 2.0 版和 ODBC 3.0 版之间差别的详细信息，请参阅 ODBC 3.0 版的 ODBC SQLSpecialColumns 规范。  
   
 ## <a name="return-code-values"></a>返回代码值  
  None  

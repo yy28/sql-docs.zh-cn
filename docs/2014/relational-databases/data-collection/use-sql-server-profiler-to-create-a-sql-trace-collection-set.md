@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873304"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)
@@ -34,21 +34,21 @@ ms.locfileid: "62873304"
   
 ### <a name="create-and-export-a-sql-server-profiler-trace"></a>创建和导出 SQL Server Profiler 跟踪  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，打开 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 （在“工具”菜单上，单击“SQL Server Profiler”。）  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，打开 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 （在“工具”  菜单上，单击“SQL Server Profiler”  。）  
   
-2.  在 **“连接到服务器”** 对话框中，单击 **“取消”**。  
+2.  在 **“连接到服务器”** 对话框中，单击 **“取消”** 。  
   
 3.  对于此应用场景，请确保将持续时间值配置为以毫秒为单位显示（默认设置）。 为此，请按照下列步骤进行操作：  
   
-    1.  在“工具”  菜单上，单击“选项” 。  
+    1.  在“工具”  菜单上，单击“选项”  。  
   
     2.  在 **“显示选项”** 区域中，确保清除“在‘持续时间’列中以微秒为单位显示值”复选框。  
   
     3.  单击 **“确定”** 关闭 **“常规选项”** 对话框。  
   
-4.  在 **“文件”** 菜单上，单击 **“新建跟踪”**。  
+4.  在 **“文件”** 菜单上，单击 **“新建跟踪”** 。  
   
-5.  在 **“连接到服务器”** 对话框中，选择要连接到的服务器，然后单击 **“连接”**。  
+5.  在 **“连接到服务器”** 对话框中，选择要连接到的服务器，然后单击 **“连接”** 。  
   
      此时，将显示“跟踪属性”  对话框。  
   
@@ -56,29 +56,29 @@ ms.locfileid: "62873304"
   
     1.  在 **“跟踪名称”** 框中，键入该跟踪要使用的名称。 在本示例中，跟踪名称为 `SPgt80`。  
   
-    2.  在 **“使用模板”** 列表中，选择要用于该跟踪的模板。 在本示例中，请单击“TSQL_SPs”。  
+    2.  在 **“使用模板”** 列表中，选择要用于该跟踪的模板。 在本示例中，请单击“TSQL_SPs”  。  
   
 7.  在 **“事件选择”** 选项卡上，请执行下列操作：  
   
     1.  标识要用于该跟踪的事件。 在本示例中，清除 **“事件”** 列中除 **ExistingConnection** 和 **SP:Completed**以外的所有复选框。  
   
-    2.  在右下角，选中“显示所有列”复选框。  
+    2.  在右下角，选中“显示所有列”  复选框。  
   
     3.  单击 **SP:Completed** 行。  
   
     4.  在这一行中滚动到 **“持续时间”** 列，然后选中 **“持续时间”** 复选框。  
   
-8.  在右下角，单击“列筛选器”以打开“编辑筛选器”对话框。 在 **“编辑筛选器”** 对话框中，请执行下列操作：  
+8.  在右下角，单击“列筛选器”以打开“编辑筛选器”对话框   。 在 **“编辑筛选器”** 对话框中，请执行下列操作：  
   
-    1.  在筛选器列表中，单击 **“持续时间”**。  
+    1.  在筛选器列表中，单击 **“持续时间”** 。  
   
     2.  在布尔运算符窗口中，展开**大于或等于**节点中，键入`80`作为值，然后单击**确定**。  
   
 9. 单击 **“运行”** 以启动跟踪。  
   
-10. 在工具栏上，单击 **“停止所选跟踪”** 或 **“暂停所选跟踪”**。  
+10. 在工具栏上，单击 **“停止所选跟踪”** 或 **“暂停所选跟踪”** 。  
   
-11. 在 **“文件”** 菜单上，依次指向 **“导出”** 和 **“编写跟踪定义的脚本”**，然后单击 **“用于 SQL 跟踪收集组”**。  
+11. 在 **“文件”** 菜单上，依次指向 **“导出”** 和 **“编写跟踪定义的脚本”** ，然后单击 **“用于 SQL 跟踪收集组”** 。  
   
 12. 在 **“另存为”** 对话框中，在 **“文件名”** 框中键入要为该跟踪定义使用的名称，然后将跟踪定义保存到所需位置。 在本示例中，文件名与跟踪名称 (SPgt80) 相同。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "62873304"
   
 ### <a name="script-a-new-collection-set-from-a-sql-server-profiler-trace"></a>通过 SQL Server Profiler 跟踪编写新收集组的脚本  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“文件”** 菜单上，指向 **“打开”** ，然后单击 **“文件”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“文件”** 菜单上，指向 **“打开”** ，然后单击 **“文件”** 。  
   
-2.  在“打开文件”对话框中，找到并打开你在前面的过程中创建的文件 (SPgt80)。  
+2.  在“打开文件”  对话框中，找到并打开你在前面的过程中创建的文件 (SPgt80)。  
   
      将在“查询”窗口中打开保存的跟踪信息，并将其合并到可运行以创建新收集组的脚本中。  
   
@@ -102,9 +102,9 @@ ms.locfileid: "62873304"
   
 5.  在对象资源管理器中，验证该收集组是否已经创建。 为此，请按照下列步骤进行操作：  
   
-    1.  右键单击“管理”，然后单击“刷新”。  
+    1.  右键单击“管理”，然后单击“刷新”   。  
   
-    2.  展开 **“管理”**，然后展开 **“数据收集”**。  
+    2.  展开 **“管理”** ，然后展开 **“数据收集”** 。  
   
      `SPROC_CollectionSet`收集组将显示在相同的级别**系统数据收集组**节点。 默认情况下，将禁用该收集组。  
   

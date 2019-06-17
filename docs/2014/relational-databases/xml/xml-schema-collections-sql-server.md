@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63193038"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
@@ -167,7 +167,7 @@ ms.locfileid: "63193038"
   
 -   编写对 XML 架构集合的相应目录视图的 Transact-SQL 查询。  
   
--   使用内置函数 **XML_SCHEMA_NAMESPACE()**。 您可以将应用`xml`数据类型方法对此函数的输出。 但不能修改基础 XML 架构。  
+-   使用内置函数 **XML_SCHEMA_NAMESPACE()** 。 您可以将应用`xml`数据类型方法对此函数的输出。 但不能修改基础 XML 架构。  
   
  这些在下列示例中进行了说明。  
   
@@ -188,7 +188,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- 可以为获取集合中的单个 XML 架构`xml`数据类型实例作为第三个参数指定的目标命名空间**xml_schema_namespace （)**。 下面的示例说明了这一点。  
+ 可以为获取集合中的单个 XML 架构`xml`数据类型实例作为第三个参数指定的目标命名空间**xml_schema_namespace （)** 。 下面的示例说明了这一点。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例如：从 XML 架构集合输出指定的架构  
  以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出目标命名空间为“<https://www.microsoft.com/books>”的 XML 架构。  

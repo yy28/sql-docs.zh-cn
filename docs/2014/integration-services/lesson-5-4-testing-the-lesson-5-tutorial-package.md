@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62890939"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>步骤 4：测试第 5 课教程包
@@ -35,9 +35,9 @@ ms.locfileid: "62890939"
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>测试 Lesson 5 教程包  
   
-1.  在 **“调试”** 菜单中，单击 **“启动调试”**。  
+1.  在 **“调试”** 菜单中，单击 **“启动调试”** 。  
   
-2.  该包运行完成后，请在 **“调试”** 菜单上单击 **“停止调试”**。  
+2.  该包运行完成后，请在 **“调试”** 菜单上单击 **“停止调试”** 。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 6 课：使用项目部署模型使用参数](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

@@ -13,21 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082163"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>定义帐户智能（维度向导）
   可以使用 **“定义帐户智能”** 页，将 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中定义的帐户类型映射到与维度中的 **“帐户类型”** 属性类型关联的维度属性中定义的帐户类型。  
   
 > [!NOTE]  
->  仅当你在“选择维度类型”页中选择“标准维度”以及在“指定维度类型”页上将维度属性映射到“帐户类型”属性类型时，才会显示此页。  
+>  仅当你在“选择维度类型”  页中选择“标准维度”  以及在“指定维度类型”  页上将维度属性映射到“帐户类型”  属性类型时，才会显示此页。  
   
 ## <a name="options"></a>选项  
  **源表帐户类型**  
- 显示分配给“指定维度键和类型”页中“帐户类型”属性类型的维度属性中包含的值。  
+ 显示分配给“指定维度键和类型”  页中“帐户类型”  属性类型的维度属性中包含的值。  
   
  **内置帐户类型**  
  选择在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中定义的帐户类型，该帐户类型将映射到源表中的帐户类型。  

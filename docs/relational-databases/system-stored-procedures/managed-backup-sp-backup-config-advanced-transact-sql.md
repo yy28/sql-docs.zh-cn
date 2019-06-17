@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62860914"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_advanced
  有关加密算法的详细信息，请参阅 [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)。  
   
  @encryptor_type  
- 加密程序，可以是任一证书的类型或 ASYMMETRIC_KEY"。 @encryptor_type是**nvarchar （32)**。 此参数是可选的如果指定为 NO_ENCRYPTION@encryption_algorithm参数。  
+ 加密程序，可以是任一证书的类型或 ASYMMETRIC_KEY"。 @encryptor_type是**nvarchar （32)** 。 此参数是可选的如果指定为 NO_ENCRYPTION@encryption_algorithm参数。  
   
  @encryptor_name  
  要用于加密备份的现有证书或非对称密钥的名称。 @encryptor_name是 **SYSNAME**。 如果使用非对称密钥，则必须使用扩展密钥管理 (EKM) 进行配置。 此参数是可选的如果指定为 NO_ENCRYPTION@encryption_algorithm参数。  

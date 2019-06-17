@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856166"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>创建目标邮件挖掘模型结构（数据挖掘基础教程）
@@ -26,20 +26,20 @@ ms.locfileid: "62856166"
   
 1.  在解决方案资源管理器中右键单击**挖掘结构**，然后选择**新建挖掘结构**以启动数据挖掘向导。  
   
-2.  在 **“欢迎使用数据挖掘向导”** 页上，单击 **“下一步”**。  
+2.  在 **“欢迎使用数据挖掘向导”** 页上，单击 **“下一步”** 。  
   
 3.  上**选择定义方法**页上，确认**从现有关系数据库或数据仓库**已选择，然后单击**下一步**。  
   
-4.  上**创建数据挖掘结构**页面上，在**想要使用何种数据挖掘技术？**，选择**Microsoft 决策树**。  
+4.  上**创建数据挖掘结构**页面上，在**想要使用何种数据挖掘技术？** ，选择**Microsoft 决策树**。  
   
     > [!NOTE]  
     >  如果收到警告，告知无法找到数据挖掘算法，则项目属性可能配置不正确。 当项目尝试从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器检索数据挖掘算法列表却找不到服务器时，就会出现此警告。 默认情况下[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]将使用**localhost**与服务器。 如果要使用其他实例或命名实例，则必须更改项目属性。 有关详细信息，请参阅[创建 Analysis Services 项目&#40;数据挖掘基础教程&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)。  
   
-5.  单击“下一步” 。  
+5.  单击“下一步”  。  
   
 6.  上**选择数据源视图**页上，在**可用数据源视图**窗格中，选择**Targeted Mailing**。 可以单击**浏览**若要查看数据源视图中的表，然后单击**关闭**以返回到向导。  
   
-7.  单击“下一步” 。  
+7.  单击“下一步”  。  
   
 8.  上**指定表类型**页上，选择中的复选框**用例**vTargetMail 以将其用作事例表，然后单击的列**下一步**。 稍后您将使用 ProspectiveBuyer 表进行测试，不过现在可以忽略它。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62856166"
   
      确保这些行仅选择了左侧列中的复选标记。 这些列将添加到结构中，但不会包含在模型中。 但是，模型生成后，它们将可用于钻取和测试。 有关钻取详细信息，请参阅[钻取查询&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
-14. 单击“下一步” 。  
+14. 单击“下一步”  。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [指定数据类型和内容类型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  

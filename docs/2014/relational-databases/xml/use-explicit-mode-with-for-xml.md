@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63231278"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>将 EXPLICIT 模式与 FOR XML 一起使用
@@ -29,7 +29,7 @@ ms.locfileid: "63231278"
  因为将所需的 XML 描述为 EXPLICIT 模式查询的一部分，所以必须确保生成的 XML 格式正确且有效。  
   
 ## <a name="rowset-processing-in-explicit-mode"></a>EXPLICIT 模式下的行集处理  
- EXPLICIT 模式会将由查询执行生成的行集转换为 XML 文档。 为使 EXPLICIT 模式生成 XML 文档，行集必须具有特定的格式。 这需要您编写 SELECT 查询以生成具有特定格式的行集（通用表 ），以便处理逻辑随后可以生成所需的 XML。  
+ EXPLICIT 模式会将由查询执行生成的行集转换为 XML 文档。 为使 EXPLICIT 模式生成 XML 文档，行集必须具有特定的格式。 这需要您编写 SELECT 查询以生成具有特定格式的行集（通用表  ），以便处理逻辑随后可以生成所需的 XML。  
   
  首先，查询必须生成下列两个元数据列：  
   

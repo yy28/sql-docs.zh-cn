@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec92f58f4dcd44fc39bfc34968a7883cb9c4cb4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62830113"
 ---
 # <a name="sequence-container"></a>序列容器
@@ -41,7 +41,7 @@ ms.locfileid: "62830113"
   
 -   对许多任务进行分组，以便您可以通过展开和折叠序列容器，更轻松地管理这些任务。  
   
-     也可以创建任务组，这些任务组用 **“分组”** 框展开和折叠。 但是，“分组”框是设计时功能，没有属性或运行时行为。 有关详细信息，请参阅[对组件分组或取消分组](../group-or-ungroup-components.md)  
+     也可以创建任务组，这些任务组用 **“分组”** 框展开和折叠。 但是，“分组”  框是设计时功能，没有属性或运行时行为。 有关详细信息，请参阅[对组件分组或取消分组](../group-or-ungroup-components.md)  
   
 -   在序列容器上设置事务属性，以便为包控制流的子集定义事务。 采用这种方法，可以更详细地管理事务。  
   

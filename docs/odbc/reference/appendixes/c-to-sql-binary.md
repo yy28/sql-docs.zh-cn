@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76c2e4673d9b561aeb5af3e61e1e4dc8532195d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63201595"
 ---
-# <a name="c-to-sql-binary"></a>从 C 到 SQL：二进制
+# <a name="c-to-sql-binary"></a>从 C 到 SQL：Binary
 是二进制的 ODBC C 数据类型的标识符：  
   
  SQL_C_BINARY  

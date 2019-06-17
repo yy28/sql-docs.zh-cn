@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083132"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>处理要求和注意事项（数据挖掘）
@@ -39,7 +39,7 @@ ms.locfileid: "66083132"
   
  处理模型时，模型不会从数据源中重新读取数据，而从挖掘结构获取数据摘要。 服务器将使用创建的多维数据集以及缓存的索引和事例数据来创建独立的线程，以便为模型定型。  
   
- 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持并行模型处理，请参阅[SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
+ 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持并行模型处理，请参阅[SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ##  <a name="bkmk_ProcessStructures"></a> 处理挖掘结构  
  可以一起处理所有相关模型的挖掘结构，也可以单独进行处理。 在预期某些模型要用较长时间进行处理并且您想要延迟该操作时，从各模型单独处理挖掘结构可能会很有用。  
@@ -64,7 +64,7 @@ ms.locfileid: "66083132"
   
  **部署项目**:具体取决于项目设置和项目的当前状态，在项目中的挖掘模型时通常处理完全部署该项目。  
   
- 启动部署时处理即自动开始，除非 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上有以前处理过的版本且没有发生结构更改。 可以通过选中下拉列表中的“部署解决方案”或按 F5 键来部署项目。 您可以  
+ 启动部署时处理即自动开始，除非 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上有以前处理过的版本且没有发生结构更改。 可以通过选中下拉列表中的“部署解决方案”  或按 F5 键来部署项目。 您可以  
   
  有关如何设置控制挖掘模型部署方式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署属性的详细信息，请参阅 [部署数据挖掘解决方案](deployment-of-data-mining-solutions.md)。  
   

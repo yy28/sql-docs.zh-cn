@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2e7e9622fdd45362da9782798c7af82ff9112745
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63000785"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
@@ -40,7 +40,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 表示在对象资源管理器想要清除的运行状况状态的节点。 *target_tree_root_with_id*是**nvarchar(400)**，默认值为 NULL。  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 表示在对象资源管理器想要清除的运行状况状态的节点。 *target_tree_root_with_id*是**nvarchar(400)** ，默认值为 NULL。  
   
  您可以从 msdb.dbo.syspolicy_system_health_state 系统视图的 target_query_expression_with_id 列指定值。  
   

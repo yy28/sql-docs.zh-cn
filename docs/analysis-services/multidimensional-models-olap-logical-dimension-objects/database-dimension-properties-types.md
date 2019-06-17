@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 663c26ac169c11e5ab2d9b90285419cf4145368c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025771"
 ---
 # <a name="database-dimension-properties---types"></a>数据库维度属性 - 类型
@@ -38,7 +38,7 @@ ms.locfileid: "63025771"
 |应用场景|一种其属性表示计划或策略分析信息的维度。|  
 |Quantitative|一种其属性表示定量信息的维度。|  
 |实用工具|一种其属性表示杂项信息的维度。|  
-|货币|该类型的维度包含货币数据和元数据。|  
+|Currency|该类型的维度包含货币数据和元数据。|  
 |Rates|一种其属性表示货币汇率信息的维度。|  
 |Channel|一种其属性表示渠道信息的维度。|  
 |Promotion|一种其属性表示营销促销信息的维度。|  

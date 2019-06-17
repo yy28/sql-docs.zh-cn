@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065861"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻译详细信息（“翻译”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -65,7 +65,7 @@ ms.locfileid: "66065861"
  以所选语言键入多维数据集对象的属性值。  
   
 ## <a name="context-menu"></a>上下文菜单  
- 右键单击“翻译详细信息”窗格中的翻译后，可以从所显示的上下文菜单中访问以下选项：  
+ 右键单击“翻译详细信息”  窗格中的翻译后，可以从所显示的上下文菜单中访问以下选项：  
   
 |术语|定义|  
 |----------|----------------|  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806365"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>创建 SQL Server 实用工具控制点（SQL Server 实用工具）
@@ -76,7 +76,7 @@ ms.locfileid: "62806365"
   
 -   该过程必须由具有 sysadmin 权限的用户运行，创建 UCP 要求同样的权限。  
   
--   SQL Server 的所有托管实例必须都从该 UCP 中删除。 请注意，该 UCP 是 SQL Server 的托管实例。 有关详细信息，请参阅[如何：从 SQL Server 实用工具中删除的 SQL Server 实例](https://go.microsoft.com/fwlink/?LinkId=169392)。  
+-   SQL Server 的所有托管实例必须都从该 UCP 中删除。 请注意，该 UCP 是 SQL Server 的托管实例。 有关详细信息，请参阅[操作说明：从 SQL Server 实用工具中删除的 SQL Server 实例](https://go.microsoft.com/fwlink/?LinkId=169392)。  
   
  使用此过程可以从 SQL Server 实用工具中删除 SQL Server UCP。 在完成该操作后，可以再次在 SQL Server 的实例上创建 UCP。  
   
@@ -101,7 +101,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>向导步骤  
  ![](../../database-engine/media/create-ucp.gif "Create_UCP")  
   
- 以下各节提供与用于创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 的向导工作流中每一页有关的详细信息。 若要启动向导以创建新的 UCP，则从 SSMS 的“视图”菜单中打开“实用工具资源管理器”窗格，然后单击“实用工具资源管理器”窗格顶部的 ![](../../database-engine/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮。  
+ 以下各节提供与用于创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 的向导工作流中每一页有关的详细信息。 若要启动向导以创建新的 UCP，则从 SSMS 的“视图”菜单中打开“实用工具资源管理器”窗格，然后单击“实用工具资源管理器”窗格顶部的 ![](../../database-engine/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮  。  
   
  单击下面列表中的链接可以导航到向导中某一页的详细信息：  
   
@@ -124,18 +124,18 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> 创建 UCP 向导简介  
  如果您打开实用工具资源管理器并且没有连接的实用工具控制点，则必须连接到一个控制点或创建一个新的控制点。  
   
- **连接到现有 UCP** - 如果在部署中已存在一个实用工具控制点，则可以通过单击“实用工具资源管理器”窗格顶部的 ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")“连接到实用工具”按钮连接到该实用工具控制点。 若要连接到现有 UCP，您必须具有管理员凭据或是实用工具读取者角色的成员。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP，并且只能从 SSMS 的某一实例连接到一个 UCP。  
+ **连接到现有 UCP** - 如果在部署中已存在一个实用工具控制点，则可以通过单击“实用工具资源管理器”窗格顶部的 ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")“连接到实用工具”按钮连接到该实用工具控制点  。 若要连接到现有 UCP，您必须具有管理员凭据或是实用工具读取者角色的成员。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP，并且只能从 SSMS 的某一实例连接到一个 UCP。  
   
- **创建新 UCP** - 若要创建新的实用工具控制点，请单击“实用工具资源管理器”窗格顶部的 ![](../../database-engine/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮。 若要创建一个新的 UCP，必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称并在连接对话框中提供管理员凭据。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP。  
+ **创建新 UCP** - 若要创建新的实用工具控制点，请单击“实用工具资源管理器”窗格顶部的 ![](../../database-engine/media/create-ucp.gif "Create_UCP")“创建 UCP”按钮  。 若要创建一个新的 UCP，必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称并在连接对话框中提供管理员凭据。 请注意，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具只能有一个 UCP。  
   
 ##  <a name="Instance_name"></a> 指定实例  
  指定与您正创建的 UCP 有关的以下信息：  
   
--   **实例名称** - 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击“连接…”。以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。  
+-   **实例名称** - 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击“连接…”  。以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。  
   
 -   **实用程序名称** - 指定将用于在网络上标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的名称。  
   
- 若要继续，请单击 **“下一步”**。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Connection_dialog"></a> 连接对话框  
  在“连接到服务器”对话框中，验证服务器类型、计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称信息。 有关详细信息，请参阅[连接到服务器（数据库引擎）](../../ssms/f1-help/connect-to-server-database-engine.md)。  
@@ -143,7 +143,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  如果连接是加密的，将使用加密连接。 如果连接未加密，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将使用加密连接重新进行连接。  
   
- 若要继续，请单击“连接...”。  
+ 若要继续，请单击“连接...”  。  
   
 ##  <a name="Agent_configuration"></a> 实用工具收集组帐户  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 Windows 域帐户。 此帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 此外，也可以使用现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户。 若要满足验证要求，请使用以下准则来指定帐户。  
@@ -152,7 +152,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户必须是 Windows 域帐户，且不是 LocalSystem、NetworkService 或 LocalService 之类的内置帐户。  
   
- 若要继续，请单击 **“下一步”**。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Validation_rules"></a> 验证规则  
  在此版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，在将创建 UCP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上，必须满足以下条件：  
@@ -166,7 +166,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不能已是某一实用工具控制点的宿主。|指定用于承载 UCP 的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例应启用 TCP/IP。|为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指定实例启用 TCP/IP。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不能具有名为“sysutility_mdw”的数据库。|创建 UCP 操作将创建一个名为“sysutility_mdw”的实用工具管理数据仓库 (UMDW)。 该操作要求该名称在验证规则运行时在计算机上不存在。 若要继续，您必须删除或重命名名为“sysutility_mdw”的任何数据库。 有关重命名操作的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例上的收集组必须停止运行。|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指定实例上创建 UCP 时停止预先存在的收集组。 如果数据收集器被禁用，则启用它，停止正在运行的所有收集组，然后为创建 UCP 操作重新运行验证规则。<br /><br /> 启用数据收集器：<br /><br /> 在对象资源管理器中，展开 **“管理”** 节点。<br /><br /> 右键单击 **“数据收集”**，然后单击 **“启用数据收集”**。<br /><br /> 停止收集组：<br /><br /> 在对象资源管理器中，依次展开“管理”节点、 **“数据收集”**、 **“系统数据收集组”**。<br /><br /> 右键单击要停止的收集组，然后单击 **“停止数据收集组”**。<br /><br /> 出现一个显示此操作结果的消息框，收集组图标上的红色圆圈指示收集组已停止运行。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例上的收集组必须停止运行。|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指定实例上创建 UCP 时停止预先存在的收集组。 如果数据收集器被禁用，则启用它，停止正在运行的所有收集组，然后为创建 UCP 操作重新运行验证规则。<br /><br /> 启用数据收集器：<br /><br /> 在对象资源管理器中，展开 **“管理”** 节点。<br /><br /> 右键单击 **“数据收集”** ，然后单击 **“启用数据收集”** 。<br /><br /> 停止收集组：<br /><br /> 在对象资源管理器中，依次展开“管理”节点、 **“数据收集”** 、 **“系统数据收集组”** 。<br /><br /> 右键单击要停止的收集组，然后单击 **“停止数据收集组”** 。<br /><br /> 出现一个显示此操作结果的消息框，收集组图标上的红色圆圈指示收集组已停止运行。|  
 |指定实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须启动。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须配置为手动启动。 否则， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须配置为自动启动。|启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为手动启动。 否则，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为自动启动。|  
 |WMI 必须正确配置。|若要排查 WMI 配置问题，请参阅 [SQL Server 实用工具故障排除](../../database-engine/troubleshoot-the-sql-server-utility.md)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户不能是 Network Service 之类的内置帐户。|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户是 Network Service 之类的内置帐户，则将该帐户重新分配给作为 sysadmin 的 Windows 域帐户。|  
@@ -178,7 +178,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  若要保存验证报表，请单击 **“保存报表”** ，然后指定文件的位置。  
   
- 若要继续，请单击 **“下一步”**。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Summary"></a> 摘要  
  摘要页显示您提供的与 UCP 有关的信息：  
@@ -189,7 +189,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 -   将用于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具数据收集作业的帐户的名称。  
   
- 若要更改 UCP 配置设置，请单击 **“上一步”**。 若要继续，请单击 **“下一步”**。  
+ 若要更改 UCP 配置设置，请单击 **“上一步”** 。 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Creating_UCP"></a> 创建实用工具控制点  
  在创建 UCP 的操作过程中，该向导将显示相关步骤并提供有关状态：  
@@ -206,15 +206,15 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  若要保存与创建 UCP 操作有关的报表，请单击 **“保存报表”** ，然后指定文件的位置。  
   
- 若要完成向导，请单击 **“完成”**。  
+ 若要完成向导，请单击 **“完成”** 。  
   
  在完成创建 UCP 向导后，对于为“已部署的数据层应用程序”、“托管实例”和“实用工具管理”在其下具有节点的 UCP，SSMS 的实用工具资源管理器导航窗格中将显示一个节点。 该 UCP 将自动成为托管实例。  
   
  数据收集过程将立即开始，但可能需要最长 30 分钟的时间，数据才会首次出现在实用工具资源管理器内容窗格的面板和视点中。 数据收集将以每 15 分钟一次的频率继续执行。 初始数据将来自该 UCP 本身。 也就是说，该 UCP 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的第一个托管实例。  
   
- 若要显示面板，请单击 **“视图”** ，然后从 SSMS 菜单中选择 **“实用工具资源管理器内容”** 。 若要刷新数据，请在实用工具资源管理器窗格中右键单击实用工具名称，然后选择“刷新”。  
+ 若要显示面板，请单击 **“视图”** ，然后从 SSMS 菜单中选择 **“实用工具资源管理器内容”** 。 若要刷新数据，请在实用工具资源管理器窗格中右键单击实用工具名称，然后选择“刷新”  。  
   
- 有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他实例注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中的详细信息，请参阅[注册 SQL Server 实例（SQL Server 实用工具）](enroll-an-instance-of-sql-server-sql-server-utility.md)。 若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中将该 UCP 作为托管实例删除，请在“实用工具资源管理器”窗格中选择“托管实例”以便填充托管实例的列表视图，在“实用工具资源管理器内容”列表视图中右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“取消实例托管”。  
+ 有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他实例注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中的详细信息，请参阅[注册 SQL Server 实例（SQL Server 实用工具）](enroll-an-instance-of-sql-server-sql-server-utility.md)。 若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中将该 UCP 作为托管实例删除，请在“实用工具资源管理器”  窗格中选择“托管实例”  以便填充托管实例的列表视图，在“实用工具资源管理器内容”  列表视图中右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“取消实例托管”  。  
   
 ##  <a name="PowerShell_create_UCP"></a> 使用 PowerShell 创建新的实用工具控制点  
  使用以下示例创建一个新的实用工具控制点：  

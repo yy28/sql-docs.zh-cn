@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771053"
 ---
 # <a name="select-oracle-tables-and-columns"></a>选择 Oracle 表和列
@@ -39,15 +39,15 @@ ms.locfileid: "62771053"
      可单击此列的任意单元格对 **security_role**进行手动编辑。  
   
  **添加表**  
- 单击“添加表”可打开“表选择”对话框，从中你可以[为捕获更改选择 Oracle 表](select-oracle-tables-for-capturing-changes.md)。  
+ 单击“添加表”  可打开“表选择”对话框，从中你可以[为捕获更改选择 Oracle 表](select-oracle-tables-for-capturing-changes.md)。  
   
  **编辑**  
- 从该列表中选择一个表，然后选择“编辑”以便打开该表的“属性”对话框，从中你可以[对为捕获更改选择的表进行更改](make-changes-to-the-tables-selected-for-capturing-changes.md)。  
+ 从该列表中选择一个表，然后选择“编辑”  以便打开该表的“属性”  对话框，从中你可以[对为捕获更改选择的表进行更改](make-changes-to-the-tables-selected-for-capturing-changes.md)。  
   
  **删除**  
- 从该列表中选择一个表，然后单击“删除”可从 CDC 实例中删除该表。  
+ 从该列表中选择一个表，然后单击“删除”  可从 CDC 实例中删除该表。  
   
- 在使用正确的对话框[为捕获更改选择 Oracle 表](select-oracle-tables-for-capturing-changes.md)或[对为捕获更改选择的表进行更改](make-changes-to-the-tables-selected-for-capturing-changes.md)后，单击“下一步”以[生成和运行补充日志记录脚本](generate-and-run-the-supplemental-logging-script.md)。  
+ 在使用正确的对话框[为捕获更改选择 Oracle 表](select-oracle-tables-for-capturing-changes.md)或[对为捕获更改选择的表进行更改](make-changes-to-the-tables-selected-for-capturing-changes.md)后，单击“下一步”  以[生成和运行补充日志记录脚本](generate-and-run-the-supplemental-logging-script.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何创建 SQL Server 更改数据库实例](how-to-create-the-sql-server-change-database-instance.md)   

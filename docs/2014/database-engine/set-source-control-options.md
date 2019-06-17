@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62843702"
 ---
 # <a name="set-source-control-options"></a>设置源代码管理选项
@@ -34,7 +34,7 @@ ms.locfileid: "62843702"
   
 ### <a name="to-set-source-control-options"></a>若要设置源代码管理选项  
   
-1.  在“工具”  菜单上，单击“选项” 。  
+1.  在“工具”  菜单上，单击“选项”  。  
   
 2.  在中**选项**对话框框中，展开**源代码管理**，然后单击**插件选择**页。  
   

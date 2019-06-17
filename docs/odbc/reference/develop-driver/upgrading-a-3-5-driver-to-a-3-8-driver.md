@@ -1,5 +1,5 @@
 ---
-title: 3.5 驱动程序升级到 3.8 驱动程序 |Microsoft Docs
+title: 3\.5 驱动程序升级到 3.8 驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df2fa8df9af317bd76b2d7f10e50f7cc937e4660
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63254158"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>将 3.5 驱动程序升级到 3.8 驱动程序
@@ -26,12 +26,12 @@ ms.locfileid: "63254158"
   
 -   驱动程序应支持 SQL_OV_ODBC3_80 SQL_ATTR_ODBC_VERSION，SQL_OV_ODBC2、 SQL_OV_ODBC3 和 SQL_OV_ODBC3_80 以外的值返回 SQL_ERROR。 未来版本的驱动程序管理器将假定一个驱动程序支持 ODBC 符合性级别，如果该驱动程序返回 SQL_SUCCESS 从[SQLSetEnvAttr 函数](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。  
   
--   3.8 版驱动程序应返回从 03.80 **SQLGetInfo** SQL_DRIVER_ODBC_VER 传递给时*信息类型*。 但是，较旧驱动程序管理器在已包含在较旧版本的 Microsoft Windows 中，将驱动程序视为版本 3.5 驱动程序，并发出一条警告。  
+-   3\.8 版驱动程序应返回从 03.80 **SQLGetInfo** SQL_DRIVER_ODBC_VER 传递给时*信息类型*。 但是，较旧驱动程序管理器在已包含在较旧版本的 Microsoft Windows 中，将驱动程序视为版本 3.5 驱动程序，并发出一条警告。  
   
      在 Windows 7 中，驱动程序管理器版本是 03.80。 在 Windows 8 中的驱动程序管理器版本是通过 SQLGetInfo SQL_DM_VER 03.81 (*信息类型*参数)。 SQL_ODBC_VER 报告为 03.80 Windows 7 和 Windows 8 中的版本。  
   
 ##### <a name="driver-specific-c-data-types"></a>特定于驱动程序的 C 数据类型  
- 3.8 版的 ODBC 应用程序一起使用时，驱动程序的 C 数据类型可以进行了定制。 (有关详细信息，请参阅[ODBC 中的 C 数据类型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。)但是，没有 3.8 驱动程序来实现任何特定于驱动程序的 C 类型的任何要求。 但仍应执行 C 类型; 范围检查，该驱动程序驱动程序管理器不会执行的 3.8 驱动程序。 为了便于驱动程序开发，可以采用以下格式定义驱动程序特定，C 数据类型的值：  
+ 3\.8 版的 ODBC 应用程序一起使用时，驱动程序的 C 数据类型可以进行了定制。 (有关详细信息，请参阅[ODBC 中的 C 数据类型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。)但是，没有 3.8 驱动程序来实现任何特定于驱动程序的 C 类型的任何要求。 但仍应执行 C 类型; 范围检查，该驱动程序驱动程序管理器不会执行的 3.8 驱动程序。 为了便于驱动程序开发，可以采用以下格式定义驱动程序特定，C 数据类型的值：  
   
 ```  
 SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1  
@@ -45,7 +45,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
   
  若要避免与服务器不必要的通信，驱动程序可以延迟后从池中重复使用连接重置之前的下一步与远程服务器通信的连接属性。  
   
- 请注意 SQL_ATTR_RESET_CONNECTION 仅用于驱动程序管理器和驱动程序之间的通信。 应用程序不能直接设置此属性。 3.8 版的所有驱动程序应实现此连接属性。  
+ 请注意 SQL_ATTR_RESET_CONNECTION 仅用于驱动程序管理器和驱动程序之间的通信。 应用程序不能直接设置此属性。 3\.8 版的所有驱动程序应实现此连接属性。  
   
 ##### <a name="streamed-output-parameters"></a>流式处理的输出参数  
  ODBC 3.8 版引入流式处理的输出参数，更可缩放的方式来检索输出参数。 (有关详细信息，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。)若要支持此功能，驱动程序时应设置 SQL_GD_OUTPUT_PARAMS 返回值中 SQL_GETDATA_EXTENSIONS*信息类型*中**SQLGetInfo**调用。 必须在驱动程序中实现对具有经过流处理的输出参数的 SQL 类型的支持。 驱动程序管理器不会生成无效的 SQL 类型的错误。 驱动程序中定义支持流的输出参数的 SQL 类型。  

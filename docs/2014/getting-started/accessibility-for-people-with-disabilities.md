@@ -22,10 +22,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842748"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>为残障人士提供的辅助功能
@@ -101,7 +101,7 @@ ms.locfileid: "62842748"
  可以联系[!INCLUDE[msCoName](../includes/msconame-md.md)]销售信息中心文本电话拨号 (800) 892-5234 之间上午 6:30 销售 支持服务联系。  
   
 ### <a name="technical-help"></a>技术帮助  
- 若要在美国国内获得技术帮助，可在太平洋时间星期一到星期五（节假日除外）的早晨 6:00 至下午 6:00，通过拨打文本电话 (800) 892-5234 与 [!INCLUDE[msCoName](../includes/msconame-md.md)]  到下午 6:00 支持服务联系。 若要在加拿大获得 和下午 8:00 可在东部时间星期一到星期五（节假日除外）的上午 8:00 至晚上 8:00 拨打电话 (905) 568-9641。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持服务的价格、条款和条件取决于提供服务的时间。  
+ 若要在美国国内获得技术帮助，可在太平洋时间星期一到星期五（节假日除外）的早晨 6:00 至下午 6:00，通过拨打文本电话 (800) 892-5234 与 [!INCLUDE[msCoName](../includes/msconame-md.md)] 到下午 6:00 支持服务联系。 若要在加拿大获得 和下午 8:00 可在东部时间星期一到星期五（节假日除外）的上午 8:00 至晚上 8:00 拨打电话 (905) 568-9641。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持服务的价格、条款和条件取决于提供服务的时间。  
   
 ## <a name="getting-more-accessibility-information"></a>获得更多辅助功能的信息  
  [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkID=8287)上提供了有关用于改善残障人士生活的辅助技术的信息。  

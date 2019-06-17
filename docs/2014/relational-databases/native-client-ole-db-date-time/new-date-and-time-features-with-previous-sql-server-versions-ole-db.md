@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63233076"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>SQL Server 早期版本的新日期和时间功能 (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "63233076"
   
 |OLE DB 客户端类型|SQL Server 2005 类型|SQL Server 2008 （或更高版本） 类型|结果转换（服务器到客户端）|参数转换（客户端到服务器）|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DATETIME|date|“确定”|“确定”|  
+|DBTYPE_DBDATE|DATETIME|Date|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零值，则由于字符串截断将失败 IRowsetChange。|  
 |DBTYPE_DBTIME||Time(0)|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零值，则由于字符串截断将失败 IRowsetChange。<br /><br /> 忽略日期。|  
@@ -39,7 +39,7 @@ ms.locfileid: "63233076"
 |DBTYPE_DBTIMESTAMP|||失败的无效的时间文字。|“确定”|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP||datetime2(7)|“确定”|“确定”|  
-|DBTYPE_DBDATE|Smalldatetime|date|“确定”|“确定”|  
+|DBTYPE_DBDATE|Smalldatetime|Date|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零值，则由于字符串截断将失败 IRowsetChange。|  
 |DBTYPE_DBTIME||Time(0)|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零值，则由于字符串截断将失败 IRowsetChange。<br /><br /> 忽略日期。|  

@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086825"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>“创建轮询查询”对话框（Analysis Services - 多维数据）
-  可以使用 **中的** “创建轮询查询” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在 **“存储选项”** 对话框的 **“通知”** 选项卡中创建轮询查询。 轮询查询通常是返回某个值的单独查询， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以使用该返回值确定是否已对表或其他关系对象进行了更改。 在“存储选项”对话框的“通知”选项卡上的“按计划轮询”选项中，单击该网格的“轮询查询”列上的省略号按钮 (**...**)，可以显示“创建轮询查询”对话框。 有关“存储选项”对话框的“通知”选项卡的详细信息，请参阅[通知（“存储选项”对话框）（Analysis Services - 多维数据）](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)。  
+  可以使用 **中的** “创建轮询查询” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在 **“存储选项”** 对话框的 **“通知”** 选项卡中创建轮询查询。 轮询查询通常是返回某个值的单独查询， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以使用该返回值确定是否已对表或其他关系对象进行了更改。 在“存储选项”对话框的“通知”选项卡上的“按计划轮询”选项中，单击该网格的“轮询查询”列上的省略号按钮 ( **...** )，可以显示“创建轮询查询”对话框。      有关“存储选项”  对话框的“通知”  选项卡的详细信息，请参阅[通知（“存储选项”对话框）（Analysis Services - 多维数据）](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)。  
   
  轮询查询应返回的值的类型取决于为特定对象（基于正在查询的表）的多维 OLAP (MOLAP) 缓存所计划的更新类型：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66086825"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**切换到一般查询生成器**|选择此选项将只显示可用于一般查询生成器视图的选项。 仅显示下列选项：<br /><br /> **SQL 窗格**<br /><br /> **结果窗格**<br /><br /> **“工具栏”**，只包含 **“切换到 VDT 查询生成器”** 和 **“运行”**<br /><br /> <br /><br /> 注意：此选项才会显示**切换到 VDT 查询生成器**处于选中状态。|  
+|**切换到一般查询生成器**|选择此选项将只显示可用于一般查询生成器视图的选项。 仅显示下列选项：<br /><br /> **SQL 窗格**<br /><br /> **结果窗格**<br /><br /> **“工具栏”** ，只包含 **“切换到 VDT 查询生成器”** 和 **“运行”**<br /><br /> <br /><br /> 注意：此选项才会显示**切换到 VDT 查询生成器**处于选中状态。|  
 |**切换到 VDT 查询生成器**|选择此选项将显示可用于 Visual Database Tools (VDT) 查询生成器视图的所有选项。<br /><br /> 注意：此选项才会显示**切换到一般查询生成器**处于选中状态。|  
 |**显示/隐藏关系图窗格**|显示或隐藏 **关系图窗格**。<br /><br /> 注意：此选项才会显示**切换到 VDT 查询生成器**处于选中状态。|  
 |**显示/隐藏网格窗格**|显示或隐藏 **网格窗格**。<br /><br /> 注意：此选项才会显示**切换到 VDT 查询生成器**处于选中状态。|  
@@ -71,17 +71,17 @@ ms.locfileid: "66086825"
 |**降序排序**|依据 **网格窗格**中的所选列对输出行按降序排序。<br /><br /> 注意：此选项才会显示**切换到 VDT 查询生成器**处于选中状态。|  
 |**删除筛选器**|删除 **网格窗格**中所选行的排序条件（如果适用的话）。<br /><br /> 注意：此选项才会显示**切换到 VDT 查询生成器**处于选中状态。|  
 |**使用分组依据**|向查询中添加分组功能。<br /><br /> 注意：此选项才会显示**切换到 VDT 查询生成器**处于选中状态。|  
-|**添加表**|显示 **“添加表”** 对话框，以便向查询中添加新表或新视图。 有关“添加表”对话框的详细信息，请参阅[“添加表”对话框（Analysis Services - 多维数据）](add-table-dialog-box-analysis-services-multidimensional-data.md)。<br /><br /> 注意：此选项才会显示**切换到 VDT 查询生成器**处于选中状态。|  
+|**添加表**|显示 **“添加表”** 对话框，以便向查询中添加新表或新视图。 有关“添加表”  对话框的详细信息，请参阅[“添加表”对话框（Analysis Services - 多维数据）](add-table-dialog-box-analysis-services-multidimensional-data.md)。<br /><br /> 注意：此选项才会显示**切换到 VDT 查询生成器**处于选中状态。|  
   
  **关系图窗格**  
  以关系图的形式显示查询所引用的对象。 关系图可显示查询中包含的表以及这些表的联接方式。 选中或清除表中某列旁边的复选框，即可在查询输出中添加或删除该列。  
   
  向查询中添加表时，该对话框将根据表中的键创建表之间的联接。 若要添加联接，请将一个表中的字段拖到另一个表中的字段上。 若要管理某个联接，请右键单击该联接。  
   
- 右键单击“关系图窗格”，可以添加或删除表，选择所有表，以及显示或隐藏窗格。  
+ 右键单击“关系图窗格”，可以添加或删除表，选择所有表，以及显示或隐藏窗格。   
   
 > [!NOTE]  
->  “关系图窗格”、“网格窗格”和“SQL 窗格”中的内容是同步的，这样其中一个窗格的更改可以反映在其他两个窗格中。  
+>  “关系图窗格”、“网格窗格”和“SQL 窗格”中的内容是同步的，这样其中一个窗格的更改可以反映在其他两个窗格中。     
   
 > [!IMPORTANT]  
 >  该对话框不支持更改查询类型。  
@@ -90,16 +90,16 @@ ms.locfileid: "66086825"
  在网格中显示查询所引用的对象。 使用此窗格可以在查询中添加和删除列，以及更改每一列的设置。  
   
 > [!NOTE]  
->  “关系图窗格”、“网格窗格”和“SQL 窗格”中的内容是同步的，这样其中一个窗格的更改可以反映在其他两个窗格中。  
+>  “关系图窗格”、“网格窗格”和“SQL 窗格”中的内容是同步的，这样其中一个窗格的更改可以反映在其他两个窗格中。     
   
  **SQL 窗格**  
  将查询显示为 SQL 语句。 键入内容即可更改查询的 SQL 语句。  
   
 > [!NOTE]  
->  “关系图窗格”、“网格窗格”和“SQL 窗格”中的内容是同步的，这样其中一个窗格的更改可以反映在其他两个窗格中。  
+>  “关系图窗格”、“网格窗格”和“SQL 窗格”中的内容是同步的，这样其中一个窗格的更改可以反映在其他两个窗格中。     
   
  **结果窗格**  
- 单击“工具栏”窗格中的“运行”时会显示查询结果。  
+ 单击“工具栏”窗格中的“运行”时会显示查询结果。    
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  

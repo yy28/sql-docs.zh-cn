@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 673b69ea632108b889cc2f99b63c9c602ef05237
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62829539"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中复制包
@@ -33,22 +33,22 @@ ms.locfileid: "62829539"
   
 3.  验证已在解决方案资源管理器中选择要复制的包，或者包含该包的 SSIS 设计器的选项卡是活动的选项卡。  
   
-4.  在“文件”菜单上，单击“将\<包名>另存为”。  
+4.  在“文件”菜单上，单击“将\<包名>另存为”   。  
   
     > [!NOTE]  
-    >  必须在 SSIS 设计器中打开包，然后“另存为”选项才会出现在“文件”菜单中。  
+    >  必须在 SSIS 设计器中打开包，然后“另存为”  选项才会出现在“文件”  菜单中。  
   
 5.  （可选）浏览到其他文件夹。  
   
 6.  更新包文件的名称。 确保保留 .dtsx 文件扩展名。  
   
-7.  单击“保存” 。  
+7.  单击“保存”  。  
   
 8.  在出现提示时，选择是否更新包对象的名称，使其与文件名匹配。 如果单击**是**，则`Name`更新包的属性。 新的包将添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，并在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开。  
   
-9. （可选）单击 **“控制流”** 选项卡的背景，并单击 **“属性”**。  
+9. （可选）单击 **“控制流”** 选项卡的背景，并单击 **“属性”** 。  
   
-10. 在“属性”窗口中，单击 ID 属性的值，然后在下拉列表中单击“\<生成新 ID>”。  
+10. 在“属性”窗口中，单击 ID 属性的值，然后在下拉列表中单击“\<生成新 ID>”  。  
   
 11. 在 **“文件”** 菜单上，单击 **“保存选定项”** ，以保存新建的包。  
   

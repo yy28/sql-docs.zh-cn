@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63136421"
 ---
 # <a name="create-an-operator"></a>创建操作员
@@ -62,9 +62,9 @@ ms.locfileid: "63136421"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要创建 SQL Server 代理操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
-3.  右键单击“操作员”文件夹，然后选择“新建操作员”。  
+3.  右键单击“操作员”  文件夹，然后选择“新建操作员”  。  
   
      在 **“新建操作员”** 对话框的 **“常规”** 页上提供以下选项：  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63136421"
      **Net send**  
      使用 **net send**通知此操作员。  
   
-4.  在完成了新操作员的创建后，单击 **“确定”**。  
+4.  在完成了新操作员的创建后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -126,9 +126,9 @@ ms.locfileid: "63136421"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- sets up the operator information for user 'danwi.' The operator is enabled.   

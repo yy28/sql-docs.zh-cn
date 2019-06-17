@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842574"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>排除针对 Microsoft Azure 的 SQL Server 托管备份的故障
@@ -105,8 +105,8 @@ ms.locfileid: "62842574"
   
      如果 SQL Server 停止响应，则在管理通道中记录事件。  事件日志的一个示例：  
   
-     *Sql 错误 (引擎未响应或收到 sqlException:SqlException:*   
-     *错误代码、 消息和堆栈跟踪将会显示在管理通道 xevent，以及某些额外信息，例如：*   
+     *Sql 错误 (引擎未响应或收到 sqlException:SqlException:*    
+     *错误代码、 消息和堆栈跟踪将会显示在管理通道 xevent，以及某些额外信息，例如：*    
     *"可能正在遇到 SQL Server 的连接问题。在当前迭代中跳过数据库"*  
   
 -   **SQL 代理停止响应或停止工作时[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]正在运行：**  

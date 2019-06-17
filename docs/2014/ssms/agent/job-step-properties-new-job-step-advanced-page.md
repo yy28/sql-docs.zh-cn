@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62937189"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>作业步骤属性：新建作业步骤 （高级页）
+# <a name="job-step-properties-new-job-step-advanced-page"></a>作业步骤属性：新建作业步骤（“高级”页）
   使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的属性。  
   
 ## <a name="options"></a>选项  
@@ -52,7 +52,7 @@ ms.locfileid: "62937189"
  将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
  **视图**  
- 在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
+ 在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
  **将输出追加到表中的现有条目**  
  将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  
@@ -80,7 +80,7 @@ ms.locfileid: "62937189"
  将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
  **视图**  
- 在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
+ 在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
  **将输出追加到表中的现有条目**  
  将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  
@@ -105,7 +105,7 @@ ms.locfileid: "62937189"
  将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
  **视图**  
- 在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
+ 在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
  **将输出追加到表中的现有条目**  
  将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  
@@ -137,7 +137,7 @@ ms.locfileid: "62937189"
  将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
  **视图**  
- 在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
+ 在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
  **将输出追加到表中的现有条目**  
  将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  

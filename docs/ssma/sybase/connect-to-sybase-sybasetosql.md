@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061000"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>连接到 Sybase (SybaseToSQL)
@@ -53,7 +53,7 @@ ms.locfileid: "63061000"
     |设置|Sybase 12.5 参数|Sybase 15 参数|  
     |-----------|-------------------------|-----------------------|  
     |服务器名称|服务器名称|“服务器”|  
-    |端口|服务器端口地址|端口|  
+    |Port|服务器端口地址|Port|  
     |“用户名”|用户 ID|用户 ID|  
     |Password|Password|Password|  
     |提供程序|提供程序|提供程序|  
@@ -74,7 +74,7 @@ ms.locfileid: "63061000"
     |服务器名称|“服务器”|  
     |用户名|uid|  
     |Password|pwd|  
-    |端口号|端口|  
+    |端口号|Port|  
   
     对于 Sybase ASE 12.5 或 15，一个连接字符串示例如下所示：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63061000"
     |服务器名称|“服务器”|  
     |用户名|uid|  
     |Password|pwd|  
-    |端口号|端口|  
+    |端口号|Port|  
   
     ADO.NET 提供程序的连接字符串的一个示例是以下操作：  
   

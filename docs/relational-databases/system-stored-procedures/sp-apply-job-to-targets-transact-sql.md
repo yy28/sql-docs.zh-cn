@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998027"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
@@ -50,11 +50,11 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
-`[ @target_server_groups = ] 'target_server_groups'` 指定的作业是要应用的目标服务器组中的逗号分隔列表。 *target_server_groups*是**nvarchar(2048)**，默认值为 NULL。  
+`[ @target_server_groups = ] 'target_server_groups'` 指定的作业是要应用的目标服务器组中的逗号分隔列表。 *target_server_groups*是**nvarchar(2048)** ，默认值为 NULL。  
   
-`[ @target_servers = ] 'target_servers'` 以逗号分隔的目标服务器指定的作业是要应用的列表。 *target_servers*是**nvarchar(2048)**，默认值为 NULL。  
+`[ @target_servers = ] 'target_servers'` 以逗号分隔的目标服务器指定的作业是要应用的列表。 *target_servers*是**nvarchar(2048)** ，默认值为 NULL。  
   
-`[ @operation = ] 'operation'` 是否应用于或从指定的目标服务器或目标服务器组中删除指定的作业。 *操作*是**varchar(7)**，使用默认值为 APPLY。 有效的操作是**APPLY**并**删除**。  
+`[ @operation = ] 'operation'` 是否应用于或从指定的目标服务器或目标服务器组中删除指定的作业。 *操作*是**varchar(7)** ，使用默认值为 APPLY。 有效的操作是**APPLY**并**删除**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144613"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
@@ -96,7 +96,7 @@ ms.locfileid: "63144613"
 |16|XTP_CHECKPOINT|当数据库具有内存优化的文件组时，可能不会截断事务日志，直至触发自动 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 检查点（每当发生 512 MB 的日志增长就会出现这种情况）。<br /><br /> 注意：512 MB 大小之前的事务日志截断，触发手动对所讨论数据库的检查点命令。|  
   
 ##  <a name="MinimallyLogged"></a> 可以按最小方式记录的操作  
- 最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志恢复模式下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
+ 最小日志记录  是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志恢复模式下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
   
 > [!NOTE]  
 >  内存优化表不支持最小日志记录。  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179944412ed72bc0055bf5c47b788a3a929e9844
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150844"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>性能监视和优化工具
@@ -41,7 +41,7 @@ ms.locfileid: "63150844"
 |错误日志|Windows 应用程序事件日志全面描述了 Windows Server 和 Windows 操作系统上发生的事件，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理和全文搜索中的事件。 它包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中独有的事件的信息。 您可以利用错误日志中的信息来解决与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有关的问题。|  
 |[系统存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统存储过程可以作为许多监视任务的一种功能强大的备选方法：<br /><br /> [sp_who (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)： <br />                    报告有关当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户和进程的快照信息，包括当前正在执行的语句以及该语句是否被阻塞。<br /><br /> [sp_lock (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)：报告有关锁的快照信息，包括对象 ID、索引 ID、锁的类型以及锁应用于的类型或资源。<br /><br /> [sp_spaceused (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)：显示对表（或整个数据库）所用的当前磁盘空间量的估计。<br /><br /> [sp_monitor (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql)：显示统计信息，包括 CPU 使用率、I/O 使用率以及自上次执行 **sp_monitor** 以来的空闲时间。|  
 |[DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)|DBCC（数据库控制台命令）语句使您能够检查性能统计信息以及数据库的逻辑与物理一致性。|  
-|[内置函数 (Transact-SQL)](/sql/t-sql/functions/functions)|内置函数可显示自启动服务器以来有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动的快照统计信息，这些统计信息存储在预定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器中。 例如，**@@CPU_BUSY** 包含 CPU 执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码所持续的时间；**@@CONNECTIONS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接或尝试连接的次数；**@@PACKET_ERRORS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接上出现的网络数据包数。|  
+|[内置函数 (Transact-SQL)](/sql/t-sql/functions/functions)|内置函数可显示自启动服务器以来有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动的快照统计信息，这些统计信息存储在预定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器中。 例如， **@@CPU_BUSY** 包含 CPU 执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码所持续的时间； **@@CONNECTIONS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接或尝试连接的次数； **@@PACKET_ERRORS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接上出现的网络数据包数。|  
 |[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)|跟踪标志可显示有关服务器内的特定活动的信息，用于诊断问题或性能问题（例如死锁链）。|  
 |[数据库引擎优化顾问](database-engine-tuning-advisor.md)|数据库引擎优化顾问可分析所执行的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句对要优化的数据库性能的影响。 数据库引擎优化顾问提供了添加、删除或修改索引、索引视图及分区的建议。|  
   

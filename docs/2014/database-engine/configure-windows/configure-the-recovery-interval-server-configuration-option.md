@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787098"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>配置恢复间隔服务器配置选项
@@ -47,7 +47,7 @@ ms.locfileid: "62787098"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置恢复间隔选项之后](#FollowUp)  
+-   **跟进：** [在配置恢复间隔选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62787098"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **设置恢复间隔**  
   
-1.  在对象资源管理器中，右键单击服务器实例，再选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器实例，再选择 **“属性”** 。  
   
 2.  单击 **“数据库设置”** 节点。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "62787098"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `recovery interval` 选项的值设置为 `3` 分钟。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `recovery interval` 选项的值设置为 `3` 分钟。  
   
 ```sql  
 USE AdventureWorks2012 ;  

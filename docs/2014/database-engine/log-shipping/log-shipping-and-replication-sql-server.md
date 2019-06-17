@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774297"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>日志传送和复制 (SQL Server)
@@ -86,7 +86,7 @@ ms.locfileid: "62774297"
   
 7.  存储过程成功执行后，请重新启动日志读取器代理。 有关详细信息，请参阅[启动和停止复制代理 (SQL Server Management Studio)](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
-8.  可以在发布服务器中应用已经分发到订阅服务器的事务。 为确保分发代理尝试在订阅服务器中重新应用这些事务时不会因错误而失败，请指定标题为“遇到数据一致性错误时继续” 的代理配置文件。  
+8.  可以在发布服务器中应用已经分发到订阅服务器的事务。 为确保分发代理尝试在订阅服务器中重新应用这些事务时不会因错误而失败，请指定标题为“遇到数据一致性错误时继续”  的代理配置文件。  
   
 ### <a name="log-shipping-with-merge-replication"></a>合并复制的日志传送  
  请按照下面过程中的步骤配置合并复制和日志传送。  

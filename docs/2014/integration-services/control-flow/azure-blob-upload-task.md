@@ -14,15 +14,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832771"
 ---
 # <a name="azure-blob-upload-task"></a>Azure blob 上载任务
   Azure Blob 上载任务允许 SSIS 包文件上传到 Azure blob 存储。   
-若要添加“Azure blob 上传任务”，请将其拖放到“SSIS 设计器”中，双击或右键单击它，然后单击“编辑”调出下面的“Azure blob 上传任务编辑器”对话框。  
+若要添加“Azure blob 上传任务”  ，请将其拖放到“SSIS 设计器”中，双击或右键单击它，然后单击“编辑”  调出下面的“Azure blob 上传任务编辑器”  对话框。  
   
  下表介绍了此对话框中的各个字段。  
   

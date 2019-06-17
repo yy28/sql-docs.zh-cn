@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017097"
 ---
 # <a name="change-an-operator39s-availability"></a>更改操作员的可用性
@@ -57,15 +57,15 @@ ms.locfileid: "63017097"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要启用或禁用的操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要启用或禁用的操作员，选择“属性”，然后单击“常规”选项卡。  
+4.  右键单击要启用或禁用的操作员，选择“属性”  ，然后单击“常规”  选项卡。  
   
-5.  在“operator_name 属性”对话框中，选中或清除“启用”复选框。  
+5.  在“operator_name 属性”   对话框中，选中或清除“启用”  复选框。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -73,9 +73,9 @@ ms.locfileid: "63017097"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- disables the 'Fran??ois Ajenstat' operator  

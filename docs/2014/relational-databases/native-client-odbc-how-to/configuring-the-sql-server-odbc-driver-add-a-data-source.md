@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126071"
 ---
 # <a name="add-a-data-source-odbc"></a>添加数据源 (ODBC)
@@ -24,7 +24,7 @@ ms.locfileid: "63126071"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理器添加数据源  
   
-1.  从**Control Panel**，访问**管理工具**，然后**数据源 (ODBC)**。 或者，可以调用 odbcad32.exe。  
+1.  从**Control Panel**，访问**管理工具**，然后**数据源 (ODBC)** 。 或者，可以调用 odbcad32.exe。  
   
 2.  单击**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡，然后依次**添加**。  
   

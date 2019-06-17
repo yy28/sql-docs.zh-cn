@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 270ca92b723aa67938dc1f56d72425d7e1c98040
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774991"
 ---
 # <a name="remove-log-shipping-sql-server"></a>删除日志传送 (SQL Server)
@@ -51,9 +51,9 @@ ms.locfileid: "62774991"
   
 1.  连接到当前是日志传送主服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并展开该实例。  
   
-2.  展开“数据库”，右键单击日志传送主数据库，再单击“属性”。  
+2.  展开“数据库”  ，右键单击日志传送主数据库，再单击“属性”  。  
   
-3.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
+3.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
 4.  清除 **“将此数据库启用为日志传送配置中的主数据库”** 复选框。  
   

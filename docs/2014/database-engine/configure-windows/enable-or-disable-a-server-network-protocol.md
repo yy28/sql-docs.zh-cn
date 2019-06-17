@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 17b4052b8842225d729bc8de996a7b0649f85a59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782395"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>启用或禁用服务器网络协议
@@ -48,15 +48,15 @@ ms.locfileid: "62782395"
   
 #### <a name="to-enable-a-server-network-protocol"></a>启用服务器网络协议  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在  配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
   
-2.  在控制台窗格中，单击“\<实例名称> 的协议”。  
+2.  在控制台窗格中，单击“\<实例名称>  的协议”  。  
   
-3.  在细节窗格中，右键单击要更改的协议，再单击“启用”  或“禁用” 。  
+3.  在细节窗格中，右键单击要更改的协议，再单击“启用”  或“禁用”  。  
   
-4.  在控制台窗格中，单击“SQL Server 服务”。  
+4.   在控制台窗格中，单击“SQL Server 服务”。  
   
-5.  在详细信息窗格中，右键单击“SQL Server (\<实例名称>)”****，然后单击“重启”，停止并重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
+5.  在详细信息窗格中，右键单击“SQL Server (\<实例名称>)” **** ，然后单击“重启”  ，停止并重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   
