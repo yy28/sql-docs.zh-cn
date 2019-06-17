@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021802"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>发布信息，代理（事务发布）
@@ -25,11 +25,11 @@ ms.locfileid: "63021802"
 ## <a name="options"></a>选项  
  有关代理的详细信息及相关任务，请右键单击相应代理所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序  。  
   
--   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序  。  
   
--   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行  。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   

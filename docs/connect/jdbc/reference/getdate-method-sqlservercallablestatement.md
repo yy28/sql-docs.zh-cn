@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a4a969e7-e72c-4ac8-8b8c-ae2281e4e705
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fdee4bfa9f5cc0e8a35bcac3214bab3415541b2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b20b5b8d8577ce768f35e99f4422ac7f0005ba34
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823175"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777191"
 ---
 # <a name="getdate-method-sqlservercallablestatement"></a>getDate 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47823175"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[getDate (int)](../../../connect/jdbc/reference/getdate-method-int.md)|根据给定的参数索引，检索指定参数的值作为 Java 编程语言中的 java.sql.Date 对象。|  
 |[getDate (int, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-int-java-util-calendar.md)|在给定参数索引和 Calendar 对象的情况下，检索指定参数的值作为 Java 编程语言中的 java.sql.Date 对象。|  

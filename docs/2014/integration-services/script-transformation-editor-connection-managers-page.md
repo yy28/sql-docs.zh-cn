@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056203"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>脚本转换编辑器（“连接管理器”页）
@@ -34,16 +34,16 @@ ms.locfileid: "66056203"
  为连接键入唯一的描述性名称。  
   
  **连接管理器**  
- 从可用的连接管理器列表中选择，或选择“\<新建连接>”以打开“添加 SSIS 连接管理器”对话框。  
+ 从可用的连接管理器列表中选择，或选择“\<新建连接>”以打开“添加 SSIS 连接管理器”对话框   。  
   
  **Description**  
  输入连接的说明。  
   
  **“添加”**  
- 向“连接管理器”列表中添加另外一个连接。  
+ 向“连接管理器”列表中添加另外一个连接  。  
   
  **删除**  
- 从“连接管理器”列表中删除所选连接。  
+ 从“连接管理器”  列表中删除所选连接。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

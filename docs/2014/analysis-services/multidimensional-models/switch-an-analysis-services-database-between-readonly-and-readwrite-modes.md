@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072889"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库
@@ -38,7 +38,7 @@ ms.locfileid: "66072889"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的左窗格或右窗格中找到要切换的数据库。  
   
-2.  右键单击该数据库并选择 **“属性”**。 查找数据库文件夹并记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
+2.  右键单击该数据库并选择 **“属性”** 。 查找数据库文件夹并记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
   
     > [!IMPORTANT]  
     >  在将数据库分离之后， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 就不能再帮助您获取数据库位置。  
@@ -51,7 +51,7 @@ ms.locfileid: "66072889"
   
 6.  右键单击**数据库**文件夹，然后选择**附加...**  
   
-7.  在 **“文件夹”** 文本框中，键入数据库文件夹的原始位置。 或者，可以使用浏览按钮 (**...**) 以查找数据库文件夹。  
+7.  在 **“文件夹”** 文本框中，键入数据库文件夹的原始位置。 或者，可以使用浏览按钮 ( **...** ) 以查找数据库文件夹。  
   
 8.  针对该数据库选择读写模式。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66072889"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的左窗格或右窗格中找到要切换的数据库。  
   
-2.  右键单击该数据库并选择 **“属性”**。 查找数据库文件夹并记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
+2.  右键单击该数据库并选择 **“属性”** 。 查找数据库文件夹并记下其位置。 如果数据库存储位置为空，则表明数据库文件夹位于服务器数据文件夹中。  
   
     > [!IMPORTANT]  
     >  在将数据库分离之后， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 就不能再帮助您获取数据库位置。  

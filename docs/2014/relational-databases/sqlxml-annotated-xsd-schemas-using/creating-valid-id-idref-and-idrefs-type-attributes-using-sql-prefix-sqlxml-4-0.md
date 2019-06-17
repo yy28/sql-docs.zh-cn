@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013923"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 创建有效的 ID、IDREF 和 IDREFS 类型属性 (SQLXML 4.0)
@@ -52,7 +52,7 @@ ms.locfileid: "66013923"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 类型  
- 在以下架构中， **\<客户 >** 元素组成**\<顺序 >** 子元素。 **\<顺序 >** 元素还有子元素，而 **\<OrderDetail >** 元素。  
+ 在以下架构中， **\<客户 >** 元素组成 **\<顺序 >** 子元素。 **\<顺序 >** 元素还有子元素，而 **\<OrderDetail >** 元素。  
   
  **OrderIDList**的属性 **\<客户 >** 是指的是一个 IDREFS 类型属性**OrderID**特性 **\<顺序 >** 元素。  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47f74d4510b46b984eb58706ff4ac159cb8b1352
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059371"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>在 SSIS 服务器上启用包执行的日志记录
@@ -32,7 +32,7 @@ ms.locfileid: "66059371"
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，导航到对象资源管理器中的包。  
   
-2.  右键单击包，然后选择“执行”。  
+2.  右键单击包，然后选择“执行”。   
   
 3.  在 **“执行包”** 对话框中，选择 **“高级”** 选项卡。  
   

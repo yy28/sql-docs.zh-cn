@@ -19,17 +19,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62989679"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全策略文件
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 将组件安全策略信息存储在三个配置文件中，而这三个配置文件会在安装过程中复制到文件系统。 这些配置文件可以包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中代码程序集的内部使用安全策略和用户定义安全策略的组合。 三个配置文件对应于中的三个安全对象组件[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]:报表服务器和 Windows 服务、 报表管理器 Web 应用程序和报表设计器预览窗口。  
   
 > [!NOTE]  
->  报表设计器有两种预览模式：预览选项卡以及在以 DebugLocal 模式启动报表项目时启动的弹出式预览窗口。 “预览”选项卡不是安全对象组件，不应用安全策略设置。 预览窗口旨在模拟报表服务器的功能，因此具有策略配置文件，您或管理员必须修改该文件才能在报表设计器中使用自定义程序集和自定义扩展插件。  
+>  报表设计器有两种预览模式：预览选项卡以及在以 DebugLocal 模式启动报表项目时启动的弹出式预览窗口  。 “预览”选项卡不是安全对象组件，不应用安全策略设置  。 预览窗口旨在模拟报表服务器的功能，因此具有策略配置文件，您或管理员必须修改该文件才能在报表设计器中使用自定义程序集和自定义扩展插件。  
   
  这些安全策略配置文件包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的程序集的安全类信息、一些默认的命名权限集以及代码组。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的策略配置文件与 Security.config 文件相似，该 Security.config 文件确定与计算机和 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的企业级策略关联的代码组层次结构和权限集。 该文件的位置是 C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\security.config。  
   

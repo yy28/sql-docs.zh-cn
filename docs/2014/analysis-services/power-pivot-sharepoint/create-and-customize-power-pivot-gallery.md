@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1a7cc26edb726952e71e25deb271ef1dd997d18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071529"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>创建和自定义 PowerPivot 库
@@ -40,7 +40,7 @@ ms.locfileid: "66071529"
   
     > [!NOTE]  
     >  Power Pivot 库需要 Microsoft Silverlight。  Microsoft Edge 浏览器不支持 Silverlight。   
-    > 若要在 Edge 中查看库内容，请单击 Power Pivot 库中的“库”  选项卡，然后将文档库视图更改为“所有文档” 。    
+    > 若要在 Edge 中查看库内容，请单击 Power Pivot 库中的“库”  选项卡，然后将文档库视图更改为“所有文档”  。    
     > 若要更改默认视图，请单击“库”  选项卡，然后单击“修改视图”。 单击“使其成为默认视图”，然后单击“确定”保存默认视图。  
     >  有关 Edge 支持哪些内容的详细信息，请参阅 Windows 博客[推陈出新，第 2 部分：告别 ActiveX、 VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
@@ -66,19 +66,19 @@ ms.locfileid: "66071529"
   
 1.  1.  **SharePoint 2010**:单击**站点操作**在您的网站主页左上角。  
   
-    2.  单击 **“其他选项”**。  
+    2.  单击 **“其他选项”** 。  
   
-    3.  在“库”下，单击 **“PowerPivot 库”**。  
+    3.  在“库”下，单击 **“PowerPivot 库”** 。  
   
-    1.  **SharePoint 2013**:单击设置图标![SharePoint 设置](../media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")。 单击 **“网站内容”**。  
+    1.  **SharePoint 2013**:单击设置图标![SharePoint 设置](../media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")。 单击 **“网站内容”** 。  
   
-    2.  单击 **“添加应用程序”**。  
+    2.  单击 **“添加应用程序”** 。  
   
-    3.  单击 **“PowerPivot 库”**。  
+    3.  单击 **“PowerPivot 库”** 。  
   
 2.  为库键入名称。 务必要包含描述性信息，以帮助用户将此库识别为 PowerPivot 工作簿和 Reporting Services 报表的丰富预览。  
   
-3.  单击 **“创建”**。  
+3.  单击 **“创建”** 。  
   
 4.  请场或服务管理员将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为 Excel Services 的可信位置。 如果用户为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新配置工作簿，则为了避免出现错误，必须执行此步骤。 有关此任务的详细信息，请参阅[在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66071529"
   
 1.  在 SharePoint 站点中，打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。  
   
-2.  在功能区中，单击 **“库”**。  
+2.  在功能区中，单击 **“库”** 。  
   
 3.  **SharePoint 2010：** 在自定义视图中，单击**修改此视图**。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66071529"
   
 1.  在 SharePoint 站点中，打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。  
   
-2.  在功能区中，单击 **“库”**。  
+2.  在功能区中，单击 **“库”** 。  
   
 3.  在“管理视图”的“当前视图”中，从列表中选择您要使用的视图。 预先设计的视图包括图库视图、影院视图和传送视图。 或者，如果您要移动、删除或管理库中的文档，则可以选择“所有文档”。  
   

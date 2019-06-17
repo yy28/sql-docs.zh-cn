@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011845"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>准备大容量导入数据 (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "66011845"
   
 -   使用大容量日志恢复模式。  
   
-     此原则适用于使用完整恢复模式的数据库。 对无索引表（“堆”）执行批量操作时，大容量日志恢复模式非常有用。 使用大容量日志恢复有助于防止事务日志出现空间不足的情况，因为大容量日志恢复不会插入日志行。 有关大容量日志恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)。  
+     此原则适用于使用完整恢复模式的数据库。 对无索引表（“堆”  ）执行批量操作时，大容量日志恢复模式非常有用。 使用大容量日志恢复有助于防止事务日志出现空间不足的情况，因为大容量日志恢复不会插入日志行。 有关大容量日志恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)。  
   
      建议您在执行大容量导入操作之前，先将数据库改为使用大容量日志恢复模式。 之后应立即将数据库重设为完整恢复模式。 有关详细信息，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   

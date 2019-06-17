@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b3ecf106315fa88fdfb68599cfce71a77be975dd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089035"
 ---
 # <a name="query-options-execution-general-page"></a>“查询选项”中的“执行”（“常规”页）
-  使用此页可指定用于运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询的选项。 若要访问此对话框，请右键单击“查询编辑器”窗口的主体，再单击“查询选项”。  
+  使用此页可指定用于运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询的选项。 若要访问此对话框，请右键单击“查询编辑器”窗口的主体，再单击“查询选项”  。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **SET ROWCOUNT**  
@@ -35,7 +35,7 @@ ms.locfileid: "66089035"
  **批处理分隔符**  
  键入用来将 Transact-SQL 语句分隔为批的词。 默认值为 GO。  
   
- 默认情况下，在 SQLCMD 模式下打开新查询  
+ 默认情况下，在 SQLCMD 模式下打开新查询   
  选中此复选框可在 SQLCMD 模式下打开新查询。 只有从 **“工具”** 菜单打开该对话框时，此复选框才可见。  
   
  选择此选项时，请记住下列限制：  
@@ -46,7 +46,7 @@ ms.locfileid: "66089035"
   
 -   由于查询编辑器无法响应操作系统提示，因此您一定要记住不要运行交互式语句。  
   
- 重置为默认值  
+ 重置为默认值   
  将此页上的所有值重置为原始默认值。  
   
   

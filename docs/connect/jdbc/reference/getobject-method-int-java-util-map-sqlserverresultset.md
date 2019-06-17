@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: df85a514-ab43-4bf6-98dd-f7f37fad1850
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5cbed2006e259b25d484e98b77b68b33f383de2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f1c909b174a0f5750bf55c8a80193865746bd737
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726905"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787740"
 ---
 # <a name="getobject-method-int-javautilmap-sqlserverresultset"></a>getObject 方法 (int, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,14 +42,14 @@ public java.lang.Object getObject(int i,
 #### <a name="parameters"></a>Parameters  
  *i*  
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
  *map*  
   
  Map 对象。  
   
 ## <a name="return-value"></a>返回值  
- Object 值。  
+ Object 值  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

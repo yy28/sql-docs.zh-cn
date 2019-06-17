@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0e6e85161ea95a9494bbaf91338b4ddc559ecbf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058792"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>平面文件连接管理器编辑器（“高级”页）
@@ -46,12 +46,12 @@ ms.locfileid: "66058792"
 |**TextQualified**|指示是否被如引号字符的文本限定符字符文本数据。 有效值为<br /><br /> **True**：平面文件中的文本数据是受限定的。<br /><br /> **False**：平面文件中的文本数据是不受限定的。|  
 |**名称**|提供说明性列名。 如果不输入名称，则 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将自动创建名称，格式为“列 0”、“列 1”，依此类推。|  
 |**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
-|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}**。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}**。 列由回车符分隔。<br /><br /> **{LF}**。 列由换行符分隔。<br /><br /> **分号 {;}**。 列由分号分隔。<br /><br /> **冒号 {:}**。 列由冒号分隔。<br /><br /> **逗号 {,}**。 列由逗号分隔。<br /><br /> **制表符 {t}**。 列由制表符分隔。<br /><br /> **竖线 {&#124;}**。 列由竖线分隔。|  
+|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}** 。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}** 。 列由回车符分隔。<br /><br /> **{LF}** 。 列由换行符分隔。<br /><br /> **分号 {;}** 。 列由分号分隔。<br /><br /> **冒号 {:}** 。 列由冒号分隔。<br /><br /> **逗号 {,}** 。 列由逗号分隔。<br /><br /> **制表符 {t}** 。 列由制表符分隔。<br /><br /> **竖线 {&#124;}** 。 列由竖线分隔。|  
 |**DataPrecision**|指定数字数据的精度。 精度是指数字的位数。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
 |**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|  
   
  **新建**  
- 单击“新建”添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
+ 单击“新建”  添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -60,10 +60,10 @@ ms.locfileid: "66058792"
 |**在其后插入**|在所选列后面插入新列。|  
   
  **删除**  
- 选择一列，然后单击“删除”来删除该列。  
+ 选择一列，然后单击“删除”  来删除该列。  
   
  **建议类型**  
- 使用“提供列类型建议”对话框可以计算文件中的示例数据，并获取关于每列的数据类型和长度的建议。 有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用  “提供列类型建议”对话框可以计算文件中的示例数据，并获取关于每列的数据类型和长度的建议。 有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

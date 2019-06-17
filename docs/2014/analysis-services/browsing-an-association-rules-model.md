@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088471"
 ---
 # <a name="browsing-an-association-rules-model"></a>浏览关联规则模型
@@ -150,7 +150,7 @@ ms.locfileid: "66088471"
   
 -   **项集：** 当你创建的模型时，还可以控制通过为 MINIMUM_PROBABILITY 参数赋值来生成的项集的数目。 在算法参数对话框中提供了此参数。  
   
--   **规则：**[!INCLUDE[msCoName](../includes/msconame-md.md)]关联规则算法使用概率值来限制所生成的规则数。 可以通过设置 `MINIMUM_PROBABILITY` 或 `MINIMUM _IMPORTANCE` 参数来控制规则数。  
+-   **规则：** [!INCLUDE[msCoName](../includes/msconame-md.md)]关联规则算法使用概率值来限制所生成的规则数。 可以通过设置 `MINIMUM_PROBABILITY` 或 `MINIMUM _IMPORTANCE` 参数来控制规则数。  
   
  有关配置高级的参数的详细信息，请参阅[数据挖掘算法&#40;SQL Server 数据挖掘外接程序&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)。  
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074891"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授予处理权限 (Analysis Services)
@@ -60,7 +60,7 @@ ms.locfileid: "66074891"
   
     -   在“多维数据集”  窗格，为每个多维数据集选中“处理”  复选框。  
   
-    -   在“维度”  窗格，选择“所有数据库维度” ，然后为每个维度选中“处理”  复选框。 或者，选择所有行，然后使用 Shift + 单击来切换复选框选项。  
+    -   在“维度”  窗格，选择“所有数据库维度”  ，然后为每个维度选中“处理”  复选框。 或者，选择所有行，然后使用 Shift + 单击来切换复选框选项。  
   
 5.  在“成员身份”  窗格，添加有权限处理这些对象的 Windows 用户和组帐户。  
   
@@ -68,11 +68,11 @@ ms.locfileid: "66074891"
   
 ## <a name="test-processing"></a>测试处理  
   
-1.  按住 Shift 键并右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“以不同用户身份运行”并使用分配到正在进行测试的角色的 Windows 帐户连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例。  
+1.  按住 Shift 键并右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“以不同用户身份运行”  并使用分配到正在进行测试的角色的 Windows 帐户连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例。  
   
 2.  打开“数据库”文件夹，选择一个数据库。 你将只会看见对角色可见的数据库，你的帐户具有此角色的成员身份。  
   
-3.  右键单击多维数据集或维度并选择“处理”。 选中处理选项。 为对象的所有组合测试所有选项。 如果由于缺失对象而出现错误，请添加对象到角色。  
+3.  右键单击多维数据集或维度并选择“处理”  。 选中处理选项。 为对象的所有组合测试所有选项。 如果由于缺失对象而出现错误，请添加对象到角色。  
   
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>设置数据挖掘结构的处理权限  
  你可以创建一个授予处理数据挖掘结构权限的角色。 这包括处理所有挖掘模型。  

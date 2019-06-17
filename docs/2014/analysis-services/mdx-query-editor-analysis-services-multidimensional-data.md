@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 579af162998ffaa7c9483a6e6d29a87f98e96fac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077882"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>MDX 查询编辑器（Analysis Services - 多维数据）
@@ -29,13 +29,13 @@ ms.locfileid: "66077882"
   
 -   在 MDX 查询编辑器的查询编辑器窗格中键入脚本。  
   
--   若要执行脚本，请按 **F5**，或者在工具栏上单击 **“执行”** ，也可以在 **“查询”** 菜单上单击 **“执行”**。 如果选择了一部分代码，则只执行该部分代码。 如果没有选择任何代码，则执行 MDX 查询编辑器的全部内容。  
+-   若要执行脚本，请按 **F5**，或者在工具栏上单击 **“执行”** ，也可以在 **“查询”** 菜单上单击 **“执行”** 。 如果选择了一部分代码，则只执行该部分代码。 如果没有选择任何代码，则执行 MDX 查询编辑器的全部内容。  
   
 -   在元数据窗格中查看 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中所包含的多维数据集和其他对象的元数据。  
   
 -   有关 MDX 语法的帮助，请在 MDX 查询编辑器中选择关键字，再按 **F1**。  
   
--   有关 MDX 语法的动态帮助，请在 **“帮助”** 菜单上单击 **“动态帮助”**，打开动态帮助组件。 如果使用动态帮助，当在查询编辑器中键入关键字时，帮助主题将显示在 **“动态帮助”** 窗口中。  
+-   有关 MDX 语法的动态帮助，请在 **“帮助”** 菜单上单击 **“动态帮助”** ，打开动态帮助组件。 如果使用动态帮助，当在查询编辑器中键入关键字时，帮助主题将显示在 **“动态帮助”** 窗口中。  
   
 ## <a name="sql-server-analysis-services-editors-toolbar"></a>SQL Server Analysis Services 编辑器工具栏  
  在打开 MDX 查询编辑器时，会出现 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 编辑器工具栏，此工具栏包含下表所列按钮。  
@@ -56,11 +56,11 @@ ms.locfileid: "66077882"
   
 |术语|定义|  
 |----------|----------------|  
-|**查询编辑器窗口**|键入要由 MDX 查询编辑器执行的 MDX 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**：将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除该选定内容。<br /><br /> **复制**：将当前选定内容复制到剪贴板。<br /><br /> **粘贴**：将剪贴板的内容粘贴到当前选定区域。<br /><br /> **连接**：打开 **“连接到服务器”** 对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **断开连接**：断开当前查询编辑器与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例之间的连接。<br /><br /> **断开所有查询**：断开当前打开的所有查询编辑器。<br /><br /> **更改连接**：打开 **“连接到服务器”** 对话框，以便与其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **在对象资源管理器中打开服务器**：在“对象资源管理器”中打开当前查询编辑器连接到的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。<br /><br /> **执行**：执行所选代码，如果没有选定任何代码，则执行当前查询编辑器中的全部代码。<br /><br /> **属性窗口**：在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中显示当前查询窗口的“属性”窗口。<br /><br /> **查询选项**：显示“查询选项”对话框。|  
+|**查询编辑器窗口**|键入要由 MDX 查询编辑器执行的 MDX 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**：将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除该选定内容。<br /><br /> **复制**：将当前选定内容复制到剪贴板。<br /><br /> **粘贴**：将剪贴板的内容粘贴到当前选定区域。<br /><br /> **连接**：打开 **“连接到服务器”** 对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **断开连接**：断开当前查询编辑器与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例之间的连接。<br /><br /> **断开所有查询**：断开当前打开的所有查询编辑器。<br /><br /> **更改连接**：打开 **“连接到服务器”** 对话框，以便与其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **在对象资源管理器中打开服务器**：在“对象资源管理器”  中打开当前查询编辑器连接到的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。<br /><br /> **执行**：执行所选代码，如果没有选定任何代码，则执行当前查询编辑器中的全部代码。<br /><br /> **属性窗口**：在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中显示当前查询窗口的“属性”  窗口。<br /><br /> **查询选项**：显示“查询选项”  对话框。|  
 |**元数据窗口**|显示当前连接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的元数据。|  
 |**Cube**|在当前连接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中选择一个多维数据集，以显示与 **“元数据”** 选项卡中的多维数据集关联的元数据。|  
-|**元数据**|显示在 **“多维数据集”** 中选定的多维数据集的元数据，包括度量值组和度量值、关键绩效指标 (KPI)、维度、层次结构、级别、成员和成员属性。 若要检索对象的完全限定键，请执行下列操作之一：<br /><br /> 将该对象从 **“元数据”** 选项卡拖到查询窗格。<br /><br /> 右键单击该对象并选择“复制”，再右键单击查询窗格并选择“粘贴”。|  
-|**函数**|显示可用于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的 MDX 函数的元数据，从 MDSCHEMA_FUNCTIONS 架构行集中检索。 若要检索函数的语法，请执行下列操作之一：<br /><br /> 将该对象从 **“函数”** 选项卡拖到查询窗格。<br /><br /> 右键单击该函数并选择 **“复制”**，再右键单击该查询窗格并选择 **“粘贴”**。|  
+|**元数据**|显示在 **“多维数据集”** 中选定的多维数据集的元数据，包括度量值组和度量值、关键绩效指标 (KPI)、维度、层次结构、级别、成员和成员属性。 若要检索对象的完全限定键，请执行下列操作之一：<br /><br /> 将该对象从 **“元数据”** 选项卡拖到查询窗格。<br /><br /> 右键单击该对象并选择“复制”，再右键单击查询窗格并选择“粘贴”。  |  
+|**函数**|显示可用于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的 MDX 函数的元数据，从 MDSCHEMA_FUNCTIONS 架构行集中检索。 若要检索函数的语法，请执行下列操作之一：<br /><br /> 将该对象从 **“函数”** 选项卡拖到查询窗格。<br /><br /> 右键单击该函数并选择 **“复制”** ，再右键单击该查询窗格并选择 **“粘贴”** 。|  
 |**结果窗口**|在网格中显示 MDX 语句或脚本的结果。|  
 |**消息窗口**|显示有关如何执行 MDX 语句或脚本的信息。 例如，此窗口可显示执行过程中遇到的所有错误，或执行完成后检索到的单元数。|  
   

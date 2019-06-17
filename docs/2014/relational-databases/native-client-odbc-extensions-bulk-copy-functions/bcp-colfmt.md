@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065455"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
@@ -102,9 +102,9 @@ idxServerCol
   
  有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符和二进制数据类型*cbUserData*可以是 SQL_VARLEN_DATA、 SQL_NULL_DATA、 0，或某个正值。 如果*cbUserData*为 SQL_VARLEN_DATA，则系统使用长度指示符，如果存在或终止符序列来确定数据的长度。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果*cbUserData*为 SQL_VARLEN_DATA，数据类型是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定字符或二进制类型，并且既不名技术长度指示器和终止符序列，则系统将返回一条错误消息。  
   
- 如果 cbUserData 为 0 或正值，则系统使用 cbUserData 作为最大数据长度。 但是，如果除了正的 cbUserData 以外，还提供了长度指示器或终止符序列，则系统使用导致数据复制量最少的方法来确定数据长度。  
+ 如果 cbUserData 为 0 或正值，则系统使用 cbUserData 作为最大数据长度   。 但是，如果除了正的 cbUserData 以外，还提供了长度指示器或终止符序列，则系统使用导致数据复制量最少的方法来确定数据长度  。  
   
- cbUserData 值表示数据的字节计数。 如果字符数据由 Unicode 宽字符表示，则正的 cbUserData 参数值表示字符数乘以每个字符大小（字节）。  
+ cbUserData 值表示数据的字节计数  。 如果字符数据由 Unicode 宽字符表示，则正的 cbUserData 参数值表示字符数乘以每个字符大小（字节）  。  
   
  *pUserDataTerm*  
  要用于该列的终止符序列。 此参数主要用于字符数据类型，因为所有其他类型均属于固定长度，或者在二进制数据的情况下，要求长度指示器以精确记录提供的字节数目。  
@@ -141,7 +141,7 @@ idxServerCol
   
 -   可选终止字节序列的长度。  
   
- 每次调用**bcp_colfmt**指定一个用户文件列的格式。 例如，若要更改五列用户数据文件中的三个列的默认设置，请先调用[bcp_columns](bcp-columns.md)**(5)**，然后调用**bcp_colfmt**五次，其中三个调用设置您的自定义格式。 对于剩余的两个调用，设置*eUserDataType*为 0，并设置*cbIndicator*， *cbUserData*，以及*cbUserDataTerm*为 0，SQL_VARLEN数据 （_d)，和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 每次调用**bcp_colfmt**指定一个用户文件列的格式。 例如，若要更改五列用户数据文件中的三个列的默认设置，请先调用[bcp_columns](bcp-columns.md) **(5)** ，然后调用**bcp_colfmt**五次，其中三个调用设置您的自定义格式。 对于剩余的两个调用，设置*eUserDataType*为 0，并设置*cbIndicator*， *cbUserData*，以及*cbUserDataTerm*为 0，SQL_VARLEN数据 （_d)，和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
  有关*cbIndicator*，为 8 指示大值类型的值现在是否有效。 如果为其相应列是新的 max 类型的字段指定了前缀，则只能将它设置为 8。 有关详细信息，请参阅[bcp_bind](bcp-bind.md)。  
   

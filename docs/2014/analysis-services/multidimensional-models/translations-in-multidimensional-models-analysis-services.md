@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072735"
 ---
 # <a name="translations-in-multidimensional-models"></a>多维模型中的翻译
@@ -53,7 +53,7 @@ ms.locfileid: "66072735"
   
 -   可以使用为实例指定的排序规则以外的 Windows 排序规则，因此可针对翻译中指定的语言对属性进行相应分类。  
   
- 你可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“翻译属性数据”对话框来定义数据库维度中的属性的翻译。 有关“翻译属性数据”对话框的详细信息，请参阅[“翻译属性数据”对话框（Analysis Services - 多维数据）](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)。  
+ 你可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“翻译属性数据”对话框来定义数据库维度中的属性的翻译  。 有关“翻译属性数据”对话框的详细信息，请参阅[“翻译属性数据”对话框（Analysis Services - 多维数据）](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)  。  
   
 ## <a name="resolving-translations"></a>解析翻译  
  如果客户端应用程序请求了采用指定语言标识符的信息，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例会尝试将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的数据和元数据解析为最接近的可能语言标识符。 如果客户端应用程序未指定默认语言，或指定了非特定区域设置标识符 (0) 或进程默认语言标识符 (1024)，那么， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用实例的默认语言来返回 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的数据和元数据。  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f09e8b4e31d9826d0988b293e2236676125fc7d9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076051"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>在维度设计器中启动商业智能向导
@@ -24,6 +24,6 @@ ms.locfileid: "66076051"
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>启动商业智能向导  
   
--   打开要添加商业智能的维度，然后单击工具栏上的 **“添加商业智能”** 按钮。 此外，也可以在对象资源管理器或解决方案资源管理器中右键单击维度，再单击“添加商业智能”。  
+-   打开要添加商业智能的维度，然后单击工具栏上的 **“添加商业智能”** 按钮。 此外，也可以在对象资源管理器或解决方案资源管理器中右键单击维度，再单击“添加商业智能”  。  
   
   

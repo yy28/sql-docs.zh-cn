@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080191"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
@@ -38,7 +38,7 @@ ms.locfileid: "66080191"
 ## <a name="logon-account-recommendations"></a>登录帐户推荐  
  在故障转移群集中，Analysis Services 的所有实例应配置为使用 Windows 域用户帐户。 将相同帐户分配给所有实例。 有关详情，请参见 [如何群集 Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) 。  
   
- 单独的实例应使用默认虚拟帐户，针对默认实例使用 **NT Service\MSSQLServerOLAPService** ，或针对命名实例使用 **NT Service\MSOLAP$**_instance-name_ 。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
+ 单独的实例应使用默认虚拟帐户，针对默认实例使用 **NT Service\MSSQLServerOLAPService** ，或针对命名实例使用 **NT Service\MSOLAP$** _instance-name_ 。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>向 Analysis Services 授予权限  
  此部分阐释了 Analysis Services 用于本地、内部操作所需的权限，例如，启动可执行程序、读取配置文件和从数据目录加载数据库。 若要查找关于设置外部数据访问的权限以及与其他服务和应用程序的互操作性的指南，请进一步参阅此主题中的 [授予特定服务器操作的其他权限](#bkmk_tasks) 。  
@@ -76,9 +76,9 @@ ms.locfileid: "66080191"
   
 2.  查看现有策略，包括`SQLServerMSASUser$`。 这是在安装 Analysis Services 的计算机上找到的本地安全组。 Windows 特权和文件文件夹权限都授予此安全组。 双击 **作为服务登录** 策略，查看如何在你的系统上指定安全组。 安全组的全名会根据你是否将 Analysis Services 作为命名实例安装而变化。 添加账户特权时，使用此安全组，而不是实际的服务账户。  
   
-3.  若要在 GPEDIT 中添加账户特权，右键单击 **“增加进程工作集”** ，然后选择 **“属性”**。  
+3.  若要在 GPEDIT 中添加账户特权，右键单击 **“增加进程工作集”** ，然后选择 **“属性”** 。  
   
-4.  单击 **“添加用户或组”**。  
+4.  单击 **“添加用户或组”** 。  
   
 5.  输入 Analysis Services 实例的用户组。 请牢记，服务账户是本地安全组的一个成员，要求你将本地计算机作为账户的域进行预置。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66080191"
   
      成员 SID 应与步骤 1 的 per-service SID 匹配。  
   
-3.  使用“计算机管理器”  |  |  |“MSASxx.MSSQLServer”|“”  |  验证是否在步骤 2 中向安全组授予了文件夹安全属性。  
+3.  使用“计算机管理器”   |    |   |“MSASxx.MSSQLServer”|“”   |   验证是否在步骤 2 中向安全组授予了文件夹安全属性。  
   
 > [!NOTE]  
 >  切勿删除或修改 SID。 若要还原无意删除的每个服务 SID，请参阅[ https://support.microsoft.com/kb/2620201 ](https://support.microsoft.com/kb/2620201)。  

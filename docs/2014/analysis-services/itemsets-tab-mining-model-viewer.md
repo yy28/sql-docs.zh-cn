@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079562"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>“项集”选项卡（挖掘模型查看器）
   可以使用 **“项集”** 窗格查看关联规则挖掘模型包含的频繁项集。 由于关联模型可包含多个项集，因此，查看器中提供了一些控件，帮助您筛选在查看器中显示的项集。  
   
- **有关详细信息：**[Microsoft 关联算法](data-mining/microsoft-association-algorithm.md)，[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **有关详细信息：** [Microsoft 关联算法](data-mining/microsoft-association-algorithm.md)，[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -49,7 +49,7 @@ ms.locfileid: "66079562"
   
  请注意，您可能需要刷新视图以查看筛选条件应用情况。 还可以启用和禁用 **“显示长名称”** 选项以刷新列表。  
   
- 默认情况下，筛选条件应用于属性-值组合的完整名称；因此，如果您只查看属性名称，则可能无法明确知道已正确应用筛选条件。 使用 **“显示”** 下拉列表可选择 **“显示属性名称和值”**，并验证是否已正确筛选项集的列表。  
+ 默认情况下，筛选条件应用于属性-值组合的完整名称；因此，如果您只查看属性名称，则可能无法明确知道已正确应用筛选条件。 使用 **“显示”** 下拉列表可选择 **“显示属性名称和值”** ，并验证是否已正确筛选项集的列表。  
   
  **显示**  
  调整项集在查看器中的显示方式。 可以选择以下三个选项之一：  

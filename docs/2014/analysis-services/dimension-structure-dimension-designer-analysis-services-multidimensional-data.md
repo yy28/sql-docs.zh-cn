@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081751"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>维度结构（维度设计器）（Analysis Services - 多维数据）
@@ -35,13 +35,13 @@ ms.locfileid: "66081751"
  **“维度结构”** 页包含以下窗格：  
   
  [数据源视图](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)  
- 使用“数据源视图”窗格可以浏览和管理与维度相关联的数据源视图。  
+ 使用“数据源视图”  窗格可以浏览和管理与维度相关联的数据源视图。  
   
  [层次结构](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
- 使用“层次结构”窗格可以管理维度的层次结构和级别。  
+ 使用“层次结构”  窗格可以管理维度的层次结构和级别。  
   
  [属性](attributes-dimension-designer-analysis-services-multidimensional-data.md)  
- 使用“属性”窗格可以浏览和管理维度的属性。  
+ 使用“属性”  窗格可以浏览和管理维度的属性。  
   
 ## <a name="see-also"></a>请参阅  
  [维度设计器&#40;Analysis Services-多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)   

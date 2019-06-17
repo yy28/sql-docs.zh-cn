@@ -11,20 +11,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049333"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>查看和读取故障转移群集实例诊断日志
   将 SQL Server 资源 DLL 的所有严重错误和警告事件写入 Windows 事件日志。 正在运行的特定于 SQL Server 的诊断信息日志由 [sp_server_diagnostics (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)系统存储过程捕获，并会写入 SQL Server 故障转移群集诊断日志文件（也称为 *SQLDIAG* 日志）中。  
   
--   **开始之前：**[建议](#Recommendations)，[安全](#Security)  
+-   **开始之前：** [建议](#Recommendations)，[安全](#Security)  
   
--   **若要查看诊断日志，使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要查看诊断日志，使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **配置诊断日志设置，请使用：**[Transact-SQL](#TsqlConfigure)  
+-   **配置诊断日志设置，请使用：** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -43,13 +43,13 @@ ms.locfileid: "63049333"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **查看诊断日志文件：**  
   
-1.  从“文件”菜单，选择“打开文件”，然后选择要查看的诊断日志文件。  
+1.  从“文件”  菜单，选择“打开文件”   ，然后选择要查看的诊断日志文件。  
   
 2.  事件在右窗格中显示为行，默认情况下，仅显示出 **name**和 **timestamp** 这两列。  
   
      这还会激活 **“扩展事件”** 菜单。  
   
-3.  若要查看更多列，转到 **“扩展事件”** 菜单，然后选择 **“选择列”**。  
+3.  若要查看更多列，转到 **“扩展事件”** 菜单，然后选择 **“选择列”** 。  
   
      将打开一个显示出可用列的对话框，您可在其中选择要显示的列。  
   

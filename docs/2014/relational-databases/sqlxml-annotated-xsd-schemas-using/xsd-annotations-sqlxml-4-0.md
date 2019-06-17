@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b9e50cc418ef1fa2076b3207d7d3429694f160a
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013549"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 批注 (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "66013549"
 |`sql:guid`|允许您指定是要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的 GUID 值，还是使用在该列的 updategram 中提供的值。|[使用 sql:identity 和 sql:guid 批注](using-the-sql-identity-and-sql-guid-annotations.md)|不支持|  
 |`sql:hide`|隐藏在最终 XML 文档的架构中指定的元素或属性。|[使用 sql:hide 隐藏元素和属性](hiding-elements-and-attributes-by-using-sql-hide.md)|不支持|  
 |`sql:identity`|可对映射到 IDENTITY 类型数据库列的任何节点指定。 为此批注指定的值定义如何更新数据库中相应 IDENTITY 类型的列。|[使用 sql:identity 和 sql:guid 批注](using-the-sql-identity-and-sql-guid-annotations.md)|不支持|  
-|`sql:inverse`|指示 updategram 逻辑颠倒已使用指定的父-子关系的解释 **\<sql: relationship >**。|[Sql: relationship 上指定 sql: inverse 属性&#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|不支持|  
+|`sql:inverse`|指示 updategram 逻辑颠倒已使用指定的父-子关系的解释 **\<sql: relationship >** 。|[Sql: relationship 上指定 sql: inverse 属性&#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|不支持|  
 |`sql:is-constant`|创建不映射到任何表的 XML 元素。 该元素出现在查询输出中。|[创建常量元素使用 sql： 是常量&#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|相同|  
 |`sql:key-fields`|允许规定唯一标识表中的行的列。|[标识键列使用 sql:key-字段&#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|相同|  
 |`sql:limit-field`<br /><br /> `sql:limit-value`|允许限制基于限制值返回的值。|[筛选值使用 sql:-字段和 sql： 的值&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)|相同|  

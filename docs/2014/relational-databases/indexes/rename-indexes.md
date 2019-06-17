@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036203"
 ---
 # <a name="rename-indexes"></a>重命名索引
@@ -56,17 +56,17 @@ ms.locfileid: "63036203"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要重命名索引的表，然后选择“设计”。  
+3.  右键单击你要重命名索引的表，然后选择“设计”  。  
   
-4.  在“表设计器”菜单上，单击“索引/键”。  
+4.  在“表设计器”  菜单上，单击“索引/键”  。  
   
-5.  在“选定的主/唯一键或索引”文本框中，选择你要重命名的索引。  
+5.  在“选定的主/唯一键或索引”  文本框中，选择你要重命名的索引。  
   
 6.  在网格中，单击 **“名称”** 并在文本框中键入新名称。  
   
-7.  单击 **“关闭”**。  
+7.  单击 **“关闭”** 。  
   
-8.  在“文件”菜单上，单击“保存”以保存 _table_name_。  
+8.  在“文件”  菜单上，单击“保存”  以保存 _table_name_。  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>通过使用对象资源管理器重命名索引  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63036203"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要重命名的索引，然后选择“重命名”。  
+5.  右键单击要重命名的索引，然后选择“重命名”  。  
   
 6.  键入索引的新名称，再按 Enter。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "63036203"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

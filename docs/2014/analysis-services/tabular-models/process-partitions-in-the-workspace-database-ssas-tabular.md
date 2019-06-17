@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15b9f9203075734dd84d7b601574f66bc401e700
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066798"
 ---
 # <a name="process-partitions-in-the-workspace-database-ssas-tabular"></a>工作区数据库 (SSAS 表格) 中处理分区
@@ -24,7 +24,7 @@ ms.locfileid: "66066798"
   
 ###  <a name="bkmk_create_new"></a> 处理分区  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，依次单击“模型”菜单、“处理”（“刷新”）和“处理分区”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，依次单击“模型”菜单、“处理”（“刷新”）和“处理分区”。     
   
 2.  在 **“模式”** 列表框中，选择以下处理模式之一：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66066798"
     |**处理清除**|删除分区中的所有数据。|  
     |**处理添加**|以增量方式用新数据更新分区。|  
   
-3.  在 **“处理”** 复选框列中，选择要用所选模式处理的分区，然后单击 **“确定”**。  
+3.  在 **“处理”** 复选框列中，选择要用所选模式处理的分区，然后单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [分区（SSAS 表格）](partitions-ssas-tabular.md)   

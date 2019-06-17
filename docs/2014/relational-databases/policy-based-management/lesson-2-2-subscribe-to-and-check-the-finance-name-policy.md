@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090687"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>订阅和检查 Finance Name 策略
@@ -58,9 +58,9 @@ ms.locfileid: "66090687"
   
 ### <a name="to-apply-the-policy-to-the-whole-server"></a>将策略应用于整个服务器  
   
-1.  当前，仅 Finance 数据库订阅了 Finance 策略类别。 在很多情况下，将策略类别应用于整个服务器会更容易一些。 在对象资源管理器中，展开“管理”，右键单击“策略管理”，然后单击“管理类别”。  
+1.  当前，仅 Finance 数据库订阅了 Finance 策略类别。 在很多情况下，将策略类别应用于整个服务器会更容易一些。 在对象资源管理器中，展开“管理”  ，右键单击“策略管理”  ，然后单击“管理类别”  。  
   
-2.  在“管理策略类别”对话框中，找到 Finance 类别，然后选中 Finance 类别的“托管数据库订阅”复选框。  
+2.  在“管理策略类别”  对话框中，找到 Finance 类别，然后选中 Finance 类别的“托管数据库订阅”  复选框。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 现在，Finance 类别会应用于所有数据库，但创建的条件会将 Finance Name 策略限定为 Finance 数据库。 这说明了如何使用复杂的条件组合限定策略目标，以便按适当的方式在多个服务器上正确应用策略。  
   

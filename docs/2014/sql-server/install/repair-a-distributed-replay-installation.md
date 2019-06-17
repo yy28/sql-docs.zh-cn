@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092958"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>修复 Distributed Replay 安装
@@ -32,7 +32,7 @@ ms.locfileid: "66092958"
   
 2.  选择[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中**卸载或更改程序**窗口中，然后在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]对话框中，单击**修复**。  
   
-3.  按照中的步骤[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]向导中，然后在**选择功能**页上，选择你想要修复，然后单击 Distributed Replay 组件**下一步**。  
+3.  按照中的步骤[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]向导中，然后在**选择功能**页上，选择你想要修复，然后单击 Distributed Replay 组件**下一步。** 。  
   
 4.  完成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导以修复选定的 Distributed Replay 功能。  
   

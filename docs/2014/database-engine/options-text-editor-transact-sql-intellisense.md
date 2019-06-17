@@ -16,14 +16,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd2cf2be2102aeed1c853ce1b9a198c2b196d26a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089822"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>选项 (文本编辑器-Transact-SQL-IntelliSense)
-  您可以使用 **“选项”** 对话框更改 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器的 IntelliSense 设置。 若要显示这些设置，请在“工具”菜单上单击“选项”，依次展开“文本编辑器”文件夹和“Transact-SQL”文件夹，然后单击“高级”。  
+  您可以使用 **“选项”** 对话框更改 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器的 IntelliSense 设置。 若要显示这些设置，请在“工具”  菜单上单击“选项”  ，依次展开“文本编辑器”  文件夹和“Transact-SQL”  文件夹，然后单击“高级”  。  
   
 ## <a name="transact-sql-intellisense-settings"></a>Transact-SQL IntelliSense 设置  
  指定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器的 IntelliSense 选项。  

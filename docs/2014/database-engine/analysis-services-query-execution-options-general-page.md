@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b2d8d7b20a7a3a5230d8441eb1f72f19e978eb4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065301"
 ---
 # <a name="analysis-services-query-execution-options-general-page"></a>Analysis Services 查询执行选项（“常规”页）
@@ -25,7 +25,7 @@ ms.locfileid: "66065301"
  **执行超时值**  
  指示在取消查询之前等待的秒数。 值 0 指示无限期的等待或无超时。  
   
- 重置为默认值  
+ 重置为默认值   
  将此页上的所有值重置为原始默认值。  
   
   

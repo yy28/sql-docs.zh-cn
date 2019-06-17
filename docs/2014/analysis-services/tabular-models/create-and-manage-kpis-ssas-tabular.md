@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067513"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>创建和管理 KPI（SSAS 表格）
@@ -39,34 +39,34 @@ ms.locfileid: "66067513"
   
 ###  <a name="bkmk_create_KPI"></a> 创建 KPI  
   
-1.  在度量值网格中，右键单击将充当基础度量值（值）的度量值，然后单击“创建 KPI”。  
+1.  在度量值网格中，右键单击将充当基础度量值（值）的度量值，然后单击“创建 KPI”  。  
   
 2.  在 **“关键绩效指标”** 对话框的 **“定义目标值”** 中，选择以下选项之一：  
   
-     选择 **“度量值”**，然后从列表框中选择一个目标度量值。  
+     选择 **“度量值”** ，然后从列表框中选择一个目标度量值。  
   
-     选择 **“绝对值”**，然后键入一个数值。  
+     选择 **“绝对值”** ，然后键入一个数值。  
   
 3.  在 **“定义状态阈值”** 中，单击并滑动阈值下限和上限。  
   
 4.  在 **“选择图标样式”** 中，单击某一图像类型。  
   
-5.  单击 **“说明”**，然后为“KPI”、“值”、“状态”和“目标”键入说明。  
+5.  单击 **“说明”** ，然后为“KPI”、“值”、“状态”和“目标”键入说明。  
   
 > [!TIP]  
 >  您可以使用“在 Excel 中分析”功能测试您的 KPI。 有关详细信息，请参阅本主题后面的 [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)中的“角色管理器”对话框定义角色的表格模型作者。  
   
 ###  <a name="bkmk_edit_KPI"></a> 编辑 KPI  
   
--   在度量值网格中，右键单击充当 KPI 的基础度量值（值）的度量值，然后单击“编辑 KPI 设置”。  
+-   在度量值网格中，右键单击充当 KPI 的基础度量值（值）的度量值，然后单击“编辑 KPI 设置”  。  
   
 ###  <a name="bkmk_delete"></a> 删除 KPI 和基础度量值  
   
--   在度量值网格中，右键单击充当 KPI 的基础度量值（值）的度量值，然后单击“删除”。  
+-   在度量值网格中，右键单击充当 KPI 的基础度量值（值）的度量值，然后单击“删除”  。  
   
 ###  <a name="bkmk_delete_KPI"></a> 删除 KPI 但保留基础度量值  
   
--   在度量值网格中，右键单击充当 KPI 的基础度量值（值）的度量值，然后单击“删除 KPI”。  
+-   在度量值网格中，右键单击充当 KPI 的基础度量值（值）的度量值，然后单击“删除 KPI”  。  
   
 ## <a name="alt-shortcuts"></a>ALT 快捷键  
   

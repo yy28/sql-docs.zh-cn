@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084378"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在依赖关系网络中查找特定节点
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 挖掘模型中的依赖关系网络可包含许多节点，因此很难找到您感兴趣的数据。 若要解决此问题，请使用数据挖掘设计器的 **“依赖关系网络”** 选项卡上的 **“查找节点”** 对话框来搜索特定节点。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 挖掘模型中的依赖关系网络可包含许多节点，因此很难找到您感兴趣的数据。 若要解决此问题，请使用数据挖掘设计器的 **“依赖关系网络”** 选项卡上的 **“查找节点”** 对话框来搜索特定节点。  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>在依赖关系网络中查找特定节点  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66084378"
   
      此时将筛选节点列表，只显示那些包含部分搜索路径的节点。  
   
-3.  从列表中选择正确的节点，然后单击 **“确定”**。  
+3.  从列表中选择正确的节点，然后单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)  

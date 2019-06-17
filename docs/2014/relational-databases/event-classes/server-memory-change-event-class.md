@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044152"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change 事件类
-   **Server Memory Change** 事件类在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存使用量增加或减少了 1 MB 或最大服务器内存的 5%（或更多）时出现。  
+  **Server Memory Change** 事件类在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存使用量增加或减少了 1 MB 或最大服务器内存的 5%（或更多）时出现。  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change 事件类的数据列  
   

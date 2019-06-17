@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059285"
 ---
 # <a name="event-handlers-tab"></a>“事件处理程序”选项卡
@@ -30,14 +30,14 @@ ms.locfileid: "66059285"
  选择事件处理程序的类型。 通过从 **“工具箱”** 中拖动相应项即可创建事件处理程序。  
   
  **删除**  
- 选择一个事件处理程序，再通过单击“删除”将其从包中删除。  
+ 选择一个事件处理程序，再通过单击“删除”  将其从包中删除。  
   
  **单击此处可创建\<事件处理程序名称 > 的可执行文件\<可执行文件名称 >**  
  单击此项可创建事件处理程序。  
   
  通过将代表 [!INCLUDE[ssIS](../includes/ssis-md.md)] 任务和容器的图形对象从 **“工具箱”** 拖至 **“事件处理程序”** 选项卡的设计图面，再通过使用优先约束定义其运行顺序来连接这些对象，即可创建控制流。  
   
- 此外，通过右键单击设计图面，然后在菜单上单击“添加批注”，以添加批注。  
+ 此外，通过右键单击设计图面，然后在菜单上单击“添加批注”  ，以添加批注。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services (SSIS) 事件处理程序](integration-services-ssis-event-handlers.md)   

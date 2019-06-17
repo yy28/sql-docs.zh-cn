@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060819"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>在数据流组件中配置错误输出
@@ -45,7 +45,7 @@ ms.locfileid: "66060819"
   
 5.  在 **“配置错误输出”** 对话框中，为组件输入中的每列在 **“错误”** 列和 **“截断”** 列中选择一个操作。  
   
-6.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
+6.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”** 。  
   
 #### <a name="to-add-an-error-output-using-the-editor-dialog-box-for-the-component"></a>使用组件的编辑器对话框添加错误输出  
   
@@ -57,17 +57,17 @@ ms.locfileid: "66060819"
   
 4.  双击要在其中配置错误输出的数据流组件，然后根据不同组件，执行下列步骤之一：  
   
-    -   单击 **“配置错误输出”**。  
+    -   单击 **“配置错误输出”** 。  
   
-    -   单击 **“错误输出”**。  
+    -   单击 **“错误输出”** 。  
   
 5.  为每列设置 **“错误”** 选项。  
   
 6.  为每列设置 **“截断”** 选项。  
   
-7.  单击“确定” 。  
+7.  单击“确定”  。  
   
-8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
+8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”** 。  
   
 ## <a name="configuring-error-output-columns"></a>配置错误输出列  
  若要配置错误输出列，必须使用 **“高级编辑器”** 对话框中的 **“输入属性和输出属性”** 选项卡。  
@@ -80,9 +80,9 @@ ms.locfileid: "66060819"
   
 3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击 **“数据流”** 选项卡。  
   
-4.  右键单击要配置其错误输出列的组件，再单击“显示高级编辑器”。  
+4.  右键单击要配置其错误输出列的组件，再单击“显示高级编辑器”  。  
   
-5.  单击“输入和输出属性”选项卡并展开“\<组件名称> 错误输出”，然后展开“输出列”。  
+5.  单击“输入和输出属性”  选项卡并展开“\<组件名称> 错误输出”  ，然后展开“输出列”  。  
   
 6.  单击某列，然后更新其属性。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66060819"
   
 7.  单击“确定” **。**  
   
-8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
+8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [数据中的错误处理](data-flow/error-handling-in-data.md)  

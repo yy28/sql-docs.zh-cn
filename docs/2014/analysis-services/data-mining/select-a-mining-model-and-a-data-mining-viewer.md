@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4da674a33d71655b161820cacbfd7ce2f16232af
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082881"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>选择挖掘模型和数据挖掘查看器
   可以使用数据挖掘设计器的 **“挖掘模型查看器”** 选项卡中的一种查看器来浏览挖掘模型。 可以轻松切换模型或更改使用的浏览器。  
   
--   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘模型查看器”选项卡上，“挖掘模型”下拉列表框包含当前挖掘结构中的所有挖掘模型的列表。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘模型查看器”  选项卡上，“挖掘模型”  下拉列表框包含当前挖掘结构中的所有挖掘模型的列表。  
   
 -   为每种模型类型提供自定义查看器。 有关所有自定义查看器的概述，请参阅[挖掘模型查看器（数据挖掘模型设计器）](../mining-model-viewers-data-mining-model-designer.md)。 有关如何使用自定义查看器来了解模型的演练，请参阅[第 4 课：浏览 Targeted 的 Mailing 模型&#40;数据挖掘基础教程&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)。  
   

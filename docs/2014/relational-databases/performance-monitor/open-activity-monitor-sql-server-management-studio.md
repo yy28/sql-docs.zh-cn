@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032001"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>打开活动监视器 (SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "63032001"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **若要设置刷新间隔使用：**[SQL Server Management Studio](#Refresh)  
+-   **若要设置刷新间隔使用：** [SQL Server Management Studio](#Refresh)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  活动监视器将在被监视的实例上运行查询以获取有关活动监视器显示窗格的信息。 当刷新间隔设置为小于 10 秒时，运行这些查询所用的时间可能会对服务器性能产生影响。  
@@ -51,9 +51,9 @@ ms.locfileid: "63032001"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>打开 SQL Server Management Studio 中的活动监视器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 标准工具栏上，单击 **“活动监视器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 标准工具栏上，单击 **“活动监视器”** 。  
   
-2.  在 **“连接到服务器”** 对话框中，选择服务器名和身份验证模式，然后单击 **“连接”**。  
+2.  在 **“连接到服务器”** 对话框中，选择服务器名和身份验证模式，然后单击 **“连接”** 。  
   
  还可随时通过按 CTRL+ALT A 打开活动监视器。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "63032001"
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>在打开 SQL Server Management Studio 时打开活动监视器  
   
-1.  在“工具”  菜单上，单击“选项” 。  
+1.  在“工具”  菜单上，单击“选项”  。  
   
-2.  在 **“选项”** 对话框中，展开 **“环境”**，再选择 **“常规”**。  
+2.  在 **“选项”** 对话框中，展开 **“环境”** ，再选择 **“常规”** 。  
   
-3.  在 **“启动时”** 框中，选择 **“打开对象资源管理器和活动监视器”**。  
+3.  在 **“启动时”** 框中，选择 **“打开对象资源管理器和活动监视器”** 。  
   
 4.  若要激活更改，请先关闭再重新打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
@@ -75,6 +75,6 @@ ms.locfileid: "63032001"
   
 -   打开活动监视器。  
   
--   右键单击“概述”，选择“刷新间隔”，然后选择活动监视器获取新实例信息所用的间隔。  
+-   右键单击“概述”  ，选择“刷新间隔”  ，然后选择活动监视器获取新实例信息所用的间隔。  
   
   

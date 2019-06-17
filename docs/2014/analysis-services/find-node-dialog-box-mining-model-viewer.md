@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c202ae84546cfdfde917a3d4ff9d98df74d7afd6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081143"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>“查找节点”对话框（挖掘模型查看器）
@@ -29,10 +29,10 @@ ms.locfileid: "66081143"
  键入节点名称的部分文本可获取包含该文本的所有节点的列表。 不支持正则表达式；默认情况下，搜索将使用通配符。  
   
  **Node list**  
- 显示包含在“节点名包含”中键入的文本的节点的列表。  
+ 显示包含在“节点名包含”  中键入的文本的节点的列表。  
   
  **确定**  
- 选择节点列表中的节点，再单击“确定”。 此时，将关闭该对话框，并在查看器中突出显示所选节点。  
+ 选择节点列表中的节点，再单击“确定”  。 此时，将关闭该对话框，并在查看器中突出显示所选节点。  
   
 ## <a name="see-also"></a>请参阅  
  [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   

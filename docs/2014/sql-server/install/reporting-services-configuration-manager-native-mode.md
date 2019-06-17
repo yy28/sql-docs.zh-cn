@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: bbd786485915405de36511f5710e3490bdfd8a3f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092662"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
@@ -112,13 +112,13 @@ ms.locfileid: "66092662"
   
     -   从 Windows“开始”屏幕上，键入 **Reporting** ，然后从搜索结果中选择 **“Reporting Services 配置管理器”** 。  
   
-    -   单击 **“开始”**，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]和 **“配置工具”**。  
+    -   单击 **“开始”** ，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]和 **“配置工具”** 。  
   
          如果要从先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中配置报表服务器实例，请打开此版本的程序文件夹。 例如，在打开 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 服务器组件的配置工具时，应指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 而非 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
   
-         单击 **“Reporting Services 配置管理器”**。  
+         单击 **“Reporting Services 配置管理器”** 。  
   
-2.  此时将出现 **“Reporting Services 配置连接”** 对话框，可以选择要配置的报表服务器实例。 单击 **“连接”**。  
+2.  此时将出现 **“Reporting Services 配置连接”** 对话框，可以选择要配置的报表服务器实例。 单击 **“连接”** 。  
   
 3.  在 **“服务器名称”** 中，指定安装报表服务器实例的计算机的名称。 默认情况下，将显示本地计算机的名称，但如果要连接到安装在远程计算机上的报表服务器，则可以键入远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66092662"
   
 5.  在 **Report Server 在stance**中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 在列表中只显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
-6.  单击 **“连接”**。  
+6.  单击 **“连接”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [报表管理器（SSRS 本机模式）](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

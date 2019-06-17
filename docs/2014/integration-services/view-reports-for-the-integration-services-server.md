@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054552"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>查看 Integration Services 服务器的报告
@@ -24,7 +24,7 @@ ms.locfileid: "66054552"
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，展开对象资源管理器中的 **“Integration Services 目录”** 节点。  
   
-2.  右键单击“SSISDB”，单击“报表”，然后单击“标准报表”。  
+2.  右键单击“SSISDB”  ，单击“报表”  ，然后单击“标准报表”  。  
   
 3.  单击以下一个或多个选项以查看报告。  
   

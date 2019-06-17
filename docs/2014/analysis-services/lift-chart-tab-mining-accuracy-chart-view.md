@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078094"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>“提升图”选项卡（“挖掘准确性图表”视图）
@@ -32,10 +32,10 @@ ms.locfileid: "66078094"
   
 ## <a name="options"></a>选项  
  **图表类型**  
- 设置要在查看器中显示的图表的类型。 您可以选择 **“提升图”** 或 **“利润图”**。  
+ 设置要在查看器中显示的图表的类型。 您可以选择 **“提升图”** 或 **“利润图”** 。  
   
  **设置**  
- 打开“利润图设置”对话框，可以使用该对话框来配置利润图。  
+ 打开“利润图设置”对话框，可以使用该对话框来配置利润图。   
   
  如果在 **“列映射”** 选项卡中选择了连续的可预测列，则利润图不可用。  
   

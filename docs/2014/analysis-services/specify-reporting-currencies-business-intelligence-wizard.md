@@ -13,21 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068213"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>指定报表货币（商业智能向导）
-  使用“定义报表货币”页为货币换算功能定义报表货币，该功能涵盖“选择换算类型”页中指定的多对多或一对多换算类型。 （报表货币是换算“选择度量值”页中所选度量值时使用的货币。）从货币维度中选择的成员可以为商业智能向导所生成的货币换算定义报表货币维度_。  
+  使用“定义报表货币”  页为货币换算功能定义报表货币，该功能涵盖“选择换算类型”  页中指定的多对多或一对多换算类型。 （报表货币是换算“选择度量值”  页中所选度量值时使用的货币。）从货币维度中选择的成员可以为商业智能向导所生成的货币换算定义报表货币维度_。  
   
 > [!NOTE]  
->  如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中右键单击维度启动了商业智能向导，则将不会显示此页。 如果在“选择换算类型”页中选择了“多对一”，那么将不会显示此页。  
+>  如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中右键单击维度启动了商业智能向导，则将不会显示此页。 如果在“选择换算类型”  页中选择了“多对一”  ，那么将不会显示此页。  
   
 ## <a name="options"></a>选项  
  **报表货币**  
- 选择“报表货币”可以将报表货币维度中货币维度所列出的所有成员都包括在内。 清除 **“报表货币”** 可以排除所有列出的成员。  
+ 选择“报表货币”  可以将报表货币维度中货币维度所列出的所有成员都包括在内。 清除 **“报表货币”** 可以排除所有列出的成员。  
   
  选择特定的成员，将其包括在报表货币维度中。 清除特定的成员，将其排除在外。  
   

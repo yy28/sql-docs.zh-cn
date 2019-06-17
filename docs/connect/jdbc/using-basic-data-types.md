@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8aa3b6b211095f3c27693928dab6518a6a2e895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759405"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790089"
 ---
 # <a name="using-basic-data-types"></a>使用基本数据类型
 
@@ -51,10 +51,10 @@ ms.locfileid: "47759405"
 | REAL               | real                                               | FLOAT                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | SMALLINT           | SMALLINT                                           | short                        |
-| smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
+| SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
-| timestamp          | BINARY                                             | byte[]                       |
+| TIMESTAMP          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
 | UNIQUEIDENTIFIER   | CHAR                                               | String                       |
@@ -67,11 +67,11 @@ ms.locfileid: "47759405"
 | geometry           | VARBINARY                                          | byte[]                       |
 | 地理          | VARBINARY                                          | byte[]                       |
   
-(1) 若要将 java.sql.Time 与时间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型一起使用，必须将 sendTimeAsDatetime 连接属性设置为 false。  
+(1) 若要将 java.sql.Time 与时间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型一起使用，必须将 sendTimeAsDatetime 连接属性设置为 false  。  
   
 （2） 您可以以编程方式访问的值**datetimeoffset**与[DateTimeOffset 类](../../connect/jdbc/reference/datetimeoffset-class.md)。  
   
-以下几部分提供了如何使用 JDBC 驱动程序和基本数据类型的实例。 有关如何在 Java 应用程序中使用基本数据类型的更多详细示例，请参阅[基本数据类型示例](../../connect/jdbc/basic-data-types-sample.md)。  
+以下几部分提供了如何使用 JDBC 驱动程序和基本数据类型的示例。 有关如何在 Java 应用程序中使用基本数据类型的更多详细示例，请参阅[基本数据类型示例](../../connect/jdbc/basic-data-types-sample.md)。  
   
 ## <a name="retrieving-data-as-a-string"></a>以字符串的格式检索数据
 
@@ -81,7 +81,7 @@ ms.locfileid: "47759405"
   
 ## <a name="retrieving-data-by-data-type"></a>按数据类型检索数据
 
-如果必须从数据源检索数据，并且已知检索的数据类型，则应使用 SQLServerResultSet 类的任一 get\<Type> 方法（也称为 Getter 方法）。 通过 get\<Type> 方法，可以使用列名或列索引，如下所示：  
+如果必须从数据源检索数据，并且已知检索的数据类型，则应使用 SQLServerResultSet 类的任一 get\<Type> 方法（也称为 Getter 方法）  。 通过 get\<Type> 方法，可以使用列名或列索引，如下所示：  
   
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47759405"
   
 ## <a name="updating-data-by-parameterized-query"></a>通过参数化查询来更新数据
 
-如果必须通过使用参数化查询来更新数据源中的数据，可以使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的任一 set\<Type> 方法（也称为 setter 方法）来设置参数的数据类型。 在下面的示例中，[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 方法用于预编译参数化查询，然后在调用 [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) 方法前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) 方法来设置参数的字符串值。  
+如果必须通过使用参数化查询来更新数据源中的数据，可以使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的任一 set\<Type> 方法（也称为 setter 方法）来设置参数的数据类型  。 在下面的示例中，[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 方法用于预编译参数化查询，然后在调用 [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) 方法前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) 方法来设置参数的字符串值。  
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   

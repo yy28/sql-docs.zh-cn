@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089133"
 ---
 # <a name="options-text-editorxmltabs-page"></a>选项（“文本编辑器”:“XML”:“选项卡”页）
-  此对话框支持您更改 XML 编辑器（用于编辑 XML 文档）的跳格行为。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，展开 **“文本编辑器”** 文件夹，展开 **XML** 子文件夹，再单击 **“制表符”**。  
+  此对话框支持您更改 XML 编辑器（用于编辑 XML 文档）的跳格行为。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，展开 **“文本编辑器”** 文件夹，展开 **XML** 子文件夹，再单击 **“制表符”** 。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多个位置设置选项  
  XML 编辑器的选项也可在“所有语言”和“常规”对话框中设置。  如果使用 **“所有语言”** 对话框来设置其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 编辑器（例如 DMX 或 MDX 编辑器）的其他选项，则必须使用此对话框重置 XML 编辑器选项。  

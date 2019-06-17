@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c791c0c00681fcc28cfb025c8108443bbb9e12a2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063209"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>在对象资源管理器中查看空间数据
@@ -29,12 +29,12 @@ ms.locfileid: "66063209"
   
 2.  从 **“选择空间列”** 列表中选择要查看的列。 如果表中只有一个空间列，则此列是列表中的默认选项。  
   
-3.  从“选择标签列”列表中选择要用作数据标签的非空间列。  
+3.  从“选择标签列”  列表中选择要用作数据标签的非空间列。  
   
 4.  从 **“选择投影”** 列表中选择地域数据所需的投影。 默认投影为 Equirectangular；其他可用投影为 Mercator、Robinson 或 Bonne。  
   
     > [!NOTE]  
-    >  如果空间列中包含几何图形数据，则“选择投影” 不可用。  
+    >  如果空间列中包含几何图形数据，则“选择投影”  不可用。  
   
 5.  调整 **“缩放”** 滑块可增加映射元素的可视大小。 对于多边形形状，仅当形状大到能够容纳标签文本时，标签才可见。  
   

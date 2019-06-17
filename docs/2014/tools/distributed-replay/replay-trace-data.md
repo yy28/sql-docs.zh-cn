@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149899"
 ---
 # <a name="replay-trace-data"></a>重播跟踪数据
@@ -37,7 +37,7 @@ ms.locfileid: "63149899"
   
     2.  在新的配置文件中修改重播配置设置。  
   
-    3.  启动事件重播阶段（下一步）时，使用“重播”选项的 *config_file* 参数指定修改后的配置文件的位置。  
+    3.  启动事件重播阶段（下一步）时，使用“重播”  选项的 *config_file* 参数指定修改后的配置文件的位置。  
   
      有关重播配置文件的详细信息，请参阅 [配置分布式重播](configure-distributed-replay.md)。  
   

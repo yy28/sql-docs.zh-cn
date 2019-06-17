@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 335fe6deeb3d89483f5f5adb040b0788891053cd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074951"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授予数据库权限 (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "66074951"
   
  在数据库级别可指定三种类型的权限。  
   
- “完全控制（管理员）”- 完全控制是一种包罗万象的权限，它通过 Analysis Services 数据库传达了广泛的功能，比如：在数据库内查询或处理任何对象的功能以及管理角色安全的功能。 完全控制与数据库管理员状态同义。 当选择 `Full Control` 时，`Process Database` 和 `Read Definition` 权限也被选择，并且不能被移除。  
+ “完全控制（管理员）”- 完全控制是一种包罗万象的权限，它通过 Analysis Services 数据库传达了广泛的功能，比如：在数据库内查询或处理任何对象的功能以及管理角色安全的功能。  完全控制与数据库管理员状态同义。 当选择 `Full Control` 时，`Process Database` 和 `Read Definition` 权限也被选择，并且不能被移除。  
   
 > [!NOTE]  
 >  服务器管理员（服务器管理员角色成员）对服务器上的每个数据库也具有隐式完全控制。  
@@ -65,7 +65,7 @@ ms.locfileid: "66074951"
   
 2.  在“常规”  窗格中，输入名称（例如：DBAdmin）。  
   
-3.  为多维数据集选择“完全控制(管理员)”复选框。 请注意，`Process Database` 和 `Read Definition` 被自动选择。 这些权限始终包含在包括了 `Full Control` 的角色中。  
+3.  为多维数据集选择“完全控制(管理员)”复选框。  请注意，`Process Database` 和 `Read Definition` 被自动选择。 这些权限始终包含在包括了 `Full Control` 的角色中。  
   
 4.  在“成员身份”  窗格中，输入使用此角色连接到 Analysis Services 的 Windows 用户和组帐户。  
   

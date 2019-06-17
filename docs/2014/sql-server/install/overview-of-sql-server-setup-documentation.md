@@ -11,17 +11,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093562"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>SQL Server 安装文档概述
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装文档以安装介质和在线两种方式提供。  
   
 ## <a name="documentation-available-during-setup"></a>在安装过程中提供的文档  
- 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的过程中，单击安装向导页上的“帮助”按钮，或在键盘上按 F1 键，即可立即了解完成该操作所需的信息。  
+ 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的过程中，单击安装向导页上的“帮助”  按钮，或在键盘上按 F1 键，即可立即了解完成该操作所需的信息。  
   
 ## <a name="overview-of-includessnoversionincludesssnoversion-mdmd-installation-topics"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装概述主题  
  无论您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导还是命令提示符来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，都最好通过阅读以下部分来做好准备：  

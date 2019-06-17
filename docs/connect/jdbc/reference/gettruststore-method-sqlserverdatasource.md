@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 561148cb1492457c4528bd1fdbf60e66233c6b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2af5dfa8b6f4fc5c509af26209962a246372bd3d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708865"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786103"
 ---
 # <a name="gettruststore-method-sqlserverdatasource"></a>getTrustStore 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.lang.String getTrustStore()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含指向证书 trustStore 文件路径（包括文件名）的字符串；如果未设置值，则为 Null。  
+ 包含指向证书 trustStore 文件路径（包括文件名）的字符串  ；如果未设置值，则为 Null。  
   
 ## <a name="remarks"></a>Remarks  
  如果未设置 trustStore 属性，[getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md) 方法将返回 Null。  

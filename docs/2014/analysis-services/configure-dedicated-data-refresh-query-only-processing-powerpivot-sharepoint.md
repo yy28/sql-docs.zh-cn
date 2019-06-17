@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087513"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>配置专用数据刷新或仅限查询的处理 (PowerPivot for SharePoint)
@@ -33,9 +33,9 @@ ms.locfileid: "66087513"
   
 ##  <a name="config"></a> 配置处理模式  
   
-1.  在管理中心的“系统设置”中，单击 **“管理服务器上的服务”**。  
+1.  在管理中心的“系统设置”中，单击 **“管理服务器上的服务”** 。  
   
-2.  在本页顶部的“服务器”中，单击下箭头，然后单击 **“更改服务器”**。  
+2.  在本页顶部的“服务器”中，单击下箭头，然后单击 **“更改服务器”** 。  
   
 3.  选择具有您要配置的 Analysis Services 服务器实例的 SharePoint 服务器。  
   

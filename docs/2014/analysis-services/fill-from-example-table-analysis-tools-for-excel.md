@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081321"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>从示例填充（Excel 表分析工具）
@@ -41,9 +41,9 @@ ms.locfileid: "66081321"
   
      例如，如果根据经验，您知道一列和包含缺失值的列之间存在因果关系，您可以取消选择其他列，以获得更佳结果。  
   
-     单击“确定” 。  
+     单击“确定”  。  
   
-5.  单击 **“运行”**。  
+5.  单击 **“运行”** 。  
   
      分析完成后，该工具创建一个新**模式**包含分析结果的工作表。 报表列出找到的规则或关键影响因素，并显示每个规则的概率。  
   

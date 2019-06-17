@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079622"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重命名 Analysis Services 实例
@@ -41,7 +41,7 @@ ms.locfileid: "66079622"
   
 3.  在 **“新实例名”** 框中，输入实例的新名称。  
   
-4.  验证用户名和密码是否正确，然后单击 **“重命名”**。  
+4.  验证用户名和密码是否正确，然后单击 **“重命名”** 。  
   
      在名称更改过程中，Analysis Services 实例将会停止并重新启动。  
   

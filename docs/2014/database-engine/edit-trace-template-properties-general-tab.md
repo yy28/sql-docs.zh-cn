@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064903"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>编辑“跟踪模板属性”（“常规”选项卡）
-  通过使用下列选项，使用 **“跟踪模板属性”** 的 **“常规”** 选项卡可以查看或编辑现有跟踪模板。 要访问此对话框，请在[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]“文件”菜单上，指向“模板”，再单击“编辑模板”。  
+  通过使用下列选项，使用 **“跟踪模板属性”** 的 **“常规”** 选项卡可以查看或编辑现有跟踪模板。 要访问此对话框，请在[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]“文件”菜单上，指向“模板”，再单击“编辑模板”    。  
   
 ## <a name="options"></a>选项  
  **选择服务器类型**  

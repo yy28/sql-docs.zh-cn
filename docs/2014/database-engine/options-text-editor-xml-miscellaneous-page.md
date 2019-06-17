@@ -11,22 +11,22 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089211"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>选项（“文本编辑器”-“XML”-“杂项”页）
 
-使用“选项”对话框，可以更改 XML 编辑器的自动完成设置和架构设置。 若要使用这些设置，请在“工具”菜单上单击“选项”，展开“文本编辑器”文件夹，单击“XML”，再单击“杂项”。  
+使用“选项”  对话框，可以更改 XML 编辑器的自动完成设置和架构设置。 若要使用这些设置，请在“工具”  菜单上单击“选项”  ，展开“文本编辑器”文件夹  ，单击“XML”  ，再单击“杂项”  。  
   
 ## <a name="auto-insert"></a>自动插入  
  **关闭标记**  
  文本编辑器在创建 XML 元素时将添加关闭标记。 如果选择了元素开始标记，该编辑器将插入匹配的关闭标记，包括匹配的命名空间前缀。 默认情况下，此复选框为选中状态。  
   
  **属性引号**  
- 创建 XML 属性时，编辑器将插入 `="``"` 字符并将插入号 (**^** ) 置于引号内。 默认情况下，此复选框为选中状态。  
+ 创建 XML 属性时，编辑器将插入 `="``"` 字符并将插入号 ( **^** ) 置于引号内。 默认情况下，此复选框为选中状态。  
   
  **Namespace 声明**  
  文本编辑器将在需要的位置自动插入命名空间声明。 默认情况下，此复选框为选中状态。  

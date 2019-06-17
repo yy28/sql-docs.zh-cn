@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058424"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 任务编辑器（“常规”页）
@@ -28,7 +28,7 @@ ms.locfileid: "66058424"
   
 ## <a name="options"></a>选项  
  **FtpConnection**  
- 选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
+ 选择现有 FTP 连接管理器，或单击“\<新建连接...>”  以创建连接管理器。  
   
 > [!IMPORTANT]  
 >  FTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be197521f64697973684728290422abd5e64fdca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 96746297f7ff083665c1ef79a0b672cb8c4bb124
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731685"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773052"
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47731685"
   
 ## <a name="constructors"></a>构造函数  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|初始化 SQLServerBlob 类的新实例。|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47731685"
   
 ## <a name="methods"></a>方法  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|此方法可释放 BLOB 对象以及它所持有的资源。|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|返回一个用于从 BLOB 中读取数据的输入流。|  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6affbe5c-e836-4195-a3ba-1892cbf81907
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b2894c91caf18c9719912e2db2562e78be0fff1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f4d695c8c3d81786bdc931d576a701a7b54746a0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665025"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762539"
 ---
 # <a name="getsavepointname-method-sqlserversavepoint"></a>getSavepointName 方法 (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.lang.String getSavepointName()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含保存点名称的 String。  
+ 包含保存点名称的 String  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9cea65df353bfd207f54f7ab4d5408491ab1d042
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a2060defebee30d7f31d33fa8ada069095780c39
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726405"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769824"
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML 数据类型示例
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 示例应用程序说明如何在关系数据库中存储 XML 数据，如何从数据库中检索 XML 数据，以及如何使用 SQLXML Java 数据类型分析 XML 数据。
+此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 示例应用程序说明如何在关系数据库中存储 XML 数据，如何从数据库中检索 XML 数据，以及如何使用 SQLXML Java 数据类型分析 XML 数据  。
 
 本部分中的代码示例使用 Simple API for XML (SAX) 分析器。 SAX 是一种公开制定的标准，用于对 XML 文档进行基于事件的分析。 它还提供了一个用于处理 XML 数据的应用程序编程接口。 请注意，应用程序也可以使用其他任何 XML 分析器，例如，文档对象模型 (DOM) 或 Streaming API for XML (StAX) 等。
 
@@ -55,7 +55,7 @@ ExampleContentHandler 类实现一个自定义内容处理程序，该处理程�
 
 showGetters 方法演示如何使用 SAX、ContentHandler 和 XMLReader 分析 SQLXML 对象中的数据。 首先，该代码示例会创建一个自定义内容处理程序的实例，即 ExampleContentHandler。 接下来，创建和执行一个 SQL 语句，该语句从 TestTable1 返回一组数据。 然后，代码示例获取 SAX 分析器并分析 XML 数据。
 
-showSetters 方法演示如何使用 SAX、ContentHandler 和 ResultSet 设置 xml 列。 首先，它使用 Connection 类的 [createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建一个空的 SQLXML 对象。 然后，获取内容处理程序的一个实例以便向 SQLXML 对象中写入数据。 接下来，代码示例向 TestTable1 中写入数据。 最后，示例代码循环访问结果集中的数据行，并使用 [getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法读取 XML 数据。
+showSetters 方法演示如何使用 SAX、ContentHandler 和 ResultSet 设置 xml 列  。 首先，它使用 Connection 类的 [createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建一个空的 SQLXML 对象。 然后，获取内容处理程序的一个实例以便向 SQLXML 对象中写入数据。 接下来，代码示例向 TestTable1 中写入数据。 最后，示例代码循环访问结果集中的数据行，并使用 [getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法读取 XML 数据。
 
 showTransformer 方法演示如何使用 SAX 和 Transformer 从一个表中获取 XML 数据，然后将该 XML 数据插入另一个表中。 首先，从 TestTable1 中检索源 SQLXML 对象。 然后，使用 Connection 类的 [createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法创建一个空的目标 SQLXML 对象。 接下来，更新目标 SQLXML 对象，并将 XML 数据写入 TestTable2。 最后，示例代码将循环访问结果集中的数据行，并使用 [getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法读取 TestTable2 中的 XML 数据。
 

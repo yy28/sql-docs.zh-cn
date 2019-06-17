@@ -14,16 +14,16 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061285"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上传任务
 “Azure SQL DW 上传任务”  使 SSIS 包可将本地数据上传到 Azure SQL 数据仓库 (DW) 中的表。 当前支持的源数据文件格式是采用 UTF8 编码的带分隔符的文本。 上传过程将按照高效的 PolyBase 方法。 具体而言，数据首先将上传到 Azure Blob 存储，然后上传到 Azure SQL DW。 因此，需要 Azure Blob 存储帐户才可使用此任务。
 
-若要添加“Azure SQL DW 上传任务” ，请将其从 SSIS 工具栏拖放到设计器画布中，双击或右键单击它，然后单击“编辑”  ，查看任务编辑器对话框。
+若要添加“Azure SQL DW 上传任务”  ，请将其从 SSIS 工具栏拖放到设计器画布中，双击或右键单击它，然后单击“编辑”  ，查看任务编辑器对话框。
 
 在“常规”  页上配置以下属性。
 
@@ -42,7 +42,7 @@ RetainFiles|指定是否保留已上传到 Azure 存储的文件。
 CompressionType|指定将文件上传到 Azure 存储时使用的压缩格式。 本地源不受影响。
 CompressionLevel|指定用于压缩格式的压缩级别。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 连接管理器。
-TableName|指定目标表的名称。 可选择现有的表名称，或通过选择“\<新建表...>”创建一个新表。
+TableName|指定目标表的名称。 可选择现有的表名称，或通过选择“\<新建表...>”  创建一个新表。
 TableDistribution|指定新表的分发方法。 已为 **TableName**指定新的表名称时适用。
 HashColumnName|指定用于哈希表分发的列。 已为 **TableDistribution** 指定 **HASH**时适用。
 

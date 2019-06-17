@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062847"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>“高级数据源视图选项”对话框（数据源视图向导）(Analysis Services)
   可以使用 **“高级数据源视图选项”** 对话框，进一步控制数据源视图如何从数据源中请求架构和关系以生成视图。  
   
- 若要打开 **“高级数据源视图选项”** 对话框，请在数据源视图向导中的 **“选择数据源”** 页上，单击 **“高级”**。  
+ 若要打开 **“高级数据源视图选项”** 对话框，请在数据源视图向导中的 **“选择数据源”** 页上，单击 **“高级”** 。  
   
 ## <a name="options"></a>选项  
  **检索关系**  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: db6467b21f84a80bb14a5e6ccad30e16d7cfb584
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63180409"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>将通知类用于传递扩展插件
@@ -35,7 +35,7 @@ ms.locfileid: "63180409"
  有关如何使用 <xref:Microsoft.ReportingServices.Interfaces.Notification> 类的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="retry-functionality"></a>重试功能  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 允许您为无法立即传递的通知创建重试队列。 在报表服务器调用某一传递扩展插件的 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> 方法后，该传递扩展可以请求报表服务器在以后的某个时间点重试该传递。 如果发生此情况，则报表服务器将把通知置于内部队列中，并且在经过了特定的时间段后重试该传递。 管理员可以使用 MaxNumberOfRetries XML 元素和 PeriodBetweenRetries XML 元素，在 RSReportServer.config 文件的传递扩展插件部分中配置报表服务器执行的重试尝试的最大次数以及两次重试之间的时间段。 如果传递在以后成功，或者达到最大重试尝试数目，则通知将从重试队列中删除。 如果传递在尝试了最大重试数目后仍失败，则通知将被放弃。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 允许您为无法立即传递的通知创建重试队列。 在报表服务器调用某一传递扩展插件的 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> 方法后，该传递扩展可以请求报表服务器在以后的某个时间点重试该传递。 如果发生此情况，则报表服务器将把通知置于内部队列中，并且在经过了特定的时间段后重试该传递。 管理员可以使用 MaxNumberOfRetries XML 元素和 PeriodBetweenRetries XML 元素，在 RSReportServer.config 文件的传递扩展插件部分中配置报表服务器执行的重试尝试的最大次数以及两次重试之间的时间段   。 如果传递在以后成功，或者达到最大重试尝试数目，则通知将从重试队列中删除。 如果传递在尝试了最大重试数目后仍失败，则通知将被放弃。  
   
 ## <a name="see-also"></a>请参阅  
  [实现传递扩展插件](../delivery-extension/implementing-a-delivery-extension.md)   

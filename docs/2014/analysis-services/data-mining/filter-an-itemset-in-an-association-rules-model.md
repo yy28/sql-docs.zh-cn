@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084360"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>在关联规则模型中筛选项集
@@ -30,7 +30,7 @@ ms.locfileid: "66084360"
   
 2.  在 **“筛选项集”** 框中输入规则条件。 例如，规则条件可以为“Touring-1000 = existing”  
   
-3.  单击 **“输入”**。  
+3.  单击 **“输入”** 。  
   
  现在便对项集进行了筛选以仅显示包含所选项的那些项集。 该框不区分大小写。 筛选器存储在内存中，因此您可以从列表中选择过去使用的筛选器。  
   

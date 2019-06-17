@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d79989e37483342e5cc1624a0529f9df98ae980
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064284"
 ---
 # <a name="add-transact-sql-snippets"></a>添加 Transact-SQL 代码段
@@ -23,7 +23,7 @@ ms.locfileid: "66064284"
 ## <a name="creating-a-transact-sql-snippet-file"></a>创建 Transact-SQL 代码段文件  
  创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的第一步是创建具有您的代码段文本的 XML 文件。 该文件必须具有 .snippet 文件扩展名，并且必须满足 [代码段架构](https://go.microsoft.com/fwlink/?LinkId=207504)的要求。 将代码段语言设置为 SQL。  
   
- 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 随附的预定义代码段作为示例。 若要找到预定义的代码段，请打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“工具”菜单，然后单击“代码段管理器”。 在 **“语言”** 列表框中选择 **SQL** ，指向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的路径将显示在 **“位置”** 框中。  
+ 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 随附的预定义代码段作为示例。 若要找到预定义的代码段，请打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“工具”  菜单，然后单击“代码段管理器”  。 在 **“语言”** 列表框中选择 **SQL** ，指向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的路径将显示在 **“位置”** 框中。  
   
 ## <a name="registering-the-code-snippet"></a>注册代码段  
  在创建代码段文件后，使用代码段管理器向 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]注册该代码段。 您可以添加包含多个代码段的文件夹，或者将单独的代码段导入到 **“我的代码段”** 文件夹中。  
@@ -34,7 +34,7 @@ ms.locfileid: "66064284"
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”**。  
+2.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”** 。  
   
 3.  单击 **“添加”** 按钮。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66064284"
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”**。  
+2.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”** 。  
   
 3.  单击 **“导入”** 按钮。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66064284"
   
 2.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-3.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”**。  
+3.  选择 **“工具”** 菜单，然后单击 **“代码段管理器”** 。  
   
 4.  单击 **“导入”** 按钮。  
   

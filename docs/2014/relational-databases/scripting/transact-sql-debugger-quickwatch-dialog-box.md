@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9fcb20846ba21876044d50c80856600214eed354
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063389"
 ---
 # <a name="quickwatch-dialog-box"></a>“快速监视”对话框
@@ -27,7 +27,7 @@ ms.locfileid: "66063389"
 ## <a name="task-list"></a>任务列表  
  **访问“快速监视”对话框**  
   
--   在 **“调试”** 菜单上，单击 **“快速监视”**。  
+-   在 **“调试”** 菜单上，单击 **“快速监视”** 。  
   
  **查看有关表达式的信息**  
   
@@ -43,15 +43,15 @@ ms.locfileid: "66063389"
   
     -   返回单个值的 Transact-SQL 语句，例如：SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
   
-2.  单击 **“重新计算”**。  
+2.  单击 **“重新计算”** 。  
   
  **将“快速监视”表达式添加到“监视”窗口**  
   
--   单击 **“添加监视”**。  
+-   单击 **“添加监视”** 。  
   
  **更改“快速监视”表达式的值**  
   
--   右键单击表达式，然后选择“编辑值”。  
+-   右键单击表达式，然后选择“编辑值”  。  
   
 ## <a name="options"></a>选项  
  **表达式列表**  
@@ -68,7 +68,7 @@ ms.locfileid: "66063389"
   
  如果表达式的长度超过了 **“值”** 列的宽度，则将指针移动到该表达式的 **“值”** 单元格上方可显示一条工具提示，指示该表达式的完整值。  
   
- **“值”** 单元格中的放大镜图标指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器可视化工具可用。 在该列表中，可以指定 **“文本可视化工具”**、 **“XML 可视化工具”** 或 **“HTML 可视化工具”**。 若要启动调试器可视化工具，请单击此放大镜图标。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器将打开一个对话框，该对话框以适合相应数据类型的格式显示这些数据。  
+ **“值”** 单元格中的放大镜图标指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器可视化工具可用。 在该列表中，可以指定 **“文本可视化工具”** 、 **“XML 可视化工具”** 或 **“HTML 可视化工具”** 。 若要启动调试器可视化工具，请单击此放大镜图标。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器将打开一个对话框，该对话框以适合相应数据类型的格式显示这些数据。  
   
  **类型**  
  显示表达式的数据类型。  

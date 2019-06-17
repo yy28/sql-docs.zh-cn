@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084611"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>从挖掘模型钻取到事例数据
@@ -48,13 +48,13 @@ ms.locfileid: "66084611"
   
 2.  在数据挖掘设计器中，单击 **“挖掘模型查看器”** 选项卡。  
   
-3.  从“挖掘模型”下拉列表中选择模型。  
+3.  从“挖掘模型”  下拉列表中选择模型。  
   
-4.  从“查看器”下拉列表中选择一个查看器，然后右键单击特定节点。  
+4.  从“查看器”  下拉列表中选择一个查看器，然后右键单击特定节点。  
   
-5.  选择 **“钻取”**，然后选择 **“仅限于模型列”** 或 **“模型和结构列”** 以打开 **“钻取”** 窗口。  
+5.  选择 **“钻取”** ，然后选择 **“仅限于模型列”** 或 **“模型和结构列”** 以打开 **“钻取”** 窗口。  
   
-6.  若要将数据复制到剪贴板，请右键单击表中的任何行，并选择“全部复制”。  
+6.  若要将数据复制到剪贴板，请右键单击表中的任何行，并选择“全部复制”  。  
   
 ## <a name="see-also"></a>请参阅  
  [钻取查询（数据挖掘）](drillthrough-queries-data-mining.md)  

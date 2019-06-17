@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062262"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>分析关键影响因素（Excel 表分析工具）
@@ -40,13 +40,13 @@ ms.locfileid: "66062262"
   
 4.  （可选） 单击**选择要用于分析列**。 在中**高级列选择**对话框框中，选择最有可能包含相关数据的列。 若要改进性能和精确性，请取消选择诸如 ID 或名称等对模式分析不重要的列。 单击**确定**以关闭**高级列选择**对话框。  
   
-5.  单击 **“运行”**。  
+5.  单击 **“运行”** 。  
   
      **分析关键影响因素**工具执行的分析数据，以确定最佳设置，然后自动设置所有参数。  
   
 6.  如果未检测到模式，该向导会创建一个新工作表，该表含有对问题的说明。  
   
-7.  如果检测到模式，则向导将在新的工作表中创建一个报表以显示这些模式。 此报告称为**的关键影响因素\<列 >**。 可以按照以下步骤所述自定义该报表。  
+7.  如果检测到模式，则向导将在新的工作表中创建一个报表以显示这些模式。 此报告称为**的关键影响因素\<列 >** 。 可以按照以下步骤所述自定义该报表。  
   
 #### <a name="create-a-custom-report"></a>创建自定义报表  
   

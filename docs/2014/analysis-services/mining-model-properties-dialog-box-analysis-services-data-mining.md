@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98d61d019aadeedadc673e1a8860ceb94d2ef96c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077685"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>“挖掘模型属性”对话框（Analysis Services - 数据挖掘）
-  可以使用 **中的** “挖掘模型属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的挖掘模型的属性。 通过右键单击**对象资源管理器**中的挖掘模型，再选择“属性”，即可显示“挖掘模型属性”对话框。  
+  可以使用 **中的** “挖掘模型属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的挖掘模型的属性。 通过右键单击**对象资源管理器**中的挖掘模型，再选择“属性”，即可显示“挖掘模型属性”对话框。    
   
 ## <a name="options"></a>选项  
   

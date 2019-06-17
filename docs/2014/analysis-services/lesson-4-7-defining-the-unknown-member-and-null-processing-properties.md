@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d14aeb7b261959ab0c95bda6a2ef4435a5b68e5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078604"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>定义未知成员和 Null 处理属性
@@ -31,7 +31,7 @@ ms.locfileid: "66078604"
   
 ## <a name="reviewing-error-handling-and-unknown-member-properties-in-the-product-dimension"></a>查看“产品”维度中的错误处理和未知成员属性  
   
-1.  切换到“产品”维度的维度设计器，单击“维度结构”选项卡，然后在“属性”窗格中选择“产品”。  
+1.  切换到“产品”  维度的维度设计器，单击“维度结构”  选项卡，然后在“属性”  窗格中选择“产品”  。  
   
      此时，您可以查看和修改该维度自身的属性。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "66078604"
   
      注意，**UnknownMember**属性未被启用，因为该属性的值设置为 **None** 而不是 **Visible** 或 **Hidden**，并且没有为 **UnknownMemberName** 属性指定名称。  
   
-3.  在“属性”窗口的 **ErrorConfiguration** 属性单元中，选择“(自定义)”，再展开 **ErrorConfiguration** 属性集合。  
+3.  在“属性”窗口的 **ErrorConfiguration** 属性单元中，选择“(自定义)”  ，再展开 **ErrorConfiguration** 属性集合。  
   
-     将“ErrorConfiguration”属性设置为“(自定义)”允许你查看默认错误配置设置，此操作不会更改任何设置。  
+     将“ErrorConfiguration”  属性设置为“(自定义)”  允许你查看默认错误配置设置，此操作不会更改任何设置。  
   
 4.  检查键和空键错误配置属性，但不进行任何更改。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66078604"
   
      注意“产品系列”级别的五个成员。  
   
-6.  展开“组件”，再展开“型号名称”级别的未标记成员。  
+6.  展开“组件”  ，再展开“型号名称”  级别的未标记成员。  
   
      此级别包含生成其他组件时使用的部件组件（从 **Adjustable Race** 产品开始），如下图所示。  
   
@@ -63,43 +63,43 @@ ms.locfileid: "66078604"
   
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>从雪花状表和“产品类别”用户定义层次结构定义属性  
   
-1.  打开 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 数据源视图的数据源视图设计器，在“关系图组织程序”窗格中选择“分销商销售”，再在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“数据源视图”菜单上单击“添加/删除对象”。  
+1.  打开 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 数据源视图的数据源视图设计器，在“关系图组织程序”  窗格中选择“分销商销售”  ，再在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“数据源视图”  菜单上单击“添加/删除对象”  。  
   
-     此时将打开“添加/删除表”对话框。  
+     此时将打开“添加/删除表”  对话框。  
   
-2.  在“包含的对象”列表中，选择 **DimProduct (dbo)**，再单击“添加相关表”。  
+2.  在“包含的对象”  列表中，选择 **DimProduct (dbo)** ，再单击“添加相关表”  。  
   
-     **DimProductSubcategory (dbo)** 和 **FactProductInventory (dbo)** 都将被添加。 删除 **FactProductInventory (dbo)**，这样，只有 **DimProductSubcategory (dbo)** 表将添加到“包含的对象”列表中。  
+     **DimProductSubcategory (dbo)** 和 **FactProductInventory (dbo)** 都将被添加。 删除 **FactProductInventory (dbo)** ，这样，只有 **DimProductSubcategory (dbo)** 表将添加到“包含的对象”  列表中。  
   
-3.  在 **DimProductSubcategory (dbo)** 表被默认选定为最新添加的表的情况下，再次单击“添加相关表”。  
+3.  在 **DimProductSubcategory (dbo)** 表被默认选定为最新添加的表的情况下，再次单击“添加相关表”  。  
   
-     **DimProductCategory (dbo)** 表即被添加到“包含的对象”列表中。  
+     **DimProductCategory (dbo)** 表即被添加到“包含的对象”  列表中。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
-5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“格式”菜单上，指向“自动布局”，再单击“关系图”。  
+5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“格式”  菜单上，指向“自动布局”  ，再单击“关系图”  。  
   
      请注意，**DimProductSubcategory (dbo)** 表和 **DimProductCategory (dbo)** 表互相链接，并且还通过 **Product** 表链接到 **ResellerSales** 表。  
   
-6.  切换到“产品”维度的维度设计器，再单击“维度结构”选项卡。  
+6.  切换到“产品”  维度的维度设计器，再单击“维度结构”  选项卡。  
   
-7.  右键单击“数据源视图”窗格中的任意位置，再单击“显示所有表”。  
+7.  右键单击“数据源视图”  窗格中的任意位置，再单击“显示所有表”  。  
   
-8.  在“数据源视图”窗格中，找到 **DimProductCategory** 表，右键单击该表中的 **ProductCategoryKey**，再单击“从列新建属性”。  
+8.  在“数据源视图”  窗格中，找到 **DimProductCategory** 表，右键单击该表中的 **ProductCategoryKey**，再单击“从列新建属性”  。  
   
 9. 在中**特性**窗格中，更改到新属性的此名称`Category`。  
   
-10. 在属性窗口中，单击**NameColumn**属性字段，然后单击浏览 (**...**) 按钮以打开**名称列**对话框。  
+10. 在属性窗口中，单击**NameColumn**属性字段，然后单击浏览 ( **...** ) 按钮以打开**名称列**对话框。  
   
-11. 选择“源列”列表中的 **EnglishProductCategoryName**，然后单击“确定”。  
+11. 选择“源列”  列表中的 **EnglishProductCategoryName**，然后单击“确定”  。  
   
-12. 在“数据源视图”窗格中，找到 **DimProductSubcategory** 表，右键单击该表中的 **ProductSubcategoryKey**，再单击“从列新建属性”。  
+12. 在“数据源视图”  窗格中，找到 **DimProductSubcategory** 表，右键单击该表中的 **ProductSubcategoryKey**，再单击“从列新建属性”  。  
   
 13. 在中**特性**窗格中，更改到新属性的此名称`Subcategory`。  
   
 14. 在属性窗口中，单击**NameColumn**属性字段，然后单击浏览 **（...）** 按钮以打开**名称列**对话框。  
   
-15. 选择“源列”列表中的 **EnglishProductSubcategoryName**，然后单击“确定”。  
+15. 选择“源列”  列表中的 **EnglishProductSubcategoryName**，然后单击“确定”  。  
   
 16. 创建新用户定义的层次结构称为**产品类别**具有以下级别，从上到下的顺序： `Category`， `Subcategory`，并**产品名称**。  
   
@@ -107,21 +107,21 @@ ms.locfileid: "66078604"
   
 ## <a name="browsing-the-user-defined-hierarchies-in-the-product-dimension"></a>浏览“产品”维度中的用户定义层次结构  
   
-1.  在“产品”维度的“维度设计器”的“维度结构”选项卡工具栏上，单击“处理”。  
+1.  在“产品”  维度的“维度设计器”  的“维度结构”  选项卡工具栏上，单击“处理”  。  
   
-2.  单击“是”以生成并部署项目，再单击“运行”来处理“产品”维度。  
+2.  单击“是”  以生成并部署项目，再单击“运行”  来处理“产品”  维度。  
   
-3.  成功处理后，在“处理进度”对话框中展开“处理维度‘产品’已成功完成”，展开“处理维度属性‘产品名称’已完成”，再展开“SQL 查询 1”。  
+3.  成功处理后，在“处理进度”  对话框中展开“处理维度‘产品’已成功完成”  ，展开“处理维度属性‘产品名称’已完成”  ，再展开“SQL 查询 1”  。  
   
-4.  单击 SELECT DISTINCT 查询，再单击“查看详细信息”。  
+4.  单击 SELECT DISTINCT 查询，再单击“查看详细信息”  。  
   
      注意，WHERE 子句已添加到 SELECT DISTINCT 子句中，这将删除 ProductSubcategoryKey 列中不包含值的那些产品，如下图所示。  
   
      ![显示 WHERE 子句的 SELECT DISTINCT 子句](../../2014/tutorials/media/l4-productnametraceline-1.gif "显示 WHERE 子句的 SELECT DISTINCT 子句")  
   
-5.  依次单击“关闭”三次，关闭所有处理对话框。  
+5.  依次单击“关闭”  三次，关闭所有处理对话框。  
   
-6.  单击“产品”维度的维度设计器中的“浏览器”选项卡，再单击“重新连接”。  
+6.  单击“产品”  维度的维度设计器中的“浏览器”  选项卡，再单击“重新连接”  。  
   
 7.  确认**Product Model Lines**将出现在**层次结构**列表中，展开`All Products`，然后展开**组件**。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66078604"
   
 ## <a name="enabling-the-unknown-member-defining-attribute-relationships-and-specifying-custom-processing-properties-for-nulls"></a>启用未知成员，定义属性关系，并指定 Null 的自定义处理属性  
   
-1.  在“产品”维度的维度设计器中，单击“维度结构”选项卡，然后在“属性”窗格中选择“产品”。  
+1.  在“产品”  维度的维度设计器中，单击“维度结构”  选项卡，然后在“属性”  窗格中选择“产品”  。  
   
 2.  在中**属性**窗口中，更改**UnknownMember**属性设置为**Visible**，然后将更改的值为**UnknownMemberName**属性设置为`Assembly Components`。  
   
@@ -143,17 +143,17 @@ ms.locfileid: "66078604"
   
 4.  在关系图中，右键单击`Subcategory`属性，然后选择**新建属性关系**。  
   
-5.  在中**创建属性关系**对话框中，**源属性**是`Subcategory`。 设置**相关属性**到`Category`。 将关系类型保留为“柔性”。  
+5.  在中**创建属性关系**对话框中，**源属性**是`Subcategory`。 设置**相关属性**到`Category`。 将关系类型保留为“柔性”  。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  在“属性”窗格中，选择“子类别”。  
+7.  在“属性”  窗格中，选择“子类别”  。  
   
 8.  在“属性”窗口中，展开 **KeyColumns** 属性，然后展开 **DimProductSubcategory.ProductSubcategoryKey (Integer)** 属性。  
   
 9. 将 **NullProcessing** 属性更改为 **UnknownMember**。  
   
-10. 在“属性”窗格中，选择“型号名称”。  
+10. 在“属性”  窗格中，选择“型号名称”  。  
   
 11. 在“属性”窗口中，展开 **KeyColumns** 属性，然后展开 **Product.ModelName (WChar)** 属性。  
   
@@ -163,9 +163,9 @@ ms.locfileid: "66078604"
   
 ## <a name="browsing-the-product-dimension-again"></a>再次浏览“产品”维度  
   
-1.  在“生成”菜单上，单击“部署 Analysis Services 教程”。  
+1.  在“生成”  菜单上，单击“部署 Analysis Services 教程”  。  
   
-2.  成功完成部署后，单击“产品”维度的维度设计器中的“浏览器”选项卡，再单击“重新连接”。  
+2.  成功完成部署后，单击“产品”  维度的维度设计器中的“浏览器”  选项卡，再单击“重新连接”  。  
   
 3.  确认**产品类别**中选择**层次结构**列表中，，然后展开`All Products`。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "66078604"
   
 4.  展开`Assembly Components`的成员`Category`级别，然后展开`Assembly Components`的成员`Subcategory`级别。  
   
-     请注意，在“产品名称”级别上显示了所有程序集组件，如下图所示。  
+     请注意，在“产品名称”  级别上显示了所有程序集组件，如下图所示。  
   
      ![产品名称级别显示程序集组件](../../2014/tutorials/media/l4-assemblycomponents-1.gif "产品名称级别显示程序集组件")  
   

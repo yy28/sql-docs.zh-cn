@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f0b4a69f7c1a6735fee26f1d622bc0f290e4677
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080401"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安装 Analysis Services 多维建模教程的示例数据和项目
@@ -35,7 +35,7 @@ ms.locfileid: "66080401"
   
 -   SQL Server Management Studio  
   
- 或者，请考虑安装 Excel 以便在您继续执行本教程时浏览您的多维数据。 通过安装 Excel，可以启用“在 Excel 中分析”功能。该功能可以使用连接到你要生成的多维数据集的数据透视表字段列表来启动 Excel。 建议使用 Excel 来浏览数据，因为您可以快速生成透视报表，并通过它与数据进行交互。  
+ 或者，请考虑安装 Excel 以便在您继续执行本教程时浏览您的多维数据。 通过安装 Excel，可以启用“在 Excel 中分析”  功能。该功能可以使用连接到你要生成的多维数据集的数据透视表字段列表来启动 Excel。 建议使用 Excel 来浏览数据，因为您可以快速生成透视报表，并通过它与数据进行交互。  
   
  或者，您可以使用在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中内置的内置 MDX 查询设计器来浏览数据。 查询设计器将返回相同的数据，除非数据以平面行集的形式表示。  
   
@@ -63,13 +63,13 @@ ms.locfileid: "66080401"
   
 3.  启动 SQL Server Management Studio 并连接到数据库引擎实例。  
   
-4.  右键单击“数据库”，然后单击“附加”。  
+4.  右键单击“数据库”，然后单击“附加”  。  
   
-5.  单击 **“添加”**。  
+5.  单击 **“添加”** 。  
   
-6.  选择 **AdventureWorksDW2012_Data.mdf** 数据库文件，并单击“确定”。 如果未列出该文件，请检查 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 文件夹，以便确保该文件在该路径下存在。  
+6.  选择 **AdventureWorksDW2012_Data.mdf** 数据库文件，并单击“确定”  。 如果未列出该文件，请检查 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 文件夹，以便确保该文件在该路径下存在。  
   
-7.  在数据库详细信息中，删除日志文件条目。 安装程序假设您具有日志文件，但在示例中没有日志文件。 附加数据库时将自动创建新日志文件。 选择日志文件并单击“删除”，然后单击“确定”以只附加主数据库文件。  
+7.  在数据库详细信息中，删除日志文件条目。 安装程序假设您具有日志文件，但在示例中没有日志文件。 附加数据库时将自动创建新日志文件。 选择日志文件并单击“删除”  ，然后单击“确定”  以只附加主数据库文件。  
   
 ## <a name="step-4-grant-database-permissions"></a>步骤 4：Grant 数据库权限  
  示例项目使用数据源模拟设置，这些设置可指定导入或处理数据所用的安全上下文。 默认情况下，模拟设置指定用于访问数据的 Analysis Services 服务帐户。 若要使用此默认设置，必须确保 Analysis Services 运行时使用的服务帐户具有对 **AdventureWorksDW2012** 数据库的数据读取器权限。  
@@ -81,13 +81,13 @@ ms.locfileid: "66080401"
   
 2.  在 Management Studio 中，连接到数据库引擎实例。  
   
-3.  展开“安全性”文件夹，右键单击“登录名”，然后选择“新建登录名”。  
+3.  展开“安全性”文件夹，右键单击“登录名”，然后选择“新建登录名”  。  
   
 4.  在“常规”页的“登录名”中，键入 **NT Service\MSSQLServerOLAPService**（或运行该服务所用的任何帐户）。  
   
-5.  单击“用户映射”。  
+5.  单击“用户映射”  。  
   
-6.  选中 **AdventureWorksDW2012** 数据库旁边的复选框。 角色成员身份应自动包括 **db_datareader** 和 **public**。 单击“确定”接受默认值。  
+6.  选中 **AdventureWorksDW2012** 数据库旁边的复选框。 角色成员身份应自动包括 **db_datareader** 和 **public**。 单击“确定”  接受默认值。  
   
 ## <a name="step-5-install-projects"></a>步骤 5：安装项目  
  教程包括一些示例项目，以便您能将您的结果与完成的项目进行比较，或者学习后面的课程。  
@@ -102,7 +102,7 @@ ms.locfileid: "66080401"
   
 2.  将 .zip 文件移到根驱动器下一级的文件夹（例如 C:\Tutorial）。 此步骤将会缓解有时如果您尝试解压缩的下载文件夹中的文件，则会发生的"路径过长"错误。  
   
-3.  解压缩示例项目：右键单击该文件，然后选择“全部提取”。 提取这些文件后，您应该已在计算机上安装以下项目：  
+3.  解压缩示例项目：右键单击该文件，然后选择“全部提取”  。 提取这些文件后，您应该已在计算机上安装以下项目：  
   
     -   Lesson 1 Complete  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66080401"
   
     -   Lesson 10 Complete  
   
-4.  取消对这些文件的只读权限。 右键单击父文件夹“Analysis Services Tutorial SQL Server 2012”，选择“属性”，然后清除“只读”复选框。 单击“确定” 。 将更改应用至此文件夹、子文件夹和文件。  
+4.  取消对这些文件的只读权限。 右键单击父文件夹“Analysis Services Tutorial SQL Server 2012”，选择“属性”  ，然后清除“只读”  复选框。 单击“确定”  。 将更改应用至此文件夹、子文件夹和文件。  
   
 5.  启动 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "66080401"
   
 7.  部署解决方案以验证是否正确设置了数据库权限和服务器位置信息。  
   
-     如果 Analysis Services 和数据库引擎是作为默认实例 (MSSQLServer) 安装的，并且所有软件在同一台计算机上运行，则可以单击“生成”菜单上的“部署解决方案”来生成示例项目并将其部署到本地 Analysis Services 实例。 在部署过程中，将从本地数据库引擎实例上的 **AdventureWorksDW2012** 数据库处理（或导入）数据。 将在包含从数据库引擎检索的数据的 Analysis Services 实例上创建新的 Analysis Services 数据库。  
+     如果 Analysis Services 和数据库引擎是作为默认实例 (MSSQLServer) 安装的，并且所有软件在同一台计算机上运行，则可以单击“生成”菜单上的“部署解决方案”  来生成示例项目并将其部署到本地 Analysis Services 实例。 在部署过程中，将从本地数据库引擎实例上的 **AdventureWorksDW2012** 数据库处理（或导入）数据。 将在包含从数据库引擎检索的数据的 Analysis Services 实例上创建新的 Analysis Services 数据库。  
   
      如果出现错误，请检查前面关于设置数据库权限的步骤。 此外，您还可能需要更改服务器名称。 默认服务器名称为 localhost。 如果服务器安装在远程计算机上或作为命名实例安装，必须覆盖默认名称以使用对于您的安装有效的服务器名称。 此外，如果服务器位于远程计算机上，则可能需要配置 Windows 防火墙以允许对它们进行访问。  
   

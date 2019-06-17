@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95ff2c99f01361f82b0ec29ee404958ca076d6ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068393"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>指定维度键和类型（维度向导）
-  可以使用“指定维度键和类型”页定义维度的键属性，并指示维度是否为渐变维度 (SCD)。  
+  可以使用“指定维度键和类型”  页定义维度的键属性，并指示维度是否为渐变维度 (SCD)。  
   
 > [!NOTE]  
->  只有在“选择生成方法”页上选择了“不使用数据源生成维度”，并在“选择维度类型”页上选择了“标准维度”时，才会显示此页。  
+>  只有在“选择生成方法”  页上选择了“不使用数据源生成维度”  ，并在“选择维度类型”  页上选择了“标准维度”  时，才会显示此页。  
   
 ## <a name="options"></a>选项  
  **键属性**  

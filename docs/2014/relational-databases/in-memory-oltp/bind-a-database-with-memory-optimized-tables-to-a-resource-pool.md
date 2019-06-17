@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63158809"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>将具有内存优化表的数据库绑定至资源池
@@ -44,7 +44,7 @@ GO
 ### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>确定 MIN_MEMORY_PERCENT 的 MAX_MEMORY_PERCENT 的最小值  
  在确定了内存优化表所需的内存后，确定所需的可用内存的百分比，并且将内存百分比设置为该值或更高值。  
   
- **例如：**   
+ **例如：**    
 对于此示例，我们将假定根据您的计算，确定了您的内存优化表和索引需要 16 GB 的内存。 假定您已提交了 32 GB 的内存供您使用。  
   
  乍看起来，可能需要将 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 设置为 50（16 是 32 的 50%）。  但是，这不会向您的内存优化表提供足够的内存。 通过查看下表（[可用于内存优化表和索引的内存百分比](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)），我们可以看到，如果有 32 GB 的已提交内存，则只有该内存量的 80% 可用于内存优化表和索引。  因此，我们基于可用内存量而不是已提交内存来计算最小和最大百分比。  

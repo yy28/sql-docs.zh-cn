@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087713"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>完成向导（数据挖掘向导）
@@ -25,16 +25,16 @@ ms.locfileid: "66087713"
  如果选择创建关联的挖掘模型，还可以设置关联挖掘模型的名称，并对挖掘模型启用钻取。  
   
 > [!NOTE]  
->  根据你在该向导的“选择定义方法”页中选择的是“从现有关系数据库或数据仓库”还是“从现有多维数据集”，此页会相应变化。  
+>  根据你在该向导的“选择定义方法”  页中选择的是“从现有关系数据库或数据仓库”  还是“从现有多维数据集”  ，此页会相应变化。  
   
- **有关详细信息：**[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[数据挖掘设计器](data-mining/data-mining-designer.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：** [数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[数据挖掘设计器](data-mining/data-mining-designer.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **挖掘结构名称**  
- 键入“数据挖掘向导”定义的挖掘结构的名称。  
+ 键入“数据挖掘向导”  定义的挖掘结构的名称。  
   
  **挖掘模型名称**  
- 键入“数据挖掘向导”定义的挖掘模型的名称。  
+ 键入“数据挖掘向导”  定义的挖掘模型的名称。  
   
  **允许钻取**  
  选择此选项，则所创建的新挖掘模型将支持钻取功能。  
@@ -48,16 +48,16 @@ ms.locfileid: "66087713"
  显示要创建的挖掘结构。  
   
  **创建挖掘模型维度**  
- 选择此选项可以基于要创建的挖掘模型创建维度。 选择此选项后，请输入要创建的维度的名称。 选择此选项将启用 **“使用挖掘模型维度创建多维数据集”**。  
+ 选择此选项可以基于要创建的挖掘模型创建维度。 选择此选项后，请输入要创建的维度的名称。 选择此选项将启用 **“使用挖掘模型维度创建多维数据集”** 。  
   
 > [!NOTE]  
->  如果在该向导的“选择定义方法”页中选择了“从现有多维数据集”，此选项将可用。  
+>  如果在该向导的“选择定义方法”  页中选择了“从现有多维数据集”  ，此选项将可用。  
   
  **使用挖掘模型维度创建多维数据集**  
  选择此选项可以基于要创建的挖掘模型创建多维数据集。 选择此选项后，请输入要创建的多维数据集的名称。  
   
 > [!NOTE]  
->  如果在“选择定义方法”页中选择了“从现有多维数据集”，并在该向导的当前页中选择了“创建挖掘模型维度”，此选项将可用。  
+>  如果在“选择定义方法”  页中选择了“从现有多维数据集”  ，并在该向导的当前页中选择了“创建挖掘模型维度”  ，此选项将可用。  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘向导的 F1 帮助&#40;Analysis Services-数据挖掘&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   

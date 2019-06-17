@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720097"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>为结构指定测试数据集（数据挖掘基础教程）
@@ -29,7 +29,7 @@ ms.locfileid: "62720097"
   
 2.  有关**中测试数据集中的事例的最大数**，类型`1000`。  
   
-3.  单击“下一步” 。  
+3.  单击“下一步”  。  
   
 ## <a name="specifying-drillthrough"></a>指定钻取  
  可以针对模型和结构启用钻取。 此对话框中的复选框可对命名模型启用钻取功能。 在处理了该模型后，您将能够从定型数据中检索用于创建模型的详细信息。  
@@ -46,7 +46,7 @@ ms.locfileid: "62720097"
   
 4.  审阅**预览版**窗格。 请注意，只有这些列选作**键**，**输入**或**可预测**显示。 您选择的其他列（例如，AddressLine1）不能用于生成模型，但是将在基础结构中可用，您可以在处理和部署模型之后查询这些列。  
   
-5.  单击 **“完成”**。  
+5.  单击 **“完成”** 。  
   
 ## <a name="previous-task-in-lesson"></a>课程中的前一个任务  
  [指定数据类型和内容类型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
