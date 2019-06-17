@@ -25,16 +25,16 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ddd5d9584f71e8a6b1ae9686203463b1eb77f47e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944674"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-此函数返回组中找到的项数量。 `COUNT` 的操作与 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 函数类似。 这些函数区别只在于其返回的值的数据类型。 `COUNT` 始终返回“int”数据类型值。 `COUNT_BIG` 始终返回“bigint”数据类型值。
+此函数返回组中找到的项数量。 `COUNT` 的操作与 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 函数类似。 这些函数区别只在于其返回的值的数据类型。 `COUNT` 始终返回“int”  数据类型值。 `COUNT_BIG` 始终返回“bigint”  数据类型值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,13 +57,13 @@ DISTINCT
 指定 `COUNT` 返回唯一非 Null 值的数量。
   
 *expression*  
-任意类型（“image”、“ntext”或“text”除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 注意，`COUNT` 不支持表达式中的聚合函数或子查询。
+任意类型（“image”  、“ntext”  或“text”  除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 注意，`COUNT` 不支持表达式中的聚合函数或子查询。
   
 \*  
-指定 `COUNT` 应对所有行计数，以确定要返回的总表行计数。 `COUNT(*)` 不采用任何参数，也不支持使用 DISTINCT。 `COUNT(*)` 不需要“expression”参数，因为根据定义，该函数不使用有关任何特定列的信息。 `COUNT(*)` 返回指定表中的行数，但保留副本行。 它对各行分别计数。 包括包含空值的行。
+指定 `COUNT` 应对所有行计数，以确定要返回的总表行计数。 `COUNT(*)` 不采用任何参数，也不支持使用 DISTINCT。 `COUNT(*)` 不需要“expression”  参数，因为根据定义，该函数不使用有关任何特定列的信息。 `COUNT(*)` 返回指定表中的行数，但保留副本行。 它对各行分别计数。 包括包含空值的行。
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-“partition_by_clause”将 `FROM` 子句生成的结果集划分为要应用 `COUNT` 函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 “order_by_clause”确定操作的逻辑顺序。 请参阅 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) 获取详细信息。 
+“partition_by_clause”  将 `FROM` 子句生成的结果集划分为要应用 `COUNT` 函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 “order_by_clause”  确定操作的逻辑顺序。 请参阅 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) 获取详细信息。 
 
 ## <a name="return-types"></a>返回类型
  **int**  
@@ -71,9 +71,9 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 ## <a name="remarks"></a>Remarks  
 COUNT(\*) 返回组中的项数。 包括 NULL 值和重复项。
   
-COUNT(ALL expression) 计算组中每行的 expression，然后返回非 null 值的数量。
+COUNT(ALL expression) 计算组中每行的 expression，然后返回非 null 值的数量   。
   
-COUNT (DISTINCT expression) 计算组中每行的 expression，然后返回独一无二的非 null 值的数量。
+COUNT (DISTINCT expression) 计算组中每行的 expression，然后返回独一无二的非 null 值的数量   。
   
 对于超出 2 ^31-1 的返回值，`COUNT` 会返回错误。 对于这些情况，请改为使用 `COUNT_BIG`。
   

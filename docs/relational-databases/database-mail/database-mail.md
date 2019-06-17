@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df493defd8a85c6d360dd224cdcec99b5732150
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506614"
 ---
 # <a name="database-mail"></a>数据库邮件
@@ -72,7 +72,7 @@ ms.locfileid: "66506614"
   
 -   日志记录。 数据库邮件将电子邮件活动记录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Microsoft Windows 应用程序事件日志和 **msdb** 数据库的表中。  
   
--   审核：数据库邮件将发送的邮件和附件的副本保留在 msdb 数据库中。 您可以轻松地审核数据库邮件的使用情况并检查保留的邮件。  
+-   审核：数据库邮件将发送的邮件和附件的副本保留在 msdb 数据库中  。 您可以轻松地审核数据库邮件的使用情况并检查保留的邮件。  
   
 -   支持 HTML：可通过数据库邮件以 HTML 格式发送电子邮件。  
   

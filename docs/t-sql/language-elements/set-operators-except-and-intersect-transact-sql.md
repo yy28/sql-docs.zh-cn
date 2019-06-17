@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ccad340088f83dc4b5c38445506c74c9aa7e70f4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981754"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>SET 运算符 - EXCEPT 和 INTERSECT (Transact-SQL)
@@ -57,12 +57,12 @@ INTERSECT 返回由左右双侧输入查询运算符输出的非重复行。
 ```  
   
 ## <a name="arguments"></a>参数  
-\<query\_specification> | ( \<query\_expression> )  
+\<query\_specification  > | ( \<query\_expression  > )  
 查询规范或查询表达式返回与来自另一个查询规范或查询表达式的数据相比较的数据。 属于 EXCEPT 或 INTERSECT 运算的列定义不一定要相同。 但必须可通过隐式转换实现可比较。 如果数据类型不同，根据[数据类型优先顺序](../../t-sql/data-types/data-type-precedence-transact-sql.md)规则确定为执行比较而运行的数据类型。  
   
 如果类型相同，但精度、确定位数或长度不同，那么结果以相同的表达式合并规则为依据。 有关详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
-查询规范或表达式无法返回 xml、text、ntext、image 或非二进制 CLR 用户定义类型列，因为这些数据类型不可比较。  
+查询规范或表达式无法返回 xml  、text  、ntext  、image  或非二进制 CLR 用户定义类型列，因为这些数据类型不可比较。  
   
 EXCEPT  
 返回由 EXCEPT 运算符左侧的查询返回的所有非重复值。 返回这些值的前提是，右侧查询不返回这些值。  

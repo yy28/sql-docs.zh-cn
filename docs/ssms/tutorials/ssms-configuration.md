@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: SQL Server Management Studio components and configuration'
+title: 教程：SQL Server Management Studio 组件和配置
 description: 介绍 SQL Server Management Studio 环境的组件和基本配置选项的教程。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,14 +11,15 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 10be7a0bcc588961321713e365819a5f699bcbc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662681"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822269"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>教程：SQL Server Management Studio 组件和配置
+
 本教程介绍 SQL Server Management Studio (SSMS) 中的多种窗口组件和一些适用于工作区的基本配置选项。 本文将指导如何： 
 
 > [!div class="checklist"]
@@ -37,15 +38,15 @@ ms.locfileid: "56662681"
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 组件
 本节介绍工作区中可用的各种窗口组件及其使用方法。 
 
-- 要关闭窗口，请选择标题栏右侧的“X”。 
-- 要重新打开窗口，请在“视图”菜单中选择窗口。 
+- 要关闭窗口，请选择标题栏右侧的“X”  。 
+- 要重新打开窗口，请在“视图”菜单中选择窗口  。 
 
     ![“视图”菜单](media/ssms-configuration/viewmenu.png)
 
 - **对象资源管理器** (F8)：对象资源管理器是服务器中所有数据库对象的树视图。 此视图包括 SQL Server 数据库引擎、SQL Server Analysis Services、SQL Server Reporting Services 和 SQL Server Integration Services 的数据库。 对象资源管理器包括连接到它的所有服务器的信息。 
     
     ![“对象资源管理器”](media/ssms-configuration/objectexplorer.png)
-- **查询窗口** (Ctrl+N)：选择“新建查询”后，在此窗口中输入 Transact-SQL (T-SQL) 查询。 查询结果也显示在此处。
+- **查询窗口** (Ctrl+N)：选择“新建查询”后，在此窗口中输入 Transact-SQL (T-SQL) 查询  。 查询结果也显示在此处。
     
     ![“新建查询”窗口](media/ssms-configuration/newquery.png)
 
@@ -87,11 +88,11 @@ ms.locfileid: "56662681"
 
       ![垂直选项卡组示例](media/ssms-configuration/verticaltabgroup.png)
         
-    - 要合并选项卡，请右键单击查询标题并选择“移到上一选项卡组”或“移到下一选项卡组”：
+    - 要合并选项卡，请右键单击查询标题并选择“移到上一选项卡组”或“移到下一选项卡组”   ：
     
       ![合并查询选项卡](media/ssms-configuration/mergetabgroups.png)
 
-- 要还原默认环境布局，请在“窗口”菜单中选择“重置窗口布局”：
+- 要还原默认环境布局，请在“窗口”菜单中选择“重置窗口布局”   ：
  
     ![还原窗口布局](media/ssms-configuration/resetwindowlayout.png)
     
@@ -106,27 +107,27 @@ ms.locfileid: "56662681"
 
 
 ## <a name="change-basic-settings"></a>更改基本设置
-本节介绍如何从“工具”菜单修改 SSMS 中的一些基本设置。
+本节介绍如何从“工具”菜单修改 SSMS 中的一些基本设置  。
 
   ![“工具”菜单](media/ssms-configuration/tools.png)
 
 
-- 要修改突出显示的工具栏，请选择“工具” > “自定义”：
+- 要修改突出显示的工具栏，请选择“工具” > “自定义”   ：
 
     ![自定义工具栏](media/ssms-configuration/toolbar.png)
 
 ### <a name="change-the-font"></a>更改字体
-- 要更改字体，请选择“工具” > “选项” > “字体和颜色”：
+- 要更改字体，请选择“工具” > “选项” > “字体和颜色”    ：
 
      ![更改字体和颜色](media/ssms-configuration/fontsandcolors.png)
 
 ### <a name="change-startup-options"></a>更改启动选项
-- 启动选项决定了首次打开 SSMS 时工作区的外观。 要更改启动选项，请选择“工具” > “选项” > “启动”：
+- 启动选项决定了首次打开 SSMS 时工作区的外观。 要更改启动选项，请选择“工具” > “选项” > “启动”    ：
  
     ![更改启动选项](media/ssms-configuration/startup.png)
 
 ### <a name="reset-settings-to-the-default"></a>将设置重置为默认值
-- 可从菜单导出和导入所有这些设置。 要导入或导出设置或恢复默认设置，请选择“工具” > “导入和导出设置” 
+- 可从菜单导出和导入所有这些设置。 要导入或导出设置或恢复默认设置，请选择“工具” > “导入和导出设置”   
 
     ![导入和导出设置](media/ssms-configuration/settings.png)
 

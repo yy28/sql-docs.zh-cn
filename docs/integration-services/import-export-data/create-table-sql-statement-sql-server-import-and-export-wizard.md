@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c73c9df155d1e09552fbf5774ac4599bf9cdbdf9
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65779156"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Create Table SQL 语句（SQL Server 导入和导出向导）
@@ -27,7 +27,7 @@ ms.locfileid: "65779156"
 在“列映射”  对话框中，如果选择“创建目标表”  ，然后选择“编辑 SQL”  ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“Create Table SQL 语句”  对话框。 在此页上，可查看并根据需要自定义 **CREATE TABLE** 命令，向导会运行该命令以创建新的目标表。
   
 > [!NOTE]
-> 如果在查找有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE 语句的信息，而不是有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的“Create Table SQL 语句”对话框的信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 
+> 如果在查找有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE 语句的信息，而不是有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的“Create Table SQL 语句”  对话框的信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 
   
 ## <a name="screen-shot-of-the-create-table-sql-statement-page"></a>“Create Table SQL 语句”页面的屏幕截图  
  以下屏幕截图显示向导的“Create Table SQL 语句”  对话框。
@@ -40,14 +40,14 @@ ms.locfileid: "65779156"
  **SQL 语句**  
 显示自动生成的 SQL 语句，允许对其进行自定义。
  
-如果更改默认 CREATE TABLE 命令，则可能还须在返回到“列映射”对话框时对关联的列映射进行更改。  
+如果更改默认 CREATE TABLE 命令，则可能还须在返回到“列映射”  对话框时对关联的列映射进行更改。  
   
 若要在 SQL 语句的文本中包括回车符，请按 Ctrl+Enter。 如果只按 Enter，则对话框将关闭。  
   
 有关 CREATE TABLE 语句和语法的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。   
   
  **自动生成**  
- 如果已更改 SQL 语句，通过单击“自动生成”可以还原默认的 SQL 语句。  
+ 如果已更改 SQL 语句，通过单击“自动生成”  可以还原默认的 SQL 语句。  
   
 ## <a name="create-a-table-that-includes-a-filestream-column"></a>创建包含 FILESTREAM 列的表  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会基于所连接的数据源生成默认 CREATE TABLE 语句。 即使源表具有 FILESTREAM 列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。
@@ -57,7 +57,7 @@ ms.locfileid: "65779156"
 有关语法的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 有关 FILESTREAM 的详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
 ## <a name="whats-next"></a>下一步是什么？  
- 查看并自定义 CREATE TABLE 命令，然后单击“确定” 之后，“Create Table SQL 语句”  对话框会使你返回到“列映射”  对话框。 有关详细信息，请参阅 [列映射](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。
+ 查看并自定义 CREATE TABLE 命令，然后单击“确定”  之后，“Create Table SQL 语句”  对话框会使你返回到“列映射”  对话框。 有关详细信息，请参阅 [列映射](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。
  
  ## <a name="see-also"></a>另请参阅
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

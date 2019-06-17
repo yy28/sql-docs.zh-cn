@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fd4e459c6f6c8ebe487ed180c363aa8523ad307a
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980556"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
@@ -45,12 +45,12 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>参数  
  GLOBAL  
- 指定 cursor_name 是指全局游标。  
+ 指定 cursor_name 是指全局游标  。  
   
- cursor_name  
- 已声明的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标。  
+ cursor_name   
+ 已声明的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标    。  
   
- cursor_variable_name  
+ cursor_variable_name   
  游标变量的名称，该变量引用一个游标。  
   
 ## <a name="remarks"></a>Remarks  

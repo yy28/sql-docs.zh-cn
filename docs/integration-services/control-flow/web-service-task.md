@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727328"
 ---
 # <a name="web-service-task"></a>Web 服务任务
@@ -84,19 +84,19 @@ ms.locfileid: "65727328"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="web-service-task-editor-general-page"></a>Web 服务任务编辑器（“常规”页）
-  使用“Web 服务任务编辑器”对话框的“常规”页，可以指定 HTTP 连接管理器，指定 Web 服务任务所使用的 Web 服务描述语言 (WSDL) 文件的位置，对 Web 服务任务进行说明，以及下载 WSDL 文件。  
+  使用“Web 服务任务编辑器”  对话框的“常规”  页，可以指定 HTTP 连接管理器，指定 Web 服务任务所使用的 Web 服务描述语言 (WSDL) 文件的位置，对 Web 服务任务进行说明，以及下载 WSDL 文件。  
   
 ### <a name="options"></a>选项  
  **HTTPConnection**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器  。  
   
 > [!IMPORTANT]  
 >  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
   
- **相关主题：**[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **相关主题：** [HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- 键入计算机本地上 WSDL 文件的完全限定路径，或单击浏览按钮 (…) 并定位到该文件。  
+ 键入计算机本地上 WSDL 文件的完全限定路径，或单击浏览按钮 (…) 并定位到该文件  。  
   
  如果您已经将该 WSDL 文件手动下载到计算机，请选择此文件。 但是，如果尚未下载该 WSDL 文件，请执行以下步骤：  
   
@@ -109,7 +109,7 @@ ms.locfileid: "65727328"
 -   单击 **“下载 WSDL”** 下载实际 WSDL 文件，并覆盖空文件。  
   
     > [!NOTE]  
-    >  在“WSDLFile”框中提供现有本地文件的名称后，才会启用“下载 WSDL”选项。  
+    >  在“WSDLFile”  框中提供现有本地文件的名称后，才会启用“下载 WSDL”  选项。  
   
  **OverwriteWSDLFile**  
  指示是否可以覆盖 Web 服务任务的 WSDL 文件。  
@@ -141,7 +141,7 @@ ms.locfileid: "65727328"
  从列表中为要执行的任务选择 Web 方法。  
   
  **WebMethodDocumentation**  
- 键入对 Web 方法的说明，或单击浏览按钮 (…)，再在“Web 方法文档”对话框中键入说明。  
+ 键入对 Web 方法的说明，或单击浏览按钮 (…)，再在“Web 方法文档”对话框中键入说明   。  
   
  **名称**  
  列出为 Web 方法提供的输入名称。  
@@ -174,15 +174,15 @@ ms.locfileid: "65727328"
   
 #### <a name="outputtype--file-connection"></a>OutputType = 文件连接  
  **File**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”，新建一个连接管理器  。  
   
- **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 变量  
  **变量**  
- 从列表中选择变量，或单击“\<新建变量...>”，创建新的变量。  
+ 从列表中选择变量，或单击“\<新建变量...>”，创建新的变量  。  
   
- **相关主题：**[Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>相关内容  
  MSDN 库中的视频[操作说明：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=259642)。  

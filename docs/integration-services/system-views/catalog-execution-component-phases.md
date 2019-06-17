@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 718605c140bcf6e44cd78c9b07b8b649e0f593bf
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714786"
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases 
@@ -31,7 +31,7 @@ ms.locfileid: "65714786"
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|阶段的唯一标识符 (ID)。|  
 |execution_id|**bigint**|执行实例的唯一 ID。|  
-|package_name|nvarchar(260)|在执行过程中启动的第一个包的名称。|  
+|package_name|nvarchar(260) |在执行过程中启动的第一个包的名称。|  
 |task_name|**nvarchar(4000)**|数据流任务的名称。|  
 |subcomponent_name|**nvarchar(4000)**|数据流组件的名称。|  
 |phase|**nvarchar(128)**|执行阶段的名称。|  

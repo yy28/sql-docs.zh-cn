@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27c6b863ac563b0814ac1d5e483f6b62e667b3e5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723853"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>连接到 Azure Blob 存储（SQL Server 导入和导出向导）
@@ -22,7 +22,7 @@ ms.locfileid: "65723853"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到 Azure Blob 存储数据源。
+本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到 Azure Blob 存储数据源    。
 
 > [!NOTE]
 > 要使用 Azure Blob 源或目标，必须安装用于 SQL Server Integration Services 的 Azure 功能包。
@@ -37,7 +37,7 @@ ms.locfileid: "65723853"
 ## <a name="options-to-specify"></a>要指定的选项
 
 > [!NOTE]
-> 无论 Azure Blob 存储是源还是目标，此数据提供程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的。
+> 无论 Azure Blob 存储是源还是目标，此数据提供程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的   。
 
  **使用 Azure 帐户**  
  指定是否使用联机帐户。

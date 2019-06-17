@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 65ad272ed3b5b3bc83e9d6035d693342482dcf05
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944186"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
@@ -47,11 +47,11 @@ NCHAR ( integer_expression )
  在数据库的排序规则支持 SC 标志时，这是从 0 到 1114111（0 到 0x10FFFF）的正整数。 如果指定的值超出此范围，则返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
- 当默认数据库排序规则不支持增补字符时，为 nchar(1)。  
+ 当默认数据库排序规则不支持增补字符时，为 nchar(1)  。  
   
- 当默认数据库排序规则支持增补字符时，为 nvarchar(2)。  
+ 当默认数据库排序规则支持增补字符时，为 nvarchar(2)  。  
   
- 如果 integer_expression 参数在范围 0 - 0xFFFF 内，则仅返回一个字符。 对于较高的值，NCHAR 返回相应的代理项对。 请勿使用 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` 构造代理项对。 而应使用支持增补字符的数据库排序规则，然后为代理项对指定 Unicode 码位。 下面的示例演示构建代理项对的旧式方法以及指定 Unicode 码位的首选方法。  
+ 如果 integer_expression 参数在范围 0 - 0xFFFF 内，则仅返回一个字符  。 对于较高的值，NCHAR 返回相应的代理项对。 请勿使用 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` 构造代理项对。 而应使用支持增补字符的数据库排序规则，然后为代理项对指定 Unicode 码位。 下面的示例演示构建代理项对的旧式方法以及指定 Unicode 码位的首选方法。  
   
 ```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  

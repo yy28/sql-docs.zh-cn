@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8feee241eb883cc889dc1888c95a9bbe3c58babb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723754"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在执行操作（SQL Server 导入和导出向导）
@@ -24,7 +24,7 @@ ms.locfileid: "65723754"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-查看在向导中所做的选择，并单击“完成向导”页中的“完成”之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导将显示“执行操作”。 在此页上，会看到在前页配置的操作的进度和结果。 不必在此页上执行任何操作。
+查看在向导中所做的选择，并单击“完成向导”页中的“完成”之后   ，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导将显示“执行操作”  。 在此页上，会看到在前页配置的操作的进度和结果。 不必在此页上执行任何操作。
 
 ## <a name="screen-shot---operation-in-progress"></a>屏幕截图 - 正在进行中的操作 
  以下屏幕快照显示操作进行过程中，向导的“执行操作”页  。  

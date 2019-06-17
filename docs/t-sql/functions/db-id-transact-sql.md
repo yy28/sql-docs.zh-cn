@@ -25,10 +25,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a34790fec91c183531ff875f94839f45de1cf9cc
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945648"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
@@ -45,8 +45,8 @@ DB_ID ( [ 'database_name' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
-'database_name'  
-将返回其数据库 ID 号 `DB_ID` 的数据库的名称。 如果对 `DB_ID` 的调用省略 database_name，则 `DB_ID` 返回当前数据库的 ID。
+'database_name'   
+将返回其数据库 ID 号 `DB_ID` 的数据库的名称。 如果对 `DB_ID` 的调用省略 database_name，则 `DB_ID` 返回当前数据库的 ID  。
   
 ## <a name="return-types"></a>返回类型
 **int**
@@ -55,7 +55,7 @@ DB_ID ( [ 'database_name' ] )
 `DB_ID` 仅可用于返回 Azure SQL 数据库中当前数据库的数据库标识符。 如果指定的数据库名称不是当前数据库，则返回 NULL。
   
 ## <a name="permissions"></a>权限  
-如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限。 调用方连接的数据库将始终出现在 sys.databases 中。
+如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行   。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限  。 调用方连接的数据库将始终出现在 sys.databases 中  。
   
 > [!IMPORTANT]  
 >  默认情况下，公共角色具有 `VIEW ANY DATABASE` 权限，允许所有登录名查看数据库信息。 若要防止登录名检测数据库，则需 `REVOKE` 公共登录名的 `VIEW ANY DATABASE` 权限或 `DENY` 个人登录名的 `VIEW ANY DATABASE` 权限。  

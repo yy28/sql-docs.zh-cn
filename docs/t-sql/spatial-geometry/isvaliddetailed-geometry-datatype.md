@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b4b5061d6840052f74c8c7c15db7f2482e9e31d2
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935903"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed（geometry 数据类型）
@@ -35,9 +35,9 @@ ms.locfileid: "65935903"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)   
   
- CLR 返回类型：string  
+ CLR 返回类型：string   
   
 ## <a name="remarks"></a>Remarks  
  下表包含可能的返回值：  
@@ -63,7 +63,7 @@ ms.locfileid: "65935903"
 |24416|因为在曲线 {0} 中，从点 {1} 开始的边或者是直线，或者是具有对跖端点的退化弧，所以无效。|  
   
 ## <a name="examples"></a>示例  
- 以下无效空间对象示例阐释了 IsValidDetailed() 方法的行为。  
+ 以下无效空间对象示例阐释了 IsValidDetailed() 方法的行为  。  
   
 ```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  

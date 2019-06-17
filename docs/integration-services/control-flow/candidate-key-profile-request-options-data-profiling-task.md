@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8ed8f3cdd8232cdf8fd66be1dce021f84d2e492
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727945"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候选键配置文件请求选项（数据事件探查任务）
@@ -39,19 +39,19 @@ ms.locfileid: "65727945"
   
 -   如果在 **KeyColumns**中选择了多个列，则该任务将计算由所有选定列组成的组合键的键强度。  
   
--   如果在 **KeyColumns** 中选择通配符 **(\*)**，则该任务将计算表或视图中的每个列的键强度。  
+-   如果在 **KeyColumns** 中选择通配符 **(\*)** ，则该任务将计算表或视图中的每个列的键强度。  
   
  例如，假定有一个包含列 A、B 和 C 的示例表，则您可以在 **KeyColumns**中进行以下选择：  
   
--   在\*KeyColumns **中选择 (**) 和 列 C。 该任务将计算列 C 的键强度，然后计算组合候选键 (A, C) 和 (B, C) 的键强度。  
+-   在\*KeyColumns **中选择 (** ) 和 列 C。 该任务将计算列 C 的键强度，然后计算组合候选键 (A, C) 和 (B, C) 的键强度。  
   
--   在\*KeyColumns\*中选择 ( **) 和 (**)。 该任务将计算单个列 A、B 和 C 的键强度，然后计算组合候选键 (A, B)、(A, C) 和 (B, C) 的键强度。  
+-   在\*KeyColumns\*中选择 ( **) 和 (** )。 该任务将计算单个列 A、B 和 C 的键强度，然后计算组合候选键 (A, B)、(A, C) 和 (B, C) 的键强度。  
   
 > [!NOTE]  
 >  如果选择 (*)，则此选项可能会导致大量计算并降低任务性能。 但是，如果任务找到满足键阈值的子集，则它不会再分析其他的组合。 例如，在上述示例表中，如果任务确定列 C 是一个键，则不会再继续分析组合候选键。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“候选键配置文件请求”**， **“请求属性”** 窗格将显示以下选项组：  
+ 对于 **“候选键配置文件请求”** ， **“请求属性”** 窗格将显示以下选项组：  
   
 -   **Data**，它包含 **TableOrView** 选项和 **KeyColumns** 选项  
   
@@ -86,7 +86,7 @@ ms.locfileid: "65727945"
  有关详细信息，请参阅本主题前面的“了解如何为 KeyColumns 属性选择列”部分。  
   
  **IsWildcard**  
- 指定是否已选择通配符 **(\*)**。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
+ 指定是否已选择通配符 **(\*)** 。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
   
  **ColumnName**  
  显示所选列的名称。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项空白。 此选项是只读的。  

@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c653130f1b2d3cfee447a3c7dec5790d14c9641f
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821704"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 调试器 -“快速监视”对话框
@@ -29,7 +29,7 @@ ms.locfileid: "65821704"
 ## <a name="task-list"></a>任务列表  
  **访问“快速监视”对话框**  
   
--   在 **“调试”** 菜单上，单击 **“快速监视”**。  
+-   在 **“调试”** 菜单上，单击 **“快速监视”** 。  
   
  **查看有关表达式的信息**  
   
@@ -45,15 +45,15 @@ ms.locfileid: "65821704"
   
     -   返回单个值的 Transact-SQL 语句，例如：SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
   
-2.  单击 **“重新计算”**。  
+2.  单击 **“重新计算”** 。  
   
  **将“快速监视”表达式添加到“监视”窗口**  
   
--   单击 **“添加监视”**。  
+-   单击 **“添加监视”** 。  
   
  **更改“快速监视”表达式的值**  
   
--   右键单击表达式，然后选择“编辑值”。  
+-   右键单击表达式，然后选择“编辑值”  。  
   
 ## <a name="options"></a>选项  
  **表达式列表**  
@@ -70,7 +70,7 @@ ms.locfileid: "65821704"
   
  如果表达式的长度超过了 **“值”** 列的宽度，则将指针移动到该表达式的 **“值”** 单元格上方可显示一条工具提示，指示该表达式的完整值。  
   
- **“值”** 单元格中的放大镜图标指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器可视化工具可用。 在该列表中，可以指定 **“文本可视化工具”**、 **“XML 可视化工具”** 或 **“HTML 可视化工具”**。 若要启动调试器可视化工具，请单击此放大镜图标。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器将打开一个对话框，该对话框以适合相应数据类型的格式显示这些数据。  
+ **“值”** 单元格中的放大镜图标指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器可视化工具可用。 在该列表中，可以指定 **“文本可视化工具”** 、 **“XML 可视化工具”** 或 **“HTML 可视化工具”** 。 若要启动调试器可视化工具，请单击此放大镜图标。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器将打开一个对话框，该对话框以适合相应数据类型的格式显示这些数据。  
   
  **类型**  
  显示表达式的数据类型。  

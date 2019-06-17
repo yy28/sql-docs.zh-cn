@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ed0376a9facde37d5c843e10885efaefaf225577
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033957"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
 ```  
   
 ## <a name="arguments"></a>参数  
- key_name  
+ key_name   
  要从数据库中删除的非对称密钥的名称。  
   
  REMOVE PROVIDER KEY  
@@ -59,7 +59,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
   
  如果将非对称密钥映射到 EKM 设备上的可扩展密钥管理 (EKM) 密钥并且未指定 REMOVE PROVIDER KEY 选项，则会从数据库中删除该密钥，但不会从设备上删除它。 这时会发出一条警告。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对非对称密钥具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

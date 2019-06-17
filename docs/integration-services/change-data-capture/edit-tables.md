@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2eaf455da969e1b8a50a2c174aefeec3aef40666
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728891"
 ---
 # <a name="edit-tables"></a>编辑表
@@ -37,16 +37,16 @@ ms.locfileid: "65728891"
 -   **安全角色**：用于访问变更数据的数据库角色的名称。 可单击此列的任意单元格对 **security_role**进行手动编辑。  
   
  **添加表**  
- 单击“添加表”可打开“表选择”对话框，从中可以[将表添加到 CDC 实例](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)。 首次访问 Oracle 数据库时，您必须 [Connect to Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)。  
+ 单击“添加表”  可打开“表选择”对话框，从中可以[将表添加到 CDC 实例](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)。 首次访问 Oracle 数据库时，您必须 [Connect to Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)。  
   
  **编辑**  
- 从该列表中选择一个表，然后选择“编辑”以便打开该表的“属性”对话框，从中可以[编辑表格属性](../../integration-services/change-data-capture/edit-the-table-properties.md)。  
+ 从该列表中选择一个表，然后选择“编辑”  以便打开该表的“属性”  对话框，从中可以[编辑表格属性](../../integration-services/change-data-capture/edit-the-table-properties.md)。  
   
 > [!NOTE]  
 >  您不能编辑已具有镜像表的表的类型映射。 只能对新表执行此操作。  
   
  **删除**  
- 从该列表中选择一个表，然后单击“删除”可从 CDC 实例中删除该表。  
+ 从该列表中选择一个表，然后单击“删除”  可从 CDC 实例中删除该表。  
   
 ## <a name="see-also"></a>另请参阅  
  [如何编辑 CDC 实例属性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   

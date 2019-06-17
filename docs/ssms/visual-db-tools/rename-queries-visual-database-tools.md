@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fe6af8d460606c1cb8ccdfc32e72c87265a607fc
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099198"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重命名查询 (Visual Database Tools)
@@ -27,9 +27,9 @@ ms.locfileid: "65099198"
   
 ### <a name="to-rename-a-query"></a>重命名查询  
   
-1.  在“视图”菜单中，选择“解决方案资源管理器”。  
+1.  在“视图”  菜单中，选择“解决方案资源管理器”  。  
   
-2.  在解决方案资源管理器中，右键单击要重命名的查询，然后在显示的快捷菜单中单击“重命名”。  
+2.  在解决方案资源管理器中，右键单击要重命名的查询，然后在显示的快捷菜单中单击“重命名”  。  
   
 3.  为该查询键入一个新名称，再按 Enter。  
   

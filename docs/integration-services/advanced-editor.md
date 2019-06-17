@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da17c68fa5195e836a9471479fdfe9e2ce70a0c4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729425"
 ---
 # <a name="advanced-editor"></a>“高级编辑器”
@@ -35,15 +35,15 @@ ms.locfileid: "65729425"
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 数据流对象具有可以在组件级、输入和输出级以及输入和输出列级设置的属性。 **“高级编辑器”** 可以枚举所选对象的全部通用和自定义属性，并最多可在下列五个选项卡中的四个选项卡上显示相应的属性：  
   
--   “连接管理器”-- 使用此选项卡可以设置连接属性  
+-    “连接管理器”-- 使用此选项卡可以设置连接属性  
   
--   “组件属性”-- 使用此选项卡可以设置组件级别属性  
+-    “组件属性”-- 使用此选项卡可以设置组件级别属性  
   
--   “列映射”-- 使用此选项卡可将可用列映射为输出列  
+-    “列映射”-- 使用此选项卡可将可用列映射为输出列  
   
--   “输入列”-- 使用此选项卡可选择输入列  
+-    “输入列”-- 使用此选项卡可选择输入列  
   
--   “输入和输出属性”-- 使用此选项卡可设置输入和输出属性；并且可以添加和删除输出、为输入和输出选择或删除列以及为输入和输出设置属性  
+-    “输入和输出属性”-- 使用此选项卡可设置输入和输出属性；并且可以添加和删除输出、为输入和输出选择或删除列以及为输入和输出设置属性  
   
  所显示的属性因组件而异。 有关可能在 **“高级编辑器”** 中显示的属性的详细信息，请参阅下列主题：  
   

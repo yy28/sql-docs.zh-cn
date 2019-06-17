@@ -11,10 +11,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: e9d3cee432adea10c4a92198a7e8486d2e8ee27f
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65198053"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
@@ -60,7 +60,7 @@ ms.locfileid: "65198053"
    GO
    ```  
 
-2. 必须使用 services.msc 重启 SQL Server。 重启 SQL Server 会重启这些服务：  
+2. 必须使用  services.msc 重启 SQL Server。 重启 SQL Server 会重启这些服务：  
 
    - SQL Server PolyBase 数据移动服务  
    - SQL Server PolyBase 引擎  
@@ -79,7 +79,7 @@ ms.locfileid: "65198053"
 
 1. 对于 Hadoop 计算机，在 Hadoop 配置目录中查找类似文件。 在文件中，查找并复制配置密钥 yarn.application.classpath 的值。  
   
-1. 对于 SQL Server 计算机，在 yarn-site.xml 文件中，查找 yarn.application.classpath 属性。 将 Hadoop 计算机的值粘贴到值元素中。  
+1. 对于 SQL Server 计算机，在 yarn-site.xml 文件中，查找 yarn.application.classpath 属性   。 将 Hadoop 计算机的值粘贴到值元素中。  
   
 1. 对于所有 CDH 5.X 版本，都需要将 mapreduce.application.classpath 配置参数添加到 yarn-site.xml 文件的末尾或添加到 mapred-site.xml 文件中。 HortonWorks 在 yarn.application.classpath 配置中包括了这些配置。 有关示例，请参阅 [PolyBase 配置](../../relational-databases/polybase/polybase-configuration.md)。
 
@@ -226,7 +226,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssms"></a>查看 SSMS 中的 PolyBase 对象  
 
-在 SSMS 中，外部表在单独的文件夹“外部表” 中显示。 外部数据源和外部文件格式位于“外部资源” 下的子文件夹中。  
+在 SSMS 中，外部表在单独的文件夹“外部表”  中显示。 外部数据源和外部文件格式位于“外部资源”  下的子文件夹中。  
   
 ![SSMS 中的 PolyBase 对象](media/polybase-management.png)  
 

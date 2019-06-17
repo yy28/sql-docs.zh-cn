@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: adfc98d7502f41b2408117ff0482e208d27834a8
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947072"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
@@ -43,33 +43,33 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 ```  
   
 ## <a name="arguments"></a>参数  
-expressionToFind  
-一个字符[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，其中包含要查找的序列。 expressionToFind 限制为 8000 个字符。
+expressionToFind   
+一个字符[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，其中包含要查找的序列。 expressionToFind 限制为 8000 个字符  。
   
-expressionToSearch  
+expressionToSearch   
 要搜索的字符表达式。
   
-start_location  
-表示搜索开始位置的 integer 或 bigint 表达式。 如果 start_location 未指定、具有负数值或 0，搜索将从 expressionToSearch 的开头开始。
+start_location   
+表示搜索开始位置的 integer 或 bigint 表达式   。 如果 start_location 未指定、具有负数值或 0，搜索将从 expressionToSearch 的开头开始   。
   
 ## <a name="return-types"></a>返回类型
-如果 expressionToSearch 具有一个 nvarchar(max)、varbinary(max) 或 varchar(max) 数据类型，则为 bigint；否则为 int。
+如果 expressionToSearch 具有一个 nvarchar(max)、varbinary(max) 或 varchar(max) 数据类型，则为 bigint；否则为 int       。
   
 ## <a name="remarks"></a>Remarks  
-如果 expressionToFind 或 expressionToSearch 表达式具有一个 Unicode 数据类型（nchar 或 nvarchar），而其他的表达式不具有，CHARINDEX 函数则会将其他表达式转换为一个 Unicode 数据类型。 CHARINDEX 不能与 image、ntext 和 text 数据类型一起使用。
+如果 expressionToFind 或 expressionToSearch 表达式具有一个 Unicode 数据类型（nchar 或 nvarchar），而其他的表达式不具有，CHARINDEX 函数则会将其他表达式转换为一个 Unicode 数据类型     。 CHARINDEX 不能与 image、ntext 和 text 数据类型一起使用    。
   
-如果 expressionToFind 或 expressionToSearch 表达式具有 NULL 值，CHARINDEX 则返回 NULL。
+如果 expressionToFind 或 expressionToSearch 表达式具有 NULL 值，CHARINDEX 则返回 NULL   。
   
-如果 CHARINDEX 在 expressionToSearch 中找不到 expressionToFind，CHARINDEX 则返回 0。
+如果 CHARINDEX 在 expressionToSearch 中找不到 expressionToFind，CHARINDEX 则返回 0   。
   
 CHARINDEX 根据输入排序规则执行比较操作。 若要以指定的排序规则执行比较，可以使用 COLLATE 将显式排序规则应用于输入。
   
 返回的起始位置从 1 开始，而不是从 0 开始。
   
-0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 CHARINDEX 中。
+0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 CHARINDEX 中  。
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
-在使用 SC 排序规则时，start_location 和返回值将代理项对计为一个字符，而不是计为两个字符。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
+在使用 SC 排序规则时，start_location 和返回值将代理项对计为一个字符，而不是计为两个字符  。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
   
 ## <a name="examples"></a>示例  
   
@@ -92,7 +92,7 @@ GO
 ```  
   
 ### <a name="b-searching-from-a-specific-position"></a>B. 从特定位置中搜索  
-此示例使用可选的 start_location 参数在搜索的字符串值变量 `@document` 的第五个字符处开始搜索 `vital`。
+此示例使用可选的 start_location 参数在搜索的字符串值变量 `@document` 的第五个字符处开始搜索 `vital`  。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-searching-for-a-nonexistent-expression"></a>C. 搜索不存在的表达式  
-此示例显示 CHARINDEX 在 expressionToSearch 中找不到 expressionToFind 时的结果集。
+此示例显示 CHARINDEX 在 expressionToSearch 中找不到 expressionToFind 时的结果集   。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -221,7 +221,7 @@ SELECT CHARINDEX('is', 'This is a string', 4);
  ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>H. 未找到字符串时的结果  
-此示例显示 CHARINDEX 在搜索的字符串中找不到字符串 string_pattern 时的返回值。
+此示例显示 CHARINDEX 在搜索的字符串中找不到字符串 string_pattern 时的返回值  。
   
 ```sql
 SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;  

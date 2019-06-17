@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 63f480358f0f6fffea0e63c4c2ff06a3993eee73
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105792"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中删除行 (Visual Database Tools)
@@ -36,7 +36,7 @@ ms.locfileid: "65105792"
   
 2.  按 Delete。  
   
-3.  在要求确认的消息框中单击“是”。  
+3.  在要求确认的消息框中单击“是”  。  
   
 > [!CAUTION]  
 > 以这种方式删除的行将从数据库中永久移除并且不能恢复。  

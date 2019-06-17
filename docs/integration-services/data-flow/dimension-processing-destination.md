@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 257f4ebaba273ad465c259a9bdd633e6513cda53
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726955"
 ---
 # <a name="dimension-processing-destination"></a>维度处理目标
@@ -63,16 +63,16 @@ ms.locfileid: "65726955"
   
 ### <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从列表中选择现有连接管理器，或单击“新建”创建新的连接管理器。  
+ 从列表中选择现有连接管理器，或单击“新建”  创建新的连接管理器。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  
   
  **可用维度列表**  
  选择要处理的维度。  
   
  **处理方法**  
- 选择要应用于列表中选定维度的处理方法。 此选项的默认值为 **“完全”**。  
+ 选择要应用于列表中选定维度的处理方法。 此选项的默认值为 **“完全”** 。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
@@ -118,10 +118,10 @@ ms.locfileid: "65726955"
  指定在出现错误时应停止处理。  
   
  **错误数**  
- 指定应停止处理的错误阈值（如果选择了“出错时停止”）。  
+ 指定应停止处理的错误阈值（如果选择了“出错时停止”  ）。  
   
  **出错时要执行的操作**  
- 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”）。  
+ 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”  ）。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
@@ -165,7 +165,7 @@ ms.locfileid: "65726955"
 |**ReportAndStop**|报告错误并停止处理。|  
   
  **错误日志路径**  
- 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标。  
+ 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标  。  
   
  **浏览(...)**  
  选择错误日志的路径。  

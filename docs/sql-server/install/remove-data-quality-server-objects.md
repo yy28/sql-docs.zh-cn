@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e286f90ddbe008346f70654ca4d9daa24dccb739
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62685196"
 ---
 # <a name="remove-data-quality-server-objects"></a>删除数据质量服务器对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "53215523"
   
 -   来自 master 数据库的 DQInitDQS_MAIN 存储过程。  
   
- 你可以通过右键单击对象，然后在快捷菜单中单击“删除”，在 SQL Server Management Studio 中删除这些对象。  
+ 你可以通过右键单击对象，然后在快捷菜单中单击“删除”  ，在 SQL Server Management Studio 中删除这些对象。  
   
 > [!IMPORTANT]  
 >  如果通过命令提示符使用 `-uninstall` 命令行参数从 SQL Server 实例中仅卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，则在卸载过程中将删除所有 DQS 对象。 您不必在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之后手动删除它们。 若要从命令提示符处卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，请在命令提示符处键入以下命令，然后按 ENTER：   

@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7f9207027f8d5b94c631b4406903dae77694371
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982694"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
@@ -73,23 +73,23 @@ END
 ```  
   
 ## <a name="arguments"></a>参数  
- input_expression  
- 使用简单 CASE 格式时计算的表达式。 input_expression 是任何有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ input_expression   
+ 使用简单 CASE 格式时计算的表达式。 input_expression 是任何有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。  
   
- WHEN when_expression  
- 使用简单 CASE 格式时要与 input_expression 进行比较的简单表达式。 when_expression 是任何有效的表达式。 input_expression 及每个 when_expression 的数据类型必须相同或必须是隐式转换的数据类型。  
+ WHEN when_expression   
+ 使用简单 CASE 格式时要与 input_expression 进行比较的简单表达式  。 when_expression 是任何有效的表达式  。 input_expression 及每个 when_expression 的数据类型必须相同或必须是隐式转换的数据类型   。  
   
- THEN result_expression  
- 当 input_expression = when_expression 的计算结果为 TRUE 时，或 Boolean_expression 的计算结果为 TRUE 时返回的表达式。 result expression 是任何有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ THEN result_expression   
+ 当 input_expression = when_expression 的计算结果为 TRUE 时，或 Boolean_expression 的计算结果为 TRUE 时返回的表达式    。 result expression 是任何有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。  
   
- ELSE else_result_expression  
- 比较运算计算结果不为 TRUE 时返回的表达式。 如果忽略此参数且比较运算计算结果不为 TRUE，则 CASE 返回 NULL。 else_result_expression 是任何有效的表达式。 else_result_expression 及任何 result_expression 的数据类型必须相同或必须是隐式转换的数据类型。  
+ ELSE else_result_expression   
+ 比较运算计算结果不为 TRUE 时返回的表达式。 如果忽略此参数且比较运算计算结果不为 TRUE，则 CASE 返回 NULL。 else_result_expression 是任何有效的表达式  。 else_result_expression 及任何 result_expression 的数据类型必须相同或必须是隐式转换的数据类型   。  
   
- WHEN Boolean_expression  
- 使用 CASE 搜索格式时所计算的布尔表达式。 Boolean_expression 是任何有效的布尔表达式。  
+ WHEN Boolean_expression   
+ 使用 CASE 搜索格式时所计算的布尔表达式。 Boolean_expression 是任何有效的布尔表达式  。  
   
 ## <a name="return-types"></a>返回类型  
- 从 result_expressions 和可选 else_result_expression 的类型集中返回优先级最高的类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+ 从 result_expressions 和可选 else_result_expression 的类型集中返回优先级最高的类型   。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
 ### <a name="return-values"></a>返回值  
  **CASE 简单表达式：**  
@@ -100,17 +100,17 @@ END
   
 -   按指定的顺序计算每个 WHEN 子句的 input_expression = when_expression。  
   
--   返回首个 input_expression = when_expression 的计算结果为 TRUE 的 result_expression。  
+-   返回首个 input_expression = when_expression 的计算结果为 TRUE 的 result_expression    。  
   
--   如果 input_expression = when_expression 的计算结果均不为 TRUE，则在指定了 ELSE 子句的情况下，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将返回 else_result_expression；若没有指定 ELSE 子句，则返回 NULL 值。  
+-   如果 input_expression = when_expression 的计算结果均不为 TRUE，则在指定了 ELSE 子句的情况下，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将返回 else_result_expression；若没有指定 ELSE 子句，则返回 NULL 值    。  
   
  **CASE 搜索表达式：**  
   
--   按指定顺序对每个 WHEN 子句的 Boolean_expression 进行计算。  
+-   按指定顺序对每个 WHEN 子句的 Boolean_expression 进行计算  。  
   
--   返回首个 Boolean_expression 的计算结果为 TRUE 的 result_expression。  
+-   返回首个 Boolean_expression 的计算结果为 TRUE 的 result_expression   。  
   
--   如果 Boolean_expression 的计算结果均不为 TRUE，则在指定了 ELSE 子句的情况下，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将返回 else_result_expression；若没有指定 ELSE 子句，则返回 NULL 值。  
+-   如果 Boolean_expression 的计算结果均不为 TRUE，则在指定了 ELSE 子句的情况下，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将返回 else_result_expression；若没有指定 ELSE 子句，则返回 NULL 值   。  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅允许在 CASE 表达式中嵌套 10 个级别。  

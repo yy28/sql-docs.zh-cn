@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 75a1cd07710bb95c041d0de8a00cb23f7354eb91
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722402"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>第 3-1 课：复制第 2 课包
@@ -30,33 +30,33 @@ ms.locfileid: "65722402"
 
 如果将复制已完成的第 2 课，请使用此过程。  要复制第 2 课示例，请参阅下一节。
 
-1.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 尚未打开，请选择“开始” > “所有程序” > “Microsoft SQL Server 2017”，然后选择 SQL Server Data Tools。
+1.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 尚未打开，请选择“开始” > “所有程序” > “Microsoft SQL Server 2017”，然后选择 SQL Server Data Tools     。
 
-2.  在“文件”菜单中，选择“打开” > “项目/解决方案”，选择“SSIS Tutorial”文件夹，选择“打开”，然后双击“SSIS Tutorial.sln”。
+2.  在“文件”菜单中，选择“打开” > “项目/解决方案”，选择“SSIS Tutorial”文件夹，选择“打开”，然后双击“SSIS Tutorial.sln”       。
 
-3.  在解决方案资源管理器中，右键单击“Lesson 2.dtsx”，然后选择“复制”。
+3.  在解决方案资源管理器中，右键单击“Lesson 2.dtsx”，然后选择“复制”    。
 
-4.  在解决方案资源管理器中，右键单击“SSIS 包”，再选择“粘贴”。
+4.  在解决方案资源管理器中，右键单击“SSIS 包”，再选择“粘贴”    。
 
     默认情况下，复制的包名称为 Lesson 3.dtsx。
 
-5.  在解决方案资源管理器中，双击“Lesson 3.dtsx”打开此包
+5.  在解决方案资源管理器中，双击“Lesson 3.dtsx”打开此包  
 
-6.  右键单击“控制流”设计图面背景的任意位置，再选择“属性”。
+6.  右键单击“控制流”设计图面背景的任意位置，再选择“属性”   。
 
-7.  在“属性”窗口中，将 Name 属性更改为 Lesson 3。
+7.  在“属性”窗口中，将 Name 属性更改为 Lesson 3    。
 
-8.  选择 ID 属性框，选择下拉箭头，然后选择“\<生成新 ID>”。
+8.  选择 ID 属性框，选择下拉箭头，然后选择“\<生成新 ID>”   。
 
 ## <a name="add-the-completed-lesson-2-package"></a>添加已完成的第 2 课包
 
 1.  依次打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 和 SSIS Tutorial 项目。
 
-2.  在解决方案资源管理器中，右键单击“SSIS 包”，再选择“添加现有包”。
+2.  在解决方案资源管理器中，右键单击“SSIS 包”，再选择“添加现有包”    。
 
-3.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”。
+3.  在“添加现有包的副本”对话框的“包位置”中，选择“文件系统”    。
 
-4.  选择浏览按钮 (…)，导航到计算机上的“Lesson 2.dtsx”，然后选择“打开”。
+4.  选择浏览按钮 (…)，导航到计算机上的“Lesson 2.dtsx”，然后选择“打开”    。
 
 5.  按上一节中的步骤 3-8 中所述，复制并粘贴第 3 课包。  
   

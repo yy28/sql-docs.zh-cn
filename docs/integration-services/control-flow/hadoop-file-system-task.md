@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ffb3559a379a8d1f64c76072f262b89d41164533
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727635"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 文件系统任务
@@ -27,7 +27,7 @@ ms.locfileid: "65727635"
 
   Hadoop 文件系统任务允许 SSIS 包在 Hadoop 群集之间或内部复制文件。  
   
- 要添加 Hadoop 文件系统任务，请将其拖放到设计器。 然后双击该任务，或右键单击，然后单击“编辑”，以打开“Hadoop 文件系统任务编辑器”对话框。  
+ 要添加 Hadoop 文件系统任务，请将其拖放到设计器。 然后双击该任务，或右键单击，然后单击“编辑”，以打开“Hadoop 文件系统任务编辑器”对话框。    
   
  ![Hadoop 文件系统任务编辑器](../../integration-services/control-flow/media/hadoop-filesystem-task.png "Hadoop File System Task Editor")  
   

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4e065ac17e913d766813076df75a6a65ffe9472e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098272"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>“查询定义不同”对话框 (Visual Database Tools)
@@ -35,12 +35,12 @@ ms.locfileid: "65098272"
 -   SQL 语句有效但包含特定于所使用数据连接的语法。  
   
 > [!TIP]  
-> 可以使用“查询”工具栏上的“验证 SQL 语句”按钮来检查语句是否有效。  
+> 可以使用“查询”  工具栏上的“验证 SQL 语句”  按钮来检查语句是否有效。  
   
 该对话框将显示一条消息，指示不能显示 SQL 语句的原因，并询问如何继续。  
   
 > [!NOTE]  
-> 如果已经隐藏了“关系图”窗格和“条件”窗格，则不会显示“查询定义不同”对话框。  
+> 如果已经隐藏了“关系图”窗格和“条件”窗格，则不会显示“查询定义不同”  对话框。  
   
 ## <a name="options"></a>选项  
 **“忽略”按钮**  

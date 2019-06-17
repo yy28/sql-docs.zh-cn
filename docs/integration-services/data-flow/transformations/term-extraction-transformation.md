@@ -30,10 +30,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: acfa92d36166968f4b82b73b5e2d63dcf2dd6370
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725806"
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
@@ -154,7 +154,7 @@ ms.locfileid: "65725806"
   
 -   数字、标点符号和字母字符的组合。 例如， *A23B#99* 返回字词 *A23B*。  
   
--   字符：%、@，&、$、#、\*、;、。、！、？、\<>、+、=、^、~、|、\\/、（、）、[、]、{、}、" 和 '。  
+-   字符：%、@，&、$、#、\*、;、。、  ！、？、\<>、+、=、^、~、|、\\/、（、）、[、]、{、}、" 和 '。  
   
     > [!NOTE]  
     >  包括一个或多个句点 (.) 的首字母缩略词不分隔为多个句子。  
@@ -211,10 +211,10 @@ ms.locfileid: "65725806"
  指示在字词提取过程中是否通过指定包含排除字词的列来排除特定的字词。 如果选择要排除字词，则必须指定以下源属性：  
   
  **“无缓存”**  
- 选择现有的 OLE DB 连接管理器，或通过单击“新建”创建新的连接。  
+ 选择现有的 OLE DB 连接管理器，或通过单击“新建”创建新的连接。   
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”对话框创建与数据库的新连接。  
+ 通过使用“配置 OLE DB 连接管理器”  对话框创建与数据库的新连接。  
   
  **表或视图**  
  选择包含排除字词的表或视图。  

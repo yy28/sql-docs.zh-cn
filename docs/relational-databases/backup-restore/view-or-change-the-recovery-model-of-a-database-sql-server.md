@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 033c14d1e144811f350f8f29ae18c052cd2ea380
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65560074"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "65560074"
 
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]查看或更改数据库。 
   
-  “恢复模式”是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。 **model** 数据库将设置新数据库的默认恢复模式。  
+  “恢复模式”  是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。 **model** 数据库将设置新数据库的默认恢复模式。  
   
   有关更深入的说明，请参阅[恢复模式](recovery-models-sql-server.md)。
   
@@ -60,15 +60,15 @@ ms.locfileid: "65560074"
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
+2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击该数据库，再单击“属性”，这将打开“数据库属性”对话框。  
+3.  右键单击该数据库，再单击“属性”  ，这将打开“数据库属性”  对话框。  
   
-4.  在 **“选择页”** 窗格中，单击 **“选项”**。  
+4.  在 **“选择页”** 窗格中，单击 **“选项”** 。  
   
 5.  当前恢复模式显示在 **“恢复模式”** 列表框中。  
   
-6.  也可以从列表中选择不同的模式来更改恢复模式。 可以选择“完整”、“大容量日志”或“简单”。  
+6.  也可以从列表中选择不同的模式来更改恢复模式。 可以选择“完整”  、“大容量日志”  或“简单”  。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -78,9 +78,9 @@ ms.locfileid: "65560074"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何对 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图执行查询以了解 **模型** 数据库的恢复模式。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何对 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图执行查询以了解 **模型** 数据库的恢复模式。  
   
 ```sql  
 SELECT name, recovery_model_desc  
@@ -94,9 +94,9 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 `model` ALTER DATABASE `FULL` 语句的 `SET RECOVERY` 选项将 [数据库中的恢复模式更改为](../../t-sql/statements/alter-database-transact-sql-set-options.md) 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 `model` ALTER DATABASE `FULL` 语句的 `SET RECOVERY` 选项将 [数据库中的恢复模式更改为](../../t-sql/statements/alter-database-transact-sql-set-options.md) 。  
   
 ```sql  
 USE [master] ;  

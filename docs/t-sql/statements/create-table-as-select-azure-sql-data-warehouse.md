@@ -13,10 +13,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f184ea911bb7731c8b5adba8010d81a91ee4ff3c
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503957"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT（Azure SQL 数据仓库）
@@ -89,7 +89,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="table-distribution-options"></a>表分发选项
 
-`DISTRIBUTION` = `HASH` ( distribution_column_name ) | ROUND_ROBIN | REPLICATE      
+`DISTRIBUTION` = `HASH` ( distribution_column_name  ) | ROUND_ROBIN | REPLICATE      
 CTAS 语句需要分布选项，并且没有默认值。 这就不同于具有默认值的 CREATE TABLE。 
 
 有关详细信息以及如何选择最佳分布列的信息，请参阅 CREATE TABLE 中的[表分发选项](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions)部分。 
@@ -106,16 +106,16 @@ CTAS 语句需要分布选项，并且没有默认值。 这就不同于具有�
 ### <a name="select-options"></a>选择选项
 select 语句是 CTAS 和 CREATE TABLE 之间的根本区别。  
 
- `WITH` common_table_expression  
+ `WITH` common_table_expression   
  指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- `SELECT` select_criteria  
- 使用 SELECT 语句的结果填充新表。 select_criteria 是 SELECT 语句的主体，用于确定将哪些数据复制到新表中。 有关 SELECT 语句的信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
+ `SELECT` select_criteria   
+ 使用 SELECT 语句的结果填充新表。 select_criteria 是 SELECT 语句的主体，用于确定将哪些数据复制到新表中  。 有关 SELECT 语句的信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
   
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>权限  
-CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限。
+CTAS 需要 select_criteria 中引用的任何对象的 `SELECT` 权限  。
 
 有关创建表的权限，请参阅 CREATE TABLE 中的[权限](https://msdn.microsoft.com/library/mt203953/#Permissions)。 
   
