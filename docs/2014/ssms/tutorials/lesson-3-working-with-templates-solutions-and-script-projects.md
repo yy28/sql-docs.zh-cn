@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753014"
 ---
-# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>第 3 课：使用模板、 解决方案和脚本项目
+# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>第 3 课：使用模板、解决方案和脚本项目
   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，您可以创建自定义模板、解决方案和脚本项目。  
   
  本课程包含以下主题：  

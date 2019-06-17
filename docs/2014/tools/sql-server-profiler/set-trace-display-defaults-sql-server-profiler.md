@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31dd441af6e46784b928006fe45b726f4c59f0c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63267381"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>设置跟踪显示默认值 (SQL Server Profiler)
@@ -24,11 +24,11 @@ ms.locfileid: "63267381"
   
 ### <a name="to-set-trace-display-defaults"></a>设置跟踪显示默认值  
   
-1.  在“工具”  菜单上，单击“选项” 。  
+1.  在“工具”  菜单上，单击“选项”  。  
   
-2.  在 **“常规选项”** 对话框中，单击 **“选择字体”**。  
+2.  在 **“常规选项”** 对话框中，单击 **“选择字体”** 。  
   
-3.  在 **“字体”** 对话框中，选择 **用于显示跟踪的**“字体” **、**“字形” **和** “大小” [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 。  
+3.  在 **“字体”** 对话框中，选择 **用于显示跟踪的**“字体” **、** “字形” **和** “大小” [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 。  
   
 4.  单击“确定” **“确定”** 应用设置并关闭“字体” **“字体”** 对话框。  
   

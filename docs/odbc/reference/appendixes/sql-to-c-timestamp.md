@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259260"
 ---
 # <a name="sql-to-c-timestamp"></a>从 SQL 到 C：时间戳
@@ -51,4 +51,4 @@ ms.locfileid: "63259260"
   
  [f] 这是相应的 C 数据类型的大小。  
 
-时间戳 SQL 数据转换为 C 字符数据时，生成的字符串时，在"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[。*f...*]"格式，其中在秒的小数部分使用最多到九位。 此格式不受 Windows® 国家/地区设置。 （除了小数点和秒的小数部分，整个格式必须使用，而不考虑时间戳 SQL 数据类型的精度。）
+时间戳 SQL 数据转换为 C 字符数据时，生成的字符串时，在"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[。*f...* ]"格式，其中在秒的小数部分使用最多到九位。 此格式不受 Windows® 国家/地区设置。 （除了小数点和秒的小数部分，整个格式必须使用，而不考虑时间戳 SQL 数据类型的精度。）

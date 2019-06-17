@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62630798"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
@@ -52,21 +52,21 @@ ms.locfileid: "62630798"
 |请求订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<订阅数据库>-\<GUID>** <sup>2</sup>|  
 |非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
   
- <sup>1</sup> 对于 Oracle 发布的推送订阅，它是“\<发布服务器>-\<发布服务器>”而不是“\<发布服务器>-\<发布数据库>”  
+ <sup>1</sup> 对于 Oracle 发布的推送订阅，它是“\<发布服务器>-\<发布服务器>”而不是“\<发布服务器>-\<发布数据库>”    
   
- <sup>2</sup> 对于 Oracle 发布的请求订阅，它是“\<发布服务器>-\<分发数据库>”而不是“\<发布服务器>-\<发布数据库>”  
+ <sup>2</sup> 对于 Oracle 发布的请求订阅，它是“\<发布服务器>-\<分发数据库>”而不是“\<发布服务器>-\<发布数据库>”    
   
 #### <a name="to-specify-synchronization-schedules"></a>指定同步计划  
   
-1.  在新建订阅向导的“同步计划”页上，从“代理计划”下拉列表中为要创建的每个订阅选择以下值之一：  
+1.  在新建订阅向导的“同步计划”页上，从“代理计划”下拉列表中为要创建的每个订阅选择以下值之一：    
   
     -   **连续运行**  
   
     -   **仅按需运行**  
   
-    -   \<定义计划...>  
+    -   \<定义计划...>   
   
-2.  如果选择“\<定义计划...>”，请在“作业计划属性”对话框中指定一个计划，然后单击“确定”。  
+2.  如果选择“\<定义计划...>”，请在“作业计划属性”对话框中指定一个计划，然后单击“确定”。     
   
 3.  完成向导。  
   
@@ -76,21 +76,21 @@ ms.locfileid: "62630798"
   
 2.  单击 **“所有订阅”** 选项卡。  
   
-3.  右键单击订阅，然后单击 **“查看详细信息”**。  
+3.  右键单击订阅，然后单击 **“查看详细信息”** 。  
   
-4.  在中**订阅\<SubscriptionName >** 窗口中，单击**操作**，然后单击**\<代理名称 > 作业属性**。  
+4.  在中**订阅\<SubscriptionName >** 窗口中，单击**操作**，然后单击 **\<代理名称 > 作业属性**。  
   
-5.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。  
+5.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。     
   
 6.  在 **“作业计划属性”** 对话框中，从 **“计划类型”** 下拉列表中选择一个值：  
   
-    -   若要指定代理应连续运行，请选择 **“SQL Server 代理启动时自动启动”**。  
+    -   若要指定代理应连续运行，请选择 **“SQL Server 代理启动时自动启动”** 。  
   
-    -   若要指定代理应按计划运行，请选择 **“重复执行”**。  
+    -   若要指定代理应按计划运行，请选择 **“重复执行”** 。  
   
-    -   若要指定代理应按需运行，请选择 **“执行一次”**。  
+    -   若要指定代理应按需运行，请选择 **“执行一次”** 。  
   
-7.  如果选择 **“重复执行”**，请为代理指定计划。  
+7.  如果选择 **“重复执行”** ，请为代理指定计划。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -100,19 +100,19 @@ ms.locfileid: "62630798"
   
 2.  展开 **“SQL Server 代理”** 文件夹，再展开 **“作业”** 文件夹。  
   
-3.  右键单击与订阅相关联的分发代理或合并代理的作业，再单击 **“属性”**。  
+3.  右键单击与订阅相关联的分发代理或合并代理的作业，再单击 **“属性”** 。  
   
-4.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。  
+4.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。     
   
 5.  在 **“作业计划属性”** 对话框中，从 **“计划类型”** 下拉列表中选择一个值：  
   
-    -   若要指定代理应连续运行，请选择 **“SQL Server 代理启动时自动启动”**。  
+    -   若要指定代理应连续运行，请选择 **“SQL Server 代理启动时自动启动”** 。  
   
-    -   若要指定代理应按计划运行，请选择 **“重复执行”**。  
+    -   若要指定代理应按计划运行，请选择 **“重复执行”** 。  
   
-    -   若要指定代理应按需运行，请选择 **“执行一次”**。  
+    -   若要指定代理应按需运行，请选择 **“执行一次”** 。  
   
-6.  如果选择 **“重复执行”**，请为代理指定计划。  
+6.  如果选择 **“重复执行”** ，请为代理指定计划。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -122,19 +122,19 @@ ms.locfileid: "62630798"
   
 2.  展开 **“SQL Server 代理”** 文件夹，再展开 **“作业”** 文件夹。  
   
-3.  右键单击与订阅相关联的分发代理或合并代理的作业，再单击 **“属性”**。  
+3.  右键单击与订阅相关联的分发代理或合并代理的作业，再单击 **“属性”** 。  
   
-4.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。  
+4.  在“作业属性 - \<JobName>”对话框的“计划”页上，单击“编辑”。     
   
 5.  在 **“作业计划属性”** 对话框中，从 **“计划类型”** 下拉列表中选择一个值：  
   
-    -   若要指定代理应连续运行，请选择 **“SQL Server 代理启动时自动启动”**。  
+    -   若要指定代理应连续运行，请选择 **“SQL Server 代理启动时自动启动”** 。  
   
-    -   若要指定代理应按计划运行，请选择 **“重复执行”**。  
+    -   若要指定代理应按计划运行，请选择 **“重复执行”** 。  
   
-    -   若要指定代理应按需运行，请选择 **“执行一次”**。  
+    -   若要指定代理应按需运行，请选择 **“执行一次”** 。  
   
-6.  如果选择 **“重复执行”**，请为代理指定计划。  
+6.  如果选择 **“重复执行”** ，请为代理指定计划。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -167,25 +167,25 @@ ms.locfileid: "62630798"
   
 1.  对事务发布创建一个新的请求订阅。 有关详细信息，请参阅 [创建请求订阅](create-a-pull-subscription.md)。  
   
-2.  在订阅服务器上，执行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定 **@publisher**或复制管理对象 (RMO) 在 **@publisher_db**或复制管理对象 (RMO) 在 **@publication**，并为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_name **@job_name** 和 **@password**。 指定上面详细说明的同步参数，为同步订阅的分发代理作业定义计划。  
+2.  在订阅服务器上，执行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** ，并为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_name **@job_name** 和 **@password** 。 指定上面详细说明的同步参数，为同步订阅的分发代理作业定义计划。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>为事务发布的推送订阅定义同步计划  
   
 1.  对事务发布创建一个新的推送订阅。 有关详细信息，请参阅 [创建推送订阅](create-a-push-subscription.md)。  
   
-2.  在订阅服务器上，执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定 **@subscriber**或复制管理对象 (RMO) 在 **@subscriber_db**或复制管理对象 (RMO) 在 **@publication**，并为 **@job_name** 和 **@password**。 指定上面详细说明的同步参数，为同步订阅的分发代理作业定义计划。  
+2.  在订阅服务器上，执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** 或复制管理对象 (RMO) 在 **@publication** ，并为 **@job_name** 和 **@password** 。 指定上面详细说明的同步参数，为同步订阅的分发代理作业定义计划。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>为合并发布的请求订阅定义同步计划  
   
 1.  对合并发布创建一个新的请求订阅。 有关详细信息，请参阅 [创建请求订阅](create-a-pull-subscription.md)。  
   
-2.  在订阅服务器上，执行 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定 **@publisher**或复制管理对象 (RMO) 在 **@publisher_db**或复制管理对象 (RMO) 在 **@publication**，并为 **@job_name** 和 **@password**。 指定上面详细说明的同步参数，为同步订阅的合并代理作业定义计划。  
+2.  在订阅服务器上，执行 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** ，并为 **@job_name** 和 **@password** 。 指定上面详细说明的同步参数，为同步订阅的合并代理作业定义计划。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>为合并发布的推送订阅定义同步计划  
   
 1.  对合并发布创建一个新的推送订阅。 有关详细信息，请参阅 [创建推送订阅](create-a-push-subscription.md)。  
   
-2.  在订阅服务器上，执行 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定 **@subscriber**或复制管理对象 (RMO) 在 **@subscriber_db**或复制管理对象 (RMO) 在 **@publication**，并为 **@job_name** 和 **@password**。 指定上面详细说明的同步参数，为同步订阅的合并代理作业定义计划。  
+2.  在订阅服务器上，执行 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** 或复制管理对象 (RMO) 在 **@publication** ，并为 **@job_name** 和 **@password** 。 指定上面详细说明的同步参数，为同步订阅的合并代理作业定义计划。  
   
 ##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  复制使用 SQL Server 代理为定期发生的活动计划作业（如快照生成和订阅同步）。 可以编程的方式使用复制管理对象 (RMO) 为复制代理作业指定计划。  

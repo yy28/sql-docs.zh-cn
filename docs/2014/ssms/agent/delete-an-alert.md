@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62523628"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
@@ -58,13 +58,13 @@ ms.locfileid: "62523628"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要删除的 SQL Server 代理警报的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击要删除的警报，然后选择“删除”。  
+4.  右键单击要删除的警报，然后选择“删除”  。  
   
-5.  在 **“删除对象”** 对话框中，确认已选择正确的警报，然后单击 **“确定”**。  
+5.  在 **“删除对象”** 对话框中，确认已选择正确的警报，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -72,9 +72,9 @@ ms.locfileid: "62523628"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- deletes the SQL Server Agent alert called 'Test Alert.'  

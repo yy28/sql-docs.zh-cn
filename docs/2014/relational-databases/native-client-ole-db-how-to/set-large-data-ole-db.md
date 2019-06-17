@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63218665"
 ---
 # <a name="set-large-data-ole-db"></a>设置大型数据 (OLE DB)
@@ -37,7 +37,7 @@ ms.locfileid: "63218665"
   
 2.  设置 DBPROPSET_ROWSET 属性组中的属性，以使行集可更新。  
   
-3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构。  
+3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构   。  
   
 4.  使用 DBBINDINGS 结构数组中的绑定信息创建取值函数。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63218665"
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
 ### <a name="code"></a>代码  

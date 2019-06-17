@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482622"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>用于 Microsoft Excel 的 Master Data Services 外接程序
@@ -42,7 +42,7 @@ ms.locfileid: "65482622"
   
 -   *member* 是数据行。 每个实体都包含成员。 **Blue**就是成员的一个示例。 有关详细信息，请参阅[成员 (Master Data Services)](../members-master-data-services.md)。  
   
--   *attribute* 是数据列。 每个成员都具有属性。 例如，“Blue”成员的“代码”属性是“B”有关属性的详细信息，请参阅[属性 (Master Data Services)](../attributes-master-data-services.md)。  
+-   *attribute* 是数据列。 每个成员都具有属性。 例如，“Blue”  成员的“代码”  属性是“B”  有关属性的详细信息，请参阅[属性 (Master Data Services)](../attributes-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

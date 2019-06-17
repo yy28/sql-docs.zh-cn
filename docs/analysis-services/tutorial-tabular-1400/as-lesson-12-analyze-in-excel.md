@@ -11,10 +11,10 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: c807825bfd4ef90491fb38e09e81eb79134fdbc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62467792"
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
@@ -39,7 +39,7 @@ ms.locfileid: "62467792"
   
 1.  单击**模型**菜单 >**在 Excel 中的分析**。  
   
-2.  在“在 Excel 中分析”对话框中，单击“确定”。  
+2.  在“在 Excel 中分析”  对话框中，单击“确定”  。  
   
     Excel 中打开新的工作簿。 将使用当前用户帐户创建一个数据源连接，默认透视将用于定义可查看字段。 数据透视表自动添加到工作表。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62467792"
   
 1.  单击**模型**菜单，并单击**在 Excel 中的分析**。  
   
-2.  在“在 Excel 中分析”对话框中，选中“当前 Windows 用户”，然后在“透视”下拉列表框中，选中 **Internet Sales**，然后单击“确定”。 
+2.  在“在 Excel 中分析”  对话框中，选中“当前 Windows 用户”  ，然后在“透视”  下拉列表框中，选中 **Internet Sales**，然后单击“确定”  。 
     
     ![as-lesson12-perspective](../tutorial-tabular-1400/media/as-lesson12-perspective.png)
     

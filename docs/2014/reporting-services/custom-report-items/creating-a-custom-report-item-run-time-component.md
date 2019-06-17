@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63265861"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>创建自定义报表项运行时组件
@@ -40,7 +40,7 @@ ms.technology: reporting-services
  有关完全实现的自定义报表项的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="definition-and-instance-objects"></a>定义和实例对象  
- 实现自定义报表项之前，必须了解“定义对象”和“实例对象”之间的差别。 定义对象用于提供自定义报表项的 RDL 表示形式，而实例对象是定义对象的已计算版本。 对于报表上的每一项，都只有一个定义对象。 访问包含表达式的定义对象上的属性时，将获取未经计算的表达式字符串。 实例对象包含定义对象的已计算版本，与项的定义对象可以是一对多的关系。 例如，如果报表有一个 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> 数据区域，其详细信息行包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem>，则在此数据区域中，将只有一个定义对象，但是每一行中都有一个实例对象。  
+ 实现自定义报表项之前，必须了解“定义对象”和“实例对象”之间的差别   。 定义对象用于提供自定义报表项的 RDL 表示形式，而实例对象是定义对象的已计算版本。 对于报表上的每一项，都只有一个定义对象。 访问包含表达式的定义对象上的属性时，将获取未经计算的表达式字符串。 实例对象包含定义对象的已计算版本，与项的定义对象可以是一对多的关系。 例如，如果报表有一个 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> 数据区域，其详细信息行包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem>，则在此数据区域中，将只有一个定义对象，但是每一行中都有一个实例对象。  
   
 ## <a name="implementing-the-icustomreportitem-interface"></a>实现 ICustomReportItem 接口  
  若要创建 `CustomReportItem` 运行时组件，则需要实现 Microsoft.ReportingServices.ProcessingCore.dll 中定义的 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 接口：  

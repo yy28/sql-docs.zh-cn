@@ -16,26 +16,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15dfb65dc7cb51311e60112145623eeda50339e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067483"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>在“关系图”窗格中显示列名 (Visual Database Tools)
-  可以在查询和视图设计器的“关系图”窗格中隐藏或显示表的列名。  
+  可以在查询和视图设计器的“关系图”  窗格中隐藏或显示表的列名。  
   
 ### <a name="show-column-names"></a>显示列名称  
   
-1.  在查询和视图设计器的“关系图”窗格中右键单击该表。  
+1.  在查询和视图设计器的“关系图”  窗格中右键单击该表。  
   
-2.  从快捷菜单中选择“列名”。  
+2.  从快捷菜单中选择“列名”  。  
   
 ### <a name="hide-column-names"></a>隐藏列名称  
   
-1.  在查询和视图设计器的“关系图”窗格中右键单击该表。  
+1.  在查询和视图设计器的“关系图”  窗格中右键单击该表。  
   
-2.  从快捷菜单中选择“仅表名”。  
+2.  从快捷菜单中选择“仅表名”  。  
   
 ## <a name="see-also"></a>请参阅  
  [设计查询和视图操作指南主题 (Visual Database Tools)](visual-database-tools.md)  

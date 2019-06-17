@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04eb0e01b1c98552c0364c5b60d918608ae23faa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62511372"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>使用 IRow::GetColumns 和 ISequentialStream 提取 BLOB 数据
-  以下函数使用 IRow::GetColumns 和 ISequentialStream 提取大型数据：  
+  以下函数使用 IRow::GetColumns 和 ISequentialStream 提取大型数据   ：  
   
 ```  
 void InitializeAndExecuteCommand()  

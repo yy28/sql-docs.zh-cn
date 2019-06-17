@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082152"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>定义货币换算（商业智能向导）
-  可以使用“定义货币换算”页，查看商业智能向导生成的包含货币换算功能的多维表达式 (MDX) 脚本。 然后可以使用此向导生成的 MDX 脚本覆盖或追加到多维数据集的 MDX 脚本中以前定义的货币换算功能。  
+  可以使用“定义货币换算”页，查看商业智能向导生成的包含货币换算功能的多维表达式 (MDX) 脚本。  然后可以使用此向导生成的 MDX 脚本覆盖或追加到多维数据集的 MDX 脚本中以前定义的货币换算功能。  
   
 > [!NOTE]  
 >  只有在商业智能向导检测到多维数据集的 MDX 脚本中至少有一处以前定义的货币换算时，才会显示此页。 在多维数据集的 MDX 脚本中，将嵌入以下注释表示货币换算：  
@@ -42,10 +42,10 @@ ms.locfileid: "66082152"
  显示由当前商业智能向导会话生成的 MDX 脚本。  
   
  **覆盖现有货币换算脚本**  
- 选择此项将用“新建货币换算脚本”中显示的 MDX 脚本覆盖“现有货币换算脚本”中显示的 MDX 脚本。  
+ 选择此项将用“新建货币换算脚本”中显示的 MDX 脚本覆盖“现有货币换算脚本”中显示的 MDX 脚本。    
   
  **此项后追加**  
- 选择此项将把“新建货币换算脚本”中显示的 MDX 脚本追加到“现有货币换算脚本”中显示的 MDX 脚本的末尾。 所追加的脚本将显示为新部分。  
+ 选择此项将把“新建货币换算脚本”中显示的 MDX 脚本追加到“现有货币换算脚本”中显示的 MDX 脚本的末尾。   所追加的脚本将显示为新部分。  
   
  **现有货币换算脚本**  
  选择现有 MDX 脚本的一部分，其中包含要覆盖或追加到以前定义的货币换算功能。  

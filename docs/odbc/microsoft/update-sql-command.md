@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632554"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL 命令
@@ -36,7 +36,7 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>参数  
- UPDATE [ *DatabaseName1!*] *TableName1*  
+ UPDATE [ *DatabaseName1!* ] *TableName1*  
  指定使用新值更新记录的表。  
   
  *DatabaseName1!* 指定包含表的数据源与指定的数据库的数据库的名称。 必须包括包含表，如果数据库不是当前的数据库的名称。 包含感叹号 （！） 分隔符之后的数据库名称和表名称之前。  

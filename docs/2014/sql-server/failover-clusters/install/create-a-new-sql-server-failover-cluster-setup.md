@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740591"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>创建新的 SQL Server 故障转移群集（安装程序）
@@ -90,7 +90,7 @@ ms.locfileid: "62740591"
   
 3.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。  
   
-4.  若要继续，请单击 **“下一步”**。  
+4.  若要继续，请单击 **“下一步”** 。  
   
 5.  在“安装程序支持文件”页，单击 **“安装”** 以安装安装程序支持文件。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62740591"
   
 7.  在“产品密钥”页上，指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../editions-and-components-of-sql-server-2016.md)。  
   
-8.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击 **“下一步”** 继续。 若要结束安装程序，请单击 **“取消”**。  
+8.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击 **“下一步”** 继续。 若要结束安装程序，请单击 **“取消”** 。  
   
 9. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62740591"
      **实例 ID** - 默认情况下，实例名称用作实例 ID。 这用于标识 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例的默认方式都是如此。 对于默认实例，实例名称和实例 ID 为 MSSQLSERVER。 若要使用非默认的实例 ID，请选中 **“实例 ID”** 框，并提供一个值。  
   
     > [!NOTE]  
-    >  典型的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 独立实例（无论是默认实例还是命名实例）不会对“实例 ID”框使用非默认值。  
+    >  典型的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 独立实例（无论是默认实例还是命名实例）不会对“实例 ID”  框使用非默认值。  
   
      **实例根目录** - 默认情况下，实例根目录为 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\。 若要指定一个非默认的根目录，请使用所提供的字段，或单击省略号按钮以找到一个安装文件夹。  
   
@@ -174,9 +174,9 @@ ms.locfileid: "62740591"
   
      **安全说明** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
-     为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”**。  
+     为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”** 。  
   
-18. 使用“服务器配置 - 排序规则”选项卡为 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非默认的排序规则。 有关详细信息，请参阅[服务器配置 - 排序规则](../../install/server-configuration-collation.md)。  
+18. 使用“服务器配置 - 排序规则”  选项卡为 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非默认的排序规则。 有关详细信息，请参阅[服务器配置 - 排序规则](../../install/server-configuration-collation.md)。  
   
 19. 使用“ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置 - 帐户设置”页指定以下各项：  
   
@@ -184,27 +184,27 @@ ms.locfileid: "62740591"
   
          在设备与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]成功建立连接之后，用于 Windows 身份验证和混合模式身份验证的安全机制是相同的。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../install/database-engine-configuration-account-provisioning.md)。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员 - 必须为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../install/database-engine-configuration-account-provisioning.md)。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员 - 必须为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”** 。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”** ，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../install/database-engine-configuration-account-provisioning.md)。  
   
-     完成对该列表的编辑后， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”**。  
+     完成对该列表的编辑后， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”** 。  
   
-20. 使用“ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置 - 数据目录”页指定非默认的安装目录。 若要安装到默认目录，请单击 **“下一步”**。  
+20. 使用“ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置 - 数据目录”页指定非默认的安装目录。 若要安装到默认目录，请单击 **“下一步”** 。  
   
     > [!IMPORTANT]  
     >  如果指定非默认的安装目录，请确保安装文件夹对于此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例是唯一的。 此对话框中的任何目录都不应与其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的目录共享。 对于故障转移群集，数据目录应位于共享群集磁盘上。  
   
     > [!NOTE]  
-    >  若要将服务器消息块 (SMB) 文件服务器指定为数据目录，请将“默认数据根目录”指定为 \\\Servername\ShareName\\... 格式的文件共享  
+    >  若要将服务器消息块 (SMB) 文件服务器指定为数据目录，请将“默认数据根目录”  指定为 \\\Servername\ShareName\\... 格式的文件共享  
   
      有关详细信息，请参阅 [数据库引擎配置 - 数据目录](../../install/database-engine-configuration-data-directories.md)。  
   
 21. 使用“ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置 - FILESTREAM”页对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例启用 FILESTREAM。 有关 FILESTREAM 的详细信息，请参阅[数据库引擎配置 - 文件流](../../install/database-engine-configuration-filestream.md)。 单击 **“下一步”** 继续。  
   
-22. 使用“[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置 - 帐户设置”页指定将拥有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的管理员权限的用户或帐户。 您必须为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅 [Analysis Services 配置 - 帐户设置](../../install/analysis-services-configuration-account-provisioning.md)。  
+22. 使用“[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置 - 帐户设置”页指定将拥有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的管理员权限的用户或帐户。 您必须为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”** 。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”** ，然后编辑将拥有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅 [Analysis Services 配置 - 帐户设置](../../install/analysis-services-configuration-account-provisioning.md)。  
   
-     完成对该列表的编辑后，[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”**。  
+     完成对该列表的编辑后，[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”** 。  
   
-23. 使用“ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置 - 数据目录”页指定非默认的安装目录。 若要安装到默认目录，请单击 **“下一步”**。  
+23. 使用“ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置 - 数据目录”页指定非默认的安装目录。 若要安装到默认目录，请单击 **“下一步”** 。  
   
     > [!IMPORTANT]  
     >  如果指定非默认的安装目录，请确保安装文件夹对于此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例是唯一的。 此对话框中的任何目录都不应与其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的目录共享。 对于故障转移群集，数据目录应位于共享群集磁盘上。  
@@ -217,11 +217,11 @@ ms.locfileid: "62740591"
   
 25. 系统配置检查器将再运行一组规则来针对您指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能验证您的计算机配置。  
   
-26. “准备安装”页显示安装期间指定的安装选项的树视图。 若要继续，请单击 **“安装”**。 安装程序将首先安装所选功能的必备组件，然后安装所选功能。  
+26. “准备安装”页显示安装期间指定的安装选项的树视图。 若要继续，请单击 **“安装”** 。 安装程序将首先安装所选功能的必备组件，然后安装所选功能。  
   
 27. 在安装过程中，“安装进度”页会提供相应的状态，因此您可以在安装过程中监视安装进度。  
   
-28. 安装完成后， **“完成”** 页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”**。  
+28. 安装完成后， **“完成”** 页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”** 。  
   
 29. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关安装程序日志文件的信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "62740591"
   
 2.  Windows Installer 4.5 是必需的，并且可能由安装向导进行安装。 如果系统提示您重新启动计算机，则重新启动计算机，然后再次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。  
   
-3.  必备组件安装完成后，安装向导会启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 要准备加入群集的节点，请移至 **“高级”** 页，然后单击 **“高级群集准备”**。  
+3.  必备组件安装完成后，安装向导会启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 要准备加入群集的节点，请移至 **“高级”** 页，然后单击 **“高级群集准备”** 。  
   
 4.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。  
   
@@ -250,14 +250,14 @@ ms.locfileid: "62740591"
   
 7.  如果您在已本地化的操作系统上进行安装，并且安装介质包括针对英语以及与操作系统相对应的语言的语言包，则您可以在“语言选择”页上为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例指定语言。 有关跨语言支持和安装注意事项的详细信息，请参阅 [SQL Server 中的本地语言版本](../../install/local-language-versions-in-sql-server.md)。  
   
-     若要继续，请单击 **“下一步”**。  
+     若要继续，请单击 **“下一步”** 。  
   
 8.  在“产品密钥”页上，指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅[各版本和 SQL Server 2014 的组件](../../editions-and-components-of-sql-server-2016.md)。  
   
     > [!NOTE]  
     >  在为相同故障转移群集准备的所有节点上，您必须指定相同的产品密钥。  
   
-9. 在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击 **“下一步”** 继续。 若要结束安装程序，请单击 **“取消”**。  
+9. 在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击 **“下一步”** 继续。 若要结束安装程序，请单击 **“取消”** 。  
   
 10. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
@@ -273,7 +273,7 @@ ms.locfileid: "62740591"
      **实例 ID** - 默认情况下，实例名称用作实例 ID。 这用于标识 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例的默认方式都是如此。 对于默认实例，实例名称和实例 ID 为 MSSQLSERVER。 若要使用非默认的实例 ID，请选中 **“实例 ID”** 文本框，并提供一个值。  
   
     > [!NOTE]  
-    >  典型的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 独立实例（无论是默认实例还是命名实例）不会对“实例 ID”文本框使用非默认值。  
+    >  典型的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 独立实例（无论是默认实例还是命名实例）不会对“实例 ID”  文本框使用非默认值。  
   
     > [!IMPORTANT]  
     >  对于为故障转移群集准备的所有节点，使用相同的实例 ID  
@@ -302,9 +302,9 @@ ms.locfileid: "62740591"
   
      **安全说明** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
-     为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”**。  
+     为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”** 。  
   
-16. 使用“服务器配置 - 排序规则”选项卡为 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非默认的排序规则。 有关详细信息，请参阅[服务器配置 - 排序规则](../../install/server-configuration-collation.md)。  
+16. 使用“服务器配置 - 排序规则”  选项卡为 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非默认的排序规则。 有关详细信息，请参阅[服务器配置 - 排序规则](../../install/server-configuration-collation.md)。  
   
 17. 使用**服务器配置 - 文件流**对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例启用 FILESTREAM。 有关详细信息，请参阅[数据库引擎配置 - 文件流](../../install/database-engine-configuration-filestream.md)。 单击 **“下一步”** 继续。  
   
@@ -316,11 +316,11 @@ ms.locfileid: "62740591"
   
 20. 系统配置检查器将再运行一组规则来针对您指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能验证您的计算机配置。  
   
-21. “准备安装”页显示安装期间指定的安装选项的树视图。 若要继续，请单击 **“安装”**。 安装程序将首先安装所选功能的必备组件，然后安装所选功能。  
+21. “准备安装”页显示安装期间指定的安装选项的树视图。 若要继续，请单击 **“安装”** 。 安装程序将首先安装所选功能的必备组件，然后安装所选功能。  
   
      在安装过程中，“安装进度”页会提供相应的状态，因此您可以在安装过程中监视安装进度。 安装完成后， **“完成”** 页会提供指向安装摘要日志文件以及其他重要说明的链接。  
   
-22. 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”**。  
+22. 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”** 。  
   
 23. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关安装程序日志文件的信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
@@ -330,7 +330,7 @@ ms.locfileid: "62740591"
   
 #### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>高级/企业故障转移群集安装步骤 2:“完成”  
   
-1.  按照 [准备步骤](#prepare)中的说明准备好所有节点后，在某个准备好的节点上运行安装程序，最好是在拥有共享磁盘的节点上运行。 在  安装中心的“高级” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 页上，单击 **“高级群集完成”**。  
+1.  按照 [准备步骤](#prepare)中的说明准备好所有节点后，在某个准备好的节点上运行安装程序，最好是在拥有共享磁盘的节点上运行。 在  安装中心的“高级” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 页上，单击 **“高级群集完成”** 。  
   
 2.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。  
   
@@ -340,7 +340,7 @@ ms.locfileid: "62740591"
   
 5.  如果您在已本地化的操作系统上进行安装，并且安装介质包括针对英语以及与操作系统相对应的语言的语言包，则您可以在“语言选择”页上为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例指定语言。 有关跨语言支持和安装注意事项的详细信息，请参阅 [SQL Server 中的本地语言版本](../../install/local-language-versions-in-sql-server.md)。  
   
-     若要继续，请单击 **“下一步”**。  
+     若要继续，请单击 **“下一步”** 。  
   
 6.  使用“群集节点配置”页来选择为群集准备的实例名称，并指定新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的网络名称。 此名称用于在网络中标识故障转移群集。  
   
@@ -374,22 +374,22 @@ ms.locfileid: "62740591"
   
          在设备与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]成功建立连接之后，用于 Windows 身份验证和混合模式身份验证的安全机制是相同的。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../install/database-engine-configuration-account-provisioning.md)。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员 - 必须为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../install/database-engine-configuration-account-provisioning.md)。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员 - 必须为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”** 。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”** ，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅[数据库引擎配置-帐户预配](../../install/database-engine-configuration-account-provisioning.md)。  
   
-     完成对该列表的编辑后， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”**。  
+     完成对该列表的编辑后， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”** 。  
   
-13. 使用“ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置 - 数据目录”页指定非默认的安装目录。 若要安装到默认目录，请单击 **“下一步”**。  
+13. 使用“ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置 - 数据目录”页指定非默认的安装目录。 若要安装到默认目录，请单击 **“下一步”** 。  
   
     > [!IMPORTANT]  
     >  如果指定非默认的安装目录，请确保安装文件夹对于此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例是唯一的。 此对话框中的任何目录都不应与其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的目录共享。 对于故障转移群集，数据目录应位于共享群集磁盘上。  
   
      有关详细信息，请参阅 [数据库引擎配置 - 数据目录](../../install/database-engine-configuration-data-directories.md)。  
   
-14. 使用“[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置 - 帐户设置”页指定将拥有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的管理员权限的用户或帐户。 您必须为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”**。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅 [Analysis Services 配置 - 帐户设置](../../install/analysis-services-configuration-account-provisioning.md)。  
+14. 使用“[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置 - 帐户设置”页指定将拥有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的管理员权限的用户或帐户。 您必须为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]至少指定一个系统管理员。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“添加当前用户”** 。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”** ，然后编辑将拥有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的管理员特权的用户、组或计算机的列表。 有关详细信息，请参阅 [Analysis Services 配置 - 帐户设置](../../install/analysis-services-configuration-account-provisioning.md)。  
   
-     完成对该列表的编辑后，[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”**。  
+     完成对该列表的编辑后，[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 验证配置对话框中的管理员列表。 完成此列表后，请单击 **“下一步”** 。  
   
-15. 使用“ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置 - 数据目录”页指定非默认的安装目录。 若要安装到默认目录，请单击 **“下一步”**。  
+15. 使用“ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 配置 - 数据目录”页指定非默认的安装目录。 若要安装到默认目录，请单击 **“下一步”** 。  
   
     > [!IMPORTANT]  
     >  如果指定非默认的安装目录，请确保安装文件夹对于此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例是唯一的。 此对话框中的任何目录都不应与其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的目录共享。 对于故障转移群集，数据目录应位于共享群集磁盘上。  
@@ -398,11 +398,11 @@ ms.locfileid: "62740591"
   
 16. 系统配置检查器将再运行一组规则来针对您指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能验证您的计算机配置。  
   
-17. “准备安装”页显示安装期间指定的安装选项的树视图。 若要继续，请单击 **“安装”**。 安装程序将首先安装所选功能的必备组件，然后安装所选功能。  
+17. “准备安装”页显示安装期间指定的安装选项的树视图。 若要继续，请单击 **“安装”** 。 安装程序将首先安装所选功能的必备组件，然后安装所选功能。  
   
 18. 在安装过程中，“安装进度”页会提供相应的状态，因此您可以在安装过程中监视安装进度。  
   
-19. 安装完成后， **“完成”** 页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”**。 完成此步骤后，为同一故障转移群集准备的所有节点就变为完成后的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的一部分。  
+19. 安装完成后， **“完成”** 页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”** 。 完成此步骤后，为同一故障转移群集准备的所有节点就变为完成后的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的一部分。  
   
 ## <a name="next-steps"></a>后续步骤  
  **配置新安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** - 为了减少系统的可攻击外围应用，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将有选择地安装和启用一些关键服务和功能。 有关详细信息，请参阅 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)。  

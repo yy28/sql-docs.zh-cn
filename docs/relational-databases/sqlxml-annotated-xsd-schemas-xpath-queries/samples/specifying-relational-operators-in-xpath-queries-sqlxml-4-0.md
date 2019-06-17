@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49e14c0a68ad901e8d22388c7edd993744c9afc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737533"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定关系运算符 (SQLXML 4.0)
@@ -31,13 +31,13 @@ ms.locfileid: "62737533"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定关系运算符  
- 此 XPath 查询返回的子元素的**\<客户 >** 元素的**CustomerID**属性值为"1"和其中任何子**\<顺序>** 元素包含 **\<OrderDetail >** 具有子级**OrderQty**属性大于 3 的值：  
+ 此 XPath 查询返回的子元素的 **\<客户 >** 元素的**CustomerID**属性值为"1"和其中任何子 **\<顺序>** 元素包含 **\<OrderDetail >** 具有子级**OrderQty**属性大于 3 的值：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 括号筛选器中指定的谓词**\<客户 >** 元素。 仅**\<客户 >** 至少有一个元素 **\<OrderDetail >** OrderQty 属性值大于返回 3 的孙级。  
+ 括号筛选器中指定的谓词 **\<客户 >** 元素。 仅 **\<客户 >** 至少有一个元素 **\<OrderDetail >** OrderQty 属性值大于返回 3 的孙级。  
   
  **子**轴是默认值。 因此，可以将该查询指定为：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62737533"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查询中指定关系运算符并使用布尔函数比较该结果  
- 此查询返回所有**\<顺序 >** 具有的元素子级的上下文节点**SalesPersonID**属性值是小于 270:  
+ 此查询返回所有 **\<顺序 >** 具有的元素子级的上下文节点**SalesPersonID**属性值是小于 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

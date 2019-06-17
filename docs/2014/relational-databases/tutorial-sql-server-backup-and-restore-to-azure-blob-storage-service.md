@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524047"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务
@@ -44,7 +44,7 @@ ms.locfileid: "62524047"
   
      可以使用用户数据库代替 AdventureWorks2012，并相应地修改 tsql 语法。  
   
--   用于发出 BACKUP 或 RESTORE 命令的用户帐户应属于具有“更改任意凭据”权限的 **db_backup 操作员**数据库角色。  
+-   用于发出 BACKUP 或 RESTORE 命令的用户帐户应属于具有“更改任意凭据”  权限的 **db_backup 操作员**数据库角色。  
   
 ### <a name="additional-reading"></a>其他阅读主题  
  以下是一些建议阅读的主题，便于了解概念以及在将 Windows Azure Blob 存储服务用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份时的最佳做法。  

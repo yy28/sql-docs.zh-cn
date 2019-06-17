@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1542c33d67c95c1c7154d08dbffd550b5f8cc72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743133"
 ---
 # <a name="view-the-xml-for-an-analysis-services-project-ssdt"></a>查看 Analysis Services 项目的 XML (SSDT)
@@ -27,7 +27,7 @@ ms.locfileid: "62743133"
   
 1.  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中打开 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目。  
   
-2.  在解决方案资源管理器中右键单击对象，再单击“查看代码”。  
+2.  在解决方案资源管理器中右键单击对象，再单击“查看代码”。   
   
      将在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中显示此对象的 XML 代码。  
   

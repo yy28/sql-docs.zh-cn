@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253329"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
@@ -109,7 +109,7 @@ ms.locfileid: "63253329"
   
     -   若要查看的颜色代码定义，请单击**图例**按钮。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 ## <a name="next-step"></a>下一步  
 迁移过程中的下一步是[连接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  

@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62766620"
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
@@ -56,7 +56,7 @@ ms.locfileid: "62766620"
   
  **“正在运行的包”** 文件夹不包含子文件夹，也不可扩展。  
   
- 默认情况下，“已存储的包”文件夹包含两个文件夹：“文件系统”和 MSDB。 **“文件系统”** 文件夹列出保存到文件系统中的包。 这些文件的位置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件中指定。 默认文件夹是 Packages 文件夹，它位于 %Program Files%\Microsoft SQL Server\100\DTS 下。 **MSDB** 文件夹列出已经保存到服务器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 sysssispackages 表包含保存到 msdb 中的包。  
+ 默认情况下，“已存储的包”  文件夹包含两个文件夹：“文件系统”  和 MSDB  。 **“文件系统”** 文件夹列出保存到文件系统中的包。 这些文件的位置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件中指定。 默认文件夹是 Packages 文件夹，它位于 %Program Files%\Microsoft SQL Server\100\DTS 下。 **MSDB** 文件夹列出已经保存到服务器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 sysssispackages 表包含保存到 msdb 中的包。  
   
  若要查看包存储区中的包列表，必须打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [在 SQL Server Management Studio 中查看 Integration Services 包（SSIS 服务）](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)的早期版本向后兼容。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62766620"
   
  若要查看 **“摘要”** 页上某个正在运行的包的信息，请单击此包。 **“摘要”** 页显示包的版本和说明等信息。  
   
- 右键单击“正在运行的包”文件夹中某个正在运行的包，然后单击“停止”，可以使该包停止运行。  
+ 右键单击“正在运行的包”  文件夹中某个正在运行的包，然后单击“停止”  ，可以使该包停止运行。  
   
 ## <a name="managing-package-storage"></a>管理包存储  
  若要组织包，可以向 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务在其配置文件中所列出的包存储区根文件夹内添加自定义文件夹。 默认情况下，根文件夹是 **“文件系统”** 和 **MSDB** 文件夹。 例如，您可能希望在 **“文件系统”** 文件夹中添加一个 **“数据清理”** 文件夹，该文件夹将包含用于清理数据的所有包。 可以将自定义文件夹添加到自定义文件夹中，从而创建适合您需要的嵌套式文件夹层次结构。 可以删除和重命名自定义文件夹，但是，不能删除或重命名配置文件所指定的根文件夹。 若要更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 列出的根文件夹，必须更新配置文件。  

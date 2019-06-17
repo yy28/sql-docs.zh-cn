@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63231822"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>项目设置（类型映射）(MySQLToSQL)
@@ -92,7 +92,7 @@ ms.locfileid: "63231822"
 |decimal[*..65]|decimal[*][0]|  
 |decimal[*..65][\*..30]|decimal[*][\*]|  
 |double|float[53]|  
-|双精度|float[53]|  
+|double precision|float[53]|  
 |双精度 [*...255] [\*...30]|numeric[*][\*]|  
 |double[*..255][\*..30]|numeric[*][\*]|  
 |已修复|NUMERIC|  
@@ -143,7 +143,7 @@ ms.locfileid: "63231822"
 |串行|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint[*..255]|SMALLINT|  
-|Text|nvarchar(max)|  
+|text|nvarchar(max)|  
 |text[0..1]|nvarchar[1]|  
 |text[2..4000]|nvarchar[*]|  
 |text[4001..*]|nvarchar(max)|  

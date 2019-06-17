@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1756c80b86ec9b8c16792bf488cc1d3d19b590d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813160"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>解决 AlwaysOn 可用性组配置问题 (SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "62813160"
 ##  <a name="Endpoints"></a> 端点  
  必须正确配置端点。  
   
-1.  确保要托管可用性副本（每个副本位置）的各个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例都具有数据库镜像终结点。 若要确定给定服务器实例上是否存在数据库镜像终结点，请使用 [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql) 目录视图。 有关详细信息，请参阅[创建 Windows 身份验证的数据库镜像终结点 (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 或[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
+1.  确保要托管可用性副本（每个副本位置  ）的各个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例都具有数据库镜像终结点。 若要确定给定服务器实例上是否存在数据库镜像终结点，请使用 [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql) 目录视图。 有关详细信息，请参阅[创建 Windows 身份验证的数据库镜像终结点 (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 或[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
 2.  检查端口号是否正确。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62813160"
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|当前主副本|确保 READ_ONLY_ROUTING_LIST 仅包含承载可读辅助副本的服务器实例。|**标识可读次要副本：** sys.availability_replicas（**secondary_role_allow_connections_desc** 列）<br /><br /> **查看只读路由列表：** sys.availability_read_only_routing_lists<br /><br /> **更改只读路由列表：** ALTER AVAILABILITY GROUP|[sys.availability_replicas (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|请确保 Windows 防火墙未在阻止 READ_ONLY_ROUTING_URL 端口。|-|[为数据库引擎访问配置 Windows 防火墙](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中，请确认：<br /><br /> 已启用 SQL Server 远程连接。<br /><br /> 已启用 TCP/IP。<br /><br /> IP 地址已正确配置。|-|[查看或更改服务器属性 (SQL Server)](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [配置服务器以侦听特定 TCP 端口（SQL Server 配置管理器）](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|确保 READ_ONLY_ROUTING_URL (TCP<strong>://*`system-address`*:</strong>*端口*) 包含正确完全限定的域名 (FQDN) 和端口号。|-|[计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|确保 READ_ONLY_ROUTING_URL (TCP<strong>:// *`system-address`* :</strong>*端口*) 包含正确完全限定的域名 (FQDN) 和端口号。|-|[计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|客户端系统|确认客户端驱动程序支持只读路由。|-|[AlwaysOn 客户端连接 (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
