@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4dfd342647f6d355ee34e1e815db9431a212dbc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62897852"
 ---
 # <a name="hex-ssis-expression"></a>HEX（SSIS 表达式）
@@ -38,9 +38,9 @@ HEX(integer_expression)
  DT_WSTR  
   
 ## <a name="remarks"></a>备注  
- 如果 integer_expression 为 Null，则 HEX 返回 Null。  
+ 如果 integer_expression 为 Null，则 HEX 返回 Null  。  
   
- integer_expression 参数的计算结果必须为整数。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
+ integer_expression 参数的计算结果必须为整数  。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
  返回结果不包含限定符，如 0x 前缀。 若要包含前缀，请使用 +（连接）运算符。 有关详细信息，请参阅 [+（连接）（SSIS 表达式）](concatenate-ssis-expression.md)。  
   
