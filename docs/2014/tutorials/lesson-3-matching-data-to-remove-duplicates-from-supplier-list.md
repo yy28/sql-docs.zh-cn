@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484656"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>第 3 课：匹配数据以便从供应商列表中删除重复项
@@ -25,6 +25,6 @@ ms.locfileid: "65484656"
  在本课中，您将执行一个匹配活动来删除供应商列表中的重复项。 首先，您创建包含一个规则的匹配策略以识别供应商列表中的重复项并将该策略发布到知识库。 接着，您创建并运行一个用于匹配的数据质量项目。 最后，您将匹配活动的结果导出到 Excel 文件，您以后在将数据上载到 Master Data Services (MDS) 时将使用该文件。  
   
 ## <a name="next-step"></a>下一步  
- [任务 1:定义匹配策略](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
+ [任务 1：定义匹配策略](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
   
   

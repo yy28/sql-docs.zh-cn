@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da3f95120b81877076533d19e4cb05785d5cb932
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105649"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指示器（报表生成器和 SSRS）
@@ -95,7 +95,7 @@ ms.locfileid: "66105649"
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> 在表和矩阵中使用指示器  
  指示器的简单形状使其很适合在表和矩阵中使用。 指示器甚至在小尺寸下效果也很好。 这使它们可用于报表的详细信息行或组行中。  
   
- 下图显示具有一个表的报表，该表使用方向指示器集“四个箭头(彩色)”来指示销售额。 报表中的指示器图标配置为使用蓝色阴影来代替默认颜色：红色、黄色和绿色。  
+ 下图显示具有一个表的报表，该表使用方向指示器集“四个箭头(彩色)”  来指示销售额。 报表中的指示器图标配置为使用蓝色阴影来代替默认颜色：红色、黄色和绿色。  
   
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66105649"
   
  无论您是使用百分比还是数字状态度量单位，都可能会发生此情况。 在您使用数字度量单位时更有可能发生此情况，因为您为此度量值提供特定值。 在您对报表数据值进行四舍五入时也更有可能发生此情况，因为这往往会使数据更离散。  
   
- 下面的方案描述当在“3 个箭头(彩色)”方向指示器中更改由三个状态构成的序列时，将会如何影响数据的可视化。 默认情况下，该序列为：  
+ 下面的方案描述当在“3 个箭头(彩色)”  方向指示器中更改由三个状态构成的序列时，将会如何影响数据的可视化。 默认情况下，该序列为：  
   
 1.  红色向下箭头  
   
@@ -147,7 +147,7 @@ ms.locfileid: "66105649"
   
  下面的方案显示对于四个不同的状态序列及其值范围，这些序列是如何影响数据可视化的。  
   
- 在这些方案中，“3 个箭头(彩色)”指示器使用数字状态度量。  
+ 在这些方案中，“3 个箭头(彩色)”  指示器使用数字状态度量。  
   
 |状态序列|起始值|结束值|  
 |--------------------|-----------------|---------------|  

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2f2d400a4ba29ebf042324877ed8d62c2a2f70ef
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482986"
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>立即应用成员权限 (Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "65482986"
   
 2.  创建新查询。  
   
-3.  键入以下文本，用数据库名称替换 database，用模型名称替换 Model_Name。  
+3.  键入以下文本，用数据库名称替换 database  ，用模型名称替换 Model_Name  。  
   
     ```  
     USE [database];  

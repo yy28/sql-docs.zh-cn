@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7515c259d8ee978f60ddd8e09ce817f133670cd6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481346"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>任务 1：使用主数据管理器创建供应商模型
@@ -41,6 +41,6 @@ ms.locfileid: "65481346"
 6.  单击**保存模型**工具栏上的按钮。  
   
 ## <a name="next-step"></a>下一步  
- [任务 2:供应商数据上载到 MDS Excel 的 MDS 外接程序使用](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
+ [任务 2：供应商数据上载到 MDS Excel 的 MDS 外接程序使用](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

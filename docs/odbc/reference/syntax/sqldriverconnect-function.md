@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537645"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函数
@@ -63,7 +63,7 @@ SQLRETURN SQLDriverConnect(
   
 ## <a name="arguments"></a>参数  
  *ConnectionHandle*  
- [输入]连接句柄。  
+ [输入] 连接句柄。  
   
  *WindowHandle*  
  [输入]窗口句柄。 应用程序可以通过父窗口的句柄，如果适用，或如果是 null 指针的窗口句柄不适用或**SQLDriverConnect**将不显示任何对话框。  

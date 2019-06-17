@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b72d0a263010cc82abab38ea2d6149d3492ed7b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108935"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 预留和注册（SSRS 配置管理器）
@@ -63,7 +63,7 @@ ms.locfileid: "66108935"
 |HTTP.SYS 中的 URL 预留|URL|解释|  
 |---------------------------------|---------|-----------------|  
 |http://+:80/reportserver|http://\<computername>/reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|此 URL 预留针对端口 80 指定了一个通配符 (+)。 这会将指定主机（在端口 80 上解析为报表服务器计算机）的任何传入请求放入报表服务器队列中。 请注意，借助此 URL 预留，可以使用任意数目的 URL 访问报表服务器。<br /><br /> 对于大多数操作系统而言，这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的默认 URL 预留。|  
-|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|此 URL 预留指定了一个 IP 地址，与通配符 URL 预留相比，其限制性要强很多。 只能使用包含此 IP 地址的 URL 连接到报表服务器。 给定此 URL 保留项，对 http:// 上报表服务器的请求\<计算机名 > / reportserver 或 http://localhost/reportserver会失败。|  
+|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|此 URL 预留指定了一个 IP 地址，与通配符 URL 预留相比，其限制性要强很多。 只能使用包含此 IP 地址的 URL 连接到报表服务器。 给定此 URL 保留项，对 http:// 上报表服务器的请求\<计算机名 > / reportserver 或 http://localhost/reportserver 会失败。|  
   
 ##  <a name="DefaultURLs"></a> 默认 URL  
  如果在默认配置中安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，安装程序将为报表服务器 Web 服务和报表管理器保留 URL。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中定义 URL 预留时，也可以接受这些默认值。 如果安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 或安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作为命名实例，则默认 URL 将包含实例名称。  
@@ -100,9 +100,9 @@ ms.locfileid: "66108935"
  因为默认安全性为 `RSWindowsNegotiate`，所以匿名访问已禁用。 对于 Intranet 访问，报表服务器 URL 使用网络计算机名称。 如果要为 Internet 连接配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，必须使用其他设置。 有关身份验证的详细信息，请参阅 [联机丛书中的](../security/authentication-with-the-report-server.md) 使用报表服务器进行身份验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="URLlocalAdmin"></a> 用于本地管理的 URL  
- 如果为 URL 预留指定了强通配符或弱通配符，则可使用 http://localhost/reportserver 或 http://localhost/reports。  
+ 如果为 URL 预留指定了强通配符或弱通配符，则可使用 http://localhost/reportserver 或 http://localhost/reports 。  
   
- http://localhost URL 将解释为 http://127.0.0.1。 如果你将 URL 预留限定为计算机名称或单个 IP 地址，则除非在本地计算机上为 127.0.0.1 创建附加预留，否则将无法使用 localhost。 同样，如果您的计算机上禁用 localhost 或 127.0.0.1，也无法使用该 URL。  
+ http://localhost URL 将解释为 http://127.0.0.1 。 如果你将 URL 预留限定为计算机名称或单个 IP 地址，则除非在本地计算机上为 127.0.0.1 创建附加预留，否则将无法使用 localhost。 同样，如果您的计算机上禁用 localhost 或 127.0.0.1，也无法使用该 URL。  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 包括新的安全功能，可以将偶然使用提升的权限运行程序的风险降到最低。 还需要执行一些其他步骤，才能在这些操作系统上启用本地管理。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66108935"
   
 -   尽管 SharePoint 产品和技术具有为自身定义的 URL 预留，但在发布到服务器时你可以忽略这种预留。 对于 SharePoint Web 应用程序，URL 预留是内部操作。  
   
--   对于单服务器部署在同一台计算机安装的一个集成的报表服务器和 SharePoint 技术实例的位置，不能使用 http://localhost/reportserver。 如果 http://localhost是用于访问 SharePoint Web 应用程序，您必须使用非默认网站或唯一端口分配来访问报表服务器。 此外，如果报表服务器与 SharePoint 场集成在一起，则对于部署中安装在远程计算机上的节点，对报表服务器的 localhost 访问将无法解析。  
+-   对于单服务器部署在同一台计算机安装的一个集成的报表服务器和 SharePoint 技术实例的位置，不能使用 http://localhost/reportserver 。 如果 http://localhost 是用于访问 SharePoint Web 应用程序，您必须使用非默认网站或唯一端口分配来访问报表服务器。 此外，如果报表服务器与 SharePoint 场集成在一起，则对于部署中安装在远程计算机上的节点，对报表服务器的 localhost 访问将无法解析。  
   
 -   不能为在 SharePoint 集成模式下运行的报表服务器配置报表管理器的 URL 预留和端点。 如果配置了这些项，则在 SharePoint 集成模式下部署报表服务器后，报表管理器将不再工作。 此模式不支持报表管理器。  
   

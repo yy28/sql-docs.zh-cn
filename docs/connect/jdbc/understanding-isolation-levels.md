@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9341004225f619f4b15aabb1a641a8a39a2329b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764855"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800169"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔离级别
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-事务指定一个隔离级别，该隔离级别定义一个事务必须与其他事务所进行的资源或数据更改相隔离的程度。 隔离级别从允许的并发副作用（例如，脏读或虚拟读取）的角度进行描述。  
+事务指定一个隔离级别，该隔离级别定义一个事务必须与由其他事务进行的资源或数据更改相隔离的程度。 隔离级别从允许的并发副作用（例如，脏读或虚拟读取）的角度进行描述。  
   
 事务隔离级别控制以下各项：  
   
@@ -48,15 +48,15 @@ ms.locfileid: "47764855"
   
 | 隔离级别  | 脏读 | 不可重复读 | 虚拟读取 |
 | ---------------- | ---------- | ------------------- | ------- |
-| 未提交读 | 用户帐户控制        | 是                 | 用户帐户控制     |
-| 已提交读   | 否         | 是                 | 用户帐户控制     |
-| 可重复读  | 否         | 否                  | 用户帐户控制     |
-| Snapshot         | 否         | 否                  | 否      |
+| 未提交读 | 是        | 是                 | 是     |
+| 已提交读   | 否         | 是                 | 是     |
+| 可重复读  | 否         | 否                  | 是     |
+| 快照         | 否         | 否                  | 否      |
 | 可序列化     | 否         | 否                  | 否      |
   
 事务必须至少在可重复读的隔离级别运行，才能在两个事务都检索同一行，然后根据原先检索的值更新行时，防止出现丢失更新的情况。 如果两个事务使用一个 UPDATE 语句更新行，而且更新并不以先前检索的值为基础，则在默认的已提交读的隔离级别上不会发生丢失更新的情况。  
 
-若要为事务设置隔离级别，可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 方法。 此方法接受 int 值作为其参数，此参数基于如下所示的连接常量之一：  
+若要为事务设置隔离级别，可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 方法。 此方法接受 int 值作为其参数，此参数基于如下所示的连接常量之一  ：  
 
 ```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  

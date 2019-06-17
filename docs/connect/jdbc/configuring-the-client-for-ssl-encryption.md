@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d80c9d8103e7a0a0eeea766487e1fc013ae5e100
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f5ec4a56beb5595353671c0f2aab18bf30e5f87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726625"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797464"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>为 SSL 加密配置客户端
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "47726625"
  有关验证服务器证书的详细信息，请参阅[了解 SSL 支持](../../connect/jdbc/understanding-ssl-support.md)中的“验证服务器 SSL 证书”部分。  
   
 ## <a name="configuring-the-client-trust-store"></a>配置客户端信任存储区  
- 验证服务器证书要求在连接时必须提供信任材料，可以使用 trustStore 和 trustStorePassword 连接属性显式提供材料，也可以使用基础 Java 虚拟机 (JVM) 的默认信任存储隐式提供材料。 有关如何在连接字符串中设置 trustStore 和 trustStorePassword 属性的详细信息，请参阅[通过 SSL 加密进行连接](../../connect/jdbc/connecting-with-ssl-encryption.md)。  
+ 验证服务器证书要求在连接时必须提供信任材料，可以使用 trustStore  和 trustStorePassword  连接属性显式提供材料，也可以使用基础 Java 虚拟机 (JVM) 的默认信任存储隐式提供材料。 有关如何在连接字符串中设置 trustStore  和 trustStorePassword  属性的详细信息，请参阅[通过 SSL 加密进行连接](../../connect/jdbc/connecting-with-ssl-encryption.md)。  
   
- 如果未指定 trustStore 属性或该属性设置为 null，则 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将依赖于基础 JVM 的安全提供程序，即 Java 安全套接字扩展 (SunJSSE)。 SunJSSE 提供程序提供一个默认的 TrustManager，用于验证由 SQL Server 针对在信任存储中提供的信任材料返回的 X.509 证书。  
+ 如果未指定 trustStore  属性或该属性设置为 null，则 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将依赖于基础 JVM 的安全提供程序，即 Java 安全套接字扩展 (SunJSSE)。 SunJSSE 提供程序提供一个默认的 TrustManager，用于验证由 SQL Server 针对在信任存储中提供的信任材料返回的 X.509 证书。  
   
  TrustManager 将尝试以下搜索顺序找到默认的 trustStore：  
   
@@ -49,7 +49,7 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- 在这种情况下，在此 JVM 上运行的任何应用程序都将使用这些设置作为默认设置。 为了在应用程序中覆盖默认设置，应在连接字符串中或在 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类的适当 setter 方法中设置 trustStore 和 trustStorePassword 连接属性。  
+ 在这种情况下，在此 JVM 上运行的任何应用程序都将使用这些设置作为默认设置。 为了在应用程序中覆盖默认设置，应在连接字符串中或在 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类的适当 setter 方法中设置 trustStore  和 trustStorePassword  连接属性。  
   
  此外，你还可以配置和管理默认的信任存储文件，如“\<java-home>/lib/security/jssecacerts”和“\<java-home>/lib/security/cacerts”。 为此，请使用随 JRE（Java 运行时环境）安装的 JAVA“keytool”实用工具。 有关“keytool”实用工具的详细信息，请参阅 Sun Microsystems 网站上的 keytool 文档。  
   

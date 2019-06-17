@@ -14,13 +14,13 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 445345d39d5612fb543466900cee97d64a567d87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744457"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800872"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>适用于 SQL Server 的 OLE DB 驱动程序功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "56744457"
  讨论对 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的元数据发现功能进行的改进。  
   
  [适用于 SQL Server 的 OLE DB 驱动程序的 UTF-16 支持](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
- 讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 在下列情况下，适用于 SQL Server 的 OLE DB 驱动程序不向缓冲区添加高代理项码位：如果在绑定列结果或输出参数时提供了长度固定的缓冲区，如果在缓冲区中终止符前面写入的 wchar 字符是代理项对的高代理项码位，以及如果下一个 wchar 字符是一个低代理项码位。  
+ 讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 在下列情况下，适用于 SQL Server 的 OLE DB 驱动程序不向缓冲区添加高代理项码位：如果在绑定列结果或输出参数时提供了长度固定的缓冲区，如果在缓冲区中终止符前面写入的 wchar 字符是代理项对的高代理项码位，以及如果下一个 wchar 字符是一个低代理项码位   。  
  
  [适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
  讨论对 utf-8 服务器编码和配置采取预防措施用户应使用 utf-8 编码数据时的支持。

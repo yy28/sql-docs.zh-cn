@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 617a4e01b3fd4f8dcbc6d929c2a26d483f2fa1ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108854"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
-  您必须为每个应用程序至少配置一个 URL 才能使用报表管理器或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。 如果您将报表服务器配置为使用 SharePoint 集成模式，并使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具更新了报表服务器 Web 服务 URL，则您还必须更新 SharePoint 管理中心中的 URL。  
+  您必须为每个应用程序至少配置一个 URL 才能使用报表管理器或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL  。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。 如果您将报表服务器配置为使用 SharePoint 集成模式，并使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具更新了报表服务器 Web 服务 URL，则您还必须更新 SharePoint 管理中心中的 URL。  
   
  可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来配置 URL。 URL 的所有部分均在此工具中定义。 与早期版本不同，Internet Information Services (IIS) 网站不再提供对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更高版本中的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 应用程序的访问。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66108854"
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到某个本地报表服务器实例。  
   
-2.  单击 **“Web 服务 URL”**。  
+2.  单击 **“Web 服务 URL”** 。  
   
 3.  指定虚拟目录。 虚拟目录名称用于标识接收请求的应用程序。 由于 IP 地址和端口可由多个应用程序共享，因而使用虚拟目录名称来指定接收请求的应用程序。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66108854"
   
      对于报表服务器 Web 服务，默认虚拟目录名称为 **ReportServer**。  
   
-4.  指定用于在网络中唯一地标识该报表服务器计算机的 IP 地址。 如果希望指定主机标头或者为同一应用程序实例定义其他 URL，则必须单击 **“高级”**。 有关如何设置 URL 的高级属性的说明，请参阅本主题后面的说明。 否则，请使用 **“Web 服务 URL”** 页从下列值中进行选择：  
+4.  指定用于在网络中唯一地标识该报表服务器计算机的 IP 地址。 如果希望指定主机标头或者为同一应用程序实例定义其他 URL，则必须单击 **“高级”** 。 有关如何设置 URL 的高级属性的说明，请参阅本主题后面的说明。 否则，请使用 **“Web 服务 URL”** 页从下列值中进行选择：  
   
     -   **“所有已分配的”** 指定分配给计算机的任何 IP 地址均可用在指向报表服务器应用程序的 URL 中。 此值还包含友好主机名（如计算机名），域名服务器可将该主机名解析为分配给该计算机的 IP 地址。 此为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的默认值。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66108854"
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具并连接到报表服务器实例。  
   
-2.  单击 **“报表管理器 URL”**。  
+2.  单击 **“报表管理器 URL”** 。  
   
 3.  指定虚拟目录。 报表管理器与报表服务器 Web 服务将侦听相同的 IP 地址和端口。 如果将报表管理器配置为指向不同的报表服务器 Web 服务，则必须在 RSReportServer.config 文件中修改报表管理器 URL 设置。 有关说明，请参阅[配置报表管理器&#40;本机模式&#41;](../report-server/configure-web-portal.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
@@ -124,15 +124,15 @@ ms.locfileid: "66108854"
   
 #### <a name="to-set-advanced-properties-on-a-url"></a>设置 URL 的高级属性  
   
-1.  在 **“Web 服务 URL”** 或 **“报表管理器 URL”** 页上，单击 **“高级”**。  
+1.  在 **“Web 服务 URL”** 或 **“报表管理器 URL”** 页上，单击 **“高级”** 。  
   
-2.  单击 **“添加”**。  
+2.  单击 **“添加”** 。  
   
-3.  单击“IP 地址”或“主机标头名称”。 如果指定主机标头，请确保指定一个 DNS 服务可以解析的名称。 如果要指定公开可用的域名，请包含整个 URL，包括 http://www。  
+3.  单击“IP 地址”或“主机标头名称”。 如果指定主机标头，请确保指定一个 DNS 服务可以解析的名称。 如果要指定公开可用的域名，请包含整个 URL，包括 http://www 。  
   
 4.  指定端口。 如果指定自定义端口，则应用程序的 URL 必须始终包含该端口号。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 6.  通过打开浏览器窗口并输入 URL 来测试 URL。  
   

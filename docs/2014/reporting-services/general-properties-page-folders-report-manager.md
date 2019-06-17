@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109133"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>文件夹的“常规”属性页（报表管理器）
@@ -31,7 +31,7 @@ ms.locfileid: "66109133"
   
 1.  打开报表管理器，并打开您要查看或配置属性的文件夹。  
   
-2.  在文件夹标志下，在工具栏中单击 **“文件夹设置”**。  
+2.  在文件夹标志下，在工具栏中单击 **“文件夹设置”** 。  
   
 ## <a name="options"></a>选项  
  **名称**  

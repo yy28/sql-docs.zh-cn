@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103724"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移动或删除项（报表管理器）
@@ -47,7 +47,7 @@ ms.locfileid: "66103724"
   
 3.  悬停在该项之上，然后单击下拉箭头。  
   
-4.  在下拉菜单中，单击 **“移动”**。  
+4.  在下拉菜单中，单击 **“移动”** 。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66103724"
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 或者，您也可以导航到要移动的对象，单击 **“属性”**，再单击该页顶部的 **“移动”** 。  
+ 或者，您也可以导航到要移动的对象，单击 **“属性”** ，再单击该页顶部的 **“移动”** 。  
   
 ## <a name="delete-an-item"></a>删除项  
  在删除项之前，确定是否有其他项使用该项。 例如，如果您删除了一个共享数据源，则使用该数据源的报表和模型将无法再运行。 删除报表时，也将删除与该报表关联的订阅和报表历史记录。 若要查找的项的依赖项，请参阅 [依赖项页&#40;报表管理器&#41;].../ 相关的项的页面的报表-manager.md）。  
@@ -68,7 +68,7 @@ ms.locfileid: "66103724"
   
 3.  悬停在该项之上，然后单击下拉箭头。  
   
-4.  在下拉菜单中，单击“删除”。  
+4.  在下拉菜单中，单击“删除”  。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

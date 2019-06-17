@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100867"
 ---
 # <a name="data-driven-subscriptions"></a>数据驱动订阅
@@ -44,7 +44,7 @@ ms.locfileid: "66100867"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>使用数据驱动订阅的要求  
  数据驱动订阅功能并不是在所有的版本中都可用。 对于在运行时可用于检索订阅数据的数据源种类还有一些限制。 以下列表提供了有关这些要求的详细信息：  
   
--   有关支持数据驱动订阅功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+-   有关支持数据驱动订阅功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 -   对于订阅数据，请选择可为报表服务器提供架构信息的数据源。 支持的数据源类型的示例包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包数据、ODBC 数据源以及 OLE DB 数据源。 有关订阅方数据源要求的详细信息，请参阅 [使用外部数据源提供订阅方数据（数据驱动订阅）](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   

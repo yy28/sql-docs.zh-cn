@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109797"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>“点击链接型报表”页（报表管理器）
@@ -42,7 +42,7 @@ ms.locfileid: "66109797"
   
 2.  悬停在该模型之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”**。 这会打开该模型的 **“常规”** 属性页。  
+3.  在下拉菜单中，单击 **“管理”** 。 这会打开该模型的 **“常规”** 属性页。  
   
 4.  选择 **“点击链接”** 选项卡。  
   

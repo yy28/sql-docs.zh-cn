@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104379"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>“报表属性”对话框 ->“页面设置”
@@ -39,11 +39,11 @@ ms.locfileid: "66104379"
  **纸张大小**  
  从列表选择大小，该列表将在“宽度”和“高度”控件中自动输入维度。 也可以选择 **“自定义大小”** ，然后更改“宽度”和“高度”控件，以反映希望使用的大小。  
   
- 宽度  
- 显示在“纸张类型”列表中选择的纸张大小的宽度。  
+ 宽度   
+ 显示在“纸张类型”  列表中选择的纸张大小的宽度。  
   
- 高度  
- 显示在“纸张类型”列表中选择的纸张大小的高度。  
+ 高度   
+ 显示在“纸张类型”  列表中选择的纸张大小的高度。  
   
  **Top**  
  设置报表顶部与报表第一行顶部之间的距离。  

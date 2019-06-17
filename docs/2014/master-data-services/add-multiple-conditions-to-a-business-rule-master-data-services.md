@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54ab01033fc65f829f2a06bb5cbad8fc9e4d08f7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480184"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>向业务规则添加多个条件 (Master Data Services)
@@ -36,9 +36,9 @@ ms.locfileid: "65480184"
   
 ### <a name="to-add-multiple-conditions-to-a-business-rule"></a>向业务规则添加多个条件  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
+2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”** 。  
   
 3.  在 **“业务规则维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "65480184"
   
 5.  从**成员类型**列表中，选择一种类型的成员。  
   
-6.  从 **“属性”** 列表中，选择某一属性或保持默认值 **“全部”**。  
+6.  从 **“属性”** 列表中，选择某一属性或保持默认值 **“全部”** 。  
   
 7.  单击要编辑的业务规则所对应的行。  
   
-8.  单击 **“编辑所选业务规则”**。  
+8.  单击 **“编辑所选业务规则”** 。  
   
 9. 在中**组件**窗格中，展开**逻辑运算符**节点。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "65480184"
   
 14. 在中**编辑条件**窗格中，完成必填的字段。  
   
-15. 在 **“编辑条件”** 窗格中，单击 **“保存项”**。  
+15. 在 **“编辑条件”** 窗格中，单击 **“保存项”** 。  
   
 16. （可选） 若要添加更多条件，从**组件**窗格中，拖动**AND**或**OR**到任何**AND**或**OR**中**如果**窗格。 然后执行步骤 13-15。  
   

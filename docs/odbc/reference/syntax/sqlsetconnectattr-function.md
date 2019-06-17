@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53ab6ddfb8253b1df877c6e20df43f8327f0f2e5
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537387"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 函数
@@ -50,7 +50,7 @@ SQLRETURN SQLSetConnectAttr(
   
 ## <a name="arguments"></a>参数  
  *ConnectionHandle*  
- [输入]连接句柄。  
+ [输入] 连接句柄。  
   
  *Attribute*  
  [输入]要设置，属性列在"注释"。  
@@ -185,7 +185,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_ENLIST_IN_DTC (ODBC 3.0)|一个 SQLPOINTER 值，该值指定是否在由 Microsoft 组件服务进行协调的分布式事务中使用的 ODBC 驱动程序。<br /><br /> 传递一个 DTC OLE 事务对象，指定要将导出到 SQL Server 或 SQL_DTC_DONE 结束连接的 DTC 关联的事务。<br /><br /> 客户端调用 Microsoft 分布式事务处理协调器 (MS DTC) OLE itransactiondispenser:: Begintransaction 方法来开始执行 MS DTC 事务，并创建一个表示事务的 MS DTC 事务对象。 然后，应用程序使用 ODBC 连接相关联的事务对象的 SQL_ATTR_ENLIST_IN_DTC 选项调用 SQLSetConnectAttr。 将在 MS DTC 事务的保护下执行所有相关的数据库活动。 若要结束连接的 DTC 关联应用程序调用使用 SQL_DTC_DONE SQLSetConnectAttr。 有关详细信息，请参阅 MS DTC 文档。|  
 |SQL_ATTR_LOGIN_TIMEOUT (ODBC 1.0)|一个 SQLUINTEGER 值对应于要等待的时间完成，然后返回到应用程序的登录请求的秒数。 默认值为驱动程序相关。 如果*ValuePtr*为 0，禁用超时且连接尝试将无限期等待。<br /><br /> 如果指定的超时时间超过了数据源中的最大登录超时值，该驱动程序替代该值，并返回 SQLSTATE 01S02 （选项值已更改）。|  
 |SQL_ATTR_METADATA_ID (ODBC 3.0)|SQLUINTEGER 值，该值确定如何处理目录函数将字符串参数。<br /><br /> 如果 SQL_TRUE，目录函数的字符串自变量被视为标识符。 这种情况并不重要。 对于分隔字符串，该驱动程序中删除任何尾随空格和字符串折叠为大写。 对于带分隔符的字符串，该驱动程序中删除任何前导或尾随空格和按原义采用任何分隔符之间是。 如果其中一个参数设置为 null 指针，该函数返回 SQL_ERROR 并且 SQLSTATE HY009 （null 指针的使用无效）。<br /><br /> 如果 SQL_FALSE，目录函数将字符串参数不被视为标识符。 这种情况很重要。 它们可以包含字符串的搜索模式，取决于参数。<br /><br /> 默认值为 SQL_FALSE。<br /><br /> *TableType*的参数**SQLTables**，其将一系列值，不会影响此属性。<br /><br /> 此外可以在语句级别上设置 SQL_ATTR_METADATA_ID。 （它是唯一的连接属性，也是语句属性。）<br /><br /> 有关详细信息，请参阅[中目录函数的自变量](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。|  
-|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|Sqlulen 生成值，该值指定驱动程序管理器如何使用 ODBC 游标库：<br /><br /> SQL_CUR_USE_IF_NEEDED = 的驱动程序管理器中使用 ODBC 游标库，仅当需要它。 如果该驱动程序支持中的 SQL_FETCH_PRIOR 选项**SQLFetchScroll**，驱动程序管理器使用的驱动程序的滚动功能。 否则，它使用 ODBC 游标库。<br /><br /> SQL_CUR_USE_ODBC = 的驱动程序管理器中使用 ODBC 游标库。<br /><br /> SQL_CUR_USE_DRIVER = 的驱动程序管理器中使用的驱动程序的滚动功能。 这是默认设置。<br /><br /> 有关 ODBC 游标库的详细信息，请参阅[附录 f:ODBC 游标库](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)。 警告：将 Windows 的未来版本中删除该游标库。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。|  
+|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|Sqlulen 生成值，该值指定驱动程序管理器如何使用 ODBC 游标库：<br /><br /> SQL_CUR_USE_IF_NEEDED = 的驱动程序管理器中使用 ODBC 游标库，仅当需要它。 如果该驱动程序支持中的 SQL_FETCH_PRIOR 选项**SQLFetchScroll**，驱动程序管理器使用的驱动程序的滚动功能。 否则，它使用 ODBC 游标库。<br /><br /> SQL_CUR_USE_ODBC = 的驱动程序管理器中使用 ODBC 游标库。<br /><br /> SQL_CUR_USE_DRIVER = 的驱动程序管理器中使用的驱动程序的滚动功能。 这是默认设置。<br /><br /> 有关 ODBC 游标库的详细信息，请参阅[附录 f:ODBC 游标库](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)。 警告：  将 Windows 的未来版本中删除该游标库。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。|  
 |SQL_ATTR_PACKET_SIZE (ODBC 2.0)|SQLUINTEGER 值，该值以字节为单位指定的网络数据包大小。 **注意：** 多个数据源也不支持此选项，或仅可以返回，但未设置网络数据包大小。 <br /><br /> 如果指定的大小超出了最大数据包大小或小于最小数据包大小，该驱动程序替代该值，并返回 SQLSTATE 01S02 （选项值已更改）。<br /><br /> 如果已建立连接后，应用程序设置数据包大小，则驱动程序将返回 SQLSTATE HY011 （属性不能立即设置）。|  
 |SQL_ATTR_QUIET_MODE (ODBC 2.0)|窗口句柄 (HWND)。<br /><br /> 窗口句柄是否为 null 指针，该驱动程序不显示任何对话框。<br /><br /> 如果窗口句柄不是 null 指针，它应该是应用程序的父窗口句柄。 这是默认设置。 该驱动程序使用此句柄来显示对话框。 **注意：** SQL_ATTR_QUIET_MODE 连接属性不适用于显示的对话框**SQLDriverConnect**。|  
 |SQL_ATTR_TRACE (ODBC 1.0)|告知驱动程序管理器是否执行跟踪 SQLUINTEGER 值：<br /><br /> SQL_OPT_TRACE_OFF 跟踪 = off （默认）<br /><br /> SQL_OPT_TRACE_ON = on 的跟踪<br /><br /> 在跟踪时，驱动程序管理器将写入到跟踪文件的每个 ODBC 函数调用。 **注意：** 当跟踪时，驱动程序管理器可返回 SQLSTATE IM013 （跟踪文件错误） 从任何函数。 <br /><br /> 应用程序使用 SQL_ATTR_TRACEFILE 选项指定跟踪文件。 如果该文件已存在，则驱动程序管理器将追加到文件。 否则，它将创建文件。 如果跟踪已打开，并指定不跟踪文件，驱动程序管理器将写入到 SQL 的文件。日志的根目录中。<br /><br /> 应用程序可以设置该变量**ODBCSharedTraceFlag**表示启用动态跟踪。 然后为当前正在运行的所有 ODBC 应用程序启用跟踪。 如果应用程序将关闭跟踪，它处于关闭状态仅对该应用程序。<br /><br /> 如果**跟踪**中的系统信息的关键字设置为 1，当应用程序调用**SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_ENV，为所有启用跟踪句柄。 仅对调用应用程序启用**SQLAllocHandle**。<br /><br /> 调用**SQLSetConnectAttr**与*特性*的 SQL_ATTR_TRACE 不要求*ConnectionHandle*参数是有效并且不会返回 SQL_ERROR，如果*ConnectionHandle*为 NULL。 此特性应用于所有连接。|  

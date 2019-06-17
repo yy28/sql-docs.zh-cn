@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109437"
 ---
 # <a name="data-source-selection-page-report-manager"></a>“选择数据源”页（报表管理器）
@@ -29,14 +29,14 @@ ms.locfileid: "66109437"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”**。 这会打开该报表或模型的“常规属性”页。  
+3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表或模型的“常规属性”页。  
   
 4.  选择 **“数据源”** 选项卡。  
   
-5.  在属性窗格中，选择 **“共享数据源”** ，然后单击 **“浏览”**。  
+5.  在属性窗格中，选择 **“共享数据源”** ，然后单击 **“浏览”** 。  
   
 ## <a name="options"></a>选项  
- **位置**  
+ **Location**  
  指定共享数据源项的完整路径，以根目录名开头。 您可以键入路径名或使用树视图找到所需的共享数据源。  
   
  **树视图**  

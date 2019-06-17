@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102534"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>将共享数据源发布到 SharePoint 库
@@ -30,23 +30,23 @@ ms.locfileid: "66102534"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开现有的或新的报表服务器项目。  
   
-2.  在 **“项目”** 菜单上，单击 **“属性”**。 “\<项目>属性页”对话框即会打开。  
+2.  在 **“项目”** 菜单上，单击 **“属性”** 。 “\<项目>属性页”对话框即会打开   。  
   
 3.  选择发布到 SharePoint 站点所用的 **“配置”** 。  
   
 4.  如果想在项目中发布共享数据源，并覆盖以前发布的共享数据源，请将 **OverwriteDataSources** 设置为 **True**。  
   
-5.  （可选）对于 **TargetDataSourceFolder**，键入指向 SharePoint 库或库文件夹的 URL。 例如， *http://TestServer/TestSite/Documents/DataSources*。  
+5.  （可选）对于 **TargetDataSourceFolder**，键入指向 SharePoint 库或库文件夹的 URL。 例如， *http://TestServer/TestSite/Documents/DataSources* 。  
   
      如果不指定值，将使用 **TargetReportFolder** 值。  
   
-6.  对于 **TargetReportFolder**，键入指向库或库文件夹的 URL。 例如， http://TestServer/TestSite/Documents/Reports。  
+6.  对于 **TargetReportFolder**，键入指向库或库文件夹的 URL。 例如， http://TestServer/TestSite/Documents/Reports  。  
   
-7.  对于 **TargetServerURL**，键入指向 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如， http://服务器名、 http://服务器名/站点或 http://服务器名/站点/子站点。  
+7.  对于 **TargetServerURL**，键入指向 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如， http://服务器名  、 http://服务器名  /站点  或 http://服务器名  /站点  /子站点  。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-9. 在解决方案资源管理器中，右键单击要发布的共享数据源，然后单击“部署”。 数据源将发布到 **TargetDataSourceFolder**中指定的位置。 部署错误将显示在输出窗口中。  
+9. 在解决方案资源管理器中，右键单击要发布的共享数据源，然后单击“部署”  。 数据源将发布到 **TargetDataSourceFolder**中指定的位置。 部署错误将显示在输出窗口中。  
   
     > [!NOTE]  
     >  将共享数据源发布到 SharePoint 站点后，该数据源文件的扩展名会更改为 .rsds。 可以直接在 SharePoint 站点上编辑和管理共享数据源。 有关详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)。  

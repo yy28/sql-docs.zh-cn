@@ -31,10 +31,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a9d363d4e2efd5d288128d6d1a428ddcb00fa54c
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980904"
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>XSD 元素和属性到表和列的显式映射
@@ -61,9 +61,9 @@ ms.locfileid: "65980904"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 批注  
- 在此示例中，XSD 架构包含的**\<联系人 >** 包含复杂类型元素 **\<FName >** 并 **\<LName >** 子元素和**ContactID**属性。  
+ 在此示例中，XSD 架构包含的 **\<联系人 >** 包含复杂类型元素 **\<FName >** 并 **\<LName >** 子元素和**ContactID**属性。  
   
- **Sql: relation**批注映射**\<联系人 >** 到 AdventureWorks 数据库中的 Person.Contact 表的元素。 **Sql: field**批注映射 **\<FName >** FirstName 列的元素和 **\<LName >** LastName 元素列。  
+ **Sql: relation**批注映射 **\<联系人 >** 到 AdventureWorks 数据库中的 Person.Contact 表的元素。 **Sql: field**批注映射 **\<FName >** FirstName 列的元素和 **\<LName >** LastName 元素列。  
   
  用于指定任何批注**ContactID**属性。 这导致将属性默认映射为具有相同名称的列。  
   

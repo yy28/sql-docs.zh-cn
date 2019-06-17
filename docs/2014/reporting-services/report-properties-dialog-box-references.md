@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e57e0eb15c8c0ae7e326927ab14493f21c52cc14
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104299"
 ---
 # <a name="report-properties-dialog-box-references"></a>“报表属性”对话框 ->“引用”
@@ -31,7 +31,7 @@ ms.locfileid: "66104299"
  单击该选项可以添加程序集。 单击省略号 （...） 按钮以打开**打开**对话框并选择完成报表处理和表达式计算所需的程序集。  
   
  **删除**  
- 若要从列表中删除程序集引用，请选择程序集名并单击“删除”按钮。  
+ 若要从列表中删除程序集引用，请选择程序集名并单击“删除”  按钮。  
   
  **添加或删除类**  
  列出报表使用的类实例。 该类列表仅适用于基于实例的成员，而不适用于静态成员。  
@@ -40,7 +40,7 @@ ms.locfileid: "66104299"
  单击该选项可以添加类引用。 单击省略号 （...） 按钮以打开**打开**对话框并选择完成报表处理和表达式计算所需的类。  
   
  **删除**  
- 若要删除类实例，请选中该实例并单击“删除”按钮。  
+ 若要删除类实例，请选中该实例并单击“删除”  按钮。  
   
  **向上**  
  可为有依赖关系的类在列表中上移该引用。  

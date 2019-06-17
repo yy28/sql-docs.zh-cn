@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479937"
 ---
 # <a name="create-a-model-master-data-services"></a>创建模型 (Master Data Services)
@@ -30,9 +30,9 @@ ms.locfileid: "65479937"
   
 ### <a name="to-create-a-model"></a>创建模型  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“模型”**。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“模型”** 。  
   
 3.  上**模型维护**页上，单击**添加模型**。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65479937"
   
 7.  （可选） 选择**强制的层次结构 (所有叶成员都都包含**创建显式层次结构作为强制层次结构。  
   
-8.  单击 **“保存模型”**。  
+8.  单击 **“保存模型”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   

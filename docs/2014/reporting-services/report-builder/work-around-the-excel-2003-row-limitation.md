@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107553"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>避开 Excel 行限制
@@ -26,7 +26,7 @@ ms.locfileid: "66107553"
   
 1.  在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 或报表管理器中打开报表。  
   
-2.  右键单击表中的“数据”行，然后单击“添加组” > “父组”，以添加外部表组。  
+2.  右键单击表中的“数据”行，然后单击“添加组” > “父组”，以添加外部表组。    
   
      ![选择父组](../media/datarow-selectparentgroup.png "Select the Parent Group")  
   
@@ -38,19 +38,19 @@ ms.locfileid: "66107553"
   
      添加外部表组会向报表添加一个组列。  
   
-4.  删除组列：右键单击列标题，单击“删除列”，选择“仅删除列”，然后单击“确定”。  
+4.  删除组列：右键单击列标题，单击“删除列”，选择“仅删除列”，然后单击“确定”。     
   
      ![删除组列](../media/groupcolumn-delete-updated.png "Delete a group column")  
   
-5.  右键单击 **“行组”** 部分中的 **“组 1”** ，然后单击 **“组属性”**。  
+5.  右键单击 **“行组”** 部分中的 **“组 1”** ，然后单击 **“组属性”** 。  
   
      ![查看组属性](../media/groupproperties-updated.png "View group properties")  
   
-6.  在 **“组属性”** 对话框的 **“排序”** 页面上，选择默认排序选项，然后单击 **“删除”**。  
+6.  在 **“组属性”** 对话框的 **“排序”** 页面上，选择默认排序选项，然后单击 **“删除”** 。  
   
      ![删除默认排序](../media/groupproperties-sorting-updated.png "Delete default sorting")  
   
-7.  在 **“分页符”** 页面上，单击 **“在组的各实例之间”** ，然后单击 **“确定”**。  
+7.  在 **“分页符”** 页面上，单击 **“在组的各实例之间”** ，然后单击 **“确定”** 。  
   
      ![设置分页符](../media/groupproperties-pagebreaks-updated.png "Set page breaks")  
   

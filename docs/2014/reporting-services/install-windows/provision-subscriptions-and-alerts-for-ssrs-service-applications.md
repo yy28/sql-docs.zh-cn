@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69724baa3790f2b7475369c8f947a4201bcd57f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108723"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>用于 SSRS 服务应用程序的设置订阅和警报
@@ -41,7 +41,7 @@ ms.locfileid: "66108723"
   
  使用以下三种方法之一更新权限：  
   
-1.  在 **“设置、订阅和警报”** 页上，键入凭据并单击 **“确定”**。  
+1.  在 **“设置、订阅和警报”** 页上，键入凭据并单击 **“确定”** 。  
   
 2.  在“设置、订阅和警报”页上单击 **“下载脚本”** 按钮，以便下载可用于配置权限的 transact SQL 脚本。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66108723"
   
 2.  在列表中找到您的服务应用程序，然后单击该应用程序的名称或者单击 **“类型”** 列以选择该服务应用程序，接着单击 SharePoint 功能区中的 **“管理”** 按钮。  
   
-3.  在 **“管理 Reporting Services 应用程序”** 页上，单击 **“设置订阅和警报”**。  
+3.  在 **“管理 Reporting Services 应用程序”** 页上，单击 **“设置订阅和警报”** 。  
   
 4.  如果 SharePoint 管理员具有针对 Master 数据库和服务应用程序数据库的足够权限，请键入那些凭据。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66108723"
   
 2.  在列表中找到您的服务应用程序，然后单击该应用程序的名称或者单击 **“类型”** 列以选择该服务应用程序，接着单击 SharePoint 功能区中的 **“管理”** 按钮。  
   
-3.  在 **“管理 Reporting Services 应用程序”** 页上，单击 **“设置订阅和警报”**。  
+3.  在 **“管理 Reporting Services 应用程序”** 页上，单击 **“设置订阅和警报”** 。  
   
 4.  在 **“查看状态”** 区域中，验证 SQL Server 代理是否正在运行。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "66108723"
   
 1.  您也可以在 SharePoint 2010 Management Shell 中使用 Windows PowerShell cmdlet 创建 Transact-SQL 脚本。  
   
-2.  在 **“开始”** 菜单上，单击 **“所有程序”**。  
+2.  在 **“开始”** 菜单上，单击 **“所有程序”** 。  
   
-3.  展开 **“Microsoft SharePoint 2010 产品”** ，然后单击 **“SharePoint 2010 Management Shell”**。  
+3.  展开 **“Microsoft SharePoint 2010 产品”** ，然后单击 **“SharePoint 2010 Management Shell”** 。  
   
 4.  通过替换报表服务器数据库的名称、应用程序池帐户和语句路径来更新下面的 PowerShell cmdlet。  
   
@@ -102,20 +102,20 @@ ms.locfileid: "66108723"
   
     -   如果使用 SQL Server 身份验证进行连接，请提供登录名和密码。  
   
-3.  单击 **“连接”**。  
+3.  单击 **“连接”** 。  
   
 #### <a name="to-run-the-transact-sql-statement"></a>运行 Transact-SQL 语句  
   
-1.  在 SQL Server Management Studio 的工具栏上，单击 **“新建查询”**。  
+1.  在 SQL Server Management Studio 的工具栏上，单击 **“新建查询”** 。  
   
-2.  在 **“文件”** 菜单上，单击 **“打开”**，然后单击 **“文件”**。  
+2.  在 **“文件”** 菜单上，单击 **“打开”** ，然后单击 **“文件”** 。  
   
 3.  定位到保存 SharePoint 2010 Management Shell 中生成的 Transact-SQL 语句的文件夹。  
   
-4.  单击该文件，然后单击 **“打开”**。  
+4.  单击该文件，然后单击 **“打开”** 。  
   
      该语句将添加到查询窗口。  
   
-5.  单击 **“执行”**。  
+5.  单击 **“执行”** 。  
   
   

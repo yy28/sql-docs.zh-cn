@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 07b60dacedec35460fd0e23e1d28769dcc5674fc
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175614"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "66175614"
 |**algorithm_desc**|**nvarchar(60)**|对于密钥所用算法的说明：<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL（仅限于可扩展密钥管理算法）|  
 |**create_date**|**datetime**|密钥的创建日期。|  
 |**modify_date**|**datetime**|密钥的修改日期。|  
-|key_guid|**uniqueidentifier**|与密钥关联的全局唯一标识符 (GUID)。 对于持久化密钥，此标识符是自动生成的。 临时密钥的 GUID 从用户提供的通行短语中派生。|  
+|key_guid |**uniqueidentifier**|与密钥关联的全局唯一标识符 (GUID)。 对于持久化密钥，此标识符是自动生成的。 临时密钥的 GUID 从用户提供的通行短语中派生。|  
 |**key_thumbprint**|**sql_variant**|密钥的 SHA-1 哈希。 该哈希是全局唯一的。 对于非可扩展密钥管理密钥，此值将为 NULL。|  
 |**provider_type**|**nvarchar(120)**|加密提供程序的类型：<br /><br /> CRYPTOGRAPHIC PROVIDER = 可扩展密钥管理密钥<br /><br /> NULL = 非可扩展密钥管理密钥|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|加密提供程序的 GUID。 对于非可扩展密钥管理密钥，此值将为 NULL。|  

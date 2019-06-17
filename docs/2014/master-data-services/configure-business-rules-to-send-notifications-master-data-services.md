@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b0ea6e215b5192d1b9e84ed252708b188d5c5a59
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483955"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>配置业务规则以发送通知 (Master Data Services)
@@ -33,15 +33,15 @@ ms.locfileid: "65483955"
   
 -   使用验证操作的业务规则必须已经存在。 有关详细信息，请参阅[创建和发布业务规则 (Master Data Services)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
--   接收通知的用户或组对未能通过验证的属性必须至少具有“只读”权限。 显式或隐式拒绝对属性的权限的用户或组将接收电子邮件，但将无法访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中的属性。  
+-   接收通知的用户或组对未能通过验证的属性必须至少具有“只读”权限。  显式或隐式拒绝对属性的权限的用户或组将接收电子邮件，但将无法访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中的属性。  
   
 -   如果将邮件发送到组，则组中只有已访问了 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的成员才会获得电子邮件。  
   
 ### <a name="to-configure-business-rules-to-send-notifications"></a>配置业务规则以发送通知  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
+2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”** 。  
   
 3.  在 **“业务规则维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65483955"
   
 5.  从**成员类型**列表中，选择一种类型的成员。  
   
-6.  从 **“属性”** 列表中，选择某一属性或保持默认值 **“全部”**。  
+6.  从 **“属性”** 列表中，选择某一属性或保持默认值 **“全部”** 。  
   
 7.  在网格中，在业务规则所对应的行中，双击**通知**字段。  
   

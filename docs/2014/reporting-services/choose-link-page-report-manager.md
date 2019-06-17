@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109874"
 ---
 # <a name="choose-link-page-report-manager"></a>“选择链接”页（报表管理器）
@@ -31,12 +31,12 @@ ms.locfileid: "66109874"
   
 2.  悬停在链接报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”**。 这会打开该链接报表的 **“常规”** 属性页。  
+3.  在下拉菜单中，单击 **“管理”** 。 这会打开该链接报表的 **“常规”** 属性页。  
   
-4.  在 **“常规”** 选项卡上的属性页中单击 **“更改链接”**。  
+4.  在 **“常规”** 选项卡上的属性页中单击 **“更改链接”** 。  
   
 ## <a name="options"></a>选项  
- **位置**  
+ **Location**  
  指定已发布报表的全名，包括文件夹路径和报表名称。 您可以键入报表的全名，也可以使用树视图导航到要使用的报表。  
   
  **树视图**  

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 484774165ea1997b98fc9dc0919f5be7450dd4c7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483367"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>创建数字属性 (Master Data Services)
@@ -37,23 +37,23 @@ ms.locfileid: "65483367"
   
 ### <a name="to-create-a-numeric-attribute"></a>创建数字属性  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”**。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”** 。  
   
 3.  在 **“实体维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
 4.  为您要为其创建属性的实体选择行。  
   
-5.  单击 **“编辑所选实体”**。  
+5.  单击 **“编辑所选实体”** 。  
   
 6.  在 **“编辑实体”** 页上：  
   
-    -   如果属性是针对叶成员的，则在 **“叶成员属性”** 窗格中，单击 **“添加叶属性”**。  
+    -   如果属性是针对叶成员的，则在 **“叶成员属性”** 窗格中，单击 **“添加叶属性”** 。  
   
-    -   如果属性是针对合并成员的，则在 **“合并成员属性”** 窗格中，单击 **“添加合并属性”**。  
+    -   如果属性是针对合并成员的，则在 **“合并成员属性”** 窗格中，单击 **“添加合并属性”** 。  
   
-    -   如果属性是针对集合的，则在 **“集合属性”** 窗格中，单击 **“添加集合属性”**。  
+    -   如果属性是针对集合的，则在 **“集合属性”** 窗格中，单击 **“添加集合属性”** 。  
   
 7.  在 **“添加属性”** 页上，选择 **“自由格式”** 选项。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "65483367"
   
 9. 在 **“显示像素宽度”** 框中，键入要在 **“资源管理器”** 网格中显示的属性列的宽度。  
   
-10. 从 **“数据类型”** 列表中，选择 **“数字”**。  
+10. 从 **“数据类型”** 列表中，选择 **“数字”** 。  
   
 11. 在 **“小数位数”** 框中，键入小数点后可以输入的位数。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "65483367"
   
 13. 根据需要，选择 **“启用更改跟踪”** 可以跟踪对属性组的更改。 有关详细信息，请参阅 [向更改跟踪组添加属性 &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 。  
   
-14. 单击 **“保存属性”**。  
+14. 单击 **“保存属性”** 。  
   
-15. 在 **“实体维护”** 页上，单击 **“保存实体”**。  
+15. 在 **“实体维护”** 页上，单击 **“保存实体”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [属性 (Master Data Services)](attributes-master-data-services.md)   

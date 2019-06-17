@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ae056d72d3966a9787ac2d52f89689ae9f6a799
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106299"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）
@@ -24,7 +24,7 @@ ms.locfileid: "66106299"
   
  可以将三维效果应用于单个图表，还可以在同一报表中同时显示二维和三维图表。  
   
- 对于所有的图表类型，你都可以通过在“图表区属性”对话框中选择“启用三维”，将三维效果应用到图表区。 有关详细信息，请参阅 [向图表添加三维效果（报表生成器和 SSRS）](chart-effects-add-3d-effects-report-builder.md)。  
+ 对于所有的图表类型，你都可以通过在“图表区属性”对话框中选择“启用三维”，将三维效果应用到图表区   。 有关详细信息，请参阅 [向图表添加三维效果（报表生成器和 SSRS）](chart-effects-add-3d-effects-report-builder.md)。  
   
  为图表增添视觉影响的另外一种方法是在条形图、柱形图、饼图和圆环图中添加凹凸效果、阳文和纹理样式。 有关详细信息，请参阅[向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   

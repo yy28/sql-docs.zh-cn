@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5168e98297b28f7dce2e07e639cb64f9c62899c3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481084"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>创建合并成员 (Master Data Services)
@@ -41,7 +41,7 @@ ms.locfileid: "65481084"
   
 2.   从“版本”列表中，选择某一版本。  
   
-3.  单击“资源管理器”。  
+3.   单击“资源管理器”。  
   
 4.   从菜单栏中，指向“层次结构”，然后单击您要将合并成员添加到的层次结构的名称。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "65481084"
   
 6.  在左侧窗格中，选择要在其下创建合并成员的根节点或合并成员。  
   
-7.  单击 **“添加”**。  
+7.  单击 **“添加”** 。  
   
 8.  在右侧窗格中，填写字段。  
   
 9. 可选。  在“批注”框中，键入有关添加成员原因的注释。 有权访问成员的所有用户都可以查看批注。  
   
-10. 单击“确定” 。  
+10. 单击“确定”  。  
   
 ## <a name="see-also"></a>请参阅  
  [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   

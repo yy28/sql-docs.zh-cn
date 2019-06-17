@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 99009d961baf3d1f870783f565cb93c628eb85c7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480163"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 应用程序要求 (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65480163"
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是 Internet Information Services (IIS) 托管的 Web 应用程序。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 仅适用于 Internet Explorer (IE) 9 或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
 
-有关如何安装和配置 IIS 的说明，请参阅[安装和配置 IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS)。
+有关如何安装和配置 IIS 的说明  ，请参阅[安装和配置 IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS)。
   
  使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 可以创建和配置 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地计算机上配置 IIS，因此适用于初始 Web 配置任务。 例如，配置具有单个 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 环境，或在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的扩展部署中配置第一个 Web 应用程序。 使用 IIS 工具来执行一些更复杂的任务，如在扩展部署中配置多个 Web 服务器。  
   
@@ -44,18 +44,18 @@ ms.locfileid: "65480163"
  在使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 您可以从 [此处](https://go.microsoft.com/fwlink/?LinkId=243096)安装 Silverlight 5。  
   
 ### <a name="role-and-role-services"></a>角色和角色服务  
- 在 Windows Server 2012 或 Windows Server 2012 R2 中，可以使用“服务器管理器”（在 Microsoft 管理控制台 (MMC) 中提供）来安装“Web 服务器 (IIS)”角色和必需的角色服务。  
+ 在 Windows Server 2012 或 Windows Server 2012 R2 中，可以使用“服务器管理器”  （在 Microsoft 管理控制台 (MMC) 中提供）来安装“Web 服务器 (IIS)”  角色和必需的角色服务。  
  
  
 > [!IMPORTANT]  
->默认情况下，已启用“动态内容压缩”。 这极大地减少了 xml 响应的大小，并可节省网络 I/O，不过会增加 CPU 使用率。  有关详细信息，请参阅 **[CTP 2.0] 改进的性能**中的 [Master Data Services (MDS) 中的新增功能](../../master-data-services/what-s-new-in-master-data-services-mds.md)。  
+>默认情况下，已启用“动态内容压缩”  。 这极大地减少了 xml 响应的大小，并可节省网络 I/O，不过会增加 CPU 使用率。  有关详细信息，请参阅 **[CTP 2.0] 改进的性能**中的 [Master Data Services (MDS) 中的新增功能](../../master-data-services/what-s-new-in-master-data-services-mds.md)。  
   
 ||  
 |-|  
 |Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理控制台<br /><br /> 万维网服务<br /><br /> 应用程序开发<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 常见的 HTTP 功能<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 静态内容<br /><br /> [注意：请不要安装 WebDAV 发布]<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> 性能<br /><br /> 静态内容压缩<br /><br /> 安全性<br /><br /> 请求筛选<br /><br /> Windows 身份验证|  
   
 ### <a name="features"></a>功能 
- 在 Windows Server 2012 和 Windows Server 2012 R2 中，可以使用“服务器管理器”来安装以下必需的功能。  
+ 在 Windows Server 2012 和 Windows Server 2012 R2 中，可以使用“服务器管理器”  来安装以下必需的功能。  
   
 ||  
 |-|  

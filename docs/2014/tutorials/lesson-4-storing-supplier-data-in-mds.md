@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489711"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>第 4 课：在 MDS 中存储供应商数据
@@ -49,6 +49,6 @@ ms.locfileid: "65489711"
 8.  创建和使用派生层次结构使用之间的基于域的属性关系**供应商**实体以及**状态**（Supplier 实体的 State 属性属于 State 实体类型的实体) 通过使用**主数据管理器**。  
   
 ## <a name="next-step"></a>下一步  
- [任务 1:创建使用主数据管理器的供应商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [任务 1：创建使用主数据管理器的供应商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

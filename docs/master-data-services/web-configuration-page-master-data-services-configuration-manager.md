@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e9036bbff7302a0580bcbc5370ba8c6e9f7835a
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485528"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>“Web 配置”页（Master Data Services 配置管理器）
@@ -31,7 +31,7 @@ ms.locfileid: "65485528"
 |控件名称|Description|  
 |------------------|-----------------|  
 |**网站**|创建新网站，选择默认网站，或者选择其他可用的网站（如果列出）。 此列表显示在本地计算机上的 Internet Information Services (IIS) 中定义的网站。 创建新网站时，将自动创建新的 Web 应用程序。 选择默认网站或其他现有的网站时，必须手动创建应用程序。|  
-|**Web 应用程序**|选择用于配置的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。 此框仅显示所选网站中的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。<br /><br /> 如果什么都没显示，请单击“创建”以创建网站。|  
+|**Web 应用程序**|选择用于配置的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。 此框仅显示所选网站中的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。<br /><br /> 如果什么都没显示，请单击“创建”  以创建网站。|  
 |**创建**|打开 **“创建 Web 应用程序”** 对话框，从中可以在所选网站中创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。 仅当选定的网站没有配置为 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的根 Web 应用程序时，此按钮才会启用。|  
   
 ## <a name="associate-application-with-database"></a>将应用程序与数据库相关联  

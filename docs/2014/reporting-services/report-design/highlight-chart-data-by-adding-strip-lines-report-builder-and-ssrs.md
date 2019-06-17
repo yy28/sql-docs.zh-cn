@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c50d242c7528485d5d21aa10f2680094628b484b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105714"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>通过添加条带线突出显示图表数据（报表生成器和 SSRS）
@@ -33,23 +33,23 @@ ms.locfileid: "66105714"
   
 ### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>在图表上按固定间隔显示交错条带线  
   
-1.  若要显示水平带状线，请右键单击垂直图表轴，然后单击“垂直轴属性”。  
+1.  若要显示水平带状线，请右键单击垂直图表轴，然后单击“垂直轴属性”  。  
   
-     若要显示垂直带状线，请右键单击水平图表轴，然后单击“水平轴属性”。  
+     若要显示垂直带状线，请右键单击水平图表轴，然后单击“水平轴属性”  。  
   
 2.  选择 **“使用交错”** 选项。 图表上将显示灰色条带线。  
   
-3.  （可选）使用相邻的“颜色”下拉列表指定带状线的颜色。  
+3.  （可选）使用相邻的“颜色”  下拉列表指定带状线的颜色。  
   
 ### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>在图表上按自定义间隔显示交错条带线  
   
-1.  若要显示水平带状线，请右键单击垂直图表轴，然后单击“垂直轴属性”。  
+1.  若要显示水平带状线，请右键单击垂直图表轴，然后单击“垂直轴属性”  。  
   
-     若要显示垂直带状线，请右键单击水平图表轴，然后单击“水平轴属性”。  
+     若要显示垂直带状线，请右键单击水平图表轴，然后单击“水平轴属性”  。  
   
      轴属性将显示在“属性”窗口中。  
   
-2.  在“属性”窗格的“外观”部分的 StripLines 属性中，单击“编辑集合(…)”按钮打开“ChartStripLine 集合编辑器”。  
+2.  在“属性”窗格的“外观”部分的 StripLines 属性中，单击“编辑集合(…)”按钮打开“ChartStripLine 集合编辑器”   。  
   
 3.  单击 **“添加”** 向集合中添加一个新条带线。  
   

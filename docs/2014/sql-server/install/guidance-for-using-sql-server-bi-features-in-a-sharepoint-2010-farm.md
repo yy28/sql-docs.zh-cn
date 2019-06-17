@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ae552c12c3d4773d6a05a6d61c7644eb245b68ed
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094995"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>在 SharePoint 2010 场中使用 SQL Server BI 功能的指南
@@ -83,7 +83,7 @@ ms.locfileid: "66094995"
 |ADO.NET Services|SharePoint 2010 在必备组件列表中列出了 ADO.NET Services，但必备组件安装程序不会安装它。 若要添加 ADO.NET Services，必须手动安装它。 如果想以数据馈送的形式将 SharePoint 列表导入到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或 Reporting Services 报表中，则必须安装 ADO.NET Services。 有关说明，请参阅[安装 ADO.NET Data Services 以支持数据馈送导出 SharePoint 列表的](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。|  
   
 ###  <a name="bkmk_install"></a> 要求和建议用于运行 SharePoint 安装  
- 您安装哪些 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能以及这些功能的安装顺序将决定可能与 SharePoint 集成到哪些级别。 例如，当某个级别的功能集成在使用内置数据库的 SharePoint 服务器上可通过 Reporting Services 使用时，大多数功能集成方案都需要 SharePoint 场安装，因为只有场安装会提供某些 BI 功能所需要的基础结构。   
+ 您安装哪些 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能以及这些功能的安装顺序将决定可能与 SharePoint 集成到哪些级别。 例如，当某个级别的功能集成在使用内置数据库的 SharePoint 服务器上可通过 Reporting Services 使用时，大多数功能集成方案都需要 SharePoint 场安装，因为只有场安装会提供某些 BI 功能所需要的基础结构。  
   
  SharePoint 场可能是单个服务器，也可能是多个服务器。 正因为存在 Claims to Windows Token Service 这类附加基础结构，才使场与独立安装分离。  
   

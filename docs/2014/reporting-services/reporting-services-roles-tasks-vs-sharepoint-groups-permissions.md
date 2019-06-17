@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c56b15a5d6887c3e00047c9a0c3a66f907ef468
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102810"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services 中的角色和任务与 SharePoint 组和权限的比较
@@ -41,9 +41,9 @@ ms.locfileid: "66102810"
 -   [比较本机模式任务和 SharePoint 权限](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> 比较权限工具和术语  
- **本机模式：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中创建本机模式权限对象 （角色和任务）[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]并为单个用户在报表管理器配置。  
+ **本机模式：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中创建本机模式权限对象 （角色和任务）[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]并为单个用户在报表管理器配置。  
   
- **SharePoint 模式：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式使用 SharePoint 权限功能。 SharePoint 组和权限从以下“站点设置”  页进行管理。  
+ **SharePoint 模式：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式使用 SharePoint 权限功能。 SharePoint 组和权限从以下“站点设置”  页进行管理。  
   
  下表比较 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式与 SharePoint 之间权限相关的对象和概念。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66102810"
 |**我的报表**|没有等同的组。  在 SharePoint 模式下运行的报表服务器不支持“我的报表”。 如果希望使用等同功能，可以使用 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 中的“我的站点”功能。|  
 |**发布服务器**<br /><br /> 添加、更新、查看、删除报表、报表模型、共享数据源和资源。| 使用“成员”组授予在 SharePoint 站点上添加项、编辑项以及更新对依赖项的引用的权限。  “成员”组拥有“参与讨论”级权限，通过这些权限，组成员能够查看页面、添加和更新项以及提交更改以待批准。|  
 |**报表生成器**<br /><br /> 在报表生成器中查看报表、自行管理单个订阅以及打开报表。|没有与“报表生成器”报表定义相对应的现成预定义权限级别或 SharePoint 组。  默认情况下，属于“成员”组或“所有者”组的用户拥有使用报表生成器的权限。  如果希望更多用户能够使用报表生成器，应创建自定义安全设置以提供类似于报表生成器角色所提供的权限级别。 有关详细信息，请参阅 [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)。|  
-|-| 使用“查看者”组授予查看呈现的报表的权限。  “查看者”组无法下载或查看报表项的内容。<br /><br /> 注意：从 SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 开始，“查看者”组不具有创建订阅的权限。|  
+|-| 使用“查看者”组授予查看呈现的报表的权限。  “查看者”组无法下载或查看报表项的内容。<br /><br /> 注意：  从 SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 开始，“查看者”组不具有创建订阅的权限  。|  
 | “系统用户”和“系统管理员” |这些角色对于在 SharePoint 模式下运行的报表服务器并不是必需的。  “系统用户”和“系统管理员”  对应于 SharePoint 场或 Web 应用程序级权限。 报表服务器不提供任何要求该级别授权的功能。|  
   
 ##  <a name="bkmk_compare_tasks_permissions"></a> 比较本机模式任务和 SharePoint 权限  

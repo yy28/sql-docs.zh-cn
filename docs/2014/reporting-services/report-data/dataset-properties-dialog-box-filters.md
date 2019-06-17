@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107342"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>“数据集属性”对话框 -&gt;“筛选器”
@@ -40,13 +40,13 @@ ms.locfileid: "66107342"
  键入或选择要对其应用筛选器的表达式。 单击“表达式”(**fx**) 按钮可编辑表达式。  
   
  **Data type**  
- 为“值”选择数据类型。 如果可能，请选择与 **“表达式”** 的数据类型匹配的数据类型。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](../report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
+ 为“值”  选择数据类型。 如果可能，请选择与 **“表达式”** 的数据类型匹配的数据类型。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](../report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
  **“运算符”**  
  选择要用于比较表达式和值的运算符。  
   
  **ReplTest1**  
- 键入在计算“表达式”框中所指定的表达式时要使用的表达式或值。 单击“表达式”(**fx**) 按钮可编辑表达式。  
+ 键入在计算“表达式”  框中所指定的表达式时要使用的表达式或值。 单击“表达式”(**fx**) 按钮可编辑表达式。  
   
 ## <a name="see-also"></a>请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

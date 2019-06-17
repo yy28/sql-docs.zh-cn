@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db9f2758c2df5585a4d9034df7b309ae4547e52c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c472f5c15be78a35291487e433e0f81a5d7aa60
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633935"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797126"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>如何：使用内置 UTF-8 支持发送和检索 UTF-8 数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "47633935"
   
     当你将字符集指定为连接选项的一部分时，驱动程序假定其他连接选项字符串使用相同的字符集。 也可以假定服务器名称和查询字符串使用相同的字符集。  
   
-可以将 UTF-8 或 SQLSRV_ENC_CHAR 传递到 CharacterSet，但无法传递 SQLSRV_ENC_BINARY。 默认编码是 SQLSRV_ENC_CHAR。  
+可以将 UTF-8 或 SQLSRV_ENC_CHAR 传递到 CharacterSet  ，但无法传递 SQLSRV_ENC_BINARY。 默认编码是 SQLSRV_ENC_CHAR。  
   
 ## <a name="example"></a>示例  
-以下示例演示如何通过在建立连接时指定 UTF-8 字符集来发送和检索 UTF-8 编码的数据。 该示例会更新已指定查看 ID 的 Production.ProductReview 表的“注释”列。 该示例还会检索并显示最近更新的数据。 请注意，“注释”列的类型是 nvarchar(3850)。 另请注意，数据在发送到服务器之前，将通过使用 PHP utf8_encode 函数转换为 UTF-8 编码。 此操作仅用于演示目的。 实际的应用程序方案会从 UTF-8 编码的数据开始。  
+以下示例演示如何通过在建立连接时指定 UTF-8 字符集来发送和检索 UTF-8 编码的数据。 该示例会更新已指定查看 ID 的 Production.ProductReview 表的“注释”列。 该示例还会检索并显示最近更新的数据。 请注意，“注释”列的类型是 nvarchar(3850)  。 另请注意，数据在发送到服务器之前，将通过使用 PHP utf8_encode  函数转换为 UTF-8 编码。 此操作仅用于演示目的。 实际的应用程序方案会从 UTF-8 编码的数据开始。  
   
 该示例假定已在本地计算机上安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
   

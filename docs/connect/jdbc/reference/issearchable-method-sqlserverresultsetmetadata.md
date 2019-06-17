@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 10cf54f9-ef42-475e-8397-790306934573
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eccee93632d466d5799ddda6b19aebc462a68743
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2365f1562ab927a041a714a519f5c295ffd4f401
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597891"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796391"
 ---
 # <a name="issearchable-method-sqlserverresultsetmetadata"></a>isSearchable 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public boolean isSearchable(int column)
 #### <a name="parameters"></a>Parameters  
  *column*  
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 如果可以在 WHERE 子句中使用此列，则为 true。 否则为 **false**。  
+ 如果可以在 WHERE 子句中使用此列，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

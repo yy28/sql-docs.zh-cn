@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a0cb087f5a0cd429d9bc6f30ea08aaef3d07b3b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483106"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>删除模型对象权限 (Master Data Services)
@@ -33,11 +33,11 @@ ms.locfileid: "65483106"
   
 ### <a name="to-delete-model-object-permissions"></a>删除模型对象权限  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”** 。  
   
 2.  在 **“用户”** 或 **“组”** 页上，选择要编辑的用户或组所对应的行。  
   
-3.  单击 **“编辑所选用户”**。  
+3.  单击 **“编辑所选用户”** 。  
   
 4.  单击 **“模型”** 选项卡。  
   

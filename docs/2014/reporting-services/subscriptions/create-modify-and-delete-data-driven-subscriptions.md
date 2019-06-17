@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68a9d73139154ffd3d1343fb54a33ce103d6d7ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100941"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Create, Modify, and Delete a Data-Driven Subscription
@@ -46,7 +46,7 @@ ms.locfileid: "66100941"
   
 #### <a name="to-create-a-data-driven-subscription-native-mode"></a>创建数据驱动订阅（本机模式）  
   
-1.  在报表管理器中，导航到包含该报表的文件夹，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理”**。  
+1.  在报表管理器中，导航到包含该报表的文件夹，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理”** 。  
   
 2.  单击 **“订阅”** 选项卡。  
   
@@ -54,21 +54,21 @@ ms.locfileid: "66100941"
   
 #### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>创建数据驱动订阅（SharePoint 模式）  
   
-1.  在 SharePoint 文档库中，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理订阅”**。  
+1.  在 SharePoint 文档库中，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理订阅”** 。  
   
-2.  单击 **“添加数据驱动订阅”**。  
+2.  单击 **“添加数据驱动订阅”** 。  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>修改现有的数据驱动订阅（本机模式）  
   
-1.  在报表管理器中，导航到包含该报表的文件夹，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理”**。  
+1.  在报表管理器中，导航到包含该报表的文件夹，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理”** 。  
   
-2.  单击 **“订阅”** 选项卡。也可以单击报表管理器顶部的“我的订阅”链接  
+2.  单击 **“订阅”** 选项卡。也可以单击报表管理器顶部的“我的订阅”  链接  
   
 3.  选择要修改的订阅。 以下图标表示数据驱动订阅：![数据驱动订阅图标](../media/hlp-16subscriptiondd.gif "数据驱动订阅图标")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>修改现有的数据驱动订阅（SharePoint 模式）  
   
-1.  在 SharePoint 文档库中，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理订阅”**。  
+1.  在 SharePoint 文档库中，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理订阅”** 。  
   
 2.  选择要修改的订阅。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66100941"
 ##  <a name="bkmk_manage_and_delete"></a> 管理和删除数据驱动订阅  
  不能通过报表管理器的“管理作业”页来停止或删除正在进行的数据驱动订阅。 因此，使用共享计划触发数据驱动订阅是有利的。 在这种情况下，如果要暂时禁止处理某个订阅，只需暂停触发该订阅的计划即可。 有关详细信息，请参阅 [创建和管理本机模式报表服务器的订阅](../create-manage-subscriptions-native-mode-report-servers.md)。  
   
- 若要删除数据驱动订阅，请从“我的订阅”页或报表的“订阅”页中选定该订阅，再单击 **“删除”**。  
+ 若要删除数据驱动订阅，请从“我的订阅”页或报表的“订阅”页中选定该订阅，再单击 **“删除”** 。  
   
  有关如何取消数据驱动订阅的说明，请参阅 [管理运行中的进程](manage-a-running-process.md)。  
   

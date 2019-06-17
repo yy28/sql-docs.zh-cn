@@ -17,19 +17,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9d14f27e1b41bf2a636f53ecb13c4fd88a9e4bc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100607"
 ---
 # <a name="technical-reference-ssrs"></a>技术参考 (SSRS)
   查找用于在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中使用或管理 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的工具和 PowerShell 参考文档。  
   
- ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "小文件文件夹图标") 错误和事件  
+ ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "小文件文件夹图标") 错误和事件   
  [Reporting Services 错误的原因和解决方法](troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "小文件文件夹图标") 功能参考  
+ ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "小文件文件夹图标") 功能参考   
  [报表设计器的 F1 帮助](tools/report-designer-f1-help.md)  
   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
@@ -42,14 +42,14 @@ ms.locfileid: "66100607"
   
  [呈现扩展插件的设备信息设置 (Reporting Services)](device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") 报表服务器命令提示实用工具  
+ ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") 报表服务器命令提示实用工具   
  [RS.exe 实用工具 (SSRS)](tools/rs-exe-utility-ssrs.md)  
   
  [rsconfig 实用工具 (SSRS)](tools/rsconfig-utility-ssrs.md)  
   
  [rskeymgmt 实用工具 (SSRS)](tools/rskeymgmt-utility-ssrs.md)  
   
- ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") Reporting Services WMI 提供程序类库  
+ ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") Reporting Services WMI 提供程序类库   
  [Reporting Services WMI 提供程序库引用 (SSRS)](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
 ## <a name="see-also"></a>请参阅  

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108739"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>初始化报表服务器（SSRS 配置管理器）
@@ -60,7 +60,7 @@ ms.locfileid: "66108739"
 -   若要针对扩展部署初始化报表服务器，可以使用 Reporting Services 配置工具中的“初始化”页或使用 **RSKeymgmt** 实用工具。 要按照分步说明操作，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
 > [!NOTE]  
->  RSKeymgmt 是一种控制台应用程序，需要在托管扩展部署中已包含的报表服务器实例的计算机上从命令行运行。 运行该实用工具时，需要指定相关参数，以选择要初始化的远程报表服务器实例。  
+>  RSKeymgmt 是一种控制台应用程序，需要在托管扩展部署中已包含的报表服务器实例的计算机上从命令行运行  。 运行该实用工具时，需要指定相关参数，以选择要初始化的远程报表服务器实例。  
   
  只有当安装标识符与公钥相匹配时，才会初始化报表服务器。 如果匹配成功，则创建允许可逆加密的对称密钥。 如果匹配失败，则将禁用报表服务器，在这种情况下，可能需要应用备份密钥；如果备份密钥不可用或无效，则可能需要删除加密数据。 有关报表服务器使用的加密密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66108739"
 >  还可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序以编程的方式初始化报表服务器。 有关详细信息，请参阅 [联机丛书中的](../tools/access-the-reporting-services-wmi-provider.md) 访问 Reporting Services WMI 提供程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>如何确认报表服务器初始化  
- 要确认报表服务器初始化，请通过在命令窗口中键入 http://\<servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令。 如果发生 `RSReportServerNotActivated` 错误，则表示初始化失败。  
+ 要确认报表服务器初始化，请通过在命令窗口中键入 http://\<servername>/reportserver 来对报表服务器 Web 服务运行 ping 命令  。 如果发生 `RSReportServerNotActivated` 错误，则表示初始化失败。  
   
 ## <a name="see-also"></a>请参阅  
  [存储加密的 Report Server 数据（SSRS 配置管理器）](ssrs-encryption-keys-store-encrypted-report-server-data.md)  

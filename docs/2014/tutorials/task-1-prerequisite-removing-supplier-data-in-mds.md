@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 84c0acceb4953b819cb5696c4ef90c39e4376846
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481226"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>任务 1（先决条件）：删除 MDS 中的供应商数据
   在本任务中，您将删除在 MDS 中存储的供应商数据。 使用手动将数据上载**MDS Excel 外接程序**上一课中。 您在本课中创建的 SSIS 包将自动为您将数据上载到 MDS。 因此，在测试该 SSIS 包之前，您需要从 MDS 删除供应商数据，删除派生的层次结构，删除供应商和状态实体，并且创建不含数据的供应商实体。  
   
-1.  启动**主数据管理器**通过导航到**http://localhost/MDS**或网站和应用程序时指定配置 MDS。 如果保持**主数据管理器**打开，请单击**SQL Server 2012 Master Data Services**顶部以切换到**主页**。  
+1.  启动**主数据管理器**通过导航到 **http://localhost/MDS** 或网站和应用程序时指定配置 MDS。 如果保持**主数据管理器**打开，请单击**SQL Server 2012 Master Data Services**顶部以切换到**主页**。  
   
 2.  单击**系统管理**中**管理任务**部分。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "65481226"
   
     1.  选择**创建新的连接**，然后单击**新建**按钮。  
   
-    2.  在添加新连接对话框中，键入**本地 MDS 服务器**有关**说明**并**http://localhost/MDS**对于**MDS 服务器地址**，然后单击**确定**以关闭对话框。  
+    2.  在添加新连接对话框中，键入**本地 MDS 服务器**有关**说明**并 **http://localhost/MDS** 对于**MDS 服务器地址**，然后单击**确定**以关闭对话框。  
   
-15. 在中**管理连接**对话框中，选择**本地 MDS 服务器**(http://localhost/MDS)，单击**测试**对连接进行测试。 单击**确定**消息框上。  
+15. 在中**管理连接**对话框中，选择**本地 MDS 服务器**(http://localhost/MDS) ，单击**测试**对连接进行测试。 单击**确定**消息框上。  
   
 16. 单击**Connect**建立到 MDS 服务器。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "65481226"
   
 21. 确认**供应商**模型用于**模型**并**VERSION_1**为选择**版本**。  
   
-22. 单击 **“资源管理器”**。 请注意，**供应商**实体的所有属性创建具有**没有值**。  
+22. 单击 **“资源管理器”** 。 请注意，**供应商**实体的所有属性创建具有**没有值**。  
   
 ## <a name="next-step"></a>下一步  
  [任务 2&#40;可选&#41;:创建 MDS 订阅视图使用主数据管理器](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  

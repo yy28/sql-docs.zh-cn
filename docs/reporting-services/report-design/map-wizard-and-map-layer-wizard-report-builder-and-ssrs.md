@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8587cedde63352f7027e573092c6e8ae02dc218d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580115"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499884"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -36,7 +36,7 @@ ms.locfileid: "65580115"
   
 -   首次打开报表生成器时，请单击设计图面中心区域上的 **“地图”** 向导图标。  
   
--   在 **“插入”** 选项卡上，单击 **“地图”**，然后单击 **“地图向导”**。  
+-   在 **“插入”** 选项卡上，单击 **“地图”** ，然后单击 **“地图向导”** 。  
   
  若要打开地图层向导，请执行以下操作之一：  
   
@@ -106,7 +106,7 @@ ms.locfileid: "65580115"
  可以为每层使用相同或不同的空间数据源，但必须在每次添加层时指定源。 当空间数据来自地图库或 ESRI 形状文件时，空间数据源不是单独的报表项。 它不显示在“报表数据”窗格中。  
   
 ###  <a name="SpatialData"></a> 什么是空间数据？  
- 空间数据包含定义地理或几何元素的坐标。 在地图中，空间数据定义“地图元素” ：定义区域或形状的多边形、定义路线或路径的线条，以及定义标记或图钉的点。 空间数据在数据源中以二进制格式存储，并指定为坐标集。 例如，点是 X 和 Y 坐标 (X Y)，线条是两组坐标 ((X1 Y1), (X2 Y2))，多边形是四组或更多坐标，其中第一组和最后一组坐标是相同的 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
+ 空间数据包含定义地理或几何元素的坐标。 在地图中，空间数据定义“地图元素”  ：定义区域或形状的多边形、定义路线或路径的线条，以及定义标记或图钉的点。 空间数据在数据源中以二进制格式存储，并指定为坐标集。 例如，点是 X 和 Y 坐标 (X Y)，线条是两组坐标 ((X1 Y1), (X2 Y2))，多边形是四组或更多坐标，其中第一组和最后一组坐标是相同的 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
   
  有关详细信息，请参阅所用空间数据类型的文档。  
   
@@ -114,12 +114,12 @@ ms.locfileid: "65580115"
  地图库所包含的地图来自面向报表创作环境的地图库文件夹中的报表。 库中的地图提供支持向报表快速添加地图。 库中预先定义的地图是由地图提供商提供的。  
   
 > [!NOTE]  
->  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([https://www.census.gov/](https://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
+>  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([https://www.census.gov/](https://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取关于 TIGER/Line 形状文件的详细信息，请转到 [TIGER/Line 形状文件和 TIGER/Line 文件技术文档](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
   
  若要扩展地图库，可以在地图库目录中添加或删除报表，并添加文件夹对地图进行组织。 有关详细信息，请参阅 [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI 形状文件是一个文件集，其中的数据符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式。 该文件集通常包含 \<filename.shp> 文件（包含空间数据）和一个支持文件 \<filename.dbf>。  
+ ESRI 形状文件是一个文件集，其中的数据符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式。 该文件集通常包含 \<filename.shp> 文件（包含空间数据）和一个支持文件 \<filename.dbf>   。  
   
  当您将形状文件指定为空间数据源而该文件位于您的本地计算机中时，空间数据将自动嵌入到报表中。 若要动态使用 ESRI 文件中的空间数据，必须执行以下操作：  
   
@@ -134,7 +134,7 @@ ms.locfileid: "65580115"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空间查询是一种数据集查询，该查询指定来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库的 SQLGeometry 或 SQLGeography 数据类型的数据。  
   
 > [!NOTE]  
->  在向导中定义数据源时，您将在“设计查询”页中看到不同的查询设计器，具体取决于您所连接的数据源的类型。 有关详细信息，请参阅[查询设计器（报表生成器）](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)。  
+>  在向导中定义数据源时，您将在“设计查询”页中看到不同的查询设计器，具体取决于您所连接的数据源的类型。 有关详细信息，请参阅[查询设计工具&#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)。  
   
  在查询设计器中运行该查询时，结果集显示一列，其中的空间数据显示为文本。 例如，一行可能包含作为一个点的空间数据，而下一行可能包含定义一组点的空间数据。 每行都成为一个地图元素。 您可以改变每个图元素的显示，将其作为不可分的单元。  
   

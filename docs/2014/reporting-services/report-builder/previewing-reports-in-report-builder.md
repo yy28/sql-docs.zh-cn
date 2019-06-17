@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107789"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
-  当您创建报表时，经常预览报表以验证报表显示您所需的内容会非常有用。 若要预览报表，请单击 **“运行”**。 报表将在预览模式下呈现。  
+  当您创建报表时，经常预览报表以验证报表显示您所需的内容会非常有用。 若要预览报表，请单击 **“运行”** 。 报表将在预览模式下呈现。  
   
  报表生成器通过在连接到报表服务器时使用编辑会话改进了预览体验。 编辑会话创建数据缓存，并使缓存中的数据集可用于重复性的报表预览。 编辑会话并不是一种您可以直接与之交互的功能，但了解何时刷新缓存的数据集将帮助您改进预览报表时的性能并理解报表呈现变快或变慢的原因。  
   

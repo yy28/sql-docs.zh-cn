@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 501eb13a137b82adad1190f990d29760c43119b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622355"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797058"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>安全注意事项 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47622355"
   
 有关如何使用 Windows 身份验证连接到服务器的信息，请参阅 [如何：使用 Windows 身份验证进行连接](../../connect/php/how-to-connect-using-windows-authentication.md)。  
   
-使用 Windows 身份验证进行连接时，建议你配置环境，以便 SQL Server 可以使用 Kerberos 身份验证协议。 有关详细信息，请参阅[如何确保在创建到 SQL Server 2005 实例的远程连接时使用 Kerberos 身份验证](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c)或 [Kerberos 身份验证与 SQL Server](https://msdn.microsoft.com/library/cc280744.aspx)。  
+使用 Windows 身份验证进行连接时，建议你配置环境，以便 SQL Server 可以使用 Kerberos 身份验证协议。 有关详细信息，请参阅 [如何确保在创建到 SQL Server 2005 实例的远程连接时使用 Kerberos 身份验证](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) 或 [Kerberos 身份验证与 SQL Server](https://msdn.microsoft.com/library/cc280744.aspx)。  
   
 ## <a name="use-encrypted-connections-when-transferring-sensitive-data"></a>在传输敏感数据时使用加密连接  
 无论通过 SQL Server 发送还是接收敏感数据，都应使用加密连接。 有关如何启用加密连接的信息，请参阅[如何启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。 若要与 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]建立安全连接，请在连接到服务器时使用加密连接属性。 有关连接属性的详细信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。  

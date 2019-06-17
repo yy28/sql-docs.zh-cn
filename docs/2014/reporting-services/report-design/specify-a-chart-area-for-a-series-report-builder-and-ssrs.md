@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14fc5556e430cf364b004cd02ebd0278da650867
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104972"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>指定序列的图表区（报表生成器和 SSRS）
@@ -34,13 +34,13 @@ ms.locfileid: "66104972"
   
 ### <a name="to-associate-a-series-with-a-new-chart-area"></a>将序列与新的图表区相关联  
   
-1.  右键单击图表上的任意位置并选择“添加新图表区域”。 图表上将出现一个新的空白图表区。  
+1.  右键单击图表上的任意位置并选择“添加新图表区域”  。 图表上将出现一个新的空白图表区。  
   
-2.  右键单击图表上的序列或右键单击“图表数据”窗格中的相应区域中的序列或数据字段，然后单击“序列属性”。  
+2.  右键单击图表上的序列或右键单击“图表数据”窗格中的相应区域中的序列或数据字段，然后单击“序列属性”  。  
   
 3.  在 **“轴和图表区”** 中，选择要在其中显示序列的图表区。  
   
-4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
+4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”  。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
   
 ## <a name="see-also"></a>请参阅  
  [图表中的多个序列（报表生成器和 SSRS）](multiple-series-on-a-chart-report-builder-and-ssrs.md)   

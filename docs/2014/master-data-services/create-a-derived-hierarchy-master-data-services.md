@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 90ecf9d2f9c677351a4c199414be25d753fe5346
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479965"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>创建派生层次结构 (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65479965"
   
 ### <a name="to-create-a-derived-hierarchy"></a>创建派生层次结构  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
 2.  上**模型视图**页上，从菜单栏中，依次指向**管理**然后单击**派生层次结构**。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "65479965"
     > [!TIP]  
     >  使用在层次结构中描述级别的名称，例如， **Product to Subcategory to Category**。  
   
-6.  单击 **“保存派生层次结构”**。  
+6.  单击 **“保存派生层次结构”** 。  
   
 7.  上**编辑派生层次结构**页上，在**可用实体和层次结构**窗格中，单击某一实体或层次结构，并将其拖到**当前级别**窗格。  
   
 8.  继续拖动实体或层次结构，直到完成您的层次结构。  
   
-9. 单击 **“上一步”**。  
+9. 单击 **“上一步”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   

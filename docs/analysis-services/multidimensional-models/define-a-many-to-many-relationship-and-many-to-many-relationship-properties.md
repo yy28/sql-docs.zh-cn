@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 31a0127e9e7e7ed7c6bc94d518e5785af04da46d
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65357396"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
@@ -37,7 +37,7 @@ ms.locfileid: "65357396"
   
  从分析上，多对多关系解决了这样一个问题，即如何精确地表示相对于维度关系的计数或求和（通常通过在为特定维度成员执行计算时消除重复计数）。 我们必须通过一个例子来澄清这一点。 假定某个产品或服务属于多个类别。 如果您在按类别对服务数目进行计数，您可能希望属于两个类别的某一服务分别包括在各类别中。 同时，您不想重复计算您提供的服务数目。 通过指定多对多维度关系，在按类别或按服务进行查询时，您获得正确结果的可能性更大了。 但是，始终需要进行详尽的测试以便确保多对多维度关系适合于这个情形。  
   
- 从结构上来说，创建多对多维度关系的方式类似于在关系数据模型中创建多对多关系。 但关系模型使用“联接表”  存储行关联，而多维模型使用“中间度量值组” 。 中间度量值组是一个术语，用来表示从不同维度映射成员的一种表。  
+ 从结构上来说，创建多对多维度关系的方式类似于在关系数据模型中创建多对多关系。 但关系模型使用“联接表”  存储行关联，而多维模型使用“中间度量值组”  。 中间度量值组是一个术语，用来表示从不同维度映射成员的一种表。  
   
  多对多维度关系没有在多维数据集关系图中直观地指示。 而是使用“维度用法”选项卡快速标识某个模型中的任何多对多关系。 多对多关系用以下图标指示。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65357396"
   
 #### <a name="step-2-create-dimensions-and-measure-groups"></a>第 2 步：创建维度和度量值组  
   
-1.  在 SQL Server Data Tools 中，在一个多维项目中右键单击“维度”并选择“新建维度”。  
+1.  在 SQL Server Data Tools 中，在一个多维项目中右键单击“维度”  并选择“新建维度”  。  
   
 2.  在现有表 **DimSalesReason**的基础上新建一个维度。 在指定源时接受所有默认值。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "65357396"
   
      ![向导页上显示维度重命名](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "显示维度重命名的向导页")  
   
-7.  右键单击“多维数据集”，然后选择“新建多维数据集”。  
+7.  右键单击“多维数据集”  ，然后选择“新建多维数据集”  。  
   
 8.  在度量值组表中，选择 **FactInternetSales** 和 **FactInternetSalesReason**。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "65357396"
   
      在“选择新维度”页中，向导会提示你为 **Fact Internet Sales Dimension**新建一个维度。 您不需要此维度，因此可以从列表中清除它。  
   
-11. 命名该多维数据集并且单击 **“完成”**。  
+11. 命名该多维数据集并且单击 **“完成”** 。  
   
 #### <a name="step-3-define-many-to-many-relationship"></a>步骤 3：定义多对多关系  
   
@@ -140,15 +140,15 @@ ms.locfileid: "65357396"
   
 1.  部署该项目，然后浏览多维数据集以便确认聚合有效。  
   
-2.  在 Excel 中，单击“数据” | “从其他源” | “从 Analysis Services”。 输入服务器的名称，选择数据库和多维数据集。  
+2.  在 Excel 中，单击“数据”   | “从其他源”   | “从 Analysis Services”  。 输入服务器的名称，选择数据库和多维数据集。  
   
 3.  创建一个数据透视表，它使用以下内容：  
   
-    -   作为值的**Sales Amount**   
+    -   作为值的**Sales Amount**  
   
-    -   列上的**Sales Reason Name**   
+    -   列上的**Sales Reason Name**  
   
-    -   行上的 **“销售订单号”**   
+    -   行上的 **“销售订单号”**  
   
 4.  分析结果。 因为我们在使用示例数据，所以，最初的印象是所有销售订单都具有完全相同的值。 但是，如果您向下滚动，则会开始看到数据变化。  
   

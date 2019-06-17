@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a0c38487f58a6db6e80d48c2b39b09e3ed93106
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107272"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 连接类型 (SSRS)
@@ -76,7 +76,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>预定义的字段属性  
- 通常受多个数据访问接口支持并出现在报表数据集的基础 MDX 查询中的预定义字段属性。 例如，MDX 维度属性 MEMBER_UNIQUE_NAME 映射到预定义报表数据集字段属性 `UniqueName`。 若要在文本框中包含唯一名称值，请使用表达式 `=Fields!`*\<FieldName>*`.UniqueName`。  
+ 通常受多个数据访问接口支持并出现在报表数据集的基础 MDX 查询中的预定义字段属性。 例如，MDX 维度属性 MEMBER_UNIQUE_NAME 映射到预定义报表数据集字段属性 `UniqueName`。 若要在文本框中包含唯一名称值，请使用表达式 `=Fields!` *\<FieldName>* `.UniqueName`。  
   
  下表提供了可以用于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的预定义字段属性的列表。  
   
@@ -93,7 +93,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>自定义属性  
- 为某个数据访问接口所支持并出现在报表数据集的基础 MDX 查询中的自定义字段属性，但这些属性不作为该数据集的字段出现在报表“数据集”窗格中。 例如， **Long Names** 是为某个维度级别定义的成员属性。 若要在文本框中包含该值，请使用表达式 `=Fields!`*\<FieldName>*`("Long Names")`。 表达式中的字段名区分大小写。  
+ 为某个数据访问接口所支持并出现在报表数据集的基础 MDX 查询中的自定义字段属性，但这些属性不作为该数据集的字段出现在报表“数据集”窗格中。 例如， **Long Names** 是为某个维度级别定义的成员属性。 若要在文本框中包含该值，请使用表达式 `=Fields!` *\<FieldName>* `("Long Names")`。 表达式中的字段名区分大小写。  
   
  可以使用以下语法在表达式中引用自定义扩展属性：  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105204"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 函数（报表生成器和 SSRS）
@@ -35,10 +35,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`VariantArray`) 在当前作用域中计算结果并指定要查找的名称或键的集合的表达式。 例如，对于多值参数， `=Parameters!IDs.value`。  
   
  *destination_expression*  
- (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!ID.Value`。  
+ (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如， `=Fields!ID.Value` 。  
   
  *result_expression*  
- (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如，`=Fields!Name.Value`。  
+ (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如， `=Fields!Name.Value` 。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“Colors”。  

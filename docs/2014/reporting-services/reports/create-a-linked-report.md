@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0df6a3bdb6f542b02b62ccf4aa6614da290551f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102699"
 ---
 # <a name="create-a-linked-report"></a>创建链接报表
@@ -30,11 +30,11 @@ ms.locfileid: "66102699"
   
 ### <a name="to-create-a-linked-report"></a>创建链接报表  
   
-1.  在报表管理器中，导航到包含想要链接到的报表的文件夹，然后打开选项菜单并单击 **“创建链接报表”**。  
+1.  在报表管理器中，导航到包含想要链接到的报表的文件夹，然后打开选项菜单并单击 **“创建链接报表”** 。  
   
 2.  键入新链接报表的名称。 根据需要，可以键入说明。  
   
-3.  若要为报表选择不同的文件夹，请单击 **“更改位置”**。 单击要使用的文件夹，或者在 **“位置”** 框中键入文件夹名称。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 如果没有选择不同的文件夹，则将在当前文件夹（链接报表所基于的报表的存储位置）中创建链接报表。  
+3.  若要为报表选择不同的文件夹，请单击 **“更改位置”** 。 单击要使用的文件夹，或者在 **“位置”** 框中键入文件夹名称。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 如果没有选择不同的文件夹，则将在当前文件夹（链接报表所基于的报表的存储位置）中创建链接报表。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 将打开链接报表。  
   

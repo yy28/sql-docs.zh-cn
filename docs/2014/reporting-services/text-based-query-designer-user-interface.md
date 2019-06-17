@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfd6d077d80093821346be030ee0dd9c2af0fc9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100600"
 ---
 # <a name="text-based-query-designer-user-interface"></a>基于文本的查询设计器用户界面
@@ -43,7 +43,7 @@ ms.locfileid: "66100600"
 |**命令类型**|选择 **Text**、 **StoredProcedure**或 **TableDirect**。 如果存储过程带有参数，则单击工具栏上的 **“运行”** 时，将出现 **“定义查询参数”** 对话框，您可以根据需要填入值。 请注意，是否存储的过程返回多个结果集，只将第一个结果集用于填充数据集。<br /><br /> 所支持的命令类型因数据源类型而异。 例如，仅 OLE DB 和 ODBC 支持 **TableDirect**。|  
   
 ### <a name="command-type-text"></a>命令类型 Text  
- 创建 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据集时，默认情况下，报表设计器会显示图形查询设计器。 若要切换为基于文本的查询设计器，请单击工具栏上的“编辑为文本”切换按钮。 基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 下图标出了每个窗格。  
+ 创建 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据集时，默认情况下，报表设计器会显示图形查询设计器。 若要切换为基于文本的查询设计器，请单击工具栏上的“编辑为文本”切换按钮  。 基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 下图标出了每个窗格。  
   
  ![通用查询设计器，用于关系数据查询](../analysis-services/media/rsqd-dsaw-sql-generic.gif "通用查询设计器，用于关系数据查询")  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66100600"
 |Pane|函数|  
 |----------|--------------|  
 |查询|显示 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询文本。 使用此窗格可以编写或编辑 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询。|  
-|结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮。|  
+|结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮   。|  
   
 #### <a name="example"></a>示例  
  以下查询将从 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库的 `Contact` 表中返回姓氏列表：  
@@ -70,7 +70,7 @@ EXEC uspGetEmployeeManagers 1;
  单击工具栏上的 **“运行”** 时，将运行 **“查询”** 窗格中的命令，并在 **“结果”** 窗格中显示结果。  
   
 ### <a name="command-type-storedprocedure"></a>命令类型 StoredProcedure  
- 选择“Command typeStoredProcedure”时，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 在“查询”窗格中输入存储过程的名称，然后单击工具栏中的 **“运行”** 按钮。 此时将打开“定义查询参数”对话框。 输入存储过程的参数值。 对于每个存储过程参数，都会创建一个报表参数。  
+ 选择“Command typeStoredProcedure”时，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格  。 在“查询”窗格中输入存储过程的名称，然后单击工具栏中的 **“运行”** 按钮。 此时将打开“定义查询参数”对话框。 输入存储过程的参数值。 对于每个存储过程参数，都会创建一个报表参数。  
   
 #### <a name="example"></a>示例  
  以下查询调用 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 存储过程 `uspGetEmployeeManagers`。 您必须在运行查询时，为雇员标识号参数输入值。  
@@ -80,7 +80,7 @@ uspGetEmployeeManagers;
 ```  
   
 ### <a name="command-type-tabledirect"></a>命令类型 TableDirect  
- 选择“Command typeTableDirect”时，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 如果输入一个表并单击 **“运行”** 按钮，则将返回该表的所有列。  
+ 选择“Command typeTableDirect”时，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格  。 如果输入一个表并单击 **“运行”** 按钮，则将返回该表的所有列。  
   
 #### <a name="example"></a>示例  
  以下查询将返回 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库中的所有客户的结果集。  

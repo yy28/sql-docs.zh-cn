@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 622fbdf67d33972500a5047c3886830ba802796a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101449"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>将 Windows SharePoint Services 中的内置安全性用于报表服务器项
@@ -37,7 +37,7 @@ ms.locfileid: "66101449"
   
  计划、订阅和报表历史记录不是安全对象。 可以对站点或库设置权限以确定用户是否可以创建或使用计划、订阅和报表历史记录，但无法直接对这些项进行安全设置。  
   
- 若要对单个项进行安全设置，请在库中选择该项，单击向下箭头并选择 **“管理权限”**。 在 **“操作”** 菜单上，选择 **“编辑权限”**。  
+ 若要对单个项进行安全设置，请在库中选择该项，单击向下箭头并选择 **“管理权限”** 。 在 **“操作”** 菜单上，选择 **“编辑权限”** 。  
   
 ## <a name="using-built-in-groups-and-permission-levels-to-access-report-server-items"></a>使用内置组和权限级别来访问报表服务器项  
  如果使用权限继承和标准 SharePoint 组，则在对报表服务器和 SharePoint 实例配置集成设置后，即可访问大多数报表服务器操作。  

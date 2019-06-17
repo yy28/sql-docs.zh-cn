@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109664"
 ---
 # <a name="create-a-model-using-report-manager"></a>使用报表管理器创建模型
@@ -32,7 +32,7 @@ ms.locfileid: "66109664"
   
 1.  在 Web 浏览器的地址栏中，键入报表服务器的 URL。  
   
-2.  单击 **“新建数据源”**。  
+2.  单击 **“新建数据源”** 。  
   
 3.  在 **“名称”** 框中，为数据源输入名称。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66109664"
   
 2.  确保为数据源指定的选项满足需要。  
   
-3.  单击 **“生成模型”**。  
+3.  单击 **“生成模型”** 。  
   
      此时，将显示数据源的“常规”页。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66109664"
   
 5.  在 **“说明”** 框中，输入对模型的简要说明。  
   
-6.  若要指定新的位置保存报表模型，请单击 **“更改位置”**。  
+6.  若要指定新的位置保存报表模型，请单击 **“更改位置”** 。  
   
      默认情况下，报表模型将保存到报表管理器主文件夹中。  
   

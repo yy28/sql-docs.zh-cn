@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102593"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>打开和关闭报表（报表管理器）
@@ -36,7 +36,7 @@ ms.locfileid: "66102593"
   
      某些报表需要您提供用户名和密码，或者需要您提供参数值。  
   
-4.  若要关闭报表，请关闭报表管理器，或浏览到另一页或文件夹（例如，通过单击“返回”按钮，或单击页面顶部的文件夹链接）。  
+4.  若要关闭报表，请关闭报表管理器，或浏览到另一页或文件夹（例如，通过单击“返回”  按钮，或单击页面顶部的文件夹链接）。  
   
      关闭报表并不会将其从浏览器缓存中删除。 必须关闭浏览器才能断开报表连接。  
   

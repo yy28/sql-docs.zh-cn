@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 51724ea4c0adf1a98d7972898d15e20e626b7c98
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489534"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>创建和执行实体同步关系（主数据服务）
@@ -61,11 +61,11 @@ ms.locfileid: "65489534"
   
  **创建实体同步关系**  
   
-1.  在主数据管理器中，单击“系统管理” 。  
+1.  在主数据管理器中，单击“系统管理”  。  
   
-2.  在“模型视图”  页上，从菜单栏中指向“管理”  ，然后单击“实体同步” 。  
+2.  在“模型视图”  页上，从菜单栏中指向“管理”  ，然后单击“实体同步”  。  
   
-3.  在“实体同步维护”  页上，单击“添加” 。 右侧将显示一个面板。  
+3.  在“实体同步维护”  页上，单击“添加”  。 右侧将显示一个面板。  
   
 4.  从“模型”  列表中，选择某一模型。  
   
@@ -79,26 +79,26 @@ ms.locfileid: "65489534"
   
 9. 如果想要同步某个现有实体，则选择“现有实体”  并从实体列表中选择一个实体，或者如果想要同步到新实体，则选择“新实体”  ，然后输入目标实体名称。  
   
-10. 选择“按需同步” ，或选择“自动同步”  并设置频率。  
+10. 选择“按需同步”  ，或选择“自动同步”  并设置频率。  
   
-11. 单击“保存” 。  
+11. 单击“保存”  。  
   
  **执行实体同步关系**  
   
-1.  在主数据管理器中，单击“系统管理” 。  
+1.  在主数据管理器中，单击“系统管理”  。  
   
-2.  在“模型视图”  页上，从菜单栏中指向“管理”  ，然后单击“实体同步” 。  
+2.  在“模型视图”  页上，从菜单栏中指向“管理”  ，然后单击“实体同步”  。  
   
 3.  在“实体同步维护”  页上，选择网格中的同步关系。  
   
-4.  单击 **“执行”**。  
+4.  单击 **“执行”** 。  
   
 ## <a name="sync-relationship-information"></a>同步关系信息  
  对于创建的每个同步关系，系统都会在网格中添加一行（其中包含十列）。 下表对这些列进行了说明。  
   
 |“列”|Description|  
 |------------|-----------------|  
-|“登录属性”|同步关系状态。<br /><br /> 单击“保存”或执行同步关系后，系统会显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示同步关系正在更新。<br /><br /> 如果创建、编辑或执行同步关系时，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
+|“登录属性”|同步关系状态。<br /><br /> 单击“保存”或执行同步关系后，系统会显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示同步关系正在更新  。<br /><br /> 如果创建、编辑或执行同步关系时，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
 |源模型|源模型名称。|  
 |源版本|源版本名称。|  
 |源实体|源实体名称。|  

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095865"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>数据库引擎配置 - 帐户设置
@@ -31,9 +31,9 @@ ms.locfileid: "66095865"
 > [!IMPORTANT]  
 >  您在安装过程中必须为新安装显式设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员。 直到您完成此步骤之后，安装程序才允许您继续操作。  
   
- **指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员** - 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例至少指定一个 Windows 主体。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“当前用户”** 按钮。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”**，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员权限的用户、组或计算机的列表。  
+ **指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员** - 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例至少指定一个 Windows 主体。 若要添加用以运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的帐户，请单击 **“当前用户”** 按钮。 若要向系统管理员列表中添加帐户或从中删除帐户，请单击 **“添加”** 或 **“删除”** ，然后编辑将拥有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员权限的用户、组或计算机的列表。  
   
- 完成列表的编辑后，单击 **“确定”**，然后在配置对话框中验证管理员列表。 完成此列表后，请单击 **“下一步”**。  
+ 完成列表的编辑后，单击 **“确定”** ，然后在配置对话框中验证管理员列表。 完成此列表后，请单击 **“下一步”** 。  
   
  如果选择“混合模式身份验证”，则必须为内置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员 (SA) 帐户提供登录凭据。  
   
@@ -97,9 +97,9 @@ ms.locfileid: "66095865"
  此页上输入的密码必须符合强密码策略要求。 如果存在任何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的自动化过程，请确保该密码符合强密码策略要求。  
   
 ## <a name="related-content"></a>相关内容  
- 有关选择 Windows 身份验证和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“选择身份验证模式”主题。  
+ 有关选择 Windows 身份验证和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“选择身份验证模式”  主题。  
   
- 有关选择帐户以运行 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的详细信息，请参阅 **联机丛书中的“配置 Windows 服务帐户和权限”**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主题。  
+ 有关选择帐户以运行 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的详细信息，请参阅 **联机丛书中的“配置 Windows 服务帐户和权限”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主题。  
   
 ## <a name="see-also"></a>请参阅  
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  

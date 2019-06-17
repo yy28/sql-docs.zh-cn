@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c07ac791d7729ffa2b61664c3294c891dd554f1
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66213738"
 ---
-# <a name="sysdmdatabasereplicastates-azure-sql-database"></a>sys.dm_database_replica_states （Azure SQL 数据库）
+# <a name="sysdmdatabasereplicastates-azure-sql-database"></a>sys.dm_database_replica_states（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   返回数据库中，公开本地副本的状态的行。  
@@ -41,7 +41,7 @@ ms.locfileid: "66213738"
 |**replica_id**|**uniqueidentifier**|可用性组内可用性副本的标识符。|  
 |**group_database_id**|**uniqueidentifier**|可用性组内数据库的标识符。 在此数据库联接到的每个副本上，该标识符都是相同的。|  
 |**is_local**|**bit**|可用性数据库是否是本地的，可以是下列值之一：<br /><br /> 0 = 数据库对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例而言不是本地的。<br /><br /> 1 = 数据库对于服务器实例而言是本地的。|  
-|**is_primary_replica**|**bit**|如果副本是主要副本则返回 1；如果副本是辅助副本则返回 0。<br /><br />适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**is_primary_replica**|**bit**|如果副本是主要副本则返回 1；如果副本是辅助副本则返回 0。<br /><br />适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。|  
 |**synchronization_state**|**tinyint**|数据移动状态，以下值之一。<br /><br /> 0 = 未同步。 对于某一主数据库，指示该数据库未做好将其事务日志与相应的辅助数据库同步的准备。 对于辅助数据库，指示数据库由于连接问题而未开始日志同步，正被挂起，或者在启动或角色切换过程中正在转换状态。<br /><br /> 1 = 正在同步。 对于主数据库，指示此数据库已做好接受来自辅助数据库的扫描请求的准备。 对于辅助数据库，指示对于该数据库正在发生活动数据移动。<br /><br /> 2 = 已同步。 主数据库显示 SYNCHRONIZED 来代替 SYNCHRONIZING。 同步提交辅助数据库在以下情况下将显示已同步：本地缓存指示数据库副本可供故障转移并且数据库正在同步。<br /><br /> 3 = 恢复。 指示撤消进程中辅助数据库主动从主数据库获取页时的阶段。<br />**注意：** 当辅助副本上的数据库处于 REVERTING 状态时，强制故障转移到辅助副本将使数据库处于在其中它不能启动作为主数据库的状态。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。<br /><br /> 4 = 正在初始化。 指示在正在辅助副本上传送和强制写入辅助数据库跟上撤消 LSN 所需的事务日志时的撤消阶段。<br />**注意：** 当辅助副本上的数据库处于 INITIALIZING 状态时，强制故障转移到辅助副本将使数据库处于在其中它不能启动作为主数据库的状态。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。|  
 |**synchronization_state_desc**|**nvarchar(60)**|数据移动状态的说明，可以是下列值之一：<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = 就此数据库而言，事务提交未同步。<br /><br /> 1 = 就此数据库而言，事务提交同步。<br /><br /> 对于异步提交可用性副本上的数据库，该值始终为 0。<br /><br /> 对于同步提交可用性副本上的数据库，该值仅在主数据库上是准确的。|  
@@ -71,7 +71,7 @@ ms.locfileid: "66213738"
 |**last_commit_lsn**|**Numeric(25,0)**|与事务日志中的最后提交的记录相对应的实际日志序列号。<br /><br /> 主数据库上，这对应于上次处理的提交记录。 辅助数据库的行显示辅助副本已发送到主副本的日志序列号。<br /><br /> 在辅助副本上，这是已重做的最后一个提交记录。|  
 |**last_commit_time**|**datetime**|与最后一个提交记录对应的时间。<br /><br /> 在辅助数据库上，此时间与主数据库上的时间相同。<br /><br /> 在主副本上，每个辅助数据库行都显示承载该辅助数据库的辅助副本报告回主副本的时间。 主数据库行和给定的辅助数据库行之间的时间差异表示大约恢复点目标 (RPO)，假定，重做进程并且进度已到主副本返回报告由辅助副本。|  
 |**low_water_mark_for_ghosts**|**bigint**|针对数据库的单调递增的数字，指示主数据库上虚影清除使用的低水印。 如果这个数字没有随着时间的推移而增加，则意味着虚影清除可能未发生。 为了确定要清除的虚影行，主副本会在所有可用性副本（包括主副本）上将该列的最小值用于此数据库。|  
-|**secondary_lag_seconds**|**bigint**|在同步期间，辅助副本是主副本的秒数。<br /><br />适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**secondary_lag_seconds**|**bigint**|在同步期间，辅助副本是主副本的秒数。<br /><br />适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。|  
 |**quorum_commit_lsn**|**Numeric(25,0)**|标识为仅供参考。 不提供支持。 不保证以后的兼容性。|
 |**quorum_commit_time**|**datetime**|标识为仅供参考。 不提供支持。 不保证以后的兼容性。|
 

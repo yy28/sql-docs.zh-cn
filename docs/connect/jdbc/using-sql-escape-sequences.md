@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4c26b94f4aa681d5042b728c5c44e50269fbc31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841721"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798612"
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 转义序列
 
@@ -158,7 +158,7 @@ JDBC 驱动程序支持以下外部联接转义序列：
 LIMIT <rows> [OFFSET <row offset>]  
 ```
 
-转义语法有两个部分：\<行> 是必需部分，用于指定要返回的行数。 OFFSET 和 \<行偏移> 都是可选部分，用于指定在开始返回行之前要跳过的行数。 JDBC 驱动程序通过将查询转换为使用 TOP 而不是 LIMIT，仅支持必需部分。 SQL Server 不支持 LIMIT 子句。 JDBC 驱动程序不支持可选的 \<行偏移>；如果使用它，驱动程序将引发异常。  
+转义语法有两个部分：\<行> 是必需部分，用于指定要返回的行数  。 OFFSET 和 \<行偏移> 都是可选部分，用于指定在开始返回行之前要跳过的行数  。 JDBC 驱动程序通过将查询转换为使用 TOP 而不是 LIMIT，仅支持必需部分。 SQL Server 不支持 LIMIT 子句。 JDBC 驱动程序不支持可选的 \<行偏移>；如果使用它，驱动程序将引发异常  。  
   
 ## <a name="see-also"></a>另请参阅
 

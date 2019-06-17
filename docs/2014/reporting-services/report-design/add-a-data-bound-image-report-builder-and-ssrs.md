@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2878198caf3db1917c596ff37b7619a5a0597621
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106895"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>添加数据绑定图像（报表生成器和 SSRS）
-  报表可以包括对存储在数据库中的图像的引用。 此类图像称为“数据绑定图像”。 例如，在产品列表中产品名称旁边显示的图片就是数据绑定图像。  
+  报表可以包括对存储在数据库中的图像的引用。 此类图像称为“数据绑定图像”  。 例如，在产品列表中产品名称旁边显示的图片就是数据绑定图像。  
   
  将数据绑定图像添加到页眉或页脚还需要其他步骤。 有关详细信息，请参阅[页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)。  
   
@@ -31,17 +31,17 @@ ms.locfileid: "66106895"
   
 2.  在您的表中插入列。 有关详细信息，请参阅[插入或删除列（报表生成器和 SSRS）](insert-or-delete-a-column-report-builder-and-ssrs.md)。  
   
-3.  在 **“插入”** 菜单上，单击 **“图像”**，然后在新列的数据行中单击。  
+3.  在 **“插入”** 菜单上，单击 **“图像”** ，然后在新列的数据行中单击。  
   
 4.  在 **“图像属性”** 对话框的“常规”页上，在 **“名称”** 文本框中键入名称，或接受默认名称。  
   
-5.  （可选）在“工具提示”文本框中，键入当用户将鼠标指针悬停在以 HTML 格式呈现的报表中的图像上时所要显示的文本。  
+5.  （可选）在“工具提示”文本框中，键入当用户将鼠标指针悬停在以 HTML 格式呈现的报表中的图像上时所要显示的文本  。  
   
-6.  在 **“选择图像源”** 中，选择 **“数据库”**。  
+6.  在 **“选择图像源”** 中，选择 **“数据库”** 。  
   
 7.  在 **“使用此字段”** 中，选择在您的报表中包含图像的字段。  
   
-8.  在“使用此 MIME 类型”中，选择图像的 MIME 类型或文件格式，如 bmp。  
+8.  在“使用此 MIME 类型”中，选择图像的 MIME 类型或文件格式，如 bmp  。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

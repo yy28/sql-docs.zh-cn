@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 870f12fa569eb0c6046377472a6122d69cd35d6e
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982967"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
@@ -50,9 +50,9 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @tabname = ] 'qualified_table_name'` 是一个或两个部分组成的表名。 表必须在当前数据库中。 *qualified_table_name*是**nvarchar(517)**，无默认值。  
+`[ @tabname = ] 'qualified_table_name'` 是一个或两个部分组成的表名。 表必须在当前数据库中。 *qualified_table_name*是**nvarchar(517)** ，无默认值。  
   
-`[ @action = ] 'action'` 是要执行的操作。 *操作*是**nvarchar （50)**，无默认值，并且可以是下列值之一。  
+`[ @action = ] 'action'` 是要执行的操作。 *操作*是**nvarchar （50)** ，无默认值，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f13746005f05d84bd8b987fe048baf392e81af3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e8c961487aaff7e6aa57ea8add571ccbc2945dee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641966"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797787"
 ---
 # <a name="data-source-wizard-screen-1"></a>数据源向导屏幕 1
 
@@ -24,7 +24,7 @@ ms.locfileid: "47641966"
     
 ## <a name="options"></a>选项
 
-### <a name="name"></a>名称
+### <a name="name"></a>“属性”
 
 ODBC 应用程序请求与数据源连接时使用的数据源名称。 例如，“Personnel”。 该数据源名称显示在“ODBC 数据源管理器”对话框中。
 
@@ -42,7 +42,7 @@ ODBC 应用程序请求与数据源连接时使用的数据源名称。 例如�
 
 有关不同网络类型的服务器名称的详细信息，请参阅“SQL Server 联机丛书”中的 SQL Server 安装文档。
 
-### <a name="finish"></a>完成
+### <a name="finish"></a>“完成”
 
 如果此屏幕上指定的信息为连接到 SQL Server 所需的全部信息，则可以单击“完成”。  对于在向导的其他屏幕上指定的所有属性都使用默认值。
 

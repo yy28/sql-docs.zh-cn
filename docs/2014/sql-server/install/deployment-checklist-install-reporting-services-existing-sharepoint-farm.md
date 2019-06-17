@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 66c366bfe8dbf79d2f392627ad018747357e7da4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095680"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>部署核对清单：将 Reporting Services 安装到现有 SharePoint 场中
@@ -64,8 +64,8 @@ ms.locfileid: "66095680"
 |备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库||  
 |备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥||  
 |还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库和加密密钥||  
-|将所有 Web 应用程序映射到新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序| |  
-|删除旧服务器上的集成 URL。|在 SharePoint 管理中心内的 **“常规应用程序设置”** 页上，单击 **“Reporting Services 集成”**。|  
+|将所有 Web 应用程序映射到新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序|The new installation <bpt id="p1">**</bpt>is now functional<ept id="p1">**</ept>|  
+|删除旧服务器上的集成 URL。|在 SharePoint 管理中心内的 **“常规应用程序设置”** 页上，单击 **“Reporting Services 集成”** 。|  
 |如果需要，从旧安装中卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。||  
   
 ## <a name="next-steps"></a>后续步骤  

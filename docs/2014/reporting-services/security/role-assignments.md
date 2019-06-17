@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 556abc4ff00df4393c756f62072254e417653f40
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101869"
 ---
 # <a name="role-assignments"></a>角色分配
@@ -30,7 +30,7 @@ ms.locfileid: "66101869"
   
 -   可由 Windows 安全性或其他身份验证机制进行身份验证的用户帐户或组帐户。  
   
--   定义一组任务的角色定义。 角色定义的示例包括“系统管理员” 、“内容管理员” 和“发布者” 。  
+-   定义一组任务的角色定义。 角色定义的示例包括“系统管理员”  、“内容管理员”  和“发布者”  。  
   
  角色分配在文件夹层次结构中可以继承。 文件夹中包含的所有报表、共享数据源、资源和子文件夹将自动继承为文件夹定义的角色分配。 您可以通过为各项分别定义角色分配来覆盖继承的安全性。 文件夹层次结构的所有部分都必须至少由一个角色分配进行保护。 不能创建不安全的项，而且在处理设置时应采用安全的方式，以避免创建不安全的项。  
   

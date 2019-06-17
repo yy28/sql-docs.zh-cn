@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098718"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
-  可以将下列参数作为 URL 的一部分使用来配置报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](specify-device-information-settings-in-a-url.md)。  
+  可以将下列参数作为 URL 的一部分使用来配置报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头   。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](specify-device-information-settings-in-a-url.md)。  
   
 > [!IMPORTANT]  
 >  非常重要的一点是，URL 包括用于通过 SharePoint 和 `_vti_bin` HTTP 代理路由请求的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 代理语法。 该代理会向 HTTP 请求中添加某一上下文，该上下文是确保为 SharePoint 模式报表服务器正确执行报表所需要的。 有关示例，请参阅 [Access Report Server Items Using URL Access](access-report-server-items-using-url-access.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "66098718"
 |*GetImage*|为 HTML 查看器用户界面获取一个特定的图标。||  
 |*图标*|获取特定呈现扩展插件的图标。||  
 |*Stylesheet*|指定要应用于 HTML 查看器的样式表。||  
-|Device Information Setting|形式的指定设备信息设置`rc:tag=value`，其中*标记*的设备信息设置特定于当前使用的呈现扩展插件的名称 (请参见说明*设置格式*参数)。 例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置向在 URL 访问字符串中使用以下参数的 JPEG 图像呈现报表：`...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](device-information-settings-for-rendering-extensions-reporting-services.md)。||  
+|Device Information Setting|形式的指定设备信息设置`rc:tag=value`，其中*标记*的设备信息设置特定于当前使用的呈现扩展插件的名称 (请参见说明*设置格式*参数)。 例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置向在 URL 访问字符串中使用以下参数的 JPEG 图像呈现报表：`...&rs:Format=IMAGE&rc:OutputFormat=JPEG`  。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](device-information-settings-for-rendering-extensions-reporting-services.md)。||  
   
 ## <a name="report-server-commands-rs"></a>报表服务器命令 (rs:)  
  下表描述了带有前缀的 URL 访问参数*rs:* 和用于报表服务器为目标。  
@@ -60,8 +60,8 @@ ms.locfileid: "66098718"
 |*格式*|指定报表呈现的格式。 常用值包括 `ATOM`、`HTML4.0`、`MHTML`、`IMAGE`、`EXCEL`、`WORD`、`CSV`、`PDF`、`XML`。 默认值是 `HTML4.0`。 有关详细信息，请参阅 [Export a Report Using URL Access](export-a-report-using-url-access.md)。<br /><br /> 例如，若要直接从 `Native` 模式报表服务器获取报表的 PDF 副本。<br /><br /> `http://myrshost/ReportServer?/myreport&rs:Format=PDF`<br /><br /> 例如在`SharePoint`模式。<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF`|  
 |*ParameterLanguage*|提供在与浏览器语言无关的 URL 中传递的参数的语言。 默认值为浏览器语言。 该值可以为区域性值，如 `en-us` 或 `de-de.`。<br /><br /> 例如在 `Native` 模式中，将覆盖浏览器语言并指定区域性值 de-DE。<br /><br /> `http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE`|  
 |*快照*|基于报表历史记录快照呈现报表。 有关详细信息，请参阅 [使用 URL 访问呈现报表历史记录快照](render-a-report-history-snapshot-using-url-access.md)。<br /><br /> 例如在 `Native` 模式中，请检索日期为 2003-04-07 且时间戳为 13:40:02 的报表历史记录快照。<br /><br /> `http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02`|  
-|*PersistStreams*|呈现单个持久流中的报表。 图像呈现器使用此参数，通过一次传输一块的方式传输呈现的报表。 在 URL 访问字符串中使用此参数后，将相同的 URL 访问字符串用于 *GetNextStream* 参数而非 *PersistStreams* 参数可以获取持久流中的下一个块。 此 URL 命令最终将返回 0 字节流，以指明持久流结束。 默认值为 `false`。|  
-|*GetNextStream*|在使用 PersistStreams 参数访问的持久流中获取下一个数据块。 有关详细信息，请参阅 *PersistStreams*的说明。 默认值是 `false`。|  
+|*PersistStreams*|呈现单个持久流中的报表。 图像呈现器使用此参数，通过一次传输一块的方式传输呈现的报表。 在 URL 访问字符串中使用此参数后，将相同的 URL 访问字符串用于 *GetNextStream* 参数而非 *PersistStreams* 参数可以获取持久流中的下一个块。 此 URL 命令最终将返回 0 字节流，以指明持久流结束。 默认值是 `false`。|  
+|*GetNextStream*|在使用 PersistStreams 参数访问的持久流中获取下一个数据块  。 有关详细信息，请参阅 *PersistStreams*的说明。 默认值为 `false`。|  
 |*SessionID*|指定客户端应用程序和报表服务器之间已建立的活动报表会话。 此参数的值设置为会话标识符。<br /><br /> 您可以将会话 ID 指定为 cookie 或 URL 的一部分。 在报表服务器已配置为不使用会话 cookie 时，没有指定会话 ID 的第一个请求将导致具有某一会话 ID 的重定向。 有关报表服务器会话的详细信息，请参阅 [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)。|  
 |*ClearSession*|`true` 值指示报表服务器从报表会话中删除报表。 与经过身份验证的用户相关联的所有报表实例都将从报表会话中删除。 （报表实例定义为使用不同报表参数值运行多次的同一报表。）默认值是 `false`。|  
 |*ResetSession*|`true` 值指示报表服务器通过删除报表会话与所有报表快照的关联来重置报表会话。 默认值是 `false`。|  
@@ -72,14 +72,14 @@ ms.locfileid: "66098718"
   
 |参数|操作|  
 |---------------|------------|  
-|*工具栏*|控制报表查看器 Web 部件的工具栏显示。 默认值为 `Full`。 可为以下值：<br /><br /> `Full`：显示完整的工具栏。<br /><br /> `Navigation`：只显示工具栏中的分页。<br /><br /> `None`：不显示工具栏。<br /><br /> <br /><br /> 例如在 `SharePoint` 模式中，只显示工具栏中的分页。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation`|  
+|*工具栏*|控制报表查看器 Web 部件的工具栏显示。 默认值是 `Full`。 可为以下值：<br /><br /> `Full`：显示完整的工具栏。<br /><br /> `Navigation`：只显示工具栏中的分页。<br /><br /> `None`：不显示工具栏。<br /><br /> <br /><br /> 例如在 `SharePoint` 模式中，只显示工具栏中的分页。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation`|  
 |*HeaderArea*|控制报表查看器 Web 部件的标头显示。 默认值为 `Full`。 可为以下值：<br /><br /> `Full`：显示完整的标头。<br /><br /> `BreadCrumbsOnly`：只显示标头中的痕迹导航以告知用户其在应用程序中所处的位置。<br /><br /> `None`：不显示标头。<br /><br /> <br /><br /> 例如在 `SharePoint` 模式中，只显示标头中的痕迹导航。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly`|  
 |*DocMapAreaWidth*|控制报表查看器 Web 部件中参数区域的显示宽度（以像素为单位）。 默认值与报表查看器 Web 部件中的默认值一样。 该值必须是非负整数。|  
 |*AsyncRender*|控制是否异步呈现报表。 默认值为 `true`，该值指定将异步呈现报表。 该值必须为布尔值 `true` 或 `false`。|  
-|*ParamMode*|控制报表查看器 Web 部件的参数提示区域在整页视图中的显示方式。  默认值是 `Full`。 有效值为<br /><br /> `Full`：显示参数提示区域。<br /><br /> `Collapsed`：折叠参数提示区域。<br /><br /> `Hidden`：隐藏参数提示区域。<br /><br /> 例如在 `SharePoint` 模式中，折叠参数提示区域。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed`|  
-|*DocMapMode*|控制报表查看器 Web 部件的文档结构图区域在整页视图中的显示方式。 默认值是 `Full`。 有效值为<br /><br /> `Full`：显示文档结构图区域。<br /><br /> `Collapsed`：折叠文档结构图区域。<br /><br /> `Hidden`：隐藏文档结构图区域。|  
-|*DockToolBar*|控制报表查看器 Web 部件的工具栏是否停靠在顶部或底部。 有效值为 `Top` 和 `Bottom`。 默认值是 `Top`。<br /><br /> <br /><br /> 例如在 `SharePoint` 模式中，将工具栏停靠在底部。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom`|  
-|*ToolBarItemsDisplayMode*|控制显示哪些工具栏项。 这是一个按位枚举值。 若要包括某一工具栏项，请将该项的值添加至总值。 例如：如果没有“操作”菜单，请使用 rv:ToolBarItemsDisplayMode=63（或 0x3F），这是 1+2+4+8+16+32 的结果；对于仅限“操作”菜单项，请使用 rv:ToolBarItemsDisplayMode=960（或 0x3C0）。  默认值是 `-1`，这将包括所有工具栏项。 有效值为<br /><br /> 1 (0x1)：“后退”按钮<br /><br /> 2 (0x2)：文本搜索控件<br /><br /> 4 (0x4)：页面导航控件<br /><br /> 8 (0x8)：“刷新”按钮<br /><br /> 16 (0x10)：“缩放”列表框<br /><br /> 32 (0x20)：“Atom 馈送”按钮<br /><br /> 64 (0x40)：“操作”中的“打印”菜单选项<br /><br /> 128 (0x80)：“操作”中的“导出”子菜单<br /><br /> 256 (0x100)：“操作”中的“使用报表生成器打开”菜单选项<br /><br /> 512 (0x200)：“操作”中的“订阅”菜单选项<br /><br /> 1024 (0x400)：“操作”中的“新建数据警报”菜单选项<br /><br /> 例如，在`SharePoint`模式中将仅显示**回**按钮、 文本搜索控件、 页面导航控件和**刷新**按钮。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15`|  
+|*ParamMode*|控制报表查看器 Web 部件的参数提示区域在整页视图中的显示方式。  默认值为 `Full`。 有效值为<br /><br /> `Full`：显示参数提示区域。<br /><br /> `Collapsed`：折叠参数提示区域。<br /><br /> `Hidden`：隐藏参数提示区域。<br /><br /> 例如在 `SharePoint` 模式中，折叠参数提示区域。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed`|  
+|*DocMapMode*|控制报表查看器 Web 部件的文档结构图区域在整页视图中的显示方式。 默认值为 `Full`。 有效值为<br /><br /> `Full`：显示文档结构图区域。<br /><br /> `Collapsed`：折叠文档结构图区域。<br /><br /> `Hidden`：隐藏文档结构图区域。|  
+|*DockToolBar*|控制报表查看器 Web 部件的工具栏是否停靠在顶部或底部。 有效值为 `Top` 和 `Bottom`。 默认值为 `Top`。<br /><br /> <br /><br /> 例如在 `SharePoint` 模式中，将工具栏停靠在底部。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom`|  
+|*ToolBarItemsDisplayMode*|控制显示哪些工具栏项。 这是一个按位枚举值。 若要包括某一工具栏项，请将该项的值添加至总值。 例如：如果没有“操作”菜单，请使用 rv:ToolBarItemsDisplayMode=63（或 0x3F），这是 1+2+4+8+16+32 的结果；对于仅限“操作”菜单项，请使用 rv:ToolBarItemsDisplayMode=960（或 0x3C0）。  默认值是 `-1`，这将包括所有工具栏项。 有效值为<br /><br /> 1 (0x1)：“后退”按钮 <br /><br /> 2 (0x2)：文本搜索控件<br /><br /> 4 (0x4)：页面导航控件<br /><br /> 8 (0x8)：“刷新”按钮 <br /><br /> 16 (0x10)：“缩放”列表框 <br /><br /> 32 (0x20)：“Atom 馈送”按钮 <br /><br /> 64 (0x40)：“操作”中的“打印”菜单选项  <br /><br /> 128 (0x80)：“操作”中的“导出”子菜单  <br /><br /> 256 (0x100)：“操作”中的“使用报表生成器打开”菜单选项  <br /><br /> 512 (0x200)：“操作”中的“订阅”菜单选项  <br /><br /> 1024 (0x400)：“操作”中的“新建数据警报”菜单选项  <br /><br /> 例如，在`SharePoint`模式中将仅显示**回**按钮、 文本搜索控件、 页面导航控件和**刷新**按钮。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15`|  
   
 ## <a name="see-also"></a>请参阅  
  [URL 访问 (SSRS)](url-access-ssrs.md)  

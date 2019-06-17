@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 257df5742c2f8dec7d48c6d3afb4d6c6373d058c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106884"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>向报表添加图表（报表生成器和 SSRS）
@@ -32,7 +32,7 @@ ms.locfileid: "66106884"
 1.  > [!NOTE]  
     >  该图表向导仅在报表生成器中提供。  
   
-     在 **“插入”** 选项卡上，单击 **“图表”**，然后单击 **“图表向导”**。  
+     在 **“插入”** 选项卡上，单击 **“图表”** ，然后单击 **“图表向导”** 。  
   
 2.  执行 **“新建图表”** 向导中的步骤。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66106884"
   
 1.  创建一个报表，并定义一个数据集。 有关详细信息，请参阅[向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)。  
   
-2.  在 **“插入”** 选项卡上，单击 **“图表”**，然后单击 **“插入图表”**。  
+2.  在 **“插入”** 选项卡上，单击 **“图表”** ，然后单击 **“插入图表”** 。  
   
 3.  在设计图面上，单击希望图表左上角所处的位置，并拖动至希望图表右下角所处的位置。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66106884"
   
 7.  向 **“类别组”** 区域添加分组字段。 将此字段添加到 **“类别组”** 区域时，将自动创建一个分组字段。 每个组都表示序列中的一个数据点。  
   
-8.  若要按类别汇总数据，请右键单击数据字段，然后单击“序列属性”。 在“类别”框中，从下拉列表中选择类别字段。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+8.  若要按类别汇总数据，请右键单击数据字段，然后单击“序列属性”  。 在“类别”框中，从下拉列表中选择类别字段  。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 9. 在 **“主文件夹”** 选项卡上，单击 **“运行”** ，以查看所呈现的报表。  
   

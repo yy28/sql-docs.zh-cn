@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107292"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 可以在报表中包含扩展的字段属性值，通过编写通过使用内置的名称来指定这些表达式`Fields`集合。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 可以在报表中包含扩展的字段属性值，通过编写通过使用内置的名称来指定这些表达式`Fields`集合。  
   
  扩展属性包括预定义属性和自定义属性。 预定义属性是多个数据源中通用的属性，它们映射到特定字段属性名称并可通过内置 `Fields` 集合按名称进行访问。 自定义属性是特定于每个数据访问接口的属性，只能通过内置 `Fields` 集合，使用将扩展属性名称用作字符串的语法进行访问。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66107292"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|指定字段的数据值。|  
 |`IsMissing`|`Boolean`|指示是否在结果数据集中找到了该字段。|  
-|`UniqueName`|`String`|返回级别的完全限定名称。 例如，`UniqueName`值可能为某位员工 *[Employee]。 [雇员所在部门]。[部门].& [Sales]。 （& a) [北美销售经理]。 [272] &*。|  
+|`UniqueName`|`String`|返回级别的完全限定名称。 例如，`UniqueName`值可能为某位员工 *[Employee]。 [雇员所在部门]。[部门].& [Sales]。 （& a) [北美销售经理]。 [272] &* 。|  
 |`BackgroundColor`|`String`|返回数据库中为该字段定义的背景颜色。|  
 |`Color`|`String`|返回数据库中为该项定义的前景色。|  
 |`FontFamily`|`String`|返回数据库中为该项定义的字体的名称。|  

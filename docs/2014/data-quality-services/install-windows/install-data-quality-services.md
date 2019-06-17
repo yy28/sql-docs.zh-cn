@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a1151b2e4cd8c51caca3bae4d97e9d616720fda0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481280"
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services
-  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含下列两个组件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**。  
+  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含下列两个组件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** 。  
   
 |DQS 组件|Description|  
 |-------------------|-----------------|  
@@ -62,7 +62,7 @@ ms.locfileid: "65481280"
   
 |第|操作|  
 |----------|------------|  
-|功能选择|选择：<br /><br /> **“数据库引擎服务”** 下的 **“Data Quality Services”** 以安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。 <br />如果你选中 **“数据库引擎服务”** 复选框，SQL Server 安装程序会将安装程序文件 DQSInstaller.exe 复制到你的计算机上的 SQL Server 实例目录下。 在完成 SQL Server 安装程序以 *完成* [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装后，您必须运行此文件。 此外，您必须执行一些附加步骤来配置 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然后才能使用它。 有关详细信息，请参阅 [安装后任务](#PostInstallationTasks)。<br /><br /> **“数据质量客户端”** 以安装 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]。<br /><br /> （建议）选择“管理工具 - 基本”之下的“管理工具 - 完整”以安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 它为您提供一个图形用户界面来管理您的 SQL Server 实例，并将帮助您执行在下一部分中列出的其他安装后任务。|  
+|功能选择|选择：<br /><br /> **“数据库引擎服务”** 下的 **“Data Quality Services”** 以安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。 <br />如果你选中 **“数据库引擎服务”** 复选框，SQL Server 安装程序会将安装程序文件 DQSInstaller.exe 复制到你的计算机上的 SQL Server 实例目录下。 在完成 SQL Server 安装程序以 *完成* [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装后，您必须运行此文件。 此外，您必须执行一些附加步骤来配置 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然后才能使用它。 有关详细信息，请参阅 [安装后任务](#PostInstallationTasks)。<br /><br /> **“数据质量客户端”** 以安装 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]。<br /><br /> （建议）选择“管理工具 - 基本”之下的“管理工具 - 完整”以安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]   。 它为您提供一个图形用户界面来管理您的 SQL Server 实例，并将帮助您执行在下一部分中列出的其他安装后任务。|  
 |数据库引擎配置|单击 **“添加当前用户”** 以便将您的用户 Windows 帐户添加到 sysadmin 固定服务器角色。 若要能在稍后运行 DQSInstaller.exe 文件以完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装，则必须执行此操作。|  
   
 ##  <a name="PostInstallationTasks"></a> 安装后任务  
@@ -70,7 +70,7 @@ ms.locfileid: "65481280"
   
 |操作|Description|相关主题|  
 |------------|-----------------|--------------------|  
-|完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装|运行 DQSInstaller.exe 文件。 在运行 DQSInstaller.exe 文件后：<br /><br /> 创建 DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。<br /><br /> 创建 ##MS_dqs_db_owner_login## 和 ##MS_dqs_service_login## 登录名。<br /><br /> dqs_administrator、dqs_kb_editor 和 dqs_kb_operator 角色在 DQS_MAIN 数据库中创建。<br /><br /> DQInitDQS_MAIN 存储过程在 master 数据库中创建。<br /><br /> DQS_install.log 文件通常在 C:\Program Files\Microsoft SQL Server\MSSQL12 中创建。*< 实例名称 >* \MSSQL\Log 文件夹。 该文件包含与对 DQSInstaller.exe 文件执行的操作有关的信息。<br /><br /> 如果 Master Data Services 数据库与 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]处于相同的 SQL Server 实例中，则会创建一个映射到 Master Data Services 登录名的用户，并向该用户授予对 DQS_MAIN 数据库的 dqs_administrator 角色。<br /><br /> <br /><br /> 此时就完成了 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 的安装。|[运行 DQSInstaller.exe 以完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
+|完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装|运行 DQSInstaller.exe 文件。 在运行 DQSInstaller.exe 文件后：<br /><br /> 创建 DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。<br /><br /> 创建 ##MS_dqs_db_owner_login## 和 ##MS_dqs_service_login## 登录名。<br /><br /> dqs_administrator、dqs_kb_editor 和 dqs_kb_operator 角色在 DQS_MAIN 数据库中创建。<br /><br /> DQInitDQS_MAIN 存储过程在 master 数据库中创建。<br /><br /> DQS_install.log 文件通常在 C:\Program Files\Microsoft SQL Server\MSSQL12 中创建。 *< 实例名称 >* \MSSQL\Log 文件夹。 该文件包含与对 DQSInstaller.exe 文件执行的操作有关的信息。<br /><br /> 如果 Master Data Services 数据库与 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]处于相同的 SQL Server 实例中，则会创建一个映射到 Master Data Services 登录名的用户，并向该用户授予对 DQS_MAIN 数据库的 dqs_administrator 角色。<br /><br /> <br /><br /> 此时就完成了 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 的安装。|[运行 DQSInstaller.exe 以完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
 |将 DQS 角色授予用户|若要登录到[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]使用[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，用户必须对 DQS_MAIN 数据库具有任何以下三种角色： **dqs_administrator**， **dqs_kb_editor**，或**dqs_kb_运算符**。 默认情况下，如果您的用户帐户是 sysadmin 固定服务器角色的成员，则您可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登录到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] ，即使在没有任何 DQS 角色授予您的用户帐户的情况下也是如此。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../dqs-security.md)。<br /><br /> 注意：这三个 DQS 角色不适用于 DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。|[向用户授予 DQS 角色](grant-dqs-roles-to-users.md)|  
 |使数据可供 DQS 操作使用|确保您可以访问用于 DQS 操作的源数据，并且可以将已处理的数据导出到数据库中的某个表。|[访问 DQS 操作数据](access-data-for-the-dqs-operations.md)|  
   

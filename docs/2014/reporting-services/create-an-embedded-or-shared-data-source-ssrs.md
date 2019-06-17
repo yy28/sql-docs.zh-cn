@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088889518d88c5fd45f988fe03185e22f041b627
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109659"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>创建嵌入数据源或共享数据源 (SSRS)
@@ -33,16 +33,16 @@ ms.locfileid: "66109659"
   
 ### <a name="to-create-an-embedded-or-shared-data-source"></a>若要创建嵌入或共享数据源  
   
-1.  在“报表数据”窗格的工具栏中，单击 **“新建”** ，然后单击 **“数据源”**。 此时将打开 **“数据源属性”** 对话框。  
+1.  在“报表数据”窗格的工具栏中，单击 **“新建”** ，然后单击 **“数据源”** 。 此时将打开 **“数据源属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果“报表数据”窗格不可见，请单击“视图”菜单上的“报表数据”。  
+    >  如果“报表数据”窗格不可见，请单击“视图”  菜单上的“报表数据”  。  
   
 2.  在 **“名称”** 文本框中，键入数据源的名称，或接受默认值。 此数据源名称在报表内部使用。 为便于识别，建议数据源名称包含在连接字符串中指定的数据库的名称。  
   
 3.  对于嵌入的数据源，请确保**嵌入连接**处于选中状态。  
   
-    1.  从“类型”下拉列表中，选择一个数据源类型，例如“Microsoft SQL Server”或“OLE DB”。  
+    1.  从“类型”下拉列表中，选择一个数据源类型，例如“Microsoft SQL Server”或“OLE DB”    。  
   
     2.  采用以下备选方案之一指定连接字符串：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66109659"
   
 4.  对于共享的数据源，请确保**使用共享数据源引用**处于选中状态。  
   
-    1.  单击 **“新建”**。 在 **“共享数据源属性”** 对话框中，执行步骤 2 和 3 创建新数据源。  
+    1.  单击 **“新建”** 。 在 **“共享数据源属性”** 对话框中，执行步骤 2 和 3 创建新数据源。  
   
     2.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66109659"
   
 ### <a name="to-import-an-existing-data-source-in-report-designer"></a>在报表设计器中导入现有数据源  
   
-1.  在解决方案资源管理器中，右键单击报表服务器项目中的“共享数据源”文件夹，然后单击“添加现有项”。 此时将打开 **“添加现有项”** 对话框。  
+1.  在解决方案资源管理器中，右键单击报表服务器项目中的“共享数据源”  文件夹，然后单击“添加现有项”  。 此时将打开 **“添加现有项”** 对话框。  
   
-2.  导航到一个现有报表定义共享数据源 (rds) 文件，然后单击“打开”。  
+2.  导航到一个现有报表定义共享数据源 (rds) 文件，然后单击“打开”  。  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

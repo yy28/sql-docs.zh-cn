@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6104bfc97d2f66652ffa9b16e9ff0ae8f9b0550
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108051"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>报表设计和报表部署的规划 (Reporting Services 2014)
@@ -75,7 +75,7 @@ ms.locfileid: "66108051"
   
  如果您将报表定义上载到报表服务器或者升级包含现有报表的报表服务器，报表服务器将保留原格式的报表定义。 **首次使用时**，报表服务器会将报表服务器数据库中的报表升级到二进制格式，并保留这种格式以便以后查看。 报表定义 (.rdl) 本身不升级。  
   
- 可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到报表管理器，选择该报表并单击 **“下载”**。 在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”**。  
+ 可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到报表管理器，选择该报表并单击 **“下载”** 。 在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”** 。  
   
  若要升级报表定义，必须在报表创作环境中打开报表，然后保存它。  
   

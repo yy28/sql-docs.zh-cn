@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101146"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>指定图像作为仪表的指针（报表生成器和 SSRS）
@@ -37,7 +37,7 @@ ms.locfileid: "66101146"
   
 2.  （可选）如果没有指针存在仪表上，右键单击仪表并选择**添加指针**。 此时将会有一个指针添加到仪表上。  
   
-3.  单击**插入**功能区上选项卡，然后双击图像图标。 将打开“图像属性”对话框。  
+3.  单击**插入**功能区上选项卡，然后双击图像图标。 将打开“图像属性”  对话框。  
   
 4.  向报表添加图像。 有关详细信息，请参阅[在报表中嵌入图像&#40;报表生成器和 SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)。  
   

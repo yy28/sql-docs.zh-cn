@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e7fb8a3b4e627190e4fc7eb4909f4d9bd542d8f8
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478521"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>分配层次结构成员权限 (Master Data Services)
@@ -38,11 +38,11 @@ ms.locfileid: "65478521"
   
 ### <a name="to-assign-hierarchy-member-permissions"></a>分配层次结构成员权限  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”** 。  
   
 2.  在 **“用户”** 或 **“组”** 页上，选择要编辑的用户或组所对应的行。  
   
-3.  单击 **“编辑所选用户”**。  
+3.  单击 **“编辑所选用户”** 。  
   
 4.  单击 **“层次结构成员”** 选项卡。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "65478521"
   
 7.  从 **“层次结构”** 列表中，选择某一层次结构。  
   
-8.  单击 **“编辑”**。  
+8.  单击 **“编辑”** 。  
   
 9. 展开树，单击要向其分配权限的层次结构节点。  
   
-10. 从菜单中，选择“创建”、“读取”、“更新”和“删除”权限的组合，或选择“拒绝”权限。  
+10. 从菜单中，选择“创建”、“读取”、“更新”和“删除”权限的组合，或选择“拒绝”权限。      
   
-11. 单击“保存” 。  
+11. 单击“保存”  。  
   
     > [!NOTE]  
     >  层次结构成员权限不立即生效。 有关详细信息，请参阅[立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)。  

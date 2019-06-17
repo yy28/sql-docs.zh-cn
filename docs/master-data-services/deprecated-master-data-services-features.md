@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: d08fd9bbb91a3783cf176f150fc966d1b44a2fc4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485286"
 ---
 # <a name="deprecated-master-data-services-features"></a>弃用的 Master Data Services 功能
@@ -33,7 +33,7 @@ ms.locfileid: "65485286"
   
 -   在资源管理器中，派生层次级别页面现在将显示每个层次结构级别的未分配（未使用）成员。 根据层次结构级别对未使用的节点进行分组。 通过拖放或剪切和粘贴操作可在“未使用”节点和“根”节点之间移动成员。  
   
-     在“系统管理”中，未使用的节点在“预览”  窗格中可见。 在“安全性”中，未使用的节点在“层次结构成员权限”  窗格中可见。 可以向“根”  节点下或“未使用”  节点下的任何成员分配权限。 也可以向“根”成员 、“未使用”成员 和“未使用伪”成员  分配权限。  
+     在“系统管理”中，未使用的节点在“预览”  窗格中可见。 在“安全性”中，未使用的节点在“层次结构成员权限”  窗格中可见。 可以向“根”  节点下或“未使用”  节点下的任何成员分配权限。 也可以向“根”成员  、“未使用”成员  和“未使用伪”成员  分配权限。  
   
 -   存储过程 (mdm.udpConvertCollectionAndConsolidatedMembersToLeaf) 会将显式层次结构转换为递归派生层次结构，并将合并成员和集合成员转换为叶成员。  
   

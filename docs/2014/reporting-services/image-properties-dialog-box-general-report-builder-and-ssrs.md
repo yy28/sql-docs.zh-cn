@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a66c424bfe5bd4a2587140a0f5238f46833a061
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109031"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>“图像属性”对话框 -&gt;“常规”（报表生成器和 SSRS）
@@ -40,17 +40,17 @@ ms.locfileid: "66109031"
 -   **数据库** 如果您希望包括表示您要包含在报表中的图像的数据库字段名称，请选择此选项。  
   
  **使用此映像**  
- 选择“嵌入”或“外部”选项时，便会出现此选项。  
+ 选择“嵌入”  或“外部”  选项时，便会出现此选项。  
   
- 如果要嵌入图像，请从下拉列表中选择要添加到报表中的图像。 单击“导入”按钮可将图像添加到下拉列表中。  
+ 如果要嵌入图像，请从下拉列表中选择要添加到报表中的图像。 单击  “导入”按钮可将图像添加到下拉列表中。  
   
  如果您选择 **“外部”** 选项，请键入相应图像的 URL。 对于发布到配置为本机模式的报表服务器的报表，请使用完整路径或相对路径。 例如， http://\<服务器名 > / images/image1.jpg。 对于发布到配置为 SharePoint 集成模式的报表服务器的报表，请使用完全限定的 URL。 例如， http://\<*SharePointservername*>/\<*站点*> / Documents/images/image1.jpg。  
   
  **导入**  
- 单击此选项可以向“使用此图像”下拉列表中添加图像。  
+ 单击此选项可以向“使用此图像”  下拉列表中添加图像。  
   
  **使用此字段**  
- 如果选择“数据库”选项，便会出现此选项。 请选择字段名称。  
+ 如果选择  “数据库”选项，便会出现此选项。 请选择字段名称。  
   
  **使用此 MIME 类型**  
  选择数据库中包含的图像的适当格式（例如 .bmp、.jpeg、.gif、.png 和 .x-png）。  
