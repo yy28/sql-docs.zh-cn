@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149848"
 ---
 # <a name="column-element-for-index-dta"></a>索引的列元素 (DTA)
@@ -38,14 +38,14 @@ ms.locfileid: "63149848"
   
 ## <a name="element-attributes"></a>元素属性  
   
-|列属性|描述|  
+|列属性|Description|  
 |----------------------|-----------------|  
-|`Type`|可选。 指定索引列类型。 使用 string 数据类型将此属性指定为以下允许  值之一：<br /><br /> `KeyColumn`：<br />                  指定按索引键进行引用的列。 使用下面的语法设置此属性：<br />`<Column Type="KeyColumn">`<br />有关键列的详细信息，请参阅 [群集索引和非群集索引介绍](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)。<br /><br /> `IncludedColumn`：指定某列是包含列（而不是键列）。 使用下面的语法设置此属性：<br />`<Column Type="IncludedColumn">`<br />有关包含列的详细信息，请参阅 [创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。|  
+|`Type`|可选。 指定索引列类型。 使用 string 数据类型将此属性指定为以下允许  值之一：<br /><br /> `KeyColumn`设置用户帐户 ：<br />                  指定按索引键进行引用的列。 使用下面的语法设置此属性：<br />`<Column Type="KeyColumn">`<br />有关键列的详细信息，请参阅 [群集索引和非群集索引介绍](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)。<br /><br /> `IncludedColumn`设置用户帐户 ：指定某列是包含列（而不是键列）。 使用下面的语法设置此属性：<br />`<Column Type="IncludedColumn">`<br />有关包含列的详细信息，请参阅 [创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。|  
 |`SortOrder`|可选。 指定列的排序顺序。 请使用 **string** 数据类型按如下格式指定 **Ascending** 或 **Descending** 排序顺序：<br /><br /> `<Column SortOrder="Ascending">`|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  

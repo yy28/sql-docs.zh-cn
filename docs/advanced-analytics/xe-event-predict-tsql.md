@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63142309"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>用于监视 PREDICT 语句的扩展事件
@@ -20,7 +20,7 @@ ms.locfileid: "63142309"
 
 实时评分从机器学习已存储在 SQL Server 的模型生成分数。 PREDICT 函数不需要 R 或 Python，仅使用特定的二进制格式创建的模型等外部运行时。 有关详细信息，请参阅[实时评分](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 有关扩展的事件 （有时称为 XEvents），以及如何在会话中跟踪事件的常规信息，请参阅以下文章：
 

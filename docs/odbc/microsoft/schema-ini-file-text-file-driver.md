@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127900"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 文件（文本文件驱动程序）
@@ -100,8 +100,8 @@ n=ColumnNametype [#]
 |参数|Description|  
 |---------------|-----------------|  
 |*ColumnName*|文本列的名称。 如果列名称包含嵌入的空格，则必须将其括在双引号。|  
-|*类型*|数据类型是按如下所示：<br /><br /> **Microsoft Jet 的数据类型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> 货币<br /><br /> Single<br /><br /> 双精度<br /><br /> DateTime<br /><br /> Text<br /><br /> 备忘录<br /><br /> **ODBC 数据类型**Char （与文本相同）<br /><br /> Float （与 Double 相同）<br /><br /> 整数 （相同短格式）<br /><br /> LongChar （等同于备注）<br /><br /> 日期*日期格式*|  
-|宽度|文本字符串值`Width`。 指示下面的编号，将指定的列的宽度 （对于字符分隔的文件是可选的; 对于固定长度的文件所需）。|  
+|*type*|数据类型是按如下所示：<br /><br /> **Microsoft Jet 的数据类型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> 双精度<br /><br /> DateTime<br /><br /> Text<br /><br /> 备忘录<br /><br /> **ODBC 数据类型**Char （与文本相同）<br /><br /> Float （与 Double 相同）<br /><br /> 整数 （相同短格式）<br /><br /> LongChar （等同于备注）<br /><br /> 日期*日期格式*|  
+|宽度 |文本字符串值`Width`。 指示下面的编号，将指定的列的宽度 （对于字符分隔的文件是可选的; 对于固定长度的文件所需）。|  
 |*#*|指定列的宽度的整数值 (需要**宽度**指定)。|  
   
 ## <a name="selecting-a-character-set"></a>选择的字符集  

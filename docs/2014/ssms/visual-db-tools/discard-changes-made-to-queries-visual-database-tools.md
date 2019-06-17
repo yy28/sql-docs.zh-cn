@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9666e611b9f0a0a4348cc75a2adb1e8b711c60fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63130263"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>放弃对查询所做的更改 (Visual Database Tools)
@@ -29,9 +29,9 @@ ms.locfileid: "63130263"
   
 ### <a name="to-discard-changes-made-to-a-query-definition"></a>放弃对查询定义所做的更改  
   
-1.  如果该查询已经在查询和视图设计器中打开，请在“文件”菜单中，单击“关闭”。  
+1.  如果该查询已经在查询和视图设计器中打开，请在“文件”  菜单中，单击“关闭”  。  
   
-2.  在“Microsoft SQL Server Management Studio”对话框中，单击“否”。  
+2.  在“Microsoft SQL Server Management Studio”  对话框中，单击“否”  。  
   
      查询定义将返回到上次保存时的状态。  
   

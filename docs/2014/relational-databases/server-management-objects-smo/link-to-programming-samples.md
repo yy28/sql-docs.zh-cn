@@ -15,10 +15,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63131775"
 ---
 # <a name="link-to-programming-samples"></a>链接到编程示例
@@ -26,7 +26,7 @@ ms.locfileid: "63131775"
   
  有关如何安装示例的详细信息，请参阅[AdventureWorks for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330)。  
   
-|标题|描述|  
+|标题|Description|  
 |-----------|-----------------|  
 |BackRest|说明如何备份和还原数据库。|  
 |ChangeTableOwner|说明如何将所有权不是 dbo 的所有表的所有权更改为 dbo。|  

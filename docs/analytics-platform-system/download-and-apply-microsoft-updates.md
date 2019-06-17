@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042295"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>下载和分析平台系统为应用 Microsoft 更新
@@ -65,7 +65,7 @@ ms.locfileid: "63042295"
   
 1.  在 WSUS 控制台中，左窗格中单击**的所有更新**。  
   
-2.  在中**的所有更新**窗格中，单击**审批**下拉列表菜单中，将**审批**到**Any 除拒绝**。 单击**状态**下拉列表菜单中，将**状态**到**任何**。 单击 **“刷新”**。  
+2.  在中**的所有更新**窗格中，单击**审批**下拉列表菜单中，将**审批**到**Any 除拒绝**。 单击**状态**下拉列表菜单中，将**状态**到**任何**。 单击 **“刷新”** 。  
   
     右键单击**标题**列并选择**文件状态**在下载完成后验证文件状态。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63042295"
   
 1.  在开始之前，打开[通过使用管理控制台监视设备&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)，单击**设备状态**选项卡，并确认**群集**并**网络**所有节点的列显示绿色 （或 NA）。 如果在两列中存在的任何警报，设备可能无法正确安装更新。 地址中的所有现有警报**群集**并**网络**继续操作之前的列。  
   
-2.  登录到 _< 域名 >_**-HST01**节点作为 Fabric 域管理员。  
+2.  登录到 _< 域名 >_ **-HST01**节点作为 Fabric 域管理员。  
   
 3.  若要将应用上为 WSUS 批准所有更新，运行更新程序。 请参阅[运行更新程序](#RunUpdateWizard)下面的说明。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "63042295"
   
 8.  在中**的所有更新**窗口中，将**状态**到**失败或需要**。  
   
-9. 单击 **“刷新”**。  
+9. 单击 **“刷新”** 。  
   
 10. 如果**所需的更新**大于零，支持人员联系以获得帮助。  
   
