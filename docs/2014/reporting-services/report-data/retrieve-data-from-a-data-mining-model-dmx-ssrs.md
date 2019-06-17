@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7cc94e2945ac50537bd3ee42241909b5dc9c2cef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107133"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>从数据挖掘模型检索数据 (DMX) (SSRS)
@@ -35,13 +35,13 @@ ms.locfileid: "66107133"
   
 ### <a name="to-create-an-embedded-microsoft-sql-server-analysis-services-data-source"></a>创建 Microsoft SQL Server Analysis Services 嵌入数据源  
   
-1.  在“报表数据”窗格的工具栏上，单击 **“新建”**，然后单击 **“数据源”**。  
+1.  在“报表数据”窗格的工具栏上，单击 **“新建”** ，然后单击 **“数据源”** 。  
   
 2.  在 **“数据源属性”** 对话框的 **“名称”** 文本框中键入名称，或接受默认名称。  
   
 3.  确保已选中 **“嵌入连接”** 。  
   
-4.  从“类型”下拉列表中，选择“Microsoft SQL Server Analysis Services”。  
+4.  从“类型”下拉列表中，选择“Microsoft SQL Server Analysis Services”   。  
   
 5.  指定使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源的连接字符串。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "66107133"
     Data Source=localhost;Initial Catalog=AdventureWorksDW2012  
     ```  
   
-6.  单击 **“凭据”**。  
+6.  单击 **“凭据”** 。  
   
      设置用于连接到数据源的凭据。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../integration-services/connection-manager/data-sources.md)  
   
     > [!NOTE]  
-    >  若要测试数据源连接，请单击 **“编辑”**。 单击 **“连接属性”** 对话框中的 **“测试连接”**。 如果测试成功，您将会看到信息性消息“连接测试成功”。 如果测试失败，您将会看到一条警告消息，其中包含有关测试失败原因的详细信息。  
+    >  若要测试数据源连接，请单击 **“编辑”** 。 单击 **“连接属性”** 对话框中的 **“测试连接”** 。 如果测试成功，您将会看到信息性消息“连接测试成功”。 如果测试失败，您将会看到一条警告消息，其中包含有关测试失败原因的详细信息。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -64,17 +64,17 @@ ms.locfileid: "66107133"
   
 ### <a name="to-create-a-dataset-for-a-microsoft-sql-server-analysis-services"></a>创建 Microsoft SQL Server Analysis Services 的数据集  
   
-1.  在“报表数据”窗格中，右键单击连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源的数据源的名称，然后单击“添加数据集”。  
+1.  在“报表数据”窗格中，右键单击连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源的数据源的名称，然后单击“添加数据集”   。  
   
 2.  在 **“数据集属性”** 对话框的 **“名称”** 文本框中键入名称。  
   
 3.  在 **“数据源”** 框中，验证名称是否为连接到 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源的数据源的名称。  
   
-4.  单击 **“查询设计器”** 打开图形查询设计器，从而以交互方式生成查询。 如果查询设计器以 MDX 模式打开，请单击工具栏上的“命令类型 DMX”（![更改为 DMX 查询语言视图](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")）以切换到数据挖掘查询设计器。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](analysis-services-dmx-query-designer-user-interface.md)。  
+4.  单击 **“查询设计器”** 打开图形查询设计器，从而以交互方式生成查询。 如果查询设计器以 MDX 模式打开，请单击工具栏上的“命令类型 DMX”（![更改为 DMX 查询语言视图](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")）以切换到数据挖掘查询设计器  。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](analysis-services-dmx-query-designer-user-interface.md)。  
   
-     或者，若要从另一个报表导入现有的 DMX 查询，请单击 **“导入”**，然后导航到包含 DMX 查询的 .rdl 文件。 不支持从 .dmx 文件导入查询。  
+     或者，若要从另一个报表导入现有的 DMX 查询，请单击 **“导入”** ，然后导航到包含 DMX 查询的 .rdl 文件。 不支持从 .dmx 文件导入查询。  
   
-5.  通过创建并运行查询查看示例结果后，请单击 **“确定”**。  
+5.  通过创建并运行查询查看示例结果后，请单击 **“确定”** 。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

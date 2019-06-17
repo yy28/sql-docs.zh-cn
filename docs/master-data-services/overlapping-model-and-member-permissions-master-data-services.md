@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 352ac7ce843f9fc052ff03184152eaf7ef3f4032
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489303"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重叠的模型和成员权限（主数据服务）
@@ -36,7 +36,7 @@ ms.locfileid: "65489303"
   
 -   有效访问权限与成员和属性权限相交。  
   
-     例如，如果成员权限包括 **“创建”** 和 **“更新”**，则属性的权限是 **“更新”**。 有效权限是 **“更新”**。  
+     例如，如果成员权限包括 **“创建”** 和 **“更新”** ，则属性的权限是 **“更新”** 。 有效权限是 **“更新”** 。  
   
  下图显示在属性权限不同于成员权限时，哪些权限对单个属性值有效。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65489303"
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别节点分配有 **“更新”** 权限。  
   
- 结果：在“资源管理器”中，用户对“山地车”节点中所有成员的所有属性值都具有“更新”权限。 所有其他成员和属性均隐藏。  
+ 结果：在“资源管理器”中，用户对“山地车”节点中所有成员的所有属性值都具有“更新”权限   。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65489303"
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别节点显式分配有 **“读取”** 权限。  
   
- 结果：在“资源管理器”中，用户对“山地车”节点中的成员的所有子类别属性值都具有“读取”权限。 所有其他成员和属性均隐藏。  
+ 结果：在“资源管理器”中，用户对“山地车”节点中的成员的所有子类别属性值都具有“读取”权限   。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "65489303"
   
  在 **“层次结构成员”** 选项卡上，派生的层次结构中的“山地车”子类别显式分配有 **“更新”** 权限。  
   
- 结果：在“资源管理器”中，用户对这些属性值具有“读取”权限。 所有其他成员和属性均隐藏。  
+ 结果：在“资源管理器”中，用户对这些属性值具有“读取”权限   。 所有其他成员和属性均隐藏。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

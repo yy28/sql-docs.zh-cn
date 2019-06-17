@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a558dafb4619ef9c4d66884f1fea9fd98e0881c
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404099"
 ---
 # <a name="lesson-12-analyze-in-excel"></a>第 12 课：在 Excel 中分析
@@ -35,7 +35,7 @@ ms.locfileid: "65404099"
   
 1.  单击**模型**菜单 >**在 Excel 中的分析**。  
   
-2.  在“在 Excel 中分析”对话框中，单击“确定”。  
+2.  在“在 Excel 中分析”  对话框中，单击“确定”  。  
   
     Excel 将打开，并显示一个新工作簿。 将使用当前用户帐户创建一个数据源连接，默认透视将用于定义可查看字段。 数据透视表自动添加到工作表。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65404099"
   
 1.  单击**模型**菜单，并单击**在 Excel 中的分析**。  
   
-2.  在“在 Excel 中分析”对话框中，选中“当前 Windows 用户”，然后在“透视”下拉列表框中，选中 **Internet Sales**，然后单击“确定”。 
+2.  在“在 Excel 中分析”  对话框中，选中“当前 Windows 用户”  ，然后在“透视”  下拉列表框中，选中 **Internet Sales**，然后单击“确定”  。 
     
     ![as-tabular-lesson12-perspective](media/as-tabular-lesson12-perspective.png)
     

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a316174a4550260a7ed6243a9e1ae93127ef510b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484455"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>确认提交变更集 (Master Data Services)
@@ -35,24 +35,24 @@ ms.locfileid: "65484455"
 ## <a name="to-commit-a-local-changeset"></a>确认本地变更集  
  确认选项仅可用于实体管理员尚未启用审批需求的实体上的本地变更集。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器” 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器”  。  
   
 2.  单击“实体”菜单中的某个实体  。  
   
-3.  在右窗格中，选择“变更集”，然后双击要确认的变更集。  
+3.  在右窗格中，选择“变更集”  ，然后双击要确认的变更集。  
   
-4.  单击“确认”。  
+4.  单击“确认”  。  
   
 ## <a name="to-submit-a-changeset"></a>提交变更集  
  提交选项仅可用在实体管理员启用了审批需求的实体上的变更集上。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器” 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器”  。  
   
 2.  单击“实体”菜单中的某个实体  。  
   
-3.  在右窗格中，选择“变更集” ，然后双击要提交的变更集。  
+3.  在右窗格中，选择“变更集”  ，然后双击要提交的变更集。  
   
-4.  单击“提交”。  
+4.  单击“提交”  。  
   
 ## <a name="next-steps"></a>后续步骤  
  [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  

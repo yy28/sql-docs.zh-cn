@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9047073a39076fd246b14db26ca1d519fd2e1c6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105069"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
@@ -176,7 +176,7 @@ ms.locfileid: "66105069"
 ##  <a name="bkmk_Parameters_Subscription"></a> 订阅参数  
  您可以定义按需订阅或快照订阅，可以指定在订阅处理过程中所用的参数值。  
   
--   **按需报表。**  对于按需报表，你可以指定不同于每个参数（该报表所列的参数）的已发布值的参数值。 例如，假设有一个 Call Service 报表使用 *Time Period* 参数返回当前日、周或月的客户服务请求。 如果报表的默认参数值设置为“今天”，则订阅可以使用不同的参数值（例如，“周”或“月”）以生成包含每周或每月数字的报表。  
+-   **按需报表。**  对于按需报表，你可以指定不同于每个参数（该报表所列的参数）的已发布值的参数值。 例如，假设有一个 Call Service 报表使用 *Time Period* 参数返回当前日、周或月的客户服务请求。 如果报表的默认参数值设置为“今天”  ，则订阅可以使用不同的参数值（例如，“周”  或“月”  ）以生成包含每周或每月数字的报表。  
   
 -   **快照。**  对于快照，订阅必须使用为快照定义的参数值。 您的订阅不能覆盖为快照定义的参数值。 例如，假设您要订阅作为报表快照运行的西部地区销售报表，并且该快照指定 **Western** 作为区域参数值。 在这种情况下，如果创建对此报表的订阅，则必须在订阅中使用参数值 **Western** 。 若要提供忽略参数的可见说明，则应将订阅页上的参数字段设置为只读字段。  
   

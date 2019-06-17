@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3937f227d025da054a28f73fffde4a57dc365c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098661"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>在 Microsoft Surface 设备和 Apple iOS 设备上查看 Reporting Services 报表
@@ -80,7 +80,7 @@ ms.locfileid: "66098661"
   
     -   通过轻按参数旁边的框或控件，选择参数值。 轻按 **“查看报表”** 将参数值应用到报表中。  
   
-    -   通过轻按 **“查找”** 旁边的框，键入搜索项，然后轻按 **“查找”**，可以搜索报表内容。  
+    -   通过轻按 **“查找”** 旁边的框，键入搜索项，然后轻按 **“查找”** ，可以搜索报表内容。  
   
     -   通过轻按导航按钮或轻按这些按钮旁边的文本框并键入页码，可在报表页之间导航。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "66098661"
 > [!IMPORTANT]  
 >  在 iPad 上不支持这些方法。  
   
--   通过打开一个 SharePoint 文档库，然后轻按 **“上载文档”**，将报表定义文件 (.rdl) 上载到该文档库。  
+-   通过打开一个 SharePoint 文档库，然后轻按 **“上载文档”** ，将报表定义文件 (.rdl) 上载到该文档库。  
   
--   通过打开报表管理器，然后轻按 **“上载文件”**，将报表定义文件上载到报表服务器数据库。  
+-   通过打开报表管理器，然后轻按 **“上载文件”** ，将报表定义文件上载到报表服务器数据库。  
   
 ## <a name="additional-information"></a>其他信息  
  有关 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和支持的浏览器的详细信息，请参阅：  
@@ -130,13 +130,13 @@ ms.locfileid: "66098661"
   
  有关 Microsoft 商业智能和移动设备的详细信息，请参阅：  
   
--   [概述移动设备和 SharePoint 2013](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161351(v=office.15).aspx)。  
+-   [概述移动设备和 SharePoint 2013](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161351(v=office.15).aspx) 。  
   
--   [SharePoint 2013 中支持的移动设备浏览器](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161353(v=office.15).aspx)。  
+-   [SharePoint 2013 中支持的移动设备浏览器](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161353(v=office.15).aspx) 。  
   
--   [Apple iPad 设备 (SharePoint Server 2010) 上查看报表和记分卡](https://technet.microsoft.com/library/hh697482.aspx)(https://technet.microsoft.com/library/hh697482.aspx)。  
+-   [Apple iPad 设备 (SharePoint Server 2010) 上查看报表和记分卡](https://technet.microsoft.com/library/hh697482.aspx)(https://technet.microsoft.com/library/hh697482.aspx) 。  
   
--   [IPad （视频） 上查看 Reporting Services 报表](https://technet.microsoft.com/sqlserver/jj873792.aspx)(https://technet.microsoft.com/sqlserver/jj873792.aspx)。  
+-   [IPad （视频） 上查看 Reporting Services 报表](https://technet.microsoft.com/sqlserver/jj873792.aspx)(https://technet.microsoft.com/sqlserver/jj873792.aspx) 。  
   
 -   [（视频） 在 Microsoft Surface RT 设备上查看 Reporting Services 报表](https://technet.microsoft.com/sqlserver/dn146017)  
   

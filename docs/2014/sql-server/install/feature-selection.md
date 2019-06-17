@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b516d76c1c814cb70215bfe37f3cddb60e614d5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095215"
 ---
 # <a name="feature-selection"></a>功能选择
@@ -33,7 +33,7 @@ ms.locfileid: "66095215"
  **“共享功能”** 是指给定计算机上所有实例所共有的功能。 上述每个共享功能都设计为与可并行安装的支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本向后兼容（Service Pack、累积更新和修补程序）。  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集：**[!INCLUDE[ssDE](../../includes/ssde-md.md)]并[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]组件是仅有[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]功能支持故障转移群集。 可以在故障转移群集节点上安装其他组件，如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，但这些组件不能识别群集，因此当该故障转移群集节点脱机时，这些组件的服务不进行故障转移。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集：** [!INCLUDE[ssDE](../../includes/ssde-md.md)]并[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]组件是仅有[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]功能支持故障转移群集。 可以在故障转移群集节点上安装其他组件，如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，但这些组件不能识别群集，因此当该故障转移群集节点脱机时，这些组件的服务不进行故障转移。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 ### <a name="instance-features"></a>实例功能  
  选择各个组件组时， **“说明”** 窗格中会显示相应的说明。 您可以选中任意一些复选框。 若要继续，必须进行选择。  
@@ -45,7 +45,7 @@ ms.locfileid: "66095215"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Native|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式包括用于创建、管理和部署表格报表、矩阵报表、图形报表以及自由格式报表的服务器和客户端组件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还是一个可用于开发报表应用程序的可扩展平台。|  
   
 > [!IMPORTANT]
->  1.  安装程序不为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署中的多个节点配置负载平衡和单 URL 寻址。 若要完成扩展部署，必须使用 Windows Server、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center 或第三方群集管理软件。 有关设置 Web 场部署的详细信息，请参阅[为横向扩展部署配置 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=199448) (https://go.microsoft.com/fwlink/?LinkId=199448)。  
+>  1.  安装程序不为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署中的多个节点配置负载平衡和单 URL 寻址。 若要完成扩展部署，必须使用 Windows Server、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center 或第三方群集管理软件。 有关设置 Web 场部署的详细信息，请参阅[为横向扩展部署配置 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=199448) (https://go.microsoft.com/fwlink/?LinkId=199448) 。  
 > 2.  有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件的浏览器要求，请参阅 [规划 Reporting Services 和 Power View 浏览器支持 (Reporting Services 2014)](../../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
 > 3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支持同时在 64 位平台上和 64 位服务器的 32 位子系统 (WOW64) 上进行并行配置。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66095215"
   
  默认情况下，共享组件安装到 %Program Files%Microsoft SQL Server\\中。 若要更改安装路径，请单击 **“浏览”** 按钮。 如果更改一个共享组件的安装路径，则要同时更改其他共享组件的安装路径。 后续安装会将共享组件安装到与原始安装相同的位置。  
   
- **实例根目录** - 默认情况下，实例根目录为 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\。 若要指定非默认的根目录，请单击“浏览”按钮或提供一个路径名。  
+ **实例根目录** - 默认情况下，实例根目录为 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\。 若要指定非默认的根目录，请单击“浏览”  按钮或提供一个路径名。  
   
  在基于 x64 的操作系统上，您可以指定 64 位组件的安装位置，以及 32 位组件在 WOW64 子系统上的安装位置。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "66095215"
 -   通过移动其他文件或应用程序在指定驱动器上腾出更多可用空间。  
   
 ## <a name="installing-adventureworks-sample-databases"></a>安装 AdventureWorks 示例数据库  
- 默认情况下，不会将示例数据库和示例代码作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的一部分进行安装。 有关安装示例数据库和示例代码的详细信息，请参阅[Microsoft SQL Server 社区项目和示例](https://go.microsoft.com/fwlink/?LinkId=87843)(https://go.microsoft.com/fwlink/?LinkId=87843)。  
+ 默认情况下，不会将示例数据库和示例代码作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的一部分进行安装。 有关安装示例数据库和示例代码的详细信息，请参阅[Microsoft SQL Server 社区项目和示例](https://go.microsoft.com/fwlink/?LinkId=87843)(https://go.microsoft.com/fwlink/?LinkId=87843) 。  
   
- 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后还可以获得有关示例的其他信息。 从**启动**菜单上，单击**所有程序**，单击**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**，单击**文档和教程**然后单击 **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]示例概述**。  
+ 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后还可以获得有关示例的其他信息。 从**启动**菜单上，单击**所有程序**，单击 **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** ，单击**文档和教程**然后单击 **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]示例概述**。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 的版本和组件](../editions-and-components-of-sql-server-2016.md)  

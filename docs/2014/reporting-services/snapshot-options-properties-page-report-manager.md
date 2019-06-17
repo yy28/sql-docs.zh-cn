@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101163"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>“快照选项”属性页（报表管理器）
@@ -32,7 +32,7 @@ ms.locfileid: "66101163"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”**。 这会打开该报表的“常规”属性页。  
+3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的“常规”属性页。  
   
 4.  选择 **“快照选项”** 选项卡。  
   

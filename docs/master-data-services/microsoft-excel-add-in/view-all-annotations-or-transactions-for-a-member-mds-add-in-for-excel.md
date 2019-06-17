@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26e016369bf2498bce87e39fb05880712608184b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489668"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>查看成员的所有批注或事务（用于 Excel 的 MDS 外接程序）
@@ -29,13 +29,13 @@ ms.locfileid: "65489668"
   
 -   必须具有包含 MDS 管理的数据的活动工作表。  
   
--   实体“事务日志类型”必须是“成员”或“属性”。  
+-   实体“事务日志类型”  必须是“成员”  或“属性”  。  
   
 ### <a name="to-view-annotations-or-transactions"></a>查看批注或事务  
   
 1.  单击包含您要查看的事务的行中的单元。  
   
-2.  单击右键，然后从显示的菜单中单击“查看事务”或“查看历史记录”。  
+2.  单击右键，然后从显示的菜单中单击“查看事务”或“查看历史记录”   。  
   
 3.  **“查看事务”** 对话框中将显示事务列表。 若要查看与事务关联的所有批注，请单击网格中的行。  
   

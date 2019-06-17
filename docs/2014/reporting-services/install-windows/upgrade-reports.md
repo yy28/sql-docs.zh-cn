@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8f97567188cc3c1f4e4082be1c4c1378ca97122f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108598"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
@@ -195,9 +195,9 @@ ms.locfileid: "66108598"
   
 -   **是** 选择 **“是”** 将转换报表中所有可以转换的 CRI。 无法升级 CRI 中不受支持的功能，也不能从报表定义文件中删除它们。 有关不支持的功能的列表，请参阅 [Upgrading Reports](upgrade-reports.md)。 查看报表时，可能看到 CRI 在报表中的显示方式存在差异。  
   
--   **否** ：如果不希望转换报表中的 CRI，请选择 **“否”** 。 当前版本中的报表处理器无法显示这些 CRI。 如果您的系统管理员计划安装从第三方软件供应商那里得到的且与新报表定义格式兼容的新版本 CRI，则应当选择 **“否”**。 在使用新版本以前，CRI 将作为带有红色 X 的空文本框显示在报表中。  
+-   **否** ：如果不希望转换报表中的 CRI，请选择 **“否”** 。 当前版本中的报表处理器无法显示这些 CRI。 如果您的系统管理员计划安装从第三方软件供应商那里得到的且与新报表定义格式兼容的新版本 CRI，则应当选择 **“否”** 。 在使用新版本以前，CRI 将作为带有红色 X 的空文本框显示在报表中。  
   
- 在上述两种情况下，报表都将升级到新的报表定义格式，并将原始报表的备份副本另存为 \<Report Name> `-` Backup.rdl。 如果在报表创作工具中保存报表，则会以新的报表定义格式保存升级的报表。 如果发布报表，则报表首先保存在您的计算机上，然后发布到报表服务器。 您需要将报表的升级版本发布到报表服务器。  
+ 在上述两种情况下，报表都将升级到新的报表定义格式，并将原始报表的备份副本另存为 \<Report Name> `-` Backup.rdl  。 如果在报表创作工具中保存报表，则会以新的报表定义格式保存升级的报表。 如果发布报表，则报表首先保存在您的计算机上，然后发布到报表服务器。 您需要将报表的升级版本发布到报表服务器。  
   
  如果不保存报表，则原始报表将保持不变。 但是，不能在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 版本中或者在使用较新报表定义格式的报表创作环境中编辑该报表。 对于报表的原始版本，通过使用报表管理器将它上载到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器，可以继续运行它。 有关详细信息，请参阅[上传文件或报表（报表管理器）](../reports/upload-a-file-or-report-report-manager.md)。  
   

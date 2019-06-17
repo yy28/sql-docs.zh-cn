@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479715"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>删除成员或集合 (Master Data Services)
@@ -44,7 +44,7 @@ ms.locfileid: "65479715"
   
 2.   从“版本”列表中，选择某一版本。  
   
-3.  单击 **“资源管理器”**。  
+3.  单击 **“资源管理器”** 。  
   
 4.  若要删除：  
   
@@ -56,9 +56,9 @@ ms.locfileid: "65479715"
   
 5.  在网格中，单击要删除的成员或集合所对应的行。  
   
-6.  单击 **“删除成员”**、 **“删除”** 或 **“删除集合”**。  
+6.  单击 **“删除成员”** 、 **“删除”** 或 **“删除集合”** 。  
   
-7.  在确认对话框中，单击 **“确定”**。  
+7.  在确认对话框中，单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [重新激活成员或集合 (Master Data Services)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   

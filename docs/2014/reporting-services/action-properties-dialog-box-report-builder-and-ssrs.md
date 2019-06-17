@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110082"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>“操作属性”对话框（报表生成器和 SSRS）
@@ -58,7 +58,7 @@ ms.locfileid: "66110082"
   
  对于发布到配置为本机模式的报表服务器的报表，请使用不带文件扩展名的完整路径或相对路径。 如果该报表与当前报表位于同一文件夹中，则只需使用该报表的名称即可。 如果报表位于同一报表服务器上的其他文件夹中，则使用相对路径或完整路径。 相对路径从当前文件夹开始并且在文件夹层次结构中上移，例如 ../Folder2/Report1。 完整路径从 /（即主文件夹）开始。 例如，/Reports/Report1。  
   
- 对于发布到配置为 SharePoint 集成模式的报表服务器的报表，请使用带有文件扩展名 (.rdl) 的完全限定 URL。 例如， http://*\<SharePointservername > /\<站点 >*/Documents/Report1.rdl。 不支持相对路径。  
+ 对于发布到配置为 SharePoint 集成模式的报表服务器的报表，请使用带有文件扩展名 (.rdl) 的完全限定 URL。 例如， http:// *\<SharePointservername > /\<站点 >* /Documents/Report1.rdl。 不支持相对路径。  
   
  有关详细信息，请参阅 msdn.microsoft.com 上[报表生成器文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[指定外部项的路径（报表生成器和 SSRS）](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
@@ -81,24 +81,24 @@ ms.locfileid: "66110082"
  键入表示钻取报表中所定义参数的名称的文本。  
   
  **ReplTest1**  
- 键入或选择要传递给钻取报表中的命名参数的值。 单击“表达式” (*fx*) 按钮可编辑表达式。  
+ 键入或选择要传递给钻取报表中的命名参数的值。 单击“表达式”  (*fx*) 按钮可编辑表达式。  
   
  **Omit**  
- 选择此选项可阻止参数运行。 默认情况下，此复选框已清除，处于不活动状态。 若要选中该复选框，请单击“表达式”(fx) 按钮，再键入 **True** 或创建表达式。 当单击 **“表达式”** 对话框中的 **“确定”** 时，即会选中此复选框。  
+ 选择此选项可阻止参数运行。 默认情况下，此复选框已清除，处于不活动状态。 若要选中该复选框，请单击“表达式”  (fx  ) 按钮，再键入 **True** 或创建表达式。 当单击 **“表达式”** 对话框中的 **“确定”** 时，即会选中此复选框。  
   
  **转到书签**  
  选择此选项可以定义指向当前报表内书签的链接。 选择 **“转到书签”** 时，页面上将显示以下其他选项。  
   
  **选择书签**  
- 键入或选择用户单击该链接时，将跳至的报表书签 ID。 单击“表达式”(fx) 按钮，更改表达式。 书签 ID 可以是静态 ID，也可以是计算结果为书签 ID 的表达式。 表达式中可以包括含有书签 ID 的字段。  
+ 键入或选择用户单击该链接时，将跳至的报表书签 ID。 单击“表达式”(fx  ) 按钮，更改表达式。 书签 ID 可以是静态 ID，也可以是计算结果为书签 ID 的表达式。 表达式中可以包括含有书签 ID 的字段。  
   
  若要链接到书签，首先必须设置报表项的“书签”属性。 若要设置“书签”属性，请选择一个报表项并在“属性”窗格中键入书签 ID 的值或表达式；例如，SalesChart 或 5TopSales。  
   
  **转到 URL**  
- 选择此选项可以定义指向网页的链接。 键入或选择网页的 URL 或计算结果为网页的 URL 的表达式。 单击“表达式”(fx) 按钮，更改表达式。 此表达式可以有一个包含 URL 的字段。 选择 **“转到 URL”** 时，页面上将显示以下其他选项。  
+ 选择此选项可以定义指向网页的链接。 键入或选择网页的 URL 或计算结果为网页的 URL 的表达式。 单击“表达式”  (fx  ) 按钮，更改表达式。 此表达式可以有一个包含 URL 的字段。 选择 **“转到 URL”** 时，页面上将显示以下其他选项。  
   
  **选择 URL**  
- 键入或输入相应项的 URL。 对于发布到配置为本机模式的报表服务器的项，请使用完整路径或相对路径。 例如， http://*\<服务器名 >*/images/image1.jpg。 对于发布到 SharePoint 集成模式下配置的报表服务器的项，请使用完全限定的 URL (例如 http://*\<SharePointservername > /\<站点 >*  /记录/映像 /image1.jpg)。  
+ 键入或输入相应项的 URL。 对于发布到配置为本机模式的报表服务器的项，请使用完整路径或相对路径。 例如， http:// *\<服务器名 >* /images/image1.jpg。 对于发布到 SharePoint 集成模式下配置的报表服务器的项，请使用完全限定的 URL (例如 http:// *\<SharePointservername > /\<站点 >*  /记录/映像 /image1.jpg)。  
   
 ## <a name="see-also"></a>请参阅  
  [图表（报表生成器和 SSRS）](report-design/charts-report-builder-and-ssrs.md)   

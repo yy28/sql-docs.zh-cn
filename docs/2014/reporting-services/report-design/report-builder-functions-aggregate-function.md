@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0c58b99b616c07e2144a30a9ea996b135b6f8a4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105343"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>Aggregate 函数（报表生成器和 SSRS）
@@ -41,7 +41,7 @@ Aggregate(expression, scope)
  返回类型视数据访问接口而定。 如果数据访问接口不支持此函数或数据不可用，则返回 `Nothing`。  
   
 ## <a name="remarks"></a>备注  
- `Aggregate` 函数提供一种方式来使用对外部数据源计算的聚合。 是否支持此功能由数据扩展插件决定。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件从 MDX 查询中检索平展行集。 结果集中的某些行可能包含在数据源服务器上计算的聚合值。 这些聚合值称为“服务器聚合” 。 若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的图形查询设计器中查看服务器聚合，可以使用工具栏上的 **“显示聚合”** 按钮。 有关详细信息，请参阅 [Analysis Services MDX 查询设计器用户界面（报表生成器）](../analysis-services-mdx-query-designer-user-interface-report-builder.md)。  
+ `Aggregate` 函数提供一种方式来使用对外部数据源计算的聚合。 是否支持此功能由数据扩展插件决定。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件从 MDX 查询中检索平展行集。 结果集中的某些行可能包含在数据源服务器上计算的聚合值。 这些聚合值称为“服务器聚合”  。 若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的图形查询设计器中查看服务器聚合，可以使用工具栏上的 **“显示聚合”** 按钮。 有关详细信息，请参阅 [Analysis Services MDX 查询设计器用户界面（报表生成器）](../analysis-services-mdx-query-designer-user-interface-report-builder.md)。  
   
  在 Tablix 数据区域的详细信息行中显示聚合和详细信息数据集值的组合时，服务器聚合通常不会包括在内，因为它们不是详细信息数据。 但是，您可能希望显示从该数据集中检索到的所有值，并自定义聚合数据的计算方式和显示方式。  
   
