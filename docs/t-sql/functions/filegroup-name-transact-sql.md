@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 02a6aebc594e47160d7b91567ba81b45d4e95694
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945933"
 ---
 # <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
@@ -48,13 +48,13 @@ FILEGROUP_NAME ( filegroup_id )
 ## <a name="arguments"></a>参数  
  *filegroup_id*  
 
-文件组名 `FILEGROUP_NAME` 将返回的文件组 ID 号。 filegroup_id 具有 smallint 数据类型。  
+文件组名 `FILEGROUP_NAME` 将返回的文件组 ID 号。 filegroup_id  具有 smallint  数据类型。  
   
 ## <a name="return-types"></a>返回类型  
 **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
-filegroup_id 对应于 sys.filegroups 目录视图的 data_space_id 列。  
+filegroup_id  对应于 sys.filegroups  目录视图的 data_space_id  列。  
   
 ## <a name="examples"></a>示例  
 此示例将返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中文件组 ID `1` 的文件组名称。  

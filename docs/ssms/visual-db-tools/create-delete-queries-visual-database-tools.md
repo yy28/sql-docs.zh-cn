@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 40b9dd59f70243dcfd547c8a94ca8b46f3237ddf
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089516"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>创建删除查询 (Visual Database Tools)
@@ -32,7 +32,7 @@ ms.locfileid: "65089516"
 您可以通过使用“删除”查询来删除表中的所有行。  
   
 > [!NOTE]  
-> 删除表中的所有行会清除表中的数据，但不会删除表本身。 若要从数据库中删除表，请在对象资源管理器中右键单击该表，再单击“删除”。  
+> 删除表中的所有行会清除表中的数据，但不会删除表本身。 若要从数据库中删除表，请在对象资源管理器中右键单击该表，再单击“删除”  。  
   
 在创建“删除”查询时，“条件”窗格将发生相应变化以反映可用于删除行的选项。 因为不在“删除”查询中显示数据，所以将移除“输出”、“排序方式”和“排序顺序”列。 此外，因为无法指定要删除的单个列，所以在代表表或表值对象的矩形中，将移除列名旁边的复选框。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65089516"
   
 1.  将要从中删除行的表添加到“关系图”窗格中。  
   
-2.  在“查询设计器”菜单中，指向“更改类型”，再单击“删除”。 **注意** 如果启动“删除”查询时，在“关系图”窗格中显示有多个表，则查询和视图设计器将显示[“删除表”对话框](../../ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md)，以提示你选择要从中删除行的表名。  
+2.  在“查询设计器”  菜单中，指向“更改类型”  ，再单击“删除”  。 **注意** 如果启动“删除”查询时，在“关系图”窗格中显示有多个表，则查询和视图设计器将显示[“删除表”对话框](../../ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md)，以提示你选择要从中删除行的表名。  
   
 在执行“删除”查询时，不会在 [“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中报告任何结果。 但是，会显示一条消息，指示已删除的行数。  
   

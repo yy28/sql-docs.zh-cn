@@ -11,10 +11,10 @@ ms.reviewer: jroth
 manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 871e53571d88fbc24bd597b6e70dbab6723a58c1
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774706"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>配置 PolyBase 以访问 MongoDB 中的外部数据
@@ -123,7 +123,7 @@ JSON 嵌套/重复数据类型将按如下所示平展
 
 ## <a name="cosmos-db-connection"></a>Cosmos DB 连接
 
-使用 Cosmos DB mongo api 和 Mongo DB PolyBase 连接器，可创建 Cosmos DB 实例的外部表。 可按照以上列出的相同步骤完成此操作。 确保数据库范围凭据、服务器地址、端口和位置字符串反映 Cosmos DB 服务器的相应内容。 
+使用 Cosmos DB mongo api 和 Mongo DB PolyBase 连接器，可创建 Cosmos DB 实例的外部表  。 可按照以上列出的相同步骤完成此操作。 确保数据库范围凭据、服务器地址、端口和位置字符串反映 Cosmos DB 服务器的相应内容。 
 
 ## <a name="next-steps"></a>后续步骤
 

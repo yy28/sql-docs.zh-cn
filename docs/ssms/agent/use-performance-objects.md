@@ -23,10 +23,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 316f943091de15857b4654e98b4910061806def6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089368"
 ---
 # <a name="use-performance-objects"></a>使用性能对象
@@ -43,8 +43,8 @@ ms.locfileid: "65089368"
   
 |实例类型|对象名称|  
 |-----------------|---------------|  
-|，则“默认”|**SQLAgent：** 对象：计数器|  
-|已命名|**SQLAgent$**<br /> **&#42;instance_name&#42; ：** 对象：计数器|  
+|，则“默认”|**SQLAgent：** 对象  ：计数器 |  
+|已命名|**SQLAgent$**<br /> **&#42;instance_name&#42; ：** 对象  ：计数器 |  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的下列性能对象。  
   

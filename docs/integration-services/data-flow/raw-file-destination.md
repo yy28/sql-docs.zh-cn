@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 529bfc2a46ddb4cb6bbd0eb90f9d39dda0af63b1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726530"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -120,7 +120,7 @@ ms.locfileid: "65726530"
   
 1.  将 WriteOption 属性设置为 **CreateOnce** 或 **CreateAlways**并运行循环的一次迭代过程。 此时将创建文件。 这可确保追加数据的元数据与文件匹配。  
   
-2.  将 WriteOption 属性重置为“追加”并将 ValidateExternalMetadata 属性设置为 **False**。  
+2.  将 WriteOption 属性重置为“追加”  并将 ValidateExternalMetadata 属性设置为 **False**。  
   
  如果使用 **TruncateAppend** 选项而不是 **“追加”** 选项，此操作将截断以前的任何迭代过程中所添加的行，然后追加新行。 使用 **TruncateAppend** 选项也要求数据与文件格式相匹配。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "65726530"
   
 1.  将原始文件目标添加到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包。  
   
-2.  右键单击该组件，然后单击 **“编辑”**。  
+2.  右键单击该组件，然后单击 **“编辑”** 。  
   
 ###  <a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **访问模式**  
@@ -196,7 +196,7 @@ ms.locfileid: "65726530"
   
 1.  将原始文件目标添加到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包。  
   
-2.  右键单击该组件，然后单击 **“编辑”**。  
+2.  右键单击该组件，然后单击 **“编辑”** 。  
   
 ###  <a name="connection"></a> 设置“连接管理器”选项卡上的选项  
  **访问模式**  

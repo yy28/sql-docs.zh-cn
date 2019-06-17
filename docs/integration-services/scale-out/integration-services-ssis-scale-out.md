@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 86a3db60a6eea2dce25394cab069d9ca9e1f9f8d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718379"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out
@@ -36,9 +36,9 @@ SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 
 ## <a name="configuration-options"></a>配置选项
 可以按下列配置安装 Scale Out：
 
--   在一台计算机上，其中 Scale Out Master 与 Scale Out Worker 在同一计算机上并排运行。
+-   在一台计算机上，其中 Scale Out Master 与 Scale Out Worker 在同一计算机上并排运行  。
 
--   在多台计算机上，其中每个 Scale Out Worker 位于不同的计算机上。
+-   在多台计算机上，其中每个 Scale Out Worker 位于不同的计算机上  。
 
 ## <a name="what-you-can-do"></a>可执行的操作
 设置 Scale Out 后，可执行以下操作：

@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5fc2a41f4f1cb24e6b8bc467d886138f7d95c12
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982167"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
@@ -49,7 +49,7 @@ IF Boolean_expression
  *Boolean_expression*  
  返回 TRUE 或 FALSE 的表达式。 如果布尔表达式中含有 SELECT 语句，则必须用括号将 SELECT 语句括起来。  
   
- { sql_statement| statement_block }  
+ { sql_statement| statement_block }    
  任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或用语句块定义的语句分组。 除非使用语句块，否则 IF 或 ELSE 条件只能影响一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的性能。  
   
  若要定义语句块，请使用控制流关键字 BEGIN 和 END。  

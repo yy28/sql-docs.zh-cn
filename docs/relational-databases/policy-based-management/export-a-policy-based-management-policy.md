@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6aee718961b0e9afb12de09651346d1686821adc
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512198"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63007598"
 ---
 # <a name="export-a-policy-based-management-policy"></a>导出基于策略的管理策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51512198"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要导出策略，请使用：**  
   
@@ -36,9 +36,9 @@ ms.locfileid: "51512198"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -49,14 +49,14 @@ ms.locfileid: "51512198"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”**。  
+3.  单击加号以便展开 **“策略管理”** 。  
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要导出的策略，然后选择“导出策略”。  
+5.  右键单击要导出的策略，然后选择“导出策略”  。  
   
 6.  在 **“导出策略”** 对话框中，在地址栏中键入文件的路径和名称。 或者，在对话框的导航窗格中找到文件的合适位置，然后在 **“文件名”** 框中键入 XML 文件的名称。  
   
-7.  完成后，单击 **“保存”**。  
+7.  完成后，单击 **“保存”** 。  
   
   

@@ -14,10 +14,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2f294414d1f9fe702324250d5fffbf05c8d39e0c
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65816385"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - 运行 Transact-SQL 脚本文件
@@ -27,7 +27,7 @@ ms.locfileid: "65816385"
 ## <a name="create-a-script-file"></a>创建脚本文件  
  若要使用记事本创建一个简单的 Transact-SQL 脚本文件，请执行下列操作：  
   
-1.  单击 **“开始”**，依次指向 **“所有程序”**、 **“附件”**，再单击 **“记事本”**。  
+1.  单击 **“开始”** ，依次指向 **“所有程序”** 、 **“附件”** ，再单击 **“记事本”** 。  
   
 2.  复制以下 Transact-SQL 代码并将其粘贴到记事本：  
   

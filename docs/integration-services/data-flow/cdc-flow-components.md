@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4648f66c9bc73a3de8bcf1bad68a9ad748718bc
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727213"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
@@ -84,7 +84,7 @@ ms.locfileid: "65727213"
   
  ![滴送处理包控制流](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle Feed Processing Package Control Flow")  
   
- 这一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 控制流包含两个 CDC 控制任务以及一个数据流任务。 第一个任务称为“获取 CDC 处理范围”，此任务为在称为“处理更改”的数据流任务中处理的更改建立 LSN 范围。 基于上一包运行期间处理的已保存在持久存储区中的更改建立此范围。  
+ 这一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 控制流包含两个 CDC 控制任务以及一个数据流任务。 第一个任务称为“获取 CDC 处理范围”，此任务为在称为“处理更改”的数据流任务中处理的更改建立 LSN 范围。   基于上一包运行期间处理的已保存在持久存储区中的更改建立此范围。  
   
  有关使用 CDC 控制任务的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 和 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "65727213"
   
  此图中演示了以下步骤：  
   
--   针对表 X 的更改是一种 CDC 源，用来读取在父控制流中确定的 CDC 处理范围中对表 X 所作的更改。  
+-   针对表 X 的更改  是一种 CDC 源，用来读取在父控制流中确定的 CDC 处理范围中对表 X 所作的更改。  
   
--   CDC 拆分器 X 用于将更改拆分为插入、删除和更新等操作。 在此情况下，假定 CDC 源被配置为生成净更改，以便并行处理不同的更改类型。  
+-   CDC 拆分器 X  用于将更改拆分为插入、删除和更新等操作。 在此情况下，假定 CDC 源被配置为生成净更改，以便并行处理不同的更改类型。  
   
 -   然后在下游进一步处理特定的更改。 在此演示中，使用多个 ODBC 目标将更改插入表，但实际情况下处理方式可能有所不同。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "65727213"
  滴送更新包需要针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 功能的访问权限。 默认情况下向 **db_owner** 固定数据库角色的成员授予此访问权限。 由于 **db_owner** 是一个权限很高的角色，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中定义捕获实例时，建议为每个捕获实例关联一个安全访问控制角色，以便允许 SSIS CDC 包使用限制性更强的用户身份处理这些更改。  
   
 ### <a name="access-to-cdc-database-current-lsn"></a>针对 CDC 数据库当前 LSN 的访问权限  
- 用于标记更改处理始自的 LSN 的 CDC 控制任务操作必须能够找到 CDC 数据库的当前 LSN。 此组件通过从 master 数据库使用 sp_replincrementlsn 来查找 LSN。 必须为用于连接 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 数据库的登录名授予针对此过程的执行权限。  
+ 用于标记更改处理始自的 LSN 的 CDC 控制任务操作必须能够找到 CDC 数据库的当前 LSN。 此组件通过从 master 数据库使用 sp_replincrementlsn  来查找 LSN。 必须为用于连接 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 数据库的登录名授予针对此过程的执行权限。  
   
 ### <a name="access-to-cdc-states-table"></a>针对 CDC 状态表的访问权限  
  CDC 状态表用于自动持久化 CDC 状态，这些状态需要由用于连接 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 数据库的登录名来更新。 由于此表是 SSIS 开发人员创建的，所以要将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 系统管理员设置为有权创建 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库并执行管理和维护任务的用户。 此外，使用启用 CDC 的数据库的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 系统管理员必须了解 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 技术及其执行方式。  

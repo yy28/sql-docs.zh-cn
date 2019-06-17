@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 334153d45cbc2f4998fdef5902a3084f5912ad95
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090086"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）
@@ -68,19 +68,19 @@ ms.locfileid: "65090086"
   
 #### <a name="to-set-the-service-startup-account-for-sql-server-agent"></a>为 SQL Server 代理设置服务启动帐户  
   
-1.  在 **“已注册的服务器”** 中，单击加号以便展开 **“数据库引擎”**。  
+1.  在 **“已注册的服务器”** 中，单击加号以便展开 **“数据库引擎”** 。  
   
 2.  单击加号以便展开 **“本地服务器组”** 文件集。  
   
-3.  右键单击要设置服务启动帐户的服务器实例，然后选择“SQL Server 配置管理器…”。  
+3.  右键单击要设置服务启动帐户的服务器实例，然后选择“SQL Server 配置管理器…”  。  
   
-4.  在 **“用户帐户控制”** 对话框中，请单击 **“是”**。  
+4.  在 **“用户帐户控制”** 对话框中，请单击 **“是”** 。  
   
-5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的控制台窗格中，选择 **“SQL Server 服务”**。  
+5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的控制台窗格中，选择 **“SQL Server 服务”** 。  
   
-6.  在详细信息窗格中，右键单击“SQL Server 代理 _(server\_name)_”（其中 server_name 是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例的名称），然后选择“属性”。  
+6.  在详细信息窗格中，右键单击“SQL Server 代理 _(server\_name)_ ”  （其中 server_name  是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例的名称），然后选择“属性”  。  
   
-7.  在“SQL Server 代理 _(server\_name)_ 属性”对话框的“登录”选项卡中，选择“登录身份”下的以下选项之一：  
+7.  在“SQL Server 代理 _(server\_name)_ 属性”   对话框的“登录”  选项卡中，选择“登录身份”  下的以下选项之一：  
   
     -   **内置帐户**：如果你的作业仅需要本地服务器中的资源，则选择此选项。 有关如何选择 Windows 内置帐户类型的信息，请参阅 [为 SQL Server 代理服务选择帐户](https://msdn.microsoft.com/library/ms191543.aspx)。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "65090086"
   
         1.  在 **“帐户名称”** 框中，输入将用来运行 SQL Server 代理的帐户。 或者，单击 **“浏览”** 打开 **“选择用户或组”** 对话框并选择要使用的帐户。  
   
-        2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”框中重新输入密码。  
+        2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”  框中重新输入密码。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
 9. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，单击 **“关闭”** 按钮。  
   

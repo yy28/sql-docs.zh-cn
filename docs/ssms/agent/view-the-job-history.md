@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 410d603b502cb2bb3da4c451a8b408eba3bc5e69
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088899"
 ---
 # <a name="view-the-job-history"></a>View the Job History
@@ -56,13 +56,13 @@ ms.locfileid: "65088899"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，再展开 **“作业”**。  
+2.  展开 **“SQL Server 代理”** ，再展开 **“作业”** 。  
   
-3.  右键单击一个作业，再单击 **“查看历史记录”**。  
+3.  右键单击一个作业，再单击 **“查看历史记录”** 。  
   
 4.  在日志文件查看器中，查看作业历史记录。  
   
-5.  若要更新作业历史记录，请单击 **“刷新”**。 若要只查看几行，请单击 **“筛选”** 按钮并输入筛选参数。  
+5.  若要更新作业历史记录，请单击 **“刷新”** 。 若要只查看几行，请单击 **“筛选”** 按钮并输入筛选参数。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -70,9 +70,9 @@ ms.locfileid: "65088899"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- lists all job information for the NightlyBackups job.  

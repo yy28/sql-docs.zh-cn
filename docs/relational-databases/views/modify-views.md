@@ -18,11 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b21a93ad09aecc13842f37b488a8230347cab283
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514775"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62744465"
 ---
 # <a name="modify-views"></a>修改视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52514775"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **修改视图，使用：**  
   
@@ -52,9 +52,9 @@ ms.locfileid: "52514775"
   
 -   ALTER VIEW 可应用于索引视图；但是，ALTER VIEW 会无条件地删除视图的所有索引。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要执行 ALTER VIEW，至少需要具有对 OBJECT 的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -63,17 +63,17 @@ ms.locfileid: "52514775"
   
 1.  在 **“对象资源管理器”** 中，单击视图所在的数据库旁边的加号，然后单击 **“视图”** 文件夹旁边的加号。  
   
-2.  右键单击要修改的视图，然后选择“设计”。  
+2.  右键单击要修改的视图，然后选择“设计”  。  
   
 3.  在查询设计器的关系图窗格中，通过以下一种或多种方式更改视图：  
   
     1.  选中或清除要添加或删除的任何元素的复选框。  
   
-    2.  在关系图窗格中右键单击，选择“添加表…”，然后从“添加表”对话框选择要添加到视图的其他列。  
+    2.  在关系图窗格中右键单击，选择“添加表…”，然后从“添加表”对话框选择要添加到视图的其他列   。  
   
-    3.  右键单击要删除的表的标题栏，然后选择“删除”。  
+    3.  右键单击要删除的表的标题栏，然后选择“删除”  。  
   
-4.  在“文件”菜单上，单击“保存”以保存_视图名称_。  
+4.  在“文件”  菜单上，单击“保存”  以保存_视图名称_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -81,9 +81,9 @@ ms.locfileid: "52514775"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例首先创建一个视图，然后使用 ALTER VIEW 修改该视图。 将一个 WHERE 子句添加到该视图定义。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例首先创建一个视图，然后使用 ALTER VIEW 修改该视图。 将一个 WHERE 子句添加到该视图定义。  
   
     ```  
     USE AdventureWorks2012 ;  
