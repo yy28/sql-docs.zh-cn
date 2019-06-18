@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 478c7e49fcdef335a65e0574eeaa80843f5b1c29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205066"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>各种 SQL Server 数据类型的 FOR XML 支持
@@ -25,7 +25,7 @@ ms.locfileid: "63205066"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|Description|  
 |-----------|-----------------|  
 |[xml 数据类型的 FOR XML 支持](for-xml-support-for-the-xml-data-type.md)|介绍 FOR XML 如何与 **xml** 数据类型结合使用。|  
 |[字符串数据类型的 FOR XML 支持](for-xml-support-for-string-data-types.md)|介绍 FOR XML 如何与诸如 **varchar** 和 **nvarchar**之类的字符串数据类型结合使用。|  
