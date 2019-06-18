@@ -12,10 +12,10 @@ ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29ebd13314c99d425b191f049f86e6e78d3134fa
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571470"
 ---
 # <a name="update-a-resource-report-manager"></a>更新资源（报表管理器）
@@ -33,7 +33,7 @@ ms.locfileid: "65571470"
   
 5.  单击 **“替换”** 以打开 **“导入资源”** 页。  
   
-6.  单击 **“浏览”**。  
+6.  单击 **“浏览”** 。  
   
 7.  选择要用于替换当前资源的文件。 您可以使用资源文件的更新版本，或指定其他名称或其他文件类型的文件。  
   

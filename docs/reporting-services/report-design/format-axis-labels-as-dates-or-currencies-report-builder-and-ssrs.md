@@ -9,10 +9,10 @@ ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 82208f23aa3bf0126c13a71f2130163b0d75c4dd
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576272"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>将轴标签的格式设置为日期或货币（报表生成器和 SSRS）
@@ -30,15 +30,15 @@ ms.locfileid: "65576272"
   
 ## <a name="to-format-x-axis-labels-as-monthly-intervals"></a>将 X 轴标签的格式设置为月间隔  
   
-1.  右键单击图表的水平轴（或 x 轴），然后选择“水平轴属性”。  
+1.  右键单击图表的水平轴（或 x 轴），然后选择“水平轴属性”  。  
   
-2.  在“水平轴属性”对话框中，选择“数字”。  
+2.  在“水平轴属性”对话框中，选择“数字”   。  
   
-3.  从 **“类别”** 列表中，选择 **“日期”**。 从“类型”列表中，选择要应用到 X 轴标签的日期格式。  
+3.  从 **“类别”** 列表中，选择 **“日期”** 。 从“类型”列表中，选择要应用到 X 轴标签的日期格式  。  
   
-4.  选择 **“轴选项”**。  
+4.  选择 **“轴选项”** 。  
   
-5.  在 **“间隔”** 中，键入 **1**。 在 **“间隔类型”** 属性中，选择 **“月”**。  
+5.  在 **“间隔”** 中，键入 **1**。 在 **“间隔类型”** 属性中，选择 **“月”** 。  
   
     > [!NOTE]  
     >  如果不指定间隔类型，则图表将按天计算间隔。  
@@ -47,11 +47,11 @@ ms.locfileid: "65576272"
   
 ## <a name="to-format-y-axis-labels-using-a-currency-format"></a>使用货币格式设置 Y 轴标签的格式  
   
-1.  右键单击图表的垂直轴（或 y 轴），然后选择“垂直轴属性”。  
+1.  右键单击图表的垂直轴（或 y 轴），然后选择“垂直轴属性”  。  
   
-2.  在“垂直轴属性”对话框中，选择“数字”。  
+2.  在“垂直轴属性”对话框中，选择“数字”   。  
   
-3.  从 **“类别”** 列表中，选择 **“货币”**。 从“符号”列表中，选择要应用到 Y 轴标签的货币格式。  
+3.  从 **“类别”** 列表中，选择 **“货币”** 。 从“符号”列表中，选择要应用到 Y 轴标签的货币格式  。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4aa8ac7d352a7c89d79f8c97cfd480a482da7a4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681165"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033815"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>关闭跟踪窗口 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47681165"
   
 1.  选择要关闭的跟踪窗口。  
   
-2.  在 **“文件”** 菜单上，单击 **“关闭”**。  
+2.  在 **“文件”** 菜单上，单击 **“关闭”** 。  
   
 > [!IMPORTANT]  
 >  如果跟踪正在运行，则关闭跟踪窗口将停止相关跟踪。  

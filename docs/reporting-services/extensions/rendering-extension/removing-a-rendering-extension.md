@@ -10,17 +10,17 @@ helpviewer_keywords:
 - removing rendering extensions
 - rendering extensions [Reporting Services], removing
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bd360d5a4929ab41c7b77e60b59b394f127f6f13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0ee3563074e2379061006b72f55dab99f80094cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723875"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193452"
 ---
 # <a name="removing-a-rendering-extension"></a>删除呈现扩展插件
-  要删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 呈现扩展插件，只需从 rsreportserver.config file, located in %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer 文件夹中删除呈现扩展插件的 Extension 元素即可。 如果为报表设计器以及报表服务器生成条目，则还需从 [RSReportDesigner 配置文件](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md)中删除 Extension 元素。 在删除配置信息之后，该呈现扩展插件对于该组件将不再可用。  
+  要删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 呈现扩展插件，只需从 rsreportserver.config file, located in %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer 文件夹中删除呈现扩展插件的 Extension 元素即可   。 如果为报表设计器以及报表服务器生成条目，则还需从 [RSReportDesigner 配置文件](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md)中删除 Extension 元素  。 在删除配置信息之后，该呈现扩展插件对于该组件将不再可用。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 配置文件](../../../reporting-services/report-server/reporting-services-configuration-files.md)   

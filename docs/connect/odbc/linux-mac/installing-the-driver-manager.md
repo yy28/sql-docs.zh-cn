@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: cd45cc3b0db61e87c8d9ce506e141cc9ad8c97c5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798786"
 ---
 # <a name="installing-the-driver-manager"></a>安装驱动程序管理器
@@ -52,7 +52,7 @@ ms.locfileid: "66798786"
   
 5.  当已准备好安装且计算机可以通过 FTP 访问外部站点时，执行以下命令： **./build_dm.sh**。
 
-如果计算机无法通过 FTP 访问外部站点，请获取 `unixODBC-2.3.0.tar.gz`。 可以从 [http://www.unixodbc.org](http://www.unixodbc.org/) 获取 `unixODBC-2.3.0.tar.gz`。单击页面左侧的“下载”链接，转到下载页面  。 然后，单击相应链接以下载 unixODBC-2.3.0（而非 unixODBC-2.3.1）。 该版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支持 unixODBC-2.3.1。 执行以下命令以开始 unixODBC 驱动程序管理器安装： **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**。  
+如果计算机无法通过 FTP 访问外部站点，请获取 `unixODBC-2.3.0.tar.gz`。 可以从 [http://www.unixodbc.org](http://www.unixodbc.org/) 获取 `unixODBC-2.3.0.tar.gz` 。单击页面左侧的“下载”链接，转到下载页面  。 然后，单击相应链接以下载 unixODBC-2.3.0（而非 unixODBC-2.3.1）。 该版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支持 unixODBC-2.3.1。 执行以下命令以开始 unixODBC 驱动程序管理器安装： **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**。  
 
 6.  键入 YES 以继续解压缩文件  。 完成这部分过程最多需要 5 分钟。  
 

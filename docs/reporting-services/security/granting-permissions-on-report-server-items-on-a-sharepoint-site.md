@@ -14,10 +14,10 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580039"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点上授予对报表服务器项的权限
@@ -56,7 +56,7 @@ ms.locfileid: "65580039"
  服务器管理员或网站集管理员可设置确定其他站点所有者是否可以设置权限的选项。 根据您拥有的权限级别，您可能无法创建或自定义 SharePoint 组或权限级别。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>使用预定义的 SharePoint 组和权限级别  
- [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 产品文档建议你使用标准 SharePoint 组（即“Site name 所有者”、“Site name 成员”和“Site name 访问者”）并在站点级分配权限。 为其分配权限的多数用户都应是 Site name 访问者或 Site name 成员组的成员。 对父站点的权限可在整个站点层次结构中得到继承。 您可以对需要其他限制的特定项中断权限继承。  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 产品文档建议你使用标准 SharePoint 组（即“Site name 所有者”、“Site name 成员”和“Site name 访问者”）并在站点级分配权限       。 为其分配权限的多数用户都应是 Site name 访问者或 Site name 成员组的成员     。 对父站点的权限可在整个站点层次结构中得到继承。 您可以对需要其他限制的特定项中断权限继承。  
   
  下列 SharePoint 组拥有以下预定义的权限级别：  
   

@@ -9,10 +9,10 @@ ms.assetid: 5ef8efba-6d48-4aeb-a3b9-a02ba5a44614
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d347e5eca0033b0bb70f16c4ca997dc95ebf9800
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575399"
 ---
 # <a name="add-a-details-group-report-builder-and-ssrs"></a>添加详细信息组（报表生成器和 SSRS）
@@ -25,11 +25,11 @@ ms.locfileid: "65575399"
   
 1.  在设计图面上，单击选定 tablix 数据区域中的任意位置。 “分组”窗格将显示选定数据区域的行组和列组。  
   
-2.  在“分组”窗格中，右键单击作为最内部的子组的组。 单击 **“添加组”**，然后单击 **“子组”**。 此时将打开 **“Tablix 组”** 对话框。  
+2.  在“分组”窗格中，右键单击作为最内部的子组的组。 单击 **“添加组”** ，然后单击 **“子组”** 。 此时将打开 **“Tablix 组”** 对话框。  
   
 3.  在 **“组表达式”** 中，使表达式保留为空白。 详细信息组没有任何表达式。  
   
-4.  选择 **“显示详细信息数据”**。  
+4.  选择 **“显示详细信息数据”** 。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

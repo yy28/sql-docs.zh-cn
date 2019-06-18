@@ -9,10 +9,10 @@ ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b58cb9cd7b4fcb13454b1a8d7cebcf380987fcbd
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582097"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>添加和修改线条（报表生成器和 SSRS）
@@ -23,7 +23,7 @@ ms.locfileid: "65582097"
     
 ## <a name="to-add-a-line"></a>添加线条    
     
-1.  在 **“插入”** 选项卡上，单击 **“线条”**。    
+1.  在 **“插入”** 选项卡上，单击 **“线条”** 。    
     
 2.  在设计图面上，单击希望线条一端所在的位置，然后单击希望线条另一端所在的位置。    
     
@@ -32,7 +32,7 @@ ms.locfileid: "65582097"
 3.  若要更改线条属性，请在设计图面上选择线条，然后在 **“主文件夹”** 选项卡的 **“边框”** 部分编辑该线条的属性。    
     
     > [!NOTE]    
-    >  如果将线条样式设置为“双线”并且线条宽度为 1 1/2 pt 或更窄，则在报表生成器、报表设计器或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中运行报表时，线条可能不会显示为双线。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。    
+    >  如果将线条样式设置为“双线”  并且线条宽度为 1 1/2 pt 或更窄，则在报表生成器、报表设计器或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中运行报表时，线条可能不会显示为双线。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。    
     
 ## <a name="see-also"></a>另请参阅    
  [矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    

@@ -9,30 +9,30 @@ helpviewer_keywords:
 - HelpLink element
 - SoapException class
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aedb060067e35c0281b81057666b96bb71d631c9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4c7df237a967b2601667ccf8b4849bfa146c6103
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589573"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62991677"
 ---
 # <a name="helplink-element"></a>HelpLink 元素
-  Detail 属性的 HelpLink 元素是报表服务器生成的 URL 字符串。 此 URL 指向由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 帮助和支持管理的一个网页，并针对在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中出现的特定错误提供附加帮助和知识库文章。 此 URL 具有以下语法：  
+  Detail  属性的 HelpLink  元素是报表服务器生成的 URL 字符串。 此 URL 指向由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 帮助和支持管理的一个网页，并针对在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中出现的特定错误提供附加帮助和知识库文章。 此 URL 具有以下语法：  
   
- https://www.microsoft.com/products/ee/transform.aspx?EvtSrc=v_alue_&EvtID=value&ProdName=value&ProdVer=value  
+ https://www.microsoft.com/products/ee/transform.aspx?EvtSrc=v_alue_&EvtID=value&ProdName=value&ProdVer=value             
   
- 下表列出 HelpLink URL 的参数。  
+ 下表列出 HelpLink  URL 的参数。  
   
 |参数|ReplTest1|  
 |--------------|-----------|  
-|EvtSrc|“Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings”|  
-|EvtID|报表服务器错误代码，例如，rsReservedItem。|  
-|ProdName|“Microsoft SQL%20Server%20Reporting%20Services”。 产品名称的值已进行 URL 编码。|  
-|ProdVer|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的版本号。 值为“8.00”指示 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。|  
+|EvtSrc |“Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings”|  
+|EvtID |报表服务器错误代码，例如，rsReservedItem。|  
+|ProdName |“Microsoft SQL%20Server%20Reporting%20Services”。 产品名称的值已进行 URL 编码。|  
+|ProdVer |[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的版本号。 值为“8.00”指示 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。|  
   
- 下面的示例说明针对错误代码 rsReservedItem 返回的 HelpLinkURL。 当用户尝试修改或删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的保留项时，将出现此错误。  
+ 下面的示例说明针对错误代码 rsReservedItem  返回的 HelpLink  URL。 当用户尝试修改或删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的保留项时，将出现此错误。  
   
 ```  
 https://www.microsoft.com/products/ee/transform.aspx?  
@@ -40,7 +40,7 @@ EvtSrc=Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings
 &EvtID=rsReservedItem&ProdName=Microsoft%20SQL%20Server%20Reporting%20Services&ProdVer=8.00  
 ```  
   
- 可以使用 SoapException 类在代码中访问 HelpLink 元素。  
+ 可以使用 SoapException  类在代码中访问 HelpLink  元素。  
   
 ```vb  
 Try  

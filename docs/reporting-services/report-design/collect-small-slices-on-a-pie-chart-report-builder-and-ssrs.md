@@ -9,10 +9,10 @@ ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8718570c6a370368eaf227280245607b182eba25
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581631"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>收集饼图上的小切片（报表生成器和 SSRS）
@@ -50,7 +50,7 @@ ms.locfileid: "65581631"
          将 CollectedThreshold 属性设置为 **10**。  
   
         > [!NOTE]  
-        >  如果将 CollectedStyle 设置为 SingleSlice，将 CollectedThreshold 设置为大于 100 的值，并将 CollectedThresholdUsePercent 设置为 True，则图表会引发异常，因为它无法计算百分比。 要解决此问题，请将 CollectedThreshold 设置为小于 100 的值。  
+        >  如果将 CollectedStyle 设置为 SingleSlice，将 CollectedThreshold 设置为大于 100 的值，并将 CollectedThresholdUsePercent 设置为 True，则图表会引发异常，因为它无法计算百分比    。 要解决此问题，请将 CollectedThreshold 设置为小于 100 的值  。  
   
     -   **按数据值。** 例如，若要将饼图上少于 5000 的切片收集到一个切片：  
   

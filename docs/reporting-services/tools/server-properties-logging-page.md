@@ -11,10 +11,10 @@ ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9e9286363970b568e0690b622fac6d94c2b01f6b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571388"
 ---
 # <a name="server-properties-logging-page"></a>服务器属性（“日志记录”页）
@@ -23,7 +23,7 @@ ms.locfileid: "65571388"
  若要打开此页，请执行以下操作：
  1) 开始 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
  2) 连接到报表服务器。
- 3) 右键单击报表服务器名称，然后选择“属性”。 
+ 3) 右键单击报表服务器名称，然后选择“属性”  。 
  4) 单击 **“日志记录”** 将此页打开。  
   
 ## <a name="options"></a>选项  

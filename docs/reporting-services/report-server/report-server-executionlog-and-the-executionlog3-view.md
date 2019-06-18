@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619691"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>报表服务器 ExecutionLog 和 ExecutionLog3 视图
@@ -55,17 +55,17 @@ ms.locfileid: "65619691"
   
 2.  单击要配置的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的名称。  
   
-3.  单击 **“系统设置”**。  
+3.  单击 **“系统设置”** 。  
   
 4.  在 **“日志记录”** 部分中选择 **“启用执行日志记录”** 。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
  **启用详细日志记录：**  
   
  您需要如前面的步骤中所述启用日志记录，然后完成以下内容：  
   
-1.  从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的“系统设置”页，找到“用户定义”部分。  
+1.  从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的“系统设置”页，找到“用户定义”部分   。  
   
 2.  将 **ExecutionLogLevel** 更改为 **verbose**。 该字段是文本输入字段，其两个可能的值是 **verbose** 和 **normal**。  
   
@@ -82,11 +82,11 @@ ms.locfileid: "65619691"
   
 2.  连接到所需报表服务器。  
   
-3.  右键单击服务器名称并单击“属性”。 如果“属性”选项被禁用，请确认您是在使用管理权限运行 SQL Server Management Studio。  
+3.  右键单击服务器名称并单击“属性”  。 如果“属性”选项被禁用，请确认您是在使用管理权限运行 SQL Server Management Studio。  
   
 4.  单击 **“日志记录”** 页。  
   
-5.  选择“启用报表执行日志记录” 。  
+5.  选择“启用报表执行日志记录”  。  
   
  **启用详细日志记录：**  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65619691"
   
 1.  在 **“服务器属性”** 对话框中，单击 **“高级”** 页。  
   
-2.  在“用户定义”部分中，将 ExecutionLogLevel 更改为 verbose。 该字段是文本输入字段，其两个可能的值是 **verbose** 和 **normal**。  
+2.  在“用户定义”部分中，将 ExecutionLogLevel 更改为 verbose    。 该字段是文本输入字段，其两个可能的值是 **verbose** 和 **normal**。  
   
 ##  <a name="bkmk_executionlog3"></a> 日志字段 (ExecutionLog3)  
  此视图在基于 XML 的 **AdditionalInfo** 列中添加了其他性能诊断节点。 AdditionalInfo 列包含 1 对多的其他字段的 XML 结构信息。 下面是一个示例 Transact SQL 语句，从视图 ExecutionLog3 检索行。 该示例假定报表服务器数据库名为 **ReportServer**：  

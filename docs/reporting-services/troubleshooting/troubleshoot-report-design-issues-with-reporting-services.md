@@ -9,10 +9,10 @@ ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573844"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>解决 Reporting Services 报表设计问题
@@ -26,7 +26,7 @@ ms.locfileid: "65573844"
   
 直接添加到设计图面的文本框只能显示数据集的聚合值。  
   
-若要验证文本框的父容器，请选择文本框，在“属性”窗格中滚动到 **“父级”**。   
+若要验证文本框的父容器，请选择文本框，在“属性”窗格中滚动到 **“父级”** 。   
   
 如果需要显示数据集中每个值的文本框，请使用数据区域，例如表或矩阵。 默认情况下，表或矩阵中的每个单元格都包含一个文本框。 将数据集字段拖到每个单元格中。   
   

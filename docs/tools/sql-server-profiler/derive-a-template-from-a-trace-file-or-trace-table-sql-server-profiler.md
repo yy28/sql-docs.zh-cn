@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f2f0cbac8ccc6ebbf53227622b4b3650aa72dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712298"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>从跟踪文件或跟踪表派生模板 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47624298"
   
 1.  打开要从其派生模板的跟踪文件或跟踪表。 有关详细信息，请参阅[打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或[打开跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)。  
   
-2.  在 **“文件”** 菜单上，指向 **“另存为”**，再单击 **“跟踪模板”**。  
+2.  在 **“文件”** 菜单上，指向 **“另存为”** ，再单击 **“跟踪模板”** 。  
   
-3.  键入名称或从列表中选择一个名称。 单击“确定” 。  
+3.  键入名称或从列表中选择一个名称。 单击“确定”  。  
   
 > [!NOTE]  
 >  如果选择现有模板文件，系统将会询问您是否希望覆盖现有文件。  

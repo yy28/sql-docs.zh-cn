@@ -9,10 +9,10 @@ ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ecee87ddf31314b8e54c98148ab0570db08a1caf
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578500"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
@@ -37,11 +37,11 @@ ms.locfileid: "65578500"
 
 ![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
-1.  右键单击类别轴，然后单击“水平轴属性”。   
+1.  右键单击类别轴，然后单击“水平轴属性”  。   
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  在“水平轴属性”对话框 >“轴选项”选项卡中，将“间隔”设置为“1”，以显示每个类别组标签。 若要在 x 轴上显示所有其他类别组标签，请键入 **2**。 
+2.  在“水平轴属性”  对话框 >“轴选项”  选项卡中，将“间隔”  设置为“1”  ，以显示每个类别组标签。 若要在 x 轴上显示所有其他类别组标签，请键入 **2**。 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -60,7 +60,7 @@ ms.locfileid: "65578500"
 
 1.  在报表设计视图中，单击图表，然后选择水平轴标签。
 
-3. 在“属性”窗格中，将 LabelInterval 设置为“1”。
+3. 在“属性”窗格中，将 LabelInterval 设置为“1”  。
 
     ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
@@ -76,9 +76,9 @@ ms.locfileid: "65578500"
 
 默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将轴间隔设置为“自动”。此过程说明如何将其设置回默认值。 
   
-1.  右键单击要更改的图表轴，然后单击 **“轴属性”**。 
+1.  右键单击要更改的图表轴，然后单击 **“轴属性”** 。 
   
-2.  在“水平轴属性”对话框 >“轴选项”选项卡中，将“间隔”设置为“自动”。该图表将显示适合该轴的最佳类别标签数。  
+2.  在“水平轴属性”  对话框 >“轴选项”  选项卡中，将“间隔”  设置为“自动”  。该图表将显示适合该轴的最佳类别标签数。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -14,10 +14,10 @@ ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 00bf03cedffd985726eb10e1c048132c415b241e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570560"
 ---
 # <a name="secure-folders"></a>保护文件夹
@@ -27,7 +27,7 @@ ms.locfileid: "65570560"
   
  安全性较低的文件夹可用来存储希望易于访问的报表。  
   
- 文件夹安全性构成了项级安全性的基础，其基点是报表服务器文件夹层次结构的根节点（即主文件夹）。 由于安全性是可继承的，因此，建议您对主文件夹设置限制相当严格的安全策略。 在主文件夹角色分配中使用“浏览者”角色，即可通过提供只读访问来做到这一点。  
+ 文件夹安全性构成了项级安全性的基础，其基点是报表服务器文件夹层次结构的根节点（即主文件夹）。 由于安全性是可继承的，因此，建议您对主文件夹设置限制相当严格的安全策略。 在主文件夹角色分配中使用“浏览者”角色，即可通过提供只读访问来做到这一点  。  
   
 ## <a name="tasks-and-folder-access"></a>任务和文件夹访问权限  
  在为文件夹创建角色分配时，请考虑下表中列出的任务：  

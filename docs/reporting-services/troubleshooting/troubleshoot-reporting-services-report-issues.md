@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573880"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>排查 Reporting Services 报表问题
@@ -32,7 +32,7 @@ ms.locfileid: "65573880"
 ## <a name="view-the-call-stack-for-report-processing-error-messages-on-the-report-server"></a>在报表服务器上查看报表处理错误消息的调用堆栈  
 在报表管理器中查看已发布的报表时，您可能会看到一条指示常规处理或呈现错误的错误消息。 若要查看详细信息，可以查看调用堆栈。   
   
-若要查看调用堆栈，请用本地管理员凭据登录到报表服务器，右键单击“报表管理器”页，然后单击“查看源”。 调用堆栈会提供有关错误消息的详细上下文。  
+若要查看调用堆栈，请用本地管理员凭据登录到报表服务器，右键单击“报表管理器”页，然后单击“查看源”  。 调用堆栈会提供有关错误消息的详细上下文。  
   
 ## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 验证查询和凭据  
 在将复杂查询包含在报表中之前，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 进行验证。   

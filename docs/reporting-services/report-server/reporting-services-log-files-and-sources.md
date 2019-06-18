@@ -16,10 +16,10 @@ ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a0f6270fc40d4a22db2d8b03deba8a53e57fbf6
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620311"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 日志文件和来源
@@ -38,7 +38,7 @@ ms.locfileid: "65620311"
 |[Windows 应用程序日志](../../reporting-services/report-server/windows-application-log.md)|Microsoft Windows 应用程序日志包含报表服务器事件的有关信息。|  
 |Windows 性能日志|Windows 性能日志包含报表服务器的性能数据。 您可以创建性能日志，然后选择计数器来确定要收集的数据。 有关详细信息，请参阅 [Monitoring Report Server Performance](../../reporting-services/report-server/monitoring-report-server-performance.md)。|  
 |SQL Server 安装日志文件|在安装过程中还会创建日志文件。 如果安装失败，或虽然成功但显示警告消息或其他消息，您可以检查日志文件以排除问题。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。|  
-|IIS 日志|由 Microsoft Internet Information Services (IIS) 创建的日志文件。 有关详细信息，请参阅[如何启用登录 Internet 信息服务 (IIS)](https://support.microsoft.com/kb/313437) (https://support.microsoft.com/kb/313437)。|  
+|IIS 日志|由 Microsoft Internet Information Services (IIS) 创建的日志文件。 有关详细信息，请参阅[如何启用登录 Internet 信息服务 (IIS)](https://support.microsoft.com/kb/313437) (https://support.microsoft.com/kb/313437) 。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

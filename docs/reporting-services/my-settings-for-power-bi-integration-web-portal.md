@@ -13,17 +13,17 @@ ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7535b16e731bc74df98f853156214abcfbe5961f
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503720"
 ---
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>我的 Power BI 集成（Web 门户）设置
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-单个用户使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中的“我的设置”页来管理其 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 登录。 当执行步骤以将报表项固定时，将自动提示你登录。  但是，如果需要手动登录或者需要注销，可以使用“我的设置”页。如果“我的设置”菜单选项不可见，则报表服务器未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成。  有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
+单个用户使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中的“我的设置”页来管理其 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 登录  。 当执行步骤以将报表项固定时，将自动提示你登录。  但是，如果需要手动登录或者需要注销，可以使用“我的设置”页  。如果“我的设置”菜单选项不可见，则报表服务器未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成  。  有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
   
 ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "65503720"
    
  ![ssRS_WebPortal_PowerBI_Notification](../reporting-services/media/ssrs-webportal-powerbi-notification.png)    
    
-通过“我的设置”页再次登录后，[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板中的磁贴才会刷新。  
+通过“我的设置”页再次登录后，[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板中的磁贴才会刷新  。  
   
 ![ssRS_WebPortal_PowerBI_SignIn_Again](../reporting-services/media/ssrs-webportal-powerbi-signin-again.png)  
   

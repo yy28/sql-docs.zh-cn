@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bf79a9f1c6790abfb1a2435e533aa0847abbd3b6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9f2a3c9db568d6c6cddc71ec221f68306acb7f22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62741690"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>使用 URL 访问集成 Reporting Services - Web 应用程序
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 访问是为实现通过网络访问单独报表而专门设计的。 此类型的访问最适合于将报表查看和导航集成到自定义 Web 应用程序中。 为了在 Web 应用程序中使用 URL 访问，您可以：  
@@ -30,7 +30,7 @@ ms.locfileid: "51813980"
 -   使用窗体 POST 方法并使用窗体字段将查询字符串参数传递到报表服务器 URL。  
   
 ## <a name="url-access-through-direct-addressing"></a>通过直接寻址进行 URL 访问  
- 若要使用某一 URL 访问某个报表服务器或报表服务器数据库项，只需从某一 Web 浏览器或应用程序内提供该 URL 地址。 还可以向 URL 提供可能影响所访问的报表或资源的外观的参数。 URL 可以通过 Web 浏览器的地址栏以某一报表服务器为目标，或者 URL 可以是作为更大的 Web 应用程序或门户的一部分的 IFrame 的来源。 您可以在门户的不同网页上包括指向报表的超链接，以及以报表的特定框架为目标或在这一过程中打开新的浏览器窗口。  
+ 若要使用某一 URL 访问某个报表服务器或报表服务器数据库项，只需从某一 Web 浏览器或应用程序内提供该 URL 地址。 还可以向 URL 提供可能影响所访问的报表或资源的外观的参数。 URL 可以通过 Web 浏览器的地址栏以某一报表服务器为目标，或者 URL 可以是作为更大的 Web 应用程序或门户的一部分的 IFrame 的来源  。 您可以在门户的不同网页上包括指向报表的超链接，以及以报表的特定框架为目标或在这一过程中打开新的浏览器窗口。  
   
  在以下示例中，超链接以名为“main”的框架为目标，该框架可能不同于包括该超链接的框架。 该超链接可能是 Web 门户的一部分。  
   
@@ -41,7 +41,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
 </a>  
 ```  
   
- 在上例中，设备信息设置 LinkTarget 与值“main”一起传递到 URL 的查询字符串中。 这确保报表中的所有钻取超链接也以名为“main”的框架为目标。  
+ 在上例中，设备信息设置 LinkTarget 与值“main”一起传递到 URL 的查询字符串中  。 这确保报表中的所有钻取超链接也以名为“main”的框架为目标。  
   
  有关设备信息设置的详细信息，请参阅[将设备信息设置传递给呈现扩展插件](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
   

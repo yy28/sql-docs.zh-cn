@@ -10,14 +10,14 @@ helpviewer_keywords:
 - debugging delivery extensions [Reporting Services]
 - troubleshooting [Reporting Services], delivery extensions
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c6a7bb7b306b3e00d0ed45aa03d42cf4637c4708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1abe30a462e8bf303b0171dbeeb82c407c80ca2a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709031"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193741"
 ---
 # <a name="debugging-delivery-extension-code"></a>调试传递扩展插件代码
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一些可以帮助分析传递扩展插件代码和查找其中错误的调试工具。 哪个工具效果最佳取决于您试图完成的任务。 此示例使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  
@@ -32,15 +32,15 @@ ms.locfileid: "47709031"
   
 4.  导航到 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 和传递扩展插件项目，并在代码中设置一些断点。  
   
-5.  在传递扩展插件项目的窗口仍保持活动状态的同时，在“调试”菜单中单击“附加到进程”。  
+5.  在传递扩展插件项目的窗口仍保持活动状态的同时，在“调试”菜单中单击“附加到进程”   。  
   
-     “附加到进程”对话框会打开。  
+     “附加到进程”对话框会打开  。  
   
-6.  从进程列表中，选择 aspnet_wp.exe 进程（如果应用程序是在 IIS 6.0 中部署的，请选择 w3wp.exe），然后单击“附加”。  
+6.  从进程列表中，选择 aspnet_wp.exe 进程（如果应用程序是在 IIS 6.0 中部署的，请选择 w3wp.exe），然后单击“附加”  。  
   
 7.  使用传递扩展插件定义新订阅。 您最可能使用报表管理器或 SOAP API。 这将调用调试器并执行对应于断点的代码。  
   
-8.  使用 F11 键分步执行代码。 有关使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 进行调试的详细信息，请参阅 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 文档。  
+8.  使用 F11 键分步执行代码  。 有关使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 进行调试的详细信息，请参阅 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 文档。  
   
 ## <a name="see-also"></a>另请参阅  
  [实现传递扩展插件](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

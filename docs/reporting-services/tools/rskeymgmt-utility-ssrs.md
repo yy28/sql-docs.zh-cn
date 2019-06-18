@@ -20,14 +20,14 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f64ee56ddbd88f2d981d35fb24d9e156b734ff88
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571476"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
-  提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例。  
+  提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -147,7 +147,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>联接同一台计算机上的报表服务器实例  
  可以从安装在同一台计算机上的多个报表服务器实例创建扩展部署。 如果要联接本地安装的报表服务器实例，请不要设置 **-u** 和 **-v** 参数。 仅当联接远程计算机中的实例时才需使用 **-u** 和 **-v** 参数。 如果指定这些参数，您将收到以下错误：“用户凭据不能用于本地连接”。  
   
- 以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中，\<initializedinstance> 是已初始化为使用报表服务器数据库的实例名称，而 \<newinstance> 是要添加到部署的实例名称：  
+ 以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中，\<initializedinstance> 是已初始化为使用报表服务器数据库的实例名称，而 \<newinstance> 是要添加到部署的实例名称   ：  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  

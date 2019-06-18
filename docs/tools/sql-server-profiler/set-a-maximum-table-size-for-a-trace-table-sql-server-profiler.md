@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9237726570f35d913f27b24c69eebb1e58f8e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737201"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712523"
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>设置跟踪表的最大表大小 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,18 +27,18 @@ ms.locfileid: "47737201"
   
 ### <a name="to-set-a-maximum-table-size-for-a-trace-table"></a>设置跟踪表的最大表大小  
   
-1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 SQL Server 实例。  
+1.  在 **“文件”** 菜单上，单击 **“新建跟踪”** ，再连接到 SQL Server 实例。  
   
      将出现“跟踪属性”对话框。 **“跟踪属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果选择“建立连接后立即开始跟踪”，则不会显示“跟踪属性”对话框，而是开始跟踪。 若要关闭此设置，请在“工具”菜单上，单击“选项”，然后清除“建立连接后立即开始跟踪”复选框。  
+    >  如果选择“建立连接后立即开始跟踪”  ，则不会显示“跟踪属性”  对话框，而是开始跟踪。 若要关闭此设置，请在“工具”  菜单上，单击“选项”  ，然后清除“建立连接后立即开始跟踪”  复选框。  
   
 2.  在 **“跟踪名称”** 框中，键入跟踪的名称。  
   
-3.  在“模板名称”列表中，选择跟踪模板。  
+3.  在“模板名称”  列表中，选择跟踪模板。  
   
-4.  选中“保存到表”复选框。  
+4.  选中“保存到表”  复选框。  
   
 5.  连接到要存储跟踪的服务器。  
   

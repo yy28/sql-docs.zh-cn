@@ -12,14 +12,14 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d225f20cae31e9f462d7f7c85c7109a3cecf43d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 30ebdf11faf4780e8091f44ef1460d8980e82505
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812957"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012189"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>使用 URL 访问集成 Reporting Services - Windows 应用程序
   尽管可以针对 Web 环境优化对报表服务器的 URL 访问，但也可以使用 URL 访问将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表嵌入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序中。 不过，涉及 Windows 窗体的 URL 访问仍然要求您使用 Web 浏览器技术。 您可以将以下集成方案用于 URL 访问和 Windows 窗体：  
@@ -29,7 +29,7 @@ ms.locfileid: "51812957"
 -   使用 Windows 窗体上的 <xref:System.Windows.Forms.WebBrowser> 控件显示报表。  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>从 Windows 窗体启动 Internet Explorer  
- 可以使用 <xref:System.Diagnostics.Process> 类访问正在计算机上运行的进程。 对于启动、停止、控制和监视应用程序等任务，<xref:System.Diagnostics.Process> 类是一个很有用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 构造。 若要查看报表服务器数据库中的特定报表，可以启动 IExplore 进程，同时将 URL 传递给报表。 以下代码示例可用于在用户单击 Windows 窗体上的某个按钮时，启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 并传递特定的报表 URL。  
+ 可以使用 <xref:System.Diagnostics.Process> 类访问正在计算机上运行的进程。 对于启动、停止、控制和监视应用程序等任务，<xref:System.Diagnostics.Process> 类是一个很有用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 构造。 若要查看报表服务器数据库中的特定报表，可以启动 IExplore 进程，同时将 URL 传递给报表  。 以下代码示例可用于在用户单击 Windows 窗体上的某个按钮时，启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 并传递特定的报表 URL。  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,15 +87,15 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中创建一个新的 Windows 应用程序。  
   
-2.  找到“工具箱”对话框中的 <xref:System.Windows.Forms.WebBrowser> 控件。  
+2.  找到“工具箱”对话框中的 <xref:System.Windows.Forms.WebBrowser> 控件  。  
   
-     如果不显示“工具箱”，可以通过单击“视图”菜单项并选择“工具箱”来访问它。  
+     如果不显示“工具箱”，可以通过单击“视图”菜单项并选择“工具箱”来访问它    。  
   
 3.  将 <xref:System.Windows.Forms.WebBrowser> 控件拖到 Windows 窗体的设计图面上。  
   
      名为 webBrowser1 的 <xref:System.Windows.Forms.WebBrowser> 控件被添加到窗体中  
   
- 可以通过调用其 Navigate 方法将 <xref:System.Windows.Forms.WebBrowser> 控件定向到 URL。 可以在运行时将特定的 URL 访问字符串分配给 <xref:System.Windows.Forms.WebBrowser> 控件，如下面的示例所示。  
+ 可以通过调用其 Navigate 方法将 <xref:System.Windows.Forms.WebBrowser> 控件定向到 URL  。 可以在运行时将特定的 URL 访问字符串分配给 <xref:System.Windows.Forms.WebBrowser> 控件，如下面的示例所示。  
   
 ```vb  
 Dim url As String = "https://localhost/reportserver?/" & _  

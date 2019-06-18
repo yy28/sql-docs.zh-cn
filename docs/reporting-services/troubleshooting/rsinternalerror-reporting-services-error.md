@@ -11,10 +11,10 @@ ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e7257e1c7a24786e580ce8d2c2da9bd52ac5b86c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573998"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 错误
@@ -37,7 +37,7 @@ ms.locfileid: "65573998"
 ## <a name="user-action"></a>用户操作  
  若要确定出现此消息的具体原因，请查看位于以下目录的报表服务器日志文件：\Microsoft SQL Server\MSRS12.\<实例名>\Reporting Services\LogFiles。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
- 若要查看调用堆栈，请右键单击出现错误的页，然后指向“查看源”。 必须在出现该错误的同一计算机上具有管理员权限，才可查看调用堆栈。  
+ 若要查看调用堆栈，请右键单击出现错误的页，然后指向“查看源”  。 必须在出现该错误的同一计算机上具有管理员权限，才可查看调用堆栈。  
   
  如果没有其他可用信息，请再次尝试请求。  
   

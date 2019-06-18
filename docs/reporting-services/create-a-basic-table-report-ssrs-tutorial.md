@@ -13,15 +13,15 @@ ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103306"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>创建基本表报表（SSRS 教程）
 
-在本教程中，将使用 Visual Studio / SQL Server Data Tools (SSDT) 中的报表设计器工具。 你将创建 SQL Server Reporting Services (SSRS) 分页报表。 报表包含通过 AdventureWorks2016 数据库的数据创建的查询表。
+在本教程中，将使用 Visual Studio / SQL Server Data Tools (SSDT) 中的报表设计器  工具。 你将创建 SQL Server Reporting Services (SSRS) 分页报表。 报表包含通过 AdventureWorks2016 数据库的数据创建的查询表。
 
 在本教程中，你将学习如何：
   
@@ -41,7 +41,7 @@ ms.locfileid: "65103306"
 - [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server 数据库引擎。  
 - SQL Server 2016 Reporting Services 或更高版本 (SSRS)。
 - AdventureWorks2016 数据库。  有关详细信息，请参阅 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。
-- 适用于 Visual Studio 的 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) 和 Reporting Services 扩展一同安装，以便访问报表设计器。
+- 适用于 Visual Studio 的 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) 和 Reporting Services 扩展一同安装，以便访问报表设计器  。
   
 还必须具有从 AdventureWorks2016 数据库检索数据的只读权限。
 

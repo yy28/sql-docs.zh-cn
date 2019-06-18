@@ -15,15 +15,15 @@ ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 48ff3b9485f4e8915299c4ad06709336e7031bfd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63013286"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 属性（“别名”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用“\<别名>属性”对话框中的“别名”页查看或指定别名连接字符串的元素。  
+  别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用“\<别名>属性”   对话框中的“别名”  页查看或指定别名连接字符串的元素。  
   
 ## <a name="options"></a>选项  
  **别名**  

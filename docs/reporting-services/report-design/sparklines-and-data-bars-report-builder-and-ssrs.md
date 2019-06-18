@@ -12,10 +12,10 @@ ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0444970a0d4c95ab44a565ff33aa49cfc91f60
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580595"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>迷你图和数据条（报表生成器和 SSRS）
@@ -69,7 +69,7 @@ ms.locfileid: "65580595"
   在您向表或矩阵添加迷你图或数据条时，这称作在一个数据区域内“嵌套”另一个数据区域。 嵌套意味着提供给迷你图或数据条的数据由表或矩阵所基于的数据集控制，或者由将其放置于表或矩阵中的位置控制。 有关详细信息，请参阅 [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
   
 ##  <a name="ConvertSparklinetoChart"></a> 将迷你图或数据条转换为完整图表  
- 因为迷你图和数据条只是一种图表，所以，在你决定想要具备整个图表功能时，可以通过右键单击图表并单击“转换为整个图表”，将迷你图或数据条转换为整个图表。 执行此操作时，将自动添加轴线、标签、刻度线和图例。  
+ 因为迷你图和数据条只是一种图表，所以，在你决定想要具备整个图表功能时，可以通过右键单击图表并单击“转换为整个图表”  ，将迷你图或数据条转换为整个图表。 执行此操作时，将自动添加轴线、标签、刻度线和图例。  
   
 > [!NOTE]  
 >  通过一次单击不能将整个图表转换为迷你图或数据栏。 但是，只需通过删除不在迷你图和数据条中的所有图表元素，即可从完整图表生成迷你图或数据条。  

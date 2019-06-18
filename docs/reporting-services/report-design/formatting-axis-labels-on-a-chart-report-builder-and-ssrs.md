@@ -26,16 +26,16 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575630"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>设置图表上轴标签的格式（报表生成器和 SSRS）
   基于坐标的图表类型（柱形图、条形图、面积图、点状图、折线图和范围图）有两个用于分类和显示数据关系的轴。 不同类型的格式设置将应用于每个轴。  
   
- 可以使用 **“轴属性”** 对话框或“属性”窗格来设置轴的格式。 右键单击要设置其格式的轴，然后单击“轴属性”可以更改轴文本的值，数值格式和日期格式，主要和次要刻度线，标签的自动调整方式以及轴线的粗细、颜色和样式。 若要更改轴标题的值，请右键单击轴标题，然后单击“轴标题属性”。  
+ 可以使用 **“轴属性”** 对话框或“属性”窗格来设置轴的格式。 右键单击要设置其格式的轴，然后单击“轴属性”  可以更改轴文本的值，数值格式和日期格式，主要和次要刻度线，标签的自动调整方式以及轴线的粗细、颜色和样式。 若要更改轴标题的值，请右键单击轴标题，然后单击“轴标题属性”  。  
   
  轴标签标识图表上的主要间隔。 默认情况下，图表使用一种算法来确定标签应如何以最佳方式放置在轴上，以避免文本重叠。  
   

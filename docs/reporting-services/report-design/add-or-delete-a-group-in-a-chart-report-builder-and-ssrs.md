@@ -9,14 +9,14 @@ ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b9c8e747ca0ca003e531381a6713b1a083a47d57
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581962"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在图表中添加或删除组（报表生成器和 SSRS）
-在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，单击图表数据区域以显示“图表数据”窗格。 通过将数据集字段拖到 **“类别组”** 和 **“序列组”** 区域来创建组。 若要添加嵌套组，请向该区域添加多个字段。  
+在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，单击图表数据区域以显示“图表数据”  窗格。 通过将数据集字段拖到 **“类别组”** 和 **“序列组”** 区域来创建组。 若要添加嵌套组，请向该区域添加多个字段。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "65581962"
   
 1.  在报表设计图面上，单击图表中的任意位置以将其选中。 此时将显示“图表数据”窗格  。  
   
-2.  在“类别组”区域中右键单击该组，然后单击“类别组属性”。  
+2.  在“类别组”  区域中右键单击该组，然后单击“类别组属性”  。  
   
 3.  添加或删除组表达式、筛选器、排序表达式和组变量。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65581962"
   
 1.  在报表设计图面上，单击图表中的任意位置以将其选中。 此时将显示“图表数据”窗格  。  
   
-2.  在“序列组”区域中右键单击该组，然后单击“序列组属性”。  
+2.  在“序列组”  区域中右键单击该组，然后单击“序列组属性”  。  
   
 3.  添加或删除组表达式、筛选器、排序表达式和组变量。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65581962"
   
 1.  在报表设计图面上，单击图表中的任意位置以将其选中。 此时将显示“图表数据”窗格  。  
   
-2.  在“类别组”或“序列组”区域中右键单击该组，然后单击“删除”。  
+2.  在“类别组”  或“序列组”  区域中右键单击该组，然后单击“删除”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

@@ -9,10 +9,10 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570857"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "65570857"
  报表服务器项包括你可以发布、上传或保存到报表服务器的分页和移动报表、KPI、共享数据源、共享数据集和其他项。 在本机报表服务器上的报表服务器分层文件夹结构中对项进行组织，或者在 SharePoint 站点上的 SharePoint 内容库中对项进行组织。 有关详细信息，请参阅[报表服务器内容管理（SSRS 本机模式）](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)。  
   
 ### <a name="folders"></a>文件夹
- 在本机报表服务器上，文件夹提供了报表服务器中存储的所有可寻址项的分层形式的导航结构和路径。 您使用文件夹层次结构以及站点和文件夹权限来帮助控制对报表服务器项的访问（通称为 *“项级安全性”*）。 默认情况下，您为特定文件夹定义的角色分配由文件夹层次结构中的子文件夹继承。 如果您将特定的角色分配给某一文件夹，则继承规则将不再适用。 文件夹结构由名为 **“主文件夹”** 的根节点和支持可选的 **“我的报表”** 功能的保留文件夹组成。 在浏览器中，该根节点是报表服务器虚拟目录的名称，例如 `https://myreportserver/reports`。 有关更多信息，请参见 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
+ 在本机报表服务器上，文件夹提供了报表服务器中存储的所有可寻址项的分层形式的导航结构和路径。 您使用文件夹层次结构以及站点和文件夹权限来帮助控制对报表服务器项的访问（通称为 *“项级安全性”* ）。 默认情况下，您为特定文件夹定义的角色分配由文件夹层次结构中的子文件夹继承。 如果您将特定的角色分配给某一文件夹，则继承规则将不再适用。 文件夹结构由名为 **“主文件夹”** 的根节点和支持可选的 **“我的报表”** 功能的保留文件夹组成。 在浏览器中，该根节点是报表服务器虚拟目录的名称，例如 `https://myreportserver/reports`。 有关更多信息，请参见 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
   
  在 SharePoint 站点上，在文档库和内容库中使用 SharePoint 文件夹来对项进行组织。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "65570857"
 ### <a name="report-data-connections-and-data-sources"></a>报表数据连接和数据源 
  当运行查询或处理报表时，报表使用数据连接来检索报表的数据。 在报表定义中，数据连接与数据源相同。 您可以从内置数据连接类型的列表中进行选择，以连接到关系数据库、多维数据库、Web 服务或一些其他数据源。 当描述数据连接时，需要使用以下术语。  
   
--   **数据连接。** 也称为“数据源”。 数据连接包含名称和依赖于连接类型的连接属性。 根据设计，数据源连接不包含凭据。 数据连接不指定从外部数据源中检索哪些数据。 为此，请在创建数据集时指定查询。  
+-   **数据连接。** 也称为“数据源”  。 数据连接包含名称和依赖于连接类型的连接属性。 根据设计，数据源连接不包含凭据。 数据连接不指定从外部数据源中检索哪些数据。 为此，请在创建数据集时指定查询。  
   
 -   **数据源定义。** 包含报表数据源的 XML 表示形式的文件。 在发布报表之后，其数据源作为数据源定义（独立于报表定义）保存到报表服务器或 SharePoint 站点上。 例如，报表服务器管理员可以更新连接字符串或凭据。 在本机报表服务器上，文件类型为 .rds。 在 SharePoint 站点上，文件类型为 .rsds。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "65570857"
  有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ### <a name="report-parameters"></a>报表参数 
- 报表参数是报表定义的一部分。 您可以向 Reporting Services 分页和移动报表添加参数，以便链接相关报表、控制报表外观、筛选报表数据或者将报表的作用域缩小到特定用户或位置。 在将分页报表发布到本机报表服务器或 SharePoint 站点时，报表参数将另存为单独的报表服务器项。 可以不通过报表定义单独管理参数。 若要为同一报表创建多组参数，请创建 *“链接报表”*。  
+ 报表参数是报表定义的一部分。 您可以向 Reporting Services 分页和移动报表添加参数，以便链接相关报表、控制报表外观、筛选报表数据或者将报表的作用域缩小到特定用户或位置。 在将分页报表发布到本机报表服务器或 SharePoint 站点时，报表参数将另存为单独的报表服务器项。 可以不通过报表定义单独管理参数。 若要为同一报表创建多组参数，请创建 *“链接报表”* 。  
   
 ### <a name="report-items"></a>报表项 
  报表项是 Reporting Services 分页报表定义中的一个内部概念，但也是基本概念。 报表项的属性适用于数据区域、地图、文本框、图像和您添加到报表的其他设计元素。 通过理解报表项的属性，可帮助您设计自定义报表内容和外观。 例如，所有报表项都具有 Hidden 属性，以控制可见性。  

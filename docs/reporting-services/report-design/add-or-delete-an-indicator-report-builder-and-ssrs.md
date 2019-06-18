@@ -9,10 +9,10 @@ ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d9bb437acf4b30a4a497286e3b8c6adabd6b5291
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581914"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>添加或删除指示器（报表生成器和 SSRS）
@@ -43,30 +43,30 @@ ms.locfileid: "65581914"
   
 2.  在您的表或矩阵中插入列。 有关详细信息，请参阅[插入或删除列（报表生成器和 SSRS）](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)。  
   
-3.  或者，在 **“插入”** 选项卡上，单击 **“矩形”**，然后单击新列中的单元。  
+3.  或者，在 **“插入”** 选项卡上，单击 **“矩形”** ，然后单击新列中的单元。  
   
-4.  在 **“插入”** 选项卡上，单击 **“指示器”**，然后单击新列中的单元。  
+4.  在 **“插入”** 选项卡上，单击 **“指示器”** ，然后单击新列中的单元。  
   
      如果您向矩形添加了某一单元，则单击该单元。  
   
 5.  在 **“选择指示器样式”** 对话框的左窗格中，单击所需的指示器类型，然后单击指示器集。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 7.  单击指示器。 将打开 **“仪表数据”** 窗格。  
   
-8.  在“值”区域的“(未指定)”下拉列表中，单击要将其值显示为指示器的字段。  
+8.  在“值”  区域的“(未指定)”  下拉列表中，单击要将其值显示为指示器的字段。  
   
      此指示器配置为使用默认值。 默认情况下，指示器配置为使用百分比作为度量单位，并且百分比范围均匀分布在指示器的各成员之间，指示器提供的值使用最近组的作用域。  
   
 ## <a name="to-delete-an-indicator-to-a-table-or-matrix"></a>从表或矩阵删除指示器  
   
-1.  右键单击要删除的指示器，然后单击“删除”。  
+1.  右键单击要删除的指示器，然后单击“删除”  。  
   
     > [!NOTE]  
     >  指示器可能位于包含其他指示器或仪表的仪表面板内。 如果仪表面板包含多个项，请确保单击该指示器以删除它，而不要删除仪表面板。 如果单击并删除了仪表面板，则将删除该仪表面板以及其中的所有项。  
   
-2.  单击 **“删除”**。  
+2.  单击 **“删除”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

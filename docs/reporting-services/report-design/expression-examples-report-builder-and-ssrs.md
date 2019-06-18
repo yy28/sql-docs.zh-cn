@@ -24,10 +24,10 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 888d46c7c03b9665c64e54ddffed9d29c67afcad
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579144"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
@@ -95,7 +95,7 @@ ms.locfileid: "65579144"
     =Today()  
     ```  
   
--   使用 DateInterval 函数拉取某日期的特定部分。 以下是一些有效的 DateInterval 参数：
+-   使用 DateInterval 函数拉取某日期的特定部分  。 以下是一些有效的 DateInterval 参数  ：
 
     -   DateInterval.Second
     -   DateInterval.Minute
@@ -208,7 +208,7 @@ ms.locfileid: "65579144"
   
      如果文本框仅包含日期或数字，则应使用文本框的 Format 属性来应用格式设置，而不应在文本框中使用 **Format** 函数。  
   
--   Right、Len 和 InStr 函数对于返回子字符串十分有用，例如将 DOMAIN\\username 剪裁为用户名。 下面的表达式从名为 User 的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
+-   Right、Len 和 InStr 函数对于返回子字符串十分有用，例如将 DOMAIN\\username 剪裁为用户名      。 下面的表达式从名为 User  的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -233,7 +233,7 @@ ms.locfileid: "65579144"
   
     ```  
   
--   若要基于单个参数提供日期范围，可使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 中的 **Regex** 函数对更改现有字符串的格式很有用，例如设置电话号码格式。 以下表达式使用 **Replace** 函数将字段中的十位电话号码格式从“nnn-nnn-nnnn”更改为“(nnn) nnn-nnnn”：  
+-   若要基于单个参数提供日期范围，可使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 中的 **Regex** 函数对更改现有字符串的格式很有用，例如设置电话号码格式。 以下表达式使用 **Replace** 函数将字段中的十位电话号码格式从“nnn  -nnn  -nnnn  ”更改为“(nnn  ) nnn  -nnnn  ”：  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  

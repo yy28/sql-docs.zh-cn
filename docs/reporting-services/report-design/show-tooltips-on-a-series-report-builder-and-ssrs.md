@@ -9,10 +9,10 @@ ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 247a1ddeec14c38f2cc29d2d57df663c1c2368df
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581266"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>在序列上显示工具提示（报表生成器和 SSRS）
@@ -25,7 +25,7 @@ ms.locfileid: "65581266"
   
 ## <a name="to-specify-a-tooltip-on-each-data-point"></a>指定关于每个数据点的工具提示  
   
-1.  右键单击序列，或右键单击“值”区域中的字段，并单击“序列属性”。  
+1.  右键单击序列，或右键单击“值”区域中的字段，并单击“序列属性”   。  
   
 2.  单击 **“序列数据”** ，并为 **“工具提示”** 属性键入字符串或表达式。 可以使用任何特定于图表的关键字来表示图表上的另一个元素。 有关详细信息，请参阅 [设置图表上数据点的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   

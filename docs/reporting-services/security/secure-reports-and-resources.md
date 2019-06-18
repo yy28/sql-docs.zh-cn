@@ -15,14 +15,14 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570625"
 ---
 # <a name="secure-reports-and-resources"></a>保护报表和资源
-  您可以设置各个报表和资源的安全性，以控制用户对这些项的访问权限。 默认情况下，只有是“管理员”内置组的成员的用户，才能运行报表、查看资源、修改属性以及删除项。 所有其他用户必须具有为其创建的角色分配才能访问报表或资源。  
+  您可以设置各个报表和资源的安全性，以控制用户对这些项的访问权限。 默认情况下，只有是“管理员”内置组的成员的用户，才能运行报表、查看资源、修改属性以及删除项  。 所有其他用户必须具有为其创建的角色分配才能访问报表或资源。  
   
 ## <a name="role-based-access-to-reports-and-resources"></a>对报表和资源的基于角色的访问  
  若要授予报表和资源的访问权限，则可以允许用户从父文件夹继承现有的角色分配，也可以针对项本身创建新的角色分配。  

@@ -9,37 +9,37 @@ ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106064"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 课：指定连接信息 (Reporting Services)
 
 在第 1 课中，你向 Tutorial 项目添加了 [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] 分页报表。
   
-在本课中，将定义数据源，这是报表用于访问关系数据库或其他源中的数据的连接信息。
+在本课中，将定义数据源  ，这是报表用于访问关系数据库或其他源中的数据的连接信息。
 
 对于此报表，你将添加 AdventureWorks2016 示例数据库作为数据源。 本教程假定此数据库位于本地计算机上安装的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例中。  
 
 ## <a name="to-set-up-a-connection"></a>设置连接  
 
-1. 在“报表数据”窗格中，选择“新建” > “数据源”。 如果“报表数据”窗格不可见，则选择“视图”菜单 > “报表数据”。
+1. 在“报表数据”  窗格中，选择“新建”   > “数据源”  。 如果“报表数据”  窗格不可见，则选择“视图”  菜单 > “报表数据”  。
 
     ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
 
-    “数据源属性”对话框将打开，并显示“常规”部分。
+    “数据源属性”  对话框将打开，并显示“常规”  部分。
 
     ![“数据源属性”对话框](media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png)
 
-2. 在“名称”文本框中，键入“AdventureWorks2016”。
+2. 在“名称”  文本框中，键入“AdventureWorks2016”。
 
-3. 选择“嵌入连接”单选按钮。
+3. 选择“嵌入连接”  单选按钮。
 
-4. 在“类型”下拉选择框中，选择“Microsoft SQL Server”。
+4. 在“类型”  下拉选择框中，选择“Microsoft SQL Server”。
   
-5. 在“连接字符串”文本框中，键入以下字符串：
+5. 在“连接字符串”  文本框中，键入以下字符串：
 
     `Data source=localhost; initial catalog=AdventureWorks2016`
 
@@ -52,11 +52,11 @@ ms.locfileid: "65106064"
     >
     > 有关连接字符串的详细信息，可以参考下面的 `See also` 部分。
 
-6. 选择“凭据”选项卡，然后在“更改用于连接到数据源的凭据”部分下，选择“使用 Windows 身份验证(集成安全性)”单选按钮。
+6. 选择“凭据”  选项卡，然后在“更改用于连接到数据源的凭据”  部分下，选择“使用 Windows 身份验证(集成安全性)”  单选按钮。
 
-7. 若要完成该过程，请单击“确定”。
+7. 若要完成该过程，请单击“确定”  。
 
-报表设计器将数据源 AdventureWorks2016 添加至“报表数据”窗格。
+报表设计器将数据源 AdventureWorks2016 添加至“报表数据”  窗格。
 
 ![ssrs-adventureworks-datasource](media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png)
 

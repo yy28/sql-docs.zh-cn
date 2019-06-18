@@ -14,11 +14,11 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637438"
 ---
 # <a name="data-classification"></a>数据分类
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -71,7 +71,7 @@ SQLRETURN SQLGetDescField(
 > [!NOTE]
 > `nn nn``tt tt`，和`cc cc`是具有最低的地址处的最低有效字节存储的多字节整数。
 
-*`sensitivitylabel`* 并*`informationtype`* 是这两个窗体
+*`sensitivitylabel`* 并 *`informationtype`* 是这两个窗体
 
  `nn [n bytes name] ii [i bytes id]`
 
@@ -79,13 +79,13 @@ SQLRETURN SQLGetDescField(
 
  `nn nn [n sensitivityprops]`
 
-每个列 *(c)*， *n* 4 字节*`sensitivityprops`* 存在：
+每个列 *(c)* ， *n* 4 字节 *`sensitivityprops`* 存在：
 
  `ss ss tt tt`
 
-s-索引*`sensitivitylabels`* 数组，`FF FF`如果未标记为
+s-索引 *`sensitivitylabels`* 数组，`FF FF`如果未标记为
 
-t-索引*`informationtypes`* 数组，`FF FF`如果未标记为
+t-索引 *`informationtypes`* 数组，`FF FF`如果未标记为
 
 
 <br><br>

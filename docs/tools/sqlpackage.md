@@ -10,15 +10,15 @@ author: pensivebrian
 ms.author: broneill
 manager: craigg
 ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269918"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
-SqlPackage.exe 是一个命令行实用工具，可自动处理以下数据库开发任务：  
+SqlPackage.exe 是一个命令行实用工具，可自动处理以下数据库开发任务  ：  
   
 - [提取](#help-for-the-extract-action)：从活动的 SQL Server 或 Azure SQL 数据库创建数据库快照 (.dacpac) 文件。  
   
@@ -34,13 +34,13 @@ SqlPackage.exe 是一个命令行实用工具，可自动处理以下数据库�
   
 - [脚本](#script-parameters-and-properties)：创建 Transact-SQL 增量更新脚本，该脚本可更新目标的架构以匹配源的架构。  
   
-通过 SqlPackage.exe 命令行，可以指定这些操作以及特定于操作的参数和属性。  
+通过 SqlPackage.exe 命令行，可以指定这些操作以及特定于操作的参数和属性  。  
 
-[下载最新版本](sqlpackage-download.md)。 有关最新版本的详细信息，请参阅[发行说明](release-notes-sqlpackage.md)。
+[下载最新版本](sqlpackage-download.md)  。 有关最新版本的详细信息，请参阅[发行说明](release-notes-sqlpackage.md)。
   
 ## <a name="command-line-syntax"></a>命令行语法
 
-SqlPackage.exe 使用在命令行上指定的参数、属性和 SQLCMD 变量启动指定的操作。  
+SqlPackage.exe 使用在命令行上指定的参数、属性和 SQLCMD 变量启动指定的操作  。  
   
 ```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
@@ -227,7 +227,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 
 ### <a name="sqlcmd-variables"></a>SQLCMD 变量
 
-下表介绍可用于重写发布操作过程中使用的 SQL 命令 (sqlcmd) 变量的值的选项的格式。 命令行上指定的变量的值将重写分配给变量（例如，在发布配置文件中）的其他值。  
+下表介绍可用于重写发布操作过程中使用的 SQL 命令 (sqlcmd) 变量的值的选项的格式  。 命令行上指定的变量的值将重写分配给变量（例如，在发布配置文件中）的其他值。  
   
 |参数|，则“默认”|描述|  
 |-------------|-----------|---------------|  
@@ -312,7 +312,7 @@ SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件�
   
 ## <a name="deployreport-parameters-and-properties"></a>DeployReport 参数和属性
 
-SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表。  
+SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表  。  
   
 ### <a name="help-for-deployreport-action"></a>DeployReport 操作的帮助
 
@@ -444,7 +444,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
   
 ## <a name="driftreport-parameters"></a>DriftReport 参数
 
-SqlPackage.exe 报告操作创建自注册数据库注册以来已对其做出的更改的 XML 报表。  
+SqlPackage.exe 报告操作创建自注册数据库注册以来已对其做出的更改的 XML 报表  。  
   
 ### <a name="help-for-driftreport-action"></a>DriftReport 操作有关的帮助
 
@@ -471,7 +471,7 @@ SqlPackage.exe 报告操作创建自注册数据库注册以来已对其做出�
 
 ## <a name="script-parameters-and-properties"></a>脚本参数和属性
 
-SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本可更新目标数据库的架构以匹配源数据库的架构。  
+SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本可更新目标数据库的架构以匹配源数据库的架构  。  
   
 ### <a name="help-for-the-script-action"></a>有关脚本操作的帮助
 

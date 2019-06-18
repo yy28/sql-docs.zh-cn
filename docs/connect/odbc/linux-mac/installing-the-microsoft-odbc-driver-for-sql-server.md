@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 3550e17c8f4d6384ceafabb77aa9ca70cd80c44b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190668"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>安装 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -425,7 +425,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 
 2.  转到下载放置文件 `msodbcsql-11.0.2270.0.tar.gz` 的目录。 确保所拥有的 \*.tar.gz 文件与你的 Linux 版本匹配。 若要提取文件，请执行以下命令：`tar xvzf msodbcsql-11.0.2270.0.tar.gz`。  
   
-3.  转到 `msodbcsql-11.0.2270.0` 目录，你应在此处看到一个名为 install.sh 的文件。  
+3.  转到 `msodbcsql-11.0.2270.0` 目录，你应在此处看到一个名为 install.sh 的文件  。  
   
 4.  若要查看可用安装选项的列表，请执行以下命令： **./install.sh**。  
   
@@ -433,7 +433,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 6.  安装该驱动程序之前，请执行以下命令：`./install.sh verify`。 `./install.sh verify` 告的输出会报计算机中是否具有在 Linux 上支持 ODBC 驱动程序所需的软件。  
   
-7.  当你准备好在 Linux 上安装 ODBC 驱动程序时，请执行命令：`./install.sh install`。 如果需要指定安装命令（`bin-dir` 或 `lib-dir`），请在“安装”选项后指定该命令。  
+7.  当你准备好在 Linux 上安装 ODBC 驱动程序时，请执行命令：`./install.sh install`。 如果需要指定安装命令（`bin-dir` 或 `lib-dir`），请在“安装”选项后指定该命令  。  
   
 8.  查看许可协议之后，键入 **YES** 以继续安装。  
   

@@ -16,10 +16,10 @@ ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e5612bc9326a359a287501aedc5227436cc576eb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570869"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting 方法 - InitializeReportServer
@@ -57,7 +57,7 @@ public void InitializeReportServer(string InstallationID,
   
  必须对已能访问安全信息的报表服务器调用 *InitializeReportServer* 方法，以便此方法可以解密加密密钥。 然后，所产生的已加密的加密密钥将存储在报表服务器数据库中。  
   
- 如果在调用 InitializeReportServer 方法时报表服务器的 [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) 属性设置为 true ，则此方法成功返回，而不尝试对加密密钥进行加密。  
+ 如果在调用 InitializeReportServer 方法时报表服务器的 [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) 属性设置为 true ，则此方法成功返回，而不尝试对加密密钥进行加密  。  
   
 ## <a name="requirements"></a>要求  
  **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d910518c2811877920c1656b36a771ea6aebc61b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2f2d3a496cbe2b8adda02b5d7425e49c09f44c77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747195"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513309"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密密钥 - 删除和重新创建加密密钥
   删除和重新创建加密密钥不属于加密密钥例行维护活动。 您可以为了响应对报表服务器的特定威胁来执行这些任务，或者当无法访问报表服务器数据库时作为最后一种解决手段来执行这些任务。  
@@ -49,7 +49,7 @@ ms.locfileid: "47747195"
   
 2.  启动 Reporting Services 配置工具，再连接到要配置的报表服务器实例。  
   
-3.  在“加密密钥”页上，单击 **“更改”**。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  在“加密密钥”页上，单击 **“更改”** 。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  重新启动报表服务器 Windows 服务。 如果要为扩展部署重新创建加密密钥，请在所有实例上重新启动该服务。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47747195"
   
 1.  启动 Reporting Services 配置工具，再连接到要配置的报表服务器实例。  
   
-2.  单击 **“加密密钥”**，再单击 **“删除”**。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  单击 **“加密密钥”** ，再单击 **“删除”** 。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  重新启动报表服务器 Windows 服务。 对于扩展部署，应对所有报表服务器实例执行此操作。  
   

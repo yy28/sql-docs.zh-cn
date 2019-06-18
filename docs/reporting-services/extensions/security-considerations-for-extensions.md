@@ -10,21 +10,21 @@ helpviewer_keywords:
 - extensions [Reporting Services], security
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4d3cd9c1db8b2662d867a7f2885e611192401c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 73da0b40d845e8e2a692b969a119adb3cfce6ef1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741295"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193366"
 ---
 # <a name="security-considerations-for-extensions"></a>扩展插件的安全注意事项
   每种以公共语言运行时 (CLR) 为目标的应用程序都必须与 CLR 的安全系统进行交互。 当此类应用程序运行时，CLR 将自动对它进行计算，然后向它提供一组权限。 应用程序可能会继续运行，或者生成安全性异常，具体取决于应用程序所收到的权限。 针对特定报表服务器的安全策略配置文件中的本地安全设置和策略定义程序集接收的代码权限。  
   
  在请求权限前，您需要知道扩展插件代码计划使用的资源和保护的操作，并且还需要知道哪些权限保护这些资源和操作。 此外，还需要跟踪扩展插件组件调用的所有类库方法访问的所有资源。 有关详细信息，请参阅 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 开发人员指南中的“请求权限”。  
   
- 部署到报表服务器的扩展插件必须以完全信任方式运行，这意味着扩展插件需要是授予 FullTrust 权限集的代码组的一部分。 这还意味着根据为特定报表对其验证身份的用户，您的扩展插件可能还要具有对通过 CLR 提供的某些服务器资源和操作的访问权限。 有关详细信息，请参阅 [Reporting Services 中的代码访问安全性](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)。  
+ 部署到报表服务器的扩展插件必须以完全信任方式运行，这意味着扩展插件需要是授予 FullTrust 权限集的代码组的一部分  。 这还意味着根据为特定报表对其验证身份的用户，您的扩展插件可能还要具有对通过 CLR 提供的某些服务器资源和操作的访问权限。 有关详细信息，请参阅 [Reporting Services 中的代码访问安全性](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为其所有扩展插件强制 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 安全性。  

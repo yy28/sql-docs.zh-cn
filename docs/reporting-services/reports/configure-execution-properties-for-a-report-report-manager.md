@@ -13,10 +13,10 @@ ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 27508400b63e1fe0cc95b290130d9c122399be32
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570848"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>配置报表的执行属性（报表管理器）
@@ -34,15 +34,15 @@ ms.locfileid: "65570848"
   
  悬停在该报表之上，然后单击下拉箭头。  
   
-1.  在下拉菜单中，单击“管理”，然后选择“处理选项”选项卡。  
+1.  在下拉菜单中，单击“管理”，然后选择“处理选项”选项卡   。  
   
-2.  单击 **“通过执行快照呈现此报表”**，然后选择以下选项之一：  
+2.  单击 **“通过执行快照呈现此报表”** ，然后选择以下选项之一：  
   
-    -   如果要创建快照，则选择“使用下列计划创建报表执行快照”，再定义特定于报表的计划，或从“共享计划”列表中进行选择。  
+    -   如果要创建快照，则选择“使用下列计划创建报表执行快照”，再定义特定于报表的计划，或从“共享计划”列表中进行选择   。  
   
-    -   如果希望立即创建快照，请选择 **“在此页上单击‘应用’按钮后创建报表快照”**。  
+    -   如果希望立即创建快照，请选择 **“在此页上单击‘应用’按钮后创建报表快照”** 。  
   
-3.  单击 **“应用”**。  
+3.  单击 **“应用”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   

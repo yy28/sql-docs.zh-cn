@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9bc3a8c70cb1b37bda19d99ab6a79b23b03490c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 00f139a6b7b334e3a3e8254a742874cfc28145b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810337"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651253"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
 创建用于数据表的数据筛选器后，接下来要生成并运行网站应用程序。  
@@ -28,9 +28,9 @@ ms.locfileid: "47810337"
   
 2.   将鼠标悬停在“名称”列下的任意行上方。 鼠标光标将显示一个手形符号。  
   
-3.  选择“名称”列中的某个值。 随后将显示子报表以及经过筛选的相应数据。  
+3.  选择“名称”列中的某个值  。 随后将显示子报表以及经过筛选的相应数据。  
   
-4.  选择“返回到父报表”图标，在“ReportViewer”工具栏中导航回父报表。  
+4.  选择“返回到父报表”图标，在“ReportViewer”工具栏中导航回父报表    。  
   
 5.  关闭浏览器以退出。  
   

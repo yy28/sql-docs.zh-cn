@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571568"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什么是 SQL Server Reporting Services (SSRS)？
@@ -38,7 +38,7 @@ SSRS 解决方案灵活地将正确信息提供给正确用户。 用户可以�
 
 SQL Server Reporting Services 提供产品的更新套件：
 
-* 提供最新的“传统”分页报表，使用户可通过更新工具和用于创建报表的新功能创建新式报表。
+* 提供最新的“传统”分页报表，使用户可通过更新工具和用于创建报表的新功能创建新式报表  。
 * 具有响应式布局的**新移动报表** ，可适应不同设备和保存方式。
 * **新式 Web 门户** ，可在任何新式浏览器中查看。 在新门户中，可以组织和显示移动和分页 Reporting Services 报表及 KPI。 还可在门户中存储 Excel 工作薄。
 

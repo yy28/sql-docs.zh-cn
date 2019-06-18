@@ -11,10 +11,10 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ceab8f9d74aed85f51c91650d0efa1cb32f421e
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175653"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>配置本机模式报表服务器上的 SSL 连接
@@ -44,19 +44,19 @@ ms.locfileid: "66175653"
 ## <a name="bind-ssl-to-a-reporting-services-url-reservation"></a>将 SSL 绑定到 Reporting Services URL 预留  
  下列步骤不包括有关请求、生成、下载或安装证书的说明。 证书必须已安装并可供使用。 指定的证书属性、从中获取证书的证书颁发机构以及用于请求和安装证书的工具和实用工具都由您决定。  
   
- 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具绑定证书。 如果在本地计算机存储区正确安装了证书，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具将检测到该证书并将它显示在“Web 服务 URL”页和“Web 门户 URL”页上的“SSL 证书”列表中。  
+ 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具绑定证书。 如果在本地计算机存储区正确安装了证书，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具将检测到该证书并将它显示在“Web 服务 URL”  页和“Web 门户 URL”  页上的“SSL 证书”  列表中。  
   
 ### <a name="to-configure-a-report-server-url-for-ssl"></a>为 SSL 配置报表服务器 URL  
   
 1.  启动 Reporting Services 配置工具，然后连接到报表服务器。  
   
-2.  选择“Web 服务 URL”。  
+2.  选择“Web 服务 URL”  。  
   
-3.  展开 SSL 证书列表。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在本地存储区中检测服务器身份验证证书。 如果已安装证书，但在列表中看不到该证书，则可能需要重新启动服务。 可以使用 Reporting Services 配置工具中“报表服务器状态”页的“停止”和“启动”按钮重启服务（首页）。  
+3.  展开 SSL 证书列表。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在本地存储区中检测服务器身份验证证书。 如果已安装证书，但在列表中看不到该证书，则可能需要重新启动服务。 可以使用 Reporting Services 配置工具中“报表服务器状态”  页的“停止”  和“启动”  按钮重启服务（首页）。  
   
 4.  选择证书。  
   
-5.  单击 **“应用”**。  
+5.  单击 **“应用”** 。  
   
 6.  单击该 URL，验证其是否有效。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "66175653"
   
  Web 门户 URL 和报表服务器 Web 服务 URL 的 URL 预留都是单独配置的。 如果还要将 Web 门户配置为通过 SSL 加密的通道进行访问，请继续执行以下步骤：  
   
-1.  访问“Web 门户 URL”。
+1.  访问“Web 门户 URL”  。
   
-2.  选择“高级”。  
+2.  选择“高级”  。  
   
-3.  在“当前 Reporting Services 功能的多个 HTTPS 标识”中，选择“添加”。  
+3.  在“当前 Reporting Services 功能的多个 HTTPS 标识”  中，选择“添加”  。  
   
-4.  选择证书，选择“确定”，然后选择“应用”。  
+4.  选择证书，选择“确定”  ，然后选择“应用”  。  
   
 5.  测试该 URL，验证其是否有效。  
   

@@ -9,10 +9,10 @@ ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cdadc94bea1f3e303c89653cb9272cac244aeba
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580363"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隐藏第一页或最后一页的页眉或页脚（报表生成器和 SSRS）
@@ -25,7 +25,7 @@ ms.locfileid: "65580363"
   
 1.  在“设计”视图中打开报表。  
   
-2.  右键单击页面页眉，再单击“页眉属性”。 将打开 **“报表表头属性”** 对话框。  
+2.  右键单击页面页眉，再单击“页眉属性”  。 将打开 **“报表表头属性”** 对话框。  
   
 3.  确保未选中 **“显示此报表的页眉”** 。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "65580363"
   
 1.  在“设计”视图中打开报表。  
   
-2.  右键单击页面页脚，再单击“页脚属性”。 将打开 **“报表表尾属性”** 对话框。  
+2.  右键单击页面页脚，再单击“页脚属性”  。 将打开 **“报表表尾属性”** 对话框。  
   
 3.  确保未选中 **“显示此报表的页脚”** 。  
   

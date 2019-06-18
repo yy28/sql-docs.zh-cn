@@ -9,10 +9,10 @@ ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1c0f695bc5c7cb6d68935d23e918f19c1408d475
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570789"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>合并数据区域中的单元（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "65570789"
   
 1.  在报表设计图面的数据区域中，单击第一个要合并的单元。 按住鼠标左键，垂直或水平拖动以选择相邻单元。 所选单元会突出显示。  
   
-2.  右键单击所选单元并选择“合并单元”。 所选单元将合并为一个单元。  
+2.  右键单击所选单元并选择“合并单元”  。 所选单元将合并为一个单元。  
   
 3.  重复步骤 1 和 2 可合并数据区域中的其他相邻单元。  
   

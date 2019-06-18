@@ -6,23 +6,23 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9931244c938723665dffa24ac83b812cc3e4d237
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b6131f6bce9cb6d1c87a4a75215a906b6d097c7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289655"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63129741"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 数据模型非常简单。 将数据作为数据集的集合导入 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 。 不需要数据集之间的正式关系。 只要键值匹配，就可以在各个数据集之间进行查找。 日期/时间聚合通过移动报表运行时进行处理，即使数据集之间的日期/时间数据粒度不同，它们也会在不同的数据集之间进行匹配。   
   
 可以从以下两种类型的源导入数据：   
   
-* **本地 Excel 文件**：依次选择 Excel 文档，以及要导入的一个或多个工作表。 导入后，数据将存储在移动报表定义中。 若要刷新原始 Excel 文件中的数据，请使用 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]“数据”选项卡右上角的“刷新数据”命令。阅读有关[为 SSRS 移动报表准备 Excel 数据的详细信息](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
+* **本地 Excel 文件**：选择 Excel 文档，然后选择要导入的工作表。 导入后，数据将存储在移动报表定义中。 若要刷新原始 Excel 文件中的数据，请使用 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]“数据”选项卡右上角的“刷新数据”命令   。阅读有关[为 SSRS 移动报表准备 Excel 数据的详细信息](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
   
-* **SQL Server 移动报表发布服务器共享数据集**：浏览服务器上的已发布数据集列表，并选择要添加到移动报表的数据集。 基于服务器数据的移动报表始终与原始服务器数据集标尺连接，并反映该服务器上的数据的最新状态。 请参阅 [支持的数据源列表](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。   
+* **Microsoft SQL Server 移动报表发布服务器共享数据集**：浏览服务器上已发布数据集的列表，然后选择要添加到移动报表中的数据集。 基于服务器数据的移动报表始终与原始服务器数据集标尺连接，并反映该服务器上的数据的最新状态。 请参阅 [支持的数据源列表](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。   
   
   阅读有关 [从移动报表发布服务器中的共享数据集获取数据](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)的详细信息。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "56289655"
   
 ## <a name="connect-mobile-report-elements-to-data"></a>将移动报表元素连接到数据 ##  
   
-每个 Microsoft SQL Server 移动报表发布服务器元素都包含一个或多个数据设置。 例如，“径向仪表”元素包含两个数据设置：“主值”和“比较值”。 上述每个设置都精确指向特定数据集中一个字段（列）。   
+每个 Microsoft SQL Server 移动报表发布服务器元素都包含一个或多个数据设置。 例如，径向仪表元素包含两个数据设置：主值和比较值。 上述每个设置都精确指向特定数据集中一个字段（列）。   
   
 移动报表运行时将根据用户选择为该仪表提供聚合值。 请注意，可以将同一个径向仪表实例的比较值从不同数据集绑定到一个字段。   
   

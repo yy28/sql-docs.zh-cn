@@ -12,10 +12,10 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503066"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
@@ -37,8 +37,8 @@ ms.locfileid: "65503066"
 |图标或控件||若要|  
 |------------------------------|-|--------|  
 |![页面导航控件](../reporting-services/media/htmlviewer-pagenav.gif "页面导航控件")|**页面导航控件**|打开报表的第一页或最后一页，逐页浏览报表，以及打开报表中的特定页面。 若要查看特定页面，请键入相应的页码，再按 Enter。|  
-|![页面显示控件](../reporting-services/media/htmlviewer-pagesize.gif "页面显示控件")|**页面显示控件**|放大或缩小报表页的大小。 除了按比例更改外，还可以选择“页宽”，以使报表页的水平宽度适应浏览器窗口大小，或选择“整页”，以使报表的垂直高度适应浏览器窗口大小。 **Internet Explorer 5.5 和更高版本支持** “缩放” [!INCLUDE[msCoName](../includes/msconame-md.md)] 选项。|  
-|![搜索字段](../reporting-services/media/htmlviewer-search.gif "搜索字段")|**搜索字段**|通过键入要查找的单词或短语（最长不超过 256 个字符）在报表中搜索内容。 搜索不区分大小写，将从当前选择的页或区域开始。 搜索操作中只包括可见内容。 若要搜索随后出现的相同值，请单击 **“下一个”**。|  
+|![页面显示控件](../reporting-services/media/htmlviewer-pagesize.gif "页面显示控件")|**页面显示控件**|放大或缩小报表页的大小。 除了按比例更改外，还可以选择“页宽”，以使报表页的水平宽度适应浏览器窗口大小，或选择“整页”，以使报表的垂直高度适应浏览器窗口大小   。 **Internet Explorer 5.5 和更高版本支持** “缩放” [!INCLUDE[msCoName](../includes/msconame-md.md)] 选项。|  
+|![搜索字段](../reporting-services/media/htmlviewer-search.gif "搜索字段")|**搜索字段**|通过键入要查找的单词或短语（最长不超过 256 个字符）在报表中搜索内容。 搜索不区分大小写，将从当前选择的页或区域开始。 搜索操作中只包括可见内容。 若要搜索随后出现的相同值，请单击 **“下一个”** 。|  
 |![导出格式](../reporting-services/media/htmlviewer-export.GIF "导出格式")|**导出格式**|打开一个新的浏览器窗口，并以所选的格式呈现报表。 可用的格式由报表服务器上安装的呈现扩展插件决定。 建议打印时采用 TIFF 格式。 单击 **“导出”** 可以按所选格式查看报表。|  
 |![文档结构图图标](../reporting-services/media/htmlviewer-docmap.GIF "文档结构图图标")|**文档结构图图标**|在包含文档结构图的报表中显示或隐藏文档结构图窗格。 文档结构图是一个类似于网站上的导航窗格的报表导航控件。 单击文档结构图中的项，即可导航到特定的组、页或子报表。|  
 |![打印机图标](../reporting-services/media/printer-icon.gif "打印机图标")|**打印机图标**|打开“打印”对话框，以便指定打印选项并打印报表。 在首次使用时，单击此图标后将提示您下载打印控件。|  

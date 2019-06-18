@@ -10,11 +10,11 @@ ms.reviewer: maghan
 author: RhysSchmidtke
 ms.author: rhys
 ms.openlocfilehash: d6d4da6d5574288fa66ea18a9c63b1488a6abcca
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63226006"
 ---
 # <a name="release-notes-for-the-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>WebForms 和 WinForms 的 SSRS 报表查看器控件的发行说明
 
@@ -26,8 +26,8 @@ ms.locfileid: "58290940"
 
 | 更改说明 | 详细信息 |
 | :----------------- | :------ |
-| 防止不带参数通过 Server.LoadReportDefinition 加载报表的 bug 修复。 | &nbsp; |
-| WebForms 报表查看器控件。 | 支持在 RTL 页面（使用 *direction: rtl;* css 属性更改文本流的页面）中进行嵌入。<br/><br/>支持通过 IReportViewerMessages5 本地化接口自定义打印对话框文本。<br/><br/>改进了辅助功能支持。<br/><br/>&bull; &nbsp; &nbsp; [报表查看器控件的 WebForms 的 NuGet 包](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
+| 防止不带参数通过 Server.LoadReportDefinition 加载报表的 bug 修复。  | &nbsp; |
+| WebForms 报表查看器控件。 | 支持在 RTL 页面（使用 *direction: rtl;* css 属性更改文本流的页面）中进行嵌入。<br/><br/>支持通过 IReportViewerMessages5  本地化接口自定义打印对话框文本。<br/><br/>改进了辅助功能支持。<br/><br/>&bull; &nbsp; &nbsp; [报表查看器控件的 WebForms 的 NuGet 包](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
 | WinForms 报表查看器控件。 | 应用在高 DPI 模式下运行时进行打印的修补程序。<br/><br/>&bull; &nbsp; &nbsp; [报表查看器控件的 WinForms 的 NuGet 包](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148) |
 | &nbsp; | &nbsp; |
 

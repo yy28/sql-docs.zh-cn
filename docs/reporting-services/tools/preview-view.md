@@ -13,14 +13,14 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7c546ee5bdc941a5b0dba77b9c110bd283b217d7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582166"
 ---
 # <a name="preview-view"></a>“预览”视图
-在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表设计器中，使用“预览”视图可以显示呈现的报表。 在预览报表时，报表设计器将在本地运行该报表，并在“预览”视图中显示该报表。 在预览模式下会对报表进行完全处理。 如果报表具有复杂的查询或具有大量数据，则首次查看时，预览可能需要花费几分钟的时间才能完成。 对于只影响报表格式的后续更改，预览使用缓存数据。
+在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表设计器中，使用“预览”视图可以显示呈现的报表。  在预览报表时，报表设计器将在本地运行该报表，并在“预览”视图中显示该报表。 在预览模式下会对报表进行完全处理。 如果报表具有复杂的查询或具有大量数据，则首次查看时，预览可能需要花费几分钟的时间才能完成。 对于只影响报表格式的后续更改，预览使用缓存数据。
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
 ## <a name="options"></a>选项  

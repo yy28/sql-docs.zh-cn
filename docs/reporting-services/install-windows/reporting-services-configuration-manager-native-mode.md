@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503631"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
@@ -70,21 +70,21 @@ ms.locfileid: "65503631"
 
     - 从 Windows“开始”屏幕上，键入 **Reporting** ，然后从搜索结果中选择 **“Reporting Services 配置管理器”** 。
 
-    - 选择“开始”，依次指向“所有程序”、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 和“配置工具”。
+    - 选择“开始”  ，依次指向“所有程序”  、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 和“配置工具”  。
 
          如果要从先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中配置报表服务器实例，请打开此版本的程序文件夹。 例如，在打开 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 服务器组件的配置工具时，应指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 而非 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。
 
-         选择“Reporting Services 配置管理器”。
+         选择“Reporting Services 配置管理器”  。
 
-2. 此时将出现 **“Reporting Services 配置连接”** 对话框，可以选择要配置的报表服务器实例。 选择“连接”。
+2. 此时将出现 **“Reporting Services 配置连接”** 对话框，可以选择要配置的报表服务器实例。 选择“连接”  。
 
 3. 在 **“服务器名称”** 中，指定安装报表服务器实例的计算机的名称。 默认情况下，将显示本地计算机的名称，但如果要连接到安装在远程计算机上的报表服务器，则可以键入远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。
 
-4. 如果指定远程计算机，请选择“查找”以建立连接。
+4. 如果指定远程计算机，请选择“查找”以建立连接  。
 
 5. 在 **Report Server 在stance**中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 在列表中只显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
 
-6. 选择“连接”。
+6. 选择“连接”  。
 
 ## <a name="next-steps"></a>后续步骤
 

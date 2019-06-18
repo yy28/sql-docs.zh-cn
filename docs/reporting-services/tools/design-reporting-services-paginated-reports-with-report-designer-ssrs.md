@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577860"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>使用报表设计器设计 Reporting Services 分页报表 (SSRS)
@@ -69,7 +69,7 @@ ms.locfileid: "65577860"
   
 -   **添加现有项。** 一个现有报表定义 (.rdl) 将在报表设计器中打开。 从早期版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 打开某一报表或项目可能会将该项目自动升级到当前版本，或者将该报表升级到当前架构。 有关更多信息，请参见 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
   
--   导入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 报表。 从 Access 数据库（.mdb、.accdb）或项目 (.adp) 文件中导入所有报表。 报表设计器将数据库或项目文件中的所有报表都转换为 RDL 格式，然后将其保存在报表项目中。 并非 Access 报表的所有功能都转移到报表定义 (.rdl) 文件中。 有关详细信息，请参阅[从 Microsoft Access 导入报表 (Reporting Services)](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) 和[支持的 Access 报表功能 (SSRS)](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)。  
+-   导入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 报表  。 从 Access 数据库（.mdb、.accdb）或项目 (.adp) 文件中导入所有报表。 报表设计器将数据库或项目文件中的所有报表都转换为 RDL 格式，然后将其保存在报表项目中。 并非 Access 报表的所有功能都转移到报表定义 (.rdl) 文件中。 有关详细信息，请参阅[从 Microsoft Access 导入报表 (Reporting Services)](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) 和[支持的 Access 报表功能 (SSRS)](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)。  
   
     > [!NOTE]  
     >  若要使用导入功能，必须将 Access 2002 或更高版本与报表设计器安装在同一台计算机上。 在导入 Access 报表时，必须能够使用报表的数据源。  
@@ -85,7 +85,7 @@ ms.locfileid: "65577860"
      有关详细信息，请参阅[报表定义语言 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)。  
   
 ##  <a name="bkmk_ReportParts"></a> 报表部件  
- 在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
+ 在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”  发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
  可通过使用 **TargetReportPartFolder** 和其他属性，脱离项目中的其他项而单独部署报表部件。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "65577860"
  使用 **“预览”** 可以验证报表数据和布局设计。 在你预览报表时，报表处理器将对报表定义架构和表达式语法进行验证，然后在 [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 窗口中列出问题。  
   
 > [!NOTE]  
->  在预览报表时，报表数据将缓存到本地计算机上的文件中。 使用相同的查询、参数和凭据再次预览同一报表时，报表设计器将检索缓存副本，而不是重新运行查询。 数据文件将在报表定义文件所在的同一目录中另存为 \<reportname>.rdl.data。 关闭报表设计器时，不会删除该文件。  
+>  在预览报表时，报表数据将缓存到本地计算机上的文件中。 使用相同的查询、参数和凭据再次预览同一报表时，报表设计器将检索缓存副本，而不是重新运行查询。 数据文件将在报表定义文件所在的同一目录中另存为 \<reportname>.rdl.data  。 关闭报表设计器时，不会删除该文件。  
   
  您可以通过以下方式预览报表：  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65577860"
   
 -   **独立预览。** 在浏览器中运行本地报表。 通过使用调试配置，您还可以使用此模式调试您撰写的自定义程序集。 在调试模式下运行项目的方法有以下三种：  
   
-    -   在 **“调试”** 菜单中，单击 **“启动调试”**。  
+    -   在 **“调试”** 菜单中，单击 **“启动调试”** 。  
   
     -   在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 标准工具栏上，单击 **“启动”** 按钮。  
   
@@ -116,9 +116,9 @@ ms.locfileid: "65577860"
      如果使用生成报表但不部署该报表的项目配置，则将在单独的预览窗口中打开在当前配置的 **StartItem** 属性中指定的报表。  
   
     > [!NOTE]  
-    >  若要使用调试模式，必须设置开始项。 在解决方案资源管理器中右键单击报表项目，再单击 **“属性”**，然后在 **StartItem**中选择要显示的报表的名称。  
+    >  若要使用调试模式，必须设置开始项。 在解决方案资源管理器中右键单击报表项目，再单击 **“属性”** ，然后在 **StartItem**中选择要显示的报表的名称。  
   
-     若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”**。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
+     若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”** 。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
   
 -   **打印预览。**  
   
@@ -144,7 +144,7 @@ ms.locfileid: "65577860"
  在报表设计器中，必须了解如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中当前版本的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]所支持的报表定义架构设计报表。 在您为特定的报表服务器或 SharePoint 站点设置项目部署属性，然后保存报表时，报表设计器将报表定义保存到架构中与目标报表服务器上的版本匹配的生成目录中。 若要创建可在下级报表服务器上发布的报表，报表设计器将删除在目标架构中不存在的报表项。 这种情况将自动发生，而没有提示。 在发生此情况时，原始报表定义将保留在项目文件夹中。 已部署的修改的报表定义位于生成文件夹中。  
   
 > [!NOTE]  
->  对于调试表达式和部署错误，您必须在生成文件夹中查看报表定义。 不要使用 **“查看源”**。 **“查看源”** 显示项目文件夹中的报表定义源。  
+>  对于调试表达式和部署错误，您必须在生成文件夹中查看报表定义。 不要使用 **“查看源”** 。 **“查看源”** 显示项目文件夹中的报表定义源。  
   
  有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)中。  
   

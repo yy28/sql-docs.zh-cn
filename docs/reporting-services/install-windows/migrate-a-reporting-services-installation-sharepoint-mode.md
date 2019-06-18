@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ddc628ee8becd79d2039a03529576c41df22a76b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570927"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>迁移 Reporting Services 安装（SharePoint 模式）
@@ -51,7 +51,7 @@ ms.locfileid: "65570927"
   
 -   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本：** 这些脚本可以在本机模式与 SharePoint 模式报表服务器之间迁移内容和资源。 有关详细信息，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 和 [从一个报表服务器迁移至另一报表服务器的 Reporting Services RS.exe 脚本](https://azuresql.codeplex.com/releases/view/115207)。  
   
--   **Reporting Services 迁移工具：** 该工具可以将报表项从本机模式服务器复制到 SharePoint 模式服务器。 有关详细信息，请参阅 [Reporting Services 迁移工具](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560)。  
+-   **Reporting Services 迁移工具：** 该工具可以将报表项从本机模式服务器复制到 SharePoint 模式服务器。 有关详细信息，请参阅 [Reporting Services 迁移工具](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560) 。  
   
 ###  <a name="bkmk_full_migration"></a> 完全迁移  
  **完全迁移：** 如果您将 SharePoint 内容数据库与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目录数据库一起迁移到新的场中，则可以按照在本文中介绍的一系列备份和还原选项执行。 在某些情况下，您将需要使用与在备份阶段中使用的不同工具来用于还原阶段。 例如，你可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的先前版本备份加密密钥，但需要使用 SharePoint 管理中心或 PowerShell 将加密密钥还原到 SQL Server 2016 Reporting Services SharePoint 模式安装。  
@@ -61,11 +61,11 @@ ms.locfileid: "65570927"
   
 |“数据库”|示例名称||  
 |--------------|------------------|-|  
-|目录数据库|ReportingService_[service application GUID] (&#42;)|用户迁移。|  
-|Temp 数据库|ReportingService_[service application GUID]TempDB (&#42;)|用户迁移。|  
+|目录数据库|ReportingService_[service application GUID] (&#42;) |用户迁移。|  
+|Temp 数据库|ReportingService_[service application GUID]TempDB (&#42;) |用户迁移。|  
 |警报数据库|ReportingService_[服务应用程序 GUID]_Alerting|在创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序时创建。|  
   
- (&#42;) 该表中所示的示例名称遵循在你创建新的 SSRS 服务应用程序时 SSRS 使用的命名约定。 如果您在从不同的服务器进行迁移，则您的目录和 tempDB 将具有来自原始安装的名称。  
+ (&#42;) 该表中所示的示例名称遵循在你创建新的 SSRS 服务应用程序时 SSRS 使用的命名约定  。 如果您在从不同的服务器进行迁移，则您的目录和 tempDB 将具有来自原始安装的名称。  
   
 ####  <a name="bkmk_backup_operations"></a> 备份操作  
  本节介绍迁移所需的信息的类型以及用于完成备份的工具或过程。  

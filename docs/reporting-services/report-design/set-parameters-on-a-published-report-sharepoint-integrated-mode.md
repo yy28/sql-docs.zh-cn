@@ -12,10 +12,10 @@ ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51fcade75cff0f5cafa0e780a823ce505e43e297
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576671"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>设置已发布报表的参数 - SharePoint 集成模式
@@ -47,7 +47,7 @@ ms.locfileid: "65576671"
   
      指定的值组合可能无法让您获得所需的结果。 如果您无法获得所需信息，则报表作者可能需要修改报表。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 ### <a name="to-set-parameter-properties"></a>设置参数属性  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65576671"
   
 2.  指向报表，然后单击向下箭头。  
   
-3.  单击 **“管理参数”**。 如果报表包含参数，页面上将列出每个参数。 此列表显示参数名称、数据类型、默认情况下使用的数据值以及打开报表时参数在参数区域中是否可见。  
+3.  单击 **“管理参数”** 。 如果报表包含参数，页面上将列出每个参数。 此列表显示参数名称、数据类型、默认情况下使用的数据值以及打开报表时参数在参数区域中是否可见。  
   
 4.  单击列表中的参数可修改其设置。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "65576671"
   
     3.  如果使用默认值且不希望在参数区域中或订阅页上显示参数，请选择 **“内部”** 。  
   
-7.  单击 **“应用”**。  
+7.  单击 **“应用”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  

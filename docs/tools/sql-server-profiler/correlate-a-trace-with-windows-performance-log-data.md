@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdbd634a74c5e7cd48232a28ab4c7709e8febfad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818925"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033756"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>将跟踪与 Windows 性能日志数据关联
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47818925"
   
 1.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，打开保存的跟踪文件或跟踪表。 不能关联仍在收集事件数据的运行中的跟踪。 为实现与系统监视器数据的准确关联，跟踪必须同时包含 **StartTime** 和 **EndTime** 数据列。  
   
-2.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **“文件”** 菜单上，单击 **“导入性能数据”**。  
+2.  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **“文件”** 菜单上，单击 **“导入性能数据”** 。  
   
 3.  在 **“打开”** 对话框中，选择包含性能日志的文件。 必须在捕获跟踪数据的同一时间段捕获性能日志数据。  
   
@@ -46,23 +46,23 @@ ms.locfileid: "47818925"
   
 ### <a name="to-create-performance-logs-that-can-be-shared-among-different-versions-of-windows"></a>创建可在 Windows 不同版本间共享的性能日志  
   
-1.  在“控制面板”中，打开 **“管理工具”**，再双击 **“性能”**。  
+1.  在“控制面板”中，打开 **“管理工具”** ，再双击 **“性能”** 。  
   
-2.  在“性能”对话框中，展开“性能日志和警报”，右键单击“计数器日志”，再单击“新建日志设置”。  
+2.  在“性能”  对话框中，展开“性能日志和警报”  ，右键单击“计数器日志”  ，再单击“新建日志设置”  。  
   
-3.  键入计数器日志的名称，然后单击 **“确定”**。  
+3.  键入计数器日志的名称，然后单击 **“确定”** 。  
   
-4.  在 **“常规”** 选项卡中，单击 **“添加计数器”**。  
+4.  在 **“常规”** 选项卡中，单击 **“添加计数器”** 。  
   
 5.  在 **“性能对象”** 列表中，选择要监视的性能对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能对象名称以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开头，命名实例以 MSSQL$*instanceName*开头。  
   
 6.  添加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所需的所有计数器和其他重要值（例如处理器时间和磁盘时间）。  
   
-7.  添加计数器后，单击 **“关闭”**。  
+7.  添加计数器后，单击 **“关闭”** 。  
   
 8.  设置 **“数据抽样间隔”** 的值。 开始时使用适中的抽样间隔值（例如 5 分钟），然后在必要时调整间隔值。  
   
-9. 在“日志文件”选项卡上，从“日志文件类型”列表中选择“文本文件（逗号分隔）”。 逗号分隔文本日志文件可以在不同版本的 Windows 中共享，并可以稍后在报表工具（例如 Microsoft Excel）中查看。  
+9. 在“日志文件”  选项卡上，从“日志文件类型”  列表中选择“文本文件（逗号分隔）”  。 逗号分隔文本日志文件可以在不同版本的 Windows 中共享，并可以稍后在报表工具（例如 Microsoft Excel）中查看。  
   
 10. 在 **“计划”** 选项卡上，指定监视计划。  
   

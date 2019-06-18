@@ -8,10 +8,10 @@ ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed8c8eb56d23d03ab77aa7bf7cc3ce3e0553e614
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502667"
 ---
 # <a name="uninstall-report-builder"></a>卸载报表生成器
@@ -24,19 +24,19 @@ ms.locfileid: "65502667"
 
 ### <a name="to-uninstall-report-builder-from-the-control-panel"></a>从控制面板卸载报表生成器
 
-1.  在 **“开始”** 菜单上，单击 **“控制面板”**。  
+1.  在 **“开始”** 菜单上，单击 **“控制面板”** 。  
   
-2.  在“控制面板”中，单击 **“程序和功能”**。  
+2.  在“控制面板”中，单击 **“程序和功能”** 。  
   
-3.  在“名称”列表中找到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 报表生成器并单击它。  
+3.  在“名称”列表中找到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 报表生成器并单击它  。  
   
-4.  单击 **“卸载”**。  
+4.  单击 **“卸载”** 。  
   
-5.  如果提示需要确认卸载报表生成器，请单击 **“是”**。  
+5.  如果提示需要确认卸载报表生成器，请单击 **“是”** 。  
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>从命令行卸载报表生成器  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。  
+1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
 2.  在“打开”  文本框中，输入 **cmd.**  
   

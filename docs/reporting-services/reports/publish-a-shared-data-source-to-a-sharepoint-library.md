@@ -13,10 +13,10 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd8444cc0bcdfe29268504cf2441c10d67a9ad0d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577522"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>将共享数据源发布到 SharePoint 库
@@ -28,7 +28,7 @@ ms.locfileid: "65577522"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开现有的或新的报表服务器项目。  
   
-2.  在 **“项目”** 菜单上，单击 **“属性”**。 “\<项目>属性页”对话框即会打开。  
+2.  在 **“项目”** 菜单上，单击 **“属性”** 。 “\<项目>属性页”对话框即会打开   。  
   
 3.  选择发布到 SharePoint 站点所用的 **“配置”** 。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65577522"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-9. 在解决方案资源管理器中，右键单击要发布的共享数据源，然后单击“部署”。 数据源将发布到 **TargetDataSourceFolder**中指定的位置。 部署错误将显示在输出窗口中。  
+9. 在解决方案资源管理器中，右键单击要发布的共享数据源，然后单击“部署”  。 数据源将发布到 **TargetDataSourceFolder**中指定的位置。 部署错误将显示在输出窗口中。  
   
     > [!NOTE]  
     >  将共享数据源发布到 SharePoint 站点后，该数据源文件的扩展名会更改为 .rsds。 可以直接在 SharePoint 站点上编辑和管理共享数据源。 有关详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  

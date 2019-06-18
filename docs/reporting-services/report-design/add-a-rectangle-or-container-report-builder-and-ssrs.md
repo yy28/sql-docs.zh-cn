@@ -12,10 +12,10 @@ ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2079eeb5cb871b5006ac4b2c45b60e9c8a3a3c97
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574772"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>添加矩形或容器（报表生成器和 SSRS）
@@ -23,7 +23,7 @@ ms.locfileid: "65574772"
    
 ## <a name="to-add-a-rectangle"></a>添加矩形    
     
-1.  在 **“插入”** 选项卡的 **“报表项”** 组中，单击 **“矩形”**。    
+1.  在 **“插入”** 选项卡的 **“报表项”** 组中，单击 **“矩形”** 。    
     
 2.  在设计图面上，单击希望矩形左上角所处的位置，并拖动至希望矩形右下角所处的位置。    
     
@@ -45,7 +45,7 @@ ms.locfileid: "65574772"
 2.  单击 **“边框”** 按钮旁的箭头以确定要更改矩形的哪些边。    
     
     > [!NOTE]    
-    >  如果将线条样式设置为“双线”并且线条宽度为 1 1/2 pt 或更窄，则在报表生成器、报表设计器或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中运行报表时，线条可能不会显示为双线。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。    
+    >  如果将线条样式设置为“双线”并且线条宽度为 1 1/2 pt 或更窄，则在报表生成器、报表设计器或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中运行报表时，线条可能不会显示为双线  。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。    
     
 ## <a name="see-also"></a>另请参阅    
  [矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)     

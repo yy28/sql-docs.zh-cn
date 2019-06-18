@@ -5,15 +5,15 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c68f8070bba8f392ded453f36078f0141d80ee04
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711890"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225702"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>向场中添加另一个报表服务器（SSRS 扩展）
 
@@ -60,13 +60,13 @@ ms.locfileid: "52711890"
 |步骤|说明和链接|  
 |----------|--------------------------|  
 |将 SharePoint 服务器添加到场。|你需要安装 SharePoint 以部署其他 Reporting Services 应用程序。<br/><br/>有关 SharePoint 2013 的详细信息，请参阅 [在 SharePoint 2013 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)。<br/><br/>有关 SharePoint 2016 的详细信息，请参阅 [在 SharePoint 2016 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)。|  
-|安装和配置 Reporting Services SharePoint 模式。|运行 SQL Server 安装。 有关安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)<br /><br /> 如果该服务器将仅用作应用程序服务器并且将不用作 WFE，则无需选择“用于 SharePoint 产品的 Reporting Services 外接程序”。<br /><br /> 1) 在“设置角色”页上，选择“SQL Server 功能安装”<br /><br /> 2) 在“功能选择”页上，选择“Reporting Services - SharePoint”<br /><br /> 3) 在“Reporting Services 配置”页上，确认为“Reporting Services SharePoint 模式”选择了“仅安装”选项。|  
-|验证 Reporting Services 是否正常运行。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”。<br /><br /> 2) 验证“SQL Server Reporting Services 服务”服务。<br /><br />有关详细信息，请参阅 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
+|安装和配置 Reporting Services SharePoint 模式。|运行 SQL Server 安装。 有关安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)<br /><br /> 如果该服务器将仅用作应用程序服务器并且将不用作 WFE，则无需选择“用于 SharePoint 产品的 Reporting Services 外接程序”  。<br /><br /> 1) 在“设置角色”页上，选择“SQL Server 功能安装”  <br /><br /> 2) 在“功能选择”页上，选择“Reporting Services - SharePoint”  <br /><br /> 3) 在“Reporting Services 配置”页上，确认为“Reporting Services SharePoint 模式”选择了“仅安装”选项    。|  
+|验证 Reporting Services 是否正常运行。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”   。<br /><br /> 2) 验证“SQL Server Reporting Services 服务”服务  。<br /><br />有关详细信息，请参阅 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
   
 ##  <a name="bkmk_additional"></a> 附加配置  
  可以优化扩展部署中的单个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器以仅执行后台处理，从而不与交互式报表执行争用资源。 后台处理包括计划、订阅和数据警报。  
   
- 若要更改单个报表服务器的行为，请在 RSreportServer.config 配置文件中将 \<IsWebServiceEnable> 设置为 false。  
+ 若要更改单个报表服务器的行为，请在 RSreportServer.config 配置文件中将 \<IsWebServiceEnable> 设置为 false   。  
   
  默认情况下，将配置报表服务器且 \<IsWebServiceEnable> 将设置为 TRUE。 当所有服务器都配置为 TRUE 时，将在场中的所有节点上均衡交互式操作和后台处理的负载。  
   

@@ -12,14 +12,14 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620593"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
-  可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  
+  可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头   。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  
   
 > [!IMPORTANT]  
 >  对于 SharePoint 模式来说，非常重要的一点是，URL 包括用于通过 SharePoint 和 `_vti_bin` HTTP 代理路由请求的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 代理语法。 该代理会向 HTTP 请求中添加上下文，该上下文是确保为 SharePoint 模式报表服务器正确执行报表所需要的。 有关示例，请参阅 [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md)。  
@@ -35,13 +35,13 @@ ms.locfileid: "65620593"
 -   [报表查看器 Web 部件命令 (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML 查看器命令 (rc:)  
- - HTML 查看器命令用于指向 HTML 查看器且以 rc: 为前缀：
+ - HTML 查看器命令用于指向 HTML 查看器且以 rc: 为前缀  ：
   
--   Toolbar：  
+-   Toolbar  ：  
                   显示或隐藏工具栏。 如果此参数的值为 **false**，将忽略所有剩余的选项。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。 此参数的默认值为 **true**。  
   
     > [!IMPORTANT]  
-    >  =**false** 不适用于使用 IP 地址（而非域名）以针对驻留在 SharePoint 站点上的报表的 URL 访问字符串。  
+    >   =**false** 不适用于使用 IP 地址（而非域名）以针对驻留在 SharePoint 站点上的报表的 URL 访问字符串。  
   
 -   *Parameters* ：显示或隐藏工具栏的参数区域。 如果将此参数设置为 **true**，将显示工具栏的参数区域。 如果此参数设置为 **false**，则不显示参数区域，用户也不能显示参数区域。 如果此参数设置为 **Collapsed**值，则不会显示参数区域，但最终用户可以对参数区域进行切换。 此参数的默认值为 **true**。  
   
@@ -117,12 +117,12 @@ ms.locfileid: "65620593"
   
 -   *Stylesheet*：指定要应用于 HTML 查看器的样式表。  
   
--   设备信息设置：以 `rc:tag=value` 形式指定设备信息设置，其中，tag 是特定于当前使用的呈现扩展插件的设备信息设置的名称（请参阅 Format 参数的说明）。 例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置向在 URL 访问字符串中使用以下参数的 JPEG 图像呈现报表：`...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
+-   设备信息设置：以 `rc:tag=value` 形式指定设备信息设置，其中，tag 是特定于当前使用的呈现扩展插件的设备信息设置的名称（请参阅 Format 参数的说明）   。 例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置向在 URL 访问字符串中使用以下参数的 JPEG 图像呈现报表：`...&rs:Format=IMAGE&rc:OutputFormat=JPEG`  。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
   
 ##  <a name="bkmk_reportserver"></a> 报表服务器命令 (rs:)  
  报表服务器命令以 *rs:* 为前缀，用于指向报表服务器：  
   
--   Command：  
+-   Command  ：  
                   根据目录项的类型，对其执行操作。 默认值由在 URL 访问字符串中引用的目录项的类型确定。 有效值为  
   
     -   **ListChildren** 和 **GetChildren** 显示文件夹的内容。 文件夹项显示在一般项导航页内。  
@@ -197,7 +197,7 @@ ms.locfileid: "65620593"
   
     -   **GetComponentDefinition** 显示与已发布的报表项关联的 XML 定义。 您必须对已发布的报表项具有“读取内容”  权限才能使用此值。  
   
--   Format：  
+-   Format  ：  
                   指定呈现和查看报表的格式。 常用值包括：  
   
     -   **HTML5**  
@@ -224,7 +224,7 @@ ms.locfileid: "65620593"
   
      默认值是 **HTML5**秒。 有关详细信息，请参阅 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)。  
   
-     有关完整列表，请参阅报表服务器 rsreportserver.config 文件的 \<Render> 扩展部分。  有关在何处查找文件的信息，请参阅 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
+     有关完整列表，请参阅报表服务器 rsreportserver.config 文件的 \<Render> 扩展部分  。  有关在何处查找文件的信息，请参阅 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
      例如，若要直接从 **Native** 模式报表服务器获取报表的 PDF 副本：  
   
@@ -238,7 +238,7 @@ ms.locfileid: "65620593"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
--   ParameterLanguage：  
+-   ParameterLanguage  ：  
                   提供在与浏览器语言无关的 URL 中传递的参数的语言。 默认值为浏览器语言。 该值可以为区域性值，如 **en-us** 或 **de-de**。  
   
      例如在 **Native** 模式中，将覆盖浏览器语言并指定区域性值 de-DE：  
@@ -255,24 +255,24 @@ ms.locfileid: "65620593"
     https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
--   PersistStreams：  
+-   PersistStreams  ：  
                   呈现单个持久流中的报表。 图像呈现器使用此参数，通过一次传输一块的方式传输呈现的报表。 在 URL 访问字符串中使用此参数后，将相同的 URL 访问字符串用于 *GetNextStream* 参数而非 *PersistStreams* 参数可以获取持久流中的下一个块。 此 URL 命令最终将返回 0 字节流，以指明持久流结束。 默认值是 **false**秒。  
   
--   GetNextStream：  
-                  在使用 PersistStreams 参数访问的持久流中获取下一个数据块。 有关详细信息，请参阅 *PersistStreams*的说明。 默认值是 **false**秒。  
+-   GetNextStream  ：  
+                  在使用 PersistStreams 参数访问的持久流中获取下一个数据块  。 有关详细信息，请参阅 *PersistStreams*的说明。 默认值是 **false**秒。  
   
--   SessionID：  
+-   SessionID  ：  
                   指定客户端应用程序和报表服务器之间已建立的活动报表会话。 此参数的值设置为会话标识符。  
   
      您可以将会话 ID 指定为 cookie 或 URL 的一部分。 在报表服务器已配置为不使用会话 cookie 时，没有指定会话 ID 的第一个请求将导致具有某一会话 ID 的重定向。 有关报表服务器会话的详细信息，请参阅 [Identifying Execution State](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)。  
   
--   ClearSession：  
+-   ClearSession  ：  
                   **true** 值指示报表服务器从报表会话中删除报表。 与经过身份验证的用户相关联的所有报表实例都将从报表会话中删除。 （报表实例定义为使用不同报表参数值运行多次的同一报表。）默认值是 **false**秒。  
   
--   ResetSession：  
+-   ResetSession  ：  
                   **true** 值指示报表服务器通过删除报表会话与所有报表快照的关联来重置报表会话。 默认值是 **false**秒。  
   
--   ShowHideToggle：  
+-   ShowHideToggle  ：  
                   切换报表部分的显示和隐藏状态。 指定用于表示要切换的部分的正整数。  
   
 ##  <a name="bkmk_webpart"></a> 报表查看器 Web 部件命令 (rv:)  
@@ -310,7 +310,7 @@ ms.locfileid: "65620593"
   
 -   *AsyncRender*：控制是否异步呈现报表。 默认值为 **true**，该值指定将异步呈现报表。 该值必须为布尔值 **true** 或 **false**。  
   
--   ParamMode：控制报表查看器 Web 部件的参数提示区域在整页视图中的显示方式。 默认值是 **Full**秒。 有效值为  
+-   ParamMode：控制报表查看器 Web 部件的参数提示区域在整页视图中的显示方式  。 默认值是 **Full**秒。 有效值为  
   
     -   **Full**：显示参数提示区域。  
   
@@ -324,7 +324,7 @@ ms.locfileid: "65620593"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   DocMapMode：控制报表查看器 Web 部件的文档结构图区域在整页视图中的显示方式。 默认值是 **Full**秒。 有效值为  
+-   DocMapMode：控制报表查看器 Web 部件的文档结构图区域在整页视图中的显示方式  。 默认值是 **Full**秒。 有效值为  
   
     -   **Full**：显示文档结构图区域。  
   
@@ -332,7 +332,7 @@ ms.locfileid: "65620593"
   
     -   **Hidden**：隐藏文档结构图区域。  
   
--   DockToolBar：控制报表查看器 Web 部件的工具栏是否停靠在顶部或底部。 有效值为 **Top** 和 **Bottom**。 默认值是 **Top**秒。  
+-   DockToolBar：控制报表查看器 Web 部件的工具栏是否停靠在顶部或底部  。 有效值为 **Top** 和 **Bottom**。 默认值是 **Top**秒。  
   
      例如在 **SharePoint** 模式中，将工具栏停靠在底部。  
   
@@ -342,27 +342,27 @@ ms.locfileid: "65620593"
   
 -   *ToolBarItemsDisplayMode*：控制显示哪些工具栏项。 这是一个按位枚举值。 若要包括某一工具栏项，请将该项的值添加至总值。 例如：如果没有“操作”菜单，请使用 rv:ToolBarItemsDisplayMode=63（或 0x3F），这是 1+2+4+8+16+32 的结果；对于仅限“操作”菜单项，请使用 rv:ToolBarItemsDisplayMode=960（或 0x3C0）。 默认值是 **-1**，这将包括所有工具栏项。 有效值为  
   
-    -   1 (0x1)：“后退”按钮  
+    -   1 (0x1)：“后退”按钮   
   
     -   2 (0x2)：文本搜索控件  
   
     -   4 (0x4)：页面导航控件  
   
-    -   8 (0x8)：“刷新”按钮  
+    -   8 (0x8)：“刷新”按钮   
   
-    -   16 (0x10)：“缩放”列表框  
+    -   16 (0x10)：“缩放”列表框   
   
-    -   32 (0x20)：“Atom 馈送”按钮  
+    -   32 (0x20)：“Atom 馈送”按钮   
   
-    -   64 (0x40)：“操作”中的“打印”菜单选项  
+    -   64 (0x40)：“操作”中的“打印”菜单选项    
   
-    -   128 (0x80)：“操作”中的“导出”子菜单  
+    -   128 (0x80)：“操作”中的“导出”子菜单    
   
-    -   256 (0x100)：“操作”中的“使用报表生成器打开”菜单选项  
+    -   256 (0x100)：“操作”中的“使用报表生成器打开”菜单选项    
   
-    -   512 (0x200)：“操作”中的“订阅”菜单选项  
+    -   512 (0x200)：“操作”中的“订阅”菜单选项    
   
-    -   1024 (0x400)：“操作”中的“新建数据警报”菜单选项  
+    -   1024 (0x400)：“操作”中的“新建数据警报”菜单选项    
   
      例如在 **SharePoint** 模式中，仅显示 **“后退”** 按钮、文本搜索控件、页面导航控件和 **“刷新”** 按钮。  
   

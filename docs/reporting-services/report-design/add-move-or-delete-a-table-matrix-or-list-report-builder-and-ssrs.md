@@ -9,10 +9,10 @@ ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7239efa5a2d64b3751fde34d7cd1e676ea905dd4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581997"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>添加、移动或删除表、矩阵或列表（报表生成器和 SSRS）
@@ -22,9 +22,9 @@ ms.locfileid: "65581997"
   
 ## <a name="to-add-a-table-or-matrix-to-a-report-by-using-the-new-table-or-new-matrix-wizard"></a>通过使用新建表或新建矩阵向导，将表或矩阵添加到报表  
   
-1.  在 **“插入”** 选项卡上，单击 **“表”** 或 **“矩阵”**，然后单击 **“表向导”** 或 **“矩阵向导”**。  
+1.  在 **“插入”** 选项卡上，单击 **“表”** 或 **“矩阵”** ，然后单击 **“表向导”** 或 **“矩阵向导”** 。  
   
-2.  执行“新建表”或“新建矩阵”向导中的步骤。  
+2.  执行“新建表”或“新建矩阵”向导中的步骤   。  
   
 3.  在 **“主文件夹”** 选项卡上，单击 **“运行”** ，以查看所呈现的报表。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65581997"
   
      随即显示一个选择控点和八个大小调整控点。  
   
-     对于嵌套数据区域，在该嵌套数据区域中右键单击，再单击“选择”，然后选择所需的报表项。 若要验证所选择的报表项，请使用“属性”窗格。 设计图面上所选项的名称显示在“属性”窗格的工具栏中。  
+     对于嵌套数据区域，在该嵌套数据区域中右键单击，再单击“选择”，然后选择所需的报表项  。 若要验证所选择的报表项，请使用“属性”窗格。 设计图面上所选项的名称显示在“属性”窗格的工具栏中。  
   
 ## <a name="to-move-a-data-region"></a>移动数据区域  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65581997"
   
 ## <a name="to-delete-a-data-region"></a>删除数据区域  
   
--   选择数据区域，在该数据区域中右键单击，然后单击“删除”。  
+-   选择数据区域，在该数据区域中右键单击，然后单击“删除”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

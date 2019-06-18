@@ -12,10 +12,10 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d93152c87ff874014e6960e4f213e5eac050618
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573298"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
@@ -36,9 +36,9 @@ ms.locfileid: "65573298"
   
 1.  在文本编辑器中打开 RSReportServer.config。  
   
-     该文件位于 \<>:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer。  
+     该文件位于 \<>:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  。  
   
-2.  查找 \<Authentication>。  
+2.  查找 \<Authentication>  。  
   
 3.  复制以下最能满足您需要的一个 XML 结构。 第一个 XML 结构提供了用于指定所有元素的占位符，将在下一部分对这些元素进行介绍：  
   
@@ -63,13 +63,13 @@ ms.locfileid: "65573298"
           </AuthenticationTypes>  
     ```  
   
-4.  将其粘贴在 \<> 的现有条目上。  
+4.  将其粘贴在 \<> 的现有条目上  。  
   
      如果使用的是多个身份验证类型，则只能添加 **RSWindowsBasic** 元素，而不能删除 **RSWindowsNegotiate**、 **RSWindowsNTLM**或 **RSWindowsKerberos**的条目。  
   
      请注意，不能将 **Custom** 与其他身份验证类型一起使用。  
   
-5.  使用对环境有效的值替换 \<Realm> 或 \<DefaultDomain> 的空值。  
+5.  使用对环境有效的值替换 \<Realm> 或 \<DefaultDomain> 的空值   。  
   
 6.  保存该文件。  
   

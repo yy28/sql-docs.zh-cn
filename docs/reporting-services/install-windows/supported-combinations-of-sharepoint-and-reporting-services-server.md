@@ -9,15 +9,15 @@ helpviewer_keywords:
 - add-in for sharepoint
 - rsSharePoint
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fb0f6ab994ffc096324a179050abbb4e8f303e7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: ea2af6514d04d24ce77bb88f391350d7c33059eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513343"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>支持的 SharePoint 和 Reporting Services 服务器组合
 
@@ -58,7 +58,7 @@ ms.locfileid: "52711518"
 
  有关外接程序下载页的链接，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
 
- 其他注意事项：
+ 其他注意事项： 
 
 - 请确保升级，以升级场中所有的 SharePoint 服务器。 这包括应用和 Web 前端服务器。
 

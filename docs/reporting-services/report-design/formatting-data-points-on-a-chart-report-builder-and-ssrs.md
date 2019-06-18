@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580339"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
@@ -81,7 +81,7 @@ ms.locfileid: "65580339"
 ## <a name="increasing-readability-in-a-chart-with-multiple-data-points"></a>提高具有多个数据点的图表的可读性  
  如果图表中具有多个序列，则可能降低图表数据点的可读性。 向图表添加多个序列时，请考虑使用区分如何有效读取和了解图表中的每个序列的方法。 有关详细信息，请参阅 [图表中的多个序列（报表生成器和 SSRS）](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)。  
   
- 为方便起见，当使用形状图时，请考虑仅添加一个数据字段和一个类别字段。 有关详细信息，请参阅[形状图（报表生成器和 SSRS）](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)。 如果图表需要多个数据字段和类别字段，请考虑更改图表类型。 您可以右键单击该序列，然后选择 **“更改图表类型”**。  
+ 为方便起见，当使用形状图时，请考虑仅添加一个数据字段和一个类别字段。 有关详细信息，请参阅[形状图（报表生成器和 SSRS）](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)。 如果图表需要多个数据字段和类别字段，请考虑更改图表类型。 您可以右键单击该序列，然后选择 **“更改图表类型”** 。  
   
 ## <a name="inserting-data-point-markers"></a>插入数据点标记  
  数据点标记是用于突出序列中的每个数据点的可视指示器。 在散点图中，该标记用于确定每个数据点的形状和大小。 标记的大小是根据图表类型指定的。 可以更改标记的大小、颜色或样式。 标记不适用于范围和形状图表类型，或任何堆积子类型。  

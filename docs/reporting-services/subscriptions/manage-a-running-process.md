@@ -26,16 +26,16 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579002"
 ---
 # <a name="manage-a-running-process"></a>管理运行中的进程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可监视报表服务器上正在运行的作业的状态。 报表服务器会定期扫描正在进行的作业，并将状态信息写入到报表服务器数据库或针对 SharePoint 模式的服务应用程序数据库中。 如果正在执行以下任意进程，则表明正在处理作业：对远程或本地数据库服务器的查询执行、报表处理以及报表呈现。  
   
- 您可以同时管理“用户作业  ”和“系统作业 ”。  
+ 您可以同时管理“用户作业  ”和“系统作业  ”。  
   
 -   用户作业是由各个用户或订阅启动的。 这包括按需运行报表，请求报表历史记录快照，手动创建报表快照，以及处理标准订阅等。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "65579002"
   
 2.  打开 **“作业”** 文件夹。  
   
-3.  右键单击报表，再单击“取消作业”。  
+3.  右键单击报表，再单击“取消作业”  。  
   
 ### <a name="how-to-cancel-a-data-driven-subscription"></a>如何取消数据驱动订阅  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65579002"
   
 4.  保存该文件。  
   
-5.  在报表管理器中，从报表的“订阅”选项卡或从“我的订阅”中删除数据驱动订阅。  
+5.  在报表管理器中，从报表的“订阅”选项卡或从“我的订阅”中删除数据驱动订阅  。  
   
 6.  删除订阅之后，在 RSReportServer.config 文件中查找 **IsNotificationService** ，并将其设置为 **True**。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "65579002"
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>在 SharePoint 模式下管理作业  
   
-1.  在 SharePoint 管理中心中，单击 **“管理服务应用程序”**。  
+1.  在 SharePoint 管理中心中，单击 **“管理服务应用程序”** 。  
   
 2.  查找并单击您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的名称，以打开“管理应用程序”页。  
   
-3.  单击 **“管理作业”**。  
+3.  单击 **“管理作业”** 。  
   
 4.  单击 **“作业 ID”** 查看作业的详细信息。  
   

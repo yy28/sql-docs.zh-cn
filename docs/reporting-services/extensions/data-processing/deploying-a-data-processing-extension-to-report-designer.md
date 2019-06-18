@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a248250c1f5584a12bc40444d27c96ccc7e69416
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3ff2fbd4cc5b910cdb5191d4fc51941167d8bfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818685"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194040"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>向报表设计器部署数据处理扩展插件
   报表设计器在您设计报表时使用数据处理扩展插件检索和处理数据。 您应将数据处理扩展插件程序集作为专用程序集部署到报表设计器。 还需要在报表设计器配置文件 RSReportDesigner.config 中生成一个条目。  
@@ -37,15 +37,15 @@ ms.locfileid: "47818685"
     </Extensions>  
     ```  
   
-4.  为数据处理扩展插件添加一个条目，该条目包含具有 Name、Type 和 Visible 属性值的 Extension 元素。 您的条目可能如下所示：  
+4.  为数据处理扩展插件添加一个条目，该条目包含具有 Name、Type 和 Visible 属性值的 Extension 元素     。 您的条目可能如下所示：  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     Name 的值是数据处理扩展插件的唯一名称。 Type 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，数据处理扩展插件是可见的。 若要从用户界面（如报表设计器）中隐藏扩展插件，请将 Visible 属性添加到 Extension 元素，并将其设置为 false。  
+     Name 的值是数据处理扩展插件的唯一名称  。 Type 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）  。 默认情况下，数据处理扩展插件是可见的。 若要从用户界面（如报表设计器）中隐藏扩展插件，请将 Visible 属性添加到 Extension 元素，并将其设置为 false    。  
   
-5.  最后，为自定义程序集添加一个代码组，以便为扩展插件授予 FullTrust 权限。 要完成该操作，将该代码组添加到 rspreviewpolicy.config 文件中即可，该文件在默认情况下位于 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 中。 代码组可能如下所示：  
+5.  最后，为自定义程序集添加一个代码组，以便为扩展插件授予 FullTrust 权限  。 要完成该操作，将该代码组添加到 rspreviewpolicy.config 文件中即可，该文件在默认情况下位于 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 中。 代码组可能如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -67,7 +67,7 @@ ms.locfileid: "47818685"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>为自定义扩展插件启用通用查询设计器  
   
--   将以下条目添加到 Designer 元素下的 RSReportDesigner.config 文件中，用在之前条目中提供的名称替换 Name 属性。  
+-   将以下条目添加到 Designer 元素下的 RSReportDesigner.config 文件中，用在之前条目中提供的名称替换 Name 属性   。  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

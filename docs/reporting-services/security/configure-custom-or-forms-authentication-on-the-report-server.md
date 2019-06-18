@@ -12,10 +12,10 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571169"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>在报表服务器上配置自定义身份验证或窗体身份验证
@@ -35,7 +35,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
 
 1.  在文本编辑器中打开 RSReportServer.config。
 
-2.  查找 \<Authentication>。
+2.  查找 \<Authentication>  。
 
 3.  复制以下 XML 结构：
 
@@ -48,7 +48,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
     </Authentication>
     ```
 
-4.  将其粘贴在 \<> 的现有条目上。
+4.  将其粘贴在 \<> 的现有条目上  。
 
      请注意，不能将 **Custom** 与其他身份验证类型一起使用。
 

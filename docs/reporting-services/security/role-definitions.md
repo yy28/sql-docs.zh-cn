@@ -14,10 +14,10 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 22087b03c0c11d008d91de80930d98fef79fc3a5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570588"
 ---
 # <a name="role-definitions"></a>角色定义
@@ -27,7 +27,7 @@ ms.locfileid: "65570588"
  角色只有在角色分配中使用时才有效。 有关角色如何提供安全性的详细信息，请参阅 [角色分配](../../reporting-services/security/role-assignments.md)。  
   
 ## <a name="types-of-role-definitions"></a>角色定义的类型  
- 角色定义既可以是项级定义也可以是系统级定义。 “项级角色定义”说明了与在报表服务器上存储和管理的项（如报表、文件夹和模型）相关的任务。 可以包含在项级角色定义中的任务如：管理报表、查看文件夹和管理单独的订阅。 “系统角色定义”  包含应用于整个站点的任务。 可以包含在系统角色中的任务如：查看报表服务器属性。  
+ 角色定义既可以是项级定义也可以是系统级定义。 “项级角色定义”  说明了与在报表服务器上存储和管理的项（如报表、文件夹和模型）相关的任务。 可以包含在项级角色定义中的任务如：管理报表、查看文件夹和管理单独的订阅。 “系统角色定义”  包含应用于整个站点的任务。 可以包含在系统角色中的任务如：查看报表服务器属性。  
   
 ## <a name="predefined-roles"></a>预定义角色  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含与不同级别的用户交互所对应的预定义角色。 下面的列表包含可以使用的预定义角色：  

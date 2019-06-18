@@ -11,10 +11,10 @@ ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4291245b101799238412115ced8b114de5a551be
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65572134"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 错误
@@ -45,7 +45,7 @@ ms.locfileid: "65572134"
 ## <a name="user-action"></a>用户操作  
  如果该错误在您手动编辑配置文件后开始出现，请删除所做的更改并输入以前的值，或者如果您有备份，请还原先前的版本。  
   
- 若要查看 rsServerConfiguration 错误附带的其他错误消息信息，请查看位于以下目录的报表服务器跟踪日志文件：\Microsoft SQL Server\MSRS12.\<instancename\Reporting Services\LogFiles。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
+ 若要查看 rsServerConfiguration 错误附带的其他错误消息信息，请查看位于以下目录的报表服务器跟踪日志文件：\Microsoft SQL Server\MSRS12.\<instancename\Reporting Services\LogFiles  。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
 ## <a name="internal-only"></a>仅内部  
   

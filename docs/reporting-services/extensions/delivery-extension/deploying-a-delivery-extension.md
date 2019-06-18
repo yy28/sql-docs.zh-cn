@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Extension element
 - deploying [Reporting Services], extensions
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4661104c1254dd7b3cf58a5e8be1dbe7c598fd6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768695"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193770"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署传递扩展插件
   传递扩展插件以 XML 配置文件的形式提供其配置信息。 该 XML 文件符合为传递扩展插件定义的 XML 架构。 传递扩展插件提供用于设置和修改配置文件的基础结构。  
@@ -27,15 +27,15 @@ ms.locfileid: "47768695"
  在将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件写入和编译到某一 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 库中后，必须将该扩展插件复制到相应的目录中，并且向适当的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件添加一个条目，以便报表服务器可以定位它。  
   
 ## <a name="configuration-file-extension-element"></a>配置文件扩展插件元素  
- 部署到报表服务器的传递扩展插件需要作为配置文件中的 Extension 元素输入。 用于报表服务器的配置文件是 RSReportServer.config。  
+ 部署到报表服务器的传递扩展插件需要作为配置文件中的 Extension 元素输入  。 用于报表服务器的配置文件是 RSReportServer.config。  
   
- 下表介绍传递扩展插件的 Extension 元素的属性。  
+ 下表介绍传递扩展插件的 Extension 元素的属性  。  
   
 |Attribute|描述|  
 |---------------|-----------------|  
 |**名称**|扩展插件的唯一名称（例如，“Report Server E-Mail”用于电子邮件传递扩展插件，“Report Server FileShare”用于文件共享传递扩展插件）。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。 如果存在重复的名称，则报表服务器返回错误。|  
 |**类型**|以逗号分隔的列表，其中包含完全限定的命名空间以及程序集的名称。|  
-|**Visible**|值为 false 指示在用户界面中将不显示该传递扩展插件。 如果未包含此属性，则默认值为 **true**。|  
+|**Visible**|值为 false 指示在用户界面中将不显示该传递扩展插件  。 如果未包含此属性，则默认值为 **true**。|  
   
  有关 RSReportServer.config 文件的详细信息，请参阅 [Reporting Services 配置文件](../../../reporting-services/report-server/reporting-services-configuration-files.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47768695"
   
 2.  在复制程序集文件后，打开 RSReportServer.config 文件。 RSReportServer.config 文件位于 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer 目录中。 还需要在配置文件中为传递扩展插件程序集文件生成一个条目。 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或诸如记事本之类的简单文本编辑器打开该配置文件。  
   
-3.  在 RSReportServer.config 文件中找到 Delivery 元素。 应当在以下位置为新创建的传递扩展插件生成一个条目：  
+3.  在 RSReportServer.config 文件中找到 Delivery 元素  。 应当在以下位置为新创建的传递扩展插件生成一个条目：  
   
     ```  
     <Extensions>  
@@ -61,15 +61,15 @@ ms.locfileid: "47768695"
     </Extensions>  
     ```  
   
-4.  为您的传递扩展插件添加一个条目。 此条目应包含一个具有 Name 和 Type 值的 Extension 元素，可能如下所示：  
+4.  为您的传递扩展插件添加一个条目。 此条目应包含一个具有 Name 和 Type 值的 Extension 元素，可能如下所示    ：  
   
     ```  
     <Extension Name="My Delivery Extension Name" Type="CompanyName.ExtensionName.MyDeliveryExtensionClass, AssemblyName" />  
     ```  
   
-     Name 的值是传递扩展插件的唯一名称。 Type 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，传递扩展插件是可见的。 若要从用户界面（如 Web 门户）中隐藏扩展插件，请将 Visible 属性添加到 Extension 元素，并将其设置为 false。  
+     Name 的值是传递扩展插件的唯一名称  。 Type 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）  。 默认情况下，传递扩展插件是可见的。 若要从用户界面（如 Web 门户）中隐藏扩展插件，请将 Visible 属性添加到 Extension 元素，并将其设置为 false    。  
   
-5.  最后，为自定义程序集添加一个代码组，以便为传递扩展插件授予 FullTrust 权限。 为此，需要将代码组添加到 rssrvpolicy.config 文件，该文件默认位于 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer 中。 代码组可能如下所示：  
+5.  最后，为自定义程序集添加一个代码组，以便为传递扩展插件授予 FullTrust 权限  。 为此，需要将代码组添加到 rssrvpolicy.config 文件，该文件默认位于 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer 中。 代码组可能如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

@@ -9,10 +9,10 @@ ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5736524ba0a57b31a832797fdb9a09c88d321a0b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581941"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>在图表中添加或删除边距（报表生成器和 SSRS）
@@ -25,7 +25,7 @@ ms.locfileid: "65581941"
   
 ## <a name="to-enable-or-disable-side-margins"></a>启用或禁用侧边距  
   
-1.  右键单击轴，然后选择“轴属性”。 将显示“垂直轴属性”或“水平轴属性”对话框。  
+1.  右键单击轴，然后选择“轴属性”  。 将显示“垂直轴属性”  或“水平轴属性”  对话框。  
   
 2.  在 **“轴选项”** 页中，设置 **“侧边距”** 属性：  
   

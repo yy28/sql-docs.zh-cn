@@ -6,41 +6,41 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e34b5bd595f70dc18b2e7ba447a689d6e1791367
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ad06a5a76344348c71838873edcc490c75b7b2e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651273"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 课：使用报表向导设计父报表
 创建用于父报表的数据连接和数据表后，接下来要使用报表设计器中的报表向导设计父报表。 有关报表设计器的详细信息，请参阅[使用报表设计器设计报表 (SSRS)](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>使用报表向导设计父报表  
   
-1.  确保在“解决方案资源管理器”中选择顶级网站。  
+1.  确保在“解决方案资源管理器”中选择顶级网站  。  
   
-2.  右键单击该网站，然后选择“添加新项”。  
+2.  右键单击该网站，然后选择“添加新项”  。  
   
-3.  在“添加新项”对话框中，选择“报表向导”，输入报表文件的名称，然后选择“添加”。  
+3.  在“添加新项”对话框中，选择“报表向导”，输入报表文件的名称，然后选择“添加”    。  
   
     随后将启动报表向导。  
   
-4.  在“数据集属性”页上的“数据源”框中，选择在[第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)中创建的 DataSet1。  
+4.  在“数据集属性”页上的“数据源”框中，选择在[第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)中创建的 DataSet1    。  
   
-    随后将自动用你在上面创建的 DataTable 更新“可用数据集”框。  
+    随后将自动用你在上面创建的 DataTable 更新“可用数据集”框   。  
   
-5.  选择“下一步” 。  
+5.  选择“下一步”  。  
   
-6.  在“排列字段”页中，执行以下操作：  
+6.  在“排列字段”页中，执行以下操作  ：  
   
-    1.  将“ProductID”、“Name”、“ProductNumber”、“SafetyStockLevel”和“ReorderLevel”从“可用字段”拖至“值”框中。  
+    1.  将“ProductID”、“Name”、“ProductNumber”、“SafetyStockLevel”和“ReorderLevel”从“可用字段”拖至“值”框中        。  
   
-    2.  选择“Sum(ProductID)”、“Sum(SafetyStockLevel)”、“Sum(ReorderLevel)”旁的箭头，然后取消选择“Sum”。  
+    2.  选择“Sum(ProductID)”、“Sum(SafetyStockLevel)”、“Sum(ReorderLevel)”旁的箭头，然后取消选择“Sum”     。  
   
-7.  选择“下一步”两次，然后选择“完成”以关闭“报表向导”。  
+7.  选择“下一步”两次，然后选择“完成”以关闭“报表向导”    。  
   
     现已创建 .rdlc 文件。 随后将在报表设计器中打开该文件。 设计图面中现在显示由您设计的 tablix。  
   

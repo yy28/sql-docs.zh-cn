@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 855991a52d2f531f559620427d4a3fc29fd79f35
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775974"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>安装或卸载用于 SharePoint 的 Reporting Services 外接程序
@@ -51,7 +51,7 @@ ms.locfileid: "64775974"
 ##  <a name="bkmk_3ways_to_install"></a> 安装方法概述  
  使用以下两种方法之一可以安装用于 SharePoint 产品的 SQL Server 2016 Reporting Services 外接程序：  
   
--   **安装向导：**![请注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")在 SQL Server 2016 中，此外接程序可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
+-   **安装向导：** ![请注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")在 SQL Server 2016 中，此外接程序可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”  页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”  。  
   
 -   **rsSharepoint.msi：** 外接程序可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
@@ -101,9 +101,9 @@ Rssharepoint.msi /?
   
     1.  导航到包含文件 **rsCustomAction.exe**的文件夹。 此文件通过外接程序的“仅文件”安装复制到您的计算机。 **rsCustomAction.exe** 位于 **%Temp%** 目录中。 要导航到此文件，请从命令提示符键入以下信息：  
   
-         **CD %temp%**。  
+         **CD %temp%** 。  
   
-         该文件应位于：**\Users\\<你的姓名\>\AppData\Local\Temp**  
+         该文件应位于： **\Users\\<你的姓名\>\AppData\Local\Temp**  
   
     2.  键入下列命令。 完成该配置步骤需要几分钟时间。 在此过程中，将重新启动 W3SVC 服务。 在程序复制文件、注册组件和运行 SharePoint 产品配置向导时，将显示若干状态消息。  
   
@@ -114,7 +114,7 @@ Rssharepoint.msi /?
     3.  更改生效所需的时间可能因您的服务器环境而异。 您还可以运行 **iisreset** 以强制实施更快的更新。  
   
 ### <a name="quiet-installation-for-scripting"></a>用于脚本撰写的静默安装  
- 你可以使用 /q 或 /quiet 开关，进行不显示任何对话框或警告的“静默”安装。 如果您想要编写外接程序安装的脚本，静默安装将很有用。  
+ 你可以使用 /q 或 /quiet 开关，进行不显示任何对话框或警告的“静默”安装   。 如果您想要编写外接程序安装的脚本，静默安装将很有用。  
   
 > [!NOTE]  
 >  如果你将 **/q** 开关用于无提示命令行安装，将不显示最终用户许可协议。 对此软件的使用受到许可协议控制并且由您负责遵守该许可协议，而与安装方法无关。  
@@ -155,11 +155,11 @@ Rssharepoint.msi /?
 ### <a name="to-uninstall-from-windows-control-panel"></a>从 Windows 控制面板卸载  
  从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 控制面板启动向导并删除外接程序：  
   
-1.  在控制面板的 **“程序”** 中，选择 **“卸载程序”**。  
+1.  在控制面板的 **“程序”** 中，选择 **“卸载程序”** 。  
   
-2.  选择“用于 SharePoint 的 Microsoft SQL Server RS 外接程序”。 还可以从命令提示符运行不带开关的 **rssharepoint.msi** 来启动卸载向导。  
+2.  选择“用于 SharePoint 的 Microsoft SQL Server RS 外接程序”  。 还可以从命令提示符运行不带开关的 **rssharepoint.msi** 来启动卸载向导。  
   
-3.  单击 **“删除”**。  
+3.  单击 **“删除”** 。  
   
 ### <a name="uninstall-from-the-command-line"></a>从命令行卸载  
  从命令行卸载外接程序：  
@@ -172,7 +172,7 @@ Rssharepoint.msi /?
     msiexec.exe /uninstall rsSharePoint.msi  
     ```  
   
-3.  您将看到一个确认消息框。 单击 **“是”**。  
+3.  您将看到一个确认消息框。 单击 **“是”** 。  
   
 ### <a name="uninstall-the-add-in-from-the-local-server-only"></a>仅从本地服务器卸载外接程序  
  卸载外接程序的以前方法会从场中删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能和对象。 如果具有多服务器场且只想从本地计算机卸载外接程序而使 SharePoint 场正常工作，请执行以下步骤：  
@@ -247,7 +247,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_upgrade"></a> 升级  
  如果具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的现有安装，则可以升级到当前版本。 外接程序安装程序将检测现有版本并提示您确认是否更新。 将显示如下的消息：  
   
- 在你的系统上检测到此产品的较低版本。是否要升级现有安装？  
+ 在你的系统上检测到此产品的较低版本。  是否要升级现有安装？  
   
  如果确认更新，则旧版本的外接程序将被删除，然后安装新版本。  
   

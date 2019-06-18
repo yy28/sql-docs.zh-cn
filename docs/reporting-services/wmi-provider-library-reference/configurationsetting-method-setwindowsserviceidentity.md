@@ -16,10 +16,10 @@ ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b12b21fe8e51f8c03bf01efd7df63053c528781
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570914"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>ConfigurationSetting 方法 - SetWindowsServiceIdentity
@@ -54,9 +54,9 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="remarks"></a>Remarks  
- UseBuiltInAccount 参数设置为 true 并且报表服务器在 Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] 或 Windows XP 上运行时，将忽略 Name、Domain 和 Password 参数的值，并且使用本地系统帐户。  
+ UseBuiltInAccount 参数设置为 true 并且报表服务器在 Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] 或 Windows XP 上运行时，将忽略 Name、Domain 和 Password 参数的值，并且使用本地系统帐户      。  
   
- UseBuiltInAccount 参数设置为 true 并且报表服务器在 Windows Server 2003 上运行时，将忽略 Domain 和 Password 属性，并且名称字段必须包含“Builtin\NetworkService”、“Builtin\System”或“Builtin\LocalService”。  
+ UseBuiltInAccount 参数设置为 true 并且报表服务器在 Windows Server 2003 上运行时，将忽略 Domain 和 Password 属性，并且名称字段必须包含“Builtin\NetworkService”、“Builtin\System”或“Builtin\LocalService”     。  
   
  SetWindowsServiceIdentity 方法可对报表服务器安装目录中的文件和文件夹设置文件权限。  
   

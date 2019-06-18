@@ -12,11 +12,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: mbarwin
 ms.openlocfilehash: 30423cd7c15a920d99fad4c0ea08e074beaece0b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522802"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

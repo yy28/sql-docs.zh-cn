@@ -8,10 +8,10 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
 ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571351"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
@@ -20,7 +20,7 @@ ms.locfileid: "65571351"
 
 使用此页可以针对报表服务器设置系统属性。 可通过多种方法来设置系统属性。 此工具提供了一个图形用户界面，您不必编写代码即可设置属性。
 
-若要打开此页，请启动 SQL Server Management Studio，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”。 选择“高级”打开此页。
+若要打开此页，请启动 SQL Server Management Studio，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”  。 选择“高级”  打开此页。
 
 ## <a name="options"></a>选项
 
@@ -37,12 +37,12 @@ ms.locfileid: "65571351"
 指示报表执行日志记录是否处于启用状态。 默认值为 **true**。 有关报表服务器执行日志的详细信息，请参阅 [报表服务器 ExecutionLog 和 ExecutionLog3 视图](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
 
 **ExecutionLogDaysKept**  
-在执行日志中保留报表执行信息的天数。 此属性的有效值包括 **-1** 到 **2**、**147**、**483**、**647**。 如果值为“-1”，则不会从执行日志表中删除条目。 默认值是 **60**秒。  
+在执行日志中保留报表执行信息的天数。 此属性的有效值包括 **-1** 到 **2**、**147**、**483**、**647**。 如果值为“-1”，则不会从执行日志表中删除条目  。 默认值是 **60**秒。  
 
 > [!NOTE]
-> 将值设置为“0”会从执行日志中删除所有条目。 值为“-1”将保留执行日志的条目，不会删除它们。
+> 将值设置为“0”会从执行日志中删除所有条目   。 值为“-1”将保留执行日志的条目，不会删除它们  。
 
-**RDLXReportTimetout** 在报表服务器命名空间中托管的所有报表的 RDLX 报表（SharePoint Server 中的 Power View 报表）处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则处理期间命名空间中的报表不会超时。 默认值是 **1800**秒。
+**RDLXReportTimetout** 在报表服务器命名空间中托管的所有报表的 RDLX 报表（SharePoint Server 中的 Power View 报表）处理超时值（以秒为单位）  。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则处理期间命名空间中的报表不会超时。 默认值是 **1800**秒。
 
 **SessionTimeout** 会话保持活动状态的时间长度（以秒为单位）。 默认值是 **600**秒。  
 
@@ -120,29 +120,29 @@ ms.locfileid: "65571351"
 **EnableRemoteErrors**  
 包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 **true** 和 **false**。 默认值是 **false**秒。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。  
 
-**EnableCustomVisuals**（仅适用于 Power BI 报表服务器） 启用 Power BI 自定义视觉对象的显示。 值为 True/False。 默认值为 True。  
+**EnableCustomVisuals**（仅适用于 Power BI 报表服务器） 启用 Power BI 自定义视觉对象的显示。 值为 True/False。 默认值为 True  。  
 
-**ExecutionLogLevel** 设置执行日志级别。 默认为正常。
+**ExecutionLogLevel** 设置执行日志级别。 默认为正常  。
 
-**InterProcessTimeoutMinutes** 设置进程超时（以分钟为单位）。 默认值为 30。
+**InterProcessTimeoutMinutes** 设置进程超时（以分钟为单位）。 默认值为 30  。
 
 **MaxFileSizeMb** 设置报表的最大文件大小（以 MB 为单位）。 默认值为 1000 *。最大值为 2000*。
 
-**ModelCleanupCycleminutes** 设置模型清理周期（以分钟为单位）。 默认为 15.
+**ModelCleanupCycleminutes** 设置模型清理周期（以分钟为单位）。 默认为 15  .
 
-**OfficeAccessTokenExpirationSeconds**（仅适用于 Power BI 报表服务器） 设置希望 Office 访问令牌到期的时间（以秒为单位）。 默认值为 60。
+**OfficeAccessTokenExpirationSeconds**（仅适用于 Power BI 报表服务器） 设置希望 Office 访问令牌到期的时间（以秒为单位）。 默认值为 60  。
 
 **OfficeOnlineDiscoveryURL**（仅适用于 Power BI 报表服务器） 设置用于查看 Excel 工作簿的 Office Online Server 实例地址。
 
-**RequireIntune**：需要 Intune 才能通过 Power BI 移动应用访问组织的报表。 默认值为 False。
+**RequireIntune**：需要 Intune 才能通过 Power BI 移动应用访问组织的报表。 默认值为 False  。
 
-**ScheduleRefreshTimeoutMinutes**（仅限 Power BI 报表服务器）：设置所需的计划刷新超时时间。默认值为 120。
+**ScheduleRefreshTimeoutMinutes**（仅限 Power BI 报表服务器）：设置所需的计划刷新超时时间。默认值为 120  。
 
-**ShowDownloadMenu**：启用客户端工具下载菜单。 默认值为 true。
+**ShowDownloadMenu**：启用客户端工具下载菜单。 默认值为 true  。
 
 **SupportedHyperlinkSchemes** ***（仅限 Power BI 报表服务器）*** 设置允许在可呈现的“超链接”操作上定义的 URI 方案的逗号分隔列表，或设置“&ast;”以启用所有超链接方案。 例如，设置“http、https”将允许指向“https://www. contoso.com”的超链接，但将删除指向“mailto:bill@contoso.com”或“javascript:window.open(‘www.contoso.com’, ‘_blank’)”的超链接。 默认为“&ast;”。
 
-**TimeInitialDelaySeconds** 设置希望初始时间延迟的时长（以秒为单位）。 默认值为 60。
+**TimeInitialDelaySeconds** 设置希望初始时间延迟的时长（以秒为单位）。 默认值为 60  。
 
 **TrustedFileFormat**：设置在浏览器中的 Reporting Services 门户网站下打开的所有外部文件格式。 对于未列出的外部文件格式，浏览器会提示下载选项。 默认值为 jpg、jpeg、jpe、wav、bmp、pdf、img、gif、json、mp4、web 和 png。
 

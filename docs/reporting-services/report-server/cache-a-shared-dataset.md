@@ -9,10 +9,10 @@ ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574771"
 ---
 # <a name="cache-a-shared-dataset"></a>如何缓存一个共享数据集
@@ -28,18 +28,18 @@ ms.locfileid: "65574771"
   
 2.  在报表管理器中，导航到要为其设置缓存属性的共享数据集，将鼠标悬停在该项上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”**。  
+3.  在下拉菜单中，单击 **“管理”** 。  
   
-4.  在左框架中，单击 **“缓存”**。  
+4.  在左框架中，单击 **“缓存”** 。  
   
     > [!NOTE]  
-    >  如果看到错误 **“未存储用于运行共享数据集的凭据”**，则缓存共享数据集选项将被禁用。 您需要修改数据源以存储凭据，或修改共享数据集以使用其他确实存储了凭据的数据源。  
+    >  如果看到错误 **“未存储用于运行共享数据集的凭据”** ，则缓存共享数据集选项将被禁用。 您需要修改数据源以存储凭据，或修改共享数据集以使用其他确实存储了凭据的数据源。  
   
-5.  选择 **“缓存共享数据集”**。  
+5.  选择 **“缓存共享数据集”** 。  
   
 6.  选择缓存在 30 分钟后过期的选项。 还可以选择缓存按指定的计划过期。  
   
-7.  单击 **“应用”**。  
+7.  单击 **“应用”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [管理共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)  

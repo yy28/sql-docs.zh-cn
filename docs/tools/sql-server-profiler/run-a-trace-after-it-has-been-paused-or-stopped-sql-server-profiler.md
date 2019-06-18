@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: badfad93ca750717b61a7f6cde38dc18d9397ded
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709645"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712476"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>在跟踪暂停或停止之后运行跟踪 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47709645"
   
 1.  选择包含停止或暂停的跟踪的窗口。  
   
-2.  在 **“文件”** 菜单上，单击 **“运行跟踪”**。  
+2.  在 **“文件”** 菜单上，单击 **“运行跟踪”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)   

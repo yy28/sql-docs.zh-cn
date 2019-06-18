@@ -9,10 +9,10 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 65d4566a7337d25a16f23eb8411e4338dabf7af0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581562"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
@@ -50,11 +50,11 @@ ms.locfileid: "65581562"
 2.  在“属性”窗格中，在 **DocumentMapLabel** 属性中键入要在文档结构图中显示的文本，或输入计算结果为标签的表达式。 例如，键入 **Sales Chart**。  
   
     > [!NOTE]  
-    >  如果看不到“属性”窗格，请在 **“视图”** 选项卡的 **“显示/隐藏”** 组中选择 **“属性”**。  
+    >  如果看不到“属性”窗格，请在 **“视图”** 选项卡的 **“显示/隐藏”** 组中选择 **“属性”** 。  
   
 3.  对要在文档结构图中显示的每个报表项重复步骤 1 和 2。  
   
-4.  单击 **“运行”**。 将运行报表，并且文档结构图会显示您创建的标签。 单击任一链接，可跳至显示该报表项的报表页。  
+4.  单击 **“运行”** 。 将运行报表，并且文档结构图会显示您创建的标签。 单击任一链接，可跳至显示该报表项的报表页。  
 
   
 ##  <a name="AddUniqueValuesToMap"></a>   
@@ -62,9 +62,9 @@ ms.locfileid: "65581562"
   
 1.  在“设计”视图中，选择包含要在文档结构图中显示的组的表、矩阵或列表。 “分组”窗格随即显示行组和列组。  
   
-2.  在“行组”窗格中，右键单击相应的组，然后单击 **“编辑组”**。 将打开 **“Tablix 组属性”** 对话框的 **“常规”** 页。  
+2.  在“行组”窗格中，右键单击相应的组，然后单击 **“编辑组”** 。 将打开 **“Tablix 组属性”** 对话框的 **“常规”** 页。  
   
-3.  单击 **“高级”**。  
+3.  单击 **“高级”** 。  
   
 4.  在 **“文档结构图”** 列表框中，键入或选择与组表达式匹配的表达式。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65581562"
   
 6.  对要在文档结构图中显示的每个组重复步骤 1-4。  
   
-7.  单击 **“运行”**。 将运行报表，并且文档结构图会显示组值。 单击任一链接，可跳至显示该报表项的报表页。  
+7.  单击 **“运行”** 。 将运行报表，并且文档结构图会显示组值。 单击任一链接，可跳至显示该报表项的报表页。  
   
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### <a name="to-hide-the-document-map-when-you-view-a-report"></a>查看报表时隐藏文档结构图  

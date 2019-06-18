@@ -10,14 +10,14 @@ helpviewer_keywords:
 - troubleshooting [Reporting Services], data processing extensions
 - data processing extensions [Reporting Services], debugging
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2ea04867f59393a4494ea6f2d179d1ffa8b80e9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 031dade1cb1f5535a1b0ccacc0efe4ca8b241ccb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743725"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194045"
 ---
 # <a name="debugging-data-processing-extension-code"></a>调试数据处理扩展插件代码
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一些可以帮助分析数据处理扩展插件代码和查找其中错误的调试工具。 哪个工具效果最佳取决于您试图完成的任务。 此示例使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  
@@ -32,13 +32,13 @@ ms.locfileid: "47743725"
   
 4.  导航到 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中包含数据处理扩展插件项目的窗口，并在代码中设置一些断点。  
   
-5.  在数据处理扩展插件项目窗口仍保持活动状态的同时，在“调试”菜单上，单击“附加到进程”。  
+5.  在数据处理扩展插件项目窗口仍保持活动状态的同时，在“调试”菜单上，单击“附加到进程”   。  
   
-     “附加到进程”对话框会打开。  
+     “附加到进程”对话框会打开  。  
   
-6.  从进程列表中，选择与报表项目对应的 devenv.exe 进程并单击“附加”。  
+6.  从进程列表中，选择与报表项目对应的 devenv.exe 进程并单击“附加”  。  
   
-7.  使用报表项目的“报表数据”选项卡定义报表数据源。 您最有可能使用一般性查询设计器来针对自定义数据源执行查询。 这将调用调试器并执行对应于断点的代码。  
+7.  使用报表项目的“报表数据”选项卡定义报表数据源  。 您最有可能使用一般性查询设计器来针对自定义数据源执行查询。 这将调用调试器并执行对应于断点的代码。  
   
 8.  使用 F11 键分步执行代码。 有关使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 进行调试的详细信息，请参阅 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 文档。  
   

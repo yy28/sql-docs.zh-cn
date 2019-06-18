@@ -12,10 +12,10 @@ ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 72486193f4171be9fdce9400328bd1c2a199f2c5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580479"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>创建、修改和删除报表历史记录中的快照
@@ -49,7 +49,7 @@ ms.locfileid: "65580479"
   
 -   手动删除单个或成组快照。  
   
-     您可以从报表管理器的“历史记录”页中删除快照。 导航到报表，单击“历史记录”，选中要删除的快照旁边的复选框，再单击 **“删除”**。  
+     您可以从报表管理器的“历史记录”页中删除快照。 导航到报表，单击“历史记录”，选中要删除的快照旁边的复选框，再单击 **“删除”** 。  
   
 -   降低报表历史记录限值以减少存储的快照数。 可以为报表服务器或特定报表设置报表历史记录限值。 如果降低限值，将从历史记录中删除最早的快照。  
   

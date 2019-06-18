@@ -11,10 +11,10 @@ ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f76bc00eca721a2ca118062d21cafe042e572dbb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576405"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>在报表中查找文本、数字或日期
@@ -36,9 +36,9 @@ ms.locfileid: "65576405"
   
      如果报表工具栏不可见，则表明它已特意隐藏起来，您将不能使用它提供的功能。 报表查看器 Web 部件的属性决定了该工具栏是否可见。  
   
-3.  单击 **“查找”**。  
+3.  单击 **“查找”** 。  
   
-4.  若要搜索随后出现的相同值，请单击 **“下一个”**。  
+4.  若要搜索随后出现的相同值，请单击 **“下一个”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  

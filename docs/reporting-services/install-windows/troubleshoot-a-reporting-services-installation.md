@@ -8,10 +8,10 @@ ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502670"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>排除 Reporting Services 安装故障
@@ -77,7 +77,7 @@ ms.locfileid: "65502670"
  ![用于返回首页链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式下安装 SQL Server 2016 SSRS 后，在 SharePoint 管理中心看不到 SQL Server Reporting Services 服务  
- 说明：如果在 SharePoint 模式中成功安装 SQL Server 2016 Reporting Services 和适用于 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 外接程序后，在以下两个菜单中看不到“SQL Server Reporting Services”，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务尚未注册：  
+ 说明：如果在 SharePoint 模式中成功安装 SQL Server 2016 Reporting Services 和适用于 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 外接程序后，在以下两个菜单中看不到“SQL Server Reporting Services”，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务尚未注册  ：  
   
 -   SharePoint 2013/2016 管理中心 ->“应用程序管理” ->“管理服务器上的服务”页  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65502670"
   
 1.  在运行 SharePoint 2013/2016 管理中心的计算机上  
   
-    1.  使用管理员权限打开 SharePoint 2013/2016 命令行管理程序。 右键单击图标，然后单击“以管理员身份运行”。 从 shell 运行以下三个 cmdlet：  
+    1.  使用管理员权限打开 SharePoint 2013/2016 命令行管理程序。 右键单击图标，然后单击“以管理员身份运行”  。 从 shell 运行以下三个 cmdlet：  
   
     2.  ```  
         Install-SPRSService  
@@ -101,7 +101,7 @@ ms.locfileid: "65502670"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  确认在以下页面上 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的状态显示为“已启动”：SharePoint 2013/2016 管理中心 ->“应用程序管理”->“管理服务器上的服务”  
+2.  确认在以下页面上 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的状态显示为“已启动”：SharePoint 2013/2016 管理中心 ->“应用程序管理”->“管理服务器上的服务”     
   
  ![用于返回首页链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于返回首页链接的箭头图标")[排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "65502670"
   
 -   从 SQL Server 安装介质安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。  
   
- 如果在完成上述解决方法之一时，“SharePoint 2013/2016 命令行管理程序”处于打开状态，请关闭命令行管理程序，然后将其重新打开。  
+ 如果在完成上述解决方法之一时，“SharePoint 2013/2016 命令行管理程序”处于打开状态，请关闭命令行管理程序，然后将其重新打开  。  
   
  有关详细信息，请参阅以下文章：  
   
@@ -211,7 +211,7 @@ ms.locfileid: "65502670"
     -   **run \<** *.NET 4.0 Framework directory* **>\InstallUtil.exe \<** *Report Server Bin directory* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  将 \<*.NET 4.0 Framework directory*> 替换为 .NET Framework 4.0 文件的物理路径，并将 \<*Report Server Bin directory*> 替换为报表服务器 Bin 文件的物理路径。  
+        >  将 \< *.NET 4.0 Framework directory*> 替换为 .NET Framework 4.0 文件的物理路径，并将 \<*Report Server Bin directory*> 替换为报表服务器 Bin 文件的物理路径。  
   
 3.  重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务。  
   
@@ -221,13 +221,13 @@ ms.locfileid: "65502670"
   
 1.  打开注册表编辑器：  
   
-    1.  单击 **“开始”**，再单击 **“运行”**。  
+    1.  单击 **“开始”** ，再单击 **“运行”** 。  
   
     2.  在“运行”  对话框的“打开”  框中，键入 **regedit**。  
   
 2.  在注册表编辑器中，选择以下注册表项： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-3.  右键单击“性能”节点，指向“新建”，然后单击“多字符串值”。  
+3.  右键单击“性能”  节点，指向“新建”  ，然后单击“多字符串值”  。  
   
 4.  键入 **Counter Names** ，然后按 Enter。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "65502670"
   
 6.  导航到以下注册表项： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-7.  右键单击“性能”节点，指向“新建”，然后单击“多字符串值”。  
+7.  右键单击“性能”  节点，指向“新建”  ，然后单击“多字符串值”  。  
   
 8.  键入 **Counter Names** ，然后按 Enter。  
   
@@ -244,7 +244,7 @@ ms.locfileid: "65502670"
  修复 64 位实例或手动重新添加注册表项之后，可以使用性能监视器来配置要监视的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 性能对象。  
   
 ###  <a name="ConfigPropsMissing"></a> 从 SQL Server 2005 升级后，未配置 ReportServerExternalURL 和 PassThroughCookies 配置属性  
- 当你从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]时，升级过程不会配置 **ReportServerExternalURL** 和 **PassThroughCookies** 配置属性。 **ReportServerExternalURL** 是一个可选属性，并且仅在以下情况下才应对其进行设置：如果你使用的是 SharePoint 2.0 Web 部件，并且希望用户能够检索报表并在新的浏览器窗口中打开。 有关 ReportServerExternalURL 的详细信息，请参阅[配置文件中的 URL（SSRS 配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 仅当使用自定义身份验证方法时，才需要**PassThroughCookies** 。 有关 PassThroughCookies的详细信息，请参阅 [配置 Web 门户以便传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
+ 当你从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]时，升级过程不会配置 **ReportServerExternalURL** 和 **PassThroughCookies** 配置属性。 **ReportServerExternalURL** 是一个可选属性，并且仅在以下情况下才应对其进行设置：如果你使用的是 SharePoint 2.0 Web 部件，并且希望用户能够检索报表并在新的浏览器窗口中打开。 有关 ReportServerExternalURL 的详细信息，请参阅[配置文件中的 URL（SSRS 配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)  。 仅当使用自定义身份验证方法时，才需要**PassThroughCookies** 。 有关 PassThroughCookies的详细信息，请参阅 [配置 Web 门户以便传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  。  
   
 > [!NOTE]  
 >  使用自定义身份验证时，建议您迁移安装而不是执行升级。 有关迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的详细信息，请参阅[迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)。  

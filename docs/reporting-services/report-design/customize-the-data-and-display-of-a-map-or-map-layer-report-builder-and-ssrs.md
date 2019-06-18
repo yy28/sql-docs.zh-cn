@@ -22,10 +22,10 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 96f1fd480d0260c24bf534dec80eef2e4ff6fda2
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65572336"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自定义地图或地图层的数据和显示（报表生成器和 SSRS）
@@ -67,7 +67,7 @@ ms.locfileid: "65572336"
   
 -   通过指定阴影，提供具有深度的错觉。  
   
- 若要更改这些选项，请右键单击“地图”，然后更改选项。  
+ 若要更改这些选项，请右键单击“地图”，然后更改选项。   
   
 ##  <a name="Viewport"></a> 更改视区的选项  
  使用视区选项可以更改报表中显示的地图的视图。  
@@ -86,7 +86,7 @@ ms.locfileid: "65572336"
   
 -   分辨率和简化。 对于线条和多边形，在绘制时间与轮廓详细程度之间选择平衡。  
   
- 若要更改这些选项，请右键单击地图视区，然后使用[地图视区属性”对话框 -&gt;“常规”](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52)页和相关页。   
+ 若要更改这些选项，请右键单击地图视区，然后使用[地图视区属性”对话框 -&gt;“常规”](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52)页和相关页。  
   
 ##  <a name="Legends"></a> 更改图例的选项  
  图例可帮助用户解释地图上的数据。  
@@ -117,7 +117,7 @@ ms.locfileid: "65572336"
  有关层的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ##  <a name="DataGrouping"></a> 更改层的数据分组  
- 您可以自定义为您自己的形状聚合空间数据的方式。 若要设置某一层的组属性，请在“地图”窗格中选择该层，并且在该层的“属性”窗格中，单击“组”，然后单击省略号 (…) 以便打开“组”属性。 在该对话框中，您可以指定组表达式、创建组变量并且筛选用于分组的数据。  
+ 您可以自定义为您自己的形状聚合空间数据的方式。 若要设置某一层的组属性，请在“地图”窗格中选择该层，并且在该层的“属性”窗格中，单击“组”，然后单击省略号 (…) 以便打开“组”属性  。 在该对话框中，您可以指定组表达式、创建组变量并且筛选用于分组的数据。  
   
  组表达式指定如何为层上的每个地图元素聚合与空间数据具有一定关系的分析数据。 默认情况下，组表达式是为空间数据与分析数据之间的关系指定的一组匹配字段。 例如，对于显示某个国家或地区的城市位置和人口规模的气泡地图，匹配字段必须包括城市名称 [City] 和区域名称 [Region]，因为可能有多个城市具有相同的名称。 相应的组表达式包括两个字段：[City] 和 [Region]。  
   

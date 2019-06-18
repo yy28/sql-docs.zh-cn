@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6aa85ddbfc5a90731284f8a3798c08375eb93ce6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739875"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712144"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>设置全局跟踪选项 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "47739875"
   
 ### <a name="to-set-global-trace-options"></a>设置全局跟踪选项  
   
-1.  在“工具”  菜单上，单击“选项” 。  
+1.  在“工具”  菜单上，单击“选项”  。  
   
-2.  在“常规选项”对话框中，单击“选择字体”修改显示选项，再单击“确定”。  
+2.  在“常规选项”  对话框中，单击“选择字体”  修改显示选项，再单击“确定”  。  
   
-3.  根据需要选择 **“建立连接后立即开始跟踪”**。  
+3.  根据需要选择 **“建立连接后立即开始跟踪”** 。  
   
-4.  根据需要选择 **“当提供程序版本发生更改时更新跟踪定义”**。 建议选择该选项，且默认情况下选择该选项。 选择该选项后，跟踪定义会自动更新为执行跟踪的服务器的当前版本。  
+4.  根据需要选择 **“当提供程序版本发生更改时更新跟踪定义”** 。 建议选择该选项，且默认情况下选择该选项。 选择该选项后，跟踪定义会自动更新为执行跟踪的服务器的当前版本。  
   
 5.  根据需要指定服务器管理滚动更新文件的方式：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47739875"
         |**4**|默认值。|  
         |**255**|最大值。 设置为最大值会影响其他进程的性能。|  
   
-    -   “默认 Health Monitor 等待间隔(秒)”设置重播线程可以阻塞其他进程的最长时间（以秒为单位）。 下表说明了这些值。  
+    -   “默认 Health Monitor 等待间隔(秒)”  设置重播线程可以阻塞其他进程的最长时间（以秒为单位）。 下表说明了这些值。  
   
         |ReplTest1|描述|  
         |-----------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "47739875"
         |**3600**|默认值。 允许不超过 **3600** 秒（1 小时）的阻塞进程。|  
         |**86400**|最大值。 允许不超过 **86400** 秒（一天）的阻塞进程。|  
   
-    -   “默认 Health Monitor 轮询间隔(秒)”设置阻塞进程的轮询重播线程的频率。 下表说明了这些值。  
+    -   “默认 Health Monitor 轮询间隔(秒)”  设置阻塞进程的轮询重播线程的频率。 下表说明了这些值。  
   
         |ReplTest1|描述|  
         |-----------|-----------------|  

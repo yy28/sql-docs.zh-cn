@@ -13,10 +13,10 @@ manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: dc205f966d0e5556f8dc6f722190d477b5d89327
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570737"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -112,7 +112,7 @@ ms.locfileid: "65570737"
   
 3.  如果升级可以继续，则安装程序将提示您继续升级过程。  
   
-4.  安装程序为 SQL Server Reporting Services 程序文件创建新的文件夹。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的程序文件夹包括 MSRS13.\<实例名称>。  
+4.  安装程序为 SQL Server Reporting Services 程序文件创建新的文件夹。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的程序文件夹包括 MSRS13.\<实例名称>  。  
   
 5.  安装程序将添加 SQL Server Reporting Services 报表服务器程序文件、配置工具和作为报表服务器功能一部分的命令行实用工具。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "65570737"
   
 8.  安装程序合并配置文件中的设置。 添加新条目时，使用当前安装的配置文件作为基础。 不会删除过时的条目，但是在升级完成后，报表服务器不会再读取它们。 升级不会删除旧日志文件、过时的 RSWebApplication.config 文件或 IIS 中的虚拟目录设置。 升级不会删除 Report Designe、Management Studio 或其他客户端工具的旧版本。 如果不再需要它们，请确保在升级完成后删除这些文件和工具。  
   
- 迁移：对于本主题前面列出的所有支持的版本，将以前版本的本机模式安装迁移到 SQL Server Reporting Services 的步骤是相同的。 有关详细信息，请参阅 [迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+ 迁移：  对于本主题前面列出的所有支持的版本，将以前版本的本机模式安装迁移到 SQL Server Reporting Services 的步骤是相同的。 有关详细信息，请参阅 [迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
   
 ##  <a name="bkmk_native_scaleout"></a> 升级 Reporting Services 本机模式扩展部署  
@@ -164,9 +164,9 @@ ms.locfileid: "65570737"
 >  由于需要升级不同技术，下面的某些方案将需要将 SharePoint 环境停止运行。 如果您的情况不允许停机，则需要完成迁移，而非就地升级。  
   
 ### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 SQL Server Reporting Services  
- **起始环境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1、SharePoint 2010 或 SharePoint 2013。  
+ **起始环境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1、SharePoint 2010 或 SharePoint 2013。  
   
- 结束环境：SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
+ 结束环境：  SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
   
 -   **SharePoint 2013/2016：** SharePoint 2013/2016 不支持从 SharePoint 2010 就地升级。 但是支持 **数据库附加升级**  过程。
   
@@ -175,7 +175,7 @@ ms.locfileid: "65570737"
 ### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 SQL Server Reporting Services  
  **起始环境：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]、SharePoint 2010。  
   
- 结束环境：SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
+ 结束环境：  SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
   
 -   **SharePoint 2013/2016：** SharePoint 2013/2016 不支持从 SharePoint 2010 就地升级。 但是支持 **数据库附加升级**  过程。
   
@@ -184,7 +184,7 @@ ms.locfileid: "65570737"
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 到 SQL Server Reporting Services  
  **起始环境：** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、SharePoint 2010。  
   
- 结束环境：SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。  
+ 结束环境：  SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。  
  
 -   **SharePoint 2013/2016：** SharePoint 2013/2016 不支持从 SharePoint 2010 就地升级。 但是支持 **数据库附加升级**  过程。
 

@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c4c1735d7f6e896ecb3a0c29b6266cddc48dffae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286955"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62502278"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web 门户上使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 创建适用于任何屏幕大小的移动报表，并在 Power BI 移动应用中查看它们。
@@ -36,7 +36,7 @@ ms.locfileid: "56286955"
 * 要创建共享数据集，请[安装报表生成器](../install-windows/install-report-builder.md)。  
 * 要创建移动报表，需 [安装 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkId=717766)。  
 * [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)（AdventureWorks 示例数据库）。  
-*  或者：World Wide Importers 示例数据库，可从 [Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)页面获得。
+*  或：World Wide Importers 示例数据库，可从 [Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)页面获得。
 * 查看结果： 
   *   [注册 Power BI 服务](https://go.microsoft.com/fwlink/?LinkID=513879) 并
   *  [下载 Power BI 移动应用](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 到你的移动设备：iOS、Android 手机或 Windows 10 设备。  
@@ -46,14 +46,14 @@ ms.locfileid: "56286955"
   
 可以从 Reporting Services 支持的任何数据源为移动报表创建共享数据源。 请参阅[支持的数据源列表](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “数据源”。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “数据源”   。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. 输入数据源信息，然后单击“确定”。  
+3. 输入数据源信息，然后单击“确定”  。  
   
     默认情况下，数据源不会显示在门户中。    
    
-5. 若要查看数据源，请单击“显示” > “数据源”。  
+5. 若要查看数据源，请单击“显示” > “数据源”   。  
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
@@ -67,21 +67,21 @@ ms.locfileid: "56286955"
   
 使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](../install-windows/install-report-builder.md)，或从你的 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。     
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “分页报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “分页报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]   。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
-2. 单击“新数据集” 。  
+2. 单击“新数据集”  。  
   
    ![PBI_SSMRP_RBNewDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-rbnewdataset.png)  
    
-3. 单击“浏览其他数据源” 。  
+3. 单击“浏览其他数据源”  。  
    
 4. 在“名称”字段中，输入保存数据源的服务器名称，格式如下：   
    
-   名称： https://localhost/ReportServer  
-   项类型：数据源 (*.rsds)  
+   名称： https://localhost/ReportServer   
+   项的类型：Data Sources (*.rsds)  
    
-5. 单击“打开” ，并导航到在该服务器上创建的数据源。  
+5. 单击“打开”  ，并导航到在该服务器上创建的数据源。  
    
 6. 选择数据源，并再次单击“打开”  。    
   
@@ -96,16 +96,16 @@ ms.locfileid: "56286955"
 ## <a name="create-KPI">创建 KPI</a>  
 可在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中立即创建 KPI。    
   
-1. 在 Web 门户右上角，单击“新建” > “新建 KPI”。   
+1. 在 Web 门户右上角，单击“新建” > “新建 KPI”   。   
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
       
    在 KPI 创建屏幕中，可以手动输入值或使用共享数据集。    
-2. 将“值”  从“手动设置”  更改到“数据集字段” 。  
+2. 将“值”  从“手动设置”  更改到“数据集字段”  。  
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. 单击“选取数据集字段”框中的省略号 ( **...** )，然后从上一步中选择数据集。  
+3. 单击“选取数据集字段”  框中的省略号 ( **...** )，然后从上一步中选择数据集。  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -117,17 +117,17 @@ ms.locfileid: "56286955"
 
    ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
-6. 单击“确定” 。
+6. 单击“确定”  。
 
-7. 在“趋势集”  框中，单击“数据集趋势” 。  
+7. 在“趋势集”  框中，单击“数据集趋势”  。  
   
-6. 在“选取数据集趋势”  框中，单击省略号 (**...**)  
+6. 在“选取数据集趋势”  框中，单击省略号 ( **...** )  
    
-7. 选择一个字段，并单击“确定” 。  
+7. 选择一个字段，并单击“确定”  。  
 
    ![PBI_SSMRP_KPIPickTrend](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipicktrend.png)  
   
-8. 为你的 KPI 命名并选取可视化类型，然后单击“创建” 。   
+8. 为你的 KPI 命名并选取可视化类型，然后单击“创建”  。   
   
    此 KPI 将显示在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中。  
    
@@ -141,7 +141,7 @@ ms.locfileid: "56286955"
   
 ## <a name="start-with-the-visuals"></a>从视觉对象开始  
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “移动报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “移动报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]   。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
@@ -183,9 +183,9 @@ ms.locfileid: "56286955"
   
 4. 选择该服务器，然后选择你所创建的数据集。  
    
-3. 返回到“数据”  选项卡，在“数据属性”  窗格中将“大小表示” 、“颜色表示” 和其他属性更改为自己数据中的字段。 
+3. 返回到“数据”  选项卡，在“数据属性”  窗格中将“大小表示”  、“颜色表示”  和其他属性更改为自己数据中的字段。 
    
-   *  “大小表示”, 和“自定义中间值”  必须是具有数值的字段。 
+   *  “大小表示”  ,  和“自定义中间值”  必须是具有数值的字段。 
    *  **分组依据** 是一种类别，因此它是文本字段。
    
    ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
@@ -200,13 +200,13 @@ ms.locfileid: "56286955"
 
 2. 同样，从模拟数据开始。 
 
-   请注意，在“视觉对象属性” 中，默认情况下 **值越高越好**，且“增量标签”  是 **目标百分比**。 它具有默认的“数据区域停止点”  ，可以对其进行更改，但现在不需要。
+   请注意，在“视觉对象属性”  中，默认情况下 **值越高越好**，且“增量标签”  是 **目标百分比**。 它具有默认的“数据区域停止点”  ，可以对其进行更改，但现在不需要。
 
    ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
-3. 在“数据”  选项卡上，选择包含数据的表，然后选择“主值”  字段以及要在“比较值” 中比较的字段。
+3. 在“数据”  选项卡上，选择包含数据的表，然后选择“主值”  字段以及要在“比较值”  中比较的字段。
 
-4. 可以选择不同的聚合，为“主值”  和“比较值” 各提供一个数字。 默认情况下，该值是一个总和。
+4. 可以选择不同的聚合，为“主值”  和“比较值”  各提供一个数字。 默认情况下，该值是一个总和。
 
    ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
@@ -222,7 +222,7 @@ ms.locfileid: "56286955"
 
    ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. 在“数据”  选项卡上的“数据属性” 中，将“密钥”  和“标签”  设置为数据中要筛选的字段。
+2. 在“数据”  选项卡上的“数据属性”  中，将“密钥”  和“标签”  设置为数据中要筛选的字段。
 
    ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
@@ -230,9 +230,9 @@ ms.locfileid: "56286955"
   
 在母版布局上创建视觉对象后，接下来可以创建一个移动报表，并专门针对你的手机用户布局进行优化。    
   
-1. 单击右上角的画布图标，再单击“手机”。  
+1. 单击右上角的画布图标，再单击“手机”  。  
   
-2. 在“控制实例” 下的布局选项卡上，你会看到已创建的两个图表。   
+2. 在“控制实例”  下的布局选项卡上，你会看到已创建的两个图表。   
   
 3. 将树形图拖动到手机画布，使其为四列宽，三行高。  
   
@@ -242,11 +242,11 @@ ms.locfileid: "56286955"
   
 1. 单击左上角的保存图标。   
    
-2. 要与他人共享并在移动设备上查看，请单击“保存到服务器” 。  
+2. 要与他人共享并在移动设备上查看，请单击“保存到服务器”  。  
   
 3. 在服务器上，浏览到要保存移动报表的文件夹。  
   
-4. 单击“选择文件夹” > “保存”。  
+4. 单击“选择文件夹” > “保存”   。  
   
    你会收到一条确认报表已保存的消息。  
     
@@ -268,10 +268,10 @@ ms.locfileid: "56286955"
   
 1.  打开并登录到移动设备上的 Power BI 应用。  
     
-2.  要查看 Reporting Services 移动报表和 KPI，请点击“Reporting Services” 。  
+2.  要查看 Reporting Services 移动报表和 KPI，请点击“Reporting Services”  。  
 ![PBI_iPad_GetStartedSm](../../reporting-services/mobile-reports/media/pbi-ipad-getstartedsm.png)  
   
-3. 点击左上角的选择图标 ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) ，然后点击“连接到服务器” 。  
+3. 点击左上角的选择图标 ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) ，然后点击“连接到服务器”  。  
   
    ![PBI_iPad_SSMRP_ConnectCrop](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-connectcrop.png)  
   

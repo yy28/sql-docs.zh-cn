@@ -10,20 +10,20 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], initializing
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b628a2d2ee2ca21cfb75abadce01293f536b8cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8bef8bcf36629b0cb31afef31f4d9a199313f015
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726885"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193953"
 ---
 # <a name="initializing-custom-assembly-objects"></a>初始化自定义程序集对象
-  在某些情况下，您可能需要在实例化自定义程序集类中的属性值和字段值时初始化它们。 您最可能需要使用从报表的全局对象集合中提供给您的值来初始化自定义类。 为此，需要覆盖报表的 Code 对象的 OnInit 方法。 若要访问 OnInit，请使用报表定义的 Code 元素。 有两种方法可用于初始化你计划要在报表中使用的自定义程序集中类的属性值或字段值：可以使用 OnInit 声明和创建类的新实例，或者可以使用 OnInit 调用可以公共使用的方法。  
+  在某些情况下，您可能需要在实例化自定义程序集类中的属性值和字段值时初始化它们。 您最可能需要使用从报表的全局对象集合中提供给您的值来初始化自定义类。 为此，需要覆盖报表的 Code 对象的 OnInit 方法   。 若要访问 OnInit，请使用报表定义的 Code 元素   。 有两种方法可用于初始化你计划要在报表中使用的自定义程序集中类的属性值或字段值：可以使用 OnInit 声明和创建类的新实例，或者可以使用 OnInit 调用可以公共使用的方法   。  
   
 ## <a name="global-object-collections-and-initialization"></a>全局对象集合和初始化  
- 若干集合可用于初始化您的自定义类变量。 可以使用 Globals 和 User 集合。 在调用 OnInit 方法时，Parameters、Fields 和 ReportItems 集合在报表生命周期中都不可用。 若要使用共享集合（Globals 或 User），需要包括 Report 对象引用。 例如，若要基于访问报表的用户的当前语言初始化自定义类，则 Code 元素可能如下：  
+ 若干集合可用于初始化您的自定义类变量。 可以使用 Globals 和 User 集合   。 在调用 OnInit 方法时，Parameters、Fields 和 ReportItems 集合在报表生命周期中都不可用     。 若要使用共享集合（Globals 或 User），需要包括 Report 对象引用    。 例如，若要基于访问报表的用户的当前语言初始化自定义类，则 Code 元素可能如下  ：  
   
 ```  
 <Code>  
@@ -38,7 +38,7 @@ ms.locfileid: "47726885"
   
  初始化上述类的属性值和字段值的一个方法就是声明您的类并通过调用某一覆盖的构造函数创建其新实例。  
   
- 初始化自定义程序集中类的属性值和字段值的另一个方法是调用从 OnInit 方法定义的可以公共使用的方法。 您首先需要在报表定义文件中为您的类添加一个实例名称。 一旦添加了相应的程序集引用和实例名称后，可以调用您的初始化方法以初始化类的属性值和字段值。 OnInit 方法可能如下：  
+ 初始化自定义程序集中类的属性值和字段值的另一个方法是调用从 OnInit 方法定义的可以公共使用的方法  。 您首先需要在报表定义文件中为您的类添加一个实例名称。 一旦添加了相应的程序集引用和实例名称后，可以调用您的初始化方法以初始化类的属性值和字段值。 OnInit 方法可能如下  ：  
   
 ```  
 <Code>  

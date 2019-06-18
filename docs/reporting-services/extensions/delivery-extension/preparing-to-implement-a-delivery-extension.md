@@ -9,14 +9,14 @@ helpviewer_keywords:
 - interfaces [Reporting Services]
 - delivery extensions [Reporting Services], implementing
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 83b4e0f0f6281a3947012be5cf3e64e5ccd7f754
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 949ab416b0d30f7bb20ec2b797a04121d49b9811
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777265"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193714"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>准备实现传递扩展插件
   在实现 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件之前，应定义要实现的接口。 首先需要确定使用传递扩展插件的方式、传递扩展插件需要哪些设置以及为传递报表通知而需要实现的特定功能。  

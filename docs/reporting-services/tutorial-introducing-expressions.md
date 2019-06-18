@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63295728"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
 该 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程介绍了如何使用包含常用函数和运算符的表达式创建功能强大且灵活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
@@ -41,24 +41,24 @@ ms.locfileid: "56292215"
   
 1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
-    将打开“新建报表或数据集”对话框。  
+    将打开“新建报表或数据集”对话框  。  
   
-    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”。  
+    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”    。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
-3.  在右窗格中，单击“表或矩阵向导”。  
+3.  在右窗格中，单击“表或矩阵向导”  。  
   
-4.  在“选择数据集”页上，单击“创建数据集” > “下一步”。  
+4.  在“选择数据集”页上，单击“创建数据集” > “下一步”    。  
   
-6.  在“选择数据源的连接”页上，选择类型为“SQL Server”的数据源。 从列表中选择一个数据源或浏览到报表服务器以选择一个数据源。  
+6.  在“选择数据源的连接”  页上，选择类型为“SQL Server”  的数据源。 从列表中选择一个数据源或浏览到报表服务器以选择一个数据源。  
 
     > [!NOTE]  
     > 只要具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-7.  单击“下一步” 。  
+7.  单击“下一步”  。  
   
-8.  在“设计查询”页上，单击“编辑为文本”。  
+8.  在“设计查询”页上，单击“编辑为文本”   。  
   
 9. 将以下查询粘贴到查询窗格中：  
   
@@ -89,13 +89,13 @@ ms.locfileid: "56292215"
     ```  
 
   
-10. 在查询设计器工具栏中，单击“运行”(**!**)。 结果集在以下列中显示 23 行数据：“FirstName”、“LastName”、“StateProvince”、“CountryRegionID”、“Gender”、“YTDPurchase”和“LastPurchase”。  
+10. 在查询设计器工具栏中，单击“运行”  ( **!** )。 结果集通过以下列显示 23 行的数据：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 和 LastPurchase。  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. 单击“下一步” 。  
+11. 单击“下一步”  。  
   
-12. 在“排列字段”页上，将以下字段按指定顺序从“可用字段”列表拖到“值”列表。  
+12. 在“排列字段”页上，将以下字段按指定顺序从“可用字段”列表拖到“值”列表    。  
   
     -   StateProvince   
     -   CountryRegionID  
@@ -104,84 +104,84 @@ ms.locfileid: "56292215"
   
     因为 CountryRegionID 和 YTDPurchase 包含数值数据，所以，SUM 聚合将默认应用于这两个字段，但你不希望对其进行求和。  
    
-13. 在“值”列表中，右键单击“CountryRegionID”，然后取消选中“Sum”复选框。  
+13. 在“值”列表中，右键单击“CountryRegionID”，然后取消选中“Sum”复选框    。  
   
     Sum 不再应用于 CountryRegionID。  
   
-14. 在“值”列表中，右键单击“YTDPurchase”，然后单击“Sum”选项。  
+14. 在“值”列表中，右键单击“YTDPurchase”，然后单击“Sum”选项    。  
   
     Sum 不再应用于 YTDPurchase。  
     
     ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. 单击“下一步” 。  
+15. 单击“下一步”  。  
   
-16. 在“选择布局”页上，保留所有默认设置，然后单击“下一步”。  
+16. 在“选择布局”页上，保留所有默认设置，然后单击“下一步”   。  
 
     ![report-builder-expression-tutorial-choose-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
-17. 单击 **“完成”**。  
+17. 单击 **“完成”** 。  
   
 ## <a name="UpdateNames"></a>2.更新数据源和数据集的默认名称  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>更新数据源的默认名称  
   
-1.  在“报表数据”窗格中，展开“数据源”文件夹。  
+1.  在“报表数据”窗格中，展开“数据源”文件夹  。  
   
-2.  右键单击“DataSource1”，然后单击“数据源属性”。  
+2.  右键单击“DataSource1”  ，然后单击“数据源属性”  。  
   
-3.  在“名称”框中，键入“ExpressionsDataSource”  
+3.  在“名称”框中，键入“ExpressionsDataSource”    
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-update-the-default-name-of-the-dataset"></a>更新数据集的默认名称  
   
-1.  在“报表数据”窗格中，展开“数据集”文件夹。  
+1.  在“报表数据”窗格中，展开“数据集”文件夹  。  
   
-2.  右键单击“DataSet1”，然后单击“数据集属性”。  
+2.  右键单击“DataSet1”  ，然后单击“数据集属性”  。  
 
     ![report-builder-expression-tutorial-rename-dataset](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
-3.  在“名称”框中，键入 **Expressions**  
+3.  在“名称”  框中，键入 **Expressions**  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3.显示名字首字母和姓氏  
-在本部分，在表达式中使用 **Left** 函数和 **Concatenate** (**&**) 运算符（其计算结果为包括首字母和姓氏的名称）。 你可以逐步生成表达式，也可以跳过一些步骤，将表达式从教程复制/粘贴到“表达式”对话框中。   
+在本部分，在表达式中使用 **Left** 函数和 **Concatenate** ( **&** ) 运算符（其计算结果为包括首字母和姓氏的名称）。 你可以逐步生成表达式，也可以跳过一些步骤，将表达式从教程复制/粘贴到“表达式”  对话框中。   
   
-1.  右键单击“StateProvince”列，指向“插入列”，然后单击“左”。  
+1.  右键单击“StateProvince”  列，指向“插入列”  ，然后单击“左”  。  
   
-    一个新列添加到“StateProvince”列的左侧。 
+    一个新列添加到“StateProvince”  列的左侧。 
     
     ![report-builder-expression-tutorial-insert-column](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
 2.  单击新列的标题，然后键入 **Name**。  
   
-3.  右键单击“Name”列的数据单元，然后单击“表达式”。  
+3.  右键单击“Name”  列的数据单元，然后单击“表达式”  。  
 
     ![report-builder-expression-tutorial-insert-expression](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
   
-4.  在“表达式”对话框中，展开“常见函数”，然后单击“文本”。  
+4.  在“表达式”  对话框中，展开“常见函数”  ，然后单击“文本”  。  
   
-5.  在“项”列表中，双击“左”。  
+5.  在“项”列表中，双击“左”   。  
   
     将 **Left** 函数添加到表达式中。  
     
     ![report-builder-expression-tutorial-left-function](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
-6.  在“类别”列表中，单击“字段(表达式)”。  
+6.  在“类别”  列表中，单击“字段(表达式)”  。  
   
-7.  在“值”列表中，双击 **FirstName**。  
+7.  在“值”  列表中，双击 **FirstName**。  
   
 8.  键入 **, 1)**  
   
     此表达式将从 **FirstName** 值提取一个字符，从左侧开始计数。  
   
-9. 键入“&". "&”  
+9. 键入“&". "&”   
 
     这将在表达式后添加一个句点和一个空格。
   
-10. 在“值”列表中，双击 **LastName**。  
+10. 在“值”  列表中，双击 **LastName**。  
   
     完成的表达式： `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`  
     
@@ -192,17 +192,17 @@ ms.locfileid: "56292215"
 12. 单击 **“运行”** 以预览报表。  
 
 ## <a name="DateFormat"></a>（可选）设置日期列、货币列和标题行的格式  
-在此部分中，设置“Last Purchase”列和“YTDPurchase”列的格式，此两列分别包含日期和货币。 同样设置标题行的格式。  
+在此部分中，设置“Last Purchase”  列和“YTDPurchase”列的格式，此两列分别包含日期和货币。 同样设置标题行的格式。  
   
 ### <a name="to-format-the-date-column"></a>设置日期列的格式  
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  选择“Last Purchase”列中的数据单元格，然后在“开始”选项卡上，转至“数字”部分，选择“日期”。  
+2.  选择“Last Purchase”列中的数据单元格，然后在“开始”选项卡上，转至“数字”部分，选择“日期”     。  
 
     ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
-3.  另外，请在“数字”部分中，单击“占位符样式”旁边的箭头，然后选择“示例值”。 
+3.  另外，请在“数字”部分中，单击“占位符样式”旁边的箭头，然后选择“示例值”    。 
 
     ![report-builder-expression-tutorial-sample-values](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
 
@@ -210,13 +210,13 @@ ms.locfileid: "56292215"
   
 ### <a name="to-format-the-currency-column"></a>设置货币列的格式
 
-- 选择“YTDPurchase”列中的数据单元格，然后在“数字”部分，选择“货币符号”。
+- 选择“YTDPurchase”列中的数据单元格，然后在“数字”部分，选择“货币符号”    。
  
 ### <a name="to-format-the-column-headers"></a>设置列标题的格式
 
 1. 选择列标题所在行。
 
-2. 在“开始”选项卡上，转至“段落”部分，选择“左”。 
+2. 在“开始”选项卡上，转至“段落”部分，选择“左”    。 
 
     ![report-builder-expression-tutorial-format-headings](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
@@ -235,51 +235,51 @@ ms.locfileid: "56292215"
  
 ### <a name="to-add-an-mf-column"></a>添加 M/F 列  
   
-1.  右键单击“Name”列，指向“插入列”，然后单击“左”。  
+1.  右键单击“Name”列，指向“插入列”，然后单击“左”    。  
   
-    一个新列添加到“Name”列的左侧。  
+    一个新列添加到“Name”列的左侧  。  
   
 2.  单击新列的标题，然后键入 **M/F**。  
   
 ### <a name="to-add-a-rectangle"></a>添加矩形  
   
-1.   在“插入”选项卡上，单击“矩形”，然后单击“M/F”列的数据单元。  
+1.   在“插入”选项卡上，单击“矩形”，然后单击“M/F”列的数据单元    。  
   
      将在该单元中添加一个矩形。  
      
      ![report-builder-expression-tutorial-insert-rectangle](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
   
-2. 拖动“M/F”和“Name”列之间的分隔符，使“M/F”列变窄。
+2. 拖动“M/F”和“Name”列之间的分隔符，使“M/F”列变窄    。
 
     ![report-builder-expression-tutorial-narrow-column](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
 ### <a name="to-use-color-to-show-gender"></a>使用颜色显示性别  
   
-1.  右键单击“M/F”列的数据单元中的矩形，然后单击“矩形属性”。  
+1.  右键单击“M/F”列的数据单元中的矩形，然后单击“矩形属性”   。  
   
-2.  在“矩形属性”对话框中，转至“填充”选项卡，单击“填充颜色”旁边的表达式“fx”按钮。  
+2.  在“矩形属性”对话框中，转至“填充”选项卡，单击“填充颜色”旁边的表达式“fx”按钮     。  
   
-3.  在“表达式”对话框中，展开“常见函数”，然后单击“程序流”。  
+3.  在“表达式”  对话框中，展开“常见函数”  ，然后单击“程序流”  。  
   
-4.  在“项”列表中，双击“Switch”。  
+4.  在“项”列表中，双击“Switch”   。  
   
-5.  在“类别”列表中，单击“字段(表达式)”。  
+5.  在“类别”  列表中，单击“字段(表达式)”  。  
   
-6.  在“值”列表中，双击 **Gender**。  
+6.  在“值”  列表中，双击 **Gender**。  
   
 7.  键入 **="Male",** （包括逗号）。
 
-8. 在“类别”列表中，单击“常量”，然后在“值”框中，单击“青蓝色”。
+8. 在“类别”列表中，单击“常量”，然后在“值”框中，单击“青蓝色”     。
 
     ![report-builder-expression-tutorial-color-expression-cornflower-blue](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
 9. 在其后键入一个逗号。 
   
-5.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“Gender”。  
+5.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“Gender”     。  
   
 7.  键入 **="Female",** （包括逗号）。 
 
-8. 在“类别”列表中，单击“常量”，然后在“值”框中，单击“番茄色”。
+8. 在“类别”列表中，单击“常量”，然后在“值”框中，单击“番茄色”     。
 
 13. 在其后键入一个右括号 **)** 。 
   
@@ -287,7 +287,7 @@ ms.locfileid: "56292215"
     
     ![report-builder-expression-tutorial-color-expression-complete](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
-12. 单击“确定”，然后再次单击“确定”关闭“矩形属性”对话框。  
+12. 单击“确定”，然后再次单击“确定”关闭“矩形属性”对话框    。  
   
 14. 单击 **“运行”** 以预览报表。  
 
@@ -297,7 +297,7 @@ ms.locfileid: "56292215"
 
 1. 单击 **“设计”** 返回设计视图。  
 
-16. 在“M/F”列选择该矩形。 在“边框”部分的“属性”窗格中，设置以下属性：
+16. 在“M/F”列选择该矩形  。 在“边框”部分的“属性”窗格中，设置以下属性：
 
     - BorderColor = 白色
     - BorderStyle = 实线
@@ -305,7 +305,7 @@ ms.locfileid: "56292215"
     
     ![report-builder-expression-tutorial-format-m-f-column](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
 
-18. 单击“运行”再次预览报表。 此次，颜色块周围具有空白区域。
+18. 单击“运行”再次预览报表  。 此次，颜色块周围具有空白区域。
 
     ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
@@ -316,17 +316,17 @@ ms.locfileid: "56292215"
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  在“报表数据”窗格中，单击“新建”，然后单击“数据集”。  
+2.  在“报表数据”窗格中，单击“新建”  ，然后单击“数据集”  。  
   
-3.  在“数据集”属性中，单击“使用在我的报表中嵌入的数据集”。  
+3.  在“数据集”属性中，单击“使用在我的报表中嵌入的数据集”  。  
   
-4.  在“数据源”列表中，选择“ExpressionsDataSource”。  
+4.  在“数据源”  列表中，选择“ExpressionsDataSource”。  
   
-5.  在“名称”框中，键入“CountryRegion”  
+5.  在“名称”框中，键入“CountryRegion”    
   
-6.  确保已选择“文本”查询类型，然后单击“查询设计器”。  
+6.  确保已选择“文本”查询类型，然后单击“查询设计器”   。  
   
-7.  单击 **“编辑为文本”**。  
+7.  单击 **“编辑为文本”** 。  
   
 8.  复制并将以下查询粘贴到查询窗格中：  
   
@@ -345,29 +345,29 @@ ms.locfileid: "56292215"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. 单击 **“运行”** (**!**) 以运行查询。  
+9. 单击 **“运行”** ( **!** ) 以运行查询。  
   
     查询结果是国家/地区标识符和名称。  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-11. 再次单击“确定”以关闭“数据集属性”对话框。  
+11. 再次单击“确定”  以关闭“数据集属性”  对话框。  
 
-     现在，“报表数据”列有了第二个数据集。
+     现在，“报表数据”列有了第二个数据集  。
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>查找 CountryRegion 数据集中的值  
   
-1.  单击“国家/地区 ID”列标题，并删除文本“ID”，以显示“国家/地区”。  
+1.  单击“Country Region ID”列标题并删除文本：ID，因此它会读作“Country Region”    。  
   
-2.  右键单击“Country Region”列的数据单元，然后单击“表达式”。  
+2.  右键单击“Country Region”  列的数据单元，然后单击“表达式”  。  
   
 3.  删除表达式，开头的等号 (=) 除外。  
   
     剩余表达式为： `=`  
   
-4.  在“表达式”对话框中，展开“常见函数”，然后单击“杂项”，在“项”列表中，双击“查找”。  
+4.  在“表达式”  对话框中，展开“常见函数”  ，然后单击“杂项”  ，在“项”  列表中，双击“查找”  。  
   
-6.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“CountryRegionID”。  
+6.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“CountryRegionID”     。  
   
 8.  立即将光标放在 `CountryRegionID.Value`后，然后键入 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**  
   
@@ -386,25 +386,25 @@ ms.locfileid: "56292215"
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  右键单击“Last Purchase”列，指向“插入列”，然后单击“右”。  
+2.  右键单击“Last Purchase”列，指向“插入列”，然后单击“右”    。  
   
-    一个新列将添加到“Last Purchase”列的右侧。  
+    一个新列将添加到“Last Purchase”列的右侧  。  
   
-3.  在列标题中，键入“Days Ago”  
+3.  在列标题中，键入“Days Ago”   
   
-4.  右键单击“Days Ago”列的数据单元格，然后单击“表达式”。  
+4.  右键单击“Days Ago”列的数据单元格，然后单击“表达式”   。  
   
-5.  在“表达式”对话框中，展开“常见函数”，然后单击“日期和时间”。  
+5.  在“表达式”对话框中，展开“常见函数”，然后单击“日期和时间”    。  
   
-6.  在“项”列表中，双击 **DateDiff**。  
+6.  在“项”  列表中，双击 **DateDiff**。  
   
 7.  紧随 `DateDiff(`，键入 **"d",** （包括引号 "" 和逗号）。 
   
-9. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“LastPurchase”。  
+9. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“LastPurchase”     。  
   
 11. 紧随 `Fields!LastPurchase.Value`，键入 **,** （逗号）。 
   
-13. 在“类别”列表中，再次单击“日期和时间”，然后在“项”列表中，双击“现在”。  
+13. 在“类别”列表中，再次单击“日期和时间”，然后在“项”列表中，双击“现在”     。  
   
     > [!WARNING]  
     > 在生产报表中，不应在报表呈现过程中会多次计算的表达式中（例如，在报表的详细信息行中）使用 **Now** 函数。 **Now** 的值随行变化，不同的值会影响表达式的计算结果，这将导致结果略微不一致。 相反，使用 `ExecutionTime` 提供的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全局变量。  
@@ -422,23 +422,23 @@ ms.locfileid: "56292215"
 ## <a name="Indicator"></a>7.使用指示器显示销售情况对比  
 在本部分中，添加一个新列，使用指示器显示某个人的年初至今 (YTD) 采购量是高于还是低于平均 YTD 采购量。 **Round** 函数从值中去掉小数部分。  
   
-需通过几个步骤配置指示器及其状态。 如果需要，可以跳过“配置指示器”过程，将已完成的表达式从本教程复制/粘贴到“表达式”对话框。  
+需通过几个步骤配置指示器及其状态。 如果需要，可以跳过“配置指示器”过程，将已完成的表达式从本教程复制/粘贴到“表达式”对话框  。  
   
 ### <a name="to-add-the--or---avg-sales-column"></a>添加 + or - AVG Sales 列  
   
-1.  右键单击“YTD Purchase”列，指向“插入列”，然后单击“右”。  
+1.  右键单击“YTD Purchase”列，指向“插入列”，然后单击“右”    。  
   
-    将一个新列添加到“YTD Purchase”列的右侧。  
+    将一个新列添加到“YTD Purchase”  列的右侧。  
   
 2.  单击列标题，然后键入 **+ or - AVG Sales**  
   
 ### <a name="to-add-an-indicator"></a>添加指示器  
   
-1.  在“插入”选项卡上，单击“指示器”，然后单击“+ or - AVG Sales”列中的数据单元格。  
+1.  在“插入”选项卡上，单击“指示器”，然后单击“+ or - AVG Sales”列中的数据单元格    。  
   
-    “选择指示器类型”对话框即会打开。  
+    “选择指示器类型”  对话框即会打开。  
   
-2.  在图标集的“方向”组中，单击由三个灰色箭头构成的图标集。  
+2.  在图标集的“方向”  组中，单击由三个灰色箭头构成的图标集。  
 
     ![report-builder-expression-tutorial-select-indicator](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
   
@@ -446,21 +446,21 @@ ms.locfileid: "56292215"
   
 ### <a name="to-configure-the-indicator"></a>配置指示器  
   
-1.  右键单击指示器，单击“指示器属性”，然后单击“值和状态”。  
+1.  右键单击指示器，单击“指示器属性”，然后单击“值和状态”   。  
   
-2.  单击“值”文本框旁边的表达式“fx”按钮。  
+2.  单击“值”文本框旁边的表达式“fx”按钮   。  
   
-3.  在“表达式”对话框中，展开“常见函数”，然后单击 **Math**。  
+3.  在“表达式”  对话框中，展开“常见函数”  ，然后单击 **Math**。  
   
-4.  在“项”列表中，双击 **Round**。  
+4.  在“项”  列表中，双击 **Round**。  
   
-5.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”。  
+5.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”     。  
   
 7.  紧随 `Fields!YTDPurchase.Value`，键入  **-** （减号）。 
   
-9. 再次展开“常见函数”，单击“聚合”，然后在“项”列表中，双击“Avg”。  
+9. 再次展开“常见函数”，单击“聚合”，然后在“项”列表中，双击“Avg”     。  
   
-11. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”。  
+11. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”     。  
   
 13. 紧随 `Fields!YTDPurchase.Value`，键入 **, "Expressions"))**  
   
@@ -468,23 +468,23 @@ ms.locfileid: "56292215"
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-16. 在“状态度量单位”框中，选择“数字”。  
+16. 在“状态度量单位”  框中，选择“数字”  。  
   
-17. 在具有向下箭头的行中，单击“起始”值的文本框右侧的 **fx**按钮。  
+17. 在具有向下箭头的行中，单击“起始”  值的文本框右侧的 **fx**按钮。  
 
     ![report-builder-expression-tutorial-indicator-start](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
-18. 在“表达式”对话框中，展开“常见函数”，然后单击 **Math**。  
+18. 在“表达式”  对话框中，展开“常见函数”  ，然后单击 **Math**。  
   
-19. 在“项”列表中，双击 **Round**。  
+19. 在“项”  列表中，双击 **Round**。  
   
-20. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”。  
+20. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”     。  
   
 22. 紧随 `Fields!YTDPurchase.Value`，键入  **-** （减号）。 
   
-24. 再次展开“常见函数”，单击“聚合”，然后在“项”列表中，双击“Avg”。  
+24. 再次展开“常见函数”，单击“聚合”，然后在“项”列表中，双击“Avg”     。  
   
-26. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”。  
+26. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”     。  
   
 28. 紧随 `Fields!YTDPurchase.Value`，键入 **, "Expressions")) < 0**  
   
@@ -492,23 +492,23 @@ ms.locfileid: "56292215"
   
 30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-31. 在“结束”值的文本框中，键入 **0**  
+31. 在“结束”  值的文本框中，键入 **0**  
   
-32. 单击具有水平方向箭头的行，然后单击“删除”。  
+32. 单击具有水平方向箭头的行，然后单击“删除”  。  
 
     ![report-builder-expression-tutorial-delete-indicator-state](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
     
     现在仅有两个箭头，向上或向下。
   
-33. 在具有向上箭头的行的“起始”框中，键入 **0**  
+33. 在具有向上箭头的行的“起始”  框中，键入 **0**  
   
-34. 单击“结束”值的文本框右侧的 **fx** 按钮。  
+34. 单击“结束”  值的文本框右侧的 **fx** 按钮。  
   
-35. 在“表达式”对话框中，删除“100”并创建表达式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. 在“表达式”对话框中，删除“100”并创建表达式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`    
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-37. 再次单击“确定”以关闭“指示器属性”对话框。  
+37. 再次单击“确定”  以关闭“指示器属性”  对话框。  
   
 38. 单击 **“运行”** 以预览报表。  
 
@@ -521,41 +521,41 @@ ms.locfileid: "56292215"
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  在“报表数据”窗格中，右键单击“参数”，然后单击“添加参数”。  
+2.  在“报表数据”  窗格中，右键单击“参数”  ，然后单击“添加参数”  。  
 
     ![report-builder-expression-tutorial-add-parameter](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
   
     此时将打开 **“报表参数属性”** 对话框。  
   
-3.  在“提示符”下，键入“选择颜色”  
+3.  在“提示符”下，键入“选择颜色”    
   
-4.  在“名称”中，键入 **RowColor**  
+4.  在“名称”  中，键入 **RowColor**  
   
-5.  在“可用值”选项卡上，单击“指定值”。  
+5.  在“可用值”选项卡上，单击“指定值”   。  
   
-7.  单击 **“添加”**。  
+7.  单击 **“添加”** 。  
   
-8.  在“标签”框中，键入“黄色”  
+8.  在“标签”框中，键入“黄色”    
   
-9. 在“值”框中，键入 **Yellow**  
+9. 在“值”  框中，键入 **Yellow**  
   
-10. 单击 **“添加”**。  
+10. 单击 **“添加”** 。  
   
-11. 在“标签”框中，键入“绿色”  
+11. 在“标签”  框中，键入“绿色”   
   
-12. 在“值”框中，键入“淡绿色”  
+12. 在“值”  框中，键入“淡绿色”   
   
-13. 单击 **“添加”**。  
+13. 单击 **“添加”** 。  
   
-14. 在“标签”框中，键入“蓝色”  
+14. 在“标签”  框中，键入“蓝色”   
   
-15. 在“值”框中，键入“浅蓝色”  
+15. 在“值”  框中，键入“浅蓝色”   
   
-16. 单击 **“添加”**。  
+16. 单击 **“添加”** 。  
   
-17. 在“标签”框中，键入“粉色”  
+17. 在“标签”  框中，键入“粉色”   
   
-18. 在“值”框中，键入 **Pink**  
+18. 在“值”  框中，键入 **Pink**  
 
     ![report-builder-expression-tutorial-parameter-available](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
@@ -569,25 +569,25 @@ ms.locfileid: "56292215"
   
 4.  在“属性”窗格中，单击 **BackgroundColor**。 
 
-     如果未看到“属性”窗格，则在“视图”选项卡上，选中“属性”框。  
+     如果未看到“属性”窗格，则在“视图”选项卡上，选中“属性”框   。  
   
-    如果在“属性”窗格中按类别列出属性，会在“杂项”类别中发现“BackgroundColor”。  
+    如果在“属性”窗格中按类别列出属性，会在“杂项”类别中发现“BackgroundColor”   。  
   
-5.  单击向下箭头，然后单击“表达式”。  
+5.  单击向下箭头，然后单击“表达式”  。  
 
     ![report-builder-expression-tutorial-banded-color-property](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
   
-6.  在“表达式”对话框中，展开“常见函数”，然后单击“程序流”。  
+6.  在“表达式”  对话框中，展开“常见函数”  ，然后单击“程序流”  。  
   
-7.  在“项”列表中，双击“IIf”。  
+7.  在“项”  列表中，双击“IIf”  。  
   
-8.  在“常见函数”下，单击“杂项”，然后在“项”列表中，双击“RowNumber”。  
+8.  在“常见函数”下，单击“杂项”，然后在“项”列表中，双击“RowNumber”     。  
 
 9. 紧随 **RowNumber(** ，键入 **Nothing) MOD 2,**
   
-8. 单击“参数”，在“值”列表中，双击“RowColor”。  
+8. 单击“参数”  ，在“值”  列表中，双击“RowColor”  。  
   
-22. 紧随 `Parameters!RowColor.Value`，键入 , “White”)  
+22. 紧随 `Parameters!RowColor.Value`，键入 , “White”)   
   
     完成的表达式： `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
@@ -597,15 +597,15 @@ ms.locfileid: "56292215"
   
 ### <a name="run-the-report"></a>运行报表  
   
-1.  在“开始”选项卡上，单击“运行”。  
+1.  在“开始”选项卡上，单击“运行”   。  
 
     现在运行报表时，在为非白色镶边选择颜色之前无法看到报表。
   
-3.  在“选择颜色”列表中，为报表中的非白色镶边选择颜色。  
+3.  在“选择颜色”列表中，为报表中的非白色镶边选择颜色  。  
     
     ![report-builder-expression-tutorial-select-color](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
   
-4.  单击 **“查看报表”**。  
+4.  单击 **“查看报表”** 。  
   
     该报表呈现，报表行交替呈现您所选的背景。 
     
@@ -616,19 +616,19 @@ ms.locfileid: "56292215"
   
 ### <a name="to-add-a-report-title"></a>添加报表标题  
   
-1.  在设计图面上，单击“单击以添加标题”。  
+1.  在设计图面上，单击“单击以添加标题”  。  
   
 2.  键入 **Sales Comparison Summary**，然后选择文本。  
   
-3.  在“开始”选项卡上的“字体”框中，进行如下设置：
+3.  在“开始”选项卡上的“字体”框中，进行如下设置   ：
 
     -  大小 = 18
     -  颜色 = 灰色
     -  加粗
   
-4.  在“开始”选项卡上，单击“运行”。  
+4.  在“开始”选项卡上，单击“运行”   。  
   
-3.  为报表中的非白色镶边选择颜色，然后单击“查看报表”。  
+3.  为报表中的非白色镶边选择颜色，然后单击“查看报表”  。  
   
 ## <a name="Save"></a>（可选）保存报表  
 您可以将报表保存到报表服务器、SharePoint 库或本地计算机。 有关详细信息，请参阅[保存报表（报表生成器）](../reporting-services/report-builder/saving-reports-report-builder.md)。  
@@ -637,15 +637,15 @@ ms.locfileid: "56292215"
   
 ### <a name="to-save-the-report-to-a-report-server"></a>将报表保存到报表服务器  
   
-1.  在“文件”菜单上，转至“另存为”。  
+1.  在“文件”菜单上，转至“另存为”   。  
   
-2.  单击 **“最近使用的站点和服务器”**。  
+2.  单击 **“最近使用的站点和服务器”** 。  
   
 3.  选择或键入您拥有保存报表权限的报表服务器的名称。  
   
     此时将显示“正在连接到报表服务器”消息。 当连接完成时，您将看到报表服务器管理员指定为默认报表位置的报表文件夹的内容。  
   
-4.  为报表提供名称，然后单击“保存”。  
+4.  为报表提供名称，然后单击“保存”  。  
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。
 

@@ -9,10 +9,10 @@ ms.technology: report-design
 ms.topic: conceptual
 ms.date: 03/01/2017
 ms.openlocfilehash: c0cf0e8c98c2a89521c7b59753401fe164a7651d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577843"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多个页中显示行标题和列标题（报表生成器和 SSRS）
@@ -29,17 +29,17 @@ ms.locfileid: "65577843"
   
 ## <a name="to-display-row-headers-on-multiple-pages"></a>在多个页上显示行标题  
   
-1. 右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
+1. 右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”** 。  
   
-2. 在 **“行标题”** 中，选择 **“在每一页上重复标题行”**。  
+2. 在 **“行标题”** 中，选择 **“在每一页上重复标题行”** 。  
   
 3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-display-column-headers-on-multiple-pages"></a>在多个页上显示列标题  
   
-1. 右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
+1. 右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”** 。  
   
-2. 在 **“列标题”** 中，选择 **“在每一页上重复标题列”**。  
+2. 在 **“列标题”** 中，选择 **“在每一页上重复标题列”** 。  
   
 3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -47,11 +47,11 @@ ms.locfileid: "65577843"
   
 1. 在设计图面上，单击 Tablix 数据区域中的行控点或列控点以将其选定。 “分组”窗格随即显示行组和列组。  
   
-2. 在“分组”窗格的右侧，单击下箭头，然后单击 **“高级模式”**。 “行组”窗格显示行组层次结构的层次结构静态和动态成员，而“列组”窗格显示列组层次结构的相同内容。  
+2. 在“分组”窗格的右侧，单击下箭头，然后单击 **“高级模式”** 。 “行组”窗格显示行组层次结构的层次结构静态和动态成员，而“列组”窗格显示列组层次结构的相同内容。  
   
 3. 单击与在滚动时要使其保持可见的静态成员（行或列）相对应的静态成员。 “属性”窗格显示 **“Tablix 成员”** 属性。  
   
-     如果未显示“属性”窗格，请单击报表生成器窗口顶部的“视图”选项卡，然后单击“属性”。  
+     如果未显示“属性”窗格，请单击报表生成器窗口顶部的“视图”选项卡，然后单击“属性”   。  
   
 4. 在“属性”窗格中，将 **RepeatOnNewPage** 设置为 True。  
   

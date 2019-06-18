@@ -9,10 +9,10 @@ ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c35f87bdde9853d962e5cbb6fe68b0894ea64144
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578489"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>使用表达式指定指示器的大小（报表生成器和 SSRS）
@@ -20,12 +20,12 @@ ms.locfileid: "65578489"
   
  指示器具有名为 IndicatorStates 的指示器状态的集合。 IndicatorStates 集合通常具有多个状态。 每个状态都是该集合的成员，并且由一个图标表示。 这些状态一起构成了 IndicatorsStates 集合。  
   
- 若要动态配置图标大小，请在报表生成器的“属性”窗格中设置 IndicatorsStates 集合中各成员的属性。 如果 **“属性”** 窗格不可见，请单击 **“视图”** 选项卡，然后选择 **“属性”**。  
+ 若要动态配置图标大小，请在报表生成器的“属性”窗格中设置 IndicatorsStates 集合中各成员的属性。 如果 **“属性”** 窗格不可见，请单击 **“视图”** 选项卡，然后选择 **“属性”** 。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，使用 **“属性”** 窗口以便设置成员属性。 如果 **“属性”** 窗口未打开，则按 F4 键。  
   
- “属性”窗格提供对指示器的 IndicatorStates 集合的属性的访问。 可以通过使用表达式设置 IndicatorStates 集合成员的 ScaleFactor 属性，将图标配置为不同的大小。 有关详细信息，请参阅[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
+ “属性”窗格提供对指示器的 IndicatorStates 集合的属性的访问  。 可以通过使用表达式设置 IndicatorStates 集合成员的 ScaleFactor 属性，将图标配置为不同的大小。 有关详细信息，请参阅[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
  在此过程中使用的表达式还用于生成具有不同大小的指示器的报表，如 [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
@@ -38,13 +38,13 @@ ms.locfileid: "65578489"
   
 2.  在“属性”窗格中找到 IndicatorStates 属性。  
   
-     如果“属性”窗格按类别进行组织，则将在“状态”类别中找到 IndicatorStates。  
+     如果“属性”窗格按类别进行组织，则将在“状态”类别中找到 IndicatorStates  。  
   
 3.  单击 IndicatorStates 旁的省略号 **(...)** 按钮。 **“指示器状态集合编辑器”** 对话框将打开。  
   
      选择该集合的所有成员。  
   
-4.  在“多选属性”列表中，单击 ScaleFactor 旁的向下箭头，然后单击“表达式”。  
+4.  在“多选属性”列表中，单击 ScaleFactor 旁的向下箭头，然后单击“表达式”   。  
   
 5.  在 **“表达式”** 对话框中，写入表达式。  
   

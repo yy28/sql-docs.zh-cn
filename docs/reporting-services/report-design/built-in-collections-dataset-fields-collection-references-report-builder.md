@@ -9,10 +9,10 @@ ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91550f60a7fe056a3df68ba9c4006e8359ff2c73
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581821"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>内置集合 - 数据集字段集合引用（报表生成器）
@@ -30,7 +30,7 @@ ms.locfileid: "65581821"
   
  若要在设计图面（而非数据区域的一部分）的文本框中直接显示字段集合的汇总值，必须指定数据集名称作为聚合函数的作用域。 例如，对于名为 `SalesData`的数据集，以下表达式指定了字段 `Sales`所有值的总计： `=Sum(Fields!Sales,"SalesData")`。  
   
- 使用“表达式”对话框定义简单字段引用时，可以在“类别”窗格中选择字段集合，并查看“字段”窗格中的可用字段列表。 每个字段都具有多个属性，包括 Value 和 IsMissing。 其余属性是数据集可能可用的预定义扩展字段属性，具体取决于数据源类型。  
+ 使用“表达式”对话框定义简单字段引用时，可以在“类别”窗格中选择字段集合，并查看“字段”窗格中的可用字段列表   。 每个字段都具有多个属性，包括 Value 和 IsMissing。 其余属性是数据集可能可用的预定义扩展字段属性，具体取决于数据源类型。  
   
 ### <a name="detecting-nulls-for-a-dataset-field"></a>检测数据集字段的 Null 值  
  若要检测为 Null（在**中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）的字段值，可使用函数 **IsNothing**。 当以下表达式放置在表详细信息行的文本框中时，将测试字段 `MiddleName` 。如果值为 Null，则显示文本“No Middle Name”，如果值不为 Null，则使用该字段值本身：  
@@ -38,7 +38,7 @@ ms.locfileid: "65581821"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>在运行时检测动态字段的缺失字段  
- 默认情况下，字段集合中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，查询可能调用一个结果集随输入参数变化的存储过程，或者查询可能为 `SELECT * FROM` \<table>，其中表定义会发生变化。  
+ 默认情况下，字段集合中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，查询可能调用一个结果集随输入参数变化的存储过程，或者查询可能为 `SELECT * FROM` \<table>，其中表定义会发生变化  。  
   
 > [!NOTE]  
 >  IsMissing 可针对任何类型的数据源检测在设计时和运行时数据集架构中的更改。 IsMissing 不能用于检测多维数据集中的空成员，并且与 **EMPTY** 和 **NON EMPTY**查询语言概念无关。  

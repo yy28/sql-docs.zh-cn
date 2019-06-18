@@ -9,10 +9,10 @@ ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 24a50de92a2b182295abc926c98358fa56e2f379
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581768"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>内置集合 - ReportItems 集合引用（报表生成器）
@@ -30,7 +30,7 @@ ms.locfileid: "65581768"
   
      `=ReportItems!Textbox1.Value`  
   
--   此表达式放置在 ReportItem 文本框的 Color 属性中，当值为 > 0 时以黑色显示文本；否则将以红色显示该值：  
+-   此表达式放置在 ReportItem 文本框的 Color 属性中，当值为 > 0 时以黑色显示文本；否则将以红色显示该值  ：  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   

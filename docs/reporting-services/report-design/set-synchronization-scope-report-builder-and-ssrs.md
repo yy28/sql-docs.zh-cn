@@ -9,10 +9,10 @@ ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7b2064bcedaf2271745f09cf7e8a8647f81849b6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576822"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>设置同步作用域（报表生成器和 SSRS）
@@ -26,15 +26,15 @@ ms.locfileid: "65576822"
   
 ## <a name="to-change-the-synchronization-scope-of-an-indicator"></a>更改指示器的同步作用域  
   
-1.  右键单击要更改的指示器，然后单击“指示器属性”。  
+1.  右键单击要更改的指示器，然后单击“指示器属性”  。  
   
 2.  在左窗格中单击 **“值和状态”** 。  
   
 3.  在 **“同步作用域”** 列表中，单击要应用的作用域。  
   
-     从指示器中删除同步作用域的“(无)”选项始终可用。 其他选项取决于您的报表布局。  
+     从指示器中删除同步作用域的“(无)”选项始终可用  。 其他选项取决于您的报表布局。  
   
-     或者，单击“表达式”(fx) 按钮以编辑设置作用域的表达式。  
+     或者，单击“表达式”(fx) 按钮以编辑设置作用域的表达式   。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

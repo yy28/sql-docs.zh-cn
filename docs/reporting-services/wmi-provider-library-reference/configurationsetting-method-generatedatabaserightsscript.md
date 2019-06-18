@@ -16,10 +16,10 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570971"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法 - GenerateDatabaseRightsScript
@@ -64,7 +64,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Remarks  
  如果 *DatabaseName* 为空，则忽略 *IsRemote* ，并且数据库名称使用报表服务器配置文件中的值。  
   
- 如果将 IsWindowsUser 设置为 true，则 UserName 的格式应为 \<domain>\\<username\>。  
+ 如果将 IsWindowsUser 设置为 true，则 UserName 的格式应为 \<domain>\\<username\>    。  
   
  如果将 *IsWindowsUser* 设置为 **true**，则生成后的脚本将向用户授予对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登录权限，将报表服务器数据库设置为默认数据库，并向用户授予报表服务器数据库、报表服务器临时数据库、master 数据库和 MSDB 系统数据库的 **RSExec** 角色。  
   

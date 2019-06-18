@@ -12,10 +12,10 @@ ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd958c0bbe781f7c39c2a2e00ecbc0ccfde7164e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573258"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>将报表绑定到共享数据源 (SSRS)
@@ -26,39 +26,39 @@ ms.locfileid: "65573258"
   
 ## <a name="to-bind-a-report-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>将报表绑定到在本机模式下运行的报表服务器上的共享数据源  
   
-1.  在 Web 门户中，单击报表磁贴右上角的省略号 (...) >“管理”。  
+1.  在 Web 门户中，单击报表磁贴右上角的省略号 (...) >“管理”  。  
 
-2.  单击 **“数据源”**。  
+2.  单击 **“数据源”** 。  
   
-3.  单击一个共享数据源，然后导航到要绑定报表的数据源。  
+3.  单击一个共享数据源  ，然后导航到要绑定报表的数据源。  
   
-4.  选择该数据源，然后单击“保存”。  
+4.  选择该数据源，然后单击“保存”  。  
   
-5.  单击 **“应用”**。  
+5.  单击 **“应用”** 。  
   
      此时，报表已绑定到所选择的数据源。  
   
 ## <a name="to-bind-a-report-to-a-shared-data-source-on-a-report-server-running-in-sharepoint-integrated-mode"></a>将报表绑定到在 SharePoint 集成模式下运行的报表服务器上的共享数据源  
   
-1.  如果尚未打开库，请在“快速启动”栏上单击其名称。 如果未显示库的名称，请单击 **“查看所有网站内容”**，然后单击库的名称。  
+1.  如果尚未打开库，请在“快速启动”栏上单击其名称。 如果未显示库的名称，请单击 **“查看所有网站内容”** ，然后单击库的名称。  
   
 2.  指向报表，然后单击向下箭头。  
   
-3.  单击 **“管理数据源”**。  
+3.  单击 **“管理数据源”** 。  
   
-4.  单击 **“dataSource1”**。  
+4.  单击 **“dataSource1”** 。  
   
 5.  在 **“连接类型”** 区域中，确认已选中 **“共享数据源”** 。  
   
-6.  在“数据源链接”区域中，单击省略号 (...) 按钮。  
+6.  在“数据源链接”区域中，单击省略号 (...) 按钮  。  
   
 7.  找到要使用的数据源。  
   
-8.  选择数据源并单击 **“确定”**。  
+8.  选择数据源并单击 **“确定”** 。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-10. 单击 **“关闭”**。  
+10. 单击 **“关闭”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   

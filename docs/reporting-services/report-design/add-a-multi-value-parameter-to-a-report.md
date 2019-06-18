@@ -9,10 +9,10 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ac257b63b3cd36cc789a842c87aff9d5186f1206
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575420"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>将多值参数添加到报表
@@ -26,7 +26,7 @@ ms.locfileid: "65575420"
   
 1.  在报表生成器中，打开您希望将多值参数添加到其中的报表。  
   
-2.  右键单击报表数据集，然后单击“数据集属性”  
+2.  右键单击报表数据集，然后单击“数据集属性”   
   
 3.  通过在 **“查询”** 框中编辑查询文本或通过使用查询设计器添加筛选器，将变量添加到数据集查询中。 有关详细信息，请参阅[在关系查询设计器中生成查询（报表生成器和 SSRS）](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "65575420"
   
     自动为查询变量创建嵌入数据集或共享数据集的数据集参数。 自动为数据集参数创建报表参数。  
   
-4.  在“报表数据”窗格中展开“参数”节点，右键单击为数据集参数自动创建的报表参数，然后单击“参数属性”。  
+4.  在“报表数据”窗格中展开“参数”节点，右键单击为数据集参数自动创建的报表参数，然后单击“参数属性”    。  
   
 5.  在 **“常规”** 选项卡中，选择 **“允许多个值”** 以允许用户为参数选择多个值。  
   
-6.  （可选）在“可用”值选项卡中，指定要显示给用户的可用值列表。  
+6.  （可选）在“可用”值选项卡中，指定要显示给用户的可用值列表  。  
   
      可用值列表将限制用户只能选择参数的有效值。 对于多值参数，列表的顶部具有一个 **“全选”** 功能，因此用户只需一次单击即可选中或取消选中所有值。 如果您选择从数据集查询中获取报表参数的可用值，请确保选择不包含与同一报表参数关联的查询变量的数据集。  
   

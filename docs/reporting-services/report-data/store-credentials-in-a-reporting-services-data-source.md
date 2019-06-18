@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
 ms.openlocfilehash: f9f8671fa07d54ac2e682f8ed5224308dcb77ddf
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575011"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>在 Reporting Services 数据源中存储凭据
@@ -46,27 +46,27 @@ ms.locfileid: "65575011"
   
 1.  在 Web 门户中，浏览到包含该报表的文件夹。 单击报表磁贴右上角的省略号 (...)。  
   
-2.  单击“管理”  ，然后单击“数据源” 。  
+2.  单击“管理”  ，然后单击“数据源”  。  
   
-3.  选择 **“自定义数据源”**。  
+3.  选择 **“自定义数据源”** 。  
   
 4.  在“数据源类型”  列表中，选择处理数据源的数据所用的数据处理扩展。  
   
-5.  对于 **“连接字符串”**，指定报表服务器用于连接数据源的连接字符串。 下面的示例说明了用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的连接字符串：  
+5.  对于 **“连接字符串”** ，指定报表服务器用于连接数据源的连接字符串。 下面的示例说明了用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的连接字符串：  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
     ```  
   
-6.  对于“连接方法” ，选择“安全存储在报表服务器中的凭据” 。  
+6.  对于“连接方法”  ，选择“安全存储在报表服务器中的凭据”  。  
   
 7.  键入用户名和密码。  
   
-    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”。  
+    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”  。  
   
-    -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”**。 如果数据库服务器支持模拟或委托，则可以选择 **“与数据源建立连接之后模拟经过身份验证的用户”**。  
+    -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果数据库服务器支持模拟或委托，则可以选择 **“与数据源建立连接之后模拟经过身份验证的用户”** 。  
   
-8.  单击 **“应用”**。  
+8.  单击 **“应用”** 。  
   
      ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
@@ -74,25 +74,25 @@ ms.locfileid: "65575011"
   
 1.  浏览到包含该报表的文档库，然后单击打开菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")。  
   
-2.  单击第二个打开菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")，然后单击“管理数据源”。  
+2.  单击第二个打开菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")，然后单击“管理数据源”  。  
   
 3.  单击想要使用存储的凭据进行配置的“自定义”  数据源的名称。  
   
 4.  在“数据源类型”  列表中，选择处理数据源的数据所用的数据处理扩展。  
   
-5.  对于 **“连接字符串”**，指定报表服务器用于连接数据源的连接字符串。 下面的示例说明了用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的连接字符串：  
+5.  对于 **“连接字符串”** ，指定报表服务器用于连接数据源的连接字符串。 下面的示例说明了用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的连接字符串：  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
     ```  
   
-6.  对于“凭据” ，选择“存储的凭据” 。  
+6.  对于“凭据”  ，选择“存储的凭据”  。  
   
-7.  键入“用户名”  和“密码” 。  
+7.  键入“用户名”  和“密码”  。  
   
-    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”。  
+    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”  。  
   
-    -   如果用户名和密码是数据库凭据，请勿选择“用作 Windows 凭据” 。 如果数据库服务器支持模拟或委托，则可选择 **“设置此帐户的执行上下文”**。  
+    -   如果用户名和密码是数据库凭据，请勿选择“用作 Windows 凭据”  。 如果数据库服务器支持模拟或委托，则可选择 **“设置此帐户的执行上下文”** 。  
   
 8.  单击 **ok**。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "65575011"
   
 1.  在 Web 门户中，浏览到共享数据源项。 
   
-2.  单击报表磁贴右上角的省略号 (...) >“管理”。 
+2.  单击报表磁贴右上角的省略号 (...) >“管理”  。 
   
-3.  在“类型”列表中，指定用于处理来自数据源的数据的数据处理扩展插件。  
+3.  在“类型”  列表中，指定用于处理来自数据源的数据的数据处理扩展插件。  
   
-4.  对于 **“连接字符串”**，指定报表服务器用于连接数据源的连接字符串。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您不要在连接字符串中指定凭据。  
+4.  对于 **“连接字符串”** ，指定报表服务器用于连接数据源的连接字符串。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您不要在连接字符串中指定凭据。  
   
      下面的示例演示用于连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的连接字符串：  
   
@@ -116,11 +116,11 @@ ms.locfileid: "65575011"
   
 5.  键入用户名和密码。  
   
-    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”。  
+    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”  。  
   
-    -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”**。 如果数据库服务器支持模拟或委托，则可以选择 **“与数据源建立连接之后模拟经过身份验证的用户”**。  
+    -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果数据库服务器支持模拟或委托，则可以选择 **“与数据源建立连接之后模拟经过身份验证的用户”** 。  
   
-6.  单击 **“应用”**。  
+6.  单击 **“应用”** 。  
   
      ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
@@ -130,11 +130,11 @@ ms.locfileid: "65575011"
   
 2.  单击上下文菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")，然后单击第二个上下文菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")。  
   
-3.  单击“编辑数据源定义” 。  
+3.  单击“编辑数据源定义”  。  
   
 4.  在“数据源类型”  列表中，指定处理数据源的数据所用的数据处理扩展。  
   
-5.  对于 **“连接字符串”**，指定报表服务器用于连接数据源的连接字符串。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您不要在连接字符串中指定凭据。  
+5.  对于 **“连接字符串”** ，指定报表服务器用于连接数据源的连接字符串。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您不要在连接字符串中指定凭据。  
   
      下面的示例演示用于连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的连接字符串：  
   
@@ -144,11 +144,11 @@ ms.locfileid: "65575011"
   
 6.  键入用户名和密码。  
   
-    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“用作 Windows 凭据”。  
+    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“用作 Windows 凭据”  。  
   
-    -   如果用户名和密码是数据库凭据，请勿选择“用作 Windows 凭据” 。 如果数据服务器支持模拟或委托，则可以选择“设置此帐户的执行上下文” 。  
+    -   如果用户名和密码是数据库凭据，请勿选择“用作 Windows 凭据”  。 如果数据服务器支持模拟或委托，则可以选择“设置此帐户的执行上下文”  。  
   
-7.  单击 **“确定”**。  
+7.  单击 **“确定”** 。  
   
      ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   

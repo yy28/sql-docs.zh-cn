@@ -7,14 +7,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0a09d7c391af0d8800f5d9c66d40ab7ba0c2cbf4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513255"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>多实例报表服务器部署的 URL 预留
   如果将多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例安装在同一台计算机上，则必须考虑如何为每个实例定义 URL 预留。 在每个实例中，报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 都必须至少有一个 URL 预留。 整组预留在 HTTP.SYS 中必须保持唯一。  

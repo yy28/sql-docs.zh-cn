@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0e26a45b7458e548535611af0ba19357f59eef54
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f92a148ec6f967fe1d3fe4282af68c0f801aa0c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031976"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194020"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>创建自定义报表项运行时组件
   自定义报表项运行时组件作为使用任何符合 CLS 的语言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 组件实现，该组件由报表处理器在运行时调用。 可在设计环境下定义此类运行时组件的属性，方法为修改相应自定义报表项的对应设计时组件。  
@@ -23,10 +23,10 @@ ms.locfileid: "50031976"
  有关完全实现的自定义报表项的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="definition-and-instance-objects"></a>定义和实例对象  
- 实现自定义报表项之前，必须了解“定义对象”和“实例对象”之间的差别。 定义对象用于提供自定义报表项的 RDL 表示形式，而实例对象是定义对象的已计算版本。 对于报表上的每一项，都只有一个定义对象。 访问包含表达式的定义对象上的属性时，将获取未经计算的表达式字符串。 实例对象包含定义对象的已计算版本，与项的定义对象可以是一对多的关系。 例如，如果报表有一个 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> 数据区域，其详细信息行包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem>，则在此数据区域中，将只有一个定义对象，但是每一行中都有一个实例对象。  
+ 实现自定义报表项之前，必须了解“定义对象”和“实例对象”之间的差别   。 定义对象用于提供自定义报表项的 RDL 表示形式，而实例对象是定义对象的已计算版本。 对于报表上的每一项，都只有一个定义对象。 访问包含表达式的定义对象上的属性时，将获取未经计算的表达式字符串。 实例对象包含定义对象的已计算版本，与项的定义对象可以是一对多的关系。 例如，如果报表有一个 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> 数据区域，其详细信息行包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem>，则在此数据区域中，将只有一个定义对象，但是每一行中都有一个实例对象。  
   
 ## <a name="implementing-the-icustomreportitem-interface"></a>实现 ICustomReportItem 接口  
- 若要创建 CustomReportItem 运行时组件，则需要实现 Microsoft.ReportingServices.ProcessingCore.dll 中定义的 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 接口：  
+ 若要创建 CustomReportItem 运行时组件，则需要实现 Microsoft.ReportingServices.ProcessingCore.dll 中定义的 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 接口  ：  
   
 ```csharp  
 namespace Microsoft.ReportingServices.OnDemandReportRendering  

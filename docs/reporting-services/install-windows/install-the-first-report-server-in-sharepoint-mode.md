@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775775"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>在 SharePoint 模式下安装第一个 Report Server
@@ -62,7 +62,7 @@ ms.locfileid: "64775775"
   
  **创建 Reporting Services 服务应用程序**  
   
--   在安装并注册 Reporting Services 服务后，创建一个或多个 Reporting Services 服务应用程序。 “SharePoint 场服务帐户”需要暂时成为本地管理员组的成员才能创建 Reporting Services 服务应用程序。 有关 SharePoint 2013 帐户权限的详细信息，请参阅 [SharePoint 2013 中的帐户权限和安全设置](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx)；对于 SharePoint 2016，请参阅 [SharePoint 2016 中的帐户权限和安全设置](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)。  
+-   在安装并注册 Reporting Services 服务后，创建一个或多个 Reporting Services 服务应用程序。 “SharePoint 场服务帐户”需要暂时成为本地管理员组的成员才能创建 Reporting Services 服务应用程序。 有关 SharePoint 2013 帐户权限的详细信息，请参阅 [SharePoint 2013 中的帐户权限和安全设置](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx) ；对于 SharePoint 2016，请参阅 [SharePoint 2016 中的帐户权限和安全设置](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)。  
   
      根据最佳安全做法，SharePoint 场管理员帐户不应同时作为本地操作系统管理员帐户。 如果您在安装过程中向本地管理员组中添加场管理员帐户，建议您在安装完成后从本地管理员组中删除该帐户。  
   
@@ -71,10 +71,10 @@ ms.locfileid: "64775775"
  此步骤在 SharePoint 模式下安装 Reporting Services 报表服务器以及用于 SharePoint 产品的 Reporting Services 外接程序。 根据已在您的计算机上安装的项，您可能不会看到在下面的步骤中介绍的某些安装页。  
  
  > [!IMPORTANT]
- > 对于 SharePoint 2016，Reporting Services 将安装在其上的 SharePoint 服务器需要具有“自定义”服务器角色。 Reporting Services 将在不处于“自定义”角色中的 SharePoint 服务器上成功部署，但在下一次 SharePoint 维护时段期间，MinRole 将停止 Reporting Services 服务，因为它检测到 SharePoint 集成模式中的 Reporting Services 不指示对其他任何 SharePoint 服务器角色的支持。 Reporting Services 服务应用程序仅支持“自定义”角色。
+ > 对于 SharePoint 2016，Reporting Services 将安装在其上的 SharePoint 服务器需要具有“自定义”服务器角色  。 Reporting Services 将在不处于“自定义”角色中的 SharePoint 服务器上成功部署，但在下一次 SharePoint 维护时段期间，MinRole 将停止 Reporting Services 服务，因为它检测到 SharePoint 集成模式中的 Reporting Services 不指示对其他任何 SharePoint 服务器角色的支持  。 Reporting Services 服务应用程序仅支持“自定义”角色  。
  
  > [!NOTE]
- > 如果你打算同时在 Share Point 2016 上安装 Power Pivot 服务，请在安装 Reporting Services 之前安装。 Power Pivot 服务仅能安装在处于“自定义”角色中的 SharePoint 服务器上。
+ > 如果你打算同时在 Share Point 2016 上安装 Power Pivot 服务，请在安装 Reporting Services 之前安装。 Power Pivot 服务仅能安装在处于“自定义”角色中的 SharePoint 服务器上  。
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>将自定义服务器角色应用于 SharePoint 2016 服务器
  
@@ -85,7 +85,7 @@ ms.locfileid: "64775775"
  
  2. 以管理员身份启动 **SharePoint 2016 命令行管理程序** 。 
   
-    可以右键单击“SharePoint 2016 命令行管理程序 ”，然后选择“以管理员身份运行”。
+    可以右键单击“SharePoint 2016 命令行管理程序 ”，然后选择“以管理员身份运行”   。
 
 3. 在 PowerShell 命令提示符中，运行以下命令。
 
@@ -100,33 +100,33 @@ ms.locfileid: "64775775"
 
         Get-SPServer SERVERNAME 
  
- 6. “角色”应列出“自定义”。
+ 6. “角色”应列出“自定义”   。
  
  ### <a name="install-reporting-services"></a>安装 Reporting Services
   
 1.  运行 SQL Server 安装向导 (Setup.exe)。  
   
-2.  在向导的左侧选择“安装”，然后选择“全新 SQL Server 独立安装或向现有安装添加功能”。  
+2.  在向导的左侧选择“安装”，然后选择“全新 SQL Server 独立安装或向现有安装添加功能”   。  
 
-3.  如果看到“产品密钥”页，请键入密钥或接受 Enterprise Evaluation 版本的默认密钥。  
+3.  如果看到“产品密钥”页，请键入密钥或接受 Enterprise Evaluation 版本的默认密钥  。  
   
-     选择“下一步” 。  
+     选择“下一步”  。  
   
 4.  如果您看到许可条款页，则查看并接受许可条款。 对于你同意发送功能使用情况数据来帮助改进产品功能和支持，Microsoft 深表感谢。  
   
-     选择“下一步” 。  
+     选择“下一步”  。  
 
-5.  建议选择“使用 Microsoft 更新检查更新(推荐)”。 此为可选项。
+5.  建议选择“使用 Microsoft 更新检查更新(推荐)”  。 此为可选项。
   
-     选择“下一步” 。   
+     选择“下一步”  。   
   
-6.  在“安装安装程序文件”页上，根据你的计算机上已安装的内容，可能会看到以下消息：  
+6.  在“安装安装程序文件”页上，根据你的计算机上已安装的内容，可能会看到以下消息  ：  
   
     -   “一个或多个受影响的文件具有挂起的操作。 安装过程完成后，必须重新启动计算机。”  
   
-    -   选择“下一步” 。  
+    -   选择“下一步”  。  
   
-7.  如果看到“安装规则”页。 查看任何警告或妨碍安装的问题。 然后选择“下一步”。
+7.  如果看到“安装规则”  页。 查看任何警告或妨碍安装的问题。 然后选择“下一步”  。
  
 8. 在 **“功能选择”** 页中，选择以下选项：  
   
@@ -134,21 +134,21 @@ ms.locfileid: "64775775"
   
     -   **用于 SharePoint 产品的 Reporting Services 外接程序**。  
   
-    -   （可选）还可以选择“数据库引擎服务”以提供完整的环境，但是你应有托管 SharePoint 数据库的 SQL Server 数据库引擎实例。  
+    -   （可选）还可以选择“数据库引擎服务”以提供完整的环境，但是你应有托管 SharePoint 数据库的 SQL Server 数据库引擎实例  。  
   
-     选择“下一步” 。  
+     选择“下一步”  。  
   
      ![rs_SetupFeatureSelection_SharePoint_with_circles](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
-9. 如果您已选择“数据库引擎服务”，请在 **“实例配置”** 页上接受 **MSSQLSERVER** 的默认实例，然后单击 **“下一步”**。  
+9. 如果您已选择“数据库引擎服务”，请在 **“实例配置”** 页上接受 **MSSQLSERVER** 的默认实例，然后单击 **“下一步”** 。  
   
      ![请注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "请注意") 与以前的 Reporting Services 体系结构一样，Reporting Services SharePoint 服务体系结构不基于 SQL Server“实例”。  
   
-10. 如果您看到 **“服务器配置”** 页，则键入相应的凭据。 如果要使用 Reporting Services 数据警报或订阅功能，则需要将 SQL Server 代理的“启动类型”更改为“自动”。 根据已在计算机上安装的项，您可能不会看到 **“服务器配置”** 页。  
+10. 如果您看到 **“服务器配置”** 页，则键入相应的凭据。 如果要使用 Reporting Services 数据警报或订阅功能，则需要将 SQL Server 代理的“启动类型”更改为“自动”   。 根据已在计算机上安装的项，您可能不会看到 **“服务器配置”** 页。  
   
-     选择“下一步” 。  
+     选择“下一步”  。  
   
-11. 如果选择了“数据库引擎服务”，你将看到“数据库引擎配置”页，请将相应的帐户添加到 SQL 管理员列表，然后选择“下一步”。  
+11. 如果选择了“数据库引擎服务”，你将看到“数据库引擎配置”页，请将相应的帐户添加到 SQL 管理员列表，然后选择“下一步”   。  
   
 12. 在 **“Reporting Services 配置”** 页上，您应该看到 **“仅安装”** 选项处于选中状态。 此选项将安装报表服务器文件，但不会为 Reporting Services 配置 SharePoint 环境。  
   
@@ -157,9 +157,9 @@ ms.locfileid: "64775775"
   
      ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
-13. 查看任何警告，然后在“功能配置规则”页上选择“下一步”（在停留此页面的情况下）。  
+13. 查看任何警告，然后在“功能配置规则”页上选择“下一步”   （在停留此页面的情况下）。  
   
-14. 在“准备安装”页上，查看安装摘要。 该摘要将包含一个 **“Reporting Services SharePoint 模式”** 子节点，该节点将显示 **SharePointFilesOnlyMode**的值。 选择“安装”。  
+14. 在“准备安装”页上，查看安装摘要  。 该摘要将包含一个 **“Reporting Services SharePoint 模式”** 子节点，该节点将显示 **SharePointFilesOnlyMode**的值。 选择“安装”  。  
   
 15. 安装将需要几分钟时间。 您将看到 **“完成”** 页，其中列出了功能以及各功能的状态。 您可能会看到一个信息对话框，指示计算机需要重新启动。  
   
@@ -179,14 +179,14 @@ ms.locfileid: "64775775"
   
  以下步骤将指导你完成打开 SharePoint 命令行管理程序并运行 PowerShell cmdlet：  
   
-1.  选择“开始”按钮  
+1.  选择“开始”按钮   
   
-2.  选择“Microsoft SharePoint 2016 产品”或“Microsoft SharePoint 2013 产品”组。  
+2.  选择“Microsoft SharePoint 2016 产品”或“Microsoft SharePoint 2013 产品”   组。  
   
-3.  右键单击“SharePoint 2016 命令行管理程序”或“SharePoint 2013 命令行管理程序”，选择“以管理员身份运行”。 
+3.  右键单击“SharePoint 2016 命令行管理程序”或“SharePoint 2013 命令行管理程序”，选择“以管理员身份运行”    。 
 
     > [!NOTE]
-    > 在标准 Windows PowerShell 窗口中无法识别 SharePoint 命令。 使用“SharePoint 命令行管理程序”。  
+    > 在标准 Windows PowerShell 窗口中无法识别 SharePoint 命令。 使用“SharePoint 命令行管理程序”  。  
   
 4.  运行以下 PowerShell 命令安装 Reporting Services SharePoint 服务。 命令成功完成后会在 Management Shell 中显示一个新行。 当命令成功完成时，**不会向 Management Shell 返回任何消息** ：  
   
@@ -209,7 +209,7 @@ ms.locfileid: "64775775"
     > [!IMPORTANT]
     > 如果您看到与以下内容类似的错误消息：  
     >   
-    >     Install-SPRSService：术语“Install-SPRSService”无法识别为 cmdlet、函数、脚本文件或可操作程序的名称。 检查名称的拼写，如果包括路径，请验证路径是否正确并重试。  
+    >     Install-SPRSService：术语“Install-SPRSService”无法识别为 cmdlet、函数、脚本文件或可操作程序的名称  。 检查名称的拼写，如果包括路径，请验证路径是否正确并重试。  
     >
     > 你位于 Windows Powershell 中而不是 SharePoint 命令行管理程序中，或尚未安装 Reporting Services SharePoint 模式。 有关 Reporting Services 和PowerShell 的详细信息，请参阅[用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
@@ -219,22 +219,22 @@ ms.locfileid: "64775775"
   
 2.  找到 **“SQL Server Reporting Services 服务”** ，然后在“操作”列中单击 **“启动”** 。  
   
-3.  Reporting Services 服务的状态将从 **“已停止”** 更改为 **“已启动”**。 如果 Reporting Services 服务不在列表中，则使用 PowerShell 安装该服务。  
+3.  Reporting Services 服务的状态将从 **“已停止”** 更改为 **“已启动”** 。 如果 Reporting Services 服务不在列表中，则使用 PowerShell 安装该服务。  
   
     > [!NOTE]  
-    >  如果 Reporting Services 服务停留在“正在启动”状态，并且未更改为“已启动”，则验证是否已在 Windows 服务器管理器中启动“SharePoint 2013 管理”服务。  
+    >  如果 Reporting Services 服务停留在“正在启动”状态，并且未更改为“已启动”，则验证是否已在 Windows 服务器管理器中启动“SharePoint 2013 管理”服务   。  
   
 ##  <a name="bkmk_create_serrviceapplication"></a> 步骤 3：创建 Reporting Services 服务应用程序  
  本节提供您在查看现有服务应用程序的情况下，用于创建服务应用程序的步骤和属性说明。  
   
-1.  在 SharePoint 管理中心的“应用程序管理”组中，选择“管理服务应用程序”。  
+1.  在 SharePoint 管理中心的“应用程序管理”组中，选择“管理服务应用程序”   。  
   
-2.  在 SharePoint 功能区中，选择“新建”按钮。  
+2.  在 SharePoint 功能区中，选择“新建”按钮  。  
   
-3.  在“新建”菜单中，选择“SQL Server Reporting Services 服务应用程序”。  
+3.  在“新建”菜单中，选择“SQL Server Reporting Services 服务应用程序”  。  
   
     > [!IMPORTANT]  
-    >  如果 Reporting Services 选项没有出现在列表中，则表明 Reporting Services 共享服务尚未安装。 查看上一节，了解如何使用 PowerShell cmdlt 安装 Reporting Services 服务。  
+    >  如果 Reporting Services 选项没有出现在列表中，则表明 Reporting Services 共享服务尚未安装  。 查看上一节，了解如何使用 PowerShell cmdlt 安装 Reporting Services 服务。  
   
 4.  在 **“创建 SQL Server Reporting Services 服务应用程序”** 页中，输入应用程序的名称。 如果您要创建多个 Reporting Services 服务应用程序，则一个描述性名称或命名约定将帮助您组织管理操作。  
   
@@ -246,11 +246,11 @@ ms.locfileid: "64775775"
   
 7.  在 **“数据库名称”** 中，默认值是 `ReportingService_<guid>`，这是唯一的数据库名称。 如果您键入一个新值，请键入唯一值。 这是您要专为服务应用程序创建的新数据库。  
   
-8.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”**，请参阅 SharePoint 文档以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳做法。  
+8.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”** ，请参阅 SharePoint 文档以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳做法。  
   
 9. 在 **“Web 应用程序关联”** 部分中，选择要设置为供当前 Reporting Services 服务应用程序访问的 Web 应用程序。 可以将一个 Reporting Services 服务应用程序与一个 Web 应用程序相关联。 如果所有当前 Web 应用程序均已与一个 Reporting Services 服务应用程序相关联，将显示警告消息。  
   
-10. 选择“确定”。  
+10. 选择“确定”  。  
   
 11. 用于创建服务应用程序的过程可能会需要几分钟才能完成。 当它完成时，将显示确认消息和一个指向 **“设置订阅和警报”** 页的链接。 如果要使用 Reporting Services 订阅功能或数据警报功能，请完成此设置步骤。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -272,15 +272,15 @@ ms.locfileid: "64775775"
   
      打开浏览器找到所需的 SharePoint 网站。 例如 https://\<servername>/sites/bi  
   
-2.  选择“设置”![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")。  
+2.  选择“设置”![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")  。  
   
-3.  选择“网站设置”。  
+3.  选择“网站设置”  。  
   
-4.  在“网站集管理”组中，选择“网站集功能”。  
+4.  在“网站集管理”组中，选择“网站集功能”   。  
   
 5.  在列表中找到 **“Power View 集成功能”** 。  
   
-6.  选择“激活”。 功能状态将更改为 **“活动”**。  
+6.  选择“激活”  。 功能状态将更改为 **“活动”** 。  
   
  将对每个网站集完成此过程。 有关详细信息，请参阅 [在 SharePoint 中激活报表服务器和 Power View 集成功能](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)。  
   
@@ -299,9 +299,9 @@ ms.locfileid: "64775775"
   
 -   更新服务代理的 **-Account** 。 该帐户在 SharePoint 场中必须是一个托管服务帐户。 有关详细信息，请参阅 SharePoint 主题 [规划 SharePoint 2013 中的管理和服务帐户](https://technet.microsoft.com/library/cc263445.aspx)。  
   
--   更新服务应用程序的 -DatabaseServer 参数。 此参数是数据库引擎实例  
+-   更新服务应用程序的 -DatabaseServer 参数  。 此参数是数据库引擎实例  
   
--   更新希望 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 功能启用的站点的 -url 参数。  
+-   更新希望 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 功能启用的站点的 -url 参数  。  
   
  **若要使用该脚本，请执行以下操作：**  
   
@@ -410,7 +410,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  Reporting Services 数据警报功能会在电子邮件中发送警报。 若要发送电子邮件，可能需要配置 Reporting Services 服务应用程序，并可能需要修改该服务应用程序的电子邮件传递扩展插件。 如果计划将电子邮件传递扩展插件用于 Reporting Services 订阅功能，则需要进行电子邮件设置。 有关详细信息，请参阅[为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2013 和 SharePoint 2016）](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)。 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>将 Reporting Services 内容类型添加到内容库  
- Reporting Services 提供预定义的内容类型，用于管理共享数据源 (.rsds) 文件和报表生成器报表定义 (.rdl) 文件。 将“报表生成器报表”和“报表数据源”内容类型添加到库中将启用“新建”命令，以便创建对应类型的新文档。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+ Reporting Services 提供预定义的内容类型，用于管理共享数据源 (.rsds) 文件和报表生成器报表定义 (.rdl) 文件。 将“报表生成器报表”  和“报表数据源”  内容类型添加到库中将启用“新建”  命令，以便创建对应类型的新文档。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>激活报表服务器文件同步功能  
  如果用户经常直接将已发布的报表项上载到 SharePoint 文档库，则 **“报表服务器文件同步”** 站点级别功能将很有用。 文件同步功能将更频繁地将报表服务器目录与文档库中的项进行同步。 有关详细信息，请参阅 [在 SharePoint 管理中心中激活报表服务器文件同步功能](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  

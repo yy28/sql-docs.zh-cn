@@ -9,17 +9,17 @@ ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581528"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>控制 Tablix 数据区域在报表页上的显示
 了解可以在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表为表、矩阵或列表数据区域设置以更改其在查看报表时的显示方式的属性。  
    
 ## <a name="controlling-the-appearance-of-data"></a>控制数据的外观  
-表、矩阵和列表数据区域都是 Tablix 数据区域的示例。 下列功能有助于控制 Tablix 数据区域的外观：  
+表、矩阵和列表数据区域都是 Tablix 数据区域的示例  。 下列功能有助于控制 Tablix 数据区域的外观：  
   
 -   **设置数据格式。** 若要在表、矩阵或列表中设置数据格式，请在单元格中设置文本框的属性。 可以同时设置多个单元的属性。 若要设置图表中的数据的格式，请在序列上设置格式设置属性。 有关详细信息，请参阅[设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)和[设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)。  
   

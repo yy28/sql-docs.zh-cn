@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 045689c0aa7f5b4bbc8a365ad2d15d77f3b67ce4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577760"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
@@ -36,35 +36,35 @@ ms.locfileid: "65577760"
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>为 Reporting Services 服务应用程序启用远程错误  
   
-1.  对于随 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或较新版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装的 SharePoint 模式报表服务器，启用服务应用程序设置 **“启用远程错误”**。 可为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序配置该设置。  
+1.  对于随 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或较新版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装的 SharePoint 模式报表服务器，启用服务应用程序设置 **“启用远程错误”** 。 可为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序配置该设置。  
   
 2.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
   
 3.  找到您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序并单击其名称。  
   
-4.  单击 **“系统设置”**。  
+4.  单击 **“系统设置”** 。  
   
 5.  在 **“安全性”** 部分，单击 **“启用远程错误”** 。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 #### <a name="enable-remote-errors-for-a-sharepoint-site"></a>为 SharePoint 站点启用远程错误  
   
-1.  对于随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本安装的 SharePoint 模式报表服务器，启用站点设置 **“启用本地模式下的远程错误”**。  
+1.  对于随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本安装的 SharePoint 模式报表服务器，启用站点设置 **“启用本地模式下的远程错误”** 。  
   
 2.  在 **“站点操作”** 中，单击您要修改的站点对应的 **“站点设置”** 。  
   
 3.  在 **“Reporting Services”** 组，单击 **“Reporting Services 站点设置”** 。  
   
-4.  单击 **“启用本地模式下的远程错误”**。  
+4.  单击 **“启用本地模式下的远程错误”** 。  
   
-5.  单击 **“确定”**。  
+5.  单击 **“确定”** 。  
   
 ##  <a name="bkmk_mgtStudio"></a> 通过 SQL Server Management Studio 启用远程错误（本机模式）  
   
 1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) 连接到 Management Studio 中的报表服务器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-2.  右键单击报表服务器节点，然后选择“属性”。  
+2.  右键单击报表服务器节点，然后选择“属性”  。  
   
 3.  单击 **“高级”** 以打开属性页。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[服务器属性（“高级”页）- Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65577760"
   
 2.  将文件另存为 EnableRemoteErrors.rss。  
   
-3.  单击 **“开始”**，指向 **“运行”**，键入 **cmd**，再单击 **“确定”** 打开命令提示符窗口。  
+3.  单击 **“开始”** ，指向 **“运行”** ，键入 **cmd**，再单击 **“确定”** 打开命令提示符窗口。  
   
 4.  导航到包含您刚刚创建的 .rss 文件的目录。  
   

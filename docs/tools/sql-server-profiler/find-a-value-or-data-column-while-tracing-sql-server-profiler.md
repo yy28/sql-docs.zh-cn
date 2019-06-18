@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88810885e1ab3447c561a1aad2f7be049cb7fff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819445"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712308"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>在跟踪时查找值或数据列 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "47819445"
   
 1.  在运行跟踪时，单击跟踪结果中的任何行。  
   
-2.  在 **“编辑”** 菜单中，单击 **“查找”**。  
+2.  在 **“编辑”** 菜单中，单击 **“查找”** 。  
   
-3.  在“查找”对话框中的“查找内容”文本框中，输入搜索值，并选择指定数据列。  
+3.  在  “查找”对话框中的  “查找内容”文本框中，输入搜索值，并选择指定数据列。  
   
-4.  若要查找下一个匹配值，请单击 **“查找下一个”**。  
+4.  若要查找下一个匹配值，请单击 **“查找下一个”** 。  
   
-5.  若要查找上一个匹配值，请单击 **“查找上一个”**。  
+5.  若要查找上一个匹配值，请单击 **“查找上一个”** 。  
   
      搜索从步骤 1 中选择的行开始。  
   

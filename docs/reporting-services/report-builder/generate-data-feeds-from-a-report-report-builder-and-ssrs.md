@@ -9,10 +9,10 @@ ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a94df8959adf40edfe2e78c7c281dd5d57f90266
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580765"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>从报表生成数据馈送（报表生成器和 SSRS）
@@ -36,7 +36,7 @@ ms.locfileid: "65580765"
   
      该报表将运行。  
   
-3.  在工具栏上，单击“导出到数据馈送”图标。  
+3.  在工具栏上，单击“导出到数据馈送”图标  。  
   
      将出现一条消息，询问是要保存还是要打开包含数据馈送的 Atom 文档。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65580765"
     > [!NOTE]  
     >  默认情况下，文档名称就是报表名称。  
   
-7.  确认文档类型为 **“ATOMSVC 文件”**，然后单击 **“保存”**。  
+7.  确认文档类型为 **“ATOMSVC 文件”** ，然后单击 **“保存”** 。  
   
 8.  或者，在浏览器或者文本编辑器或 XML 编辑器中打开该 .atomsvc 文件。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65580765"
     > [!NOTE]  
     >  默认情况下，文档名称就是报表名称。 如果该 Atom 服务文档具有多个数据馈送，默认情况下它们全都使用相同的名称，即报表名称。 为了区分它们，请重命名这些数据馈送以便使用有意义的名称。  
   
-7.  确认文档类型为 **“ATOM 文件”**，然后单击 **“保存”**。  
+7.  确认文档类型为 **“ATOM 文件”** ，然后单击 **“保存”** 。  
   
 8.  或者，在浏览器或者文本编辑器或 XML 编辑器中打开该 .atom 文件。  
 

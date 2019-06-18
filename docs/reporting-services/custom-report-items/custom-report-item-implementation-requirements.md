@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e643352261945a289776824bbe164798828e3d66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3e90b19178bc62d0c6ef51a740ab86244709a948
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028926"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194321"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>自定义报表项实现要求
   本主题将讨论开发和部署自定义报表项的先决条件。  
@@ -36,7 +36,7 @@ ms.locfileid: "50028926"
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 为开发人员提供了许多工具和功能以简化和加速编码、调试和测试的迭代周期，并使部署过程更为容易。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 包括 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 和 C# 编译器以及相关工具。  
   
--   自定义报表项使用 Microsoft.ReportDesigner 和 <xref:Microsoft.ReportingServices.Interfaces> 命名空间。 它们存储在作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的一部分安装的 Microsoft.ReportingServices.Designer.DLL 和 Microsoft.ReportingServices.Interfaces.DLL 程序集中。  
+-   自定义报表项使用 Microsoft.ReportDesigner 和 <xref:Microsoft.ReportingServices.Interfaces> 命名空间  。 它们存储在作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的一部分安装的 Microsoft.ReportingServices.Designer.DLL 和 Microsoft.ReportingServices.Interfaces.DLL 程序集中。  
   
 -   自定义报表项设计时组件需要在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中从 <xref:System.ComponentModel> 命名空间实现接口。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文档中有关于 <xref:System.ComponentModel> 的记载。  
   

@@ -9,10 +9,10 @@ ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aaa9b5b26b94bb6eb25b4091e0503591b2dcdba
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581865"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>允许文本框扩大或收缩（报表生成器和 SSRS）
@@ -20,13 +20,13 @@ ms.locfileid: "65581865"
   
 ## <a name="to-allow-a-text-box-to-grow-or-shrink"></a>允许文本框扩大或收缩  
   
-1.  右键单击文本框，然后单击“文本框属性”。  
+1.  右键单击文本框，然后单击“文本框属性”  。  
   
 2.  单击 **“常规”** 选项卡。  
   
-    -   若要允许文本框基于其内容垂直扩展，请选择 **“允许高度增大”**。  
+    -   若要允许文本框基于其内容垂直扩展，请选择 **“允许高度增大”** 。  
   
-    -   若要允许文本框基于其内容收缩，请选择 **“允许高度减小”**。  
+    -   若要允许文本框基于其内容收缩，请选择 **“允许高度减小”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [文本框（报表生成器和 SSRS）](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  

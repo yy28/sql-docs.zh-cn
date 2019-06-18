@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 45b598a405637d17c1e22cccfdb67858bd8e2a46
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287905"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061780"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>使用钻取功能创建选项卡式移动报表
 了解如何使用钻取功能和参数创建外观和行为与选项卡式报表类似的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表。
@@ -38,7 +38,7 @@ ms.locfileid: "56287905"
 
    ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
-2. 针对“销售”仪表将“主题色”设置为“开”，使其相对于报表的其余部分更加醒目--在本示例中，为黑底白色。
+2. 针对“销售”仪表将“主题色”设置为“开”，使其相对于报表的其余部分更加醒目--在本示例中，为黑底白色   。
 
     ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
@@ -63,15 +63,15 @@ ms.locfileid: "56287905"
 
     ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
-2. 选择“布局”选项卡后，在“视觉对象属性”窗格中，选择“钻取目标”。
+2. 选择“布局”选项卡后，在“视觉对象属性”窗格中，选择“钻取目标”    。
 
-3. 选择“移动报表”。
+3. 选择“移动报表”  。
 
 4. 导航到将作为钻取目标的报表然后选中 - 在本示例中为“财务 - 运输”。
 
     ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
-5. 在“配置目标报表”中，选择用于筛选报表的参数，并选择“应用”。
+5. 在“配置目标报表”中，选择用于筛选报表的参数，并选择“应用”   。
 
    ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    
@@ -81,7 +81,7 @@ ms.locfileid: "56287905"
 
 1.  打开“运输”报表，将“销售”仪表设置为钻取到“销售”报表，然后将其他三个仪表设置为分别钻取到各自报表。
 
-2. 同样，在“运输”报表中，将“运输”仪表的“主题色”设置为“开”，使其相对于报表其余部分更加醒目。
+2. 同样，在“运输”报表中，将“运输”仪表的“主题色”设置为“开”，使其相对于报表其余部分更加醒目   。
 
 3. 对“燃料”、“存储”和“杂项支出”报表执行上述步骤。 
 

@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65572751"
 ---
 # <a name="graphical-query-designer-user-interface"></a>图形查询设计器用户界面
@@ -40,7 +40,7 @@ ms.locfileid: "65572751"
   
 -   **StoredProcedure** ：支持对数据源中的存储过程的调用。 若要使用此选项，您必须已被数据库管理员授予对数据源中的存储过程的执行权限。  
   
- 默认命令类型为 **“文本”**。  
+ 默认命令类型为 **“文本”** 。  
   
 > [!NOTE]  
 >  不是所有的数据处理扩展插件都支持上述所有类型。 基础数据访问接口必须支持某个命令类型，该命令类型选项才可用。  
@@ -57,7 +57,7 @@ ms.locfileid: "65572751"
 |关系图|显示查询中表的图形表示形式。 使用此窗格可以选择字段并定义表之间的关系。|  
 |网格|显示查询返回的字段列表。 使用此窗格可以定义别名、排序顺序、筛选器、组和参数。|  
 |SQL|显示关系图窗格和网格窗格表示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。 使用此窗格可以用 [!INCLUDE[tsql](../../includes/tsql-md.md)]编写或更新查询。|  
-|结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，再单击“运行”，或者单击工具栏中的“运行”按钮。|  
+|结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，再单击“运行”，或者单击工具栏中的“运行”按钮   。|  
   
  当您在前三个窗格的任意一个窗格中更改信息时，其他窗格中也会显示这些更改。 例如，如果在“关系图”窗格中添加了一个表，则将自动在 SQL 窗格的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询中添加该表。 如果在 SQL 窗格的查询中添加了一个字段，则将自动在“网格”窗格的列表中添加该字段并更新“关系图”窗格中的表。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65572751"
 |![将所选字段设置为按升序排序](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "将所选字段设置为按升序排序")|在“关系图”窗格中，将选定列的排序顺序设置为 **“升序排序”** 。|  
 |![将所选字段设置为按降序排序](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "将所选字段设置为按降序排序")|在“关系图”窗格中，将选定列的排序顺序设置为 **“降序排序”** 。|  
 |![删除所选字段中的筛选器](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "删除所选字段中的筛选器")|在标记为具有筛选器的关系图窗格中删除所选列的筛选器（![所选的筛选器列旁边的筛选器图形](../../reporting-services/report-data/media/rsqdicon-filter.gif "所选的筛选器列旁边的筛选器图形")）。|  
-|![对所选字段使用“分组依据”](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "对所选字段使用“分组依据”")|在“网格”窗格中显示或隐藏 **“分组依据”** 列。 当 **“分组依据”** 切换为开时，“网格”窗格中将出现以 **“分组依据”** 命名的额外列，并且查询中选定列的每个值都默认为 **“分组依据”**，这将导致选定列被包含在 SQL 文本的 Group By 子句中。 使用“分组依据”按钮自动添加 GROUP BY 子句，其中包括 SELECT 子句中的所有列。 当 SELECT 子句包含聚合函数调用（如 SUM(ColumnName)）时，如果想让它出现在结果集中，则需将每个非聚合列包含在 GROUP BY 子句中。<br /><br /> 若要出现在“结果”窗格中，查询中的每列都必须有一个定义用于计算要在“结果”窗格中显示的值的聚合函数，或者查询中的列都必须在 SQL 查询的 GROUP BY 子句中指定。|  
+|![对所选字段使用“分组依据”](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "对所选字段使用“分组依据”")|在“网格”窗格中显示或隐藏 **“分组依据”** 列。 当 **“分组依据”** 切换为开时，“网格”窗格中将出现以 **“分组依据”** 命名的额外列，并且查询中选定列的每个值都默认为 **“分组依据”** ，这将导致选定列被包含在 SQL 文本的 Group By 子句中。 使用“分组依据”按钮自动添加 GROUP BY 子句，其中包括 SELECT 子句中的所有列。 当 SELECT 子句包含聚合函数调用（如 SUM(ColumnName)）时，如果想让它出现在结果集中，则需将每个非聚合列包含在 GROUP BY 子句中。<br /><br /> 若要出现在“结果”窗格中，查询中的每列都必须有一个定义用于计算要在“结果”窗格中显示的值的聚合函数，或者查询中的列都必须在 SQL 查询的 GROUP BY 子句中指定。|  
 |![向关系图窗格中添加新表](../../reporting-services/report-data/media/rsqdicon-addtable.gif "向关系图窗格中添加新表")|从数据源向“关系图”窗格中添加新表。<br /><br /> **注意** ：添加新表时，查询设计器将尝试匹配来自数据源的外键关系。 添加表后，请确认表之间以链接形式表示的外键关系是正确的。|  
   
 #### <a name="example"></a>示例  

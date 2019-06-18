@@ -16,10 +16,10 @@ ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bbce09bb5c76d29bf56defb3c5403665e5226558
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576752"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>访问 Reporting Services WMI 提供程序
@@ -30,8 +30,8 @@ ms.locfileid: "65576752"
   
 |类|命名空间|描述|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_\<EncodedInstanceName>\v13|为客户端提供连接到已安装的报表服务器所需的基本信息。|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_\<EncodedInstanceName>\v13\Admin|表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。<br /><br /> **\*\* 重要提示 \*\*** 只有拥有管理权限才能访问此类。|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_\<EncodedInstanceName>\v13 |为客户端提供连接到已安装的报表服务器所需的基本信息。|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_\<EncodedInstanceName>\v13\Admin |表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。<br /><br /> **\*\* 重要提示 \*\*** 只有拥有管理权限才能访问此类。|  
   
  以上每个类实例是为每个报表服务器实例创建的。 您可以使用任何 Microsoft 或第三方工具来访问报表服务器公开的 WMI 对象，包括 .NET Framework 本身公开的 WMI 编程接口。 本主题介绍如何使用 PowerShell 命令 [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx)访问和使用 WMI 类实例。  
   

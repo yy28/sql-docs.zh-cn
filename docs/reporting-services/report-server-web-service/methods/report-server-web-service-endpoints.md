@@ -12,14 +12,14 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b4adc5d154dedbdf120e035d0cab90bd89e4d07f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284632"
 ---
 # <a name="report-server-web-service-endpoints"></a>报表服务器 Web 服务端点
   报表服务器 Web 服务提供了几个端点，用于管理报表服务器以及执行和导航报表。  
@@ -28,7 +28,7 @@ ms.locfileid: "51814190"
  有三个端点可用于管理报表服务器上的对象，即：<xref:ReportService2005>、<xref:ReportService2006> 和 <xref:ReportService2010>。 <xref:ReportService2005> 端点用于管理配置为本机模式的报表服务器上的对象。 <xref:ReportService2006> 端点用于管理配置为 SharePoint 集成模式的报表服务器上的对象。 <xref:ReportService2010> 终结点合并了 <xref:ReportService2005> 和 <xref:ReportService2006> 的功能，可以管理为本机或 SharePoint 集成模式配置的报表服务器上的对象。  
   
 > [!IMPORTANT]  
->  如果报表服务器配置为 SharePoint 集成模式，<xref:ReportService2005> API 将返回 rsOperationNotSupportedSharePointMode 错误。 如果报表服务器配置为本机模式，<xref:ReportService2006> API 将返回 rsOperationNotSupportedNativeMode 错误。 同样，在非预期模式中使用 <xref:ReportService2010> 中的模式特定 API 时，API 将返回相应的错误。  
+>  如果报表服务器配置为 SharePoint 集成模式，<xref:ReportService2005> API 将返回 rsOperationNotSupportedSharePointMode 错误  。 如果报表服务器配置为本机模式，<xref:ReportService2006> API 将返回 rsOperationNotSupportedNativeMode 错误  。 同样，在非预期模式中使用 <xref:ReportService2010> 中的模式特定 API 时，API 将返回相应的错误。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 中不推荐使用 <xref:ReportService2005> 和 <xref:ReportService2006> 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  

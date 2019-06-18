@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9bf66cdaad2f0ad85ff0213bb0711723e6ed3d05
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280732"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>添加从某个移动报表到其他移动报表或 URL 的钻取
 你可以添加从某个 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表中的任何仪表、图表或数据网格到另一个移动报表或自定义 URL 的钻取。 
@@ -26,7 +26,7 @@ ms.locfileid: "56291947"
 
 ![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
 
->**提示**：先生成目标报表，并将它保存到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中。 如果打算从源报表传递参数，则还需要将参数添加到目标报表中。 然后，可以设置从源报表到目标报表的钻取。 [将参数添加到移动报表](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)。
+>**提示**：先创建目标报表并将其保存到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中。 如果打算从源报表传递参数，则还需要将参数添加到目标报表中。 然后，可以设置从源报表到目标报表的钻取。 [将参数添加到移动报表](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)。
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>设置到移动报表的钻取  
 
@@ -34,10 +34,10 @@ ms.locfileid: "56291947"
 
    与大多数图表和简单的数据网格一样，地图和仪表也支持钻取。
    
-2. 在“视觉对象属性”窗格中，选择“钻取目标” > “移动报表”。  
+2. 在“视觉对象属性”窗格中，选择“钻取目标” > “移动报表”    。  
 3. 选择服务器和目标移动报表。  
 
-   >注意：如果目标移动报表与源移动报表不在同一个服务器上，请改用自定义 URL 连接到它，如下一部分中所述。  
+   >注意：如果目标移动报表与源移动报表不在同一个服务器上，则改为使用自定义 URL 连接到源移动报表，如下一节所述。  
  
 4. 选择目标移动报表之后，你会看到其可用的输入参数，包括可以绑定到导航器控件的属性以及对目标移动报表的数据集配置的参数。  
 
@@ -50,15 +50,15 @@ ms.locfileid: "56291947"
 ## <a name="set-up-a-drillthrough-to-a-custom-url"></a>设置到自定义 URL 的钻取  
   
 1. 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]的“布局”视图中，选择一个支持钻取目标的可视化效果。    
-2. 在“视觉对象属性”窗格中，选择“钻取目标” > “自定义 URL”。  这将打开钻取配置对话框。  
+2. 在“视觉对象属性”窗格中，选择“钻取目标” > “自定义 URL”    。  这将打开钻取配置对话框。  
   
-3. 在“设置钻取 URL”中，输入在单击可视化效果时要转到的目标 URL，然后从右侧列出的“可用参数”中进行选择。 面板下方将显示自定义 URL 与示例解析参数（如果包含）的组合预览。  
+3. 在“设置钻取 URL”中，输入在单击可视化效果时要转到的目标 URL，然后从右侧列出的“可用参数”中进行选择   。 面板下方将显示自定义 URL 与示例解析参数（如果包含）的组合预览。  
   
    ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   
    *钻取到自定义 URL 属性*  
   
-4. 单击 **“应用”**。  
+4. 单击 **“应用”** 。  
 
   
 当你在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中预览移动报表时，如果单击某个带有钻取的可视化效果，将看到一条指示已禁用钻取的消息。 你只能在保存或发布移动报表后实际钻取到目标并查看它，而不能从 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 布局内或在预览模式下查看它。  
@@ -68,11 +68,11 @@ ms.locfileid: "56291947"
 
 1. 在 Web 门户中，选择你要隐藏的目标报表上的省略号 (...)，然后选择“管理”。
 
-2. 在“属性”中，选择“在磁贴视图中隐藏”。
+2. 在“属性”中，选择“在磁贴视图中隐藏”   。
 
 你可以选择在 Web 门户中查看隐藏的项： 
 
-* 在 Web 门户的右上角选择“查看” > “显示隐藏项”。 
+* 在 Web 门户的右上角选择“查看” > “显示隐藏项”   。 
 
 隐藏的项以较浅的颜色显示。
     

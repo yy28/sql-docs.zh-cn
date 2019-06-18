@@ -9,14 +9,14 @@ ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570675"
 ---
 # <a name="secure-shared-dataset-items"></a>保护共享数据集项
-  在报表服务器上，共享数据集项可由多个报表使用。 您可以对共享数据集加以保护以便控制用户能够访问的程度。 默认情况下，只有是“管理员”内置组的成员的用户才能查看共享数据集、修改属性、启用缓存、创建缓存刷新计划以及删除项。 所有其他用户必须具有为其创建的角色分配才能访问共享数据集。  
+  在报表服务器上，共享数据集项可由多个报表使用。 您可以对共享数据集加以保护以便控制用户能够访问的程度。 默认情况下，只有是“管理员”  内置组的成员的用户才能查看共享数据集、修改属性、启用缓存、创建缓存刷新计划以及删除项。 所有其他用户必须具有为其创建的角色分配才能访问共享数据集。  
   
  若要设置安全性，应创建相应的角色分配，以指定对共享数据集拥有访问权限的用户帐户或组帐户。  
   

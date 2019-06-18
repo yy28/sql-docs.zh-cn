@@ -9,14 +9,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], settings
 - Setting class
 ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5a779c949b90bfe0b09e17dd7a6a83f50ee8e383
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 118f116de516e912b78b7467450b44116b432271
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193596"
 ---
 # <a name="using-the-setting-class-for-a-delivery-extension"></a>将 Setting 类用于传递扩展插件
   <xref:Microsoft.ReportingServices.Interfaces.Setting> 类位于 <xref:Microsoft.ReportingServices.Interfaces> 命名空间中，表示与传递扩展插件的扩展插件设置有关的信息。 <xref:Microsoft.ReportingServices.Interfaces.Setting> 类提供了基础结构，用于存储与为使传递扩展插件正常工作所需的设置有关的信息。 例如，在报表服务器电子邮件传递中，要求某一用户提供特定于电子邮件传递的设置，例如收件人的地址、发件人的地址、电子邮件的标题行等。 毋庸置疑，您的自定义传递提供程序将要求用户提供特定设置，以便传递扩展插件可以提供通知和报表。  

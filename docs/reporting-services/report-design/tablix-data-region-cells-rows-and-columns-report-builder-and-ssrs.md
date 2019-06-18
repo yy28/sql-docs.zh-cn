@@ -14,10 +14,10 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574716"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 数据区域单元、行和列（报表生成器和 SSRS）
@@ -72,7 +72,7 @@ ms.locfileid: "65574716"
 ## <a name="displaying-data-on-rows-and-columns"></a>在行和列中显示数据  
  行和行组以及列和列组具有相同关系。 以下讨论介绍如何添加在 tablix 数据区域的行中显示详细信息数据和分组数据的行，但其原理同样适用于添加显示详细信息数据和分组数据的列。  
   
- 对于 tablix 数据区域中的每个行，行位于每个行组内部或外部。 如果行位于行组内部，该行针对组的每个唯一值只重复一次，该值称为“组实例” 。 如果行位于行组外部，该行相对于该组仅重复一次。 所有行组以外的行都是静态行，并且仅针对数据区域重复一次。 例如，表头行或表尾行是静态行。 至少在一个组内重复的行是动态行。  
+ 对于 tablix 数据区域中的每个行，行位于每个行组内部或外部。 如果行位于行组内部，该行针对组的每个唯一值只重复一次，该值称为“组实例”  。 如果行位于行组外部，该行相对于该组仅重复一次。 所有行组以外的行都是静态行，并且仅针对数据区域重复一次。 例如，表头行或表尾行是静态行。 至少在一个组内重复的行是动态行。  
   
  如果具有嵌套组，行可以位于父组的内部，但需要位于子组的外部。 行针对父组中的每个组值重复，但只相对于子组显示一次。 若要显示组的标签或总计，请在该组外部添加一个行。 若要显示随每个组实例更改的数据，请在该组内部添加一个行。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "65574716"
  当 tablix 正文区中的单元位于详细信息行或列中时，该单元可以显示详细信息数据；该单元位于组行或组列中时，则显示聚合组数据。 单元中数据的作用域是该单元所属的最内部行组和最内部列组的交集。  
   
 > [!NOTE]  
->  每个单元显示的实际数据是该单元所含报表项的计算后的表达式，它通常为文本框。 在属于详细信息行或列的单元中，表达式默认为详细信息数据（例如， **[LineTotal]**。） 在不属于详细信息行或列的单元中，表达式默认为聚合函数（例如， **Sum[LineTotal]**。） 如果表达式未指定聚合函数（即使该单元属于组行或组列），则显示组中的第一个值。 有关聚合的详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+>  每个单元显示的实际数据是该单元所含报表项的计算后的表达式，它通常为文本框。 在属于详细信息行或列的单元中，表达式默认为详细信息数据（例如， **[LineTotal]** 。） 在不属于详细信息行或列的单元中，表达式默认为聚合函数（例如， **Sum[LineTotal]** 。） 如果表达式未指定聚合函数（即使该单元属于组行或组列），则显示组中的第一个值。 有关聚合的详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
 ### <a name="merging-and-splitting-cells"></a>合并和拆分单元  
  在 tablix 区域内，可以将多个相邻单元合并在一起。 例如，可以为跨越多个列或行的标签创建单元。  

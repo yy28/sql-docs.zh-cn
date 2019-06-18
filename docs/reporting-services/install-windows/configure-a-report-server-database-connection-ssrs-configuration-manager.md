@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
 ms.openlocfilehash: 6aecb763ccfe8743942ddb41a7eeb826e2ec5088
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64568378"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
@@ -42,9 +42,9 @@ ms.locfileid: "64568378"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 **System.Data.SqlClient** 连接到承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 如果使用的是 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的本地实例，报表服务器将使用共享内存建立连接。 如果使用的是报表服务器数据库的远程数据库服务器，则可能必须根据所使用的版本启用远程连接。 如果使用的是 Enterprise Edition，则默认情况下会启用 TCP/IP 远程连接。  
 
-若要验证实例是否接受远程连接，请依次单击“开始”、“所有程序”、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”、“SQL Server 配置管理器”，然后确认为每个服务启用了 TCP/IP 协议。  
+若要验证实例是否接受远程连接，请依次单击“开始”、“所有程序”、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”、“SQL Server 配置管理器”，然后确认为每个服务启用了 TCP/IP 协议     。  
 
-启用远程连接时，也会启用客户端协议和服务器协议。 若要确认协议已启用，请依次单击 **“开始”**、 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**、 **“SQL Server 配置管理器”**、 **“SQL Server 网络配置”**，再单击 **“MSSQLSERVER 协议”**。 有关详细信息，请参阅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中[启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。  
+启用远程连接时，也会启用客户端协议和服务器协议。 若要确认协议已启用，请依次单击 **“开始”** 、 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** 、 **“SQL Server 配置管理器”** 、 **“SQL Server 网络配置”** ，再单击 **“MSSQLSERVER 协议”** 。 有关详细信息，请参阅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中[启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。  
 
 ## <a name="defining-a-report-server-database-connection"></a>定义报表服务器数据库连接
 
@@ -64,7 +64,7 @@ ms.locfileid: "64568378"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在下列 RSreportserver.config 设置中存储和加密连接信息。 必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 rsconfig 实用工具为这些设置创建加密值。  
 
-并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即，使用服务帐户来建立连接），则 \<LogonUser>、\<LogonDomain> 和 \<LogonCred> 将为空，如下所示：  
+并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即，使用服务帐户来建立连接），则 \<LogonUser>、\<LogonDomain> 和 \<LogonCred> 将为空，如下所示    ：  
 
 ```
 <Dsn></Dsn>  

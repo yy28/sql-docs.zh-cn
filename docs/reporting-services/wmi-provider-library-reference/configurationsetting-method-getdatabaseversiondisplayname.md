@@ -11,10 +11,10 @@ ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570952"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting 方法 - GetDatabaseVersionDisplayName
@@ -53,7 +53,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 |RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |修补程序||最接近的适用版本|  
   
- 如果版本早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000，返回的 HRESULT 为 ACT_E_BAD_VERSION。  
+ 如果版本早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000，返回的 HRESULT 为 ACT_E_BAD_VERSION  。  
   
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  

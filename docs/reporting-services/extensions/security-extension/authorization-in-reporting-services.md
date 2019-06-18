@@ -8,17 +8,17 @@ ms.topic: reference
 helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d1c0ea21bad3c3b34e6250ad1974a81848392e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608905"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193349"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services 中的授权
-  授权是指确定是否应为某个身份授予其请求的、针对报表服务器数据库的给定资源的访问权限的过程。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于角色的授权体系结构，根据用户的应用程序角色分配为用户授予针对给定资源的访问权限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全扩展插件包含对一个授权组件的实现，该组件用于在报表服务器上对用户进行身份验证后授予用户访问权限。 在某一用户尝试通过 SOAP API 和通过 URL 访问对系统或报表服务器项执行操作时，调用授权。 这可以通过安全扩展插件接口 IAuthorizationExtension2 实现。 如前所述，所有扩展插件均继承自 IExtension，这是部署的所有扩展插件的基接口。 IExtension 和 IAuthorizationExtension2 是 Microsoft.ReportingServices.Interfaces 命名空间的成员。  
+  授权是指确定是否应为某个身份授予其请求的、针对报表服务器数据库的给定资源的访问权限的过程。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于角色的授权体系结构，根据用户的应用程序角色分配为用户授予针对给定资源的访问权限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全扩展插件包含对一个授权组件的实现，该组件用于在报表服务器上对用户进行身份验证后授予用户访问权限。 在某一用户尝试通过 SOAP API 和通过 URL 访问对系统或报表服务器项执行操作时，调用授权。 这可以通过安全扩展插件接口 IAuthorizationExtension2 实现  。 如前所述，所有扩展插件均继承自 IExtension，这是部署的所有扩展插件的基接口  。 IExtension 和 IAuthorizationExtension2 是 Microsoft.ReportingServices.Interfaces 命名空间的成员    。  
   
 ## <a name="checking-access"></a>检查访问  
  在授权中，任何自定义安全实现的关键环节都是访问权限检查，访问权限检查是在 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法中实现的。 每当用户尝试对报表服务器执行操作时，就会调用 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>。 为每个操作类型都将重载 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法。 对于文件夹操作，访问检查的示例可能如下：  
@@ -52,7 +52,7 @@ public bool CheckAccess(
 }  
 ```  
   
- 通过传入登录用户的名称、用户标记、项的安全描述符和请求的操作，报表服务器调用 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法。 在此处检查用户名的安全描述符和相应权限以完成该请求，然后返回 true 以指示授予访问，或者返回 false 以指示拒绝访问。  
+ 通过传入登录用户的名称、用户标记、项的安全描述符和请求的操作，报表服务器调用 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 方法。 在此处检查用户名的安全描述符和相应权限以完成该请求，然后返回 true 以指示授予访问，或者返回 false 以指示拒绝访问   。  
   
 ## <a name="security-descriptors"></a>安全描述符  
  在设置针对报表服务器数据库中的项的授权策略时，客户端应用程序（例如报表管理器）会将用户信息提交到安全扩展插件，同时提交用于该项的安全策略。 此安全策略和用户信息统称为安全描述符。 安全描述符包含报表服务器数据库中某一项的以下信息：  

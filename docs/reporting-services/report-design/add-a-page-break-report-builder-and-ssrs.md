@@ -9,10 +9,10 @@ ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ca618e82e9eed6a0cb43582b8aa1feff33d67626
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574805"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>添加分页符（报表生成器和 SSRS）
@@ -23,7 +23,7 @@ ms.locfileid: "65574805"
   
 ### <a name="to-add-a-page-break-to-a-data-region"></a>向数据区域添加分页符  
   
-1.  在设计图面上，右键单击数据区域的角部图柄，然后单击“Tablix 属性”。  
+1.  在设计图面上，右键单击数据区域的角部图柄，然后单击“Tablix 属性”  。  
   
 2.  在 **“常规”** 选项卡中的 **“分页符选项”** 下选择下列选项之一：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "65574805"
   
 ### <a name="to-add-a-page-break-to-a-rectangle"></a>向矩形添加分页符  
   
-1.  在设计图面上，右键单击要在其中添加分页符的矩形，然后单击“矩形属性”。  
+1.  在设计图面上，右键单击要在其中添加分页符的矩形，然后单击“矩形属性”  。  
   
 2.  在 **“常规”** 选项卡中的 **“分页符选项”** 下选择下列选项之一：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65574805"
   
 ### <a name="to-add-a-page-break-to-a-row-group-in-a-table-matrix-or-list"></a>将分页符添加到表、矩阵或列表中的行组  
   
-1.  在“分组”窗格中，右键单击行组，然后单击“组属性”。  
+1.  在“分组”窗格中，右键单击行组，然后单击“组属性”  。  
   
     > [!NOTE]  
     >  将忽略列组上的分页符。  

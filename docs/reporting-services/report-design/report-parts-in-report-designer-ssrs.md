@@ -11,15 +11,15 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97b6d8c05fa5e5b1487f04a5ff87849f703c90d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576787"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>报表设计器中的报表部件 (SSRS)
 
-  在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。  
+  在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”  发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。  
   
  通常，报表部件在报表设计器中和报表生成器中以相同的方式工作。 若要了解基本功能，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   

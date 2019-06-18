@@ -5,15 +5,15 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 603407cd0642a8fb3bb66826d89300ea0d8c7e0d
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
-ms.translationtype: HT
+ms.openlocfilehash: ec887dcd7d75ef2521258aaa4f37341b05467fc2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050929"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225619"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>向场中添加另一个 Reporting Services Web 前端
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式包括应用程序服务器和 Web 前端 (WFE) 服务器所需的组件。 本主题主要介绍如何为 WFE 服务器安装所需的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件，包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能（例如订阅、数据警报和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]）使用的应用程序页。 WFE 所需的主要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装是安装用于 SharePoint 2016 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。  
@@ -48,8 +48,8 @@ ms.locfileid: "50050929"
 |步骤|说明和链接|  
 |----------|--------------------------|  
 |将 SharePoint 服务器添加到场。|你需要安装 SharePoint 以部署其他 Reporting Services 应用程序。<br/><br/>有关 SharePoint 2013 的详细信息，请参阅 [在 SharePoint 2013 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)。<br/><br/>有关 SharePoint 2016 的详细信息，请参阅 [在 SharePoint 2016 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)。|  
-|安装用于 SharePoint 2016 产品的 SQL Server Reporting Services 外接程序。|有几种方法可安装外接程序。 以下步骤使用 SQL Server 安装向导。 有关安装该外接程序的详细信息，请参阅 [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1) 运行 SQL Server 安装。<br /><br /> 2) 在“安装角色”页上，选择“SQL Server 功能安装”<br /><br /> 3) 在“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”<br /><br /> 4) 在随后出现的多个页面上，单击“下一步”，完成安装选项。<br /><br/>若要详细了解如何安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)|  
-|验证新服务器是否正常运行。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”。<br /><br /> 2) 验证列表中是否包含新的服务器。|  
+|安装用于 SharePoint 2016 产品的 SQL Server Reporting Services 外接程序。|有几种方法可安装外接程序。 以下步骤使用 SQL Server 安装向导。 有关安装该外接程序的详细信息，请参阅 [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1) 运行 SQL Server 安装。<br /><br /> 2) 在“安装角色”  页上，选择“SQL Server 功能安装” <br /><br /> 3) 在“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”  <br /><br /> 4) 在随后出现的多个页面上，单击“下一步”，完成安装选项  。<br /><br/>若要详细了解如何安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)|  
+|验证新服务器是否正常运行。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”   。<br /><br /> 2) 验证列表中是否包含新的服务器。|  
 |更新您的 NLB 解决方案。|如果需要，更新您的硬件或软件的 NLB 环境，以便包括新的服务器。|  
 
 ## <a name="next-steps"></a>后续步骤

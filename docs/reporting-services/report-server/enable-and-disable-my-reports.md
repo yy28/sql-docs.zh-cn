@@ -15,10 +15,10 @@ ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577778"
 ---
 # <a name="enable-and-disable-my-reports"></a>启用和禁用“我的报表”
@@ -31,7 +31,7 @@ ms.locfileid: "65577778"
   
  用于“我的报表”功能的角色定义可确定在“我的报表”工作区中支持哪些操作。 例如，如果“我的报表”角色不包括“创建链接报表”任务，用户将无法在“我的报表”文件夹中创建链接报表。 有关详细信息，请参阅 [保护我的报表](../../reporting-services/security/secure-my-reports.md)。  
   
- 若要停用“我的报表”功能，请清除 **“为每个用户启用‘我的报表’文件夹。”**。 停用“我的报表”功能将为用户移除“我的报表”文件夹的所有可见的指示形式。 一旦禁用该功能，您必须手动删除提供实际存储位置的文件夹（即“用户文件夹”中的子文件夹）。  
+ 若要停用“我的报表”功能，请清除 **“为每个用户启用‘我的报表’文件夹。”** 。 停用“我的报表”功能将为用户移除“我的报表”文件夹的所有可见的指示形式。 一旦禁用该功能，您必须手动删除提供实际存储位置的文件夹（即“用户文件夹”中的子文件夹）。  
   
 ### <a name="when-my-reports-is-activated"></a>激活“我的报表”功能之后  
  一旦激活该功能，用户将在根文件夹（即“主文件夹”）之下看到“我的报表”文件夹。 除了“我的报表”文件夹外，报表服务器管理员还会在“用户文件夹”文件夹中看到对应每个用户的子文件夹。  

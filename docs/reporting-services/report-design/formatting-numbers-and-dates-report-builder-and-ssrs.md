@@ -18,20 +18,20 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2802da2b5b227f3cdb4e4ea3bfa59ca15f5d8d2f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576087"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>设置数字和日期的格式（报表生成器和 SSRS）
   通过从相应数据区域的 **“属性”** 对话框的 **“数字”** 页选择格式，可以在数据区域中设置数字和日期的格式。  
   
- 若要指定文本框报表项中的格式字符串，需要选择要对其设置格式的项，右键单击该项，选择 **“文本框属性”**，然后单击 **“数字”**。 可以通过相同方式设置表或矩阵数据区域中的各个单元格的格式，因为表或矩阵中的单元格是单个文本框。  
+ 若要指定文本框报表项中的格式字符串，需要选择要对其设置格式的项，右键单击该项，选择 **“文本框属性”** ，然后单击 **“数字”** 。 可以通过相同方式设置表或矩阵数据区域中的各个单元格的格式，因为表或矩阵中的单元格是单个文本框。  
   
- 图表数据区域通常显示沿类别 (x) 轴的日期，和沿值 (y) 轴的值。 若要指定图表中的格式设置，请右键单击某个轴并选择 **“轴属性”**。 在值轴上，只能为数字指定格式。 有关详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
+ 图表数据区域通常显示沿类别 (x) 轴的日期，和沿值 (y) 轴的值。 若要指定图表中的格式设置，请右键单击某个轴并选择 **“轴属性”** 。 在值轴上，只能为数字指定格式。 有关详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
- 若要指定仪表数据区域中的格式设置，请右键单击仪表的刻度，并选择 **“径向刻度属性”** 或 **“线性刻度属性”**。  
+ 若要指定仪表数据区域中的格式设置，请右键单击仪表的刻度，并选择 **“径向刻度属性”** 或 **“线性刻度属性”** 。  
   
 > [!NOTE]  
 >  如果要使用的某些格式设置选项显示为灰色，这表示这些格式设置选项与字段的数据类型（在数据源中设置）不兼容。 例如，如果该字段包含数值，但该字段的数据类型为 String，则无法应用数值数据格式设置选项（如货币或小数）。  
@@ -52,7 +52,7 @@ ms.locfileid: "65576087"
   
 -   如果是对同一文本框中的数字和字符组合设置格式，请考虑使用占位符，以将数字和其余文本区分开来单独设置格式。 有关详细信息，请参阅 [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)。 如果为文本框的 Format 属性指定了无效格式字符串，则该格式字符串会被忽略。 如果为图表或仪表上的 Format 属性指定了无效格式字符串，则指定的格式字符串将被解释为字符串并且不会应用格式设置。  
   
--   如果选择 **“类别”** 下的 **“货币”** 并选中 **“值的显示位置”**，则可以选择 **“千”**、 **“百万”** 或 **“十亿”** 使用财务格式显示数字。 例如，如果字段值为 1,789,905,394，且您选择 **“十亿”** 并指定 2 个小数位，则该值在报表中显示为 1.78。  
+-   如果选择 **“类别”** 下的 **“货币”** 并选中 **“值的显示位置”** ，则可以选择 **“千”** 、 **“百万”** 或 **“十亿”** 使用财务格式显示数字。 例如，如果字段值为 1,789,905,394，且您选择 **“十亿”** 并指定 2 个小数位，则该值在报表中显示为 1.78。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   

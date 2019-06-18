@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574251"
 ---
 # <a name="url-access-ssrs"></a>URL 访问 (SSRS)
@@ -75,7 +75,7 @@ https://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  本机模式报表服务器数据库中该项的相对路径名称，或者是 SharePoint 目录中该项的完全限定 URL。  
   
- 目录项的路径。 对于本机模式，它是报表服务器数据库中该项的相对路径，以斜杠 (**/**) 开头。 例如：  
+ 目录项的路径。 对于本机模式，它是报表服务器数据库中该项的相对路径，以斜杠 ( **/** ) 开头。 例如：  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  

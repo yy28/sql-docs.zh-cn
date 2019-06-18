@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cee144e7fed793cf08c246f3a83a4f9e213e80a4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298415"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316618"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>向 Reporting Services 移动报表添加可视化效果
 图表是数据可视化效果必不可少的一部分。 了解可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表中使用的图表，这些图表可涵盖一系列方案。 
@@ -27,10 +27,10 @@ ms.locfileid: "56298415"
 ### <a name="number-format"></a>数字格式
 你可以向 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 中的图表中的数字分配各种格式，例如，常规、带小数或不带小数的货币、带小数和不带小数的百分比等等。 在图表中，数字格式应用于轴批注以及数据点弹出窗口。 应对每个图表单独设置数字格式，而不是在移动报表上作为一个整体来设置。 
 
-* 若要设置数字格式，请选择“布局”选项卡，在设计图面上选择图表，然后在“视觉对象属性”窗格中选择“数字格式”。 
+* 若要设置数字格式，请选择“布局”选项卡，在设计图面上选择图表，然后在“视觉对象属性”窗格中选择“数字格式”    。 
   
 ### <a name="legend"></a>图例
-* 若要显示图表的图例，请选择“布局”选项卡，在设计图面上选择图表，然后在“视觉对象属性”窗格中将“显示图例”设置为“打开”
+* 若要显示图表的图例，请选择“布局”选项卡，在设计图面上选择图表，然后在“视觉对象属性”窗格中将“显示图例”设置为“打开”    
   
 ### <a name="series"></a>系列
 显示在图表中的各个值或度量值称为一个系列；多个系列可以共享（并且确实在共享）同一 X 轴和同一 Y 轴。 选择一个或多个数据表和字段即可在数据视图的数据属性面板中定义系列。 每个字段都会在图表可视化效果中生成单个系列的数据点，并呈现出自己的颜色。  
@@ -38,15 +38,15 @@ ms.locfileid: "56298415"
 ### <a name="change-aggregation"></a>更改聚合 
 对于图表中的数值字段，默认聚合为总和。 你可以将其更改为平均值、计数、最小值、最大值、第一个或最后一个。
 
-* 选择“数据”选项卡，然后在“数据属性”中，选择数值字段旁边的“选项”> 选择其他聚合。
+* 选择“数据”选项卡，然后在“数据属性”中，选择数值字段旁边的“选项”> 选择其他聚合    。
 
 ### <a name="set-or-clear-filters"></a>设置或清除筛选器
 
 如果添加导航器来筛选移动报表，可以决定希望其筛选哪些图表。
 
-1. 选择“数据”选项卡，然后在“数据属性”中选择“选项”。
+1. 选择“数据”选项卡，然后在“数据属性”中选择“选项”    。
 
-2. 在“筛选依据”下面，会显示可以选择或清除的导航器。
+2. 在“筛选依据”下面，会显示可以选择或清除的导航器  。
 
 了解有关 [添加导航器以筛选移动报表](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)的详细信息。
    
@@ -56,17 +56,17 @@ ms.locfileid: "56298415"
 
 ![mobile-report-time-chart](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
 
-1. 从“布局”选项卡将“时间表”拖至设计图面并重设其大小。
+1. 从“布局”选项卡将“时间表”拖至设计图面并重设其大小   。
 
-2. 默认情况下，它是堆积条形图。 可以在“系列可视化”中进行更改。
+2. 默认情况下，它是堆积条形图。 可以在“系列可视化”中进行更改  。
 
-3. 如果报表中没有图表需要的数据，请选择“数据”选项卡 >“添加数据”以[从 Excel 或共享数据集获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
+3. 如果报表中没有图表需要的数据，请选择“数据”选项卡 >“添加数据”以[从 Excel 或共享数据集获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)   。
 
-3. 在“数据属性”窗格中，“主系列”是“SimulatedTable”。 选择框中的箭头 > 选择你的表。
+3. 在“数据属性”窗格中，“主系列”是“SimulatedTable”    。 选择框中的箭头 > 选择你的表。
 
-5. 如果将“数据结构”设置为“按列”（在“布局”选项卡 >“视觉对象属性”窗格中），那么，在此处的“数据属性”窗格中可以选择多个数值列。
+5. 如果将“数据结构”设置为“按列”（在“布局”选项卡 >“视觉对象属性”窗格中），那么，在此处的“数据属性”窗格中可以选择多个数值列      。
 
-   如果将“数据结构”设置为“按行”，那么，在此处的“数据属性”窗格中可以选择一个“系列名称字段”和一个数值列。
+   如果将“数据结构”设置为“按行”，那么，在此处的“数据属性”窗格中可以选择一个“系列名称字段”和一个数值列     。
    
 了解有关 [按列或行对数据分组](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md)的详细信息。
   
@@ -76,11 +76,11 @@ ms.locfileid: "56298415"
 
 ![mobile-report-category-chart](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
 
-1. 从“布局”选项卡将“类别图表”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）。
+1. 从“布局”选项卡将“类别图表”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）   。
 
-2. 选择“数据”选项卡，并在“数据属性”窗格的“类别坐标”下选择表和要作为分组依据的字段。 此字段将位于所生成图表的 x 轴上。
+2. 选择“数据”选项卡，并在“数据属性”窗格的“类别坐标”下选择表和要作为分组依据的字段    。 此字段将位于所生成图表的 x 轴上。
 
-3. 在“主系列”下面，选择表以及要为每个类别聚合的数值字段。 
+3. 在“主系列”下面，选择表以及要为每个类别聚合的数值字段  。 
   
 ## <a name="totals-charts"></a>总计图表  
 
@@ -98,20 +98,20 @@ ms.locfileid: "56298415"
 
 ![mobile-report-comparison-time-chart](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
 
-1. 从“布局”选项卡将其中一个“比较图”（时间、类别或总计）拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）。
+1. 从“布局”选项卡将其中一个“比较图”（时间、类别或总计）拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）   。
 
-2. 在“视觉对象属性”窗格的“系列可视化”中，选择以下选项之一： 
+2. 在“视觉对象属性”窗格的“系列可视化”中，选择以下选项之一   ： 
    * 条形图与细条形图
    * 折线图与条形图
    * 条形图与分段面积图 
 
 在比较图中，可以选择对某个系列中的主值和比较值使用相同的图表颜色。
 
-* 在“视觉对象属性”窗格中，将“在比较系列上重复使用颜色”设置为“打开”。
+* 在“视觉对象属性”窗格中，将“在比较系列上重复使用颜色”设置为“打开”    。
 
-   如果设置为“打开”，调色板将在绘制主系列与比较系列之间重启，因此，主系列和比较系列中的相关值是相同的。 
+   如果设置为“打开”，调色板将在绘制主系列与比较系列之间重启，因此，主系列和比较系列中的相关值是相同的  。 
 
-   如果设置为“关闭”，则在绘制比较系列之后又绘制主系列时，调色板会继续按正常方式轮换使用其颜色，避免在两种系列的颜色之间造成可能出现的误导性颜色协调错误。  
+   如果设置为“关闭”，则在绘制比较系列之后又绘制主系列时，调色板会继续按正常方式轮换使用其颜色，避免在两种系列的颜色之间造成可能出现的误导性颜色协调错误  。  
   
 ## <a name="pie-and-funnel-charts"></a>饼图和漏斗图  
   
@@ -122,13 +122,13 @@ ms.locfileid: "56298415"
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
 
 ### <a name="structure-pie-and-funnel-chart-data-by-rows-or-by-columns"></a>按行或按列构造饼图和漏斗图数据
-1. 从“布局”选项卡将“饼图”或“漏斗图”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）。
-2. 在“视觉对象属性”窗格的“数据结构”下面，选择以下选项之一：
+1. 从“布局”选项卡将“饼图”或“漏斗图”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）    。
+2. 在“视觉对象属性”  窗格的“数据结构”  下面，选择以下选项之一：
    * **按列**
    * **按行**
-3. 如果选择了“按列”，则选择“数据”选项卡，并在“数据属性”窗格的“主系列”下面，选择表以及需要在饼图或漏斗图中聚合的所有字段。 将使用字段名称来标记所生成图表的每个区域。
+3. 如果选择了“按列”  ，则选择“数据”  选项卡，并在“数据属性”  窗格的“主系列”  下面，选择表以及需要在饼图或漏斗图中聚合的所有字段。 将使用字段名称来标记所生成图表的每个区域。
 
-   如果选择了“按行”，则选择“数据”选项卡，并在“数据属性”窗格的“类别列”下，选择表以及包含饼图中用于分组的值和标签的列。 在“主系列”列下面，为图表中的值选择一个数值字段。
+   如果选择了“按行”，则选择“数据”选项卡，并在“数据属性”窗格的“类别列”下，选择表以及包含饼图中用于分组的值和标签的列     。 在“主系列”列下面，为图表中的值选择一个数值字段。
 
 了解有关 [按列或行对数据分组](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md)的详细信息。 
 
@@ -138,23 +138,23 @@ ms.locfileid: "56298415"
 
 ![mobile-report-group-treemap](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
 
-1. 从“布局”选项卡将“树状图”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）。
-2.  选择“数据”选项卡，然后在“数据属性”窗格中： 
+1. 从“布局”选项卡将“树状图”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）   。
+2.  选择“数据”选项卡，然后在“数据属性”   窗格中： 
 
-     * 在“大小表示”下，为图块大小选择一个数值字段。
-     * 在“颜色表示”下面为图块颜色选择一个数值字段。 
-     * [可选] **自定义中心值**：如果可视化类型为 HeatMapWithCustomCenterValue，只能使用自定义中心值。
+     * 在“大小表示”下，为图块大小选择一个数值字段  。
+     * 在“颜色表示”  下面为图块颜色选择一个数值字段。 
+     * [可选] **自定义中间值**：可视化类型为 HeatMapWithCustomCenterValue 时，只能使用 **自定义中间值** 。
      
          中间值用于决定框的颜色。 与中间值相比，指标越好，颜色越绿。 指标越差，颜色越红。
      
-     * [可选]若要在查看器选择网格中的某个图块时显示弹出窗口，请在“弹出式标签”下面选择一个或多个字段。 树状图弹出窗口可以同时显示文本和数值字段。  
+     * [可选]若要在查看器选择网格中的某个图块时显示弹出窗口，请在“弹出式标签”  下面选择一个或多个字段。 树状图弹出窗口可以同时显示文本和数值字段。  
 
 默认情况下，树状图采用分层结构，先按类别，然后按大小和颜色对图块分组。
-* 仍在“数据”选项卡上，在“分组依据”下选择表和字段。
+* 仍在“数据”选项卡上，在“分组依据”下选择表和字段   。
 
 可以关闭分组，以便仅按大小和颜色排列图块。 
 
-* 择“布局”选项卡并将“两级树状图”设置为“关闭”。   
+* 择“布局”  选项卡并将“两级树状图”  设置为“关闭”  。   
 
 ## <a name="waterfall-charts"></a>瀑布图
 
@@ -172,15 +172,15 @@ ms.locfileid: "56298415"
 
 ### <a name="create-a-waterfall-chart"></a>创建瀑布图
 
-1. 从“布局”选项卡将“瀑布图”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）。
+1. 从“布局”选项卡将“瀑布图”拖至设计图面、重设其大小，并[为其获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)（如有必要）   。
 
     ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
-2.  选择“数据”选项卡，然后在“数据属性”窗格中，为“类别坐标”选择一个数据中的类别字段，为“主系列”选择一个数值字段： 
+2.  选择“数据”选项卡，然后在“数据属性”窗格中，为“类别坐标”选择一个数据中的类别字段，为“主系列”选择一个数值字段     ： 
 
     ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     
-3. 选择“布局”选项卡以查看预览瀑布图。
+3. 选择“布局”选项卡以查看预览瀑布图  。
 
    ![mobile-report-waterfall-chart](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
    

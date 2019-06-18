@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67b9d537a3c274e156bf8b4c6450a622b6ef6593
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62442797"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 课：使用 dta 命令提示实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "51657666"
 ## <a name="access-dta-command-prompt-utility-help-menu"></a>访问 DTA 命令提示实用工具帮助菜单
   
   
-1.  在“开始”菜单中，依次指向“所有程序”、“附件”，再单击“命令提示符”。  
+1.  在“开始”  菜单中，依次指向“所有程序”  、“附件”  ，再单击“命令提示符”  。  
   
 2.  在命令提示符下，键入以下命令，再按 Enter 键：  
   

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 32e4ca675330278d69994faa81b7bb3e4a13b4b6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291415"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194834"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 教程通过一个简单示例，介绍了如何创建数据驱动订阅，生成筛选报表输出并将其保存到文件共享，解释了数据驱动订阅的概念。 
@@ -53,7 +53,7 @@ ms.locfileid: "56291415"
 ## <a name="requirements"></a>要求  
 数据驱动订阅通常由报表服务器管理员创建和维护。 创建数据驱动订阅的步骤要求具有生成查询的相关知识、了解包含订阅服务器数据的数据源，同时还要拥有对报表服务器的提升权限。  
   
-本教程使用教程[创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)中创建的销售订单报表和示例数据库 AdventureWorks2014 中的数据。  
+本教程使用教程[创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)中创建的销售订单报表和示例数据库 AdventureWorks2014 中的数据   。  
   
 您的计算机必须安装以下软件才能使用此教程：  
   

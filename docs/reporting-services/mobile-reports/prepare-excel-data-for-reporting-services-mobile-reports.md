@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0391ea88e192b694d99cd557760cfc588e77f768
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286375"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62499937"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>为 Reporting Services 移动报表准备 Excel 数据
   
@@ -75,7 +75,7 @@ ms.locfileid: "56286375"
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-转换单元格后，必须通过选择这些单元格，或从“类别”列表中依次选择整列 >“上下文”菜单 >“设置单元格格式” > “日期”来将其格式设置为日期。 还可以使用 Excel 文本分列向导将文本单元格转换为格式正确的日期。  
+转换单元格后，必须通过选择这些单元格，或从“类别”列表中依次选择整列 >“上下文”菜单 >“设置单元格格式” > “日期”来将其格式设置为日期     。 还可以使用 Excel 文本分列向导将文本单元格转换为格式正确的日期。  
   
 ## <a name="unsupported"></a>不支持  
   

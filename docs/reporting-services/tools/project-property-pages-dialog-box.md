@@ -13,25 +13,25 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578241"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
 
-  使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请在“项目”菜单中，单击“\<报表项目名称>属性”。  
+  使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请在“项目”  菜单中，单击“\<报表项目名称>  属性”  。  
   
- 定义配置属性后，可以从位于工具栏上的“解决方案配置”下拉列表中选择配置。  
+ 定义配置属性后，可以从位于工具栏上的“解决方案配置”  下拉列表中选择配置。  
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
 ## <a name="options"></a>选项  
  **Configuration**  
- 选择要编辑的配置。 最初，可使用以下配置： **Debug**、 **DebugLocal**和 **Release**。 首先显示活动配置，例如 **Active(Debug)**。  
+ 选择要编辑的配置。 最初，可使用以下配置： **Debug**、 **DebugLocal**和 **Release**。 首先显示活动配置，例如 **Active(Debug)** 。  
   
- 若要同时查看多个配置的属性，请选择 **“所有配置”** 或 **“多个配置”**。  
+ 若要同时查看多个配置的属性，请选择 **“所有配置”** 或 **“多个配置”** 。  
   
  若要创建其他配置，请单击工具栏上的 **“配置管理器”** 。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65578241"
  选择 **True** 可在发布报表时使用项目中的数据源覆盖服务器上的数据源。 选择 **False** 可保留服务器上的现有数据源。  
   
  **TargetServerVersion**  
- 选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的适当版本，或者选择“检测版本”以自动确定安装在由 **TargetServer URL** 属性标识的服务器上的版本。 默认值为 SQL Server 2017。  
+ 选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的适当版本，或者选择“检测版本”  以自动确定安装在由 **TargetServer URL** 属性标识的服务器上的版本。 默认值为 SQL Server 2017。   
   
  **TargetDataSourceFolder**  
  要在其中存储已发布共享数据源的文件夹的名称。 如果您没有指定文件夹，那么数据源将发布到与报表所在文件夹相同的文件夹。 如果报表服务器上没有该文件夹，则报表设计器将在发布报表时创建该文件夹。  

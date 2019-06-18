@@ -12,19 +12,19 @@ helpviewer_keywords:
 - Report Definition Language, referencing assemblies
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d70500ddf58bd448ad3df006ad26e9886a2b3712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 87285bffd5136c4ac2a66ae17755edcecd35f065
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752165"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193979"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>在 RDL 文件中引用程序集
-  为了支持在报表定义文件中使用自定义代码程序集，RDL 规范中包含两个报表定义语言 (RDL) 元素：CodeModules 元素和 Classes 元素。  
+  为了支持在报表定义文件中使用自定义代码程序集，RDL 规范中包含两个报表定义语言 (RDL) 元素：CodeModules 元素和 Classes 元素   。  
   
- 通过 CodeModules 元素，可以在报表表达式中引用托管代码程序集。 CodeModules 是一个顶级元素，它包含针对在报表定义文件中用来调用专用函数的程序集的引用。 支持使用自定义程序集的报表定义中的一个条目可能如下所示：  
+ 通过 CodeModules 元素，可以在报表表达式中引用托管代码程序集  。 CodeModules 是一个顶级元素，它包含针对在报表定义文件中用来调用专用函数的程序集的引用  。 支持使用自定义程序集的报表定义中的一个条目可能如下所示：  
   
 ```  
 <CodeModules>  
@@ -32,9 +32,9 @@ ms.locfileid: "47752165"
 </CodeModules>  
 ```  
   
- 可以通过手动将 CodeModule 元素添加到 RDL 文件或使用“报表属性”对话框的“引用”选项卡来注册自定义程序集，而不是从自定义代码调用 <xref:System.Reflection.Assembly.Load%2A>。 有关详细信息，请参阅 [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+ 可以通过手动将 CodeModule 元素添加到 RDL 文件或使用“报表属性”对话框的“引用”选项卡来注册自定义程序集，而不是从自定义代码调用 <xref:System.Reflection.Assembly.Load%2A>    。 有关详细信息，请参阅 [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
- Classes 元素支持在报表定义中使用实例成员。 Classes 是一个顶级元素，它包含对类名称和实例名称的引用。 支持使用实例成员的报表定义中的一个条目可能如下所示：  
+ Classes 元素支持在报表定义中使用实例成员  。 Classes 是一个顶级元素，它包含对类名称和实例名称的引用  。 支持使用实例成员的报表定义中的一个条目可能如下所示：  
   
 ```  
 <Classes>  

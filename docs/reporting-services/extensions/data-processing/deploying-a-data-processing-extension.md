@@ -10,28 +10,28 @@ helpviewer_keywords:
 - Extension element
 - deploying [Reporting Services], extensions
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e638318b740631a7466f204b1b14fb5ba9e82f2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3e8c86c1ba590ab574e7afe351b3e29c2c918b7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773345"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194070"
 ---
 # <a name="deploying-a-data-processing-extension"></a>部署数据处理扩展插件
   在编写 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件并将其编译为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 库之后，你需要使其变得可供报表服务器和报表设计器发现。 这就像将扩展插件复制到适当的目录并向适当的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件添加条目一样轻松。  
   
 ## <a name="configuration-file-extension-element"></a>配置文件扩展插件元素  
- 在配置文件中，你向报表服务器或报表设计器部署的数据处理扩展插件需要作为 Extension 元素输入。 对于报表服务器，这些文件为 RSReportServer.config；对于报表设计器则为 RSReportDesigner.config。  
+ 在配置文件中，你向报表服务器或报表设计器部署的数据处理扩展插件需要作为 Extension 元素输入  。 对于报表服务器，这些文件为 RSReportServer.config；对于报表设计器则为 RSReportDesigner.config。  
   
- 下表介绍数据处理扩展插件的 Extension 元素的属性。  
+ 下表介绍数据处理扩展插件的 Extension 元素的属性  。  
   
 |Attribute|描述|  
 |---------------|-----------------|  
 |**名称**|扩展插件的唯一名称，例如，“SQL”表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据处理扩展插件，或者“OLEDB”表示 OLE DB 数据处理扩展插件。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。|  
 |**类型**|以逗号分隔的列表，其中包含完全限定的命名空间以及程序集的名称。|  
-|**Visible**|值为 false 指示在用户界面中将不显示数据处理扩展插件。 如果未包含此属性，则默认值为 **true**。|  
+|**Visible**|值为 false 指示在用户界面中将不显示数据处理扩展插件  。 如果未包含此属性，则默认值为 **true**。|  
   
  有关 RSReportServer.config 或 RSReportDesigner.config 文件的详细信息，请参阅 [Reporting Services 配置文件](../../../reporting-services/report-server/reporting-services-configuration-files.md)。  
   

@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581289"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
@@ -55,13 +55,13 @@ rs {-?}
  **-i** *input_file*  
  （必需）指定要执行的 .rss 文件。 此值可以是指向 .rss 文件的相对路径或完全限定路径。  
   
- -s serverURL  
+ -s serverURL    
  （必需）指定执行文件的 Web 服务器的名称和报表服务器的虚拟目录名。 以下是报表服务器 URL 的一个示例： `https://examplewebserver/reportserver`。 服务器名称开头处的前缀 http:// 或 https:// 是可选的。 如果省略前缀，报表服务器脚本主机将先尝试使用 https，并在 https 无效时使用 http。  
   
- -u [domain\\]username  
+ -u  [domain  \\]username   
  （可选）指定用于连接到报表服务器的用户帐户。 如果省略 **-u** 和 **-p** ，则使用当前的 Windows 用户帐户。  
   
- -p password  
+ -p password    
  （指定了 **-u** 时为必需）指定与 **-u** 参数一起使用的密码。 此值区分大小写。  
   
  **-e**  
@@ -83,16 +83,16 @@ rs {-?}
  **-b**  
  （可选）指定脚本文件中的命令以批处理方式运行。 如有任何命令失败，则回滚批处理。 某些命令无法以批处理方式运行，这些命令将按常规方式运行。 仅当脚本中产生异常并且未在脚本中得到处理时，才会导致回滚。 如果脚本处理了异常，并从 **Main**正常返回，则将提交批处理。 如果省略此参数，则命令将不以批处理方式运行。 有关详细信息，请参阅 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
   
- -v globalvar  
- （可选）指定脚本中使用的全局变量。 如果脚本使用全局变量，则必须指定此参数。 指定的值必须对 .rss 文件中定义的全局变量有效。 必须为每个 –v 参数指定一个全局变量。  
+ -v globalvar    
+ （可选）指定脚本中使用的全局变量。 如果脚本使用全局变量，则必须指定此参数。 指定的值必须对 .rss 文件中定义的全局变量有效。 必须为每个 –v 参数指定一个全局变量  。  
   
  **-v** 参数在命令行上指定，可用来为运行时在脚本中定义的全局变量设置值。 例如，如果脚本中包含一个名为 *parentFolder*的变量，则可以在命令行上为该文件夹指定一个名称：  
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 全局变量以给定的名称命名，并设置为提供的值。 例如， **-v a=**"**1**" **-v b=**"**2**" 将生成一个名为 **a** 且值为 "**1**" 的变量，以及一个值为 " **2** " 的变量**b**。  
+ 全局变量以给定的名称命名，并设置为提供的值。 例如， **-v a=** "**1**" **-v b=** "**2**" 将生成一个名为 **a** 且值为 "**1**" 的变量，以及一个值为 " **2** " 的变量**b**。  
   
- 全局变量可用于脚本中的所有函数。 反斜杠与英文引号连用 (**\\"**) 将解释为一个英文双引号。 仅当字符串中包含空格时才需要使用英文引号。 变量名必须对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]有效；变量名必须以字母字符或下划线开头，并包含字母字符、数字或下划线。 不能将保留字用作变量名。 有关使用全局变量的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
+ 全局变量可用于脚本中的所有函数。 反斜杠与英文引号连用 ( **\\"** ) 将解释为一个英文双引号。 仅当字符串中包含空格时才需要使用英文引号。 变量名必须对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]有效；变量名必须以字母字符或下划线开头，并包含字母字符、数字或下划线。 不能将保留字用作变量名。 有关使用全局变量的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
  **-t**  
  （可选）将错误信息输出到跟踪日志中。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  

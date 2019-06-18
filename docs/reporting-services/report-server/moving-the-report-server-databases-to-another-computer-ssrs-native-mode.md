@@ -9,10 +9,10 @@ ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619683"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>将报表服务器数据库移至其他计算机（SSRS 本机模式）
@@ -27,7 +27,7 @@ ms.locfileid: "65619683"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 您不必将作业移到新计算机上，不过您可能需要删除计算机上不再使用的作业。  
   
--   订阅、缓存报表和快照将保留在移动的数据库中。 如果在数据库移动之后快照不选取刷新的数据，则清除快照选项，然后选择“应用”保存更改，重新创建计划，然后再次选择“应用”保存所做的更改。  
+-   订阅、缓存报表和快照将保留在移动的数据库中。 如果在数据库移动之后快照不选取刷新的数据，则清除快照选项，然后选择“应用”保存更改，重新创建计划，然后再次选择“应用”保存所做的更改   。  
   
 -   移动数据库时，会保留 reportservertempdb 中存储的临时报表和用户会话数据。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "65619683"
   
 3.  启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并打开与承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接。  
   
-4.  右键单击该报表服务器数据库，指向“任务”，并单击“分离”。 对报表服务器临时数据库重复此步骤。  
+4.  右键单击该报表服务器数据库，指向“任务”，并单击“分离”  。 对报表服务器临时数据库重复此步骤。  
   
 5.  将 .mdf 和 .ldf 文件复制或移至要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 Data 文件夹中。 由于要移动两个数据库，因此请确保移动或复制所有四个文件。  
   
 6.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，打开与将承载报表服务器数据库的新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接。  
   
-7.  右键单击“数据库”节点，然后单击“附加”。  
+7.  右键单击“数据库”节点，然后单击“附加”  。  
   
 8.  单击 **“添加”** 以选择要附加的报表服务器数据库 .mdf 和 .ldf 文件。 对报表服务器临时数据库重复此步骤。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "65619683"
   
 10. 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具并打开与报表服务器的连接。  
   
-11. 在“数据库”页上，选择新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后单击 **“连接”**。  
+11. 在“数据库”页上，选择新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后单击 **“连接”** 。  
   
-12. 选择刚才移动的报表服务器数据库，然后单击 **“应用”**。  
+12. 选择刚才移动的报表服务器数据库，然后单击 **“应用”** 。  
   
 13. 在“加密密钥”页上，单击“还原”。 指定包含密钥备份副本的文件以及该文件的解锁密码。  
   
@@ -200,17 +200,17 @@ GO
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到报表服务器。  
   
-2.  在“数据库”页上，单击 **“更改数据库”**。 单击“下一步” 。  
+2.  在“数据库”页上，单击 **“更改数据库”** 。 单击“下一步”  。  
   
-3.  单击 **“选择现有报表服务器数据库”**。 单击“下一步” 。  
+3.  单击 **“选择现有报表服务器数据库”** 。 单击“下一步”  。  
   
-4.  选择现在承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并单击 **“测试连接”**。 单击“下一步” 。  
+4.  选择现在承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并单击 **“测试连接”** 。 单击“下一步”  。  
   
-5.  在“数据库名称”中，选择要使用的报表服务器数据库。 单击“下一步” 。  
+5.  在“数据库名称”中，选择要使用的报表服务器数据库。 单击“下一步”  。  
   
-6.  在“凭据”中，指定报表服务器用来连接到报表服务器数据库的凭据。 单击“下一步” 。  
+6.  在“凭据”中，指定报表服务器用来连接到报表服务器数据库的凭据。 单击“下一步”  。  
   
-7.  单击 **“下一步”** ，然后单击 **“完成”**。  
+7.  单击 **“下一步”** ，然后单击 **“完成”** 。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例包含 **RSExecRole** 角色。 通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具设置报表服务器数据库连接时，将创建角色、注册登录信息并分配角色。 如果使用备用方法（具体来说，如果使用 rsconfig.exe 命令提示实用工具）来配置连接，报表服务器不会处于工作状态。 您可能需要编写 WMI 代码以使报表服务器可用。 有关详细信息，请参阅 [访问 Reporting Services WMI 提供程序](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  

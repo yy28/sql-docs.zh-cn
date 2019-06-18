@@ -8,21 +8,21 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6315362b4c8d308e3be8d812ccfdeadaa1e7de8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717045"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194137"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>如何部署自定义报表项
   若要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自定义报表项，必须修改报表服务器配置文件，并将设计时和运行时组件程序集复制到报表设计器和报表服务器的相应应用程序文件夹中。  
   
 ### <a name="to-deploy-a-custom-report-item"></a>部署自定义报表项  
   
-1.  编辑 Rsreportdesigner.config 文件，以配置供在相应设计器中使用的自定义报表项运行时组件和设计时组件。 注意：ReportItemName 条目必须匹配 CustomReportItemDesigner 类中所用的 CustomReportItemAttribute 属性。 例如：  
+1.  编辑 Rsreportdesigner.config 文件，以配置供在相应设计器中使用的自定义报表项运行时组件和设计时组件。 注意：ReportItemName 条目必须匹配 CustomReportItemDesigner 类中所用的 CustomReportItemAttribute 属性    。 例如：  
   
     ```  
     <ReportItems>  
@@ -44,7 +44,7 @@ ms.locfileid: "47717045"
     </ReportItems>  
     ```  
   
-3.  编辑 Rsssrvpolicy.config 文件以添加可向相应自定义报表项授予合适权限的 CodeGroup。 例如：  
+3.  编辑 Rsssrvpolicy.config 文件以添加可向相应自定义报表项授予合适权限的 CodeGroup  。 例如：  
   
     ```  
     <CodeGroup   

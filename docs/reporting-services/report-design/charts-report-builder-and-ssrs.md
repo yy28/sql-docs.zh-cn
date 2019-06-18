@@ -19,10 +19,10 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1e2b3e519a55d23b524582bef8bb7a677023e704
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581616"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>图表（报表生成器和 SSRS）
@@ -34,7 +34,7 @@ ms.locfileid: "65581616"
   
  ![图表元素关系图](../../reporting-services/report-design/media/rs-chartelementsc.gif "Chart elements diagram")  
   
- 可以将图表作为报表部件与报表分开发布。 有关详细信息，请参阅[报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。
+ 可以将图表作为报表部件与报表分开发布  。 有关详细信息，请参阅[报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。
   
  
 ##  <a name="DesigningChart"></a> 设计图表  

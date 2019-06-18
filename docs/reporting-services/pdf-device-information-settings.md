@@ -12,10 +12,10 @@ ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503681"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 设备信息设置
@@ -23,7 +23,7 @@ ms.locfileid: "65503681"
   
 |设置|ReplTest1|  
 |-------------|-----------|  
-| AccessiblePDF | 指示是否呈现可访问/已标记的 PDF，此 PDF 大小更大，但更易于屏幕阅读器和其他辅助技术读取和导航。 默认值是 **false**秒。 [在 Power BI 报表服务器（2018 年 3 月版）及更高版本中可用] |
+| AccessiblePDF  | 指示是否呈现可访问/已标记的 PDF，此 PDF 大小更大，但更易于屏幕阅读器和其他辅助技术读取和导航。 默认值是 **false**秒。 [在 Power BI 报表服务器（2018 年 3 月版）及更高版本中可用] |
 |**“列”**|要为报表设置的列数。 此值将覆盖报表的原始设置。|  
 |**ColumnSpacing**|要为报表设置的列间距。 此值将覆盖报表的原始设置。|  
 |**DpiX**|输出设备在 X 方向的分辨率。|  

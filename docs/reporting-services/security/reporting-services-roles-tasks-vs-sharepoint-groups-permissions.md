@@ -17,10 +17,10 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 091cdef1316ace27dd2928fb9c263cbc19ea0e61
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570838"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色任务与SharePoint 组权限对比
@@ -39,7 +39,7 @@ ms.locfileid: "65570838"
 -   [比较本机模式任务和 SharePoint 权限](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> 比较权限工具和术语  
- **本机模式：**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式权限对象（角色和任务）在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建并在报表管理器中为各用户配置。  
+ **本机模式：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式权限对象（角色和任务）在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建并在报表管理器中为各用户配置。  
   
  **SharePoint 模式：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式使用 SharePoint 权限功能。 SharePoint 组和权限从以下“站点设置”  页进行管理。  
   

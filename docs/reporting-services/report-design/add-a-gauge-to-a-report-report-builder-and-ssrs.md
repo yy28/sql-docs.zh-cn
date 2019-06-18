@@ -9,10 +9,10 @@ ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b5c1a9989831e6c28cd2aecd58a3e9f8640465c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575020"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>向报表添加仪表（报表生成器和 SSRS）
@@ -37,7 +37,7 @@ ms.locfileid: "65575020"
   
 5.  将数据集中的一个字段添加到数据字段放置区。 您只能添加一个字段。 如果要显示多个字段，必须添加其他指针，每个字段一个指针。  
   
-     右键单击仪表刻度，然后选择“刻度属性”。 为刻度的 **“最小值”** 和 **“最大值”** 分别键入一个值。 有关详细信息，请参阅[设置仪表的最小值或最大值（报表生成器和 SSRS）](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
+     右键单击仪表刻度，然后选择“刻度属性”  。 为刻度的 **“最小值”** 和 **“最大值”** 分别键入一个值。 有关详细信息，请参阅[设置仪表的最小值或最大值（报表生成器和 SSRS）](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   

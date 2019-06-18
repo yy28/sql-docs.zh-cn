@@ -9,10 +9,10 @@ ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d9e7b846d17fd6ad86edc45ff7dd4251c098ae1a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578459"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>对多个形状图指定一致的颜色（报表生成器和 SSRS）
@@ -31,13 +31,13 @@ ms.locfileid: "65578459"
   
 1.  单击图表以显示“图表数据”窗格。  
   
-2.  在“类别组”区域中右键单击某一类别，然后单击“类别组属性”。  
+2.  在“类别组”区域中右键单击某一类别，然后单击“类别组属性”   。  
   
-3.  在“常规”选项卡上的 **“同步其中的组”** 框中，单击要同步其颜色的类别的名称，然后单击 **“确定”**。  
+3.  在“常规”选项卡上的 **“同步其中的组”** 框中，单击要同步其颜色的类别的名称，然后单击 **“确定”** 。  
   
 ## <a name="to-specify-consistent-colors-across-multiple-shape-charts"></a>跨多个形状图指定一致的颜色  
   
-1.  右键单击表体外部区域，然后选择“报表属性”。  
+1.  右键单击表体外部区域，然后选择“报表属性”  。  
   
 2.  在 **“代码”** 中，将以下代码键入到文本框中。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "65578459"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  右键单击形状图，然后选择“序列属性”。  
+4.  右键单击形状图，然后选择“序列属性”  。  
   
-5.  在“填充”中，单击“表达式”(fx) 按钮可以编辑“颜色”属性的表达式。  
+5.  在“填充”中，单击“表达式”(fx) 按钮可以编辑“颜色”属性的表达式     。  
   
 6.  键入以下表达式，其中“MyCategoryField”是在 **“类别组”** 区域中显示的字段：  
   

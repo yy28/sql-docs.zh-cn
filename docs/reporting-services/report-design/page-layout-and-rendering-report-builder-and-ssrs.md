@@ -9,10 +9,10 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8ec929d77b9805e3285b5d5a75940231b09cbd8e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576349"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>页面布局和呈现方式（报表生成器和 SSRS）
@@ -45,7 +45,7 @@ ms.locfileid: "65576349"
  报表可以跨越多个页，每个页上都可以有重复的页眉和页脚。 报表可包含图形元素，如图像和线条，并可具有多种基于表达式的字体、颜色和样式。  
   
 ##  <a name="ReportSections"></a> 报表区域  
- 报表由三个主要区域组成：页眉（可选）、页脚（可选）和表体。 报表的页眉和页脚不是独立的报表区域，而是由放置在表体的顶部和底部的报表项组成。 页眉和页脚会在报表每一页的顶部和底部重复相同的内容。 您可以在页眉和页脚中放置图像、文本框和线条。 可以在表体中放置任何类型的报表项。  
+ 报表由三个主要区域组成：页  眉（可选）、页  脚（可选）和表体。 报表的页眉和页脚不是独立的报表区域，而是由放置在表体的顶部和底部的报表项组成  。 页眉和页脚会在报表每一页的顶部和底部重复相同的内容。 您可以在页眉和页脚中放置图像、文本框和线条。 可以在表体中放置任何类型的报表项。  
   
  您可以设置报表项的属性，以便一开始就在页中隐藏或显示该报表项。 可以设置数据区域的行、列或组的可见性属性，并提供切换按钮使用户能以交互方式显示或隐藏报表数据。 还可以使用表达式（包括基于报表参数的表达式）来设置可见性或初始可见性。  
   

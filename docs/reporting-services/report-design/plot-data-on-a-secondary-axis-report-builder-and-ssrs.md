@@ -9,10 +9,10 @@ ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 86d73f2ab16bdb7ee801e333f3a75c96a2a1c360
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578182"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>在辅助轴上绘制数据（报表生成器和 SSRS）
@@ -30,9 +30,9 @@ ms.locfileid: "65578182"
   
 ### <a name="to-plot-a-series-on-the-secondary-axis"></a>在辅助轴上绘制序列  
   
-1.  右键单击图表中的序列，或右键单击要在辅助轴上显示的 **“值”** 区域中的某个字段，然后单击 **“序列属性”**。 随即出现 **“序列属性”** 对话框。  
+1.  右键单击图表中的序列，或右键单击要在辅助轴上显示的 **“值”** 区域中的某个字段，然后单击 **“序列属性”** 。 随即出现 **“序列属性”** 对话框。  
   
-2.  单击 **“轴和图表区”**，然后选择要启用的辅助轴、值轴或类别轴。  
+2.  单击 **“轴和图表区”** ，然后选择要启用的辅助轴、值轴或类别轴。  
 
 ## <a name="next-steps"></a>后续步骤
 

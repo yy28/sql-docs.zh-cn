@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Report Server Web service, WSDL
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c125c4e1c413fd974ee80fd7f06c8c9f69f33b8d
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c78f160e51265e4ce87a191aa3076dc4464c31d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026183"
 ---
 # <a name="accessing-the-soap-api"></a>访问 SOAP API
   报表服务器 Web 服务使用通过 HTTP 的简单对象访问协议 (SOAP)，并充当客户端程序和报表服务器之间的通信接口。 该 Web 服务提供两个端点（一个用于报表执行，一个用于报表管理），并且由您可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的完整功能的方法和一组复杂类型对象构成。 若要调用该服务，必须引用 Reporting Services Web 服务描述语言 (WSDL)。  
@@ -51,11 +51,11 @@ https://server/reportserver/ReportService2010.asmx?wsdl
   
 |URL 元素|描述|  
 |-----------------|-----------------|  
-|服务器|报表服务器部署到的服务器的名称。|  
-|reportserver|包含 XML Web 服务的文件夹的名称。 此名称在设置期间配置。|  
-|\<终结点名称>.asmx|Web 服务端点的名称。|  
+|服务器 |报表服务器部署到的服务器的名称。|  
+|reportserver |包含 XML Web 服务的文件夹的名称。 此名称在设置期间配置。|  
+|\<终结点名称>.asmx |Web 服务端点的名称。|  
   
- 有关 WSDL 格式的详细信息，请参阅万维网联合会 (W3C) WSDL 规范，网址为 http://www.w3.org/TR/wsdl。  
+ 有关 WSDL 格式的详细信息，请参阅万维网联合会 (W3C) WSDL 规范，网址为 http://www.w3.org/TR/wsdl 。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 Web 服务和 .NET Framework 生成应用程序](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

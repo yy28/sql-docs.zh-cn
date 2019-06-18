@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 39b22e5d32d835281e6194e996ab7e27b2c3519d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292285"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280465"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>向移动报表添加数据网格 | Reporting Services
-有时最佳可视化对象是数据本身。 了解用于在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中显示数据的三种数据网格（或表）：
+有时最佳可视化对象是数据本身。 了解用于在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中显示数据的三种数据网格（或表）  ：
 * 简单数据网格
 * 指示器数据网格
 * 图表数据网格
@@ -28,13 +28,13 @@ ms.locfileid: "56292285"
 
 将数据网格添加到设计图面之后，可以将它连接到实际数据。
 
-1. 将简单数据网格从“布局”选项卡拖至设计网格，并将其调整为所需大小。
+1. 将简单数据网格从“布局”选项卡拖至设计网格，并将其调整为所需大小  。
 
 2. [从 Excel 或共享数据集获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
 
-3. 选择“数据”选项卡，并在“数据属性”窗格的“网格视图的数据”下选择一个数据表。
+3. 选择“数据”选项卡，并在“数据属性”窗格的“网格视图的数据”    下选择一个数据表。
 
-4. 在“列”窗格中，选择所需列。 重新排列和重命名它们，并设置其格式和聚合。 
+4. 在“列”窗格中，选择所需列  。 重新排列和重命名它们，并设置其格式和聚合。 
 
  
 ##  <a name="indicator-data-grid"></a>指示器数据网格
@@ -42,13 +42,13 @@ ms.locfileid: "56292285"
 
 ![mobile-report-indicator-data-grid](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
 
-1. 将指示器数据网格从“布局”选项卡拖至设计网格，并将其调整为所需大小。
+1. 将指示器数据网格从“布局”选项卡拖至设计网格，并将其调整为所需大小  。
 
-2. 在“列”窗格中的“数据”选项卡上，选择“添加仪表列”。 
+2. 在“列”窗格中的“数据”选项卡上，选择“添加仪表列”    。 
 
-3. 选择“选项”，然后选择“仪表类型”。 
+3. 选择“选项”，然后选择“仪表类型”   。 
 
-4. 设置“值”和“比较”字段以及“值方向”（如[直接向移动报表添加的仪表](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)中所述）。
+4. 设置“值”和“比较”字段以及“值方向”（如[直接向移动报表添加的仪表](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)中所述）    。
 
 数据网格会自动向仪表仅馈送特定于该数据网格行的数据。  
 
@@ -59,22 +59,22 @@ ms.locfileid: "56292285"
 
 将图表列添加到数据网格时，需要添加单独的数据表以便为每行中的图表提供数据。 此第二个数据表需要与主数据表共享一个字段，以便将每行链接到其关联图表数据。 
 
-1. 将图表数据网格从“布局”选项卡拖至设计网格，并将其调整为所需的大小。
+1. 将图表数据网格从“布局”选项卡拖至设计网格，并将其调整为所需的大小  。
 
-2. 在“列”窗格中的“数据”选项卡上，选择“添加图表列”。 
+2. 在“列”窗格中的“数据”选项卡上，选择“添加图表列”    。 
 
 3. [从 Excel 或共享数据集获取数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) 以添加与主数据表共享一个字段的第二个数据表（如果尚未这样做）。
 
-4. 在“数据属性”下，在“网格视图的数据”中选择主数据表，然后在“图表可视化效果的引用数据”中选择第二个表。
+4. 在“数据属性”下，在“网格视图的数据”中选择主数据表，然后在“图表可视化效果的引用数据”中选择第二个表    。
 
-5. 选择“选项”，然后选择“图表类型”。
+5. 选择“选项”，然后选择“图表类型”   。
  
-6. 依次选择“图表数据字段”、“源查找”和“目标查找”。 
+6. 依次选择“图表数据字段”、“源查找”和“目标查找”    。 
    这三个属性决定了数据网格向列中的每个图表提供数据的方式。
    
-   *   “源查找”设置为“网格视图的数据”的数据表中的字段。 此字段充当按行进行的筛选器，该筛选器应用于图表引用数据表，以便为嵌入式表的每行提供数据。 
-   * “目标查找”是“图表可视化效果的引用数据”的数据表中的字段。 将在这两个字段对每个行中的图表数据进行联接。   
-   * “图表数据字段”决定了“图表可视化效果的引用数据”数据表中的哪个度量值要用作 Y 轴值或图表中每行中的系列。  
+   *   “源查找”设置为“网格视图的数据”的数据表中的字段   。 此字段充当按行进行的筛选器，该筛选器应用于图表引用数据表，以便为嵌入式表的每行提供数据。 
+   * “目标查找”是“图表可视化效果的引用数据”的数据表中的字段   。 将在这两个字段对每个行中的图表数据进行联接。   
+   * “图表数据字段”决定了“图表可视化效果的引用数据”数据表中的哪个度量值要用作 Y 轴值或图表中每行中的系列   。  
 
 ## <a name="see-also"></a>另请参阅 
 * [Reporting Services 移动报表中的地图](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)

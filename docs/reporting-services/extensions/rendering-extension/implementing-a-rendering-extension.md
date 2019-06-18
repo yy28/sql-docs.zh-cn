@@ -12,14 +12,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], rendering
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 56a8294775ccb51cd216c2cd72c955bd9379c004
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a72144df0f560feb6da0b954cbd7053832d46c87
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643745"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193691"
 ---
 # <a name="implementing-a-rendering-extension"></a>实现呈现扩展插件
   呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 SQL Server Reporting Services 包含六种呈现扩展插件：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  

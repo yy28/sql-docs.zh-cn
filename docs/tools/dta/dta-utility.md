@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590191"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63001098"
 ---
 # <a name="dta-utility"></a>dta 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ dta
 dta -D database_name1, database_name2...  
 ```  
   
- 此外，也可以对各个数据库名称使用 -D 参数，从而指定多个数据库。例如：  
+ 此外，也可以对各个数据库名称使用 -D  参数，从而指定多个数据库。例如：  
   
 ```  
 dta -D database_name1 -D database_name2... n  
@@ -152,7 +152,7 @@ dta -d AdventureWorks2012 ...
   
 |参数|默认值|详细信息|  
 |---------------|-------------------|-------------|  
-|*database_name*|使用 -D 选项指定的 database_name||  
+|*database_name*|使用 -D  选项指定的 database_name ||  
 |*owner_name*|**dbo**|*owner_name* 必须为 **dbo**。 如果指定了其他值，则 **dta** 执行将失败并返回错误。|  
 |*table_name*|None||  
   
@@ -165,7 +165,7 @@ dta -d AdventureWorks2012 ...
  允许 **dta** 覆盖现有的输出文件。 如果已经存在同名输出文件，并且没有指定 **-F** ，则 **dta**将返回错误。 你可以使用具有 **-of** 、 **-or**或 **-ox**的 **-F**。  
   
  **-fa** _physical_design_structures_to_add_  
- 指定 **dta** 应在建议中包括的物理设计结构的类型。 下表列出并说明了可为此参数指定的值。 未指定任何值时，dta 将使用默认值 -fa IDX。  
+ 指定 **dta** 应在建议中包括的物理设计结构的类型。 下表列出并说明了可为此参数指定的值。 未指定任何值时，dta  将使用默认值 -fa IDX  。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
@@ -205,7 +205,7 @@ dta -d AdventureWorks2012 ...
 |FULL|完全分区（选择该值可增强性能）|  
 |ALIGNED|仅限对齐分区（选择该值可增强可管理性）|  
   
- ALIGNED 表示在 **dta** 生成的建议中，每个建议的索引都完全按定义该索引的基础表所用的方式进行分区。 索引视图中的非聚集索引与索引视图对齐。 只能为此参数指定一个值。 默认值为 -fp NONE。  
+ ALIGNED 表示在 **dta** 生成的建议中，每个建议的索引都完全按定义该索引的基础表所用的方式进行分区。 索引视图中的非聚集索引与索引视图对齐。 只能为此参数指定一个值。 默认值为 -fp NONE  。  
   
  **-fx** _drop_only_mode_  
  指定 **dta** 仅考虑删除现有物理设计结构。 没有考虑任何新的物理设计结构。 如果指定此选项， **dta** 将评估现有物理设计结构的使用情况，并建议删除很少使用的结构。 此参数不带任何值， 它不能与 **-fa**、 **-fp**或 **-fk ALL** 参数一起使用。  
@@ -214,10 +214,10 @@ dta -d AdventureWorks2012 ...
  为优化会话指定一个数字标识符。 如果未指定，则 **dta** 将生成一个 ID 号。 可以使用此标识符查看现有优化会话的信息。 如果不指定 **-ID**值，则必须用 **-s**指定会话名。  
   
  **-ip**  
- 指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可使用 -n 选项更改此值。  
+ 指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可使用 -n  选项更改此值。  
  
 **-iq**  
- 指定查询存储用作工作负荷。 分析显式选择的数据库查询存储中的前 1000 个事件。 可使用 -n 选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
+ 指定查询存储用作工作负荷。 分析显式选择的数据库查询存储中的前 1000 个事件。 可使用 -n  选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
 |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
@@ -227,13 +227,13 @@ dta -d AdventureWorks2012 ...
  指定用作优化输入的工作负荷文件的路径和文件名。 该文件必须采用下列格式之一：.trc（SQL Server Profiler 跟踪文件）、.sql（SQL 文件）或 .log（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 跟踪文件）。 必须指定一个工作负荷文件或一个工作负荷表。  
   
  **-it** _workload_trace_table_name_  
- 指定包含用于优化的工作负荷跟踪的表名。 如果使用表，则用以下格式指定其名称：[*database_name*]**.**[*owner_name*]**.**_table_name_。  
+ 指定包含用于优化的工作负荷跟踪的表名。 如果使用表，则用以下格式指定其名称：[*database_name*] **.** [*owner_name*] **.** _table_name_。  
   
  下表显示了每个参数的默认值：  
   
 |参数|默认值|  
 |---------------|-------------------|  
-|*database_name*|使用 -D 选项指定的 database_name|  
+|*database_name*|使用 -D  选项指定的 database_name |  
 |*owner_name*|**dbo**。|  
 |*table_name*|无。|  
   
@@ -344,14 +344,14 @@ dta -iq -I 48
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- 此参数是在命令提示符中输入表列表 (**-Tl**) 的替代方式。 如果使用了 **-Tl**，请不要使用表列表文件 ( **-Tf**)。 如果同时使用这两个参数， **dta** 将失败并返回错误。  
+ 此参数是在命令提示符中输入表列表 ( **-Tl**) 的替代方式。 如果使用了 **-Tl**，请不要使用表列表文件 ( **-Tf**)。 如果同时使用这两个参数， **dta** 将失败并返回错误。  
   
  如果省略 **-Tf** 和 **-Tl** 参数，则将考虑对指定数据库中的所有用户表进行优化。  
   
  **-Tl** _table_list_  
  在命令提示符中指定要优化的一组表。 各表名间用逗号分隔。 如果使用 **-D** 参数只指定一个数据库，则无需使用数据库名限定表名。 在其他情况下，使用以下格式的完全限定名： *database_name.schema_name.table_name* ，每个表都必须使用此格式。  
   
- 此参数是使用表列表文件 (**-Tf**) 的替代方法。 如果同时使用 **-Tl** 和 **-Tf** ，则 **dta** 将失败并返回错误。  
+ 此参数是使用表列表文件 ( **-Tf**) 的替代方法。 如果同时使用 **-Tl** 和 **-Tf** ，则 **dta** 将失败并返回错误。  
   
  **-U** _login_id_  
  指定用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登录 ID。  

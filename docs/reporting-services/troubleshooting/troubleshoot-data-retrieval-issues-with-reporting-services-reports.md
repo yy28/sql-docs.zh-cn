@@ -9,10 +9,10 @@ ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574428"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services 报表的数据检索问题疑难解答
@@ -40,7 +40,7 @@ ms.locfileid: "65574428"
 确认密码不包含特殊字符。 如果不能更改密码，则可以请数据库管理员将相应的凭据作为系统 ODBC 数据源名称 (DSN) 的一部分存储在本地和服务器中。 有关详细信息，请参阅 MSDN 上的 .NET Framework SDK 文档中的“OdbcConnection.ConnectionString”。   
   
 > [!NOTE]  
->建议您不要在连接字符串中添加登录信息（如密码）。 报表设计器在“数据源属性”或“共享数据源属性”对话框上提供“凭据”页，可在其中输入凭据。 这些凭据安全地存储在报表创作计算机上。  
+>建议您不要在连接字符串中添加登录信息（如密码）。 报表设计器在“数据源属性”或“共享数据源属性”对话框上提供“凭据”页，可在其中输入凭据    。 这些凭据安全地存储在报表创作计算机上。  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>在查询设计器中运行查询时为什么看不到数据？  
 创建数据集时，数据集字段集合将显示在“报表数据”窗格中。 有时候，数据集字段集合不按预期的方式显示。   

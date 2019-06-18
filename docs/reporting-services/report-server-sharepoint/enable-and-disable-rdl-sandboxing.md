@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577762"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>在 SharePoint 集成模式下针对 Reporting Services 启用和禁用 RDL 沙盒
@@ -33,16 +33,16 @@ ms.locfileid: "65577762"
 
  在启用 RDL 沙盒处理时，禁用以下功能：  
   
--   报表定义的 \<Code> 元素中的自定义代码。  
+-   报表定义的 \<Code> 元素中的自定义代码  。  
   
 -   用于 [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] 自定义报表项的 RDL 向后兼容模式。  
   
 -   表达式中的命名参数。  
   
- 本主题介绍 RSReportServer.Config 文件中 \<RDLSandboxing> 元素内的各元素。 有关如何修改此文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 服务器跟踪日志记录与 RDL 沙盒处理功能相关的活动。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。  
+ 本主题介绍 RSReportServer.Config 文件中 \<RDLSandboxing> 元素内的各元素  。 有关如何修改此文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 服务器跟踪日志记录与 RDL 沙盒处理功能相关的活动。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
 ## <a name="example-configuration"></a>配置示例
- 下面的示例显示了 RSReportServer.Config 文件中 \<RDLSandboxing> 元素的设置和示例值。  
+ 下面的示例显示了 RSReportServer.Config 文件中 \<RDLSandboxing> 元素的设置和示例值  。  
   
 ```  
 <RDLSandboxing>  
@@ -74,10 +74,10 @@ ms.locfileid: "65577762"
 |**类型**|在 RDL 表达式内允许的成员的列表。|  
 |**Allow**|RDL 表达式中允许的一个类型或一组类型。|  
 |**Namespace**|**Allow** 的属性，它是包含应用于 Value 的一个或多个类型的命名空间。 此属性不区分大小写。|  
-|**AllowNew**|Allow 的布尔属性，控制是否允许在 RDL 表达式中或 RDL \<Class> 元素中创建该类型的新实例。<br /><br /> 在启用 RDLSandboxing 时，无论 AllowNew 的设置如何，都不能在 RDL 表达式中创建新数组。|  
+|**AllowNew**|Allow 的布尔属性，控制是否允许在 RDL 表达式中或 RDL \<Class> 元素中创建该类型的新实例   。<br /><br /> 在启用 RDLSandboxing 时，无论 AllowNew 的设置如何，都不能在 RDL 表达式中创建新数组   。|  
 |**ReplTest1**|**Allow** 的值，作为在 RDL 表达式中要允许的类型的名称。 值 **\*** 指示命名空间中的所有类型都是允许的。 此属性不区分大小写。|  
-|**成员**|对于在类型 \<Types> 元素中包括的类型的列表，为在 RDL 表达式中不允许的成员名称的列表。|  
-|**拒绝**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 在为某一成员指定了 Deny 后，不允许所有类型的具有此名称的所有成员。|  
+|**成员**|对于在类型 \<Types> 元素中包括的类型的列表，为在 RDL 表达式中不允许的成员名称的列表  。|  
+|**拒绝**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 在为某一成员指定了 Deny 后，不允许所有类型的具有此名称的所有成员  。|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>当启用 RDL 沙盒处理时使用表达式
 
@@ -106,7 +106,7 @@ ms.locfileid: "65577762"
   
 -   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** 方法。  
   
--   报表定义中的 \<Classes> 元素。  
+-   报表定义中的 \<Classes> 元素  。  
   
 -   已为允许列表中的某一类型添加到阻止列表中的成员。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "65577762"
   
  若要启用一种类型的成员，但拒绝其他类型的具有相同名称的成员，必须执行以下操作：  
   
--   为成员名称添加 \<Deny> 元素。  
+-   为成员名称添加 \<Deny> 元素  。  
   
 -   对于您想要启用的成员，为其创建一个代理成员，该成员在自定义程序集中的类上具有不同的名称。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "65577762"
   
  若要将 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 函数添加到允许列表，请将来自 Microsoft.VisualBasic 命名空间的相应类型添加到该允许列表。  
   
- 若要将 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 类型关键字添加到允许列表，请将相应的 CLR 类型添加到该允许列表。 例如，若要使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 关键字 Integer，请将以下 XML 片段添加到 \<RDLSandboxing> 元素：  
+ 若要将 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 类型关键字添加到允许列表，请将相应的 CLR 类型添加到该允许列表。 例如，若要使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 关键字 Integer，请将以下 XML 片段添加到 \<RDLSandboxing> 元素   ：  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -158,7 +158,7 @@ ms.locfileid: "65577762"
   
 ### <a name="working-with-operators-and-new"></a>使用运算符和 New
 
- 默认情况下，始终允许 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] New **以外的所有**.NET Framework 语言运算符。 New 运算符由 \<Allow> 元素上的 AllowNew 属性控制。 始终允许其他语言运算符（如默认集合取值函数运算符 **!**） 和 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 转换宏（如 **CInt**）。  
+ 默认情况下，始终允许 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] New **以外的所有**.NET Framework 语言运算符。 New 运算符由 \<Allow> 元素上的 AllowNew 属性控制    。 始终允许其他语言运算符（如默认集合取值函数运算符 **!** ） 和 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 转换宏（如 **CInt**）。  
   
  不支持将运算符添加到阻止列表（包括自定义运算符）。 要排除某一类型的运算符，必须执行以下操作：  
   

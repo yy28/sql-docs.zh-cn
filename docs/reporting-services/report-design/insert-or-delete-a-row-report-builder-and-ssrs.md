@@ -9,10 +9,10 @@ ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b20b95586e387484d536ad8005c6f57c1de4698
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580162"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>插入或删除行（报表生成器和 SSRS）
@@ -31,29 +31,29 @@ ms.locfileid: "65580162"
   
 ## <a name="to-insert-a-row-in-a-selected-data-region"></a>在所选数据区域中插入行  
   
--   右键单击要插入行的位置对应的行控点，再单击“插入行”，然后单击“上方”或“下方”。  
+-   右键单击要插入行的位置对应的行控点，再单击“插入行”，然后单击“上方”或“下方”    。  
   
      \- 或 -  
   
--   右键单击要插入行的数据区域中的单元，再单击“插入行”，然后单击“上方”或“下方”。  
+-   右键单击要插入行的数据区域中的单元，再单击“插入行”，然后单击“上方”或“下方”    。  
   
 ## <a name="to-delete-a-row-from-a-selected-data-region"></a>删除所选数据区域中的行  
   
--   选择要删除的行，右键单击任一所选行的控点，然后单击“删除行”。  
+-   选择要删除的行，右键单击任一所选行的控点，然后单击“删除行”  。  
   
      \- 或 -  
   
--   右键单击要删除的行所在的数据区域中的单元，然后单击“删除行”。  
+-   右键单击要删除的行所在的数据区域中的单元，然后单击“删除行”  。  
   
 ## <a name="to-insert-a-row-in-a-group-in-a-selected-data-region"></a>在所选数据区域的组中插入行  
   
--   在要插入行的 Tablix 数据区域的行组区中，右键单击插入位置的行组单元，再单击“插入行”，然后单击“上方 – 组外部”、“上方 – 组内部”、“下方 – 组内部”或“下方 – 组外部”。  
+-   在要插入行的 Tablix 数据区域的行组区中，右键单击插入位置的行组单元，再单击“插入行”，然后单击“上方 – 组外部”、“上方 – 组内部”、“下方 – 组内部”或“下方 – 组外部”      。  
   
      此时将在您单击过的行组单元所表示的组的内部或外部添加一行。  
   
 ## <a name="to-delete-a-row-from-a-group-in-a-selected-data-region"></a>删除所选数据区域的组中的行  
   
--   右键单击要删除的行所在的 Tablix 数据区域的行组区中的行组单元，然后单击“删除行”。  
+-   右键单击要删除的行所在的 Tablix 数据区域的行组区中的行组单元，然后单击“删除行”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

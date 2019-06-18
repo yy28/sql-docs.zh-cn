@@ -15,14 +15,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 - SOAP [Reporting Services], calls
 ms.assetid: f6f0c6e3-8bb5-4c44-9d19-1872edc72746
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d5c35023512430fd8a9a954a900330e2bb04f325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 65da2d36c53f5f00851b36f47396b7bcbf6a6092
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660105"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284610"
 ---
 # <a name="calling-web-service-methods"></a>调用 Web 服务方法
   当使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 代理类调用 Web 服务操作时，可以通过使用该类的方法来实现。 这些方法的响应方式类似于 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类库中类的任何其他方法。 所有 Web 服务方法都具有公共访问，并要求您提供适当数量的参数和参数类型。 在项目中创建代理类的实例之后，您可以调用方法以通过报表服务器执行报表操作。 以下 C# 代码说明如何使用 <xref:ReportService2010.ReportingService2010> 代理类的 <xref:ReportService2010.ReportingService2010.ListChildren%2A> 方法。 此代码用于对返回 <xref:ReportService2010.CatalogItem> 对象数组（此数组包含报表服务器数据库中所有项的列表）的 Web 服务进行递归调用：  

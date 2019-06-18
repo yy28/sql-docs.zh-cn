@@ -11,10 +11,10 @@ ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c9720a4d5e975f6bf46c17d2008252e05cf7171f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577861"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>在报表设计器中停靠“报表数据”窗格 (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "65577861"
   
 ### <a name="to-display-the-report-data-pane"></a>显示“报表数据”窗格  
   
--   在“设计”视图的“视图”菜单中，选择“报表数据”或使用 Ctrl+Alt+D。
+-   在“设计”视图的“视图”菜单中，选择“报表数据”或使用 Ctrl+Alt+D   。
   
 ### <a name="to-dock-the-report-data-pane"></a>停靠“报表数据”窗格  
   
@@ -32,11 +32,11 @@ ms.locfileid: "65577861"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>将“报表数据”窗格从停靠窗口更改为选项卡式窗口  
   
--   右键单击“报表数据”窗格的标题栏，然后单击“停靠为选项卡式文档”。  
+-   右键单击“报表数据”窗格的标题栏，然后单击“停靠为选项卡式文档”  。  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>将“报表数据”窗格从选项卡式窗口更改为停靠窗口  
   
--   右键单击“报表数据”选项卡，然后单击“停靠”。  
+-   右键单击“报表数据”选项卡，然后单击“停靠”  。  
   
      若要在两种显示状态之间切换，请双击“报表数据”窗格的标题栏。  
   

@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579397"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>将报表查看器 Web 部件添加到网页
@@ -33,17 +33,17 @@ ms.locfileid: "65579397"
 
 1.  打开或创建 Web 部件页或仪表板。  
   
-2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”**。  
+2.  在 **“站点操作”** 菜单上，单击 **“编辑页面”** 。  
   
-3.  单击“添加 Web 部件”。  
+3.  单击“添加 Web 部件”  。  
   
-4.  在 Web 部件类别列表中，选择 **“杂项”** 类别，然后选择 **“SQL Server Reporting Services 报表查看器”**。  
+4.  在 Web 部件类别列表中，选择 **“杂项”** 类别，然后选择 **“SQL Server Reporting Services 报表查看器”** 。  
   
-5.  单击 **“添加”**。 Web 部件将添加到区域的顶部。 可以将其拖至区域中的其他位置。  
+5.  单击 **“添加”** 。 Web 部件将添加到区域的顶部。 可以将其拖至区域中的其他位置。  
   
-6.  在查看器中，单击 **“单击此处打开工具窗格”**。  
+6.  在查看器中，单击 **“单击此处打开工具窗格”** 。  
   
-7.  通过单击“浏览”(**...**) 按钮，从当前网站集合的任一库中选择报表。 也可以键入报表 URL。 若要确定任一报表的 URL，请右键单击报表并选择“属性”。 请勿单击报表旁的向下箭头；报表项的“查看属性”页上未指出报表 URL。 如果从“属性”对话框复制并粘贴 URL，请用空格替换“%20”URL 编码（例如，“Company%20Sales”应为“Company Sales”）。  
+7.  通过单击“浏览”( **...** ) 按钮，从当前网站集合的任一库中选择报表。 也可以键入报表 URL。 若要确定任一报表的 URL，请右键单击报表并选择“属性”  。 请勿单击报表旁的向下箭头；报表项的“查看属性”页上未指出报表 URL。 如果从“属性”  对话框复制并粘贴 URL，请用空格替换“%20”URL 编码（例如，“Company%20Sales”应为“Company Sales”）。  
   
     > [!NOTE]  
     >  每个报表查看器 Web 部件都包含一个报表。 URL 必须是当前 SharePoint 站点或同一 Web 应用程序或场内站点上的报表的完全限定路径。 URL 必须能解析为包含报表的文档库或文档库内的文件夹。 报表 URL 必须包含 .rdl 文件扩展名。 如果报表依赖的是模型或共享数据源文件，则不必在 URL 中指定这些文件。 报表包含对所需文件的引用。  

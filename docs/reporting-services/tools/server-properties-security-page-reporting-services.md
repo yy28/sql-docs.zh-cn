@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/10/2016
 ms.openlocfilehash: 0e29dcf7681d105f92b3bf187c38ebe764d2449e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571311"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>服务器属性（“安全性”页）- Reporting Services
@@ -24,7 +24,7 @@ ms.locfileid: "65571311"
  若要打开此页，请执行以下操作：
  1) 启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2) 连接到报表服务器实例。
- 3) 右键单击报表服务器名称，然后选择“属性”。
+ 3) 右键单击报表服务器名称，然后选择“属性”  。
  4) 单击 **“安全性”** 将此页打开。  
   
 ## <a name="options"></a>选项
@@ -39,7 +39,7 @@ ms.locfileid: "65571311"
 
  指定用户是否可以从报表生成器报表执行即席查询，当用户单击相关数据时，会自动在报表生成器报表中生成新报表。  
   
- 设置此选项将确定报表服务器的 **EnableLoadReportDefinition** 属性是设置为 **True** 还是 **False**。 如果清除此选项，则该属性设置为 False，报表服务器不会生成在数据浏览过程中创建的点击链接型报表。 将阻止所有对 LoadReportDefinition 方法的调用。  
+ 设置此选项将确定报表服务器的 **EnableLoadReportDefinition** 属性是设置为 **True** 还是 **False**。 如果清除此选项，则该属性设置为 False，报表服务器不会生成在数据浏览过程中创建的点击链接型报表  。 将阻止所有对 LoadReportDefinition 方法的调用  。  
   
  如果关闭此选项，则会缓解恶意用户通过用 **LoadReportDefinition** 请求使报表服务器重载来启动拒绝服务攻击的威胁。  
   

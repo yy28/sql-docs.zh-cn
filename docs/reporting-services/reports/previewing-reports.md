@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 6bd9a273347aa2010cf670ea3a87622e92d69f82
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935890"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>预览 SQL Server Reporting Services (SSRS) 中的报表
@@ -22,7 +22,7 @@ ms.locfileid: "65935890"
   在设计 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表时，在将报表发布到生产环境中之前可能需要查看该报表。 可使用多种方法查看该报表：在报表设计器中切换到预览模式、使用报表设计器中的预览窗口以及在测试环境中将报表发布到报表服务器。  
   
 > [!NOTE]  
-> 在预览报表时，报表数据将缓存到本地计算机上的文件中。 使用相同的查询、参数和凭据再次预览同一报表时，报表设计器将检索缓存副本，而不是重新运行查询。 数据文件将在报表定义文件所在的同一目录中另存为 \<reportname>.rdl.data。 关闭报表设计器时，不会删除该文件。  
+> 在预览报表时，报表数据将缓存到本地计算机上的文件中。 使用相同的查询、参数和凭据再次预览同一报表时，报表设计器将检索缓存副本，而不是重新运行查询。 数据文件将在报表定义文件所在的同一目录中另存为 \<reportname>.rdl.data  。 关闭报表设计器时，不会删除该文件。  
   
 ## <a name="preview-mode"></a>预览模式
 
@@ -32,16 +32,16 @@ ms.locfileid: "65935890"
 
  预览报表的另一种方法是使用调试配置运行报表项目，例如，调试您编写的自定义程序集。 将在默认浏览器中打开报表。 运行项目的方法有以下三种：  
   
-- 通过在“调试”菜单上单击“启动调试”。  
+- 通过在“调试”菜单上单击“启动调试”   。  
   
-- 通过在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 标准工具栏 ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug") 上单击“启动”按钮。  
+- 通过在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 标准工具栏 ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug") 上单击“启动”按钮  。  
   
 - 按 **F5**。  
   
  如果使用生成报表但不部署该报表的项目配置，则将在单独的预览窗口中打开在当前配置的 **StartItem** 属性中指定的报表。 预览窗口显示报表的方式与预览模式相同，并具有相同功能。  
   
 > [!NOTE]  
-> 在调试报表之前，必须设置开始项。 例如，如果运行调试模式，浏览器将打开主报表服务器页，而不是预览模式下的报表。 若要设置启动项，请在解决方案资源管理器中右键单击报表项目，再单击“属性”，然后在 StartItem 中选择要显示的报表的名称。  
+> 在调试报表之前，必须设置开始项。 例如，如果运行调试模式，浏览器将打开主报表服务器页，而不是预览模式下的报表。 若要设置启动项，请在解决方案资源管理器中右键单击报表项目，再单击“属性”，然后在 StartItem 中选择要显示的报表的名称   。  
   
  若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”** 。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
   

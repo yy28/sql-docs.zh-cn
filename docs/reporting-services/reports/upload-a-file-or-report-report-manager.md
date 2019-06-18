@@ -15,10 +15,10 @@ ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573302"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>在报表管理器中上传文件或报表
@@ -30,13 +30,13 @@ ms.locfileid: "65573302"
   
 ### <a name="to-upload-a-file-or-report"></a>上载文件或报表  
   
-1.  在 Web 门户中，单击“上传”。  
+1.  在 Web 门户中，单击“上传”  。  
   
 4.  浏览到想要上传的文件。 可以上载报表定义文件、图像、文档或任何要在报表服务器上可用的文件。  
   
 5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符：\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。  
   
-6.  若要用新项替换现有项，请选择 **“如果该项已存在，则覆盖该项”**。  
+6.  若要用新项替换现有项，请选择 **“如果该项已存在，则覆盖该项”** 。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

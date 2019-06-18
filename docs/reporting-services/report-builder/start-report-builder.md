@@ -14,10 +14,10 @@ ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8170a46bdcb0d6249b59965e190ff3eb6d14b4d0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571751"
 ---
 # <a name="start-report-builder"></a>启动报表生成器
@@ -36,9 +36,9 @@ ms.locfileid: "65571751"
   
 ## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 门户启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  在 Web 浏览器的地址栏中，键入报表服务器的 URL。 默认情况下，该 URL 为 https://\<servername>/reports。  
+1.  在 Web 浏览器的地址栏中，键入报表服务器的 URL。 默认情况下，该 URL 为 https://\<servername  >/reports。  
   
-2.  在 Web 门户的上栏中，选择“新建” > “分页报表”。  
+2.  在 Web 门户的上栏中，选择“新建” > “分页报表”。    
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
@@ -52,15 +52,15 @@ ms.locfileid: "65571751"
   
 2.  打开库。  
   
-3.  单击 **“文档”**。  
+3.  单击 **“文档”** 。  
   
-4.  在 **“新建文档”** 菜单上，单击 **“报表生成器报表”**。  
+4.  在 **“新建文档”** 菜单上，单击 **“报表生成器报表”** 。  
   
      第一次时，此操作将启动 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 向导。 有关详细信息，请参阅 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) 。  
   
      [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 将打开，随后可在报表服务器中创建分页报表或打开报表。  
   
-     **注意** 如果  “新建文档”菜单未列出 “报表生成器报表”、 “报表生成器模型”或 “报表数据源”，则需要将其内容类型添加到 SharePoint 库中。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+     **注意** 如果  “新建文档”菜单未列出  “报表生成器报表”、  “报表生成器模型”或  “报表数据源”，则需要将其内容类型添加到 SharePoint 库中。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
 
 ## <a name="next-steps"></a>后续步骤
 

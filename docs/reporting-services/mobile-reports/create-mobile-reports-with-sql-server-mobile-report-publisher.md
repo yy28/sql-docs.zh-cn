@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce369a5652e2fe45335a49b6df3d3fc48dd9caf0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295045"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200532"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>使用 SQL Server 移动报表发布服务器创建移动报表
 了解 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表，其针对移动设备进行了优化，可连接到本地数据，且具有多种类型的数据可视化效果。 
@@ -36,14 +36,14 @@ ms.locfileid: "56295045"
 这些文章可帮助你入门。
 -  下载 [SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [创建 Reporting Services 移动报表](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [End-to-end walkthrough:Create mobile reports and KPIs in SQL Server Reporting Services（端到端演练：在 SQL Server Reporting Services 中创建移动报表和 KPI）](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/)（Christopher Finlan 博客）  
-- [设计优先还是数据优先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)：决定是先使用模拟数据设计报表，还是使用自己的数据开始。  
+-  [端到端演练：在 SQL Server Reporting Services 中创建移动报表和 KPI](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/)（Christopher Finlan 的博客）  
+- [设计为先还是数据为先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)：决定是先使用模拟数据设计报表，还是使用自己的数据开始。  
 - [用于 Reporting Services 移动报表的数据](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)：使用来自共享数据集的数据，或从 Excel 工作簿准备数据，以在移动报表中使用。
-- [How data refresh works in mobile reports and KPIs in Reporting Services（在 Reporting Services 中移动报表和 KPI 的数据刷新工作原理）](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)（Christopher Finlan 博客）：了解如何设置共享数据集的缓存，以便控制刷新数据的频率并提升报表性能。
+- [Reporting Services 中移动报表和 KPI 的数据刷新工作原理](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) （Christopher Finlan 的博客）：了解如何设置共享数据集的缓存，以便控制刷新数据的频率并提升报表性能。
 - [移动报表中的可视化效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [移动报表中的仪表](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [移动报表中的地图](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
-- 利用颜色和企业标志[设置 Web 门户和移动报表的外观](../../reporting-services/branding-the-web-portal.md) 
+- 利用颜色和企业标志[设置 Web 门户和移动报表的外观](../../reporting-services/branding-the-web-portal.md)
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Power BI 移动应用中的 SSRS 移动报表
 

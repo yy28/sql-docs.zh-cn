@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d9156414506dadb0bf70dfeca237046c5bc7e1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670105"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712353"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>基于事件开始时间筛选事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "47670105"
   
 ### <a name="to-filter-an-event-based-on-the-event-start-time"></a>基于事件开始时间筛选事件  
   
-1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
+1.  在 **“文件”** 菜单上，单击 **“新建跟踪”** ，再连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
   
      将出现“跟踪属性”对话框。 **“跟踪属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果选择“建立连接后立即开始跟踪”，则不会显示“跟踪属性”对话框，而是开始跟踪。 若要关闭此设置，请在“工具”菜单上，单击“选项”，然后清除“建立连接后立即开始跟踪”复选框。  
+    >  如果选择“建立连接后立即开始跟踪”  ，则不会显示“跟踪属性”  对话框，而是开始跟踪。 若要关闭此设置，请在“工具”  菜单上，单击“选项”  ，然后清除“建立连接后立即开始跟踪”  复选框。  
   
 2.  在 **“跟踪名称”** 框中，键入跟踪的名称。  
   
-3.  在“使用模板”名称列表中，选择跟踪模板。  
+3.  在“使用模板”  名称列表中，选择跟踪模板。  
   
 4.  为跟踪结果指定目标（可选）。  
   
-5.  在“事件选择”选项卡上，单击“StartTime”列标题。 也可以右键单击列标题，然后单击“编辑列筛选器”打开“编辑筛选器”对话框。  
+5.  在“事件选择”  选项卡上，单击“StartTime”  列标题。 也可以右键单击列标题，然后单击“编辑列筛选器”  打开“编辑筛选器”  对话框。  
   
-6.  展开 **“大于”** 或 **“小于”**，然后在比较运算符下方的字段中输入 **datetime** 值。  
+6.  展开 **“大于”** 或 **“小于”** ，然后在比较运算符下方的字段中输入 **datetime** 值。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  

@@ -9,10 +9,10 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577402"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>报表生成器函数 - LookupSet 函数
@@ -57,7 +57,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   返回一组结果表达式值。  
   
- 若要从具有指定名称的名称/值对（具有 1 对 1 的关系）的数据集中检索单个值，请使用 [Lookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。 若要为一组值调用 Lookup，请使用 [Multilookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)。  
+ 若要从具有指定名称的名称/值对（具有 1 对 1 的关系）的数据集中检索单个值，请使用 [Lookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。 若要为一组值调用 Lookup，请使用 [Multilookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)  。  
   
  存在下列限制：  
   

@@ -12,10 +12,10 @@ ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1bd47c468354cead8a3fd9c2ad5b391988a919b6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573189"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>转换数据源（报表生成器和 SSRS）
@@ -32,16 +32,16 @@ ms.locfileid: "65573189"
   
 #### <a name="to-convert-a-data-source-from-embedded-to-shared"></a>将嵌入数据源转换为共享数据源  
   
--   在“报表数据”窗格中，右键单击数据源，然后单击“转换为共享数据源”。  
+-   在“报表数据”窗格中，右键单击数据源，然后单击“转换为共享数据源”  。  
   
     > [!NOTE]  
-    >  如果“报表数据”窗格不可见，请单击 **“视图”** 菜单上的 **“报表数据”**。 如果“报表数据”窗格以浮动窗口形式打开，则请停靠该窗格。 有关详细信息，请参阅[在报表设计器中停靠“报表数据”窗格 (SSRS)](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)。  
+    >  如果“报表数据”窗格不可见，请单击 **“视图”** 菜单上的 **“报表数据”** 。 如果“报表数据”窗格以浮动窗口形式打开，则请停靠该窗格。 有关详细信息，请参阅[在报表设计器中停靠“报表数据”窗格 (SSRS)](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)。  
   
      在“报表数据”窗格中，数据源图标将更改为共享数据源图标。 在解决方案资源管理器中， **“共享数据源”** 文件夹中会出现一个同名的共享数据源。  
   
 ### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>将共享数据源转换为嵌入数据源  
   
--   在“报表数据”窗格中，右键单击数据源，打开“数据源属性”对话框，然后单击“嵌入连接”。 输入必需的信息。  
+-   在“报表数据”窗格中，右键单击数据源，打开“数据源属性”对话框，然后单击“嵌入连接”   。 输入必需的信息。  
   
      在“报表数据”窗格中，数据源图标将更改为共享数据源图标。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "65573189"
   
 #### <a name="to-convert-a-data-source-from-embedded-to-shared"></a>将嵌入数据源转换为共享数据源  
   
--   在“报表数据”窗格中，右键单击数据源以便打开“数据源属性”对话框，然后单击“嵌入连接”。 输入必需的信息。  
+-   在“报表数据”窗格中，右键单击数据源以便打开“数据源属性”对话框，然后单击“嵌入连接”   。 输入必需的信息。  
   
      在“报表数据”窗格中，数据源图标将更改为共享数据源图标。  
   
 #### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>将共享数据源转换为嵌入数据源  
   
--   在“报表数据”窗格中，右键单击数据源，打开“数据源属性”对话框，然后单击“嵌入连接”。 输入必需的信息。  
+-   在“报表数据”窗格中，右键单击数据源，打开“数据源属性”对话框，然后单击“嵌入连接”   。 输入必需的信息。  
   
      在“报表数据”窗格中，数据源图标将更改为共享数据源图标。  
   

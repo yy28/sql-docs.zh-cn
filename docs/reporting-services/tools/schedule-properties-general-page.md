@@ -11,10 +11,10 @@ ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a05afd2a99ca8680d5c3d38538a9fcee03d5dc5f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571399"
 ---
 # <a name="schedule-properties-general-page"></a>计划属性（“常规”页）
@@ -27,8 +27,8 @@ ms.locfileid: "65571399"
  若要打开此页，请执行以下操作：
  1) 启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2) 连接到报表服务器。
- 3) 展开“共享计划”文件夹。
- 4) 右键单击共享计划，并选择“属性”。  
+ 3) 展开“共享计划”文件夹  。
+ 4) 右键单击共享计划，并选择“属性”  。  
   
 > [!NOTE]  
 >并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本均提供此功能；并且在运行不具有此功能的版本时，此页将不会出现。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  

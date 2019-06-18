@@ -9,10 +9,10 @@ ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 119e9f04ddbaf91da420d69343d7fe741fbdd63d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576851"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>设置文本框方向（报表生成器和 SSRS）
@@ -23,7 +23,7 @@ ms.locfileid: "65576851"
   
 由于旋转的是文本框而非文本，因此旋转适用于文本框中的所有文本。 不能为文本的各个部分指定不同的方向。 需手动调整列宽和行高的大小以容纳旋转的文本。  
   
- 用于指定文本方向的 WritingMode 属性不在“文本框属性”对话框中。 它在“属性”窗格中，并在此设置属性。   
+ 用于指定文本方向的 WritingMode 属性不在“文本框属性”对话框中  。 它在“属性”窗格中，并在此设置属性。   
   
 ## <a name="to-rotate-text"></a>旋转文本  
   
@@ -31,12 +31,12 @@ ms.locfileid: "65576851"
   
 3.  选择要旋转的文本框。  
   
-2.  如果“属性”窗格未打开，请在“视图”选项卡上选中“属性”复选框。  
+2.  如果“属性”窗格未打开，请在“视图”选项卡上选中“属性”复选框   。  
   
 4.  在“属性”窗格中查找 WritingMode 属性，选择要应用到文本框的文本方向。  
   
     > [!NOTE]  
-    >  对“属性”窗格中的属性进行分类时，WritingMode 位于“本地化”类别中。  
+    >  对“属性”窗格中的属性进行分类时，WritingMode 位于“本地化”类别中  。  
   
 5.  在列表框中，选择 **Horizontal**、 **Vertical**或 **Rotate270**。  
   

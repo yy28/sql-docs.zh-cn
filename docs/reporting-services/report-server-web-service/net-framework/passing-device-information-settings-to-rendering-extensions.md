@@ -17,14 +17,14 @@ helpviewer_keywords:
 - device information settings [Reporting Services], about device information settings
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a394ad6eccf86b3c6aff6168f09fd990651288f7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128881"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>将设备信息设置传递给呈现扩展插件
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，设备信息设置用于将呈现参数传递到呈现扩展插件。 报表服务器 Web 服务中的设置将以 **DeviceInfo** XML 元素的形式传递并由报表服务器进行处理。 由于设备信息设置均具有默认值，因此在呈现进程中可将其视为可选参数。 但是，您可以使用设备信息设置对呈现进行自定义并覆盖由服务器提供的默认值。  
@@ -32,7 +32,7 @@ ms.locfileid: "51812780"
  可以用多种方式指定设备信息设置。 可以通过编程方式使用 Render 方法。 如果要通过报表的 URL 访问报表，则可以指定设备信息作为 URL 参数。 还可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件中编辑设备信息设置，以指定全局呈现参数。 有关全局指定呈现参数的详细信息，请参阅[在 RSReportServer.Config 中自定义呈现扩展插件参数](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)。  
   
 ## <a name="passing-device-information-using-the-render-method"></a>使用 Render 方法传递设备信息  
- 要将设备信息设置传递到呈现扩展插件，请使用 M:Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@,Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.Warning[]@,System.String[]@) 方法。 例如，当以 HTML 格式呈现时，可将以下 XML 字符串传递到 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 方法以创建一个 HTML 段落。  
+ 要将设备信息设置传递到呈现扩展插件，请使用 M:Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@,Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.Warning[]@,System.String[]@)  方法。 例如，当以 HTML 格式呈现时，可将以下 XML 字符串传递到 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 方法以创建一个 HTML 段落。  
   
 ```  
 <DeviceInfo>  

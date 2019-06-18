@@ -9,10 +9,10 @@ ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3a3e94111a11380b86ec3127d7a1c9641f20b44
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570817"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>指定对数刻度（报表生成器和 SSRS）
@@ -27,11 +27,11 @@ ms.locfileid: "65570817"
   
 ## <a name="to-specify-a-logarithmic-scale"></a>指定对数刻度  
   
-1.  右键单击图表的 y 轴，然后单击“垂直轴属性”。 随即出现“垂直轴属性”对话框。  
+1.  右键单击图表的 y 轴，然后单击“垂直轴属性”  。 随即出现“垂直轴属性”对话框  。  
   
-2.  在“轴选项”中，选择“使用对数刻度”。  
+2.  在“轴选项”中，选择“使用对数刻度”   。  
   
-3.  在“对数底数”文本框中，键入一个用作对数底数的正值。 如果不指定任何值，则对数底数采用默认值 10。  
+3.  在“对数底数”文本框中，键入一个用作对数底数的正值  。 如果不指定任何值，则对数底数采用默认值 10。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

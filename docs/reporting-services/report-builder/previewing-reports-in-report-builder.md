@@ -9,14 +9,14 @@ ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36c1c3172e4d37963340fdbebce85eff9b5086b9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580717"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
-  当创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，经常预览报表以验证报表显示你所需的内容会非常有用。 若要预览报表，请单击 **“运行”**。 报表将在预览模式下呈现。  
+  当创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，经常预览报表以验证报表显示你所需的内容会非常有用。 若要预览报表，请单击 **“运行”** 。 报表将在预览模式下呈现。  
   
  报表生成器通过在连接到报表服务器时使用编辑会话改进了预览体验。 编辑会话创建数据缓存，并使缓存中的数据集可用于重复性的报表预览。 编辑会话并不是一种您可以直接与之交互的功能，但了解何时刷新缓存的数据集将帮助您改进预览报表时的性能并理解报表呈现变快或变慢的原因。  
   

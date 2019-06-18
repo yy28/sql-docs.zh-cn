@@ -9,10 +9,10 @@ ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adf756e3ef9cbed7689a5cceb80e6ef4d93e2fb9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581726"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>更改行高或列宽（报表生成器和 SSRS）
@@ -52,7 +52,7 @@ ms.locfileid: "65581726"
 3.  在“属性”窗格中，将 CanGrow 设置为 **False**。  
   
     > [!NOTE]  
-    >  如果没有看到“属性”窗格，请单击“视图”菜单上的“属性”。  
+    >  如果没有看到“属性”窗格，请单击“视图”菜单上的“属性”   。  
   
 ### <a name="to-change-column-width"></a>更改列宽  
   

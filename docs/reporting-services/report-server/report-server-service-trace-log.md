@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: d1efc5b57191ec17f610206115743b656d58d4b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581388"
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
@@ -31,7 +31,7 @@ ms.locfileid: "65581388"
 
 ## <a name="bkmk_trace_configuration_settings"></a> 跟踪配置设置
 
-在配置文件 ReportingServicesService.exe.config 中管理跟踪日志行为。可在以下文件夹路径中找到该配置文件：  
+在配置文件 ReportingServicesService.exe.config 中管理跟踪日志行为  。可在以下文件夹路径中找到该配置文件：  
   
  `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`中管理跟踪日志行为。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65581388"
 |**TraceListeners**|指定输出跟踪日志内容的目标。 您可以通过使用逗号进行分隔来指定多个目标。|有效值为<br /><br /> <br /><br /> DebugWindow<br /><br /> File（默认值）<br /><br /> StdOut|  
 |**TraceFileMode**|指定跟踪日志是否包含 24 小时时段内的数据。 每天应当为每个组件设置唯一的跟踪日志。|此值设置为“Unique”（默认值）。 不要修改此值。|  
 |**组件类别**|按以下格式指定为其生成跟踪日志信息的组件以及跟踪级别：<br /><br /> \<component category>:\<tracelevel><br /><br /> 可以指定所有或部分组件 (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**)。 如果您不想生成特定组件的信息，则可以禁用其跟踪（例如“SemanticModelGenerator:0”）。 请不要禁用 **all**的跟踪。<br /><br /> 如果要查看为每个语义查询生成的 Transact-SQL 语句，则可以设置“SemanticQueryEngine:4”。 Transact-SQL 语句记录到跟踪日志中。 下例说明将 Transact-SQL 语句添加到日志的配置设置：<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|组件类别可以设置为：<br /><br /> <br /><br /> **All** 用于跟踪未划分为特定类别的所有进程的常规报表服务器活动。<br /><br /> **RunningJobs** 用于跟踪正在进行中的报表或订阅操作。<br /><br /> **SemanticQueryEngine** 用于跟踪用户在基于模型的报表中执行即席数据浏览时处理的语义查询。<br /><br /> **SemanticModelGenerator** 用于跟踪模型生成。<br /><br /> **http** 用于启用报表服务器 HTTP 日志文件。 有关详细信息，请参阅 [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)。|  
-|组件类别的 trace level 值|\<component category>:\<tracelevel><br /><br /> <br /><br /> 如果您不对组件追加跟踪级别，将使用为 **DefaultTraceSwitch** 指定的值。 例如，如果指定“all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator”，所有组件将使用默认跟踪级别。|有效的跟踪级别值包括：<br /><br /> <br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式<br /><br /> 报表服务器的默认级别为“all:3”。|  
+|组件类别的 trace level 值 |\<component category>:\<tracelevel><br /><br /> <br /><br /> 如果您不对组件追加跟踪级别，将使用为 **DefaultTraceSwitch** 指定的值。 例如，如果指定“all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator”，所有组件将使用默认跟踪级别。|有效的跟踪级别值包括：<br /><br /> <br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式<br /><br /> 报表服务器的默认级别为“all:3”。|  
   
 ## <a name="bkmk_add_custom"></a> 添加自定义配置设置以指定转储文件位置  
 可以添加自定义设置来设置 Dr. Watson for Windows 工具用于存储转储文件的位置。 自定义设置为 **Directory**。 下例提供了如何在 **RStrace** 部分中指定此配置设置的说明：  
@@ -101,9 +101,9 @@ ms.locfileid: "65581388"
 ## <a name="previous-versions"></a>以前的版本
 
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]早期版本中，存在多个跟踪日志文件，每个应用程序一个跟踪日志文件。 以下文件已过时，并且 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本不会再创建它们：
-+ ReportServerWebApp_\<timestamp>.log
-+ ReportServer_\<timestamp>.log
-+ ReportServerService_main_\<timestamp>.log
++ ReportServerWebApp_\<timestamp>.log 
++ ReportServer_\<timestamp>.log 
++ ReportServerService_main_\<timestamp>.log 
   
 ## <a name="see-also"></a>另请参阅
 

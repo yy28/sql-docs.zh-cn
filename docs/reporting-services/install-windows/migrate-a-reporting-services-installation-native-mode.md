@@ -8,10 +8,10 @@ ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
 ms.openlocfilehash: fe461a189bcf7a123db40674a5cd035621151999
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570715"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>迁移 Reporting Services 安装（本机模式）
@@ -112,7 +112,7 @@ ms.locfileid: "65570715"
   
 * 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及更高版本中不支持客户端安全套接字层 (SSL) 证书。 如果使用客户端 SSL 证书，则必须在迁移之前重新设计报表解决方案。  
   
-* 如果使用 Windows 集成身份验证之外的身份验证类型，则必须将 RSReportServer.config 文件中的 `<AuthenticationTypes>` 元素更新为支持的身份验证类型。 支持的身份验证类型包括 NTLM、Kerberos、Negotiate 和 Basic。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及更高版本中不支持匿名、.NET Passport 和摘要式身份验证。  
+* 如果使用 Windows 集成身份验证之外的身份验证类型，则必须将 RSReportServer.config 文件中的 `<AuthenticationTypes>` 元素更新为支持的身份验证类型  。 支持的身份验证类型包括 NTLM、Kerberos、Negotiate 和 Basic。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及更高版本中不支持匿名、.NET Passport 和摘要式身份验证。  
   
 * 如果在报表环境中使用自定义级联样式表，则不能迁移这些样式表。 迁移后对它们进行手动移动。
   
@@ -144,7 +144,7 @@ ms.locfileid: "65570715"
 
 ## <a name="bkmk_install_ssrs"></a> 安装 SQL Server Reporting Services
 
- 在仅文件模式下安装新的报表服务器实例，以便可以将该实例配置为使用非默认值。 对于命令行安装，请使用 FilesOnly 参数。 在安装向导中，选中 **“安装但不配置”** 选项。  
+ 在仅文件模式下安装新的报表服务器实例，以便可以将该实例配置为使用非默认值。 对于命令行安装，请使用 FilesOnly 参数  。 在安装向导中，选中 **“安装但不配置”** 选项。  
   
  单击下面的链接之一以查看有关如何安装新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例的说明：  
   
@@ -233,13 +233,13 @@ ms.locfileid: "65570715"
  如果要迁移扩展部署，则应使所有报表服务器节点脱机并按照一次迁移一个服务器的方式迁移各个服务器。 一旦迁移了第一个报表服务器并且其成功连接到报表服务器数据库，则该报表服务器数据库版本将自动升级到 SQL Server 数据库版本。  
   
 > [!IMPORTANT]
->  如果横向扩展部署中的所有报表服务器均联机并且尚未被迁移，则它们可能会遇到 rsInvalidReportServerDatabase 异常，因为它们在连接到升级的报表服务器数据库之后使用的仍是旧版架构。  
+>  如果横向扩展部署中的所有报表服务器均联机并且尚未被迁移，则它们可能会遇到 rsInvalidReportServerDatabase 异常，因为它们在连接到升级的报表服务器数据库之后使用的仍是旧版架构  。  
 
-如果迁移的报表服务器配置为用于横向扩展部署的共享数据库，则需要在配置报表服务器服务前从 ReportServer 数据库的 Keys 表中删除所有旧加密密钥。 如果未删除这些密钥，迁移的报表服务器将尝试在扩展部署模式下进行初始化。 有关详细信息，请参阅[添加和删除扩展部署的加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)和[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
+如果迁移的报表服务器配置为用于横向扩展部署的共享数据库，则需要在配置报表服务器服务前从 ReportServer 数据库的 Keys 表中删除所有旧加密密钥   。 如果未删除这些密钥，迁移的报表服务器将尝试在扩展部署模式下进行初始化。 有关详细信息，请参阅[添加和删除扩展部署的加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)和[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
 
 无法使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器删除扩展密钥。 必须使用 SQL Server Management Studio 从 **Keys** 数据库的 **ReportServer** 表中删除旧密钥。 删除 Keys 表中的所有行。 此操作清除该表并准备将其用于只还原对称密钥，如下面的步骤所述。  
 
-在删除密钥之前，建议您首先备份对称加密密钥。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来备份密钥。 打开配置管理器，单击“加密密钥”选项卡，然后单击“备份”按钮。 还可以撰写 WMI 命令的脚本以便备份加密密钥。 有关 WMI 的详细信息，请参阅 [BackupEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)。  
+在删除密钥之前，建议您首先备份对称加密密钥。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来备份密钥。 打开配置管理器，单击“加密密钥”选项卡，然后单击“备份”按钮  。 还可以撰写 WMI 命令的脚本以便备份加密密钥。 有关 WMI 的详细信息，请参阅 [BackupEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)。  
   
 1. 启动 Reporting Services 配置管理器，然后连接到安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   

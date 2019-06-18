@@ -15,10 +15,10 @@ ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d66cb9fa3fdb3bdee5eb0f4fefbc282a9841f9a7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582027"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>向报表添加代码 (SSRS)
@@ -30,9 +30,9 @@ ms.locfileid: "65582027"
   
 ### <a name="to-add-embedded-code-to-a-report"></a>向报表添加嵌入代码  
   
-1.  在“设计”视图中，右键单击报表边框外的设计图面，然后单击“报表属性”。  
+1.  在“设计”视图中，右键单击报表边框外的设计图面，然后单击“报表属性”   。  
   
-2.  单击 **“代码”**。  
+2.  单击 **“代码”** 。  
   
 3.  在 **“自定义代码”** 中键入代码。 报表运行时，代码中的错误会引发警告。 下面的示例创建一个名为 `ChangeWord` 的自定义函数，该函数可使用词语“`Bike`”替换“`Bicycle`”。  
   

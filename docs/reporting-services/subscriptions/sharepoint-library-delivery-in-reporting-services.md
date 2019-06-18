@@ -13,10 +13,10 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578063"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 库传递
@@ -49,9 +49,9 @@ ms.locfileid: "65578063"
   
 1.  转到从中访问报表的 SharePoint 站点。  
   
-2.  选择报表，单击它旁边的向下箭头，然后选择 **“管理订阅”**。  
+2.  选择报表，单击它旁边的向下箭头，然后选择 **“管理订阅”** 。  
   
-3.  单击 **“创建”**、 **“编辑”** 或 **“删除”**。  
+3.  单击 **“创建”** 、 **“编辑”** 或 **“删除”** 。  
   
  有关“管理订阅”列表的状态消息中显示有关订阅的当前信息，包括订阅是否成功以及上次运行订阅的日期和时间。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65578063"
  指定要在目标库中为报表显示的文件名和扩展名。 如果不指定文件扩展名，则报表服务器会根据报表输出格式创建一个扩展名。 此值是必需的。 文件名中不得包含下列字符：: \ / * ? " < > | # { } %  
   
  Title  
- 为目标库中的报表指定可选的“标题”属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
+ 为目标库中的报表指定可选的“标题”属性  。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
   
  路径  
  指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如：`https://mySharePointWeb/MySite/MyDocLib`；其中 `https://mySharePointWeb` 表示 Web 应用程序，“MySite”是 SharePoint 网站，“MyDocLib”是将传入报表的 SharePoint 库。  
@@ -80,7 +80,7 @@ ms.locfileid: "65578063"
  指定处理订阅时是否使用更新的版本替换具有相同名称和扩展名的文件。 如果希望使用更新的版本替换现有文件，请选择 **“覆盖”** 。 如果不希望订阅替换文件，请选择 **“无”** 。 在这种情况下，如果存在具有目标名称和扩展名的文件，则不进行传递。 如果希望通过在文件名末尾追加数字来添加同一文件的连续版本，请选择 **“Autoincrement”** 。  
   
  自动复制  
- 如果使用自动复制功能将一个文件的最新版本自动复制到多个位置，在启用“覆盖”的情况下则会复制此文件。 如果使用 **“Autoincrement”** 或 **“无”**，则传递将失败并发生 **rsDeliveryError** 错误。  
+ 如果使用自动复制功能将一个文件的最新版本自动复制到多个位置，在启用“覆盖”的情况下则会复制此文件  。 如果使用 **“Autoincrement”** 或 **“无”** ，则传递将失败并发生 **rsDeliveryError** 错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建和管理 SharePoint 模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   

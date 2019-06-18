@@ -9,10 +9,10 @@ ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580885"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
@@ -47,22 +47,22 @@ ms.locfileid: "65580885"
 1.  在“报表数据”窗格中，展开“内置字段”文件夹。  
   
     > [!NOTE]  
-    >  如果看不到“报表数据”窗格，请在“视图”选项卡上选中“报表数据”。  
+    >  如果看不到“报表数据”窗格，请在“视图”选项卡上选中“报表数据”  。  
   
 2.  将 **“页码”** 字段从“报表数据”窗格拖动到报表表头和表尾。  
   
     > [!NOTE]  
-    >  页脚将自动添加到报表。 若要添加页眉，请在 **“插入”** 选项卡上，单击 **“页眉”**，然后单击 **“添加页眉”**。  
+    >  页脚将自动添加到报表。 若要添加页眉，请在 **“插入”** 选项卡上，单击 **“页眉”** ，然后单击 **“添加页眉”** 。  
     >   
     >  将添加一个包含简单表达式 [&PageNumber] 的文本框。  
   
 ### <a name="to-add-the-word-page-before-the-page-number"></a>在页码前添加单词 "Page"  
   
-1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”。  
+1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”  。  
   
-     “为以下项设置表达式: 值”文本框包含表达式 =Globals!PageNumber。  
+     “为以下项设置表达式: 值”文本框包含表达式 =Globals!PageNumber  。  
   
-2.  将光标放在 = 号后，然后键入 "Page " &。  
+2.  将光标放在 = 号后，然后键入 "Page " &  。  
   
      该表达式现在变为 ="Page "&Globals!PageNumber  
   
@@ -70,11 +70,11 @@ ms.locfileid: "65580885"
   
 ### <a name="to-add-total-number-of-pages-after-the-page-number"></a>在页码后面添加总页数  
   
-1.  右键单击包含表达式的文本框，然后单击 **“表达式”**。  
+1.  右键单击包含表达式的文本框，然后单击 **“表达式”** 。  
   
-2.  在表达式的末尾键入 &" of "&。  
+2.  在表达式的末尾键入 &" of "&  。  
   
-3.  在“类别”窗格中，展开“内置字段”，然后双击 TotalPages。  
+3.  在“类别”窗格中，展开“内置字段”，然后双击 TotalPages   。  
   
      该表达式现在变为 ="Page "&Globals!PageNumber &" of "&Globals!TotalPages  
   

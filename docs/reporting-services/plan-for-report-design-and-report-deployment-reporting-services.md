@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581248"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>报表设计和报表部署的规划 | Reporting Services
@@ -70,11 +70,11 @@ ms.locfileid: "65581248"
   
  如果您将报表定义上载到报表服务器或者升级包含现有报表的报表服务器，报表服务器将保留原格式的报表定义。 **首次使用时**，报表服务器会将报表服务器数据库中的报表升级到二进制格式，并保留这种格式以便以后查看。 报表定义 (.rdl) 本身不升级。  
   
- 可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，选择报表并单击“下载”。 
+ 可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，选择报表并单击“下载”  。 
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”**。  
+在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”** 。  
 
 ::: moniker-end
   

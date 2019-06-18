@@ -9,10 +9,10 @@ ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1fd408e5459aea50c04c29d234fce54d8a3ab772
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503910"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>使用报表查看器控件集成 Reporting Services - 入门
@@ -21,11 +21,11 @@ ms.locfileid: "65503910"
 
 ## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>向新的 Web 项目添加报表查看器控件
 
-1. 创建新的 ASP.NET 空网站或打开现有的 ASP.NET 项目。
+1. 创建新的 ASP.NET 空网站或打开现有的 ASP.NET 项目  。
 
     ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
 
-2. 通过 NuGet 包管理器控制台安装报表查看器控件 NuGet 包。
+2. 通过 NuGet 包管理器控制台  安装报表查看器控件 NuGet 包。
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
@@ -36,7 +36,7 @@ ms.locfileid: "65503910"
     <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
     ```
     
-4. 向页面添加 ScriptManagerControl。
+4. 向页面添加 ScriptManagerControl  。
 
 5. 向页面添加报表查看器控件。 可更新下面的代码段，以引用远程报表服务器上承载的报表。
 
@@ -74,7 +74,7 @@ ms.locfileid: "65503910"
 
 ## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>更新现有项目，以使用报表查看器控件
 
-请务必将任何程序集引用更新到版本 15.0.0.0，包括项目的 web.config 和引用查看器控件的所有 .aspx 页。
+请务必将任何程序集引用更新到版本 15.0.0.0  ，包括项目的 web.config 和引用查看器控件的所有 .aspx 页。
 
 ### <a name="sample-webconfig-changes"></a>示例 web.config 更改
 
@@ -136,11 +136,11 @@ ms.locfileid: "65503910"
 
 ## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>向新的 Windows 窗体项目添加报表查看器控件
 
-1. 创建新的 Windows 窗体应用程序或打开现有的项目。
+1. 创建新的 Windows 窗体应用程序或打开现有的项目  。
 
     ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 
-2. 通过 NuGet 包管理器控制台安装报表查看器控件 NuGet 包。
+2. 通过 NuGet 包管理器控制台  安装报表查看器控件 NuGet 包。
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
@@ -232,15 +232,15 @@ ms.locfileid: "65503910"
 
     ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. 在工具箱中的任意位置单击右键，再选择“选择项...”。
+3. 在工具箱中的任意位置单击右键，再选择“选择项...”  。
 
     ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
-4. 在 .NET Framework 组件中，选择“浏览”。
+4. 在 .NET Framework 组件中，选择“浏览”   。
 
     ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
-5. 从安装的 NuGet 包中选择“Microsoft.ReportViewer.WinForms.dll”或“Microsoft.ReportViewer.WebForms.dll”。
+5. 从安装的 NuGet 包中选择“Microsoft.ReportViewer.WinForms.dll”或“Microsoft.ReportViewer.WebForms.dll”   。
 
     > [!NOTE] 
     > NuGet 包将安装在项目的解决方案目录中。 dll 的路径将如下所示：`{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40` 或 `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40`。

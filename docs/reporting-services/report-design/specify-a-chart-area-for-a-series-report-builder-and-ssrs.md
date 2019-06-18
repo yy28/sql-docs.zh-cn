@@ -12,14 +12,14 @@ ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5ef1e735b69e0547f7a9ca9a9d64bf9423a6068e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578528"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>指定序列的图表区（报表生成器和 SSRS）
-  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，“图表”为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个“图表区域”。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的多个图表区的概念。  
+  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，“图表”  为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个“图表区域”  。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的多个图表区的概念。  
   
  ![显示图表区域的图表](../../reporting-services/report-design/media/chartareasdiagram.gif "Shows a diagram of a chart area")  
   
@@ -32,13 +32,13 @@ ms.locfileid: "65578528"
   
 ## <a name="to-associate-a-series-with-a-new-chart-area"></a>将序列与新的图表区相关联  
   
-1.  右键单击图表上的任意位置并选择“添加新图表区域”。 图表上将出现一个新的空白图表区。  
+1.  右键单击图表上的任意位置并选择“添加新图表区域”  。 图表上将出现一个新的空白图表区。  
   
-2.  右键单击图表上的序列或右键单击“图表数据”窗格中的相应区域中的序列或数据字段，然后单击“序列属性”。  
+2.  右键单击图表上的序列或右键单击“图表数据”窗格中的相应区域中的序列或数据字段，然后单击“序列属性”  。  
   
 3.  在 **“轴和图表区”** 中，选择要在其中显示序列的图表区。  
   
-4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
+4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”  。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
   
 ## <a name="see-also"></a>另请参阅  
  [图表中的多个序列（报表生成器和 SSRS）](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   

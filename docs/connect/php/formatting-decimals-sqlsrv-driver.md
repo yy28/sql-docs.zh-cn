@@ -12,11 +12,11 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 76b6d27acedcfe2ec462a764559237a1a2218f78
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676516"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669599"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>设置十进制字符串和 Money 值格式（SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "56676516"
 ## <a name="add-leading-zeroes-if-missing"></a>如果缺少，添加前导零
 从版本 5.6.0，选项`FormatDecimals`添加到 sqlsrv 连接和语句级别中，这样用户就可以设置十进制字符串的格式。 此选项需要布尔值 （true 或 false），并且只影响在提取结果中的 decimal 或 numeric 值的格式设置。 换而言之，`FormatDecimals`选项没有任何影响插入或更新等其他操作。
 
-默认情况下，`FormatDecimals` 为 false。 如果设置为 true，到十进制字符串的前导零将添加对任何十进制值小于 1。
+默认情况下，`FormatDecimals` 为 false  。 如果设置为 true，到十进制字符串的前导零将添加对任何十进制值小于 1。
 
 ## <a name="configure-number-of-decimal-places"></a>配置的小数位数
 与`FormatDecimals`开启，另一个选项， `DecimalPlaces`，允许用户显示 money 和 smallmoney 数据时配置的小数位数。 它接受的范围内的整数值 [0，4]，并舍入显示时可能会发生。 但是，底层的 money 数据保持不变。

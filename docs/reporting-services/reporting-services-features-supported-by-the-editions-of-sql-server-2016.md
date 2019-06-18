@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/01/2018
 ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936553"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 各个版本支持的 Reporting Services 功能
@@ -88,9 +88,9 @@ Microsoft 下载中心提供以下软件客户端应用程序。 它们有助于
   
 |工具名称|Enterprise|Standard|Web|Express with Advanced Services|开发人员|  
 |---------------|----------------|--------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] （.rdl 和 .rds）|是|是|是|是|是|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|是||||是|  
-|用于移动设备的 Power BI 应用（iOS、Windows 10 和 Android）(.rsmobile)|是||||是|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] （.rdl 和 .rds   ）|是|是|是|是|是|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile  )|是||||是|  
+|用于移动设备的 Power BI 应用（iOS、Windows 10 和 Android）(.rsmobile  )|是||||是|  
   
 > [!NOTE]  
 > * 上表标识启用这些客户端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 但是，这些工具可以访问任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本上承载的数据。  

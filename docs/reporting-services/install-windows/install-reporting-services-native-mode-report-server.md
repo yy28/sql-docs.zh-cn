@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8598ed98c9a7f8876d210b8b358b66ffb8cbff7c
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513635"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安装 Reporting Services 2016 本机模式报表服务器
 
@@ -70,7 +70,7 @@ ms.locfileid: "52712378"
   
 -   用于运行安装程序的用户帐户必须是本地 Administrators 组成员，而且拥有针对承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例创建数据库的权限。  
   
--   安装程序必须能够使用默认值来保留用于访问报表服务器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]的 URL。 这些值包括端口 80、强通配符和虚拟目录名（格式为 ReportServer_\<instance_name> 和 Reports_\<instance_name>。  
+-   安装程序必须能够使用默认值来保留用于访问报表服务器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]的 URL。 这些值包括端口 80、强通配符和虚拟目录名（格式为 ReportServer_\<instance_name>  和 Reports_\<instance_name>  。  
   
 -   安装程序必须能够使用默认值来创建报表服务器数据库。 这些值包括 **ReportServer** 和 **ReportServerTempDB**。 如果存在以前安装的现有数据库，安装程序则因无法将报表服务器配置为本机模式的默认配置而被阻止。 必须重命名、移动或删除这类数据库以取消阻止安装程序。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52712378"
 |Prefix|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，安装程序将尝试创建使用 HTTP 前缀的 URL 预留。|  
 |主机名|默认主机名为强通配符 (+)。 它指定对于解析为计算机的任何主机名，报表服务器均会接受指定端口上的任何 HTTP 请求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver`。|  
 |端口|默认端口为 80。 请注意，如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 应用程序时，必须将该端口显式添加至 URL 中。|  
-|虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer_\<instance_name>（对于报表服务器 Web 服务）和 Reports_\<instance_name>（对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]）。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，默认的虚拟目录为 **reports**。|  
+|虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer_\<instance_name>（对于报表服务器 Web 服务）和 Reports_\<instance_name>（对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]）   。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，默认的虚拟目录为 **reports**。|  
   
  完整的 URL 字符串示例如下所示：  
   
@@ -114,7 +114,7 @@ ms.locfileid: "52712378"
   
     -   安装规则  
   
-2.  在 **“安装角色”** 页上，选择 **“SQL Server 功能安装”**。  
+2.  在 **“安装角色”** 页上，选择 **“SQL Server 功能安装”** 。  
   
      ![安装角色的 SQL Server 功能安装](../../reporting-services/install-windows/media/rs-setuprole.png "SQL Server Feature Installation for setup role")  
   
@@ -128,7 +128,7 @@ ms.locfileid: "52712378"
   
 4.  查看通过的“功能规则”  。  
   
-5.  在实例配置页中，请记住，如果选择配置“命名实例” ，则当浏览到报表管理器和报表服务器本身时，将需要在 URLS 中使用实例名称。 如果实例名称是“THESQLINSTANCE”，URLS 将如下所示：  
+5.  在实例配置页中，请记住，如果选择配置“命名实例”  ，则当浏览到报表管理器和报表服务器本身时，将需要在 URLS 中使用实例名称。 如果实例名称是“THESQLINSTANCE”，URLS 将如下所示：  
   
     -   `https://[ServerName]/ReportServer_THESQLINSTANCE`  
   
@@ -138,16 +138,16 @@ ms.locfileid: "52712378"
   
 7.  在“数据库引擎配置”  页上，添加 SQL Server 管理员。  
   
-8.  在 **“Reporting Services 配置”** 页上，选择 **“安装和配置”**。  
+8.  在 **“Reporting Services 配置”** 页上，选择 **“安装和配置”** 。  
   
      ![SSRS 本机模式配置](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS Native Mode Configuration")  
   
     > [!NOTE]  
-    >  除非同时选择安装该数据库功能，否则“安装和配置” 将不可用。  
+    >  除非同时选择安装该数据库功能，否则“安装和配置”  将不可用。  
   
 9. 功能配置规则：验证通过的规则。 如果所有规则都通过，则安装向导将自动前进到“安装准备就绪”  。  针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，规则将验证报表服务器目录和临时目录数据库是否尚未存在。  
   
-10. 在“安装准备就绪”页上，记下配置文件的路径，以便你在稍后对服务器的初始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置（包括已安装的组件、服务帐户和管理员）进行总结时可用作参考。  
+10. 在“安装准备就绪”  页上，记下配置文件的路径，以便你在稍后对服务器的初始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置（包括已安装的组件、服务帐户和管理员）进行总结时可用作参考。  
   
 11. 完成 SQL Server 安装向导后，使用以下基本步骤验证默认本机模式安装。  
   

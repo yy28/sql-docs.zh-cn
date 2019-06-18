@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cf68ea627b69377827cd6e9e33afc70a2c76ef2b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294926"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63218948"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   使用报表生成器中的参数创建分页报表时，可以自定义参数窗格。 在报表设计视图中，可以将参数拖到参数窗格中的特定列和行。 你可以通过添加和删除列来更改窗格的布局。  
   
- 将参数拖到窗格中的新列和新行时，“报表数据”窗格中的参数顺序也会发生变化。 更改“报表数据”窗格中参数顺序时，窗格中参数的位置会发生变化。 有关参数顺序的重要性的详细信息，请参阅[更改报表参数的顺序（报表生成器和 SSRS）](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)。  
+ 将参数拖到窗格中的新列和新行时，“报表数据”窗格中的参数顺序也会发生变化  。 更改“报表数据”窗格中参数顺序时，窗格中参数的位置会发生变化  。 有关参数顺序的重要性的详细信息，请参阅[更改报表参数的顺序（报表生成器和 SSRS）](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)。  
   
 ## <a name="to-customize-the-parameters-pane"></a>自定义参数窗格的步骤  
   
@@ -30,23 +30,23 @@ ms.locfileid: "56294926"
   
 2.  若要向窗格添加参数，请执行以下操作之一。  
   
-    -   右键单击参数窗格中的空白单元格，然后单击“添加参数” 。  
+    -   右键单击参数窗格中的空白单元格，然后单击“添加参数”  。  
   
          ![从“参数”窗格中添加新参数](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Add new parameter from parameters pane")  
   
-    -   在“报表数据”窗格中，右键单击“参数”，然后单击“添加参数”。  
+    -   在“报表数据”窗格中，右键单击“参数”  ，然后单击“添加参数”   。  
   
 3.  若要将参数移动到参数窗格中的新位置，请将参数拖到窗格中的不同单元格。  
   
-     更改窗格中参数的位置时，“报表数据”窗格的“参数”列表中的参数顺序将自动发生变化。 有关参数顺序的影响的详细信息，请参阅[更改报表参数的顺序（报表生成器和 SSRS）](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+     更改窗格中参数的位置时，“报表数据”窗格的“参数”列表中的参数顺序将自动发生变化   。 有关参数顺序的影响的详细信息，请参阅[更改报表参数的顺序（报表生成器和 SSRS）](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 4.  若要访问参数的属性，请执行以下操作之一。  
   
-    -   右键单击参数窗格中的参数，然后单击“参数属性” 。  
+    -   右键单击参数窗格中的参数，然后单击“参数属性”  。  
   
          ![从“参数”窗格访问参数属性](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Access parameter properties from the parameters pane")  
   
-    -   右键单击“报表数据”窗格中的参数，然后单击“参数属性”。  
+    -   右键单击“报表数据”窗格中的参数，然后单击“参数属性”   。  
   
 5.  若要向窗格添加新的列和行，或删除现有的行和列，请右键单击参数窗格中的任意位置，然后单击所示菜单中的命令。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "56294926"
   
 6.  若要从窗格和报表中删除参数，请执行以下操作之一。  
   
-    -   右键单击参数窗格中的参数，然后单击“删除”  。  
+    -   右键单击参数窗格中的参数，然后单击“删除”   。  
   
          ![从“参数”窗格中删除参数](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Delete parameters from the parameters pane")  
   
-    -   右键单击“报表数据”窗格中的参数，然后单击“删除”。  
+    -   右键单击“报表数据”窗格中的参数，然后单击“删除”   。  
   
 ## <a name="see-also"></a>另请参阅  
  [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  

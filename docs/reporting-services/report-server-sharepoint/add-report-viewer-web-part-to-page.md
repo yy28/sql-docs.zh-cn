@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574791"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>将 SQL Server Reporting Services 报表查看器 Web 部件添加到 SharePoint 页
@@ -32,39 +32,39 @@ ms.locfileid: "65574791"
 
 ## <a name="add-web-part"></a>添加 Web 部件
 
-1. 在 SharePoint 网站上，选择左上角的“齿轮”图标，并选择“添加页”。
+1. 在 SharePoint 网站上，选择左上角的“齿轮”  图标，并选择“添加页”  。
 
     ![从齿轮图标向 sharepoint 站点添加页。](media/sharepoint-add-a-page.png)
 
-2. 命名页，并选择“创建”。
+2. 命名页，并选择“创建”  。
 
-3. 在页设计器中，选择功能区中的“插入”选项卡。 然后选择“部件”部分中的“Web 部件”。
+3. 在页设计器中，选择功能区中的“插入”  选项卡。 然后选择“部件”  部分中的“Web 部件”  。
 
     ![从 office 功能区插入 Web 部件。](media/sharepoint-insert-web-part.png)
 
-4. 在“类别”下，选择 **SQL Server Reporting Services（本机模式）。 在“部件”下，选择“报表查看器”。 然后选择“添加”。
+4. 在“类别”  下，选择 **SQL Server Reporting Services（本机模式）。 在“部件”  下，选择“报表查看器”  。 然后选择“添加”  。
 
     ![添加报表查看器 Web 部件。](media/sharepoint-report-viewer-web-part.png)
 
-    最初可能遇到错误。 出现错误的原因是，默认报表服务器 URL 设置为 https://localhost 且可能在该位置不可用。
+    最初可能遇到错误。 出现错误的原因是，默认报表服务器 URL 设置为 https://localhost  且可能在该位置不可用。
 
 ## <a name="configure-the-report-viewer-web-part"></a>配置报表查看器 Web 部件
 
 若要配置指向特定报表的 Web 部件，请执行以下步骤。
 
-1. 在编辑 SharePoint 页时，选择 Web 部件右上方的向下键，并选择“编辑 Web 部件”。
+1. 在编辑 SharePoint 页时，选择 Web 部件右上方的向下键，并选择“编辑 Web 部件”  。
 
     ![编辑 Web 部件下拉列表中的网页。](media/sharepoint-edit-web-part.png)
 
-2. 为承载报表的报表服务器输入“报表服务器 URL”。 URL 看起来应类似于 https://myrsserver/reportserver。
+2. 为承载报表的报表服务器输入“报表服务器 URL”  。 URL 看起来应类似于 https://myrsserver/reportserver  。
 
-3. 输入想要在 Web 部件中显示的报表的路径和名称。 这看起来应类似于 /AdventureWorks Sample Reports/Company Sales。 在此示例中，报表“公司销售额”位于名为 AdventureWorks 示例报表的文件夹中。
+3. 输入想要在 Web 部件中显示的报表的路径和名称。 这看起来应类似于 /AdventureWorks Sample Reports/Company Sales  。 在此示例中，报表“公司销售额”  位于名为 AdventureWorks 示例报表  的文件夹中。
 
-4. 如果报表需要参数，则在提供报表服务器 URL 和报表名称后，选择“参数”部分中的“负载参数”。
+4. 如果报表需要参数，则在提供报表服务器 URL 和报表名称后，选择“参数”  部分中的“负载参数”  。
 
-5. 选择“确定”将所做更改保存到 Web 部件配置。
+5. 选择“确定”  将所做更改保存到 Web 部件配置。
 
-6. 在 Office 功能区中选择“保存”，将所做更改保存到 SharePoint 页。
+6. 在 Office 功能区中选择“保存”  ，将所做更改保存到 SharePoint 页。
 
 ![SharePoint 页上的报表查看器 Web 部件](media/sharepoint-report-viewer-web-part-on-page.png)
 

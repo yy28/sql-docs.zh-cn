@@ -15,10 +15,10 @@ ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9e13f6c0d8c4c81a60e1a93898119bbb0884b2d8
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582150"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>向报表添加程序集引用 (SSRS)
@@ -26,9 +26,9 @@ ms.locfileid: "65582150"
   
 ### <a name="to-add-an-assembly-reference-to-a-report"></a>向报表添加程序集引用  
   
-1.  在“设计”视图中，右键单击报表边框外的设计图面，然后单击“报表属性”。  
+1.  在“设计”视图中，右键单击报表边框外的设计图面，然后单击“报表属性”   。  
   
-2.  单击 **“引用”**。  
+2.  单击 **“引用”** 。  
   
 3.  在 **“添加或删除程序集”** 中，单击 **“添加”** ，然后单击省略号按钮浏览到程序集。  
   

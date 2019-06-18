@@ -13,10 +13,10 @@ ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1b10c9dbfa67a632ce007c1406f8b806a03475b4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571048"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>将报表发布到 SharePoint 库
@@ -28,9 +28,9 @@ ms.locfileid: "65571048"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开现有的或新的报表服务器项目。  
   
-2.  在 **“项目”** 菜单中单击 **“属性”**。 “\<项目>属性页”对话框即会打开。  
+2.  在 **“项目”** 菜单中单击 **“属性”** 。 “\<项目>属性页”对话框即会打开   。  
   
-3.  在 **“配置”** 列表中，选择要用于生成并发布报表的解决方案生成配置的名称。 当前配置以“活动”状态列出（\<配置>）。  
+3.  在 **“配置”** 列表中，选择要用于生成并发布报表的解决方案生成配置的名称。 当前配置以“活动”状态列出（\<配置>）   。  
   
 4.  如果想在项目中发布共享数据源，并覆盖以前发布的共享数据源，请将 **OverwriteDataSources** 设置为 **True**。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65571048"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-9. 在解决方案资源管理器中，右键单击要发布的报表，然后单击“部署”。 报表将发布到 **TargetReportFolder**中指定的位置。 部署错误将显示在输出窗口中。  
+9. 在解决方案资源管理器中，右键单击要发布的报表，然后单击“部署”  。 报表将发布到 **TargetReportFolder**中指定的位置。 部署错误将显示在输出窗口中。  
   
 ## <a name="see-also"></a>另请参阅  
  [“项目属性页”对话框](../../reporting-services/tools/project-property-pages-dialog-box.md)   

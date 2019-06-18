@@ -9,10 +9,10 @@ ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f21fe04e31c4360400934afc76376165083c1dc2
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581946"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>在图表中添加刻度分隔线（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.locfileid: "65581946"
   
 ### <a name="to-enable-scale-breaks-on-the-chart"></a>启用图表中的刻度分隔线  
   
-1.  右键单击垂直轴，然后单击“轴属性”。 随即将打开“垂直轴属性”对话框。  
+1.  右键单击垂直轴，然后单击“轴属性”  。 随即将打开“垂直轴属性”  对话框。  
   
 2.  选中 **“启用刻度分隔线”** 复选框。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65581946"
   
 2.  在设计图面上，右键单击图表中的 Y 轴。 Y 轴对象（默认情况下名为“图表轴”）的属性显示在“属性”窗格中。  
   
-3.  在“刻度线”部分，展开 ScaleBreakStyle 属性。  
+3.  在“刻度线”  部分，展开 ScaleBreakStyle 属性。  
   
 4.  更改 ScaleBreakStyle 属性（如 BreakLineType 和 Spacing）的值。 有关设置刻度分隔线属性的详细信息，请参阅[在图表中显示包含多个数据区域的序列（报表生成器和 SSRS）](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)。  
 

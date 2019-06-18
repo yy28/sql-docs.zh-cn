@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f99e1b4957332b66ed710c0416f545d883ecc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629425"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712004"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>打开跟踪表 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "47629425"
   
 ### <a name="to-open-a-trace-table"></a>打开跟踪表  
   
-1.  在 **“文件”** 菜单上，指向 **“打开”**，再单击 **“跟踪表”**。  
+1.  在 **“文件”** 菜单上，指向 **“打开”** ，再单击 **“跟踪表”** 。  
   
 2.  连接到包含跟踪表的服务器实例。  
   
 3.  在 **“源表”** 对话框中，从 **“数据库”** 列表中选择包含保存跟踪表的数据库。  
   
-4.  从 **“表”** 列表中选择表名。 单击“确定” 。  
+4.  从 **“表”** 列表中选择表名。 单击“确定”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Profiler 查看和分析跟踪](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)   

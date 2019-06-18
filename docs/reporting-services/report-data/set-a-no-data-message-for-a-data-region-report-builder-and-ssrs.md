@@ -9,10 +9,10 @@ ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a78a71caf85bad0df6d21f22c305a93898c122df
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579039"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>为数据区域设置“无数据”消息（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "65579039"
   
 2.  在“属性”窗格的 **NoRowsMessage** 属性字段中，键入要显示为消息的文本。  
   
-     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式。  
+     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
   
 ### <a name="to-set-the-nodatamessage-property-for-a-chart"></a>设置图表的 NoDataMessage 属性  
   
@@ -37,7 +37,7 @@ ms.locfileid: "65579039"
   
 3.  在 **“标题”** 的 **NoDataMessage** 属性字段中，键入要显示为消息的文本。  
   
-     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式。  
+     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
   
 ### <a name="to-set-the-norowsmessage-for-a-subreport"></a>设置子报表的 NoRowsMessage  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65579039"
   
 2.  在“属性”窗格的 **NoRowsMessage** 属性字段中，键入要显示为消息的文本。  
   
-     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式。  
+     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
   
 ### <a name="to-set-the-nodatatext-property-for-a-color-scale-for-a-map"></a>设置地图色阶的 NoDataText 属性  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65579039"
   
 2.  在“属性”窗格的 **NoDataText**中，键入要显示为代表无数据值的颜色的标签的文本。  
   
-     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式。  
+     此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式   。  
   
 ## <a name="see-also"></a>另请参阅  
  [子报表（报表生成器和 SSRS）](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   

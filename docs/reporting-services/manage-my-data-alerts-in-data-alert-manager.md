@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9feef3af6a4506f3daa6fab793a3c76a5dd84cae
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581034"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在数据警报管理器中管理我的数据警报
@@ -34,7 +34,7 @@ SharePoint 用户可以查看他们所创建的数据警报列表以及与这些
   
 1.  转至您在其中保存了您已创建数据警报的报表的 SharePoint 库。  
   
-2.  单击针对报表展开下拉菜单的图标，然后单击“管理数据警报”。 下图显示该下拉菜单。  
+2.  单击针对报表展开下拉菜单的图标，然后单击“管理数据警报”  。 下图显示该下拉菜单。  
   
      ![从报表上下文菜单打开警报管理器](../reporting-services/media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
   
@@ -49,7 +49,7 @@ SharePoint 用户可以查看他们所创建的数据警报列表以及与这些
   
 ### <a name="to-edit-an-alert-definition"></a>编辑警报定义  
   
--   右键单击要编辑其警报定义的数据警报，然后单击“编辑”。  
+-   右键单击要编辑其警报定义的数据警报，然后单击“编辑”  。  
   
      该警报定义将在数据警报设计器中打开。 有关详细信息，请参阅 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md) 和 [数据警报设计器](../reporting-services/data-alert-designer.md)。  
   
@@ -61,13 +61,13 @@ SharePoint 用户可以查看他们所创建的数据警报列表以及与这些
   
 ### <a name="to-delete-an-alert-definition"></a>删除警报定义  
   
--   右键单击要删除的数据警报，然后单击“删除”。  
+-   右键单击要删除的数据警报，然后单击“删除”  。  
   
      删除警报后，将不会发送进一步的警报消息。  
   
 ### <a name="to-run-an-alert"></a>运行警报  
   
--   右键单击要运行的数据警报，然后单击“运行”。  
+-   右键单击要运行的数据警报，然后单击“运行”  。  
   
      创建警报实例，并立即发送数据警报消息，而不考虑数据警报设计器中指定的计划选项。 例如，配置为每周发送的警报，并且仅当结果更改时才发送。  
 

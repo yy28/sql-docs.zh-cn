@@ -12,14 +12,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], SOAP
 - Web applications [Reporting Services]
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e1f0bbc3528272298d8a3343108e7229bac26f17
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 53196d1336bb7be6093b749acb93f1ad95a99852
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030046"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62741943"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>使用 SOAP 集成 Reporting Services - Web 应用程序
   可以通过 Reporting Services SOAP API 访问报表服务器的完整功能。 因为它是一个 Web 服务，所以您可以轻松地访问 SOAP API 以向自定义业务应用程序提供企业报表功能。 从 Web 应用程序访问报表服务器 Web 服务的方法与从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序访问 SOAP API 的方法非常类似。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，可以生成一个代理类，它公开报表服务器 Web 服务的属性和方法，并使你能够使用熟悉的基础结构和工具来生成建立在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技术之上的业务应用程序。  
@@ -40,7 +40,7 @@ ms.locfileid: "50030046"
  有关 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 模拟的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文档。  
   
 ## <a name="managing-the-report-server-using-soap-api"></a>使用 SOAP API 管理报表服务器  
- 还可以使用 Web 应用程序管理报表服务器及其内容。 随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的报表管理器是完全使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 和 Reporting Services SOAP API 生成的 Web 应用程序的一个示例。 您可以将报表管理器的报表管理功能添加到自定义 Web 应用程序。 例如，你可能希望返回报表服务器数据库中可用报表的列表，并将它们显示在 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Listbox 控件中以供用户从中选择。 下面的代码连接到报表服务器数据库并返回报表服务器数据库中的项列表。 然后，将可用报表添加到 Listbox 控件，而该控件显示每个报表的路径。  
+ 还可以使用 Web 应用程序管理报表服务器及其内容。 随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的报表管理器是完全使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 和 Reporting Services SOAP API 生成的 Web 应用程序的一个示例。 您可以将报表管理器的报表管理功能添加到自定义 Web 应用程序。 例如，你可能希望返回报表服务器数据库中可用报表的列表，并将它们显示在 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Listbox 控件中以供用户从中选择  。 下面的代码连接到报表服务器数据库并返回报表服务器数据库中的项列表。 然后，将可用报表添加到 Listbox 控件，而该控件显示每个报表的路径。  
   
 ```vb  
 Private Sub Page_Load(sender As Object, e As System.EventArgs)  

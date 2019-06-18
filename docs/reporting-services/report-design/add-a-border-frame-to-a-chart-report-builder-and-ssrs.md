@@ -9,10 +9,10 @@ ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a98492ecca7cafebfff34e6438edb39e173d8b8
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571641"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>向图表添加边框（报表生成器和 SSRS）
@@ -23,19 +23,19 @@ ms.locfileid: "65571641"
   
 ### <a name="to-apply-a-border-to-a-chart"></a>向图表应用边框  
   
-1.  右键单击图表上的任意位置并选择“图表属性”。  
+1.  右键单击图表上的任意位置并选择“图表属性”  。  
   
     > [!NOTE]  
-    >  如果看不到“图表属性”，请在快捷菜单中指向“图表”，然后选择“图表属性”。  
+    >  如果看不到“图表属性”，请在快捷菜单中指向“图表”，然后选择“图表属性”    。  
   
-2.  选择 **“边框”**，然后单击要应用于图表的边框类型。  
+2.  选择 **“边框”** ，然后单击要应用于图表的边框类型。  
   
 3.  （可选）选择一个值或键入一个表示边框样式的表达式。  
   
 4.  （可选）指定将绘制在图表周围作为边框的线条的颜色。  
   
     > [!NOTE]  
-    >  **“线条颜色”** 列表中包括常用颜色。 若要在更多颜色列表中进行选择，请在列表中单击“更多颜色”，或单击列表旁的表达式 (fx) 按钮以打开“表达式”编辑器。  
+    >  **“线条颜色”** 列表中包括常用颜色。 若要在更多颜色列表中进行选择，请在列表中单击“更多颜色”，或单击列表旁的表达式 (fx) 按钮以打开“表达式”编辑器    。  
   
 5.  （可选）指定边框的宽度。 有效值介于 0.25pt 到 20pt 之间。 可以考虑将边框的大小保持在 1pt 到 3pt 之间，以获得最佳视觉效果。  
   

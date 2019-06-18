@@ -11,21 +11,21 @@ helpviewer_keywords:
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2652b7ac43daba48c214de00d9787a60c6a7b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857065"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62991595"
 ---
 # <a name="identifying-execution-state"></a>标识执行状态
   超文本传输协议 (HTTP) 是一个无连接且无状态协议，这意味着它不自动指示不同请求是否来自同一个客户端，甚至也不指示单个浏览器实例是否仍在查看页面或站点。 会话创建逻辑连接，以通过 HTTP 在服务器与客户端之间维护状态。 与特定会话相关的用户特定的信息称为会话状态。  
   
  会话管理涉及将 HTTP 请求与从同一个会话生成的其他先前请求相关。 如果没有会话管理，则由于 HTTP 协议的无连接和无状态性质，因此这些请求将与报表服务器 Web 服务无关。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不公开会话状态的总体概念，例如，由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 公开的这类概念。 然而，当执行报表时，报表服务器以 execution 的形式维护方法调用之间的状态。 执行允许用户通过多种方式与报表交互 - 包括从报表服务器加载报表，为报表设置凭据和参数，以及呈现报表。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不公开会话状态的总体概念，例如，由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 公开的这类概念。 然而，当执行报表时，报表服务器以 execution 的形式维护方法调用之间的状态  。 执行允许用户通过多种方式与报表交互 - 包括从报表服务器加载报表，为报表设置凭据和参数，以及呈现报表。  
   
  当客户端与报表服务器通信时，它们使用执行来管理报表查看和用户在报表中导航到其他页的过程，以及显示或隐藏报表的各个部分。 对于客户端应用程序正在运行的每个报表，都存在一个唯一执行。  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f15ca40b0f924374795c122589caee31bfbd329a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781491"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62711851"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>重播跟踪文件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "47781491"
   
 ### <a name="to-replay-a-trace-file"></a>重播跟踪文件  
   
-1.  在 **“文件”** 菜单上，指向 **“打开”**，然后单击 **“跟踪文件”**。 选择包含需要重播的事件类的跟踪文件。  
+1.  在 **“文件”** 菜单上，指向 **“打开”** ，然后单击 **“跟踪文件”** 。 选择包含需要重播的事件类的跟踪文件。  
   
-2.  在 **“重播”** 菜单上，单击 **“开始”**，然后连接到要重播跟踪的服务器实例。  
+2.  在 **“重播”** 菜单上，单击 **“开始”** ，然后连接到要重播跟踪的服务器实例。  
   
-3.  在 **“重播配置”** 对话框的 **“基本重播选项”** 选项卡上，指定 **“重播服务器”**。 单击 **“更改”** 以更改 **“重播服务器”** 框中显示的服务器。  
+3.  在 **“重播配置”** 对话框的 **“基本重播选项”** 选项卡上，指定 **“重播服务器”** 。 单击 **“更改”** 以更改 **“重播服务器”** 框中显示的服务器。  
   
 4.  根据需要，选择下列目标位置之一以在其中保存重播：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47781491"
   
     -   **保存到表**，该选项指定保存重播的数据库表。  
   
-5.  选择“按跟踪的顺序重播事件”或“使用多个线程重播事件”。 下表列出了这些设置之间的差异。  
+5.  选择“按跟踪的顺序重播事件”  或“使用多个线程重播事件”  。 下表列出了这些设置之间的差异。  
   
     |选项|描述|  
     |------------|-----------------|  
@@ -50,15 +50,15 @@ ms.locfileid: "47781491"
   
 6.  选择 **“显示重播结果”** 以在重播时查看结果。  
   
-7.  还可以单击“高级重播选项”选项卡以配置以下选项：  
+7.  还可以单击“高级重播选项”  选项卡以配置以下选项：  
   
-    -   若要重播所有服务器进程 ID (SPID)，请选择“重播系统 SPID”。  
+    -   若要重播所有服务器进程 ID (SPID)，请选择“重播系统 SPID”  。  
   
-    -   若要仅重播属于特定 SPID 的进程，请选择 **“仅重播一个 SPID”**。 在 **“要重播的 SPID”** 框中，键入 SPID。  
+    -   若要仅重播属于特定 SPID 的进程，请选择 **“仅重播一个 SPID”** 。 在 **“要重播的 SPID”** 框中，键入 SPID。  
   
-    -   若要重播特定时间段内发生的事件，请选择 **“按日期和时间限制重播”**。 为“开始时间”和“结束时间”选择日期和时间，以指定要在重播中包括的时间段。  
+    -   若要重播特定时间段内发生的事件，请选择 **“按日期和时间限制重播”** 。 为“开始时间”  和“结束时间”  选择日期和时间，以指定要在重播中包括的时间段。  
   
-    -   若要控制重播期间 SQL Server 管理进程的方法，请配置 **“Health Monitor 选项”**。  
+    -   若要控制重播期间 SQL Server 管理进程的方法，请配置 **“Health Monitor 选项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   

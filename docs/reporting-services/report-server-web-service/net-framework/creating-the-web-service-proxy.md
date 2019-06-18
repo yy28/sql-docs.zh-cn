@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 05901af8c6f11379b186495d1ae744c5f7598d91
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 116e4ca4ef2080c186a11b6816a08d4c3c5ba169
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814270"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284641"
 ---
 # <a name="creating-the-web-service-proxy"></a>创建 Web 服务代理
   客户端和 Web 服务可以通过 SOAP 消息进行通信，这些消息将输入参数和输出参数封装为 XML。 代理类将参数映射到 XML 元素，然后通过网络发送 SOAP 消息。 通过这种方法，代理类使您不必在 SOAP 级别与 Web 服务通信，并允许您在支持 SOAP 和 Web 服务代理的任何开发环境中调用 Web 服务方法。  
@@ -68,13 +68,13 @@ ReportingService2010 service = new ReportingService2010();
   
  **将 Web 引用添加到项目**  
   
-1.  在“解决方案资源管理器”中，选择要使用 Web 服务的项目。  
+1.  在“解决方案资源管理器”  中，选择要使用 Web 服务的项目。  
   
-2.  在“项目”菜单中，单击“添加 Web 引用”。  
+2.  在“项目”  菜单中，单击“添加 Web 引用”  。  
   
-     “添加 Web 引用”对话框打开。  
+     “添加 Web 引用”  对话框打开。  
   
-3.  在“URL”字段中，输入指向报表服务器 Web 服务的完整路径。  
+3.  在“URL”  字段中，输入指向报表服务器 Web 服务的完整路径。  
   
      报表服务器 Web 服务的报表执行端点的简化 URL 可能如下所示：  
   
@@ -91,15 +91,15 @@ ReportingService2010 service = new ReportingService2010();
   
 4.  验证项目是否可以使用报表服务器 Web 服务，以及您是否具有适当的权限访问报表服务器。  
   
-5.  在“Web 引用名”字段中输入一个名称，将在代码中使用该名称以编程方式访问报表服务器 Web 服务。  
+5.  在“Web 引用名”  字段中输入一个名称，将在代码中使用该名称以编程方式访问报表服务器 Web 服务。  
   
-6.  选择“添加引用”按钮，以在应用程序中创建对 Web 服务的引用。  
+6.  选择“添加引用”  按钮，以在应用程序中创建对 Web 服务的引用。  
   
-     新引用将出现在“解决方案资源管理器”中处于活动状态的项目的“Web 引用”节点下，其名称在“Web 引用名”字段中指定。  
+     新引用将出现在“解决方案资源管理器”  中处于活动状态的项目的“Web 引用”节点下，其名称在“Web 引用名”  字段中指定。  
   
-7.  在“解决方案资源管理器”中，展开“Web 引用”文件夹，以记下与可用于项目中的项的 Web 引用类对应的命名空间。  
+7.  在“解决方案资源管理器”  中，展开“Web 引用”文件夹，以记下与可用于项目中的项的 Web 引用类对应的命名空间。  
   
-     在将 Web 引用添加到项目后，关联的文件将显示在“解决方案资源管理器”的“Web 引用”文件夹内的某个文件夹中。  
+     在将 Web 引用添加到项目后，关联的文件将显示在“解决方案资源管理器”  的“Web 引用”文件夹内的某个文件夹中。  
   
  在添加 Web 引用之后，使用以下语法创建代理类的实例：  
   
@@ -116,7 +116,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
   
 ```  
   
- 还可以将“using”（在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为“Import”）指令添加到报表服务器 Web 服务引用中。 如果您使用该指令，则不必完全限定命名空间中的类型。 为此，请在文件中添加以下代码：  
+ 还可以将“using”  （在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为“Import”  ）指令添加到报表服务器 Web 服务引用中。 如果您使用该指令，则不必完全限定命名空间中的类型。 为此，请在文件中添加以下代码：  
   
 ```vb  
 Import myNamespace.myReferenceName  

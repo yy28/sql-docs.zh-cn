@@ -9,10 +9,10 @@ ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc8b459c3ecfe9c34ff7552acb2565c1b25239a7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581690"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>图表图例 - 更改项文本（报表生成器）
@@ -29,11 +29,11 @@ ms.locfileid: "65581690"
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-shape-chart"></a>修改在形状图的图例中显示的文本  
   
-1.  右键单击某一序列，或右键单击“值”区域中的字段，并选择“序列属性”。  
+1.  右键单击某一序列，或右键单击“值”  区域中的字段，并选择“序列属性”  。  
   
 2.  单击 **“图例”** ，并在 **“自定义图例文本”** 框中键入关键字。  
   
- 下表提供了用于“自定义图例文本”属性的特定于图表的关键字示例。 有关关键字的详细信息，请参阅[设置图表上数据点的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
+ 下表提供了用于“自定义图例文本”  属性的特定于图表的关键字示例。 有关关键字的详细信息，请参阅[设置图表上数据点的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
 |关键字|描述|图例中的显示文本示例|  
 |-------------|-----------------|---------------------------------------------------|  
@@ -43,11 +43,11 @@ ms.locfileid: "65581690"
 |`#AXISLABEL (#PERCENT{P0})`|显示类别字段的文本表示形式，后跟每个类别在图表上显示的百分比。|Michael Blythe (85%)|  
   
 > [!NOTE]  
->  仅当“序列组”区域中没有指定的字段时，才能在运行时计算 #AXISLABEL 关键字。  
+>  仅当“序列组”  区域中没有指定的字段时，才能在运行时计算 #AXISLABEL 关键字。  
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-non-shape-chart"></a>修改在非形状图的图例中显示的文本  
   
-1.  右键单击某一序列，或右键单击“值”区域中的字段，并选择“序列属性”。  
+1.  右键单击某一序列，或右键单击“值”  区域中的字段，并选择“序列属性”  。  
   
 2.  单击 **“图例”** ，并在 **“自定义图例文本”** 框中键入图例标签。 随即用该文本更新序列。  
   

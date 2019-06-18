@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574020"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>用于报表服务器上的项的 URL 示例 - SharePoint 模式
@@ -49,7 +49,7 @@ ms.locfileid: "65574020"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 服务器站点或子站点的 URL  
  部署报表或报表数据源时，必须使用 SharePoint 站点和子站点的 URL（如果有）。 在 URL 中，站点名称紧接在服务器名称之后出现，例如 `https://*servername/site*` 或 `https://*servername/site/subsite*`。  
   
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 应用程序中，站点和子站点经常对应于主站点上的选项卡。 若要找到站点名或子站点名，请单击 **“主文件夹”**，然后单击 **“所有网站内容”**。 滚动到底部并查找 **“站点和工作区”**。 站点列表将显示在此部分中。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 应用程序中，站点和子站点经常对应于主站点上的选项卡。 若要找到站点名或子站点名，请单击 **“主文件夹”** ，然后单击 **“所有网站内容”** 。 滚动到底部并查找 **“站点和工作区”** 。 站点列表将显示在此部分中。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 库的 URL  
  向 SharePoint 库中部署报表或相关项时，必须使用 SharePoint 库的 URL。 要用于库的 URL 根据所使用的 SharePoint 版本而不同。  
@@ -58,7 +58,7 @@ ms.locfileid: "65574020"
   
  在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如， `https://*servername/site/*Documents`。  
   
- 若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口。 文件地址中包含发布操作所需的 URL 值。  
+ 若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口   。 文件地址中包含发布操作所需的 URL 值。  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>SharePoint 站点上的项的完全限定 URL  
  始终通过完全限定的 URL 对存储在 SharePoint 库中的项进行寻址，这种完全限定的 URL 以 Web 应用程序开头 (`https://*server*`) 作为根节点，并以所引用的文件名结束。  

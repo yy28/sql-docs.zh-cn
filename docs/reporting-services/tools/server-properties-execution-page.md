@@ -11,16 +11,16 @@ ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e8259591c54068cde134c98ae405dd77fac6fab4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571369"
 ---
 # <a name="server-properties-execution-page"></a>服务器属性（“执行”页）
   使用此页可设置报表执行的超时值。 此值将应用于当前报表服务器实例处理的所有报表。 您可以针对单个报表覆盖此值。 您指定的值必须适合报表服务器上发生的所有报表处理，并适合在报表服务器检索报表中所使用的数据时针对数据库服务器执行的查询处理。  
   
- 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”。 单击 **“执行”** 将此页打开。  
+ 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”  。 单击 **“执行”** 将此页打开。  
   
 ## <a name="options"></a>选项  
  **不对报表执行时间设置超时**  

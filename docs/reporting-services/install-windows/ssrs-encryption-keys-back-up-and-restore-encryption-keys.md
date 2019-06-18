@@ -13,10 +13,10 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502854"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密密钥 - 备份和还原加密密钥
@@ -61,13 +61,13 @@ ms.locfileid: "65502854"
   
 1.  启动报表服务器配置管理器，然后连接到要配置的报表服务器实例。  
   
-2.  单击“加密密钥”，再选择“备份”。  
+2.  单击“加密密钥”，再选择“备份”   。  
   
 3.  键入强密码。  
   
 4.  指定用来包含所存储密钥的文件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将向该文件追加 .snk 文件扩展名。 请考虑将文件存储在独立于报表服务器的磁盘上。  
   
-5.  选择“确定”。  
+5.  选择“确定”  。  
   
 ###  <a name="bkmk_backup_rskeymgmt"></a> 备份加密密钥 - rskeymgmt（本机模式）  
   
@@ -94,13 +94,13 @@ ms.locfileid: "65502854"
   
 1.  启动 Reporting Services 配置管理器，然后连接到要配置的报表服务器实例。  
   
-2.  在“加密密钥”页上，选择“还原”。  
+2.  在“加密密钥”页上，选择“还原”  。  
   
 3.  选择包含备份副本的 .snk 文件。  
   
 4.  键入用于解锁该文件的密码。  
   
-5.  选择“确定”。 
+5.  选择“确定”  。 
   
 ###  <a name="bkmk_restore_rskeymgmt"></a> 还原加密密钥 - rskeymgmt（本机模式）  
   

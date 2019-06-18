@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5c1c2bb116f08dca2df111b6cccd9d6f0bf28160
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503295"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -63,7 +63,7 @@ ms.locfileid: "65503295"
   
 1.  从文档库中，单击 SharePoint 功能区中的 **“文档”** 。  
   
-2.  单击 **“新建文档”** ，然后单击 **“报表生成器报表”**。 如果看不到此选项，请回顾以前向库中添加报表服务器内容类型的过程。  
+2.  单击 **“新建文档”** ，然后单击 **“报表生成器报表”** 。 如果看不到此选项，请回顾以前向库中添加报表服务器内容类型的过程。  
   
 ### <a name="create-a-basic-report"></a>创建基本报表  
   
@@ -86,9 +86,9 @@ ms.locfileid: "65503295"
   
 1.  运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到您刚安装的报表服务器实例。 “Web 服务 URL”页包括指向报表服务器 Web 服务的链接。 单击该链接可验证您是否可以访问该服务器。 如果未配置报表服务器数据库，请先进行配置，再单击该链接。  
   
-2.  打开“服务”控制台应用程序并验证报表服务器服务是否正在运行。 若要查看报表服务器服务的状态，请单击“开始”，指向“控制面板”，双击“管理工具”，再双击“服务”。 出现服务列表后，滚动到“报表服务器 (MSSQLSERVER)”。 该服务的状态应为 **“已启动”**。  
+2.  打开“服务”控制台应用程序并验证报表服务器服务是否正在运行。 若要查看报表服务器服务的状态，请单击“开始”，指向“控制面板”，双击“管理工具”，再双击“服务”     。 出现服务列表后，滚动到“报表服务器 (MSSQLSERVER)”  。 该服务的状态应为 **“已启动”** 。  
   
-3.  打开浏览器，在地址栏中键入报表服务器的 URL。 该地址由安装过程中为报表服务器指定的服务器名称和虚拟目录名组成。 默认情况下，报表服务器虚拟目录的名称为 **ReportServer**。 可以使用以下 URL 验证报表服务器安装： https://\<computer name>/ReportServer\<_instance name>。 如果将报表服务器安装为命名实例，URL 将有所不同。 有关 URL 格式的详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。 如果你在 Windows Vista 或 Windows Server 2008 上是本地管理员，请参阅[为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+3.  打开浏览器，在地址栏中键入报表服务器的 URL。 该地址由安装过程中为报表服务器指定的服务器名称和虚拟目录名组成。 默认情况下，报表服务器虚拟目录的名称为 **ReportServer**。 可以使用以下 URL 验证报表服务器安装： https://\<computer name>/ReportServer\<_instance name>   。 如果将报表服务器安装为命名实例，URL 将有所不同。 有关 URL 格式的详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。 如果你在 Windows Vista 或 Windows Server 2008 上是本地管理员，请参阅[为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 4.  运行报表以测试报表服务器的操作。 对于此步骤，您可以从教程创建一个示例报表。 有关详细信息，请参阅[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "65503295"
   
 1.  打开浏览器，在地址栏中键入 Web 门户 URL。 该地址由你在安装过程中或在 Reporting Services 配置工具的“Web 门户 URL”页中为 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 指定的服务器名称和虚拟目录名称组成。 默认情况下， [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 虚拟目录的名称为 **报表**。 可以使用以下 URL 验证 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 安装：  
   
-     https://\<computer name>/Reports\<_instance name>。  
+     https://\<computer name>/Reports\<_instance name>   。  
   
 2.  使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 创建新文件夹或上载文件，以测试定义是否传回报表服务器数据库。 如果上述操作成功，则表明连接正常。  
   

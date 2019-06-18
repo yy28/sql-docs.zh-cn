@@ -11,10 +11,10 @@ ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571361"
 ---
 # <a name="server-properties-history-page"></a>服务器属性（“历史记录”页）
@@ -27,7 +27,7 @@ ms.locfileid: "65571361"
  若要打开此页，请执行以下操作：
  1) 启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2) 连接到报表服务器实例。
- 3) 右键单击报表服务器名称，然后选择“属性”。
+ 3) 右键单击报表服务器名称，然后选择“属性”  。
  4) 单击 **“历史记录”** 将此页打开。  
   
 ## <a name="options"></a>选项  

@@ -9,10 +9,10 @@ ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4cae758708ce0ac703aa2b6e82b574b45c54195a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65572263"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用调色板定义图表上的颜色（报表生成器和 SSRS）
@@ -29,7 +29,7 @@ ms.locfileid: "65572263"
   
      对象名称（默认为**Chart1** ）将显示在“属性”窗格顶部的下拉列表中。  
   
-3.  在“图表”部分，从下拉列表中为 Palette 属性选择新的调色板。  
+3.  在“图表”部分，从下拉列表中为 Palette 属性选择新的调色板  。  
   
     > [!NOTE]  
     >  您无法更改预定义调色板中的颜色或顺序。  
@@ -40,9 +40,9 @@ ms.locfileid: "65572263"
   
 2.  在设计图面上，单击该图表。 图表对象的属性将显示在“属性”窗格中。  
   
-3.  在 **“图表”** 部分，为 **“调色板”** 属性选择 **“自定义”**。  
+3.  在 **“图表”** 部分，为 **“调色板”** 属性选择 **“自定义”** 。  
   
-4.  在 CustomPaletteColors 属性中，单击“编辑集合”(…) 按钮。 将打开 **“ReportColorExpression 集合编辑器”** 。  
+4.  在 CustomPaletteColors 属性中，单击“编辑集合”(…) 按钮  。 将打开 **“ReportColorExpression 集合编辑器”** 。  
   
 5.  单击 **“添加”** 以添加颜色。 从下拉列表中选择颜色或选择“表达式”并为特定颜色指定十六进制值，例如“橙色”为 ff6600。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65572263"
   
 6.  单击 **“添加”** 以向调色板添加更多颜色。  
   
-7.  完成后，单击 **“确定”**。  
+7.  完成后，单击 **“确定”** 。  
   
  如果使用自定义调色板，可更改颜色顺序以调整图表中不同序列的颜色。  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Report Server Web service, SOAP
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 592481ca8d2bf75c5a02d16b8955f9085a09a3f6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4f03388971728750866480a5b0a6ec9626f92a1c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63069863"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   报表服务器 Web 服务使用简单对象访问协议 (SOAP) 消息通过网络发送基于文本的命令。 这些命令采用的形式为使用 HTTP 通过万维网发送的 XML 文本。 通过将 SOAP 用作其通信协议，报表服务器 Web 服务使应用程序和组件能够使用开放和广为接受的基础结构与报表服务器交换数据。 SOAP 标准在 www.w3.org/TR/SOAP 中定义。  
@@ -39,7 +39,7 @@ ms.locfileid: "54255762"
 </soap:Envelope>  
 ```  
   
- SOAP 自身要求将消息放到 Envelope 元素中，并且将消息的主体放入 Body 元素内。 在本示例中，主体包含对于 <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法的调用，该方法采用一个表示待删除项的路径的字符串参数。 可以创建一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 客户端代理类，以便将所有 SOAP 操作封装到方法中。 以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 方法表示前面给出的 SOAP 示例。  
+ SOAP 自身要求将消息放到 Envelope  元素中，并且将消息的主体放入 Body  元素内。 在本示例中，主体包含对于 <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法的调用，该方法采用一个表示待删除项的路径的字符串参数。 可以创建一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 客户端代理类，以便将所有 SOAP 操作封装到方法中。 以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 方法表示前面给出的 SOAP 示例。  
   
 ```  
 public void DeleteItem(string item);  

@@ -12,15 +12,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb259625e100c886efabc00e21f7bd41f04389d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715656"
 ---
 # <a name="review-the-replay-results"></a>查看重播结果
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能完成一个分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播活动。 为了捕获此活动，使用“重播”选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能完成一个分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播活动。 为了捕获此活动，使用“重播”  选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
   
  存储结果跟踪文件的位置由位于每个客户端上的客户端配置文件 `<ResultDirectory>` 中的 XML 元素 `DReplayClient.xml` 指定。 每次重播时，都将覆盖客户端结果目录中的跟踪文件。  
   

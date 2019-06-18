@@ -10,10 +10,10 @@ author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
 ms.openlocfilehash: 2e1e6e6773644b12b6259349c522113ec66a0d43
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502769"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安装教程
@@ -335,7 +335,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-将浏览器指向 https://localhost/testsql.php（macOS 上的 https://localhost:8080/testsql.php）。 现在应能够连接到 SQL Server/Azure SQL 数据库。
+将浏览器指向 https://localhost/testsql.php （macOS 上的 https://localhost:8080/testsql.php ）。 现在应能够连接到 SQL Server/Azure SQL 数据库。
 
 ## <a name="see-also"></a>另请参阅  
 [开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
