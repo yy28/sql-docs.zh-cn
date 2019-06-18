@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082732"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用嵌套表数据作为准确性图表的输入
@@ -45,9 +45,9 @@ ms.locfileid: "66082732"
   
 4.  单击浏览按钮 **（...）** 若要从当前服务器上的数据源视图的列表中选择外部数据集。  
   
-5.  单击“选择事例表” 。 在 **“选择表”** 对话框中，从包含事例数据的数据源视图中选择事例表，然后单击 **“确定”**。  
+5.  单击“选择事例表”  。 在 **“选择表”** 对话框中，从包含事例数据的数据源视图中选择事例表，然后单击 **“确定”** 。  
   
-6.  单击 **“选择嵌套表”**。 在 **“选择表”** 对话框中，选择包含嵌套数据的表，然后单击 **“确定”**。  
+6.  单击 **“选择嵌套表”** 。 在 **“选择表”** 对话框中，选择包含嵌套数据的表，然后单击 **“确定”** 。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

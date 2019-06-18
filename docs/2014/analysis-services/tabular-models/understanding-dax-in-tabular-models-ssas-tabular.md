@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e02123703295d13a0be9bcb74382ce4a7ed9dd66
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066264"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格模型中的 DAX（SSAS 表格）
@@ -261,7 +261,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   使用公式中的特殊函数指定的关系  
   
- 有许多类型的上下文：“行上下文” 、“查询上下文” 和“筛选上下文”。  
+  有许多类型的上下文：“行上下文”  、“查询上下文”  和“筛选上下文”。  
   
 ###  <a name="bkmk_row_context"></a> 行上下文  
  *行上下文*可视为"当前行"。 如果您在计算列中创建某一公式，则该公式的“行上下文”将包括来自当前行中所有列的值。 如果该表与其他表相关，则上下文还包括来自另一个表中与当前行相关的所有值。  
@@ -325,7 +325,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  如前所述，通过使用模型中的可用表、表之间的所有关系和所应用的所有筛选器来确定验证（和重新计算操作）期间的上下文。  
   
- 例如，如果刚刚将一些数据导入到一个新表中，而该表未与任何其他表关联（并且尚未应用任何筛选器），则当前上下文是表中的完整列集。 如果通过关系将该表与其他表链接，则当前上下文将包括相关的表。 如果将该表中的某个列添加到一个报表中，该报表具有切片器并且可能具有一些报表筛选器，则公式的上下文是报表的每个单元中的数据子集。  
+ 例如，如果刚刚将一些数据导入到一个新表中，而该表未与任何其他表关联（并且尚未应用任何筛选器），则当前上下文  是表中的完整列集。 如果通过关系将该表与其他表链接，则当前上下文将包括相关的表。 如果将该表中的某个列添加到一个报表中，该报表具有切片器并且可能具有一些报表筛选器，则公式的上下文是报表的每个单元中的数据子集。  
   
  上下文是一个很有用的概念，但也可能导致很难排除公式问题。 我们建议您从简单的公式和关系入手，了解上下文的工作原理。 下一节提供了一些示例，说明公式如何使用不同类型的上下文来动态返回结果。  
   
@@ -352,7 +352,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   在通过关系连接表时，必须确保用作键的两列具有匹配的值。 但不强制引用完整性，因此有可能在键列中具有不匹配值的情况下仍创建关系。 如果发生这种情况，您应注意空值或不匹配值可能会影响公式的结果。  
   
--   使用关系在模型中链接表时，可以扩大公式的计算范围（或“上下文”）。 因添加新表、新关系或因活动关系改变而引起的上下文变化可能会导致结果发生意外变化。 有关详细信息，请参阅本主题前面的 [DAX 公式中的上下文](#bkmk_context) 。  
+-    使用关系在模型中链接表时，可以扩大公式的计算范围（或“上下文”）。 因添加新表、新关系或因活动关系改变而引起的上下文变化可能会导致结果发生意外变化。 有关详细信息，请参阅本主题前面的 [DAX 公式中的上下文](#bkmk_context) 。  
   
 ##  <a name="bkmk_tables"></a> 使用表和列  
  表格模型中的表在外观上与 Excel 表类似，但在处理数据和公式的方式上却有所不同：  
@@ -375,7 +375,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  计算公式时，模型设计器首先检查常规语法，然后根据当前上下文中的可能列和表检查所提供的列和表的名称。 如果名称不明确或者列或表无法找到，则您将收到有关公式的错误（在发生错误的单元格中，用 #ERROR 字符串代替数据值）。 有关表、 列和其他对象的命名要求的详细信息，请参阅"命名要求"中[PowerPivot 的 DAX 语法规范](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx)。  
   
 ### <a name="table-relationships"></a>表关系  
- 通过创建表之间的关系，可以在另一个表中查找数据，并使用相关值来执行复杂计算。 例如，可以使用计算列来查找与当前分销商相关的所有装运记录，然后对每个分销商的装运成本求和。 但在许多情况下，关系可能没有必要。 可以在公式中使用 LOOKUPVALUE 函数为满足在 search_column 和 search_value 参数中指定的条件的行返回 result_columnName 中的值。  
+ 通过创建表之间的关系，可以在另一个表中查找数据，并使用相关值来执行复杂计算。 例如，可以使用计算列来查找与当前分销商相关的所有装运记录，然后对每个分销商的装运成本求和。 但在许多情况下，关系可能没有必要。 可以在公式中使用 LOOKUPVALUE 函数为满足在 search_column  和 search_value  参数中指定的条件的行返回 result_columnName  中的值。  
   
  很多 DAX 函数都要求两个表或多个表之间存在关系，以便定位所引用的列并返回有意义的结果。 其他函数将尝试确定关系；但是，为获得最佳结果，您始终应尽量创建关系。 有关详细信息，请参阅本主题前面的 [公式和表格模型](#bkmk_RelModel) 。  
   
@@ -395,7 +395,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  有关详细信息，请参阅 [处理数据（SSAS 表格）](../process-data-ssas-tabular.md)。  
   
 ##  <a name="bkmk_troubleshoot"></a> 更正公式中的错误  
- 如果在定义公式时遇到错误，公式可能会包含“语法错误” 、“语义错误” 或“计算错误”。  
+  如果在定义公式时遇到错误，公式可能会包含“语法错误”  、“语义错误”  或“计算错误”。  
   
  语法错误最容易解决。 它们通常涉及缺少括号或逗号。 有关单独函数的语法的帮助，请参阅 [DAX 函数参考](https://msdn.microsoft.com/library/ee634396.aspx)。  
   

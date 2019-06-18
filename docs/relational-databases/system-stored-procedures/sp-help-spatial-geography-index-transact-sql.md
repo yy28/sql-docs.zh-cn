@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ec690eb615ed86ea5c99b34a91a11dad4fbd2716
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017835"
 ---
 # <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>备注  
   
 ## <a name="example"></a>示例  
- 下面的示例使用`sp_help_spatial_geography_index`调查**geography**空间索引**SIndx_SpatialTable_geography_col2**表定义**geography_col**中的给定的查询示例**@qs**。 此示例只返回指定索引的核心属性。  
+ 下面的示例使用`sp_help_spatial_geography_index`调查**geography**空间索引**SIndx_SpatialTable_geography_col2**表定义**geography_col**中的给定的查询示例 **@qs** 。 此示例只返回指定索引的核心属性。  
   
 ```  
 declare @qs geography  

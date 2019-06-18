@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fb65d55d2b6b135c562f9dd4b02170de6b7df3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63297870"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>在关系图中排列表 (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63297870"
   
 1.  右键单击“数据库关系图”窗口的空白区域。  
   
-2.  在快捷菜单中，单击“排列表”。  
+2.  在快捷菜单中，单击“排列表”  。  
   
 ## <a name="see-also"></a>请参阅  
  [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  

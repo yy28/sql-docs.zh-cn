@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bc2e3bd77b0a5a7454bd136b7a0dc485180ba28
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072015"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>透视（多维数据集设计器）（Analysis Services - 多维数据）
@@ -29,7 +29,7 @@ ms.locfileid: "66072015"
  使用工具栏可以执行该选项卡上的常见操作。  
   
  **透视详细信息**  
- 使用“透视详细信息”窗格可以创建和修改所选多维数据集的透视。  
+ 使用“透视详细信息”  窗格可以创建和修改所选多维数据集的透视。  
   
 ## <a name="see-also"></a>请参阅  
  [透视](multidimensional-models-olap-logical-cube-objects/perspectives.md)  

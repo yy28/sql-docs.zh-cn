@@ -20,14 +20,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060963"
 ---
 # <a name="common-properties"></a>通用属性
-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
   
  本主题列出并描述了数据流对象的通用属性。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66060963"
 |ID|Integer|用于唯一标识输出的值。|  
 |IdentificationString|String|用于标识输出的字符串。|  
 |IsErrorOut|Boolean|指示输出是否为错误输出。|  
-|IsSorted|Boolean|指示输出是否已排序。 默认值是 `False`。<br /><br /> **\*\* 重要\* \*** 的值设置`IsSorted`属性设置为`True`不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
+|IsSorted|Boolean|指示输出是否已排序。 默认值为 `False`。<br /><br /> **\*\* 重要\* \*** 的值设置`IsSorted`属性设置为`True`不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |“属性”|String|输出的名称。|  
 |SynchronousInputID|Integer|与输出同步的输入的 ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
@@ -181,7 +181,7 @@ ms.locfileid: "66060963"
 |“属性”|String|输出列的名称。|  
 |SortKeyPosition|Integer|用于指示单个列是否已排序、其排序顺序以及多个列的排序顺序的值。 如何值为 **0** ，则表示未对该列进行排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |SpecialFlags|Integer|包含输出列的特殊标志的值。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 `Fail component`、`Ignore failure` 和 `Redirect row`。 默认值为 `Fail component`。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 `Fail component`、`Ignore failure` 和 `Redirect row`。 默认值是 `Fail component`。|  
   
  输出列还包括一组数据类型属性。  
   

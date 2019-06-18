@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 076a3df69245cb269593e1a2298f18c9266ab217
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980326"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @table_name = ] 'table\_name'` 是为其请求全文索引信息的一部分或两个表名称。 *table_name*是**nvarchar(517)**，默认值为 NULL。 如果*table_name*省略，则为每个全文索引表检索全文索引列信息。  
+`[ @table_name = ] 'table\_name'` 是为其请求全文索引信息的一部分或两个表名称。 *table_name*是**nvarchar(517)** ，默认值为 NULL。 如果*table_name*省略，则为每个全文索引表检索全文索引列信息。  
   
 `[ @column_name = ] 'column\_name'` 是为其请求全文索引元数据的名称。 *column_name*是**sysname**，默认值为 NULL。 如果*column_name*省略或为 NULL，为每个全文索引列返回全文索引列信息*table_name*。 如果*table_name*也未指定或为 NULL，为数据库中的所有表的每个全文索引列返回全文索引列信息。  
   

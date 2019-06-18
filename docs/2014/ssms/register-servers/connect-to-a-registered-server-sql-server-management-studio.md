@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 789dc265513c4d0068c721e8cdefb07d7a3d5331
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63297910"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>连接到已注册的服务器 (SQL Server Management Studio)
@@ -27,6 +27,6 @@ ms.locfileid: "63297910"
   
 #### <a name="to-connect-to-a-registered-server"></a>连接到注册服务器  
   
-1.  在已注册的服务器中，右键单击一个服务器，指向“连接”，然后单击“对象资源管理器”。  
+1.  在已注册的服务器中，右键单击一个服务器，指向“连接”  ，然后单击“对象资源管理器”  。  
   
   

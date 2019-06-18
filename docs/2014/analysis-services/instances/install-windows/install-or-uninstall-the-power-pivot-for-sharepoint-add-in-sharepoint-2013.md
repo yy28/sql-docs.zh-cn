@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1fb1e718f8b2ab0257651ff47674d293a9e6a95
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079875"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>安装或卸载 PowerPivot for SharePoint 外接程序 (SharePoint 2013)
@@ -96,11 +96,11 @@ ms.locfileid: "66079875"
   
 2.  在“欢迎”页上，单击 **“下一步”** 。  
   
-3.  阅读并接受许可协议，然后单击 **“下一步”**。  
+3.  阅读并接受许可协议，然后单击 **“下一步”** 。  
   
 4.  在 **“功能选择”** 页上，默认情况下将选择所有功能。  
   
-5.  在“欢迎”页上，单击 **“下一步”**。  
+5.  在“欢迎”页上，单击 **“下一步”** 。  
   
 6.  单击 **“安装”** 以进行安装直至完成安装。  
   
@@ -116,7 +116,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 ```  
   
 ### <a name="quiet-command-line-installation-for-scripting"></a>用于脚本编写的静默命令行安装  
- 你可以使用 /q 或 /quiet 开关，进行不显示任何对话框或警告的“静默”安装。 如果您想要编写外接程序安装的脚本，静默安装将很有用。  
+ 你可以使用 /q 或 /quiet 开关，进行不显示任何对话框或警告的“静默”安装   。 如果您想要编写外接程序安装的脚本，静默安装将很有用。  
   
 > [!IMPORTANT]  
 >  如果你将 **/q** 开关用于无提示命令行安装，将不显示最终用户许可协议。 对此软件的使用受到许可协议控制并且由您负责遵守该许可协议，而与安装方法无关。  
@@ -171,13 +171,13 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
  **Or**  
   
-1.  转到 **“开始”**、 **“所有程序”**。  
+1.  转到 **“开始”** 、 **“所有程序”** 。  
   
-2.  单击 **“Microsoft SQL Server 2014”**。  
+2.  单击 **“Microsoft SQL Server 2014”** 。  
   
-3.  单击 **“配置工具”**。  
+3.  单击 **“配置工具”** 。  
   
-4.  单击 **“PowerPivot for SharePoint 2013 配置”**。  
+4.  单击 **“PowerPivot for SharePoint 2013 配置”** 。  
   
  有关配置工具的详细信息，请参阅 [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
@@ -188,7 +188,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
  您可通过下列方式之一卸载或修复 [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] ：  
   
-1.  **Windows 控制面板：** 选择**Microsoft SQL Server 2012 PowerPivot for SharePoint 2013**。 单击 **“卸载”** 或 **“修复”**。  
+1.  **Windows 控制面板：** 选择**Microsoft SQL Server 2012 PowerPivot for SharePoint 2013**。 单击 **“卸载”** 或 **“修复”** 。  
   
 2.  运行 spPowerPivot.msi 并选择 **“删除”** 选项或 **“修复”** 选项。  
   

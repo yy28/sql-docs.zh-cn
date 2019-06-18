@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103933"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>启用和禁用 Reporting Services 的客户端打印
@@ -47,31 +47,31 @@ ms.locfileid: "66103933"
 ## <a name="enabling-and-disabling-client-side-printing"></a>启用和禁用客户端打印功能  
  报表服务器管理员可以通过设置报表服务器系统属性禁用打印功能的选项**EnableClientPrinting**到`false`。 这将对该服务器管理的所有报表禁用客户端打印功能。 默认情况下**EnableClientPrinting**设置为`true`。 您可以通过下列方式禁用客户端打印功能：  
   
--   对于本机模式下的报表服务器 ：  
+-   对于本机模式下的报表服务器  ：  
   
     1.  使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
     2.  连接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的报表服务器实例。  
   
-    3.  右键单击报表服务器节点，然后单击“属性”。 如果 **“属性”** 选项被禁用，请确认您是在使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
+    3.  右键单击报表服务器节点，然后单击“属性”  。 如果 **“属性”** 选项被禁用，请确认您是在使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
     4.  选择**允许下载 ActiveX 客户端打印控件**。  
   
-    5.  单击“确定” 。  
+    5.  单击“确定”  。  
   
--   对于 SharePoint 模式报表服务器 ：  
+-   对于 SharePoint 模式报表服务器  ：  
   
-    1.  在 SharePoint 管理中心中，单击 **“应用程序管理”**。  
+    1.  在 SharePoint 管理中心中，单击 **“应用程序管理”** 。  
   
-    2.  单击 **“管理服务应用程序”**。  
+    2.  单击 **“管理服务应用程序”** 。  
   
     3.  单击您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的名称，然后单击 SharePoint 功能区中的 **“管理”** 。  
   
-    4.  单击 **“系统设置”**。  
+    4.  单击 **“系统设置”** 。  
   
-    5.  选择 **“启用客户端打印”**。 **“启用客户端打印”** 选项位于页面的底部附近。  
+    5.  选择 **“启用客户端打印”** 。 **“启用客户端打印”** 选项位于页面的底部附近。  
   
-    6.  单击“确定” 。  
+    6.  单击“确定”  。  
   
 -   编写脚本或代码，设置报表服务器系统属性**EnableClientPrinting**到 `false.`  
   

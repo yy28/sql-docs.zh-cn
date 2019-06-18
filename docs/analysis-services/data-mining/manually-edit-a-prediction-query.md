@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aba181ab73ab730869eaa7930591cf21a947d20c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679408"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手动编辑预测查询
@@ -25,7 +25,7 @@ ms.locfileid: "62679408"
  使用预测查询生成器中的网格可插入对象和列的名称，并设置单个预测函数的语法，然后切换到手动编辑模式以更改参数值。  
   
 > [!NOTE]  
->  如果从“查询文本”视图切换回“设计”视图，则会丢失在“查询文本”视图中所做的任何更改。  
+>  如果从“查询文本”视图切换回“设计”视图，则会丢失在“查询文本”视图中所做的任何更改    。  
   
 ### <a name="modify-a-query"></a>修改查询  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62679408"
   
      屏幕底部的网格将替换为包含查询的文本编辑器。 可以在此编辑器中键入对查询的更改。  
   
-2.  若要运行查询，请在 **“挖掘模型”** 菜单上选择 **“结果”**，或者单击此按钮切换到查询结果。  
+2.  若要运行查询，请在 **“挖掘模型”** 菜单上选择 **“结果”** ，或者单击此按钮切换到查询结果。  
   
     > [!NOTE]  
     >  如果您创建的查询无效，则“结果”窗口将不会显示错误，也不会显示任何结果。 单击 **“设计”** 按钮，或者从 **“挖掘模型”** 菜单中选择 **“设计”** 或 **“查询”** 以解决问题并再次运行查询。  

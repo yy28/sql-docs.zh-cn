@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63031963"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>创建插入结果查询 (Visual Database Tools)
@@ -69,22 +69,22 @@ WHERE (pub_id = '0766')
   
 1.  创建一个新查询并添加要从其中复制行的表（源表）。 若要在同一个表内复制行，则可将源表作为目标表添加。  
   
-2.  在 **“查询设计器”** 菜单中，指向 **“更改类型”**，再单击 **“插入结果”**。  
+2.  在 **“查询设计器”** 菜单中，指向 **“更改类型”** ，再单击 **“插入结果”** 。  
   
 3.  在“ [选择插入结果的目标表](visual-database-tools.md)”对话框中，选择要将行复制到其中的表（目标表）。  
   
     > [!NOTE]  
-    >  查询和视图设计器无法预先确定您可更新哪些表和视图。 因此，“从查询选择插入的表”对话框中的“表名称”列表将显示所查询的数据连接中的所有可用表和视图，甚至包括不能将行复制到其中的表和视图。  
+    >  查询和视图设计器无法预先确定您可更新哪些表和视图。 因此，“从查询选择插入的表”  对话框中的“表名称”  列表将显示所查询的数据连接中的所有可用表和视图，甚至包括不能将行复制到其中的表和视图。  
   
-4.  在表示表或表值对象的矩形中，选择要复制其内容的列的名称。 若要复制整个行，请选择 **\* （所有列）**。  
+4.  在表示表或表值对象的矩形中，选择要复制其内容的列的名称。 若要复制整个行，请选择 **\* （所有列）** 。  
   
-     查询和视图设计器会将选择的列添加到“条件”窗格的“列”列中。  
+     查询和视图设计器会将选择的列添加到“条件”窗格的“列”  列中。  
   
-5.  在“条件”窗格的“追加”列中，为要复制的每个列选择目标表中的相应目标列。 选择*tablename。\** 如果要复制整行。 目标表中的列必须与源表中的列具有相同（或兼容）的数据类型。  
+5.  在“条件”窗格的“追加”  列中，为要复制的每个列选择目标表中的相应目标列。 选择*tablename。\** 如果要复制整行。 目标表中的列必须与源表中的列具有相同（或兼容）的数据类型。  
   
 6.  如果希望按特定顺序复制行，请指定排序顺序。 有关详细信息，请参阅[对查询结果进行排序和分组 (Visual Database Tools)](sort-and-group-query-results-visual-database-tools.md)。  
   
-7.  通过在“筛选器”列中输入搜索条件来指定要复制的行。 有关详细信息，请参阅[指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)。  
+7.  通过在“筛选器”  列中输入搜索条件来指定要复制的行。 有关详细信息，请参阅[指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)。  
   
      如果未指定搜索条件，则源表中的所有行都会复制到目标表中。  
   

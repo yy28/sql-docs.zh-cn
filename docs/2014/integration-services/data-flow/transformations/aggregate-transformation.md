@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770633"
 ---
 # <a name="aggregate-transformation"></a>聚合转换
@@ -100,7 +100,7 @@ ms.locfileid: "62770633"
   
  聚合转换是异步过程，也就是说它并非逐行地占用和发布数据， 而是占用整个行集，执行其分组和聚合操作，然后发布结果。  
   
- 此转换不传递任何列，而是在数据流中为发布的数据创建新列。 只有应用聚合函数的输入列或转换用于分组的输入列才复制到转换输出。 例如，聚合转换输入可能有三列：CountryRegion、City 和 Population。 转换按 **CountryRegion** 列分组，并对 **Population** 列应用 Sum 函数。 因此，输出不包含 **City** 列。  
+ 此转换不传递任何列，而是在数据流中为发布的数据创建新列。 只有应用聚合函数的输入列或转换用于分组的输入列才复制到转换输出。 例如，聚合转换输入可能有三列：CountryRegion  、City  和 Population  。 转换按 **CountryRegion** 列分组，并对 **Population** 列应用 Sum 函数。 因此，输出不包含 **City** 列。  
   
  也可将多个输出添加到聚合转换，并将每个聚合定向到不同输出。 例如，如果聚合转换应用 Sum 和 Average 函数，则可以将每个聚合定向到不同输出。  
   

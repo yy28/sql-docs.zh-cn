@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809340"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>服务器属性（“常规”页）— SQL Server Management Studio
@@ -58,10 +58,10 @@ ms.locfileid: "62809340"
  显示服务器支持的排序规则。 排序规则指定用于 Unicode 数据和非 Unicode 数据的特定代码页和排序顺序。  
   
  **已群集化**  
- 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集中配置了该服务器实例，则显示“True”；如果未群集该服务器实例，则显示“False”。  
+ 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集中配置了该服务器实例，则显示“True”  ；如果未群集该服务器实例，则显示“False”  。  
   
  **启用 HADR**  
- 如果启用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，则显示“True”；如果禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，则显示“False”。 有关启用或禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
+ 如果启用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，则显示“True”  ；如果禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，则显示“False”  。 有关启用或禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
 ## <a name="description-field"></a>说明字段  
  查看服务器属性的其他信息。  

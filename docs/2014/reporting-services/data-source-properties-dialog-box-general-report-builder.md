@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109473"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>“数据源属性”对话框 -&gt;“常规”（报表生成器）
@@ -55,7 +55,7 @@ ms.locfileid: "66109473"
  选择数据处理扩展插件。 该列表显示所有已注册的扩展插件。  
   
  **连接字符串**  
- 输入数据源的连接字符串。 单击 **“生成”** 可使用 **“连接属性”** 对话框生成连接字符串。 单击“表达式” (*fx*) 按钮可编辑表达式。  
+ 输入数据源的连接字符串。 单击 **“生成”** 可使用 **“连接属性”** 对话框生成连接字符串。 单击“表达式”  (*fx*) 按钮可编辑表达式。  
   
  **处理查询时使用单个事务**  
  选择此选项可指示使用此数据源的数据集在针对数据库的单个事务中运行。 若要将使用同一数据源的子报表的事务包括在内，请选择该子报表，然后在“属性”窗格中，将 **MergeTransactions** 设置为 **True**。  

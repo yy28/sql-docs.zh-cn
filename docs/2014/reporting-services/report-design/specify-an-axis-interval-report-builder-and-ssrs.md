@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104851"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
@@ -34,7 +34,7 @@ ms.locfileid: "66104851"
   
 ### <a name="to-show-all-category-labels-on-the-x-axis"></a>在 X 轴上显示所有类别标签  
   
-1.  右键单击类别轴，然后单击 **“轴属性”**。 随即会打开 **“轴属性”** 对话框。  
+1.  右键单击类别轴，然后单击 **“轴属性”** 。 随即会打开 **“轴属性”** 对话框。  
   
 2.  在中**轴选项**，请设置`Interval`到**1**。 随即显示每个类别组标签。 如果希望在 X 轴上显示所有其他类别组标签，请键入 **2**。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66104851"
   
 ### <a name="to-enable-a-variable-interval-calculation-on-an-axis"></a>启用轴上的可变间隔计算  
   
-1.  右键单击要更改的图表轴，然后单击 **“轴属性”**。 随即会打开 **“轴属性”** 对话框。  
+1.  右键单击要更改的图表轴，然后单击 **“轴属性”** 。 随即会打开 **“轴属性”** 对话框。  
   
 2.  在中**轴选项**，请设置`Interval`到**自动**。该图表将显示适合该轴的最佳类别标签数。  
   

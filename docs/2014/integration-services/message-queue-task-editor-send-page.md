@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057603"
 ---
 # <a name="message-queue-task-editor-send-page"></a>消息队列任务编辑器（“发送”页）
@@ -52,17 +52,17 @@ ms.locfileid: "66057603"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
  **DataFileMessage**  
- 键入数据文件的路径，或单击省略号 (…) 后再定位到相应的文件。  
+ 键入数据文件的路径，或单击省略号 (…) 后再定位到相应的文件。   
   
 ### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
  **VariableMessage**  
- 键入变量名称，或单击省略号 (…) 后再选择相应的变量。 各变量之间用逗号分隔。  
+ 键入变量名称，或单击省略号 (…) 后再选择相应的变量。  各变量之间用逗号分隔。  
   
  **相关主题：** 选择变量  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
  **StringMessage**  
- 键入字符串消息，或单击省略号 (…) 后在“输入字符串消息”对话框中键入消息。  
+ 键入字符串消息，或单击省略号 (…) 后在“输入字符串消息”对话框中键入消息。    
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

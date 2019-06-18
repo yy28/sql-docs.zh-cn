@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273401"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>创建数据源视图（数据挖掘基础教程）
@@ -24,9 +24,9 @@ ms.locfileid: "63273401"
   
 1.  在中**解决方案资源管理器**，右键单击**数据源视图**，然后选择**新数据源视图**。  
   
-2.  在“欢迎使用数据源视图向导”页中，单击“下一步”。  
+2.  在“欢迎使用数据源视图向导”  页中，单击“下一步”  。  
   
-3.  上**选择数据源**页面上，在**关系数据源**，选择你在上一任务中创建的 Adventure Works DW 2012 数据源。 单击“下一步” 。  
+3.  上**选择数据源**页面上，在**关系数据源**，选择你在上一任务中创建的 Adventure Works DW 2012 数据源。 单击“下一步”  。  
   
     > [!NOTE]  
     >  如果你想要创建数据源，请右击**数据源**，然后单击**新数据源**，启动数据源向导。  
@@ -37,7 +37,7 @@ ms.locfileid: "63273401"
   
     -   **vTargetMail (dbo)** -有关过去的自行车购买者的历史数据视图  
   
-5.  单击“下一步” 。  
+5.  单击“下一步”  。  
   
 6.  上**完成向导**页上，默认情况下数据源视图命名为 Adventure Works DW 2012。 将名称更改为`Targeted Mailing`，然后单击**完成**。  
   

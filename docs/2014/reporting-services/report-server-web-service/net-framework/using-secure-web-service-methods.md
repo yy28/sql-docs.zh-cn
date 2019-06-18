@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e88a164602f9bbe6ad42c3897285a484cac94466
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62518657"
 ---
 # <a name="using-secure-web-service-methods"></a>使用安全 Web 服务方法
@@ -28,7 +28,7 @@ ms.locfileid: "62518657"
 |级别|Description|  
 |-----------|-----------------|  
 |**0**|不安全。 对 Reporting Services SOAP API 的调用不要求安全连接。|  
-|大于“0”|安全。 对 Reporting Services SOAP API 所进行的所有调用都要求安全连接。|  
+|大于“0” |安全。 对 Reporting Services SOAP API 所进行的所有调用都要求安全连接。|  
   
  可以使用 Web 服务的 <xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A> 方法返回根据报表服务器的当前配置要求安全连接的 Web 服务方法列表。 在 SSL 方案中，应评估由 <xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A> 返回的方法列表，并根据所调用的方法将 Web 服务 URI 的架构名称更改为“https”或“http”。  
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775627"
 ---
 # <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
@@ -40,7 +40,7 @@ ms.locfileid: "62775627"
   
     1.  运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
   
-    2.  在左窗格中，单击 **“安装”**。  
+    2.  在左窗格中，单击 **“安装”** 。  
   
     3.  在右窗格中，单击**从 SQL Server 2005 中，SQL Server 2008、 SQL Server 2008 R2 或 SQL Server 2012 升级**。  
   

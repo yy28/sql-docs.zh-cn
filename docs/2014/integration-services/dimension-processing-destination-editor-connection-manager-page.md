@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059437"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>维度处理目标编辑器（“连接管理器”页）
@@ -28,16 +28,16 @@ ms.locfileid: "66059437"
   
 ## <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从列表中选择现有连接管理器，或单击“新建”创建新的连接管理器。  
+ 从列表中选择现有连接管理器，或单击“新建”  创建新的连接管理器。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  
   
  **可用维度列表**  
  选择要处理的维度。  
   
  **处理方法**  
- 选择要应用于列表中选定维度的处理方法。 此选项的默认值为 **“完全”**。  
+ 选择要应用于列表中选定维度的处理方法。 此选项的默认值为 **“完全”** 。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

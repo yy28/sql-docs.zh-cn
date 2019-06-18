@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62505996"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器和客户端服务帐户
@@ -24,15 +24,15 @@ ms.locfileid: "62505996"
   
 1.  在安装有 Distributed Replay 服务的计算机上，在命令提示符下键入 `dcomcnfg`。  
   
-2.  双击“服务”，向下滚动并右键单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<服务名称>”，然后单击“开始”或“停止”。  
+2.  双击“服务”，向下滚动并右键单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<服务名称>”，然后单击“开始”或“停止”     。  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>修改 Distributed Replay 控制器服务  
   
 1.  在控制器计算机上，停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器服务。  
   
-2.  在“服务”下，右键单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播控制器”，然后选择“属性”。  
+2.  在“服务”  下，右键单击  “[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播控制器”，然后选择“属性”  。  
   
-3.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器属性”** 窗口中的 **“登录”** 选项卡上，选择 **“本帐户”**，键入或单击 **“浏览”** 以输入新的登录帐户，然后单击 **“确定”**。  
+3.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器属性”** 窗口中的 **“登录”** 选项卡上，选择 **“本帐户”** ，键入或单击 **“浏览”** 以输入新的登录帐户，然后单击 **“确定”** 。  
   
      **重要**:在配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
   
@@ -58,15 +58,15 @@ ms.locfileid: "62505996"
   
     2.  在安装有控制器服务的控制器计算机上，在命令提示符下键入 `dcomcnfg`。  
   
-    3.  在“组件服务”窗口中，导航到“控制台根节点 -> 组件服务 -> 计算机 -> 我的电脑 -> DCOM Config ->DReplayController”。  
+    3.  在“组件服务”  窗口中，导航到“控制台根节点 -> 组件服务 -> 计算机 -> 我的电脑 -> DCOM Config ->DReplayController”  。  
   
-    4.  右键单击“DReplayController”，然后单击“属性”。  
+    4.  右键单击“DReplayController”  ，然后单击“属性”  。  
   
     5.  在 **“DReplayController 属性”** 窗口中的 **“安全性”** 选项卡上，单击 **“启动和激活权限”** 部分的 **“编辑”** 。  
   
-    6.  为新的客户端服务登录帐户授予 **“本地和远程激活”** 权限，然后单击 **“确定”**。  
+    6.  为新的客户端服务登录帐户授予 **“本地和远程激活”** 权限，然后单击 **“确定”** 。  
   
-    7.  单击 **“访问权限”** 部分的 **“编辑”** ，并为新的客户端服务登录帐户授予 **“本地和远程访问”** 权限，然后单击 **“确定”**。  
+    7.  单击 **“访问权限”** 部分的 **“编辑”** ，并为新的客户端服务登录帐户授予 **“本地和远程访问”** 权限，然后单击 **“确定”** 。  
   
     8.  单击 **“确定”** 以关闭 **“DReplayController 属性”** 窗口。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62505996"
   
 2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端服务。  
   
-3.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端属性”** 窗口中的 **“登录”** 选项卡上，选择 **“本帐户”**，键入或单击 **“浏览”** 以输入新的登录帐户，然后单击 **“确定”**。  
+3.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端属性”** 窗口中的 **“登录”** 选项卡上，选择 **“本帐户”** ，键入或单击 **“浏览”** 以输入新的登录帐户，然后单击 **“确定”** 。  
   
 4.  启动 Distributed Replay 客户端服务。  
   

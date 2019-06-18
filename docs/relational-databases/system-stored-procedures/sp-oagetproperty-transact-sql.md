@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6611998b8aa22242693ec5d44bf842671a777c98
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65449724"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
@@ -45,7 +45,7 @@ sp_OAGetProperty objecttoken , propertyname
  *objecttoken*  
  通过使用先前创建的 OLE 对象的对象令牌**sp_OACreate**。  
   
- propertyname  
+ propertyname   
  要返回的 OLE 对象的属性名。  
   
  *propertyvalue* **输出**  

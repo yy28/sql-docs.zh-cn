@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63154992"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
@@ -25,7 +25,7 @@ ms.locfileid: "63154992"
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 组件  
   
-|描述|主题|  
+|Description|主题|  
 |-----------------|-----------|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]介绍使用  执行的常见任务，如自定义键盘快捷方式和查看属性页。|[使用 SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)|  
 | 介绍如何使用“对象资源管理器” [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查看和管理  的一个或多个实例中的所有对象。|[对象资源管理器](object/object-explorer.md)|  

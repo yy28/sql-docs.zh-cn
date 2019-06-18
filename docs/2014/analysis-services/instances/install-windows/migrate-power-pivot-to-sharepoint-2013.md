@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6cbbe9f2ba24773ef2b55444e65ce946b0763a41
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079849"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>将 PowerPivot 迁移到 SharePoint 2013
@@ -61,9 +61,9 @@ ms.locfileid: "66079849"
 ##  <a name="bkmk_backup_restore"></a> 2) 备份、复制、还原数据库  
  "SharePoint 数据库附加升级"过程是一系列步骤来备份、 复制和还原 PowerPivot 相关内容和服务应用程序数据库移到 SharePoint 2013 场。  
   
-1.  **将数据库设置为只读的：** 在中[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，右键单击数据库名称，然后单击**属性**。 在“选项”页中，将“数据库只读”属性设置为 **True**。  
+1.  **将数据库设置为只读的：** 在中[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，右键单击数据库名称，然后单击**属性**。 在“选项”  页中，将“数据库只读”  属性设置为 **True**。  
   
-2.  **退后：** 备份每个内容数据库和你想要迁移到 SharePoint 2013 场的服务应用程序数据库。 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，右键单击数据库名称，再单击“任务”，然后单击“备份”。  
+2.  **退后：** 备份每个内容数据库和你想要迁移到 SharePoint 2013 场的服务应用程序数据库。 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，右键单击数据库名称，再单击“任务”  ，然后单击“备份”  。  
   
 3.  将数据库备份文件 (.bak) 复制到所需的目标服务器。  
   
@@ -72,21 +72,21 @@ ms.locfileid: "66079849"
 5.  **将数据库设置为读写：** 设置**数据库只读**到**False**。  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) 准备 Web 应用程序和装入内容数据库  
- 以下过程的更多详细说明，请参阅[数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+ 以下过程的更多详细说明，请参阅[数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690) 。  
   
 1.  **使数据库脱机：**  
   
      使用 SharePoint 管理中心使每个 SharePoint 2013 内容数据库脱机。 内容数据库将被您所复制到的数据库替换。 考虑哪个顺序是针对您的环境的最佳顺序。 考虑首先使每个数据库脱机并装入其相关的替换数据库，然后再使下一内容数据库脱机。 另一个选项是使所有内容数据库作为一组而一起脱机。  
   
-    1.  在 SharePoint 管理中心中，单击 **“应用程序管理”**。  
+    1.  在 SharePoint 管理中心中，单击 **“应用程序管理”** 。  
   
-    2.  单击 **“管理内容数据库”**。  
+    2.  单击 **“管理内容数据库”** 。  
   
     3.  单击数据库的名称。  
   
-    4.  在 **“管理内容数据库设置”** 上，将 **“数据库状态”** 设置为 **“脱机”**。  
+    4.  在 **“管理内容数据库设置”** 上，将 **“数据库状态”** 设置为 **“脱机”** 。  
   
-    5.  选择 **“删除内容数据库”**。 请注意显示的警告：在内容数据库中存储的站点将无法继续访问。  
+    5.  选择 **“删除内容数据库”** 。 请注意显示的警告：在内容数据库中存储的站点将无法继续访问。  
   
 -   **装入内容数据库：**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66079849"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     有关详细信息，请参阅[附加或分离内容数据库 (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx)。  
+     有关详细信息，请参阅[附加或分离内容数据库 (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx) 。  
   
      **完成该步骤时的状态：** 装入操作完成后，用户可以看到已处于旧的内容数据库中的文件。 因此，用户可以在文档库中看到和打开工作簿。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66079849"
   
  在 SharePoint 管理中心中，将 PowerPivot 服务应用程序配置为使用您复制到的旧服务应用程序数据库。 PowerPivot 服务将服务应用程序数据库升级到新架构。  
   
-1.  在 SharePoint 管理中心中，单击 **“管理服务应用程序”**。  
+1.  在 SharePoint 管理中心中，单击 **“管理服务应用程序”** 。  
   
 2.  找到 PowerPivot 服务应用程序，例如"默认 PowerPivot 服务应用程序"，单击服务应用程序的名称，然后单击**属性**SharePoint 功能区中。  
   
@@ -150,13 +150,13 @@ ms.locfileid: "66079849"
   
     1.  另一个用于迁移计划的选项是对每个工作簿都启用计划刷新。 导航到包含工作簿的文档库。  
   
-    2.  打开上下文菜单，然后单击 **“管理 PowerPivot 数据刷新”**。  
+    2.  打开上下文菜单，然后单击 **“管理 PowerPivot 数据刷新”** 。  
   
-    3.  在 **“计划刷新”** 部分中，单击 **“启用”**。  
+    3.  在 **“计划刷新”** 部分中，单击 **“启用”** 。  
   
-    4.  您可以选择 **“也尽快刷新”**。 此选项会在您单击“确定”后立即将一个刷新实例添加到队列中。 定期刷新计划仍将在适当的时间触发。  
+    4.  您可以选择 **“也尽快刷新”** 。 此选项会在您单击“确定”后立即将一个刷新实例添加到队列中。 定期刷新计划仍将在适当的时间触发。  
   
-    5.  单击 **“确定”**。 刷新历史记录现在将在刷新页中可见，并且刷新将在普通时间触发。  
+    5.  单击 **“确定”** 。 刷新历史记录现在将在刷新页中可见，并且刷新将在普通时间触发。  
   
  **SQL Server 2008 R2 PowerPivot workbooks**  
   
@@ -171,10 +171,10 @@ ms.locfileid: "66079849"
   
 -   [升级工作簿和计划的数据刷新 (SharePoint 2013)](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
--   [升级到 SharePoint 2013 的过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688)。  
+-   [升级到 SharePoint 2013 的过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688) 。  
   
--   [清理前升级到 SharePoint 2013 的准备工作](https://go.microsoft.com/fwlink/p/?LinkId=256689)(https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [清理前升级到 SharePoint 2013 的准备工作](https://go.microsoft.com/fwlink/p/?LinkId=256689)(https://go.microsoft.com/fwlink/p/?LinkId=256689) 。  
   
--   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690) 。  
   
   

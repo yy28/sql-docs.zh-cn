@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073601"
 ---
 # <a name="move-an-analysis-services-database"></a>移动 Analysis Services 数据库
@@ -53,7 +53,7 @@ ms.locfileid: "66073601"
   
 6.  右键单击**数据库**文件夹，然后选择**附加...**  
   
-7.  在 **“文件夹”** 文本框中，键入数据库文件夹的新位置。 或者，可以使用浏览按钮 (**...**) 以查找数据库文件夹。  
+7.  在 **“文件夹”** 文本框中，键入数据库文件夹的新位置。 或者，可以使用浏览按钮 ( **...** ) 以查找数据库文件夹。  
   
 8.  选择`ReadWrite`数据库模式。  
   

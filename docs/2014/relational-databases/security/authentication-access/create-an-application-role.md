@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011945"
 ---
 # <a name="create-an-application-role"></a>创建应用程序角色
@@ -56,15 +56,15 @@ ms.locfileid: "63011945"
   
 3.  展开 **“角色”** 文件夹。  
   
-4.  右键单击“应用程序角色”文件夹，然后选择“新建应用程序角色…”。  
+4.  右键单击“应用程序角色”文件夹，然后选择“新建应用程序角色…”   。  
   
-5.  在“常规”页的“应用程序角色 - 新建”对话框中，在“角色名称”框中输入新的应用程序角色的新名称。  
+5.  在“常规”页的“应用程序角色 - 新建”对话框中，在“角色名称”框中输入新的应用程序角色的新名称    。  
   
-6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号“(…)”以打开“定位架构”对话框。  
+6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号“(…)”以打开“定位架构”对话框   。  
   
 7.  在 **“密码”** 框中，输入新角色的密码。 在 **“确认密码”** 框中再次输入该密码。  
   
-8.  在 **“此角色拥有的架构”**，选择或查看此角色将拥有的架构。 架构只能由一个架构或角色拥有。  
+8.  在 **“此角色拥有的架构”** ，选择或查看此角色将拥有的架构。 架构只能由一个架构或角色拥有。  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -81,9 +81,9 @@ ms.locfileid: "63011945"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Creates an application role called "weekly_receipts" that has the password "987Gbv876sPYY5m23" and "Sales" as its default schema.  

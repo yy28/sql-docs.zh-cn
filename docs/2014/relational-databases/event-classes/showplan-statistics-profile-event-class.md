@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0dc08151d47bee9190f199e187db25a3b5dd6de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662059"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile 事件类
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan Statistics Profile 事件类。 所包括的信息是 Showplan XML Statistics Profile 事件类中所含信息的一部分。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan Statistics Profile 事件类。 所包括的信息是 Showplan XML Statistics Profile 事件类中所含信息的一部分。  
   
  Showplan Statistics Profile 事件类显示完整的编写时数据；包含 Showplan Statistics Profile 的跟踪可能会使性能明显降低。 若要最大限度地降低此开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪。  
   

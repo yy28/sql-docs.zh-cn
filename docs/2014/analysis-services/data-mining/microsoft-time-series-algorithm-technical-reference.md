@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c5ffde59f990602964ac178e629a9967d6304d2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083756"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
@@ -59,7 +59,7 @@ ms.locfileid: "66083756"
   
 -    在 Microsoft 时序算法中包括的 ARIMA 公式使用“自动回归”  和“移动平均值”这两个项。  
   
--    时序模型可以是“静态的” 或“非静态的”。  “静态模型”  是还原为平均值的那些模型（尽管它们可能具有循环），而“非静态模型” 不具有平衡焦点，需要承受“充量”或外部变量引入的更大差异或变化。  
+-    时序模型可以是“静态的”  或“非静态的”。  “静态模型”  是还原为平均值的那些模型（尽管它们可能具有循环），而“非静态模型”  不具有平衡焦点，需要承受“充量”或外部变量引入的更大差异或变化。  
   
 -    “差分”的目标是使时序稳定且变得静态。  
   
@@ -90,39 +90,39 @@ ms.locfileid: "66083756"
 ### <a name="detection-of-seasonality"></a>季节性检测  
  ARIMA 和 ARTXP 算法都支持季节性检测或周期检测。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在定型之前使用快速傅立叶变换检测季节性。 但是，您可以通过设置算法参数，影响季节性检测以及时序分析的结果。  
   
--   通过更改 AUTODETECT_SEASONALITY 的值，可以影响生成的时间段的可能数目。  
+-   通过更改 AUTODETECT_SEASONALITY  的值，可以影响生成的时间段的可能数目。  
   
--   通过为 PERIODICITY_HINT 设置一个值或多个值，可以为算法提供有关数据中预期周期的信息并有可能提高检测精度。  
+-   通过为 PERIODICITY_HINT  设置一个值或多个值，可以为算法提供有关数据中预期周期的信息并有可能提高检测精度。  
   
 > [!NOTE]  
 >  ARTXP 和 ARIMA 算法都对季节性提示非常敏感。 因此，提供错误提示可能会对结果产生不利影响。  
   
 ### <a name="choosing-an-algorithm-and-specifying-the-blend-of-algorithms"></a>选择算法和指定算法混合  
- 默认情况下，在选择 MIXED 选项时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将算法组合起来并向它们分配相等的权重。 不过，在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 中，可以指定特定的算法，或者可以通过设置参数来自定义结果中各算法的比例，该参数针对短期预测或长期预测为结果加权。 默认情况下，FORECAST_METHOD 参数将设置为 MIXED，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用这两个算法，并对其值加权以最大化每个算法的强度。  
+ 默认情况下，在选择 MIXED 选项时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将算法组合起来并向它们分配相等的权重。 不过，在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 中，可以指定特定的算法，或者可以通过设置参数来自定义结果中各算法的比例，该参数针对短期预测或长期预测为结果加权。 默认情况下，FORECAST_METHOD  参数将设置为 MIXED，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用这两个算法，并对其值加权以最大化每个算法的强度。  
   
--   若要控制算法选择，可以设置 FORECAST_METHOD 参数。  
+-   若要控制算法选择，可以设置 FORECAST_METHOD  参数。  
   
 -   如果要使用交叉预测，则必须使用 ARTXP 或 MIXED 选项，原因是 ARIMA 不支持交叉预测。  
   
--   如果更看重短期预测，则将 FORECAST_METHOD 设置为 ARTXP。  
+-   如果更看重短期预测，则将 FORECAST_METHOD  设置为 ARTXP。  
   
--   如果想要改进长期预测，则将 FORECAST_METHOD 设置为 ARIMA。  
+-   如果想要改进长期预测，则将 FORECAST_METHOD  设置为 ARIMA。  
   
- 在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]中，还可以自定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 混合使用 ARIMA 和 ARTXP 算法组合的方式。 可以通过设置 PREDICTION_SMOOTHING 参数控制混合的起点和变化速率：  
+ 在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]中，还可以自定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 混合使用 ARIMA 和 ARTXP 算法组合的方式。 可以通过设置 PREDICTION_SMOOTHING  参数控制混合的起点和变化速率：  
   
--   如果将 PREDICTION_SMOOTHING 设置为 0，则模型将仅使用 ARTXP。  
+-   如果将 PREDICTION_SMOOTHING  设置为 0，则模型将仅使用 ARTXP。  
   
--   如果将 PREDICTION_SMOOTHING 设置为 1，则模型将仅使用 ARIMA。  
+-   如果将 PREDICTION_SMOOTHING  设置为 1，则模型将仅使用 ARIMA。  
   
--   如果将 PREDICTION_SMOOTHING 设置为 0 和 1 之间的某个值，则模型对 ARTXP 算法所加的权重将随着预测步长增加而按指数规律减小。 同时，模型还将 ARIMA 算法的权重设置为 ARTXP 权重的 1 补数。 模型使用规范化和一个稳定常量来平滑曲线。  
+-   如果将 PREDICTION_SMOOTHING  设置为 0 和 1 之间的某个值，则模型对 ARTXP 算法所加的权重将随着预测步长增加而按指数规律减小。 同时，模型还将 ARIMA 算法的权重设置为 ARTXP 权重的 1 补数。 模型使用规范化和一个稳定常量来平滑曲线。  
   
  一般来说，如果最多预测 5 个时间段，则 ARTXP 几乎总是最佳选择。 但是，当增加要预测的时间段的个数时，ARIMA 的性能通常会更好。  
   
- 下图演示当 PREDICTION_SMOOTHING 设置为默认值 0.5 时模型如何混合使用这两个算法。 ARIMA 和 ARTXP 开始时权重相等，但随着预测步骤数增加，ARIMA 的权重越来越大。  
+ 下图演示当 PREDICTION_SMOOTHING  设置为默认值 0.5 时模型如何混合使用这两个算法。 ARIMA 和 ARTXP 开始时权重相等，但随着预测步骤数增加，ARIMA 的权重越来越大。  
   
  ![时序算法混合的默认曲线](../media/time-series-mixing-default.gif "时序算法混合的默认曲线")  
   
- 而下图演示当 PREDICTION_SMOOTHING 设置为 0.2 时如何混合使用这两个算法。 对于步骤 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]，模型为 ARIMA 加的权重为 0.2，为 ARTXP 加的权重为 0.8。 此后，ARIMA 的权重将按指数规律增大，而 ARTXP 的权重将按指数规律减小。  
+ 而下图演示当 PREDICTION_SMOOTHING  设置为 0.2 时如何混合使用这两个算法。 对于步骤 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]，模型为 ARIMA 加的权重为 0.2，为 ARTXP 加的权重为 0.8。 此后，ARIMA 的权重将按指数规律增大，而 ARTXP 的权重将按指数规律减小。  
   
  ![时序模型混合的衰减曲线](../media/time-series-blending-curve.gif "时序模型混合的衰减曲线")  
   
@@ -137,12 +137,12 @@ ms.locfileid: "66083756"
 |*HISTORIC_MODEL_COUNT*|指定将要生成的历史模型的数量。 默认值为 1。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
 |*HISTORICAL_MODEL_GAP*|指定两个连续的历史模型之间的时间间隔。 默认值为 10。 该值表示时间单位数，其中单位由模型定义。<br /><br /> 例如，如果将此值设置为 g，则将以 g、2*g、3\*g（依此类推）的时间间隔为被时间段截断的数据生成历史模型。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
 |*INSTABILITY_SENSITIVITY*|控制预测方差超过特定阈值的点，在该点后 ARTXP 算法将禁止预测。 默认值为 1。<br /><br /> 注意：此参数不适用于仅使用 ARIMA 的模型。<br /><br /> 默认值 1 提供与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]相同的行为。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 监视每个预测的规范化标准偏差。 对于任何预测，只要该值超过阈值，时序算法就会返回 NULL 并停止预测过程。<br /><br /> 值 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 将停止不稳定的检测。 这意味着无论方差为多少，都可以创建无限个预测。<br /><br /> 注意：此参数只能在修改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]企业。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅使用默认值 1。|  
-|*MAXIMUM_SERIES_VALUE*|指定用于预测的最大值。 此参数与 MINIMUM_SERIES_VALUE 一起用于将预测约束到某一预期范围。 例如，您可以指定任何一天的预测销售数量决不应超过库存产品数量。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
-|*MINIMUM_SERIES_VALUE*|指定可以预测的最小值。 此参数与 MAXIMUM_SERIES_VALUE 一起用于将预测约束到某一预期范围。 例如，可以指定预测的销售额决不应为负数。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
+|*MAXIMUM_SERIES_VALUE*|指定用于预测的最大值。 此参数与 MINIMUM_SERIES_VALUE  一起用于将预测约束到某一预期范围。 例如，您可以指定任何一天的预测销售数量决不应超过库存产品数量。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
+|*MINIMUM_SERIES_VALUE*|指定可以预测的最小值。 此参数与 MAXIMUM_SERIES_VALUE  一起用于将预测约束到某一预期范围。 例如，可以指定预测的销售额决不应为负数。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
 |*MINIMUM_SUPPORT*|指定在每个时序树中生成一个拆分所需的最小时间段数。 默认值为 10。|  
 |*MISSING_VALUE_SUBSTITUTION*|指定如何填补历史数据中的空白。 默认情况下，不允许数据中存在空白。 如果数据中包含多个序列，则序列也不能有参差不齐的边缘。 也就是说，所有序列都应具有相同的起点和终点。 对时序模型执行 `PREDICTION JOIN` 时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还使用此参数的值来填补新数据中的空白。 下表将列出此参数的可能值：<br /><br /> None:默认值。 用沿定型模型曲线绘制的值来替换缺失值。<br /><br /> 上一：重复前一时间段中的值。<br /><br /> 平均值：使用的培训中使用的时间段的变动平均值。<br /><br /> 数值常量：使用指定的数字来替换所有缺失值。|  
 |*PERIODICITY_HINT*|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。<br /><br /> 方括号 [] 中的 n 是可选项，并且可以按需多次重复。 例如，若要为按月提供的数据提供多个周期提示，则可以输入 {12, 3, 1} 来检测年度、季度和月的模式。 但是，周期对模型质量有重大影响。 如果给出的提示与实际周期不同，则会对结果造成不良影响。<br /><br /> 默认值为 {1}。<br /><br /> 注意：大括号是必需的。 另外，此参数具有字符串数据类型。 因此，如果在数据挖掘扩展插件 (DMX) 语句中键入此参数，则必须用引号将数字和大括号括起来。|  
-|*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]设置用户帐户 ：指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 0.5:（默认值）指定预测时应使用这两种算法并混合结果。<br /><br /> 1:指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> <br /><br /> 注意：使用*FORECAST_METHOD*参数来控制定型。|  
+|*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]设置用户帐户 ：指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 0.5:（默认值）指定预测时应使用这两种算法并混合结果。<br /><br /> 1：指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> <br /><br /> 注意：使用*FORECAST_METHOD*参数来控制定型。|  
   
 ### <a name="modeling-flags"></a>建模标志  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](modeling-flags-data-mining.md)。  

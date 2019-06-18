@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62829362"
 ---
 # <a name="xml-task"></a>XML 任务
@@ -84,7 +84,7 @@ ms.locfileid: "62829362"
 ### <a name="xpath-operation"></a>XPath 运算  
  可将 XPath 运算配置为使用不同类型的 XPath 功能。  
   
--   选择“计算”选项，以实现各种 XPath 函数，如 sum()。  
+-   选择“计算”  选项，以实现各种 XPath 函数，如 sum()。  
   
 -   选择 **“结点列表”** 选项，将选定节点以 XML 片段方式返回。  
   

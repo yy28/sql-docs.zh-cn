@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065731"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>翻译（维度设计器）（Analysis Services - 多维数据）
@@ -26,10 +26,10 @@ ms.locfileid: "66065731"
  **“翻译”** 选项卡包含以下窗格：  
   
  [工具栏](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
- 使用工具栏可以执行维度设计器的“翻译”选项卡中的常规操作。  
+ 使用工具栏可以执行维度设计器的“翻译”  选项卡中的常规操作。  
   
  [翻译详细信息](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
- 使用“翻译详细信息”窗格可以浏览和管理与维度关联的翻译。  
+ 使用“翻译详细信息”  窗格可以浏览和管理与维度关联的翻译。  
   
 ## <a name="see-also"></a>请参阅  
  [维度设计器&#40;Analysis Services-多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)   

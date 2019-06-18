@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483006"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>显式层次结构 (Master Data Services)
@@ -39,7 +39,7 @@ ms.locfileid: "65483006"
  强制显式层次结构要求所有叶成员必须包含在层次结构树中。 默认情况下，所有成员都包含在该树的根上。 您可以根据需要重新排列成员。  
   
 ### <a name="non-mandatory-explicit-hierarchy"></a>非强制显式层次结构  
- 非强制显式层次结构是所有叶成员都处于系统创建的“未使用”节点中的层次结构。 可以根据需要将成员移出此节点。 其余成员可以保留在 **“未使用”** 节点中。  
+ 非强制显式层次结构是所有叶成员都处于系统创建的“未使用”  节点中的层次结构。 可以根据需要将成员移出此节点。 其余成员可以保留在 **“未使用”** 节点中。  
   
  使用非强制显式层次结构时，对层次结构所做的任何报告或分析可能与对强制层次结构所做的报告或分析不一致。  
   

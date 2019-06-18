@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8d81a1df5e574c2ae4821176634e439f4ab6b07
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075100"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>多维数据集、分区和维度处理的错误配置 (SSAS - Multidimensional)
@@ -105,9 +105,9 @@ ms.locfileid: "66075100"
   
 #### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
   
-1.  在“对象资源管理器”中，右键单击以下对象之一的“属性”：维度、多维数据集或分区。  
+1.  在“对象资源管理器”中，右键单击以下对象之一的“属性”  ：维度、多维数据集或分区。  
   
-2.  在“属性”中，单击 **“错误配置”**。  
+2.  在“属性”中，单击 **“错误配置”** 。  
   
 #### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
   
@@ -131,7 +131,7 @@ ms.locfileid: "66075100"
   
 1.  在 SQL Server Data Tools 的解决方案资源管理器中，双击多维数据集以便在多维数据集设计器中打开它。  
   
-2.  在“度量值”窗格中右键单击某个度量值，然后选择“属性”。  
+2.  在“度量值”窗格中右键单击某个度量值，然后选择“属性”  。  
   
 3.  在属性中，展开**源**若要查看`NullProcessing`属性。 它在默认情况下设置为 **“Automatic”** ，这对于 OLAP 项，会将包含数字数据的字段的 null 值转换为零。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66075100"
   
 1.  在 SQL Server Data Tools 的解决方案资源管理器中，双击维度以便在维度设计器中打开它。  
   
-2.  在“属性”窗格中右键单击某个属性，然后选择“属性”。  
+2.  在“属性”窗格中右键单击某个属性，然后选择“属性”  。  
   
 3.  在属性中，展开**KeyColumns**若要查看`NullProcessing`属性。 它在默认情况下设置为 **“Automatic”** ，这会将包含数字数据的字段的 null 值转换为零。 将值更改为任一`Error`或`UnknownMember`。  
   

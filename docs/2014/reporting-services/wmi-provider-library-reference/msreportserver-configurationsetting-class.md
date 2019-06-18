@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a7956d71bf9cf477049864c5f4eb341fd276a48
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66097341"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting 类
@@ -45,7 +45,7 @@ public class MSReportServer_ConfigurationSetting
  此类型的任何公共静态（**中的** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）成员在多线程操作中是安全的。 不能保证任何实例成员都是线程安全的。  
   
 ## <a name="example"></a>示例  
- 若要运行下面的代码，请添加服务器名称来取代每个 \<servername>。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例会遍历 [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) 类的每个属性，并向控制台输出每个属性的名称及其属性值。  
+ 若要运行下面的代码，请添加服务器名称来取代每个 \<servername  >。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例会遍历 [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) 类的每个属性，并向控制台输出每个属性的名称及其属性值。  
   
 ```vb  
 Imports System  

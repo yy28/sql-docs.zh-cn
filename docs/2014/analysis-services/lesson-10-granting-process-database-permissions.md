@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc77762698b04143802ad38c05385d4b18555e1c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079151"
 ---
 # <a name="granting-process-database-permissions"></a>授予处理数据库权限
@@ -26,29 +26,29 @@ ms.locfileid: "66079151"
   
 ## <a name="defining-a-process-database-objects-security-role"></a>定义“Process Database Objects”安全角色  
   
-1.  在解决方案资源管理器中，右键单击“角色”，然后单击“新建角色”以便打开角色设计器。  
+1.  在解决方案资源管理器中，右键单击“角色”  ，然后单击“新建角色”  以便打开角色设计器。  
   
-2.  单击“处理数据库”复选框。  
+2.  单击“处理数据库”  复选框。  
   
 3.  在属性窗口中更改**名称**到此新角色的属性`Process Database Objects Role`。  
   
      ![角色设计器](../../2014/tutorials/media/l10-security-1.png "角色设计器")  
   
-4.  切换到角色设计器的“成员身份”选项卡，然后单击“添加”。  
+4.  切换到角色设计器的“成员身份”  选项卡，然后单击“添加”  。  
   
-5.  输入将是此角色的成员的 Windows 域用户或组的帐户。 单击“检查名称”以便验证帐户信息，然后单击“确定”。  
+5.  输入将是此角色的成员的 Windows 域用户或组的帐户。 单击“检查名称”  以便验证帐户信息，然后单击“确定”  。  
   
-6.  切换到角色设计器的“多维数据集”选项卡。  
+6.  切换到角色设计器的“多维数据集”  选项卡。  
   
      注意，此角色的成员有处理此数据库的权限，但不具有访问 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的数据的权限，也不具有本地多维数据集/钻取访问权限，如下图所示。  
   
      ![多维数据集角色设计器选项卡](../../2014/tutorials/media/l10-security-2.png "多维数据集角色设计器选项卡")  
   
-7.  切换到角色设计器的“维度”选项卡。  
+7.  切换到角色设计器的“维度”  选项卡。  
   
      注意，此角色的成员有权处理此数据库中的所有维度对象，并且在默认情况下，对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 数据库中的每个维度对象有读取访问权限。  
   
-8.  在“生成”菜单上，单击“部署 Analysis Services 教程”。  
+8.  在“生成”  菜单上，单击“部署 Analysis Services 教程”  。  
   
      现在，您已经成功定义和部署了“Process Database Objects”安全角色。 将多维数据集部署到生产环境之后，所部署的多维数据集的管理员可以根据需要向此角色中添加用户，以便将处理责任委派给具体用户。  
   

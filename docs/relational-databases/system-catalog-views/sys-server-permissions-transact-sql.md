@@ -22,10 +22,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a1631532cb31813d8425fbf97ee4eec1936d9a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62683841"
 ---
 # <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
@@ -35,15 +35,15 @@ ms.locfileid: "62683841"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|class|**tinyint**|标识存在权限的对象的类。<br /><br /> 100 = 服务器<br /><br /> 101 = 服务器主体<br /><br /> 105 = 端点|  
+|class |**tinyint**|标识存在权限的对象的类。<br /><br /> 100 = 服务器<br /><br /> 101 = 服务器主体<br /><br /> 105 = 端点|  
 |**class_desc**|**nvarchar(60)**|权限所针对的类的说明。 可以是以下值之一：<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|存在权限的安全对象的 ID，根据类解释。 通常情况下，这只是一种应用于类表示的内容的 ID。 非标准的解释如下：<br /><br /> 100 = 始终为 0|  
 |**minor_id**|**int**|存在权限的对象的辅助 ID，根据类进行解释。|  
 |**grantee_principal_id**|**int**|向其授予权限的服务器主体 ID。|  
 |**grantor_principal_id**|**int**|这些权限的授权者的服务器主体 ID。|  
-|**类型**|**char(4)**|服务器权限类型。 有关权限类型的列表，请参阅下一个表。|  
+|**type**|**char(4)**|服务器权限类型。 有关权限类型的列表，请参阅下一个表。|  
 |**permission_name**|**nvarchar(128)**|权限名称。|  
-|State|**char(1)**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = Grant With Grant 选项|  
+|State |**char(1)**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = Grant With Grant 选项|  
 |**state_desc**|**nvarchar(60)**|权限状态的说明：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |权限类型|权限名称|适用于安全对象|  

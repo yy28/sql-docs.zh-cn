@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087764"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>比较表格和多维解决方案 (SSAS)
@@ -116,7 +116,7 @@ ms.locfileid: "66087764"
 |用户定义的层次结构|[是](multidimensional-models/user-defined-hierarchies-create.md)|是|  
 |写回|[是](multidimensional-models/set-partition-writeback.md)|否|  
   
- * 如果你的解决方案必须支持非常大量的非重复计数 （例如，数以百万计的客户 Id），请首先考虑表格。 表格在此方案中往往具有更高的性能。 请参阅有关在白皮书中，非重复计数部分[Analysis Services 案例研究：在大型商业解决方案中使用表格模型](https://msdn.microsoft.com/library/dn751533.aspx)。  
+ \* 如果你的解决方案必须支持非常大量的非重复计数 （例如，数以百万计的客户 Id），请首先考虑表格。 表格在此方案中往往具有更高的性能。 请参阅有关在白皮书中，非重复计数部分[Analysis Services 案例研究：在大型商业解决方案中使用表格模型](https://msdn.microsoft.com/library/dn751533.aspx)。  
   
 ##  <a name="bkmk_modelsize"></a> 模型大小  
  就对象的总数而言，模型大小不依解决方案类型而定。 但是，用来生成各解决方案的设计工具在其适应处理大量对象的程度上有所不同。 更大的模型有时候在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中构建会更容易，因为它提供更多的功能以便在对象资源管理器和解决方案资源管理器中按类型描绘和列出对象。  

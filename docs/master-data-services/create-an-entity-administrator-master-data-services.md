@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0b0907b41aeaa27868e434e4d63d7ea11069de32
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477109"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>创建实体管理员 (Master Data Services)
@@ -36,17 +36,17 @@ ms.locfileid: "65477109"
   
 ## <a name="to-create-an-entity-administrator"></a>创建实体管理员  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”** 。  
   
-2.  选择要编辑的用户或组所对应的行，然后单击“编辑所选用户” 。  
+2.  选择要编辑的用户或组所对应的行，然后单击“编辑所选用户”  。  
   
-3.  单击  “模型”选项卡，（可选）从  “模型”列表中选择一个模型，然后单击“编辑” 。  
+3.  单击  “模型”选项卡，（可选）从  “模型”列表中选择一个模型，然后单击“编辑”  。  
   
 4.  单击你想要授予权限的实体，然后单击菜单上的“管理员”  。  
   
 5.  对希望组或用户成为其管理员的每个实体，完成步骤 4。  
   
-6.  单击“保存” 。  
+6.  单击“保存”  。  
   
 ## <a name="see-also"></a>请参阅  
  [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071144"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>使用数据馈送库共享数据馈送 (PowerPivot for SharePoint)
@@ -55,9 +55,9 @@ ms.locfileid: "66071144"
   
 1.  在 SharePoint 站点上，打开数据馈送库或另一个您已添加和配置了数据服务内容类型的文档库。 若要查找以前创建的数据馈送库，请单击“快速启动”中的 **“查看全部”** 。  
   
-2.  在页顶部功能区的“文档工具”中，单击 **“文档”**。  
+2.  在页顶部功能区的“文档工具”中，单击 **“文档”** 。  
   
-3.  单击 **“新建文档”** ，然后选择 **“数据服务文档”**。  
+3.  单击 **“新建文档”** ，然后选择 **“数据服务文档”** 。  
   
 4.  在“新建数据服务文档”页中，输入以下信息：  
   

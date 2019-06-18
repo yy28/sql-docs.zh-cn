@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779660"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文目录属性（“常规”页）
@@ -64,7 +64,7 @@ ms.locfileid: "62779660"
  全文目录的名称。  
   
  **区分重音**  
- 查看或修改目录是否区分标注字符，例如波形符 (**~**)、锐音符 (**´**) 或元音 (**¨**)。 有效值为  
+ 查看或修改目录是否区分标注字符，例如波形符 ( **~** )、锐音符 (**´**) 或元音 (**¨**)。 有效值为  
   
 -   **是**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62779660"
   
 |||  
 |-|-|  
-|**无**|不执行 **“优化目录”**、 **“重新生成目录”** 或 **“重新填充目录”** 操作。|  
+|**无**|不执行 **“优化目录”** 、 **“重新生成目录”** 或 **“重新填充目录”** 操作。|  
 |**优化目录**|优化目录的空间利用率，从而提高查询性能。 它还可提高搜索结果相关排名的准确性。<br /><br /> 该操作执行 ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE。|  
 |**重新生成目录**|删除并重新生成全文目录。 如果更改了基本目录属性（如区分重音），则必须执行此操作。<br /><br /> 全文目录所在的文件组必须为联机或可读写状态，重新生成才可成功。 重新生成后，全文索引将重新填充。<br /><br /> 该操作执行 ALTER FULLTEXT CATALOG *catalog_name* REBUILD。|  
 |**重新填充目录**|使用数据的最新更改来更新目录。 使用此选项并不要求停用目录。|  

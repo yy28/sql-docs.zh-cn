@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080416"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>“输入选择”选项卡（“挖掘准确性图表”视图）
   可以使用 **“挖掘准确性图表”** 设计器的 **“输入选择”** 选项卡，指定用于测试模型和生成准确性图表的数据源。  
   
- **详细信息：**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
+ **详细信息：** [测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>选项  
  **同步预测**  **列和值**  
@@ -50,14 +50,14 @@ ms.locfileid: "66080416"
 |**指定其他数据集**|从现有数据源视图中指定要用作测试数据集的表。|  
   
 ## <a name="filtering-options"></a>筛选选项  
- 如果选择选项 **“指定其他数据集”**，则可以定义数据源视图并创建要应用于这些数据的筛选器。 创建筛选器时，您将在从数据源视图返回测试数据的查询中创建 WHERE 子句。  
+ 如果选择选项 **“指定其他数据集”** ，则可以定义数据源视图并创建要应用于这些数据的筛选器。 创建筛选器时，您将在从数据源视图返回测试数据的查询中创建 WHERE 子句。  
   
  **注意** 使用 **“输入选择”** 选项卡无法为挖掘模型指定筛选器。若要创建模型筛选器，请单击 **“挖掘模型”** 选项卡，然后编辑模型属性。  
   
  如果创建挖掘模型时未创建用于测试的维持集，则可以选择此选项并将原始数据源视图指定为测试集。 通过使用此解决方法，您还可以设置原始数据集的筛选器。  
   
  **指定列映射**  
- 打开“指定列映射”对话框，在其中可以选择数据源、指定事例表和嵌套表以及将外部数据列映射到挖掘结构列。  
+ 打开“指定列映射”  对话框，在其中可以选择数据源、指定事例表和嵌套表以及将外部数据列映射到挖掘结构列。  
   
  有关详细信息，请参阅[“指定列映射”对话框（挖掘准确性图表）](specify-column-mapping-dialog-box-mining-accuracy-chart.md)。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66080416"
  显示使用筛选器编辑器生成的筛选条件。  
   
  **打开筛选器编辑器**  
- 打开“数据集筛选器”对话框（使用该对话框可以选择外部表并对事例表列设置条件）和“筛选器”对话框（该对话框可帮助你生成应用于所选表中各个列或应用于嵌套表中的列的条件）。  
+ 打开“数据集筛选器”  对话框（使用该对话框可以选择外部表并对事例表列设置条件）和“筛选器”  对话框（该对话框可帮助你生成应用于所选表中各个列或应用于嵌套表中的列的条件）。  
   
 ## <a name="see-also"></a>请参阅  
  [测试和验证任务和操作指南&#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   

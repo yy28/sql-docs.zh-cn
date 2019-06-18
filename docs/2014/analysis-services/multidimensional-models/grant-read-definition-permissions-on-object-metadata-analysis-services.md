@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074899"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授予对象元数据的读取定义权限 (Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66074899"
   
  我们建议您包括`Read Definition`在数据库级别设置为专用处理角色时的权限。 无`Read Definition`使得非管理员可以查看模型的对象层次结构中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]并导航到单个对象进行后续处理。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”，然后单击某个数据库角色（或创建一个新的数据库角色）。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”  ，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
 2.  上**常规**选项卡上，选择`Read Definition`选项。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66074899"
   
 ## <a name="set-read-definition-permissions-on-individual-objects"></a>设置单个对象的读取定义权限  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，打开“数据库”文件夹，选择一个数据库，在对象资源管理器中展开相应数据库的“角色”，然后单击某个数据库角色（或创建新的数据库角色）。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，打开“数据库”  文件夹，选择一个数据库，在对象资源管理器中展开相应数据库的“角色”  ，然后单击某个数据库角色（或创建新的数据库角色）。  
   
 2.  在中**常规**窗格中，清除数据库权限的`Read Definition`。 此步骤清除了权限继承，这样便可对单个对象设置权限。  
   

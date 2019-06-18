@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074207"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>内部成员属性 (MDX)
@@ -34,7 +34,7 @@ ms.locfileid: "66074207"
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供程序可能支持其他内部成员属性。 有关其他访问接口支持的内部成员属性的详细信息，请参阅这些访问接口附带的文档。  
   
 ## <a name="types-of-member-properties"></a>成员属性的类型  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持以下两种类型的内部成员属性：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持以下两种类型的内部成员属性：  
   
  上下文相关的成员属性  
  这些成员属性必须在特定层次结构或级别的上下文中使用，用于为指定维度或级别的每个成员提供值。  

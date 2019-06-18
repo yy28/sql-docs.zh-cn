@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107302"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的元素路径语法 (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107302"
 ||（垂直条）|分隔语法项。 只能选择其中一项。|  
 |`[ ] (brackets)`|可选语法项。 不要键入方括号。|  
 |**{ }** （大括号）|分隔语法项的参数。|  
-|[...*n*]|指示前面的项可以重复 *n* 次。 各项之间以逗号分隔。|  
+|[  ...*n*]|指示前面的项可以重复 *n* 次。 各项之间以逗号分隔。|  
   
 ## <a name="syntax"></a>语法  
   
@@ -78,7 +78,7 @@ XMLLocalName :: =
 |`ElementNode`|XML 文档中的 XML 节点。 节点由标记指定，并与其他节点之间存在层次结构关系。 例如，\<Customers> 是根元素节点。 \<Customer> 是 \<Customers> 的子元素。|  
 |`XMLName`|节点的名称。 例如，Customers 节点的名称为 Customers。 `XMLName` 可以使用命名空间标识符作为前缀，以唯一命名每个节点。|  
 |`Encoding`|指示此元素的 `Value` 是编码的 XML，它需要解码并作为此元素的子元素。|  
-|`FieldList`|定义要用于检索数据的元素和属性集。<br /><br /> 如果未指定，则所有属性和子元素都将用作字段。 如果指定了空字段列表 (**{}**)，则不使用来自该节点的任何字段。<br /><br /> `FieldList` 不可以同时包含 `Value` 以及 `Element` 或 `ElementNode`。|  
+|`FieldList`|定义要用于检索数据的元素和属性集。<br /><br /> 如果未指定，则所有属性和子元素都将用作字段。 如果指定了空字段列表 ( **{}** )，则不使用来自该节点的任何字段。<br /><br /> `FieldList` 不可以同时包含 `Value` 以及 `Element` 或 `ElementNode`。|  
 |`Field`|指定作为数据集字段检索的数据。|  
 |`Attribute`|`ElementNode` 中的“名称-值”对。 例如，在元素节点\<客户 ID ="1">，`ID`是属性和`@ID(Integer)`返回"1"的整数类型中对应的数据字段`ID`。|  
 |`Value`|元素的值。 `Value` 只能在元素路径的最后一个 `ElementNode` 中使用。 例如，因为\<返回 > 是一个叶节点，如果将其包含在元素路径，值的末尾`Return {@}`是`Chair`。|  
@@ -178,7 +178,7 @@ XMLLocalName :: =
   
 2.  为 XML 数据源创建新的数据集。  
   
-3.  在 **“数据集属性”** 对话框中，单击 **“查询设计器”**。 基于文本的查询设计器对话框打开。  
+3.  在 **“数据集属性”** 对话框中，单击 **“查询设计器”** 。 基于文本的查询设计器对话框打开。  
   
 4.  在查询窗格中，输入以下两行：  
   
@@ -196,7 +196,7 @@ XMLLocalName :: =
   
      `<Query>`  
   
-8.  单击“运行查询(!)”。  
+8.  单击“运行查询(!)”  。  
   
      结果集的以下列中显示 4 行数据： `xmlns`、 `Customer.ID`、 `FirstName`、 `LastName`、 `ID`、 `Qty`、 `Order`。  
   

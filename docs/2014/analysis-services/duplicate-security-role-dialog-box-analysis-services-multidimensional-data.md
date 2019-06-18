@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081501"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>“Analysis Services 重复的安全角色”对话框（Analysis Services - 多维数据）
-  使用**Analysis Services 重复安全角色-\<数据库名称 >-\<从角色名称复制 >** 中的对话框[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]复制中的现有角色[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库。 右键单击对象资源管理器中的角色并选择“复制”，可以显示“复制角色”对话框。  
+  使用**Analysis Services 重复安全角色-\<数据库名称 >-\<从角色名称复制 >** 中的对话框[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]复制中的现有角色[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库。 右键单击对象资源管理器中的角色并选择“复制”  ，可以显示“复制角色”  对话框。  
   
 ## <a name="options"></a>选项  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017841"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
@@ -39,9 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**，表示清除所有发布的元数据。 如果显式指定发布，则该发布必须已存在。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 **%** ，表示清除所有发布的元数据。 如果显式指定发布，则该发布必须已存在。  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` 指定是否重新初始化订阅服务器。 *订阅服务器上*是**nvarchar(5)**，可以是**TRUE**或**FALSE**，默认值为**TRUE**。 如果 **，则返回 TRUE**，订阅标记为重新初始化。 如果**FALSE**，未标记为要重新初始化订阅。  
+`[ @reinitialize_subscriber = ] 'subscriber'` 指定是否重新初始化订阅服务器。 *订阅服务器上*是**nvarchar(5)** ，可以是**TRUE**或**FALSE**，默认值为**TRUE**。 如果 **，则返回 TRUE**，订阅标记为重新初始化。 如果**FALSE**，未标记为要重新初始化订阅。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -53,11 +53,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  之后**sp_mergecleanupmetadata**执行时，默认情况下，发布了元数据存储在订阅服务器上的所有订阅**MSmerge_genhistory**， **MSmerge_contents**并**MSmerge_tombstone**标记为要重新初始化，订阅服务器上任何挂起的更改都将丢失，并且当前快照将标记为已过时。  
 > 
 > [!NOTE]
->  如果有多个发布数据库，并且任何一个发布使用无限发布保持期 (**@retention**=**0**)，运行**sp_mergecleanupmetadata**不会清除合并复制更改跟踪数据库元数据。 因此，要谨慎使用无限发布保持。  
+>  如果有多个发布数据库，并且任何一个发布使用无限发布保持期 ( **@retention** =**0**)，运行**sp_mergecleanupmetadata**不会清除合并复制更改跟踪数据库元数据。 因此，要谨慎使用无限发布保持。  
   
- 执行此存储过程时，可以选择是否要重新初始化订阅服务器，通过设置**@reinitialize_subscriber**参数**TRUE** （默认值） 或**FALSE**. 如果**sp_mergecleanupmetadata**情况下执行**@reinitialize_subscriber**参数设置为**TRUE**，快照会重新应用于订阅服务器即使的订阅创建没有初始快照 （例如，如果快照数据和架构已手动应用，或在订阅服务器上已存在）。 将参数设置为**FALSE**应小心，因为如果不重新初始化发布，则必须确保发布服务器和订阅服务器上的数据同步。  
+ 执行此存储过程时，可以选择是否要重新初始化订阅服务器，通过设置 **@reinitialize_subscriber** 参数**TRUE** （默认值） 或**FALSE**. 如果**sp_mergecleanupmetadata**情况下执行 **@reinitialize_subscriber** 参数设置为**TRUE**，快照会重新应用于订阅服务器即使的订阅创建没有初始快照 （例如，如果快照数据和架构已手动应用，或在订阅服务器上已存在）。 将参数设置为**FALSE**应小心，因为如果不重新初始化发布，则必须确保发布服务器和订阅服务器上的数据同步。  
   
- 而不考虑的值**@reinitialize_subscriber**， **sp_mergecleanupmetadata**失败是否存在正在进行的合并进程尝试将更改上载到发布服务器或在重新发布订阅服务器调用存储的过程的时间。  
+ 而不考虑的值 **@reinitialize_subscriber** ， **sp_mergecleanupmetadata**失败是否存在正在进行的合并进程尝试将更改上载到发布服务器或在重新发布订阅服务器调用存储的过程的时间。  
   
  **执行 sp_mergecleanupmetadata 时设置与@reinitialize_subscriber= TRUE:**  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62829475"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含配置文件请求选项（数据事件探查任务）
@@ -51,7 +51,7 @@ ms.locfileid: "62829475"
 -   当包含强度的值为 1.0，而 **SupersetColumnsKeyThreshold** 设置为 **Exact**时。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“值包含配置文件请求”**， **“请求属性”** 窗格显示下面的选项组：  
+ 对于 **“值包含配置文件请求”** ， **“请求属性”** 窗格显示下面的选项组：  
   
 -   **Data**，它包含 **SubsetTableOrView**、 **SupersetTableOrView**和 **InclusionColumns** 选项  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62829475"
  有关详细信息，请参阅本主题前面的“了解 InclusionColumns 属性列的选择”部分。  
   
  **IsWildcard**  
- 指定是否已选择通配符 **(\*)**。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
+ 指定是否已选择通配符 **(\*)** 。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
   
  **ColumnName**  
  显示所选列的名称。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项空白。 此选项是只读的。  

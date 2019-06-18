@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012469"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定算数运算符 (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66012469"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查询中，`child`是轴和`OrderDetail`是节点测试 (如果**OrderDetail**是 **\<元素节点 >**，因为 **\<元素 >** 节点是主节点`child`轴)。 为所有 **\<OrderDetail >** 元素节点，在谓词中的测试应用，并返回满足条件的这些节点。  
+ 在查询中，`child`是轴和`OrderDetail`是节点测试 (如果**OrderDetail**是 **\<元素节点 >** ，因为 **\<元素 >** 节点是主节点`child`轴)。 为所有 **\<OrderDetail >** 元素节点，在谓词中的测试应用，并返回满足条件的这些节点。  
   
 > [!NOTE]  
 >  XPath 中的数字是双精度浮点数，对本示例中的浮点数进行比较将导致舍入。  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066227"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -32,17 +32,17 @@ ms.locfileid: "66066227"
   
  **若要查看属性关系选项卡上的工具栏**  
   
--   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”选项卡。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”  选项卡。  
   
 ## <a name="options"></a>选项  
  **添加商业智能**  
- 打开“商业智能向导”，并添加商业智能功能。 有关详细情况，请参阅[使用商业智能向导增强维度](use-the-business-intelligence-wizard-to-enhance-dimensions.md)。  
+ 打开“商业智能向导”  ，并添加商业智能功能。 有关详细情况，请参阅[使用商业智能向导增强维度](use-the-business-intelligence-wizard-to-enhance-dimensions.md)。  
   
  **处理**  
  处理对象。  
   
  **新建属性关系**  
- 打开“创建属性关系”对话框，可以在其中定义新的属性关系。  
+ 打开“创建属性关系”  对话框，可以在其中定义新的属性关系。  
   
  **缩放**  
  循环缩放比例，或显示可用的缩放选项列表。  
@@ -66,6 +66,6 @@ ms.locfileid: "66066227"
  根据维度设计器使用的布局算法，自动排列关系图中的形状。 默认情况下，启用 **“自动排列形状”** 。  
   
  **显示列表视图**  
- 显示或隐藏“属性”和“属性关系”列表。 这些列表立即出现在包含属性关系图的窗格下的自己的窗格中。  
+ 显示或隐藏“属性”  和“属性关系”  列表。 这些列表立即出现在包含属性关系图的窗格下的自己的窗格中。  
   
   

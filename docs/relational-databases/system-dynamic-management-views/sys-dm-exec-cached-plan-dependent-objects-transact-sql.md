@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f74b6b9fe659f6d2af0f30bd6a2b629939fc5628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013559"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
@@ -41,7 +41,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>参数  
 *plan_handle*  
-是一个令牌，用于唯一标识已执行的批次查询执行计划和其计划驻留在计划缓存中。 *plan_handle*是**varbinary(64)**。   
+是一个令牌，用于唯一标识已执行的批次查询执行计划和其计划驻留在计划缓存中。 *plan_handle*是**varbinary(64)** 。   
 
 *Plan_handle*可以从以下动态管理对象中获得：  
   

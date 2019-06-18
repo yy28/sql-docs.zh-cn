@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653742"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>第 2 课：从 RDL 架构使用 xsd 工具生成类
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>第 2 课：使用 XSD 工具从 RDL 架构生成类
   创建 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目后，下一步是检索报表定义架构的本地副本和运行 XML 架构定义工具 (Xsd.exe)。  
   
 ### <a name="to-generate-the-rdl-classes"></a>生成 RDL 类  
@@ -32,7 +32,7 @@ ms.locfileid: "62653742"
   
 3.  浏览到您创建 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目的位置，使用文件名 ReportDefinition.xsd 保存该架构。  
   
-4.  保存文件后，打开的实例[!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]命令提示符。 若要打开命令提示符实例，请单击开始菜单，指向**所有程序**，依次指向**Microsoft Visual Studio 2010**，指向**Visual Studio Tools**单击**Visual Studio 命令提示符 (2010)**。  
+4.  保存文件后，打开的实例[!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]命令提示符。 若要打开命令提示符实例，请单击开始菜单，指向**所有程序**，依次指向**Microsoft Visual Studio 2010**，指向**Visual Studio Tools**单击**Visual Studio 命令提示符 (2010)** 。  
   
 5.  将当前路径更改为 ReportDefinition.xsd 文件的保存位置：  
   

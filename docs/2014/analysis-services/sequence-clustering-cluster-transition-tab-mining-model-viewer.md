@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069082"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类转换”选项卡（挖掘模型查看器）
-  可以使用“Microsoft 顺序分析和聚类分析查看器”中的“状态转换”选项卡，更仔细地查看选定分类中的各个属性-值对或状态之间的转换。  
+  可以使用“Microsoft 顺序分析和聚类分析查看器”  中的“状态转换”  选项卡，更仔细地查看选定分类中的各个属性-值对或状态之间的转换。  
   
  使用此顺序分析和聚类分析模型视图可查看模式。 在关系图中，链接表示转换的概率，节点则表示序列状态。  
   
- **有关详细信息：**[Microsoft 序列聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)，[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **有关详细信息：** [Microsoft 序列聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)，[使用 Microsoft 序列分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -34,7 +34,7 @@ ms.locfileid: "66069082"
  选择一个包含在当前挖掘结构中的挖掘模型以进行查看。 挖掘模型将在其关联的查看器中打开。  
   
  **Viewer**  
- 选择用于浏览选定挖掘模型的查看器。 您可以使用自定义查看器或 **“Microsoft 一般内容树查看器”**。 还可以使用插件查看器（如果有）。  
+ 选择用于浏览选定挖掘模型的查看器。 您可以使用自定义查看器或 **“Microsoft 一般内容树查看器”** 。 还可以使用插件查看器（如果有）。  
   
  **放大**  
  放大关系图以更好地查看状态。  
@@ -49,9 +49,9 @@ ms.locfileid: "66069082"
  将完整的关系图复制到剪贴板。  
   
  **Cluster**  
- 选择要在查看器中显示的分类。 默认情况下，“总体(全部)”处于选中状态，这意味着整个模型中的状态和转换都包含在图形中。 在选择某个特定分类时，仅显示该分类中的状态和转换。  
+ 选择要在查看器中显示的分类。 默认情况下，“总体(全部)”  处于选中状态，这意味着整个模型中的状态和转换都包含在图形中。 在选择某个特定分类时，仅显示该分类中的状态和转换。  
   
- **提示：** 您可以使用重命名群集**分类关系图**选项卡。只需选择一个分类，右键单击该分类并选择“重命名”即可做到这一点。 通过使用更具说明性的标签来对分类进行重命名，可使得在 **“状态转换”** 选项卡中比较分类变得更容易。  
+ **提示：** 您可以使用重命名群集**分类关系图**选项卡。只需选择一个分类，右键单击该分类并选择“重命名”  即可做到这一点。 通过使用更具说明性的标签来对分类进行重命名，可使得在 **“状态转换”** 选项卡中比较分类变得更容易。  
   
  **显示边缘标签**  
  选择此选项可在图形的每个边缘上显示一些数字来指示转换概率。  

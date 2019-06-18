@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6cfd7e6b263bf3d33bf06f7ae1a3396f2447f16
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489731"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>为事务添加批注 (Master Data Services)
@@ -41,31 +41,31 @@ ms.locfileid: "65489731"
   
 2.   从“版本”列表中，选择某一版本。  
   
-3.  单击 **“资源管理器”**。  
+3.  单击 **“资源管理器”** 。  
   
 4.  从菜单栏中指向 **“实体”** ，然后单击包含具有要添加批注的事务的成员的实体。  
   
 5.  在网格中，单击该成员所在的行。  
   
-6.  单击 **“查看事务”**。  
+6.  单击 **“查看事务”** 。  
   
 7.  在 **“查看事务”** 对话框中，单击要添加批注的事务。  
   
 8.  在该对话框的底部的框中，键入您的批注。  
   
-9. 单击 **“添加批注”**。 该批注显示在 **“批注”** 窗格中。  
+9. 单击 **“添加批注”** 。 该批注显示在 **“批注”** 窗格中。  
   
 ### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>在版本管理中为事务添加批注（仅限管理员）  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击 **“版本管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击 **“版本管理”** 。  
   
-2.  在菜单栏上，单击 **“事务”**。  
+2.  在菜单栏上，单击 **“事务”** 。  
   
 3.  在 **“事务”** 窗格中，单击网格中您要添加批注的事务所对应的行。  
   
 4.  在 **“事务批注”** 窗格的 **“批注”** 框中，键入您的批注。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 ## <a name="see-also"></a>请参阅  
  [批注 (Master Data Services)](../master-data-services/annotations-master-data-services.md)   

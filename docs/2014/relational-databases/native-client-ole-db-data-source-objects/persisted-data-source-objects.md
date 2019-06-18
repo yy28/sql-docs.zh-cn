@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63231452"
 ---
 # <a name="persisted-data-source-objects"></a>持久化数据源对象
@@ -28,7 +28,7 @@ ms.locfileid: "63231452"
 ## <a name="examples"></a>示例  
  **A.使数据源初始化持久化：**  
   
- 此示例显示使数据源初始化属性持久化的一个函数，它为连接定义服务器、数据库并使用 Windows 身份验证模式。 在函数的 pLocation 和 pDatasource 参数中接收服务器名称和数据库名称。  
+ 此示例显示使数据源初始化属性持久化的一个函数，它为连接定义服务器、数据库并使用 Windows 身份验证模式。 在函数的 pLocation 和 pDatasource 参数中接收服务器名称和数据库名称   。  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -225,7 +225,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- 可在调用 IDBInitialize::Initialize 前后调用 IPersistFile::Save 方法。 如果在从 IDBInitialize::Initialize 成功返回后调用该方法，可确保使有效的数据源指定持久化。  
+ 可在调用 IDBInitialize::Initialize 前后调用 IPersistFile::Save 方法   。 如果在从 IDBInitialize::Initialize 成功返回后调用该方法，可确保使有效的数据源指定持久化  。  
   
 ## <a name="see-also"></a>请参阅  
  [数据源对象&#40;OLE DB&#41;](data-source-objects-ole-db.md)  

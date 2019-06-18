@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5dbf64a128cb21c7ac0e3d956a3dbdc6b320317
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085374"
 ---
 # <a name="create-a-relational-mining-structure"></a>创建关系挖掘结构
@@ -48,7 +48,7 @@ ms.locfileid: "66085374"
  接下来，请使用数据源视图向导将所需数据汇集到单个数据源视图中。 有关如何使用数据源视图选择、转换、筛选或管理数据的详细信息，请参阅 [多维模型中的数据源视图](../multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
 ##  <a name="BKMK_Relational_Structure"></a> 过程概述  
- 通过在解决方案资源管理器中右键单击“挖掘结构”节点，然后选择“添加新的挖掘结构”来启动数据挖掘向导。 该向导可指导您通过以下步骤创建新关系挖掘模型的结构：  
+ 通过在解决方案资源管理器中右键单击“挖掘结构”节点，然后选择“添加新的挖掘结构”来启动数据挖掘向导   。 该向导可指导您通过以下步骤创建新关系挖掘模型的结构：  
   
 1.  **选择定义方法**:此处选择数据源类型，然后选择**从关系数据库或数据仓库**。  
   

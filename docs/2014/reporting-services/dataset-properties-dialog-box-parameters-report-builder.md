@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109384"
 ---
-# <a name="dataset-properties-dialog-box-parameters-report-builder"></a>“数据集属性”对话框 -&amp;gt;“参数”（报表生成器）
+# <a name="dataset-properties-dialog-box-parameters-report-builder"></a>“数据集属性”对话框 -&gt;“参数”（报表生成器）
   选择**参数**上**数据集属性**对话框可以添加、 更改和删除查询参数。  
   
  对于嵌入数据集，选项应用于报表定义中的数据集。  
@@ -42,7 +42,7 @@ ms.locfileid: "66109384"
  在列表中向下移动所选的参数。  
   
  **参数名称**  
- 键入添加到“数据集属性”对话框“查询”选项卡上数据集中的查询参数的名称。  
+ 键入添加到“数据集属性”  对话框“查询”  选项卡上数据集中的查询参数的名称。  
   
  **参数值**  
  仅限嵌入数据集。  

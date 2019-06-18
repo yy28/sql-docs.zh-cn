@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a2a830ad4d6fa87cd754910baf8be53216086cab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810428"
 ---
 # <a name="change-the-service-startup-account-for-sql-server-sql-server-configuration-manager"></a>为 SQL Server 更改服务启动帐户（SQL Server 配置管理器）
@@ -45,7 +45,7 @@ ms.locfileid: "62810428"
   
 #### <a name="to-change-the-sql-server-service-startup-account"></a>更改 SQL Server 服务启动帐户  
   
-1.  在“开始”  菜单上，依次指向“所有程序” 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具” ，然后单击“SQL Server 配置管理器” 。  
+1.  在“开始”  菜单上，依次指向“所有程序”  、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”  ，然后单击“SQL Server 配置管理器”  。  
   
     > [!NOTE]  
     >  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  
@@ -55,17 +55,17 @@ ms.locfileid: "62810428"
     > -   **Windows 8**：  
     >          若要打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器，请在**搜索**超级按钮**应用**，类型**SQLServerManager\<版本 >.msc**如`SQLServerManager12.msc`，然后按**Enter**。  
   
-2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，单击 **“SQL Server 服务”**。  
+2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，单击 **“SQL Server 服务”** 。  
   
-3.  在详细信息窗格中，右键单击要为其更改服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称，再单击“属性” 。  
+3.  在详细信息窗格中，右键单击要为其更改服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称，再单击“属性”  。  
   
-4.  在“SQL Server \<instancename> 属性”**** 对话框中，单击“登录”选项卡，并选择“登录身份”帐户类型。  
+4.  在“SQL Server \<instancename> 属性” **** 对话框中，单击“登录”  选项卡，并选择“登录身份”  帐户类型。  
   
-5.  选择了新服务启动帐户后，单击 **“确定”**。  
+5.  选择了新服务启动帐户后，单击 **“确定”** 。  
   
      将出现一个消息框，询问是否要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
-6.  单击 **“是”**，然后关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
+6.  单击 **“是”** ，然后关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
 ## <a name="see-also"></a>请参阅  
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](start-stop-pause-resume-restart-sql-server-services.md)   

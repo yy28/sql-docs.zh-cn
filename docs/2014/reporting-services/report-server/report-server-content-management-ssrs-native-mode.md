@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b79be33eba191349f324473ad5d80abb7b1f398
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103521"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
@@ -161,11 +161,11 @@ ms.locfileid: "66103521"
   
 |字符|转义值|示例|  
 |---------------|------------------|-------------|  
-|（空格）|[ ]|Firstname Lastname 将变为 Firstname[ ]Lastname|  
-|\（反斜杠）|替换为一个空格字符|DomainName\Username 将变为 DomainName Username|  
-|@（@ 符号）|[at]|username@hotmail.com 将变为 username[at]hotmail.com|  
-|&（与号）|[amp]|username@company&company.com 将变为 username[at]company[amp]company.com|  
-|$（美元符号）|[dollar]|User $Name 将变为 User[ ][dollar]Name|  
+|（空格）|[ ]|Firstname Lastname  将变为 Firstname[ ]Lastname |  
+|\（反斜杠）|替换为一个空格字符|DomainName\Username  将变为 DomainName Username |  
+|@（@ 符号）|[at]|username  @hotmail.com 将变为 username  [at]hotmail.com|  
+|&（与号）|[amp]|username@  company&  company.com  将变为 username[at]company[amp]company.com   |  
+|$（美元符号）|[dollar]|User $Name   将变为 User[ ][dollar]Name  |  
   
  “我的报表”功能是可选的。 安装报表服务器时，默认情况下将禁用“我的报表”功能。 有关启用此功能的详细信息，请参阅 [启用和禁用“我的报表”](enable-and-disable-my-reports.md)。 有关详细信息，请参阅 [保护我的报表](../security/secure-my-reports.md)。  
   

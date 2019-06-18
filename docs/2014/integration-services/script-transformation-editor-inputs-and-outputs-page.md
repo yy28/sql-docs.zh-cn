@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056067"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>脚本转换编辑器（“输入和输出”页）
@@ -41,13 +41,13 @@ ms.locfileid: "66056067"
  将其他输出添加到列表中。  
   
  **添加列**  
- 选择用于放置新输出列的文件夹，再单击“添加列”来添加该列。  
+ 选择用于放置新输出列的文件夹，再单击“添加列”  来添加该列。  
   
  **删除输出**  
- 选择某个输出，再单击“删除输出”即可将其删除。  
+ 选择某个输出，再单击“删除输出”  即可将其删除。  
   
  **删除列**  
- 选择某个列，然后单击“删除列”来删除该列。  
+ 选择某个列，然后单击“删除列”  来删除该列。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a84e1d2fa9d65cfdab4e4753315d44346af4597e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004527"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "63004527"
 
   为每个作为内部表的对象返回一行。 内部表由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动生成以支持各种功能。 例如，创建主 XML 索引时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将自动创建一个内部表以保存拆分的 XML 文档数据。 内部表出现在**sys**每个数据库架构和具有唯一的、 由系统生成的名称指示其功能，例如， **xml_index_nodes_2021582240_32001**或**queue_messages_1977058079**  
   
- 内部表不包括用户可访问的数据，并且其架构是固定的，不可改变。 不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中引用内部表名称。 例如，不能执行 select 语句\*FROM  *\<sys.internal_table_name >*。 但是，可以查询目录视图以查看内部表的元数据。  
+ 内部表不包括用户可访问的数据，并且其架构是固定的，不可改变。 不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中引用内部表名称。 例如，不能执行 select 语句\*FROM  *\<sys.internal_table_name >* 。 但是，可以查询目录视图以查看内部表的元数据。  
   
   
 |列名|数据类型|Description|  
