@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0a9ef2d748bacbcab184c5f60dea8c3514cb61b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723665"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 开发人员文档
@@ -63,7 +63,7 @@ ms.locfileid: "65723665"
  介绍同步输出与异步输出之间的重要差异以及在数据流中使用这些输出的组件。  
   
  [以编程方式使用连接管理器](../integration-services/working-with-connection-managers-programmatically.md)  
- 列出可从托管代码使用的连接管理器以及代码调用 AcquireConnection 方法时连接管理器返回的值。  
+ 列出可从托管代码使用的连接管理器以及代码调用 AcquireConnection  方法时连接管理器返回的值。  
   
  [用脚本扩展包](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  介绍如何使用脚本任务扩展控制流或使用脚本组件扩展数据流。  
@@ -87,7 +87,7 @@ ms.locfileid: "65723665"
   
 ## <a name="external-resources"></a>外部资源  
   
--    www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
+-   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
