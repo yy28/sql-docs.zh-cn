@@ -15,11 +15,11 @@ ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3034dc76a64e25b614b1871247369214199c36b
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997489"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521265"
 ---
 # <a name="create-a-database-master-key"></a>创建数据库主密钥
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53997489"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
 要求对数据库具有 CONTROL 权限。  
   
 ## <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -38,9 +38,9 @@ ms.locfileid: "53997489"
   
 2. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-3. 在标准菜单栏上，单击 **“新建查询”**。  
+3. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-4. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+4. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     -- Creates a database master key for the "AdventureWorks2012" database.   

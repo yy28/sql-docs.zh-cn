@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775214"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>支持的版本和版本升级
@@ -59,7 +59,7 @@ ms.locfileid: "62775214"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位版本只能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 位服务器。  
   
 > [!NOTE]  
->  当你升级到[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]从以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition 中，Enterprise Edition 之间进行选择：基于内核的许可和企业版。 这些 Enterprise 版仅在许可模式和支持的内核的最大数目方面存在差异。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+>  当你升级到[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]从以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition 中，Enterprise Edition 之间进行选择：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版仅在许可模式和支持的内核的最大数目方面存在差异。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支持从以下版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行升级：  
   

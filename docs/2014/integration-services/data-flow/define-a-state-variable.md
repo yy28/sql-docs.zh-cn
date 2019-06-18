@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827557"
 ---
 # <a name="define-a-state-variable"></a>定义状态变量
@@ -26,7 +26,7 @@ ms.locfileid: "62827557"
   
  下表提供了 CDC 状态变量值的组分的详细说明。  
   
-|组件|Description|  
+|组件|描述|  
 |---------------|-----------------|  
 |`<state-name>`|这是当前 CDC 状态的名称。|  
 |`CS`|这标记当前处理范围开始点（当前开始）。|  
@@ -45,7 +45,7 @@ ms.locfileid: "62827557"
   
  下表对可能的CDC 状态值进行了说明：  
   
-|State|Description|  
+|State|描述|  
 |-----------|-----------------|  
 |(INITIAL)|这是在当前 CDC 组上运行任何包之前的初始状态。 这也是 CDC 状态为空时的状态。|  
 |ILSTART（初始加载已开始）|这是初始加载包已开始、`MarkInitialLoadStart` 操作调用 CDC 控制任务后时的状态。|  

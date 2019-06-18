@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 67876c93657f643247487c7cf712b9194604773e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689235"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62795614"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ```  
   
 ## <a name="arguments"></a>参数  
- table | view  
+ table | view    
  其删除统计信息的目标表或索引视图的名称。 表和视图的名称必须符合[数据库标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定表或视图所有者名称。  
   
  *statistics_name*  
@@ -68,7 +68,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
   
  有关显示统计信息的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对表或视图具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 22fd00314105f4ef43a734697bdae86badc145a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754159"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的数据库引擎功能
@@ -61,7 +61,7 @@ ms.locfileid: "62754159"
 |数据类型|`timestamp` 数据类型的 `rowversion` 语法|`rowversion` 数据类型语法|timestamp|158|  
 |数据类型|在 `timestamp` 列中插入 null 值的功能。|请改用 DEFAULT。|将 NULL 插入 TIMESTAMP 列|179|  
 |数据类型|“text in row”表选项|请使用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 数据类型。 有关详细信息，请参阅 [sp_tableoption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)。|text in row 表选项|9|  
-|数据类型|数据类型：<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|请使用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 数据类型。|`text`数据类型：`ntext`、`image` 或 |4|  
+|数据类型|数据类型：<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|请使用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 数据类型。|`text`数据类型：`ntext`、`image` 或|4|  
 |数据库管理|sp_attach_db<br /><br /> sp_attach_single_file_db|使用 FOR ATTACH 选项的 CREATE DATABASE 语句。 若要在一个或多个日志文件有新位置的情况下重新生成这些日志文件，请使用 FOR ATTACH_REBUILD_LOG 选项。|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |数据库对象|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE 和 ALTER TABLE 中的 DEFAULT 关键字|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |数据库对象|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE 和 ALTER TABLE 中的 CHECK 关键字|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  

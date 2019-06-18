@@ -15,43 +15,26 @@ helpviewer_keywords:
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fabec0dd86d8ab648f51ea82bfc1ca83fac79832
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: f466fc76d2b960cd5b27eef70dd8a553833c83af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212677"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796658"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>更改 Always On 可用性组中副本的故障转移模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 更改 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 Always On 可用性组的可用性副本的故障转移模式。 故障转移模式是一个副本属性，用于确定在同步提交可用性模式下运行的副本的故障转移模式。 有关详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 和 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
   
--   **开始之前：**  
-  
-     [先决条件和限制](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **若要更改可用性副本的可用性模式，可使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Prerequisites"></a> 先决条件和限制  
+## <a name="Prerequisites"></a> 先决条件和限制  
   
 -   只有主副本支持该任务。 您必须连接到承载主副本的服务器实例。  
   
 -   SQL Server 故障转移群集实例 (FCI) 不支持通过可用性组来自动进行故障转移，因此，只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
   
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> Permissions  
+
+##  <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -59,11 +42,11 @@ ms.locfileid: "53212677"
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
 3.  单击要更改其副本的可用性组。  
   
-4.  右键单击该副本，然后单击“属性”。  
+4.  右键单击该副本，然后单击“属性”  。  
   
 5.  在 **“可用性副本属性”** 对话框中，使用 **“故障转移模式”** 下拉列表更改此副本的故障转移模式。  
   
@@ -86,7 +69,7 @@ ms.locfileid: "53212677"
 
       - 其中，*group_name* 是可用性组的名称。  
   
-      - server_name 是计算机名或故障转移群集网络名称。 对于命名实例，添加“\instance_name”。 使用托管想要修改的副本的名称。
+      - server_name  是计算机名或故障转移群集网络名称。 对于命名实例，添加“\instance_name”。 使用托管想要修改的副本的名称。
   
    有关这些参数的详细信息，请参阅 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)。  
   

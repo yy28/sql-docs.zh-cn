@@ -16,10 +16,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef5c3558ca7afbcdfeec18b7041ad9b27a8cc8fc
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946381"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字符格式导入或导出数据 (SQL Server)
@@ -61,7 +61,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 
 * 数据文件中的第一个字段是非字符
 
-考虑以下任意解决方法是否适用于特定情况：
+考虑以下任意解决方法是否适用于特定  情况：
 * 请勿使用格式化文件。  下面提供了此解决方法的一个示例，请参阅 [在不使用格式化文件的情况下使用 bcp 和 Unicode 字符格式导入数据](#bcp_widechar_import)，
 
 * 使用 **-c** 切换而不是 **-w**，

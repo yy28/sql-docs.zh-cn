@@ -23,10 +23,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 905a470c09c1fff750900764134846925d7899b6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095871"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>企业范围的自动化管理
@@ -35,7 +35,7 @@ ms.locfileid: "65095871"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的自动化管理称为“多服务器管理”。 使用多服务器管理可以执行下列操作：  
+跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的自动化管理称为“多服务器管理”  。 使用多服务器管理可以执行下列操作：  
   
 -   管理两台或多台服务器。  
   

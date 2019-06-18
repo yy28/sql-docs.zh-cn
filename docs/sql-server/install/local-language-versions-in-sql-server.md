@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 914947a72035b5df2247eb01358253938f6eded6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663135"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62682372"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的本地语言版本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -76,9 +76,9 @@ ms.locfileid: "47663135"
   
 1.  安装与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本匹配的操作系统 MUI（如果尚未安装）。  
   
-2.  在控制面板中，打开“区域和语言选项” 。  
+2.  在控制面板中，打开“区域和语言选项”  。  
   
-3.  在“高级”  选项卡上，从列表中为“选择一种语言来匹配要使用的非 Unicode 程序的语言版本” 选择一个值。  
+3.  在“高级”  选项卡上，从列表中为“选择一种语言来匹配要使用的非 Unicode 程序的语言版本”  选择一个值。  
   
      此设置将使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装选择最佳默认排序规则。  
   

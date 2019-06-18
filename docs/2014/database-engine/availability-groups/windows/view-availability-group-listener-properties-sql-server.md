@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788023"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>查看可用性组侦听器属性 (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "62788023"
   
 3.  展开可用性组节点，然后展开 **“可用性组侦听器”** 节点。  
   
-4.  右键单击要查看的侦听器，然后选择“属性”命令。  
+4.  右键单击要查看的侦听器，然后选择“属性”  命令。  
   
 5.  这将打开 **“可用性组侦听器属性”** 对话框。 有关详细信息，请参阅本主题后面的 [可用性组侦听程序属性（对话框）](#AgListenerPropertiesDialog)。  
   

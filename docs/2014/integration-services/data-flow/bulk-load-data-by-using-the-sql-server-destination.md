@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828139"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目标大容量加载数据
@@ -44,7 +44,7 @@ ms.locfileid: "62828139"
   
     -   选择一个现有的表或视图。  
   
-    -   单击“新建”，并在“创建表”对话框中写入创建表或视图的 SQL 语句。  
+    -   单击“新建”  ，并在“创建表”  对话框中写入创建表或视图的 SQL 语句。  
   
         > [!NOTE]  
         >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于连接数据源生成一个默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
@@ -54,14 +54,14 @@ ms.locfileid: "62828139"
     > [!NOTE]  
     >  目标自动映射名称相同的列。  
   
-9. 单击“高级”，并设置大容量加载选项：“保留标识”、“保留 NULL”、“表锁”、“检查约束”和“激发触发器”。  
+9. 单击“高级”  ，并设置大容量加载选项：“保留标识”  、“保留 NULL”  、“表锁”  、“检查约束”  和“激发触发器”  。  
   
      也可以指定要插入的第一个和最后一个输入行、在插入操作停止前可以出现的最大错误数以及插入据以排序的列。  
   
     > [!NOTE]  
     >  排序顺序由列所列出的顺序确定。  
   
-10. 单击“确定” 。  
+10. 单击 **“确定”** 。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

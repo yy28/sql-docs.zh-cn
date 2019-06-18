@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 80f6fbec56a086ad150620dac1179da9018370b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250753"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server Backup Device 对象
@@ -25,7 +25,7 @@ ms.locfileid: "63250753"
   
  此表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Backup Device** 计数器。  
   
-|SQL Server Backup Device 计数器|Description|  
+|SQL Server Backup Device 计数器|描述|  
 |---------------------------------------|-----------------|  
 |**Device Throughput Bytes/sec**|一个备份设备在备份或还原数据库时所用的读写操作的吞吐量（以每秒字节数表示）。 这一计数器只有在备份或还原操作执行时才存在。|  
   

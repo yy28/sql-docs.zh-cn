@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 659a6d76fabd2b01d91ae993fc818d81874350c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63276306"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>从正在运行的跟踪中派生模板 (SQL Server Profiler)
@@ -27,9 +27,9 @@ ms.locfileid: "63276306"
   
 1.  必要时，可切换到包含跟踪的窗口。  
   
-2.  在 **“文件”** 菜单上，指向 **“另存为”**，再单击 **“跟踪模板”**。  
+2.  在 **“文件”** 菜单上，指向 **“另存为”** ，再单击 **“跟踪模板”** 。  
   
-3.  键入名称或从列表中选择一个名称。 单击“确定” 。  
+3.  键入名称或从列表中选择一个名称。 单击“确定”  。  
   
 > [!NOTE]  
 >  如果选择现有模板文件，系统将会询问您是否希望覆盖现有文件。 可以只选择用户定义的模板。 无法覆盖预定义的系统跟踪模板。  

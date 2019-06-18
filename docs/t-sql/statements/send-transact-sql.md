@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3ead09886af3ec64c00af06e3919941effd7b234
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638690"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ SEND
 ```  
   
 ## <a name="arguments"></a>参数  
-ON CONVERSATION conversation_handle [.. @conversation_handle_n]  
-指定消息所属的会话。 conversation_handle 必须包含一个有效的会话标识符。 不能多次使用相同的会话句柄。  
+ON CONVERSATION conversation_handle [.. @conversation_handle_n]   
+指定消息所属的会话。 conversation_handle 必须包含一个有效的会话标识符。  不能多次使用相同的会话句柄。  
   
-MESSAGE TYPE message_type_name  
+MESSAGE TYPE message_type_name   
 指定发送的消息的消息类型。 必须将此消息类型包含在这些会话使用的服务约定中。 这些约定必须允许从此会话方发送该类型的消息。 例如，会话的目标服务只能发送在约定中指定为 SENT BY TARGET 或 SENT BY ANY 的消息。 如果省略此子句，则消息类型为 DEFAULT。  
   
-message_body_expression  
-提供一个表示消息主体的表达式。 Message_body_expression 是可选的。 但如果存在 message_body_expression，则表达式必须是一个可以转换为 varbinary(max) 的类型。 该表达式不能为 NULL。 如果省略该子句，则消息主体为空。  
+message_body_expression   
+提供一个表示消息主体的表达式。 Message_body_expression 是可选的。  但如果存在 message_body_expression，则表达式必须是一个可以转换为 varbinary(max) 的类型。   该表达式不能为 NULL。 如果省略该子句，则消息主体为空。  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -75,7 +75,7 @@ SEND 语句将来自一个或多个 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 
   
 - 包含 SEND 语句的代码与包含提供会话句柄的 BEGIN DIALOG 或 RECEIVE 语句的代码有时是分开的。 在这些情况下，会话句柄必须是传递给包含 SEND 语句的代码的状态信息中的数据项之一。  
   
-发送到其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中的服务的消息将存储在当前数据库的传输队列中，直到可以将这些消息传输到远程实例中的服务队列为止。 发送到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的服务的消息被直接放入与这些服务关联的队列中。 如果因出现某种情况导致无法将本地消息直接放入目标服务队列中，则可以先将本地消息存储在传输队列中，直到解决了这种情况为止。 这些事件的示例包括某些类型的错误或目标服务队列处于非活动状态。 可使用 sys.transmission_queue 系统视图查看传输队列中的消息。  
+发送到其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中的服务的消息将存储在当前数据库的传输队列中，直到可以将这些消息传输到远程实例中的服务队列为止。 发送到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的服务的消息被直接放入与这些服务关联的队列中。 如果因出现某种情况导致无法将本地消息直接放入目标服务队列中，则可以先将本地消息存储在传输队列中，直到解决了这种情况为止。 这些事件的示例包括某些类型的错误或目标服务队列处于非活动状态。 可使用 sys.transmission_queue 系统视图查看传输队列中的消息。   
   
 SEND 是一个原子语句。 如果在多个会话中发送消息的 SEND 语句失败（例如，对话处于错误状态时），则不会将任何消息存储在传输队列中，也不会将消息放入任何目标服务队列中。  
   
@@ -93,11 +93,11 @@ SEND 语句分别锁定发送消息的每个会话，以确保每个会话按顺
   
 SEND 在用户定义的函数中无效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 若要发送消息，当前用户必须在每个发送消息的服务的队列中具有 RECEIVE 权限。  
   
 ## <a name="examples"></a>示例  
-以下示例启动一个对话，并在该对话中发送一条 XML 消息。 为了发送此消息，该示例将 xml 对象转换为 varbinary(max)。  
+以下示例启动一个对话，并在该对话中发送一条 XML 消息。 为了发送此消息，该示例将 xml 对象转换为 varbinary(max)  。  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  

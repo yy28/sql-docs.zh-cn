@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63313023"
 ---
 # <a name="print-dialog-box"></a>“打印”对话框
-  可通过选择“打印”对话框中的选项来指定打印文档的方式。  
+  可通过选择“打印”  对话框中的选项来指定打印文档的方式。  
   
 ## <a name="printer"></a>打印机  
  **名称**  
@@ -52,7 +52,7 @@ ms.locfileid: "63313023"
  只打印当前所选内容。 在选择文档的部分或全部内容之前该选项始终不可用。  
   
  **页**  
- 打印在“页”框中所键入的页。  
+ 打印在“页”  框中所键入的页。  
   
 ## <a name="copies"></a>副本  
  **份数**  

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813583"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>配置服务器以侦听特定 TCP 端口（SQL Server 配置管理器）
@@ -45,17 +45,17 @@ ms.locfileid: "62813583"
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>为 SQL Server 数据库引擎分配 TCP/IP 端口号  
   
-1.  在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”，展开“\<实例名称> 的协议”，然后双击“TCP/IP”。  
+1.  在 SQL Server 配置管理器的控制台窗格中，展开“SQL Server 网络配置”  ，展开“\<实例名称> 的协议”  ，然后双击“TCP/IP”  。  
   
-2.  在“TCP/IP 属性”对话框的“IP 地址”选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上的各个 IP 地址。 右键单击每个地址，再单击“属性”，标识要配置的 IP 地址。  
+2.  在“TCP/IP 属性”  对话框的“IP 地址”  选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上的各个 IP 地址。 右键单击每个地址，再单击  “属性”，标识要配置的 IP 地址。  
   
 3.  如果 **“TCP 动态端口”** 对话框中包含 **0**，则表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在侦听动态端口，请删除 0。  
   
-4.  在 **“IP**_n_ **属性”** 区域框的 **“TCP 端口”** box, type the port number you want this “IP address to listen on, and then click **“确定”**。  
+4.  在 **“IP**_n_ **属性”** 区域框的 **“TCP 端口”** box, type the port number you want this “IP address to listen on, and then click **“确定”** 。  
   
-5.  在控制台窗格中，单击“SQL Server 服务”。  
+5.   在控制台窗格中，单击“SQL Server 服务”。  
   
-6.  在详细信息窗格中，右键单击“SQL Server (\<实例名称>)”，然后单击“重启”以停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+6.  在详细信息窗格中，右键单击“SQL Server  (\<实例名称>)”  ，然后单击“重启”  以停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  在配置完 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以侦听特定端口后，可以通过下列三种方式使用客户端应用程序连接到特定端口：  
   

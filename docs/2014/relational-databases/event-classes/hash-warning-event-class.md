@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662341"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 事件类
@@ -41,14 +41,14 @@ ms.locfileid: "62662341"
  创建或更新联接涉及的列上的统计信息是减少发生哈希递归或哈希释放次数最有效的方法。  
   
 > [!NOTE]  
->  另外，“Grace 哈希联接”和“递归哈希联接”两词也用于描述哈希释放。  
+>  另外，“Grace 哈希联接”  和“递归哈希联接”  两词也用于描述哈希释放。  
   
 > [!IMPORTANT]  
->  若要确定查询优化器生成执行计划时 Hash Warning 事件发生的位置，还应在跟踪中收集一个 Showplan 事件类。 可以选择除了 Showplan Text 和 Showplan Text (Unencoded) 事件类（不会返回节点 ID）以外的任何 Showplan 事件类。 Showplan 中的节点 ID 标识查询优化器在生成查询执行计划时执行的每个运算。 这些运算称为“运算符” ，Showplan 中的每个运算符都有一个节点 ID。 Hash Warning 事件的 ObjectID 列与 Showplan 中的节点 ID 对应，因此可确定哪个运算符或运算导致错误。  
+>  若要确定查询优化器生成执行计划时 Hash Warning 事件发生的位置，还应在跟踪中收集一个 Showplan 事件类。 可以选择除了 Showplan Text 和 Showplan Text (Unencoded) 事件类（不会返回节点 ID）以外的任何 Showplan 事件类。 Showplan 中的节点 ID 标识查询优化器在生成查询执行计划时执行的每个运算。 这些运算称为“运算符”  ，Showplan 中的每个运算符都有一个节点 ID。 Hash Warning 事件的 ObjectID 列与 Showplan 中的节点 ID 对应，因此可确定哪个运算符或运算导致错误。  
   
 ## <a name="hash-warning-event-class-data-columns"></a>Hash Warning 事件类的数据列  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|`int`|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
@@ -61,7 +61,7 @@ ms.locfileid: "62662341"
 |HostName|`nvarchar`|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IntegerData|`int`|递归级数（仅限于哈希递归）。|25|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为“*\<域>\\<用户名\>*”）。|11|是|  
+|LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为“ *\<域>\\<用户名\>* ”）。|11|是|  
 |LoginSid|`image`|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  

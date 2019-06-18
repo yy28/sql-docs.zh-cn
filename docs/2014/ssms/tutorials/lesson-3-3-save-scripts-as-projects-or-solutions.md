@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753035"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>将脚本另存为项目或解决方案
@@ -28,7 +28,7 @@ ms.locfileid: "62753035"
   
 1.  打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，然后使用对象资源管理器连接到服务器。  
   
-2.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。 系统将打开“新建项目”对话框。  
+2.  在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。 系统将打开“新建项目”对话框。  
   
 3.  在“名称”文本框中，键入 **StatusCheck**，在“模板”中单击“SQL Server 脚本”，再单击“确定”以打开新的解决方案和脚本项目。  
   

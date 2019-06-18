@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ddef6de92c0bb5329e84011f9996368ef6b452dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e60261790ce1597c9968fb9c6c3c15403f71a93c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66786952"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>即席分布式查询服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47690137"
 >  允许使用临时名称意味着到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何经过身份验证的登录名均可访问该访问接口。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应对任何本地登录名都能安全访问的访问接口启用此功能。  
   
 ## <a name="remarks"></a>Remarks  
- 尝试进行即席连接但未启用“ 即席分布式查询 ”  会导致错误：消息 7415，级别 16，状态 1，行 1  
+ 尝试进行即席连接但未启用“即席分布式查询”会导致错误  ：消息 7415，级别 16，状态 1，行 1  
   
  已拒绝对 OLE DB 访问接口“Microsoft.ACE.OLEDB.12.0”的即席访问。 必须通过链接服务器来访问此访问接口。  
   

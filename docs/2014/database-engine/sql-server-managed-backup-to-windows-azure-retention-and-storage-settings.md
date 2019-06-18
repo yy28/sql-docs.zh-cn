@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773534"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>SQL Server 托管备份到 Windows Azure - 保持和存储设置
@@ -83,7 +83,7 @@ ms.locfileid: "62773534"
   
 -   用于向 Windows Azure 存储帐户进行身份验证的 SQL 凭据。  
   
--   指定不使用加密*@encryption_algorithm*  =  **NO_ENCRYPTION**或指定支持的加密算法。 有关加密的详细信息，请参阅 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)。  
+-   指定不使用加密 *@encryption_algorithm*  =  **NO_ENCRYPTION**或指定支持的加密算法。 有关加密的详细信息，请参阅 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)。  
   
  仅通过 Transact-SQL 支持针对数据库级别配置的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。  
   
@@ -94,11 +94,11 @@ ms.locfileid: "62773534"
   
 -   **使用 TRANSACT-SQL:**  
   
-     如果要启用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]第一次所需的参数是： *@database_name*， *@credential_name*， *@encryption_algorithm*， *@enable_backup**@storage_url*参数是可选的。 如果未提供的值@storage_url参数，则这使用 SQL 凭据中的存储帐户信息派生。 如果提供存储 URL，则只应为存储帐户的根提供该 URL，并且该 URL 必须与您指定的 SQL 凭据中的信息相符。  
+     如果要启用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]第一次所需的参数是： *@database_name* ， *@credential_name* ， *@encryption_algorithm* ， *@enable_backup* *@storage_url* 参数是可选的。 如果未提供的值@storage_url参数，则这使用 SQL 凭据中的存储帐户信息派生。 如果提供存储 URL，则只应为存储帐户的根提供该 URL，并且该 URL 必须与您指定的 SQL 凭据中的信息相符。  
   
     1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-    2.  在标准菜单栏上，单击 **“新建查询”**。  
+    2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
     3.  复制并粘贴到查询窗口的下面的示例，然后单击`Execute`。 此示例将启用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]为数据库 TestDB。 保持期设置为 30 天。 本例通过指定加密算法和加密程序信息，使用加密选项。  
   
@@ -135,26 +135,26 @@ ms.locfileid: "62773534"
 ##  <a name="InstanceConfigure"></a> 启用和配置默认[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]实例设置  
  可以启用和配置默认[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]两种方法在实例级别上的设置：通过使用系统存储过程`smart_backup.set_instance_backup`或**SQL Server Management Studio**。 下面说明了这两种方法：  
   
- **smart_backup.set_instance_backup:**。 通过指定的值**1**有关*@enable_backup*参数，可启用备份并设置默认配置。 在实例级别应用后，将这些默认设置应用于添加到此实例的任何新数据库。  首次启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 时，除了对实例启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 之外，还必须提供以下信息：  
+ **smart_backup.set_instance_backup:** 。 通过指定的值**1**有关 *@enable_backup* 参数，可启用备份并设置默认配置。 在实例级别应用后，将这些默认设置应用于添加到此实例的任何新数据库。  首次启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 时，除了对实例启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 之外，还必须提供以下信息：  
   
 -   保持期。  
   
 -   用于向 Windows Azure 存储帐户进行身份验证的 SQL 凭据。  
   
--   加密选项。 指定不使用加密*@encryption_algorithm*  =  **NO_ENCRYPTION**或指定支持的加密算法。 有关加密的详细信息，请参阅 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)。  
+-   加密选项。 指定不使用加密 *@encryption_algorithm*  =  **NO_ENCRYPTION**或指定支持的加密算法。 有关加密的详细信息，请参阅 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)。  
   
  启用后，这些设置将被保留。 如果要更改配置，则只需要数据库名称和要更改的设置。 未指定现有的值时，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]保留这些值。  
   
 > [!IMPORTANT]  
 >  在某一实例上配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 前，它对于检查现有配置（如果有）可能会很有用。 在本节的后面将介绍查看数据库的配置设置的步骤。  
   
- **SQL Server Management Studio:** 要执行此任务在 SQL Server Management Studio 中的，请在对象资源管理器，展开**管理**节点，然后右键单击**托管备份**。 选择 **“配置”**。 这将打开 **“托管备份”** 对话框。 使用此对话框可指定保持期、SQL 凭据、存储 URL 和加密设置。 有关此对话框中的特定帮助，请参阅[配置托管备份&#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)。  
+ **SQL Server Management Studio:** 要执行此任务在 SQL Server Management Studio 中的，请在对象资源管理器，展开**管理**节点，然后右键单击**托管备份**。 选择 **“配置”** 。 这将打开 **“托管备份”** 对话框。 使用此对话框可指定保持期、SQL 凭据、存储 URL 和加密设置。 有关此对话框中的特定帮助，请参阅[配置托管备份&#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)。  
   
 #### <a name="using-transact-sql"></a>使用 Transact-SQL  
   
 1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制并粘贴到查询窗口的下面的示例，然后单击`Execute`。  
   
@@ -202,13 +202,13 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
 >  在您在配置默认设置后创建新的数据库时，最多需要用 15 分钟以便使用默认设置配置该数据库。 这也将应用于从 **Simple** 更改为 **Full** 或 **Bulk-Logged** 恢复模型的数据库。  
   
 ##  <a name="DatabaseDisable"></a> 为数据库禁用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
- 可通过使用 `sp_set_db_backup` 系统存储过程，禁用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]设置。 *@enableparameter*用于启用和禁用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]特定数据库，其中 1 表示启用，0 禁用配置设置的配置。  
+ 可通过使用 `sp_set_db_backup` 系统存储过程，禁用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]设置。 *@enableparameter* 用于启用和禁用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]特定数据库，其中 1 表示启用，0 禁用配置设置的配置。  
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>为特定数据库禁用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ：  
   
 1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制并粘贴到查询窗口的下面的示例，然后单击`Execute`。  
   
@@ -229,7 +229,7 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制并粘贴到查询窗口的下面的示例，然后单击`Execute`。 下例确定是否在实例级别配置了[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]以及是否所有启用了[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的数据库都在实例上，并且执行系统存储过程 `sp_set_db_backup` 以禁用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。  
   
@@ -297,7 +297,7 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制并粘贴到查询窗口的下面的示例，然后单击`Execute`。  
   
@@ -328,7 +328,7 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制并粘贴到查询窗口的下面的示例，然后单击 `Execute`  
   
@@ -355,7 +355,7 @@ Go
   
 1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制并粘贴到查询窗口的下面的示例，然后单击`Execute`。  
   

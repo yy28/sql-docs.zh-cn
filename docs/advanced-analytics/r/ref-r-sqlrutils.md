@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 7ccc3ad494658fc7a8f9c67472aecb1c4cddb7da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641750"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils （SQL Server 中的 R 库）
@@ -22,7 +22,7 @@ ms.locfileid: "62641750"
 
 通过转换 R 代码以在单个存储过程中运行，可更有效地利用 SQL Server R Services，它要求将 R 脚本作为参数嵌入 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 **sqlrutils** 包有助于构建此嵌入的 R 脚本并正确设置相关参数。
 
- **Sqlrutils** 包执行以下任务：
+**Sqlrutils** 包执行以下任务：
 
 - 将生成的 T-SQL 脚本保存为 R 数据结构内的字符串
 - 可以选择为 T-SQL 脚本生成 .sql 文件，可编辑或运行此文件来创建存储过程
@@ -41,7 +41,7 @@ ms.locfileid: "62641750"
 
 以下部分概述可以从调用的函数**sqlrutils**包开发一个存储的过程，其中包含嵌入的 R 代码。 为每个方法或函数的参数的详细信息，请参阅包的 R 帮助： `help(package="sqlrutils")`
 
-|函数 | Description |
+|函数 | 描述 |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 执行 SQL 存储过程。|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 获取对存储过程的输入参数的列表。| 
@@ -104,7 +104,7 @@ ms.locfileid: "62641750"
 > [!NOTE]
 > *executeStoredProcedure* 函数需要 ODBC 3.8 提供程序，例如适用于 SQL Server 的 ODBC Driver 13。  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [如何创建使用 sqlrutils 对存储的过程](how-to-create-a-stored-procedure-using-sqlrutils.md)
 

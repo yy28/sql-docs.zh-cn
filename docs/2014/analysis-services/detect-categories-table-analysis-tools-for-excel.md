@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06c466eb5e3275818a710a9f9d90c705ed93c957
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081856"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>检测类别（Excel 表分析工具）
@@ -39,7 +39,7 @@ ms.locfileid: "66081856"
   
 4.  您可以选择指定要创建的类别的最大数目。 默认情况下，该工具找到多少个类别，就会自动创建多少个类别。  
   
-5.  单击 **“运行”**。  
+5.  单击 **“运行”** 。  
   
 6.  此工具创建一个名为“类别报表”的新工作表，其中包含类别的列表以及它们的特征。  
   

@@ -18,11 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a9d0dcecd83c38dcd42bc7512bd416bd70d743ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712185"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515937"
 ---
 # <a name="delete-columns-from-a-table"></a>从表中删除列
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47712185"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具从表中删除列：**  
   
@@ -53,42 +53,42 @@ ms.locfileid: "47712185"
   
  不能删除具有 PRIMARY KEY 或 FOREIGN KEY 约束或者其他依赖关系的列，但在使用表设计器时例外。 在使用对象资源管理器或 [!INCLUDE[tsql](../../includes/tsql-md.md)]时，必须首先删除该列上的所有依赖关系。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-columns-by-using-object-explorer"></a>通过使用对象资源管理器删除列  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在“对象资源管理器”中，找到要从其中删除列的表，然后将其展开以公开列名称。 
+2.  在“对象资源管理器”中，找到要从其中删除列的表，然后将其展开以公开列名称  。 
 
-3.  右键单击要删除的列，然后选择“删除”。  
+3.  右键单击要删除的列，然后选择“删除”  。  
   
-3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
+3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
  如果该列包含约束或其他依赖关系，则在 **“删除对象”** 对话框中将显示一条错误消息。 通过删除引用的约束解决该错误。  
   
 #### <a name="to-delete-columns-by-using-table-designer"></a>通过使用表设计器删除列  
   
-1.  在“对象资源管理器”中，右键单击要从其中删除列的表，然后选择“设计”。  
+1.  在“对象资源管理器”  中，右键单击要从其中删除列的表，然后选择“设计”  。  
   
-2.  右键单击要删除的列，然后从快捷菜单上选择“删除列”。  
+2.  右键单击要删除的列，然后从快捷菜单上选择“删除列”  。  
   
-3.  如果该列参与了关系（FOREIGN KEY 或 PRIMARY KEY），则将显示一条消息，提示您确认删除所选列及其关系。 选择 **“是”**。  
+3.  如果该列参与了关系（FOREIGN KEY 或 PRIMARY KEY），则将显示一条消息，提示您确认删除所选列及其关系。 选择 **“是”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-columns"></a>删除列  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

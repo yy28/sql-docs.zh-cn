@@ -24,10 +24,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5a32ee7b130727f537f818942879f0486bbf9422
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095741"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
@@ -78,9 +78,9 @@ ms.locfileid: "65095741"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“将其设置为主服务器”。 **主服务器向导** 将引导您完成设置主服务器和添加目标服务器的过程。  
+2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，再单击“将其设置为主服务器”  。 **主服务器向导** 将引导您完成设置主服务器和添加目标服务器的过程。  
   
-3.  从“主服务器操作员”中，配置主服务器的操作员。若要通过电子邮件或寻呼程序向操作员发送通知，必须配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以发送电子邮件。 若要使用 **net send**向操作员发送通知，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所在的服务器上运行 Messenger 服务。  
+3.  从“主服务器操作员”  中，配置主服务器的操作员。若要通过电子邮件或寻呼程序向操作员发送通知，必须配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以发送电子邮件。 若要使用 **net send**向操作员发送通知，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所在的服务器上运行 Messenger 服务。  
   
     **电子邮件地址**  
     设置操作员的电子邮件地址。  
@@ -128,9 +128,9 @@ ms.locfileid: "65095741"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
   
 ```  
 USE msdb ;  

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754195"
 ---
 # <a name="allowing-partially-trusted-callers"></a>允许部分可信任的调用方
@@ -45,7 +45,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  假设有一个实用工具类对许多服务器端 CLR 集成应用程序都非常有用。 例如，它可能是一个表示查询调用结果的类。 若要启用对此组件的共享，请将此实用工具类置于单独的程序集中。 然后，即可从包含 CLR 集成对象的各种其他程序集引用该程序集。 因为此实用工具类可用于多个不同的服务器应用程序，所以应仔细检查并解决任何安全问题。 然后，将 `AllowPartiallyTrustedCallers` 属性应用于包含此实用工具类的程序集，以便通过 `SAFE` 或 `EXTERNAL_ACCESS` 权限集标记的程序集中包含的 CLR 集成对象可以使用此实用工具类和方法，即使此实用工具类和方法位于单独的程序集中。  
   
  有时，在通读查询结果时能够执行命令（而不需要打开新的连接并将所有结果读入内存）很有用。 ADO.NET 2.0 中的多个活动的结果集 (MARS) 功能就是一种能够帮助您实现以上操作的技术。 目前，用于服务器端编程的进程内的提供程序不能实现 MARS。 若要消除此限制，可以使用服务器端游标。 此示例说明如何使用服务器端游标解决对服务器端编程缺少 MARS 支持的问题。  

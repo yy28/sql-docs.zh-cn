@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1ebe7fa94a66482be35026b2049bdc57e357d9b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801967"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515993"
 ---
 # <a name="delete-foreign-key-relationships"></a>删除外键关系
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47801967"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **删除外键约束，使用：**  
   
@@ -42,30 +42,30 @@ ms.locfileid: "47801967"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>删除外键约束  
   
-1.  在 **“对象资源管理器”** 中，展开具有约束的表，再展开 **“键”**。  
+1.  在 **“对象资源管理器”** 中，展开具有约束的表，再展开 **“键”** 。  
   
-2.  右键单击该约束，然后单击“删除”。  
+2.  右键单击该约束，然后单击“删除”  。  
   
-3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
+3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>删除外键约束  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

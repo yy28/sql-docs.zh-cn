@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cc00205c7278e25fad3c3301dcdf0507cb9b4bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600605"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672435"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>导航 SQL ServerPowerShell 路径
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "47600605"
 [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 提供程序在与文件路径相似的结构中公开 SQL Server 实例中的对象集。 您可以使用 Windows PowerShell cmdlet 导航提供程序路径，并且创建自定义驱动器以便缩短需键入的路径。  
 
 > [!NOTE]
-> SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新。 最新的 PowerShell 模块是 SqlServer 模块。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能。  
-> 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer 模块。
-> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)。
+> SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS   。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新  。 最新的 PowerShell 模块是 SqlServer 模块  。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能   。  
+> 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS   。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer  模块。
+> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)  。
   
 Windows PowerShell 实现 cmdlet 以便导航表示 PowerShell 提供程序支持的对象层次结构的路径结构。 在您导航到该路径中的节点时，可以使用其他 cmdlet 以便针对当前对象执行基本操作。 由于 cmdlet 会经常用到，因此它们具有简短的规范别名。 还有一组将 cmdlet 映射到类似命令提示符命令的别名，以及另一组用于 UNIX shell 命令的别名。  
   
@@ -136,7 +136,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell 提供程序](sql-server-powershell-provider.md)   
  [使用 SQL ServerPowerShell 路径](work-with-sql-server-powershell-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   

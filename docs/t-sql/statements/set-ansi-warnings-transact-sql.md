@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af30fd34d42b296e9b83bbd537dcff411cd42608
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639094"
 ---
 # <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,13 +57,13 @@ SET ANSI_WARNINGS ON
   
 -   设置为 ON 时，如果聚合函数（如 SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP 或 COUNT）中出现空值，将生成警告消息。 设置为 OFF 时，不发出警告。  
   
--   设置为 ON 时，被零除错误和算术溢出错误将导致回滚语句，并生成错误消息。 设置为 OFF 时，被零除错误和算术溢出错误将导致返回空值。 如果尝试对 character、Unicode 或 binary 列执行 INSERT 或 UPDATE 操作，而这些列中的新值长度超出列的最大大小，那么，在发生被零除错误或算术溢出错误时，将导致返回 NULL 值。 如果 SET ANSI_WARNINGS 为 ON，则根据 ISO 标准，将取消 INSERT 或 UPDATE。 字符列的尾随空格和二进制列的尾随零都将被忽略。 设置为 OFF 时，数据将剪裁为列的大小，并且语句执行成功。  
+-   设置为 ON 时，被零除错误和算术溢出错误将导致回滚语句，并生成错误消息。 设置为 OFF 时，被零除错误和算术溢出错误将导致返回空值。 如果尝试对 character、Unicode 或 binary 列执行 INSERT 或 UPDATE 操作，而这些列中的新值长度超出列的最大大小，那么，在发生被零除错误或算术溢出错误时，将导致返回 NULL 值   。 如果 SET ANSI_WARNINGS 为 ON，则根据 ISO 标准，将取消 INSERT 或 UPDATE。 字符列的尾随空格和二进制列的尾随零都将被忽略。 设置为 OFF 时，数据将剪裁为列的大小，并且语句执行成功。  
   
 > [!NOTE]  
-> 在 binary 或 varbinary 数据转换中发生截断时，不管 SET 选项如何设置，都不发出警告或错误消息。  
+> 在 binary 或 varbinary 数据转换中发生截断时，不管 SET 选项如何设置，都不发出警告或错误消息   。  
   
 > [!NOTE]  
-> 在存储过程和用户定义函数中传递参数，或者在批处理语句中声明和设置变量时，不执行 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 INSERT 或 UPDATE 语句可以成功执行。  
+> 在存储过程和用户定义函数中传递参数，或者在批处理语句中声明和设置变量时，不执行 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 INSERT 或 UPDATE 语句可以成功执行  。  
   
 可以使用 sp_configure 的 user options 选项，为服务器的所有连接设置 ANSI_WARNINGS 的默认设置。 有关详细信息，请参阅本主题后面的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)不熟悉的读者。  
   
@@ -90,7 +90,7 @@ IF ( (8 & @@OPTIONS) = 8 ) SET @ANSI_WARN = 'ON';
 SELECT @ANSI_WARN AS ANSI_WARNINGS;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

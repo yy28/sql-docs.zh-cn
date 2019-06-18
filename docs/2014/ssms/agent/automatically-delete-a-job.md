@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472985"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
@@ -64,11 +64,11 @@ ms.locfileid: "62472985"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，展开 **“作业”**，右键单击要编辑的作业，再单击 **“属性”**。  
+2.  展开 **“SQL Server 代理”** ，展开 **“作业”** ，右键单击要编辑的作业，再单击 **“属性”** 。  
   
 3.  选择 **“通知”** 页。  
   
-4.  选中 **“自动删除作业”**，并选择以下某项：  
+4.  选中 **“自动删除作业”** ，并选择以下某项：  
   
     -   单击 **“当作业成功时”** 以在作业成功完成时删除作业状态。  
   

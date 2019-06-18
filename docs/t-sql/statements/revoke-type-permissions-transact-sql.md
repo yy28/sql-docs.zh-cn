@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a5a98994ab735e685e1d866ff9a28899cdef8c52
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638659"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE 类型权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,11 +53,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对类型撤消的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON TYPE :: [ schema_name ] . type_name  
- 指定要对其撤消权限的类型。 需要使用作用域限定符 (::)。 如果未指定 schema_name，则使用默认架构。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)。  
+ ON TYPE :: [ schema_name ] .    type_name   
+ 指定要对其撤消权限的类型。 需要使用作用域限定符 (::)  。 如果未指定 schema_name，则使用默认架构  。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)   。  
   
  { FROM | TO } \<database_principal> 指定要从中撤销权限的主体。  
   
@@ -75,45 +75,45 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
  AS \<database_principal> 指定一个主体，执行此查询的主体从该主体获得撤销该权限的权利。  
   
- Database_user  
+ Database_user   
  指定数据库用户。  
   
- Database_role  
+ Database_role   
  指定数据库角色。  
   
- Application_role  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+ Application_role   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 
   
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ Database_user_mapped_to_Windows_User   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ Database_user_mapped_to_Windows_Group   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ Database_user_mapped_to_certificate   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ Database_user_mapped_to_asymmetric_key   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login  
+ Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>Remarks  
  类型是架构级的安全对象，包含于权限层次结构中作为其父级的架构中。  
   
 > [!IMPORTANT]  
->  GRANT、DENY 和 REVOKE 权限不适用于系统类型。 可以为用户定义类型授予权限。 有关用户定义类型的详细信息，请参阅[使用 SQL Server 中的用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)。  
+>  GRANT、DENY 和 REVOKE 权限不适用于系统类型    。 可以为用户定义类型授予权限。 有关用户定义类型的详细信息，请参阅[使用 SQL Server 中的用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)。  
   
  下表列出了可撤消的对类型最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
   
@@ -125,7 +125,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对类型的 CONTROL 权限。 如果使用 AS 子句，则指定的主体必须拥有类型。  
   
 ## <a name="examples"></a>示例  

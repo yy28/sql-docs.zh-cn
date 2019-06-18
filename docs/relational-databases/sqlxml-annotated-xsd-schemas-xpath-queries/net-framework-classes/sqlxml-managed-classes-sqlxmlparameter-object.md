@@ -19,17 +19,17 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb7d6de3e00430e39d51dd365282e997a1e284d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737831"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>SQLXML 托管类 - SqlXmlParameter 对象
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SqlXmlParameter 对象支持以下属性：  
   
- “属性”  
+ 名称  
  参数名。 命令可以是传递的参数。 调用 CreateParameter 方法 SqlXmlCommand 对象的创建参数对象。  
   
  ReplTest1  

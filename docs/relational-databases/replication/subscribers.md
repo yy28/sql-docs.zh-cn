@@ -17,11 +17,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 508abbeac89bb374fbfb68e368e68988218e0e91
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521822"
 ---
 # <a name="subscribers"></a>订阅服务器
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53207387"
   
 ## <a name="options"></a>选项  
  **“发布服务器属性”**  
- 选中网格中的复选框可以启用相应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源作为“发布”页上所选发布的订阅服务器。 如果没有列出订阅服务器，请单击 **“添加订阅服务器”** 或 **“添加 SQL Server 订阅服务器”**。  
+ 选中网格中的复选框可以启用相应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源作为“发布”页上所选发布的订阅服务器  。 如果没有列出订阅服务器，请单击 **“添加订阅服务器”** 或 **“添加 SQL Server 订阅服务器”** 。  
   
  **订阅数据库**  
  此列中显示的信息和其中可用的操作取决于 **“订阅服务器”** 列中所列的订阅服务器的类型：  
@@ -39,7 +39,7 @@ ms.locfileid: "53207387"
     > [!NOTE]  
     >  若要启用发布服务器作为订阅服务器，则订阅数据库与发布数据库必须属于不同的数据库。  
   
--   对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器，不显示订阅数据库。 请在 **“添加非 SQL Server 订阅服务器”** 对话框的 **“数据源名称”** 字段中指定数据库以及其他连接信息。 若要显示此对话框，请单击 **“添加订阅服务器”** ，再单击 **“添加非 SQL Server 订阅服务器”**。  
+-   对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器，不显示订阅数据库。 请在 **“添加非 SQL Server 订阅服务器”** 对话框的 **“数据源名称”** 字段中指定数据库以及其他连接信息。 若要显示此对话框，请单击 **“添加订阅服务器”** ，再单击 **“添加非 SQL Server 订阅服务器”** 。  
   
  **“添加订阅服务器”**  
  向可以启用为订阅服务器的服务器列表中添加服务器。 如果以下条件全部为真，则显示此按钮：  
@@ -53,7 +53,7 @@ ms.locfileid: "53207387"
   
 -   所选发布的发布服务器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本。  
   
- 单击“添加订阅服务器”将显示具有以下两个选项的菜单：“添加 SQL Server 订阅服务器”和“添加非 SQL Server 订阅服务器”。 单击 **“添加非 SQL Server 订阅服务器”** 可以添加 Oracle 或 IBM DB2 订阅服务器。  
+ 单击“添加订阅服务器”将显示具有以下两个选项的菜单  ：“添加 SQL Server 订阅服务器”和“添加非 SQL Server 订阅服务器”   。 单击 **“添加非 SQL Server 订阅服务器”** 可以添加 Oracle 或 IBM DB2 订阅服务器。  
   
  **“添加 SQL Server 订阅服务器”**  
  向可以启用为订阅服务器的服务器列表中添加服务器。 如果以下一个或多个条件为真，则显示此按钮：  

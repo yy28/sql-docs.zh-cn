@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ffdd615647e1dea318d5cec7fa5075b6449b4dae
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65093850"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>“排序规则”对话框 (Visual Database Tools)
@@ -27,9 +27,9 @@ ms.locfileid: "65093850"
   
 在以下情况下将显示此对话框：  
   
--   在“列属性”选项卡的“排序规则”字段中输入无效的排序规则名称。  
+-   在“列属性”  选项卡的“排序规则”  字段中输入无效的排序规则名称。  
   
--   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 (…)。  
+-   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 (…)    。  
   
 ## <a name="options"></a>选项  
 **SQL 排序规则**  
@@ -39,10 +39,10 @@ ms.locfileid: "65093850"
 在下拉列表中由 Windows 定义的排序规则顺序之间进行选择。  
   
 **二进制排序**  
-使用字符值的二进制代码进行比较。 如果选择此选项，某些字母比较选项将不可用。 例如，不区分大小写的比较选项将不可用，因为大写字母和小写字母具有不同的二进制编码。 只有在选择了“Windows 排序规则”后才适用。  
+使用字符值的二进制代码进行比较。 如果选择此选项，某些字母比较选项将不可用。 例如，不区分大小写的比较选项将不可用，因为大写字母和小写字母具有不同的二进制编码。 只有在选择了“Windows 排序规则”  后才适用。  
   
 **字典排序**  
-使用字母比较选项。 只有在选择了“Windows 排序规则”后才适用。 字母比较选项包括：  
+使用字母比较选项。 只有在选择了“Windows 排序规则”  后才适用。 字母比较选项包括：  
   
 -   **区分大小写** 如果希望在比较中将大写字母和小写字母视为不相同，请选择此选项。  
   

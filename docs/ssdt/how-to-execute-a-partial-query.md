@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0dff2087286035b078f59ac1673a733fb3cc8358
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090175"
 ---
 # <a name="how-to-execute-a-partial-query"></a>如何：执行部分查询
@@ -26,9 +26,9 @@ Transact\-SQL 编辑器允许突出显示特定的脚本段落并将其作为单
   
 ### <a name="to-partially-execute-a-query"></a>部分执行查询  
   
-1.  在“SQL Server 对象资源管理器”中，双击“视图”下的 PerishableFruits 以在 Transact\-SQL 编辑器中将其打开。  
+1.  在“SQL Server 对象资源管理器”  中，双击“视图”  下的 PerishableFruits  以在 Transact\-SQL 编辑器中将其打开。  
   
-2.  突出显示代码中的 `SELECT p.Id, p.Name FROM dbo.Product p` 段，右键单击并选择“执行查询”。  
+2.  突出显示代码中的 `SELECT p.Id, p.Name FROM dbo.Product p` 段，右键单击并选择“执行查询”  。  
   
-3.  请注意，在 `Products` 表中具有指定字段的所有行都将在“结果”窗格中返回。  
+3.  请注意，在 `Products` 表中具有指定字段的所有行都将在“结果”  窗格中返回。  
   

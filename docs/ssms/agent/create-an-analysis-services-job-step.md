@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8bbe55fb0bacc59983c80f1ba03683f3e1efa377
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095897"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
@@ -68,13 +68,13 @@ ms.locfileid: "65095897"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅[创建作业](../../ssms/agent/create-jobs.md)。  
+2.  展开“SQL Server 代理”  ，创建一个新作业或右键单击一个现有作业，再单击“属性”  。 有关创建作业的详细信息，请参阅[创建作业](../../ssms/agent/create-jobs.md)。  
   
-3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页面，再单击 **“新建”**。  
+3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页面，再单击 **“新建”** 。  
   
-4.  在 **“新建作业步骤”** 对话框中，键入作业 **“步骤名称”**。  
+4.  在 **“新建作业步骤”** 对话框中，键入作业 **“步骤名称”** 。  
   
-5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 命令”**。  
+5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 命令”** 。  
   
 6.  在 **“运行身份”** 列表中，选择为使用 Analysis Services 命令子系统而定义的代理。 如果用户是 **sysadmin** 固定服务器角色的成员，还可以选择 **“SQL Agent 服务帐户”** 运行此作业步骤。  
   
@@ -88,13 +88,13 @@ ms.locfileid: "65095897"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅 [创建作业](../../ssms/agent/create-jobs.md)。  
+2.  展开“SQL Server 代理”  ，创建一个新作业或右键单击一个现有作业，再单击“属性”  。 有关创建作业的详细信息，请参阅 [创建作业](../../ssms/agent/create-jobs.md)。  
   
-3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
+3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”** 。  
   
-4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”**。  
+4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
   
-5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 查询”**。  
+5.  在 **“类型”** 列表中，单击 **“SQL Server Analysis Services 查询”** 。  
   
 6.  在 **“运行身份”** 列表中，选择为使用 Analysis Services 查询子系统而定义的代理。 如果用户是 **sysadmin** 固定服务器角色的成员，还可以选择 **“SQL Agent 服务帐户”** 运行此作业步骤。  
   
@@ -110,9 +110,9 @@ ms.locfileid: "65095897"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Creates a job step that uses XMLA to create a relational data source that
@@ -153,9 +153,9 @@ ms.locfileid: "65095897"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Creates a job step that uses MDX to return data  

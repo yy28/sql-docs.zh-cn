@@ -20,11 +20,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1cdaa903f8d81c2c4878965bc085f594f0313704
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715894"
 ---
 # <a name="create-a-database-schema"></a>创建数据库架构
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "53626264"
   
 -   创建数据库对象时，如果将某一有效的域主体（用户或组）指定为对象所有者，则该域主体将作为架构添加到数据库中。 这个新架构将为该域主体所有。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 -   需要对数据库拥有 CREATE SCHEMA 权限。  
   
@@ -54,19 +54,19 @@ ms.locfileid: "53626264"
   
 2.  展开要在其中创建新数据库架构的数据库。  
   
-3.  右键单击“安全性”文件夹，指向“新建”，并选择“架构”。  
+3.  右键单击“安全性”文件夹，指向“新建”，并选择“架构”    。  
   
-4.  在“架构 - 新建”对话框中的“常规”页上，在“架构名称”框中输入新架构的名称。  
+4.  在“架构 - 新建”对话框中的“常规”页上，在“架构名称”框中输入新架构的名称    。  
   
 5.  在 **“架构所有者”** 框中，输入要拥有该架构的数据库用户或角色的名称。 或者，单击 **“搜索”** 以打开 **“搜索角色和用户”** 对话框。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 > [!NOTE]
-> 如果要使用 SSMS 针对 Azure SQL 数据库或 Azure SQL 数据仓库创建架构，则不会显示对话框。 将需要运行生成的“创建架构模板 T-SQL 语句”。
+> 如果要使用 SSMS 针对 Azure SQL 数据库或 Azure SQL 数据仓库创建架构，则不会显示对话框   。 将需要运行生成的“创建架构模板 T-SQL 语句”。
   
 ### <a name="additional-options"></a>其他选项  
- “架构 - 新建”对话框还在两个其他页上提供了选项：“权限”和“扩展属性”。  
+ “架构 - 新建”对话框还在两个其他页上提供了选项：  “权限”和“扩展属性”   。  
   
 -   **“权限”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "53626264"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  以下示例将创建一个名为 `Chains` 的架构，然后创建名为 `Sizes` 的表。  
     ```sql  

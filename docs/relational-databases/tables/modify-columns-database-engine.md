@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 93cbdf74f8917492a2007d48ad27863440869092
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749675"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62693289"
 ---
 # <a name="modify-columns-database-engine"></a>修改列（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47749675"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要修改列的数据类型，请使用：**  
   
@@ -45,22 +45,22 @@ ms.locfileid: "47749675"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>修改列的数据类型  
   
-1.  在“对象资源管理器”中，右键单击要更改其小数位数的列所在的表，再单击“设计”。  
+1.  在“对象资源管理器”  中，右键单击要更改其小数位数的列所在的表，再单击“设计”  。  
   
 2.  选择要修改其数据类型的列。  
   
-3.  在“列属性”选项卡中，单击“数据类型”属性的网格单元格，再从下拉列表中选择新的数据类型。  
+3.  在“列属性”  选项卡中，单击“数据类型”  属性的网格单元格，再从下拉列表中选择新的数据类型。  
   
-4.  在“文件”菜单上，单击“保存”以保存表名。  
+4.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
 > [!NOTE]  
 >  当您修改列的数据类型时，即使已为所选数据类型指定其他长度，表设计器也会使用该数据类型的默认长度。 在指定数据类型之后，始终需要将数据类型长度设置为所需的值。  
@@ -72,11 +72,11 @@ ms.locfileid: "47749675"
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>修改列的数据类型  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     CREATE TABLE dbo.doc_exy (column_a INT ) ;  

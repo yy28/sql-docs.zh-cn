@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ba51dcc2f2da07c72c88a6be47e5edef0ea2ae29
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724472"
 ---
 # <a name="change-the-configuration-settings-for-a-database"></a>更改数据库的配置设置
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51560380"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要更改数据库的选项设置，请使用：**  
   
@@ -47,16 +47,16 @@ ms.locfileid: "51560380"
   
 -   只有系统管理员、数据库所有者、 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及 **db_owner** 固定数据库角色成员才能修改这些选项。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-change-the-option-settings-for-a-database"></a>更改数据库的选项设置  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，扩展该服务器，然后扩展“数据库”，右键单击某个数据库，再单击“属性”。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，扩展该服务器，然后扩展  “数据库”，右键单击某个数据库，再单击  “属性”。  
   
 2.  在 **“数据库属性”** 对话框中，单击 **“选项”** 访问大多数配置设置。 文件和文件组配置、镜像和日志传送都在各自相应的页上。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "51560380"
   
 #### <a name="to-change-the-option-settings-for-a-database"></a>更改数据库的选项设置  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例设置 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库的恢复模式和数据页面验证选项。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例设置 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库的恢复模式和数据页面验证选项。  
   
  [!code-sql[DatabaseDDL#AlterDatabase7](../../relational-databases/databases/codesnippet/tsql/change-the-configuration_1.sql)]  
   

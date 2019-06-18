@@ -14,17 +14,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 790cbbd195e96304a150b06627a10113dfb5aba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688645"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686633"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **Blocked Process Report** 事件类指明某个任务已被阻塞，导致超过指定的时间。 此事件类不包括系统任务和正在等待未发现死锁的资源的任务。  
   
- 若要配置阈值和报告生成频率，请使用 **sp_configure** 命令配置“阻塞的进程阈值”选项（以秒为单位进行设置）。 默认情况下，不生成阻塞的进程报告。 有关设置“阻塞的进程阈值”选项的详细信息，请参阅[服务器配置选项](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
+ 若要配置阈值和报告生成频率，请使用 **sp_configure** 命令配置“阻塞的进程阈值”  选项（以秒为单位进行设置）。 默认情况下，不生成阻塞的进程报告。 有关设置“阻塞的进程阈值”  选项的详细信息，请参阅[服务器配置选项](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
   
  有关筛选**阻塞的进程报告**事件类返回的数据的信息，请参阅[在跟踪中筛选事件 (SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)、[设置跟踪筛选器 (Transact-SQL)](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) 或 [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)。  
   
@@ -32,20 +32,20 @@ ms.locfileid: "47688645"
   
 |数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**DatabaseID**|**int**|获取锁所在的数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|用户帐户控制|  
-|**Duration**|**bigint**|进程阻塞的时间（毫秒）。|13|用户帐户控制|  
-|**EndTime**|**datetime**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。|15|用户帐户控制|  
+|**DatabaseID**|**int**|获取锁所在的数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
+|**Duration**|**bigint**|进程阻塞的时间（毫秒）。|13|是|  
+|**EndTime**|**datetime**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。|15|是|  
 |**EventClass**|**int**|事件类型 = 137。|27|否|  
 |**EventSequence**|**int**|特定事件在请求中的顺序。|51|否|  
-|**IndexID**|**int**|受事件影响的对象的索引的 ID。 若要确定对象的索引的 ID，请使用 **sysindexes** 系统表的 **indid** 列。|24|用户帐户控制|  
-|**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|用户帐户控制|  
-|**LoginSid**|**图像**|已登录的用户的安全标识符 (SID)。 系统线程中始终报告此事件。 IsSystem = 1；SID = sa。|41|用户帐户控制|  
-|**模式**|**int**|事件已接收的或要请求的状态。<br /><br /> 0 = NULL<br /><br /> 1 = Sch-S<br /><br /> 2 = Sch-M<br /><br /> 3 = S<br /><br /> 4 = U<br /><br /> 5 = X<br /><br /> 6 = IS<br /><br /> 7 = IU<br /><br /> 8 = IX<br /><br /> 9 = SIU<br /><br /> 10 = SIX<br /><br /> 11 = UIX<br /><br /> 12 = BU<br /><br /> 13 = RangeS-S<br /><br /> 14 = RangeS-U<br /><br /> 15 = RangeI-N<br /><br /> 16 = RangeI-S<br /><br /> 17 = RangeI-U<br /><br /> 18 = RangeI-X<br /><br /> 19 = RangeX-S<br /><br /> 20 = RangeX-U<br /><br /> 21 = RangeX-X|32|用户帐户控制|  
-|**Exchange Spill**|**int**|获取其锁的对象的系统分配的 ID（如果可用并适用）。|22|用户帐户控制|  
+|**IndexID**|**int**|受事件影响的对象的索引的 ID。 若要确定对象的索引的 ID，请使用 **sysindexes** 系统表的 **indid** 列。|24|是|  
+|**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
+|**LoginSid**|**图像**|已登录的用户的安全标识符 (SID)。 系统线程中始终报告此事件。 IsSystem = 1；SID = sa。|41|是|  
+|**模式**|**int**|事件已接收的或要请求的状态。<br /><br /> 0 = NULL<br /><br /> 1 = Sch-S<br /><br /> 2 = Sch-M<br /><br /> 3 = S<br /><br /> 4 = U<br /><br /> 5 = X<br /><br /> 6 = IS<br /><br /> 7 = IU<br /><br /> 8 = IX<br /><br /> 9 = SIU<br /><br /> 10 = SIX<br /><br /> 11 = UIX<br /><br /> 12 = BU<br /><br /> 13 = RangeS-S<br /><br /> 14 = RangeS-U<br /><br /> 15 = RangeI-N<br /><br /> 16 = RangeI-S<br /><br /> 17 = RangeI-U<br /><br /> 18 = RangeI-X<br /><br /> 19 = RangeX-S<br /><br /> 20 = RangeX-U<br /><br /> 21 = RangeX-X|32|是|  
+|**Exchange Spill**|**int**|获取其锁的对象的系统分配的 ID（如果可用并适用）。|22|是|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26||  
-|**SessionLoginName**|**nvarchar**|发起该会话的用户的登录名。 例如，如果您使用 Login1 连接到 SQL Server 并以 Login2 身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
-|**TextData**|**ntext**|依赖于跟踪中捕获的事件类的文本值。|1|用户帐户控制|  
-|**TransactionID**|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
+|**SessionLoginName**|**nvarchar**|发起该会话的用户的登录名。 例如，如果您使用 Login1 连接到 SQL Server 并以 Login2 身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|**TextData**|**ntext**|依赖于跟踪中捕获的事件类的文本值。|1|是|  
+|**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

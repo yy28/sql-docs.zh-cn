@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62503772"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何生成预测和使用 SQL Server 中机器学习模型的预测
@@ -84,7 +84,7 @@ _评分_是一个两步过程。 首先，指定要从表加载的已训练的�
 
 **使用 SQL**
 
-从 SQL 代码中，你可以训练模型使用[sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，并直接插入在类型的列的表中已训练的模型**varbinary （max)**。 一个简单的示例，请参阅[在 R 中创建 preditive 模型](../tutorials/rtsql-create-a-predictive-model-r.md)
+从 SQL 代码中，你可以训练模型使用[sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，并直接插入在类型的列的表中已训练的模型**varbinary （max)** 。 一个简单的示例，请参阅[在 R 中创建 preditive 模型](../tutorials/rtsql-create-a-predictive-model-r.md)
 
 **使用 R**
 
@@ -105,7 +105,7 @@ _评分_是一个两步过程。 首先，指定要从表加载的已训练的�
 + [适用于 R 的 mrsdeploy 包](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
 + [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)

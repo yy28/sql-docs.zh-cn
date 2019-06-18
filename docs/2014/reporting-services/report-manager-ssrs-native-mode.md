@@ -1,32 +1,20 @@
 ---
 title: 报表管理器 （SSRS 本机模式） |Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- reports [Reporting Services], managing
-- Report Manager [Reporting Services], about Report Manager
-- customizing Report Manager
-- Report Manager [Reporting Services], customizing
-- report servers [Reporting Services], administering
-- browsing reports [Reporting Services]
-- administering reports
-- Report Manager [Reporting Services]
-- components [Reporting Services], Report Manager
-ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 31e64dfe871fa38daee266814006468a8ea32e65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 55581ae96660732ee01bf12fa37e1c5e8ac9634e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568381"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>报表管理器（SSRS 本机模式）
   报表管理器是基于 Web 的报表访问和管理工具，用于通过 HTTP 连接来管理远程位置的单个报表服务器实例。 您还可以使用报表管理器的报表查看器和导航功能。 本主题内容：  
@@ -101,7 +89,7 @@ ms.locfileid: "59940663"
 ##  <a name="bkmk_icon_descriptions"></a> 图标说明  
  下表对报表管理器中使用的图标进行了说明。 有关报表工具栏中显示的图标的详细信息，请参阅[HTML 查看器和报表工具栏](html-viewer-and-the-report-toolbar.md)。  
   
-|图标|Description|操作|  
+|图标|描述|操作|  
 |----------|-----------------|------------|  
 |![报表图标](media/hlp-16doc.gif "报表图标")|报告|单击报表图标或名称可打开该报表。 该报表将在单独的窗口中打开。|  
 |![模型图标](media/model-icon.gif "Model icon")|报表模型|单击报表模型图标可打开模型属性页。|  
@@ -109,17 +97,15 @@ ms.locfileid: "59940663"
 |![文件夹图标](media/hlp-16folder.gif "文件夹图标")|文件夹|单击文件夹图标或名称可打开该文件夹。|  
 |![订阅图标](media/hlp-16subscription.gif "订阅图标")|订阅|单击订阅图标或说明可编辑相应的订阅。|  
 |![数据驱动订阅图标](media/hlp-16subscriptiondd.gif "数据驱动订阅图标")|数据驱动订阅|单击数据驱动订阅图标或说明可编辑相应的订阅。|  
-|![通用资源图标](media/hlp-16file.gif "通用资源图标")|资源|单击资源图标或名称可打开该资源。 该资源将在单独的窗口中打开。|  
+|![通用资源图标](media/hlp-16file.gif "通用资源图标")|Resource|单击资源图标或名称可打开该资源。 该资源将在单独的窗口中打开。|  
 |![共享数据源图标](media/hlp-16datasource.png "共享数据源图标")|共享数据源项|单击共享数据源图标可打开数据源的属性页、报表列表和订阅列表。|  
 |![属性页图标](media/hlp-16prop.gif "属性页图标")|属性页|单击属性图标可访问其他页面来设置属性和安全性。|  
   
-## <a name="see-also"></a>请参阅  
- [配置 URL（SSRS 配置管理器）](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [规划 Reporting Services 和 Power View 浏览器支持的&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [报表生成器&#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
- [Reporting Services 工具](tools/reporting-services-tools.md)   
- [报表服务器内容管理（SSRS 本机模式）](report-server/report-server-content-management-ssrs-native-mode.md)   
- [查看和浏览本机模式下使用 SharePoint Web 部件的报表&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
-  
-  
+## <a name="see-also"></a>请参阅
+
+- [配置 URL（SSRS 配置管理器）](install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [规划 Reporting Services 和 Power View 浏览器支持的&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [报表生成器&#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)
+- - [Reporting Services 工具](tools/reporting-services-tools.md)
+- [报表服务器内容管理（SSRS 本机模式）](report-server/report-server-content-management-ssrs-native-mode.md)  
+[报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)

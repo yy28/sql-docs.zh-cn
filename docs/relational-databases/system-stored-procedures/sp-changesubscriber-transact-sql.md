@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997806"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -61,9 +61,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type` 是订阅服务器类型。 *类型*是**tinyint**，默认值为 NULL。 **0**指示[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。 **1**指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或其他 ODBC 数据源服务器订阅服务器。  
   
-`[ @login = ] 'login'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证登录 id。 login 的数据类型为 sysname，默认值为 NULL。  
+`[ @login = ] 'login'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证登录 id。 login 的数据类型为 sysname，默认值为 NULL   。  
   
-`[ @password = ] 'password'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证密码。 *密码*是**sysname**，默认值为**%**。 **%** 指示未更改密码属性。  
+`[ @password = ] 'password'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证密码。 *密码*是**sysname**，默认值为 **%** 。 **%** 指示未更改密码属性。  
   
 `[ @commit_batch_size = ] commit_batch_size` 支持向后兼容性。  
   
@@ -117,7 +117,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @active_end_date = ] active_end_date` 是正在计划分发任务停止的日期格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
-`[ @description = ] 'description'` 是一个可选文本说明。 *描述*是**nvarchar(255)**，默认值为 NULL。  
+`[ @description = ] 'description'` 是一个可选文本说明。 *描述*是**nvarchar(255)** ，默认值为 NULL。  
   
 `[ @security_mode = ] security_mode` 是实现的安全模式。 *security_mode*是**int**，可以是下列值之一。  
   

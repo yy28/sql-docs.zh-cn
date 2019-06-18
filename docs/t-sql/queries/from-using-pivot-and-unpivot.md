@@ -26,11 +26,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 04632f7b1ef117c31701cf998b913375656e8a39
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928683"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -159,7 +159,7 @@ FROM PurchaseOrderHeader;
 > [!IMPORTANT]  
 >  如果聚合函数与 `PIVOT` 一起使用，则计算聚合时将不考虑出现在值列中的任何空值。  
   
-与 `PIVOT` 执行的操作几乎相反，`UNPIVOT` 将列轮换为行。 假设以上示例中生成的表在数据库中存储为 `pvt`，并且您需要将列标识符 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋转为对应于特定供应商的行值。 因此，必须标识另外两个列。 包含要轮换的列值（`Emp1`、`Emp2`...）的列称为 `Employee`，保留要轮换列下的现有值的列称为 `Orders`。 这些列分别对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义中的 pivot_column 和 value_column。 以下为该查询。  
+与 `PIVOT` 执行的操作几乎相反，`UNPIVOT` 将列轮换为行。 假设以上示例中生成的表在数据库中存储为 `pvt`，并且您需要将列标识符 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋转为对应于特定供应商的行值。 因此，必须标识另外两个列。 包含要轮换的列值（`Emp1`、`Emp2`...）的列称为 `Employee`，保留要轮换列下的现有值的列称为 `Orders`。 这些列分别对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义中的 pivot_column 和 value_column   。 以下为该查询。  
   
 ```sql
 -- Create the table and insert values as portrayed in the previous example.  
@@ -204,7 +204,7 @@ VendorID    Employee    Orders
   
 请注意，`UNPIVOT` 并不完全是 `PIVOT` 的逆操作。 `PIVOT` 执行聚合，并将多个可能的行合并为输出中的一行。 `UNPIVOT` 不重现原始表值表达式的结果，因为行已被合并。 另外，`UNPIVOT` 输入中的 NULL 值也在输出中消失了。 如果值消失，表明在执行 `PIVOT` 操作前，输入中可能就已存在原始 NULL 值。  
   
-[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中的 `Sales.vSalesPersonSalesByFiscalYears` 视图将使用 `PIVOT` 返回每个销售人员在每个会计年度的总销售额。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中编写视图脚本，请在“对象资源管理器”中的“视图”文件夹下找到 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库对应的视图。 右键单击该视图名称，再选择“编写视图脚本为”。  
+[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中的 `Sales.vSalesPersonSalesByFiscalYears` 视图将使用 `PIVOT` 返回每个销售人员在每个会计年度的总销售额。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中编写视图脚本，请在“对象资源管理器”中的“视图”文件夹下找到 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库对应的视图   。 右键单击该视图名称，再选择“编写视图脚本为”  。  
   
 ## <a name="see-also"></a>另请参阅  
 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   

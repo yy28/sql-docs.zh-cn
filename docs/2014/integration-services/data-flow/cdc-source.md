@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828120"
 ---
 # <a name="cdc-source"></a>CDC 源
@@ -38,7 +38,7 @@ ms.locfileid: "62828120"
   
 -   基于所确定的 CDC 处理范围的 CDC 状态包变量的名称。 CDC 源不修改该变量。  
   
- CDC 源返回的数据与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 函数 cdc.fn_cdc_get_all_changes_\<capture-instance-name> 或 cdc.fn_cdc_get_net_changes_\<capture-instance-name>（在可用时）返回的数据相同。 唯一可选的添加是列 **__$initial_processing** ，它指示当前处理范围是否可与表的初始加载重叠。 有关初始处理的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。  
+ CDC 源返回的数据与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 函数 cdc.fn_cdc_get_all_changes_\<capture-instance-name> 或 cdc.fn_cdc_get_net_changes_\<capture-instance-name>（在可用时）返回的数据相同   。 唯一可选的添加是列 **__$initial_processing** ，它指示当前处理范围是否可与表的初始加载重叠。 有关初始处理的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。  
   
  CDC 源有一个常规输出和一个错误输出。  
   
@@ -81,14 +81,14 @@ use <cdc-enabled-database-name>
   
 -   \<value-from-state-ce> 是在 CDC 状态变量中以 CE/\<value-from-state-cs>/（CE 表示 Current-processing-range-End）形式出现的值。  
   
--   \<mode> 是 CDC 处理模式。 处理模式具有以下值之一： **“全部”**、 **“全部且具有旧值”**、 **“净值”**、 **“具有更新掩码的净值”** 和 **“净值且具有合并”**。  
+-   \<mode> 是 CDC 处理模式。 处理模式具有以下值之一： **“全部”** 、 **“全部且具有旧值”** 、 **“净值”** 、 **“具有更新掩码的净值”** 和 **“净值且具有合并”** 。  
   
  此脚本可通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中复现问题（在其中可以轻松地复现和标识错误），有助于标识问题。  
   
 #### <a name="sql-server-error-message"></a>SQL Server 错误消息  
  下面是可以由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回的消息：  
   
- 为过程或函数 cdc.fn_cdc_get_net_changes_\<..> 提供的参数数目不足。  
+ 为过程或函数 cdc.fn_cdc_get_net_changes_\<..> 提供的参数数目不足  。  
   
  此错误并不表示缺少参数。 这意味着 CDC 状态变量中的开始或结束 LSN 值无效。  
   
@@ -107,7 +107,7 @@ use <cdc-enabled-database-name>
   
  打开 **“高级编辑器”** 对话框：  
   
--   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 CDC 源，然后选择 **“显示高级编辑器”**。  
+-   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 CDC 源，然后选择 **“显示高级编辑器”** 。  
   
  有关可在 **“高级编辑器”** 对话框中设置的属性的详细信息，请参阅 [CDC Source Custom Properties](cdc-source-custom-properties.md)。  
   

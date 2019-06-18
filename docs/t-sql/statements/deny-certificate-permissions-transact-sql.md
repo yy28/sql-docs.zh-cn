@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: af316bd77056bb08d37551ba5cd2a812bda4ad04
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664470"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY 证书权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可拒绝授予证书的权限。 如下所列。  
   
- ON CERTIFICATE ::certificate_name  
+ ON CERTIFICATE ::certificate_name    
  指定拒绝将其权限授予他人的证书。 需要使用作用域限定符“::”。  
   
- database_principal  
+ database_principal   
  指定要对其拒绝权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -73,7 +73,7 @@ DENY permission  [ ,...n ]
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- denying_principal  
+ denying_principal   
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -103,7 +103,7 @@ DENY permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对证书具有 CONTROL 权限。 如果使用 AS 子句，则指定的主体必须拥有证书。  
   
 ## <a name="see-also"></a>另请参阅  

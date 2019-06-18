@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25b7f1be157d6557842e9d482db2404c2705e932
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58913292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62632100"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +147,7 @@ ms.locfileid: "58913292"
   
 -   若要对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用 Kerberos 身份验证，请参阅 [知识库中的](https://support.microsoft.com/kb/319723) How to use Kerberos authentication in SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] （如何在 SQL Server 中使用 Kerberos 身份验证）。  
 
--   SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持使用以下配置： 
+-   SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持  使用以下配置： 
     *   工作组群集上的 SQL FCI。 
     *   多域群集上的 SQL FCI。   
     *   域和工作组群集上的 SQL FCI。 

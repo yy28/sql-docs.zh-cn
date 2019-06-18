@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724562"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
@@ -47,7 +47,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  指定要提取的游标缓冲区。 *fetchtype*是一个可选参数，需要以下整数输入值之一。  
   
-|ReplTest1|“属性”|Description|  
+|ReplTest1|“属性”|描述|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|提取的第一个缓冲区*nrows*行。 如果*nrows*等于 0，游标位于结果集前面且不返回任何行。|  
 |0x0002|NEXT|提取的下一个缓冲区*nrows*行。|  
@@ -134,7 +134,7 @@ sp_cursorfetch cursor
   
  RPC 状态参数设置为下表中显示的值之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |0|过程已成功执行。|  
 |0x0001|过程失败。|  
@@ -143,7 +143,7 @@ sp_cursorfetch cursor
   
  这些行将作为典型的结果集返回，也即：列格式 (0x2a)、行 (0xd1)，后跟完成 (0xfd)。 元数据标记，它是相同的格式与为 sp_cursoropen，指定发送：为 0xa5 和 0xa4 用于 SQL Server 7.0 用户等。 行状态指示器在具有列名称 rowstat 和数据类型 INT4 的每一行的末尾作为隐藏列发送（类似于 BROWSE 模式）。 此 rowstat 列具有下表中显示的值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

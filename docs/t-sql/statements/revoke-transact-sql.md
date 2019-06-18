@@ -31,11 +31,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2993baa2608c4d5852bd691dcc45667de736edc8
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326508"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638700"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +93,7 @@ REVOKE
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
  ALL  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  该选项不会撤消所有可能的权限。 撤消 ALL 相当于撤消以下权限。  
   
@@ -115,19 +115,19 @@ REVOKE
  PRIVILEGES  
  包含此参数是为了符合 ISO 标准。 请不要更改 ALL 的行为。  
   
- permission  
+ permission   
  权限的名称。 本主题后面的[特定于安全对象的语法](#securable)部分所列出的主题介绍了权限和安全对象之间的有效映射。  
   
  *column*  
  指定表中将撤消其权限的列的名称。 需要使用括号。  
   
- class  
- 指定将撤消其权限的安全对象的类。 需要使用作用域限定符 ::。  
+ class   
+ 指定将撤消其权限的安全对象的类。 需要使用作用域限定符 ::  。  
   
- securable  
+ securable   
  指定将撤消其权限的安全对象。  
   
- TO | FROM principal  
+ TO | FROM principal   
  主体的名称。 可撤消其对安全对象的权限的主体随安全对象而异。 有关有效组合的详细信息，请参阅本主题后面的[特定于安全对象的语法](#securable)部分所列出的主题。  
   
  CASCADE  
@@ -136,7 +136,7 @@ REVOKE
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS principal  
+ AS principal   
  使用 AS principal 子句指示将撤销由你以外的主体所授予的权限。 例如，假设用户 Mary 是 principal_id 12，用户 Raul 是主体 15。 Mary 和 Raul 为用户 Steven 授予相同权限。 Sys.database_permissions 表两次指示该权限，但分别具有不同的 grantor_prinicpal_id 值。 Mary 可以使用 `AS RAUL` 子句撤销权限以移除 Raul 授予的权限。
  
 在此语句中使用 AS 并不意味着能够模拟其他用户。  
@@ -155,7 +155,7 @@ REVOKE
   
  在撤消通过指定 GRANT OPTION 为其赋予权限的主体的权限时，如果未指定 CASCADE，则将无法成功执行 REVOKE 语句。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  对安全对象具有 CONTROL 权限的主体可以撤消该安全对象的权限。 对象所有者可以撤消他们所拥有的对象的权限。  
   
  具备 CONTROL SERVER 权限的被权限者（例如 sysadmin 固定服务器角色的成员）可以撤消对该服务器的任何安全对象所拥有的任何权限。 对数据库具有 CONTROL 权限的被授权者（例如 db_owner 固定数据库角色的成员）可以撤消对该数据库的任何安全对象所拥有的任何权限。 被授予架构的 CONTROL 权限的用户可以撤消针对该架构的任何对象的任何权限。  

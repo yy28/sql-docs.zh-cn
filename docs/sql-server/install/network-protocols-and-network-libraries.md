@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c6683da3464e094db8e85eca71baa45e3c2d031
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62684732"
 ---
 # <a name="network-protocols-and-network-libraries"></a>网络协议和网络库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,21 +52,21 @@ ms.locfileid: "53201866"
   
 #### <a name="to-disable-smb"></a>禁用 SMB  
   
-1.  在“开始”菜单中，指向“设置”，然后单击“网络和拨号连接”。  
+1.  在“开始”  菜单中，指向“设置”  ，然后单击“网络和拨号连接”  。  
   
-     右键单击面向 Internet 的连接，然后单击“属性”。  
+     右键单击面向 Internet 的连接，然后单击“属性”  。  
   
-2.  选中 **“Microsoft Networks 客户端”** 复选框，然后单击 **“卸载”**。  
+2.  选中 **“Microsoft Networks 客户端”** 复选框，然后单击 **“卸载”** 。  
   
 3.  执行卸载步骤。  
   
-4.  选择 **“Microsoft Networks 文件和打印机共享”**，然后单击 **“卸载”**。  
+4.  选择 **“Microsoft Networks 文件和打印机共享”** ，然后单击 **“卸载”** 。  
   
 5.  执行卸载步骤。  
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>在可通过 Internet 访问的服务器上禁用 SMB  
   
--   在本地连接属性中，使用“传播控制协议/Internet 协议 (TCP/IP) 属性”对话框删除“Microsoft 网络的文件和打印共享”和“Microsoft 网络客户端”。  
+-   在本地连接属性中，使用“传播控制协议/Internet 协议 (TCP/IP) 属性”  对话框删除“Microsoft 网络的文件和打印共享”  和“Microsoft 网络客户端”  。  
   
 ## <a name="endpoints"></a>终结点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接引入了一个新概念；在服务器端用 [!INCLUDE[tsql](../../includes/tsql-md.md)]*终结点*。 可以对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端点授予、撤消和拒绝权限。 默认情况下，所有用户都具备访问端点的权限，除非 sysadmin 组的成员或端点所有者拒绝或撤消了此权限。 GRANT、REVOKE 和 DENY ENDPOINT 语法使用管理员必须从端点的目录视图中获得的端点 ID。  

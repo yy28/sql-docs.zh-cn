@@ -19,11 +19,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e697adb4df3127468e5e74d5e5c4cbbebbae6615
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135793"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508331"
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "54135793"
 
  验证数据分为三个部分：  
   
-1.  将对发布的单个或所有订阅“标记”  为要验证。 可以在“验证单个订阅”、“验证多个订阅”和“验证所有订阅”对话框中，将订阅标记为要验证，这些对话框可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“本地发布”**文件夹和“本地订阅”** 文件夹访问。 也可以从 **“所有订阅”** 选项卡、 **“订阅监视列表”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+1.  将对发布的单个或所有订阅“标记”  为要验证。 可以在“验证单个订阅”  、“验证多个订阅”  和“验证所有订阅”  对话框中，将订阅标记为要验证，这些对话框可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“本地发布”  **文件夹和“本地订阅”** 文件夹访问。 也可以从 **“所有订阅”** 选项卡、 **“订阅监视列表”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 2.  下次分发代理（对于事务复制）或合并代理（对于合并复制）同步订阅时，将对订阅进行验证。 分发代理通常是连续运行的，在这种情况下验证会立即进行；合并代理通常是按需运行的，在这种情况下验证在运行代理后进行。  
   
@@ -92,14 +92,14 @@ ms.locfileid: "54135793"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。    
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。    
-3.  右键单击要验证其订阅的发布，然后单击 **“验证多个订阅”**。    
+3.  右键单击要验证其订阅的发布，然后单击 **“验证多个订阅”** 。    
 4.  在 **“验证多个订阅”** 对话框中，选择要验证的订阅：   
-    -   选择 **“验证所有 SQL Server 订阅”**。    
-    -   选择 **“验证下列订阅”**，再选择一个或多个订阅。    
-5.  若要指定要执行的验证类型（行计数，或行计数和校验和），请单击 **“验证选项”**，然后在 **“订阅验证选项”** 对话框中指定选项。  
+    -   选择 **“验证所有 SQL Server 订阅”** 。    
+    -   选择 **“验证下列订阅”** ，再选择一个或多个订阅。    
+5.  若要指定要执行的验证类型（行计数，或行计数和校验和），请单击 **“验证选项”** ，然后在 **“订阅验证选项”** 对话框中指定选项。  
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 7.  在复制监视器或 **“查看同步状态”** 对话框中查看验证结果。 对于每个订阅：   
-    1.  展开发布，右键单击该订阅，然后单击 **“查看同步状态”**。    
+    1.  展开发布，右键单击该订阅，然后单击 **“查看同步状态”** 。    
     2.  如果代理未运行，请单击 **“查看同步状态”** 对话框中的 **“启动”** 。 该对话框将显示有关验证的信息性消息。    
      如果未显示有关验证的任何消息，则说明该代理已记录了后续消息。 在这种情况下，请在复制监视器中查看验证结果。 有关详细信息，请参阅本主题中有关复制监视器相关操作的过程。  
 
@@ -107,7 +107,7 @@ ms.locfileid: "54135793"
 
 #### <a name="all-articles"></a>所有项目 
   
-1.  在发布服务器上，对发布数据库执行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 指定 **@publication** 并为 **@rowcount_only**指定以下值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 指定 **@publication** 并为 **@rowcount_only** 指定以下值之一：  
   
     -   **1** - 只检查行计数（默认值）    
     -   **2** - 行计数和二进制校验和。  
@@ -119,7 +119,7 @@ ms.locfileid: "54135793"
   
 #### <a name="single-article"></a>单个项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication**、为 **@article**指定项目名称并为 **@rowcount_only**指定以下值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication** 、为 **@article** 指定项目名称并为 **@rowcount_only** 指定以下值之一：  
   
     -   **1** - 只检查行计数（默认值）    
     -   **2** - 行计数和二进制校验和。  
@@ -133,9 +133,9 @@ ms.locfileid: "54135793"
 #### <a name="single-subscriber"></a>单个订阅服务器 
   
 1.  在发布服务器的发布数据库中，使用 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md) 打开一个显式事务。    
-2.  在发布服务器上，对发布数据库执行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)。 为 **@publication**指定发布，为 **@subscriber**指定订阅服务器的名称，并为 **@destination_db**。    
+2.  在发布服务器上，对发布数据库执行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)。 为 **@publication** 指定发布，为 **@subscriber** 指定订阅服务器的名称，并为 **@destination_db** 。    
 3.  （可选）对每个要验证的订阅都重复步骤 2。    
-4.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication**、为 **@article**指定项目名称并为 **@rowcount_only**指定以下值之一：    
+4.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication** 、为 **@article** 指定项目名称并为 **@rowcount_only** 指定以下值之一：    
     -   **1** - 只检查行计数（默认值）    
     -   **2** - 行计数和二进制校验和。  
   
@@ -152,17 +152,17 @@ ms.locfileid: "54135793"
 ### <a name="using-replication-monitor"></a>使用复制监视器
   
 1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器。   
-2.  右键单击要验证其订阅的发布，然后单击 **“验证多个订阅”**。   
+2.  右键单击要验证其订阅的发布，然后单击 **“验证多个订阅”** 。   
 3.  在 **“验证多个订阅”** 对话框中，选择要验证的订阅：  
   
-    -   选择 **“验证所有 SQL Server 订阅”**。    
-    -   选择 **“验证下列订阅”**，再选择一个或多个订阅。    
-4.  若要指定要执行的验证类型（行计数，或行计数和校验和），请单击 **“验证选项”**，然后在 **“订阅验证选项”** 对话框中指定选项。    
+    -   选择 **“验证所有 SQL Server 订阅”** 。    
+    -   选择 **“验证下列订阅”** ，再选择一个或多个订阅。    
+4.  若要指定要执行的验证类型（行计数，或行计数和校验和），请单击 **“验证选项”** ，然后在 **“订阅验证选项”** 对话框中指定选项。    
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  单击 **“所有订阅”** 选项卡。  
 7.  查看验证结果。 对于每个推送订阅：    
-    1.  如果代理未运行，请右键单击该订阅，然后单击 **“开始同步”**。    
-    2.  右键单击该订阅，然后单击 **“查看详细信息”**。   
+    1.  如果代理未运行，请右键单击该订阅，然后单击 **“开始同步”** 。    
+    2.  右键单击该订阅，然后单击 **“查看详细信息”** 。   
     3.  在 **“所选会话中的操作”** 文本区域中的 **“分发服务器到订阅服务器的历史记录”** 选项卡中，查看信息。  
   
 ## <a name="for-a-single-subscription-to-a-merge-publication"></a>对于合并发布的单个订阅
@@ -171,13 +171,13 @@ ms.locfileid: "54135793"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。    
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。   
-3.  展开要验证其订阅的发布，右键单击该订阅，然后单击 **“验证单个订阅”**。    
-4.  在 **“验证单个订阅”** 对话框中，选择 **“验证此订阅”**。    
-5.  若要指定要执行的验证类型（行计数，或行计数和校验和），请单击 **“选项”**，然后在 **“订阅验证选项”** 对话框中指定选项。    
+3.  展开要验证其订阅的发布，右键单击该订阅，然后单击 **“验证单个订阅”** 。    
+4.  在 **“验证单个订阅”** 对话框中，选择 **“验证此订阅”** 。    
+5.  若要指定要执行的验证类型（行计数，或行计数和校验和），请单击 **“选项”** ，然后在 **“订阅验证选项”** 对话框中指定选项。    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  在复制监视器或 **“查看同步状态”** 对话框中查看验证结果：  
   
-    1.  展开发布，右键单击该订阅，然后单击 **“查看同步状态”**。    
+    1.  展开发布，右键单击该订阅，然后单击 **“查看同步状态”** 。    
     2.  如果代理未运行，请单击 **“查看同步状态”** 对话框中的 **“启动”** 。 该对话框将显示有关验证的信息性消息。  
   
      如果未显示有关验证的任何消息，则说明该代理已记录了后续消息。 在这种情况下，请在复制监视器中查看验证结果。 有关详细信息，请参阅本主题中有关复制监视器相关操作的过程。  
@@ -187,11 +187,11 @@ ms.locfileid: "54135793"
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。    
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。   
-3.  右键单击要验证其订阅的发布，然后单击 **“验证所有订阅”**。    
+3.  右键单击要验证其订阅的发布，然后单击 **“验证所有订阅”** 。    
 4.  在 **“验证所有订阅”** 对话框中，指定要执行的验证类型（行计数，或行计数和校验和）。   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  在复制监视器或 **“查看同步状态”** 对话框中查看验证结果。 对于每个订阅：    
-    1.  展开发布，右键单击该订阅，然后单击 **“查看同步状态”**。    
+    1.  展开发布，右键单击该订阅，然后单击 **“查看同步状态”** 。    
     2.  如果代理未运行，请单击 **“查看同步状态”** 对话框中的 **“启动”** 。 该对话框将显示有关验证的信息性消息。  
   
      如果未显示有关验证的任何消息，则说明该代理已记录了后续消息。 在这种情况下，请在复制监视器中查看验证结果。 有关详细信息，请参阅本主题中有关复制监视器相关操作的过程。  
@@ -202,18 +202,18 @@ ms.locfileid: "54135793"
 ### <a name="using-replication-monitor"></a>使用复制监视器  
 1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器，再单击一个发布。    
 2.  单击 **“所有订阅”** 选项卡。    
-3.  右键单击要验证的订阅，然后单击 **“验证单个订阅”**。    
-4.  在 **“验证单个订阅”** 对话框中，选择 **“验证此订阅”**。    
-5.  若要指定要执行的验证类型（行计数，或行计数和校验和），请单击 **“选项”**，然后在 **“订阅验证选项”** 对话框中指定选项。    
+3.  右键单击要验证的订阅，然后单击 **“验证单个订阅”** 。    
+4.  在 **“验证单个订阅”** 对话框中，选择 **“验证此订阅”** 。    
+5.  若要指定要执行的验证类型（行计数，或行计数和校验和），请单击 **“选项”** ，然后在 **“订阅验证选项”** 对话框中指定选项。    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  单击 **“所有订阅”** 选项卡。    
 8.  查看验证结果：    
-    1.  如果代理未运行，请右键单击该订阅，然后单击 **“开始同步”**。    
-    2.  右键单击该订阅，然后单击 **“查看详细信息”**。    
+    1.  如果代理未运行，请右键单击该订阅，然后单击 **“开始同步”** 。    
+    2.  右键单击该订阅，然后单击 **“查看详细信息”** 。    
     3.  查看 **“同步历史记录”** 选项卡 **“所选会话的最后消息”** 文本区域中的信息。  
 
 ### <a name="using-transact-sql"></a>使用 Transact-SQL
-1.  在发布服务器上，对发布数据库执行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 **@publication**指定发布，为 **@subscriber**指定订阅服务器的名称，为 **@subscriber_db**指定项目名称并为 **@level**指定以下值之一：   
+1.  在发布服务器上，对发布数据库执行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 **@publication** 指定发布，为 **@subscriber** 指定订阅服务器的名称，为 **@subscriber_db** 指定项目名称并为 **@level** 指定以下值之一：   
     -   **1** - 只验证行计数。    
     -   **3** - 行计数二进制校验和验证。  
   
@@ -230,17 +230,17 @@ ms.locfileid: "54135793"
   
 ### <a name="using-replication-monitor"></a>使用复制监视器    
 1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器。    
-2.  右键单击要验证其订阅的发布，然后单击 **“验证所有订阅”**。    
+2.  右键单击要验证其订阅的发布，然后单击 **“验证所有订阅”** 。    
 3.  在 **“验证所有订阅”** 对话框中，指定要执行的验证类型（行计数，或行计数和校验和）。    
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 5.  单击 **“所有订阅”** 选项卡。    
 6.  查看验证结果。 对于每个推送订阅：    
-    1.  如果代理未运行，请右键单击该订阅，然后单击 **“开始同步”**。    
-    2.  右键单击该订阅，然后单击 **“查看详细信息”**。    
+    1.  如果代理未运行，请右键单击该订阅，然后单击 **“开始同步”** 。    
+    2.  右键单击该订阅，然后单击 **“查看详细信息”** 。    
     3.  查看 **“同步历史记录”** 选项卡 **“所选会话的最后消息”** 文本区域中的信息。 
   
 ### <a name="using-transact-sql"></a>使用 Transact-SQL
-1.  在发布服务器上，对发布数据库执行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 指定 **@publication** 并为 **@level**指定以下值之一：    
+1.  在发布服务器上，对发布数据库执行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 指定 **@publication** 并为 **@level** 指定以下值之一：    
     -   **1** - 只验证行计数。   
     -   **3** - 行计数二进制校验和验证。  
   

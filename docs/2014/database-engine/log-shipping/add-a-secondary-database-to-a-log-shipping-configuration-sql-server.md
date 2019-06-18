@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22f1fbc9470eb4002bb40f0e4e513f35134c442e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774331"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>向日志传送配置添加辅助数据库 (SQL Server)
@@ -50,11 +50,11 @@ ms.locfileid: "62774331"
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>添加日志传送辅助数据库  
   
-1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”。  
+1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”  。  
   
-2.  在 **“选择页”** 下，单击 **“事务日志传送”**。  
+2.  在 **“选择页”** 下，单击 **“事务日志传送”** 。  
   
-3.  在 **“辅助服务器实例和数据库”** 下，单击 **“添加”**。  
+3.  在 **“辅助服务器实例和数据库”** 下，单击 **“添加”** 。  
   
 4.  单击 **“连接”** ，连接到要用作辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   

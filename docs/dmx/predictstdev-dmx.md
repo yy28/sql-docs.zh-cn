@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659002"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
@@ -32,7 +32,7 @@ PredictStdev(<scalar column reference>)
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
- 指定的类型的标量值*\<标量列引用 >*。  
+ 指定的类型的标量值 *\<标量列引用 >* 。  
   
 ## <a name="remarks"></a>备注  
  如果列引用为离散，则**PredictStdev**返回 0，因为不能对离散值计算标准偏差。  

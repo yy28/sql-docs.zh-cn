@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b6416febd415ef75f2455a55c14c2e220c4b5b0a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215676"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62681506"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,15 +42,15 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ```  
   
 ## <a name="arguments"></a>参数  
- IF EXISTS  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ IF EXISTS   
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  只有在类型已存在时才对其进行有条件地删除。  
   
  *schema_name*  
  别名或用户定义的类型所属的架构名。  
   
- type_name  
+ type_name   
  要删除的别名数据类型或用户定义的类型的名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -62,8 +62,8 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
   
 -   存在在数据库中创建的函数、存储过程或触发器，且这些例程使用别名类型或用户定义的类型的变量和参数。 通过查询 [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) 或 [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md) 目录视图可获得有关别名类型参数或用户定义类型参数的信息。  
   
-## <a name="permissions"></a>Permissions  
- 需要对 type_name 拥有 CONTROL 权限，或对 schema_name 拥有 ALTER 权限。  
+## <a name="permissions"></a>权限  
+ 需要对 type_name 拥有 CONTROL 权限，或对 schema_name 拥有 ALTER 权限   。  
   
 ## <a name="examples"></a>示例  
  以下示例假设已经在当前数据库中创建了一个名为 `ssn` 的类型。  

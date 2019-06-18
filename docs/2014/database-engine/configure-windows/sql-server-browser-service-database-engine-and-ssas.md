@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 258ec0640a5281152fcce6faa771272c3f94de64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809323"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服务（数据库引擎和 SSAS）
@@ -115,17 +115,17 @@ ms.locfileid: "62809323"
 ### <a name="default-account"></a>默认帐户  
  安装程序将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器配置为使用安装期间为服务选定的帐户。 其他可能的帐户包括：  
   
--   所有“域\本地”帐户  
+-   所有“域\本地”  帐户  
   
 -   **“本地服务”** 帐户  
   
--   “本地系统”帐户（不推荐使用，因为其具有不必要的权限）  
+-   “本地系统”  帐户（不推荐使用，因为其具有不必要的权限）  
   
 ### <a name="hiding-sql-server"></a>隐藏 SQL Server  
  隐藏的实例是仅支持共享内存连接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，设置 `HideInstance` 标记来指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器不应对此服务器实例的相关信息做出响应。  
   
 ### <a name="using-a-firewall"></a>使用防火墙  
- 若要与有防火墙保护的服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行通信，除了打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 端口（如 1433）之外，还要打开 UDP 端口 1434。 有关如何使用防火墙的信息，请参阅"如何：为配置防火墙[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]访问权限"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+ 若要与有防火墙保护的服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行通信，除了打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 端口（如 1433）之外，还要打开 UDP 端口 1434。 有关使用防火墙的信息，请参见“如何：为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access 配置防火墙”（位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中）。  
   
 ## <a name="see-also"></a>请参阅  
  [网络协议和网络库](../../sql-server/install/network-protocols-and-network-libraries.md)  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022223"
 ---
 # <a name="oracle-subscribers"></a>Oracle 订阅服务器
@@ -58,9 +58,9 @@ ms.locfileid: "63022223"
   
  成功连接到 Oracle 订阅服务器后，尝试使用为订阅的分发代理配置的同一帐户和密码登录到该数据库：  
   
-1.  单击 **“启动”**，再单击 **“运行”**。  
+1.  单击 **“启动”** ，再单击 **“运行”** 。  
   
-2.  键入 `cmd` ，然后单击 **“确定”**。  
+2.  键入 `cmd` ，然后单击 **“确定”** 。  
   
 3.  在命令提示符下，键入：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63022223"
   
     -   确保不要将空字符串作为列值插入到已发布表中。  
   
-    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 -SkipErrors 参数。 指定 Oracle 错误代码 1400 (**-SkipErrors1400**)。  
+    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 -SkipErrors 参数  。 指定 Oracle 错误代码 1400 ( **-SkipErrors1400**)。  
   
     -   修改生成的创建表脚本，从任何可能包含关联空字符串的字符列中删除 NOT NULL 属性，并使用 @creation_script sp_addarticle [的](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)参数将修改后的脚本作为项目的自定义创建脚本提供。  
   

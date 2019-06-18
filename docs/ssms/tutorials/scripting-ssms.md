@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Script objects in SQL Server Management Studio'
+title: 教程：在 SQL Server Management Studio 中编写对象脚本
 description: 有关在 SSMS 中编写对象脚本的教程
 keywords: SQL Server, SSMS, SQL Server Management Studio, 脚本, 编写脚本
 author: MashaMSFT
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: ce0ffdaa26e0ca48eef710f8368b8cb2b0c92191
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: b3a9bdd7735d7a1573567ca06076f83d400775c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662821"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140622"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>教程：在 SQL Server Management Studio 中编写对象脚本
+
 本教程将指导如何为 SQL Server Management Studio (SSMS) 中找到的各种对象生成 Transact-SQL (T-SQL) 脚本。 本教程提供如何编写以下对象的脚本的示例：
 
 > [!div class="checklist"]
@@ -37,7 +38,7 @@ ms.locfileid: "56662821"
 > * 存储过程
 > * 扩展事件
 
-要为“对象资源管理器”中的任何对象编写脚本，请右键单击它并选择“编写对象脚本为”选项。 本教程将介绍该过程。
+要为“对象资源管理器”  中的任何对象编写脚本，请右键单击它并选择“编写对象脚本为”  选项。 本教程将介绍该过程。
 
 
 ## <a name="prerequisites"></a>必备条件
@@ -56,119 +57,119 @@ ms.locfileid: "56662821"
 ### <a name="script-t-sql-when-you-back-up-a-database"></a>备份数据库时编写 T-SQL 脚本
 1. 连接到运行 SQL Server 的服务器。
 2. 展开 **“数据库”** 节点。
-3. 右键单击数据库“Adventureworks2016” > “任务” > “备份”：
+3. 右键单击数据库“Adventureworks2016” > “任务” > “备份”    ：
 
     ![备份数据库](media/scripting-ssms/backupdb.png)
 
 4. 按照所需方式配置备份。 对于本教程，所有内容均保留默认值。 但是，在窗口中进行的任何更改都会反映在脚本中。 
-5. 选择“脚本” > “将操作脚本保存到‘新建查询’窗口”：
+5. 选择  “脚本” >   “将操作脚本保存到‘新建查询’窗口”：
  
     ![脚本数据库备份--脚本操作](media/scripting-ssms/scriptdbbackup.PNG)
 6. 查看查询窗口中填充的 T-SQL。
 
     ![脚本数据库备份--查看 T-SQL](media/scripting-ssms/dbbackupscript.PNG)
-7. 选择“执行”以执行查询，以便通过 T-SQL 备份数据库。 
+7. 选择“执行”以执行查询，以便通过 T-SQL 备份数据库  。 
 
 
 ### <a name="script-t-sql-when-you-shrink-the-transaction-log"></a>在收缩事务日志时编写 T-SQL 脚本
-1. 右键单击数据库“AdventureWorks2016” > “任务” > “收缩” > “文件”：
+1. 右键单击数据库“AdventureWorks2016” > “任务” > “收缩” > “文件”     ：
 
      ![收缩文件](media/scripting-ssms/shrinkfiles.png)
 
-2. 从“文件类型”下拉列表框中选择“日志”：
+2. 从  “文件类型”下拉列表框中选择“日志”  ：
 
     ![收缩事务日志](media/scripting-ssms/shrinktlog.png)
 
-3. 选择“脚本”和“将操作脚本保存到剪贴板”：
+3. 选择“脚本”和“将操作脚本保存到剪贴板”   ：
 
     ![将脚本保存到剪贴板](media/scripting-ssms/scriptactiontoclipboard.png)
 
-4. 打开一个“新建查询”窗口并粘贴。 （在窗口中右键单击。 然后选择“粘贴”。）
+4. 打开一个“新建查询”窗口并粘贴  。 （在窗口中右键单击。 然后选择“粘贴”  。）
 
     ![粘贴脚本](media/scripting-ssms/paste.png)
-5. 选择“执行”以执行查询和收缩事务日志。 
+5. 选择“执行”以执行查询和收缩事务日志  。 
 
 
 ## <a name="script-databases"></a>编写数据库脚本
-以下部分介绍如何使用“脚本编写为”选项和“生成脚本”选项编写数据库脚本。 “脚本编写为”选项将重新创建数据库及其配置选项。 通过使用“生成脚本”选项，可编写架构和数据的脚本。 在本部分中，你将创建两个新数据库。 可以使用“脚本编写为”选项来创建 AdventureWorks2016a。 可以使用“生成脚本”选项来创建 AdventureWorks2016b。
+以下部分介绍如何使用“脚本编写为”选项和“生成脚本”选项编写数据库脚本   。 “脚本编写为”选项将重新创建数据库及其配置选项  。 通过使用“生成脚本”选项，可编写架构和数据的脚本  。 在本部分中，你将创建两个新数据库。 可以使用“脚本编写为”  选项来创建 AdventureWorks2016a  。 可以使用“生成脚本”  选项来创建 AdventureWorks2016b  。
 
 
 ### <a name="script-a-database-by-using-the-script-option"></a>使用脚本选项为数据库编写脚本
 1. 连接到运行 SQL Server 的服务器。
 2. 展开 **“数据库”** 节点。
-3. 右键单击数据库“AdventureWorks2016” > “编写数据库脚本为” > “创建到” > “新建查询窗口”：
+3. 右键单击数据库“AdventureWorks2016” > “编写数据库脚本为” > “创建到” > “新建查询窗口”     ：
 
     ![编写数据库脚本](media/scripting-ssms/scriptdb.png)
 
 4. 在窗口中查看数据库创建查询： 
 
     ![脚本化数据库](media/scripting-ssms/scriptedoutdb.png)：此选项仅脚本化数据库配置选项。
-5. 在键盘上选择 Ctrl+F 以打开“查找”对话框。 选择向下箭头以打开“替换”选项。 在顶部的“查找”行中键入“AdventureWorks2016”，在底部的“替换”行中键入“AdventureWorks2016a”。
-6. 选择“全部替换”，将所有 AdventureWorks2016 实例替换为 AdventureWorks2016a。 
+5. 在键盘上选择 Ctrl+F 以打开  “查找”对话框。 选择向下箭头以打开“替换”  选项。 在顶部的“查找”行中键入“AdventureWorks2016”，在底部的“替换”行中键入“AdventureWorks2016a”   。
+6. 选择“全部替换”，将所有 AdventureWorks2016 实例替换为 AdventureWorks2016a    。 
 
     ![查找和替换](media/scripting-ssms/findandreplace.png)
 
-1. 选择“执行”以执行查询并创建新的 AdventureWorks2016a 数据库。 
+1. 选择“执行”以执行查询并创建新的 AdventureWorks2016a 数据库  。 
 
 ### <a name="script-a-database-by-using-the-generate-scripts-option"></a>使用生成脚本选项为数据库编写脚本
 1. 连接到运行 SQL Server 的服务器。
 2. 展开 **“数据库”** 节点。
-3. 右键单击 AdventureWorks2016 > “任务” > “生成脚本”：
+3. 右键单击  AdventureWorks2016 >   “任务” >   “生成脚本”：
 
     ![生成数据库的脚本](media/scripting-ssms/generatescriptsfordb.png)
 
-4. “简介”页随即打开。 选择“下一步”以打开“选择对象”页面。 可选择整个数据库或数据库中的特定对象。 选择“编写整个数据库及所有数据库对象的脚本”。 
+4. “简介”页随即打开  。 选择“下一步”以打开“选择对象”页面   。 可选择整个数据库或数据库中的特定对象。 选择“编写整个数据库及所有数据库对象的脚本”  。 
  
     ![生成对象的脚本](media/scripting-ssms/scriptobjects.png)
  
-5. 选择“下一步”以打开“设置脚本编写选项”页面。 在此，你可以配置保存脚本的位置以及一些其他高级选项。 
+5. 选择“下一步”以打开“设置脚本编写选项”页面   。 在此，你可以配置保存脚本的位置以及一些其他高级选项。 
 
-    A. 选择“保存到新建查询窗口”。 
+    A. 选择“保存到新建查询窗口”  。 
 
-    B. 选择“高级”并确保已设置以下选项：
+    B. 选择“高级”并确保已设置以下选项  ：
 
-      - “编写统计信息脚本”设置为“编写统计信息脚本”。
-      - “要编写脚本的数据的类型”设置为“仅限架构”。
-      - “编写索引脚本”设置为“True”。
+      - “编写统计信息脚本”设置为“编写统计信息脚本”   。
+      - “要编写脚本的数据的类型”设置为“仅限架构”   。
+      - “编写索引脚本”设置为“True”   。
 
    ![编写对象脚本](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > 如果为“要编写脚本的数据的类型”选项选择“架构和数据”，可以为数据库的数据编写脚本。 但是，这对于大型数据库来说并不是理想之选。 它可能需要比 SSMS 分配更多的内存。 这个限制也适用于小型数据库。 如果要移动大型数据库的数据，请使用[导入和导出向导](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
+   > 如果为“要编写脚本的数据的类型”选项选择“架构和数据”，可以为数据库的数据编写脚本   。 但是，这对于大型数据库来说并不是理想之选。 它可能需要比 SSMS 分配更多的内存。 这个限制也适用于小型数据库。 如果要移动大型数据库的数据，请使用[导入和导出向导](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 
 
-1. 选择“确定”，然后选择“下一步”。
-2. 在“摘要”页上，请选择“下一步”。 然后再次选择“下一步”，以将脚本生成到“新建查询”窗口。 
-3. 在键盘上打开“查找”对话框 (Ctrl+F)。 选择向下箭头以打开“替换”选项。 在顶部的“查找”行，输入 AdventureWorks2016。 在底部的“替换”行，输入 AdventureWorks2016b。 
-4. 选择“全部替换”以将所有 AdventureWorks2016 实例替换为 AdventureWorks2016b。 
+1. 选择“确定”  ，然后选择“下一步”  。
+2. 在“摘要”页上，请选择“下一步”   。 然后再次选择“下一步”，以将脚本生成到“新建查询”窗口   。 
+3. 在键盘上打开  “查找”对话框 (Ctrl+F)。 选择向下箭头以打开“替换”  选项。 在顶部  的“查找”行，输入 AdventureWorks2016  。 在底部的  “替换”行，输入 AdventureWorks2016b  。 
+4. 选择“全部替换”以将所有 AdventureWorks2016 实例替换为 AdventureWorks2016b    。 
 
     ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
-7. 选择“执行”以执行查询并创建新的 AdventureWorks2016b 数据库。 
+7. 选择“执行”以执行查询并创建新的 AdventureWorks2016b 数据库  。 
 
 ## <a name="script-tables"></a>编写表脚本
 本部分介绍如何编写数据库中表的脚本。 使用此选项可以创建表或删除和创建表。 通过此选项，还可以编写与修改表相关的 T-SQL 脚本。 例如，插入或更新表。 在此部分中，将删除表，然后重新创建它。 
 
 1. 连接到运行 SQL Server 的服务器。
-2. 展开“数据库”节点。
-3. 展开“AdventureWorks2016”数据库节点。 
-4. 展开“表”节点。
-5. 右键单击“dbo.ErrorLog” > “编写表脚本为” > “删除并创建到” > “新建查询编辑器窗口”：
+2. 展开“数据库”节点  。
+3. 展开“AdventureWorks2016”数据库节点  。 
+4. 展开“表”节点  。
+5. 右键单击“dbo.ErrorLog” > “编写表脚本为” > “删除并创建到” > “新建查询编辑器窗口”     ：
     
     ![编写表脚本](media/scripting-ssms/scripttable.png)
 
-6. 选择“执行”以执行该查询。 此操作将删除 Errorlog 表并重新创建它。 
+6. 选择“执行”以执行该查询  。 此操作将删除  Errorlog 表并重新创建它。 
 
     >[!NOTE]
-    > 默认情况下，AdventureWorks2016 数据库中的“错误日志”表为空。 所以，删除表并不会丢失任何数据。 但是，对包含数据的表执行这些步骤会导致数据丢失。 
+    > 默认情况下，AdventureWorks2016 数据库中的  “错误日志”表为空。 所以，删除表并不会丢失任何数据。 但是，对包含数据的表执行这些步骤会导致数据丢失。 
  
 ## <a name="script-stored-procedures"></a>编写存储过程脚本
 此部分介绍如何删除并创建存储过程。  
 
 1. 连接到运行 SQL Server 的服务器。
-2. 展开“数据库”节点。
-3. 展开“可编程性”节点。 
-4. 展开“存储过程”节点。
-5. 右键单击存储过程“dbo.uspGetBillOfMaterials” > “编写存储过程脚本为” > “删除并创建到” > “新建查询编辑器窗口”：
+2. 展开“数据库”节点  。
+3. 展开“可编程性”节点  。 
+4. 展开“存储过程”节点  。
+5. 右键单击存储过程“dbo.uspGetBillOfMaterials” > “编写存储过程脚本为” > “删除并创建到” > “新建查询编辑器窗口”     ：
     
     ![编写存储过程脚本](media/scripting-ssms/scriptstoredprocedure.PNG)
 
@@ -176,27 +177,27 @@ ms.locfileid: "56662821"
 本部分介绍如何编写[扩展事件](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)脚本。
 
 1. 连接到运行 SQL Server 的服务器。
-2. 展开“管理”节点。
-3. 展开“扩展事件”节点。
-4. 展开“会话”节点。
-5. 右键单击感兴趣的扩展会话 >“编写会话脚本为” > “新查询编辑器窗口”：
+2. 展开“管理”节点  。
+3. 展开“扩展事件”节点  。
+4. 展开“会话”节点  。
+5. 右键单击感兴趣的扩展会话 >“编写会话脚本为” > “新查询编辑器窗口”   ：
 
     ![扩展的新建查询编辑器窗口会话](media/scripting-ssms/scriptxevents.png)
 
-6. 在“新建查询编辑器窗口”中，将新的会话名称从 system_health 修改为 system_health2。 选择“执行”以执行该查询。
+6. 在“新建查询编辑器窗口”中，将新的会话名称从 system_health 修改为 system_health2    。 选择“执行”以执行该查询  。
 
-7. 在“对象资源管理器”中右键单击“会话”。 选择“刷新”以查看新的扩展事件会话。 会话旁边的绿色图标表示会话正在运行。 红色图标表示会话已停止。 
+7. 在“对象资源管理器”中右键单击“会话”   。 选择  “刷新”以查看新的扩展事件会话。 会话旁边的绿色图标表示会话正在运行。 红色图标表示会话已停止。 
 
     ![新的扩展事件会话](media/scripting-ssms/newxevent.png)
 
     >[!NOTE]
-    > 可通过右键单击会话并选择“开始”来开始会话。 但是，由于这是已经在运行的 system_health 会话的副本，可跳过此步骤。 可以删除扩展事件会话的副本：右键单击扩展事件会话副本并选择“删除”。 
+    > 可通过右键单击会话并选择“开始”来开始会话  。 但是，由于这是已经在运行的 system_health 会话的副本，可跳过此步骤  。 可以删除扩展事件会话的副本：右键单击扩展事件会话副本并选择“删除”  。 
 
 ## <a name="next-steps"></a>后续步骤
 下一篇文章将介绍 SSMS 中提供的预建 T-SQL 模板。 
 
 转到下一篇文章，了解详细信息：
 > [!div class="nextstepaction"]
-> [后续步骤](templates-ssms.md)
+> [后续步骤](ssms-configuration.md)
 
 

@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e588da5bc2fb39c1b760bda5fb4ab6ea0b80dbd7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095360"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>打开查询和视图设计器 (Visual Database Tools)
@@ -37,21 +37,21 @@ ms.locfileid: "65095360"
   
 -   这些窗格对于处理查询和视图非常有用。  
   
--   当您打开一个视图或查询时，以上部分或全部窗格将随之打开。 所打开的窗格取决于“选项”对话框中的设置以及你所连接的数据库管理系统。 默认设置是四个窗格全都打开。  
+-   当您打开一个视图或查询时，以上部分或全部窗格将随之打开。 所打开的窗格取决于“选项”  对话框中的设置以及你所连接的数据库管理系统。 默认设置是四个窗格全都打开。  
   
 ### <a name="to-open-the-query-and-view-designer-for-a-view"></a>为视图打开查询和视图设计器  
   
-1.  在对象资源管理器中，右键单击要打开的视图，然后单击“设计”或“打开视图”。  
+1.  在对象资源管理器中，右键单击要打开的视图，然后单击“设计”  或“打开视图”  。  
   
-    如果选择“设计”，查询和视图设计器窗格将按照在“选项”对话框中选定的选项设置打开。 如果选择“打开视图”，默认情况下仅打开“结果”窗格。  
+    如果选择“设计”  ，查询和视图设计器窗格将按照在“选项”  对话框中选定的选项设置打开。 如果选择“打开视图”  ，默认情况下仅打开“结果”窗格。  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>为现有查询打开查询和视图设计器  
   
-1.  在解决方案资源管理器中，展开“查询”文件夹。  
+1.  在解决方案资源管理器中，展开“查询”  文件夹。  
   
 2.  双击要打开的查询。  
   
-3.  突出显示相应的查询语句，右键单击突出显示的区域，再单击“在编辑器中设计查询”。  
+3.  突出显示相应的查询语句，右键单击突出显示的区域，再单击“在编辑器中设计查询”  。  
   
 ## <a name="see-also"></a>另请参阅  
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

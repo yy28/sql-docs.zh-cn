@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62853477"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
@@ -110,7 +110,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  使用预测子句可以说明使用预测列的方式。 下表列出了两种可以使用的子句。  
   
-|\<预测 > 子句|Description|  
+|\<预测 > 子句|描述|  
 |---------------------------|-----------------|  
 |**PREDICT**|该列可以由模型预测，并且可以在输入事例中提供，以预测其他可预测列的值。|  
 |**PREDICT_ONLY**|此列可以由模型预测，但其值不可用于输入事例来预测其他可预测列的值。|  

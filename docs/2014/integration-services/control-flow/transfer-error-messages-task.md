@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62830119"
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
@@ -40,7 +40,7 @@ ms.locfileid: "62830119"
   
  传输错误消息任务支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源和目标。 对于使用哪个版本作为源或目标，没有限制。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  该任务引发一个报告已经传输的错误消息数的信息事件。  
   
  传输错误消息任务并不报告错误消息传输的进度，它仅报告 0% 和 100 % 完成。  

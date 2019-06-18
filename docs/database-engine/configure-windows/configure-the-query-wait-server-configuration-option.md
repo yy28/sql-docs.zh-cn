@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6716a2566ad3072a86e1a8d3cd61c81b617dc23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a0ae01b1bbf0242cc3912d57c50d5e91d2864586
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675885"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799394"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>配置查询等待值服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47675885"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要配置查询等待值选项，请使用：**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47675885"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置查询等待值选项之后](#FollowUp)  
+-   **跟进：** [在配置查询等待值选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -52,16 +52,16 @@ ms.locfileid: "47675885"
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-query-wait-option"></a>配置 query wait 选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“高级”** 节点。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "47675885"
   
 #### <a name="to-configure-the-query-wait-option"></a>配置 query wait 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `query wait` 选项的值设置为 `7500` 秒。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `query wait` 选项的值设置为 `7500` 秒。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -91,7 +91,7 @@ GO
   
 ```  
   
- 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置查询等待值选项之后  
  该设置将立即生效，无需重新启动服务器。  

@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 415e1a46734eeed97457a6235a0d9912b17e232b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745269"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
@@ -48,7 +48,7 @@ ms.locfileid: "62745269"
 ## <a name="usage"></a>用法  
  下表介绍了客户端应用程序可启用安全身份验证的最常见应用场景。  
   
-|应用场景|Description|  
+|应用场景|描述|  
 |--------------|-----------------|  
 |早期应用程序不指定 SPN。|该兼容应用场景可确保不会对针对先前版本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]开发的应用程序的行为进行任何更改。 如果未指定 SPN，则应用程序使用已生成的 SPN，但不能识别使用哪个身份验证方法。|  
 |使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 当前版本的客户端应用程序将连接字符串中的 SPN 指定为域用户或计算机帐户、特定于实例的 SPN 或用户定义的字符串。|在访问接口、初始化或连接字符串中可使用 **ServerSPN** 关键字进行以下操作：<br /><br /> -指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例用于连接的帐户。 这可简化对 Kerberos 身份验证的访问。 如果 Kerberos 密钥发行中心 (KDC) 存在且指定了正确的帐户，则使用 Kerberos 身份验证的可能性大于 NTLM。 KDC 通常与域控制器在同一台计算机上。<br /><br /> -指定 SPN 可查找 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务帐户。 对于每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，会生成两个可用于此目的的默认 SPN。 但是，不能保证 Active Directory 中存在这些密钥，因此这种情况下无法保证 Kerberos 身份验证。<br /><br /> -指定将用于查找 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务帐户的 SPN。 此 SPN 可以是任何映射到服务帐户的用户定义字符串。 这种情况下，必须手动在 KDC 中注册密钥，且密钥必须满足用户定义的 SPN 的规则。<br /><br /> **FailoverPartnerSPN** 关键字可用于为故障转移伙伴服务器指定 SPN。 帐户和 Active Directory 键值的范围与您可为主体服务器指定的值相同。|  
@@ -93,7 +93,7 @@ ms.locfileid: "62745269"
   
  以下是 SPN 在连接字符串或连接属性中使用的语法：  
   
-|语法|Description|  
+|语法|描述|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|使用除 TCP 之外的协议时访问接口生成的用于默认实例的默认 SPN。<br /><br /> *fqdn* 为完全限定的域名。|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 时访问接口生成的默认 SPN。<br /><br /> *port* 为 TCP 端口号。|  

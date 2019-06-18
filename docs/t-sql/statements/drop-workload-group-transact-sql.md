@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c4900794c3a29067c38b1fb16b127d07cf574ab8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812595"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62681376"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ DROP WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>参数  
- group_name  
+ group_name   
  现有的用户定义工作负荷组的名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -59,7 +59,7 @@ DROP WORKLOAD GROUP group_name
   
 -   在已发出 DROP WORKLOAD GROUP 语句但决定不打算显式停止会话以应用更改的情况下，您可以使用在发出 DROP 语句之前组的名称来重新创建组，然后将该组移动到原始资源池。 若要应用更改，请运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
+ [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md)   

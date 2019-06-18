@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 926f6227d5a3a2e11dffbf4b9f080b1fc5ec35a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871850"
 ---
 # <a name="database-properties-changetracking-page"></a>数据库属性（“更改跟踪”页）
@@ -33,19 +33,19 @@ ms.locfileid: "62871850"
  还可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql)来配置更改跟踪。  
   
  **保持期**  
- 指定在数据库中保留更改跟踪信息的最短期限。 只有当“自动清除”的值为 **True** 时，才会删除数据。  
+ 指定在数据库中保留更改跟踪信息的最短期限。 只有当“自动清除”  的值为 **True** 时，才会删除数据。  
   
  默认值为 2。  
   
  **保持期单位**  
- 指定“保持期”值的单位。 可以选择 **“天”**、 **“小时”** 或 **“分钟”**。 默认值为 **“天”**。  
+ 指定“保持期”值的单位。 可以选择 **“天”** 、 **“小时”** 或 **“分钟”** 。 默认值为 **“天”** 。  
   
  最短保持期为 1 分钟。 不存在最长保持期。  
   
  **自动清除**  
  指示是否在经过指定的保持期后自动删除更改跟踪信息。  
   
- 启用“自动清除”会将任何先前自定义的保持期重置为默认保持期（即 2 天）。  
+ 启用“自动清除”  会将任何先前自定义的保持期重置为默认保持期（即 2 天）。  
   
 ## <a name="see-also"></a>请参阅  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   

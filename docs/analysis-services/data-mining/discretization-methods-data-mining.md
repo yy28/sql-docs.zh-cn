@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 610108ce4edb6e3beb5c13398d0a79eca200bdba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62467758"
 ---
 # <a name="discretization-methods-data-mining"></a>离散化方法（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中创建数据挖掘模型时使用的某些算法需要特定的内容类型才能正常运行。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法的输入不能为连续列，并且不能预测连续值。 另外，有些列可能会因包含的值太多而导致算法不易标识数据中据以创建模型的相关模式。  
   
- 在这些情况下，可以将列中的数据离散化，以便能够使用算法来生成挖掘模型。 “离散化 ”是将值放入存储桶中以便得到有限数目的可能状态的过程。 存储桶本身是作为有序且离散的值处理的。 数值列和字符串列都可以进行离散化。  
+ 在这些情况下，可以将列中的数据离散化，以便能够使用算法来生成挖掘模型。 “离散化  ”是将值放入存储桶中以便得到有限数目的可能状态的过程。 存储桶本身是作为有序且离散的值处理的。 数值列和字符串列都可以进行离散化。  
   
  离散化数据时，可以使用多种方法。 如果数据挖掘解决方案使用关系数据，则通过设置 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 属性的值可以控制对数据分组所使用的存储桶数。 默认存储桶数为 5。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62467758"
   
  下表说明了可在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中用于离散化数据的方法。  
   
-|离散化方法|Description|  
+|离散化方法|描述|  
 |---------------------------|-----------------|  
 |**AUTOMATIC**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 确定要使用的离散化方法。|  
 |**群集**|该算法可以对定型数据采样，初始化为一些随机点，然后使用 Expectation Maximization (EM) 聚类分析方法运行几次 Microsoft 聚类分析算法迭代，以此将数据分组。 由于 **CLUSTERS** 方法可用于所有分布曲线，所以该方法很有用。 但是，该方法所需的处理时间比其他离散化方法的处理时间长。<br /><br /> 此方法只能用于数值列。|  

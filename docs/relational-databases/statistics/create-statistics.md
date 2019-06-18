@@ -20,11 +20,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a8c1dbccf3b45896f56aba5c478e1a37954f37f8
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380698"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645193"
 ---
 # <a name="create-statistics"></a>创建统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "53380698"
   
 -   不能删除、重命名或更改在筛选的统计信息谓词中定义的表列的定义。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求用户是表或索引视图所有者，或者是以下角色之一的成员： **sysadmin** 固定服务器角色、 **db_owner** 固定数据库角色或 **db_ddladmin** 固定数据库角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,9 +69,9 @@ ms.locfileid: "53380698"
   
 3.  单击加号以便展开您要创建新统计信息的表。  
   
-4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”。  
+4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”   。  
   
-     以下属性将显示在“新建表 _table\_name_ 的统计信息”对话框的“常规”页面上。  
+     以下属性将显示在“新建表 _table\_name_ 的统计信息”  对话框的“常规”  页面上。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -115,12 +115,12 @@ ms.locfileid: "53380698"
      **更新这些列的统计信息**  
      选中此项后将在对话框关闭时更新统计信息。  
   
-     以下属性将显示在“新建 _table\_name_ 的统计信息”对话框的“筛选器”页面上。  
+     以下属性将显示在“新建 _table\_name_ 的统计信息”  对话框的“筛选器”  页面上。  
   
      **筛选表达式**  
      定义要将哪些数据行包含在筛选的统计信息中。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  在“新建表 _table\_name_ 的统计信息”对话框中，在“常规”页面上，单击“添加”。  
+5.  在“新建表 _table\_name_ 的统计信息”  对话框中，在“常规”  页面上，单击“添加”  。  
   
      **“选择列”** 对话框中显示以下属性： 此信息为只读信息。  
   
@@ -139,9 +139,9 @@ ms.locfileid: "53380698"
      **Allow NULLs**  
      指示列是否接受空值。  
   
-6.  在 **“选择列”** 对话框中，选中要为其创建统计信息的每个列旁边的复选框，然后单击 **“确定”**。  
+6.  在 **“选择列”** 对话框中，选中要为其创建统计信息的每个列旁边的复选框，然后单击 **“确定”** 。  
   
-7.  在“新建表 _table\_name_ 的统计信息”对话框中，单击“确定”。  
+7.  在“新建表 _table\_name_ 的统计信息”  对话框中，单击“确定”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -149,9 +149,9 @@ ms.locfileid: "53380698"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;   

@@ -18,10 +18,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1970f103825d95e77edffd5d2f6c58e405c9469d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946608"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
@@ -55,10 +55,10 @@ ms.locfileid: "64946608"
  **UDT 表示用户定义的类型。  
   
 ## <a name="exporting-using--v-80"></a>使用 -V 80 进行导出  
- 使用 -V80 开关批量导出数据时，本机模式下的 nvarchar(max)、varchar(max)、varbinary(max)、XML 和 UDT 数据将像 text、image 和 ntext 数据一样以带有 4 个字节的前缀形式存储，而不是像 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本默认的那样以带有 8 个字节的前缀形式存储。  
+ 使用 -V80 开关批量导出数据时，本机模式下的 nvarchar(max)、varchar(max)、varbinary(max)、XML 和 UDT 数据将像 text、image 和 ntext 数据一样以带有 4 个字节的前缀形式存储，而不是像 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本默认的那样以带有 8 个字节的前缀形式存储        。  
   
 ## <a name="copying-date-values"></a>复制日期值  
- **bcp** 将使用 ODBC 大容量复制 API。 因此，为了将日期值导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **bcp** 使用了 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[*.f...*])。  
+ **bcp** 将使用 ODBC 大容量复制 API。 因此，为了将日期值导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **bcp** 使用了 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ])。  
   
  对于字符格式的数据文件， **bcp** 命令会为 **datetime** 和 **smalldatetime** 类型的值使用 ODBC 默认格式将文件导出。 例如，包含日期 **的** datetime `12 Aug 1998` 列将以字符串 `1998-08-12 00:00:00.000`的形式大容量复制到数据文件中。  
   

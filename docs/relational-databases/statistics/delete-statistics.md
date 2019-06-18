@@ -15,11 +15,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 41eedb9c78254658a87de8531295582448da542e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645043"
 ---
 # <a name="delete-statistics"></a>删除统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "53380780"
   
 -   不能使用 DROP STATISTICS 删除有关索引的统计信息。 统计信息的保留时间与索引存在的时间相同。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -64,9 +64,9 @@ ms.locfileid: "53380780"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  右键单击要删除的统计信息对象，然后选择“删除”。  
+5.  右键单击要删除的统计信息对象，然后选择“删除”  。  
   
-6.  在 **“删除对象”** 对话框中，确保已选择正确的统计信息，然后单击 **“确定”**。  
+6.  在 **“删除对象”** 对话框中，确保已选择正确的统计信息，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -74,9 +74,9 @@ ms.locfileid: "53380780"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

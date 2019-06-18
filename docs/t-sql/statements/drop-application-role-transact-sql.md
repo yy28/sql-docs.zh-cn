@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 77bf5aad865c2c8a858c8a9c47fc5706d644cfb3
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361457"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62723455"
 ---
 # <a name="drop-application-role-transact-sql"></a>DROP APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ DROP APPLICATION ROLE rolename
 ```  
   
 ## <a name="arguments"></a>参数  
- rolename  
+ rolename   
  指定要删除的应用程序角色的名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -53,7 +53,7 @@ DROP APPLICATION ROLE rolename
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY APPLICATION ROLE 权限。  
   
 ## <a name="examples"></a>示例  

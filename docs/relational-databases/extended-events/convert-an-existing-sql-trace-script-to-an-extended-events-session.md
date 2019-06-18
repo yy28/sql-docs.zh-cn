@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669290"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>将现有 SQL 跟踪脚本转换为扩展事件会话
 
@@ -84,7 +84,7 @@ ms.locfileid: "58478192"
   
     2.  对于您在前一步骤中标识的每个 SQL 跟踪事件类，找到等效的扩展事件的事件名称。 （如果你不确定等效的事件名称，请使用 [查看与 SQL 跟踪事件类等效的扩展事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)主题中的查询。）  
   
-    3.  使用下面的查询可以标识要用于您在前一步骤中标识的事件的正确的数据字段。 该查询将在“事件字段”列中显示扩展事件数据字段。 在该查询中，用前一步骤中指定的事件名称替换 *<event_name>*。  
+    3.  使用下面的查询可以标识要用于您在前一步骤中标识的事件的正确的数据字段。 该查询将在“事件字段”列中显示扩展事件数据字段。 在该查询中，用前一步骤中指定的事件名称替换 *<event_name>* 。  
   
         ```sql
         SELECT xp.name package_name, xe.name event_name  
@@ -105,7 +105,7 @@ ms.locfileid: "58478192"
 ## <a name="to-create-the-extended-events-session"></a>创建扩展事件会话  
  使用查询编辑器可以创建扩展事件会话，并且将输出写入某一文件目标。 下面的步骤描述单个查询，并且提供介绍如何生成查询的说明。 有关完整查询示例，请参阅本主题的“示例”部分。  
   
-1.  添加语句以创建事件会话，并且使用要用于扩展事件会话的名称替换session_name。  
+1.  添加语句以创建事件会话，并且使用要用于扩展事件会话的名称替换session_name  。  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  

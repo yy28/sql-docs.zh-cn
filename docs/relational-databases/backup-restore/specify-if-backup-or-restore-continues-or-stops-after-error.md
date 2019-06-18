@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0c36052ce31b2d0edede232151bb8ef21e9af772
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825537"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516838"
 ---
 # <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>指定备份或还原操作在遇到错误后是继续还是停止
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47825537"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要指定备份或还原操作在遇到错误后是停止还是继续，请使用：**  
   
@@ -42,9 +42,9 @@ ms.locfileid: "47825537"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  BACKUP  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
@@ -61,15 +61,15 @@ ms.locfileid: "47825537"
   
 1.  执行以下步骤以便 [创建数据库备份](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
-2.  在 **“选项”** 页的 **“可靠性”** 部分中，单击 **“写入介质前检查校验和”** 和 **“出错时继续”**。  
+2.  在 **“选项”** 页的 **“可靠性”** 部分中，单击 **“写入介质前检查校验和”** 和 **“出错时继续”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-specify-whether-a-backup-operation-continues-or-stops-after-encountering-an-error"></a>指定备份操作在遇到错误后是继续还是停止  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  在 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 语句中，指定 CONTINUE_AFTER ERROR 选项可继续操作，指定 STOP_ON_ERROR 选项可停止操作。 默认行为是遇到错误后停止。 下面的示例指示备份操作在遇到错误时仍继续。  
   
@@ -82,9 +82,9 @@ GO
   
 #### <a name="to-specify-whether-a-restore-operation-continues-or-stops-after-encountering-an-error"></a>指定还原操作在遇到错误后是继续还是停止  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  在 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句中，指定 CONTINUE_AFTER ERROR 选项可继续操作，指定 STOP_ON_ERROR 选项可停止操作。 默认行为是遇到错误后停止。 下面的示例指示还原操作在遇到错误时仍继续。  
   

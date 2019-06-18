@@ -15,10 +15,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946227"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "64946227"
 > [!NOTE]  
 >  读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 可以读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**生成的 10。0 版格式化文件，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 无法读取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**。  
   
- 本主题说明了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 为特定表创建格式化文件。 格式化文件基于指定的数据类型选项（**-n**、 **-c**、 **-w**或 **-N**）以及表或视图分隔符。  
+ 本主题说明了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 为特定表创建格式化文件。 格式化文件基于指定的数据类型选项（ **-n**、 **-c**、 **-w**或 **-N**）以及表或视图分隔符。  
   
 ## <a name="creating-a-non-xml-format-file"></a>创建非 XML 格式化文件  
  若要使用 **bcp** 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。 **format** 选项还需要 **-f** 选项，例如：  
@@ -197,7 +197,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
-|**-t** `,`|将逗号 (**,**) 指定为字段终止符。<br /><br /> 注意：如果数据文件使用默认的字段终止符 (`\t`)，则不需要 -t 开关。|  
+|**-t** `,`|将逗号 ( **,** ) 指定为字段终止符。<br /><br /> 注意：如果数据文件使用默认的字段终止符 (`\t`)，则不需要 -t 开关  。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则必须指定 **-U** 和 **-P** 才能成功登录。|  
   
  在 Windows 命令提示符下，输入以下 `bcp` 命令：  

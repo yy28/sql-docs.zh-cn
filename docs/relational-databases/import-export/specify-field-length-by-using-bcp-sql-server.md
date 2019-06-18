@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2dc3cd6f52d0c43903cb663ec6e6aa6d8bd60f3
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946140"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定字段长度 (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "64946140"
   字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如， **int** 数据类型占 4 个字节。 如果指示前缀长度为 0，则 **bcp** 命令会提示输入字段长度、默认字段长度以及字段长度对包含 **char** 数据的数据文件中数据存储的影响。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示输入字段长度  
- 如果某个交互式 **bcp** 命令包含不带格式化文件开关 (**-f**) 或数据格式开关（**-n**、**-c**、**-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的字段长度，如下所示：  
+ 如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f**) 或数据格式开关（ **-n**、 **-c**、 **-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的字段长度，如下所示：  
   
  `Enter length of field <field_name> [<default>]:`  
   

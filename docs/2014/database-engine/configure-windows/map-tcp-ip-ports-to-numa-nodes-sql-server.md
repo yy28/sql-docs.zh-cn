@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781741"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>将 TCP IP 端口映射到 NUMA 节点 (SQL Server)
@@ -48,9 +48,9 @@ ms.locfileid: "62781741"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>将 TCP/IP 端口映射到 NUMA 节点  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server 网络配置”，然后单击 \<实例名> 的“协议”。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，展开“SQL Server 网络配置”，然后单击 \<实例名> 的“协议”    。  
   
-2.  在详细信息窗格中，双击“TCP/IP”。  
+2.  在详细信息窗格中，双击“TCP/IP”  。  
   
 3.  在 **“IP 地址”** 选项卡（要配置的 IP 地址的相应部分）的 **“TCP 端口”** 框中，在端口号后面的方括号里添加 NUMA 节点标识符。 例如，对于 TCP 端口 1500 以及节点 0、2 和 5，请使用 `1500[37]` 或 `1500[0x25]`。  
   

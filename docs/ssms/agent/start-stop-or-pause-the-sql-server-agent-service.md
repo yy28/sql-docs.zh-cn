@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 46b9c2bacfe9dc4e35b2326053df39008e910ab1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089577"
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>Start, Stop, or Pause the SQL Server Agent Service
@@ -72,11 +72,11 @@ ms.locfileid: "65089577"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要管理 SQL Server 代理服务的服务器。  
   
-2.  右键单击“SQL Server 代理”，然后选择“启动”、“停止”或“重启”。  
+2.  右键单击“SQL Server 代理”  ，然后选择“启动”  、“停止”  或“重启”  。  
   
-3.  在 **“用户帐户控制”** 对话框中，请单击 **“是”**。  
+3.  在 **“用户帐户控制”** 对话框中，请单击 **“是”** 。  
   
-4.  系统提示是否要执行该操作时，请单击 **“是”**。  
+4.  系统提示是否要执行该操作时，请单击 **“是”** 。  
   
 有关详细信息，请参阅：  
   

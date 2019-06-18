@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aac3a20511012e0a058fff6988c793c4f51d594d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663391"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 事件类
@@ -28,7 +28,7 @@ ms.locfileid: "62663391"
   
 ## <a name="cursorunprepare-event-class-data-columns"></a>CursorUnprepare 事件类的数据列  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  

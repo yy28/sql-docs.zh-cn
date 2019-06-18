@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62748639"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>从客户端应用程序进行连接 (Analysis Services)
@@ -41,7 +41,7 @@ ms.locfileid: "62748639"
   
  您可以通过在特定用户标识下运行 SSMS、然后作为该用户连接到 Analysis Services，对权限进行测试。  
   
- 按住 Shift 键并右键单击 **SQL Server Management Studio** 快捷方式，以便访问“以其他用户身份运行”选项。  
+ 按住 Shift 键并右键单击 **SQL Server Management Studio** 快捷方式，以便访问“以其他用户身份运行”  选项。  
   
 1.  启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在 **“连接到服务器”** 对话框中，选择 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器类型。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62748639"
   
      对于命名实例，必须以 servername\instance name 格式指定服务器名称。 此命名约定的示例可以是网络名称为 ADV-SRV062 的服务器的 ADV-SRV062\Finance，其中，已将 Analysis Services 作为标题为 Finance 的命名实例安装。  
   
-     对于部署在故障转移群集中的服务器，请使用 SSAS 群集的网络名称建立连接。 此名称在 SQL Server 安装期间指定，名为 **“SQL Server 网络名称”**。 请注意，如果您将 SSAS 以命名实例形式安装到 Windows Server 故障转移群集 (WSFC) 上，则绝不要在连接上添加实例名称。 这一做法仅适用于 SSAS；相比之下，群集关系数据库引擎的命名实例包含实例名称。 例如，如果您将 SSAS 和数据库引擎均安装为命名实例 (Contoso-Accounting)，SQL Server 网络名称为 SQL-CLU，则需使用“SQL-CLU”连接 SSAS，而使用“SQL-CLU\Contoso-Accounting”来连接数据库引擎。 有关更多信息和示例，请参阅 [如何安装群集 SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548) 。  
+     对于部署在故障转移群集中的服务器，请使用 SSAS 群集的网络名称建立连接。 此名称在 SQL Server 安装期间指定，名为 **“SQL Server 网络名称”** 。 请注意，如果您将 SSAS 以命名实例形式安装到 Windows Server 故障转移群集 (WSFC) 上，则绝不要在连接上添加实例名称。 这一做法仅适用于 SSAS；相比之下，群集关系数据库引擎的命名实例包含实例名称。 例如，如果您将 SSAS 和数据库引擎均安装为命名实例 (Contoso-Accounting)，SQL Server 网络名称为 SQL-CLU，则需使用“SQL-CLU”连接 SSAS，而使用“SQL-CLU\Contoso-Accounting”来连接数据库引擎。 有关更多信息和示例，请参阅 [如何安装群集 SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548) 。  
   
      对于部署在网络负载平衡群集中的服务器，请使用 NLB 的虚拟服务器名称建立连接。  
   
@@ -76,15 +76,15 @@ ms.locfileid: "62748639"
   
  您可以通过基于特定的用户标识启动 Excel 来测试权限。  
   
- 按住 Shift 键并右键单击 **Excel** 快捷方式，以便访问“以其他用户身份运行”选项。  
+ 按住 Shift 键并右键单击 **Excel** 快捷方式，以便访问“以其他用户身份运行”  选项。  
   
-1.  在 Excel 的“数据”选项卡上，单击 **“自其他来源”**，然后单击 **“来自 Analysis Services”**。 输入服务器名称，然后选择要查询的多维数据集或透视。  
+1.  在 Excel 的“数据”选项卡上，单击 **“自其他来源”** ，然后单击 **“来自 Analysis Services”** 。 输入服务器名称，然后选择要查询的多维数据集或透视。  
   
      对于部署在负载平衡群集中的服务器，请使用分配给该群集的虚拟服务器名称。  
   
-2.  在 Excel 中设置连接时，可以在数据连接向导的最后一页上指定 Excel Services 的身份验证设置。 这些设置用于设置应上载到包含 Excel Services 的 SharePoint 服务器的工作簿的属性。 数据刷新操作中会使用这些设置。 选项包括“Windows 身份验证”、“Secure Store Service”(SSS) 和“无”。  
+2.  在 Excel 中设置连接时，可以在数据连接向导的最后一页上指定 Excel Services 的身份验证设置。 这些设置用于设置应上载到包含 Excel Services 的 SharePoint 服务器的工作簿的属性。 数据刷新操作中会使用这些设置。 选项包括“Windows 身份验证”  、“Secure Store Service”  (SSS) 和“无”  。  
   
-     避免使用 **“无”**。 除非您连接到已配置 HTTP 访问的服务器，否则，Analysis Services 将不允许您在连接字符串上指定用户名和密码。 同样，除非您知道 SSS 目标应用程序 ID 将映射到一组拥有对 Analysis Services 数据库的用户访问权限的 Windows 用户凭据，否则不要使用 SSS。 在大多数方案中，对于来自 Excel 的 Analysis Services 连接，最佳选择是使用 Windows 身份验证的默认选项。  
+     避免使用 **“无”** 。 除非您连接到已配置 HTTP 访问的服务器，否则，Analysis Services 将不允许您在连接字符串上指定用户名和密码。 同样，除非您知道 SSS 目标应用程序 ID 将映射到一组拥有对 Analysis Services 数据库的用户访问权限的 Windows 用户凭据，否则不要使用 SSS。 在大多数方案中，对于来自 Excel 的 Analysis Services 连接，最佳选择是使用 Windows 身份验证的默认选项。  
   
  有关详细信息，请参阅 [连接到 SQL Server Analysis Services 或从其中导入数据](http://go.microsoft.com/fwlink/?linkID=215150)。  
   

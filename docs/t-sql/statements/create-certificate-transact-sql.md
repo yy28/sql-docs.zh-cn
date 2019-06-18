@@ -29,10 +29,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aede830ed407fcd7dddba4d2d9446b6510e84c8a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774945"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
@@ -111,55 +111,55 @@ CREATE CERTIFICATE certificate_name
 ```  
   
 ## <a name="arguments"></a>参数  
- certificate_name  
+ certificate_name   
  数据库中证书的名称。  
   
- AUTHORIZATION user_name  
+ AUTHORIZATION user_name   
  拥有该证书的用户的名称。  
   
- ASSEMBLY assembly_name  
+ ASSEMBLY assembly_name   
  指定已经加载到数据库中的已签名的程序集。  
   
- [ EXECUTABLE ] FILE ='path_to_file'  
- 指定包含证书的 DER 编码文件的完整路径（包括文件名）。 如果使用 EXECUTABLE 选项，则文件为已使用证书签名的 DLL。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
+ [ EXECUTABLE ] FILE ='path_to_file'   
+ 指定包含证书的 DER 编码文件的完整路径（包括文件名）。 如果使用 EXECUTABLE 选项，则文件为已使用证书签名的 DLL。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径  。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
 
 > [!IMPORTANT]
 > Azure SQL 数据库不支持通过文件或使用私钥文件创建证书。
   
- BINARY =asn_encoded_certificate  
+ BINARY =asn_encoded_certificate   
  指定为二进制常量的 ASN 编码证书字节数。  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  WITH PRIVATE KEY  
  指定将证书的私钥加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 从程序集创建证书时，此子句无效。 若要加载从程序集创建的证书的私钥，请使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)。  
   
- FILE ='path_to_private_key'  
- 指定私钥的完整路径（包括文件名）。 path_to_private_key 可以是本地路径，也可以是网络位置的 UNC 路径。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
+ FILE ='path_to_private_key  '  
+ 指定私钥的完整路径（包括文件名）。 path_to_private_key 可以是本地路径，也可以是网络位置的 UNC 路径  。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
   
 > [!IMPORTANT]  
 >  这种方法不适用于包含的数据库或 Azure SQL 数据库。  
   
- BINARY =private_key_bits  
+ BINARY =private_key_bits   
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定为二进制常量的专有键位。 这些位可采用加密形式。 如果加密，则用户必须提供解密密码。 不会对此密码执行密码策略检查。 私钥位应该采用 PVK 文件格式。  
   
- DECRYPTION BY PASSWORD ='key_password'  
+ DECRYPTION BY PASSWORD ='key_password  '  
  指定对从文件中检索的私钥进行解密所需的密码。 如果私钥受空密码的保护，则该子句为可选项。 建议不要将私钥保存到无密码保护的文件中。 如果需要密码，但是未指定密码，则该语句将失败。  
   
- ENCRYPTION BY PASSWORD ='password'  
- 指定用于加密私钥的密码。 只有在需要使用密码对证书进行加密时，才使用该选项。 如果省略该子句，则使用数据库主密钥对私钥进行加密。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
+ ENCRYPTION BY PASSWORD ='password'   
+ 指定用于加密私钥的密码。 只有在需要使用密码对证书进行加密时，才使用该选项。 如果省略该子句，则使用数据库主密钥对私钥进行加密。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求  。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
- SUBJECT = 'certificate_subject_name'  
- 根据 X.509 标准中的定义，术语 subject 是指证书的元数据中的字段。 主题的长度应不超过 64 个字符，并且在 Linux 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中强制执行此限制。 对于 Windows 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，主题的长度最多是 128 个字符。 将主题存储到目录中时，如果主题的长度超过 128 个字节，则主题会被截断，但是包含证书的二进制大型对象 (BLOB) 将保留完整的主题名称。  
+ SUBJECT = 'certificate_subject_name  '  
+ 根据 X.509 标准中的定义，术语 subject 是指证书的元数据中的字段  。 主题的长度应不超过 64 个字符，并且在 Linux 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中强制执行此限制。 对于 Windows 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，主题的长度最多是 128 个字符。 将主题存储到目录中时，如果主题的长度超过 128 个字节，则主题会被截断，但是包含证书的二进制大型对象 (BLOB) 将保留完整的主题名称。  
   
- START_DATE ='datetime'  
+ START_DATE ='datetime  '  
  证书生效的日期。 如果未指定，则将 START_DATE 设置为当前日期。 START_DATE 采用 UTC 时间，并且可以通过可转换为日期和时间的任何格式指定。  
   
- EXPIRY_DATE = 'datetime'  
+ EXPIRY_DATE = 'datetime  '  
  证书过期的日期。 如果未指定，则将 EXPIRY_DATE 设置为 START_DATE 一年之后的日期。 EXPIRY_DATE 采用 UTC 时间，并且可以通过可转换为日期和时间的任何格式指定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 会检查过期日期。 使用证书进行加密的备份还将检查到期日期，且不会允许使用过期证书创建新备份，但会允许使用过期证书进行还原。 但是，在将证书用于数据库加密或 Always Encrypted 时，不会强制应用到期日期。  
   
- ACTIVE FOR BEGIN_DIALOG = { ON | OFF }  
+ ACTIVE FOR BEGIN_DIALOG = { ON | OFF  }  
  使证书可用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话会话的发起方。 默认值为 ON。  
   
 ## <a name="remarks"></a>Remarks  
@@ -171,7 +171,7 @@ CREATE CERTIFICATE certificate_name
   
  存储证书的整个证书颁发者字段，但只有前 884 个字节出现在 sys.certificates 目录视图中。  
   
- 私钥必须与 certificate_name 指定的公钥相对应。  
+ 私钥必须与 certificate_name 指定的公钥相对应  。  
   
  当您通过容器创建证书时，可选择是否加载私钥。 但是当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成自我签名的证书时，始终会创建私钥。 默认情况下，私钥使用数据库主密钥进行加密。 如果数据库主密钥不存在并且未指定密码，则该语句将失败。  
   
@@ -182,7 +182,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 >  内置的加密和签名功能不会检查证书的过期日期。 使用这些功能的用户必须决定何时检查证书的过期日期。  
   
- 可以使用 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md) 函数创建证书的二进制说明。 有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的示例，请参阅文章 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B。  
+ 可以使用 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md) 函数创建证书的二进制说明。 有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的示例，请参阅文章 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B   。  
   
 ## <a name="permissions"></a>权限  
  要求对数据库具有 CREATE CERTIFICATE 权限。 只有 Windows 登录名、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和应用程序角色才能拥有证书。 其他组和角色不能拥有证书。  

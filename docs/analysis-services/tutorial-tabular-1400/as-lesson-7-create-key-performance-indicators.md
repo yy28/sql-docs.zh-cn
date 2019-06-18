@@ -11,10 +11,10 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5f3b3de71cb60a27613482255556bfbff6bcc8cf
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64877623"
 ---
 # <a name="create-key-performance-indicators"></a>创建关键绩效指标
@@ -51,14 +51,14 @@ ms.locfileid: "64877623"
   
 7.  在左侧（低）滑块字段中，输入 **1**，然后在右侧（高）滑块字段中，输入 **1.07**。  
   
-8.  在“选择图标样式”中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型。
+8.  在“选择图标样式”  中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型。
   
     ![as-lesson7-kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
     > 请注意**说明**可用图标样式下方的标签。 按照说明为各种 KPI 元素使其更易于识别在客户端应用程序中。  
   
-9. 单击“确定”以完成 KPI。  
+9. 单击“确定”  以完成 KPI。  
   
     在度量值网格中，注意图标旁边**InternetCurrentQuarterSalesPerformance**度量值。 此图标表示此度量值充当 KPI 的基本值。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64877623"
   
 5.  在左侧 （低） 滑块字段中，滑动，直到此字段显示**0.8**，然后滑动右侧 （高） 滑块字段，直到此字段显示**1.03**。  
   
-6.  在“选择图标样式”中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型，然后单击“确定”。  
+6.  在“选择图标样式”  中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型，然后单击“确定”  。  
   
 ## <a name="whats-next"></a>下一步是什么？
 

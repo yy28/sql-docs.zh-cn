@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770412"
 ---
 # <a name="character-map-transformation"></a>字符映射表转换
@@ -36,7 +36,7 @@ ms.locfileid: "62770412"
 ## <a name="mapping-operations"></a>映射操作  
  下表说明了字符映射表转换支持的映射操作。  
   
-|操作|Description|  
+|操作|描述|  
 |---------------|-----------------|  
 |Byte reversal|反转字节顺序。|  
 |Full width|将半角字符映射到全角字符。|  

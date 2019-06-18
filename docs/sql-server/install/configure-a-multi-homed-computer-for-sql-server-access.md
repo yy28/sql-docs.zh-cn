@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e20ed69a9fdff95914dd0d5086e3c0774421d44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599945"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62671714"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>将多宿主计算机配置为允许 SQL Server 访问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47599945"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>确定计算机上可用的 IP 地址  
   
-1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上，依次单击“开始”和“运行”，键入 **cmd**，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
+1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上，依次单击“开始”  和“运行”  ，键入 **cmd**，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
 2.  在“命令提示符”窗口中，键入 **ipconfig,** ，然后按 Enter 列出此计算机上可用的 IP 地址。  
   
@@ -68,17 +68,17 @@ ms.locfileid: "47599945"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  单击 **“开始”**，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]和 **“配置工具”**，然后单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”**。  
+1.  单击 **“开始”** ，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]和 **“配置工具”** ，然后单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”** 。  
   
-2.  在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”的控制台窗格中，依次展开“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置”、“\<实例名称> 的协议”，然后双击“TCP/IP”。  
+2.  在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”  的控制台窗格中，依次展开“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置”  、“\<实例名称> 的协议”  ，然后双击“TCP/IP”  。  
   
-3.  在“TCP/IP 属性”对话框的“IP 地址”选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上配置的各个 IP 地址。  
+3.  在“TCP/IP 属性”  对话框的“IP 地址”  选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上配置的各个 IP 地址。  
   
 4.  对于任意 IP 地址，如果 **“TCP 动态端口”** 对话框中包含 **0**，则指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在侦听动态端口。 本示例使用固定端口，而不是使用在重新启动时会发生更改的动态端口。 因此，如果 **“TCP 动态端口”** 对话框中包含 **0**，则删除 0。  
   
 5.  请注意为要配置的每个 IP 地址列出的 TCP 端口。 对于本示例，假设两个 IP 地址都侦听默认端口 1433。  
   
-6.  如果不希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用某些可用端口，则请在 **“协议”** 选项卡上将 **“全部侦听”** 值更改为 **“否”**；在 **“IP 地址”** 选项卡上，将不想使用的 IP 地址的 **“活动”** 值更改为 **“否”** 。  
+6.  如果不希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用某些可用端口，则请在 **“协议”** 选项卡上将 **“全部侦听”** 值更改为 **“否”** ；在 **“IP 地址”** 选项卡上，将不想使用的 IP 地址的 **“活动”** 值更改为 **“否”** 。  
   
 ## <a name="configuring-windows-firewall-with-advanced-security"></a>配置高级安全 Windows 防火墙  
  知道计算机所使用的 IP 地址和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的端口后，就可以创建防火墙规则，然后为特定的 IP 地址配置这些规则。  
@@ -87,34 +87,34 @@ ms.locfileid: "47599945"
   
 1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上，以管理员身份登录。  
   
-2.  依次单击“开始” 、“运行” ，键入 **wf.msc**，然后单击“确定” 。  
+2.  依次单击“开始”  、“运行”  ，键入 **wf.msc**，然后单击“确定”  。  
   
-3.  在“用户帐户控制”对话框中，单击“继续”使用管理员凭据打开高级安全 Windows 防火墙管理单元。  
+3.  在“用户帐户控制”对话框中，单击“继续”使用管理员凭据打开高级安全 Windows 防火墙管理单元   。  
   
 4.  在 **“概述”** 页上，确认已启用 Windows 防火墙。  
   
-5.  在左窗格中，单击 **“入站规则”**。  
+5.  在左窗格中，单击 **“入站规则”** 。  
   
-6.  右键单击“入站规则”，然后单击“新建规则”以打开“新建入站规则向导”。  
+6.  右键单击“入站规则”，然后单击“新建规则”以打开“新建入站规则向导”    。  
   
-7.  可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序创建规则。 但是，由于本示例使用固定端口，所以请选择 **“端口”**，然后单击 **“下一步”**。  
+7.  可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序创建规则。 但是，由于本示例使用固定端口，所以请选择 **“端口”** ，然后单击 **“下一步”** 。  
   
 8.  在 **“协议和端口”** 页上，选择 **TCP**。  
   
-9. 选择 **“指定的本地端口”**。 键入端口号（由逗号分隔），然后单击 **“下一步”**。 在本示例中，你将配置默认端口；因此请输入 **1433**。  
+9. 选择 **“指定的本地端口”** 。 键入端口号（由逗号分隔），然后单击 **“下一步”** 。 在本示例中，你将配置默认端口；因此请输入 **1433**。  
   
-10. 在 **“操作”** 页上，查看各选项。 在本示例中，不使用防火墙强制进行安全连接。 因此，请单击 **“允许连接”**，然后单击 **“下一步”**。  
+10. 在 **“操作”** 页上，查看各选项。 在本示例中，不使用防火墙强制进行安全连接。 因此，请单击 **“允许连接”** ，然后单击 **“下一步”** 。  
   
     > [!NOTE]  
     >  您的环境可能要求使用安全连接。 如果选择其中一个安全连接选项，则可能必须配置证书和 **“强行加密”** 选项。 有关安全连接的详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)和[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 11. 在 **“配置文件”** 页上，为该规则选择一个或多个配置文件。 如果您不熟悉防火墙配置文件，请单击防火墙程序中的 **“了解有关配置文件的详细信息”** 链接。  
   
-    -   如果计算机是服务器而且仅当连接到域时才可用，则请选择 **“域”**，然后单击 **“下一步”**。  
+    -   如果计算机是服务器而且仅当连接到域时才可用，则请选择 **“域”** ，然后单击 **“下一步”** 。  
   
     -   如果计算机为移动计算机（例如便携式计算机），则它在连接到不同网络时很可能使用多个配置文件。 对于移动计算机，可以为不同的配置文件配置不同的访问功能。 例如，可以在计算机使用域配置文件时允许访问，而在计算机使用公共配置文件时不允许访问。  
   
-12. 在 **“名称”** 页上，提供规则的名称和说明，然后单击 **“完成”**。  
+12. 在 **“名称”** 页上，提供规则的名称和说明，然后单击 **“完成”** 。  
   
 13. 重复此过程，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用的每个 IP 地址创建另一个规则。  
   
@@ -122,21 +122,21 @@ ms.locfileid: "47599945"
   
 #### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>为特定的 IP 地址配置防火墙规则  
   
-1.  在“高级安全 Windows 防火墙”的“入站规则”页上，右键单击刚创建的规则，然后单击“属性”。  
+1.  在“高级安全 Windows 防火墙”的“入站规则”页上，右键单击刚创建的规则，然后单击“属性”    。  
   
 2.  在 **“规则属性”** 对话框中，选择 **“范围”** 选项卡。  
   
-3.  在 **“本地 IP 地址”** 区域中，选择 **“下列 IP 地址”**，然后单击 **“添加”**。  
+3.  在 **“本地 IP 地址”** 区域中，选择 **“下列 IP 地址”** ，然后单击 **“添加”** 。  
   
-4.  在 **“IP 地址”** 对话框中，选择 **“此 IP 地址或子网”**，然后键入要配置的 IP 地址之一。  
+4.  在 **“IP 地址”** 对话框中，选择 **“此 IP 地址或子网”** ，然后键入要配置的 IP 地址之一。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-6.  在 **“远程 IP 地址”** 区域中，选择 **“下列 IP 地址”**，然后单击 **“添加”**。  
+6.  在 **“远程 IP 地址”** 区域中，选择 **“下列 IP 地址”** ，然后单击 **“添加”** 。  
   
 7.  使用 **“IP 地址”** 对话框为计算机上选定的 IP 地址配置连接。 可以启用源自特定 IP 地址、某些范围的 IP 地址、整个子网或源自特定计算机的连接。 若要正确配置此选项，您需要十分了解网络。 有关网络的信息，请与网络管理员联系。  
   
-8.  若要关闭 **“IP 地址”** 对话框，请单击 **“确定”**；然后单击 **“确定”** 关闭 **“规则属性”** 对话框。  
+8.  若要关闭 **“IP 地址”** 对话框，请单击 **“确定”** ；然后单击 **“确定”** 关闭 **“规则属性”** 对话框。  
   
 9. 若要配置多宿主计算机上的其他 IP 地址，请使用另一 IP 地址和另一规则重复此过程。  
   

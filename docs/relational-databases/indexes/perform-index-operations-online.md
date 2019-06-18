@@ -17,11 +17,11 @@ manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca3269ffefc69584aea56ad47f125e8c11fa75d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745975"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686753"
 ---
 # <a name="perform-index-operations-online"></a>联机执行索引操作
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47745975"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要联机重新生成索引，请使用：**  
   
@@ -63,9 +63,9 @@ ms.locfileid: "47745975"
   
 -   有关联机创建、重新生成或删除索引的更多限制和局限性，请参阅 [联机索引操作指南](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -80,27 +80,27 @@ ms.locfileid: "47745975"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要联机重新生成的索引，然后选择“属性”。  
+5.  右键单击要联机重新生成的索引，然后选择“属性”  。  
   
-6.  在 **“选择页”** 下，选择 **“选项”**。  
+6.  在 **“选择页”** 下，选择 **“选项”** 。  
   
-7.  选择 **“允许联机 DML 处理”**，然后从列表中选择 **True** 。  
+7.  选择 **“允许联机 DML 处理”** ，然后从列表中选择 **True** 。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
-9. 右键单击要联机重新生成的索引，然后选择“重新生成”。  
+9. 右键单击要联机重新生成的索引，然后选择“重新生成”  。  
   
-10. 在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。  
+10. 在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-rebuild-or-drop-an-index-online"></a>联机创建、重新生成或删除索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将联机重新生成现有的索引  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将联机重新生成现有的索引  
   
     ```  
     USE AdventureWorks2012;  

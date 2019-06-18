@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472176"
 ---
 # <a name="rename-a-table-or-column"></a>重命名表或列 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  在导入过程中，您可以通过在 **“表导入向导”** 的 **“选择表和视图”** 页中键入 **“友好名称”**，更改表的名称。 如果您通过在 **“表导入向导”** 的 **“指定 SQL 查询”** 页上指定查询来导入数据，也可以更改表和列名。  
+  在导入过程中，您可以通过在 **“表导入向导”** 的 **“选择表和视图”** 页中键入 **“友好名称”** ，更改表的名称。 如果您通过在 **“表导入向导”** 的 **“指定 SQL 查询”** 页上指定查询来导入数据，也可以更改表和列名。  
   
  在您将数据添加到模型中后，表的名称（或标题）将出现在模型设计器底部的表选项卡上。 您可以更改表的名称，以便为其提供更为合适的名称。 您还可以在数据添加到模型中之后重命名列。 在您从多个源导入了数据，并且想要确保不同表中的列具有易于区分的名称时，此选项特别重要。  
   
 ### <a name="to-rename-a-table"></a>重命名表  
   
-1.  在模型设计器中，右键单击包含要重命名的表的选项卡，然后单击 **“重命名”**。  
+1.  在模型设计器中，右键单击包含要重命名的表的选项卡，然后单击 **“重命名”** 。  
   
 2.  键入新名称。  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62510316"
 ---
 # <a name="save-as"></a>另存为
@@ -32,23 +32,23 @@ ms.locfileid: "62510316"
  使用此选项可以查看当前的文件名，更改文件名，或在显示的文件和文件夹中进行筛选。 若要在显示的文件和文件夹中进行筛选，请输入要筛选的文件的完整文件名或部分文件名。 可以使用星号 (`*`) 作为通配符。  
   
 > [!TIP]
->  若要显示位于 Web 和网络位置上的文件，请在“文件名”框中输入 URL 或网络路径。 例如，输入“<http://mywebsite>”可显示“mywebsite”Web 位置中可用的文件，输入“\\\myserver\myshare”可显示“myserver”上的“myshare”位置中可用的文件。  
+>  若要显示位于 Web 和网络位置上的文件，请在“文件名”  框中输入 URL 或网络路径。 例如，输入“<http://mywebsite>”可显示“mywebsite”Web 位置中可用的文件，输入“\\\myserver\myshare”可显示“myserver”上的“myshare”位置中可用的文件。  
   
  **保存类型**  
  使用此选项可为所选项选择新的文件类型。 显示的文件类型包括所选项可转换成的所有可用文件类型。  
   
  **高级保存选项**  
- 若要访问“高级保存选项”对话框，请选择“保存”按钮右侧的小矩形，再单击“编码保存”。 使用此对话框可以指定文件编码以及要在行尾使用的字符。  
+ 若要访问“高级保存选项”  对话框，请选择“保存”  按钮右侧的小矩形，再单击“编码保存”  。 使用此对话框可以指定文件编码以及要在行尾使用的字符。  
   
 ## <a name="left-panel"></a>左面板  
  **桌面**  
  显示桌面上的所有文件和文件夹。  
   
  **我的项目**  
- 显示“我的项目”或最近访问过的位置中的文件和文件夹。  
+ 显示“我的项目”  或最近访问过的位置中的文件和文件夹。  
   
  **我的电脑**  
- 显示“我的电脑”在计算机上的位置。  
+ 显示“我的电脑”  在计算机上的位置。  
   
 ## <a name="see-also"></a>请参阅  
  [高级保存选项](advanced-save-options.md)   

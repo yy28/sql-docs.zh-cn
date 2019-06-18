@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 94b361c5bcc12f2ceb532de0338cceeb6659fc52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657125"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62761220"
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>将磁盘或磁带指定为备份目标 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47657125"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要将磁盘或磁带指定为备份目标，可使用：**  
   
@@ -50,9 +50,9 @@ ms.locfileid: "47657125"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
  备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)不检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
@@ -63,21 +63,21 @@ ms.locfileid: "47657125"
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
+2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击数据库，指向“任务”，再单击“备份”。 将出现 **“备份数据库”** 对话框。  
+3.  右键单击数据库，指向“任务”  ，再单击“备份”  。 将出现 **“备份数据库”** 对话框。  
   
-4.  在 **“常规”** 页的 **“目标”** 部分，单击 **“磁盘”** 或 **“磁带”**。 若要选择包含单个介质集的多个磁盘或磁带机（最多为 64 个）的路径，请单击 **“添加”**。  
+4.  在 **“常规”** 页的 **“目标”** 部分，单击 **“磁盘”** 或 **“磁带”** 。 若要选择包含单个介质集的多个磁盘或磁带机（最多为 64 个）的路径，请单击 **“添加”** 。  
   
-     若要删除备份目标，请选择该备份目标并单击 **“删除”**。 若要查看备份目标的内容，请选择该备份目标并单击 **“内容”**。  
+     若要删除备份目标，请选择该备份目标并单击 **“删除”** 。 若要查看备份目标的内容，请选择该备份目标并单击 **“内容”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-specify-a-disk-or-tape-as-a-backup-destination"></a>将磁盘或磁带指定为备份目标  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  在 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 语句中指定该文件或设备及其物理名称。 此示例会将 `AdventureWorks2012` 数据库备份到磁盘文件 `Z:\SQLServerBackups\AdventureWorks2012.Bak`。  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba7914456e4ffcf19a52c6e7f7206a390147cc2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662420"
 ---
 # <a name="ftcrawl-aborted-event-class"></a>FT:Crawl Aborted 事件类
@@ -26,7 +26,7 @@ ms.locfileid: "62662420"
   
 ## <a name="ftcrawl-aborted-event-class-data-columns"></a>FT:Crawl Aborted 事件类的数据列  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|正在运行全文爬网的数据库的 ID。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**错误**|**int**|给定事件的错误号。 通常是 **sysmessages** 表中存储的错误号。|31|是|  

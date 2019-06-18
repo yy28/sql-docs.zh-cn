@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c576d4adb09ee1bd50c23c29d490cb15c829744f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096596"
 ---
 # <a name="delete-one-or-more-jobs"></a>删除一个或多个作业
@@ -58,21 +58,21 @@ ms.locfileid: "65096596"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  依次展开“SQL Server 代理”和“作业”，右键单击要删除的作业，再单击“删除”。  
+2.  依次展开“SQL Server 代理”  和“作业”  ，右键单击要删除的作业，再单击“删除”  。  
   
-3.  在“删除对象”对话框中，确认选择了要删除的作业。  
+3.  在“删除对象”  对话框中，确认选择了要删除的作业。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
 #### <a name="to-delete-multiple-jobs"></a>删除多个作业  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**。  
+2.  展开 **“SQL Server 代理”** 。  
   
-3.  右键单击“作业活动监视器”，然后单击“查看作业活动”。  
+3.  右键单击“作业活动监视器”  ，然后单击“查看作业活动”  。  
   
-4.  在作业活动监视器中，选择要删除的作业，右键单击选择的作业，然后选择“删除作业”。  
+4.  在作业活动监视器中，选择要删除的作业，右键单击选择的作业，然后选择“删除作业”  。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -80,9 +80,9 @@ ms.locfileid: "65096596"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE msdb ;  

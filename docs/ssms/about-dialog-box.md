@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0fc0c392851ebd91690654ba328eff71712d61c1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089438"
 ---
 # <a name="about-dialog-box"></a>“关于”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
-“关于”对话框提供了产品信息，并可通过该对话框访问有关运行该产品的计算机信息。 在评估版本中，[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 项将列出安装过期前所剩余的天数。 此对话框在“帮助”菜单中。  
+“关于”  对话框提供了产品信息，并可通过该对话框访问有关运行该产品的计算机信息。 在评估版本中，[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 项将列出安装过期前所剩余的天数。 此对话框在“帮助”  菜单中。  
   
 ## <a name="options"></a>选项  
 **组件名称**  

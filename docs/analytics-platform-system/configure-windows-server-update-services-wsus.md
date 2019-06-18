@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63134749"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>在分析平台系统中配置 Windows Server Update Services (WSUS)
@@ -55,7 +55,7 @@ ms.locfileid: "63134749"
   
     1.  在中**服务器管理器仪表板**，然后在**工具**菜单中，单击**Windows Server Update Services**。  
   
-    2.  在左窗格中**Update Services**窗口中，单击以展开的虚拟机管理节点服务器 (**_appliance_domain_VMM**)，然后单击**选项**。  
+    2.  在左窗格中**Update Services**窗口中，单击以展开的虚拟机管理节点服务器 ( **_appliance_domain_VMM**)，然后单击**选项**。  
   
     3.  在中**选项**窗格中，单击**WSUS 服务器配置向导**以启动配置向导。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "63134749"
   
     #### <a name="to-update-by-using-microsoft-update"></a>通过使用 Microsoft 更新来更新  
   
-    1.  如果选择使用 Microsoft Update 同步，不需要任何更改**选择上游服务器**页。 单击“下一步” 。  
+    1.  如果选择使用 Microsoft Update 同步，不需要任何更改**选择上游服务器**页。 单击“下一步”  。  
   
         ![WSUS 上游服务器同步](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -167,7 +167,7 @@ ms.locfileid: "63134749"
   
 12. 完成。  
   
-    单击 **“完成”**。  
+    单击 **“完成”** 。  
   
 ## <a name="bkmk_WSUSGroup"></a>在 WSUS 中的设备服务器组合  
 Analytics Platform system 配置 WSUS 之后, 的下一步是进行分组的设备服务器。 通过将所有设备服务器添加到组，WSUS 将能够将软件更新应用到设备中的所有服务器。  

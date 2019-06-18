@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 59849d1e4a462433ac7f0b1b4e3e620bcdb82256
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856066"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
@@ -33,10 +33,10 @@ ms.locfileid: "62856066"
 
   包含链接服务器或远程服务器注册，每行和本地服务器具有一个行**server_id** = 0。  
 
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|链接服务器的本地 ID。|  
-|**名称**|**sysname**|当**server_id** = 0 时，返回的值是服务器名称。<br /><br /> 当**server_id** > 0，返回的值是链接服务器的本地名称。|  
+|**name**|**sysname**|当**server_id** = 0 时，返回的值是服务器名称。<br /><br /> 当**server_id** > 0，返回的值是链接服务器的本地名称。|  
 |**product**|**sysname**|链接服务器的产品名。 "SQL Server"的值指示的另一个实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**provider**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 数据源连接属性。|  

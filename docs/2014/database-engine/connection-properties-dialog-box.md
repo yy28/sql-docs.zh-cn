@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808395"
 ---
 # <a name="connection-properties-dialog-box"></a>“连接属性”对话框
-  使用此对话框可以查看当前的连接属性。 在不同“对象资源管理器”对话框中单击“查看连接属性”时，可以使用此对话框。 此页上显示的属性是只读的。  
+  使用此对话框可以查看当前的连接属性。 在不同“对象资源管理器”对话框中单击“查看连接属性”  时，可以使用此对话框。 此页上显示的属性是只读的。  
   
- 若要更改属性（如“数据库”），请在打开“连接属性”对话框之前，使用“对象资源管理器”连接到所需的数据库。  
+ 若要更改属性（如“数据库”  ），请在打开“连接属性”  对话框之前，使用“对象资源管理器”连接到所需的数据库。  
   
  请注意，SQL Azure 的查询超时期限是 30 分钟。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62808395"
  用于连接身份验证的登录的用户名。  
   
 ## <a name="connection-category"></a>连接类别  
- 查看当前连接的连接属性。 大多数连接属性都是在连接过程中，在“连接到服务器”对话框的“连接属性”选项卡上选择的。  
+ 查看当前连接的连接属性。 大多数连接属性都是在连接过程中，在“连接到服务器”  对话框的“连接属性”  选项卡上选择的。  
   
  **“数据库”**  
  当前连接到的数据库的名称。 若要更改此名称，请使用 SQL 编辑器工具栏。  

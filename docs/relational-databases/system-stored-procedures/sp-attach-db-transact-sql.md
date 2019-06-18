@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997065"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
@@ -50,7 +50,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>参数  
 `[ @dbname = ] 'dbnam_ '` 是要连接到服务器的名称。 该名称必须是唯一的。 *dbname*是**sysname**，默认值为 NULL。  
   
-`[ @filename1 = ] 'filename_n'` 是物理名称，包括数据库文件的路径。 *filename_n*是**nvarchar(260)**，默认值为 NULL。 最多可以指定 16 个文件名。 参数名称开始**@filename1**递增到**@filename16**。 文件名列表至少必须包括主文件。 主文件中包含指向数据库中其他文件的系统表。 该列表还必须包括在数据库分离之后移动的所有文件。  
+`[ @filename1 = ] 'filename_n'` 是物理名称，包括数据库文件的路径。 *filename_n*是**nvarchar(260)** ，默认值为 NULL。 最多可以指定 16 个文件名。 参数名称开始 **@filename1** 递增到 **@filename16** 。 文件名列表至少必须包括主文件。 主文件中包含指向数据库中其他文件的系统表。 该列表还必须包括在数据库分离之后移动的所有文件。  
   
 > [!NOTE]  
 >  此参数映射到 CREATE DATABASE 语句的 FILENAME 参数。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  

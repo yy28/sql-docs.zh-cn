@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791997"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
@@ -76,7 +76,7 @@ ms.locfileid: "62791997"
  **可用性组的故障转移策略设置应用于所有副本，无论它位于独立实例还是 FCI 实例中。  
   
 > [!NOTE]  
->  有关详细信息**的节点数**中故障转移群集内和**AlwaysOn 可用性组**不同版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[支持的功能SQL Server 2012 的版本](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  有关详细信息**的节点数**中故障转移群集内和**AlwaysOn 可用性组**不同版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅[支持的功能SQL Server 2012 的版本](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 上承载可用性副本的注意事项  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 262b2c795da92b2ef32c6956d9a2deda0e45a39d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62915224"
 ---
 # <a name="mssqlserver21889"></a>MSSQLSERVER_21889
@@ -36,6 +36,6 @@ ms.locfileid: "62915224"
  为了承载发布服务器数据库，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须为复制发布服务器。 在远程服务器上，`sp_validate_redirected_publisher` 调用 `sp_helpdistributor`，以确定该服务器是否为复制发布服务器。 如果执行存储过程 `sp_helpdistributor` 时指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目标实例不是复制发布服务器，则会返回该错误。  
   
 ## <a name="user-action"></a>用户操作  
- 在承载发布服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上执行 `sp_adddistributor`。 在运行 `sp_adddistributor` 时，指定正确的分发服务器。 使用相同的值*@password*形式的参数时使用`sp_adddistributor`最初在分发服务器上运行。  
+ 在承载发布服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上执行 `sp_adddistributor`。 在运行 `sp_adddistributor` 时，指定正确的分发服务器。 使用相同的值 *@password* 形式的参数时使用`sp_adddistributor`最初在分发服务器上运行。  
   
   

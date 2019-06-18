@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4eebf51a73a6d5f4665c418b6f6b03078777bd0f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590371"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686022"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "53590371"
   
 -   不能通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]来移动使用 UNIQUE 或 PRIMARY KEY 约束创建的索引。 若要移动这些索引，请在 [中使用](../../t-sql/statements/create-index-transact-sql.md) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]语句以及 (DROP_EXISTING=ON) 选项。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -64,19 +64,19 @@ ms.locfileid: "53590371"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击您要移动的索引的表，然后选择“设计”。  
+3.  右键单击您要移动的索引的表，然后选择  “设计”。  
   
-4.  在“表设计器”菜单上，单击“索引/键”。  
+4.  在“表设计器”  菜单上，单击“索引/键”  。  
   
 5.  选择要移动的索引。  
   
-6.  在主网格中，展开 **“数据空间规范”**。  
+6.  在主网格中，展开 **“数据空间规范”** 。  
   
 7.  选择 **“文件组或分区方案名称”** 并从列表中选择要将索引移动到的文件组或分区方案。  
   
-8.  单击 **“关闭”**。  
+8.  单击 **“关闭”** 。  
   
-9. 在“文件”菜单上，选择“保存”以保存 _table_name_。  
+9. 在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>在“对象资源管理器”中将现有索引移到其他文件组  
   
@@ -88,9 +88,9 @@ ms.locfileid: "53590371"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要移动的索引，然后选择“属性”。  
+5.  右键单击要移动的索引，然后选择  “属性”。  
   
-6.  在 **“选择页”** 下，选择 **“存储”**。  
+6.  在 **“选择页”** 下，选择 **“存储”** 。  
   
 7.  选择移动此索引的目标文件组。  
   
@@ -100,9 +100,9 @@ ms.locfileid: "53590371"
   
      在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多处理器计算机上，可以通过指定最大的并行度值来配置用于执行索引语句的处理器数。 并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本均提供并行索引操作功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅“SQL Server 2016 各个版本支持的功能”。 有关并行索引操作的详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
- “索引属性 - index_name” 对话框的“存储”页中提供以下信息：  
+ “索引属性 - index_name” 对话框的“存储”页中提供以下信息    ：  
   
  **文件组**  
  在指定的文件组中存储索引。 该列表仅显示标准 (row) 文件组。 默认情况下，将在该列表中选择相应数据库的 PRIMARY 文件组。  
@@ -150,9 +150,9 @@ ms.locfileid: "53590371"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

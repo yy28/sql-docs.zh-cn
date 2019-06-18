@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714334"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
@@ -59,7 +59,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @source_dbms = ] 'source_dbms'` 是从中映射数据类型的 DBMS 的名称。 *source_dbms*是**sysname**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**ORACLE**|源为 Oracle 数据库。|  
@@ -67,7 +67,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  如果满足以下条件，则必须指定此参数*mapping_id*为 NULL。  
   
-`[ @source_version = ] 'source_version'` 是源 DBMS 的版本号。 *source_version*是**varchar(10)**，默认值为 NULL。  
+`[ @source_version = ] 'source_version'` 是源 DBMS 的版本号。 *source_version*是**varchar(10)** ，默认值为 NULL。  
   
 `[ @source_type = ] 'source_type'` 源 DBMS 中的数据类型。 *source_type*是**sysname**。 如果满足以下条件，则必须指定此参数*mapping_id*为 NULL。  
   
@@ -87,7 +87,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @destination_dbms = ] 'destination_dbms'` 是目标 DBMS 的名称。 *destination_dbms*是**sysname**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**ORACLE**|目标为 Oracle 数据库。|  
@@ -95,7 +95,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|目标为 Sybase 数据库。|  
 |NULL（默认值）||  
   
-`[ @destination_version = ] 'destination_version'` 目标 DBMS 的产品版本。 *destination_version*是**varchar(10)**，默认值为 NULL。  
+`[ @destination_version = ] 'destination_version'` 目标 DBMS 的产品版本。 *destination_version*是**varchar(10)** ，默认值为 NULL。  
   
 `[ @destination_type = ] 'destination_type'` 目标 DBMS 中列出的数据类型。 *destination_type*是**sysname**，默认值为 NULL。  
   

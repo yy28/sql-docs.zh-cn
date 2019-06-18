@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f2f854c7a6dbd0d1ab569f87bf053a5b9f45058
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044206"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 事件类别 (SQL Server Profiler)
@@ -28,7 +28,7 @@ ms.locfileid: "63044206"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[Audit Add DB User 事件类](audit-add-db-user-event-class.md)|指示已在数据库中添加或删除作为数据库用户的登录名。|  
 |[Audit Add Login to Server Role 事件类](audit-add-login-to-server-role-event-class.md)|指示已在固定服务器角色中添加或删除登录名。|  

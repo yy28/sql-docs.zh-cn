@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8919457cb10ae9feaa7e1c82eed5a73860fd6d42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62446117"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "47829755"
 
 运行 DBCC CHECKDB - 如果没有干净的备份可用，请运行没有 REPAIR 子句的 DBCC CHECKDB 以确定损坏范围。 建议使用 DBCC CHECKDB 的 REPAIR 子句。 接下来，请运行带适当 REPAIR 子句的 DBCC CHECKDB 修复损坏的数据。
 
-> **不支持警报标记!!!!**
-> **不支持 tr 标记!!!!**
+> **不支持警报标记!!!!** 
+> **不支持 tr 标记!!!!** 
 > **不支持 tr 标记!!!!**
 
 如果运行具有 REPAIR 子句的 DBCC CHECKDB 无法解决存在的问题，请与主要支持提供商联系。

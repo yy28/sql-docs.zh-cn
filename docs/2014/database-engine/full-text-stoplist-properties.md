@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779404"
 ---
 # <a name="full-text-stoplist-properties"></a>全文非索引字表属性
@@ -44,10 +44,10 @@ ms.locfileid: "62779404"
  通过删除所有语言的全部非索引字来清除非索引字表。  
   
  **Stopword**  
- 如果您选择的是 **“添加非索引字”** 或 **“删除非索引字”**，请在 **“非索引字”** 字段中输入所需的非索引字。 新的非索引字必须是唯一的，也就是说，在针对所选语言的此非索引字表中还不存在该非索引字。  
+ 如果您选择的是 **“添加非索引字”** 或 **“删除非索引字”** ，请在 **“非索引字”** 字段中输入所需的非索引字。 新的非索引字必须是唯一的，也就是说，在针对所选语言的此非索引字表中还不存在该非索引字。  
   
  **全文语言**  
- 如果您选择的是 **“添加非索引字”**、 **“删除非索引字”** 或 **“删除所有非索引字”**，请从列表框中选择非索引字的语言。 这将列出该服务器实例支持的所有全文语言。  
+ 如果您选择的是 **“添加非索引字”** 、 **“删除非索引字”** 或 **“删除所有非索引字”** ，请从列表框中选择非索引字的语言。 这将列出该服务器实例支持的所有全文语言。  
   
 ## <a name="see-also"></a>请参阅  
  [sys.fulltext_stopwords (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   

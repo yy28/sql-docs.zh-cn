@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e58b9b54de57225ee7e2c2ac2ff11afcba4a5a23
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089341"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
@@ -58,13 +58,13 @@ ms.locfileid: "65089341"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要在其中查看有关警报的信息的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击包含要查看的信息的警报，然后选择“属性”。  
+4.  右键单击包含要查看的信息的警报，然后选择“属性”  。  
   
-    有关 _alert\_name_“警报属性”对话框中包含的可用选项的详细信息，请参阅：  
+    有关 _alert\_name_“警报属性”  对话框中包含的可用选项的详细信息，请参阅：  
   
     -   [警报属性 - 新建警报（“常规”页）](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65089341"
   
     -   [警报属性（“历史记录”页）](../../ssms/agent/alert-properties-history-page.md)  
   
-5.  完成后，单击 **“确定”**。  
+5.  完成后，单击 **“确定”** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -82,9 +82,9 @@ ms.locfileid: "65089341"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- reports information about the Demo: Sev. 25 Errors alert  

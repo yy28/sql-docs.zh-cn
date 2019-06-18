@@ -9,15 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-manager: craigg
-ms.openlocfilehash: 6c01393866ae90c800afbbc7f55e5cb63bfb7554
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jroth
+ms.openlocfilehash: 9c2b248e89b3aa822de79dd26970931fea4aaebd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65094302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822810"
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在开始使用 FILESTREAM 之前，必须在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中启用 FILESTREAM。 本主题说明了如何使用 SQL Server 配置管理器来启用 FILESTREAM。  
   
@@ -25,23 +28,23 @@ ms.locfileid: "65094302"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>启用和更改 FILESTREAM 设置  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在服务列表中，右键单击“SQL Server 服务”，然后单击“打开”。  
+2.  在服务列表中，右键单击“SQL Server 服务”  ，然后单击“打开”  。  
   
-3.  在“SQL Server 配置管理器”管理单元中，找到要在其中启用 FILESTREAM 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+3.  在“SQL Server 配置管理器”  管理单元中，找到要在其中启用 FILESTREAM 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-4.  右键单击该实例，然后单击“属性”。  
+4.  右键单击该实例，然后单击“属性”  。  
   
 5.  在 **“SQL Server 属性”** 对话框中，单击 **“FILESTREAM”** 选项卡。  
   
-6.  选中“针对 Transact-SQL 访问启用 FILESTREAM”复选框。  
+6.  选中“针对 Transact-SQL 访问启用 FILESTREAM”  复选框。  
   
-7.  如果要在 Windows 中读取和写入 FILESTREAM 数据，请单击“针对文件 I/O 流访问启用 FILESTREAM”。 在 **“Windows 共享名”** 框中输入 Windows 共享的名称。  
+7.  如果要在 Windows 中读取和写入 FILESTREAM 数据，请单击“针对文件 I/O 流访问启用 FILESTREAM”  。 在 **“Windows 共享名”** 框中输入 Windows 共享的名称。  
   
-8.  如果远程客户端必须访问存储在此共享中的 FILESTREAM 数据，请选择 **“允许远程客户端针对 FILESTREAM 数据启用流访问”**。  
+8.  如果远程客户端必须访问存储在此共享中的 FILESTREAM 数据，请选择 **“允许远程客户端针对 FILESTREAM 数据启用流访问”** 。  
   
-9. 单击 **“应用”**。  
+9. 单击 **“应用”** 。  
   
 10. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，单击 **“新建查询”** 以显示查询编辑器。  
   
@@ -52,7 +55,7 @@ ms.locfileid: "65094302"
     RECONFIGURE  
     ```  
   
-12. 单击 **“执行”**。  
+12. 单击 **“执行”** 。  
   
 13. 重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
@@ -68,7 +71,7 @@ ms.locfileid: "65094302"
   
 -   使用 64-KB NTFS 簇。 压缩卷必须设置为 4-KB NTFS 簇。  
   
--   在 FILESTREAM 卷上禁用索引并设置 disablelastaccess。 若要设置 disablelastaccess，请使用 Windows fsutil 实用程序。  
+-   在 FILESTREAM 卷上禁用索引并设置 disablelastaccess  。 若要设置 disablelastaccess，请使用 Windows fsutil 实用程序   。  
   
 -   除非必要，否则请禁止对 FILESTREAM 卷进行防病毒扫描。 如果需要进行防病毒扫描，请避免设置将自动删除有问题文件的策略。  
   
@@ -80,6 +83,7 @@ ms.locfileid: "65094302"
 |RAID 5|Normal|Normal|很好|性能比一个磁盘或 JBOD 更好；比 RAID 0 或条带化 RAID 5 差。|  
 |RAID 0|很好|很好|None||  
 |RAID 5 ＋ 条带化|很好|很好|很好|成本最高的选项。|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
 ###  <a name="database"></a>物理数据库设计  

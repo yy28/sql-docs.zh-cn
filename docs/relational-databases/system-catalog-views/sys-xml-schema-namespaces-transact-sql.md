@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60b30e74ab58e5fd6a7bb122ba7e1b247e21273b
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945872"
 ---
 # <a name="sysxmlschemanamespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "64945872"
 
   对于每个 XSD 定义的 XML 命名空间，相应地返回一行。 以下元组是唯一： **collection_id**， **namespace_id**，并**collection_id**，以及**名称**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**xml_collection_id**|**int**|包含此命名空间的 XML 架构集合的 ID。|  
-|**名称**|**nvarchar(4000)**|XML 命名空间的名称。 空白**名称**指示没有目标命名空间。|  
+|**name**|**nvarchar(4000)**|XML 命名空间的名称。 空白**名称**指示没有目标命名空间。|  
 |**xml_namespace_id**|**int**|以 1 为基数的序号，用于唯一标识数据库中的 XML 命名空间。|  
   
 ## <a name="permissions"></a>权限  

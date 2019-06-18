@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: af78f507b56ec83c2768bbf3d30f5d8d7313d7c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025800"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 证书和非对称密钥
-  公钥加密 (PKI) 是一种消息保密方式，在使用这种方式时用户将创建一个“公钥”和一个“私钥”。 私钥是保密的，而公钥可以分发给其他人。 虽然密钥之间具有数学关系，但要想通过公钥推导出私钥却并不容易。 公钥用于加密数据，私钥用于解密数据。 使用公钥加密的消息只能使用正确的私钥来解密。 由于存在两个不同的密钥，因而这些密钥是“非对称的”。  
+  公钥加密 (PKI) 是一种消息保密方式，在使用这种方式时用户将创建一个“公钥”  和一个“私钥”  。 私钥是保密的，而公钥可以分发给其他人。 虽然密钥之间具有数学关系，但要想通过公钥推导出私钥却并不容易。 公钥用于加密数据，私钥用于解密数据。 使用公钥加密的消息只能使用正确的私钥来解密。  由于存在两个不同的密钥，因而这些密钥是“非对称的”。  
   
  证书和非对称密钥都属于非对称加密的使用方式。 证书通常用作非对称密钥的容器，因为它们可以包含更多信息，例如过期日期和颁发者。 这两种机制的加密算法之间存在差异，但相同密钥长度的加密强度是相同的。 通常，可以使用证书来加密数据库中其他类型的加密密钥，或者为代码模块签名。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63025800"
 ### <a name="using-a-certificate-in-sql-server"></a>在 SQL Server 中使用证书  
  证书可用来帮助确保连接的安全性（在数据库镜像中）、为包和其他对象签名或者加密数据或连接。 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中有关证书的其他资源。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)|介绍用于创建证书的命令。|  
 |[使用数字签名标识包的源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|显示有关如何使用证书为软件包签名的信息。|  
@@ -56,7 +56,7 @@ ms.locfileid: "63025800"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>在 SQL Server 中使用非对称密钥  
  非对称密钥可用来帮助确保数据的安全性或为纯文本签名。 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中有关非对称密钥的其他资源。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|介绍用于创建非对称密钥的命令。|  
 |[SIGNBYASYMKEY (Transact-SQL)](/sql/t-sql/functions/signbyasymkey-transact-sql)|显示用于为对象签名的选项。|  

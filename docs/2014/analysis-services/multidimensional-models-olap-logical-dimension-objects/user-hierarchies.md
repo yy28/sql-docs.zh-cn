@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e06a332823c593468c73fce635e1eac3040c6b6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702485"
 ---
 # <a name="user-hierarchies"></a>用户层次结构
@@ -80,7 +80,7 @@ ms.locfileid: "62702485"
  将与国家（地区）级别中的其他成员关联的成员填入省市自治区级别中，将市县级别中的成员与省市自治区级别中相应的成员建立关联。 但是，由于国家（地区）级别的 Vatican City 成员在省市自治区级别中没有相关联的成员，所以必须将市县级别的成员直接关联到国家（地区）级别的 Vatican City 成员。 因为这些更改，该维度的层次结构现在成为不规则层次结构。 城市 Vatican City 的父级是国家/地区 Vatican City，而它并不直接位于市县级别的 Vatican City 成员的上一级。 有关详细信息，请参阅 [不规则层次结构](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)。  
   
 ### <a name="parent-child-hierarchies"></a>父子层次结构  
- 维度的父子层次结构是通过使用特殊属性（称为父属性）来定义的，目的是为了确定成员之间的相互关系。 父属性用于说明维度主表内部的自引用关系或自联接。 父子层次结构是根据单个父属性构造的。 层次结构中出现的级别是通过与父属性关联的成员之间的父子关系形成的，因此只为一个父子层次结构分配一个级别。 父子层次结构的维度架构依赖于维度主表中提供的自引用关系。 例如，以下关系图说明**DimOrganization**中的维度主表[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]示例数据库。  
+ 维度的父子层次结构是通过使用特殊属性（称为父属性）来定义的，目的是为了确定成员之间的相互关系。 父属性用于说明维度主表内部的自引用关系或自联接   。 父子层次结构是根据单个父属性构造的。 层次结构中出现的级别是通过与父属性关联的成员之间的父子关系形成的，因此只为一个父子层次结构分配一个级别。 父子层次结构的维度架构依赖于维度主表中提供的自引用关系。 例如，以下关系图说明**DimOrganization**中的维度主表[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]示例数据库。  
   
  ![DimOrganization 表中的自引用联接](../../../2014/analysis-services/dev-guide/media/dimorganization.gif "DimOrganization 表中的自引用联接")  
   

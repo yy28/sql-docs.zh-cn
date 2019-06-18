@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652516"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62681482"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
 ## <a name="arguments"></a>参数  
 *schema_name*  
-触发器所属架构的名称。 不能为 DDL 或登录触发器指定 schema_name。  
+触发器所属架构的名称。 不能为 DDL 或登录触发器指定 schema_name  。  
   
-trigger_name  
+trigger_name   
 要启用的触发器的名称。  
   
 ALL  
@@ -71,7 +71,7 @@ ALL SERVER
 ## <a name="remarks"></a>Remarks  
 启用触发器并不是要重新创建它。 禁用的触发器仍以对象形式存在于当前数据库中，但并不触发。 启用触发器将导致在运行触发器最初编程时所针对的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时触发。 可以使用 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 禁用触发器。 此外，还可以通过使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 来禁用或启用为表定义的 DML 触发器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 若要启用 DML 触发器，用户需要至少对于创建触发器所在的表或视图拥有 ALTER 权限。  
   
 若要启用具有服务器作用域 (ON ALL SERVER) 的 DDL 触发器或登录触发器，用户需要对服务器具有 CONTROL SERVER 权限。 若要启用具有数据库范围 (ON DATABASE) 的 DDL 触发器，用户至少需要在当前数据库中拥有 ALTER ANY DATABASE DDL TRIGGER 权限。  

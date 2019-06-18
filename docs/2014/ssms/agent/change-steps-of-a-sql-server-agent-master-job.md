@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017581"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -50,19 +50,19 @@ ms.locfileid: "63017581"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要修改步骤的作业的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要修改步骤的作业，然后选择“属性”。  
+4.  右键单击要修改步骤的作业，然后选择“属性”  。  
   
-5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“步骤”。  
+5.  在“作业属性 - job_name”  对话框中的“选择页”下，选择“步骤”    。  
   
-6.  单击**编辑**以打开**作业步骤属性-**_job_step_name_对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性：新建作业步骤&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)并[作业步骤属性：新建作业步骤&#40;高级页&#41;](job-step-properties-new-job-step-advanced-page.md)。  
+6.  单击**编辑**以打开**作业步骤属性-** _job_step_name_对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性：新建作业步骤&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)并[作业步骤属性：新建作业步骤&#40;高级页&#41;](job-step-properties-new-job-step-advanced-page.md)。  
   
-7.  完成后，单击 **“确定”**。  
+7.  完成后，单击 **“确定”** 。  
   
-8.  在中**作业属性-**_job_name_对话框中，单击**确定**。  
+8.  在中**作业属性-** _job_name_对话框中，单击**确定**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -70,9 +70,9 @@ ms.locfileid: "63017581"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- changes the number of retry attempts for the first step of the Weekly Sales Data Backup job.   

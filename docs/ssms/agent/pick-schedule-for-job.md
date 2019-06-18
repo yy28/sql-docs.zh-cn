@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ce303fcf282a25515e87005ac9e8225e612e17fd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088856"
 ---
 # <a name="pick-schedule-for-job"></a>为作业选取计划
@@ -48,7 +48,7 @@ ms.locfileid: "65088856"
 列出附加到计划的作业编号。 单击编号可以查看相应作业的属性。  
   
 **属性**  
-启动“作业计划属性”对话框，可以在该对话框中查看该计划的有关信息。  
+启动“作业计划属性”  对话框，可以在该对话框中查看该计划的有关信息。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建计划并将计划附加到作业](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  

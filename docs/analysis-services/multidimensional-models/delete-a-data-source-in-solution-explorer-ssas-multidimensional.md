@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 51510891524b77ee0a2edaa33f024c538dcd4b81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63043972"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>在解决方案资源管理器中删除数据源（SSAS 多维）
@@ -31,7 +31,7 @@ ms.locfileid: "63043972"
   
 2.  在 **“解决方案资源管理器”** 中，展开 **“数据源”** 文件夹。  
   
-3.  右键单击数据源，然后单击“删除”。 **“删除对象”**  对话框将出现，其中显示您删除数据源后将失效的对象。 在单击 **“确定”** 以便删除数据源之前请仔细查看此列表。  
+3.  右键单击数据源，然后单击“删除”  。 **“删除对象”**  对话框将出现，其中显示您删除数据源后将失效的对象。 在单击 **“确定”** 以便删除数据源之前请仔细查看此列表。  
   
 4.  保存项目。  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524383"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
@@ -58,13 +58,13 @@ ms.locfileid: "62524383"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要删除的操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要删除的操作员，然后选择“删除”。  
+4.  右键单击要删除的操作员，然后选择“删除”  。  
   
-5.  在 **“删除对象”** 对话框中，确保已选择正确的操作员，然后单击 **“确定”**。 如果希望其他操作员收到发送给已删除操作员的警报和作业，请选择 **“重新分配给”** ，然后在列表中选择一个操作员。  
+5.  在 **“删除对象”** 对话框中，确保已选择正确的操作员，然后单击 **“确定”** 。 如果希望其他操作员收到发送给已删除操作员的警报和作业，请选择 **“重新分配给”** ，然后在列表中选择一个操作员。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -72,9 +72,9 @@ ms.locfileid: "62524383"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- deletes operator 'Test Operator' and reassigns all alerts and jobs sent to that operator to 'Fran??ois Ajenstat'  

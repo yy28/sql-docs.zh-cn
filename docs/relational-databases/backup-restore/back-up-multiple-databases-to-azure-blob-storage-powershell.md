@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 09e32f92112844e8a291d212e271281636df55e1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242465"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478520"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>将多个数据库备份到 Azure Blob 存储 - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "59242465"
   
 1.  **导航 SQL Server PowerShell 路径：** Windows PowerShell 实现了一些 cmdlet，可以导航表示 PowerShell 提供程序支持的对象层次结构的路径结构。 在您导航到该路径中的节点时，可以使用其他 cmdlet 以便针对当前对象执行基本操作。  
   
-2.  Get-ChildItem cmdlet：Get-ChildItem 返回的信息取决于 SQL Server PowerShell 路径中的位置。 例如，如果该位置在计算机级别，则此 cmdlet 返回计算机上安装的所有 SQL Server 数据库引擎实例。 再举一个例子，如果该位置在数据库等对象级别，则此 cmdlet 返回数据库对象的列表。  默认情况下， **Get-ChildItem** cmdlet 不返回系统对象。  使用 -Force 参数可查看系统对象。  
+2.  Get-ChildItem  cmdlet：Get-ChildItem  返回的信息取决于 SQL Server PowerShell 路径中的位置。 例如，如果该位置在计算机级别，则此 cmdlet 返回计算机上安装的所有 SQL Server 数据库引擎实例。 再举一个例子，如果该位置在数据库等对象级别，则此 cmdlet 返回数据库对象的列表。  默认情况下， **Get-ChildItem** cmdlet 不返回系统对象。  使用 -Force 参数可查看系统对象。  
   
      有关详细信息，请参阅 [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)。  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997953"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -48,9 +48,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 `[ @article = ] 'article'` 是要更改其属性的名称。 *文章*是**sysname**，默认值为 NULL。  
   
-`[ @property = ] 'property'` 若要更改的项目属性。 *属性*是**nvarchar(100)**。  
+`[ @property = ] 'property'` 若要更改的项目属性。 *属性*是**nvarchar(100)** 。  
   
-`[ @value = ] 'value'` 是的项目属性的新值。 *值*是**nvarchar(255)**。  
+`[ @value = ] 'value'` 是的项目属性的新值。 *值*是**nvarchar(255)** 。  
   
  下表说明项目的属性和这些属性的值。  
   
@@ -73,7 +73,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**delete**|删除目标表。|  
 ||**truncate**|截断目标表。|  
 |**pub_identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
-|**schema_option**||为给定项目指定架构生成选项的位图。 *schema_option*是**binary(8)**。 有关详细信息，请参阅本主题后面备注部分。|  
+|**schema_option**||为给定项目指定架构生成选项的位图。 *schema_option*是**binary(8)** 。 有关详细信息，请参阅本主题后面备注部分。|  
 ||**0x00**|通过快照代理禁用脚本。|  
 ||**0x01**|生成对象创建（CREATE TABLE、CREATE PROCEDURE 等）。|  
 ||**0x02**|如果已定义，则生成传播项目更改的存储过程。|  
@@ -104,7 +104,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|在复制的索引**xml**列。|  
 ||**0x8000000**|创建订阅服务器中尚不存在的任何架构。|  
 ||**0x10000000**|将转换**xml**的列**ntext**在订阅服务器上。|  
-||**0x20000000**|将大型对象数据类型 (**nvarchar （max)**， **varchar （max)**，并**varbinary （max)**) 中引入的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]到支持的数据类型在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。|  
+||**0x20000000**|将大型对象数据类型 (**nvarchar （max)** ， **varchar （max)** ，并**varbinary （max)** ) 中引入的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]到支持的数据类型在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。|  
 ||**0x40000000**|复制的权限。|  
 ||**0x80000000**|尝试删除不属于发布一部分的任何对象的依赖项。|  
 ||**0x100000000**|使用此选项用于复制 FILESTREAM 属性，如果在指定**varbinary （max)** 列。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 包含 FILESTREAM 列的表复制[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不支持订阅服务器，而不考虑如何设置此架构选项。<br /><br /> 请参阅相关的选项**0x800000000**。|  
@@ -130,7 +130,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||用于生成同步输出文件的表或视图的名称。 默认值为 NULL。 Oracle 发布服务器不支持。|  
 |**tablespace**||标识从 Oracle 数据库发布的项目的日志记录表所使用的表空间。 有关详细信息，请参阅[管理 Oracle 表空间](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
 |**threshold**||用于控制分发代理何时分配新标识范围的百分比值。 对等复制不支持此属性。|  
-|**类型**||Oracle 发布服务器不支持。|  
+|**type**||Oracle 发布服务器不支持。|  
 ||**logbased**|基于日志的项目。|  
 ||**logbased manualboth**|具有手动筛选器和手动视图并且基于日志的项目。 此选项需要*sync_object*并*筛选器*还设置属性。 Oracle 发布服务器不支持。|  
 ||**logbased manualfilter**|具有手动筛选器并且基于日志的项目。 此选项需要*sync_object*并*筛选器*还设置属性。 Oracle 发布服务器不支持。|  

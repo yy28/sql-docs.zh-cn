@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a28982b3dcf8136e7981899b50aed1aa8f9904c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62955890"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>将查询与项目中的连接关联
@@ -27,9 +27,9 @@ ms.locfileid: "62955890"
   
 ### <a name="to-associate-a-query-with-a-connection-in-a-project"></a>将查询与项目中的连接关联  
   
-1.  如果查询在查询编辑器中处于打开状态，请右键单击查询编辑器的空白区域，指向“连接”，再单击“连接”。 如果查询未打开，请在解决方案资源管理器中双击查询，以连接该查询。  
+1.  如果查询在查询编辑器中处于打开状态，请右键单击查询编辑器的空白区域，指向“连接”  ，再单击“连接”  。 如果查询未打开，请在解决方案资源管理器中双击查询，以连接该查询。  
   
-2.  在“连接到数据库引擎”对话框中，提供连接信息。 如果连接信息与现有连接匹配，该查询将与此连接关联。  
+2.  在“连接到数据库引擎”  对话框中，提供连接信息。 如果连接信息与现有连接匹配，该查询将与此连接关联。  
   
 ## <a name="see-also"></a>请参阅  
  [解决方案资源管理器](solution-explorer.md)   

@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fafc1fc122576bd8432ba76a34dbee001989421d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515717"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>对复制禁用外键约束
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47678868"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **对复制禁用外键约束，使用：**  
   
@@ -45,9 +45,9 @@ ms.locfileid: "47678868"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -56,11 +56,11 @@ ms.locfileid: "47678868"
   
 1.  在 **“对象资源管理器”** 中，展开具有要修改的外键约束的表，再展开 **“键”** 文件夹。  
   
-2.  右键单击外键约束，再单击“修改”。  
+2.  右键单击外键约束，再单击“修改”  。  
   
 3.  在 **“外键关系”** 对话框，针对 **“强制用于复制”** 选择 **“否”** 值。  
   
-4.  单击 **“关闭”**。  
+4.  单击 **“关闭”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

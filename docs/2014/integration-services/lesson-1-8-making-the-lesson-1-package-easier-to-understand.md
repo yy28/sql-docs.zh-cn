@@ -1,5 +1,5 @@
 ---
-title: 步骤 8:使 Lesson 1 包更易理解 |Microsoft Docs
+title: 步骤 8：使 Lesson 1 包更易理解 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767589"
 ---
-# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>步骤 8:使 Lesson 1 包更易理解
+# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>步骤 8：使第 1 课包更易理解
   因为您已完成了 Lesson 1 包的配置，所以整理包布局是很必要的。 如果控制流和数据流布局中的形状大小不一，或者如果形状未对齐或未进行分组，则可能很难理解包功能。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 提供了可轻松、快速设置包布局格式的工具。 格式设置功能包括使形状大小统一，对齐各个形状，并控制形状之间的水平间距和垂直间距。  
@@ -34,13 +34,13 @@ ms.locfileid: "62767589"
   
 3.  将游标置于 Extract Sample Currency 转换的右上方，单击并将游标拖过所有的数据流组件。  
   
-4.  在 **“格式”** 菜单中，指向 **“使大小相同”**，再单击 **“两者”**。  
+4.  在 **“格式”** 菜单中，指向 **“使大小相同”** ，再单击 **“两者”** 。  
   
-5.  选定数据流对象后，在 **“格式”** 菜单中，指向 **“对齐”**，再单击 **“左对齐”**。  
+5.  选定数据流对象后，在 **“格式”** 菜单中，指向 **“对齐”** ，再单击 **“左对齐”** 。  
   
 ### <a name="to-add-an-annotation-to-the-data-flow"></a>向数据流中添加批注  
   
-1.  右键单击数据流设计图面背景的任意位置，再单击 **“添加批注”**。  
+1.  右键单击数据流设计图面背景的任意位置，再单击 **“添加批注”** 。  
   
 2.  在批注框中键入或粘贴以下文本。  
   

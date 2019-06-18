@@ -13,10 +13,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 0e693c97ad2702eefb0e02084b6c49d138ef934a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089525"
 ---
 # <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql"></a>sys.workload_management_workload_classifier_details (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "65089525"
 
   返回每个分类器的详细信息。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|分类器的 ID。 向可加入[sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md)。 不可为 null。|
 |classifier_type|**sysname**|对其分类实体。 不可为 null。|MEMBERNAME|

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917959"
 ---
 # <a name="database-mail"></a>数据库邮件
@@ -41,37 +41,37 @@ ms.locfileid: "62917959"
   
 ### <a name="scalability"></a>可伸缩性  
   
--   后台传递：数据库邮件提供后台或异步，传递。 调用 **sp_send_dbmail** 发送消息时，数据库邮件可以向 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列中添加请求。 存储过程将立即返回。 外部电子邮件组件将接收请求并传递电子邮件。  
+-   后台传递：数据库邮件提供后台（或异步）传递功能。 调用 **sp_send_dbmail** 发送消息时，数据库邮件可以向 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列中添加请求。 存储过程将立即返回。 外部电子邮件组件将接收请求并传递电子邮件。  
   
--   多个配置文件：数据库邮件允许您创建多个配置文件内的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 另外，您也可以选择发送邮件时数据库邮件使用的配置文件。  
+-   多个配置文件：借助数据库邮件，可在一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中创建多个配置文件。 另外，您也可以选择发送邮件时数据库邮件使用的配置文件。  
   
--   多个帐户：每个配置文件可以包含多个故障转移帐户。 您可以配置包含不同帐户的不同配置文件以跨多台电子邮件服务器分发电子邮件。  
+-   多个帐户：每个配置文件均可包含多个故障转移帐户。 您可以配置包含不同帐户的不同配置文件以跨多台电子邮件服务器分发电子邮件。  
   
--   64 位兼容性：数据库邮件完全支持的 64 位安装上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   64 位兼容性：数据库邮件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 64 位安装上完全受支持。  
   
 ### <a name="security"></a>安全性  
   
--   默认情况下关闭：若要减少的图面区域[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，默认情况下禁用数据库邮件存储过程。  
+-   默认关闭：为减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的外围应用，默认禁用数据库邮件存储过程。  
   
 -   邮件安全性：若要发送数据库邮件，您必须是 **msdb** 数据库中的 **DatabaseMailUserRole** 数据库角色的成员。  
   
 -   配置文件安全性：数据库邮件增强了邮件配置文件的安全性。 您可以选择对数据库邮件配置文件具有访问权限的 **msdb** 数据库用户或组， 并可以为 **msdb**中的任一特定用户或所有用户授予访问权限。 专用配置文件用于限制指定用户的访问权限。 公共配置文件可供数据库中的所有用户使用。  
   
--   附件大小调控器：数据库邮件增强了对附件文件大小的可配置限制。 可以使用 [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) 存储过程更改此限制。  
+-   附件大小调控器：数据库邮件对附件文件大小强制实施可配置的限制。 可以使用 [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) 存储过程更改此限制。  
   
--   禁止的文件扩展名：数据库邮件维护一个禁止的文件扩展名的列表。 用户无法附加扩展名为列表中某个扩展名的文件。 可以使用 sysmail_configure_sp 更改该列表。  
+-   禁用的文件扩展名：数据库邮件维护着一个包含禁用的文件扩展名的列表。 用户无法附加扩展名为列表中某个扩展名的文件。 可以使用 sysmail_configure_sp 更改该列表。  
   
 -   数据库邮件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎服务帐户下运行。 若要将文件夹中的文件附加到电子邮件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎帐户应有权访问该文件所在的文件夹。  
   
 ### <a name="supportability"></a>可支持性  
   
--   集成的配置：数据库邮件维护中的电子邮件帐户的信息[!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)]。  
+-   集成配置：数据库邮件在 [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)]中维护电子邮件帐户的信息。  
   
 -   日志记录。 数据库邮件将电子邮件活动记录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Microsoft Windows 应用程序事件日志和 **msdb** 数据库的表中。  
   
--   审核：数据库邮件将保留发送邮件和附件的副本**msdb**数据库。 您可以轻松地审核数据库邮件的使用情况并检查保留的邮件。  
+-   审核：数据库邮件将发送的邮件和附件的副本保留在 msdb 数据库中  。 您可以轻松地审核数据库邮件的使用情况并检查保留的邮件。  
   
--   支持 HTML:数据库邮件允许您以 HTML 格式发送电子邮件。  
+-   支持 HTML：可通过数据库邮件以 HTML 格式发送电子邮件。  
   
 
   

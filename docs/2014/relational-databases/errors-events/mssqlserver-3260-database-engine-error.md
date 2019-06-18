@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_3260 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 3260 (Database Engine error)
 ms.assetid: ed62f86d-90cb-4b04-8bc5-43e0b9ba6141
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b409d53b33a7fbe09fb9f74d1a04d3ac38e3b864
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62868693"
 ---
 # <a name="mssqlserver3260"></a>MSSQLSERVER_3260
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>详细信息  
   
 |||  
@@ -34,8 +33,9 @@ ms.locfileid: "62868693"
 |消息正文|内部缓冲区已满。|  
   
 ## <a name="explanation"></a>解释  
-服务器的内存不足。  
+ 服务器的内存不足。  
   
 ## <a name="user-action"></a>用户操作  
-重试该操作。 如果该错误再次出现，请与您的产品支持提供商联系。  
+ 重试该操作。 如果该错误再次出现，请与您的产品支持提供商联系。  
+  
   

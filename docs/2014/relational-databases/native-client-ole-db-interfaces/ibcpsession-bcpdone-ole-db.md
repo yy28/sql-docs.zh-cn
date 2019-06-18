@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743193"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -34,17 +34,17 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>备注  
- 在调用 BCPDone 方法之后，不能对 [IBCPSession](ibcpsession-ole-db.md) 接口调用其他操作。 唯一的可能性是调用 [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) 方法。  
+ 在调用 BCPDone 方法之后，不能对 [IBCPSession](ibcpsession-ole-db.md) 接口调用其他操作  。 唯一的可能性是调用 [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法。  
+ 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法  。  
   
 ## <a name="example"></a>示例  
- 该示例演示如何使用 IBCPSession 接口。  
+ 该示例演示如何使用 IBCPSession 接口  。  
   
  在运行此示例之前，必须执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
@@ -62,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  可以通过以下命令，使用 BCP 将此数据添加回表中：  
   
- bcp master..fltest in outfile.dat -n -T -S server  
+ bcp master..fltest in outfile.dat -n -T -S server    
   
  当编译此示例时，您需要指定 sqlncli11.lib。  
   

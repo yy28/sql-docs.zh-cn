@@ -25,11 +25,11 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712349"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -61,26 +61,26 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ## <a name="arguments"></a>参数  
 
-object_name ([schema_name.]table_name.column_name)
+object_name  ([schema_name.]table_name.column_name)
 
 是要进行分类的数据库列的名称。 目前仅支持列分类。
-    - schema_name（可选）- 是已分类的列所属架构的名称。
-    - table_name（可选）- 是已分类的列所属表的名称。
-    - column_name - 是正在进行分类的列的名称。
+    - schema_name  （可选）- 是已分类的列所属架构的名称。
+    - table_name  （可选）- 是已分类的列所属表的名称。
+    - column_name  - 是正在进行分类的列的名称。
 
-LABEL
+LABEL 
 
 是敏感度标签的可人工读取名称。 敏感度标签表示数据库列中存储的数据的敏感度。
 
-LABEL_ID
+LABEL_ID 
 
 是与敏感度标签相关联的标识符。 这通常由集中式信息保护平台用于唯一标识系统中的标签。
 
-INFORMATION_TYPE
+INFORMATION_TYPE 
 
 是信息类型的可人工读取名称。 信息类型用于描述存储在数据库列中数据的类型。
 
-INFORMATION_TYPE_ID
+INFORMATION_TYPE_ID 
 
 是与信息类型相关联的标识符。 这通常由集中式信息保护平台用于唯一标识系统中的信息类型。
 
@@ -101,7 +101,7 @@ INFORMATION_TYPE_ID
 
 ### <a name="a-classifying-two-columns"></a>A. 对两个列进行分类
 
-以下示例使用敏感度标签“高度机密”和信息类型“财务”对列 dbo.sales.price 和 dbo.sales.discount 进行分类。
+以下示例使用敏感度标签“高度机密”  和信息类型“财务”  对列 dbo.sales.price  和 dbo.sales.discount  进行分类。
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
@@ -110,7 +110,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 ```  
 
 ### <a name="b-classifying-only-a-label"></a>B. 仅对一个标签进行分类
-以下示例使用标签“机密”和标签 ID 643f7acd-776a-438d-890c-79c3f2a520d6 对列 dbo.customer.comments 进行分类。 未对此列进行信息类型分类。
+以下示例使用标签“机密”  和标签 ID 643f7acd-776a-438d-890c-79c3f2a520d6  对列 dbo.customer.comments  进行分类。 未对此列进行信息类型分类。
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO

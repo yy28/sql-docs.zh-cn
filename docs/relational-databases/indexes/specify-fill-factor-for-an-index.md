@@ -16,11 +16,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ba81029a195bcee0e747bfe517fa5d6b27e4ead1
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686912"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -60,9 +60,9 @@ ms.locfileid: "53588372"
 #### <a name="adding-data-to-the-end-of-the-table"></a>将数据添加到表的末尾  
  如果新数据在表中均匀分布，则不是 0 或 100 的非零填充因子对性能有利。 但是，如果所有数据都添加到表的末尾，则不会填充索引页中的可用空间。 例如，如果索引键列是 IDENTITY 列，则新行的键将总是增加，并且索引行在逻辑意义上将添加到索引的末尾。 如果将用加长行的大小的数据来更新现有行，则请使用小于 100 的填充因子。 每页上的额外字节将有助于把行中的额外长度造成的页拆分降低到最小限度。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -73,17 +73,17 @@ ms.locfileid: "53588372"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要指定索引的填充因子的表，然后选择“设计”。  
+3.  右键单击你要指定索引的填充因子的表，然后选择“设计”  。  
   
-4.  在“表设计器”菜单上，单击“索引/键”。  
+4.  在“表设计器”  菜单上，单击“索引/键”  。  
   
 5.  选择您要指定填充因子的索引。  
   
-6.  展开 **“填充规范”**，选择 **“填充因子”** 行并在行中输入所需的填充因子。  
+6.  展开 **“填充规范”** ，选择 **“填充因子”** 行并在行中输入所需的填充因子。  
   
-7.  单击 **“关闭”**。  
+7.  单击 **“关闭”** 。  
   
-8.  在“文件”菜单上，选择“保存”以保存 _table_name_。  
+8.  在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用对象资源管理器为索引指定填充因子  
   
@@ -95,13 +95,13 @@ ms.locfileid: "53588372"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要指定填充因子的索引，然后选择“属性”。  
+5.  右键单击要指定填充因子的索引，然后选择“属性”  。  
   
-6.  在 **“选择页”** 下，选择 **“选项”**。  
+6.  在 **“选择页”** 下，选择 **“选项”** 。  
   
 7.  在 **“填充因子”** 行中，输入所需的填充因子。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -109,9 +109,9 @@ ms.locfileid: "53588372"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例重新生成现有索引，并在重新生成操作过程中应用指定的填充因子。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例重新生成现有索引，并在重新生成操作过程中应用指定的填充因子。  
   
     ```  
     USE AdventureWorks2012;  
@@ -128,9 +128,9 @@ ms.locfileid: "53588372"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

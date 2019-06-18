@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625893"
 ---
 # <a name="policy-management-node-object-explorer"></a>“策略管理”节点（对象资源管理器）
-  本部分包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“策略管理”节点的以下 F1 帮助主题。  
+  本部分包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“策略管理”  节点的以下 F1 帮助主题。  
   
 -   [“创建新条件”或“打开条件”对话框，“常规”页](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

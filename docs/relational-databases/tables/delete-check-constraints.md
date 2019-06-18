@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ccecc230e3c911168419bc02ad5b7920f6ebc0ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515901"
 ---
 # <a name="delete-check-constraints"></a>删除 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47621456"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具删除 CHECK 约束：**  
   
@@ -44,9 +44,9 @@ ms.locfileid: "47621456"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -55,21 +55,21 @@ ms.locfileid: "47621456"
   
 1.  在 **“对象资源管理器”** 中，展开具有 CHECK 约束的表。  
   
-2.  展开  **“约束”**。  
+2.  展开  **“约束”** 。  
   
-3.  右键单击该约束，然后单击“删除”。  
+3.  右键单击该约束，然后单击“删除”  。  
   
-4.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
+4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-check-constraint"></a>删除 CHECK 约束  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     ALTER TABLE dbo.DocExc   

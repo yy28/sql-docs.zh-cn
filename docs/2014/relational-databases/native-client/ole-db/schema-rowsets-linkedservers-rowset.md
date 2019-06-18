@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667332"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS 行集 (OLE DB)
-  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源。  
+  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源  。  
   
- LINKEDSERVERS 行集包含以下列。  
+ LINKEDSERVERS 行集包含以下列  。  
   
 |列名|类型指示符|Description|  
 |-----------------|--------------------|-----------------|  

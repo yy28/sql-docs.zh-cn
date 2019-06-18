@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774556"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>交换主日志传送服务器和辅助日志传送服务器的角色 (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62774556"
   
     2.  添加辅助数据库时，在 **“辅助数据库设置”** 对话框的 **“辅助数据库”** 框中输入原来的主数据库的名称。  
   
-    3.  在 **“辅助数据库设置”** 对话框中，选中 **“否，辅助数据库已初始化”**。  
+    3.  在 **“辅助数据库设置”** 对话框中，选中 **“否，辅助数据库已初始化”** 。  
   
 4.  如果对于您之前的日志传送配置启用了日志传送监视，则重新配置日志传送监视以便监视新的日志传送配置。  执行以下命令，将 *database_name* 替换为你的数据库的名称：  
   

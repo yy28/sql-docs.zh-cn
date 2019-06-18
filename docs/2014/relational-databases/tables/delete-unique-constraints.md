@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761146"
 ---
 # <a name="delete-unique-constraints"></a>删除唯一约束
@@ -49,23 +49,23 @@ ms.locfileid: "62761146"
   
 #### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>使用对象资源管理器删除唯一约束  
   
-1.  在对象资源管理器中，展开包含唯一约束的表，再展开 **“约束”**。  
+1.  在对象资源管理器中，展开包含唯一约束的表，再展开 **“约束”** 。  
   
-2.  右键单击该键，然后选择“删除”。  
+2.  右键单击该键，然后选择“删除”  。  
   
-3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”**。  
+3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”** 。  
   
 #### <a name="to-delete-a-unique-constraint-using-table-designer"></a>使用表设计器删除唯一约束  
   
-1.  在“对象资源管理器”中，右键单击具有唯一约束的表，然后单击“设计”。  
+1.  在“对象资源管理器”  中，右键单击具有唯一约束的表，然后单击“设计”  。  
   
-2.  在“表设计器”菜单上，单击“索引/键”。  
+2.  在“表设计器”  菜单上，单击“索引/键”  。  
   
-3.  在“索引/键”对话框中，从“选定的主键/唯一键和索引”列表中选择唯一键。  
+3.  在“索引/键”  对话框中，从“选定的主键/唯一键和索引”  列表中选择唯一键。  
   
-4.  单击 **“删除”**。  
+4.  单击 **“删除”** 。  
   
-5.  在“文件”菜单上，单击“保存”表格名称。  
+5.  在“文件”  菜单上，单击“保存”  表格名称  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -73,9 +73,9 @@ ms.locfileid: "62761146"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Return the name of unique constraint.  

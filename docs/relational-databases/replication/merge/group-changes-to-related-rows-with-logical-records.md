@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4bebb60c7d40ab7d1a98bbb6c8b28ff64ea7b09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134267"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639395"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>通过逻辑记录对相关行的更改进行分组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

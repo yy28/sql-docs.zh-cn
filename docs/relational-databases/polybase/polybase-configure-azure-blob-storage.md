@@ -11,10 +11,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 0dfb43a96801fcac3d40e445601d68aab674917e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774545"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>配置 PolyBase 以访问 Azure Blob 存储中的外部数据
@@ -44,7 +44,7 @@ ms.locfileid: "64774545"
    GO
    ```  
 
-2. 必须使用 services.msc 重启 SQL Server。 重启 SQL Server 会重启这些服务：  
+2. 必须使用  services.msc 重启 SQL Server。 重启 SQL Server 会重启这些服务：  
 
    - SQL Server PolyBase 数据移动服务  
    - SQL Server PolyBase 引擎  
@@ -189,7 +189,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssms"></a>查看 SSMS 中的 PolyBase 对象  
 
-在 SSMS 中，外部表在单独的文件夹“外部表” 中显示。 外部数据源和外部文件格式位于“外部资源” 下的子文件夹中。  
+在 SSMS 中，外部表在单独的文件夹“外部表”  中显示。 外部数据源和外部文件格式位于“外部资源”  下的子文件夹中。  
   
 ![SSMS 中的 PolyBase 对象](media/polybase-management.png)  
 

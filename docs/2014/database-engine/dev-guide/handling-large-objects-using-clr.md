@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781532"
 ---
 # <a name="handling-large-objects-using-clr"></a>使用 CLR 处理大型对象
   SQL Server 的 `HandlingLOBUsingCLR` 示例说明了如何通过使用公共语言运行时 (CLR) 存储过程在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与服务器可访问的文件系统之间传输大型对象 (LOB)。 本示例说明了如何在服务器端代码中访问文件，以及如何从基于 CLR 的存储过程中调用动态查询和存储过程。 此示例还说明了如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 注册和注销 CLR 方法和程序集。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要创建和运行此项目，必须安装下列软件：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://go.microsoft.com/fwlink/?LinkId=31046)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  

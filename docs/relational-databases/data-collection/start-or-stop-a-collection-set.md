@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5669af5105e8d46f346d279b3be8027b7c22088d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700077"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62695003"
 ---
 # <a name="start-or-stop-a-collection-set"></a>启动或停止收集组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47700077"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要启动或停止收集组，请使用：**  
   
@@ -58,26 +58,26 @@ ms.locfileid: "47700077"
   
 -   若要获取有关收集组的信息，请查询 [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) 目录视图。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 **dc_operator** 固定数据库角色的成员身份。 如果收集组没有代理帐户，则需要具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-start-a-collection-set"></a>启动收集组  
   
-1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”**。  
+1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击要启动的收集组，然后单击“启动数据收集组”。  
+2.  右键单击要启动的收集组，然后单击“启动数据收集组”  。  
   
      将出现一个消息框，显示此操作的结果，收集组图标上的绿色箭头指示收集组已经启动。  
   
 #### <a name="to-stop-a-collection-set"></a>停止收集组  
   
-1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”**。  
+1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”** 和 **“系统数据收集组”** 。  
   
-2.  右键单击要停止的收集组，然后单击“停止数据收集组”。  
+2.  右键单击要停止的收集组，然后单击“停止数据收集组”  。  
   
      将出现一个消息框，显示此操作的结果，收集组图标上的红色圆圈指示收集组已经停止。  
   
@@ -85,11 +85,11 @@ ms.locfileid: "47700077"
   
 #### <a name="to-start-a-collection-set"></a>启动收集组  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) 启动 ID 为 `1`的收集组。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) 启动 ID 为 `1`的收集组。  
   
 ```sql  
 USE msdb;  
@@ -99,11 +99,11 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 #### <a name="to-stop-a-collection-set"></a>停止收集组  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) 停止 ID 为 `1`的收集组。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) 停止 ID 为 `1`的收集组。  
   
 ```sql  
 USE msdb;  

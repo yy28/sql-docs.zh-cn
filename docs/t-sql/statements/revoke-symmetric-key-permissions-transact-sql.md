@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 129e2db1eaf71111c23b018c64df6921c0cde2d0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639100"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE 对称密钥权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对对称密钥撤消的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON SYMMETRIC KEY ::asymmetric_key_name  
+ ON SYMMETRIC KEY ::asymmetric_key_name   
  指定要对其撤消权限的对称密钥。 需要作用域限定符 ::。  
   
  GRANT OPTION  
@@ -71,33 +71,33 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- { TO | FROM } \<database_principal>  
+ { TO | FROM } \<database_principal>   
  指定要从中撤消权限的主体。  
   
  AS \<database_principal> 指定一个主体，执行此查询的主体从该主体获得撤销该权限的权利。  
   
- Database_user  
+ Database_user   
  指定数据库用户。  
   
- Database_role  
+ Database_role   
  指定数据库角色。  
   
- Application_role  
+ Application_role   
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User  
+ Database_user_mapped_to_Windows_User   
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group  
+ Database_user_mapped_to_Windows_Group   
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate  
+ Database_user_mapped_to_certificate   
  指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key  
+ Database_user_mapped_to_asymmetric_key   
  指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login  
+ Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>Remarks  
@@ -115,7 +115,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对称密钥的 CONTROL 权限或对数据库的 ALTER ANY SYMMETRIC KEY 权限。 若要使用 AS 选项，则指定的主体必须拥有对称密钥。  
   
 ## <a name="examples"></a>示例  

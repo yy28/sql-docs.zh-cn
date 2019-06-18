@@ -15,11 +15,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fffbb19685087883d9b788e7dc894eb413f4b0b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802781"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516089"
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "56802781"
     
 
     
-##   <a name="permissions"></a>Permissions    
+##   <a name="permissions"></a>权限    
  使用外键创建新表需要在数据库中具有 CREATE TABLE 权限，并对在其中创建表的架构具有 ALTER 权限。    
     
  在某一现有表中创建外键需要对该表具有 ALTER 权限。    
@@ -65,21 +65,21 @@ ms.locfileid: "56802781"
 ## <a name="create-a-foreign-key-relationship-in-table-designer"></a>在表设计器中创建外键关系 
 ####  <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio    
     
-1.  在对象资源管理器中，右键单击将位于关系的外键方的表，再单击“设计”。    
+1.  在对象资源管理器中，右键单击将位于关系的外键方的表，再单击“设计”  。    
     
      此时，将在 **表设计器**中打开该表。    
     
-2.  在 **表设计器** 菜单上，单击 **“关系”**。    
+2.  在 **表设计器** 菜单上，单击 **“关系”** 。    
     
-3.  在“外键关系”对话框中，单击“添加”。    
+3.  在“外键关系”  对话框中，单击“添加”  。    
     
-     “选定的关系”列表中将以系统提供的名称显示关系，格式为 FK_\<*tablename*>_\<*tablename*>，其中 *tablename* 是外键表的名称。    
+     “选定的关系”  列表中将以系统提供的名称显示关系，格式为 FK_\<*tablename*>_\<*tablename*>，其中 *tablename* 是外键表的名称。    
     
 4.  在 **“选定的关系”** 列表中单击该关系。    
     
-5.  单击右侧网格中的“表和列规范”，再单击该属性右侧的省略号 (…)。    
+5.  单击右侧网格中的“表和列规范”，再单击该属性右侧的省略号 (…)   。    
     
-6.  在“表和列”对话框中，从“主键”下拉列表中选择要位于关系主键方的表。    
+6.  在“表和列”  对话框中，从“主键”  下拉列表中选择要位于关系主键方的表。    
     
 7.  在下方的网格中，选择要分配给表的主键的列。 在每列左侧的相临网格单元格中，选择外键表的相应外键列。    
     
@@ -92,9 +92,9 @@ ms.locfileid: "56802781"
     
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。    
     
-2.  在标准菜单栏上，单击 **“新建查询”**。    
+2.  在标准菜单栏上，单击 **“新建查询”** 。    
     
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此实例创建一个表并定义针对列 `TempID` 的外键约束，该列引用 `SalesReasonID` 表中的列 `Sales.SalesReason` 。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用于确保对 `Sales.SalesReason` 表的更改自动传播到 `Sales.TempSalesReason` 表。    
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此实例创建一个表并定义针对列 `TempID` 的外键约束，该列引用 `SalesReasonID` 表中的列 `Sales.SalesReason` 。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用于确保对 `Sales.SalesReason` 表的更改自动传播到 `Sales.TempSalesReason` 表。    
     
     ```    
     USE AdventureWorks2012;    
@@ -115,9 +115,9 @@ ms.locfileid: "56802781"
     
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。    
     
-2.  在标准菜单栏上，单击 **“新建查询”**。    
+2.  在标准菜单栏上，单击 **“新建查询”** 。    
     
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例针对 `TempID` 列创建外键并引用 `SalesReasonID` 表中的 `Sales.SalesReason` 列。    
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例针对 `TempID` 列创建外键并引用 `SalesReasonID` 表中的 `Sales.SalesReason` 列。    
     
     ```    
     USE AdventureWorks2012;    

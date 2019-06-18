@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b13aeed62a84258fcfbf5820c17dca59f4b5852
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660748"
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
@@ -32,14 +32,14 @@ ms.locfileid: "62660748"
 
   包含 object_type 为 TR 或 TA 的所有服务器级别 DDL 触发器的集合。 如果是 CLR 触发器的程序集必须加载到**主**数据库。 所有服务器级别 DDL 触发器名称存在于单个全局范围内。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|触发器的名称。|  
+|**name**|**sysname**|触发器的名称。|  
 |**object_id**|**int**|对象的 ID。|  
 |**parent_class**|**tinyint**|父级的类。 始终为：<br /><br /> 100 = 服务器|  
 |**parent_class_desc**|**nvarchar(60)**|父类的说明。 始终为：<br /><br /> SERVER。|  
 |**parent_id**|**int**|对 SERVER 上的触发器，此值始终为 0。|  
-|**类型**|**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
+|**type**|**char(2)**|对象类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
 |**type_desc**|**nvarchar(60)**|对象类型的类的说明。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|触发器的创建日期。|  
 |**modify_date**|**datetime**|上一次使用 ALTER 语句修改触发器的日期。|  

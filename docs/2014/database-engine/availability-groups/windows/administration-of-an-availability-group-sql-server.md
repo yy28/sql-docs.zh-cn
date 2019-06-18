@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4896c9219632d816565fdd30c11aa82ccbf7fef1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791891"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>管理可用性组 (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62791891"
   
 -   暂停或恢复数据库。  
   
--   执行计划的手动故障转移（手动故障转移）或强制手动故障转移（强制故障转移）。  
+-   执行计划的手动故障转移（手动故障转移  ）或强制手动故障转移（强制故障转移  ）。  
   
 -   创建和配置可用性组侦听器。  
   

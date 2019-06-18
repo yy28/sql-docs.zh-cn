@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 215ff84696cfc3d7590777ab1a2ad0f17c48d2a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62501798"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>（错误） 消息目录视图-sys.messages
@@ -34,11 +34,11 @@ ms.locfileid: "62501798"
 
   为每一行**message_id**或**language_id**在系统中，同时系统定义和用户定义消息的错误消息。 有关详细信息，请参阅 [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)。  
    
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|消息的 ID。 此 ID 在服务器中是唯一的。 编号在 50000 以下的消息 ID 是系统消息。|  
 |**language_id**|**smallint**|要为其语言 ID 中的文本**文本**使用，如中所定义**syslanguages**。 这是唯一的指定**message_id**。|  
-|severity|**tinyint**|消息的严重级别，在 1 到 25 之间。 这是相同的所有消息中的语言**message_id**。|  
+|severity |**tinyint**|消息的严重级别，在 1 到 25 之间。 这是相同的所有消息中的语言**message_id**。|  
 |**is_event_logged**|**bit**|1 = 出现错误时将消息记入事件日志。 这是相同的所有消息中的语言**message_id**。|  
 |**text**|**nvarchar(2048)**|消息的文本时使用的相应**language_id**处于活动状态。|  
   

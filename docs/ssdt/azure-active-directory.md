@@ -11,11 +11,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 4d607a7fa7dd9ce91c5ca97bf144f89e1624ed93
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670606"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62660134"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支持
 
@@ -27,14 +27,14 @@ SQL Server Data Tools (SSDT) 提供了多种 [Azure Active Directory (Azure AD)]
 
 #### <a name="which-azure-sql-products"></a>哪些 Azure SQL 产品？
 
-本文介绍 [Azure 云](https://azure.microsoft.com/)中以下 Azure SQL 产品列表的 Azure AD：
+本文介绍 [Azure 云](https://azure.microsoft.com/)中以下 Azure SQL 产品列表的 Azure AD  ：
 
 - Azure SQL Database
 - Azure SQL 数据仓库
 
 ## <a name="active-directory-password-authentication"></a>Active Directory 密码身份验证
 
-Active Directory 密码验证是一种连接到之前列出的 Azure SQL 产品的机制。 该机制使用 Azure Active Directory (Azure AD) 中的标识。 以下情况下使用此方法进行连接：
+Active Directory 密码验证是一种连接到之前列出的 Azure SQL 产品的机制  。 该机制使用 Azure Active Directory (Azure AD) 中的标识。 以下情况下使用此方法进行连接：
 
 - 使用来自未与 Azure 联合的域的凭据登录到 Windows，或者
 - 通过 Azure AD 使用 Azure AD 身份验证，并且它基于初始域或客户端域。
@@ -43,11 +43,11 @@ Active Directory 密码验证是一种连接到之前列出的 Azure SQL 产品�
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 集成身份验证
 
-Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到列出的 Azure SQL 产品的机制。 如果使用 Azure Active Directory 凭据从联盟域登录 Windows，请使用这种方法进行连接。 有关详细信息，请参阅 [使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
+Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure AD) 中的标识连接到列出的 Azure SQL 产品的机制  。 如果使用 Azure Active Directory 凭据从联盟域登录 Windows，请使用这种方法进行连接。 有关详细信息，请参阅 [使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 交互式身份验证
 
-使用 SSDT 连接到列出的 Azure SQL 产品时，Active Directory 交互式身份验证可用，但仅用于 [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) 或更高版本。
+使用 SSDT 连接到列出的 Azure SQL 产品时，Active Directory 交互式身份验证可用，但仅用于 [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) 或更高版本  。
 
 - [下载并安装任何版本的 .NET Framework](https://www.microsoft.com/net/download/all)。
 - [Visual Studio 2017 版本 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) 或更高版本。
@@ -60,23 +60,23 @@ Active Directory 交互式身份验证支持交互式身份验证，以便能够
 - Microsoft 帐户，如 @outlook.com、@hotmail.com、@live.com。
 - 非 Microsoft 帐户，如 @gmail.com。
 
-如果指定 MFA 方法，必须指定“用户名”，“密码”字段已禁用。 
+如果指定 MFA 方法，必须指定“用户名”，“密码”字段已禁用   。 
 
 #### <a name="password-entry"></a>密码输入
 
-使用 Active Directory 交互式身份验证进行验证时，将看到打开的身份验证窗口，其中提示用户手动输入密码。
+使用 Active Directory 交互式身份验证  进行验证时，将看到打开的身份验证窗口，其中提示用户手动输入密码。
 
 ![登录对话框](media/azure-active-directory/sign-in.png)
 
 Azure AD 通过此附加 MFA 弹出窗口强制执行 MFA。
 
 > [!NOTE]
-> 使用 Active Directory 交互式身份验证将阻止自动化工作流。 必须存在以手动输入密码的形式与身份验证过程进行交互的人员。
+> 使用 Active Directory 交互式身份验证将阻止自动化工作流  。 必须存在以手动输入密码的形式与身份验证过程进行交互的人员。
 
 ## <a name="known-issues-and-limitations"></a>已知问题和限制
 
-- 仅当连接到本文开头列出的 Azure SQL 产品时，才支持Active Directory 交互式身份验证。 SQL Server（本地或 VM 上）不支持它。
-- 服务器资源管理器中的连接对话框不支持 Active Directory 交互式身份验证。 必须结合使用 SSDT 和 SQL Server 对象资源管理器进行连接。
+- 仅当连接到本文开头列出的 Azure SQL 产品时，才支持Active Directory 交互式身份验证  。 SQL Server（本地或 VM 上）不支持它。
+- 服务器资源管理器中的连接对话框不支持 Active Directory 交互式身份验证   。 必须结合使用 SSDT 和 SQL Server 对象资源管理器进行连接  。
 - SSDT 不支持将单一登录与当前登录 Visual Studio 的帐户集成。
 - 在 Visual Studio 安装期间安装到扩展目录的 SQLPackage.exe 并不是指从此位置进行使用。 若要配合使用 SQLPackage.exe 和 Azure AD，请转到 [https://www.microsoft.com/download/details.aspx?id=55088](https://www.microsoft.com/download/details.aspx?id=55088) 
 - Azure AD 身份验证不支持 SSDT 数据比较。  

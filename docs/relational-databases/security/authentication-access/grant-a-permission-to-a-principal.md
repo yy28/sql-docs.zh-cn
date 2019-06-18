@@ -15,11 +15,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb89c5bd1d3c1f40e03de60041dc3d22cc56f661
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540411"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645454"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>向主体授予权限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52540411"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要向主体授予权限，请使用：**  
   
@@ -48,9 +48,9 @@ ms.locfileid: "52540411"
   
 -   对类似的安全对象（表、视图和过程）进行配置，使它们属于同一个架构，然后向架构授予权限。 例如，工资架构可能拥有多个表、视图和存储过程。 通过授予针对该架构的访问权限，可以同时授予执行工资功能所需的所有权限。 有关可向哪些安全对象授予权限的详细信息，请参阅 [Securables](../../../relational-databases/security/securables.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  授权者（或使用 AS 选项指定的主体）必须具有使用 GRANT OPTION 授予的权限本身，或具有隐含授予该权限的更高权限。 **sysadmin** 固定服务器角色成员可以授予任何权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -66,11 +66,11 @@ ms.locfileid: "52540411"
   
 3.  展开 **“存储过程”** 文件夹。  
   
-4.  右键单击某一存储过程，然后选择“属性”。  
+4.  右键单击某一存储过程，然后选择“属性”  。  
   
-5.  在“存储过程属性 - stored\_procedure\_name”对话框中选择某页面，然后选择“权限”。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
+5.  在“存储过程属性 - stored\_procedure\_name”对话框中选择某页面，然后选择“权限”    。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
   
-6.  完成后，单击 **“确定”**。  
+6.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -78,9 +78,9 @@ ms.locfileid: "52540411"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Grants EXECUTE permission on stored procedure HumanResources.uspUpdateEmployeeHireInfo to an application role called Recruiting11.   

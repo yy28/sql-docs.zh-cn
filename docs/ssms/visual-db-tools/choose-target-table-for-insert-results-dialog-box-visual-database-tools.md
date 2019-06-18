@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4028ff53a81d35654030e21838d8733236e42297
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089376"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>“选择插入结果的目标表”对话框 (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "65089376"
 从列表中选择结果行要添加到其中的表的名称。 只能为“插入结果”查询指定一个表。  
   
 > [!NOTE]  
-> 可以在“属性”窗口中更改要在其中插入行的表。  
+> 可以在“属性”  窗口中更改要在其中插入行的表。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建“插入结果”查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  

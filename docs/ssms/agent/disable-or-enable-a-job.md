@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6d3137b019319163e24a32a2037e9ab7bcbd002f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096558"
 ---
 # <a name="disable-or-enable-a-job"></a>Disable or Enable a Job
@@ -55,11 +55,11 @@ ms.locfileid: "65096558"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**。  
+2.  展开 **“SQL Server 代理”** 。  
   
-3.  展开“作业”，然后右键单击要禁用或启用的作业。  
+3.  展开“作业”  ，然后右键单击要禁用或启用的作业。  
   
-4.  若要禁用作业，请单击 **“禁用”**。 若要启用作业，请单击 **“启用”**。  
+4.  若要禁用作业，请单击 **“禁用”** 。 若要启用作业，请单击 **“启用”** 。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -67,9 +67,9 @@ ms.locfileid: "65096558"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- changes the name, description, and disables status of the job NightlyBackups.  

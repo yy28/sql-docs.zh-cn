@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768783"
 ---
 # <a name="property-expressions-editor"></a>属性表达式编辑器
@@ -38,7 +38,7 @@ ms.locfileid: "62768783"
  单击省略号可以打开 **“表达式生成器”** 对话框。 有关详细信息，请参阅 [Expression Builder](expression-builder.md)。  
   
  **删除**  
- 选择一个属性，再单击“删除”。  
+ 选择一个属性，再单击“删除”  。  
   
 ## <a name="see-also"></a>请参阅  
  [“表达式”页](expressions-page.md)   

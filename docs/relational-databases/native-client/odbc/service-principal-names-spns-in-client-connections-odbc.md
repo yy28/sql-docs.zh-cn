@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a7d352dd345fa6d8e3fb1f2d3502279fd8ca68c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63018630"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>客户端连接中的服务主体名称 (SPN) (ODBC)
@@ -28,7 +28,7 @@ ms.locfileid: "63018630"
 ## <a name="connection-string-keywords"></a>连接字符串关键字  
  客户端应用程序使用以下连接字符串关键字可指定 SPN。  
   
-|关键字|ReplTest1|  
+|关键字|值|  
 |-------------|-----------|  
 |**ServerSPN**|服务器的 SPN。 默认值是空字符串，这将导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用默认的驱动程序生成的 SPN。|  
 |**FailoverPartnerSPN**|故障转移伙伴的 SPN。 默认值是空字符串，这将导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用默认的驱动程序生成的 SPN。|  
