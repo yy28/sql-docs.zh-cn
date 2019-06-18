@@ -13,10 +13,10 @@ ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0d6f5a74365565e5da3be99408f53bc086b0b689
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582049"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>为报表参数添加、更改或删除可用值
@@ -33,14 +33,14 @@ ms.locfileid: "65582049"
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>添加或更改报表参数的可用值  
   
-1.  在“报表数据”窗格中，展开“参数”节点。 右键单击该参数，然后单击“参数属性”。 此时将打开 **“报表参数属性”** 对话框。  
+1.  在“报表数据”窗格中，展开“参数”节点。 右键单击该参数，然后单击“参数属性”  。 此时将打开 **“报表参数属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果“报表数据”窗格不可见，请单击“视图”，然后单击“报表数据”。  
+    >  如果“报表数据”窗格不可见，请单击“视图”，然后单击“报表数据”   。  
   
-2.  单击 **“可用值”**。 选择可用值选项：  
+2.  单击 **“可用值”** 。 选择可用值选项：  
   
-    -   单击“指定值”可手动提供值列表，还可以为值提供友好名称（标签）。  
+    -   单击“指定值”可手动提供值列表，还可以为值提供友好名称（标签）  。  
   
          单击 **“添加”** ，然后在 **“值”** 文本框中输入值，或在 **“标签”** 文本框中输入标签。 如果不提供标签，将使用输入的值。 您可以为值编写表达式。 数据类型必须与参数的数据类型相匹配。 字段名称不能用于参数的表达式中。 有关示例，请参阅[常用筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "65582049"
   
 ### <a name="to-remove-the-available-values-for-a-report-parameter"></a>删除报表参数的可用值  
   
-1.  在“报表数据”窗格中，展开“参数”节点。 右键单击该参数，然后单击“参数属性”。 将打开 **“Report Parameters”** 对话框。  
+1.  在“报表数据”窗格中，展开“参数”节点。 右键单击该参数，然后单击“参数属性”  。 将打开 **“Report Parameters”** 对话框。  
   
-2.  单击 **“可用值”**。  
+2.  单击 **“可用值”** 。  
   
-3.  在 **“选择以下选项之一”** 中，单击 **“无”**。  
+3.  在 **“选择以下选项之一”** 中，单击 **“无”** 。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

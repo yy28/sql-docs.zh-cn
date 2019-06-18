@@ -9,10 +9,10 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8167b9066b0549332a6bb30030d339b79c3c45ac
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580870"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>表达式中的数据类型（报表生成器和 SSRS）
@@ -66,7 +66,7 @@ ms.locfileid: "65580870"
 -   检查所使用的数据处理扩展插件是否包括用于检索预先设定格式的数据的元数据。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询包括 FORMATTED_VALUE 扩展属性，用于已在处理多维数据集时设置了格式的多维数据集值。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
 ## <a name="understanding-parameter-data-types"></a>了解参数数据类型  
- 报表参数必须是下列五种数据类型之一：Boolean、DateTime、Integer、Float 或 Text（也称为 String）。 数据集查询包含查询参数时，将会自动创建报表参数，并将其链接到查询参数。 报表参数的默认数据类型是 String。 若要更改报表参数的默认数据类型，请在“报表参数属性”对话框的“常规”页上，从“数据类型”下拉列表中选择正确的值。  
+ 报表参数必须是下列五种数据类型之一：Boolean、DateTime、Integer、Float 或 Text（也称为 String）。 数据集查询包含查询参数时，将会自动创建报表参数，并将其链接到查询参数。 报表参数的默认数据类型是 String。 若要更改报表参数的默认数据类型，请在“报表参数属性”对话框的“常规”页上，从“数据类型”下拉列表中选择正确的值    。  
   
 > [!NOTE]  
 >  DateTime 数据类型的报表参数不支持毫秒。 尽管可以创建基于包含毫秒值的参数，但是不能从包含具有毫秒的 Date 或 Time 值的可用值下拉列表中选择值。  

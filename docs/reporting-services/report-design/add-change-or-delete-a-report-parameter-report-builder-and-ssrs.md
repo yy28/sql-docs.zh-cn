@@ -9,10 +9,10 @@ ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eb0d29f62a3751f0b8b6acd1c33c7b7f7eb10ff2
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582062"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>添加、更改或删除报表参数（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "65582062"
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>添加或编辑报表参数  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 或报表设计器的“报表数据”窗格中，右键单击“参数”节点，然后单击“添加参数”。 此时将打开 **“报表参数属性”** 对话框。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 或报表设计器的“报表数据”  窗格中，右键单击“参数”  节点，然后单击“添加参数”  。 此时将打开 **“报表参数属性”** 对话框。  
   
 2.  在 **“名称”** 中，键入参数的名称，或接受默认名称。  
   
@@ -35,19 +35,19 @@ ms.locfileid: "65582062"
   
 4.  在 **“数据类型”** 中，选择参数值的数据类型。  
   
-5.  如果参数可以包含空白值，请选择 **“允许空白值”**。  
+5.  如果参数可以包含空白值，请选择 **“允许空白值”** 。  
   
-6.  如果参数可以包含 Null 值，请选择 **“允许 Null 值”**。  
+6.  如果参数可以包含 Null 值，请选择 **“允许 Null 值”** 。  
   
-7.  若要允许用户为参数选择多个值，请选择 **“允许多个值”**。  
+7.  若要允许用户为参数选择多个值，请选择 **“允许多个值”** 。  
   
 8.  设置可见性选项。  
   
-    -   若要在报表顶部的工具栏中显示参数，请选择 **“可见”**。  
+    -   若要在报表顶部的工具栏中显示参数，请选择 **“可见”** 。  
   
-    -   若要隐藏参数使其不显示在工具栏中，请选择 **“隐藏”**。  
+    -   若要隐藏参数使其不显示在工具栏中，请选择 **“隐藏”** 。  
   
-    -   若要隐藏参数，以保护其不会在报表发布后，被从报表服务器上修改，请选择 **“内部”**。 这样将仅可在报表定义中查看该报表参数。 对于此选项，您必须设置一个默认值，或允许参数接受 Null 值。  
+    -   若要隐藏参数，以保护其不会在报表发布后，被从报表服务器上修改，请选择 **“内部”** 。 这样将仅可在报表定义中查看该报表参数。 对于此选项，您必须设置一个默认值，或允许参数接受 Null 值。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65582062"
   
 1.  在 **“报表数据”** 窗格中，展开 **“参数”** 节点。  
   
-2.  右键单击报表参数，然后单击 **“删除”**。  
+2.  右键单击报表参数，然后单击 **“删除”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)   

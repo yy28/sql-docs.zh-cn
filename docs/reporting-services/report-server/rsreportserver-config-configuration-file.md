@@ -9,10 +9,10 @@ ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 351ca36275fbd782e3bf3e8d098aaf6a49287430
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500413"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
@@ -59,7 +59,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  下表提供有关在文件的第一部分显示的常规配置设置的信息。 将按设置在配置文件中的显示顺序依次列出： 表的最后一列指示设置是适用于本机模式报表服务器 **(N)** 还是 SharePoint 模式报表服务器 **(S)** 或两者均适用。  
   
 > [!NOTE]  
->  在本主题中，“最大整数”是指 INT_MAX 值 2147483647。  有关详细信息，请参阅[整数限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
+>  在本主题中，“最大整数”是指 INT_MAX 值 2147483647。  有关详细信息，请参阅[整数限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx) 。  
   
 |设置|描述|“模式”|  
 |-------------|-----------------|----------|  

@@ -12,10 +12,10 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfb2676b2cc06b2a3ab774b467759c7e26c58e3a
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175566"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
@@ -36,35 +36,35 @@ ms.locfileid: "66175566"
   
 #### <a name="to-open-port-80"></a>打开端口 80  
   
-1.  在 **“开始”** 菜单上单击 **“控制面板”**，单击 **“系统和安全”**，然后单击 **“Windows 防火墙”**。 不为“类别”视图配置控制面板，您只需要选择 **“Windows 防火墙”**。  
+1.  在 **“开始”** 菜单上单击 **“控制面板”** ，单击 **“系统和安全”** ，然后单击 **“Windows 防火墙”** 。 不为“类别”视图配置控制面板，您只需要选择 **“Windows 防火墙”** 。  
   
-2.  单击 **“高级设置”**。  
+2.  单击 **“高级设置”** 。  
   
-3.  单击 **“入站规则”**。  
+3.  单击 **“入站规则”** 。  
   
-4.  在“操作”窗口中单击“新建规则”。  
+4.  在“操作”  窗口中单击“新建规则”  。  
   
-5.  单击 **“端口”** 的 **“规则类型”**。  
+5.  单击 **“端口”** 的 **“规则类型”** 。  
   
-6.  单击“下一步” 。  
+6.  单击“下一步”  。  
   
 7.  在 **“协议和端口”** 页上，单击 **TCP**。  
   
 8.  选择 **“特定本地端口”** ，然后键入值 **80**。  
   
-9. 单击“下一步” 。  
+9. 单击“下一步”  。  
   
-10. 在 **“操作”** 页上，单击 **“允许连接”**。  
+10. 在 **“操作”** 页上，单击 **“允许连接”** 。  
   
-11. 单击“下一步” 。  
+11. 单击“下一步”  。  
   
 12. 在 **“配置文件”** 页上，单击适合您的环境的选项。  
   
-13. 单击“下一步” 。  
+13. 单击“下一步”  。  
   
-14. 在“名称”页上，输入名称“ReportServer (TCP on port 80)”  
+14. 在“名称”页上，输入名称“ReportServer (TCP on port 80)”    
   
-15. 单击 **“完成”**。  
+15. 单击 **“完成”** 。  
   
 16. 重新启动计算机。  
   

@@ -8,17 +8,17 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5e34e018cbbd1ecc9dd6258111cccf7132a682e7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 17975defea6029e4077acbe45fd3f8b0d7495267
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289065"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62759648"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Custom maps in Reporting Services mobile reports
-SQL Server 移动报表发布服务器中的地图使用称为 ESRI 形状文件的格式进行定义。  
+SQL Server 移动报表发布服务器中的地图使用称为 ESRI 形状文件的格式进行定义  。  
   
 该格式最初由一家私营公司设计，现在这种半开放格式被广泛应用于大部分 GIS 应用程序。 根据此格式，移动报表发布服务器需要提供两个文件来定义地图：  
   

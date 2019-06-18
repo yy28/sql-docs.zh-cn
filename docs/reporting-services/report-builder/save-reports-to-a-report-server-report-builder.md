@@ -9,10 +9,10 @@ ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580664"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>将报表保存到报表服务器（报表生成器）
@@ -23,7 +23,7 @@ ms.locfileid: "65580664"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>将报表保存到报表服务器  
   
-1.  从“报表生成器”按钮，单击 **“保存”**。 此时，将打开“另存为”“\<报表项>”对话框。  
+1.  从“报表生成器”按钮，单击 **“保存”** 。 此时，将打开“另存为”“\<报表项>”对话框   。  
   
     > [!NOTE]  
     >  如果正在重新保存报表，会自动将其重新保存到以前的位置。 使用“另存为”选项可以更改位置。  
@@ -38,7 +38,7 @@ ms.locfileid: "65580664"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>将报表另存为不同名称  
   
-1.  从“报表生成器”按钮，单击 **“另存为”**。 此时，将打开“另存为”“\<报表项>”对话框。  
+1.  从“报表生成器”按钮，单击 **“另存为”** 。 此时，将打开“另存为”“\<报表项>”对话框   。  
   
 2.  浏览到报表服务器位置或要保存报表的文件共享。  
   

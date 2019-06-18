@@ -12,11 +12,11 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 35626c192c3d74ad0201cee3c5e97adbce92a3aa
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669692"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdosqlsrv-driver"></a>设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "56676518"
 ## <a name="add-leading-zeroes-if-missing"></a>如果缺少，添加前导零
 从 5.6.0 版本、 连接或语句属性`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`允许用户设置十进制字符串的格式。 此属性需要布尔值 （true 或 false），并且只会影响中提取结果的 decimal 或 numeric 值的格式。 换而言之，此属性具有对其他操作，例如插入或更新没有影响。
 
-默认情况下，`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 为 false。 如果设置为 true，到十进制字符串的前导零将添加对任何十进制值小于 1。
+默认情况下，`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 为 false  。 如果设置为 true，到十进制字符串的前导零将添加对任何十进制值小于 1。
 
 ## <a name="configure-number-of-decimal-places"></a>配置的小数位数
 与`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`开启连接或语句的另一个属性， `PDO::SQLSRV_ATTR_DECIMAL_PLACES`，允许用户显示 money 和 smallmoney 数据时配置的小数位数。 它接受的范围内的整数值 [0，4]，并舍入显示时可能会发生。 但是，底层的 money 数据保持不变。

@@ -9,10 +9,10 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581849"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>内置集合 - 内置的全局和用户引用（报表生成器）
@@ -27,7 +27,7 @@ ms.locfileid: "65581849"
 |**成员**|**类型**|**Description**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|报表开始运行的日期和时间。|  
-|PageNumber|**Integer**|相对于重置页码的分页符的当前页码。 在报表处理开始时，初始值设置为 1。 对于每个呈现的页，该页码将增 1。<br /><br /> 若要为矩形、数据区域、数据区域组或地图在分页符内对页面进行编号，请在“PageBreak”属性上，将“ResetPageNumber”属性设置为“True”。 不支持 Tablix 列层次结构组。<br /><br /> PageNumber 只能用于页眉或页脚中的表达式中。|  
+|PageNumber|**Integer**|相对于重置页码的分页符的当前页码。 在报表处理开始时，初始值设置为 1。 对于每个呈现的页，该页码将增 1。<br /><br /> 若要为矩形、数据区域、数据区域组或地图在分页符内对页面进行编号，请在“PageBreak”属性上，将“ResetPageNumber”属性设置为“True”  。 不支持 Tablix 列层次结构组。<br /><br /> PageNumber 只能用于页眉或页脚中的表达式中。|  
 |ReportFolder|**String**|包含该报表的文件夹的完整路径。 它不包括报表服务器 URL。|  
 |ReportName|**String**|报表存储在报表服务器数据库中的名称。|  
 |ReportServerUrl|**String**|正在运行该报表的报表服务器的 URL。|  

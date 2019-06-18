@@ -11,10 +11,10 @@ ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4034d7a2892ede43f364d0ebdd105314b6107ff2
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580359"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>创建报表历史记录（SharePoint 集成模式下的 Reporting Services）
@@ -26,9 +26,9 @@ ms.locfileid: "65580359"
   
 1.  指向报表。  
   
-2.  单击以显示下箭头，然后选择 **“查看报表历史记录”**。  
+2.  单击以显示下箭头，然后选择 **“查看报表历史记录”** 。  
   
-3.  单击 **“新建快照”**。 如果该按钮不可见，则是因为您没有在报表历史记录中创建快照的权限。  
+3.  单击 **“新建快照”** 。 如果该按钮不可见，则是因为您没有在报表历史记录中创建快照的权限。  
   
 4.  若要查看您刚创建的快照，从列表中将其选中。 每个快照都是由用来显示何时创建快照的时间戳进行标识的。 您不能重命名快照，不能将其移动到另一个位置，也不能修改它。  
   
@@ -36,19 +36,19 @@ ms.locfileid: "65580359"
   
 1.  指向报表。  
   
-2.  单击以显示下箭头，然后选择 **“管理处理选项”**。  
+2.  单击以显示下箭头，然后选择 **“管理处理选项”** 。  
   
-3.  在 **“历史记录快照选项”** 中，单击 **“根据计划创建报表历史记录快照”**。  
+3.  在 **“历史记录快照选项”** 中，单击 **“根据计划创建报表历史记录快照”** 。  
   
-4.  如果您有包含要使用的计划信息的共享计划，请单击 **“根据共享计划”** 并选择要使用的计划。 否则，请单击 **“根据自定义计划”**，然后单击 **“配置”** 以指定根据重复执行的计划来创建报表历史记录的选项。  
+4.  如果您有包含要使用的计划信息的共享计划，请单击 **“根据共享计划”** 并选择要使用的计划。 否则，请单击 **“根据自定义计划”** ，然后单击 **“配置”** 以指定根据重复执行的计划来创建报表历史记录的选项。  
   
 ### <a name="to-create-report-history-when-data-is-refreshed-in-a-report"></a>在刷新报表中的数据时创建报表历史记录  
   
 1.  指向报表。  
   
-2.  单击以显示下箭头，然后选择 **“管理处理选项”**。  
+2.  单击以显示下箭头，然后选择 **“管理处理选项”** 。  
   
-3.  在 **“历史记录快照选项”** 中，单击 **“在报表历史记录中存储所有报表数据快照”**。  
+3.  在 **“历史记录快照选项”** 中，单击 **“在报表历史记录中存储所有报表数据快照”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  

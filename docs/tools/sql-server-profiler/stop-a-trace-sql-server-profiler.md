@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0d3b9a2c0d699b03e26930300eb01e1ac096097
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804245"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62439964"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>停止跟踪 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47804245"
   
 1.  选择正在运行的跟踪。  
   
-2.  在 **“文件”** 菜单上，单击 **“停止跟踪”**。  
+2.  在 **“文件”** 菜单上，单击 **“停止跟踪”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  

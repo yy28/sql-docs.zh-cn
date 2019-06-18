@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580821"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>导出报表（报表生成器和 SSRS）
@@ -41,7 +41,7 @@ ms.locfileid: "65580821"
 
 1.  运行或预览报表。  
   
-2.  在功能区上，单击 **“导出”**。  
+2.  在功能区上，单击 **“导出”** 。  
   
      ![报表生成器导出](../../reporting-services/report-builder/media/ssrb-export.png "Report Builder Export")  
   
@@ -51,41 +51,41 @@ ms.locfileid: "65580821"
   
 ##  <a name="bkmk_export_from_rm"></a> 从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户导出报表  
   
-1.  从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户的“主页”导航至要导出的报表。  
+1.  从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户的“主页”  导航至要导出的报表。  
   
 2.  单击报表来呈现并预览报表。  
   
-3.  在报表查看器工具栏上，单击“导出”下拉箭头。  
+3.  在报表查看器工具栏上，单击“导出”  下拉箭头。  
   
      ![Reporting Services Web 门户导出](../../reporting-services/report-builder/media/ssrsportal-export.png "Reporting Services web portal Export")  
   
 4.  选择要使用的格式。  
   
-5.  单击 **“导出”**。 将出现一个对话框，询问你是否要打开或保存该文件。  
+5.  单击 **“导出”** 。 将出现一个对话框，询问你是否要打开或保存该文件。  
   
-6.  若要以选定的导出格式查看该报表，请单击 **“打开”**。  
+6.  若要以选定的导出格式查看该报表，请单击 **“打开”** 。  
   
      \- 或 -  
   
-     若要立即以选定的导出格式保存该报表，请单击 **“保存”**。  
+     若要立即以选定的导出格式保存该报表，请单击 **“保存”** 。  
   
-     将使用与所选格式关联的应用程序显示或保存该报表。 如果单击 **“保存”**，系统将提示您指定保存报表的位置。  
+     将使用与所选格式关联的应用程序显示或保存该报表。 如果单击 **“保存”** ，系统将提示您指定保存报表的位置。  
   
 ##  <a name="bkmk_export_from_sharepoint"></a> 从 SharePoint 库导出该报表。  
   
 1.  预览报表。  
   
-2.  在工具栏上，单击 **“操作”**，指向 **“导出”**，然后选择要使用的格式。  
+2.  在工具栏上，单击 **“操作”** ，指向 **“导出”** ，然后选择要使用的格式。  
   
      将打开 **“文件下载”** 对话框。  
   
-3.  若要以选定的导出格式查看该报表，请单击 **“打开”**。  
+3.  若要以选定的导出格式查看该报表，请单击 **“打开”** 。  
   
      \- 或 -  
   
-     若要立即以选定的导出格式保存该报表，请单击 **“保存”**。  
+     若要立即以选定的导出格式保存该报表，请单击 **“保存”** 。  
   
-     将使用与所选格式关联的应用程序显示或保存该报表。 如果单击 **“保存”**，系统将提示您指定保存报表的位置。  
+     将使用与所选格式关联的应用程序显示或保存该报表。 如果单击 **“保存”** ，系统将提示您指定保存报表的位置。  
   
      还可以选择更改导出的报表的文件名。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "65580821"
 |XML|数据|XML 呈现扩展插件可以按 XML 格式返回报表。 报表 XML 的架构专用于相应的报表，并且只包含数据。 布局信息呈现以及分页都不是由 XML 呈现扩展插件完成。 此扩展插件生成的 XML 可以导入到数据库中用作 XML 数据消息，或发送到自定义应用程序。<br/><br/> 有关详细信息，请参阅[导出到 HTML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。|  
   
 ##  <a name="GeneratingDataFeedsFromReport"></a> 从报表生成数据馈送  
- 若要从某个报表生成数据馈送，请在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户中运行该报表，然后单击 Web 门户工具栏上的“生成数据馈送”图标。 系统会提示您选择保存还是打开文件。 如果您选择 **“打开”**，则将在应用程序中打开与 .atomsvc 文件扩展名关联的 Atom 服务文档。 如果您选择 **“保存”**，则将该文档另存为 .atomsvc 文件。 默认情况下，该文件的名称即为报表的名称。 您可以将此名称更改为一个更有意义的名称。  
+ 若要从某个报表生成数据馈送，请在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户中运行该报表，然后单击 Web 门户工具栏上的“生成数据馈送”  图标。 系统会提示您选择保存还是打开文件。 如果您选择 **“打开”** ，则将在应用程序中打开与 .atomsvc 文件扩展名关联的 Atom 服务文档。 如果您选择 **“保存”** ，则将该文档另存为 .atomsvc 文件。 默认情况下，该文件的名称即为报表的名称。 您可以将此名称更改为一个更有意义的名称。  
   
  将该 Atom 服务文档保存到计算机上。 稍后，您可以将其上载到报表服务器或另一个服务器上以供他人使用。 有关详细信息，请参阅[基于报表生成数据馈送](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)和[基于单个报表生成数据馈送](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   

@@ -9,10 +9,10 @@ ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535d35ad80f940e7d3ed4a9163b2e65757088e58
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581170"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用打印控件从浏览器中打印报表（报表生成器和 SSRS）
@@ -26,7 +26,7 @@ ms.locfileid: "65581170"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="print-options"></a>打印选项  
- 若要配置报表的打印属性，请在 **“打印”** 对话框中，单击 **“属性”** 按钮。 **“纸张大小”** 取决于在报表定义中定义的报表页大小的默认高度和宽度。 根据打印机类型及其功能的不同，可用的值会有所不同。 宽度和高度显示的默认值取决于计算机上配置的打印驱动程序。 更改这些值后，报表将使用新的尺寸进行打印。 页宽和页高都由 **“方向”**（设置为 **“纵向”** 或 **“横向”**）确定。 默认的显示方向取决于报表的页宽和页高。  
+ 若要配置报表的打印属性，请在 **“打印”** 对话框中，单击 **“属性”** 按钮。 **“纸张大小”** 取决于在报表定义中定义的报表页大小的默认高度和宽度。 根据打印机类型及其功能的不同，可用的值会有所不同。 宽度和高度显示的默认值取决于计算机上配置的打印驱动程序。 更改这些值后，报表将使用新的尺寸进行打印。 页宽和页高都由 **“方向”** （设置为 **“纵向”** 或 **“横向”** ）确定。 默认的显示方向取决于报表的页宽和页高。  
   
 > [!NOTE]  
 >  **“打印”** 对话框和宽度、高度及页面方向的默认打印机设置都由报表定义确定。  

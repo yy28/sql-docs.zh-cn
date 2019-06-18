@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 244f5383add437b8bd4985045bd9edc8538805e3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798293"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驱动程序的系统要求
@@ -52,8 +52,8 @@ ms.locfileid: "66798293"
   
   |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.2.2.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 7.2 中的新增功能包括：JDK 11 支持、Active Directory 托管服务标识 (MSI) 身份验证、OSGi 支持、SQLServerError API。 |    
-|mssql-jdbc-7.2.2.jre11.jar|4.3|10|需要 Java 运行时环境 (JRE) 11.0. 使用 JRE 10.0 或更低版本会引发异常。<br /><br /> 7.2 中的新增功能包括：JDK 11 支持、Active Directory 托管服务标识 (MSI) 身份验证、OSGi 支持、SQLServerError API。 |    
+|mssql-jdbc-7.2.2.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 7\.2 中的新增功能包括：JDK 11 支持、Active Directory 托管服务标识 (MSI) 身份验证、OSGi 支持、SQLServerError API。 |    
+|mssql-jdbc-7.2.2.jre11.jar|4.3|10|需要 Java 运行时环境 (JRE) 11.0. 使用 JRE 10.0 或更低版本会引发异常。<br /><br /> 7\.2 中的新增功能包括：JDK 11 支持、Active Directory 托管服务标识 (MSI) 身份验证、OSGi 支持、SQLServerError API。 |    
 
 
   JDBC Driver 7.2 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目：  
@@ -76,8 +76,8 @@ ms.locfileid: "66798293"
   
   |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.0.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 7.0 中的新增功能包括：JDK 10 支持、已将默认符合性级别更新为 JDBC 4.2 规范、空间数据类型支持、cancelQueryTimeout 连接属性、请求边界方法、useBulkCopyForBatchInsert 连接属性、数据发现和分类信息、UTF-8 功能扩展和 CityHash 支持。 |    
-|mssql-jdbc-7.0.0.jre10.jar|4.3|10|需要 Java Runtime Environment (JRE) 10.0。 使用 JRE 9.0 或更低版本会引发异常。<br /><br /> 7.0 中的新增功能包括：JDK 10 支持、已将默认符合性级别更新为 JDBC 4.2 规范、空间数据类型支持、cancelQueryTimeout 连接属性、请求边界方法、useBulkCopyForBatchInsert 连接属性、数据发现和分类信息、UTF-8 功能扩展和 CityHash 支持。 |    
+|mssql-jdbc-7.0.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 7\.0 中的新增功能包括：JDK 10 支持、已将默认符合性级别更新为 JDBC 4.2 规范、空间数据类型支持、cancelQueryTimeout 连接属性、请求边界方法、useBulkCopyForBatchInsert 连接属性、数据发现和分类信息、UTF-8 功能扩展和 CityHash 支持。 |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|需要 Java Runtime Environment (JRE) 10.0。 使用 JRE 9.0 或更低版本会引发异常。<br /><br /> 7\.0 中的新增功能包括：JDK 10 支持、已将默认符合性级别更新为 JDBC 4.2 规范、空间数据类型支持、cancelQueryTimeout 连接属性、请求边界方法、useBulkCopyForBatchInsert 连接属性、数据发现和分类信息、UTF-8 功能扩展和 CityHash 支持。 |    
 
 
   JDBC Driver 7.0 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目：  
@@ -100,9 +100,9 @@ ms.locfileid: "66798293"
   
   |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|需要 Java Runtime Environment (JRE) 9.0。 使用 JRE 8.0 或更低版本会引发异常。<br /><br /> 6.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|需要 Java Runtime Environment (JRE) 9.0。 使用 JRE 8.0 或更低版本会引发异常。<br /><br /> 6\.4 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |
 
 JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目 
 
@@ -124,8 +124,8 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
   
 |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
 |---------|-----------------------------|----------------------|-----------------|
-|mssql-jdbc-6.2.2.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6.2 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
-|mssql-jdbc-6.2.3.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6.2 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用|    
+|mssql-jdbc-6.2.2.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.2 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用。 |  
+|mssql-jdbc-6.2.3.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.2 中的新增功能包括：适用于 Linux 的 Azure AD 身份验证、Kerberos 的主体/密码方法、在跨域身份验证的 SPN 中自动检测领域、Kerberos 约束委派、查询超时、套接字超时和已准备好的语句句柄重复使用|    
 
   JDBC Driver 6.2 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目 
   
@@ -147,8 +147,8 @@ JDBC Driver 6.4 还适用于 Maven Central Repository，并且可以通过在 PO
   
 |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
 |---------|-----------------------------|----------------------|-----------------|   
-|sqljdbc41.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6.0 和 4.2 包中的新增功能包括：JDBC 4.1 符合性和大容量复制<br /><br /> 此外，6.0 包中独有的新增功能包括：Always Encrypted、表值参数、Azure Active Directory 身份验证、与 AlwaysOn 可用性组的透明连接、已准备好的查询和国际化域名 (IDN) 的参数元数据检索的改进|  
-|sqljdbc42.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6.0 和 4.2 包中的新增功能包括：JDBC 4.1 符合性、JDBC 4.2 符合性和大容量复制<br /><br /> 此外，6.0 包中独有的新增功能包括：Always Encrypted、表值参数、Azure Active Directory 身份验证、与 AlwaysOn 可用性组的透明连接、已准备好的查询和国际化域名 (IDN) 的参数元数据检索的改进|  
+|sqljdbc41.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更低版本会引发异常。<br /><br /> 6\.0 和 4.2 包中的新增功能包括：JDBC 4.1 符合性和大容量复制<br /><br /> 此外，6.0 包中独有的新增功能包括：Always Encrypted、表值参数、Azure Active Directory 身份验证、与 AlwaysOn 可用性组的透明连接、已准备好的查询和国际化域名 (IDN) 的参数元数据检索的改进|  
+|sqljdbc42.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更低版本会引发异常。<br /><br /> 6\.0 和 4.2 包中的新增功能包括：JDBC 4.1 符合性、JDBC 4.2 符合性和大容量复制<br /><br /> 此外，6.0 包中独有的新增功能包括：Always Encrypted、表值参数、Azure Active Directory 身份验证、与 AlwaysOn 可用性组的透明连接、已准备好的查询和国际化域名 (IDN) 的参数元数据检索的改进|  
   
  **Microsoft JDBC Driver 4.1 for SQL Server：**  
   
