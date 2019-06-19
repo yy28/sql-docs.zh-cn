@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 88b723e47b177c6a505a0821ddd4925c7179a15b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922065"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>删除备份设备 (SQL Server)
@@ -51,13 +51,13 @@ ms.locfileid: "62922065"
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“服务器对象”**，然后展开 **“备份设备”**。  
+2.  展开 **“服务器对象”** ，然后展开 **“备份设备”** 。  
   
-3.  右键单击要删除的设备，然后单击“删除”。  
+3.  右键单击要删除的设备，然后单击“删除”  。  
   
 4.  在 **“删除对象”** 对话框中，请验证 **“对象名称”** 列中显示正确的设备名称。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62922065"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制并将以下示例粘贴到查询中。 此示例演示如何使用 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 删除备份设备。 执行第一个示例以创建 `mybackupdisk` 备份设备和物理名称 `c:\backup\backup1.bak`。 执行 `sp_dropdevice` 以便删除 `mybackupdisk` 备份设备。 `delfile` 参数将删除物理名称。  
   

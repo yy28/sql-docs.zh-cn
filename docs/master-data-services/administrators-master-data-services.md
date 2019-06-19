@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: edc42dc5746e551913395249cd029e41132f8f0e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486407"
 ---
 # <a name="administrators-master-data-services"></a>管理员 (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "65486407"
   本文介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的管理员类型：模型管理员、实体管理员和超级用户。  
   
 ## <a name="model-administrators"></a>模型管理员  
- 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，模型管理员是对“模型对象”选项卡上的顶级模型对象拥有“管理员”权限的用户。当用户对特定模型具有管理员权限时，该模型“管理员”权限将超越模型子对象上的任何其他权限（模型对象权限和成员权限），会有效忽略这些权限。  
+ 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，模型管理员是对“模型对象”  选项卡上的顶级模型对象拥有“管理员”  权限的用户。当用户对特定模型具有管理员权限时，该模型“管理员”权限将超越模型子对象上的任何其他权限（模型对象权限和成员权限），会有效忽略这些权限  。  
   
 -   如果用户具有对 **“资源管理器”** 功能区域的访问权限，此用户可以添加、删除和更新此区域中的所有主数据。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "65486407"
   
 -   访问所有功能区域。  
   
--   添加、删除和更新“资源管理器”功能区域中所有模型的所有主数据。  
+-   添加、删除和更新“资源管理器”  功能区域中所有模型的所有主数据。  
   
  可以将“超级用户”权限分配给多个用户和/或用户组。  
   
 ## <a name="comparing-administrator-types"></a>比较管理员类型  
   
-|管理员类型|Description|  
+|管理员类型|描述|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 超级用户|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中分配的权限对于管理员的访问权限没有影响。<br /><br /> 可以是基于显式分配的功能区域权限或从组继承的权限的超级用户。<br /><br /> 会自动拥有对所有模型的所有权限。<br /><br /> 自动对所有功能区域具有访问权限。|  
 |模型管理员|可以是基于显式分配的管理员权限或者从组继承的权限的模型管理员。<br /><br /> 仅对向其分配访问权限的功能区域具有访问权限。<br /><br /> 自动对特定模型中的所有对象和成员具有所有权限。|  

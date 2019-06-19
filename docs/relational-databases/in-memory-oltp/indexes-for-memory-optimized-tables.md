@@ -1,7 +1,7 @@
 ---
 title: 内存优化表的索引 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 06/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0ed65ac8c7f4824270d84cde95cf5ab84851ece
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462467"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>内存优化的表的索引
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 所有内存优化表都至少必须有一个索引，因为行正是通过索引才连接在一起。 在内存优化表中，每个索引也经过内存优化。 内存优化索引中的索引与基于磁盘的表中的传统索引在以下几个方面不同：  
@@ -35,8 +36,8 @@ ms.locfileid: "51673016"
 - 哈希索引  
 - 内存优化表的非聚集索引（即 B 树的默认内部结构） 
   
-[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)更深入地介绍了哈希索引。
-[内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)更深入地介绍了非聚集索引。  
+[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)更深入地介绍了哈希  索引。  
+[内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)更深入地介绍了非聚集  索引。  
 *另一篇文章* 介绍了 [Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)索引。  
 
 ## <a name="syntax-for-memory-optimized-indexes"></a>内存优化索引的语法  
@@ -57,7 +58,7 @@ ms.locfileid: "51673016"
     )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA\_AND_DATA);  
+            DURABILITY = SCHEMA_AND_DATA);  
     ```
 > [!NOTE]  
 > 对于每个内存优化表或表类型，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的索引数限制为 8 个。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中不再有内存优化表和表类型专属的索引数量限制。
@@ -116,11 +117,30 @@ ms.locfileid: "51673016"
   
 ## <a name="duplicate-index-key-values"></a>重复的索引键值
 
-重复的索引键值可能会影响对内存优化表的操作的性能。 大量的重复项（例如，100+）会导致索引维护作业效率低下，因为必须针对大多数索引操作遍历重复链。 这可能会影响对内存优化表执行的 `INSERT`、`UPDATE` 和 `DELETE` 操作。 
+重复的索引键值可能会降低内存优化表的性能。 遍历大多数索引读取和写入操作的条目链的重复系统。 当重复的条目链超过 100 个条目时，性能降低可能可测量。
 
-对于哈希索引，此问题更加明显，这是因为对于哈希索引，每项操作的成本都更低，加之大型重复链会对哈希冲突链产生干扰。 若要减少索引中的重复，可以使用非聚集索引并将其他列（例如主键中的列）添加到索引键末尾，以减少重复项的数量。 若要详细了解哈希冲突，请参阅[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。
+### <a name="duplicate-hash-values"></a>重复的哈希值
 
-例如，假设 `Customers` 表的列 `CustomerId` 上有主键，列 `CustomerCategoryID` 上有索引。 通常，一个给定的类别中会有许多客户，因此 CustomerCategoryID 列上的索引中的给定键会有许多重复值。 在此示例中，最佳做法是对 `(CustomerCategoryID, CustomerId)` 使用非聚集索引。 因为此索引可用于使用涉及 `CustomerCategoryID` 的谓词且不含重复内容的查询，所以不会导致索引维护效率低下。
+就哈希索引来说，此问题更加明显。 由于以下注意事项，哈希索引受到的影响更大：
+
+- 每个哈希索引的操作成本更低。
+- 大型重复链与哈希冲突链互相干扰。
+
+要减少索引中的重复，请尝试进行以下调整：
+
+- 使用非聚集索引。
+- 在索引键的末尾添加其他列，以减少重复项的数量。
+  - 例如，可以添加主键中存在的列。
+
+若要详细了解哈希冲突，请参阅[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。
+
+### <a name="example-improvement"></a>示例改进
+
+以下示例介绍如何避免索引中出现任何性能低效的情况。
+
+假设 `Customers` 表的 `CustomerId` 上有主键，列 `CustomerCategoryID` 上有索引。 通常，在给定类别中将有许多客户。 因此，在索引的给定键内，CustomerCategoryID 将有多个重复值。
+
+在这种情况下，最佳做法是对 `(CustomerCategoryID, CustomerId)` 使用非聚集索引。 此索引可用于使用涉及 `CustomerCategoryID` 的谓词的查询，但索引键不包含重复项。 因此，重复的 CustomerCategoryID 值或索引中额外的列不会导致低效的索引维护。
 
 下面的查询显示表 `CustomerCategoryID` 中的 `Sales.Customers`索引的平均重复索引键值数，该表位于示例数据库 [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md)中。
 
@@ -155,15 +175,11 @@ SELECT AVG(row_count) FROM
 SELECT CustomerName, Priority, Description 
 FROM SupportEvent  
 WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
-    
-SELECT CustomerName, Priority, Description 
-FROM SupportEvent  
-WHERE CustomerName != 'Ben';  
-    
+
 SELECT StartDateTime, CustomerName  
 FROM SupportEvent  
-ORDER BY StartDateTime;  
-    
+ORDER BY StartDateTime DESC; -- ASC would cause a scan.
+
 SELECT CustomerName  
 FROM SupportEvent  
 WHERE StartDateTime = '2016-02-26';  
@@ -195,17 +211,18 @@ WHERE col1 = 'dn';
   
 如果 `WHERE` 子句仅指定索引键中的第二列，这两种索引类型都没有用。  
 
-### <a name="summary-table-to-compare-index-use-scenarios"></a>比较索引使用方案的摘要表  
+## <a name="summary-table-to-compare-index-use-scenarios"></a>比较索引使用方案的摘要表  
   
-下表列出了不同索引类型支持的所有操作。 “是”表示索引能够有效地满足请求，“否”表示索引无法有效地满足请求。 
+下表列出了不同索引类型支持的所有操作。 “是”  表示索引能够有效地满足请求，“否”  表示索引无法有效地满足请求。 
   
 | 运算 | 内存优化， <br/> 密切相关的文章 | 内存优化， <br/> 非聚集 | 基于磁盘， <br/> （非）聚集 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| 索引扫描，检索所有表行。 | 用户帐户控制 | 是 | 用户帐户控制 |  
-| 采用相等谓词 (=) 的索引查找。 | 用户帐户控制 <br/> （需要完整键。） | 用户帐户控制  | 用户帐户控制 |  
-| 采用不相等和范围谓词 <br/> （>、<、<=、>=、`BETWEEN`）。 | 否 <br/> （索引扫描中的结果。） | 是 <sup>1</sup> | 用户帐户控制 |  
-| 按与索引定义匹配的排序顺序检索行。 | 否 | 是 | 用户帐户控制 |  
-| 按与索引定义相反的排序顺序检索行。 | 否 | 否 | 用户帐户控制 |  
+| 索引扫描，检索所有表行。 | 是 | 是 | 是 |  
+| 采用相等谓词 (=) 的索引查找。 | 是 <br/> （需要完整键。） | 是  | 是 |  
+| 采用不相等和范围谓词 <br/> （>、<、<=、>=、`BETWEEN`）。 | 否 <br/> （索引扫描中的结果。） | 是 <sup>1</sup> | 是 |  
+| 按与索引定义匹配的排序顺序检索行。 | 否 | 是 | 是 |  
+| 按与索引定义相反的排序顺序检索行。 | 否 | 否 | 是 |  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup>对于内存优化表的非聚集索引，不需要完整键，也可以执行索引查找。  
 

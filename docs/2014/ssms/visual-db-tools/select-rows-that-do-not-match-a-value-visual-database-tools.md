@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067533"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>选择与值不匹配的行 (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63067533"
   
 1.  如果尚未指定搜索条件，请将要在搜索条件内使用的列或表达式添加到[“条件”窗格](visual-database-tools.md)中。  
   
-2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”网格列中，顺序输入 NOT 运算符和搜索值。  
+2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”  网格列中，顺序输入 NOT 运算符和搜索值。  
   
  例如，若要在 `products` 表中查找产品代码列中的值以“A”之外的其他字符开头的所有行，则可以输入如下搜索条件：  
   

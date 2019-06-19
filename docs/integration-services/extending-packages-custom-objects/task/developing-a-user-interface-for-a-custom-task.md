@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed8c9c9679ceafa3a046f684b77893aaee01763e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724440"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>为自定义任务开发用户界面
@@ -45,7 +45,7 @@ ms.locfileid: "65724440"
   
  本节介绍为自定义任务开发用户界面时，<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 特性和 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 接口的角色，并提供有关如何在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中创建、集成、部署和调试任务的详细信息。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器为任务提供用户界面的多个入口点：用户可以从快捷菜单中选择“编辑”，双击任务，或者单击属性表底部的“显示编辑器”链接。 当用户访问其中一个入口点时，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 编辑器会定位并加载包含该任务的用户界面的程序集。 任务的用户界面负责创建在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中向用户显示的属性对话框。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器为任务提供用户界面的多个入口点：用户可以从快捷菜单中选择“编辑”  ，双击任务，或者单击属性表底部的“显示编辑器”  链接。 当用户访问其中一个入口点时，[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 编辑器会定位并加载包含该任务的用户界面的程序集。 任务的用户界面负责创建在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中向用户显示的属性对话框。  
   
  任务及其用户界面是不同的实体。 应该在不同的程序集中实现它们，以减少本地化、部署和维护的工作。 除了在任务中编码的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 特性值中包含的信息外，任务 DLL 不会加载、调用或通常的包含其用户界面的任何知识。 此信息是任务与其用户界面相关联的唯一方式。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044062"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>测试筛选后的模型（数据挖掘基础教程）
@@ -37,7 +37,7 @@ ms.locfileid: "63044062"
   
 4.  在中**模型名称**字段中，键入`TM_Decision_Tree_Male`。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
  然后为模型创建一个筛选器，用于根据客户的性别选择客户。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63044062"
   
      --或者--  
   
-     选择该模型。 在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
+     选择该模型。 在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”** 。  
   
 2.  在 **“模型筛选器”** 对话框的 **“挖掘结构列”** 文本框中，单击网格中的第一行。  
   

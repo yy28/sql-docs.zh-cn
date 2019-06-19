@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026889"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 数据类型
@@ -61,7 +61,7 @@ ms.locfileid: "63026889"
   
  下表显示有关 Microsoft Access 数据类型的限制。  
   
-|数据类型|Description|  
+|数据类型|描述|  
 |---------------|-----------------|  
 |二进制、 VARBINARY 和 VARCHAR|创建 BINARY、 VARBINARY 或 VARCHAR 列的零或未指定的长度实际上返回一个 510 字节的列。|  
 |BYTE|即使 Microsoft 访问号码字段与字段大小等于字节无符号，负号可以插入到的字段中，使用 Microsoft Access 驱动程序时。|  

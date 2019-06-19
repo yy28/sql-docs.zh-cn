@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b4ad97a783781596fccbbc2c159140d819586b38
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478546"
 ---
 # <a name="validation-statuses-master-data-services"></a>验证状态 (Master Data Services)
   在 **“版本管理”** 功能区域中的 **“验证版本”** 页上，以下状态可能会出现。  
   
-|“登录属性”|Description|  
+|“登录属性”|描述|  
 |------------|-----------------|  
 |正在等待验证|正在等待验证的所有新创建的成员。|  
 |正在等待重新验证|正在等待验证的现有成员。|  

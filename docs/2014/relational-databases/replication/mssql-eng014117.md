@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b29b1df0ed0d86cff33461bdd298c0634505af00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63191567"
 ---
 # <a name="mssqleng014117"></a>MSSQL_ENG014117
@@ -35,7 +35,7 @@ ms.locfileid: "63191567"
 ## <a name="explanation"></a>解释  
  如果下列之一或两者均为 True，则会出现此错误：  
   
--   msdb..MSdistributiondbs 中缺少指定分发数据库的条目。  
+-   msdb..MSdistributiondbs  中缺少指定分发数据库的条目。  
   
 -   在 master  数据库中没有本地服务器入口，或者存在的入口不正确。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63191567"
   
      如果 @@SERVERNAME 的值对于某个群集实例是不正确的，则必须使用群集管理器更改该名称。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
- 验证已正确注册分发服务器实例后，请验证分发数据库是否已在 msdb..MSdistributiondbs 中列出。 如果未列出：  
+ 验证已正确注册分发服务器实例后，请验证分发数据库是否已在 msdb..MSdistributiondbs  中列出。 如果未列出：  
   
 1.  请编写分发配置的脚本。 有关详细信息，请参阅 [Scripting Replication](scripting-replication.md)。  
   

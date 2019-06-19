@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34f07a3b0518e202cbbcba0f15d7782da56921d4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728593"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>处理插入、更新和删除
@@ -72,7 +72,7 @@ select
 ## <a name="next-step"></a>下一步  
  在拆分要处理的行之后，下一步是将更改应用到目标中。  
   
- **下一个主题：**[将变更应用到目标](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+ **下一个主题：** [将变更应用到目标](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [有条件拆分转换](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   

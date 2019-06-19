@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7427a85fa3e8b6f65bb899d008a13f48008e4c0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715794"
 ---
 # <a name="catalogstopoperation-ssisdb-database"></a>catalog.stop_operation（SSISDB 数据库）
@@ -34,8 +34,8 @@ catalog.stop_operation [ @operation_id = ] operation_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @operation_id = ] operation_id  
- 执行验证或实例的唯一标识符。 operation_id 为 bigint。  
+ [ @operation_id = ] operation_id   
+ 执行验证或实例的唯一标识符。 operation_id 为 bigint   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

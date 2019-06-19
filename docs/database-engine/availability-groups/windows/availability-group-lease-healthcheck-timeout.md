@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a581e981829d6a2bbd8ed0181decc2d2af5e316
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+manager: jroth
+ms.openlocfilehash: 08794856151267477753b1b756a63b6eb897b7f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742097"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761857"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的租用、群集和运行状况检测超时的机制和指南 
 
@@ -30,7 +30,7 @@ ms.locfileid: "55742097"
 
 对于 SQL Server，AG 资源 DLL 基于 AG 租用机制和 Always On 运行状况检测来确定 AG 的运行状况。 AG 资源 DLL 通过 `IsAlive` 操作公开资源运行状况。 资源监视器按照由 `CrossSubnetDelay` 和 `SameSubnetDelay` 群集范围内的值设置的群集检测信号间隔轮询 `IsAlive`。 在主节点上，只要资源 DLL 的 `IsAlive` 调用返回的 AG 运行不正常，群集服务就会启动故障转移。 
 
-群集服务将检测信号发送到群集中的其他节点，并确认从它们接收到的检测信号。 当一个节点检测到来自一系列未确认检测信号的通信故障时，它会广播一条消息，导致所有可访问的节点协调其群集节点运行状况的视图。 这个称为“重组事件”的事件会保持所有节点的群集状态的一致性。 在重组事件之后，如果仲裁丢失，则包括此分区中的 AG 在内的所有群集资源都将脱机。 该分区中的所有节点都转换为解析状态。 如果存在一个保留仲裁的分区，则 AG 将分配给该分区中的一个节点并成为主副本，而所有其他节点将成为辅助副本。 
+群集服务将检测信号发送到群集中的其他节点，并确认从它们接收到的检测信号。 当一个节点检测到来自一系列未确认检测信号的通信故障时，它会广播一条消息，导致所有可访问的节点协调其群集节点运行状况的视图。 这个称为  “重组事件”的事件会保持所有节点的群集状态的一致性。 在重组事件之后，如果仲裁丢失，则包括此分区中的 AG 在内的所有群集资源都将脱机。 该分区中的所有节点都转换为解析状态。 如果存在一个保留仲裁的分区，则 AG 将分配给该分区中的一个节点并成为主副本，而所有其他节点将成为辅助副本。 
 
 ## <a name="always-on-health-detection"></a>Always On 运行状况检测 
 
@@ -78,7 +78,7 @@ AG 的故障条件级别改变了运行状况检查的故障条件。 对于任�
 | 级别 | 实例被认为停止的条件
 |:---|---
 | 1：OnServerDown | 如果除 AG 之外的资源出现故障，运行状况检查不会采取任何措施。 如果在 5 个间隔内未收到 AG 数据，或 5/3 \* HealthCheckTimeout
-| 2：OnServerUnresponsive | 如果没有从 HealthCheckTimeout 的 `sp_server_diagnostics` 收到数据
+| 2:OnServerUnresponsive | 如果没有从 HealthCheckTimeout 的 `sp_server_diagnostics` 收到数据
 | 3：OnCriticalServerError | （默认）如果系统组件报告错误
 | 4：OnModerateServerError | 如果资源组件报告错误 
 | 5：OnAnyQualifiedFailureConitions |  如果查询处理组件报告错误
@@ -115,7 +115,7 @@ WSFC 配置中有四个值负责确定群集超时值
 租用机制由 WSFC 群集中特定于每个 AG 的单个值来控制。 在故障转移群集管理器中导航到此值：
 
 1. 在“角色”选项卡中，找到目标 AG 角色。 单击目标 AG 角色。 
-2. 右键单击窗口底部的 AG 资源，然后选择“属性”。 
+2. 右键单击窗口底部的 AG 资源，然后选择“属性”  。 
 
    ![故障转移群集管理器](media/availability-group-lease-healthcheck-timeout/image2.png) 
 

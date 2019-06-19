@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721797"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>第 4-3 课：添加错误流重定向
@@ -30,33 +30,33 @@ ms.locfileid: "65721797"
   
 在本任务中，你将 Lookup Currency Key 转换配置为将所有失败的行重定向到错误输出。 在数据流的错误分支中，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会将这些行写入文件。  
   
-默认情况下，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误输出中的两个额外列 ErrorCode 和 ErrorColumn 仅包含数字错误代码和发生错误的列的 ID。 在本任务中，在程序包将失败的行写入文件之前，使用脚本组件来访问 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API 并获取错误说明。  
+默认情况下，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误输出中的两个额外列 ErrorCode 和 ErrorColumn 仅包含数字错误代码和发生错误的列的 ID   。 在本任务中，在程序包将失败的行写入文件之前，使用脚本组件来访问 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API 并获取错误说明。  
   
 ## <a name="configure-an-error-output"></a>配置错误输出  
   
-1.  在“SSIS 工具箱”中，展开“公共”，然后将“脚本组件”拖动到“数据流”选项卡的设计图面上。将“脚本”放置在“Lookup Currency Key”转换的右侧。  
+1.  在“SSIS 工具箱”  中，展开“公共”  ，然后将“脚本组件”  拖动到“数据流”  选项卡的设计图面上。将“脚本”  放置在“Lookup Currency Key”  转换的右侧。  
   
-2.  在“选择脚本组件类型”对话框中，选择“转换”，然后选择“确定”。  
+2.  在“选择脚本组件类型”对话框中，选择“转换”，然后选择“确定”    。  
   
-3.  要连接这两个组件，请选择“Lookup Currency Key”转换，然后将其红色箭头拖到新的“脚本”转换中。  
+3.  要连接这两个组件，请选择“Lookup Currency Key”转换，然后将其红色箭头拖到新的“脚本”转换中   。  
   
-    红色箭头表示“Lookup Currency Key”转换的错误输出。 通过使用红色箭头将转换连接到脚本组件，可以将所有处理错误重定向到脚本组件，该组件会处理这些错误并将其发送到目标。  
+    红色箭头表示“Lookup Currency Key”  转换的错误输出。 通过使用红色箭头将转换连接到脚本组件，可以将所有处理错误重定向到脚本组件，该组件会处理这些错误并将其发送到目标。  
   
-4.  在“配置错误输出”对话框的“错误”列中，选择“重定向行”，再单击“确定”。  
+4.  在“配置错误输出”对话框的“错误”列中，选择“重定向行”，再单击“确定”     。  
   
-5.  在“数据流”设计图面上，在新的“ScriptComponent”中单击名称“脚本组件”，然后将该名称更改为“获取错误说明”。  
+5.  在“数据流”设计图面上，在新的“ScriptComponent”中单击名称“脚本组件”，然后将该名称更改为“获取错误说明”     。  
   
-6.  双击“Get Error Description”转换。  
+6.  双击“Get Error Description”  转换。  
   
-7.  在“脚本转换编辑器”对话框中的“输入列”页中，选择“ErrorCode”列。  
+7.  在“脚本转换编辑器”  对话框中的“输入列”  页中，选择“ErrorCode”  列。  
   
-8.  在“输入和输出”页中，展开“输出 0”，依次选择“输出列”、“添加列”。  
+8.  在“输入和输出”页中，展开“输出 0”，依次选择“输出列”、“添加列”     。  
   
-9. 在“名称”属性中，输入“ErrorDescription”并将“DataType”属性设置为“Unicode 字符串 [DT_WSTR]”。  
+9. 在“名称”属性中，输入“ErrorDescription”并将“DataType”属性设置为“Unicode 字符串 [DT_WSTR]”     。  
   
-10. 在“脚本”页中，验证是否已将“LocaleID”属性设置为“英语(美国)”。
+10. 在“脚本”页中，验证是否已将“LocaleID”属性设置为“英语(美国)”    。
   
-11. 单击“编辑脚本”，打开 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在“Input0_ProcessInputRow”方法中，键入或粘贴以下代码：  
+11. 单击“编辑脚本”，打开 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)  。 在“Input0_ProcessInputRow”方法中，键入或粘贴以下代码  ：  
   
     [Visual Basic]  
   
@@ -95,9 +95,9 @@ ms.locfileid: "65721797"
         }  
     ```  
   
-12. 在“生成”菜单上，选择“生成解决方案”，生成脚本并保存所做的更改，然后关闭 VSTA。  
+12. 在“生成”菜单上，选择“生成解决方案”，生成脚本并保存所做的更改，然后关闭 VSTA   。  
   
-13. 单击“确定”，关闭“脚本转换编辑器”对话框。  
+13. 单击“确定”，关闭“脚本转换编辑器”对话框   。  
   
 ## <a name="go-to-next-task"></a>转到下一个任务
 [步骤 4：添加平面文件目标](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  

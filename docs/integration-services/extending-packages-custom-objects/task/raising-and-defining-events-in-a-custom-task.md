@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 70fa79702aadcca09c43d1ca6d9fbeef0988d8f2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724435"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>在自定义任务中引发和定义事件
@@ -48,7 +48,7 @@ ms.locfileid: "65724435"
   
  下面的代码示例介绍了自定义任务的 **InitializeTask** 方法，在该自定义任务中，创建了两个自定义事件并设置了其属性。 然后，将新事件添加到 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合。  
   
- 第一个自定义事件的事件名为 “**OnBeforeIncrement**”，说明为“**更新初始值后触发**”。 下一个参数为 **true** 值，指示此事件应允许创建用于处理事件的事件处理程序容器。 事件处理程序是一个可向任务提供包和服务中的结构的容器，像其他诸如包、序列、ForLoop 和 ForEachLoop 的其他容器一样。 当 *allowEventHandlers* 参数为 **true** 时，会为该事件创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象。 为事件定义的所有参数现在均可在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的变量集合中用于 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
+ 第一个自定义事件的事件名为  “**OnBeforeIncrement**”，说明为  “**更新初始值后触发**”。 下一个参数为 **true** 值，指示此事件应允许创建用于处理事件的事件处理程序容器。 事件处理程序是一个可向任务提供包和服务中的结构的容器，像其他诸如包、序列、ForLoop 和 ForEachLoop 的其他容器一样。 当 *allowEventHandlers* 参数为 **true** 时，会为该事件创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象。 为事件定义的所有参数现在均可在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的变量集合中用于 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  

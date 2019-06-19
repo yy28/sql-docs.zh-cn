@@ -12,17 +12,17 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102032"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>连接字符串和权限概述
-若要运行 SQL Server 单元测试，必须通过使用一个或两个特定连接字符串来连接数据库服务器。 每个连接字符串均表示一个具有特定权限的帐户，您必须具有相关权限才能在特定脚本中执行作为测试的一部分的某个任务/某一组任务。 可以在“SQL Server 测试配置”对话框中指定这些字符串，或者通过手动编辑测试项目的 app.config 文件来指定这些字符串。  
+若要运行 SQL Server 单元测试，必须通过使用一个或两个特定连接字符串来连接数据库服务器。 每个连接字符串均表示一个具有特定权限的帐户，您必须具有相关权限才能在特定脚本中执行作为测试的一部分的某个任务/某一组任务。 可以在“SQL Server 测试配置”  对话框中指定这些字符串，或者通过手动编辑测试项目的 app.config 文件来指定这些字符串。  
   
 ## <a name="connection-strings"></a>连接字符串  
-在“SQL Server 测试配置”对话框中，可以为下列每个帐户指定连接字符串。  
+在“SQL Server 测试配置”  对话框中，可以为下列每个帐户指定连接字符串。  
   
 > [!NOTE]  
 > 只有在使用 SQL Server 身份验证的情况下执行上下文和特权上下文才会不同。 如果使用 Windows 身份验证，则将对这两个连接字符串使用相同的凭据。  

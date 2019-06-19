@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480007"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包
@@ -74,7 +74,7 @@ ms.locfileid: "65480007"
   
     -   若要显示所有可用选项，请键入 `MDSModelDeploy` ，然后按 Enter 键。  
   
-    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName 是该选项的名称：`MDSModelDeploy help OptionName`。  
+    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName  是该选项的名称：`MDSModelDeploy help OptionName`。  
   
 4.  可选。 如果您有多个 Web 应用程序，通过键入下面的命令并按 Enter 键，确定您要部署到的服务的名称：  
   

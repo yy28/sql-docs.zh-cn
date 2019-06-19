@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109149"
 ---
 # <a name="expression-dialog-box-report-builder"></a>“表达式”对话框（报表生成器）
@@ -29,7 +29,7 @@ ms.locfileid: "66109149"
 ## <a name="expression-constructs"></a>表达式构造  
  表达式以等号 (=) 开头，可以包含常量、文字、运算符以及对内置字段、内置集合、内置函数、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 运行库函数、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 公共语言运行时类和自定义函数的引用。 以下列表介绍了可添加到表达式中的类别和值。  
   
- **设置表达式：**_\<PropertyName>_  
+ **设置表达式：** _\<PropertyName>_  
  要为其定义表达式的属性的名称。 此外，还可以在“属性”窗格中按名称设置此属性。  
   
  **常量**  
@@ -44,7 +44,7 @@ ms.locfileid: "66109149"
  提供报表参数的列表。  
   
  **Fields(** _\<selected Dataset>_ **)**  
- 显示在数据集类别中选择的数据集的字段列表。 双击某字段可将该字段复制到“表达式”框。  
+ 显示在数据集类别中选择的数据集的字段列表。 双击某字段可将该字段复制到“表达式”  框。  
   
  **数据集**  
  提供可用数据集的列表并显示数据集的成员字段。  

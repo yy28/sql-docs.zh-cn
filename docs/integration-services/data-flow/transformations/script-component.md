@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67c3c406c5375e32ed2e49fe59b7f362f421e0d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725908"
 ---
 # <a name="script-component"></a>脚本组件
@@ -119,7 +119,7 @@ ms.locfileid: "65725908"
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [使用脚本组件扩展数据流](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
 ### <a name="options"></a>“常规”  
- 选择 **“源”**、 **“目标”** 或 **“转换”** 将影响脚本转换的配置和脚本转换编辑器所显示的页。  
+ 选择 **“源”** 、 **“目标”** 或 **“转换”** 将影响脚本转换的配置和脚本转换编辑器所显示的页。  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>脚本转换编辑器（“连接管理器”页）
   可以使用 **脚本转换编辑器** 的 **“连接管理器”** 页指定脚本将使用的任何连接。  
@@ -134,22 +134,22 @@ ms.locfileid: "65725908"
  为连接键入唯一的描述性名称。  
   
  **连接管理器**  
- 从可用的连接管理器列表中选择，或选择“\<新建连接>”以打开“添加 SSIS 连接管理器”对话框。  
+ 从可用的连接管理器列表中选择，或选择“\<新建连接>”以打开“添加 SSIS 连接管理器”对话框   。  
   
  **Description**  
  输入连接的说明。  
   
  **“添加”**  
- 向“连接管理器”列表中添加另外一个连接。  
+ 向“连接管理器”列表中添加另外一个连接  。  
   
  **删除**  
- 从“连接管理器”列表中删除所选连接。  
+ 从“连接管理器”  列表中删除所选连接。  
   
 ## <a name="script-transformation-editor-input-columns-page"></a>脚本转换编辑器（“输入列”页）
   可以使用 **“脚本转换编辑器”** 对话框的 **“输入列”** 页设置输入列的属性。  
   
 > [!NOTE]  
->  由于源组件只有输出而没有输入，因此对于源组件不能显示“输入列”页。  
+>  由于源组件只有输出而没有输入，因此对于源组件不能显示“输入列”页  。  
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [使用脚本组件扩展数据流](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "65725908"
  使用复选框指定脚本转换要使用的列。  
   
  **输入列**  
- 从每行的可用输入列的列表中选择。 通过选中“可用输入列”表中的复选框来选择列。  
+ 从每行的可用输入列的列表中选择。 通过选中“可用输入列”  表中的复选框来选择列。  
   
  **输出别名**  
  为每个输出列键入一个别名。 默认值为输入列的名称；不过，您也可以任选一个唯一的描述性名称。  
@@ -189,13 +189,13 @@ ms.locfileid: "65725908"
  将其他输出添加到列表中。  
   
  **添加列**  
- 选择用于放置新输出列的文件夹，再单击“添加列”来添加该列。  
+ 选择用于放置新输出列的文件夹，再单击“添加列”  来添加该列。  
   
  **删除输出**  
- 选择某个输出，再单击“删除输出”即可将其删除。  
+ 选择某个输出，再单击“删除输出”  即可将其删除。  
   
  **删除列**  
- 选择某个列，然后单击“删除列”来删除该列。  
+ 选择某个列，然后单击“删除列”  来删除该列。  
   
 ## <a name="script-transformation-editor-script-page"></a>脚本转换编辑器（“脚本”页）
   可以使用 **“脚本转换编辑器”** 对话框的 **“脚本”** 选项卡指定脚本及相关属性。  

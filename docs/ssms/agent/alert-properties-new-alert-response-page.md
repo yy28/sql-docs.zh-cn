@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: da2d50d1601567c15622350a461d32b2e21ebd37
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099508"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>警报属性 - 新建警报（“响应”页）
@@ -31,19 +31,19 @@ ms.locfileid: "65099508"
 
 ## <a name="options"></a>选项  
 **执行作业**  
-启用“作业列表”、“新建作业”和“查看作业”选项。  
+启用“作业列表”  、“新建作业”  和“查看作业”  选项。  
   
 **新建作业**  
-打开“新建作业”对话框。 此按钮在“执行作业”处于未选中状态时不可用。  
+打开“新建作业”  对话框。 此按钮在“执行作业”  处于未选中状态时不可用。  
   
 **查看作业**  
-查看或修改所选作业。 此选项在“执行作业”处于未选中状态时不可用。  
+查看或修改所选作业。 此选项在“执行作业”  处于未选中状态时不可用。  
   
 **通知操作员**  
 启用可用来添加、删除或更改操作员的控件。  
   
 **操作员列表**  
-列出在发生警报时要获得通知的操作员。 若要指定通知方法，请选中显示在操作员姓名后面的“电子邮件”、“寻呼程序”或“Net send”复选框。此选项在“通知操作员”处于未选中状态时不可用。  
+列出在发生警报时要获得通知的操作员。 若要指定通知方法，请选中显示在操作员姓名后面的“电子邮件”  、“寻呼程序”  或“Net send”  复选框。此选项在“通知操作员”  处于未选中状态时不可用。  
   
 **电子邮件**  
 使用电子邮件通知操作员。  
@@ -55,10 +55,10 @@ ms.locfileid: "65099508"
 使用 **net send** 通知操作员。  
   
 **新建操作员**  
-显示可用于创建新操作员的“新建操作员”对话框。  
+显示可用于创建新操作员的“新建操作员”  对话框。  
   
 **查看操作员**  
-显示当前所选操作员的“属性”对话框。 可以在“操作员属性”对话框上查看和修改操作员属性。  
+显示当前所选操作员的“属性”  对话框。 可以在“操作员属性”对话框上查看和修改操作员属性  。  
   
 ## <a name="see-also"></a>另请参阅  
 [警报](../../ssms/agent/alerts.md)  

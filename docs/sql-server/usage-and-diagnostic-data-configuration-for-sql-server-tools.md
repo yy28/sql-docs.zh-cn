@@ -12,10 +12,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65376856"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>配置 SQL Server 工具使用情况和诊断数据收集 (CEIP)
@@ -43,11 +43,11 @@ ms.locfileid: "65376856"
   
 1.  启动 Visual Studio。  
   
-2.  在“帮助”菜单中，选择“发送反馈” > “设置”。  
+2.  在“帮助”菜单中，选择“发送反馈”   > “设置”  。  
   
-3.  若要禁用 CEIP，请单击“否，我不想参加”，然后单击“确定”。  
+3.  若要禁用 CEIP，请单击“否，我不想参加”  ，然后单击“确定”  。  
   
-     若要启用 CEIP，请单击“是，我愿意参加”，然后单击“确定”。  
+     若要启用 CEIP，请单击“是，我愿意参加”  ，然后单击“确定”  。  
   
 
   
@@ -87,11 +87,11 @@ ms.locfileid: "65376856"
   
 1.  启动 Visual Studio。  
   
-2.  在“帮助”菜单中，选择“发送反馈” > “设置”。  
+2.  在“帮助”菜单中，选择“发送反馈”   > “设置”  。  
   
-3.  若要禁用 CEIP，请单击“否，我不想参加”，然后单击“确定”。  
+3.  若要禁用 CEIP，请单击“否，我不想参加”  ，然后单击“确定”  。  
   
-     若要启用 CEIP，请单击“是，我愿意参加”，然后单击“确定”。  
+     若要启用 CEIP，请单击“是，我愿意参加”  ，然后单击“确定”  。  
   
 
   
@@ -125,13 +125,13 @@ ms.locfileid: "65376856"
   
 1.  启动工具并打开 Analysis Services 或 Integration Services 的新的或现有项目。  
   
-2.  从“帮助”菜单中，选择“Microsoft SQL Server 客户反馈选项” 。  
+2.  从“帮助”菜单中，选择“Microsoft SQL Server 客户反馈选项”  。  
   
-3.  要关闭 CEIP，单击“否，我不想参加” 。  
+3.  要关闭 CEIP，单击“否，我不想参加”  。  
   
-     要启用 CEIP，请单击“是，我愿意参加” 。  
+     要启用 CEIP，请单击“是，我愿意参加”  。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
  **使用基于注册表的策略或组策略**  
   

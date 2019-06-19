@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b8ce22855cfbc3239f4ab2e8695400d92386b858
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480935"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>将 DQS 配置为使用引用数据
@@ -27,7 +27,7 @@ ms.locfileid: "65480935"
 ## <a name="before-you-begin"></a>开始之前  
   
 ###  <a name="Prerequisites"></a> 先决条件  
- 若要使用来自市场的引用数据，您必须具有有效的市场帐户密钥。 有关创建市场帐户密钥的详细信息，请参阅[创建帐户](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936)。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建市场帐户密钥。  
+ 若要使用来自市场的引用数据，您必须具有有效的市场帐户密钥。 有关创建市场帐户密钥的详细信息，请参阅[创建帐户](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936) 。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建市场帐户密钥。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -38,7 +38,7 @@ ms.locfileid: "65480935"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中的 **“管理”** 下，单击 **“配置”**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中的 **“管理”** 下，单击 **“配置”** 。  
   
 3.  如果您的组织使用代理服务器连接到 Internet，则在 **“引用数据”** 选项卡中的 **“网络设置”** 区域下，在 **“代理服务器”** 和 **“端口”** 框中键入适当的值。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65480935"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中的 **“管理”** 下，单击 **“配置”**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中的 **“管理”** 下，单击 **“配置”** 。  
   
 3.  如果您的组织使用代理服务器连接到 Internet，则在 **“引用数据”** 选项卡中的 **“网络设置”** 区域下，在 **“代理服务器”** 和 **“端口”** 框中键入适当的值。  
   

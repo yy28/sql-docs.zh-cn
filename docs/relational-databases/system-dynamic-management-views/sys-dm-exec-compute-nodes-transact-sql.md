@@ -24,10 +24,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f82087cc2549871147d0a85d6c36e9d8d211979
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013482"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "63013482"
   
  使用此 DMV 以查看其角色、 名称和 IP 地址向外缩放群集中的所有节点的列表。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|与节点关联的唯一数字 id。 此视图的键。|无论是什么类型的向外缩放群集中是唯一的。|  
 |type|**nvarchar(32)**|节点的类型。|计算、 头|  

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed952b3e9d275d54c751aa64c6544653511667c3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715462"
 ---
 # <a name="system-variables"></a>系统变量
@@ -94,7 +94,7 @@ ms.locfileid: "65715462"
 |**ProgressCountHigh**|Int32|64 位值的高位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |**ProgressCountLow**|Int32|64 位值的低位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |**ProgressDescription**|String|进度说明。|OnProgress 事件处理程序|  
-|**Propagate**|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意：在包的验证过程中将忽略 Propagate 变量的值。 如果在子包中将 **Propagate** 设置为 **False** ，这并不会防止事件向上传播至父包。|所有事件处理程序|  
+|**Propagate**|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意：在包的验证过程中将忽略 Propagate  变量的值。 如果在子包中将 **Propagate** 设置为 **False** ，这并不会防止事件向上传播至父包。|所有事件处理程序|  
 |**SourceDescription**|String|事件处理程序中引发事件的可执行文件的说明。|所有事件处理程序|  
 |**SourceID**|String|引发事件的事件处理程序中可执行文件的唯一标识符。|所有事件处理程序|  
 |**SourceName**|String|引发事件的事件处理程序中可执行文件的名称。|所有事件处理程序|  

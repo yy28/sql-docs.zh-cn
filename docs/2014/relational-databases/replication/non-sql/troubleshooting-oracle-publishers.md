@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021910"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>对 Oracle 发布服务器进行故障排除
@@ -68,7 +68,7 @@ ms.locfileid: "63021910"
   
 -   “Oracle 服务器实例‘\<*OraclePublisherName*>'’以前配置为将‘\<*SQLServerDistributorName*>’作为其分发服务器。 若要开始使用‘\<*NewSQLServerDistributorName*>’作为其分发服务器，必须删除 Oracle 服务器实例上的当前复制配置，而这将删除该服务器实例上的所有发布。”  
   
--   “Oracle 服务器‘\<*OracleServerName*>’已被定义为分发服务器‘\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*’上的发布服务器‘\<*OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词‘*\<SynonymName>*’，以便重新创建。”  
+-   “Oracle 服务器‘\<*OracleServerName*>’已被定义为分发服务器‘\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* ’上的发布服务器‘\<*OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词‘ *\<SynonymName>* ’，以便重新创建。”  
   
  删除 Oracle 发布服务器时，会自动清除 Oracle 数据库中的复制对象。 但是，在某些情况下需要手动清除 Oracle 复制对象。 手动清除复制创建的 Oracle 复制对象：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63021910"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>引发关于重复链接服务器登录名的 SQL Server 错误 21642  
  在初始配置 Oracle 发布服务器时，会为发布服务器和分发服务器之间的连接创建一个链接服务器项。 该链接服务器的名称与 Oracle TNS 服务名称相同。 如果尝试创建具有相同名称的链接服务器，则会显示以下错误消息：  
   
- “异类发布服务器需要链接服务器。 名为‘*\<LinkedServerName>*’的链接服务器已存在。 请删除链接服务器或另选一个发布服务器名称。”  
+ “异类发布服务器需要链接服务器。 名为‘ *\<LinkedServerName>* ’的链接服务器已存在。 请删除链接服务器或另选一个发布服务器名称。”  
   
  如果尝试直接创建链接服务器，或者预先删除了 Oracle 发布服务器和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器之间的关系，而当前在尝试重新配置它，就会出现此错误。 如果尝试重新配置发布服务器时收到此错误，请用 [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql) 删除链接服务器。  
   
@@ -101,11 +101,11 @@ ms.locfileid: "63021910"
   
  尝试在分发服务器上找到 SQL\*PLUS。 对于 Oracle 10g 客户端安装，此可执行文件的名称为 sqlplus.exe。 它通常安装在 %ORACLE_HOME%/bin 中。 若要验证 SQL\*PLUS 的路径是否显示在系统路径中，请检查系统变量 **Path** 的值：  
   
-1.  右键单击 **“我的电脑”**，再单击 **“属性”**。  
+1.  右键单击 **“我的电脑”** ，再单击 **“属性”** 。  
   
-2.  单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
+2.  单击 **“高级”** 选项卡，再单击 **“环境变量”** 。  
   
-3.  在 **“环境变量”** 对话框的 **“系统变量”** 列表中，选择 **Path** 变量，然后单击 **“编辑”**。  
+3.  在 **“环境变量”** 对话框的 **“系统变量”** 列表中，选择 **Path** 变量，然后单击 **“编辑”** 。  
   
 4.  在 **“编辑系统变量”** 对话框中：如果 **“变量值”** 文本框中未包含 sqlplus.exe 所在文件夹的路径，请编辑字符串以包含该路径。  
   
@@ -151,17 +151,17 @@ ms.locfileid: "63021910"
   
  查看并修改注册表设置：  
   
-1.  单击 **“启动”**，再单击 **“运行”**。  
+1.  单击 **“启动”** ，再单击 **“运行”** 。  
   
-2.  在 **“运行”** 对话框中，键入 **regedit**，然后单击 **“确定”**。  
+2.  在 **“运行”** 对话框中，键入 **regedit**，然后单击 **“确定”** 。  
   
-3.  导航到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers。  
+3.  导航到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers。  
   
      Providers 下应该包含一个名为 OraOLEDB.Oracle 的文件夹。 在此文件夹中应该有一个名为 **AllowInProcess**的 DWORD 值，它的值为 **1**。  
   
 4.  如果发现 **AllowInProcess** 被设置为 **0**，请将其更新为 **1**：  
   
-    1.  右键单击该注册表项，然后单击 **“修改”**。  
+    1.  右键单击该注册表项，然后单击 **“修改”** 。  
   
     2.  在 **“编辑字符串”** 对话框的 **“数值数据”** 字段中，键入 **1** 。  
   
@@ -235,11 +235,11 @@ ms.locfileid: "63021910"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中连接到 Oracle 发布服务器的分发服务器并展开服务器节点。  
   
-2.  右键单击 **“复制”**，然后单击 **“分发服务器属性”**。  
+2.  右键单击 **“复制”** ，然后单击 **“分发服务器属性”** 。  
   
 3.  在 **“分发服务器属性”** 对话框中的 **“发布服务器”** 页上，清除 Oracle 发布服务器的复选框。  
   
-4.  单击“确定” 。  
+4.  单击 **“确定”** 。  
   
  **删除 Oracle 发布服务器 (Transact-SQL)**  
   

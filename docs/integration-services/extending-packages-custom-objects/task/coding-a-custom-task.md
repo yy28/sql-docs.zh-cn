@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57ab14256d3c1e7c909b125e470fca06ef3e7808
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724456"
 ---
 # <a name="coding-a-custom-task"></a>编写自定义任务代码
@@ -38,10 +38,10 @@ ms.locfileid: "65724456"
 ### <a name="validating-the-task"></a>验证任务  
  设计 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包时，可以使用验证来检查每个任务的设置，以便及时发现不正确或不恰当的设置，而不是只在运行时才发现所有错误。 验证的目的是确定任务是否包含将阻止任务成功运行的无效设置或连接。 这可确保包所包含的任务首次运行能够更为顺利。  
   
- 在自定义代码中使用 Validate 方法可实现验证。 运行时引擎通过对任务调用 Validate 方法来验证任务。 任务开发人员应负责定义任务验证成功或失败的标准并通知运行时引擎此评估的结果。  
+ 在自定义代码中使用 Validate 方法可实现验证  。 运行时引擎通过对任务调用 Validate 方法来验证任务  。 任务开发人员应负责定义任务验证成功或失败的标准并通知运行时引擎此评估的结果。  
   
 #### <a name="task-abstract-base-class"></a>任务抽象基类  
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> 抽象基类提供 Validate 方法，每个任务应重写该方法以定义其验证标准。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器将在包设计过程中多次自动调用 Validate 方法，并在警告或错误发生时向用户提供可视化提示，以帮助识别任务的配置问题。 任务返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 枚举的值并引发警告和错误事件，从而提供验证结果。 这些事件包含将在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中向用户显示的信息。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.Task> 抽象基类提供 Validate 方法，每个任务应重写该方法以定义其验证标准  。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器将在包设计过程中多次自动调用 Validate 方法，并在警告或错误发生时向用户提供可视化提示，以帮助识别任务的配置问题  。 任务返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 枚举的值并引发警告和错误事件，从而提供验证结果。 这些事件包含将在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中向用户显示的信息。  
   
  下面是一些验证示例：  
   
@@ -57,15 +57,15 @@ ms.locfileid: "65724456"
   
  在确定验证对象时，有时需要考虑性能因素。 例如，任务的输入可能是一个低带宽或通信量过大的网络连接。 若要验证该资源是否可用，可能需要几秒钟的处理时间。 别的验证可能需要往返于需要量很大的服务器，低验证例程的速度可能就会降低。 虽然许多属性和设置都可以进行验证，但并不是所有属性和设置都应该进行验证。  
   
--   在任务运行前，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 还会调用 Validate 方法中的代码；如果验证失败，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 将取消执行。  
+-   在任务运行前，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 还会调用 Validate 方法中的代码；如果验证失败，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 将取消执行  。  
   
 #### <a name="user-interface-considerations-during-validation"></a>验证过程中用户界面的注意事项  
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> 包含一个用作 Validate 方法参数的 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口包含一些方法，任务可调用这些方法以向运行时引擎引发事件。 在验证期间出现警告或错误情况时会调用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 这两个警告方法需要相同的参数，包括错误代码、源组件、说明、帮助文件以及帮助上下文信息。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器使用这些信息在设计图面上显示可视化提示。 设计器提供的可视化提示包含感叹号图标，该图标显示在设计图面上的任务旁。 此可视化提示通知用户：任务需要其他配置才能继续执行。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.Task> 包含一个用作 Validate 方法参数的 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口  。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口包含一些方法，任务可调用这些方法以向运行时引擎引发事件。 在验证期间出现警告或错误情况时会调用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 这两个警告方法需要相同的参数，包括错误代码、源组件、说明、帮助文件以及帮助上下文信息。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器使用这些信息在设计图面上显示可视化提示。 设计器提供的可视化提示包含感叹号图标，该图标显示在设计图面上的任务旁。 此可视化提示通知用户：任务需要其他配置才能继续执行。  
   
- 感叹号图标还显示一个包含错误消息的工具提示。 错误消息由任务在事件的说明参数中提供。 错误消息还显示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的“任务列表”窗格中，该窗格可供用户集中查看所有验证错误。  
+ 感叹号图标还显示一个包含错误消息的工具提示。 错误消息由任务在事件的说明参数中提供。 错误消息还显示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的“任务列表”窗格中，该窗格可供用户集中查看所有验证错误  。  
   
 #### <a name="validation-example"></a>验证示例  
- 下面的代码示例演示一个具有 UserName 属性的任务。 此属性已被指定为验证成功所必需的。 如果未设置此属性，任务将会发布错误，并从 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 枚举返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>。 Validate 方法包装在 try/catch 块中，如果出现异常，验证将失败。  
+ 下面的代码示例演示一个具有 UserName 属性的任务  。 此属性已被指定为验证成功所必需的。 如果未设置此属性，任务将会发布错误，并从 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 枚举返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>。 Validate 方法包装在 try/catch 块中，如果出现异常，验证将失败  。  
   
 ```csharp  
 using System;  
@@ -159,10 +159,10 @@ End Class
  通常不需要对任务实现自定义持久性。 自定义持久性仅在对象的属性使用复杂数据类型时才需要。 有关详细信息，请参阅[开发用于 Integration Services 的自定义对象](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)。  
   
 ## <a name="executing-the-task"></a>执行任务  
- 本节介绍如何使用任务继承和重写的 Execute 方法。 本节还介绍用于提供任务执行结果信息的各种方法。  
+ 本节介绍如何使用任务继承和重写的 Execute 方法  。 本节还介绍用于提供任务执行结果信息的各种方法。  
   
 ### <a name="execute-method"></a>Execute 方法  
- 当 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时调用包中包含的任务的 Execute 方法时，该任务将会运行。 任务在此方法中实现其核心业务逻辑和功能，并通过发布消息、返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 枚举的值以及重写 ExecutionValue 属性的 get 属性来提供执行结果。  
+ 当 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时调用包中包含的任务的 Execute 方法时，该任务将会运行  。 任务在此方法中实现其核心业务逻辑和功能，并通过发布消息、返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 枚举的值以及重写 ExecutionValue 属性的 get 属性来提供执行结果   。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基类提供 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法的默认实现。 自定义任务重写此方法以定义其运行时功能。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 对象包装任务，从而将该任务与运行时引擎和包中的其他对象隔离。 由于这种隔离，任务不知道它在包中所处的执行顺序位置，所以仅在由运行库调用时才运行。 这种体系结构可防止任务在执行期间修改包时可能发生的问题。 只有通过向任务提供作为 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法参数的对象，该任务才能访问包中的其他对象。 这些参数允许任务引发事件、向事件日志写入条目、访问变量集合以及在事务中登记与数据源的连接，同时还保持确保包的稳定性和可靠性所需的隔离。  
   
@@ -177,14 +177,14 @@ End Class
 |Object|包含容器（如果有）所属的事务对象。 此值作为参数传递给 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 对象的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 方法。|  
   
 ### <a name="providing-execution-feedback"></a>提供执行反馈  
- 任务将其代码包装到 try/catch 块中，以防止向运行时引擎引发异常。 这样可确保包会完成执行，不会意外停止。 但是，运行时引擎提供了其他机制，可处理任务执行期间可能会出现的错误情况。 这些机制包括发布错误和警告信息、从 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 结构返回值、发布消息、返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 值以及通过 <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A> 属性提供任务执行结果的信息。  
+ 任务将其代码包装到 try/catch 块中，以防止向运行时引擎引发异常  。 这样可确保包会完成执行，不会意外停止。 但是，运行时引擎提供了其他机制，可处理任务执行期间可能会出现的错误情况。 这些机制包括发布错误和警告信息、从 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 结构返回值、发布消息、返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 值以及通过 <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A> 属性提供任务执行结果的信息。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口包含 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法，任务可调用这些方法向运行时引擎发布错误和警告消息。 这两个方法需要一些参数，如错误代码、源组件、说明、帮助文件以及帮助上下文信息。 根据任务的配置，运行库会通过引发事件和断点或向事件日志写入信息来响应这些消息。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 还提供 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 属性，该属性可用于提供有关执行结果的其他信息。 例如，如果任务要在其 Execute 方法中删除表中的行，则该任务可能会将所删除的行数作为 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 属性的值返回。 此外，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 还提供 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecValueVariable%2A> 属性。 此属性允许用户将从任务返回的 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 映射到任何任务可见的变量。 随后，指定的变量即可用于建立任务之间的优先约束。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 还提供 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 属性，该属性可用于提供有关执行结果的其他信息。 例如，如果任务要在其 Execute 方法中删除表中的行，则该任务可能会将所删除的行数作为 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 属性的值返回  。 此外，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 还提供 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecValueVariable%2A> 属性。 此属性允许用户将从任务返回的 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 映射到任何任务可见的变量。 随后，指定的变量即可用于建立任务之间的优先约束。  
   
 ### <a name="execution-example"></a>执行示例  
- 下面的代码示例演示 Execute 方法的实现，并演示了一个重写的 ExecutionValue 属性。 该任务删除其 fileName 属性指定的文件。 如果该文件不存在或 fileName 属性为空字符串，任务将发布一条警告。 该任务在 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 属性中返回一个布尔值，以指示该文件是否已删除。  
+ 下面的代码示例演示 Execute 方法的实现，并演示了一个重写的 ExecutionValue 属性   。 该任务删除其 fileName 属性指定的文件  。 如果该文件不存在或 fileName 属性为空字符串，任务将发布一条警告  。 该任务在 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 属性中返回一个布尔值，以指示该文件是否已删除  。  
   
 ```csharp  
 using System;  

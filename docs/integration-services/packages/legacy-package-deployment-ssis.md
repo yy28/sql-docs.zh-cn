@@ -33,10 +33,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5a9b49b743ed95766bfbd8d310bba40c6bfe396
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719970"
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
@@ -176,11 +176,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  间接配置使用环境变量。 配置不直接指定配置设置，而是指向环境变量，环境变量又包含配置值。 如果对于包的每个部署，配置的位置都可以更改，则使用间接配置是较好的选择。  
 
 ## <a name="create-package-configurations"></a>创建包配置
-  使用“包配置组织程序”对话框和包配置向导，可以创建包配置。 若要访问这些工具，请在 **中单击** “SSIS” **菜单上的** “包配置” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+  使用“包配置组织程序”  对话框和包配置向导，可以创建包配置。 若要访问这些工具，请在 **中单击** “SSIS” **菜单上的** “包配置” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
   
  **说明：**
-> 还可以通过单击“配置”属性旁的省略号按钮，访问“包配置组织程序”。 “配置”选项出现在包的属性窗口中。  
+> 还可以通过单击“配置”  属性旁的省略号按钮，访问“包配置组织程序”  。 “配置”选项出现在包的属性窗口中。  
 > 
 > 配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。    
 > 
@@ -234,13 +234,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，单击 **“控制流”**、 **“数据流”**、 **“事件处理程序”** 或 **“包资源管理器”** 选项卡。  
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，单击 **“控制流”** 、 **“数据流”** 、 **“事件处理程序”** 或 **“包资源管理器”** 选项卡。  
   
-4.  在 **SSIS** 菜单上，单击“包配置” 。  
+4.  在 **SSIS** 菜单上，单击“包配置”  。  
   
-5.  在 **“包配置组织程序”** 对话框中，选择 **“启用包配置”**，再单击 **“添加”**。  
+5.  在 **“包配置组织程序”** 对话框中，选择 **“启用包配置”** ，再单击 **“添加”** 。  
   
-6.  在“包配置向导”页的欢迎页上，单击 **“下一步”**。  
+6.  在“包配置向导”页的欢迎页上，单击 **“下一步”** 。  
   
 7.  在“选择配置类型”页上，指定配置类型，然后设置与该配置类型相关的属性。 有关详细信息，请参阅 [Package Configuration Wizard UI Reference](../../integration-services/packages/package-configuration-wizard-ui-reference.md)。  
   
@@ -248,11 +248,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
     > **注意：** 只有 **XML 配置文件**和 **SQL Server** 配置类型支持在一个配置中包括多个属性。  
   
-9. 在“完成向导”页上，键入配置的名称，然后单击 **“完成”**。  
+9. 在“完成向导”页上，键入配置的名称，然后单击 **“完成”** 。  
   
 10. 查看 **“包配置组织程序”** 对话框中的配置。  
   
-11. 单击 **“关闭”**。  
+11. 单击 **“关闭”** 。  
 
 ## <a name="package-configurations-organizer"></a>“包配置组织程序”
   可以使用 **“包配置组织程序”** 对话框启用包配置，查看当前包的配置列表以及指定加载这些配置的首选顺序。  
@@ -291,7 +291,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  通过重新运行包配置向导来编辑现有配置。  
   
  **删除**  
- 选择一个配置，再单击“删除”。  
+ 选择一个配置，再单击“删除”。   
   
  **箭头**  
  在列表中选择一个配置，再使用向上键和向下键可将其上移或下移。 配置将按照在列表中的显示顺序来进行加载。  
@@ -479,7 +479,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  通过首先配置创建部署实用工具的生成过程，然后生成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，可以为该项目创建一个包部署实用工具。 在生成项目时，将自动包括项目中的所有包和包配置。 若要部署其他文件（如项目的自述文件），请将这些文件放在 **项目的** “杂项” [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 文件夹中。 当生成项目时，也会自动包括这些文件。  
   
- 您可以按照不同的方式配置每个项目部署。 在生成项目和创建包部署实用工具之前，您可以设置部署实用工具的属性，自定义项目中包的部署方法。 例如，您可以指定在部署项目时是否可以更新包配置。 若要访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的属性，请右键单击该项目，再单击“属性”。  
+ 您可以按照不同的方式配置每个项目部署。 在生成项目和创建包部署实用工具之前，您可以设置部署实用工具的属性，自定义项目中包的部署方法。 例如，您可以指定在部署项目时是否可以更新包配置。 若要访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的属性，请右键单击该项目，再单击  “属性”。  
   
  下表列出了部署实用工具属性。  
   
@@ -497,9 +497,9 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含要为其创建包部署实用工具的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的解决方案。  
   
-2.  右键单击该项目，再单击“属性”。  
+2.  右键单击该项目，再单击“属性”  。  
   
-3.  在“\<project name> 属性页”对话框中，单击“部署实用工具”。  
+3.  在“\<project name> 属性页”对话框中，单击“部署实用工具”   。  
   
 4.  若要在部署包时更新包配置，请将 **AllowConfigurationChanges** 设置为 **True**。  
   
@@ -507,9 +507,9 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 6.  还可以通过修改 **DeploymentOutputPath** 属性来更新部署实用工具的位置。  
   
-7.  单击“确定” 。  
+7.  单击“确定”  。  
   
-8.  在解决方案资源管理器中，右键单击该项目，再单击“生成”。  
+8.  在解决方案资源管理器中，右键单击该项目，再单击  “生成”。  
   
 9. 在 **“输出”** 窗口中查看生成进度和生成错误。  
 
@@ -591,7 +591,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **配置文件**  
  通过从列表中选择文件，可以编辑配置文件的内容。  
   
- **相关主题：**[创建包配置](../../integration-services/packages/create-package-configurations.md)  
+ **相关主题：** [创建包配置](../../integration-services/packages/create-package-configurations.md)  
   
  **路径**  
  查看要配置的属性的路径。  
@@ -653,7 +653,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  指定包及其依赖关系要复制到的路径和文件夹。  
   
  **“浏览”**  
- 使用“查找文件夹”对话框找到目标文件夹。  
+ 使用“查找文件夹”  对话框找到目标文件夹。  
   
  **Next**  
  转到向导的下一页。  
@@ -683,7 +683,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **包路径**  
  指定逻辑文件夹的名称，或者输入 "/" 作为默认文件夹。  
   
- 若要在“SSIS 包”对话框中选择该文件夹，请单击“浏览(...)”。但是，该对话框不提供用来选择默认文件夹的方法。 如果要使用默认文件夹，则必须在该文本框中输入 "/"。  
+ 若要在“SSIS 包”  对话框中选择该文件夹，请单击“浏览(...)”。但是，该对话框不提供用来选择默认文件夹的方法。 如果要使用默认文件夹，则必须在该文本框中输入 "/"。  
   
 > [!NOTE]  
 >  如果没有输入有效的包路径，则会出现下面的错误消息：“一个或多个参数无效。”  
@@ -701,5 +701,5 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  可以使用 **“完成包安装向导”** 页查看包安装结果的摘要。 此页提供了如所部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的名称、已安装的包、配置文件和安装位置等之类的详细信息。  
   
  **“完成”**  
- 单击“完成”即可退出该向导。  
+ 单击“完成”  即可退出该向导。  
 

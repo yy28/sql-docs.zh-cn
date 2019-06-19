@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e79a92bc1756003341cbb9e0581ade42a2bcee8b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090010"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 代码
@@ -55,7 +55,7 @@ ms.locfileid: "66090010"
 |单步执行下一个语句或模块|上**调试**菜单上，单击**单步执行**。<br /><br /> 上**调试**工具栏上，单击**单步执行**按钮。<br /><br /> 按 F11。|  
 |逐过程执行下一个语句或模块|上**调试**菜单上，单击**单步跳过**。<br /><br /> 上**调试**工具栏上，单击**单步跳过**按钮。<br /><br /> 按 F10。|  
 |跳出模块|上**调试**菜单上，单击**单步跳出**。<br /><br /> 上**调试**工具栏上，单击**单步跳出**按钮。<br /><br /> 按 Shift+F11。|  
-|运行到当前光标位置|右键单击查询编辑器窗口，然后单击“运行至光标处”。<br /><br /> 按 Ctrl+F10。|  
+|运行到当前光标位置|右键单击查询编辑器窗口，然后单击“运行至光标处”  。<br /><br /> 按 Ctrl+F10。|  
   
 ## <a name="see-also"></a>请参阅  
  [Transact-SQL 调试器信息](transact-sql-debugger-information.md)  

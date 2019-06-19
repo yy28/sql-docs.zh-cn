@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011956"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>向主体授予权限
@@ -63,11 +63,11 @@ ms.locfileid: "63011956"
   
 3.  展开 **“存储过程”** 文件夹。  
   
-4.  右键单击某一存储过程，然后选择“属性”。  
+4.  右键单击某一存储过程，然后选择“属性”  。  
   
-5.  在中**存储过程属性-**_stored_procedure_name_对话框中的，在选择页上，选择下**权限**。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
+5.  在中**存储过程属性-** _stored_procedure_name_对话框中的，在选择页上，选择下**权限**。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
   
-6.  完成后，单击 **“确定”**。  
+6.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -75,9 +75,9 @@ ms.locfileid: "63011956"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Grants EXECUTE permission on stored procedure HumanResources.uspUpdateEmployeeHireInfo to an application role called Recruiting11.   

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3bc5b6cc425ad04e9ad1f2cafbae2a3d88f8599c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718236"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
@@ -55,7 +55,7 @@ ms.locfileid: "65718236"
   
 -   “有效签名”  是一个可以成功读取的签名。  
   
--   “无效签名”是一个解密的校验和（由私钥加密的包代码的单向哈希）与在加载 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的过程中计算的解密校验和不相符的签名。  
+-   “无效签名”  是一个解密的校验和（由私钥加密的包代码的单向哈希）与在加载 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的过程中计算的解密校验和不相符的签名。  
   
 -   “可信签名”  是一个使用由受信任的根证书颁发机构签名的数字证书创建的签名。 该设置不要求签名者出现在可信发布服务器的用户列表中。  
   
@@ -75,23 +75,23 @@ ms.locfileid: "65718236"
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>实现包的签名策略  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。  
+1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
 2.  在“运行”对话框中，键入 **Regedit**，然后单击“确定”。   
   
 3.  找到注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS。  
   
-4.  右键单击“MSDTS”，指向“新建”，然后单击“DWORD 值”。  
+4.  右键单击“MSDTS”  ，指向“新建”  ，然后单击“DWORD 值”  。  
   
 5.  将新值的名称更新为 **BlockedSignatureStates**。  
   
-6.  右键单击“BlockedSignatureStates”，再单击“修改”。  
+6.  右键单击“BlockedSignatureStates”  ，再单击“修改”  。  
   
 7.  在 **“编辑 DWORD 值”** 对话框中，键入值 0、1、2 或 3。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
-9. 在 **“文件”** 菜单中，单击 **“退出”**。    
+9. 在 **“文件”** 菜单中，单击 **“退出”** 。    
 
 ## <a name="cert"></a> 使用数字证书对包签名
   本主题介绍如何使用数字证书对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包进行签名。 可以使用数字签名以及其他设置来防止加载和运行无效的包。  
@@ -122,13 +122,13 @@ ms.locfileid: "65718236"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的 **“SSIS”** 菜单上，单击 **“数字签名”**。  
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的 **“SSIS”** 菜单上，单击 **“数字签名”** 。  
   
-4.  在 **“数字签名”** 对话框中，单击 **“签名”**。  
+4.  在 **“数字签名”** 对话框中，单击 **“签名”** 。  
   
 5.  在 **“选择证书”** 对话框中，选择一个证书。  
   
-6.  也可单击“查看证书”来查看证书信息。  
+6.  也可单击“查看证书”  来查看证书信息。  
   
 7.  单击 **“确定”** 关闭 **“选项证书”** 对话框。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "65718236"
   
 ### <a name="options"></a>选项  
  **签名**  
- 单击此项将打开“选择证书”对话框，在其中可选择要使用的证书。  
+ 单击此项将打开“选择证书”  对话框，在其中可选择要使用的证书。  
   
  **删除**  
  单击此项将删除数字签名。  

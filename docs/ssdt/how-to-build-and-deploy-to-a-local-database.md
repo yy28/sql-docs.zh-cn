@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3dddd702582cdc8b2baea11838b0ad7e0ccd8cc9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098220"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>如何：生成和部署到本地数据库
@@ -29,51 +29,51 @@ Microsoft SQL Server 2012 提供称作 SQL Server Express 本地数据库运行�
   
 ### <a name="to-use-the-local-database"></a>使用本地数据库  
   
-1.  请注意，在“SQL Server 对象资源管理器”中的 SQL Server 节点下，将出现一个名为“本地”的新节点。 这是本地数据库实例。  
+1.  请注意，在“SQL Server 对象资源管理器”  中的 SQL Server  节点下，将出现一个名为“本地”  的新节点。 这是本地数据库实例。  
   
-2.  展开“本地”和“数据库”节点。 请注意具有与 TradeDev 项目同名的数据库的外观。 展开此数据库下的节点。 “数据工具操作”窗口可在“本地”节点数据库上显示正在进行的扩展/导入操作的状态。 请注意，这些节点不包含我们在以前的过程中创建的任何表和实体。  
+2.  展开“本地”  和“数据库”  节点。 请注意具有与 TradeDev 项目同名的数据库的外观。 展开此数据库下的节点。 “数据工具操作”  窗口可在“本地”  节点数据库上显示正在进行的扩展/导入操作的状态。 请注意，这些节点不包含我们在以前的过程中创建的任何表和实体。  
   
 3.  按 F5 调试 TradeDev 数据库项目。  
   
     默认情况下，SSDT 将使用本地数据库服务器实例来调试数据库项目。 在这种情况下，SSDT 将首先尝试生成该项目，如果没有错误，该项目（及其实体）将部署到本地数据库中。 如果您在以后调试相同的项目，SSDT 将检测到您在上次调试会话后进行的任何更改，并且仅将这些更改部署到本地数据库。  
   
-4.  再次展开“本地”数据库服务器中 TradeDev 下的节点。 这一次，注意到表、视图和函数已部署到该本地数据库服务器。  
+4.  再次展开“本地”  数据库服务器中 TradeDev  下的节点。 这一次，注意到表、视图和函数已部署到该本地数据库服务器。  
   
-5.  右键单击 TradeDev 节点并选择“新建查询”。  
+5.  右键单击 TradeDev  节点并选择“新建查询”  。  
   
-6.  在脚本窗格中，粘贴以下代码并单击“执行查询”按钮以便运行该查询。  
+6.  在脚本窗格中，粘贴以下代码并单击“执行查询”  按钮以便运行该查询。  
   
     ```  
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-7.  “消息”窗格将显示“(0 行受影响)”并且“结果”窗格将不返回任何行。 这是因为我们对本地数据库进行查询，而非对包含实际数据的连接的数据库进行查询。  
+7.  “消息”  窗格将显示“(0 行受影响)”并且“结果”  窗格将不返回任何行。 这是因为我们对本地数据库进行查询，而非对包含实际数据的连接的数据库进行查询。  
   
-    可以通过右键单击这个本地 TradeDev 数据库下方的 Products 表，然后选择“查看数据”，对此进行确认。 请注意，该表是空的。  
+    可以通过右键单击这个本地 TradeDev  数据库下方的 Products  表，然后选择“查看数据”  ，对此进行确认。 请注意，该表是空的。  
   
 ### <a name="to-replicate-real-data-to-the-local-database"></a>将实际数据复制到本地数据库  
   
-1.  在“SQL Server 对象资源管理器”中，展开连接的 SQL Server 实例并找到 TradeDev 数据库。  
+1.  在“SQL Server 对象资源管理器”  中，展开连接的 SQL Server 实例并找到 TradeDev  数据库。  
   
-    右键单击 Suppliers 表并选择“查看数据”。  
+    右键单击 Suppliers  表并选择“查看数据”  。  
   
-2.  单击数据编辑器顶部的“脚本”按钮（从右边数第二个按钮）。 从该脚本中复制 `INSERT` 语句。  
+2.  单击数据编辑器顶部的“脚本”  按钮（从右边数第二个按钮）。 从该脚本中复制 `INSERT` 语句。  
   
-3.  展开“本地”服务器实例并右键单击 TradeDev 节点，然后选择“新建查询”。  
+3.  展开“本地”  服务器实例并右键单击 TradeDev  节点，然后选择“新建查询”  。  
   
 4.  将 `INSERT` 语句粘贴到此查询窗口中并执行查询。  
   
-5.  重复上述步骤，将数据从连接的 TradeDev 数据库的 Products 和 Fruits 表复制到本地 TradeDev 数据库。  
+5.  重复上述步骤，将数据从连接的 TradeDev  数据库的 Products  和 Fruits  表复制到本地 TradeDev  数据库。  
   
-6.  右键单击该“本地”服务器实例，然后选择“刷新”。 使用“查看数据”对这些表进行检查，以便确认已填充该本地数据库。  
+6.  右键单击该“本地”  服务器实例，然后选择“刷新”  。 使用“查看数据”  对这些表进行检查，以便确认已填充该本地数据库。  
   
-7.  右键单击本地服务器实例的 TradeDev 节点，然后选择“新建查询”。  
+7.  右键单击本地服务器实例的 TradeDev  节点，然后选择“新建查询”  。  
   
-8.  在脚本窗格中，粘贴以下代码并单击“执行查询”按钮以便运行该查询。  
+8.  在脚本窗格中，粘贴以下代码并单击“执行查询”  按钮以便运行该查询。  
   
     ```  
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-9. 在 Transact\-SQL 编辑器窗格下的“结果”窗格中，将看到返回 `Products` 表的 Apples 和 Potato Chips 行。  
+9. 在 Transact\-SQL 编辑器窗格下的“结果”  窗格中，将看到返回 `Products` 表的 Apples 和 Potato Chips 行。  
   

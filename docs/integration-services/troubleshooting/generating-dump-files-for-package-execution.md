@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1d4761db172138eb86e3cf511b904c5b86b90c4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713751"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>生成包执行的转储文件
@@ -46,7 +46,7 @@ ms.locfileid: "65713751"
   
 -   .tmp 调试转储文件。 这是一个文本格式文件。  
   
- 默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将这些文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。  
+ 默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将这些文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中  。  
   
  下表仅介绍 .tmp 文件中的某些部分。 .tmp 文件还包含该表中未列出的其他数据。  
   

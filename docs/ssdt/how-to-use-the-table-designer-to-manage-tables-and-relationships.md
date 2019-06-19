@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096865"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>如何：使用表设计器管理表和关系
@@ -34,17 +34,17 @@ ms.locfileid: "65096865"
   
 1.  打开您在以前的过程中已在处理的 TradeDev 项目。  
   
-2.  在“解决方案资源管理器”中，展开“dbo”文件夹，右键单击“表”文件夹并选择“添加”，然后选择“表”。  
+2.  在“解决方案资源管理器”  中，展开  “dbo”文件夹，右键单击“表”  文件夹并选择“添加”，然后选择“表”。    
   
-3.  将这个新表命名为“Shipper”，然后单击“添加”。  
+3.  将这个新表命名为“Shipper”  ，然后单击“添加”  。  
   
-4.  表设计器随即打开。 在列网格中，向该表添加名为 ShipperName 且数据类型为 int 的一个新列。  
+4.  表设计器随即打开。 在列网格中，向该表添加名为  ShipperName 且数据类型为  int 的一个新列。  
   
-5.  请注意，你还可以在“属性”窗口中编辑列的属性。 单击 ShipperName 列，在“属性”窗口中，将该列的“数据类型”更改为 nvarchar，将“长度”更改为 128。 请注意，在您将焦点移出该字段时，设计器的脚本窗格和列网格将自动更新以便反映您的更改。  
+5.  请注意，你还可以在“属性”  窗口中编辑列的属性。 单击  ShipperName 列，在“属性”  窗口中，将该列的“数据类型”  更改为  nvarchar，将“长度”  更改为  128。 请注意，在您将焦点移出该字段时，设计器的脚本窗格和列网格将自动更新以便反映您的更改。  
   
 ### <a name="to-create-a-new-foreign-key-constraint"></a>创建新的外键约束  
   
-1.  在设计器的上下文窗格中右键单击“外键”节点，然后选择“添加新的外键”。  
+1.  在设计器的上下文窗格中右键单击“外键”  节点，然后选择“添加新的外键”  。  
   
 2.  请注意，节点计数将自动递增 1。 按 ENTER 键接受该约束的默认名称。  
   

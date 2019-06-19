@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 7bb60aac75343a65264c2a87f72957dae336dacb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105736"
 ---
 # <a name="create-and-update-database-tables"></a>创建和更新数据库表
@@ -32,7 +32,7 @@ ms.locfileid: "65105736"
   
 ## <a name="create-a-table"></a>创建表  
   
-1. 右键单击数据库中的“表”节点，然后选择“新建” > “表”：  
+1. 右键单击数据库中的“表”节点，然后选择“新建” > “表”    ：  
   
     ![新建表](../media/design-tables/new-table.png)
   
@@ -44,7 +44,7 @@ ms.locfileid: "65105736"
   
 ## <a name="update-a-table"></a>更新表  
   
-1. 右键单击数据库的“表”节点下的表，并选择“设计”：  
+1. 右键单击数据库的“表”节点下的表，并选择“设计”   ：  
   
    ![更新表](../media/design-tables/update-table.png)
 

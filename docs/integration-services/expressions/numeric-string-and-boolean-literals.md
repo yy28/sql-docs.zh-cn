@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ba8cbd66c809e5d32448e1489f38d02ddadf921
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725117"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>数值、字符串和布尔型文字
@@ -115,7 +115,7 @@ ms.locfileid: "65725117"
 |\xhhhh|十六进制表示的 Unicode 字符|  
   
 ## <a name="boolean-literals"></a>布尔值文字  
- 表达式计算器支持常用的布尔值文字：True 和 False。 表达式计算器不区分大小写，任何大写和小写字母的组合都是允许的。 例如，TRUE 和 True 的作用是一样的。  
+ 表达式计算器支持常用的布尔值文字：True  和 False  。 表达式计算器不区分大小写，任何大写和小写字母的组合都是允许的。 例如，TRUE 和 True 的作用是一样的。  
   
 > **注意**：在表达式中，布尔值文字必须用空格分隔。  
   

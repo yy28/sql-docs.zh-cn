@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 42d83c5adf9afa268bb7ec6e069731d6f8a05219
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716002"
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment（SSISDB 数据库）
@@ -36,14 +36,14 @@ catalog.rename_environment [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name  
- 包含环境的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
+ [ @folder_name = ] folder_name   
+ 包含环境的文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [ @environment_name = ] environment_name  
- 环境的原始名称。 environment_name 为 nvarchar(128)。  
+ [ @environment_name = ] environment_name   
+ 环境的原始名称。 environment_name 为 nvarchar(128)   。  
   
  [ @new_environment_name = ] *new_environment_name*  
- 环境的新名称。 *new_environment_name* 为 **nvarchar(128)**。  
+ 环境的新名称。 *new_environment_name* 为 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

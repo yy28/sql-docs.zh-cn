@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 76cc525bbab351cb440d1a1078ef008205b7be94
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106290"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>输入搜索值的规则 (Visual Database Tools)
@@ -78,7 +78,7 @@ ms.locfileid: "65106290"
   
 -   **引号** 不能将数字放在引号内。  
   
--   **非数字字符** 除小数点分隔符（在 Windows 控制面板的“区域设置”对话框中定义）和负号 (-) 之外，不能包含非数字字符。 不能包含数字分组符号（如千位间的逗号）或货币符号。  
+-   **非数字字符** 除小数点分隔符（在 Windows 控制面板的“区域设置”  对话框中定义）和负号 (-) 之外，不能包含非数字字符。 不能包含数字分组符号（如千位间的逗号）或货币符号。  
   
 -   **小数点标记** 如果输入整数，则可以包含小数点标记，无论所搜索的值是整数还是实数。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "65106290"
   
 查询和视图设计器可以使用以下日期格式：  
   
--   **区域设置特定** 在“Windows 区域设置属性”对话框中指定的日期格式。  
+-   **区域设置特定** 在“Windows 区域设置属性”  对话框中指定的日期格式。  
   
 -   **数据库特定** 数据库可以理解的任何格式。  
   

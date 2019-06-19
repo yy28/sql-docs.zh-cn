@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7332f70144194bcddca0c2729b4615252a39e7e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717899"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>群集中的 Integration Services (SSIS)
@@ -91,7 +91,7 @@ ms.locfileid: "65717899"
   
 ### <a name="to-configure-integration-services-as-a-cluster-resource"></a>将 Integration Services 配置为群集资源  
   
-1.  打开 **“群集管理器”**。  
+1.  打开 **“群集管理器”** 。  
   
 2.  在控制台树中选择 Groups 文件夹。  
   
@@ -101,21 +101,21 @@ ms.locfileid: "65717899"
   
     -   若要将 Integrations Services 作为群集资源添加到不同于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的组中，请选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所属的组以外的组。  
   
-4.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“资源”**。  
+4.  在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“资源”** 。  
   
-5.  在“资源向导”的“新资源”页上，键入名称并选择“一般服务”作为“服务类型”。 不要更改 **“组”** 的值。 单击“下一步” 。  
+5.  在“资源向导”的“新资源”页上，键入名称并选择“一般服务”作为“服务类型”    。 不要更改 **“组”** 的值。 单击“下一步”  。  
   
-6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步” 。  
+6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步”  。  
   
-7.  若要添加依赖关系，请在 **“依赖关系”** 页上的 **“可用资源”** 下选择一项资源，然后单击 **“添加”**。 对于故障转移情况， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和用来存储 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的共享磁盘应在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 联机前重新联机。 在选择依赖关系之后，单击 **“下一步”**。  
+7.  若要添加依赖关系，请在 **“依赖关系”** 页上的 **“可用资源”** 下选择一项资源，然后单击 **“添加”** 。 对于故障转移情况， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和用来存储 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的共享磁盘应在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 联机前重新联机。 在选择依赖关系之后，单击 **“下一步”** 。  
   
      有关详细信息，请参阅 [Add Dependencies to a SQL Server Resource](../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)。  
   
-8.  在“一般服务参数”  页上，输入 **MsDtsServer** 作为服务名。 单击“下一步” 。  
+8.  在“一般服务参数”  页上，输入 **MsDtsServer** 作为服务名。 单击“下一步”  。  
   
 9. 在 **“注册表复制”** 页上单击 **“添加”** ，以添加用来标识 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件位置的注册表项。 此文件必须位于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务所在资源组中的共享磁盘上。  
   
-10. 在“注册表项”对话框中，键入 SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile。 单击 **“确定”**，然后单击 **“完成”**。  
+10. 在“注册表项”   对话框中，键入 SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile。 单击 **“确定”** ，然后单击 **“完成”** 。  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务现已添加为群集资源。  
   
@@ -133,6 +133,6 @@ ms.locfileid: "65717899"
   
 ### <a name="to-bring-the-integration-services-service-online"></a>将 Integration Services 服务联机  
   
--   在“群集管理器”中选择 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，单击右键，然后在弹出菜单中选择“联机”。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务现已作为群集资源联机。  
+-   在  “群集管理器”中选择 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，单击右键，然后在弹出菜单中选择“联机”  。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务现已作为群集资源联机。  
   
   

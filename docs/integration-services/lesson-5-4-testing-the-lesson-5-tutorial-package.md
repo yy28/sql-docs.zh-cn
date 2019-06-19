@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc67c0a145b1ec32dc14cae8d56e538f14c2808e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721540"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>第 5-4 课：测试第 5 课包
@@ -24,9 +24,9 @@ ms.locfileid: "65721540"
 
 
 
-在运行时，包从配置变量中而非创建包时指定的目录名称中获取 Directory 属性的值。 该变量的值来自 SSISTutorial.dtsConfig XML 文件。  
+在运行时，包从配置变量中而非创建包时指定的目录名称中获取 Directory 属性的值  。 该变量的值来自 SSISTutorial.dtsConfig XML 文件  。  
   
-若要验证该包在运行时是否使用新值更新了 Directory 属性，请运行该包。 因为新目录中只有三个示例数据文件，所以数据流会运行三次。  
+若要验证该包在运行时是否使用新值更新了 Directory 属性，请运行该包  。 因为新目录中只有三个示例数据文件，所以数据流会运行三次。  
   
 ## <a name="checking-the-package-layout"></a>检查包布局  
 在测试包之前，请验证第 5 课包中的控件和数据流是否与下图中显示的对象类似：  
@@ -41,9 +41,9 @@ ms.locfileid: "65721540"
   
 ## <a name="test-the-lesson-5-package"></a>测试第 5 课包  
   
-1.  在“调试”菜单中，选择“启动调试”。  
+1.  在“调试”菜单中，选择“启动调试”   。  
   
-2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”。  
+2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”   。  
   
 ## <a name="next-lesson"></a>下一课  
 [第 6 课：在 SSIS 中对项目部署模型使用参数](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

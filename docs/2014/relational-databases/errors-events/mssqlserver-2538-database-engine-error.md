@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_2538 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 2538 (Database Engine error)
 ms.assetid: 0a0f7d79-f1ba-4749-8804-fb660cca3492
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36ba25f8653e3fd3f1287d8de5108af880f9ba7c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62914485"
 ---
 # <a name="mssqlserver2538"></a>MSSQLSERVER_2538
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>详细信息  
   
 |||  
@@ -34,8 +33,9 @@ ms.locfileid: "62914485"
 |消息正文|文件 FILE。 区数 = EXTENTS，已用页数 = USED_PAGES，保留页数 = RESERVED_PAGES。|  
   
 ## <a name="explanation"></a>解释  
-此信息是 DBCC CHECKALLOC 命令输出的一部分。 此信息是指定数据库的已分配区数、已用页数和保留页数的按文件摘要。  
+ 此信息是 DBCC CHECKALLOC 命令输出的一部分。 此信息是指定数据库的已分配区数、已用页数和保留页数的按文件摘要。  
   
 ## <a name="user-action"></a>用户操作  
-None  
+ None  
+  
   

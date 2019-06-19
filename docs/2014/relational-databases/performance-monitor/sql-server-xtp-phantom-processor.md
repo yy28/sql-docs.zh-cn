@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14c34bb0d7520b914d8dbfc1cfc8174341722ece
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150979"
 ---
 # <a name="xtp-phantom-processor"></a>XTP 虚拟处理器
@@ -22,7 +22,7 @@ ms.locfileid: "63150979"
   
  下表介绍**XTP 虚拟处理器**计数器。  
   
-|计数器|Description|  
+|计数器|描述|  
 |-------------|-----------------|  
 |**灰尘角扫描重试次数/秒（虚拟发出）**|在虚拟处理器发出的灰尘角扫描期间，由于写冲突而进行的每秒扫描重试次数（平均值）。 此为非常低级的计数器，不适合客户使用。|  
 |**删除的虚拟过期行数/秒**|虚拟扫描每秒删除的过期行数（平均值）。|  

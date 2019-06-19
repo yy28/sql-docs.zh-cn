@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723674"
 ---
 # <a name="install-integration-services"></a>安装集成服务
@@ -64,14 +64,14 @@ ms.locfileid: "65723674"
      
 如果使用安装向导安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，则会使用一系列页面来指定组件和选项。
 
--   在“功能选择”页的“共享功能”下，选择“Integration Services”。
+-   在“功能选择”页的“共享功能”下，选择“Integration Services”    。
 
--   在“实例功能”下，可根据需要选择“数据库引擎服务”，以托管 SSIS 目录数据库 `SSISDB`，并存储、管理、运行和监视 SSIS 包。
+-   在“实例功能”下，可根据需要选择“数据库引擎服务”，以托管 SSIS 目录数据库 `SSISDB`，并存储、管理、运行和监视 SSIS 包   。
 
--   要安装用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编程的托管程序集，仍需在“共享功能”下选中“客户端工具 SDK”。
+-   要安装用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编程的托管程序集，仍需在“共享功能”下选中“客户端工具 SDK”   。
 
 > [!NOTE]
-> 如果选择了可在安装向导的“功能选择”页上选择进行安装的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，则会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的部分子集。 这些组件可用于特定任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能会受到限制。 例如， **“数据库引擎服务”** 选项将安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 为确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 **“功能选择”** 页上选择“ **集成服务** ”。
+> 如果选择了可在安装向导的“功能选择”页上选择进行安装的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，则会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的部分子集  。 这些组件可用于特定任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能会受到限制。 例如， **“数据库引擎服务”** 选项将安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 为确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 **“功能选择”** 页上选择“ **集成服务** ”。
 
 ### <a name="installing-a-dedicated-server-for-etl-processes"></a>为 ETL 进程安装专用服务器
 
@@ -85,7 +85,7 @@ ms.locfileid: "65723674"
 
 要完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，请从以下列表中选择所需组件：
 
--   **Integration Services (SSIS)**。 使用 SQL Server 安装向导安装 SSIS。 选择 SSIS 会安装以下各项：
+-   **Integration Services (SSIS)** 。 使用 SQL Server 安装向导安装 SSIS。 选择 SSIS 会安装以下各项：
 
     -   对 SQL Server 数据库引擎上 SSIS 目录的支持。
 
@@ -93,11 +93,11 @@ ms.locfileid: "65723674"
 
     -   32 位和 64 位 SSIS 组件。
 
-    -   安装 SSIS 时不会安装设计和开发 SSIS 包所需的工具。
+    -   安装 SSIS 时不  会安装设计和开发 SSIS 包所需的工具。
 
 -   **SQL Server 数据库引擎**。 使用 SQL Server 安装向导安装数据库引擎。 通过选择“数据库引擎”，可创建并托管 SSIS 目录数据库 `SSISDB`，并存储、管理、运行和监视 SSIS 包。
 
--   **SQL Server Data Tools (SSDT)**。 要下载并安装 SSDT，请参阅[下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。 安装 SSDT 后，可设计和部署 SSIS 包。 SSDT 安装以下各项：
+-   **SQL Server Data Tools (SSDT)** 。 要下载并安装 SSDT，请参阅[下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。 安装 SSDT 后，可设计和部署 SSIS 包。 SSDT 安装以下各项：
 
     -   SSIS 包设计和开发工具，包括 SSIS 设计器。
 

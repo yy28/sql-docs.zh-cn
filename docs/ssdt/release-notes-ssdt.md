@@ -13,10 +13,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101905"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
@@ -48,9 +48,9 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
 ## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1，SSDT for VS 2017
 
-发布时间：&nbsp; 2019 年 4 月 27 日  
-生成号：&nbsp; 14.0.16191.0  
-SSDT for Visual Studio 2017。
+发布时间：  &nbsp; 2019 年 4 月 27 日  
+生成号：  &nbsp; 14.0.16191.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -79,9 +79,9 @@ SSDT for Visual Studio 2017。
 
 ## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0，SSDT for VS 2017
 
-发布时间：2019 年 1 月 28 日  
-生成号：14.0.16186.0  
-SSDT for Visual Studio 2017。
+发布时间：  2019 年 1 月 28 日  
+生成号：  14.0.16186.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -113,9 +113,9 @@ SSDT for Visual Studio 2017。
 
 ## <a name="1582nbsp-ssdt-for-vs-2017"></a>15.8.2，SSDT for VS 2017
 
-发布时间：2018 年 11 月 5 日  
-生成号：14.0.16182.0  
-SSDT for Visual Studio 2017。
+发布时间：  2018 年 11 月 5 日  
+生成号：  14.0.16182.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 **SSIS：**
@@ -129,9 +129,9 @@ SSDT for Visual Studio 2017。
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1，SSDT for VS 2017
 
-发布时间：2018 年 9 月 27 日  
-生成号：14.0.16179.0  
-SSDT for Visual Studio 2017。
+发布时间：  2018 年 9 月 27 日  
+生成号：  14.0.16179.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -149,9 +149,9 @@ SSDT for Visual Studio 2017。
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8，SSDT for VS 2017
 
-发布时间：2018 年 9 月 5 日  
-生成号：14.0.16174.0  
-SSDT for Visual Studio 2017。
+发布时间：  2018 年 9 月 5 日  
+生成号：  14.0.16174.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -172,9 +172,9 @@ SSDT for Visual Studio 2017。
 
 ## <a name="1571nbsp-ssdt-for-vs-2017"></a>15.7.1，SSDT for VS 2017
 
-发布时间：2018 年 7 月 2 日  
-生成号：14.0.16167.0  
-SSDT for Visual Studio 2017。
+发布时间：  2018 年 7 月 2 日  
+生成号：  14.0.16167.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -195,18 +195,18 @@ SSDT for Visual Studio 2017。
 
 ## <a name="1570nbsp-ssdt-for-vs-2017"></a>15.7.0，SSDT for VS 2017
 
-发布时间：2018 年 6 月 4 日  
-生成号：14.0.16165.0  
-SSDT for Visual Studio 2017。
+发布时间：  2018 年 6 月 4 日  
+生成号：  14.0.16165.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 
 **SSIS：**
 
-- 修复“选项”对话框中“Integration Services 设计器”页无法正常显示的问题。  
-- 修复“排序转换编辑器”编辑器中文本显示的亮度比问题。  
-- 修复尝试编辑组合框时“解决引用”对话框消失的问题。  
-- 修复“Hadoop 连接管理器”的 F1 帮助链接不起作用的问题。  
+- 修复“选项”对话框中“Integration Services 设计器”页无法正常显示的问题  。  
+- 修复“排序转换编辑器”编辑器中文本显示的亮度比问题  。  
+- 修复尝试编辑组合框时“解决引用”对话框消失的问题  。  
+- 修复“Hadoop 连接管理器”的 F1 帮助链接不起作用的问题  。  
 - 修复面向 SQL Server 2016 时位于容器中的脚本任务代码丢失的问题。  
 
 
@@ -216,13 +216,13 @@ SSDT for Visual Studio 2017。
 
 ### <a name="known-issues"></a>已知问题：
 
-- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试   。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
 ## <a name="1560nbsp-ssdt-for-vs-2017"></a>15.6.0，SSDT for VS 2017
 
-发布时间：2018 年 4 月 10 日  
-生成号：14.0.16162.0  
-SSDT for Visual Studio 2017。
+发布时间：  2018 年 4 月 10 日  
+生成号：  14.0.16162.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -249,8 +249,8 @@ SSDT for Visual Studio 2017。
 
 ## <a name="1552nbsp-ssdt-for-vs-2017"></a>15.5.2，SSDT for VS 2017
 
-生成号：14.0.16156.0  
-SSDT for Visual Studio 2017。
+生成号：  14.0.16156.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -268,12 +268,12 @@ SSDT for Visual Studio 2017。
 - 修复了下载有效负载有时失败，出现错误“系统找不到指定的文件 (0x80070002)”的问题。  
 
 ### <a name="known-issues"></a>已知问题
-- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试   。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
 ## <a name="1551nbsp-ssdt-for-vs-2017"></a>15.5.1，SSDT for VS 2017
 
-生成号：14.0.16148.0  
-SSDT for Visual Studio 2017。
+生成号：  14.0.16148.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -286,8 +286,8 @@ SSDT for Visual Studio 2017。
 
 ## <a name="1550nbsp-ssdt-for-vs-2017"></a>15.5.0，SSDT for VS 2017
 
-生成号：14.0.16146.0  
-SSDT for Visual Studio 2017。
+生成号：  14.0.16146.0  
+SSDT for Visual Studio 2017。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -313,8 +313,8 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 ## <a name="173nbsp-ssdt-for-vs-2015"></a>17.3，SSDT for VS 2015
 
-生成号：14.0.61712.050  
-SSDT for Visual Studio 2015。
+生成号：  14.0.61712.050  
+SSDT for Visual Studio 2015。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -362,8 +362,8 @@ SSDT for Visual Studio 2015。
 
 ## <a name="1540-previewnbsp-ssdt-for-vs-2017"></a>15.4.0（预览版），SSDT for VS 2017
 
-生成号：14.0.16134.0  
-SSDT for Visual Studio 2017。
+生成号：  14.0.16134.0  
+SSDT for Visual Studio 2017。 
   
 ### <a name="whats-new"></a>新增功能
 
@@ -390,13 +390,13 @@ SSDT for Visual Studio 2017。
 **已知问题**
 
 - 安装程序尚未本地化。
-- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试  。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
 
 ## <a name="1730nbsp-ssdt-for-vs-2015"></a>17.30，SSDT for VS 2015
 
-生成号：14.0.61709.290  
-SSDT for Visual Studio 2015。
+生成号：  14.0.61709.290  
+SSDT for Visual Studio 2015。 
 
 ### <a name="whats-new"></a>新增功能
 
@@ -421,15 +421,15 @@ SSDT for Visual Studio 2015。
 
 - 新的报表项目格式不会保留源代码管理绑定，并会引发与以下消息类似的错误：
 
-   项目文件 C:\path 未绑定到源代码管理，但该解决方案包含其中的源代码管理绑定信息。
+   项目文件 C:\path 未绑定到源代码管理，但该解决方案包含其中的源代码管理绑定信息。 
  
-   若要解决此问题，每当打开解决方案时，请单击“使用解决方案绑定”。
+   若要解决此问题，每当打开解决方案时，请单击“使用解决方案绑定”  。
 
 - 将项目升级到新的 MSBuild 格式后，保存可能会失败，消息类似于以下内容：
 
-   “参数 "unevaluatedValue" 不得为 null。”
+   “参数 "unevaluatedValue" 不得为 null。” 
 
-   若要解决此问题，请更新“项目配置”并填写“平台”属性。
+   若要解决此问题，请更新“项目配置”  并填写“平台”  属性。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
@@ -488,8 +488,8 @@ SSDT for Visual Studio 2015。
 
 ## <a name="1530-previewnbsp-ssdt-for-vs-2017"></a>15.3.0（预览版），SSDT for VS 2017
 
-生成号：14.0.16121.0  
-SSDT for Visual Studio 2017。
+生成号：  14.0.16121.0  
+SSDT for Visual Studio 2017。 
   
 ### <a name="whats-new"></a>新增功能
 
@@ -500,20 +500,20 @@ SSDT for Visual Studio 2017。
 
 - 安装程序尚未本地化。
 - SSIS 尚未本地化。
-- 当 ExecuteOutofProcess 设置为 True 时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+- 当 ExecuteOutofProcess 设置为 True 时，SSIS 执行包任务不支持调试   。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 - 不可将包含第三方扩展的 SSIS 包切换为面向其他服务器版本。
 
 
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2，SSDT for VS 2015
 
-生成号：14.0.61707.300  
-SSDT for Visual Studio 2015。
+生成号：  14.0.61707.300  
+SSDT for Visual Studio 2015。 
 
 ### <a name="whats-new"></a>新增功能
 
 
 **AS 项目：**
-- 现可在“角色”对话框中配置“对象级安全性”，便于在 1400 兼容级别表格模型中实现高级安全性。
+- 现可在“角色”  对话框中配置“对象级安全性”，便于在 1400 兼容级别表格模型中实现高级安全性。
 - 用于在适用于 VS2017 的 SSDT AS 项目中的 AS Azure 模型中无电子邮件地址用户的新的 AAD 角色成员选择。
 - SSDT AS 表格项目中新的 AS Azure“始终提示”项目属性，用于自定义 ADAL 凭据缓存的行为。
 
@@ -543,7 +543,7 @@ SSDT for Visual Studio 2015。
 - 修复了在某些情况下对 KPI 格式的编辑没有持续存在的问题。
 - 修复了 PowerQuery UI 在不论公式栏是否显示的情况下都显示错误的菜单已检查状态的问题。
 - 修复了具有 PowerQuery 数据源的 AS 表格 1400 兼容级别项目当从表格模型资源管理器中选择“更改数据源”菜单时，可能会导致 VS 崩溃的问题。
-- 修复了导致加载 1400 表格模型可能会显示错误“未能加载文件或程序集‘Microsoft.ProBI.MashupLibrary’”的间歇性问题。
+- 修复了导致加载 1400 表格模型可能会显示错误“未能加载文件或程序集‘Microsoft.ProBI.MashupLibrary’”的间歇性问题  。
 
 **RS 项目**
 - RS“标尺”和“参数”框设置选择状态的用户首选项在会话中会被正确记住。
@@ -551,12 +551,12 @@ SSDT for Visual Studio 2015。
 **IS 项目**
 - 修复了 ADO/ADO.NET ForEachLoop 容器未正确显示的问题
 - 修复了某些任务/组件/向导未本地化的问题
-- 将最新 TargetServerVersion 从“SQL Server vNext”更改为“SQL Server 2017”
+- 将最新 TargetServerVersion 从“SQL Server vNext”更改为“SQL Server 2017” 
 
 ## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10，SSDT for VS 2015
 
-生成号：14.0.61705.170  
-SSDT for Visual Studio 2015。
+生成号：  14.0.61705.170  
+SSDT for Visual Studio 2015。 
 
 ### <a name="whats-new"></a>新增功能
 **AS 项目：**
@@ -589,9 +589,9 @@ SSDT for Visual Studio 2015。
 
 ## <a name="170nbsp-ssdt-for-vs-2015"></a>17.0，SSDT for VS 2015
 
-生成号：14.0.61704.140  
-SSDT for Visual Studio 2015。  
-最高支持 SQL Server 2017。
+生成号：  14.0.61704.140  
+SSDT for Visual Studio 2015。   
+最高支持 SQL Server 2017。 
 
 ### <a name="whats-new"></a>新增功能
 **数据库项目：**
@@ -693,18 +693,18 @@ SSDT for Visual Studio 2015。
 
 ## <a name="165nbsp-ssdt-for-vs-2015"></a>16.5，SSDT for VS 2015
 
-发布时间：2016 年 10 月 20 日  
-生成号：14.0.61021.0  
-SSDT for Visual Studio 2015。  
-最高支持 SQL Server 2016。
+发布时间：  2016 年 10 月 20 日  
+生成号：  14.0.61021.0  
+SSDT for Visual Studio 2015。   
+最高支持 SQL Server 2016。 
 
 **新增功能**
 
 
 ### <a name="connection-improvements"></a>连接改进
 
-* “浏览”选项卡中的新搜索框可帮助你筛选本地服务器、网络服务器和 Azure SQL 数据库。 如果这些列表中显示了大量的服务器或数据库，此功能将十分有用。
-* “历史记录”选项卡中包含右键菜单选项用于固定/取消固定收藏项目，并提供一个新选项用于从历史记录中删除连接。
+* “浏览”选项卡中的新搜索框可帮助你筛选本地服务器、网络服务器和 Azure SQL 数据库。  如果这些列表中显示了大量的服务器或数据库，此功能将十分有用。
+* “历史记录”选项卡中包含右键菜单选项用于固定/取消固定收藏项目，并提供一个新选项用于从历史记录中删除连接。 
 
 ### <a name="sqlpackage-and-dacfx-api-improvements"></a>SqlPackage 和 DacFx API 改进
 
@@ -786,9 +786,9 @@ Console.WriteLine(result.DeploymentReport);
 
 ## <a name="164-ssdt-for-vs-2015"></a>16.4，SSDT for VS 2015
 
-发布时间：2016 年 9 月 20 日  
-生成号：14.0.60918  
-适用于 SQL Server 2016。
+发布时间：  2016 年 9 月 20 日  
+生成号：  14.0.60918  
+适用于 SQL Server 2016。 
 
 **新增功能**
 
@@ -825,9 +825,9 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
 ## <a name="163nbsp-ssdt-for-vs-2015"></a>16.3，SSDT for VS 2015
 
-发布时间：2016 年 8 月 15 日  
-生成号：14.0.60812.0  
-适用于 SQL Server 2016。
+发布时间：  2016 年 8 月 15 日  
+生成号：  14.0.60812.0  
+适用于 SQL Server 2016。 
 
 **新增功能**
 
@@ -863,9 +863,9 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
 ## <a name="july-2016nbsp-ssdt-for-vs-2015"></a>2016 年 7 月，SSDT for VS 2015
 
-发布时间：2016 年 6 月 30 日  
-生成号：14.0.60629.0  
-适用于 SQL Server 2016。
+发布时间：  2016 年 6 月 30 日  
+生成号：  14.0.60629.0  
+适用于 SQL Server 2016。 
 
 **新增功能**  
 - **Always Encrypted 支持：** 对于包含 Always Encrypted 列的数据库，此发行版通过我们的核心 API 和命令行工具 (SqlPackage.exe) 添加了对 Always Encrypted 的完全支持。 你可以生成并发布完全支持所有 Always Encrypted 功能的数据库项目。  
@@ -907,9 +907,9 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
 ## <a name="june-2016nbsp-ssdt-for-vs-2015"></a>2016 年 6 月，SSDT for VS 2015
 
-发布时间：2016 年 6 月 1 日  
-生成号：14.0.60525.0  
-适用于 SQL Server 2016。
+发布时间：  2016 年 6 月 1 日  
+生成号：  14.0.60525.0  
+适用于 SQL Server 2016。 
 
 SSDT 正式版 (GA) 现已发布。 2016 年 6 月 SSDT GA 更新添加了对 SQL Server 2016 RTM 最新更新的支持，并修复了多个 bug。 有关详细信息，请参阅 [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)（SQL Server Data Tools GA 2016 年 6 月更新）。
 

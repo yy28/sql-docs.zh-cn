@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 391a47edc45145bac21ce351e36c613f2a76addd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716105"
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values（SSISDB 数据库）
@@ -38,17 +38,17 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name  
- 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
+ [ @folder_name = ] folder_name   
+ 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [ @project_name = ] project_name  
- 参数所在的项目的名称。 *project_name* 为 **nvarchar(128)**。  
+ [ @project_name = ] project_name   
+ 参数所在的项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
- [ @package_name = ] package_name  
- 包的名称。 指定包名称，以便从特定包中检索所有项目参数和参数。 使用 NULL 可以从所有包中检索所有项目参数和参数。 package_name 为 nvarchar(260)。  
+ [ @package_name = ] package_name   
+ 包的名称。 指定包名称，以便从特定包中检索所有项目参数和参数。 使用 NULL 可以从所有包中检索所有项目参数和参数。 package_name  为 nvarchar(260)  。  
   
- [ @reference_id = ] reference_id  
- 环境引用的唯一标识符。 此参数可选。 reference_id 为 bigint。  
+ [ @reference_id = ] reference_id   
+ 环境引用的唯一标识符。 此参数可选。 reference_id 为 bigint   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -67,7 +67,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |value_set|**bit**|如果值为 `1`，则已分配参数值。 如果值为 `0`，则尚未分配参数值。|  
   
 > [!NOTE]  
->  以纯文本形式显示文本值。 将显示 NULL 来替代敏感值。  
+>  以纯文本形式显示文本值。 将显示 NULL  来替代敏感值。  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

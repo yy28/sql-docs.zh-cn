@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e587cfdac199558e9ef15cedfe53592f415d0b5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724655"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>在数据流组件中记录和定义日志条目
@@ -72,7 +72,7 @@ End Sub
   
  上面的示例使用 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>，因为组件希望每执行一次记录一条。  
   
- 注册自定义日志项目并将自定义组件的实例添加到数据流设计器图面后，设计器中的“日志记录”对话框在可用日志项目列表中显示名为“我的自定义组件日志项目”的新日志项目。  
+ 注册自定义日志项目并将自定义组件的实例添加到数据流设计器图面后，设计器中的“日志记录”对话框在可用日志项目列表中显示名为“我的自定义组件日志项目”的新日志项目  。  
   
 ### <a name="logging-to-a-custom-log-entry"></a>记录到自定义日志条目  
  注册完自定义日志条目后，组件即可记录自定义消息。 下面的示例在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 方法的执行过程中写入自定义日志条目，其中包含组件所使用的 SQL 语句文本。  
@@ -100,7 +100,7 @@ Public  Overrides Sub PreExecute()
 End Sub  
 ```  
   
- 现在，当用户执行包时，在“日志记录”对话框中选择“我的自定义组件日志项目”后，日志将包含明确标记为“User::My Custom Component Log Entry”的条目。 此新日志条目包含 SQL 语句文本、时间戳和开发人员记录的所有其他数据。  
+ 现在，当用户执行包时，在“日志记录”对话框中选择“我的自定义组件日志项目”后，日志将包含明确标记为“User::My Custom Component Log Entry”的条目  。 此新日志条目包含 SQL 语句文本、时间戳和开发人员记录的所有其他数据。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 日志记录](../../../integration-services/performance/integration-services-ssis-logging.md)  

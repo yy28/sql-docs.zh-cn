@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6788b27f4260905c18487866d22fe9434f34b5ff
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097547"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
@@ -28,7 +28,7 @@ ms.locfileid: "65097547"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”  。  
   
 **本主题内容**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65097547"
   
 -   通过执行 sp_start_job 存储过程。  
   
-作业中的每个操作都是一个“作业步骤” 。 例如，作业步骤可以运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、执行 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包或向 Analysis Services 服务器发出命令。 作业步骤作为作业的一部分进行管理。  
+作业中的每个操作都是一个“作业步骤”  。 例如，作业步骤可以运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、执行 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包或向 Analysis Services 服务器发出命令。 作业步骤作为作业的一部分进行管理。  
   
 所有作业步骤均在特定的安全上下文中运行。 对于使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的作业步骤，请使用 EXECUTE AS 语句设置作业步骤的安全上下文。 对于其他类型的作业步骤，请使用代理帐户来设置作业步骤的安全上下文。  
   

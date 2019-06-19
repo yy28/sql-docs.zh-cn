@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 48712714fb837a769153870404257403184087c0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096680"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>定义对警报的响应 (SQL Server Management Studio)
@@ -66,19 +66,19 @@ ms.locfileid: "65096680"
   
 1.  在 **“对象资源管理器”** 中，单击加号以便展开包含您要对其定义响应的警报的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击要对其定义响应的警报，然后选择“属性”。  
+4.  右键单击要对其定义响应的警报，然后选择“属性”  。  
   
-5.  在“_alert\_name_ 警报属性”对话框的“选择页”下，选择“响应”。  
+5.  在“_alert\_name_ 警报属性”  对话框的“选择页”  下，选择“响应”  。  
   
-6.  选中 **“执行作业”** 复选框，然后从 **“执行作业”** 复选框下的列表中选择出现警报时执行的作业。 您可以单击 **“新建作业”** 来创建新的作业。 也可以单击 **“查看作业”** 查看有关作业的详细信息。 有关“新建作业”和“作业属性 _job\_name_”对话框中的可用选项的详细信息，请参阅[创建作业](../../ssms/agent/create-a-job.md)和[查看作业](../../ssms/agent/view-a-job.md)。  
+6.  选中 **“执行作业”** 复选框，然后从 **“执行作业”** 复选框下的列表中选择出现警报时执行的作业。 您可以单击 **“新建作业”** 来创建新的作业。 也可以单击 **“查看作业”** 查看有关作业的详细信息。 有关“新建作业”  和“作业属性 _job\_name_”  对话框中的可用选项的详细信息，请参阅[创建作业](../../ssms/agent/create-a-job.md)和[查看作业](../../ssms/agent/view-a-job.md)。  
   
-7.  如果要在激活警报时通知操作员，请选中 **“通知操作员”** 复选框。 在“操作员”列表中，选择以下一种或多种方法用于通知操作员：“电子邮件”、“寻呼机”或“Net Send”。 您可以单击 **“新建操作员”** 创建新的操作员。 也可以单击 **“查看操作员”** 查看有关操作员的详细信息。 有关 **“新建操作员”** 和 **“查看操作员属性”** 对话框中的可用选项的详细信息，请参阅 [Create an Operator](../../ssms/agent/create-an-operator.md) 和 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)。  
+7.  如果要在激活警报时通知操作员，请选中 **“通知操作员”** 复选框。 在“操作员”列表中，选择以下一种或多种方法用于通知操作员  ：“电子邮件”、“寻呼机”或“Net Send”    。 您可以单击 **“新建操作员”** 创建新的操作员。 也可以单击 **“查看操作员”** 查看有关操作员的详细信息。 有关 **“新建操作员”** 和 **“查看操作员属性”** 对话框中的可用选项的详细信息，请参阅 [Create an Operator](../../ssms/agent/create-an-operator.md) 和 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)。  
   
-8.  完成后，单击 **“确定”**。  
+8.  完成后，单击 **“确定”** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -86,9 +86,9 @@ ms.locfileid: "65096680"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- adds an e-mail notification for Test Alert.  

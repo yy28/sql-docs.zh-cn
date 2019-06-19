@@ -1,6 +1,6 @@
 ---
 title: Polygon | Microsoft Docs
-ms.date: 03/06/2017
+ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,17 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8818d5b8b97e6bef9df2a4e2d9b550e2cbbc980c
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65936388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66761446"
 ---
 # <a name="polygon"></a>Polygon
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   **Polygon** 是存储为一系列点的二维表面，这些点定义一个外部边界环和零个或多个内部环。  
   
 ## <a name="polygon-instances"></a>Polygon 实例  
@@ -107,11 +109,13 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
 ## <a name="examples"></a>示例  
 ### <a name="example-a"></a>示例 A。  
-下面的示例创建了一个带有孔和 SRID 为 10 的简单 `geometry``Polygon` 实例。  
+以下示例创建了一个带有间隙和 SRID 为 10 的简单 `geometry` `Polygon` 实例。
   
 ```sql  
 DECLARE @g geometry;  
-SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
+SET @g = geometry::STPolyFromText(
+    'POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))',
+    10);
 ```  
   
 
@@ -120,7 +124,9 @@ SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2,
   
 ```sql  
 DECLARE @g geometry;  
-SET @g = geometry::Parse('POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))');  
+SET @g = geometry::Parse(
+    'POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))'
+    );  
 ```  
   
 ### <a name="example-c"></a>示例 C.  
@@ -134,7 +140,8 @@ SELECT @g.ToString();
 以上示例中返回的 `geometry` 实例为 `MultiPolygon`。  
   
 ```sql  
-MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))  
+MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)),
+              ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))
 ```  
   
 ### <a name="example-d"></a>示例 D。  

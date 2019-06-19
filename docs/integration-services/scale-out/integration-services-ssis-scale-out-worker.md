@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: bb649888638ec4e194d64679b73fc69806664fc3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718464"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
@@ -31,8 +31,8 @@ Scale Out Worker 运行 Scale Out Worker 服务以从 Scale Out Master 中请求
 
 |配置  |描述  |默认值|
 |---------|---------|---------|
-|DisplayName|Scale Out Worker 的显示名称。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。|计算机名称|
-|描述|Scale Out Worker 的说明。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。|Empty|
+|DisplayName|Scale Out Worker 的显示名称。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。 |计算机名称|
+|描述|Scale Out Worker 的说明。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。 |Empty|
 |MasterEndpoint|连接到 Scale Out Master 的终结点。|该终结点在 Scale Out Worker 安装期间设置|
 |MasterHttpsCertThumbprint|用于对 Scale Out Master 进行身份验证的客户端 SSL 证书的指纹|客户端证书的指纹在 Scale Out Worker 安装期间指定。|
 |WorkerHttpsCertThumbprint|用于对 Scale Out Worker 进行身份验证的 Scale Out Master 证书的指纹。|证书的指纹在 Scale Out Worker 安装期间自动创建并安装|
@@ -62,7 +62,7 @@ Scale Out Worker 服务的日志文件位于 `\<drive\>:\Users\\[account]\AppDat
 
 在 `TasksRootFolder` 的 `WorkerSettings.config` 文件中配置每项单独任务的日志位置。 如果未指定值，则日志位于 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` 文件夹。 
 
-[account] 参数是运行 Scale Out Worker 服务的帐户。 默认情况下，该帐户为 `SSISScaleOutWorker140`。
+[account] 参数是运行 Scale Out Worker 服务的帐户  。 默认情况下，该帐户为 `SSISScaleOutWorker140`。
 
 ## <a name="next-steps"></a>后续步骤
 [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)

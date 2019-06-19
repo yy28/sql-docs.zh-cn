@@ -27,10 +27,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 072a0506d4dad9aad762cae77cad97a3bf16bdd3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717869"
 ---
 # <a name="set-package-properties"></a>设置包属性
@@ -60,7 +60,7 @@ ms.locfileid: "65717869"
   
 -   [版本(Version)](#Version)  
   
- 有关不能在“属性”窗口中设置的其他包属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
+ 有关不能在“属性”  窗口中设置的其他包属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>在“属性”窗口中设置包属性  
   
@@ -113,7 +113,7 @@ ms.locfileid: "65717869"
 |**CreatorComputerName**|创建包的计算机的名称。|  
 |**CreatorName**|包创建者的姓名。|  
 |**Description**|包功能说明。|  
-|**ID**|包 GUID，该属性是在创建包时分配的。 该属性为只读。 若要生成 **ID** 属性的新随机值，请在下拉列表中选择 \<“生成新 ID”\>。|  
+|**ID**|包 GUID，该属性是在创建包时分配的。 该属性为只读。 若要生成 **ID** 属性的新随机值，请在下拉列表中选择 \<“生成新 ID”\>  。|  
 |**名称**|包的名称。|  
 |**PackageType**|包类型。 其值为： **Default**、 **DTSDesigner**、 **DTSDesigner100**、 **DTSWizard**、 **SQLDBMaint**和 **SQLReplication**。 此属性的默认值为 **Default**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>。|  
   
@@ -122,8 +122,8 @@ ms.locfileid: "65717869"
   
 |属性|描述|  
 |--------------|-----------------|  
-|**配置**|包使用的配置集合。 单击浏览按钮 (…) 可以查看和配置包配置。|  
-|**表达式**|单击浏览按钮 (…) 可以为包属性创建表达式。<br /><br /> 请注意，你可以为对象模型包含的所有包属性（而不仅仅是“属性”窗口中列出的属性）创建属性表达式。<br /><br /> 有关详细信息，请参阅[在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 **Expressions**。 单击表达式文本框中的浏览按钮 (…) 可以修改和计算表达式。|  
+|**配置**|包使用的配置集合。 单击浏览按钮 (…) 可以查看和配置包配置  。|  
+|**表达式**|单击浏览按钮 (…) 可以为包属性创建表达式  。<br /><br /> 请注意，你可以为对象模型包含的所有包属性（而不仅仅是“属性”窗口中列出的属性）创建属性表达式。<br /><br /> 有关详细信息，请参阅[在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 **Expressions**。 单击表达式文本框中的浏览按钮 (…) 可以修改和计算表达式  。|  
 |**ForceExecutionResult**|包的执行结果。 其值为： **None**、 **Success**、 **Failure**和 **Completion**。 此属性的默认值为 **None**。 有关详细信息，请参阅 T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult。|  
 |**LocaleId**|Microsoft Win32 区域设置。 此属性的默认值为本地计算机上操作系统的区域设置。|  
 |**LoggingMode**|指定包日志记录行为的值。 具体的值为 **Disabled**、 **Enabled**和 **UseParentSetting**。 此属性的默认值为 **UseParentSetting**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>。|  
@@ -144,7 +144,7 @@ ms.locfileid: "65717869"
   
 |属性|描述|  
 |--------------|-----------------|  
-|**IsolationLevel**|包事务的隔离级别。 其值为： **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**和 **Snapshot**。 此属性的默认值为 **Serializable**。<br /><br /> 注意：IsolationLevel 属性的 Snapshot 值与包事务不兼容。 因此，您无法使用 **IsolationLevel** 属性将包事务的隔离级别设为 **Shapshot**。 而是使用 SQL 查询将包事务设为 **Snapshot**。 有关详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。<br /><br /> 仅当 **IsolationLevel** 属性的值设为 **TransactionOption** 时，系统才将 **Required**属性应用到包事务。<br /><br /> 在以下条件成立时，将忽略子容器请求的 **IsolationLevel** 属性的值：<br />子容器的 **TransactionOption** 属性的值为 **Supported**。<br />子容器联接父容器的事务。<br /><br /> 只有在容器开始新的事务时，才遵从该容器请求的 **IsolationLevel** 属性的值。 在以下条件成立时，容器将开始新的事务：<br />容器的 **TransactionOption** 属性的值为 **Required**。<br />父级已开始一个事务。<br /><br /> <br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
+|**IsolationLevel**|包事务的隔离级别。 其值为： **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**和 **Snapshot**。 此属性的默认值为 **Serializable**。<br /><br /> 注意：IsolationLevel  属性的 Snapshot  值与包事务不兼容。 因此，您无法使用 **IsolationLevel** 属性将包事务的隔离级别设为 **Shapshot**。 而是使用 SQL 查询将包事务设为 **Snapshot**。 有关详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。<br /><br /> 仅当 **IsolationLevel** 属性的值设为 **TransactionOption** 时，系统才将 **Required**属性应用到包事务。<br /><br /> 在以下条件成立时，将忽略子容器请求的 **IsolationLevel** 属性的值：<br />子容器的 **TransactionOption** 属性的值为 **Supported**。<br />子容器联接父容器的事务。<br /><br /> 只有在容器开始新的事务时，才遵从该容器请求的 **IsolationLevel** 属性的值。 在以下条件成立时，容器将开始新的事务：<br />容器的 **TransactionOption** 属性的值为 **Required**。<br />父级已开始一个事务。<br /><br /> <br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |**TransactionOption**|包的事务参与情况。 其值为： **NotSupported**、 **Supported**、 **Required**。 此属性的默认值为 **Supported**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>。|  
   
 ###  <a name="Version"></a> 版本  
@@ -161,13 +161,13 @@ ms.locfileid: "65717869"
 ## <a name="set-package-properties-in-the-properties-window"></a>在“属性”窗口中设置包属性 
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开要配置的包所在的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在“解决方案资源管理器”中双击此包，将其在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开，或者右键单击并选择“视图设计器”。  
+2.  在  “解决方案资源管理器”中双击此包，将其在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开，或者右键单击并选择“视图设计器”  。  
   
 3.  单击 **“控制流”** 选项卡，然后执行下列操作之一：  
   
-    -   右键单击控制流设计图面背景中的任意位置，然后单击“属性”。  
+    -   右键单击控制流设计图面背景中的任意位置，然后单击“属性”  。  
   
-    -   在 **“视图”** 菜单上，单击 **“属性窗口”**。  
+    -   在 **“视图”** 菜单上，单击 **“属性窗口”** 。  
   
 4.  在 **“属性”** 窗口中编辑包属性。  
   

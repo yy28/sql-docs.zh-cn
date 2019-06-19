@@ -23,10 +23,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 64702cde504d2c79d96297649799c2205b01725c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105714"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 编辑器 (Visual Database Tools)
@@ -41,7 +41,7 @@ SQL 编辑器提供了许多有用的 SQL 文本编辑功能，包括：
   
 -   提供有用的编辑功能，包括剪切、复制、粘贴和拖动操作。  
   
--   更改编辑器的行为（在“工具”菜单中选择“选项”）以修改虚空格、自动换行、行号和制表符大小。  
+-   更改编辑器的行为（在“工具”  菜单中选择“选项”  ）以修改虚空格、自动换行、行号和制表符大小。  
   
 -   帮助管理调试断点。  
   

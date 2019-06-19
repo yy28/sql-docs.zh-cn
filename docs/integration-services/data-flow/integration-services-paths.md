@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d66c98acec072ff2ce3afa4fb2ecfb0236f05ec
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726875"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
@@ -42,7 +42,7 @@ ms.locfileid: "65726875"
   
  可配置的路径属性有路径的名称、说明和批注。 还可以用编程的方式配置路径。 有关详细信息，请参阅 [以编程方式连接数据流组件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
   
- 路径批注显示路径源的名称或 **设计器中** “数据流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡的设计图面上的路径名称。 路径批注与可以添加到数据流、控制流和事件处理程序的批注类似， 唯一区别是路径批注附加到路径，而其他批注则显示在 **设计器的**“数据流” **、**“控制流” **和**“事件处理程序” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上。  
+ 路径批注显示路径源的名称或 **设计器中** “数据流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡的设计图面上的路径名称。 路径批注与可以添加到数据流、控制流和事件处理程序的批注类似， 唯一区别是路径批注附加到路径，而其他批注则显示在 **设计器的**“数据流” **、** “控制流” **和**“事件处理程序” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上。  
   
  元数据显示前一组件的输出中每一列的名称、数据类型、精度、小数位数、长度、代码页和源组件。 源组件是创建此列的数据流组件。 这可能是数据流中的第一个组件，也可能不是。 例如，Union All 和排序转换创建自己的列，并且是其输出列的源。 反之，复制列转换则可以不加更改地传递列，或者通过复制输入列来创建新列。 复制列转换仅是新列的源组件。  
 
@@ -53,11 +53,11 @@ ms.locfileid: "65726875"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“数据流”选项卡，然后双击路径。  
+3.  单击“数据流”  选项卡，然后双击路径。  
   
-4.  在 **“数据流路径编辑器”** 中，单击 **“常规”**。 然后，可以编辑默认的路径名称并提供路径说明。 还可以修改 PathAnnotation 属性。  
+4.  在 **“数据流路径编辑器”** 中，单击 **“常规”** 。 然后，可以编辑默认的路径名称并提供路径说明。 还可以修改 PathAnnotation 属性。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
@@ -139,16 +139,16 @@ ms.locfileid: "65726875"
  列出数据查看器的类型。  
   
  **“添加”**  
- 单击此项可使用“配置数据查看器”对话框来添加数据查看器。  
+ 单击此项可使用“配置数据查看器”  对话框来添加数据查看器。  
   
  **删除**  
  单击此项可删除所选数据查看器。  
   
  **配置**  
- 单击此项可使用“配置数据查看器”对话框来配置所选数据查看器。  
+ 单击此项可使用“配置数据查看器”  对话框来配置所选数据查看器。  
  
 ## <a name="path-properties"></a>Path Properties
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
   
  本主题列出并描述了连接数据流对象的路径的自定义属性。  
   

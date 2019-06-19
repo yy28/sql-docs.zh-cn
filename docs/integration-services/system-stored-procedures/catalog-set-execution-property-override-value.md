@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a12576e083a30a939964803687198ae0842fb73
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715855"
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value 
@@ -37,20 +37,20 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id = ] execution_id  
- 执行实例的唯一标识符。 execution_id 为 bigint。  
+ [ @execution_id = ] execution_id   
+ 执行实例的唯一标识符。 execution_id 为 bigint   。  
   
  [ @property_path = ] *property_path*  
- 指向包中属性的路径。 *property_path* 为 **nvarchar(4000)**。  
+ 指向包中属性的路径。 *property_path* 为 **nvarchar(4000)** 。  
   
- [ @property_value = ] property_value  
- 要赋给该属性的覆盖值。 *property_value* 为 **nvarchar(max)**。  
+ [ @property_value = ] property_value   
+ 要赋给该属性的覆盖值。 *property_value* 为 **nvarchar(max)** 。  
   
- [ @sensitive = ] sensitive  
+ [ @sensitive = ] sensitive   
  当值为 1 时，属性是敏感的并在存储时加密。 当值为 0 时，属性是不敏感的并以纯文本形式存储值。 *sensitive* 参数为 **bit**。  
   
 ## <a name="remarks"></a>Remarks  
- 此过程执行的功能与“执行包”对话框上“高级”选项卡中的“属性重写”部分执行的功能相同。 该属性的路径从包任务的“包路径”属性派生。  
+ 此过程执行的功能与“执行包”  对话框上“高级”  选项卡中的“属性重写”  部分执行的功能相同。 该属性的路径从包任务的“包路径”  属性派生。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 993e46a9795aa8528f4e1a1744dbf9dd5b27f89f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488909"
 ---
 # <a name="merge-conflicts-master-data-services"></a>合并冲突 (Master Data Services)
@@ -24,7 +24,7 @@ ms.locfileid: "65488909"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果你尝试发布的数据已被另一个用户更改，则发布将失败并显示冲突错误。 若要解决此错误，可以执行合并冲突，然后重新发布更改。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -45,7 +45,7 @@ ms.locfileid: "65488909"
   
     -   选择“你的变更”  ，然后单击“应用  以保留现有的本地更改。  
   
-4.  单击“应用” 后，可以进行其他更改，并再次发布。 或者，可以单击“取消”  以取消更新并从服务器重新加载最新的版本。  
+4.  单击“应用”  后，可以进行其他更改，并再次发布。 或者，可以单击“取消”  以取消更新并从服务器重新加载最新的版本。  
   
 ## <a name="see-also"></a>请参阅  
  [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)  

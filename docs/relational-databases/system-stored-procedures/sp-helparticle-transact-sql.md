@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017806"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
-`[ @article = ] 'article'` 是发布中的名称。 *文章*是**sysname**，默认值为**%**。 如果*一文*是未提供，则返回指定发布的所有项目的信息。  
+`[ @article = ] 'article'` 是发布中的名称。 *文章*是**sysname**，默认值为 **%** 。 如果*一文*是未提供，则返回指定发布的所有项目的信息。  
   
 `[ @returnfilter = ] returnfilter` 指定是否应返回筛选子句。 *returnfilter*是**位**，默认值为**1**，表示返回筛选器子句。  
   
@@ -64,7 +64,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**base object**|**nvarchar(257)**|项目或存储过程所表示的基础表的名称。|  
 |**目标对象**|**sysname**|目标（订阅）表的名称。|  
 |**同步对象**|**nvarchar(257)**|用于定义已发布项目的视图的名称。|  
-|**类型**|**smallint**|项目的类型：<br /><br /> **1** = 基于日志的。<br /><br /> **3** = 基于日志的具有手动筛选器。<br /><br /> **5** = 具有手动视图并且基于日志。<br /><br /> **7** = 具有手动筛选器和手动视图并且基于日志。<br /><br /> **8** = 存储过程执行。<br /><br /> **24** = 可序列化的存储的过程执行。<br /><br /> **32** = 存储过程 （仅限架构）。<br /><br /> **64** = 视图 （仅限架构）。<br /><br /> **96** = 聚合函数 （仅限架构）。<br /><br /> **128** = 函数 （仅限架构）。<br /><br /> **257** = 基于日志的索引的视图。<br /><br /> **259** = 具有手动筛选器基于日志的索引的视图。<br /><br /> **261** = 具有手动视图并且基于日志的索引的视图。<br /><br /> **263** = 具有手动筛选器基于日志的索引的视图和手动视图。<br /><br /> **320** = 索引视图 （仅限架构）。<br /><br />|  
+|**type**|**smallint**|项目的类型：<br /><br /> **1** = 基于日志的。<br /><br /> **3** = 基于日志的具有手动筛选器。<br /><br /> **5** = 具有手动视图并且基于日志。<br /><br /> **7** = 具有手动筛选器和手动视图并且基于日志。<br /><br /> **8** = 存储过程执行。<br /><br /> **24** = 可序列化的存储的过程执行。<br /><br /> **32** = 存储过程 （仅限架构）。<br /><br /> **64** = 视图 （仅限架构）。<br /><br /> **96** = 聚合函数 （仅限架构）。<br /><br /> **128** = 函数 （仅限架构）。<br /><br /> **257** = 基于日志的索引的视图。<br /><br /> **259** = 具有手动筛选器基于日志的索引的视图。<br /><br /> **261** = 具有手动视图并且基于日志的索引的视图。<br /><br /> **263** = 具有手动筛选器基于日志的索引的视图和手动视图。<br /><br /> **320** = 索引视图 （仅限架构）。<br /><br />|  
 |**status**|**tinyint**|可以是[& （位与）](../../t-sql/language-elements/bitwise-and-transact-sql.md)的一个或多个项目属性的结果：<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = 项目处于活动状态。<br /><br /> **0x08** = 包括 insert 语句中的列名称。<br /><br /> **0x16** = 使用参数化语句。<br /><br /> **0x32** = 使用参数化语句，并在 insert 语句中包括的列名称。|  
 |**filter**|**nvarchar(257)**|用于水平筛选表的存储过程。 必须已使用 FOR REPLICATION 子句创建了此存储过程。|  
 |**description**|**nvarchar(255)**|项目的说明项。|  

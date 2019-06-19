@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28d2381c82bc8c1dfe324b396431397a8cea1694
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723799"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>“预览数据”对话框（SQL Server 导入和导出向导）
@@ -35,17 +35,17 @@ ms.locfileid: "65723799"
  **数据源**  
 显示向导用于从数据源加载数据的查询。
 
-如果选择了要复制的表格，则“源”字段会显示 `SELECT * FROM <table>` 查询，而不是表名称。 
+如果选择了要复制的表格，则“源”字段会显示 `SELECT * FROM <table>` 查询，而不是表名称  。 
   
  **示例数据网格**  
  显示查询从数据源返回的示例数据（最多 200 行）。  
 
 
 ## <a name="thats-not-right-i-want-to-change-something"></a>这不正确，我想要更改某些内容
-预览数据后，你可能想更改之前在向导页面中选择的选项。 要进行这些更改，请单击“确定”，返回到“选择源表和视图”页，然后单击“后退”返回到前面可以更改选项的页面。
+预览数据后，你可能想更改之前在向导页面中选择的选项。 要进行这些更改，请单击“确定”，返回到“选择源表和视图”页，然后单击“后退”返回到前面可以更改选项的页面    。
 
 ## <a name="whats-next"></a>下一步是什么？  
- 预览要复制的数据并单击“确定” 后，“预览数据”  对话框将返回到“选择源表和源视图”  页或“配置平面文件目标”  页。 有关详细信息，请参阅 [选择源表和源视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 或 [配置平面文件目标](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
+ 预览要复制的数据并单击“确定”  后，“预览数据”  对话框将返回到“选择源表和源视图”  页或“配置平面文件目标”  页。 有关详细信息，请参阅 [选择源表和源视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 或 [配置平面文件目标](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
  
  ## <a name="see-also"></a>另请参阅
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

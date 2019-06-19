@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19c69aa1a1ab27e7498d3c9d6a0d52c25b9f0020
-ms.sourcegitcommit: c2a5bed031b14f66562f792a3afaefab8c759fda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66826828"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表格模型的兼容性级别
@@ -68,7 +68,7 @@ ms.locfileid: "66826828"
 > [!NOTE]  
 >  在 SSMS 中，当连接到 SQL Server Analysis Services 服务器、 Azure Analysis Services 服务器或 Power BI Premium 工作区中，支持的兼容级别属性将显示 1200年。 这是一个已知的问题，会在即将发布的 SSMS 中解决更新。 解析时，此属性将显示最高支持的兼容级别。 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维数据库的兼容性级别](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [What's new in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
  [创建新的表格模型项目](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  

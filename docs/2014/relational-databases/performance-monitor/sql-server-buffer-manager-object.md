@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250763"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server Buffer Manager 对象
@@ -40,7 +40,7 @@ ms.locfileid: "63250763"
 ## <a name="buffer-manager-performance-objects"></a>缓冲区管理器性能对象  
  下表描述了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** 性能对象。  
   
-|SQL Server Buffer Manager 计数器|Description|  
+|SQL Server Buffer Manager 计数器|描述|  
 |----------------------------------------|-----------------|  
 |**缓冲区缓存命中率**|指示在缓冲区高速缓存中找到而不需要从磁盘中读取的页的百分比。 该比率是缓存命中总次数与过去几千页访问以来的缓存查找总次数之比。 经过很长时间后，该比率的变化很小。 由于从缓存中读取数据比从磁盘中读取数据的开销小得多，一般希望该比率高一些。 通常，可以通过增加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的可用内存量或使用缓冲池扩展功能来提高缓冲区缓存命中率。|  
 |**Checkpoint pages/sec**|指示由要求刷新所有脏页的检查点或其他操作每秒刷新到磁盘的页数。|  
@@ -54,7 +54,7 @@ ms.locfileid: "63250763"
 |**Extension page unreferenced time**|未被引用时，页在缓冲池扩展中保留的平均时长（以秒计）。|  
 |**Extension pages writes/sec**|每秒向缓冲池扩展文件中写入的页数。|  
 |**Free list stalls/sec**|指示每秒必须等待空闲页面的请求数量。|  
-|**Lazy writes/sec**|指示缓冲区管理器惰性编写器每秒写入的缓冲区数。 “惰性编写器”是一个系统进程，用于成批刷新过期的脏缓冲区（包含更改的缓冲区，必须将这些更改写回磁盘，才能将缓冲区重用于其他页），并使它们可用于用户进程。 惰性编写器不需要为创建可用缓冲区而频繁执行检查点。|  
+|**Lazy writes/sec**|指示缓冲区管理器惰性编写器每秒写入的缓冲区数。 “惰性编写器”  是一个系统进程，用于成批刷新过期的脏缓冲区（包含更改的缓冲区，必须将这些更改写回磁盘，才能将缓冲区重用于其他页），并使它们可用于用户进程。 惰性编写器不需要为创建可用缓冲区而频繁执行检查点。|  
 |**Page life expectancy**|指示页面在没有引用的情况下，在此节点的缓冲池中停留的时间（以秒计）。|  
 |**Page lookups/sec**|指示每秒要求在缓冲池中查找页的请求数。|  
 |**Page reads/sec**|指示每秒发生的物理数据库页读取数。 此统计信息显示的是所有数据库间的物理页读取总数。 由于物理 I/O 的开销大，可以通过使用更大的数据缓存、智能索引、更有效的查询或更改数据库设计等方法，将开销降到最低。|  

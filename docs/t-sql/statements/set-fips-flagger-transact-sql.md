@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4dd2c65a885e7619c9ddcd92ed7849981453e838
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708645"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939724"
 ---
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 ```  
   
 ## <a name="arguments"></a>参数  
- ' level '  
+ ' level '     
  对 FIPS 127-2 标准的遵从级别，将检查所有数据库操作是否达到该级别。 如果数据库操作与选定的 ISO 标准级别冲突，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将生成一个警告。  
   
- level 必须为以下值之一。  
+ level 必须为以下值之一  。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  如果在存储过程中设置 `SET FIPS_FLAGGER`，则从存储过程返回控制后将还原 `SET FIPS_FLAGGER` 的值。 因此，动态 SQL 中指定的 `SET FIPS_FLAGGER` 语句对动态 SQL 语句之后的任何语句无效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="see-also"></a>另请参阅  

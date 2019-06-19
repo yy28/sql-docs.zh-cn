@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ba44570e03ef308b850637b58feb7bd0a3730c4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716642"
 ---
 # <a name="catalogdeleteenvironmentreference-ssisdb-database"></a>catalog.delete_environment_reference（SSISDB 数据库）
@@ -34,8 +34,8 @@ delete_environment_reference [ @reference_id = ] reference_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @reference_id = ] reference_id  
- 环境引用的唯一标识符。 reference_id 为 bigint。  
+ [ @reference_id = ] reference_id   
+ 环境引用的唯一标识符。 reference_id 为 bigint   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

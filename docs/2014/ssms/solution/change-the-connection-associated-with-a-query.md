@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62955804"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>更改与查询关联的连接
@@ -27,9 +27,9 @@ ms.locfileid: "62955804"
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>更改与查询关联的连接  
   
-1.  在查询编辑器中，右键单击查询编辑器的空白区域，指向“连接”，再单击“更改连接”。  
+1.  在查询编辑器中，右键单击查询编辑器的空白区域，指向“连接”  ，再单击“更改连接”  。  
   
-2.  在“连接到数据库引擎”对话框中，提供新连接信息，再单击“连接”。  
+2.  在“连接到数据库引擎”  对话框中，提供新连接信息，再单击“连接”  。  
   
 ## <a name="see-also"></a>请参阅  
  [解决方案资源管理器](solution-explorer.md)   

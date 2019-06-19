@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c70ec2c669c779e29dfb23ef61ba80865f68b532
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63194975"
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>“SQL 注释”对话框 (Visual Database Tools)
-  此对话框提供了一个可编辑区域，您可以在其中编写查询的详细说明。 若要访问此对话框，请在查询和视图设计器中打开查询或视图，然后在“属性”窗口中选择“SQL 注释”，再单击该属性字段右侧的省略号 (“…”)。  
+  此对话框提供了一个可编辑区域，您可以在其中编写查询的详细说明。 若要访问此对话框，请在查询和视图设计器中打开查询或视图，然后在“属性”窗口中选择“SQL 注释”，再单击该属性字段右侧的省略号 (“…”)    。  
   
 ## <a name="see-also"></a>请参阅  
  [显示查询属性 (Visual Database Tools)](visual-database-tools.md)  

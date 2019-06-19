@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e76d95b99ed2578cdfc9ff5ab9a752b644d82067
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63000631"
 ---
 # <a name="audit-login-event-class"></a>Audit Login 事件类
-   **Audit Login** 事件类指示用户已成功登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此类中的事件由新连接或从连接池中重用的连接触发。  
+  **Audit Login** 事件类指示用户已成功登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此类中的事件由新连接或从连接池中重用的连接触发。  
   
 ## <a name="audit-login-event-class-data-columns"></a>Audit Login 事件类的数据列  
   

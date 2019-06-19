@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a359cdc0467d06cf0f67c1229981466f9b440101
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723924"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>连接到 MySQL 数据源（SQL Server 导入和导出向导）
@@ -22,7 +22,7 @@ ms.locfileid: "65723924"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 MySQL 数据源。 有多个数据提供程序可用于连接到 MySQL。
+本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 MySQL 数据源    。 有多个数据提供程序可用于连接到 MySQL。
 
 > [!IMPORTANT]
 > 连接到 MySQL 数据库的详细需求和先决条件不在此 Microsoft 文章的范围之内。 本文假定已安装了 MySQL 客户端软件，并且可以成功连接到目标 MySQL 数据库。 有关详细情况，请咨询 MySQL 数据库管理员或参阅 MySQL 文档。
@@ -31,25 +31,25 @@ ms.locfileid: "65723924"
 从 [MySQL 连接器](https://dev.mysql.com/downloads/connector/)页面下载本主题中介绍的提供程序和驱动程序。
 
 ## <a name="connect-to-mysql-with-the-net-framework-data-provider-for-mysql"></a>使用用于 MySQL 的 .NET Framework 数据提供程序连接到 MySQL
-在向导的“选择数据源”页或“选择目标”页上选择“用于 MySQL 的 .NET Framework 数据提供程序”之后，页面显示用于提供程序的选项的分组列表。 其中包含许多不友好名称和不熟悉的设置。 幸运的是，只需提供几条信息。 可以忽略其他设置的默认值。
+在向导的“选择数据源”页或“选择目标”页上选择“用于 MySQL 的 .NET Framework 数据提供程序”之后，页面显示用于提供程序的选项的分组列表    。 其中包含许多不友好名称和不熟悉的设置。 幸运的是，只需提供几条信息。 可以忽略其他设置的默认值。
 
 > [!NOTE]
-> 无论 MySQL 是源还是目标，此数据提供程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的。
+> 无论 MySQL 是源还是目标，此数据提供程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的   。
 
 |必填信息|用于 MySQL 的 .NET Framework 数据提供程序属性|
 |---|---|
 |服务器名称|**Server**|
 |数据库名称|**“数据库”**|
-|身份验证（登录）信息|“用户 ID”和“密码”|
+|身份验证（登录）信息|“用户 ID”和“密码”  |
 
-无须在列表的“ConnectionString”字段中输入连接字符串。 为 MySQL 服务器名称（“服务器”）输入单独值并输入登录信息后，向导会基于单独的属性及其值组合连接字符串。 
+无须在列表的“ConnectionString”字段中输入连接字符串  。 为 MySQL 服务器名称（“服务器”）输入单独值并输入登录信息后，向导会基于单独的属性及其值组合连接字符串  。 
 
 ![使用 .NET 提供程序连接到 MySQL，1/2](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-1-of-2.png)
 
 ![使用 .NET 提供程序连接到 MySQL，2/2](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-2-of-2.png)
 
 ## <a name="connect-to-mysql-with-the-mysql-odbc-driver"></a>使用 MySQL ODBC 驱动程序连接到 MySQL
-ODBC 驱动程序未在数据源的下拉列表中列出。 要使用 ODBC 驱动程序连接，请首先在“选择数据源”页或“选择目标”页上选择“用于ODBC 的 .NET Framework 数据提供程序”作为数据源。 此提供程序充当 ODBC 驱动程序的包装器。
+ODBC 驱动程序未在数据源的下拉列表中列出。 要使用 ODBC 驱动程序连接，请首先在“选择数据源”页或“选择目标”页上选择“用于ODBC 的 .NET Framework 数据提供程序”作为数据源    。 此提供程序充当 ODBC 驱动程序的包装器。
 
 下面是选择用于 ODBC 的 .NET Framework 数据提供程序后随即显示的常规屏幕。
 
@@ -58,7 +58,7 @@ ODBC 驱动程序未在数据源的下拉列表中列出。 要使用 ODBC 驱�
 ### <a name="options-to-specify-mysql-odbc-driver"></a>要指定的选项（MySQL ODBC 驱动程序）
 
 > [!NOTE]
-> 无论 MySQL 是源还是目标，此数据提供程序和 ODBC 驱动程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的。
+> 无论 MySQL 是源还是目标，此数据提供程序和 ODBC 驱动程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的   。
 
 要使用 MySQL ODBC 驱动程序连接到 MySQL，请组合出一条包含以下设置及其值的连接字符串。 完整连接字符串的格式紧跟在设置列表之后。
 
@@ -85,7 +85,7 @@ MySQL 数据库的名称。
     ```
 
 ### <a name="enter-the-connection-string"></a>输入连接字符串
-在“选择数据源”页或“选择目标”页上的“ConnectionString”字段中输入连接字符串，或在“Dsn”字段中输入 DSN 名称。 输入连接字符串后，向导会分析该字符串，并在列表中显示各个属性及其值。
+在“选择数据源”页或“选择目标”页上的“ConnectionString”字段中输入连接字符串，或在“Dsn”字段中输入 DSN 名称     。 输入连接字符串后，向导会分析该字符串，并在列表中显示各个属性及其值。
 
 以下示例使用此连接字符串。
 

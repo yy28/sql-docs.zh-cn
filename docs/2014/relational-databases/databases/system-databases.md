@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 916fd6d996a1a5270173d290c61f262ddf3f797b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871124"
 ---
 # <a name="system-databases"></a>系统数据库
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含以下系统数据库。  
   
-|系统数据库|Description|  
+|系统数据库|描述|  
 |---------------------|-----------------|  
 |[master 数据库](master-database.md)|记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的所有系统级信息。|  
 |[msdb 数据库](msdb-database.md)|用于 SQL Server 代理计划警报和作业。|  

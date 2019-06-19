@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 131e5ee4436cc1cf1e5a5f2f979504e75c169d93
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503254"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
@@ -101,15 +101,15 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-**适用范围：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。   
-从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，data_file 可位于 Azure Blob 存储中。 在这种情况下，需要指定 data_source_name 选项。
+**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。   
+从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，data_file 可位于 Azure Blob 存储中。 在这种情况下，需要指定 data_source_name 选项  。
 
 > [!IMPORTANT]
 > Azure SQL 数据库不支持从 Windows 文件读取内容。
 
 
-**'** _data_source_name_ **'**   
-**适用范围：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。   
+**'** _data_source_name_ **'**    
+**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。   
 命名的外部数据源，指向将导入文件的 Azure Blob 存储位置。 外部数据源必须使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中添加的 `TYPE = BLOB_STORAGE` 选项创建。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。    
  
 ```sql
@@ -118,7 +118,7 @@ FROM 'data/orders.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 ```
 
- BATCHSIZE **=**_batch_size_  
+ BATCHSIZE **=** _batch_size_  
  指定批处理中的行数。 每个批处理作为一个事务复制到服务器。 如果复制操作失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将提交或回滚每个批处理的事务。 默认情况下，指定数据文件中的所有数据为一个批处理。 有关性能注意事项的信息，请参阅本主题后面的“备注”。  
   
  CHECK_CONSTRAINTS  
@@ -134,7 +134,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 > [!NOTE]  
 >  MAXERRORS 选项不适用于约束检查。  
   
- CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'**_code_page_**'** }  
+ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** }  
  指定该数据文件中数据的代码页。 仅当数据含有字符值大于 **127** 或小于 **32** 的 **char**、**varchar** 或 **text** 列时，CODEPAGE 才适用。  
 
 ```sql
@@ -144,7 +144,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 ```
 
 > [!IMPORTANT]
-> Linux for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 不支持 CODEPAGE 选项。 对于 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)]，只能对 CODEPAGE 使用“RAW”选项。
+> Linux for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 不支持 CODEPAGE 选项。 对于 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)]，只能对 CODEPAGE 使用“RAW”  选项。
 
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议在[格式化文件](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)中为每个列指定一个排序规则名称。  
@@ -154,10 +154,10 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |ACP|数据类型为 **char**、**varchar** 或 **text** 的列从 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|  
 |OEM（默认值）|数据类型为 **char**、**varchar** 或 **text** 的列从系统 OEM 代码页转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|  
 |RAW|不进行从一个代码页到另一个代码页的转换；这是最快的选项。|  
-|*code_page*|特定的代码页码，例如 850。<br /><br /> &#42;&#42; 重要提示 &#42;&#42; 低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|  
+|*code_page*|特定的代码页码，例如 850。<br /><br />  &#42;&#42; 重要提示 &#42;&#42; 低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|  
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
+DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** }  
 指定 BULK INSERT 使用指定的数据文件类型值执行导入操作。  
 
 &nbsp;
@@ -170,18 +170,18 @@ DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'
 |**widenative**|本机（数据库）数据类型，**char**、**varchar** 和 **text** 列除外，这些列中的数据均以 Unicode 格式存储。 通过使用 **bcp** 实用工具从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批量导入数据来创建 **widenative** 数据文件。<br /><br /> 与 **widechar** 相比，**widenative** 值可以提供更高的性能。 如果数据文件包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 扩展字符，则指定 **widenative**。<br /><br /> 有关详细信息信息，请参阅 [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|  
 | &nbsp; | &nbsp; |
 
-ERRORFILE **='**_file_name_**'**  
+ERRORFILE **='** _file_name_ **'**  
 指定用于收集格式有误且不能转换为 OLE DB 行集的行的文件。 这些行将按原样从数据文件复制到此错误文件中。
 
 错误文件是执行命令时创建的。 如果该文件已经存在，则会发生错误。 此外，还创建了一个扩展名为 .ERROR.txt 的控制文件。 此文件引用错误文件中的每一行并提供错误诊断。 纠正错误后即可加载数据。  
-**适用范围：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
+**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，`error_file_path` 可位于 Azure Blob 存储中。
 
 'errorfile_data_source_name'   
-**适用范围：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
+**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。
 是命名的外部数据源，指向错误文件的 Azure Blob 存储位置，该错误文件包含导入过程中发现的错误。 外部数据源必须使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中添加的 `TYPE = BLOB_STORAGE` 选项创建。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
  
- FIRSTROW = first_row  
+ FIRSTROW =  first_row   
  指定要加载的第一行的行号。 默认值是指定数据文件中的第一行。 FIRSTROW 从 1 开始。  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ ERRORFILE **='**_file_name_**'**
  如果没有指定 FIRE_TRIGGERS，将不执行任何插入触发器。  
 
 FORMATFILE_DATASOURCE **=** 'data_source_name'   
-**适用范围：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。   
+**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。   
 命名的外部数据源，指向格式化文件（定义导入数据的架构）的 Azure Blob 存储位置。 外部数据源必须使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中添加的 `TYPE = BLOB_STORAGE` 选项创建。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
   
  KEEPIDENTITY  
@@ -205,9 +205,9 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
  指定空列在大容量导入操作期间应保留 Null 值，而不插入列的任何默认值。 有关详细信息，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
  KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_  
- 将每个批处理中数据的近似千字节数 (KB) 指定为 kilobytes_per_batch。 默认情况下，KILOBYTES_PER_BATCH 是未知的。 有关性能注意事项的信息，请参阅本主题后面的“备注”。  
+ 将每个批处理中数据的近似千字节数 (KB) 指定为 kilobytes_per_batch  。 默认情况下，KILOBYTES_PER_BATCH 是未知的。 有关性能注意事项的信息，请参阅本主题后面的“备注”。  
   
-LASTROW = last_row 指定要加载的最后一行的行号。 默认值为 0，表示指定数据文件中的最后一行。  
+LASTROW =  last_row  指定要加载的最后一行的行号。 默认值为 0，表示指定数据文件中的最后一行。  
   
  MAXERRORS **=** _max_errors_  
  指定允许在数据中出现的最大语法错误数，超过该数量后将取消大容量导入操作。 大容量导入操作无法导入的每一行都将被忽略并且计为一个错误。 如果未指定 *max_errors*，则默认值为 10。  
@@ -215,13 +215,13 @@ LASTROW = last_row 指定要加载的最后一行的行号。 默认值为 0，�
 > [!NOTE]  
 >  MAX_ERRORS 选项不适用于约束检查，也不适用于转换 **money** 和 **bigint** 数据类型。  
   
- ORDER ( { column [ ASC | DESC ] } [ ,... n ] )  
+ ORDER ( { column [ ASC | DESC ] } [ ,... n ] )     
  指定如何对数据文件中的数据排序。 如果根据表中的聚集索引（如果有）对要导入的数据排序，则可提高批量导入的性能。 如果数据文件按不同于聚集索引键的顺序排序，或者该表没有聚集索引，则忽略 ORDER 子句。 提供的列名必须是目标表中有效的列名。 默认情况下，大容量插入操作假设数据文件未排序。 对于经过优化的批量导入， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还将验证导入的数据是否已排序。  
   
  *n*  
  指示可以指定多个列的占位符。  
   
- ROWS_PER_BATCH = rows_per_batch  
+ ROWS_PER_BATCH =  rows_per_batch   
  指示数据文件中近似的数据行数量。  
   
  默认情况下，数据文件中所有的数据都作为单一事务发送到服务器，批处理中的行数对于查询优化器是未知的。 如果指定了 ROWS_PER_BATCH（值 > 0），则服务器将使用此值优化批量导入操作。 为 ROWS_PER_BATCH 指定的值应当与实际行数大致相同。 有关性能注意事项的信息，请参阅本主题后面的“备注”。  
@@ -235,7 +235,7 @@ LASTROW = last_row 指定要加载的最后一行的行号。 默认值为 0，�
 ### <a name="input-file-format-options"></a>输入文件格式选项
   
 FORMAT **=** 'CSV'   
-**适用范围：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。   
+**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。   
 指定符合 [RFC 4180](https://tools.ietf.org/html/rfc4180) 标准的逗号分隔值文件。
 
 ```sql
@@ -245,10 +245,10 @@ WITH ( FORMAT='CSV');
 ```
 
 FIELDQUOTE **=** 'field_quote'   
-**适用范围：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。   
+**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。   
 指定将用作 CSV 文件引号字符的字符。 如果未指定，根据 [RFC 4180](https://tools.ietf.org/html/rfc4180) 标准中的定义，引号字符 (") 将用作引号字符。
   
- FORMATFILE = 'format_file_path'  
+ FORMATFILE =  'format_file_path  '  
  指定格式化文件的完整路径。 描述数据文件的格式化文件，数据文件中包含存储的响应，而存储的响应则是使用 **bcp** 实用工具在同一表或视图中创建的。 在下列情况下应使用格式化文件：  
   
 -   数据文件包含的列多于或少于表或视图包含的列。  
@@ -259,13 +259,13 @@ FIELDQUOTE **=** 'field_quote'
   
 -   数据格式有其他更改。 格式化文件通常使用 **bcp** 实用工具创建，并可根据需要使用文本编辑器修改。 有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
 
-**适用范围：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。   
+**适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。   
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，format_file_path 可位于 Azure Blob 存储中。
 
- FIELDTERMINATOR **='**_field_terminator_**'**  
+ FIELDTERMINATOR **='** _field_terminator_ **'**  
  指定要用于 **char** 和 **widechar** 数据文件的字段终止符。 默认字段终止符为 \t（制表符）。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
 
- ROWTERMINATOR **='**_row_terminator_**'**  
+ ROWTERMINATOR **='** _row_terminator_ **'**  
  指定要用于 **char** 和 **widechar** 数据文件的行终止符。 默认行终止符为 **\r\n**（换行符）。  有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
 
   
@@ -341,7 +341,7 @@ GO
 
 ## <a name="general-remarks"></a>一般备注  
 
- 有关 BULK INSERT 语句、INSERT ...SELECT \* FROM OPENROWSET(BULK...) 语句和 bcp 命令的比较，请参阅[批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
+ 有关 BULK INSERT 语句、INSERT ...SELECT \* FROM OPENROWSET(BULK...) 语句和 **bcp** 命令，请参阅[批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
  有关准备数据以进行批量导入的信息，请参阅[准备用于批量导出或导入的数据 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。  
   
@@ -446,7 +446,7 @@ EXEC(@bulk_cmd);
 ```  
   
 > [!NOTE]  
->  由于 Microsoft Windows 处理文本文件的方式，（**\n** 自动替换为 **\r\n**）。  
+>  由于 Microsoft Windows 处理文本文件的方式，（ **\n** 自动替换为 **\r\n**）。  
 
 > [!IMPORTANT]
 > Azure SQL 数据库不支持从 Windows 文件读取内容。

@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 889bd1f743b30727bed5266b0c725733b823d654
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724141"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>引用脚本解决方案中的其他程序集
@@ -40,7 +40,7 @@ ms.locfileid: "65724141"
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类库为脚本开发人员提供了一组强大的工具，用于在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中实现自定义功能。 脚本任务和脚本组件还可以使用自定义托管程序集。  
   
 > [!NOTE]
->  若要使包能够使用 Web 服务中的对象和方法，可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中提供的“添加 Web 引用”命令。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的早期版本中，必须生成代理类才能使用 Web 服务。  
+>  若要使包能够使用 Web 服务中的对象和方法，可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中提供的“添加 Web 引用”  命令。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的早期版本中，必须生成代理类才能使用 Web 服务。  
   
 ## <a name="using-a-managed-assembly"></a>使用托管程序集  
  对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，若要在设计时查找托管程序集，必须执行以下步骤：  
@@ -52,7 +52,7 @@ ms.locfileid: "65724141"
   
 2.  添加对托管程序集的引用。  
   
-     若要添加引用，请在 VSTA 的“添加引用”对话框的“浏览”选项卡中查找和添加托管程序集。  
+     若要添加引用，请在 VSTA 的“添加引用”  对话框的“浏览”  选项卡中查找和添加托管程序集。  
   
  对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，若要在运行时查找托管程序集，必须执行以下步骤：  
   
@@ -67,23 +67,23 @@ ms.locfileid: "65724141"
   
  下表介绍了一些比较常用的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类：  
   
--   System.Data 包含 ADO.NET 体系结构。  
+-   System.Data  包含 ADO.NET 体系结构。  
   
--   System.IO 提供文件系统和流的接口。  
+-   System.IO  提供文件系统和流的接口。  
   
--   System.Windows.Forms 提供窗体创建。  
+-   System.Windows.Forms  提供窗体创建。  
   
--   System.Text.RegularExpressions 提供处理正则表达式的类。  
+-   System.Text.RegularExpressions  提供处理正则表达式的类。  
   
--   System.Environment 返回有关本地计算机、当前用户以及计算机和用户设置的信息。  
+-   System.Environment  返回有关本地计算机、当前用户以及计算机和用户设置的信息。  
   
--   System.Net 提供网络通信。  
+-   System.Net  提供网络通信。  
   
--   System.DirectoryServices 公开 Active Directory。  
+-   System.DirectoryServices  公开 Active Directory。  
   
--   System.Drawing 提供丰富的图像处理库。  
+-   System.Drawing  提供丰富的图像处理库。  
   
--   System.Threading 启用多线程编程。  
+-   System.Threading  启用多线程编程。  
   
  有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的详细信息，请参阅 MSDN Library。  
   

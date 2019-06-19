@@ -34,10 +34,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60d44f92bc039914ed2fd983c65d53f9d7865fb6
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503461"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -108,12 +108,12 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 ```  
   
 ## <a name="arguments"></a>参数  
- IF EXISTS  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ IF EXISTS   
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  仅当索引已存在时对其进行有条件地删除。  
   
- index_name  
+ index_name   
  要删除的索引名称。  
   
  *database_name*  
@@ -122,7 +122,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  *schema_name*  
  表或视图所属架构的名称。  
   
- table_or_view_name  
+ table_or_view_name   
  与该索引关联的表或视图的名称。 只有表支持空间索引。  
   
  若要显示对象的索引报表，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图。  
@@ -130,19 +130,19 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  Windows Azure SQL Database 支持由三部分组成的格式 database_name.[schema_name].object_name，其中 database_name 为当前数据库，database_name 为 tempdb，object_name 以 # 开头。  
   
  \<drop_clustered_index_option>  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  控制聚集索引选项。 这些选项不能与其他索引类型一起使用。  
   
- MAXDOP = max_degree_of_parallelism  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（仅限性能级别 P2 和 P3）。  
+ MAXDOP = max_degree_of_parallelism   
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（仅限性能级别 P2 和 P3）  。  
   
- 在索引操作期间替代 max degree of parallelism 配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+ 在索引操作期间替代 max degree of parallelism 配置选项  。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
 > [!IMPORTANT]  
 >  空间索引或 XML 索引不允许使用 MAXDOP。  
   
- max_degree_of_parallelism 可以是：  
+ max_degree_of_parallelism 可以是  ：  
   
  1  
  取消生成并行计划。  
@@ -158,8 +158,8 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]  
 >  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均提供并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- ONLINE = ON | OFF  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ ONLINE = ON | OFF   
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。  
   
@@ -174,49 +174,49 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"** default **"**  
+ MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ **)**  | _filegroup\_name_ |  **"** default **"**  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 支持将 "default" 作为文件组名称。  
   
  指定一个位置，以移动当前处于聚集索引叶级别的数据行。 数据将以堆的形式移动到这一新位置。 可以将分区方案或文件组指定为新位置，但该分区方案或文件组必须已存在。 MOVE TO 对索引视图或非聚集索引无效。 如果未指定分区方案或文件组，则生成的表将位于为聚集索引定义的同一分区方案或文件组中。  
   
  如果使用 MOVE TO 删除了聚集索引，则将重新生成所有对基表的非聚集索引，但这些索引会保留在其原始文件组或分区方案中。 如果基表移动到其他文件组或分区方案中，这些非聚集索引不会通过移动来与基表（堆）的新位置一致。 因此，即使非聚集索引以前与聚集索引对齐，它们也可能不再与堆对齐。 有关已分区索引的详细信息，请参阅[已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
- partition_scheme_name ( column_name )   
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ partition_scheme_name ( column_name )      
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  指定分区方案作为生成表的位置。 该分区方案必须已通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 创建完毕。 如果未指定位置但表已分区，则表将包含在与现有聚集索引相同的分区方案中。  
   
  方案中的列名不限制为索引定义中的列。 可以指定基表中的任何列。  
   
- filegroup_name  
+ filegroup_name   
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定文件组作为生成表的位置。 如果未指定位置并且表是未分区的，则生成的表将包含在与聚集索引相同的文件组中。 该文件组必须已存在。  
   
- "default"  
+ "default"    
  指定生成表的默认位置。  
   
 > [!NOTE]
->  在此上下文中，default 不是关键字。 它是默认文件组的标识符，必须对其进行分隔，就像在 MOVE TO "default" 或 MOVE TO [default] 中一样。 如果指定了“default”，则必须将当前会话的 QUOTED_IDENTIFIER 选项设置为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
+>  在此上下文中，default 不是关键字。 它是默认文件组的标识符，必须对其进行分隔，就像在 MOVE TO "default" 或 MOVE TO [default] 中一样     。 如果指定了“default”，则必须将当前会话的 QUOTED_IDENTIFIER 选项设置为 ON   。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
- FILESTREAM_ON { partition_scheme_name | filestream_filegroup_name | "default" }  
+ FILESTREAM_ON { partition_scheme_name | filestream_filegroup_name | "default" }      
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定一个位置，当前处于聚集索引叶级别的 FILESTREAM 表将移至此位置。 数据将以堆的形式移动到这一新位置。 可以将分区方案或文件组指定为新位置，但该分区方案或文件组必须已存在。 FILESTREAM ON 对于索引视图或非聚集索引无效。 如果未指定分区方案，则数据将位于为聚集索引定义的同一分区方案中。  
   
- partition_scheme_name  
+ partition_scheme_name   
  指定 FILESTREAM 数据的分区方案。 该分区方案必须已通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 创建完毕。 如果未指定位置但表已分区，则表将包含在与现有聚集索引相同的分区方案中。  
   
  如果为 MOVE TO 指定了分区方案，则必须为 FILESTREAM ON 使用同一个分区方案。  
   
- filestream_filegroup_name  
+ filestream_filegroup_name   
  指定 FILESTREAM 数据的 FILESTREAM 文件组。 如果未指定位置并且表未分区，则数据将包括在默认 FILESTREAM 文件组中。  
   
- "default"  
+ "default"    
  指定 FILESTREAM 数据的默认位置。  
   
 > [!NOTE]
->  在此上下文中，default 不是关键字。 它是默认文件组的标识符，必须对其进行分隔，就像在 MOVE TO "default" 或 MOVE TO [default] 中一样。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
+>  在此上下文中，default 不是关键字。 它是默认文件组的标识符，必须对其进行分隔，就像在 MOVE TO "default" 或 MOVE TO [default] 中一样     。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
 ## <a name="remarks"></a>Remarks  
  删除非聚集索引时，将从元数据中删除索引定义，并从数据库文件中删除索引数据页（B 树）。 删除聚集索引时，将从元数据中删除索引定义，并且存储于聚集索引叶级别的数据行将存储到生成的未排序表（堆）中。 将重新获得以前由索引占有的所有空间。 此后可将该空间用于任何数据库对象。  
@@ -225,7 +225,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  删除索引视图的聚集索引时，将自动删除同一视图的所有非聚集索引和自动创建的统计信息。 手动创建的统计信息不会删除。  
   
- 保留 _table\_or\_view\_name_**.**_index\_name_ 语法是为了保持后向兼容性。 XML 索引或空间索引无法使用向后兼容的语法删除。  
+ 保留 _table\_or\_view\_name_ **.** _index\_name_ 语法是为了保持后向兼容性。 XML 索引或空间索引无法使用向后兼容的语法删除。  
   
  删除带有 128 个或更多区数的索引时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联的锁，直到提交事务为止。  
   
@@ -238,11 +238,11 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  当指定 ONLINE = ON 时，DROP INDEX 事务不会阻塞对基础数据和关联非聚集索引的修改。 一次只能联机删除一个聚集索引。 有关 ONLINE 选项的完整说明，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
- 如果聚集索引在视图上被禁用，或者它在叶级别数据行中包含 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或 xml 列，则不能联机删除该索引。  
+ 如果聚集索引在视图上被禁用，或者它在叶级别数据行中包含 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max) 或 xml 列，则不能联机删除该索引        。  
   
  使用 ONLINE = ON 和 MOVE TO 选项要求附加的临时磁盘空间。  
   
- 删除索引后，生成的堆将出现在 sys.indexes 目录视图中，且 name 列中为 NULL。 若要查看表名，请将 sys.indexes 和 sys.tables 联接在 object_id 上。 有关示例查询的信息，请参阅示例 D。  
+ 删除索引后，生成的堆将出现在 sys.indexes 目录视图中，且 name 列中为 NULL   。 若要查看表名，请将 sys.indexes 和 sys.tables 联接在 object_id 上    。 有关示例查询的信息，请参阅示例 D。  
   
  在运行 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 或更高版本的多处理器计算机中，DROP INDEX 可以使用更多处理器执行与删除聚集索引有关的扫描和排序操作，就像其他查询所做的一样。 可以通过指定 MAXDOP 索引选项手动配置用于运行 DROP INDEX 语句的处理器数目。 有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
@@ -255,12 +255,12 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 脱机删除聚集索引时，只删除较高级别的聚集索引；因此，该操作的执行速度很快。 如果联机删除聚集索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将重新生成堆两次，一次针对步骤 1，一次针对步骤 2。 有关数据压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
 ## <a name="xml-indexes"></a>XML 索引  
- 删除 XML 索引时，不能指定选项。 此外，不能使用 _table\_or\_view\_name_**.**_index\_name_ 语法。 删除主 XML 索引时，将自动删除所有关联的辅助 XML 索引。 有关详细信息，请参阅 [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)。  
+ 删除 XML 索引时，不能指定选项。 此外，不能使用 _table\_or\_view\_name_ **.** _index\_name_ 语法。 删除主 XML 索引时，将自动删除所有关联的辅助 XML 索引。 有关详细信息，请参阅 [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)。  
   
 ## <a name="spatial-indexes"></a>空间索引  
- 只有表支持空间索引。 删除空间索引时，无法指定任何选项或使用 **.**_index\_name_。 正确的语法如下：  
+ 只有表支持空间索引。 删除空间索引时，无法指定任何选项或使用 **.** _index\_name_。 正确的语法如下：  
   
- DROP INDEX spatial_index_name ON spatial_table_name;  
+ DROP INDEX spatial_index_name ON spatial_table_name;    
   
  有关空间索引的详细信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
@@ -291,7 +291,7 @@ GO
 ### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>C. 联机删除聚集索引并设置 MAXDOP 选项  
  以下示例在 `ONLINE` 选项设置为 `ON` 和 `MAXDOP` 设置为 `8` 的情况下删除聚集索引。 因为未指定 MOVE TO 选项，生成的表将与索引存储在相同的文件组中。 此示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   

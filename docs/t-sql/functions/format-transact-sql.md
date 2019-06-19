@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 817b8a639a1c827d90c780d5c2c3e35a1855d11a
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 732ca10f49982c7e2de190cffd50d9780a986a8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65949008"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66499521"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -45,25 +45,25 @@ FORMAT ( value, format [, culture ] )
  *value*  
  支持格式化的数据类型的表达式。 有关有效类型的列表，请参阅下面“备注”部分中的表。  
   
- format  
- nvarchar 格式模式。  
+ format   
+ nvarchar 格式模式  。  
   
- format 参数必须包含一个有效的 .NET Framework 格式字符串，要么作为标准格式字符串（例如，“C”或“D”），要么作为日期值和数值的自定义字符模式（例如，“MMMM DD, yyyy (dddd)”）。 不支持组合格式。 有关这些格式模式的完整解释，请查阅有关常规字符串格式、自定义日期和时间格式以及自定义数字格式的 .NET Framework 文档。 一个好的起点是主题“[格式类型](https://go.microsoft.com/fwlink/?LinkId=211776)”。  
+ format 参数必须包含一个有效的 .NET Framework 格式字符串，要么作为标准格式字符串（例如，“C”或“D”），要么作为日期值和数值的自定义字符模式（例如，“MMMM DD, yyyy (dddd)”）  。 不支持组合格式。 有关这些格式模式的完整解释，请查阅有关常规字符串格式、自定义日期和时间格式以及自定义数字格式的 .NET Framework 文档。 一个好的起点是主题“[格式类型](https://go.microsoft.com/fwlink/?LinkId=211776)”。  
   
- culture  
- 指定区域性的可选 nvarchar 参数。  
+ culture   
+ 指定区域性的可选 nvarchar 参数  。  
   
- 如果未提供 culture 参数，则使用当前会话的语言。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性作为参数；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言。 如果 culture 参数无效，FORMAT 将引发错误。  
+ 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性作为参数；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言  。 如果 culture 参数无效，FORMAT 将引发错误  。  
   
 ## <a name="return-types"></a>返回类型
 
- nvarchar 或 Null  
+ nvarchar 或 Null   
   
- 返回值的长度由 format 确定。  
+ 返回值的长度由 format 确定  。  
   
 ## <a name="remarks"></a>Remarks
 
- FORMAT 将返回 NULL 错误，而不是非 valid 的 culture。 例如，如果 format 中指定的值无效，则返回 NULL。  
+ FORMAT 将返回 NULL 错误，而不是非 valid 的 culture   。 例如，如果 format 中指定的值无效，则返回 NULL  。  
 
  FORMAT 函数具有不确定性。
   
@@ -71,9 +71,9 @@ FORMAT ( value, format [, culture ] )
   
  此函数无法进行远程处理，因为它依赖于 CLR 的存在。 远程处理需要 CLR 的函数可能导致在远程服务器上出现错误。  
   
- FORMAT 依赖于 CLR 格式设置规则，规则规定冒号和句点必须进行转义。 因此，当格式字符串（第二个参数）包含冒号或句点时，如果输入值（第一个参数）属于 time 数据类型，则冒号或句点必须使用反斜杠转义。 请参阅[时间数据类型的 D. FORMAT](#ExampleD)。  
+ FORMAT 依赖于 CLR 格式设置规则，规则规定冒号和句点必须进行转义。 因此，当格式字符串（第二个参数）包含冒号或句点时，如果输入值（第一个参数）属于 time 数据类型，则冒号或句点必须使用反斜杠转义  。 请参阅[时间数据类型的 D. FORMAT](#ExampleD)。  
   
- 下表列出了 value 参数可接受的数据类型，其中还有相关的 .NET Framework 映射等效类型。  
+ 下表列出了 value 参数可接受的数据类型，其中还有相关的 .NET Framework 映射等效类型  。  
   
 |类别|类型|.NET 类型|  
 |--------------|----------|---------------|  
@@ -151,7 +151,7 @@ DateTime Result  Custom Number Result
   
 ### <a name="c-format-with-numeric-types"></a>C. 用于数值类型的 FORMAT
 
- 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 Sales.CurrencyRate 表中的 5 个行。 EndOfDateRate 列在该表中作为 money 类型存储。 在本示例中，该列以非格式化形式返回，然后通过指定 .NET 数字格式、常规格式和货币格式类型进行格式化。 有关这些格式和其他数字格式的详细信息，请参阅[标准数字格式字符串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
+ 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 Sales.CurrencyRate 表中的 5 个行  。 EndOfDateRate 列在该表中作为 money 类型存储   。 在本示例中，该列以非格式化形式返回，然后通过指定 .NET 数字格式、常规格式和货币格式类型进行格式化。 有关这些格式和其他数字格式的详细信息，请参阅[标准数字格式字符串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  
@@ -215,6 +215,27 @@ SELECT FORMAT(cast('07:35' as time), N'hh:mm');   --> returns NULL
 SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35  
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
+
+Format 返回指定了 AM 或 PM 的格式化当前时间
+
+```sql
+SELECT FORMAT(SYSDATETIME(), N'hh:mm tt'); -- returns 03:46 PM
+SELECT FORMAT(SYSDATETIME(), N'hh:mm t'); -- returns 03:46 P
+```
+
+Format 返回显示 AM 的指定时间
+
+```sql
+select FORMAT(CAST('2018-01-01 01:00' AS datetime2), N'hh:mm tt') -- returns 01:00 AM
+select FORMAT(CAST('2018-01-01 01:00' AS datetime2), N'hh:mm t')  -- returns 01:00 A
+```
+
+Format 返回显示 PM 的指定时间
+
+```sql
+select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm tt') -- returns 02:00 PM
+select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm t') -- returns 02:00 P
+```
   
 ## <a name="see-also"></a>另请参阅
 

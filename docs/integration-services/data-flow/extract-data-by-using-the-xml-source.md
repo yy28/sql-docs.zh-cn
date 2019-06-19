@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 45e24864ad54d8b54dbf32c71e675e995217a18d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726819"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 源提取数据
@@ -43,9 +43,9 @@ ms.locfileid: "65726819"
   
     -   对于 **“XML 文件位置”** 访问模式，单击 **“浏览”** 找到包含该 XML 文件的文件夹。  
   
-    -   对于“来自变量的 XML 文件”访问模式，选择包含 XML 文件路径的用户定义变量。  
+    -   对于“来自变量的 XML 文件”访问模式，选择包含 XML 文件路径的用户定义变量。   
   
-    -   对于“来自变量的 XML 数据”访问模式，选择包含 XML 数据的用户定义变量。  
+    -   对于“来自变量的 XML 数据”访问模式，选择包含 XML 数据的用户定义变量。   
   
     > [!NOTE]  
     >  这些变量必须在包含该 XML 源的数据流任务的作用域内定义，或者在包的作用域内定义；此外，变量的数据类型必须为字符串。  
@@ -60,9 +60,9 @@ ms.locfileid: "65726819"
   
 8.  若要更新输出列的名称，请单击 **“列”** 并在 **“输出列”** 列表中编辑这些值。  
   
-9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
+9. 若要配置错误输出，请单击 **“错误输出”** 。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-10. 单击“确定” 。  
+10. 单击“确定”  。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

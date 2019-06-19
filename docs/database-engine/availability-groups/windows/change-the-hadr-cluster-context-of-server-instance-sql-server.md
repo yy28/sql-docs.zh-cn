@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4f01db5d1d27c57b863c3421e6abee894975b85
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202126"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796637"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>更改管理 Always On 可用性组中副本元数据的群集
 
@@ -30,30 +30,10 @@ ms.locfileid: "53202126"
   
  仅在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC 群集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的过程中切换 HADR 群集上下文。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨群集迁移支持用最短的可用性组停机时间将操作系统升级到 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 。 有关详细信息，请参阅 [针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](https://msdn.microsoft.com/library/jj873730.aspx)。  
   
--   **开始之前：**  
-  
-     [限制和局限](#Restrictions)  
-  
-     [先决条件](#Prerequisites)  
-  
-     [建议](#Recommendations)  
-  
-     [安全性](#Security)  
-  
--   若要切换可用性副本的群集上下文，请使用：[Transact-SQL](#TsqlProcedure)  
-  
--   **跟进：**[在切换可用性副本的群集上下文后](#FollowUp)  
-  
--   [相关任务](#RelatedTasks)  
-  
--   [相关内容](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
 > [!CAUTION]  
 >  仅在跨群集迁移 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 部署的过程中切换 HADR 群集上下文。  
   
-###  <a name="Restrictions"></a> 限制和局限  
+##  <a name="Restrictions"></a> 限制和局限  
   
 -   您只能将 HADR 群集上下文从本地 WSFC 群集切换到远程群集，然后再从远程群集切换回本地群集。 不能将 HADR 群集上下文从一个远程群集切换到另一个远程群集。  
   
@@ -61,7 +41,7 @@ ms.locfileid: "53202126"
   
 -   远程 HADR 群集上下文随时可以切换回本地群集。 但是，只要服务器实例承载任何可用性副本，该上下文将无法再进行切换。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a> 先决条件  
   
 -   您对其更改 HADR 群集上下文的服务器实例必须正在运行 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 或更高版本（Enterprise Edition 或更高）。  
   
@@ -78,7 +58,7 @@ ms.locfileid: "53202126"
   
 -   在您可以从远程群集切换到本地群集之前，所有同步提交副本必须都处于 SYNCHRONIZED 状态。  
   
-###  <a name="Recommendations"></a> 建议  
+##  <a name="Recommendations"></a> 建议  
   
 -   我们建议您指定完整的域名。 这是因为为了找到短名称的目标 IP 地址，ALTER SERVER CONFIGURATION 使用 DNS 名称解析。 在某些情况下，根据 DNS 搜索顺序，使用短名称可能会导致混淆。 例如，考虑以下命令，该命令在 `abc` 域 (`node1.abc.com`) 中的节点上执行。 意向的目标群集是 `CLUS01` 域 ( `xyz` ) 中的`clus01.xyz.com`群集。 但是，本地域主机还承载名为 `CLUS01` (`clus01.abc.com`) 的一个群集。  
   
@@ -88,9 +68,8 @@ ms.locfileid: "53202126"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
   
 -   **SQL Server 登录名**  
   
@@ -111,7 +90,7 @@ ms.locfileid: "53202126"
   
 2.  使用 [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md) 语句的 SET HADR CLUSTER CONTEXT 子句，如下所示：  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'**_windows\_cluster_**'** | LOCAL }  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'** _windows\_cluster_ **'** | LOCAL }  
   
      其中：  
   

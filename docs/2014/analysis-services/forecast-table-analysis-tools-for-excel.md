@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081049"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>预测（Excel 表分析工具）
@@ -41,11 +41,11 @@ ms.locfileid: "66081049"
   
 3.  指定要预测的列。 该工具会自动选择的列中具有可预测的数据类型的数据-即，连续数值数据。 如果某些具有连续数值数据的列包含许多 null 值或零值，由于缺少数据可能影响结果，该工具可能不会选择这些列。 如果发生这种情况，您可以通过使用解决数据[重新标记&#40;SQL Server 数据挖掘外接程序&#41;](relabel-sql-server-data-mining-add-ins.md)工具。  
   
-4.  指定包含日期、时间或其他序列标识符的列。 如果您选择的选项**\<无时间戳 >** 该工具将创建一系列基于的源数据中的行的序列。  
+4.  指定包含日期、时间或其他序列标识符的列。 如果您选择的选项 **\<无时间戳 >** 该工具将创建一系列基于的源数据中的行的序列。  
   
 5.  指定要进行的预测数。  
   
-6.  或者，为算法提供关于您希望数据每周、每月还是按其他时间间隔重复的提示。 如果你的数据不适合给定的模式，或者您不了解任何模式，请选择**\<自动检测 >** 希望该工具查找重复的时间段。  
+6.  或者，为算法提供关于您希望数据每周、每月还是按其他时间间隔重复的提示。 如果你的数据不适合给定的模式，或者您不了解任何模式，请选择 **\<自动检测 >** 希望该工具查找重复的时间段。  
   
 7.  向导将预测添加到源表中，并在新的工作表中创建预测报表。  
   

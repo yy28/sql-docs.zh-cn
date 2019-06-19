@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b166ceafd545952039d9c1929dc8aea6dc538d24
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724503"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支持自定义组件中的多目标
@@ -25,7 +25,7 @@ ms.locfileid: "65724503"
 
  现在可以在 SQL Server Data Tools (SSDT) 中使用 SSIS 设计器来创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。 若要获取用于 Visual Studio 2015 的 SSDT，请参阅[下载最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 
 
- 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
  ![项目属性对话框中的 TargetServerVersion 属性](../../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
  
@@ -100,7 +100,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **错误消息。** 无法将类型为 "System.__ComObject" 的 COM 对象强制转换为接口类型 "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100"。 此操作失败的原因是对 IID 为“{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}”的接口的 COM 组件调用 QueryInterface 因以下错误而失败：不支持此类接口(异常来自 HRESULT:0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
 
-**解决方案。** 如果自定义扩展引用 Microsoft.SqlServer.DTSPipelineWrap 或 Microsoft.SqlServer.DTSRuntimeWrap 等 SSIS 互操作程序集，将“嵌入互操作类型”属性的值设置为“False”。
+**解决方案。** 如果自定义扩展引用 Microsoft.SqlServer.DTSPipelineWrap 或 Microsoft.SqlServer.DTSRuntimeWrap 等 SSIS 互操作程序集，将“嵌入互操作类型”  属性的值设置为“False”  。
 
 ![嵌入互操作类型](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

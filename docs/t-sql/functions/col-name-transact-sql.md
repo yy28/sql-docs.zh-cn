@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7750eab9dd1e5ff24ee94f38979df03275091964
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944075"
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
@@ -43,11 +43,11 @@ COL_NAME ( table_id , column_id )
 ```  
   
 ## <a name="arguments"></a>参数  
-table_id  
-包含该列的表的标识号。 table_id 自变量具有一个 int 数据类型。
+table_id   
+包含该列的表的标识号。 table_id 自变量具有一个 int 数据类型   。
   
-column_id  
-列的标识号。 column_id 自变量具有一个 int 数据类型。
+column_id   
+列的标识号。 column_id 自变量具有一个 int 数据类型   。
   
 ## <a name="return-types"></a>返回类型
 **sysname**
@@ -58,7 +58,7 @@ column_id
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其所拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 这意味着，如果用户对该对象没有正确的权限，那些发出元数据的内置函数（如 `COL_NAME`）则可能会返回 NULL。 有关详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。
   
 ## <a name="remarks"></a>Remarks  
-table_id 和 column_id 参数共同产生一个列名称字符串。
+table_id 和 column_id 参数共同产生一个列名称字符串   。
   
 有关获取表和列标识号的详细信息，请参阅 [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)。
   

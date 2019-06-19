@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 597cebf9db40c2e119949c86341b4817a51c38ff
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102000"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>使用 SQL Server 单元测试验证数据库代码
@@ -47,7 +47,7 @@ SQL Server 单元测试功能（在 SQL Server Data Tools 的 2012 年 12 月更
 |**进行动手实践：** 可以按照介绍性演练来熟悉如何创建和运行简单的 SQL Server 单元测试。 此演练包括一个负面 SQL Server 单元测试示例。|[演练：创建和运行 SQL Server 单元测试](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)|  
 |**定义 SQL Server 单元测试：** 必须在单元测试的项目中创建 SQL Server 单元测试。 可以为该项目配置设置并为每个测试定义一个或多个测试条件。|[创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)<br /><br />[在 SQL Server 单元测试中使用测试条件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)|  
 |**运行 SQL Server 单元测试：** 在定义一个或多个单元测试后，可以运行这些测试、调试所有问题以及检查测试结果。|[运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)|  
-|**管理测试组 (Visual Studio 2010)：** 如果要同时运行多个测试，可以将它们划分到多个组中。 测试列表仍受支持，但对于新测试组，您应该考虑使用测试类别。 例如，你可以为针对触发器或特定架构中的所有对象的测试创建测试类别。|[定义测试类别以对测试进行分组](https://msdn.microsoft.com/library/dd286595(VS.100).aspx)<br /><br />[定义测试列表以对测试进行分组](https://msdn.microsoft.com/library/dd286584(VS.100).aspx)|  
+|**管理测试组 (Visual Studio 2010)：** 如果要同时运行多个测试，可以将它们划分到多个组中。 测试列表仍受支持，但对于新测试组，您应该考虑使用测试类别。 例如，你可以为针对触发器或特定架构  中的所有对象的测试创建测试类别。|[定义测试类别以对测试进行分组](https://msdn.microsoft.com/library/dd286595(VS.100).aspx)<br /><br />[定义测试列表以对测试进行分组](https://msdn.microsoft.com/library/dd286584(VS.100).aspx)|  
 |**将测试项目和测试签入版本控制中：** 在运行测试并验证它们是否正常运行之后，应将测试项目和所有相关文件签入版本控制中，以便所有团队成员都可以运行这些测试。 通过将测试项目与 SQL Server 数据库项目一起签入版本控制，你可以轻松还原数据库和数据库测试的兼容版本。|[将文件添加到版本控制](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)<br /><br />[使用“签入”和“挂起的更改”窗口](https://msdn.microsoft.com/library/ms245462(VS.100).aspx)|  
 |**定义自定义测试条件：** 如果必须测试默认测试条件组没有包括的行为，可以创建自定义测试条件。 您必须将这些条件分发给要运行使用新条件的测试的所有团队成员。|[方案：定义 SQL Server 单元测试的自定义测试条件](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
 |**更新现有单元测试：** 如果具有一些在以前版本的 Visual Studio 中创建的数据库单元测试，则必须升级这些测试，然后它们才能在此版本中成功生成和运行。<br /><br />**注意**：如果打开的解决方案同时包含以前版本的 Visual Studio 中的数据库项目和数据库单元测试项目，则系统会提示升级数据库项目。 系统不会提示您升级数据库单元测试项目，它必须手动升级。|[升级包含数据库单元测试的较旧的测试项目](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md)|  

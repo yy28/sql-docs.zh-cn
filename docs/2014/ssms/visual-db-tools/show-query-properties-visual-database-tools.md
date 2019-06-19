@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35092821d2407e90e550a4351f186de6a585cd64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63071792"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>显示查询属性 (Visual Database Tools)
@@ -27,9 +27,9 @@ ms.locfileid: "63071792"
   
 ### <a name="to-display-properties-for-a-query"></a>显示查询的属性  
   
--   在查询和视图设计器中打开查询后，在“视图”菜单中，单击“属性窗口”。  
+-   在查询和视图设计器中打开查询后，在“视图”  菜单中，单击“属性窗口”  。  
   
- 此时，将会在“属性”窗口中显示该查询的属性。  
+ 此时，将会在“属性”  窗口中显示该查询的属性。  
   
 ## <a name="see-also"></a>请参阅  
  [执行基本的查询操作 (Visual Database Tools)](visual-database-tools.md)  

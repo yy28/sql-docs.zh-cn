@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0a6a198d252f2363fc55e38677518ec02724e3e2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102022"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>解决 SQL Server 数据库单元测试问题
@@ -28,13 +28,13 @@ ms.locfileid: "65102022"
 -   [在运行数据库单元测试时发生超时](#TimeoutsDuringUnitTests)  
   
 ## <a name="UnitTestingAndAppConfigChanges"></a>在运行单元测试时单元测试和 App.Config 更改被忽略  
-如果您在测试项目中修改 App.Config 文件，则必须首先重新生成该测试项目，然后这些更改才会生效。 这些更改包括你通过使用“SQL Server 测试配置”对话框对 App.Config 进行的更改。 如果您没有重新生成测试项目，则在运行单元测试时将不会应用这些更改。  
+如果您在测试项目中修改 App.Config 文件，则必须首先重新生成该测试项目，然后这些更改才会生效。 这些更改包括你通过使用“SQL Server 测试配置”  对话框对 App.Config 进行的更改。 如果您没有重新生成测试项目，则在运行单元测试时将不会应用这些更改。  
   
 ## <a name="DatabaseDeploymentInUnitTests"></a>在运行单元测试时数据库部署到意外的目标  
 如果您在运行单元测试时从某一数据库项目部署数据库，则通过使用在您的单元测试配置中指定的连接字符串信息来部署数据库。 在“数据库项目调试”属性中指定的连接信息不用于此任务，这允许你对同一个数据库的不同实例运行 SQL Server 单元测试。  
   
 ## <a name="TimeoutsDuringUnitTests"></a>在运行数据库单元测试时发生超时  
-如果您的数据库单元测试由于超时而失败，则可以通过在您的测试项目中更新 app.config 文件来增加超时期限。 在连接字符串上定义的连接超时指定单元测试连接到服务器时要等待多长时间。 命令超时（必须在 app.config 文件中直接定义）指定在单元测试执行 Transact\-SQL 脚本时要等待多长时间。 如果您有长时间运行的单元测试方面的问题，则尝试在相应上下文元素中增加该命令超时值。 例如，若对于 PrivilegedContext 元素将命令超时指定为 120 秒，则按如下所示更新 app.config：  
+如果您的数据库单元测试由于超时而失败，则可以通过在您的测试项目中更新 app.config 文件来增加超时期限。 在连接字符串上定义的连接超时指定单元测试连接到服务器时要等待多长时间。 命令超时（必须在 app.config 文件中直接定义）指定在单元测试执行 Transact\-SQL 脚本时要等待多长时间。 如果您有长时间运行的单元测试方面的问题，则尝试在相应上下文元素中增加该命令超时值。 例如，若对于 PrivilegedContext  元素将命令超时指定为 120 秒，则按如下所示更新 app.config：  
   
 ```  
 <SqlUnitTesting_VS2010>  

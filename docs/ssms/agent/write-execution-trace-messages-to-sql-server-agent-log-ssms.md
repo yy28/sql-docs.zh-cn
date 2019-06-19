@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b4e1e38ee7d4cde2c9c68b8b04eaf10c7e10b2a4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103214"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
@@ -71,9 +71,9 @@ ms.locfileid: "65103214"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要将执行跟踪消息写入到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的服务器。  
   
-2.  右键单击“SQL Server 代理”，然后选择“属性”。  
+2.  右键单击“SQL Server 代理”  ，然后选择“属性”  。  
   
-3.  在“SQL Server 代理属性 - server\_name”对话框中，在“常规”页的“错误日志”下，选中“包含执行跟踪消息”复选框。  
+3.  在“SQL Server 代理属性 - server\_name”对话框中，在“常规”页的“错误日志”下，选中“包含执行跟踪消息”复选框      。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   

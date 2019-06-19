@@ -17,46 +17,21 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23321c9c8208cf4a78909ab5cedcd921184f7b0b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d27da0678e993047ffb71a2000a497d282d6dc63
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214698"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799295"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>连接到 Always On 可用性组侦听器 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题包含有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 客户端连接和应用程序故障转移功能的注意事项的信息。  
+  本文包含有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 客户端连接和应用程序故障转移功能的注意事项的信息。  
   
 > [!NOTE]  
 >  对于绝大多数常见的侦听器配置，只需通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句或 PowerShell cmdlet 即可创建第一个可用性组侦听器。 有关详细信息，请参阅本主题后面的 [相关任务](#RelatedTasks)。  
   
- **本主题内容：**  
-  
--   [可用性组侦听器](#AGlisteners)  
-  
--   [使用侦听器连接到主副本](#ConnectToPrimary)  
-  
--   [使用侦听器连接到只读的辅助副本（只读路由）](#ConnectToSecondary)  
-  
-    -   [为只读路由配置可用性副本](#ConfigureARsForROR)  
-  
-    -   [只读应用程序意向和只读路由](#ReadOnlyAppIntent)  
-  
--   [跳过可用性组侦听器](#BypassAGl)  
-  
--   [有关故障转移的客户端连接行为](#CCBehaviorOnFailover)  
-  
--   [支持可用性组多子网故障转移](#SupportAgMultiSubnetFailover)  
-  
--   [可用性组侦听器和 SSL 证书](#SSLcertificates)  
-  
--   [可用性组侦听器和服务器主体名称 (SPN)](#SPNs)  
-  
--   [相关任务](#RelatedTasks)  
-  
--   [相关内容](#RelatedContent)  
   
 ##  <a name="AGlisteners"></a> 可用性组侦听器  
  您可以通过创建一个可用性组侦听器来提供到给定可用性组的数据库的客户端连接。 可用性组侦听器是一个虚拟网络名称 (VNN)，客户端可连接到此名称以访问 Always On 可用性组的主要副本或次要副本中的数据库。 可用性组侦听器使客户端无需知道它要连接到的 SQL Server 物理实例的名称，即可连接到某个可用性副本。  无需修改客户端连接字符串，即可连接到当前主副本的当前位置。  
@@ -67,13 +42,8 @@ ms.locfileid: "53214698"
   
  有关可用性组侦听程序的基本信息，请参阅 [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- **本节内容：**  
   
--   [可用性组侦听器配置](#AGlConfig)  
-  
--   [选择可用性组侦听器端口](#SelectListenerPort)  
-  
-###  <a name="AGlConfig"></a> 可用性组侦听器配置  
+##  <a name="AGlConfig"></a> 可用性组侦听器配置  
  可用性组侦听器由以下各项定义：  
   
  唯一的 DNS 名称  
@@ -95,7 +65,7 @@ ms.locfileid: "53214698"
   
  可用性组侦听器不支持混合网络配置和跨子网 DHCP。 这是因为，当发生故障转移时，动态 IP 可能已过期或被释放，这将会威胁总体高可用性。  
   
-###  <a name="SelectListenerPort"></a> 选择可用性组侦听器端口  
+##  <a name="SelectListenerPort"></a> 选择可用性组侦听器端口  
  当配置可用性组侦听器时，您必须指定一个端口。  您可以将默认端口配置为 1433，以便允许使用客户端连接字符串以达到简化目的。 如果使用 1433，则无需在连接字符串中指定端口号。   此外，由于每个可用性组侦听器都将具有一个独立的虚拟网络名称，因此，在单个 WSFC 上配置的每个可用性组侦听器都可以配置为引用相同的默认端口 1433。  
   
  还可以指定一个非标准的侦听器端口，但是，这意味着您还需要在连接到可用性组侦听器时，在您的连接字符串中显式指定一个目标端口。  您还需要为非标准端口打开对防火墙的权限。  
@@ -114,7 +84,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  您仍可选择直接引用主副本或辅助副本的 SQL Server 实例名称，而不使用可用性组侦听器服务器名称，但如果您选择这样做，将会丢失新连接（自动定向到当前主副本）的优势。  还将失去只读路由的优势。  
   
 ##  <a name="ConnectToSecondary"></a> 使用侦听器连接到只读的辅助副本（只读路由）  
- 只读路由指的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将到可用性组侦听器的传入连接路由到配置为允许只读工作负荷的次要副本。 如果符合下列要求，则引用可用性组侦听器名称的传入连接可自动路由到只读副本：  
+ 只读路由  指的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将到可用性组侦听器的传入连接路由到配置为允许只读工作负荷的次要副本。 如果符合下列要求，则引用可用性组侦听器名称的传入连接可自动路由到只读副本：  
   
 -   至少一个辅助副本设置为只读访问，并且每个只读辅助副本和主副本都配置为支持只读路由。 有关详细信息，请参阅 [本节中后面的为只读路由配置可用性副本](#ConfigureARsForROR)。  
 
@@ -122,7 +92,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 
 -   连接字符串引用某一可用性组侦听器，并且将传入连接的应用程序意向设置为只读（例如，使用 ODBC 或 OLEDB 连接字符串或连接特性或属性中的 **Application Intent=ReadOnly** 关键字）。 有关详细信息，请参阅本节后面的 [只读应用程序意向和只读路由](#ReadOnlyAppIntent)。  
   
-###  <a name="ConfigureARsForROR"></a> 为只读路由配置可用性副本  
+##  <a name="ConfigureARsForROR"></a> 为只读路由配置可用性副本  
  数据库管理员必须按如下所示配置可用性副本：  
   
 1.  对于您要配置为可读取辅助副本的每个可用性副本，数据库管理员都必须配置以下设置，这些设置仅在辅助角色下才会生效：  
@@ -139,7 +109,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 -   [为可用性组配置只读路由 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-###  <a name="ReadOnlyAppIntent"></a> 只读应用程序意向和只读路由  
+##  <a name="ReadOnlyAppIntent"></a> 只读应用程序意向和只读路由  
  应用程序意向连接字符串属性表示客户端应用程序是要定向到可用性组数据库的读写版本还是只读版本的请求。 若要使用只读路由，在连接到可用性组侦听器时，客户端必须在连接字符串中使用应用程序只读意向。 如果没有只读应用程序意向，则连接到可用性组侦听器将定向到主副本上的数据库。  
   
  在登录期间，应用程序意向属性存储在客户端的会话中，然后 SQL Server 实例将处理该意向，并按照可用性组的配置和辅助副本中目标数据库的当前读写状态来确定执行什么操作。  
@@ -167,14 +137,14 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="BypassAGl"></a> 跳过可用性组侦听器  
  当可用性组侦听器支持故障转移重定向和只读路由时，客户端连接无需使用这两个功能。 客户端连接还可以直接引用 SQL Server 实例，而不是连接到可用性组侦听器。  
   
- 对于 SQL Server 实例，无论连接是使用可用性组侦听器还是使用其他实例端点登录都无关紧要。  SQL Server 实例将验证目标数据库的状态，并允许或禁止基于可用性组配置和当前实例的数据库状态进行连接。  例如，如果客户端应用程序直接连接到 SQL Server 实例的端口并连接到可用性组中承载的目标数据库，且该目标数据库处于主状态和联机状态，则连接将获得成功。  如果目标数据库处于脱机或过渡状态，将无法连接到数据库。  
+ 对于 SQL Server 实例，无论连接是使用可用性组侦听程序还是使用其他实例终结点登录都无关紧要。  SQL Server 实例将验证目标数据库的状态，并允许或禁止基于可用性组配置和当前实例的数据库状态进行连接。  例如，如果客户端应用程序直接连接到 SQL Server 实例的端口并连接到可用性组中承载的目标数据库，且该目标数据库处于主状态和联机状态，则连接将获得成功。  如果目标数据库处于脱机或过渡状态，将无法连接到数据库。  
   
  此外，当从数据库镜像迁移到 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时，只要只有一个辅助副本存在且该副本禁止用户连接，应用程序就可以指定数据库镜像连接字符串。 有关详细信息，请参阅本节后面的 [将数据库镜像连接字符串用于可用性组](#DbmConnectionString)。  
   
-###  <a name="DbmConnectionString"></a> 将数据库镜像连接字符串用于可用性组  
+##  <a name="DbmConnectionString"></a> 将数据库镜像连接字符串用于可用性组  
  如果可用性组仅拥有一个次要副本并且使用次要副本的 ALLOW_CONNECTIONS = READ_ONLY 或 ALLOW_CONNECTIONS = NONE 进行配置，则客户端可以通过使用数据库镜像连接字符串连接到主要副本。 在将现有应用程序从数据库镜像迁移到可用性组时，此方法可能会很有用，只要您将可用性组限制为两个可用性副本（一个主副本和一个辅助副本）。 如果添加其他辅助副本，您需要为该可用性组创建一个可用性组侦听器，并更新您的应用程序以使用该可用性组侦听器 DNS 名称。  
   
- 在使用数据库镜像连接字符串时，客户端可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 或用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 客户端提供的连接字符串必须至少提供一个服务器实例的名称，即“初始伙伴名称” ，以便标识最初承载您想要连接到的可用性副本的服务器实例。 此外，连接字符串还可以提供另一个服务器实例的名称，即“故障转移伙伴名称” ，以便标识最初将辅助副本作为故障转移伙伴名称承载的服务器实例。  
+ 在使用数据库镜像连接字符串时，客户端可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 或用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 客户端提供的连接字符串必须至少提供一个服务器实例的名称，即“初始伙伴名称”  ，以便标识最初承载您想要连接到的可用性副本的服务器实例。 此外，连接字符串还可以提供另一个服务器实例的名称，即“故障转移伙伴名称”  ，以便标识最初将辅助副本作为故障转移伙伴名称承载的服务器实例。  
   
  有关数据库镜像连接字符串详细信息，请参阅 [将客户端连接到数据库镜像会话 (SQL Server)](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
@@ -200,9 +170,9 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; Mult
  **MultiSubnetFailover** 连接选项应设置为 **True** ，即使可用性组仅跨单子网也不例外。  这允许您预先配置新的客户端以支持进一步跨多个子网，而无需进一步更改客户端连接字符串，还可以优化单子网故障转移的故障转移性能。  在不需要 **MultiSubnetFailover** 连接选项时，它将提供更快进行子网故障转移的优势。  这是因为，客户端驱动程序将尝试为每个与可用性组关联的 IP 地址并行打开 TCP 套接字。  客户端驱动程序将等待第一个 IP 响应成功，一旦成功，就将其用于连接。  
   
 ##  <a name="SSLcertificates"></a> 可用性组侦听器和 SSL 证书  
- 当连接到可用性组侦听器时，如果参与的 SQL Server 实例将 SSL 证书与会话加密结合使用，则正在连接的客户端驱动程序将需要支持 SSL 证书中的“主题备用名称”以便强制加密。  SQL Server 驱动程序对于证书“主题备用名称”的支持计划用于 ADO.NET (SqlClient)、Microsoft JDBC 和 SQL Native Client (SNAC)。  
+ 当连接到可用性组侦听器时，如果参与的 SQL Server 实例将 SSL 证书与会话加密结合使用，则正在连接的客户端驱动程序将需要支持 SSL 证书中的“主题备用名称”以便强制加密。  SQL Server 驱动程序对于证书“使用者可选名称”的支持计划用于 ADO.NET (SqlClient)、Microsoft JDBC 和 SQL Native Client (SNAC)。  
   
- 必须为故障转移群集中每个参与的服务器节点配置 A X.509 证书，并在证书“主题备用名称”中设置所有可用性组侦听器的列表。  
+ 必须为故障转移群集中每个参与的服务器节点配置 X.509 证书，并在证书“使用者可选名称”中设置所有可用性组侦听程序的列表。  
   
  例如，如果 WSFC 具有三个可用性组侦听器，名称分别为 `AG1_listener.Adventure-Works.com`、 `AG2_listener.Adventure-Works.com`和 `AG3_listener.Adventure-Works.com`，则证书的“主题备用名称”应设置如下：  
   

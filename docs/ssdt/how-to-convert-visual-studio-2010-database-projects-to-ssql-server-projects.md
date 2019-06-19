@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 93c4e141dc48c87214fc6de764d0b2ff33ebe9b9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098241"
 ---
 # <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>如何：将 Visual Studio 2010 数据库项目转换为 SQL Server 数据库项目并重新以不同平台为目标
@@ -38,17 +38,17 @@ ms.locfileid: "65098241"
   
 1.  打开 SQL Server 2005 或 2008 数据库项目。  
   
-2.  “转换为 SQL Server 数据库项目”向导将自动打开。 选择“转换为 SQL Server 数据库项目”，然后单击“确定”。 保留默认设置以便备份选中的现有文件。  
+2.  “转换为 SQL Server 数据库项目”  向导将自动打开。 选择“转换为 SQL Server 数据库项目”  ，然后单击“确定”  。 保留默认设置以便备份选中的现有文件。  
   
-3.  将自动生成一个转换报告，其中列出已转换的所有文件。 要了解有关转换过程的详细信息，请单击项目文件名旁边的 +（加号）。  
+3.  将自动生成一个转换报告，其中列出已转换的所有文件。 要了解有关转换过程的详细信息，请单击项目文件名旁边的  +（加号）。  
   
-4.  请注意，在“解决方案资源管理器”中，项目文件、属性文件和架构对象都将转换。  
+4.  请注意，在“解决方案资源管理器”  中，项目文件、属性文件和架构对象都将转换。  
   
 ### <a name="to-change-a-projects-target-platform"></a>更改项目的目标平台  
   
-1.  在“解决方案资源管理器”中，右键单击新转换的项目，然后选择“属性”以便访问“项目设置”对话框。  
+1.  在“解决方案资源管理器”  中，右键单击新转换的项目，然后选择“属性”  以便访问“项目设置”  对话框。  
   
-2.  在“目标平台”下拉列表中选择任何 SSDT 支持的平台。  
+2.  在“目标平台”  下拉列表中选择任何 SSDT 支持的平台。  
   
 ## <a name="see-also"></a>另请参阅  
 [如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  

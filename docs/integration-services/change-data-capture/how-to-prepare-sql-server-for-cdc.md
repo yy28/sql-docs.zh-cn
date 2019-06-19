@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7cb1e51817c4263bdd649ca2f1ea40c0cc968b89
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728755"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>如何为 CDC 准备 SQL Server
@@ -31,17 +31,17 @@ ms.locfileid: "65728755"
   
 ### <a name="to-enable-sql-server-for-cdc"></a>为 CDC 启用 SQL Server  
   
-1.  从 **“开始”** 菜单上，选择 **“Oracle CDC 服务配置”**。  
+1.  从 **“开始”** 菜单上，选择 **“Oracle CDC 服务配置”** 。  
   
-2.  从左侧的窗格中选择 **“本地 CDC 服务”** ，然后从 **“操作”** 窗格中单击 **“准备 SQL Server”**。  
+2.  从左侧的窗格中选择 **“本地 CDC 服务”** ，然后从 **“操作”** 窗格中单击 **“准备 SQL Server”** 。  
   
-     还可以右键单击“本地 CDC 服务”，然后选择“准备 SQL Server”。  
+     还可以右键单击“本地 CDC 服务”  ，然后选择“准备 SQL Server”  。  
   
 3.  在“为 Oracle CDC 准备 SQL Server 实例”对话框中输入所需信息。 有关如何在此对话框中输入所需信息的信息，请参阅 [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)。  
   
      若要为 Oracle CDC 准备 SQL Server 实例，该登录名必须对 MSXDBCDC 数据库具有写入权限。 输入对 MSXDBCDC 数据库具有写入权限的登录名的凭据，例如 `sysasmin` 角色的成员。  
   
- **注意**：可以单击“查看脚本”来查看安装脚本的只读版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员可以将此脚本复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理控制台，以便根据需要编辑和执行该脚本。  
+ **注意**：可以单击“查看脚本”  来查看安装脚本的只读版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员可以将此脚本复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理控制台，以便根据需要编辑和执行该脚本。  
   
 ## <a name="see-also"></a>另请参阅  
  [为 CDC 准备 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  

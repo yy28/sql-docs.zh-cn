@@ -21,16 +21,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e359073f2672f0fd68461398b78dc93b38ed39ec
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946435"
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回在生成表或视图的标识列时指定的递增值（形式为 numeric(@@MAXPRECISION,0)）。  
+  返回在生成表或视图的标识列时指定的递增值（形式为 numeric  (@@  MAXPRECISION,0)）。  
   
  ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,8 +42,8 @@ IDENT_INCR ( 'table_or_view' )
 ```  
   
 ## <a name="arguments"></a>参数  
- 'table_or_view'  
- 指定表或视图以检查有效的标识增量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view 可以是带有引号的字符串常量。 也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar。  
+ 'table_or_view'     
+ 指定表或视图以检查有效的标识增量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view  可以是带有引号的字符串常量。 也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar      。  
   
 ## <a name="return-types"></a>返回类型  
  **numeric**  

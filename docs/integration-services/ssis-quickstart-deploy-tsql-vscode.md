@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 890fa6b671a3497ae1009813c6486c23a8b9217f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717579"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>使用 TRANSACT-SQL 从 Visual Studio Code 部署 SSIS 项目
@@ -43,25 +43,25 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>在 VS Code 中将语言模式设置为 SQL
 
-若要启用 `mssql` 命令和 T-SQL IntelliSense，请在 Visual Studio Code 中将语言模式设置为 SQL。
+若要启用 `mssql` 命令和 T-SQL IntelliSense，请在 Visual Studio Code 中将语言模式设置为 SQL  。
 
 1. 打开 Visual Studio Code，然后打开一个新窗口。 
 
-2. 在状态栏的右下角单击“纯文本”。
+2. 在状态栏的右下角单击“纯文本”  。
  
-3. 在打开的“选择语言模式”下拉菜单中选择或输入“SQL”，然后按 ENTER 将语言模式设置为 SQL。 
+3. 在打开的“选择语言模式”  下拉菜单中选择或输入“SQL”  ，然后按 ENTER  将语言模式设置为 SQL。 
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>连接到 SSIS 目录数据库
 
 使用 Visual Studio Code 来建立到 SSIS 目录的连接。
 
-1. 在 VS Code 中，按 CTRL+SHIFT+P（或 F1）打开命令面板。
+1. 在 VS Code 中，按 CTRL+SHIFT+P（或 F1）打开命令面板   。
 
-2. 键入 sqlcon，然后按 ENTER。
+2. 键入 sqlcon，然后按 ENTER   。
 
-3. 按 ENTER 以选择“创建连接配置文件”。 本步骤是为 SQL Server 实例创建连接配置文件。
+3. 按 ENTER  以选择“创建连接配置文件”  。 本步骤是为 SQL Server 实例创建连接配置文件。
 
-4. 按照提示为新连接配置文件指定连接属性。 指定每个值后，按 ENTER 继续。 
+4. 按照提示为新连接配置文件指定连接属性。 指定每个值后，按 ENTER  继续。 
 
    | 设置       | 建议的值 | 详细信息 |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -70,21 +70,21 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
    | **身份验证** | SQL 登录名 | |
    | **User name** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
-   | **是否保存密码？** |  是或否 | 如果不希望每次都输入密码，请选择“是”。 |
-   | **输入此配置文件的名称** | 一个配置文件名称，如 mySSISServer | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 
+   | **是否保存密码？** | 是或否 | 如果不希望每次都输入密码，请选择“是”。 |
+   | **输入此配置文件的名称** | 一个配置文件名称，如 mySSISServer  | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 
 
-5. 按 ESC 键关闭提示配置文件已创建并连接的提示消息。
+5. 按 ESC  键关闭提示配置文件已创建并连接的提示消息。
 
 6. 在状态栏中验证连接。
 
 ## <a name="run-the-t-sql-code"></a>运行 T-SQL 代码
 运行下面的 TRANSACT-SQL 代码以部署 SSIS 项目。
 
-1. 在“编辑器”窗口中，在空查询窗口中输入以下查询。
+1. 在“编辑器”  窗口中，在空查询窗口中输入以下查询。
 
 2. 为系统更新 `catalog.deploy_project` 存储过程中的参数值。
 
-3. 按 CTRL+SHIFT+E 以运行代码并部署项目。
+3. 按 CTRL+SHIFT+E  以运行代码并部署项目。
 
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)

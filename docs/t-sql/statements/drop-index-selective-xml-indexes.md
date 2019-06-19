@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 663dc63894d8356bc9856cba1fca23908e26ef74
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503653"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX（选择性 XML 索引）
@@ -46,7 +46,7 @@ DROP INDEX index_name ON <object>
 ```  
   
 ##  <a name="Arguments"></a> 参数  
- index_name  
+ index_name   
  要删除的现有索引的名称。  
   
  *\< object>* 是包含已建立索引的 XML 列的表。 使用以下格式之一：  

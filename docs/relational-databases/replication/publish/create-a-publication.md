@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 338e076b2a95d7086b0acc22dff1d85e4327844d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661271"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51665816"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建发布和定义项目，使用：**  
   
@@ -47,13 +47,13 @@ ms.locfileid: "51665816"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   发布和项目名称不能包括下列任何字符：%、\*、[ , ]、|、:、"、? , ' , \ , / , < , >. 如果数据库中的对象包括任意上述字符，并且你希望复制它们，那么必须在“项目属性 - \<项目>”对话框（可从向导中的“项目”页获得）中指定一个不同于相应对象名称的项目名称。  
+-   发布和项目名称不能包括下列任何字符：%、\*、[ , ]、|、:、"、? , ' , \ , / , < , >. 如果数据库中的对象包括任意上述字符，并且你希望复制它们，那么必须在“项目属性 - \<项目>”  对话框（可从向导中的“项目”  页获得）中指定一个不同于相应对象名称的项目名称。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../../includes/msconame-md.md)] （加密服务）。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可以使用新建发布向导创建发布和定义项目。 创建发布之后，可在“发布属性 - \<发布>”对话框中查看和修改发布属性。 有关从 Oracle 数据库创建发布的信息，请参阅[从 Oracle 数据库创建发布](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)。  
+ 可以使用新建发布向导创建发布和定义项目。 创建发布之后，可在“发布属性 - \<发布>”  对话框中查看和修改发布属性。 有关从 Oracle 数据库创建发布的信息，请参阅[从 Oracle 数据库创建发布](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)。  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
   
@@ -61,7 +61,7 @@ ms.locfileid: "51665816"
   
 2.  展开 **“复制”** 文件夹，再右键单击 **“本地发布”** 文件夹。  
   
-3.  单击 **“新建发布”**。  
+3.  单击 **“新建发布”** 。  
   
 4.  按照新建发布向导中的页完成以下任务：  
   
@@ -110,16 +110,16 @@ ms.locfileid: "51665816"
   
     -   如果无法确定已发布的数据库是否存在日志读取器代理作业，请在发布服务器上对发布数据库执行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。  
   
-    -   如果结果集为空，则创建日志读取器代理作业。 在发布服务器上，执行[sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 将运行该代理时所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 凭据指定给 **@job_name** 和 **@password**中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password**。 继续执行步骤 3。  
+    -   如果结果集为空，则创建日志读取器代理作业。 在发布服务器上，执行[sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 将运行该代理时所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 凭据指定给 **@job_name** 和 **@password** 中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password** 。 继续执行步骤 3。  
   
-3.  在发布服务器上，执行[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 为 **@publication**指定发布名称，并且对于 **@repl_freq** 参数，为快照发布指定 **snapshot** 值或为事务发布指定 **continuous** 值。 指定任何其他发布选项。 这便定义了发布。  
+3.  在发布服务器上，执行[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 为 **@publication** 指定发布名称，并且对于 **@repl_freq** 参数，为快照发布指定 **snapshot** 值或为事务发布指定 **continuous** 值。 指定任何其他发布选项。 这便定义了发布。  
   
     > [!NOTE]  
     >  发布名称不能包括下列字符：  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-4.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将步骤 3 中使用的发布名称指定给 **@publication** 指定在步骤 2 中使用的发布名称，并为 **@snapshot_job_name** 和 **@password**中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password**中对事务发布启用更新订阅。 此操作将为发布创建一个快照代理作业。  
+4.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将步骤 3 中使用的发布名称指定给 **@publication** 指定在步骤 2 中使用的发布名称，并为 **@snapshot_job_name** 和 **@password** 中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password** 中对事务发布启用更新订阅。 此操作将为发布创建一个快照代理作业。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -139,7 +139,7 @@ ms.locfileid: "51665816"
     >   
     >  % * [ ] | : " ? \ / < >  
   
-3.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 为 **@publication** 指定在步骤 2 中使用的发布名称，并为 **@snapshot_job_name** 和 **@password**中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password**中对事务发布启用更新订阅。 此操作将为发布创建一个快照代理作业。  
+3.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 为 **@publication** 指定在步骤 2 中使用的发布名称，并为 **@snapshot_job_name** 和 **@password** 中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password** 中对事务发布启用更新订阅。 此操作将为发布创建一个快照代理作业。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -196,7 +196,7 @@ ms.locfileid: "51665816"
   
     -   （可选）如果使用 SQL Server 身份验证连接到发布服务器，设置 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> 字段。  
   
-    -   （可选）使用包含性逻辑或运算符（在 Visual C# 中为 **|**，在 Visual Basic 中为 **Or**）和逻辑异或运算符（在 Visual C# 中为 **^**，在 Visual Basic 中为 **Xor**），设置 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 属性的 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 值。  
+    -   （可选）使用包含性逻辑或运算符（在 Visual C# 中为 **|** ，在 Visual Basic 中为 **Or**）和逻辑异或运算符（在 Visual C# 中为 **^** ，在 Visual Basic 中为 **Xor**），设置 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 属性的 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 值。  
   
     -   （可选）将 <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> 设置为发布服务器的名称（如果发布服务器不是 SQL Server 发布服务器）。  
   
@@ -228,7 +228,7 @@ ms.locfileid: "51665816"
         > [!NOTE]  
         >  如果发布是由 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定服务器角色的成员创建的，则不需要设置 **P:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity** 。 有关详细信息，请参阅 [复制代理安全模式](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
-    -   （可选）使用“或”逻辑 OR 运算符（在 Visual C# 中为**|** ，在 Visual Basic 中为 **Or** ）和“异或”逻辑 OR 运算符（在 Visual C# 中为**^** ，在 Visual Basic 中为 **Xor** ），将 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的值设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 属性的值。  
+    -   （可选）使用“或”逻辑 OR 运算符（在 Visual C# 中为 **|** ，在 Visual Basic 中为 **Or** ）和“异或”逻辑 OR 运算符（在 Visual C# 中为 **^** ，在 Visual Basic 中为 **Xor** ），将 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的值设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 属性的值。  
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 方法来创建发布。  
   

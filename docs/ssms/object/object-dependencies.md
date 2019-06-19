@@ -14,45 +14,45 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d78edce14b7e88648ce134c2bb3d7def7003f516
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102984"
 ---
 # <a name="object-dependencies"></a>对象依赖关系
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-一些数据库对象与其他数据库对象存在依赖关系。 例如，视图和存储过程依赖于包含视图或过程返回的数据的表是否存在。 当前对象的“对象依赖关系（‘常规’页）”列出了该对象正常运行所需的数据库对象和依赖于所选对象的对象。 在其定义中引用了另一个对象并且该定义存储在系统目录中的对象称为“引用实体”。 被另一对象引用的对象称为“被引用实体”。  
+一些数据库对象与其他数据库对象存在依赖关系。 例如，视图和存储过程依赖于包含视图或过程返回的数据的表是否存在。 当前对象的“对象依赖关系（‘常规’页）”  列出了该对象正常运行所需的数据库对象和依赖于所选对象的对象。 在其定义中引用了另一个对象并且该定义存储在系统目录中的对象称为“引用实体”  。 被另一对象引用的对象称为“被引用实体”  。  
   
-当前对象的“对象依赖关系（‘高级’页）”列出了依赖于该对象的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象。 这些对象可存储于不同的服务器上。  
+当前对象的“对象依赖关系（‘高级’页）”  列出了依赖于该对象的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象。 这些对象可存储于不同的服务器上。  
   
 使用此对话框可在更改或删除所选对象之前了解其依赖关系。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
-依赖于 \<所选对象> 的对象  
+依赖于 \<所选对象> 的对象    
 单击此按钮将列出依赖于所选对象的对象，以及依赖关系跟踪所涉及的对象。  
   
-\<所选对象> 依赖的对象  
+\<所选对象> 依赖的对象     
 单击此按钮将列出所选对象所依赖的并且依赖关系跟踪涉及的对象。  
   
 **依赖关系**  
-如果单击了“依赖 <selected object> 的对象”，则选择此选项将显示依赖于所选对象的对象的层次结构视图。 如果单击了“<selected object> 依赖的对象”，则选择此选项将显示所选对象所依赖的对象的层次结构视图。  
+如果单击了“依赖 <selected object> 的对象”   ，则选择此选项将显示依赖于所选对象的对象的层次结构视图。 如果单击了“<selected object> 依赖的对象”    ，则选择此选项将显示所选对象所依赖的对象的层次结构视图。  
   
 **名称**  
-显示上面“依赖关系”树视图中所选对象的名称。  
+显示上面“依赖关系”  树视图中所选对象的名称。  
   
 **类型**  
-显示上面“依赖关系”树视图中所选对象的类型。  
+显示上面“依赖关系”  树视图中所选对象的类型。  
   
 **上次同步时间**  
 > [!NOTE]  
-> 仅在“高级”页上提供此选项。  
+> 仅在“高级”  页上提供此选项。  
   
 指定上次更新依赖关系信息的时间和日期。  
   
 **依赖关系类型**  
 > [!NOTE]  
-> 仅在“常规”页上提供此选项。  
+> 仅在“常规”  页上提供此选项。  
   
 显示两个对象之间的依赖关系的类型。 可以为以下各项之一：  
   

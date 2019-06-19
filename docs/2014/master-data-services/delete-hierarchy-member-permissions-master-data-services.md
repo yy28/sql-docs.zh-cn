@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 853bc9ce4b2f0432f74e3876f9a6234042fe5b5e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479517"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>删除层次结构成员权限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，删除模型对象权限可以删除已进行的任何分配。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
@@ -33,11 +33,11 @@ ms.locfileid: "65479517"
   
 ### <a name="to-delete-hierarchy-member-permissions"></a>删除层次结构成员权限  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”** 。  
   
 2.  在 **“用户”** 或 **“组”** 页上，选择要编辑的用户或组所对应的行。  
   
-3.  单击 **“编辑所选用户”**。  
+3.  单击 **“编辑所选用户”** 。  
   
 4.  单击 **“层次结构成员”** 选项卡。  
   

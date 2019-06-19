@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151500"
 ---
 # <a name="summary-basic-navigation"></a>摘要：基本导航
@@ -24,11 +24,11 @@ ms.locfileid: "63151500"
   
 -   关闭那些不会立刻用到的窗口。  
   
--   如果未显示所需的工具，则从“视图”菜单中选中该工具。  
+-   如果未显示所需的工具，则从“视图”  菜单中选中该工具。  
   
--   使用“自动隐藏”，从而在环境布局中提供更多的空间。  
+-   使用“自动隐藏”  ，从而在环境布局中提供更多的空间。  
   
--   设置“启动时”选项以自定义默认布局。  
+-   设置“启动时”  选项以自定义默认布局。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 2 课：编写 TRANSACT-SQL](lesson-2-writing-transact-sql.md)  

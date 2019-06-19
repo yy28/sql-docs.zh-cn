@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c6253baf56d869eb5748f07a9648a7e8e57ccb8
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725345"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt;（大于）（SSIS 表达式）
@@ -60,7 +60,7 @@ expression1 > expression2
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
   
--   **“日期”、“时间”或“日期/时间”**：expression1 和 expression2 的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **“日期”、“时间”或“日期/时间”** ：expression1  和 expression2  的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  

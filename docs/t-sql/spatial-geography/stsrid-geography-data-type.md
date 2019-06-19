@@ -19,16 +19,16 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 96a8577d621b9cc8b22e0f3b334b1d9831fdcad7
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65939162"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  STSrid 是一个表示该实例的空间引用标识符 (SRID) 的整数。  
+  STSrid 是一个表示该实例的空间引用标识符 (SRID) 的整数  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "65939162"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：int  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：int   
   
  CLR 类型：**SqlInt32**  
   

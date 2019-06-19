@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479537"
 ---
 # <a name="entity-permissions-master-data-services"></a>实体权限 (Master Data Services)
@@ -32,9 +32,9 @@ ms.locfileid: "65479537"
  具有对实体的权限时，您可以添加和删除实体的成员、其显式层次结构和集合。  
   
 > [!NOTE]  
->  这些权限仅应用到用户界面的“资源管理器”功能区域。  
+>  这些权限仅应用到用户界面的“资源管理器”  功能区域。  
   
-|权限|Description|  
+|权限|描述|  
 |----------------|-----------------|  
 |**只读**|显示实体，但是用户不能添加、删除或更改成员。|  
 |**Update**|显示实体，用户可以添加、删除和更改成员。|  

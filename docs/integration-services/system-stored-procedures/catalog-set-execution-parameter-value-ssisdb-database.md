@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1a41df41528d3b9e76fd55404ae8ab544646a5d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715893"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value（SSISDB 数据库）
@@ -39,8 +39,8 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id = ] execution_id  
- 执行实例的唯一标识符。 execution_id 为 bigint。  
+ [ @execution_id = ] execution_id   
+ 执行实例的唯一标识符。 execution_id 为 bigint   。  
   
  [ @object_type = ] *object_type*  
  参数的类型。  
@@ -66,10 +66,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  *object_type* 为 **smallint**。  
   
  [ @parameter_name = ] *parameter_name*  
- 参数名。 parameter_name 为 nvarchar(128)。  
+ 参数名。 parameter_name  为 nvarchar(128)  。  
   
  [ @parameter_value = ] *parameter_value*  
- 参数的值。 parameter_value 为 sql_variant。  
+ 参数的值。 parameter_value  为 sql_variant  。  
   
 ## <a name="remarks"></a>Remarks  
  要查找用于给定执行的参数值，请查询 catalog.execution_parameter_values 视图。  

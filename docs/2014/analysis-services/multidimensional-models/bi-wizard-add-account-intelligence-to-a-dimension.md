@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076899"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>向维度中添加帐户智能
@@ -33,7 +33,7 @@ ms.locfileid: "66076899"
  在向导的第一个 **“定义帐户智能”** 页中，指定要应用帐户智能的维度。 已添加到该选定维度中的帐户智能增强功能将会使维度发生更改。 所有包含选定维度的多维数据集都将继承这些更改。  
   
 ## <a name="specifying-account-attributes"></a>指定帐户属性  
- 在向导的 **“配置维度属性”** 页中，指定选定帐户维度中的帐户属性。 首先，在 **“包括”** 列中，选中要映射到维度中维度属性的每个帐户属性类型旁边的复选框。 然后，在“维度属性”列中，展开下拉列表，并选择维度中对应于选定属性类型的属性。 从列表中选择特性会设置帐户特性的 `Type` 属性。  
+ 在向导的 **“配置维度属性”** 页中，指定选定帐户维度中的帐户属性。 首先，在 **“包括”** 列中，选中要映射到维度中维度属性的每个帐户属性类型旁边的复选框。 然后，在“维度属性”列中，展开下拉列表，并选择维度中对应于选定属性类型的属性。  从列表中选择特性会设置帐户特性的 `Type` 属性。  
   
 ## <a name="mapping-account-types"></a>映射帐户类型  
  第二个 **“定义帐户智能”** 页将维度表中的帐户类型值映射到由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]识别的帐户类型。 仅当维度中包含 **“帐户类型”** 维度属性时，才出现该页。 若要包含 **“帐户类型”** 维度，请在向导的 **“定义帐户智能设置”** 页中，选中 **“帐户类型”** 旁边的复选框，然后选择相应的属性。  
@@ -59,7 +59,7 @@ ms.locfileid: "66076899"
   
  若要更改数据库映射到每个帐户类型的默认聚合，可以使用数据库设计器。  
   
-1.  在解决方案资源管理器中，右键单击 Analysis Services 项目，再单击“编辑数据库”。  
+1.  在解决方案资源管理器中，右键单击 Analysis Services 项目，再单击“编辑数据库”。   
   
 2.  在 **“帐户类型映射”** 框的 **“名称”** 中，选择帐户类型。  
   

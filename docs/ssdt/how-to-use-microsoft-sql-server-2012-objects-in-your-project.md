@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e3175f523a0cc6b91fd1d5bd955e6872a5cf0064
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098408"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何：在项目中使用 Microsoft SQL Server 2012 对象
@@ -28,9 +28,9 @@ Microsoft SQL Server 2012 中引入了序列。 序列是一种用户定义的�
   
 ### <a name="to-add-a-new-sequence-object-to-your-project"></a>向您的项目添加一个新的序列对象  
   
-1.  在“解决方案资源管理器”中，右键单击“TradeDev”数据库项目，选择“添加”，然后选择“新项”。  
+1.  在“解决方案资源管理器”  中，右键单击“TradeDev”  数据库项目，选择“添加”  ，然后选择“新项”  。  
   
-2.  在左窗格上单击“可编程性”，然后选择“序列”。 单击“添加”，将新对象添加到项目中。  
+2.  在左窗格上单击“可编程性”  ，然后选择“序列”  。 单击“添加”  ，将新对象添加到项目中。  
   
 3.  用以下内容替换默认代码。  
   
@@ -44,13 +44,13 @@ Microsoft SQL Server 2012 中引入了序列。 序列是一种用户定义的�
     CACHE 10  
     ```  
   
-4.  如果项目的目标平台未设置为 Microsoft SQL Server 2012，则“错误列表”将显示 `CREATE SEQUENCE` 语句的语法错误。 若要更正此问题，请按照[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述相应地更改目标平台。  
+4.  如果项目的目标平台未设置为 Microsoft SQL Server 2012，则“错误列表”将显示 `CREATE SEQUENCE` 语句的语法错误  。 若要更正此问题，请按照[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述相应地更改目标平台。  
   
 5.  请按照[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述，将项目发布到已连接的 Microsoft SQL Server 2012 服务器中的数据库。  
   
 ### <a name="to-use-the-new-sequence-object"></a>使用新的序列对象  
   
-1.  在 SQL Server 对象资源管理器中，右击你在上一个过程中发布到的数据库，然后选择“新建查询”。  
+1.  在 SQL Server 对象资源管理器中，右击你在上一个过程中发布到的数据库，然后选择“新建查询”  。  
   
 2.  将以下代码粘贴到查询窗口中。  
   
@@ -65,7 +65,7 @@ Microsoft SQL Server 2012 中引入了序列。 序列是一种用户定义的�
     GO  
     ```  
   
-3.  按下“执行查询”按钮。  
+3.  按下“执行查询”  按钮。  
   
-4.  在 SQL Server 对象资源管理器中，导航到数据库中的 Products 表。 右键单击并选择“查看数据”，以便检查新添加的行。  
+4.  在  SQL Server 对象资源管理器中，导航到数据库中的  Products 表。 右键单击并选择“查看数据”  ，以便检查新添加的行。  
   

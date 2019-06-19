@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0810533a3488043ef4b3d8db9c0de4f3174b4ba8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102616"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 使用情况和诊断数据收集的本地审核
@@ -28,10 +28,10 @@ SQL Server Management Studio (SSMS) 包含已启用 Internet 的功能，这些�
 若要查看 SSMS 收集的功能使用情况数据，请执行以下步骤：
 
 1.  启动 SSMS。
-2.  单击“查看”，然后单击主菜单中的“输出”以显示“输出”窗口。 
-3.  看到“输出”窗口后，选择“显示输出来源:”菜单中的“遥测”。
+2.  单击“查看”  ，然后单击主菜单中的“输出”  以显示“输出”  窗口。 
+3.  看到“输出”  窗口后，选择“显示输出来源:”  菜单中的“遥测”  。
 
-使用 SSMS 与数据库进行交互时，“输出”窗口显示收集的数据。
+使用 SSMS 与数据库进行交互时，“输出”  窗口显示收集的数据。
 
 ## <a name="enable-or-disable-usage-and-diagnostic-data-collection-in-ssms"></a>在 SSMS 中启用或禁用使用情况和诊断数据收集
 

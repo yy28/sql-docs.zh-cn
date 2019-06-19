@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fea06da23752c75d56f22419a458f0719264283c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723713"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>并行安装 Integration Services 版本
@@ -32,7 +32,7 @@ ms.locfileid: "65723713"
 ## <a name="designing-and-maintaining-packages"></a>设计和维护包  
  若要设计和维护面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包，请使用 SQL Server Data Tools (SSDT) for Visual Studio 2015。 要获取 SSDT，请参阅 [下载最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
   
- 在 Integration Services 项目属性页中，在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在 Integration Services 项目属性页中，在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
 |SQL Server 的目标版本|SSIS 包的开发环境|  
 |----------------------------------|-----------------------------------------------|  

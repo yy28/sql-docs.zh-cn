@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e5ebfb5edbcbb0cc6ec47b063ffb11d87b01c55
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726236"
 ---
 # <a name="character-map-transformation"></a>字符映射表转换
@@ -89,7 +89,7 @@ ms.locfileid: "65726236"
 -   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="character-map-transformation-editor"></a>字符映射表转换编辑器
-  可以使用“字符映射表转换编辑器”对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
+  可以使用“字符映射表转换编辑器”  对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
   
 ### <a name="options"></a>选项  
  **可用输入列**  

@@ -1,8 +1,9 @@
 ---
 title: 使用 ExecuteXMLReader 方法执行 SQL 查询 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -13,17 +14,19 @@ helpviewer_keywords:
 - ExecuteXmlReader method
 - SQL queries [SQLXML]
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9791a5638e49c8299717d9aeb2b2ec63e3feb5a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720147"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>使用 ExecuteXMLReader 方法执行 SQL 查询
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   而不是使用 ExecuteToStream 方法，可以使用 SqlXmlCommand 对象 ExecuteXmlReader 方法执行命令。 此方法返回可用于进一步处理结果 （在此示例中打印元素或属性名称和值） 的 XmlReader 对象。  
   
 > [!NOTE]  

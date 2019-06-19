@@ -15,17 +15,17 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 3790d0f71b130ff1b73ae9af94fabcefed1cedd1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65368343"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下载并安装 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 
-SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Analysis Services (AS) 数据模型、Integration Services (IS) 包和 Reporting Services (RS) 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。
+SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Analysis Services (AS) 数据模型、Integration Services (IS) 包和 Reporting Services (RS) 报表  。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。
 
 
 ## <a name="changes-in-ssdt-for-visual-studio-2019"></a>SSDT for Visual Studio 2019 中的变化 ##
@@ -52,13 +52,13 @@ SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关�
 
 ## <a name="install-ssdt-with-visual-studio-2017"></a>使用 Visual Studio 2017 安装 SSDT
 
-若要在 [Visual Studio 安装](https://docs.microsoft.com/visualstudio/install/install-visual-studio)过程中安装 SSDT，请选择“数据存储和处理”工作负荷，然后选择“SQL Server Data Tools”。 如果已安装 Visual Studio，则可以[编辑工作负荷列表](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)，使其包括 SSDT：![数据存储和处理工作负荷](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
+若要在 [Visual Studio 安装](https://docs.microsoft.com/visualstudio/install/install-visual-studio)过程中安装 SSDT，请选择“数据存储和处理”工作负荷，然后选择“SQL Server Data Tools”   。 如果已安装 Visual Studio，则可以[编辑工作负荷列表](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)，使其包括 SSDT：![数据存储和处理工作负荷](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
 
 ## <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>安装 Analysis Services、Integration Services 和 Reporting Services 工具
 
 若要安装 AS、IS 和 RS 项目支持，请运行 [SSDT 独立安装程序](#ssdt-for-vs-2017-standalone-installer)。 
 
-该安装程序列出了可将 SSDT 工具添加到其中的可用 Visual Studio 实例。 如果未安装 Visual Studio，则选择“安装新的 SQL Server Data Tools 实例”可通过最低版本的 Visual Studio 安装 SSDT，但为获得最佳体验，建议通过[最新版本的 Visual Studio](https://www.visualstudio.com/downloads) 使用 SSDT。 
+该安装程序列出了可将 SSDT 工具添加到其中的可用 Visual Studio 实例。 如果未安装 Visual Studio，则选择“安装新的 SQL Server Data Tools 实例”可通过最低版本的 Visual Studio 安装 SSDT，但为获得最佳体验，建议通过[最新版本的 Visual Studio](https://www.visualstudio.com/downloads) 使用 SSDT  。 
 
 ![选择 AS、IS、RS](../ssdt/media/download-sql-server-data-tools-ssdt/select-services.png)
 
@@ -69,8 +69,8 @@ SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关�
 [![下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.9.1)](https://go.microsoft.com/fwlink/?linkid=2086373) 
 
 > [!IMPORTANT]
-> - 安装 SSDT for Visual Studio 2017 (15.9.1) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（如已安装），并关闭所有 VS 实例。
-> - 请将 SSDT for Visual Studio 2017 (15.8.0) 或先前版本用于设计包含 Teradata 源/目标的 SSIS 包。 15.8.0 版之后的 SSDT for Visual Studio 2017 版本无法设计包含 Attunity Teradata 源/目标的 SSIS 包。
+> - 安装 SSDT for Visual Studio 2017 (15.9.1) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（如已安装），并关闭所有 VS 实例   。
+> - 请将 SSDT for Visual Studio 2017 (15.8.0) 或先前版本用于设计包含 Teradata 源/目标的 SSIS 包。 15\.8.0 版之后的 SSDT for Visual Studio 2017 版本无法设计包含 Attunity Teradata 源/目标的 SSIS 包。
 
 
 **版本信息**  
@@ -85,7 +85,7 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 
 ### <a name="available-languages---ssdt-for-vs-2017"></a>支持的语言 - SSDT for VS 2017
 
-此版本的 SSDT for VS 2017 可安装以下语言：
+此版本的 SSDT for VS 2017 可安装以下语言  ：
 
 - [简体中文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x804)
 - [繁体中文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x404)

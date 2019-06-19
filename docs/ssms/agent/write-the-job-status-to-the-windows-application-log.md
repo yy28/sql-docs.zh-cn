@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7da43cc6b21f5d99aa58f152898211af805275a7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103224"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
@@ -64,17 +64,17 @@ ms.locfileid: "65103224"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，展开 **“作业”**，右键单击要编辑的作业，再单击 **“属性”**。  
+2.  展开 **“SQL Server 代理”** ，展开 **“作业”** ，右键单击要编辑的作业，再单击 **“属性”** 。  
   
 3.  选择 **“通知”** 页。  
   
-4.  请检查 **“写入 Windows 应用程序事件日志”**，然后执行下列操作之一：  
+4.  请检查 **“写入 Windows 应用程序事件日志”** ，然后执行下列操作之一：  
   
-    -   单击“当作业成功时”，以在作业成功完成时记录作业状态。  
+    -   单击“当作业成功时”  ，以在作业成功完成时记录作业状态。  
   
-    -   单击“当作业失败时”，以在作业未成功完成时记录作业状态。  
+    -   单击“当作业失败时”  ，以在作业未成功完成时记录作业状态。  
   
-    -   单击“当作业完成时”，以便无论完成状态如何，都记录作业状态。  
+    -   单击“当作业完成时”  ，以便无论完成状态如何，都记录作业状态。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理对象  
 **将作业状态写入 Windows 应用程序日志**  

@@ -15,28 +15,28 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098147"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用表设计器创建数据库对象
-SQL Server 对象资源管理器中的新的“SQL Server”节点不但在外观上与 SSMS 十分相似，而且可以使用在功能上与其 SSMS 对应项类似的上下文菜单创建新对象。  
+SQL Server 对象资源管理器  中的新的“SQL Server”  节点不但在外观上与 SSMS 十分相似，而且可以使用在功能上与其 SSMS 对应项类似的上下文菜单创建新对象。  
   
-例如，可以在“数据库”节点下创建一个新数据库。 同样，您可以选择特定的数据库，并且使用新的表设计器即时创建或编辑表定义及其相关编程对象。 从表设计器中，您可以切换到脚本窗格，从该窗格中，您可以直接编辑定义此表的脚本。  
+例如，可以在“数据库”  节点下创建一个新数据库。 同样，您可以选择特定的数据库，并且使用新的表设计器即时创建或编辑表定义及其相关编程对象。 从表设计器中，您可以切换到脚本窗格，从该窗格中，您可以直接编辑定义此表的脚本。  
   
 ### <a name="to-create-a-new-database"></a>创建新数据库  
   
-1.  在 SQL Server 对象资源管理器中，在“SQL Server”节点下，展开你的连接的服务器实例。  
+1.  在 SQL Server 对象资源管理器  中，在“SQL Server”  节点下，展开你的连接的服务器实例。  
   
-2.  右键单击“数据库”节点，然后选择“添加新数据库”。  
+2.  右键单击“数据库”  节点，然后选择“添加新数据库”  。  
   
-3.  将这个新数据库重命名为 Trade。  
+3.  将这个新数据库重命名为 Trade  。  
   
 ### <a name="to-create-new-tables-using-the-table-designer"></a>使用表设计器创建新表  
   
-1.  展开新创建的“Trade”节点。 右键单击“表”节点，选择“添加新表”。  
+1.  展开新创建的“Trade”  节点。 右键单击“表”  节点，选择“添加新表”  。  
   
 2.  表设计器随即将在一个新窗口中打开。 该设计器由列网格、脚本窗格和上下文窗格构成。 列网格将列出表中的所有列。 我们将在以后过程中重新访问该设计器的其他组件。  
   
@@ -52,21 +52,21 @@ SQL Server 对象资源管理器中的新的“SQL Server”节点不但在外�
     CREATE TABLE [dbo].[Suppliers]  
     ```  
   
-4.  单击列网格中的空行以便向该表添加新列。  为“名称”字段输入 CompanyName，为“数据类型”字段输入 nvarchar (128)，取消选中“允许 Null 值”字段。 在您按 Tab 键离开这些字段时，请注意脚本窗格将立即更新。  
+4.  单击列网格中的空行以便向该表添加新列。  为“名称”  字段输入 CompanyName  ，为“数据类型”  字段输入 nvarchar (128)  ，取消选中“允许 Null 值”  字段。 在您按 Tab 键离开这些字段时，请注意脚本窗格将立即更新。  
   
-5.  添加另一个新列。 为“名称”字段输入 Address，为“数据类型”字段输入 nvarchar (MAX)，取消选中“允许 Null 值”字段。  
+5.  添加另一个新列。 为“名称”  字段输入 Address  ，为“数据类型”  字段输入 nvarchar (MAX)  ，取消选中“允许 Null 值”  字段。  
   
     > [!WARNING]  
     > 在您正在从连接的数据库编辑对象时，不要将这些对象保存到您的本地驱动器。 若要正确保存对数据库的更改，请按照下一过程中的步骤执行操作，即[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)。  
   
-6.  重复上述步骤，创建另一个名为“Customer” 的表。 这一次，您将使用列网格向该 Customer 表添加以下列。 并且记住要更改脚本，以便该表的名称为 `[dbo].[Customer]`。  
+6.  重复上述步骤，创建另一个名为“Customer”  的表。 这一次，您将使用列网格向该 Customer 表添加以下列。 并且记住要更改脚本，以便该表的名称为 `[dbo].[Customer]`。  
   
     |“属性”|数据类型|**允许 Null 值**|  
     |--------|-------------|-------------------|  
     |ID|ssNoversion|unchecked|  
     |“属性”|nvarchar (128)|unchecked|  
   
-7.  再创建一个名为“Products”的表。 使用列网格向该 Products 表添加以下列。 并且记住要更改脚本，以便该表的名称为 `[dbo].[Products]`。  
+7.  再创建一个名为“Products”  的表。 使用列网格向该 Products 表添加以下列。 并且记住要更改脚本，以便该表的名称为 `[dbo].[Products]`。  
   
     |“属性”|数据类型|**允许 Null 值**|  
     |--------|-------------|-------------------|  
@@ -80,7 +80,7 @@ SQL Server 对象资源管理器中的新的“SQL Server”节点不但在外�
   
 1.  表设计器的上下文窗格将为您提供表定义（键、约束、触发器等）的逻辑视图，使您可以选择一个对象以便突出显示其与单独列的关系。  
   
-    对于 Products 表，在表设计器的上下文窗格中右键单击“CHECK 约束”节点，然后选择“添加新的 CHECK 约束”。  
+    对于 Products 表，在表设计器的上下文窗格中右键单击“CHECK 约束”  节点，然后选择“添加新的 CHECK 约束”  。  
   
 2.  请注意，节点计数将自动递增 1。  
   
@@ -94,7 +94,7 @@ SQL Server 对象资源管理器中的新的“SQL Server”节点不但在外�
   
 ### <a name="to-create-new-foreign-key-references-using-the-table-designer"></a>使用表设计器创建新的外键引用  
   
-1.  对于 Products 表，在上下文窗格中右键单击“外键”节点，然后选择“添加新的外键”。  
+1.  对于 Products 表，在上下文窗格中右键单击“外键”  节点，然后选择“添加新的外键”  。  
   
 2.  请注意，节点计数将自动递增 1。  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3692261ca636f85b7e0ebb03812eb31bdd2164b9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714409"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations（SSISDB 数据库）
@@ -37,7 +37,7 @@ ms.locfileid: "65714409"
 |created_time|**datetimeoffset**|创建操作的时间。|  
 |object_type|**smallint**|受操作影响的对象的类型。 该对象可能是文件夹 (`10`）、项目 (`20`）、包 (`30`)、环境 (`40`） 或执行实例 （`50`)。|  
 |object_id|**bigint**|操作影响的对象的 ID。|  
-|object_name|nvarchar(260)|对象的名称。|  
+|object_name|nvarchar(260) |对象的名称。|  
 |status|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset**|开始操作的时间。|  
 |end_time|**datetimeoffsset**|操作结束的时间。|  

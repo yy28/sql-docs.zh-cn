@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba16c8726963fcb355f1e6e424c15ec66601c126
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716613"
 ---
 # <a name="catalogdeleteenvironment-ssisdb-database"></a>catalog.delete_environment（SSISDB 数据库）
@@ -34,11 +34,11 @@ delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] envi
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name  
- 包含环境的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
+ [ @folder_name = ] folder_name   
+ 包含环境的文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [ @environment_name = ] environment_name  
- 要删除的环境的名称。 environment_name 为 nvarchar(128)。  
+ [ @environment_name = ] environment_name   
+ 要删除的环境的名称。 environment_name 为 nvarchar(128)   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

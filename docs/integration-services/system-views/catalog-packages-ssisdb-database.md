@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a82624d43f63ff8e774c61198021e29cd080366e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714515"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages（SSISDB 数据库）
@@ -28,7 +28,7 @@ ms.locfileid: "65714515"
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  显示 SSISDB 目录中显示的所有包的详细信息。  
+  显示 SSISDB  目录中显示的所有包的详细信息。  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  

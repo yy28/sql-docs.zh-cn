@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151105"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQLServer，Workload Group Stats 对象
@@ -25,7 +25,7 @@ ms.locfileid: "63151105"
   
  每个活动工作负荷组都创建一个 SQLServer:Workload Group Stats 性能对象实例，实例的名称与资源调控器工作负荷组的名称相同。 下表介绍了此实例支持的计数器。  
   
-|计数器名称|Description|  
+|计数器名称|描述|  
 |------------------|-----------------|  
 |Queued requests|当前正在等待拾取的排队请求数。 如果达到 GROUP_MAX_REQUESTS 限制后操作中止，则此计数可为非零值。|  
 |Active requests|此工作负荷组中当前运行的请求数。 此值应该等于按组 ID 筛选的 sys.dm_exec_requests 的行数。|  

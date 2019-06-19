@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c07444ff1dd425671fbc17176fc3aa94e0705bd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725601"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ （位非）（SSIS 表达式）
@@ -38,10 +38,10 @@ ms.locfileid: "65725601"
   
 ## <a name="arguments"></a>参数  
  *integer_expression*  
- 整数数据类型的任何有效表达式。 integer_expression 是一个整数，该整数转换为二进制数以进行位运算。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 整数数据类型的任何有效表达式。 integer  _expression  是一个整数，该整数转换为二进制数以进行位运算。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="result-types"></a>结果类型  
- 返回 integer_expression 数据类型。  
+ 返回 integer_expression  数据类型。  
   
 ## <a name="remarks"></a>Remarks  
  None  

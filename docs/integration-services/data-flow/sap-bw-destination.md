@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ae27f40a1da682ee0254d3605f3f05d47ceba44
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726417"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目标
@@ -46,9 +46,9 @@ ms.locfileid: "65726417"
   
 1.  创建新的源系统：  
   
-    1.  选择类型，**“第三方/分级 BAPI”**。  
+    1.  选择类型， **“第三方/分级 BAPI”** 。  
   
-    2.  对于“与目标系统的通信类型”，选择“非 Unicode (非活动 MDMP 设置)”。  
+    2.  对于“与目标系统的通信类型”  ，选择“非 Unicode (非活动 MDMP 设置)”  。  
   
     3.  分配适当的程序 ID。  
   

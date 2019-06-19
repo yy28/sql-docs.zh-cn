@@ -23,10 +23,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63139017"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>连接到 SQL Server (AccessToSQL)
@@ -59,7 +59,7 @@ ms.locfileid: "63139017"
   
 2.  在中**服务器名称**框中，输入或选择的实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-    -   如果要连接到本地计算机上的默认实例，则可以输入**localhost**或句点 (**。**)。  
+    -   如果要连接到本地计算机上的默认实例，则可以输入**localhost**或句点 ( **。** )。  
   
     -   如果要连接到另一台计算机上的默认实例，输入的计算机的名称。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "63139017"
   
 6.  对于安全的连接，将添加两个控件，**加密连接**复选框并**TrustServerCertificate**复选框。 仅当**加密连接**选中复选框**TrustServerCertificate**复选框是否可见。 当**加密连接**是 checked(true) 和**TrustServerCertificate** unchecked(false)，将验证 SQL Server SSL 证书。 验证服务器证书是 SSL 握手过程的一部分，这可确保服务器是要连接到的正确服务器。 若要确保这一点，必须在客户端和服务器端上安装证书。  
   
-7.  单击 **“连接”**。  
+7.  单击 **“连接”** 。  
   
 **更高版本兼容性**  
   
