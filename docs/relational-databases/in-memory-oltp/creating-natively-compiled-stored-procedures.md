@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1bb3879e8f411dc8fa82fe8344df693e8cdaef2a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672896"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047885"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>创建本机编译的存储过程
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "51672896"
   
 -   原子块。 有关详细信息，请参阅 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)。  
   
--   参数和变量的 NOT NULL 约束。 不能将 **NULL** 值分配给声明为 **NOT NULL**的参数或变量。 有关详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。  
+-   参数和变量的 NOT NULL  约束。 不能将 **NULL** 值分配给声明为 **NOT NULL**的参数或变量。 有关详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。  
   
     -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) ...  
   
-    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"**; -- *（必须初始化为一个值。）*  
+    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *（必须初始化为一个值。）*  
   
     -   SET @myVarchar **= null**; -- *（编译，但在运行时失败。）*  
   

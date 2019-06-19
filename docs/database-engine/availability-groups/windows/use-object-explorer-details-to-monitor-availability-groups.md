@@ -15,48 +15,35 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8804bc9cc86941acaba7856d3134339abc969059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf43dae4f0950d34d9e1c0d4a49faf8656e9af76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824985"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803434"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用“对象资源管理器详细信息”来监视可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器详细信息”窗格来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。  
+  本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器详细信息”  窗格来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。  
   
 > [!NOTE]  
->  有关使用“对象资源管理器详细信息”窗格的信息，请参阅[对象资源管理器详细信息窗格](../../../ssms/object/object-explorer-details-pane.md)。  
+>  有关使用“对象资源管理器详细信息”窗格的信息，请参阅 [对象资源管理器详细信息窗格](../../../ssms/object/object-explorer-details-pane.md)。  
   
--   **准备工作：**  [先决条件](#Prerequisites)  
   
--   **若要监视可用性组，请使用：**[SQL Server Management Studio](#SSMSProcedure)  
-  
--   **对象资源管理器详细信息：**  
-  
-     [可用性组详细信息](#AvGroupsDetails)  
-  
-     [可用性副本详细信息](#AvReplicaDetails)  
-  
-     [可用性数据库详细信息](#AvDbDetails)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a> 先决条件  
  您必须连接到承载主副本或辅助副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（服务器实例）。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **监视可用性组、可用性副本和可用性数据库**  
   
-1.  在“视图”菜单上单击 **“对象资源管理器详细信息”**，或按 **F7** 键。  
+1.  在“视图”菜单上单击 **“对象资源管理器详细信息”** ，或按 **F7** 键。  
   
 2.  在对象资源管理器中，连接到要在其上监视可用性组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，然后单击服务器名称以展开服务器树。  
   
-3.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+3.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
-4.  **“对象资源管理器详细信息”** 窗格显示所连接的服务器实例为其承载副本的所有可用性组。 对于每个可用性组，“服务器实例(主)”列都显示当前承载主要副本的服务器实例的名称。  若要显示有关给定的可用性组的详细信息，请在对象资源管理器中选择它。  
+4.  **“对象资源管理器详细信息”** 窗格显示所连接的服务器实例为其承载副本的所有可用性组。 对于每个可用性组，“服务器实例(主)”  列都显示当前承载主要副本的服务器实例的名称。  若要显示有关给定的可用性组的详细信息，请在对象资源管理器中选择它。  
   
 5.  **“对象资源管理器详细信息”** 窗格随后显示此可用性组的 **“可用性副本”** 和 **“可用性数据库”** 节点：  
   
@@ -72,7 +59,7 @@ ms.locfileid: "47824985"
  **“可用性组”** 详细信息屏幕显示以下列：  
   
  **名称**  
- 列出所选可用性组的“可用性副本”、“可用性数据库”和“可用性组”侦听器等文件夹。  
+ 列出所选可用性组的“可用性副本”、“可用性数据库”和“可用性组”侦听器等文件夹。     
   
 ##  <a name="AvReplicaDetails"></a> 可用性副本详细信息  
  **“可用性副本”** 详细信息屏幕显示以下列：  
@@ -81,7 +68,7 @@ ms.locfileid: "47824985"
  显示承载可用性副本的服务器实例的名称，以及指示该服务器实例与本地服务器实例的当前连接状态的图标。  
   
  **角色**  
- 指示可用性副本的当前角色，即“主”或“辅助”。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
+ 指示可用性副本的当前角色，即“主”  或“辅助”  。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
  **辅助角色中的连接模式**  
  指示给定的可用性副本（正在执行辅助角色，也就是充当辅助副本）的数据库是否可以接受来自客户端的连接。  
@@ -128,7 +115,7 @@ ms.locfileid: "47824985"
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
-|正在同步|辅助数据库已收到主数据库尚未写入磁盘（硬编码）的事务日志记录。<br /><br /> 注意：在异步提交模式中，同步状态始终是“正在同步”。|  
+|正在同步|辅助数据库已收到主数据库尚未写入磁盘（硬编码）的事务日志记录。<br /><br /> 注意：在异步提交模式中，同步状态始终是“正在同步”  。|  
 |||  
   
  **已挂起**  
@@ -146,7 +133,7 @@ ms.locfileid: "47824985"
   
 ## <a name="see-also"></a>另请参阅  
  [sys.dm_os_performance_counters (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [使用 AlwaysOn 仪表板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [使用 AlwaysOn 面板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [查看可用性组属性 (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)   
  [查看可用性副本属性 (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   

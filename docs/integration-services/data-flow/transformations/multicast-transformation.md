@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d81de36b6d0e8df65e1b744b284d9c96dec5d9d0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725955"
 ---
 # <a name="multicast-transformation"></a>多播转换
@@ -55,7 +55,7 @@ ms.locfileid: "65725955"
  在左侧选择输出可以在右侧的表中查看其属性。  
   
  **属性**  
- 除了“名称”和“说明”外，所有列出的输出属性都是只读的。  
+ 除了“名称”  和“说明”  外，所有列出的输出属性都是只读的。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   

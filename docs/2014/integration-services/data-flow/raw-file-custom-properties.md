@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900897"
 ---
 # <a name="raw-file-custom-properties"></a>原始文件自定义属性
@@ -24,7 +24,7 @@ ms.locfileid: "62900897"
   
  下表介绍原始文件源的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|用来访问原始数据的模式。 可能的值为 `File name` (0) 和 `File name from variable` (1)。 默认值为 `File name` (0)。|  
 |FileName|String|源文件的路径和文件名。|  
@@ -39,7 +39,7 @@ ms.locfileid: "62900897"
   
  下表介绍了原始文件目标的自定义属性。 所有属性均可读/写。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|一个值，指定 FileName 属性是包含文件名还是包含变量（包含文件名）名。 选项为 `File name` (0) 和 `File name from variable` (1)。|  
 |FileName|String|原始文件目标要写入的文件的名称。|  

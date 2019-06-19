@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095147"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>全文搜索自 SQL Server 2008 以后已发生更改
@@ -23,7 +23,7 @@ ms.locfileid: "66095147"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  若干个全文搜索功能、设置和对象自 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 后已得到修改，并且升级时不会维护许多现有设置。  
   
 ## <a name="corrective-action"></a>纠正措施  

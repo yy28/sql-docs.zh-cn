@@ -1,7 +1,7 @@
 ---
 title: SET FMTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,21 +23,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f15a6d81f064e417726fe7b4efe6987f7b96fa85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbc4cb3569573b8558edcf7335c0515da16d750c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500547"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-all-md](../../includes/tsql-appliesto-ss-all-md.md)]
 
   只将元数据返回给客户端。 可以用于测试响应的格式，而不必实际执行查询。  
-  
-> [!NOTE]  
->  请勿使用此功能。 此功能已由 [sp_describe_first_result_setult_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)、[sp_describe_undeclared_parameters (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)、[sys.dm_exec_describe_first_result_set (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 和 [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) 取代。  
-  
+
+> [!NOTE]
+> 请勿使用此功能。 此功能已由以下项替代：
+>
+> - [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
+> - [sp_describe_undeclared_parameters (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
@@ -45,50 +51,104 @@ ms.locfileid: "47666075"
 ```  
 SET FMTONLY { ON | OFF }   
 ```  
-  
-## <a name="remarks"></a>Remarks  
- 当 SET FMTONLY 为 ON 时，不会因请求而对任何行进行处理或将其发送到客户端。  
-  
- SET FMTONLY 的设置是在执行或运行时设置，而不是在分析时设置。  
-  
-## <a name="permissions"></a>Permissions  
+
+## <a name="remarks"></a>Remarks
+
+当 `FMTONLY` 为 `ON` 时，返回包含列名称但不含任何数据行的行集。
+
+分析 Transact-SQL 批时，`SET FMTONLY ON` 无效。 在执行运行时期间生效。
+
+默认值是 `OFF`。
+
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
-  
-## <a name="examples"></a>示例  
-  
-### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>A：在未实际运行查询的情况下查看查询的列标头信息。  
- 以下示例将 `SET FMTONLY` 设置更改为 `ON`，并执行 `SELECT` 语句。 该设置使上述语句只返回列信息，而不返回数据行。  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SET FMTONLY ON;  
-GO  
-SELECT *   
-FROM HumanResources.Employee;  
-GO  
-SET FMTONLY OFF;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>B. 在未实际运行查询的情况下查看查询的列标头信息。  
- 以下示例演示如何仅返回查询的列标头（元数据）信息。 批处理开始时将 FMTONLY 设置为 OFF，并在 SELECT 语句前将 FMTONLY 更改为 ON。 这样可使 SELECT 语句只返回列标头，而不返回数据行。  
-  
-```  
--- Uses AdventureWorks  
-  
-BEGIN  
-    SET FMTONLY OFF;  
-    SET DATEFORMAT mdy;  
-    SET FMTONLY ON;  
-    SELECT * FROM dbo.DimCustomer;  
-    SET FMTONLY OFF;  
-END  
-  
-```  
-  
+
+## <a name="examples"></a>示例
+
+以下 Transact-SQL 代码示例将 `FMTONLY` 设置为 `ON`。 此设置使 SQL Server 仅返回有关所选列的元数据信息。 具体来说，返回列名称。 不返回任何数据行。
+
+在该示例中，存储过程 `prc_gm29` 的测试执行返回以下内容：
+
+- 多个行集。
+- 来自多个表的列，位于其某个 `SELECT` 语句中。
+
+<!--
+Issue 2246 inspired this code example, and the replacement of the two pre-existing examples. 2019/June/03, GM.
+-->
+
+```sql
+go
+SET NoCount ON;
+
+go
+DROP PROCEDURE IF EXISTS prc_gm29;
+
+DROP Table IF EXISTS #tabTemp41;
+DROP Table IF EXISTS #tabTemp42;
+go
+
+CREATE TABLE #tabTemp41
+(
+   KeyInt41        int           not null,
+   Name41          nvarchar(16)  not null,
+   TargetDateTime  datetime      not null  default GetDate()
+);
+
+CREATE TABLE #tabTemp42
+(
+   KeyInt42 int          not null,   -- JOIN-able to KeyInt41.
+   Name42   nvarchar(16) not null
+);
+go
+
+INSERT into #tabTemp41 (KeyInt41, Name41) values (10, 't41-c');
+INSERT into #tabTemp42 (KeyInt42, Name42) values (10, 't42-p');
+go
+
+CREATE PROCEDURE prc_gm29
+AS
+begin
+SELECT * from #tabTemp41;
+SELECT * from #tabTemp42;
+
+SELECT t41.KeyInt41, t41.TargetDateTime, t41.Name41, t42.Name42
+   from
+                 #tabTemp41 as t41
+      INNER JOIN #tabTemp42 as t42 on t42.KeyInt42 = t41.KeyInt41
+end;
+go
+
+SET DATEFORMAT mdy;
+
+SET FMTONLY ON;
+EXECUTE prc_gm29;   -- Returns multiple tables.
+SET FMTONLY OFF;
+go
+DROP PROCEDURE IF EXISTS prc_gm29;
+
+DROP Table IF EXISTS #tabTemp41;
+DROP Table IF EXISTS #tabTemp42;
+go
+
+/****  Actual Output:
+[C:\JunkM\]
+>> osql.exe -S myazuresqldb.database.windows.net -U somebody -P secret -d MyDatabase -i C:\JunkM\Issue-2246-a.SQL 
+
+ KeyInt41    Name41           TargetDateTime
+ ----------- ---------------- -----------------------
+
+ KeyInt42    Name42
+ ----------- ----------------
+
+ KeyInt41    TargetDateTime          Name41           Name42
+ ----------- ----------------------- ---------------- ----------------
+
+
+[C:\JunkM\]
+>>
+****/
+```
+
 ## <a name="see-also"></a>另请参阅  
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   

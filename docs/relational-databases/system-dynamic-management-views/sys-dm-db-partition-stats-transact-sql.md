@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462653"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "66462653"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_db_partition_stats**。 在 sys.dm_pdw_nodes_db_partition_stats partition_id 不同于 Azure SQL 数据仓库在 sys.partitions 目录视图中 partition_id。
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|分区 ID。 在数据库中是唯一的。 这是相同的值**partition_id**中**sys.partitions**目录除了 Azure SQL 数据仓库视图。|  
 |**object_id**|**int**|包含该分区的表或索引视图的对象 ID。|  

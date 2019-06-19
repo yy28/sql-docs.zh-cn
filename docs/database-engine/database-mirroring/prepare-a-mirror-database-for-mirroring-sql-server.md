@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2179ae0fd8110f7172ca936b77045f58fb50cd7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d555bc79dffcb750494bd9f1f79622d03fc75eb5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770167"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795332"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>为镜像准备镜像数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "47770167"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   [准备现有镜像数据库以重新启动镜像](#PrepareToRestartMirroring)  
   
 -   [准备新的镜像数据库](#CombinedProcedure)  
   
--   **跟进：**[准备镜像数据库之后](#FollowUp)  
+-   **跟进：** [准备镜像数据库之后](#FollowUp)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -87,12 +87,12 @@ ms.locfileid: "47770167"
   
 -   对于生产数据库，始终备份到单独的设备。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  备份数据库时，TRUSTWORTHY 设置为 OFF。 因此，在新的镜像数据库中，TRUSTWORTHY 始终为 OFF。 如果数据库在故障转移之后需要得到信任，则必须执行其他设置步骤。 有关详细信息，请参阅 [将镜像数据库设置为使用 Trustworthy 属性 (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)中准备镜像数据库。  
   
  有关启用镜像数据库主秘钥自动加密的详细信息，请参阅 [设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  数据库所有者或系统管理员。  
   
 ##  <a name="PrepareToRestartMirroring"></a> 准备现有镜像数据库以重新启动镜像  
@@ -237,7 +237,7 @@ ms.locfileid: "47770167"
   
  有关设置数据库镜像、显示安全设置、准备镜像数据库、设置合作伙伴以及添加见证服务器的完整示例的信息，请参阅 [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)中准备镜像数据库。  
   
-##  <a name="FollowUp"></a> 跟进：在准备镜像数据库之后  
+##  <a name="FollowUp"></a> 跟进：准备镜像数据库之后  
   
 1.  如果在最近的 RESTORE LOG 操作之后已执行了任何其他日志备份，则还必须使用 RESTORE WITH NORECOVERY 手动应用其他每个日志备份。  
   

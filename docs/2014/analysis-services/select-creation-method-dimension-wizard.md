@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069599"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>选择创建方法（维度向导）
@@ -24,7 +24,7 @@ ms.locfileid: "66069599"
   
  **若要打开维度向导**  
   
--   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的**解决方案资源管理器**中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目的“维度”文件夹，然后单击“新建维度”。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的**解决方案资源管理器**中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目的“维度”文件夹，然后单击“新建维度”   。  
   
 ## <a name="options"></a>选项  
  **使用现有表**  
@@ -59,7 +59,7 @@ ms.locfileid: "66069599"
  选择要用于创建维度的模板。 模板提供面向特定商业用途的一组完整的属性和层次结构定义。  
   
 > [!NOTE]  
->  仅当选择了“在数据源中生成非时间表”选项时，此选项才可用。  
+>  仅当选择了“在数据源中生成非时间表”  选项时，此选项才可用。  
   
 ## <a name="see-also"></a>请参阅  
  [维度向导的 F1 帮助](dimension-wizard-f1-help.md)   

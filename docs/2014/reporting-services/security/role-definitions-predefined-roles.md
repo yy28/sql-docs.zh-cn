@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9f6eff58d5d9c536dd6c6c9f40d389bab1532e3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101792"
 ---
 # <a name="predefined-roles"></a>预定义角色
@@ -35,7 +35,7 @@ ms.locfileid: "66101792"
 ##  <a name="bkmk_rolelist"></a> 预定义角色定义  
  预定义角色都由其所支持的任务定义。 您可以修改这些角色，也可以用自定义角色替换它们。  
   
- “作用域” 定义了使用角色的边界。 项级角色提供对报表服务器项和影响这些项的操作的不同等级访问。 对根节点（主文件夹）和整个报表服务器文件夹层次结构中的所有项可以定义项级角色。 系统级角色授予站点级别的访问权限。 项级角色和系统级角色是互斥的，但是可共同用来提供对报表服务器内容和操作的丰富权限。  
+ “作用域”  定义了使用角色的边界。 项级角色提供对报表服务器项和影响这些项的操作的不同等级访问。 对根节点（主文件夹）和整个报表服务器文件夹层次结构中的所有项可以定义项级角色。 系统级角色授予站点级别的访问权限。 项级角色和系统级角色是互斥的，但是可共同用来提供对报表服务器内容和操作的丰富权限。  
   
  下表对预定义角色、作用域以及如何使用进行了说明。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "66101792"
 |查看报表服务器属性|查看应用于报表服务器的属性，如应用程序名称，是否启用“我的报表”功能以及报表历史记录默认值。<br /><br /> 如果从“系统用户”角色中删除此任务，将无法访问“站点设置”页。  而且，在每页的顶部也不显示应用程序标题。 默认情况下，报表管理器的标题是“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]”。|  
 |查看共享计划|查看用于运行报表或刷新报表的共享计划。<br /><br /> 如果从“系统用户”角色中删除此任务，用户将不能选择用于订阅和其他计划操作的共享计划。 |  
   
- “系统用户”角色可用作对默认安全性的补充。   在用来向报表用户扩展报表服务器访问权限的新角色分配中，您可以加入此角色。 有关详细信息，请参阅 [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)。  
+ “系统用户”角色可用作对默认安全性的补充。  在用来向报表用户扩展报表服务器访问权限的新角色分配中，您可以加入此角色。 有关详细信息，请参阅 [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)   

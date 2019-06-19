@@ -15,19 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 404b1d5d8467fe5840a6f53007bd55bc58cdf19f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089543"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>跟踪表属性（“事件选择”选项卡）
   使用 **“跟踪表属性”** 对话框的 **“事件选择”** 选项卡可以查看跟踪的事件和数据列属性，或者从跟踪中删除事件或列。  
   
- 若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 打开一个跟踪表。 然后在 **“文件”** 菜单上单击 **“属性”**，再单击 **“事件选择”** 选项卡。  
+ 若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 打开一个跟踪表。 然后在 **“文件”** 菜单上单击 **“属性”** ，再单击 **“事件选择”** 选项卡。  
   
 ## <a name="options"></a>选项  
- “事件”列  
+ “事件”  列  
  查看按事件类别组织的跟踪事件。 可以通过选中事件框或选中事件的数据列来选择事件。 如果选中事件框，则该事件的所有可用数据列均被选中。 如果选中了某个事件的数据列，则该事件将被选中，并且其他所有必需列也被自动选中。 如果您正在查看跟踪文件或表，清除事件复选框或数据列将减少跟踪窗口中的可见数据量，便于分析。 您也可以更改列筛选器以减少跟踪窗口中的可见数据量。 有关事件类的详细信息，请参阅 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
  其他数据列  
@@ -42,10 +42,10 @@ ms.locfileid: "66089543"
  显示所有可用数据列。 默认情况下，仅显示选定的数据列。 取消选中此框，将隐藏 **“事件选择”** 网格中所有未选定的数据列。  
   
  **列筛选器**  
- 启动“编辑筛选器”对话框，该对话框在列标签的左侧显示一个筛选器图标。 您可以使用此对话框编辑数据列筛选器。  
+ 启动“编辑筛选器”  对话框，该对话框在列标签的左侧显示一个筛选器图标。 您可以使用此对话框编辑数据列筛选器。  
   
  **组织列**  
- 选择要跟踪的**事件**和数据列后，单击“组织列”将强制网格对跟踪结果窗口中的列重新排序。  
+ 选择要跟踪的**事件**和数据列后，单击“组织列”  将强制网格对跟踪结果窗口中的列重新排序。  
   
 ## <a name="see-also"></a>请参阅  
  [打开跟踪表 (SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   

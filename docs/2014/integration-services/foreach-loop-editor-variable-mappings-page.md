@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058526"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach 循环编辑器（“变量映射”页）
@@ -28,10 +28,10 @@ ms.locfileid: "66058526"
   
 ## <a name="options"></a>选项  
  **变量**  
- 选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
+ 选择现有变量，或单击“\<新建变量...>”，创建一个新变量  。  
   
 > [!NOTE]  
->  映射一个变量之后，“变量”列表中会自动增加一行。  
+>  映射一个变量之后，“变量”  列表中会自动增加一行。  
   
  **相关主题**：[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66058526"
  **相关主题**：[使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **删除**  
- 选择一个变量，再单击“删除”。  
+ 选择一个变量，再单击“删除”  。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

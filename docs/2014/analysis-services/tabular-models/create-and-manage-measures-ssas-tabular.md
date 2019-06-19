@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6087d5fa39dd023d13ce3f49fbdfb855f12b921c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067451"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>创建和管理度量值（SSAS 表格）
@@ -33,11 +33,11 @@ ms.locfileid: "66067451"
 -   [删除度量值](#bkmk_delete)  
   
 ## <a name="tasks"></a>“任务”  
- 若要创建和管理度量值，将使用表的度量值网格。 您只能在模型设计器的“数据视图”中查看表的度量值网格。 您不能在处于关系图视图中时创建度量值或查看度量值网格；不过，您可以在关系图视图中查看现有的度量值。 要为表显示度量值网格，请单击 **“表”** 菜单，然后单击 **“显示度量值网格”**。  
+ 若要创建和管理度量值，将使用表的度量值网格。 您只能在模型设计器的“数据视图”中查看表的度量值网格。 您不能在处于关系图视图中时创建度量值或查看度量值网格；不过，您可以在关系图视图中查看现有的度量值。 要为表显示度量值网格，请单击 **“表”** 菜单，然后单击 **“显示度量值网格”** 。  
   
 ###  <a name="bkmk_create_stand"></a> 使用标准聚合公式创建度量值  
   
--   单击要为其创建度量值的列，然后单击 **“列”** 菜单，指向 **“自动求和”**，再单击某一聚合类型。  
+-   单击要为其创建度量值的列，然后单击 **“列”** 菜单，指向 **“自动求和”** ，再单击某一聚合类型。  
   
      度量值将用默认名称自动创建，后随列正下方的度量值网格中的第一个单元中的公式。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66067451"
   
 ###  <a name="bkmk_delete"></a> 删除度量值  
   
--   在度量值网格中，右键单击某一度量值，然后单击“删除”。  
+-   在度量值网格中，右键单击某一度量值，然后单击“删除”  。  
   
 ## <a name="see-also"></a>请参阅  
  [度量值（SSAS 表格）](measures-ssas-tabular.md)   

@@ -10,13 +10,13 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c69d17094d5998c0158aeb56d8c14421f6199a4b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fdf35fa6ad124784f44391e5ad6b7d42cd1064a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794848"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>从命令提示符安装更新
 
@@ -25,9 +25,9 @@ ms.locfileid: "51605983"
 请根据您所在单位的需要测试并修改安装脚本。 
  
 ## <a name="sample-syntax-for-installation"></a>安装的示例语法 
-更新包的名称可能会有变化，可能包含语言、版本和处理器组件。 在命令提示符下应用更新，将 <包名称> 替换为更新包的名称： 
+更新包的名称可能会有变化，可能包含语言、版本和处理器组件。 在命令提示符下应用更新，从而将 <package_name> 替换为更新包的名称： 
  
-- 更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单一实例和所有共享组件（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和管理工具）：可以使用 InstanceName 参数或 InstanceID 参数指定实例。 若要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例，必须指定 InstanceID 参数。
+- 更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单个实例和所有共享组件（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和管理工具）：您可以通过使用 InstanceName 参数或 InstanceID 参数指定实例。 若要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例，必须指定 InstanceID 参数。
 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
@@ -87,7 +87,7 @@ ms.locfileid: "51605983"
 |**/UpdateEnabled**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和加入产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将包含找到的更新。| 
 |**/IAcceptSQLServerLicenseTerms**|仅在为无人参与安装指定了 /Q 或 /QS 参数时是必需的。| 
  
- * 不能通过指定此参数来将更新应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备实例。 必须指定 /instanceID 参数。 
+ \* 不能通过指定此参数来将更新应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备实例。 必须指定 /instanceID 参数。 
  
 ## <a name="see-also"></a>另请参阅 
  [SQL Server 服务安装概述](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 

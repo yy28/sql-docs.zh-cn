@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5dd733ff5de0a45f689a8d768c29453136cba550
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65942907"
 ---
 # <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
@@ -46,7 +46,7 @@ IS_OBJECTSIGNED (
  安全对象类的类型。  
   
  *@object_id*  
- 要测试的对象的 object_id。 @object_id 的类型为 int。  
+ 要测试的对象的 object_id。 @object_id 的类型为 int   。  
   
  *@class*  
  对象的类：  
@@ -55,10 +55,10 @@ IS_OBJECTSIGNED (
   
 -   “非对称密钥”  
   
- @class 的数据类型为 sysname。  
+ @class 的数据类型为 sysname   。  
   
  *@thumbprint*  
- 对象的 SHA 指纹。 @thumbprint 的类型为 varbinary(32)。  
+ 对象的 SHA 指纹。 @thumbprint 的类型为 varbinary(32)   。  
   
 ## <a name="returned-types"></a>返回类型  
  **int**  
@@ -78,7 +78,7 @@ IS_OBJECTSIGNED (
 ## <a name="examples"></a>示例  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. 显示数据库的扩展属性  
- 下面的示例测试 master 数据库中的 spt_fallback_db 表是否由架构签名证书进行签名。  
+ 下面的示例测试 master 数据库中的 spt_fallback_db 表是否由架构签名证书进行签名  。  
   
 ```  
 USE master;  

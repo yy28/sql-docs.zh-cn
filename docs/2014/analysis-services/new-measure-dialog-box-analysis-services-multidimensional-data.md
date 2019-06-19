@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072343"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>“新建度量值”对话框（Analysis Services - 多维数据）
@@ -26,7 +26,7 @@ ms.locfileid: "66072343"
   
 -   在多维数据集设计器中的 **“多维数据集结构”** 选项卡上，单击 **“工具栏”** 窗格中的 **“新建度量值”** 。  
   
--   在多维数据集设计器中的“多维数据集结构”选项卡上，右键单击“度量值”窗格中的度量值组或度量值，再从上下文菜单中选择“新建度量值”。  
+-   在多维数据集设计器中的“多维数据集结构”  选项卡上，右键单击“度量值”  窗格中的度量值组或度量值，再从上下文菜单中选择“新建度量值”  。  
   
 ## <a name="options"></a>选项  
  **Usage**  
@@ -36,7 +36,7 @@ ms.locfileid: "66072343"
  选择要从中创建新度量值的表。  
   
  **源列**  
- 从“源表”中所选择的表中选择新度量值所基于的列。  
+ 从“源表”  中所选择的表中选择新度量值所基于的列。  
   
  **显示所有列**  
  对于创建新度量值所在的度量值组的事实数据表，选择此选项将显示其中的所有列。 如果未选择此项， **“源列”** 将仅显示未用作逻辑主键的数字列或关系所涉及的数字列。  

@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 81d2c60f281e439b010b8ead087e13cafa91c95e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149001"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>补充课程 - 动态安全性
 
@@ -49,7 +49,7 @@ ms.locfileid: "64776086"
   
 3.  在查询编辑器中，单击**DimSalesTerritory**查询，然后删除**SalesTerritoryAlternateKey**列。  
   
-7.  单击“导入” 。  
+7.  单击“导入”  。  
   
     新表添加到模型工作区中。 对象和源 DimSalesTerritory 表中的数据然后导入 AW Internet Sales 表格模型。  
   
@@ -88,7 +88,7 @@ AdventureWorksDW 示例数据库中的 DimEmployee 表包含来自 AdventureWork
   
 8.  在中**要粘贴的数据**，确认数据包含的所有用户数据和从 SampleEmployee 工作表的标头。  
   
-9. 确认已选中“使用第一行作为列标题”，然后单击“确定”。  
+9. 确认已选中“使用第一行作为列标题”  ，然后单击“确定”  。  
   
     创建包含从 SampleEmployee 工作表复制的员工数据命名 EmployeeSecurity 的新表。  
   
@@ -110,7 +110,7 @@ AdventureWorksDW 示例数据库中的 DimEmployee 表包含来自 AdventureWork
   
 #### <a name="to-hide-the-employeesecurity-table-from-client-applications"></a>若要隐藏 EmployeeSecurity 表客户端应用程序  
   
--   在模型设计器的“关系图视图”中，右键单击“Employee”表标题，然后单击“从客户端工具中隐藏”。  
+-   在模型设计器的“关系图视图”中，右键单击“Employee”  表标题，然后单击“从客户端工具中隐藏”  。  
   
 ## <a name="create-a-sales-employees-by-territory-user-role"></a>创建 Sales Employees by Territory 用户角色  
 
@@ -129,11 +129,11 @@ AdventureWorksDW 示例数据库中的 DimEmployee 表包含来自 AdventureWork
   
 3.  单击新角色，然后在**名称**列中，重命名为**Sales Employees by Territory**。  
   
-4.  在“权限”列中，单击下拉列表，然后选择“读取”权限。  
+4.  在“权限”  列中，单击下拉列表，然后选择“读取”  权限。  
   
 5.  单击**成员**选项卡，然后依次**添加**。  
   
-6.  在中**选择用户或组**对话框中**输入要选择的对象名称**，键入创建 EmployeeSecurity 表时使用的第一个示例用户名。 单击“检查名称”以确认该用户名有效，然后单击“确定”。  
+6.  在中**选择用户或组**对话框中**输入要选择的对象名称**，键入创建 EmployeeSecurity 表时使用的第一个示例用户名。 单击“检查名称”  以确认该用户名有效，然后单击“确定”  。  
   
     重复此步骤中，添加创建 EmployeeSecurity 表时所用的其他示例用户名称。  
   
@@ -169,11 +169,11 @@ AdventureWorksDW 示例数据库中的 DimEmployee 表包含来自 AdventureWork
   
 1.  在 SSDT 中，单击**模型**菜单，并单击**在 Excel 中的分析**。  
   
-2.  在“在 Excel 中分析”对话框的“指定用于连接到模型的用户名或角色”中，选择“其他 Windows 用户”，然后单击“浏览”。  
+2.  在“在 Excel 中分析”  对话框的“指定用于连接到模型的用户名或角色”  中，选择“其他 Windows 用户”  ，然后单击“浏览”  。  
   
 3.  在中**选择用户或组**对话框中**输入要选择的对象名称**，键入用户名称包含在 EmployeeSecurity 表，然后单击**检查名称**。  
   
-4.  单击“确定”关闭“选择用户或组”对话框，然后单击“确定”关闭“在 Excel 中分析”对话框。  
+4.  单击“确定”  关闭“选择用户或组”  对话框，然后单击“确定”  关闭“在 Excel 中分析”  对话框。  
   
     Excel 中打开新的工作簿。 自动创建数据透视表。 数据透视表字段列表包含新模型中可用的数据字段的大多数。  
   

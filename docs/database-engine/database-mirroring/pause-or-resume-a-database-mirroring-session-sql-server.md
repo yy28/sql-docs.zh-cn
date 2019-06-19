@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 51e19a1af0fc8e1764c66777cf58d580a70671b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8dbd0c7d408293bda1dfcdb71652bc6464a59f8e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776855"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795378"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>暂停或恢复数据库镜像会话 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47776855"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要替换此文本，请使用：**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47776855"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[暂停或恢复数据库镜像之后](#FollowUp)  
+-   **跟进：** [暂停或恢复数据库镜像之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  您可以随时挂起数据库镜像会话，这可能提高瓶颈期间的性能，之后您可以随时恢复挂起的会话。  
@@ -48,9 +48,9 @@ ms.locfileid: "47776855"
 > [!CAUTION]  
 >  在强制服务后，当原始的主体服务器重新连接时，镜像将挂起。 在这种情况下，恢复镜像可能会导致原始主体服务器上的数据丢失。 有关管理潜在的数据丢失的信息，请参阅[数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -62,15 +62,15 @@ ms.locfileid: "47776855"
   
 2.  展开 **“数据库”** 并选择数据库。  
   
-3.  右键单击数据库，选择“任务”，再单击“镜像”。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择“任务”  ，再单击“镜像”  。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
-4.  若要暂停会话，请单击 **“暂停”**。  
+4.  若要暂停会话，请单击 **“暂停”** 。  
   
-     此时，将显示一个提示，要求您确认；如果单击 **“是”**，则会话将暂停，并且该按钮改为 **“恢复”**。  
+     此时，将显示一个提示，要求您确认；如果单击 **“是”** ，则会话将暂停，并且该按钮改为 **“恢复”** 。  
   
      有关暂停会话的影响的详细信息，请参阅[暂停和恢复数据库镜像 (SQL Server)](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)。  
   
-5.  若要恢复会话，请单击 **“恢复”**。  
+5.  若要恢复会话，请单击 **“恢复”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47776855"
   
 1.  为任一伙伴连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  发出以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47776855"
   
 1.  为任一伙伴连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  发出以下 Transact-SQL 语句：  
   

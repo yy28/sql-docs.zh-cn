@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 61a95fef0bdc8ae31631c0c86f43f9ca5fa6a98b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725011"
 ---
 # <a name="right-ssis-expression"></a>RIGHT（SSIS 表达式）
@@ -45,15 +45,15 @@ RIGHT(character_expression,integer_expression)
  DT_WSTR  
   
 ## <a name="remarks"></a>Remarks  
- 如果 integer_expression 大于 character_expression 的长度，则该函数将返回 character_expression。  
+ 如果 integer_expression 大于 character_expression 的长度，则该函数将返回 character_expression    。  
   
- 如果 integer_expression 为 0，则该函数返回零长度的字符串。  
+ 如果 integer_expression 为 0，则该函数返回零长度的字符串  。  
   
- 如果 integer_expression 为负数，则该函数返回一个错误。  
+ 如果 integer_expression 为负数，则该函数返回一个错误  。  
   
- integer_expression 参数可使用变量和列。  
+ integer_expression 参数可使用变量和列  。  
   
- RIGHT 只能用于 DT_WSTR 数据类型。 如果 character_expression 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 RIGHT 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
+ RIGHT 只能用于 DT_WSTR 数据类型。 如果 character_expression  参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 RIGHT 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  如果任一参数为 Null，则 RIGHT 返回的结果为 Null。  
   

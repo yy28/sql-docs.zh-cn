@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a69d5194c6eea3bc81676e8c0c3b1cac1d06270c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075569"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名计算 (Analysis Services)
@@ -59,14 +59,14 @@ FROM
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中定义命名计算的数据源视图。  
   
-2.  在解决方案资源管理器中，展开“数据源视图”文件夹，然后双击数据源视图。  
+2.  在解决方案资源管理器中，展开“数据源视图”  文件夹，然后双击数据源视图。  
   
-3.  在“表”或“关系图”窗格中，右键单击要在其中定义命名计算的表，再单击“新建命名计算”。 请务必右键单击表名称而不是属性。 菜单应该如下所示：  
+3.  在“表”或“关系图”窗格中，右键单击要在其中定义命名计算的表，再单击“新建命名计算”    。 请务必右键单击表名称而不是属性。 菜单应该如下所示：  
   
      ![屏幕截图的关系图工作区中，右键单击菜单](../media/ssas-olapdsv-diagram.gif "屏幕截图的关系图工作区中，右键单击菜单")  
   
     > [!NOTE]  
-    >  若要查找表或视图，可以通过单击“数据源视图”菜单或者右键单击“表”或“关系图”窗格的空白区域以使用“查找表”选项。  
+    >  若要查找表或视图，可以通过单击“数据源视图”菜单或者右键单击“表”或“关系图”窗格的空白区域以使用“查找表”选项     。  
   
 4.  在 **“创建命名计算”** 对话框中，执行下列操作：  
   
@@ -76,7 +76,7 @@ FROM
   
     -   在 **“表达式”** 文本框中，使用适用于数据访问接口的 SQL 方言键入生成新列内容的表达式。  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”** 。  
   
      命名计算列显示为数据源视图表的最后一列。 计算器符号指示该列包含命名计算。  
   

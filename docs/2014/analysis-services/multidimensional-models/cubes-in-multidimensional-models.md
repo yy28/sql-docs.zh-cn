@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076107"
 ---
 # <a name="cubes-in-multidimensional-models"></a>多维模型中的多维数据集
@@ -31,7 +31,7 @@ ms.locfileid: "66076107"
 ## <a name="components-of-cubes"></a>多维数据集的组件  
  一个多维数据集由以下组件构成：  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |维度|[多维模型中的维度](dimensions-in-multidimensional-models.md)|  
 |度量值和度量值组|[在多维模型中创建度量值和度量值组](create-measures-and-measure-groups-in-multidimensional-models.md)|  
@@ -45,7 +45,7 @@ ms.locfileid: "66076107"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[使用多维数据集向导创建多维数据集](create-a-cube-using-the-cube-wizard.md)|说明如何使用多维数据集向导定义多维数据集、维度、维度属性以及用户定义层次结构。|  
 |[在多维模型中创建度量值和度量值组](create-measures-and-measure-groups-in-multidimensional-models.md)|介绍如何定义度量值组。|  

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250651"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server，Databases 对象
@@ -29,7 +29,7 @@ ms.locfileid: "63250651"
   
  下表说明了 SQL Server **Databases** 计数器。  
   
-|SQL Server Databases 计数器|Description|  
+|SQL Server Databases 计数器|描述|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|数据库的活动事务数。|  
 |**Backup/Restore Throughput/sec**|每秒数据库的备份和还原操作的读取/写入吞吐量。 例如，并行使用多个备份设备或使用更快的设备时，可以测量数据库备份操作性能的变化情况。 数据库的备份或还原操作的吞吐量可以确定备份和还原操作的进程和性能。|  
@@ -48,7 +48,7 @@ ms.locfileid: "63250651"
 |**Log Flushes/sec**|每秒日志刷新数目。|  
 |**Log Growths**|数据库事务日志增长的总次数。|  
 |**Log Shrinks**|数据库事务日志收缩的总次数。|  
-|**Log Pool Cache Misses/sec**|日志块在日志池中不可用的请求数。 “日志池”是事务日志的内存中缓存。 这种缓存用于优化对恢复、事务复制、回滚和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]日志的读取操作。|  
+|**Log Pool Cache Misses/sec**|日志块在日志池中不可用的请求数。 “日志池”  是事务日志的内存中缓存。 这种缓存用于优化对恢复、事务复制、回滚和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]日志的读取操作。|  
 |**Log Pool Disk Reads/sec**|日志池发出的提取日志块的磁盘读取数。|  
 |**Log Pool Requests/sec**|日志池处理的日志块请求数。|  
 |**Log Truncations**|已收缩事务日志的次数。|  

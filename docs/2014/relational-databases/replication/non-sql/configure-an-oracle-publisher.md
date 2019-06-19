@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022595"
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
@@ -41,7 +41,7 @@ ms.locfileid: "63022595"
 > [!NOTE]  
 >  删除 **MSSQLSERVERDISTRIBUTOR** 公共同义词和用 **CASCADE** 选项配置的 Oracle 复制用户，会删除 Oracle 发布服务器上的所有复制对象。  
   
- 有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 后，该脚本位于以下目录下：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql。 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
+ 有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 后，该脚本位于以下目录下： *\<驱动器>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql。 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
   
  使用具有 DBA 权限的帐户连接到 Oracle 数据库并执行此脚本。 此脚本将提示输入复制管理用户架构的用户名和密码以及用于创建对象的默认表空间（此表空间必须已存在于 Oracle 数据库中）。 有关为对象指定其他表空间的信息，请参阅[管理 Oracle 表空间](manage-oracle-tablespaces.md)。 可以任选用户名和强密码，但要将它们记下来，因为以后将 Oracle 数据库配置为发布服务器时会提示您输入此信息。 建议只将此架构用于复制所需的对象，而不要在此架构下创建要发布的表。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63022595"
   
  在 Oracle Universal Installer 中，您需要提供以下信息：  
   
-|信息|Description|  
+|信息|描述|  
 |-----------------|-----------------|  
 |Oracle 主目录|这是 Oracle 软件的安装目录的路径。 接受默认路径（C:\oracle\ora90 或类似路径），或输入另一个路径。 有关 Oracle 主目录的详细信息，请参阅本主题后面的“Oracle 主目录注意事项”部分。|  
 |Oracle 主目录名称|Oracle 主目录路径的别名。|  
@@ -82,7 +82,7 @@ ms.locfileid: "63022595"
   
  完成 Oracle Universal Installer 之后，使用 Net Configuration Assistant 配置网络连接。 必须提供四部分信息以配置网络连接。 在设置数据库和侦听器时，Oracle 数据库管理员将配置网络。如果您没有此信息，应由数据库管理员提供此信息。 必须执行以下操作：  
   
-|操作|Description|  
+|操作|描述|  
 |------------|-----------------|  
 |标识数据库|标识数据库的方法有两种。 第一种方法是使用 Oracle 系统标识符 (SID)，该方法在所有 Oracle 版本中均可用。 第二种方法是使用服务名称，该名称从 Oracle 8.0 版本开始才可用。 这两种方法都使用一个在创建数据库时所配置的值，并且要注意，客户端网络配置所使用的命名方法要与管理员在配置数据库的侦听器时使用的命名方法相同。|  
 |标识数据库的网络别名|必须指定网络别名，该别名将用来访问 Oracle 数据库。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上将 Oracle 数据库标识为发布服务器时，也要提供此别名。 实际上，网络别名是指向在创建数据库时所配置的远程 SID 或服务名称的指针。在不同的 Oracle 版本和产品中存在多种引用名称，包括 Net 服务名称和 TNS 别名。 在登录时，SQL*Plus 将提示您输入此别名来作为“Host String”参数。|  
@@ -97,9 +97,9 @@ ms.locfileid: "63022595"
   
  成功连接到 Oracle 发布服务器后，请尝试使用与您所创建的复制管理用户架构关联的帐户和密码登录数据库。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务所使用的 Windows 帐户下运行时必须执行下列操作：  
   
-1.  单击 **“启动”**，再单击 **“运行”**。  
+1.  单击 **“启动”** ，再单击 **“运行”** 。  
   
-2.  键入 `cmd` ，然后单击 **“确定”**。  
+2.  键入 `cmd` ，然后单击 **“确定”** 。  
   
 3.  在命令提示符下，键入：  
   

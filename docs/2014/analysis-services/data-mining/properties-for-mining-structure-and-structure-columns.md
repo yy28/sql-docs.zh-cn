@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083061"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>挖掘结构和结构列的属性
@@ -29,7 +29,7 @@ ms.locfileid: "66083061"
 >  如果更改挖掘结构中的任何属性的值，即使是名称或说明等元数据，也必须首先重新处理该挖掘结构及其模型，然后才能查看或查询模型。  
   
 ## <a name="properties-of-mining-structures-and-mining-structure-columns"></a>挖掘结构和挖掘结构列的属性  
- 下表描述挖掘结构和挖掘结构列的属性，这些属性特定于数据挖掘，并且可以在 **“挖掘结构”** 选项卡中进行查看和配置。若要查看或配置这些属性，请在树视图中右键单击元素，然后单击“属性”。  
+ 下表描述挖掘结构和挖掘结构列的属性，这些属性特定于数据挖掘，并且可以在 **“挖掘结构”** 选项卡中进行查看和配置。若要查看或配置这些属性，请在树视图中右键单击元素，然后单击“属性”  。  
   
 -   若要查看结构的属性，请单击挖掘结构标题。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66083061"
   
 ### <a name="properties-of-the-mining-structure"></a>挖掘结构的属性  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |**CacheMode**|指定在定型中使用的事例在定型完成之后应缓存还是放弃。<br /><br /> 注意：此属性必须设置为`KeepTrainingCases`以启用钻取和维持。|  
 |**排序规则**|指定列的默认排序规则。 如果没有指定排序规则，则将使用服务器的排序规则。|  
@@ -53,7 +53,7 @@ ms.locfileid: "66083061"
   
 ### <a name="properties-of-the-mining-structure-columns"></a>挖掘结构列的属性  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|标识已分类列所说明的列。|  
 |**内容**|列的内容类型。|  
@@ -67,8 +67,8 @@ ms.locfileid: "66083061"
 |**ModelingFlags**|设置算法可用的其他参数。|  
 |`Name`|列的名称。|  
 |**NameColumn**|标识提供父元素名称的列。|  
-|**数据源**|显示列的源。<br /><br /> 对于关系数据源，其值始终为 **(none)**。<br /><br /> 对于基于 OLAP 多维数据集的结构，其值为对用作嵌套表源的切片进行定义的 MDX 语句。|  
-|**SourceMeasureGroup**|显示度量值组的源。<br /><br /> 对于关系数据源，其值始终为 **(none)**。<br /><br /> 对于基于 OLAP 多维数据集的结构，其值为对用作嵌套表源的切片进行定义的 MDX 语句。|  
+|**数据源**|显示列的源。<br /><br /> 对于关系数据源，其值始终为 **(none)** 。<br /><br /> 对于基于 OLAP 多维数据集的结构，其值为对用作嵌套表源的切片进行定义的 MDX 语句。|  
+|**SourceMeasureGroup**|显示度量值组的源。<br /><br /> 对于关系数据源，其值始终为 **(none)** 。<br /><br /> 对于基于 OLAP 多维数据集的结构，其值为对用作嵌套表源的切片进行定义的 MDX 语句。|  
 |**类型**|列中内容的数据类型。|  
   
  有关设置或更改属性的详细信息，请参阅 [挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)。  

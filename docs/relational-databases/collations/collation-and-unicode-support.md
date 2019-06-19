@@ -29,10 +29,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a754607e4eb3af99216e5a11e9af50730279040e
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66836379"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
@@ -100,7 +100,7 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
     
 除了更改服务器的排序规则外，无法更改系统数据库的排序规则。    
     
-数据库排序规则将应用于数据库中的所有元数据，并且是所有字符串列、临时对象、变量名称和数据库中使用的任何其他字符串的默认排序规则。 当更改用户数据库的排序规则时，如果在数据库访问临时表中进行查询，则可能出现排序规则冲突。 临时表始终存储在 tempdb 系统数据库中，该数据库使用实例的排序规则。 如果排序规则导致计算字符数据时出现冲突，则比较用户数据库和 **tempdb** 之间的字符数据的查询可能会失败。 您可以通过在查询中指定 COLLATE 子句来解决此问题。 有关详细信息，请参阅[排序规则 (Transact-SQL)](~/t-sql/statements/collations.md)。    
+数据库排序规则将应用于数据库中的所有元数据，并且是所有字符串列、临时对象、变量名称和数据库中使用的任何其他字符串的默认排序规则。 当更改用户数据库的排序规则时，如果在数据库访问临时表中进行查询，则可能出现排序规则冲突。 临时表始终存储在 tempdb 系统数据库中，该数据库使用实例的排序规则  。 如果排序规则导致计算字符数据时出现冲突，则比较用户数据库和 **tempdb** 之间的字符数据的查询可能会失败。 您可以通过在查询中指定 COLLATE 子句来解决此问题。 有关详细信息，请参阅[排序规则 (Transact-SQL)](~/t-sql/statements/collations.md)。    
     
 #### <a name="column-level-collations"></a>列级排序规则    
 当您创建或更改表时，可使用 COLLATE 子句指定每个字符串列的排序规则。 如果未指定排序规则，则为该列分配数据库的默认排序规则。    
@@ -116,12 +116,12 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 区域设置是与位置或区域性相关联的一组信息。 它可以包括所用语言的名称和标识符、用于书写该语言的文字以及文化习俗。 排序规则可以与一个或多个区域设置相关联。 有关详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
- 代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集”。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。     
+ 代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集”   。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。     
 ###  <a name="Sort_Order_Defn"></a> Sort Order    
  排序顺序指定数据值的排序方式。 它影响数据比较的结果。 数据的排序通过使用排序规则而实现，且可使用索引对排序进行优化。    
     
 ##  <a name="Unicode_Defn"></a> Unicode 支持    
-Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。 如果存储的字符数据反映 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）中存在多种语言，则应使用 Unicode (UTF-16) 数据类型（nchar、nvarchar 和 ntext），而不要使用非 Unicode 数据类型（char、varchar 和 text）。 或者，从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，如果使用已启用 UTF-8 的排序规则 (\_UTF8)，则以前的非 Unicode 数据类型（**char** 和 **varchar**）将变为 Unicode (UTF-8) 数据类型。 
+Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。 如果存储的字符数据反映 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）中存在多种语言，则应使用 Unicode (UTF-16) 数据类型（nchar、nvarchar 和 ntext），而不要使用非 Unicode 数据类型（char、varchar 和 text）       。 或者，从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，如果使用已启用 UTF-8 的排序规则 (\_UTF8)，则以前的非 Unicode 数据类型（**char** 和 **varchar**）将变为 Unicode (UTF-8) 数据类型。 
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不会更改以前存在的 Unicode (UTF-16) 数据类型（**nchar**、**nvarchar** 和 **ntext**）的行为。   
@@ -180,7 +180,7 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
 |非 Unicode|非 Unicode|这是对多语言数据有极大局限性的方案。 您只可使用一个代码页。|    
     
 ##  <a name="Supplementary_Characters"></a> 增补字符    
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 **nchar** 和 **nvarchar** 等数据类型来存储任何排序规则下的 Unicode (UTF-16) 数据，并提供 **char** 和 **varchar** 等数据类型来存储已启用 UTF-8 的排序规则 (\_UTF8) 下的 Unicode (UTF-8) 数据。 这些数据类型分别使用名为 *UTF-16* 和 *UTF-8* 的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 8 位字或 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个或四个连续的 8 位字 (UTF-8)，或两个连续的 16 位字 (UTF-16)。 这些字符称为“补充字符”，其他连续的 8 位字或 16 位字称为“代理项对”。    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 **nchar** 和 **nvarchar** 等数据类型来存储任何排序规则下的 Unicode (UTF-16) 数据，并提供 **char** 和 **varchar** 等数据类型来存储已启用 UTF-8 的排序规则 (\_UTF8) 下的 Unicode (UTF-8) 数据。 这些数据类型分别使用名为 *UTF-16* 和 *UTF-8* 的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 8 位字或 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个或四个连续的 8 位字 (UTF-8)，或两个连续的 16 位字 (UTF-16)。 这些字符称为“补充字符”  ，其他连续的 8 位字或 16 位字称为“代理项对”  。    
     
 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，新的补充字符 (\_SC) 排序规则系列可用于以下数据类型：**nchar**、**nvarchar** 和 **sql_variant**。 例如： `Latin1_General_100_CI_AS_SC`或 `Japanese_Bushu_Kakusu_100_CI_AS_SC`（如果使用日语排序规则）。 
  
@@ -196,7 +196,7 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
     
 -   不支持将增补字符用在元数据（如数据库对象的名称）中。    
     
--   使用含补充字符 (\_SC) 的排序规则的数据库无法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时启用。 这是因为为复制而创建的某些系统表和存储过程使用不支持补充字符的旧版 ntext 数据类型。  
+-   使用含补充字符 (\_SC) 的排序规则的数据库无法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时启用。 这是因为为复制而创建的某些系统表和存储过程使用不支持补充字符的旧版 ntext 数据类型  。  
     
 -   SC 标志可应用于：    
     

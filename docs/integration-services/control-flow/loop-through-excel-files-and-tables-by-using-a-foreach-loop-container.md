@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cb534e6306d590c6a1c407ef92fdcd2ae729415
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727553"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 循环容器，循环遍历 Excel 文件和表
@@ -42,11 +42,11 @@ ms.locfileid: "65727553"
   
 3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
-4.  在“Foreach 循环编辑器”的“集合”页上，选择“Foreach 文件”枚举器，并指定 Excel 工作簿所在的文件夹，然后指定文件筛选器（通常是 *.xlsx）。  
+4.  在“Foreach 循环编辑器”的“集合”页上，选择“Foreach 文件”枚举器，并指定 Excel 工作簿所在的文件夹，然后指定文件筛选器（通常是 *.xlsx）   。  
   
-5.  在“变量映射”页中，将索引 0 映射到用户定义字符串变量，该变量将在每个循环迭代中接收当前 Excel 路径和文件名。 （本过程后面显示的示例表达式将使用变量名 `ExcelFile`。）  
+5.  在“变量映射”  页中，将索引 0 映射到用户定义字符串变量，该变量将在每个循环迭代中接收当前 Excel 路径和文件名。 （本过程后面显示的示例表达式将使用变量名 `ExcelFile`。）  
   
-6.  关闭 **“Foreach 循环编辑器”**。  
+6.  关闭 **“Foreach 循环编辑器”** 。  
   
 7.  按照 [在包中添加、删除或共享连接管理器](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)中所述，将 Excel 连接管理器添加到包。 为连接选择一个现有 Excel 工作簿文件以避免出现验证错误。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "65727553"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>使用 Foreach ADO.NET 架构行集枚举器循环遍历 Excel 表  
   
-1.  创建使用 Microsoft ACE OLE DB 访问接口连接 Excel 工作簿的 ADO.NET 连接管理器。 在“连接管理器”对话框的“所有”页上，确保输入 Excel 版本，在本例中，Excel 12.0 作为“Extended Properties”属性的值。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+1.  创建使用 Microsoft ACE OLE DB 访问接口连接 Excel 工作簿的 ADO.NET 连接管理器。 在“连接管理器”对话框的“所有”页上，确保输入 Excel 版本，在本例中，Excel 12.0 作为“Extended Properties”属性的值  。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
   
 2.  创建一个字符串变量，用于在每次循环迭代中接收当前表的名称。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65727553"
   
 7.  在 **“变量映射”** 页上，将索引 2 映射到以前创建的字符串变量，以存放当前表的名称。  
   
-8.  关闭 **“Foreach 循环编辑器”**。  
+8.  关闭 **“Foreach 循环编辑器”** 。  
   
 9. 在 Foreach 循环容器中创建任务，这些任务使用 Excel 连接管理器对指定工作簿中的每个 Excel 表执行相同的操作。 如果你使用脚本任务来检查枚举表名或处理每个表，请记住将字符串变量添加到脚本任务的 ReadOnlyVariables 属性。  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e017a792f2554b757170a7669b83fada43dfb6a9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082027"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>定义计算作用域（商业智能向导）
@@ -27,10 +27,10 @@ ms.locfileid: "66082027"
  选择时间计算所适用的度量值。  
   
  **全选**  
- 选择“可用度量值”中列出的所有度量值。  
+ 选择“可用度量值”  中列出的所有度量值。  
   
  **全部清除**  
- 清除“可用度量值”中列出的所有度量值。  
+ 清除“可用度量值”  中列出的所有度量值。  
   
 ## <a name="see-also"></a>请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   

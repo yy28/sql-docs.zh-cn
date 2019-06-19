@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bee4d3ea71aaeacf682a6e90fad91786fa7a0c9c
-ms.sourcegitcommit: e92ce0f59345fe61c0dd3bfe495ef4b1de469d4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66221176"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 连接管理器
@@ -135,7 +135,7 @@ ms.locfileid: "66221176"
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **授予数据工厂托管标识所需的权限**。 对要复制数据的数据库运行以下 T-SQL：
+1. **向数据工厂托管标识授予所需的权限**。 对要复制数据的数据库运行以下 T-SQL：
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a00716f654263528d0332fb5a71cef6d80f9bc21
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775472"
 ---
 # <a name="soft-numa-sql-server"></a>软件 NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "51605387"
 > 软件 NUMA 不支持热添加处理器。  
   
 ## <a name="automatic-soft-numa"></a>自动软件 NUMA  
- 使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，只要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在启动时检测到每个 NUMA 或插槽内的物理内核数目超过 8 个，在默认情况下就会自动创建 soft-NUMA 节点。 计算节点中的物理内核时，不区分超线程处理器内核。  如果检测到每个插槽内的物理内核数目多于 8 个，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会创建 soft-NUMA 节点，在理想情况下包含 8 个内核，但也可少至每节点 5 个逻辑内核，或多达 9 个。 可以通过 CPU 关联掩码限制硬件节点的大小。 NUMA 节点数永远不会超过支持的 NUMA 节点的最大数目。  
+使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，只要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在启动时检测到每个 NUMA 或插槽内的物理内核数目超过 8 个，在默认情况下就会自动创建 soft-NUMA 节点。 计算节点中的物理内核时，不区分超线程处理器内核。  如果检测到每个插槽内的物理内核数目多于 8 个，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会创建 soft-NUMA 节点，在理想情况下包含 8 个内核，但也可少至每节点 5 个逻辑内核，或多达 9 个。 可以通过 CPU 关联掩码限制硬件节点的大小。 NUMA 节点数永远不会超过支持的 NUMA 节点的最大数目。  
   
- 可以使用带有 `SET SOFTNUMA` 参数的 [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md) 语句来禁用或重新启用 soft-NUMA。 更改此设置的值后，需要重新启动数据库引擎才会生效。  
+可以使用带有 `SET SOFTNUMA` 参数的 [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md) 语句来禁用或重新启用 soft-NUMA。 更改此设置的值后，需要重新启动数据库引擎才会生效。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测到硬件 NUMA 节点的每个节点或插槽内物理内核多于 8 个时，此图显示可在 SQL Server 错误日志中看到的关于 soft-NUMA 的信息类型。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测到硬件 NUMA 节点的每个节点或插槽内物理内核多于 8 个时，此图显示可在 SQL Server 错误日志中看到的关于 soft-NUMA 的信息类型。  
 
 
 ```
@@ -49,6 +49,9 @@ ms.locfileid: "51605387"
 2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.     
 2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.   
 ```   
+
+> [!NOTE]
+> 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，使用跟踪标志 8079 以使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能够使用自动 Soft-NUMA。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8079 不再有效。 有关详细信息，请参阅 [DBCC TRACEON - 跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 ## <a name="manual-soft-numa"></a>手动软件 NUMA  
 通过禁用自动 soft_NUMA 并编辑注册表，可手动配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来使用 soft-NUMA，以添加节点配置关联掩码。 借助这种方法，软件 NUMA 掩码可以表示为二进制、DWORD（十六进制或十进制）或 QWORD（十六进制或十进制）注册表项。 若要配置前 32 个 CPU 以后的 CPU，请使用 QWORD 或 BINARY 注册表值（在低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，不能使用 QWORD 值）。 修改注册表后，必须重启 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，soft-NUMA 配置才会生效。  
@@ -70,7 +73,7 @@ ms.locfileid: "51605387"
   
  大量使用 I/O 的实例 A 现在有两个 I/O 线程和一个惰性编写器线程。 执行大量占用处理器操作的实例 B 仅有一个 I/O 线程和一个惰性编写器线程。 可以向实例分配不同的内存量，但是与硬件 NUMA 不同，它们都从同一个操作系统内存块中接收内存，并且不具有从内存到处理器的关联。  
   
- 惰性编写器线程与物理 NUMA 内存节点的 SQLOS 视图有关。 因此，不管存在什么硬件，物理 NUMA 节点都将等于创建的惰性编写器线程数。 有关详细信息，请参阅 [软件 NUMA、I/O 完成线程、惰性编写器工作线程和内存节点的工作机制](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)。  
+ 惰性编写器线程与物理 NUMA 内存节点的 SQLOS 视图有关。 因此，不管存在什么硬件，物理 NUMA 节点都将等于创建的惰性编写器线程数。 有关详细信息，请参阅[工作原理：Soft NUMA、I/O 完成线程、惰性编写器工作线程和内存节点](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)。  
   
 > [!NOTE]
 > 升级 **的实例时，不复制** Soft-NUMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]注册表项。  
@@ -130,7 +133,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)：显示 SOFTNUMA 的当前值（0 或 1）  
   
--   [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)：softnuma 和 softnuma_desc 列显示当前配置值。  
+-   [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)：softnuma 和 softnuma_desc 列显示当前配置值   。  
   
 > [!NOTE]
 > 虽然可以使用 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 来查看自动软件 NUMA 的运行值，但不能使用 **sp_configure** 更改其值。 必须使用带有 `SET SOFTNUMA` 参数的 [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md) 语句。  

@@ -12,10 +12,10 @@ ms.author: sawinark
 ms.reviewer: maghan
 manager: craigg
 ms.openlocfilehash: a323ebdaa6e9fd8b1ce09acc3f8354d536df9701
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014963"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>验证部署到 Azure 的 SQL Server Integration Services (SSIS) 包
@@ -24,7 +24,7 @@ ms.locfileid: "66014963"
 
 
 
-将 SQL Server Integration Services (SSIS) 项目部署到 Azure 服务器上的 SSIS 目录 (SSISDB) 时，包部署向导将在“评审”页面后添加一个额外的验证步骤。 检查项目中的包是否存在可能阻止包在 Azure SSIS Integration Runtime 中按预期运行的已知问题。 然后向导在“验证”页面上显示所有适用的警告。
+将 SQL Server Integration Services (SSIS) 项目部署到 Azure 服务器上的 SSIS 目录 (SSISDB) 时，包部署向导将在“评审”页面后添加一个额外的验证步骤  。 检查项目中的包是否存在可能阻止包在 Azure SSIS Integration Runtime 中按预期运行的已知问题。 然后向导在“验证”页面上显示所有适用的警告  。
 
 > [!IMPORTANT]
 > 使用 SQL Server Data Tools (SSDT) 17.4 版或更高版本部署项目时，将出现本文所述的验证。 要获取最新版 SSDT，请参阅[下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。

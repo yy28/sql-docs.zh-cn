@@ -26,10 +26,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 429be4403d1df512b43a049b0014afcafea15740
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947493"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -47,16 +47,16 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 为 character、binary、text、ntext 或者 image [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 为 character、binary、text、ntext 或者 image [表达式](../../t-sql/language-elements/expressions-transact-sql.md)      。  
   
- start  
- 指定返回字符的起始位置的整数或 bigint 表达式。 （编号从 1 开始，意味着表达式中的第一个字符为 1）。 如果 start 小于 1，则返回的表达式的起始位置为表达式中指定的第一个字符。 在这种情况下，返回的字符数是后两者中的较大值：*start* + *length* 之和减去 1，0。 如果 start 大于值表达式中的字符数，将返回一个零长度的表达式。  
+ start   
+ 指定返回字符的起始位置的整数或 bigint 表达式  。 （编号从 1 开始，意味着表达式中的第一个字符为 1）。 如果 start 小于 1，则返回的表达式的起始位置为表达式中指定的第一个字符   。 在这种情况下，返回的字符数是后两者中的较大值：*start* + *length* 之和减去 1，0。 如果 start 大于值表达式中的字符数，将返回一个零长度的表达式  。  
   
  *length*  
- 是正整数或用于指定要返回的 expression 的字符数的 bigint 表达式。 如果 length 是负数，会生成错误并终止语句。 如果 start 和 length 的总和大于表达式中的字符数，则会返回从 start 开始的整个值表达式。  
+ 是正整数或用于指定要返回的 expression 的字符数的 bigint 表达式   。 如果 length 是负数，会生成错误并终止语句  。 如果 start 和 length 的总和大于表达式中的字符数，则会返回从 start 开始的整个值表达式     。  
   
 ## <a name="return-types"></a>返回类型  
- 如果 expression 是支持的字符数据类型之一，则返回字符数据。 如果 expression 是 binary 支持的字符数据类型之一，则返回字符数据。 返回的字符串类型与指定表达式的类型相同（表中显示的除外）。  
+ 如果 expression 是支持的字符数据类型之一，则返回字符数据  。 如果 expression 是 binary 支持的字符数据类型之一，则返回字符数据   。 返回的字符串类型与指定表达式的类型相同（表中显示的除外）。  
   
 |指定的表达式|返回类型|  
 |--------------------------|-----------------|  
@@ -65,12 +65,12 @@ SUBSTRING ( expression ,start , length )
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>Remarks  
- start 和 length 的值对于 ntext、char 或 varchar 数据类型必须以字符数指定，对于 text、image、binary 或 varbinary 数据类型，则以字节数指定。  
+ start 和 length 的值对于 ntext、char 或 varchar 数据类型必须以字符数指定，对于 text、image、binary 或 varbinary 数据类型，则以字节数指定          。  
   
- start 或 length 包含大于 2147483647 的值时，expression 必须是 varchar(max) 或 varbinary(max)。  
+ start 或 length 包含大于 2147483647 的值时，expression 必须是 varchar(max) 或 varbinary(max)      。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- 在使用增补字符 (SC) 排序规则时，start 和 length 将 expression 中的每个代理项对计为一个字符。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 在使用增补字符 (SC) 排序规则时，start 和 length 将 expression 中的每个代理项对计为一个字符    。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -114,9 +114,9 @@ bcd
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. 对 text、ntext 和 image 数据使用 SUBSTRING  
   
 > [!NOTE]  
->  若要运行以下示例，必须安装 pubs 数据库。  
+>  若要运行以下示例，必须安装 pubs 数据库  。  
   
- 以下示例说明如何返回 `pubs` 数据库的 `pub_info` 表内每个 text 和 image 数据列的前 10 个字符。 text 数据返回为 varchar，而 image 数据返回为 varbinary。  
+ 以下示例说明如何返回 `pubs` 数据库的 `pub_info` 表内每个 text 和 image 数据列的前 10 个字符   。 text 数据返回为 varchar，而 image 数据返回为 varbinary     。  
   
 ```  
 USE pubs;  
@@ -136,7 +136,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- 以下示例说明 SUBSTRING 对 text 和 ntext 数据的影响。 首先，该示例在 `pubs` 数据库内创建一个名为 `npub_info` 的新表。 接着，该示例使用 `pr_info` 列的前 80 个字符在 `npub_info` 表中创建 `pub_info.pr_info` 列，然后将添加 `ü` 为第一个字符。 最后，`INNER JOIN` 检索所有出版商标识号以及 text 和 ntext 出版商信息列的`SUBSTRING`。  
+ 以下示例说明 SUBSTRING 对 text 和 ntext 数据的影响   。 首先，该示例在 `pubs` 数据库内创建一个名为 `npub_info` 的新表。 接着，该示例使用 `pr_info` 列的前 80 个字符在 `npub_info` 表中创建 `pub_info.pr_info` 列，然后将添加 `ü` 为第一个字符。 最后，`INNER JOIN` 检索所有出版商标识号以及 text 和 ntext 出版商信息列的`SUBSTRING`   。  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   

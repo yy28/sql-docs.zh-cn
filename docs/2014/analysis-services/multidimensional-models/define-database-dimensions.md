@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075605"
 ---
 # <a name="define-database-dimensions"></a>定义数据库维度
@@ -40,7 +40,7 @@ ms.locfileid: "66075605"
   
  维度设计器中有三个不同的选项卡，下表对这些选项卡进行了说明。  
   
-|Tab|Description|  
+|Tab|描述|  
 |---------|-----------------|  
 |**维度结构**|使用此选项卡上，若要使用的维度到结构检查或创建数据源视图架构对于维度，以处理特性，以及组织中用户定义的层次结构的属性。|  
 |**属性关系**|使用此选项卡可以创建、修改或删除维度的属性关系。|  

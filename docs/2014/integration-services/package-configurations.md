@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056886"
 ---
 # <a name="package-configurations"></a>包配置
@@ -84,7 +84,7 @@ ms.locfileid: "66056886"
 ## <a name="package-configuration-types"></a>包配置类型  
  下表介绍了包配置的类型。  
   
-|类型|Description|  
+|类型|描述|  
 |----------|-----------------|  
 |XML 配置文件|XML 文件包含配置。 XML 文件可以包括多个配置。|  
 |环境变量|环境变量包含配置。|  
@@ -153,7 +153,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>相关内容  
   
--   msdn.microsoft.com 上的技术文章 [理解 Integration Services 包配置](https://go.microsoft.com/fwlink/?LinkId=165643)   
+-   msdn.microsoft.com 上的技术文章 [理解 Integration Services 包配置](https://go.microsoft.com/fwlink/?LinkId=165643)  
   
 -   博客文章[代码的包配置中创建包](https://go.microsoft.com/fwlink/?LinkId=217663)，www.sqlis.com 上的。  
   

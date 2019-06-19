@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c86f31bc79dae5c257f58d59bbfc8039e02f7e4e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090122"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定断点筛选器
@@ -27,11 +27,11 @@ ms.locfileid: "66090122"
   
 #### <a name="to-specify-a-breakpoint-filter"></a>指定断点筛选器  
   
-1.  在“编辑器”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”。  
+1.  在“编辑器”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”  。  
   
      -或-  
   
-     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”。  
+     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”  。  
   
 2.  在 **“断点筛选器”** 对话框中，使用 **“筛选器”** 框按名称指定计算机，或者按名称或 ID 编号指定操作系统进程和线程：  
   

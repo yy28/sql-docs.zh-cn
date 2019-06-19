@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3510c94a80f0ba7cf06817afd62d6d29e1878f1e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948905"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
@@ -41,11 +41,11 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 ```  
   
 ## <a name="arguments"></a>参数  
-Asym_Key_ID  
-数据库中非对称密钥的 ID。 Asym_Key_ID 具有 int 数据类型。  
+Asym_Key_ID   
+数据库中非对称密钥的 ID。 Asym_Key_ID 具有 int 数据类型   。  
   
-cleartext  
-`ENCRYPTBYASYMKEY` 将使用非对称密钥对其加密的数据字符串。 cleartext 可以具有
+cleartext   
+`ENCRYPTBYASYMKEY` 将使用非对称密钥对其加密的数据字符串。 cleartext 可以具有 
  
 + **binary**
 + **char**
@@ -60,7 +60,7 @@ cleartext
 数据类型。  
   
 **@plaintext**  
-`ENCRYPTBYASYMKEY` 将使用非对称密钥对其加密的包含值的变量。 @plaintext 可以具有
+`ENCRYPTBYASYMKEY` 将使用非对称密钥对其加密的包含值的变量。 @plaintext 可以具有 
   
 + **binary**
 + **char**
@@ -75,12 +75,12 @@ cleartext
 数据类型。  
   
 ## <a name="return-types"></a>返回类型  
-varbinary（最大大小为 8,000 个字节）。  
+varbinary（最大大小为 8,000 个字节）  。  
   
 ## <a name="remarks"></a>Remarks  
 与对称密钥加密和解密相比，使用非对称密钥的加密和解密操作消耗大量资源，因此成本很高。 我们建议开发人员避免对大型数据集执行非对称密钥加密和解密操作 - 例如，存储在数据库表中的用户数据数据集。 相反，我们建议开发人员首先使用强对称密钥对数据进行加密，然后使用非对称密钥对该对称密钥进行加密。  
   
-如果输入超出一定字节数，`ENCRYPTBYASYMKEY` 将返回 NULL（具体取决于算法）。 具体限制：
+如果输入超出一定字节数，`ENCRYPTBYASYMKEY` 将返回 NULL（具体取决于算法）  。 具体限制：
 
 + 一个 512 位的 RSA 密钥最多可加密 53 个字节
 + 一个 1024 位的密钥最多可加密 117 个字节

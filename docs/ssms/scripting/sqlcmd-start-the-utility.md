@@ -12,10 +12,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 07f2f685df21384e8062bf04601946f4e211b5a3
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821880"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - 启动实用工具
@@ -29,7 +29,7 @@ ms.locfileid: "65821880"
   
 ### <a name="start-the-sqlcmd-utility-and-connect-to-a-default-instance-of-sql-server"></a>启动 sqlcmd 实用工具并连接到 SQL Server 的默认实例  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。 在 **“打开”** 框中，键入 **cmd**，然后单击 **“确定”** 打开命令提示符窗口。 （如果你之前未连接到此 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，则可能需要配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以接受连接。）  
+1.  在 **“开始”** 菜单上，单击 **“运行”** 。 在 **“打开”** 框中，键入 **cmd**，然后单击 **“确定”** 打开命令提示符窗口。 （如果你之前未连接到此 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，则可能需要配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以接受连接。）  
   
 2.  在命令提示符下键入 **sqlcmd**。  
   

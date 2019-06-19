@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070011"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>计划数据刷新 (PowerPivot for SharePoint)
@@ -77,7 +77,7 @@ ms.locfileid: "66070011"
   
 1.  在包含该工作簿的库中，选择该工作簿，然后单击向下箭头以显示命令列表。  
   
-2.  单击 **“管理 PowerPivot 数据刷新”**。 如果已定义数据刷新计划，则您将看到“查看数据刷新历史记录”页。 您可以单击 **“配置数据刷新”** 以打开计划定义页。  
+2.  单击 **“管理 PowerPivot 数据刷新”** 。 如果已定义数据刷新计划，则您将看到“查看数据刷新历史记录”页。 您可以单击 **“配置数据刷新”** 以打开计划定义页。  
   
 3.  在计划定义页中，选中 **“启用”** 复选框。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66070011"
   
 2.  选择文档，然后单击显示在右侧的向下箭头。  
   
-3.  选择 **“管理 PowerPivot 数据刷新”**。  
+3.  选择 **“管理 PowerPivot 数据刷新”** 。  
   
  此时将出现历史记录页，其中显示当前 Excel 工作簿中 PowerPivot 数据的所有刷新活动的完整记录，包括最近数据刷新操作的状态。  
   

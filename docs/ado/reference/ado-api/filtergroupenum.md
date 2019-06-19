@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: db586609b90ba023e2a1700642cb678e8f08a8b2
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66694901"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 指定要从筛选的记录的组[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|用于查看仅受影响的最后一个的记录的筛选器[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)，[重新同步](../../../ado/reference/ado-api/resync-method.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，或者[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)调用。|  
 |**adFilterConflictingRecords**|5|用于查看失败的最后的批处理更新的记录的筛选器。|  

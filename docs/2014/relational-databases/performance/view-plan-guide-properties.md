@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151263"
 ---
 # <a name="view-plan-guide-properties"></a>查看计划指南属性
@@ -52,7 +52,7 @@ ms.locfileid: "63151263"
   
 2.  单击加号以便展开 **“计划指南”** 文件夹。  
   
-3.  右键单击要查看其属性的计划指南，然后选择“属性”。  
+3.  右键单击要查看其属性的计划指南，然后选择“属性”  。  
   
      **“计划指南属性”** 对话框显示以下属性。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "63151263"
      **声明专用纸**  
      显示应用此计划指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-4.  单击“确定” 。  
+4.  单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -91,9 +91,9 @@ ms.locfileid: "63151263"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  

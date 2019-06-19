@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081451"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>编辑现有数据源连接（SSAS 表格）
@@ -35,17 +35,17 @@ ms.locfileid: "66081451"
   
 #### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>更改当前连接使用的外部数据源  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”** 。  
   
-2.  选择您要修改的数据源连接，然后单击 **“编辑”**。  
+2.  选择您要修改的数据源连接，然后单击 **“编辑”** 。  
   
 3.  在 **“编辑连接”** 对话框中，单击 **“浏览”** 找到类型相同但名称或位置不同的其他数据库。  
   
      更改数据库文件后，将立即显示一条消息，指示您需要保存和刷新表以便查看新数据。  
   
-4.  单击 **“保存”**，然后单击 **“关闭”**。  
+4.  单击 **“保存”** ，然后单击 **“关闭”** 。  
   
-5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，依次单击 **“模型”**、 **“处理”** 和 **“全部处理”**。  
+5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，依次单击 **“模型”** 、 **“处理”** 和 **“全部处理”** 。  
   
      将使用新数据源重新处理表，但保留原有的数据选择。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66081451"
   
 1.  在模型设计器中，选择某个表。  
   
-2.  单击 **“表”** 菜单，然后单击 **“表属性”**。  
+2.  单击 **“表”** 菜单，然后单击 **“表属性”** 。  
   
      **“表名”** 框中将显示所选表的名称。 **“源名称”** 框包含外部数据源中的表的名称。 如果源和模型中对列的命名方式不同，则可通过选择 **“源”** 或 **“模型”** 选项在这两组列名之间进行切换。  
   

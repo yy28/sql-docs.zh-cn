@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c08545341e3ecfe8c82ab01723d96167412e1b03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62895016"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比较脚本任务和脚本组件
@@ -28,7 +28,7 @@ ms.locfileid: "62895016"
 ## <a name="similarities-between-the-script-task-and-the-script-component"></a>脚本任务和脚本组件之间的相似之处  
  脚本任务和脚本组件有以下相同特性。  
   
-|功能|Description|  
+|功能|描述|  
 |-------------|-----------------|  
 |两个设计时模式|在任务和组件中，都是从在编辑器中指定属性开始，然后切换到开发环境编写代码。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|任务和组件都使用相同的 VSTA IDE，并且支持在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 中编写代码。|  
@@ -43,7 +43,7 @@ ms.locfileid: "62895016"
 |控制流/数据流|脚本任务在设计器的“控制流”选项卡中配置，在包的数据流外部运行。|脚本组件在设计器的“数据流”页中配置，表示数据流任务中的源、转换或目标。|  
 |用途|脚本任务可完成几乎所有一般用途的任务。|必须指定是否要使用脚本组件创建源、转换或目标。|  
 |执行|脚本任务在包工作流中的某个点运行自定义代码。 除非将其放在循环容器或事件处理程序中，否则它只运行一次。|脚本组件也运行一次，但是通常它为数据流中的每行数据运行一次主处理例程。|  
-|编辑器|“脚本任务编辑器”有三个页面：“常规”、“脚本”和“表达式”。 仅`ReadOnlyVariables`并`ReadWriteVariables`，并**ScriptLanguage**属性会直接影响您可以编写的代码。|“脚本转换编辑器”最多有四个页面：“输入列”、“输入和输出”、“脚本”和“连接管理器”。 在其中每个页面上配置的元数据和属性将决定自动生成以供您在编码中使用的基类的成员。|  
+|编辑器|“脚本任务编辑器”  有三个页面：“常规”  、“脚本”  和“表达式”  。 仅`ReadOnlyVariables`并`ReadWriteVariables`，并**ScriptLanguage**属性会直接影响您可以编写的代码。|“脚本转换编辑器”  最多有四个页面：“输入列”  、“输入和输出”  、“脚本”  和“连接管理器”  。 在其中每个页面上配置的元数据和属性将决定自动生成以供您在编码中使用的基类的成员。|  
 |与包交互|在为脚本任务编写的代码中，使用 `Dts` 属性访问包的其他功能。 `Dts` 属性是 `ScriptMain` 类的成员。|在脚本组件代码中，使用类型化的取值函数属性访问特定包功能，如变量和连接管理器。<br /><br /> `PreExecute` 方法仅可访问只读变量。 `PostExecute` 方法既可以访问只读变量，又可以访问读/写变量。<br /><br /> 有关这些方法的详细信息，请参阅 [的编码和调试脚本组件] (../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md。|  
 |使用变量|脚本任务使用<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>的属性`Dts`对象可通过该任务的访问变量<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A>和<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A>属性。 例如：<br /><br /> **[VB]**<br /><br /> `Dim myVar as String myVar = Dts.Variables("MyStringVariable").Value.ToString`<br /><br /> <br /><br /> **[C#]**<br /><br /> `string myVar; myVar = Dts.Variables["MyStringVariable"].Value.ToString();`|脚本组件使用自动生成的基类的类型化取值函数属性，这些属性基于组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 属性创建。 例如：<br /><br /> **[VB]**<br /><br /> `Dim myVar as String myVar = Me.Variables.MyStringVariable`<br /><br /> <br /><br /> **[C#]**<br /><br /> `string myVar; myVar = this.Variables.MyStringVariable;`|  
 |使用连接|脚本任务使用 `Dts` 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 属性访问在包中定义的连接管理器。 例如：<br /><br /> **[VB]**<br /><br /> `Dim myFlatFileConnection As String myFlatFileConnection = _     DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction), _     String)`<br /><br /> <br /><br /> **[C#]**<br /><br /> `string myFlatFileConnection; myFlatFileConnection = (Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) as String);`|脚本组件使用自动生成的基类的类型化取值函数属性，这些属性基于用户在编辑器的“连接管理器”页上输入的连接管理器列表创建。 例如：<br /><br /> **[VB]**<br /><br /> `Dim connMgr As IDTSConnectionManager100 connMgr = Me.Connections.MyADONETConnection`<br /><br /> <br /><br /> **[C#]**<br /><br /> `IDTSConnectionManager100 connMgr; connMgr = this.Connections.MyADONETConnection;`|  

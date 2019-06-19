@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070126"
 ---
 # <a name="row-filters-role-designertabular-model"></a>行筛选器（角色设计器）（表模型）
   使用角色设计器的 **“行筛选器”** 页可以定义关联角色的行级别筛选器。 只能为具有“读取”和“读取和处理”权限的角色定义行筛选器。  
   
 > [!NOTE]  
->  如果在角色设计器的“常规”页上选择了“完全控制(管理员)”，或如果角色权限设置为“处理”，则将禁用此页上的所有选项。  
+>  如果在角色设计器的“常规”页上选择了“完全控制(管理员)”，或如果角色权限设置为“处理”，则将禁用此页上的所有选项    。  
   
 ## <a name="options"></a>选项  
  **表**  

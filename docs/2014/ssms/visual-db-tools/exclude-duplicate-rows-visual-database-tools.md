@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 63ec11b8575017ffbb3a1b1468ef3150a20326e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028345"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>排除重复行 (Visual Database Tools)
@@ -29,9 +29,9 @@ ms.locfileid: "63028345"
   
 ### <a name="to-exclude-duplicate-rows-from-the-result-set"></a>从结果集中排除重复行  
   
-1.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“属性”。  
+1.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“属性”  。  
   
-2.  在“属性”窗口，单击“DISTINCT 值”，再将其值设置为“是”。  
+2.  在“属性”窗口，单击“DISTINCT 值”  ，再将其值设置为“是”  。  
   
      查询和视图设计器将在 SQL 语句中显示列的列表之前插入关键字 DISTINCT。  
   

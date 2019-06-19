@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077253"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>修改某个特性的 KeyColumn 属性
@@ -30,11 +30,11 @@ ms.locfileid: "66077253"
   
 2.  通过执行下列过程之一打开维度设计器：  
   
-    -   在**解决方案资源管理器**中，右键单击“维度”文件夹中的维度，然后单击“打开”或“视图设计器”。  
+    -   在**解决方案资源管理器**中，右键单击“维度”文件夹中的维度，然后单击“打开”或“视图设计器”    。  
   
          -或-  
   
-    -   在多维数据集设计器上**多维数据集结构**选项卡上，展开中的多维数据集维度**维度**窗格，然后单击**编辑\<维度 >**。  
+    -   在多维数据集设计器上**多维数据集结构**选项卡上，展开中的多维数据集维度**维度**窗格，然后单击**编辑\<维度 >** 。  
   
 3.  在 **“维度结构”** 选项卡的 **“属性”** 窗格中，单击要修改其 **KeyColumns** 属性的特性。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66077253"
   
      **“键列”** 对话框将打开。  
   
-6.  若要删除现有键列，请在“键列”列表中选择相应的列，然后单击“\<”按钮。  
+6.  若要删除现有键列，请在“键列”  列表中选择相应的列，然后单击“\<”按钮  。  
   
-7.  若要添加键列，请在“可用列”列表中选择相应的列，然后单击“>”按钮。  
+7.  若要添加键列，请在“可用列”  列表中选择相应的列，然后单击“>”  按钮。  
   
     > [!NOTE]  
     >  如果定义多个键列，则这些列在 **“键列”** 列表中的排序将影响键列的显示顺序。 例如，月特性有两个键列：月和年。 如果列表中年列显示在月列前，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将先按年进行排序，再按月进行排序。 如果月列显示在年列前，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将先按月进行排序，再按年进行排序。  

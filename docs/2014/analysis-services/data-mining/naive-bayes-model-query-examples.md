@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b713d9918dabcbaabba2085710dfaa5ed5d3a33b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083282"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Naive Bayes 模型查询示例
@@ -168,7 +168,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
  和用于浏览输入属性与可预测属性之间的关系相比，Microsoft Naive Bayes 算法通常较少用于预测。 但模型支持使用预测函数进行预测和关联。  
   
 ###  <a name="bkmk_Query5"></a> 示例查询 5:使用单独查询预测结果  
- 下面的查询使用单独查询提供新值，并基于模型预测具有这些特征的客户是否会购买自行车。 创建针对回归模型的查询的最简便方法是使用 **“单独查询输入”** 对话框。 例如，创建下面的 DMX 查询可以使用以下方法：依次选择 `TM_NaiveBayes` 模型、 **“单独查询”**，然后从 `[Commute Distance]` 和 `Gender`的下拉列表中选择值。  
+ 下面的查询使用单独查询提供新值，并基于模型预测具有这些特征的客户是否会购买自行车。 创建针对回归模型的查询的最简便方法是使用 **“单独查询输入”** 对话框。 例如，创建下面的 DMX 查询可以使用以下方法：依次选择 `TM_NaiveBayes` 模型、 **“单独查询”** ，然后从 `[Commute Distance]` 和 `Gender`的下拉列表中选择值。  
   
 ```  
 SELECT  
