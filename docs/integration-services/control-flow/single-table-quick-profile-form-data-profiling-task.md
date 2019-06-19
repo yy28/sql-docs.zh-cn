@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d04e4be41f72d244ec5cd0c7d2a04e468f871181
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727435"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>单个表快速配置文件窗体（数据事件探查任务）
@@ -54,7 +54,7 @@ ms.locfileid: "65727435"
 |**“与决定列一样最多 N 列”**|选择最大列数，以可能的组合作为决定列进行测试。 默认值为 1。 最大值为 1000。 例如，选择 2 可对具有以下特点的组合进行测试：单个列或两个列组合为另一个（依赖）列的决定列。|  
   
 > [!NOTE]  
->  值包含配置文件类型在“单个表快速配置文件窗体”中不可用。  
+>  值包含配置文件类型在“单个表快速配置文件窗体”中不可用  。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

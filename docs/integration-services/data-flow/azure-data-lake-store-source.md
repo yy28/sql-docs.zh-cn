@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 105bc5131a4c4c56bb7218de46c1bf6b6e86254c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727181"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 源
@@ -28,7 +28,7 @@ ms.locfileid: "65727181"
 
   “Azure Data Lake Store 源”  组件允许 SSIS 包读取 Azure Data Lake Store 中的数据。 支持的文件格式为：文本和 Avro。
   
- “Azure Data Lake Store 源”是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。  
+ “Azure Data Lake Store 源”是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件  。  
   
 > [!NOTE]
 > 若要确保 Azure Data Lake Store 连接管理器和使用它的组件（即 Azure Data Lake Store 源和 Azure Data Lake Store 目标）可连接到服务，请确保在 [此处](https://www.microsoft.com/download/details.aspx?id=49492)下载最新版本的 Azure 功能包。 
@@ -48,4 +48,4 @@ ms.locfileid: "65727181"
 
 ## <a name="text-qualifier"></a>文本限定符
 
-Azure Data Lake Store 源不支持文本限定符。 如果必须指定文本限定符以正确处理文件，请考虑将文件下载到本地计算机并使用平面文件源处理文件。 平面文件源支持指定文本限定符。 有关详细信息，请参阅[平面文件源](flat-file-source.md)。
+Azure Data Lake Store 源不支持文本限定符  。 如果必须指定文本限定符以正确处理文件，请考虑将文件下载到本地计算机并使用平面文件源处理文件  。 平面文件源支持指定文本限定符。 有关详细信息，请参阅[平面文件源](flat-file-source.md)。

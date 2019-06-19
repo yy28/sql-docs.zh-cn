@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069925"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>脚本组织程序（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -37,10 +37,10 @@ ms.locfileid: "66069925"
  **Command**  
  显示命令的名称（对于计算成员和命名集）或计算的第一行（对于脚本命令）。  
   
- 选择命令，可以显示适用于该命令的“脚本编辑器”、“计算成员窗体编辑器”或“命名集窗体编辑器”（在窗体视图中），或将“脚本编辑器”窗格的内容滚动到多维数据集脚本中该命令的位置（在脚本视图中）。  
+ 选择命令，可以显示适用于该命令的“脚本编辑器”、“计算成员窗体编辑器”或“命名集窗体编辑器”（在窗体视图中），或将“脚本编辑器”窗格的内容滚动到多维数据集脚本中该命令的位置（在脚本视图中）。      
   
 ## <a name="context-menu"></a>上下文菜单  
- 右键单击“脚本组织程序”窗格中的命令后，可以从所显示的上下文菜单中访问以下选项：  
+ 右键单击“脚本组织程序”窗格中的命令后，可以从所显示的上下文菜单中访问以下选项：   
   
 |Option|定义|  
 |------------|----------------|  

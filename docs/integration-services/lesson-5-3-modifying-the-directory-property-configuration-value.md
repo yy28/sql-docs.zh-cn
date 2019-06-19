@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721215"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>第 5-3 课：修改 Directory 属性配置值
@@ -24,13 +24,13 @@ ms.locfileid: "65721215"
 
 
 
-在此任务中，修改存储在 SSISTutorial.dtsConfig 文件中的配置设置，以设置包级别变量 `User::varFolderName` 的 Value 属性。 该变量更新 Foreach 循环容器的 Directory 属性。 修改后的值指向前一个任务中创建的 New Sample Data 文件夹。 修改配置设置并运行包后，将从配置文件中的变量更新 Directory 属性。 以前，Directory 属性值包含在包中。  
+在此任务中，修改存储在 SSISTutorial.dtsConfig 文件中的配置设置，以设置包级别变量 `User::varFolderName` 的 Value 属性   。 该变量更新 Foreach 循环容器的 Directory 属性  。 修改后的值指向前一个任务中创建的 New Sample Data 文件夹  。 修改配置设置并运行包后，将从配置文件中的变量更新 Directory 属性  。 以前，Directory 属性值包含在包中  。  
   
 ## <a name="modify-the-configuration-setting-of-the-directory-property"></a>修改 Directory 属性的配置设置  
   
-1.  在记事本或其他文本编辑器中，找到并打开在前一个任务中使用“程序包配置向导”创建的 SSISTutorial.dtsConfig 配置文件。  
+1.  在记事本或其他文本编辑器中，找到并打开在前一个任务中使用“程序包配置向导”创建的 SSISTutorial.dtsConfig 配置文件  。  
   
-2.  更改 **ConfiguredValue** 元素的值，使其与上一个任务中创建的 **New Sample Data** 文件夹匹配。 请不要将路径用引号括起来。 如果 New Sample Data 文件夹位于驱动器的根级（例如，C:\\）上，则更新的 XML 应与下面的示例类似：  
+2.  更改 **ConfiguredValue** 元素的值，使其与上一个任务中创建的 **New Sample Data** 文件夹匹配。 请不要将路径用引号括起来。 如果 New Sample Data 文件夹位于驱动器的根级（例如，C:\\）上，则更新的 XML 应与下面的示例类似   ：  
   
     ```
     <?xml version="1.0"?>
@@ -45,7 +45,7 @@ ms.locfileid: "65721215"
     </DTSConfiguration>  
     ```
 
-    在文件中，标题信息（GeneratedBy、GeneratedFromPackageID 和 GeneratedDate）将有所不同。 要注意的元素是 **Configuration** 元素。 变量 `User::varFolderName` 的 Value 属性现在包含 C:\New Sample Data。  
+    在文件中，标题信息（GeneratedBy、GeneratedFromPackageID 和 GeneratedDate）将有所不同    。 要注意的元素是 **Configuration** 元素。 变量 `User::varFolderName` 的 Value 属性现在包含 C:\New Sample Data   。  
   
 3.  保存更改，再关闭文本编辑器。  
   

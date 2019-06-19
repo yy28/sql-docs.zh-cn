@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072162"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>“分区属性”对话框 (SSMS)
   在 SQL Server Management Studio 中，可以使用 **“分区属性”** 对话框设置 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的多维数据集的分区属性。  
   
- 若要打开“分区属性”对话框，请在“对象资源管理器”中右键单击某个分区，再单击“属性”。  
+ 若要打开“分区属性”对话框，请在“对象资源管理器”中右键单击某个分区，再单击“属性”    。  
   
  **“分区属性”** 对话框包含以下页：  
   

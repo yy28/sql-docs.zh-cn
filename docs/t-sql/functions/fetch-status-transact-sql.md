@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b913dc4de858bb8d8bd70cccbd6ed9b7c4143174
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946084"
 ---
 # <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
@@ -57,7 +57,7 @@ ms.locfileid: "65946084"
   
 例如，用户从一个游标执行一条 FETCH 语句，然后调用一个存储过程，此存储过程打开并处理另一个游标的结果。 从被调用的存储过程返回控制时，`@@FETCH_STATUS` 反映的是在存储过程中执行的最后的 FETCH 语句的结果，而不是在调用存储过程之前执行的 FETCH 语句的结果。  
   
-若要检索特定游标的最后提取状态，请查询 sys.dm_exec_cursors 动态管理函数的 fetch_status 列。  
+若要检索特定游标的最后提取状态，请查询 sys.dm_exec_cursors 动态管理函数的 fetch_status 列   。  
   
 ## <a name="examples"></a>示例  
 此示例使用 `@@FETCH_STATUS` 来控制 `WHILE` 循环中的游标活动。  

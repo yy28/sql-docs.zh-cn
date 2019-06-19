@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071812"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>配置磁盘空间使用情况 (PowerPivot for SharePoint)
@@ -50,21 +50,21 @@ ms.locfileid: "66071812"
   
  在系统级别，您可以创建电子邮件警报，在磁盘空间不足时通知您。 Microsoft 系统中心包括电子邮件警报功能。 您还可以使用文件服务器资源管理器、任务计划程序或 PowerShell 脚本来设置警报。 以下链接提供一些有用的信息，可帮助您设置在磁盘空间不足时发出的通知：  
   
--   [什么是文件服务器资源管理器的新增](https://technet.microsoft.com/library/hh831746.aspx)(https://technet.microsoft.com/library/hh831746.aspx)。  
+-   [什么是文件服务器资源管理器的新增](https://technet.microsoft.com/library/hh831746.aspx)(https://technet.microsoft.com/library/hh831746.aspx) 。  
   
--   [适用于 Windows Server 2008 R2 文件服务器资源管理器分步指南](https://go.microsoft.com/fwlink/?LinkID=204875)(https://go.microsoft.com/fwlink/?LinkID=204875)。  
+-   [适用于 Windows Server 2008 R2 文件服务器资源管理器分步指南](https://go.microsoft.com/fwlink/?LinkID=204875)(https://go.microsoft.com/fwlink/?LinkID=204875) 。  
   
--   [Windows Server 2008 上设置磁盘空间不足警报](https://go.microsoft.com/fwlink/?LinkID=204870)( https://go.microsoft.com/fwlink/?LinkID=204870)。  
+-   [Windows Server 2008 上设置磁盘空间不足警报](https://go.microsoft.com/fwlink/?LinkID=204870)( https://go.microsoft.com/fwlink/?LinkID=204870) 。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>如何限制用于存储缓存文件的磁盘空间量  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务器上的服务”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务器上的服务”** 。  
   
 2.  单击 **SQL Server Analysis Services**。  
   
      请注意对在物理服务器上运行的 Analysis Services 实例设置限制，而非在服务应用程序级别设置限制。 使用本地 Analysis Services 实例的所有服务应用程序都受到为该实例设置的单个最大磁盘空间的限制。  
   
-3.  在“磁盘使用情况”中，设置“总磁盘空间”的值 (GB) 以便设置用于缓存的空间量的上限。 默认值为 0，它允许 Analysis Services 使用所有可用磁盘空间。  
+3.  在“磁盘使用情况”中，设置“总磁盘空间”的值 (GB) 以便设置用于缓存的空间量的上限  。 默认值为 0，它允许 Analysis Services 使用所有可用磁盘空间。  
   
 4.  磁盘使用情况，在**删除缓存的数据库中最后 'n' 小时**设置，指定磁盘空间达到最大限制时清空缓存的上次使用的条件。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66071812"
   
 ## <a name="how-to-limit-how-long-a-database-is-kept-in-the-cache"></a>如何限制数据库保留在缓存中的时间长度  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”** 。  
   
 2.  单击**默认 PowerPivot 服务应用程序**以打开管理仪表板。  
   
-3.  在“操作”中，单击 **“配置服务应用程序设置”**。  
+3.  在“操作”中，单击 **“配置服务应用程序设置”** 。  
   
 4.  在“磁盘缓存”部分中，您可以指定非活动数据库保留在内存中以便支持新请求的时间长度（默认为 48 小时）以及该数据库保留在缓存中的时间长度（默认为 120 小时）。  
   

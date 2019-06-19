@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 627edc6b58395f9d741b3972f04e9101127f72fa
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099913"
 ---
 # <a name="proxy-editor---add-principal"></a>代理编辑器 - 添加主体
@@ -37,7 +37,7 @@ ms.locfileid: "65099913"
 列出所选类型的主体服务器。  
   
 **名称**  
-选择主体的名称以便向其授予访问权限，或者选择“名称”以便向该列表中的所有主体授予访问权限。  
+选择主体的名称以便向其授予访问权限，或者选择“名称”  以便向该列表中的所有主体授予访问权限。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建 SQL Server 代理的代理帐户](../../ssms/agent/create-a-sql-server-agent-proxy.md)  

@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 21dc355570d5a2778e553924a189ce985513a7cc
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981031"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>数据类型强制和 sql:datatype 批注 (SQLXML 4.0)
@@ -89,9 +89,9 @@ ms.locfileid: "65981031"
 ## <a name="sqldatatype-annotation"></a>sql:datatype 批注  
  **Sql: datatype**批注用于指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型; 此批注时，必须指定：  
   
--   进行大容量加载**dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列从 XSD **dateTime**，**日期**，或**时间**类型。 在这种情况下，必须标识[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列的数据类型使用**sql: datatype ="dateTime"**。 此规则也适用于 updategram。  
+-   进行大容量加载**dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列从 XSD **dateTime**，**日期**，或**时间**类型。 在这种情况下，必须标识[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列的数据类型使用**sql: datatype ="dateTime"** 。 此规则也适用于 updategram。  
   
--   进行大容量加载的列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier**类型且 XSD 值是一个 GUID，包括大括号 （{和}）。 当指定**sql: datatype ="uniqueidentifier"**，大括号之前插入列中删除的值。 如果**sql: datatype**未指定，则使用大括号和插入或更新失败，将发送的值。  
+-   进行大容量加载的列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier**类型且 XSD 值是一个 GUID，包括大括号 （{和}）。 当指定**sql: datatype ="uniqueidentifier"** ，大括号之前插入列中删除的值。 如果**sql: datatype**未指定，则使用大括号和插入或更新失败，将发送的值。  
   
 -   XML 数据类型**base64Binary**映射到各种[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型 (**二进制**，**映像**，或**varbinary**)。 若要将 XML 数据类型映射**base64Binary**为特定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，请使用**sql: datatype**批注。 此批注指定属性要映射到的列的显式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 当正在数据库中存储数据时，这很有用。 通过指定**sql: datatype**批注，您可以标识显式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
   

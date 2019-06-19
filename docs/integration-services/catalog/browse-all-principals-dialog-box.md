@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 523fb8a446e6985efe3e632a2e1c2b9804b76f49
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729245"
 ---
 # <a name="browse-all-principals-dialog-box"></a>“浏览所有主体”对话框
@@ -25,7 +25,7 @@ ms.locfileid: "65729245"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用“浏览所有主体”对话框选择数据库主体，以更改所选项目或所选文件夹中包含的所有项目的主体权限。  
+  使用“浏览所有主体”对话框选择数据库主体，以更改所选项目或所选文件夹中包含的所有项目的主体权限  。  
   
  **您希望做什么？**  
   
@@ -43,11 +43,11 @@ ms.locfileid: "65729245"
   
 3.  展开 **“SSISDB”** 节点。  
   
-4.  要更改所选文件夹中包含的所有项目的主体权限，请右键单击该文件夹，然后单击“属性”。  
+4.  要更改所选文件夹中包含的所有项目的主体权限，请右键单击该文件夹，然后单击“属性”  。  
   
-     要更改所选文件的主体权限，请扩展包含该项目的文件夹，右键单击该项目，然后单击“属性”。  
+     要更改所选文件的主体权限，请扩展包含该项目的文件夹，右键单击该项目，然后单击“属性”  。  
   
-5.  选择 **“权限”** 页，然后单击 **“浏览”**。  
+5.  选择 **“权限”** 页，然后单击 **“浏览”** 。  
   
 ##  <a name="options"></a> 配置选项  
  此页显示来自 SSISDB 数据库的目录视图 sys.database_principals 的主体。  
@@ -55,10 +55,10 @@ ms.locfileid: "65729245"
  选择主体后，在您单击 **“确定”** 并且关闭 **“浏览所有主体”** 对话框时，会将这些主体添加到父对话框的 **“权限”** 页上的 **“登录名或角色”** 列表中。 在将主体添加到 **“登录名或角色”** 列表后，您可以更改该主体对所选项目的权限。  
   
  **选择列**  
- 选择此选项可以将主体添加到父对话框的“权限”页上的“登录名或角色”列表中。  
+ 选择此选项可以将主体添加到父对话框的“权限”页上的“登录名或角色”   列表中。  
   
  **图标列**  
- 与主体的“类型”相对应的图标。  
+ 与主体的  “类型”相对应的图标。  
   
  **名称**  
  主体的名称。  

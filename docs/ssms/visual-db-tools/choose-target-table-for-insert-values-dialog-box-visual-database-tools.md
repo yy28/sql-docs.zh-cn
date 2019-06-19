@@ -15,17 +15,17 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 31ff12ff168be5f73bd03d3f71aaaccaee6dd214
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097505"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>“选择插入值的目标表”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此对话框可以指定要使用“插入值”查询更新的表。 将查询的类型更改为“插入值”查询时，如果“关系图”窗格中显示了多个表，则将显示此对话框。  
+使用此对话框可以指定要使用“插入值”查询更新的表。 将查询的类型更改为“插入值”查询时，如果“关系图”  窗格中显示了多个表，则将显示此对话框。  
   
-选择要向其中添加数据的表，再单击“确定”。  
+选择要向其中添加数据的表，再单击“确定”  。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建“插入值”查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md)  

@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 662aaa76f7af8a45513219af63c66fe3a65bede6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981654"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>斜杠星型（块注释）(Transact-SQL)
@@ -47,7 +47,7 @@ text_of_comment
 ```  
   
 ## <a name="arguments"></a>参数  
- text_of_comment  
+ text_of_comment   
  是注释的文本。 它是一个或多个字符串。  
   
 ## <a name="remarks"></a>Remarks  

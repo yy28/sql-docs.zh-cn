@@ -15,10 +15,10 @@ ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a160fd5ab5b263445eac0047bd128d82f6804aa2
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935498"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
@@ -178,7 +178,7 @@ ms.locfileid: "65935498"
   
   
 ###  <a name="number"></a> 点数  
- 所有非空 **geometry** 实例都由“点” 组成。 这些点表示在其上绘制几何图形的面的 X 和 Y 坐标。 **geometry** 提供许多用于查询实例的点的内置方法。  
+ 所有非空 **geometry** 实例都由“点”  组成。 这些点表示在其上绘制几何图形的面的 X 和 Y 坐标。 **geometry** 提供许多用于查询实例的点的内置方法。  
   
  **返回构成实例的点数。**  
  [STNumPoints（geometry 数据类型）](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)  
@@ -219,14 +219,14 @@ ms.locfileid: "65935498"
   
   
 ###  <a name="empty"></a> Empty  
- 空 **geometry** 实例不包含任何点。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 实例的长度为零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 实例的面积为 0。  
+ 空  **geometry** 实例不包含任何点。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 实例的长度为零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 实例的面积为 0。  
   
  **确定实例是否为空**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md)。  
   
   
 ###  <a name="simple"></a> Simple  
- 为了使实例的 **geometry** 变得“简单” ，必须符合以下全部两个要求：  
+ 为了使实例的 **geometry** 变得“简单”  ，必须符合以下全部两个要求：  
   
 -   实例的每个图形不能与自身相交，但其终点除外。  
   
@@ -240,9 +240,9 @@ ms.locfileid: "65935498"
   
   
 ###  <a name="boundary"></a> 边界、内部和外部  
- **geometry** 实例的“内部”是指由实例占用的空间，而“外部”是指未占用的空间。  
+ **geometry** 实例的“内部”  是指由实例占用的空间，而“外部”  是指未占用的空间。  
   
- “边界” 由 OGC 定义，如下所示：  
+ “边界”  由 OGC 定义，如下所示：  
   
 -   **Point** 和 **MultiPoint** 实例没有边界。  
   
@@ -266,13 +266,13 @@ SELECT @g.STBoundary().ToString();
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
 ###  <a name="envelope"></a> 包络线  
- **geometry**实例的“包络线”又称为“边界框”，它是一个由实例的最小和最大坐标 (X,Y) 形成的轴对齐矩形。  
+ **geometry**实例的“包络线”  又称为“边界框”  ，它是一个由实例的最小和最大坐标 (X,Y) 形成的轴对齐矩形。  
   
  **返回实例的包络线**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a> 闭合  
- 闭合的 **geometry** 实例是指起始点和终点相同的图形。 **Polygon** 实例被视为闭合的。 **Point** 实例不是闭合的。  
+ 闭合的  **geometry** 实例是指起始点和终点相同的图形。 **Polygon** 实例被视为闭合的。 **Point** 实例不是闭合的。  
   
  环是一个简单、闭合的 **LineString** 实例。  
   

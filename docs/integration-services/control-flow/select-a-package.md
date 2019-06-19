@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cc976451c29c6d0b1656fec456b2a46b1f4f5f1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727485"
 ---
 # <a name="select-a-package"></a>选择包
@@ -61,7 +61,7 @@ ms.locfileid: "65727485"
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 文件  
  **文件名**  
- 提供包的路径，或单击浏览按钮“(…)”并查找包。  
+ 提供包的路径，或单击浏览按钮“(…)”并查找包  。  
   
 ## <a name="see-also"></a>另请参阅  
  [消息队列任务](../../integration-services/control-flow/message-queue-task.md)  

@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070271"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>“用其他表替换该表”对话框
-  可以使用 **中的** “用其他表替换该表” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，用尚未包含在数据源视图中的基础数据源中的表替换数据源视图中的现有表。 通过右键单击**数据源视图设计器**中的“关系图”或“表”窗格中的一个表名，再从“替换表”中选择“使用其他表”，即可显示“用其他表替换该表”对话框。  
+  可以使用 **中的** “用其他表替换该表” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，用尚未包含在数据源视图中的基础数据源中的表替换数据源视图中的现有表。 通过右键单击**数据源视图设计器**中的“关系图”或“表”窗格中的一个表名，再从“替换表”中选择“使用其他表”，即可显示“用其他表替换该表”对话框。       
   
 ## <a name="options"></a>选项  
  **数据源**  

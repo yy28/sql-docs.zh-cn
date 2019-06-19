@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 819601e12f2e9b4179ffa966fb8e54962c9f31d4
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943867"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
@@ -40,26 +40,26 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 ```  
   
 ## <a name="arguments"></a>参数  
-string_value  
-要与其他值串联的字符串值。 `CONCAT` 函数需要至少两个 string_value 自变量，并且不得超过 254 个 string_value 自变量。
+string_value   
+要与其他值串联的字符串值。 `CONCAT` 函数需要至少两个 string_value 自变量，并且不得超过 254 个 string_value 自变量   。
   
 ## <a name="return-types"></a>返回类型  
-string_value  
+string_value   
 长度和类型取决于输入的字符串值。
   
 ## <a name="remarks"></a>Remarks  
-`CONCAT` 采用可变数量的字符串自变量，并将它们串联（或联接）成单个字符串。 需要至少两个输入值；否则 `CONCAT` 将引发错误。 `CONCAT` 在串联前会将所有自变量隐式转换为字符串类型。 `CONCAT` 会将 Null 值隐式转换为空字符串。 如果 `CONCAT` 接收到全部为 NULL 值的自变量，它将返回类型为 varchar(1) 的空字符串。 隐式转换为字符串的过程遵循现有的数据类型转换规则。 有关数据类型转换的详细信息，请参阅 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。
+`CONCAT` 采用可变数量的字符串自变量，并将它们串联（或联接）成单个字符串。 需要至少两个输入值；否则 `CONCAT` 将引发错误。 `CONCAT` 在串联前会将所有自变量隐式转换为字符串类型。 `CONCAT` 会将 Null 值隐式转换为空字符串。 如果 `CONCAT` 接收到全部为 NULL 值的自变量，它将返回类型为 varchar(1) 的空字符串   。 隐式转换为字符串的过程遵循现有的数据类型转换规则。 有关数据类型转换的详细信息，请参阅 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。
   
 返回类型取决于参数的类型。 此表将说明这一映射：
   
 |输入类型|输出类型和长度|  
 |---|---|
 |1.以下类型的任何自变量<br><br />SQL-CLR 系统类型<br><br />SQL-CLR UDT<br><br />或多个<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2.或者为以下类型的任何自变量<br><br />**varbinary(max)**<br><br />或多个<br><br />**varchar(max)**|varchar(max)，除非其中一个参数是任意长度的 nvarchar。 在这种情况下，`CONCAT` 将返回类型 nvarchar(max) 的结果。|  
-|3.或者为类型 nvarchar 的任何自变量，最多为 4000 个字符<br><br />(nvarchar(<= 4000) )|**nvarchar**(<= 4000)|  
-|4.在所有其他情况下|varchar(<= 8000)（最多为 8000 个字符的 varchar），除非其中一个参数是任意长度的 nvarchar。 在那种情况下，`CONCAT` 将返回类型 nvarchar(max) 的结果。|  
+|2.或者为以下类型的任何自变量<br><br />**varbinary(max)**<br><br />或多个<br><br />**varchar(max)**|varchar(max)，除非其中一个参数是任意长度的 nvarchar   。 在这种情况下，`CONCAT` 将返回类型 nvarchar(max) 的结果  。|  
+|3.或者为类型 nvarchar 的任何自变量，最多为 4000 个字符 <br><br />(nvarchar(<= 4000) ) |**nvarchar**(<= 4000)|  
+|4.在所有其他情况下|varchar(<= 8000)（最多为 8000 个字符的 varchar），除非其中一个参数是任意长度的 nvarchar   。 在那种情况下，`CONCAT` 将返回类型 nvarchar(max) 的结果  。|  
   
-当 `CONCAT` 接收到长度小于或等于 4000 个字符的 nvarchar 输入自变量或长度小于或等于 8000 个字符的 varchar 输入自变量时，隐式转换可能会影响结果的长度。 当将其他数据类型隐式转换为字符串时，它们具有不同长度。 例如，int (14) 的字符串长度为 12，而 float 的长度为 32。 因此，两个整数的串联将返回长度小于 24 的结果。
+当 `CONCAT` 接收到长度小于或等于 4000 个字符的 nvarchar 输入自变量或长度小于或等于 8000 个字符的 varchar 输入自变量时，隐式转换可能会影响结果的长度   。 当将其他数据类型隐式转换为字符串时，它们具有不同长度。 例如，int (14) 的字符串长度为 12，而 float 的长度为 32   。 因此，两个整数的串联将返回长度小于 24 的结果。
   
 如果没有任何输入自变量具有支持的大型对象 (LOB) 类型，返回类型的长度则截断为 8000 个字符，而不考虑返回类型。 这种截断可节约空间并支持计划生成的效率。
   

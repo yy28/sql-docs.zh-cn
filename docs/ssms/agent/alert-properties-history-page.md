@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3fa617f195f70976f2788c184d6fe07df74d17f0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104469"
 ---
 # <a name="alert-properties-history-page"></a>警报属性（“历史记录”页）
@@ -33,10 +33,10 @@ ms.locfileid: "65104469"
 
 ## <a name="options"></a>选项  
 **上次警报的日期**  
-显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”。  
+显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”  。  
   
 **上次响应的日期**  
-显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”。  
+显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”  。  
   
 **发生次数**  
 自从创建警报后或从上次重置计数后，该事件发生的总次数。  

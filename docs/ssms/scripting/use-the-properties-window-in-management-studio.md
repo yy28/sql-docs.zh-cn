@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 842b63977b849ea770e49c12b8ca941b5baf31ae
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821615"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>使用 Management Studio 中的“属性”窗口
@@ -44,7 +44,7 @@ ms.locfileid: "65821615"
   
 ### <a name="to-view-the-properties-of-a-showplan-operator"></a>查看 Showplan 运算符的属性  
   
-1.  在 **“查询”** 菜单上，单击 **“包括实际的执行计划”**。  
+1.  在 **“查询”** 菜单上，单击 **“包括实际的执行计划”** 。  
   
 2.  在 SQL 查询编辑器中，键入并执行一个查询。  
   

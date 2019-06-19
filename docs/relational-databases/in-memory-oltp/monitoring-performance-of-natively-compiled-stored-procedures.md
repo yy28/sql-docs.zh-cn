@@ -13,10 +13,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3b341f6e40fdc5acf618d3f81c5932b9be50149
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106232"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
@@ -43,12 +43,12 @@ SELECT [definition]
 
 ## <a name="procedure-level-execution-statistics"></a>过程级别执行统计信息
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：可使用 [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用过程级别统计信息收集。  以下语句针对当前实例上所有本机编译的 T-SQL 模块启用过程级别的执行统计信息收集：
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：可使用 [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用过程级别统计信息收集。  以下语句针对当前实例上所有本机编译的 T-SQL 模块启用过程级别的执行统计信息收集：
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：可使用[数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_PROCEDURE_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用过程级别的统计信息收集。 以下语句对当前数据库中的所有本地编译的 T-SQL 模块启用过程级别的执行统计信息收集：
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：可使用[数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_PROCEDURE_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用过程级别的统计信息收集。 以下语句对当前数据库中的所有本地编译的 T-SQL 模块启用过程级别的执行统计信息收集：
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -57,12 +57,12 @@ ALTER DATABASE
 
 ## <a name="query-level-execution-statistics"></a>查询级别执行统计信息
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：可使用 [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用查询级别的统计信息收集。  以下语句对当前实例的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ：可使用 [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用查询级别的统计信息收集。  以下语句对当前实例的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：可使用[数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_QUERY_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用语句级别统计信息收集。 以下语句对当前数据库中的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** ：可使用[数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_QUERY_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用语句级别统计信息收集。 以下语句对当前数据库中的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -152,7 +152,7 @@ SET SHOWPLAN_XML OFF
 GO  
 ```  
   
- 或者，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，选择过程名称并且单击 **“显示估计的执行计划”**。  
+ 或者，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，选择过程名称并且单击 **“显示估计的执行计划”** 。  
   
  本机编译的存储过程的估计的执行计划显示过程中查询的查询运算符和表达式。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 对于本机编译的存储过程，并不支持所有 SHOWPLAN_XML 属性。 例如，与查询优化器开销相关的属性不是针对过程的 SHOWPLAN_XML 的一部分。  
   

@@ -26,10 +26,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 507e198a12ad613602ffe77295313851f72ecb60
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947995"
 ---
 # <a name="susername-transact-sql"></a>SUSER_NAME (Transact-SQL)
@@ -56,7 +56,7 @@ _server\_user\_id_
 ## <a name="remarks"></a>Remarks  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 中，安全标识号 (SID) 取代了服务器用户标识号 (SUID)。  
   
-SUSER_NAME 只返回在 syslogins 系统表中有条目的登录的登录名。  
+SUSER_NAME 只返回在 syslogins 系统表中有条目的登录的登录名  。  
   
 SUSER_NAME 可用于选择列表、WHERE 子句和任何允许使用表达式的地方。 即使未指定任何参数，也请在 SUSER_NAME 后使用括号。  
   

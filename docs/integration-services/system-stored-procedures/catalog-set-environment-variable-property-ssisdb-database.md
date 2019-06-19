@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b57a3ca1893d44cc2ed3fd60e20a39c4e43f473
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715931"
 ---
 # <a name="catalogsetenvironmentvariableproperty-ssisdb-database"></a>catalog.set_environment_variable_property（SSISDB 数据库）
@@ -38,20 +38,20 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name  
- 包含环境的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
+ [ @folder_name = ] folder_name   
+ 包含环境的文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [ @environment_name = ] environment_name  
- 环境的名称。 environment_name 为 nvarchar(128)。  
+ [ @environment_name = ] environment_name   
+ 环境的名称。 environment_name 为 nvarchar(128)   。  
   
- [ @variable_name = ] variable_name  
- 环境变量的名称。 variable_name 为 nvarchar(128)。  
+ [ @variable_name = ] variable_name   
+ 环境变量的名称。 variable_name 为 nvarchar(128)   。  
   
- [ @property_name = ] property_name  
- 环境变量属性的名称。 property_name 为 nvarchar(128)。  
+ [ @property_name = ] property_name   
+ 环境变量属性的名称。 property_name 为 nvarchar(128)   。  
   
- [ @property_value = ] property_value  
- 环境变量属性的值。 property_value 为 nvarchar(4000)。  
+ [ @property_value = ] property_value   
+ 环境变量属性的值。 property_value  为 nvarchar(4000)  。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

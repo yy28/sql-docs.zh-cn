@@ -18,10 +18,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713321"
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
@@ -54,7 +54,7 @@ ms.locfileid: "65713321"
 将分区函数的分区映射到一组文件组的数据库对象。 在各个文件组上放置分区的主要原因是为了确保可以在分区上独立执行备份操作。 这是因为您可以在各个文件组上执行备份。  
   
 ### <a name="partitioning-column"></a>分区列  
-分区函数对表或索引进行分区时所使用的表或索引列。 参与分区函数的计算列必须显式标记为 PERSISTED。 用作索引列时有效的所有数据类型都可以用作分区依据列， **timestamp**除外。 无法指定 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)**、 **nvarchar(max)** 或 **varbinary(max)** 数据类型。 此外，无法指定 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型和别名数据类型列。  
+分区函数对表或索引进行分区时所使用的表或索引列。 参与分区函数的计算列必须显式标记为 PERSISTED。 用作索引列时有效的所有数据类型都可以用作分区依据列， **timestamp**除外。 无法指定 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 数据类型。 此外，无法指定 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型和别名数据类型列。  
   
 ### <a name="aligned-index"></a>对齐的索引  
 与其对应的表建立在同一个分区方案之上的一种索引。 如果表与其索引对齐，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则可以快速高效地切换分区，同时又能维护表及其索引的分区结构。 索引要与其基表对齐，并不需要与基表参与相同的命名分区函数。 但是，索引和基表的分区函数实质上必须是相同的，因为：
@@ -93,7 +93,7 @@ ms.locfileid: "65713321"
   
 随着分区数目的增加，创建和重新生成对齐索引的执行时间可能会更长。 我们建议您不要同时运行多个创建和重新生成索引命令，因为可能会遇到性能和内存问题。  
   
- 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行排序以生成已分区索引时，它首先为每个分区生成一个排序表。 然后在每个分区各自的文件组中生成排序表，或者在 tempdb中生成排序表（如果指定了 SORT_IN_TEMPDB 索引选项）。 每个排序表都需要一个最小内存量才能生成。 在生成与其基表对齐的已分区索引时，将一次生成一个排序表，因此使用的内存较少。 但是，在生成非对齐的已分区索引时，将同时生成排序表。 因此，必须有足够的内存来处理这些并发的排序。 分区数越多，所需的内存越多。 每个分区的每个排序表的最小大小为 40 页，每页 8 KB。 例如，具有 100 个分区的非对齐已分区索引需要足够的内存才能同时连续地对 4,000 (40 * 100) 页进行排序。 如果有这么多的可用内存，生成操作将成功，但性能可能会降低。 如果没有这么多可用内存，生成操作将失败。 而具有 100 个分区的对齐已分区索引只需要具有对 40 页进行排序的内存就足够了，因为不会同时执行排序。  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行排序以生成已分区索引时，它首先为每个分区生成一个排序表。 然后在每个分区各自的文件组中生成排序表，或者在 tempdb  中生成排序表（如果指定了 SORT_IN_TEMPDB 索引选项）。 每个排序表都需要一个最小内存量才能生成。 在生成与其基表对齐的已分区索引时，将一次生成一个排序表，因此使用的内存较少。 但是，在生成非对齐的已分区索引时，将同时生成排序表。 因此，必须有足够的内存来处理这些并发的排序。 分区数越多，所需的内存越多。 每个分区的每个排序表的最小大小为 40 页，每页 8 KB。 例如，具有 100 个分区的非对齐已分区索引需要足够的内存才能同时连续地对 4,000 (40 * 100) 页进行排序。 如果有这么多的可用内存，生成操作将成功，但性能可能会降低。 如果没有这么多可用内存，生成操作将失败。 而具有 100 个分区的对齐已分区索引只需要具有对 40 页进行排序的内存就足够了，因为不会同时执行排序。  
   
  无论是对齐索引还是非对齐索引，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对多处理器计算机上的生成操作应用了并行度，需要的内存可能会更多。 这是因为并行度越高，需要的内存就越多。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将并行度设置为 4，那么具有 100 个分区的非对齐已分区索引将需要使四个处理器同时分别对 4,000 页（即，共 16,000 页）进行排序的足够内存。 如果已分区索引是对齐的，需要的内存将减少，只要够四个处理器分别对 40 页（共 160 页，即 4 * 40）进行排序就行了。 您可以使用 MAXDOP 索引选项手动降低并行度。  
 

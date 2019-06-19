@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011918"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
@@ -55,7 +55,7 @@ ms.locfileid: "66011918"
  当你使用大容量导出数据 **-V80**切换，请`nvarchar(max)`， `varchar(max)`， `varbinary(max)`，XML，并使用 4 个字节的前缀，如存储在纯模式下的 UDT 数据`text`， `image`，和`ntext`数据，而不是使用 8 个字节的前缀，这是默认设置[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]及更高版本。  
   
 ## <a name="copying-date-values"></a>复制日期值  
- **bcp** 将使用 ODBC 大容量复制 API。 因此，为了将日期值导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **bcp** 使用了 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[*.f...*])。  
+ **bcp** 将使用 ODBC 大容量复制 API。 因此，为了将日期值导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **bcp** 使用了 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ])。  
   
  **Bcp**命令将使用 ODBC 默认格式的字符格式数据文件导出`datetime`和`smalldatetime`值。 例如，包含日期 `12 Aug 1998` 的 `datetime` 列将以字符串 `1998-08-12 00:00:00.000` 的形式大容量复制到数据文件中。  
   

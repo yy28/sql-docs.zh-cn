@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d875024e6f227c6ba0d65ab0346092c02e860385
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945234"
 ---
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
@@ -55,7 +55,7 @@ SESSION_CONTEXT(N'key')
  SESSION_CONTEXT 的 MARS 行为类似于 CONTEXT_INFO 的该行为。 如果 MARS 批设置键值对，则新值不会返回到相同连接上的其他 MARS 批，除非它们在设置新值的批完成后开始。 如果连接上有多个活动的 MARS 批，那么值不能设置为“read_only”。 这样可以避免有关哪一个值“胜出”的争用条件和非确定性。  
   
 ## <a name="examples"></a>示例  
- 下面这个简单的示例将键 `user_id` 的会话上下文值设置为 4，然后使用 SESSION_CONTEXT 函数检索值。  
+ 下面这个简单的示例将键 `user_id` 的会话上下文值设置为 4，然后使用 SESSION_CONTEXT 函数检索值  。  
   
 ```  
 EXEC sp_set_session_context 'user_id', 4;  

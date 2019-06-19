@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 310c734a8b2bd72c0d2217540ce9fb303a87df77
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948865"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
@@ -45,32 +45,32 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>参数  
- passphrase  
+ passphrase   
  用于生成对称密钥的通行短语。  
   
  @passphrase  
- 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含用于生成对称密钥的通行短语。  
+ 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含用于生成对称密钥的通行短语       。  
   
- cleartext  
+ cleartext   
  要加密的明文。  
   
  @cleartext  
- 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含明文。 最大大小为 8000 个字节。  
+ 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含明文       。 最大大小为 8000 个字节。  
   
- add_authenticator  
- 指示是否将验证器与明文一起加密。 如果将添加验证器，则为 1。 int。  
+ add_authenticator   
+ 指示是否将验证器与明文一起加密。 如果将添加验证器，则为 1。 int  。  
   
  @add_authenticator  
  指示是否将哈希与明文一起加密。  
   
- authenticator  
- 用于派生验证器的数据。 sysname。  
+ authenticator   
+ 用于派生验证器的数据。 sysname  。  
   
  @authenticator  
  包含验证器所源自的数据的变量。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）。  
+ varbinary（最大大小为 8000 个字节）  。  
   
 ## <a name="remarks"></a>Remarks  
  通行短语是包含空格的密码。 使用通行短语的优点在于，与相对较长的字符串相比，有含义的短语或句子更容易记忆。  

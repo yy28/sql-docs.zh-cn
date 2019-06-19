@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 358dfa31d1f7701bc2c30c676423355a4f4b57bc
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946034"
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
@@ -47,14 +47,14 @@ FILE_NAME ( file_id )
 ```  
   
 ## <a name="arguments"></a>参数  
-file_id  
-文件名称 `FILE_NAME` 将返回的文件标识号。 file_id 具有 int 数据类型。  
+file_id   
+文件名称 `FILE_NAME` 将返回的文件标识号。 file_id  具有 int  数据类型。  
   
 ## <a name="return-types"></a>返回类型  
 **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
-file_ID 与 sys.master_files 目录视图或 sys.database_files 目录视图中的 file_id 列相对应。  
+file_ID  与 sys.master_files 目录视图或 sys.database_files 目录视图中的 file_id 列相对应。  
   
 ## <a name="examples"></a>示例  
 此示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `file_ID 1` 和 `file_ID` 的文件名。  

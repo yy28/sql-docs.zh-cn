@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43b91f4afcedf7348919758fa2ce691b6a457d72
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724218"
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
@@ -36,7 +36,7 @@ ms.locfileid: "65724218"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  除文本和数值数据外，产品数据库或用户数据库还经常包含图像。 Microsoft .NET Framework 中的 System.Drawing 命名空间提供用于操作图像的类。  
+  除文本和数值数据外，产品数据库或用户数据库还经常包含图像。 Microsoft .NET Framework 中的 System.Drawing 命名空间提供用于操作图像的类  。  
   
  [示例 1：将图像转换为 JPEG 格式](#example1)  
   
@@ -52,19 +52,19 @@ ms.locfileid: "65724218"
   
 1.  创建一个名为 `CurrentImageFile` 的字符串变量，并将其值设置为一个现有图像文件的路径和名称。  
   
-2.  在“脚本任务编辑器”的“脚本”页，将 `CurrentImageFile` 变量添加到 ReadOnlyVariables 属性中。  
+2.  在“脚本任务编辑器”的“脚本”页，将 `CurrentImageFile` 变量添加到 ReadOnlyVariables 属性中    。  
   
-3.  在脚本项目中，设置对 System.Drawing 命名空间的引用。  
+3.  在脚本项目中，设置对 System.Drawing 命名空间的引用  。  
   
-4.  在代码中，使用 Imports 语句导入 System.Drawing 和 System.IO 命名空间。  
+4.  在代码中，使用 Imports 语句导入 System.Drawing 和 System.IO 命名空间    。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>将此脚本任务示例配置为用于多个图像文件  
   
 1.  将脚本任务放入 Foreach 循环容器。  
   
-2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为枚举器，并指定源文件的路径和文件掩码，如“*.bmp”。  
+2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为枚举器，并指定源文件的路径和文件掩码，如“*.bmp”    。  
   
-3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0  。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  
@@ -163,19 +163,19 @@ End Function
   
 2.  再创建整数变量 `MaxThumbSize`，并赋值（单位为像素），例如 100。  
   
-3.  在“脚本任务编辑器”的“脚本”页，将这两个变量添加到 ReadOnlyVariables 属性中。  
+3.  在“脚本任务编辑器”的“脚本”页，将这两个变量添加到 ReadOnlyVariables 属性中    。  
   
-4.  在脚本项目中，设置对 System.Drawing 命名空间的引用。  
+4.  在脚本项目中，设置对 System.Drawing 命名空间的引用  。  
   
-5.  在代码中，使用 Imports 语句导入 System.Drawing 和 System.IO 命名空间。  
+5.  在代码中，使用 Imports 语句导入 System.Drawing 和 System.IO 命名空间    。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>将此脚本任务示例配置为用于多个图像文件  
   
 1.  将脚本任务放入 Foreach 循环容器。  
   
-2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为“枚举器”，并指定源文件的路径和文件掩码，如“*.jpg”。  
+2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为“枚举器”，并指定源文件的路径和文件掩码，如“*.jpg”     。  
   
-3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0  。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  

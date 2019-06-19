@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6a0d07bfa9946697c18bcdd4be7186d17f612ccc
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948923"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
@@ -43,32 +43,32 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 ```  
   
 ## <a name="arguments"></a>参数  
- cert_ID  
-用于保护对称密钥的证书的 ID。 cert_ID 具有 int 数据类型。  
+ cert_ID   
+用于保护对称密钥的证书的 ID。 cert_ID 具有 int 数据类型   。  
   
-cert_password  
-用于加密证书私钥的密码。 如果数据库主密钥保护私钥，则可能具有 `NULL` 值。 cert_password 具有 nvarchar 数据类型。  
+cert_password   
+用于加密证书私钥的密码。 如果数据库主密钥保护私钥，则可能具有 `NULL` 值。 cert_password 具有 nvarchar 数据类型   。  
 
-'ciphertext'  
-使用密钥加密的数据字符串。 ciphertext 具有 varbinary 数据类型。  
+'ciphertext'   
+使用密钥加密的数据字符串。 ciphertext 具有 varbinary 数据类型   。  
 
 @ciphertext  
-varbinary 类型的变量，包含使用密钥加密的数据。  
+varbinary 类型的变量，包含使用密钥加密的数据  。  
 
-add_authenticator  
-指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 如果加密过程使用验证器，则 add_authenticator 具有 1 值。 add_authenticator 具有 int 数据类型。  
+add_authenticator   
+指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 如果加密过程使用验证器，则 add_authenticator 具有 1 值  。 add_authenticator 具有 int 数据类型   。  
   
 @add_authenticator  
-变量，指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @add_authenticator 具有 int 数据类型。  
+变量，指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @add_authenticator 具有 int 数据类型   。  
   
-authenticator  
-用作验证器生成基础的数据。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 authenticator 具有 sysname 数据类型。  
+authenticator   
+用作验证器生成基础的数据。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 authenticator 具有 sysname 数据类型   。  
   
 @authenticator  
-包含验证器生成所源自的数据的变量。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @authenticator 具有 sysname 数据类型。  
+包含验证器生成所源自的数据的变量。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @authenticator 具有 sysname 数据类型   。  
   
 ## <a name="return-types"></a>返回类型  
-varbinary（最大大小为 8,000 个字节）。  
+varbinary（最大大小为 8,000 个字节）  。  
   
 ## <a name="remarks"></a>Remarks  
 `DECRYPTBYKEYAUTOCERT` 合并了 `OPEN SYMMETRIC KEY` 和 `DECRYPTBYKEY` 的功能。 在单个操作中，它首先解密对称密钥，然后使用该密钥解密已加密的 ciphertext。  

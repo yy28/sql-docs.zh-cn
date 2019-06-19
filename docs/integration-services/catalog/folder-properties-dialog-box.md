@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a4ade06f7275007c17834fbee3d69e2d5583d7f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729195"
 ---
 # <a name="folder-properties-dialog-box"></a>“文件夹属性”对话框
@@ -31,11 +31,11 @@ ms.locfileid: "65729195"
   
 ## <a name="to-set-folder-description-and-permissions"></a>设置文件夹说明和权限  
   
-1.  右键单击该文件夹并选择“属性”。  
+1.  右键单击该文件夹并选择“属性”。   
   
 2.  在 **“常规”** 页上，选择 **“常规”** 下的 **“说明”** ，然后输入可选说明。  
   
-3.  在 **“权限”** 页上，单击 **“浏览...”**，选择一个或多个数据库主体，然后单击 **“确定”**。  
+3.  在 **“权限”** 页上，单击 **“浏览...”** ，选择一个或多个数据库主体，然后单击 **“确定”** 。  
   
 4.  在 **“登录名或角色”** 下选择一个名称，然后在 **“权限”** 下指定相应的权限。  
   

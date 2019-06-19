@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fa14ecf463b3ac9cc71b415fd46a8fabbfc13823
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944227"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
@@ -54,15 +54,15 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
  指定考虑每一个唯一值。 DISTINCT 对于 MIN 无意义，使用它仅仅是为了符合 ISO 标准。  
   
  *expression*  
- 常量、列名、函数以及算术运算符、位运算符和字符串运算符的任意组合。 MIN 可用于 numeric、char、varchar、uniqueidentifier 或 datetime 列，但不能用于 bit 列。 不允许使用聚合函数和子查询。  
+ 常量、列名、函数以及算术运算符、位运算符和字符串运算符的任意组合。 MIN 可用于 numeric、char、varchar、uniqueidentifier 或 datetime 列，但不能用于 bit 列       。 不允许使用聚合函数和子查询。  
   
  有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序  。 需要 order_by_clause  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与 expression 相同的值。  
+ 返回与 expression 相同的值  。  
   
 ## <a name="remarks"></a>Remarks  
  MIN 忽略任何 Null 值。  

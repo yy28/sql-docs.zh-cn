@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f2442cc389e6ca9becc1b2a210a4056361fb94
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715754"
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property（SSISDB 数据库）
@@ -35,13 +35,13 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 
 ## <a name="arguments"></a>参数
 [@WorkerAgentId =] *WorkerAgentId*  
-Scale Out Worker 的 Worker 代理 ID。 WorkerAgentId 为 uniqueidentifier。
+Scale Out Worker 的 Worker 代理 ID。 WorkerAgentId 为 uniqueidentifier   。
 
 [@PropertyName =] *PropertyName*  
-属性的名称。 *PropertyName* 为 **nvarchar(256)**。
+属性的名称。 *PropertyName* 为 **nvarchar(256)** 。
 
 [@PropertyValue =] *PropertyValue*  
-属性的值。 *PropertyValue* 为 **nvarchar(max)**。
+属性的值。 *PropertyValue* 为 **nvarchar(max)** 。
 
 ## <a name="remarks"></a>Remarks
 有效的属性名称为 **DisplayName**、**Description**、**Tags**。

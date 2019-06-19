@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: de956e2dffebd801205bf4ac46a7f503e1acbe8f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944273"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
@@ -47,14 +47,14 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="arguments"></a>参数  
  db_id('*database_name*')  
- 调用[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函数。 此函数接受数据库名称并返回数据库 ID，其中**sys.dm_fts_index_keywords**用于查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID。  
+ 调用[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函数。 此函数接受数据库名称并返回数据库 ID，其中**sys.dm_fts_index_keywords**用于查找指定的数据库。 如果省略 database_name，则返回当前数据库 ID  。  
   
  object_id('*table_name*')  
  调用[object_id （)](../../t-sql/functions/object-id-transact-sql.md)函数。 此函数接受表名，并返回包含要检查的全文索引的表的表 ID。  
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**keyword**|**nvarchar(4000)**|存储在全文索引的关键字的十六进制表示形式。<br /><br /> 注意：OxFF 表示指示文件或数据集的末尾的特殊字符。|  
 |**display_term**|**nvarchar(4000)**|关键字的可读格式。 这种格式是从十六进制格式派生的。<br /><br /> 注意：**Display_term**值 OxFF 是"的文件尾"。|  

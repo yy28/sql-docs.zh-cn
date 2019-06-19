@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: a25edc0b9f43a31eb1c99550cd4f72c5409c898c
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938148"
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate（geometry 数据类型）
@@ -39,18 +39,18 @@ EnvelopeAggregate ( geometry_operand )
  一个 **geometry** 类型的表列，表示一组 **geometry** 对象。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
   
 ## <a name="exceptions"></a>异常  
  在输入值无效时引发 `FormatException`。 请参阅 [STIsValid（geometry 数据类型）](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
 ## <a name="remarks"></a>Remarks  
- 在输入为空或具有不同的 SRID 时，方法返回 null。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ 在输入为空或具有不同的 SRID 时，方法返回 null  。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- 方法忽略 null 输入。  
+ 方法忽略 null 输入  。  
   
 > [!NOTE]  
->  如果所有输入值均为 null，则方法返回 null。  
+>  如果所有输入值均为 null，则方法返回 null   。  
   
 ## <a name="examples"></a>示例  
  以下示例为表变量列中的一组对象返回边界框。  

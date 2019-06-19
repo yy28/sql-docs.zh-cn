@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6901a6eb93ad2374eaf6d613e9eada21dea3cc55
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983236"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
@@ -47,8 +47,8 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  { = | <> | != | > | >= | !> | < | <= | !< }  
  一个比较运算符。  
   
- subquery  
- 返回单列结果集的子查询。 返回列的数据类型必须与 scalar_expression 的数据类型相同。  
+ subquery   
+ 返回单列结果集的子查询。 返回列的数据类型必须与 scalar_expression 的数据类型相同  。  
   
  受限的 SELECT 语句，其中不允许使用 ORDER BY 子句和 INTO 关键字。  
   
@@ -59,9 +59,9 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  如果指定的比较对于所有比较对 (_scalar_expression_ **,** _x)_ 均为 TRUE（其中 *x* 是单列集中的值），则返回 TRUE。 否则返回 FALSE。  
   
 ## <a name="remarks"></a>Remarks  
- ALL 要求 scalar_expression 与子查询返回的每个值进行比较时都应满足比较条件。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_expression，scalar_expression <= ALL（子查询）的计算结果为 TRUE。 如果子查询返回值 2 和 3，*scalar_expression* = ALL（子查询）的计算结果为 FALSE，因为子查询的某些值（值 3）不符合表达式的条件。  
+ ALL 要求 scalar_expression 与子查询返回的每个值进行比较时都应满足比较条件  。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_expression，scalar_expression <= ALL（子查询）的计算结果为 TRUE   。 如果子查询返回值 2 和 3，*scalar_expression* = ALL（子查询）的计算结果为 FALSE，因为子查询的某些值（值 3）不符合表达式的条件。  
   
- 有关要求 scalar_expression 只与子查询返回的某一个值比较时满足比较条件的语句，请参阅 [SOME | ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md)。  
+ 有关要求 scalar_expression 只与子查询返回的某一个值比较时满足比较条件的语句，请参阅 [SOME | ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md)  。  
   
  本文讨论了 ALL 用于子查询的情况。 ALL 也可以与 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 和 [SELECT](../../t-sql/queries/select-transact-sql.md) 一起使用。  
   

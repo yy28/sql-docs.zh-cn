@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: edf6d73edb8c4409f82302c2cdf013f18037e4bc
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478535"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>针对业务规则验证特定成员 (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65478535"
 > [!NOTE]  
 >  如果想要将业务规则应用于某个模型版本中的所有成员，请参阅[针对业务规则验证版本 (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -39,11 +39,11 @@ ms.locfileid: "65478535"
   
 2.   从“版本”列表中，选择某一版本。  
   
-3.  单击 **“资源管理器”**。  
+3.  单击 **“资源管理器”** 。  
   
 4.  从菜单栏中指向 **“实体”** ，然后单击包含要将规则应用于的成员的实体名称。  
   
-5.  单击“应用业务规则”。 业务规则仅应用于在网格中显示的成员。  
+5.  单击“应用业务规则”  。 业务规则仅应用于在网格中显示的成员。  
   
 ## <a name="see-also"></a>请参阅  
  [针对业务规则验证版本 (Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)   

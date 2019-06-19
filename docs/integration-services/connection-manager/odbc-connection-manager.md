@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 767e94fe1a87973331ccae234bc85270a5cee800
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728138"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 连接管理器
@@ -66,10 +66,10 @@ ms.locfileid: "65728138"
  查看所选 ODBC 连接管理器的属性和值。  
   
  **新建**  
- 使用“连接管理器”对话框创建 ODBC 连接管理器。 通过此对话框，您也可以在需要时创建新的 ODBC 数据源。  
+ 使用“连接管理器”对话框创建 ODBC 连接管理器。  通过此对话框，您也可以在需要时创建新的 ODBC 数据源。  
   
  **删除**  
- 选择某个连接，然后可以使用“删除”按钮将其删除。  
+ 选择某个连接，然后可以使用“删除”按钮将其删除。   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

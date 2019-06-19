@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c66c7e7d91f754203d4f23b0d7f45a391aaec67
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946878"
 ---
 # <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
@@ -40,26 +40,26 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- data_type [ ( length ) ]  
- 要将 expression 强制转换为的数据类型。  
+ data_type [ ( length ) ]   
+ 要将 expression 强制转换为的数据类型  。  
   
  *expression*  
  要强制转换的值。  
   
- style  
- 一个可选的整数表达式，指定 TRY_CONVERT 函数如何转换 expression。  
+ style   
+ 一个可选的整数表达式，指定 TRY_CONVERT 函数如何转换 expression   。  
   
- style 接受与 CONVERT 函数的 style 参数相同的值。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
+ style 接受与 CONVERT 函数的 style 参数相同的值    。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
- 可接受值的范围由 data_type 的值确定。 如果 style 为 NULL，则 TRY_CONVERT 返回 NULL。  
+ 可接受值的范围由 data_type 的值确定  。 如果 style 为 NULL，则 TRY_CONVERT 返回 NULL   。  
   
 ## <a name="return-types"></a>返回类型  
  返回转换为指定数据类型的值（如果转换成功）；否则返回 Null。  
   
 ## <a name="remarks"></a>Remarks  
- TRY_CONVERT 接收传递给它的值，并尝试将该值转换为指定的 data_type。 如果强制转换成功，TRY_CONVERT 按指定的 data_type 返回值；如果发生错误，则返回 NULL。 但是，如果请求的转换是显式不允许执行的转换，则 TRY_CONVERT 失败并显示错误。  
+ TRY_CONVERT 接收传递给它的值，并尝试将该值转换为指定的 data_type   。 如果强制转换成功，TRY_CONVERT 按指定的 data_type 返回值；如果发生错误，则返回 NULL   。 但是，如果请求的转换是显式不允许执行的转换，则 TRY_CONVERT 失败并显示错误  。  
   
- TRY_CONVERT 是兼容级别 110 和更高级别中的保留关键字。  
+ TRY_CONVERT 是兼容级别 110 和更高级别中的保留关键字  。  
   
  此功能可以在某个 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本以及更高版本的服务器上远程执行。 但在低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的服务器版本中无法远程执行。  
   

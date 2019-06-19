@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1dfa01a0e8ac5818a2a29e76fe6f7d34b5539013
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105356"
 ---
 # <a name="close-a-solution"></a>关闭解决方案
@@ -30,7 +30,7 @@ ms.locfileid: "65105356"
   
 ### <a name="to-close-a-solution"></a>关闭解决方案  
   
-1.  在 **“文件”** 菜单上，单击 **“关闭解决方案”**。  
+1.  在 **“文件”** 菜单上，单击 **“关闭解决方案”** 。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

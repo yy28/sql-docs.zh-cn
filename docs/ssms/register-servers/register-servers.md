@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 880692611ff827b77ec5f24565f7ce3626df17a5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104273"
 ---
 # <a name="register-servers"></a>注册服务器
@@ -49,7 +49,7 @@ ms.locfileid: "65104273"
   
 -   创建服务器组。  
   
--   通过在“已注册的服务器名称”框中提供与“服务器名称”列表中不同的值，为已注册的服务器提供用户友好名称。  
+-   通过在“已注册的服务器名称”  框中提供与“服务器名称”  列表中不同的值，为已注册的服务器提供用户友好名称。  
   
 -   提供已注册服务器的详细说明。  
   

@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b9c1ce066768207f7a04d16e2f4c18666eb231d7
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943995"
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>排序规则函数 - TERTIARY_WEIGHTS (Transact-SQL)
@@ -42,14 +42,14 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
-non_Unicode_character_string_expression  
-根据 SQL 第三排序规则定义的 char、varchar 或 varchar(max) 类型的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 有关上述排序规则的列表，请参阅注释。
+non_Unicode_character_string_expression   
+根据 SQL 第三排序规则定义的 char、varchar 或 varchar(max) 类型的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)    。 有关上述排序规则的列表，请参阅注释。
   
 ## <a name="return-types"></a>返回类型
-non_Unicode_character_string_expression 是 char 或 varchar 时，`TERTIARY_WEIGHTS` 返回 varbinary；non_Unicode_character_string_expression 具有 varchar(max) 数据类型时，返回 varbinary(max)。
+non_Unicode_character_string_expression 是 char 或 varchar 时，`TERTIARY_WEIGHTS` 返回 varbinary；non_Unicode_character_string_expression 具有 varchar(max) 数据类型时，返回 varbinary(max)        。
   
 ## <a name="remarks"></a>Remarks  
-SQL 第三排序规则未定义 non_Unicode_character_string_expression 时，`TERTIARY_WEIGHTS` 返回 NULL。 下表显示了 SQL 第三排序规则：
+SQL 第三排序规则未定义 non_Unicode_character_string_expression 时，`TERTIARY_WEIGHTS` 返回 NULL  。 下表显示了 SQL 第三排序规则：
   
 |排序次序 ID|SQL 排序规则|  
 |---|---|
@@ -86,7 +86,7 @@ SQL 第三排序规则未定义 non_Unicode_character_string_expression 时，`T
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-使用 `TERTIARY_WEIGHTS` 来定义根据 char、varchar 或 varchar(max) 列的值定义的计算列。 当查询的 ORDER BY 子句指定 char、varchar 或 varchar(max) 列时，计算列和 char、varchar 或 varchar(max) 列上的索引定义可以提升性能。
+使用 `TERTIARY_WEIGHTS` 来定义根据 char、varchar 或 varchar(max) 列的值定义的计算列    。 当查询的 ORDER BY 子句指定 char、varchar 或 varchar(max) 列时，计算列和 char、varchar 或 varchar(max) 列上的索引定义可以提升性能       。
   
 ## <a name="examples"></a>示例  
 本示例在将 `TERTIARY_WEIGHTS` 函数应用于 `char` 列的值的表中创建计算列：

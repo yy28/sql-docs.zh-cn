@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c27111dac0da8d9248bea1b7d7408cd70130d01b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948807"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
@@ -45,37 +45,37 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 ```  
   
 ## <a name="arguments"></a>参数  
-Cert_ID  
+Cert_ID   
 int 数据类型的证书 ID 值。
   
-Expiry_Date  
+Expiry_Date   
 证书过期日期。
   
-Start_Date  
+Start_Date   
 证书开始生效的日期。
   
-Issuer_Name  
+Issuer_Name   
 证书颁发者的名称。
   
-Cert_Serial_Number  
+Cert_Serial_Number   
 证书序列号。
   
 *主题*  
 证书主题。
   
- SID  
+ SID   
 证书 SID。 这也是映射到该证书的所有登录或用户的 SID。
   
-String_SID  
+String_SID   
 字符串形式的证书的 SID。 这也是映射到该证书的所有登录或用户的 SID。
   
 ## <a name="return-types"></a>返回类型
 必须以单引号括起属性规范。
   
-返回类型取决于在函数调用中指定的属性。 返回类型 sql_variant 包装所有返回值。
--   Expiry_Date 和 Start_Date 返回 datetime。  
--   Cert_Serial_Number、Issuer_Name、String_SID 和 Subject 全部都返回 nvarchar。  
--   SID 返回 varbinary。  
+返回类型取决于在函数调用中指定的属性。 返回类型 sql_variant 包装所有返回值  。
+-   Expiry_Date 和 Start_Date 返回 datetime    。  
+-   Cert_Serial_Number、Issuer_Name、String_SID 和 Subject 全部都返回 nvarchar      。  
+-   SID 返回 varbinary   。  
   
 ## <a name="remarks"></a>Remarks  
 请参阅 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目录视图中的证书信息。

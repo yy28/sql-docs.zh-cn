@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8903517affd4d0a8e395a17cb97e27ddd5a67d5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722453"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>第 2 课：使用 SSIS 添加循环
@@ -24,7 +24,7 @@ ms.locfileid: "65722453"
 
 
 
-在[第 1 课中：使用 SSIS 创建项目和基本包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)，创建了一个从单个平面文件源中提取数据的包。 然后使用查找转换转换了数据。 最后，程序包将数据加载到 AdventureWorksDW2012 示例数据库中的 FactCurrencyRate 事实数据表的副本中。  
+在[第 1 课中：使用 SSIS 创建项目和基本包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)，创建了一个从单个平面文件源中提取数据的包。 然后使用查找转换转换了数据。 最后，程序包将数据加载到 AdventureWorksDW2012 示例数据库中的 FactCurrencyRate 事实数据表的副本中   。  
   
 提取、转换和加载 (ETL) 过程通常从多个平面文件源中提取数据。 从多个源提取数据需要采用迭代控制流。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可以轻松将迭代或循环添加到包。  
   

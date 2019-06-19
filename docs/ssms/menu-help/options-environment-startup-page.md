@@ -9,17 +9,17 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 582267d58a3e1ac87d64f52727bab7977882bb0a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102754"
 ---
 # <a name="options-environment---startup-page"></a>选项（“环境”-“启动”页）
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-使用“选项”对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，再然后单击“启动”。
+使用“选项”  对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，再然后单击“启动”  。
 
 ## <a name="uielement-list"></a>UIElement 列表
 
@@ -27,15 +27,15 @@ ms.locfileid: "65102754"
 
 选择 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在启动时执行的操作。 相应的选项包括：
 
-- “打开对象资源管理器”，如果选择此选项，将在启动时提示输入连接信息，然后打开对象资源管理器。
+- “打开对象资源管理器”  ，如果选择此选项，将在启动时提示输入连接信息，然后打开对象资源管理器。
 
-- “打开新查询窗口”，如果选择此选项，将在启动时提示输入连接信息，然后打开 SQL 查询编辑器。
+- “打开新查询窗口”  ，如果选择此选项，将在启动时提示输入连接信息，然后打开 SQL 查询编辑器。
 
-- “打开对象资源管理器和查询窗口”，如果选择此选项，将在启动时提示输入连接信息，然后利用该连接打开对象资源管理器和 SQL 查询编辑器。
+- “打开对象资源管理器和查询窗口”  ，如果选择此选项，将在启动时提示输入连接信息，然后利用该连接打开对象资源管理器和 SQL 查询编辑器。
 
-- “打开对象资源管理器和活动监视器”
+- “打开对象资源管理器和活动监视器” 
 
-- “打开空环境”，如果选择此选项，将在启动时打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，但不打开 SQL 查询编辑器窗口，并且不会将对象资源管理器连接到服务器。
+- “打开空环境”  ，如果选择此选项，将在启动时打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，但不打开 SQL 查询编辑器窗口，并且不会将对象资源管理器连接到服务器。
 
 **在对象资源管理器中隐藏系统对象**
 

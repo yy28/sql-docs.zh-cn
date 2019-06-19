@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b3692f3c0bc1c09a5841fcff146ceb9f4489548c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945426"
 ---
 # <a name="schemaname-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
@@ -44,12 +44,12 @@ SCHEMA_NAME ( [ schema_id ] )
   
 |术语|定义|  
 |----------|----------------|  
-|schema_id|架构的 ID。 schema_id 是 int。如果没有定义 schema_id，则 SCHEMA_NAME 将返回调用方的默认架构的名称。|  
+|schema_id |架构的 ID。 schema_id 是 int   。如果没有定义 schema_id，则 SCHEMA_NAME 将返回调用方的默认架构的名称  。|  
   
 ## <a name="return-types"></a>返回类型  
  **sysname**  
   
- schema_id 不是有效 ID 时，返回 NULL。  
+ schema_id 不是有效 ID 时，返回 NULL  。  
   
 ## <a name="remarks"></a>Remarks  
  SCHEMA_NAME 返回系统架构和用户定义架构的名称。 可以在选择列表、WHERE 子句和任何允许使用表达式的地方调用 SCHEMA_NAME。  

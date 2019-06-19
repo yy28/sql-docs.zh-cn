@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47e228c3494c03e86ffa7208f7caf5c1fe150a95
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727743"
 ---
 # <a name="execute-package-task"></a>执行包任务
@@ -49,10 +49,10 @@ ms.locfileid: "65727743"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含执行工作流操作的任务，如执行可执行文件和批处理文件。 有关详细信息，请参阅 [Execute Process Task](../../integration-services/control-flow/execute-process-task.md)。  
   
 ## <a name="running-packages"></a>运行包  
- “执行包”任务可运行与父包一起包含在同一个项目中的子包。 您可以通过将 **ReferenceType** 属性设置为 **“项目引用”**，然后设置 **PackageNameFromProjectReference** 属性，从项目中选择子包。  
+ “执行包”任务可运行与父包一起包含在同一个项目中的子包。 您可以通过将 **ReferenceType** 属性设置为 **“项目引用”** ，然后设置 **PackageNameFromProjectReference** 属性，从项目中选择子包。  
   
 > [!NOTE]  
->  “ReferenceType”选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”。 [部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+>  “ReferenceType”  选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”  。 [部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  执行包任务也可以运行存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库中的包和存储在文件系统中的包。 此任务使用 OLE DB 连接管理器连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或者使用文件连接管理器访问文件系统。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65727743"
  有关详细信息，请参阅 [在子包中使用变量和参数的值](../../integration-services/packages/legacy-package-deployment-ssis.md#child)。  
   
 ### <a name="accessing-parent-package-variables"></a>访问父包变量  
- 子包可以通过使用脚本任务访问父包变量。 在“脚本任务编辑器”的“脚本”页上输入父包变量的名称时，不要在变量名称中包括“用户:”。 否则，子包在运行父包时找不到该变量。  
+ 子包可以通过使用脚本任务访问父包变量。 在“脚本任务编辑器”的“脚本”页上输入父包变量的名称时，不要在变量名称中包括“用户:”    。 否则，子包在运行父包时找不到该变量。  
   
 ## <a name="configuring-the-execute-package-task"></a>配置执行包任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
@@ -142,7 +142,7 @@ ms.locfileid: "65727743"
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，打开包含执行包任务的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目。  
   
-2.  在 SSIS 设计器中右键单击该任务，然后单击“编辑”。  
+2.  在 SSIS 设计器中右键单击该任务，然后单击“编辑”  。  
   
 ###  <a name="general"></a> 设置“常规”页上的选项  
  **名称**  
@@ -156,10 +156,10 @@ ms.locfileid: "65727743"
   
 ###  <a name="package"></a> 设置“包”页上的选项  
  **ReferenceType**  
- 为项目中的子包选择“项目引用”。 为位于包外部的子包选择 **“外部引用”** 。  
+ 为项目中的子包选择“项目引用”  。 为位于包外部的子包选择 **“外部引用”** 。  
   
 > [!NOTE]  
->  “ReferenceType”选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”。 [部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+>  “ReferenceType”  选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”  。 [部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  **密码**  
  如果子包受密码保护，请提供子包的密码，或单击省略号按钮 (…)，为子包创建新的密码。  
@@ -192,18 +192,18 @@ ms.locfileid: "65727743"
   
 ##### <a name="location--sql-server"></a>位置 = SQL Server  
  **“连接”**  
- 在列表中选择 OLE DB 连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
+ 在列表中选择 OLE DB 连接管理器，或单击“\<新建连接...>”  以创建新的连接管理器。  
   
- **相关主题：**[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
  键入子包的名称，或单击省略号 (…) 再定位到包。  
   
 ##### <a name="location--file-system"></a>位置 = 文件系统  
  **“连接”**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器  。  
   
- **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **PackageNameReadOnly**  
  显示包的名称。  

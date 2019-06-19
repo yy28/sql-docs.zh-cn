@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2f44636f7ccf2b8aad7794403199acfe68637b15
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105666"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>“遇到 SQL 语法错误”对话框 (Visual Database Tools)
@@ -34,9 +34,9 @@ ms.locfileid: "65105666"
 -   SQL 语句有效但包含特定于所使用数据连接的语法。  
   
 > [!TIP]  
-> 可以使用“查询”工具栏上的“验证 SQL 语法”按钮来检查语句是否有效。  
+> 可以使用“查询”  工具栏上的“验证 SQL 语法”  按钮来检查语句是否有效。  
   
-该对话框将显示一条消息，指出无法分析 SQL 语句的原因。 单击“确定”即可继续操作。  
+该对话框将显示一条消息，指出无法分析 SQL 语句的原因。 单击“确定”  即可继续操作。  
   
 ## <a name="see-also"></a>另请参阅  
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

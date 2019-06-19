@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980428"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
@@ -45,17 +45,17 @@ PRINT msg_str | @local_variable | string_expr
 ```  
   
 ## <a name="arguments"></a>参数  
- msg_str  
+ msg_str   
  字符串或 Unicode 字符串常量。 有关详细信息，请参阅[常量 (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md)。  
   
- @ local_variable  
- 任何有效的字符数据类型的变量。 @local\_variable 的数据类型必须为 char、nchar、varchar 或 nvarchar，或者必须能够隐式转换为这些数据类型。  
+ @ local_variable    
+ 任何有效的字符数据类型的变量。 @  local\_variable  的数据类型必须为 char  、nchar  、varchar  或 nvarchar  ，或者必须能够隐式转换为这些数据类型。  
   
- string_expr  
+ string_expr   
  返回字符串的表达式。 可包括串联的文字值、函数和变量。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="remarks"></a>Remarks  
- 如果消息字符串为非 Unicode 字符串，则最长不得超过 8,000 个字符；如果消息字符串为 Unicode 字符串，则最长不得超过 4,000 个字符。 超过最大长度的字符串会被截断。 varchar(max) 和 nvarchar(max) 数据类型被截断为不大于 varchar(8000) 和 nvarchar(4000) 的数据类型。  
+ 如果消息字符串为非 Unicode 字符串，则最长不得超过 8,000 个字符；如果消息字符串为 Unicode 字符串，则最长不得超过 4,000 个字符。 超过最大长度的字符串会被截断。 varchar(max) 和 nvarchar(max) 数据类型被截断为不大于 varchar(8000) 和 nvarchar(4000) 的数据类型     。  
   
  RAISERROR 也可以用于返回消息。 RAISERROR 与 PRINT 相比具有以下优点：  
   

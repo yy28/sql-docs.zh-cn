@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ce2952af8a3f75ce8cc3e7714bb0490db33febd5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099348"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警报属性 - 新建警报（“常规”页）
@@ -48,7 +48,7 @@ ms.locfileid: "65099348"
   
 ## <a name="sql-server-event-alert-options"></a>SQL Server 事件警报选项  
 **数据库名称**  
-为该事件指定一个数据库，或者指定“所有数据库”，这样不管在哪一个数据库中发生该事件，都会对消息作出响应。  
+为该事件指定一个数据库，或者指定“所有数据库”  ，这样不管在哪一个数据库中发生该事件，都会对消息作出响应。  
   
 **错误号**  
 指定此事件将用于响应错误，并指定错误号。  

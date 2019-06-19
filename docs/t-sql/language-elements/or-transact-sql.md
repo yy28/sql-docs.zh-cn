@@ -22,10 +22,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fea8af37696162a78c1711e68a98392d8b9c1bbb
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980469"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
@@ -58,7 +58,7 @@ boolean_expression OR boolean_expression
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|UNKNOWN|  
-|UNKNOWN|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN |TRUE|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `vEmployeeDepartmentHistory` 视图检索加晚班或夜班的 `Quality Assurance` 人员的姓名。 如果省略括号，查询将返回加晚班的 `Quality Assurance` 雇员和所有加夜班的雇员。  

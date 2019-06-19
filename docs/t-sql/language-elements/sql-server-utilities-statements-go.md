@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981659"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 实用工具语句 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供不在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中、但 sqlcmd 和 osql 实用工具以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器可识别的命令。 这些命令可用于提高批处理和脚本的可读性和执行效率。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供不在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中、但 sqlcmd 和 osql 实用工具以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器可识别的命令   。 这些命令可用于提高批处理和脚本的可读性和执行效率。  
   
   GO 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具发出一批 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句已结束的信号。  
   
@@ -48,7 +48,7 @@ GO [count]
  为一个正整数。 GO 之前的批处理将执行指定的次数。  
   
 ## <a name="remarks"></a>Remarks  
- GO 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句；它是可由 sqlcmd 和 osql 实用工具以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器识别的命令。  
+ GO 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句；它是可由 sqlcmd 和 osql 实用工具以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器识别的命令   。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将 GO 解释为应该向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例发送当前批 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的信号。 当前批语句由上一 GO 命令后输入的所有语句组成，如果是第一条 GO 命令，则由即席会话或脚本开始后输入的所有语句组成。  
   

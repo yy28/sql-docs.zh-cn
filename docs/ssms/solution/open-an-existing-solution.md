@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8105dd55b8ad4d9eced6098068f25a414c55ce8e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102872"
 ---
 # <a name="open-an-existing-solution"></a>打开现有解决方案
@@ -27,9 +27,9 @@ ms.locfileid: "65102872"
   
 ### <a name="to-open-an-existing-solution"></a>打开现有的解决方案  
   
-1.  在“文件”菜单中，指向“打开”，然后单击“项目”/“解决方案”。  
+1.  在“文件”  菜单中，指向“打开”  ，然后单击“项目”/“解决方案”  。  
   
-2.  在“打开项目”对话框中，定位到所需的解决方案，单击该解决方案，再单击“打开”。  
+2.  在“打开项目”  对话框中，定位到所需的解决方案，单击该解决方案，再单击“打开”  。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

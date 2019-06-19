@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055641"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>设置 Integration Services 服务的属性
@@ -33,9 +33,9 @@ ms.locfileid: "66055641"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>使用 SQL Server 配置管理器设置 Integration Services 服务的属性  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”** 和 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 **“Microsoft SQL Server”** 和 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在“SQL Server 配置管理器”管理单元中，在服务列表中找到 **SQL Server Integration Services**，右键单击 **SQL Server Integration Services**，然后单击“属性”。  
+2.  在“SQL Server 配置管理器”管理单元中，在服务列表中找到 **SQL Server Integration Services**，右键单击 **SQL Server Integration Services**，然后单击“属性”。    
   
 3.  在 **“SQL Server Integration Services 属性”** 对话框中，可以执行下列操作：  
   
@@ -44,19 +44,19 @@ ms.locfileid: "66055641"
     -   单击 **“服务”** 选项卡以查看有关服务的信息（例如，主机计算机的名称），并指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的启动模式。  
   
         > [!NOTE]  
-        >  “高级”选项卡不包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的信息。  
+        >   “高级”选项卡不包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的信息。  
   
-4.  单击 **“确定”**。  
+4.  单击 **“确定”** 。  
   
-5.  在“文件”菜单上，单击“退出”以关闭“SQL Server 配置管理器”管理单元。  
+5.  在“文件”菜单上，单击“退出”以关闭“SQL Server 配置管理器”管理单元。     
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>使用“服务”设置 Integration Services 服务的属性  
   
-1.  在 **“控制面板”** 中，如果使用的是经典视图，请单击 **“管理工具”**；如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”**。  
+1.  在 **“控制面板”** 中，如果使用的是经典视图，请单击 **“管理工具”** ；如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”** 。  
   
-2.  单击 **“服务”**。  
+2.  单击 **“服务”** 。  
   
-3.  在“服务”管理单元中，在服务列表中找到 **SQL Server Integration Services**，右键单击 **SQL Server Integration Services**，再单击“属性”。  
+3.  在“服务”管理单元中，在服务列表中找到 **SQL Server Integration Services**，右键单击 **SQL Server Integration Services**，再单击“属性”。    
   
 4.  在 **“SQL Server Integration Services 属性”** 对话框中，可以执行下列操作：  
   
@@ -70,11 +70,11 @@ ms.locfileid: "66055641"
   
     -   单击 **“依赖项”** 选项卡可查看依赖服务的列表。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务没有任何依赖项。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
-6.  另外，如果启动类型为“手动”或“自动”，还可以右键单击 **SQL Server Integration Services**，然后单击“启动”、“停止”或“重新启动”。  
+6.  另外，如果启动类型为“手动”或“自动”，还可以右键单击 **SQL Server Integration Services**，然后单击“启动”、“停止”或“重新启动”。   
   
-7.  在“文件”菜单上，单击“退出”关闭“服务”管理单元。  
+7.  在“文件”菜单上，单击“退出”关闭“服务”管理单元。     
   
 ## <a name="see-also"></a>请参阅  
  [管理 Integration Services 服务](../../2014/integration-services/manage-the-integration-services-service.md)  

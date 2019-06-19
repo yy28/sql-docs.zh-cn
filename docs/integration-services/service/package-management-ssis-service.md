@@ -29,10 +29,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4d453c1e5c6de342ac81fdd828a570bdc33e5a
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805269"
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
@@ -59,16 +59,16 @@ ms.locfileid: "65805269"
   
  **“正在运行的包”** 文件夹不包含子文件夹，也不可扩展。  
   
- 默认情况下，“已存储的包”文件夹包含两个文件夹：“文件系统”和 MSDB。 **“文件系统”** 文件夹列出保存到文件系统中的包。 这些文件的位置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件中指定。 默认文件夹是 Packages 文件夹，它位于 %Program Files%\Microsoft SQL Server\100\DTS 下。 **MSDB** 文件夹列出已经保存到服务器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 sysssispackages 表包含保存到 msdb 中的包。  
+ 默认情况下，“已存储的包”  文件夹包含两个文件夹：“文件系统”  和 MSDB  。 **“文件系统”** 文件夹列出保存到文件系统中的包。 这些文件的位置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件中指定。 默认文件夹是 Packages 文件夹，它位于 %Program Files%\Microsoft SQL Server\100\DTS 下。 **MSDB** 文件夹列出已经保存到服务器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 sysssispackages 表包含保存到 msdb 中的包。  
   
  若要查看包存储区中的包列表，必须打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
 ## <a name="monitor-running-packages"></a>监视正在运行的包  
- “正在运行的包”文件夹列出当前正在运行的包。 若要在 **的** “摘要” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]页上查看当前包的信息，请单击 **“正在运行的包”** 文件夹。 **“摘要”** 页上列有正在运行的包的执行持续时间等信息。 您可以选择刷新该文件夹，以显示最新的信息。  
+ “正在运行的包”  文件夹列出当前正在运行的包。 若要在 **的** “摘要” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]页上查看当前包的信息，请单击 **“正在运行的包”** 文件夹。 **“摘要”** 页上列有正在运行的包的执行持续时间等信息。 您可以选择刷新该文件夹，以显示最新的信息。  
   
  若要查看 **“摘要”** 页上某个正在运行的包的信息，请单击此包。 **“摘要”** 页显示包的版本和说明等信息。  
   
-右键单击“正在运行的包”文件夹中某个正在运行的包，然后单击“停止”，可以使该包停止运行。  
+右键单击“正在运行的包”  文件夹中某个正在运行的包，然后单击“停止”  ，可以使该包停止运行。  
   
 ## <a name="view-packages-in-ssms"></a>在 SSMS 中查看包
     
@@ -76,12 +76,12 @@ ms.locfileid: "65805269"
   
 ### <a name="to-connect-to-integration-services"></a>连接到 Integration Services  
   
-1.  单击 **“开始”**，依次指向 **“所有程序”** 和 **Microsoft SQL Server**，然后单击 **SQL Server Management Studio**。  
+1.  单击 **“开始”** ，依次指向 **“所有程序”** 和 **Microsoft SQL Server**，然后单击 **SQL Server Management Studio**。  
   
-2.  在 **“连接到服务器”** 对话框中，在 **“服务器类型”** 列表中选择 **Integration Services** ，在 **“服务器名称”** 框中提供服务器名称，然后单击 **“连接”**。  
+2.  在 **“连接到服务器”** 对话框中，在 **“服务器类型”** 列表中选择 **Integration Services** ，在 **“服务器名称”** 框中提供服务器名称，然后单击 **“连接”** 。  
   
     > [!IMPORTANT]  
-    >  如果无法连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务可能未运行。 若要了解该服务的状态，请单击 **“开始”**，依次指向 **“所有程序”**、 **Microsoft SQL Server**和 **“配置工具”**，再单击 **“SQL Server 配置管理器”**。 在左窗格中，单击 **“SQL Server 服务”**。 在右窗格中，查找 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 如果该服务尚未运行，请启动该服务。  
+    >  如果无法连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务可能未运行。 若要了解该服务的状态，请单击 **“开始”** ，依次指向 **“所有程序”** 、 **Microsoft SQL Server**和 **“配置工具”** ，再单击 **“SQL Server 配置管理器”** 。 在左窗格中，单击 **“SQL Server 服务”** 。 在右窗格中，查找 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 如果该服务尚未运行，请启动该服务。  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 默认情况下，会打开对象资源管理器窗口并定位在 SQL Server Management Studio 左下角。 如果对象资源管理器未打开，请单击 **“视图”** 菜单上的 **“对象资源管理器”** 。  
   
@@ -125,71 +125,71 @@ ms.locfileid: "65805269"
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 导入包  
   
-1.  单击“开始”，指向 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后单击 **SQL Server Management Studio**。  
+1.  单击  “开始”，指向 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后单击 **SQL Server Management Studio**。  
   
 2.  在 **“连接到服务器”** 对话框中，设置以下选项：  
   
-    -   在 **“服务器类型”** 框中，选择 **“Integration Services”**。  
+    -   在 **“服务器类型”** 框中，选择 **“Integration Services”** 。  
   
-    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器。  
+    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器   。  
   
-3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”**。  
+3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”** 。  
   
 4.  在对象资源管理器中，展开 **“已存储的包”** 文件夹。  
   
 5.  展开子文件夹，找到要向其中导入包的文件夹。  
   
-6.  右键单击该文件夹，单击“导入包”。 然后请执行下列操作之一：  
+6.  右键单击该文件夹，单击“导入包”。  然后请执行下列操作之一：  
   
     -   若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例导入，请选择 **“SQL Server”** 选项，然后指定服务器并选择身份验证模式。 如果选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供用户名和密码。  
   
-         单击浏览按钮 (…)，选择要导入的包，再单击“确定”。  
+         单击浏览按钮 (…)，选择要导入的包，再单击“确定”   。  
   
     -   若要从文件系统导入，请选择 **“文件系统”** 选项。  
   
-         单击浏览按钮 (…)，选择要导入的包，然后单击“打开”。  
+         单击浏览按钮 (…)，选择要导入的包，然后单击“打开”   。  
   
     -   若要从 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中导入，请选择 **“SSIS 包存储区”** 选项，并指定服务器。  
   
-         单击浏览按钮 (…)，选择要导入的包，再单击“确定”。  
+         单击浏览按钮 (…)，选择要导入的包，再单击“确定”   。  
   
 7.  根据需要，也可以更新包名称。  
   
-8.  若要更新包的保护级别，请单击浏览按钮 (…)，然后使用“包保护级别”对话框选择其他保护级别。 如果选定了 **“使用密码加密敏感数据”** 或 **“使用密码加密所有数据”** 选项，请键入并确认密码。  
+8.  若要更新包的保护级别，请单击浏览按钮 (…)，然后使用“包保护级别”对话框选择其他保护级别   。 如果选定了 **“使用密码加密敏感数据”** 或 **“使用密码加密所有数据”** 选项，请键入并确认密码。  
   
 9. 单击 **“确定”** ，完成导入操作。  
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 导出包  
   
-1.  单击“开始”，指向 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后单击 **SQL Server Management Studio**。  
+1.  单击  “开始”，指向 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后单击 **SQL Server Management Studio**。  
   
 2.  在 **“连接到服务器”** 对话框中，设置下列选项：  
   
-    -   在 **“服务器类型”** 框中，选择 **“Integration Services”**。  
+    -   在 **“服务器类型”** 框中，选择 **“Integration Services”** 。  
   
-    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器。  
+    -   在“服务器名称”框中，提供服务器名称，或者单击“\<浏览更多...>”，并找到要使用的服务器   。  
   
-3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”**。  
+3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”** 。  
   
 4.  在对象资源管理器中，展开 **“已存储的包”** 文件夹。  
   
 5.  展开子文件夹以找到要导出的包。  
   
-6.  右键单击该包，单击“导出”，然后执行以下操作之一：  
+6.  右键单击该包，单击“导出”  ，然后执行以下操作之一：  
   
     -   若要导出到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例，请选择 **SQL Server** 选项，然后指定服务器并选择身份验证模式。 如果选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供用户名和密码。  
   
-         单击浏览按钮 (…)，展开“SSIS 包”文件夹以找到要存储此包的文件夹。 也可以更新此包的默认名称，然后单击 **“确定”**。  
+         单击浏览按钮 (…)，展开“SSIS 包”文件夹以找到要存储此包的文件夹   。 也可以更新此包的默认名称，然后单击 **“确定”** 。  
   
     -   要导出到文件系统，请选择 **“文件系统”** 选项。  
   
-         单击浏览按钮 (…) 以查找要向其中导出包的文件夹，键入包文件的名称，然后单击“保存”。  
+         单击浏览按钮 (…) 以查找要向其中导出包的文件夹，键入包文件的名称，然后单击“保存”   。  
   
     -   若要导出到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区，请选择 **“SSIS 包存储区”** 选项并指定服务器。  
   
-         单击浏览按钮 (…)，展开“SSIS 包”文件夹，然后选择要存储此包的文件夹。 也可以在 **“包名称”** 文本框中为包键入新名称。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         单击浏览按钮 (…)，展开“SSIS 包”文件夹，然后选择要存储此包的文件夹   。 也可以在 **“包名称”** 文本框中为包键入新名称。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  若要更新包的保护级别，请单击浏览按钮 (…)，然后使用“包保护级别”对话框选择其他保护级别。 如果选定了 **“使用密码加密敏感数据”** 或 **“使用密码加密所有数据”** 选项，请键入并确认密码。  
+7.  若要更新包的保护级别，请单击浏览按钮 (…)，然后使用“包保护级别”对话框选择其他保护级别   。 如果选定了 **“使用密码加密敏感数据”** 或 **“使用密码加密所有数据”** 选项，请键入并确认密码。  
   
 8.  单击 **“确定”** ，完成导出操作。  
 
@@ -225,13 +225,13 @@ ms.locfileid: "65805269"
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
  **包路径**  
- 键入包的路径，或单击浏览按钮 (…) 并查找包。  
+ 键入包的路径，或单击浏览按钮 (…) 并查找包  。  
   
  **包名称**  
  可以根据需要对包进行重命名。 默认名称是要导入的包的名称。  
   
  **保护级别**  
- 单击浏览按钮 (…)，然后在“包保护级别”对话框中更新保护级别。 有关详细信息，请参阅 [“包和项目保护级别”对话框](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
+ 单击浏览按钮 (…)，然后在“包保护级别”对话框中更新保护级别   。 有关详细信息，请参阅 [“包和项目保护级别”对话框](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>“导出包”对话框 UI 参考
   可以使用 **中的** “导出包” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框，将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包导出到其他位置并根据需要修改包的保护级别。  
@@ -265,10 +265,10 @@ ms.locfileid: "65805269"
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供密码。  
   
  **包路径**  
- 键入包路径，或单击浏览按钮 (…)，然后定位存储包的文件夹。  
+ 键入包路径，或单击浏览按钮 (…)，然后定位存储包的文件夹  。  
   
  **保护级别**  
- 单击浏览按钮 (…)，然后在“包保护级别”对话框中更新保护级别。 有关详细信息，请参阅 [“包和项目保护级别”对话框](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
+ 单击浏览按钮 (…)，然后在“包保护级别”对话框中更新保护级别   。 有关详细信息，请参阅 [“包和项目保护级别”对话框](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
 
 ## <a name="back-up-and-restore-packages"></a>备份和还原包
   

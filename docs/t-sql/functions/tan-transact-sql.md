@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f63a8d77e93e8cd0208c124abab3deab5a474b4
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948484"
 ---
 # <a name="tan-transact-sql"></a>TAN (Transact-SQL)
@@ -42,7 +42,7 @@ TAN ( float_expression )
   
 ## <a name="arguments"></a>参数  
  *float_expression*  
- float 类型或可隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，解释为弧度数。  
+ float 类型或可隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，解释为弧度数   。  
   
 ## <a name="return-types"></a>返回类型  
  **float**  

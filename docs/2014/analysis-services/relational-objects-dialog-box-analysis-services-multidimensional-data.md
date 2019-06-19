@@ -13,24 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070347"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>“关系对象”对话框（Analysis Services - 多维数据）
-  可以使用 **中的** “关系对象” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，从数据源中选择要设置主动缓存的表、视图或其他对象。 通过单击“存储选项”对话框的“通知”选项卡上任意一个“指定跟踪表”选项的省略号按钮 (**...**)，可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中显示此对话框。  
+  可以使用 **中的** “关系对象” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，从数据源中选择要设置主动缓存的表、视图或其他对象。 通过单击“存储选项”  对话框的“通知”  选项卡上任意一个“指定跟踪表”  选项的省略号按钮 ( **...** )，可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中显示此对话框。  
   
 ## <a name="options"></a>选项  
  **选择你想要设置主动缓存的关系对象**  
- 选择要跟踪的对象。使用此选项可显示一个包含可用对象及其类型的网格，这些对象及其类型与“筛选器”中设置的筛选器匹配（如果未设置“筛选器”，则为所有表），但尚未显示在当前关系图中。  
+ 选择要跟踪的对象。使用此选项可显示一个包含可用对象及其类型的网格，这些对象及其类型与“筛选器”  中设置的筛选器匹配（如果未设置“筛选器”  ，则为所有表），但尚未显示在当前关系图中。  
   
  **Filter**  
- 键入用于限制所列对象的筛选器，再单击该按钮可筛选“选择要为其设置主动缓存的关系对象”中所列的表。  
+ 键入用于限制所列对象的筛选器，再单击该按钮可筛选“选择要为其设置主动缓存的关系对象”  中所列的表。  
   
  **显示系统对象**  
- 选择此项将在“选择要为其设置主动缓存的关系对象”中显示数据源的系统对象。  
+ 选择此项将在“选择要为其设置主动缓存的关系对象”  中显示数据源的系统对象。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

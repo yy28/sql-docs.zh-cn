@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4750fe9d0c74d8443f3482557268e67858d882f1
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944846"
 ---
 # <a name="x40x40options-transact-sql"></a>@@OPTIONS (Transact-SQL)
@@ -44,18 +44,18 @@ ms.locfileid: "65944846"
  **integer**  
   
 ## <a name="remarks"></a>Remarks  
- 使用 SET 命令或 sp_configure user options 值可获得这些选项。 使用 SET 命令配置的会话值会替代 sp_configure 选项。 许多工具（例如 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 自动配置设置选项。 每个用户都有一个表示配置的 @OPTIONS 函数。  
+ 使用 SET 命令或 sp_configure user options 值可获得这些选项   。 使用 SET 命令配置的会话值会替代 sp_configure 选项   。 许多工具（例如 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 自动配置设置选项。 每个用户都有一个表示配置的 @OPTIONS 函数。  
   
- 可以使用 SET 语句更改特定用户会话的语言和查询处理选项。 @@OPTIONS 只能检测到设置为 ON 或 OFF 的选项。  
+ 可以使用 SET 语句更改特定用户会话的语言和查询处理选项。 @@OPTIONS 只能检测到设置为 ON 或 OFF 的选项  。  
   
- @@OPTIONS 函数返回选项的位图，转换为基数为 10 的（十进制）整数。 主题[配置 user options 服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)提供的表中介绍了位设置的存放位置。  
+ @@OPTIONS 函数返回选项的位图，转换为基数为 10 的（十进制）整数  。 主题[配置 user options 服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)提供的表中介绍了位设置的存放位置。  
   
- 要解码 @@OPTIONS 值，将 @@OPTIONS 返回的整数转换为二进制，然后查找[配置 user options 服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)中的表中的值。 例如，如果 `SELECT @@OPTIONS;` 返回值 `5496`，使用 Windows 编程人员计算器 (calc.exe) 将十进制 `5496` 转换为二进制。 结果为 `1010101111000`。 最右边的字符（二进制 1、2 和 4）为 0，指示表中的前三项为关闭状态。 查询该表，可以看到这三项是 DISABLE_DEF_CNST_CHK、IMPLICIT_TRANSACTIONS 和 CURSOR_CLOSE_ON_COMMIT。 下一项（`1000` 位置中的 ANSI_WARNINGS）为启用状态。 继续向左处理位图并向下处理选项列表。 如果最左边的选项是 0，则它们被类型转换截断。 位图 `1010101111000` 实际上是 `001010101111000`，代表全部 15 个选项。  
+ 要解码 @@OPTIONS 值，将 @@OPTIONS 返回的整数转换为二进制，然后查找[配置 user options 服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)中的表中的值   。 例如，如果 `SELECT @@OPTIONS;` 返回值 `5496`，使用 Windows 编程人员计算器 (calc.exe) 将十进制 `5496` 转换为二进制  。 结果为 `1010101111000`。 最右边的字符（二进制 1、2 和 4）为 0，指示表中的前三项为关闭状态。 查询该表，可以看到这三项是 DISABLE_DEF_CNST_CHK、IMPLICIT_TRANSACTIONS 和 CURSOR_CLOSE_ON_COMMIT    。 下一项（`1000` 位置中的 ANSI_WARNINGS）为启用状态  。 继续向左处理位图并向下处理选项列表。 如果最左边的选项是 0，则它们被类型转换截断。 位图 `1010101111000` 实际上是 `001010101111000`，代表全部 15 个选项。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-demonstration-of-how-changes-affect-behavior"></a>A. 更改如何影响行为的演示  
- 下面的示例演示采用 CONCAT_NULL_YIELDS_NULL 选项的两个不同设置的连结行为的区别。  
+ 下面的示例演示采用 CONCAT_NULL_YIELDS_NULL 选项的两个不同设置的连结行为的区别  。  
   
 ```  
 SELECT @@OPTIONS AS OriginalOptionsValue;  

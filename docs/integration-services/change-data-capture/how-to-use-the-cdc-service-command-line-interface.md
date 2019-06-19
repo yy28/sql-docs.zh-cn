@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5aec8974f2b21bd28869b2c06be9eadbf5cd239c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728701"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>如何使用 CDC 服务命令行界面
@@ -27,7 +27,7 @@ ms.locfileid: "65728701"
   
 ### <a name="to-use-the-command-line"></a>使用命令行  
   
-1.  从“开始”菜单打开命令行控制台。 在“运行”或“搜索”框中键入 **cmd** 以便打开该控制台。  
+1.  从“开始”菜单打开命令行控制台  。 在“运行”或“搜索”框中键入 **cmd** 以便打开该控制台。  
   
 2.  在命令提示符后，键入 **cd** 以及指向安装了 Oracle CDC 服务的文件夹的完整路径。  
   

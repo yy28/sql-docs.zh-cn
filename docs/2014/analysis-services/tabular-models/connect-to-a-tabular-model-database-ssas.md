@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067658"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>连接到表格模型数据库 (SSAS)
@@ -56,11 +56,11 @@ ms.locfileid: "66067658"
   
      在以下步骤中，您要将这些帐户添加到 Analysis Services 实例上的服务器角色中。  
   
-3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，再右键单击该服务器实例，然后选择“属性”。 在对象资源管理器中，右键单击“角色”，然后选择“新建角色”。  
+3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，再右键单击该服务器实例，然后选择“属性”  。 在对象资源管理器中，右键单击“角色”  ，然后选择“新建角色”  。  
   
-4.  在“Analysis Services 属性”页中，选择 **“安全性”**。  
+4.  在“Analysis Services 属性”页中，选择 **“安全性”** 。  
   
-5.  单击 **“添加”**，然后输入 Excel Services 使用的帐户，后跟 Reporting Services 使用的帐户。  
+5.  单击 **“添加”** ，然后输入 Excel Services 使用的帐户，后跟 Reporting Services 使用的帐户。  
   
 ##  <a name="bkmk_excelconn"></a> 从 Excel 或 SharePoint 进行连接  
  提供对 Analysis Services 数据库的访问权限的客户端库可用于连接到在表格模式服务器上运行的模型数据库。 库包括 Analysis Services OLE DB 访问接口、ADOMD.NET 和 AMO。  
@@ -77,17 +77,17 @@ ms.locfileid: "66067658"
   
 #### <a name="connect-from-excel"></a>从 Excel 进行连接  
   
-1.  在 Excel 中的 **“数据”** 选项卡上的 **“获取外部数据”** 中，单击 **“自其他来源”**。  
+1.  在 Excel 中的 **“数据”** 选项卡上的 **“获取外部数据”** 中，单击 **“自其他来源”** 。  
   
-2.  选择 **“从 Analysis Services”**。  
+2.  选择 **“从 Analysis Services”** 。  
   
 3.  在 **“服务器名称”** 中，指定将承载数据库的 Analysis Services 实例。 服务器名称通常是运行服务器软件的计算机的名称。 如果服务器已作为命名实例安装，则必须按以下格式指定名称：\<服务器名称 >\\< 实例名\>。  
   
      必须为独立的表格部署配置服务器实例，并且该服务器实例必须具有允许访问的入站规则。 有关详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) 和 [将 Windows 防火墙配置为允许 Analysis Services 访问](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-4.  对于登录凭据，如果您对数据库具有读取权限，则选择 **“使用 Windows 身份验证”** 。 否则，请选择 **“使用以下用户名和密码”**，然后输入具有数据库权限的 Windows 帐户的用户名和密码。 单击“下一步” 。  
+4.  对于登录凭据，如果您对数据库具有读取权限，则选择 **“使用 Windows 身份验证”** 。 否则，请选择 **“使用以下用户名和密码”** ，然后输入具有数据库权限的 Windows 帐户的用户名和密码。 单击“下一步”  。  
   
-5.  选择数据库。 有效选择将为该数据库显示单个 **“模型”** 多维数据集。 单击 **“下一步”** ，然后单击 **“完成”**。  
+5.  选择数据库。 有效选择将为该数据库显示单个 **“模型”** 多维数据集。 单击 **“下一步”** ，然后单击 **“完成”** 。  
   
  在建立连接后，您可以使用数据来创建数据透视表或数据透视图。 有关详细信息，请参阅本主题后面的 [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)中的“角色管理器”对话框定义角色的表格模型作者。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66067658"
   
  **在尝试与在工作簿中使用的外部数据源建立连接的过程中出现错误。**  
   
- 在 SharePoint 上，当您尝试在使用模型数据的数据透视表中进行数据交互（例如筛选数据）时，将会发生此 Microsoft Excel 错误。 发生此错误的原因是该用户对工作簿没有足够的 SharePoint 权限。 该用户必须具有 **“读取”** 权限或更高权限。 “仅查看”权限对于数据访问是不够的。  
+ 在 SharePoint 上，当您尝试在使用模型数据的数据透视表中进行数据交互（例如筛选数据）时，将会发生此 Microsoft Excel 错误。 发生此错误的原因是该用户对工作簿没有足够的 SharePoint 权限。 该用户必须具有 **“读取”** 权限或更高权限。 “仅查看”  权限对于数据访问是不够的。  
   
 ## <a name="see-also"></a>请参阅  
  [表格模型解决方案部署（SSAS 表格）](tabular-model-solution-deployment-ssas-tabular.md)  

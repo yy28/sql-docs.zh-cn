@@ -29,10 +29,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d45b1d74242476da155e387f8ec00f8e4e23278f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946974"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
@@ -51,12 +51,12 @@ IS_MEMBER ( { 'group' | 'role' } )
   
 ## <a name="arguments"></a>参数  
  **'** group **'**   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 
   
- 正在检查的 Windows 组的名称；必须采用格式 Domain\\Group。 group 的数据类型为 sysname。  
+ 正在检查的 Windows 组的名称；必须采用格式 Domain\\Group   。 group 的数据类型为 sysname   。  
   
- 'role'  
- 要检查的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的名称。 role 的数据类型为 sysname，它可以包括数据库固定角色或用户定义的角色，但不能包括服务器角色。  
+ 'role'     
+ 要检查的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的名称。 role 的数据类型为 sysname，它可以包括数据库固定角色或用户定义的角色，但不能包括服务器角色   。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -66,17 +66,17 @@ IS_MEMBER ( { 'group' | 'role' } )
   
 |返回值|描述|  
 |------------------|-----------------|  
-|0|当前用户不是 group 或 role 的成员。|  
-|1|当前用户是 group 或 role 的成员。|  
-|NULL|group 或 role 无效。 在由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或使用应用程序角色的登录名查询时，对于 Windows 组返回 NULL。|  
+|0|当前用户不是 group 或 role 的成员   。|  
+|1|当前用户是 group 或 role 的成员   。|  
+|NULL|group 或 role 无效   。 在由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或使用应用程序角色的登录名查询时，对于 Windows 组返回 NULL。|  
   
  IS_MEMBER 通过检查 Windows 创建的访问令牌来确定 Windows 组成员身份。 该访问标记不反映在用户连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后对组成员身份进行的更改。 Windows 组成员身份不能由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序角色查询。  
   
  若要在数据库角色中添加和删除成员，请使用 [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md)。 若要在服务器角色中添加和删除成员，请使用 [ALTER SERVER ROLE (Transact-SQL)](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   
- 此函数计算角色成员身份，而不是基础权限。 例如，db_owner 固定数据库角色具有 CONTROL DATABASE 权限。 如果用户具有 CONTROL DATABASE 权限，但不是该角色的成员，此函数将正确报告用户不是 db_owner 角色的成员，即使用户具有相同的权限也是如此。  
+ 此函数计算角色成员身份，而不是基础权限。 例如，db_owner 固定数据库角色具有 CONTROL DATABASE 权限   。 如果用户具有 CONTROL DATABASE 权限，但不是该角色的成员，此函数将正确报告用户不是 db_owner 角色的成员，即使用户具有相同的权限也是如此   。  
   
- sysadmin 固定服务器角色的成员均以 dbo 用户身份进入每个数据库。 检查 sysadmin 固定服务器角色成员的权限会检查 dbo 的权限，而不是原始登录名。 由于 dbo 无法添加到数据库角色且在 Windows 组中不存在，因此 dbo 将始终返回 0（或者如果角色不存在，则为 NULL）。  
+ sysadmin 固定服务器角色的成员均以 dbo 用户身份进入每个数据库   。 检查 sysadmin 固定服务器角色成员的权限会检查 dbo 的权限，而不是原始登录名   。 由于 dbo 无法添加到数据库角色且在 Windows 组中不存在，因此 dbo 将始终返回 0（或者如果角色不存在，则为 NULL）   。  
   
 ## <a name="related-functions"></a>相关函数  
  若要确定另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名是否为数据库角色的成员，请使用 [IS_ROLEMEMBER (Transact-SQL)](../../t-sql/functions/is-rolemember-transact-sql.md)。 若要确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名是否为服务器角色的成员，请使用 [IS_SRVROLEMEMBER (Transact-SQL)](../../t-sql/functions/is-srvrolemember-transact-sql.md)。  

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728011"
 ---
 # <a name="bulk-insert-task"></a>大容量插入任务
@@ -126,9 +126,9 @@ ms.locfileid: "65728011"
   
 ### <a name="options"></a>选项  
  **“连接”**  
- 在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”，创建一个新连接。  
+ 在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”，创建一个新连接  。  
   
- **相关主题：**[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **DestinationTable**  
  键入目标表或视图的名称，或在列表中选择表或视图。  
@@ -142,13 +142,13 @@ ms.locfileid: "65728011"
 |**指定**|指定格式。 选择此选项将显示动态选项 **RowDelimiter** 和 **ColumnDelimiter**。|  
   
  **File**  
- 在列表中选择一个文件或平面文件连接管理器，或单击“\<新建连接…>”，创建一个新连接。  
+ 在列表中选择一个文件或平面文件连接管理器，或单击“\<新建连接…>”，创建一个新连接  。  
   
  文件位置与在此任务的连接管理器中指定的 SQL Server 数据库引擎有关。 该文本文件必须可被服务器本地硬盘上的 SQL Server 数据库引擎访问，或可通过 SQL Server 的共享驱动器或映射的驱动器访问。 SSIS 运行时不访问该文件。  
   
  如果通过使用平面文件连接管理器来访问源文件，则大容量插入任务不会使用在平面文件连接管理器中指定的格式。 相反，大容量插入任务将使用在格式化文件中指定的格式，或者使用该任务的 RowDelimite 和 ColumnDelimiter 属性的值。  
   
- **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md) 
   
  **刷新表**  
  刷新表和视图的列表。  
@@ -157,14 +157,14 @@ ms.locfileid: "65728011"
   
 #### <a name="format--use-file"></a>Format = 使用文件  
  **FormatFile**  
- 键入格式化文件的路径，或单击省略号按钮“(…)”定位到该格式化文件。  
+ 键入格式化文件的路径，或单击省略号按钮“(…)”定位到该格式化文件  。  
   
 #### <a name="format--specify"></a>Format = 指定  
  **RowDelimiter**  
- 指定源文件中的行分隔符。 默认值为 **{CR}{LF}**。  
+ 指定源文件中的行分隔符。 默认值为 **{CR}{LF}** 。  
   
  **ColumnDelimiter**  
- 指定源文件中的列分隔符。 默认值为 **“制表符”**。  
+ 指定源文件中的列分隔符。 默认值为 **“制表符”** 。  
   
 ## <a name="bulk-insert-task-editor-general-page"></a>大容量插入任务编辑器（“常规”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“常规”** 页，对大容量插入任务进行命名和说明。  

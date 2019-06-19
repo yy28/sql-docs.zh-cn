@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0d6abe662e9d79a23be11d2bccc72dc8d0ec8c6e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099726"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>显示查询属性 (Visual Database Tools)
@@ -29,9 +29,9 @@ ms.locfileid: "65099726"
   
 ### <a name="to-display-properties-for-a-query"></a>显示查询的属性  
   
--   在查询和视图设计器中打开查询后，在“视图”菜单中，单击“属性窗口”。  
+-   在查询和视图设计器中打开查询后，在“视图”  菜单中，单击“属性窗口”  。  
   
-此时，将会在“属性”窗口中显示该查询的属性。  
+此时，将会在“属性”  窗口中显示该查询的属性。  
   
 ## <a name="see-also"></a>另请参阅  
 [执行基本的查询操作 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

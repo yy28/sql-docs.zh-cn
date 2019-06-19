@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af2cc62bd09dd2376c68ec5d66e4867369ef8b68
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727751"
 ---
 # <a name="execute-process-task"></a>执行进程任务
@@ -88,7 +88,7 @@ ms.locfileid: "65727751"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
 ## <a name="execute-process-task-editor-general-page"></a>执行进程任务编辑器（“常规”页）
-  可以使用“执行进程任务编辑器”对话框的“常规”页，对执行进程任务进行命名和说明。  
+  可以使用“执行进程任务编辑器”对话框的“常规”页，对执行进程任务进行命名和说明。    
   
 ### <a name="options"></a>选项  
  **名称**  
@@ -114,18 +114,18 @@ ms.locfileid: "65727751"
  提供命令提示符参数。  
   
  **WorkingDirectory**  
- 键入包含可执行文件的文件夹的路径，或单击浏览 (…) 按钮定位到该文件夹。  
+ 键入包含可执行文件的文件夹的路径，或单击浏览 (…) 按钮定位到该文件夹  。  
   
  **StandardInputVariable**  
- 选择为进程提供输入的变量，或单击“\<新建变量...>”创建一个新变量：  
+ 选择为进程提供输入的变量，或单击“\<新建变量...>”创建一个新变量  ：  
   
- **相关主题：**[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- 选择用于捕获进程输出的变量，或单击“\<新建变量...>”创建一个新变量。  
+ 选择用于捕获进程输出的变量，或单击“\<新建变量...>”创建一个新变量  。  
   
  **StandardErrorVariable**  
- 选择用于捕获进程错误输出的变量，或单击“\<新建变量...>”创建一个新变量。  
+ 选择用于捕获进程错误输出的变量，或单击“\<新建变量...>”创建一个新变量  。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  指示在进程退出代码与 **SuccessValue**中指定的值不同时任务是否失败。  

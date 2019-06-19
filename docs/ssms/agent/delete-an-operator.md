@@ -21,10 +21,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 09b4ceaa09548dcd7c5789d8234bb9c53e9068bf
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096750"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
@@ -65,13 +65,13 @@ ms.locfileid: "65096750"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要删除的操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要删除的操作员，然后选择“删除”。  
+4.  右键单击要删除的操作员，然后选择“删除”  。  
   
-5.  在 **“删除对象”** 对话框中，确保已选择正确的操作员，然后单击 **“确定”**。 如果希望其他操作员收到发送给已删除操作员的警报和作业，请选择 **“重新分配给”** ，然后在列表中选择一个操作员。  
+5.  在 **“删除对象”** 对话框中，确保已选择正确的操作员，然后单击 **“确定”** 。 如果希望其他操作员收到发送给已删除操作员的警报和作业，请选择 **“重新分配给”** ，然后在列表中选择一个操作员。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -79,9 +79,9 @@ ms.locfileid: "65096750"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- deletes operator 'Test Operator' and reassigns all alerts and jobs

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d353876938b3e64317f461240b2333e71217449
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727122"
 ---
 # <a name="connect-components-in-a-data-flow"></a>连接数据流中的组件
@@ -43,7 +43,7 @@ ms.locfileid: "65727122"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  单击“控制流”选项卡，然后双击包含要连接的组件所在数据流的数据流任务。  
+3.  单击“控制流”  选项卡，然后双击包含要连接的组件所在数据流的数据流任务。  
   
 4.  在 **“数据流”** 选项卡的设计图面上，选择要连接的转换或源。  
   

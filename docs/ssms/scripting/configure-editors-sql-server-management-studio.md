@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0f90a0406ead09efaac27326fa6071270401b74b
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820959"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>配置编辑器 (SQL Server Management Studio)
@@ -24,7 +24,7 @@ ms.locfileid: "65820959"
   您可以通过为每个编辑器配置选项，自定义 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器的操作。  
   
 ## <a name="settng-editor-options"></a>设置编辑器选项  
- 通过使用“工具”菜单，然后选择“选项…”以便显示“选项”对话框，可设置大多数编辑器选项。 在 **“选项”** 对话框中，打开左侧窗格中的 **“文本编辑器”** 节点，以便设置代码和文本编辑选项。 “文本编辑器”下方的节点适用于特定编辑器：  
+ 通过使用“工具”菜单，然后选择“选项…”以便显示“选项”对话框，可设置大多数编辑器选项    。 在 **“选项”** 对话框中，打开左侧窗格中的 **“文本编辑器”** 节点，以便设置代码和文本编辑选项。 “文本编辑器”下方的节点适用于特定编辑器：  
   
 1.  **所有语言** - 使用此节点设置的选项将应用于所有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 编辑器。 可通过使用其他节点为特定的编辑器设置不同选项，覆盖这些设置。  
   

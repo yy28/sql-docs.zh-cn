@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2cb16e1a8abe807149caed9e5b520cae0d8f44c7
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982212"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
@@ -47,18 +47,18 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  ALL  
  删除实例中的所有订阅。  
   
- subscription_id  
- 删除订阅 ID 为 subscription_id 的订阅。  
+ subscription_id   
+ 删除订阅 ID 为 subscription_id 的订阅  。  
   
 ## <a name="remarks"></a>Remarks  
  KILL QUERY NOTIFICATION SUBSCRIPTION 语句删除查询通知订阅，而不生成通知消息。  
   
- subscription_id 是动态管理视图 [sys.dm_qn_subscriptions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) 中显示的订阅 ID。  
+ subscription_id 是动态管理视图 [sys.dm_qn_subscriptions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) 中显示的订阅 ID  。  
   
  如果指定的订阅 ID 不存在，该语句将生成错误。  
   
 ## <a name="permissions"></a>权限  
- 该语句的执行权限只限于 sysadmin 固定服务器角色的成员。  
+ 该语句的执行权限只限于 sysadmin 固定服务器角色的成员  。  
   
 ## <a name="examples"></a>示例  
   

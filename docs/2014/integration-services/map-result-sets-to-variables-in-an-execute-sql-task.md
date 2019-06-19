@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057761"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>在执行 SQL 任务中将结果集映射到变量
@@ -30,7 +30,7 @@ ms.locfileid: "66057761"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在“解决方案资源管理器”中，双击该包将其打开。  
+2.  在“解决方案资源管理器”  中，双击该包将其打开。  
   
 3.  单击 **“控制流”** 选项卡。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "66057761"
   
 5.  双击执行 SQL 任务。  
   
-6.  在 **“执行 SQL 任务编辑器”** 对话框中的 **“常规”** 页上，选择 **“单行”**、 **“完整结果集”** 或 **XML** 结果集类型。  
+6.  在 **“执行 SQL 任务编辑器”** 对话框中的 **“常规”** 页上，选择 **“单行”** 、 **“完整结果集”** 或 **XML** 结果集类型。  
   
      有关不同的结果集的说明，请参阅 [执行 SQL 任务中的结果集](result-sets-in-the-execute-sql-task.md)  
   
-7.  单击 **“结果集”**。  
+7.  单击 **“结果集”** 。  
   
-8.  若要添加结果集映射，请单击 **“添加”**。  
+8.  若要添加结果集映射，请单击 **“添加”** 。  
   
 9. 从 **“变量名称”** 列表中，选择变量或创建新变量。 有关详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66057761"
   
      通常，可以将列名用作结果集名称，也可以将列列表中的列的序号位置用作结果集名称。 使用列名作为结果集名称的功能将依赖于配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
   
-11. 单击“确定” 。  
+11. 单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [执行 SQL 任务](control-flow/execute-sql-task.md)   

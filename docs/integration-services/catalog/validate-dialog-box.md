@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26390931bce4a2b26a4b9e2c234368b02a1e0442
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729148"
 ---
 # <a name="validate-dialog-box"></a>“验证”对话框
@@ -48,7 +48,7 @@ ms.locfileid: "65729148"
   
 4.  展开包含您要验证的项目或包的文件夹。  
   
-5.  右键单击该包，然后单击“验证”。  
+5.  右键单击该包，然后单击“验证”  。  
   
 ##  <a name="general"></a> 设置“常规”页上的选项  
  **环境**  

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 51332c1d9d5076752a3897a12e5e6a1e5a2b6ee2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102859"
 ---
 # <a name="move-items-in-a-solution"></a>在解决方案中移动项
@@ -30,11 +30,11 @@ ms.locfileid: "65102859"
   
 1.  在解决方案资源管理器中，选择要移动的项。  
   
-2.  在“编辑”菜单上，单击“剪切”。  
+2.  在“编辑”  菜单上，单击“剪切”  。  
   
 3.  在解决方案资源管理器中，选择目标位置。  
   
-4.  在“编辑” 菜单上，单击“粘贴”。  
+4.  在“编辑”  菜单上，单击“粘贴”  。  
   
 可以通过在解决方案资源管理器中拖动查询和杂项文件来移动项。 拖动可使您看到拖动操作的结果。 将查询从一个项目类型移动到另一个项目类型可能会导致查询在目标项目中被视为杂项文件。  
   

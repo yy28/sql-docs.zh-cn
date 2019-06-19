@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064403"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -36,15 +36,15 @@ ms.locfileid: "66064403"
   
 -   列表模式  
   
-     使用此模式可以创建和修改层次结构。 若要在列表模式下查看属性，请从快捷菜单中选择 **“属性显示方式”** ，然后单击 **“列表”**。  
+     使用此模式可以创建和修改层次结构。 若要在列表模式下查看属性，请从快捷菜单中选择 **“属性显示方式”** ，然后单击 **“列表”** 。  
   
 -   树模式  
   
-     使用此模式可以创建和修改层次结构。 若要在树模式下查看属性，请从快捷菜单中选择 **“属性显示方式”** ，然后单击 **“树”**。  
+     使用此模式可以创建和修改层次结构。 若要在树模式下查看属性，请从快捷菜单中选择 **“属性显示方式”** ，然后单击 **“树”** 。  
   
 -   网格模式  
   
-     使用此模式可以手动创建维度或修改特性属性。 若要在网格模式下查看属性，请从快捷菜单中选择 **“属性显示方式”** ，然后单击 **“网格”**。  
+     使用此模式可以手动创建维度或修改特性属性。 若要在网格模式下查看属性，请从快捷菜单中选择 **“属性显示方式”** ，然后单击 **“网格”** 。  
   
 ## <a name="grid-mode-options"></a>网格模式选项  
  在网格模式中查看属性时，可以访问下表中所列出的列：  
@@ -58,7 +58,7 @@ ms.locfileid: "66064403"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |Regular|标识常规属性。|  
-|Key|标识维度的键属性。 此项对应于维度的叶成员。 每个维度只能有一个键属性。 若要修改此项，请在“属性”窗格中单击“KeyColumns” 属性旁边的省略号按钮 (**...**)。|  
+|Key|标识维度的键属性。 此项对应于维度的叶成员。 每个维度只能有一个键属性。 若要修改此项，请在“属性”  窗格中单击“KeyColumns”  属性旁边的省略号按钮 ( **...** )。|  
 |Parent|表示父子关系中的父属性。 此关系中的子属性必须始终为键属性。|  
 |AccountType|表示帐户类型属性。 当度量值的聚合函数设置为“by account”时，服务器或引擎将使用此项。|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66064403"
  显示基础列的数据类型。 创建新属性时，单击下箭头可以从可用的选项中进行选择。  
   
  **名称列**  
- 显示基础列的位置。 创建新属性时，单击下箭头可以选择 **“与键相同”** 或 **“单独列”**。 如果选择了 **“单独列”** ， **“属性”** 窗格中的 **NameColumn** 属性将设置存储相应名称的列以用于该属性。  
+ 显示基础列的位置。 创建新属性时，单击下箭头可以选择 **“与键相同”** 或 **“单独列”** 。 如果选择了 **“单独列”** ， **“属性”** 窗格中的 **NameColumn** 属性将设置存储相应名称的列以用于该属性。  
   
 ## <a name="see-also"></a>请参阅  
  [维度结构&#40;维度设计器&#41; &#40;Analysis Services-多维数据&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   

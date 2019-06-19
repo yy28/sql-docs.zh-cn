@@ -20,16 +20,16 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6a69b84fb78acaa30800f69783e6117e37e01149
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943861"
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-此函数以端到端的方式返回从串联或联接的两个或更多字符串值生成的字符串。 它会用第一个函数参数中指定的分隔符分隔连接的字符串值。 （`CONCAT_WS` 指示使用分隔符连接。）
+此函数以端到端的方式返回从串联或联接的两个或更多字符串值生成的字符串。 它会用第一个函数参数中指定的分隔符分隔连接的字符串值。 （`CONCAT_WS` 指示使用分隔符连接。） 
 
 ##  <a name="syntax"></a>语法   
 ```sql
@@ -40,7 +40,7 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 separator  
 任何字符类型的表达式（`char`、`nchar`、`nvarchar` 或 `varchar`）。
 
-argument1、argument2、argumentN  
+argument1、argument2、argumentN   
 任何类型的表达式。
 
 ## <a name="return-types"></a>返回类型

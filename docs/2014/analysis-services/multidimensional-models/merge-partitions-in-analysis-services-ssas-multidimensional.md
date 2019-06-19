@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073652"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合并分区（SSAS - 多维）
@@ -115,16 +115,16 @@ ms.locfileid: "66073652"
 > [!IMPORTANT]  
 >  合并分区之前，首先复制数据筛选信息（通常是基于 SQL 查询进行筛选的 WHERE 子句）。 以后，合并完成后，您应该更新包含累积事实数据的分区的“分区源”属性。  
   
-1.  在对象资源管理器中，展开包含要合并分区的多维数据集的“度量值组”节点，展开“分区”，右键单击要被合并或要合并到的分区。 例如，如果您要将每个季度的事实数据移到存储年度事实数据的分区，请选择包含年度事实数据的分区。  
+1.  在对象资源管理器中，展开包含要合并分区的多维数据集的“度量值组”  节点，展开“分区”  ，右键单击要被合并或要合并到的分区。 例如，如果您要将每个季度的事实数据移到存储年度事实数据的分区，请选择包含年度事实数据的分区。  
   
 2.  单击**合并分区**以打开**合并分区\<分区名称 >** 对话框。  
   
-3.  在 **“源分区”** 下，选中要与目标分区合并的每个源分区旁边的复选框，然后单击 **“确定”**。  
+3.  在 **“源分区”** 下，选中要与目标分区合并的每个源分区旁边的复选框，然后单击 **“确定”** 。  
   
     > [!NOTE]  
     >  源分区合并到目标分区后，将立即删除源分区。 合并完成后，刷新“分区”文件夹以更新其内容。  
   
-4.  右键单击包含累积数据的分区，然后选择“属性”。  
+4.  右键单击包含累积数据的分区，然后选择“属性”  。  
   
 5.  打开`Source`属性并修改 WHERE 子句，使之包括您刚合并的分区数据。 请记住，`Source`属性不会自动更新。 如果您重新处理而未首先更新`Source`，可能无法获得所有所需的数据。  
   

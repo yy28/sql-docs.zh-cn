@@ -18,10 +18,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2f278b257b1e14f88743a03098949712fa7a873
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946671"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
@@ -38,11 +38,11 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>参数
 
- inputString 是要搜索的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 inputString 可以是任何字符数据类型（nvarchar、varchar、nchar、char）。
+ inputString  是要搜索的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 inputString 可以是任何字符数据类型（nvarchar、varchar、nchar、char）  。
 
- characters 是一个包含应替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 字符可以是任何字符数据类型。
+  characters 是一个包含应替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 字符可以是任何字符数据类型  。
 
-translations 是一个包含替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 转换必须与字符的数据类型和长度相同。
+ translations 是一个包含替换字符的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 转换必须与字符的数据类型和长度相同   。
 
 ## <a name="return-types"></a>返回类型
 
@@ -50,7 +50,7 @@ translations 是一个包含替换字符的字符串[表达式](../../t-sql/lang
 
 ## <a name="remarks"></a>Remarks
 
-如果字符和转换表达式长度不同，则 `TRANSLATE` 将返回错误。 如果任何参数为 NULL，`TRANSLATE` 将返回 NULL。  
+如果字符和转换表达式长度不同，则 `TRANSLATE` 将返回错误   。 如果任何参数为 NULL，`TRANSLATE` 将返回 NULL。  
 
 `TRANSLATE` 函数行为类似于使用多个 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函数。 但是，`TRANSLATE` 不会多次替换字符。 这不同于多个 `REPLACE` 函数，因为每次使用都会替换所有相关字符。 
 

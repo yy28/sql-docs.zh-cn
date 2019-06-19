@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b75355aec1c0461f1f0b5b5938ec931de4820c2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727654"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>函数依赖关系配置文件请求选项（数据事件探查任务）
@@ -33,21 +33,21 @@ ms.locfileid: "65727654"
  有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>了解如何选择决定列和依赖列  
- “函数依赖关系配置文件请求”计算决定端列或列集（在 **DeterminantColumns** 属性中指定）对依赖端列（在 **DependentColumn** 属性中指定）的值的决定程度。 例如，美国的州列在函数关系上应依赖于美国邮政编码列。 也就是说，如果邮政编码（决定列）为 98052，则州（依赖列）应始终为华盛顿。  
+ “函数依赖关系配置文件请求”  计算决定端列或列集（在 **DeterminantColumns** 属性中指定）对依赖端列（在 **DependentColumn** 属性中指定）的值的决定程度。 例如，美国的州列在函数关系上应依赖于美国邮政编码列。 也就是说，如果邮政编码（决定列）为 98052，则州（依赖列）应始终为华盛顿。  
   
  可以在 **DeterminantColumns** 属性中指定一个列或列集作为决定端。 例如，假定有一个包含列 A、B 和 C 的示例表，则您可以在 **DeterminantColumns** 属性中进行以下选择：  
   
--   如果选择通配符 **(\*)**，则数据事件探查任务会将每个列都当作依赖关系的决定端进行测试。  
+-   如果选择通配符 **(\*)** ，则数据事件探查任务会将每个列都当作依赖关系的决定端进行测试。  
   
 -   如果选择通配符 **(\*)** 和其他一个或多个列，则数据事件探查任务会将每个列组合作为依赖关系的决定端进行测试。 例如，假定有一个包含列 A、B 和 C 的示例表。如果指定 **(\*)** 和列 C 作为 **DeterminantColumns** 属性的值，则数据事件探查任务会将组合 (A, C) 和 (B, C) 作为依赖关系的决定端进行测试。  
   
- 可以在 **(\*)** 属性中指定一个列或 **DependentColumn** 属性中指定一个列或列集作为决定端。 如果选择 **(\*)**，则数据事件探查任务将针对每个列测试决定端列或列集。  
+ 可以在 **(\*)** 属性中指定一个列或 **DependentColumn** 属性中指定一个列或列集作为决定端。 如果选择 **(\*)** ，则数据事件探查任务将针对每个列测试决定端列或列集。  
   
 > [!NOTE]  
->  如果选择 **(\*)**，则此选项可能会导致大量计算并降低任务性能。 但是，如果任务找到满足函数依赖关系阈值的子集，则它不会再分析其他的组合。 例如，在上述示例表中，如果任务确定列 C 为决定列，则不会再继续分析组合候选列。  
+>  如果选择 **(\*)** ，则此选项可能会导致大量计算并降低任务性能。 但是，如果任务找到满足函数依赖关系阈值的子集，则它不会再分析其他的组合。 例如，在上述示例表中，如果任务确定列 C 为决定列，则不会再继续分析组合候选列。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“函数依赖关系配置文件请求”**， **“请求属性”** 窗格将显示以下选项组：  
+ 对于 **“函数依赖关系配置文件请求”** ， **“请求属性”** 窗格将显示以下选项组：  
   
 -   **Data**，它包含 **DeterminantColumns** 选项和 **DependentColumn** 选项  
   
@@ -78,7 +78,7 @@ ms.locfileid: "65727654"
  有关详细信息，请参阅本主题前面的“了解如何选择决定列和依赖列”部分。  
   
  **IsWildCard**  
- 指定是否已选择通配符 **(\*)**。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
+ 指定是否已选择通配符 **(\*)** 。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
   
  **ColumnName**  
  显示所选列的名称。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项空白。 此选项是只读的。  

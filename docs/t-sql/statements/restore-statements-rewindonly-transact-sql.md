@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ffcb2612d84a7cd29044062ab264d6b40e3dfd64
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943704"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 语句 - REWINDONLY (Transact-SQL)
@@ -62,17 +62,17 @@ FROM <backup_device> [ ,...n ]
  指定要用于还原操作的逻辑或物理备份设备。  
   
  { *logical_backup_device_name* |  **@** _logical\_backup\_device\_name\_var_ }  
- 由 sp_addumpdevice 创建的、用于还原数据库的备份设备的逻辑名称，该名称必须符合有关标识符的规则。 如果作为变量 ( **@** _logical\_backup\_device\_name\_var_) 提供，则可以将该备份设备名称指定为字符串常量 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量。  
+ 由 sp_addumpdevice  创建的、用于还原数据库的备份设备的逻辑名称，该名称必须符合有关标识符的规则。 如果作为变量 ( **@** _logical\_backup\_device\_name\_var_) 提供，则可以将该备份设备名称指定为字符串常量 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) 或字符字符串数据类型（ntext  或 text  数据类型除外）的变量。  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- 允许从指定的磁盘或磁带设备还原备份。 应以设备的实际名称（例如，完整路径和文件名）指定磁盘和磁带的设备类型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 或 TAPE = '\\\\.\TAPE0'。 如果指定为变量 (@physical\_backup\_device\_name\_var)，则可以将该设备名称指定为字符串常量 (@physical\_backup\_device\_name\_var = 'physical_backup_device_name') 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量。  
+ 允许从指定的磁盘或磁带设备还原备份。 应以设备的实际名称（例如，完整路径和文件名）指定磁盘和磁带的设备类型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 或 TAPE = '\\\\.\TAPE0'。 如果指定为变量 (@physical\_backup\_device\_name\_var)，则可以将该设备名称指定为字符串常量 (@physical\_backup\_device\_name\_var = 'physical_backup_device_name') 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量        。  
   
  如果使用的是具有 UNC 名称（必须包含计算机名称）的网络服务器，请指定磁盘的设备类型。 有关如何使用 UNC 名称的详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
  运行 Microsoft SQL Server 所用的帐户必须对远程计算机或网络服务器拥有 READ 访问权，这样才能执行 RESTORE 操作。  
   
  *n*  
- 一个占位符，用于指示可以指定多个备份设备和逻辑备份设备。 备份设备或逻辑备份设备最多可以有 64 个。  
+ 一个占位符，用于指示可以指定多个备份设备和逻辑备份设备。 备份设备或逻辑备份设备最多可以有 64 个  。  
   
  还原顺序是否要求备份设备的数量与创建备份所属的介质集时所用的数量相同，这取决于还原是脱机还原还是联机还原。 脱机还原允许还原所用的设备少于创建备份时所用的设备。 联机还原要求使用备份的所有备份设备。 使用较少的设备进行还原将会失败。  
   

@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9867f73e382dbf59290844b0a7597eece7d4399a
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944297"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
@@ -47,11 +47,11 @@ PARSENAME ( 'object_name' , object_piece )
 ```  
   
 ## <a name="arguments"></a>参数  
- 'object_name'  
- 要检索其指定部分的对象的名称。 object_name 为 sysname。 此参数是可选的限定对象名称。 如果对象名称的所有部分都是限定的，则此名称可包含四部分：服务器名称、数据库名称、所有者名称以及对象名称。  
+ 'object_name'   
+ 要检索其指定部分的对象的名称。 object_name 为 sysname   。 此参数是可选的限定对象名称。 如果对象名称的所有部分都是限定的，则此名称可包含四部分：服务器名称、数据库名称、所有者名称以及对象名称。  
   
- object_piece  
- 要返回的对象部分。 object_piece 的数据类型为 int，可以为下列值：  
+ object_piece   
+ 要返回的对象部分。 object_piece 的数据类型为 int，可以为下列值   ：  
   
  1 = 对象名称  
   
@@ -67,7 +67,7 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="remarks"></a>Remarks  
  如果存在下列条件之一，则 PARSENAME 返回 NULL：  
   
--   object_name 或 object_piece 为 NULL。  
+-   object_name 或 object_piece 为 NULL   。  
   
 -   发生语法错误。  
   

@@ -14,10 +14,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51d12d639cf1f5b34824f5442f9af026005a56c4
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821809"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL 调试器 -“线程”窗口
@@ -27,7 +27,7 @@ ms.locfileid: "65821809"
 ## <a name="task-list"></a>任务列表  
  **访问“线程”窗口**  
   
--   在 **“调试”** 菜单上单击 **“窗口”**，然后单击 **“线程”**。  
+-   在 **“调试”** 菜单上单击 **“窗口”** ，然后单击 **“线程”** 。  
   
 ## <a name="columns"></a>“列”  
  **ID**  

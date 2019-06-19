@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bf5385adf8be483b569b7fc2f3213b73ba284b3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948217"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
@@ -47,7 +47,7 @@ ABS ( numeric_expression )
 精确数值或近似数值数据类型类别的表达式。
   
 ## <a name="return-types"></a>返回类型  
-返回与 numeric_expression 相同的类型。
+返回与 numeric_expression  相同的类型。
   
 ## <a name="examples"></a>示例  
 此示例显示了对三个不同数字使用 `ABS` 函数所得的结果。

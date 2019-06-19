@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 5375f3992cd5d969276b02612f02ab4c32842689
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718784"
 ---
 # <a name="add-a-scale-out-worker-with-scale-out-manager"></a>使用 Scale Out Manager 添加 Scale Out Worker
@@ -29,10 +29,10 @@ Integration Services Scale Out Manager 可简化向现有 Scale Out 环境添加
 按照以下步骤，将 Scale Out Worker 添加到 Scale Out 拓扑：
 
 ## <a name="1-install-scale-out-worker"></a>1.安装 Scale Out Worker
-在 SQL Server 安装向导中，在“功能选择”页上选择 Integration Services 和 Scale Out Worker。 
+在 SQL Server 安装向导中，在“功能选择”页上选择 Integration Services 和 Scale Out Worker  。 
 ![功能选择 Worker](media/feature-select-worker.PNG)
 
-在“Integration Services Scale Out 配置 - 辅助节点”页上，单击“下一步”即可跳过此处的配置，并使用“Scale Out Manager”完成安装后的配置。
+在“Integration Services Scale Out 配置 - 辅助节点”页上，单击“下一步”即可跳过此处的配置，并使用“Scale Out Manager”完成安装后的配置    。
 
 完成安装向导。
 
@@ -42,11 +42,11 @@ Integration Services Scale Out Manager 可简化向现有 Scale Out 环境添加
 ## <a name="3-add-a-scale-out-worker-with-scale-out-manager"></a>3.使用 Scale Out Manager 添加 Scale Out Worker
 以管理员身份运行 SQL Server Management Studio 并连接到 Scale Out Master 的 SQL Server 实例。
 
-在对象资源管理器中，右键单击“SSISDB”，并选择“管理 Scale Out”。 
+在对象资源管理器中，右键单击“SSISDB”，并选择“管理 Scale Out”   。 
 
 ![管理 Scale Out](media/manage-scale-out.PNG)
 
-在“Scale Out Manager”对话框中，切换到“Worker 管理器”。 选择“+”，并按照“连接 Worker”对话框中的说明进行操作。 
+在“Scale Out Manager”对话框中，切换到“Worker 管理器”   。 选择“+”，并按照“连接 Worker”对话框中的说明进行操作   。 
 
 ## <a name="next-steps"></a>后续步骤
 有关详细信息，请参阅 [Scale Out Manager](integration-services-ssis-scale-out-manager.md)。

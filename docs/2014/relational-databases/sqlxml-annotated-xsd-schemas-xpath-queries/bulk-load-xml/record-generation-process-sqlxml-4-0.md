@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013334"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>记录生成过程 (SQLXML 4.0)
@@ -148,17 +148,17 @@ ms.locfileid: "66013334"
   
 -   当 **\<客户 >** XML 数据文件中的元素节点进入作用域，则 XML 大容量加载将生成 Cust 表的记录。 然后，XML 大容量加载将必要的列值 （CustomerID、 CompanyName 和 City） 复制从**\<CustomerID >**， **\<公司名称 >**， 和 **\<城市 >** 与这些元素的子元素进入作用域。  
   
--   当**\<顺序 >** 元素节点进入作用域，则 XML 大容量加载将生成 CustOrder 表的记录。 XML 大容量加载将复制的值**OrderID**属性为此记录。 从获取客户 id 列所需的值 **\<CustomerID >** 的子元素**\<客户 >** 元素。 XML 大容量加载使用中指定的信息`<sql:relationship>`若要获取此记录的 CustomerID 外密钥值，除非**CustomerID**中指定的属性**\<顺序 >** 元素。 一般规则是：如果子元素显式指定外键属性的值，则 XML 大容量加载使用该值，而不通过使用指定的 `<sql:relationship>` 来获取父元素的值。 与此**\<顺序 >** 元素节点离开作用域中，XML 大容量加载将记录发送到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]然后再处理所有后续**\<顺序 >** 元素节点相同的方式。  
+-   当**\<顺序 >** 元素节点进入作用域，则 XML 大容量加载将生成 CustOrder 表的记录。 XML 大容量加载将复制的值**OrderID**属性为此记录。 从获取客户 id 列所需的值**\<CustomerID >** 的子元素**\<客户 >** 元素。 XML 大容量加载使用中指定的信息`<sql:relationship>`若要获取此记录的 CustomerID 外密钥值，除非**CustomerID**中指定的属性**\<顺序 >** 元素。 一般规则是：如果子元素显式指定外键属性的值，则 XML 大容量加载使用该值，而不通过使用指定的 `<sql:relationship>` 来获取父元素的值。 与此**\<顺序 >** 元素节点离开作用域中，XML 大容量加载将记录发送到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]然后再处理所有后续**\<顺序 >** 元素节点相同的方式。  
   
 -   最后， **\<客户 >** 元素节点离开作用域。 此时，XML 大容量加载将客户记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 XML 大容量加载为 XML 数据流中的所有后续客户执行此过程。  
   
  以下是有关映射架构的两点结论：  
   
--   当架构满足"包容"规则 (例如，与客户和订单相关联的所有数据在关联的范围内都定义**\<客户 >** 和 **\<顺序 >** 元素节点)，大容量加载成功。  
+-   当架构满足"包容"规则 (例如，与客户和订单相关联的所有数据在关联的范围内都定义**\<客户 >** 和**\<顺序 >** 元素节点)，大容量加载成功。  
   
--   在描述**\<客户 >** 元素，以适当顺序指定了元素及其子项目。 在这种情况下，  **\<CustomerID >** 子元素指定之前**\<顺序 >** 子元素。 这意味着，在输入 XML 数据文件中，  **\<CustomerID >** 元素的值是可用作外键时值**\<顺序 >** 元素进入作用域。 首先指定键属性，此即“键排序规则”。  
+-   在描述**\<客户 >** 元素，以适当顺序指定了元素及其子项目。 在这种情况下， **\<CustomerID >** 子元素指定之前**\<顺序 >** 子元素。 这意味着，在输入 XML 数据文件中， **\<CustomerID >** 元素的值是可用作外键时值**\<顺序 >** 元素进入作用域。 首先指定键属性，此即“键排序规则”。  
   
-     如果指定 **\<CustomerID >** 子元素的后面**\<顺序 >** 子元素，值不可用 **\<顺序 >** 元素进入作用域。 当 **\</o >** 然后读取结束标记、 CustOrder 表的记录视为完成并使用 NULL 值作为 CustomerID 列，这不是所需的结果在 CustOrder 表中插入。  
+     如果指定**\<CustomerID >** 子元素的后面**\<顺序 >** 子元素，值不可用**\<顺序 >** 元素进入作用域。 当 **\</o >** 然后读取结束标记、 CustOrder 表的记录视为完成并使用 NULL 值作为 CustomerID 列，这不是所需的结果在 CustOrder 表中插入。  
   
 #### <a name="to-create-a-working-sample"></a>创建工作示例  
   
@@ -261,7 +261,7 @@ ms.locfileid: "66013334"
   
  因为大容量加载忽略 IDREFS 类型的节点，则不生成记录时**OrderList**属性节点进入作用域。 如果要将订单记录添加到 Orders 表，必须在架构中的某个地方描述这些订单。 在此架构中，指定**\<顺序 >** 元素可确保 XML 大容量加载将订单记录添加到订单表。 **\<顺序 >** 元素描述填充 CustOrder 表的记录所需的所有属性。  
   
- 您必须确保**CustomerID**并**OrderID**中的值**\<客户 >** 元素中的值匹配 **\<顺序 >** 元素。 由您负责维护引用完整性。  
+ 您必须确保**CustomerID**并**OrderID**中的值**\<客户 >** 元素中的值匹配**\<顺序 >** 元素。 由您负责维护引用完整性。  
   
 #### <a name="to-test-a-working-sample"></a>测试工作示例  
   

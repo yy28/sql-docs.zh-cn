@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 327333366b2636bd74d78fb8c2713f5b4c8707f7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724257"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>使用脚本任务发送 HTML 邮件消息
@@ -35,7 +35,7 @@ ms.locfileid: "65724257"
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="description"></a>描述  
- 以下示例使用 System.Net.Mail 命名空间配置和发送 HTML 邮件。 该脚本从包变量获取电子邮件的收件人、发件人、主题和正文，然后使用它们创建一个新 MailMessage，并将其 IsBodyHtml 属性设置为 True。 然后，该脚本从另一个包变量获取 SMTP 服务器名称，初始化 System.Net.Mail.SmtpClient 实例，并调用其 Send 方法发送 HTML 消息。 该示例将消息发送功能封装到一个可在其他脚本中重用的子例程中。  
+ 以下示例使用 System.Net.Mail 命名空间配置和发送 HTML 邮件  。 该脚本从包变量获取电子邮件的收件人、发件人、主题和正文，然后使用它们创建一个新 MailMessage，并将其 IsBodyHtml 属性设置为 True    。 然后，该脚本从另一个包变量获取 SMTP 服务器名称，初始化 System.Net.Mail.SmtpClient 实例，并调用其 Send 方法发送 HTML 消息   。 该示例将消息发送功能封装到一个可在其他脚本中重用的子例程中。  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>不使用 SMTP 连接管理器配置此脚本任务示例  
   
@@ -49,19 +49,19 @@ ms.locfileid: "65724257"
   
 3.  创建一个名为 `HtmlEmailServer` 的字符串变量，并向其分配一个可接收匿名传出消息的可用 SMTP 服务器的名称。  
   
-4.  将这五个变量全部分配到新脚本任务的 ReadOnlyVariables 属性。  
+4.  将这五个变量全部分配到新脚本任务的 ReadOnlyVariables 属性  。  
   
-5.  将 System.Net 和 System.Net.Mail 命名空间导入代码。  
+5.  将 System.Net 和 System.Net.Mail 命名空间导入代码   。  
   
  本主题中的示例代码从包变量获取 SMTP 服务器名称。 当然，还可以利用 SMTP 连接管理器封装连接信息，并在代码中从连接管理器提取服务器名称。 SMTP 连接管理器的 <xref:Microsoft.SqlServer.Dts.ManagedConnections.SMTPConn.AcquireConnection%2A> 方法以下列格式返回一个字符串：  
   
  `SmtpServer=smtphost;UseWindowsAuthentication=False;EnableSsl=False;`  
   
- 可以使用 String.Split 方法将此参数列表从每个分号 (;) 或等号 (=) 处分为一个单独的字符串数组，然后提取该数组的第二个参数 (subscript 1) 作为服务器名称。  
+ 可以使用 String.Split 方法将此参数列表从每个分号 (;) 或等号 (=) 处分为一个单独的字符串数组，然后提取该数组的第二个参数 (subscript 1) 作为服务器名称  。  
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>使用 SMTP 连接管理器配置此脚本任务示例  
   
-1.  通过从 ReadOnlyVariables 列表删除 `HtmlEmailServer` 变量修改先前配置的脚本任务。  
+1.  通过从 ReadOnlyVariables 列表删除 `HtmlEmailServer` 变量修改先前配置的脚本任务  。  
   
 2.  将获取服务器名称的代码行：  
   

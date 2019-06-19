@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4d0fdc777715dc7077fc3396e533c5e6336a675
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728654"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>准备查询变更数据
@@ -131,7 +131,7 @@ ms.locfileid: "65728654"
   
 5.  保留从脚本执行过程返回 **DtsExecResult.Success** 的默认代码行。  
   
-6.  关闭脚本开发环境和 **“脚本任务编辑器”**。  
+6.  关闭脚本开发环境和 **“脚本任务编辑器”** 。  
   
 #### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>使用执行 SQL 任务连接查询字符串  
   
@@ -142,11 +142,11 @@ ms.locfileid: "65728654"
   
 2.  在 **“执行 SQL 任务编辑器”** 中的 **“常规”** 页上，选择以下选项：  
   
-    1.  对于 **ResultSet**，选择 **“单行”**。  
+    1.  对于 **ResultSet**，选择 **“单行”** 。  
   
     2.  配置到源数据库的有效连接。  
   
-    3.  对于 **SQLSourceType**，选择 **“直接输入”**。  
+    3.  对于 **SQLSourceType**，选择 **“直接输入”** 。  
   
     4.  对于 **SQLStatement**，输入以下 SQL 语句：  
   
@@ -203,6 +203,6 @@ ms.locfileid: "65728654"
 ## <a name="next-step"></a>下一步  
  在准备查询字符串和配置数据流任务之后，下一步就是创建用于从数据库检索变更数据的表值函数。  
   
- **下一个主题：**[创建函数以检索变更数据](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+ **下一个主题：** [创建函数以检索变更数据](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
   

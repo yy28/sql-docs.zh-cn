@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27b5758dcac60f2c36ad08f600a36d9d501a811d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486483"
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
@@ -62,7 +62,7 @@ ms.locfileid: "65486483"
 ## <a name="sequential-or-simultaneous-versions"></a>顺序版本或同时版本  
  可以创建模型的顺序版本或同时版本。  
   
--   **顺序版本：** 每次提交版本时，可以创建新的副本并为版本提供下一个序列号。 例如，可以复制 **“版本 7”** 的模型，并将副本命名为 **“版本 8”**。  
+-   **顺序版本：** 每次提交版本时，可以创建新的副本并为版本提供下一个序列号。 例如，可以复制 **“版本 7”** 的模型，并将副本命名为 **“版本 8”** 。  
   
 -   **同时版本：** 要同时使用数据的两个或多个版本时，可以创建模型的同时版本。 如果您的公司存在与正常业务流程相符的重组或合并行为，并且您要确定如何使新的主数据适应现有结构，同时版本将非常有用。  
   

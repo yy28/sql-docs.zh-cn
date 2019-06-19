@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e1d29433e9d788f0f34adc30902bedde0938c428
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820824"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>将文件扩展名与代码编辑器关联
@@ -31,29 +31,29 @@ ms.locfileid: "65820824"
   
 ### <a name="to-associate-a-new-file-extension-with-sql-server-management-studio"></a>将新的文件扩展名与 SQL Server Management Studio 相关联  
   
-1.  在 **“开始”** 菜单中，指向 **“所有程序”**，指向 **“附件”**，再单击 **“Windows 资源管理器”**。  
+1.  在 **“开始”** 菜单中，指向 **“所有程序”** ，指向 **“附件”** ，再单击 **“Windows 资源管理器”** 。  
   
-2.  在 Windows 资源管理器的 **“工具”** 菜单上，单击 **“文件夹选项”**。  
+2.  在 Windows 资源管理器的 **“工具”** 菜单上，单击 **“文件夹选项”** 。  
   
-3.  在 **“文件夹选项”** 对话框的 **“文件类型”** 选项卡上，单击 **“新建”**。  
+3.  在 **“文件夹选项”** 对话框的 **“文件类型”** 选项卡上，单击 **“新建”** 。  
   
-4.  在 **“新建扩展名”** 对话框的 **“文件扩展名”** 框中，键入要关联的新文件扩展名，然后单击 **“确定”**。 扩展名不要以句点开头。  
+4.  在 **“新建扩展名”** 对话框的 **“文件扩展名”** 框中，键入要关联的新文件扩展名，然后单击 **“确定”** 。 扩展名不要以句点开头。  
   
-5.  在 **“已注册的文件类型”** 框，单击新的扩展名，再单击 **“更改”**。  
+5.  在 **“已注册的文件类型”** 框，单击新的扩展名，再单击 **“更改”** 。  
   
-6.  在“打开方式”对话框中，单击“SSMS - SQL Server Management Studio”，再单击“确定”。  
+6.  在“打开方式”对话框中，单击“SSMS - SQL Server Management Studio”，再单击“确定”    。  
   
 7.  单击 **“关闭”** 关闭 **“文件夹选项”** 对话框，然后关闭 Windows 资源管理器。  
   
 ### <a name="to-associate-a-new-file-extension-with-a-code-editor-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中将新文件扩展名与代码编辑器相关联  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“工具”** 菜单中，单击 **“选项”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“工具”** 菜单中，单击 **“选项”** 。  
   
-2.  在 **“选项”** 对话框中，单击 **“文本编辑器”**，再单击 **“文件扩展名”**。  
+2.  在 **“选项”** 对话框中，单击 **“文本编辑器”** ，再单击 **“文件扩展名”** 。  
   
 3.  在 **“扩展名”** 框中，键入新的文件扩展名。  
   
-4.  在 **“编辑器”** 框中，单击要用于打开此文件类型的代码编辑器，单击 **“添加”**，再单击 **“确定”**。  
+4.  在 **“编辑器”** 框中，单击要用于打开此文件类型的代码编辑器，单击 **“添加”** ，再单击 **“确定”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [Ssms 实用工具](../../tools/sql-server-management-studio/ssms-utility.md)  

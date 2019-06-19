@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1d46915d40388ee5e899a94a80d64ff0ae3361bd
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945864"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
@@ -37,22 +37,22 @@ CERTENCODED ( cert_id )
 ```  
   
 ## <a name="arguments"></a>参数  
-cert_id  
-证书的 certificate_id。 在 sys. 证书中找到此值；[CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数也将返回该值。 cert_id 为 int 数据类型。
+cert_id   
+证书的 certificate_id  。 在 sys. 证书中找到此值；[CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数也将返回该值。 cert_id 为 int 数据类型   。
   
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-同时使用 CERTENCODED 和 CERTPRIVATEKEY 以二进制格式返回证书的其他部分。
+同时使用 CERTENCODED 和 CERTPRIVATEKEY 以二进制格式返回证书的其他部分   。
   
 ## <a name="permissions"></a>权限  
-CERTENCODED 向用户开放使用。
+CERTENCODED 向用户开放使用  。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="simple-example"></a>简单示例  
-此示例创建一个名为 `Shipping04` 的证书，然后使用 CERTENCODED 函数返回该证书的二进制编码。 此示例将该证书的到期日期设置为 2040 年 10 月 31 日。
+此示例创建一个名为 `Shipping04` 的证书，然后使用 CERTENCODED 函数返回该证书的二进制编码  。 此示例将该证书的到期日期设置为 2040 年 10 月 31 日。
   
 ```sql
 CREATE DATABASE TEST1;
