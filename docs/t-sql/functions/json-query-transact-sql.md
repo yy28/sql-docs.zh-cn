@@ -20,10 +20,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: ba0fdffbc354e87419da9d349841d63c38ab794b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577431"
 ---
 # <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "65577431"
 
  从 JSON 字符串中提取对象或数组。  
   
- 若要从 JSON 字符串提取标量值而不是对象或数组，请参阅 [JSON_VALUE (Transact SQL)](../../t-sql/functions/json-value-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)。  
+ 若要从 JSON 字符串提取标量值而不是对象或数组，请参阅 [JSON_VALUE (Transact SQL)](../../t-sql/functions/json-value-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)   。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,18 +47,18 @@ JSON_QUERY ( expression [ , path ] )
  *expression*  
  一个表达式。 通常是包含 JSON 文本的变量或列的名称。  
   
- 如果 JSON_QUERY 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误。 如果 JSON_QUERY 找不到由 path 标识的值，则它会扫描整个文本，并且会在找到在 expression 中任何位置无效的 JSON 时返回错误。  
+ 如果 JSON_QUERY 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误    。 如果 JSON_QUERY 找不到由 path 标识的值，则它会扫描整个文本，并且会在找到在 expression 中任何位置无效的 JSON 时返回错误    。  
   
- path  
+ path   
  指定要提取的对象或数组的 JSON 路径。
 
-在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值。
+在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值  。
 
 JSON 路径可以为分析指定宽松或严格模式。 如果未指定分析模式，则宽松模式是默认值。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
 
-path 的默认值是“$”。 因此，如果没有为 path 提供值，则 JSON_QUERY 会返回输入 expression。
+path 的默认值是“$”  。 因此，如果没有为 path 提供值，则 JSON_QUERY 会返回输入 expression    。
 
-如果 path 格式无效，则 JSON_QUERY 返回错误。  
+如果 path 格式无效，则 JSON_QUERY 返回错误   。  
   
 ## <a name="return-value"></a>返回值
 
@@ -107,7 +107,7 @@ path 的默认值是“$”。 因此，如果没有为 path 提供值，则 JSO
 
 **JSON_QUERY** 返回有效 JSON 片段。 因此，**FOR JSON** 不对 **JSON_QUERY** 返回值中的特殊字符进行转义。
 
-如果在使用 FOR JSON 返回结果，并且包含已采用 JSON 格式（在列中或作为表达式的结果）的数据，则使用不带 path 参数的 JSON_QUERY 对数据进行包装。
+如果在使用 FOR JSON 返回结果，并且包含已采用 JSON 格式（在列中或作为表达式的结果）的数据，则使用不带 path 参数的 JSON_QUERY 对数据进行包装   。
 
 ## <a name="examples"></a>示例  
   

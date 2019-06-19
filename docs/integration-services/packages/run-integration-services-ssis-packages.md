@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805252"
 ---
 # <a name="run-integration-services-ssis-packages"></a>运行 Integration Services (SSIS) 包
@@ -66,29 +66,29 @@ ms.locfileid: "65805252"
 ## <a name="run-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中运行包
   在开发、调试和测试包的过程中，通常在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行包。 在从 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器运行包时，包始终可以立即运行。  
   
- 包运行时， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器在 **“进度”** 选项卡上显示包执行的进度。除了有关包中失败的所有任务或容器的信息外，还可以查看包及其任务和容器的开始时间和完成时间。 在包完成运行后，运行时信息仍显示在“执行结果”选项卡上。有关详细信息，请参阅 [Debugging Control Flow](../../integration-services/troubleshooting/debugging-control-flow.md)主题中的“进度报告”部分。  
+ 包运行时， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器在 **“进度”** 选项卡上显示包执行的进度。除了有关包中失败的所有任务或容器的信息外，还可以查看包及其任务和容器的开始时间和完成时间。 在包完成运行后，运行时信息仍显示在“执行结果”  选项卡上。有关详细信息，请参阅 [Debugging Control Flow](../../integration-services/troubleshooting/debugging-control-flow.md)主题中的“进度报告”部分。  
   
  **设计时部署**。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行包时，包被生成，然后部署到文件夹。 在运行包前，可以指定要包将部署到其中的文件夹。 如果未指定文件夹，默认将使用 **bin** 文件夹。 这种部署称为设计时部署。  
   
 ### <a name="to-run-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中运行包  
   
-1.  在“解决方案资源管理器”中，如果解决方案包含多个项目，则右键单击包含包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，然后单击“设为启动对象”以便设置启动项目。  
+1.  在“解决方案资源管理器”中，如果解决方案包含多个项目，则右键单击包含包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，然后单击“设为启动对象”  以便设置启动项目。  
   
-2.  在“解决方案资源管理器”中，如果项目包含多个包，则右键单击某个包，然后单击“设为启动对象”以便设置启动包。  
+2.  在“解决方案资源管理器”中，如果项目包含多个包，则右键单击某个包，然后单击“设为启动对象”  以便设置启动包。  
   
 3.  若要运行包，请执行以下操作：  
   
     -   打开要运行的包，然后单击菜单栏上的 **“启动调试”** ，或按 F5。 包运行完成后，按 Shift+F5 返回设计模式。  
   
-    -   在“解决方案资源管理器”中，右键单击包，然后单击“执行包”。  
+    -   在“解决方案资源管理器”中，右键单击包，然后单击“执行包”  。  
   
 ### <a name="to-specify-a-different-folder-for-design-time-deployment"></a>为设计时部署指定不同文件夹  
   
-1.  在“解决方案资源管理器”中，右键单击包含要运行的包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目文件夹，然后单击“属性”。  
+1.  在“解决方案资源管理器”中，右键单击包含要运行的包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目文件夹，然后单击“属性”  。  
   
-2.  在“\<项目名称> 属性页”对话框中，单击“生成”。  
+2.  在“\<项目名称> 属性页”  对话框中，单击“生成”  。  
   
-3.  更新 OutputPath 属性中的值以指定要用于设计时部署的文件夹，然后单击“确定”。  
+3.  更新 OutputPath 属性中的值以指定要用于设计时部署的文件夹，然后单击“确定”  。  
 
 
 ## <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 在 SSIS 服务器上运行包
@@ -102,15 +102,15 @@ ms.locfileid: "65805252"
   
 2.  在对象资源管理器中，展开 **“Integration Services 目录”** 节点，再展开 **“SSISDB”** 节点，然后导航到包含在您部署的项目中的包。  
   
-3.  右键单击包名称，然后选择“执行”。  
+3.  右键单击包名称，然后选择“执行”  。  
   
-4.  使用 **“执行包”** 对话框中的 **“参数”**、 **“连接管理器”** 和 **“高级”** 选项卡上的设置来配置包执行。  
+4.  使用 **“执行包”** 对话框中的 **“参数”** 、 **“连接管理器”** 和 **“高级”** 选项卡上的设置来配置包执行。  
   
 5.  单击 **“确定”** 运行包。  
   
      -或 -  
   
-     使用存储过程来运行包。 单击“脚本”生成创建执行实例并启动执行实例的 Transact-SQL 语句。 该语句包含对 catalog.create_execution、catalog.set_execution_parameter_value 和 catalog.start_execution 存储过程的调用。 有关这些存储过程的详细信息，请参阅 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)和 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。  
+     使用存储过程来运行包。 单击“脚本”  生成创建执行实例并启动执行实例的 Transact-SQL 语句。 该语句包含对 catalog.create_execution、catalog.set_execution_parameter_value 和 catalog.start_execution 存储过程的调用。 有关这些存储过程的详细信息，请参阅 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)和 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。  
 
 ## <a name="execute_package_dialog"></a> Execute Package Dialog Box
   使用 **“执行包”** 对话框可以运行在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上存储的包。  
@@ -143,7 +143,7 @@ ms.locfileid: "65805252"
   
 4.  展开包含您要运行的包的文件夹。  
   
-5.  右键单击该包，然后单击“执行”。  
+5.  右键单击该包，然后单击“执行”  。  
   
 ###  <a name="general"></a> 设置“常规”页上的选项  
  选择 **“环境”** 以便指定适用于运行的包的环境。  
@@ -157,7 +157,7 @@ ms.locfileid: "65805252"
 ###  <a name="advanced"></a> 设置“高级”选项卡上的选项  
  使用“高级”选项卡可以管理属性和其他包设置。  
   
- “添加”、“编辑”、“删除”  
+ “添加”  、“编辑”  、“删除”   
  单击以便添加、编辑或删除某一属性。  
   
  **日志记录级别**  
@@ -170,7 +170,7 @@ ms.locfileid: "65805252"
  指定包将在 32 位系统上执行。  
   
 ###  <a name="script"></a> 编写“执行包”对话框中选项的脚本  
- 在您处于 **“执行包”** 对话框中时，还可以使用工具栏上的 **“脚本”** 按钮为您编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码。 生成的脚本使用与你在“执行包”对话框中选择的相同选项调用存储过程 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。 该脚本出现在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的新脚本窗口中。  
+ 在您处于 **“执行包”** 对话框中时，还可以使用工具栏上的 **“脚本”** 按钮为您编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码。 生成的脚本使用与你在“执行包”  对话框中选择的相同选项调用存储过程 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。 该脚本出现在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的新脚本窗口中。  
 
 ## <a name="see-also"></a>另请参阅  
  [dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)   
