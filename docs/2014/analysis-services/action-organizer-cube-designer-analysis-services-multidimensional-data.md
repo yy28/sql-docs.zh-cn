@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d48f3d23ce9e8c3eca83396d9413d82717fa3c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062932"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>操作组织程序（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -29,7 +29,7 @@ ms.locfileid: "66062932"
  选择一个操作将显示 **操作窗体编辑器**；选择钻取操作将显示 **钻取操作窗体编辑器**，或选择报表操作以显示 **报表操作窗体编辑器**。  
   
 ## <a name="context-menu"></a>上下文菜单  
- 右键单击“操作组织程序”窗格中的操作，可以从所显示的上下文菜单中访问以下选项：  
+ 右键单击“操作组织程序”  窗格中的操作，可以从所显示的上下文菜单中访问以下选项：  
   
  **新的操作**  
  单击此项可显示 **“操作窗体编辑器”** 窗格并创建新操作。  
@@ -44,6 +44,6 @@ ms.locfileid: "66062932"
  单击此项可显示 **“删除对象”** 对话框，并删除所选操作。  
   
 > [!NOTE]  
->  只有在选择了“操作组织程序”窗格时，才启用此选项。  
+>  只有在选择了“操作组织程序”  窗格时，才启用此选项。  
   
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1d610ea44ff29056228d6bf788cba1f74a50db58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061677"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>连接到 SQL Server (SybaseToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63061677"
 **服务器名称**  
 输入或选择要连接到的 SQL Server 实例。 默认情况下，显示最近连接到的实例。  
   
--   如果要连接到本地计算机上的默认实例，可以输入**localhost**或句点 (**。**)。  
+-   如果要连接到本地计算机上的默认实例，可以输入**localhost**或句点 ( **。** )。  
   
 -   如果要连接到另一台计算机上的默认实例，输入的计算机的名称。  
   

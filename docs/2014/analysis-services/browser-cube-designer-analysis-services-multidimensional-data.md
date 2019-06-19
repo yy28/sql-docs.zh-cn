@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4415fedb492eb32c2929c50999cad1542b41ca78
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064618"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>浏览器（多维数据集设计器）（Analysis Services - 多维数据）
@@ -53,13 +53,13 @@ ms.locfileid: "66064618"
  工具栏中包含可以在设计视图或查询视图中使用的工具。 有关工具栏以及如何使用其功能的详细信息，请参阅[工具栏（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **在 Excel 中分析**  
- 使用“在 Excel 中分析”功能可以将当前选定的多维数据集数据发送到 Excel，这样你就可以在数据透视表中预览这些数据。 当前选定的数据基于您从 **“元数据”** 窗格中添加的项以及您使用筛选器和查询生成函数可能已经定义的所有筛选器。 有关详细信息，请参阅[在 Excel 中分析（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用“在 Excel 中分析”  功能可以将当前选定的多维数据集数据发送到 Excel，这样你就可以在数据透视表中预览这些数据。 当前选定的数据基于您从 **“元数据”** 窗格中添加的项以及您使用筛选器和查询生成函数可能已经定义的所有筛选器。 有关详细信息，请参阅[在 Excel 中分析（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **元数据**  
- 使用“元数据”窗格可以查看多维数据集所包含的对象，以便在层次结构中深化以及浏览和使用度量值。 选择多维数据集后，您可以在 **“报表”** 窗格中查看与所选多维数据集相关联的数据。 有关此窗格的详细信息，请参阅[元数据（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用“元数据”  窗格可以查看多维数据集所包含的对象，以便在层次结构中深化以及浏览和使用度量值。 选择多维数据集后，您可以在 **“报表”** 窗格中查看与所选多维数据集相关联的数据。 有关此窗格的详细信息，请参阅[元数据（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **筛选器和查询**  
- 使用设计图面的这一区域可以生成 MDX 查询，只需从“元数据”窗格中拖放对象，并对源多维数据集或维度指定筛选条件。 有关详细信息，请参阅[查询和筛选（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)。  
+ 使用设计图面的这一区域可以生成 MDX 查询，只需从“元数据”  窗格中拖放对象，并对源多维数据集或维度指定筛选条件。 有关详细信息，请参阅[查询和筛选（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集对象&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   

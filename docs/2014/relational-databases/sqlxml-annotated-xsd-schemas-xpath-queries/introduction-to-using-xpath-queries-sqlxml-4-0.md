@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012713"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
@@ -45,11 +45,11 @@ ms.locfileid: "66012713"
 </root>  
 ```  
   
- 本文档中**\<客户 >** 是元素节点**cid**是属性节点，和 **"Important"** 是文本节点。  
+ 本文档中 **\<客户 >** 是元素节点**cid**是属性节点，和 **"Important"** 是文本节点。  
   
- XPath 是图形导航语言，用于从 XML 文档中选择节点集。 每个 XPath 运算符根据前一个 XPath 运算符所选择的节点集来选择节点集。 例如，给定一组**\<客户 >** 节点，XPath 可以选择所有**\<顺序 >** 节点**日期**属性值 **"7/14/1999"**。 生成的节点集包含订单日期为 7/14/1999 的所有订单。  
+ XPath 是图形导航语言，用于从 XML 文档中选择节点集。 每个 XPath 运算符根据前一个 XPath 运算符所选择的节点集来选择节点集。 例如，给定一组 **\<客户 >** 节点，XPath 可以选择所有 **\<顺序 >** 节点**日期**属性值 **"7/14/1999"** 。 生成的节点集包含订单日期为 7/14/1999 的所有订单。  
   
- 万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了一部分的 W3C XPath 规范，位于 http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ 万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了一部分的 W3C XPath 规范，位于 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  以下是 W3C XPath 实现与 SQLXML 4.0 实现之间的主要差异。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109920"
 ---
 # <a name="cache-refresh-options-report-manager"></a>缓存刷新选项（报表管理器）
@@ -31,16 +31,16 @@ ms.locfileid: "66109920"
   
 2.  悬停在该报表或共享数据集之上，然后单击下拉箭头。  
   
-3.  在下拉列表中，单击 **“管理”**。 此时，将打开 **“常规”** 属性页。  
+3.  在下拉列表中，单击 **“管理”** 。 此时，将打开 **“常规”** 属性页。  
   
 4.  单击 **“缓存刷新计划”** 选项卡。  
   
-5.  若要创建新的缓存计划，请单击 **“新建缓存刷新计划”**。  
+5.  若要创建新的缓存计划，请单击 **“新建缓存刷新计划”** 。  
   
     > [!NOTE]  
     >  必须启用并启动 SQL Server 代理服务，才能创建缓存刷新计划。  
   
-6.  若要创建缓存计划的副本然后对其自定义，请单击 **“根据现有内容新建”**。  
+6.  若要创建缓存计划的副本然后对其自定义，请单击 **“根据现有内容新建”** 。  
   
 ## <a name="cache-refresh-options"></a>缓存刷新选项  
  **删除**  

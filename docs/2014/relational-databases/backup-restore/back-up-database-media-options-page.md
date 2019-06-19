@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 712ea68c3e0405399e3868e3f7fce375c351f4c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876814"
 ---
 # <a name="back-up-database-media-options-page"></a>备份数据库（“介质选项”页）
@@ -33,7 +33,7 @@ ms.locfileid: "62876814"
 >  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅[维护计划](../maintenance-plans/maintenance-plans.md)和[使用维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”  按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本。  
   
 ## <a name="options"></a>选项  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62876814"
  如果备份到现有介质集，还可以要求备份操作验证备份集的名称和过期时间。  
   
  **介质集名称**  
- 如果选中了“检查媒体集名称和备份集过期时间”，还可以指定用于此备份操作的媒体集的名称。  
+ 如果选中了“检查媒体集名称和备份集过期时间”  ，还可以指定用于此备份操作的媒体集的名称。  
   
  **备份到新介质集并清除所有现有备份集**  
  使用新介质集，并清除以前的备份集。  
