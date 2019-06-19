@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97c652c257b6d2aea6eec532c14ffebb6044ed45
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723599"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
@@ -119,7 +119,7 @@ ms.locfileid: "65723599"
   
      ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
   
-3.  为列表自身中或 **“属性”** 窗口中的 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
+3.  为列表自身中或 **“属性”** 窗口中的 **“名称”** 、 **“数据类型”** 、 **“值”** 、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
   
     |属性|描述|  
     |--------------|-----------------|  
@@ -134,15 +134,15 @@ ms.locfileid: "65723599"
   
 4.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件中。  
   
-    > **警告！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮，可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
+    > **警告！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。  可以使用“删除 (X)”工具栏按钮来删除参数。  使用最后一个工具栏按钮，可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
   
-    > **注意**：如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。  
+    > **注意**：如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。   
   
 ### <a name="create-project-parameters"></a>创建项目参数  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中打开该项目。  
   
-2.  在解决方案资源管理器中右键单击“Project.params”，然后单击“打开”，或者双击“Project.params”将其打开。  
+2.  在解决方案资源管理器中右键单击“Project.params”，然后单击“打开”，或者双击“Project.params”将其打开。     
   
      ![项目参数窗口](../integration-services/media/denali-project-parameters.gif "Project Parameters Window")  
   
@@ -150,7 +150,7 @@ ms.locfileid: "65723599"
   
      ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
   
-4.  为 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。  
+4.  为 **“名称”** 、 **“数据类型”** 、 **“值”** 、 **“敏感”** 和 **“必需”** 属性输入值。  
   
     |属性|描述|  
     |--------------|-----------------|  
@@ -163,10 +163,10 @@ ms.locfileid: "65723599"
   
 5.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件的配置中。 保存项目文件以将对参数值的所有更改提交到磁盘。  
   
-    > **警告！！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮打开 **“管理参数值”** 对话框，您可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
+    > **警告！！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。  可以使用“删除 (X)”工具栏按钮来删除参数。  使用最后一个工具栏按钮打开 **“管理参数值”** 对话框，您可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-“参数化”对话框可使将新的或现有的参数与任务属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。 以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](https://msdn.microsoft.com/library/hh213214.aspx)。
+“参数化”  对话框可使将新的或现有的参数与任务属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。  以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](https://msdn.microsoft.com/library/hh213214.aspx)。
   
 ### <a name="options"></a>选项  
  **属性**  
@@ -191,7 +191,7 @@ ms.locfileid: "65723599"
  指定参数的默认值。 这也称作设计默认值，以后在部署时可以覆盖该值。  
   
  **范围**  
- 通过选择“项目”或“包”选项指定参数的范围。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
+ 通过选择“项目”或“包”选项指定参数的范围。   项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
   
  **区分**  
  通过选中或清除该复选框，指定参数是否为敏感参数。 敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。  
@@ -204,13 +204,13 @@ ms.locfileid: "65723599"
   
 ### <a name="set-server-defaults-with-ssms-object-explorer"></a>使用 SSMS 对象资源管理器设置服务器默认值  
   
-1.  选择并右键单击“集成服务”节点下的项目。  
+1.  选择并右键单击“集成服务”节点下的项目。   
   
 2.  单击 **“属性”** 以便打开 **“项目属性”** 对话框窗口。  
   
-3.  通过在 **“选择页”** 之下单击 **“参数”**，打开参数页。  
+3.  通过在 **“选择页”** 之下单击 **“参数”** ，打开参数页。  
   
-4.  在 **“参数”** 列表中选择所需参数。 注意：“容器”列将帮助区分项目参数和包参数。  
+4.  在 **“参数”** 列表中选择所需参数。 注意：“容器”  列将帮助区分项目参数和包参数。  
   
 5.  在 **“值”** 列中，指定所需的服务器默认参数值。  
 

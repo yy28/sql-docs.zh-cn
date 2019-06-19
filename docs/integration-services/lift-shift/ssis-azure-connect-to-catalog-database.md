@@ -12,10 +12,10 @@ ms.author: sawinark
 ms.reviewer: maghan
 manager: craigg
 ms.openlocfilehash: ba29528248a94a2a46aa14a2cdb5f72e1501f273
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015179"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>连接到 Azure 中的 SSIS 目录 (SSISDB)
@@ -37,8 +37,8 @@ ms.locfileid: "66015179"
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>从 Azure 门户获取连接信息
 1. 登录到 [Azure 门户](https://portal.azure.com/)。
-2. 从 Azure 门户的左侧菜单中选择“SQL 数据库”，然后在“SQL 数据库”页上选择 `SSISDB` 数据库。 
-3. 在 `SSISDB` 数据库的“概述”页上，查看完全限定服务器名称，如下图所示。 将鼠标悬停在服务器名称上，以打开“单击进行复制”选项。
+2. 从 Azure 门户的左侧菜单中选择“SQL 数据库”  ，然后在“SQL 数据库”  页上选择 `SSISDB` 数据库。 
+3. 在 `SSISDB` 数据库的“概述”  页上，查看完全限定服务器名称，如下图所示。 将鼠标悬停在服务器名称上，以打开“单击进行复制”  选项。
 
     ![服务器连接信息](media/ssis-azure-connect-to-catalog-database/server-name.png) 
 
@@ -47,7 +47,7 @@ ms.locfileid: "66015179"
 ## <a name="connect-with-ssms"></a>与 SSMS 连接
 1. 打开 SQL Server Management Studio。
 
-2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息：
+2. **连接到该服务器**。 在“连接到服务器”对话框中，输入以下信息  ：
 
    | 设置       | 建议的值 | 描述 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -59,16 +59,16 @@ ms.locfileid: "66015179"
 
     ![使用 SSMS 连接到服务器](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
 
-3. **连接到 SSISDB 数据库**。 选择“选项”展开“连接到服务器”对话框。 在展开的“连接到服务器”对话框中，选择“连接属性”选项卡。在“连接到数据库”字段中，选择或输入 `SSISDB`。
+3. **连接到 SSISDB 数据库**。 选择“选项”  展开“连接到服务器”  对话框。 在展开的“连接到服务器”  对话框中，选择“连接属性”  选项卡。在“连接到数据库”  字段中，选择或输入 `SSISDB`。
 
     > [!IMPORTANT]
     > 如果连接时未选择 `SSISDB`，对象资源管理器中可能不会显示 SSIS 目录。
 
     ![选择 SSISDB 数据库以供连接](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-2.png)
 
-4. 然后选择“连接”。
+4. 然后选择“连接”  。
 
-5. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”，查看 SSIS 目录数据库中的对象。
+5. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”，查看 SSIS 目录数据库中的对象   。
 
     ![在 SSMS 对象资源管理器中查找 SSISDB 数据库](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 

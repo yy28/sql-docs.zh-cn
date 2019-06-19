@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057758"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>“创建新条件”或“打开条件”对话框，“常规”页
-  此对话框用于创建或更改基于策略的管理条件。 条件是一个布尔表达式，用于针对方面指定基于策略的管理目标的一组允许状态。 可在“表达式”/“字段”框中选择的属性取决于所使用的方面。 有关条件与方面和策略如何关联的详细信息，请参阅[使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  
+  此对话框用于创建或更改基于策略的管理条件。 条件是一个布尔表达式，用于针对方面指定基于策略的管理目标的一组允许状态。 可在  “表达式”/“字段”框中选择的属性取决于所使用的方面。 有关条件与方面和策略如何关联的详细信息，请参阅[使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -39,14 +39,14 @@ ms.locfileid: "63057758"
  为该表达式选择一个比较运算符。 比较运算符包括：=、!=、>、>=、<、<=、[NOT]LIKE、[NOT]IN。 并非所有运算符都适用于某些属性。  
   
  **ReplTest1**  
- 该表达式的值设置。 允许的值取决于方面。 值可以为 TRUE/FALSE、字符串或数值。 字符串值必须用在单引号内，例如：**'AdventureWorks'**。 并非所有运算符都适用于某些属性。  
+ 该表达式的值设置。 允许的值取决于方面。 值可以为 TRUE/FALSE、字符串或数值。 字符串值必须用在单引号内，例如： **'AdventureWorks'** 。 并非所有运算符都适用于某些属性。  
   
 ## <a name="group-clauses"></a>子句分组  
  可以对子句进行分组，以使其作为独立于查询其余部分的一个单元来运行，就像在数学等式或逻辑语句中的表达式两侧加上括号一样。 在生成复杂查询时，对子句进行分组是非常有用的。  
   
  **对子句进行分组**  
   
--   按 Shift 或 Ctrl 键，然后单击两个或多个子句以选择一个范围。 右键单击所选区域，然后单击“子句分组”。  
+-   按 Shift 或 Ctrl 键，然后单击两个或多个子句以选择一个范围。 右键单击所选区域，然后单击  “子句分组”。  
   
 ## <a name="see-also"></a>请参阅  
  [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)  

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: bc9762470b6e2a836c29f53ebfc3ffeadbcc381f
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66454692"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
@@ -34,7 +34,7 @@ ms.locfileid: "66454692"
 
 + 不要在域控制器上安装 R Services 。 安装程序的 R Services 部分将失败。
 
-+ + 不要在运行数据库内实例的同一台计算机上安装“共享功能” > “R Server（独立版）” 。   
++ \+ 不要在运行数据库内实例的同一台计算机上安装“共享功能” > “R Server（独立版）” 。   
 
   可以与其他版本的 R 和 Python 并行安装，因为 SQL Server 实例使用自己的开源 R 和 Anaconda 发行版的副本。 但是，在 SQL Server 外部的 SQL Server 计算机上运行使用 R 和 Python 的代码可能会导致各种问题：
     

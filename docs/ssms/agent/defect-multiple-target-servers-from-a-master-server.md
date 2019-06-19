@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 95170cd480a6efa4a3b37282f65b623c2548d9ed
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096725"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
@@ -40,15 +40,15 @@ ms.locfileid: "65096725"
   
 1.  在对象资源管理器中，展开配置为主服务器的服务器。   
   
-2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“管理目标服务器”。  
+2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，再单击“管理目标服务器”  。  
   
-3.  单击 **“发布指令”**，然后在 **“指令类型”** 列表中选择 **“脱离”**。  
+3.  单击 **“发布指令”** ，然后在 **“指令类型”** 列表中选择 **“脱离”** 。  
   
 4.  在 **“收件人”** 下，执行以下操作之一：  
   
     -   单击 **“所有目标服务器”** ，脱离此主服务器的所有目标服务器。 如果要完全卸载当前多服务器管理配置，则使用此选项。  
   
-    -   单击 **“以下目标服务器”**，再单击相应的 **“选择”** 框，脱离此主服务器的部分（而不是全部）目标服务器。  
+    -   单击 **“以下目标服务器”** ，再单击相应的 **“选择”** 框，脱离此主服务器的部分（而不是全部）目标服务器。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建多服务器环境](../../ssms/agent/create-a-multiserver-environment.md)  

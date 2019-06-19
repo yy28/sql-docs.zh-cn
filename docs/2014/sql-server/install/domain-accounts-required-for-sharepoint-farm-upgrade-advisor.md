@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3e6d9802eafeea7babdcf23a3e8ea0f6b732e308
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095504"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 场要求使用域帐户（升级顾问）
@@ -27,7 +27,7 @@ ms.locfileid: "66095504"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  为场环境配置的 SharePoint 产品要求您使用域帐户来连接服务和数据库。 这包括您为 Reporting Services 服务帐户指定的帐户。  
   
  如果您没有对 Reporting Services 使用域用户帐户，SharePoint 2010 管理中心页及其他位置将会出现问题。 当您尝试配置 Reporting Services 集成时，将会看到类似以下内容的错误消息：  
@@ -47,7 +47,7 @@ ms.locfileid: "66095504"
   
 4.  选择**使用另一帐户**和输入域帐户的凭据。  
   
-5.  单击 **“应用”**。  
+5.  单击 **“应用”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  

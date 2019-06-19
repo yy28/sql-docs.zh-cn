@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb2544db775987ff44e54b10163812ac53620a9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102798"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Reporting Services 网站设置和网站功能（SharePoint 模式）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式具有几个网站级自定义功能和可以从“SharePoint 网站设置”页管理的网站功能。 这些设置适用于整个网站并影响所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 必须拥有“内容管理员”和“系统管理员”权限才能查看此页。  
   
-|网站设置|Description|  
+|网站设置|描述|  
 |------------------|-----------------|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 网站设置|本主题中介绍了适用于网站的设置。|  
 |管理数据警报|管理数据警报功能。|  
@@ -30,11 +30,11 @@ ms.locfileid: "66102798"
   
 1.  从 SharePoint 站点**站点操作**菜单上，单击**站点设置**。  
   
-2.  在 **Reporting Services** 部分中，单击 **“Reporting Services 网站设置”**。  
+2.  在 **Reporting Services** 部分中，单击 **“Reporting Services 网站设置”** 。  
   
 ## <a name="options-for-reporting-services-site-settings"></a>Reporting Services 网站设置选项  
   
-|Option|Description|  
+|Option|描述|  
 |------------|-----------------|  
 |**启用 RSClientPrint ActiveX 控件下载**|该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 有关控件的详细信息，请参阅 [Using the RSClientPrint Control in Custom Applications](report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**启用本地模式下的远程错误**|在本地模式下运行时，在远程计算机上显示或隐藏详细的错误消息。 如果看到类似于以下内容的错误消息，则启用远程错误可能很有用：<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aee8914493c66ff451d7bca7f56fc8723d2a7ca0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63254143"
 ---
 # <a name="return-codes-odbc"></a>返回代码 ODBC
@@ -45,7 +45,7 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
  下表定义的返回代码。  
   
-|返回代码|Description|  
+|返回代码|描述|  
 |-----------------|-----------------|  
 |SQL_SUCCESS|已成功完成的函数。 应用程序调用**SQLGetDiagField**标头记录中检索其他信息。|  
 |SQL_SUCCESS_WITH_INFO|已成功完成，可能出现非致命错误 （警告） 的函数。 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索其他信息。|  

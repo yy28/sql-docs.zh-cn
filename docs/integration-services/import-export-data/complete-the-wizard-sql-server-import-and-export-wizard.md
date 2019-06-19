@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fadf1fac6929433c217241039634a7af8658f4f6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724001"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成该向导（SQL Server 导入和导出向导）
@@ -24,10 +24,10 @@ ms.locfileid: "65724001"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-指定是否要立即运行复制操作并选择性地保存该包后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“完成该向导”。 在此页面上，将查看你在向导中所做的选择，然后单击“完成”以启动复制操作。 
+指定是否要立即运行复制操作并选择性地保存该包后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“完成该向导”  。 在此页面上，将查看你在向导中所做的选择，然后单击“完成”以启动复制操作。 
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>“完成向导”页的屏幕截图 
- 下面的屏幕截图简单地展示了向导的“完成该向导”页的例子。  
+ 下面的屏幕截图简单地展示了向导的“完成该向导”  页的例子。  
   
  ![导入和导出向导的“完成向导”页](../../integration-services/import-export-data/media/complete.png "Complete the Wizard page of the Import and Export Wizard")  
   
@@ -40,7 +40,7 @@ ms.locfileid: "65724001"
 -   是否立即运行此包。  
   
 ## <a name="whats-next"></a>下一步是什么？  
- 查看在向导中所做的选择并单击“完成”后，下一个页面是“执行操作”。 在此页上，会看到在前页配置的操作的进度和结果。 有关详细信息，请参阅 [执行操作](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)。
+ 查看在向导中所做的选择并单击“完成”后，下一个页面是“执行操作”。   在此页上，会看到在前页配置的操作的进度和结果。 有关详细信息，请参阅 [执行操作](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)。
  
 ## <a name="see-also"></a>另请参阅
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

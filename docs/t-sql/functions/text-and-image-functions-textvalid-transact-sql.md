@@ -24,16 +24,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1ad4bc199c923c488e968740324c5f4d47766b96
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948435"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>文本与图像函数 - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  检查特定文本指针是否有效的 text、ntext 或 image 函数。  
+  检查特定文本指针是否有效的 text、ntext 或 image 函数    。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]没有可用的替代功能。  
@@ -54,28 +54,28 @@ TEXTVALID ( 'table.column' ,text_ ptr )
  *column*  
  要使用的列的名称。  
   
- text_ptr  
+ text_ptr   
  要检查的文本指针。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- 如果指针有效则返回 1，无效则返回 0。 请注意，text 列的标识符必须包含表名。 在没有有效的文本指针的情况下，不能使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
+ 如果指针有效则返回 1，无效则返回 0。 请注意，text 列的标识符必须包含表名  。 在没有有效的文本指针的情况下，不能使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
   
- 当使用 text、ntext 和 image 数据时，下列函数和语句也非常有用。  
+ 当使用 text、ntext 和 image 数据时，下列函数和语句也非常有用    。  
   
 |函数或语句|描述|  
 |---------------------------|-----------------|  
-|PATINDEX **(** '%pattern%' **,** expression **)**|返回指定字符串在 text 和 ntext 列中所处的字符位置。|  
-|DATALENGTH **(** _expression_ **)**|返回 text、ntext 和 image 列中数据的长度。|  
-|SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）。|  
+|PATINDEX **(** '%pattern%  ' **,** expression  **)**|返回指定字符串在 text 和 ntext 列中所处的字符位置   。|  
+|DATALENGTH **(** _expression_ **)**|返回 text、ntext 和 image 列中数据的长度    。|  
+|SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）    。|  
   
 ## <a name="examples"></a>示例  
  以下示例报告是否存在用于 `logo` 表的 `pub_info` 列中的各个值的有效文本指针。  
   
 > [!NOTE]  
->  若要运行此示例，必须安装 pubs 数据库。  
+>  若要运行此示例，必须安装 pubs 数据库  。  
   
 ```  
 USE pubs;  

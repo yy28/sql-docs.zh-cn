@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108399"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 课：在父报表上添加钻取操作
@@ -28,9 +28,9 @@ ms.locfileid: "66108399"
   
 3.  右键单击该文本框，然后依次**文本框属性**。  
   
-4.  转到“操作”选项卡，然后选择“转到报表”选项。  
+4.  转到“操作”选项卡，然后选择“转到报表”选项   。  
   
-5.  在“指定报表”部分中输入子报表的名称。  
+5.  在“指定报表”部分中输入子报表的名称  。  
   
 6.  单击**外**下**使用这些参数运行报表**部分。  
   

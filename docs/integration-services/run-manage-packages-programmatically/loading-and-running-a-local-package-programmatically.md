@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c33c81cec98bdafaa4aa31481102d95b5baae004
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719435"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以编程方式加载和运行本地包
@@ -41,7 +41,7 @@ ms.locfileid: "65719435"
   
 -   以编程方式运行包  
   
- 本主题中用于加载和运行包的所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集。 在新项目中添加引用之后，使用 using 或 Imports 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
+ 本主题中用于加载和运行包的所有方法都需要引用 Microsoft.SqlServer.ManagedDTS  程序集。 在新项目中添加引用之后，使用 using  或 Imports  语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
   
 ## <a name="loading-a-package-programmatically"></a>以编程方式加载包  
  若要以编程方式在本地计算机中加载包，无论包是本地存储还是远程存储，都可以调用以下方法之一：  
@@ -62,9 +62,9 @@ ms.locfileid: "65719435"
   
 1.  启动 Visual Studio 开发环境，以您首选的开发语言创建新的应用程序。 本示例使用的是控制台应用程序；但您也可以从 Windows 窗体应用程序、ASP.NET Web 窗体或 Web 服务或者 Windows 服务运行包。  
   
-2.  在“项目”菜单上，单击“添加引用”，向 Microsoft.SqlServer.ManagedDTS.dll 添加一个引用。 单击“确定” 。  
+2.  在“项目”  菜单上，单击“添加引用”  ，向 Microsoft.SqlServer.ManagedDTS.dll  添加一个引用。 单击“确定”  。  
   
-3.  使用 Visual Basic Imports 语句或 C# using 语句来导入 Microsoft.SqlServer.Dts.Runtime 命名空间。  
+3.  使用 Visual Basic Imports  语句或 C# using  语句来导入 Microsoft.SqlServer.Dts.Runtime  命名空间。  
   
 4.  在主例程中添加以下代码。 完成的控制台应用程序应类似于下面的示例。  
   

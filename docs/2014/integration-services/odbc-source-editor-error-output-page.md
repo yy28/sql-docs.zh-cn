@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057130"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>ODBC 源编辑器（“错误输出”页）
@@ -29,9 +29,9 @@ ms.locfileid: "66057130"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”选项卡上，双击 ODBC 源。  
+-   在“数据流”  选项卡上，双击 ODBC 源。  
   
--   在 **“ODBC 源编辑器”** 中，单击 **“错误输出”**。  
+-   在 **“ODBC 源编辑器”** 中，单击 **“错误输出”** 。  
   
 ## <a name="options"></a>选项  
   

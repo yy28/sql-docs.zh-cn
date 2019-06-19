@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143287"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638423"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -63,9 +63,9 @@ SET ANSI_PADDING ON
   
  下表显示在将值插入数据类型为 **char**、**varchar**、**binary** 和 **varbinary** 的列时，SET ANSI_PADDING 设置的效果。  
   
-|设置|char(n) NOT NULL 或 binary(n) NOT NULL|char(n) NULL 或 binary(n) NULL|varchar(n) 或 varbinary(n)|  
+|设置|char(n) NOT NULL 或 binary(n) NOT NULL  |char(n) NULL 或 binary(n) NULL  |varchar(n) 或 varbinary(n)  |  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|填充原始值（**char** 列具有尾随空格的值，**binary** 列具有尾随零的值），以达到列的长度。|如果 SET ANSI_PADDING 为 ON，则遵从与 char(_n_) 或 binary(_n_) NOT NULL 相同的规则。|不剪裁插入 **varchar** 列中的字符值的尾随空格。 不剪裁插入 **varbinary** 列中的二进制值的尾随零。 不将值填充到列的长度。|  
+|ON|填充原始值（**char** 列具有尾随空格的值，**binary** 列具有尾随零的值），以达到列的长度。|如果 SET ANSI_PADDING 为 ON，则遵从与  char(_n_)  或  binary(_n_  ) NOT NULL 相同的规则。|不剪裁插入 **varchar** 列中的字符值的尾随空格。 不剪裁插入 **varbinary** 列中的二进制值的尾随零。 不将值填充到列的长度。|  
 |OFF|填充原始值（**char** 列具有尾随空格的值，**binary** 列具有尾随零的值），以达到列的长度。|如果 SET ANSI_PADDING 为 OFF，则遵从与 **varchar** 或 **varbinary** 相同的规则。|剪裁插入 **varchar** 列中的字符值的尾随空格。 剪裁插入 **varbinary** 列中的二进制值的尾随零。|  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ SET ANSI_PADDING ON
   
 SET ANSI_PADDING 的默认值为 ON。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序在连接时会自动将 ANSI_PADDING 设置为 ON。 在连接之前，您可以在应用程序的 ODBC 数据源、ODBC 连接特性或 OLE DB 连接属性集合中配置此设置。 对于来自 DB-Library 应用程序的连接，SET ANSI_PADDING 的默认设置为 OFF。  
   
- SET ANSI_PADDING 设置不会影响 **nchar**、**nvarchar**、**ntext**、**text**、**image**、**varbinary(max)**、**varchar(max)** 和 **nvarchar(max)** 数据类型。 它们始终显示 SET ANSI_PADDING ON 行为。 这表示不剪裁尾随空格和尾随零。  
+ SET ANSI_PADDING 设置不会影响 **nchar**、**nvarchar**、**ntext**、**text**、**image**、**varbinary(max)** 、**varchar(max)** 和 **nvarchar(max)** 数据类型。 它们始终显示 SET ANSI_PADDING ON 行为。 这表示不剪裁尾随空格和尾随零。  
   
 如果 ANSI_DEFAULTS 为 ON，则启用 ANSI_PADDING。  
   
@@ -89,7 +89,7 @@ IF ( (16 & @@OPTIONS) = 16 ) SET @ANSI_PADDING = 'ON';
 SELECT @ANSI_PADDING AS ANSI_PADDING;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

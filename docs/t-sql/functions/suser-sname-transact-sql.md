@@ -28,10 +28,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 80defa93fb82a5a6b451acd00c8336a74a06ba34
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948196"
 ---
 # <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -48,10 +48,10 @@ SUSER_SNAME ( [ server_user_sid ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- server_user_sid  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ server_user_sid   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
- 可选的登录安全标识号。 server_user_sid 为 varbinary(85)。 server_user_sid 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组的安全标识号。 如果未指定 server_user_sid，则返回有关当前用户的信息。 如果此参数包含词 NULL，将返回 NULL。  
+ 可选的登录安全标识号。 server_user_sid 为 varbinary(85)   。 server_user_sid 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组的安全标识号  。 如果未指定 server_user_sid，则返回有关当前用户的信息  。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(128)**  
@@ -79,7 +79,7 @@ GO
 ### <a name="b-using-susersname-with-a-windows-user-security-id"></a>B. 使用带 Windows 用户安全 ID 的 SUSER_SNAME  
  以下示例返回与 Windows 安全标识号关联的登录名。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
@@ -106,7 +106,7 @@ GO
 ### <a name="d-calling-susersname-in-combination-with-execute-as"></a>D. 与 EXECUTE AS 一起调用 SUSER_SNAME  
  该示例显示了从模拟上下文调用时的 SUSER_SNAME 的行为。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
 ```  
 SELECT SUSER_SNAME();  

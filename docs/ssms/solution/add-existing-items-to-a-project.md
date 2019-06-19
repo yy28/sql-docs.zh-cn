@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 85aeec915272d2859b3f320cc833d16a83b8d834
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105535"
 ---
 # <a name="add-existing-items-to-a-project"></a>向项目中添加现有项
@@ -29,7 +29,7 @@ ms.locfileid: "65105535"
   
 1.  在解决方案资源管理器中，选择目标项目。  
   
-2.  在“项目”菜单上，单击“添加现有项”。  
+2.  在“项目”  菜单上，单击“添加现有项”  。  
   
     **Look in**  
     找到要从此列表添加到项目中的文件或文件夹。 对于 XML Web services 和 ASP.NET Web 应用程序，文件位于 Web 服务器上。  
@@ -38,16 +38,16 @@ ms.locfileid: "65105535"
     显示桌面上的文件和文件夹。  
   
     **我的项目**  
-    显示默认“我的项目”位置中的文件和文件夹。  
+    显示默认“我的项目”  位置中的文件和文件夹。  
   
     **我的电脑**  
-    显示“我的电脑”文件夹的内容。  
+    显示“我的电脑”  文件夹的内容。  
   
     **文件名**  
     使用此选项可以筛选所显示的文件和文件夹。 输入要用来筛选的完整或部分文件名，使用星号 (`*`) 作为通配符。  
   
     > [!NOTE]  
-    > 通过在“文件名”框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入 `https://mywebsite` 可显示 mywebsite Web 位置中可用的文件，输入 \\\myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件。  
+    > 通过在“文件名”  框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入 `https://mywebsite` 可显示 mywebsite Web 位置中可用的文件，输入 \\\myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件   。  
   
     **文件类型**  
     使用此选项基于文件扩展名筛选文件。 每个产品列出最常用文件类型的默认筛选器。  
@@ -63,9 +63,9 @@ ms.locfileid: "65105535"
   
         向项目中添加所选文件，并以该文件类型的默认编辑器打开文件。 该选项将打开最初选定的文件，而不将文件复制到项目文件夹中。  
   
-3.  如果添加查询文件，则“连接”对话框将提示您为查询指定连接。 如果不希望将连接关联到查询，则可以单击“连接”对话框中的“取消”。  
+3.  如果添加查询文件，则“连接”对话框将提示您为查询指定连接。 如果不希望将连接关联到查询，则可以单击“连接”对话框中的“取消”  。  
   
-4.  该文件将添加到项目的“查询”或“杂项文件”文件夹中。  
+4.  该文件将添加到项目的“查询”  或“杂项文件”  文件夹中。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

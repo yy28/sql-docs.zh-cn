@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 813319309e489943cfdd94e13f300990b72e94be
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092716"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>未配置报表服务器数据库（升级顾问）
@@ -29,7 +29,7 @@ ms.locfileid: "66092716"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  安装程序只能升级完全配置的报表服务器实例。 若要继续，必须配置报表服务器数据库，或使用 Microsoft Windows **Control Panel**若要删除的报表服务器功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装。 删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 后，便可升级其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。  
   
 ## <a name="corrective-action"></a>纠正措施  

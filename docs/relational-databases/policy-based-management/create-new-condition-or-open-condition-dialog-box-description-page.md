@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c66e1d0f6a7eeb7835b7a255f0aef253476cee93
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512853"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63009828"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>“创建新条件”或“打开条件”对话框，“说明”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 升级复制数据库 | Microsoft Docs
+title: 升级或修补复制的数据库 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124607"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794718"
 ---
-# <a name="upgrade-replicated-databases"></a>升级复制数据库
+# <a name="upgrade-or-patch-replicated-databases"></a>升级或修补复制的数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -42,9 +42,7 @@ SQL Server 的升级路径因部署模式而异。 SQL Server 一般情况下提
 
 并行升级复制拓扑的常用方法是将发布服务器-订阅服务器对分批迁移到新的并行环境，而不是迁移整个拓扑。 这种分阶段方法有助于控制停机时间，并在某种程度上把对依赖复制的业务的影响降至最低。  
 
-
-> [!NOTE]  
-> 有关将复制拓扑升级到 SQL 2016 的更多详细信息，请参阅博客文章 [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)（将复制拓扑升级到 SQL Server 2016）。 
+本文的大部分内容都适用于升级 SQL Server 的版本。 但是，在使用服务包或累积更新修补 SQL Server 时，也应使用就地升级过程。 
 
  >[!WARNING]
  > 升级复制拓扑涉及多个步骤。 建议在于实际生产环境中运行升级之前，尝试在测试环境中升级复制拓扑的副本。 通过这种方式，在实际升级过程中不需要使用任何操作文档，便能顺利升级，且不会发生成本高昂的长时间停机。 我们已了解到，客户在升级复制拓扑时，为生产环境使用 Always On 可用性组和/或 SQL Server 故障转移群集实例可显著减少停机时间。 此外，我们建议在尝试升级之前，对所有数据库都进行备份（包括 MSDB、Master、分发数据库和参与复制的用户数据库）。
@@ -123,7 +121,7 @@ SQL Server 的升级路径因部署模式而异。 SQL Server 一般情况下提
 
 
   >[!NOTE]
-  > 为了减少停机时间，我们建议将分发服务器的“并行迁移”作为一个活动执行，将“就地升级到 SQL Server 2016”作为另一个活动执行。 这样，可通过分阶段方法来降低风险和尽量减少停机时间。
+  > 为了减少停机时间，我们建议将分发服务器的“并行迁移”作为一个活动执行，将“就地升级到 SQL Server 2016”作为另一个活动执行   。 这样，可通过分阶段方法来降低风险和尽量减少停机时间。
 
 ## <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步  
  合并复制的 Web 同步选项要求将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (replisapi.dll) 复制到用于同步的 Internet Information Services (IIS) 服务器上的虚拟目录中。 配置 Web 同步时，该文件被配置 Web 同步向导复制到虚拟目录中。 若要升级安装在 IIS 服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，必须将 replisapi.dll 从 COM 目录手动复制到 IIS 服务器上的虚拟目录。 有关配置 Web 同步的详细信息，请参阅 [配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)。  

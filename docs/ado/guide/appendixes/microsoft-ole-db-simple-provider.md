@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: bc17df7bad00205803b33cb4af17cb3c6ddaac56
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701283"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 简单的提供程序概述
@@ -45,7 +45,7 @@ MSDAOSP
 
  该字符串包含这些关键字：
 
-|关键字|Description|
+|关键字|描述|
 |-------------|-----------------|
 |**提供程序**|指定 SQL Server 的 OLE DB 访问接口。|
 |**数据源**|指定的服务器的名称。|

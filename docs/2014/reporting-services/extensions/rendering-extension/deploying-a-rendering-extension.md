@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298600"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署呈现扩展插件
@@ -28,7 +28,7 @@ ms.locfileid: "63298600"
   
  下表描述的特性`Extension`呈现扩展插件的元素：  
   
-|特性|Description|  
+|特性|描述|  
 |---------------|-----------------|  
 |**名称**|扩展插件的唯一名称。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extensions** 元素内的所有条目中必须唯一。 如果存在重复的名称，则报表服务器返回错误。|  
 |**类型**|以逗号分隔的列表，其中包含完全限定的命名空间以及程序集的名称。|  
@@ -64,7 +64,7 @@ ms.locfileid: "63298600"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     **Name** 的值必须是呈现扩展插件的唯一名称。 Type 的值是一个以逗号分隔的列表，它包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 实现的完全限定命名空间的一个条目，后跟程序集的名称（不包含 .dll 文件扩展名）。 默认情况下，呈现扩展插件是可见的。 若要隐藏扩展插件从用户界面，如报表管理器中，添加**Visible**归于`Extension`元素，并将其设置为`false`。  
+     **Name** 的值必须是呈现扩展插件的唯一名称。 Type 的值是一个以逗号分隔的列表，它包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 实现的完全限定命名空间的一个条目，后跟程序集的名称（不包含 .dll 文件扩展名）  。 默认情况下，呈现扩展插件是可见的。 若要隐藏扩展插件从用户界面，如报表管理器中，添加**Visible**归于`Extension`元素，并将其设置为`false`。  
   
 ## <a name="verifying-the-deployment"></a>验证部署  
  还可以打开报表管理器，并验证您的扩展插件是否包括在报表的可用导出类型列表中。  

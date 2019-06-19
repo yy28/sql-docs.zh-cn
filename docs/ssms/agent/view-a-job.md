@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 41db40bfdb2de654a924da50c1c2de46fe65a625
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089587"
 ---
 # <a name="view-a-job"></a>View a Job
@@ -57,9 +57,9 @@ ms.locfileid: "65089587"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，再展开 **“作业”**。  
+2.  展开 **“SQL Server 代理”** ，再展开 **“作业”** 。  
   
-3.  右键单击一个作业，然后单击 **“属性”**。  
+3.  右键单击一个作业，然后单击 **“属性”** 。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -67,9 +67,9 @@ ms.locfileid: "65089587"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- lists all aspects of the information for the job NightlyBackups.  

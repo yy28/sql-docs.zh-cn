@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108425"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 课：设置报表格式 (Reporting Services)
@@ -35,11 +35,11 @@ ms.locfileid: "66108425"
   
 1.  单击 **“设计”** 选项卡。  
   
-2.  右键单击带有 `[Date]` 字段表达式的单元格，然后单击“文本框属性”。  
+2.  右键单击带有 `[Date]` 字段表达式的单元格，然后单击“文本框属性”。   
   
 3.  单击**数量**，然后在**类别**字段中，选择`Date`。  
   
-4.  在 **“类型”** 框中，选择 **“2000 年 1 月 31 日”**。  
+4.  在 **“类型”** 框中，选择 **“2000 年 1 月 31 日”** 。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -50,9 +50,9 @@ ms.locfileid: "66108425"
   
 #### <a name="to-format-a-currency-field"></a>设置货币字段格式  
   
-1.  右键单击带有 `[LineTotal]` 字段表达式的单元格，然后单击“文本框属性”。  
+1.  右键单击带有 `[LineTotal]` 字段表达式的单元格，然后单击“文本框属性”。   
   
-2.  单击 **“数字”**，然后在 **“类别”** 字段中，选择 **“货币”**。  
+2.  单击 **“数字”** ，然后在 **“类别”** 字段中，选择 **“货币”** 。  
   
 3.  如果区域设置为“英语(美国)”，则默认设置应为：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66108425"
   
     -   **符号：$ 英语(美国)**  
   
-4.  选择“使用千位分隔符(,)”。  
+4.  选择“使用千位分隔符(,)”。   
   
      如果示例文本为 **$12,345.00**，则说明您的设置是正确的。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66108425"
   
 2.  指向列控点之间的行，使光标变为双箭头。 拖动列，调整到所需大小。  
   
-3.  选择包含列标题标签的行，从 **“格式”** 菜单中，指向 **“字体”** ，然后单击 **“加粗”**。  
+3.  选择包含列标题标签的行，从 **“格式”** 菜单中，指向 **“字体”** ，然后单击 **“加粗”** 。  
   
 4.  若要预览报表，请单击 **“预览”** 选项卡。其外观应与下图相似：  
   

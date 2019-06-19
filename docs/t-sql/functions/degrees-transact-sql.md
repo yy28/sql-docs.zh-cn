@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a2548bb89bbf959e7889eff9df8259aad94dc4b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948895"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
@@ -42,10 +42,10 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>参数  
  *numeric_expression*  
-精确数值或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+精确数值或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。  
   
 ## <a name="return-code-values"></a>返回代码值  
-返回数据类型与 numeric_expression 的数据类型匹配的值。  
+返回数据类型与 numeric_expression 的数据类型匹配的值  。  
   
 ## <a name="examples"></a>示例  
 此示例返回按 PI/2 弧度表示的角的度数。  

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9811bc6f5571357b4dcbd834de39f74255299135
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945931"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
@@ -45,11 +45,11 @@ FILEPROPERTY ( file_name , property )
 ```  
   
 ## <a name="arguments"></a>参数  
- file_name  
- 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)。  
+ file_name   
+ 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)   。  
   
- property  
- 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一。  
+ property   
+ 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一   。  
   
 |ReplTest1|描述|返回的值|  
 |-----------|-----------------|--------------------|  
@@ -62,7 +62,7 @@ FILEPROPERTY ( file_name , property )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应。  
+ file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应     。  
   
 ## <a name="examples"></a>示例  
  以下示例返回 `IsPrimaryFile` 数据库中的 `AdventureWorks_Data` 文件名的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 属性的设置。  

@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cfb3e978c407ecdd3394c2d6ca90df9d5b1f8885
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506593"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>内存中 OLTP 不支持的 SQL Server 功能
@@ -54,8 +54,8 @@ ms.locfileid: "66506593"
 
 |数据库|Allowed|描述|  
 |---------------|-------------|-----------------|  
-| 用户数据库、模型和 msdb。 | 否 | 多数情况下，不支持跨数据库查询和事务。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外。 此时，master 数据库可进行只读访问。 |
-| 资源数据库和 tempdb | 是 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制。
+| 用户数据库、模型和 msdb   。 | 否 | 多数情况下，不支持跨数据库查询和事务  。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外   。 此时，master 数据库可进行只读访问  。 |
+| 资源数据库和 tempdb   | 是 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制   。
 
 
 ## <a name="scenarios-not-supported"></a>不支持的方案  
@@ -64,8 +64,8 @@ ms.locfileid: "66506593"
   
 - 访问内存优化表的查询上的键集和动态游标。 这些游标将降级为静态和只读的。  
   
-- 不支持使用 MERGE INTO 目标（其中目标是内存优化表）。
-    - 内存优化表支持 MERGE USING 源。  
+- 不支持使用 MERGE INTO 目标（其中目标是内存优化表）    。
+    - 内存优化表支持 MERGE USING 源   。  
   
 - 不支持 ROWVERSION (TIMESTAMP) 数据类型。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。
   
@@ -81,7 +81,7 @@ ms.locfileid: "66506593"
     - 不支持 PBM 的仅阻止并记录模式。 当服务器上存在此类策略时，可能会使内存中 OLTP DDL 无法成功执行。 支持“按需”和“按计划”模式。  
 
 - 内存中 OLTP 不支持数据库包含（[包含的数据库](../../relational-databases/databases/contained-databases.md)）。
-    - 支持 contained database authentication。 但是，在动态管理视图 (DMV) dm_db_uncontained_entities 中，所有内存中 OLTP 对象都被标记为“breaking containment”。
+    - 支持 contained database authentication。 但是，在动态管理视图 (DMV) dm_db_uncontained_entities 中，所有内存中 OLTP 对象都被标记为“breaking containment”  。
 
   
 ## <a name="see-also"></a>另请参阅  

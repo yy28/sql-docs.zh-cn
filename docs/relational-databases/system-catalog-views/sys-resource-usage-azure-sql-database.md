@@ -21,10 +21,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9b0e16279615bf102c916793439d440211939839
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025403"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
@@ -43,7 +43,7 @@ ms.locfileid: "63025403"
   
  对于每个用户数据库，以连续方式为每小时提供一行信息。 即使数据库在该小时内处于闲置状态，也有对应的一行，并且该数据库的 usage_in_seconds 值将为 0。 将相应地为该小时累积存储使用情况和 SKU 信息。  
   
-|“列”|数据类型|Description|  
+|“列”|数据类型|描述|  
 |-------------|---------------|-----------------|  
 |time|**datetime**|时间 (UTC)（以小时增量表示）。|  
 |database_name|**nvarchar**|用户数据库的名称。|  

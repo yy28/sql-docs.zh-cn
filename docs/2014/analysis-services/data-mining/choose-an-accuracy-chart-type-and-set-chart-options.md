@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085814"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>选择准确性图表类型和设置图表选项
@@ -55,7 +55,7 @@ ms.locfileid: "66085814"
  分类矩阵的内容对于所有模型类型都是相同的，并且无法进行配置。 可以将图表中的数据复制到剪贴板，然后在 Excel 中进行处理。  
   
 #### <a name="cross-validation-report"></a>交叉验证报表  
- 对于交叉验证报表，在解决方案资源管理器中选择挖掘结构或挖掘模型后，单击“交叉验证”选项卡，配置所有相关选项，然后单击“获取结果”生成报表。 不能进一步进行配置。  
+ 对于交叉验证报表，在解决方案资源管理器中选择挖掘结构或挖掘模型后，单击“交叉验证”选项卡，配置所有相关选项，然后单击“获取结果”生成报表   。 不能进一步进行配置。  
   
  对于所有模型类型，交叉验证报表的格式均相同，并且无法进行配置。 但报表的内容会有所不同，具体取决于要分析的模型的类型和可预测属性的数据类型。 也可以将报表的结果复制到剪贴板，然后在 Excel 中处理该数据。  
   

@@ -12,60 +12,42 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53f91ef270d9e4ea255a1cf71250dcc21c88346a
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 6bc6fcad5f667b0c1224c4d1e897ae9fc30642d0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793527"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>使用 PowerShell 创建 AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题说明如何使用 PowerShell cmdlet 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过 PowerShell 创建和配置 AlwaysOn 可用性组。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
+  本主题说明如何使用 PowerShell cmdlet 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过 PowerShell 创建和配置 AlwaysOn 可用性组。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本”  ）的形式进行故障转移。  
   
 > [!NOTE]  
 >  有关可用性组的简介，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)中通过 PowerShell 创建和配置 AlwaysOn 可用性组。  
   
--   **开始之前：**  
-  
-     [先决条件、限制和建议](#PrerequisitesRestrictions)  
-  
-     [安全性](#Security)  
-  
-     [任务和相应 PowerShell Cmdlet 的摘要](#SummaryPSStatements)  
-  
-     [设置和使用 SQL Server PowerShell 提供程序](#PsProviderLinks)  
-  
--   **若要创建和配置可用性组，请使用：**[使用 PowerShell 创建和配置可用性组](#PowerShellProcedure)  
-  
--   **示例：**[使用 PowerShell 创建可用性组](#ExampleConfigureGroup)  
-  
--   [相关任务](#RelatedTasks)  
-  
--   [相关内容](#RelatedContent)  
-  
 > [!NOTE]  
 >  除了使用 PowerShell cmdlet 之外，您还可以使用“创建可用性组”向导或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 有关详细信息，请参阅 [使用“新建可用性组”对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 或 [创建可用性组 (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)中通过 PowerShell 创建和配置 AlwaysOn 可用性组。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
- 我们强烈建议您首先阅读此部分，再尝试创建您的第一个可用性组。  
   
-###  <a name="PrerequisitesRestrictions"></a> 先决条件、限制和建议  
+##  <a name="PrerequisitesRestrictions"></a> 先决条件、限制和建议  
   
--   创建可用性组之前，请先验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主机实例分别位于单个 WSFC 故障转移群集的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还要验证您的服务器实例满足其他服务器实例先决条件，并且其他所有 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]要求都得到满足且您知道有关建议。 有关详细信息，我们强烈建议你参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
+-   创建可用性组之前，请先验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主机实例分别位于单个 WSFC 故障转移群集的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还要验证您的服务器实例满足其他服务器实例先决条件，并且其他所有 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]要求都得到满足且您知道有关建议。 有关详细信息，我们强烈建议你参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
+  
+##  <a name="PowerShellProcedure"></a> 使用 PowerShell 创建和配置可用性组  
+
 ###  <a name="SummaryPSStatements"></a> 任务和相应 PowerShell Cmdlet 的摘要  
  下表列出了涉及配置可用性组的基本任务，并且指出了 PowerShell cmdlet 支持的任务。 必须按照任务在表中出现的顺序执行 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 任务。  
   
-|任务|PowerShell Cmdlet（如果可用）或 Transact-SQL 语句|执行任务的位置&#42;|  
+|任务|PowerShell Cmdlet（如果可用）或 Transact-SQL 语句|执行任务的位置&#42; |  
 |----------|--------------------------------------------------------------------|---------------------------------|  
-|创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|**New-SqlHadrEndPoint**|在缺少数据库镜像端点的每个服务器实例上执行。<br /><br /> 注意：若要更改现有数据库镜像端点，请使用 Set-SqlHadrEndpoint。|  
+|创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|**New-SqlHadrEndPoint**|在缺少数据库镜像端点的每个服务器实例上执行。<br /><br /> 注意：若要更改现有数据库镜像端点，请使用 Set-SqlHadrEndpoint  。|  
 |创建可用性组|首先，将 **New-SqlAvailabilityReplica** cmdlet 与 **-AsTemplate** 参数一起使用，以便为你计划包括在可用性组中的两个可用性副本中的每一个都创建内存中可用性副本对象。<br /><br /> 然后，通过使用 **New-SqlAvailabilityGroup** cmdlet 并引用你的可用性副本对象，创建可用性组。|在要承载初始主副本的服务器实例上执行。|  
 |将辅助副本联接到可用性组|**Join-SqlAvailabilityGroup**|在承载辅助副本的各服务器实例上执行。|  
 |准备辅助数据库|**Backup-SqlDatabase** 和 **Restore-SqlDatabase**|在承载主副本的服务器实例上创建备份。<br /><br /> 使用 **NoRecovery** 还原参数在承载辅助副本的各服务器实例上还原备份。 如果文件路径在承载主副本和目标辅助副本的计算机之间存在差异，还要使用 **RelocateFile** 还原参数。|  
@@ -77,9 +59,7 @@ ms.locfileid: "57974326"
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [获取 SQL Server PowerShell 帮助](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell 创建和配置可用性组  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 > [!NOTE]  
 >  若要查看给定 cmdlet 的语法和示例，请使用 **PowerShell 环境中的** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  

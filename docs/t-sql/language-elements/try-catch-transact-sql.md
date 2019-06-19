@@ -31,10 +31,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e2d6c3a22ebae4a8617a4f788f9feb259d9bb7d
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981417"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -58,10 +58,10 @@ END CATCH
 ```  
   
 ## <a name="arguments"></a>参数  
- sql_statement  
+ sql_statement   
  任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
- statement_block  
+ statement_block   
  批处理或包含于 BEGIN…END 块中的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句组。  
   
 ## <a name="remarks"></a>Remarks  

@@ -27,17 +27,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b31c801d485d4e127993ba7664b5277e5a1e01
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943691"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66469641"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-此函数将指定的 number 值（作为带符号整数）与输入 date 值的指定 datepart 相加，然后返回该修改值。
+此函数将指定的 number 值（作为带符号整数）与输入 date 值的指定 datepart 相加，然后返回该修改值    。
   
 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
@@ -51,29 +51,29 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>参数  
 *datepart*  
-`DATEADD` 要将其与整数值相加的 date 的一部分。 此表列出了所有有效的 datepart 参数。 
+`DATEADD` 要将其与整数值相加的 date 的一部分    。 此表列出了所有有效的 datepart 参数  。 
 
 > [!NOTE]
-> 对于 datepart 参数，`DATEADD` 不接受用户定义的变量等效项。 
+> 对于 datepart 参数，`DATEADD` 不接受用户定义的变量等效项  。 
   
 |*datepart*|缩写形式|  
 |---|---|
-|year|yy, yyyy|  
-|quarter|qq, q|  
-|month|mm, m|  
-|dayofyear|dy, y|  
-|day|dd, d|  
-|week|wk, ww|  
-|weekday|dw, w|  
-|hour|**hh**|  
-|minute|mi, n|  
-|second|ss, s|  
-|millisecond|ms|  
-|microsecond|mcs|  
-|nanosecond|ns|  
+|year |yy, yyyy  |  
+|quarter |qq, q  |  
+|month |mm, m  |  
+|dayofyear |dy, y  |  
+|day |dd, d  |  
+|week |wk, ww  |  
+|weekday |dw, w  |  
+|hour |**hh**|  
+|minute |mi, n  |  
+|second |ss, s  |  
+|millisecond |ms |  
+|microsecond |mcs |  
+|nanosecond |ns |  
   
 *number*  
-一个表达式，可解析为 `DATEADD` 将其与 date 的 datepart 相加的 [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。 对于 number，`DATEADD` 接受 用户定义的变量值。 `DATEADD` 将截断带小数部分的指定 number 值。 在这种情况下，它不对 number 值进行舍入。
+一个表达式，可解析为 `DATEADD` 将其与 date 的 datepart 相加的 [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   。 对于 number，`DATEADD` 接受 用户定义的变量值  。 `DATEADD` 将截断带小数部分的指定 number 值  。 在这种情况下，它不对 number 值进行舍入  。
   
 *date*  
 可解析为下列值之一的表达式： 
@@ -85,23 +85,24 @@ DATEADD (datepart , number , date )
 + **smalldatetime**
 + **time**
 
-对于 date，`DATEADD` 接受列表达式、表达式、字符串文本或用户定义的变量。 字符串文字值必须解析为 datetime。 使用四位数年份可避免含糊不清问题。 有关两位数年份的信息，请参阅[配置两位数年份截止服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
+对于 date，`DATEADD` 接受列表达式、表达式、字符串文本或用户定义的变量  。 字符串文字值必须解析为 datetime  。 使用四位数年份可避免含糊不清问题。 有关两位数年份的信息，请参阅[配置两位数年份截止服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
   
 ## <a name="return-types"></a>返回类型
-date 参数数据类型变为 `DATEADD` 返回值数据类型，字符串文本 date 值除外。 对于字符串文本，`DATEADD` 返回 datetime 值。 如果字符串文本秒数小数位超过三位 (.nnn) 或如果字符串文本包含时区偏移量部分，`DATEADD` 将引发错误。
+
+此方法的返回值数据类型是动态的。 返回类型取决于为 `date` 提供的参数。 如果 `date` 的值是字符串文本日期，则 `DATEADD` 返回日期/时间值  。 如果为 `date` 提供了其他的有效输入数据类型，则 `DATEADD` 返回相同的数据类型。 如果字符串文本秒数小数位超过三位 (.nnn) 或如果字符串文本包含时区偏移量部分，则 `DATEADD` 引发错误。
   
 ## <a name="return-value"></a>返回值  
   
 ## <a name="datepart-argument"></a>datepart 参数  
-dayofyear、day 和 weekday 返回相同的值。
+dayofyear、day 和 weekday 返回相同的值    。
   
-每个 datepart 及其缩写都返回相同的值。
+每个 datepart 及其缩写都返回相同的值  。
   
 如果以下各项为 true：
 
-+ datepart 为 month
-+ date 月份比返回月份的天数多
-+ date 日在返回月份中不存在
++ datepart 为 month  
++ date 月份比返回月份的天数多 
++ date 日在返回月份中不存在 
 
 `DATEADD` 则返回返回月份的最后一天。 例如，9 月份有 30 天；因此，以下语句返回 2006-09-30 00:00:00.000：
   
@@ -111,7 +112,7 @@ SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>number 参数  
-number 参数不能超出 int 的范围。在以下语句中，number 的参数超出 int 的范围（超出 1）。 以下语句均返回以下错误消息："`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
+number 参数不能超出 int 的范围   。在以下语句中，number 的参数超出 int 的范围（超出 1）   。 以下语句均返回以下错误消息："`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
 SELECT DATEADD(year,2147483648, '20060731');  
@@ -119,7 +120,7 @@ SELECT DATEADD(year,-2147483649, '20060731');
 ```  
   
 ## <a name="date-argument"></a>date 参数  
-`DATEADD` 不允许 date 参数增加至其数据范围之外的值。 在以下语句中，与 date 值相加的 number 值超出了 date 数据类型的范围。 `DATEADD` 返回以下错误消息：“`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`。”
+`DATEADD` 不允许 date 参数增加至其数据范围之外的值  。 在以下语句中，与 date 值相加的 number 值超出了 date 数据类型的范围    。 `DATEADD` 返回以下错误消息：“`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`。”
   
 ```sql
 SELECT DATEADD(year,2147483647, '20060731');  
@@ -127,12 +128,12 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>date 为 smalldatetime 型、datepart 为秒或秒小数部分时的返回值  
-[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 值的秒数部分始终为 00。 以下原则适用于 smalldatetime date 值： 
+[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 值的秒数部分始终为 00。 以下原则适用于 smalldatetime date 值   ： 
 
--   若 datepart 为 second 且 number 值在 -30 和 +29 之间，`DATEADD` 不进行任何更改。  
--   若 datepart 为 second 且 number 值小于 -30 或大于 +29，`DATEADD` 从一分钟开始执行相加操作。  
--   若 datepart 为 millisecond 且 number 值在 -30001 和 +29998 之间，`DATEADD` 不进行任何更改。  
--   若 datepart 为 millisecond 且 number 值小于 -30001 或大于 +29998，`DATEADD` 从一分钟开始执行相加操作。  
+-   若 datepart 为 second 且 number 值在 -30 和 +29 之间，`DATEADD` 不进行任何更改    。  
+-   若 datepart 为 second 且 number 值小于 -30 或大于 +29，`DATEADD` 从一分钟开始执行相加操作    。  
+-   若 datepart 为 millisecond 且 number 值在 -30001 和 +29998 之间，`DATEADD` 不进行任何更改    。  
+-   若 datepart 为 millisecond 且 number 值小于 -30001 或大于 +29998，`DATEADD` 从一分钟开始执行相加操作    。  
   
 ## <a name="remarks"></a>Remarks  
 在以下子句中使用 `DATEADD`：
@@ -144,11 +145,11 @@ SELECT DATEADD(year,-2147483647, '20060731');
 + WHERE
   
 ## <a name="fractional-seconds-precision"></a>秒的小数部分精度
-对于 date 数据类型 smalldatetime、date 和 datetime，`DATEADD` 不允许执行 microsecond 或 nanosecond 的 datepart 添加操作。
+对于 date 数据类型 smalldatetime、date 和 datetime，`DATEADD` 不允许执行 microsecond 或 nanosecond 的 datepart 添加操作        。
   
-毫秒的小数位数为 3 (.123)，微秒的小数位数为 6 (.123456)，而纳秒的小数位数为 9 (.123456789)。 time、datetime2 和 datetimeoffset 数据类型的最大小数位数为 7 (.1234567)。 若 datepart 为 nanosecond，则在 date 的秒数小数部分增加前 number 必须为 100。 介于 1 和 49 之间的 number 向下舍入为 0，介于 50 和 99 之间的 number 向上舍入为 100。
+毫秒的小数位数为 3 (.123)，微秒的小数位数为 6 (.123456)，而纳秒的小数位数为 9 (.123456789)。 time、datetime2 和 datetimeoffset 数据类型的最大小数位数为 7 (.1234567)    。 若 datepart 为 nanosecond，则在 date 的秒数小数部分增加前 number 必须为 100     。 介于 1 和 49 之间的 number 向下舍入为 0，介于 50 和 99 之间的 number 向上舍入为 100  。
   
-以下语句添加 millisecond、microsecond 或 nanosecond 的 datepart。
+以下语句添加 millisecond、microsecond 或 nanosecond 的 datepart     。
   
 ```sql
 DECLARE @datetime2 datetime2 = '2007-01-01 13:10:10.1111111';  
@@ -185,7 +186,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
 ## <a name="examples"></a>示例  
 
 ### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>A. 以 1 为增量递增 datepart  
-以下每条语句以 1 为增量递增 datepart：
+以下每条语句以 1 为增量递增 datepart  ：
   
 ```sql
 DECLARE @datetime2 datetime2 = '2007-01-01 13:10:10.1111111';  
@@ -235,7 +236,7 @@ nanosecond   2007-01-01 13:10:10.1111111
 ```  
   
 ### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>B. 在一条语句中将 datepart 增加一级以上  
-以下每个语句按足够大的 number 逐量增加 datepart，该 number 还应足以增加 date 的下一个更高的 datepart：
+以下每个语句按足够大的 number 逐量增加 datepart，该 number 还应足以增加 date 的下一个更高的 datepart     ：
   
 ```sql
 DECLARE @datetime2 datetime2;  
@@ -255,7 +256,7 @@ SELECT DATEADD(millisecond,1,@datetime2); --2007-01-01 01:01:01.1121111
 ```  
   
 ### <a name="c-using-expressions-as-arguments-for-the-number-and-date-parameters"></a>C. 使用表达式作为 number 和 date 形参的实参  
-以下示例使用不同类型的表达式作为 number 和 date 形参的实参。 示例使用 AdventureWorks 数据库。
+以下示例使用不同类型的表达式作为 number 和 date 形参的实参   。 示例使用 AdventureWorks 数据库。
   
 #### <a name="specifying-a-column-as-date"></a>将一列指定为 date  
 此示例将 `2` 天加到 `OrderDate` 列中的每个值，以便派生名为 `PromisedShipDate` 的新列：
@@ -291,7 +292,7 @@ SalesOrderID OrderDate               PromisedShipDate
 ```  
   
 #### <a name="specifying-user-defined-variables-as-number-and-date"></a>将用户定义的变量指定为 number 和 date  
-此示例将用户定义的变量指定为 number 和 date 的参数：
+此示例将用户定义的变量指定为 number 和 date 的参数   ：
   
 ```sql
 DECLARE @days int = 365,   
@@ -309,7 +310,7 @@ SELECT DATEADD(day, @days, @datetime);
 ```  
   
 #### <a name="specifying-scalar-system-function-as-date"></a>将标量系统函数指定为 date  
-此示例指定 `SYSDATETIME` 为 date。 返回的确切值取决于语句执行的日期和时间：
+此示例指定 `SYSDATETIME` 为 date  。 返回的确切值取决于语句执行的日期和时间：
   
 ```sql
 SELECT DATEADD(month, 1, SYSDATETIME());  
@@ -325,7 +326,7 @@ SELECT DATEADD(month, 1, SYSDATETIME());
 ```  
   
 #### <a name="specifying-scalar-subqueries-and-scalar-functions-as-number-and-date"></a>将标量子查询和标量函数指定为 number 和 date  
-此示例使用标量子查询 `MAX(ModifiedDate)` 作为 number 和 date 的参数。 `(SELECT TOP 1 BusinessEntityID FROM Person.Person)` 充当 number 形参的假实参，用来说明如何从值列表中选择 number 实参。
+此示例使用标量子查询 `MAX(ModifiedDate)` 作为 number 和 date 的参数   。 `(SELECT TOP 1 BusinessEntityID FROM Person.Person)` 充当 number 形参的假实参，用来说明如何从值列表中选择 number 实参  。
   
 ```sql
 SELECT DATEADD(month,(SELECT TOP 1 BusinessEntityID FROM Person.Person),  
@@ -333,14 +334,14 @@ SELECT DATEADD(month,(SELECT TOP 1 BusinessEntityID FROM Person.Person),
 ```  
   
 #### <a name="specifying-numeric-expressions-and-scalar-system-functions-as-number-and-date"></a>将数值表达式和标量系统函数指定为 number 和 date  
-此示例将数值表达式 (-`(10/2))`、[一元运算符](../../mdx/unary-operators.md) (`-`)、[算术运算符](../../mdx/arithmetic-operators.md) (`/`) 和标量系统函数 (`SYSDATETIME`) 作为 number 和 date 的参数。
+此示例将数值表达式 (-`(10/2))`、[一元运算符](../../mdx/unary-operators.md) (`-`)、[算术运算符](../../mdx/arithmetic-operators.md) (`/`) 和标量系统函数 (`SYSDATETIME`) 作为 number 和 date 的参数   。
   
 ```sql
 SELECT DATEADD(month,-(10/2), SYSDATETIME());  
 ```  
   
 #### <a name="specifying-ranking-functions-as-number"></a>将排名函数指定为 number  
-此示例使用排名函数作为 number 的参数。
+此示例使用排名函数作为 number 的参数  。
   
 ```sql
 SELECT p.FirstName, p.LastName  
@@ -356,7 +357,7 @@ WHERE TerritoryID IS NOT NULL
 ```  
   
 #### <a name="specifying-an-aggregate-window-function-as-number"></a>将聚合开窗函数指定为 number  
-此示例使用聚合开窗函数作为 number 的参数。
+此示例使用聚合开窗函数作为 number 的参数  。
   
 ```sql
 SELECT SalesOrderID, ProductID, OrderQty  

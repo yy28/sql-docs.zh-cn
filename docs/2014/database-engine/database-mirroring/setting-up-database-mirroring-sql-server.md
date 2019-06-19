@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754457"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>设置数据库镜像 (SQL Server)
@@ -93,9 +93,9 @@ ms.locfileid: "62754457"
         >  在高性能模式下，WITNESS 需设置为 OFF。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 > [!NOTE]  
->  有关使用的示例[!INCLUDE[tsql](../../includes/tsql-md.md)]若要设置数据库镜像使用 Microsoft Windows 身份验证，请参阅[示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
+>  有关使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 设置使用 Microsoft Windows 身份验证的数据库镜像的示例，请参阅[示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
 >   
->  有关使用的示例[!INCLUDE[tsql](../../includes/tsql-md.md)]若要设置数据库镜像使用基于证书的安全性，请参阅[示例：设置数据库镜像使用证书&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+>  有关使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来设置使用基于证书的安全机制的数据库镜像的示例，请参阅[示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
  
   
@@ -112,10 +112,10 @@ ms.locfileid: "62754457"
  [使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](database-mirroring-establish-session-windows-authentication.md)  
  说明了设置数据库镜像的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤。  
   
- [示例：设置数据库镜像使用 Windows 身份验证&#40;Transact SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+ [示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  包含使用 Windows 身份验证创建带有见证服务器的数据库镜像会话所需的所有阶段的示例。  
   
- [示例：设置数据库镜像使用证书&#40;Transact SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  包含使用基于证书的身份验证创建带有见证服务器的数据库镜像会话所需的所有阶段的示例。  
   
  [设置登录帐户对数据库镜像或 AlwaysOn 可用性组&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  

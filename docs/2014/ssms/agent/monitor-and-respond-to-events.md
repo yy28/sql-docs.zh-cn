@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720134"
 ---
 # <a name="monitor-and-respond-to-events"></a>监视事件和响应事件
@@ -42,7 +42,7 @@ ms.locfileid: "62720134"
  介绍了为管理员创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可用于在作业失败或成功时用来发送通知的别名。  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>关于监视事件和响应事件  
- 对事件的自动响应称为“警报”。 您可以针对一个或多个事件定义警报，指定希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何响应发生的这些事件。 警报可以通过通知管理员和/或运行某项作业来响应事件。 警报还可以将事件转发到其他计算机上的 Microsoft Windows 应用程序日志。 例如，您可以指定在发生严重性为 19 的事件时立即通知操作员。 通过定义警报，数据库管理员可以更有效地监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 对事件的自动响应称为“警报”  。 您可以针对一个或多个事件定义警报，指定希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何响应发生的这些事件。 警报可以通过通知管理员和/或运行某项作业来响应事件。 警报还可以将事件转发到其他计算机上的 Microsoft Windows 应用程序日志。 例如，您可以指定在发生严重性为 19 的事件时立即通知操作员。 通过定义警报，数据库管理员可以更有效地监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理只响应定义了警报的事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用来监视事件的方法取决于事件的类型。  
   

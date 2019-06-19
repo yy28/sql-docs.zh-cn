@@ -17,10 +17,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 70d6be59845433719cc462326d1135c77d34beee
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776148"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase 的监视和故障排除
@@ -136,13 +136,13 @@ PolyBase 查询拆分为 sys.dm_exec_distributed_request_steps 中的一系列�
 
 ## <a name="to-view-the--polybase-query-plan-to-be-changed"></a>查看 PolyBase 查询计划（待更改） 
 
-1. 在 SSMS 中，启用“包含实际的执行计划”(Ctrl+M)，并运行查询。
+1. 在 SSMS 中，启用“包含实际的执行计划”(Ctrl+M)，并运行查询  。
 
 2. 单击“执行计划”  选项卡。
 
    ![PolyBase 查询计划](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 查询计划")  
 
-3. 右键单击“远程查询运算符”，然后选择“属性”。
+3. 右键单击“远程查询运算符”  ，然后选择“属性”  。
 
 4. 将远程查询值复制并粘贴到文本编辑器中，以查看 XML 远程查询计划。 以下是一个示例。
 

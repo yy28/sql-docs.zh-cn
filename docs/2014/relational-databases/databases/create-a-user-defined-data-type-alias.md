@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917441"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
@@ -54,7 +54,7 @@ ms.locfileid: "62917441"
   
 #### <a name="to-create-a-user-defined-data-type"></a>创建用户定义数据类型  
   
-1.  在“对象资源管理器”中，依次展开“数据库”、一个数据库、“可编程性”和“类型”，右键单击“用户定义数据类型”，然后单击“新建用户定义数据类型”。  
+1.  在“对象资源管理器”中，依次展开“数据库”、一个数据库、“可编程性”和“类型”，右键单击“用户定义数据类型”，然后单击“新建用户定义数据类型”      。  
   
      **允许 Null**  
      指定用户定义数据类型是否可以接受 Null 值。 不能编辑现有的用户定义数据类型的为 NULL 性。  
@@ -96,7 +96,7 @@ ms.locfileid: "62917441"
   
      不为 `nvarchar(max)`、`varchar(max)` 或 `varbinary(max)` 数据类型显示存储。  
   
-2.  在“新建用户定义数据类型”对话框的“架构”框中，键入此数据类型别名所属的架构，或使用浏览按钮选择架构。  
+2.  在“新建用户定义数据类型”对话框的“架构”框中，键入此数据类型别名所属的架构，或使用浏览按钮选择架构   。  
   
 3.  在 **“名称”** 框中，键入新数据类型别名的名称。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "62917441"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例基于系统提供的 `varchar` 数据类型创建一个数据类型别名。 `ssn` 数据类型别名用于那些保存 11 位数字的社会保障号 (999-99-9999) 的列。 该列不能为 NULL。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例基于系统提供的 `varchar` 数据类型创建一个数据类型别名。 `ssn` 数据类型别名用于那些保存 11 位数字的社会保障号 (999-99-9999) 的列。 该列不能为 NULL。  
   
 ```sql  
 CREATE TYPE ssn  

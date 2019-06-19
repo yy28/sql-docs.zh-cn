@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed5486e9f48bc0f0ca5ab4b6af031571f4f3580d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945946"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
@@ -42,11 +42,11 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 ```  
   
 ## <a name="arguments"></a>参数  
- filegroup_name  
-类型为 sysname 的表达式，它表示要为 `FILEGROUPPROPERTY` 返回命名的属性信息的文件组名称。  
+ filegroup_name   
+类型为 sysname  的表达式，它表示要为 `FILEGROUPPROPERTY` 返回命名的属性信息的文件组名称。  
   
- property  
-类型为 varchar(128) 的表达式，它返回文件组属性的名称。 Property 可以返回下列值之一：  
+ property   
+类型为 varchar(128)  的表达式，它返回文件组属性的名称。 Property  可以返回下列值之一：  
   
 |ReplTest1|描述|返回的值|  
 |-----------|-----------------|--------------------|  
@@ -58,7 +58,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 **int**  
   
 ## <a name="remarks"></a>Remarks  
-filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应。  
+filegroup_name  与 sys.filegroups  目录视图中的 name  列相对应。  
   
 ## <a name="examples"></a>示例  
 此示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中主文件组的 `IsDefault` 属性设置。  

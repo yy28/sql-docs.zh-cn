@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ddba17337d8b9ec3cda5e85b9e769ea88915ee91
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488468"
 ---
 # <a name="edit-an-entity-master-data-services"></a>编辑实体 (Master Data Services)
@@ -35,11 +35,11 @@ ms.locfileid: "65488468"
   
 ### <a name="to-edit-an-entity"></a>编辑实体  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体” 。  
+2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体”  。  
   
-3.  在“管理实体”  页上，从“网格”中选择要更改的实体所在的行，然后单击“编辑” 。  
+3.  在“管理实体”  页上，从“网格”中选择要更改的实体所在的行，然后单击“编辑”  。  
   
 4.  在“名称”  框中，键入属性的新名称。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65488468"
   
 6.  在“临时表的名称”  字段中，键入临时表的新名称。  
   
-7.  对于“事务日志类型”字段，请在下拉列表中选择更新的事务日志类型。  
+7.  对于“事务日志类型”  字段，请在下拉列表中选择更新的事务日志类型。  
   
      有关详细信息，请参阅[更改实体事务日志类型 (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65488468"
      有关详细信息，请参阅 [Data Compression](../relational-databases/data-compression/data-compression.md)  
   
 ## <a name="status"></a>“登录属性”  
- 在网格的状态列中显示实体上所执行操作的状态。 单击“保存实体” 时，将显示下图，指示实体正在更新。  
+ 在网格的状态列中显示实体上所执行操作的状态。 单击“保存实体”  时，将显示下图，指示实体正在更新。  
   
  ![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")  
   

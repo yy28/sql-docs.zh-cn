@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a36ad34a7f8636d5d13c8d914f8b90965ead65c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070875"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 库
@@ -47,7 +47,7 @@ ms.locfileid: "66070875"
   
 > [!NOTE]  
 >  Power Pivot 库需要 Microsoft Silverlight。  Microsoft Edge 浏览器不支持 Silverlight。   
-> 若要在 Edge 中查看库内容，请单击 Power Pivot 库中的“库”  选项卡，然后将文档库视图更改为“所有文档” 。    
+> 若要在 Edge 中查看库内容，请单击 Power Pivot 库中的“库”  选项卡，然后将文档库视图更改为“所有文档”  。    
 > 若要更改默认视图，请单击“库”  选项卡，然后单击“修改视图”。 单击“使其成为默认视图”，然后单击“确定”保存默认视图。  
 >  有关 Edge 支持哪些内容的详细信息，请参阅 Windows 博客[推陈出新，第 2 部分：告别 ActiveX、 VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66070875"
 ##  <a name="icons"></a> PowerPivot 库中的图标  
  图标提供针对内容可用性和状态的可视指示器。  
   
-|图标|Description|  
+|图标|描述|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|当正在为文档中的每一页生成缩略图时，沙漏图标将出现。 刷新该页以显示图像的更新。|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|当工作簿或报表所具有的页面数目超过可在 PowerPivot 库中显示的页面数目时，页面图标将出现。 若要查看所有这些页面，您必须使用客户端应用程序。|  
@@ -71,7 +71,7 @@ ms.locfileid: "66070875"
   
 2.  1.  **Excel 2010:** 在文件菜单中，单击**保存并发送**。  
   
-    2.  单击 **“保存到 SharePoint”**。  
+    2.  单击 **“保存到 SharePoint”** 。  
   
     3.  如果希望使用“Excel Services 选项”选择要发布的各个工作表或参数，请单击 **“发布选项”** 。 例如，使用“Excel Services 选项”中的“参数”选项卡，可以选择在所发布的工作簿中显示哪些切片器。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66070875"
   
 1.  在 SharePoint 站点中，打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。  
   
-2.  在“库”功能区中，单击 **“文档”**。  
+2.  在“库”功能区中，单击 **“文档”** 。  
   
 3.  在 **“上载文档”** 中，选择某一上载选项，然后输入要上载的文件的名称和位置。 库设置决定文档的显示位置。 可能需要刷新浏览器窗口以查看最近添加的内容。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070875"
   
 1.  在 SharePoint 站点中，打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。  
   
-2.  在功能区中，单击 **“库”**。  
+2.  在功能区中，单击 **“库”** 。  
   
 3.  在“管理视图”中的“当前视图”列表中，单击下箭头，然后选择“所有文档”。  
   
@@ -141,13 +141,13 @@ ms.locfileid: "66070875"
 ##  <a name="image"></a> 刷新缩略图  
  使用以下步骤为 PowerPivot 库中的文档重新生成缩略图。  
   
-1.  将 PowerPivot 库切换为“所有文档”视图。 为此，单击功能区中的 **“库”** ，并将 **“当前视图”** 更改为 **“所有视图”**。  
+1.  将 PowerPivot 库切换为“所有文档”视图。 为此，单击功能区中的 **“库”** ，并将 **“当前视图”** 更改为 **“所有视图”** 。  
   
 2.  选择您要刷新其缩略图的工作簿或报表。  
   
-3.  单击右侧的向下箭头，然后选择 **“编辑属性”**。  
+3.  单击右侧的向下箭头，然后选择 **“编辑属性”** 。  
   
-4.  单击“保存” 。 保存文档将强制快照服务重新生成预览图像。  
+4.  单击“保存”  。 保存文档将强制快照服务重新生成预览图像。  
   
 ##  <a name="bkmk_known_issues"></a> 已知问题  
   

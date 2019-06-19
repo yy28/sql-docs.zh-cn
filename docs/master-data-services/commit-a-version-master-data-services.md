@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dc503340e741e2503803cc51ad4a57c15e2a8a7f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484295"
 ---
 # <a name="commit-a-version-master-data-services"></a>提交版本 (Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "65484295"
   
 -   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   版本的状态必须是 **“已锁定”**。 有关详细信息，请参阅 [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)。  
+-   版本的状态必须是 **“已锁定”** 。 有关详细信息，请参阅 [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)。  
   
 -   所有成员必须已经成功验证。  
   
@@ -42,15 +42,15 @@ ms.locfileid: "65484295"
   
 ### <a name="to-commit-a-version"></a>提交版本  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
   
-2.  在 **“管理版本”** 页上，从菜单栏中，单击 **“验证版本”**。  
+2.  在 **“管理版本”** 页上，从菜单栏中，单击 **“验证版本”** 。  
   
 3.  在 **“验证版本”** 页上，选择要提交的模型和版本。  
   
-4.  单击 **“提交”**。  
+4.  单击 **“提交”** 。  
   
-5.  在确认对话框中，单击 **“确定”**。  
+5.  在确认对话框中，单击 **“确定”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   

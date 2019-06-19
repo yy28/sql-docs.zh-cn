@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c14596554fd5df79fc967866421d7137ead71872
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945601"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
@@ -38,10 +38,10 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>参数  
  *expression*  
-varbinary(n)、varbinary(max) 或 binary(n) 值。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
+varbinary(n)、varbinary(max) 或 binary(n) 值        。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
-数据类型 varbinary(max) 的值。 `DECOMPRESS` 将使用 ZIP 算法解压缩输入参数。 如有必要，用户应显式将结果强制转换为目标类型。  
+数据类型 varbinary(max) 的值  。 `DECOMPRESS` 将使用 ZIP 算法解压缩输入参数。 如有必要，用户应显式将结果强制转换为目标类型。  
   
 ## <a name="remarks"></a>Remarks  
   

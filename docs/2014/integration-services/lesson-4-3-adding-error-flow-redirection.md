@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891399"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>步骤 3：添加错误流重定向
@@ -30,29 +30,29 @@ ms.locfileid: "62891399"
   
 ### <a name="to-configure-an-error-output"></a>配置错误输出  
   
-1.  在“SSIS 工具箱”中，展开“公共”，然后将“脚本组件”拖动到“数据流”选项卡的设计图面上。将“脚本”放置在“Lookup Currency Key”转换的右侧。  
+1.  在“SSIS 工具箱”  中，展开“公共”  ，然后将“脚本组件”  拖动到“数据流”  选项卡的设计图面上。将“脚本”  放置在“Lookup Currency Key”  转换的右侧。  
   
-2.  在“选择脚本组件类型”对话框中，单击“转换”，再单击“确定”。  
+2.  在“选择脚本组件类型”  对话框中，单击“转换”  ，再单击“确定”  。  
   
-3.  单击“Lookup Currency Key”转换，并将红色箭头拖动到新添加的“脚本”转换中，以连接这两个组件。  
+3.  单击“Lookup Currency Key”  转换，并将红色箭头拖动到新添加的“脚本”  转换中，以连接这两个组件。  
   
-     红色箭头表示“Lookup Currency Key”转换的错误输出。 通过使用红色箭头将转换连接到脚本组件，您可以将所有处理错误重定向到脚本组件，然后，该组件会处理这些错误并将它们发送到目标。  
+     红色箭头表示“Lookup Currency Key”  转换的错误输出。 通过使用红色箭头将转换连接到脚本组件，您可以将所有处理错误重定向到脚本组件，然后，该组件会处理这些错误并将它们发送到目标。  
   
-4.  在“配置错误输出”对话框的“错误”列中，选择“重定向行”，再单击“确定”。  
+4.  在“配置错误输出”  对话框的“错误”  列中，选择“重定向行”  ，再单击“确定”  。  
   
-5.  在“数据流”设计图面上，在新添加的“ScriptComponent”中单击“ScriptComponent”，然后将该名称更改为Get Error Description”。  
+5.  在“数据流”  设计图面上，在新添加的“ScriptComponent”  中单击“ScriptComponent”  ，然后将该名称更改为Get Error Description”  。  
   
-6.  双击“Get Error Description”转换。  
+6.  双击“Get Error Description”  转换。  
   
-7.  在“脚本转换编辑器”对话框中的“输入列”页中，选择“ErrorCode”列。  
+7.  在“脚本转换编辑器”  对话框中的“输入列”  页中，选择“ErrorCode”  列。  
   
-8.  在“输入和输出”页中，展开“输出 0”，单击“输出列”，再单击“添加列”。  
+8.  在“输入和输出”  页中，展开“输出 0”  ，单击“输出列”  ，再单击“添加列”  。  
   
-9. 在中`Name`属性中，键入**ErrorDescription**并设置`DataType`属性设置为**Unicode 字符串 [DT_WSTR]**。  
+9. 在中`Name`属性中，键入**ErrorDescription**并设置`DataType`属性设置为**Unicode 字符串 [DT_WSTR]** 。  
   
 10. 上**脚本**页上，确认`LocaleID`属性设置为**英语 （美国。**  
   
-11. 单击“编辑脚本”打开 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 `Input0_ProcessInputRow` 方法中，键入或粘贴以下代码。  
+11. 单击“编辑脚本”  打开 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 `Input0_ProcessInputRow` 方法中，键入或粘贴以下代码。  
   
      [Visual Basic]  
   
@@ -91,9 +91,9 @@ ms.locfileid: "62891399"
         }  
     ```  
   
-12. 在“生成”菜单上，单击“生成解决方案”生成脚本并保存更改，然后关闭 VSTA。  
+12. 在“生成”  菜单上，单击“生成解决方案”  生成脚本并保存更改，然后关闭 VSTA。  
   
-13. 单击“确定”关闭“脚本转换编辑器”对话框。  
+13. 单击“确定”  关闭“脚本转换编辑器”  对话框。  
   
 ## <a name="next-steps"></a>后续步骤  
  [第 4 步：添加平面文件目标] (lesson-4-4-adding-a-flat-file-destination.md  

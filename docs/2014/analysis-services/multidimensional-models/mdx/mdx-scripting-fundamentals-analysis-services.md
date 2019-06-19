@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17cb2b326ed510a952249da6a73693b6be6ab252
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073856"
 ---
 # <a name="mdx-scripting-fundamentals-analysis-services"></a>MDX 脚本编写基础知识 (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66073856"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[基本 MDX 脚本 (MDX)](the-basic-mdx-script-mdx.md)|详细介绍了基本 MDX 脚本（包括每个多维数据集中提供的默认 MDX 脚本），以及 MDX 脚本通常如何在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的多维数据集内运行。|  
 |[管理作用域和上下文 (MDX)](managing-scope-and-context-mdx.md)|介绍如何使用 [CALCULATE](/sql/mdx/mdx-scripting-calculate) 语句、 [SCOPE](/sql/mdx/mdx-scripting-scope) 语句以及 [This](/sql/mdx/this-mdx) 函数管理 MDX 脚本中的上下文和作用域。|  

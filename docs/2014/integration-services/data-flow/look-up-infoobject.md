@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771103"
 ---
 # <a name="look-up-infoobject"></a>查找 InfoObject
@@ -29,17 +29,17 @@ ms.locfileid: "62771103"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 SAP BW 目标。  
+2.  在“数据流”  选项卡上，双击 SAP BW 目标。  
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
 4.  在 **“连接管理器”** 页的 **“创建 SAP BW 对象”** 组框中，选择以下选项之一：  
   
-    1.  选择 **“InfoCube”**。 然后单击 **“创建”**。 在 **“创建事务数据的 InfoCube”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
+    1.  选择 **“InfoCube”** 。 然后单击 **“创建”** 。 在 **“创建事务数据的 InfoCube”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
   
-    2.  选择 **“InfoSource”**。 然后单击 **“创建”**。 在 **“创建 InfoSource”** 对话框中，选择 **“事务数据”**。 在 **“创建事务数据的 InfoSource”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
+    2.  选择 **“InfoSource”** 。 然后单击 **“创建”** 。 在 **“创建 InfoSource”** 对话框中，选择 **“事务数据”** 。 在 **“创建事务数据的 InfoSource”** 对话框中单击列表中某一行的 **“IObject”** 列中的 **“搜索”** 。 每一行表示包数据流中的一列。  
   
-    3.  选择 **“InfoSource”**。 然后单击 **“创建”**。 在 **“创建 InfoSource”** 对话框中，选择 **“主数据”**。 在 **“创建主数据的 InfoSource”** 对话框中单击 **“查找”**。  
+    3.  选择 **“InfoSource”** 。 然后单击 **“创建”** 。 在 **“创建 InfoSource”** 对话框中，选择 **“主数据”** 。 在 **“创建主数据的 InfoSource”** 对话框中单击 **“查找”** 。  
   
  您还可以单击 **“新建 InfoObject”** 对话框中 **“属性”** 部分中的 **“添加”** 来打开 **“查找 InfoObject”** 对话框。  
   

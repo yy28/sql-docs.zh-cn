@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224465"
 ---
 # <a name="column-size"></a>列大小
@@ -40,7 +40,7 @@ ms.locfileid: "63224465"
 |SQL_DOUBLE[c]|15|  
 |所有二进制类型 [a]，[b]。|定义或最大长度以字节为单位的列或参数。 例如，定义为 BINARY(10) 的列的长度为 10。|  
 |SQL_TYPE_DATE[c]|10 (中的字符数*年-月-日*格式)。|  
-|SQL_TYPE_TIME[c]|8 (中的字符数*hh mm ss*格式)，或 9 + *s* (中的字符数*hh: mm:*[.fff...] 格式，其中*的*秒精度)。|  
+|SQL_TYPE_TIME[c]|8 (中的字符数*hh mm ss*格式)，或 9 + *s* (中的字符数*hh: mm:* [.fff...] 格式，其中*的*秒精度)。|  
 |SQL_TYPE_TIMESTAMP|16 (中的字符数*年-月-日 hh: mm*格式)<br /><br /> 19 (中的字符数*年-月-日* *hh: mm:* 格式)<br /><br /> 或<br /><br /> 20 + *s* (中的字符数*年-月-日： 分： 秒*[.fff...] 格式，其中*s*秒精度)。|  
 |SQL_INTERVAL_SECOND|其中*p*为间隔起始精度和*s*秒精度*p* (如果*s*= 0) 或*p* + *s*+ 1 (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|其中*p*为间隔起始精度和*s*秒精度 9 +*p* (如果*s*= 0) 或 10 +*p*+ *s* (如果*s*> 0)。 [d]|  

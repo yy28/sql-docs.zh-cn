@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: be518cfacfefa76f380eefab1e45348e037cc0c1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098463"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定预先部署或后期部署脚本
@@ -34,7 +34,7 @@ END
   
 ## <a name="to-add-and-modify-a-pre--or-post-deployment-script"></a>添加和修改预先部署或后期部署脚本  
   
-1.  在“解决方案资源管理器”中，展开数据库项目以便显示“脚本”文件夹。  
+1.  在“解决方案资源管理器”  中，展开数据库项目以便显示“脚本”文件夹。  
   
 2.  右键单击“脚本”文件夹并选择“添加”。  
   

@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e4fd1a39bef618b942e8a6cea6cbcac781a49521
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936166"
 ---
 # <a name="z-geography-data-type"></a>Z（geography 数据类型）
@@ -38,12 +38,12 @@ ms.locfileid: "65936166"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float   
   
  CLR 类型：**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geography 实例不是 point，则此属性的值为 Null；对于未设置此属性的任何 Point 实例，此属性的值也为 Null。  
+ 如果 geography 实例不是 point，则此属性的值为 Null；对于未设置此属性的任何 Point 实例，此属性的值也为 Null   。  
   
  该属性为只读。  
   

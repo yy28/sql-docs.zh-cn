@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a62d94a101a2c62ae21950f6ad25e8f44ad333ca
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728605"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>检索和了解变更数据
@@ -53,15 +53,15 @@ ms.locfileid: "65728605"
   
     1.  配置到源数据库的有效连接。  
   
-    2.  对于 **“数据访问模式”**，选择 **“变量中的 SQL 命令”**。  
+    2.  对于 **“数据访问模式”** ，选择 **“变量中的 SQL 命令”** 。  
   
-    3.  对于 **“变量名称”**，选择 **“User::SqlDataQuery”**。  
+    3.  对于 **“变量名称”** ，选择 **“User::SqlDataQuery”** 。  
   
 3.  在 **“OLE DB 源编辑器”** 中的 **“列”** 页上，确保所需的所有列都映射到输出列。  
   
 ## <a name="next-step"></a>下一步  
  在配置了用于检索变更数据的 OLE DB 源之后，下一步就是开始设计包中的数据流。  
   
- **下一个主题：**[处理插入、更新和删除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+ **下一个主题：** [处理插入、更新和删除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
   

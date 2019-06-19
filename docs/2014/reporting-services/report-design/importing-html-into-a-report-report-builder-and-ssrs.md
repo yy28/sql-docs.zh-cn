@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105671"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>将 HTML 导入报表（报表生成器和 SSRS）
@@ -70,9 +70,9 @@ ms.locfileid: "66105671"
   
 -   格式不正确的 CSS 值和 HTML 的忽略方式相同。  
   
--   如果同一标记中存在特性和 CSS 样式特性，则 CSS 属性具有较高优先级。 例如，如果文本为 \<p style="text-align: right" align="left">，则仅应用 text-align 特性，并且文本为右对齐。  
+-   如果同一标记中存在特性和 CSS 样式特性，则 CSS 属性具有较高优先级。 例如，如果文本为 \<p style="text-align: right" align="left">，则仅应用 text-align 特性，并且文本为右对齐  。  
   
--   对于特性和 CSS 样式，如果多次指定某一属性，则仅应用该属性的最后一个实例。 例如，如果文本为 \<p align="left" align="right">，该文本则为右对齐。  
+-   对于特性和 CSS 样式，如果多次指定某一属性，则仅应用该属性的最后一个实例。 例如，如果文本为 \<p align="left" align="right">，该文本则为右对齐  。  
   
 ## <a name="see-also"></a>请参阅  
  [以 HTML 格式呈现（报表生成器和 SSRS）](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  

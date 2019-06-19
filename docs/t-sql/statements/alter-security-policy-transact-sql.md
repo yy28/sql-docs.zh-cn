@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 403887d4e573f28214e5fd82586fd07e20c338d5
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62648713"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ security_policy_name
 安全策略的名称。 安全策略名称必须符合有关标识符的规则，并且在数据库中以及对其架构均必须是唯一的。  
   
 schema_name  
-是安全策略所属架构的名称。 由于架构绑定，必须使用 schema_name。  
+是安全策略所属架构的名称。 由于架构绑定，必须使用 schema_name  。  
   
 [ FILTER | BLOCK ]  
 绑定到目标表的函数的安全谓词类型。 FILTER 谓词以静默方式筛选可用于读取操作的行。 BLOCK 谓词显式阻止违反谓词函数的写入操作。  
@@ -72,10 +72,10 @@ tvf_schema_name.security_predicate_function_name
 { column_name | arguments }  
 用作安全谓词函数的参数的列名和表达式。 目标表上的任意列都能用作谓词函数的参数。 可以使用包含文字、内置的表达式和使用算术运算符的表达式。  
   
-table_schema_name.table_name  
+table_schema_name.table_name   
 是安全谓词的目标表。 对于特定 DML 操作，多个禁用的安全策略能以单个表为目标，但是在任何给定时间只能启用一个。  
   
-\<block_dml_operation>  
+\<block_dml_operation>   
 应用的 block 谓词的特定 DML 操作。 AFTER 指定将针对 DML 操作（INSERT 或 UPDATE）执行后的行值计算谓词。 BEFORE 指定将针对 DML 操作（UPDATE 或 DELETE）执行前的行值计算谓词。 如果不指定任何操作，则谓词将应用到所有操作。  
   
 你无法对应用的 block 谓词的操作执行 ALTER，因为该操作用于唯一标识该谓词。 相反，必须删除该谓词，并为新操作添加一个新的谓词。  
@@ -92,11 +92,11 @@ table_schema_name.table_name
 ## <a name="remarks"></a>Remarks  
 ALTER SECURITY POLICY 语句位于事务范围内。 如果对事务进行回滚，也将对该语句进行回滚。  
   
-将谓词函数用于内存优化表时，安全策略中必须包含 SCHEMABINDING 并使用 WITH NATIVE_COMPILATION 编译提示。 不能使用 ALTER 语句更改 SCHEMABINDING 参数，因为该参数应用于所有谓词。 若要更改架构绑定，必须先删除安全策略，然后再重新创建。  
+将谓词函数用于内存优化表时，安全策略中必须包含 SCHEMABINDING 并使用 WITH NATIVE_COMPILATION 编译提示   。 不能使用 ALTER 语句更改 SCHEMABINDING 参数，因为该参数应用于所有谓词。 若要更改架构绑定，必须先删除安全策略，然后再重新创建。  
   
 在执行相应 DML 操作后计算阻止谓词。 因此，READ UNCOMMITTED 查询可看到要回滚的临时值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要 ALTER ANY SECURITY POLICY 权限。  
   
 另外，每个添加的谓词都需要以下权限：  
@@ -106,7 +106,7 @@ ALTER SECURITY POLICY 语句位于事务范围内。 如果对事务进行回滚
 -   针对目标表上被用作参数的每一列的 REFERENCES 权限。  
   
 ## <a name="examples"></a>示例  
-以下示例演示了 ALTER SECURITY POLICY 语法的使用。 有关完整安全策略方案的示例，请参阅[行级安全性](../../relational-databases/security/row-level-security.md)。  
+以下示例演示了 ALTER SECURITY POLICY  语法的使用。 有关完整安全策略方案的示例，请参阅[行级安全性](../../relational-databases/security/row-level-security.md)。  
   
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. 向策略添加其他谓词  
 以下语法更改安全策略，同时添加一个筛选器谓词到 `mytable` 表。  

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c832fe601eb7151e438d7f93c3e39e9b249ea246
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483325"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>创建属性组 (Master Data Services)
@@ -37,7 +37,7 @@ ms.locfileid: "65483325"
   
 ### <a name="to-create-an-attribute-group"></a>创建属性组  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
 2.  上**模型视图**页上，从菜单栏中，依次指向**管理**然后单击**属性组**。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65483325"
   
 4.  从 **“实体”** 列表中，选择某一实体。  
   
-5.  单击 **“叶组”**、 **“合并组”** 或 **“集合组”** ，以便为叶成员、合并成员或集合相应创建属性组。  
+5.  单击 **“叶组”** 、 **“合并组”** 或 **“集合组”** ，以便为叶成员、合并成员或集合相应创建属性组。  
   
 6.  单击**添加属性组**。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "65483325"
     > [!NOTE]  
     >  如果所选**合并组**或**集合组**步骤 5 中，在此框是**合并组名称**或**集合组名称**分别。  
   
-8.  单击 **“保存组”**。  
+8.  单击 **“保存组”** 。  
   
 9. 展开该组的文件夹。  
   
-10. 单击 **“属性”**。  
+10. 单击 **“属性”** 。  
   
 11. 单击**编辑所的选项**。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65483325"
   
 13. （可选） 单击**向上**并**向下**箭头可以更改属性的从左到右顺序。  
   
-14. 单击“保存” 。  
+14. 单击“保存”  。  
   
 ## <a name="next-steps"></a>后续步骤  
   

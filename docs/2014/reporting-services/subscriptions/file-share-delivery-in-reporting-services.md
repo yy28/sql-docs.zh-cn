@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100911"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的文件共享传递
@@ -67,7 +67,7 @@ ms.locfileid: "66100911"
   
  您可以指定覆盖选项对每个报表传递重复使用相同的文件名或者创建新文件。 若要覆盖文件，必须使用相同的文件名和扩展名。  
   
- 为每个传递创建唯一的文件的另一种方法是在文件名中包含时间戳。 若要执行此操作，添加`@timestamp`变量的文件的名称 (例如， *CompanySales@timestamp*)。 采用这种方法，文件名的定义是唯一的，因此永远不会被覆盖。  
+ 为每个传递创建唯一的文件的另一种方法是在文件名中包含时间戳。 若要执行此操作，添加`@timestamp`变量的文件的名称 (例如， *CompanySales@timestamp* )。 采用这种方法，文件名的定义是唯一的，因此永远不会被覆盖。  
   
 ## <a name="see-also"></a>请参阅  
  [创建、 修改和删除标准订阅&#40;Reporting Services 本机模式&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  

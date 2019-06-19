@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65836152"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 数据类型和列 (SQL Server)
@@ -55,12 +55,12 @@ ms.locfileid: "65836152"
   
 -   您希望使用数据库服务器的管理功能来管理 XML 数据。 例如，这可能是备份、恢复和复制。  
   
- 如果未满足这些条件中的任意一个，则最好是将数据存储为非 XML 数据，这是一种大型对象类型（如 **[n]varchar(max)** 或 **varbinary(max)**）。  
+ 如果未满足这些条件中的任意一个，则最好是将数据存储为非 XML 数据，这是一种大型对象类型（如 **[n]varchar(max)** 或 **varbinary(max)** ）。  
   
 ## <a name="xml-storage-options"></a>XML 存储选项  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 存储选项包括：  
   
--   本机存储，数据类型为 **xml**   
+-   本机存储，数据类型为 **xml**  
   
      数据以保留数据的 XML 内容的内部表示形式进行存储， 这种内部表示形式包括包容层次结构、文档顺序、元素和属性值的相关信息。 具体来说，就是保留 XML 数据的 InfoSet 内容。 有关信息集的详细信息，请访问 [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 内容并不是文本 XML 的精确副本，因为其中未保留下列信息：无关紧要的空格、属性顺序、命名空间前缀和 XML 声明。  
   

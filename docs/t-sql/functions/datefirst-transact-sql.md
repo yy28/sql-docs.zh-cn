@@ -34,10 +34,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c748a75fa9264cce7282f2a9af7b5d183c75cdb5
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943639"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
@@ -59,7 +59,7 @@ ms.locfileid: "65943639"
 **tinyint**
   
 ## <a name="remarks"></a>Remarks  
-SET DATEFIRST n 指定一周的第一天（星期日、星期一、星期二等）。 n 值的范围为 1 到 7。
+SET DATEFIRST n 指定一周的第一天（星期日、星期一、星期二等）  。 n 值的范围为 1 到 7  。
 
 ```sql
 SET DATEFIRST 3;

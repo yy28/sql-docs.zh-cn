@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 490b00717d16e4ca101ea591c22e71a2d228e659
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774970"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase 的类型映射
@@ -28,7 +28,7 @@ ms.locfileid: "64774970"
 对于引用外部数据源中的文件的外部表，列和类型定义必须映射到外部文件的确切架构。 定义引用 Hadoop/Hive 中存储的数据的数据类型时，可在 SQL 与 Hive 数据类型之间使用以下映射，并在从中进行选择时将类型强制转换为 SQL 数据类型。 除非另有说明，否则类型包括 Hive 的所有版本。
 
 > [!NOTE]  
-> 在任何转换中，SQL Server 都不支持 Hive 无穷大数据值。 PolyBase 会失败，并出现数据类型转换错误。
+> 在任何转换中，SQL Server 都不支持 Hive 无穷大  数据值。 PolyBase 会失败，并出现数据类型转换错误。
 
 ## <a name="hadoop-type-mapping-reference"></a>Hadoop 类型映射引用
 
@@ -81,11 +81,11 @@ ms.locfileid: "64774970"
 |DATE              |Datetime2        |
 |timestamp         |Datetime2        | 
 
-类型不匹配 
+类型不匹配  
 
-Float：Oracle 支持的浮点精度为 126，低于 SQL Server 支持的精度 (53)。 因此，可以直接映射 Float (1-53)，但除此之外，截断会导致数据丢失。
+Float：  Oracle 支持的浮点精度为 126，低于 SQL Server 支持的精度 (53)。 因此，可以直接映射 Float (1-53)  ，但除此之外，截断会导致数据丢失。
 
-时间戳：Oracle 中的时间戳和具有当地时区的时间戳支持 0.9 秒的精度，而 SQL Server DateTime2 仅支持 0.7 秒的精度。 
+时间戳：  Oracle 中的时间戳和具有当地时区的时间戳支持 0.9 秒的精度，而 SQL Server DateTime2 仅支持 0.7 秒的精度。 
 
 
 

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010963"
 ---
 # <a name="upgrade-full-text-search"></a>升级全文搜索
@@ -135,9 +135,9 @@ ms.locfileid: "66010963"
   
  **更改服务器实例的全文升级行为**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]设置用户帐户 ：使用 [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) 的 upgrade\_option 操作  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]：使用 [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) 的 upgrade\_option 操作   
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：** 使用“服务器属性”对话框的“全文升级选项”。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：** 使用“服务器属性”对话框的“全文升级选项”   。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
 ##  <a name="Considerations_for_Restore"></a> 有关将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录还原到 的注意事项 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  将全文数据从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一种方法是将完整数据库备份还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -187,7 +187,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中附加的每个全文目录的状态与从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]分离数据库时相同。 如果分离操作挂起任意全文检索填充，该填充将在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上恢复，全文检索随后即可用于全文搜索。  
   
- 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文目录文件，或者在未指定新位置的情况下在附加操作期间移动全文文件，行为则取决于选择的全文升级选项。 如果全文升级选项为“导入”或“重新生成”，则重新生成附加的全文目录。 如果全文升级选项为“重置”，则重置附加的全文目录。  
+ 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文目录文件，或者在未指定新位置的情况下在附加操作期间移动全文文件，行为则取决于选择的全文升级选项。 如果全文升级选项为“导入”  或“重新生成”  ，则重新生成附加的全文目录。 如果全文升级选项为“重置”  ，则重置附加的全文目录。  
   
  有关分离和附加数据库的详细信息，请参阅[数据库分离和附加 (SQL Server)](../databases/database-detach-and-attach-sql-server.md)、[CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)、[sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql) 和 [sp_detach_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)。  
   

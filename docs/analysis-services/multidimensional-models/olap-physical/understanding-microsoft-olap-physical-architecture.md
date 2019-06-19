@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bcbbb73fc0e2802ef1873be2aa4e0143afaf4056
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020080"
 ---
 # <a name="understanding-microsoft-olap-physical-architecture"></a>了解 Microsoft OLAP 物理体系结构
@@ -22,7 +22,7 @@ ms.locfileid: "63020080"
 ## <a name="in-this-section"></a>本节内容  
  以下主题提供有关的体系结构的详细信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]解决方案。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[OLAP 引擎服务器组件](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)|介绍 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器的组件。|  
 |[本地多维数据集&#40;Analysis Services-多维数据&#41;](../../../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)|介绍如何实现独立多维数据集，以及该实现在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 解决方案中的作用域。|  

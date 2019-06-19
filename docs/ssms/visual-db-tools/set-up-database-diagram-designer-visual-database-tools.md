@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e8236a18c715451ecb32c5fdcb890d5bf00901c2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099901"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>设置数据库关系图设计器 (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "65099901"
   
 2.  展开该数据库连接下的“数据库关系图”节点。  
   
-3.  如果希望设置数据库关系图，请在出现提示时选择“是”。  
+3.  如果希望设置数据库关系图，请在出现提示时选择“是”  。  
   
     > [!NOTE]  
     > 这将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上创建数据库关系图表、系统存储过程和一个系统函数。  

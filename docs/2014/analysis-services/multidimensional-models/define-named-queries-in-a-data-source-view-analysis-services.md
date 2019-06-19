@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075554"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名查询 (Analysis Services)
@@ -41,9 +41,9 @@ ms.locfileid: "66075554"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中添加命名查询的数据源视图。  
   
-2.  在解决方案资源管理器中，展开“数据源视图”文件夹，然后双击数据源视图。  
+2.  在解决方案资源管理器中，展开“数据源视图”  文件夹，然后双击数据源视图。  
   
-3.  在“表”或“关系图”窗格中，右键单击空白区域，再单击“新建命名查询”。  
+3.  在“表”  或“关系图”  窗格中，右键单击空白区域，再单击“新建命名查询”  。  
   
 4.  在 **“创建命名查询”** 对话框中，执行下列操作：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66075554"
     > [!NOTE]  
     >  查询生成用户界面 (UI) 取决于数据源。 您所得到的不是图形 UI，而是基于文本的一般 UI。 您可以使用这些不同的 UI 来实现同样的功能，但必须以不同的方式来操作。 有关详细信息，请参阅[“创建或编辑命名查询”对话框（Analysis Services - 多维数据）](../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)。  
   
-5.  单击“确定” 。 一个显示两个重叠表的图标出现在表格表头上，指示此表已被一个命名查询替代。  
+5.  单击 **“确定”** 。 一个显示两个重叠表的图标出现在表格表头上，指示此表已被一个命名查询替代。  
   
 ## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   

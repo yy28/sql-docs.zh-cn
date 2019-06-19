@@ -27,11 +27,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b6703906dbe133436656ca2822ac18a9df42ad4c
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334574"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034269"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,17 +112,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  PARTITION BY  
  将查询结果集分为多个分区。 开窗函数分别应用于每个分区，并为每个分区重新启动计算。  
   
- value_expression  
- 指定行集按其分区的列。 value_expression 只能引用可供 FROM 子句使用的列。 value_expression 不能引用选择列表中的表达式或别名。 value_expression 可以是列表达式、标量子查询、标量函数或用户定义的变量。  
+ value_expression   
+ 指定行集按其分区的列。 value_expression 只能引用可供 FROM 子句使用的列  。 value_expression 不能引用选择列表中的表达式或别名  。 value_expression 可以是列表达式、标量子查询、标量函数或用户定义的变量  。  
   
  \<ORDER BY 子句 >  
  定义结果集的每个分区中行的逻辑顺序。 也就是说，它指定按其执行开窗函数计算的逻辑顺序。  
   
- order_by_expression  
- 指定用于进行排序的列或表达式。 order_by_expression 只能引用可供 FROM 子句使用的列。 不能将整数指定为表示列名或别名。  
+ order_by_expression   
+ 指定用于进行排序的列或表达式。 order_by_expression 只能引用可供 FROM 子句使用的列  。 不能将整数指定为表示列名或别名。  
   
- COLLATE collation_name  
- 指定应该根据在 collation_name 中指定的排序规则执行 ORDER BY 操作。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于 char、nchar、varchar 和 nvarchar 类型的列。  
+ COLLATE collation_name   
+ 指定应该根据在 collation_name 中指定的排序规则执行 ORDER BY 操作  。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称  。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于 char、nchar、varchar 和 nvarchar 类型的列     。  
   
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
@@ -393,7 +393,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 以下示例使用 ROWS 子句定义其行将作为当前行以及后随的 N 行（在此示例中为 1 行）计算的窗口。  
+ 以下示例使用 ROWS 子句定义其行将作为当前行以及后随的 N 行（在此示例中为 1 行）计算的窗口  。  
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a5240f2f255281709bf563f5a82dc70ecb534d6e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722465"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>第 2-4 课：测试第 2 课教程包
@@ -42,11 +42,11 @@ ms.locfileid: "65722465"
   
 ## <a name="test-the-lesson-2-tutorial-package"></a>测试第 2 课教程包  
   
-1.  在“解决方案资源管理器”中，右键单击“Lesson 2.dtsx”，然后选择“执行包”。  
+1.  在“解决方案资源管理器”中，右键单击“Lesson 2.dtsx”，然后选择“执行包”    。  
   
-    包开始运行。 可以在“输出”窗口中或选择“进度”选项卡来验证每个循环的状态。例如，可以看到 1097 行从文件 Currency_VEB.txt 添加到目标表中。  
+    包开始运行。 可以在“输出”窗口中或选择“进度”选项卡来验证每个循环的状态   。例如，可以看到 1097 行从文件 Currency_VEB.txt 添加到目标表中。  
   
-2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”。  
+2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”   。  
   
 ## <a name="go-to-next-lesson"></a>转到下一课  
 [第 3 课：使用 SSIS 添加日志记录](../integration-services/lesson-3-add-logging-with-ssis.md)  

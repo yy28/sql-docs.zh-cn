@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096098"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>配置服务帐户（SSRS 配置管理器）
@@ -44,13 +44,13 @@ ms.locfileid: "66096098"
   
      如果报表服务器部署在支持 Kerberos 身份验证的网络中，则必须使用刚刚指定的域用户帐户注册报表服务器服务主体名称 (SPN)。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
-4.  单击 **“应用”**。  
+4.  单击 **“应用”** 。  
   
-5.  当系统提示您备份对称密钥时，请键入对称密钥备份的文件名和位置，并键入用于锁定和解锁该文件的密码，然后单击 **“确定”**。  
+5.  当系统提示您备份对称密钥时，请键入对称密钥备份的文件名和位置，并键入用于锁定和解锁该文件的密码，然后单击 **“确定”** 。  
   
-6.  如果报表服务器使用该服务帐户连接到报表服务器数据库，则连接信息将更新为使用新的帐户或密码。 更新连接信息要求连接到数据库。 如果出现“ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **数据库连接”** 对话框，请输入拥有连接到数据库的权限的凭据，然后单击 **“确定”**。  
+6.  如果报表服务器使用该服务帐户连接到报表服务器数据库，则连接信息将更新为使用新的帐户或密码。 更新连接信息要求连接到数据库。 如果出现“ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **数据库连接”** 对话框，请输入拥有连接到数据库的权限的凭据，然后单击 **“确定”** 。  
   
-7.  当系统提示您还原对称密钥时，请键入在步骤 5 中指定的密码，并单击 **“确定”**。  
+7.  当系统提示您还原对称密钥时，请键入在步骤 5 中指定的密码，并单击 **“确定”** 。  
   
 8.  查看“结果”窗格中的状态消息以验证所有任务是否均已成功完成。  
   

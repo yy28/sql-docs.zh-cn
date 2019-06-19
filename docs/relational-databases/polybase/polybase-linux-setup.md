@@ -11,20 +11,20 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 69c256ef52d9c302d55ef1499059d959ed55b528
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63759064"
 ---
 # <a name="install-polybase-on-linux"></a>在 Linux 上安装 PolyBase
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-以下步骤在 Linux 上安装 [PolyBase](../../relational-databases/search/full-text-search.md) (mssql-server-polybase)。 PolyBase 允许针对远程数据源运行外部查询。 
+以下步骤在 Linux 上安装 [PolyBase](../../relational-databases/search/full-text-search.md) (mssql-server-polybase)  。 PolyBase 允许针对远程数据源运行外部查询。 
 
 >[!NOTE]
-> 在安装 Polybase 前，请首先[安装 SQL Server](../../linux/sql-server-linux-setup.md#platforms)。 这将配置安装 mssql-server-polybase 包时要用到的密钥和存储库。
+> 在安装 Polybase 前，请首先[安装 SQL Server](../../linux/sql-server-linux-setup.md#platforms)。 这将配置安装 mssql-server-polybase 包时要用到的密钥和存储库  。
 
 > 当前无法在 Linux 上对 PolyBase 进行横向扩展。
 
@@ -39,7 +39,7 @@ ms.locfileid: "63759064"
 
 ## <a name="RHEL">在 RHEL 上安装</a>
 
-通过下列命令在 Red Hat Enterprise Linux 上安装 mssql-server-polybase。 
+通过下列命令在 Red Hat Enterprise Linux 上安装 mssql-server-polybase  。 
 
 ```bash
 sudo yum install -y mssql-server-polybase
@@ -58,7 +58,7 @@ sudo systemctl restart mssql-server
 
 ## <a name="ubuntu">在 Ubuntu 上安装</a>
 
-通过下列命令在 Ubuntu 上安装 mssql-server-polybase。 
+通过下列命令在 Ubuntu 上安装 mssql-server-polybase  。 
 
 ```bash
 sudo apt-get install mssql-server-polybase
@@ -77,7 +77,7 @@ sudo systemctl restart mssql-server
 
 ## <a name="SLES">在 SLES 上安装</a>
 
-通过下列命令在 SUSE Linux Enterprise Server 上安装 mssql-server-polybase。 
+通过下列命令在 SUSE Linux Enterprise Server 上安装 mssql-server-polybase  。 
 
 ```bash
 sudo zypper install mssql-server-polybase
@@ -107,7 +107,7 @@ RECONFIGURE [WITH OVERRIDE];
 
 ## <a name="update-polybase"></a>更新 PolyBase
 
-如果已安装 mssql-server-polybase，可使用下列命令将其更新至最新版本：
+如果已安装 mssql-server-polybase，可使用下列命令将其更新至最新版本  ：
 
 ### <a name="rhel"></a>RHEL
 

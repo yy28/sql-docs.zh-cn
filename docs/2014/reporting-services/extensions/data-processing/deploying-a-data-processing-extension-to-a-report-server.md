@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164062"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>如何：向报表服务器部署数据处理扩展插件
@@ -27,7 +27,7 @@ ms.locfileid: "63164062"
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>部署数据处理扩展插件程序集  
   
-1.  将程序集从临时位置复制到您要在其上使用数据处理扩展插件的报表服务器的 bin 目录中。 报表服务器 Bin 目录的默认位置为 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer\bin。  
+1.  将程序集从临时位置复制到您要在其上使用数据处理扩展插件的报表服务器的 bin 目录中。 报表服务器 Bin 目录的默认位置为 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer\bin  。  
   
     > [!NOTE]  
     >  此步骤会妨碍升级到较新的 SQL Server 实例。 有关详细信息，请参阅 [Upgrade and Migrate Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md)。  
@@ -52,7 +52,7 @@ ms.locfileid: "63164062"
   
      `Name` 的值为数据处理扩展插件的唯一名称。 `Type` 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，数据处理扩展插件是可见的。 若要在用户界面（如报表管理器）中隐藏扩展插件，请将 `Visible` 属性添加到 `Extension` 元素，并将其设置为 `false`。  
   
-5.  为自定义程序集添加一个用于向扩展插件授予 `FullTrust` 权限的代码组。 为此，需要将代码组添加到 rssrvpolicy.config 文件，该文件默认位于 %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<Instance Name>\Reporting Services\ReportServer。 代码组可能如下所示：  
+5.  为自定义程序集添加一个用于向扩展插件授予 `FullTrust` 权限的代码组。 为此，需要将代码组添加到 rssrvpolicy.config 文件，该文件默认位于 %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<Instance Name>\Reporting Services\ReportServer  。 代码组可能如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

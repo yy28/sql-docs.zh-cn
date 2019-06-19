@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: aa6a8629790c1f0fd3208ecfd4b2e0517f9bb86c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943546"
 ---
 # <a name="x40x40packeterrors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "65943546"
  **integer**  
   
 ## <a name="remarks"></a>Remarks  
- 要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括数据包错误）的报表，请运行 sp_monitor。  
+ 要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括数据包错误）的报表，请运行 sp_monitor  。  
   
 ## <a name="examples"></a>示例  
  下面的示例显示了使用 `@@PACKET_ERRORS`。  

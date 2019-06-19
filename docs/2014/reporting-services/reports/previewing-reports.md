@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: af45559f2eccfc718aa1d4ba3e986ecd3144c847
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63180197"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>预览 SQL Server Reporting Services (SSRS) 中的报表
@@ -21,7 +21,7 @@ ms.locfileid: "63180197"
   在设计报表时，在将报表发布到生产环境中之前可能需要查看该报表。 可使用多种方法查看该报表：在报表设计器中切换到预览模式、使用报表设计器中的预览窗口以及在测试环境中将报表发布到报表服务器。  
   
 > [!NOTE]  
-> 在预览报表时，报表数据将缓存到本地计算机上的文件中。 使用相同的查询、参数和凭据再次预览同一报表时，报表设计器将检索缓存副本，而不是重新运行查询。 数据文件将在报表定义文件所在的同一目录中另存为 \<reportname>.rdl.data。 关闭报表设计器时，不会删除该文件。  
+> 在预览报表时，报表数据将缓存到本地计算机上的文件中。 使用相同的查询、参数和凭据再次预览同一报表时，报表设计器将检索缓存副本，而不是重新运行查询。 数据文件将在报表定义文件所在的同一目录中另存为 \<reportname>.rdl.data  。 关闭报表设计器时，不会删除该文件。  
   
 ## <a name="preview-mode"></a>预览模式
 
@@ -42,7 +42,7 @@ ms.locfileid: "63180197"
 > [!NOTE]  
 > 在调试报表之前，必须设置开始项。 若要设置启动项，请在解决方案资源管理器中右键单击报表项目，单击**属性**，然后在`StartItem`，选择要显示的报表的名称。  
   
- 若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”**。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
+ 若要预览项目开始项之外的特定报表，请选择生成报表但不部署该报表的配置（例如，DebugLocal 配置），右键单击报表，再单击 **“运行”** 。 必须选择不部署报表的配置；否则，报表将发布到报表服务器，而不是显示在本地预览窗口中。  
   
 ## <a name="print-preview"></a>打印预览
 

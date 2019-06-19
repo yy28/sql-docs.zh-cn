@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c386191c9e6dc9d8cf1836381e50f3a9d607c25
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944573"
 ---
 # <a name="cryptgenrandom-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
@@ -40,13 +40,13 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>参数  
 *length*  
-`CRYPT_GEN_RANDOM` 将创建数的长度数，以字节为单位。 length 参数的数据类型为“int”且值范围在 1 和 8000 之间。 `CRYPT_GEN_RANDOM` 为此范围外的“int”值返回 NULL。 
+`CRYPT_GEN_RANDOM` 将创建数的长度数，以字节为单位。 length 参数的数据类型为“int”  且值范围在 1 和 8000 之间  。 `CRYPT_GEN_RANDOM` 为此范围外的“int”  值返回 NULL。 
   
-seed  
-一个可选的十六进制数字，用作随机种子值。 种子的长度必须匹配 length 参数的值。 种子参数的数据类型为“varbinary (8000)”。
+seed   
+一个可选的十六进制数字，用作随机种子值。 种子的长度必须匹配 length 参数的值   。 种子参数的数据类型为“varbinary (8000)”   。
   
 ## <a name="returned-types"></a>返回类型  
-varbinary(8000)
+varbinary(8000) 
   
 ## <a name="permissions"></a>权限  
 此函数是公用的，因此不需要任何特殊权限。

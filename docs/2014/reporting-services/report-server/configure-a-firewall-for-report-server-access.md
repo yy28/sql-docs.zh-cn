@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104155"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
@@ -39,35 +39,35 @@ ms.locfileid: "66104155"
   
 #### <a name="to-open-port-80-on-windows-7-windows-server-2008-r2-windows-server-2012-and-2012-r2"></a>要在 Windows 7、Windows Server 2008 R2、Windows Server 2012 和 2012 R2 中打开端口 80  
   
-1.  在 **“开始”** 菜单上单击 **“控制面板”**，单击 **“系统和安全”**，然后单击 **“Windows 防火墙”**。 不为“类别”视图配置控制面板，您只需要选择 **“Windows 防火墙”**。  
+1.  在 **“开始”** 菜单上单击 **“控制面板”** ，单击 **“系统和安全”** ，然后单击 **“Windows 防火墙”** 。 不为“类别”视图配置控制面板，您只需要选择 **“Windows 防火墙”** 。  
   
-2.  单击 **“高级设置”**。  
+2.  单击 **“高级设置”** 。  
   
-3.  单击 **“入站规则”**。  
+3.  单击 **“入站规则”** 。  
   
-4.  在 **“操作”** 窗口中单击 **“新建规则”** 。  
+4.  在 **“操作”** 窗口中单击 **“新建规则”** 。   
   
-5.  单击 **“端口”** 的 **“规则类型”**。  
+5.  单击 **“端口”** 的 **“规则类型”** 。  
   
-6.  单击“下一步” 。  
+6.  单击“下一步”  。  
   
 7.  在 **“协议和端口”** 页上，单击 **TCP**。  
   
 8.  选择 **“特定本地端口”** ，然后键入值 **80**。  
   
-9. 单击“下一步” 。  
+9. 单击“下一步”  。  
   
-10. 在 **“操作”** 页上，单击 **“允许连接”**。  
+10. 在 **“操作”** 页上，单击 **“允许连接”** 。  
   
-11. 单击“下一步” 。  
+11. 单击“下一步”  。  
   
 12. 在 **“配置文件”** 页上，单击适合您的环境的选项。  
   
-13. 单击“下一步” 。  
+13. 单击“下一步”  。  
   
-14. 在“名称”页上，输入名称“ReportServer (TCP on port 80)”  
+14. 在“名称”页上，输入名称“ReportServer (TCP on port 80)”    
   
-15. 单击 **“完成”**。  
+15. 单击 **“完成”** 。  
   
 16. 重新启动计算机。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "66104155"
   
 2.  单击**允许程序通过 Windows 防火墙**。  
   
-3.  单击 **“继续”**。  
+3.  单击 **“继续”** 。  
   
 4.  在异常选项卡上单击**添加端口**。  
   
-5.  在名称键入**ReportServer (TCP 端口 80 上)**。  
+5.  在名称键入**ReportServer (TCP 端口 80 上)** 。  
   
 6.  端口号，在键入**80**。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66104155"
   
 8.  单击**更改作用域**。  
   
-9. 单击**仅我的网络 （子网）**，然后单击**确定**。  
+9. 单击**仅我的网络 （子网）** ，然后单击**确定**。  
   
 10. 单击 **“确定”** 关闭对话框。  
   

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: c6b99dfd27655894456a1b0957c8c42f31819e1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62795737"
 ---
 # <a name="managing-passwords-oracletosql"></a>管理密码 (OracleToSQL)
@@ -36,7 +36,7 @@ SSMA 允许你保护你的数据库的密码。
   
 1.  **清除文本：** 在密码节点的值属性中键入数据库密码。 服务器连接文件的脚本文件的服务器部分中的服务器定义节点下找到它。  
   
-    密码以明文形式是不安全的。 因此，您将遇到以下警告消息中的控制台输出：*"服务器&lt;服务器 id&gt;密码是提供不安全的明文形式 SSMA 控制台应用程序提供了一个选项来保护通过加密的密码，请参阅-securepassword 选项 SSMA 帮助文件中的详细信息信息。*  
+    密码以明文形式是不安全的。 因此，您将遇到以下警告消息中的控制台输出： *"服务器&lt;服务器 id&gt;密码是提供不安全的明文形式 SSMA 控制台应用程序提供了一个选项来保护通过加密的密码，请参阅-securepassword 选项 SSMA 帮助文件中的详细信息信息。*  
   
     **加密的密码：** 在这种情况下，指定的密码，在本地计算机中 ProtectedStorage.ssma 以加密形式存储。  
   

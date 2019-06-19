@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f355527002ed6d3637a3d1d895eb776c620c971d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060372"
 ---
 # <a name="connect-to-integration-services"></a>连接到 Integration Services
@@ -26,10 +26,10 @@ ms.locfileid: "66060372"
   
 2.  在 **“视图”** 菜单上，单击 **“对象资源管理器”** 。  
   
-3.  在对象资源管理器工具栏上，单击 **“连接”**，然后单击 **“Integration Services”**。  
+3.  在对象资源管理器工具栏上，单击 **“连接”** ，然后单击 **“Integration Services”** 。  
   
 4.  在 **“连接到服务器”** 对话框中，提供服务器名。 可以使用句点 (.)、(local) 或 `localhost` 来指示本地服务器。  
   
-5.  单击 **“连接”**。  
+5.  单击 **“连接”** 。  
   
   

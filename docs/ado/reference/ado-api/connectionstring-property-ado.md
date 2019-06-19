@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d31b9ff3a60b746309224b0e0f9669cef229f234
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695953"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 属性 (ADO)
@@ -34,7 +34,7 @@ ms.locfileid: "66695953"
   
  ADO 支持五个参数为**ConnectionString**属性; 而无需任何处理通过 ADO 提供程序直接与任何其他参数传递。 参数 ADO 支持如下所示。  
   
-|参数|Description|  
+|参数|描述|  
 |--------------|-----------------|  
 |*Provider=*|指定要用于连接的提供程序的名称。|  
 |*文件名称 =*|指定的特定于提供程序的文件 （例如，持久化的数据源对象） 包含预设的连接信息的名称。|  

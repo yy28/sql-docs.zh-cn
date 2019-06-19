@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105603"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在滚动报表时保持标题可见（报表生成器和 SSRS）
@@ -22,7 +22,7 @@ ms.locfileid: "66105603"
   
  控制行和列的方式取决于您是拥有表还是矩阵。 如果您拥有表，则将静态成员（行标题和列标题）配置为保持可见。 如果您拥有矩阵，则将行组头和列组头配置为保持可见。  
   
- 如果将报表导出到 Excel，则不会自动冻结标头。 可以冻结 Excel 中的窗格。 有关详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)的“页眉和页脚”节。  
+ 如果将报表导出到 Excel，则不会自动冻结标头。 可以冻结 Excel 中的窗格。 有关详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)的“页眉和页脚”节  。  
   
 > [!NOTE]  
 >  即使表拥有行组和列组，也不能使这些组头在滚动时保持可见  
@@ -40,9 +40,9 @@ ms.locfileid: "66105603"
   
 ### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>使矩阵组头在滚动时保持可见  
   
-1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
+1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”** 。  
   
-2.  在 **“常规”** 选项卡上的 **“行标题”** 或 **“列标题”** 下选择 **“滚动时标题应保持可见”**。  
+2.  在 **“常规”** 选项卡上的 **“行标题”** 或 **“列标题”** 下选择 **“滚动时标题应保持可见”** 。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66105603"
   
      “行组”窗格显示行组层次结构的层次结构静态和动态成员，而“列组”窗格显示列组层次结构的相同内容。  
   
-2.  在“分组”窗格的右侧，单击下箭头，然后单击 **“高级模式”**。  
+2.  在“分组”窗格的右侧，单击下箭头，然后单击 **“高级模式”** 。  
   
 3.  单击要在滚动时保持可见的静态成员（行或列）。 “属性”窗格显示 **“Tablix 成员”** 属性。  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 450b1cdde9185edee5eac41f52d209e43a7ae22f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996258"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
@@ -49,7 +49,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  用户为指示事件是否成功而传递的参数。 它将出现在审核日志的成功列中。 `@succeeded` 是**位**。  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- 由用户定义的文本，并且该文本将记录在审核日志的新的 user_defined_event_id 列中。 `@user_defined_information` 是**nvarchar(4000)**。  
+ 由用户定义的文本，并且该文本将记录在审核日志的新的 user_defined_event_id 列中。 `@user_defined_information` 是**nvarchar(4000)** 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

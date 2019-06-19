@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088508"
 ---
 # <a name="sql-server-backward-compatibility"></a>SQL Server 的向后兼容性
@@ -22,7 +22,7 @@ ms.locfileid: "66088508"
   
  本主题范围中包含的功能包括数据可编程性、外围应用配置器工具、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务，以及其他多种功能更改。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[SQL Server 2014 中已弃用的 SQL Server 功能](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|此版本中不推荐使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能。 本主题介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置和安装功能。|  
 |[SQL Server 2014 中已停止使用的 SQL Server 功能](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|此版本中不再推荐使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能。 本主题介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置和安装功能。|  

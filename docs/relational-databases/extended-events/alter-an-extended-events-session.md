@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cedb0addec5d6164b418b6bec0458de429dd6a82
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66198202"
 ---
 # <a name="alter-an-extended-events-session"></a>更改扩展事件会话
@@ -43,13 +43,13 @@ ms.locfileid: "66198202"
 -   更改高级属性配置。  
   
 > [!NOTE]  
->  “SQL Server 扩展事件向导”不支持事件会话修改。  
+>  “SQL Server 扩展事件向导”  不支持事件会话修改。  
   
 ## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>如何使用 SQL Server 扩展事件向导更改扩展事件会话  
   
 -   在对象资源管理器中，依次展开 **“管理”** 、 **“扩展事件”** 和 **“会话”** 。  
   
--   右键单击要更改的会话，然后单击“属性”。  
+-   右键单击要更改的会话，然后单击“属性”  。  
   
 -   在 **“属性”** 对话框中进行相应的更改，然后单击 **“确定”** 。  
   

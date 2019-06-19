@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9cdb5c17a74b600b640872d7b153f715da8e15a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590231"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999611"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "53590231"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例必须运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本才能使用此向导。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例上的数据库包含 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]上不支持的对象，则无法使用该向导将数据库部署到 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 如果 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 上的数据库包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持的对象，则您无法使用该向导将数据库部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC BACPAC 文件中且没有密码。 在导入此 BACPAC 时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>权限  
  此向导需要对源数据库具有 DAC 导出权限。 登录名至少要求 ALTER ANY LOGIN 和数据库作用域 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。  
   
  此向导需要对目标实例或服务器的 DAC 导入权限。 登录名必须是 **sysadmin** 或 **serveradmin** 固定服务器角色的成员，或者是 **dbcreator** 固定服务器角色的成员并且具有 ALTER ANY LOGIN 权限。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以导入 DAC。 将具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 loginmanager 或 serveradmin 角色的成员身份。 将不具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 dbmanager 或 serveradmin 角色的成员身份。  
@@ -69,7 +69,7 @@ ms.locfileid: "53590231"
   
 3.  展开 **“数据库”** 节点。  
   
-4.  右键单击要部署的数据库，选择 “任务”，然后选择“将数据库部署到 SQL Azure…”  
+4.  右键单击要部署的数据库，选择 “任务”，然后选择“将数据库部署到 SQL Azure…”    
   
 5.  完成向导对话框：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "53590231"
   
  **本地主机：**  
   
--   **服务器连接** - 指定服务器连接详细信息，然后单击“连接”来验证连接。  
+-   **服务器连接** - 指定服务器连接详细信息，然后单击“连接”来验证连接  。  
   
 -   **新数据库名称** - 指定新数据库的名称。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "53590231"
 -   指定临时文件的本地目录，该文件为 BACPAC 存档文件。 请注意，将在指定位置创建此文件，并且在操作完成后，此文件将保留在该位置。  
   
 ##  <a name="Summary"></a> 摘要页  
- 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成部署操作，请单击 **“完成”**。 若要取消部署操作并退出向导，请单击 **“取消”**。  
+ 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成部署操作，请单击 **“完成”** 。 若要取消部署操作并退出向导，请单击 **“取消”** 。  
   
 ##  <a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  

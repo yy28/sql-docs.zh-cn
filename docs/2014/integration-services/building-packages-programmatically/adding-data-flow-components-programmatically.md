@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 286b37195b200761ce8cd8e941076c8a27e61011
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62836790"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以编程方式添加数据流组件
@@ -35,7 +35,7 @@ ms.locfileid: "62836790"
 ## <a name="adding-a-managed-component"></a>添加托管组件  
  您不能使用 CLSID 或 PROGID 向数据流添加一个托管数据流组件，因为这些值指向包装而不是组件本身。 您可以改用 `CreationName` 属性或 `AssemblyQualifiedName` 属性，如以下示例中所示。  
   
- 若要使用 `AssemblyQualifiedName` 属性，则必须在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目中添加对包含托管组件的程序集的引用。 这些程序集没有在“添加引用”对话框的 .NET 选项卡上列出。 通常需要浏览至 C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents 文件夹查找程序集。  
+ 若要使用 `AssemblyQualifiedName` 属性，则必须在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目中添加对包含托管组件的程序集的引用。 这些程序集没有在“添加引用”  对话框的 .NET 选项卡上列出。 通常需要浏览至 C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents  文件夹查找程序集。  
   
  内置托管数据流组件包括：  
   

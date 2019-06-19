@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: caa86a14e114958ef109d54e2f2d374c8b096b4d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728733"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何从 CDC 设计器控制台管理 CDC 服务
@@ -27,9 +27,9 @@ ms.locfileid: "65728733"
   
 ### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>从 CDC 设计器控制台管理 CDC 服务  
   
-1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”**。  
+1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”** 。  
   
-2.  在左侧的窗格中，展开 **“变更数据捕获”**。  
+2.  在左侧的窗格中，展开 **“变更数据捕获”** 。  
   
 3.  选择要管理的服务。  
   

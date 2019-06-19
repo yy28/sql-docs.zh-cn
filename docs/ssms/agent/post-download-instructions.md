@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 573dec07eadd70edde5e9607cc6dd90927c75613
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088796"
 ---
 # <a name="post-download-instructions"></a>发布下载指令
@@ -37,7 +37,7 @@ ms.locfileid: "65088796"
 查看下载指令的说明。  
   
 **轮询间隔**  
-设置目标服务器的轮询间隔。 仅适用于“设置轮询间隔”指令。  
+设置目标服务器的轮询间隔。 仅适用于“设置轮询间隔”  指令。  
   
 **所有目标服务器**  
 选择此选项可以将下载指令发布到所有目标服务器。  

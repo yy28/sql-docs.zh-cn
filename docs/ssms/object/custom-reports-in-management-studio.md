@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 966cd899d5a3d6019febd4ba939f360c16c9cd78
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095226"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
@@ -34,9 +34,9 @@ ms.locfileid: "65095226"
 ## <a name="running-a-custom-report"></a>运行自定义报表  
 可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中通过以下方式运行自定义报表：  
   
--   在对象资源管理器中，右键单击一个节点，指向“报表”，再左键单击“自定义报表”。 在“打开文件”对话框中，找到包含 .rdl 文件的文件夹，然后打开相应的报表文件。  
+-   在对象资源管理器中，右键单击一个节点，指向“报表”  ，再左键单击“自定义报表”  。 在“打开文件”  对话框中，找到包含 .rdl 文件的文件夹，然后打开相应的报表文件。  
   
--   在对象资源管理器中，右键单击一个节点，指向“报表”，再指向“自定义报表”，然后从最近打开的文件列表中选择一个自定义报表。  
+-   在对象资源管理器中，右键单击一个节点，指向“报表”  ，再指向“自定义报表”  ，然后从最近打开的文件列表中选择一个自定义报表。  
   
 ## <a name="limitations"></a>限制  
 在使用自定义报表时，请注意以下限制：  

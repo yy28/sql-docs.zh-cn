@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080904"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>“生成命名查询”对话框（Analysis Services - 多维数据）
@@ -32,7 +32,7 @@ ms.locfileid: "66080904"
  键入命名查询的说明（可选）。  
   
  **查询定义**  
- 显示由“所选图表对象”中选择的图表序列、图表序列值或图表筛选器生成的命名查询的定义。  
+ 显示由“所选图表对象”中选择的图表序列、图表序列值或图表筛选器生成的命名查询的定义。   
   
  **所选的图表对象**  
  选择基于命名查询的定义的图表对象。  

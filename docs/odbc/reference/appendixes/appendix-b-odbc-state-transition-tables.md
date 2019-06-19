@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026923"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附录 B：ODBC 状态转换表
@@ -47,7 +47,7 @@ ms.locfileid: "63026923"
   
 -   **E**  
 
-     **_n_**  ， **C_n_**， **S_n_**，或者**D_n_** -环境、 连接、 语句或描述符状态将更改为指定的状态。  
+     **_n_**  ， **C_n_** ， **S_n_** ，或者**D_n_** -环境、 连接、 语句或描述符状态将更改为指定的状态。  
  
 -   **(IH)** -无效的句柄传递给函数。 如果句柄是句柄为空或已有效句柄的类型不正确-例如，连接句柄时传递语句句柄所需-该函数返回 SQL_INVALID_HANDLE;否则，该行为是未定义并可能严重。 仅当其是处于指定状态调用函数的唯一可能的结果时，会显示此错误。 此错误不会更改状态，始终检测由驱动程序管理器中，由括号。  
   

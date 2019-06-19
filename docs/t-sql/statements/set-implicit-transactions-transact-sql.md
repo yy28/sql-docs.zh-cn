@@ -26,16 +26,16 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a2dae52947d736ccc371e1cdc675924149c67cf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641525"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939806"
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  为了连接，将 BEGIN TRANSACTION 模式设置为“隐式”。  
+  为了连接，将 BEGIN TRANSACTION 模式设置为“隐式”。   
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 为 ON 时，系统处于“隐式”事务模式。 这意味着如果 @@TRANCOUNT = 0，下列任一 Transact-SQL 语句都会开始新事务。 这等同于先执行一个不可见的 BEGIN TRANSACTION：  
+ 为 ON 时，系统处于“隐式”事务模式。  这意味着如果 @@TRANCOUNT = 0，下列任一 Transact-SQL 语句都会开始新事务。 这等同于先执行一个不可见的 BEGIN TRANSACTION：  
   
 ||||  
 |-|-|-|  
@@ -54,9 +54,9 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |BEGIN TRANSACTION|GRANT|SELECT（参见下面的例外情况。）|  
 |CREATE|Insert|TRUNCATE TABLE|  
 |删除|OPEN|UPDATE|  
-|DROP|实例时都提供 SQL Server 登录名。|实例时都提供 SQL Server 登录名。|  
+|DROP|。|。|  
   
- 为 OFF 时，上述每个 T-SQL 语句都受一个不可见的 BEGIN TRANSACTION 和一个不可见的 COMMIT TRANSACTION 语句限制。 为 OFF 时，事务模式为自动提交。 如果 T-SQL 代码发出了一个可见 BEGIN TRANSACTION，那么事务模式为显式。  
+ 为 OFF 时，上述每个 T-SQL 语句都受一个不可见的 BEGIN TRANSACTION 和一个不可见的 COMMIT TRANSACTION 语句限制。 为 OFF 时，事务模式为自动提交。  如果 T-SQL 代码发出了一个可见 BEGIN TRANSACTION，那么事务模式为显式。   
   
  有几点需要说明：  
   

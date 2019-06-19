@@ -11,15 +11,15 @@ author: pensivebrian
 ms.author: broneill
 manager: kenvh
 ms.openlocfilehash: 411a2cf4c9a3170e9fb3a3dc7709d8b3882f066b
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670863"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63183699"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的发行说明
 
-[下载最新版本](sqlpackage-download.md)
+[下载最新版本](sqlpackage-download.md) 
 
 本文列出了 SqlPackage.exe 的已发布版本提供的功能和修补程序。
 
@@ -162,7 +162,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fix | 详细信息 |
 | :-- | :------ |
-| 将 Azure SQL 数据库 .bacpac 导入到本地实例时，修复了由于此版本的 SQL Server 不支持没有密码的数据库主密钥而出现的错误。 | &nbsp; |
+| 将 Azure SQL 数据库 .bacpac 导入到本地实例时，修复了由于此版本的 SQL Server 不支持没有密码的数据库主密钥  而出现的错误。 | &nbsp; |
 | 修复了图形表的未解析伪列错误。 | &nbsp; |
 | 修复了将 SchemaCompareDataModel 用于 SQL 身份验证来比较架构的问题。 | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -176,7 +176,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 详细信息 |
 | :------ | :------ |
-| 添加了对 SQL 2017+ 和 Azure SQL 数据库上的时态保留策略的支持。 | &nbsp; |
+| 添加了对 SQL 2017+ 和 Azure SQL 数据库上的时态保留策略  的支持。 | &nbsp; |
 | 添加了 /DiagnosticsFile:"C:\Temp\sqlpackage.log" 命令行参数以指定用于保存诊断信息的文件路径。 | &nbsp; |
 | 添加了 /Diagnostics 命令行参数以将诊断信息记录到控制台。 | &nbsp; |
 | &nbsp; | &nbsp; |

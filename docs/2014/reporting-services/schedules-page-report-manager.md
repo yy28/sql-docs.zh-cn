@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102319"
 ---
 # <a name="schedules-page-report-manager"></a>“计划”页（报表管理器）
@@ -32,7 +32,7 @@ ms.locfileid: "66102319"
   
 1.  打开报表管理器。  
   
-2.  在页面顶部的右角，单击 **“站点设置”**。 这会打开该站点的“常规属性”页。  
+2.  在页面顶部的右角，单击 **“站点设置”** 。 这会打开该站点的“常规属性”页。  
   
 3.  选择 **“计划”** 选项卡。  
   

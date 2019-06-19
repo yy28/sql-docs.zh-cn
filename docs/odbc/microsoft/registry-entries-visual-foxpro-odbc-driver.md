@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de287802693adb18e39509fdc0e7577d05984949
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316826"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>注册表项（Visual FoxPro ODBC 驱动程序）
@@ -45,13 +45,13 @@ ms.locfileid: "63316826"
   
  将 Visual FoxPro ODBC 数据源添加到您的 ODBC 配置，每次添加新的密钥为该数据源名称。 数据源的值中设置的值对应**ODBC Visual FoxPro 设置**对话框，如以下表中列出。  
   
-|值名称 （关键字）|值类型|ReplTest1|  
+|值名称 （关键字）|值类型|值|  
 |----------------------------|----------------|-----------|  
 |逐份打印|REG_SQ|任何受支持的排序规则序列|  
-|Description|REG_SZ|数据源的用户说明|  
+|描述|REG_SZ|数据源的用户说明|  
 |驱动程序||Vfpodbc.dll 文件系统路径|  
-|排他|| 是或否|  
-|BackgroundFetch|| 是或否|  
+|排他||是或否|  
+|BackgroundFetch||是或否|  
 |SourceDB|REG_SZ|路径。DBC 文件|  
 |SourceType|REG_SZ|"DBC"或者"DBF"|  
   

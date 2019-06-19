@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7e1be086b891d6888c6509b15adc6664b3022978
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187121"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>处理 SSMA 项目 (SybaseToSQL)
@@ -55,7 +55,7 @@ SSMA 包含多个选项进行转换和加载数据库对象，将迁移数据，
   
 **若要创建项目**  
   
-1.  在“文件”菜单中，选择“新建项目”。  
+1.  在“文件”菜单中，选择“新建项目”。    
   
     此时将显示“新建项目”  对话框。  
   
@@ -97,7 +97,7 @@ SSMA 包含多个选项进行转换和加载数据库对象，将迁移数据，
   
         正在保存元数据可能需要几分钟的时间。 如果您不想要现在保存元数据，则选择任何复选框。  
   
-    2.  单击“保存”按钮。  
+    2.  单击“保存”  按钮。  
   
         SSMA 将 Sybase ASE 架构中分析并将元数据保存到项目文件。  
   

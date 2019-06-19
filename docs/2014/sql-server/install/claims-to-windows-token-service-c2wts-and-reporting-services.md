@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e08be032df493913cc6cebf5ae29d583f26c86ba
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096553"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) 和 Reporting Services
@@ -96,7 +96,7 @@ ms.locfileid: "66096553"
   
     2.  将启动类型更改为"**自动**"并启动服务。  
   
-4.  启动 SharePoint 'Claims to Windows Token Service:在“管理服务器上的服务”页，通过 SharePoint 管理中心启动 Claims to Windows Token Service。 应在将执行操作的服务器上启动该服务。 例如，如果你有一个作为 WFE 的服务器，并且有另一个作为应用程序服务器的服务器（该服务器具有正在运行的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务），则只需启动该应用程序服务器上的 c2WTS。 在 WFE 上不需要 c2WTS。  
+4.  启动 SharePoint 'Claims to Windows Token Service:在“管理服务器上的服务”页，通过 SharePoint 管理中心启动 Claims to Windows Token Service  。 应在将执行操作的服务器上启动该服务。 例如，如果你有一个作为 WFE 的服务器，并且有另一个作为应用程序服务器的服务器（该服务器具有正在运行的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务），则只需启动该应用程序服务器上的 c2WTS。 在 WFE 上不需要 c2WTS。  
   
 ## <a name="see-also"></a>请参阅  
  [声明为 Windows 令牌服务 (c2WTS) 概述 （ https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   

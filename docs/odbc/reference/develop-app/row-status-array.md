@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2a04f5052a0b686d3669c976ec7c4bee09e52b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468624"
 ---
 # <a name="row-status-array"></a>行状态数组
 除了数据之外， **SQLFetch**并**SQLFetchScroll**可以返回一个数组，其中提供行集中的每个行的状态。 此数组是通过将 SQL_ATTR_ROW_STATUS_PTR 语句属性指定的。 此数组分配的应用程序，并且必须由 SQL_ATTR_ROW_ARRAY_SIZE 语句属性指定的所有元素。 设置数组中的值**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，和**SQLSetPos。** 值描述的行和该状态是否已更改自上次提取的状态。  
   
-|行状态数组值|Description|  
+|行状态数组值|描述|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|已成功提取行，并且自上次提取以来未发生更改。|  
 |SQL_ROW_SUCCESS_WITH_INFO|已成功提取行，并且自上次提取以来未发生更改。 但是，有关行返回一条警告。|  

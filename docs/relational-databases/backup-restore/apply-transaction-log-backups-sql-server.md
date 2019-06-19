@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478537"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>应用事务日志备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "59240587"
     > **提示！** 最佳方法是还原所有日志备份 (RESTORE LOG *database_name* WITH NORECOVERY)。 还原上一次日志备份后，用单独的操作恢复数据库 (RESTORE DATABASE *database_name* WITH RECOVERY)。  
   
 ##  <a name="RecoveryAndTlogs"></a> 恢复和事务日志  
- 当您完成还原操作并恢复数据库后，恢复将回滚所有未完成的事务。 此步骤称为“撤消阶段” 。 回滚对还原数据库的完整性是必需的。 回滚后，数据库将进入联机状态，不能再将其他事务日志备份应用到数据库。  
+ 当您完成还原操作并恢复数据库后，恢复将回滚所有未完成的事务。 此步骤称为“撤消阶段”  。 回滚对还原数据库的完整性是必需的。 回滚后，数据库将进入联机状态，不能再将其他事务日志备份应用到数据库。  
   
  例如，一系列事务日志备份包含一个运行时间长的事务。 该事务的起点记录在第一个事务日志备份中，终点记录在第二个事务日志备份中。 第一个事务日志备份中没有任何关于提交或回滚操作的记录。 如果在应用第一个事务日志备份后运行恢复操作，则运行时间长的事务被视为未完成，并且将回滚事务的第一个事务日志备份中记录的数据修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许在此点后应用第二个事务日志备份。  
   

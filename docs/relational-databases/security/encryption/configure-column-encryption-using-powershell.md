@@ -13,11 +13,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef76a5d992be5303801233fc34e325d8a54e0a7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521571"
 ---
 # <a name="configure-column-encryption-using-powershell"></a>使用 PowerShell 配置列加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ ms.locfileid: "47822049"
 任务  |项目  |访问纯文本密钥/密钥存储  |访问数据库   
 ---|---|---|---
 步骤 1. 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
-步骤 2. 连接到服务器和数据库 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 用户帐户控制
-步骤 3. 如果列主密钥（保护要轮换的列加密密钥）存储在 Azure 密钥保管库中，请对 Azure 进行身份验证 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 用户帐户控制 | 否
+步骤 2. 连接到服务器和数据库 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
+步骤 3. 如果列主密钥（保护要轮换的列加密密钥）存储在 Azure 密钥保管库中，请对 Azure 进行身份验证 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | 否
 步骤 4. 构造一组 SqlColumnEncryptionSettings 对象，每个对象对应一个要加密、重新加密或解密的数据库列。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 它用于指定列的目标加密方案。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 否 | 否
-步骤 5. 设置所需加密配置，该配置在之前的步骤中创建的一组 SqlColumnMasterKeySettings 对象中指定。 根据指定的目标设置和列的当前加密配置，将加密、重新加密或解密列。| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意：** 此步骤可能需要较长时间。 你的应用程序将无法通过整个操作或部分操作访问表，具体取决于你所选择的方法（联机或脱机）。 | 用户帐户控制 | 用户帐户控制
+步骤 5. 设置所需加密配置，该配置在之前的步骤中创建的一组 SqlColumnMasterKeySettings 对象中指定。 根据指定的目标设置和列的当前加密配置，将加密、重新加密或解密列。| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意：** 此步骤可能需要较长时间。 你的应用程序将无法通过整个操作或部分操作访问表，具体取决于你所选择的方法（联机或脱机）。 | 是 | 是
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>使用脱机方法加密列 - 示例
 

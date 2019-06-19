@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d71009c7e4f2c9b717a41f10ca4dc8b9f815ad30
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66708425"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 枚举常量
@@ -25,7 +25,7 @@ ms.locfileid: "66708425"
   
  以下枚举的常量定义。  
   
-|枚举|Description|  
+|枚举|描述|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|指定何时执行操作的类型**SetPermissions**调用。|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|指定要编制索引是否具有 null 值的记录。|  

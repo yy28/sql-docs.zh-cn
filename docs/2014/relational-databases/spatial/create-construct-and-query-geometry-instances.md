@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014311"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
@@ -250,7 +250,7 @@ ms.locfileid: "66014311"
 ###  <a name="boundary"></a> 边界、内部和外部  
  *内部*的`geometry`实例是指由实例占用的空间并*外部*是指未占用空间它。  
   
- “边界” 由 OGC 定义，如下所示：  
+ “边界”  由 OGC 定义，如下所示：  
   
 -   `Point` 和 `MultiPoint` 实例没有边界。  
   

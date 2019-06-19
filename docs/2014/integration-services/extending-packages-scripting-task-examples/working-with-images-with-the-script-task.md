@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768443"
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
@@ -57,9 +57,9 @@ ms.locfileid: "62768443"
   
 1.  将脚本任务放入 Foreach 循环容器。  
   
-2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为枚举器，并指定源文件的路径和文件掩码，如“*.bmp”。  
+2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为枚举器，并指定源文件的路径和文件掩码，如“*.bmp”    。  
   
-3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0  。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  
@@ -168,9 +168,9 @@ End Function
   
 1.  将脚本任务放入 Foreach 循环容器。  
   
-2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为“枚举器”，并指定源文件的路径和文件掩码，如“*.jpg”。  
+2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为“枚举器”，并指定源文件的路径和文件掩码，如“*.jpg”     。  
   
-3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0  。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  

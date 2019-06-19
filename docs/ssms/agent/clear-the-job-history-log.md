@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c548cb5ac6fcb722dc1130aea5317871592f8544
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105972"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
@@ -58,17 +58,17 @@ ms.locfileid: "65105972"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，再展开 **“作业”**。  
+2.  展开 **“SQL Server 代理”** ，再展开 **“作业”** 。  
   
-3.  右键单击某个作业，再单击 **“查看历史记录”**。  
+3.  右键单击某个作业，再单击 **“查看历史记录”** 。  
   
 4.  在 **“日志文件查看器”** 中，选择要清除其历史记录的作业，再执行下列操作：  
   
-    -   单击 **“删除”**，再单击 **“删除历史记录”** 对话框中的 **“删除所有历史记录”** 。 可以删除所有作业历史记录，或者仅删除早于指定日期的历史记录。 若要删除所有作业历史记录，请单击 **“删除所有历史记录”**。 如果只删除较早的作业历史记录日志，请单击 **“删除以下时间之前的历史记录”**，然后指定日期。  
+    -   单击 **“删除”** ，再单击 **“删除历史记录”** 对话框中的 **“删除所有历史记录”** 。 可以删除所有作业历史记录，或者仅删除早于指定日期的历史记录。 若要删除所有作业历史记录，请单击 **“删除所有历史记录”** 。 如果只删除较早的作业历史记录日志，请单击 **“删除以下时间之前的历史记录”** ，然后指定日期。  
   
-    -   单击 **“作业状态”** （如果要清除多服务器作业的历史记录日志）。 单击 **“作业”**，单击某个作业名，再单击 **“查看远程作业历史记录”**。  
+    -   单击 **“作业状态”** （如果要清除多服务器作业的历史记录日志）。 单击 **“作业”** ，单击某个作业名，再单击 **“查看远程作业历史记录”** 。  
   
-5.  单击 **“删除”**。  
+5.  单击 **“删除”** 。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -76,9 +76,9 @@ ms.locfileid: "65105972"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- example removes the history for a job named NightlyBackups.  

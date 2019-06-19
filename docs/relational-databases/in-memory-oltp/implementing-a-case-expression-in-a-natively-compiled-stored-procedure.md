@@ -13,16 +13,16 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5aae82125660ef381d9760ed3f25309f2320bb54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047669"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在本机编译的存储过程中实现 CASE 表达式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-适用于：[!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server
+适用于  ：[!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server
 
 本机编译的 T-SQL 模块支持 CASE 表达式。 下面的示例演示了在查询中使用 CASE 表达式的方法。 
 
@@ -45,9 +45,9 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-适用于：[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 和自 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)] 开始的 SQL Server
+适用于  ：[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 和自 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)] 开始的 SQL Server
 
-  本机编译的 T-SQL 模块不支持 CASE 表达式。 以下示例演示一种在本机编译的存储过程中实现 CASE 表达式功能的方法。  
+  本机编译的 T-SQL 模块不  支持 CASE 表达式。 以下示例演示一种在本机编译的存储过程中实现 CASE 表达式功能的方法。  
   
  代码示例使用表变量构造单个结果集。 这仅适合当于处理有限行数，因为它涉及到创建数据行的额外副本。  
   

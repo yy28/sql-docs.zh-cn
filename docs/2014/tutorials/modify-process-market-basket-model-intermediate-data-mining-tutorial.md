@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63301364"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>修改和处理市场篮模型（数据挖掘中级教程）
@@ -50,7 +50,7 @@ ms.locfileid: "63301364"
   
      **处理挖掘结构-Association**对话框随即打开。  
   
-3.  单击 **“运行”**。  
+3.  单击 **“运行”** 。  
   
      **处理进度**对话框将打开以显示有关模型处理的信息。 处理新的结构和模型可能需要一些时间。  
   

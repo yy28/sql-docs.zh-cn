@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025147"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,13 +82,13 @@ column_name <data_type>
 ```  
   
 ## <a name="arguments"></a>参数  
- column_name  
- 要更改、添加或删除的列的名称。 column_name 可以包含 1 到 128 个字符。 对于使用 timestamp 数据类型创建的新列，可以省略 column_name。 如果没有为 timestamp 数据类型的列指定 column_name，则使用名称 timestamp。  
+ column_name   
+ 要更改、添加或删除的列的名称。 column_name 可以包含 1 到 128 个字符  。 对于使用 timestamp 数据类型创建的新列，可以省略 column_name  。 如果没有为 timestamp 数据类型的列指定 column_name，则使用名称 timestamp    。  
   
- [ type_schema_name. ] type_name  
+ [ type_schema_name.   ] type_name   
  是添加的列的数据类型及其所属架构。  
   
- type_name 可以为：  
+ type_name 可以为  ：  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型。  
   
@@ -96,7 +96,7 @@ column_name <data_type>
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用户定义类型及其所属架构。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用户定义类型必须先使用 CREATE TYPE 进行创建，然后才能在表定义中使用。  
   
- 如果未指定 type_schema_name，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 按照下列顺序引用 type_name：  
+ 如果未指定 type_schema_name，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 按照下列顺序引用 type_name   ：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型。  
   
@@ -110,24 +110,24 @@ column_name <data_type>
 *scale*  
  是指定数据类型的小数位数。 有关有效小数位数值的详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
-max  
- 仅适用于 varchar、nvarchar 和 varbinary 数据类型。 它们用于存储 2^31 个字节的字符和二进制数据，以及 2^30 个字节的 Unicode 数据。  
+max   
+ 仅适用于 varchar、nvarchar 和 varbinary 数据类型    。 它们用于存储 2^31 个字节的字符和二进制数据，以及 2^30 个字节的 Unicode 数据。  
   
-CONTENT  
- 指定 column_name 中 xml 数据类型的每个实例都可包含多个顶级元素。 CONTENT 仅适用于 xml 数据类型，并且只有在同时指定了 xml_schema_collection 时才能指定 CONTENT。 如果未指定，则默认行为是 CONTENT。  
+CONTENT   
+ 指定 column_name 中 xml 数据类型的每个实例都可包含多个顶级元素   。 CONTENT 仅适用于 xml 数据类型，并且只有在同时指定了 xml_schema_collection 时才能指定 CONTENT   。 如果未指定，则默认行为是 CONTENT。  
   
 DOCUMENT  
- 指定 column_name 中 xml 数据类型的每个实例只能包含一个顶级元素。 DOCUMENT 仅适用于 xml 数据类型，并且只有在同时指定了 xml_schema_collection 时才能指定 DOCUMENT。  
+ 指定 column_name 中 xml 数据类型的每个实例只能包含一个顶级元素   。 DOCUMENT 仅适用于 xml 数据类型，并且只有在同时指定了 xml_schema_collection 时才能指定 DOCUMENT   。  
   
- xml_schema_collection  
+ xml_schema_collection   
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 仅适用于 xml 数据类型，用于将 XML 架构集合与该类型相关联。 在架构中键入 xml 列之前，须先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在数据库中创建该架构。  
+ 仅适用于 xml 数据类型，用于将 XML 架构集合与该类型相关联  。 在架构中键入 xml 列之前，须先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在数据库中创建该架构  。  
   
 FILESTREAM  
- 还可以为拥有数据类型为 varbinary(max) 的 type_name 的列指定 FILESTREAM 存储属性。  
+ 还可以为拥有数据类型为 varbinary(max) 的 type_name 的列指定 FILESTREAM 存储属性   。  
   
- 为列指定了 FILESTREAM 后，该表还必须有一个具有 ROWGUIDCOL 属性且数据类型为 uniqueidentifier 的列。 此列不得为空值且必须具有 UNIQUE 或 PRIMARY KEY 单列约束。 该列的 GUID 值必须在插入数据时由应用程序提供，或由使用 NEWID () 函数的 DEFAULT 约束提供。  
+ 为列指定了 FILESTREAM 后，该表还必须有一个具有 ROWGUIDCOL 属性且数据类型为 uniqueidentifier 的列  。 此列不得为空值且必须具有 UNIQUE 或 PRIMARY KEY 单列约束。 该列的 GUID 值必须在插入数据时由应用程序提供，或由使用 NEWID () 函数的 DEFAULT 约束提供。  
   
  如果为表定义了 FILESTREAM 列，则不能删除 ROWGUIDCOL 列并且不能更改相关的约束。 仅当删除了最后一个 FILESTREAM 列后，才能删除 ROWGUIDCOL 列。  
   
@@ -135,35 +135,35 @@ FILESTREAM
   
  有关如何使用列定义的示例，请参阅 [FILESTREAM (Transact-SQL)](../../relational-databases/blob/filestream-sql-server.md)。  
   
-COLLATE collation_name  
+COLLATE collation_name   
  指定列的排序规则。 如果未指定，则为该列分配数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如需获取列表和详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) 和 [SQL Server 排序规则名称 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。  
   
- COLLATE 子句只能用来指定数据类型为 char、varchar、nchar 和 nvarchar 的列的排序规则。  
+ COLLATE 子句只能用来指定数据类型为 char、varchar、nchar 和 nvarchar 的列的排序规则     。  
   
  有关 COLLATE 子句的详细信息，请参阅 [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)。  
   
  NULL | NOT NULL  
  确定列中是否允许空值。 严格来讲，NULL 不是约束，但可以像指定 NOT NULL 那样指定它。  
   
-[ CONSTRAINT constraint_name ]  
- 指定 DEFAULT 值定义的开头。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。 除了不能以数字符号 (#) 开头以外，约束名称还必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 如果未指定 constraint_name，则 DEFAULT 定义使用系统生成的名称。  
+[ CONSTRAINT constraint_name  ]  
+ 指定 DEFAULT 值定义的开头。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。 除了不能以数字符号 (#) 开头以外，约束名称还必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则  。 如果未指定 constraint_name，则 DEFAULT 定义使用系统生成的名称  。  
   
 DEFAULT  
- 指定列的默认值的关键字。 DEFAULT 定义可用于为表中现有数据行的新列提供值。 DEFAULT 定义不能应用于 timestamp 列，或具有 IDENTITY 属性的列。 如果为用户定义类型列指定了默认值，则该类型必须支持从 constant_expression 到用户定义类型的隐式转换。  
+ 指定列的默认值的关键字。 DEFAULT 定义可用于为表中现有数据行的新列提供值。 DEFAULT 定义不能应用于 timestamp 列，或具有 IDENTITY 属性的列  。 如果为用户定义类型列指定了默认值，则该类型必须支持从 constant_expression 到用户定义类型的隐式转换  。  
   
-constant_expression  
- 用作默认列值的文字值、NULL 或者系统函数。 如果与定义为 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用户定义类型的列结合使用，则该类型的实现必须支持从 constant_expression 到用户定义类型的隐式转换。  
+constant_expression   
+ 用作默认列值的文字值、NULL 或者系统函数。 如果与定义为 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用户定义类型的列结合使用，则该类型的实现必须支持从 constant_expression 到用户定义类型的隐式转换  。  
   
 WITH VALUES   
- 添加列和 DEFAULT 约束时，如果列允许为空，那么对于现有行，使用 WITH VALUES 会将新列的值设置为 DEFAULT constant_expression 中给定的值。 如果要添加的列不允许为空，那么对于现有行，列值始终设置为 DEFAULT constant_expression 中给定的值。 自 SQL Server 2012 起，这可能是元数据操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)。
+ 添加列和 DEFAULT 约束时，如果列允许为空，那么对于现有行，使用 WITH VALUES 会将新列的值设置为 DEFAULT constant_expression  中给定的值。 如果要添加的列不允许为空，那么对于现有行，列值始终设置为 DEFAULT constant_expression  中给定的值。 自 SQL Server 2012 起，这可能是元数据操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)。
 如果在没有同时添加相关列的情况下使用它，它将不起作用。
  
- 指定 DEFAULT constant_expression 中给定的值将存储在添加到现有行的新列中。 如果所添加的列允许 Null 值且指定了 WITH VALUES，则默认值将存储在添加到现有行的新列中。 如果没有对允许为空的列指定 WITH VALUES，那么现有行对应的新列中存储的是值 NULL。 如果新列不允许 Null 值，那么不论是否指定 WITH VALUES，都将在新行中存储默认值。  
+ 指定 DEFAULT constant_expression 中给定的值将存储在添加到现有行的新列中  。 如果所添加的列允许 Null 值且指定了 WITH VALUES，则默认值将存储在添加到现有行的新列中。 如果没有对允许为空的列指定 WITH VALUES，那么现有行对应的新列中存储的是值 NULL。 如果新列不允许 Null 值，那么不论是否指定 WITH VALUES，都将在新行中存储默认值。  
   
 IDENTITY  
  指定新列为标识列。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]为该列提供唯一的增量值。 当您向现有表中添加标识符列时，还会将标识号添加到具有种子值和增量值的现有表行中。 无法保证行的更新顺序。 也会为添加的任何新行生成标识号。  
   
- 标识列通常与 PRIMARY KEY 约束一起使用，作为表的唯一行标识符。 可以将 IDENTITY 属性分配到 tinyint、smallint、int、bigint、decimal(p,0) 或 numeric(p,0) 列。 每个表只能创建一个标识列。 DEFAULT 关键字和绑定默认值不能用于标识列。 要么同时指定种子和增量，要么都不指定。 如果二者都未指定，则取默认值 (1,1)。  
+ 标识列通常与 PRIMARY KEY 约束一起使用，作为表的唯一行标识符。 可以将 IDENTITY 属性分配到 tinyint、smallint、int、bigint、decimal(p,0) 或 numeric(p,0) 列       。 每个表只能创建一个标识列。 DEFAULT 关键字和绑定默认值不能用于标识列。 要么同时指定种子和增量，要么都不指定。 如果二者都未指定，则取默认值 (1,1)。  
   
 > [!NOTE]  
 >  不能修改现有的表列以添加 IDENTITY 属性。  
@@ -172,10 +172,10 @@ IDENTITY
   
  若要通过允许显式插入值来禁用某列的 IDENTITY 属性，请使用 [SET IDENTITY_INSERT](../../t-sql/statements/set-identity-insert-transact-sql.md)。  
   
-seed  
+seed   
  用于表中所加载的第一行的值。  
   
-increment  
+increment   
  增加到上一个加载行的标识值的增量值。  
   
 NOT FOR REPLICATION  
@@ -186,7 +186,7 @@ NOT FOR REPLICATION
 ROWGUIDCOL  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定该列是一个行全局唯一标识符列。 只能为 uniqueidentifier 列分配 ROWGUIDCOL，并且每个表中只有一个 uniqueidentifier 列能指定为 ROWGUIDCOL 列。 不能为用户定义数据类型分配 ROWGUIDCOL。  
+ 指定该列是一个行全局唯一标识符列。 只能为 uniqueidentifier 列分配 ROWGUIDCOL，并且每个表中只有一个 uniqueidentifier 列能指定为 ROWGUIDCOL 列   。 不能为用户定义数据类型分配 ROWGUIDCOL。  
   
  ROWGUIDCOL 并不强制列中所存储值的唯一性。 另外，该属性也不会为插入到表中的新行自动生成值。 若要为每列生成唯一值，则可以在 INSERT 语句中使用 NEWID 函数，也可以将 NEWID 函数指定为列的默认值。 有关详细信息，请参阅 [NEWID (Transact-SQL)](../../t-sql/functions/newid-transact-sql.md) 和 [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。  
   
@@ -199,7 +199,7 @@ SPARSE
  ENCRYPTED WITH  
  使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 功能指定加密列。  
   
- COLUMN_ENCRYPTION_KEY = key_name  
+ COLUMN_ENCRYPTION_KEY = key_name   
  指定列加密密钥。 有关详细信息，请参阅 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)。  
   
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
@@ -214,16 +214,16 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  列必须是符合条件的数据类型。  
   
 ALGORITHM  
-适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
-须是“AEAD_AES_256_CBC_HMAC_SHA_256”。  
+适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  。  
+须是“AEAD_AES_256_CBC_HMAC_SHA_256”  。  
   
  有关包括功能约束在内的详细信息，请参阅 [Always Encrypted (Transact-SQL)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
   
    
-ADD MASKED WITH ( FUNCTION = ' mask_function ')  
- 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ADD MASKED WITH ( FUNCTION = ' mask_function ')   
+ 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
- 指定动态数据掩码。 mask_function 是具有相应参数的掩码函数的名称。 可用函数包括：  
+ 指定动态数据掩码。 mask_function 是具有相应参数的掩码函数的名称  。 可用函数包括：  
   
 -   default()  
   
@@ -236,7 +236,7 @@ ADD MASKED WITH ( FUNCTION = ' mask_function ')
  有关函数参数的信息，请参阅[动态数据掩码](../../relational-databases/security/dynamic-data-masking.md)。  
   
 ## <a name="remarks"></a>Remarks  
- 如果添加的列具有 uniqueidentifier 数据类型，则可以通过使用一个使用 NEWID() 函数的默认值对该列进行定义，以向表中的每个现有行的新列提供唯一标识符值。  
+ 如果添加的列具有 uniqueidentifier 数据类型，则可以通过使用一个使用 NEWID() 函数的默认值对该列进行定义，以向表中的每个现有行的新列提供唯一标识符值  。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不强制在列定义中指定 DEFAULT、IDENTITY、ROWGUIDCOL 或列约束的顺序。  
   

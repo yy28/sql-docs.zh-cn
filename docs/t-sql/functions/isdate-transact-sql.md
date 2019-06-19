@@ -33,18 +33,18 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0afa469d682aac12e35ddf0bad15091cdac14364
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947209"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  如果表达式是有效的 date、time、或 datetime 值，则返回 1；否则返回 0。  
+  如果表达式是有效的 date、time、或 datetime 值，则返回 1；否则返回 0     。  
   
- 如果表达式为 datetime2 值，则 ISDATE 返回 0。  
+ 如果表达式为 datetime2 值，则 ISDATE 返回 0   。  
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。 请注意，datetime 数据的范围为 1753-01-01 至 9999-12-31，而日期数据的范围为 0001-01-01 至 9999-12-31。  
   
@@ -77,14 +77,14 @@ ISDATE ( expression )
 |-----------------------|-------------------------|  
 |NULL|0|  
 |[数据类型](../../t-sql/data-types/data-types-transact-sql.md)中除字符串、Unicode 字符串或日期和时间以外的任何数据类型类别中列出的数据类型值。|0|  
-|text、ntext 或 image 数据类型的值。|0|  
-|秒精度小数位数超过 3 的任何值（.0000 到 .0000000...n）。 如果表达式为 datetime2 值，ISDATE 将返回 0，但如果表达式是有效的 datetime 值，则将返回 1。|0|  
+|text、ntext 或 image 数据类型的值    。|0|  
+|秒精度小数位数超过 3 的任何值（.0000 到 .0000000...n）。 如果表达式为 datetime2 值，ISDATE 将返回 0，但如果表达式是有效的 datetime 值，则将返回 1     。|0|  
 |有效日期和无效值混在一起的任何值，例如 1995-10-1a。|0|  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. 使用 ISDATE 测试是否为有效的 datetime 表达式  
- 下面的示例说明如何使用 `ISDATE` 测试某一字符串是否是有效的 datetime。  
+ 下面的示例说明如何使用 `ISDATE` 测试某一字符串是否是有效的 datetime  。  
   
 ```  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
@@ -144,7 +144,7 @@ SET DATEFORMAT mdy;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>C. 使用 ISDATE 测试是否为有效的 datetime 表达式  
- 下面的示例说明如何使用 `ISDATE` 测试某一字符串是否是有效的 datetime。  
+ 下面的示例说明如何使用 `ISDATE` 测试某一字符串是否是有效的 datetime  。  
   
 ```  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  

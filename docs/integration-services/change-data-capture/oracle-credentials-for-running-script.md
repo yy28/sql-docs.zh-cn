@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae98170e3c6628afc75934cece345bbbfbc22267
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728641"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
@@ -34,7 +34,7 @@ ms.locfileid: "65728641"
   
 -   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**：如果选择此选项，则必须在连接到的源 Oracle 数据库中为用户键入“用户名”和“密码”。  
+-   **Oracle 身份验证**：如果选择此选项，则必须在连接到的源 Oracle 数据库中为用户键入“用户名”和“密码”   。  
   
 ## <a name="see-also"></a>另请参阅  
  [如何管理 CDC 实例](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   

@@ -14,11 +14,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 56f98831db725a04d7399a49fbe8f6803cbe510c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241395"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478720"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>第 2 课：配置数据库对象的权限
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "59241395"
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 如果不能访问 SQL Server 实例，请从以下链接选择平台。 如果选择 SQL 身份验证，请使用 SQL Server 登录凭据。
-- Windows：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+-  Windows：[下载 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - **macOS**：[在 Docker 上下载 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "59241395"
   
 ### <a name="create-a-new-windows-account"></a>创建新的 Windows 帐户  
   
-1.  单击“开始”后，单击“运行”，在“打开”框中，键入“%SystemRoot%\system32\compmgmt.msc /s”，再单击“确定”打开“计算机管理”程序。 
-2.  在“系统工具”下，展开“本地用户和组”，右键单击“用户”，再单击“新建用户”。    
-3.  在“用户名”框中，键入“Mary”。    
-4.  在“密码”和“确认密码”框中，键入强密码，再单击“创建”创建新的本地 Windows 用户。  
+1.  单击“开始”后，单击“运行”，在“打开”框中，键入“%SystemRoot%\system32\compmgmt.msc /s”，再单击“确定”打开“计算机管理”程序。      
+2.  在“系统工具”下，展开“本地用户和组”，右键单击“用户”，再单击“新建用户”。        
+3.  在“用户名”框中，键入“Mary”。      
+4.  在“密码”和“确认密码”框中，键入强密码，再单击“创建”创建新的本地 Windows 用户。     
   
 ### <a name="create-a-sql-login"></a>创建 SQL 登录名  
 

@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813190"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>全文搜索的行为更改
@@ -69,7 +69,7 @@ ms.locfileid: "62813190"
 |**术语**|**以前的断字符和词干分析器的结果**|**新断字符和词干分析器的结果**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |jěˊÿｑℭžl<br /><br /> *（其中字词为无效英文字符）*|'jěˊÿｑℭžl'|je yq zl|  
-|table's|table's<br /><br /> 表|table's|  
+|table's|table's<br /><br /> table|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v z *（其中，v 和 z 为干扰词）*|*（无结果）*|v z|  
 |$100 000 USD|$100<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> USD|$100 000 USD<br /><br /> nn100000usd|  

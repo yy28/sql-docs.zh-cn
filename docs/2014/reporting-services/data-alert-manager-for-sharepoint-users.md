@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8382bfd231c87c1a0c1ea1d2f326cffaf327b202
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109515"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 用户的数据警报管理器
@@ -35,13 +35,13 @@ ms.locfileid: "66109515"
 >  在您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 警报功能之前，管理员必须向您授予权限。 有关所需权限的信息，请参阅 [Reporting Services 数据警报](../ssms/agent/alerts.md)。  
   
 ##  <a name="ViewingAlerts"></a> 查看数据警报信息  
- 您可以查看在数据警报设计器中创建的数据警报列表。 若要打开数据警报管理器，请右键单击发布到 SharePoint 库的报表。 下图显示了报表右键单击菜单中的“管理数据警报”选项。  
+ 您可以查看在数据警报设计器中创建的数据警报列表。 若要打开数据警报管理器，请右键单击发布到 SharePoint 库的报表。 下图显示了报表右键单击菜单中的“管理数据警报”选项。   
   
  ![从报表上下文菜单打开警报管理器](media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
   
  数据警报管理器包括一个表，该表列出警报名称、报表名称、警报定义创建者的姓名、发送警报消息的数目、上次运行警报的时间、上次修改警报定义的时间以及最新警报消息的状态。 如果无法生成或发送警报消息，则状态列将包含有关该错误的信息并且帮助您纠正该警报问题。 有关详细信息，请参阅 [在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。  
   
- 下表在数据警报管理器中显示某个表中的示例数据。 发生错误时，错误消息和日志中条目的标识符 (GUID) 包含在表的“状态”字段中。  
+ 下表在数据警报管理器中显示某个表中的示例数据。 发生错误时，错误消息和日志中条目的标识符 (GUID) 包含在表的“状态”字段中  。  
   
 |警报名称|报表名称|创建者|发送的警报数|上次运行时间|上次修改时间|“登录属性”|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "66109515"
   
   
 ##  <a name="EditAlerts"></a> 编辑数据警报  
- 作为信息工作者，从数据警报管理器中打开您的警报定义以便编辑。 您可以编辑您创建的警报定义，但无法编辑其他人创建的警报定义。 右键单击警报定义并单击“编辑”时，“数据警报设计器”随即打开，其中将显示警报定义。 有关详细信息，请参阅 [数据警报设计器](../../2014/reporting-services/data-alert-designer.md) 和 [在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md)。  
+ 作为信息工作者，从数据警报管理器中打开您的警报定义以便编辑。 您可以编辑您创建的警报定义，但无法编辑其他人创建的警报定义。 右键单击警报定义并单击“编辑”时，“数据警报设计器”随即打开，其中将显示警报定义  。 有关详细信息，请参阅 [数据警报设计器](../../2014/reporting-services/data-alert-designer.md) 和 [在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md)。  
   
   
   

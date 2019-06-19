@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072266"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>“新建度量值组”对话框（多维数据集设计器）
@@ -26,7 +26,7 @@ ms.locfileid: "66072266"
   
 -   在多维数据集设计器中的 **“多维数据集结构”** 选项卡上，单击 **“工具栏”** 窗格中的 **“新建度量值组”** 。  
   
--   在多维数据集设计器中的“多维数据集结构”选项卡上，右键单击“度量值”窗格中的度量值组或度量值，再从上下文菜单中选择“新建度量值组”。  
+-   在多维数据集设计器中的“多维数据集结构”选项卡上，右键单击“度量值”窗格中的度量值组或度量值，再从上下文菜单中选择“新建度量值组”。     
   
 ## <a name="options"></a>选项  
  **从数据源视图选择一个表**  
