@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab6f53c5b75e1ef78eab346d2b0dd96a42e5861
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62703953"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -164,13 +164,13 @@ ms.locfileid: "58510144"
 ##  <a name="info"></a> 获取有关 XML 架构和架构集合的信息  
  XML 架构集合在目录视图 sys.xml_schema_collections 中枚举出来。 XML 架构集合“sys”由系统定义。 它包含无需显式加载即可在所有用户定义的 XML 架构集合中使用的预定义命名空间。 此列表包含 xml、xs、xsi、fn 和 xdt 的命名空间。 另外两个目录视图是 sys.xml_schema_namespaces（它枚举每个 XML 架构集合中的所有命名空间）和 sys.xml_components（它枚举每个 XML 架构中的所有 XML 架构组件）。  
   
- 内置函数 XML_SCHEMA_NAMESPACE（schemaName、XmlSchemacollectionName、namespace-uri） 生成 xml 数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
+ 内置函数 XML_SCHEMA_NAMESPACE  （schemaName、XmlSchemacollectionName、namespace-uri）  生成 xml  数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
   
  可以按下列方式枚举 XML 架构集合的内容：  
   
 -   编写对 XML 架构集合的相应目录视图的 Transact-SQL 查询。  
   
--   使用内置函数 **XML_SCHEMA_NAMESPACE()**。 您可以对此函数的输出应用 **xml** 数据类型方法。 但不能修改基础 XML 架构。  
+-   使用内置函数 **XML_SCHEMA_NAMESPACE()** 。 您可以对此函数的输出应用 **xml** 数据类型方法。 但不能修改基础 XML 架构。  
   
  这些在下列示例中进行了说明。  
   
@@ -194,7 +194,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
  可以通过将目标命名空间指定为 **XML_SCHEMA_NAMESPACE()** 的第三个参数，获取集合中单个 XML 架构作为 **xml**数据类型实例。 下面的示例说明了这一点。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例如：从 XML 架构集合输出指定的架构  
- 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出假定目标命名空间为“https/\/www.microsoft.com/was-books”的 XML 架构。  
+ 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出假定目标命名空间为“https/\/www.microsoft.com/was-books”的 XML 架构。   
   
 ```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   

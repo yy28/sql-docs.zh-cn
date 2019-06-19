@@ -16,15 +16,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 186a78bbd2b887875bf6f5fc8594ffb714fb3ec7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088827"
 ---
 # <a name="advanced-save-options"></a>高级保存选项
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问“高级存储选项”对话框，在“文件”菜单上，单击“<query name>.sql 另存为”，打开“文件另存为”对话框，再单击“保存”按钮上的向下箭头，然后单击“编码保存”。  
+使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问“高级存储选项”  对话框，在“文件”  菜单上，单击“<query name>.sql 另存为”   ，打开“文件另存为”  对话框，再单击“保存”  按钮上的向下箭头，然后单击“编码保存”  。  
   
 ## <a name="options"></a>选项  
 **编码**  

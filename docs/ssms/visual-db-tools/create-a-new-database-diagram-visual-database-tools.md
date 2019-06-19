@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3de33a9f85a5a846b12fe8a95dc7b70381257c41
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089551"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>创建新的数据库关系图 (Visual Database Tools)
@@ -27,13 +27,13 @@ ms.locfileid: "65089551"
   
 ### <a name="to-create-a-new-database-diagram"></a>创建新的数据库关系图  
   
-1.  在对象资源管理器中，右键单击“数据库关系图”文件夹或该文件夹中的任何关系图。  
+1.  在对象资源管理器中，右键单击“数据库关系图”  文件夹或该文件夹中的任何关系图。  
   
-2.  在快捷菜单上选择“新建数据库关系图”。  
+2.  在快捷菜单上选择“新建数据库关系图”  。  
   
-    此时将显示“添加表”对话框。  
+    此时将显示“添加表”  对话框。  
   
-3.  在“表”列表中选择所需的表，再单击“添加”。  
+3.  在“表”  列表中选择所需的表，再单击“添加”  。  
   
     这些表将以图形方式显示在新的数据库关系图中。  
   

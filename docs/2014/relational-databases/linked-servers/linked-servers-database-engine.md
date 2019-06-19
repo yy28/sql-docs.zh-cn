@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743491"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
@@ -46,7 +46,7 @@ ms.locfileid: "62743491"
   
  “OLE DB 访问接口”  是管理特定数据源并与其交互的 DLL。 “OLE DB 数据源”  标识可通过 OLE DB 访问的特定数据库。 虽然通过链接服务器定义查询的数据源通常是数据库，但 OLE DB 访问接口对各种文件和文件格式仍可用。 这些文件和文件格式包括文本文件、电子表格数据和全文内容搜索的结果。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口 (PROGID:SQLNCLI11) 是有关的正式 OLE DB 访问接口[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序 (PROGID:SQLNCLI11) 是适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的官方 OLE DB 提供程序。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询旨在与任何实现所需 OLE DB 接口的 OLE DB 访问接口一起使用。 但是， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和特定访问接口进行过测试。  
@@ -76,9 +76,9 @@ ms.locfileid: "62743491"
   
 -   通过运行 **sp_dropserver**删除链接服务器定义。 还可以使用此存储过程删除远程服务器。  
   
- 还可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”，选择“新建”，再选择“链接服务器”。 通过右键单击链接服务器名称并选择“删除”，可以删除链接服务器定义。  
+ 还可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”  ，选择“新建”  ，再选择“链接服务器”  。 通过右键单击链接服务器名称并选择“删除”  ，可以删除链接服务器定义。  
   
- 对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 这个四部分名称应采用格式_linked_server_name.catalog_**。_`schema`_.**_object_name_。  
+ 对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 这个四部分名称应采用格式_linked_server_name.catalog_ **。 _`schema`_ .** _object_name_。  
   
 > [!NOTE]  
 >  可以定义链接服务器指回（环回）到在其上定义它们的服务器。 当在单服务器网络中测试使用分布式查询的应用程序时，环回服务器是很有用的。 环回链接服务器专用于测试，许多操作（如分布式事务）不支持该服务器。  

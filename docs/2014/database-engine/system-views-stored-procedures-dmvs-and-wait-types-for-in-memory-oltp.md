@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842396"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>系统视图、存储过程、内存中 OLTP 的 DMV 和等待类型
@@ -22,7 +22,7 @@ ms.locfileid: "62842396"
   
 ### <a name="system-views"></a>系统视图  
   
-|系统视图|Description|内存中 OLTP 功能|  
+|系统视图|描述|内存中 OLTP 功能|  
 |-----------------|-----------------|-----------------------------|  
 |[sys.data_spaces (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|检查文件组是否包含内存优化的数据。|以下各列显示其他的值：**类型**并**type_desc**。|  
 |[sys.indexes (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|检查内存优化表中是否存在索引。|以下各列显示其他的值：**类型**并**type_desc**。|  
@@ -35,14 +35,14 @@ ms.locfileid: "62842396"
   
 ### <a name="metadata-functions"></a>元数据函数  
   
-|元数据函数|Description|内存中 OLTP 功能|  
+|元数据函数|描述|内存中 OLTP 功能|  
 |-----------------------|-----------------|-----------------------------|  
 |[OBJECTPROPERTYEX (Transact-SQL)](/sql/t-sql/functions/objectproperty-transact-sql)|检查数据库对象是否经过内存优化。|**ExecIsWithNativeCompilation**并**TableIsMemoryOptimized**属性。<br /><br /> **IsSchemaBound**属性支持过程对象类型 （返回 0 表示过程而不是 NULL）。|  
 |[SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql)|检查服务器是否支持内存中 OLTP。|**IsXTPSupported**属性。|  
   
 ### <a name="system-stored-procedures"></a>系统存储过程  
   
-|存储过程|Description|  
+|存储过程|描述|  
 |----------------------|-----------------|  
 |[sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|将内存中 OLTP 数据库绑定至资源池。|  
 |[sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|启动内存中 OLTP 数据库的垃圾回收。|  

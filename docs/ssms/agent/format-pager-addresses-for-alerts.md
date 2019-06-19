@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4d47ffe7db5442f3ad238825d9c8012a05f4ef4b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096587"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
@@ -57,15 +57,15 @@ ms.locfileid: "65096587"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要发送到寻呼程序的警报的服务器。  
   
-2.  右键单击“SQL Server 代理”，然后选择“属性”  
+2.  右键单击“SQL Server 代理”  ，然后选择“属性”   
   
-3.  在 **“选择页”** 下，选择 **“警报系统”**。  
+3.  在 **“选择页”** 下，选择 **“警报系统”** 。  
   
-4.  在“寻呼电子邮件的地址格式”字段的“收件人行”和“抄送行”框中，输入寻呼地址的前缀或后缀。 发送通知时，将插入操作员的实际寻呼地址。  
+4.  在“寻呼电子邮件的地址格式”  字段的“收件人行”  和“抄送行”  框中，输入寻呼地址的前缀或后缀。 发送通知时，将插入操作员的实际寻呼地址。  
   
 5.  在 **“主题”** 框中，输入主题行的前缀或后缀。  
   
-6.  选择“在通知页中包含电子邮件的正文部分”复选框，以便在寻呼消息中包含完整电子邮件（与仅包含主题行相对）。  
+6.  选择“在通知页中包含电子邮件的正文部分”  复选框，以便在寻呼消息中包含完整电子邮件（与仅包含主题行相对）。  
   
-7.  完成后，单击 **“确定”**。  
+7.  完成后，单击 **“确定”** 。  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831742"
 ---
 # <a name="file-system-task"></a>文件系统任务
@@ -31,7 +31,7 @@ ms.locfileid: "62831742"
 ## <a name="predefined-file-system-operations"></a>预定义的文件系统操作  
  文件系统任务包含一组预定义的操作。 下表介绍了这些运算。  
   
-|操作|Description|  
+|操作|描述|  
 |---------------|-----------------|  
 |复制目录|将文件夹从一个位置复制到另一个位置。|  
 |复制文件|将文件从一个位置复制到另一个位置。|  
@@ -53,7 +53,7 @@ ms.locfileid: "62831742"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>文件系统任务可用的自定义日志项  
  下表介绍了文件系统任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../custom-messages-for-logging.md)。  
   
-|日志项|Description|  
+|日志项|描述|  
 |---------------|-----------------|  
 |`FileSystemOperation`|报告任务所执行的操作。 在文件系统操作开始时写入日志项，日志项包括有关源和目标的信息。|  
   

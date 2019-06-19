@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed62b74256b15aa27ca94459963928ae4b2727ca
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729112"
 ---
 # <a name="advanced-connection-properties"></a>高级连接属性
@@ -29,7 +29,7 @@ ms.locfileid: "65729112"
   
  使用 **“高级连接属性”** 对话框添加的参数将添加到在 **“连接到 SQL Server”** 对话框中选择的参数上。  
   
- 所提供的各个参数的最后一个实例均覆盖该参数的任何以前的实例。 使用 **“高级连接参数”** 添加的参数将跟踪并替换 **“SQL Server 连接”** 对话框中提供的参数。 例如，如果“SQL Server 连接”对话框将服务器名称指定为 SERVER1，而“其他连接参数”页包含 ;SERVER=SERVER2，则会连接到 SERVER2。  
+ 所提供的各个参数的最后一个实例均覆盖该参数的任何以前的实例。 使用 **“高级连接参数”** 添加的参数将跟踪并替换 **“SQL Server 连接”** 对话框中提供的参数。 例如，如果“SQL Server 连接”  对话框将服务器名称指定为 SERVER1，而“其他连接参数”  页包含 ;SERVER=SERVER2，则会连接到 SERVER2。  
   
  使用 **“高级连接属性”** 对话框添加的参数将作为纯文本传递。  
   
