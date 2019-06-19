@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cce0b8606b398d1c72b70c161bb8ccdf0d779167
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728065"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务
@@ -237,7 +237,7 @@ ms.locfileid: "65728065"
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
 ## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 执行 DDL 任务编辑器（“常规”页）
-  可以使用“Analysis Services 执行 DDL 任务编辑器”对话框的“常规”页命名和描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL 任务。  
+  可以使用“Analysis Services 执行 DDL 任务编辑器”  对话框的“常规”  页命名和描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL 任务。  
   
 ### <a name="options"></a>选项  
  **名称**  
@@ -250,13 +250,13 @@ ms.locfileid: "65728065"
  键入对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL 任务的说明。  
   
 ## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services 执行 DDL 任务编辑器（DDL 页）
-  可以使用“Analysis Services 执行 DDL 任务编辑器”对话框的 **DDL** 页指定与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的连接，以及提供有关数据定义语言 (DDL) 语句的源的信息。  
+  可以使用“Analysis Services 执行 DDL 任务编辑器”对话框的 **DDL** 页指定与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的连接，以及提供有关数据定义语言 (DDL) 语句的源的信息。   
   
 ### <a name="static-options"></a>静态选项  
  **“连接”**  
- 在列表中选择 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，或单击“\<新建连接...>”并使用“添加 Analysis Services 连接管理器”对话框新建一个连接。  
+ 在列表中选择 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，或单击“\<新建连接...>”  并使用“添加 Analysis Services 连接管理器”  对话框新建一个连接。  
   
- **相关主题：**[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **相关主题：** [“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  指定 DDL 语句的源类型。 此属性具有下表所列的选项：  
@@ -271,17 +271,17 @@ ms.locfileid: "65728065"
   
 #### <a name="sourcetype--direct-input"></a>SourceType = 直接输入  
  **数据源**  
- 键入 DDL 语句，或单击省略号 (…)，然后在“DDL 语句”对话框中键入语句。  
+ 键入 DDL 语句，或单击省略号 (…)，然后在“DDL 语句”对话框中键入语句   。  
   
 #### <a name="sourcetype--file-connection"></a>SourceType = 文件连接  
  **数据源**  
- 在列表中选择“文件连接”，或单击“\<新建连接...>”并使用“文件连接管理器”对话框新建一个连接。  
+ 在列表中选择“文件连接”，或单击“\<新建连接...>”  并使用“文件连接管理器”  对话框新建一个连接。  
   
- **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = 变量  
  **数据源**  
- 在列表中选择一个变量，或单击“\<新建变量...>”并使用“添加变量”对话框新建一个变量。  
+ 在列表中选择一个变量，或单击“\<新建变量...>”并使用“添加变量”对话框新建一个变量   。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)  
+ **相关主题：** [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)  
   

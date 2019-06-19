@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7fd7377f622d5d986ddb7b665f4f920365d5189f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944897"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
@@ -44,10 +44,10 @@ OPENQUERY ( linked_server ,'query' )
 ```  
   
 ## <a name="arguments"></a>参数  
- linked_server  
+ linked_server   
  表示链接服务器名称的标识符。  
   
- ' query '  
+ ' query '     
  在链接服务器中执行的查询字符串。 该字符串的最大长度为 8 KB。  
   
 ## <a name="remarks"></a>Remarks  

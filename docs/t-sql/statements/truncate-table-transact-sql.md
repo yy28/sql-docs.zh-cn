@@ -27,10 +27,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82107dd0e4e5927eec1670a2a4e9fcf933ae35df
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503313"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -70,14 +70,14 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  表所属架构的名称。  
   
  *table_name*  
- 要截断的表的名称，或要删除其全部行的表的名称。 table_name 须是文本。 table_name 不能是 OBJECT_ID() 函数或变量。  
+ 要截断的表的名称，或要删除其全部行的表的名称。 table_name 须是文本。  table_name 不能是 OBJECT_ID() 函数或变量。    
   
- WITH ( PARTITIONS ( { \<partition_number_expression> | \<range> } [ , ...n ] ) )  
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
+ WITH ( PARTITIONS ( { \<partition_number_expression> | \<range> } [ , ...n ] ) )    
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
   
- 指定要截断或删除其中所有行的分区。 如果表未分区，则 WITH PARTITIONS 参数会生成错误。 如果未提供 WITH PARTITIONS 子句，则整个表都将被截断。  
+ 指定要截断或删除其中所有行的分区。 如果表未分区，则 WITH PARTITIONS 参数会生成错误。  如果未提供 WITH PARTITIONS 子句，则整个表都将被截断。   
   
- 可以按以下方式指定 \<partition_number_expression>： 
+ 可以按以下方式指定 \<partition_number_expression>：  
   
 -   提供分区号，例如：`WITH (PARTITIONS (2))`  
   
@@ -85,7 +85,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 -   同时提供范围和单独分区，例如：`WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   \<range> 可指定为由单词 TO 隔开的分区号，例如：`WITH (PARTITIONS (6 TO 8))`  
+-   \<range> 可指定为由单词 TO 隔开的分区号，例如：`WITH (PARTITIONS (6 TO 8))`    
   
  要截断一个已分区表，表和索引必须对齐（在同一个分区函数上进行分区）。  
   
@@ -131,7 +131,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能够删除或截断超过 128 个区的表，而无需同步锁定所有需删除的区。  
   
 ## <a name="permissions"></a>权限  
- 所需的最低权限是 table_name 上的 ALTER 权限。 TRUNCATE TABLE 权限默认授予表所有者、sysadmin 固定服务器角色的成员、db_owner 和 db_ddladmin 固定数据库角色的成员，并且不可转移权限。 但是，可以在诸如存储过程这样的模块中加入 TRUNCATE TABLE 语句，然后为使用 EXECUTE AS 子句的模块授予适当的权限。  
+ 所需的最低权限是 table_name 上的 ALTER 权限。  TRUNCATE TABLE 权限默认授予表所有者、sysadmin 固定服务器角色的成员、db_owner 和 db_ddladmin 固定数据库角色的成员，并且不可转移权限。 但是，可以在诸如存储过程这样的模块中加入 TRUNCATE TABLE 语句，然后为使用 EXECUTE AS 子句的模块授予适当的权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -153,7 +153,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. 截断表分区  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
   
  下面的示例将截断已分区表的指定分区。 `WITH (PARTITIONS (2, 4, 6 TO 8))` 语法导致分区号 2、4、6、7 和 8 被截断。  
   

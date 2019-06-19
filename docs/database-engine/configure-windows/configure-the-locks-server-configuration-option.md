@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d8681bfa94a859e5ce63a74e26960c64db3b7528
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 06ce19dba1624455bdc470cfeec7b16655ec3d3b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755345"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794187"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>配置 locks 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47755345"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **配置 locks 选项，使用：**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47755345"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置锁选项之后](#FollowUp)  
+-   **跟进：** [在配置锁选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -58,16 +58,16 @@ ms.locfileid: "47755345"
   
 -   **locks** 选项也会影响何时进行锁升级。 如果 **locks** 设置为 0，则当前锁结构使用的内存达到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 内存池的 40% 时将进行锁升级。 如果 **locks** 未设置为 0，则当锁的数量达到 **locks**的指定值的 40% 时将进行锁升级。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-locks-option"></a>配置 locks 选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“高级”** 节点。  
   
@@ -79,11 +79,11 @@ ms.locfileid: "47755345"
   
 #### <a name="to-configure-the-locks-option"></a>配置 locks 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 设置 `locks` 选项的值，将所有用户可用的锁数设置为 `20000`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 设置 `locks` 选项的值，将所有用户可用的锁数设置为 `20000`。  
   
 ```sql  
 Use AdventureWorks2012 ;  
@@ -100,7 +100,7 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：在配置 locks 选项之后  
+##  <a name="FollowUp"></a> 跟进：在配置锁选项之后  
  必须重新启动服务器，设置才会生效。  
   
 ## <a name="see-also"></a>另请参阅  

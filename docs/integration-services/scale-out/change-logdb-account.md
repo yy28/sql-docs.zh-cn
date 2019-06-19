@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: f62f7f5536fb2a1ec716971e6c24d88e47cc04aa
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66009827"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>更改 Scale Out 日志记录的帐户
@@ -23,7 +23,7 @@ ms.locfileid: "66009827"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-在 Scale Out 中运行 SSIS 包时，会使用自动创建的名为 ##MS_SSISLogDBWorkerAgentLogin## 的用户帐户将事件消息记录到 SSISDB 数据库中。 此用户使用 SQL Server 身份验证登录。
+在 Scale Out 中运行 SSIS 包时，会使用自动创建的名为 ##MS_SSISLogDBWorkerAgentLogin## 的用户帐户将事件消息记录到 SSISDB 数据库中  。 此用户使用 SQL Server 身份验证登录。
 
 要更改用于 Scale Out 日志记录的帐户，请执行以下操作：
 

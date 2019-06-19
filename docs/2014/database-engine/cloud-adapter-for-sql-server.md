@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2ddaf87aa91e62cc422bf5a4558232f03339121
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065144"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server 的云适配器
-  创建云适配器服务是 Windows Azure 虚拟机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 设置的一部分。 云适配器服务在首次运行时生成自签名的 SSL 证书，然后作为“本地系统”帐户运行。 它生成用于配置自身的配置文件。 云适配器还创建一个 Windows 防火墙规则以允许默认端口 11435 上的传入 TCP 连接。  
+  创建云适配器服务是 Windows Azure 虚拟机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 设置的一部分。 云适配器服务在首次运行时生成自签名的 SSL 证书，然后作为“本地系统”  帐户运行。 它生成用于配置自身的配置文件。 云适配器还创建一个 Windows 防火墙规则以允许默认端口 11435 上的传入 TCP 连接。  
   
  云适配器是无状态的同步服务，它从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的本地实例接收消息。 停止云适配器服务时，它停止远程访问云适配器、解除 SSL 证书的绑定并禁用 Windows 防火墙规则。  
   

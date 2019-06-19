@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085311"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在数据挖掘设计器中创建单独查询
@@ -49,7 +49,7 @@ AS [t]
   
      选择要用于创建预测的模型。  
   
-     例如，若要创建本主题开头所显示的示例代码，请选择 TM_Decision_Tree，再单击“确定”。  
+     例如，若要创建本主题开头所显示的示例代码，请选择 TM_Decision_Tree，再单击“确定”  。  
   
 3.  在 **“挖掘模型预测”** 选项卡中，单击工具栏上的 **“单独查询”** 。  
   
@@ -63,11 +63,11 @@ AS [t]
   
      例如，将 **Bike Buyer** 拖到 **“源”** 列。  
   
-6.  通过在“源”列的下拉列表中选择“预测函数”或“自定义表达式”，向查询中添加其他函数。  
+6.  通过在“源”列的下拉列表中选择“预测函数”或“自定义表达式”，向查询中添加其他函数    。  
   
-     例如，单击 **“预测函数”**，再选择 **PredictProbability**。  
+     例如，单击 **“预测函数”** ，再选择 **PredictProbability**。  
   
-7.  在 **PredictProbability** 行中单击“条件/参数”，键入要预测的列的名称，还可以选择键入要预测的特定值。  
+7.  在 **PredictProbability** 行中单击“条件/参数”  ，键入要预测的列的名称，还可以选择键入要预测的特定值。  
   
      例如，键入 `[Bike Buyer], 1`。  
   

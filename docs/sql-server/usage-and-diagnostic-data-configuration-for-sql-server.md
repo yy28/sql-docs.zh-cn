@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: 44a8d6c22d7dd003f7c6e90963eb546e6ca1bf50
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65372761"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>配置 SQL Server 使用情况和诊断数据收集 (CEIP)
@@ -69,7 +69,7 @@ AND instance_name = '_Total'
 > [!NOTE]
 > 错误和使用情况报告应用程序在 SQL Server 的“配置工具”下列出。 使用此工具，可以 SQL Server 2017 中的相同方式，管理错误报告以及使用情况和诊断数据收集的偏好设置。 错误报告独立于使用情况和诊断数据收集，因此可以与使用情况和诊断数据收集分开启用或禁用。 错误报告收集发送到 Microsoft 的故障转储，其中可能包含[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)中所述的敏感信息。
 
-要启动 SQL Server 错误和使用情况报告，请单击或点击“启动”，然后在搜索框中搜索“错误”。 将显示 SQL Server 错误和使用情况报告项。 启动此工具后，可以管理为相应计算机上安装的实例和组件收集的使用情况和诊断数据以及严重错误。
+要启动 SQL Server 错误和使用情况报告，请单击或点击“启动”  ，然后在搜索框中搜索“错误”。 将显示 SQL Server 错误和使用情况报告项。 启动此工具后，可以管理为相应计算机上安装的实例和组件收集的使用情况和诊断数据以及严重错误。
 
 对于付费版本，选中“使用情况报告”复选框可以管理向 Microsoft 发送使用情况和诊断数据。
 

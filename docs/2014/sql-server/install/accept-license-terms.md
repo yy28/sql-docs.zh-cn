@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096841"
 ---
 # <a name="accept-license-terms"></a>接受许可条款
   使用 **安装向导的** “接受许可条款” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页可以接受该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的许可条款。  
   
- 您可以打印许可协议或将其复制到剪贴板。 若要继续，请接受许可条款，然后单击 **“下一步”**。 若要关闭安装过程，请单击 **“取消”**。  
+ 您可以打印许可协议或将其复制到剪贴板。 若要继续，请接受许可条款，然后单击 **“下一步”** 。 若要关闭安装过程，请单击 **“取消”** 。  
   
 ## <a name="customer-experience-improvement-program-ceip"></a>客户体验改善计划 (CEIP)  
  如果启用 CEIP 报告，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将被配置为定期向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 发送报告。 报告将包含有关硬件配置和用户如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和组件的信息。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 将使用功能使用情况数据来改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此功能监视的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件包括以下各项：  
@@ -46,7 +46,7 @@ ms.locfileid: "66096841"
   
  有关功能使用情况的信息将发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，在那里保存这些信息，且其访问将受到限制。  
   
- 若要在安装程序完成后禁用 CEIP 报告，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“配置工具”菜单上的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误和使用情况报告”工具。  
+ 若要在安装程序完成后禁用 CEIP 报告，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“配置工具”  菜单上的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误和使用情况报告”  工具。  
   
  对于诸如安装、升级、修复等此类安装程序操作，仅在执行安装程序期间才收集和上载信息。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66096841"
   
  如果启用了错误报告功能并出现错误，则 Windows 事件日志中可能会包含来自 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的一条响应，该响应指向与特定错误有关的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章。  
   
- 若要在安装程序完成后禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及其组件的所有实例的错误或功能使用情况报告，请转到 **“错误和使用情况报告设置”** 对话框并清除 **“功能使用情况”** 的复选框。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个组件（[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和共享组件）启用了“错误报告”，则可以对个别组件以及共享组件（在“其他”中列出）的每个实例禁用“错误报告”。  
+ 若要在安装程序完成后禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及其组件的所有实例的错误或功能使用情况报告，请转到 **“错误和使用情况报告设置”** 对话框并清除 **“功能使用情况”** 的复选框。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个组件（[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和共享组件）启用了“错误报告”  ，则可以对个别组件以及共享组件（在“其他”  中列出）的每个实例禁用“错误报告”。  
   
 ## <a name="see-also"></a>请参阅  
  [关于 SQL Server 许可条款](../../../2014/getting-started/about-the-sql-server-license-terms.md)  

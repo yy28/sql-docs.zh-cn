@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 152d4b274fe2e966a30ffe09ba2939ba4cafef39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e44e40d6c1fc01a012054223ce027e78363f33b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202476"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800978"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>使用 SQL Server Management 中的“可用性组向导”将副本添加到 AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用“将副本添加到可用性组向导”可帮助你将新的次要副本添加到现有 AlwaysOn 可用性组。  
+  使用“将副本添加到可用性组向导”可帮助你将新的次要副本添加到现有 AlwaysOn 可用性组  。  
   
 > [!NOTE]  
 >  有关使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 将辅助副本添加到可用性组的详细信息，请参阅 [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "53202476"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果你从未向可用性组添加过任何可用性副本，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)中的“服务器实例”与“可用性组和副本”部分。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a> 先决条件  
   
 -   您必须连接到承载当前主副本的服务器实例。  
   
@@ -55,11 +55,9 @@ ms.locfileid: "53202476"
   
     -   为了使该向导创建并访问备份，需要指定网络共享。 对于主副本，用于启动 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帐户必须对网络共享具有读写文件系统权限。 对于辅助副本，该帐户必须具有对网络共享区的读权限。  
   
-     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中创建和配置 AlwaysOn 可用性组。  
-  
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> Permissions  
+     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
+   
+## <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
  如果要允许“将副本添加到可用性组向导”管理数据库镜像端点，还需要 CONTROL ON ENDPOINT 权限。  
@@ -69,9 +67,9 @@ ms.locfileid: "53202476"
   
 1.  在对象资源管理器中，连接到承载可用性组的主副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
-3.  右键单击要向其添加辅助副本的可用性组，然后选择“添加副本”命令。 这将启动“将副本添加到可用性组向导”。  
+3.  右键单击要向其添加辅助副本的可用性组，然后选择“添加副本”  命令。 这将启动“将副本添加到可用性组向导”。  
   
 4.  在 **“连接到现有的辅助副本”** 页上，连接到可用性组中的每个辅助副本。 有关详细信息，请参阅[“连接到现有次要副本”页（添加副本向导：添加数据库向导）](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
   
@@ -80,10 +78,10 @@ ms.locfileid: "53202476"
     |选项卡|简短说明|  
     |---------|-----------------------|  
     |**副本**|使用此选项卡可以指定将承载新的辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。|  
-    |**端点**|使用此选项卡可验证每个新的辅助副本的现有数据库镜像端点（如果有）。 如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则该向导会自动创建该端点。<br /><br /> <br /><br /> 注意：如果任何服务器实例基于非域用户帐户运行，则您需要首先对您的服务器实例进行手动更改，然后才能在向导中继续执行。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。|  
+    |**端点**|使用此选项卡可验证每个新的辅助副本的现有数据库镜像端点（如果有）。 如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则该向导会自动创建该端点。<br /><br /> <br /><br /> 注意：如果任何服务器实例基于非域用户帐户运行，则你需要首先对你的服务器实例进行手动更改，然后才能在向导中继续执行。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。|  
     |**备份首选项**|使用此选项卡可以整体为可用性组指定您的备份首选项；如果您想要修改当前设置，还可为各个可用性副本指定备份优先级。|  
   
-6.  如果所选的副本包含具有数据库主密钥的数据库，请在“密码”列中输入数据库主密钥的密码。  “状态”列指示具有数据库主密钥的数据库  “所需的密码”。 在“密码”列中输入正确的密码之前，“下一步”将显示为灰色。 输入密码后，请单击 “刷新”。 如果正确输入密码，则“状态”列会指示“密码已输入”，然后便可进行“下一步”操作。  
+6.  如果所选的副本包含具有数据库主密钥的数据库，请在“密码”列中输入数据库主密钥的密码  。  “状态”列指示具有数据库主密钥的数据库  “所需的密码”。 在“密码”列中输入正确的密码之前，“下一步”将显示为灰色   。 输入密码后，请单击  “刷新”。 如果正确输入密码，则“状态”列会指示“密码已输入”，然后便可进行“下一步”操作   。  
   
 7.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
   
@@ -91,7 +89,7 @@ ms.locfileid: "53202476"
   
          如果你的环境满足自动启动初始数据同步的要求，则选择此选项（有关详细信息，请参阅本主题前面的 [先决条件、限制和建议](#Prerequisites)）。  
   
-         如果选择 **“完全”**，则在创建可用性组后，向导会将每个主数据库及其事务日志备份到网络共享，并在每个承载新的辅助副本的服务器实例上还原备份。 然后，该向导将每个新的辅助数据库联接到可用性组。  
+         如果选择 **“完全”** ，则在创建可用性组后，向导会将每个主数据库及其事务日志备份到网络共享，并在每个承载新的辅助副本的服务器实例上还原备份。 然后，该向导将每个新的辅助数据库联接到可用性组。  
   
          在 **“指定可由所有副本访问的共享网络位置”** 字段中，指定承载副本的所有服务器都具有读写访问权限的备份共享。 日志备份将是您的日志备份链的一部分。 适当地存储日志备份文件。  
   
@@ -106,11 +104,11 @@ ms.locfileid: "53202476"
   
          如果要使用您自己的数据库和主数据库的日志备份，请选择此选项。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-8.  **“验证”** 页验证在此向导中指定的值是否满足“将副本添加到可用性组向导”的要求。 若要进行更改，请单击 **“上一页”** 以返回前面的向导页，更改一个或多个值。 单击 **“下一步”** 返回到 **“验证”** 页，然后单击 **“重新运行验证”**。  
+8.  **“验证”** 页验证在此向导中指定的值是否满足“将副本添加到可用性组向导”的要求。 若要进行更改，请单击 **“上一页”** 以返回前面的向导页，更改一个或多个值。 单击 **“下一步”** 返回到 **“验证”** 页，然后单击 **“重新运行验证”** 。  
   
 9. 在 **“摘要”** 页上，查看您为新的可用性组进行的选择。 若要进行更改，请单击 **“上一步”** 以返回到相应页。 在进行更改后，单击 **“下一步”** 以返回到 **“摘要”** 页。  
   
-     如果您满意所做的选择，可以选择单击“脚本”以创建向导将执行的步骤的脚本。 然后，若要创建和配置新的可用性组，请单击 **“完成”**。  
+     如果您满意所做的选择，可以选择单击“脚本”以创建向导将执行的步骤的脚本。 然后，若要创建和配置新的可用性组，请单击 **“完成”** 。  
   
 10. **“进度”** 页将显示创建可用性组的各步骤（配置端点、创建可用性组和将辅助副本联接到该组）的进度。  
   

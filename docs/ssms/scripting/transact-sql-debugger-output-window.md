@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d49b81ce49cd30115e89936a56e70a7f7699643
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821697"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 调试器 -“输出”窗口
@@ -27,14 +27,14 @@ ms.locfileid: "65821697"
   
  **访问“输出”窗口**  
   
--   在 **“视图”** 菜单上单击 **“其他窗口”**，再单击 **“输出”**。  
+-   在 **“视图”** 菜单上单击 **“其他窗口”** ，再单击 **“输出”** 。  
   
 ## <a name="options"></a>选项  
  **输出窗格列表**  
  显示要查看的输出窗格的列表。 可能会有多个信息窗格可用，取决于哪些工具已经使用 **“输出”** 窗口将信息传递给用户。  
   
  **输出窗格**  
- 显示“输出窗格列表”中所选窗格的输出结果。  
+ 显示“输出窗格列表”  中所选窗格的输出结果。  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)  

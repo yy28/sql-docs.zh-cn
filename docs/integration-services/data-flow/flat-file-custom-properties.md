@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e2e2fffae3b6c57e0251fdd5b851160824de0f8
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726786"
 ---
 # <a name="flat-file-custom-properties"></a>平面文件自定义属性
@@ -31,7 +31,7 @@ ms.locfileid: "65726786"
   
 |属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|String|包含文件名的输出列的名称。 如果未指定名称，则不会生成包含文件名的输出列。<br /><br /> 注意：此属性未在平面文件源编辑器中提供，但可以使用“高级编辑器”进行设置。|  
+|FileNameColumnName|String|包含文件名的输出列的名称。 如果未指定名称，则不会生成包含文件名的输出列。<br /><br /> 注意：此属性未在平面文件源编辑器  中提供，但可以使用“高级编辑器”  进行设置。|  
 |RetainNulls|Boolean|该值指定当数据转换管道引擎处理数据时是否将源文件中的 Null 值仍保留为 Null 值。 此属性的默认值为 **False**。|  
   
  平面文件源的输出没有自定义属性。  
@@ -40,7 +40,7 @@ ms.locfileid: "65726786"
   
 |属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|一个值，该值指示列是使用 DTS 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 有关详细信息，请参阅 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 此属性的默认值为 **False**。<br /><br /> 注意：此属性未在平面文件源编辑器中提供，但可以使用“高级编辑器”进行设置。|  
+|FastParse|Boolean|一个值，该值指示列是使用 DTS 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 有关详细信息，请参阅 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 此属性的默认值为 **False**。<br /><br /> 注意：此属性未在平面文件源编辑器  中提供，但可以使用“高级编辑器”  进行设置。|  
   
  有关详细信息，请参阅 [Flat File Source](../../integration-services/data-flow/flat-file-source.md)。  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157123"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
@@ -61,23 +61,23 @@ ms.locfileid: "63157123"
   
     -   删除配置文件  
   
--   **跟进：**[在更改代理参数后](#FollowUp)  
+-   **跟进：** [在更改代理参数后](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 ###  <a name="Access_SSMS"></a> 从 SQL Server Management Studio 访问“代理配置文件”对话框  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“常规”页上，单击“配置文件默认值”。  
+1.  在“分发服务器属性 - \<分发服务器>”对话框的“常规”页上，单击“配置文件默认值”    。  
   
 #### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>从复制监视器访问“代理配置文件”对话框  
   
--   若要为所有代理打开此对话框，请右键单击发布服务器，再单击 **“代理配置文件”**。  
+-   若要为所有代理打开此对话框，请右键单击发布服务器，再单击 **“代理配置文件”** 。  
   
 -   为单个代理打开此对话框：  
   
     1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器，然后单击某个发布。  
   
-    2.  对于分发代理配置文件和合并代理配置文件，请右键单击 **“所有订阅”** 选项卡上的订阅，再单击 **“代理配置文件”**。 对于其他代理，右键单击 **“代理”** 选项卡上的代理，然后单击 **“代理配置文件”**。  
+    2.  对于分发代理配置文件和合并代理配置文件，请右键单击 **“所有订阅”** 选项卡上的订阅，再单击 **“代理配置文件”** 。 对于其他代理，右键单击 **“代理”** 选项卡上的代理，然后单击 **“代理配置文件”** 。  
   
 ###  <a name="Specify_SSMS"></a> 指定代理的配置文件  
   
@@ -85,27 +85,27 @@ ms.locfileid: "63157123"
   
 2.  在 **“代理配置文件”** 网格的 **“作为新项的默认值”** 列中选择一个配置文件。 默认情况下，该配置文件只应用于新发布和订阅的代理。  
   
-3.  若要指定用于现有发布或订阅且属于选定类型的所有代理都使用该配置文件，请单击 **“更改现有代理”**。  
+3.  若要指定用于现有发布或订阅且属于选定类型的所有代理都使用该配置文件，请单击 **“更改现有代理”** 。  
   
 ###  <a name="Modify_SSMS"></a> 查看和编辑与配置文件关联的参数  
   
 1.  如果 **“代理配置文件”** 对话框中显示了多个代理的配置文件，请选择一个代理。  
   
-2.  单击配置文件旁边的属性按钮 (...)。  
+2.  单击配置文件旁边的属性按钮 (...)  。  
   
-3.  查看“\<ProfileName> 配置文件属性”对话框中的参数和值。  
+3.  查看“\<ProfileName> 配置文件属性”对话框中的参数和值  。  
   
     -   用户定义配置文件中的参数可以编辑，但预定义系统配置文件中的参数不可编辑。  
   
     -   若要查看代理的所有参数，请清除 **“仅显示此配置文件中使用的参数”** 复选框。 有关代理参数的信息，请参阅本主题末尾处的链接。  
   
-4.  单击 **“关闭”**。  
+4.  单击 **“关闭”** 。  
   
 ###  <a name="Create_SSMS"></a> 创建用户定义的配置文件  
   
 1.  如果 **“代理配置文件”** 对话框中显示了多个代理的配置文件，请选择一个代理。  
   
-2.  单击 **“新建”**。  
+2.  单击 **“新建”** 。  
   
 3.  在 **“新建代理配置文件”** 初始化对话框中，选择一个作为新配置文件基础的现有配置文件。  
   
@@ -123,12 +123,12 @@ ms.locfileid: "63157123"
   
     1.  在 **“代理配置文件”** 网格中选择其他配置文件。  
   
-    2.  单击 **“更改现有代理”**。  
+    2.  单击 **“更改现有代理”** 。  
   
         > [!NOTE]  
         >  此操作将更改用于现有发布或订阅且属于选定类型的所有代理的配置文件，而不只更改那些使用要删除的配置文件的代理的配置文件。  
   
-3.  选择要删除的配置文件，再单击 **“删除”**。  
+3.  选择要删除的配置文件，再单击 **“删除”** 。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -136,7 +136,7 @@ ms.locfileid: "63157123"
   
 ###  <a name="Create_tsql"></a> 创建一个新的代理配置文件  
   
-1.  在分发服务器上，执行 [sp_add_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql)。 指定 **@name**，将 **@profile_type** 的值指定为 **@profile_type**，并为 **@agent_type**指定下列值之一：  
+1.  在分发服务器上，执行 [sp_add_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql)。 指定 **@name** ，将 **@profile_type** 的值指定为 **@profile_type** ，并为 **@agent_type** 指定下列值之一：  
   
     -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
@@ -148,13 +148,13 @@ ms.locfileid: "63157123"
   
     -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
-     如果此配置文件将成为此复制代理类型的新默认配置文件，请将 **@profile_type** 的值指定为 **@default**。 使用 **@profile_id** 输出参数可返回新配置文件的标识符。 这将会使用基于给定代理类型的默认配置文件的配置文件参数集创建新的配置文件。  
+     如果此配置文件将成为此复制代理类型的新默认配置文件，请将 **@profile_type** 的值指定为 **@default** 。 使用 **@profile_id** 输出参数可返回新配置文件的标识符。 这将会使用基于给定代理类型的默认配置文件的配置文件参数集创建新的配置文件。  
   
 2.  在已创建新配置文件后，可添加、删除或修改默认参数以自定义该配置文件。  
   
 ###  <a name="Modify_tsql"></a> 修改现有代理配置文件  
   
-1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为 **@agent_type**指定下列值之一：  
+1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为 **@agent_type** 指定下列值之一：  
   
     -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
@@ -168,24 +168,24 @@ ms.locfileid: "63157123"
   
      这将返回指定类型的代理的所有配置文件。 请记下要更改的配置文件在结果集中的 **profile_id** 值。  
   
-2.  在分发服务器上，执行 [sp_help_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql)。 为 **@profile_id**。 这将返回该配置文件的所有参数。 请记下要从配置文件中修改或删除的任何参数的名称。  
+2.  在分发服务器上，执行 [sp_help_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql)。 为 **@profile_id** 。 这将返回该配置文件的所有参数。 请记下要从配置文件中修改或删除的任何参数的名称。  
   
-3.  若要更改配置文件中的参数值，请执行 [sp_change_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql)。 为 **@profile_id**指定步骤 1 中的配置文件标识符，为 **@property**指定要更改的参数的名称，并为 **@value**。  
+3.  若要更改配置文件中的参数值，请执行 [sp_change_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql)。 为 **@profile_id** 指定步骤 1 中的配置文件标识符，为 **@property** 指定要更改的参数的名称，并为 **@value** 。  
   
     > [!NOTE]  
     >  您不能将现有的代理配置文件更改为代理的默认配置文件。 相反，您必须创建一个新的配置文件以作为默认配置文件，如前面的过程所示。  
   
-4.  若要从配置文件中删除参数，请执行 [sp_drop_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql)。 为 **@profile_id** 指定步骤 1 中的配置文件标识符并为 **@parameter_name**。  
+4.  若要从配置文件中删除参数，请执行 [sp_drop_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql)。 为 **@profile_id** 指定步骤 1 中的配置文件标识符并为 **@parameter_name** 。  
   
 5.  若要向配置文件添加新的参数，必须执行下列操作：  
   
     -   查询分发服务器上的 [MSagentparameterlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msagentparameterlist-transact-sql) 表以确定可为每个代理类型设置哪些配置文件参数。  
   
-    -   在分发服务器上，执行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql)。 为 **@profile_id**指定步骤 1 中的配置文件标识符，为 **@parameter_name**指定要添加的有效参数的名称，并为 **@parameter_value**。  
+    -   在分发服务器上，执行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql)。 为 **@profile_id** 指定步骤 1 中的配置文件标识符，为 **@parameter_name** 指定要添加的有效参数的名称，并为 **@parameter_value** 。  
   
 ###  <a name="Delete_tsql"></a> 删除代理配置文件  
   
-1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为 **@agent_type**指定下列值之一：  
+1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为 **@agent_type** 指定下列值之一：  
   
     -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
@@ -199,11 +199,11 @@ ms.locfileid: "63157123"
   
      这将返回指定类型的代理的所有配置文件。 请记下要删除的配置文件在结果集中的 **profile_id** 值。  
   
-2.  在分发服务器上，执行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql)。 为 **@profile_id**。  
+2.  在分发服务器上，执行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql)。 为 **@profile_id** 。  
   
 ###  <a name="Synch_tsql"></a> 在同步期间使用代理配置文件  
   
-1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为 **@agent_type**指定下列值之一：  
+1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql)。 为 **@agent_type** 指定下列值之一：  
   
     -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   

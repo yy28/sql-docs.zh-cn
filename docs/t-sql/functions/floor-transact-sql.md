@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c1859eba4ab1fdab20b4ba07037468ec870d0791
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949044"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
@@ -43,10 +43,10 @@ FLOOR ( numeric_expression )
   
 ## <a name="arguments"></a>参数  
  *numeric_expression*  
- 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式。  
+ 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式  。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与 numeric_expression 相同的类型。  
+ 返回与 numeric_expression  相同的类型。  
   
 ## <a name="examples"></a>示例  
  以下示例显示正数、负数和货币值在 `FLOOR` 函数中的运用。  
@@ -55,7 +55,7 @@ FLOOR ( numeric_expression )
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 结果是与 numeric_expression数据类型相同的计算所得值的整数部分。  
+ 结果是与 numeric_expression数据类型相同的计算所得值的整数部分  。  
   
 ```  
 ---------      ---------     -----------  
@@ -69,7 +69,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 结果是与 numeric_expression数据类型相同的计算所得值的整数部分。  
+ 结果是与 numeric_expression数据类型相同的计算所得值的整数部分  。  
   
  ```
  -----   ---------    -----------  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00f2dd9628419bf517c683358bfae89d8625c702
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+manager: jroth
+ms.openlocfilehash: 0e8faaeb6a809caf5bd8c42ceee94cbbb0702979
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65936358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794138"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>配置 max degree of parallelism 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "65936358"
 
 ||||
 |----------------|-----------------|-----------------|
-|具有单个 NUMA 节点的服务器|少于 16 个 逻辑处理器|将 MAXDOP 保持为小于或等于逻辑处理器的数量|
-|具有单个 NUMA 节点的服务器|大于 16 个逻辑处理器|将 MAXDOP 保持为逻辑处理器数量的一半，最大值为 16|
-|具有多个 NUMA 节点的服务器|每个 NUMA 节点少于 16 个逻辑处理器|将 MAXDOP 保持为小于或等于每个 NUMA 节点的逻辑处理器的数量|
+|具有单个 NUMA 节点的服务器|小于或等于 8 个逻辑处理器|将 MAXDOP 保持为小于或等于逻辑处理器的数量|
+|具有单个 NUMA 节点的服务器|大于 8 个逻辑处理器|将 MAXDOP 保持为 8 个|
+|具有多个 NUMA 节点的服务器|每个 NUMA 节点拥有小于或等于 16 个逻辑处理器|将 MAXDOP 保持为小于或等于每个 NUMA 节点的逻辑处理器的数量|
 |具有多个 NUMA 节点的服务器|每个 NUMA 节点大于 16 个逻辑处理器|将 MAXDOP 保持为每个 NUMA 节点逻辑处理器数量的一半，最大值为 16|
   
 > [!NOTE]
@@ -67,9 +67,9 @@ ms.locfileid: "65936358"
 
 ||||
 |----------------|-----------------|-----------------|
-|具有单个 NUMA 节点的服务器|少于 8 个 逻辑处理器|将 MAXDOP 保持为小于或等于逻辑处理器的数量|
+|具有单个 NUMA 节点的服务器|小于或等于 8 个逻辑处理器|将 MAXDOP 保持为小于或等于逻辑处理器的数量|
 |具有单个 NUMA 节点的服务器|大于 8 个逻辑处理器|将 MAXDOP 保持为 8 个|
-|具有多个 NUMA 节点的服务器|每个 NUMA 节点少于 8 个逻辑处理器|将 MAXDOP 保持为小于或等于每个 NUMA 节点的逻辑处理器的数量|
+|具有多个 NUMA 节点的服务器|每个NUMA 节点拥有小于或等于 8 个逻辑处理器|将 MAXDOP 保持为小于或等于每个 NUMA 节点的逻辑处理器的数量|
 |具有多个 NUMA 节点的服务器|每个 NUMA 节点大于 8 个逻辑处理器|将 MAXDOP 保持为 8 个|
   
 ###  <a name="Security"></a> Security  

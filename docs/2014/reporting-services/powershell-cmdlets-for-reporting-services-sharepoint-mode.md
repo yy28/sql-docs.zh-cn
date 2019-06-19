@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0e2cb6de46a20f185819f42825576ee529e0198
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108058"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
@@ -56,7 +56,7 @@ ms.locfileid: "66108058"
   
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet 摘要  
 
- 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)**。 有关详细信息，请参阅 [在 Windows Server 上启动 Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在以下 cmdlet 摘要中，对服务应用程序数据库，引用的数据库创建和使用的所有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 这包括配置、警报和 temp 数据库。  
+ 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)** 。 有关详细信息，请参阅 [在 Windows Server 上启动 Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在以下 cmdlet 摘要中，对服务应用程序数据库，引用的数据库创建和使用的所有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 这包括配置、警报和 temp 数据库。  
 
   
  如果您在键入 PowerShell 示例时看到类似以下内容的错误消息：  
@@ -74,7 +74,7 @@ ms.locfileid: "66108058"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 有关详细信息请参阅[使用 Windows PowerShell 管理 SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx) (https://technet.microsoft.com/library/ee806878.aspx)。  
+ 有关详细信息请参阅[使用 Windows PowerShell 管理 SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx) (https://technet.microsoft.com/library/ee806878.aspx) 。  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>打开 SharePoint Management Shell 并运行 cmdlet  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66108058"
   
 2.  单击 **“Microsoft SharePoint 产品”** 组。  
   
-3.  单击 **“SharePoint Management Shell”**。  
+3.  单击 **“SharePoint Management Shell”** 。  
   
  若要查看针对 cmdlet 的命令行帮助，请在 PowerShell 命令提示符处使用 PowerShell“Get-Help”命令。 例如：  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108058"
 ###  <a name="bkmk_sharedservice_cmdlets"></a> 共享服务和代理 Cmdlet  
  下表包含用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务的 PowerShell cmdlet。  
   
-|Cmdlet|Description|  
+|Cmdlet|描述|  
 |------------|-----------------|  
 |Install-SPRSService|安装并注册或卸载 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共享服务。 这只能在 SharePoint 模式下具有 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装的计算机上进行。 对于安装，将发生两个操作：<br /><br /> 1)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务安装在场中。<br /><br /> 2)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务实例安装在当前计算机。<br /><br /> 对于卸载，将发生两个操作：<br />1)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]从当前计算机上卸载服务。<br />2)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]从场中卸载服务。<br /><br /> <br /><br /> 注意：如果存在的任何其他计算机场中的具有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务安装，或仍有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]在场中运行服务应用程序，将显示一条警告消息。|  
 |Install-SPRSServiceProxy|安装并注册（或卸载）SharePoint 场中的 Reporting Services 服务代理。|  
@@ -101,7 +101,7 @@ ms.locfileid: "66108058"
 ###  <a name="bkmk_serviceapp_cmdlets"></a> 服务应用程序和代理 Cmdlet  
  下表包含用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序及其关联代理的 PowerShell cmdlet。  
   
-|Cmdlet|Description|  
+|Cmdlet|描述|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|获取一个或多个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序对象。|  
 |New-SPRSServiceApplication|创建一个新的 Reporting Services 服务应用程序及关联的数据库。<br /><br /> LogonType 参数：指定报表服务器是否使用 SSRS 应用程序池帐户或 SQL Server 登录名来访问报表服务器数据库。 该参数可以是下列值之一：<br /><br /> 0 Windows 身份验证<br /><br /> 1 SQL Server<br /><br /> 2 应用程序池帐户（默认值）|  
@@ -121,7 +121,7 @@ ms.locfileid: "66108058"
   
 ###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Reporting Services 自定义功能 Cmdlet  
   
-|Cmdlet|Description|  
+|Cmdlet|描述|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|为指定的 Reporting Services 服务应用程序更新加密密钥并且重新加密其数据。|  
 |Restore-SPRSEncryptionKey|还原以前为 Reporting Services 服务应用程序备份的加密密钥。|  
@@ -178,7 +178,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  向默认代理组添加代理  
   
-3.  授予服务应用对端口 80 Web 应用的内容数据库的访问权限。 该脚本假设网站"http://sitename"已存在。  
+3.  授予服务应用对端口 80 Web 应用的内容数据库的访问权限。 该脚本假设网站"http://sitename "已存在。  
   
 ```  
 # Create service application and service application proxy  

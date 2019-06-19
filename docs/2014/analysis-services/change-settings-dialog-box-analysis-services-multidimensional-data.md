@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088253"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>“更改设置”对话框（Analysis Services - 多维数据）
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “更改设置” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，可以更改对 **“处理”** 对话框中所列对象的处理进行控制的设置。 单击 **“处理”** 对话框中的 **“更改设置”** ，将显示 **“更改设置”** 对话框。  
   
 > [!NOTE]  
->  此对话框中指定的设置将覆盖从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库继承的“处理”对话框中所列对象的默认设置。  
+>  此对话框中指定的设置将覆盖从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库继承的“处理”  对话框中所列对象的默认设置。  
   
 ## <a name="options"></a>选项  
  **处理选项**  
@@ -33,7 +33,7 @@ ms.locfileid: "66088253"
  单击此项可并行处理对象。  
   
  **最大并行任务**  
- 选择处理操作并行执行的最大任务数，或选择“让服务器决定”以允许 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 选择并行任务的最佳数量。  
+ 选择处理操作并行执行的最大任务数，或选择“让服务器决定”  以允许 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 选择并行任务的最佳数量。  
   
  **顺序**  
  单击此项可按顺序处理对象。  
@@ -46,7 +46,7 @@ ms.locfileid: "66088253"
 -   **“单独的事务”** 在单独的事务中处理所有对象（包括依赖对象）。  
   
 > [!NOTE]  
->  只有在选择了“按顺序”时，才会启用此选项。  
+>  只有在选择了“按顺序”  时，才会启用此选项。  
   
  **写回表选项**  
  选择用于管理写回表的选项：  
@@ -86,7 +86,7 @@ ms.locfileid: "66088253"
  键入处理停止前忽略的错误数。  
   
  **出错时要执行的操作**  
- 选择以下操作之一，以便在错误数超出“错误数”中的值时执行该操作：  
+ 选择以下操作之一，以便在错误数超出“错误数”  中的值时执行该操作：  
   
 -   **“停止处理”** 将结束处理操作。  
   
@@ -132,10 +132,10 @@ ms.locfileid: "66088253"
  键入错误日志文件的完整路径和文件名。  
   
  **“浏览”**  
- 单击此项以打开“打开”对话框，然后选择错误日志文件的完整路径和文件名。  
+ 单击此项以打开“打开”  对话框，然后选择错误日志文件的完整路径和文件名。  
   
  **处理受影响的对象**  
- 单击此项可处理与“处理”对话框中的所选对象存在依赖关系的对象。  
+ 单击此项可处理与“处理”  对话框中的所选对象存在依赖关系的对象。  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771225"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何编辑 CDC 实例属性
@@ -22,19 +22,19 @@ ms.locfileid: "62771225"
   
 ### <a name="to-edit-the-cdc-instance-configuration-properties"></a>编辑 CDC 实例的配置属性  
   
-1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”**。  
+1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”** 。  
   
 2.  在左侧的窗格中，展开 **“变更数据捕获”** ，然后展开包含您要编辑其属性的实例的服务。  
   
 3.  选择要编辑其属性的实例的名称。  
   
-4.  从 CDC 设计器控制台右侧的“操作”窗格中，单击 **“属性”**。  
+4.  从 CDC 设计器控制台右侧的“操作”窗格中，单击 **“属性”** 。  
   
-     也可以右键单击要编辑其属性的实例，然后单击“属性”。  
+     也可以右键单击要编辑其属性的实例，然后单击“属性”  。  
   
 5.  在属性编辑器中，在以下选项卡中编辑属性：  
   
-    -   **Oracle**：使用属性编辑器中的“Oracle”选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
+    -   **Oracle**：使用属性编辑器中的“Oracle”  选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
   
          有关可在此选项卡中编辑的内容的信息，请参阅 [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62771225"
   
          有关可在此选项卡中编辑的内容的信息，请参阅 [Edit Tables](edit-tables.md)。  
   
-    -   **脚本**：使用“脚本”选项卡可对 Oracle 源数据库运行或重新运行一个设置补充日志记录的脚本。  
+    -   **脚本**：使用“脚本”  选项卡可对 Oracle 源数据库运行或重新运行一个设置补充日志记录的脚本。  
   
          有关可在此选项卡中执行的操作的信息，请参阅 [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md)。  
   

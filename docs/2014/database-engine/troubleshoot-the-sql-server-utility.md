@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842523"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server 实用工具故障排除
@@ -96,7 +96,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   失败的或不支持的 WMI 验证。 有关详细信息，请参阅本主题前面的“失败的 WMI 验证”部分。  
   
--   刷新托管实例列表视图中的数据，因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具视点中的数据不自动刷新。 若要刷新数据，请右键单击 **“实用工具资源管理器导航”** 窗格中的 **“托管实例”** 节点，然后选择 **“刷新”**；或者在列表视图中右键单击 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例名称，然后选择 **“刷新”**。 请注意，在已向某一 UCP 注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的某一实例后，可能需要最长 30 分钟的时间，数据才会首次出现在实用工具资源管理器内容窗格的面板和视点中。  
+-   刷新托管实例列表视图中的数据，因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具视点中的数据不自动刷新。 若要刷新数据，请右键单击 **“实用工具资源管理器导航”** 窗格中的 **“托管实例”** 节点，然后选择 **“刷新”** ；或者在列表视图中右键单击 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例名称，然后选择 **“刷新”** 。 请注意，在已向某一 UCP 注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的某一实例后，可能需要最长 30 分钟的时间，数据才会首次出现在实用工具资源管理器内容窗格的面板和视点中。  
   
 -   使用 SQL Server 配置管理器验证该 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例是否正在运行。  
   
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   UCP 上的 SQL Server Browser 服务必须启动，并且它必须配置为自动启动。 如果您的组织禁止使用 SQL Server Browser 服务，则使用以下步骤可以允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的托管实例连接到 UCP：  
   
-    1.  在 Windows 任务栏上的托管实例上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，单击**启动**，然后单击**运行...**.  
+    1.  在 Windows 任务栏上的托管实例上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，单击**启动**，然后单击**运行...** .  
   
-    2.  在提供的空间中键入“cliconfg.exe”，然后单击 **“确定”**。  
+    2.  在提供的空间中键入“cliconfg.exe”，然后单击 **“确定”** 。  
   
-    3.  如果提示允许“SQL 客户端配置实用工具 EXE”启动，则单击 **“继续”**。  
+    3.  如果提示允许“SQL 客户端配置实用工具 EXE”启动，则单击 **“继续”** 。  
   
-    4.  上**SQL Server 客户端网络实用工具**对话框中，选择**别名**选项卡，然后单击**添加...**.  
+    4.  上**SQL Server 客户端网络实用工具**对话框中，选择**别名**选项卡，然后单击**添加...** .  
   
     5.  在 **“添加网络库配置”** 对话框上：  
   
@@ -154,13 +154,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的某一托管实例承载在 Windows Server 2003 计算机上，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务帐户必须属于性能监视器用户安全组或本地管理员组。 否则，数据收集将失败并且具有拒绝访问错误。 若要将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务帐户添加到性能监视器用户安全组中，请使用以下步骤：  
   
-    1.  依次打开 **“计算机管理”**、 **“本地用户和组”**、 **“组”**。  
+    1.  依次打开 **“计算机管理”** 、 **“本地用户和组”** 、 **“组”** 。  
   
-    2.  右键单击 **“性能监视器用户”** ，然后选择 **“添加到组”**。  
+    2.  右键单击 **“性能监视器用户”** ，然后选择 **“添加到组”** 。  
   
-    3.  单击 **“添加”**。  
+    3.  单击 **“添加”** 。  
   
-    4.  输入 SQL Server 代理服务正基于其运行的帐户，然后单击 **“确定”**。  
+    4.  输入 SQL Server 代理服务正基于其运行的帐户，然后单击 **“确定”** 。  
   
     5.  如果在将用户添加到该组之前，该 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例已向 UCP 注册，则重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务。  
   

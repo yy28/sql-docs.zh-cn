@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b374b8dc5ef942bd5c7e16329e0b226befb668d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726254"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>为查找转换创建和部署缓存
@@ -45,11 +45,11 @@ ms.locfileid: "65726254"
   
      根据需要配置数据源。  
   
-4.  双击缓存转换，在“缓存转换编辑器”中的“连接管理器”页上单击“新建”，创建一个新的缓存连接管理器。  
+4.  双击缓存转换，在“缓存转换编辑器”  中的“连接管理器”  页上单击“新建”  ，创建一个新的缓存连接管理器。  
   
 5.  在 **“缓存连接管理器编辑器”** 的 **“常规”** 选项卡上，选择以下选项对缓存连接管理器进行配置，以保存缓存：  
   
-    1.  选择 **“使用文件缓存”**。  
+    1.  选择 **“使用文件缓存”** 。  
   
     2.  在 **“文件名”** 中，键入文件路径。  
   
@@ -83,15 +83,15 @@ ms.locfileid: "65726254"
   
     1.  在解决方案资源管理器中，选择在步骤 1 中打开的项目。  
   
-    2.  在“项目”菜单上，单击“添加现有项”。  
+    2.  在“项目”  菜单上，单击“添加现有项”  。  
   
-    3.  选择缓存文件，再单击 **“添加”**。  
+    3.  选择缓存文件，再单击 **“添加”** 。  
   
      该文件将显示在解决方案资源管理器中的 **“杂项”** 文件夹。  
   
 4.  配置项目以创建一个部署实用工具，再生成项目。 有关详细信息，请参阅 [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)。  
   
-     将创建清单文件 \<项目名称>.SSISDeploymentManifest.xml，其中列出了项目、包及包配置中的杂项文件。  
+     将创建清单文件 \<项目名称>.SSISDeploymentManifest.xml，其中列出了项目、包及包配置中的杂项文件  。  
   
 5.  将包部署到文件系统。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
   

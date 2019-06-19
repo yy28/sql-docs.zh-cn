@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d4557d7a525866bf74cd4883d0b403d6382232
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717680"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>使用 Transact-SQL 从 SSMS 部署 SSIS 项目
@@ -46,7 +46,7 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
 
 1. 打开 SQL Server Management Studio。
 
-2. 在“连接到服务器”对话框中，输入以下信息：
+2. 在“连接到服务器”对话框中，输入以下信息  ：
 
    | 设置       | 建议的值 | 详细信息 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -56,9 +56,9 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
    | **登录** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
 
-3. 单击 **“连接”**。 对象资源管理器窗口在 SSMS 中打开。 
+3. 单击 **“连接”** 。 对象资源管理器窗口在 SSMS 中打开。 
 
-4. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”查看 SSIS 目录数据库中的对象。
+4. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”查看 SSIS 目录数据库中的对象   。
 
 ## <a name="run-the-t-sql-code"></a>运行 T-SQL 代码
 运行下面的 Transact-SQL 代码以部署 SSIS 项目。
@@ -67,11 +67,11 @@ SQL Server Management Studio 是一种集成环境，用于管理从 SQL Server 
 
 2.  为系统更新 `catalog.deploy_project` 存储过程中的参数值。
 
-3.  请确保 SSISDB 是当前数据库。
+3.  请确保 SSISDB 是当前数据库  。
 
 4.  运行该脚本。
 
-5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目。
+5. 在对象资源管理器中，如有必要，请刷新 SSISDB 的内容，然后检查已部署的项目  。
 
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)

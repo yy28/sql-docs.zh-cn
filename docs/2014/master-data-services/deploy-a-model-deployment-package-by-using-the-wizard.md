@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cbdf233af3c0c27d6b4e95d18dc2c438d5307e7d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479479"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用向导部署模型部署包
@@ -37,19 +37,19 @@ ms.locfileid: "65479479"
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>仅部署模型对象的模型部署包  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“系统”** ，然后单击 **“部署”**。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“系统”** ，然后单击 **“部署”** 。  
   
-3.  在 **“模型部署向导”** 上，单击 **“部署”**。  
+3.  在 **“模型部署向导”** 上，单击 **“部署”** 。  
   
-4.  单击 **“浏览”**。  
+4.  单击 **“浏览”** 。  
   
-5.  找到部署包（.pkg 文件），然后单击“打开”。  
+5.  找到部署包（.pkg 文件），然后单击“打开”。   
   
-6.  单击“下一步” 。  
+6.  单击“下一步”  。  
   
-7.  在加载包后，单击 **“下一步”**。  
+7.  在加载包后，单击 **“下一步”** 。  
   
 8.  如果该模型已存在，则可以通过选择 **“更新现有模型”** 更新该模型。 若要创建新模型，请选择 **“创建新模型”** ，并且在单击 **“下一步”** 后，可为该新模型键入名称。  
   

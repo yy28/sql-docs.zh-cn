@@ -27,10 +27,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bf3b9c4dfd1216cccadb3a82e949168626206a6
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943121"
 ---
 # <a name="hasdbaccess-transact-sql"></a>HAS_DBACCESS (Transact-SQL)
@@ -47,8 +47,8 @@ HAS_DBACCESS ( 'database_name' )
 ```  
   
 ## <a name="arguments"></a>参数  
- 'database_name'  
- 数据库的名称，用户希望获取有关该数据库的访问信息。 database_name 的数据类型为 sysname。  
+ 'database_name'   
+ 数据库的名称，用户希望获取有关该数据库的访问信息。 database_name 的数据类型为 sysname   。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  

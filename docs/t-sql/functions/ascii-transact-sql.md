@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f77ef33c6974d7189078e3610f272d376480b814
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945022"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
@@ -44,13 +44,13 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>参数  
 *character_expression*  
-char 或 varchar 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
+char 或 varchar 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。
   
 ## <a name="return-types"></a>返回类型
  **int**  
   
 ## <a name="remarks"></a>Remarks
-ASCII 表示美国信息交换标准码。 它是现代计算机的一种字符编码标准。 要获取 ASCII 字符列表，请参阅 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的“可打印字符”部分。
+ASCII 表示美国信息交换标准码      。 它是现代计算机的一种字符编码标准。 要获取 ASCII 字符列表，请参阅 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的“可打印字符”部分  。
 
 ## <a name="examples"></a>示例  
 此示例假定一个 ASCII 字符集，并返回 6 个字符的 `ASCII` 值。

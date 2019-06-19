@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcc54a1f10345d342b536e049f8288f57708055c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726186"
 ---
 # <a name="data-mining-query-transformation"></a>数据挖掘查询转换
@@ -54,10 +54,10 @@ ms.locfileid: "65726186"
   
 ### <a name="options"></a>选项  
  **“连接”**  
- 使用列表框选择现有 Analysis Services 连接，或使用下面介绍的“新建”按钮创建新的连接。  
+ 使用列表框选择现有 Analysis Services 连接，或使用下面介绍的“新建”  按钮创建新的连接。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  
   
  **挖掘结构**  
  从可用挖掘模型结构的列表中进行选择。  
@@ -73,5 +73,5 @@ ms.locfileid: "65726186"
  将数据挖掘扩展插件 (DMX) 查询直接键入文本框中。  
   
  **生成新查询**  
- 单击“生成新查询”可以通过使用图形查询生成器来创建数据挖掘扩展插件 (DMX) 查询。  
+ 单击  “生成新查询”可以通过使用图形查询生成器来创建数据挖掘扩展插件 (DMX) 查询。  
   

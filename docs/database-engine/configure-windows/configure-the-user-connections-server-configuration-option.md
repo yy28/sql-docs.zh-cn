@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e9053620cc9d9de516b809253a13e53c8a7323ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 39f32d8934ebff8cd53bb8defdc30d0510913eb9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776735"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66767984"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>配置 user connections 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47776735"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **配置 user connections 选项，使用：**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47776735"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置 user connections 选项之后](#FollowUp)  
+-   **跟进：** [在配置用户连接选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -58,16 +58,16 @@ ms.locfileid: "47776735"
     > [!IMPORTANT]  
     >  如果必须使用此选项，请不要将值设置得太高，这是因为不管是否使用连接，每个连接都会产生开销。 如果超过了用户连接的最大允许值，将收到一条错误消息，而且直到出现一个可用连接之后才能建立连接。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-user-connections-option"></a>配置 user connections 选项  
   
-1.  在对象资源浏览器中，右键单击某个服务器，然后单击 **“属性”**。  
+1.  在对象资源浏览器中，右键单击某个服务器，然后单击 **“属性”** 。  
   
 2.  单击 **“连接”** 节点。  
   
@@ -79,11 +79,11 @@ ms.locfileid: "47776735"
   
 #### <a name="to-configure-the-user-connections-option"></a>配置 user connections 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例显示如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `user connections` 选项的值配置为 `325` 个用户。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例显示如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `user connections` 选项的值配置为 `325` 个用户。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -101,7 +101,7 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：在配置 user connections 选项之后  
+##  <a name="FollowUp"></a> 跟进：在配置用户连接选项之后  
  必须重新启动服务器，设置才会生效。  
   
 ## <a name="see-also"></a>另请参阅  

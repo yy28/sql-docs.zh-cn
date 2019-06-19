@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788724"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>使用 AlwaysOn 面板 (SQL Server Management Studio)
@@ -65,16 +65,16 @@ ms.locfileid: "62788724"
   
 1.  在对象资源管理器中，连接到要运行 AlwaysOn 面板的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
   
-2.  展开“AlwaysOn 高可用性”节点，右键单击“可用性组”节点，然后单击“显示面板”。  
+2.  展开“AlwaysOn 高可用性”  节点，右键单击“可用性组”  节点，然后单击“显示面板”  。  
   
 ###  <a name="DashboardOptions"></a> 若要更改 AlwaysOn 面板选项  
- 可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“选项”对话框配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 面板行为，使其自动刷新和启用自动定义的 AlwaysOn 策略。  
+ 可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“选项”  对话框配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 面板行为，使其自动刷新和启用自动定义的 AlwaysOn 策略。  
   
-1.  从 **“工具”** 菜单中，单击 **“选项”**。  
+1.  从 **“工具”** 菜单中，单击 **“选项”** 。  
   
-2.  若要自动刷新面板，在 **“选项”** 对话框中，选择 **“启用自动刷新”**，输入以秒计的刷新间隔，然后输入要重试连接的次数。  
+2.  若要自动刷新面板，在 **“选项”** 对话框中，选择 **“启用自动刷新”** ，输入以秒计的刷新间隔，然后输入要重试连接的次数。  
   
-3.  若要启用用户定义的策略，请选择“启用用户定义的 AlwaysOn 策略”。  
+3.  若要启用用户定义的策略，请选择“启用用户定义的 AlwaysOn 策略”  。  
   
 ##  <a name="AvGroupsView"></a> 可用性组摘要  
  可用性组屏幕为所连接服务器实例承载其副本的每个可用性组都显示一行摘要。 此窗格显示以下列。  
@@ -93,7 +93,7 @@ ms.locfileid: "62788724"
 -   **手动**。 指示没有副本处于自动故障转移模式。  
   
  **问题**  
- 单击“问题”链接可打开针对某一问题的故障排除文档。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 AlwaysOn 可用性组 (SQL Server) 运行问题的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 单击“问题”  链接可打开针对某一问题的故障排除文档。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 AlwaysOn 可用性组 (SQL Server) 运行问题的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
 > [!TIP]  
 >  单击列标题可按可用性组的名称、主实例、故障转移模式或问题对可用性组信息进行排序。  
@@ -124,7 +124,7 @@ ms.locfileid: "62788724"
  承载可用性副本的服务器实例的名称。 默认情况下显示此列。  
   
  **角色**  
- 指示可用性副本的当前角色，即“主”或“辅助”。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。 默认情况下显示此列。  
+ 指示可用性副本的当前角色，即“主”  或“辅助”  。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。 默认情况下显示此列。  
   
  **故障转移模式**  
  显示为副本配置的故障转移模式。 可能的故障转移模式值包括：  
@@ -204,7 +204,7 @@ ms.locfileid: "62788724"
 >  有关可用性副本的性能计数器的信息，请参阅 [SQL Server，可用性副本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
 ##  <a name="AvDbDetails"></a> 对可用性组信息分组  
- 若要对信息进行分组，请单击 **“分组依据”**，并选择下列选项之一：  
+ 若要对信息进行分组，请单击 **“分组依据”** ，并选择下列选项之一：  
   
 -   **可用性副本**  
   
@@ -280,7 +280,7 @@ ms.locfileid: "62788724"
  有关所有 AlwaysOn 策略问题的列表，请参阅[针对 AlwaysOn 可用性组 (SQL Server) 运行问题的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **已挂起**  
- 指示数据库“已挂起”还是“已恢复”。 默认情况下隐藏此值。  
+ 指示数据库“已挂起”  还是“已恢复”  。 默认情况下隐藏此值。  
   
  **挂起原因**  
  指示已挂起状态的原因。 默认情况下隐藏此值。  
@@ -289,7 +289,7 @@ ms.locfileid: "62788724"
  指示主副本和辅助副本中最后一个事务日志记录的时间差异。 如果主副本失败，则丢失该时间窗口内的所有事务日志记录。 默认情况下隐藏此值。  
   
  **估计的恢复时间（秒）**  
- 指示重做追赶时间所需的时间（秒）。 追赶时间是次要副本要与主要副本保持同步所需的时间。 默认情况下隐藏此值。  
+ 指示重做追赶时间所需的时间（秒）。 追赶时间  是次要副本要与主要副本保持同步所需的时间。 默认情况下隐藏此值。  
   
  **同步性能（秒）**  
  指示主副本与辅助副本之间的同步所需的时间（秒）。 默认情况下隐藏此值。  

@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092183"
 ---
 # <a name="service-account-ssrs-native-mode"></a>服务帐户（SSRS 本机模式）
@@ -36,7 +36,7 @@ ms.locfileid: "66092183"
  从此列表中选择 **Network Service**、 **Local System**或 **Local Service** 。 建议只选择 **Network Service** ；不过，可以将帐户配置为使用任何可用的帐户。  
   
  **使用其他帐户**  
- 选择此选项可以指定 Windows 用户帐户。 可以输入本地 Windows 用户帐户或域用户帐户。 按以下格式指定域帐户： *\<域 >\\< 用户\>*。 按以下格式指定本地 Windows 用户帐户： *\<计算机名 >\\< 用户\>*。 您只能选择现有的帐户；不能在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置中创建新帐户。  
+ 选择此选项可以指定 Windows 用户帐户。 可以输入本地 Windows 用户帐户或域用户帐户。 按以下格式指定域帐户： *\<域 >\\< 用户\>* 。 按以下格式指定本地 Windows 用户帐户： *\<计算机名 >\\< 用户\>* 。 您只能选择现有的帐户；不能在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置中创建新帐户。  
   
  帐户的最大字符数限制为 20 个字符。  
   

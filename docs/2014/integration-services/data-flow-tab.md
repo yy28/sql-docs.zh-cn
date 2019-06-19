@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059901"
 ---
 # <a name="data-flow-tab"></a>“数据流”选项卡
@@ -24,7 +24,7 @@ ms.locfileid: "66059901"
   
  通过将表示源、转换和目标的图形对象从 **“工具箱”** 拖至 **“数据流”** 选项卡的设计图面，再连接这些对象以创建确定转换运行顺序的路径，即可创建数据流。  
   
- 右键单击某个路径，再单击“数据查看器”，可以添加数据查看器来查看每个数据流对象前后的数据。  
+ 右键单击某个路径，再单击“数据查看器”  ，可以添加数据查看器来查看每个数据流对象前后的数据。  
   
  您还可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器从 **“数据流”** 选项卡中添加以下功能：  
   

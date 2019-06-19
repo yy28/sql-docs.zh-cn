@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18150e08b06e1b8f919df98e8e10b4eb43cc4b64
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727474"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
@@ -106,12 +106,12 @@ ms.locfileid: "65727474"
   
 ### <a name="options"></a>选项  
  **SMTPConnection**  
- 从列表中选择一个 SMTP 连接管理器，或单击“\<新建连接…>”创建新的连接管理器。  
+ 从列表中选择一个 SMTP 连接管理器，或单击“\<新建连接…>”创建新的连接管理器  。  
   
 > [!IMPORTANT]  
 >  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
   
- **相关主题：**[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)  
+ **相关主题：** [SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)  
   
  **From**  
  指定发件人的电子邮件地址。  
@@ -150,19 +150,19 @@ ms.locfileid: "65727474"
   
 #### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 直接输入  
  **MessageSource**  
- 键入邮件正文，或单击浏览按钮 (…)，然后在“消息源”对话框中键入邮件内容。  
+ 键入邮件正文，或单击浏览按钮 (…)，然后在“消息源”对话框中键入邮件内容  。  
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 文件连接  
  **MessageSource**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器  。  
   
- **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 变量  
  **MessageSource**  
- 从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
+ 从列表中选择变量，或单击“\<新建变量...>”以创建新的变量  。  
   
- **相关主题：**[Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   

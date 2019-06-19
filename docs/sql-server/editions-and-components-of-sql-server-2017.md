@@ -34,16 +34,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560113"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66744175"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [请分享你对 SQL Docs 中心页的反馈！](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 本主题详细介绍 SQL Server 2017 的不同版本支持的功能。 
 
@@ -63,7 +65,7 @@ ms.locfileid: "65560113"
 
 ### <a name="try-sql-server"></a>试用 SQL Server！    
     
-> [![从 Evaluation Center 下载](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**[从 Evaluation Center 下载 SQL Server 2017](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
+> [![从 Evaluation Center 下载](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) **[从 Evaluation Center 下载 SQL Server 2017](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
 <!---    
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
@@ -194,9 +196,9 @@ ms.locfileid: "65560113"
 |Resource Governor|是|否|否|否|否|  
 |已分区表并行度|是|否|否|否|否|
 |多个 Filestream 容器|是|是|是|是|是|
-|NUMA 感知、大型页内存和缓冲区数组分配|是|否|否|否|否|
+|可识别 NUMA 的大型页内存和缓冲区数组分配|是|否|否|否|否|
 |缓冲池扩展|是|是|否|否|否|
-|IO 资源调控|是|否|否|否|否|  
+|I/O 资源治理|是|否|否|否|否|  
 |预读|是|否|否|否|否|
 |高级扫描|是|否|否|否|否|
 |延迟持续性|是|是|是|是|是|

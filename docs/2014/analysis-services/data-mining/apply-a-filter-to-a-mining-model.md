@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086221"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>对挖掘模型应用筛选器
@@ -48,7 +48,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      -或-  
   
-     选择该模型。 然后，在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
+     选择该模型。 然后，在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”** 。  
   
 4.  在 **“模型筛选器”** 对话框的 **“挖掘结构列”** 文本框中，单击网格中的第一行。  
   
@@ -72,7 +72,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      您所创建的筛选条件自动添加到“表达式”文本框中。 例如： `[Income] > '30000'`  
   
-10. 单击网格下一行中的“AND/OR”文本框，以添加条件。  
+10. 单击网格下一行中的“AND/OR”  文本框，以添加条件。  
   
      例如，若要创建 BETWEEN 条件，请选择`AND`从逻辑操作数下拉列表。  
   
@@ -86,13 +86,13 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>向挖掘模型中的嵌套表添加筛选器  
   
-1.  在中**\<名称 > 模型筛选器**对话框框中，单击下的网格中的空行**挖掘结构列**。  
+1.  在中 **\<名称 > 模型筛选器**对话框框中，单击下的网格中的空行**挖掘结构列**。  
   
 2.  从下拉列表中选择嵌套表的名称。  
   
      文本框左侧的图标会发生改变，以指示所选项是表名称。  
   
-3.  单击 **“运算符”** 文本框，然后选择 **“包含”** 或 **“不包含”**。  
+3.  单击 **“运算符”** 文本框，然后选择 **“包含”** 或 **“不包含”** 。  
   
      在 **“模型筛选器”** 对话框中，只有这些条件可用于嵌套表，因为您要将事例表限定为包含嵌套表中某一特定值的那些事例。 在下一步中，您将设置嵌套表条件的值。  
   

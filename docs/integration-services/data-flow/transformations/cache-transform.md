@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a33198113b770aff85a52a153272f019d4ffdca7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726267"
 ---
 # <a name="cache-transform"></a>缓存转换
@@ -69,7 +69,7 @@ ms.locfileid: "65726267"
   
 ### <a name="options"></a>选项  
  **缓存连接管理器**  
- 使用列表选择现有的缓存连接管理器，或使用“新建”按钮创建新的连接。  
+ 使用列表选择现有的缓存连接管理器，或使用“新建”  按钮创建新的连接。  
   
  **新建**  
  使用“缓存连接管理器编辑器”对话框创建新的连接。  

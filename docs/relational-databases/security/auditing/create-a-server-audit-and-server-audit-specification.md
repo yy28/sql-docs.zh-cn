@@ -19,15 +19,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 650c5bd55365fbf1729fe3514bd31b6af73f6981
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978813"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716234"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和服务器审核规范。 “ 审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 “服务器审核规范”  对象属于审核。 您可以为每个审核创建一个服务器审核规范，因为它们都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例范围内创建的。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和服务器审核规范。 “  审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 “服务器审核规范”  对象属于审核。 您可以为每个审核创建一个服务器审核规范，因为它们都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例范围内创建的。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
  **本主题内容**  
   
@@ -51,9 +51,9 @@ ms.locfileid: "53978813"
   
 -   CREATE SERVER AUDIT 语句位于事务范围内。 如果对事务进行回滚，也将对该语句进行回滚。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 -   若要创建、更改或删除服务器审核，主体需要拥有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "53978813"
   
 1.   在对象资源管理器中，展开“安全性”文件夹。  
   
-2.  右键单击“审核”文件夹，然后选择“新建审核…”。  
+2.  右键单击“审核”文件夹，然后选择“新建审核…”   。  
   
      在 **“创建审核”** 对话框的 **“常规”** 页上提供以下选项。  
   
@@ -90,14 +90,14 @@ ms.locfileid: "53978813"
     > [!IMPORTANT]  
     >  在审核处于失败状态时，专用管理员连接可继续执行审核的事件。  
   
-     “审核目标”列表  
+     “审核目标”  列表  
      指定数据的审核目标。 可用选项包括二进制文件、Windows 应用程序日志或 Windows 安全日志。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 写入到 Windows 安全日志。 有关详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
   
      **文件路径**  
-     指定当“审核目标”是文件时，要将审核数据写入的文件夹所在的位置。  
+     指定当“审核目标”  是文件时，要将审核数据写入的文件夹所在的位置。  
   
      **省略号 (...)**  
-     打开“定位文件夹 - server\_name”对话框，以指定文件路径或创建要写入审核文件的文件夹。  
+     打开“定位文件夹 - server\_name”对话框，以指定文件路径或创建要写入审核文件的文件夹   。  
   
      **审核文件最大限制：**  
      **最大滚动更新文件数**  
@@ -106,27 +106,27 @@ ms.locfileid: "53978813"
      **最大文件数**  
      指定在达到最大审核文件数时，导致生成附加审核事件的任何操作都将失败并报告错误。  
   
-     “无限制”复选框  
-     在选中了“最大滚动更新文件数”下的“无限制”复选框后，可创建的审核文件数不受任何限制。 **“无限制”** 复选框默认被选中并且适用于 **“最大滚动更新文件数”** 和 **“最大文件数”** 选择。  
+     “无限制”  复选框  
+     在选中了“最大滚动更新文件数”  下的“无限制”  复选框后，可创建的审核文件数不受任何限制。 **“无限制”** 复选框默认被选中并且适用于 **“最大滚动更新文件数”** 和 **“最大文件数”** 选择。  
   
-     “文件数”框  
+     “文件数”  框  
      指定要创建的审核文件的数目，最高为 2,147,483,647。 只有取消选中 **“无限制”** 时，此选项才可用。  
   
      **最大文件大小**  
      指定审核文件的最大大小，可以兆字节 (MB)、千兆字节 (GB) 或百万兆字节 (TB) 为单位。 您可以指定 1024 MB 至 2,147,483,647 TB 之间的值。 选中 **“无限制”** 复选框将不会对文件大小施加限制。 指定一个小于 1024 MB 的值将失败，并且返回错误。 默认情况下， **“无限制”** 复选框为选中状态。  
   
-     “保留磁盘空间”复选框  
+     “保留磁盘空间”  复选框  
      指定在磁盘上预先分配与指定的最大文件大小相等的空间。 只有在 **“最大文件大小”** 下未选中 **“无限制”** 复选框的情况下，才能使用此设置。 默认情况下，不选中此复选框。  
   
 3.  或者，在 **“筛选器”** 页上，对服务器审核输入一个谓词或 `WHERE` 子句，以便指定在 **“常规”** 页上未提供的附加选项。 用小括号将该谓词括起来，例如 `(object_name = 'EmployeesTable')`。  
   
-4.  在完成选项选择后，请单击 **“确定”**。  
+4.  在完成选项选择后，请单击 **“确定”** 。  
   
 #### <a name="to-create-a-server-audit-specification"></a>创建服务器审核规范  
   
 1.  在对象资源管理器中，右键单击加号以展开 **“安全性”** 文件夹。  
   
-2.  右键单击“服务器审核规范”文件夹，然后选择“新建服务器审核规范…”。  
+2.  右键单击“服务器审核规范”文件夹，然后选择“新建服务器审核规范…”   。  
   
      **“创建服务器审核规范”** 对话框中提供了以下选项。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "53978813"
      指定要捕获的服务器级别审核操作组和审核操作。 有关服务器级别审核操作组和审核操作的列表以及它们所包含事件的说明，请参阅 [SQL Server 审核操作组和操作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
      **对象架构**  
-     显示具有指定“对象名称”的对象的架构。  
+     显示具有指定“对象名称”  的对象的架构。  
   
      **Object Name**  
      要审核的对象的名称。 这仅适用于审核操作，而不适用于审核组。  
@@ -154,7 +154,7 @@ ms.locfileid: "53978813"
      **省略号 (...)**  
      打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
   
-3.  在完成后，单击 **“确定”**。  
+3.  在完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -162,9 +162,9 @@ ms.locfileid: "53978813"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
@@ -176,9 +176,9 @@ ms.locfileid: "53978813"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  

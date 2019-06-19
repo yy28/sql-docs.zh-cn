@@ -16,11 +16,11 @@ ms.author: josack
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 718d03619165f94ae9b0820a7c2c6319549069be
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372650"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62465723"
 ---
 # <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="arguments"></a>参数  
 *expression*  
-任意类型（“image”、“sql_variant”、“ntext”或“text”除外）的 [expression](../../t-sql/language-elements/expressions-transact-sql.md)。 
+任意类型（“image”  、“sql_variant”  、“ntext”  或“text”  除外）的 [expression](../../t-sql/language-elements/expressions-transact-sql.md)。 
 
 ## <a name="return-types"></a>返回类型
  **bigint**  
@@ -51,7 +51,7 @@ APPROX_COUNT_DISTINCT ( expression )
 `APPROX_COUNT_DISTINCT( expression )` 计算组中每行的表达式，并返回组中唯一非空值的近似数。 此函数旨在跨响应速度比绝对精度更为关键的大型数据集进行聚合。  
 
 `APPROX_COUNT_DISTINCT` 专用于大数据方案，更适合以下情形：
-- 访问包含数百万行或更多行的数据集，且
+- 访问包含数百万行或更多行的数据集，且 
 - 聚合包含多个非重复值的一个或多个列
 
 此函数实现可保证最多 2% 的错误率，概率在 97% 内。 

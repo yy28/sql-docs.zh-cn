@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a7449f51121491025d662fde50eaa548602cd41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: fa1beab7acbdb4eb2b522596b8854e4bc714c640
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503460"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795515"
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,13 +151,13 @@ ms.locfileid: "52503460"
  当伙伴连接在一起并且数据库已同步时，支持手动故障转移。 如果镜像服务器实例出现故障，则主体服务器实例不会受到影响并且公开运行（即，未镜像数据）。 如果主体服务器丢失，则镜像会挂起，但可以将服务强制到镜像服务器（可能造成数据丢失）。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> 具有自动故障转移的高安全性模式  
- 自动故障转移通过确保在丢失一个服务器之后仍向数据库提供服务来提供高可用性。 自动故障转移要求会话具有第三个服务器实例（“见证服务器 ”），理想情况是见证服务器驻留在第三台计算机上。 下图显示了支持自动故障转移的高安全性模式会话的配置。  
+ 自动故障转移通过确保在丢失一个服务器之后仍向数据库提供服务来提供高可用性。 自动故障转移要求会话具有第三个服务器实例（“见证服务器  ”），理想情况是见证服务器驻留在第三台计算机上。 下图显示了支持自动故障转移的高安全性模式会话的配置。  
   
  ![会话的见证服务器和两个伙伴](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "会话的见证服务器和两个伙伴")  
   
  与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器通过验证主体服务器是否已启用并运行来仅支持自动故障转移。 只有在镜像服务器和见证服务器与主体服务器断开连接之后而保持相互连接时，镜像服务器才启动自动故障转移。  
   
- 设置见证服务器时，会话需要“仲裁”（允许数据库可用的至少两个服务器实例之间的关系）。 有关详细信息，请参阅[数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)和[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 设置见证服务器时，会话需要“仲裁”（允许数据库可用的至少两个服务器实例之间的关系）  。 有关详细信息，请参阅[数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)和[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  自动故障转移需要下列条件：  
   
@@ -173,7 +173,7 @@ ms.locfileid: "52503460"
   
 -   如果只有镜像服务器变得不可用，则主体服务器和见证服务器将继续运行。  
   
- 如果会话丢失见证服务器，则仲裁需要两个伙伴。 如果任何一个伙伴失去仲裁，两个伙伴都将失去仲裁且在重新建立仲裁之前数据库将不可用。 此仲裁要求确保没有见证服务器时数据库从不“公开” 运行，即从不执行数据镜像。  
+ 如果会话丢失见证服务器，则仲裁需要两个伙伴。 如果任何一个伙伴失去仲裁，两个伙伴都将失去仲裁且在重新建立仲裁之前数据库将不可用。 此仲裁要求确保没有见证服务器时数据库从不“公开”  运行，即从不执行数据镜像。  
   
 > [!NOTE]  
 >  如果您希望见证服务器在很长一段时间内保持断开，则我们建议您在见证服务器变为可用之前将其从会话中删除。  

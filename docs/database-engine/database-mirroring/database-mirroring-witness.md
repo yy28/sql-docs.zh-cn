@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 11c66e1ec21787fa263a999e9beaaf0e22646b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 996def514bc87bde79f85bffbb04056bf487764f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646735"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795463"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  若要支持自动故障转移，必须在高安全性模式下配置数据库镜像会话，并且还要具有第三个服务器实例（也称为“见证服务器”）。 见证服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的可选实例，它能使高安全性模式会话中的镜像服务器识别出是否要启动自动故障转移。 与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器的唯一角色是支持自动故障转移。  
+  若要支持自动故障转移，必须在高安全性模式下配置数据库镜像会话，并且还要具有第三个服务器实例（也称为“见证服务器”  ）。 见证服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的可选实例，它能使高安全性模式会话中的镜像服务器识别出是否要启动自动故障转移。 与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器的唯一角色是支持自动故障转移。  
   
 > [!NOTE]  
 >  在高性能模式下，见证服务器对可用性会有不利影响。 如果见证服务器是针对数据库镜像会话而配置，则主体服务器必须至少连接到一个其他服务器实例，即镜像服务器或见证服务器，或者是连接到这两个服务器。 否则，将无法使用数据库，并且不能进行强制服务（可能丢失数据）。 因此，对于高性能模式，我们极力建议您始终将见证服务器设置为 OFF。 有关见证服务器对高性能模式影响的信息，请参阅 [数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
@@ -64,7 +64,7 @@ ms.locfileid: "47646735"
   
 -   如果镜像服务器与见证服务器和主体服务器都断开连接，则不论主体服务器状态如何都无法进行自动故障转移。  
   
- 至少要连接到两个服务器实例的要求称为“仲裁 ”。 仲裁可以确保数据库一次仅可由一个伙伴提供服务。 有关仲裁的工作原理以及它对会话的影响的详细信息，请参阅 [仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 至少要连接到两个服务器实例的要求称为“仲裁  ”。 仲裁可以确保数据库一次仅可由一个伙伴提供服务。 有关仲裁的工作方式及其对会话的影响的信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ##  <a name="AddRemoveWitness"></a> 添加或删除见证服务器  
  **添加见证服务器**  

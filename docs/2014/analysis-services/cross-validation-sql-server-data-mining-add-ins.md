@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086653"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>交叉验证（SQL Server 数据挖掘外接程序）
@@ -62,7 +62,7 @@ ms.locfileid: "66086653"
   
      如果可预测列包含连续数值数据，则此选项不可用。  
   
-8.  单击 **“完成”**。 创建一个新工作表时，名为**交叉验证**。  
+8.  单击 **“完成”** 。 创建一个新工作表时，名为**交叉验证**。  
   
     > [!NOTE]  
     >  在将模型分区到折叠中并对每个折叠进行测试时，Microsoft Excel 可能会暂时停止响应。  
@@ -75,7 +75,7 @@ ms.locfileid: "66086653"
  如果您选择同时支持聚类分析模型和其他类型模型的结构，则不会对聚类分析模型进行测试。  
   
 ## <a name="understanding-cross-validation-results"></a>了解交叉验证结果  
- 交叉验证的结果将显示在新的工作表，标题为**交叉验证报表\<属性名称 >**。 新工作表包括多个部分：第一部分是一个摘要，提供有关已测试模型的重要元数据，以便您了解这些结果分别属于哪个模型或结构。  
+ 交叉验证的结果将显示在新的工作表，标题为**交叉验证报表\<属性名称 >** 。 新工作表包括多个部分：第一部分是一个摘要，提供有关已测试模型的重要元数据，以便您了解这些结果分别属于哪个模型或结构。  
   
  报表中的第二部分提供一个统计信息摘要，指示原始模型的有效程度。 在此摘要中，为每个折叠创建的模型之间的差异分析的三个关键度量值：*均方根误差*，*平均绝对误差*，和*对数得分*. 这些是标准的统计度量值，不仅用于数据挖掘，还用在大多数类型的统计分析中。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66086653"
 #### <a name="classification-true-or-false-positives-and-negatives"></a>分类：真正、 假负和假负  
  此测试可用于具有指定目标的所有分类模型。 该度量值指示根据对以下问题的回答，每个事例如何分类：模型预测什么内容和实际结果如何。  
   
-|度量值|Description|  
+|度量值|描述|  
 |-------------|-----------------|  
 |真正|满足以下条件的事例计数：<br /><br /> 事例包含目标值。<br /><br /> 模型已预测事例包含目标值。|  
 |假正|满足以下条件的事例计数：<br /><br /> 实际值等于目标值。<br /><br /> 模型已预测事例包含目标值。|  

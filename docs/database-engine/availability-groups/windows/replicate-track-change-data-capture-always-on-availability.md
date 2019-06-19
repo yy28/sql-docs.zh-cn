@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a40d8209fd01c6f5e3c4ec2c3d4344d2b62ee35
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 35ff790595dbcb6a3864b2d1414149374119d907
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787993"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "54125947"
     ```  
   
     > [!NOTE]  
-    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请使用 [sp_update_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 的 @enabled 选项。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
+    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请使用 [sp_update_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 的 @enabled 选项  。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
   
 -   **向 AlwaysOn 主数据库副本中添加 CDC 角色**  
   
@@ -172,7 +172,7 @@ ms.locfileid: "54125947"
   
      一般情况下，你应使用域登录名来对驻留在作为 AlwaysOn 可用性组成员的数据库中的更改数据进行客户端访问。 若要确保在故障转移后能够继续访问变更数据，域用户需要具有对支持可用性组副本的所有主机的访问特权。 如果将一个数据库用户添加到主副本中的数据库，则会将该用户与一个域登录名关联，然后将该数据库用户传播到辅助数据库，并且继续与指定的域登录名关联。 如果将新数据库用户与一个 SQL Server 身份验证登录名关联，则将传播辅助数据库上的用户而不关联登录名。 尽管可以使用关联的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证登录名来访问最初定义数据库用户的主副本上的更改数据，但该节点是能够进行访问的唯一节点。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证登录名将无法访问任何辅助数据库中的数据，也无法访问除定义了数据库用户的原始数据库之外的任何新的主数据库中的数据。  
      
--   禁用变更数据捕获  
+-   禁用变更数据捕获   
 如果需要在属于 AlwaysOn 可用性组的数据库中禁用“更改数据捕获”，则需要执行其他步骤以确保不会影响日志截断。 需要执行以下步骤之一，防止禁用变更数据捕获后，变更数据捕获会阻止日志截断：
     - 重启每个次要副本实例上的 SQL Server 服务
     - 或者，从可用性组的所有次要副本实例中删除此数据库，并使用自动或手动种子设定将它添加到可用性组副本实例
@@ -198,7 +198,7 @@ ms.locfileid: "54125947"
   
     -   推送订阅：发布服务器和分发服务器必须至少运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
-    -   请求订阅：发布服务器、分发服务器和订阅服务器的数据库必须至少位于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 上。 这是因为订阅服务器上的合并代理必须知道可用性组如何将故障转移到其辅助代理。  
+    -   请求订阅：发布服务器、分发服务器和订阅服务器数据库都必须至少位于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中。 这是因为订阅服务器上的合并代理必须知道可用性组如何将故障转移到其辅助代理。  
   
 -   发布服务器实例满足加入 AlwaysOn 可用性组所需的所有先决条件。 有关详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
   

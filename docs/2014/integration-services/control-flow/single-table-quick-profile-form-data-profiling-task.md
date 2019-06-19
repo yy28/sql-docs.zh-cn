@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5cd76f42424836114bc5b8ed32862d5e1d84869e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62830179"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>单个表快速配置文件窗体（数据事件探查任务）
@@ -36,7 +36,7 @@ ms.locfileid: "62830179"
  **Compute**  
  选择要计算的配置文件  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**列 Null 比率配置文件**|使用选定表或视图中所有适用列的默认配置来计算列 Null 比率配置文件。<br /><br /> 此配置文件报告选定列中 null 值的百分比。 此配置文件可以帮助您识别数据中的问题，例如，列中 null 值的比率以外偏高。 有关此配置文件设置的详细信息，请参阅[列 Null 比率配置文件请求选项（数据事件探查任务）](column-null-ratio-profile-request-options-data-profiling-task.md)。|  
 |**列统计信息配置文件**|使用选定表或视图中所有适用列的默认设置来计算列统计信息配置文件。<br /><br /> 此配置文件报告的统计信息包括：数值列的最小值、最大值、平均值和标准偏差以及 `datetime` 列的最小值和最大值。 此配置文件可以帮助您识别数据中的问题，如无效日期。 有关此配置文件设置的详细信息，请参阅[列统计信息配置文件请求选项（数据事件探查任务）](column-statistics-profile-request-options-data-profiling-task.md)。|  
@@ -49,7 +49,7 @@ ms.locfileid: "62830179"
 |**“与决定列一样最多 N 列”**|选择最大列数，以可能的组合作为决定列进行测试。 默认值为 1。 最大值为 1000。 例如，选择 2 可对具有以下特点的组合进行测试：单个列或两个列组合为另一个（依赖）列的决定列。|  
   
 > [!NOTE]  
->  值包含配置文件类型在“单个表快速配置文件窗体”中不可用。  
+>  值包含配置文件类型在“单个表快速配置文件窗体”中不可用  。  
   
 ## <a name="see-also"></a>请参阅  
  [数据事件探查任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)   

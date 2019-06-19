@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22fa9d76887451e57f41c8536efc71d954e2e78c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726561"
 ---
 # <a name="partition-processing-destination"></a>分区处理目标
@@ -70,16 +70,16 @@ ms.locfileid: "65726561"
   
 ### <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  
   
  **可用分区列表**  
  选择要处理的分区。  
   
  **处理方法**  
- 选择处理方法。 此选项的默认值为 **“完全”**。  
+ 选择处理方法。 此选项的默认值为 **“完全”** 。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
@@ -131,10 +131,10 @@ ms.locfileid: "65726561"
  指定在出现错误时应停止处理。  
   
  **错误数**  
- 如果选择了“出错时停止”，请指定应停止处理的错误阈值。  
+ 如果选择了“出错时停止”  ，请指定应停止处理的错误阈值。  
   
  **出错时要执行的操作**  
- 如果选择了“出错时停止”，请指定在达到错误阈值时要执行的操作。  
+ 如果选择了“出错时停止”  ，请指定在达到错误阈值时要执行的操作。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  

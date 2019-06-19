@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 024d7c4a043dbc4801d5eb39fe7b05d27ef7c2b5
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943224"
 ---
 # <a name="pwdencrypt-transact-sql"></a>PWDENCRYPT (Transact-SQL)
@@ -42,8 +42,8 @@ PWDENCRYPT ( 'password' )
 ```  
   
 ## <a name="arguments"></a>参数  
- password  
- 要加密的密码。 password 的数据类型为 sysname。  
+ password   
+ 要加密的密码。 password 的数据类型为 sysname   。  
   
 ## <a name="return-types"></a>返回类型  
  **varbinary(128)**  

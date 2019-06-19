@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a44415653cffdbd98f7ef7bc1a39ba58c5473a86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824955"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666546"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,21 +138,21 @@ AS { sql_statement
   
 ## <a name="arguments"></a>参数  
  *schema_name*  
- DML 触发器所属架构的名称。 DML 触发器的作用域是为其创建该触发器的表或视图的架构。 schema_name 仅在 DML 触发器及其对应的表或视图属于默认架构时可选。 不能为 DDL 或登录触发器指定 schema_name。  
+ DML 触发器所属架构的名称。 DML 触发器的作用域是为其创建该触发器的表或视图的架构。 schema_name 仅在 DML 触发器及其对应的表或视图属于默认架构时可选  。 不能为 DDL 或登录触发器指定 schema_name  。  
   
- trigger_name  
+ trigger_name   
  要修改的现有触发器。  
   
- table | view  
+ table | view    
  对其执行 DML 触发器的表或视图。 可以选择指定表或视图的完全限定名称。  
   
  DATABASE  
- 将 DDL 触发器的作用域应用于当前数据库。 如果指定了此参数，则只要当前数据库中出现 event_type 或 event_group，就会激发该触发器。  
+ 将 DDL 触发器的作用域应用于当前数据库。 如果指定了此参数，则只要当前数据库中出现 event_type 或 event_group，就会激发该触发器   。  
   
  ALL SERVER  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 将 DDL 或登录触发器的作用域应用于当前服务器。 如果指定了此参数，则只要当前服务器中的任何位置出现 event_type 或 event_group，就会激发该触发器。  
+ 将 DDL 或登录触发器的作用域应用于当前服务器。 如果指定了此参数，则只要当前服务器中的任何位置出现 event_type 或 event_group，就会激发该触发器   。  
   
  WITH ENCRYPTION  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -196,26 +196,26 @@ AS { sql_statement
   
  对于 INSTEAD OF 触发器，不允许对具有指定级联操作 ON DELETE 的引用关系的表使用 DELETE 选项。 同样，也不允许对具有指定级联操作 ON UPDATE 的引用关系的表使用 UPDATE 选项。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)。  
   
- event_type  
+ event_type   
  执行之后将导致激发 DDL 触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件的名称。 [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出了 DDL 触发器的有效事件。  
   
- event_group  
- 预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 执行任何属于 event_group 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件之后，都将激发 DDL 触发器。 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)中列出了 DDL 触发器的有效事件组。 ALTER TRIGGER 运行完成后，event_group 还将充当宏，将它涉及的事件类型添加到 sys.trigger_events 目录视图中。  
+ event_group   
+ 预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 执行任何属于 event_group 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件之后，都将激发 DDL 触发器  。 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)中列出了 DDL 触发器的有效事件组。 ALTER TRIGGER 运行完成后，event_group 还将充当宏，将它涉及的事件类型添加到 sys.trigger_events 目录视图中  。  
   
  NOT FOR REPLICATION  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  表示当复制代理修改触发器所涉及的表时，不应执行该触发器。  
   
- sql_statement  
+ sql_statement   
  触发条件和操作。  
   
- 对于内存优化表中的触发器，顶层允许的唯一 sql_statement 是 ATOMIC 块。 ATOMIC 块内允许的 T-SQL 由本地进程内允许的 T-SQL 决定。  
+ 对于内存优化表中的触发器，顶层允许的唯一 sql_statement 是 ATOMIC 块  。 ATOMIC 块内允许的 T-SQL 由本地进程内允许的 T-SQL 决定。  
   
  EXTERNAL NAME \<method_specifier>  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定要与触发器绑定的程序集的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中。 该类不能为嵌套类。  
+ 指定要与触发器绑定的程序集的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中  。 该类不能为嵌套类。  
   
 ## <a name="remarks"></a>Remarks  
  有关 ALTER TRIGGER 的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md) 中的“备注”部分。  
@@ -240,7 +240,7 @@ AS { sql_statement
 ## <a name="logon-triggers"></a>登录触发器  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持针对登录事件的触发器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要更改 DML 触发器，需要对于定义该触发器所在的表或视图拥有 ALTER 权限。  
   
  若要更改定义了服务器范围 (ON ALL SERVER) 的 DDL 触发器或者更改登录触发器，需要对该服务器拥有 CONTROL SERVER 权限。 若要更改定义了数据库范围 (ON DATABASE) 的 DDL 触发器，需要对当前数据库拥有 ALTER ANY DATABASE DDL TRIGGER 权限。  

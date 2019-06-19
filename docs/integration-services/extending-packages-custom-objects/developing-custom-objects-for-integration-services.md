@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa21219ef5946ec4d4b95aff1a201aca9b453a2e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724590"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>开发 Integration Services 的自定义对象
@@ -57,7 +57,7 @@ ms.locfileid: "65724590"
   
 5.  也可以为您的组件生成自定义用户界面。 为了便于部署，您可能会希望在同一解决方案中将用户界面作为独立项目开发，并生成为独立的程序集。  
   
-6.  （可选）在“SSIS 工具箱”中显示指向自定义对象的示例和帮助内容的链接。  
+6.  （可选）在“SSIS 工具箱”  中显示指向自定义对象的示例和帮助内容的链接。  
   
 7.  如[生成、部署和调试自定义对象](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)中所述，生成、部署和调试新的自定义对象。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65724590"
 |数据流组件|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>|<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>|  
   
 ## <a name="providing-links-to-samples-and-help-content"></a>提供指向示例和帮助内容的链接  
- 若要在“SSIS 工具箱”中显示指向用托管代码编写的自定义对象的示例和帮助内容的链接，请使用以下属性。  
+ 若要在“SSIS 工具箱”  中显示指向用托管代码编写的自定义对象的示例和帮助内容的链接，请使用以下属性。  
   
 -   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.SamplesTag%2A>  
   
@@ -99,7 +99,7 @@ ms.locfileid: "65724590"
  在自定义用户界面项目或程序集中，通常有两个类：一个用于实现特定类型自定义对象的用户界面的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接口的类和用于显示以收集用户信息的 Windows 窗体。 您实现的接口只有少量方法，因此开发自定义用户界面并不困难。  
   
 > [!NOTE]  
->  许多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 日志提供程序都有一个自定义用户界面，该界面实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，并使用已筛选的可用连接管理器下拉列表替换“配置”文本框。 但是，此版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。 为 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性指定值不起作用。  
+>  许多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 日志提供程序都有一个自定义用户界面，该界面实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，并使用已筛选的可用连接管理器下拉列表替换“配置”  文本框。 但是，此版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。 为 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性指定值不起作用。  
   
  下表提供了对一些接口的简单引用，您在为每种类型的自定义对象开发自定义用户界面时必须实现这些接口。 该表还介绍了当你选择不为对象开发自定义用户界面，或者无法在对象的特性中使用 **UITypeName** 属性将对象链接到其用户界面时，用户所能看到的内容。 尽管功能强大的高级编辑器能够满足数据流组件的要求，但对于任务和连接管理器，“属性”窗口解决方案的用户友好性较差，并且如果没有自定义窗体，将根本就无法配置自定义 ForEach 枚举器。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65724590"
 |-------------------|-----------------------------------|----------------------------------------------------------------------|  
 |任务|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|仅“属性”窗口|  
 |“ODBC 源编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|仅“属性”窗口|  
-|日志提供程序|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> （未在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中实现）|“配置”列中的文本框|  
+|日志提供程序|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> （未在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中实现）|“配置”  列中的文本框|  
 |枚举器|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|仅“属性”窗口。 编辑器的“枚举器配置”区域为空。|  
 |数据流组件|<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>|“高级编辑器”|  
   

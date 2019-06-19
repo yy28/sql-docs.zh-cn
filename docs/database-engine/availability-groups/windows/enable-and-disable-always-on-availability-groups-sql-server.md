@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+manager: jroth
+ms.openlocfilehash: 3f1ea7ec48f702173ad3370b7212b0b0b24260dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527120"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765794"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>启用或禁用 AlwaysOn 可用性组功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,23 +31,8 @@ ms.locfileid: "57527120"
 > [!IMPORTANT]  
 >  如果您删除后重新创建了 WSFC 群集，则必须在其原始 WSFC 群集上承载可用性副本的每个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上都禁用然后重新启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
   
--   **开始之前：**  
   
-     [先决条件](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **如何：**  
-  
-    -   [确定是否已启用 AlwaysOn 可用性组](#IsEnabled)  
-  
-    -   [启用 AlwaysOn 可用性组](#EnableAOAG)  
-  
-    -   [禁用 AlwaysOn 可用性组](#DisableAOAG)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Prerequisites"></a> 启用 AlwaysOn 可用性组的先决条件  
+##  <a name="Prerequisites"></a> 启用 AlwaysOn 可用性组的先决条件  
   
 -   该服务器实例必须驻留在 Windows Server 故障转移群集 (WSFC) 节点上。  
   
@@ -57,11 +42,10 @@ ms.locfileid: "57527120"
   
  有关用于创建和配置可用性组的其他先决条件的详细信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> 安全性  
+## <a name="Permissions"></a> 权限  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上启用 AlwaysOn 可用性组时，服务器实例具有对 WSFC 群集的完全控制权限。  
-  
-####  <a name="Permissions"></a> Permissions  
- 要求本地计算机上 **Administrator** 组中的成员身份以及对 WSFC 群集的完全控制。 使用 PowerShell 启用 AlwaysOn 时，使用“以管理员身份运行”选项打开命令提示符窗口。  
+
+ 要求本地计算机上 **Administrator** 组中的成员身份以及对 WSFC 群集的完全控制。 使用 PowerShell 启用 AlwaysOn 时，使用“以管理员身份运行”  选项打开命令提示符窗口。  
   
  要求 Active Directory 创建对象和管理对象权限。  
   
@@ -76,7 +60,7 @@ ms.locfileid: "57527120"
 ###  <a name="SSMS1Procedure"></a> 使用 SQL Server Management Studio  
  **确定是否已启用 AlwaysOn 可用性组**  
   
-1.  在“对象资源管理器”中，右键单击服务器实例，再单击“属性”。  
+1.  在“对象资源管理器”中，右键单击服务器实例，再单击“属性”  。  
   
 2.  在 **“服务器属性”** 对话框中，单击 **“常规”** 页。 **“启用 HADR”** 属性显示以下值之一：  
   
@@ -132,15 +116,15 @@ ms.locfileid: "57527120"
   
 1.  连接到承载要启用 AlwaysOn 可用性组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的 Windows Server 故障转移群集 (WSFC) 节点。  
   
-2.  在“开始”  菜单上，依次指向“所有程序” 、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、“配置工具” ，然后单击“SQL Server 配置管理器” 。  
+2.  在“开始”  菜单上，依次指向“所有程序”  、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、“配置工具”  ，然后单击“SQL Server 配置管理器”  。  
   
-3.  在 **SQL Server 配置管理器**中，单击“SQL Server 服务”，右键单击 “SQL Server (**\<**_instance name_**>)**”，其中 **\<**_instance name_**>** 是要启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”  
+3.  在 **SQL Server 配置管理器**中，单击“SQL Server 服务”，右键单击 “SQL Server ( **\<** _instance name_ **>)** ”，其中 **\<** _instance name_ **>** 是要启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”    
   
-4.  选择“AlwaysOn 高可用性”选项卡。  
+4.  选择“AlwaysOn 高可用性”  选项卡。  
   
 5.  验证 **Windows 故障转移群集名称**字段包含本地故障转移群集的名称。 如果此字段为空，则此服务器实例当前不支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 原因包括本地计算机不是群集节点、WSFC 群集已关闭或此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 不支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
   
-6.  选中“启用 AlwaysOn 可用性组”复选框，然后单击“确定”。  
+6.  选中“启用 AlwaysOn 可用性组”复选框，然后单击“确定”   。  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器保存您的更改。 然后，必须手动重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。 这使您可以选择最适合您的业务要求的重新启动时间。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务重启后，AlwaysOn 将启用，而且 **IsHadrEnabled** 服务器属性将设置为 1。  
   
@@ -149,12 +133,12 @@ ms.locfileid: "57527120"
   
 1.  将目录 (**cd**) 更改为你要为 AlwaysOn 可用性组启用的服务器实例。  
   
-2.  使用 Enable-SqlAlwaysOn cmdlet 启用 AlwaysOn 可用性组。  
+2.  使用 Enable-SqlAlwaysOn cmdlet 启用 AlwaysOn 可用性组  。  
   
      若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
     > [!NOTE]  
-    >  有关如何控制 Enable-SqlAlwaysOn cmdlet 是否重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的信息，请参阅本主题后面的 [Cmdlet 何时重新启动 SQL Server 服务？](#WhenCmdletRestartsSQL)。  
+    >  有关如何控制 Enable-SqlAlwaysOn cmdlet 是否重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的信息，请参阅本主题后面的 [Cmdlet 何时重新启动 SQL Server 服务？](#WhenCmdletRestartsSQL)  。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -179,7 +163,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
     -   [PowerShell](#PScmd3Procedure)  
   
--   **跟进：**[在禁用 AlwaysOn 之后](#FollowUp)  
+-   **跟进：** [在禁用 AlwaysOn 之后](#FollowUp)  
   
 > [!IMPORTANT]  
 >  一次只能在一个服务器实例上禁用 AlwaysOn。 在禁用 AlwaysOn 可用性组之后，一直等待直到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务已重启，然后才继续在另一个服务器实例上操作。  
@@ -196,11 +180,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  连接到承载要禁用 AlwaysOn 可用性组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的 Windows Server 故障转移群集 (WSFC) 节点。  
   
-2.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+2.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-3.  在“SQL Server 配置管理器”中，单击“SQL Server 服务”，右键单击 “SQL Server (**\<**_instance name_**>)**”，其中 **\<**_instance name_**>** 是要禁用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”。  
+3.  在“SQL Server 配置管理器”  中，单击“SQL Server 服务”  ，右键单击 “SQL Server ( **\<** _instance name_ **>)** ”，其中 **\<** _instance name_ **>** 是要禁用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”  。  
   
-4.  在“AlwaysOn 高可用性”选项卡上，取消选中“启用 AlwaysOn 可用性组”复选框，然后单击“确定”。  
+4.  在“Always On 高可用性”选项卡上，取消选中“启用 Always On 可用性组”复选框，然后单击“确定”    。  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器保存您的更改并重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务重启时，将禁用 AlwaysOn 且 **IsHadrEnabled** 服务器属性将设置为 0，以指示已禁用 AlwaysOn 可用性组。  
   
@@ -209,9 +193,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="PScmd3Procedure"></a> 使用 SQL Server PowerShell  
  **禁用 AlwaysOn**  
   
-1.  将目录 (cd) 更改为你要为 AlwaysOn 可用性组禁用的当前启用的服务器实例。  
+1.  将目录 (cd) 更改为你要为 AlwaysOn 可用性组禁用的当前启用的服务器实例  。  
   
-2.  使用 Disable-SqlAlwaysOn cmdlet 来启用 AlwaysOn 可用性组。  
+2.  使用 Disable-SqlAlwaysOn cmdlet 来启用 AlwaysOn 可用性组  。  
   
      例如，以下命令在 SQL Server 的实例上禁用 AlwaysOn 可用性组 (*Computer*\\*Instance*)。  此命令需要重新启动实例，并将提示您确认此重新启动。  
   
@@ -220,7 +204,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
     ```  
   
     > [!IMPORTANT]  
-    >  有关如何控制 Disable-SqlAlwaysOn cmdlet 是否重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的信息，请参阅本主题后面的 [Cmdlet 何时重新启动 SQL Server 服务？](#WhenCmdletRestartsSQL)。  
+    >  有关如何控制 Disable-SqlAlwaysOn cmdlet 是否重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的信息，请参阅本主题后面的 [Cmdlet 何时重新启动 SQL Server 服务？](#WhenCmdletRestartsSQL)  。  
   
      若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
@@ -229,7 +213,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ###  <a name="FollowUp"></a>跟进：在禁用 AlwaysOn 之后  
- 禁用 AlwaysOn 可用性组后，必须重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 SQL 配置管理器将自动重新启动该服务器实例。 但是，如果使用了 Disable-SqlAlwaysOn cmdlet，则需要手动重新启动该服务器实例 。 有关详细信息，请参阅 [sqlservr Application](../../../tools/sqlservr-application.md)。  
+ 禁用 AlwaysOn 可用性组后，必须重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 SQL 配置管理器将自动重新启动该服务器实例。 但是，如果使用了 Disable-SqlAlwaysOn cmdlet，则需要手动重新启动该服务器实例  。 有关详细信息，请参阅 [sqlservr Application](../../../tools/sqlservr-application.md)。  
   
  在重新启动的服务器实例上：  
   
@@ -250,7 +234,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 4.  辅助数据库将进入 RESTORING 状态。 您可以删除这些数据库，或者可通过使用 RESTORE WITH RECOVERY 还原它们。 但是，还原的数据库不再参与可用性组数据同步。  
   
 ##  <a name="WhenCmdletRestartsSQL"></a> Cmdlet 何时重新启动 SQL Server 服务？  
- 在当前正在运行的服务器实例上，使用 Enable-SqlAlwaysOn 或 Disable-SqlAlwaysOn 更改当前 AlwaysOn 设置可能导致 SQL Server 服务重新启动。 重新启动行为取决于以下条件：  
+ 在当前正在运行的服务器实例上，使用 Enable-SqlAlwaysOn 或 Disable-SqlAlwaysOn 更改当前 AlwaysOn 设置可能导致 SQL Server 服务重新启动   。 重新启动行为取决于以下条件：  
   
 |指定了 -NoServiceRestart 参数|指定了 -Force 参数|重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务？|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  

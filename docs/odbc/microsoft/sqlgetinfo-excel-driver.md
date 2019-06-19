@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2524c51f1b4b9297b6e3483a27fd78e6c1836e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63301987"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo（Excel 驱动程序）
@@ -37,7 +37,7 @@ ms.locfileid: "63301987"
   
 ## <a name="sqldbmsver"></a>SQL_DBMS_VER  
   
-|ISAM|版本|版本号的格式|  
+|ISAM|Version|版本号的格式|  
 |----------|-------------|-------------------------------|  
 |Microsoft Excel|3.0|03.00.0000|  
 ||4.0|04.00.0000|  

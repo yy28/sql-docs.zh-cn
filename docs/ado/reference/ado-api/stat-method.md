@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5f19d1b9ef0dc3b200a895d05728f6985544203b
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66719076"
 ---
 # <a name="stat-method"></a>Stat 方法
@@ -43,7 +43,7 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  指定此方法不返回的某些成员在 STATSTG 结构中，从而节省内存分配操作。 值取自 STATFLAG 枚举。 STATFLAG 枚举具有两个值  
   
-|常量|ReplTest1|  
+|常量|值|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  

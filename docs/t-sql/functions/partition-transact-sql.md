@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b296737ecc7d9988365a9ad7abed8b2ee7abf61c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943560"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
@@ -44,17 +44,17 @@ ms.locfileid: "65943560"
  *database_name*  
  包含分区函数的数据库的名称。  
   
- partition_function_name  
+ partition_function_name   
  对其应用一组分区列值的任何现有分区函数的名称。  
   
  *expression*  
- 其数据类型必须匹配或可隐式转换为其对应分区列数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 表达式也可以是当前参与 partition_function_name 的分区列的名称。  
+ 其数据类型必须匹配或可隐式转换为其对应分区列数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 表达式也可以是当前参与 partition_function_name 的分区列的名称   。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- $PARTITION 返回从 1 到分区函数的分区数之间的 int 值。  
+ $PARTITION 返回从 1 到分区函数的分区数之间的 int 值  。  
   
  $PARTITION 将针对任何有效值返回分区号，无论此值当前是否存在于使用分区函数的分区表或索引中。  
   

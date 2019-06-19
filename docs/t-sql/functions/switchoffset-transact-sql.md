@@ -26,16 +26,16 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f28eaf5d8b6e0c3ef06e739d97c4e20c565ebc4e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948184"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回从存储的时区偏移量变为指定的新时区偏移量时得到的 datetimeoffset 值。  
+  返回从存储的时区偏移量变为指定的新时区偏移量时得到的 datetimeoffset 值  。  
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
@@ -48,19 +48,19 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 ```  
   
 ## <a name="arguments"></a>参数  
- DATETIMEOFFSET  
- 是一个可以解析为 datetimeoffset(n) 值的表达式。  
+ DATETIMEOFFSET   
+ 是一个可以解析为 datetimeoffset(n) 值的表达式  。  
   
- time_zone  
+ time_zone   
  是一个格式为 [+|-]TZH:TZM 的字符串，或是一个表示时区偏移量的带符号的整数（分钟数），假定它能够感知夏时制并作出相应的调整。  
   
 ## <a name="return-type"></a>返回类型  
- 具有 DATETIMEOFFSET 参数小数精度的 datetimeoffset。  
+ 具有 DATETIMEOFFSET 参数小数精度的 datetimeoffset   。  
   
 ## <a name="remarks"></a>Remarks  
- 使用 SWITCHOFFSET 可选择与最初存储的时区偏移量不同的时区偏移量的 datetimeoffset 值。 SWITCHOFFSET 不会更新存储的 time_zone 值。  
+ 使用 SWITCHOFFSET 可选择与最初存储的时区偏移量不同的时区偏移量的 datetimeoffset 值  。 SWITCHOFFSET 不会更新存储的 time_zone 值  。  
   
- SWITCHOFFSET 可用于更新 datetimeoffset 列。  
+ SWITCHOFFSET 可用于更新 datetimeoffset 列  。  
   
  将 SWITCHOFFSET 用于函数 GETDATE() 可能导致查询运行缓慢。 这是因为查询优化器无法获取 datetime 值的准确基数估计值。 要解决此问题，请使用 OPTION (RECOMPILE) 查询提示以强制查询优化器在下次执行同一查询时重新编译查询计划。 优化器将得到准确的基数估计值并生成更高效的查询计划。 有关 RECOMPILE 查询提示的详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   

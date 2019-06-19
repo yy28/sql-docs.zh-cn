@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d316864d3dffb26680a503ad1b43bcb4b3ab94a8
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728324"
 ---
 # <a name="data-sources"></a>“数据源”
@@ -40,7 +40,7 @@ ms.locfileid: "65728324"
 -   数据源提供数据源对象与其包引用之间的同步。 如果数据源和引用它的包在同一个项目中，在数据源更改时就会自动更新数据源引用的连接字符串属性。  
   
 ## <a name="reference-data-sources"></a>引用数据源  
- 要将数据源对象添加到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，请在“解决方案资源管理器”中右键单击“数据源”文件夹，然后单击“新建数据源”。 该项将添加到 **“数据源”** 文件夹。 如果要使用在其他项目中创建的数据源对象，则必须首先将其添加到该项目。  
+ 要将数据源对象添加到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，请在“解决方案资源管理器”  中右键单击“数据源”  文件夹，然后单击“新建数据源”  。 该项将添加到 **“数据源”** 文件夹。 如果要使用在其他项目中创建的数据源对象，则必须首先将其添加到该项目。  
   
  将引用数据源对象的连接管理器添加到包之后，便可以在该包中使用数据源对象。 可以在生成包控制流和数据流之前将其添加到包中，也可以作为构造控制流和数据流的一个步骤来添加。  
   

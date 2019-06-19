@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639513"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>并行数据仓库中的管理权限
@@ -62,7 +62,7 @@ SQL Server PDW 的数据库引擎权限由管理服务器级别通过登录名�
   
 -   Using 创建登录名时**CREATE LOGIN**语句中，登录名将接收**CONNECT SQL**权限允许登录名连接到 SQL Server PDW。  
   
--   通过使用创建数据库用户时**CREATE USER**语句中，用户会收到**CONNECT ON DATABASE::**_< 数据库名称 >_ 权限，允许要连接到该数据库作为用户登录名。  
+-   通过使用创建数据库用户时**CREATE USER**语句中，用户会收到**CONNECT ON DATABASE::** _< 数据库名称 >_ 权限，允许要连接到该数据库作为用户登录名。  
   
 -   由于隐式权限继承自的显式权限，包括公共角色的所有主体，默认情况下没有任何显式或隐式的权限。 因此，当存在时没有显式权限，可以也有任何隐式权限。  
   
@@ -74,7 +74,7 @@ SQL Server PDW 的数据库引擎权限由管理服务器级别通过登录名�
   
 -   事务不需要的权限。 可以运行的所有主体**BEGIN TRANSACTION**，**提交**，并**回滚**事务命令。 但是，主体必须具有适当的权限来运行每个语句在事务中。  
   
--   USE 语句不需要权限。 可以运行的所有主体**使用**语句上任何数据库，但若要访问的数据库必须已用户主体数据库中，或者必须启用 guest 用户。  
+-   USE 语句不需要权限  。 可以运行的所有主体**使用**语句上任何数据库，但若要访问的数据库必须已用户主体数据库中，或者必须启用 guest 用户。  
   
 ### <a name="the-public-role"></a>公共角色  
 所有新的设备登录名自动属于公共角色。 PUBLIC 服务器角色具有以下特征：  
@@ -89,7 +89,7 @@ SQL Server PDW 的数据库引擎权限由管理服务器级别通过登录名�
 登录名是否有权执行特定操作取决于对登录名、 用户和用户是其成员的角色授予或拒绝的权限。 服务器级权限 (如**CREATE LOGIN**并**VIEW SERVER STATE**) 可供服务器级主体 （登录名）。 数据库级权限 (如**选择**从表或**EXECUTE**对过程) 可供数据库级主体 （用户和数据库角色）。  
   
 ### <a name="implicit-and-explicit-permissions"></a>隐式和显式权限  
-显式权限是 GRANT 或 DENY 语句给授予某主体的 GRANT 或 DENY 权限。 中列出了数据库级别权限[sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)视图。 中列出了服务器级权限[sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)视图。  
+显式权限是 GRANT 或 DENY 语句给授予某主体的 GRANT 或 DENY 权限      。 中列出了数据库级别权限[sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)视图。 中列出了服务器级权限[sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)视图。  
   
 *隐式权限*是**授予**或**拒绝**主体 （登录名或服务器角色） 已继承的权限。 可以按以下方式继承权限。  
   
@@ -183,7 +183,7 @@ SQL Server PDW 的数据库引擎权限由管理服务器级别通过登录名�
 ## <a name="fixed-database-roles"></a>固定数据库角色
 SQL Server 提供了预配置的 （固定） 数据库级角色，以帮助你管理的服务器上的权限。 预配置的角色被固定的无法更改分配给他们的权限。 也可以创建用户定义的数据库角色。 可以更改分配给用户定义的数据库角色的权限。  
   
-角色是可组合其他主体的安全主体。 数据库角色是数据库级权限作用域中。 为数据库角色的成员，可以添加数据库用户和其他数据库角色。 固定的数据库角色不能添加到每个其他。 （“角色”类似于 Windows 操作系统中的“组”。）  
+角色是可组合其他主体的安全主体。 数据库角色是数据库级权限作用域中。 为数据库角色的成员，可以添加数据库用户和其他数据库角色。 固定的数据库角色不能添加到每个其他。 （“角色”  类似于 Windows 操作系统中的“组”  。）  
   
 有 9 固定的数据库角色。  
   
@@ -219,7 +219,7 @@ SQL Server 提供了预配置的 （固定） 数据库级角色，以帮助你�
 SQL Server 会自动创建固定的服务器角色。 SQL Server PDW 具有有限的 SQL Server 固定服务器角色的成员实现。 仅**sysadmin**并**公共**具有作为成员的用户登录名。 **Setupadmin**并**dbcreator**角色内部使用的 SQL Server PDW。 无法添加或从任何角色中删除其他成员。  
   
 ### <a name="sysadmin-fixed-server-role"></a>sysadmin 固定服务器角色  
-sysadmin 固定服务器角色的成员可以在服务器上执行任何活动。 **Sa**登录名是唯一的成员**sysadmin**固定的服务器角色。 无法将其他登录名添加到**sysadmin**固定的服务器角色。 授予 CONTROL SERVER 权限近似拥有 sysadmin 固定服务器角色的成员身份。 以下示例授予**CONTROL SERVER**到登录名的权限的名为 Fay。  
+sysadmin 固定服务器角色的成员可以在服务器上执行任何活动  。 **Sa**登录名是唯一的成员**sysadmin**固定的服务器角色。 无法将其他登录名添加到**sysadmin**固定的服务器角色。 授予 CONTROL SERVER 权限近似拥有 sysadmin 固定服务器角色的成员身份   。 以下示例授予**CONTROL SERVER**到登录名的权限的名为 Fay。  
   
 ```sql  
 USE master;  

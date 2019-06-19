@@ -14,14 +14,14 @@ ms.topic: conceptual
 ms.date: 04/26/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e6d23fb19b756bbf303a06512fecc3a6d29b8090
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 1366d0a20ed39b466d1a2f6cb3e84f0f30e17f9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66718084"
 ---
-# <a name="transparent-data-encryption-tde-with-customer-managed-keys-in-azure-key-vault-akv-troubleshooting"></a>使用 Azure 密钥保管库 (AKV) 中客户托管的密钥进行透明数据加密 (TDE) 的问题排查
+# <a name="common-errors-and-resolutions-with-transparent-data-encryption-tde-with-customer-managed-keys-in-azure-key-vault-akv"></a>使用 Azure 密钥保管库 (AKV) 中客户托管的密钥进行透明数据加密 (TDE) 的常见错误和解决方法
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 本主题提供有关以下问题的信息：  

@@ -25,11 +25,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973846"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716094"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "57973846"
   
 ## <a name="create-a--full-text-index"></a>创建全文索引 
 
-1. 在对象资源管理器中，右键单击要对其创建全文索引的表，指向“全文索引”，然后单击“定义全文索引”。 此操作将在一个单独的窗口中启动向导。
+1. 在对象资源管理器中，右键单击要对其创建全文索引的表，指向  “全文索引”，然后单击  “定义全文索引”。 此操作将在一个单独的窗口中启动向导。
    单击“下一步” 
   
 2. **唯一索引。**  从下拉列表中选择索引。 索引必须是唯一且不为 Null 的单键列索引。 为全文唯一键选择最小的唯一键索引。 为了获得最佳性能，建议使用聚集索引。  
@@ -47,13 +47,13 @@ ms.locfileid: "57973846"
 4. **断字符语言。** 从下拉列表中选择语言。 此选项用于为索引标识正确的断字符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用断字符在全文索引的数据中标识词的边界。  
   
 5.  **类型列。** 选择存储作为全文索引列的文档类型的列名称。  
-> **注意**：只有当“可用列”列中命名的列为“varbinary(max)”或“image”类型时，才会启用“类型列”。  
+> **注意**：只有当“可用列”列中命名的列为“varbinary(max)”或“image”类型时，才会启用“类型列”     。  
   
 6. **统计语义。** 选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   
 >**说明** 
 >
->如果所选语言没有关联的语义语言模型，则不会启用“统计语义”复选框。 如果你在选择“语言”前选择“统计语义”，则下拉组合框中提供的语言将限制为存在语义语言模型支持的那些语言。  
+>如果所选语言没有关联的语义语言模型，则不会启用“统计语义”  复选框。 如果你在选择  “语言”前选择  “统计语义”，则下拉组合框中提供的语言将限制为存在语义语言模型支持的那些语言。  
 >
 > 语义搜索**不适用于 Azure SQL 数据库。** 在 Azure SQL 数据库上运行此向导时，不会显示“统计语义”选项。
   
@@ -92,7 +92,7 @@ ms.locfileid: "57973846"
      选中此项可以将该目录设为此数据库的默认目录。  
   
      c. **区分重音**  
-     指定新目录是区分重音还是不区分重音。 如果数据库区分重音，默认情况下会选中“区分”。  
+     指定新目录是区分重音还是不区分重音。 如果数据库区分重音，默认情况下会选中“区分”  。  
   
      d. **选择索引文件组**  
      指定对其创建全文索引的文件组。  
@@ -108,7 +108,7 @@ ms.locfileid: "57973846"
  11. **选择全文非索引字表**  
      指定要用于全文索引的非索引字表，或者禁用非索引字表。  
   
-     使用称为“非索引字表”的对象在数据库中管理非索引字。 “非索引字表”是一个由非索引字组成的列表，这些非索引字在与全文检索关联时会应用于该索引的全文查询。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
+     使用称为“非索引字表”的对象在数据库中管理非索引字。 “非索引字表”  是一个由非索引字组成的列表，这些非索引字在与全文检索关联时会应用于该索引的全文查询。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
      选择下列值之一：  
   

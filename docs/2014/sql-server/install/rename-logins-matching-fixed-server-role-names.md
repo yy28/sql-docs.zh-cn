@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d983f514f7cc0185021de40f153d78fd6e4dd112
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092881"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>重命名与固定服务器角色名称匹配的登录名
@@ -60,7 +60,7 @@ ms.locfileid: "66092881"
   
 2.  删除登录名。  
   
-3.  使用**sp_addlogin**系统过程来创建新的登录名。 指定在步骤 1 中返回的 SID **@sid**参数为每个相应登录名。  
+3.  使用**sp_addlogin**系统过程来创建新的登录名。 指定在步骤 1 中返回的 SID **@sid** 参数为每个相应登录名。  
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

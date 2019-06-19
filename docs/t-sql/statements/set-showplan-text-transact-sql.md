@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b01cdf350983bc24d6dda6efb8d6911027021264
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62819455"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  当 SET SHOWPLAN_TEXT 为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行信息，但不执行语句。 将该选项设置为 ON 以后，将返回有关所有后续 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的执行计划信息，直到将该选项设置为 OFF 为止。 例如，如果在 SET SHOWPLAN_TEXT 为 ON 时执行 CREATE TABLE 语句，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将从涉及同一个表的后续 SELECT 语句返回错误信息，以便通知用户：指定的表不存在。 因此，对此表的后续引用将失败。 如果 SET SHOWPLAN_TEXT 是 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句，但不生成包含执行计划信息的报表。  
   
- SET SHOWPLAN_TEXT 旨在返回可由 Microsoft Win32 命令提示符应用程序（如 sqlcmd 实用工具）读取的输出。 SET SHOWPLAN_ALL 则返回更详细的输出，以使专门处理其输出的程序进行处理。  
+ SET SHOWPLAN_TEXT 旨在返回可由 Microsoft Win32 命令提示符应用程序（如 sqlcmd 实用工具）读取的输出  。 SET SHOWPLAN_ALL 则返回更详细的输出，以使专门处理其输出的程序进行处理。  
   
  不能在存储过程中指定 SET SHOWPLAN_TEXT 和 SET SHOWPLAN_ALL。 它们必须是批处理中的唯一语句。  
   
@@ -61,20 +61,20 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
 |列名|描述|  
 |-----------------|-----------------|  
-|**StmtText**|对于不是 PLAN_ROW 类型的行，该列包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 对于 PLAN_ROW 类型的行，此列包含对操作的说明。 此列包含物理运算符，也可以选择包含逻辑运算符。 该列的后面还可以跟有由物理运算符决定的说明。 有关物理运算符的详细信息，请参阅 [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md) 中的 Argument 列。|  
+|**StmtText**|对于不是 PLAN_ROW 类型的行，该列包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 对于 PLAN_ROW 类型的行，此列包含对操作的说明。 此列包含物理运算符，也可以选择包含逻辑运算符。 该列的后面还可以跟有由物理运算符决定的说明。 有关物理运算符的详细信息，请参阅 [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md) 中的 Argument 列  。|  
   
  有关可以在显示计划输出中看到的物理和逻辑运算符的详细信息，请参阅[显示计划逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要使用 SET SHOWPLAN_TEXT，必须对执行 SET SHOWPLAN_TEXT 的语句具有足够的执行权限，同时必须对包含被引用对象的所有数据库具有 SHOWPLAN 权限。  
   
- 对于 SELECT、INSERT、UPDATE、DELETE、EXEC stored_procedure 和 EXEC user_defined_function 语句，若要生成显示计划，用户必须：  
+ 对于 SELECT、INSERT、UPDATE、DELETE、EXEC stored_procedure 和 EXEC user_defined_function 语句，若要生成显示计划，用户必须   ：  
   
 -   具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。  
   
 -   对包含 Transact-SQL 语句所引用的对象（如表、视图等）的所有数据库拥有 SHOWPLAN 权限。  
   
- 对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。  
+ 对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限  。  
   
 ## <a name="examples"></a>示例  
  此例显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在处理语句时如何使用索引。  

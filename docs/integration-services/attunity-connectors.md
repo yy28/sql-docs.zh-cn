@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b555dfd5c92212e6a8a24568964c96af35eb8c0d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729472"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Attunity 推出的用于 Oracle 和 Teradata 的 Microsoft 连接器（用于 Integration Services (SSIS)）
@@ -37,7 +37,7 @@ ms.locfileid: "65729472"
 
 例如，如果已安装最新版本的 SSDT，则 SSDT 为 17 版，具有一个以 14 开头的内部版本号。 此版本的 SSDT 添加了对 SQL Server 2017 的支持。 若要在 SSIS 包开发中查看和使用 Attunity 连接器（即使想面向更早的 SQL Server 版本），仍须安装最新版本的 Attunity 连接器（5.0 版）。 此版本的连接器也添加了对 SQL Server 2017 的支持。
 
-从“帮助” | “关于 Microsoft Visual Studio”或控制面板中的“程序和功能”检查 Visual Studio 中安装的 SSDT 版本。 然后安装下表中相应的 Attunity 连接器版本。
+从“帮助” | “关于 Microsoft Visual Studio”或控制面板中的“程序和功能”检查 Visual Studio 中安装的 SSDT 版本    。 然后安装下表中相应的 Attunity 连接器版本。
 
 |SSDT 版本|SSDT 内部版本号|目标 SQL Server 版本|连接器的所需版本|
 |---------|---------|---------|---------|

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a7bc11692944f5da349760e3b1e12f473fb15b3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726682"
 ---
 # <a name="odata-source-properties"></a>OData 源属性
@@ -23,17 +23,17 @@ ms.locfileid: "65726682"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-在数据流中右键单击“OData 源”并单击“属性”时，可在“属性”窗口中看到“OData 源”组件的属性。  
+在数据流中右键单击“OData 源”并单击“属性”时，可在“属性”窗口中看到“OData 源”组件的属性     。  
 
 ## <a name="properties"></a>属性 
 
 |属性|描述|  
 |-|-|  
 |CollectionName|从 OData 服务检索的集合的名称。 **“CollectionName”** 属性在 **UseResourcePath** 为 False 时使用。<br /><br /> 此属性能够使用表达式，可以在运行时设置值。 但是，如果集合的元数据与设计时使用的元数据不匹配，会出现验证错误，从而导致数据流执行失败。|  
-|DefaultStringLength|此值为没有最大长度的字符串列指定默认长度。<br /><br /> 默认值：4000|  
+|DefaultStringLength|此值为没有最大长度的字符串列指定默认长度。<br /><br /> 默认值：  4000|  
 |查询|OData 查询参数。 此属性能够使用表达式，可以在运行时设置。|  
 |ResourcePath|在需要指定完整资源路径（而不仅仅是选择集合名称）时使用此属性。 此属性在 **UseResourcePath** 为 True 时使用。|  
-|UseResourcePath|设置为 True 时， **ResourcePath** 值追加到基 URL 以确定 OData 馈送位置。 设置为 False 时 ，使用 **CollectionName** 值。<br /><br /> 默认值：False|  
+|UseResourcePath|设置为 True 时， **ResourcePath** 值追加到基 URL 以确定 OData 馈送位置。 设置为 False 时 ，使用 **CollectionName** 值。<br /><br /> 默认值：  False|  
   
 ## <a name="see-also"></a>另请参阅
 [OData 源](odata-source.md)

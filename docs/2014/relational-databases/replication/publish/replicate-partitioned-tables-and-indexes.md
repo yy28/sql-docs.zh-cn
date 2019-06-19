@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266579"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
@@ -37,7 +37,7 @@ ms.locfileid: "63266579"
   
  与分区相关的第一组属性是项目架构选项，用于决定是否应将分区对象复制到订阅服务器。 可以按下列方式设置这些架构选项：  
   
--   在新建发布向导的 **“项目属性”** 页或者“发布属性”对话框中。 若要复制上一个表中列出的对象，指定的值`true`的属性**复制表分区方案**并**复制索引分区方案**。 有关如何访问“项目属性”页的信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
+-   在新建发布向导的 **“项目属性”** 页或者“发布属性”对话框中。 若要复制上一个表中列出的对象，指定的值`true`的属性**复制表分区方案**并**复制索引分区方案**。 有关如何访问“项目属性”  页的信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 -   通过使用以下其中一个存储过程的 *schema_option* 参数：  
   
@@ -70,9 +70,9 @@ ms.locfileid: "63266579"
 ### <a name="enabling-partition-switching"></a>启用分区切换  
  使用事务发布的下列属性，用户可以控制已复制环境中分区切换的行为。  
   
--   **@allow_partition_switch**如果设置为`true`，可以对发布数据库执行 SWITCH PARTITION。  
+-   **@allow_partition_switch** 如果设置为`true`，可以对发布数据库执行 SWITCH PARTITION。  
   
--   **@replicate_partition_switch** 确定 SWITCH PARTITION DDL 语句是否应复制到订阅服务器。 此选项是仅当**@allow_partition_switch**设置为`true`。  
+-   **@replicate_partition_switch** 确定 SWITCH PARTITION DDL 语句是否应复制到订阅服务器。 此选项是仅当 **@allow_partition_switch** 设置为`true`。  
   
  创建发布时可以使用 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 设置这些属性，或在创建发布后使用 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) 设置这些属性。 如上所述，合并复制不支持分区切换。 若要对已启用合并复制的表执行 SWITCH PARTITION，请从发布中删除该表。  
   

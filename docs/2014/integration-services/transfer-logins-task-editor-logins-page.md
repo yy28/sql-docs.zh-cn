@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054926"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>传输登录名任务编辑器（“登录名”页）
@@ -29,15 +29,15 @@ ms.locfileid: "66054926"
   
 ## <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接  。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接  。  
   
  **LoginsToTransfer**  
  选择要从源服务器复制到目标服务器的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名。 此属性具有下表所列的选项：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**AllLogins**|源服务器上的所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名都将复制到目标服务器。|  
 |**SelectedLogins**|只有通过 **LoginsList** 指定的登录名才会复制到目标服务器。|  
@@ -54,7 +54,7 @@ ms.locfileid: "66054926"
   
  此属性具有下表所列的选项：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**FailTask**|如果目标服务器上已存在同名的登录名，则任务失败。|  
 |**Overwrite**|任务将覆盖目标服务器上同名的登录名。|  

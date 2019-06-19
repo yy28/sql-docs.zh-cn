@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700443"
 ---
 # <a name="records-and-provider-supplied-fields"></a>记录和提供程序提供的字段
@@ -56,7 +56,7 @@ ms.locfileid: "66700443"
 ## <a name="resource-recordset-columns"></a>资源记录集列  
  一个*资源记录集*以下列组成。  
   
-|列名|类型|Description|  
+|列名|类型|描述|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|只读。 指示该资源的 URL。|  
 |RESOURCE_PARENTNAME|AdVarWChar|只读。 指示父记录的绝对 URL。|  

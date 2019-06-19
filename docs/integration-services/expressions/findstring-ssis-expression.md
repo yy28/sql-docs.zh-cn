@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cadd3f8fbfee31bc79c4cccc70f270e06229f27d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725407"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING（SSIS 表达式）
@@ -69,7 +69,7 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- 此示例使用 **Name** 列。 它返回“Name”列中第二个“n”的位置。 返回结果因 **Name**中值的不同而不同。 如果 **Name** 包含 Anderson，则函数返回 8。  
+ 此示例使用 **Name** 列。 它返回“Name”列中第二个“n”的位置  。 返回结果因 **Name**中值的不同而不同。 如果 **Name** 包含 Anderson，则函数返回 8。  
   
 ```  
 FINDSTRING(Name, "n", 2)   

@@ -22,10 +22,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7034cdc464d89c4ec2174037efe5ccf51f9a9751
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982404"
 ---
 # <a name="-division-transact-sql"></a>/ (Division) (Transact-SQL)
@@ -43,15 +43,15 @@ dividend / divisor
   
 ## <a name="arguments"></a>参数  
  *被除数*  
- 被除数的数值表达式。 dividend 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 被除数的数值表达式。 dividend 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)    。  
   
  *除数*  
- 除数的数值表达式。 divisor 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效表达式。  
+ 除数的数值表达式。 divisor 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效表达式    。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
- 如果整数的 divisor 除以整数的 dividend，其结果是一个整数，小数部分被截断。  
+ 如果整数的 divisor 除以整数的 dividend，其结果是一个整数，小数部分被截断   。  
   
 ## <a name="remarks"></a>Remarks  
  / 运算符返回的实际值是用第一个表达式除以第二个表达式所得的商。  

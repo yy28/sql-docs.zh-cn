@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91ea18d66129f5450e20bf7e9412380aeb47611e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725940"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令转换
@@ -67,19 +67,19 @@ ms.locfileid: "65725940"
   
 4.  将连接线（绿色或红色箭头）从数据源或前一个转换拖动到 OLE DB 命令转换，从而将 OLE DB 命令转换连接到数据流。  
   
-5.  右键单击组件，并选择“编辑高级编辑器”或“显示高级编辑器”。  
+5.  右键单击组件，并选择“编辑高级编辑器”或“显示高级编辑器”。   
   
 6.  在 **“连接管理器”** 选项卡上，从 **“连接管理器”** 列表中选择 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-7.  单击“组件属性”选项卡，并单击“SqlCommand”框中的省略号按钮 (…)。  
+7.  单击“组件属性”选项卡，并单击“SqlCommand”框中的省略号按钮 (…)    。  
   
-8.  在“字符串值编辑器”中，键入参数化 SQL 语句，并且使用问号 (?) 作为每个参数的参数标记。  
+8.  在“字符串值编辑器”中，键入参数化 SQL 语句，并且使用问号 (?) 作为每个参数的参数标记。   
   
-9. 单击 **“刷新”**。 单击“刷新”时，转换将为 External Columns 集合中的每一个参数都创建一列，并设置 DBParamInfoFlags 属性。  
+9. 单击 **“刷新”** 。 单击“刷新”时，转换将为 External Columns 集合中的每一个参数都创建一列，并设置 DBParamInfoFlags 属性。   
   
 10. 单击 **“输入属性和输出属性”** 选项卡。  
   
-11. 展开 **“OLE DB 命令输入”**，再展开 **“外部列”**。  
+11. 展开 **“OLE DB 命令输入”** ，再展开 **“外部列”** 。  
   
 12. 验证 **“外部列”** 是否为 SQL 语句中的每个参数列出了一列。 列的名称是 **Param_0**、 **Param_1**，以此类推。  
   
@@ -97,11 +97,11 @@ ms.locfileid: "65725940"
   
     -   指定列的数据类型，并根据该数据类型指定列的代码页、长度、精度和小数位数。  
   
-    -   若要删除未使用的参数，请选择 **“外部列”** 中的参数，再单击 **“删除列”**。  
+    -   若要删除未使用的参数，请选择 **“外部列”** 中的参数，再单击 **“删除列”** 。  
   
     -   单击 **“列映射”** ，并将 **“可用输入列”** 列表中的列映射到 **“可用目标列”** 列表中的参数。  
   
-14. 单击“确定” 。  
+14. 单击“确定”  。  
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存”** 。  
   

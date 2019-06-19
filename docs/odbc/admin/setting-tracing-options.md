@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ccf5afd559d4d3716c22b42665c516aa230fafe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198533"
 ---
 # <a name="setting-tracing-options"></a>设置跟踪选项
@@ -51,7 +51,7 @@ ms.locfileid: "63198533"
   
 6.  若要返回到每个用户跟踪，请清除该复选框。  
   
-7.  单击 **“应用”**。  
+7.  单击 **“应用”** 。  
   
 > [!NOTE]  
 >  如果已有一种模式中启动跟踪，必须停止跟踪并切换到要成功更改的模式的其他模式。  

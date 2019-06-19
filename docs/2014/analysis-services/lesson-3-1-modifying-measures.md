@@ -11,26 +11,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078903"
 ---
 # <a name="modifying-measures"></a>修改度量值
-  可以使用“FormatString”属性定义控制如何向用户显示度量值的格式设置。 在此任务中，您将为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的货币和百分比度量值指定格式设置属性。  
+  可以使用“FormatString”  属性定义控制如何向用户显示度量值的格式设置。 在此任务中，您将为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的货币和百分比度量值指定格式设置属性。  
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>修改多维数据集的度量值  
   
-1.  切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器的“多维数据集结构”选项卡，然后在“度量值”窗格中展开“Internet Sales”度量值组，右键单击“订单数量”，然后单击“属性”。  
+1.  切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器的“多维数据集结构”  选项卡，然后在“度量值”  窗格中展开“Internet Sales”  度量值组，右键单击“订单数量”  ，然后单击“属性”  。  
   
-2.  在“属性”窗口中，单击“自动隐藏”图钉图标使“属性”窗口保持打开状态。  
+2.  在“属性”窗口中，单击“自动隐藏”  图钉图标使“属性”窗口保持打开状态。  
   
      当“属性”窗口处于打开状态时，同时更改多维数据集中多个项的属性将更加容易。  
   
-3.  在“属性”窗口中单击“FormatString”列表，然后键入 **#,#**。  
+3.  在“属性”窗口中单击“FormatString”  列表，然后键入 **#,#** 。  
   
-4.  在“多维数据集结构”选项卡的工具栏上，单击左侧的“显示度量值网格”图标。  
+4.  在“多维数据集结构”  选项卡的工具栏上，单击左侧的“显示度量值网格”  图标。  
   
      通过网格视图，您可以同时选择多个度量值。  
   
@@ -52,17 +52,17 @@ ms.locfileid: "66078903"
   
     -   **Freight**  
   
-6.  在“属性”窗口的“FormatString”列表中，选择“Currency”。  
+6.  在“属性”窗口的“FormatString”  列表中，选择“Currency”  。  
   
-7.  在“属性”窗口顶部（标题栏正下方）的下拉列表中，选择“Unit Price Discount Pct”度量值，然后在“FormatString”列表中选择“Percent”。  
+7.  在“属性”窗口顶部（标题栏正下方）的下拉列表中，选择“Unit Price Discount Pct”  度量值，然后在“FormatString”  列表中选择“Percent”  。  
   
 8.  在属性窗口中更改**名称**属性**Unit Price Discount Pct**度量值添加到`Unit Price Discount Percentage`。  
   
 9. 在中**度量值**窗格中，单击**Tax Amt**更改为此度量值的名称和`Tax Amount`。  
   
-10. 在“属性”窗口中，单击“自动隐藏”图标隐藏“属性”窗口，然后在“多维数据集结构”选项卡的工具栏上单击“显示度量值树”。  
+10. 在“属性”窗口中，单击“自动隐藏”  图标隐藏“属性”窗口，然后在“多维数据集结构”  选项卡的工具栏上单击“显示度量值树”  。  
   
-11. 在“文件”  菜单上，单击“全部保存” 。  
+11. 在“文件”  菜单上，单击“全部保存”  。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [修改“客户”维度](lesson-3-2-modifying-the-customer-dimension.md)  

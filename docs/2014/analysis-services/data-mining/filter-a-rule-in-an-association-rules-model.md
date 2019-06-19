@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084409"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>筛选关联规则模型中的规则
@@ -31,7 +31,7 @@ ms.locfileid: "66084409"
   
 ### <a name="filter-a-rule-in-an-association-model"></a>筛选关联模型中的规则  
   
-1.  使用 **“关联规则查看器”** 打开挖掘模型。 若要在 SQL Server Management Studio 中执行此操作，右键单击模型名称，然后选择 **“浏览”**。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中执行此操作，请双击包含该模型的挖掘结构，然后单击“数据挖掘设计器”的“挖掘模型查看器”选项卡。  
+1.  使用 **“关联规则查看器”** 打开挖掘模型。 若要在 SQL Server Management Studio 中执行此操作，右键单击模型名称，然后选择 **“浏览”** 。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中执行此操作，请双击包含该模型的挖掘结构，然后单击“数据挖掘设计器”的“挖掘模型查看器”选项卡   。  
   
 2.  单击 **“关联规则查看器”** 的 **“规则”** 选项卡。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "66084409"
   
      **“筛选规则”** 文本框支持用 .NET 语言定义的正则表达式。 因此，可使用如下所示的表达式： `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`。 此表达式将返回特定项集，其中包括的属性具有以各种顺序显示的词语“Helmets”和“Fenders”。  
   
-4.  对于 **“最小概率”**，增大概率值以查看较少的规则，减小概率值以查看较多的规则。  
+4.  对于 **“最小概率”** ，增大概率值以查看较少的规则，减小概率值以查看较多的规则。  
   
-5.  对于 **“最低重要性”**，增大重要性的值以查看较少的规则，减小该值以查看较多的规则。  
+5.  对于 **“最低重要性”** ，增大重要性的值以查看较少的规则，减小该值以查看较多的规则。  
   
 6.  有关**显示**，选择以下选项之一：**显示属性名称和值**，**仅显示属性名称**，或**仅显示属性值**。  
   
-7.  对于 **“最大行数”**，增大该值以增加符合指定条件的规则的总数，减小该值以限制返回的规则数。 规则按概率排序，所以您可以消除符合指定的概率或重要性条件的其他规则。  
+7.  对于 **“最大行数”** ，增大该值以增加符合指定条件的规则的总数，减小该值以限制返回的规则数。 规则按概率排序，所以您可以消除符合指定的概率或重要性条件的其他规则。  
   
 8.  选中或取消选中 **“显示长名称”** 复选框以切换规则名称的显示方式。  
   

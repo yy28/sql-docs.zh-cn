@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4f22316a6d2d826d7f582ebf8fb85b789e695f28
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820844"
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 代码段
@@ -40,9 +40,9 @@ ms.locfileid: "65820844"
   
     -   按 Ctrl + K、Ctrl + X。  
   
-    -   在 **“编辑”** 菜单上，指向 **“IntelliSense”**，然后单击 **“插入代码段”**。  
+    -   在 **“编辑”** 菜单上，指向 **“IntelliSense”** ，然后单击 **“插入代码段”** 。  
   
-    -   单击鼠标右键，然后从快捷菜单中选择“插入代码段”命令。  
+    -   单击鼠标右键，然后从快捷菜单中选择“插入代码段”  命令。  
   
 3.  双击代码段，或从代码段选择器中选择代码段，然后按 Tab 或 Enter。  
   

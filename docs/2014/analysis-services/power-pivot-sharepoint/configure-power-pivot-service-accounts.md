@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071862"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>配置 PowerPivot 服务帐户
@@ -44,51 +44,51 @@ ms.locfileid: "66071862"
   
 ##  <a name="bkmk_passwordssas"></a> 更新 SQL Server Analysis Services (PowerPivot) 实例的过期的密码  
   
-1.  指向“开始”，单击 **“管理工具”**，再单击 **“服务”**。 双击**SQL Server Analysis Services (PowerPivot)**。 单击 **“登录”**，然后为该帐户输入新密码。  
+1.  指向“开始”，单击 **“管理工具”** ，再单击 **“服务”** 。 双击**SQL Server Analysis Services (PowerPivot)** 。 单击 **“登录”** ，然后为该帐户输入新密码。  
   
-2.  在“管理中心”的“安全性”部分中，单击 **“配置托管帐户”**。  
+2.  在“管理中心”的“安全性”部分中，单击 **“配置托管帐户”** 。  
   
 3.  单击 **“编辑”** 更改特定帐户。  
   
-4.  选择 **“立即更改密码”**。  
+4.  选择 **“立即更改密码”** 。  
   
-5.  选择 **“将帐户密码设置为新值”**。 在该托管帐户下运行的所有服务都将使用更新后的凭据。  
+5.  选择 **“将帐户密码设置为新值”** 。 在该托管帐户下运行的所有服务都将使用更新后的凭据。  
   
 ##  <a name="bkmk_passwordapp"></a> PowerPivot 服务应用程序更新的过期的密码  
   
-1.  在“管理中心”的“安全性”部分中，单击 **“配置托管帐户”**。  
+1.  在“管理中心”的“安全性”部分中，单击 **“配置托管帐户”** 。  
   
 2.  单击 **“编辑”** 更改特定帐户。  
   
-3.  选择 **“立即更改密码”**。  
+3.  选择 **“立即更改密码”** 。  
   
-4.  选择 **“将帐户密码设置为新值”**。 在该托管帐户下运行的所有服务都将使用更新后的凭据。  
+4.  选择 **“将帐户密码设置为新值”** 。 在该托管帐户下运行的所有服务都将使用更新后的凭据。  
   
 ##  <a name="bkmk_newacct"></a> 更改运行每个服务所基于的帐户  
   
-1.  在“管理中心”的“安全性”部分中，单击 **“配置服务帐户”**。  
+1.  在“管理中心”的“安全性”部分中，单击 **“配置服务帐户”** 。  
   
-2.  选择“Windows 服务 - SQL Server Analysis Services”以更改 Analysis Services 服务帐户。  
+2.  选择  “Windows 服务 - SQL Server Analysis Services”以更改 Analysis Services 服务帐户。  
   
 3.  在 **“为此服务选择帐户”** 中，选择某个现有托管帐户或创建一个新帐户。 该帐户必须是域用户帐户。  
   
-4.  选择**服务应用程序池-SharePoint Web 服务系统**若要更改默认 PowerPivot 服务应用程序的应用程序池标识。 根据配置您的安装的方式，可基于为 SharePoint 服务创建的现有服务应用程序池运行服务。 默认情况下，PowerPivot 配置工具将注册为服务**默认 PowerPivot 服务应用程序 （PowerPivot 服务应用程序）**。  
+4.  选择**服务应用程序池-SharePoint Web 服务系统**若要更改默认 PowerPivot 服务应用程序的应用程序池标识。 根据配置您的安装的方式，可基于为 SharePoint 服务创建的现有服务应用程序池运行服务。 默认情况下，PowerPivot 配置工具将注册为服务**默认 PowerPivot 服务应用程序 （PowerPivot 服务应用程序）** 。  
   
      如果 SharePoint 管理员已手动配置该服务，则该服务最有可能具有自己的服务应用程序池。  
   
 5.  在 **“为此服务选择帐户”** 中，选择某个现有托管帐户或创建一个新帐户。 该帐户必须是域用户帐户。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 ##  <a name="bkmk_appPool"></a> 创建或更改 PowerPivot 服务应用程序的应用程序池  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”** 。  
   
 2.  选择但不要单击 PowerPivot 服务应用程序。 单击应用程序名称将打开 PowerPivot 管理面板，其中未提供指向指定应用程序池的属性页的链接。  可以单击行中的空白区域或单击类型名称以选择 PowerPivot 服务应用程序。  
   
 3.  在功能区上单击 **“属性”** 。  
   
-4.  选择 **“创建新应用程序池”**。 为应用程序池提供名称并为其标识指定托管帐户。  
+4.  选择 **“创建新应用程序池”** 。 为应用程序池提供名称并为其标识指定托管帐户。  
   
 ##  <a name="requirements"></a> 帐户要求和权限  
  在规划 PowerPivot for SharePoint 部署时，必须规划以下服务帐户。  
@@ -118,11 +118,11 @@ ms.locfileid: "66071862"
 ##  <a name="updatemanually"></a> 故障排除：手动授予管理权限  
  如果更新凭据的人不是计算机上的本地管理员，则管理权限更新将会失败。 如果出现此情况，您可以手动授予管理权限。 为此，最简单的方法是在管理中心运行 PowerPivot 配置计时器作业。 使用此方法，可以重置场中所有 PowerPivot 服务器的权限。 请注意，仅当同时以场管理员身份和计算机上的本地管理员身份运行 SharePoint 计时器作业时，此方法才有效。  
   
-1.  在“监视”中，单击 **“查看作业定义”**。  
+1.  在“监视”中，单击 **“查看作业定义”** 。  
   
 2.  选择**PowerPivot 配置计时器作业**。  
   
-3.  单击 **“立即运行”**。  
+3.  单击 **“立即运行”** 。  
   
  作为最后的手段，可以通过授予 Analysis Services 系统管理权限对 PowerPivot 服务应用程序，确保正确的权限，然后明确将服务应用程序标识添加到 SQLServerMSASUser$\<服务器名 > $PowerPivot Windows 安全组。 必须对与 SharePoint 场集成的每个 Analysis Services 实例重复这些步骤。  
   
@@ -130,52 +130,52 @@ ms.locfileid: "66071862"
   
 1.  在 SQL Server Management Studio，连接到 Analysis Services 实例作为\<服务器名称 > \POWERPIVOT。  
   
-2.  右键单击服务器名称并选择“属性”。  
+2.  右键单击服务器名称并选择“属性”  。  
   
-3.  单击 **“安全性”**。  
+3.  单击 **“安全性”** 。  
   
-4.  单击 **“添加”**。  
+4.  单击 **“添加”** 。  
   
 5.  键入用于 PowerPivot 服务应用程序池的帐户的名称，然后单击**确定**。  
   
-6.  在“管理工具”中，单击 **“计算机管理”**。  
+6.  在“管理工具”中，单击 **“计算机管理”** 。  
   
-7.  打开 **“本地用户和组”**。  
+7.  打开 **“本地用户和组”** 。  
   
-8.  打开 **“组”**。  
+8.  打开 **“组”** 。  
   
 9. 双击 SQLServerMSASUser$\<服务器名 > $PowerPivot。  
   
-10. 单击 **“添加”**。  
+10. 单击 **“添加”** 。  
   
 11. 键入用于 PowerPivot 服务应用程序池的帐户的名称，然后单击**确定**。  
   
 ##  <a name="expired"></a> 故障排除：解决 HTTP 503 错误由于密码过期管理中心或 SharePoint Foundation Web 应用程序服务  
  如果管理中心服务或 SharePoint Foundation Web 应用程序服务由于帐户重置或密码过期而停止工作，您在尝试打开 SharePoint 管理中心或 SharePoint 站点时将遇到 HTTP 503“服务不可用”错误消息。 按以下步骤操作可将服务器恢复联机状态。 一旦管理中心可用，您就可以继续更新过期帐户信息。  
   
-1.  在“管理工具”中，单击 **“Internet Information Services 管理器”**。  
+1.  在“管理工具”中，单击 **“Internet Information Services 管理器”** 。  
   
 2.  针对属于具有过期密码的域用户帐户的站点或管理中心应用程序池标识，执行以下操作：  
   
-    1.  右键单击应用程序池名称并选择“高级设置”。  
+    1.  右键单击应用程序池名称并选择“高级设置”  。  
   
     2.  选择**标识**单击...按钮以打开应用程序池标识对话框。  
   
-    3.  单击 **“设置”**。  
+    3.  单击 **“设置”** 。  
   
     4.  键入用户名和密码。  
   
 3.  运行 IISRESET。 为此，请以管理员身份打开命令提示符，键入 `iisreset` 命令。  
   
-4.  在 SharePoint 管理中心的“安全性”部分中，选择 **“配置托管帐户”**。  
+4.  在 SharePoint 管理中心的“安全性”部分中，选择 **“配置托管帐户”** 。  
   
 5.  单击 **“编辑”** 以更新具有过期密码的托管帐户的信息。  
   
-6.  选择 **“立即更改密码”**。  
+6.  选择 **“立即更改密码”** 。  
   
-7.  单击 **“使用现有密码”**。  
+7.  单击 **“使用现有密码”** 。  
   
-8.  键入密码，然后单击 **“确定”**。  
+8.  键入密码，然后单击 **“确定”** 。  
   
  如果安装了 Reporting Services，可以使用 Reporting Services 配置管理器来更新报表服务器的密码和与报表服务器数据库的连接。 有关详细信息，请参阅[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)。  
   

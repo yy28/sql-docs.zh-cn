@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0140a11c9b9b4c161deb01d4439e9fb52eda63af
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726827"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 源提取数据
@@ -41,7 +41,7 @@ ms.locfileid: "65726827"
   
          该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。  
   
-    -   **SQL 命令**：键入 SQL 命令，或单击“浏览”从文本文件中加载 SQL 查询。  
+    -   **SQL 命令**：键入 SQL 命令，或单击“浏览”  从文本文件中加载 SQL 查询。  
   
 6.  可以单击 **“预览”** ，查看最多 200 行 ODBC 源所提取的数据。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "65726827"
   
 8.  如果需要，可以通过编辑 **“输出列”** 列表中的值来更新输出列的名称。  
   
-9. 若要配置错误输出，请单击 **“错误输出”**。  
+9. 若要配置错误输出，请单击 **“错误输出”** 。  
   
-10. 单击“确定” 。  
+10. 单击“确定”  。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

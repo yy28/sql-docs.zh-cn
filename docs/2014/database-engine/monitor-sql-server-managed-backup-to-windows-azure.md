@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62844533"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>监视 SQL Server 托管备份到 Windows Azure
@@ -30,9 +30,9 @@ ms.locfileid: "62844533"
   
 1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 这将返回扩展事件的当前配置和电子邮件通知。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 这将返回扩展事件的当前配置和电子邮件通知。  
   
 ```  
 Use msdb  

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536320"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函数
@@ -216,7 +216,7 @@ SQLRETURN SQLSetPos(
  删除数据后，驱动程序将更改为 SQL_ROW_DELETED （或 SQL_ROW_ERROR） 中的相应行实现行状态数组的值。  
   
 ## <a name="updating-data-using-sqlsetpos"></a>使用 SQLSetPos 更新数据  
- 应用程序可以绑定的数据缓冲区中或通过一个或多个调用将传递列的值**SQLPutData**。 其数据传递使用的列**SQLPutData**称为*执行时数据**列*。 这些通常用于发送 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 列的数据，可以与其他列组合。  
+ 应用程序可以绑定的数据缓冲区中或通过一个或多个调用将传递列的值**SQLPutData**。 其数据传递使用的列**SQLPutData**称为*执行时数据* *列*。 这些通常用于发送 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 列的数据，可以与其他列组合。  
   
 #### <a name="to-update-data-with-sqlsetpos-an-application"></a>使用 SQLSetPos，应用程序中更新数据：  
   

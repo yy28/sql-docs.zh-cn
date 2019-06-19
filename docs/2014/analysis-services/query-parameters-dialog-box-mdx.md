@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070531"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>“查询参数”对话框 (MDX)
@@ -33,7 +33,7 @@ ms.locfileid: "66070531"
  如果参数应用于某一特定的层次结构，则从列表中选择一个层次结构。  
   
  **多个值**  
- Description  
+ 描述  
   
  **默认**  
  指示参数的默认值（如果有）。 默认情况下，不分配任何值。  

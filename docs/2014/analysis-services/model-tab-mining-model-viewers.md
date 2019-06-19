@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077623"
 ---
 # <a name="model-tab-mining-model-viewers"></a>“模型”选项卡（挖掘模型查看器）
@@ -24,7 +24,7 @@ ms.locfileid: "66077623"
   
  使用此时序模型视图可提取有关时序分析的有用信息，包括图形的公式、ARIMA 术语和系数。  
   
- **有关详细信息：**[Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)，[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)， [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)  
+ **有关详细信息：** [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)，[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)， [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  

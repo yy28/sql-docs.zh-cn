@@ -10,13 +10,13 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: a7bbf62397971834da589d7232070300296f10c4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 51bcd27ee8d2c63103650c8527014716f10bc3f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794702"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>升级到 SQL Server 的其他版本（安装程序）
 
@@ -30,7 +30,7 @@ ms.locfileid: "51601947"
 - [安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **故障转移群集实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的一个节点上运行版本升级就足够了。 此节点可以是主动节点或被动节点，并且在版本升级过程中引擎不会使资源脱机。 版本升级后需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或故障转移到其他节点。  
+> 故障转移群集实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的其中某个节点上运行版本升级就足够了。 此节点可以是主动节点或被动节点，并且在版本升级过程中引擎不会使资源脱机。 版本升级后需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或故障转移到其他节点。  
   
 ## <a name="prerequisites"></a>必备条件  
 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取权限的域帐户。  
@@ -44,23 +44,23 @@ ms.locfileid: "51601947"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 在根文件夹中，双击 setup.exe 或者从配置工具中启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  若要将 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 的现有实例升级到另一版本，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心中单击 **“维护”**，然后选择 **“版本升级”**。  
+2.  若要将 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 的现有实例升级到另一版本，请在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心中单击 **“维护”** ，然后选择 **“版本升级”** 。  
   
 3.  如果需要使用安装程序支持文件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将安装它们。 如果安装程序指示您重新启动计算机，请在继续操作之前重新启动。  
   
-4.  系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”**。  
+4.  系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”** 。  
   
 5.  在“产品密钥”页上，选择相应的单选按钮，这些按钮指示您是升级到免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅 [SQL Server 的版本和组件](../../sql-server/editions-and-components-of-sql-server-2017.md)和[支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
-6.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 若要继续，请单击 **“下一步”**。 若要结束安装程序，请单击 **“取消”**。  
+6.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 若要继续，请单击 **“下一步”** 。 若要结束安装程序，请单击 **“取消”** 。  
   
 7.  在“选择实例”页上指定要升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 8.  在版本升级操作开始之前，“版本升级规则”页会验证您的计算机配置。  
   
-9. “准备升级版本”页显示您在安装过程中指定的安装选项的树视图。 若要继续，请单击 **“升级”**。  
+9. “准备升级版本”页显示您在安装过程中指定的安装选项的树视图。 若要继续，请单击 **“升级”** 。  
   
-10. 在版本升级过程中，需要重新启动服务以便接受新设置。 版本升级完成后，“完成”页会提供指向版本升级摘要日志文件的链接。 若要关闭该向导，请单击 **“关闭”**。  
+10. 在版本升级过程中，需要重新启动服务以便接受新设置。 版本升级完成后，“完成”页会提供指向版本升级摘要日志文件的链接。 若要关闭该向导，请单击 **“关闭”** 。  
   
 11. “完成”页会提供指向安装日志文件摘要以及其他重要说明的链接。  
   

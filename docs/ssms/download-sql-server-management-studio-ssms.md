@@ -24,15 +24,18 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: a9fbef681f2b6202c973f31c8c7dd4489133556a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 41acbbf99bc84f96803a296d19c6f63a32761d8e
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993923"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744191"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+> [!div class="nextstepaction"]
+> [请分享你对 SQL Docs 中心页的反馈！](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 SQL Server Management Studio (SSMS) 是一种集成环境，用于管理从 SQL Server 到 Azure SQL 数据库的任何 SQL 基础结构。 SSMS 提供用于配置、监视和管理 SQL Server 和数据库实例的工具。 使用 SSMS 部署、监视和升级应用程序使用的数据层组件，以及生成查询和脚本。
 
@@ -42,9 +45,9 @@ SSMS 是免费的！
 
 ## <a name="download-ssms-180-ga"></a>下载 SSMS 18.0 (GA)
 
-SSMS 18.0 通用版本 (GA) 现已推出，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的最新一代 SQL Server Management Studio！
+SSMS 18.0 通用版本 (GA) 现已推出，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的最新一代 SQL Server Management Studio  ！
 
-[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.0 (GA)](https://go.microsoft.com/fwlink/?linkid=2088649)
+[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.0 (GA)](https://go.microsoft.com/fwlink/?linkid=2088649) 
 
 SSMS 18.0 不再处于预览状态，它是 SSMS 18.0 的第一个通用版本 (GA)。 如果安装了 SSMS 18.0 预览版，请在安装 SSMS 18.0 GA 之前将其卸载。
 
@@ -58,7 +61,7 @@ SSMS 18.0 不再处于预览状态，它是 SSMS 18.0 的第一个通用版本 (
 
 SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与以前的版本并行安装，因此，这两个版本均可供使用。
 
-如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18
+如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18 
  
 ## <a name="available-languages-ssms-180-ga"></a>可用语言 (SSMS 18.0 GA)
 
@@ -103,7 +106,7 @@ SSMS 18.0 (GA) 是最新版本的 SQL Server Management Studio。 SSMS 的 18.x 
   
 ## <a name="release-notes-ssms-180-ga"></a>发行说明 (SSMS 18.0 GA)
 
-- 当客户帐户属于多个租户时，“SSIS Integration Runtime 创建向导”仅显示一个租户下的 SQL 数据库。
+- 当客户帐户属于多个租户时，“SSIS Integration Runtime 创建向导”仅显示一个租户下的 SQL 数据库  。
 
 ## <a name="previous-ssms-releases"></a>SSMS 的早期版本
 

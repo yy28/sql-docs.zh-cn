@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 910de9d388e60ae3664153e2f6cb3bb5203b289c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055778"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>在部署项目后设置参数值
@@ -22,13 +22,13 @@ ms.locfileid: "66055778"
   
 ### <a name="to-set-server-defaults-with-ssms-object-explorer"></a>使用 SSMS 对象资源管理器设置服务器默认值：  
   
-1.  选择并右键单击“集成服务”节点下的项目。  
+1.  选择并右键单击“集成服务”节点下的项目。   
   
 2.  单击 **“属性”** 以便打开 **“项目属性”** 对话框窗口。  
   
-3.  通过在 **“选择页”** 之下单击 **“参数”**，打开参数页。  
+3.  通过在 **“选择页”** 之下单击 **“参数”** ，打开参数页。  
   
-4.  在 **“参数”** 列表中选择所需参数。 注意：“容器”列将帮助区分项目参数和包参数。  
+4.  在 **“参数”** 列表中选择所需参数。 注意：“容器”  列将帮助区分项目参数和包参数。  
   
 5.  在 **“值”** 列中，指定所需的服务器默认参数值。  
   

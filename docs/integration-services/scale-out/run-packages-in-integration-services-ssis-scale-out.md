@@ -14,10 +14,10 @@ manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 1825b26912b507b8e58b1828437102cf3650d5e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015039"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>在 Integration Services (SSIS) Scale Out 中运行包
@@ -37,36 +37,36 @@ ms.locfileid: "66015039"
 
 1. 打开“在 Scale Out 中执行包”对话框。
 
-    在 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]中，连接到 Integration Services 服务器。 在对象资源管理器中，展开树，显示“Integration Services 目录” 下的节点。 右键单击 **SSISDB** 节点或者要运行的项目或包，然后单击“在 Scale Out 中执行” 。
+    在 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]中，连接到 Integration Services 服务器。 在对象资源管理器中，展开树，显示“Integration Services 目录”  下的节点。 右键单击 **SSISDB** 节点或者要运行的项目或包，然后单击“在 Scale Out 中执行”  。
 
 2. 选择包并设置选项。
 
-    在“包选择”页中，选择要运行的一个或多个包。 为每个包设置环境、参数、连接管理器和高级选项等。 单击包以设置这些选项。
+    在“包选择”页中，选择要运行的一个或多个包  。 为每个包设置环境、参数、连接管理器和高级选项等。 单击包以设置这些选项。
     
-    在“高级”选项卡中，设置名为“重试计数”的 Scale Out 选项来指定包执行失败后将重试的次数。
+    在“高级”选项卡中，设置名为“重试计数”的 Scale Out 选项来指定包执行失败后将重试的次数   。
 
     > [!NOTE]
-    > “出错时转储”选项仅在运行 Scale Out Worker 服务的帐户是本地计算机管理员时生效。
+    > “出错时转储”选项仅在运行 Scale Out Worker 服务的帐户是本地计算机管理员时生效  。
 
 3. 选择辅助角色计算机。
 
-    在“计算机选择”页上，选择运行包的 Scale Out Worker 计算机。 默认情况下，允许任何计算机运行包。 
+    在“计算机选择”页上，选择运行包的 Scale Out Worker 计算机  。 默认情况下，允许任何计算机运行包。 
 
    > [!NOTE] 
-   > 使用 Scale Out Worker 服务的用户帐户的凭据执行包。 在“计算机选择”页上可查看这些凭据。 默认情况下，该帐户为 `NT Service\SSISScaleOutWorker140`。
+   > 使用 Scale Out Worker 服务的用户帐户的凭据执行包。 在“计算机选择”页上可查看这些凭据  。 默认情况下，该帐户为 `NT Service\SSISScaleOutWorker140`。
 
    > [!WARNING]
    > 同一辅助角色上不同用户触发的包执行使用相同的凭据运行。 它们之间没有安全边界。 
 
 4. 运行包和查看报表。
 
-    单击“确定”  ，启动包执行。 若要查看包执行报表，在对象资源管理器中右键单击包，单击“报表” ，单击“所有执行” ，查找该执行。
+    单击“确定”  ，启动包执行。 若要查看包执行报表，在对象资源管理器中右键单击包，单击“报表”  ，单击“所有执行”  ，查找该执行。
     
 ## <a name="stored_proc"></a>在存储过程中运行包
 
 1.  创建执行。
 
-    为每个包调用 `[catalog].[create_execution]`。 将参数 @runinscaleout 设置为 `True`。 如果不允许所有的 Scale Out Worker 计算机运行包，请将参数 @useanyworker 设置为 `False`。 若要深入了解此存储过程和 @useanyworker 参数，请参阅 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)。 
+    为每个包调用 `[catalog].[create_execution]`。 将参数 @runinscaleout 设置为 `True`  。 如果不允许所有的 Scale Out Worker 计算机运行包，请将参数 @useanyworker 设置为 `False`  。 若要深入了解此存储过程和 @useanyworker  参数，请参阅 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)。 
 
 2. 设置执行参数。
 
@@ -78,7 +78,7 @@ ms.locfileid: "66015039"
 
 4. 启动执行。
 
-    调用 `[catalog].[start_execution]`。 设置参数 @retry_count，以设置包执行失败后将重试的次数。
+    调用 `[catalog].[start_execution]`。 设置参数 @retry_count，以设置包执行失败后将重试的次数  。
     
 ### <a name="example"></a>示例
 以下示例使用一个 Scale Out Worker 在 Scale Out 中运行两个包，`package1.dtsx` 和 `package2.dtsx`。  
@@ -113,20 +113,20 @@ GO
 -   **sysadmin** 服务器角色中的成员资格  
 
 ## <a name="set-default-execution-mode"></a>设置默认执行模式
-要将包的默认执行模式设置为“Scale Out”，请执行以下操作：
+要将包的默认执行模式设置为“Scale Out”，请执行以下操作  ：
 
-1.  在 SSMS 的对象资源管理器中，右键单击“SSISDB”节点并选择“属性”。
+1.  在 SSMS 的对象资源管理器中，右键单击“SSISDB”节点并选择“属性”   。
 
-2.  在“目录属性”对话框中，将“服务器范围内的默认执行模式”设置为“Scale Out”。
+2.  在“目录属性”对话框中，将“服务器范围内的默认执行模式”设置为“Scale Out”    。
 
-设置此默认执行模式后，就不再需要在调用 `[catalog].[create_execution]` 存储过程时指定 @runinscaleout 参数。 包会在 Scale Out 中自动运行。 
+设置此默认执行模式后，就不再需要在调用 `[catalog].[create_execution]` 存储过程时指定 @runinscaleout 参数  。 包会在 Scale Out 中自动运行。 
 
 ![执行模式](media/exe-mode.PNG)
 
-要将默认执行模式切换回来以便不按默认 Scale Out 模式运行包，请将“服务器范围内的默认执行模式”设置为“服务器”。
+要将默认执行模式切换回来以便不按默认 Scale Out 模式运行包，请将“服务器范围内的默认执行模式”设置为“服务器”   。
 
 ## <a name="sql_agent"></a>在 SQL Server 代理作业中运行包
-在 SQL Server 代理作业中，可以运行 SSIS 包作为作业的一个步骤。 要在 Scale Out 中运行包，请将默认执行模式设置为“Scale Out”。将默认执行模式设置为“Scale Out”后，SQL Server 代理作业中的包将在 Scale Out 模式下运行。
+在 SQL Server 代理作业中，可以运行 SSIS 包作为作业的一个步骤。 要在 Scale Out 中运行包，请将默认执行模式设置为“Scale Out”  。将默认执行模式设置为“Scale Out”后，SQL Server 代理作业中的包将在 Scale Out 模式下运行  。
 
 ## <a name="next-steps"></a>后续步骤
 -   [Scale Out 疑难解答](troubleshooting-scale-out.md)

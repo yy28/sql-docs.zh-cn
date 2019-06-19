@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f00183cdc91fabfcf168ceee8871b6033af2fdc3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477051"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>创建数字属性 (Master Data Services)
@@ -42,12 +42,12 @@ ms.locfileid: "65477051"
 ## <a name="attribute-information"></a>属性信息  
  对于创建的每个属性，系统都会在网格中添加一行（其中包含七列）。 下表对这些列进行了说明。  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“登录属性”|属性状态。<br /><br /> 单击保存后，系统显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示属性正在更新。<br /><br /> 如果创建或编辑属性时出现错误，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
 |“属性”|属性名称。|  
 |显示名称|属性显示名称。|  
-|Description|属性说明。|  
+|描述|属性说明。|  
 |显示像素宽度|属性宽度。|  
 |类型和属性|属性的类型和数据类型信息。|  
 |启用更改跟踪|指定是否启用该属性以进行更改跟踪，并在括号中显示组号。|  
@@ -64,15 +64,15 @@ ms.locfileid: "65477051"
   
 ### <a name="to-create-a-numeric-attribute"></a>创建数字属性  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体” 。  
+2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体”  。  
   
 3.  在“管理实体”  页上，选择要为其创建属性的实体所在的行。  
   
-4.  单击 **“属性”**。  
+4.  单击 **“属性”** 。  
   
-5.  在“管理属性”  页上，执行下列操作之一，然后单击“添加” 。  
+5.  在“管理属性”  页上，执行下列操作之一，然后单击“添加”  。  
   
     -   如果属性是针对叶成员，则从“成员类型”  列表框选择“叶”  。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "65477051"
   
 8.  在 **“显示像素宽度”** 框中，键入要在 **“资源管理器”** 网格中显示的属性列的宽度。  
   
-9. 从“属性类型”列表中，选择“自由格式”。  
+9. 从“属性类型”  列表中，选择“自由格式”  。  
   
-10. 从 **“数据类型”** 列表中，选择 **“数字”**。  
+10. 从 **“数据类型”** 列表中，选择 **“数字”** 。  
   
 11. 在 **“小数位数”** 框中，键入小数点后可以输入的位数。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "65477051"
   
 13. 根据需要，选择 **“启用更改跟踪”** 可以跟踪对属性组的更改。 有关详细信息，请参阅[向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-14. 单击“保存” 。  
+14. 单击“保存”  。  
   
 ## <a name="see-also"></a>请参阅  
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   

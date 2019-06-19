@@ -41,11 +41,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c08e29c5d1fba184739e2bb0e33718f766c32655
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62708169"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +93,7 @@ ORDER BY order_by_expression
 ```  
   
 ## <a name="arguments"></a>参数  
- order_by_expression  
+ order_by_expression   
  指定用于对查询结果集进行排序的列或表达式。 可以将排序列指定为一个名称或列别名，也可以指定一个表示列在选择列表中所处位置的非负整数。  
   
  可以指定多个排序列。 别名必须是唯一的。 ORDER BY 子句中的排序列的顺序定义了排序结果集的结构。 也就是说，按第一列对结果集进行排序，然后按第二列对排序列表进行排序，依此类推。  
@@ -107,40 +107,40 @@ SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects
 ORDER BY SchemaName + ''; -- wrong
 ```
   
- COLLATE collation_name  
- 指定应根据 collation_name 中指定的排序规则执行 ORDER BY 操作，而不是根据表或视图中所定义的列的排序规则。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于类型为 char、varchar、nchar 和 nvarchar 的列。  
+ COLLATE collation_name   
+ 指定应根据 collation_name 中指定的排序规则执行 ORDER BY 操作，而不是根据表或视图中所定义的列的排序规则  。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称  。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 仅适用于类型为 char、varchar、nchar 和 nvarchar 的列     。  
   
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 按从最低值到最高值的顺序进行排序。 DESC 按从最高值到最低值的顺序进行排序。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
   
- OFFSET { integer_constant | offset_row_count_expression } { ROW | ROWS }  
+ OFFSET { integer_constant | offset_row_count_expression } { ROW | ROWS }    
  指定开始从查询表达式返回行之前跳过的行数。 该值可以是大于或等于零的整数常量或表达式。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
- offset_row_count_expression 可以是变量、参数或常量标量子查询。 在使用子查询时，它无法引用在外部查询范围中定义的任何列。 也就是说，它无法与外部查询相关联。  
+ offset_row_count_expression 可以是变量、参数或常量标量子查询  。 在使用子查询时，它无法引用在外部查询范围中定义的任何列。 也就是说，它无法与外部查询相关联。  
   
  ROW 和 ROWS 是同义词，是为了与 ANSI 兼容而提供的。  
   
- 在查询执行计划中，将在 TOP 查询运算符的 Offset 属性中显示偏移行数值。  
+ 在查询执行计划中，将在 TOP 查询运算符的 Offset 属性中显示偏移行数值  。  
   
- FETCH { FIRST | NEXT } { integer_constant | fetch_row_count_expression } { ROW | ROWS } ONLY  
+ FETCH { FIRST | NEXT } { integer_constant | fetch_row_count_expression } { ROW | ROWS } ONLY    
  指定在处理 OFFSET 子句后返回的行数。 该值可以是大于或等于 1 的整数常量或表达式。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
- fetch_row_count_expression 可以是变量、参数或常量标量子查询。 在使用子查询时，它无法引用在外部查询范围中定义的任何列。 也就是说，它无法与外部查询相关联。  
+ fetch_row_count_expression 可以是变量、参数或常量标量子查询  。 在使用子查询时，它无法引用在外部查询范围中定义的任何列。 也就是说，它无法与外部查询相关联。  
   
  FIRST 和 NEXT 是同义词，是为了与 ANSI 兼容而提供的。  
   
  ROW 和 ROWS 是同义词，是为了与 ANSI 兼容而提供的。  
   
- 在查询执行计划中，将在 TOP 查询运算符的 Rows 或 Top 属性中显示偏移行数值。  
+ 在查询执行计划中，将在 TOP 查询运算符的 Rows 或 Top 属性中显示偏移行数值   。  
   
 ## <a name="best-practices"></a>最佳实践  
  避免将 ORDER BY 子句中的整数指定为选择列表中的列位置表示形式 例如，虽然 `SELECT ProductID, Name FROM Production.Production ORDER BY 2` 等语句是有效的，但与指定实际列名相比，其他人并不容易理解该语句。 此外，对选择列表的更改（如更改列顺序或添加新列）需要修改 ORDER BY 子句，以避免出现意外结果。  
   
- 在 SELECT TOP (N) 语句中，请始终使用 ORDER BY 子句。 这是以可预知的方式指明哪些行受 TOP 影响的唯一方法。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
+ 在 SELECT TOP (N) 语句中，请始终使用 ORDER BY 子句  。 这是以可预知的方式指明哪些行受 TOP 影响的唯一方法。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
   
 ## <a name="interoperability"></a>互操作性  
  在与 SELECT…INTO 语句一起使用以从另一来源插入行时，ORDER BY 子句不能保证按指定的顺序插入这些行。  
@@ -150,9 +150,9 @@ ORDER BY SchemaName + ''; -- wrong
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  ORDER BY 子句中的列数没有限制；但是，在 ORDER BY 子句中指定的列的总大小不能超过 8,060 个字节。  
   
- 不能在 ORDER BY 子句中使用 ntext、text、image、geography、geometry 和 xml 类型的列。  
+ 不能在 ORDER BY 子句中使用 ntext、text、image、geography、geometry 和 xml 类型的列       。  
   
- order_by_expression 出现在排名函数中时，无法指定整数或常量。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ order_by_expression 出现在排名函数中时，无法指定整数或常量  。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
  如果已在 FROM 子句中指定了表名的别名，则在 ORDER BY 子句中只能使用该别名来限定其列。  
   
@@ -364,7 +364,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a>限制返回的行数  
  以下示例使用 OFFSET 和 FETCH 限制查询返回的行数。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. 指定整数常量以提供 OFFSET 和 FETCH 值  
  以下示例将一个整数常量指定为 OFFSET 和 FETCH 子句的值。 第一个查询返回所有按 `DepartmentID` 列排序的行。 将此查询返回的结果与后面的两个查询的结果进行比较。 下一个查询使用 `OFFSET 5 ROWS` 子句跳过前 5 行，然后返回所有其余行。 最终查询使用 `OFFSET 0 ROWS` 子句从第一行开始，然后使用 `FETCH NEXT 10 ROWS ONLY` 将返回的行限制为排序的结果集中的 10 行。  

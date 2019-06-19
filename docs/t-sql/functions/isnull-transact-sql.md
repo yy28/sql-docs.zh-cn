@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1fc40d263e5b7e22c38f225f50809d35e0b73415
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949234"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
@@ -44,17 +44,17 @@ ISNULL ( check_expression , replacement_value )
 ```  
   
 ## <a name="arguments"></a>参数  
- check_expression  
- 将被检查是否为 NULL 的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 check_expression 可以是任何类型。  
+ check_expression   
+ 将被检查是否为 NULL 的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 check_expression 可以是任何类型  。  
   
- replacement_value  
- check_expression为 NULL 时要返回的表达式。 replacement_value 必须是可隐式转换为 check_expression 类型的类型。  
+ replacement_value   
+ check_expression为 NULL 时要返回的表达式  。 replacement_value 必须是可隐式转换为 check_expression 类型的类型   。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与该 check_expression 相同的类型。 如果提供了文本 NULL 作为 check_expression，则返回replacement_value 数据类型。 如果提供了文本 NULL 作为 check_expression 且未提供 replacement_value，则返回 int。  
+ 返回与该 check_expression 相同的类型  。 如果提供了文本 NULL 作为 check_expression，则返回replacement_value 数据类型。   如果提供了文本 NULL 作为 check_expression 且未提供 replacement_value，则返回 int    。  
   
 ## <a name="remarks"></a>Remarks  
- 如果 check_expression 不为 NULL，则将返回该表达式的值；否则，将返回 replacement_value。如果类型不同，则 replacement_value 会隐式转换为 check_expression 的类型。 如果 replacement_value 长于 check_expression，则可能截断 replacement_value。  
+ 如果 check_expression 不为 NULL，则将返回该表达式的值；否则，将返回 replacement_value。如果类型不同，则 replacement_value 会隐式转换为 check_expression 的类型    。 如果 replacement_value 长于 check_expression，则可能截断 replacement_value    。  
   
 > [!NOTE]  
 >  使用 [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md) 返回第一个非 null 值。  

@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 099f576409f4f6052065cf6b3c8fc55bd03bfe03
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105413"
 ---
 # <a name="operator-properties-history-page"></a>操作员属性（“历史记录”页）
@@ -31,13 +31,13 @@ ms.locfileid: "65105413"
   
 ## <a name="options"></a>选项  
 **通过电子邮件**  
-通过电子邮件进行的最近通知尝试，或者，如果从未通过电子邮件通知过此操作员，此选项将为“(从未发送电子邮件)”。  
+通过电子邮件进行的最近通知尝试，或者，如果从未通过电子邮件通知过此操作员，此选项将为“(从未发送电子邮件)”  。  
   
 **通过寻呼程序**  
-通过寻呼程序进行的最近通知尝试，或者，如果从未通过寻呼程序通知过此操作员，此选项将为“(从未寻呼)”。  
+通过寻呼程序进行的最近通知尝试，或者，如果从未通过寻呼程序通知过此操作员，此选项将为“(从未寻呼)”  。  
   
 **通过 net send**  
-通过 net send 进行的最近通知尝试，或者，如果从未通过网络发送通知过此操作员，此选项将为“(从未通过网络发送通知)”。  
+通过 net send 进行的最近通知尝试，或者，如果从未通过网络发送通知过此操作员，此选项将为“(从未通过网络发送通知)”  。  
   
 ## <a name="see-also"></a>另请参阅  
 [运算符](../../ssms/agent/operators.md)  

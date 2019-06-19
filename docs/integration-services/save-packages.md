@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 48d6db7b2c68fac233dbc585ddbcf4ffb795ca8d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718948"
 ---
 # <a name="save-packages"></a>保存包
@@ -42,13 +42,13 @@ ms.locfileid: "65718948"
   
 2.  在解决方案资源管理器中，单击要保存的包。  
   
-3.  在 **“文件”** 菜单上单击 **“保存选定项”**。  
+3.  在 **“文件”** 菜单上单击 **“保存选定项”** 。  
   
     > [!NOTE]  
     >  可以在“属性”窗口中验证保存包的路径及文件名。  
 
 ## <a name="save-a-copy-of-a-package"></a>保存一个包副本
-  此部分介绍如何将包的副本保存到文件系统、包存储区或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 msdb 数据库。 指定保存包副本的位置时，也能够更新包的名称。  
+  此部分介绍如何将包的副本保存到文件系统、包存储区或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 msdb  数据库。 指定保存包副本的位置时，也能够更新包的名称。  
   
  包存储区可以同时包括 **msdb** 数据库和文件系统中的文件夹，也可以只包含 **msdb**或文件系统中的文件夹。 在 **msdb**中，包将保存到 **sysssispackages** 表中。 此表包括一个 **folderid** 列，用于标识包所属的逻辑文件夹。 逻辑文件夹提供了对保存到 **msdb** 中的包进行分组的有用方式，文件系统中的文件夹也提供了对保存到文件系统中的包进行分组的方式。 **msdb** 中的 **sysssispackagefolders** 表中的行定义这些文件夹。  
   
@@ -61,18 +61,18 @@ ms.locfileid: "65718948"
   
 1.  在解决方案资源管理器中，双击要保存其副本的包。  
   
-2.  在“文件”菜单上，单击“包文件\<的副本 > 另存为”。  
+2.  在“文件”菜单上，单击“包文件\<的副本 > 另存为”   。  
   
 3.  在 **“保存包的副本”** 对话框，在 **“包位置”** 列表中选择包的位置。 可用选项包括：  
     -   SQL Server
     -   文件系统 
     -   SSIS 包存储区 
   
-4.  如果位置为 **SQL Server** 或 **“SSIS 包存储区”**，请提供服务器名称。  
+4.  如果位置为 **SQL Server** 或 **“SSIS 包存储区”** ，请提供服务器名称。  
   
 5.  如果保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请指定身份验证类型；如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，还请提供用户名和密码。  
   
-6.  若要指定包路径，请键入路径或单击浏览按钮 (…)，以指定包的位置。 包的默认名称为 Package。 也可以将包名称更新为所需的名称。  
+6.  若要指定包路径，请键入路径或单击浏览按钮 (…)，以指定包的位置  。 包的默认名称为 Package。 也可以将包名称更新为所需的名称。  
   
      如果选择 **SQL Server** 作为 **“包路径”** 选项，则包路径由 **msdb** 中的逻辑文件夹和包名称构成。 例如，如果包 DownloadMonthlyData 与 MSDB 文件夹中的 Finance 文件夹（ **msdb**中的根逻辑文件夹的默认名称）相关联，则名为 DownloadMonthlyData 的包的包路径为 MSDB/Finance/DownloadMonthlyData  
   
@@ -82,13 +82,13 @@ ms.locfileid: "65718948"
   
 7.  查看包保护级别。  
   
-8.  还可以单击“保护级别”旁边的 (…) 浏览按钮，更改保护级别。  
+8.  还可以单击“保护级别”旁边的 (…) 浏览按钮，更改保护级别   。  
   
     -   在 **“包保护级别”** 对话框中，选择不同的保护级别。  
   
-    -   单击“确定” 。  
+    -   单击“确定”  。  
   
-9. 单击“确定” 。  
+9. 单击“确定”  。  
 
 ## <a name="save-a-package-as-a-package-template"></a>将包保存为包模板
  本部分介绍在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中创建新的 Integration Services 包时如何制定自定义包以及将自定义包作为模板。 默认情况下，在将新包添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 使用创建空包的包模板。 您无法替换此默认模板，但可以添加新的模板。  
@@ -109,10 +109,10 @@ ms.locfileid: "65718948"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开要在其中创建包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在解决方案资源管理器中，右键单击项目，指向“添加”，然后单击“新建项”。  
+2.  在解决方案资源管理器中，右键单击项目，指向“添加”，然后单击“新建项”。    
   
-3.  在“添加新项 —\<项目名称>”对话框中，单击要用作模板的包。  
+3.  在“添加新项 —\<项目名称>”对话框中，单击要用作模板的包  。  
   
      模板列表包括名为“新建 SSIS 包”的默认包模板。 包图标将标识可以用作包模板的模板。  
   
-4.  单击 **“添加”**。  
+4.  单击 **“添加”** 。  

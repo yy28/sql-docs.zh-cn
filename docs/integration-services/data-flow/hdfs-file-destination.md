@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 418921c7ce0f37cbbf7953f6b8023a717f8ae54b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726783"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 文件目标
@@ -57,14 +57,14 @@ Java 版本的体系结构（32/64 位）应与要使用的 SSIS 运行时的体
 ### <a name="set-up-zulus-openjdk"></a>安装 Zulu OpenJDK
 1. 下载并提取安装 zip 包。
 2. 从命令提示符处，运行 `sysdm.cpl`。
-3. 在“高级”选项卡上，选择“环境变量”。
-4. 在“系统变量”部分中，选择“新建”。
-5. 输入变量名称 `JAVA_HOME`。
-6. 选择“浏览目录”，导航到已提取的文件夹，然后选择 `jre` 子文件夹。
-   然后选择“确定”，“变量值”将自动进行填充。
-7. 选择“确定”，关闭“新建系统变量”对话框。
-8. 选择“确定”，关闭“环境变量”对话框。
-9. 选择“确定”以关闭“系统属性”对话框。
+3. 在“高级”选项卡上，选择“环境变量”   。
+4. 在“系统变量”部分中，选择“新建”   。
+5. 输入变量名称 `JAVA_HOME`  。
+6. 选择“浏览目录”，导航到已提取的文件夹，然后选择 `jre` 子文件夹  。
+   然后选择“确定”，“变量值”将自动进行填充   。
+7. 选择“确定”，关闭“新建系统变量”对话框   。
+8. 选择“确定”，关闭“环境变量”对话框   。
+9. 选择“确定”以关闭“系统属性”对话框   。
 
 ### <a name="set-up-oracles-java-se-runtime-environment"></a>安装 Oracle Java SE 运行时环境
 1. 下载并运行 exe 安装程序。

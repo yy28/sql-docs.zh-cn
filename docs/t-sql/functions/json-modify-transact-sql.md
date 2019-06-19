@@ -13,10 +13,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 8c12a2213c39a8a464a29697e5621a382b6daf69
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577459"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
@@ -38,33 +38,33 @@ JSON_MODIFY ( expression , path , newValue )
  *expression*  
  一个表达式。 通常是包含 JSON 文本的变量或列的名称。  
   
- 如果 expression 不包含有效 JSON，则 JSON_MODIFY 返回错误。  
+ 如果 expression 不包含有效 JSON，则 JSON_MODIFY 返回错误   。  
   
- path  
+ path   
  指定要更新的属性的 JSON 路径表达式。
 
- path 具有以下语法：  
+ path 具有以下语法  ：  
   
  `[append] [ lax | strict ] $.<json path>`  
   
 - *append*  
-    指定应将新值追加到通过 \<json path> 引用的数组的可选修饰符。  
+    指定应将新值追加到通过 \<json path> 引用的数组的可选修饰符  。  
   
 - *lax*  
-    指定通过 \<json path> 引用的属性不是必须存在。 如果该属性不存在，则 JSON_MODIFY 尝试在指定路径上插入新值。 如果无法在路径上插入属性，则插入可能会失败。 如果未指定 lax 或 strict，则 lax 是默认模式。  
+    指定通过 \<json path> 引用的属性不是必须存在  。 如果该属性不存在，则 JSON_MODIFY 尝试在指定路径上插入新值。 如果无法在路径上插入属性，则插入可能会失败。 如果未指定 lax  或 strict  ，则 lax  是默认模式。  
   
 - *strict*  
-    指定通过 \<json path> 引用的属性必须处于 JSON 表达式中。 如果该属性不存在，则 JSON_MODIFY 返回错误。  
+    指定通过 \<json path> 引用的属性必须处于 JSON 表达式中  。 如果该属性不存在，则 JSON_MODIFY 返回错误。  
   
-- \<json path>  
+- \<json path>   
     为要更新的属性指定路径。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
-在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值。
+在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值  。
 
-如果 path 格式无效，则 JSON_MODIFY 返回错误。  
+如果 path 格式无效，则 JSON_MODIFY 返回错误   。  
   
  *newValue*  
- path 指定的属性的新值。  
+ path 指定的属性的新值  。  
   
  在宽松模式下，如果新值为 NULL，则 JSON_MODIFY 会删除指定键。  
   
@@ -72,7 +72,7 @@ JSON_MODIFY ( expression , path , newValue )
   
 ## <a name="return-value"></a>返回值
 
- 以正确格式化 JSON 文本的形式返回 expression 的更新值。  
+ 以正确格式化 JSON 文本的形式返回 expression  的更新值。  
   
 ## <a name="remarks"></a>Remarks
 
@@ -246,7 +246,7 @@ PRINT @stats
   
 ### <a name="example---modify-a-json-object"></a>示例 - 修改 JSON 对象
 
- JSON_MODIFY 将 newValue 参数视为纯文本（即使它包含正确格式化 JSON 文本）。 因此，函数的 JSON 输出会使用双引号括起，并且所有特殊字符都会进行转义，如下面的示例中所示。  
+ JSON_MODIFY 将 newValue  参数视为纯文本（即使它包含正确格式化 JSON 文本）。 因此，函数的 JSON 输出会使用双引号括起，并且所有特殊字符都会进行转义，如下面的示例中所示。  
   
  **“数据集属性”**  
   
@@ -274,7 +274,7 @@ PRINT @info
 }
 ```  
   
- 若要避免自动转义，请使用 JSON_QUERY 函数提供 newValue。 JSON_MODIFY 知道 JSON_MODIFY 返回的值是正确格式化 JSON，因此它不会对值进行转义。  
+ 若要避免自动转义，请使用 JSON_QUERY 函数提供 newValue  。 JSON_MODIFY 知道 JSON_MODIFY 返回的值是正确格式化 JSON，因此它不会对值进行转义。  
   
  **“数据集属性”**  
   

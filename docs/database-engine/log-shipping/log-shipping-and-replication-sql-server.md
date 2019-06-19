@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4c92321a8f9e0cb70a1e16a268ef1e84b17946ae
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: be80018d94c0696866d10dcbf1a505a19483a02d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130427"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794626"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>日志传送和复制 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "54130427"
   
 7.  存储过程成功执行后，请重新启动日志读取器代理。 有关详细信息，请参阅[启动和停止复制代理 (SQL Server Management Studio)](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
-8.  可以在发布服务器中应用已经分发到订阅服务器的事务。 为确保分发代理尝试在订阅服务器中重新应用这些事务时不会因错误而失败，请指定标题为“遇到数据一致性错误时继续” 的代理配置文件。  
+8.  可以在发布服务器中应用已经分发到订阅服务器的事务。 为确保分发代理尝试在订阅服务器中重新应用这些事务时不会因错误而失败，请指定标题为“遇到数据一致性错误时继续”  的代理配置文件。  
   
 ### <a name="log-shipping-with-merge-replication"></a>合并复制的日志传送  
  请按照下面过程中的步骤配置合并复制和日志传送。  
@@ -110,7 +110,7 @@ ms.locfileid: "54130427"
   
     -   如果发布未经筛选，则应能通过与最新订阅服务器同步来更新发布数据库。  
   
-    -   如果发布经过筛选，则可能无法更新发布数据库。 请考虑一个表，该表的分区使每个订阅只接收一个区域的客户数据：北、东、南和西。 如果每个数据分区至少有一个订阅服务器，那么使每个分区与订阅服务器同步会更新发布数据库。 但是，以西分区为例，如果其中的数据未复制到任何订阅服务器，那么发布服务器上的此数据就无法更新。 在这种情况下，建议重新初始化所有订阅，以使发布服务器和订阅服务器中的数据收敛。 有关详细信息，请参阅 [重新初始化订阅](../../relational-databases/replication/reinitialize-subscriptions.md)。  
+    -   如果发布经过筛选，则可能无法更新发布数据库。 假设有一个按如下方式分区的表：每个订阅仅收到一个区域（北部、东部、南部和西部）的客户数据。 如果每个数据分区至少有一个订阅服务器，那么使每个分区与订阅服务器同步会更新发布数据库。 但是，以西分区为例，如果其中的数据未复制到任何订阅服务器，那么发布服务器上的此数据就无法更新。 在这种情况下，建议重新初始化所有订阅，以使发布服务器和订阅服务器中的数据收敛。 有关详细信息，请参阅 [重新初始化订阅](../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
      如果与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]版本的订阅服务器同步，则订阅无法匿名；它必须是客户端订阅或服务器订阅（在早期版本中称为本地订阅和全局订阅）。 有关详细信息，请参阅 [同步数据](../../relational-databases/replication/synchronize-data.md)。  
   

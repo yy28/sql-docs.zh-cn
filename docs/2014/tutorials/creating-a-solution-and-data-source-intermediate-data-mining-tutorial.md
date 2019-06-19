@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62855348"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>创建解决方案和数据源（数据挖掘中级教程）
@@ -28,7 +28,7 @@ ms.locfileid: "62855348"
   
 1.  打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。  
+2.  在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。  
   
 3.  从 **“已安装的模板”** 窗格中选择 **“Analysis Services 多维和数据挖掘项目”** 。  
   
@@ -38,26 +38,26 @@ ms.locfileid: "62855348"
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored-optional"></a>更改存储数据挖掘对象的实例（可选）  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“项目”** 菜单中的 **“属性”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“项目”** 菜单中的 **“属性”** 。  
   
-2.  在“属性页”  窗格的左侧，单击“部署” 。  
+2.  在“属性页”  窗格的左侧，单击“部署”  。  
   
 3.  验证 **“服务器”** 名称是否为 **localhost**。 如果使用的是其他实例，请键入该实例的名称。 如果使用的是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的命名实例，请键入计算机名称和实例名称。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-change-the-deployment-properties-for-a-project-optional"></a>更改项目的部署属性（可选）  
   
-1.  在解决方案资源管理器中，右键单击该项目，然后选择 **“属性”**。  
+1.  在解决方案资源管理器中，右键单击该项目，然后选择 **“属性”** 。  
   
      --或者--  
   
-     在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，选择 **“项目”** 菜单中的 **“属性”**。  
+     在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，选择 **“项目”** 菜单中的 **“属性”** 。  
   
-2.  在“属性页”  窗格的左侧，单击“部署” 。  
+2.  在“属性页”  窗格的左侧，单击“部署”  。  
   
-     在 **“选项”** 窗格中选择 **“部署模式”**，将选项设置为 **“全部部署”** 以覆盖对象，或者设置为 **“仅部署更改”** 以更新对象或添加对象。  
+     在 **“选项”** 窗格中选择 **“部署模式”** ，将选项设置为 **“全部部署”** 以覆盖对象，或者设置为 **“仅部署更改”** 以更新对象或添加对象。  
   
 ## <a name="creating-a-data-source"></a>创建数据源  
- 在数据挖掘基础教程中，您创建了一个用于存储 *数据库连接信息的“数据源”*[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 。 在本解决方案中按照相同的步骤创建 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据源。  
+ 在数据挖掘基础教程中，您创建了一个用于存储 *数据库连接信息的“数据源”* [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 。 在本解决方案中按照相同的步骤创建 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据源。  
   
 #### <a name="to-create-a-data-source"></a>创建数据源  
   

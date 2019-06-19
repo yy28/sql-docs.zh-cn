@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9178ee0cbb010f55cf7438c345112c95f3d2b3fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 34e5533d442dbbc91807a533ba53ebcc8b115d19
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508701"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775335"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>在单用户模式下启动 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "52508701"
   
 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的对象资源管理器可能会失败，因为在某些操作中它需要使用多个连接。 若要在单用户模式下管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（仅通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的查询编辑器连接）或者使用 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   
-将 -m 选项与 SQLCMD 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 结合使用时，可将连接限制为指定客户端应用程序。 
+将 -m  选项与 SQLCMD  或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 结合使用时，可将连接限制为指定客户端应用程序。 
 
 > [!NOTE]
-> 在 Linux 上，SQLCMD 必须大写，如下所示。
+> 在 Linux 上，SQLCMD  必须大写，如下所示。
 
-例如，-m"sqlcmd" 将连接限制为单个连接，并且该连接必须将自身标识为 SQLCMD 客户端程序。 当您正在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且未知的客户端应用程序正在占用这个唯一的可用连接时，使用此选项。 若要通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的查询编辑器进行连接，请使用 **-m"Microsoft SQL Server Management Studio - Query"**。  
+例如，-m"sqlcmd"  将连接限制为单个连接，并且该连接必须将自身标识为 SQLCMD  客户端程序。 当您正在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且未知的客户端应用程序正在占用这个唯一的可用连接时，使用此选项。 若要通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的查询编辑器进行连接，请使用 **-m"Microsoft SQL Server Management Studio - Query"** 。  
   
 > [!IMPORTANT]  
 >  不要将此选项作为安全功能使用。 客户端应用程序提供客户端应用程序名称，并且提供假名称来作为连接字符串的一部分。  

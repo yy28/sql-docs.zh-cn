@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a8b92add29a1f18f085baa25cd41e82eb08d6c1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725864"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
@@ -72,16 +72,16 @@ ms.locfileid: "65725864"
   
 3.  在 **“数据流”** 选项卡中，找到适当的源或上游转换，或将其从 **“工具箱”** 拖到设计图面上。  
   
-4.  右键单击组件，并单击“显示高级编辑器”。  
+4.  右键单击组件，并单击“显示高级编辑器”。   
   
 5.  单击 **“输入属性和输出属性”** 选项卡。  
   
-6.  单击“\<组件名称> 输出”，将“IsSorted”属性设置为 True。  
+6.  单击“\<组件名称> 输出”  ，将“IsSorted”  属性设置为 True  。  
   
     > [!NOTE]  
     >  如果手动将输出的 **IsSorted** 属性设置为 **True** 且没有对数据进行排序，则当你运行该包时，可能会在下游合并或合并联接转换中产生缺失数据或错误数据比较。  
   
-7.  展开 **“输出列”**。  
+7.  展开 **“输出列”** 。  
   
 8.  单击要指示为已排序的列，并根据下列准则将其 **SortKeyPosition** 属性设置为非零的整数：  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65725864"
   
 9. 对每个已排序的列，重复步骤 8。  
   
-10. 单击“确定” 。  
+10. 单击“确定”  。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

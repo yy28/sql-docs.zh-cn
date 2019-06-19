@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071224"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>使用 SharePoint 2013 进行 PowerPivot 数据刷新
   SharePoint 2013 中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型刷新设计通过利用 Excel Services 作为主组件，加载和刷新在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器在 SharePoint 场的外部运行。  
   
- 以前的数据刷新体系结构专门依赖于 PowerPivot 系统服务在 SharePoint 模式 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上加载和刷新数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在 PowerPivot 应用程序服务器上在本地运行。 这个新的体系结构还引入了一个新方法，以便将计划信息作为文档库中工作簿项的元数据维护。 SharePoint 2013 Excel Services 中的体系结构支持“交互式数据刷新”  和“计划数据刷新” 。  
+ 以前的数据刷新体系结构专门依赖于 PowerPivot 系统服务在 SharePoint 模式 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上加载和刷新数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在 PowerPivot 应用程序服务器上在本地运行。 这个新的体系结构还引入了一个新方法，以便将计划信息作为文档库中工作簿项的元数据维护。 SharePoint 2013 Excel Services 中的体系结构支持“交互式数据刷新”  和“计划数据刷新”  。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66071224"
   
 1.  在 SharePoint 文档库中，在浏览器中打开一个 PowerPivot 工作簿。  
   
-2.  在浏览器窗口中，单击 **“数据”** 菜单，然后单击 **“刷新选定的连接”** 或 **“刷新所有连接”**。  
+2.  在浏览器窗口中，单击 **“数据”** 菜单，然后单击 **“刷新选定的连接”** 或 **“刷新所有连接”** 。  
   
 3.  Excel Services 将加载 PowerPivot 数据库，对该数据库进行处理，然后查询该数据库以便刷新 Excel 工作簿缓存。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66071224"
  ![interactive data refresh](../media/as-interactive-datarefresh-sharepoint2013.gif "interactive data refresh")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> 带有工作簿数据连接和交互式数据刷新的 Windows 身份验证  
- Excel Services 向 Analysis Services 服务器发送一个处理命令，该命令指示该服务器模拟某一用户帐户。 为了获取足以执行用户模拟-委托进程的系统权限，该 Analysis Services 服务帐户要求对本地服务器具有“以操作系统方式执行”特权。 该 Analysis Services 服务器还需要能够将用户的凭据委托给数据源。 查询结果被发送到 Excel Services。  
+ Excel Services 向 Analysis Services 服务器发送一个处理命令，该命令指示该服务器模拟某一用户帐户。 为了获取足以执行用户模拟-委托进程的系统权限，该 Analysis Services 服务帐户要求对本地服务器具有“以操作系统方式执行”  特权。 该 Analysis Services 服务器还需要能够将用户的凭据委托给数据源。 查询结果被发送到 Excel Services。  
   
  典型的用户体验：当客户在包含 PowerPivot 模型的 Excel 2013 工作簿中选择"刷新所有连接"时，他们将看到类似以下的错误消息：  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66071224"
   
     1.  运行"`secpol.msc`"  
   
-    2.  依次单击 **“本地安全策略”**、 **“本地策略”** 和 **“用户权限分配”**。  
+    2.  依次单击 **“本地安全策略”** 、 **“本地策略”** 和 **“用户权限分配”** 。  
   
     3.  添加该服务帐户。  
   
@@ -149,9 +149,9 @@ ms.locfileid: "66071224"
   
 -   请参阅这些步骤之后的图示。  
   
-1.  在 SharePoint 文档库中，单击**打开菜单**(**...**) 的 PowerPivot 工作簿。  
+1.  在 SharePoint 文档库中，单击**打开菜单**( **...** ) 的 PowerPivot 工作簿。  
   
-2.  单击第二个 **“打开菜单”** ，然后单击 **“管理 PowerPivot 数据刷新”**。  
+2.  单击第二个 **“打开菜单”** ，然后单击 **“管理 PowerPivot 数据刷新”** 。  
   
 3.  在 **“管理数据刷新”** 页上，单击 **“启用”** ，然后配置刷新计划。  
   
@@ -166,14 +166,14 @@ ms.locfileid: "66071224"
  ![管理数据刷新上下文菜单](../media/as-manage-datarefresh-sharepoint2013.gif "管理数据刷新上下文菜单")  
   
 > [!TIP]  
->  有关 online 刷新工作簿从 SharePoint 的信息，请参阅[刷新 Excel 工作簿使用嵌入的 PowerPivot 模型从 SharePoint Online （白皮书）](https://technet.microsoft.com/library/jj992650.aspx) (https://technet.microsoft.com/library/jj992650.aspx)。  
+>  有关 online 刷新工作簿从 SharePoint 的信息，请参阅[刷新 Excel 工作簿使用嵌入的 PowerPivot 模型从 SharePoint Online （白皮书）](https://technet.microsoft.com/library/jj992650.aspx) (https://technet.microsoft.com/library/jj992650.aspx) 。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 中计划的数据刷新体系结构  
  下图总结了 SharePoint 2013 和 SQL Server 2012 SP1 中的数据刷新体系结构。  
   
  ![SQL Server 2012 SP1 数据刷新的体系结构](../media/as-scheduled-data-refresh2012sp1-architecture.gif "的 SQL Server 2012 SP1 数据刷新体系结构")  
   
-||Description||  
+||描述||  
 |-|-----------------|-|  
 |**(1)**|Analysis Services 引擎|在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上的数据模型处理。 该服务器在 SharePoint 场的外部运行。|  
 |**(2)**|用户界面|该用户界面由两页构成。 一页用于定义计划，另一页用于查看刷新历史记录。 这两页并不直接访问 PowerPivot 服务应用程序数据库，但使用 PowerPivot 系统服务访问这些数据库。|  
@@ -200,11 +200,11 @@ ms.locfileid: "66071224"
   
  日志项包含：  
   
--   “PowerPivot 服务”  的“区域” 。  
+-   “PowerPivot 服务”  的“区域”  。  
   
--   “数据刷新” 的类别。  
+-   “数据刷新”  的类别。  
   
- 查看 **“配置诊断日志记录”**。 有关详细信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)。  
+ 查看 **“配置诊断日志记录”** 。 有关详细信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)。  
   
 ##  <a name="datarefresh_additional_authentication"></a> 其他身份验证注意事项  
  在 Excel 2013 中， **“Excel Services 身份验证设置”** 对话框中的设置确定 Excel Services 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用于数据刷新的 Windows 标识。  
@@ -221,7 +221,7 @@ ms.locfileid: "66071224"
   
 2.  在功能区中单击 **“连接”** 。  
   
-3.  在 **“工作簿连接”** 对话框中，选择连接，然后单击 **“属性”**。  
+3.  在 **“工作簿连接”** 对话框中，选择连接，然后单击 **“属性”** 。  
   
 4.  在中**连接属性**对话框中，单击**定义**，然后单击**身份验证设置...** 按钮。  
   

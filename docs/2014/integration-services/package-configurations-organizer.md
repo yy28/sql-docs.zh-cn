@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056968"
 ---
 # <a name="package-configurations-organizer"></a>“包配置组织程序”
@@ -60,7 +60,7 @@ ms.locfileid: "66056968"
  通过重新运行包配置向导来编辑现有配置。  
   
  **删除**  
- 选择一个配置，再单击“删除”。  
+ 选择一个配置，再单击“删除”。   
   
  **箭头**  
  在列表中选择一个配置，再使用向上键和向下键可将其上移或下移。 配置将按照在列表中的显示顺序来进行加载。  

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 519bedd5dd014a92239d58a50678df9a54945d52
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713943"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>包开发的故障排除工具
@@ -34,11 +34,11 @@ ms.locfileid: "65713943"
 ## <a name="troubleshooting-design-time-validation-issues"></a>设计时验证问题故障排除  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，当打开包后，系统将在验证所有数据流组件值之前验证所有连接，并设置速度较慢或无法脱机工作的所有连接。 这有助于减少验证包数据流时的延迟时间。  
   
- 打开包后，还可以通过右键单击“连接管理器”区域中的连接管理器并单击“脱机工作”来关闭连接。 这可以在 SSIS 设计器中加快执行操作。  
+ 打开包后，还可以通过右键单击“连接管理器”  区域中的连接管理器并单击“脱机工作”  来关闭连接。 这可以在 SSIS 设计器中加快执行操作。  
   
  已设置为脱机工作的连接将保持脱机状态，直到您执行下列操作之一：  
   
--   通过右键单击 SSIS 设计器的“连接管理器”区域中的连接管理器并单击“测试连接”来测试连接。  
+-   通过右键单击 SSIS 设计器的“连接管理器”  区域中的连接管理器并单击“测试连接”  来测试连接。  
   
      例如，当打开包后，连接最初设置为脱机工作。 修改连接字符串以解决该问题，并单击 **“测试连接”** 以测试连接。  
   

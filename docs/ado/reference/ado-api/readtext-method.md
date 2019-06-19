@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5e7f9a484ecb873a141f9b91a88c64f65ff25336
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712206"
 ---
 # <a name="readtext-method"></a>ReadText 方法
@@ -47,7 +47,7 @@ String = Stream.ReadText ( NumChars)
 > [!NOTE]
 >  **ReadText**方法使用文本流 ([类型](../../../ado/reference/ado-api/type-property-ado-stream.md)是**adTypeText**)。 对于二进制流 (**类型**是**adTypeBinary**)，使用[读取](../../../ado/reference/ado-api/read-method.md)。  
   
- 导致大量的通过返回的 XML 数据的查询**ReadText** ActiveX 数据对象 (ADO) Stream 对象的方法可能需要大量时间来执行; 如果这是在从调用在 COM + 组件ASP 页上，用户的会话可能会超时。ADO Stream 对象数据将从 utf-8 编码转换到 Unicode;经常性内存重新分配操作所涉及如此大的数据的转换是数量的非常耗时。 若要解决，请重复的调用**ReadText**方法 ADO 命令对象，并指定较小数目的字符。 测试已表明 128 K (131,072) 与等效的值是最佳。 随着减小该值，而减少响应时间。 有关详细信息，请参阅知识库文章 280067，"PRB:使用 ADO 流对象的 ReadText 方法从 SQL Server 2000 中检索非常大的 XML 文档可能会很慢"，在中 Microsoft 知识库 https://support.microsoft.com。  
+ 导致大量的通过返回的 XML 数据的查询**ReadText** ActiveX 数据对象 (ADO) Stream 对象的方法可能需要大量时间来执行; 如果这是在从调用在 COM + 组件ASP 页上，用户的会话可能会超时。ADO Stream 对象数据将从 utf-8 编码转换到 Unicode;经常性内存重新分配操作所涉及如此大的数据的转换是数量的非常耗时。 若要解决，请重复的调用**ReadText**方法 ADO 命令对象，并指定较小数目的字符。 测试已表明 128 K (131,072) 与等效的值是最佳。 随着减小该值，而减少响应时间。 有关详细信息，请参阅知识库文章 280067，"PRB:使用 ADO 流对象的 ReadText 方法从 SQL Server 2000 中检索非常大的 XML 文档可能会很慢"，在中 Microsoft 知识库 https://support.microsoft.com 。  
   
 ## <a name="applies-to"></a>适用范围  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

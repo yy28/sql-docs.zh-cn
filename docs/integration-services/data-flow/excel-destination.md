@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bca1c858dd57d13ed89b817c97818784cf275a2b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726891"
 ---
 # <a name="excel-destination"></a>Excel 目标
@@ -68,10 +68,10 @@ ms.locfileid: "65726891"
   
 ### <a name="static-options"></a>静态选项  
  **Excel 连接管理器**  
- 从列表中选择现有的 Excel 连接管理器，或单击“新建”创建新连接。  
+ 从列表中选择现有的 Excel 连接管理器，或单击“新建”  创建新连接。  
   
  **新建**  
- 使用“Excel 连接管理器”对话框创建一个新连接管理器。  
+ 使用“Excel 连接管理器”  对话框创建一个新连接管理器。  
   
  **数据访问模式**  
  指定从源选择数据的方法。  
@@ -83,13 +83,13 @@ ms.locfileid: "65726891"
 |SQL 命令|使用 SQL 查询将数据加载到 Excel 目标中。|  
   
  **Excel 表的名称**  
- 从下拉列表中选择 Excel 目标。 如果此列表为空，请单击 **“新建”**。  
+ 从下拉列表中选择 Excel 目标。 如果此列表为空，请单击 **“新建”** 。  
   
  **新建**  
- 单击“新建”将启动“创建表”对话框。 当您单击 **“确定”** 时，此对话框将创建 **“Excel 连接管理器”** 指向的 Excel 文件。  
+ 单击“新建”将启动“创建表”对话框。   当您单击 **“确定”** 时，此对话框将创建 **“Excel 连接管理器”** 指向的 Excel 文件。  
   
  **查看现有数据**  
- 使用“预览查询结果”对话框预览结果。 预览最多可以显示 200 行。  
+ 使用“预览查询结果”  对话框预览结果。 预览最多可以显示 200 行。  
   
 ### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
@@ -103,13 +103,13 @@ ms.locfileid: "65726891"
   
 #### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。  
+ 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。    
   
  **生成查询**  
- 使用“查询生成器”对话框可直观地构造 SQL 查询。  
+ 使用“查询生成器”  对话框可直观地构造 SQL 查询。  
   
  **“浏览”**  
- 使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
+ 使用“打开”  对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
  验证查询文本的语法。  
@@ -138,12 +138,12 @@ ms.locfileid: "65726891"
  查看数据源的名称。  
   
  **列**  
- 查看在“Excel 源编辑器”对话框中“连接管理器”节点上选择的外部（源）列。  
+ 查看在“Excel 源编辑器”对话框中“连接管理器”节点上选择的外部（源）列   。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  

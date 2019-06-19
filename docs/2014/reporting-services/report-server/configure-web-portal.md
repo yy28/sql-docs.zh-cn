@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aff33ad5722ad4b08c1429b795607d1217b95e39
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103939"
 ---
 # <a name="configure-report-manager-native-mode"></a>配置报表管理器（本机模式）
@@ -69,7 +69,7 @@ ms.locfileid: "66103939"
   
 3.  为报表管理器输入唯一的虚拟目录名。  
   
-4.  单击 **“应用”**。  
+4.  单击 **“应用”** 。  
   
 5.  如果使用的是 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 或 Windows Server 2008，则可能还需要执行其他步骤才能使用报表管理器。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66103939"
   
 #### <a name="to-configure-a-static-report-server-url"></a>配置静态报表服务器 URL  
   
-1.  在文本编辑器中打开 **RSReportServer.config** 文件。 默认情况下，该文件位于 \Program Files\Microsoft SQL Server\MSRS12.\<实例名>\Reporting Services\ReportServer。  
+1.  在文本编辑器中打开 **RSReportServer.config** 文件。 默认情况下，该文件位于 \Program Files\Microsoft SQL Server\MSRS12.\<实例名>\Reporting Services\ReportServer  。  
   
 2.  查找 `ReportServerURL`。  
   
@@ -147,13 +147,13 @@ ms.locfileid: "66103939"
   
 2.  打开 Internet Explorer。  
   
-3.  输入报表管理器 URL。 默认情况下，该 URL 为 http://\<your-server-name>/reports，但如果已将 Reporting Services 作为命名实例安装，则默认 URL 将为 http://\<your-server-name>/reports\<_instancename>。  
+3.  输入报表管理器 URL。 默认情况下，该 URL 为 http://\<your-server-name>/reports，但如果已将 Reporting Services 作为命名实例安装，则默认 URL 将为 http://\<your-server-name>/reports\<_instancename>    。  
   
-4.  单击 **“网站设置”**。  
+4.  单击 **“网站设置”** 。  
   
 5.  在 **“常规”** 选项卡上的 **“名称”** 中，将 **SQL Server Reporting Services** 替换为其他名称。  
   
-6.  单击 **“应用”**。  
+6.  单击 **“应用”** 。  
   
 ##  <a name="DisableRM"></a> Turn Off Report Manager  
  在以下情况下可以关闭报表管理器：如果有可提供等效功能的自定义应用程序，或正在使用其他服务实例的报表管理器应用程序。 若要关闭报表管理器，可以修改 RSReportServer.config 文件。  

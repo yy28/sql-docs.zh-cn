@@ -1,5 +1,5 @@
 ---
-title: 示例：使用证书设置数据库镜像 (Transact-SQL) | Microsoft Docs
+title: 例如：使用证书设置数据库镜像 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e095d56a6b68e581a7d6f9184581575fac9f6c4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 06d8ddd5710b41a80a41643bc2df194ad9c3981c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795483"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>示例：使用证书设置数据库镜像 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例如：使用证书设置数据库镜像 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此示例演示了使用基于证书的身份验证创建数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 建议您对数据库镜像连接进行加密，除非您能够保证网络的安全。  
   
@@ -263,7 +263,7 @@ ms.locfileid: "52542736"
     ```  
   
     > [!NOTE]  
-    >  如果打算在具有自动故障转移功能的高安全性模式下运行，请将事务安全性设置为 FULL（默认设置），并在执行第二个 SET PARTNER 'partner_server'**** 语句后尽快添加见证服务器。 注意，必须首先为出站连接和入站连接配置见证服务器。  
+    >  如果打算在具有自动故障转移功能的高安全性模式下运行，请将事务安全性设置为 FULL（默认设置），并在执行第二个 SET PARTNER 'partner_server' **** 语句后尽快添加见证服务器。 注意，必须首先为出站连接和入站连接配置见证服务器。  
   
  [[示例顶部]](#ExampleH2)  
   

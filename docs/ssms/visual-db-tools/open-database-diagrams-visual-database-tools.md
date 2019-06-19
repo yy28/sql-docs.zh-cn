@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ac73a53c615ceb538078eb6025968c91936190a2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095194"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>打开数据库关系图 (Visual Database Tools)
@@ -28,13 +28,13 @@ ms.locfileid: "65095194"
   
 ### <a name="to-open-a-database-diagram"></a>打开数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”  文件夹。  
   
 2.  双击要打开的数据库关系图的名称。  
   
     -或 -  
   
-    右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”。  
+    右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”  。  
   
 此时，将在数据库关系图设计器中打开该数据库关系图，您可以在其中编辑关系图。  
   

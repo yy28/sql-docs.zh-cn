@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 21b12ce8d9c9f2c63265f79f5c8c5614dc16f9fa
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089467"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>将数据库关系图复制到剪贴板 (Visual Database Tools)
@@ -32,7 +32,7 @@ ms.locfileid: "65089467"
     > [!NOTE]  
     > 只有数据库关系图的所有者或数据库的 db_owner 角色成员才能打开关系图。  
   
-2.  右键单击空白区域，然后选择“将关系图复制到剪贴板”。  
+2.  右键单击空白区域，然后选择“将关系图复制到剪贴板”  。  
   
     现在，整个数据库关系图的图像便已复制到系统剪贴板中。  
   

@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2afb9294fa75926b6f6a78ec8b889a2e38a851a4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090341"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>插入外侧 Transact-SQL 代码段
   外侧代码段是一种模板，可将其作为在 BEGIN、IF 或 WHILE 块中插入一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起点。  
   
 ## <a name="inserting-surround-with-snippets"></a>插入外侧代码段  
- 外侧代码段可以通过以下三种方式之一实现：键盘快捷键、“编辑”菜单和上下文菜单。  
+ 外侧代码段可以通过以下三种方式之一实现：键盘快捷键、“编辑”  菜单和上下文菜单。  
   
  插入代码段后，必须更改替换文本，以形成有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有关详细信息，请参阅 [完成 Transact-SQL 代码段](complete-transact-sql-snippets.md)。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "66090341"
   
     -   按 Ctrl+K、Ctrl+S。  
   
-    -   在 **“编辑”** 菜单中，指向 **“IntelliSense”**，然后选择 **“外侧代码”** 命令。  
+    -   在 **“编辑”** 菜单中，指向 **“IntelliSense”** ，然后选择 **“外侧代码”** 命令。  
   
-    -   右键单击选定的文本，然后在上下文菜单中选择“外侧代码”命令。  
+    -   右键单击选定的文本，然后在上下文菜单中选择“外侧代码”  命令。  
   
 3.  使用鼠标或通过键入代码段名称并按 Tab 或 Enter 从列表中选择代码段名称（BEGIN、IF 或 WHILE）。  
   

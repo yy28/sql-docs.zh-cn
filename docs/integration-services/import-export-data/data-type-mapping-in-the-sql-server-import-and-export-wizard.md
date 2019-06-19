@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71e52e1e20575f52e4aefde27e16578411c2ea2d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723825"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导中的数据类型映射
@@ -26,8 +26,8 @@ ms.locfileid: "65723825"
   
 ##  <a name="wizardMapping"></a> 向导如何在源和目标之间映射数据类型？
 向导使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装的映射文件将数据类型从一个数据库系统或版本映射到另一个数据库系统或版本。 例如，它可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型映射到 Oracle 数据类型。 默认情况下，XML 格式的映射文件安装在以下文件夹中。
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\**（针对 64 位）
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\**（针对 32 位）。  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\** （针对 64 位）
+-   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** （针对 32 位）。  
   
  如果编辑现有映射文件，或者向文件夹中添加新的映射文件，则必须关闭并重新打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，以便加载新的或更改过的映射文件。  
  

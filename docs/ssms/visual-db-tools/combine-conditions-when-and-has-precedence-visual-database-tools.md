@@ -18,15 +18,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1e2df18e14fea713dae58fa080256210e97c3c7c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65093830"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>在 AND 优先时组合条件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-若要使用 AND 组合条件，应向查询中添加两次列，一个条件一次。 若要使用 OR 组合条件，可将第一个条件放在“筛选器”列中，并将其他条件放在“或...”列中。  
+若要使用 AND 组合条件，应向查询中添加两次列，一个条件一次。 若要使用 OR 组合条件，可将第一个条件放在“筛选器”列中，并将其他条件放在“或...”  列中。  
   
 例如，假设要查找在公司的低级职位工作五年以上的雇员，或查找中级职位的雇员而不考虑其雇佣日期。 此查询需要三个条件，其中两个条件用 AND 链接：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "65093830"
   
 1.  在 [“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的数据列。 如果希望使用通过 AND 链接的两个或多个条件搜索同一列，则对于每个要搜索的值都必须将该数据列名添加到网格中一次。  
   
-2.  在“筛选器”列中，输入要用 AND 链接的所有条件。 例如，若要用 AND 链接搜索 `hire_date` 列和 `job_lvl` 列的条件，请在“筛选器”列中分别输入值 `< '1/1/91'` 和 `= 100`。  
+2.  在“筛选器”  列中，输入要用 AND 链接的所有条件。 例如，若要用 AND 链接搜索 `hire_date` 列和 `job_lvl` 列的条件，请在“筛选器”列中分别输入值 `< '1/1/91'` 和 `= 100`。  
   
     这些网格项在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)内的语句中生成以下 WHERE 子句：  
   
@@ -49,9 +49,9 @@ ms.locfileid: "65093830"
       (job_lvl = 100)  
     ```  
   
-3.  在“或...”网格列中，输入要用 OR 链接的条件。 例如，若要添加在 `job_lvl` 列中搜索其他值的条件，请在“或...”列中输入其他值，例如 `= 200`。  
+3.  在“或...”  网格列中，输入要用 OR 链接的条件。 例如，若要添加在 `job_lvl` 列中搜索其他值的条件，请在“或...”  列中输入其他值，例如 `= 200`。  
   
-    在“或...”列中添加值时，将向 SQL 窗格内的语句中的 WHERE 子句中添加另一个条件：  
+    在“或...”  列中添加值时，将向 SQL 窗格内的语句中的 WHERE 子句中添加另一个条件：  
   
     ```  
     WHERE (hire_date < '01/01/91' ) AND  

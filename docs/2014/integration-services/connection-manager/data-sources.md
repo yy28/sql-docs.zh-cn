@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fa4a428c1d1f290ceadee19d21f3b8f0b8bd942
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62833837"
 ---
 # <a name="data-sources"></a>“数据源”
@@ -27,7 +27,7 @@ ms.locfileid: "62833837"
 > [!NOTE]  
 >  只能将数据源添加到配置为使用包部署模型的项目。 如果将项目配置为使用项目部署模型，您使用在项目级别创建的连接管理器来共享连接，而不使用数据源。  
 >   
->  有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)。 有关将项目转换为项目部署模型的详细信息，请参阅 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)。  
+>  有关部署模型的详细信息，请参阅 [部署的项目和包](../packages/deploy-integration-services-ssis-projects-and-packages.md)。 有关将项目转换为项目部署模型的详细信息，请参阅 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)。  
   
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用数据源的好处如下：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62833837"
 -   数据源提供数据源对象与其包引用之间的同步。 如果数据源和引用它的包在同一个项目中，在数据源更改时就会自动更新数据源引用的连接字符串属性。  
   
 ## <a name="reference-data-sources"></a>引用数据源  
- 要将数据源对象添加到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，请在“解决方案资源管理器”中右键单击“数据源”文件夹，然后单击“新建数据源”。 该项将添加到 **“数据源”** 文件夹。 如果要使用在其他项目中创建的数据源对象，则必须首先将其添加到该项目。  
+ 要将数据源对象添加到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，请在“解决方案资源管理器”  中右键单击“数据源”  文件夹，然后单击“新建数据源”  。 该项将添加到 **“数据源”** 文件夹。 如果要使用在其他项目中创建的数据源对象，则必须首先将其添加到该项目。  
   
  将引用数据源对象的连接管理器添加到包之后，便可以在该包中使用数据源对象。 可以在生成包控制流和数据流之前将其添加到包中，也可以作为构造控制流和数据流的一个步骤来添加。  
   

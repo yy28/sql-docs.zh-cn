@@ -21,14 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725251"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>安全角色（Analysis Services - 多维数据）
-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中使用角色来管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象和数据的安全性。 在基本术语中，角色与 Microsoft Windows 用户和用户组的安全性标识符 (SID) 相关联，用户和用户组具有为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例管理的对象定义的特定访问权限和权限。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]提供了两类角色：  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中使用角色来管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象和数据的安全性。 在基本术语中，角色与 Microsoft Windows 用户和用户组的安全性标识符 (SID) 相关联，用户和用户组具有为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例管理的对象定义的特定访问权限和权限。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]提供了两类角色：  
   
 -   服务器角色，它是一个固定角色，用于提供对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例的管理员访问权限。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62725251"
   
 |操作|值|解释|  
 |------------|------------|-----------------|  
-|处理|{`true`, `false`}<br /><br /> `false`Default=|如果值为 `true`，则成员可以处理该对象以及该对象中包含的任何对象。<br /><br /> 处理权限不适用于挖掘模型。 <xref:Microsoft.AnalysisServices.MiningModel> 权限始终从 <xref:Microsoft.AnalysisServices.MiningStructure> 继承。|  
+|Process|{`true`, `false`}<br /><br /> `false`Default=|如果值为 `true`，则成员可以处理该对象以及该对象中包含的任何对象。<br /><br /> 处理权限不适用于挖掘模型。 <xref:Microsoft.AnalysisServices.MiningModel> 权限始终从 <xref:Microsoft.AnalysisServices.MiningStructure> 继承。|  
 |读取定义|{`None`, `Basic`, `Allowed`}<br /><br /> `None`Default=|指定成员是否能读取与对象关联的数据定义 (ASSL)。<br /><br /> 如果值为 `Allowed`，则成员可读取与对象关联的 ASSL。<br /><br /> `Basic` 和 `Allowed` 由对象中包含的对象继承。 `Allowed` 可覆盖 `Basic` 和 `None`。<br /><br /> 对象的 DISCOVER_XML_METADATA 要求值为 `Allowed`。 创建链接对象和本地多维数据集时，要求值为 `Basic`。|  
 |读取|{`None`, `Allowed`}<br /><br /> Default=`None`（DimensionPermission 除外，其中 default=`Allowed`）|指定成员是否可读取架构行集和数据内容。<br /><br /> `Allowed` 提供有关数据库，这样您发现数据库的读取访问权限。<br /><br /> 对于多维数据集，如果值为 `Allowed`，则可读取架构行集内部并可访问多维数据集内容（除非受到 <xref:Microsoft.AnalysisServices.CellPermission> 和 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 的约束）。<br /><br /> 对于维度，如果值为 `Allowed`，则可读取维度中的所有属性（除非受到 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 的约束）。 读取权限仅用于对 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 的静态继承。 对于维度，如果值为 `None`，则将隐藏维度，且仅授予对可聚合属性的默认成员的访问权限；如果维度包含不可聚合属性，则将会引发错误。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.MiningModelPermission>，如果值为 `Allowed`，则将授予查看架构行集中对象并执行预测联接的权限。<br /><br /> **NoteAllowed**需要读取或写入到数据库中的任何对象。|  
 |写入|{`None`, `Allowed`}<br /><br /> `None`Default=|指定成员是否拥有对父对象的数据的写入权限。<br /><br /> 该权限适用于 <xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.Cube> 和 <xref:Microsoft.AnalysisServices.MiningModel> 子类。 但不适用于数据库 <xref:Microsoft.AnalysisServices.MiningStructure> 子类，这将会生成验证错误。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.Dimension>，如果值为 `Allowed`，则将授予对维度中所有属性的写入权限。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.Cube>，如果值为 `Allowed`，则对于定义为 Type=writeback 的分区，则将授予对其多维数据集的单元的写入权限。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.MiningModel>，如果值为 `Allowed`，则将授予修改模型内容的权限。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.MiningStructure>，值 `Allowed` 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中没有特定含义。 **注意：** 写入不能设置为`Allowed`除非读取也设置为 `Allowed`|  

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789861"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)
@@ -69,7 +69,7 @@ ms.locfileid: "62789861"
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")||是|是|**更快故障转移到本地副本**|如果某个 WSFC 节点正在运行 Windows Server 2008 R2 Service Pack 1 (SP1)，请确保安装了在知识库文章 2687741 中介绍的修补程序。<br /><br /> 此修补程序可以改进 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移到本地副本的性能。|KB 2687741:[提高了 SQL Server 2012 中的"AlwaysOn 可用性组"功能的修补程序是适用于 Windows Server 2008 R2](https://support.microsoft.com/KB/2687741)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|是|是|是|**非对称存储的故障转移群集实例 (Fci)**|如果将为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用任何故障转移群集实例 (FCI)，则安装 Windows Server 2008 修补程序 976097。<br /><br /> 此修补程序使故障转移群集管理 Microsoft 管理控制台 (MMC) 管理单元以支持只对某些 WSFC 节点可用的非对称存储共享磁盘。|KB 976097:[用于将非对称存储的支持添加到故障转移群集管理 mmc 管理单元运行的 Windows Server 2008 或 Windows Server 2008 R2 的故障转移群集的修补程序](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 体系结构指南：使用故障转移群集实例和可用性组生成高可用性和灾难恢复解决方案](https://technet.microsoft.com/library/jj215886.aspx)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|是|是|不适用|**Internet 协议安全性 (IPsec)**|如果您的环境使用 IPsec 连接，则当客户端计算机与虚拟网络名称重新建立 IPsec 连接（在此上下文中将连接到可用性组侦听器）时，可能会出现长时间的延迟（约两到三分钟）。 如果使用 IPsec 连接，我们建议您查看知识库文章 (KB 980915) 中详述的特定应用场景。|KB 980915:[重新建立 IPSec 连接从运行 Windows Server 2003、 Windows Vista、 Windows Server 2008、 Windows 7 或 Windows Server 2008 R2 的计算机时出现长时间延迟](https://support.microsoft.com/kb/980915)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|是|是|是|**IPv6**|如果使用 IPv6，根据您的 Windows Server 操作系统，我们建议您查看知识库文章 2578103 或 2578113 中详述的特定应用场景。<br /><br /> 如果 Windows Server 拓扑使用 IP 版本 6 (IPv6)，则 WSFC 群集服务需要大约 30 秒的时间来对 IPv6 IP 地址进行故障转移。 这会导致客户端等待约 30 秒来重新连接该 IPv6 IP 地址。|KB 2578103 (Windows Server 2008):[群集服务需要大约 30 秒 Windows Server 2008 中的 IPv6 IP 地址进行故障转移](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2):**Windows Server 2008 R2:**[群集服务需要大约 30 秒 Windows Server 2008 R2 中的 IPv6 IP 地址进行故障转移](https://support.microsoft.com/kb/2578113)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|是|是|是|**IPv6**|如果使用 IPv6，根据您的 Windows Server 操作系统，我们建议您查看知识库文章 2578103 或 2578113 中详述的特定应用场景。<br /><br /> 如果 Windows Server 拓扑使用 IP 版本 6 (IPv6)，则 WSFC 群集服务需要大约 30 秒的时间来对 IPv6 IP 地址进行故障转移。 这会导致客户端等待约 30 秒来重新连接该 IPv6 IP 地址。|KB 2578103 (Windows Server 2008):[群集服务需要大约 30 秒 Windows Server 2008 中的 IPv6 IP 地址进行故障转移](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2):**Windows Server 2008 R2:** [群集服务需要大约 30 秒 Windows Server 2008 R2 中的 IPv6 IP 地址进行故障转移](https://support.microsoft.com/kb/2578113)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|是|是|是|**没有路由器之间群集和应用程序服务器**|如果故障转移群集与应用程序服务器之间不存在路由器，则群集服务对网络相关资源进行故障转移的速度会很慢。 这在可用性组执行故障转移之后会延迟客户端重新连接。 在缺少路由器时，我们建议您查看知识库文章 2582281 中详述的特定应用场景并安装该修补程序（如果适用于您的环境）。|KB 2582281:[如果群集与应用程序服务器之间不存在路由器，则故障转移操作的速度会很慢](https://support.microsoft.com/kb/2582281)|  
   
 ###  <a name="ComputerRecommendations"></a> 针对承载可用性副本的计算机的建议（Windows 系统）  
@@ -99,7 +99,7 @@ ms.locfileid: "62789861"
   
 3.  使用 `Get-ClusterResource` cmdlet 查找网络名称资源，然后使用 `Set-ClusterParameter` cmdlet 设置 `HostRecordTTL` 值，如下所示：  
   
-     Get-ClusterResource “\<NetworkResourceName>” | Set-ClusterParameter HostRecordTTL \<TimeInSeconds>  
+     Get-ClusterResource “\<NetworkResourceName>” | Set-ClusterParameter HostRecordTTL \<TimeInSeconds>    
   
      下面的 PowerShell 示例为名为“`SQL Network Name (SQL35)`”的网络名称资源将 HostRecordTTL 设置为 300 秒。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62789861"
 -   [Windows 2008 R2 故障转移多站点群集](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
   
 ##  <a name="ServerInstance"></a> SQL Server 实例先决条件和限制  
- 每个可用性组均要求称作“可用性副本” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的一组故障转移伙伴，它们由  的实例承载。 给定的服务器实例可以是独立实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI)。  
+  每个可用性组均要求称作“可用性副本” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的一组故障转移伙伴，它们由  的实例承载。 给定的服务器实例可以是独立实例  或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例  (FCI)。  
   
  
   
@@ -208,11 +208,11 @@ ms.locfileid: "62789861"
 > [!NOTE]  
 >  从 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中开始，AlwaysOn 故障转移群集实例支持 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 和 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 中的群集共享卷 (CSV)。 有关 CSV 的详细信息，请参阅 [了解故障转移群集中的群集共享卷](https://technet.microsoft.com/library/dd759255.aspx)。  
   
--   FCI 的群集节点仅可以托管给定可用性组的一个副本：如果在 FCI 上添加可用性副本，是 FCI 的可能所有者的 WSFC 群集节点不能托管同一个可用性组的另一个副本。  
+-   FCI 的群集节点仅可以托管给定可用性组的一个副本  ：如果在 FCI 上添加可用性副本，是 FCI 的可能所有者的 WSFC 群集节点不能托管同一个可用性组的另一个副本。  
   
      此外，其他每个副本都必须由同一个 WSFC 群集中不同 WSFC 节点上驻留的 SQL Server 2012 实例承载。 唯一的例外是在迁移到另一个 WSFC 群集时，此时一个可用性组可能会暂时跨两个群集。  
   
--   FCI 不支持可用性组自动故障转移：FCI 不支持通过可用性组来自动进行故障转移，因此只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
+-   FCI 不支持可用性组自动故障转移  ：FCI 不支持通过可用性组来自动进行故障转移，因此只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
   
 -   **更改 FCI 网络名称：** 如果你需要更改托管可用性副本的 FCI 的网络名称，则需要从副本的可用性组中删除它，然后将它添加回可用性组中。 您不能删除主副本，因此，如果您在重命名承载主副本的 FCI，则应故障转移到某一辅助副本，然后删除之前的主副本并将其添加回去。 请注意，重命名 FCI 可能会更改其数据库镜像端点的 URL。 当您添加副本时，请确保指定当前端点的 URL。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "62789861"
   
 -   **可用性副本：** 每个可用性组都支持一个主副本和最多八个辅助副本。 所有副本都可在异步提交模式下运行，或最多三个副本可在同步提交模式下运行（具有两个同步辅助副本的一个主副本）。  
   
--   每台计算机的可用性组和可用性数据库的最大数目：可以在计算机（VM 或物理机）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 对每个物理计算机承载 10 个可用性组和 100 个数据库进行了广泛测试。 系统过载的信号可能包括但不限于工作线程用尽、AlwaysOn 系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
+-   每台计算机的可用性组和可用性数据库的最大数目  ：可以在计算机（VM 或物理机）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 对每个物理计算机承载 10 个可用性组和 100 个数据库进行了广泛测试。 系统过载的信号可能包括但不限于工作线程用尽、AlwaysOn 系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
   
 -   **不要使用故障转移群集管理器来操作可用性组：**  
   
@@ -264,7 +264,7 @@ ms.locfileid: "62789861"
 ###  <a name="RequirementsAG"></a> 先决条件（可用性组）  
  在创建或重新配置可用性组配置时，请确保您遵守以下要求。  
   
-||先决条件|Description|  
+||先决条件|描述|  
 |-|------------------|-----------------|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您计划使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 承载可用性副本，则请确保您理解 FCI 限制并且满足 FCI 要求。|[有关使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和限制](#FciArLimitations) （本主题的前面予以介绍）|  
   
@@ -330,11 +330,11 @@ ms.locfileid: "62789861"
   
 -   如果辅助数据库的文件路径（包括驱动器号）不同于相应主数据库的路径，则以下限制适用：  
   
-    -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：不支持“完全”选项（在[选择初始数据同步页](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)页面上），  
+    -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：  不支持“完全”选项（在[选择初始数据同步页](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)页面上），   
   
     -   **RESTORE WITH MOVE：** 若要创建辅助数据库，在承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上数据库文件必须是 RESTORED WITH MOVE。  
   
-    -   对添加文件操作的影响：以后针对主要副本的添加文件操作在辅助数据库上可能会失败。 此失败可能导致辅助数据库暂停。 而这又会导致辅助副本进入“非同步”状态。  
+    -   对添加文件操作的影响  ：以后针对主要副本的添加文件操作在辅助数据库上可能会失败。 此失败可能导致辅助数据库暂停。 而这又会导致辅助副本进入“非同步”状态。  
   
         > [!NOTE]  
         >  有关如何处理失败的添加文件操作的详细信息，请参阅[解决失败的添加文件操作问题（AlwaysOn 可用性组）](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)。  

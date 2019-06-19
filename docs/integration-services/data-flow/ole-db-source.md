@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f666a224c2e41fb50a1a62748e7d8f1666d0beb9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726638"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
@@ -68,7 +68,7 @@ ms.locfileid: "65726638"
   
  OLE DB 源使用 OLE DB 连接管理器来连接到它从中提取数据的数据源。 取决于 OLE DB 连接管理器所使用的访问接口和连接管理器所连接的关系数据库管理系统 (RDBMS)，参数的命名和列出将应用不同的规则。 如果参数名是从 RDBMS 返回的，则可以使用参数名来将参数列表中的参数映射到 SQL 语句中的参数；否则，参数将按它们在参数列表中的序数位置映射到 SQL 语句中的参数。 支持的参数名类型按访问接口而各不相同。 例如，某些访问接口要求使用变量或列名称，而某些访问接口则要求使用诸如 0 或 Param0 这样的符号名称。 应当参阅访问接口对应的文档，了解有关在 SQL 语句中使用的参数名称的信息。  
   
- 使用 OLE DB 连接管理器时，不能使用参数化子查询，这是因为 OLE DB 源不能通过 OLE DB 访问接口派生参数信息。 但是，可以使用表达式将参数值连接到查询字符串并设置该源的 SqlCommand 属性。在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以使用“OLE DB 源编辑器”对话框配置 OLE DB 源，并在“设置查询参数”对话框中将参数映射到变量。  
+ 使用 OLE DB 连接管理器时，不能使用参数化子查询，这是因为 OLE DB 源不能通过 OLE DB 访问接口派生参数信息。 但是，可以使用表达式将参数值连接到查询字符串并设置该源的 SqlCommand 属性。在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，可以使用“OLE DB 源编辑器”对话框配置 OLE DB 源，并在“设置查询参数”对话框中将参数映射到变量。    
   
 ### <a name="specifying-parameters-by-using-ordinal-positions"></a>使用序号位置指定参数  
  如果没有返回参数名，则 **“设置查询参数”** 对话框中的 **“参数”** 列表中的参数列出顺序将控制运行时参数将映射哪个参数标记。 列表中的第一个参数将映射到 SQL 语句中的第一个 ?， 第二个参数映射到第二个 ?，以此类推。  
@@ -133,16 +133,16 @@ ms.locfileid: "65726638"
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，向 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包添加 OLE DB 源。  
   
-2.  右键单击源组件，然后单击“编辑”。  
+2.  右键单击源组件，然后单击“编辑”。   
   
-3.  单击 **“连接管理器”**。  
+3.  单击 **“连接管理器”** 。  
   
 ### <a name="static-options"></a>静态选项  
  **“无缓存”**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”对话框创建一个新连接管理器。  
+ 通过使用“配置 OLE DB 连接管理器”  对话框创建一个新连接管理器。  
   
  **数据访问模式**  
  指定从源选择数据的方法。  
@@ -150,12 +150,12 @@ ms.locfileid: "65726638"
 |选项|描述|  
 |------------|-----------------|  
 |表或视图|从 OLE DB 数据源中的表或视图中检索数据。|  
-|表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关信息：**[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关信息：** [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL 命令|使用 SQL 查询从 OLE DB 数据源中检索数据。|  
 |变量中的 SQL 命令|在变量中指定 SQL 查询文本。|  
   
  **预览**  
- 通过使用“数据视图”对话框预览结果。 **预览版** 最多可以显示 200 行。  
+ 通过使用“数据视图”  对话框预览结果。 **预览版** 最多可以显示 200 行。  
   
 > [!NOTE]  
 >  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值“\<数值太大，无法显示>”或 System.Byte[]。 使用 SQL OLE DB 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
@@ -172,16 +172,16 @@ ms.locfileid: "65726638"
   
 #### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。  
+ 输入 SQL 查询的文本，通过单击“生成查询”  来生成查询，或通过单击“浏览”  定位到包含查询文本的文件。  
   
  **参数**  
  如果已经在参数化查询文本中使用 ? 作为参数占位符输入了参数化查询，请使用 **“设置查询参数”** 对话框将查询输入参数映射到包变量。  
   
  **生成查询**  
- 使用“查询生成器”对话框可直观地构造 SQL 查询。  
+ 使用“查询生成器”  对话框可直观地构造 SQL 查询。  
   
  **“浏览”**  
- 使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
+ 使用“打开”  对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
  验证查询文本的语法。  
@@ -191,7 +191,7 @@ ms.locfileid: "65726638"
  选择包含 SQL 查询文本的变量。  
   
 ## <a name="ole-db-source-editor-columns-page"></a>OLE DB 源编辑器（“列”页）
-  可以使用“OLE DB 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
+  可以使用“OLE DB 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列   。  
   
 ### <a name="options"></a>选项  
  **可用外部列**  
@@ -211,12 +211,12 @@ ms.locfileid: "65726638"
  查看数据源的名称。  
   
  **列**  
- 查看在“OLE DB 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
+ 查看在“OLE DB 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。    
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  

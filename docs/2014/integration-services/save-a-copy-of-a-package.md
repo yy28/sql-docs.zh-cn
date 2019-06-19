@@ -17,13 +17,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056269"
 ---
-# <a name="save-a-copy-of-a-package"></a>保存一个包副本 
+# <a name="save-a-copy-of-a-package"></a>保存一个包副本
   此过程介绍如何将包的副本保存到文件系统、包存储区或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 **msdb** 数据库。 指定保存包副本的位置时，也能够更新包的名称。  
   
  包存储区可以同时包括 **msdb** 数据库和文件系统中的文件夹，也可以只包含 **msdb**或文件系统中的文件夹。 在 **msdb**中，包将保存到 **sysssispackages** 表中。 此表包括一个 **folderid** 列，用于标识包所属的逻辑文件夹。 逻辑文件夹提供了对保存到 **msdb** 中的包进行分组的有用方式，文件系统中的文件夹也提供了对保存到文件系统中的包进行分组的方式。 **msdb** 中的 **sysssispackagefolders** 表中的行定义这些文件夹。  
@@ -37,15 +37,15 @@ ms.locfileid: "66056269"
   
 1.  在解决方案资源管理器中，双击要保存其副本的包。  
   
-2.  在“文件”菜单上，单击“包文件\<的副本 > 另存为”。  
+2.  在“文件”菜单上，单击“包文件\<的副本 > 另存为”   。  
   
 3.  在 **“保存包的副本”** 对话框，在 **“包位置”** 列表中选择包的位置。  
   
-4.  如果位置为 **SQL Server** 或 **“SSIS 包存储区”**，请提供服务器名称。  
+4.  如果位置为 **SQL Server** 或 **“SSIS 包存储区”** ，请提供服务器名称。  
   
 5.  如果保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请指定身份验证类型；如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，还请提供用户名和密码。  
   
-6.  若要指定包路径，请键入路径或单击浏览按钮 (…)，以指定包的位置。 包的默认名称为 Package。 也可以将包名称更新为所需的名称。  
+6.  若要指定包路径，请键入路径或单击浏览按钮 (…)，以指定包的位置  。 包的默认名称为 Package。 也可以将包名称更新为所需的名称。  
   
      如果选择 **SQL Server** 作为 **“包路径”** 选项，则包路径由 **msdb** 中的逻辑文件夹和包名称构成。 例如，如果包 DownloadMonthlyData 与 MSDB 文件夹中的 Finance 文件夹（ **msdb**中的根逻辑文件夹的默认名称）相关联，则名为 DownloadMonthlyData 的包的包路径为 MSDB/Finance/DownloadMonthlyData  
   
@@ -55,13 +55,13 @@ ms.locfileid: "66056269"
   
 7.  查看包保护级别。  
   
-8.  还可以单击“保护级别”旁边的 (…) 浏览按钮，更改保护级别。  
+8.  还可以单击“保护级别”旁边的 (…) 浏览按钮，更改保护级别   。  
   
     -   在 **“包保护级别”** 对话框中，选择不同的保护级别。  
   
-    -   单击“确定” 。  
+    -   单击 **“确定”** 。  
   
-9. 单击“确定” 。  
+9. 单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services (SSIS) 包](../../2014/integration-services/integration-services-ssis-packages.md)   

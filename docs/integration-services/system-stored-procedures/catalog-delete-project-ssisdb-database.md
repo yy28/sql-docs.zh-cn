@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 096e0b12aea8376ee27b7d22cceaae94a0746f99
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716350"
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project（SSISDB 数据库）
@@ -34,11 +34,11 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name  
- 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
+ [ @folder_name = ] folder_name   
+ 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)   。  
   
- [ @project_name = ] project_name  
- 要删除的项目的名称。 project_name 为 nvarchar(128)。  
+ [ @project_name = ] project_name   
+ 要删除的项目的名称。 project_name 为 nvarchar(128)   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

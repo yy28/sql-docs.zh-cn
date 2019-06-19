@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f667ff368ca54f2ccfaeab47716338c7d694c1da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62792143"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>将辅助副本联接到可用性组 (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62792143"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：**[配置辅助数据库](#FollowUp)  
+-   **跟进：** [配置辅助数据库](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -69,11 +69,11 @@ ms.locfileid: "62792143"
   
 3.  选择您连接到辅助副本的可用性组。  
   
-4.  右键单击辅助副本，然后单击“联接到可用性组”。  
+4.  右键单击辅助副本，然后单击  “联接到可用性组”。  
   
 5.  这将打开 **“将副本联接到可用性组”** 对话框。  
   
-6.  若要将辅助副本联接到可用性组，请单击 **“确定”**。  
+6.  若要将辅助副本联接到可用性组，请单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **将可用性副本联接到可用性组**  
