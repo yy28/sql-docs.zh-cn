@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b74e4137ebb076b1cbea37ecaf3e1ae3c26f26f6
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516145"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "58434478"
   
 -   建议为每个备份使用唯一文件名以防止意外覆盖 blob。  
   
--   创建容器时，建议将访问级别设置为 **“私有”**，这样只有可以提供所需的身份验证信息的用户或帐户可以在容器中读取或写入 blob。  
+-   创建容器时，建议将访问级别设置为 **“私有”** ，这样只有可以提供所需的身份验证信息的用户或帐户可以在容器中读取或写入 blob。  
   
 -   对于在 Windows Azure 虚拟机中运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，请使用与虚拟机相同区域中的存储帐户，以免产生区域之间的数据传输成本。 使用同一区域还可以确保备份和还原操作具有最佳性能。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "58434478"
     -   `SqlException 3284 occurred. Severity: 16 State: 5  
         Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
   
-        要解决此错误，请重新发布指定了 BLOCKSIZE = 65536 的 RESTORE 语句。  
+        要解决此错误，请重新发布指定了 BLOCKSIZE = 65536 的 RESTORE 语句   。  
   
 -   由于 blob 具有活动租约，备份期间出错：失败的备份活动可能导致 blob 产生活动租约。  
   

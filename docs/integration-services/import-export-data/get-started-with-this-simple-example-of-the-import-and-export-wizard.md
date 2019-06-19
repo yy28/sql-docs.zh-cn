@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f05baa17bb09b5cafcd775160d2f585004d00b1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723834"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>导入和导出向导的简单示例入门
@@ -50,14 +50,14 @@ ms.locfileid: "65723834"
 有关详细信息，请参阅 [启动 SQL Server 导入和导出向导](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-2---view-the-welcome-page"></a>步骤 2 - 查看“欢迎”页
-向导第一页是“欢迎”页。 
+向导第一页是“欢迎”页  。 
 
-如果不想再次看到此页面，请继续并单击“不再显示此起始页”。
+如果不想再次看到此页面，请继续并单击“不再显示此起始页”  。
 
 ![欢迎使用向导](../../integration-services/import-export-data/media/welcome-to-the-wizard.jpg)
 
 ## <a name="step-3---pick-excel-as-your-data-source"></a>步骤 3 - 选取 Excel 作为数据源
-在下一页“选择数据源”中，选取 Microsoft Excel 作为数据源。 然后浏览选取 Excel 文件。 最后，指定用于创建该文件的 Excel 版本。
+在下一页“选择数据源”中，选取 Microsoft Excel 作为数据源  。 然后浏览选取 Excel 文件。 最后，指定用于创建该文件的 Excel 版本。
 
 > [!IMPORTANT]
 > 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。
@@ -67,14 +67,14 @@ ms.locfileid: "65723834"
 有关向导中这一页的详细信息，请参阅[选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>步骤 4 - 选取 SQL Server 作为目标
-在下一页“选择目标”中，选择 Microsoft SQL Server 作为目标，方法是在列表中选择一个用于连接到 SQL Server 的数据提供程序。 在本示例中，选择“用于 SQL Server 的 .NET Framework 数据提供程序”。
+在下一页“选择目标”中，选择 Microsoft SQL Server 作为目标，方法是在列表中选择一个用于连接到 SQL Server 的数据提供程序  。 在本示例中，选择“用于 SQL Server 的 .NET Framework 数据提供程序”  。
 
 该页会显示提供程序属性列表。 其中许多是不友好名称和不熟悉的设置。 所幸，要连接到任何企业数据库，通常只需要提供三条信息。 可以忽略其他设置的默认值。
 
 |必填信息|用于 SQL Server 的 .Net Framework 数据提供程序属性|
 |---|---|
 |服务器名称|**数据源**|
-|身份验证（登录）信息|“集成安全性”或“用户 ID”和“密码”<br/>如果想查看服务器上的数据库的下拉列表，首先必须提供有效的登录信息。|
+|身份验证（登录）信息|“集成安全性”或“用户 ID”和“密码”   <br/>如果想查看服务器上的数据库的下拉列表，首先必须提供有效的登录信息。|
 |数据库名称|**初始目录**|
 
 ![选择 SQL Server 目标](../../integration-services/import-export-data/media/choose-the-sql-server-destination.jpg)
@@ -82,16 +82,16 @@ ms.locfileid: "65723834"
 有关如何连接到 SQL Server 的详细信息，请参阅[连接到 SQL Server 数据源](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)。 有关向导中本页的详细信息，请参阅[选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-5---copy-a-table-instead-of-writing-a-query"></a>步骤 5 - 复制表格，而不是编写查询
-在下一页“指定表复制或查询”中，指定为要复制源数据的整个表。 不想用 SQL 语言编写查询来选择要复制的数据。
+在下一页“指定表复制或查询”中，指定为要复制源数据的整个表  。 不想用 SQL 语言编写查询来选择要复制的数据。
 
 ![指定为复制表格](../../integration-services/import-export-data/media/specify-to-copy-a-table.jpg)
 
 有关向导中这一页的详细信息，请参阅[指定表复制或查询](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-6---pick-the-table-to-copy"></a>步骤 6 - 选取要复制的表
-在下一页“选择源表和视图”中，选择要从数据源复制的一个表或多个表。 然后将每个选定的源表映射到新的或现有的目标表。
+在下一页“选择源表和视图”中，选择要从数据源复制的一个表或多个表  。 然后将每个选定的源表映射到新的或现有的目标表。
 
-在此示例中，向导默认将“源”列中的“WizardWalkthrough$”工作表映射到 SQL Server目标中的同名新表中。 （Excel 工作簿仅包含一张工作表。）
+在此示例中，向导默认将“源”列中的“WizardWalkthrough$”工作表映射到 SQL Server目标中的同名新表中   。 （Excel 工作簿仅包含一张工作表。）
 -   源表名称中的美元符号 ($) 指示 Excel 工作表。 （Excel 中的命名范围仅由其名称表示。）
 -   目标表图标上的星爆图案指示向导即将新建目标表。
 
@@ -104,35 +104,35 @@ ms.locfileid: "65723834"
 有关向导中这一页的详细信息，请参阅[选择源表和视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)。
 
 ## <a name="optional-step-7---review-the-column-mappings"></a>（可选）步骤 7 - 查看列映射
-离开“选择源表和视图”之前，可选择单击“编辑映射”按钮，打开“列映射”对话框。 此时，在“映射”表中，会看到向导如何将源工作表中的列映射到新的目标表中的列。
+离开“选择源表和视图”之前，可选择单击“编辑映射”按钮，打开“列映射”对话框    。 此时，在“映射”表中，会看到向导如何将源工作表中的列映射到新的目标表中的列  。
 
 ![查看列映射](../../integration-services/import-export-data/media/view-column-mappings.jpg)
 
 有关向导中这一页的详细信息，请参阅[列映射](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。
 
 ## <a name="optional-step-8---review-the-create-table-statement"></a>（可选）步骤 8 - 查看 CREATE TABLE 语句
-当“列映射”对话框打开时，可选择单击“编辑 SQL”按钮，打开“创建表 SQL 语句”对话框。 此时，将看到向导生成的 CREATE TABLE 语句，用于生成新的目标表。 通常无需更改语句。
+当“列映射”对话框打开时，可选择单击“编辑 SQL”按钮，打开“创建表 SQL 语句”对话框    。 此时，将看到向导生成的 CREATE TABLE 语句，用于生成新的目标表  。 通常无需更改语句。
 
 ![查看 CREATE TABLE 语句](../../integration-services/import-export-data/media/view-create-table-statement.jpg)
 
 有关向导中这一页的详细信息，请参阅[创建表 SQL 语句](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)。
 
 ## <a name="optional-step-9---preview-the-data-to-copy"></a>（可选）步骤 9 - 预览要复制的数据
-单击“确定”关闭“创建表 SQL 语句”对话框后，再次单击“确定”，关闭“列映射”对话框，即返回“选择源表和视图”页。 可选择单击“预览”按钮，以查看向导要复制的数据的示例。 在本示例中，看起来一切正常。
+单击“确定”关闭“创建表 SQL 语句”对话框后，再次单击“确定”，关闭“列映射”对话框，即返回“选择源表和视图”页      。 可选择单击“预览”按钮，以查看向导要复制的数据的示例  。 在本示例中，看起来一切正常。
 
 ![预览要复制的数据](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
 
 有关向导中这一页的详细信息，请参阅[预览数据](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-10---yes-you-want-to-run-the-import-export-operation"></a>步骤 10 - 是的，要运行导入-导出操作
-在下一页“保存并运行包”中，保持启用“立即运行”，以便在单击下一页中的“完成”后，立即复制数据。 或者，可以通过单击“保存并运行包”页中的“完成”，跳过下一页。
+在下一页“保存并运行包”中，保持启用“立即运行”，以便在单击下一页中的“完成”后，立即复制数据    。 或者，可以通过单击“保存并运行包”页中的“完成”，跳过下一页   。
 
 ![运行包](../../integration-services/import-export-data/media/run-the-package.jpg)
 
 有关向导中这一页的详细信息，请参阅[保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-11---finish-the-wizard-and-run-the-import-export-operation"></a>步骤 11 - 完成向导并运行导入-导出操作
-如果在“保存并运行包页中”单击“下一步”，而不是“完成”，则在下一页“完成向导”中，会看到向导将要执行的操作的摘要。 单击“完成”以运行导入-导出操作。
+如果在“保存并运行包页中”单击“下一步”，而不是“完成”，则在下一页“完成向导”中，会看到向导将要执行的操作的摘要     。 单击“完成”以运行导入-导出操作  。
 
 ![完成向导](../../integration-services/import-export-data/media/complete-the-wizard.jpg)
 

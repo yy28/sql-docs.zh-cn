@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 747cf2bb865fb9b3fcdb11a43e410f574556dcc5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723890"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>连接到 Excel 数据源（SQL Server 导入和导出向导）
@@ -22,7 +22,7 @@ ms.locfileid: "65723890"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本文介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 Microsoft Excel 数据源。
+本文介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 Microsoft Excel 数据源    。
 
 下面的屏幕截图显示到 Microsoft Excel 工作簿的示例连接。
 
@@ -36,17 +36,17 @@ ms.locfileid: "65723890"
 ## <a name="options-to-specify"></a>要指定的选项
 
 > [!NOTE]
-> 无论 Excel 是源还是目标，此数据提供程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的。
+> 无论 Excel 是源还是目标，此数据提供程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的   。
 
 **Excel 文件路径**  
  指定 Excel 文件的路径和文件名。 例如：
 -   针对本地计算机上的文件，指定 **C:\\MyData.xlsx**。
 -   针对网络共享上的文件，指定 **\\\\Sales\\Database\\Northwind.xlsx**。
 
-或单击 **“浏览”**。  
+或单击 **“浏览”** 。  
   
  **“浏览”**  
- 通过使用“打开”对话框定位电子表格。  
+ 通过使用“打开”  对话框定位电子表格。  
 
 > [!NOTE]
 > 该向导无法打开受密码保护的 Excel 文件。
