@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb41c4ec10b78f3457ca5c760a32f1012cdeeba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5ff522eff5e0f7742515d799303c5a1c28d4ff16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636936"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799427"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>配置 priority boost 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47636936"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **配置 priority boost 选项，使用：**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47636936"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[配置优先级提升选项后](#FollowUp)  
+-   **跟进：** [在配置优先级提升选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -50,16 +50,16 @@ ms.locfileid: "47636936"
   
 -   若将优先级提升过高，将会耗尽基本操作系统和网络功能的资源，导致关闭 SQL Server 或在该服务器上使用其他操作系统任务时出现问题。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-priority-boost-option"></a>配置 priority boost 选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“处理器”** 节点。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "47636936"
   
 #### <a name="to-configure-the-priority-boost-option"></a>配置 priority boost 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `priority boost` 选项的值设置为 `1`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `priority boost` 选项的值设置为 `1`。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -91,9 +91,9 @@ GO
   
 ```  
   
- 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)配置选项。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：在配置 priority boost 选项之后  
+##  <a name="FollowUp"></a> 跟进：在配置优先级提升选项之后  
  必须重新启动服务器，设置才会生效。  
   
 ## <a name="see-also"></a>另请参阅  

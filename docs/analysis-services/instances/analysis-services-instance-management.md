@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a93a7ddb0af87ae15f8d793f21a008d9a4bc25c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659483"
 ---
 # <a name="sql-server-analysis-services-server-management"></a>SQL Server Analysis Services 服务器管理
@@ -51,7 +51,7 @@ Azure Analysis Services，请参阅[管理 Azure Analysis Services](https://docs
   
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [比较表格和多维解决方案](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

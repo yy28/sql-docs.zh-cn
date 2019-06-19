@@ -14,32 +14,32 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9ab28bdec31d3be6deabbd2f9188e7e3684139b
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821819"
 ---
 # <a name="transact-sql-debugger---command-window"></a>Transact-SQL 调试器 -“命令”窗口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  使用“命令窗口”可以对“[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查询编辑器”窗口中当前所调试的代码运行命令，例如调试和编辑命令。 只有在调试模式下才可以使用 **“命令窗口”**。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持许多在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]“命令”窗口中支持的命令。 有关详细信息，请参阅 [Visual Studio“命令”窗口](https://go.microsoft.com/fwlink/?LinkId=112007)。  
+  使用“命令窗口”  可以对“[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查询编辑器”窗口中当前所调试的代码运行命令，例如调试和编辑命令。 只有在调试模式下才可以使用 **“命令窗口”** 。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持许多在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]“命令”  窗口中支持的命令。 有关详细信息，请参阅 [Visual Studio“命令”窗口](https://go.microsoft.com/fwlink/?LinkId=112007)。  
   
 ## <a name="task-list"></a>任务列表  
  **访问“命令”窗口**  
   
--   在 **“调试”** 菜单中，单击 **“启动调试”**。  
+-   在 **“调试”** 菜单中，单击 **“启动调试”** 。  
   
  **打印变量的值**  
   
--   在“命令窗口”中，键入 **Debug.Print \<VariableName>**，然后按 Enter 键。  
+-   在“命令窗口”  中，键入 **Debug.Print \<VariableName>** ，然后按 Enter 键。  
   
  **列出有关当前线程的信息**  
   
--   在“命令窗口”中，键入 **Debug.ListThread**，然后按 Enter 键。  
+-   在“命令窗口”  中，键入 **Debug.ListThread**，然后按 Enter 键。  
   
  **将变量添加到“快速监视”窗口**  
   
--   在“命令窗口”中，键入 **Debug.QuickWatch \<VariableName>**，然后按 Enter 键。  
+-   在“命令窗口”  中，键入 **Debug.QuickWatch \<VariableName>** ，然后按 Enter 键。  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)  

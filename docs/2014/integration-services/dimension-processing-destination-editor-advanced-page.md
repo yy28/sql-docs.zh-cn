@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059489"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>维度处理目标编辑器（“高级”页）
@@ -33,7 +33,7 @@ ms.locfileid: "66059489"
  **键错误操作**  
  指定如何处理包含不可接受的键值的记录。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|将不适用的键值转换为 `UnknownMember` 值。|  
 |**DiscardRecord**|放弃记录。|  
@@ -45,12 +45,12 @@ ms.locfileid: "66059489"
  指定在出现错误时应停止处理。  
   
  **错误数**  
- 指定应停止处理的错误阈值（如果选择了“出错时停止”）。  
+ 指定应停止处理的错误阈值（如果选择了“出错时停止”  ）。  
   
  **出错时要执行的操作**  
- 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”）。  
+ 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”  ）。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**StopProcessing**|停止处理。|  
 |**StopLogging**|停止记录错误。|  
@@ -58,7 +58,7 @@ ms.locfileid: "66059489"
  **找不到键**  
  指定在出现“找不到键”错误时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -67,7 +67,7 @@ ms.locfileid: "66059489"
  **重复键**  
  指定在出现“重复键”错误时执行的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -76,7 +76,7 @@ ms.locfileid: "66059489"
  **空键转换为未知键**  
  指定在将空键转换为 `UnknownMember` 值后所采取的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -85,14 +85,14 @@ ms.locfileid: "66059489"
  **不允许空键**  
  指定在不允许空键而又遇到空键时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
 |**ReportAndStop**|报告错误并停止处理。|  
   
  **错误日志路径**  
- 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标。  
+ 键入错误日志的路径，或单击浏览 (...) 按钮以选择目标  。  
   
  **浏览(...)**  
  选择错误日志的路径。  

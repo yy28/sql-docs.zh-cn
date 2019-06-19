@@ -1,5 +1,5 @@
 ---
-title: 示例：使用 Windows 身份验证设置数据库镜像 (T-SQL) | Microsoft Docs
+title: 例如：使用 Windows 身份验证设置数据库镜像 (T-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4f4fe56652f71e3c46e93b8115e792154d17a74f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 42f706ed9b7975c73f6c24b3f7e828ab077c8776
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832285"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795431"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>例如：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此示例说明使用 Windows 身份验证来创建带有见证服务器的数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 注意，可以不使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，而使用配置数据库镜像安全向导来设置数据库镜像。 有关详细信息，请参阅本主题后面的 [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
@@ -40,7 +40,7 @@ GO
   
  有关更改 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中恢复模式的信息，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要对数据库的 ALTER 权限和 CREATE ENDPOINT 权限，或者需要 **sysadmin** 固定服务器角色的成员资格。  
   
 ## <a name="example"></a>示例  
@@ -50,9 +50,9 @@ GO
   
 |初始镜像角色|宿主系统|域用户帐户|  
 |----------------------------|-----------------|-------------------------|  
-|主体|PARTNERHOST1|\<Mydomain>\\<dbousername\>|  
-|镜像|PARTNERHOST5|\<Mydomain>\\<dbousername\>|  
-|Witness|WITNESSHOST4|\<Somedomain>\\<witnessuser\>|  
+|主体|PARTNERHOST1|\<Mydomain>\\<dbousername\> |  
+|镜像|PARTNERHOST5|\<Mydomain>\\<dbousername\> |  
+|Witness|WITNESSHOST4|\<Somedomain>\\<witnessuser\> |  
   
 1.  在主体服务器实例（PARTNERHOST1 中的默认实例）上创建端点。  
   

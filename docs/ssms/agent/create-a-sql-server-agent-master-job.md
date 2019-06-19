@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b999b7a06f07df346f9fd38f8118913321d893fb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095557"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>创建 SQL Server 代理主作业
@@ -71,9 +71,9 @@ ms.locfileid: "65095557"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要创建 SQL Server 代理作业的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
-3.  右键单击“作业”文件夹，然后选择“新建作业…”。  
+3.  右键单击“作业”文件夹，然后选择“新建作业…”   。  
   
 4.  在 **“新建作业”** 对话框的 **“常规”** 页上，修改作业的常规属性。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“常规”页）](../../ssms/agent/job-properties-new-job-general-page.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65095557"
   
 9. 在 **“目标”** 页上，管理作业的目标服务器。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“目标”页）](../../ssms/agent/job-properties-new-job-targets-page.md)。  
   
-10. 完成后，单击 **“确定”**。  
+10. 完成后，单击 **“确定”** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -95,9 +95,9 @@ ms.locfileid: "65095557"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE msdb ;  

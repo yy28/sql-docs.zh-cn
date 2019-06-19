@@ -16,15 +16,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ba35386a91e6660b69b1e00c31da95e405b8627
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126197"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665382"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>管理对等拓扑（复制 Transact-SQL 编程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  管理对等拓扑类似于管理典型的事务复制拓扑，但有许多需要特别注意的地方。 管理对等拓扑的主要区别在于，有些更改需要让系统“停止” 。 为了停止系统，需要停止对所有节点上已发布表的操作，并确保每个节点都已收到来自所有其他节点的所有更改。 有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
+  管理对等拓扑类似于管理典型的事务复制拓扑，但有许多需要特别注意的地方。 管理对等拓扑的主要区别在于，有些更改需要让系统“停止”  。 为了停止系统，需要停止对所有节点上已发布表的操作，并确保每个节点都已收到来自所有其他节点的所有更改。 有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
 > [!NOTE]  
 >  在对等拓扑中，分发服务器使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本不能低于请求订阅服务器的版本。  

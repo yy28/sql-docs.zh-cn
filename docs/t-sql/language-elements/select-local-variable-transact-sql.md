@@ -27,10 +27,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 3ea8dffc7256d08788b2a3b12812cd1f6e8f9cbd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981865"
 ---
 # <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "65981865"
 
   将局部变量设置为表达式的值。  
   
- 要分配变量，建议使用 [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) 而不是 SELECT @local_variable。  
+ 要分配变量，建议使用 [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) 而不是 SELECT @local_variable  。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 ```  
   
 ## <a name="arguments"></a>参数  
-@local_variable  
+@local_variable   
  要为其赋值的声明变量。  
   
 {= | += | -= | \*= | /= | %= | &= | ^= | |= }   
@@ -73,9 +73,9 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
  为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 此参数包含一个标量子查询。  
   
 ## <a name="remarks"></a>Remarks  
- SELECT @local_variable 通常用于将单个值返回到变量中。 但是，如果 expression 是列的名称，则可返回多个值。 如果 SELECT 语句返回多个值，则将返回的最后一个值赋给变量。  
+ SELECT @local_variable 通常用于将单个值返回到变量中  。 但是，如果 expression 是列的名称，则可返回多个值  。 如果 SELECT 语句返回多个值，则将返回的最后一个值赋给变量。  
   
- 如果 SELECT 语句没有返回行，变量将保留当前值。 如果 expression 是不返回值的标量子查询，则将变量设为 NULL。  
+ 如果 SELECT 语句没有返回行，变量将保留当前值。 如果 expression 是不返回值的标量子查询，则将变量设为 NULL  。  
   
  一个 SELECT 语句可以初始化多个局部变量。  
   

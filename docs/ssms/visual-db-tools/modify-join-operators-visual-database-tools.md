@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 52ec5347795a6b26453ae806c3ef43113d28aed4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095399"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改联接运算符 (Visual Database Tools)
@@ -28,11 +28,11 @@ ms.locfileid: "65095399"
   
 ### <a name="to-modify-join-operators"></a>修改联接运算符  
   
-1.  在[“关系图”窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)中，右键单击要修改的联接线，再从快捷菜单中选择“属性”。  
+1.  在[“关系图”窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)中，右键单击要修改的联接线，再从快捷菜单中选择“属性”  。  
   
-2.  在“属性”窗口中，单击“联接条件和类型”，再单击该属性右侧的“省略号 (…)”。  
+2.  在“属性”窗口中，单击“联接条件和类型”，再单击该属性右侧的“省略号 (…)”   。  
   
-3.  在“联接”对话框中，选择一个新运算符。  
+3.  在“联接”  对话框中，选择一个新运算符。  
   
 ## <a name="see-also"></a>另请参阅  
 [自动联接表 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)  

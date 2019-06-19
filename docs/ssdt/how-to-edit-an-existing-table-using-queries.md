@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2c988efd63982b2dc5ebd8e73f2291a19b3b9b76
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090238"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>如何：使用查询编辑现有表
@@ -26,17 +26,17 @@ ms.locfileid: "65090238"
   
 ### <a name="to-edit-the-definition-of-an-existing-table"></a>编辑现有表的定义  
   
-1.  在“SQL Server 对象资源管理器”中展开 Trade 数据库的“表”节点，然后右键单击 dbo.Suppliers。  
+1.  在“SQL Server 对象资源管理器”  中展开 Trade  数据库的“表”  节点，然后右键单击 dbo.Suppliers  。  
   
-2.  选择“视图设计器”以便在表设计器中查看表架构。  
+2.  选择“视图设计器”  以便在表设计器中查看表架构。  
   
-3.  为 Address 列选中“允许 Null 值”框。 请注意，脚本窗格中的相应代码将立即更改为 `NULL`。  
+3.  为 Address  列选中“允许 Null 值”  框。 请注意，脚本窗格中的相应代码将立即更改为 `NULL`。  
   
 4.  按照[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)主题中的步骤更新数据库。  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>使用 Transact\-SQL 查询在新表中填充数据  
   
-1.  右键单击 Trade 数据库节点并选择“新建查询”。  
+1.  右键单击 Trade  数据库节点并选择“新建查询”  。  
   
 2.  在脚本窗格中，粘贴以下代码。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "65090238"
     GO  
     ```  
   
-3.  单击“执行查询”按钮以运行该查询。 “消息”窗格中的以下内容指示这些行已成功添加到表中。  
+3.  单击“执行查询”  按钮以运行该查询。 “消息”  窗格中的以下内容指示这些行已成功添加到表中。  
   
-（2 行受影响）（1 行受影响）（2 行受影响）  
+（2 行受影响）（1 行受影响）（2 行受影响）   
   
 4.  用下面部分中的代码替换脚本窗格中的代码并且执行该查询。 这将尝试向 `Products` 表中添加 `ShelfLife` 为 6 的一个新行。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "65090238"
     GO  
     ```  
   
-5.  “消息”窗格指示 `INSERT` 语句与现有 CHECK 约束冲突，这会将 `ShelfLife` 的值限制为低于 5。 由于该语句未能满足现有约束，因此将不更新 Products 表。  
+5.  “消息”  窗格指示 `INSERT` 语句与现有 CHECK 约束冲突，这会将 `ShelfLife` 的值限制为低于 5。 由于该语句未能满足现有约束，因此将不更新 Products 表。  
   
 6.  用以下代码更改该代码并且再次运行该查询。 请注意，此时该行成功更新。  
   

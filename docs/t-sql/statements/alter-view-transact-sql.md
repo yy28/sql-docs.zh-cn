@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 780d2929180657afc705335ff2110b9f3f9cc6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749375"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664678"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -55,7 +55,7 @@ AS select_statement
  *schema_name*  
  视图所属架构的名称。  
   
- view_name  
+ view_name   
  要更改的视图。  
   
  *column*  
@@ -65,15 +65,15 @@ AS select_statement
 >  只有在 ALTER VIEW 执行前后列名称不变的情况下，列的权限才会保持不变。  
   
 > [!NOTE]  
->  在视图的各列中，列名的权限在 CREATE VIEW 或 ALTER VIEW 语句间均适用，与基础数据源无关。 例如，如果在 CREATE VIEW 语句中授予对 SalesOrderID 列的权限，则 ALTER VIEW 语句可以重命名 SalesOrderID 列（例如，重命名为 OrderRef），并且仍然具有与使用 SalesOrderID 的视图关联的权限。  
+>  在视图的各列中，列名的权限在 CREATE VIEW 或 ALTER VIEW 语句间均适用，与基础数据源无关。 例如，如果在 CREATE VIEW 语句中授予对 SalesOrderID 列的权限，则 ALTER VIEW 语句可以重命名 SalesOrderID 列（例如，重命名为 OrderRef），并且仍然具有与使用 SalesOrderID 的视图关联的权限     。  
   
  ENCRYPTION  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  加密 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 中包含 ALTER VIEW 语句文本的项。 WITH ENCRYPTION 可防止视图作为 SQL Server 复制的一部分进行发布。  
   
  SCHEMABINDING  
- 将视图绑定到基础表的架构。 如果指定了 SCHEMABINDING，则不能以可影响视图定义的方式来修改基表。 必须首先修改或删除视图定义本身，然后才能删除要修改的表的相关性。 使用 SCHEMABINDING 时，_select\_statement_ 必须包含所引用的表、视图或用户定义函数的两部分名称 (_schema_**.**_object_)。 所有被引用对象都必须在同一个数据库内。  
+ 将视图绑定到基础表的架构。 如果指定了 SCHEMABINDING，则不能以可影响视图定义的方式来修改基表。 必须首先修改或删除视图定义本身，然后才能删除要修改的表的相关性。 使用 SCHEMABINDING 时，_select\_statement_ 必须包含所引用的表、视图或用户定义函数的两部分名称 (_schema_ **.** _object_)。 所有被引用对象都必须在同一个数据库内。  
   
  不能删除参与使用 SCHEMABINDING 子句创建的视图的表或视图，除非该视图已被删除或更改，而不再具有架构绑定。 否则，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误。 另外，如果对参与具有架构绑定的视图的表执行 ALTER TABLE 语句，而这些语句又会影响视图定义，则这些语句将会失败。  
   
@@ -82,16 +82,16 @@ AS select_statement
   
  对于使用 VIEW_METADATA 创建的视图，浏览模式的元数据在描述结果集内视图中的列时，将返回视图名，而不返回基表名。  
   
- 使用 WITH VIEW_METADATA 创建视图时，如果该视图具有 INSERT 或 UPDATE INSTEAD OF 触发器，则视图的所有列（timestamp 列除外）都可更新。 有关详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 中的“注释”部分。  
+ 使用 WITH VIEW_METADATA 创建视图时，如果该视图具有 INSERT 或 UPDATE INSTEAD OF 触发器，则视图的所有列（timestamp 列除外）都可更新  。 有关详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 中的“注释”部分。  
   
  AS  
  视图要执行的操作。  
   
- select_statement  
+ select_statement   
  定义视图的 SELECT 语句。  
   
  WITH CHECK OPTION  
- 要求对该视图执行的所有数据修改语句都必须符合 select_statement 中所设置的条件。  
+ 要求对该视图执行的所有数据修改语句都必须符合 select_statement 中所设置的条件  。  
   
 ## <a name="remarks"></a>Remarks  
  有关 ALTER VIEW 的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 中的“备注”部分。  
@@ -103,7 +103,7 @@ AS select_statement
   
  ALTER VIEW 可应用于索引视图；但是，ALTER VIEW 会无条件地删除视图的所有索引。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行 ALTER VIEW，至少需要具有对 OBJECT 的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

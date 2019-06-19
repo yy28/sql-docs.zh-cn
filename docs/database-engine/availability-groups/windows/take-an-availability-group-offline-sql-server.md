@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 392790b24fb8e78ee9922d6cb34d2b1ea80b0961
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7a53e16032d2e90b4072d0f19939e4d9be0e7a78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606537"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803507"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>使可用性组脱机 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,37 +25,19 @@ ms.locfileid: "51606537"
   
  在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的跨群集迁移过程中，如果任何应用程序直接连接到某一可用性组的主副本，则该可用性组必须置于脱机状态。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨群集迁移支持用最短的可用性组停机时间进行操作系统升级。 典型的情形是将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨群集迁移用于升级到 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]的操作系统升级。 有关详细信息，请参阅 [针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](https://msdn.microsoft.com/library/jj873730.aspx)。  
   
--   **开始之前：**  
-  
-     [先决条件](#Prerequisites)  
-  
-     [建议](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **若要使可用性组处于脱机状态，请使用：**  [Transact-SQL](#TsqlProcedure)  
-  
--   **跟进：**[在可用性组处于脱机状态后](#FollowUp)  
-  
--   [相关内容](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
   
 > [!CAUTION]  
 >  仅将 OFFLINE 选项用于可用性组资源的跨群集迁移。  
   
-###  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a> 先决条件  
   
--   您对其输入 OFFLINE 命令的服务器实例必须正在运行 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 或更高版本（Enterprise Edition 或更高）。  
-  
+-   您对其输入 OFFLINE 命令的服务器实例必须正在运行 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 或更高版本（Enterprise Edition 或更高）。    
 -   可用性组当前必须处于联机状态。  
   
-###  <a name="Recommendations"></a> 建议  
+##  <a name="Recommendations"></a> 建议  
  在您使可用性组脱机之前，删除可用性组侦听器。 有关详细信息，请参阅 [删除可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)的操作系统升级。  
   
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -78,9 +60,9 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ##  <a name="FollowUp"></a> 跟进：在可用性组处于脱机状态后  
   
--   **OFFLINE 操作的日志记录：**  启动了 OFFLINE 操作的 WSFC 节点的标识存储于 WSFC 群集日志和 SQL ERRORLOG 中。  
+-   **OFFLINE 操作的日志记录：** 启动了 OFFLINE 操作的 WSFC 节点的标识存储于 WSFC 群集日志和 SQL ERRORLOG 中。  
   
--   **如果你在使可用性组脱机之前未删除该可用性组侦听程序：**  如果要将该可用性组迁移到其他 WSFC 群集，请删除该侦听程序的 VNN 和 VIP。 你可以通过使用故障转移群集管理控制台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)删除侦听程序的 VNN 和 VIP。 请注意，在 Windows 8 上不推荐使用 cluster.exe。  
+-   **如果在使组脱机之前未删除可用性组侦听程序：** 如果要将可用性组迁移到其他 WSFC 群集，请删除其侦听器的 VNN 和 VIP。 你可以通过使用故障转移群集管理控制台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)删除侦听程序的 VNN 和 VIP。 请注意，在 Windows 8 上不推荐使用 cluster.exe。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -92,7 +74,7 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   [SQL Server 2012 技术文章](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 31297cfd8312f0fb8b6719a229c8b5d1abf70e5f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799274"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>在 AlwaysOn 可用性组中管理使用数据库的作业的登录名

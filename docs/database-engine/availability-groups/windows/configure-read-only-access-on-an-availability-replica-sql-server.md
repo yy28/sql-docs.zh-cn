@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c7dfd6c8dc39e2653a2ddeca3bec07a1270f5cd8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: b596a81bf48a69e9b4c641e878383a4a513c891b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135817"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793668"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>配置对 Always On 可用性组的次要副本的只读访问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,37 +30,14 @@ ms.locfileid: "54135817"
   
  有关对次要副本允许只读访问的含义的信息以及有关对连接访问的介绍，请参阅[关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) 和[活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
--   **开始之前：**  
-  
-     [先决条件和限制](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **配置对可用性副本的访问，使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **跟进：**[为可用性副本配置只读访问后](#FollowUp)  
-  
--   [相关任务](#RelatedTasks)  
-  
--   [相关内容](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Prerequisites"></a> 先决条件和限制  
+ 
+##  <a name="Prerequisites"></a> 先决条件和限制  
   
 -   若要配置不同的连接访问，您必须连接到承载主副本的服务器实例。  
   
-###  <a name="Security"></a> 安全性  
+##  <a name="Permissions"></a> 权限  
   
-####  <a name="Permissions"></a> Permissions  
-  
-|任务|Permissions|  
+|任务|权限|  
 |----------|-----------------|  
 |在创建可用性组时配置副本|需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 |修改可用性副本|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
@@ -70,11 +47,11 @@ ms.locfileid: "54135817"
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
 3.  单击要更改其副本的可用性组。  
   
-4.  右键单击该可用性副本，然后单击“属性”。  
+4.  右键单击该可用性副本，然后单击“属性”  。  
   
 5.  在 **“可用性副本属性”** 对话框中，可以更改主角色和辅助角色的连接访问设置，如下所示：  
   
@@ -212,7 +189,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
  **在故障转移后可能会影响触发器和作业的因素**  
   
- 如果您在非可读取辅助数据库或可读取辅助数据库上正运行时具有将失败的触发器和作业，则需要编写针对这些触发器和作业的脚本，以便对给定副本进行检查以确定该数据库是主数据库还是可读取辅助数据库。 若要获取该信息，请使用 [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md) 函数以返回数据库的 Updateability 属性。 若要标识只读数据库，请按如下所示将 READ_ONLY 指定为值：  
+ 如果您在非可读取辅助数据库或可读取辅助数据库上正运行时具有将失败的触发器和作业，则需要编写针对这些触发器和作业的脚本，以便对给定副本进行检查以确定该数据库是主数据库还是可读取辅助数据库。 若要获取该信息，请使用 [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md) 函数以返回数据库的 Updateability  属性。 若要标识只读数据库，请按如下所示将 READ_ONLY 指定为值：  
   
 ```  
 DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'  

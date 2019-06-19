@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1ff09c90aece19ea306ec91b8d5cb0d95da937c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727235"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET 自定义属性
@@ -33,7 +33,7 @@ ms.locfileid: "65727235"
 |-------------------|---------------|-----------------|  
 |CommandTimeout|String|该值指定 SQL 命令超时之前等待的秒数。值为 0 时指示命令永远不会超时。|  
 |SqlCommand|String|ADO NET 源可以用来提取数据的 SQL 语句。<br /><br /> 当包加载时，可以使用 ADO NET 源将使用的 SQL 语句动态更新此属性。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)和[在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)。|  
-|AllowImplicitStringConversion|Boolean|该值指示是否出现以下情况：<br /><br /> - 在外部元数据类型与字符串输出列类型（DT_WSTR 或 DT_NTEXT）之间存在不匹配时，未生成验证错误。<br /><br /> - 外部元数据类型隐式转换为输出列使用的字符串数据类型。<br /><br /> <br /><br /> 默认值为 TRUE。<br /><br /> 有关详细信息，请参阅 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)。|  
+|AllowImplicitStringConversion|Boolean|该值指示是否出现以下情况：<br /><br /> \- 在外部元数据类型与字符串输出列类型（DT_WSTR 或 DT_NTEXT）之间存在不匹配时，未生成验证错误。<br /><br /> \- 外部元数据类型隐式转换为输出列使用的字符串数据类型。<br /><br /> <br /><br /> 默认值为 TRUE。<br /><br /> 有关详细信息，请参阅 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)。|  
   
  ADO NET 源的输出和输出列没有自定义属性。  
   

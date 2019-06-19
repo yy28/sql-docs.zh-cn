@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: a20e12062a71394906c62c753d56f1137d9bb73d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794619"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>故障转移到日志传送辅助服务器 (SQL Server)

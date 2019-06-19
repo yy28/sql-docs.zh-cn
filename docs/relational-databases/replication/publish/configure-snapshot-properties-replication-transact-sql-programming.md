@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b454197982685882610fc808d9319835053e21bb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134207"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661061"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>配置快照属性（复制 Transact-SQL 编程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "54134207"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>在创建快照发布或事务发布时配置快照属性  
   
-1.  在发布服务器上，执行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 为 **@publication**指定发布名称，将 **@repl_freq** 的值指定为 **snapshot** 或 **@repl_freq**，并指定一个或多个下列与快照相关的参数：  
+1.  在发布服务器上，执行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 为 **@publication** 指定发布名称，将 **@repl_freq** 的值指定为 **snapshot** 或 **@repl_freq** ，并指定一个或多个下列与快照相关的参数：  
   
     -   **@alt_snapshot_folder** - 如果此发布的快照可从某位置访问，而不是或者也能从快照的默认文件夹访问，则指定相应路径。    
     -   **@compress_snapshot** - 如果备用快照文件夹内的快照文件是 **CAB 文件格式的压缩文件，则将值指定为** true [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。    
@@ -40,7 +40,7 @@ ms.locfileid: "54134207"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>创建合并发布时配置快照属性  
   
-1.  在发布服务器上，执行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 为 **@publication**指定发布名称，将 **@repl_freq** 的值指定为 **snapshot** 或 **@repl_freq**，并指定一个或多个下列与快照相关的参数：  
+1.  在发布服务器上，执行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 为 **@publication** 指定发布名称，将 **@repl_freq** 的值指定为 **snapshot** 或 **@repl_freq** ，并指定一个或多个下列与快照相关的参数：  
   
     -   **@alt_snapshot_folder** - 如果此发布的快照可从某位置访问，而不是或者也能从快照的默认文件夹访问，则指定相应路径。    
     -   **@compress_snapshot** - 如果备用快照文件夹内的快照文件是 **CAB 文件格式的压缩文件，则将值指定为** 。   
@@ -52,9 +52,9 @@ ms.locfileid: "54134207"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>修改现有快照发布或事务发布的快照属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 将 **@force_invalidate_snapshot** 或 **@force_invalidate_snapshot** ，并为 **@property**指定下列值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 将 **@force_invalidate_snapshot** 或 **@force_invalidate_snapshot** ，并为 **@property** 指定下列值之一：  
   
-    -   **alt_snapshot_folder** - 也为 **@value**。    
+    -   **alt_snapshot_folder** - 也为 **@value** 。    
     -   **compress_snapshot** - 也将 **CAB 文件格式的压缩文件，则将值指定为** 的值指定为 **false** 或 **@value** ，以指示备用快照文件夹内的快照文件是否为 CAB 文件格式的压缩文件。    
     -   **pre_snapshot_script** - 也为 **@value** 指定在初始快照应用之前的初始化过程中将在订阅服务器上执行的 **.sql** 文件的文件名和完整路径。    
     -   **post_snapshot_script** - 也为 **@value** 指定在初始快照应用之前的初始化过程中将在订阅服务器上执行的 **.sql** 文件的文件名和完整路径。    
@@ -69,9 +69,9 @@ ms.locfileid: "54134207"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>修改现有合并发布的快照属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 将 **@force_invalidate_snapshot** 或 **@force_invalidate_snapshot** ，并为 **@property**指定下列值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 将 **@force_invalidate_snapshot** 或 **@force_invalidate_snapshot** ，并为 **@property** 指定下列值之一：  
   
-    -   **alt_snapshot_folder** - 也为 **@value**。    
+    -   **alt_snapshot_folder** - 也为 **@value** 。    
     -   **compress_snapshot** - 也将 **CAB 文件格式的压缩文件，则将值指定为** 的值指定为 **false** 或 **@value** ，以指示备用快照文件夹内的快照文件是否为 CAB 文件格式的压缩文件。    
     -   **pre_snapshot_script** - 也为 **@value** 指定在初始快照应用之前的初始化过程中将在订阅服务器上执行的 **.sql** 文件的文件名和完整路径。    
     -   **post_snapshot_script** - 也为 **@value** 指定在初始快照应用之前的初始化过程中将在订阅服务器上执行的 **.sql** 文件的文件名和完整路径。    

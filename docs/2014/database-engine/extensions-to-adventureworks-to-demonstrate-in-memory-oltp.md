@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779944"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>演示内存中 OLTP 的 AdventureWorks 扩展
@@ -31,9 +31,9 @@ ms.locfileid: "62779944"
   
  此示例的文档的结构如下：  
   
--   安装示例和运行演示工作负荷的[先决条件](#Prerequisites)   
+-   安装示例和运行演示工作负荷的[先决条件](#Prerequisites)  
   
--    [基于AdventureWorks安装In-Memory OLTP示例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
+-   [基于AdventureWorks安装In-Memory OLTP示例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
   
 -   [示例表和过程的说明](#Descriptionofthesampletablesandprocedures)-这包括表和添加到 AdventureWorks 的过程的说明[!INCLUDE[hek_2](../includes/hek-2-md.md)]示例中，以及注意事项迁移一些原始 AdventureWorks 表到内存优化  
   
@@ -186,7 +186,7 @@ ms.locfileid: "62779944"
   
 -   *索引键中可以为 Null 的列* - 在原始表中，列 SalesPersonID 可以为 Null，而在新表中，该列不可为 Null，并且默认约束值为 -1。 这是因为内存优化表中的索引不能在索引键中具有可以为 Null 的列；-1 是这种情况下 NULL 的代理项。  
   
--   计算列 - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
+-   计算列  - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
   
 -   在*中，内存优化表不支持* 外键约束 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用程序可确保引用完整性，从而在插入行时不验证引用完整性。 可以使用以下脚本，通过存储过程 dbo.usp_ValidateIntegrity 验证此表中数据的引用完整性：  
   
@@ -568,7 +568,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类型**|**名称**|**pages_MB**|  
+|**type**|**名称**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -663,7 +663,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类型**|**名称**|**pages_MB**|  
+|**type**|**名称**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -682,7 +682,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**类型**|**名称**|**pages_MB**|  
+|**type**|**名称**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|默认|0|  

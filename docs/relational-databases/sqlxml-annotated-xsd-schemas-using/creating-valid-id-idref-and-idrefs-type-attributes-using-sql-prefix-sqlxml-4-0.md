@@ -25,10 +25,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cdc0ccd97fd5998241432667c2e9c4729c970a23
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980958"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 创建有效的 ID、IDREF 和 IDREFS 类型属性 (SQLXML 4.0)
@@ -55,7 +55,7 @@ ms.locfileid: "65980958"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 类型  
- 在以下架构中， **\<客户 >** 元素组成**\<顺序 >** 子元素。 **\<顺序 >** 元素还有子元素，而 **\<OrderDetail >** 元素。  
+ 在以下架构中， **\<客户 >** 元素组成 **\<顺序 >** 子元素。 **\<顺序 >** 元素还有子元素，而 **\<OrderDetail >** 元素。  
   
  **OrderIDList**的属性 **\<客户 >** 是指的是一个 IDREFS 类型属性**OrderID**特性 **\<顺序 >** 元素。  
   

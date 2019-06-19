@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 109e031e95b7535733bd9cb71baa4d20128ceb5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719496"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
@@ -51,7 +51,7 @@ sp_help_log_shipping_primary_database
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**primary_id**|日志传送配置的主数据库 ID。|  
 |**primary_database**|日志传送配置中主数据库的名称。|  

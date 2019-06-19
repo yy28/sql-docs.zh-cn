@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082303"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>“决策树”选项卡（挖掘模型查看器）
-  “决策树”窗格直观地显示在决策树模型中创建的决策规则。 决策规则描述通向某个特定结果的路径。  
+  “决策树”  窗格直观地显示在决策树模型中创建的决策规则。 决策规则描述通向某个特定结果的路径。  
   
- **有关详细信息：**[Microsoft 决策树算法](data-mining/microsoft-decision-trees-algorithm.md)，[使用 Microsoft 树查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **有关详细信息：** [Microsoft 决策树算法](data-mining/microsoft-decision-trees-algorithm.md)，[使用 Microsoft 树查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -56,7 +56,7 @@ ms.locfileid: "66082303"
  选择要在查看器中显示的树。 如果创建一个包含多个可预测属性的模型，则算法将为每个可预测属性创建一个单独的树。  
   
  **背景**  
- 选择用于表示每个节点的背景色的可预测属性值。 例如，在示例 AdventureWorks 模型中，如果将“背景”设置为 1 ([Bike Buyer] = Yes)，则自行车购买者数的比例较大的时候，节点会具有较深的阴影。 此选项提供有关树中分支和节点的含义的其他可视化提示。  
+ 选择用于表示每个节点的背景色的可预测属性值。 例如，在示例 AdventureWorks 模型中，如果将“背景”  设置为 1 ([Bike Buyer] = Yes)，则自行车购买者数的比例较大的时候，节点会具有较深的阴影。 此选项提供有关树中分支和节点的含义的其他可视化提示。  
   
  **默认扩展**  
  从列表中选择一个值可设置树图形中显示的级别数的默认值。  

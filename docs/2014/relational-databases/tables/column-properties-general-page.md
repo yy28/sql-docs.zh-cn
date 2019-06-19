@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62854900"
 ---
 # <a name="column-properties-general-page"></a>列属性（“常规”页）
   使用此页可以查看所选列的属性。  
   
- 此页上的信息为只读信息。 若要修改列，请关闭“列属性”对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”。  
+ 此页上的信息为只读信息。 若要修改列，请关闭“列属性”  对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”  。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -53,7 +53,7 @@ ms.locfileid: "62854900"
  指示标识列的初始行值。  
   
  **标识增量**  
- “标识增量”属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值。  
+ “标识增量”  属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值。  
   
  **默认值绑定**  
  绑定到该列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认值。 如果未绑定默认值，此选项为空白。  

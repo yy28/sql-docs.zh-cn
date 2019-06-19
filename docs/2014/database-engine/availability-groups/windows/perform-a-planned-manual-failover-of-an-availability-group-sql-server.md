@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789288"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的计划手动故障转移 (SQL Server)
-  本主题说明如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行手动故障转移而不丢失数据（计划的手动故障转移）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移（类似于任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移）将辅助副本转换为主角色，同时将以前的主副本转换为辅助角色。  
+  本主题说明如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行手动故障转移而不丢失数据（计划的手动故障转移  ）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移（类似于任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移）将辅助副本转换为主角色，同时将以前的主副本转换为辅助角色。  
   
  仅当主副本和目标辅助副本在同步提交模式下运行且当前同步时，才支持计划的手动故障转移，这种故障转移保留加入到目标辅助副本上的可用性组的辅助数据库中的所有数据。 一旦以前的主副本转换为辅助角色，其数据库将变成辅助数据库，并开始与新的主数据库进行同步。 在将其全部转换为 SYNCHRONIZED 状态之后，新的辅助副本将变成适于充当将来计划的手动故障转移的目标。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62789288"
 -   目标辅助副本当前必须与主副本同步。 这要求此辅助副本上的所有辅助数据库必须已加入到可用性组，并与其对应的主数据库同步（即本地辅助数据库必须为 SYNCHRONIZED）。  
   
     > [!TIP]  
-    >  若要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql) 动态管理视图中的 **is_failover_ready** 列，或查看 [AlwaysOn 组面板](use-the-always-on-dashboard-sql-server-management-studio.md)的“故障转移就绪”列。  
+    >  若要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql) 动态管理视图中的 **is_failover_ready** 列，或查看 [AlwaysOn 组面板](use-the-always-on-dashboard-sql-server-management-studio.md)的“故障转移就绪”  列。  
   
 -   只有目标辅助副本支持该任务。 您必须连接到承载目标辅助副本的服务器实例。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62789288"
   
 2.  依次展开 **“AlwaysOn 高可用性”** 节点和 **“可用性组”** 节点。  
   
-3.  右键单击要进行故障转移的可用性组，然后选择“故障转移”命令。  
+3.  右键单击要进行故障转移的可用性组，然后选择“故障转移”  命令。  
   
 4.  这将启动“故障转移可用性组向导”。 有关详细信息，请参阅本主题后面的 [使用故障转移可用性组向导 (SQL Server Management Studio)](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。  
   

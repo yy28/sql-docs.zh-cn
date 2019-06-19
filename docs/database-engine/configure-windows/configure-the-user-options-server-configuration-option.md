@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 73c5f451036360acdbf2b986b84d5631af75386d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6d9a4b5da604917262b8787d71a6bc068a6fc552
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670165"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803303"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>配置 user options 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47670165"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要配置 user options 配置选项，可使用：**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47670165"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置 user options 配置选项之后](#FollowUp)  
+-   **跟进：** [在配置用户选项配置选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -71,16 +71,16 @@ ms.locfileid: "47670165"
   
 -   **user options** 中位的位置与 @@OPTIONS 中位的位置相同。 每个连接都有自己的 @@OPTIONS 函数，该函数表示配置环境。 登录到 \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，用户会收到将当前 **user options** 值指定为 @@OPTIONS 的默认环境。 对 **user options** 执行 SET 语句会影响会话的 @@OPTIONS 函数的相应值。 在此设置更改后创建的所有连接都将收到新值。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>配置 user options 配置选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“连接”** 节点。  
   
@@ -92,11 +92,11 @@ ms.locfileid: "47670165"
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>配置 user options 配置选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 配置 `user options` 以更改 ANSI_WARNINGS 服务器选项的设置。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 配置 `user options` 以更改 ANSI_WARNINGS 服务器选项的设置。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -108,7 +108,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在配置 user options 配置选项之后  
+##  <a name="FollowUp"></a> 跟进：在配置用户选项配置选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
 ## <a name="see-also"></a>另请参阅  

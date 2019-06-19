@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2a9f9364f790e88f119ee46ed17ad2051d23b64
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106263"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>隐藏图表上的图例项（报表生成器和 SSRS）
@@ -27,9 +27,9 @@ ms.locfileid: "66106263"
   
 ### <a name="to-hide-an-item-from-display-in-the-legend"></a>在图例中隐藏项  
   
-1.  右键单击要隐藏的序列，并选择“序列属性”。  
+1.  右键单击要隐藏的序列，并选择“序列属性”  。  
   
-2.  单击 **“图例”**。 选择 **“不在图例中显示此序列”** 选项。  
+2.  单击 **“图例”** 。 选择 **“不在图例中显示此序列”** 选项。  
   
     > [!NOTE]  
     >  不能仅针对一个组隐藏序列，而对其他组显示该序列。 如果将字段添加到 **“序列组”** 区域中，将隐藏该组所包含的所有序列。  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789816"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>监视可用性组 (Transact-SQL)
@@ -169,7 +169,7 @@ ms.locfileid: "62789816"
 >  主副本位置是可用性组的权威来源。  
   
 > [!NOTE]  
->  有关可用性数据库的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 性能计数器（ **SQLServer:Database Replica** 性能对象）的信息，请参阅 [SQL Server，数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。 此外，若要监视可用性数据库的事务日志活动，请使用以下 SQLServer:Databases 性能对象计数器：“日志刷新写入时间(毫秒)”、“日志刷新次数/秒”、“日志池缓存失误数/秒”、“日志池磁盘读取数/秒”和“日志池请求数/秒”。有关详细信息，请参阅 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
+>  有关可用性数据库的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 性能计数器（ **SQLServer:Database Replica** 性能对象）的信息，请参阅 [SQL Server，数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。 此外，若要监视可用性数据库的事务日志活动，请使用以下 SQLServer:Databases 性能对象计数器  ：“日志刷新写入时间(毫秒)”、“日志刷新次数/秒”、“日志池缓存失误数/秒”、“日志池磁盘读取数/秒”和“日志池请求数/秒”      。有关详细信息，请参阅 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
   
 ##  <a name="AGlisteners"></a> 监视可用性组侦听器  
  若要监视 WSFC 群集子网上的可用性组侦听器，请使用以下视图：  
