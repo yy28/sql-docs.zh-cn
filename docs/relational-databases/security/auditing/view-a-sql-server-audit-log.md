@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4c94df2f2857f0657e315d3944eeaf783eef3a20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508294"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716054"
 ---
 # <a name="view-a-sql-server-audit-log"></a>查看 SQL Server 审核日志
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52508294"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看 SQL Server 审核日志，可使用：**  
   
@@ -38,9 +38,9 @@ ms.locfileid: "52508294"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 **CONTROL SERVER** 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -49,11 +49,11 @@ ms.locfileid: "52508294"
   
 1.   在对象资源管理器中，展开“安全性”文件夹。  
   
-2.  展开“审核”文件夹。  
+2.  展开“审核”文件夹。   
   
-3.  右键单击要查看的审核日志，然后选择“查看审核日志”。 这将打开“日志文件查看器 - server\_name”对话框。 有关详细信息，请参阅 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+3.   右键单击要查看的审核日志，然后选择“查看审核日志”。 这将打开“日志文件查看器 - server\_name”对话框   。 有关详细信息，请参阅 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
-4.  完成后，单击“关闭”。  
+4.   完成后，单击“关闭”。  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议通过使用日志文件查看器查看审核日志。 但是，如果你要创建自动监视系统，则可以使用 [sys.fn_get_audit_file (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) 函数直接读取审核文件中的信息。 直接读取该文件将以略有不同的（未处理的）格式返回数据。 有关详细信息，请参阅 **sys.fn_get_audit_file** 。  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 697a1c06a2d30d5721c122c557f3e41836335b02
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65449949"
 ---
 # <a name="data-mining-query-tools"></a>数据挖掘查询工具
@@ -35,25 +35,25 @@ ms.locfileid: "65449949"
 ##  <a name="bkmk_Builder"></a> 预测查询生成器  
  数据挖掘设计器的 **“挖掘模型预测”** 选项卡中提供了预测查询生成器，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中使用。  
   
- 使用该查询生成器时，可选择挖掘模型、添加新事例数据和添加预测函数。 随后可以切换到文本编辑器以手动修改查询，或切换到“结果”窗格以查看查询的结果。  
+ 使用该查询生成器时，可选择挖掘模型、添加新事例数据和添加预测函数。 随后可以切换到文本编辑器以手动修改查询，或切换到“结果”  窗格以查看查询的结果。  
   
 ##  <a name="bkmk_QueryEditor"></a> 查询编辑器  
  通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查询编辑器还可以生成和运行 DMX 查询。 可以连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例，然后选择数据库、挖掘结构列和挖掘模型。 **“元数据浏览器”** 包含可浏览的预测函数的列表。  
   
 ##  <a name="bkmk_Templates"></a> DMX 模板  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了可用于生成 DMX 查询的交互式 DMX 查询模板。 如果看不到模板列表，请单击工具栏上的 **“视图”** ，然后选择 **“模板资源管理器”**。 若要查看所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模板，包括用于 DMX、MDX 和 XMLA 的模板，请单击多维数据集图标。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了可用于生成 DMX 查询的交互式 DMX 查询模板。 如果看不到模板列表，请单击工具栏上的 **“视图”** ，然后选择 **“模板资源管理器”** 。 若要查看所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模板，包括用于 DMX、MDX 和 XMLA 的模板，请单击多维数据集图标。  
   
  若要使用模板生成查询，您可以将模板拖入打开的查询窗口中，也可以双击模板以打开新的连接和新的查询窗格。  
   
  有关如何通过模板创建预测查询的示例，请参阅 [通过模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)。  
   
 > [!WARNING]  
->  针对 Microsoft Office Excel 的数据挖掘外接程序还包含多个模板以及可帮助您编写复杂的 DMX 语句的交互式查询生成器。 若要使用模板，请单击 **“查询”**，再单击数据挖掘客户端中的 **“高级”** 。  
+>  针对 Microsoft Office Excel 的数据挖掘外接程序还包含多个模板以及可帮助您编写复杂的 DMX 语句的交互式查询生成器。 若要使用模板，请单击 **“查询”** ，再单击数据挖掘客户端中的 **“高级”** 。  
   
 ##  <a name="bkmk_SSIS"></a> Integration Services 数据挖掘组件  
  还可以将预测查询包括在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的以下任务和转换支持创建和执行 DMX 预测查询和 DMX 语句。  
   
-|组件|Description|  
+|组件|描述|  
 |---------------|-----------------|  
 |数据挖掘查询任务|将 DMX 查询和其他 DMX 语句作为控制流的一部分执行。<br /><br /> 任务编辑器提供了预测查询生成器和一个用于手动修改 DMX 查询的文本框。 但是，任务编辑器无法验证针对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案中的对象的查询。 因此，最好是在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中创建查询，然后将语句或查询的文本粘贴到任务编辑器中。|  
 |数据挖掘查询转换|使用数据流源所提供的数据，在数据流内执行预测查询。<br /><br /> 任务编辑器提供了预测查询生成器和一个用于手动修改 DMX 查询的文本框。<br /><br /> 转换只能用于创建使用数据流中的数据的查询；即使用 PREDICTION JOIN 语法的查询。 此组件不能用于执行内容查询或其他类型的 DMX 语句。|  

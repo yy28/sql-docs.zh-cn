@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 29c244eb502a7731f7ff45d0ff586dc49310afdf
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982296"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
@@ -47,7 +47,7 @@ GOTO label
 ```  
   
 ## <a name="arguments"></a>参数  
- label  
+ label   
  如果 GOTO 语句指向该标签，则其为处理的起点。 标签必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 无论是否使用 GOTO 语句，标签均可作为注释方法使用。  
   
 ## <a name="remarks"></a>Remarks  

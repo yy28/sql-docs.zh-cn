@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 33cf01dda6f512428090d0c12654f43e1b03c0ab
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103178"
 ---
 # <a name="view-job-activity"></a>View Job Activity
@@ -57,15 +57,15 @@ ms.locfileid: "65103178"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**。  
+2.  展开 **“SQL Server 代理”** 。  
   
-3.  右键单击“作业活动监视器”，然后单击“查看作业活动”。  
+3.  右键单击“作业活动监视器”  ，然后单击“查看作业活动”  。  
   
 4.  在 **作业活动监视器**中，可以查看为此服务器定义的每个作业的详细信息。  
   
 5.  右键单击一个作业以启动、停止、启用或禁用该作业，按照作业活动监视器中的显示刷新状态，删除该作业，或者查看其历史记录或属性。  若要启动、停止、启用、禁用或刷新多个作业，请在作业活动监视器中选择多个行，然后右键单击所选内容。  
   
-6.  若要更新作业活动监视器，请单击 **“刷新”**。 若要查看较少的行，请单击 **“筛选”** ，然后输入筛选参数。  
+6.  若要更新作业活动监视器，请单击 **“刷新”** 。 若要查看较少的行，请单击 **“筛选”** ，然后输入筛选参数。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -73,9 +73,9 @@ ms.locfileid: "65103178"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- lists activity for all jobs that the current user has permission to view.  

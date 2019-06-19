@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c1ff17941e837474d2d27919dcbd821d241d8394
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802601"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66749184"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,10 +91,16 @@ ms.locfileid: "56802601"
 > 
 > 但是，从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，当创建或重新生成已分区索引时，不会通过扫描表中的所有行来创建或更新统计信息。 相反，查询优化器使用默认采样算法来生成这些统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS` 以及 `FULLSCAN` 子句。  
   
-### <a name="Security"></a> 安全性  
+### <a name="Security"></a> Security  
   
-#### <a name="Permissions"></a> Permissions  
-要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
+#### <a name="Permissions"></a> 权限  
+要求对表或视图具有 ALTER 权限。 用户至少必须是以下某个角色的成员：
+
+* db_ddladmin 数据库角色 <sup>1</sup>  
+* db_owner 数据库角色 
+* sysadmin 服务器角色   
+
+<sup>1</sup>db_ddladmin 数据库角色是[最低权限角色](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)  。
   
 ## <a name="SSMSProcedureFrag"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 检查索引碎片  
   
@@ -108,9 +114,9 @@ ms.locfileid: "56802601"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要检查碎片的索引，然后选择 **“属性”**。  
+5.  右键单击要检查碎片的索引，然后选择 **“属性”** 。  
   
-6.  在 **“选择页”** 下，选择 **“碎片”**。  
+6.  在 **“选择页”** 下，选择 **“碎片”** 。  
   
      **“碎片”** 页将提供以下信息：  
   
@@ -133,7 +139,7 @@ ms.locfileid: "56802601"
      标记为已删除，但尚未移除的行数。 当服务器不忙时，将通过清除线程移除这些行。 此值不包括由于某个快照隔离事务未完成而保留的行。  
   
      **索引类型**  
-     索引的类型。 可能的值包括 **“聚集索引”**、 **“非聚集索引”** 和 **“主 XML”**。 表也可以存储为堆（不带索引），但此后将无法打开此“索引属性”页。  
+     索引的类型。 可能的值包括 **“聚集索引”** 、 **“非聚集索引”** 和 **“主 XML”** 。 表也可以存储为堆（不带索引），但此后将无法打开此“索引属性”页。  
   
      **叶级行数**  
      叶级行的数目。  
@@ -159,9 +165,9 @@ ms.locfileid: "56802601"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -205,9 +211,9 @@ ms.locfileid: "56802601"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要重新组织的索引，然后选择 **“重新组织”**。  
+5.  右键单击要重新组织的索引，然后选择 **“重新组织”** 。  
   
-6.  在 **“重新组织索引”** 对话框中，确认正确的索引位于 **“要重新组织的索引”** 网格中，然后单击 **“确定”**。  
+6.  在 **“重新组织索引”** 对话框中，确认正确的索引位于 **“要重新组织的索引”** 网格中，然后单击 **“确定”** 。  
   
 7.  选中 **“压缩大型对象列数据”** 复选框，以指定也压缩所有包含大型对象 (LOB) 数据的页。  
   
@@ -221,7 +227,7 @@ ms.locfileid: "56802601"
   
 3.  展开要为其重新组织索引的表。  
   
-4.  右键单击 **“索引”** 文件夹，然后选择 **“全部重新组织”**。  
+4.  右键单击 **“索引”** 文件夹，然后选择 **“全部重新组织”** 。  
   
 5.  在 **“重新组织索引”** 对话框中，确认正确的索引位于 **“要重新组织的索引”** 中。 若要从 **“要重新组织的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
   
@@ -239,9 +245,9 @@ ms.locfileid: "56802601"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要重新组织的索引，然后选择“重新生成”。  
+5.  右键单击要重新组织的索引，然后选择“重新生成”  。  
   
-6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。  
+6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。  
   
 7.  选中 **“压缩大型对象列数据”** 复选框，以指定也压缩所有包含大型对象 (LOB) 数据的页。  
   
@@ -253,9 +259,9 @@ ms.locfileid: "56802601"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -273,9 +279,9 @@ ms.locfileid: "56802601"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -290,9 +296,9 @@ ms.locfileid: "56802601"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例在 `Employee` 表中重新生成单个索引。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例在 `Employee` 表中重新生成单个索引。  
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   
@@ -300,7 +306,7 @@ ms.locfileid: "56802601"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制以下示例并将其粘贴到查询中，该示例指定了 `ALL`关键字。 这将重新生成与表相关联的所有索引。 其中指定了三个选项。  
   

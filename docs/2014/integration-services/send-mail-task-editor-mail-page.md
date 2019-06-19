@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055833"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>发送邮件任务编辑器（“邮件”页）
@@ -28,12 +28,12 @@ ms.locfileid: "66055833"
   
 ## <a name="options"></a>选项  
  **SMTPConnection**  
- 从列表中选择一个 SMTP 连接管理器，或单击“\<新建连接…>”创建新的连接管理器。  
+ 从列表中选择一个 SMTP 连接管理器，或单击“\<新建连接…>”创建新的连接管理器  。  
   
 > [!IMPORTANT]  
 >  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
   
- **相关主题：**[SMTP 连接管理器](connection-manager/smtp-connection-manager.md)  
+ **相关主题：** [SMTP 连接管理器](connection-manager/smtp-connection-manager.md)  
   
  **From**  
  指定发件人的电子邮件地址。  
@@ -72,19 +72,19 @@ ms.locfileid: "66055833"
   
 ### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 直接输入  
  **MessageSource**  
- 键入邮件正文，或单击浏览按钮 (…)，然后在“消息源”对话框中键入邮件内容。  
+ 键入邮件正文，或单击浏览按钮 (…)，然后在“消息源”对话框中键入邮件内容  。  
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 文件连接  
  **MessageSource**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器  。  
   
- **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = 变量  
  **MessageSource**  
- 从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
+ 从列表中选择变量，或单击“\<新建变量...>”以创建新的变量  。  
   
- **相关主题：**[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

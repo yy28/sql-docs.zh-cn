@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2bcb3cfa20948e6bb0964d29331ca1d426b8916
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199913"
 ---
 # <a name="change-workload-group-settings"></a>更改工作负荷组设置
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]更改工作负荷组设置。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要更改工作负荷组的设置，请使用：**[SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL)  
+-   **若要更改工作负荷组的设置，请使用：** [SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL)  
   
 ## <a name="before-you-begin"></a>开始之前  
   
@@ -46,13 +46,13 @@ ms.locfileid: "63199913"
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至其中包含要修改的工作负荷组的 **“工作负荷组”** 文件夹。  
   
-2.  右键单击要修改的工作负荷组，然后单击“属性”。  
+2.  右键单击要修改的工作负荷组，然后单击“属性”  。  
   
 3.  在 **“资源调控器属性”** 页中，如果工作负荷组所在的行未自动选中，则在 **“资源池的工作负荷组”** 网格内将其选中。  
   
 4.  在行中单击或双击要更改的单元，然后输入新值。  
   
-5.  若要保存更改，请单击 **“确定”**。  
+5.  若要保存更改，请单击 **“确定”** 。  
   
 ##  <a name="ChgWGTSQL"></a> 使用 Transact-SQL 更改工作负荷组设置  
  **使用 Transact-SQL 更改工作负荷组设置**  

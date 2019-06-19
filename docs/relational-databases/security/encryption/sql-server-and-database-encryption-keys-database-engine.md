@@ -12,27 +12,33 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: ac5f345a6ee07abb8ddf5f4dbacff914914da5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4656beba4de77e7d245a025911dfc2f417b8e1c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749035"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462679"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和数据库加密密钥（数据库引擎）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密密钥帮助保护存储在服务器数据库中的数据、凭据和连接信息。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密钥分为两种：“对称”和“非对称”。 对称密钥使用相同的密码对数据进行加密和解密。 非对称密钥使用一个密码来加密数据（称为公钥），使用另一个密码来解密数据（称为私钥）。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密密钥帮助保护存储在服务器数据库中的数据、凭据和连接信息。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密钥分为两种：“对称”  和“非对称”  。 对称密钥使用相同的密码对数据进行加密和解密。 非对称密钥使用一个密码来加密数据（称为公  钥），使用另一个密码来解密数据（称为私  钥）。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密密钥包括一组用来保护敏感数据的公钥、私钥和对称密钥。 当第一次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时，将在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初始化过程中创建对称密钥。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用此密钥来加密存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的敏感数据。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在数据库中存储敏感数据的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，都要创建一个公钥私钥对。  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>SQL Server 和数据库密钥的应用  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在密钥中的应用主要有两个方面：作为某 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上为该实例生成的*服务主密钥* (SMK) 和作为用于数据库的*数据库主密钥* (DMK)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在密钥中的应用主要有两个方面：作为某 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上为该实例生成的*服务主密钥* (SMK) 和作为用于数据库的*数据库主密钥* (DMK)。
+
+### <a name="service-master-key"></a>服务主密钥
   
- 当第一次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时，将自动生成 SMK 并用于对链接的服务器密码、凭据和数据库主密钥进行加密。 SMK 是通过使用采用 Windows 数据保护 API (DPAPI) 的本地计算机密钥进行加密的。 DPAPI 使用从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的 Windows 凭据和计算机的凭据派生的密钥。 服务主密钥只能由创建它时所用的服务帐户或可以访问该计算机凭据的主体进行解密。  
+ 服务主密钥是 SQL Server 加密层次结构的根。 当第一次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时，将自动生成 SMK 并用于对链接的服务器密码、凭据和数据库主密钥进行加密。 SMK 是通过使用采用 Windows 数据保护 API (DPAPI) 的本地计算机密钥进行加密的。 DPAPI 使用从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的 Windows 凭据和计算机的凭据派生的密钥。 服务主密钥只能由创建它时所用的服务帐户或可以访问该计算机凭据的主体进行解密。
+
+只有创建服务主密钥的 Windows 服务帐户或有权访问服务帐户名称和密码的主体能够打开服务主密钥。
+
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 使用 AES-256 加密算法来保护服务主密钥 (SMK) 和数据库主密钥 (DMK)。 AES 是一种比早期版本中使用的 3DES 更新的加密算法。 在将[!INCLUDE[ssDE](../../../includes/ssde-md.md)]实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 后，应重新生成 SMK 和 DMK 以便将主密钥升级到 AES。 有关重新生成 SMK 的详细信息，请参阅 [ALTER SERVICE MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-service-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-master-key-transact-sql.md)。
+
+### <a name="database-master-key"></a>数据库主密钥
   
- 数据库主密钥是一种用于保护数据库中存在的证书私钥和非对称密钥的对称密钥。 它还可用于对数据进行加密，但由于它有长度限制，所以用于数据加密时实用性不如对称密钥。  
-  
- 当创建主密钥时，会使用 Triple DES 算法以及用户提供的密码对其进行加密。 若要启用数据库主密钥的自动解密，请使用 SMK 对此密钥的副本进行加密。 此密钥的副本存储在使用它的数据库和 **master** 系统数据库中。  
+ 数据库主密钥是一种用于保护数据库中存在的证书私钥和非对称密钥的对称密钥。 它还可用于对数据进行加密，但由于它有长度限制，所以用于数据加密时实用性不如对称密钥。 要启用数据库主密钥的自动解密，请使用 SMK 对此密钥的副本进行加密。 此密钥的副本存储在使用它的数据库和 **master** 系统数据库中。  
   
  每当更改 DMK 时，存储在 **master** 系统数据库中的 DMK 副本都将在没有提示的情况下更新。 但是，使用 **DROP ENCRYPTION BY SERVICE MASTER KEY** 语句的 **ALTER MASTER KEY** 选项可以更改此默认设置。 必须使用 **OPEN MASTER KEY** 语句和密码打开未使用服务主密钥进行加密的 DMK。  
   
@@ -52,7 +58,7 @@ ms.locfileid: "47749035"
 -   在服务器扩展部署（多个服务器同时共享单个数据库以及为该数据库提供可逆加密的密钥）中添加或删除服务器实例。  
   
 ## <a name="important-security-information"></a>重要的安全信息  
- 访问由服务主密钥保护的对象需要使用用来创建该密钥的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户或计算机帐户。 即，计算机与创建密钥的系统绑定在一起。 可以更改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户或计算机帐户，而不会失去对密钥的访问权限。 但是，如果同时更改两者，则将失去对服务主密钥的访问权限。 如果在不具有这两个元素中的任何一个的情况下失去了服务主密钥的访问权限，则将无法对使用原始密钥加密的数据和对象进行解密。  
+ 访问由服务主密钥保护的对象需要使用用来创建该密钥的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户或计算机帐户。 即，计算机与创建密钥的系统绑定在一起。 可以更改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户或  计算机帐户，而不会失去对密钥的访问权限。 但是，如果同时更改两者，则将失去对服务主密钥的访问权限。 如果在不具有这两个元素中的任何一个的情况下失去了服务主密钥的访问权限，则将无法对使用原始密钥加密的数据和对象进行解密。  
   
  如果没有服务主密钥，则将无法还原受服务主密钥保护的连接。  
   

@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcaa38cd3849f1665d0f31e8d2749730d2494fcc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63217948"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>SQL Server Integration Services 属性（“登录”选项卡）
-  使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]“属性”对话框中的“登录”选项卡可指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用的帐户，并且可启动和停止该服务。  
+  使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]“属性”  对话框中的“登录”  选项卡可指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用的帐户，并且可启动和停止该服务。  
   
 ## <a name="options"></a>选项  
  **本地系统帐户**  

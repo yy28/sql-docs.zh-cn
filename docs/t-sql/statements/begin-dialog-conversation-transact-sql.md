@@ -32,11 +32,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f26eace7208ce0ec251707a34e964f718fcc1d09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124787"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051728"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,18 +64,18 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
   
 ## <a name="arguments"></a>参数  
  **@** _dialog_handle_  
- 一个变量，用于为 BEGIN DIALOG CONVERSATION 语句返回的新对话存储系统生成的对话句柄。 该变量的类型必须为 uniqueidentifier。  
+ 一个变量，用于为 BEGIN DIALOG CONVERSATION 语句返回的新对话存储系统生成的对话句柄。 该变量的类型必须为 uniqueidentifier  。  
   
  FROM SERVICE *initiator_service_name*  
  指定启动对话的服务。 指定的名称必须是当前数据库中的服务的名称。 为发起方服务指定的队列将接收由目标服务返回的消息，以及 Service Broker 为此会话创建的消息。  
   
- TO SERVICE 'target_service_name'  
- 指定启动对话时的目标服务。 *target_service_name* 的类型为 **nvarchar(256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 target_service_name 字符串匹配。 换言之，比较时将区分大小写，且不考虑当前的排序规则。  
+ TO SERVICE 'target_service_name'     
+ 指定启动对话时的目标服务。 *target_service_name* 的类型为 **nvarchar(256)** 。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 target_service_name 字符串匹配  。 换言之，比较时将区分大小写，且不考虑当前的排序规则。  
   
  *service_broker_guid*  
  指定承载目标服务的数据库。 如果有多个数据库承载目标服务实例，则可通过提供 *service_broker_guid* 与特定数据库通信。  
   
- *service_broker_guid* 的类型为 **nvarchar(128)**。 若要查找数据库的 *service_broker_guid*，请在数据库中运行以下查询：  
+ *service_broker_guid* 的类型为 **nvarchar(128)** 。 若要查找数据库的 *service_broker_guid*，请在数据库中运行以下查询：  
   
 ```  
 SELECT service_broker_guid  
@@ -92,13 +92,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  指定此会话遵循的约定。 当前数据库中必须有该约定。 如果目标服务不接受遵循指定约定的新会话，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将返回针对该会话的错误消息。 如果省略此子句，则会话会遵循名为 **DEFAULT** 的约定。  
   
- RELATED_CONVERSATION =related_conversation_handle  
+ RELATED_CONVERSATION =related_conversation_handle    
  指定将新对话添加到的现有会话组。 如果使用该子句，则新对话与 *related_conversation_handle* 指定的对话属于同一个会话组。 *related_conversation_handle* 的类型必须可隐式转换为类型 **uniqueidentifier**。 如果 *related_conversation_handle* 不引用现有的对话，则该语句将失败。  
   
- RELATED_CONVERSATION_GROUP =related_conversation_group_id  
+ RELATED_CONVERSATION_GROUP =related_conversation_group_id    
  指定将新对话添加到的现有会话组。 如果使用该子句，则新对话将添加到 *related_conversation_group_id* 指定的会话组中。 *related_conversation_group_id* 的类型必须可隐式转换为类型 **uniqueidentifier**。 如果 *related_conversation_group_id* 不引用现有的会话组，Service Broker 会使用指定的 *related_conversation_group_id* 创建一个新的会话组，并将新对话与该会话组关联。  
   
- LIFETIME =dialog_lifetime  
+ LIFETIME =dialog_lifetime    
  指定对话将保持打开状态的最长时间。 为使对话成功完成，两个端点都必须在生存期内显式结束对话。 *dialog_lifetime* 的值必须以秒表示。 生存期的类型为 **int**。如果未指定 LIFETIME 子句，则对话的生存期为 **int** 数据类型的最大值。  
   
  ENCRYPTION  
@@ -122,7 +122,7 @@ WHERE database_id = DB_ID() ;
   
  BEGIN DIALOG CONVERSATION 在用户定义函数中无效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要启动对话，则当前的用户对于在该命令的 FROM 子句中指定的服务的队列必须有 RECEIVE 权限，对于指定的约定有 REFERENCES 权限。  
   
 ## <a name="examples"></a>示例  

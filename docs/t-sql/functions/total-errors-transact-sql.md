@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e0fdc42540f7b0bf80ecfd1b4d9c088f6f064266
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949029"
 ---
 # <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "65949029"
  **integer**  
   
 ## <a name="remarks"></a>Remarks  
- 并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所遇到的所有写入错误都由该函数进行处理。 偶尔发生的非致命写入错误由服务器本身进行处理，并不将其视为错误。 若要显示包含几个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括错误总数信息）的报表，请运行 sp_monitor。  
+ 并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所遇到的所有写入错误都由该函数进行处理。 偶尔发生的非致命写入错误由服务器本身进行处理，并不将其视为错误。 若要显示包含几个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括错误总数信息）的报表，请运行 sp_monitor  。  
   
 ## <a name="examples"></a>示例  
  以下示例显示了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到当前日期和时间为止所遇到的错误数。  

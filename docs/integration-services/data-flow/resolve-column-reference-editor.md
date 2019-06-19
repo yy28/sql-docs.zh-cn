@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9b414c8f47cbe8942f4448d0f071b125a7d6518
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726470"
 ---
 # <a name="resolve-column-reference-editor"></a>解析列引用编辑器
@@ -34,16 +34,16 @@ ms.locfileid: "65726470"
  在所有列引用都已解决后，如果没有任何其他数据路径错误，则在数据路径旁将不会显示错误图标。  
   
 ## <a name="options"></a>选项  
- **未映射的输出列（源）**    
+ **未映射的输出列（源）**     
  来自当前未映射的上游路径的列  
   
-**映射的列（源）**    
+**映射的列（源）**     
  来自映射到下游路径中的列的上游路径的列  
   
-**映射的列（目标）**    
+**映射的列（目标）**     
  来自映射到下游路径中的列的上游路径的列  
   
-**未映射的输入列（目标）**    
+**未映射的输入列（目标）**     
  来自当前未映射的下游路径的列  
   
 **删除未映射的输入列**  

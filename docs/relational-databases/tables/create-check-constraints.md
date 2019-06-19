@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98ddc4f21807b9ac5185ad5e510cd83e35bbc93b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652601"
 ---
 # <a name="create-check-constraints"></a>创建 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52521664"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具创建新的 CHECK 约束：**  
   
@@ -44,18 +44,18 @@ ms.locfileid: "52521664"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要具有表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-new-check-constraint"></a>创建新的 CHECK 约束  
   
-1.  在“对象资源管理器”中，展开要为其添加 CHECK 约束的表，右键单击“约束”，然后单击“新建约束”。  
+1.  在  “对象资源管理器”中，展开要为其添加 CHECK 约束的表，右键单击  “约束”，然后单击  “新建约束”。  
   
-2.  在“CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 (…)。  
+2.  在“CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 (…)    。  
   
 3.  在 **“CHECK 约束表达式”** 对话框中，键入 CHECK 约束的 SQL 表达式。 例如，若要将 `SellEndDate` 表的 `Product` 列中的条目限制为大于等于 `SellStartDate` 列中的日期的值，或者为 NULL 值，则键入：  
   
@@ -72,9 +72,9 @@ ms.locfileid: "52521664"
     > [!NOTE]  
     >  确保将任何非数字约束值包含在单引号 (') 中。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
-5.  在“标识”类别中，您可以更改 CHECK 约束的名称并且为该约束添加说明（扩展属性）。  
+5.  在  “标识”类别中，您可以更改 CHECK 约束的名称并且为该约束添加说明（扩展属性）。  
   
 6.  在 **“表设计器”** 类别中，您可以设置何时强制约束。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52521664"
     |在此表上发生复制操作时强制约束|**强制用于复制**|  
     |在此表中插入或更新行时强制约束|**强制用于 INSERT 和 UPDATE**|  
   
-7.  单击 **“关闭”**。  
+7.  单击 **“关闭”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -92,9 +92,9 @@ ms.locfileid: "52521664"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     ALTER TABLE dbo.DocExc   

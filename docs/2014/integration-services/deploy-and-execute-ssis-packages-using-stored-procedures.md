@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56141595c62e5190bf3ef797059acd602f801ed7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059604"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用存储过程部署和执行 SSIS 包
@@ -26,11 +26,11 @@ ms.locfileid: "66059604"
 >  您可以通过执行以下操作为下面的过程中列出的存储过程轻松地生成 Transact-SQL 语句，但 catalog.deploy_project 除外：  
 > 
 >  1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，在对象资源管理器中展开“Integration Services 目录”  节点，然后导航到您要执行的包。  
-> 2.  右键单击该包，然后单击“执行”。  
+> 2.  右键单击该包，然后单击“执行”  。  
 > 3.  根据需要，设置参数值、连接管理器属性和 **“高级”** 选项卡中的选项（例如，日志记录级别）。  
 > 
 >      有关日志记录级别的详细信息，请参阅 [启用日志记录在 SSIS 服务器上的包执行的](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)。  
-> 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”**。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的“查询编辑器”窗口中。  
+> 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”** 。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的“查询编辑器”窗口中。  
   
 ## <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>使用存储过程部署和执行包  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66059604"
   
      在 **“链接服务器属性”** 的 **“服务器选项”** 页上，将 **RPC** 和 **RPC Out** 设置为 **True**。 此外，将 **“为 RPC 启用针对分布式事务的升级”** 设置为 **False**。  
   
--   通过在对象资源管理器中展开“链接服务器”下的“提供程序”节点，右键单击该提供程序，然后单击“属性”，对为链接服务器选择的提供程序启用动态参数。 选择 **“动态参数”** 旁边的 **“启用”**。  
+-   通过在对象资源管理器中展开“链接服务器”下的“提供程序”节点，右键单击该提供程序，然后单击“属性”，对为链接服务器选择的提供程序启用动态参数。    选择 **“动态参数”** 旁边的 **“启用”** 。  
   
 -   确认分布式事务处理协调器 (DTC) 在两个服务器上均启动。  
   

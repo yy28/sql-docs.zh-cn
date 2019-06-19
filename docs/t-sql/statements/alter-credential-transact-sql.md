@@ -22,10 +22,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: ec9f609ed3687106ca65152496cbb20b2ff1b8f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63051590"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
@@ -45,20 +45,20 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- credential_name  
+ credential_name   
  指定将要更改的凭据的名称。  
   
- IDENTITY ='identity_name'  
+ IDENTITY ='identity_name'   
  指定从服务器外部进行连接时要使用的帐户名称。  
   
- SECRET ='secret'  
+ SECRET ='secret'   
  指定发送身份验证所需的机密内容。 *secret* 是可选项。
   
 > [!IMPORTANT]
 > Azure SQL 数据库仅支持 Azure Key Vault 和共享访问签名标识。 不支持 Windows 用户标识。
   
 ## <a name="remarks"></a>Remarks  
- 当凭据发生更改时，identity_name 和 secret 的值都将重置。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
+ 当凭据发生更改时，identity_name 和 secret 的值都将重置   。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
   
  使用服务主密钥对密码进行加密。 如果重新生成服务主密钥，则需要使用新服务主密钥对该密码重新加密。  
   

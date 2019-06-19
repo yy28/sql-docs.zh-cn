@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0c2d28900e8e0c75123e48704de56ff69d720d17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108751"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>迁移 Reporting Services 安装（SharePoint 模式）
@@ -44,7 +44,7 @@ ms.locfileid: "66108751"
  新 SharePoint 环境运行后，可以在包括内容数据库的数据库级别选择仅内容迁移或完全迁移。  
   
 ###  <a name="bkmk_content_only_migration"></a> 仅限迁移的内容  
- **仅迁移 Reporting Services 内容：** 若要将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内容复制到新场，则需要使用相关工具（如 rs.exe）将内容复制到新的 SharePoint 安装。 有关仅内容迁移的详细信息，请参阅以下内容：  
+ **仅迁移 Reporting Services 内容：** 若要将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内容复制到新场，则需要使用相关工具（如 rs.exe）将内容复制到新的 SharePoint 安装  。 有关仅内容迁移的详细信息，请参阅以下内容：  
   
 -   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本：** 脚本可以在迁移内容和纯模式和 SharePoint 模式报表服务器之间的资源。 有关详细信息，请参阅[将脚本保存到报表服务器之间迁移内容的示例 Reporting Services rs.exe](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)和[将内容从一个报表服务器迁移到另一个的ReportingServicesRS.exe脚本](http://azuresql.codeplex.com/releases/view/115207).  
   

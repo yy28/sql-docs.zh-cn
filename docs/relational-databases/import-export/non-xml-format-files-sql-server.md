@@ -17,15 +17,15 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a407063bfd76e937f13587d02ad472df566bb83c
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946654"
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式化文件 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，大容量导出和导入支持两种类型的格式化文件：非 XML 格式化文件和 XML 格式化文件。  
+  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，大容量导出和导入支持两种类型的格式化文件：非 XML 格式化文件  和 XML 格式化文件  。  
   
  **本主题内容：**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "64946654"
   
 |格式化文件字段|描述|  
 |------------------------|-----------------|  
-|版本|**bcp** 实用工具的版本号：<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 该版本号仅可由 **bcp**识别，而无法由 [!INCLUDE[tsql](../../includes/tsql-md.md)]识别。<br /><br /> <br /><br /> 注意：读取格式化文件所用的 bcp 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 可以读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**生成的 10.0 版格式化文件，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 无法读取由 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**生成的 12.0 版格式化文件。|  
+|版本|**bcp** 实用工具的版本号：<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 该版本号仅可由 **bcp**识别，而无法由 [!INCLUDE[tsql](../../includes/tsql-md.md)]识别。<br /><br /> <br /><br /> 注意：读取格式化文件所用的 bcp 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高  。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 可以读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**生成的 10.0 版格式化文件，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 无法读取由 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**生成的 12.0 版格式化文件。|  
 |列数|数据文件中字段的数目。 该数目必须在所有行中都相同。|  
   
  其他格式化文件字段说明需要大容量导入或导出的数据字段。 每个数据字段都需在格式化文件中占单独一行。 每个格式化文件行均包含下表中说明的格式化文件字段的值。  

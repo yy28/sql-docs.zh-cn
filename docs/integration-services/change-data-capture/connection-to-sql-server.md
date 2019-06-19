@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a3e9f70011d96d9aa5d5068af5cddecd8f29cce9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728994"
 ---
 # <a name="connection-to-sql-server"></a>连接到 SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "65728994"
   
 -   Windows 身份验证  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”和“密码”。  
+-   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”  和“密码”  。  
   
 ### <a name="options"></a>选项  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
@@ -46,9 +46,9 @@ ms.locfileid: "65728994"
   
 -   **执行超时值**：键入一个时间（秒），未超过该时间，程序将等待 SQL 命令执行完成，超过该时间后将生成超时错误。 默认值为 **30**。  
   
--   **加密连接**：选择“加密连接”可确保对正在建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接进行加密以保护隐私。  
+-   **加密连接**：选择“加密连接”  可确保对正在建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接进行加密以保护隐私。  
   
--   **高级**：单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
+-   **高级**：单击“高级”  并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
   
 ## <a name="see-also"></a>另请参阅  
  [针对 CDC 服务的 SQL Server 连接所需权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  

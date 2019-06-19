@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c2416606148a0b735f48ec5bd951ee956e020b5e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105439"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>在解决方案中添加现有项目
@@ -32,9 +32,9 @@ ms.locfileid: "65105439"
   
 1.  在解决方案资源管理器中，选择解决方案。  
   
-2.  在“文件”菜单中，指向“添加”，再单击“现有项目”。  
+2.  在“文件”  菜单中，指向“添加”  ，再单击“现有项目”  。  
   
-3.  在“添加现有项目”对话框中，找到要添加的项目，选择该项目文件，再单击“打开”。  
+3.  在“添加现有项目”  对话框中，找到要添加的项目，选择该项目文件，再单击“打开”  。  
   
     该项目即添加到选定的解决方案中。  
   

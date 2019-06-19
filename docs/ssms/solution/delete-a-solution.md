@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fe7f88fb9a75518996ebd906149e050325f2ac67
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105281"
 ---
 # <a name="delete-a-solution"></a>删除解决方案
@@ -33,11 +33,11 @@ ms.locfileid: "65105281"
   
 1.  在解决方案资源管理器中，选择要删除的解决方案。  
   
-2.  在 **“文件”** 菜单上，单击 **“关闭解决方案”**。  
+2.  在 **“文件”** 菜单上，单击 **“关闭解决方案”** 。  
   
 3.  在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 资源管理器中，找到并选择与要删除的解决方案关联的文件。  
   
-4.  在“文件”菜单上，单击“删除”。  
+4.  在“文件”  菜单上，单击“删除”  。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

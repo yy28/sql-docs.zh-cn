@@ -13,16 +13,16 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521548"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>创建并存储列主密钥 (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-列主密钥是“始终加密”功能中使用的保护密钥的密钥，用于对列加密密钥进行加密。 列主密钥必须存储在受信任的密钥存储，并且这些密钥可供需要加密或解密数据的应用程序以及用于配置“始终加密”和管理“始终加密”密钥的工具访问。
+列主密钥是“始终加密”功能中使用的保护密钥的密钥，用于对列加密密钥进行加密。  列主密钥必须存储在受信任的密钥存储，并且这些密钥可供需要加密或解密数据的应用程序以及用于配置“始终加密”和管理“始终加密”密钥的工具访问。
 
 本文详细介绍了选择密钥存储和为“始终加密”创建列主密钥。 有关详细概述，请参阅 [Always Encrypted 密钥管理概述](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。
 
@@ -30,7 +30,7 @@ ms.locfileid: "58657951"
 
 “始终加密”功能支持使用多个密钥存储来存储“始终加密”列主密钥。 受支持的密钥存储因你使用的驱动程序和版本而异。
 
-将考虑两种高级别密钥存储 - 本地密钥存储和集中式密钥存储。
+将考虑两种高级别密钥存储 - 本地密钥存储和集中式密钥存储。  
 
 ###  <a name="local-or-centralized-key-store"></a>本地密钥存储还是集中式密钥存储？
 
@@ -61,7 +61,7 @@ ms.locfileid: "58657951"
 
 若要成为有效的列主密钥，证书必须：
 * 是 X.509 证书。
-* 存储在以下两个证书存储位置之一：本地计算机或当前用户。 （若要在本地计算机证书存储位置中创建证书，必须是目标计算机上的管理员。）
+* 存储在以下两个证书存储位置之一：本地计算机  或当前用户  。 （若要在本地计算机证书存储位置中创建证书，必须是目标计算机上的管理员。）
 * 包含私钥（证书中密钥的推荐长度为 2048 位或更高）。
 * 针对密钥交换而创建。
 
@@ -89,26 +89,26 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>使证书可用于应用程序和用户
 
-如果列主密钥是存储在本地计算机证书存储位置的一个证书，你需要导出包含私钥的证书并将其导入到托管应用程序（预期要加密或解密存储在加密列中的数据）的所有计算机，或用于配置“始终加密”功能和管理“始终加密”密钥的工具。 此外，每个用户必须被授予本地计算机证书存储位置中存储的证书的读取权限，以便能够使用该证书作为列主密钥。
+如果列主密钥是存储在本地计算机  证书存储位置的一个证书，你需要导出包含私钥的证书并将其导入到托管应用程序（预期要加密或解密存储在加密列中的数据）的所有计算机，或用于配置“始终加密”功能和管理“始终加密”密钥的工具。 此外，每个用户必须被授予本地计算机证书存储位置中存储的证书的读取权限，以便能够使用该证书作为列主密钥。
 
-如果列主密钥是存储在当前用户证书存储位置的一个证书，你需要导出包含私钥的证书并将其导入到运行应用程序（预期要加密或解密存储在加密列中的数据）的所有用户帐户的当前用户证书存储位置，或用于配置“始终加密”功能和管理“始终加密”密钥（包含这些应用程序/工具的所有计算机上的密钥）的工具。 无需任何权限配置 - 登录计算机后，用户可以访问其当前用户证书存储位置的所有证书。
+如果列主密钥是存储在当前用户  证书存储位置的一个证书，你需要导出包含私钥的证书并将其导入到运行应用程序（预期要加密或解密存储在加密列中的数据）的所有用户帐户的当前用户证书存储位置，或用于配置“始终加密”功能和管理“始终加密”密钥（包含这些应用程序/工具的所有计算机上的密钥）的工具。 无需任何权限配置 - 登录计算机后，用户可以访问其当前用户证书存储位置的所有证书。
 
 #### <a name="using-powershell"></a>使用 PowerShell
 使用 [Import-PfxCertificate](/powershell/module/pkiclient/import-pfxcertificate) 和 [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet 导入和导出证书。
 
 #### <a name="using-microsoft-management-console"></a>使用 Microsoft 管理控制台 
 
-若要向用户授予存储在本地计算机证书存储位置的证书的读取权限，请执行以下步骤：
+若要向用户授予存储在本地计算机证书存储位置的证书的读取权限  ，请执行以下步骤：
 
 1.  打开命令提示符，并键入 **mmc**。
-2.  在 MMC 控制台的“文件”菜单上，单击“添加/删除管理单元”。
-3.  在“添加/删除管理单元”对话框中，单击“添加”。
-4.  在“添加独立管理单元”对话框中，单击“证书”，再单击“添加”。
-5.  在“证书”管理单元对话框中，单击“计算机帐户”，再单击“完成”。
-6.  在“添加独立管理单元”对话框中，单击“关闭”。
-7.  在“添加/删除管理单元”对话框中，单击“确定”。
-8.  在“证书”管理单元中的“证书”>“个人”文件夹中找到证书，右键单击证书，指向“所有任务”，然后单击“管理私钥”。
-9.  在“安全”对话框中，根据需要添加用户帐户的读取权限。
+2.  在 MMC 控制台的“文件”  菜单上，单击“添加/删除管理单元”  。
+3.  在“添加/删除管理单元”  对话框中，单击“添加”  。
+4.  在“添加独立管理单元”  对话框中，单击“证书”  ，再单击“添加”  。
+5.  在“证书”管理单元对话框中，单击“计算机帐户”，再单击“完成”。   
+6.  在“添加独立管理单元”  对话框中，单击“关闭”  。
+7.  在“添加/删除管理单元”  对话框中，单击“确定”  。
+8.  在“证书”管理单元中的“证书”>“个人”文件夹中找到证书，右键单击证书，指向“所有任务”，然后单击“管理私钥”。    
+9.  在“安全”  对话框中，根据需要添加用户帐户的读取权限。
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>创建 Azure 密钥保管库中的列主密钥
 
@@ -139,9 +139,9 @@ $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destinatio
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>使 Azure 密钥保管库密钥可用于应用程序和用户
 
-将 Azure 密钥保管库密钥用作列主密钥时，应用程序需要进行 Azure 身份验证，并且应用程序的身份需要具有密钥保管库的以下权限：get、unwrapKey 和 verify。 
+将 Azure 密钥保管库密钥用作列主密钥时，应用程序需要进行 Azure 身份验证，并且应用程序的身份需要具有密钥保管库的以下权限：get、unwrapKey 和 verify    。 
 
-若要预配使用存储在 Azure 密钥保管库中的列主密钥保护的列加密密钥，你需要 get、unwrapKey、wrapKey、sign 和 verify 权限。 此外，若要在 Azure 密钥保管库中创建新的密钥，你需要 create 权限；若要列出密钥保管库内容，你需要 list 权限。
+若要预配使用存储在 Azure 密钥保管库中的列主密钥保护的列加密密钥，你需要 get  、unwrapKey  、wrapKey  、sign  和 verify  权限。 此外，若要在 Azure 密钥保管库中创建新的密钥，你需要 create  权限；若要列出密钥保管库内容，你需要 list  权限。
 
 #### <a name="using-powershell"></a>使用 PowerShell
 

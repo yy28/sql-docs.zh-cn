@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63280484"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的参数
-  参数是在从“工具”菜单中启动外部工具时，由 Studio 环境提供值的变量。 可以使用“外部工具”对话框将外部工具（如记事本）添加到“工具”菜单。  
+  参数是在从“工具”  菜单中启动外部工具时，由 Studio 环境提供值的变量。 可以使用“外部工具”  对话框将外部工具（如记事本）添加到“工具”  菜单。  
   
  下表列出了外部工具的参数。  
   
-|“属性”|参数|Description|  
+|“属性”|参数|描述|  
 |----------|--------------|-----------------|  
 |**项路径**|$(ItemPath)|当前源代码的完整文件名（以驱动器 + 路径 + 文件名形式定义）；如果一个非源代码窗口处于活动状态，则该参数将是空白的。|  
 |**项目录**|$(ItemDir)|当前源代码的目录（以驱动器 + 路径形式定义）；如果一个非源代码窗口处于活动状态，则该参数将是空白的。|  

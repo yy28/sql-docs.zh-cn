@@ -14,10 +14,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cebd77c1728cc7758e0a4b2077ac0a651bf77f96
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821939"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定断点筛选器
@@ -29,11 +29,11 @@ ms.locfileid: "65821939"
   
 #### <a name="to-specify-a-breakpoint-filter"></a>指定断点筛选器  
   
-1.  在“编辑器”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”。  
+1.  在“编辑器”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”  。  
   
      -或 -  
   
-     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”。  
+     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”  。  
   
 2.  在 **“断点筛选器”** 对话框中，使用 **“筛选器”** 框按名称指定计算机，或者按名称或 ID 编号指定操作系统进程和线程：  
   

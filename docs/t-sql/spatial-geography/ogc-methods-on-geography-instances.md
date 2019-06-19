@@ -14,16 +14,16 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 2938e8d6c8bf0f3aebfbbadc0bbaa4f8ded57161
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935880"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>地域实例上的 OGC 方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 geography 实例上支持开放地理空间信息联盟 (OGC) 方法。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 geography 实例上支持开放地理空间信息联盟 (OGC) 方法  。  
   
  有关 OGC 规范的详细信息，请参阅以下资源：  
   
