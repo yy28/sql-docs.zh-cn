@@ -18,11 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d325480ad39800d28161e79cf468419278fb894f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507351"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62693462"
 ---
 # <a name="modify-check-constraints"></a>修改 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52507351"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具修改 CHECK 约束：**  
   
@@ -43,18 +43,18 @@ ms.locfileid: "52507351"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-check-constraint"></a>修改 CHECK 约束  
   
-1.  在“对象资源管理器” 中，右键单击包含 CHECK 约束的表，然后选择“设计”。  
+1.  在“对象资源管理器”  中，右键单击包含 CHECK 约束的表，然后选择“设计”  。  
   
-2.  在“表设计器”菜单上，单击“CHECK 约束…”。  
+2.  在“表设计器”菜单上，单击“CHECK 约束…”   。  
   
 3.  在 **“CHECK 约束”** 对话框中，在 **“选定的 CHECK 约束”** 下选择要编辑的约束。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "52507351"
     > [!NOTE]  
     >  对于 CHECK 约束，有些数据库具有不同的功能。  
   
-5.  单击 **“关闭”**。  
+5.  单击 **“关闭”** 。  
   
-6.  在“文件”菜单上，单击“保存”以保存表名。  
+6.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改 CHECK 约束**  

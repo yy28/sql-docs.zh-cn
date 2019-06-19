@@ -22,10 +22,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1b55e49768509a5294e30a511f09ec8b91984ab
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981730"
 ---
 # <a name="set-operators---union-transact-sql"></a>集运算符 - UNION (Transact-SQL)
@@ -53,7 +53,7 @@ ms.locfileid: "65981730"
 ## <a name="arguments"></a>参数  
 \<query_specification> | ( \<query_expression> ) 查询规范或查询表达式，用以返回要与另一个查询规范或查询表达式所返回的数据合并的数据。 属于 UNION 运算的列定义不一定要相同，但必须可通过隐式转换实现兼容。 如果数据类型不同，则根据[数据类型优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)规则确定所产生的数据类型。 如果类型相同，但精度、确定位数或长度不同，那么结果以相同的表达式合并规则为依据。 有关详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
-xml 数据类型的列必须相等。 所有的列必须类型化为 XML 架构或是非类型化的。 如果要类型化，这些列必须类型化为相同的 XML 架构集合。  
+xml  数据类型的列必须相等。 所有的列必须类型化为 XML 架构或是非类型化的。 如果要类型化，这些列必须类型化为相同的 XML 架构集合。  
   
 UNION  
 指定合并多个结果集并将其作为单个结果集返回。  
@@ -311,7 +311,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. 使用三个 SELECT 语句的 UNION 来说明 ALL 和括号的作用  
-下面的示例使用 `UNION` 合并同一个表的结果，以展示使用 `UNION` 时 ALL 和括号的效果。  
+下面的示例使用 `UNION` 合并同一个表  的结果，以展示使用 `UNION` 时 ALL 和括号的效果。  
   
 第一个示例使用 `UNION ALL` 显示重复记录，并三次返回源表中的每一行。 第二个示例使用不带 `ALL` 的 `UNION`，删除三个 `SELECT` 语句的组合结果中的重复行，仅返回源表中的非重复行。  
   

@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a2be726581713805c3cc001125957597eb178945
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098505"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>从以前的版本升级数据库关系图 (Visual Database Tools)
@@ -36,7 +36,7 @@ ms.locfileid: "65098505"
   
 2.  在该数据库下展开“数据库关系图”节点。  
   
-3.  如果希望设置数据库关系图，请在出现提示时选择“是”。  
+3.  如果希望设置数据库关系图，请在出现提示时选择“是”  。  
   
     这将升级存储在数据库中的关系图。  
   

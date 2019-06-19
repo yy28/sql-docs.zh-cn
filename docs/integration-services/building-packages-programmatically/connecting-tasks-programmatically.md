@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d5e7e6cdb7dc5cc50d292ef0b6b0e39b176e837
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729301"
 ---
 # <a name="connecting-tasks-programmatically"></a>以编程方式连接任务
@@ -38,8 +38,8 @@ ms.locfileid: "65729301"
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|指定执行结果确定受约束的容器或任务是否运行。 请将 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 属性设置为 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 枚举中的所需值。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|指定表达式的值确定受约束的容器或任务是否运行。 请设置 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 属性。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|指定约束结果必须发生且表达式必须计算，受约束的容器或任务才能运行。 设置 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 的 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> 属性，并将其 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> 属性设置为“true”。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|指定约束结果必须发生，或者表达式必须计算，受约束的容器或任务才能运行。 设置 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 的 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> 属性，并将其 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> 属性设置为“false”。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|指定约束结果必须发生且表达式必须计算，受约束的容器或任务才能运行。 设置 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 的 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> 属性，并将其 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> 属性设置为“true”  。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|指定约束结果必须发生，或者表达式必须计算，受约束的容器或任务才能运行。 设置 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 的 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> 属性，并将其 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> 属性设置为“false”  。|  
   
  下面的代码示例演示将两个任务添加到包中。 在它们之间创建 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>，以防止第二个任务在第一个任务完成之前运行。  
   

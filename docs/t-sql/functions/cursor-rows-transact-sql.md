@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ad753fbdd529cbe9bc53906479aa134029fcc45e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947871"
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
@@ -48,10 +48,10 @@ ms.locfileid: "65947871"
   
 |返回值|描述|  
 |---|---|
-|-m|游标被异步填充。 返回的值 (-m) 是键集中当前的行数*m*。|  
+|-m |游标被异步填充。 返回的值 (-m) 是键集中当前的行数*m*。|  
 |-1|游标为动态游标。 因为动态游标可反映所有更改，所以游标符合条件的行数不断变化。 游标不一定检索所有符合条件的行。|  
 |0|没有已打开的游标，对于上一个打开的游标没有符合条件的行，或上一个打开的游标已被关闭或被释放。|  
-|*n*|游标已完全填充。 返回值 (n) 是游标中的总行数。|  
+|*n*|游标已完全填充。 返回值 (n) 是游标中的总行数  。|  
   
 ## <a name="remarks"></a>Remarks  
 如果异步打开最后一个游标，`@@CURSOR_ROWS` 返回负数。 如果 sp_configure cursor threshold 的值超过 0，且游标结果集中的行数大于游标阈值，则异步打开键集驱动程序或静态游标。

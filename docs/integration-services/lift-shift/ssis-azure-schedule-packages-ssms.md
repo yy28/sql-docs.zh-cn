@@ -12,10 +12,10 @@ ms.author: sawinark
 ms.reviewer: maghan
 manager: craigg
 ms.openlocfilehash: 5ab271c79ffdcb43573c8a55680a2695305a96af
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012833"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 计划 Azure 中部署的 SSIS 包的执行
@@ -28,13 +28,13 @@ ms.locfileid: "66012833"
 
 如果要使用 SQL 数据库来托管 SSIS 目录 `SSISDB`，可使用此 SSMS 功能生成计划 SSIS 包所需的数据工厂管道、活动和触发器。 然后，可在数据工厂中选择性地编辑和扩展这些对象。
 
-如果使用 SSMS 来计划包，SSIS 会自动创建三个基于所选包和时间戳的名称命名的新数据工厂对象。 例如，如果 SSIS 包的名称为 MyPackage，SSMS 将创建与以下类似的新数据工厂对象：
+如果使用 SSMS 来计划包，SSIS 会自动创建三个基于所选包和时间戳的名称命名的新数据工厂对象。 例如，如果 SSIS 包的名称为 MyPackage，SSMS 将创建与以下类似的新数据工厂对象  ：
 
 | Object | “属性” |
 |---|---|
-| 管道 | Pipeline_MyPackage_2018-05-08T09_00_00Z |
-| 执行 SSIS 包活动 | Activity_MyPackage_2018-05-08T09_00_00Z |
-| 触发器 | Trigger_MyPackage_2018-05-08T09_00_00Z |
+| 管道 | Pipeline_MyPackage_2018-05-08T09_00_00Z  |
+| 执行 SSIS 包活动 | Activity_MyPackage_2018-05-08T09_00_00Z  |
+| 触发器 | Trigger_MyPackage_2018-05-08T09_00_00Z  |
 |||
 
 ## <a name="prerequisites"></a>必备条件
@@ -43,31 +43,31 @@ ms.locfileid: "66012833"
 
 ## <a name="schedule-a-package-in-ssms"></a>在 SSMS 中计划包
 
-1. 在 SSMS 的对象资源管理器中，依次选择 SSISDB 数据库、文件夹、项目和包。 右键单击包，然后选择“计划”。
+1. 在 SSMS 的对象资源管理器中，依次选择 SSISDB 数据库、文件夹、项目和包。 右键单击包，然后选择“计划”  。
 
     ![选择要计划的包。](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image1-schedule.png)
 
-2. “新建计划”对话框随即打开。 在“新建计划”对话框的“常规”页中，提供新计划作业的名称和说明。
+2. “新建计划”对话框随即打开  。 在“新建计划”对话框的“常规”页中，提供新计划作业的名称和说明   。
 
     ![“新建计划”对话框的“常规”页](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image2-new-schedule.png)
 
-3. 在“新建计划”对话框的“包”页中，选择可选运行时设置和运行时环境。
+3. 在“新建计划”对话框的“包”页中，选择可选运行时设置和运行时环境   。
 
     ![“新建计划”对话框的“包”页](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image3-new-schedule2.png)
 
-4. 在“新建计划”对话框的“计划”页中，提供计划设置（如频率、当日时间和持续时间）。
+4. 在“新建计划”对话框的“计划”页中，提供计划设置（如频率、当日时间和持续时间）   。
 
     ![“新建计划”对话框的“计划”页](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image4-new-schedule3.png)
 
-5. 在“新建计划”对话框中完成创建作业后，将显示一条确认信息，提醒你 SSMS 要创建的新数据工厂对象。 如果在确认对话框中选择“是”，Azure 门户中将打开新的数据工厂管道，以便查看和自定义。
+5. 在“新建计划”对话框中完成创建作业后，将显示一条确认信息，提醒你 SSMS 要创建的新数据工厂对象  。 如果在确认对话框中选择“是”，Azure 门户中将打开新的数据工厂管道，以便查看和自定义  。
 
     ![确认新计划](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image5-confirmation.png)
 
-6. 若要自定义计划触发器，从“触发器”菜单中选择“新建/编辑”。
+6. 若要自定义计划触发器，从“触发器”菜单中选择“新建/编辑”   。
 
     ![选择性地编辑新管道](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image6-edit.png)
 
-    “编辑触发器”边栏选项卡随即打开，以便自定义计划选项。
+    “编辑触发器”边栏选项卡随即打开，以便自定义计划选项  。
 
     ![编辑触发器](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image7-edit2.png)
 

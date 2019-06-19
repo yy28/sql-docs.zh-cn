@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d550361063bd051e146b8fc350ae63b0b57c399
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728558"
 ---
 # <a name="select-oracle-tables-and-columns"></a>选择 Oracle 表和列
@@ -44,15 +44,15 @@ ms.locfileid: "65728558"
      可单击此列的任意单元格对 **security_role**进行手动编辑。  
   
  **添加表**  
- 单击“添加表”可打开“表选择”对话框，从中你可以[为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)。  
+ 单击“添加表”  可打开“表选择”对话框，从中你可以[为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)。  
   
  **编辑**  
- 从该列表中选择一个表，然后选择“编辑”以便打开该表的“属性”对话框，从中你可以[对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)。  
+ 从该列表中选择一个表，然后选择“编辑”  以便打开该表的“属性”  对话框，从中你可以[对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)。  
   
  **删除**  
- 从该列表中选择一个表，然后单击“删除”可从 CDC 实例中删除该表。  
+ 从该列表中选择一个表，然后单击“删除”  可从 CDC 实例中删除该表。  
   
- 在使用正确的对话框[为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)或[对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)后，单击“下一步”以[生成和运行补充日志记录脚本](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)。  
+ 在使用正确的对话框[为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)或[对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)后，单击“下一步”  以[生成和运行补充日志记录脚本](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   

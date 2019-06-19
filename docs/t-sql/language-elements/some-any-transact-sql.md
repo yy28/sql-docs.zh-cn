@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 44dfbf2ce8c11bea93420d1222ae08d1eef3b00e
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981603"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
@@ -54,17 +54,17 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  指定应进行比较。  
   
- subquery  
- 包含某列结果集的子查询。 所返回列的数据类型必须是与 scalar_expression 相同的数据类型。  
+ subquery   
+ 包含某列结果集的子查询。 所返回列的数据类型必须是与 scalar_expression 相同的数据类型  。  
   
 ## <a name="result-types"></a>结果类型  
  **Boolean**  
   
 ## <a name="result-value"></a>结果值  
- 对于任何对 (scalar_expression,x)（其中 x 是单列集中的值），当指定的比较是 TRUE 时，SOME 或 ANY 返回 TRUE；否则返回 FALSE。  
+ 对于任何对 (scalar_expression,x)（其中 x 是单列集中的值），当指定的比较是 TRUE 时，SOME 或 ANY 返回 TRUE；否则返回 FALSE       。  
   
 ## <a name="remarks"></a>Remarks  
- SOME 要求 scalar_expression 与子查询返回的至少一个值比较时满足比较条件。 有关要求 scalar_expression 与子查询返回的每个值比较时都符合比较条件的语句，请参阅 [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md)。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_express，scalar_expression = SOME（子查询）的计算结果为 TRUE。 如果子查询返回值 2 和 3，scalar_expression = ALL（子查询）的计算结果为 FALSE，因为子查询的某些值（值 3）不符合表达式的条件。  
+ SOME 要求 scalar_expression  与子查询返回的至少一个值比较时满足比较条件。 有关要求  scalar_expression 与子查询返回的每个值比较时都符合比较条件的语句，请参阅 [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md)。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_express  ，  scalar_expression = SOME（子查询）的计算结果为 TRUE。 如果子查询返回值 2 和 3，scalar_expression  = ALL（子查询）的计算结果为 FALSE，因为子查询的某些值（值 3）不符合表达式的条件。  
   
 ## <a name="examples"></a>示例  
   

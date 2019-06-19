@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee831e325d7291548e9d6e4ae266cabcb2607a46
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718246"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
@@ -42,7 +42,7 @@ ms.locfileid: "65718246"
 >  除了本主题中所述的保护级别外，还可以使用固定数据库级角色保护保存到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包。  
   
 ## <a name="definition-of-sensitive-information"></a>定义敏感信息  
- 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中，下列信息定义为“敏感” 信息：  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中，下列信息定义为“敏感”  信息：  
   
 -   连接字符串的密码部分。 但是，如果选择加密所有数据的选项，则整个连接字符串都将被视为敏感信息。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "65718246"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中设置或更改包的保护级别  
   
-1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值。  
+1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值  。  
   
 2.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含该包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "65718246"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示符下设置或更改包的保护级别  
   
-1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值。  
+1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值  。  
   
 2.  在主题 **dtutil Utility** 中查看 [Encrypt](../../integration-services/dtutil-utility.md)选项的映射，然后确定要用作所选 **ProtectionLevel** 属性的值的相应整数。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "65718246"
  从列表中选择保护级别。  
   
  **密码**  
- 如果使用“使用密码加密敏感数据”或“使用密码加密所有数据”保护级别，请键入密码。  
+ 如果使用“使用密码加密敏感数据”  或“使用密码加密所有数据”  保护级别，请键入密码。  
   
  **重新键入密码**  
  再次键入该密码。  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6fd9f7ffc5c07fdfb310984426b57cd84e521137
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716983"
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump 
@@ -25,7 +25,7 @@ ms.locfileid: "65716983"
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  导致暂停正在运行的包并创建转储文件。 此文件存储在 \<drive>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps文件夹中。  
+  导致暂停正在运行的包并创建转储文件。 此文件存储在 \<drive>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps文件夹中  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,8 +35,8 @@ catalog.create_execution_dump [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id = ] execution_id  
- 正在运行的包的执行 ID。 execution_id 为 bigint。  
+ [ @execution_id = ] execution_id   
+ 正在运行的包的执行 ID。 execution_id 为 bigint   。  
   
 ## <a name="example"></a>示例  
  在以下示例中，系统提示将为正在运行的执行 ID 为 88 的包创建转储文件。  
@@ -54,7 +54,7 @@ EXEC create_execution_dump @execution_id = 88
  None  
   
 ## <a name="permissions"></a>权限  
- 此存储过程要求用户为具有 ssis_admin 数据库角色的成员。  
+ 此存储过程要求用户为具有 ssis_admin 数据库角色的成员  。  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下表说明了导致存储过程失败的情况。  

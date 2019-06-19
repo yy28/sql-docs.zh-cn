@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e0c93242a047e261ae9d40c7ded9293653f7e287
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982325"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
@@ -65,22 +65,22 @@ FETCH
  LAST  
  返回游标中的最后一行并将其作为当前行。  
   
- ABSOLUTE { n| @nvar}  
- 如果 n 或 @nvar 为正，则返回从游标起始处开始向后的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为负，则返回从游标末尾处开始向前的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为 0，则不返回行。 n 必须是整数常量，并且 @nvar 必须是 smallint、tinyint 或 int。  
+ ABSOLUTE { n| @nvar}    
+ 如果 n 或 @nvar 为正，则返回从游标起始处开始向后的第 n 行，并将返回行变成新的当前行    。 如果 n 或 @nvar 为负，则返回从游标末尾处开始向前的第 n 行，并将返回行变成新的当前行    。 如果 n 或 @nvar 为 0，则不返回行   。 n 必须是整数常量，并且 @nvar 必须是 smallint、tinyint 或 int      。  
   
- RELATIVE { n| @nvar}  
- 如果 n 或 @nvar 为正，则返回从当前行开始向后的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为负，则返回从当前行开始向前的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为 0，则返回当前行。 在对游标进行第一次提取时，如果在将 n 或 @nvar 设置为负数或 0 的情况下指定 `FETCH RELATIVE`，则不返回行。 n 必须是整数常量，并且 @nvar 必须是 smallint、tinyint 或 int。  
+ RELATIVE { n| @nvar}    
+ 如果 n 或 @nvar 为正，则返回从当前行开始向后的第 n 行，并将返回行变成新的当前行    。 如果 n 或 @nvar 为负，则返回从当前行开始向前的第 n 行，并将返回行变成新的当前行    。 如果 n 或 @nvar 为 0，则返回当前行   。 在对游标进行第一次提取时，如果在将 n 或 @nvar 设置为负数或 0 的情况下指定 `FETCH RELATIVE`，则不返回行   。 n 必须是整数常量，并且 @nvar 必须是 smallint、tinyint 或 int      。  
   
  GLOBAL  
- 指定 cursor_name 是指全局游标。  
+ 指定 cursor_name 是指全局游标  。  
   
- cursor_name  
- 要从中进行提取的开放游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 指全局游标，如果未指定 GLOBAL，则指局部游标。  
+ cursor_name   
+ 要从中进行提取的开放游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 指全局游标，如果未指定 GLOBAL，则指局部游标   。  
   
- @cursor_variable_name  
+ @cursor_variable_name   
  游标变量名，引用要从中进行提取操作的打开的游标。  
   
- INTO @variable_name[ ,...n]  
+ INTO @variable_name[ ,...n]    
  允许将提取操作的列数据放到局部变量中。 列表中的各个变量从左到右与游标结果集中的相应列相关联。 各变量的数据类型必须与相应的结果集列的数据类型匹配，或是结果集列数据类型所支持的隐式转换。 变量的数目必须与游标选择列表中的列数一致。  
   
 ## <a name="remarks"></a>Remarks  

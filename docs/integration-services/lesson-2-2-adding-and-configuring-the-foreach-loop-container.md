@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c865c00eb1020aa6128cdd7a40d61a191bad2a3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722740"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>第 2-2 课：添加和配置 Foreach 循环容器
@@ -30,61 +30,61 @@ ms.locfileid: "65722740"
   
 目前，第 1 课中的平面文件连接管理器只连接一个特定的平面文件。 若要循环地连接该文件夹中的每个平面文件，必须同时对 Foreach 循环容器和平面文件连接管理器进行如下配置：  
   
--   **Foreach 循环容器：** 将该容器的枚举值映射为用户定义的包变量。 然后，该容器使用此变量来动态修改平面文件连接管理器的 ConnectionString 属性，并循环连接该文件夹中的每个平面文件。  
+-   **Foreach 循环容器：** 将该容器的枚举值映射为用户定义的包变量。 然后，该容器使用此变量来动态修改平面文件连接管理器的 ConnectionString 属性，并循环连接该文件夹中的每个平面文件  。  
   
--   **平面文件连接管理器：** 使用用户定义的变量填充在第 1 课中创建的连接管理器的 ConnectionString 属性，以修改该连接管理器。  
+-   **平面文件连接管理器：** 使用用户定义的变量填充在第 1 课中创建的连接管理器的 ConnectionString 属性，以修改该连接管理器  。  
   
 本任务中的过程介绍了如何创建和修改 Foreach 循环容器以使用用户定义的包变量，以及如何将数据流任务添加到该循环中。 你将了解改平面文件连接管理器，以便在下一任务中使用用户定义的变量。  
   
-在对该包进行这些修改后，当该包运行时，Foreach 循环容器将循环访问示例数据文件夹中的所有文件。 每次找到一个与条件相匹配的文件时，Foreach 循环容器都会用文件名填充新变量，将该变量映射到 Sample Currency Data 平面文件连接管理器的 ConnectionString 属性，然后对该文件运行数据流。 这样一来，在 Foreach 循环的每次迭代中，数据流任务都会使用一个不同的平面文件。  
+在对该包进行这些修改后，当该包运行时，Foreach 循环容器将循环访问示例数据文件夹中的所有文件。 每次找到一个与条件相匹配的文件时，Foreach 循环容器都会用文件名填充新变量，将该变量映射到 Sample Currency Data 平面文件连接管理器的 ConnectionString 属性，然后对该文件运行数据流  。 这样一来，在 Foreach 循环的每次迭代中，数据流任务都会使用一个不同的平面文件。  
   
 > [!NOTE]  
 > 由于 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 区分控制流和数据流，因此添加到控制流的任何循环都不需要对数据流进行修改。 因此，无需更改第 1 课数据流。  
   
 ## <a name="add-a-foreach-loop-container"></a>添加 Foreach 循环容器  
   
-1.  在“SQL Server Data Tools”中，选择“控制流”选项卡。  
+1.  在“SQL Server Data Tools”中，选择“控制流”选项卡   。  
   
-2.  在“SSIS 工具箱”中，展开“容器”，然后将“Foreach 循环容器”拖到“控制流”选项卡的设计图面上。  
+2.  在“SSIS 工具箱”  中，展开“容器”  ，然后将“Foreach 循环容器”  拖到“控制流”  选项卡的设计图面上。  
   
-3.  右键单击新的“Foreach 循环容器”，然后选择“编辑”。  
+3.  右键单击新的“Foreach 循环容器”，然后选择“编辑”   。  
   
-4.  在“Foreach 循环编辑器”对话框的“常规”页中，对于“名称”，请输入 Foreach File in Folder。 选择“确定”。  
+4.  在“Foreach 循环编辑器”对话框的“常规”页中，对于“名称”，请输入 Foreach File in Folder     。 选择“确定”  。  
   
-5.  右键单击“Foreach 循环容器”，然后选择“属性”，在“属性”窗口中，确保已将 LocaleID 属性设置为“英语(美国)”。  
+5.  右键单击“Foreach 循环容器”，然后选择“属性”，在“属性”窗口中，确保已将 LocaleID 属性设置为“英语(美国)”     。  
   
 ## <a name="configure-the-enumerator-for-the-foreach-loop-container"></a>为 Foreach 循环容器配置枚举器  
   
-1.  双击“Foreach File in Folder”以重新打开“Foreach 循环编辑器”。  
+1.  双击“Foreach File in Folder”以重新打开“Foreach 循环编辑器”   。  
   
-2.  选择“集合”。  
+2.   选择“集合”。  
   
-3.  在“集合”页上，选择“Foreach 文件枚举器”。  
+3.  在“集合”  页上，选择“Foreach 文件枚举器”  。  
   
-4.  在“枚举器配置”组中，选择“浏览”。  
+4.  在“枚举器配置”组中，选择“浏览”   。  
   
-5.  在“浏览文件夹”对话框中，找到计算机上包含 Currency_*.txt 文件（随附示例数据）的文件夹。
+5.  在“浏览文件夹”对话框中，找到计算机上包含 Currency_*.txt 文件（随附示例数据）的文件夹  。
 
-6.  在“文件”框中，输入 Currency_\*.txt。  
+6.  在“文件”框中，输入 Currency_\*.txt   。  
   
 ## <a name="map-the-enumerator-to-a-user-defined-variable"></a>将枚举器映射为用户定义的变量  
   
-1.  选择“变量映射”。  
+1.  选择“变量映射”  。  
   
-2.  在“变量映射”页的“变量”列中，选择空单元格，然后选择“\<新建变量…>”。  
+2.  在“变量映射”页的“变量”列中，选择空单元格，然后选择“\<新建变量…>”    。  
   
-3.  在“添加变量”对话框中，对于“名称”，请键入 varFileName。  
+3.  在“添加变量”对话框中，对于“名称”，请键入 varFileName    。  
   
     > [!NOTE]  
     > 变量名称区分大小写。  
   
-4.  选择“确定”。  
+4.  选择“确定”  。  
   
-5.  再次选择“确定”，退出“Foreach 循环编辑器”对话框。  
+5.  再次选择“确定”，退出“Foreach 循环编辑器”对话框   。  
   
 ## <a name="add-the-data-flow-task-to-the-loop"></a>将数据流任务添加到循环中  
   
--   将“Extract Sample Currency Data”数据流任务拖到 Foreach File in Folder Foreach 循环容器中。  
+-   将“Extract Sample Currency Data”数据流任务拖到 Foreach File in Folder Foreach 循环容器中   。  
   
 ## <a name="go-to-next-task"></a>转到下一个任务  
 [步骤 3：修改平面文件连接管理器](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  

@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503240"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -68,13 +68,13 @@ CREATE QUEUE <object>
 ```  
   
 ## <a name="arguments"></a>参数  
- Database_name（对象）  
- 要在其中创建新队列的数据库的名称。 database_name 须指定现有数据库的名称。 如果未提供 database_name，将在当前数据库中创建队列。  
+ Database_name（对象）   
+ 要在其中创建新队列的数据库的名称。 database_name 须指定现有数据库的名称  。 如果未提供 database_name，将在当前数据库中创建队列  。  
   
- schema_name（对象）  
- 新队列所属架构的名称。 默认情况下，该架构为执行该语句的用户的默认架构。 如果由 sysadmin 固定服务器角色成员或者 database_name 指定的数据库中的 db_dbowner 或 db_ddladmin 固定数据库角色成员执行 CREATE QUEUE 语句，则 schema_name 可以指定与当前连接的登录名关联的架构以外的架构。 否则，schema_name 必须是执行该语句的用户的默认架构。  
+ schema_name（对象）   
+ 新队列所属架构的名称。 默认情况下，该架构为执行该语句的用户的默认架构。 如果由 sysadmin 固定服务器角色成员或者 database_name 指定的数据库中的 db_dbowner 或 db_ddladmin 固定数据库角色成员执行 CREATE QUEUE 语句，则 schema_name 可以指定与当前连接的登录名关联的架构以外的架构   。 否则，schema_name 必须是执行该语句的用户的默认架构  。  
   
- queue_name  
+ queue_name   
  要创建的队列的名称。 此名称必须符合有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符指南。  
   
  STATUS（队列）  
@@ -95,17 +95,17 @@ CREATE QUEUE <object>
  PROCEDURE_NAME = \<procedure>  
  指定处理此队列中的消息时要启动的存储过程的名称。 此值必须是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
   
- database_name（过程）  
+ database_name（过程）   
  包含存储过程的数据库的名称。  
   
- schema_name（过程）  
+ schema_name（过程）   
  包含存储过程的架构的名称。  
   
- procedure_name  
+ procedure_name   
  存储过程的名称。  
   
- MAX_QUEUE_READERS =max_readers  
- 指定队列同时启动的激活存储过程的最大实例数。 max_readers 值必须是 0 到 32767 之间的数字。  
+ MAX_QUEUE_READERS =max_readers   
+ 指定队列同时启动的激活存储过程的最大实例数。 max_readers 值必须是 0 到 32767 之间的数字    。  
   
  EXECUTE AS  
  指定用于运行激活存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用户帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够在队列启动存储过程时检查此用户的权限。 对于域用户，在启动过程时服务器必须与域连接，否则激活将失败。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户，服务器始终可检查权限。  
@@ -113,8 +113,8 @@ CREATE QUEUE <object>
  SELF  
  指定存储过程以当前用户身份执行。 （执行该 CREATE QUEUE 语句的数据库主体。）  
   
- 'user_name'  
- 执行存储过程时所用的用户名。 user_name 参数必须是指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限。  
+ 'user_name'   
+ 执行存储过程时所用的用户名。 user_name 参数必须是指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户  。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限  。  
   
  OWNER  
  指定存储过程以队列的所有者身份执行。  
@@ -124,13 +124,13 @@ CREATE QUEUE <object>
   
  将有害消息处理设置为 OFF 的队列在五个连续的事务回滚之后不会被禁用。 这样，应用程序就可以定义自定义的有害消息处理系统。  
   
- ON filegroup | [DEFAULT]  
- 指定从中创建此队列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件组。 可使用 filegroup 参数标识文件组，也可使用 DEFAULT 标识符以使用 Service Broker 数据库的默认文件组。 在此子句的上下文中，DEFAULT 不是关键字，必须作为标识符进行分隔。 如果未指定文件组，该队列使用数据库的默认文件组。  
+ ON filegroup |  [DEFAULT  ]  
+ 指定从中创建此队列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件组。 可使用 filegroup 参数标识文件组，也可使用 DEFAULT 标识符以使用 Service Broker 数据库的默认文件组  。 在此子句的上下文中，DEFAULT 不是关键字，必须作为标识符进行分隔。 如果未指定文件组，该队列使用数据库的默认文件组。  
   
 ## <a name="remarks"></a>Remarks  
  队列可以是 SELECT 语句的目标。 但是，只能使用在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话中运行的语句（如 SEND、RECEIVE 和 END CONVERSATION）来修改队列的内容。 队列不能是 INSERT、UPDATE、DELETE 或 TRUNCATE 语句的目标。  
   
- 队列可能不是临时对象。 因此，以 # 开头的队列名称无效。  
+ 队列可能不是临时对象。 因此，以 # 开头的队列名称无效  。  
   
  通过以不可用状态创建队列，可以先准备好服务的基础结构，然后再允许在队列中接收消息。  
   
@@ -146,7 +146,7 @@ CREATE QUEUE <object>
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|status|**tinyint**|消息的状态。 RECEIVE 语句将返回状态为 1 的所有消息。 如果启用了消息保持，则将状态设置为 0。 如果禁用了消息保持，则将消息从队列中删除。 队列中的消息可包含下列任一值：<br /><br /> 0=保留收到的消息<br /><br /> 1=准备接收<br /><br /> 2=尚未完成<br /><br /> 3=保留发送的消息|  
+|status|**tinyint**|消息的状态。 RECEIVE 语句将返回状态为 1 的所有消息  。 如果启用了消息保持，则将状态设置为 0。 如果禁用了消息保持，则将消息从队列中删除。 队列中的消息可包含下列任一值：<br /><br />  0=保留收到的消息<br /><br />  1=准备接收<br /><br />  2=尚未完成<br /><br />  3=保留发送的消息|  
 |priority|**tinyint**|为此消息指定的优先级。|  
 |queuing_order|**bigint**|消息在队列中的序号。|  
 |conversation_group_id|**uniqueidentifier**|此消息所属会话组的标识符。|  

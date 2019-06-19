@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 55721b2b1f843ee78e8b69e4a1b99e39737ebb64
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948934"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
@@ -45,7 +45,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>参数  
- passphrase  
+ passphrase   
 用于生成解密密钥的密码。  
   
  @passphrase  
@@ -61,26 +61,26 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 
 包含用于生成解密密钥的密码。  
   
-'ciphertext'  
-使用密钥加密的数据字符串。 ciphertext 具有 varbinary 数据类型。  
+'ciphertext'   
+使用密钥加密的数据字符串。 ciphertext 具有 varbinary 数据类型   。  
  
 @ciphertext  
-varbinary 类型的变量，包含使用密钥加密的数据。 @ciphertext 变量的最大大小为 8,000 字节。  
+varbinary 类型的变量，包含使用密钥加密的数据  。 @ciphertext 变量的最大大小为 8,000 字节  。  
   
-add_authenticator  
-指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 add_authenticator 具有 1 值。 add_authenticator 具有 int 数据类型。  
+add_authenticator   
+指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 add_authenticator 具有 1 值  。 add_authenticator 具有 int 数据类型   。  
   
 @add_authenticator  
-变量，指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 @add_authenticator 的值为 1。 @add_authenticator 具有 int 数据类型。  
+变量，指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 @add_authenticator 的值为 1  。 @add_authenticator 具有 int 数据类型   。  
 
-authenticator  
-用作验证器生成基础的数据。 authenticator 具有 sysname 数据类型。  
+authenticator   
+用作验证器生成基础的数据。 authenticator 具有 sysname 数据类型   。  
   
 @authenticator  
-包含用作验证器生成基础的数据的变量。 @authenticator 具有 sysname 数据类型。  
+包含用作验证器生成基础的数据的变量。 @authenticator 具有 sysname 数据类型   。  
   
 ## <a name="return-types"></a>返回类型  
-varbinary（最大大小为 8,000 个字节）。  
+varbinary（最大大小为 8,000 个字节）  。  
   
 ## <a name="remarks"></a>Remarks  
 `DECRYPTBYPASSPHRASE` 不需要执行权限。 如果 `DECRYPTBYPASSPHRASE` 收到错误的密码或错误的验证器信息，则返回 NULL。  

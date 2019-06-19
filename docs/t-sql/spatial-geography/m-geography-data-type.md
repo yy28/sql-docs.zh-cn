@@ -19,16 +19,16 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 87ca41dc0b2b00db06acedb78c7196f92274180a
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937649"
 ---
 # <a name="m-geography-data-type"></a>M（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  geography 实例的 M（度量）值。 度量值的语义是用户定义的，但是通常用于描述沿线条的距离。 例如，度量值可用于跟踪某条公路上的里程碑。  
+  geography 实例的 M（度量）值   。 度量值的语义是用户定义的，但是通常用于描述沿线条的距离。 例如，度量值可用于跟踪某条公路上的里程碑。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,12 +38,12 @@ ms.locfileid: "65937649"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float   
   
  CLR 类型：**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 geography 实例不是 Point，则此属性的值为 Null；对于未设置此属性的任何 Point 实例，此属性的值也为 Null。  
+ 如果 geography 实例不是 Point，则此属性的值为 Null；对于未设置此属性的任何 Point 实例，此属性的值也为 Null    。  
   
  该属性为只读。  
   

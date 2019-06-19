@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a089ea233f99294c1e4a38a643e93607e5c56d13
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728297"
 ---
 # <a name="excel-connection-manager"></a>Excel 连接管理器
@@ -30,7 +30,7 @@ ms.locfileid: "65728297"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Excel 连接管理器使包可以连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿文件。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 Excel 源和 Excel 目标使用 Excel 连接管理器。  
+  Excel 连接管理器使包可以连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿文件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 Excel 源和 Excel 目标使用 Excel 连接管理器。  
  
 > [!IMPORTANT]
 > 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。
@@ -62,7 +62,7 @@ ms.locfileid: "65728297"
  键入一个现有或新的 Excel 工作簿文件的路径和文件名。  
    
  **“浏览”**  
- 使用“打开”对话框导航到 Excel 文件所在的文件夹或要创建新文件的文件夹。  
+ 使用“打开”对话框导航到 Excel 文件所在的文件夹或要创建新文件的文件夹  。  
   
  **Excel 版本**  
  指定用于创建文件的 Microsoft Excel 的版本。  

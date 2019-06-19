@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9547e76602ab82b7cc66b62eb52d37857de95ab4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726451"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 目标编辑器（“错误输出”页）
@@ -36,7 +36,7 @@ ms.locfileid: "65726451"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 SAP BW 目标。  
+2.  在“数据流”  选项卡上，双击 SAP BW 目标。  
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“错误输出”** ，以打开编辑器的 **“错误输出”** 页。  
   

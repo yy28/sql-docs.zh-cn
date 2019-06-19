@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 45311f4c175d517164ae49a3906704cac4a37f2c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948112"
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "65948112"
 ## <a name="remarks"></a>Remarks  
 连接与用户不同。 应用程序可以打开多个与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，而不需要用户观察这些连接。
   
-为包含几个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息的报表运行“sp_monitor”，包括试图连接统计信息。
+为包含几个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息的报表运行“sp_monitor”  ，包括试图连接统计信息。
   
 @@MAX_CONNECTIONS 是允许同时连接到服务器的最大连接数。 @@CONNECTIONS 随每次登录尝试而增加，因此 @@CONNECTIONS 可以超过 @@MAX_CONNECTIONS。
   

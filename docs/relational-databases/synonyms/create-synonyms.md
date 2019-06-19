@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cbe7f38f6132e79f1938936c0914bae236ea5a03
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543623"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639245"
 ---
 # <a name="create-synonyms"></a>创建同义词
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52543623"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建同义词，可使用：**  
   
@@ -40,10 +40,10 @@ ms.locfileid: "52543623"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  若要在给定架构中创建同义词，则用户必须具有 CREATE SYNONYM 权限，并拥有架构或具有 ALTER SCHEMA 权限。 CREATE SYNONYM 权限是可授予的权限。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52543623"
   
 1.  在 **“对象资源管理器”** 中，展开要创建新视图的数据库。  
   
-2.  右键单击“同义词”文件夹，然后单击“新建同义词...”。  
+2.  右键单击“同义词”文件夹，然后单击“新建同义词...”   。  
   
 3.  在 **“添加同义词”** 对话框中，输入以下信息。  
   
@@ -80,11 +80,11 @@ ms.locfileid: "52543623"
   
 #### <a name="to-create-a-synonym"></a>创建同义词  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的现有表创建一个同义词。 后续示例中将使用该同义词。  

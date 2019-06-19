@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 77a20360718563f101b44e68bf287e59876d8d38
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098562"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>“验证警告”对话框 (Visual Database Tools)
@@ -52,7 +52,7 @@ ms.locfileid: "65098562"
 取消保存操作。  
   
 **保存文本文件**  
-显示“另存为”对话框，可以在其中为包含警告列表的文本文件指定位置。  
+显示“另存为”  对话框，可以在其中为包含警告列表的文本文件指定位置。  
   
 ## <a name="see-also"></a>另请参阅  
 [设计表 (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  

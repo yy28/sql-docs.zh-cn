@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e7fd4ca761d87df2a98a8c88ab0848ddff2e4faa
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948851"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
@@ -40,13 +40,13 @@ EOMONTH ( start_date [, month_to_add ] )
 ```  
   
 ## <a name="arguments"></a>参数  
-start_date  
+start_date   
 日期表达式，指定要为其返回该月的最后一天的日期。  
   
-month_to_add  
-可选的整数表达式，指定要加到 start_date 的月份数。  
+month_to_add   
+可选的整数表达式，指定要加到 start_date 的月份数  。  
   
-如果 month_to_add 参数具有值，则 `EOMONTH` 向 start_date 添加指定月份数，然后返回结果日期所在月份的最后一天。 如果增加后超过有效的日期范围，`EOMONTH` 将引发错误。  
+如果 month_to_add 参数具有值，则 `EOMONTH` 向 start_date 添加指定月份数，然后返回结果日期所在月份的最后一天   。 如果增加后超过有效的日期范围，`EOMONTH` 将引发错误。  
   
 ## <a name="return-type"></a>返回类型  
  **date**  

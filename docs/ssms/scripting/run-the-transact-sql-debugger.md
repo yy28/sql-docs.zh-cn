@@ -24,10 +24,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a41977904a209a4de50ea0529af98453e6e15a65
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821985"
 ---
 # <a name="run-the-transact-sql-debugger"></a>运行 Transact-SQL 调试器
@@ -55,11 +55,11 @@ ms.locfileid: "65821985"
   
  查询编辑器窗口会保持在调试模式下，直到查询编辑器窗口中的最后一个语句完成或您停止调试模式。 可以使用以下任何一种方法来停止调试模式和语句执行：  
   
--   在 **“调试”** 菜单中，单击 **“停止调试”**。  
+-   在 **“调试”** 菜单中，单击 **“停止调试”** 。  
   
 -   在 **“调试”** 工具栏上，单击 **“停止调试”** 按钮。  
   
--   在 **“查询”** 菜单上，单击 **“取消执行查询”**。  
+-   在 **“查询”** 菜单上，单击 **“取消执行查询”** 。  
   
 -   在 **“查询”** 工具栏上，单击 **“取消执行查询”** 按钮。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65821985"
 |**窗口/局部变量**|不可用|**断点/局部变量**|Ctrl+Alt+V，L|显示 **“局部变量”** 窗口。|  
 |**窗口/调用堆栈**|不可用|**断点/调用堆栈**|Ctrl+Alt+C|显示 **“调用堆栈”** 窗口。|  
 |**窗口/线程**|不可用|**断点/线程**|Ctrl+Alt+H|显示 **“线程”** 窗口。|  
-|**Continue**|不可用|**Continue**|Alt+F5|运行到下一个断点。 在将焦点放在处于调试模式的查询编辑器窗口上之前，**“继续”** 处于不活动状态。|  
+|**Continue**|不可用|**Continue**|Alt+F5|运行到下一个断点。 在将焦点放在处于调试模式的查询编辑器窗口上之前， **“继续”** 处于不活动状态。|  
 |**“调试”**|不可用|**“调试”**|Alt+F5|将查询编辑器窗口置于调试模式，并运行到第一个断点。 如果将焦点放在处于调试模式的查询编辑器窗口上，则 **“启动调试”** 将由 **“继续”** 替代。|  
 |**全部中断**|不可用|**全部中断**|Ctrl+Alt+Break|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不使用此功能。|  
 |**停止调试**|不可用|**“停止调试”**|Shift+F5|使查询编辑器窗口脱离调试模式，并将其恢复到常规模式。|  

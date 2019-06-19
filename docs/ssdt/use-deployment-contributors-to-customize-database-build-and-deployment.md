@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3952706cebfd5f26f68e2dd103de1cb19c46bd05
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101962"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>使用生成参与者和部署参与者来自定义数据库生成和部署
@@ -33,13 +33,13 @@ Visual Studio 提供了可用于为数据库项目修改生成和部署操作的
 ### <a name="supported-extensibility-scenarios"></a>受支持的扩展性方案  
 可以实现生成或部署参与者以支持以下示例方案：  
   
--   在项目生成期间生成架构文档 - 若要支持此方案，你需要实现 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 并重写 OnExecute 方法以生成架构文档。 您可以创建一个目标文件，该文件定义用于控制是否运行扩展并指定输出文件的名称的默认参数。  
+-   在项目生成期间生成架构文档  - 若要支持此方案，你需要实现 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 并重写 OnExecute 方法以生成架构文档。 您可以创建一个目标文件，该文件定义用于控制是否运行扩展并指定输出文件的名称的默认参数。  
   
--   在部署 SQL 项目时生成差异报告 - 若要支持此方案，你需要实现 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)，它可在部署 SQL 项目时生成 XML 文件。  
+-   在部署 SQL 项目时生成差异报告  - 若要支持此方案，你需要实现 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)，它可在部署 SQL 项目时生成 XML 文件。  
   
--   修改部署计划以更改移动数据的时间 - 若要支持此方案，你需要实现 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 并循环访问部署计划。 对于该计划中的每个 SqlTableMigrationStep，您需要检查比较结果以确定是应执行还是跳过该步骤。  
+-   修改部署计划以更改移动数据的时间  - 若要支持此方案，你需要实现 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 并循环访问部署计划。 对于该计划中的每个 SqlTableMigrationStep，您需要检查比较结果以确定是应执行还是跳过该步骤。  
   
--   在部署 SQL 项目时将文件复制到生成的 dacpac - 若要支持此方案，你需要实现部署参与者并重写 OnEstablishDeploymentConfiguration 方法，以指定由项目系统标记为 DeploymentExtensionConfiguration 的文件。 这些文件应复制到输出文件夹并添加到生成的 dacpac 中。 也可以修改参与者以将多个文件合并为一个新文件，此文件将复制到输出文件夹并添加到部署清单中。 在部署期间，可以实现 OnApplyDeploymentConfiguration 方法以从 dacpac 中提取这些文件，并准备这些文件以便在 OnExecute 方法中使用。  
+-   在部署 SQL 项目时将文件复制到生成的 dacpac  - 若要支持此方案，你需要实现部署参与者并重写 OnEstablishDeploymentConfiguration 方法，以指定由项目系统标记为 DeploymentExtensionConfiguration 的文件。 这些文件应复制到输出文件夹并添加到生成的 dacpac 中。 也可以修改参与者以将多个文件合并为一个新文件，此文件将复制到输出文件夹并添加到部署清单中。 在部署期间，可以实现 OnApplyDeploymentConfiguration 方法以从 dacpac 中提取这些文件，并准备这些文件以便在 OnExecute 方法中使用。  
   
 此外，可以公开参与者中要写入到数据库项目文件的自定义的名称/值参数对。 通过使用这些参数，可以使参与者能够提取 MSBuild 中的信息，或使参与者的最终用户能够自定义行为。 例如，您可以允许用户指定输入或输出文件的名称。  
   

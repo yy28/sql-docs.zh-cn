@@ -18,10 +18,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e368b005eaa1f5729f177356f3e06ea5effbd417
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947536"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
@@ -44,7 +44,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 *expression*  
 是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 串联期间，表达式被转换为 `NVARCHAR` 或 `VARCHAR` 类型。 非字符串类型被转换为 `NVARCHAR` 类型。
 
-separator  
+separator   
 是 `NVARCHAR` 或 `VARCHAR` 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联字符串的分隔符。 可以是文本或变量。 
 
 <order_clause>   
@@ -96,7 +96,7 @@ FROM Person.Person;
 
 结果中不返回 `name` 单元格中的 `NULL` 值。   
 > [!NOTE]  
->  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符。 可切换到“结果显示为文本”，以便正确查看结果集。   
+>  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。   
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 生成使用逗号分隔且不带 NULL 值的姓名列表   
 下面的示例在一个结果单元格中返回以逗号分隔的姓名，并使用“N/A”替换 null 值。  
@@ -125,7 +125,7 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
->  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符。 可切换到“结果显示为文本”，以便正确查看结果集。   
+>  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。   
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 返回带有相关标记的新闻文章 
 文章及其标记被分隔到不同的表中。 开发人员想在返回时将每篇文章及其所有相关标记作为一行。 请使用以下查询： 

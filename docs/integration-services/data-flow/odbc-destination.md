@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2914cdec402cee3be7ba92d74e0c8ff7db8fd41e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726635"
 ---
 # <a name="odbc-destination"></a>ODBC 目标
@@ -37,9 +37,9 @@ ms.locfileid: "65726635"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> 加载选项  
  ODBC 目标可以使用两个访问加载模块之一。 在 [ODBC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)中设置模式。 这两种模式是：  
   
--   **批处理**：在此模式中，ODBC 目标将基于发现的 ODBC 访问接口功能尝试使用最高效的插入方法。 对于大多数现今的 ODBC 访问接口，这意味着准备具有参数的 INSERT 语句，然后使用按行数组参数绑定（其中，数组大小由 **BatchSize** 属性控制）。 如果选择“批处理”并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”模式。  
+-   **批处理**：在此模式中，ODBC 目标将基于发现的 ODBC 访问接口功能尝试使用最高效的插入方法。 对于大多数现今的 ODBC 访问接口，这意味着准备具有参数的 INSERT 语句，然后使用按行数组参数绑定（其中，数组大小由 **BatchSize** 属性控制）。 如果选择“批处理”  并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”  模式。  
   
--   **逐行**：在此模式中，ODBC 目标准备具有参数的 INSERT 语句并使用“SQL 执行”来一次一行地插入行。  
+-   **逐行**：在此模式中，ODBC 目标准备具有参数的 INSERT 语句并使用“SQL 执行”  来一次一行地插入行。  
   
 ## <a name="error-handling"></a>错误处理  
  ODBC 目标有一个错误输出。 组件的错误输出包括以下输出列：  
@@ -77,7 +77,7 @@ ms.locfileid: "65726635"
   
  打开 **“高级编辑器”** 对话框：  
   
--   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 ODBC 目标，然后选择 **“显示高级编辑器”**。  
+-   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 ODBC 目标，然后选择 **“显示高级编辑器”** 。  
   
  有关可在“高级编辑器”对话框中设置的属性的详细信息，请参阅 [ODBC Destination Custom Properties](../../integration-services/data-flow/odbc-destination-custom-properties.md)。  
   
@@ -96,9 +96,9 @@ ms.locfileid: "65726635"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开包含 ODBC 目标的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”选项卡上，双击 ODBC 目标。  
+-   在“数据流”  选项卡上，双击 ODBC 目标。  
   
--   在 **“ODBC 目标编辑器”** 中，单击 **“连接管理器”**。  
+-   在 **“ODBC 目标编辑器”** 中，单击 **“连接管理器”** 。  
   
 ### <a name="options"></a>选项  
   
@@ -106,7 +106,7 @@ ms.locfileid: "65726635"
  从列表中选择现有 ODBC 连接管理器，或单击“新建”创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
   
 #### <a name="new"></a>新版  
- 单击 **“新建”**。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的连接管理器。  
+ 单击 **“新建”** 。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的连接管理器。  
   
 #### <a name="data-access-mode"></a>数据访问模式  
  选择将数据加载到目标的方法。 选项显示在下表中：  
@@ -133,7 +133,7 @@ ms.locfileid: "65726635"
  可用目标列的列表。 将目标列拖放到某一可用输入列以映射这些列。  
   
 #### <a name="input-column"></a>输入列  
- 查看选定的输入列。 可以通过选择“\<忽略>”以从输出中排除列来移除映射。  
+ 查看选定的输入列。 可以通过选择“\<忽略>”  以从输出中排除列来移除映射。  
   
 #### <a name="destination-column"></a>目标列  
  查看所有可用目标列（包括映射和未映射的列）。  
@@ -147,9 +147,9 @@ ms.locfileid: "65726635"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开包含 ODBC 目标的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”选项卡上，双击 ODBC 目标。  
+-   在“数据流”  选项卡上，双击 ODBC 目标。  
   
--   在 **“ODBC 目标编辑器”** 中，单击 **“错误输出”**。  
+-   在 **“ODBC 目标编辑器”** 中，单击 **“错误输出”** 。  
   
 ### <a name="options"></a>选项  
   

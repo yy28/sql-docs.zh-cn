@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b361e91469bb92a1f22b95bcceb28347974807e3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946630"
 ---
 # <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
@@ -43,18 +43,18 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="arguments"></a>参数  
  *object_id*  
- 触发器的对象 ID。 如果指定了 object_id，则返回为该语句执行指定触发器的次数。 如果未指定 object_id，则返回为该语句执行全部触发器的次数。  
+ 触发器的对象 ID。 如果指定了 object_id，则返回为该语句执行指定触发器的次数  。 如果未指定 object_id，则返回为该语句执行全部触发器的次数  。  
   
  **'** *trigger_type* **'**  
- 指定将 TRIGGER_NESTLEVEL 应用于 AFTER 触发器还是 INSTEAD OF 触发器。 为 AFTER 触发器指定 AFTER。 为 INSTEAD OF 触发器指定 IOT。 如果指定了 trigger_type，则必须指定 trigger_event_category。  
+ 指定将 TRIGGER_NESTLEVEL 应用于 AFTER 触发器还是 INSTEAD OF 触发器。 为 AFTER 触发器指定 AFTER  。 为 INSTEAD OF 触发器指定 IOT  。 如果指定了 trigger_type，则必须指定 trigger_event_category   。  
   
  **'** *trigger_event_category* **'**  
- 指定将 TRIGGER_NESTLEVEL 应用于 DML 触发器还是 DDL 触发器。 为 DML 触发器指定 DML。 为 DDL 触发器指定 DDL。 如果指定了 trigger_event_category，则必须指定 trigger_type。 注意，由于 DDL 触发器只能是 AFTER 触发器，因此仅 AFTER 可以使用 DDL 指定。  
+ 指定将 TRIGGER_NESTLEVEL 应用于 DML 触发器还是 DDL 触发器。 为 DML 触发器指定 DML  。 为 DDL 触发器指定 DDL  。 如果指定了 trigger_event_category，则必须指定 trigger_type   。 注意，由于 DDL 触发器只能是 AFTER 触发器，因此仅 AFTER 可以使用 DDL 指定   。  
   
 ## <a name="remarks"></a>Remarks  
  如果未指定参数，则 TRIGGER_NESTLEVEL 返回调用堆栈上的触发器总数。 这包括它本身。 当触发器所执行的命令导致其他触发器激发，或导致触发器的连续激发时，可省略参数。  
   
- 若要针对特殊触发器类型和事件类别返回调用堆栈上的触发器总数，请指定 object_id = 0。  
+ 若要针对特殊触发器类型和事件类别返回调用堆栈上的触发器总数，请指定 object_id = 0  。  
   
  如果 TRIGGER_NESTLEVEL 在触发器的外部执行，且任何参数均不为 NULL，则 TRIGGER_NESTLEVEL 返回 0。  
   

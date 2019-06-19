@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724887"
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
@@ -74,7 +74,7 @@ ms.locfileid: "65724887"
   
  ![属性表达式的用户界面](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "属性表达式的用户界面")  
   
- 在“属性”窗口和“表达式”页中，单击“表达式”集合级别中的浏览按钮“(…)”，以打开“属性表达式编辑器”对话框。 属性表达式编辑器允许将属性映射到表达式，也允许键入属性表达式。 如果希望使用图形表达式工具来创建表达式，然后对其进行验证，请在表达式级别单击浏览按钮 (…) 以打开“表达式生成器”对话框，然后进行创建或修改，并（可选）验证表达式。  
+ 在“属性”窗口和“表达式”页中，单击“表达式”集合级别中的浏览按钮“(…)”，以打开“属性表达式编辑器”对话框      。 属性表达式编辑器允许将属性映射到表达式，也允许键入属性表达式。 如果希望使用图形表达式工具来创建表达式，然后对其进行验证，请在表达式级别单击浏览按钮 (…) 以打开“表达式生成器”对话框，然后进行创建或修改，并（可选）验证表达式。    
   
  还可以从 **“属性表达式编辑器”** 对话框打开 **“表达式生成器”** 对话框。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "65724887"
 -   [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ### <a name="setting-property-expressions-of-data-flow-components"></a>设置数据流组件的属性表达式  
- 如果在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中构造包，则支持属性表达式的数据流组件的属性将显示在它们所属的“数据流”任务上。 若要添加、更改和删除数据流组件的属性表达式，请右键单击数据流组件所属的数据流的“数据流”任务，并单击“属性”。 “属性”窗口将列出可以对其使用属性表达式的数据流组件的属性。 例如，若要在名为 SampleCustomer 的数据流中创建或修改“行抽样”转换的 SamplingValue 属性的属性表达式，请右键单击“行抽样”转换所属的数据流的“数据流”任务，然后单击“属性”。 SamplingValue 属性将在“属性”窗口中列出，其格式为 [SampleCustomer].[SamplingValue]。  
+ 如果在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中构造包，则支持属性表达式的数据流组件的属性将显示在它们所属的“数据流”任务上。 若要添加、更改和删除数据流组件的属性表达式，请右键单击数据流组件所属的数据流的“数据流”任务，并单击“属性”。  “属性”窗口将列出可以对其使用属性表达式的数据流组件的属性。 例如，若要在名为 SampleCustomer 的数据流中创建或修改“行抽样”转换的 SamplingValue 属性的属性表达式，请右键单击“行抽样”转换所属的数据流的“数据流”任务，然后单击“属性”。  SamplingValue 属性将在“属性”窗口中列出，其格式为 [SampleCustomer].[SamplingValue]。  
   
  在“属性”窗口中，可以添加、更改和删除数据流组件的属性表达式，具体方式与对其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象类型执行属性表达式操作时相同。 通过“属性”窗口，还可以访问用于添加、更改或删除数据流组件的属性表达式的各种对话框和生成器。 有关可以用属性表达式更新的数据流组件属性的详细信息，请参阅 [Transformation Custom Properties](../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "65724887"
  属性表达式将在加载包配置之后加载。 例如，变量首先由它们的配置进行更新，然后计算并加载使用这些变量的属性表达式。 这意味着属性表达式始终使用由配置所设置的变量的值。  
   
 > [!NOTE]  
->  不能使用 **dtexec** 实用工具的“设置”选项填充属性表达式。  
+>  不能使用 **dtexec** 实用工具的“设置”  选项填充属性表达式。  
   
  下表总结了何时计算并加载 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的属性表达式。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "65724887"
  `@[User::myfilenamefull]`  
   
 > [!NOTE]  
->  连接管理器的属性表达式只能使用“属性”窗口进行访问。 若要查看连接管理器的属性，必须在“属性”窗口打开时在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“连接管理器”区域中选择连接管理器，或右键单击连接管理器并选择“属性”。  
+>  连接管理器的属性表达式只能使用“属性”窗口进行访问。 若要查看连接管理器的属性，必须在“属性”窗口打开时在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“连接管理器”区域中选择连接管理器，或右键单击连接管理器并选择“属性”。    
   
 ### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>文本文件日志提供程序的 ConfigString 属性的属性表达式  
  下面的属性表达式可以用于设置文本文件日志提供程序的 ConfigString 属性。 该表达式使用一个用户定义变量 `varConfigString`，该变量包含要使用的文件连接管理器的名称。 文件连接管理器指定将在其中写入日志项的文本文件的路径。  
@@ -168,7 +168,7 @@ ms.locfileid: "65724887"
  `@[User::varConfigString]`  
   
 > [!NOTE]  
->  日志提供程序的属性表达式只能通过“属性”窗口访问。 若要查看某日志提供程序的属性，必须在“属性”窗口打开的情况下在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“包资源管理器”选项卡中选择相应的日志提供程序；或者在包资源管理器中右键单击该日志提供程序，再单击“属性”。  
+>  日志提供程序的属性表达式只能通过“属性”窗口访问。 若要查看某日志提供程序的属性，必须在“属性”窗口打开的情况下在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“包资源管理器”选项卡中选择相应的日志提供程序；或者在包资源管理器中右键单击该日志提供程序，再单击“属性”。    
   
 ## <a name="external-resources"></a>外部资源  
   

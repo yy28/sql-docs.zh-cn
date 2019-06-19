@@ -15,10 +15,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 442e349da7b8b21363e747910044cbbd537ffa0b
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620611"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
@@ -104,9 +104,9 @@ SELECT modifiedJson = @json;
 |{"info":{"address":[{"town":"Belgrade"},{"town":"London"},{"town":"Madrid"}]}|  
   
 ### <a name="convert-json-collections-to-a-rowset"></a>将 JSON 集合转换为行集
-在 SQL Server 中查询 JSON 不需要自定义查询语言。 可以使用标准的 T-SQL 查询 JSON 数据。 如果必须基于 JSON 数据创建查询或报表，可以通过调用 OPENJSON 行集函数，轻松地将 JSON 数据转换为行与列。 有关详细信息，请参阅[用 OPENJSON 将 JSON 数据转换为行和列 (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)。  
+在 SQL Server 中查询 JSON 不需要自定义查询语言。 可以使用标准的 T-SQL 查询 JSON 数据。 如果必须基于 JSON 数据创建查询或报表，可以通过调用 OPENJSON 行集函数，轻松地将 JSON 数据转换为行与列  。 有关详细信息，请参阅[用 OPENJSON 将 JSON 数据转换为行和列 (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)。  
   
-以下示例调用 OPENJSON，并且将 `@json` 变量中存储的对象数组转换为可使用标准 SQL SELECT 语句查询的行集：  
+以下示例调用 OPENJSON，并且将 `@json` 变量中存储的对象数组转换为可使用标准 SQL SELECT 语句查询的行集   ：  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -131,10 +131,10 @@ FROM OPENJSON(@json)
 |5|Jane|Smith||2005-11-04T12:00:00|  
   
 **OPENJSON** 将 JSON 对象的数组转换为表，其中每个对象表示为一行，键/值对将作为单元返回。 输出遵循下列规则：
-- OPENJSON 将 JSON 值转换为 WITH 子句中指定的类型。
+- OPENJSON 将 JSON 值转换为 WITH 子句中指定的类型   。
 - **OPENJSON** 可以处理规则的键/值对以及分层组织的对象。
 - 不需要返回 JSON 文本中包含的所有字段。
-- 如果 JSON 值不存在，OPENJSON 返回 NULL 值。
+- 如果 JSON 值不存在，OPENJSON  返回 NULL 值。
 - 可以选择在类型规范后指定一个路径，以引用嵌套属性或按不同的名称引用属性。
 - 路径中可选的 **strict** 前缀指定 JSON 文本中必须存在指定属性的值。
 
@@ -161,7 +161,7 @@ FROM OPENJSON(@json)
     outer apply openjson( skills ) 
                      with ( skill nvarchar(8) '$' )
 ```  
-首个 `OPENJSON` 中返回技能数组，作为原始 JSON 文本片段，并使用 `APPLY` 运算符传递给其他 `OPENJSON` 函数。 第二个 `OPENJSON` 函数将分析 JSON 数组并将字符串值返回为单列行集，这一行集将与第一个 `OPENJSON` 的结果联接。 此查询的结果如下表所示：
+首个 `OPENJSON` 中返回技能数组，作为原始 JSON 文本片段，并使用 `APPLY` 运算符传递给其他 `OPENJSON` 函数  。 第二个 `OPENJSON` 函数将分析 JSON 数组并将字符串值返回为单列行集，这一行集将与第一个 `OPENJSON` 的结果联接。 此查询的结果如下表所示：
 
 **结果**  
   
@@ -179,9 +179,9 @@ FROM OPENJSON(@json)
 >[!NOTE]
 >不支持将 Azure SQL 数据仓库数据转换为 JSON，也不支持导出 JSON。
 
-通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，可将 SQL Server 数据或 SQL 查询结果的格式设置为 JSON。 使用 FOR JSON 委托从客户端应用程序到 SQL Server 的 JSON 输出格式。 有关详细信息，请参阅[借助 FOR JSON 将查询结果格式化为 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
+通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，可将 SQL Server 数据或 SQL 查询结果的格式设置为 JSON。 使用 FOR JSON 委托从客户端应用程序到 SQL Server 的 JSON 输出格式  。 有关详细信息，请参阅[借助 FOR JSON 将查询结果格式化为 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
-以下示例使用带有 FOR JSON 子句的 PATH 模式：  
+以下示例使用带有 FOR JSON 子句的 PATH 模式  ：  
   
 ```sql  
 SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth as dob  
@@ -248,7 +248,7 @@ JSON 文本存储在 varchar 或 nvarchar 列中，并编制了纯文本形式�
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>在 SQL Server 中存储 JSON 数据并编制索引
 
-JSON 是一种文本格式，因此 JSON 文档可存储于 SQL 数据库中的 `NVARCHAR` 列。 由于所有 SQL Server 子系统中支持 `NVARCHAR` 类型，可将 JSON 文档放置于具有“聚集列存储”索引的表、内存优化表或者可使用 OPENROWSET 或 PolyBase 读取的外部文件。
+JSON 是一种文本格式，因此 JSON 文档可存储于 SQL 数据库中的 `NVARCHAR` 列。 由于所有 SQL Server 子系统中支持 `NVARCHAR` 类型，可将 JSON 文档放置于具有“聚集列存储”索引的表、内存优化表或者可使用 OPENROWSET 或 PolyBase 读取的外部文件   。
 
 要了解有关在 SQL Server 中存储、索引和优化 JSON 数据的详细信息，请参阅以下文章：
 -   [在 SQL Server 或 SQL 数据库中存储 JSON 文档](store-json-documents-in-sql-tables.md)
@@ -257,14 +257,14 @@ JSON 是一种文本格式，因此 JSON 文档可存储于 SQL 数据库中的 
 
 ### <a name="load-json-files-into-sql-server"></a>将 JSON 文件加载到 SQL Server  
 
-可将文件中存储的信息格式化为标准 JSON 或行分隔的 JSON。 SQL Server 可以导入 JSON 文件的内容，使用 OPENJSON 或 JSON_VALUE 函数分析内容，并将其加载到表中。  
+可将文件中存储的信息格式化为标准 JSON 或行分隔的 JSON。 SQL Server 可以导入 JSON 文件的内容，使用 OPENJSON 或 JSON_VALUE 函数分析内容，并将其加载到表中   。  
   
 -   如果 JSON 文档存储在可由 SQL Server 访问的本地文件、共享网络驱动器或 Azure 文件位置，则可以使用批量导入将 JSON 数据加载到 SQL Server。
   
 -   如果行分隔的 JSON 文件存储在 Azure Blob 存储或 Hadoop 文件系统中，你可以用 PolyBase 来加载 JSON 文本，以 Transact-SQL 代码形式分析文本，然后将其载入表中。  
 
 ### <a name="import-json-data-into-sql-server-tables"></a>将 JSON 数据导入 SQL Server 表  
-如果必须将 JSON 数据从外部服务加载到 SQL Server，则可以使用 OPENJSON 将数据导入 SQL Server，而不是在应用程序层中分析数据。  
+如果必须将 JSON 数据从外部服务加载到 SQL Server，则可以使用 OPENJSON 将数据导入 SQL Server，而不是在应用程序层中分析数据  。  
   
 ```sql  
 DECLARE @jsonVariable NVARCHAR(MAX)
@@ -309,7 +309,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 你可以通过外部 REST 服务提供 JSON 变量的内容，然后将这些内容从客户端 JavaScript 框架作为参数发送，或者从外部文件加载。 可以在 SQL Server 表中轻松插入、更新或合并来自 JSON 文本的结果。
 
 ## <a name="analyze-json-data-with-sql-queries"></a>使用 SQL 查询分析 JSON 数据  
-如果必须筛选或聚合 JSON 数据用于报表，可以使用 OPENJSON 将 JSON 转换为关系格式。 然后，可使用标准 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和内置函数来准备报表。  
+如果必须筛选或聚合 JSON 数据用于报表，可以使用 OPENJSON 将 JSON 转换为关系格式  。 然后，可使用标准 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和内置函数来准备报表。  
   
 ```sql  
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
@@ -330,7 +330,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 你可以在同一个查询中使用 JSON 文本中的标准表列和值。 可以在 `JSON_VALUE(Tab.json, '$.Status')` 表达式上添加索引来提高查询的性能。 有关详细信息，请参阅[对 JSON 数据编制索引](../../relational-databases/json/index-json-data.md)。
  
 ## <a name="return-data-from-a-sql-server-table-formatted-as-json"></a>从格式化为 JSON 的 SQL Server 表返回数据  
-如果你的 Web 服务从数据库层提取数据并以 JSON 格式返回数据，或者你使用接受已格式化为 JSON 的数据的 JavaScript 框架或库，则可以直接在 SQL 查询中设置 JSON 输出的格式。 你可以使用 FOR JSON 将 JSON 格式设置委托给 SQL Server，而非编写代码或者包含一个库来转换表格查询结果并将对象序列化为 JSON 格式。  
+如果你的 Web 服务从数据库层提取数据并以 JSON 格式返回数据，或者你使用接受已格式化为 JSON 的数据的 JavaScript 框架或库，则可以直接在 SQL 查询中设置 JSON 输出的格式。 你可以使用 FOR JSON 将 JSON 格式设置委托给 SQL Server，而非编写代码或者包含一个库来转换表格查询结果并将对象序列化为 JSON 格式  。  
   
 例如，你可能想要生成符合 OData 规范的 JSON 输出。 Web 服务需要采用以下格式的请求和响应： 
   
@@ -354,7 +354,7 @@ FOR JSON AUTO
 ## <a name="test-drive-built-in-json-support-with-the-adventureworks-sample-database"></a>使用 AdventureWorks 示例数据库测试驱动内置 JSON 支持
 若要获取 AdventureWorks 示例数据库，请至少从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=49502)下载数据库文件和示例以及脚本文件。 
  
-将示例数据库还原到 SQL Server 2016 实例后，请提取示例文件，然后从 JSON 文件夹中打开“JSON Sample Queries procedures views and indexes.sql”文件。 运行此文件中的脚本，将某些现有数据的格式重新设置为 JSON 数据，对 JSON 数据测试示例查询和报告，为 JSON 数据编制索引，然后导入和导出 JSON。  
+将示例数据库还原到 SQL Server 2016 实例后，请提取示例文件，然后从 JSON 文件夹中打开“JSON Sample Queries procedures views and indexes.sql”文件  。 运行此文件中的脚本，将某些现有数据的格式重新设置为 JSON 数据，对 JSON 数据测试示例查询和报告，为 JSON 数据编制索引，然后导入和导出 JSON。  
   
 下面是你可以对该文件中包含的脚本执行的操作：  
   
@@ -383,7 +383,7 @@ FOR JSON AUTO
 *在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON*
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
-在 SQL Server 中使用 JSON 函数构建 REST API
+在 SQL Server 中使用 JSON 函数构建 REST API 
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
 
 ### <a name="reference-articles"></a>参考文章  

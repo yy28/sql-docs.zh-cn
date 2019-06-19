@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e6c504b96e181a0362cf7d20daa95017d2140fa
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725715"
 ---
 # <a name="xml-source"></a>XML 源
@@ -77,7 +77,7 @@ ms.locfileid: "65725715"
   
  XML 源支持多个常规输出和多个错误输出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含“XML 源编辑器”对话框，可用于配置 XML 源。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含“XML 源编辑器”  对话框，可用于配置 XML 源。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
@@ -108,22 +108,22 @@ ms.locfileid: "65725715"
  指定 XML 源数据本身是否包含 XSD 架构（用于定义和验证 XML 源数据的结构和数据）。  
   
  **XSD 位置**  
- 键入 XSD 架构文件的路径和文件名，或者可以单击“浏览”定位该文件。  
+ 键入 XSD 架构文件的路径和文件名，或者可以单击“浏览”  定位该文件。  
   
  **“浏览”**  
- 使用“打开”对话框定位到 XSD 架构文件。  
+ 使用“打开”  对话框定位到 XSD 架构文件。  
   
  **生成 XSD**  
- 使用“另存为”对话框可以为自动生成的 XSD 架构文件选择位置。 编辑器将根据 XML 数据的结构来推断架构。  
+ 使用“另存为”  对话框可以为自动生成的 XSD 架构文件选择位置。 编辑器将根据 XML 数据的结构来推断架构。  
   
 ### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
 #### <a name="data-access-mode--xml-file-location"></a>数据访问模式 = XML 文件位置  
  **XML 位置**  
- 键入 XML 数据文件的路径和文件名，或者通过单击“浏览”查找文件。  
+ 键入 XML 数据文件的路径和文件名，或者通过单击“浏览”  查找文件。  
   
  **“浏览”**  
- 使用“打开”对话框定位到 XML 数据文件。  
+ 使用“打开”  对话框定位到 XML 数据文件。  
   
 #### <a name="data-access-mode--xml-file-from-variable"></a>数据访问模式 = 来自变量的 XML 文件  
  **变量名称**  
@@ -134,7 +134,7 @@ ms.locfileid: "65725715"
  选择包含 XML 数据的变量。  
   
 ## <a name="xml-source-editor-columns-page"></a>XML 源编辑器（“列”页）
-  可以使用“XML 源编辑器”对话框的“列”节点，将输出列映射到外部（源）列。  
+  可以使用“XML 源编辑器”对话框的“列”节点，将输出列映射到外部（源）列。    
   
 ### <a name="options"></a>选项  
  **可用外部列**  
@@ -154,12 +154,12 @@ ms.locfileid: "65725715"
  查看数据源的名称。  
   
  **列**  
- 查看在“XML 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
+ 查看在“XML 源编辑器”  对话框中“连接管理器”  页上选择的外部（源）列。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  

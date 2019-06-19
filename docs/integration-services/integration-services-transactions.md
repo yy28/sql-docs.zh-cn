@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ed63abe0ea2c96461409e964b232abce6e1b103
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723507"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 事务
@@ -28,7 +28,7 @@ ms.locfileid: "65723507"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  包使用事务将任务执行的数据库操作绑定到原子单元中，这样做可以维护数据的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器类型（包、For 循环、Foreach 循环和序列容器以及封装每个任务的任务宿主）都可以配置为使用事务。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了用于配置事务的三个选项：NotSupported、Supported 和 Required。  
+  包使用事务将任务执行的数据库操作绑定到原子单元中，这样做可以维护数据的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器类型（包、For 循环、Foreach 循环和序列容器以及封装每个任务的任务宿主）都可以配置为使用事务。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了用于配置事务的三个选项：NotSupported  、Supported  和 Required  。  
   
 -   **Required** 指示该容器启动一个事务，除非已经存在由其父容器启动的事务。 如果事务已经存在，容器将联接该事务。 例如，如果没有配置为支持事务的包包括一个使用 **Required** 选项的序列容器，则该序列容器会启动其自己的事务。 如果包已经配置为使用 **Required** 选项，则序列容器将联接包事务。  
   
@@ -61,13 +61,13 @@ ms.locfileid: "65723507"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”。  
+4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”  。  
   
-5.  在“属性”窗口中，将 TransactionOption 属性设置为“必需”。  
+5.  在“属性”  窗口中，将 TransactionOption 属性设置为“必需”  。  
   
-6.  在“控制流”选项卡的设计图面上，右键单击要在事务中注册的任务或容器，再单击“属性”。  
+6.  在“控制流”  选项卡的设计图面上，右键单击要在事务中注册的任务或容器，再单击“属性”  。  
   
-7.  在“属性”窗口中，将 TransactionOption 属性设置为“支持”。  
+7.  在“属性”  窗口中，将 TransactionOption 属性设置为“支持”  。  
   
     > [!NOTE]  
     >  若要在事务中登记连接，请注册在该事务中使用连接的任务。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../integration-services/connection-manager/integration-services-ssis-connections.md)。  
@@ -85,20 +85,20 @@ ms.locfileid: "65723507"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”。  
+4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”  。  
   
-5.  在“属性”窗口中，将 TransactionOption 属性设置为“支持”。  
+5.  在“属性”  窗口中，将 TransactionOption 属性设置为“支持”  。  
   
     > [!NOTE]  
     >  该包支持事务，但事务是由包中的任务或容器启动的。  
   
-6.  在“控制流”选项卡的设计图面上，右键单击要为其启动事务的包中的任务或容器，然后单击“属性”。  
+6.  在“控制流”  选项卡的设计图面上，右键单击要为其启动事务的包中的任务或容器，然后单击“属性”  。  
   
-7.  在“属性”窗口中，将 TransactionOption 属性设置为“必需”。  
+7.  在“属性”  窗口中，将 TransactionOption 属性设置为“必需”  。  
   
-8.  如果事务由容器启动，则右键单击要在事务中注册的任务或容器，然后单击“属性”。  
+8.  如果事务由容器启动，则右键单击要在事务中注册的任务或容器，然后单击“属性”  。  
   
-9. 在“属性”窗口中，将 TransactionOption 属性设置为“支持”。  
+9. 在“属性”  窗口中，将 TransactionOption 属性设置为“支持”  。  
   
     > [!NOTE]  
     >  若要在事务中登记连接，请注册在该事务中使用连接的任务。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../integration-services/connection-manager/integration-services-ssis-connections.md)。  
@@ -160,7 +160,7 @@ ms.locfileid: "65723507"
   
 ## <a name="external-resources"></a>外部资源  
   
--    www.mssqltips.com 上的博客项 [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783)（如何在 SQL Server Integration Services SSIS 中使用事务）  
+-   www.mssqltips.com 上的博客项 [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783)（如何在 SQL Server Integration Services SSIS 中使用事务）  
   
 ## <a name="see-also"></a>另请参阅  
  [继承的事务](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   

@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a71b6b5cd3f62fd3c51121bd6ef705911ffc76d4
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943452"
 ---
 # <a name="percentrank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
@@ -42,7 +42,7 @@ PERCENT_RANK( )
   
 ## <a name="arguments"></a>参数  
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 _order\_by\_clause_ 确定执行操作的逻辑顺序。 需要 order_by_clause。 不能在 PERCENT_RANK 函数中指定 OVER 语法的 \<rows 或 range 子句\>。  有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区  。 如果未指定，则此函数将查询结果集的所有行视为单个组。 _order\_by\_clause_ 确定执行操作的逻辑顺序。 需要 order_by_clause  。 不能在 PERCENT_RANK 函数中指定 OVER 语法的 \<rows 或 range 子句\>。  有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  **float(53)**  

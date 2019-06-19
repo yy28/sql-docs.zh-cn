@@ -20,19 +20,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1c0b3c7332fdb2583800f3aa600175f06f8928f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999600"
 ---
 # <a name="delete-a-data-tier-application"></a>删除数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以通过使用“删除数据层应用程序向导”或 Windows PowerShell 脚本，删除数据层应用程序。 您可以指定是保留、分离还是删除关联数据库。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要升级 DAC，请使用：**[注册数据层应用程序向导](#UsingDeleteDACWizard)、[PowerShell](#DeleteDACPowerShell)  
+-   **若要升级 DAC，请使用：** [注册数据层应用程序向导](#UsingDeleteDACWizard)、[PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>开始之前  
  在删除某一数据层应用程序 (DAC) 实例时，您可以选择三个选项之一，这三个选项指定要对与该数据层应用程序相关联的数据库执行何种操作。 所有这三个选项都删除 DAC 定义元数据。 这些选项在如何处理与数据层应用程序相关联的数据库上有所不同。 向导并不删除与 DAC 或数据库相关联的任何实例级别的对象，例如登录名。  
@@ -55,7 +55,7 @@ ms.locfileid: "53591341"
 > [!WARNING]  
 >  通过从还原或重新连接的数据库注册 DAC 重新生成一个 DAC 实例时，将不会重新创建该原始 DAC 的某些部分，例如服务器选择策略。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  只能由 **sysadmin** 或 **serveradmin** 固定服务器角色的成员删除 DAC，或者由数据库所有者删除。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以启动该向导。  
   
 ##  <a name="UsingDeleteDACWizard"></a> 使用“删除数据层应用程序向导”  
@@ -67,7 +67,7 @@ ms.locfileid: "53591341"
   
 3.  展开 **数据层应用程序** 节点。  
   
-4.  右键单击要删除的 DAC，然后选择“删除数据层应用程序…”  
+4.  右键单击要删除的 DAC，然后选择“删除数据层应用程序…”   
   
 5.  完成向导对话框：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "53591341"
   
  **不再显示此页。** - 选中该复选框可以停止在将来显示此页。  
   
- “下一步 >” - 进入“选择方法”页。  
+ “下一步 >”  - 进入“选择方法”  页。  
   
  **取消** - 结束向导且不删除数据层应用程序或数据库。  
   
@@ -103,9 +103,9 @@ ms.locfileid: "53591341"
   
  数据库的数据和日志文件被永久删除。  
   
- **< 上一步** - 返回到“简介”页。  
+ **< 上一步** - 返回到“简介”  页。  
   
- “下一步 >”- 继续到“摘要”页。  
+ “下一步 >”  - 继续到“摘要”  页。  
   
  **取消** - 结束向导且不删除 DAC 或数据库。  
   
@@ -116,9 +116,9 @@ ms.locfileid: "53591341"
   
  **查看选择摘要** - 查看在该框中显示的 DAC、数据库和删除方法。 如果信息正确，则选择 **“下一步”** 或者 **“完成”** 以便删除 DAC。 如果 DAC 和数据库信息不正确，则选择 **“取消”** 并且选择正确的 DAC。 如果删除方法不正确，则选择 **“上一步”** 返回到 **“选择方法”** 页并且选择其他方法。  
   
- **< 上一步** - 返回到“选择方法”页以便选择其他删除方法。  
+ **< 上一步** - 返回到“选择方法”  页以便选择其他删除方法。  
   
- **下一步 >** - 使用你在上一页中选择的方法删除 DAC 实例，并且继续到“删除数据层应用程序”页。  
+ **下一步 >** - 使用你在上一页中选择的方法删除 DAC 实例，并且继续到“删除数据层应用程序”  页。  
   
  **取消** - 结束向导且不删除 DAC 实例。  
   

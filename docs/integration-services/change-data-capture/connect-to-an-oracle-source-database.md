@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76b35434fd3d9a171478394967ef13cca6411c32
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728962"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>连接到 Oracle 源数据库
@@ -41,7 +41,7 @@ ms.locfileid: "65728962"
   
 -   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**：如果选择此选项，则必须在连接到的 Oracle 数据库中为用户键入“用户名”和“密码”。  
+-   **Oracle 身份验证**：如果选择此选项，则必须在连接到的 Oracle 数据库中为用户键入“用户名”和“密码”   。  
   
 > [!NOTE]
 >  用户必须在 Oracle 数据库中被授予以下权限才能成为日志挖掘用户。  
@@ -63,7 +63,7 @@ ms.locfileid: "65728962"
 >  如果无法将上述任何权限授予 V$xxx，则向其授予 V_S$xxx。  
   
  **测试连接**  
- 单击“测试连接”可确定是否已建立与具有 Oracle 数据库的远程计算机的连接。 将打开一个对话框，通知您连接是否成功。  
+ 单击  “测试连接”可确定是否已建立与具有 Oracle 数据库的远程计算机的连接。 将打开一个对话框，通知您连接是否成功。  
   
 > [!IMPORTANT]  
 >  由于一个已知问题，如果 CDC 设计器未以管理员的身份运行，与 Oracle 源数据库的连接可能会失败。 如果连接失败，请使用 **“以管理员身份运行”** 选项关闭后重新启动 CDC 设计器。  

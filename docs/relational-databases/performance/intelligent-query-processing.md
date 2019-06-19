@@ -14,10 +14,10 @@ ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9889ac45bff237ddb1e26e9dbbaffd12f3be556
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776035"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
@@ -51,7 +51,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 借助此功能，可以在执行期间使用一个缓存计划，将计划动态切换为采用更优质的联接策略。
 
-通过批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。
+通过批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后  。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。
 工作原理如下：
 -  如果生成联接输入的行计数足够小，以致于嵌套循环联接优于哈希联接，则计划将切换到嵌套循环算法。
 -  如果生成联接输入超过特定行计数阈值，则不会进行切换并且计划将通过哈希联接继续。
@@ -75,7 +75,7 @@ WHERE [fo].[Quantity] = 360;
 1. 我们拥有新的自适应联接运算符。 此运算符可定义用于决定何时切换到嵌套循环计划的阈值。 对于该示例，阈值为 78 行。 包含 &gt;= 78 行的任何示例均将使用哈希联接。 如果小于阈值，将使用嵌套循环联接。
 1. 由于我们将返回 336 行，超过了阈值，因此第二个分支表示标准哈希联接操作的探测阶段。 请注意，实时查询统计信息将显示流经运算符的行，在本示例中为“672 行，共 672 行”。
 1. 并且，最后一个分支是供未超出阈值的嵌套循环联接使用的聚集索引查找。 请注意，我们将看到显示“0 行，共 336 行”（未使用分支）。
- 现将计划与同一查询进行对比，但此次针对表格中只有一行的的 Quantity 值：
+ 现将计划与同一查询进行对比，但此次针对表格中只有一行的的 Quantity 值  ：
  
 ```sql
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
@@ -124,7 +124,7 @@ WHERE [fo].[Quantity] = 361;
 - 嵌套循环联接和哈希联接生成的替代解决方案的第一个子级（外部引用）应相同。
 
 ### <a name="adaptive-joins-and-nested-loop-efficiency"></a>自适应联接和嵌套循环效率
-如果自适应联接切换到嵌套循环操作，它将使用哈希联接生成已经读取的行。 运算符不会再次重新读取外部引用行。
+如果自适应联接切换到嵌套循环操作，它将使用哈希联接生成已经读取的行。 运算符不会  再次重新读取外部引用行。
 
 ### <a name="adaptive-threshold-rows"></a>自适应阈值行
 下图显示了哈希联接的成本与嵌套循环联接替代的成本之间的示例交集。  在这个交点处，确定了阈值，该阈值将反过来确定将实际用于联接操作的算法。
@@ -163,7 +163,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ## <a name="batch-mode-memory-grant-feedback"></a>批处理模式内存授予反馈
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查询执行后的计划包括执行所需的最小内存和能将所有行纳入内存的理想内存授予大小。 如果内存授予大小不正确，性能将受到影响。 如果授予过量，则会导致内存浪费，减少并发执行。 如果内存授予不足，则会导致到磁盘的昂贵溢出。 通过解决重复工作负荷，批处理模式内存授予反馈可重新计算查询所需的实际内存，并更新缓存计划的授予值。 执行相同的查询语句时，查询将使用修改后的内存授予大小，减少影响并发的过量内存授予，并修复造成到磁盘的昂贵溢出的估计不足的内存授予。
-下图是使用批处理模式自适应内存授予反馈的一个示例。 对于首次执行查询，由于高溢出，持续时间为 88 秒：   
+下图是使用批处理模式自适应内存授予反馈的一个示例。 对于首次执行查询，由于高溢出，持续时间为 88 秒  ：   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -177,23 +177,23 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![高溢出](./media/2_AQPGraphHighSpills.png)
 
-启用内存授予反馈后，对于第二次执行，持续时间为 1 秒（从 88 秒减少），完全消除溢出，且授予内存更高： 
+启用内存授予反馈后，对于第二次执行，持续时间为 1 秒  （从 88 秒减少），完全消除溢出，且授予内存更高： 
 
 ![无溢出](./media/3_AQPGraphNoSpills.png)
 
 ### <a name="memory-grant-feedback-sizing"></a>内存授予反馈大小调整
 对于内存授予过量的情况，如果授予的内存是实际使用内存大小的两倍，内存授予反馈将重新计算内存授予并更新缓存的计划。 内存授予不足 1 MB 的计划将不会针对超额重新进行计算。
-对于内存授予大小不足，造成批处理模式运算符溢出到磁盘的情况，内存授予反馈将触发内存授予的重新计算。 将向内存授予反馈报告溢出事件，并可通过 spilling_report_to_memory_grant_feedback xEvent 显露。 此事件将返回计划的节点 ID 和该节点溢出的数据大小。
+对于内存授予大小不足，造成批处理模式运算符溢出到磁盘的情况，内存授予反馈将触发内存授予的重新计算。 将向内存授予反馈报告溢出事件，并可通过 spilling_report_to_memory_grant_feedback xEvent 显露  。 此事件将返回计划的节点 ID 和该节点溢出的数据大小。
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>内存授予反馈和参数敏感型方案
-为保持最优，不同的参数值可能还需要不同的查询计划。 此类查询被定义为“参数敏感型”。 对于参数敏感型计划，如果查询具有不稳定的内存要求，则内存授予反馈对该查询禁用。 在重复运行查询后禁用计划，并且可以通过监视 memory_grant_feedback_loop_disabled xEvent 观察到这一切。 有关参数截取和参数敏感度的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
+为保持最优，不同的参数值可能还需要不同的查询计划。 此类查询被定义为“参数敏感型”。 对于参数敏感型计划，如果查询具有不稳定的内存要求，则内存授予反馈对该查询禁用。 在重复运行查询后禁用计划，并且可以通过监视 memory_grant_feedback_loop_disabled xEvent 观察到这一切  。 有关参数截取和参数敏感度的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
 
 ### <a name="memory-grant-feedback-caching"></a>内存授予反馈缓存
 反馈可以存储在单个执行的缓存计划中。 它是该语句的连续执行，但受益于内存授予反馈调整。 此功能适用于重复执行语句。 内存授予反馈将只更改缓存的计划。 当前未在查询存储中捕获更改。
-如果从缓存中逐出计划，则不会保存反馈。 如果存在故障转移，则反馈也将丢失。 使用 `OPTION (RECOMPILE)` 的语句可创建新的计划，但不会缓存它。 由于它未被缓存，因此不会产生内存授予反馈，也不会针对编译和执行存储。 但是，如果已缓存未使用 `OPTION (RECOMPILE)` 的等效语句（即包含相同的查询哈希）并重新执行，连续语句可从内存授予反馈中受益。
+如果从缓存中逐出计划，则不会保存反馈。 如果存在故障转移，则反馈也将丢失。 使用 `OPTION (RECOMPILE)` 的语句可创建新的计划，但不会缓存它。 由于它未被缓存，因此不会产生内存授予反馈，也不会针对编译和执行存储。 但是，如果已缓存未使用 `OPTION (RECOMPILE)` 的等效语句（即包含相同的查询哈希）并重新执行，连续语句可从内存授予反馈中受益  。
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>跟踪内存授予反馈活动
-可以使用 memory_grant_updated_by_feedback xEvent 跟踪内存授予反馈事件。 此事件可跟踪当前执行计数历史记录，内存授予反馈更新计划的次数，修改前理想的额外内存授予，以及内存授予反馈修改缓存计划后理想的额外内存授予。
+可以使用 memory_grant_updated_by_feedback xEvent 跟踪内存授予反馈事件  。 此事件可跟踪当前执行计数历史记录，内存授予反馈更新计划的次数，修改前理想的额外内存授予，以及内存授予反馈修改缓存计划后理想的额外内存授予。
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>内存授予反馈、资源调控器和查询提示
 实际内存授予服从资源调控器或查询提示确定的查询内存限制。
@@ -225,7 +225,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ## <a name="row-mode-memory-grant-feedback"></a>行模式内存授予反馈
 
-适用对象：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 为公开预览版功能
+适用对象  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 为公开预览版功能
 
 > [!NOTE]
 > 行模式内存授予反馈是一项公共预览版功能。  
@@ -234,11 +234,11 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 若要在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中启用行模式内存授予反馈的公共预览版，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
 
-通过 memory_grant_updated_by_feedback XEvent，可以查看行模式内存授予反馈活动。 
+通过 memory_grant_updated_by_feedback  XEvent，可以查看行模式内存授予反馈活动。 
 
-从行模式内存授予反馈开始，将显示两个新的查询计划属性，用于实际执行后计划：IsMemoryGrantFeedbackAdjusted 和 LastRequestedMemory，它们将添加到 MemoryGrantInfo 查询计划 XML 元素。 
+从行模式内存授予反馈开始，将显示两个新的查询计划属性，用于实际执行后计划：IsMemoryGrantFeedbackAdjusted 和 LastRequestedMemory，它们将添加到 MemoryGrantInfo 查询计划 XML 元素  。 
 
-LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节 (KB) 为单位）。 使用 IsMemoryGrantFeedbackAdjusted 属性，可以查看实际查询执行计划内语句的内存授予反馈状态。 下面列出了此属性的可取值：
+LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节 (KB) 为单位）  。 使用 IsMemoryGrantFeedbackAdjusted 属性，可以查看实际查询执行计划内语句的内存授予反馈状态  。 下面列出了此属性的可取值：
 
 | IsMemoryGrantFeedbackAdjusted 值 | 描述 |
 |---|---|
@@ -278,12 +278,12 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 通过交错执行，函数中的实际行计数可用于做出更明智的下游查询计划决策。 若要详细了解多语句表值函数 (MSTVF)，请参阅[表值函数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
 
-交错执行可更改单一查询执行的优化和执行阶段之间的单向边界，并使计划能够根据修订后的基数估值进行调整。 如果遇到交错执行的候选项，该项当前为“多语句表值函数 (MSTVF)”，将暂停优化，执行适用的子树，捕获准确的基数估值，然后针对下游操作继续优化。   
+交错执行可更改单一查询执行的优化和执行阶段之间的单向边界，并使计划能够根据修订后的基数估值进行调整。 如果遇到交错执行的候选项，该项当前为“多语句表值函数 (MSTVF)”，将暂停优化，执行适用的子树，捕获准确的基数估值，然后针对下游操作继续优化  。   
 
 自 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起，MSTVF 的固定基数猜测为“100”，而早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本为“1”。 交错执行有助于解决由于与 MSTVF 关联的这些固定基数估值而导致的工作负荷性能问题。 有关 MSTVF 的详细信息，请参阅[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
 
 下图描绘了[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)输出，一个显示 MSTVF 的固定基数估值影响的整体执行计划的子集。 可查看实际行流与估计行数。 有三个值得注意的计划区域（从右到左显示）：
-1. MSTVF 表扫描具有 100 行的固定估值。 然而，对于此示例，有 527,597 行流经此 MSTVF 表扫描，如通过“527597 行，共 100 行”的实际与估值的实时查询统计信息中所示，因此固定估值偏差显著。
+1. MSTVF 表扫描具有 100 行的固定估值。 然而，对于此示例，有 527,597 行流经此 MSTVF 表扫描，如通过“527597 行，共 100 行”的实际与估值的实时查询统计信息中所示，因此固定估值偏差显著  。
 1. 对于嵌套循环操作，仅假定联接的外侧将返回 100 行。 如果 MSTVF 实际返回惊人的行数，最好将另一联接算法一起使用。
 1. 对于哈希匹配操作，请注意小型警告符号，在本示例中指示到磁盘的溢出。
 
@@ -319,8 +319,8 @@ MSTVF 中简单的 `SELECT *` 不会获益于交错执行。
 
 | 执行计划属性 | 描述 |
 | --- | --- |
-| ContainsInterleavedExecutionCandidates | 适用于 QueryPlan 节点。 如果为“true”，表示计划包含交错执行候选项。 |
-| IsInterleavedExecuted | TVF 节点的 RelOp 下的 RuntimeInformation 元素的属性。 如果为“true”，表示该操作已具体化为交错执行操作的一部分。 |
+| ContainsInterleavedExecutionCandidates | 适用于 QueryPlan 节点  。 如果为“true”，表示计划包含交错执行候选项  。 |
+| IsInterleavedExecuted | TVF 节点的 RelOp 下的 RuntimeInformation 元素的属性  。 如果为“true”，表示该操作已具体化为交错执行操作的一部分  。 |
 
 还可以通过以下 xEvent 跟踪交错执行匹配项：
 
@@ -400,9 +400,9 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 ## <a name="approximate-query-processing"></a>近似查询处理
 
 > [!NOTE]
-> APPROX_COUNT_DISTINCT 是一项公共预览版功能。  
+> APPROX_COUNT_DISTINCT  是一项公共预览版功能。  
 
-近似查询处理是新的功能系列。 它可以跨响应速度比绝对精度更为关键的大型数据集进行聚合。 例如，要跨 100 亿行计算 COUNT(DISTINCT())，以供显示在仪表板上。 在这种情况下，绝对精度并不重要，而响应速度则至关重要。 新增的 APPROX_COUNT_DISTINCT 聚合函数返回组中唯一非 NULL 值的近似数。
+近似查询处理是新的功能系列。 它可以跨响应速度比绝对精度更为关键的大型数据集进行聚合。 例如，要跨 100 亿行计算 COUNT(DISTINCT())  ，以供显示在仪表板上。 在这种情况下，绝对精度并不重要，而响应速度则至关重要。 新增的 APPROX_COUNT_DISTINCT  聚合函数返回组中唯一非 NULL 值的近似数。
 
 有关详细信息，请参阅 [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/functions/approx-count-distinct-transact-sql.md)。
 
@@ -416,8 +416,8 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 ### <a name="background"></a>背景
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引入了一项可加速分析工作负载的新功能，即列存储索引。 我们扩展了用例，并改进了每个后续版本中列存储索引的性能。 到目前为止，我们已将所有这些功能作为单一功能进行了表述和记录。 可以在表上创建列存储索引。 分析工作负载的速度会变快。 不过，有两套相关但不同的技术：
-- 使用列存储索引，分析查询仅访问所需列中的数据。 与传统行存储索引中的压缩相比，列存储格式的页压缩更高效。 
-- 使用批处理模式处理，查询运算符可以更高效地处理数据。 它们一次处理一批行，而不是一行。 许多其他可伸缩性改进都与批处理模式处理相关。 若要详细了解批处理模式，请参阅[执行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。
+- 使用列存储  索引，分析查询仅访问所需列中的数据。 与传统行存储  索引中的压缩相比，列存储格式的页压缩更高效。 
+- 使用批处理模式  处理，查询运算符可以更高效地处理数据。 它们一次处理一批行，而不是一行。 许多其他可伸缩性改进都与批处理模式处理相关。 若要详细了解批处理模式，请参阅[执行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。
 
 两组功能协同工作，以改进输入/输出 (I/O) 和 CPU 利用率：
 - 通过使用列存储索引，更多数据适合内存。 这可以减少 I/O 需求。
@@ -431,7 +431,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 结合使用这两种功能时，通常效果最佳。 因此，到目前为止，SQL Server 查询优化器仅对涉及至少一个有列存储索引的表的查询考虑使用批处理模式处理。
 
-对于一些应用程序，列存储索引并不是理想选择。 应用程序可能会使用列存储索引不支持的其他一些功能。 例如，就地修改与列存储压缩不兼容。 因此，有聚集列存储索引的表不支持触发器。 更重要的是，列存储索引会增加 DELETE 和 UPDATE 语句的开销。 
+对于一些应用程序，列存储索引并不是理想选择。 应用程序可能会使用列存储索引不支持的其他一些功能。 例如，就地修改与列存储压缩不兼容。 因此，有聚集列存储索引的表不支持触发器。 更重要的是，列存储索引会增加 DELETE  和 UPDATE  语句的开销。 
 
 对于一些混合事务分析工作负载，工作负载的事务方面开销远比列存储索引的优势重要。 此类方案只能通过批处理模式处理来改进 CPU 利用率。 正因如此，“行存储上的批处理模式”功能对所有查询考虑使用批处理模式。 涉及哪些索引并不重要。
 
@@ -453,7 +453,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 1. 初始检查输入查询中的表大小、使用的运算符和估计的基数。
 2. 其他检查点，因为优化器会发现新的、成本更低的查询计划。 如果这些替代计划没有大量使用批处理模式，优化器会停止探索批处理模式替代方案。
 
-如果使用行存储上的批处理模式，则会发现在查询计划中实际运行模式为批处理模式。 扫描运算符对磁盘堆和 B 树索引使用批处理模式。 此批处理模式扫描可以评估批处理模式位图筛选器。 还可以在计划中看到其他批处理模式运算符。 例如，哈希联接、基于哈希的聚合、排序、窗口聚合、筛选器、串联和计算标量运算符。
+如果使用行存储上的批处理模式，则会发现在查询计划中实际运行模式为批处理模式  。 扫描运算符对磁盘堆和 B 树索引使用批处理模式。 此批处理模式扫描可以评估批处理模式位图筛选器。 还可以在计划中看到其他批处理模式运算符。 例如，哈希联接、基于哈希的聚合、排序、窗口聚合、筛选器、串联和计算标量运算符。
 
 ### <a name="remarks"></a>Remarks
 
@@ -467,7 +467,7 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 
 ### <a name="configure-batch-mode-on-rowstore"></a>配置行存储上的批处理模式
 
-BATCH_MODE_ON_ROWSTORE 数据库范围内配置默认处于启用状态。 无需更改数据库兼容性级别，即可禁用行存储上的批处理模式：
+BATCH_MODE_ON_ROWSTORE  数据库范围内配置默认处于启用状态。 无需更改数据库兼容性级别，即可禁用行存储上的批处理模式：
 
 ```sql
 -- Disabling batch mode on rowstore
@@ -477,7 +477,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
 
-可以通过数据库范围内配置来禁用行存储上的批处理模式。 但仍可使用 ALLOW_BATCH_MODE 查询提示，在查询一级替代设置。 以下示例启用行存储的批处理模式，即使通过数据库作用域配置禁用了该功能：
+可以通过数据库范围内配置来禁用行存储上的批处理模式。 但仍可使用 ALLOW_BATCH_MODE  查询提示，在查询一级替代设置。 以下示例启用行存储的批处理模式，即使通过数据库作用域配置禁用了该功能：
 
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
@@ -488,7 +488,7 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
 
-还可以使用 DISALLOW_BATCH_MODE 查询提示，对特定查询禁用行存储上的批处理模式。 请参阅以下示例：
+还可以使用 DISALLOW_BATCH_MODE  查询提示，对特定查询禁用行存储上的批处理模式。 请参阅以下示例：
 
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER

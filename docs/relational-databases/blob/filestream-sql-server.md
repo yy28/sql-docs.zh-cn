@@ -17,10 +17,10 @@ ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 manager: craigg
 ms.openlocfilehash: 178068ee909369fa8559bdce284364630b7763f2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65094334"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
@@ -50,7 +50,7 @@ FILESTREAM 存储以 **varbinary(max)** 列的形式实现，在该列中数据�
   
 若要指定列应将数据存储在文件系统中，请对 **varbinary(max)** 列指定 FILESTREAM 属性。 这样 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会将该列的所有数据存储在文件系统，而不是数据库文件中。  
   
-FILESTREAM 数据必须存储在 FILESTREAM 文件组中。 FILESTREAM 文件组是包含文件系统目录而非文件本身的专用文件组。 这些文件系统目录称为“数据容器” 。 数据容器是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 存储与文件系统存储之间的接口。 
+FILESTREAM 数据必须存储在 FILESTREAM 文件组中。 FILESTREAM 文件组是包含文件系统目录而非文件本身的专用文件组。 这些文件系统目录称为“数据容器”  。 数据容器是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 存储与文件系统存储之间的接口。 
 
 使用 FILESTREAM 存储时，请考虑以下内容：  
 

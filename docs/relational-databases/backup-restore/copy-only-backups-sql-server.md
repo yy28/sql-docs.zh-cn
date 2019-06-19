@@ -17,11 +17,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 6649909f4d3a4bf6b95b657ef45f55c34f042f3a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240685"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478509"
 ---
 # <a name="copy-only-backups-sql-server"></a>仅复制备份 (SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "59240685"
 
 [!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-1.  在“对象资源管理器”中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
+1.  在“对象资源管理器”  中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 
-2.  展开“数据库”，右键单击 `Sales`，然后指向“任务”，再单击“备份...”。
+2.  展开“数据库”  ，右键单击 `Sales`，然后指向“任务”  ，再单击“备份...”  。
 
-3.  在“常规”页的“源”部分中，选中“仅复制备份”复选框。
+3.  在“常规”  页的“源”  部分中，选中“仅复制备份”  复选框。
 
-4.  单击“确定” 。
+4.  单击“确定”  。
 
   
 ###  <a name="TsqlProcedure"></a>B.  使用 Transact-SQL  

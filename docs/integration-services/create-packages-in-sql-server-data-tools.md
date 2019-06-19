@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea0f60f98ef86908e7e81f810c9160a71d91755c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727291"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建包
@@ -59,7 +59,7 @@ ms.locfileid: "65727291"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开要在其中创建包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在解决方案资源管理器中，右键单击“SSIS 包”文件夹，然后单击“新建 SSIS 包”。  
+2.  在解决方案资源管理器中，右键单击“SSIS 包”文件夹，然后单击“新建 SSIS 包”   。  
   
 3.  还可以向包中添加控制流、数据流任务和事件处理程序。 有关详细信息，请参阅[控制流](../integration-services/control-flow/control-flow.md)、[数据流](../integration-services/data-flow/data-flow.md)和[Integration Services (SSIS) 事件处理程序](../integration-services/integration-services-ssis-event-handlers.md)。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65727291"
   
 1.  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。  
   
-2.  在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+2.  在“配置属性”  的“常规”  选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
      ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
   

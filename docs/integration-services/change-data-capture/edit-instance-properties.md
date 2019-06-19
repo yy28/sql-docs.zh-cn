@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5efde857036053b6ff31499a2ea6d889e34dfb25
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728913"
 ---
 # <a name="edit-instance-properties"></a>编辑实例属性
@@ -43,9 +43,9 @@ ms.locfileid: "65728913"
   
 2.  选择要编辑其属性的 CDC 实例。  
   
-3.  从 CDC 设计器控制台右侧的 **“操作”** 窗格中，单击 **“属性”**。  
+3.  从 CDC 设计器控制台右侧的 **“操作”** 窗格中，单击 **“属性”** 。  
   
-     还可以在左窗格中右键单击该服务，然后选择“属性”。  
+     还可以在左窗格中右键单击该服务，然后选择“属性”  。  
   
 ### <a name="or"></a>或  
   
@@ -53,8 +53,8 @@ ms.locfileid: "65728913"
   
 2.  从 CDC 设计器控制台中心的列表中，选择要编辑其属性的 CDC 实例。  
   
-3.  从 CDC 设计器控制台右侧的 **“操作”** 窗格中，单击 **“属性”**。  
+3.  从 CDC 设计器控制台右侧的 **“操作”** 窗格中，单击 **“属性”** 。  
   
-     还可以从 CDC 设计器控制台中心的列表中右键单击该服务，然后选择“属性”。  
+     还可以从 CDC 设计器控制台中心的列表中右键单击该服务，然后选择“属性”  。  
   
   

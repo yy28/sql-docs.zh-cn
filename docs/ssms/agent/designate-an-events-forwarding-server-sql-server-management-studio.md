@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 425fa57e064f5bebb76a1de1149ba56f43dcfce2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096614"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
@@ -54,9 +54,9 @@ ms.locfileid: "65096614"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要将其事件转发到其他服务器的服务器。  
   
-2.  右键单击“SQL Server 代理”，然后选择“属性”。  
+2.  右键单击“SQL Server 代理”  ，然后选择“属性”  。  
   
-3.  在“SQL Server 代理属性” –_server_name_ 对话框的“选择页”下，选择“高级”。  
+3.  在“SQL Server 代理属性” –_server_name_ 对话框的“选择页”下，选择“高级”    。  
   
 4.  在 **“SQL Server 事件转发”** 下，选中 **“将事件转发到其他服务器”** 复选框。  
   
@@ -68,5 +68,5 @@ ms.locfileid: "65096614"
   
 6.  在 **“如果事件的严重性不低于”** 列表中，单击将事件转发到所选服务器时的严重级别。  
   
-7.  完成后，单击 **“确定”**。  
+7.  完成后，单击 **“确定”** 。  
   

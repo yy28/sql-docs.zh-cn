@@ -18,18 +18,18 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e0d0f760bcc31414dc6a6f69b62cdd28bb36741d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946114"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符” 。  
+  当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符”  。  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>bcp 的前缀长度提示  
- 如果交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-w**或 **-N**）的 **in**或 **out**选项，则该命令会提示输入每个数据字段的前缀长度，如下所示：  
+ 如果交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、 **-c**、 **-w**或 **-N**）的 **in**或 **out**选项，则该命令会提示输入每个数据字段的前缀长度，如下所示：  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -85,7 +85,7 @@ ms.locfileid: "64946114"
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \***的未来版本中将删除**ntext **、** text **和** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 **nvarchar(max)**、 **varchar(max)** 和 **varbinary(max)** 。  
+ \***的未来版本中将删除**ntext **、** text **和** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
   
 ##  <a name="PrefixLengthsImport"></a> 大容量导入时的前缀长度  
  大容量导入数据时，前缀长度为最初创建数据文件时指定的值。 如果数据文件不是由 **bcp** 命令创建，那么可能没有长度前缀字符。 在这种情况下，将前缀长度指定为 0。  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 14c699b186eb99cd3e4f890f87470c907248f428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833725"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63453573"
 ---
 # <a name="define-filters"></a>定义筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47833725"
   
 ## <a name="options"></a>选项  
  **“运算符”**  
- 为筛选器选择一个运算符，例如 **“小于或等于”**。  
+ 为筛选器选择一个运算符，例如 **“小于或等于”** 。  
   
  **ReplTest1**  
  为筛选器输入一个值。 大多数运算符只需要在第一个 **“值”** 列中输入值，但 **“介于”** 和 **“不介于”** 运算符需要在两个 **“值”** 列中都输入值。  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 793420d352b25d969c5cd618861c9b355dea8491
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131977"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62752263"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>订阅，发布服务器到分发服务器的历史记录（事务订阅）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

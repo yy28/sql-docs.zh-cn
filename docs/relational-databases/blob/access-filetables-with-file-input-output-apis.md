@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089034"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用文件输入输出 API 访问 FileTable
@@ -94,7 +94,7 @@ ms.locfileid: "65089034"
   
 -   不能回滚这些更改。  
   
- 但是，也可以通过调用 **OpenSqlFileStream()**，借助事务性 FILESTREAM 访问来访问 FileTable 中的 FILESTREAM 列。 这种访问可以是纯事务性的，将具有当前支持的所有事务性一致性级别。  
+ 但是，也可以通过调用 **OpenSqlFileStream()** ，借助事务性 FILESTREAM 访问来访问 FileTable 中的 FILESTREAM 列。 这种访问可以是纯事务性的，将具有当前支持的所有事务性一致性级别。  
   
 ###  <a name="concurrency"></a> 并发控制  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为文件系统应用程序间以及在文件系统应用程序与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 应用程序间的 FileTable 访问强制执行并发控制。 通过持有 FileTable 行的相应锁来实现此并发控制。  

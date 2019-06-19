@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f7e2ca12ccd98b1b8be77e2df2e480036dda70b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948914"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
@@ -43,9 +43,9 @@ EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )
   
 ## <a name="arguments"></a>参数  
 _certificate\_ID_  
-数据库中证书的 ID。 int。  
+数据库中证书的 ID。 int  。  
   
-cleartext  
+cleartext   
 将使用证书进行加密的数据字符串。  
   
 **@cleartext**  
@@ -59,7 +59,7 @@ cleartext
 * **nchar**
   
 ## <a name="return-types"></a>返回类型  
-varbinary（最大大小为 8000 个字节）。  
+varbinary（最大大小为 8000 个字节）  。  
   
 ## <a name="remarks"></a>Remarks  
 此函数使用证书的公钥对数据进行加密。 只能使用相应的私钥对加密文本进行解密。 相较使用对称密钥进行加密和解密的方法，这些非对称转换的开销更大。 因此，建议在处理大型数据集时不要使用非对称加密。

@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d3273cb476178d147991ae06f230eeea926e9d5
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943450"
 ---
 # <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
@@ -46,10 +46,10 @@ PERCENTILE_CONT ( numeric_literal )
  *numeric_literal*  
  要计算的百分位数。 该值必须介于 0.0 和 1.0 之间。  
   
- WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ])  
- 指定要排序的数值列表，并计算百分位数。 仅允许一个 order_by_expression。 表达式必须计算得出精确的或近似数值类型，并且不允许使用其他数据类型。 精确数值类型为 int、bigint、smallint、tinyint、numeric、bit、decimal、smallmoney 和 money。 近似数值类型为 float 和 real。 默认的排序顺序为升序。  
+ WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ])      
+ 指定要排序的数值列表，并计算百分位数。 仅允许一个 order_by_expression  。 表达式必须计算得出精确的或近似数值类型，并且不允许使用其他数据类型。 精确数值类型为 int、bigint、smallint、tinyint、numeric、bit、decimal、smallmoney 和 money          。 近似数值类型为 float 和 real   。 默认的排序顺序为升序。  
   
- OVER (\< partition_by_clause> )  
+ OVER (\< partition_by_clause> )    
  将 FROM 子句生成的结果集划分为数个应用百分位数函数的分区。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。 无法在 PERCENTILE_CONT 函数中指定 OVER 语法的 \<ORDER BY 子句> 和 \<rows 或 range 子句>。  
   
 ## <a name="return-types"></a>返回类型  

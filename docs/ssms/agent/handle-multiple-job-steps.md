@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8d27e26eced538718492d0239af875968eed4777
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096445"
 ---
 # <a name="handle-multiple-job-steps"></a>处理多个作业步骤
@@ -31,7 +31,7 @@ ms.locfileid: "65096445"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为“流控制”。 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
+如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为“流控制”  。 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
   
 ![SQL Server 代理作业步骤控制流](../../ssms/agent/media/dbflow01.gif "SQL Server 代理作业步骤控制流")  
   

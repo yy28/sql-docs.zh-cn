@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6abe725d180b36de3eeea53c59666da1322214bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666045"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033539"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ DROP REMOTE SERVICE BINDING binding_name
 ```  
   
 ## <a name="arguments"></a>参数  
- binding_name  
+ binding_name   
  要删除的远程服务绑定的名称。 不能指定服务器、数据库和架构名称。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  远程服务绑定的所有者、db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员默认拥有删除远程服务绑定的权限。  
   
 ## <a name="examples"></a>示例  

@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: be54e78055b72924ffeaed676c20076cd0d71d8b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088938"
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
@@ -71,11 +71,11 @@ ms.locfileid: "65088938"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要重命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
-3.  右键单击“错误日志”文件夹，然后选择“配置”。  
+3.  右键单击“错误日志”  文件夹，然后选择“配置”  。  
   
-4.  在 **“配置 SQL Server 代理错误日志”** 对话框的 **“错误日志文件”** 框中，输入错误日志的新文件路径和文件名称。 或者，单击省略号 **(...)** 以打开“指定代理错误日志位置”对话框。  
+4.  在 **“配置 SQL Server 代理错误日志”** 对话框的 **“错误日志文件”** 框中，输入错误日志的新文件路径和文件名称。 或者，单击省略号 **(...)** 以打开“指定代理错误日志位置”  对话框。  
   
-5.  完成后，单击 **“确定”**。  
+5.  完成后，单击 **“确定”** 。  
   

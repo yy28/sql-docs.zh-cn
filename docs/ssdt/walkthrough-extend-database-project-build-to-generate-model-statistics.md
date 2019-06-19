@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102042"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>演练：扩展数据库项目生成以生成模型统计信息
@@ -89,11 +89,11 @@ ms.locfileid: "65102042"
   
 2.  将文件“Class1.cs”重命名为“ModelStatistics.cs”。  
   
-3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”。  
+3.  在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”  。  
   
-4.  选择“System.ComponentModel.Composition”  条目，然后单击“确定” 。  
+4.  选择“System.ComponentModel.Composition”  条目，然后单击“确定”  。  
   
-5.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”。 单击“浏览”按钮。  导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin 文件夹。 选择“Microsoft.SqlServer.Dac.dll” 、“Microsoft.SqlServer.Dac.Extensions.dll” 和“Microsoft.Data.Tools.Schema.Sql.dll”  条目，然后单击“确定” 。  
+5.  添加所需的 SQL 引用：右键单击项目节点，然后单击“添加引用”  。 单击“浏览”按钮。  导航到 C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin  文件夹。 选择“Microsoft.SqlServer.Dac.dll”  、“Microsoft.SqlServer.Dac.Extensions.dll”  和“Microsoft.Data.Tools.Schema.Sql.dll”  条目，然后单击“确定”  。  
   
     接下来，开始向类中添加代码。  
   
@@ -432,23 +432,23 @@ ms.locfileid: "65102042"
   
 ### <a name="to-sign-and-build-the-assembly"></a>生成程序集并对其进行签名  
   
-1.  在“项目”  菜单上，单击“MyBuildContributor 属性” 。  
+1.  在“项目”  菜单上，单击“MyBuildContributor 属性”  。  
   
 2.  单击“签名”选项卡。   
   
-3.  单击“对程序集签名” 。  
+3.  单击“对程序集签名”  。  
   
-4.  在“选择强名称密钥文件”中，单击 **<New>**。  
+4.  在“选择强名称密钥文件”  中，单击 **<New>** 。  
   
-5.  在“创建强名称密钥”  对话框的“密钥文件名称” 中，键入“MyRefKey” 。  
+5.  在“创建强名称密钥”  对话框的“密钥文件名称”  中，键入“MyRefKey”  。  
   
 6.  （可选）可以为强名称密钥文件指定密码。  
   
-7.  单击“确定” 。  
+7.  单击“确定”  。  
   
-8.  在“文件”  菜单上，单击“全部保存” 。  
+8.  在“文件”  菜单上，单击“全部保存”  。  
   
-9. 在“生成”  菜单上，单击“生成解决方案” 。  
+9. 在“生成”  菜单上，单击“生成解决方案”  。  
   
     接下来，您必须安装程序集，以便在生成 SQL 项目时加载该程序集。  
   
@@ -459,7 +459,7 @@ ms.locfileid: "65102042"
   
 1.  接下来，您要将程序集信息复制到 Extensions 目录中。 Visual Studio 在启动后将识别 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录和子目录中的任何扩展文件，并使其可供使用。  
   
-2.  将 MyBuildContributor.dll 程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。  
+2.  将 MyBuildContributor.dll  程序集文件从输出目录复制到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目录。  
   
     > [!NOTE]  
     > 默认情况下，已编译的 .dll 文件的路径为 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
@@ -525,7 +525,7 @@ ms.locfileid: "65102042"
   
 1.  在 Visual Studio 中，右键单击项目并选择“重新生成”。 这将重新生成项目，您应该看到生成的模型统计信息，其中输出将包含在生成输出中并保存到 ModelStatistics.xml。 请注意，可能需要在解决方案资源管理器中选择“显示所有文件”才能看到 xml 文件。  
   
-2.  打开 Visual Studio 命令提示符：在“开始”菜单上，依次单击“所有程序”、“Microsoft Visual Studio <Visual Studio Version>”、“Visual Studio Tools”和“Visual Studio 命令提示符(<Visual Studio Version>)”。  
+2.  打开 Visual Studio 命令提示符：在“开始”菜单上，依次单击“所有程序”、“Microsoft Visual Studio <Visual Studio Version>”、“Visual Studio Tools”和“Visual Studio 命令提示符(<Visual Studio Version>)”      。  
   
 3.  在命令提示符处，导航到包含 SQL 项目的文件夹。  
   

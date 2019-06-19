@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6246183a4a928e1813125676753c827bf20cf8c5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721150"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>第 5 课：添加包部署模型的 SSIS 包配置
@@ -38,7 +38,7 @@ ms.locfileid: "65721150"
   
 在本课中，将修改在[第 4 课：使用 SSIS 添加错误流重定向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)中创建的示例  包，以便使用包部署模型并利用包配置。 还可以复制本教程附带的已完成的第 4 课包。 
 
-使用“程序包配置向导”，可创建一个 XML 配置，以便更新 Foreach 循环容器的 Directory 属性。 使用映射到 Directory 属性的包级别变量。 创建配置文件后，将变量的值从开发环境外部修改为新的示例数据文件夹路径。 再次运行包时，配置文件将填充变量值，而变量将更新 **Directory** 属性。 然后，包将循环访问新数据文件夹中的文件，而不是原始硬编码文件夹中的文件。  
+使用“程序包配置向导”，可创建一个 XML 配置，以便更新 Foreach 循环容器的 Directory 属性  。 使用映射到 Directory 属性的包级别变量  。 创建配置文件后，将变量的值从开发环境外部修改为新的示例数据文件夹路径。 再次运行包时，配置文件将填充变量值，而变量将更新 **Directory** 属性。 然后，包将循环访问新数据文件夹中的文件，而不是原始硬编码文件夹中的文件。  
   
 > [!NOTE]
 > 如果尚不具备必备条件，请参阅[第 1 课必备条件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites)。

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89a6251bca61f49b5acd6803702dc44cb21584c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544525"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62861488"
 ---
 # <a name="create-a-database"></a>创建数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52544525"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建数据库，使用：**  
   
@@ -63,9 +63,9 @@ ms.locfileid: "52544525"
   
 -   在创建数据库时，请根据数据库中预期的最大数据量，创建尽可能大的数据文件。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对 master 数据库的 CREATE DATABASE 权限，或需要 CREATE ANY DATABASE/ALTER ANY DATABASE 权限。  
   
  为了控制对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机上的磁盘使用，通常只有少数登录帐户才有创建数据库的权限。  
@@ -76,16 +76,16 @@ ms.locfileid: "52544525"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
-2.  右键单击“数据库”，然后单击“新建数据库”。  
+2.  右键单击“数据库”  ，然后单击“新建数据库”  。  
   
 3.  在 **“新建数据库”** 中，输入数据库名称。  
   
-4.  若要通过接受所有默认值创建数据库，请单击 **“确定”**；否则，请继续后面的可选步骤。  
+4.  若要通过接受所有默认值创建数据库，请单击 **“确定”** ；否则，请继续后面的可选步骤。  
   
-5.  若要更改所有者名称，请单击 (…) 选择其他所有者。  
+5.  若要更改所有者名称，请单击 (…) 选择其他所有者  。  
   
     > [!NOTE]  
-    >  “使用全文检索”选项始终处于选中和灰显状态，这是因为从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，所有用户数据库都启用了全文检索。  
+    >  “使用全文检索”  选项始终处于选中和灰显状态，这是因为从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，所有用户数据库都启用了全文检索。  
   
 6.  若要更改主数据文件和事务日志文件的默认值，请在 **“数据库文件”** 网格中单击相应的单元并输入新值。 有关详细信息，请参阅 [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   
@@ -103,17 +103,17 @@ ms.locfileid: "52544525"
   
     2.  在 **“值”** 列中，输入扩展属性文本。 例如，输入描述数据库的一个或多个语句。  
   
-12. 若要创建数据库，请单击 **“确定”**。  
+12. 若要创建数据库，请单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-database"></a>创建数据库  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将创建数据库 `Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 创建、修改或删除用户数据库后，应备份 `Sales_log` 文件以 MB 为单位进行分配，因为 `MB` 参数中显式声明了 `SIZE` 后缀。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将创建数据库 `Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 创建、修改或删除用户数据库后，应备份 `Sales_log` 文件以 MB 为单位进行分配，因为 `MB` 参数中显式声明了 `SIZE` 后缀。  
   
 ```sql  
 USE master ;  

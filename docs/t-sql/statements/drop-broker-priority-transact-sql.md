@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c922d50bdac99ad39fe9057a2c5091a2a389a849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684275"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62723326"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ DROP BROKER PRIORITY ConversationPriorityName
 ## <a name="remarks"></a>Remarks  
  删除会话优先级时，现有会话将继续使用由该会话优先级分配的优先级来运行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用于创建会话优先级的权限默认授予 db_ddladmin 或 db_owner 固定数据库角色以及 sysadmin 固定服务器角色的成员。 需要对数据库拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

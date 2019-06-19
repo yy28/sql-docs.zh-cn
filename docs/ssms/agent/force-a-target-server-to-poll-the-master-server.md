@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 49408bfe22bf05e6315b9598c0b65f5c02b791de
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096549"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
@@ -37,9 +37,9 @@ ms.locfileid: "65096549"
 > [!NOTE]  
 > 如果在目标服务器试图上载作业状态时无法访问主服务器，则作业将处于假脱机状态，直到可以访问主服务器。  
   
--   **开始之前：**[限制和局限](#Restrictions)、[安全性](#Security)  
+-   **开始之前：** [限制和局限](#Restrictions)、[安全性](#Security)  
   
--   **若要强制目标服务器轮询主服务器，请使用：**[SQL Server Management Studio](#SSMS)  
+-   **若要强制目标服务器轮询主服务器，请使用：** [SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>开始之前  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65096549"
   
 1.  在 **对象资源管理器**中，展开主服务器。  
   
-2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“管理目标服务器”。  
+2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，再单击“管理目标服务器”  。  
   
-3.  单击目标服务器，再单击 **“强制轮询”**。  
+3.  单击目标服务器，再单击 **“强制轮询”** 。  
   

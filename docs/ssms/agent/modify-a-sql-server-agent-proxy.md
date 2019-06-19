@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 65d884ab6fd9f378e977fd3be9f24e134fc9df23
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105493"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
@@ -65,17 +65,17 @@ ms.locfileid: "65105493"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要修改的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以便展开 **“代理”** 文件夹。  
   
-4.  单击加号以展开代理的子系统节点（例如，“ActiveX 脚本”）。  
+4.  单击加号以展开代理的子系统节点（例如，“ActiveX 脚本”  ）。  
   
-5.  右键单击要修改属性的代理帐户，然后选择“属性”。  
+5.  右键单击要修改属性的代理帐户，然后选择“属性”  。  
   
-6.  在“_proxy\_name_ 代理帐户属性”对话框中，根据需要更改代理帐户。 有关此对话框中的选项的详细信息，请参阅 [创建 SQL Server 代理的代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
+6.  在“_proxy\_name_ 代理帐户属性”  对话框中，根据需要更改代理帐户。 有关此对话框中的选项的详细信息，请参阅 [创建 SQL Server 代理的代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
-7.  完成后，单击 **“确定”**。  
+7.  完成后，单击 **“确定”** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -83,9 +83,9 @@ ms.locfileid: "65105493"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Disables the proxy named 'Catalog application proxy'.  

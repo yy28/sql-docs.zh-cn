@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 812915337b03927af5b23a66a0452d0d6a875112
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724481"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用脚本组件创建 ODBC 目标
@@ -42,7 +42,7 @@ ms.locfileid: "65724481"
   
 -   **OdbcCommand** 需要位置参数。 在命令的文本中，参数的位置由问号 (?) 指示。 （相反，**SqlCommand** 需要命名参数。）  
   
- 本示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表。 此示例通过数据流传递此表的第一列和第四列：int AddressID 和 nvarchar(30) City 列。 [开发特定类型的脚本组件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主题中的源、转换和目标示例使用了相同的数据。  
+ 本示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表。 此示例通过数据流传递此表的第一列和第四列：int AddressID 和 nvarchar(30) City 列    。 [开发特定类型的脚本组件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主题中的源、转换和目标示例使用了相同的数据。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   
@@ -59,15 +59,15 @@ ms.locfileid: "65724481"
   
 4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （无需任何转换，即可将源直接连接到目标。）为了确保本示例能够正常工作，上游组件的输出必须至少包含 **AdventureWorks** 示例数据库的 **Person.Address** 表中的 **AddressID** 和 **City** 列。  
   
-5.  打开“脚本转换编辑器”。 在“输入列”页中，选择 AddressID 和 City 列。  
+5.  打开“脚本转换编辑器”  。 在“输入列”  页中，选择 AddressID  和 City  列。  
   
-6.  在“输入和输出”页中，用更具说明性的名称（如 **MyAddressInput**）重命名输入。  
+6.  在“输入和输出”  页中，用更具说明性的名称（如 **MyAddressInput**）重命名输入。  
   
-7.  在“连接管理器”页中，添加或创建一个具有说明性名称（如 **MyODBCConnectionManager**）的 ODBC 连接管理器。  
+7.  在“连接管理器”  页中，添加或创建一个具有说明性名称（如 **MyODBCConnectionManager**）的 ODBC 连接管理器。  
   
-8.  在“脚本”页中，单击“编辑脚本”，并在 **ScriptMain** 类中输入下面所示的脚本。  
+8.  在“脚本”  页中，单击“编辑脚本”  ，并在 **ScriptMain** 类中输入下面所示的脚本。  
   
-9. 关闭脚本开发环境和“脚本转换编辑器”，然后运行该示例。  
+9. 关闭脚本开发环境和“脚本转换编辑器”  ，然后运行该示例。  
   
     ```vb  
     Imports System.Data.Odbc  

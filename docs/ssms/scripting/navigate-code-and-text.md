@@ -23,10 +23,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23e1560bff7515f99e10588003b7b9b3d1935376
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821367"
 ---
 # <a name="navigate-code-and-text"></a>代码和文本定位
@@ -66,7 +66,7 @@ ms.locfileid: "65821367"
 -   使用 Ctrl+向上键和 Ctrl+向下键可以滚动视图而不移动插入点。  
   
 ## <a name="go-to-command"></a>Go To 命令  
- 使用 **GoTo** 命令可以转到特定的行号。 若要显示编号，请在 **“选项”** 对话框中依次单击 **“文本编辑器”**、 **“所有语言”** 和 **“常规”**，然后选择 **“行号”**。  
+ 使用 **GoTo** 命令可以转到特定的行号。 若要显示编号，请在 **“选项”** 对话框中依次单击 **“文本编辑器”** 、 **“所有语言”** 和 **“常规”** ，然后选择 **“行号”** 。  
   
  **转到特定行号**  
   

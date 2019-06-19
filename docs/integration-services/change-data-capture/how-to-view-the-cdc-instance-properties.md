@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0fddc9de23354536b7e6ed1956ad903ce559184
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728708"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>如何查看 CDC 实例属性
@@ -27,7 +27,7 @@ ms.locfileid: "65728708"
   
 ### <a name="to-view-information-about-a-specific-instance"></a>查看有关特定实例的信息  
   
-1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”**。  
+1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”** 。  
   
 2.  在左侧的窗格中，展开 **“变更数据捕获”** ，然后展开包含您要查看的实例的服务。  
   

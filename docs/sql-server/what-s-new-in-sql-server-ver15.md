@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 中的新增功能 | Microsoft Docs
 ms.date: 05/28/2019
-ms.prod: sql-server-2019
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,16 +9,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
-ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
+ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66810281"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836312"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的基础上构建，旨在将 SQL Server 发展成一个平台，以提供开发语言、数据类型、本地或云以及操作系统选项。 本文汇总了 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能。
 
@@ -26,7 +26,7 @@ ms.locfileid: "66810281"
 
 有关详细信息和已知问题，请参阅 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 发行说明](sql-server-ver15-release-notes.md)。
 
-使用[最新工具](#tools)获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验。
+使用[最新工具](#tools)获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验  。
 
 ## <a name="ctp-30-may-2019"></a>CTP 3.0（2019 年 5 月）
 
@@ -42,10 +42,10 @@ ms.locfileid: "66810281"
 
 | 新增功能或更新 | 详细信息 |
 |:---|:---|
-| mssqlctl 更新 | 多个 mssqlctl [命令和参数更新](../big-data-cluster/reference-mssqlctl.md)。 这包括对“mssqlctl login”命令的更新，该命令现在以控制器用户名和终结点为目标。 |
+| mssqlctl 更新  | 多个 mssqlctl [命令和参数更新](../big-data-cluster/reference-mssqlctl.md)  。 这包括对“mssqlctl login”命令的更新，该命令现在以控制器用户名和终结点为目标  。 |
 | 存储增强功能 | 支持日志和数据的不同存储配置。 此外，减少了大数据群集的持久卷声明数。 |
 | 多个计算池实例 | 支持多个计算池实例。 |
-| 新池行为和功能 | 现在，默认情况下，计算池仅用于“ROUND_ROBIN”分发中的存储池和数据池操作。 数据池现在可以使用新的新“REPLICATED”分发类型，这意味着同一数据在所有数据池实例上都有。 |
+| 新池行为和功能 | 现在，默认情况下，计算池仅用于“ROUND_ROBIN”分发中的存储池和数据池操作  。 数据池现在可以使用新的新“REPLICATED”分发类型，这意味着同一数据在所有数据池实例上都有  。 |
 | 外部表的改进 | HADOOP 数据源类型的外部表现在支持读取最大 1 MB 的行。 外部表（ODBC、存储池、数据池）现在支持与 SQL Server 表一样宽的行。 |
 | &nbsp; | &nbsp; |
 
@@ -60,6 +60,7 @@ ms.locfileid: "66810281"
 |[内存数据库](../relational-databases/in-memory-database.md)添加了新的 DDL 语法来控制混合缓冲池。 <sup>2</sup>|使用[混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md)，可以在需要时直接访问位于永久性内存 (PMEM) 设备上数据库文件中的数据库页。|
 |新的内存数据库功能，添加了内存优化 tempdb 元数据。|请参阅[内存优化 TempDB 元数据](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
 |链接服务器支持 UTF-8 字符编码。 |[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md) |
+|按排序规则将 BIN2_UTF8 更名为 Latin1_General_100_BIN2_UTF8。 |[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md) |
 |SQL Server 安装程序包括遵循已记录的指南的 MaxDOP 建议。 |[配置 max degree of parallelism 服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats` 返回更多有关查询计划的并行度和内存授予的信息。 |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
@@ -91,7 +92,7 @@ ms.locfileid: "66810281"
 | 部署配置文件 | 使用默认和自定义[部署配置 JSON 文件](../big-data-cluster/deployment-guidance.md#configfile)进行大数据群集部署，而不是使用环境变量。 |
 | 提示的部署 | `mssqlctl cluster create` 现在会提示进行默认部署的任何必要设置。 |
 | 服务终结点和 Pod 名称更改 | 有关更多信息，请参阅[大数据群集发行说明](../big-data-cluster/release-notes-big-data-cluster.md)。 |
-| mssqlctl 的改进 | 使用 mssqlctl [列出外部终结点](../big-data-cluster/deployment-guidance.md#endpoints)，并通过 `--version` 参数检查 mssqlctl 的版本。 |
+| mssqlctl 的改进  | 使用 mssqlctl [列出外部终结点](../big-data-cluster/deployment-guidance.md#endpoints)，并通过 `--version` 参数检查 mssqlctl 的版本   。 |
 | 脱机安装 | [脱机大数据群集部署指南](../big-data-cluster/deploy-offline.md)。 |
 | HDFS 分层的改进 | 针对 Amazon S3 存储的 HDFS 分层。 对 ADLS Gen2 的 OAuth 支持。 可提高性能的缓存功能。 有关详细信息，请参阅 [HSDFS 分层](../big-data-cluster/hdfs-tiering.md) |
 | 从 Spark 到 SQL Server 的连接器 | [使用 MSSQL JDBC 连接器从 Spark 读取和写入到 SQL Server](../big-data-cluster/spark-mssql-connector.md) |
@@ -117,10 +118,10 @@ ms.locfileid: "66810281"
 | 新增功能或更新 | 详细信息 |
 |:---|:---|
 | 关于 GPU 支持在 Spark 中使用 TensorFlow 运行深度学习的指南。 | [部署具有 GPU 支持的大数据群集并运行 TensorFlow](../big-data-cluster/spark-gpu-tensorflow.md)。 |
-| 默认情况下，不再继续创建数据源 SqlDataPool 和 SqlStoragePool。 | 请根据需要手动创建它们。 查看[已知问题](../big-data-cluster/release-notes-big-data-cluster.md#externaltablesctp24)。 |
+| 默认情况下，不再继续创建数据源 SqlDataPool 和 SqlStoragePool   。 | 请根据需要手动创建它们。 查看[已知问题](../big-data-cluster/release-notes-big-data-cluster.md#externaltablesctp24)。 |
 | 数据池的 `INSERT INTO SELECT` 支持。 | 有关示例，请参阅[教程：使用 Transact-SQL 将数据引入 SQL Server 数据池](../big-data-cluster/tutorial-data-pool-ingest-sql.md)。 |
 | `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 选项。 | 请参阅[大数据群集发行说明](../big-data-cluster/release-notes-big-data-cluster.md#whats-new)。|
-| 更新的 AKS 部署建议。 | 当在 AKS 上评估大数据群集时，我们现在建议使用大小为 Standard_L8s 的单个节点。 |
+| 更新的 AKS 部署建议。 | 当在 AKS 上评估大数据群集时，我们现在建议使用大小为 Standard_L8s 的单个节点  。 |
 | Spark 运行时升级到 Spark 2.4。 | |
 | &nbsp; | &nbsp; |
 
@@ -153,14 +154,14 @@ ms.locfileid: "66810281"
 | 在 IntelliJ 中的大数据群集上提交 Spark 作业。 | [在 IntelliJ 中的 SQL Server 大数据群集上提交 Spark 作业](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) |
 | 用于应用程序部署和群集管理的常见 CLI。 | [如何在 SQL Server 2019 大数据群集（预览版）上部署应用](../big-data-cluster/big-data-cluster-create-apps.md) |
 | 将应用程序部署到大数据群集的 VS Code 扩展。 | [如何使用 VS Code 将应用程序部署到 SQL Server 大数据群集](../big-data-cluster/app-deployment-extension.md) |
-| 对 mssqlctl 工具命令用法的更改。 | 有关更多详细信息，请参阅 [mssqlctl 的已知问题](../big-data-cluster/release-notes-big-data-cluster.md#mssqlctlctp23)。 |
+| 对 mssqlctl 工具命令用法的更改  。 | 有关更多详细信息，请参阅 [mssqlctl 的已知问题](../big-data-cluster/release-notes-big-data-cluster.md#mssqlctlctp23)。 |
 | 在大数据群集中使用 Sparklyr。 | [在 SQL Server 2019 大数据群集中使用 Sparklyr](../big-data-cluster/sparklyr-from-RStudio.md) |
 | 通过 **HDFS 分层**将兼容 HDFS 的外部存储装入大数据群集。 | 请参阅 [HDFS 分层](../big-data-cluster/hdfs-tiering.md)。 |
 | SQL Server 主实例和 HDFS/Spark 网关的新的统一连接体验。 | 请参阅 [SQL Server 主实例和 HDFS/Spark 网关](../big-data-cluster/connect-to-big-data-cluster.md)。 |
-| 使用 mssqlctl cluster delete 命令删除群集现在仅删除属于大数据群集的命名空间中的对象。 | 不会删除命名空间。 但是，在早期版本中，此命令会删除整个命名空间。 |
-| 安全性终结点名称已更改并合并。 | service-security-lb 和 service-security-nodeport 已合并到 endpoint-security 终结点中。 |
-| 代理终结点名称已更改并合并。 | service-proxy-lb 和 service-proxy-nodeport 已合并到 endpoint-service-proxy 终结点中。 |
-| 控制器终结点名称已更改并合并。 | service-mssql-controller-lb 和 service-mssql-controller-nodeport 已合并到 endpoint-controller 终结点中。 |
+| 使用 mssqlctl cluster delete 命令删除群集现在仅删除属于大数据群集的命名空间中的对象  。 | 不会删除命名空间。 但是，在早期版本中，此命令会删除整个命名空间。 |
+| 安全性终结点名称已更改并合并  。 | service-security-lb 和 service-security-nodeport 已合并到 endpoint-security 终结点中    。 |
+| 代理终结点名称已更改并合并  。 | service-proxy-lb 和 service-proxy-nodeport 已合并到 endpoint-service-proxy 终结点中    。 |
+| 控制器终结点名称已更改并合并  。 | service-mssql-controller-lb 和 service-mssql-controller-nodeport 已合并到 endpoint-controller 终结点中    。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="database-engine"></a>数据库引擎
@@ -227,7 +228,7 @@ ms.locfileid: "66810281"
 
 | 新增功能或更新 | 详细信息 |
 |:-----|:-----|
-|现支持在  [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安装期间默认选择 UTF-8 排序规则。 |[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
+|现支持在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安装期间默认选择 UTF-8 排序规则。 |[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 |标量 UDF 内联自动将标量用户定义函数 (UDF) 转换为关系表达式，并将其嵌入调用 SQL 查询。 |[标量 UDF 内联](../relational-databases/user-defined-functions/scalar-udf-inlining.md) |
 |如果 `SELECT` 在继续执行查询之前等待同步统计信息更新操作完成，则动态管理视图 `sys.dm_exec_requests` 列 `command` 显示 `SELECT (STATMAN)`。 | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |新的等待类型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 会显示在 `sys.dm_os_wait_stats` 动态管理视图中。 它显示了针对同步统计信息刷新操作耗费的实例级别累计时间。|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
@@ -260,14 +261,14 @@ ms.locfileid: "66810281"
 |从 HDFS 访问大数据。 | |
 |使用 Spark 运行高级分析和机器学习。 | |
 |使用 Spark 将数据流式传输到 SQL 数据池。 | |
-|在 Azure Data Studio 中提供笔记本体验的运行查询书籍。|[数据工程](../azure-data-studio/what-is.md#data-engineering)|
+|在 Azure Data Studio 中提供笔记本体验的运行查询书籍  。|[数据工程](../azure-data-studio/what-is.md#data-engineering)|
 | &nbsp; | &nbsp; |
 
 ### <a name="database-engine"></a>数据库引擎
 
 | 新增功能或更新 | 详细信息 |
 |:-----|:-----|
-|已添加数据库“COMPATIBILITY_LEVEL 150”。 |[ALTER DATABASE Compatibility Level (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
+|已添加数据库“COMPATIBILITY_LEVEL 150”  。 |[ALTER DATABASE Compatibility Level (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
 |可恢复联机索引创建。|[CREATE INDEX (Transact-SQL)](../t-sql/statements/create-index-transact-sql.md#resumable-indexes) |
 |行模式内存授予反馈。 |[行模式内存授予反馈](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
 |近似 `COUNT DISTINCT`。|[近似查询处理](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
@@ -322,7 +323,7 @@ ms.locfileid: "66810281"
 |:-----|:-----|
 |[Azure Data Studio](../azure-data-studio/what-is.md) 支持连接和管理 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 大数据群集。 |[什么是 Azure Data Studio](../azure-data-studio/what-is.md)|
 |支持使用 SQL Server 大数据群集的方案。 |[SQL Server 2019 扩展（预览版）](../azure-data-studio/sql-server-2019-extension.md)|
-|[**SQL Server Management Studio (SSMS) 18.0（预览版）**](../ssms/sql-server-management-studio-ssms.md)：支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。| |
+|[**SQL Server Management Studio (SSMS) 18.0（预览版）** ](../ssms/sql-server-management-studio-ssms.md)：支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。| |
 |支持具有安全 enclave 的 Always Encrypted。 |[具有安全 Enclave 的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)|
 | &nbsp; | &nbsp; |
 
@@ -354,7 +355,7 @@ ms.locfileid: "66810281"
 - 从 HDFS 访问大数据。 (CTP 2.0)
 - 使用 Spark 运行高级分析和机器学习。 (CTP 2.0)
 - 使用 Spark 将数据流式传输到 SQL 数据池。 (CTP 2.0)
-- 在 [Azure Data Studio](../sql-operations-studio/what-is.md) 中运行提供 notebook 体验的查询书籍。 (CTP 2.0)
+- 在 [Azure Data Studio  ](../sql-operations-studio/what-is.md) 中运行提供 notebook 体验的查询书籍。 (CTP 2.0)
  
 [!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
@@ -517,7 +518,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a name="database-compatibility-level-ctp-20"></a>数据库兼容性级别 (CTP 2.0)
 
-已添加数据库“COMPATIBILITY_LEVEL 150”。 若要启用特定用户数据库，请执行：
+已添加数据库“COMPATIBILITY_LEVEL 150”  。 若要启用特定用户数据库，请执行：
 
    ```sql
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
@@ -525,7 +526,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a name="resumable-online-index-create-ctp-20"></a>可恢复联机索引创建 (CTP 2.0)
 
-可恢复联机索引创建允许索引创建操作暂停并稍后从操作暂停或失败的位置恢复，而不是从头开始重新启动。
+ 可恢复联机索引创建允许索引创建操作暂停并稍后从操作暂停或失败的位置恢复，而不是从头开始重新启动。
 
 可恢复联机索引创建支持以下方案：
 - 在索引创建失败后恢复索引创建操作，例如在数据库故障转移后或磁盘空间不足后。
@@ -572,16 +573,16 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a name="intelligent-query-processing-ctp-20"></a>智能查询处理 (CTP 2.0)
 
-- 通过调整批处理模式和行模式运算符的内存授予大小，行模式内存授予反馈扩展了 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中引入的内存授予反馈功能。 对于内存授予过量的情况，如果授予的内存是实际使用内存大小的两倍，内存授予反馈将重新计算内存授予。 然后，连续执行将请求更少的内存。 对于造成到磁盘的溢出的大小不足的内存授予，内存授予反馈将触发重新计算内存授予。 然后，连续执行将请求更多的内存。 在数据库兼容性级别 150 下默认启用此功能。
+- 通过调整批处理模式和行模式运算符的内存授予大小，行模式内存授予反馈  扩展了 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中引入的内存授予反馈功能。 对于内存授予过量的情况，如果授予的内存是实际使用内存大小的两倍，内存授予反馈将重新计算内存授予。 然后，连续执行将请求更少的内存。 对于造成到磁盘的溢出的大小不足的内存授予，内存授予反馈将触发重新计算内存授予。 然后，连续执行将请求更多的内存。 在数据库兼容性级别 150 下默认启用此功能。
 
-- 近似 COUNT DISTINCT 返回组中唯一非空值的近似数。 此函数旨在用于大数据方案。 该函数针对查询进行了优化，其中满足所有以下条件：
+- 近似 COUNT DISTINCT  返回组中唯一非空值的近似数。 此函数旨在用于大数据方案。 该函数针对查询进行了优化，其中满足所有以下条件：
    - 访问至少数百万行的数据集。
    - 聚合包含大量非重复值的一个或多个列。
    - 响应能力比绝对精度更重要。
       - `APPROX_COUNT_DISTINCT` 返回的结果通常在准确答案的 2% 范围内。
       - 它在准确答案所需的一小部分时间内返回近似答案。
 
-- 行存储上的批处理模式不再需要列存储索引在批处理模式下处理查询。 批处理模式允许查询运算符在一组行上工作，而不是一次仅处理一行。 在数据库兼容性级别 150 下默认启用此功能。 当满足所有以下条件，批处理模式可提高访问行存储表的查询速度：
+- 行存储上的批处理模式  不再需要列存储索引在批处理模式下处理查询。 批处理模式允许查询运算符在一组行上工作，而不是一次仅处理一行。 在数据库兼容性级别 150 下默认启用此功能。 当满足所有以下条件，批处理模式可提高访问行存储表的查询速度：
    - 查询使用分析运算符，如联接或聚合运算符。
    - 查询涉及 100,000 或更多行。
    - 该查询受到 CPU 的约束，而不受输入/输出数据的约束。
@@ -589,19 +590,19 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
       - 会给查询增加过多开销。
       - 或者不可行，因为应用程序依赖于列存储索引尚不支持的一项功能。
 
-- 表变量延迟编译功能提升了计划质量和引用表变量的查询的整体性能。 在优化和初始编译期间，此功能会传播基于实际表变量行计数的基数估计。 这种准确的行计数信息将用于优化下游计划操作。 在数据库兼容性级别 150 下默认启用此功能。
+- 表变量延迟编译  功能提升了计划质量和引用表变量的查询的整体性能。 在优化和初始编译期间，此功能会传播基于实际表变量行计数的基数估计。 这种准确的行计数信息将用于优化下游计划操作。 在数据库兼容性级别 150 下默认启用此功能。
 
 若要使用智能查询处理功能，设置数据库 `COMPATIBILITY_LEVEL = 150`。
 
 #### <a id="programmability"></a> Java 语言可编程性扩展 (CTP 2.0)
 
-- **Java 语言扩展 （预览版）**：使用 Java 语言扩展来执行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 Java 代码。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例添加“机器学习服务（数据库内）”功能时将安装此扩展。
+- **Java 语言扩展 （预览版）** ：使用 Java 语言扩展来执行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 Java 代码。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例添加“机器学习服务（数据库内）”功能时将安装此扩展。
 
 #### <a id="sqlgraph"></a> SQL 图形功能 (CTP 2.3)
 
 - **在图形匹配查询中使用派生表或视图别名 (CTP 2.1)** [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 预览版中的图形查询支持使用 `MATCH` 语法中的视图和派生表别名。 若要在 `MATCH` 中使用这些别名，必须使用 `UNION ALL` 运算符在一组节点或一组边界表上创建视图和派生表。 节点或边界表不一定包含筛选器。 在要查询图中两个或更多个实体之间的异类实体或异类连接的情况下，在 `MATCH` 查询中使用派生表和视图别名的功能非常有用。
 
-- 通过 `MERGE` DML 中的支持匹配 (CTP 2.0)，可以指定单个语句中的图形关系，而不是单独的 `INSERT`、`UPDATE` 或 `DELETE` 语句。 使用 `MERGE` 语句中的 `MATCH` 谓词将节点或边界表中的当前图形数据与新数据合并。 此功能启用边界表上的 `UPSERT` 方案。 用户现在可以使用单个合并语句在两个节点之间插入一个新的边界或更新现有边界。
+- 通过 `MERGE` DML 中的支持匹配 (CTP 2.0)  ，可以指定单个语句中的图形关系，而不是单独的 `INSERT`、`UPDATE` 或 `DELETE` 语句。 使用 `MERGE` 语句中的 `MATCH` 谓词将节点或边界表中的当前图形数据与新数据合并。 此功能启用边界表上的 `UPSERT` 方案。 用户现在可以使用单个合并语句在两个节点之间插入一个新的边界或更新现有边界。
 
 - **边缘约束 (CTP 2.0)** 被引入了 SQL 图形中的边界表。 边界表可以将任何节点连接到数据库中的任何其他节点。 引入边缘约束后，现在可以对此行为应用一些限制。 新 `CONNECTION` 约束可用于指定将允许给定边缘表在架构中连接的节点类型。 
 
@@ -609,7 +610,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a name="database-scoped-default-setting-for-online-and-resumable-ddl-operations-ctp-20"></a>针对联机和可恢复 DDL 操作的数据库范围的默认设置 (CTP 2.0)
 
-- 联机和可恢复 DDL 操作的数据库范围的默认设置允许对数据库级别的 `ONLINE` 和 `RESUMABLE` 的默认行为设置，而不是为每个单独的索引 DDL 语句（比如 index create 或 rebuild）定义这些选项。
+- 联机和可恢复 DDL 操作的数据库范围的默认设置  允许对数据库级别的 `ONLINE` 和 `RESUMABLE` 的默认行为设置，而不是为每个单独的索引 DDL 语句（比如 index create 或 rebuild）定义这些选项。
 
 - 使用 `ELEVATE_ONLINE` 和 `ELEVATE_RESUMABLE` 数据库范围的配置选项设置这些默认值。 这两个选项都会导致引擎自动将支持操作提升为索引联机或可恢复执行。 可以使用这些选项启用以下行为：
 
@@ -625,7 +626,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a id="ha"></a>AlwaysOn 可用性组 - 更多同步副本 (CTP 2.0)
 
-- 最多五个同步副本：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 将同步副本的最大数目从 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中的 3 增加到 5。 可以配置此组的 5 个副本在该组中进行自动故障转移。 有 1 个主要副本以及 4 个同步的次要副本。
+-  最多五个同步副本：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 将同步副本的最大数目从 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中的 3 增加到 5。 可以配置此组的 5 个副本在该组中进行自动故障转移。 有 1 个主要副本以及 4 个同步的次要副本。
 
 - **主要副本到辅助副本连接重定向**：允许客户端应用程序连接定向到主要副本，而不考虑在连接字符串中指定的目标服务器。 此功能允许在不使用侦听器的情况下进行连接重定向。 在以下情况下使用次要副本到主要副本连接重定向：
 
@@ -651,13 +652,13 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>对永久性内存设备的扩展支持 (CTP 2.0)
 
-任何置于永久性内存设备上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 文件现在都可以在启用模式下运行。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 直接访问设备，使用高效的 memcpy 操作绕过操作系统的存储堆栈。 此模式可以提高性能，因为它允许针对此类设备的低延迟输入/输出。
+任何置于永久性内存设备上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 文件现在都可以在启用  模式下运行。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 直接访问设备，使用高效的 memcpy 操作绕过操作系统的存储堆栈。 此模式可以提高性能，因为它允许针对此类设备的低延迟输入/输出。
     - 示例 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 文件包括：
         - 数据库文件
         - 事务日志文件
         - 内存中 OLTP 检查点文件
     - 永久性内存也称为“存储类内存”。
-    - 在一些非 Microsoft 网站上，永久性内存有时会通俗地称为“pmem”。
+    - 在一些非 Microsoft 网站上，永久性内存有时会通俗地称为“pmem”  。
 
 > [!NOTE]
 > 对于此预览版，永久性内存设备上的文件启用只在 Linux 上可用。 Windows 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持自 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 起开始提供的永久性内存设备。
@@ -688,7 +689,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a id="polybase"></a> 新 PolyBase 连接器
 
-- 面向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata 和 MongoDB 的新连接器：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata 和 MongoDB 的外部数据引入了新连接器。
+-  面向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata 和 MongoDB 的新连接器：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata 和 MongoDB 的外部数据引入了新连接器。
 
 #### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>新 sys.dm_db_page_info 系统函数返回页面信息 (CTP 2.0)
 
@@ -706,14 +707,14 @@ FROM sys.dm_exec_requests AS d
 
 ### <a id="sqllinux"></a> Linux 上的 SQL Server
 
-- **Docker 容器上使用 Kubernetes 的 AlwaysOn 可用性组 (CTP 2.2)**：Kubernetes 可以协调运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的容器，以提供一组高度可用的数据库，其中包含 SQL Server AlwaysOn 可用性组。 Kubernetes 运算符部署一个 StatefulSet，其中包括带 mssql-server container 的容器和运行状况监视器。
+- **Docker 容器上使用 Kubernetes 的 AlwaysOn 可用性组 (CTP 2.2)** ：Kubernetes 可以协调运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的容器，以提供一组高度可用的数据库，其中包含 SQL Server AlwaysOn 可用性组。 Kubernetes 运算符部署一个 StatefulSet，其中包括带 mssql-server container 的容器和运行状况监视器  。
 
-- **新容器注册表 (CTP 2.1)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的所有容器映像现均位于 Microsoft 容器注册表中。 Microsoft 容器注册表是用于分发 Microsoft 产品容器的官方容器注册表。 此外，现发布了已认证的基于 RHEL 映像。
+- **新容器注册表 (CTP 2.1)** ：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的所有容器映像现均位于 Microsoft 容器注册表中。 Microsoft 容器注册表是用于分发 Microsoft 产品容器的官方容器注册表。 此外，现发布了已认证的基于 RHEL 映像。
 
   - Microsoft 容器注册表：`mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - 经认证的基于 RHEL 的容器映像：`mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-- **复制支持 (CTP 2.0)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 Linux 上的 SQL Server 复制。 使用 SQL 代理的 Linux 虚拟机可以是发布服务器、分发服务器上或订阅服务器。 
+- **复制支持 (CTP 2.0)** ：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 Linux 上的 SQL Server 复制。 使用 SQL 代理的 Linux 虚拟机可以是发布服务器、分发服务器上或订阅服务器。 
 
   创建以下类型的发布：
   - 事务性
@@ -722,19 +723,19 @@ FROM sys.dm_exec_requests AS d
 
   配置复制 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或使用[复制存储过程](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
 
-- **支持 Microsoft 分布式事务处理协调器 (MSDTC) (CTP 2.0)**：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 Microsoft 分布式事务处理协调器 (MSDTC)。 有关详细信息，请参阅[如何在 Linux 上配置 MSDTC](../linux/sql-server-linux-configure-msdtc.md)。
+- **支持 Microsoft 分布式事务处理协调器 (MSDTC) (CTP 2.0)** ：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 Microsoft 分布式事务处理协调器 (MSDTC)。 有关详细信息，请参阅[如何在 Linux 上配置 MSDTC](../linux/sql-server-linux-configure-msdtc.md)。
 
-- **OpenLDAP 支持第三方 AD 提供商 (CTP 2.0)**：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 OpenLDAP，它允许第三方提供商加入 Active Directory。
+- **OpenLDAP 支持第三方 AD 提供商 (CTP 2.0)** ：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 OpenLDAP，它允许第三方提供商加入 Active Directory。
 
-- **Linux 上的机器学习 (CTP 2.0)**：Linux 现在支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 机器学习服务（数据库内）。 支持包括 `sp_execute_external_script` 存储过程。 有关如何在 Linux 上安装机器学习服务的说明，请参阅[在 Linux 上安装 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 机器学习服务 R 和 Python 支持](../linux/sql-server-linux-setup-machine-learning.md)。
+- **Linux 上的机器学习 (CTP 2.0)** ：Linux 现在支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 机器学习服务（数据库内）。 支持包括 `sp_execute_external_script` 存储过程。 有关如何在 Linux 上安装机器学习服务的说明，请参阅[在 Linux 上安装 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 机器学习服务 R 和 Python 支持](../linux/sql-server-linux-setup-machine-learning.md)。
 
 ### <a id="mds"></a> Master Data Services 
 
-- **用 HTML 替换的 Silverlight 控件 (CTP 2.0)**：Master Data Services (MDS) 门户不再依赖 Silverlight。 所有以前的 Silverlight 组件均已替换为 HTML 控件。
+- **用 HTML 替换的 Silverlight 控件 (CTP 2.0)** ：Master Data Services (MDS) 门户不再依赖 Silverlight。 所有以前的 Silverlight 组件均已替换为 HTML 控件。
 
 ### <a id="security"></a>安全性
 
-- **SQL Server 配置管理器中的证书管理 (CTP 2.0)**：SSL/TLS 证书广泛用于保护对 SQL Server 实例的访问。 证书管理现已集成到 SQL Server 配置管理器，以简化诸如以下常见任务：
+- **SQL Server 配置管理器中的证书管理 (CTP 2.0)** ：SSL/TLS 证书广泛用于保护对 SQL Server 实例的访问。 证书管理现已集成到 SQL Server 配置管理器，以简化诸如以下常见任务：
 
   - 查看和验证安装在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上的证书。 
   - 查看即将到期的证书。
@@ -769,7 +770,7 @@ FROM sys.dm_exec_requests AS d
   > [!TIP]
   > 有关 Azure Data Studio 的最新改进，请参阅 [Azure Data Studio 发行说明](../azure-data-studio/release-notes-azure-data-studio.md)。
 
-- [**SQL Server Management Studio (SSMS) 18.0（预览版）**](../ssms/sql-server-management-studio-ssms.md)：支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
+- [**SQL Server Management Studio (SSMS) 18.0（预览版）** ](../ssms/sql-server-management-studio-ssms.md)：支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
 
   - 从 SSMS 启动 Azure Data Studio。 (CTP 2.3)
   - 支持具有安全 enclave 的 Always Encrypted。 (CTP 2.0)

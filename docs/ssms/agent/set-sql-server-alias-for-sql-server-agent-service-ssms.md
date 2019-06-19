@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ae6b9600ec2fb41439d30ece3a8c2fe8bc08008e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103234"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
@@ -69,11 +69,11 @@ ms.locfileid: "65103234"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 实例，再展开该实例。  
   
-2.  右键单击“SQL Server 代理”，然后单击“属性”。  
+2.  右键单击“SQL Server 代理”  ，然后单击“属性”  。  
   
-3.  在“SQL Server 代理属性 _server\_name_”对话框的“选择页”下，选择“连接”，然后  
+3.  在“SQL Server 代理属性 _server\_name_”  对话框的“选择页”  下，选择“连接”  ，然后  
   
 4.  在 **“本地主机服务器别名”** 框中，键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理应连接到的服务器别名的类型。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   

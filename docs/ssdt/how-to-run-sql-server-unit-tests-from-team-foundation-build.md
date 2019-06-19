@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099653"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：通过 Team Foundation Build 运行 SQL Server 单元测试
@@ -61,7 +61,7 @@ ms.locfileid: "65099653"
   
 6.  [运行新生成定义](#RunBuild)  
   
-在生成计算机上运行 SQL Server 单元测试  
+ 在生成计算机上运行 SQL Server 单元测试  
   
 在生成计算机上运行单元测试时，单元测试可能无法找到数据库项目文件 (.dbproj)。 出现此问题的原因是 app.config 文件使用相对路径来引用这些文件。 此外，如果单元测试无法找到要用于运行单元测试的 SQL Server 实例，则单元测试可能会失败。 如果生成计算机中存储在 app.config 文件中的连接字符串无效，则会出现此问题。  
   
@@ -74,30 +74,30 @@ ms.locfileid: "65099653"
   
 1.  打开包含要配置其设置的测试项目的解决方案。  
   
-2.  在“解决方案资源管理器”中的“解决方案项”文件夹中，双击“Local.testsettings”文件。  
+2.  在“解决方案资源管理器”  中的“解决方案项”  文件夹中，双击“Local.testsettings”  文件。  
   
-    此时将出现“测试设置”对话框。  
+    此时将出现“测试设置”  对话框。  
   
-3.  在列表中，单击“主机”。  
+3.  在列表中，单击“主机”  。  
   
-4.  在详细信息窗格中的“宿主进程平台”中，单击“MSIL”以将测试配置为在 x64 生成代理上运行。  
+4.  在详细信息窗格中的“宿主进程平台”  中，单击“MSIL”  以将测试配置为在 x64 生成代理上运行。  
   
-5.  单击 **“应用”**。  
+5.  单击 **“应用”** 。  
   
 ## <a name="CreateATestList"></a>为测试指定测试类别（可选）  
 通常，在创建生成定义以运行单元测试时，可以指定一个或多个测试类别。 在运行生成时，将运行指定类别中的所有测试。  
   
 #### <a name="to-assign-tests-to-a-test-category"></a>为测试指定测试类别  
   
-1.  打开“测试视图”窗口。  
+1.  打开“测试视图”  窗口。  
   
 2.  选择测试。  
   
-3.  在属性窗格中，单击“测试类别”，然后单击最右侧列中的省略号 (…)。  
+3.  在属性窗格中，单击“测试类别”，然后单击最右侧列中的省略号 (…)  。  
   
-4.  在“测试类别”窗口中的“添加新类别”框中，为新测试类别键入名称。  
+4.  在“测试类别”  窗口中的“添加新类别”  框中，为新测试类别键入名称。  
   
-5.  单击“添加” ，然后单击“确定”。  
+5.  单击“添加”  ，然后单击“确定”  。  
   
     新建的测试类别将分配给您的测试，并且可通过测试的属性将其用于其他测试。  
   
@@ -109,15 +109,15 @@ ms.locfileid: "65099653"
   
 #### <a name="to-specify-an-appconfig-file-for-team-foundation-build"></a>为 Team Foundation Build 指定 app.config 文件  
   
-1.  在“解决方案资源管理器”中，右键单击 app.config 文件，然后单击“复制”。  
+1.  在“解决方案资源管理器”  中，右键单击 app.config 文件，然后单击“复制”  。  
   
-2.  右键单击测试项目，然后单击“粘贴”。  
+2.  右键单击测试项目，然后单击“粘贴”  。  
   
-3.  右键单击名为“app.config 的副本”的文件，然后单击“重命名”。  
+3.  右键单击名为“app.config 的副本”  的文件，然后单击“重命名”。  
   
-4.  键入 _BuildComputer_**.sqlunitttest.config** 并按 ENTER，其中 *BuildComputer* 是你的生成代理运行所在计算机的名称。  
+4.  键入 _BuildComputer_ **.sqlunitttest.config** 并按 ENTER，其中 *BuildComputer* 是你的生成代理运行所在计算机的名称。  
   
-5.  双击 BuildComputer.sqlunitttest.config。  
+5.  双击  BuildComputer.sqlunitttest.config。  
   
     将在编辑器中打开此配置文件。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65099653"
     <DatabaseDeployment DatabaseProjectFileName="..\..\..\Database3\Database3.sqlproj"      Configuration="Debug" />  
     ```  
   
-    完成后，BuildComputer.sqlunitttest.config 文件应类似于 Visual Studio 2010 的以下示例：  
+    完成后，  BuildComputer.sqlunitttest.config 文件应类似于 Visual Studio 2010 的以下示例：  
   
     ```  
     <SqlUnitTesting_VS2010>  
@@ -163,11 +163,11 @@ ms.locfileid: "65099653"
   
 7.  更新 ExecutionContext 和 PrivilegedContext 的 ConnectionString 属性，以指定与要部署到的目标数据库的连接。  
   
-8.  在“文件”  菜单上，单击“全部保存” 。  
+8.  在“文件”  菜单上，单击“全部保存”  。  
   
 9. 在解决方案资源管理器中，双击 app.config。  
   
-10. 在编辑器中，针对每个 \<SqlUnitTesting_VSVersion> 节点，添加 `AllowConfigurationOverride="true"`。 例如：  
+10. 在编辑器中，针对每个 \<SqlUnitTesting_  VSVersion> 节点，添加 `AllowConfigurationOverride="true"`。 例如：  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  
@@ -179,7 +179,7 @@ ms.locfileid: "65099653"
   
     进行此更改后，将允许 Team Foundation Build 使用您创建的替换配置文件。  
   
-11. 在“文件”  菜单上，单击“全部保存” 。  
+11. 在“文件”  菜单上，单击“全部保存”  。  
   
     接下来，必须更新 Local.testsettings 以包括自定义的配置文件。  
   
@@ -187,21 +187,21 @@ ms.locfileid: "65099653"
   
 1.  在解决方案资源管理器中，双击 Local.testsettings。  
   
-    此时将出现“测试设置”对话框。  
+    此时将出现“测试设置”  对话框。  
   
-2.  在类别列表中，单击“部署”。  
+2.  在类别列表中，单击“部署”  。  
   
-3.  选中“启用部署”复选框。  
+3.  选中“启用部署”  复选框。  
   
-4.  单击“添加文件”。  
+4.  单击“添加文件”  。  
   
-5.  在“添加部署文件”对话框中，指定你创建的 BuildComputer.sqlunitttest.config 文件。  
+5.  在“添加部署文件”  对话框中，指定你创建的  BuildComputer.sqlunitttest.config 文件。  
   
-6.  单击 **“应用”**。  
+6.  单击 **“应用”** 。  
   
-7.  单击 **“关闭”**。  
+7.  单击 **“关闭”** 。  
   
-8.  在“文件”  菜单上，单击“全部保存” 。  
+8.  在“文件”  菜单上，单击“全部保存”  。  
   
     接下来，将您的解决方案签入版本控制中。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "65099653"
   
     有关更多信息，请参阅[将项目或解决方案添加到版本控制](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)。  
   
-3.  单击“视图”，然后单击“挂起的签入”。  
+3.  单击“视图”  ，然后单击“挂起的签入”  。  
   
 4.  签入您的解决方案的所有文件。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "65099653"
     > [!NOTE]  
     > 您可能有特定的团队流程来控制如何创建和管理自动测试。 例如，该流程可能要求您先在本地验证您的生成，然后再将该代码以及在代码上运行的测试一起签入。  
   
-    在“解决方案资源管理器”中，挂锁图标显示在每个文件旁边，以指示该文件已签入。 有关详细信息，请参阅[查看版本控制文件和文件夹属性](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)。  
+    在“解决方案资源管理器”  中，挂锁图标显示在每个文件旁边，以指示该文件已签入。 有关详细信息，请参阅[查看版本控制文件和文件夹属性](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)。  
   
     您的测试现在已经可用于 Team Foundation Build。 您现在可以创建包含要运行的测试的生成定义。  
   
@@ -238,33 +238,33 @@ ms.locfileid: "65099653"
   
 #### <a name="to-create-a-build-definition"></a>创建生成定义  
   
-1.  在团队资源管理器中，单击你的团队项目，右键单击“生成”节点，然后单击“新建生成定义”。  
+1.  在团队资源管理器中，单击你的团队项目，右键单击“生成”  节点，然后单击“新建生成定义”  。  
   
-    此时将显示“新建生成定义”窗口。  
+    此时将显示“新建生成定义”  窗口。  
   
-2.  在“生成定义名称”中，键入要用于此生成定义的名称。  
+2.  在“生成定义名称”  中，键入要用于此生成定义的名称。  
   
-3.  在导航栏中，单击“生成默认值”。  
+3.  在导航栏中，单击“生成默认值”  。  
   
-4.  在“将生成输出复制到以下放置文件夹(UNC 路径，如 \\\server\share)”中，指定一个文件夹以包含生成输出。  
+4.  在“将生成输出复制到以下放置文件夹(UNC 路径，如 \\\server\share)”  中，指定一个文件夹以包含生成输出。  
   
     您可以指定本地计算机上的共享文件夹或生成过程有权访问的任何网络位置。  
   
-5.  在导航栏中，单击“进程”。  
+5.  在导航栏中，单击“进程”  。  
   
-6.  在“必需”组中的“要生成的项”中，单击“浏览(…)”按钮。  
+6.  在“必需”组中的“要生成的项”中，单击“浏览(…)”按钮   。  
   
-7.  在“生成项目列表编辑器”对话框中，单击“添加”。  
+7.  在“生成项目列表编辑器”  对话框中，单击“添加”  。  
   
-8.  指定在本演练前面添加到版本控制中的解决方案文件 (.sln)，然后单击“确定”。  
+8.  指定在本演练前面添加到版本控制中的解决方案文件 (.sln)，然后单击“确定”  。  
   
-    此解决方案将显示在“要生成的项目或解决方案文件”列表中。  
+    此解决方案将显示在“要生成的项目或解决方案文件”  列表中。  
   
-9. 单击“确定” 。  
+9. 单击“确定”  。  
   
-10. 在“基本”组中的“自动测试”中，指定要运行的测试。 默认情况下，将运行解决方案中名为 \*test\*.dll 的文件中包含的测试。  
+10. 在“基本”  组中的“自动测试”  中，指定要运行的测试。 默认情况下，将运行解决方案中名为 \*test\*.dll 的文件中包含的测试。  
   
-11. 在“文件”菜单上，单击“保存 ProjectName”。  
+11. 在“文件”  菜单上，单击“保存 ProjectName”   。  
   
     现在，您已创建了生成定义。 接下来，需要修改测试项目。  
   
@@ -274,13 +274,13 @@ ms.locfileid: "65099653"
   
 1.  在团队资源管理器中，展开团队项目节点，展开“生成”节点，右键单击要运行的生成定义，然后单击“使新生成入队”。  
   
-    此时将显示“**将生成 {**_TeamProjectName_**}** 排队”对话框，其中包含所有现有生成类型的列表。  
+    此时将显示“**将生成 {** _TeamProjectName_ **}** 排队”对话框，其中包含所有现有生成类型的列表。  
   
-2.  如果需要，在“生成定义”中单击新生成定义。  
+2.  如果需要，在“生成定义”  中单击新生成定义。  
   
-3.  确认“生成定义”、“生成代理”和“该生成的放置文件夹”字段中的值全部正确，然后单击“排队”。  
+3.  确认“生成定义”  、“生成代理”  和“该生成的放置文件夹”  字段中的值全部正确，然后单击“排队”  。  
   
-    此时将显示“生成资源管理器”的“排队”选项卡。 有关详细信息，请参阅[管理和查看已完成的生成 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx)或[在生成资源管理器中管理你的生成 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
+    此时将显示“生成资源管理器”  的“排队”  选项卡。 有关详细信息，请参阅[管理和查看已完成的生成 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx)或[在生成资源管理器中管理你的生成 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
   
 ## <a name="see-also"></a>另请参阅  
 [运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)  

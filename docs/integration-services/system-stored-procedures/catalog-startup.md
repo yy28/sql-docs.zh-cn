@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e5bec6c25f53da66a4f1d3e6aa09d94b621c81f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715868"
 ---
 # <a name="catalogstartup"></a>catalog.startup 
@@ -29,7 +29,7 @@ ms.locfileid: "65715868"
   
  该存储过程可以纠正当 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务器实例出现故障时正在运行的任何包的状态。  
   
- 可以选择让该存储过程在每次重新启动 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务器实例时自动运行，方法是选择“创建目录”对话框中的“在 SQL Server 启动时启用 Integration Services 存储过程自动执行”选项。  
+ 可以选择让该存储过程在每次重新启动 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务器实例时自动运行，方法是选择“创建目录”  对话框中的“在 SQL Server 启动时启用 Integration Services 存储过程自动执行”  选项。  
   
 ## <a name="syntax"></a>语法  
   

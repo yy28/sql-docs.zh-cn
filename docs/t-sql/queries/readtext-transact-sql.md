@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: f2c07b756c608e5e28de3351d887d7a7b2f051ce
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927578"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ HOLDLOCK
   
 如果 @@TEXTSIZE 函数的值小于为 READTEXT 指定的大小，则该值将替代为 READTEXT 指定的大小。 @@TEXTSIZE 函数指定对 SET TEXTSIZE 语句设置的返回数据字节数的限制。 有关为 TEXTSIZE 设置会话设置的详细信息，请参阅 [SET TEXTSIZE (Transact-SQL)](../../t-sql/statements/set-textsize-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 READTEXT 权限默认授予对指定的表具有 SELECT 权限的用户。 可在转移 SELECT 权限时转移权限。  
   
 ## <a name="examples"></a>示例  

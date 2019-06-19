@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2ab8ab5fc572648840e2b4b5919ae0c3417a2a23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726205"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047652"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>内存优化表的哈希索引疑难解答
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47726205"
   
 创建内存优化表的哈希索引时，需要在创建时指定桶计数。 在大多数情况下，桶计数在理想情况下应该介于索引键中非重复值数目的 1 到 2 倍之间。 
 
-不过，即使 BUCKET_COUNT 不太低于或高于首选范围，哈希索引的性能依然很有可能是可忍受或可接受的。 至少应考虑为哈希索引指定约等于内存优化表数据增长后预计包含的行数的 BUCKET_COUNT。  
+不过，即使 BUCKET_COUNT  不太低于或高于首选范围，哈希索引的性能依然很有可能是可忍受或可接受的。 至少应考虑为哈希索引指定约等于内存优化表数据增长后预计包含的行数的 BUCKET_COUNT  。  
 假设数据不断增长的表包含 2,000,000 行，但预计会增长到原来的 10 倍（即 20,000,000 行）。 那么，首先可以指定一个为表中行数 10 倍的桶计数。 这样，便为行数增加提供了空间。  
   
 - 理想情况下，当行的数量达到初始桶计数时，你则会增加桶计数。  
@@ -171,8 +171,8 @@ go
   
 上述 `INSERT` 循环执行以下操作：  
   
-- 插入主键索引和 ix_OrderSequence 的唯一值。  
-- 插入了几十万行，但只呈现了 `StatusCode` 的 8 个非重复值。 因此，索引 ix_StatusCode 中的值重复率很高。  
+- 插入主键索引和 ix_OrderSequence  的唯一值。  
+- 插入了几十万行，但只呈现了 `StatusCode` 的 8 个非重复值。 因此，索引 ix_StatusCode  中的值重复率很高。  
   
 为了在桶计数不最佳时进行问题排查，请从 **sys.dm_db_xtp_hash_index_stats**检查 SELECT 的以下输出。 对于这些结果，我们添加 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 到从 D.1 部分复制的 SELECT。  
   
@@ -218,7 +218,7 @@ go
   
 ### <a name="balancing-the-trade-off"></a>权衡取舍  
   
-OLTP 工作负载注重每个行。 全表扫描通常不是影响 OLTP 工作负载的关键因素。 因此，必须在内存使用量与相等测试和插入操作性能之间权衡取舍。  
+OLTP 工作负载注重每个行。 全表扫描通常不是影响 OLTP 工作负载的关键因素。 因此，必须在内存使用量  与相等测试和插入操作性能  之间权衡取舍。  
   
 **如果内存使用量是更大的考虑因素：**  
   

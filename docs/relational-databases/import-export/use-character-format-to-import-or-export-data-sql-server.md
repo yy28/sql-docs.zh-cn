@@ -16,10 +16,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d129c6d0efb5659c0e10aa1c131b6e99a930896d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946406"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
@@ -70,7 +70,7 @@ ms.locfileid: "64946406"
 |BULK INSERT|DATAFILETYPE **='char'**|在批量导入数据时使用字符格式。|  
 |OPENROWSET|N/A|必须使用格式化文件|
   
- \*若要将字符 (**-c**) 数据加载到与旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端兼容的格式中，请使用 **-V** 开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ \*若要将字符 ( **-c**) 数据加载到与旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端兼容的格式中，请使用 **-V** 开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
    
 > [!NOTE]
 >  或者，您可以在格式化文件中为每个字段指定格式设置。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。

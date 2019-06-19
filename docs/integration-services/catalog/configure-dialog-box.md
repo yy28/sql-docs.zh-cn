@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dbf1fba077d693b45cd20c0e9f683cda64bc03dd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729222"
 ---
 # <a name="configure-dialog-box"></a>配置对话框
@@ -49,12 +49,12 @@ ms.locfileid: "65729222"
   
 4.  展开包含您要配置的包或项目的文件夹。  
   
-5.  右键单击该包或项目，然后单击“配置”。  
+5.  右键单击该包或项目，然后单击“配置”。   
   
 ##  <a name="parameter"></a> 设置“参数”页上的选项  
  使用 **“参数”** 页查看参数名称和值，然后修改值。  
   
- 在“范围”下拉列表中，选择“参数”和“连接管理器”选项卡中显示的参数的范围。  
+ 在“范围”下拉列表中，选择“参数”和“连接管理器”选项卡中显示的参数的范围。     
   
  以下是 **“参数”** 选项卡的选项列表。  
   
@@ -93,14 +93,14 @@ ms.locfileid: "65729222"
  列出包含环境的文件夹。  
   
  **打开**  
- 单击可打开“环境属性”对话框。  
+ 单击可打开“环境属性”对话框。   
   
  **“添加”**  
- 单击可添加对环境的引用。 在 **“浏览环境”** 对话框中，单击一个环境，然后单击 **“确定”**。  
+ 单击可添加对环境的引用。 在 **“浏览环境”** 对话框中，单击一个环境，然后单击 **“确定”** 。  
   
  您可以选择 **“SSISDB”** 节点下的任何项目文件夹中包含的环境。  
   
  **删除**  
- 单击“引用”区域中列出的环境，然后单击“删除”。  
+ 单击“引用”区域中列出的环境，然后单击“删除”。    
   
   

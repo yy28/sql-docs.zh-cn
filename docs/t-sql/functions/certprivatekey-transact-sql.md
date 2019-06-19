@@ -18,10 +18,10 @@ ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948824"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
@@ -46,23 +46,23 @@ CERTPRIVATEKEY
 ```  
   
 ## <a name="arguments"></a>参数  
-certificate_ID  
-证书的 certificate_id。 通过 sys.certificates 或通过 [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数获得此值。 cert_id 为 int 数据类型。
+certificate_ID   
+证书的 certificate_id  。 通过 sys.certificates 或通过 [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数获得此值。 cert_id 为 int 数据类型   。
   
-encryption_password  
+encryption_password   
 用于对返回的二进制值进行加密的密码。
   
-decryption_password  
+decryption_password   
 用于对返回的二进制值进行解密的密码。
   
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-同时使用 CERTENCODED 和 CERTPRIVATEKEY 以二进制格式返回证书的其他部分。
+同时使用 CERTENCODED 和 CERTPRIVATEKEY 以二进制格式返回证书的其他部分   。
   
 ## <a name="permissions"></a>权限  
-CERTPRIVATEKEY 向用户开放使用。
+CERTPRIVATEKEY 向用户开放使用  。
   
 ## <a name="examples"></a>示例  
   
@@ -79,7 +79,7 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-请参阅 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B，查看有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的更为复杂的示例。
+请参阅 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B，查看有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的更为复杂的示例   。
   
 ## <a name="see-also"></a>另请参阅
 [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  

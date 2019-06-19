@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0df33614cbb10708c6438db69807a1ec3c78d4c3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047931"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>查看事务发布的数据冲突 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "54129868"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-3.  右键单击要查看其冲突的发布，然后单击 **“查看冲突”**。  
+3.  右键单击要查看其冲突的发布，然后单击 **“查看冲突”** 。  
   
 4.  在 **“选择冲突表”** 对话框中，选择要查看冲突的数据库、发布和表。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "54129868"
   
     -   在上部网格中选择行，以在下部网格中显示该行的信息。  
   
-    -   在上部网格中选择一行或多行，再单击 **“删除”**，即从冲突元数据表中删除相应行。  
+    -   在上部网格中选择一行或多行，再单击 **“删除”** ，即从冲突元数据表中删除相应行。  
   
-    -   单击属性按钮 (**...**) 查看有关冲突所涉及的列的详细信息。  
+    -   单击属性按钮 ( **...** ) 查看有关冲突所涉及的列的详细信息。  
   
-    -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”**。 输入一个值，或单击浏览按钮 (**...**)，然后导航到相应文件。 单击 **“确定”** 关闭 **“选项”** 对话框。  
+    -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”** 。 输入一个值，或单击浏览按钮 ( **...** )，然后导航到相应文件。 单击 **“确定”** 关闭 **“选项”** 对话框。  
   
 6.  关闭复制冲突查看器。  
   

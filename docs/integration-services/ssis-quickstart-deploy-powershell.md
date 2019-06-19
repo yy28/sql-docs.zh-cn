@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78a74a6199bfa1db229451a323d417d623bfe1e4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717623"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>使用 PowerShell 部署 SSIS 项目
@@ -42,11 +42,11 @@ Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙�
 要将项目部署到 Azure SQL 数据库，则获取所需的信息以连接到 SSIS 目录数据库 (SSISDB)。 在接下来的步骤中需要完全限定的服务器名称和登录信息。
 
 1. 登录 [Azure 门户](https://portal.azure.com/)。
-2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库。 
-3. 在数据库的“概述”页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上。 
+2. 从左侧的菜单选择“SQL 数据库”，然后选择“SQL 数据库”页中的 SSISDB 数据库   。 
+3. 在数据库的“概述”  页上，查看完全限定的服务器名称。 若想查看“单击以复制”选项，将鼠标悬停在服务器名称上  。 
 4. 如果忘记了 Azure SQL 数据库服务器登录信息，导航到 SQL 数据库服务器页以查看服务器管理员名称。 如有必要，可重置密码。
-5. 单击“显示数据库连接字符串”。
-6. 查看完整的 ADO.NET 连接字符串。
+5. 单击“显示数据库连接字符串”  。
+6. 查看完整的 ADO.NET  连接字符串。
 
 ## <a name="ssis-powershell-provider"></a>SSIS PowerShell 提供程序
 为以下脚本顶部的变量提供适当的值，然后运行脚本以部署 SSIS 项目。

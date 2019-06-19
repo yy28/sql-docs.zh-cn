@@ -14,15 +14,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6e126769f0dbaa149915553b425bb79d0fb04d59
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105213"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>选项（“设计器” - “维护计划”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“选项”对话框可以确定在将新形状添加到设计图面时设计器的默认行为。 在“工具”菜单上，单击“选项”，展开“设计器”，再选择“维护计划”。  
+使用“选项”  对话框可以确定在将新形状添加到设计图面时设计器的默认行为。 在“工具”  菜单上，单击“选项”  ，展开“设计器”  ，再选择“维护计划”  。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
 **将新形状连接到默认选中的形状**  

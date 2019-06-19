@@ -14,24 +14,24 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 54b34b87f48f43bfbbe5ca40d423f8b017905601
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821657"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 调试器 -“监视”窗口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **“监视”** 窗口显示有关所选表达式的信息。 最多可以有四个“监视”窗口：“监视 1”、“监视 2”、“监视 3”和“监视 4”。 这些表达式是在 **“调用堆栈”** 窗口中选择的当前调用堆栈帧范围内求值的。 只有在调试模式下才可监视变量和表达式。  
+  **“监视”** 窗口显示有关所选表达式的信息。 最多可以有四个“监视”窗口：“监视 1”、“监视 2”、“监视 3”和“监视 4”    。 这些表达式是在 **“调用堆栈”** 窗口中选择的当前调用堆栈帧范围内求值的。 只有在调试模式下才可监视变量和表达式。  
   
 ## <a name="task-list"></a>任务列表  
  **访问“监视”窗口**  
   
--   在 **“调试”** 菜单上依次单击 **“窗口”**、 **“监视”**，然后再单击 **“监视 1”**、 **“监视 2”、“监视 3”** 或 **“监视 4”**。  
+-   在 **“调试”** 菜单上依次单击 **“窗口”** 、 **“监视”** ，然后再单击 **“监视 1”** 、 **“监视 2”、“监视 3”** 或 **“监视 4”** 。  
   
  **更改表达式的值**  
   
--   右键单击表达式，然后选择“编辑值”。  
+-   右键单击表达式，然后选择“编辑值”  。  
   
 ## <a name="columns"></a>“列”  
  **名称**  
@@ -48,11 +48,11 @@ ms.locfileid: "65821657"
 -   返回单个值的 Transact-SQL 语句，例如：SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
   
  **ReplTest1**  
- 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器对“名称”中指定的表达式求值后所返回的值。  
+ 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器对“名称”  中指定的表达式求值后所返回的值。  
   
  如果表达式的长度超过了 **“值”** 列的宽度，则将指针移动到该表达式的 **“值”** 单元格上方可显示一条工具提示，指示该表达式的完整值。  
   
- **“值”** 单元格中的放大镜图标指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器可视化工具可用。 在该列表中，可以指定 **“文本可视化工具”**、 **“XML 可视化工具”** 或 **“HTML 可视化工具”**。 若要启动调试器可视化工具，请单击此放大镜图标。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器将打开一个对话框，该对话框以适合相应数据类型的格式显示这些数据。  
+ **“值”** 单元格中的放大镜图标指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器可视化工具可用。 在该列表中，可以指定 **“文本可视化工具”** 、 **“XML 可视化工具”** 或 **“HTML 可视化工具”** 。 若要启动调试器可视化工具，请单击此放大镜图标。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器将打开一个对话框，该对话框以适合相应数据类型的格式显示这些数据。  
   
  **类型**  
  显示表达式的数据类型。  

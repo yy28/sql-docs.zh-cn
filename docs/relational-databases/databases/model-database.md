@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9febf511aef30bde1b01a5cad8eba3e3f8845b2f
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191027"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62640098"
 ---
 # <a name="model-database"></a>model 数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,37 +53,37 @@ ms.locfileid: "52191027"
   
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|用户帐户控制|  
-|ANSI_NULL_DEFAULT|OFF|用户帐户控制|  
-|ANSI_NULLS|OFF|用户帐户控制|  
-|ANSI_PADDING|OFF|用户帐户控制|  
-|ANSI_WARNINGS|OFF|用户帐户控制|  
-|ARITHABORT|OFF|用户帐户控制|  
-|AUTO_CLOSE|OFF|用户帐户控制|  
-|AUTO_CREATE_STATISTICS|ON|用户帐户控制|  
-|AUTO_SHRINK|OFF|用户帐户控制|  
-|AUTO_UPDATE_STATISTICS|ON|用户帐户控制|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|用户帐户控制|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|是|  
+|ANSI_NULL_DEFAULT|OFF|是|  
+|ANSI_NULLS|OFF|是|  
+|ANSI_PADDING|OFF|是|  
+|ANSI_WARNINGS|OFF|是|  
+|ARITHABORT|OFF|是|  
+|AUTO_CLOSE|OFF|是|  
+|AUTO_CREATE_STATISTICS|ON|是|  
+|AUTO_SHRINK|OFF|是|  
+|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
-|CONCAT_NULL_YIELDS_NULL|OFF|用户帐户控制|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|用户帐户控制|  
-|CURSOR_DEFAULT|GLOBAL|用户帐户控制|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 是<br /><br /> 用户帐户控制|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|用户帐户控制|  
+|CONCAT_NULL_YIELDS_NULL|OFF|是|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|是|  
+|CURSOR_DEFAULT|GLOBAL|是|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 是<br /><br /> 是|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|是|  
 |DB_CHAINING|OFF|否|  
 |ENCRYPTION|OFF|否|  
 |MIXED_PAGE_ALLOCATION|ON|否|  
-|NUMERIC_ROUNDABORT|OFF|用户帐户控制|  
-|PAGE_VERIFY|CHECKSUM|用户帐户控制|  
-|PARAMETERIZATION|SIMPLE|用户帐户控制|  
-|QUOTED_IDENTIFIER|OFF|用户帐户控制|  
-|READ_COMMITTED_SNAPSHOT|OFF|用户帐户控制|  
-|RECOVERY|取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本*|用户帐户控制|  
-|RECURSIVE_TRIGGERS|OFF|用户帐户控制|  
+|NUMERIC_ROUNDABORT|OFF|是|  
+|PAGE_VERIFY|CHECKSUM|是|  
+|PARAMETERIZATION|SIMPLE|是|  
+|QUOTED_IDENTIFIER|OFF|是|  
+|READ_COMMITTED_SNAPSHOT|OFF|是|  
+|RECOVERY|取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本*|是|  
+|RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 选项|DISABLE_BROKER|否|  
 |TRUSTWORTHY|OFF|否|  
   
- * 若要验证数据库的当前恢复模式，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 或 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
+ \* 若要验证数据库的当前恢复模式，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 或 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   

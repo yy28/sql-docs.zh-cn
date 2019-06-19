@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723327"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>第 1-4 课：将数据流任务添加到包
@@ -31,18 +31,18 @@ ms.locfileid: "65723327"
   
 ## <a name="add-a-data-flow-task"></a>添加数据流任务  
   
-1.  选择“控制流”选项卡。  
+1.  选择“控制流”选项卡  。  
   
-2.  在“SSIS 工具箱”窗格中，展开“收藏夹”，并将一个“数据流任务”拖到“控制流”选项卡的设计图面上。  
+2.  在“SSIS 工具箱”窗格中，展开“收藏夹”，并将一个“数据流任务”拖到“控制流”选项卡的设计图面上     。  
   
     > [!NOTE]  
-    > 如果“SSIS 工具箱”不可用，请依次选择“SSIS”菜单和“SSIS 工具箱”，以显示它。  
+    > 如果“SSIS 工具箱”不可用，请依次选择“SSIS”菜单和“SSIS 工具箱”，以显示它   。  
 
-3.  在“控制流”设计图面中，右键单击新的“数据流任务”，再选择“重命名”，然后将名称更改为“Extract Sample Currency Data”。  
+3.  在“控制流”设计图面中，右键单击新的“数据流任务”，再选择“重命名”，然后将名称更改为“Extract Sample Currency Data”     。  
   
     为添加到设计图面的所有组件提供唯一的名称。 考虑到易用性和可维护性，名称应说明每个组件的功能。 按照这些命名指南， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包可以进行自我说明。 另一个说明包的方法是使用批注。 有关注释的详细信息，请参阅[在包中使用注释](../integration-services/use-annotations-in-packages.md)。  
   
-4.  右键单击“数据流”任务，选择“属性”，然后在“属性”窗口中，确保已将 LocaleID 属性设置为“英语(美国)”。  
+4.  右键单击“数据流”任务，选择“属性”，然后在“属性”窗口中，确保已将 LocaleID 属性设置为“英语(美国)”    。  
   
 ## <a name="go-to-next-task"></a>转到下一个任务
 [步骤 5：添加并配置平面文件源](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  

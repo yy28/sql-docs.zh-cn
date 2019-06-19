@@ -23,16 +23,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 014dee25c2e2237f7c9b72b79f78aa2a0abb4e47
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948146"
 ---
 # <a name="contextinfo--transact-sql"></a>CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-此函数返回通过使用 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 语句为当前会话或批处理设置的“context_info”值。
+此函数返回通过使用 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 语句为当前会话或批处理设置的“context_info”  值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,9 +43,9 @@ CONTEXT_INFO()
 ```  
   
 ## <a name="return-value"></a>返回值
-“context_info”值。
+“context_info”  值。
   
-如果尚未设置 context_info：
+如果尚未设置 context_info  ：
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中返回 NULL。  
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中返回特定于会话的唯一 GUID。  
   
@@ -59,7 +59,7 @@ CONTEXT_INFO()
 - **sys.sysprocesses**
   
 ## <a name="examples"></a>示例  
-以下简单示例将“context_info”值设置为 `0x1256698456`，然后使用 `CONTEXT_INFO` 函数检索该值。
+以下简单示例将“context_info”  值设置为 `0x1256698456`，然后使用 `CONTEXT_INFO` 函数检索该值。
   
 ```sql
 SET CONTEXT_INFO 0x1256698456;  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b744bf63f2b001c0f2529d6430d2ec335202abfe
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946524"
 ---
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
@@ -51,7 +51,7 @@ DISTINCT
 整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 `CHECKSUM_AGG` 不允许使用聚合函数或子查询。
   
 ## <a name="return-types"></a>返回类型
-将所有表达式值的校验和作为 int 类型返回。
+将所有表达式值的校验和作为 int 类型返回   。
   
 ## <a name="remarks"></a>Remarks  
 `CHECKSUM_AGG` 可以检测表中的更改。

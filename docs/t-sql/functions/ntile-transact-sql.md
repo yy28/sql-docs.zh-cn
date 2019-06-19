@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f2597386a3beac94ff1cc5d067299f308a255e9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944070"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
@@ -44,7 +44,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>参数  
  *integer_expression*  
- 一个正整数表达式，用于指定每个分区必须被划分成的组数。 integer_expression 可以是 int 或 bigint 类型。  
+ 一个正整数表达式，用于指定每个分区必须被划分成的组数。 integer_expression 可以是 int 或 bigint 类型    。  
   
  \<partition_by_clause>  
  将由 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分为要应用函数的分区。 有关 PARTITION BY 语法的信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
@@ -56,7 +56,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
  **bigint**  
   
 ## <a name="remarks"></a>Remarks  
- 如果分区的行数不能被 integer_expression 整除，则将导致一个成员有两种大小不同的组。 按照 OVER 子句指定的顺序，较大的组排在较小的组前面。 例如，如果总行数是 53，组数是 5，则前三个组每组包含 11 行，其余两个组每组包含 10 行。 另一方面，如果总行数可被组数整除，则行数将在组之间平均分布。 例如，如果总行数为 50，有五个组，则每组将包含 10 行。  
+ 如果分区的行数不能被 integer_expression 整除，则将导致一个成员有两种大小不同的组  。 按照 OVER 子句指定的顺序，较大的组排在较小的组前面。 例如，如果总行数是 53，组数是 5，则前三个组每组包含 11 行，其余两个组每组包含 10 行。 另一方面，如果总行数可被组数整除，则行数将在组之间平均分布。 例如，如果总行数为 50，有五个组，则每组将包含 10 行。  
   
  NTILE 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
@@ -107,7 +107,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ```  
   
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. 使用 PARTITION BY 划分结果集  
- 以下示例将 `PARTITION BY` 参数添加到示例 A 中的代码。首先按 `PostalCode` 将行分区，然后在每个 `PostalCode` 内将行分成四个组。 该示例还声明一个变量 `@NTILE_Var` 并使用该变量指定 integer_expression 参数的值。  
+ 以下示例将 `PARTITION BY` 参数添加到示例 A 中的代码。首先按 `PostalCode` 将行分区，然后在每个 `PostalCode` 内将行分成四个组。 该示例还声明一个变量 `@NTILE_Var` 并使用该变量指定 integer_expression 参数的值  。  
   
 ```  
 USE AdventureWorks2012;  

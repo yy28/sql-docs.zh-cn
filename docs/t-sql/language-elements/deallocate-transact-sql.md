@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fb66fd1627907d0e9d26f3524835f5ad126c2b57
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982528"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
@@ -43,11 +43,11 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
 ```  
   
 ## <a name="arguments"></a>参数  
- cursor_name  
- 已声明游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 `GLOBAL`，则 cursor_name 指全局游标，如果未指定 `GLOBAL`，则指局部游标。  
+ cursor_name   
+ 已声明游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 `GLOBAL`，则 cursor_name 指全局游标，如果未指定 `GLOBAL`，则指局部游标   。  
   
- @cursor_variable_name  
- cursor 变量的名称。 @cursor_variable_name 必须为 cursor 类型。  
+ @cursor_variable_name   
+ cursor 变量的名称  。 @cursor_variable_name 必须为 cursor 类型   。  
   
 ## <a name="remarks"></a>Remarks  
 对游标进行操作的语句使用游标名称或游标变量引用游标。 `DEALLOCATE` 删除游标与游标名称或游标变量之间的关联。 如果一个名称或变量是最后引用游标的名称或变量，则将释放游标，游标使用的任何资源也随之释放。 用于保护提取隔离的滚动锁在 `DEALLOCATE` 上释放。 用于保护更新（包括通过游标进行的定位更新）的事务锁一直到事务结束才释放。  

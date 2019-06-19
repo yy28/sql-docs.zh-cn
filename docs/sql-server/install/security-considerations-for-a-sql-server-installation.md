@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cda2bf030b8e04cf40144c117359d553353ebf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62685874"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>安装 SQL Server 的安全注意事项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "47846755"
 ###  <a name="isolated_services"></a> Isolate Services  
  隔离服务可以降低风险，防止已受到危害的服务被用于危及其他服务。 若要隔离服务，请考虑以下原则：  
   
--   在不同的 Windows 帐户下运行各自的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 对每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，尽可能使用不同的低权限 Windows 或本地用户帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+-   在不同的 Windows 帐户下运行各自的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 对每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，尽可能使用不同的低权限 Windows 或本地用户帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)预览版本升级问题的解答。  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  使用正确的文件系统可提高安全性。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，应执行以下几项任务：  
@@ -135,7 +135,7 @@ ms.locfileid: "47846755"
   
 -   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务与低特权 Windows 本地用户帐户或域用户帐户相关联。  
   
--   有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+-   有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)预览版本升级问题的解答。  
   
  **身份验证模式**  
   

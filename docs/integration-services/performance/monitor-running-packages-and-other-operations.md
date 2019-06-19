@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c188f7ba04162b3cd385606789c94e9c08354e4
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805249"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>监视运行包和其他操作
@@ -67,7 +67,7 @@ ms.locfileid: "65805249"
   
 2.  连接 Microsoft SQL Server 数据库引擎  
   
-3.  在对象资源管理器中，展开 **Integration Services** 节点，右键单击 **SSISDB**，然后单击 **“活动操作”**。  
+3.  在对象资源管理器中，展开 **Integration Services** 节点，右键单击 **SSISDB**，然后单击 **“活动操作”** 。  
   
 ### <a name="configure-the-options"></a>配置选项  
   
@@ -118,7 +118,7 @@ ms.locfileid: "65805249"
  请参阅 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间及其类。  
   
 ### <a name="viewing-the-history-of-packages-that-have-run"></a>查看已运行的包的历史记录  
- 若要查看在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中已运行的包的历史记录，请使用 **“全部执行”** 报表。 有关“全部执行”报表和其他标准报表的详细信息，请参阅 [Integration Services 服务器的报告](#reports)。  
+ 若要查看在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中已运行的包的历史记录，请使用 **“全部执行”** 报表。 有关“全部执行”  报表和其他标准报表的详细信息，请参阅 [Integration Services 服务器的报告](#reports)。  
   
  有关可用于查看正在运行的包的历史记录的其他方法的信息，请参阅以下主题。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "65805249"
 |**执行信息**|显示过去 24 小时内处于不同状态（失败、正在运行、成功、其他）的执行次数。|  
 |**包信息**|显示过去 24 小时内执行的包总数。|  
 |**连接信息**|显示过去 24 小时内失败的执行中使用的连接。|  
-|**包详细信息**|显示过去 24 小时内发生的已完成执行的详细信息。 例如，本节说明了失败的执行次数与执行总次数，执行的持续时间（秒）和过去三个月内执行的平均持续时间。<br /><br /> 通过单击 **“概述”**、 **“所有消息”** 和 **“执行性能”**，可以查看有关包的其他信息。<br /><br /> **“执行性能”** 报告显示上次执行实例的持续时间、开始和结束时间以及应用的环境。<br /><br /> **“执行性能”** 报告中包含的图表和关联的表显示过去 10 次成功执行包的持续时间。 该表还显示过去三个月内的平均执行持续时间。 在运行时可能会为这 10 次成功执行包应用不同的环境和不同的文字值。<br /><br /> 最后， **“执行性能”** 报告显示包数据流组件的活动时间和总时间。 活动时间指组件在所有阶段中用于执行的总共用时，而总时间指示组件占用的总时间。 如果上次包执行的日志记录级别设置为“性能”或“详细”，则该报告仅显示包组件的此信息。<br /><br /> **“概述”** 报告显示包任务的状态。 **“消息”** 报告显示包和任务的事件消息和错误消息，如报告开始和结束时间，以及写入的行数。<br /><br /> 还可以单击 **“概述”** 报告中的 **“查看消息”** ，导航到 **“消息”** 报告。 还可以单击 **“消息”** 报告中的 **“查看概述”** ，导航到 **“概述”** 报告。|  
+|**包详细信息**|显示过去 24 小时内发生的已完成执行的详细信息。 例如，本节说明了失败的执行次数与执行总次数，执行的持续时间（秒）和过去三个月内执行的平均持续时间。<br /><br /> 通过单击 **“概述”** 、 **“所有消息”** 和 **“执行性能”** ，可以查看有关包的其他信息。<br /><br /> **“执行性能”** 报告显示上次执行实例的持续时间、开始和结束时间以及应用的环境。<br /><br /> **“执行性能”** 报告中包含的图表和关联的表显示过去 10 次成功执行包的持续时间。 该表还显示过去三个月内的平均执行持续时间。 在运行时可能会为这 10 次成功执行包应用不同的环境和不同的文字值。<br /><br /> 最后， **“执行性能”** 报告显示包数据流组件的活动时间和总时间。 活动时间指组件在所有阶段中用于执行的总共用时，而总时间指示组件占用的总时间。 如果上次包执行的日志记录级别设置为“性能”或“详细”，则该报告仅显示包组件的此信息。<br /><br /> **“概述”** 报告显示包任务的状态。 **“消息”** 报告显示包和任务的事件消息和错误消息，如报告开始和结束时间，以及写入的行数。<br /><br /> 还可以单击 **“概述”** 报告中的 **“查看消息”** ，导航到 **“消息”** 报告。 还可以单击 **“消息”** 报告中的 **“查看概述”** ，导航到 **“概述”** 报告。|  
   
  您可以通过单击 **“筛选器”** ，然后在 **“筛选设置”** 对话框中选择条件，对在任何页上显示的表进行筛选。 可用的筛选条件依赖于要显示的数据。 您可以通过在 **“筛选设置”** 对话框中单击排序图标，更改报告的排序顺序。  
   
@@ -180,10 +180,10 @@ ms.locfileid: "65805249"
  **“所有验证”** 报告显示已在服务器上执行的所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 验证的摘要。 摘要中显示每次验证的信息，如状态、开始时间和结束时间。 每个摘要条目包含一个指向在验证期间生成的消息的链接。 与 Integration Services 面板一样，您可以将筛选器应用于表，以便缩小显示的信息的范围。  
   
 ### <a name="custom-reports"></a>自定义报告  
- 可以将自定义报告（.rdl 文件）添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“Integration Services 目录”节点下的 **SSISDB** 目录节点。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<数据库>.\<所有者>.\<对象>。 例如，SSISDB.internal.executions。  
+ 可以将自定义报告（.rdl 文件）添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“Integration Services 目录”节点下的 **SSISDB** 目录节点  。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<数据库>.\<所有者>.\<对象>。 例如，SSISDB.internal.executions。  
   
 > [!NOTE]  
->  将自定义报告添加到“数据库”节点下的 **SSISDB** 节点时，可以不使用 SSISDB 前缀。  
+>  将自定义报告添加到“数据库”  节点下的 **SSISDB** 节点时，可以不使用 SSISDB 前缀。  
   
  有关如何创建和添加自定义报告的说明，请参阅 [Add a Custom Report to Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)。  
 
@@ -194,7 +194,7 @@ ms.locfileid: "65805249"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开对象资源管理器中的 **“Integration Services 目录”** 节点。  
   
-2.  右键单击“SSISDB”，单击“报表”，然后单击“标准报表”。  
+2.  右键单击“SSISDB”  ，单击“报表”  ，然后单击“标准报表”  。  
   
 3.  单击以下一个或多个选项以查看报告。  
   

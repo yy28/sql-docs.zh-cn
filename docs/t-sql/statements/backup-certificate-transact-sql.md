@@ -30,10 +30,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 192eb9d6fb313f689081c590f2881f028fd54ced
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774898"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
@@ -70,21 +70,21 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- certname  
+ certname   
  要备份的证书的名称。
 
- TO FILE = path_to_file  
+ TO FILE = path_to_file   
  指定要保存证书的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 如果仅指定了文件名，则该文件将保存在实例的默认用户数据文件夹中（可能是也可能不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹）。 对于 SQL Server Express LocalDB，实例的默认用户数据文件夹是 `%USERPROFILE%` 环境变量为创建实例的帐户指定的路径。  
 
  WITH PRIVATE KEY 指定将证书的私钥保存到文件中。 此子句为可选项。
 
- FILE = path_to_private_key_file  
+ FILE = path_to_private_key_file   
  指定要保存私钥的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 如果仅指定了文件名，则该文件将保存在实例的默认用户数据文件夹中（可能是也可能不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹）。 对于 SQL Server Express LocalDB，实例的默认用户数据文件夹是 `%USERPROFILE%` 环境变量为创建实例的帐户指定的路径。  
 
- ENCRYPTION BY PASSWORD = encryption_password  
+ ENCRYPTION BY PASSWORD = encryption_password   
  用于在将密钥写入备份文件之前对私钥进行加密的密码。 该密码需要进行复杂性检查。  
   
- DECRYPTION BY PASSWORD = decryption_password  
+ DECRYPTION BY PASSWORD = decryption_password   
  用于在备份密钥之前对私钥进行解密的密码。 如果证书是用主密钥加密，便无需使用此参数。 
   
 ## <a name="remarks"></a>Remarks  

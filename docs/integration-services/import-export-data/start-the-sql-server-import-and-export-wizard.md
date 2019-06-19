@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6393a3c60abdde6d55302aa83c0c9d687e1af029
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723718"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>启动 SQL Server 导入和导出向导
@@ -48,7 +48,7 @@ ms.locfileid: "65723718"
 
 ## <a name="startStart"></a> “开始”菜单  
 ### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>从“开始”菜单启动 SQL Server 导入和导出向导
-1.  在“开始”菜单上，查找和展开“Microsoft SQL Server 2016”。
+1.  在“开始”  菜单上，查找和展开“Microsoft SQL Server 2016”  。
 3.  单击以下选项之一。
   
     -   **SQL Server 2016 导入和导出数据(64 位)**
@@ -75,9 +75,9 @@ ms.locfileid: "65723718"
 ### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>从 SQL Server Management Studio (SSMS) 启动 SQL Server 导入和导出向导    
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。
     
-2.  展开“数据库”。
+2.   展开“数据库”。
 3.  右键单击某个数据库。
-4.  指向“任务” 。
+4.  指向“任务”  。
 5.  单击以下选项之一。
   
     -   **导入数据**
@@ -92,13 +92,13 @@ ms.locfileid: "65723718"
 ### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>从具有 SQL Server Data Tools (SSDT) 的 Visual Studio 启动 SQL Server 导入和导出向导 
  在具有 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 Visual Studio 中，在 Integration Services 项目打开的情况下，执行以下列操作之一。 
   
--   在“项目”  菜单上，单击“SSIS 导入和导出向导” 。 
+-   在“项目”  菜单上，单击“SSIS 导入和导出向导”  。 
 
     ![启动向导项目](../../integration-services/import-export-data/media/start-wizard-project.jpg) 
     
     \- 或 -
     
--   在解决方案资源管理器中，右键单击“SSIS 包”  文件夹，再单击“SSIS 导入和导出向导” 。
+-   在解决方案资源管理器中，右键单击“SSIS 包”  文件夹，再单击“SSIS 导入和导出向导”  。
 
     ![启动向导包](../../integration-services/import-export-data/media/start-wizard-packages.jpg)
 
@@ -112,7 +112,7 @@ ms.locfileid: "65723718"
 > 从向导的任何页面或对话框中点击 F1 键，可查看当前页的相关文档。   
 
  ## <a name="whats-next"></a>下一步是什么？  
- 当你启动向导时，第一页是“欢迎使用 SQL Server 导入和导出向导” 。 不必在此页上执行任何操作。 有关详细信息，请参阅 [欢迎使用 SQL Server 导入和导出向导](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  
+ 当你启动向导时，第一页是“欢迎使用 SQL Server 导入和导出向导”  。 不必在此页上执行任何操作。 有关详细信息，请参阅 [欢迎使用 SQL Server 导入和导出向导](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  
   
 ## <a name="related"></a>相关任务和内容  
  以下是一些其他的基本任务。

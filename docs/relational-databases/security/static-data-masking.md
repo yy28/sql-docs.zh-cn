@@ -12,10 +12,10 @@ ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580972"
 ---
 # <a name="static-data-masking"></a>静态数据掩码
@@ -93,7 +93,7 @@ ms.locfileid: "65580972"
 
 下面是运行静态数据掩码的分步指南。 
  
-1. 启动 SQL Server Management Studio。 连接到数据库。 在左侧的“对象资源管理器”窗格中，展开数据库文件夹。 右键单击要进行掩码的数据库。 左键单击“任务”。 左键单击“对数据库执行掩码...(预览)”。
+1. 启动 SQL Server Management Studio。 连接到数据库。 在左侧的“对象资源管理器”窗格中，展开数据库文件夹  。 右键单击要进行掩码的数据库。 左键单击“任务”  。 左键单击“对数据库执行掩码...  (预览)”。
  
  ![任务菜单](../../relational-databases/security/media/sql-static-data-masking/task_data_masking.PNG)
  
@@ -105,11 +105,11 @@ ms.locfileid: "65580972"
  
  ![表格的下拉列表](../../relational-databases/security/media/sql-static-data-masking/ui_dropdown_column.png)
  
-4. 选择要进行掩码操作的列和要应用的掩码函数。 可用的掩码类型有：Shuffle 掩码、分组 Shuffle 掩码、单值掩码、NULL 掩码和字符串复合掩码。 
+4. 选择要进行掩码操作的列和要应用的掩码函数。 可用的掩码类型有：Shuffle 掩码、分组 Shuffle 掩码、单值掩码、NULL 掩码和字符串复合掩码      。 
  
  ![掩码函数下拉列表](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- 注意：大部分掩码函数有其他配置参数。 静态数据掩码为 Shuffle 掩码提供一个默认参数。 对于分组 Shuffle 掩码、单值掩码和字符串复合掩码，用户必须提供配置参数。 若要更改或提供配置参数，请单击“配置...”选项，然后在弹出的对话框中为参数指定（备用）值。 [掩码函数](#masking-functions)详细介绍了每个掩码函数。
+ 注意：大部分掩码函数有其他配置参数。 静态数据掩码为 Shuffle 掩码提供一个默认参数。 对于分组 Shuffle 掩码、单值掩码和字符串复合掩码，用户必须提供配置参数。 若要更改或提供配置参数，请单击“配置...”选项，然后在弹出的对话框中为参数指定（备用）值  。 [掩码函数](#masking-functions)详细介绍了每个掩码函数。
  
  ![掩码函数配置按钮](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -123,14 +123,14 @@ ms.locfileid: "65580972"
  
  ![验证机制警告](../../relational-databases/security/media/sql-static-data-masking/validation_warning.PNG)
  
-5. 可将完整的掩码配置另存为 XML 文件，以供将来使用。  尽管 Azure SQL 数据库和本地数据库之间的掩码函数配置相同，但保存的其他属性（例如备份文件路径）仍有一些细微的差别。 要保存配置，请单击“保存配置”、提供文件名，然后单击保存。  之后，用户便可使用“加载配置”来加载现有配置文件。我们建议为列数很多的表格使用配置文件。 
+5. 可将完整的掩码配置另存为 XML 文件，以供将来使用。  尽管 Azure SQL 数据库和本地数据库之间的掩码函数配置相同，但保存的其他属性（例如备份文件路径）仍有一些细微的差别。 要保存配置，请单击“保存配置”、提供文件名，然后单击保存  。  之后，用户便可使用“加载配置”来加载现有配置文件  。我们建议为列数很多的表格使用配置文件。 
  
  ![配置文件](../../relational-databases/security/media/sql-static-data-masking/load_save_config.PNG)
  
-6. 静态数据掩码将在用户的“文档”文件夹中创建一个名为“静态数据掩码”的文件夹并放入日志文件。 日志文件对调试十分有用。 日志文件的名称显示在配置窗口的底部。 
+6. 静态数据掩码将在用户的“文档”文件夹中创建一个名为“静态数据掩码”的文件夹并放入日志文件  。 日志文件对调试十分有用。 日志文件的名称显示在配置窗口的底部。 
   
  
-7. （仅限 SQL Server）如果对本地数据库执行静态数据掩码，则静态数据掩码将执行备份/还原操作。 在“步骤 2：克隆 .BAK 文件位置”中，提供备份文件在服务器上的存储位置。 
+7. （仅限 SQL Server）如果对本地数据库执行静态数据掩码，则静态数据掩码将执行备份/还原操作。 在“步骤 2：  克隆 .BAK 文件位置”中，提供备份文件在服务器上的存储位置。 
 
 ## <a name="masking-functions"></a>掩码函数
 
@@ -140,14 +140,14 @@ NULL 掩码用 NULL 替换列中所有值。 如果列不接受 NULL 值，静�
 
 ### <a name="single-value-masking"></a>单值掩码
 
-单值掩码用一个固定值替换列中的所有值，该固定值由用户指定。 输入的内容的格式必须可转换为所选列的类型。 要指定该值，点击“配置…”，提供一个值，然后点击“确定”。 
+单值掩码用一个固定值替换列中的所有值，该固定值由用户指定。 输入的内容的格式必须可转换为所选列的类型。 要指定该值，点击“配置…”，提供一个值，然后点击“确定”   。 
 
 ![单值掩码参数](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 
 
 ### <a name="shuffle-masking"></a>Shuffle 掩码
 
-将列中的所有值随机打乱到新行中。 不生成新数据。 Shuffle 掩码提供保留列中 NULL 项的选项。 要执行此操作，请单击“配置...”，然后选择“保持 NULL 位置”框。
+将列中的所有值随机打乱到新行中。 不生成新数据。 Shuffle 掩码提供保留列中 NULL 项的选项。 要执行此操作，请单击“配置...”，然后选择“保持 NULL 位置”框  。
 
 ![Shuffle 掩码参数](../../relational-databases/security/media/sql-static-data-masking/shuffle_parameter.PNG)
 
@@ -167,7 +167,7 @@ NULL 掩码用 NULL 替换列中所有值。 如果列不接受 NULL 值，静�
 | 612-72-1026  | 116-30-8733  | 209-36-1971 |  
 
 ### <a name="group-shuffle-masking"></a>分组 Shuffle 掩码
-在置乱组中，分组 Shuffle 将几列绑定在一起。 将置乱组中的各列作为一体一起打乱。 用户必须使用“配置...”选项指定置乱组的名称。
+在置乱组中，分组 Shuffle 将几列绑定在一起。 将置乱组中的各列作为一体一起打乱。 用户必须使用“配置...”选项指定置乱组的名称  。
 
 ![分组 Shuffle 掩码参数](../../relational-databases/security/media/sql-static-data-masking/group_shuffle_parameter.PNG)
 

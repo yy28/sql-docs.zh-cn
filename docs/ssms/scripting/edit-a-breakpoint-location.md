@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3b35521c0a387028d442ff77214e910a922ff4a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820816"
 ---
 # <a name="edit-a-breakpoint-location"></a>编辑断点位置
@@ -30,11 +30,11 @@ ms.locfileid: "65820816"
   
 #### <a name="to-edit-a-breakpoint-location"></a>编辑断点位置  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“位置”。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“位置”  。  
   
      -或 -  
   
-     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单的“位置”。  
+     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单的“位置”  。  
   
 2.  在 **“文件断点”** 对话框中，编辑 **“文件”** 以指定新的文件，编辑 **“行”** 以指定新行，或者编辑 **“字符”** 以指定该行内的新位置。 如果您指定的新文件已经在查询编辑器窗口中打开，则断点会移至该编辑器窗口。 如果文件未打开，则会打开新的编辑器窗口，并在其中载入文件，断点随即移至新的位置。  
   

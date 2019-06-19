@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 44cb6fa7f32616f7a1616c334c438b7a752546e3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946052"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
@@ -44,16 +44,16 @@ FILE_IDEX ( file_name )
 ```  
   
 ## <a name="arguments"></a>参数  
- file_name  
-类型为 sysname 的表达式，它返回文件名称的文件 ID 值“FILE_IDEX”。 
+ file_name   
+类型为 sysname  的表达式，它返回文件名称的文件 ID 值“FILE_IDEX”。 
   
 ## <a name="return-types"></a>返回类型  
 **int**  
   
-出现错误时，返回 NULL  
+出现错误时，返回 NULL   
   
 ## <a name="remarks"></a>Remarks  
-file_name 对应于 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图中的 name 列中所显示的逻辑文件名。  
+file_name  对应于 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图中的 name  列中所显示的逻辑文件名。  
   
 在 SELECT 列表、WHERE 子句或支持使用表达式的任何位置使用 `FILE_IDEX`。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   

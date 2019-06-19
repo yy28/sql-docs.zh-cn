@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a0b1b7e7a0cecb2f71d8e326615bb25259ca0fcf
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727645"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>合并包工作流中的数据事件探查任务
@@ -126,7 +126,7 @@ ms.locfileid: "65727645"
   
 2.  打开 **“数据事件探查任务编辑器”** 以配置该任务。  
   
-3.  在该编辑器的 **“常规”** 页上，选择前面配置的文件连接管理器的名称作为 **“目标”**。  
+3.  在该编辑器的 **“常规”** 页上，选择前面配置的文件连接管理器的名称作为 **“目标”** 。  
   
 4.  在该编辑器的 **“配置文件请求”** 页上，创建新的列 Null 比率配置文件。  
   
@@ -298,7 +298,7 @@ ms.locfileid: "65727645"
   
 -   在将脚本任务连接到工作流下游分支的优先约束中，写入使用变量值定位工作流的表达式。  
   
-     例如，可以将优先约束的 **“求值运算”** 设置为 **“表达式和约束”**。 然后，可以使用 `@AddressLine2NullRatio < .90` 作为该表达式的值。 当前面的任务成功并且所选列的 Null 值的百分比小于 90% 时，这将使工作流遵循所选的路径。  
+     例如，可以将优先约束的 **“求值运算”** 设置为 **“表达式和约束”** 。 然后，可以使用 `@AddressLine2NullRatio < .90` 作为该表达式的值。 当前面的任务成功并且所选列的 Null 值的百分比小于 90% 时，这将使工作流遵循所选的路径。  
   
 ## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>将数据事件探查任务连接到从数据流转换的数据  
  您可以不对直接来自数据源的数据进行事件探查，而是对数据流中已加载并转换的数据进行事件探查。 不过，数据事件探查任务仅针对持久化数据而不针对内存中的数据进行操作。 因此，必须首先使用目标组件将已转换的数据保存到临时表中。  

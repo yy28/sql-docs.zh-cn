@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 461a0afd4b77a449f7b398a03113164370061df5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105162"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>“全文索引”对话框 (Visual Database Tools)
@@ -38,13 +38,13 @@ ms.locfileid: "65105162"
 创建新的全文索引。  
   
 **删除**  
-删除在“选定的全文检索”列表中所选的全文检索。  
+删除在“选定的全文检索”  列表中所选的全文检索。  
   
 **常规类别**  
-展开此项可显示“列”和“全文本目录名称”。  
+展开此项可显示“列”  和“全文本目录名称”  。  
   
 **“列”**  
-显示一个逗号分隔列表，其中列出了可进行全文搜索的列的名称。 若要查看完整列表，请单击该属性字段左侧的省略号按钮“(…)”。  
+显示一个逗号分隔列表，其中列出了可进行全文搜索的列的名称。 若要查看完整列表，请单击该属性字段左侧的省略号按钮“(…)”  。  
   
 **全文本目录名称**  
 显示用于存储此全文索引的全文本目录的名称。 若要将索引存储在其他目录中，请单击当前目录名称，再从下拉列表中选择其他目录。  

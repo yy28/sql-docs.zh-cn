@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37d7c5813a700ab137aba98e5347cef214570bb6
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948781"
 ---
 # <a name="x40x40language-transact-sql"></a>&#x40;&#x40;LANGUAGE (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "65948781"
  **nvarchar**  
   
 ## <a name="remarks"></a>Remarks  
- 若要查看语言设置信息（包括有效的正式语言名称），可在不指定参数的情况下运行 sp_helplanguage。  
+ 若要查看语言设置信息（包括有效的正式语言名称），可在不指定参数的情况下运行 sp_helplanguage  。  
   
 ## <a name="examples"></a>示例  
  以下示例返回当前会话的语言。  

@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fad23cc2ecd044b300ee80366f06d2f5c54b80ae
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948790"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
@@ -44,26 +44,26 @@ REPLACE ( string_expression , string_pattern , string_replacement )
 ```  
   
 ## <a name="arguments"></a>参数  
- string_expression  
- 是要搜索的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 string_expression 可以是字符或二进制数据类型。  
+ string_expression   
+ 是要搜索的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 string_expression 可以是字符或二进制数据类型  。  
   
  *string\_pattern*  
- 是要查找的子字符串。 string_pattern 可以是字符或二进制数据类型。 string_pattern 不能为空字符串 ('')，不能超过页容纳的最大字节数。  
+ 是要查找的子字符串。 string_pattern 可以是字符或二进制数据类型  。 string_pattern 不能为空字符串 ('')，不能超过页容纳的最大字节数  。  
   
  *string\_replacement*  
- 是替换字符串。 string_replacement 可以是字符或二进制数据类型。  
+ 是替换字符串。 string_replacement 可以是字符或二进制数据类型  。  
   
 ## <a name="return-types"></a>返回类型  
- 如果其中的一个输入参数数据类型为 nvarchar，则返回 nvarchar；否则 REPLACE 返回 varchar。  
+ 如果其中的一个输入参数数据类型为 nvarchar，则返回 nvarchar；否则 REPLACE 返回 varchar    。  
   
  如果任何一个参数为 NULL，则返回 NULL。  
   
- 如果 string_expression 的类型不是 varchar(max) 或 nvarchar(max)，则 REPLACE 将返回值截断为 8000 个字节。 若要返回大于 8,000 字节的值，则必须将 string_expression 显式转换为大值数据类型。  
+ 如果 string_expression 的类型不是 varchar(max) 或 nvarchar(max)，则 REPLACE 将返回值截断为 8000 个字节    。 若要返回大于 8,000 字节的值，则必须将 string_expression 显式转换为大值数据类型  。  
   
 ## <a name="remarks"></a>Remarks  
  REPLACE 根据输入的排序规则执行比较操作。 若要以指定排序规则进行比较，则可以使用 [COLLATE](~/t-sql/statements/collations.md) 将显式排序规则应用于输入。  
   
- 0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 REPLACE 中。  
+ 0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 REPLACE 中  。  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `cde` 替换 `abcdefghi` 中的字符串 `xxx`。  

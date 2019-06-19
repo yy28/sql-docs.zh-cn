@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c36a1b7235b1a323bbace94762411aa2c71df15b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65094261"
 ---
 # <a name="load-files-into-filetables"></a>将文件加载到 FileTable 中
@@ -32,7 +32,7 @@ ms.locfileid: "65094261"
 |文件的当前位置|用于迁移的选项|  
 |-------------------------------|---------------------------|  
 |文件当前存储在文件系统中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不识别文件。|由于 FileTable 显示为 Windows 文件系统中的文件夹，您可以使用移动或复制文件的任何方法轻松地将文件加载到新的 FileTable。 这些方法包括 Windows 资源管理器、包括 xcopy 和 robocopy 在内的命令行选项，以及自定义脚本或应用程序。<br /><br /> 不能将现有文件夹转换为 FileTable。|  
-|文件当前存储在文件系统中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含一个元数据表，该表中包含指向文件的指针。|第一步是使用之前提到的方法之一移动或复制文件。<br /><br /> 第二步是更新现有元数据的表以指向该文件的新位置。<br /><br /> 有关详细信息，请参阅本文中的[示例：将文件从文件系统迁移到 FileTable](#HowToMigrateFiles)。|  
+|文件当前存储在文件系统中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含一个元数据表，该表中包含指向文件的指针。|第一步是使用之前提到的方法之一移动或复制文件。<br /><br /> 第二步是更新现有元数据的表以指向该文件的新位置。<br /><br /> 有关详细信息，请参阅[示例：将文件从文件系统迁移到 FileTable](#HowToMigrateFiles)。|  
   
 ###  <a name="HowToLoadNew"></a> 如何：将文件加载到 FileTable 中  
 可通过以下方法将文件加载到 FileTable 中：  
@@ -41,7 +41,7 @@ ms.locfileid: "65094261"
   
 -   从命令提示符下、批处理文件或脚本中使用命令行选项（如 MOVE、COPY、XCOPY 或 ROBOCOPY）。  
   
--   用 C# 或 Visual Basic.NET 编写一个用于移动或复制文件的自定义应用程序。 从 System.IO 命名空间调用方法。  
+-   用 C# 或 Visual Basic.NET 编写一个用于移动或复制文件的自定义应用程序。 从 System.IO 命名空间调用方法  。  
   
 ###  <a name="HowToMigrateFiles"></a> 示例：将文件从文件系统迁移到 FileTable  
  在这种情况下，您的文件存储在文件系统中，并且您具有包含指向这些文件的指针的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的元数据表。 您要将文件移入 FileTable，然后用 FileTable UNC 路径替换元数据中每个文件的原始 UNC 路径。 [GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 函数帮助你实现这一目标。  
@@ -54,7 +54,7 @@ ms.locfileid: "65094261"
   
 2.  使用 xcopy 或类似的工具将 .jpg 文件连同目录结构一起复制到 FileTable 的根目录下。  
   
-3.  通过使用类似于以下示例的代码修复 PhotoMetadata 表中的元数据：  
+3.  通过使用类似于以下示例的代码修复 PhotoMetadata  表中的元数据：  
   
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  

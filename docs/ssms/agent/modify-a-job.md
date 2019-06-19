@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2edc2ae6f302c1d73486d20f58369c107ba6951d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105417"
 ---
 # <a name="modify-a-job"></a>Modify a Job
@@ -33,7 +33,7 @@ ms.locfileid: "65105417"
   
 **本主题内容**  
   
--   **开始之前：**   
+-   **开始之前：**  
   
     [限制和局限](#Restrictions)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "65105417"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，再展开“作业”，然后右键单击要修改的作业，再单击“属性”。  
+2.  展开“SQL Server 代理”  ，再展开“作业”  ，然后右键单击要修改的作业，再单击“属性”  。  
   
 3.  在 **“作业属性”** 对话框中，使用相应的页来更新作业的属性、步骤、计划、警报和通知。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "65105417"
   
 1.  在对象资源管理器中，连接到数据库引擎实例，然后展开该实例。  
   
-2.  在工具栏上，单击 **“新建查询”**。  
+2.  在工具栏上，单击 **“新建查询”** 。  
   
 3.  在查询窗口中，使用以下系统存储过程修改作业。  
   

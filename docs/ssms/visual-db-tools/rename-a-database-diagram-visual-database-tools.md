@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 35d97032f2764ffe128665472fa7369452c1746e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099278"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>重命名数据库关系图 (Visual Database Tools)
@@ -29,11 +29,11 @@ ms.locfileid: "65099278"
   
 ### <a name="to-rename-a-database-diagram"></a>重命名数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”  文件夹。  
   
 2.  右键单击要重命名的数据库关系图。  
   
-3.  从快捷菜单中选择“重命名”。  
+3.  从快捷菜单中选择“重命名”  。  
   
     此时，将在对象资源管理器中的关系图名称附近打开一个编辑框。  
   

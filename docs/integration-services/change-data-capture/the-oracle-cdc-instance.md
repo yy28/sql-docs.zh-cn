@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1dcaf8e01a1ebb0f2ed0d7f33988de2aec6327cc
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728495"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 实例
@@ -27,7 +27,7 @@ ms.locfileid: "65728495"
   
  下面介绍 Oracle CDC 实例执行的任务：  
   
--   **处理服务启动验证**：在启动时，CDC 实例从 xdbcdc_config 表加载其配置并且执行一系列状态验证，这些验证确保 CDC 实例持久化状态是一致的并且可以开始处理更改。  
+-   **处理服务启动验证**：在启动时，CDC 实例从 xdbcdc_config  表加载其配置并且执行一系列状态验证，这些验证确保 CDC 实例持久化状态是一致的并且可以开始处理更改。  
   
 -   **准备变更捕获**：在成功通过验证后，Oracle CDC 实例将扫描当前定义的所有捕获实例，并且准备 Oracle LogMiner 查询以及变更捕获所需的其他支持结构。 此外，Oracle 实例将重新加载上次 Oracle CDC 实例运行时保存的内部捕获状态。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "65728495"
   
     -   在单独的线程中，在 30 秒的上限内尽可能多地将内存中缓存的记录写入临时事务表（按照从最旧的事务到最新的事务的顺序），然后更新 **xdbcdc_state** 表并提交所有更改。  
   
--   **处理配置更改**：针对来自 CDC 服务的配置更改或者通过在 cdc.xdbcdc_config 表中检测到新版本来通知 Oracle CDC 实例。 大多数更改不需要重新启动 Oracle CDC 实例（例如，添加或删除捕获实例）。 但是，某些更改（例如更改 Oracle 连接字符串和访问凭据）则要求重新启动 CDC 实例。  
+-   **处理配置更改**：针对来自 CDC 服务的配置更改或者通过在 cdc.xdbcdc_config  表中检测到新版本来通知 Oracle CDC 实例。 大多数更改不需要重新启动 Oracle CDC 实例（例如，添加或删除捕获实例）。 但是，某些更改（例如更改 Oracle 连接字符串和访问凭据）则要求重新启动 CDC 实例。  
   
--   **处理恢复**：在某一 Oracle CDC 实例启动时，其内部状态将从 xdbcdc_state 和 xdbcdc_staged_transactions 表还原。 一旦状态还原后，CDC 实例将照常运行。  
+-   **处理恢复**：在某一 Oracle CDC 实例启动时，其内部状态将从 xdbcdc_state  和 xdbcdc_staged_transactions  表还原。 一旦状态还原后，CDC 实例将照常运行。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误处理](../../integration-services/change-data-capture/error-handling.md)  

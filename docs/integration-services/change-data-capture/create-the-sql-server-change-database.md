@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b9ea9d63d2303a66e56ab38774845cee73c125a4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728931"
 ---
 # <a name="create-the-sql-server-change-database"></a>创建 SQL Server 更改数据库
@@ -49,7 +49,7 @@ ms.locfileid: "65728931"
   
 1.  **更改数据库**：新的更改数据库的名称。 该数据库的名称就是您向实例提供的名称。 此只读字段显示数据库的完整路径。  
   
-2.  **创建数据库**：单击“创建数据库”可创建数据库。  
+2.  **创建数据库**：单击“创建数据库”  可创建数据库。  
   
      若要创建数据库，该登录名必须具有 `sysasmin` 服务器角色。 有关详细信息，请参阅上面的安全说明。  
   

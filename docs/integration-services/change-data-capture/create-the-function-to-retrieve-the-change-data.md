@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7890ea871365188918a2b45105848b748f5aa670
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728981"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>创建函数以检索变更数据
@@ -217,13 +217,13 @@ go
 |**__$seqval**|**binary(10)**|用于对事务中的行更改进行排序的序列值。|  
 |**__$operation**|**int**|与更改关联的数据操作语言 (DML) 操作。 可以为以下各项之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（执行更新操作前的值。）<br /><br /> 4 = 更新（执行更新操作后的值。）|  
 |**__$update_mask**|**varbinary(128)**|基于变更表的列序号的位掩码，用于标识那些发生了变更的列。 如果需要确定哪些列发生了更改，则可检查此值。|  
-|\<捕获的源表列>|不定|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中最初未指定任何列，则将返回源表中的所有列。|  
+|\<捕获的源表列> |不定|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中最初未指定任何列，则将返回源表中的所有列。|  
   
  有关详细信息，请参阅[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
 ## <a name="next-step"></a>下一步  
  在创建了用于查询变更数据的表值函数之后，下一步就是开始设计包中的数据流。  
   
- **下一个主题：**[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **下一个主题：** [检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55867a7740bd0a37d789a870ef043350b22e5376
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: bea5d805294216b796f36f3f0762b564162924dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64776271"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,16 +55,16 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  *Asym_Key_Name*  
  非对称密钥在数据库中所使用的名称。  
   
- REMOVE PRIVATE KEY   
+ REMOVE PRIVATE KEY  
  从非对称密钥中删除私钥，但不删除公钥。  
   
  WITH PRIVATE KEY  
  更改私钥的保护。  
   
- ENCRYPTION BY PASSWORD ='strongPassword'  
- 指定用于保护私钥的新密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
+ ENCRYPTION BY PASSWORD ='strongPassword'   
+ 指定用于保护私钥的新密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求  。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
   
- DECRYPTION BY PASSWORD ='oldPassword'  
+ DECRYPTION BY PASSWORD ='oldPassword'   
  指定当前用于保护私钥的旧密码。 如果私钥使用数据库主密钥进行加密，则不需要指定旧密码。  
   
 ## <a name="remarks"></a>Remarks  
@@ -82,7 +82,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
   
  若要更改非对称密钥的所有权，请使用 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  如果要删除私钥，则要求对非对称密钥具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
@@ -110,7 +110,7 @@ GO
  以下示例从私钥中删除密码保护，然后使用数据库主密钥来保护该私钥。  
   
 ```  
-OPEN MASTER KEY;  
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<database master key password>';  
 ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<enterStrongPasswordHere>' );  
 GO  

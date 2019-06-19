@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 39e43b52575b8f500b68c61eda2cb12c68406db9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106266"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -57,19 +57,19 @@ ms.locfileid: "65106266"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要修改步骤的作业的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要修改步骤的作业，然后选择“属性”。  
+4.  右键单击要修改步骤的作业，然后选择“属性”  。  
   
-5.  在“作业属性 - job\_name”对话框中的“选择页”下，选择“步骤。  
+5.  在“作业属性 - job\_name”对话框中的“选择页”下，选择“步骤     。  
   
-6.  单击“编辑”，打开“作业步骤属性 -job \_step\_name”对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性 - 新建作业步骤（“常规”页）](../../ssms/agent/job-step-properties-new-job-step-general-page.md)和[作业步骤属性 - 新建作业步骤（“高级”页）](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
+6.  单击“编辑”，打开“作业步骤属性 -job \_step\_name”  对话框   。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性 - 新建作业步骤（“常规”页）](../../ssms/agent/job-step-properties-new-job-step-general-page.md)和[作业步骤属性 - 新建作业步骤（“高级”页）](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
   
-7.  完成后，单击 **“确定”**。  
+7.  完成后，单击 **“确定”** 。  
   
-8.  在“作业属性 - job\_name”对话框中，单击“确定”。  
+8.  在“作业属性 - job\_name”  对话框中，单击“确定”   。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -77,9 +77,9 @@ ms.locfileid: "65106266"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- changes the number of retry attempts for the first step

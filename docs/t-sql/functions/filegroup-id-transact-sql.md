@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66ae36c48417c1ded4fa80491a7f90e77d4af0c1
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945958"
 ---
 # <a name="filegroupid-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
@@ -43,13 +43,13 @@ FILEGROUP_ID ( 'filegroup_name' )
 ```  
   
 ## <a name="arguments"></a>参数  
-filegroup_name 是类型 sysname 的表达式，它表示文件组 ID `FILEGROUP_ID` 将返回的文件组名称。  
+filegroup_name  是类型 sysname  的表达式，它表示文件组 ID `FILEGROUP_ID` 将返回的文件组名称。  
   
 ## <a name="return-types"></a>返回类型  
 **int**  
   
 ## <a name="remarks"></a>Remarks  
-filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应。  
+filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应    。  
   
 ## <a name="examples"></a>示例  
 此示例将返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中名为 `PRIMARY` 的文件组的文件组 ID。  

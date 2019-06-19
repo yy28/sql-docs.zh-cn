@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1488499a710c8e5ab80d46b2c2027cb93e0c54d7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719580"
 ---
 # <a name="performance-counters"></a>性能计数器
@@ -88,15 +88,15 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ### <a name="to-add-logging-of-performance-counters"></a>添加性能计数器的日志记录  
   
-1.  在 **“控制面板”** 中，如果您使用的是经典视图，请单击 **“管理工具”**。 如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”**。  
+1.  在 **“控制面板”** 中，如果您使用的是经典视图，请单击 **“管理工具”** 。 如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”** 。  
   
-2.  单击 **“性能”**。  
+2.  单击 **“性能”** 。  
   
-3.  在“性能”对话框中，展开“性能日志和警报”，右键单击“计数器日志”，再单击“新建日志设置”。 键入日志的名称。 例如，键入 **MyLog**。  
+3.  在“性能”  对话框中，展开“性能日志和警报”  ，右键单击“计数器日志”  ，再单击“新建日志设置”  。 键入日志的名称。 例如，键入 **MyLog**。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
-5.  在 **MyLog** 对话框中，单击 **“添加计数器”**。  
+5.  在 **MyLog** 对话框中，单击 **“添加计数器”** 。  
   
 6.  单击 **“使用本地计算机计数器”** 记录本地计算机上性能计数器的日志，或者单击 **“从计算机选择计数器”** ，然后从列表中选择计算机，以记录该指定的计算机的性能计数器的日志。  
   
@@ -108,15 +108,15 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
     -   选择 **“选择列表中的计数器”** ，然后选择要使用的性能计数器。  
   
-9. 单击 **“添加”**。  
+9. 单击 **“添加”** 。  
   
-10. 单击 **“关闭”**。  
+10. 单击 **“关闭”** 。  
   
 11. 在 **MyLog** 对话框中，检查 **“计数器”** 列表中记录日志的性能计数器的列表。  
   
 12. 若要添加其他计数器，请重复步骤 5 到步骤 10。  
   
-13. 单击“确定” 。  
+13. 单击“确定”  。  
   
     > [!NOTE]  
     >  必须使用属于 Administrators 组成员的本地帐户或域帐户启动性能日志和警报服务。  

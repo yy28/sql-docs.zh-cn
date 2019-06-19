@@ -19,10 +19,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 9b98e7250f6cea54401ba533c769ab2be0bc82cf
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577573"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
@@ -43,7 +43,7 @@ ISJSON ( expression )
  要测试的字符串。  
   
 ## <a name="return-value"></a>返回值  
- 如果字符串包含有效 JSON，则返回 1；否则，返回 0。 如果 expression 为 NULL，则返回 NULL。  
+ 如果字符串包含有效 JSON，则返回 1；否则，返回 0。 如果 expression  为 NULL，则返回 NULL。  
   
  不返回错误。  
   

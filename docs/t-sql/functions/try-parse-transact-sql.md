@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50c1c88525c096e5b573236c569b9e15d703a60f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946880"
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
@@ -40,18 +40,18 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- string_value  
- nvarchar(4000) 值，表示要分析为指定数据类型的格式化值。  
+ string_value   
+ nvarchar(4000) 值，表示要分析为指定数据类型的格式化值  。  
   
- string_value 必须为所请求的数据类型的有效表示形式，否则 TRY_PARSE 将返回 Null。  
+ string_value 必须为所请求的数据类型的有效表示形式，否则 TRY_PARSE 将返回 Null  。  
   
- data_type  
+ data_type   
  表示结果的所请求数据类型的文本。  
   
- culture  
- 可选字符串，它标识对 string_value 进行格式化的区域性。  
+ culture   
+ 可选字符串，它标识对 string_value 进行格式化的区域性  。  
   
- 如果未提供 culture 参数，则使用当前会话的语言。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言。 如果 culture 参数无效，PARSE 将引发错误。  
+ 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言  。 如果 culture 参数无效，PARSE 将引发错误  。  
   
 ## <a name="return-types"></a>返回类型  
  返回表达式的结果（已转换为请求的数据类型）；如果强制转换失败，则返回 Null。  
@@ -65,7 +65,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
  **有关 data_type 参数的详细信息**  
   
- data_type 参数的值局限于下表中显示的类型以及样式。 提供的样式信息有助于确定允许使用哪些类型的模式。 有关样式的详细信息，请参阅 System.Globalization.NumberStyles 和 DateTimeStyles 枚举的 .NET Framework 文档。  
+ data_type 参数的值局限于下表中显示的类型以及样式  。 提供的样式信息有助于确定允许使用哪些类型的模式。 有关样式的详细信息，请参阅 System.Globalization.NumberStyles 和 DateTimeStyles 枚举的 .NET Framework 文档   。  
   
 |类别|类型|.NET 类型|使用的样式|  
 |--------------|----------|---------------|-----------------|  

@@ -15,10 +15,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65779252"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
@@ -247,7 +247,7 @@ FROM sys.database_query_store_options;
   
  如果问题仍然存在，则表明磁盘上的查询存储数据已永久损坏。
  
- 对于 SQL 2017 及更高版本，可通过在受影响的数据库内执行 sp_query_store_consistency_check 存储过程来恢复查询存储。 对于 SQL 2016，需要从查询存储中清除数据，如下所示。
+ 对于 SQL 2017 及更高版本，可通过在受影响的数据库内执行 sp_query_store_consistency_check  存储过程来恢复查询存储。 对于 SQL 2016，需要从查询存储中清除数据，如下所示。
  
  如果没有效果，可在请求读写模式之前尝试清除查询存储。  
   
@@ -295,11 +295,11 @@ FROM sys.database_query_store_options;
 
 -   适用时，将查询参数化（例如，在存储过程或 sp_executesql 中包装查询）。 有关详细信息，请参阅[参数和执行计划重用](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)。    
   
--   如果工作负载包含许多一次性使用的临时批处理且查询计划各不相同，请使用“[针对临时工作负载进行优化](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)”选项。  
+-   如果工作负载包含许多一次性使用的临时批处理且查询计划各不相同，请使用“[针对临时工作负载进行优化](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)”  选项。  
   
     -   将不同 query_hash 值的数目与 sys.query_store_query 中项的总数进行比较。 如果该比率接近 1，则说明你的即席工作负荷生成了不同的查询。  
   
--   如果不同查询计划的数量不多，请对数据库或部分查询应用“[强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)”。  
+-   如果不同查询计划的数量不多，请对数据库或部分查询应用“[强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)”  。  
   
     -   请参阅[计划指南](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)，仅对选定查询强制执行参数化操作。  
   
@@ -325,7 +325,7 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- 有关原因的完整列表，请参阅 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 你还可以使用 query_store_plan_forcing_failed XEvent 来跟踪和故障排除计划强制失败情况。  
+ 有关原因的完整列表，请参阅 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 你还可以使用 query_store_plan_forcing_failed  XEvent 来跟踪和故障排除计划强制失败情况。  
   
 ##  <a name="Renaming"></a> 避免在使用强制计划执行查询时重命名数据库  
 

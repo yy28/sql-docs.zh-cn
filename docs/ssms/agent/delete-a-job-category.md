@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7478ea0fae6d1859407fd071ce205aeebdc5385e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096914"
 ---
 # <a name="delete-a-job-category"></a>删除作业类别
@@ -65,17 +65,17 @@ ms.locfileid: "65096914"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开您想要在其中删除作业类别的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
-3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
+3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”** 。  
   
-4.  在“管理作业类别 _server\_name_”对话框中，选择要删除的作业类别。  
+4.  在“管理作业类别  _server\_name_”对话框中，选择要删除的作业类别。  
   
-5.  单击 **“删除”**。  
+5.  单击 **“删除”** 。  
   
-6.  在 **“作业类别”** 对话框中，单击 **“是”**。  
+6.  在 **“作业类别”** 对话框中，单击 **“是”** 。  
   
-7.  关闭“管理作业类别 _server\_name_”对话框。  
+7.  关闭“管理作业类别  _server\_name_”对话框。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -83,9 +83,9 @@ ms.locfileid: "65096914"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- deletes the job category named AdminJobs.  

@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 785f7f0af9a41052a870edc8feaf566585a45e89
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725974"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
@@ -78,7 +78,7 @@ ms.locfileid: "65725974"
  指定要使用内部联接、左外部联接还是完全联接。  
   
  **交换输入**  
- 通过使用“交换输入”按钮来交换输入的顺序。 对于左外部联接选项，此选项可能有用。  
+ 通过使用“交换输入”  按钮来交换输入的顺序。 对于左外部联接选项，此选项可能有用。  
   
  **输入**  
  对于要在合并的输出中包含的每个列，请首先从可用输入列表中相应地进行选择。  

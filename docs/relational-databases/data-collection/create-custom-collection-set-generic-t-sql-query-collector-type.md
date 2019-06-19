@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7184a6d2e3f10889233f6ed4b2057755dc9bdd72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610431"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653434"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>创建自定义收集组 - 一般 T-SQL 查询收集器类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47610431"
     GO  
     ```  
   
-     您还可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中执行目视检查。 在对象资源管理器中，展开 **“管理”** 节点，然后展开 **“数据收集”**。 新的收集组将显示。 收集组的红色圆圈图标指示该收集组已停止。  
+     您还可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中执行目视检查。 在对象资源管理器中，展开 **“管理”** 节点，然后展开 **“数据收集”** 。 新的收集组将显示。 收集组的红色圆圈图标指示该收集组已停止。  
   
 ## <a name="example"></a>示例  
  下面的代码示例汇集了上面步骤中记录的示例。 请注意，为收集项设置的收集频率（5 秒钟）将被忽略，因为收集组的收集模式设置为 0，即缓存模式。 有关详细信息，请参阅 [Data Collection](../../relational-databases/data-collection/data-collection.md)。  

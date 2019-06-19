@@ -13,10 +13,10 @@ ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
 ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983120"
 ---
 # <a name="get-full-memory-dump"></a>获取完整内存转储

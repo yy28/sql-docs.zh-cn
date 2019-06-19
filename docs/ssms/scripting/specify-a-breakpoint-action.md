@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 011dcadf2fba4343ae5b0a4642d243faabc6ea3c
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821192"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定断点操作
@@ -50,11 +50,11 @@ ms.locfileid: "65821192"
   
 #### <a name="to-specify-a-when-hit-action"></a>指定命中条件操作  
   
-1.  在编辑器窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”。  
+1.  在编辑器窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”  。  
   
      -或 -  
   
-     在“断点”窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”。  
+     在“断点”  窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”  。  
   
 2.  在 **“当命中断点时”** 对话框中，选择您需要的行为：  
   

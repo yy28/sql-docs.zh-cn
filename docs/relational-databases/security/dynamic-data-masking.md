@@ -12,10 +12,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 06a6ef378e621d055d039d22ea023d8d0d68f25b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088988"
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
@@ -63,7 +63,7 @@ ms.locfileid: "65088988"
   
 -   使用 `SELECT INTO` 或 `INSERT INTO` 将数据从经过屏蔽的列复制到另一表中会导致目标表中显示屏蔽的数据。  
   
--   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出时，将应用动态数据屏蔽。 数据库包含已掩码的列将导致导出的数据文件也包含已掩码的数据（假定该文件是由没有 UNMASK 特权的用户导出的），并且导入的数据库将包含已静态掩码的数据。  
+-   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出时，将应用动态数据屏蔽。 数据库包含已掩码的列将导致导出的数据文件也包含已掩码的数据（假定该文件是由没有 UNMASK 特权的用户导出的），并且导入的数据库将包含已静态掩码的数据  。  
   
 ## <a name="querying-for-masked-columns"></a>查询屏蔽列  
  使用 **sys.masked_columns** 视图可查询对其应用了屏蔽函数的表列。 该视图继承自 **sys.columns** 视图。 该视图会返回 **sys.columns** 视图中的所有列，以及 **is_masked** 和 **masking_function** 列，表明该列是否被屏蔽，以及在该列被屏蔽的情况下定义了什么屏蔽函数。 该视图仅显示在其上应用了屏蔽函数的列。  

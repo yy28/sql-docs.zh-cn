@@ -14,10 +14,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 63043009d9c908ad5edc3771e5d353cf2f66b010
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821926"
 ---
 # <a name="specify-a-breakpoint-condition"></a>指定断点条件
@@ -31,18 +31,18 @@ ms.locfileid: "65821926"
   
 #### <a name="to-specify-a-condition"></a>指定条件  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“条件”。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“条件”  。  
   
      -或 -  
   
-     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单上的“条件”。  
+     在“断点”  窗口中，右键单击断点符号，然后单击快捷菜单上的“条件”  。  
   
 2.  在 **“断点条件”** 对话框中，在 **“条件”** 框中输入一个有效的布尔表达式。  
   
-3.  如果希望在表达式的计算结果为 **true** 时断开，则选择 **“为 true”**，如果希望在表达式的值发生更改时断开，则选择 **“已更改”** 。  
+3.  如果希望在表达式的计算结果为 **true** 时断开，则选择 **“为 true”** ，如果希望在表达式的值发生更改时断开，则选择 **“已更改”** 。  
   
     > [!NOTE]  
-    >  在第一次到达断点之前，调试器不会计算布尔表达式。 如果选择 **“已更改”**，则调试器不会将第一次计算视为一项更改，因此不会在第一次计算时中断。  
+    >  在第一次到达断点之前，调试器不会计算布尔表达式。 如果选择 **“已更改”** ，则调试器不会将第一次计算视为一项更改，因此不会在第一次计算时中断。  
   
 ## <a name="see-also"></a>另请参阅  
  [指定命中计数](../../relational-databases/scripting/specify-a-hit-count.md)   

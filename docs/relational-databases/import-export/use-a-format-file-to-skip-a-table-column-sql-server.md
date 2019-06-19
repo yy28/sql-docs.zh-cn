@@ -16,10 +16,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cbadda2e3843fc4b15a5ebc2e5ec57a1c76cbf2b
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946192"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式化文件跳过表列 (SQL Server)
@@ -56,7 +56,7 @@ GO
 
 可以使用非 XML 格式化文件或 XML 格式化文件跳过表列。 这两种情况都可通过两步完成：
 
-1.   使用 bcp 命令行实用工具创建默认格式化文件。
+1.   使用 bcp  命令行实用工具创建默认格式化文件。
 
 2.   在文本编辑器中修改默认格式化文件。
 
@@ -67,7 +67,7 @@ GO
 ## <a name="option-1---use-a-non-xml-format-file"></a>选项 #1 - 使用非 XML 格式化文件  
   
 ### <a name="step-1---create-a-default-non-xml-format-file"></a>步骤 #1 - 创建默认非 XML 格式化文件  
-在命令提示符下运行以下 bcp 命令为 `myTestSkipCol` 示例表创建默认非 XML 格式化文件：  
+在命令提示符下运行以下 bcp  命令为 `myTestSkipCol` 示例表创建默认非 XML 格式化文件：  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
@@ -141,7 +141,7 @@ GO
   
 ### <a name="step-1---create-a-default-xml-format-file"></a>步骤 #1 - 创建默认 XML 格式化文件   
 
-在命令提示符下运行以下 bcp 命令为 `myTestSkipCol` 示例表创建默认 XML 格式化文件：  
+在命令提示符下运行以下 bcp  命令为 `myTestSkipCol` 示例表创建默认 XML 格式化文件：  
   
 ```cmd
 bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
@@ -196,7 +196,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
 #### <a name="using-bulk-insert-with-a-view"></a>对视图使用 BULK INSERT  
 
-使用 XML 格式化文件时，你无法在通过 bcp 命令或 `BULK INSERT` 语句直接向表导入内容时跳过列。 但是，您可以向表中除最后一列的所有列导入。 如果必须跳过最后一列以外的任何列，必须创建仅包含数据文件所含列的目标表视图。 然后，您可以将此文件中的数据大容量导入此视图。  
+使用 XML 格式化文件时，你无法在通过 bcp  命令或 `BULK INSERT` 语句直接向表导入内容时跳过列。 但是，您可以向表中除最后一列的所有列导入。 如果必须跳过最后一列以外的任何列，必须创建仅包含数据文件所含列的目标表视图。 然后，您可以将此文件中的数据大容量导入此视图。  
   
 下面的示例在 `myTestSkipCol` 表上创建 `v_myTestSkipCol` 视图。 此视图跳过第二表列 `Col2`。 然后此例使用 `BULK INSERT` 将 `myTestSkipCol2.dat` 数据文件导入此视图。  
   

@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: aab93a133a8dcfeaea96ffa1886ccfcb20936f95
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947475"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
@@ -49,20 +49,20 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>参数
 
  *string*  
- 任何字符类型（例如 nvarchar、varchar、nchar 或 char）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 任何字符类型（例如 nvarchar、varchar、nchar 或 char）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)     。  
   
- separator  
- 任何字符类型（例如 nvarchar(1)、varchar(1)、nchar(1) 或 char(1)）的单字符[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联子字符串的分隔符。  
+ separator   
+ 任何字符类型（例如 nvarchar(1)、varchar(1)、nchar(1) 或 char(1)）的单字符[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用作串联子字符串的分隔符     。  
   
 ## <a name="return-types"></a>返回类型  
 
-返回其行是子字符串的单列表。 该列名为“value”。 如果任何输入参数为 nvarchar 或 nchar，则返回 nvarchar。 否则，返回 varchar。 返回类型的长度与字符串参数的长度相同。  
+返回其行是子字符串的单列表。 该列名为“value”  。 如果任何输入参数为 nvarchar 或 nchar，则返回 nvarchar    。 否则，返回 varchar  。 返回类型的长度与字符串参数的长度相同。  
   
 ## <a name="remarks"></a>Remarks  
 
-STRING_SPLIT 输入包含分隔子字符串的字符串，并输入一个字符用作分隔符。 STRING_SPLIT 输出其行包含子字符串的单列表。 输出列的名称为“value”。
+STRING_SPLIT 输入包含分隔子字符串的字符串，并输入一个字符用作分隔符  。 STRING_SPLIT 输出其行包含子字符串的单列表。 输出列的名称为“value”  。
 
-输出行可以按任意顺序排列。 顺序不保证与输入字符串中的子字符串顺序匹配。 可以通过在 SELECT 语句中使用 ORDER BY 子句覆盖最终排序顺序 (`ORDER BY value`)。
+输出行可以按任意顺序排列。 顺序不保证与输入字符串中的子字符串顺序匹配  。 可以通过在 SELECT 语句中使用 ORDER BY 子句覆盖最终排序顺序 (`ORDER BY value`)。
 
 当输入字符串包含两个或多个连续出现的分隔符字符时，将出现长度为零的空子字符串。 空子字符串的处理方式与普通子字符串相同。 可以通过使用 WHERE 子句筛选出包含空的子字符串的任何行 (`WHERE value <> ''`)。 如果输入字符串为 NULL，则 STRING_SPLIT 表值函数返回一个空表。  
 
@@ -130,7 +130,7 @@ FROM Product
 |3|HL Mountain Frame|mountain|  
 
   >[!NOTE]
-  > 输出的顺序不保证与输入字符串中的子字符串顺序匹配。
+  > 输出的顺序不保证与输入字符串中的子字符串顺序匹配  。
   
 ### <a name="c-aggregation-by-values"></a>C. 按值聚合
 

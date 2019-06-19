@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 71d0710d479c4654549b6ec579102891c94f900e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947836"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
@@ -46,17 +46,17 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- Asym_Key_ID  
- 当前数据库中非对称密钥的 ID。 Asym_Key_ID 的数据类型为 int。  
+ Asym_Key_ID   
+ 当前数据库中非对称密钥的 ID。 Asym_Key_ID 的数据类型为 int   。  
   
  **@plaintext**  
- 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含将使用非对称密钥进行签名的数据。  
+ 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含将使用非对称密钥进行签名的数据     。  
   
- password  
- 用于保护私钥的密码。 password 的数据类型为 nvarchar(128)。  
+ password   
+ 用于保护私钥的密码。 password 的数据类型为 nvarchar(128)   。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）。  
+ varbinary（最大大小为 8000 个字节）  。  
   
 ## <a name="remarks"></a>Remarks  
  需要对非对称密钥具有 CONTROL 权限。  

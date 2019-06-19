@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f7449741ac1c29595700c116118598a1b9cedf4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981622"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+（字符串串联）(Transact-SQL)
@@ -44,7 +44,7 @@ expression + expression
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 字符和二进制数据类型类别中的任何一个数据类型的有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，但 image、ntext 或 text 数据类型除外。 两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。  
+ 字符和二进制数据类型类别中的任何一个数据类型的有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，但 image、ntext 或 text 数据类型除外    。 两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。  
   
  在二进制字符串之间串联二进制字符串和任何字符串时，必须显式转换字符数据。 以下示例显示了对于二进制串联，何时必须使用 `CONVERT` 或 `CAST`，何时不需要使用 `CONVERT` 或 `CAST`。  
   
@@ -87,7 +87,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```  
   
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. 组合数值和日期数据类型  
- 以下示例使用 `CONVERT` 函数串联 numeric 和 date 数据类型。  
+ 以下示例使用 `CONVERT` 函数串联 numeric 和 date 数据类型   。  
   
 ```sql  
 -- Uses AdventureWorks  

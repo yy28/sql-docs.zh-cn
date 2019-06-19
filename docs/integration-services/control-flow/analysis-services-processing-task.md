@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01e5fa146c49d1fd43b2fac8fda419dec412fee6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728075"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
@@ -85,7 +85,7 @@ ms.locfileid: "65728075"
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 处理任务编辑器（“常规”页）
-  可以使用“Analysis Services 处理任务编辑器”对话框的“常规”页，对 Analysis Services 处理任务进行命名和说明。  
+  可以使用“Analysis Services 处理任务编辑器”对话框的“常规”页，对 Analysis Services 处理任务进行命名和说明   。  
   
 ### <a name="options"></a>选项  
  **名称**  
@@ -112,12 +112,12 @@ ms.locfileid: "65728075"
   
 ### <a name="options"></a>选项  
  **Analysis Services 连接管理器**  
- 从列表中选择现有的 Analysis Services 连接管理器，或单击“新建”以创建新的连接管理器。  
+ 从列表中选择现有的 Analysis Services 连接管理器，或单击  “新建”以创建新的连接管理器。  
   
  **新建**  
  创建新的 Analysis Services 连接管理器。  
   
- **相关主题：**[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **相关主题：** [Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **对象列表**  
  |属性|描述|  
@@ -131,12 +131,12 @@ ms.locfileid: "65728075"
  将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象添加到列表中。  
   
  **删除**  
- 选择对象，再单击“删除”。  
+ 选择对象，再单击“删除”  。  
   
  **影响分析**  
  对所选对象进行影响分析。  
   
- **相关主题：**[“影响分析”对话框（Analysis Services - 多维数据）](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **相关主题：** [“影响分析”对话框（Analysis Services - 多维数据）](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **批设置摘要**  
  |属性|描述|  
@@ -150,5 +150,5 @@ ms.locfileid: "65728075"
  **更改设置**  
  更改处理选项以及对维度键中错误的处理方式。  
   
- **相关主题：**[“更改设置”对话框（Analysis Services - 多维数据）](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **相关主题：** [“更改设置”对话框（Analysis Services - 多维数据）](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   

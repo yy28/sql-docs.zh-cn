@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718279"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 故障排除
@@ -40,7 +40,7 @@ SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和
 ### <a name="solution"></a>解决方案
 1.  检查是否已启用 Scale Out。
 
-    在 SSMS 的对象资源管理器中，右键单击“SSISDB”，然后选中“启用 Scale Out 功能”。
+    在 SSMS 的对象资源管理器中，右键单击“SSISDB”，然后选中“启用 Scale Out 功能”   。
 
     ![是否已启用 Scale Out](media/isenabled.PNG)
 
@@ -66,7 +66,7 @@ SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和
 
 ### <a name="symptoms"></a>症状
 
-“System.ServiceModel.EndpointNotFoundException：可接受消息的 https://[MachineName]:[Port]/ClusterManagement/ 下无任何终结点侦听。”
+“System.ServiceModel.EndpointNotFoundException：可接受消息的 https://[MachineName]:[Port]/ClusterManagement/ 下无任何终结点侦听。”* 
 
 ### <a name="solution"></a>解决方案
 
@@ -81,11 +81,11 @@ SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和
 ## <a name="could-not-establish-trust-relationship"></a>无法建立信任关系
 
 ### <a name="symptoms"></a>症状
-“System.ServiceModel.Security.SecurityNegotiationException: 无法使用授权 '[Machine Name]:[Port]' 与 SSL/TLS 安全通道建立信任关系。”。
+“System.ServiceModel.Security.SecurityNegotiationException:  无法使用授权 '[Machine Name]:[Port]' 与 SSL/TLS 安全通道建立信任关系。”。
 
-“System.Net.WebException:已关闭基础连接：无法与 SSL/TLS 安全通道建立信任关系。”
+“System.Net.WebException:已关闭基础连接：无法与 SSL/TLS 安全通道建立信任关系。”*
 
-“System.Security.Authentication.AuthenticationException:根据验证过程，远程证书无效。”
+“System.Security.Authentication.AuthenticationException:根据验证过程，远程证书无效。”*
 
 ### <a name="solution"></a>解决方案
 1.  如果尚未安装 Scale Out Master 证书，请将其安装到 Scale Out Worker 节点上本地计算机的根证书存储中，然后重启 Scale Out Worker 服务。
@@ -101,9 +101,9 @@ SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和
 
 ### <a name="symptoms"></a>症状
 
-“System.ServiceModel.Security.SecurityNegotiationException:无法使用授权 '[Machine Name]:[Port]' 与 SSL/TLS 建立安全通道。”
+“System.ServiceModel.Security.SecurityNegotiationException:无法使用授权 '[Machine Name]:[Port]' 与 SSL/TLS 建立安全通道。”*
 
-“System.Net.WebException:请求已中止：无法创建 SSL/TLS 安全通道。”
+“System.Net.WebException:请求已中止：无法创建 SSL/TLS 安全通道。”*
 
 ### <a name="solution"></a>解决方案
 通过运行以下命令，检查运行 Scale Out Worker 服务的帐户是否有权访问 Scale Out Worker 证书：
@@ -122,9 +122,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>症状
 
-“System.ServiceModel.Security.MessageSecurityException:HTTP 请求已使用客户端身份验证方案 'Anonymous' 禁止。”
+“System.ServiceModel.Security.MessageSecurityException:HTTP 请求已使用客户端身份验证方案 'Anonymous' 禁止。”*
 
-“System.Net.WebException:远程服务器返回了错误：(403) 已禁止。”
+“System.Net.WebException:远程服务器返回了错误：(403) 已禁止。”*
 
 ### <a name="solution"></a>解决方案
 1.  如果尚未安装 Scale Out Worker 证书，请将其安装到 Scale Out Master 节点上本地计算机的根证书存储中，然后重启 Scale Out Worker 服务。
@@ -177,7 +177,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ## <a name="cannot-open-certificate-store"></a>无法打开证书存储
 
 ### <a name="symptoms"></a>症状
-在 Scale Out Manager 中，Scale Out Worker 连接到 Scale Out Master 时验证失败，并收到错误消息：“无法打开计算机上的证书存储”。
+在 Scale Out Manager 中，Scale Out Worker 连接到 Scale Out Master 时验证失败，并收到错误消息：“无法打开计算机上的证书存储”  。
 
 ### <a name="solution"></a>解决方案
 
@@ -212,9 +212,9 @@ Scale Out 中“执行”不启动。
 包执行报告中的错误消息不充足，无法进行故障排除。
 
 ### <a name="solution"></a>解决方案
-可在 `WorkerSettings.config` 中配置的 `TasksRootFolder` 下找到更多执行日志。 默认情况下，此文件夹为 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`。 [account] 是运行 Scale Out Worker 服务的帐户，其默认值为 `SSISScaleOutWorker140`。
+可在 `WorkerSettings.config` 中配置的 `TasksRootFolder` 下找到更多执行日志。 默认情况下，此文件夹为 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`。 [account] 是运行 Scale Out Worker 服务的帐户，其默认值为 `SSISScaleOutWorker140`  。
 
-要为执行 ID 为 [execution ID] 的包查找日志，请执行以下 Transact-SQL 命令，获取 [task ID]（任务 ID）。 然后，在 `TasksRootFolder` 下查找包含 [task ID] 的子文件夹名称。
+要为执行 ID 为 [execution ID] 的包查找日志，请执行以下 Transact-SQL 命令，获取 [task ID]（任务 ID）   。 然后，在 `TasksRootFolder` 下查找包含 [task ID] 的子文件夹名称  。
 
 ```sql
 SELECT [TaskId]

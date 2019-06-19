@@ -15,10 +15,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab0a3bff6159d098ce8a53631e4f4da49f81fba9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980157"
 ---
 # <a name="variables-transact-sql"></a>变量 (Transact-SQL)
@@ -31,7 +31,7 @@ Transact-SQL 局部变量是可以保存单个特定类型数据值的对象。 
 * 保存存储过程返回代码要返回的数据值或函数返回值。
 
 > [!NOTE]
-> 一些 Transact-SQL 系统函数的名称以两个 at 符号 (\@\@) 开头。 尽管在旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@函数称为全局变量，但它们不是变量，不具有等同于变量的行为。 \@\@函数是系统函数，语法遵循函数规则。
+> 一些 Transact-SQL 系统函数的名称以两个 at  符号 (\@\@) 开头。 尽管在旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@函数称为全局变量，但它们不是变量，不具有等同于变量的行为。 \@\@函数是系统函数，语法遵循函数规则。
 
 以下脚本创建一个小的测试表并向其填充 26 行。 脚本使用变量来执行下列三个操作： 
 
@@ -86,13 +86,13 @@ DECLARE 语句通过以下操作初始化 Transact-SQL 变量：
 * 指定系统提供的或用户定义的数据类型和长度。 对于数值变量还指定精度和小数位数。 对于 XML 类型的变量，可以指定一个可选的架构集合。
 * 将值设置为 NULL。
 
-例如，下面的 DECLARE语句创建名为 \@mycounter 且数据类型为 int 的局部变量。  
+例如，下面的 DECLARE  语句创建名为 \@mycounter  且数据类型为 int 的局部变量。  
 ```sql
 DECLARE @MyCounter int;
 ```
 若要声明多个局部变量，请在定义的第一个局部变量后使用一个逗号，然后指定下一个局部变量名称和数据类型。
 
-例如，下面的 DECLARE 语句创建了三个局部变量，分别名为 \@LastName、\@FirstName 和 \@StateProvince，并将每个变量都初始化为 NULL：  
+例如，下面的 DECLARE  语句创建了三个局部变量，分别名为 \@LastName  、\@FirstName  和 \@StateProvince  ，并将每个变量都初始化为 NULL：  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -162,7 +162,7 @@ GO
 > [!WARNING]
 > 如果在单个 SELECT 语句中有多个赋值子句，则 SQL Server 不保证表达式求值的顺序。 请注意，只有当赋值之间有引用时才能看到影响。
 
-如果 SELECT 语句返回多行而且变量引用一个非标量表达式，则会将变量设置为结果集最后一行中表达式的返回值。 例如，在下面的批处理中，\@EmpIDVariable 设置为返回的最后一行的 BusinessEntityID 值，即为 1：  
+如果 SELECT 语句返回多行而且变量引用一个非标量表达式，则会将变量设置为结果集最后一行中表达式的返回值。 例如，在下面的批处理中，\@EmpIDVariable  设置为返回的最后一行的 BusinessEntityID  值，即为 1：  
 
 ```sql
 USE AdventureWorks2014;

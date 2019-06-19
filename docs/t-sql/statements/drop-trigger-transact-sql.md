@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 541bdcde5841394c3a28428a9e21ae4797e75fd4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62684366"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ON ALL SERVER
   
  有关查看现有触发器列表的详细信息，请参阅 [sys.triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 和 [sys.server_triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要删除 DML 触发器，需要具有对于定义该触发器所在的表或视图的 ALTER 权限。  
   
  若要删除定义了服务器范围 (ON ALL SERVER) 的 DDL 触发器或删除登录触发器，需要对服务器拥有 CONTROL SERVER 权限。 若要删除定义了数据库范围 (ON DATABASE) 的 DDL 触发器，要求在当前数据库中具有 ALTER ANY DATABASE DDL TRIGGER 权限。  

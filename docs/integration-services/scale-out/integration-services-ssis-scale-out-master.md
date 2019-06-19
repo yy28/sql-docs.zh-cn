@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 51c2efbde3a87c85722022b9114354e8f57d8c9d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718555"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
@@ -68,7 +68,7 @@ Scale Out Master 服务是一项 Windows 服务，负责与 Scale Out Worker 的
 
 Scale Out Master 服务日志文件位于 `<drive>:\Users\[account]\AppData\Local\SSIS\ScaleOut\Master` 文件夹。 
 
-[account] 参数指运行 Scale Out Master 服务的帐户。 默认情况下，此帐户为 `SSISScaleOutMaster140`。
+[account] 参数指运行 Scale Out Master 服务的帐户  。 默认情况下，此帐户为 `SSISScaleOutMaster140`。
 
 ## <a name="next-steps"></a>后续步骤
 

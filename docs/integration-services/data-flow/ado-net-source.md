@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1906329a1add4d7484011816a210ef85fa2ec5a6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727243"
 ---
 # <a name="ado-net-source"></a>ADO NET 源
@@ -45,7 +45,7 @@ ms.locfileid: "65727243"
   
  通过在 ADO NET 源之后使用数据转换，还可以将 DT_NTEXT 数据类型转换为 DT_BYTES 或 DT_STR 数据类型。 有关详细信息，请参阅 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
- 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，日期数据类型 DT_DBDATE、DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的某些日期数据类型。 您可以配置 ADO NET 源，从而将日期数据类型从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的数据类型转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的数据类型。 若要配置 ADO NET 源以便转换这些日期数据类型，请将 **连接管理器的** Type System Version [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 属性设置为 **Latest**。 （**Type System Version** 属性位于“连接管理器”对话框的“全部”页。 若要打开“连接管理器”对话框，请右键单击 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器，然后单击“编辑”。  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，日期数据类型 DT_DBDATE、DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的某些日期数据类型。 您可以配置 ADO NET 源，从而将日期数据类型从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的数据类型转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的数据类型。 若要配置 ADO NET 源以便转换这些日期数据类型，请将 **连接管理器的** Type System Version [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 属性设置为 **Latest**。 （**Type System Version** 属性位于“连接管理器”  对话框的“全部”  页。 若要打开“连接管理器”  对话框，请右键单击 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器，然后单击“编辑”  。  
   
 > [!NOTE]  
 >  如果将 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器的 **Type System Version** 属性设置为**SQL Server 2005**，则系统会将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期数据类型转换为 DT_WSTR。  
@@ -102,16 +102,16 @@ ms.locfileid: "65727243"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 ADO NET 源。  
+2.  在“数据流”  选项卡上，双击 ADO NET 源。  
   
-3.  在 **“ADO NET 源编辑器”** 中，单击 **“连接管理器”**。  
+3.  在 **“ADO NET 源编辑器”** 中，单击 **“连接管理器”** 。  
   
 ### <a name="static-options"></a>静态选项  
  **ADO.NET 连接管理器**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 使用“配置 ADO.NET 连接管理器”对话框创建新的连接管理器。  
+ 使用“配置 ADO.NET 连接管理器”  对话框创建新的连接管理器。  
   
  **数据访问模式**  
  指定从源选择数据的方法。  
@@ -122,7 +122,7 @@ ms.locfileid: "65727243"
 |SQL 命令|使用 SQL 查询从 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据源中检索数据。|  
   
  **预览**  
- 通过使用“数据视图”对话框预览结果。 **预览版** 最多可以显示 200 行。  
+ 通过使用“数据视图”  对话框预览结果。 **预览版** 最多可以显示 200 行。  
   
 > [!NOTE]  
 >  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值“\<数值太大，无法显示>”或 System.Byte[]。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
@@ -135,16 +135,16 @@ ms.locfileid: "65727243"
   
 #### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。  
+ 输入 SQL 查询的文本，通过单击“生成查询”  来生成查询，或通过单击“浏览”  定位到包含查询文本的文件。  
   
  **生成查询**  
- 使用“查询生成器”对话框可直观地构造 SQL 查询。  
+ 使用“查询生成器”  对话框可直观地构造 SQL 查询。  
   
  **“浏览”**  
- 使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
+ 使用“打开”  对话框可定位到包含 SQL 查询文本的文件。  
   
 ## <a name="ado-net-source-editor-columns-page"></a>ADO NET 源编辑器（“列”页）
-  可以使用“ADO NET 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
+  可以使用“ADO NET 源编辑器”  对话框的“列”  页，将输出列映射到每个外部（源）列。  
   
  若要了解有关 ADO NET 源的详细信息，请参阅 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)。  
   
@@ -152,9 +152,9 @@ ms.locfileid: "65727243"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 ADO NET 源。  
+2.  在“数据流”  选项卡上，双击 ADO NET 源。  
   
-3.  在 **“ADO NET 源编辑器”** 中，单击 **“列”**。  
+3.  在 **“ADO NET 源编辑器”** 中，单击 **“列”** 。  
   
 ### <a name="options"></a>选项  
  **可用外部列**  
@@ -175,21 +175,21 @@ ms.locfileid: "65727243"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 ADO NET 源。  
+2.  在“数据流”  选项卡上，双击 ADO NET 源。  
   
-3.  在 **“ADO NET 源编辑器”** 中，单击 **“错误输出”**。  
+3.  在 **“ADO NET 源编辑器”** 中，单击 **“错误输出”** 。  
   
 ### <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   
  **列**  
- 查看在“ADO NET 源编辑器”对话框的“连接管理器”页上选择的外部（源）列。  
+ 查看在“ADO NET 源编辑器”对话框的“连接管理器”页上选择的外部（源）列   。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  

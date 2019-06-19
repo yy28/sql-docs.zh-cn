@@ -12,11 +12,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6e2d5c2e408b6899520aa3ec1185808ef6b0c2d8
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305865"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716634"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>将搜索功能所使用的断字符还原到以前的版本
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "58305865"
     > [!WARNING]  
     >  此更改影响在当前版本和以前版本中均使用 NaturalLanguage6.dll 的所有语言。  
   
-5.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID.  
+5.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID  .  
   
 6.  使用以下步骤添加 COM ClassID 的新键，用于所选语言的以前的断字符和词干分析器接口：  
   
@@ -166,7 +166,7 @@ ms.locfileid: "58305865"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的以前的词干分析器的文件名。  
   
-7.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+7.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>  。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 8.  将 **WBreakerClass** 键值更新为来自当前断字符的表的值。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "58305865"
     > [!WARNING]  
     >  此更改影响在当前版本和以前版本中均使用 NaturalLanguage6.dll 的所有语言。  
   
-3.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID.  
+3.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID  .  
   
 4.  如果以下键不存在，则使用以下步骤为所选语言的当前断字符和词干分析器接口的 COM ClassID 添加新键：  
   
@@ -195,7 +195,7 @@ ms.locfileid: "58305865"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的当前词干分析器的文件名。  
   
-5.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+5.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>  。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 6.  将 **WBreakerClass** 键值更新为来自以前断字符的表的值。  
   
@@ -275,7 +275,7 @@ ms.locfileid: "58305865"
   
 1.  不要从 Binn 文件夹中删除组件的当前版本的文件。  
   
-2.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID.  
+2.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID  .  
   
 3.  使用以下步骤添加 COM ClassID 的新键，用于所选语言的以前的断字符和词干分析器接口：  
   
@@ -287,7 +287,7 @@ ms.locfileid: "58305865"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的以前的词干分析器的文件名。  
   
-4.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+4.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>  。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 5.  将 **WBreakerClass** 键值更新为来自当前断字符的表的值。  
   
@@ -299,7 +299,7 @@ ms.locfileid: "58305865"
   
 1.  不要从 Binn 文件夹中删除组件的以前版本的文件。  
   
-2.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID.  
+2.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID  .  
   
 3.  如果以下键不存在，则使用以下步骤为所选语言的当前断字符和词干分析器接口的 COM ClassID 添加新键：  
   
@@ -311,7 +311,7 @@ ms.locfileid: "58305865"
   
     4.  如果所选语言使用某一词干分析器，则将该键值的（默认）数据更新为来自该表的当前词干分析器的文件名。  
   
-4.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
+4.  在注册表中，导航到以下节点：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>  。 *<language_key>* 表示用于注册表中的语言的缩写；例如，“fra”表示法语，“esn”表示西班牙语。  
   
 5.  将 **WBreakerClass** 键值更新为来自以前断字符的表的值。  
   
