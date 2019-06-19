@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 32a2296fdb68e640ce8ebfc8dd9cdb351666b337
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250580"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server、内存节点
@@ -23,7 +23,7 @@ ms.locfileid: "63250580"
 ## <a name="memory-node-counters"></a>内存节点计数  
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **内存节点** 计数器。  
   
-|SQL Server Memory Manager 计数器|Description|  
+|SQL Server Memory Manager 计数器|描述|  
 |----------------------------------------|-----------------|  
 |**Database Node Memory (KB)**|指定服务器当前在此节点上用于数据库页面的内存量。|  
 |**Free Node Memory (KB)**|指定服务器在此节点上未使用的内存量。|  

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089081"
 ---
 # <a name="query-options-execution-ansi-page"></a>“查询选项”中的“执行”（ANSI 页）
@@ -53,7 +53,7 @@ ms.locfileid: "66089081"
  **SET ANSI_NULLS**  
  指定在与 Null 值一起使用等于 (`=`) 和不等于 (`<>`) 比较运算符时采用符合 ISO 标准的行为。 当选中 **SET ANSI_NULLS** 时，所有与 Null 值进行比较求得的值均为 UNKNOWN，这是符合 ISO 标准的行为。 如果未选中 **SET ANSI_NULLS** ，则在数据值为 NULL 时，所有数据与空值的比较求得的值为 TRUE。 默认情况下选择此选项。  
   
- 重置为默认值  
+ 重置为默认值   
  将此页上的所有值重置为原始默认值。  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a6694195ea88dbc6ffb8837a70fc1d389a8f204
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727805"
 ---
 # <a name="data-mining-query"></a>数据挖掘查询
@@ -39,18 +39,18 @@ ms.locfileid: "65727805"
  显示所选的挖掘模型，您希望利用该模型来进行预测。  
   
  **选择模型**  
- 打开“选择挖掘模型”对话框。  
+ 打开“选择挖掘模型”  对话框。  
   
  **输入列**  
  显示用于生成预测的所选输入列。  
   
  **数据源**  
- 从下拉列表中选择包含要用于列的字段的源。 可以使用“挖掘模型”表中所选的挖掘模型、“选择输入表”表中所选的输入表、预测函数或自定义表达式。  
+ 从下拉列表中选择包含要用于列的字段的源。 可以使用“挖掘模型”  表中所选的挖掘模型、“选择输入表”  表中所选的输入表、预测函数或自定义表达式。  
   
  可以将列从包含挖掘模型的表和输入列中拖动到单元。  
   
  **字段**  
- 从派生自源表的列的列表中选择列。 如果在“源”中选择了“预测函数”，则此单元将包含对所选挖掘模型可用的预测函数的下拉列表。  
+ 从派生自源表的列的列表中选择列。 如果在“源”  中选择了“预测函数”  ，则此单元将包含对所选挖掘模型可用的预测函数的下拉列表。  
   
  **别名**  
  服务器返回的列的名称。  
@@ -59,7 +59,7 @@ ms.locfileid: "65727805"
  选择此项将返回列或只使用 WHERE 子句中的列。  
   
  **分组**  
- 与“和/或”列一起使用，将表达式组合到一起。 例如，(expr1 OR expr2) AND expr3。  
+ 与“和/或”  列一起使用，将表达式组合到一起。 例如，(expr1 OR expr2) AND expr3。  
   
  **和/或**  
  用于创建逻辑查询。 例如，(expr1 OR expr2) AND expr3。  

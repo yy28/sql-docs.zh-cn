@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088009"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>“分类关系图”选项卡（挖掘模型查看器）
   **“分类关系图”** 选项卡提供聚类分析模型中包含的所有分类的图形视图。  
   
- **有关详细信息：**[Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)，[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **有关详细信息：** [Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)，[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -50,7 +50,7 @@ ms.locfileid: "66088009"
  缩小关系图，直到屏幕可容纳整个关系图。  
   
  **查找节点**  
- 打开“查找节点”对话框。 在难以找到所需属性的大型模型中，此功能很有用。 可以在该对话框中输入搜索条件，这将对分类视图进行筛选以仅显示包含搜索字符串的分类。  
+ 打开“查找节点”  对话框。 在难以找到所需属性的大型模型中，此功能很有用。 可以在该对话框中输入搜索条件，这将对分类视图进行筛选以仅显示包含搜索字符串的分类。  
   
  **改善布局**  
  对关系图中的分类进行重新排序以改善布局。  
@@ -64,7 +64,7 @@ ms.locfileid: "66088009"
  选择一个属性以在分类图中显示。  
   
  **状态**  
- 选择“明暗度变量”的单个状态以在分类图中使用。  
+ 选择“明暗度变量”  的单个状态以在分类图中使用。  
   
  **Links**  
  通过上移或下移滑块来调整分类之间显示的链接数。 降低滑块将只保留分类之间的最强关联。  

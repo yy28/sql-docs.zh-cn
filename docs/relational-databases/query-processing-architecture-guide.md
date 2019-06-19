@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462712"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "58161684"
 - 批模式执行
 
 ### <a name="row-mode-execution"></a>行模式执行
-行模式执行是一种与传统 RDMBS 表一起使用的查询处理方法，其中数据以行格式存储。 当执行查询并且查询访问行存储表中的数据时，执行树运算符和子运算符会读取表格架构中指定的所有列中的每个所需行。 然后，从读取的每行开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检索结果集所需的列，即 SELECT 语句、JOIN 谓词或筛选谓词所引用的列。
+行模式执行是一种与传统 RDMBS 表一起使用的查询处理方法，其中数据以行格式存储  。 当执行查询并且查询访问行存储表中的数据时，执行树运算符和子运算符会读取表格架构中指定的所有列中的每个所需行。 然后，从读取的每行开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 检索结果集所需的列，即 SELECT 语句、JOIN 谓词或筛选谓词所引用的列。
 
 > [!NOTE]
 > 对于 OLTP 方案，行模式执行效率非常高，但在扫描大量数据时效率较低，例如数据仓库方案。
 
 ### <a name="batch-mode-execution"></a>批模式执行  
-批模式执行是一种查询处理方法，用于统一处理多个行（因此采用“批”一词）。 批中的每列都作为一个矢量存储在单独的内存区域中，因此批模式处理是基于矢量的。 批模式处理还使用一些算法，这些算法针对多核 CPU 和新式硬件上的内存吞吐量增加进行了优化。      
+批模式执行是一种查询处理方法，用于统一处理多个行（因此采用“批”一词）  。 批中的每列都作为一个矢量存储在单独的内存区域中，因此批模式处理是基于矢量的。 批模式处理还使用一些算法，这些算法针对多核 CPU 和新式硬件上的内存吞吐量增加进行了优化。      
 
 批模式执行与列存储存储格式紧密集成，并且围绕列存储存储格式进行了优化。 批模式处理在可能的情况下会对压缩数据运行，并消除了行模式执行所用的[交换运算符](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)。 结果是并行性更佳和性能更快。    
 
@@ -421,9 +421,9 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行计划包含下列主要组件： 
 
 - **查询执行计划**     
-  执行计划的主体是一个重入的只读数据结构，可由任意数量的用户使用。 这称为查询计划。 查询计划中不存储用户上下文。 内存中查询计划副本永远不超过两个：一个副本用于所有的串行执行，另一个用于所有的并行执行。 并行副本覆盖所有的并行执行，与并行执行的并行度无关。 
+  大部分执行计划是由任意数量的用户使用的可重入的只读数据结构。 这称为查询计划。 查询计划中不存储用户上下文。 内存中查询计划副本永远不超过两个：一个副本用于所有的串行执行，另一个用于所有的并行执行。 并行副本覆盖所有的并行执行，与并行执行的并行度无关。 
 - **执行上下文**     
-  每个正在执行查询的用户都有一个包含其执行专用数据（如参数值）的数据结构。 此数据结构称为执行上下文。 执行上下文数据结构可以重新使用。 如果用户执行查询而其中的一个结构未使用，将会用新用户的上下文重新初始化该结构。 
+  正在执行查询的每个用户都有一个数据结构，用于保存特定于其执行的数据（如参数值）。 此数据结构称为执行上下文。 执行上下文数据结构可以重新使用。 如果用户执行查询而其中的一个结构未使用，将会用新用户的上下文重新初始化该结构。 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
@@ -505,7 +505,7 @@ GO
 > [!NOTE]
 > 在 xEvents 不可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 探查器 [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 跟踪事件同样可用于报告语句级重新编译。
 > 跟踪事件 [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) 也报告语句级重新编译，并且此跟踪事件还可用于跟踪和调试重新编译。 SP:Recompile 仅针对存储过程和触发器生成，而 `SQL:StmtRecompile` 则针对存储过程、触发器、即席批处理、使用 `sp_executesql` 执行的批处理、预定义查询和动态 SQL 生成。
-> `SP:Recompile` 和 `SQL:StmtRecompile` 的 EventSubClass 列都包含一个整数代码，用以指明重新编译的原因。 [此处](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)对代码进行了说明。
+> `SP:Recompile` 和 `SQL:StmtRecompile` 的 EventSubClass 列都包含一个整数代码，用以指明重新编译的原因  。 [此处](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)对代码进行了说明。
 
 > [!NOTE]
 > 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `ON` 时，如果查询以表或索引视图为目标，而自上次执行后，表或索引视图的统计信息已更新或其基数已发生很大变化，查询将被重新编译。 此行为适用于标准用户定义表、临时表以及由 DML 触发器创建的插入表和删除表。 如果过多的重新编译影响到查询性能，请考虑将此设置更改为 `OFF`。 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `OFF` 时，不会因统计信息或基数的更改而发生任何重新编译，但是，由 DML `INSTEAD OF` 触发器创建的插入表和删除表除外。 因为这些表是在 tempdb 中创建的，因此，是否重新编译访问这些表的查询取决于 tempdb 中 `AUTO_UPDATE_STATISTICS` 的设置。 请注意，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，即使此设置为 `OFF`，查询也将继续基于 DML 触发器插入表和删除表的基数更改进行重新编译。
@@ -729,6 +729,8 @@ WHERE ProductID = 63;
 -  通过 sp_executesql 提交的查询 
 -  预定义查询
 
+有关对错误参数探查问题进行故障排除的详细信息，请参阅[对具有参数敏感型查询执行计划问题的查询进行故障排除](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues)。
+
 > [!NOTE]
 > 对于使用 `RECOMPILE` 提示的查询，将探查参数值和局部变量的当前值。 探查的参数值和局部变量值在批处理中所处的位置刚好就在具有 `RECOMPILE` 提示的语句前面。 特别的是，对于参数，不会探查随批处理调用而出现的值。
 
@@ -751,7 +753,7 @@ WHERE ProductID = 63;
 >   有关游标的详细信息，请参阅 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)。
 > - **递归查询**    
 >   有关递归的详细信息，请参阅[定义和使用递归公用表表达式的准则](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的递归](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
-> - **表值函数 (TVF)**    
+> - **表值函数 (TVF)**     
 >   有关 TVF 的详细信息，请参阅[创建用户定义函数（数据库引擎）](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
 > - **TOP 关键字**    
 >   有关详细信息，请参阅 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
@@ -939,7 +941,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种方
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 关系引擎使用 OLE DB 应用程序编程接口 (API) 打开链接服务器上的行集、提取行并管理事务。
 
-对于每个作为链接服务器访问的 OLE DB 数据源，运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的服务器上必须有 OLE DB 访问接口。 在特定 OLE DB 数据源上可执行哪些 [!INCLUDE[tsql](../includes/tsql-md.md)] 操作取决于 OLE DB 访问接口的功能。
+对于每个作为链接服务器访问的 OLE DB 数据源，运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的服务器上必须有 OLE DB 访问接口。 在特定 OLE DB 数据源上可执行哪些 [!INCLUDE[tsql](../includes/tsql-md.md)] 操作取决于 OLE DB 提供程序的功能。
 
 对于每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，`sysadmin` 固定服务器角色的成员可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 属性启用或禁用对 OLE DB 提供程序使用即席连接器名称。 如果启用了即席访问，则任何登录到该实例的用户都可以执行包含即席连接器名称的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，该即席连接器名称引用了网络中可以通过 OLE DB 访问接口访问的任何数据源。 为了控制对数据源的访问， `sysadmin` 角色的成员可以对该 OLE DB 提供程序禁用即席访问，从而限制用户只能访问由管理员定义的链接服务器名称所引用的那些数据源。 默认情况下，对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 访问接口启用即席访问，而对所有其他的 OLE DB 访问接口禁用即席访问。
 
@@ -982,7 +984,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>显示查询执行计划中的分区信息
 
-可以使用 Transact-SQL [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”  可以显示编译时执行计划，单击“包括实际的执行计划” 可以显示运行时计划。 
+可以使用 Transact-SQL [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”  可以显示编译时执行计划，单击“包括实际的执行计划”  可以显示运行时计划。 
 
 使用这些工具，您可以确定以下信息：
 

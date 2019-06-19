@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3ae997dfc2ea9b601a0d7a41a0d24c4cb9c426b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489679"
 ---
 # <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>任务 7：在 Excel 中查看你使用“主数据管理器”所做的更新

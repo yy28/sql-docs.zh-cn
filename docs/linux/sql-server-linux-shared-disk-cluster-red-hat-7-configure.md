@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 73dff2be37cade58991078fec4663a9ac351f49b
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712895"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
@@ -108,7 +108,7 @@ ms.locfileid: "66712895"
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>配置共享存储并移动数据库文件 
 
-有多种解决方案可用于提供共享存储。 本演练演示如何使用 NFS 配置共享存储。 我们建议您遵循最佳做法，并使用 Kerberos 保护 NFS (您可以找到这里举个例子： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)。 
+有多种解决方案可用于提供共享存储。 本演练演示如何使用 NFS 配置共享存储。 我们建议您遵循最佳做法，并使用 Kerberos 保护 NFS (您可以找到这里举个例子： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) 。 
 
 >[!Warning]
 >如果不保护 NFS，然后将能够访问你的数据文件的任何人可以访问你的网络和欺骗 SQL 节点的 IP 地址。 与往常一样，请确保在将系统投入生产前，对系统建立威胁模型。 另一种存储方法是使用 SMB 文件共享。

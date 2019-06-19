@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3f6f17e97b485e7c6c4dc747886bd5304b8fa812
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63007628"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>创建新的基于策略的管理条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,24 +36,24 @@ ms.locfileid: "51512362"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-condition"></a>创建条件  
   
-1.  在“对象资源管理器”中，单击加号以展开你要在其中创建基于策略的管理条件的服务器。  
+1.  在“对象资源管理器”  中，单击加号以展开你要在其中创建基于策略的管理条件的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”**。  
+3.  单击加号以便展开 **“策略管理”** 。  
   
 4.  单击加号以便展开 **“方面”** 文件夹。  
   
-5.  右键单击要在其中创建新条件的方面，然后选择“新建条件”。  
+5.  右键单击要在其中创建新条件的方面，然后选择“新建条件”  。  
   
 6.  在 **“创建新条件”** 对话框的 **“名称”** 框中，键入新条件的名称。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "51512362"
   
 8.  在 **“表达式”** 下，通过在 **“字段”** 框中选择一个方面属性及与其关联的运算符和值，构造条件表达式。 在添加多个表达式时，可使用 **And** 或 **Or**来联接这些表达式。 有关此对话框中可用选项的详细信息，请参阅[“创建新条件”或“打开条件”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)、[“创建新条件”或“打开条件”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)和[“高级编辑(条件)”对话框](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md)。  
   
-9. 完成后，单击 **“确定”**。  
+9. 完成后，单击 **“确定”** 。  
   
   

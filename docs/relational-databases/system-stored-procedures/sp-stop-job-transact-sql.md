@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004265"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
@@ -49,12 +49,12 @@ sp_stop_job
   
 `[ @job_id = ] job_id` 要停止的作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
-`[ @originating_server = ] 'master_server'` 主服务器的名称。 如果指定主服务器的名称，则将停止所有多服务器作业。 *master_server*是**nvarchar （128)**，默认值为 NULL。 指定此参数仅在调用时，才**sp_stop_job**在目标服务器上。  
+`[ @originating_server = ] 'master_server'` 主服务器的名称。 如果指定主服务器的名称，则将停止所有多服务器作业。 *master_server*是**nvarchar （128)** ，默认值为 NULL。 指定此参数仅在调用时，才**sp_stop_job**在目标服务器上。  
   
 > [!NOTE]  
 >  只能指定前三个参数之一。  
   
-`[ @server_name = ] 'target_server'` 在其上停止多服务器作业的特定目标服务器的名称。 *target_server*是**nvarchar （128)**，默认值为 NULL。 指定此参数仅在调用时，才**sp_stop_job**在主服务器上的多服务器作业。  
+`[ @server_name = ] 'target_server'` 在其上停止多服务器作业的特定目标服务器的名称。 *target_server*是**nvarchar （128)** ，默认值为 NULL。 指定此参数仅在调用时，才**sp_stop_job**在主服务器上的多服务器作业。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

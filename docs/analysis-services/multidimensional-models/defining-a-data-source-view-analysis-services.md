@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63043364"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定义数据源视图 (Analysis Services)
@@ -79,7 +79,7 @@ ms.locfileid: "63043364"
 > [!NOTE]  
 >  或者，可以使用架构生成向导首先构造维度和多维数据集，然后为模型生成 DSV。 有关详细信息，请参阅[架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
   
-1.  在解决方案资源管理器中，右键单击 Data Source Views 文件夹，然后单击“新建数据源视图”。  
+1.  在解决方案资源管理器中，右键单击 Data Source Views 文件夹，然后单击“新建数据源视图”。   
   
 2.  指定向外部关系数据库提供连接信息的新的或现有数据源对象（只能在向导中选择一个数据源）。  
   

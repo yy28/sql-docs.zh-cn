@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768021"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>选择目标（SQL Server 导入和导出向导）
@@ -58,7 +58,7 @@ ms.locfileid: "62768021"
  从指定的实例上的数据库列表中选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或单击创建新的数据库**新建**。  
   
  **刷新**  
- 通过单击“刷新”，还原可用数据库的列表。  
+ 通过单击“刷新”  ，还原可用数据库的列表。  
   
  **新建**  
  使用创建新的目标数据库**Create Database**对话框。  
@@ -68,7 +68,7 @@ ms.locfileid: "62768021"
  指定要存储数据的文件的路径和文件名。 或者，单击 **“浏览”** 定位文件。  
   
  **“浏览”**  
- 使用“打开”对话框定位文件。  
+ 使用“打开”  对话框定位文件。  
   
  **区域设置**  
  指定定义字符排序顺序以及日期和时间格式的区域设置 ID (LCID)。  
@@ -82,7 +82,7 @@ ms.locfileid: "62768021"
  **格式**  
  指示是否使用带分隔符、固定宽度或右边未对齐的格式。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |带分隔符|各列之间由在 **“列”** 页上指定的分隔符隔开。|  
 |固定宽度|列的宽度固定。|  
@@ -129,6 +129,6 @@ ms.locfileid: "62768021"
  当工作组信息文件与数据库关联时，为数据库连接提供相应的用户密码。 但是，如果对于所有用户都使用一个密码保护数据库，则必须在 **“数据链接属性”** 对话框（可通过 **“高级”** 按钮访问）中提供此值。  
   
  **高级**  
- 通过使用“数据链接属性”对话框指定高级选项，例如数据库密码或非默认工作组信息文件。 有关 OLE DB 访问接口属性的详细信息，请在 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)的“Data Access”（数据访问）部分中进行搜索。  
+ 通过使用“数据链接属性”  对话框指定高级选项，例如数据库密码或非默认工作组信息文件。 有关 OLE DB 访问接口属性的详细信息，请在 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)的“Data Access”（数据访问）部分中进行搜索。  
   
   

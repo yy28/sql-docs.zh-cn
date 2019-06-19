@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026971"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,8 +83,8 @@ ms.locfileid: "57974366"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有两种盘区类型： 
 
-* 统一盘区，由单个对象所有。盘区中的所有八页只能由所属对象使用。
-* 混合盘区，最多可由八个对象共享。 区中八页的每页可由不同的对象所有。
+* 统一盘区，由单个对象所有。盘区中的所有八页只能由所属对象使用  。
+* 混合盘区，最多可由八个对象共享  。 区中八页的每页可由不同的对象所有。
 
 一直到（并且包括）[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会将所有盘区分配给包含少量数据的表。 新表或索引通常从混合区分配页。 当表或索引增长到 8 页时，将变成使用统一区进行后续分配。 如果对现有表创建索引，并且该表包含的行足以在索引中生成 8 页，则对该索引的所有分配都使用统一区进行。 但是，从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，数据库中所有分配的默认值都是统一区。
 
@@ -109,10 +109,10 @@ ms.locfileid: "57974366"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用两种类型的分配映射表来记录盘区的分配： 
 
-- 全局分配映射表 (GAM)   
+- 全局分配映射表 (GAM)     
   GAM 页记录已分配的区。 每个 GAM 包含 64,000 个区，相当于近 4 GB 的数据。 GAM 用 1 个位来表示所涵盖区间内的每个区的状态。 如果位为 1，则区可用；如果位为 0，则区已分配。 
 
-- 共享全局分配映射表 (SGAM)   
+- 共享全局分配映射表 (SGAM)     
   SGAM 页记录当前用作混合区且至少有一个未使用的页的区。 每个 SGAM 包含 64,000 个区，相当于近 4-GB 的数据。 SGAM 用 1 个位来表示所涵盖区间内的每个区的状态。 如果位为 1，则区正用作混合区且有可用页。 如果位为 0，则区未用作混合区，或者虽然用作混合区但其所有页均在使用中。 
 
 根据区当前的使用情况，GAM 和 SGAM 中每个区具有以下位模式。 
@@ -131,7 +131,7 @@ ms.locfileid: "57974366"
 
 ### <a name="tracking-free-space"></a>跟踪可用空间
 
-“页可用空间 (PFS)”页记录每页的分配状态，是否已分配单个页以及每页的可用空间量。 PFS 对每页都有 1 个字节，记录该页是否已分配。如果已分配，则记录该页是为空、已满 1% 到 50%、已满 51% 到 80%、已满 81% 到 95% 还是已满 96% 到 100%。
+“页可用空间 (PFS)”页记录每页的分配状态，是否已分配单个页以及每页的可用空间量  。 PFS 对每页都有 1 个字节，记录该页是否已分配。如果已分配，则记录该页是为空、已满 1% 到 50%、已满 51% 到 80%、已满 81% 到 95% 还是已满 96% 到 100%。
 
 将区分配给对象后，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将使用 PFS 页来记录区中的哪些页已分配或哪些页可用。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]必须分配新页时，将使用此信息。 保留的页中的可用空间量仅用于堆和 Text/Image 页。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]必须找到一个具有可用空间的页来保存新插入的行时，使用此信息。 索引不要求跟踪页的可用空间，因为插入新行的点是由索引键值设置的。
 
@@ -141,7 +141,7 @@ ms.locfileid: "57974366"
 
 ## <a name="managing-space-used-by-objects"></a>管理对象使用的空间 
 
-“索引分配映射 (IAM)”页将映射分配单元使用的数据库文件中 4-GB 部分中的盘区。 分配单元有下列三种类型：
+“索引分配映射 (IAM)”  页将映射分配单元使用的数据库文件中 4-GB 部分中的盘区。 分配单元有下列三种类型：
 
 - IN_ROW_DATA   
     用于存储堆分区或索引分区。
@@ -171,16 +171,16 @@ IAM 页根据需要分配给每个分配单元，在文件中的位置也是随�
 
 仅当 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]不能在现有的区中快速找到足以容纳插入行的页时，才将新区分配给分配单元。 
 
-<a name="ProportionalFill"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用“比例填充分配算法”从文件组的可用盘区中分配盘区。 如果同一文件组内有两个文件，而一个文件的可用空间是另一个文件的两倍，那么每从后一个文件分配一页，就从前一个文件分配两页。 这意味着文件组内的每个文件应该有近似的空间使用百分比。 
+<a name="ProportionalFill"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用“比例填充分配算法”从文件组的可用盘区中分配盘区  。 如果同一文件组内有两个文件，而一个文件的可用空间是另一个文件的两倍，那么每从后一个文件分配一页，就从前一个文件分配两页。 这意味着文件组内的每个文件应该有近似的空间使用百分比。 
 
 ## <a name="tracking-modified-extents"></a>跟踪已修改的区 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用两个内部数据结构跟踪被大容量复制操作修改的盘区，以及自上次完整备份后修改的盘区。 这些数据结构极大地加快了差异备份的速度。 当数据库使用大容量日志恢复模式时，这些数据结构也可以加快将大容量复制操作记录至日志的速度。 与全局分配图 (GAM) 和共享全局分配图 (SGAM) 页相同，这些结构也是位图，其中的每一位代表一个单独的区。 
 
-- 差异更改映射表 (DCM)   
+- 差异更改映射表 (DCM)     
    这样便可跟踪自上次执行 `BACKUP DATABASE` 语句后更改过的盘区。 如果扩展盘区的位是 1，则自上次执行 `BACKUP DATABASE` 语句后扩展盘区已被修改。 如果位是 0，则扩展盘区没有被修改。 差异备份只读取 DCM 页便可以确定已修改的区。 这样大大减少了差异备份必须扫描的页数。 运行差异备份所需的时间与自上次执行 BACKUP DATABASE 语句之后修改的区数成正比，而不是与整个数据库的大小成正比。 
 
-- 大容量更改映射表 (BCM)   
+- 大容量更改映射表 (BCM)     
    跟踪自上次执行 `BACKUP LOG` 语句后，被大容量日志记录操作修改的盘区。 如果某个扩展盘区的位是 1，表明自上次执行 `BACKUP LOG` 语句后，该扩展盘区已经被有日志记录的大容量复制操作修改。 如果位是 0，则该扩展盘区未被有日志记录的大容量复制操作修改。 尽管所有数据库中都显示 BCM 页，但只有在数据库使用大容量日志记录恢复模式时，才会与 BCM 页有关。 在此恢复模式中，当执行 `BACKUP LOG` 时，备份进程将扫描 BCM 查找已经修改的盘区。 然后，将那些区包括在日志备份中。 如果数据库从数据库备份和一系列事务日志备份恢复，便可以恢复大容量日志记录操作。 在使用简单恢复模式的数据库中，BCM 页是不相关的，因为大容量日志记录操作不记入日志。 在使用完整恢复模式的数据库中，BCM 页同样不相关，因为该恢复模式将大容量日志记录操作视为有完整日志记录的操作。 
 
 DCM 页和 BCM 页的间隔与 GAM 和 SGAM 页的间隔相同，都是 64,000 个区。 在物理文件中，DCM 和 BCM 页位于 GAM 和 SGAM 页之后。

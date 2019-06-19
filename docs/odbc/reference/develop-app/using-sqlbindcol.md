@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63208478"
 ---
 # <a name="using-sqlbindcol"></a>使用 SQLBindCol
@@ -35,7 +35,7 @@ ms.locfileid: "63208478"
   
  例如，下面的代码将变量绑定到销售人员和 CustID 列。 列的数据将返回在*销售人员*并*CustID*。 因为*销售人员*是字符缓冲区，该应用程序指定其字节长度 (11)，以便该驱动程序可以确定是否要截断的数据。 返回的字节长度标题，或是否，则为 NULL，将返回在*SalesPersonLenOrInd*。  
   
- 因为*CustID*整数变量，并且具有固定长度，无需指定其字节长度; 驱动程序假定它是**sizeof (** SQLUINTEGER **)**。 返回的客户的字节长度 ID 数据，或是否，则为 NULL，将返回在*CustIDInd*。 请注意，应用程序有兴趣仅薪金是否为 NULL，因为指定的字节长度始终**sizeof (** SQLUINTEGER **)**。  
+ 因为*CustID*整数变量，并且具有固定长度，无需指定其字节长度; 驱动程序假定它是**sizeof (** SQLUINTEGER **)** 。 返回的客户的字节长度 ID 数据，或是否，则为 NULL，将返回在*CustIDInd*。 请注意，应用程序有兴趣仅薪金是否为 NULL，因为指定的字节长度始终**sizeof (** SQLUINTEGER **)** 。  
   
 ```  
 SQLCHAR       SalesPerson[11];  

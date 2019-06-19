@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7e99c6e4f28ecef032ff3b793393e5465740156d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250742"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
@@ -26,7 +26,7 @@ ms.locfileid: "63250742"
 ## <a name="buffer-node-performance-objects"></a>缓冲区节点性能对象  
  此表说明了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** 性能对象。  
   
-|SQL Server Buffer Node 计数器|Description|  
+|SQL Server Buffer Node 计数器|描述|  
 |-------------------------------------|-----------------|  
 |**Database pages**|指示此节点的缓冲池中包含数据库内容的页数。|  
 |**Page life expectancy**|指示某页在没有引用的情况下，在此节点的缓冲池中停留的最小时间（秒）。|  

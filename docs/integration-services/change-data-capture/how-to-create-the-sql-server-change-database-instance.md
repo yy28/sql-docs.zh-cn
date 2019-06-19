@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 13f26adb51da59357eb3ede282c7761516087da3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728796"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>如何创建 SQL Server 更改数据库实例
@@ -27,15 +27,15 @@ ms.locfileid: "65728796"
   
 ### <a name="to-create-cdc-instances"></a>创建 CDC 实例  
   
-1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”**。  
+1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”** 。  
   
-2.  在左侧的窗格中，展开 **“变更数据捕获”**。  
+2.  在左侧的窗格中，展开 **“变更数据捕获”** 。  
   
 3.  选择您要在其上创建新的 CDC 实例的服务。  
   
-4.  从 CDC 设计器控制台右侧的 **“操作”** 窗格中，选择 **“新建 Oracle CDC 实例”**。  
+4.  从 CDC 设计器控制台右侧的 **“操作”** 窗格中，选择 **“新建 Oracle CDC 实例”** 。  
   
-     还可右键单击要创建新的 CDC 实例的服务，然后选择“新建 Oracle CDC 实例”。  
+     还可右键单击要创建新的 CDC 实例的服务，然后选择“新建 Oracle CDC 实例”  。  
   
 5.  在新建实例向导中输入创建新实例所需的信息。 有关此向导所需信息的信息，请参阅 [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)。  
   

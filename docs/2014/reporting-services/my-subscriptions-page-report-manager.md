@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108192"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>“我的订阅”页（报表管理器）
@@ -39,7 +39,7 @@ ms.locfileid: "66108192"
   
 ## <a name="options"></a>选项  
  **删除**  
- 选中要删除的每个订阅旁边的复选框，再单击 **“删除”**。  
+ 选中要删除的每个订阅旁边的复选框，再单击 **“删除”** 。  
   
  **编辑**  
  单击此选项可查看或编辑说明。  

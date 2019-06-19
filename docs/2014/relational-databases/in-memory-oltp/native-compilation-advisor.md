@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63072737"
 ---
 # <a name="native-compilation-advisor"></a>本机编译顾问
@@ -28,13 +28,13 @@ ms.locfileid: "63072737"
  有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用本机编译顾问的演练  
- 在 **对象资源管理器**中，右键单击要转换的存储过程，然后选择 **“本机编译顾问”**。 这将显示 **“存储过程本机编译顾问”** 的欢迎使用页。 单击 **“下一步”** 继续。  
+ 在 **对象资源管理器**中，右键单击要转换的存储过程，然后选择 **“本机编译顾问”** 。 这将显示 **“存储过程本机编译顾问”** 的欢迎使用页。 单击 **“下一步”** 继续。  
   
 ### <a name="stored-procedure-validation"></a>存储过程验证  
  此页将报告存储过程是否使用与本机编译不兼容的任何构造。 您可以单击 **“下一步”** 查看详细信息。 如果存在与本机编译不兼容的构造，可以单击 **“下一步”** 查看详细信息。  
   
 ### <a name="stored-procedure-validation-result"></a>存储过程验证结果  
- 如果存在与本机编译不兼容的构造，则 **“存储过程验证结果”** 页将显示详细信息。 你可以生成报表（单击“生成报表”）、退出“本机编译顾问”以及更新你的代码以便它与本机编译兼容。  
+ 如果存在与本机编译不兼容的构造，则 **“存储过程验证结果”** 页将显示详细信息。 你可以生成报表（单击“生成报表”  ）、退出“本机编译顾问”  以及更新你的代码以便它与本机编译兼容。  
   
 ## <a name="code-sample"></a>代码示例  
  下面的示例显示了一个已解释的存储过程以及针对本机编译的等效存储过程。 该示例假定名为 c:\data 的目录。  

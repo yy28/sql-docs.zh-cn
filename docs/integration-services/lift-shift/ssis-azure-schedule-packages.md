@@ -12,10 +12,10 @@ ms.author: sawinark
 ms.reviewer: maghan
 manager: craigg
 ms.openlocfilehash: d879833ee055d857627890471a68cbbaf4263abb
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012841"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>计划 Azure 中部署的 SQL Server Integration Services (SSIS) 包的执行
@@ -39,7 +39,7 @@ ms.locfileid: "66012841"
 
 ## <a name="ssms"></a>使用 SSMS 计划包
 
-在 SQL Server Management Studio (SSMS) 中，可以右键单击部署到 SSIS 目录数据库 (SSISDB) 的包，并选择“计划”以打开“新建计划”对话框。 有关详细信息，请参阅[使用 SSMS 计划 Azure 中的 SSIS 包](ssis-azure-schedule-packages-ssms.md)。
+在 SQL Server Management Studio (SSMS) 中，可以右键单击部署到 SSIS 目录数据库 (SSISDB) 的包，并选择“计划”以打开“新建计划”对话框   。 有关详细信息，请参阅[使用 SSMS 计划 Azure 中的 SSIS 包](ssis-azure-schedule-packages-ssms.md)。
 
 此功能要求 SQL Server Management Studio 17.7 或更高版本。 若要获取 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 
@@ -136,13 +136,13 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
 
 1.  在 SQL Server Management Studio 中，连接到要在其中创建作业的本地 SQL Server 数据库。
 
-2.  右键单击“SQL Server 代理”节点，选择“新建”，然后选择“作业”以打开“新建作业”对话框。
+2.  右键单击“SQL Server 代理”  节点，选择“新建”  ，然后选择“作业”  以打开“新建作业”  对话框。
 
-3.  在“新建作业”对话框中，选择“步骤”页，然后选择“新建”以打开“新建作业步骤”对话框。
+3.  在“新建作业”  对话框中，选择“步骤”  页，然后选择“新建”  以打开“新建作业步骤”  对话框。
 
-4.  在“新建作业步骤”对话框中，选择 `SSISDB` 作为  **数据库。**
+4.  在“新建作业步骤”  对话框中，选择 `SSISDB` 作为  **数据库。**
 
-5.  在“命令”字段中，输入与以下示例所示脚本类似的 Transact-SQL 脚本：
+5.  在“命令”  字段中，输入与以下示例所示脚本类似的 Transact-SQL 脚本：
 
     ```sql
     -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures

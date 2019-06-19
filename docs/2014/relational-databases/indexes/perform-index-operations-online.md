@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9eceaff8ea7fee16eac3afef8bdc560d7fb1642
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036191"
 ---
 # <a name="perform-index-operations-online"></a>联机执行索引操作
@@ -76,17 +76,17 @@ ms.locfileid: "63036191"
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要联机重新生成的索引，然后选择“属性”。  
+5.  右键单击要联机重新生成的索引，然后选择“属性”  。  
   
-6.  在 **“选择页”** 下，选择 **“选项”**。  
+6.  在 **“选择页”** 下，选择 **“选项”** 。  
   
-7.  选择 **“允许联机 DML 处理”**，然后从列表中选择 **True** 。  
+7.  选择 **“允许联机 DML 处理”** ，然后从列表中选择 **True** 。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
-9. 右键单击要联机重新生成的索引，然后选择“重新生成”。  
+9. 右键单击要联机重新生成的索引，然后选择“重新生成”  。  
   
-10. 在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。  
+10. 在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -94,9 +94,9 @@ ms.locfileid: "63036191"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将联机重新生成现有的索引  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将联机重新生成现有的索引  
   
     ```  
     USE AdventureWorks2012;  

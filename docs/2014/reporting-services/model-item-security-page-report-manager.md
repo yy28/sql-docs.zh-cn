@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108233"
 ---
 # <a name="model-item-security-page-report-manager"></a>“模型项安全性”页（报表管理器）
@@ -56,7 +56,7 @@ ms.locfileid: "66108233"
   
 2.  悬停在该模型之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”**。 这会打开该模型的“常规属性”页。  
+3.  在下拉菜单中，单击 **“管理”** 。 这会打开该模型的“常规属性”页。  
   
 4.  选择 **“模型项安全性”** 选项卡。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66108233"
  单击此项可以继承父项的安全设置。  
   
  **为以下用户和组 （用分号分隔） 分配读取权限**  
- 单击此项可以指定要为其定义访问权限的用户帐户或组帐户。 如果使用默认安全性，则用户帐户和组帐户为 Windows 域帐户。 按以下格式指定帐户： *\<域 >\\< 帐户\>*。  
+ 单击此项可以指定要为其定义访问权限的用户帐户或组帐户。 如果使用默认安全性，则用户帐户和组帐户为 Windows 域帐户。 按以下格式指定帐户： *\<域 >\\< 帐户\>* 。  
   
 ## <a name="see-also"></a>请参阅  
  [Management Studio 中报表服务器的 F1 帮助](tools/report-server-in-management-studio-f1-help.md)  

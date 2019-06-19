@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2664d71243d98e9b8152c5c5c7ce241a4f3669f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164352"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>为传递扩展插件实现 ISubscriptionBaseUIUserControl 接口
@@ -31,7 +31,7 @@ ms.locfileid: "63164352"
 > [!NOTE]  
 >  不要求您将 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 接口作为传递扩展插件的一部分实现。 而是始终可以通过 SOAP API 方法 <xref:ReportService2010.ReportingService2010.CreateSubscription%2A> 和 <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A> 创建使用传递扩展插件的订阅。 有关用于管理订阅和传递的 SOAP API 功能的详细信息，请参阅[订阅和传递方法](../../report-server-web-service/methods/subscription-and-delivery-methods.md)。  
   
- <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 接口扩展 <xref:Microsoft.ReportingServices.Interfaces.IExtension>。 实现 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 的用户控件也必须从 System.Web.UI.WebControls.WebControl 继承。 有关 WebControl 类的详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 开发人员指南。  
+ <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 接口扩展 <xref:Microsoft.ReportingServices.Interfaces.IExtension>。 实现 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 的用户控件也必须从 System.Web.UI.WebControls.WebControl 继承  。 有关 WebControl 类的详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 开发人员指南  。  
   
  有关如何使用 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 接口的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   

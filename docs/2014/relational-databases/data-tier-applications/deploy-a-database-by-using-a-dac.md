@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873028"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
@@ -66,7 +66,7 @@ ms.locfileid: "62873028"
   
 3.  展开 **“数据库”** 节点。  
   
-4.  右键单击要部署的数据库，选择 “任务”，然后选择“将数据库部署到 SQL Azure…”  
+4.  右键单击要部署的数据库，选择 “任务”，然后选择“将数据库部署到 SQL Azure…”    
   
 5.  完成向导对话框：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62873028"
   
  **本地主机：**  
   
--   **服务器连接** - 指定服务器连接详细信息，然后单击“连接”来验证连接。  
+-   **服务器连接** - 指定服务器连接详细信息，然后单击“连接”来验证连接  。  
   
 -   **新数据库名称** - 指定新数据库的名称。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62873028"
 -   指定临时文件的本地目录，该文件为 BACPAC 存档文件。 请注意，将在指定位置创建此文件，并且在操作完成后，此文件将保留在该位置。  
   
 ##  <a name="Summary"></a> 摘要页  
- 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成部署操作，请单击 **“完成”**。 若要取消部署操作并退出向导，请单击 **“取消”**。  
+ 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成部署操作，请单击 **“完成”** 。 若要取消部署操作并退出向导，请单击 **“取消”** 。  
   
 ##  <a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  

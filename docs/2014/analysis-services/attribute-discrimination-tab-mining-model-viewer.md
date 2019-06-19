@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063125"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>“属性对比”选项卡（挖掘模型查看器）
   可以使用 **“属性对比”** 选项卡，比较输入属性的状态并查看这些状态与结果属性相关的方式。 两个所选的可预测属性状态之间差别最大的属性值会首先列出。  
   
- **有关详细信息：**[Microsoft Naive Bayes 算法](data-mining/microsoft-naive-bayes-algorithm.md)，[使用 Microsoft Naive Bayes 查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **有关详细信息：** [Microsoft Naive Bayes 算法](data-mining/microsoft-naive-bayes-algorithm.md)，[使用 Microsoft Naive Bayes 查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -50,7 +50,7 @@ ms.locfileid: "66063125"
 |-----------|-----------------|  
 |**属性**|挖掘模型中的输入属性。|  
 |**值**|**“属性”** 中列出的属性的状态。|  
-|**倾向于\<值为 1 >**|条形指示当前属性和值是否倾向于“值 1” 中所选的目标结果。|  
+|**倾向于\<值为 1 >**|条形指示当前属性和值是否倾向于“值 1”  中所选的目标结果。|  
 |**倾向于\<值为 2 >**|条形指示当前属性和值是否倾向于 **“值 2”** 中所选的目标结果。|  
   
 ## <a name="see-also"></a>请参阅  

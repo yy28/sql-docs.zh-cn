@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c8c41b7f9c42628f4310c3f1a54dc24a7f124202
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004973"
 ---
 # <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "63004973"
 
   报告自上次数据库重新启动以来对每个 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 对象进行的操作所影响的行数。 统计信息会在操作执行时更新（无论事务提交还是回滚）。  
   
- sys.dm_db_xtp_object_stats 可以帮助您标识更改最多的内存优化表。 您可以决定删除表中未使用或很少使用的索引，因为每个索引都会影响性能。 如果存在哈希索引，则您应定期重新计算桶计数。 有关详细信息，请参阅 [Determining the Correct Bucket Count for Hash Indexes](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)。  
+ sys.dm_db_xtp_object_stats 可以帮助您标识更改最多的内存优化表。 您可以决定删除表中未使用或很少使用的索引，因为每个索引都会影响性能。 如果存在哈希索引，则您应定期重新计算桶计数。 有关详细信息，请参阅 [哈希索引确定正确的存储桶计数](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)。  
   
  sys.dm_db_xtp_object_stats 可以帮助您标识引发写/写冲突（这可能会影响应用程序性能）的内存优化表。 例如，如果您有事务重试逻辑，则相同语句可能需要执行多次。 您还可以使用此信息标识需要写/写错误处理的表（以及因此得到的业务逻辑）。  
   

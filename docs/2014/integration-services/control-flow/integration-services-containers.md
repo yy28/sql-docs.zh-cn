@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831255"
 ---
 # <a name="integration-services-containers"></a>Integration Services 容器
@@ -37,7 +37,7 @@ ms.locfileid: "62831255"
 ## <a name="container-types"></a>容器类型  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供四种用于生成包的容器。 下表列出了容器类型。  
   
-|容器|Description|  
+|容器|描述|  
 |---------------|-----------------|  
 |[Foreach 循环容器](foreach-loop-container.md)|通过使用枚举器重复运行控制流。|  
 |[For 循环容器](for-loop-container.md)|通过测试某个条件重复运行控制流。|  
@@ -49,7 +49,7 @@ ms.locfileid: "62831255"
 ### <a name="summary-of-container-properties"></a>容器属性摘要  
  通常，所有容量类型都有一组属性。 如果使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的图形工具创建包，“属性”窗口将列出 Foreach 循环容器、For 循环容器和序列容器的以下属性。 配置任务宿主容器属性是配置任务宿主容器所封装的任务的一部分。 配置任务时需要设置任务宿主属性。  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |`DelayValidation`|指示是否将容器的验证推迟到运行时进行的布尔值。 此属性的默认值为 `False`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A> 。|  
 |`Description`|容器说明。 该属性包含一个字符串，但可以为空。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A> 。|  
@@ -61,7 +61,7 @@ ms.locfileid: "62831255"
 |`ForcedExecutionValueType`|`ForcedExecutionValue` 的数据类型。 此属性的默认值为 `Int32`。|  
 |`ForceExecutionResult`|指定运行包或容器的强制结果的值。 其值为：`None`、`Success`、`Failure` 和 `Completion`。 此属性的默认值为 `None`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A> 。|  
 |`ForceExecutionValue`|指定容器的可选执行值是否应强制包含特定值的布尔值。 此属性的默认值为 `False`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A> 。|  
-|`ID`|容器 GUID，该属性是在创建包时分配的。 该属性为只读。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A> 的用户。|  
+|`ID`|容器 GUID，该属性是在创建包时分配的。 该属性为只读。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>。|  
 |`IsolationLevel`|容器事务的隔离级别。 其值为：`Unspecified`、`Chaos`、`ReadUncommitted`、`ReadCommitted`、`RepeatableRead`、`Serializable` 和 `Snapshot`。 此属性的默认值为 `Serializable`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A> 。|  
 |`LocaleID`|Microsoft Win32 区域设置。 此属性的默认值为本地计算机上操作系统的区域设置。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A> 。|  
 |`LoggingMode`|指定容器日志记录行为的值。 具体的值为 `Disabled`、`Enabled` 和 `UseParentSetting`。 此属性的默认值为 `UseParentSetting`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 。|  

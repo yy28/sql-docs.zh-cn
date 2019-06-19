@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63282152"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的身份验证
@@ -28,7 +28,7 @@ ms.locfileid: "63282152"
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services 中的自定义身份验证  
  在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，Windows 操作系统通过集成的安全性或通过用户凭据的显式接受和验证，处理用户的身份验证。 可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中开发自定义身份验证，以支持附加的身份验证架构。 这可以通过安全扩展插件接口 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 实现。 所有扩展插件都继承自报表服务器部署和使用的任何扩展插件的 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 基接口。 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 以及 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> 是 <xref:Microsoft.ReportingServices.Interfaces> 命名空间的成员。  
   
- 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中对报表服务器进行身份验证的主要方式是 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法。 此 Reporting Services Web 服务成员可用于将用户凭据传递到某一报表服务器以进行验证。 在基础安全扩展插件实现**IAuthenticationExtension.LogonUser**其中包含自定义身份验证代码。 在窗体身份验证示例 LogonUser 中，对提供的凭据和数据库中的自定义用户存储执行身份验证检查。 LogonUser 的实现的示例如下：  
+ 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中对报表服务器进行身份验证的主要方式是 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 方法。 此 Reporting Services Web 服务成员可用于将用户凭据传递到某一报表服务器以进行验证。 在基础安全扩展插件实现**IAuthenticationExtension.LogonUser**其中包含自定义身份验证代码。 在窗体身份验证示例 LogonUser 中，对提供的凭据和数据库中的自定义用户存储执行身份验证检查  。 LogonUser 的实现的示例如下  ：  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  

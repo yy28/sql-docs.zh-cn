@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316397"
 ---
 # <a name="script-a-table"></a>编写表脚本
@@ -26,9 +26,9 @@ ms.locfileid: "63316397"
   
 #### <a name="to-create-the-insert-script-for-a-table"></a>若要创建表的插入脚本，请执行以下操作：  
   
-1.  在“对象资源管理器”中，依次展开服务器、“数据库”、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]、“表”，再右键单击“HumanResources.Employee”，然后指向“编写表脚本为”。  
+1.  在“对象资源管理器”中，依次展开服务器、“数据库”  、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]、“表”  ，再右键单击“HumanResources.Employee”  ，然后指向“编写表脚本为”  。  
   
-2.  快捷菜单有七个可用脚本选项：**创建到**，**放到**， **DROP 和 CREATE 到**，**选择此选项将**，**插入到**，**更新**，并**删除到**。 指向“UPDATE To”，再单击“新查询编辑器窗口”。  
+2.  快捷菜单有七个可用脚本选项：**创建到**，**放到**， **DROP 和 CREATE 到**，**选择此选项将**，**插入到**，**更新**，并**删除到**。 指向“UPDATE To”  ，再单击“新查询编辑器窗口”  。  
   
 3.  系统将打开一个新查询编辑器窗口，执行连接并显示完整的更新语句。  
   

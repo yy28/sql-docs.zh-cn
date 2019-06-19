@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108701"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>删除和重新创建加密密钥（SSRS 配置管理器）
@@ -52,7 +52,7 @@ ms.locfileid: "66108701"
   
 2.  启动 Reporting Services 配置工具，再连接到要配置的报表服务器实例。  
   
-3.  在“加密密钥”页上，单击 **“更改”**。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  在“加密密钥”页上，单击 **“更改”** 。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  重新启动报表服务器 Windows 服务。 如果要为扩展部署重新创建加密密钥，请在所有实例上重新启动该服务。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108701"
   
 1.  启动 Reporting Services 配置工具，再连接到要配置的报表服务器实例。  
   
-2.  单击 **“加密密钥”**，再单击 **“删除”**。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  单击 **“加密密钥”** ，再单击 **“删除”** 。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  重新启动报表服务器 Windows 服务。 对于扩展部署，应对所有报表服务器实例执行此操作。  
   
