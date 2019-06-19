@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775323"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>安装 SQL Server，并使用 SMB 文件共享作为存储选项
@@ -32,7 +32,7 @@ ms.locfileid: "62775323"
   
 -   \\\ServerName\ShareName  
   
- 有关通用命名约定的详细信息，请参阅[UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534)。  
+ 有关通用命名约定的详细信息，请参阅[UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534) 。  
   
  不支持环回 UNC 路径（其服务器名称为 localhost、127.0.0.1 或本地计算机名称的 UNC 路径）。 作为一种特殊情况，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的文件服务器群集承载在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所运行的同一节点上，则也不受支持。 若要防止出现这种情况，建议在单独的 Windows 群集中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与文件服务器群集。  
   
@@ -87,22 +87,22 @@ ms.locfileid: "62775323"
 |操作系统|SMB2 协议版本|优势 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|与以前的 SMB 版本相比改进的性能。<br /><br /> 持续性，帮助从临时网络问题恢复。|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1，包含 Server Core|2.1|支持大型 MTU，这有利于大型数据传输，例如 SQL 备份和还原。 此功能必须由用户启用。 有关如何启用此功能的详细信息，请参阅 [SMB 中的新增功能](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319)。<br /><br /> 针对 SQL OLTP 样式工作负荷的显著的性能改进。 这些性能改进要求应用修补程序。 有关控件的详细信息，请参阅[此处](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320)。|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，包含 Server Core|3.0|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且可承受网络接口故障。<br /><br /> 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2，包含 Server Core|3.2|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且使用 SMB 多通道可承受网络接口故障。<br /><br /> 使用 SMB Direct 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。<br /><br /> 针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP 所共有的小型随机读/写 I/O 进行优化。<br /><br /> 默认情况下启用最大传输单位 (MTU)，这可以显著增强大型连续传输（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据仓库和数据库备份或还原）的性能。|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1，包含 Server Core|2.1|支持大型 MTU，这有利于大型数据传输，例如 SQL 备份和还原。 此功能必须由用户启用。 有关如何启用此功能的详细信息，请参阅 [SMB 中的新增功能](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319) 。<br /><br /> 针对 SQL OLTP 样式工作负荷的显著的性能改进。 这些性能改进要求应用修补程序。 有关控件的详细信息，请参阅[此处](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320) 。|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，包含 Server Core|3.0|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且可承受网络接口故障。<br /><br /> 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174) 。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2，包含 Server Core|3.2|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且使用 SMB 多通道可承受网络接口故障。<br /><br /> 使用 SMB Direct 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174) 。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。<br /><br /> 针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP 所共有的小型随机读/写 I/O 进行优化。<br /><br /> 默认情况下启用最大传输单位 (MTU)，这可以显著增强大型连续传输（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据仓库和数据库备份或还原）的性能。|  
   
 ## <a name="security-considerations"></a>需要考虑的安全性因素  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户应具有对 SMB 共享文件夹的 FULL CONTROL 共享权限和 NTFS 权限。 使用 SMB 文件服务器时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户可以是域帐户或系统帐户。 有关共享和 NTFS 权限的详细信息，请参阅 [文件服务器上的共享和 NTFS 权限](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户应具有对 SMB 共享文件夹的 FULL CONTROL 共享权限和 NTFS 权限。 使用 SMB 文件服务器时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户可以是域帐户或系统帐户。 有关共享和 NTFS 权限的详细信息，请参阅 [文件服务器上的共享和 NTFS 权限](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535) 。  
   
     > [!NOTE]  
     >  对 SMB 共享文件夹的 FULL CONTROL 共享权限和 NTFS 权限应被限制为： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户和具有管理服务器角色的 Windows 用户。  
   
-     建议将域帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 如果系统帐户用作服务帐户，则按以下格式为计算机帐户授予权限：<domain_name>**\\**<computer_name>**$**。  
+     建议将域帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 如果系统帐户用作服务帐户，则按以下格式为计算机帐户授予权限：<domain_name>  **\\** <computer_name>  **$** 。  
   
     > [!NOTE]  
     >  -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中，如果 SMB 文件共享指定为存储选项，则需要将域帐户指定为服务帐户。 对于 SMB 文件共享，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后系统帐户只能指定为服务帐户。  
-    > -   虚拟帐户无法通过身份验证，因而无法访问远程位置。 所有虚拟帐户均使用计算机帐户的权限。 以 _<domain_name>_**\\**_<computer_name>_**$** 格式设置计算机帐户。  
+    > -   虚拟帐户无法通过身份验证，因而无法访问远程位置。 所有虚拟帐户均使用计算机帐户的权限。 以 _<domain_name>_ **\\** _<computer_name>_ **$** 格式设置计算机帐户。  
   
 -   用于安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帐户应该对用作数据目录的 SMB 文件共享文件夹或群集安装过程中的任何其他数据文件夹（用户数据库目录、用户数据库日志目录、TempDB 目录、TempDB 日志目录、备份目录）具有 FULL CONTROL 权限。  
   

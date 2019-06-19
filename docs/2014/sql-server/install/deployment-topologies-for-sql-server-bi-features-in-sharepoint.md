@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 7ef3ecf31c0539f3b3cb2cf5a4f04b044e625bd1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095595"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>SharePoint 中 SQL Server BI 功能的部署拓扑
@@ -65,14 +65,14 @@ ms.locfileid: "66095595"
 |||  
 |-|-|  
 |**(1)**|Excel Service 应用程序。 作为 SharePoint 安装的一部分创建的服务应用程序。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”** 。|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|  
 |**(4)**|从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装介质或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能包中安装用于 SharePoint 的 Reporting Services 外接程序。|  
 |**(5)**|运行 **spPowerPivot.msi** 以安装数据访问接口、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库并计划数据刷新。|  
 |**(6)**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在 SharePoint 模式下的服务器。 将 Excel Services 应用程序 **“数据模型设置”** 配置为使用此服务器。|  
 |**(7)**|SharePoint 内容、配置和服务应用程序数据库。|  
   
- ![SharePoint 设置](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 设置](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) 。  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a> PowerPivot for SharePoint 2013 单服务器部署  
  单服务器部署用于测试目的，不建议在生产部署中采用。  
@@ -84,7 +84,7 @@ ms.locfileid: "66095595"
 |||  
 |-|-|  
 |**(1)**|Excel Service 应用程序。 作为 SharePoint 安装的一部分创建的服务应用程序。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”** 。|  
 |**(3)**|SharePoint 内容、配置和服务应用程序数据库。|  
 |**(4)**|SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 将 Excel Services 应用程序 **“数据模型设置”** 配置为使用此服务器。|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66095595"
 |||  
 |-|-|  
 |**(1)**|Excel Service 应用程序。 作为 SharePoint 安装的一部分创建的服务应用程序。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”** 。|  
 |**(3)**|运行 **spPowerPivot.msi** 以安装数据访问接口、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库并计划数据刷新。|  
 |**(4)**|SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 将 Excel Services 应用程序 **“数据模型设置”** 配置为使用此服务器。|  
 |**(5)**|SharePoint 内容、配置和服务应用程序数据库。|  
@@ -113,7 +113,7 @@ ms.locfileid: "66095595"
 |||  
 |-|-|  
 |**(1)**|Excel Service 应用程序。 作为 SharePoint 安装的一部分创建的服务应用程序。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”** 。|  
 |**(3)**|运行 spPowerPivot.msi 以安装数据访问接口、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库并计划数据刷新。|  
 |**(4)**|SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 将 Excel Services 应用程序 **“数据模型设置”** 配置为使用此服务器。|  
 |**(5)**|SharePoint 内容、配置和服务应用程序数据库。|  
@@ -126,7 +126,7 @@ ms.locfileid: "66095595"
 |||  
 |-|-|  
 |**(1)**|Excel Service 应用程序。 作为 SharePoint 安装的一部分创建的服务应用程序。|  
-|**(2)**|PowerPivot 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”**。|  
+|**(2)**|PowerPivot 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”** 。|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|  
 |**(4)**|从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装介质或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能包中安装用于 SharePoint 的 Reporting Services 外接程序。|  
 |**(5)**|SharePoint 内容、配置和服务应用程序数据库。|  
@@ -140,7 +140,7 @@ ms.locfileid: "66095595"
 |||  
 |-|-|  
 |**(1)**|Excel Service 应用程序。 作为 SharePoint 安装的一部分创建的服务应用程序。|  
-|**(2)**|PowerPivot 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”**。|  
+|**(2)**|PowerPivot 服务应用程序。 默认名称为 **“默认的 PowerPivot 服务应用程序”** 。|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|  
 |**(4)**|从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装介质或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能包中安装用于 SharePoint 的 Reporting Services 外接程序。|  
 |**(5)**|运行 **spPowerPivot.msi** 以安装数据访问接口、PowerPivot 配置工具、PowerPivot 库并安排数据刷新。|  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf246256471931292d6dfcee8a83386bce256e08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62816928"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "62816928"
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**int**|标识每个唯一的数据类型。|  
 |**dbms_id**|**int**|标识数据类型所属的 DBMS。|  
-|**类型**|**sysname**|数据类型名称（本机）。|  
+|**type**|**sysname**|数据类型名称（本机）。|  
 |**createparams**|**int**|说明哪一长度、精度和小数位数组合适用于每种数据类型的位图，包括：<br /><br /> **0x1** = 精度。<br /><br /> **0x2** = SCALE.<br /><br /> **0x4** = 长度。|  
   
 ## <a name="remarks"></a>备注  

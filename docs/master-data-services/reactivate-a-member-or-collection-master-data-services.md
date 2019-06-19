@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 210dd27a8f91077e7e022c19ec97f41c7908a38c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489638"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>重新激活成员或集合 (Master Data Services)
@@ -52,19 +52,19 @@ ms.locfileid: "65489638"
   
 ### <a name="to-reactivate-a-member-or-collection"></a>重新激活成员或集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击 **“版本管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击 **“版本管理”** 。  
   
-2.  在菜单栏上，单击 **“事务”**。  
+2.  在菜单栏上，单击 **“事务”** 。  
   
 3.  在 **“事务”** 页上，从 **“模型”** 列表中选择某个模型。  
   
 4.   从“版本”列表中，选择某一版本。  
   
-5.  在 **“事务”** 窗格中，单击要重新激活的成员或集合所对应的行。 此行应在“旧值”列中显示“活动”并在“新值”列中显示“已停用”。  
+5.  在 **“事务”** 窗格中，单击要重新激活的成员或集合所对应的行。 此行应在“旧值”  列中显示“活动”  并在“新值”  列中显示“已停用”  。  
   
-6.  单击 **“撤消事务”**。  
+6.  单击 **“撤消事务”** 。  
   
-7.  在确认对话框中，单击 **“确定”**。 添加新事务，在 **“新值”** 列中显示 **“活动”** 。  
+7.  在确认对话框中，单击 **“确定”** 。 添加新事务，在 **“新值”** 列中显示 **“活动”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [删除成员或集合 (Master Data Services)](../master-data-services/delete-a-member-or-collection-master-data-services.md)   

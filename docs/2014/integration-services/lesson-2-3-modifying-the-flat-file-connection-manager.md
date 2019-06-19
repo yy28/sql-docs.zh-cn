@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767429"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>步骤 3：修改平面文件连接管理器
@@ -24,13 +24,13 @@ ms.locfileid: "62767429"
   
 ### <a name="to-configure-the-flat-file-connection-manager-to-use-a-variable-for-the-connection-string"></a>配置平面文件连接管理器以使用连接字符串的变量  
   
-1.  在 **“连接管理器”** 窗格中，右键单击 **Sample Flat File Source Data**，再选择 **“属性”**。  
+1.  在 **“连接管理器”** 窗格中，右键单击 **Sample Flat File Source Data**，再选择 **“属性”** 。  
   
-2.  在“属性”窗口中，针对“表达式”，单击空单元，然后单击省略号按钮“(…)”。  
+2.  在“属性”窗口中，针对“表达式”，单击空单元，然后单击省略号按钮“(…)”   。  
   
 3.  在中**属性表达式编辑器**对话框中**属性**列中，键入或选择`ConnectionString`。  
   
-4.  在“表达式”列中，单击省略号按钮“(…)”以打开“表达式生成器”对话框。  
+4.  在“表达式”列中，单击省略号按钮“(…)”以打开“表达式生成器”对话框    。  
   
 5.  在 **“表达式生成器”** 对话框中，展开 **“变量”** 节点。  
   

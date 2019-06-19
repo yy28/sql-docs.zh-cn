@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4277c6606392c91ffb3de40ace658cd68461f01
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536255"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 函数
@@ -81,7 +81,7 @@ SQLRETURN SQLStatistics(
  *唯一*  
  [输入]索引的类型：SQL_INDEX_UNIQUE 或 SQL_INDEX_ALL。  
   
- Reserved  
+ Reserved   
  [输入]指示基数和页中的列的结果集的重要性。 以下选项会影响返回的基数和页仅限于列;如果即使基数和页不会返回，则返回索引的信息。  
   
  SQL_ENSURE 请求驱动程序无条件地检索统计信息。 （仅符合 Open Group 标准并不支持 ODBC 扩展驱动程序将不能以支持 SQL_ENSURE。）  

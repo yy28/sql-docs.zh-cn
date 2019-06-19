@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056026"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>选择包管理选项（SSIS 包升级向导）
@@ -39,7 +39,7 @@ ms.locfileid: "66056026"
  **验证升级包**  
  验证升级包，并仅保存通过验证的升级包。  
   
- 如果未选择此选项，则向导将不会验证升级包。 因此，向导将保存所有升级包，不论包是否有效。 向导会将升级包保存到在向导的“选择目标位置”页上指定的目标。  
+ 如果未选择此选项，则向导将不会验证升级包。 因此，向导将保存所有升级包，不论包是否有效。 向导会将升级包保存到在向导的“选择目标位置”  页上指定的目标。  
   
  验证会延长升级过程的时间。 对于可能成功升级的大型包，建议不要选择此选项。  
   

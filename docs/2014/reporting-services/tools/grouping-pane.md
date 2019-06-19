@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 476815dc8378c1e8ca790091021c1bd3ec95ba9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100271"
 ---
 # <a name="grouping-pane"></a>“分组”窗格
@@ -53,7 +53,7 @@ ms.locfileid: "66100271"
  在高级模式中，可以查看组的所有静态和动态成员。 选择成员时，“属性”窗口将显示当前所选 **“Tablix 成员”** 的属性。  
   
 > [!NOTE]  
->  若要切换“高级模式”，请在“列组”窗格一侧右键单击向下箭头，然后单击“高级模式”。  
+>  若要切换“高级模式”，请在“列组”窗格一侧右键单击向下箭头，然后单击“高级模式”   。  
   
  在大多数情况下，在创建组或添加总计时，将自动设置用于控制静态和动态组行及组列的显示的属性。 若要编辑默认值，必须在“行组”或“列组”窗格中选择组成员，然后在“属性”窗口中更改属性值。 以下属性可用：  
   

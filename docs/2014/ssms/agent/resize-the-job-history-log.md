@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650881"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
@@ -46,9 +46,9 @@ ms.locfileid: "62650881"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”，然后单击“属性”。  
+2.  右键单击“SQL Server 代理”  ，然后单击“属性”  。  
   
-3.  选择“历史记录”页，然后确认已选中“限制作业历史记录日志的大小”。  
+3.  选择“历史记录”  页，然后确认已选中“限制作业历史记录日志的大小”  。  
   
 4.  在 **“作业历史记录日志的最大大小”** 框中，输入作业历史记录日志允许的最大行数。  
   
@@ -58,10 +58,10 @@ ms.locfileid: "62650881"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”，然后单击“属性”。  
+2.  右键单击“SQL Server 代理”  ，然后单击“属性”  。  
   
-3.  选择 **“历史记录”** 页，然后单击 **“自动删除代理历史记录”**。  
+3.  选择 **“历史记录”** 页，然后单击 **“自动删除代理历史记录”** 。  
   
-4.  选择适当的“天”、“周”或“月”数。  
+4.  选择适当的“天”  、“周”  或“月”  数。  
   
   

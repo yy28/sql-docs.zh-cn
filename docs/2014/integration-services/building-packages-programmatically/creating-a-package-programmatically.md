@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f7ebe0c0c5d23210a5111e8b4daaa69f8c73bb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62836384"
 ---
 # <a name="creating-a-package-programmatically"></a>以编程方式创建包
@@ -63,11 +63,11 @@ Module Module1
 End Module  
 ```  
   
- 若要编译并运行该示例，请在 Visual Studio 中按 F5。 若要使用 C# 编译器 (csc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用将 \<filename> 替换为 .cs 或 .vb 文件的名称，并为其选择一个 \<outputfilename>。  
+ 若要编译并运行该示例，请在 Visual Studio 中按 F5。 若要使用 C# 编译器 (csc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用将 \<filename> 替换为 .cs 或 .vb 文件的名称，并为其选择一个 \<outputfilename>    。  
   
  **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 若要使用 Visual Basic .NET 编译器 (vbc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用。  
+ 若要使用 Visual Basic .NET 编译器 (vbc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用  。  
   
  **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   

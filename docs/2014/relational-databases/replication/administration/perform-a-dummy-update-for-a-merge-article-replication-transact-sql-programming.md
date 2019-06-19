@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 691988cd229f9b0c9ab81f31713a2b2e46806bdb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162006"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>执行合并项目的虚更新（复制 Transact-SQL 编程）
@@ -29,7 +29,7 @@ ms.locfileid: "63162006"
   
 1.  请对需要虚更新的合并发布表中的行执行操作（例如，UPDATETEXT）。  
   
-2.  在服务器（发布服务器或订阅服务器）的进行了更改的数据库中，执行 [sp_mergedummyupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql)。 为 **@source_object**指定进行了更改的表，并为 **@rowguid**。  
+2.  在服务器（发布服务器或订阅服务器）的进行了更改的数据库中，执行 [sp_mergedummyupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql)。 为 **@source_object** 指定进行了更改的表，并为 **@rowguid** 。  
   
 3.  同步此订阅以复制更改行。  
   

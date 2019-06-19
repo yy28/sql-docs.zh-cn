@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781992"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>为 Kerberos 连接注册服务主体名称
@@ -71,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **命名实例**  
   
--   *MSSQLSvc/FQDN*:[_port_**|**_instancename_]，其中：  
+-   *MSSQLSvc/FQDN*:[_port_ **|** _instancename_]，其中：  
   
     -   *MSSQLSvc* 是要注册的服务。  
   
@@ -83,7 +83,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **默认实例**  
   
--   *MSSQLSvc/FQDN*:_port_**|**_MSSQLSvc/FQDN_其中：  
+-   *MSSQLSvc/FQDN*:_port_ **|** _MSSQLSvc/FQDN_其中：  
   
     -   *MSSQLSvc* 是要注册的服务。  
   
@@ -103,9 +103,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |MSSQLSvc/*fqdn:InstanceName*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。 *InstanceName* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例名称。|  
   
 ##  <a name="Auto"></a> 自动注册 SPN  
- 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例启动时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务注册 SPN。 实例停止时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试取消此 SPN 的注册。 对于 TCP/IP 连接，注册 SPN 时使用的格式为 MSSQLSvc/\<FQDN>:\<tcpport>。命名实例和默认实例均将注册为 MSSQLSvc，可根据 \<tcpport> 值来区分这些实例。  
+ 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例启动时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务注册 SPN。 实例停止时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试取消此 SPN 的注册。 对于 TCP/IP 连接，注册 SPN 时使用的格式为 MSSQLSvc/\<FQDN>:\<tcpport>   。命名实例和默认实例均将注册为 MSSQLSvc，可根据 \<tcpport> 值来区分这些实例   。  
   
- 对于支持 Kerberos 的其他连接注册 SPN 时采用格式*MSSQLSvc /\<FQDN >*:*\<实例名 >* 对于命名实例。 注册默认实例的格式为 MSSQLSvc/\<FQDN>。  
+ 对于支持 Kerberos 的其他连接注册 SPN 时采用格式*MSSQLSvc /\<FQDN >* : *\<实例名 >* 对于命名实例。 注册默认实例的格式为 MSSQLSvc/\<FQDN>  。  
   
  如果服务帐户缺少执行这些操作所需的权限，在注册或取消注册 SPN 时可能需要进行手动干预。  
   
@@ -143,7 +143,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
   
 -   **username@domain** 操作系统上运行 **domain\username** （适用于域用户帐户）  
   
--   machine$@domain 或 host\FQDN（适用于计算机域帐户，如 Local System 或 NETWORK SERVICES）。  
+-   machine$@domain 或 host\FQDN（适用于计算机域帐户，如 Local System 或 NETWORK SERVICES）   。  
   
  若要确定连接的身份验证方法，请执行下面的查询。  
   

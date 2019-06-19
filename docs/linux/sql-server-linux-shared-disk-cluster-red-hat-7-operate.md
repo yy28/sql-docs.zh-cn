@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: bc453b815c0aaee7a7cd30b153101f75c1dbeacf
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712907"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>对适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集进行操作
@@ -260,7 +260,7 @@ pacemaker: active/enabled
 
     需要在所有节点上打开以下端口，才能使 Pacemaker 进行通信。
     
-    - * * TCP:2224, 3121, 21064
+    - \* * TCP:2224, 3121, 21064
 
 - **Pacemaker 或 Corosync 服务运行**
 

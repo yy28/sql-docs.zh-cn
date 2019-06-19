@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086820"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>创建挖掘结构（SQL Server 数据挖掘外接程序）
@@ -37,7 +37,7 @@ ms.locfileid: "66086820"
   
 2.  在中**选择源数据**对话框框中，指定 Excel 区域、 Excel 数据表或包含你想要用于分析的数据的外部数据源。  
   
-     单击“下一步” 。  
+     单击“下一步”  。  
   
 3.  在中**选择的列**对话框框中，查看所选的数据源中可用的列的列表。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66086820"
   
      单击 **“确定”** 关闭对话框。  
   
-6.  单击“下一步” 。  
+6.  单击“下一步”  。  
   
      根据所用数据的类型，您可能希望在此步骤之后完成向导。 在这种情况下，跳转到**完成**页以命名挖掘结构。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "66086820"
   
      可以选择键入要用于测试的最大行数。  
   
-     单击“下一步” 。  
+     单击“下一步”  。  
   
 8.  在中**完成**对话框中，键入名称和新的挖掘结构的说明。  
   
-9. 单击 **“完成”**。  
+9. 单击 **“完成”** 。  
   
 ### <a name="related-options"></a>相关的选项  
   

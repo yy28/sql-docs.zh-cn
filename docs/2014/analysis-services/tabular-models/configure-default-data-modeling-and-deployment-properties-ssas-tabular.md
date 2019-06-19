@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1246119b72890bc80125034c8ee23bcd0c221b5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067585"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>配置默认数据建模和部署属性（SSAS 表格）
@@ -27,9 +27,9 @@ ms.locfileid: "66067585"
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>为新模型项目配置默认的兼容级别属性  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“工具”** 菜单，然后单击 **“选项”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“工具”** 菜单，然后单击 **“选项”** 。  
   
-2.  在 **“选项”** 对话框中，展开 **“Analysis Services 表格设计器”**，然后单击 **“兼容级别”**。  
+2.  在 **“选项”** 对话框中，展开 **“Analysis Services 表格设计器”** ，然后单击 **“兼容级别”** 。  
   
 3.  配置以下属性设置：  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66067585"
   
 #### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>为新模型项目配置默认的部署服务器属性设置  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“工具”** 菜单，然后单击 **“选项”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“工具”** 菜单，然后单击 **“选项”** 。  
   
-2.  在 **“选项”** 对话框中，展开 **“Analysis Services 表格设计器”**，然后单击 **“部署”**。  
+2.  在 **“选项”** 对话框中，展开 **“Analysis Services 表格设计器”** ，然后单击 **“部署”** 。  
   
 3.  配置以下属性设置：  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66067585"
   
 ###  <a name="bkmk_conf_default"></a> 为新模型项目配置默认的工作区数据库属性设置  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“工具”** 菜单，然后单击 **“选项”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“工具”** 菜单，然后单击 **“选项”** 。  
   
-2.  在 **“选项”** 对话框中，展开 **“Analysis Services 表格设计器”**，然后单击 **“工作区数据库”**。  
+2.  在 **“选项”** 对话框中，展开 **“Analysis Services 表格设计器”** ，然后单击 **“工作区数据库”** 。  
   
 3.  配置以下属性设置：  
   

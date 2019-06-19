@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62504962"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "62504962"
 |owning_principal_sid|nvarchar(256)|拥有该用户实例的主体的 SID（安全标识符）。 它与 Windows SID 相匹配。|  
 |owning_principal_sid_binary|varbinary(85)|拥有用户实例的用户的二进制版 SID。|  
 |**instance_name**|**nvarchar(128)**|该用户实例的名称。|  
-|**instance_pipe_name**|nvarchar(260)|创建用户实例时，便会创建与应用程序连接的命名管道。 可以在连接字符串中使用该名称以连接到该用户实例。|  
+|**instance_pipe_name**|nvarchar(260) |创建用户实例时，便会创建与应用程序连接的命名管道。 可以在连接字符串中使用该名称以连接到该用户实例。|  
 |**os_process_id**|**Int**|该用户实例的 Windows 进程的进程号。|  
 |**os_process_creation_date**|**日期时间**|上次启动该用户实例进程的日期和时间。|  
 |**heart_beat**|**nvarchar(5)**|该用户实例的当前状态，可以是 ALIVE 或 DEAD。|  

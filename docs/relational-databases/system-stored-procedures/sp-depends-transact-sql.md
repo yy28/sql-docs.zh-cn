@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047161"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
@@ -56,7 +56,7 @@ sp_depends [ @objname = ] '<object>'
  对象所属架构的名称。  
   
  *object_name*  
- 要检查其依赖关系的数据库对象。 该对象可以是表、视图、存储过程、用户定义函数或触发器。 o*bject_name*是**nvarchar(776)**，无默认值。  
+ 要检查其依赖关系的数据库对象。 该对象可以是表、视图、存储过程、用户定义函数或触发器。 o*bject_name*是**nvarchar(776)** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -64,22 +64,22 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>结果集  
  **sp_depends**显示两个结果集。  
   
- 下面的结果集显示的对象所在*\<对象 >* 取决于。  
+ 下面的结果集显示的对象所在 *\<对象 >* 取决于。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**名称**|**nvarchar(257** **)**|存在依赖项的项名称。|  
-|**类型**|**nvarchar(16)**|项的类型。|  
+|**type**|**nvarchar(16)**|项的类型。|  
 |**updated**|**nvarchar(7)**|是否更新项。|  
 |**selected**|**nvarchar(8)**|项是否用于 SELECT 语句。|  
 |**column**|**sysname**|存在依赖项的列或参数。|  
   
- 下面的结果集显示依赖于的对象*\<对象 >*。  
+ 下面的结果集显示依赖于的对象 *\<对象 >* 。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**名称**|**nvarchar(257** **)**|存在依赖项的项名称。|  
-|**类型**|**nvarchar(16)**|项的类型。|  
+|**type**|**nvarchar(16)**|项的类型。|  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

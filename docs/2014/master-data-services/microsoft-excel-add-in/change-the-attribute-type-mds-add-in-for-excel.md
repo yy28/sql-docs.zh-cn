@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482764"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>更改属性类型（用于 Excel 的 MDS 外接程序）
@@ -23,7 +23,7 @@ ms.locfileid: "65482764"
  如果要更改属性类型以创建受限制列表（基于域的属性），请参阅[创建基于域的属性（用于 Excel 的 MDS 外接程序）](create-a-domain-based-attribute-mds-add-in-for-excel.md)。  
   
 > [!NOTE]  
->  不能更新“名称”或“代码”列的类型或长度。  
+>  不能更新“名称”  或“代码”  列的类型或长度。  
   
 ## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
@@ -40,11 +40,11 @@ ms.locfileid: "65482764"
   
 2.  单击要更改的列中的任意单元。  
   
-3.  在 **“生成模型”** 组中，单击 **“特性属性”**。  
+3.  在 **“生成模型”** 组中，单击 **“特性属性”** 。  
   
 4.  在 **“特性属性”** 对话框中，根据需要更新设置。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 ## <a name="what-happens-when-you-change-the-attribute-type"></a>在更改属性类型时会发生什么情况？  
  如果属性有任何依赖项，例如属性由任何 MDS 业务规则引用或属性包含在订阅视图中，则您更改属性的数据类型时，MDS 将：  

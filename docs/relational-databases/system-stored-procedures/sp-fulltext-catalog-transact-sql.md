@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983109"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
@@ -48,7 +48,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="arguments"></a>参数  
 `[ @ftcat = ] 'fulltext_catalog_name'` 是全文目录的名称。 每个数据库的目录名称必须是唯一的。 *fulltext_catalog_name*是**sysname**。  
   
-`[ @action = ] 'action'` 是要执行的操作。 *操作*是**varchar （20)**，可以是下列值之一。  
+`[ @action = ] 'action'` 是要执行的操作。 *操作*是**varchar （20)** ，可以是下列值之一。  
   
 > [!NOTE]  
 >  可根据需要创建、删除和修改全文目录。 但请避免同时对多个目录的架构进行更改。 可以使用执行这些操作**sp_fulltext_table**存储过程，这是建议的方法。  
@@ -64,7 +64,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 `[ @path = ] 'root_directory'` 为是根目录 （不是完整物理路径）**创建**操作。 *root_directory*是**nvarchar(100)** 和具有默认值为 NULL，表示使用安装时指定的默认位置。 这是 Mssql 目录中; 中的 Ftdata 子目录例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\FTData。 指定的根目录必须驻留在同一台计算机的某一驱动器上，它不能只包含驱动器号，也不能是相对路径。 不支持使用网络驱动器、可移动驱动器、软盘和 UNC 路径。 全文目录必须在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关联的本地硬盘上创建。  
   
- **@path** 仅当*操作*是**创建**。 有关以外的其他操作**创建**(**停止**，**重新生成**，等等)， **@path**必须为 NULL 或省略。  
+ **@path** 仅当*操作*是**创建**。 有关以外的其他操作**创建**(**停止**，**重新生成**，等等)， **@path** 必须为 NULL 或省略。  
   
  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例是群集中的虚拟服务器，则指定的目录所在目录需要位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源所属的共享磁盘驱动器上。 如果@path未指定，则默认目录所在目录的位置为已安装虚拟服务器时指定的目录中的共享磁盘驱动器上。  
   
@@ -77,7 +77,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>备注  
  **Start_full**操作用来创建中的全文索引数据的完整快照*fulltext_catalog_name*。 **Start_incremental**操作用来重新编制索引的数据库中仅已更改的行。 仅当表具有的类型的列，可以应用增量填充**时间戳**。 如果全文目录中的表不包含类型的列**时间戳**，则该表将进行完全填充。  
   
- 全文目录及索引数据存储在某些文件中，这些文件是在全文目录所在目录中创建的。 该全文目录所在目录创建为目录中指定的目录的子目录**@path**或在该服务器默认全文目录所在目录中如果**@path**不是指定。 生成全文目录所在目录名称的方式可以保证它在服务器上是唯一的。 因此，一个服务器上所有的全文目录所在目录可以共享相同的路径。  
+ 全文目录及索引数据存储在某些文件中，这些文件是在全文目录所在目录中创建的。 该全文目录所在目录创建为目录中指定的目录的子目录 **@path** 或在该服务器默认全文目录所在目录中如果 **@path** 不是指定。 生成全文目录所在目录名称的方式可以保证它在服务器上是唯一的。 因此，一个服务器上所有的全文目录所在目录可以共享相同的路径。  
   
 ## <a name="permissions"></a>权限  
  调用方必须是隶属**db_owner**角色。 根据请求的操作，调用方应不拒绝授予 ALTER 或 CONTROL 权限 (这**db_owner**具有) 授予目标全文目录。  

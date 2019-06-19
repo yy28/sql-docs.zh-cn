@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060862"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>将包配置为使用事务
@@ -41,11 +41,11 @@ ms.locfileid: "66060862"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”。  
+4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”  。  
   
 5.  在中**属性**窗口中，将 TransactionOption 属性设置为`Required`。  
   
-6.  在“控制流”选项卡的设计图面上，右键单击要在事务中注册的任务或容器，再单击“属性”。  
+6.  在“控制流”  选项卡的设计图面上，右键单击要在事务中注册的任务或容器，再单击“属性”  。  
   
 7.  在中**属性**窗口中，将 TransactionOption 属性设置为`Supported`。  
   
@@ -67,18 +67,18 @@ ms.locfileid: "66060862"
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”。  
+4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”  。  
   
 5.  在中**属性**窗口中，将 TransactionOption 属性设置为`Supported`。  
   
     > [!NOTE]  
     >  该包支持事务，但事务是由包中的任务或容器启动的。  
   
-6.  在“控制流”选项卡的设计图面上，右键单击要为其启动事务的包中的任务或容器，然后单击“属性”。  
+6.  在“控制流”  选项卡的设计图面上，右键单击要为其启动事务的包中的任务或容器，然后单击“属性”  。  
   
 7.  在中**属性**窗口中，将 TransactionOption 属性设置为`Required`。  
   
-8.  如果事务由容器启动，则右键单击要在事务中注册的任务或容器，然后单击“属性”。  
+8.  如果事务由容器启动，则右键单击要在事务中注册的任务或容器，然后单击“属性”  。  
   
 9. 在中**属性**窗口中，将 TransactionOption 属性设置为`Supported`。  
   

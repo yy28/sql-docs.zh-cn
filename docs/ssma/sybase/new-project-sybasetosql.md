@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 853483d2149cc159395fae9fda10f6f84a245151
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63278843"
 ---
 # <a name="new-project-sybasetosql"></a>新建项目 (SybaseToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63278843"
 **名称**  
 输入项目的名称。 SSMA 会追加文件扩展名。  
   
-**位置**  
+**Location**  
 输入或浏览到文件夹或网络位置来保存该项目。  
   
 **迁移到**  

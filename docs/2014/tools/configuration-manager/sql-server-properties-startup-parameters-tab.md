@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679156"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
@@ -22,12 +22,12 @@ ms.locfileid: "62679156"
   
 ## <a name="options"></a>选项  
  **指定启动参数**  
- 若要添加某一参数，请键入该参数，然后单击 **“添加”**。  
+ 若要添加某一参数，请键入该参数，然后单击 **“添加”** 。  
   
- 若要修改所需的参数之一，请在 **“现有参数”** 框中键入该参数，更改 **“指定启动参数”** 框中的值，然后单击 **“更新”**。  
+ 若要修改所需的参数之一，请在 **“现有参数”** 框中键入该参数，更改 **“指定启动参数”** 框中的值，然后单击 **“更新”** 。  
   
  **“现有参数”**  
- 若要删除某一参数，请选择该参数，然后单击 **“删除”**。  
+ 若要删除某一参数，请选择该参数，然后单击 **“删除”** 。  
   
 ## <a name="parameter-format"></a>参数格式  
  不要在参数之间输入分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器会自动添加分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器将强制以下参数要求。  
@@ -51,7 +51,7 @@ ms.locfileid: "62679156"
  有关如何移动 master 数据库的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“移动系统数据库”主题。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书的“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”主题中介绍了所有支持的启动参数。 -T*trace#* 的启动参数指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例应该以有效的指定跟踪标志 (*trace#*) 启动。 跟踪标记用于以非标准行为启动服务器。 有关跟踪标志的详细信息，请参阅[!INCLUDE[tsql](../../includes/tsql-md.md)]联机丛书中的“跟踪标志 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )”主题。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书的“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”主题中介绍了所有支持的启动参数。 -T*trace#* 的启动参数指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例应该以有效的指定跟踪标志 (*trace#* ) 启动。 跟踪标记用于以非标准行为启动服务器。 有关跟踪标志的详细信息，请参阅[!INCLUDE[tsql](../../includes/tsql-md.md)]联机丛书中的“跟踪标志 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )”主题。  
   
 > [!CAUTION]  
 >  您可能会看到在 Internet 上描述的其他未记录的启动参数和跟踪标志。 创建未记录的启动参数和跟踪标志是为了满足某些不常见问题或者强制测试所需的某些条件。 使用未记录的启动参数可能会导致意外结果。 除非 Microsoft 客户支持服务部门指示，否则不要使用未记录的参数。  

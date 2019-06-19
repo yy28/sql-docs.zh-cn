@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c49b343e9eb04a349219b9a5a752496c9bc0abda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63297579"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>向关系图中添加相关表 (Visual Database Tools)
@@ -28,6 +28,6 @@ ms.locfileid: "63297579"
   
 1.  将具有关系的表添加到数据库关系图中。  
   
-2.  右键单击该表，再从快捷菜单中单击“添加相关表”。  
+2.  右键单击该表，再从快捷菜单中单击“添加相关表”  。  
   
   

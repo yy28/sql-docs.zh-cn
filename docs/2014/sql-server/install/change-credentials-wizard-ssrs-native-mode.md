@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9dba9988bec98f597a59fe4152b2abdde0d5ccea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096709"
 ---
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>更改凭据向导（SSRS 本机模式）
@@ -38,7 +38,7 @@ ms.locfileid: "66096709"
  您不能指定其他 Windows 凭据。 如果您希望以其他 Windows 用户身份连接，请以该用户身份登录，然后启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。  
   
  **凭据**  
- 指定用于将报表服务器连接到报表服务器数据库的帐户。 有效值包括报表服务器 Web 服务的服务帐户、在您要用来承载报表服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上定义的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 数据库登录名，或 Windows 帐户。 如果使用 Windows 帐户，则可以指定本地帐户 (*\<计算机名 >\\< 用户名\>*) 如果报表服务器和数据库位于同一台计算机或域用户帐户 (*\<域 >\\< 用户名\>*) 如果它们位于同一域中的不同计算机上。  
+ 指定用于将报表服务器连接到报表服务器数据库的帐户。 有效值包括报表服务器 Web 服务的服务帐户、在您要用来承载报表服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上定义的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 数据库登录名，或 Windows 帐户。 如果使用 Windows 帐户，则可以指定本地帐户 ( *\<计算机名 >\\< 用户名\>* ) 如果报表服务器和数据库位于同一台计算机或域用户帐户 ( *\<域 >\\< 用户名\>* ) 如果它们位于同一域中的不同计算机上。  
   
  报表服务器将创建一个数据库登录名，并为您指定的帐户分配数据库权限。  
   

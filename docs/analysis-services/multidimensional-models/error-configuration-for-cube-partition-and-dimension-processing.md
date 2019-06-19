@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65357359"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>多维数据集、 分区和维度处理的错误配置
@@ -54,7 +54,7 @@ ms.locfileid: "65357359"
   
 -   由于 **ConvertToUnknown** 的 **KeyErrorAction**设置，默认操作是转换为未知成员。 分配给未知成员的记录会在数据库中进行隔离，作为您在处理完成之后可能要调查的问题证据。  
   
-     未知成员会从查询工作负荷中排除，但是这些成员在某些客户端应用程序中可见（如果 **“UnknownMember”** 设置为 **“Visible”**）。  
+     未知成员会从查询工作负荷中排除，但是这些成员在某些客户端应用程序中可见（如果 **“UnknownMember”** 设置为 **“Visible”** ）。  
   
      若要跟踪转换为未知成员的 null 值数目，可以修改 **NullKeyConvertedToUnknown** 属性以便向日志或在“处理”窗口中报告这些错误。  
   
@@ -101,33 +101,33 @@ ms.locfileid: "65357359"
   
 #### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
   
-1.  在“对象资源管理器”中，右键单击以下对象之一的“属性”：维度、多维数据集或分区。  
+1.  在“对象资源管理器”中，右键单击以下对象之一的“属性”  ：维度、多维数据集或分区。  
   
-2.  在“属性”中，单击 **“错误配置”**。  
+2.  在“属性”中，单击 **“错误配置”** 。  
   
 #### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
   
 1.  在解决方案资源管理器中，双击某个维度或多维数据集。 **“ErrorConfiguration”** 随即出现在下方窗格的“属性”中。  
   
-2.  或者，仅对于单个维度，在“解决方案资源管理器”中右键单击该维度，选择“处理”，然后在“处理维度”对话框中选择“更改设置”。 错误配置选项随即出现在“维度键错误”选项卡上。  
+2.  或者，仅对于单个维度，在“解决方案资源管理器”中右键单击该维度，选择“处理”  ，然后在“处理维度”对话框中选择“更改设置”  。 错误配置选项随即出现在“维度键错误”选项卡上。  
   
 ##  <a name="bkmk_missing"></a> 缺失键 (KeyNotFound)  
  缺失键值的记录无法添加到数据库中，即使在忽略错误或错误限制是无限时也是如此。  
   
  当事实数据表中的记录包含外键值，但是该外键在相关维度表中没有对应记录时，服务器会在分区处理过程中生成 **KeyNotFound** 错误。 当处理的相关或雪花状维度表中一个维度中的记录指定的外键在相关维度中不存在时，也会发生此错误。  
   
- 发生 **KeyNotFound** 错误时，会将有问题的记录分配给未知成员。 此行为通过 **“键操作”**（设置为 **“ConvertToUnknown”**）进行控制，以便您可以查看分配的记录做进一步调查。  
+ 发生 **KeyNotFound** 错误时，会将有问题的记录分配给未知成员。 此行为通过 **“键操作”** （设置为 **“ConvertToUnknown”** ）进行控制，以便您可以查看分配的记录做进一步调查。  
   
 ##  <a name="bkmk_nullfact"></a> 事实数据表中的 Null 外键 (KeyNotFound)  
  默认情况下，事实数据表的外键列中的 Null 值转换为零。 假设零不是有效的外键值， **KeyNotFound** 错误会进行记录并针对错误限制（默认情况下是零）进行计数。  
   
- 要允许处理继续进行，可以在转换 Null 值并检查是否存在错误之前处理 Null 值。 为此，请将 **“NullProcessing”** 设置为 **“Error”**。  
+ 要允许处理继续进行，可以在转换 Null 值并检查是否存在错误之前处理 Null 值。 为此，请将 **“NullProcessing”** 设置为 **“Error”** 。  
   
 #### <a name="set-nullprocessing-property-on-a-measure"></a>对度量值设置 NullProcessing 属性  
   
 1.  在 SQL Server Data Tools 的解决方案资源管理器中，双击多维数据集以便在多维数据集设计器中打开它。  
   
-2.  在“度量值”窗格中右键单击某个度量值，然后选择“属性”。  
+2.  在“度量值”窗格中右键单击某个度量值，然后选择“属性”  。  
   
 3.  在“属性”中，展开 **“源”** 以查看 **“NullProcessing”** 属性。 它在默认情况下设置为 **“Automatic”** ，这对于 OLAP 项，会将包含数字数据的字段的 null 值转换为零。  
   
@@ -148,9 +148,9 @@ ms.locfileid: "65357359"
   
 1.  在 SQL Server Data Tools 的解决方案资源管理器中，双击维度以便在维度设计器中打开它。  
   
-2.  在“属性”窗格中右键单击某个属性，然后选择“属性”。  
+2.  在“属性”窗格中右键单击某个属性，然后选择“属性”  。  
   
-3.  在“属性”中，展开 **“KeyColumns”** 以查看 **“NullProcessing”** 属性。 它在默认情况下设置为 **“Automatic”** ，这会将包含数字数据的字段的 null 值转换为零。 请将该值更改为 **“Error”** 或 **“UnknownMember”**。  
+3.  在“属性”中，展开 **“KeyColumns”** 以查看 **“NullProcessing”** 属性。 它在默认情况下设置为 **“Automatic”** ，这会将包含数字数据的字段的 null 值转换为零。 请将该值更改为 **“Error”** 或 **“UnknownMember”** 。  
   
      此修改通过在检查记录是否存在错误之前弃用或转换记录，消除触发 **“KeyNotFound”** 的底层条件。  
   
@@ -162,9 +162,9 @@ ms.locfileid: "65357359"
  要更改此行为，请将 **KeyDuplicate** 设置为 **ReportAndContinue** 或 **ReportAndStop** 以报告错误。 随后可以检查错误以确定维度设计中的潜在缺陷。  
   
 ##  <a name="bkmk_limit"></a> 更改错误限制或错误限制操作  
- 可以提高错误限制以允许处理过程中出现更多错误。 没有有关提高错误限制的指南；合适的值因具体情况而异。 错误限制在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中通过 **ErrorConfiguration** 属性中的 **KeyErrorLimit** 进行指定，或是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中通过维度、多维数据集或度量值组属性的“错误配置”选项卡上的“错误数”进行指定。  
+ 可以提高错误限制以允许处理过程中出现更多错误。 没有有关提高错误限制的指南；合适的值因具体情况而异。 错误限制在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中通过 **ErrorConfiguration** 属性中的 **KeyErrorLimit** 进行指定，或是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中通过维度、多维数据集或度量值组属性的“错误配置”选项卡上的“错误数”  进行指定。  
   
- 达到错误限制之后，便可以指定处理停止或日志记录停止。 例如，假定对错误限制 100 将操作设置为 **StopLogging** 。 出现第 101 个错误时，处理继续进行，但是错误不再进行记录或计数。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，将错误限制操作指定为 **ErrorConfiguration** 属性中的 **KeyErrorLimitAction**，或是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，将其指定为维度、多维数据集或度量值组属性的“错误配置”选项卡上的“出错时要执行的操作”。  
+ 达到错误限制之后，便可以指定处理停止或日志记录停止。 例如，假定对错误限制 100 将操作设置为 **StopLogging** 。 出现第 101 个错误时，处理继续进行，但是错误不再进行记录或计数。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，将错误限制操作指定为 **ErrorConfiguration** 属性中的 **KeyErrorLimitAction**，或是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，将其指定为维度、多维数据集或度量值组属性的“错误配置”选项卡上的“出错时要执行的操作”  。  
   
 ##  <a name="bkmk_log"></a> 设置错误日志路径  
  可以指定文件以存储在处理过程中报告的键相关错误消息。 默认情况下，错误在交互处理过程中在“处理”窗口中可见，随后会在关闭窗口或会话时被弃用。 日志仅包含与键相关的错误信息，与处理对话框中报告的错误相同。  

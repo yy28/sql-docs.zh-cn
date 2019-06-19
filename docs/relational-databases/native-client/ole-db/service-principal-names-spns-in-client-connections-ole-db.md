@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 62073e1618d4ab43acbbfbaad1fb6e2ff16c7658
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62631695"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>客户端连接中的服务主体名称 (SPN) (OLE DB)
@@ -55,8 +55,8 @@ ms.locfileid: "62631695"
 |成员函数|Description|  
 |---------------------|-----------------|  
 |IDataInitialize::GetDataSource|*pwszInitializationString*可以包含新关键字**ServerSPN**并**FailoverPartnerSPN**。|  
-|IDataInitialize::GetInitializationString|如果 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 没有默认值，将通过 ppwszInitString 将它们包括在初始化字符串中，作为 ServerSPN 和 FailoverPartnerSPN 的关键字值。 如果有默认值，这些关键字将不包括在初始化字符串中。|  
-|IDBInitialize::Initialize|如果通过在数据源初始化属性中设置 DBPROP_INIT_PROMPT 启用了提示功能，将显示 OLE DB“登录”对话框。 这允许为主体服务器及其故障转移伙伴输入 SPN。<br /><br /> 如果设置了 DPPROP_INIT_PROVIDERSTRING 中的访问接口字符串，该字符串将识别新关键字 ServerSPN 和 FailoverPartnerSPN，并使用其值（如果存在）来初始化 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN。<br /><br /> 可以调用 idbproperties:: Setproperties idbinitialize:: Initialize 调用之前设置属性 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN。 这是使用访问接口字符串的替代方法。<br /><br /> 如果在多个位置设置了某属性，以编程方式设置的值优先于在访问接口字符串中设置的值。 在初始化字符串中设置的值优先于在登录对话框中设置的值。<br /><br /> 如果同一关键字多次出现在访问接口字符串中，首次出现的值的优先级最高。|  
+|IDataInitialize::GetInitializationString|如果 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 没有默认值，将通过 ppwszInitString 将它们包括在初始化字符串中，作为 ServerSPN 和 FailoverPartnerSPN 的关键字值    。 如果有默认值，这些关键字将不包括在初始化字符串中。|  
+|IDBInitialize::Initialize|如果通过在数据源初始化属性中设置 DBPROP_INIT_PROMPT 启用了提示功能，将显示 OLE DB“登录”对话框。 这允许为主体服务器及其故障转移伙伴输入 SPN。<br /><br /> 如果设置了 DPPROP_INIT_PROVIDERSTRING 中的访问接口字符串，该字符串将识别新关键字 ServerSPN 和 FailoverPartnerSPN，并使用其值（如果存在）来初始化 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN   。<br /><br /> 可以调用 idbproperties:: Setproperties idbinitialize:: Initialize 调用之前设置属性 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN。 这是使用访问接口字符串的替代方法。<br /><br /> 如果在多个位置设置了某属性，以编程方式设置的值优先于在访问接口字符串中设置的值。 在初始化字符串中设置的值优先于在登录对话框中设置的值。<br /><br /> 如果同一关键字多次出现在访问接口字符串中，首次出现的值的优先级最高。|  
 |IDBProperties::GetProperties|可以调用 IDBProperties::GetProperties 来获取新的数据源初始化属性 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 的值，以及新的数据源属性 SSPROP_AUTHENTICATIONMETHOD 和 SSPROP_MUTUALLYAUTHENTICATED 的值。|  
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo 将包括新的数据源初始化属性 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN，或者新的数据源属性 SSPROP_AUTHENTICATION_METHOD 和 SSPROP_MUTUALLYAUTHENTICATED。|  
 |IDBProperties::SetProperties|可以调用 IDBProperties::SetProperties 来设置新的数据源初始化属性 SSPROP_INITSERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 的值。<br /><br /> 这些属性可以设置在任何时候，但如果数据源已打开，将返回以下错误：DB_E_ERRORSOCCURRED，"多步 OLE DB 操作生成错误。 检查每个 OLE DB 状态值（如果有）。 未执行任何操作。”|  

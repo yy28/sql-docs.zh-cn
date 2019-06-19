@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: adecc79256f49aeca9532e50119675515b9939dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164363"
 ---
 # <a name="debugging-data-processing-extension-code"></a>调试数据处理扩展插件代码
@@ -34,13 +34,13 @@ ms.locfileid: "63164363"
   
 4.  导航到 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中包含数据处理扩展插件项目的窗口，并在代码中设置一些断点。  
   
-5.  在数据处理扩展插件项目窗口仍保持活动状态的同时，在“调试”菜单上，单击“附加到进程”。  
+5.  在数据处理扩展插件项目窗口仍保持活动状态的同时，在“调试”菜单上，单击“附加到进程”   。  
   
-     “附加到进程”对话框会打开。  
+     “附加到进程”对话框会打开  。  
   
-6.  从进程列表中，选择与报表项目对应的 devenv.exe 进程并单击“附加”。  
+6.  从进程列表中，选择与报表项目对应的 devenv.exe 进程并单击“附加”  。  
   
-7.  使用报表项目的“报表数据”选项卡定义报表数据源。 您最有可能使用一般性查询设计器来针对自定义数据源执行查询。 这将调用调试器并执行对应于断点的代码。  
+7.  使用报表项目的“报表数据”选项卡定义报表数据源  。 您最有可能使用一般性查询设计器来针对自定义数据源执行查询。 这将调用调试器并执行对应于断点的代码。  
   
 8.  使用 F11 键分步执行代码。 有关使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 进行调试的详细信息，请参阅 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 文档。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 288f9e0d5a86e34db2fdd81163f229eff5275606
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064338"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的行为更改
@@ -76,15 +76,15 @@ ms.locfileid: "66064338"
   
 1.  单击向下箭头以打开菜单，找到单独文档。  
   
-2.  单击 **“管理权限”**。  
+2.  单击 **“管理权限”** 。  
   
-3.  默认情况下，库将继承权限。 若要更改此库中单独工作簿的权限，请单击 **“停止继承权限”**。  
+3.  默认情况下，库将继承权限。 若要更改此库中单独工作簿的权限，请单击 **“停止继承权限”** 。  
   
 4.  按需要针对 PowerPivot 工作簿的附加权限的用户名或组名选中复选框。 附加权限将允许这些用户链接到嵌入的 PowerPivot 数据并且使用这些数据作为其他文档中的外部数据源。  
   
-5.  单击 **“编辑用户权限”**。  
+5.  单击 **“编辑用户权限”** 。  
   
-6.  选择 **“读取”** 权限，然后单击 **“确定”**。  
+6.  选择 **“读取”** 权限，然后单击 **“确定”** 。  
   
 #### <a name="powerpivot-gallery-new-rules-for-snapshot-generation-for-some-powerpivot-workbooks"></a>PowerPivot 库：为一些 PowerPivot 工作簿生成快照的新规则  
  此版本中引入了在 PowerPivot 库中生成快照映像的新要求，这消除了泄露信息的潜在根源（也即，显示来自您无权查看的数据源的数据的快照）。 这些要求仅适用于您每次查看 PowerPivot 工作簿时都连接到外部数据源的工作簿。 如果您只使用直观显示嵌入 PowerPivot 数据的工作簿，将看不到在 PowerPivot 库中生成快照的方式发生了什么变化。  
@@ -100,9 +100,9 @@ ms.locfileid: "66064338"
  ![GMNI_PowerPivotGalleryIcon_Locked](media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")  
   
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>负载平衡请求的新默认设置已从“循环”更改为“基于运行状况”  
- PowerPivot 服务应用程序具有一些默认设置，这些设置确定如何在场中的多台 PowerPivot for SharePoint 服务器之间分配对 PowerPivot 数据的请求。 在前一版本中，默认设置是 **“循环”**，其中请求在可用服务器之间按顺序进行分配。 在这一版本中，默认值现在为 **“基于运行状况”**。 PowerPivot 服务应用程序使用服务器运行状况统计数据（如可用内存或 CPU）来确定哪些服务器实例获取 xt 请求。  
+ PowerPivot 服务应用程序具有一些默认设置，这些设置确定如何在场中的多台 PowerPivot for SharePoint 服务器之间分配对 PowerPivot 数据的请求。 在前一版本中，默认设置是 **“循环”** ，其中请求在可用服务器之间按顺序进行分配。 在这一版本中，默认值现在为 **“基于运行状况”** 。 PowerPivot 服务应用程序使用服务器运行状况统计数据（如可用内存或 CPU）来确定哪些服务器实例获取 xt 请求。  
   
- 如果您从前一版本升级服务器，PowerPivot 服务应用程序将保留以前的默认设置（**“循环”**）。 若要使用 **“基于运行状况”** 分配方法设置，您必须修改配置设置。 有关详细信息，请参阅[创建和配置 PowerPivot 服务应用程序在管理中心内](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
+ 如果您从前一版本升级服务器，PowerPivot 服务应用程序将保留以前的默认设置（ **“循环”** ）。 若要使用 **“基于运行状况”** 分配方法设置，您必须修改配置设置。 有关详细信息，请参阅[创建和配置 PowerPivot 服务应用程序在管理中心内](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [后向兼容性](../../2014/getting-started/backward-compatibility.md)   

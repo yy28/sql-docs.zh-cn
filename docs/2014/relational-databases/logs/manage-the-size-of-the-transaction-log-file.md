@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144328"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
@@ -36,7 +36,7 @@ ms.locfileid: "63144328"
 > [!NOTE]  
 >  能够延长虚拟日志文件活动时间的因素（如长时间运行的事务）可以限制甚至阻止日志收缩。 有关延迟日志截断的因素的信息，请参阅[事务日志 (SQL Server)](the-transaction-log-sql-server.md)。  
   
- 收缩日志文件可删除一个或多个不包含逻辑日志任何部分的虚拟日志文件（即“不活动的虚拟日志文件” ）。 在收缩事务日志文件时，将从日志文件的末端删除足够的不活动虚拟日志文件，以便将日志减小到接近目标大小。  
+ 收缩日志文件可删除一个或多个不包含逻辑日志任何部分的虚拟日志文件（即“不活动的虚拟日志文件”  ）。 在收缩事务日志文件时，将从日志文件的末端删除足够的不活动虚拟日志文件，以便将日志减小到接近目标大小。  
   
  **若要收缩日志文件 （而不收缩数据库文件）**  
   

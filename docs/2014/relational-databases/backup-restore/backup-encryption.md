@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922168"
 ---
 # <a name="backup-encryption"></a>备份加密
@@ -86,9 +86,9 @@ ms.locfileid: "62922168"
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
  在以下任何对话框中，可在创建数据库的备份时加密备份。  
   
-1.  [备份数据库（“备份选项”页）](back-up-database-backup-options-page.md)在“备份选项”页上，可以选择“加密”，并指定加密算法和证书或非对称密钥以用于加密。  
+1.  [备份数据库（“备份选项”页）](back-up-database-backup-options-page.md)在  “备份选项”页上，可以选择  “加密”，并指定加密算法和证书或非对称密钥以用于加密。  
   
-2.  [使用维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)选择某个备份任务后，可以在“定义备份()任务”页的“选项”选项卡上，选择“备份加密”，并指定加密算法和证书或密钥以用于加密。  
+2.  [使用维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)选择某个备份任务后，可以在  “定义备份()任务”页的  “选项”选项卡上，选择  “备份加密”，并指定加密算法和证书或密钥以用于加密。  
   
 ### <a name="using-transact-sql"></a>使用 Transact SQL  
  以下是示例 Transact-SQL 语句以加密备份文件：  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796152"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
-`[ @operation = ] 'operation'` 针对指定的作业的有效操作。 *操作*是**varchar(64)**，默认值为 NULL，并且可以是下列值之一。  
+`[ @operation = ] 'operation'` 针对指定的作业的有效操作。 *操作*是**varchar(64)** ，默认值为 NULL，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -68,11 +68,11 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|服务器作业，使目标服务器将其系统时钟与多服务器域时钟同步。 因为此操作的开销很大，所以只能有限制地偶尔执行。|  
 |**UPDATE**|作业操作，只更新**sysjobs**作业，而不是作业步骤或计划的信息。 将自动调用**sp_update_job**。|  
   
-`[ @object_type = ] 'object_type'` 指定作业的对象的类型。 *object_type*是**varchar(64)**，默认值为 NULL。 *object_type*可以是 JOB 或 SERVER。 有关有效的详细信息*object_type*值，请参阅[sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
+`[ @object_type = ] 'object_type'` 指定作业的对象的类型。 *object_type*是**varchar(64)** ，默认值为 NULL。 *object_type*可以是 JOB 或 SERVER。 有关有效的详细信息*object_type*值，请参阅[sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
   
 `[ @object_name = ] 'object_name'` 对象的名称。 *object_name*是**sysname**，默认值为 NULL。 如果*object_type*是作业*object_name*是作业名称。 如果*object_type*是服务器， *object_name*是服务器名称。  
   
-`[ @target_server = ] 'target_server'` 目标服务器的名称。 *target_server*是**nvarchar （128)**，默认值为 NULL。  
+`[ @target_server = ] 'target_server'` 目标服务器的名称。 *target_server*是**nvarchar （128)** ，默认值为 NULL。  
   
 `[ @has_error = ] has_error` 为作业是否应确认错误。 *has_error*是**tinyint**，默认值为 NULL，指示应确认没有错误。 **1**指示应确认所有错误。  
   

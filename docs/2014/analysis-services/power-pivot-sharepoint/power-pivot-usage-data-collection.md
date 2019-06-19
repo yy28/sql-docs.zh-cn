@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46504906b13323ac4881ca2289e87e31f1cea72f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071091"
 ---
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 使用情况数据收集
@@ -43,7 +43,7 @@ ms.locfileid: "66071091"
   
 |阶段|Description|  
 |-----------|-----------------|  
-|1|使用情况数据收集由 SharePoint 部署中的 PowerPivot 组件和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据访问接口所生成的事件触发。 可启用或禁用的可配置事件包括连接请求、加载和卸载请求以及应用程序服务器上 PowerPivot 服务监视的查询响应计时事件。 由服务器管理单独并且不能禁用的其他事件。 这些事件包括数据刷新事件和服务器运行状况事件。<br /><br /> 最初，使用 SharePoint 系统的数据收集功能在本地日志文件中收集和存储使用情况数据。 这些文件和它们的位置是 SharePoint 中标准使用情况数据收集系统的一部分。 文件的位置在场中的每个服务器上均相同。 要查看或更改日志记录目录的位置，请在 SharePoint 管理中心中转到 **“监视”** ，然后单击 **“配置 Usage and Health Data Collection”**。|  
+|1|使用情况数据收集由 SharePoint 部署中的 PowerPivot 组件和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据访问接口所生成的事件触发。 可启用或禁用的可配置事件包括连接请求、加载和卸载请求以及应用程序服务器上 PowerPivot 服务监视的查询响应计时事件。 由服务器管理单独并且不能禁用的其他事件。 这些事件包括数据刷新事件和服务器运行状况事件。<br /><br /> 最初，使用 SharePoint 系统的数据收集功能在本地日志文件中收集和存储使用情况数据。 这些文件和它们的位置是 SharePoint 中标准使用情况数据收集系统的一部分。 文件的位置在场中的每个服务器上均相同。 要查看或更改日志记录目录的位置，请在 SharePoint 管理中心中转到 **“监视”** ，然后单击 **“配置 Usage and Health Data Collection”** 。|  
 |2|“Microsoft SharePoint Foundation 使用情况数据导入”计时器作业按照计划的间隔（默认为每小时）将使用情况数据从本地文件移到 PowerPivot 服务应用程序数据库。 如果您在场中具有多个 PowerPivot 服务应用程序，则每个应用程序都将具有自己的数据库。 事件包含标识哪个 PowerPivot 服务应用程序生成此事件的内部信息。 应用程序标识符确保使用情况数据绑定到创建它的应用程序。|  
 |3|数据复制到可用于管理中心中的 PowerPivot 管理面板的内部报告数据库。|  
 |4|该数据源是您可以访问以便在 Excel 中创建自定义报告的 PowerPivot 工作簿。 只有源工作簿的一个实例。 本地化的报告都基于相同的源工作簿。|  
@@ -62,7 +62,7 @@ ms.locfileid: "66071091"
 |数据刷新|由 PowerPivot 服务为计划的数据更新启动的数据刷新操作。 在应用程序级别收集有关数据刷新的使用情况历史记录以便生成操作报告，并且此历史记录反映在各个工作簿的“管理数据刷新”页中。<br /><br /> **注意：** 有关[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]和 SharePoint 2013 部署，数据刷新由 Excel Services 而不是 Analysis Services 服务器。|否。 如果您为 PowerPivot 服务应用程序启用数据刷新，则始终收集数据刷新使用情况数据。|  
   
 ##  <a name="servicesjobs"></a> 服务和计时器作业  
- 下表描述使用情况数据收集系统中的服务和数据集存储区。 有关如何覆盖计时器作业计划以强制执行数据刷新的 PowerPivot 管理面板报告中的服务器运行状况和使用情况数据的说明，请参阅[使用 SharePoint 2010 的 PowerPivot 数据刷新](../powerpivot-data-refresh-with-sharepoint-2010.md)。 您可以查看 SharePoint 管理中心中的计时器作业。 转到 **“监视”**，然后单击 **“检查作业状态”**。 单击 **“检查作业定义”**。  
+ 下表描述使用情况数据收集系统中的服务和数据集存储区。 有关如何覆盖计时器作业计划以强制执行数据刷新的 PowerPivot 管理面板报告中的服务器运行状况和使用情况数据的说明，请参阅[使用 SharePoint 2010 的 PowerPivot 数据刷新](../powerpivot-data-refresh-with-sharepoint-2010.md)。 您可以查看 SharePoint 管理中心中的计时器作业。 转到 **“监视”** ，然后单击 **“检查作业状态”** 。 单击 **“检查作业定义”** 。  
   
 |组件|默认调度|Description|  
 |---------------|----------------------|-----------------|  
