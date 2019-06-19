@@ -20,10 +20,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 53739518c40221b752d63016faf369b9e3e71587
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576319"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "65576319"
 对于不能直接使用 JSON 的应用或服务，可以使用 **OPENJSON** 将 JSON 数据导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或者将 JSON 数据转换为关系格式。  
   
 > [!NOTE]  
->  **OPENJSON** 函数仅在兼容级别 130 或更高级别下可用。 如果数据库兼容级别低于 130，SQL Server 将无法找到并运行 OPENJSON 函数。 其他 JSON 函数在所有兼容性级别均可用。
+>  **OPENJSON** 函数仅在兼容级别 130 或更高级别下可用。 如果数据库兼容级别低于 130，SQL Server 将无法找到并运行 OPENJSON 函数  。 其他 JSON 函数在所有兼容性级别均可用。
 > 
 > 可以在 `sys.databases` 视图或数据库属性中查看兼容级别。 可以使用以下命令更改数据库的兼容级别：  
 > 
@@ -53,19 +53,19 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 <with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
 ```  
 
-**OPENJSON** 表值函数会分析作为第一个参数提供的 jsonExpression，并返回包含来自表达式中 JSON 对象的数据的一行或多行。 jsonExpression 可以包含嵌套子对象。 如果要分析 jsonExpression 中的子对象，则可以为 JSON 子对象指定 path参数。
+**OPENJSON** 表值函数会分析作为第一个参数提供的 jsonExpression  ，并返回包含来自表达式中 JSON 对象的数据的一行或多行。 jsonExpression  可以包含嵌套子对象。 如果要分析 jsonExpression 中的子对象，则可以为 JSON 子对象指定 path参数   。
 
 ### <a name="openjson"></a>openjson
 
 ![OPENJSON TVF 的语法](../../relational-databases/json/media/openjson-syntax.png "OPENJSON 语法")  
 
-默认情况下，**OPENJSON** 表值函数返回三列，这些列包含在 jsonExpression  中找到的每个 {键:值} 对的键名称、值和类型。 作为替代方法，可以通过提供 with_clause 来显式指定 **OPENJSON** 返回的结果集的架构。
+默认情况下，**OPENJSON** 表值函数返回三列，这些列包含在 jsonExpression  中找到的每个 {键:值} 对的键名称、值和类型。 作为替代方法，可以通过提供 with_clause  来显式指定 **OPENJSON** 返回的结果集的架构。
   
 ### <a name="withclause"></a>with_clause
   
 ![OPENJSON TVF 中的 WITH 子句的语法](../../relational-databases/json/media/openjson-shema-syntax.png " 语法")
 
-with_clause 包含 **OPENJSON** 要返回的列及其类型的列表。 默认情况下，**OPENJSON** 将 jsonExpression 中的键与 with_clause 中的列名进行匹配（在此情况下，匹配键意味着它区分大小写）。 如果列名与键名称不匹配，则可以提供可选的 column_path，它是在 jsonExpression 中引用键的 [JSON 路径表达式](../../relational-databases/json/json-path-expressions-sql-server.md)。 
+with_clause  包含 **OPENJSON** 要返回的列及其类型的列表。 默认情况下，**OPENJSON** 将 jsonExpression  中的键与 with_clause  中的列名进行匹配（在此情况下，匹配键意味着它区分大小写）。 如果列名与键名称不匹配，则可以提供可选的 column_path，它是在 jsonExpression 中引用键的 [JSON 路径表达式](../../relational-databases/json/json-path-expressions-sql-server.md)   。 
 
 ## <a name="arguments"></a>参数
 
@@ -73,7 +73,7 @@ with_clause 包含 **OPENJSON** 要返回的列及其类型的列表。 默认�
 
 是包含 JSON 文本的 Unicode 字符表达式。  
   
-OPENJSON 循环访问 JSON 表达式中的数组的元素或对象的属性，并为每个元素或属性返回一行。 下面的示例返回作为 jsonExpression 提供的对象的每个属性：  
+OPENJSON 循环访问 JSON 表达式中的数组的元素或对象的属性，并为每个元素或属性返回一行。 下面的示例返回作为 jsonExpression  提供的对象的每个属性：  
   
 ```sql  
 DECLARE @json NVARCHAR(4000) = N'{  
@@ -102,13 +102,13 @@ FROM OPENJSON(@json)
 |ArrayValue|["a","r","r","a","y"]|4|  
 |ObjectValue|{"obj":"ect"}|5|  
 
-### <a name="path"></a>path
+### <a name="path"></a>path 
 
-是在 jsonExpression 中引用对象或数组的可选 JSON 路径表达式。 **OPENJSON** 会定位到指定位置处的 JSON 文本，并且仅分析引用的片段。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。
+是在 jsonExpression  中引用对象或数组的可选 JSON 路径表达式。 **OPENJSON** 会定位到指定位置处的 JSON 文本，并且仅分析引用的片段。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。
 
-在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值。
+在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值  。
   
-下面的示例通过指定 path 来返回嵌套对象：  
+下面的示例通过指定 path 来返回嵌套对象  ：  
 
 ```sql  
 DECLARE @json NVARCHAR(4000) = N'{  
@@ -139,22 +139,22 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 
 ### <a name="withclause"></a>*with_clause*
 
-显式定义 **OPENJSON** 函数要返回的输出架构。 可选 with_clause 可以包含以下元素：
+显式定义 **OPENJSON** 函数要返回的输出架构。 可选 with_clause  可以包含以下元素：
 
-colName 是输出列的名称。  
+colName  是输出列的名称。  
   
-默认情况下，**OPENJSON** 使用列的名称与 JSON 文本中的属性进行匹配。 例如，如果在架构中指定列 name，则 OPENJSON 会尝试使用 JSON 文本中的属性“name”填充此列。 可以使用 column_path 参数替代此默认映射。  
+默认情况下，**OPENJSON** 使用列的名称与 JSON 文本中的属性进行匹配。 例如，如果在架构中指定列 name  ，则 OPENJSON 会尝试使用 JSON 文本中的属性“name”填充此列。 可以使用 column_path 参数替代此默认映射  。  
   
 *类型*  
 是输出列的数据类型。  
 
 > [!NOTE]
-> 如果还使用 **AS JSON** 选项，则列 type 必须是 `NVARCHAR(MAX)`。
+> 如果还使用 **AS JSON** 选项，则列 type  必须是 `NVARCHAR(MAX)`。
   
-column_path  
-是指定要在指定列中返回的属性的 JSON 路径。 有关详细信息，请参阅本主题前面的 path 参数说明。  
+column_path   
+是指定要在指定列中返回的属性的 JSON 路径。 有关详细信息，请参阅本主题前面的 path 参数说明  。  
   
-使用 column_path 可在输出列的名称与属性的名称不匹配时替代重写默认映射规则。  
+使用 column_path 可在输出列的名称与属性的名称不匹配时替代重写默认映射规则  。  
   
 用于将路径各步与 JSON 表达式的属性进行匹配的比较不区分大小写且无法识别排序规则（即是 BIN2 比较）。  
   
@@ -221,7 +221,7 @@ OPENJSON 函数返回的列取决于 WITH 选项。
   
 1. 当调用具有默认架构的 OPENJSON 时（即当未在 WITH 子句中指定显式架构时），该函数返回具有以下各列的表：  
     1.  **Key**。 一个 nvarchar(4000) 值，包含指定属性的名称或指定数组中元素的索引。 键列具有 BIN2 排序规则。  
-    2.  **值**。 一个 nvarchar(max) 值，包含属性的值。 值列从 jsonExpression 继承其排序规则。
+    2.  **值**。 一个 nvarchar(max) 值，包含属性的值。 值列从 jsonExpression  继承其排序规则。
     3.  **Type**。 一个 int 值，包含值的类型。 仅当使用具有默认架构的 OPENJSON 时，才返回 **Type** 列。 类型列具有以下值之一：  
   
         |类型列的值|JSON 数据类型|  
@@ -239,16 +239,16 @@ OPENJSON 函数返回的列取决于 WITH 选项。
 
 ## <a name="remarks"></a>Remarks  
 
-在 OPENJSON 的第二个参数或 with_clause 中使用的 json_path可以以 lax 或 strict 关键字开头。
+在 OPENJSON 的第二个参数或 with_clause 中使用的 json_path可以以 lax 或 strict 关键字开头      。
 
 - 在 **lax** 模式下，**OPENJSON** 在找不到指定路径上的对象或值时不会引发错误。 如果找不到路径，则 **OPENJSON** 返回空结果集或 NULL 值。
 - 在 **strict** 模式下，**OPENJSON** 在找不到路径时返回错误。
 
 此页面上的某些示例显式指定路径模式（宽松或严格）。 路径模式是可选项。 如果未显式指定路径模式，则宽松模式是默认值。 有关路径模式和路径表达式的详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。    
 
-with_clause 中的列名会与 JSON 文本中的键进行匹配。 如果指定列名 `[Address.Country]`，则它会与键 `Address.Country` 进行匹配。 如果要在对象 `Address` 中引用嵌套键 `Country`，则必须在列路径中指定路径 `$.Address.Country`。
+with_clause  中的列名会与 JSON 文本中的键进行匹配。 如果指定列名 `[Address.Country]`，则它会与键 `Address.Country` 进行匹配。 如果要在对象 `Address` 中引用嵌套键 `Country`，则必须在列路径中指定路径 `$.Address.Country`。
 
-json_path 可以包含具有字母数字字符的键。 如果在键中包含特殊字符，则使用双引号在 json_path 中对键名称进行转义。 例如，在以下 JSON 文本中，`$."my key $1".regularKey."key with . dot"` 与值 1 进行匹配：
+json_path 可以包含具有字母数字字符的键  。 如果在键中包含特殊字符，则使用双引号在 json_path 中对键名称进行转义  。 例如，在以下 JSON 文本中，`$."my key $1".regularKey."key with . dot"` 与值 1 进行匹配：
 
 ```json
 {
@@ -285,7 +285,7 @@ WHERE product.productTypeID IN (1,2,3,4)
   
 ### <a name="example-2---merge-properties-from-two-json-objects"></a>示例 2 - 合并来自两个 JSON 对象的属性
 
-下面的示例选择两个 JSON 对象的所有属性的并集。 这两个对象具有重复的 name 属性。 该示例使用键值从结果中排除重复行。  
+下面的示例选择两个 JSON 对象的所有属性的并集。 这两个对象具有重复的 name  属性。 该示例使用键值从结果中排除重复行。  
   
 ```sql  
 DECLARE @json1 NVARCHAR(MAX),@json2 NVARCHAR(MAX)
@@ -304,7 +304,7 @@ WHERE [key] NOT IN (SELECT [key] FROM OPENJSON(@json1))
   
 ### <a name="example-3---join-rows-with-json-data-stored-in-table-cells-using-cross-apply"></a>示例 3 - 使用 CROSS APPLY 联接包含存储在表单元格中的 JSON 数据的行
 
-在下面的示例中，`SalesOrderHeader` 表具有一个 `SalesReason` 文本列，它包含采用 JSON 格式的 `SalesOrderReasons` 的数组。 `SalesOrderReasons` 对象包含属性，例如 Quality 和 Manufacturer。 该示例创建一个报表，它将每个销售订单行联接到相关销售原因。 OPENJSON 运算符会扩展销售原因的 JSON 数组，如同原因是存储在单独的子表中一样。 CROSS APPLY 运算符随后将每个销售订单行与 OPENJSON 表值函数返回的行联接。  
+在下面的示例中，`SalesOrderHeader` 表具有一个 `SalesReason` 文本列，它包含采用 JSON 格式的 `SalesOrderReasons` 的数组。 `SalesOrderReasons` 对象包含属性，例如 Quality  和 Manufacturer  。 该示例创建一个报表，它将每个销售订单行联接到相关销售原因。 OPENJSON 运算符会扩展销售原因的 JSON 数组，如同原因是存储在单独的子表中一样。 CROSS APPLY 运算符随后将每个销售订单行与 OPENJSON 表值函数返回的行联接。  
   
 ```sql  
 SELECT SalesOrderID,OrderDate,value AS Reason

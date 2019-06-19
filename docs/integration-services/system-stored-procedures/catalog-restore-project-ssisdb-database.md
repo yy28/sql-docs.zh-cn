@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af878e23862e791443ad0057997cf93d0eab8ca1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715992"
 ---
 # <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project（SSISDB 数据库）
@@ -37,22 +37,22 @@ catalog.restore_project [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name  
- 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
+ [ @folder_name = ] folder_name   
+ 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [ @project _name = ] project_name  
- 项目的名称。 *project_name* 为 **nvarchar(128)**。  
+ [ @project _name = ] project_name   
+ 项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
- [ @object_version_lsn = ] object_version_lsn  
- 项目的版本。 object_version_lsn 为 bigint。  
+ [ @object_version_lsn = ] object_version_lsn   
+ 项目的版本。 object_version_lsn  为 bigint  。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 如果找到 project_name，则项目详细信息将作为结果的一部分返回为 varbinary(MAX)。  
+ 如果找到 project_name  ，则项目详细信息将作为结果的一部分返回为 varbinary(MAX)  。  
   
- 如果无法将项目还原到指定的文件夹，则返回 NO RESULT SET。  
+ 如果无法将项目还原到指定的文件夹，则返回 NO RESULT SET  。  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
@@ -73,7 +73,7 @@ catalog.restore_project [ @folder_name = ] folder_name
 -   用户没有相应的权限  
   
 ## <a name="remarks"></a>Remarks  
- 还原某个项目后，将为所有参数分配默认值，并且所有环境引用都保持不变。 目录中保留的最大项目版本数量由目录属性 MAX_VERSIONS_PER_PROJECT 决定，如 [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 视图中所示。  
+ 还原某个项目后，将为所有参数分配默认值，并且所有环境引用都保持不变。 目录中保留的最大项目版本数量由目录属性 MAX_VERSIONS_PER_PROJECT  决定，如 [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 视图中所示。  
   
 > [!WARNING]  
 >  在还原项目后，环境引用可能不再有效。  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a4e4dc5e53f4e45c558b5d709073900b6e724f1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717113"
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap 
@@ -39,36 +39,36 @@ catalog.add_data_tap [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id = ] execution_id  
- 包含包的执行 ID。 execution_id 为 bigint。  
+ [ @execution_id = ] execution_id   
+ 包含包的执行 ID。 execution_id 为 bigint   。  
   
- [ @task_package_path = ] task_package_path  
- 数据流任务的包路径。 数据流任务的 PackagePath 属性指定该路径。 此路径区分大小写。 若要查找包路径，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中右键单击数据流任务，然后单击“属性”。 将在“属性”窗口中显示 PackagePath 属性。  
+ [ @task_package_path = ] task_package_path   
+ 数据流任务的包路径。 数据流任务的 PackagePath 属性指定该路径  。 此路径区分大小写。 若要查找包路径，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中右键单击数据流任务，然后单击“属性”  。 将在“属性”窗口中显示 PackagePath 属性   。  
   
- task_package_path 为 nvarchar(max)。  
+ task_package_path 为 nvarchar(max)   。  
   
- [ @dataflow_path_id_string = ] dataflow_path_id_string  
- 数据流路径的标识字符串。 一个路径连接两个数据流组件。 路径的 IdentificationString 属性指定该字符串。  
+ [ @dataflow_path_id_string = ] dataflow_path_id_string   
+ 数据流路径的标识字符串。 一个路径连接两个数据流组件。 路径的 IdentificationString 属性指定该字符串  。  
   
- 若要找到此标识字符串，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中右键单击两个数据流组件之间的路径，然后单击“属性”。 将在“属性”窗口中显示 IdentificationString 属性。  
+ 若要找到此标识字符串，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中右键单击两个数据流组件之间的路径，然后单击“属性”  。 将在“属性”窗口中显示 IdentificationString 属性   。  
   
- dataflow_path_id_string 为 nvarchar(4000)。  
+ dataflow_path_id_string 为 nvarchar(4000)   。  
   
- [ @data_filename = ] data_filename  
+ [ @data_filename = ] data_filename   
  存储分流的数据的文件名称。 如果数据流任务在 Foreach 循环或 For 循环容器内执行，则用单独的文件存储该循环每次迭代的分流数据。 用与每次迭代对应的编号为每个文件加前缀。  
   
- 默认情况下，该文件存储在 \<drive>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps 文件夹中。  
+ 默认情况下，该文件存储在 \<drive>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps 文件夹中  。  
   
- data_filename 为 nvarchar(4000)。  
+ data_filename 为 nvarchar(4000)   。  
   
- [ @max_rows = ] max_rows  
- 在数据分流期间捕获的行数。 如果未指定此值，则捕获所有行。 max_rows 为 int。  
+ [ @max_rows = ] max_rows   
+ 在数据分流期间捕获的行数。 如果未指定此值，则捕获所有行。 max_rows 为 int   。  
   
- [ @data_tap_id = ] data_tap_id  
- 返回数据分流点的 ID。 data_tap_id 为 bigint。  
+ [ @data_tap_id = ] data_tap_id   
+ 返回数据分流点的 ID。 data_tap_id 为 bigint   。  
   
 ## <a name="example"></a>示例  
- 在以下示例中，对数据流任务 `'Paths[OLE DB Source.OLE DB Source Output]` 中的数据流路径 `\Package\Data Flow Task` 创建一个数据分流点。 分流的数据存储在 DataDumps 文件夹的 `output0.txt` 文件中（即 \<drive>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps）。  
+ 在以下示例中，对数据流任务 `'Paths[OLE DB Source.OLE DB Source Output]` 中的数据流路径 `\Package\Data Flow Task` 创建一个数据分流点。 分流的数据存储在 DataDumps 文件夹的 `output0.txt` 文件中（即 \<drive>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps）  。  
   
 ```sql
 Declare @execution_id bigint  
@@ -82,7 +82,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 若要添加数据分流点，执行实例必须处于已创建状态（在 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图的 status 列中值为 1）。 只要运行执行，状态值就会发生更改。 可以通过调用 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)创建执行。  
+ 若要添加数据分流点，执行实例必须处于已创建状态（在 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图的 status 列中值为 1）  。 只要运行执行，状态值就会发生更改。 可以通过调用 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)创建执行。  
   
  以下是 add_data_tap 存储过程的注意事项。  
   

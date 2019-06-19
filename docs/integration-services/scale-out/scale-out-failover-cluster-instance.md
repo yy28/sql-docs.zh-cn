@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: a834d527b7356383d942ea7b764d33a427d23a70
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718387"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out 通过 SQL Server 故障转移群集实例对高可用性的支持
@@ -48,7 +48,7 @@ ms.locfileid: "65718387"
 按照 [3.在辅助节点上安装 Scale Out Master](scale-out-support-for-high-availability.md#3-install-scale-out-master-on-the-secondary-node) 操作
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5.更新 Scale Out Master 服务配置文件
-更新主节点和辅助节点上的 Scale Out Master 服务配置文件 \<驱动器\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config。 将 SqlServerName 更新为 [SQL Server 网络名称]//[实例名称] 或针对默认实例更新为 [SQL Server 网络名称]。
+更新主节点和辅助节点上的 Scale Out Master 服务配置文件 \<驱动器\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config。 将 SqlServerName 更新为 [SQL Server 网络名称]//[实例名称] 或针对默认实例更新为 [SQL Server 网络名称]  。
 
 ## <a name="6-add-scale-out-master-service-to-sql-server-role-in-windows-failover-cluster"></a>6.向 Windows 故障转移群集中的 SQL Server 角色添加 Scale Out Master
 在故障转移群集管理器中，连接到 Scale Out 的群集。在资源管理器中选择“角色”，右键单击 SQL Server 角色，然后依次选择“添加资源”和“通用服务”。 

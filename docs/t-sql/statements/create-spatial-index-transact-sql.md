@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d7e9938c8132489bb18538aec6b8256dd2115fd
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503217"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
@@ -151,7 +151,7 @@ CREATE SPATIAL INDEX index_name
   
 ## <a name="arguments"></a>参数  
 
- index_name  
+ index_name   
  索引的名称。 索引名称在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
  ON \<object> ( *spatial_column_name* )  
@@ -169,17 +169,17 @@ CREATE SPATIAL INDEX index_name
 |**地理**|GEOGRAPHY_GRID|  
 |**地理**|GEOGRAPHY_AUTO_GRID|  
   
- 只能对类型为 geometry 或 geography 的列创建空间索引，否则会抛出错误。 如果为给定类型传递的参数无效，便会抛出错误。  
+ 只能对类型为 geometry  或 geography  的列创建空间索引，否则会抛出错误。 如果为给定类型传递的参数无效，便会抛出错误。  
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何实现分割的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
  ON *filegroup_name*  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  为指定文件组创建指定索引。 如果未指定位置并且表未分区，则索引将与基础表使用相同的文件组。 该文件组必须已存在。  
   
  ON "default"  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  为默认文件组创建指定索引。  
   
@@ -206,7 +206,7 @@ CREATE SPATIAL INDEX index_name
  指定要使用的 **geometry** 网格分割方案。 只能对 **geometry** 数据类型的列指定 GEOMETRY_GRID。  GEOMETRY_GRID 允许手动调整分割方案。  
   
  GEOMETRY_AUTO_GRID  
- 适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ 适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  只能对 geometry 数据类型的列指定。 这是此数据类型的默认设置，无需指定。  
   
@@ -214,7 +214,7 @@ CREATE SPATIAL INDEX index_name
  指定地理网格分割方案。 只能对 **geography** 数据类型的列指定 GEOGRAPHY_GRID。  
   
  GEOGRAPHY_AUTO_GRID  
- 适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ 适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  只能对 geography 数据类型的列指定。  这是此数据类型的默认设置，无需指定。  
   
@@ -296,8 +296,8 @@ GRIDS
 > [!WARNING]
 > 如果指定的密度无效，则会引发错误。  
   
-CELLS_PER_OBJECT =n  
-指定可由分割进程用于在索引中单个空间对象的每个对象的分割单元格数。 n 可以是介于 1 和 8192 之间（含 1 和 8192）的任何整数。 如果传递的数字无效或者该数字大于指定分割的最大单元格数，则会引发错误。  
+CELLS_PER_OBJECT =n   
+指定可由分割进程用于在索引中单个空间对象的每个对象的分割单元格数。 n 可以是介于 1 和 8192 之间（含 1 和 8192）的任何整数  。 如果传递的数字无效或者该数字大于指定分割的最大单元格数，则会引发错误。  
   
  CELLS_PER_OBJECT 的默认值如下：  
   
@@ -312,23 +312,23 @@ CELLS_PER_OBJECT =n
   
  “每个对象的单元格数”分割规则使用 CELLS_PER_OBJECT 值。 有关分割规则的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
-PAD_INDEX = { ON | OFF }  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+PAD_INDEX = { ON | OFF }   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  指定索引填充。 默认为 OFF。  
   
  ON  
  指示由 *fillfactor* 指定的可用空间百分比应用于索引的中间级页。  
   
- OFF 或未指定 fillfactor  
+ OFF 或未指定 fillfactor   
  指示考虑到中间级页上的键集，将中间级页填充到接近其容量的程度，以留出足够的空间，使之至少能够容纳索引的最大的一行。  
   
- PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX 使用由 FILLFACTOR 指定的百分比。 如果为 FILLFACTOR 指定的百分比不够大，无法容纳一行，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在内部覆盖该百分比以允许最小值。 无论 fillfactor 的值有多小，中间级索引页上的行数永远都不会小于两行。  
+ PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX 使用由 FILLFACTOR 指定的百分比。 如果为 FILLFACTOR 指定的百分比不够大，无法容纳一行，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在内部覆盖该百分比以允许最小值。 无论 fillfactor 的值有多小，中间级索引页上的行数永远都不会小于两行  。  
   
 FILLFACTOR =*fillfactor*  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
- 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数。 默认值为 0。 如果 fillfactor 为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引。  
+ 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 如果 fillfactor 为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引  。  
   
 > [!NOTE]  
 > 填充因子的值 0 和 100 在所有方面都是相同的。
@@ -340,8 +340,8 @@ FILLFACTOR =*fillfactor*
   
  有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
-SORT_IN_TEMPDB = { ON | OFF }  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+SORT_IN_TEMPDB = { ON | OFF }   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  指定是否在 tempdb 中存储临时排序结果。 默认为 OFF。  
   
@@ -356,7 +356,7 @@ SORT_IN_TEMPDB = { ON | OFF }
 IGNORE_DUP_KEY =**OFF**  
 对空间索引不起作用，这是因为此索引类型永远不唯一。 请不要将此选项设置为 ON，否则会引发错误。  
   
-STATISTICS_NORECOMPUTE = { ON | OFF}  
+STATISTICS_NORECOMPUTE = { ON | OFF}   
 指定是否重新计算分布统计信息。 默认为 OFF。  
   
  ON  
@@ -370,8 +370,8 @@ STATISTICS_NORECOMPUTE = { ON | OFF}
 > [!IMPORTANT]  
 > 如果禁用分布统计的自动重新计算，可能会妨碍查询优化器为涉及该表的查询选取最佳执行计划。  
   
-DROP_EXISTING = { ON | OFF }  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+DROP_EXISTING = { ON | OFF }   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  指定应删除并重新生成已命名的先前存在的空间索引。 默认为 OFF。  
   
@@ -391,8 +391,8 @@ ONLINE =**OFF**
 > [!NOTE]  
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-ALLOW_ROW_LOCKS = { ON | OFF }  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ALLOW_ROW_LOCKS = { ON | OFF }   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  指定是否允许行锁。 默认值为 ON。  
   
@@ -402,8 +402,8 @@ ALLOW_ROW_LOCKS = { ON | OFF }
  OFF  
  不使用行锁。  
   
-ALLOW_PAGE_LOCKS = { ON | OFF }  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ALLOW_PAGE_LOCKS = { ON | OFF }   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  指定是否允许使用页锁。 默认值为 ON。  
   
@@ -413,15 +413,15 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
  OFF  
  不使用页锁。  
   
-MAXDOP =max_degree_of_parallelism  
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+MAXDOP =max_degree_of_parallelism   
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  只在索引操作期间覆盖 `max degree of parallelism` 配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
 > [!IMPORTANT]  
 > 虽然从语法上讲支持 MAXDOP 选项，但当前 CREATE SPATIAL INDEX 始终只使用一个处理器。  
   
- max_degree_of_parallelism 可以是：  
+ max_degree_of_parallelism 可以是  ：  
   
  1  
  取消生成并行计划。  
@@ -438,7 +438,7 @@ MAXDOP =max_degree_of_parallelism
 > 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}  
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
  确定索引所使用的数据压缩级别。  
   

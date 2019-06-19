@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 90732e16e94aa8c64602a3ad21f2ad59f35ef9fb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098883"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>为同一列指定多个搜索条件 (Visual Database Tools)
@@ -47,9 +47,9 @@ ms.locfileid: "65098883"
   
 1.  在[“条件窗格”](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在刚刚添加的数据列的“筛选器”列中，指定第一个条件。  
+2.  在刚刚添加的数据列的“筛选器”  列中，指定第一个条件。  
   
-3.  在同一数据列的“或...”列中，指定第二个条件。  
+3.  在同一数据列的“或...”  列中，指定第二个条件。  
   
 查询和视图设计器将创建包含 OR 条件的 WHERE 子句，如下所示：  
   
@@ -69,11 +69,11 @@ WHERE (salary < 30000) OR (salary > 100000)
   
 1.  在“条件”窗格中，添加要搜索的列。  
   
-2.  在刚刚添加的数据列的“筛选器”列中，指定第一个条件。  
+2.  在刚刚添加的数据列的“筛选器”  列中，指定第一个条件。  
   
 3.  将同一数据列再次添加到“条件”窗格中，将其放在网格的空行中。  
   
-4.  在数据列的第二个实例的“筛选器”列中，指定第二个条件。  
+4.  在数据列的第二个实例的“筛选器”  列中，指定第二个条件。  
   
 查询设计器将创建包含 AND 条件的 WHERE 子句，如下所示：  
   

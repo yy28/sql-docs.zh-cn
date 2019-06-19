@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 417b3203cc6e09f3918e2156ac6f676cad381368
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104470"
 ---
 # <a name="options-environment---general-page"></a>选项（“环境”-“常规”页）
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“选项”对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，再单击“常规”。
+使用“选项”  对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，再单击“常规”  。
 
 ## <a name="uielement-list"></a>UIElement 列表
 

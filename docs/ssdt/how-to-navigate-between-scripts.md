@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 49c19d1109f6105f2f081b1f85c2f188d2c02539
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099674"
 ---
 # <a name="how-to-navigate-between-scripts"></a>如何：在脚本之间导航
@@ -28,9 +28,9 @@ ms.locfileid: "65099674"
   
 ### <a name="to-navigate-between-scripts"></a>在脚本之间导航  
   
-1.  在“解决方案资源管理器”中展开“函数”文件夹，然后双击“GetProductsBySupplier.sql”。  
+1.  在“解决方案资源管理器”  中展开“函数”  文件夹，然后双击  “GetProductsBySupplier.sql”。  
   
-2.  在此行代码中右键单击 `Products`，然后选择“转到定义”  
+2.  在此行代码中右键单击 `Products`，然后选择“转到定义”   
   
     ```  
     SELECT * from Products p  
@@ -38,5 +38,5 @@ ms.locfileid: "65099674"
   
 3.  Products.sql 将自动打开，并且显示定义 `Products` 类型的位置。  
   
-4.  返回到 GetProductsBySupplier.sql。 这次在 `Products` 的上下文菜单中选择“查找所有引用”。 在“查找符号结果”窗格中，你将看到引用了 `Products` 表的位置的列表。 双击任何搜索结果将转到该引用的位置。  
+4.  返回到 GetProductsBySupplier.sql。 这次在 `Products` 的上下文菜单中选择“查找所有引用”  。 在“查找符号结果”  窗格中，你将看到引用了 `Products` 表的位置的列表。 双击任何搜索结果将转到该引用的位置。  
   

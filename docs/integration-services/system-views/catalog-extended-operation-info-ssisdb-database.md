@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e77a6574bafaf743ebcc77721ac7e1b812fec974
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714614"
 ---
 # <a name="catalogextendedoperationinfo-ssisdb-database"></a>catalog.extended_operation_info（SSISDB 数据库）
@@ -31,7 +31,7 @@ ms.locfileid: "65714614"
 |-----------------|---------------|-----------------|  
 |info_id|**bigint**|扩展信息的唯一标识符 (ID)。|  
 |operation_id|**bigint**|对应于扩展信息的操作的唯一 ID。|  
-|object_name|nvarchar(260)|对象的名称。|  
+|object_name|nvarchar(260) |对象的名称。|  
 |object_type|**smallint**|受操作影响的对象的类型。 该对象可能是文件夹 (`10`）、项目 (`20`）、包 (`30`)、环境 (`40`） 或执行实例 （`50`)。|  
 |reference_id|**bigint**|操作中使用的引用的唯一 ID。|  
 |status|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  

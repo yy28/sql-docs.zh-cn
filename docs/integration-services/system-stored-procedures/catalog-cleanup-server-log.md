@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c03018fefd6b4d09987a67ced7694d8f5e574db
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717220"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log 
@@ -47,7 +47,7 @@ catalog.cleanup_server_log
   
 -   针对项目的 READ 和 EXECUTE 权限，以及针对引用环境的 READ 权限（如果适用）。  
   
--   ssis_admin 数据库角色的成员资格。  
+-   ssis_admin 数据库角色的成员资格  。  
   
 -   **sysadmin** 服务器角色的成员资格。  
   
@@ -59,7 +59,7 @@ catalog.cleanup_server_log
 -   SSISDB 数据库未处于单用户模式下。  
   
 ## <a name="remarks"></a>Remarks  
- SQL Server 2012 Service Pack 2 将 SERVER_OPERATION_ENCRYPTION_LEVEL 属性添加到 internal.catalog_properties 表。 该属性有两个可能值：  
+ SQL Server 2012 Service Pack 2 将 SERVER_OPERATION_ENCRYPTION_LEVEL 属性添加到 internal.catalog_properties 表  。 该属性有两个可能值：  
   
 -   **PER_EXECUTION (1)** - 为每次执行创建用于保护敏感执行参数和执行日志的证书和对称密钥。 因为每次执行都会生成证书/密钥，生产环境中可能会出现性能问题（死锁、失败的维护工作等）。 但是，此设置提供的安全性级别比其他值 (2) 高。  
   

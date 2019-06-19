@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719591"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
@@ -138,7 +138,7 @@ ms.locfileid: "65719591"
 |**OnVariableValueChanged**|在变量的值更改时写入日志项。|  
 |**OnWarning**|在出现警告时写入日志项。|  
 |**PipelineComponentTime**|对于每个数据流组件，为验证和执行的每个阶段写入日志项。 该日志条目为每个阶段指定处理时间。|  
-|**诊断**<br /><br /> **DiagnosticEx**|写入提供诊断信息的日志项。<br /><br /> 例如，您可以在每次调用外部数据访问接口之前和之后记录消息。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 当你想查找数据流中存在错误的列的列名称时，请记录 **DiagnosticEx** 事件。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。 有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 注意：如果使用 SQL Server 日志提供程序记录 DiagnosticEx，输出可能被截断。 SQL Server 日志提供程序的 **消息** 字段属于 nvarchar(2048) 类型。 若要避免截断，请在记录 **DiagnosticEx** 事件时使用其他日志提供程序。|  
+|**诊断**<br /><br /> **DiagnosticEx**|写入提供诊断信息的日志项。<br /><br /> 例如，您可以在每次调用外部数据访问接口之前和之后记录消息。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 当你想查找数据流中存在错误的列的列名称时，请记录 **DiagnosticEx** 事件。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。 有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 注意：如果使用 SQL Server 日志提供程序记录 DiagnosticEx  ，输出可能被截断。 SQL Server 日志提供程序的 **消息** 字段属于 nvarchar(2048) 类型。 若要避免截断，请在记录 **DiagnosticEx** 事件时使用其他日志提供程序。|  
   
  包和很多任务都有可以启用日志记录功能的自定义日志项。 例如，发送邮件任务提供了 **SendMailTaskBegin** 自定义日志项，该日志项在发送邮件任务开始运行时（但在发送电子邮件消息之前）记录信息。 有关详细信息，请参阅 [Custom Messages for Logging](#custom_messages)。  
   
@@ -227,11 +227,11 @@ ms.locfileid: "65719591"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在 **SSIS** 菜单上，单击 **“日志记录”**。  
+2.  在 **SSIS** 菜单上，单击 **“日志记录”** 。  
   
-3.  在 **“提供程序类型”** 列表中，选择一个日志提供程序，然后单击 **“添加”**。  
+3.  在 **“提供程序类型”** 列表中，选择一个日志提供程序，然后单击 **“添加”** 。  
   
-4.  在“配置”列中，选择连接管理器或单击“\<新建连接>”以为日志提供程序新建一个适当类型的连接管理器。 根据所选提供程序的不同，可以使用下列某个连接管理器：  
+4.  在“配置”列中，选择连接管理器或单击“\<新建连接>”以为日志提供程序新建一个适当类型的连接管理器   。 根据所选提供程序的不同，可以使用下列某个连接管理器：  
   
     -   对于文本文件，请使用文件连接管理器。 有关详细信息，请参阅 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -248,7 +248,7 @@ ms.locfileid: "65719591"
     > [!NOTE]  
     >  一个包可以使用多个同一类型的日志。  
   
-6.  还可以选中包级复选框，选择要用于包级日志记录的日志，然后单击“详细信息”选项卡。  
+6.  还可以选中包级复选框，选择要用于包级日志记录的日志，然后单击“详细信息”  选项卡。  
   
 7.  在 **“详细信息”** 选项卡上，选择 **“事件”** 将记录所有日志项，清除 **“事件”** 可以选择单个事件。  
   
@@ -257,9 +257,9 @@ ms.locfileid: "65719591"
     > [!NOTE]  
     >  默认情况下会记录所有信息。  
   
-9. 在“详细信息”选项卡上，单击“保存”。 将显示 **“另存为”** 对话框。 找到要将日志记录配置保存到的文件夹，为新的日志配置键入文件名，然后单击 **“保存”**。  
+9. 在“详细信息”  选项卡上，单击“保存”  。 将显示 **“另存为”** 对话框。 找到要将日志记录配置保存到的文件夹，为新的日志配置键入文件名，然后单击 **“保存”** 。  
   
-10. 单击“确定” 。  
+10. 单击“确定”  。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
@@ -297,7 +297,7 @@ ms.locfileid: "65719591"
  如果容器为灰色，而您想要设置该容器的日志记录选项，请单击对应复选框两次。 第一次单击将清除该复选框，第二次单击将选中该复选框，这样您就可以选择要使用的日志提供程序以及要记录的信息。  
   
 ###  <a name="provider"></a> 配置“提供程序和日志”选项卡上的选项  
- 可以使用“配置 SSIS 日志”对话框的“提供程序和日志”选项卡，创建和配置用于捕获运行时事件的日志。  
+ 可以使用“配置 SSIS 日志”  对话框的“提供程序和日志”  选项卡，创建和配置用于捕获运行时事件的日志。  
   
 #### <a name="options"></a>选项  
  **提供程序类型**  
@@ -307,18 +307,18 @@ ms.locfileid: "65719591"
  将指定类型的日志添加到包的日志提供程序集合中。  
   
  **名称**  
- 通过使用复选框，可以为在“配置 SSIS 日志”对话框的“容器”窗格中选择的容器或任务启用或禁用日志。 名称字段是可编辑的。 可以使用提供程序的默认名称，也可以键入唯一的描述性名称。  
+ 通过使用复选框，可以为在“配置 SSIS 日志”  对话框的“容器”  窗格中选择的容器或任务启用或禁用日志。 名称字段是可编辑的。 可以使用提供程序的默认名称，也可以键入唯一的描述性名称。  
   
  **Description**  
  说明字段是可编辑的。 可以单击该字段，然后修改日志的默认说明。  
   
  **Configuration**  
- 在列表中选择一个现有的连接管理器或单击\<“新建连接...”> 以创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
+ 在列表中选择一个现有的连接管理器或单击\<“新建连接...”>  以创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
   
  相关主题：[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)管理器、[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **删除**  
- 选择一个日志提供程序，然后单击“删除”。  
+ 选择一个日志提供程序，然后单击“删除”  。  
   
 ###  <a name="detail"></a> 配置“详细信息”选项卡上的选项  
  可以使用 **“配置 SSIS 日志”** 对话框的 **“详细信息”** 选项卡，指定要启用日志记录的事件以及要记录的详细信息。 所选的信息适用于包中的所有日志提供程序。 例如，无法将一些信息写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而在文本文件中写入另外一些信息。  
@@ -361,7 +361,7 @@ ms.locfileid: "65719591"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在 **SSIS** 菜单上，单击 **“日志记录”**。  
+2.  在 **SSIS** 菜单上，单击 **“日志记录”** 。  
   
 3.  展开包的树视图，并选择要配置的容器。  
   
@@ -370,23 +370,23 @@ ms.locfileid: "65719591"
     > [!NOTE]  
     >  只能在包级创建日志。 有关详细信息，请参阅 [在 SQL Server Data Tools 中启用包日志记录](#ssdt)。  
   
-5.  单击 **“详细信息”** 选项卡，单击 **“加载”**。  
+5.  单击 **“详细信息”** 选项卡，单击 **“加载”** 。  
   
-6.  找到要使用的日志记录配置文件，并单击 **“打开”**。  
+6.  找到要使用的日志记录配置文件，并单击 **“打开”** 。  
   
 7.  （可选）通过在 **“事件”** 列中选中其复选框，选择要记录的其他日志项。 单击 **“高级”** 可以选择要为此项记录的信息类型。  
   
     > [!NOTE]  
     >  新容器可以包含最初用于创建日志记录配置的容器中所没有的其他日志项。 您必须手动选择这些其他日志项，才能对它们进行记录。  
   
-8.  若要保存日志记录配置的更新后的版本，请单击 **“保存”**。  
+8.  若要保存日志记录配置的更新后的版本，请单击 **“保存”** 。  
   
 9. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
 ## <a name="server_logging"></a>在 SSIS 服务器上启用包执行的日志记录
   本主题介绍在运行已经部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包时，如何设置或更改该包的日志记录级别。 在运行包时设置的日志记录级别将覆盖你在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中设计时配置的包日志记录。 有关详细信息，请参阅[在 SQL Server Data Tools 中启用包日志记录](#ssdt)。  
   
- 在 SQL Server“服务器属性”中，“服务器日志记录级别”属性下，可以选择默认服务器范围内的日志记录级别。 可以从本主题中介绍的内置日志记录中选择一项，或者选择现有的自定义日志记录级别。 默认情况下，所选的日志记录级别适用于部署到 SSIS 目录的所有包。 同时也默认适用于运行 SSIS 包的 SQL 代理作业步骤。  
+ 在 SQL Server“服务器属性”中，“服务器日志记录级别”属性下，可以选择默认服务器范围内的日志记录级别。   可以从本主题中介绍的内置日志记录中选择一项，或者选择现有的自定义日志记录级别。 默认情况下，所选的日志记录级别适用于部署到 SSIS 目录的所有包。 同时也默认适用于运行 SSIS 包的 SQL 代理作业步骤。  
   
  此外，也可使用下列方法之一对单个包指定日志记录级别。 本主题涵盖第一种方法。  
   
@@ -400,7 +400,7 @@ ms.locfileid: "65719591"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，导航到对象资源管理器中的包。  
   
-2.  右键单击包，然后选择“执行”。  
+2.  右键单击包，然后选择“执行”。   
   
 3.  在 **“执行包”** 对话框中，选择 **“高级”** 选项卡。  
   
@@ -417,7 +417,7 @@ ms.locfileid: "65719591"
 |“基本”|除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
 |运行时沿袭|收集跟踪数据流中的沿袭信息所需的数据。 可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。|  
 |“性能”|仅记录性能统计信息、OnError 和 OnWarning 事件。<br /><br /> **“执行性能”** 报表显示包数据流组件的活动时间和总时间。 仅当上次包执行的日志记录级别设置为 **“性能”** 或 **“详细”** 时，此信息才可用。 有关详细信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 视图显示数据流组件在执行的每个阶段的开始时间和结束时间。 仅当包执行的日志记录级别设置为 **“性能”** 或 **“详细”** 时，此视图才会为这些组件显示以上信息。|  
-|“详细”|记录所有事件，包括自定义事件和诊断事件。<br /><br /> 自定义事件包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务记录的那些事件。 有关自定义事件的详细信息，请参阅 [Custom Messages for Logging](#custom_messages)。<br /><br /> 诊断事件的一个例子就是“DiagnosticEx”  事件。 每当执行包任务执行子包时，此事件均将捕获传递给子包的参数值。<br /><br /> “DiagnosticEx”事件还有助于获取其中出现行级错误的列的名称。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> **DiagnosticEx** 的消息列的值是 XML 文本。 若要查看包执行的消息文本，请查询 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)视图。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 每当数据流组件向下游组件发送数据时， [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 视图就会显示一行。 日志记录级别必须设置为 **“详细”** ，才能在该视图中捕获此信息。|  
+|“详细”|记录所有事件，包括自定义事件和诊断事件。<br /><br /> 自定义事件包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务记录的那些事件。 有关自定义事件的详细信息，请参阅 [Custom Messages for Logging](#custom_messages)。<br /><br /> 诊断事件的一个例子就是“DiagnosticEx”  事件。 每当执行包任务执行子包时，此事件均将捕获传递给子包的参数值。<br /><br /> “DiagnosticEx”  事件还有助于获取其中出现行级错误的列的名称。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> **DiagnosticEx** 的消息列的值是 XML 文本。 若要查看包执行的消息文本，请查询 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)视图。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 每当数据流组件向下游组件发送数据时， [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 视图就会显示一行。 日志记录级别必须设置为 **“详细”** ，才能在该视图中捕获此信息。|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>使用“自定义日志记录级别管理”对话框来创建和管理自定义日志记录级别  
  可以创建只收集想要的统计信息和事件的自定义日志记录级别。 还可以选择捕获事件上下文，包括变量值、连接字符串和组件属性。 运行包时，可在任何可以选择内置日志记录级别的位置处，选择自定义日志记录级别。  
@@ -425,13 +425,13 @@ ms.locfileid: "65719591"
 > [!TIP]  
 >  若要捕获包变量的值，必须将该变量的 **IncludeInDebugDump** 属性设置为 **True**。  
   
-1.  要创建和管理自定义日志记录级别，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击 SSISDB 数据库并选择“自定义日志记录级别”以打开“自定义日志记录级别管理”对话框。 “自定义日志记录级别”  列表包含所有现有的自定义日志记录级别。  
+1.  要创建和管理自定义日志记录级别，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击 SSISDB 数据库并选择“自定义日志记录级别”以打开“自定义日志记录级别管理”对话框。   “自定义日志记录级别”  列表包含所有现有的自定义日志记录级别。  
   
-2.  要 **创建** 新的自定义日志记录级别，请单击“创建” ，然后提供名称和描述。 在“统计信息”  和“事件”  选项卡上，选择想要收集的统计信息和事件。 在“事件”  选项卡上，可以选择对单个事件选择“包括上下文”  。 然后单击“保存” 。  
+2.  要 **创建** 新的自定义日志记录级别，请单击“创建”  ，然后提供名称和描述。 在“统计信息”  和“事件”  选项卡上，选择想要收集的统计信息和事件。 在“事件”  选项卡上，可以选择对单个事件选择“包括上下文”  。 然后单击“保存”  。  
   
-3.  要 **更新** 现有的自定义日志记录级别，请在列表中选中并重新配置它，然后单击“保存” 。  
+3.  要 **更新** 现有的自定义日志记录级别，请在列表中选中并重新配置它，然后单击“保存”  。  
   
-4.  要 **删除** 现有的自定义日志记录级别，请在列表中选中它，然后单击“删除” 。  
+4.  要 **删除** 现有的自定义日志记录级别，请在列表中选中它，然后单击“删除”  。  
   
  **自定义日志记录级别的权限。**  
   

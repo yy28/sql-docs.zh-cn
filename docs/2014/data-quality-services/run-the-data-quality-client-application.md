@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbb790fc5067d1544cd4b3d9d6e90b34be8e2b77
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484143"
 ---
 # <a name="run-the-data-quality-client-application"></a>运行数据质量客户端应用程序
@@ -36,15 +36,15 @@ ms.locfileid: "65484143"
 ##  <a name="Run"></a> 运行数据质量客户端  
  若要在装有[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]的计算机上运行它，请执行以下操作：  
   
-1.  单击 **“开始”**，指向 **“所有程序”**，依次单击 **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**、 **Data Quality Services**和 **“数据质量客户端”**。  
+1.  单击 **“开始”** ，指向 **“所有程序”** ，依次单击 **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]** 、 **Data Quality Services**和 **“数据质量客户端”** 。  
   
 2.  在 **“连接到服务器”** 对话框中：  
   
-    1.  指定您要将 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序连接到的服务器。 选择 **(LOCAL)** 以便连接到本地计算机上的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 还可以单击向下箭头并选择“\<浏览网络以查找更多服务器>”，以便连接到其他服务器（或者按名称连接到本地服务器）。 将显示 **“查找服务器”** 对话框。 您可以在 **“本地服务器”** 选项卡或 **“网络服务器”** 选项卡中选择某一服务器。  
+    1.  指定您要将 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序连接到的服务器。 选择 **(LOCAL)** 以便连接到本地计算机上的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 。 还可以单击向下箭头并选择“\<浏览网络以查找更多服务器>”  ，以便连接到其他服务器（或者按名称连接到本地服务器）。 将显示 **“查找服务器”** 对话框。 您可以在 **“本地服务器”** 选项卡或 **“网络服务器”** 选项卡中选择某一服务器。  
   
-    2.  如果想要加密在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 之间传输的数据，请单击“选项”，然后选中“加密连接”复选框。  
+    2.  如果想要加密在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 之间传输的数据，请单击“选项”  ，然后选中“加密连接”  复选框。  
   
-3.  单击 **“连接”**。  
+3.  单击 **“连接”** 。  
   
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕将出现。 有关详细信息，请参阅[数据质量客户端主屏幕](../../2014/data-quality-services/data-quality-client-home-screen.md)。  
   

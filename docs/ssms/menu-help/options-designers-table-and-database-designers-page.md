@@ -14,15 +14,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b6c9bf93c92bb7797f179e0b6647993dff71e6b7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105124"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>选项（“设计器”-“表设计器和数据库设计器”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此页可确定设计器的默认行为。 若要访问这些设置，请在“工具”菜单上，单击“选项”，展开“设计器”文件夹，再单击“表设计器”。  
+使用此页可确定设计器的默认行为。 若要访问这些设置，请在“工具”  菜单上，单击“选项  ”，展开“设计器”  文件夹，再单击“表设计器”  。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
 **为表设计器更新重写连接字符串的超时值**  
@@ -80,5 +80,5 @@ ms.locfileid: "65105124"
     允许选择要查看的列。  
   
 **在新建关系图时启动“添加表”对话框**  
-在打开设计器时自动打开“添加表”对话框。  
+在打开设计器时自动打开“添加表”  对话框。  
   

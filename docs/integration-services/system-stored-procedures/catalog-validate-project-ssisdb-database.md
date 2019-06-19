@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1879aef282f9e3d8e61767ba2808bf3dd2908b8d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715677"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project（SSISDB 数据库）
@@ -40,26 +40,26 @@ catalog.validate_project [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name  
- 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
+ [ @folder_name = ] folder_name   
+ 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [ @project_name = ] project_name  
- 项目的名称。 *project_name* 为 **nvarchar(128)**。  
+ [ @project_name = ] project_name   
+ 项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
- [ @validate_type = ] validate_type  
- 指示要执行的验证类型。 使用字符 `F` 执行完全验证。 此参数是可选的，默认情况下使用字符 `F`。 validate_type 为 char(1)。  
+ [ @validate_type = ] validate_type   
+ 指示要执行的验证类型。 使用字符 `F` 执行完全验证。 此参数是可选的，默认情况下使用字符 `F`。 validate_type  为 char(1)  。  
   
- [ @validation_id = ] validation_id  
- 返回验证的唯一标识符 (ID)。 validation_id 为 bigint。  
+ [ @validation_id = ] validation_id   
+ 返回验证的唯一标识符 (ID)。 validation_id  为 bigint  。  
   
- [ @use32bitruntime = ] use32bitruntime  
- 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 在 64 位操作系统上运行时，使用值 `1` 以便使用 32 位运行时执行此包。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数可选。 use32bitruntime 为 bit。  
+ [ @use32bitruntime = ] use32bitruntime   
+ 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 在 64 位操作系统上运行时，使用值 `1` 以便使用 32 位运行时执行此包。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数可选。 use32bitruntime  为 bit  。  
   
- [ @environment_scope = ] environment_scope  
- 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数是可选的，默认情况下使用字符 `D`。 environment_scope 为 char(1)。  
+ [ @environment_scope = ] environment_scope   
+ 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数是可选的，默认情况下使用字符 `D`。 environment_scope 为 char(1)   。  
   
- [ @reference_id = ] reference_id  
- 环境引用的唯一 ID。 如果 environment_scope 为 `S`，仅当在验证中包含单个环境引用时，才需要此参数。 reference_id 为 bigint。  
+ [ @reference_id = ] reference_id   
+ 环境引用的唯一 ID。 如果 environment_scope  为 `S`，仅当在验证中包含单个环境引用时，才需要此参数。 reference_id 为 bigint   。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）  

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5664a4cb745a250aa8db6d98b92a275bb91c7a8d
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536577"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 函数
@@ -86,7 +86,7 @@ BOOL SQLInstallDriverEx(
 ## <a name="diagnostics"></a>诊断  
  当**SQLInstallDriverEx**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|错误|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|无效缓冲区长度|*LpszPathOut*参数不是足够大以包含输出路径。 在缓冲区中包含的被截断的路径。<br /><br /> *CbPathOutMax*参数为 0，并且*fRequest*已 ODBC_INSTALL_COMPLETE。|  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>注释  
  *LpszDriver*参数是中的关键字值对形式的属性列表。 每个对终止 null 字节，并且整个列表终止 null 字节。 （也就是说，两个 null 字节标记列表的末尾。）此列表的格式如下所示：  
   
- _driver-desc_ **\\**0Driver**=**_driver-DLL-filename_**\\**0[Setup**=**_setup-DLL-filename_<b>\\</b>0]  
+ _driver-desc_ **\\** 0Driver **=** _driver-DLL-filename_ **\\** 0[Setup **=** _setup-DLL-filename_<b>\\</b>0]  
   
- [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
+ [_driver-attr-keyword1_ **=** _value1_<b>\\</b>0][_driver-attr-keyword2_ **=** _value2_<b>\\</b>0]...<b>\\</b>0  
   
  其中 \0 是 null 字节和*驱动程序 attr keywordn*是任何驱动程序属性关键字。 关键字必须出现在指定的顺序。 例如，假设用于格式化的文本的文件的驱动程序具有单独的驱动程序和安装程序 Dll，并可以使用具有.txt 和.csv 扩展名的文件。 *LpszDriver*此驱动程序的参数可能按如下所示：  
   

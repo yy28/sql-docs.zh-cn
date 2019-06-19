@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 93bbfcc8b76fe6fe1028b5b13395e0a88a6b359a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726365"
 ---
 # <a name="source-assistant"></a>源助手
@@ -32,7 +32,7 @@ ms.locfileid: "65726365"
 >  源助手替换 Integration Services 连接项目和相应向导。  
   
 ## <a name="add-a-source-with-source-assistant"></a>使用源助手添加源
-本节介绍了使用源助手添加新源的步骤，并且列出了在“添加新源”对话框中提供的选项，将源助手向下拉到 SSIS 设计器时可看到此对话框。  
+本节介绍了使用源助手添加新源的步骤，并且列出了在“添加新源”对话框中提供的选项，将源助手向下拉到 SSIS 设计器时可看到此对话框  。  
 
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开要将源组件添加到的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
@@ -40,19 +40,19 @@ ms.locfileid: "65726365"
   
 3.  在 **“类型”** 列表中，选择目标的类型。  
   
-4.  在“连接管理器”列表中选择现有连接管理器，或选择“\<新建>”，创建新的连接管理器。  
+4.  在“连接管理器”列表中选择现有连接管理器，或选择“\<新建>”，创建新的连接管理器   。  
   
 5.  如果您选择现有连接管理器，则单击 **“确定”** 以便关闭 **“添加新目标”** 对话框。 您应该会看到添加到数据流的目标管理器和连接管理器。  
   
-6.  如果单击“\<新建>”创建新的连接管理器，可看到“连接管理器”对话框，可在其中指定连接参数。 在您创建完新的连接管理器后，将在 SSIS 设计器中看到目标和连接管理器。  
+6.  如果单击“\<新建>”创建新的连接管理器，可看到“连接管理器”对话框，可在其中指定连接参数   。 在您创建完新的连接管理器后，将在 SSIS 设计器中看到目标和连接管理器。  
 
 ## <a name="add-new-source-dialog-box"></a>“添加新源”对话框
-下表列出了“添加新源”对话框中的可用选项。  
+下表列出了“添加新源”对话框中的可用选项  。  
   
 |选项|描述|  
 |------------|-----------------|  
 |类型|选择要连接到的源的类型。|  
-|连接管理器|选择现有连接管理器或单击“\<新建>”创建新的连接管理器。|  
+|连接管理器|选择现有连接管理器或单击“\<新建>”创建新的连接管理器  。|  
 |仅显示已安装项|指定是否要仅查看安装的源。|  
 |“确定”|单击以保存您的更改，并打开任何后续对话框来配置其他选项。| 
   

@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3d325033d1e315ce7b9175f812ae992316fa2f44
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726805"
 ---
 # <a name="flat-file-source"></a>平面文件源
@@ -81,19 +81,19 @@ ms.locfileid: "65726805"
   
 ### <a name="options"></a>选项  
  **Flat file connection manager**  
- 从列表中选择现有的连接管理器，或单击“新建”创建新的连接管理器。  
+ 从列表中选择现有的连接管理器，或单击“新建”  创建新的连接管理器。  
   
  **新建**  
- 通过使用“平面文件连接管理器编辑器”对话框创建新的连接管理器。  
+ 通过使用“平面文件连接管理器编辑器”  对话框创建新的连接管理器。  
   
  **在数据流中保留源中的空值**  
  指定提取数据时是否保留空值。 此属性的默认值为 **false**。 当此值为 F**alse**时，平面文件源使用每列的相应默认值替换源数据中的空值，例如，对于字符串列使用空字符串，对于数值列使用零。  
   
  **预览**  
- 通过使用“数据视图”对话框预览结果。 预览最多可以显示 200 行。  
+ 通过使用“数据视图”  对话框预览结果。 预览最多可以显示 200 行。  
   
 ## <a name="flat-file-source-editor-columns-page"></a>平面文件源编辑器（“列”页）
-  可以使用“平面文件源编辑器”对话框的“列”节点，将输出列映射到每个外部（源）列。  
+  可以使用“平面文件源编辑器”  对话框的“列”  节点，将输出列映射到每个外部（源）列。  
   
 > [!NOTE]  
 >  平面文件源的 **FileNameColumnName** 属性及其输出列的 **FastParse** 属性未在 **“平面文件源编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 有关这些属性的详细信息，请参阅 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)的“平面文件源”部分。  
@@ -109,19 +109,19 @@ ms.locfileid: "65726805"
  为每个输出列提供唯一的名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
 ## <a name="flat-file-source-editor-error-output-page"></a>平面文件源编辑器（“错误输出”页）
-  可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。  
+  可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。    
   
 ### <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   
  **列**  
- 查看在“平面文件源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
+ 查看在“平面文件源编辑器”对话框中“连接管理器”页上选择的外部（源）列。    
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  

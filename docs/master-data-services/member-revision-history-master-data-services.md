@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f4f39c05c0f2d8bccafa31488bab2fad700a0d90
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489008"
 ---
 # <a name="member-revision-history-master-data-services"></a>成员修订历史记录 (Master Data Services)
@@ -39,7 +39,7 @@ ms.locfileid: "65489008"
   
  **查看和管理修订历史记录**  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器” 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器”  。  
   
 2.  从“实体”  菜单中选择实体。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65489008"
 ## <a name="view-and-manage-revision-history-by-member"></a>由成员查看和管理修订历史记录  
  如果具有成员的读取权限，就可以在资源管理器功能区中查看成员的修订版本。 如果具有更新权限，就可以将成员回退到之前的修订版本或为修订版本添加注释。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器” 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器”  。  
   
 2.  从“实体”  菜单中选择实体。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65489008"
 4.  在右窗格中，单击“查看历史记录”  。  
   
 ## <a name="log-retention-setting"></a>日志保留设置  
- 可以通过设置 **数据库的系统设置中的“日志保留天数”**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 属性配置历史记录数据保留期，也可以通过在创建或编辑模型时设置“日志保留天数”  来配置。  
+ 可以通过设置 **数据库的系统设置中的“日志保留天数”** [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 属性配置历史记录数据保留期，也可以通过在创建或编辑模型时设置“日志保留天数”  来配置。  
   
 ## <a name="related-task"></a>相关任务  
   
