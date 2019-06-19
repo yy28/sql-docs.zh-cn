@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49513fd41e3167adcc9d39a8e680dd25bccb24a6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081839"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>“维度属性”对话框（Analysis Services - 多维数据）
-  可以使用 **中的** “维度属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的维度的属性。 在对象资源管理器中右键单击某个维度，并选择“属性”，可以显示“维度属性”对话框。  
+  可以使用 **中的** “维度属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的维度的属性。 在对象资源管理器中右键单击某个维度，并选择“属性”，可以显示“维度属性”对话框   。  
   
 ## <a name="options"></a>选项  
   

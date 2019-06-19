@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1f9750813d305834fe36f2c6ab7abfaa1d95075
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106772"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>添加矩形或容器（报表生成器和 SSRS）
@@ -28,7 +28,7 @@ ms.locfileid: "66106772"
   
 ### <a name="to-add-a-rectangle"></a>添加矩形  
   
-1.  在 **“插入”** 选项卡的 **“报表项”** 组中，单击 **“矩形”**。  
+1.  在 **“插入”** 选项卡的 **“报表项”** 组中，单击 **“矩形”** 。  
   
 2.  在设计图面上，单击希望矩形左上角所处的位置，并拖动至希望矩形右下角所处的位置。  
   

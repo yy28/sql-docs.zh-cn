@@ -34,14 +34,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb8058eacc2958327f1aa5649ed2dcfefe173b37
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014809"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 插入数据 (SQLXML 4.0)
-  当记录实例出现在时，updategram 指示插入操作**\<后 >** 块中但不是在相应**\<之前 >** 块。 在这种情况下，updategram 中的记录插入**\<后 >** 到数据库中的块。  
+  当记录实例出现在时，updategram 指示插入操作 **\<后 >** 块中但不是在相应 **\<之前 >** 块。 在这种情况下，updategram 中的记录插入 **\<后 >** 到数据库中的块。  
   
  以下是 updategram 的插入操作格式：  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66014809"
  **\<之前 >** 块可省略了插入操作。 如果可选`mapping-schema`未指定属性，  **\<ElementName >** 的 updategram 映射到数据库表和子元素中指定或属性将映射到表中的列。  
   
 ## <a name="after-block"></a>\<后 > 块  
- 您可以指定一个或多个记录中的**\<后 >** 块。  
+ 您可以指定一个或多个记录中的 **\<后 >** 块。  
   
- 如果**\<后 >** 块不提供特定列的值，updategram 将使用 （如果已指定一个架构） 中带批注的架构指定的默认值。 如果架构未指定列的默认值，则 updategram 不指定到此列的任何显式值，并，时，将分配[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到此列的默认值 （如果指定）。 如果没有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认值并且此列接受 NULL 值，则 updategram 将此列的值设置为 NULL。 如果此列既没有默认值也不接受 NULL 值，则命令将失败并且 updategram 将返回一个错误。 如果要添加记录的表包含一个 IDENTITY 类型的列，则使用 `updg:returnid` 属性返回系统生成的标识值。  
+ 如果 **\<后 >** 块不提供特定列的值，updategram 将使用 （如果已指定一个架构） 中带批注的架构指定的默认值。 如果架构未指定列的默认值，则 updategram 不指定到此列的任何显式值，并，时，将分配[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到此列的默认值 （如果指定）。 如果没有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认值并且此列接受 NULL 值，则 updategram 将此列的值设置为 NULL。 如果此列既没有默认值也不接受 NULL 值，则命令将失败并且 updategram 将返回一个错误。 如果要添加记录的表包含一个 IDENTITY 类型的列，则使用 `updg:returnid` 属性返回系统生成的标识值。  
   
 ## <a name="updgid-attribute"></a>updg:id 属性  
  如果 updategram 只是要插入记录，则 updategram 不需要 `updg:id` 属性。 有关详细信息`updg:id`，请参阅[使用 XML Updategram 更新数据&#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)。  
@@ -79,7 +79,7 @@ ms.locfileid: "66014809"
  如果 updategram 要在其中插入记录的表包含一个 IDENTITY 类型的列，则 updategram 可通过使用可选的 `updg:at-identity` 属性捕获系统分配的值。 然后，updategram 可以在后续操作中使用此值。 一旦执行 updategram，即可通过指定 `updg:returnid` 属性返回生成的标识值。  
   
 ## <a name="updgguid-attribute"></a>updg:guid 属性  
- `updg:guid` 属性是一个生成全局唯一标识符的可选属性。 此值保持在范围内的整个**\<同步 >** 块中指定它。 可以使用此值在任何地方**\<同步 >** 块。 该属性调用`NEWGUID()`[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函数生成的唯一标识符。  
+ `updg:guid` 属性是一个生成全局唯一标识符的可选属性。 此值保持在范围内的整个 **\<同步 >** 块中指定它。 可以使用此值在任何地方 **\<同步 >** 块。 该属性调用`NEWGUID()`[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函数生成的唯一标识符。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足中指定的要求[运行 SQLXML 示例的要求](../../sqlxml/requirements-for-running-sqlxml-examples.md)。  
@@ -157,7 +157,7 @@ ms.locfileid: "66014809"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. 使用 updategram 插入多个记录  
- 此 updategram 向 HumanResources.Shift 表添加两个新的轮班记录。 Updategram 不指定可选**\<之前 >** 块。  
+ 此 updategram 向 HumanResources.Shift 表添加两个新的轮班记录。 Updategram 不指定可选 **\<之前 >** 块。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -501,7 +501,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Updategram 指定`xsi:nil`有关 **\<fname >** 中的元素**\<后 >** 块。 因此，在执行此 updategram 时，会为表中的 first_name 列插入 NULL 值。  
+ Updategram 指定`xsi:nil`有关 **\<fname >** 中的元素 **\<后 >** 块。 因此，在执行此 updategram 时，会为表中的 first_name 列插入 NULL 值。  
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   

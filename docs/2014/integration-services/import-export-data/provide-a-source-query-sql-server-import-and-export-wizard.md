@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a028c880d87e21e1fcc63ffc605e7d375619dbf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767859"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供源查询（SQL Server 导入和导出向导）
@@ -37,7 +37,7 @@ WHERE CommissionPct > 0.015
 ```  
   
  **分析**  
- 检查“SQL 语句”文本框中 SQL 语句的语法。  
+ 检查“SQL 语句”  文本框中 SQL 语句的语法。  
   
 > [!NOTE]  
 >  如果检查语句的语法所需的时间超过超时值（30 秒），则将停止分析并生成错误。 在成功完成分析之前，您将无法跳过向导的这一页。 一种解决方案是基于查询创建数据库视图，然后从向导查询该视图，而不是直接输入查询文本。  

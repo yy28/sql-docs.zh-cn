@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 919a0c9eb96021ccd7495579cda9756bcdde3194
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761448"
 ---
 # <a name="delete-foreign-key-relationships"></a>删除外键关系
@@ -47,11 +47,11 @@ ms.locfileid: "62761448"
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>删除外键约束  
   
-1.  在 **“对象资源管理器”** 中，展开具有约束的表，再展开 **“键”**。  
+1.  在 **“对象资源管理器”** 中，展开具有约束的表，再展开 **“键”** 。  
   
-2.  右键单击该约束，然后单击“删除”。  
+2.  右键单击该约束，然后单击“删除”  。  
   
-3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
+3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62761448"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

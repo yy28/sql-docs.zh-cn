@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055952"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>“选择 SMO 枚举”对话框
-  可以使用“选择 SMO 枚举”对话框，指定要在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上枚举的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 并选择枚举类型。  
+  可以使用“选择 SMO 枚举”  对话框，指定要在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上枚举的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 并选择枚举类型。  
   
 ## <a name="options"></a>选项  
  **枚举**  
@@ -32,7 +32,7 @@ ms.locfileid: "66055952"
  使用“对象”枚举类型。  
   
  **预填充**  
- 为“对象”枚举类型使用“预填充”选项。  
+ 为“对象”枚举类型使用“预填充”  选项。  
   
  **名称**  
  使用“名称”枚举类型。  

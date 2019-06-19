@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ce48c964ec756668aa12566c494d9ae9a1e5372
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099576"
 ---
 # <a name="server-properties-history-page"></a>服务器属性（“历史记录”页）
@@ -26,7 +26,7 @@ ms.locfileid: "66099576"
   
  报表历史记录快照存储在报表服务器数据库中。 如果要保留无限多个快照，请确保定期检查数据库大小，确保它的增长速度不会过快或占用太多的磁盘空间。  
   
- 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”。 单击 **“历史记录”** 将此页打开。  
+ 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”  。 单击 **“历史记录”** 将此页打开。  
   
 ## <a name="options"></a>选项  
  **不限制报表历史记录中保留的快照数**  

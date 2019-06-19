@@ -14,32 +14,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63031931"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>选项 （SQL Server 对象资源管理器-脚本页）
   使用此页可设置脚本选项，以应用于**对象资源管理器**中对象上下文菜单上的以下命令：  
   
--   用于用户表和视图的“编辑”命令。  
+-   用于用户表和视图的“编辑”  命令。  
   
 -   **脚本\<对象 > 作为**用于用户创建对象的命令。  
   
--   用于用户创建对象的“修改”命令。  
+-   用于用户创建对象的“修改”  命令。  
   
--   本页也可用于设置“生成 SQL Server 脚本向导”的脚本选项默认值。  
+-   本页也可用于设置“生成 SQL Server 脚本向导”  的脚本选项默认值。  
   
 ## <a name="remarks"></a>备注  
- **编辑**并**修改**命令可能会产生不同的结果**脚本\<对象 > 作为**命令用于同一选项设置。 “编辑”和“修改”命令用于在查询编辑器会话期间修改当前数据库中的对象。 **脚本\<对象 > 作为**命令用于生成一个脚本，以便它可用于更高版本创建的对象。  
+ **编辑**并**修改**命令可能会产生不同的结果**脚本\<对象 > 作为**命令用于同一选项设置。 “编辑”  和“修改”  命令用于在查询编辑器会话期间修改当前数据库中的对象。 **脚本\<对象 > 作为**命令用于生成一个脚本，以便它可用于更高版本创建的对象。  
   
 ## <a name="options"></a>选项  
  通过从每个选项右侧列表中的可用设置中进行选择，可以指定脚本选项。  
   
 ### <a name="general-scripting-options"></a>常规脚本选项  
  **分隔各条语句**  
- 使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要更改**查询编辑器**，选择“工具”/“选项”/“查询执行”/“SQL Server”/“常规”/“批处理分隔符”。 默认值为 False。 有关详细信息，请参阅[GO &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)。  
+ 使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要更改**查询编辑器**，选择“工具”  /“选项”  /“查询执行”  /“SQL Server”  /“常规”  /“批处理分隔符”  。 默认值为 False。 有关详细信息，请参阅[GO &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)。  
   
  **包含说明性标头**  
  通过将每个对象的脚本分隔为多个部分以向脚本添加说明性注释。 默认值为 True。 有关详细信息，请参阅[注释&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql)。  

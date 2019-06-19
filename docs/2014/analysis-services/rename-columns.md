@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070321"
 ---
 # <a name="lesson-3-rename-columns"></a>第 3 课：对列重命名
@@ -32,7 +32,7 @@ ms.locfileid: "66070321"
   
 #### <a name="to-rename-columns"></a>对列进行重命名  
   
-1.  在模型设计器中，单击“Customer”表（选项卡）。  
+1.  在模型设计器中，单击“Customer”  表（选项卡）。  
   
      单击某个选项卡时，该表将在模型设计器窗口中变为活动状态。  
   

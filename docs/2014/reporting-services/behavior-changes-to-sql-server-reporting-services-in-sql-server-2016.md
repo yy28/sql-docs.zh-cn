@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91fa7a66981f3e36c7e25babffbf73dc2519a0c2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109941"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014 中 SQL Server Reporting Services 的行为更改
@@ -67,7 +67,7 @@ ms.locfileid: "66109941"
 ### <a name="report-server-configuration-and-management-tools"></a>报表服务器配置和管理工具  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>配置管理器不用于 SharePoint 模式  
- **新行为：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager 不再支持 SharePoint 模式报表服务器。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式的配置现在可以通过使用 SharePoint 管理中心来完成，因此 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器不再支持 SharePoint 模式。 配置管理器现在仅用于本机模式报表服务器。  
+ **新行为：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager 不再支持 SharePoint 模式报表服务器。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式的配置现在可以通过使用 SharePoint 管理中心来完成，因此 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器不再支持 SharePoint 模式。 配置管理器现在仅用于本机模式报表服务器。  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>无法将服务器从一种模式更改为另一种模式  
  **新行为：** 无法更改服务器模式。 如果您以本机模式安装了报表服务器，则无法将其更改或重新配置为 SharePoint 模式。 如果在 SharePoint 模式中进行安装，则可以将报表服务器更改为本机模式。  

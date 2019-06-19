@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5386c8db5c3d240533b21311794779905039e70a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62985815"
 ---
 # <a name="rendering-extensions-overview"></a>呈现扩展插件概述
@@ -33,11 +33,11 @@ ms.locfileid: "62985815"
 |`XML`|以 XML 格式呈现报表。 报表在浏览器中打开。 应用于此 XML 输出的其他转换可能是一种经济有效的方法，使您免于开发自己的呈现扩展插件。|  
 |`CSV`|以逗号分隔的格式呈现报表。 报表在与 CSV 文件格式关联的查看工具中打开。|  
 |`IMAGE`|以面向页面的格式呈现报表。 此格式在报表工具栏的“导出”下拉列表中显示为 **TIFF**。|  
-|`PDF`|在 Adobe Acrobat Reader 中呈现报表。 此格式在报表工具栏的“导出”下拉列表中显示为“Acrobat (PDF) 文件”。|  
+|`PDF`|在 Adobe Acrobat Reader 中呈现报表。 此格式在报表工具栏的“导出”下拉列表中显示为“Acrobat (PDF) 文件”  。|  
 |`EXCEL`|在 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 中呈现报表。|  
 |`WORD`|在 [!INCLUDE[ofprword](../../../includes/ofprword-md.md)] 中呈现报表。|  
 |`HTML 4.0`（HTML 呈现扩展插件的一部分）|HTML 是用于最初呈现报表的格式。 如果浏览器支持 HTML 4.0，则这是所使用的格式。 否则，使用 HTML 3.2。|  
-|`MHTML`（HTML 呈现扩展插件的一部分）|以 MHTML 格式呈现报表。 报表在 Internet Explorer 中打开。 此格式在报表工具栏的“导出”下拉列表中显示为“Web 存档”。|  
+|`MHTML`（HTML 呈现扩展插件的一部分）|以 MHTML 格式呈现报表。 报表在 Internet Explorer 中打开。 此格式在报表工具栏的“导出”下拉列表中显示为“Web 存档”  。|  
 |`NULL`|不将报表呈现为特定的格式。 这一呈现扩展插件用于将报表放到缓存中。 空呈现应与计划的执行或传递一起使用。|  
   
  有关建议的格式及其用法的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../report-builder/export-reports-report-builder-and-ssrs.md)。  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e20363b7d26b2b668ca52d44615488e06573f730
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106380"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>更改图表类型（报表生成器和 SSRS）
@@ -29,12 +29,12 @@ ms.locfileid: "66106380"
   
 ### <a name="to-change-the-chart-type"></a>更改图表类型  
   
-1.  在“设计”视图中，右键单击图表，然后单击“更改图表类型”。  
+1.  在“设计”视图中，右键单击图表，然后单击“更改图表类型”  。  
   
     > [!NOTE]  
     >  有多个序列显示在图表中时，必须右键单击要更改的序列，而不是图表。  
   
-2.  在“选择图表类型”对话框中，从列表中选择图表类型。  
+2.  在“选择图表类型”  对话框中，从列表中选择图表类型。  
   
 ## <a name="see-also"></a>请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   

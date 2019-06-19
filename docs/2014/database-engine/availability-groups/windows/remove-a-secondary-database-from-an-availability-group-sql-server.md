@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 183acf0bf1e6e92483989545a710769501fa946d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814132"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>从可用性组中删除辅助数据库 (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62814132"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：**[从可用性组中删除辅助数据库之后](#FollowUp)  
+-   **跟进：** [从可用性组中删除辅助数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -69,9 +69,9 @@ ms.locfileid: "62814132"
   
     -   若要删除单个数据库，请在 **“对象资源管理器”** 窗格或 **“对象资源管理器详细信息”** 窗格中选中该数据库。  
   
-5.  右键单击选定的一个或多个数据库，然后在命令菜单中选择“删除辅助数据库”。  
+5.  右键单击选定的一个或多个数据库，然后在命令菜单中选择“删除辅助数据库”  。  
   
-6.  在 **“从可用性组删除数据库”** 对话框中，要删除所有列出的数据库，则单击 **“确定”**。 如果您不想删除所有列出的数据库，请单击 **“取消”**。  
+6.  在 **“从可用性组删除数据库”** 对话框中，要删除所有列出的数据库，则单击 **“确定”** 。 如果您不想删除所有列出的数据库，请单击 **“取消”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **从可用性组中删除辅助数据库**  

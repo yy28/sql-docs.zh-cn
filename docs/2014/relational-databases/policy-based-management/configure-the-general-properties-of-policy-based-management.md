@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162392"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>配置基于策略的管理的常规属性
@@ -47,11 +47,11 @@ ms.locfileid: "63162392"
   
 #### <a name="to-configure-policy-based-management"></a>配置基于策略的管理  
   
-1.  在“对象资源管理器”中，单击加号以展开你要在其中配置基于策略的管理属性的服务器。  
+1.  在“对象资源管理器”  中，单击加号以展开你要在其中配置基于策略的管理属性的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“策略管理”，然后选择“属性”。  
+3.  右键单击“策略管理”  ，然后选择“属性”  。  
   
      在 **“策略管理属性”** 对话框中提供以下选项。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63162392"
   
     -   如果该值为 true，则成功和失败的策略评估都会记录。  
   
-4.  完成后，单击 **“确定”**。  
+4.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63162392"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- enables Policy-Based Management   

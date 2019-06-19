@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b8648b9166ffa192ca21233ab6add38260a7dea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871144"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>查看数据库快照 (SQL Server)
@@ -40,16 +40,16 @@ ms.locfileid: "62871144"
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，然后展开该实例。  
   
-2.  展开 **“数据库”**。  
+2.  展开 **“数据库”** 。  
   
-3.  展开 **“数据库快照”**，然后选择要查看的快照。  
+3.  展开 **“数据库快照”** ，然后选择要查看的快照。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看数据库快照**  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  若要列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的数据库快照，对于非 NULL 值请查询 **sys.databases** 目录视图的 [source_database_id](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列。  
   

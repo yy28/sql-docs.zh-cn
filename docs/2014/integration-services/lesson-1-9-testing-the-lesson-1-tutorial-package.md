@@ -1,5 +1,5 @@
 ---
-title: 步骤 9:测试第 1 课教程包 |Microsoft Docs
+title: 步骤 9：测试第 1 课教程包 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767601"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>步骤 9:测试第 1 课教程包
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>步骤 9：测试第 1 课教程包
   在本课中，已经完成了下列任务：  
   
 -   创建了一个新的 [!INCLUDE[ssIS](../includes/ssis-md.md)] 项目。  
@@ -41,11 +41,11 @@ ms.locfileid: "62767601"
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>运行 Lesson 1 教程包  
   
-1.  在 **“调试”** 菜单中，单击 **“启动调试”**。  
+1.  在 **“调试”** 菜单中，单击 **“启动调试”** 。  
   
      包将开始运行，结果有 1097 个行被成功添加到 **AdventureWorksDW2012** 中的 **FactCurrency**事实数据表中。  
   
-2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”**。  
+2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”** 。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 2 课：添加循环](../integration-services/lesson-2-adding-looping-with-ssis.md)  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62870876"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>查看数据库快照的稀疏文件大小 (Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "62870876"
   
  若要查看磁盘上每个快照稀疏文件当前使用的字节数，请查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) 动态管理视图的 **size_on_disk_bytes** 列。  
   
- 若要查看稀疏文件占用的磁盘空间，在 Microsoft Windows 中右键单击文件，再单击“属性”，然后查看“占用空间”值。  
+ 若要查看稀疏文件占用的磁盘空间，在 Microsoft Windows 中右键单击文件，再单击“属性”  ，然后查看“占用空间”  值。  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>查看稀疏文件的最大大小  
  稀疏文件最大只能增长到创建快照时相应的源数据库文件的大小。 若要了解此大小，可以使用下列方法之一：  

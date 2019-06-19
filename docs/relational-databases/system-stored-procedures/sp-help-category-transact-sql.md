@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62797818"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -43,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @class = ] 'class'` 有关哪些请求信息的类。 *类*是**varchar(8)**，默认值为**作业**。 *类*可以是下列值之一。  
+`[ @class = ] 'class'` 有关哪些请求信息的类。 *类*是**varchar(8)** ，默认值为**作业**。 *类*可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERT**|提供有关警报类别的信息。|  
 |**运算符**|提供有关操作员类别的信息。|  
   
-`[ @type = ] 'type'` 为其请求信息的类别的类型。 *类型*是**varchar(12)**，默认值为 NULL，并且可以是下列值之一。  
+`[ @type = ] 'type'` 为其请求信息的类别的类型。 *类型*是**varchar(12)** ，默认值为 NULL，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -67,7 +67,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 当**@suffix**是**0**， **sp_help_category**返回以下结果集：  
+ 当 **@suffix** 是**0**， **sp_help_category**返回以下结果集：  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -75,7 +75,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|类别的类型：<br /><br /> **1** = 本地<br /><br /> **2** = 多服务器<br /><br /> **3** = 无|  
 |**名称**|**sysname**|类别名称|  
   
- 当**@suffix**是**1**， **sp_help_category**返回以下结果集：  
+ 当 **@suffix** 是**1**， **sp_help_category**返回以下结果集：  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

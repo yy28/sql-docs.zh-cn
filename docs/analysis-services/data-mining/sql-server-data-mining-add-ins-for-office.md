@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89986d3c8de4a1cbefbccf285a92a2dc19c6c7aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151412"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Office 数据挖掘外接程序
@@ -43,7 +43,7 @@ ms.locfileid: "63151412"
   
      如果您不熟悉数据挖掘，则可以使用 **“查询”** 向导帮助生成预测查询。  
   
-     高级用户可通过拖放“高级查询编辑器”生成自定义 DMX 查询，或使用 Excel VBA 自动进行预测。  
+     高级用户可通过拖放“高级查询编辑器”生成自定义 DMX 查询，或使用 Excel VBA 自动进行预测。   
   
 -   **记载和管理。** 创建数据集并生成了一些模型后，通过生成的数据和模型参数的统计摘要记录你的工作和你的见解。  
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63074053"
 ---
 # <a name="template-explorer"></a>Template Explorer
@@ -34,7 +34,7 @@ ms.locfileid: "63074053"
 ## <a name="benefits-of-templates"></a>模板的优点  
  模板适用于解决方案、项目和各种类型的代码编辑器。 模板可用于创建对象，如数据库、表、视图、索引、存储过程、触发器、统计信息和函数。 此外，通过创建用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的扩展属性、链接服务器、登录名、角色、用户和模板，有些模板还可以帮助您管理服务器。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供的模板脚本包含了可以帮助您自定义代码的参数。 打开模板后，使用“替换模板参数”对话框可以将值插入到脚本中。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供的模板脚本包含了可以帮助您自定义代码的参数。 打开模板后，使用“替换模板参数”  对话框可以将值插入到脚本中。  
   
  为频繁执行的任务创建自定义模板。 将自定义脚本组织到现有文件夹中，或创建一个新的文件夹结构。  
   

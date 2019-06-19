@@ -13,21 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079502"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 浏览器（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
-  可以使用多维数据集设计器中的“KPI”选项卡上的“KPI 浏览器”窗格查看和测试关键绩效指标 (KPI) 的结果。 在浏览之前，必须先将 KPI 部署到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
+  可以使用多维数据集设计器中的“KPI”  选项卡上的“KPI 浏览器”  窗格查看和测试关键绩效指标 (KPI) 的结果。 在浏览之前，必须先将 KPI 部署到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
   
 > [!NOTE]  
 >  此窗格仅显示在浏览器视图中。  
   
 ## <a name="options"></a>选项  
  **子多维数据集网格**  
- 用于定义子多维数据集和限制在“结果”窗格中显示的 KPI 结果。 该网格包含以下列：  
+ 用于定义子多维数据集和限制在“结果”  窗格中显示的 KPI 结果。 该网格包含以下列：  
   
  **Dimension**  
  选择应用此筛选器的维度。  
@@ -36,7 +36,7 @@ ms.locfileid: "66079502"
  选择应用此筛选器的层次结构。  
   
  **“运算符”**  
- 选择运算符，以定义“筛选表达式”中的表达式如何应用于所选层次结构。 下表对可用的运算符进行了说明：  
+ 选择运算符，以定义“筛选表达式”  中的表达式如何应用于所选层次结构。 下表对可用的运算符进行了说明：  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -48,19 +48,19 @@ ms.locfileid: "66079502"
 |**开始使用**|结果限制为成员名称以 **“筛选表达式”** 中的字符串开头的成员。|  
 |**范围 （包括）**|结果限制为在 **“筛选表达式”** 中选择的范围。|  
 |**范围 （不包括）**|结果限制为排除在 **“筛选表达式”** 中所选范围之外的成员。|  
-|**MDX**|结果限制为在“筛选表达式”中设置的多维表达式 (MDX) 表达式。|  
+|**MDX**|结果限制为在“筛选表达式”  中设置的多维表达式 (MDX) 表达式。|  
   
  **筛选表达式**  
- 键入通过“运算符”计算的表达式，该表达式可限制要浏览的 KPI 结果。  
+ 键入通过“运算符”  计算的表达式，该表达式可限制要浏览的 KPI 结果。  
   
 > [!NOTE]  
 >  此字段是动态数据输入元素，其外观将根据所选运算符的不同而相应改变，以反映该运算符所需的数据类型。  
   
  **结果网格**  
- 基于“筛选器网格”中定义的筛选器，显示 KPI 的计算结果值、目标、状态和走向。 该网格包含以下列：  
+ 基于“筛选器网格”  中定义的筛选器，显示 KPI 的计算结果值、目标、状态和走向。 该网格包含以下列：  
   
  **显示结构**  
- 显示多维数据集包含的 KPI，按照每个 KPI 的“显示文件夹”或“父 KPI”值分层组织。  
+ 显示多维数据集包含的 KPI，按照每个 KPI 的“显示文件夹”  或“父 KPI”  值分层组织。  
   
  **ReplTest1**  
  显示 KPI 的值。  

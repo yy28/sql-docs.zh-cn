@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10cfa4d5d9deeeeb6bc664fc6480e31bc5dc483e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894771"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>使用脚本任务扩展包
@@ -39,7 +39,7 @@ ms.locfileid: "62894771"
  下列主题提供有关脚本任务的详细信息。  
   
  [在脚本任务编辑器中配置脚本任务](configuring-the-script-task-in-the-script-task-editor.md)  
- 说明在“脚本任务编辑器”中配置的属性如何影响脚本任务中代码的功能和性能。  
+ 说明在“脚本任务编辑器”  中配置的属性如何影响脚本任务中代码的功能和性能。  
   
  [脚本任务的编码和调试](../../control-flow/script-task.md)  
  说明如何使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 开发包含在脚本任务中的脚本。  

@@ -15,23 +15,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055160"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>字词查找转换编辑器（“引用表”选项卡）
-  可以使用“字词查找转换编辑器”对话框的“引用表”选项卡指定到引用（查找）表的连接。  
+  可以使用“字词查找转换编辑器”  对话框的“引用表”  选项卡指定到引用（查找）表的连接。  
   
  若要了解有关字词查找转换的详细信息，请参阅 [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md)。  
   
 ## <a name="options"></a>选项  
  **“无缓存”**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”对话框创建新的连接。  
+ 通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
   
  **引用表的名称**  
  通过从该列表中选择项，可以从数据库中选择查找表或视图。 查找表或视图应包含具有现有字词列表的列，以便源列中的文本可以与这些字词进行比较。  

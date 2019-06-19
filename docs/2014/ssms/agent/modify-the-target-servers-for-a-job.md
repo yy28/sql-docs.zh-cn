@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a97fd3892e74b16c844867f88bc7d72fedc46d20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720380"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
@@ -55,11 +55,11 @@ ms.locfileid: "62720380"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，再展开“作业”，右键单击某个作业，然后单击“属性”。  
+2.  展开“SQL Server 代理”  ，再展开“作业”  ，右键单击某个作业，然后单击“属性”  。  
   
-3.  在“作业属性”对话框中，选择“目标”页，然后单击“目标为本地服务器”或“目标为多台服务器”。  
+3.  在“作业属性  ”对话框中，选择“目标”  页，然后单击“目标为本地服务器”  或“目标为多台服务器”  。  
   
-     如果选择 **“目标为多台服务器”**，请选中服务器名称左边的框将其指定为作业的目标服务器。 验证未选中不作为作业的目标服务器旁的复选框。  
+     如果选择 **“目标为多台服务器”** ，请选中服务器名称左边的框将其指定为作业的目标服务器。 验证未选中不作为作业的目标服务器旁的复选框。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62720380"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将“每周销售备份”多服务器作业分配给服务器 SEATTLE2。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将“每周销售备份”多服务器作业分配给服务器 SEATTLE2。  
   
 ```  
 USE msdb ;  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184307"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>创建外部联接 (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63184307"
   
 1.  自动或手动创建外部联接。 有关详细信息，请参阅[自动联接表 (Visual Database Tools)](join-tables-automatically-visual-database-tools.md) 或[手动联接表 (Visual Database Tools)](join-tables-manually-visual-database-tools.md)。  
   
-2.  在关系图窗格中，然后从选择联接线**查询设计器**菜单中，选择**中选择所有行\<tablename >**，选择其额外的包含的表的命令想要包括的行。  
+2.  在关系图窗格中，然后从选择联接线**查询设计器**菜单中，选择**中选择所有行\<tablename >** ，选择其额外的包含的表的命令想要包括的行。  
   
     -   选择第一个表可以创建左外部联接。  
   

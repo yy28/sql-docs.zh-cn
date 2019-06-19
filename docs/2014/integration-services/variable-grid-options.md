@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054679"
 ---
 # <a name="variable-grid-options"></a>变量网格选项
@@ -26,7 +26,7 @@ ms.locfileid: "66054679"
   
 ## <a name="options-for-filter"></a>筛选器选项  
  **显示系统变量**  
- 选择此项可在“变量”窗口中列出系统变量。 系统变量是预定义的。 您无法添加或删除系统变量。 可以修改 **“RaiseChangedEvent”** 属性设置。  
+ 选择此项可在“变量”  窗口中列出系统变量。 系统变量是预定义的。 您无法添加或删除系统变量。 可以修改 **“RaiseChangedEvent”** 属性设置。  
   
  此列表使用颜色进行标记。 系统变量呈灰色，而用户定义变量则呈黑色。  
   

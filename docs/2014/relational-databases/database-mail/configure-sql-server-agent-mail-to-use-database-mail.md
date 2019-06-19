@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872258"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>配置 SQL Server 代理邮件以使用数据库邮件
@@ -55,13 +55,13 @@ ms.locfileid: "62872258"
   
 -   在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
--   右键单击“SQL Server 代理”，然后单击“属性”。  
+-   右键单击“SQL Server 代理”  ，然后单击“属性”  。  
   
--   单击 **“警报系统”**。  
+-   单击 **“警报系统”** 。  
   
--   选择 **“启用邮件配置文件”**。  
+-   选择 **“启用邮件配置文件”** 。  
   
--   在 **“邮件系统”** 列表中，选择 **“数据库邮件”**。  
+-   在 **“邮件系统”** 列表中，选择 **“数据库邮件”** 。  
   
 -   在 **“邮件配置文件列表”** 中，为数据库邮件选择一个邮件配置文件。  
   

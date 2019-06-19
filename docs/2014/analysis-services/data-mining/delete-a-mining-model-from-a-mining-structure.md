@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d4e32a40946eb9e513ad22cd837773187843151
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084774"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>从挖掘结构中删除挖掘模型
@@ -29,19 +29,19 @@ ms.locfileid: "66084774"
   
 1.  在 **中，选择** “挖掘模型” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡。  
   
-2.  右键单击要删除的模型，然后选择“删除”。  
+2.  右键单击要删除的模型，然后选择“删除”  。  
   
      将打开 **“删除对象”** 对话框。  
   
-3.  单击“确定” 。  
+3.  单击“确定”  。  
   
 ### <a name="delete-a-mining-model-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 删除挖掘模型  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
   
-2.  展开 **“挖掘结构”**，然后展开 **“挖掘模型”**。  
+2.  展开 **“挖掘结构”** ，然后展开 **“挖掘模型”** 。  
   
-3.  右键单击要删除的模型，然后选择“删除”。  
+3.  右键单击要删除的模型，然后选择“删除”  。  
   
      删除模型并不删除定型数据，只删除定型时创建的元数据和所有模式。  
   

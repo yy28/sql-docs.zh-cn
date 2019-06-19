@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072691"
 ---
 # <a name="use-a-template-to-create-an-action"></a>使用模板创建操作
@@ -27,7 +27,7 @@ ms.locfileid: "66072691"
   
 -   打开要为其创建操作的多维数据集，然后在 **“设计”** 下单击 **“操作”** 选项卡。  
   
--   在“计算工具”下，单击“模板”选项卡，展开包含要创建的操作类型的节点，然后双击要使用的模板。  
+-   在“计算工具”下，单击“模板”选项卡，展开包含要创建的操作类型的节点，然后双击要使用的模板   。  
   
 -   填写基于模板完成生成操作所需的信息。  
   

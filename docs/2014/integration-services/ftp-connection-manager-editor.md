@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058491"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 连接管理器编辑器
@@ -55,7 +55,7 @@ ms.locfileid: "66058491"
  提供传输数据的块区大小 (KB)。  
   
  **测试连接**  
- 在配置 FTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。  
+ 在配置 FTP 连接管理器后，请通过单击“测试连接”  确认该连接是否正常。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)  

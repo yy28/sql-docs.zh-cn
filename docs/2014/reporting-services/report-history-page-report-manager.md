@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104483"
 ---
 # <a name="report-history-page-report-manager"></a>“报表历史记录”页（报表管理器）
@@ -39,7 +39,7 @@ ms.locfileid: "66104483"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“查看报表历史记录”**。  
+3.  在下拉菜单中，单击 **“查看报表历史记录”** 。  
   
 ## <a name="options"></a>选项  
  **删除**  

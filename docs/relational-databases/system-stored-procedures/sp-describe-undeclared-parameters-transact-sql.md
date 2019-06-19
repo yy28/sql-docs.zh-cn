@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088508"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -43,9 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ \@tsql = ] 'Transact-SQL\_batch'` 一个或多个[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 *Transact SQL_batch*可能**nvarchar (**_n_**)** 或**nvarchar （max)**。  
+`[ \@tsql = ] 'Transact-SQL\_batch'` 一个或多个[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 *Transact SQL_batch*可能**nvarchar (** _n_ **)** 或**nvarchar （max)** 。  
   
-`[ \@params = ] N'parameters'` \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于方式 sp_executesql 工作原理。 *参数*可能**nvarchar (**_n_**)** 或**nvarchar （max)**。  
+`[ \@params = ] N'parameters'` \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于方式 sp_executesql 工作原理。 *参数*可能**nvarchar (** _n_ **)** 或**nvarchar （max)** 。  
   
  是一个字符串，它包含的定义中嵌入的所有参数*Transact SQL_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 n 是表示附加参数定义的占位符。 如果 TRANSACT-SQL 语句中的批处理不包含参数，\@参数不是必需的。 该参数的默认值为 NULL。  
   
@@ -196,11 +196,11 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **数值 （38，19）** -不考虑其他 numeric 或 decimal 数据类型。  
   
-    -   **varchar(8000)**， **varchar （max)**， **nvarchar(4000)**，并且**nvarchar （max)** -其他字符串数据类型 (如**文本**， **char （8000)**， **nvarchar(30)** 等) 不被视为。  
+    -   **varchar(8000)** ， **varchar （max)** ， **nvarchar(4000)** ，并且**nvarchar （max)** -其他字符串数据类型 (如**文本**， **char （8000)** ， **nvarchar(30)** 等) 不被视为。  
   
-    -   **varbinary(8000)** 并**varbinary （max)** -不考虑其他二进制数据类型 (如**图像**， **binary(8000)**， **varbinary(30)**，等等。)。  
+    -   **varbinary(8000)** 并**varbinary （max)** -不考虑其他二进制数据类型 (如**图像**， **binary(8000)** ， **varbinary(30)** ，等等。)。  
   
-    -   **日期**， **time(7)**， **smalldatetime**， **datetime**， **datetime2(7)**， **datetimeoffset(7)** -其他日期和时间类型，如**time(4)**，不考虑。  
+    -   **日期**， **time(7)** ， **smalldatetime**， **datetime**， **datetime2(7)** ， **datetimeoffset(7)** -其他日期和时间类型，如**time(4)** ，不考虑。  
   
     -   **sql_variant**  
   
@@ -233,7 +233,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      只有在每种数据类型之间的隐式转换次数相同（按照规则 1）并且某种数据类型具有最高优先级时，此规则才适用。 如果没有隐式转换，数据类型推断将失败并发生错误。 例如在查询`SELECT @p FROM t`，数据类型推断失败，因为任何数据类型为\@p 是很好。 例如，没有从隐式转换**int**到**xml**。  
   
-3.  如果两个类似的数据类型按照规则 1，例如**varchar(8000)** 并**varchar （max)** 较小数据类型 (**varchar(8000)**) 选择。 相同原则也适用于**nvarchar**并**varbinary**数据类型。  
+3.  如果两个类似的数据类型按照规则 1，例如**varchar(8000)** 并**varchar （max)** 较小数据类型 (**varchar(8000)** ) 选择。 相同原则也适用于**nvarchar**并**varbinary**数据类型。  
   
 4.  就规则 1 而言，类型推断算法倾向于将某些转换视为比其他转换好。 转换从最好到最坏依次为：  
   
@@ -245,7 +245,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  任何其他转换。  
   
- 例如，对于查询`SELECT * FROM t WHERE [Col_varchar(30)] > @p`， **varchar(8000)** 因为转换 (a) 是最佳选择。 查询`SELECT * FROM t WHERE [Col_char(30)] > @p`， **varchar(8000)** 仍选择，因为它会导致类型 (b) 转换，因为另一个选项 (如**varchar(4000)**) 会导致类型 (d) 转换。  
+ 例如，对于查询`SELECT * FROM t WHERE [Col_varchar(30)] > @p`， **varchar(8000)** 因为转换 (a) 是最佳选择。 查询`SELECT * FROM t WHERE [Col_char(30)] > @p`， **varchar(8000)** 仍选择，因为它会导致类型 (b) 转换，因为另一个选项 (如**varchar(4000)** ) 会导致类型 (d) 转换。  
   
  作为最后一个示例中，给定一个查询`SELECT NULL + @p`， **int**为选择\@p 因为它产生类型 (c) 转换。  
   

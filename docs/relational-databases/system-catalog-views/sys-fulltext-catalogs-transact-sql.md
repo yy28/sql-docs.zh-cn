@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 ms.openlocfilehash: 0183694382851f023c9f6863848a3e525cc0b7aa
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945621"
 ---
 # <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "64945621"
 |-----------------|---------------|-----------------|  
 |fulltext_catalog_id|**int**|全文目录的 ID。 该 ID 在数据库中的所有全文目录中是唯一的。|  
 |name|**sysname**|目录的名称。 在该数据库中是唯一的。|  
-|path|nvarchar(260)|目录所在的文件系统中的目录的名称。|  
+|path|nvarchar(260) |目录所在的文件系统中的目录的名称。|  
 |is_default|**bit**|默认的全文目录。<br /><br /> True = 默认。<br /><br /> False = 非默认。|  
 |is_accent_sensitivity_on|**bit**|目录的区分重音设置。<br /><br /> True = 区分重音。<br /><br /> True = 不区分重音。|  
 |data_space_id|**int**|创建此目录时所在的文件组。|  

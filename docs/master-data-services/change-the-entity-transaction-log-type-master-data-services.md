@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 994ead2df766436dfd6c28912faf6905ffac359c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485313"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>更改实体事务日志类型 (Master Data Services)
@@ -41,14 +41,14 @@ ms.locfileid: "65485313"
   
  **更改事务日志类型**  
   
-1.  在主数据管理器中，单击“系统管理” 。  
+1.  在主数据管理器中，单击“系统管理”  。  
   
-2.  在“管理模型”  页上，选择要编辑的实体模型行，然后单击“实体” 。  
+2.  在“管理模型”  页上，选择要编辑的实体模型行，然后单击“实体”  。  
   
-3.  在“管理实体”  页上，选择要更新的实体行，然后单击“编辑” 。  
+3.  在“管理实体”  页上，选择要更新的实体行，然后单击“编辑”  。  
   
 4.  在下拉列表中选择事务日志类型。  
   
-5.  单击“保存” 。  
+5.  单击“保存”  。  
   
   

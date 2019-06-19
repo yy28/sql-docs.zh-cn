@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076242"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>创建 Analysis Services 项目 (SSDT)
@@ -48,21 +48,21 @@ ms.locfileid: "66076242"
 ##  <a name="bkmk_NewUsingTemplate"></a> 使用 Analysis Services 项目模板创建新项目  
  使用这些说明可以创建一个空的项目，您可在其中定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，然后将它们作为新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库部署。  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“文件”**，指向 **“新建”**，然后单击 **“项目”**。 在 **“新建项目”** 对话框的 **“项目类型”** 窗格中，选择 **“商业智能项目”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“文件”** ，指向 **“新建”** ，然后单击 **“项目”** 。 在 **“新建项目”** 对话框的 **“项目类型”** 窗格中，选择 **“商业智能项目”** 。  
   
-2.  在 **“新建项目”** 对话框的 **“Visual Studio 已安装的模板”** 类别中，选择 **“Analysis Services 项目”**。  
+2.  在 **“新建项目”** 对话框的 **“Visual Studio 已安装的模板”** 类别中，选择 **“Analysis Services 项目”** 。  
   
 3.  在 **“名称”** 文本框中，键入项目的名称。 您输入的名称将用作默认数据库名称。  
   
-4.  在“位置”下拉列表中，键入或选择用于存储项目文件的文件夹，或单击“浏览”选择一个文件夹。  
+4.  在“位置”  下拉列表中，键入或选择用于存储项目文件的文件夹，或单击“浏览”  选择一个文件夹。  
   
-5.  若要将新项目添加到现有解决方案，请在“解决方案”下拉列表中选择“添加到解决方案”。  
+5.  若要将新项目添加到现有解决方案，请在“解决方案”  下拉列表中选择“添加到解决方案”  。  
   
      -或-  
   
-     若要创建新的解决方案，请在“解决方案”下拉列表中选择“创建新解决方案”。 若要为新解决方案创建新的文件夹，请选择 **“创建解决方案的目录”**。 在 **“解决方案名称”** 中，键入新解决方案的名称。  
+     若要创建新的解决方案，请在“解决方案”  下拉列表中选择“创建新解决方案”  。 若要为新解决方案创建新的文件夹，请选择 **“创建解决方案的目录”** 。 在 **“解决方案名称”** 中，键入新解决方案的名称。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 ##  <a name="bkmk_NewUsingWizard"></a> 使用现有的 Analysis Services 数据库创建新项目  
  使用导入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库向导可以基于现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的对象创建项目。 在基于现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时，此数据库的元数据将在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目中打开。 可以在项目中修改这些对象，而不会影响原始对象，然后可以将这些对象部署到相同的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库（如果部署属性指定该数据库）或部署到新创建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以进行比较测试。 直到部署更改之后，所做的更改才会影响现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
@@ -71,15 +71,15 @@ ms.locfileid: "66076242"
   
  在您处理或部署项目之前，可能需要更改在数据源中指定的数据访问接口。 如果您所使用的 SQL Server 软件比用于创建数据库的软件更新，则在您的项目中指定的数据访问接口可能未安装在您的计算机上。 在处理过程中，将使用服务帐户检索您的 Analysis Services 数据库中的数据。 如果该数据库位于远程服务器上，则检查本地服务是否对该服务器具有处理和读取权限。  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“文件”**，指向 **“新建”**，然后单击 **“项目”**。 在 **“新建项目”** 对话框的 **“项目类型”** 窗格中，选择 **“商业智能项目”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“文件”** ，指向 **“新建”** ，然后单击 **“项目”** 。 在 **“新建项目”** 对话框的 **“项目类型”** 窗格中，选择 **“商业智能项目”** 。  
   
-2.  在 **“新建项目”** 对话框的 **“Visual Studio 已安装的模板”** 类别中，选择 **“导入 Analysis Services 数据库”**。  
+2.  在 **“新建项目”** 对话框的 **“Visual Studio 已安装的模板”** 类别中，选择 **“导入 Analysis Services 数据库”** 。  
   
-3.  为项目和解决方案输入属性信息，包括文件的名称和位置。 单击“确定” 。  
+3.  为项目和解决方案输入属性信息，包括文件的名称和位置。 单击“确定”  。  
   
-4.  在 **“欢迎使用导入 Analysis Services 数据库向导”** 页上，单击 **“下一步”**。  
+4.  在 **“欢迎使用导入 Analysis Services 数据库向导”** 页上，单击 **“下一步”** 。  
   
-5.  在 **“源数据库”** 页上，指定向导将从中提取内容并创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的服务器和数据库，再单击 **“下一步”**。  
+5.  在 **“源数据库”** 页上，指定向导将从中提取内容并创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的服务器和数据库，再单击 **“下一步”** 。  
   
      支持的数据库包括在以下版本的 Analysis Services 中创建的那些数据库： [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66076242"
   
  将现有项目添加到某一解决方案会将该项目与该解决方案相关联，但不是复制。 如果该 Analysis Services 项目已在其他解决方案中创建，则项目文件将与用于创建它的原始解决方案一起保留。 这意味着，您通过任何一个解决方案对项目进行的任何更改都将作用于同一组源文件。 如果此行为并非您的预期行为，则应该首先将项目文件复制或移动到新的解决方案文件夹，然后将项目添加到该解决方案。  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开该解决方案。 在解决方案资源管理器中，右键单击该解决方案，指向“添加”，然后单击“现有项目”以选择要添加的项目。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开该解决方案。 在解决方案资源管理器中，右键单击该解决方案，指向“添加”  ，然后单击“现有项目”以选择要添加的项目  。  
   
 2.  选择要添加到解决方案的 .dwproj 文件。  
   

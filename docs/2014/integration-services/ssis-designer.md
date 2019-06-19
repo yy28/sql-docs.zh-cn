@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea0776247555b9a5b63e2bbaa9ae9243abf6863c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62766422"
 ---
 # <a name="ssis-designer"></a>SSIS 设计器
@@ -48,13 +48,13 @@ ms.locfileid: "62766422"
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器不依赖于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务（即管理和监视包的服务），而且在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中创建或修改包也不需要该服务处于运行状态。 但是，如果在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器打开的情况下停止该服务，则您无法再打开 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器提供的对话框，并且可能收到“RPC 服务器不可用”的错误消息。 若要重置 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器并继续对包进行操作，就必须关闭设计器，退出 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然后重新打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目和包。  
   
 ## <a name="undo-and-redo"></a>撤消和重做  
- 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中撤消或重做最多 20 个操作。 对于包，可以在“控制流”、“数据流”、“事件处理程序”和“参数”选项卡以及“变量”窗口中进行撤消/重做。 对于项目，可以在“项目参数”窗口中进行撤消/重做。  
+ 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中撤消或重做最多 20 个操作。 对于包，可以在“控制流”  、“数据流”  、“事件处理程序”  和“参数”  选项卡以及“变量”  窗口中进行撤消/重做。 对于项目，可以在“项目参数”  窗口中进行撤消/重做。  
   
- 不能撤消/重做对新的“SSIS 工具箱”所做的更改。  
+ 不能撤消/重做对新的“SSIS 工具箱”所做的更改  。  
   
  使用组件编辑器更改组件时，可以将更改作为一个组来撤消和重做，而不是撤消和重做单个更改。 更改组在撤消和重做下拉列表中显示为单个操作。  
   
- 若要撤消操作，请单击撤消工具栏按钮、“编辑/撤消”菜单项，或按 Ctrl+Z。 若要恢复操作，请单击恢复工具栏按钮、“编辑/恢复”菜单项或按 CTRL + Y。若要撤消和恢复多项操作，可以单击相应工具栏按钮旁边的箭头，在下拉列表中选中多项操作，然后在该列表中单击。  
+ 若要撤消操作，请单击撤消工具栏按钮、“编辑/撤消”  菜单项，或按 Ctrl+Z。 若要恢复操作，请单击恢复工具栏按钮、“编辑/恢复”  菜单项或按 CTRL + Y。若要撤消和恢复多项操作，可以单击相应工具栏按钮旁边的箭头，在下拉列表中选中多项操作，然后在该列表中单击。  
   
 ## <a name="parts-of-the-ssis-designer"></a>SSIS 设计器的部件  
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器有五个永久选项卡：其中四个选项卡分别用于生成包控制流、数据流、参数和事件处理程序，另外一个选项卡用于查看包的内容。 运行时将出现第六个选项卡，显示包在运行时的执行进度以及完成后的执行结果。  

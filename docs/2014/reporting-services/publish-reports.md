@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108031"
 ---
 # <a name="publish-reports"></a>发布报表
@@ -27,14 +27,14 @@ ms.locfileid: "66108031"
   
 ### <a name="to-publish-all-reports-in-a-project"></a>发布项目中的所有报表  
   
--   在“生成”菜单中，单击“部署 \<报表项目名称>”。 或者，在解决方案资源管理器中，右键单击报表项目，然后单击“部署”。 可以在“输出”窗口中查看发布过程的状态。  
+-   在“生成”菜单中，单击“部署 \<报表项目名称>”   。 或者，在解决方案资源管理器中，右键单击报表项目，然后单击“部署”  。 可以在“输出”窗口中查看发布过程的状态。  
   
     > [!NOTE]  
     >  当您部署报表服务器项目时，也会部署报表服务器中的共享数据源。  
   
 ### <a name="to-publish-a-single-report"></a>发布单个报表  
   
--   在解决方案资源管理器中，右键单击报表，然后单击 **“部署”**。 可以在“输出”窗口中查看发布过程的状态。  
+-   在解决方案资源管理器中，右键单击报表，然后单击 **“部署”** 。 可以在“输出”窗口中查看发布过程的状态。  
   
     > [!NOTE]  
     >  当您发布报表时，还必须部署报表使用的共享数据源。  

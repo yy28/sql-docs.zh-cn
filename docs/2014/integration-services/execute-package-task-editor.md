@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059059"
 ---
 # <a name="execute-package-task-editor"></a>执行包任务编辑器
@@ -38,7 +38,7 @@ ms.locfileid: "66059059"
   
 1.  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，打开包含执行包任务的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目。  
   
-2.  在 SSIS 设计器中右键单击该任务，然后单击“编辑”。  
+2.  在 SSIS 设计器中右键单击该任务，然后单击“编辑”  。  
   
 ##  <a name="general"></a> 设置“常规”页上的选项  
  **名称**  
@@ -52,21 +52,21 @@ ms.locfileid: "66059059"
   
 ##  <a name="package"></a> 设置“包”页上的选项  
  **ReferenceType**  
- 为项目中的子包选择“项目引用”。 为位于包外部的子包选择 **“外部引用”** 。  
+ 为项目中的子包选择“项目引用”  。 为位于包外部的子包选择 **“外部引用”** 。  
   
 > [!NOTE]  
->  “ReferenceType”选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”。 有关转换的详细信息，请参阅 [将项目部署到 Integration Services 服务器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
+>  “ReferenceType”  选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”  。 有关转换的详细信息，请参阅 [将项目部署到 Integration Services 服务器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
   
  **密码**  
  如果子包受密码保护，请提供子包的密码，或单击省略号按钮 (…)，为子包创建新的密码。  
   
  `ExecuteOutOfProcess`  
- 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，执行包任务的 ExecuteOutOfProcess 属性设置为`False`，并在与父包相同的进程中运行子包。 如果将此属性设置为 `true`，则在单独的进程中运行子包。  这可能减慢子包的启动。 此外，如果将该属性设置为 `true`，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](install-windows/install-integration-services.md)。  
+ 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，执行包任务的 ExecuteOutOfProcess 属性设置为`False`，并在与父包相同的进程中运行子包。 如果将此属性设置为 `true`，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将该属性设置为 `true`，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](install-windows/install-integration-services.md)。  
   
 ### <a name="referencetype-dynamic-options"></a>ReferenceType 动态选项  
   
 #### <a name="referencetype--external-reference"></a>ReferenceType = 外部引用  
- **位置**  
+ **Location**  
  选择子包的位置。 此属性具有下表所列的选项。  
   
 |ReplTest1|Description|  
@@ -88,18 +88,18 @@ ms.locfileid: "66059059"
   
 #### <a name="location--sql-server"></a>位置 = SQL Server  
  **“连接”**  
- 在列表中选择 OLE DB 连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
+ 在列表中选择 OLE DB 连接管理器，或单击“\<新建连接...>”  以创建新的连接管理器。  
   
- **相关主题：**[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)，[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **相关主题：** [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)，[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  键入子包的名称，或单击省略号 (…) 再定位到包。  
   
 #### <a name="location--file-system"></a>位置 = 文件系统  
  **“连接”**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器  。  
   
- **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  显示包的名称。  

@@ -10,12 +10,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 83ead8522e506fcf4ab81d2e904c354424cdb6fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 9b6516c427f15c960c6bfb459c4fc375e798b798
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66080157"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046670"
 ---
 # <a name="connection-string-properties-analysis-services"></a>连接字符串属性 (Analysis Services)
   本主题介绍的是连接字符串属性，您可能需要在某个设计器或管理工具中设置这些属性，也可能在连接到并查询 Analysis Services 数据的客户端应用程序所生成的连接字符串中看到这些属性。 因此，它仅涉及可用属性的一部分。 完整列表包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库在服务器上是如何配置的。  
@@ -52,7 +52,7 @@ ms.locfileid: "66080157"
 |--------------|-----------------|-------------|  
 |`Data Source` 或 `DataSource`|指定服务器实例。 此属性对于所有连接都是必需的。 有效值包括服务器的网络名称或 IP 地址、local 或 localhost（对本地连接）、URL（如果针对 HTTP 或 HTTPS 访问配置了服务器）或本地多维数据集 (.cub) 文件的名称。|对于默认实例和端口 (TCP 2383) 为`Data source=AW-SRV01` 。<br /><br /> 对于命名实例 ($Finance) 和固定端口为`Data source=AW-SRV01$Finance:8081` 。<br /><br /> 对于采用默认实例和端口的完全限定的域名为`Data source=AW-SRV01.corp.Adventure-Works.com` 。<br /><br /> 对于服务器的 IP 地址为`Data source=172.16.254.1` ，它绕过 DNS 服务器查找，对于解决连接问题很有用。|  
 |`Initial Catalog` 或 `Catalog`|指定要连接到的 Analysis Services 数据库的名称。 该数据库必须部署在 Analysis Services 上，并且您必须有权连接到它。 此属性对于 AMO 连接是可选的，但是对于 ADOMD.NET 是必需的。|`Initial catalog=AdventureWorks2012`|  
-|`Provider`|有效值包括 MSOLAP 或 MSOLAP。\<版本 >，其中\<版本 > 为 3、 4 或 5。 在文件系统上，数据访问接口名称对于 SQL Server 2012 版本为 msolap110.dll，对于 SQL Server 2008 和 2008 R2 为 msolap100.dll，对于 SQL Server 2005 为 msolap90.dll。<br /><br /> 当前版本为 MSOLAP.5。 此属性是可选的。 默认情况下，客户端库从注册表读取 OLE DB 访问接口的当前版本。 仅在需要特定版本的数据访问接口时才需要设置此属性，例如要连接到 SQL Server 2008 实例。<br /><br /> 数据访问接口对应于 SQL Server 的版本。 如果您的组织使用当前和以前版本的 Analysis Services，很可能需要指定在手动创建的连接字符串上使用哪个访问接口。 您可能还需要在缺少所需版本的计算机上下载并安装特定版本的数据访问接口。 可以从下载中心的“SQL Server 功能包”页上下载 OLE DB 访问接口。 转到 [Microsoft SQL Server 2012 功能包](https://go.microsoft.com/fwlink/?LinkId=296473) 以下载用于 SQL Server 2012 的 Analysis Services OLE DB 访问接口。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 中发布。 2008 R2 版本支持 PowerPivot 工作簿，有时需要在 SharePoint 服务器上手动安装。 若要区分这些版本，必须检查提供程序的文件属性中的内部版本号：转到 Program files\Microsoft Analysis Services\AS OLEDB\10。 右键单击 msolap110.dll，然后选择“ **属性**”。 单击 **“详细信息”**。 查看文件版本信息。 版本应包括。\<内部版本号 > 适用于 SQL Server 2008 R2。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 和 [用于 Analysis Services 连接的数据提供程序](data-providers-used-for-analysis-services-connections.md)。<br /><br /> MSOLAP.3 已在 SQL Server 2005 中发布。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 再次发布<br /><br /> MSOLAP.5 已在 SQL Server 2012 中发布|`Provider=MSOLAP.3` 用于需要 SQL Server 2005 版本的 Analysis Services OLE DB 访问接口的连接。|  
+|`Provider`|有效值包括 MSOLAP 或 MSOLAP。\<版本 >，其中\<版本 > 为 3、 4 或 5。 在文件系统上，数据访问接口名称对于 SQL Server 2012 版本为 msolap110.dll，对于 SQL Server 2008 和 2008 R2 为 msolap100.dll，对于 SQL Server 2005 为 msolap90.dll。<br /><br /> 当前版本为 MSOLAP.5。 此属性是可选的。 默认情况下，客户端库从注册表读取 OLE DB 访问接口的当前版本。 仅在需要特定版本的数据访问接口时才需要设置此属性，例如要连接到 SQL Server 2008 实例。<br /><br /> 数据访问接口对应于 SQL Server 的版本。 如果您的组织使用当前和以前版本的 Analysis Services，很可能需要指定在手动创建的连接字符串上使用哪个访问接口。 您可能还需要在缺少所需版本的计算机上下载并安装特定版本的数据访问接口。 可以从下载中心的“SQL Server 功能包”页上下载 OLE DB 访问接口。 转到 [Microsoft SQL Server 2012 功能包](https://go.microsoft.com/fwlink/?LinkId=296473) 以下载用于 SQL Server 2012 的 Analysis Services OLE DB 访问接口。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 中发布。 2008 R2 版本支持 PowerPivot 工作簿，有时需要在 SharePoint 服务器上手动安装。 若要区分这些版本，必须检查提供程序的文件属性中的内部版本号：转到 Program files\Microsoft Analysis Services\AS OLEDB\10。 右键单击 msolap110.dll，然后选择“ **属性**”。 单击 **“详细信息”** 。 查看文件版本信息。 版本应包括。\<内部版本号 > 适用于 SQL Server 2008 R2。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 和 [用于 Analysis Services 连接的数据提供程序](data-providers-used-for-analysis-services-connections.md)。<br /><br /> MSOLAP.3 已在 SQL Server 2005 中发布。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 再次发布<br /><br /> MSOLAP.5 已在 SQL Server 2012 中发布|`Provider=MSOLAP.3` 用于需要 SQL Server 2005 版本的 Analysis Services OLE DB 访问接口的连接。|  
 |`Cube`|多维数据集名称或透视名称。 一个数据库可以包含多个多维数据集和透视。 可以使用多个目标时，在连接字符串上包括多维数据集或透视名称。|`Cube=SalesPerspective` 显示你可以使用 Cube 连接字符串属性指定多维数据集名称或透视名称。|  
   
 ##  <a name="bkmk_auth"></a> 身份验证和安全  
@@ -82,7 +82,7 @@ ms.locfileid: "66080157"
   
 |属性|Description|  
 |--------------|-----------------|  
-|`Application Name`|设置与连接关联的应用程序的名称。 当监视跟踪事件，特别是您具有访问同一数据库的几个应用程序时，此值很有用。 例如，添加应用程序名称 = 'test' 在 SQL Server Profiler 跟踪中，显示连接字符串会导致 'test' 到如以下屏幕截图中所示：<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 此属性的别名包括 `sspropinitAppName`、`AppName`。 有关详细信息，请参阅 [连接到 SQL Server 时使用 Application Name 参数](https://go.microsoft.com/fwlink/?LinkId=301699)。|  
+|`Application Name`|设置与连接关联的应用程序的名称。 当监视跟踪事件，特别是您具有访问同一数据库的几个应用程序时，此值很有用。 例如，添加应用程序名称 = 'test' 在 SQL Server Profiler 跟踪中，显示连接字符串会导致 'test' 到如以下屏幕截图中所示：<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 此属性的别名包括 `sspropinitAppName`、`AppName`。 有关详细信息，请参阅 [连接到 SQL Server 时使用 Application Name 参数](https://www.connectionstrings.com/use-application-name-sql-server/)。|  
 |`AutoSyncPeriod`|设置客户端和服务器缓存同步的频率（毫秒）。 ADOMD.NET 为具有最小内存开销的常用对象提供客户端缓存。 这有助于减少到服务器的往返次数。 默认值为 10000 毫秒（或 10 秒钟）。 设置为 null 或 0 时，关闭自动同步功能。|  
 |`Character Encoding`|定义如何在请求中对字符编码。 有效值为 Default 或 UTF-8（它们是等效的）和 UTF-16。|  
 |`CompareCaseSensitiveStringFlags`|为指定的区域设置调整区分大小写的字符串比较。 有关如何设置此属性的详细信息，请参阅 [CompareCaseSensitiveStringFlags 属性](https://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx)。|  
