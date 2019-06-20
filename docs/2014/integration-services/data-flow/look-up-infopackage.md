@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27063b71c307d1114f74977b81eac19130e70708
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901771"
 ---
 # <a name="look-up-infopackage"></a>查找 InfoPackage
@@ -29,11 +29,11 @@ ms.locfileid: "62901771"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 SAP BW 目标。  
+2.  在“数据流”  选项卡上，双击 SAP BW 目标。  
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
-4.  在“连接管理器”页面上的“InfoPackage/InfoSource”组框中，单击“查找”显示“查找 InfoPackage”对话框。  
+4.  在“连接管理器”页面上的“InfoPackage/InfoSource”组框中，单击“查找”显示“查找 InfoPackage”对话框     。  
   
 ## <a name="lookup-options"></a>查找选项  
  在查找字段中，您可以使用星号通配符 (*) 或使用部分字符串结合星号通配符来筛选结果。 但是，如果您将查找字段保留为空，则查找操作仅与该字段中的空字符串匹配。  

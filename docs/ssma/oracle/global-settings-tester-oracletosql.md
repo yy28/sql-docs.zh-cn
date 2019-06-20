@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62864898"
 ---
 # <a name="global-settings-tester-oracletosql"></a>全局设置（测试程序）(OracleToSQL)

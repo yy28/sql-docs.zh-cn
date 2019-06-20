@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481317"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>任务 1：定义匹配策略
-  在本任务中，您将创建含有一个规则的匹配策略。 该规则具有一个先决条件：**供应商 ID**，这意味着在使用在规则中的其他域之前 Supplier Id 必须匹配。 该规则使用其他两个域：**供应商名称**与**相似性**值设置为**70%** 并**联系人电子邮件**与**相似性**值设置为**30%**。  
+  在本任务中，您将创建含有一个规则的匹配策略。 该规则具有一个先决条件：**供应商 ID**，这意味着在使用在规则中的其他域之前 Supplier Id 必须匹配。 该规则使用其他两个域：**供应商名称**与**相似性**值设置为**70%** 并**联系人电子邮件**与**相似性**值设置为**30%** 。  
   
 1.  在主页面中的**DQS 客户端**，单击**右箭头**旁边**供应商**知识，然后选择**匹配策略**。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65481317"
   
 12. 重复前两个步骤以添加**联系人电子邮件**具有域**30**有关**权重**。  
   
-13. 请注意，**最小匹配分数**设置为**80%**，这是您在中看到的值**常规**选项卡**配置**页**DQS 管理**。 您只能将此分数增加为高于此处的这个阈值。  
+13. 请注意，**最小匹配分数**设置为**80%** ，这是您在中看到的值**常规**选项卡**配置**页**DQS 管理**。 您只能将此分数增加为高于此处的这个阈值。  
   
 14. 请注意，**重叠的群集**选择选项。 通过此选项，一条记录可以显示在多个群集中。 如果您将该设置为更改为“不重叠的群集”，则具有公共记录的多个群集将合并成单个群集。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "65481317"
 16. 单击**下一步**若要切换到**匹配结果**页。  
   
 ## <a name="next-step"></a>下一步  
- [任务 2:测试和发布匹配策略](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [任务 2：测试和发布匹配策略](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

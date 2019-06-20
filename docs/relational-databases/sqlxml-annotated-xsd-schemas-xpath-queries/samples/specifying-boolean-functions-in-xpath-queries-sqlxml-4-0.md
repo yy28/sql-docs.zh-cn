@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 414a391591577d554d88b6b5b5aac901834e8509
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737406"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔函数 (SQLXML 4.0)
@@ -32,7 +32,7 @@ ms.locfileid: "62737406"
 ## <a name="examples"></a>示例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布尔函数  
- 此查询返回所有**\<客户 >** 的上下文节点的子元素不具有**\<顺序 >** 子元素：  
+ 此查询返回所有 **\<客户 >** 的上下文节点的子元素不具有 **\<顺序 >** 子元素：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -80,7 +80,7 @@ ms.locfileid: "62737406"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布尔函数  
- 此查询返回所有**\<客户 >** 上下文节点不具有元素子级**\<顺序 >** 子元素。 就关系而言，此查询返回未下订单的所有客户。  
+ 此查询返回所有 **\<客户 >** 上下文节点不具有元素子级 **\<顺序 >** 子元素。 就关系而言，此查询返回未下订单的所有客户。  
   
 ```  
 /child::Customer[child::Order=false()]  

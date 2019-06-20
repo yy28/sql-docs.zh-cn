@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013660"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 指定递归关系中的深度
@@ -59,7 +59,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  在该片段中，雇员 5 向雇员 4 报告，雇员 4 向雇员 3 报告，雇员 3 和 2 向雇员 1 报告。  
   
- 若要产生该结果，可以使用以下 XSD 架构，并指定针对它的 XPath 查询。 此架构描述 **\<Emp >** 元素的类型为 EmployeeType 组成 **\<Emp >** 相同类型，为 EmployeeType 的子元素。 此即属于递归关系（元素和其祖先属于相同类型）。 此外，架构使用 **\<sql: relationship >** 来描述监督者和被监督者之间的父-子关系。 请注意，在这 **\<sql: relationship >**，Emp 是父和子表。  
+ 若要产生该结果，可以使用以下 XSD 架构，并指定针对它的 XPath 查询。 此架构描述 **\<Emp >** 元素的类型为 EmployeeType 组成 **\<Emp >** 相同类型，为 EmployeeType 的子元素。 此即属于递归关系（元素和其祖先属于相同类型）。 此外，架构使用 **\<sql: relationship >** 来描述监督者和被监督者之间的父-子关系。 请注意，在这 **\<sql: relationship >** ，Emp 是父和子表。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -283,7 +283,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ### <a name="nonrecursive-elements"></a>非递归元素  
  如果在架构中不导致任何递归的元素上指定 `sql:max-depth` 批注，将忽略该批注。 在以下架构中，  **\<Emp >** 元素组成 **\<常量 >** 子元素，而又有 **\<Emp >** 子元素。  
   
- 在此架构中，`sql:max-depth`上指定的批注 **\<常量 >** 元素中的内容将被忽略，因为之间不允许使用递归 **\<Emp >** 父和 **\<常量 >** 子元素。 但之间的递归 **\<Emp >** 祖先和 **\<Emp >** 子。 该架构在二者上都指定了 `sql:max-depth` 批注。 因此，`sql:max-depth`祖先指定的批注 (**\<Emp >** 监督者角色中) 将优先。  
+ 在此架构中，`sql:max-depth`上指定的批注 **\<常量 >** 元素中的内容将被忽略，因为之间不允许使用递归 **\<Emp >** 父和 **\<常量 >** 子元素。 但之间的递归 **\<Emp >** 祖先和 **\<Emp >** 子。 该架构在二者上都指定了 `sql:max-depth` 批注。 因此，`sql:max-depth`祖先指定的批注 ( **\<Emp >** 监督者角色中) 将优先。  
   
 #### <a name="example-c"></a>示例 C  
   

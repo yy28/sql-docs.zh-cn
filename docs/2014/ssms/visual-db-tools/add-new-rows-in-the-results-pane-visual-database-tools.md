@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cda813db916faf4819f85d3d09213679fba2eeec
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63459994"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中添加新行 (Visual Database Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "63459994"
   
 1.  定位到“结果”窗格底部，此处有一个可用于添加新数据行的空白行。  
   
-     所有列的初始值都将为 NULL。  
+     所有列的初始值都将为 NULL  。  
   
     > [!TIP]  
     >  若要直接转到第一个空行，请使用“结果”窗格底部的导航栏。  
@@ -43,7 +43,7 @@ ms.locfileid: "63459994"
     > [!NOTE]  
     >  如果所粘贴的一行或多行无法提交到数据库，则您将收到消息，指示哪些行不能提交。  
   
-3.  为新行输入数据。 如果要粘贴数据，请从“编辑”菜单中选择“粘贴”。  
+3.  为新行输入数据。 如果要粘贴数据，请从“编辑”  菜单中选择“粘贴”  。  
   
 4.  离开该行可以将其提交到数据库。  
   

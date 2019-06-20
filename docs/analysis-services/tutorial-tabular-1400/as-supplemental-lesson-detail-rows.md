@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 20f5f32d4cca8b69d94410296e3653a92a1d6d46
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bad45d18c351e838ec944b1ae67e3ce88c7e1d20
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685235"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263306"
 ---
 # <a name="supplemental-lesson---detail-rows"></a>补充课程 - 详细信息行
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685235"
 
 在本补充课程中，使用 DAX 编辑器来定义自定义的详细信息行表达式。 详细信息行表达式是向最终用户提供有关度量值的聚合结果的详细信息的度量值的属性。 
   
-学完本课的预计时间：**10 分钟**  
+估计的时间才能完成本课程中：**10 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 
@@ -81,6 +81,6 @@ ms.locfileid: "57685235"
   
 ## <a name="see-also"></a>另请参阅  
 
-[SELECTCOLUMNS 函数 (DAX)](https://msdn.microsoft.com/library/mt761759.aspx)  
+[SELECTCOLUMNS 函数 (DAX)](/dax/selectcolumns-function-dax)  
 [补充课程 - 动态安全性](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [补充课程 - 不规则层次结构](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056012"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>选择目标位置（SSIS 包升级向导）
@@ -31,7 +31,7 @@ ms.locfileid: "66056012"
   
 ## <a name="static-options"></a>静态选项  
  **保存到源位置**  
- 将升级的包保存到在向导的“选择源位置”页上指定的位置。  
+ 将升级的包保存到在向导的“选择源位置”  页上指定的位置。  
   
  如果原始包存储在文件系统中，并且您希望向导备份这些包，请选择 **“保存到源位置”** 选项。 有关详细信息，请参阅 [使用 SSIS 包升级向导升级 Integration Services 包](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66056012"
 |**Microsoft SQL Server**|指示升级的包将保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的现有实例中。<br /><br /> 选择此值将显示相应的动态选项 **“包源”** 。|  
   
  **文件夹**  
- 键入要保存升级包的文件夹的名称，或单击“浏览”找到该文件夹。  
+ 键入要保存升级包的文件夹的名称，或单击“浏览”  找到该文件夹。  
   
  **“浏览”**  
  浏览找到将保存已升级包的文件夹。  

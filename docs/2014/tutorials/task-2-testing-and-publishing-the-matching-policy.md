@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484731"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>任务 2：测试和发布匹配策略
@@ -50,6 +50,6 @@ ms.locfileid: "65484731"
 7.  在 SQL Server Data Quality Services 对话框中，单击**发布**然后单击**确定**消息框上。 现在，您定义的匹配策略发布到**供应商**知识库。 您可以使用此知识库来针对输入文件运行匹配过程，以确定和解决重复项。  
   
 ## <a name="next-step"></a>下一步  
- [任务 3:创建和运行数据质量项目以进行匹配](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [任务 3：创建和运行数据质量项目以进行匹配](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

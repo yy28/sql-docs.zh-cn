@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479563"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>删除属性组 (Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "65479563"
   
 ### <a name="to-delete-an-attribute-group"></a>删除属性组  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
 2.  上**模型视图**页上，从菜单栏中，依次指向**管理**然后单击**属性组**。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "65479563"
   
 7.  单击**删除所选的组**。  
   
-8.  在确认对话框中，单击 **“确定”**。  
+8.  在确认对话框中，单击 **“确定”** 。  
   
-9. 在附加确认对话框中，单击 **“确定”**。  
+9. 在附加确认对话框中，单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [属性组 (Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)   

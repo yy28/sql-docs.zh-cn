@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484661"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>任务 2：使用用于 Excel 的 MDS 外接程序将供应商数据上传到 MDS
@@ -34,9 +34,9 @@ ms.locfileid: "65484661"
   
     1.  选择**创建新的连接**，然后单击**新建**按钮。  
   
-    2.  在**添加新连接**对话框中，键入**本地 MDS 服务器**有关**说明**并**http://localhost/MDS**为**MDS 服务器地址**，然后单击**确定**以关闭对话框。  
+    2.  在**添加新连接**对话框中，键入**本地 MDS 服务器**有关**说明**并 **http://localhost/MDS** 为**MDS 服务器地址**，然后单击**确定**以关闭对话框。  
   
-6.  在中**管理连接**对话框中，选择**本地 MDS 服务器**(http://localhost/MDS)，单击**测试**对连接进行测试。 单击**确定**消息框上。  
+6.  在中**管理连接**对话框中，选择**本地 MDS 服务器**(http://localhost/MDS) ，单击**测试**对连接进行测试。 单击**确定**消息框上。  
   
 7.  单击**Connect**连接到 MDS 服务器。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "65484661"
 15. 保持**Excel**打开。  
   
 ## <a name="next-task"></a>下一个任务  
- [任务 3:验证数据在主数据管理器](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [任务 3：验证数据在主数据管理器](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

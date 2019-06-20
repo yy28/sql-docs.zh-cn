@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813240"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>查看可用性组属性 (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "62813240"
   
 3.  右键单击要查看其属性的可用性组，然后选择“属性”命令。  
   
-4.  在 **“可用性组属性”** 对话框中，使用 **“常规”** 和 **“备份首选项”** 页查看所选可用性组的属性，在某些情况下，还可以更改这些属性。 有关详细信息，请参阅[可用性组属性和新的可用性组&#40;常规页&#41;](availability-group-properties-new-availability-group-general-page.md)并[可用性组属性：新的可用性组&#40;备份首选项页&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
+4.  在 **“可用性组属性”** 对话框中，使用 **“常规”** 和 **“备份首选项”** 页查看所选可用性组的属性，在某些情况下，还可以更改这些属性。 有关详细信息，请参阅[可用性组属性和新的可用性组&#40;常规页&#41;](availability-group-properties-new-availability-group-general-page.md)并[可用性组属性：新建可用性组（“备份首选项”页）](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
   
      使用 **“权限”** 页可以查看当前登录名、角色以及与可用性组关联的显式权限。 有关详细信息，请参阅 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   

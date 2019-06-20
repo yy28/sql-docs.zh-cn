@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 142d2a0ba403600d45f338596b5a581980ec79f0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486094"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>保存快捷查询文件（用于 Excel 的 MDS 外接程序）
@@ -31,9 +31,9 @@ ms.locfileid: "65486094"
   
 ### <a name="to-save-a-shortcut-query-file"></a>保存快捷查询文件  
   
-1.  在 **“保存并发送”** 组中，单击 **“保存查询”** 下的箭头，然后单击 **“另存为查询”**。  
+1.  在 **“保存并发送”** 组中，单击 **“保存查询”** 下的箭头，然后单击 **“另存为查询”** 。  
   
-2.  可选。 若要重命名查询，请单击 **“保存查询”** 下的箭头，然后单击 **“管理查询”**。 选择查询，然后单击 **“重命名”**。  
+2.  可选。 若要重命名查询，请单击 **“保存查询”** 下的箭头，然后单击 **“管理查询”** 。 选择查询，然后单击 **“重命名”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   

@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62467982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148983"
 ---
 # <a name="create-a-tabular-model-project"></a>创建表格模型项目
 
@@ -41,13 +41,13 @@ ms.locfileid: "62467982"
   
     默认情况下**解决方案名称**相同项目名中; 但是，可以键入不同的解决方案名称。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
 5.  在中**表格模型设计器**对话框中，选择**集成工作区**。  
   
     工作区在模型创作期间托管与项目同名的表格模型数据库。 集成工作区表示 Visual Studio 将使用内置实例，无需单独安装一个 Analysis Services 服务器实例仅仅出于模型创作。
       
-6.  在中**兼容性级别**，选择**SQL Server 2017 / Azure Analysis Services (1400)**。   
+6.  在中**兼容性级别**，选择**SQL Server 2017 / Azure Analysis Services (1400)** 。   
  
     ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       

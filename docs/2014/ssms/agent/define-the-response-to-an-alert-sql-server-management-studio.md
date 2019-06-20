@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ac3e9ee443f0c10a39128fc1d6aab6813ec4f4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524067"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>定义对警报的响应 (SQL Server Management Studio)
@@ -59,19 +59,19 @@ ms.locfileid: "62524067"
   
 1.  在 **“对象资源管理器”** 中，单击加号以便展开包含您要对其定义响应的警报的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击要对其定义响应的警报，然后选择“属性”。  
+4.  右键单击要对其定义响应的警报，然后选择“属性”  。  
   
-5.  在“alert_name 警报属性”对话框的“选择页”下，选择“响应”。  
+5.  在“alert_name 警报属性”   对话框的“选择页”  下，选择“响应”  。  
   
-6.  选中 **“执行作业”** 复选框，然后从 **“执行作业”** 复选框下的列表中选择出现警报时执行的作业。 您可以单击 **“新建作业”** 来创建新的作业。 也可以单击 **“查看作业”** 查看有关作业的详细信息。 有关“新建作业”和“作业属性 job_name”对话框中的可用选项的详细信息，请参阅[作业](create-a-job.md)和[查看作业](view-a-job.md)。  
+6.  选中 **“执行作业”** 复选框，然后从 **“执行作业”** 复选框下的列表中选择出现警报时执行的作业。 您可以单击 **“新建作业”** 来创建新的作业。 也可以单击 **“查看作业”** 查看有关作业的详细信息。 有关“新建作业”  和“作业属性 job_name”   对话框中的可用选项的详细信息，请参阅[作业](create-a-job.md)和[查看作业](view-a-job.md)。  
   
-7.  如果要在激活警报时通知操作员，请选中 **“通知操作员”** 复选框。 在中**操作员列表**，选择一个或多个以下用于通知操作员的方法：**电子邮件**，**寻呼**，或**Net 发送**。 您可以单击 **“新建操作员”** 创建新的操作员。 也可以单击 **“查看操作员”** 查看有关操作员的详细信息。 有关 **“新建操作员”** 和 **“查看操作员属性”** 对话框中的可用选项的详细信息，请参阅 [Create an Operator](create-an-operator.md) 和 [View Information About an Operator](view-information-about-an-operator.md)。  
+7.  如果要在激活警报时通知操作员，请选中 **“通知操作员”** 复选框。 在“操作员”列表中，选择以下一种或多种方法用于通知操作员  ：“电子邮件”、“寻呼机”或“Net Send”    。 您可以单击 **“新建操作员”** 创建新的操作员。 也可以单击 **“查看操作员”** 查看有关操作员的详细信息。 有关 **“新建操作员”** 和 **“查看操作员属性”** 对话框中的可用选项的详细信息，请参阅 [Create an Operator](create-an-operator.md) 和 [View Information About an Operator](view-information-about-an-operator.md)。  
   
-8.  完成后，单击 **“确定”**。  
+8.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,9 +79,9 @@ ms.locfileid: "62524067"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- adds an e-mail notification for Test Alert.  

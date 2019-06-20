@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9478564d6fde6596fe6f407bb9a9a2b389b2a1d2
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480991"
 ---
 # <a name="create-a-cross-domain-rule"></a>创建跨域规则
@@ -45,7 +45,7 @@ ms.locfileid: "65480991"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [创建知识库](../../2014/data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../../2014/data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”** 。 有关详细信息，请参阅 [创建知识库](../../2014/data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../../2014/data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  域管理在 Data Quality Service 客户端页面中执行，该页面包含用于单独域管理操作的五个选项卡。 它不是一个向导驱动的过程；任何管理操作都可以单独执行。  
@@ -54,7 +54,7 @@ ms.locfileid: "65480991"
   
 4.  单击 **“复合域规则”** 选项卡。  
   
-5.  单击 **“添加新的域规则”**，然后为该规则输入名称和说明。  
+5.  单击 **“添加新的域规则”** ，然后为该规则输入名称和说明。  
   
 6.  选择 **“活动”** 可指定将运行该规则（默认设置），取消选中则可以阻止该规则运行。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65480991"
   
     3.  如果该条件需要值，则在文本框中输入与该条件相关联的值。  
   
-    4.  如果 If 子句要求其他条件，则单击 **“向所选子句添加新的条件”**。 选择操作符和条件，并且根据需要为该条件输入值。  
+    4.  如果 If 子句要求其他条件，则单击 **“向所选子句添加新的条件”** 。 选择操作符和条件，并且根据需要为该条件输入值。  
   
     5.  若要更改这些条件的顺序，请通过单击其左侧选择一个条件，再单击向上或向下箭头。  
   

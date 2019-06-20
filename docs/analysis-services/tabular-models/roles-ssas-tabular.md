@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6c42615115ae486d14112a1a1dbd7f05d6328eb
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472130"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263303"
 ---
 # <a name="roles"></a>角色
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -84,8 +84,8 @@ ms.locfileid: "62472130"
   
 |函数|Description|  
 |--------------|-----------------|  
-|[USERNAME 函数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|返回当前登录用户的 domain\username。|  
-|[CUSTOMDATA 函数 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|返回连接字符串中的 CustomData 属性。|  
+|[USERNAME 函数 (DAX)](/dax/username-function-dax)|返回当前登录用户的 domain\username。|  
+|[CUSTOMDATA 函数 (DAX)](/dax/customdata-function-dax)|返回连接字符串中的 CustomData 属性。|  
   
  您可以使用 LOOKUPVALUE 函数返回某一列的值，在该列中，Windows 用户名与 USERNAME 函数返回的用户名或 CustomData 函数返回的字符串相同。 然后，可以限制查询，只显示 LOOKUPVALUE 返回的值与相同或相关表中的值匹配的行。  
   
@@ -128,8 +128,8 @@ ms.locfileid: "62472130"
 ## <a name="see-also"></a>请参阅  
  [透视](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [“在 Excel 中分析”](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME 函数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [LOOKUPVALUE 函数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [CUSTOMDATA 函数 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [USERNAME 函数 (DAX)](/dax/username-function-dax)   
+ [LOOKUPVALUE 函数 (DAX)](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 函数 (DAX)](/dax/customdata-function-dax)  
   
   

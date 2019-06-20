@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619584"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
@@ -31,7 +31,7 @@ ms.locfileid: "65619584"
   
 -   建议为每个备份使用唯一文件名以防止意外覆盖 blob。  
   
--   创建容器时，建议将访问级别设置为 **“私有”**，这样只有可以提供所需的身份验证信息的用户或帐户可以在容器中读取或写入 blob。  
+-   创建容器时，建议将访问级别设置为 **“私有”** ，这样只有可以提供所需的身份验证信息的用户或帐户可以在容器中读取或写入 blob。  
   
 -   对于在 Windows Azure 虚拟机中运行的 SQL Server 实例上的 SQL Server 数据库，请使用虚拟机所在区域中的存储帐户来避免区域之间的数据传输成本。 使用同一区域还可以确保备份和还原操作具有最佳性能。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65619584"
 -   从压缩备份中还原时，您可能看到以下错误：  
   
     -   **发生 SqlException 3284。严重性：16 状态：5**  
-        **在设备上的消息文件标记 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 未对齐。用于创建备份集的相同块大小重新发布 Restore 语句：'65536' 看起来像一个可能值。**  
+        **在设备上的消息文件标记 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' 未对齐。用于创建备份集的相同块大小重新发布 Restore 语句：'65536' 看起来像一个可能值。**  
   
          要修复此错误，请重新发布指定了 `BACKUP` 的 `BLOCKSIZE = 65536` 语句。  
   
@@ -117,15 +117,15 @@ ms.locfileid: "65619584"
   
  代理服务器可能具有限制每分钟连接次数的设置。 “备份到 URL”进程是一个多线程进程，因此可能超过此限制。 如果出现此情况，代理服务器将终止连接。 若要解决此问题，请更改代理设置，使 SQL Server 不使用该代理。   下面是一些您可能在错误日志中看到的类型或错误消息的示例：  
   
--   尽情涂鸦"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"失败：备份到 URL 收到来自远程终结点的异常。 异常消息：无法从传输连接读取数据：连接已关闭。  
+-   尽情涂鸦"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak "失败：备份到 URL 收到来自远程终结点的异常。 异常消息：无法从传输连接读取数据：连接已关闭。  
   
--   文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”上发生不可恢复的 I/O 错误。无法从远程终结点收集错误。  
+-   文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ”上发生不可恢复的 I/O 错误。无法从远程终结点收集错误。  
   
      消息 3013，级别 16，状态 1，第 2 行  
   
      备份数据库异常终止。  
   
--   Backupiorequest:: Reportioerror 备份设备上写入失败 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息：无法从传输连接读取数据：连接已关闭。  
+-   Backupiorequest:: Reportioerror 备份设备上写入失败 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息：无法从传输连接读取数据：连接已关闭。  
   
  如果使用跟踪标志 3051 打开详细日志记录，您还可能在日志中看到以下消息：  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65619584"
   
  **未选择默认代理设置：**  
   
- 有时，可能由于没有选择默认设置而导致如下代理身份验证错误：文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”上发生不可恢复的 I/O 错误。备份到 URL”收到来自远程终结点的异常 *。异常消息：远程服务器返回了错误：(407)* **需要代理身份验证**。  
+ 有时，可能由于没有选择默认设置而导致如下代理身份验证错误：文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ”上发生不可恢复的 I/O 错误。备份到 URL”收到来自远程终结点的异常 *。异常消息：远程服务器返回了错误：(407)* **需要代理身份验证**。  
   
  若要解决此问题，请使用以下步骤创建一个配置文件，以允许“备份到 URL”进程使用默认代理设置：  
   

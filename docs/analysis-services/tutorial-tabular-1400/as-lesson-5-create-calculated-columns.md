@@ -11,10 +11,10 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776068"
 ---
 # <a name="create-calculated-columns"></a>创建计算列
@@ -45,7 +45,7 @@ ms.locfileid: "64776068"
   
 3.  右键单击**CalendarQuarter**列标题，并单击**插入列**。  
   
-    一个名为“Calculated Column 1”的新列插入到“Calendar Quarter”列的左侧。  
+    一个名为“Calculated Column 1”  的新列插入到“Calendar Quarter”  列的左侧。  
   
 4.  在表上方公式栏中，键入以下 DAX 公式：自动完成可帮助你键入的完全限定的名称的列和表，并列出可用的函数。  
   
@@ -123,7 +123,7 @@ ProductCategoryName 计算的列用于在 DimProduct 表中，其中包括 DimPr
     =[SalesAmount]-[TotalProductCost]
     ``` 
 
-4.  将此列重命名为“Margin”。  
+4.  将此列重命名为“Margin”  。  
  
       ![as-lesson5-newmargin](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
       

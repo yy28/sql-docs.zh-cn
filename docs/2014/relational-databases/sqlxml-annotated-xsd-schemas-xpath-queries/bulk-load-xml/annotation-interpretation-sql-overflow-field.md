@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013473"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "66013473"
   
  在将数据存储在溢出列中的过程中，XML 大容量加载还会存储定义了 `sql:overflow-field` 的父元素的开始标记和结束标记。  
   
- 例如，以下架构描述**\<客户 >** 并 **\<CustOrder >** 元素。 上述每个元素都标识一个溢出列：  
+ 例如，以下架构描述 **\<客户 >** 并 **\<CustOrder >** 元素。 上述每个元素都标识一个溢出列：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,9 +73,9 @@ ms.locfileid: "66013473"
 </xsd:schema>  
 ```  
   
- 在架构中， **\<客户 >** 元素映射到 Cust 表和**\<顺序 >** 元素映射到 CustOrder 表。  
+ 在架构中， **\<客户 >** 元素映射到 Cust 表和 **\<顺序 >** 元素映射到 CustOrder 表。  
   
- 这两个**\<客户 >** 并**\<顺序 >** 元素标识一个溢出列。 因此，XML 大容量加载会将所有未用完的子元素和属性的**\<客户 >** Cust 表的溢出列中的元素和所有未用完的子元素和属性的**\<顺序 >** CustOrder 表的溢出列中的元素。  
+ 这两个 **\<客户 >** 并 **\<顺序 >** 元素标识一个溢出列。 因此，XML 大容量加载会将所有未用完的子元素和属性的 **\<客户 >** Cust 表的溢出列中的元素和所有未用完的子元素和属性的 **\<顺序 >** CustOrder 表的溢出列中的元素。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   

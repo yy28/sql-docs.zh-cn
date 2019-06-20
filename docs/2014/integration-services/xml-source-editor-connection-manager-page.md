@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054299"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 源编辑器（“连接管理器”页）
@@ -40,22 +40,22 @@ ms.locfileid: "66054299"
  指定 XML 源数据本身是否包含 XSD 架构（用于定义和验证 XML 源数据的结构和数据）。  
   
  **XSD 位置**  
- 键入 XSD 架构文件的路径和文件名，或者可以单击“浏览”定位该文件。  
+ 键入 XSD 架构文件的路径和文件名，或者可以单击“浏览”  定位该文件。  
   
  **“浏览”**  
- 使用“打开”对话框定位到 XSD 架构文件。  
+ 使用“打开”  对话框定位到 XSD 架构文件。  
   
  **生成 XSD**  
- 使用“另存为”对话框可以为自动生成的 XSD 架构文件选择位置。 编辑器将根据 XML 数据的结构来推断架构。  
+ 使用“另存为”  对话框可以为自动生成的 XSD 架构文件选择位置。 编辑器将根据 XML 数据的结构来推断架构。  
   
 ## <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
 ### <a name="data-access-mode--xml-file-location"></a>数据访问模式 = XML 文件位置  
  **XML 位置**  
- 键入 XML 数据文件的路径和文件名，或者通过单击“浏览”查找文件。  
+ 键入 XML 数据文件的路径和文件名，或者通过单击“浏览”  查找文件。  
   
  **“浏览”**  
- 使用“打开”对话框定位到 XML 数据文件。  
+ 使用“打开”  对话框定位到 XML 数据文件。  
   
 ### <a name="data-access-mode--xml-file-from-variable"></a>数据访问模式 = 来自变量的 XML 文件  
  **变量名称**  

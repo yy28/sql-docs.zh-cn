@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013353"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
@@ -48,11 +48,11 @@ ms.locfileid: "63013353"
 </root>  
 ```  
   
- 本文档中**\<客户 >** 是元素节点**cid**是属性节点，和 **"Important"** 是文本节点。  
+ 本文档中 **\<客户 >** 是元素节点**cid**是属性节点，和 **"Important"** 是文本节点。  
   
- XPath 是图形导航语言，用于从 XML 文档中选择节点集。 每个 XPath 运算符根据前一个 XPath 运算符所选择的节点集来选择节点集。 例如，给定一组**\<客户 >** 节点，XPath 可以选择所有**\<顺序 >** 节点**日期**属性值 **"7/14/1999"**。 生成的节点集包含订单日期为 7/14/1999 的所有订单。  
+ XPath 是图形导航语言，用于从 XML 文档中选择节点集。 每个 XPath 运算符根据前一个 XPath 运算符所选择的节点集来选择节点集。 例如，给定一组 **\<客户 >** 节点，XPath 可以选择所有 **\<顺序 >** 节点**日期**属性值 **"7/14/1999"** 。 生成的节点集包含订单日期为 7/14/1999 的所有订单。  
   
- 万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了一部分的 W3C XPath 规范，位于 http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ 万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了一部分的 W3C XPath 规范，位于 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  以下是 W3C XPath 实现与 SQLXML 4.0 实现之间的主要差异。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63013353"
 |包含连续谓词和嵌套谓词的布尔值谓词||[在 XPath 查询中指定算数运算符&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |所有关系运算符|=, !=, <, \<=, >, >=|[XPath 查询中指定关系运算符&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算术运算符|+、-、*、div|[在 XPath 查询中指定算数运算符&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|显式转换函数|**number()**, **string()**, **Boolean()**|[在 XPath 查询中指定显式转换函数&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|显式转换函数|**number()** , **string()** , **Boolean()**|[在 XPath 查询中指定显式转换函数&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |布尔运算符|AND、OR|[XPath 查询中指定布尔运算符&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|布尔函数|**true()**, **false()**, **not()**|[在 XPath 查询中指定布尔函数&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|布尔函数|**true()** , **false()** , **not()**|[在 XPath 查询中指定布尔函数&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |XPath 变量||[XPath 查询中指定 XPath 变量&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>不支持的功能  
@@ -108,13 +108,13 @@ ms.locfileid: "63013353"
   
 |功能|项|  
 |-------------|----------|  
-|Axes|**上级**，**上级或自身**，**子代**，**后代或自身 (/ /)**，**以下**， **后同辈**，**命名空间**，**前面**，**前面的同级**|  
+|Axes|**上级**，**上级或自身**，**子代**，**后代或自身 (/ /)** ，**以下**， **后同辈**，**命名空间**，**前面**，**前面的同级**|  
 |数值谓词||  
 |算术运算符|mod|  
-|节点函数|**上级**，**上级或自身**，**子代**，**后代或自身 (/ /)**，**以下**， **后同辈**，**命名空间**，**前面**，**前面的同级**|  
-|字符串函数|**string （)**， **concat （)**， **starts-with()**， **contains （)**， **substring-before()**， **substring-after()**， **substring （)**， **string-length （)**， **normalize()**， **translate()**|  
+|节点函数|**上级**，**上级或自身**，**子代**，**后代或自身 (/ /)** ，**以下**， **后同辈**，**命名空间**，**前面**，**前面的同级**|  
+|字符串函数|**string （)** ， **concat （)** ， **starts-with()** ， **contains （)** ， **substring-before()** ， **substring-after()** ， **substring （)** ， **string-length （)** ， **normalize()** ， **translate()**|  
 |布尔函数|**lang()**|  
-|数字函数|**sum()**, **floor()**, **ceiling()**, **round()**|  
+|数字函数|**sum()** , **floor()** , **ceiling()** , **round()**|  
 |Union 运算符|&#124;|  
   
  在模板中指定 XPath 查询时，请注意以下行为：  

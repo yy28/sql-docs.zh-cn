@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 026c588f2fc35a6cb256a63046ad91e5d1b5641a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62830244"
 ---
 # <a name="select-a-package"></a>选择包
   可以使用 **“选择包”** 对话框，指定消息队列任务可从中接收消息的包。  
   
 ## <a name="static-options"></a>静态选项  
- **位置**  
+ **Location**  
  指定包的位置。 此属性具有下表所列的选项。  
   
 |ReplTest1|Description|  

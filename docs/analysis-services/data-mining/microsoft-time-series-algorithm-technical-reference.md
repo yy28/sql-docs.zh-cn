@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd520413e425ad7ef43eb44511365c43c51022f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753527"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
@@ -125,7 +125,7 @@ ms.locfileid: "62753527"
 |*MINIMUM_SUPPORT*|指定在每个时序树中生成一个拆分所需的最小时间段数。 默认值为 10。|  
 |*MISSING_VALUE_SUBSTITUTION*|指定如何填补历史数据中的空白。 默认情况下，不允许数据中存在空白。 下表将列出此参数的可能值：<br /><br /> **上一**:重复前一时间段中的值。<br /><br /> **意味着**:使用的培训中使用的时间段的变动平均值。<br /><br /> 数值常量：使用指定的数字来替换所有缺失值。<br /><br /> **无**：默认值。 用沿定型模型曲线绘制的值来替换缺失值。<br /><br /> <br /><br /> 请注意，如果数据中包含多个序列，这些序列不能有参差不齐的边缘。 也就是说，所有序列都应具有相同的起点和终点。 <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对时序模型执行 **PREDICTION JOIN** 时，还使用此参数的值来填补新数据中的空白。|  
 |*PERIODICITY_HINT*|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。<br /><br /> 方括号 [] 中的 n 是可选项，并且可以按需多次重复。 例如，若要为按月提供的数据提供多个周期提示，则可以输入 {12, 3, 1} 来检测年度、季度和月的模式。 但是，周期对模型质量有重大影响。 如果给出的提示与实际周期不同，则会对结果造成不良影响。<br /><br /> 默认值为 {1}。<br /><br /> 请注意，需要使用大括号。 另外，此参数具有字符串数据类型。 因此，如果在数据挖掘扩展插件 (DMX) 语句中键入此参数，则必须用引号将数字和大括号括起来。|  
-|*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]设置用户帐户 ：<br />                          指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 1:指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> 0.5:默认值。 指定预测时两个算法都应使用并混合结果。<br /><br /> <br /><br /> 执行预测平滑处理时，使用 FORECAST_METHOD 参数来控制定型。   请注意，此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
+|*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]设置用户帐户 ：<br />                          指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 1：指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> 0.5:默认值。 指定预测时两个算法都应使用并混合结果。<br /><br /> <br /><br /> 执行预测平滑处理时，使用 FORECAST_METHOD 参数来控制定型。   请注意，此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
   
 ### <a name="modeling-flags"></a>建模标志  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  

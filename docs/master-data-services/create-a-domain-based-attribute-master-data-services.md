@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 09d0b3b339a70b5d2ccae3c9edca11ddf942e95c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487598"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>创建基于域的属性 (Master Data Services)
@@ -64,15 +64,15 @@ ms.locfileid: "65487598"
   
 ### <a name="to-create-a-domain-based-attribute"></a>创建基于域的属性  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，单击一个模型，然后单击“实体” 。  
+2.  在“管理模型”  页上，单击一个模型，然后单击“实体”  。  
   
 3.  在“管理实体”  页上，选择要为其创建属性的实体所在的行。  
   
-4.  单击 **“属性”**。  
+4.  单击 **“属性”** 。  
   
-5.  在“管理属性”  页上，执行下列操作之一，然后单击“添加” 。  
+5.  在“管理属性”  页上，执行下列操作之一，然后单击“添加”  。  
   
     -   如果属性是针对叶成员，则从“成员类型”  列表框选择“叶”  。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "65487598"
   
 8.  在 **“显示像素宽度”** 框中，键入要在 **“资源管理器”** 网格中显示的属性列的宽度。  
   
-9. 从“属性类型”列表中，选择“基于域”。  
+9. 从“属性类型”  列表中，选择“基于域”  。  
   
 10. 从“域实体”  列表中，选择要用于填充属性值的实体。 
   
@@ -98,7 +98,7 @@ ms.locfileid: "65487598"
   
 12. **可选。** 选择 **Enable change tracking** 可以跟踪对属性值的更改。 有关详细信息，请参阅[向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-13. 单击“保存” 。  
+13. 单击“保存”  。  
   
 ## <a name="see-also"></a>请参阅  
  [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)   

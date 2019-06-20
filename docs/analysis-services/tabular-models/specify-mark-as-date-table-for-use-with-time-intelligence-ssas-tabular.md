@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 53de714a7db50b653a24fa42662fc7e0aeffa88d
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472077"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263396"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>指定标记为日期表，以便用于时间智能
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "62472077"
   
 3.  在 **“标记日期表”** 对话框的 **“日期”** 列表框中，选择要用作唯一标识符的列。 此列必须包含唯一值，并且数据类型应为 Date。 例如：  
   
-    |date|  
+    |Date|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  
@@ -52,6 +52,6 @@ ms.locfileid: "62472077"
   
 ## <a name="see-also"></a>请参阅  
  [计算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [时间智能函数 (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [时间智能函数 (DAX)](/dax/time-intelligence-functions-dax)  
   
   

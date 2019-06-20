@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b8090ea1080fa7528d3a8297e14760190e8aadfe
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980258"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 确定特定断字符是否已注册。  
- 下面的示例列出了土耳其语 (LCID = 1055) 的断字符（如果已经在系统上安装该语言并已在服务实例上注册）。 此示例指定参数名称， **@component_type**并**@param**。  
+ 下面的示例列出了土耳其语 (LCID = 1055) 的断字符（如果已经在系统上安装该语言并已在服务实例上注册）。 此示例指定参数名称， **@component_type** 并 **@param** 。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

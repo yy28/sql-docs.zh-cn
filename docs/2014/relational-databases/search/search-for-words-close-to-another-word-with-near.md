@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011069"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
@@ -33,7 +33,7 @@ ms.locfileid: "66011069"
 ##  <a name="Custom_NEAR"></a> 自定义邻近词  
  自定义邻近词引入了下列新功能：  
   
--   可以指定第一个搜索词与最后一个搜索词之间存在的非搜索词的最大数目或最大距离，以作为构成匹配项的条件。  
+-   可以指定第一个搜索词与最后一个搜索词之间存在的非搜索词的最大数目或最大距离  ，以作为构成匹配项的条件。  
   
 -   如果指定词的最大数目，还可以指定搜索词必须以指定顺序出现在匹配项中。  
   
@@ -158,7 +158,7 @@ GO
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我们建议您使用 [自定义邻近词](#Custom_NEAR)。  
   
- 通用邻近词表明指定的搜索词必须全部出现在一个文档中匹配项才能返回，而与搜索词之间非搜索词的数目（距离）无关。 基本语法为：  
+ 通用邻近词表明指定的搜索词必须全部出现在一个文档中匹配项才能返回，而与搜索词之间非搜索词的数目（距离  ）无关。 基本语法为：  
   
  { *search_term* { NEAR | ~ } *search_term* } [ ,...*n* ]  
   

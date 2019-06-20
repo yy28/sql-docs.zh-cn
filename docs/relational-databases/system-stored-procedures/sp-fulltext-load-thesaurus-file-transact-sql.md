@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822761"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
@@ -45,7 +45,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  映射某种语言的区域设置标识符 (LCID) 的整数，您要为该语言加载同义词库 XML 定义。 若要获取服务器实例可用的语言的 Lcid，请使用[sys.fulltext_languages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)目录视图。  
   
- **@loadOnlyIfNotLoaded**  = *action*  
+ **@loadOnlyIfNotLoaded** = *action*  
  指定是否即使在同义词库文件已加载的情况下也将它加载到内部同义词库表中。 *操作*是之一：  
   
 |ReplTest1|定义|  

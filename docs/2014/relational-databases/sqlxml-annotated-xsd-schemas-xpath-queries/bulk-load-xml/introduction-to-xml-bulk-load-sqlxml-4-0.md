@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013391"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大容量加载简介 (SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "66013391"
 ## <a name="streaming-of-xml-data"></a>XML 数据的流式处理  
  由于源 XML 文档可能很大，因此无法将整个文档读入内存以进行大容量加载处理。 XML 大容量加载而是将 XML 数据解释为流并读取它。 当该实用工具读取数据时，该工具标识数据库表，并根据 XML 数据源生成相应记录，然后再将这些记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以便插入。  
   
- 例如，以下源 XML 文档组成**\<客户 >** 元素和**\<顺序 >** 子元素：  
+ 例如，以下源 XML 文档组成 **\<客户 >** 元素和 **\<顺序 >** 子元素：  
   
 ```  
 <Customer ...>  
@@ -56,7 +56,7 @@ ms.locfileid: "66013391"
 ...  
 ```  
   
- 当 XML 大容量加载读取**\<客户 >** 元素，则会生成 Customertable 一条记录。 当它读取 **\</Customer >** 结束标记时，XML 大容量加载将该记录到表中插入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在同一个说一句，当它读取**\<顺序 >** 元素中，XML 大容量加载为 Ordertable，生成一条记录，然后插入到该记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表在读取 **\</ 订购 >** 结束标记。  
+ 当 XML 大容量加载读取 **\<客户 >** 元素，则会生成 Customertable 一条记录。 当它读取 **\</Customer >** 结束标记时，XML 大容量加载将该记录到表中插入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在同一个说一句，当它读取 **\<顺序 >** 元素中，XML 大容量加载为 Ordertable，生成一条记录，然后插入到该记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表在读取 **\</ 订购 >** 结束标记。  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>事务和非事务 XML 大容量加载操作  
  XML 大容量加载可以以事务或非事务模式运行。 性能是如果您是在非事务模式下执行大容量加载通常最佳： 即，事务属性设置为 FALSE)，并且以下条件之一为 true:  

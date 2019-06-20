@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 2768449e242b7da66406b9c1a5b95084e0f04949
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072394"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263375"
 ---
 # <a name="calculated-columns"></a>计算列
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072394"
   
 -   当您重命名计算列时，必须手动更新依赖于该列的所有公式。 如果您没有处于手动更新模式，则更新公式结果将自动发生。 但是，此操作可能要花一些时间。  
   
--   有一些字符不能用于列名中。 有关详细信息，请参阅 [DAX 语法参考](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5)中的“命名要求”。  
+-   有一些字符不能用于列名中。 有关详细信息，请参阅 [DAX 语法参考](/dax/dax-syntax-reference)中的“命名要求”。  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  与用于度量值的公式相比，用于计算列的公式可能会消耗更多的资源。 原因之一是：计算列的结果始终是为表中的每一行计算的，而度量值仅是为报表、数据透视表或数据透视图中使用的筛选器定义的单元计算的。 例如，某个具有 100 万行的表将始终具有含 100 万个结果的计算列，并且对性能具有相应影响。 但是，数据透视表通常会通过应用行和列标题对数据进行筛选；因此，仅为数据透视表的每个单元中的数据子集计算度量值。  

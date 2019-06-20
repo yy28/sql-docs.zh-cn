@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 5fc29872795623bd0d9e72414a15add92591ec7d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641388"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>数据加载到内存使用 rxImport （SQL Server 和 RevoScaleR 教程）
@@ -34,7 +34,7 @@ ms.locfileid: "62641388"
     rxSetComputeContext("local")
     ```
 
-2. 如果 sqlQuery 参数中存在效的 SQL 语句，则创建新的 SQL Server 数据源对象。 此示例获取具有最高风险评分的观测值的子集。 这样一来，只有真正需要的数据才会放入本地内存。
+2. 如果 sqlQuery  参数中存在效的 SQL 语句，则创建新的 SQL Server 数据源对象。 此示例获取具有最高风险评分的观测值的子集。 这样一来，只有真正需要的数据才会放入本地内存。
 
     ```R
     sqlServerProbDS \<- RxSqlServerData(
@@ -73,7 +73,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 ## <a name="more-about-rximport"></a>详细了解 rxImport
 
-不仅可以使用 rxImport 来移动数据，还可在读取它的过程中转换数据。 例如，可以为固定宽度的列指定字符数，提供变量的说明，设置因子列的级别，甚至还能创建可在导入后使用的新级别。
+不仅可以使用 rxImport  来移动数据，还可在读取它的过程中转换数据。 例如，可以为固定宽度的列指定字符数，提供变量的说明，设置因子列的级别，甚至还能创建可在导入后使用的新级别。
 
 **RxImport**函数在导入过程中，将变量名称分配到的列，但可以通过使用指示新变量名称*colInfo*参数或更改数据类型使用*colClasses*参数。
 

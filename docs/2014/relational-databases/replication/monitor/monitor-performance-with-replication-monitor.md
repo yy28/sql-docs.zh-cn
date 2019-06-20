@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667213"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>用复制监视器监视性能
@@ -44,15 +44,15 @@ ms.locfileid: "62667213"
   
 -   超过指定的滞后时间（从事务在发布服务器上提交到相应的事务在订阅服务器上提交之间间隔的时间）。  
   
-     这适用于事务复制。 如果达到或超过指定的阈值，状态将显示为 **“‘严重’状态下的性能”**。  
+     这适用于事务复制。 如果达到或超过指定的阈值，状态将显示为 **“‘严重’状态下的性能”** 。  
   
 -   超出了指定的同步时间。  
   
-     这适用于合并复制。 如果达到或超过指定的阈值，状态将显示为 **“长时间运行的合并”**。 您可以为拨号连接和局域网 (LAN) 连接指定不同的阈值。  
+     这适用于合并复制。 如果达到或超过指定的阈值，状态将显示为 **“长时间运行的合并”** 。 您可以为拨号连接和局域网 (LAN) 连接指定不同的阈值。  
   
 -   在给定时间内未处理完指定的行数。  
   
-     这适用于合并复制。 如果达到或超过指定的阈值，状态将显示为 **“‘严重’状态下的性能”**。 您可以为拨号连接和 LAN 连接指定不同的阈值。  
+     这适用于合并复制。 如果达到或超过指定的阈值，状态将显示为 **“‘严重’状态下的性能”** 。 您可以为拨号连接和 LAN 连接指定不同的阈值。  
   
  有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)。  
   

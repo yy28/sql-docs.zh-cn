@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060639"
 ---
 # <a name="configure-error-output"></a>配置错误输出
@@ -34,12 +34,12 @@ ms.locfileid: "66060639"
  **错误**  
  如果适用，指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](data-flow/error-handling-in-data.md)  
   
  **截断**  
  如果适用，指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](data-flow/error-handling-in-data.md)  
   
  **说明**  
  查看操作的说明。  

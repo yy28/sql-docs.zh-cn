@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e5a4d0ec80da5c29d513e74df1becca2d5cbb84
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404869"
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
@@ -42,7 +42,7 @@ ms.locfileid: "65404869"
   
 2.  在表导入向导中下,**关系数据库**，单击**Microsoft SQL Server** > **下一步**。  
   
-3.  在“连接到 Microsoft SQL Server 数据库”页的“友好的连接名称”中，键入 **Adventure Works DB from SQL**。  
+3.  在“连接到 Microsoft SQL Server 数据库”  页的“友好的连接名称”  中，键入 **Adventure Works DB from SQL**。  
   
 4.  在中**服务器名称**，键入安装了 AdventureWorksDW 数据库的服务器的名称。  
   
@@ -50,23 +50,23 @@ ms.locfileid: "65404869"
   
     ![as-tabular-lesson2-tiw-name](media/as-tabular-lesson2-tiw-name.png)
   
-6.  在“模拟信息”页中，需要指定在导入和处理数据时 Analysis Services 将用于连接数据源的凭据。 确认已选中“特定的 Windows 用户名和密码”，在“用户名”和“密码”中输入 Windows 登录凭据，然后单击“下一步”。  
+6.  在“模拟信息”  页中，需要指定在导入和处理数据时 Analysis Services 将用于连接数据源的凭据。 确认已选中“特定的 Windows 用户名和密码”  ，在“用户名”  和“密码”  中输入 Windows 登录凭据，然后单击“下一步”  。  
   
     > [!NOTE]  
     > 使用 Windows 用户帐户和密码可提供用于连接到数据源的最安全方法。 有关详细信息，请参阅[模拟](../tabular-models/impersonation-ssas-tabular.md)。  
   
-7.  在“选择如何导入数据”页中，确认已选中“从表和视图的列表中进行选择，以便选择要导入的数据”。 需要从表和视图的列表中进行选择，因此，单击“下一步”以便显示源数据库内所有源表的列表。  
+7.  在“选择如何导入数据”  页中，确认已选中“从表和视图的列表中进行选择，以便选择要导入的数据”  。 需要从表和视图的列表中进行选择，因此，单击“下一步”  以便显示源数据库内所有源表的列表。  
   
 8.  在中**选择表和视图**页上，选择以下表的复选框：**DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，并**FactInternetSales**。  
   
-    **请不要**单击“完成”。  
+    **请不要**单击“完成”  。  
   
 ## <a name="FilterData"></a>Filter the table data  
 要导入示例数据库中的 DimCustomer 表包含来自原始 SQL Server Adventure Works 数据库的数据的子集。 将筛选掉不需要导入您的模型时从 DimCustomer 表的列的更多。 如果可能，你将想要筛选出不会为了节省模型使用的内存中空间使用的数据。  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>导入之前对表数据进行筛选  
   
-1.  选择的行**DimCustomer**表，并单击**预览并筛选**。 “预览所选表”窗口将打开，其中显示“DimCustomer”源表中的所有列。  
+1.  选择的行**DimCustomer**表，并单击**预览并筛选**。 “预览所选表”  窗口将打开，其中显示“DimCustomer”源表中的所有列。  
   
 2.  清除位于以下各列顶部的复选框：**SpanishEducation**， **FrenchEducation**， **SpanishOccupation**， **FrenchOccupation**。 
 
@@ -74,7 +74,7 @@ ms.locfileid: "65404869"
   
     因为这些列的值与互联网销售分析无关，所以不需要导入这些列。 消除不必要的列将使您的模型，更小且更高效。  
   
-3.  确认已选中所有其他列，然后单击“确定”。  
+3.  确认已选中所有其他列，然后单击“确定”  。  
   
     请注意，单词**应用的筛选器**此时将显示在**筛选器详细信息**中的列**DimCustomer**行; 如果单击该链接将会看到的文本说明您刚刚应用的筛选器。  
     
@@ -150,9 +150,9 @@ ms.locfileid: "65404869"
     ![as-tabular-lesson2-success](media/as-tabular-lesson2-success.png) 
   
     > [!TIP]  
-    > 若要查看在导入的表之间自动创建的关系，请在“数据准备”行上单击“详细信息”。 
+    > 若要查看在导入的表之间自动创建的关系，请在“数据准备”  行上单击“详细信息”  。 
   
-2.  单击 **“关闭”**。  
+2.  单击 **“关闭”** 。  
   
     该向导将关闭并且模型设计器现在显示在导入的表。 
   

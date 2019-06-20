@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cef68db4bc688aafae6f6c106063ff61fa7ad015
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65449972"
 ---
 # <a name="data-mining-solutions"></a>数据挖掘解决方案
@@ -44,7 +44,7 @@ ms.locfileid: "65449972"
 ##  <a name="bkmk_Deploy"></a> 部署数据挖掘解决方案  
  要将解决方案部署到的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例必须在支持多维对象和数据挖掘对象的模式下运行；即，你不能将数据挖掘对象部署到承载表格模型或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的实例。  
   
- 因此，在 Visual Studio 中创建数据挖掘解决方案时，请务必使用模板 **“Analysis Services 多维和数据挖掘项目”**。  
+ 因此，在 Visual Studio 中创建数据挖掘解决方案时，请务必使用模板 **“Analysis Services 多维和数据挖掘项目”** 。  
   
  在部署解决方案时，将在与解决方案文件同名的数据库中的指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中创建用于数据挖掘的对象。  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676879"
 ---
 # <a name="add-or-edit-filter"></a>添加或编辑筛选器
@@ -38,7 +38,7 @@ ms.locfileid: "62676879"
   
     1.  在 **“添加筛选器”** 对话框上单击 **“取消”** 。  
   
-    2.  在 **“筛选表行”** 页上选择筛选器窗格中的表，再单击 **“编辑”**。  
+    2.  在 **“筛选表行”** 页上选择筛选器窗格中的表，再单击 **“编辑”** 。  
   
     3.  在 **“编辑筛选器”** 对话框中编辑现有筛选器。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62676879"
   
 3.  **指定将从此表接收数据的订阅数**  
   
-     仅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本适用；仅限合并复制。 通过合并复制，可以指定最适合您的数据和应用程序的分区类型。 如果选择 **“此表中的行将仅转到一个订阅”**，则合并复制将设置不重叠分区选项。 不重叠分区与预计算分区协同工作以提高性能，使用不重叠分区可以将与预计算分区相关联的上载开销降至最低。 使用的参数化筛选器和联接筛选器越复杂，不重叠分区的性能优势就越明显。 如果选择此选项，则必须确保对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
+     仅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本适用；仅限合并复制。 通过合并复制，可以指定最适合您的数据和应用程序的分区类型。 如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制将设置不重叠分区选项。 不重叠分区与预计算分区协同工作以提高性能，使用不重叠分区可以将与预计算分区相关联的上载开销降至最低。 使用的参数化筛选器和联接筛选器越复杂，不重叠分区的性能优势就越明显。 如果选择此选项，则必须确保对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
   
  在添加或编辑完筛选器后，请单击 **“确定”** 以保存更改并关闭该对话框。 将对照 SELECT 子句中的表分析并运行指定的筛选器。 如果筛选语句有语法错误或其他问题，将会通知您编辑该筛选语句。  
   

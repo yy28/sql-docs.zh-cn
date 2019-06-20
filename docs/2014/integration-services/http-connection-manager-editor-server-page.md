@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058246"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP 连接管理器编辑器（“服务器”页）
@@ -51,7 +51,7 @@ ms.locfileid: "66058246"
  指定是否希望 HTTP 连接管理器使用客户端证书进行身份验证。  
   
  **证书**  
- 使用“选择证书”对话框从列表中选择证书。 文本框显示与此证书关联的名称。  
+ 使用“选择证书”对话框从列表中选择证书。  文本框显示与此证书关联的名称。  
   
  **超时值(秒)**  
  提供连接 Web 服务器时允许的超时值。 此属性的默认值为 30 秒。  
@@ -60,7 +60,7 @@ ms.locfileid: "66058246"
  提供用于写入数据的块区大小。  
   
  **测试连接**  
- 在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。  
+ 在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。   
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

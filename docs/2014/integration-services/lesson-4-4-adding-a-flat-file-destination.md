@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767369"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>步骤 4：添加平面文件目标
@@ -46,7 +46,7 @@ ms.locfileid: "62767369"
   
 11. 在“选项”窗格中，单击“列”。  
   
-     请注意，除了源数据文件中的列，三个新列是存在：ErrorCode、 ErrorColumn 和 ErrorDescription。 这三列由 Lookup Currency Key 转换的错误输出和获取错误说明转换中的脚本生成，可用于排查失败行的原因。  
+     请注意，除了源数据文件中的列，三个新列是存在：ErrorCode、ErrorColumn 和 ErrorDescription。 这三列由 Lookup Currency Key 转换的错误输出和获取错误说明转换中的脚本生成，可用于排查失败行的原因。  
   
 12. 单击“确定” 。  
   

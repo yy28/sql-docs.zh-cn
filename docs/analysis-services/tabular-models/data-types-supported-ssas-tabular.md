@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22109f1cd7f3ebce652ae4c006473866321f7f0e
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472196"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263416"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>表格模型中支持的数据类型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "62472196"
 >  不能从字符串长度超过 131,072 个字符的 **varchar(max)** 列进行导入。  
   
 ### <a name="table-data-type"></a>Table data type（表数据类型）  
- 此外，DAX 使用“表”  数据类型。 DAX 在许多函数中都使用此数据类型，如在聚合和时间智能计算中。 某些函数要求对表的引用；其他函数返回可用作对其他函数的输入的表。 在要求表作为输入的某些函数中，您可以指定计算结果为表的表达式；对于某些函数，要求对基表的引用。 有关特定函数的要求的信息，请参阅 [DAX 函数引用](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)。  
+ 此外，DAX 使用“表”  数据类型。 DAX 在许多函数中都使用此数据类型，如在聚合和时间智能计算中。 某些函数要求对表的引用；其他函数返回可用作对其他函数的输入的表。 在要求表作为输入的某些函数中，您可以指定计算结果为表的表达式；对于某些函数，要求对基表的引用。 有关特定函数的要求的信息，请参阅 [DAX 函数引用](/dax/dax-function-reference)。  
   
 ##  <a name="bkmk_implicit"></a> DAX 公式中的隐式和显式数据类型转换
   
@@ -136,7 +136,7 @@ ms.locfileid: "62472196"
  例如，如果某一整数在除法运算中与某一货币值一起使用，则两个值都转换为实数，并且结果也是实数。  
   
 #### <a name="comparison-operators"></a>比较运算符  
-支持仅一组有限的混合的数据类型比较操作的组合。 若要了解详细信息，请参阅 [DAX 运算符参考](https://msdn.microsoft.com/library/ee634237.aspx)。  
+支持仅一组有限的混合的数据类型比较操作的组合。 若要了解详细信息，请参阅 [DAX 运算符参考](/dax/dax-operator-reference)。  
   
 ## <a name="bkmk_hand_blanks"></a> 空白、 空字符串和零值的处理  
  下表汇总了差异之间 DAX 和 Microsoft Excel 中处理空白的方式：  
@@ -157,5 +157,5 @@ ms.locfileid: "62472196"
 |BLANK OR BLANK|空白|错误|  
 |BLANK AND BLANK|空白|错误|  
   
- 有关特定函数或运算符如何处理空白的详细信息，请参阅 [DAX 函数引用](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)一节中关于各 DAX 函数的单独主题。  
+ 有关特定函数或运算符如何处理空白的详细信息，请参阅 [DAX 函数引用](/dax/dax-function-reference)一节中关于各 DAX 函数的单独主题。  
   

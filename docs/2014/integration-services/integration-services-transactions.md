@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767621"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 事务
-  包使用事务将任务执行的数据库操作绑定到原子单元中，这样做可以维护数据的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器类型（包、For 循环、Foreach 循环和序列容器以及封装每个任务的任务宿主）都可以配置为使用事务。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了用于配置事务的三个选项：NotSupported、Supported 和 Required。  
+  包使用事务将任务执行的数据库操作绑定到原子单元中，这样做可以维护数据的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器类型（包、For 循环、Foreach 循环和序列容器以及封装每个任务的任务宿主）都可以配置为使用事务。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了用于配置事务的三个选项：NotSupported  、Supported  和 Required  。  
   
 -   **Required** 指示该容器启动一个事务，除非已经存在由其父容器启动的事务。 如果事务已经存在，容器将联接该事务。 例如，如果没有配置为支持事务的包包括一个使用 **Required** 选项的序列容器，则该序列容器会启动其自己的事务。 如果包已经配置为使用 **Required** 选项，则序列容器将联接包事务。  
   

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0af2ec4471dc24af0fdb02576adad312ed35069f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740697"
 ---
 # <a name="srvwillconvert-extended-stored-procedure-api"></a>srv_willconvert（扩展存储过程 API）
@@ -49,10 +49,10 @@ desttype
 ```  
   
 ## <a name="arguments"></a>参数  
- srctype  
+ srctype   
  指示要转换的数据的数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
- desttype  
+ desttype   
  指示源数据要转换成的目标数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
 ## <a name="returns"></a>返回  

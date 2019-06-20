@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013671"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定关系 (SQLXML 4.0)
@@ -54,7 +54,7 @@ ms.locfileid: "66013671"
  指定关系的唯一名称。  
   
  **Parent**  
- 指定父关系（表）。 这是一个可选属性；如果未指定此属性，将从文档的子层次结构中的信息获得父表名称。 如果架构指定了使用相同的两个父-子层次结构 **\<sql: relationship >** 不同的父元素未指定父属性中的，但 **\<sql:关系 >**。 此信息将从架构的层次结构中获得。  
+ 指定父关系（表）。 这是一个可选属性；如果未指定此属性，将从文档的子层次结构中的信息获得父表名称。 如果架构指定了使用相同的两个父-子层次结构 **\<sql: relationship >** 不同的父元素未指定父属性中的，但 **\<sql:关系 >** 。 此信息将从架构的层次结构中获得。  
   
  **parent-key**  
  指定父项的父键。 如果父键由多列组成，则指定值时应在各值之间使用空格。 在为多列键指定的值与为对应的子键指定的值之间存在位置映射。  
@@ -68,7 +68,7 @@ ms.locfileid: "66013671"
  **反函数**  
  此属性上指定 **\<sql: relationship >** 由 updategram 使用。 有关详细信息，请参阅[relationship 上指定 sql: inverse 属性](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
- `sql:key-fields`必须在包含子元素，具有一个元素指定批注 **\<sql: relationship >** 元素子元素之间定义并不提供的主键父元素中指定的表。 即使架构未指定 **\<sql: relationship >**，则必须指定`sql:key-fields`以生成适当的层次结构。 有关详细信息，请参阅[通过使用 sql:key 标识键列的字段](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  
+ `sql:key-fields`必须在包含子元素，具有一个元素指定批注 **\<sql: relationship >** 元素子元素之间定义并不提供的主键父元素中指定的表。 即使架构未指定 **\<sql: relationship >** ，则必须指定`sql:key-fields`以生成适当的层次结构。 有关详细信息，请参阅[通过使用 sql:key 标识键列的字段](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  
   
  为了在结果中生成适当的嵌套，建议在所有架构中指定 `sql:key-fields`。  
   
@@ -238,7 +238,7 @@ ms.locfileid: "66013671"
 </xsd:schema>  
 ```  
   
- 您可以指定匿名关系，而不指定命名关系。 在本示例中的全部内容 **\<批注 >**... **\</annotation >**，它描述了两个关系时，作为子元素的出现 **\<产品 >** 。  
+ 您可以指定匿名关系，而不指定命名关系。 在本示例中的全部内容 **\<批注 >** ... **\</annotation >** ，它描述了两个关系时，作为子元素的出现 **\<产品 >** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -382,9 +382,9 @@ ms.locfileid: "66013671"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. 针对多个元素指定 sql:relationship  
- 在此示例中，带批注的 XSD 架构包含 **\<客户 >**， **\<顺序 >**，以及 **\<OrderDetail >** 元素。  
+ 在此示例中，带批注的 XSD 架构包含 **\<客户 >** ， **\<顺序 >** ，以及 **\<OrderDetail >** 元素。  
   
- **\<顺序 >** 元素是子元素的 **\<客户 >** 元素。 **\<sql: relationship >** 上指定 **\<顺序 >** 子元素; 因此，属于客户的订单将显示为的子元素 **\<客户 >**.  
+ **\<顺序 >** 元素是子元素的 **\<客户 >** 元素。 **\<sql: relationship >** 上指定 **\<顺序 >** 子元素; 因此，属于客户的订单将显示为的子元素 **\<客户 >** .  
   
  **\<顺序 >** 元素包含 **\<OrderDetail >** 子元素。 **\<sql: relationship >** 上指定 **\<OrderDetail >** 子元素，因此属于某个订单的订单详细信息显示为子元素的 **\<顺序 >** 元素。  
   
@@ -524,7 +524,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 在架构中，同时 **\<Emp1 >** 元素和 **\<Emp2 >** 元素都是类型`EmpType`。 类型`EmpType`描述 **\<顺序 >** 子元素和对应 **\<sql: relationship >**。 在这种情况下，没有任何可以中确定的单一父 **\<sql: relationship >** 通过**父**属性。 在此情况下，未指定**父**属性中 **\<sql: relationship >**;**父**从获取属性信息在架构中的层次结构。  
+ 在架构中，同时 **\<Emp1 >** 元素和 **\<Emp2 >** 元素都是类型`EmpType`。 类型`EmpType`描述 **\<顺序 >** 子元素和对应 **\<sql: relationship >** 。 在这种情况下，没有任何可以中确定的单一父 **\<sql: relationship >** 通过**父**属性。 在此情况下，未指定**父**属性中 **\<sql: relationship >** ;**父**从获取属性信息在架构中的层次结构。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
   

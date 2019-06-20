@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dcf080146f8eee0e03d0c7b22c391fd1ace54e85
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487731"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>数据库登录名、用户和角色 (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65487731"
   
 |登录|Description|  
 |-----------|-----------------|  
-|**mds_dlp_login**|允许创建 UNSAFE 程序集。 有关详细信息，请参阅 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。<br /><br /> -具有随机生成的密码的禁用的登录名。<br /><br /> - 映射到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的 dbo。<br /><br /> - 对于 msdb，mds_clr_user 映射到此登录名。|  
+|**mds_dlp_login**|允许创建 UNSAFE 程序集。 有关详细信息，请参阅 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。<br /><br /> -具有随机生成的密码的禁用的登录名。<br /><br /> \- 映射到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的 dbo。<br /><br /> \- 对于 msdb，mds_clr_user 映射到此登录名。|  
 |**mds_email_login**|用于通知的启用的登录名。<br /><br /> 对于 msdb 和 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库，mds_email_user 映射到此登录名。|  
   
 ## <a name="msdb-users"></a>msdb 用户  
@@ -43,13 +43,13 @@ ms.locfileid: "65487731"
 |“用户”|Description|  
 |----------|-----------------|  
 |**mds_clr_user**|未使用。 映射到 mds_dlp_login。|  
-|**mds_email_user**|用于通知。<br /><br /> - 映射到 mds_email_login。<br /><br /> - 是以下角色的成员：DatabaseMailUserRole。|  
+|**mds_email_user**|用于通知。<br /><br /> \- 映射到 mds_email_login。<br /><br /> \- 是以下角色的成员：DatabaseMailUserRole。|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 数据库用户  
   
 |“用户”|Description|  
 |----------|-----------------|  
-|**mds_email_user**|用于通知。<br /><br /> - 具有针对 mdm 架构的 SELECT 权限。<br /><br /> - 具有针对 mdm.MemberGetCriteria 用户定义的表类型的 EXECUTE 权限。<br /><br /> - 具有针对 mdm.udpNotificationQueueActivate 存储过程的 EXECUTE 权限。|  
+|**mds_email_user**|用于通知。<br /><br /> \- 具有针对 mdm 架构的 SELECT 权限。<br /><br /> \- 具有针对 mdm.MemberGetCriteria 用户定义的表类型的 EXECUTE 权限。<br /><br /> \- 具有针对 mdm.udpNotificationQueueActivate 存储过程的 EXECUTE 权限。|  
 |**mds_schema_user**|拥有 mdm 和 mdq 架构。 默认架构为 mdm。<br /><br /> 不具有映射到它的登录名。|  
 |**mds_ssb_user**|用于执行 Service Broker 任务。<br /><br /> -具有针对所有架构的 DELETE、INSERT、REFERENCES、SELECT 和 UPDATE 权限。<br /><br /> -不具有映射到它的登录名。|  
   

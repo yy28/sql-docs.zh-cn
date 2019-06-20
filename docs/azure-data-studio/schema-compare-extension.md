@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: 15c9b05c418d300b7c65266826df552864d0a5b3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798087"
 ---
-# <a name="schema-compare-extension-preview"></a>架构比较扩展 （预览版）
+# <a name="schema-compare-extension-preview"></a>架构比较扩展（预览版）
 架构比较扩展提供了一种易于使用的体验来比较.dacpac 文件和数据库，并从源到目标应用所做的更改。
 
 这种体验目前处于其初始预览状态。 报告问题和功能请求[此处。](https://github.com/microsoft/azuredatastudio/issues)

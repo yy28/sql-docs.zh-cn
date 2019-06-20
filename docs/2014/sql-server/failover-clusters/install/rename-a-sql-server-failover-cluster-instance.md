@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63125994"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
@@ -63,7 +63,7 @@ ms.locfileid: "63125994"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>在重命名操作之后的其他注意事项  
  在重命名故障转移群集的网络名称后，需要按照下面的说明进行验证和操作，使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在所有情况下都正常工作。  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** 更改的网络名称后[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]故障转移群集实例使用 Windows 群集管理器工具，将来的升级或卸载操作可能会失败。 若要解决此问题更新**ClusterName**注册表项中的解决方法部分的说明[这](https://go.microsoft.com/fwlink/?LinkId=244002)(https://go.microsoft.com/fwlink/?LinkId=244002)。  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** 更改的网络名称后[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]故障转移群集实例使用 Windows 群集管理器工具，将来的升级或卸载操作可能会失败。 若要解决此问题更新**ClusterName**注册表项中的解决方法部分的说明[这](https://go.microsoft.com/fwlink/?LinkId=244002)(https://go.microsoft.com/fwlink/?LinkId=244002) 。  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务：** 验证并执行下面的其他操作[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理服务：  
   

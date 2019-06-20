@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: abbdbeec81a029716ac6516f9436373e91365a23
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702773"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>使用 ADO 与 Microsoft Visual Basic 和 Visual Basic for Applications
@@ -31,7 +31,7 @@ ms.locfileid: "66702773"
 
 #### <a name="to-reference-ado-from-microsoft-visual-basic"></a>若要从 Microsoft Visual Basic 引用 ADO
 
-1.  在 Visual Basic 中，从**项目**菜单中，选择**引用...** .
+1.  在 Visual Basic 中，从**项目**菜单中，选择**引用...**.
 
 2.  选择**Microsoft ActiveX 数据对象 x.x 库**从列表中。 验证至少也选中以下库：
 
@@ -43,7 +43,7 @@ ms.locfileid: "66702773"
 
     -   OLE 自动化
 
-3.  单击“确定”  。
+3.  单击“确定” 。
 
  您可以使用 ADO 轻松地使用 Visual Basic 应用程序，通过使用 Microsoft Access 中，例如。
 
@@ -51,7 +51,7 @@ ms.locfileid: "66702773"
 
 1.  在 Microsoft Access 中，选择或创建从一个模块**模块**选项卡**数据库**窗口。
 
-2.  上**工具**菜单中，选择**引用...** .
+2.  上**工具**菜单中，选择**引用...**.
 
 3.  选择**Microsoft ActiveX 数据对象 x.x 库**从列表中。 验证至少也选中以下库：
 
@@ -61,7 +61,7 @@ ms.locfileid: "66702773"
 
     -   Microsoft DAO 3.5 对象库 （或更高版本）
 
-4.  单击“确定”  。
+4.  单击“确定” 。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Visual Basic 中创建 ADO 对象
  若要创建一个自动化变量，并为该变量的对象的实例，可以使用两个方法：**Dim**或**CreateObject**。

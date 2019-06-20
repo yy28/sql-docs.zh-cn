@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057319"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 源编辑器（“连接”页）
@@ -24,10 +24,10 @@ ms.locfileid: "66057319"
   
 ## <a name="static-options"></a>静态选项  
  **OData 连接管理器**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 通过使用“OData 连接管理器编辑器”对话框创建新的连接管理器。  
+ 通过使用“OData 连接管理器编辑器”  对话框创建新的连接管理器。  
   
  **使用集合或资源路径**  
  指定从源选择数据的方法。  
@@ -44,7 +44,7 @@ ms.locfileid: "66057319"
  基于在此对话框中选择的选项显示只读馈送 URL。  
   
  **预览**  
- 通过使用“预览”对话框预览结果。 **“预览”** 最多可以显示 20 行。  
+ 通过使用“预览”  对话框预览结果。 **“预览”** 最多可以显示 20 行。  
   
 ## <a name="dynamic-options"></a>动态选项  
   

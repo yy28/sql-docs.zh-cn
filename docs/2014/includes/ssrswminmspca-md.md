@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 376dc7f48cf137a0a28a18f45300e4de0051a1cb
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65816959"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67228481"
 ---
 **root\\Microsoft\\SqlServer\\ReportServer\\\<*InstanceName*\>\\v12\\Admin**
