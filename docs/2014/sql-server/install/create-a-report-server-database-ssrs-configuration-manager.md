@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e6a5c6544acae62a5a9ed7d2fbafe05bbd0f9f2e
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66454665"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>创建报表服务器数据库（SSRS 配置管理器）
@@ -44,7 +44,7 @@ ms.locfileid: "66454665"
   
 -   手动：请使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 如果使用远程 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 来承载该数据库，则必须手动创建报表服务器数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
- **SharePoint 模式：** “报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项“仅安装”  。 此选项安装所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下方式之一至少创建一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序：  
+ **SharePoint 模式：**“报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项“仅安装”。 此选项安装所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下方式之一至少创建一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序：  
   
 -   使用 SharePoint 管理中心创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 有关详细信息，请参阅[步骤 3：创建 Reporting Services 服务应用程序](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)中的“服务应用程序”一节。  
   

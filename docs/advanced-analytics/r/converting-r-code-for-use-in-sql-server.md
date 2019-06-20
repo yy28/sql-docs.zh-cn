@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: a3348058b03ff1441256cc8298ddc1b5b2216b0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642780"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>将 SQL Server （数据库内） 实例中执行的 R 代码转换
@@ -26,7 +26,7 @@ ms.locfileid: "62642780"
 
 + 使用访问网络或不能在 SQL Server 上安装的 R 库。
 + 代码会单独调用外部 SQL Server，如 Excel 工作表、 文件共享上和其他数据库的数据源。 
-+ 你想要运行中的代码*@script*参数[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)和也参数化存储的过程。
++ 你想要运行中的代码 *@script* 参数[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)和也参数化存储的过程。
 + 您的原始解决方案包括可能会在生产环境中执行独立，如数据准备或与模型定型、 评分、 或报告的功能设计更加高效的多个步骤。
 + 你想要提高通过更改库、 使用并行执行，或卸载到 SQL Server 的一些处理来优化性能。 
 

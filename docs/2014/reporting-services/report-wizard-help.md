@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102992"
 ---
 # <a name="report-wizard-help"></a>报表向导帮助
   本部分介绍报表向导的 F1 帮助。 报表向导可自动完成创建表格报表和矩阵报表的过程。 下表对本部分的主题进行了说明：  
   
- 若要打开报表向导，请在 **“项目”** 菜单上单击 **“添加新项”**。  
+ 若要打开报表向导，请在 **“项目”** 菜单上单击 **“添加新项”** 。  
   
 ## <a name="in-this-section"></a>本节内容  
   

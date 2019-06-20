@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 711b577b737b48012e1bed0a52ba599cf17b3d8f
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 1f322b395f897780f3693d1186767aeef7dbfd4a
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685754"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263265"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services 中的新增功能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -38,7 +38,7 @@ SQL Server 2017 Analysis Services 中包含了此处所述的功能。 为了充
 ![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-若要升级现有表格模型在 SSDT 中，在解决方案资源管理器，右键单击**Model.bim**，然后在**属性**，将**兼容性级别**属性设置为**SQL Server 2017 (1400)**。 
+若要升级现有表格模型在 SSDT 中，在解决方案资源管理器，右键单击**Model.bim**，然后在**属性**，将**兼容性级别**属性设置为**SQL Server 2017 (1400)** 。 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -85,14 +85,14 @@ SQL Server 2017 Analysis Services 中包含了此处所述的功能。 为了充
 
 ![AS_Ragged_Hierarchy](../analysis-services/media/as-ragged-hierarchy.png)
 
-此版本引入了“隐藏成员”  属性。 可以将层次结构的“隐藏成员”  属性设置为“隐藏空成员” 。
+此版本引入了“隐藏成员”  属性。 可以将层次结构的“隐藏成员”  属性设置为“隐藏空成员”  。
 
 ![AS_Hide_Blank_Members](../analysis-services/media/as-hide-blank-members.png)
 
  >[!NOTE]
  > 模型中的空成员表示为 DAX 空值，而非空字符串。
 
-设置为“隐藏空成员” 并部署模型后，会在报告客户端（如 Excel）中显示易于阅读的层次结构版本。
+设置为“隐藏空成员”  并部署模型后，会在报告客户端（如 Excel）中显示易于阅读的层次结构版本。
 
 ![AS_Non_Ragged_Hierarchy](../analysis-services/media/as-non-ragged-hierarchy.png)
 
@@ -111,7 +111,7 @@ SQL Server 2017 Analysis Services 中包含了此处所述的功能。 为了充
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 函数通常用在详细信息行表达式。 以下示例定义为示例 Adventure Works 表格模型中 Internet 销售表的行返回的列：
+[SELECTCOLUMNS](/dax/selectcolumns-function-dax) DAX 函数通常用在详细信息行表达式。 以下示例定义为示例 Adventure Works 表格模型中 Internet 销售表的行返回的列：
 
 ```
 SELECTCOLUMNS(
@@ -123,7 +123,7 @@ SELECTCOLUMNS(
 )
 ```
 
-定义属性并部署模型后，用户选择“显示详细信息” 时，会返回自定义行集。 它将自动采用所选单元格的筛选上下文。 在此示例中，仅显示 2010 年值的行：
+定义属性并部署模型后，用户选择“显示详细信息”  时，会返回自定义行集。 它将自动采用所选单元格的筛选上下文。 在此示例中，仅显示 2010 年值的行：
 
 ![AS_Detail_Rows](../analysis-services/media/as-detail-rows.png)
 
@@ -146,7 +146,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 
 必须使用基于 JSON 的元数据、 表格模型脚本语言 (TMSL) 或表格对象模型 (TOM) 设置对象级安全性。 
 
-例如，通过将“TablePermission”  类的“MetadataPermission”  属性设置为“无” ，以下代码可帮助保护示例 Adventure Works 表格模型中的产品表。
+例如，通过将“TablePermission”  类的“MetadataPermission”  属性设置为“无”  ，以下代码可帮助保护示例 Adventure Works 表格模型中的产品表。
 
 ```
 //Find the Users role in Adventure Works and secure the Product table
@@ -179,9 +179,9 @@ db.Update(UpdateOptions.ExpandFull);
 [MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset) ，为此 DMV，各种客户端工具用于显示度量值维度提供了改进。 例如，Excel 数据透视表中的资源管理器功能允许用户跨向下钻到与所选度量值相关的维度。 此版本中更正基数列之前显示不正确的值。
 
 ## <a name="dax-enhancements"></a>DAX 增强功能
-此版本包括对新的 DAX 函数和功能的支持。 为了利用，你需要使用最新版本的 SSDT。 若要了解详细信息，请参阅[的新 DAX 函数](https://msdn.microsoft.com/library/mt704075.aspx)。
+此版本包括对新的 DAX 函数和功能的支持。 为了利用，你需要使用最新版本的 SSDT。 若要了解详细信息，请参阅[的新 DAX 函数](/dax/new-dax-functions)。
 
-一个新的 DAX 功能的最重要部分是新[IN 运算符 / 函数 CONTAINSROW](https://msdn.microsoft.com/library/mt842621.aspx) DAX 表达式。 这与经常用于在 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 子句中指定多个值的 `WHERE` 运算符类似。
+一个新的 DAX 功能的最重要部分是新[IN 运算符 / 函数 CONTAINSROW](/dax/in-operator-containsrow-function) DAX 表达式。 这与经常用于在 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 子句中指定多个值的 `WHERE` 运算符类似。
 
 以前，通常使用逻辑 `OR` 运算符指定多值筛选，如以下度量值表达式所示：
 

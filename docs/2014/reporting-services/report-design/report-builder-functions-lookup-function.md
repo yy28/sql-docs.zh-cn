@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105214"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 函数（报表生成器和 SSRS）
@@ -32,13 +32,13 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parameters  
  *source_expression*  
- (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ProdID.Value`。  
+ (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如， `=Fields!ProdID.Value` 。  
   
  *destination_expression*  
- (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!ProductID.Value`。  
+ (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如， `=Fields!ProductID.Value` 。  
   
  *result_expression*  
- (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如，`=Fields!ProductName.Value`。  
+ (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如， `=Fields!ProductName.Value` 。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“Products”。  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209978"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>配合使用 16 位应用程序和 32 位驱动程序
@@ -36,7 +36,7 @@ ms.locfileid: "63209978"
 >  只要一个 16 位应用程序与 32 位驱动程序进行交互，32 位驱动程序管理器将始终返回"2.0"作为版本的 ODBC 驱动程序支持。  
   
 ## <a name="administration"></a>管理  
- 可以通过使用 ODBC 数据源管理器管理 32 位驱动程序的数据的源。 若要打开 ODBC 管理器中运行 Microsoft® Windows® 2000年的计算机上，打开 Windows 控制面板中，双击**管理工具**，然后双击**数据源 (ODBC)**。 在计算机上运行的 Microsoft Windows 的早期版本，名为图标**32 位 ODBC**或只需**ODBC**。  
+ 可以通过使用 ODBC 数据源管理器管理 32 位驱动程序的数据的源。 若要打开 ODBC 管理器中运行 Microsoft® Windows® 2000年的计算机上，打开 Windows 控制面板中，双击**管理工具**，然后双击**数据源 (ODBC)** 。 在计算机上运行的 Microsoft Windows 的早期版本，名为图标**32 位 ODBC**或只需**ODBC**。  
   
  下图显示了如何的 16 位应用程序调用 32 位驱动程序安装程序 DLL。 16 位安装程序 DLL 之间的 32 位驱动程序安装程序 DLL 是将转换为 32 位安装程序 DLL 调用的 16 位安装程序 DLL 调用的泛型形式转换 DLL。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63209978"
 ## <a name="components"></a>组件  
  MDAC 2.8 SP1 SDK 的 ODBC 组件包括以下文件为运行 32 位驱动程序使用 16 位应用程序。 这些组件是 \Redist 目录中。  
   
-|File name|描述|  
+|File name|Description|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16 位 ODBC 泛型形式转换 DLL|  
 |Odbc32gt.dll|32 位 ODBC 泛型形式转换 DLL|  
@@ -59,7 +59,7 @@ ms.locfileid: "63209978"
   
  此外，以下文件以及 16 位 2.10 的 ODBC 驱动程序管理器中，这不是 ODBC 3.51 的一部分，所需的应使用 16 位应用程序安装。  
   
-|File name|描述|  
+|File name|Description|  
 |---------------|-----------------|  
 |Odbc.dll|16 位驱动程序管理器|  
 |Odbcinst.dll|16 位安装程序 DLL|  

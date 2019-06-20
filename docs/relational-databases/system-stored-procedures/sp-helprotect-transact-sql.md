@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635864"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'object_statement'` 是当前数据库中或具有报告权限的语句中的名称。 *object_statement*是**nvarchar(776)**，默认值为 NULL，表示将返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称中窗体可以包含的所有者限定符_所有者_**。**_对象_。  
+`[ @name = ] 'object_statement'` 是当前数据库中或具有报告权限的语句中的名称。 *object_statement*是**nvarchar(776)** ，默认值为 NULL，表示将返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称中窗体可以包含的所有者限定符_所有者_ **。** _对象_。  
   
  如果*object_statement*是一条语句，它可以是 CREATE 语句。  
   
@@ -56,7 +56,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 `[ @grantorname = ] 'grantor'` 是授予权限的名称。 *grantor*是**sysname**，默认值为 NULL，表示将返回数据库中任意主体授予权限的所有信息。  
   
-`[ @permissionarea = ] 'type'` 是一个字符串，该值指示是否显示对象权限 (字符串**o**)，语句权限 (字符串**s**)，和 / 或 (**os**)。 *类型*是**varchar(10)**，默认值为**os**。 *类型*可以是任何组合**o**并**s**用或者不用逗号或空格之间**o**并**s**。  
+`[ @permissionarea = ] 'type'` 是一个字符串，该值指示是否显示对象权限 (字符串**o**)，语句权限 (字符串**s**)，和 / 或 (**os**)。 *类型*是**varchar(10)** ，默认值为**os**。 *类型*可以是任何组合**o**并**s**用或者不用逗号或空格之间**o**并**s**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

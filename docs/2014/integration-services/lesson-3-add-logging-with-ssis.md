@@ -10,12 +10,12 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a3a32b35503ff6dae2e103f46e45a28359b948d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767531"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046766"
 ---
 # <a name="lesson-3-adding-logging"></a>第 3 课：添加日志记录
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含日志记录功能，可通过提供任务和容器事件跟踪监控包执行情况以及进行故障排除。 日志记录功能非常灵活，可以在包级别或在包中的各个任务和容器上启用。 可以选择要记录的事件，也可以对单个包创建多个日志。  
@@ -35,7 +35,7 @@ ms.locfileid: "62767531"
  在本课程中，您将创建一份中创建的包[第 2 课：添加循环](lesson-2-adding-looping-with-ssis.md)。 使用这个新包，您将添加并配置日志记录，以在包执行过程中监控特定事件。 如果您尚未完成前面的任何课程，也可以复制本教程附带的已完成的 Lesson 2 包。  
   
 > [!IMPORTANT]  
->  本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [CodePlex 上的 Reporting Services 产品示例](https://go.microsoft.com/fwlink/p/?LinkID=52691)。  
+>  本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署的详细信息**AdventureWorksDW2012**， [GitHub 上的 Reporting Services 产品示例](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。  
   
 ## <a name="lesson-tasks"></a>课程任务  
  本课程包含以下任务：  

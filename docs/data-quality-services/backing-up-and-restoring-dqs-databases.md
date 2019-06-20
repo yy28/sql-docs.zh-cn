@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: f831f2c077f89a57dd8b1dfde667aa91efa01c36
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802219"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>备份和还原 DQS 数据库

@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63143578"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 驱动程序性能事件探查
@@ -74,7 +74,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>应用程序配置文件统计信息  
   
-|SQLPERF 字段|描述|  
+|SQLPERF 字段|Description|  
 |-------------------|-----------------|  
 |TimerResolution|服务器时钟时间的最小解析度（以毫秒为单位）。 通常，此值报告为 0（零）并且只有在报告的数值很大时才应予以考虑。 如果服务器时钟的最小解析度大于某些基于计时器的统计信息可能使用的间隔时间，这些统计信息可能会急剧增加。|  
 |SQLidu|SQL_PERF_START 之后 INSERT、DELETE 或 UPDATE 语句的数量。|  
@@ -112,7 +112,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>时间统计信息  
   
-|SQLPERF 字段|描述|  
+|SQLPERF 字段|Description|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 之后驱动程序花费在处理工作上的累积时间量，其中包括等待服务器的回复所花费的时间。|  
 |msNetworkServerTime|驱动程序等待服务器回复所花费的累积时间量。|  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740117"
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>MDX 数据修改 - 使用多维数据集写回
@@ -40,7 +40,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
 ## <a name="example"></a>示例  
  您可以使用 Adventure Works 多维数据集中的 Sales Targets 度量值组来测试 UPDATE CUBE。 此度量值组包含由 SUM 聚合的度量值，这是 UPDATE CUBE 的一个要求。  
   
-1.  为 Adventure Works 数据库的 Sales Targets 度量值组启用写回。 在 Management Studio 中，右键单击度量值组，指向“写回选项”，然后选择“启用写回”。  
+1.  为 Adventure Works 数据库的 Sales Targets 度量值组启用写回。 在 Management Studio 中，右键单击度量值组，指向“写回选项”，然后选择“启用写回”   。  
   
      您应在 Writeback 文件夹中看到一个新的写回表。 该表的名称为 WriteTable_Fact Sales Quota。  
   
@@ -65,7 +65,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
   
 4.  重新运行 SELECT 语句。 您现在应看到配额为零。  
   
- 写回值约束为仅用于当前会话。 若要在各用户和会话之间保留该值，请处理写回表。 在 Management Studio 中，右键单击“WriteTable_Fact Sales Quota”，然后选择“处理”。  
+ 写回值约束为仅用于当前会话。 若要在各用户和会话之间保留该值，请处理写回表。 在 Management Studio 中，右键单击“WriteTable_Fact Sales Quota”，然后选择“处理”  。  
   
  若要指定分配方法，新值必须大于零。 在此示例中，“Sales Amount Quota”的新值为两百万，该分配方法将该金额在所有销售代表之间进行分配。  
   
@@ -106,7 +106,7 @@ USE_EQUAL_ALLOCATION
   
 -   删除写回中包含的度量值。  
   
--   向写回中包含的维度添加不带“(全部)”级别的属性。  
+-   向写回中包含的维度添加不带“(全部)”  级别的属性。  
   
 -   更改写回中包含的维度的维度粒度。  
   

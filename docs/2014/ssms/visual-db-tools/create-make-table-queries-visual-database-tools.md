@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676309"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>创建“生成表”查询 (Visual Database Tools)
@@ -59,17 +59,17 @@ WHERE country = 'UK'
   
 1.  将一个或多个源表添加到“关系图”窗格中。  
   
-2.  在“查询设计器”菜单中，指向“更改类型”，再单击“生成表”。  
+2.  在“查询设计器”  菜单中，指向“更改类型”  ，再单击“生成表”  。  
   
-3.  在“生成表”对话框中，键入目标表的名称。 查询和视图设计器不会检查该名称是否已使用，也不会检查您是否具有创建表的权限。  
+3.  在“生成表”  对话框中，键入目标表的名称。 查询和视图设计器不会检查该名称是否已使用，也不会检查您是否具有创建表的权限。  
   
      若要在另一个数据库中创建目标表，请指定完全限定表名，包括目标数据库的名称、所有者（如果需要）以及表名。  
   
-4.  通过将其添加到查询中来指定要复制的列。 有关详细信息，请参阅[向查询中添加列 (Visual Database Tools)](visual-database-tools.md)。 列只有在添加到查询后才能复制。 若要复制整个行，请选择 **\* （所有列）**。  
+4.  通过将其添加到查询中来指定要复制的列。 有关详细信息，请参阅[向查询中添加列 (Visual Database Tools)](visual-database-tools.md)。 列只有在添加到查询后才能复制。 若要复制整个行，请选择 **\* （所有列）** 。  
   
-     “查询和视图设计器”会将选择的列添加到“条件”窗格的“列”列中。  
+     “查询和视图设计器”会将选择的列添加到“条件”窗格的“列”  列中。  
   
-5.  如果希望按特定顺序复制行，请指定排序顺序。 有关详细信息，请参阅“对查询结果进行排序和分组”。  
+5.  如果希望按特定顺序复制行，请指定排序顺序。 有关详细信息，请参阅“对查询结果进行排序和分组”  。  
   
 6.  通过输入搜索条件指定要复制的行。 有关详细信息，请参阅[指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)。  
   

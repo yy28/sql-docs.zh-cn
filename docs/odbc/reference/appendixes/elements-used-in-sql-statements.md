@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240953"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL 语句中使用的元素
@@ -54,7 +54,7 @@ ms.locfileid: "63240953"
   
  *expression* ::= term &#124; expression {+&#124;-} term  
   
- *factor* ::= [*+*&#124;*-*]*primary*  
+ *factor* ::= [ *+* &#124; *-* ]*primary*  
   
  *insert-value* ::=  
   
@@ -98,10 +98,10 @@ ms.locfileid: "63240953"
   
  *table-reference-list* ::= *table-reference* [,*table-reference*]...  
   
- *term* ::= *factor* &#124; *term* {\*&#124;*/*} *factor*  
+ *term* ::= *factor* &#124; *term* {\*&#124; */* } *factor*  
   
  *unsigned-integer* ::= {*digit*}  
   
  *上限大小写字母*:: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G&#124;小时&#124;我&#124;J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; &#124;Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
- *user-defined-name* ::= *letter*[*digit* &#124; *letter* &#124; *_*]...
+ *user-defined-name* ::= *letter*[*digit* &#124; *letter* &#124; *_* ]...

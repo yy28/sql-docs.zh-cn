@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92aa4343d2c9ec6b0b69275be71923595e2dc76e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109527"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>向管理员提出警报的数据警报管理器
@@ -41,7 +41,7 @@ ms.locfileid: "66109527"
   
  数据警报管理器包括一个表，该表列出警报名称、报表名称、警报所有者的姓名、发送警报消息的数目、上次运行警报的时间、上次修改警报定义的时间以及警报消息的状态。 如果无法生成或发送警报，则状态列将包含有关该错误的信息并且帮助您纠正该警报问题。 有关详细信息，请参阅 [在数据警报管理器中管理 SharePoint 站点上的所有数据警报](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
- 下表在数据警报管理器中显示某个表中的示例数据。 发生错误时，错误消息和日志中条目的标识符 (GUID) 包含在表的“状态”字段中。  
+ 下表在数据警报管理器中显示某个表中的示例数据。 发生错误时，错误消息和日志中条目的标识符 (GUID) 包含在表的“状态”字段中  。  
   
 |警报名称|报表名称|创建者|发送的警报数|上次运行时间|上次修改时间|“登录属性”|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  

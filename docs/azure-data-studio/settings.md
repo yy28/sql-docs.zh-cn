@@ -12,10 +12,10 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: 883c0c98531311d77754fcbcdd86615283aecdc7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798068"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改用户和工作区设置
@@ -31,7 +31,7 @@ ms.locfileid: "66798068"
 
 菜单命令**文件** > **首选项** > **设置**(**代码** >  **首选项** > **设置**Mac 上) 提供的入口点，若要配置用户和工作区设置。 提供的默认设置的列表。 将复制你想要将更改为适当的任何设置`settings.json`文件。 在右侧的选项卡，可以在用户和工作区设置文件之间快速切换。
 
-您还可以打开中的用户和工作区设置**命令面板**(**Ctrl + Shift + P**) 与**首选项：打开用户设置**和**首选项：打开设置工作区**或使用键盘快捷方式 (**Ctrl +，** )。
+您还可以打开中的用户和工作区设置**命令面板**(**Ctrl + Shift + P**) 与**首选项：打开用户设置**和**首选项：打开设置工作区**或使用键盘快捷方式 (**Ctrl +，**)。
 
 以下示例禁用在编辑器中的行号，并配置的代码行来自动缩进。
 

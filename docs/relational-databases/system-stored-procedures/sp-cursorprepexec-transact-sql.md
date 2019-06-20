@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09f33f4f153f21cfe7a3c8c538c2f272b3df77b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507349"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -86,7 +86,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 由于可能存在的请求的选项不适合于通过定义的游标 *\<stmt >*，此参数可同时用作输入和输出。 在此类情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个适当的类型并修改此值。  
+ 由于可能存在的请求的选项不适合于通过定义的游标 *\<stmt >* ，此参数可同时用作输入和输出。 在此类情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个适当的类型并修改此值。  
   
  *ccopt*  
  并发控制选项。 *ccopt*是一个可选参数，需要以下项之一**int**输入值。  

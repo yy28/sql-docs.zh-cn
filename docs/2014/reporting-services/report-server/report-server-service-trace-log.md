@@ -16,17 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d69b2a3eeb28d5fe23eb6674c8a0ca0ee7628a75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103412"
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器跟踪日志是一个含有报表服务器服务操作详细信息的 ASCII 文本文件，其中包括由报表服务器 Web 服务、报表管理器和后台处理执行的操作。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息可能非常有用。  
   
 > [!NOTE]  
->  在早期版本中，每个应用程序都具有一个跟踪日志文件，因此具有多个跟踪日志文件。 以下文件已过时，并且 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本不会再创建它们：ReportServerWebApp_*\<时间戳 >*.log、 ReportServer_*\<时间戳 >*.log 和 ReportServerService_main_ *\<时间戳 >*。 日志。  
+>  在早期版本中，每个应用程序都具有一个跟踪日志文件，因此具有多个跟踪日志文件。 以下文件已过时，并且 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本不会再创建它们：ReportServerWebApp_ *\<时间戳 >* .log、 ReportServer_ *\<时间戳 >* .log 和 ReportServerService_main_ *\<时间戳 >* 。 日志。  
   
  **本主题内容：**  
   

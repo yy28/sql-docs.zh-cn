@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479939"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>创建订阅视图 (Master Data Services)
@@ -32,9 +32,9 @@ ms.locfileid: "65479939"
   
 ### <a name="to-create-a-subscription-view"></a>若要创建订阅视图  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“集成管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“集成管理”** 。  
   
-2.  在菜单栏中，单击 **“创建视图”**。  
+2.  在菜单栏中，单击 **“创建视图”** 。  
   
 3.  上**订阅视图**页上，单击**添加订阅视图**。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65479939"
   
 9. 如果您从 **“格式”** 列表中选择 **“显式级别”** 或 **“派生级别”** ，则键入要包括在视图中的层次结构中的级别数。  
   
-10. 单击“保存” 。  
+10. 单击“保存”  。  
   
 ## <a name="see-also"></a>请参阅  
  [将数据导出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   

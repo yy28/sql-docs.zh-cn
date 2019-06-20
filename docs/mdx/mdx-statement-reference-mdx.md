@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6155fa549918a9bb17d93c268681826d07581123
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63048491"
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX 语句参考 (MDX)
@@ -23,7 +23,7 @@ ms.locfileid: "63048491"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|Description|  
 |-----------|-----------------|  
 |[MDX 脚本编写语句 (MDX)](../mdx/mdx-scripting-statements-mdx.md)|包含有关 MDX 脚本编写语句的信息，这种语句用于管理 MDX 脚本中的查询上下文、作用域和流控制。|  
 |[MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|包含有关 MDX 数据定义语句的信息，这种语句用于创建、删除和操作多维对象。|  

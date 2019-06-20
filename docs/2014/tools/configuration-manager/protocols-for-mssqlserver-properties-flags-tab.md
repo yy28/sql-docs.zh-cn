@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 937485df231bcff089157bd8fee05ebd913a4ff4
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63459858"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>MSSQLSERVER 的协议属性（“标志”选项卡）
@@ -29,7 +29,7 @@ ms.locfileid: "63459858"
   
  有关加密的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书中的“加密与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接”。  
   
- 登录过程始终是加密的。 如果将 **ForceEncryption** 设为 **“是”**，则将对所有客户端/服务器通信进行加密，并必须将连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的客户端配置为信任服务器证书的根颁发机构。 有关详细信息，请参阅 SQL Server 联机丛书中的“如何：启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密连接（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”，位于  联机丛书中。  
+ 登录过程始终是加密的。 如果将 **ForceEncryption** 设为 **“是”**，则将对所有客户端/服务器通信进行加密，并必须将连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的客户端配置为信任服务器证书的根颁发机构。 有关详细信息，请参阅 SQL Server 联机丛书中的“如何：启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的加密连接（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”，位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中。  
   
 ## <a name="cluster-servers"></a>集群服务器  
  若要在故障转移群集中使用加密，必须在故障转移群集中的所有节点上安装具有完全限定的虚拟服务器 DNS 名称的服务器证书。 例如，如果有一个包含两个分别名为“test1.\<your company>.com”和“test2.\<your company>.com”节点的群集，还有一个名为“virtsql”的虚拟服务器，则需要在这两个节点上安装“virtsql.\<your company>.com”的证书。 然后，可以选中 **SQL Server 配置管理器** 中的 **ForceEncryption** 复选框以将故障转移群集配置为使用加密。  

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213375"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>使用 Integration Services 并行数据仓库加载数据
@@ -216,17 +216,17 @@ id,city,lastUpdateDate,orderDate
   
 4.  选择**创建新的连接**。  
   
-5.  填写 server、 用户、 密码和目标数据库的信息特定于你的设备的信息。 （示例所示）。 再单击 **“确定”**。  
+5.  填写 server、 用户、 密码和目标数据库的信息特定于你的设备的信息。 （示例所示）。 再单击 **“确定”** 。  
   
     对于 InfiniBand 连接，请**服务器名称**:输入 < 设备名称 >-SQLCTL01，17001。  
   
     为以太网连接**服务器名称**:输入控制节点的群集、 逗号、 端口 17001 的 IP 的地址。 例如，10.192.63.134,17001。  
   
-    **用户：**`user1`  
+    **用户：** `user1`  
   
-    **密码：**`password1`  
+    **密码：** `password1`  
   
-    **目标数据库：**`LoadExampleDB`  
+    **目标数据库：** `LoadExampleDB`  
   
 6.  选择目标表： `Orders`。  
   

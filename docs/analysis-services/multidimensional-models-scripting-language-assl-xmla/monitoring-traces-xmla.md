@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 60c44d2771033c86814cb9dbc0a18aab7c79c483
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261629"
 ---
 # <a name="monitoring-traces-xmla"></a>监视跟踪 (XMLA)
@@ -48,7 +48,7 @@ ms.locfileid: "63261629"
 |ObjectReference|String|ObjectName 中所指定对象的对象引用的 XML 表示形式。|  
 |NestLevel|Integer|发生事件的事务的级别。|  
 |NumSegments|Long integer|发生事件的命令所影响或访问的数据段数量。|  
-|Severity|Integer|事件异常的严重级别。 此列可包含下列值之一：<br /><br /> <br /><br /> 0：成功<br /><br /> <br /><br /> 1:信息<br /><br /> <br /><br /> 2:警告<br /><br /> <br /><br /> 3:错误|  
+|Severity|Integer|事件异常的严重级别。 此列可包含下列值之一：<br /><br /> <br /><br /> 0：成功<br /><br /> <br /><br /> 1：信息<br /><br /> <br /><br /> 2:警告<br /><br /> <br /><br /> 3：错误|  
 |成功|Boolean|指示命令成功还是失败。|  
 |错误|Long integer|事件的错误号（如果适用）。|  
 |ConnectionID|String|发生事件的连接的标识符。|  

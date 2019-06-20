@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658840"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
@@ -32,7 +32,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
- 指定的类型的标量值 *\<* 标量列引用*>*。  
+ 指定的类型的标量值 *\<* 标量列引用 *>* 。  
   
 ## <a name="remarks"></a>备注  
  如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包括缺少状态存储桶，设置\<预测状态 > 到**INCLUDE_NULL**。  

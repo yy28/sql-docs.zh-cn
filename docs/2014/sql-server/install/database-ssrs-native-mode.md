@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095718"
 ---
 # <a name="database-ssrs-native-mode"></a>数据库（SSRS 本机模式）
@@ -47,7 +47,7 @@ ms.locfileid: "66095718"
  指定报表服务器用来连接报表服务器数据库的凭据。 可以指定的凭据类型包括服务帐户、Windows 域用户、Windows 本地用户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名。 有关选择凭据的详细信息，请参阅[配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
  **用户名**  
- 如果使用的是 Windows 凭据，请指定域用户帐户；如果使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果使用的 Windows 凭据，它们按以下格式指定： *\<域 >\\< 帐户\>*。  
+ 如果使用的是 Windows 凭据，请指定域用户帐户；如果使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果使用的 Windows 凭据，它们按以下格式指定： *\<域 >\\< 帐户\>* 。  
   
  **密码**  
  指定帐户的密码。  

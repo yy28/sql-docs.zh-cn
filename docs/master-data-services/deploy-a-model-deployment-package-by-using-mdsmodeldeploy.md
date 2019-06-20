@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9af16a2e8c1d967b42882cc84fae68f1920e9c28
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478079"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署包
@@ -42,7 +42,7 @@ ms.locfileid: "65478079"
   
 -   您必须是部署模型的环境中的管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   如果正在更新包含数据的模型，则不能“锁定”或“提交”正在部署到的版本。  
+-   如果正在更新包含数据的模型，则不能“锁定”或“提交”正在部署到的版本   。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>部署模型部署包  
   
@@ -58,7 +58,7 @@ ms.locfileid: "65478079"
   
     -   若要显示所有可用选项，请键入 `MDSModelDeploy` ，然后按 Enter 键。  
   
-    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName 是该选项的名称：`MDSModelDeploy help OptionName`。  
+    -   若要显示某个选项的帮助，请键入以下命令，其中 OptionName  是该选项的名称：`MDSModelDeploy help OptionName`。  
   
 4.  可选。 如果您有多个 Web 应用程序，通过键入下面的命令并按 Enter 键，确定您要部署到的服务的名称：  
   
@@ -91,13 +91,13 @@ ms.locfileid: "65478079"
     > [!IMPORTANT]  
     >  如果使用 MDSModelDeploy 工具更新现有模型及其数据，并且该包不包含目标模型中存在的实体、属性或成员，则 MDSModelDeploy 不会从模型中删除此实体、属性或成员。  
   
-     其中，PackageName 是包文件 (.pkg) 的名称，ModelName 是新模型的名称，VersionName 是版本的名称，ServiceName 是上一步中返回的服务的名称。 确保模型名称和版本名称完全匹配区分大小写的名称。  
+     其中，PackageName  是包文件 (.pkg) 的名称，ModelName  是新模型的名称，VersionName  是版本的名称，ServiceName  是上一步中返回的服务的名称。 确保模型名称和版本名称完全匹配区分大小写的名称。  
   
 6.  成功部署包后，将显示一条消息“MDSModelDeploy 操作已成功完成”。  
   
  **说明：**  
   
--   如果包中的订阅视图与现有模型中的订阅视图同名，则显示如下警告：“Deployer 订阅视图已重命名”，并且该视图创建为 modelname.subscriptionviewname。 如果此名称已使用，则不会创建订阅视图。  
+-   如果包中的订阅视图与现有模型中的订阅视图同名，则显示如下警告：“Deployer 订阅视图已重命名”，并且该视图创建为 modelname.subscriptionviewname   。 如果此名称已使用，则不会创建订阅视图。  
   
 -   部署过程具有以下四个步骤：  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1b0d70a5d8121963d424f25eef517af7cde4ba7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720071"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>将表从一个数据库关系图复制到另一个数据库关系图 (Visual Database Tools)
@@ -31,11 +31,11 @@ ms.locfileid: "62720071"
   
 2.  打开源数据库关系图和目标数据库关系图，并在源关系图中选择要复制到目标关系图的表。  
   
-3.  单击工具栏上的“复制”按钮。 此操作会将所选表的定义放置到剪贴板上。  
+3.  单击工具栏上的“复制”  按钮。 此操作会将所选表的定义放置到剪贴板上。  
   
 4.  切换到目标关系图。 此关系图必须与源关系图位于同一数据库中。  
   
-5.  单击工具栏上的“粘贴”按钮。 剪贴板内容将出现在新的位置，而且在单击其他位置之前保持突出显示状态。 如果选定的表与目标关系图中的其他表之间存在关系，则将自动绘制关系线。  
+5.  单击工具栏上的“粘贴”  按钮。 剪贴板内容将出现在新的位置，而且在单击其他位置之前保持突出显示状态。 如果选定的表与目标关系图中的其他表之间存在关系，则将自动绘制关系线。  
   
  当在任一关系图中编辑该表时，所做更改将同时反映在这两个关系图中。 同样，在任一关系图中保存表之后，在任一关系图中都不再将该表视为“已修改”。  
   

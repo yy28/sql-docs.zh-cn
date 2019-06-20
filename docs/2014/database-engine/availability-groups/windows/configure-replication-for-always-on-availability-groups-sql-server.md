@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 547ebeb6043345821d2b2a19b407599abfd14008
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814706"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>为 AlwaysOn 可用性组配置复制 (SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "62814706"
         @security_mode = 1;  
     ```  
   
-3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 `sp_adddistpublisher`。 @security_mode 参数可用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前主要副本。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为 0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 *@login* 和 *@password* 值一起使用。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
+3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 `sp_adddistpublisher`。 @security_mode 参数可用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前主要副本  。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为 0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 *@login* 和 *@password* 值一起使用。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
   
     > [!NOTE]  
     >  如果任何已修改的复制代理在分发服务器之外的计算机上运行，则使用 Windows 身份验证连接到主副本的方法将要求为副本主机之间的通信配置 Kerberos 身份验证。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名连接到当前主副本的方法无需 Kerberos 身份验证。  
@@ -70,7 +70,7 @@ ms.locfileid: "62814706"
   
  **在原始发布服务器上配置发布服务器**  
   
-1.  配置远程分发。 如果要使用存储过程来配置发布服务器，则运行 `sp_adddistributor`。 指定的相同值*@password*时所使用`sp_adddistrbutor`在分发服务器来设置分发运行。  
+1.  配置远程分发。 如果要使用存储过程来配置发布服务器，则运行 `sp_adddistributor`。 指定的相同值 *@password* 时所使用`sp_adddistrbutor`在分发服务器来设置分发运行。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -133,7 +133,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- 在每个辅助副本主机上配置分发。 将原始发布服务器的分发服务器标识为远程分发服务器。 使用最初在分发服务器上运行 `sp_adddistributor` 时所使用的相同密码。 如果要使用存储的过程来配置分发， *@password*参数的`sp_adddistributor`用于指定的密码。  
+ 在每个辅助副本主机上配置分发。 将原始发布服务器的分发服务器标识为远程分发服务器。 使用最初在分发服务器上运行 `sp_adddistributor` 时所使用的相同密码。 如果要使用存储的过程来配置分发， *@password* 参数的`sp_adddistributor`用于指定的密码。  
   
 ```  
 EXEC sp_adddistributor   

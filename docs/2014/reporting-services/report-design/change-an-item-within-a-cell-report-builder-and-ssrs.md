@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7676145c7f1beb28f2d6abedf57c3c33d1a41c9f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106353"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>更改单元中的项（报表生成器和 SSRS）
@@ -32,7 +32,7 @@ ms.locfileid: "66106353"
 -   在 **“插入”** 选项卡的 **“数据区域”** 或 **“报表项”** 组中，单击要添加到报表的项，然后单击报表。 该项将添加到报表。  
   
 > [!NOTE]  
->  在将某一图像报表项拖到单元中时，“图像属性”对话框将打开，从中可以设置图像添加到单元前的属性，例如图像的源。  
+>  在将某一图像报表项拖到单元中时，“图像属性”  对话框将打开，从中可以设置图像添加到单元前的属性，例如图像的源。  
   
 ## <a name="see-also"></a>请参阅  
  [图像、文本框、矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46f440aa6b40d8a2e0ff48c59818b722073b1628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640369"
 ---
 # <a name="remove-a-utility-control-point-sql-server-utility"></a>删除实用工具控制点（SQL Server 实用工具）
@@ -54,9 +54,9 @@ ms.locfileid: "62640369"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
 ```  
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  

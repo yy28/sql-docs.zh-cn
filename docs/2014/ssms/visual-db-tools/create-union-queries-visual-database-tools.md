@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34e06960274c7e16ef4f6efc31f1b7ca55a7d48c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270593"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>创建 UNION 查询 (Visual Database Tools)
@@ -45,7 +45,7 @@ ms.locfileid: "63270593"
     FROM dbo.Gloves;  
     ```  
   
-3.  在“查询设计器”菜单中，单击“执行 SQL”以运行该查询。  
+3.  在“查询设计器”  菜单中，单击“执行 SQL”  以运行该查询。  
   
      UNION 查询现在由查询设计器进行格式设置。  
   

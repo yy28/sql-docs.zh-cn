@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805575"
 ---
 # <a name="create-custom-templates"></a>创建自定义模板
@@ -28,17 +28,17 @@ ms.locfileid: "62805575"
   
 #### <a name="to-create-a-custom-template"></a>创建自定义模板  
   
-1.  在模板资源管理器中，展开“SQL Server 模板”，右键单击“存储过程”，指向“新建”，然后单击“文件夹”。  
+1.  在模板资源管理器中，展开“SQL Server 模板”  ，右键单击“存储过程”  ，指向“新建”  ，然后单击“文件夹”  。  
   
 2.  键入 **Custom** 作为新模板文件夹的名称，然后按 Enter。  
   
-3.  右键单击“Custom”，指向“新建”，然后单击“模板”。  
+3.  右键单击“Custom”  ，指向“新建”  ，然后单击“模板”  。  
   
 4.  键入 **WorkOrdersProc** 作为新模板的名称，然后按 **Enter**。  
   
-5.  右键单击“WorkOrdersProc”，然后单击“编辑”。  
+5.  右键单击“WorkOrdersProc”  ，然后单击“编辑”  。  
   
-6.  在“连接到数据库引擎”对话框中，验证连接信息，然后单击“连接”。  
+6.  在“连接到数据库引擎”  对话框中，验证连接信息，然后单击“连接”  。  
   
 7.  在查询编辑器中，键入以下脚本以创建用于查找特定部分（在此事例中是 Blade）顺序的存储过程。 （您可以从“教程”窗口中复制和粘贴代码。）  
   
@@ -63,11 +63,11 @@ ms.locfileid: "62805575"
   
 8.  按 F5 执行此脚本，创建 **WorkOrdersForBlade** 过程。  
   
-9. 在对象资源管理器中，右键单击服务器，然后单击“新建查询”。 系统将打开新的“查询编辑器”窗口。  
+9. 在对象资源管理器中，右键单击服务器，然后单击“新建查询”  。 系统将打开新的“查询编辑器”窗口。  
   
-10. 在查询编辑器中，键入 **EXECUTE dbo.WorkOrdersForBlade**，然后按 F5 执行查询。 确认“结果”窗格返回 Blade 的工作订单列表。  
+10. 在查询编辑器中，键入 **EXECUTE dbo.WorkOrdersForBlade**，然后按 F5 执行查询。 确认“结果”  窗格返回 Blade 的工作订单列表。  
   
-11. 编辑模板脚本 （在步骤 7 中的脚本），使用参数替换的产品名称 Blade  <strong>*<* product_name</strong>， `nvarchar(50)`，<strong>名称*>*</strong>  ，四个位置。  
+11. 编辑模板脚本 （在步骤 7 中的脚本），使用参数替换的产品名称 Blade <strong> *<* product_name</strong>， `nvarchar(50)`，<strong>名称 *>* </strong>，四个位置。  
   
     > [!NOTE]  
     >  参数需要三个元素：要替换的参数的名称、该参数的数据类型以及该参数的默认值。  
@@ -93,15 +93,15 @@ ms.locfileid: "62805575"
     GO  
     ```  
   
-13. 在“文件”菜单中，单击“保存 WorkOrdersProc.sql”以保存模板。  
+13. 在“文件”  菜单中，单击“保存 WorkOrdersProc.sql”  以保存模板。  
   
 #### <a name="to-test-the-custom-template"></a>测试自定义模板  
   
-1.  在模板资源管理器中，依次展开“存储过程”和“Custom”，然后双击“WorkOrderProc”。  
+1.  在模板资源管理器中，依次展开“存储过程”  和“Custom”  ，然后双击“WorkOrderProc”  。  
   
-2.  在“连接到数据库引擎”对话框中，填写连接信息，然后单击“连接”。 系统将打开新的“查询编辑器”窗口，其中包含“WorkOrderProc”模板的内容。  
+2.  在“连接到数据库引擎”  对话框中，填写连接信息，然后单击“连接”  。 系统将打开新的“查询编辑器”窗口，其中包含“WorkOrderProc”  模板的内容。  
   
-3.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”**。  
+3.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。  
   
 4.  中**替换模板参数**对话框中，对于`product_name`值，键入**FreeWheel** （覆盖默认内容），然后单击**确定**关闭**替换模板参数**对话框框中，然后在查询编辑器中修改脚本。  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774965"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
@@ -43,7 +43,7 @@ ms.locfileid: "62774965"
 >  在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某一版本升级到另一版本之前，请验证要升级到的版本是否支持当前使用的功能。  
   
 > [!NOTE]  
->  当你升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]从以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition 中，Enterprise Edition 之间进行选择：基于内核的许可和企业版。 这些 Enterprise 版本仅在许可模式方面存在不同。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+>  当你升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]从以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition 中，Enterprise Edition 之间进行选择：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版本仅在许可模式方面存在不同。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
 ## <a name="pre-upgrade-checklist"></a>升级准备一览表  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行升级。 也可以迁移早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的数据库。 可以从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移至同一台计算机上的另一个实例，也可以从另一台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移。 迁移选项包括使用复制数据库向导、备份和还原功能、使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导，以及批量导出/批量导入方法。  

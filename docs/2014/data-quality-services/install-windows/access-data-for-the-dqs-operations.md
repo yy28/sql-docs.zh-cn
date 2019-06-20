@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480523"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>访问 DQS 操作数据
@@ -34,13 +34,13 @@ ms.locfileid: "65480523"
   
 1.  启动 Microsoft SQL Server Management Studio。  
   
-2.  在 Microsoft SQL Server Management Studio 中，依次展开您的 SQL Server 实例、 **“安全性”** 和 **“登录名”**。  
+2.  在 Microsoft SQL Server Management Studio 中，依次展开您的 SQL Server 实例、 **“安全性”** 和 **“登录名”** 。  
   
-3.  右键单击某一 SQL 登录名，然后单击 **“属性”**。  
+3.  右键单击某一 SQL 登录名，然后单击 **“属性”** 。  
   
 4.  在 **“登录属性”** 对话框的左侧窗格中，单击 **“用户映射”** 页。  
   
-5.  在右侧窗格中，选中“**DQS_STAGING_DATA**”数据库的“**映射**”列下的复选框，然后在“**数据库角色成员身份:DQS_STAGING_DATA”窗格中选择以下角色**：  
+5.  在右侧窗格中，选中“**DQS_STAGING_DATA**”数据库的“**映射**”列下的复选框，然后在“**数据库角色成员身份:DQS_STAGING_DATA**”窗格中选择以下角色：  
   
     -   **db_datareader**：从表/视图中读取数据。  
   

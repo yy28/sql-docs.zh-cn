@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098842"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>将文档上载到 SharePoint 库（SharePoint 模式下的 Reporting Services）
@@ -33,13 +33,13 @@ ms.locfileid: "66098842"
   
 ### <a name="to-add-a-report-definition-or-report-model-to-a-library"></a>向库中添加报表定义或报表模型  
   
-1.  打开库或库中的某个文件夹。 如果库尚未打开，请在“快速启动”上单击其名称。 如果未显示库的名称，请单击 **“查看所有网站内容”**，然后单击库的名称。  
+1.  打开库或库中的某个文件夹。 如果库尚未打开，请在“快速启动”上单击其名称。 如果未显示库的名称，请单击 **“查看所有网站内容”** ，然后单击库的名称。  
   
-2.  在 **“上载”** 菜单中，单击 **“上载文档”**。  
+2.  在 **“上载”** 菜单中，单击 **“上载文档”** 。  
   
-3.  若要上传单个报表或报表模型文件，请选择报表定义 (.rdl) 或报表模型 (.smdl) 文件，然后单击“确定”。  
+3.  若要上传单个报表或报表模型文件，请选择报表定义 (.rdl) 或报表模型 (.smdl) 文件，然后单击“确定”  。  
   
-     如果报表定义使用共享数据源 (.rsds) 文件存储与外部数据源的连接信息，则可以同时上载 .rdl 和 .rsds 文件。 为此，请单击 **“上载多个文档”**，指定这两个文件，然后单击 **“确定”**。  
+     如果报表定义使用共享数据源 (.rsds) 文件存储与外部数据源的连接信息，则可以同时上载 .rdl 和 .rsds 文件。 为此，请单击 **“上载多个文档”** ，指定这两个文件，然后单击 **“确定”** 。  
   
  如果您上载的报表包含对共享数据源、报表模型或子报表的引用，则文件上载后这些引用将会断开。 有关如何重置引用的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)。  
   

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047591"
 ---
 # <a name="atomization-xquery"></a>原子化 (XQuery)
@@ -46,7 +46,7 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 隐式原子化的另一个示例是使用算术运算符。 **+** 运算符需要原子值，并且**data （)** 隐式应用来检索 LaborHours 属性的原子值。 针对的 Instructions 列指定了查询**xml** ProductModel 表中的类型。 下面的查询将返回 LaborHours 属性三次。 在该查询中，请注意下列情况：  
+ 隐式原子化的另一个示例是使用算术运算符。 ** + **运算符需要原子值，并且**data （)** 隐式应用来检索 LaborHours 属性的原子值。 针对的 Instructions 列指定了查询**xml** ProductModel 表中的类型。 下面的查询将返回 LaborHours 属性三次。 在该查询中，请注意下列情况：  
   
 -   构造 OrignialLaborHours 属性时，原子化隐式应用于 `$WC/@LaborHours` 返回的单独序列。 LaborHours 属性的类型化值被分配给 OrignialLaborHours。  
   

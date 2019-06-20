@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c7a9ad23124105443349720d2d5769fb9227db2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105029"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>设置仪表的最小值或最大值（报表生成器和 SSRS）
@@ -29,13 +29,13 @@ ms.locfileid: "66105029"
   
 ### <a name="to-set-the-minimum-and-maximum-on-the-gauge"></a>在仪表上设置最小值和最大值  
   
-1.  右键单击刻度并选择“刻度属性”。 此时将显示 **“刻度属性”** 对话框。  
+1.  右键单击刻度并选择“刻度属性”  。 此时将显示 **“刻度属性”** 对话框。  
   
-2.  在 **“常规”** 中，为 **“最小值”** 指定一个值。 默认情况下，此值为 0。 或者，单击“表达式”(fx) 按钮，编辑设置该选项值的表达式。  
+2.  在 **“常规”** 中，为 **“最小值”** 指定一个值。 默认情况下，此值为 0。 或者，单击“表达式”(fx) 按钮，编辑设置该选项值的表达式   。  
   
-3.  为 **“最大值”** 指定一个值。 默认情况下，此值为 100。 或者，单击“表达式”(fx) 按钮，编辑设置该选项值的表达式。  
+3.  为 **“最大值”** 指定一个值。 默认情况下，此值为 100。 或者，单击“表达式”(fx) 按钮，编辑设置该选项值的表达式   。  
   
-4.  （可选）如果最大值和最小值较大，请为“刻度标签乘以”选项指定一个值。 若要指定可减小刻度的乘数，请使用小数。 例如，如果刻度范围为 0 到 1000，则可指定乘数值 0.01，以将刻度范围减少到只显示 0 到 10。  
+4.  （可选）如果最大值和最小值较大，请为“刻度标签乘以”  选项指定一个值。 若要指定可减小刻度的乘数，请使用小数。 例如，如果刻度范围为 0 到 1000，则可指定乘数值 0.01，以将刻度范围减少到只显示 0 到 10。  
   
 ## <a name="see-also"></a>请参阅  
  [设置仪表上刻度的格式（报表生成器和 SSRS）](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

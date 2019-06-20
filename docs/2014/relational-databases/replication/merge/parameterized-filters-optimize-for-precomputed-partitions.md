@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250551"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>使用预计算分区优化参数化筛选器的性能
   预计算分区是一种性能优化方法，可用于已筛选的合并发布。 预计算分区也是在已筛选的发布上使用逻辑记录的一项要求。 有关逻辑记录的详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](group-changes-to-related-rows-with-logical-records.md)。  
   
- 订阅服务器与发布服务器同步时，发布服务器必须计算订阅服务器的筛选器，以确定哪些行属于该订阅服务器的分区或数据集。 我们将为接收已筛选数据集的每个订阅服务器确定发布服务器上的更改的分区成员身份这一过程称为“分区计算” 。 如果没有预计算分区，那么，自上次为特定订阅服务器运行合并代理之后，对发布服务器上已筛选列每进行一次更改都必须执行分区计算，而且对与该发布服务器同步的每个订阅服务器都要重复这一过程。  
+ 订阅服务器与发布服务器同步时，发布服务器必须计算订阅服务器的筛选器，以确定哪些行属于该订阅服务器的分区或数据集。 我们将为接收已筛选数据集的每个订阅服务器确定发布服务器上的更改的分区成员身份这一过程称为“分区计算”  。 如果没有预计算分区，那么，自上次为特定订阅服务器运行合并代理之后，对发布服务器上已筛选列每进行一次更改都必须执行分区计算，而且对与该发布服务器同步的每个订阅服务器都要重复这一过程。  
   
  但是，如果发布服务器和订阅服务器在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本上运行并且您使用了预计算分区，那么发布服务器上所有更改的分区成员身份在进行更改时即已预计算并持久化。 因此，当订阅服务器与发布服务器同步时，它可以立即开始下载与其分区相关的更改，而不必执行分区计算过程。 当发布中有大量更改、订阅服务器或项目时，这样可以显著提高性能。  
   

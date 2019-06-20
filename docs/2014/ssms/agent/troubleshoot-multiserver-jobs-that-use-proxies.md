@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245414"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>排除使用代理的多服务器作业的故障
@@ -25,7 +25,7 @@ ms.locfileid: "63245414"
   
 -   “该作业步骤需要代理帐户，但是目标服务器上禁用了代理匹配功能。”  
   
-     若要解决此错误，请将 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.**_\<n_>**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 注册表子项设置为“1 (true)”。 默认情况下，此子项设置为**0** (`false`)。 **MSSQL.**\<*n*> 的值是实例名；例如，**MSSQL.1** 或 **MSSQL.3**  
+     若要解决此错误，请将 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n_> **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 注册表子项设置为“1 (true)”  。 默认情况下，此子项设置为**0** (`false`)。 **MSSQL.** \<*n*> 的值是实例名；例如，**MSSQL.1** 或 **MSSQL.3**  
   
 -   “找不到代理。”  
   

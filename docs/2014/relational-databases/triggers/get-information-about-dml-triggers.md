@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62698759"
 ---
 # <a name="get-information-about-dml-triggers"></a>获取有关 DML 触发器的信息
@@ -48,7 +48,7 @@ ms.locfileid: "62698759"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)。  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- 要求 **公共** 角色具有成员身份。 用户对象的定义是对象所有者或具有以下权限之一的被授权者可见：ALTER、 控件、 TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定数据库角色的成员隐式具有这些权限。  
+ 要求 **公共** 角色具有成员身份。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定数据库角色的成员隐式具有这些权限。  
   
  **sys.sql_expression_dependencies**  
  要求对数据库具有 VIEW DEFINITION 权限，并对数据库的 **sys.sql_expression_dependencies** 具有 SELECT 权限。 默认情况下，SELECT 权限仅授予 **db_owner** 固定数据库角色的成员。 将 SELECT 和 VIEW DEFINITION 权限授予其他用户时，被授权者可以查看数据库中的所有依赖关系。  
@@ -59,25 +59,25 @@ ms.locfileid: "62698759"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要查看其定义的触发器的表。  
+2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要查看其定义的触发器的表。  
   
-3.  展开“触发器”，右键单击需要的触发器，然后单击“修改”。 将在查询窗口中显示 DML 触发器的定义。  
+3.  展开“触发器”  ，右键单击需要的触发器，然后单击“修改”  。 将在查询窗口中显示 DML 触发器的定义。  
   
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>查看 DML 触发器的依赖关系  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要查看的触发器及其依赖关系的表。  
+2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要查看的触发器及其依赖关系的表。  
   
-3.  展开“触发器”，右键单击需要的触发器，然后单击“查看依赖关系”。  
+3.  展开“触发器”  ，右键单击需要的触发器，然后单击“查看依赖关系”  。  
   
-4.  在“对象依赖关系”窗口中，若要查看依赖于 DML 触发器的对象，请选择“依赖于 \<DML 触发器名称> 的对象”。 将在 **“依赖关系”** 区域显示这些对象。  
+4.  在“对象依赖关系”  窗口中，若要查看依赖于 DML 触发器的对象，请选择“依赖于 \<DML 触发器名称> 的对象”  。 将在 **“依赖关系”** 区域显示这些对象。  
   
-     若要查看 DML 所依赖的对象，请选择“\<DML 触发器名称> 所依赖的对象”。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
+     若要查看 DML 所依赖的对象，请选择“\<DML 触发器名称> 所依赖的对象”  。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
   
-5.  若要获取有关 **“依赖关系”** 区域中显示的对象的信息，请单击该对象。 在 **“所选对象”** 字段中，在 **“名称”**、 **“类型”** 和 **“依赖关系类型”** 框中提供信息。  
+5.  若要获取有关 **“依赖关系”** 区域中显示的对象的信息，请单击该对象。 在 **“所选对象”** 字段中，在 **“名称”** 、 **“类型”** 和 **“依赖关系类型”** 框中提供信息。  
   
-6.  若要关闭 **“对象依赖关系”** 窗口，请单击 **“确定”**。  
+6.  若要关闭 **“对象依赖关系”** 窗口，请单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62698759"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。 每个示例显示您如何查看 `iuPerson` 触发器的定义。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。 每个示例显示您如何查看 `iuPerson` 触发器的定义。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -118,9 +118,9 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。 每个示例显示您如何查看 `iuPerson` 触发器的依赖关系。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。 每个示例显示您如何查看 `iuPerson` 触发器的依赖关系。  
   
 ```  
 USE AdventureWorks2012;   
@@ -144,9 +144,9 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。 每个示例显示您如何查看数据库中有关 DML 触发器 (`TR`) 的信息。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。 每个示例显示您如何查看数据库中有关 DML 触发器 (`TR`) 的信息。  
   
 ```  
 USE AdventureWorks2012;   
@@ -180,9 +180,9 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。 每个示例显示如何查看激发 `iuPerson` 触发器的事件。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。 每个示例显示如何查看激发 `iuPerson` 触发器的事件。  
   
 ```sql  
 USE AdventureWorks2012;   

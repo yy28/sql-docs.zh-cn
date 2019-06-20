@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721649"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
@@ -92,7 +92,7 @@ ms.locfileid: "62721649"
   
 2.  选择与 Web 同步站点关联的应用程序池，然后单击 **“操作”** 窗格上的 **“高级设置”** 。  
   
-3.  在“高级设置”对话框的 **“处理模型”** 标题下，单击标为 **“最大工作线程数”** 的行。 更改属性值，然后单击 **“确定”**。  
+3.  在“高级设置”对话框的 **“处理模型”** 标题下，单击标为 **“最大工作线程数”** 的行。 更改属性值，然后单击 **“确定”** 。  
   
 ## <a name="configuring-the-publication"></a>配置发布  
  若要使用 Web 同步，需要创建一个发布（就像为标准合并拓扑创建发布一样）。 有关详细信息，请参阅[发布数据和数据库对象](publish/publish-data-and-database-objects.md)。  
@@ -124,7 +124,7 @@ ms.locfileid: "62721649"
   
 -   如果要复制大量数据，则可能必须调整合并代理的批大小。  
   
- 合并复制的批大小是用“ 代”度量的，代是指每个项目的变更集。 使用指定的批处理中的生成数的-`DownloadGenerationsPerBatch`和-`UploadGenerationsPerBatch`的合并代理参数。 有关详细信息，请参阅 [Replication Merge Agent](agents/replication-merge-agent.md)。  
+ 合并复制的批大小是用“  代”度量的，代是指每个项目的变更集。 使用指定的批处理中的生成数的-`DownloadGenerationsPerBatch`和-`UploadGenerationsPerBatch`的合并代理参数。 有关详细信息，请参阅 [Replication Merge Agent](agents/replication-merge-agent.md)。  
   
  对于大量数据，请为每个批次参数指定一个较小的数字。 我们建议您从值 10 开始，然后基于应用程序需要和性能进行调整。 通常，这些参数在代理配置文件中指定。 有关配置文件的详细信息，请参阅 [Replication Agent Profiles](agents/replication-agent-profiles.md)。  
   

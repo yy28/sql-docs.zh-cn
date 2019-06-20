@@ -16,18 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209749"
 ---
 # <a name="move-a-workload-group"></a>移动工作负荷组
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 将资源调控器工作负荷组移动到其他资源池。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   若要移动工作负荷组，请使用：[SQL Server Management Studio](#MoveWGSSMS)、[Transact-SQL](#MoveWGTSQL)  
+-   若要移动工作负荷组，请使用  ：[SQL Server Management Studio](#MoveWGSSMS)、[Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果存在挂起的资源调控器配置操作，则无法移动工作负荷组。  
@@ -41,13 +41,13 @@ ms.locfileid: "63209749"
 ##  <a name="MoveWGSSMS"></a> 使用 SQL Server Management Studio 移动工作负荷组  
  **使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
   
-1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
+1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器”  ，然后单击“属性” ，这将打开“资源调控器属性”页  。  
+2.  右键单击“资源调控器”  ，然后单击“属性”  ，这将打开“资源调控器属性”页  。  
   
 3.  在 **“资源池”** 窗口中，单击包含要移动的工作负荷组的资源池。 此时， **“工作负荷组”** 窗口会列出该资源池中的工作负荷组。  
   
-4.  在“工作负荷组”窗口中，右键单击要移动的工作负荷组左侧的向右箭头，然后单击“移到”。 这将显示 **“移动工作负荷组”** 窗口。  
+4.  在“工作负荷组”  窗口中，右键单击要移动的工作负荷组左侧的向右箭头，然后单击“移到”  。 这将显示 **“移动工作负荷组”** 窗口。  
   
 5.  在窗口中显示可用的资源池。 单击要将工作负荷组移动到的资源池的名称，然后单击 **“确定”** 执行此操作。  
   

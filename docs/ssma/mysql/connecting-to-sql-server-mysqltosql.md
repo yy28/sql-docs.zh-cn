@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273511"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>连接到 SQL Server (MySQLToSQL)
@@ -50,7 +50,7 @@ ms.locfileid: "63273511"
   
 2.  在连接对话框中，输入或选择的 SQL Server 实例的名称。  
   
-    -   如果要连接到本地计算机上的默认实例，则可以输入**localhost**或句点 (**。**)。  
+    -   如果要连接到本地计算机上的默认实例，则可以输入**localhost**或句点 ( **。** )。  
   
     -   如果要连接到另一台计算机上的默认实例，输入的计算机的名称。  
   

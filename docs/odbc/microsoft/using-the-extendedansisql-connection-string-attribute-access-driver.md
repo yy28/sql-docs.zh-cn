@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e8994c441c2c0de82ff89029a489e5ff3d3a7e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259368"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>使用 ExtendedAnsiSQL 连接字符串属性（Access 驱动程序）

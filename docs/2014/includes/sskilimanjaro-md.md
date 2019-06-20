@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 7c132d6459768644993e7d26f85dc419ee935d3b
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65817279"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67209966"
 ---
 SQL Server 2008 R2

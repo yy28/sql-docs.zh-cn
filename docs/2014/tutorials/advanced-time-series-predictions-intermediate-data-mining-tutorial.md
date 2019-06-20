@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822446"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>高级时序预测（数据挖掘中级教程）
@@ -103,7 +103,7 @@ ms.locfileid: "62822446"
   
      **选择表和视图**:选择刚创建的表 NewSalesData。  
   
-3.  单击 **“完成”**。  
+3.  单击 **“完成”** 。  
   
 4.  在数据源视图设计图面上，右键单击 NewSalesData，，然后选择**浏览数据**以验证数据。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "62822446"
   
 1.  在中**解决方案资源管理器**，右键单击**数据源视图**，然后选择**新数据源视图**。  
   
-2.  在向导的欢迎页上，单击 **“下一步”**。  
+2.  在向导的欢迎页上，单击 **“下一步”** 。  
   
-3.  在 **“选择数据源”** 页上，选择 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，然后单击 **“下一步”**。  
+3.  在 **“选择数据源”** 页上，选择 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，然后单击 **“下一步”** 。  
   
 4.  在页中，**选择表和视图**，不添加任何表-只需单击**下一步**。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62822446"
   
      **名称**：`T1000 Pacific Region`  
   
-3.  单击 **“完成”**。  
+3.  单击 **“完成”** 。  
   
 4.  右键单击的空设计图面**T1000 Pacific Region.dsv**，然后选择**新建命名查询**。  
   

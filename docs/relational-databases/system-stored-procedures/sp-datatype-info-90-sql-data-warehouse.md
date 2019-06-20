@@ -13,10 +13,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 69d37727f321e4fd2f38ca30184baba6ab432fe9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507327"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 （SQL 数据仓库）
@@ -50,8 +50,8 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|与 DBMS 相关的数据类型。|  
 |DATA_TYPE|**smallint**|此类型的所有列所映射到的 ODBC 类型代码。|  
 |PRECISION|**int**|数据源中数据类型的最大精度。 数据类型的精度不适用时返回 NULL。 PRECISION 列的返回值以 10 为基数。|  
-|LITERAL_PREFIX|**varchar(** 32 **)**|常量前使用的一个或多个字符。 例如，一个单引号 () 的字符类型和二进制文件的 0x。|  
-|LITERAL_SUFFIX|**varchar(** 32 **)**|字符或字符用于终止常量的一个。 例如，一个单引号 () 的字符类型和二进制文件没有引号。|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|常量前使用的一个或多个字符。 例如，一个单引号 (  ) 的字符类型和二进制文件的 0x。|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|字符或字符用于终止常量的一个。 例如，一个单引号 (  ) 的字符类型和二进制文件没有引号。|  
 |CREATE_PARAMS|**varchar(** 32 **)**|此数据类型的创建参数的说明。 例如，**十进制**是"precision，scale"， **float**为 NULL，并且**varchar**为"max_length"。|  
 |NULLABLE|**smallint**|指定为 Null 性。<br /><br /> 1 = 允许 Null 值。<br /><br /> 0 = 不允许 Null 值。|  
 |CASE_SENSITIVE|**smallint**|指定是否区分大小写。<br /><br /> 1 = 此类型的所有列都区分大小写（用于排序规则）。<br /><br /> 0 = 此类型的所有列都不区分大小写。|  

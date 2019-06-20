@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63255430"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>查看和解决合并发布的数据冲突 (SQL Server Management Studio)
@@ -48,7 +48,7 @@ ms.locfileid: "63255430"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-3.  右键单击要查看其冲突的发布，然后单击 **“查看冲突”**。  
+3.  右键单击要查看其冲突的发布，然后单击 **“查看冲突”** 。  
   
     > [!NOTE]  
     >  如果为 **conflict_logging** 属性指定了值 **“subscriber”** ， **“查看冲突”** 菜单选项将不可用。 若要查看冲突，请在命令提示符下启动 ConflictViewer.exe。 默认情况下，ConflictViewer.exe 位于以下目录中：Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE。 要获取有效引导参数的列表，请运行 ConflictViewer.exe -?。  
@@ -61,9 +61,9 @@ ms.locfileid: "63255430"
   
     -   在上部网格中选择行，以在下部网格中显示该行的信息。  
   
-    -   在上部网格中选择一行或多行，然后单击 **“删除”**，这与单击 **“提交入选方”** 按钮的效果相同（不对数据进行任何更改）。  
+    -   在上部网格中选择一行或多行，然后单击 **“删除”** ，这与单击 **“提交入选方”** 按钮的效果相同（不对数据进行任何更改）。  
   
-    -   单击属性按钮 (...) 查看有关冲突所涉及的列的详细信息。  
+    -   单击属性按钮 (...) 查看有关冲突所涉及的列的详细信息  。  
   
     -   编辑 **“冲突解决入选方”** 或 **“冲突解决落选方”** 列中的数据，然后再提交数据（如果列为灰色，则数据为只读）。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63255430"
   
     -   单击 **“提交落选方”** 覆盖解决结果，并将指定为冲突落选方的值传播到拓扑中的所有节点。  
   
-    -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”**。 输入一个值，或单击浏览按钮 (**...**)，然后导航到相应文件。 单击 **“确定”** 可退出 **“选项”** 对话框。  
+    -   选择 **“记录此冲突的详细信息”** 将冲突数据记录到一个文件中。 若要指定文件的位置，请指向 **“查看”** 菜单，然后单击 **“选项”** 。 输入一个值，或单击浏览按钮 ( **...** )，然后导航到相应文件。 单击 **“确定”** 可退出 **“选项”** 对话框。  
   
 6.  关闭复制冲突查看器。  
   

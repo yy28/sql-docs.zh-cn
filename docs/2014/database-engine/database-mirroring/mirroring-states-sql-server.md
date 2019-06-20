@@ -20,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754555"
 ---
 # <a name="mirroring-states-sql-server"></a>镜像状态 (SQL Server)
-  数据库镜像会话期间，镜像数据库一直处于一种特定状态（镜像状态）。 数据库的状态反映了通信状态、数据流和伙伴之间数据的差异。 数据库镜像会话采用的状态与主体数据库相同。  
+  数据库镜像会话期间，镜像数据库一直处于一种特定状态（镜像状态  ）。 数据库的状态反映了通信状态、数据流和伙伴之间数据的差异。 数据库镜像会话采用的状态与主体数据库相同。  
   
  在整个数据库镜像会话期间，服务器实例相互监视。 伙伴使用镜像状态监视数据库。 除 PENDING_FAILOVER 状态外，主体数据库和镜像数据库始终处于同一状态。 如果为会话设置一个见证服务器，则每个伙伴都将使用其连接状态（CONNECTED 或 DISCONNECTED）监视该见证服务器。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62754555"
 |---------------------|-----------------|  
 |SYNCHRONIZING|镜像数据库的内容滞后于主体数据库的内容。 主体服务器正在将日志记录发送到镜像服务器（正在将更改应用于镜像数据库以使其前滚）。<br /><br /> 在数据库镜像会话开始时，数据库处于 SYNCHRONIZING 状态。 主体服务器为数据库提供服务，同时镜像服务器尽量与主体服务器保持同步。|  
 |SYNCHRONIZED|当镜像服务器与主体服务器几乎保持同步时，镜像状态将更改为 SYNCHRONIZED。 只要主体服务器继续向镜像服务器发送更改，并且镜像服务器继续将更改应用于镜像数据库，数据库就会保持此状态。<br /><br /> 如果将事务安全性设置为 FULL，则 SYNCHRONIZED 状态同时支持自动故障转移和手动故障转移，并且在故障转移后不会丢失数据。<br /><br /> 如果关闭事务安全性，则即使处于 SYNCHRONIZED 状态，也总可能丢失某些数据。|  
-|SUSPENDED|数据库的镜像副本不可用。 主体数据库运行时不向镜像服务器发送任何日志，这种情况称为“运行已公开” 。 这是故障转移后的状态。<br /><br /> 如果发生重做错误或管理员暂停会话，则会话也可能会变为 SUSPENDED 状态。<br /><br /> SUSPENDED 是在伙伴关闭和启动时都能存在的持久性状态。|  
+|SUSPENDED|数据库的镜像副本不可用。 主体数据库运行时不向镜像服务器发送任何日志，这种情况称为“运行已公开”  。 这是故障转移后的状态。<br /><br /> 如果发生重做错误或管理员暂停会话，则会话也可能会变为 SUSPENDED 状态。<br /><br /> SUSPENDED 是在伙伴关闭和启动时都能存在的持久性状态。|  
 |PENDING_FAILOVER|此状态只在故障转移开始之后的主体服务器中存在，但此时服务器尚未转换到镜像角色。<br /><br /> 当故障转移开始时，主体数据库将进入 PENDING_FAILOVER 状态，快速终止任何用户连接，并在此后不久便接管镜像角色。|  
 |DISCONNECTED|伙伴已失去与其他伙伴的通信。|  
   

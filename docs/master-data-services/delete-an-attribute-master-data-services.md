@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fdf3b766e48843a15e73b7a41b7c434ba604e0af
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478222"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>删除属性 (Master Data Services)
@@ -36,13 +36,13 @@ ms.locfileid: "65478222"
   
 ### <a name="to-delete-an-attribute"></a>删除属性  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体” 。  
+2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体”  。  
   
 3.  在“管理实体”  页上，选择要为其创建属性的实体所在的行。  
   
-4.  单击 **“属性”**。  
+4.  单击 **“属性”** 。  
   
 5.  在“管理属性”  页上，执行下列操作之一。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "65478222"
     > [!NOTE]  
     >  不能删除 Name 或 Code 属性。  
   
-7.  单击 **“删除”**。  
+7.  单击 **“删除”** 。  
   
-8.  在确认对话框中，单击 **“确定”**。  
+8.  在确认对话框中，单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   

@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62874472"
 ---
 # <a name="implementing-assemblies"></a>实现程序集
@@ -86,7 +86,7 @@ ms.locfileid: "62874472"
   
 -   通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或方法直接或间接引用程序集中的方法的持久化计算列。  
   
--   属于 CLR 用户定义类型且依赖于程序集的列，并且该类型实现的是 UserDefined（非 Native）序列化格式。  
+-   属于 CLR 用户定义类型且依赖于程序集的列，并且该类型实现的是 UserDefined（非 Native）序列化格式   。  
   
 > [!CAUTION]  
 >  未指定 WITH UNCHECKED DATA 时，如果新的程序集版本对表、索引或其他持久性站点中的现有数据造成影响，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试阻止 ALTER ASSEMBLY 执行。 但是，当 CLR 程序集更新时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能保证计算列、索引、索引视图或表达式与基本例程和类型保持一致。 执行 ALTER ASSEMBLY 时一定要谨慎，以确保表达式的结果与程序集中存储的基于该表达式的值相互匹配。  
