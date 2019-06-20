@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788003"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>查看可用性副本属性 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62788003"
   
 3.  展开可用性副本所属的可用性组，然后展开 **“可用性副本”** 节点。  
   
-4.  右键单击要查看其属性的可用性副本，然后选择“属性”命令。  
+4.  右键单击要查看其属性的可用性副本，然后选择“属性”  命令。  
   
 5.  在 **“可用性副本属性”** 对话框中，使用 **“常规”** 页查看该副本的属性。 如果连接到主副本，您可以更改下列属性：可用性模式、故障转移模式、主角色的连接访问权限、辅助角色（可读取的辅助副本）的读取访问权限以及会话超时值。 有关详细信息，请参阅[可用性副本属性&#40;常规页&#41;](availability-replica-properties-general-page.md)。  
   

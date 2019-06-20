@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a23d2753f6fe1d94fcccab648766c3471581906
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472289"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263391"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>创建和管理表格模型分区
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "62472289"
   分区将表分成多个逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 在已部署的模型中将重复在模型创作过程中为模型定义的分区。 部署完成后，您可以通过使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框或使用脚本来管理这些分区。 本主题中提供的任务介绍如何为已部署的模型创建和管理分区。  
   
   > [!NOTE]  
->  在 1400年兼容性级别创建的表格模型中的分区使用 M 查询语句进行定义。 若要了解详细信息，请参阅[M 引用](https://msdn.microsoft.com/library/mt211003.aspx)。 
+>  在 1400年兼容性级别创建的表格模型中的分区使用 M 查询语句进行定义。 若要了解详细信息，请参阅[M 引用](/powerquery-m/power-query-m-reference)。 
 >
   
 ## <a name="tasks"></a>“任务”  
- 若要为已部署的表格模型数据库创建和管理分区，您可以使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 若要查看“分区”对话框，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击某一表，然后单击“分区”。    
+ 若要为已部署的表格模型数据库创建和管理分区，您可以使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框。 若要查看“分区”对话框，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击某一表，然后单击“分区”。  
   
 ###  <a name="bkmk_create_new"></a> 创建新分区  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62472289"
   
 3.  在中**查询语句**，键入或粘贴 SQL 或 M 查询语句定义的列和任何你想要包括到查询窗口在分区中的子句。  
   
-4.  若要验证语句，请单击 **“检查语法”** 。  
+4.  若要验证语句，请单击 **“检查语法”**。  
   
 ###  <a name="bkmk_copy"></a> 复制分区  
   

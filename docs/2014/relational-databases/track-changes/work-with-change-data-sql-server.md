@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269892"
 ---
 # <a name="work-with-change-data-sql-server"></a>处理变更数据 (SQL Server)
@@ -60,7 +60,7 @@ ms.locfileid: "63269892"
  有关如何截获这些已知的 TVF 错误并返回有关失败的更有意义的信息的说明，请参阅“使用 TRY CATCH 枚举净更改”模板。  
   
 > [!NOTE]  
->  若要在 SQL Server Management Studio 中查找变更数据捕获模板，请在“视图”菜单上单击“模板资源管理器”，展开 **“SQL Server 模板”**，然后展开 **“变更数据捕获”** 文件夹。  
+>  若要在 SQL Server Management Studio 中查找变更数据捕获模板，请在“视图”  菜单上单击“模板资源管理器”  ，展开 **“SQL Server 模板”** ，然后展开 **“变更数据捕获”** 文件夹。  
   
 ##  <a name="Functions"></a> 查询函数  
  根据所跟踪的源表的特性以及配置其捕获实例的方式，将生成一个或两个查询更改数据的 TVF。  

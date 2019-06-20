@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62957149"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
@@ -43,7 +43,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @action = ] 'action'` 要为指定的登录名执行的操作。 *操作*是**varchar(10)**，无默认值。 当*操作*是**删除**， **sp_manage_jobs_by_login**删除拥有的所有作业*current_owner_login_name*。 当*操作*是**重新分配**，所有作业均都分配给*new_owner_login_name*。  
+`[ @action = ] 'action'` 要为指定的登录名执行的操作。 *操作*是**varchar(10)** ，无默认值。 当*操作*是**删除**， **sp_manage_jobs_by_login**删除拥有的所有作业*current_owner_login_name*。 当*操作*是**重新分配**，所有作业均都分配给*new_owner_login_name*。  
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'` 当前作业所有者的登录名。 *current_owner_login_name*是**sysname**，无默认值。  
   

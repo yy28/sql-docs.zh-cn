@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071636"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>创建与 PowerPivot 工作簿的 BI 语义模型连接
@@ -66,27 +66,27 @@ ms.locfileid: "66071636"
   
  您必须是网站所有者才能更改权限。  
   
-1.  在“网站操作”中，单击 **“网站权限”**。  
+1.  在“网站操作”中，单击 **“网站权限”** 。  
   
 2.  单击“创建组”  并将新组命名为 **BISM Users**。  
   
-3.  选择 **“读取”** 权限级别，然后单击 **“创建”**。  
+3.  选择 **“读取”** 权限级别，然后单击 **“创建”** 。  
   
 4.  在“人员和组”中选择 **BISM Users** 。  
   
-5.  指向“新建”，单击 **“添加用户”**，然后添加用户或组帐户。  
+5.  指向“新建”，单击 **“添加用户”** ，然后添加用户或组帐户。  
   
      此时，这些用户和组将拥有对整个网站的“读取”权限，包括从网站级别继承权限的所有库和列表。 如果这些权限太高，则可以选择从特定的库、列表或项中删除此组。  
   
  若要选择性地删除项目级别的权限，请执行以下操作：  
   
-1.  在库中选择一个文档。 单击右下箭头，然后单击 **“管理权限”**。  
+1.  在库中选择一个文档。 单击右下箭头，然后单击 **“管理权限”** 。  
   
-2.  默认情况下，项会继承权限。 若要更改此库中的单个文档的权限，请单击 **“停止继承权限”**。  
+2.  默认情况下，项会继承权限。 若要更改此库中的单个文档的权限，请单击 **“停止继承权限”** 。  
   
-3.  选中 “BISM 用户”旁的复选框。  
+3.  选中  “BISM 用户”旁的复选框。  
   
-4.  单击 **“删除用户权限”**。  
+4.  单击 **“删除用户权限”** 。  
   
 ##  <a name="bkmk_userdb"></a> 配置针对工作簿的 SharePoint 权限  
  如果您在一个 Excel 工作簿内使用某一 PowerPivot 数据库，则针对该 Excel 工作簿的 SharePoint 权限将确定通过 BI 语义模型连接进行的数据访问。 为了将工作簿用作外部数据源，访问该工作簿的所有用户都必须对工作簿具有读取权限。  

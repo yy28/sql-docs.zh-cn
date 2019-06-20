@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057861"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>查找转换编辑器（“错误输出”页）
@@ -42,7 +42,7 @@ ms.locfileid: "66057861"
   
  如果您在 **“指定如何处理无匹配项的行** 列表中选中了 **“将行重定向到无匹配输出”** ，则该选项不可用。 此列表位于 **“查找转换编辑器”** 对话框的 **“常规”** 页上。  
   
- **相关主题：**[数据中的错误处理](data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](data-flow/error-handling-in-data.md)  
   
  **截断**  
  指定在发生数据截断时应当出现的情况：  

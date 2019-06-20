@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081368"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>错误配置（“挖掘结构”对话框）（Analysis Services - 多维数据）
@@ -43,7 +43,7 @@ ms.locfileid: "66081368"
  键入处理停止前忽略的错误数。  
   
  **出错时要执行的操作**  
- 选择以下操作之一，以便在错误数超出“错误数”中的值时执行该操作：  
+ 选择以下操作之一，以便在错误数超出“错误数”  中的值时执行该操作：  
   
 -   **“停止处理”** 将结束处理操作。  
   

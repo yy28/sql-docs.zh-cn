@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
 ms.openlocfilehash: 00eb4dc7d90226f7d5c944ea3b878aefb4c8a105
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109755"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>比较不同 Microsoft 环境中的商业智能功能
@@ -39,9 +39,9 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商业智能可
 |使用情况监视|是|否|是|  
 |利用基于行的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的安全性|是|否|否|  
   
- **<sup>1</sup>**[了解数据管理中数据专员的角色](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)和[视频：Power BI 信息管理和数据管理](https://www.youtube.com/watch?v=8dHOj68ts7c)。  
+ **<sup>1</sup>** [了解数据管理中数据专员的角色](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)和[视频：Power BI 信息管理和数据管理](https://www.youtube.com/watch?v=8dHOj68ts7c)。  
   
- **<sup>2</sup>**[power BI q&a:优化 Power BI 工作簿 （云建模）](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/)。  
+ **<sup>2</sup>** [power BI q&a:优化 Power BI 工作簿 （云建模）](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/)。  
   
  **<sup>3</sup>**  [介绍 Power View for Office 365 中的新预测功能](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)。  
   

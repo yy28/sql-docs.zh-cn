@@ -43,10 +43,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 933a03f2e6192be32eebd84923f4e513bd1716e6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054044"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
@@ -241,7 +241,7 @@ ms.locfileid: "66054044"
 -   **数据库**-指定或确认新数据库的名称。 如果数据库名称在目标 SQL Server 实例上已存在，建议您修改该名称。  
   
 ##  <a name="Summary"></a> 摘要页  
- 使用此页可查看操作的指定设置。 若要使用指定设置完成部署操作，请单击 **“完成”**。 若要取消部署操作并退出向导，请单击 **“取消”**。  
+ 使用此页可查看操作的指定设置。 若要使用指定设置完成部署操作，请单击 **“完成”** 。 若要取消部署操作并退出向导，请单击 **“取消”** 。  
   
  将数据库详细信息部署到 Windows Azure VM 上的 SQL Server 数据库可能需要手动步骤。 将为您详细说明这些步骤。  
   

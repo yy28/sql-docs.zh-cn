@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63007299"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>将参数传递给 Updategram (SQLXML 4.0)
@@ -32,7 +32,7 @@ ms.locfileid: "63007299"
  Updategram 允许您将 NULL 作为参数值传递。 若要将传递 NULL 参数值，指定**nullvalue**属性。 分配给的值**nullvalue**然后提供属性作为参数值。 Updategram 将该值视为 NULL。  
   
 > [!NOTE]  
->  在 **\<sql:header >** 并 **\<updg:header >**，则应指定**nullvalue**为非限定; 而中**\<updg:sync >**，则指定**nullvalue**为限定 (例如， **updg: nullvalue**)。  
+>  在 **\<sql:header >** 并 **\<updg:header >** ，则应指定**nullvalue**为非限定; 而中 **\<updg:sync >** ，则指定**nullvalue**为限定 (例如， **updg: nullvalue**)。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足中指定的要求[运行 SQLXML 示例的要求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  

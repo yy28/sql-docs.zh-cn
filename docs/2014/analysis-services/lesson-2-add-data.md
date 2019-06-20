@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078964"
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
@@ -33,28 +33,28 @@ ms.locfileid: "66078964"
   
 #### <a name="to-create-a-connection-to-a-the-adventureworksdw2012-database"></a>创建到 AdventureWorksDW2012 数据库的连接  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”菜单，然后单击“从数据源导入”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”  菜单，然后单击“从数据源导入”  。  
   
-     这将启动“表导入向导”，它将引导您设置与数据源的连接。 如果“从数据源导入”处于灰显状态，则在“解决方案资源管理器”中双击“Model.bim”，以便在设计器中打开模型。  
+     这将启动“表导入向导”，它将引导您设置与数据源的连接。 如果“从数据源导入”  处于灰显状态，则在“解决方案资源管理器”  中双击“Model.bim”  ，以便在设计器中打开模型。  
   
-2.  在“表导入向导”的“关系数据库”下，单击“Microsoft SQL Server”，然后单击“下一步”。  
+2.  在“表导入向导”  的“关系数据库”  下，单击“Microsoft SQL Server”  ，然后单击“下一步”  。  
   
 3.  在中**连接到 Microsoft SQL Server 数据库**页上，在**友好的连接名称**，类型`Adventure Works DB from SQL`。  
   
-4.  在“服务器名称”中，键入安装了 AdventureWorksDW 数据库的服务器的名称。  
+4.  在“服务器名称”  中，键入安装了 AdventureWorksDW 数据库的服务器的名称。  
   
-5.  在“数据库名称”字段中，单击向下箭头并选择“AdventureWorksDW”，然后单击“下一步”。  
+5.  在“数据库名称”  字段中，单击向下箭头并选择“AdventureWorksDW”  ，然后单击“下一步”  。  
   
-6.  在“模拟信息”页中，需要指定在导入和处理数据时 Analysis Services 将用于连接数据源的凭据。 确认已选中“特定的 Windows 用户名和密码”，在“用户名”和“密码”中输入 Windows 登录凭据，然后单击“下一步”。  
+6.  在“模拟信息”  页中，需要指定在导入和处理数据时 Analysis Services 将用于连接数据源的凭据。 确认已选中“特定的 Windows 用户名和密码”  ，在“用户名”  和“密码”  中输入 Windows 登录凭据，然后单击“下一步”  。  
   
     > [!NOTE]  
     >  使用 Windows 用户帐户和密码可提供用于连接到数据源的最安全方法。 有关详细信息，请参阅[模拟（SSAS 表格）](tabular-models/impersonation-ssas-tabular.md)。  
   
-7.  在“选择如何导入数据”页中，确认已选中“从表和视图的列表中进行选择，以便选择要导入的数据”。 需要从表和视图的列表中进行选择，因此，单击“下一步”以便显示源数据库内所有源表的列表。  
+7.  在“选择如何导入数据”  页中，确认已选中“从表和视图的列表中进行选择，以便选择要导入的数据”  。 需要从表和视图的列表中进行选择，因此，单击“下一步”  以便显示源数据库内所有源表的列表。  
   
 8.  在中**选择表和视图**页上，选择以下表的复选框：**DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，并**FactInternetSales**。  
   
-9. 我们希望为模型中的表提供更易理解的名称。 单击“友好名称”列中对应于“DimCustomer”的单元格。 通过从 DimCustomer 中删除"Dim"重命名表。  
+9. 我们希望为模型中的表提供更易理解的名称。 单击“友好名称”  列中对应于“DimCustomer”  的单元格。 通过从 DimCustomer 中删除"Dim"重命名表。  
   
 10. 重命名其他表：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66078964"
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
   
-     **请不要**单击“完成”。  
+     **请不要**单击“完成”  。  
   
  现在已连接到数据库，选择了要导入的表，并向表提供了友好名称，请转到下一部分：[导入之前对表数据进行筛选](#FilterData)。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66078964"
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>导入之前对表数据进行筛选  
   
-1.  选择“Customer”表中的行，然后单击“预览并筛选”。 “预览所选表”窗口将打开，其中显示“DimCustomer”源表中的所有列。  
+1.  选择“Customer”  表中的行，然后单击“预览并筛选”  。 “预览所选表”  窗口将打开，其中显示“DimCustomer”源表中的所有列。  
   
 2.  清除位于以下各列顶部的复选框：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66078964"
   
      因为这些列的值与互联网销售分析无关，所以不需要导入这些列。 消除不必要的列将使您的模型变小。  
   
-3.  确认已选中所有其他列，然后单击“确定”。  
+3.  确认已选中所有其他列，然后单击“确定”  。  
   
      请注意，单词**应用的筛选器**此时将显示在**筛选器详细信息**中的列**客户**行; 如果单击该链接将会看到的文本说明您刚刚应用的筛选器。  
   
@@ -145,14 +145,14 @@ ms.locfileid: "66078964"
   
 #### <a name="to-import-the-selected-tables-and-column-data"></a>导入选择的表和列数据  
   
-1.  检查所做选择。 如果一切都看上去没什么问题，则单击“完成”。  
+1.  检查所做选择。 如果一切都看上去没什么问题，则单击“完成”  。  
   
      导入数据时，该向导会显示已提取的行的数量。 导入完所有数据之后，将显示一条指示成功的消息。  
   
     > [!TIP]  
-    >  若要查看在导入的表之间自动创建的关系，请在“数据准备”行上单击“详细信息”。  
+    >  若要查看在导入的表之间自动创建的关系，请在“数据准备”  行上单击“详细信息”  。  
   
-2.  单击 **“关闭”**。  
+2.  单击 **“关闭”** 。  
   
      该向导将关闭并且模型设计器将可见。 每个表都已作为新的选项卡添加到模型设计器中。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "66078964"
   
 #### <a name="to-save-the-model-project"></a>保存模型项目  
   
--   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“文件”菜单，然后单击“全部保存”。  
+-   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“文件”  菜单，然后单击“全部保存”  。  
   
 ## <a name="next-step"></a>下一步  
  若要继续学习本教程，请转到下一课：[第 3 课：重命名列](rename-columns.md)。  

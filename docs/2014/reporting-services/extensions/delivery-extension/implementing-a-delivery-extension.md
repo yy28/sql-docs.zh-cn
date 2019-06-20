@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cae33496e4dddcaf2d14ba2d87f0d4013795e58f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63165131"
 ---
 # <a name="implementing-a-delivery-extension"></a>实现传递扩展插件
@@ -41,19 +41,19 @@ ms.locfileid: "63165131"
  介绍传递扩展插件的属性以及如何实现您自己的传递扩展插件类。  
   
  [将通知类用于传递扩展插件](using-a-notification-class-for-a-delivery-extension.md)  
- 介绍 Notification 类的属性以及如何在传递扩展插件实现中使用该类。  
+ 介绍 Notification 类的属性以及如何在传递扩展插件实现中使用该类  。  
   
  [将 Setting 类用于传递扩展插件](using-the-setting-class-for-a-delivery-extension.md)  
- 介绍 Setting 类的属性以及如何在传递扩展插件实现中使用该类。  
+ 介绍 Setting 类的属性以及如何在传递扩展插件实现中使用该类  。  
   
  [将 IDeliveryReportServerInformation 接口用于传递扩展插件](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
- 介绍 IDeliveryReportServerInformation 接口的属性以及如何在传递扩展插件实现中使用该接口。  
+ 介绍 IDeliveryReportServerInformation 接口的属性以及如何在传递扩展插件实现中使用该接口  。  
   
  [将 Report 类用于传递扩展插件](using-the-report-class-for-a-delivery-extension.md)  
- 介绍 Report 类的属性以及如何在传递扩展插件实现中使用该类。  
+ 介绍 Report 类的属性以及如何在传递扩展插件实现中使用该类  。  
   
  [将 RenderedOutputFile 类用于传递扩展插件](using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
- 介绍 RenderedOutputFile 类的属性以及如何在传递扩展插件实现中使用该类。  
+ 介绍 RenderedOutputFile 类的属性以及如何在传递扩展插件实现中使用该类  。  
   
  [为传递扩展插件实现 ISubscriptionBaseUIUserControl 接口](implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
  介绍传递扩展插件用户控件的属性以及如何实现您自己的用于订阅的用户界面。  

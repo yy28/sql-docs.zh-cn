@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19c13fba697477174f671344304a9cd4befba53e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063641"
 ---
 # <a name="use-the-sqlcmd-utility"></a>使用 sqlcmd 实用工具
   `sqlcmd` 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的即席、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 `sqlcmd`，或要生成可使用 `sqlcmd` 运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 `sqlcmd`实用程序通常使用以下方式：  
   
--   用户以交互方式输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，依次单击 **“开始”**、 **“所有程序”**，指向 **“附件”**，然后单击 **“命令提示符”**。 在命令提示符处，键入 `sqlcmd`，后面跟随所需的选项列表。 有关支持的选项的完整列表`sqlcmd`，请参阅[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
+-   用户以交互方式输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，依次单击 **“开始”** 、 **“所有程序”** ，指向 **“附件”** ，然后单击 **“命令提示符”** 。 在命令提示符处，键入 `sqlcmd`，后面跟随所需的选项列表。 有关支持的选项的完整列表`sqlcmd`，请参阅[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   
 -   用户通过下列方式提交 `sqlcmd` 作业：指定要执行的单个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，或将实用工具指向要执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所在的文本文件。 输出通常定向到一个文本文件，但也可以显示在命令提示符处。  
   
@@ -40,16 +40,16 @@ ms.locfileid: "66063641"
 ## <a name="typically-used-sqlcmd-options"></a>常用 sqlcmd 选项  
  最常用的选项如下：  
   
--   服务器选项 (**-S**)，用于标识的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到`sqlcmd`连接。  
+-   服务器选项 ( **-S**)，用于标识的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到`sqlcmd`连接。  
   
--   身份验证选项 (**-E**， **-U**，并 **-P**) 指定的凭据的`sqlcmd`用于连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   身份验证选项 ( **-E**， **-U**，并 **-P**) 指定的凭据的`sqlcmd`用于连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
     > [!NOTE]  
     >  **-E** 选项为默认选项，毋须指定。  
   
--   输入选项 (**-Q**， **-q**，并 **-i**)，用于标识输入的位置`sqlcmd`。  
+-   输入选项 ( **-Q**， **-q**，并 **-i**)，用于标识输入的位置`sqlcmd`。  
   
--   输出选项 (**-o**)，在其中指定的文件`sqlcmd`是将其输出。  
+-   输出选项 ( **-o**)，在其中指定的文件`sqlcmd`是将其输出。  
   
 ## <a name="connecting-to-the-sqlcmd-utility"></a>连接到 sqlcmd 实用工具  
  以下是 `sqlcmd` 实用工具的常见用法：  

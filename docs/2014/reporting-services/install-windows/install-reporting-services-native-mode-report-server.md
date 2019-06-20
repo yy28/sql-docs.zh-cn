@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a54650403458eec09826b51f1528a844e48791
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108813"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安装 Reporting Services 本机模式报表服务器
@@ -83,7 +83,7 @@ ms.locfileid: "66108813"
   
 -   用于运行安装程序的用户帐户必须是本地 Administrators 组成员，而且拥有针对承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例创建数据库的权限。  
   
--   安装程序必须能够使用默认值来保留用于访问报表服务器和报表管理器的 URL。 这些值包括端口 80、强通配符和虚拟目录名（格式为 ReportServer_\<instance_name> 和 Reports_\<instance_name>。  
+-   安装程序必须能够使用默认值来保留用于访问报表服务器和报表管理器的 URL。 这些值包括端口 80、强通配符和虚拟目录名（格式为 ReportServer_\<instance_name>  和 Reports_\<instance_name>  。  
   
 -   安装程序必须能够使用默认值来创建报表服务器数据库。 这些值包括 **ReportServer** 和 **ReportServerTempDB**。 如果存在以前安装的现有数据库，安装程序则因无法将报表服务器配置为本机模式的默认配置而被阻止。 必须重命名、移动或删除这类数据库以取消阻止安装程序。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66108813"
 |组成部分|Description|  
 |----------|-----------------|  
 |Prefix|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，安装程序将尝试创建使用 HTTP 前缀的 URL 预留。|  
-|主机名|默认主机名为强通配符 (+)。 它指定报表服务器会接受指定端口的任何主机名解析为的计算机，包括 http:// 上的任何 HTTP 请求\<计算机名 > / reportserver， http://localhost/reportserver，或 http://\<ip 地址 > /报表服务器。|  
+|主机名|默认主机名为强通配符 (+)。 它指定报表服务器会接受指定端口的任何主机名解析为的计算机，包括 http:// 上的任何 HTTP 请求\<计算机名 > / reportserver， http://localhost/reportserver ，或 http://\< ip 地址 > /报表服务器。|  
 |Port|默认端口为 80。 请注意，如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 应用程序时，必须将该端口显式添加至 URL 中。|  
 |虚拟目录|默认情况下，虚拟目录创建格式为 ReportServer_\<*instance_name*> 的报表服务器 Web 服务和 Reports_\<*instance_name*>为报表管理器中。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于报表管理器，默认的虚拟目录为 **reports**。|  
   
@@ -105,12 +105,12 @@ ms.locfileid: "66108813"
   
 -   http://+:80/reportserver 用于访问报表服务器。  
   
--   http://+:80/reports用于为报表管理器的访问权限。  
+-   http://+:80/reports 用于为报表管理器的访问权限。  
   
 ##  <a name="bkmk_installwithwizard"></a> 使用 SQL Server 安装向导安装本机模式  
  以下列表介绍了在 SQL Server 安装向导中选择的  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 特定步骤和选项。 该列表并不介绍您在安装向导中看到的每一页，而是仅介绍作为本机模式安装一部分的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关页。  
   
-1.  在 **“安装角色”** 页上，选择 **“SQL Server 功能安装”**。  
+1.  在 **“安装角色”** 页上，选择 **“SQL Server 功能安装”** 。  
   
      ![安装角色的 SQL Server 功能安装](../../../2014/sql-server/install/media/rs-setuprole.gif "SQL Server Feature Installation for setup role")  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66108813"
   
 3.  如果计划使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅功能，则在 **“服务器配置”** 页上，您要验证是否为 **“自动”** 启动类型配置了 SQL Server 代理。  
   
-4.  在 **“Reporting Services 配置”** 页上，选择 **“安装和配置”**。  
+4.  在 **“Reporting Services 配置”** 页上，选择 **“安装和配置”** 。  
   
      ![SSRS 本机模式配置](../../../2014/sql-server/install/media/rs-setupconfiguration-native-with-circles.gif "SSRS Native Mode Configuration")  
   

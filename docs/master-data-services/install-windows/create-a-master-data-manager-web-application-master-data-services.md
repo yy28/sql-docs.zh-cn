@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85791ac61d35d9c5651a4df02b15e5ee1fc896a6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485813"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>创建主数据管理器 Web 应用程序 (Master Data Services)
@@ -50,13 +50,13 @@ ms.locfileid: "65485813"
   
 1.  打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  在左窗格中单击 **“Web 配置”**。  
+2.  在左窗格中单击 **“Web 配置”** 。  
   
-3.  在 **“Web 配置”** 页上的网站列表中，选择 **“新建网站”**。  
+3.  在 **“Web 配置”** 页上的网站列表中，选择 **“新建网站”** 。  
   
 4.  在 **“创建网站”** 对话框中，指定新网站的信息。 有关对话框中的用户界面 (UI) 选项的详细信息，请参阅 [创建网站对话框（Master Data Services 配置管理器）](../../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)。  
   
-5.  单击“确定” 。  
+5.  单击“确定”  。  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>在现有网站中创建主数据管理器 Web 应用程序  
  在现有网站中创建 Web 应用程序时，您可以选择 Web 应用程序的虚拟路径和别名。 将该 Web 应用程序添加到新的应用程序池中。  
@@ -65,15 +65,15 @@ ms.locfileid: "65485813"
   
 1.  打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  在左窗格中单击 **“Web 配置”**。  
+2.  在左窗格中单击 **“Web 配置”** 。  
   
 3.  在 **“Web 配置”** 页上，从 **“网站”** 列表中选择要创建 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的网站。  
   
-4.  单击 **“创建应用程序”**。  
+4.  单击 **“创建应用程序”** 。  
   
 5.  在 **“创建 Web 应用程序”** 对话框中，指定新 Web 应用程序的信息。 有关对话框中的用户界面 (UI) 选项的详细信息，请参阅 [创建 Web 应用程序对话框（Master Data Services 配置管理器）](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 ## <a name="next-steps"></a>后续步骤  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 48b2f38635e77f58388cc6d3b04beedd7fdc470c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106623"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>向报表添加 HTML（报表生成器和 SSRS）
@@ -25,19 +25,19 @@ ms.locfileid: "66106623"
   
 ### <a name="to-add-html-from-a-field-in-your-dataset-into-a-text-box"></a>将 HTML 从数据集中的字段添加到文本框中  
   
-1.  在 **“插入”** 选项卡上，单击 **“列表”**。 单击设计图面，然后拖动鼠标根据所需大小创建一个文本框。  
+1.  在 **“插入”** 选项卡上，单击 **“列表”** 。 单击设计图面，然后拖动鼠标根据所需大小创建一个文本框。  
   
      此时将打开 **“数据集属性”** 对话框。 可以使用共享数据集或嵌入在报表中的数据集。 有关详细信息，请单击[“数据集属性”对话框 ->“查询”（报表生成器）](../report-data/dataset-properties-dialog-box-query-report-builder.md)或[“数据集属性”对话框 ->“查询”](../dataset-properties-dialog-box-query.md)。  
   
-2.  在 **“插入”** 选项卡上，单击 **“文本框”**。 在列表中单击，然后拖动鼠标根据所需大小创建一个文本框。  
+2.  在 **“插入”** 选项卡上，单击 **“文本框”** 。 在列表中单击，然后拖动鼠标根据所需大小创建一个文本框。  
   
 3.  将数据集中的 HTML 字段拖到文本框中。 此时将为您的字段创建一个占位符。  
   
-4.  右键单击该占位符，然后单击“占位符属性”。  
+4.  右键单击该占位符，然后单击“占位符属性”  。  
   
 5.  在 **“常规”** 选项卡中，确保 **“值”** 框中包含要对您在步骤 3 中所放置字段进行比较的表达式。  
   
-6.  单击“HTML - 将 HTML 标记解释为样式”。 这会使字段被视为 HTML。  
+6.  单击“HTML - 将 HTML 标记解释为样式”  。 这会使字段被视为 HTML。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

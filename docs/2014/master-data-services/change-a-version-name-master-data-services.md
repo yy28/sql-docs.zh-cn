@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e064f78efa3caacf3b21c330a54c145b8fead4a
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483647"
 ---
 # <a name="change-a-version-name-master-data-services"></a>更改版本名称 (Master Data Services)
@@ -31,9 +31,9 @@ ms.locfileid: "65483647"
   
 ### <a name="to-change-the-version-name"></a>更改版本名称  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
   
-2.  在“管理版本”页上的网格中，双击“名称”列中的某一单元。  
+2.  在“管理版本”  页上的网格中，双击“名称”  列中的某一单元。  
   
 3.  键入新名称。  
   

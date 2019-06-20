@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011259"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
@@ -128,8 +128,8 @@ ms.locfileid: "66011259"
   
 |平台|估计 fdhost.exe 内存需求量 MB-*F*<sup>1</sup>|用于计算最大服务器内存的公式*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _爬网范围数_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)-*`F`*-** 500|  
-|x64|_F_ **=** _爬网范围数_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
+|x86|_F_ ** = ** _爬网范围数_ ** &#42; ** 50|_M_ **=minimum(** _T_ **,** 2000 **)-*`F`*-** 500|  
+|x64|_F_ ** = ** _爬网范围数_ ** &#42; ** 10 ** &#42; ** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
  <sup>1</sup>如果正在多个完全填充，则计算每个的 fdhost.exe 内存需求量分别作为*F1*， *F2*，依次类推。 然后计算 M 为 T- sigma(_F_i)。  
   

@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127036"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 键盘快捷键
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”**。 在 **“环境”** 下的 **“键盘”** 页中选择所需的键盘方案。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”** 。 在 **“环境”** 下的 **“键盘”** 页中选择所需的键盘方案。  
   
 > [!NOTE]  
->  若要仅显示标题，请单击此页顶部的“全部折叠”。  
+>  若要仅显示标题，请单击此页顶部的“全部折叠”  。  
   
 ## <a name="menu-activation-keyboard-shortcuts"></a>菜单激活键盘快捷键  
   
@@ -218,15 +218,15 @@ ms.locfileid: "63127036"
 |运行 `sp_help` 系统存储过程|Alt+F1|Alt+F1|  
 |运行 `sp_who` 系统存储过程|Ctrl+1|Ctrl+1|  
 |运行 `sp_lock` 系统存储过程|Ctrl+2|Ctrl+2|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+3|Ctrl+3|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+4|Ctrl+4|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+5|Ctrl+5|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+6|Ctrl+6|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+8|Ctrl+8|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+9|Ctrl+9|  
-|运行在 **“工具”**、 **“选项”**、 **“键盘”**、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+0|Ctrl+0|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+3|Ctrl+3|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+4|Ctrl+4|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+5|Ctrl+5|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+6|Ctrl+6|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+7|Ctrl+7|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+8|Ctrl+8|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+9|Ctrl+9|  
+|运行在 **“工具”** 、 **“选项”** 、 **“键盘”** 、 **“查询快捷方式”** 对话框中为此快捷方式配置的存储过程|Ctrl+0|Ctrl+0|  
   
 ## <a name="text-manipulation-in-code-editor-keyboard-shortcuts"></a>代码编辑器中的文本操作键盘快捷键  
   

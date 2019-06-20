@@ -11,31 +11,31 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69d7ad1e3a65f49aa850e016e5e5bd609039ccf3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108523"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 课：指定连接信息 (Reporting Services)
-  向“教程”项目添加报表之后，需要定义数据源，它是报表从关系数据库、多维数据库或其他资源访问数据所使用的连接信息。  
+  向“教程”项目添加报表之后，需要定义数据源  ，它是报表从关系数据库、多维数据库或其他资源访问数据所使用的连接信息。  
   
  在本课中，您将使用 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 示例数据库作为数据源。 本教程假定此数据库位于本地计算机上安装的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例中。  
   
 ### <a name="to-set-up-a-connection"></a>设置连接  
   
-1.  在中**报表数据**窗格中，单击**新建**，然后单击**数据源...**.  
+1.  在中**报表数据**窗格中，单击**新建**，然后单击**数据源...** .  
   
     > [!NOTE]  
-    >  如果“报表数据”窗格不可见，请单击“视图”菜单上的“报表数据”。  
+    >  如果“报表数据”  窗格不可见，请单击“视图”  菜单上的“报表数据”  。  
   
 2.  在 **“名称”** 中，键入 [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]。  
   
-3.  确保已选中“嵌入连接”。  
+3.  确保已选中“嵌入连接”  。  
   
-4.  在“类型”中，选择 Microsoft SQL Server。  
+4.  在“类型”中，选择 Microsoft SQL Server   。  
   
-5.  在“连接字符串”中，键入以下文本：  
+5.  在“连接字符串”中，键入以下文本  ：  
   
     ```  
     Data source=localhost; initial catalog=AdventureWorks2012  
@@ -50,7 +50,7 @@ ms.locfileid: "66108523"
     >   
     >  有关连接字符串的详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](data-connections-data-sources-and-connection-strings-in-reporting-services.md)并[数据源属性对话框，常规](data-source-properties-dialog-box-general.md)。  
   
-6.  在左窗格中单击“凭据”，然后单击“使用 Windows 身份验证(集成安全性)”。  
+6.  在左窗格中单击“凭据”  ，然后单击“使用 Windows 身份验证(集成安全性)”  。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 数据源[!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]添加到**报表数据**窗格。  
   

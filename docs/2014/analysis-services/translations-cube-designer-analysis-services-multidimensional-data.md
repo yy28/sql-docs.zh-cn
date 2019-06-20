@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5f361679d7e2e57024f0ac6859dbc3b0aac32a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065789"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>翻译（多维数据集设计器）（Analysis Services - 多维数据）
@@ -29,7 +29,7 @@ ms.locfileid: "66065789"
  使用工具栏可以执行该选项卡上的常见操作。有关此窗格的详细信息，请参阅[工具栏（“翻译”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md)。  
   
  **翻译详细信息**  
- 使用“翻译详细信息”窗格可以创建和修改所选多维数据集的翻译。  
+ 使用“翻译详细信息”  窗格可以创建和修改所选多维数据集的翻译。  
   
 ## <a name="see-also"></a>请参阅  
  [多维数据集翻译](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   

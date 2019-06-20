@@ -20,17 +20,17 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157cb3b24d04337c4949e3d6cfe38337895b3bea
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cae28e453e37f6f2d91826aefef265b7991ef51d
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719425"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263249"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   返回所有受支持的排序规则的列表。  
   
@@ -55,7 +55,10 @@ fn_helpcollations ()
   
 ## <a name="examples"></a>示例
 
- 以下示例返回以字母 `L` 开头并且是二进制排序规则的所有排序规则名称。  
+ 以下示例返回以字母 `L` 开头并且是二进制排序规则的所有排序规则名称。
+
+> [!Note]
+> 必须在 master 数据库中运行针对 fn_helpcollations （） 的 azure SQL 数据仓库查询。  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  

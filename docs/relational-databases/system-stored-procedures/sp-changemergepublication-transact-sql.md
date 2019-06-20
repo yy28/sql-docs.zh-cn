@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997125"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
@@ -46,7 +46,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` 要为给定发布更改的属性。 *属性*是**sysname**，可以是值中的一个列在后面的表。  
   
-`[ @value = ] 'value'` 指定属性的新值。 *值*是**nvarchar(255)**，可以是值中的一个列在后面的表。  
+`[ @value = ] 'value'` 指定属性的新值。 *值*是**nvarchar(255)** ，可以是值中的一个列在后面的表。  
   
  下表说明的发布，可以更改，以及限制对这些属性值的属性。  
   
@@ -105,8 +105,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**retention**||这是**int**表示的数*retention_period_unit*单元要保存为给定发布的更改。 如果在保持期内没有同步该订阅，并在分发服务器上使用清除操作删除了该订阅本应接收到的挂起更改，则该订阅将过期，必须重新初始化。 允许的最大保持期为当前日期到 9999 年 12 月 31 日之间的天数。<br /><br /> 注意：对于合并发布的保持期具有 24 小时的宽限期，以适应不同的时区中的订阅服务器。|  
 |**retention_period_unit**|**day**|按天指定保持期。|  
 ||**week**|按周指定保持期。|  
-||month|按月指定保持期。|  
-||year|按年指定保持期。|  
+||month |按月指定保持期。|  
+||year |按年指定保持期。|  
 |**snapshot_in_defaultfolder**|**true**|在默认快照文件夹中存储快照文件。|  
 ||**false**|快照文件存储在由指定的备用位置*alt_snapshot_folder*。 此组合指定将快照文件同时存储在默认位置和备用位置中。|  
 |**snapshot_ready**|**true**|用于发布的快照已准备就绪。|  

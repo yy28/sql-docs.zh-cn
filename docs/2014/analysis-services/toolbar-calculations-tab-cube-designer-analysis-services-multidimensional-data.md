@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066075"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -36,8 +36,8 @@ ms.locfileid: "66066075"
 |**窗体视图**|选择此选项可在窗体视图中使用 **“计算”** 选项卡。|  
 |**脚本视图**|选择此选项可在脚本视图中使用 **“计算”** 选项卡。|  
 |**检查语法**|单击此项可在多维数据集脚本中检查语法。|  
-|**Font**|单击此项可显示“字体”对话框，并在多维数据集脚本中的选择点位置插入一组有效的字体相关单元属性值。 只有在脚本视图中才会启用此选项。|  
-|**Color**|单击此项可显示“颜色”对话框，并在多维数据集脚本中的选择点位置插入有效的 RGB（红-绿-蓝）值。 只有在脚本视图中才会启用此选项。|  
+|**Font**|单击此项可显示“字体”对话框，并在多维数据集脚本中的选择点位置插入一组有效的字体相关单元属性值。  只有在脚本视图中才会启用此选项。|  
+|**Color**|单击此项可显示“颜色”对话框，并在多维数据集脚本中的选择点位置插入有效的 RGB（红-绿-蓝）值。  只有在脚本视图中才会启用此选项。|  
 |**计算属性**|单击此项可显示 **“计算属性”** 对话框，并编辑多维数据集脚本中计算的计算属性值。|  
 |**更改用户**|单击此项可显示 **“安全上下文”** 对话框，并更改 **“计算”** 选项卡中使用的用户和角色。|  
 |**突出显示已更改的单元**|此选项不可用。|  

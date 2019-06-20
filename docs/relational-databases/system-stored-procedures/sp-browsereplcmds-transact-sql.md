@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996369"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
@@ -45,9 +45,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` 指定要返回的最低的精确序列号。 *xact_seqno_start*是**nchar(22)**，默认值为 0x00000000000000000000。  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` 指定要返回的最低的精确序列号。 *xact_seqno_start*是**nchar(22)** ，默认值为 0x00000000000000000000。  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` 指定要返回的最高精确序列号。 *xact_seqno_end*是**nchar(22)**，默认值为 0xFFFFFFFFFFFFFFFFFFFF。  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` 指定要返回的最高精确序列号。 *xact_seqno_end*是**nchar(22)** ，默认值为 0xFFFFFFFFFFFFFFFFFFFF。  
   
 `[ @originator_id = ] 'originator_id'` 指定如果具有指定的命令*originator_id*返回。 *originator_id*是**int**，默认值为 NULL。  
   
@@ -72,7 +72,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_srvname**|**sysname**|发起事务的服务器。|  
 |**originator_db**|**sysname**|发起事务的数据库。|  
 |**article_id**|**int**|项目的 ID。|  
-|**类型**|**int**|命令的类型。|  
+|**type**|**int**|命令的类型。|  
 |**partial_command**|**bit**|指示是否为部分命令。|  
 |**hashkey**|**int**|仅限内部使用。|  
 |**originator_publication_id**|**int**|发起事务的发布的 ID。|  

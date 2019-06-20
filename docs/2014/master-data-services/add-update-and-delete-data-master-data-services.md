@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054264"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>添加、更新和删除数据 (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "66054264"
   
 -   必须有权执行 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 stg.udp_\<name>_Leaf、stg.udp\_\<name>_Consolidated 或 \_\<name>_Relationship 存储过程。  
   
--   模型的状态不能是“已提交” 。  
+-   模型的状态不能是“已提交”  。  
   
  **添加、更新和删除 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的数据**  
   
@@ -60,11 +60,11 @@ ms.locfileid: "66054264"
   
     -   使用主数据管理的“集成管理”  功能区域。  
   
-         “临时批处理”  页上，在下拉列表中选择向其添加数据的模型，然后单击“开始批处理” 。 “状态”  字段将指示执行批处理的状态。 有关状态的详细信息，请参阅[导入状态 (Master Data Services)](../../2014/master-data-services/import-statuses-master-data-services.md)。  
+         “临时批处理”  页上，在下拉列表中选择向其添加数据的模型，然后单击“开始批处理”  。 “状态”  字段将指示执行批处理的状态。 有关状态的详细信息，请参阅[导入状态 (Master Data Services)](../../2014/master-data-services/import-statuses-master-data-services.md)。  
   
          ![主数据管理器中的“临时批处理”页](../../2014/master-data-services/media/mds-staging-batches.png "Staging Batches Page in Master Data Manager")  
   
-         按照 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的“临时批处理间隔”设置所确定的间隔启动临时过程。 有关详细信息，请参阅[系统设置 (Master Data Services)](../../2014/master-data-services/system-settings-master-data-services.md)。  
+         按照 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的“临时批处理间隔”设置所确定的间隔启动临时过程。  有关详细信息，请参阅[系统设置 (Master Data Services)](../../2014/master-data-services/system-settings-master-data-services.md)。  
   
 5.  查看在临时过程中出现的错误。 有关详细信息，请参阅[临时过程时发生的视图错误&#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md)并[临时过程错误&#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)。  
   

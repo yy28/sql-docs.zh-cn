@@ -16,19 +16,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876699"
 ---
 # <a name="backup-timeline"></a>备份时间线
-  使用“备份时间线”对话框可以查找和指定备份以便将数据库还原到某个时间点。 通过单击“还原数据库（“常规”页）”窗格上的“时间线”可以访问“备份时间线”对话框。 通过此对话框，您可以查看对数据库执行的还原操作的时间线。  
+  使用“备份时间线”  对话框可以查找和指定备份以便将数据库还原到某个时间点。 通过单击“还原数据库（“常规”页）”  窗格上的“时间线”  可以访问“备份时间线”  对话框。 通过此对话框，您可以查看对数据库执行的还原操作的时间线。  
   
  数据库恢复顾问确保仅选择需要恢复到该时点的那些备份。 这些选定的备份构成了为您的还原操作建议的还原计划。 您应仅使用选定的备份。 有关数据库恢复顾问的信息，请参阅[还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)。  
   
 ## <a name="restore-to"></a>还原到  
- 默认情况下，将选择 **“上次所做备份”** 。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将选择相应的备份以便还原数据库，并且将数据库还原到该时点的上一备份。 单击“具体日期和时间”可以手动设置日期和时间（选择特定的时间点）。  
+ 默认情况下，将选择 **“上次所做备份”** 。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将选择相应的备份以便还原数据库，并且将数据库还原到该时点的上一备份。 单击“具体日期和时间”  可以手动设置日期和时间（选择特定的时间点）。  
   
  **“特定日期和时间”** 允许您停止在所选的特定日期和时间上的还原。 时间线展现了围绕所选日期和时间的 24 小时中执行的备份操作。  
   

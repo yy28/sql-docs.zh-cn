@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62989992"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
@@ -36,7 +36,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>参数  
- property  
+ property   
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
  *pField*  
@@ -67,7 +67,7 @@ HRESULT BCPSetBulkMode (
   
  应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 icommandprepare:: Prepare 方法返回一个错误并阻止您检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  
   
- 下表列出了 property 参数的常量。  
+ 下表列出了 property 参数的常量  。  
   
 |属性|Description|  
 |--------------|-----------------|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079869"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>验证 PowerPivot for SharePoint 安装
@@ -25,32 +25,32 @@ ms.locfileid: "66079869"
   
 1.  在开始菜单上单击**所有程序**，打开 Microsoft SharePoint 2010 产品，然后单击**SharePoint 2010 管理中心**。  
   
-2.  输入您的用户名和密码，然后单击 **“确定”**。  
+2.  输入您的用户名和密码，然后单击 **“确定”** 。  
   
      或者，您可以修改浏览器设置，以便避免每次打开管理中心时都不得不输入用户名和密码。 若要将管理中心作为可信站点添加，请执行以下操作。  
   
-    1.  在 Internet Explorer 中的“工具”菜单上，单击 **“Internet 选项”**。  
+    1.  在 Internet Explorer 中的“工具”菜单上，单击 **“Internet 选项”** 。  
   
     2.  在“安全”选项卡中，在 **“选择要查看或更改安全设置的区域”** 部分中，单击“受信任的站点”，然后单击“站点”。  
   
-    3.  取消选中“对该区域中的所有站点要求服务器验证(https:)”复选框。  
+    3.  取消选中“对该区域中的所有站点要求服务器验证(https:)”  复选框。  
   
-    4.  在 **“将该网站添加到区域中”** 中，键入您的网站的 URL，然后单击 **“添加”**。  
+    4.  在 **“将该网站添加到区域中”** 中，键入您的网站的 URL，然后单击 **“添加”** 。  
   
-    5.  单击 **“关闭”**，然后单击 **“确定”**。  
+    5.  单击 **“关闭”** ，然后单击 **“确定”** 。  
   
         > [!NOTE]  
         >  SharePoint 安装文档包含有关解决代理服务器错误和禁用 Internet Explorer 安全增强配置的附加说明，以便您可以下载和安装更新。 有关详细信息，请参阅 Microsoft 网站上 **Deploy a single server with SQL Server** （部署单台带有 SQL Server 的服务器）中的 [Perform additional tasks](https://go.microsoft.com/fwlink/?LinkId=177754) “执行附加任务”部分。  
   
-3.  在管理中心的“系统设置”中，单击 **“管理场功能”**。  
+3.  在管理中心的“系统设置”中，单击 **“管理场功能”** 。  
   
-4.  确认 **“PowerPivot 集成功能”** 为 **“活动”**。  
+4.  确认 **“PowerPivot 集成功能”** 为 **“活动”** 。  
   
-5.  在管理中心的“系统设置”中，单击 **“管理服务器上的服务”**。  
+5.  在管理中心的“系统设置”中，单击 **“管理服务器上的服务”** 。  
   
 6.  验证 **SQL Server Analysis Services** 和 **SQL Server PowerPivot 系统服务** 是否已启动。  
   
-7.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
+7.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”** 。  
   
 8.  单击**默认 PowerPivot 服务应用程序**若要为此应用程序打开 PowerPivot 管理面板。 第一次使用时，面板要花几分钟的加载时间。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66079869"
   
 2.  验证 PowerPivot 数据访问和处理功能在应用程序中可用。 您可以通过验证 PowerPivot 提供的库模板是否存在来验证此可用性：  
   
-    1.  在站点操作，单击**更多选项...**.  
+    1.  在站点操作，单击**更多选项...** .  
   
     2.  在库中，你应看到**数据馈送库**并**PowerPivot 库**。 这些库模板由 PowerPivot 功能提供，并且在正确集成了该功能的情况下在“库”列表中将可见。  
   
@@ -78,17 +78,17 @@ ms.locfileid: "66079869"
   
 4.  在该工作簿顶部单击某个切片器或筛选器。 月份、颜色和类型是此工作簿中的切片器。 单击切片器会启动 PowerPivot 查询并证明您的服务器可以正常运行。 该服务器将在后台加载 PowerPivot 数据并返回结果。  
   
-5.  返回到库。 选择该工作簿右侧的向下箭头，然后单击 **“启动 Power View”**。 此步骤确认 Reporting Services 中的 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 功能可以正常工作。 如果您未安装 Reporting Services，请跳过此步骤。  
+5.  返回到库。 选择该工作簿右侧的向下箭头，然后单击 **“启动 Power View”** 。 此步骤确认 Reporting Services 中的 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 功能可以正常工作。 如果您未安装 Reporting Services，请跳过此步骤。  
   
      在下一步骤中，您将在 Management Studio 中连接到该服务器以确认数据已加载并且缓存。  
   
 6.  从“开始”菜单中的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 程序组启动 SQL Server Management Studio。 如果未在您的服务器上安装此工具，则可以跳到最后一步以便确认缓存文件是否存在。  
   
-7.  在“服务器类型”中，选择 **“Analysis Services”**。  
+7.  在“服务器类型”中，选择 **“Analysis Services”** 。  
   
-8.  在服务器名称，输入**\<服务器名称 > \powerpivot**，其中**\<服务器名称 >** 是具有 PowerPivot for SharePoint 安装的计算机的名称。  
+8.  在服务器名称，输入 **\<服务器名称 > \powerpivot**，其中 **\<服务器名称 >** 是具有 PowerPivot for SharePoint 安装的计算机的名称。  
   
-9. 单击 **“连接”**。 这将验证 Analysis Services 服务器是否可用。  
+9. 单击 **“连接”** 。 这将验证 Analysis Services 服务器是否可用。  
   
 10. 在对象资源管理器，您可以单击**数据库**查看加载的 PowerPivot 数据文件的列表。  
   

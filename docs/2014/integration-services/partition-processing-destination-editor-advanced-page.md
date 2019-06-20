@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056779"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>分区处理目标编辑器（“高级”页）
@@ -48,10 +48,10 @@ ms.locfileid: "66056779"
  指定在出现错误时应停止处理。  
   
  **错误数**  
- 如果选择了“出错时停止”，请指定应停止处理的错误阈值。  
+ 如果选择了“出错时停止”  ，请指定应停止处理的错误阈值。  
   
  **出错时要执行的操作**  
- 如果选择了“出错时停止”，请指定在达到错误阈值时要执行的操作。  
+ 如果选择了“出错时停止”  ，请指定在达到错误阈值时要执行的操作。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

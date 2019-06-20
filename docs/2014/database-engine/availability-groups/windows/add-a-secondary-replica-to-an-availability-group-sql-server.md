@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7605f4e5fd2fd6601cf1d132b438187edeeb29fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62792037"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>将辅助副本添加到可用性组 (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62792037"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：**[在添加辅助副本之后](#FollowUp)  
+-   **跟进：** [在添加辅助副本之后](#FollowUp)  
   
 ## <a name="before-you-begin"></a>开始之前  
  我们强烈建议您首先阅读此部分，再尝试创建您的第一个可用性组。  

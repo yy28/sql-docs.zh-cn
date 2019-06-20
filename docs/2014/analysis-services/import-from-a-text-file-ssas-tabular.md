@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 455d0981a4b81bc81b2dece8cedbd6ea07e66a21
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080539"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>从文本文件导入（SSAS 表格）
@@ -24,9 +24,9 @@ ms.locfileid: "66080539"
   
 ### <a name="to-import-data-from-a-text-file"></a>从文本文件导入数据  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”** 。  
   
-2.  在 **“连接到数据源”** 页的 **“文本文件”** 下，选择 **“Excel 文件”** 或 **“文本文件”**，然后单击 **“下一步”**。  
+2.  在 **“连接到数据源”** 页的 **“文本文件”** 下，选择 **“Excel 文件”** 或 **“文本文件”** ，然后单击 **“下一步”** 。  
   
 3.  执行表导入向导中的步骤。 在后续页上，您可以使用 **“选择表和视图”** 页来选择特定表并应用筛选器。  
   

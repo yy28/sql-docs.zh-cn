@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d84f208fc36c0bb647537aa174b86e06ba70abc3
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.openlocfilehash: dfc217b3a4e5fa58b171677c2acedc313a090285
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65403379"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263364"
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>补充课程-通过使用行筛选器实现动态安全性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "65403379"
   
 若要实现动态安全性，您必须向模型中添加一个表，该表中包含那些可以创建与模型的连接作为数据源并可浏览模型对象和数据的用户的 Windows 用户名。 您使用本教程创建的模型位于 Adventure Works Corp. 上下文中；但是，若要完成本课程，您必须添加一个表，其中包含来自您自己域的用户。 您不需要将添加的用户名的密码。 若要使用您自己域的用户的小型示例创建 EmployeeSecurity 表，将使用粘贴功能粘贴 Excel 电子表格中的员工数据。 在实际应用场景中，包含添加到模型中的用户名的表通常将使用实际数据库中的表作为数据源；例如，实际的 dimEmployee 表。  
   
-为了实现动态安全性，您将使用两个新的 DAX 函数：[USERNAME 函数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)并[LOOKUPVALUE 函数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 该公式使用 LOOKUPVALUE 函数，指定 EmployeeSecurity 表中的值，并随后将传递给 USERNAME 函数，后者指定登录的用户的用户名的值属于此角色。 然后，用户可以浏览仅指定的角色的行筛选器的数据。 在这种情况下，您将指定销售员工只能浏览自己为其中成员的销售区域的 Internet 销售数据。  
+为了实现动态安全性，您将使用两个新的 DAX 函数：[USERNAME 函数 (DAX)](/dax/username-function-dax)并[LOOKUPVALUE 函数 (DAX)](/dax/lookupvalue-function-dax)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 该公式使用 LOOKUPVALUE 函数，指定 EmployeeSecurity 表中的值，并随后将传递给 USERNAME 函数，后者指定登录的用户的用户名的值属于此角色。 然后，用户可以浏览仅指定的角色的行筛选器的数据。 在这种情况下，您将指定销售员工只能浏览自己为其中成员的销售区域的 Internet 销售数据。  
   
 若要完成本补充课程，您将需要完成一系列任务。 这些任务是此 Adventure Works 表格模型方案所特有的，但并不一定适用于实际的应用场景。 每个任务都包含描述任务目的的附加信息。  
   
@@ -186,6 +186,6 @@ ms.locfileid: "65403379"
     此用户不能浏览或查询其所属的区域之外的区域的任何 Internet 销售数据，因为在 Sales Employees by Territory 用户角色中为 Sales Territory 表定义的行筛选器有效地保护了与其他销售区域相关的所有数据。  
   
 ## <a name="see-also"></a>请参阅  
-[USERNAME 函数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
-[LOOKUPVALUE 函数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
-[CUSTOMDATA 函数 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+[USERNAME 函数 (DAX)](/dax/username-function-dax)  
+[LOOKUPVALUE 函数 (DAX)](/dax/lookupvalue-function-dax)  
+[CUSTOMDATA 函数 (DAX)](/dax/customdata-function-dax)  

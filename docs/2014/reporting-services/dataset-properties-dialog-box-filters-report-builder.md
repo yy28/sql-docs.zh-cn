@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109381"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>“数据集属性”对话框 -&gt;“筛选器”（报表生成器）
@@ -45,9 +45,9 @@ ms.locfileid: "66109381"
  键入或选择要对其应用筛选器的表达式。 单击“表达式”(**fx**) 按钮可编辑表达式。  
   
  **Data type**  
- 为“值”选择数据类型。 如果可能，请选择与 **“表达式”** 的数据类型匹配的数据类型。  
+ 为“值”  选择数据类型。 如果可能，请选择与 **“表达式”** 的数据类型匹配的数据类型。  
   
- **“表达式”** 和 **“值”** 中的值的计算结果必须属于同一数据类型。 例如，如果“表达式”设置为具有数据类型 System.Int32 的字段并且“值”设置为 7，则从下拉列表中选择 **Integer**。  
+ **“表达式”** 和 **“值”** 中的值的计算结果必须属于同一数据类型。 例如，如果“表达式”设置为具有数据类型 System.Int32 的字段并且“值”设置为 7，则从下拉列表中选择 **Integer**。    
   
  如果您需要的数据类型选项不在下拉列表中，请编写表达式将该值转换成正确的数据类型。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66109381"
  选择要用于比较表达式和值的运算符。  
   
  **ReplTest1**  
- 键入在计算“表达式”框中所指定的表达式时要使用的表达式或值。 单击“表达式”(**fx**) 按钮可编辑表达式。  
+ 键入在计算“表达式”  框中所指定的表达式时要使用的表达式或值。 单击“表达式”(**fx**) 按钮可编辑表达式。  
   
 ## <a name="see-also"></a>请参阅  
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   

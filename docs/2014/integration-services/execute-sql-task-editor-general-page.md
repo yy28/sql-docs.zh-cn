@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058992"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>执行 SQL 任务编辑器（“常规”页）
@@ -49,15 +49,15 @@ ms.locfileid: "66058992"
  在您将此属性设置为 `Allowed` 时，“执行 SQL 任务”将尝试将输出参数和查询结果转换为结果赋值给的变量的数据类型。 这适用于 **单行** 结果集类型。  
   
  **ResultSet**  
- 指定运行 SQL 语句预期的结果类型。 从 **“单行”**、 **“完整结果集”**、 **XML**或 **“无”** 中选择。  
+ 指定运行 SQL 语句预期的结果类型。 从 **“单行”** 、 **“完整结果集”** 、 **XML**或 **“无”** 中选择。  
   
  **ConnectionType**  
  选择连接数据源要使用的连接管理器的类型。 可用的连接类型包括 **OLE DB**、 **ODBC**、 **ADO**、 **ADO.NET** 和 **SQLMOBILE**。  
   
- **相关主题：**[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)、[ODBC 连接管理器](connection-manager/odbc-connection-manager.md)、[ADO 连接管理器](connection-manager/ado-connection-manager.md)、[ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 连接管理器](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **相关主题：** [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)、[ODBC 连接管理器](connection-manager/odbc-connection-manager.md)、[ADO 连接管理器](connection-manager/ado-connection-manager.md)、[ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 连接管理器](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **“连接”**  
- 从已定义的连接管理器的列表中选择连接。 要创建新连接，请选择“\<新建连接...>”。  
+ 从已定义的连接管理器的列表中选择连接。 要创建新连接，请选择“\<新建连接...>”  。  
   
  **SQLSourceType**  
  选择任务运行的 SQL 语句的源类型。  
@@ -80,13 +80,13 @@ ms.locfileid: "66058992"
  **BypassPrepare**  
  指示 SQL 语句是否已准备就绪。  如果为 `true`，则跳过准备过程；如果为 `false`，则在运行 SQL 语句前准备 SQL 语句。 此选项仅可用于支持准备的 OLE DB 连接。  
   
- **相关主题：**[准备好的执行](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **相关主题：** [准备好的执行](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **“浏览”**  
- 使用“打开”对话框定位包含 SQL 语句的文件。 选择一个文件，将文件内容作为 SQL 语句复制到 **SQLStatement** 属性中。  
+ 使用“打开”  对话框定位包含 SQL 语句的文件。 选择一个文件，将文件内容作为 SQL 语句复制到 **SQLStatement** 属性中。  
   
  **生成查询**  
- 使用“查询生成器”对话框创建 SQL 语句，查询生成器是一种用于创建查询的图形工具。 此选项在 **SQLSourceType** 选项设置为 **“直接输入”** 时可用。  
+ 使用“查询生成器”  对话框创建 SQL 语句，查询生成器是一种用于创建查询的图形工具。 此选项在 **SQLSourceType** 选项设置为 **“直接输入”** 时可用。  
   
  **分析查询**  
  验证 SQL 语句的语法。  
@@ -95,21 +95,21 @@ ms.locfileid: "66058992"
   
 ### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = 直接输入  
  **SQLStatement**  
- 在选项框中键入要执行的 SQL 语句，或者单击浏览按钮 (…)，在“输入 SQL 查询”对话框中键入 SQL 语句，还可以单击“生成查询”，使用“查询生成器”对话框编写 SQL 语句。  
+ 在选项框中键入要执行的 SQL 语句，或者单击浏览按钮 (…)，在“输入 SQL 查询”对话框中键入 SQL 语句，还可以单击“生成查询”，使用“查询生成器”对话框编写 SQL 语句    。  
   
- **相关主题：**[查询生成器](../../2014/integration-services/query-builder.md)  
+ **相关主题：** [查询生成器](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 文件连接  
  **文件连接**  
- 选择现有文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器。  
+ 选择现有文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器  。  
   
- **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：** [文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 变量  
  **SourceVariable**  
- 选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
+ 选择现有变量，或单击“\<新建变量...>”，创建一个新变量  。  
   
- **相关主题：**[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

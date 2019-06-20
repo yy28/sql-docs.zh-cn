@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062471"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Analysis Services MDX 查询设计器 (PowerPivot)
@@ -36,13 +36,13 @@ ms.locfileid: "66062471"
   
 |Pane|函数|  
 |----------|--------------|  
-|选择“多维数据集”按钮 (**...**)|显示当前选定的多维数据集。|  
+|选择“多维数据集”按钮 ( **...** )|显示当前选定的多维数据集。|  
 |“元数据”窗格|显示在选定多维数据集中定义的度量值、关键绩效指标 (KPI) 和维度的层次列表。|  
 |“计算成员”窗格|显示当前定义的可在查询中使用的计算成员。|  
 |“筛选器”窗格|用于选择维度和相关的层次结构，以筛选源中的数据并限制返回的数据。|  
 |“数据”窗格|在从“元数据”窗格向“计算成员”窗格拖动项目时，显示结果集的列标题。 如果选中 **“自动执行”** 按钮，则可自动更新结果集。|  
   
- 可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果选中工具栏上的“自动执行”（![自动执行查询](media/rsqdicon-autoexecute.gif "AutoExecute the query")）切换按钮，则每次将元数据对象拖到“数据”窗格时，查询设计器都将运行查询。 可以使用工具栏上的“运行”（![运行查询](media/rsqdicon-run.gif "Run the query")）按钮手动运行查询。  
+ 可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果选中工具栏上的“自动执行”（![自动执行查询](media/rsqdicon-autoexecute.gif "AutoExecute the query")）切换按钮，则每次将元数据对象拖到“数据”窗格时，查询设计器都将运行查询  。 可以使用工具栏上的“运行”（![运行查询](media/rsqdicon-run.gif "Run the query")）按钮手动运行查询  。  
   
  在此模式下创建 MDX 查询时，下面的附加属性将会自动包含到查询中：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66062471"
   
 |Pane|函数|  
 |----------|--------------|  
-|选择“多维数据集”按钮 (**...**)|显示当前选定的多维数据集。|  
+|选择“多维数据集”按钮 ( **...** )|显示当前选定的多维数据集。|  
 |元数据/函数/模板窗格|显示在选定多维数据集中定义的度量值、KPI 和维度的层次列表。|  
 |“查询”窗格|显示查询文本。|  
 |“结果”窗格|显示运行查询的结果。|  

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8beb6998d78ad9a113ce18323133de7ed39ead56
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090643"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>将服务器配置为运行 Off By Default 策略
@@ -22,25 +22,25 @@ ms.locfileid: "66090643"
   
 ### <a name="to-run-the-off-by-default-policy"></a>运行 Off By Default 策略  
   
-1.  在对象资源管理器中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，指向“策略”，然后单击“评估”。  
+1.  在对象资源管理器中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，指向“策略”  ，然后单击“评估”  。  
   
-2.  在“评估策略”对话框中，可以从另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或文件中选择策略。 对于此步骤，仍将“源”设置为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
+2.  在“评估策略”  对话框中，可以从另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或文件中选择策略。 对于此步骤，仍将“源”  设置为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
-3.  在“策略”部分中，选择 **Off By Default** 策略。  
+3.  在“策略”  部分中，选择 **Off By Default** 策略。  
   
-4.  要查看服务器是否符合该策略，请单击“评估”。  
+4.  要查看服务器是否符合该策略，请单击“评估”  。  
   
-5.  如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 符合该策略，则会在“结果”区域中显示带复选标记的绿色圆圈。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]不符合该策略，则会显示带 X 的红色圆圈。  
+5.  如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 符合该策略，则会在“结果”  区域中显示带复选标记的绿色圆圈。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]不符合该策略，则会显示带 X 的红色圆圈。  
   
-6.  在“目标详细信息”区域中，如果发生了错误，你会在“消息”列中看到其他信息。 在“消息”列中，单击“查看”以查看报表，其中包含所检查的每个方面属性的检查结果。  
+6.  在“目标详细信息”  区域中，如果发生了错误，你会在“消息”  列中看到其他信息。 在“消息”  列中，单击“查看”  以查看报表，其中包含所检查的每个方面属性的检查结果。  
   
-7.  页面底部将显示策略说明，“更多帮助”部分显示为策略配置的超链接。 单击消息超链接可打开在创建策略时指定的网页。  
+7.  页面底部将显示策略说明，“更多帮助”  部分显示为策略配置的超链接。 单击消息超链接可打开在创建策略时指定的网页。  
   
-8.  关闭浏览器，然后关闭“结果详细视图”对话框。  
+8.  关闭浏览器，然后关闭“结果详细视图”  对话框。  
   
-9. 如果服务器不符合该策略并且你希望禁用数据库邮件，请在“评估结果”页中单击“应用”。  
+9. 如果服务器不符合该策略并且你希望禁用数据库邮件，请在“评估结果”  页中单击“应用”  。  
   
-10. 关闭“结果详细视图”和“评估策略”对话框。  
+10. 关闭“结果详细视图”  和“评估策略”  对话框。  
   
 ## <a name="next-lesson"></a>下一课  
  [第 2 课：创建并应用命名标准策略](lesson-2-create-and-apply-a-naming-standards-policy.md)  

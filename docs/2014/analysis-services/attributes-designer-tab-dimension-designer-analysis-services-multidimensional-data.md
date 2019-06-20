@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c534fc23e2bc4938349d7874c1ce1fbd9b374dd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064481"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -24,7 +24,7 @@ ms.locfileid: "66064481"
   
  **若要查看属性窗格**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”选项卡。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”  选项卡。  
   
 2.  在工具栏上，单击 **“显示列表视图”** 图标。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66064481"
   
 ### <a name="shortcut-menu-options"></a>快捷菜单选项  
  **新建属性关系**  
- 打开“创建属性关系”对话框，可以在其中定义新的属性关系。  
+ 打开“创建属性关系”  对话框，可以在其中定义新的属性关系。  
   
  有关详细信息，请参阅[“创建属性关系”和“编辑属性关系”对话框（“属性关系设计器”选项卡，维度设计器）（Analysis Services - 多维数据）](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md)和[定义属性关系](multidimensional-models/attribute-relationships-define.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66064481"
  在列表中突出显示该属性的名称，您可以修改此文本。  
   
  **属性**  
- 在“属性”窗口中显示特性的属性。  
+ 在“属性”  窗口中显示特性的属性。  
   
 ## <a name="see-also"></a>请参阅  
  [属性关系&#40;维度设计器&#41; &#40;Analysis Services-多维数据&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   

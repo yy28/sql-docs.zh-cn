@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089582"
 ---
 # <a name="trace-properties-events-selection-tab"></a>跟踪属性（“事件选择”选项卡）
   使用 **“跟踪属性”** 对话框的 **“事件选择”** 选项卡可以查看或指定跟踪的事件和数据列。  
   
 ## <a name="options"></a>选项  
- “事件”列  
+ “事件”  列  
  通过选中或清除事件列中的复选框，指定跟踪的事件。 **“事件”** 按事件类别进行组织。 模板中指定的事件类是自动选择的。 有关详细信息，请参阅 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
  数据列  
@@ -40,7 +40,7 @@ ms.locfileid: "66089582"
  显示所有可用数据列。 默认情况下，仅显示选定的数据列。 取消选中此框，将隐藏 **“事件选择”** 网格中所有未选定的数据列。  
   
  **列筛选器**  
- 启动“编辑筛选器”对话框。 您可以使用此对话框编辑数据列筛选器。  
+ 启动“编辑筛选器”  对话框。 您可以使用此对话框编辑数据列筛选器。  
   
  **组织列**  
  更改跟踪中列的顺序，并按一列或多列对结果分组。  

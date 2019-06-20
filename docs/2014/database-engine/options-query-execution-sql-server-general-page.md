@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 83c0d1ad4d63d361754c5e2183081c30c7c51f2b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089985"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>选项 （查询执行 SQL Server-常规页）
-  使用此页可指定用于运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询的选项。 对这些选项所做的更改仅应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在“查询”菜单上单击“查询选项”，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中单击右键，再选择“查询选项”。  
+  使用此页可指定用于运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询的选项。 对这些选项所做的更改仅应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在“查询”  菜单上单击“查询选项”  ，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中单击右键，再选择“查询选项”  。  
   
 ## <a name="options"></a>选项  
  **SET ROWCOUNT**  
@@ -35,7 +35,7 @@ ms.locfileid: "66089985"
  **批处理分隔符**  
  键入用来将 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句分隔为批的词。 默认值为 GO。  
   
- 默认情况下，在 SQLCMD 模式下打开新查询  
+ 默认情况下，在 SQLCMD 模式下打开新查询   
  选中此复选框可在 SQLCMD 模式下打开新查询。 有关 SQLCMD 模式的详细信息，请参阅[使用查询编辑器编辑 SQLCMD 脚本](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  
   
  选择此选项时，请记住下列限制：  
@@ -46,7 +46,7 @@ ms.locfileid: "66089985"
   
 -   由于查询编辑器无法响应操作系统提示，因此您一定要记住不要运行交互式语句。  
   
- 重置为默认值  
+ 重置为默认值   
  单击此项可将此页上的所有值重置为原始默认值。  
   
 ## <a name="see-also"></a>请参阅  

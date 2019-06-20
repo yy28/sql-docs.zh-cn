@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081653"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery 部署方案（SSAS 表格）
@@ -43,11 +43,11 @@ ms.locfileid: "66081653"
   
  您可以随时启用 DirectQuery；但是，为了确保您不会创建与 DirectQuery 模式不兼容的列或公式，我们建议您从一开始就启用 DirectQuery 模式。  
   
- 最初，甚至始终在内存中创建 DirectQuery 模型。 工作区数据库的默认查询模式也设置为 **“DirectQuery 以及内存中”**。 使用此混合工作模式，您可以在对照 DirectQuery 要求验证模型的同时，继续使用导入数据的缓存，以便在模型设计过程中提高性能。  
+ 最初，甚至始终在内存中创建 DirectQuery 模型。 工作区数据库的默认查询模式也设置为 **“DirectQuery 以及内存中”** 。 使用此混合工作模式，您可以在对照 DirectQuery 要求验证模型的同时，继续使用导入数据的缓存，以便在模型设计过程中提高性能。  
   
  **第 3 步。解决验证错误**  
   
- 如果您在启用 DirectQuery 时或在添加新的数据或公式时遇到验证错误，则打开 Visual Studio 的 **“错误列表”**，然后执行所需操作。  
+ 如果您在启用 DirectQuery 时或在添加新的数据或公式时遇到验证错误，则打开 Visual Studio 的 **“错误列表”** ，然后执行所需操作。  
   
 -   根据错误消息中的说明，更改针对 DirectQuery 模式的所有所需的属性设置。  
   
@@ -62,18 +62,18 @@ ms.locfileid: "66081653"
 |||  
 |-|-|  
 |**仅限 DirectQuery**|将属性设置为 **DirectQuery**。|  
-|**混合模式**|将属性设置为 **“内存中以及 DirectQuery”** 或 **“DirectQuery 以及内存中”**。<br /><br /> 稍后您可以更改此值以使用不同的首选项。<br /><br /> 请注意，客户端可能覆盖连接字符串中的首选方法。|  
+|**混合模式**|将属性设置为 **“内存中以及 DirectQuery”** 或 **“DirectQuery 以及内存中”** 。<br /><br /> 稍后您可以更改此值以使用不同的首选项。<br /><br /> 请注意，客户端可能覆盖连接字符串中的首选方法。|  
   
  **第 5 步。指定 DirectQuery 分区**  
   
 |||  
 |-|-|  
 |**仅限 DirectQuery**|可选。 仅 DirectQuery 模型无需分区。<br /><br /> 但是，如果您在设计阶段在模型中创建了分区，请注意仅有一个分区可用作数据源。 默认情况下，创建的第一个分区将用作 DirectQuery 分区。<br /><br /> 若要确保模型所需的所有数据可以从 DirectQuery 分区中获取，请选择一个 DirectQuery 分区，并编辑 SQL 语句以获得整个数据集。|  
-|**混合模式**|如果您的模型中的任意表包含多个分区，您必须选择单个分区作为“DirectQuery 分区” 。 如果您没有指派分区，则默认情况下，创建的第一个分区将用作 DirectQuery 分区。<br /><br /> 设置除 DirectQuery 以外的所有分区的处理选项。 通常，始终不处理 DirectQuery 分区，因为数据是通过关系源传递的。<br /><br /> 有关详细信息，请参阅[分区和 DirectQuery 模式&#40;SSAS 表格&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)。|  
+|**混合模式**|如果您的模型中的任意表包含多个分区，您必须选择单个分区作为“DirectQuery 分区”  。 如果您没有指派分区，则默认情况下，创建的第一个分区将用作 DirectQuery 分区。<br /><br /> 设置除 DirectQuery 以外的所有分区的处理选项。 通常，始终不处理 DirectQuery 分区，因为数据是通过关系源传递的。<br /><br /> 有关详细信息，请参阅[分区和 DirectQuery 模式&#40;SSAS 表格&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)。|  
   
  **步骤 6。对模拟进行配置**  
   
- 仅 DirectQuery 模型支持模拟。 模拟选项（ **“模拟设置”**）定义在查看来自指定的 SQL Server 数据源的数据时使用的凭据。  
+ 仅 DirectQuery 模型支持模拟。 模拟选项（ **“模拟设置”** ）定义在查看来自指定的 SQL Server 数据源的数据时使用的凭据。  
   
 |||  
 |-|-|  
@@ -93,11 +93,11 @@ ms.locfileid: "66081653"
   
  **步骤 8。验证已部署的模型**  
   
- 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，打开部署了该模型的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。 右键单击数据库名称并选择 **“属性”**。  
+ 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，打开部署了该模型的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。 右键单击数据库名称并选择 **“属性”** 。  
   
 -   当您在定义部署属性时，设置属性 **DirectQueryMode**。  
   
--   当您在定义用户模拟选项时，设置属性 **“数据源模拟信息”**。 有关详细信息，请参阅[设置模拟选项（SSAS - 多维）](multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。  
+-   当您在定义用户模拟选项时，设置属性 **“数据源模拟信息”** 。 有关详细信息，请参阅[设置模拟选项（SSAS - 多维）](multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。  
   
 -   在部署了模型后，您可以随时更改这些属性。  
   
@@ -111,8 +111,8 @@ ms.locfileid: "66081653"
   
 |||  
 |-|-|  
-|**无缓存的 DirectQuery**|不向缓存中加载任何数据。 永远不能处理模型。<br /><br /> 只能通过使用支持 DAX 查询的客户端对模型进行查询。 查询结果始终从原始数据源返回。<br /><br /> **DirectQueryMode** = `On`<br /><br />  = **DirectQuery**|  
-|**使用查询仅针对缓存的 DirectQuery**|部署失败。 不支持这种配置。<br /><br /> **DirectQueryMode** = `On`<br /><br />  = **内存中**|  
+|**无缓存的 DirectQuery**|不向缓存中加载任何数据。 永远不能处理模型。<br /><br /> 只能通过使用支持 DAX 查询的客户端对模型进行查询。 查询结果始终从原始数据源返回。<br /><br /> **DirectQueryMode** = `On`<br /><br />   = **DirectQuery**|  
+|**使用查询仅针对缓存的 DirectQuery**|部署失败。 不支持这种配置。<br /><br /> **DirectQueryMode** = `On`<br /><br />   = **内存中**|  
   
  **混合模式**  
  在混合模式中部署您的模型具有许多好处：您可以根据需要从 SQL Server 数据源获取最新数据，但通过保留缓存，您能够使用内存中的数据以便在设计报表或测试模型时提高速度。  
@@ -123,8 +123,8 @@ ms.locfileid: "66081653"
   
 |||  
 |-|-|  
-|**缓存为首选的混合模式**|可以处理模型，并且可以将数据加载到缓存中。 默认情况下，查询使用缓存。  如果某一客户端想要使用 DirectQuery 源，则一个参数必须插入到连接字符串中。<br /><br /> **DirectQueryMode** = `On`<br /><br />  = **In-Memory with DirectQuery**|  
-|**DirectQuery 为首选的混合模式**|对模型进行处理，并且可以将数据加载到缓存中。 但是，查询在默认情况下使用 DirectQuery。 如果某一客户端想要使用缓存数据，则一个参数必须插入到连接字符串中。 如果对模型中的表进行了分区，则缓存的主分区也设置为 **“内存中以及 DirectQuery”**。<br /><br /> **DirectQueryMode** = `On`<br /><br />  = **“DirectQuery 以及内存中”**|  
+|**缓存为首选的混合模式**|可以处理模型，并且可以将数据加载到缓存中。 默认情况下，查询使用缓存。  如果某一客户端想要使用 DirectQuery 源，则一个参数必须插入到连接字符串中。<br /><br /> **DirectQueryMode** = `On`<br /><br />   = **In-Memory with DirectQuery**|  
+|**DirectQuery 为首选的混合模式**|对模型进行处理，并且可以将数据加载到缓存中。 但是，查询在默认情况下使用 DirectQuery。 如果某一客户端想要使用缓存数据，则一个参数必须插入到连接字符串中。 如果对模型中的表进行了分区，则缓存的主分区也设置为 **“内存中以及 DirectQuery”** 。<br /><br /> **DirectQueryMode** = `On`<br /><br />   =  **“DirectQuery 以及内存中”**|  
   
 ## <a name="see-also"></a>请参阅  
  [DirectQuery 模式（SSAS 表格）](tabular-models/directquery-mode-ssas-tabular.md)   

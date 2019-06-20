@@ -15,20 +15,20 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090989"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服务 URL（SSRS 本机模式）
-  使用“Web 服务 URL”页可配置或修改用于访问报表服务器的 URL。 将基于指定的 URL 创建“URL 预留”。 URL 预留定义适用于所有 URL 的语法和规则，随后可使用这些 URL 来访问报表服务器 Web 服务。 它指定报表服务器 Web 服务的前缀、主机、端口和虚拟目录。 根据指定主机的方式不同，一个预留可能会对应多个 URL。 主机的默认值指定强通配符。 使用强通配符，可在 URL 中指定可解析为承载报表服务器的计算机的任何主机名。 有关 URL 配置和保留的详细信息，请参阅[配置 URL &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)并[配置报表服务器 Url &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+  使用“Web 服务 URL”页可配置或修改用于访问报表服务器的 URL。 将基于指定的 URL 创建“URL 预留”  。 URL 预留定义适用于所有 URL 的语法和规则，随后可使用这些 URL 来访问报表服务器 Web 服务。 它指定报表服务器 Web 服务的前缀、主机、端口和虚拟目录。 根据指定主机的方式不同，一个预留可能会对应多个 URL。 主机的默认值指定强通配符。 使用强通配符，可在 URL 中指定可解析为承载报表服务器的计算机的任何主机名。 有关 URL 配置和保留的详细信息，请参阅[配置 URL &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)并[配置报表服务器 Url &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
  若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，并在导航窗格中单击 **“Web 服务 URL”** 。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
- 此页提供报表服务器 URL 中常用的值。 如果要创建其他 URL，请使用主机标头，或指定特殊格式的 IP 地址，然后单击 **“高级”**。  
+ 此页提供报表服务器 URL 中常用的值。 如果要创建其他 URL，请使用主机标头，或指定特殊格式的 IP 地址，然后单击 **“高级”** 。  
   
  单击 **“应用”** 后，此页上将显示一个指向 Web 服务的链接。 如果在创建报表服务器数据库之前单击此链接，则可能会看到“Page Not Found”（找不到页）错误。 配置数据库后，就不会再显示此错误。 有关详细信息，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   

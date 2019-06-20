@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 95bf8da81caa71b3f095e7143292cd60e807b585
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108627"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -112,7 +112,7 @@ ms.locfileid: "66108627"
   
 -   备份对 IIS 中现有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 虚拟目录的任何自定义。  
   
--   删除无效的 SSL 证书。  这包括在升级 Reporting Services 前未计划更新的到期证书。  无效证书将导致升级失败并且类似于以下错误消息将写入 Reporting Services 日志文件：**Microsoft.ReportingServices.WmiProvider.WMIProviderException:未在网站上配置安全套接字层 (SSL) 证书。**.  
+-   删除无效的 SSL 证书。  这包括在升级 Reporting Services 前未计划更新的到期证书。  无效证书将导致升级失败并且类似于以下错误消息将写入 Reporting Services 日志文件：**Microsoft.ReportingServices.WmiProvider.WMIProviderException:未在网站上配置安全套接字层 (SSL) 证书。** .  
   
  在升级生产环境之前，务必在与生产环境具有相同配置的生产前环境中运行测试升级。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "66108627"
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 的受支持版本升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **起始环境：** SQL Server 2008 R2, SharePoint 2010.  
   
- **结束环境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
+ **结束环境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
   
 -   支持就地升级，并且不会停止 SharePoint 环境的运行。  
   
@@ -227,9 +227,9 @@ ms.locfileid: "66108627"
  ![使用顶部的链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[本主题中：](#bkmk_top)  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **起始环境：**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2，SharePoint 2007。  
+ **起始环境：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2，SharePoint 2007。  
   
- **结束环境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
+ **结束环境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
   
 -   此就地升级方案要求停止 SharePoint 环境的运行，因为 SharePoint 和 SQL Server 技术都需要升级。 您可能要考虑完成迁移，而不是就地升级。  
   
@@ -246,10 +246,10 @@ ms.locfileid: "66108627"
   
  ![使用顶部的链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[本主题中：](#bkmk_top)  
   
-### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SQL Server 2005 SP2 至   
+### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SQL Server 2005 SP2 至  
  **起始环境：** SQL Server 2005 SP2，SharePoint 2007。  
   
- **结束环境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
+ **结束环境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
   
 -   此就地升级方案要求停止 SharePoint 环境的运行，因为 SharePoint 和 SQL Server 技术都需要升级。 您可能要考虑完成迁移，而不是就地升级。  
   
@@ -304,11 +304,11 @@ ms.locfileid: "66108627"
 > [!NOTE]  
 >  有关 SharePoint 数据库附加升级的详细信息，请参阅下列文章：  
   
--   [升级到 SharePoint 2013 的过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688)。  
+-   [升级到 SharePoint 2013 的过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688) 。  
   
--   [清理前升级到 SharePoint 2013 的准备工作](https://go.microsoft.com/fwlink/p/?LinkId=256689)(https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [清理前升级到 SharePoint 2013 的准备工作](https://go.microsoft.com/fwlink/p/?LinkId=256689)(https://go.microsoft.com/fwlink/p/?LinkId=256689) 。  
   
--   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690) 。  
   
  ![使用顶部的链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[本主题中：](#bkmk_top)  
   

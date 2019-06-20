@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099658"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
   使用此页可以针对报表服务器设置系统属性。 可通过多种方法来设置系统属性。 此工具提供了一个图形用户界面，您不必编写代码即可设置属性。  
   
- 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”。 单击 **“高级”** 打开此页。  
+ 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”  。 单击 **“高级”** 打开此页。  
   
 ## <a name="options"></a>选项  
  **EnableMyReports**  
@@ -35,7 +35,7 @@ ms.locfileid: "66099658"
  确定是否可从报表服务器下载 RSClientPrint ActiveX 控件。 有效的值是`true`和`false`。 默认值是 `true`。 有关此控件所需的其他设置的详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
   
  **EnableExecutionLogging**  
- 指示报表执行日志记录是否处于启用状态。 默认值是 `true`。 有关报表服务器执行日志的详细信息，请参阅[报表服务器执行日志和 ExecutionLog3 视图](../report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
+ 指示报表执行日志记录是否处于启用状态。 默认值为 `true`。 有关报表服务器执行日志的详细信息，请参阅[报表服务器执行日志和 ExecutionLog3 视图](../report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
   
  **ExecutionLogDaysKept**  
  在执行日志中保留报表执行信息的天数。 此属性的有效值包括 `-1` 到 `2`、`147`、`483` 和 `647`。 如果值为 `-1`，则不从执行日志表中删除项。 默认值是 `60`。  
@@ -56,7 +56,7 @@ ms.locfileid: "66099658"
  指定报表服务器可以存储的参数值的最大数目。 有效值为 `-1` 以及 `+1` 到 `2,147,483,647`。 默认值是 `1500`。  
   
  **UseSessionCookies**  
- 指示报表服务器与客户端浏览器通信时是否应使用会话 cookie。 默认值为 `true`。  
+ 指示报表服务器与客户端浏览器通信时是否应使用会话 cookie。 默认值是 `true`。  
   
  **ExternalImagesTimeout**  
  确定在连接超时之前，必须对外部映像文件检索的时间长度。默认值是`600`秒。  
@@ -103,7 +103,7 @@ ms.locfileid: "66099658"
  指定报表编辑会话超时之前的秒数。默认值为 7200 秒（2 小时）。  
   
  **EnableTestConnectionDetailedErrors**  
- 指示当用户使用报表服务器测试数据源连接时，是否向客户端计算机发送详细的错误消息。 默认值是 `true`。 如果此选项设置为 `false`，则只发送一般错误消息。  
+ 指示当用户使用报表服务器测试数据源连接时，是否向客户端计算机发送详细的错误消息。 默认值为 `true`。 如果此选项设置为 `false`，则只发送一般错误消息。  
   
 ## <a name="see-also"></a>请参阅  
  [设置报表服务器属性 (Management Studio)](set-report-server-properties-management-studio.md)   

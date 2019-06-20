@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1008202519f1d9bcbf48dfdc4cd4ef3a3cbbe20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108466"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>第 4 课：定义用于子报表的数据连接和数据表
@@ -32,21 +32,21 @@ ms.locfileid: "66108466"
   
 4.  上**选择数据连接**页上，单击**新的连接**。  
   
-5.  在“添加连接”对话框中，执行以下步骤：  
+5.  在“添加连接”对话框中，执行以下步骤  ：  
   
     1.  在中**服务器名称**框中，输入服务器的位置**AdventureWorks2008**位于数据库所在。  
   
          默认的 SQL Server Express 实例为 **(local)\sqlexpress**。  
   
-    2.  在“登录到服务器”部分中，选择使你可访问数据的选项。 “使用 Windows 身份验证”为默认选项。  
+    2.  在“登录到服务器”部分中，选择使你可访问数据的选项  。 “使用 Windows 身份验证”为默认选项  。  
   
     3.  从**选择或输入数据库名称**下拉列表中，单击**AdventureWorks2008**。  
   
-    4.  单击“确定”，然后单击“下一步”。  
+    4.  单击“确定”  ，然后单击“下一步”  。  
   
-6.  如果在步骤 5 (b) 中选择了“使用 SQL Server 身份验证”，则选择一个选项，决定是在字符串中加入敏感数据还是在应用程序代码中设置该信息。  
+6.  如果在步骤 5 (b) 中选择了“使用 SQL Server 身份验证”，则选择一个选项，决定是在字符串中加入敏感数据还是在应用程序代码中设置该信息  。  
   
-7.  上**将连接字符串保存到应用程序配置文件**页上，键入连接字符串的名称或接受默认**AdventureWorks2008ConnectionString**。 单击“下一步” 。  
+7.  上**将连接字符串保存到应用程序配置文件**页上，键入连接字符串的名称或接受默认**AdventureWorks2008ConnectionString**。 单击“下一步”  。  
   
 8.  上**选择命令类型**页上，选择**使用 SQL 语句**，然后单击**下一步**。  
   

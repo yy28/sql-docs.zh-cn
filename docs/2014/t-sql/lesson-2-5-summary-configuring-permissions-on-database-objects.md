@@ -13,13 +13,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642710"
 ---
-# <a name="summary-configuring-permissions-on-database-objects"></a>摘要：配置对数据库对象的权限
+# <a name="summary-configuring-permissions-on-database-objects"></a>摘要：配置数据库对象的权限
   登录名为用户提供了连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的权限。 用户是可以访问特定数据库的登录名。 使用 GRANT 语句可授予用户读取数据以及访问和更改数据的权限。  
   
  视图是单条 SELECT 语句，在用户看来就像一个表。 存储过程是以批处理形式执行的一条或多条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。  

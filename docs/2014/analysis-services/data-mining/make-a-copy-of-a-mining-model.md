@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084221"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>生成挖掘模型的副本
@@ -39,7 +39,7 @@ ms.locfileid: "66084221"
   
      -或-  
   
-     选择该模型。 在 **“挖掘模型”** 菜单中，选择 **“新建挖掘模型”**。  
+     选择该模型。 在 **“挖掘模型”** 菜单中，选择 **“新建挖掘模型”** 。  
   
 4.  为新的挖掘模型键入名称，并选择一种算法。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

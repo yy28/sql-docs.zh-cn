@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a1564a2b190703e011624162ad4bc25fd5de794
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079193"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>第 13 课：在 Excel 中分析
@@ -32,9 +32,9 @@ ms.locfileid: "66079193"
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>使用默认透视进行浏览  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“在 Excel 中分析”**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“在 Excel 中分析”** 。  
   
-2.  在“在 Excel 中分析”对话框中，单击“确定”。  
+2.  在“在 Excel 中分析”  对话框中，单击“确定”  。  
   
      Excel 将打开，并显示一个新工作簿。 将使用当前用户帐户创建一个数据源连接，默认透视将用于定义可查看字段。 数据透视表将自动添加到工作表中。  
   
@@ -44,20 +44,20 @@ ms.locfileid: "66079193"
   
 #### <a name="to-browse-by-using-the-internet-sales-perspective"></a>使用“Internet Sales”透视进行浏览  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“在 Excel 中分析”**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“在 Excel 中分析”** 。  
   
-2.  在“在 Excel 中分析”对话框中，选中“当前 Windows 用户”，然后在“透视”下拉列表框中，选中 **Internet Sales**，然后单击“确定”。 Excel 将打开。  
+2.  在“在 Excel 中分析”  对话框中，选中“当前 Windows 用户”  ，然后在“透视”  下拉列表框中，选中 **Internet Sales**，然后单击“确定”  。 Excel 将打开。  
   
-3.  在 Excel 的“数据透视表字段列表”中，请注意 Customer 表已从字段列表中排除。  
+3.  在 Excel 的“数据透视表字段列表”  中，请注意 Customer 表已从字段列表中排除。  
   
 ## <a name="browse-using-roles"></a>使用角色进行浏览  
  角色是任何表格模型中不可或缺的一部分。 一个角色都没有（用户可以作为成员添加到这些角色），用户将不能使用您的模型访问和分析数据。 “在 Excel 中分析”功能为您提供测试所定义的角色的方法。  
   
 #### <a name="to-browse-by-using-the-internet-sales-manager-user-role"></a>使用“Internet Sales Manager”用户角色进行浏览  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“在 Excel 中分析”**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“在 Excel 中分析”** 。  
   
-2.  在“在 Excel 中分析”对话框的“指定要用于连接到模型的用户名或角色”中，选中“角色”，然后在下拉列表框中，选中 **Internet Sales Manager**，然后单击“确定”。  
+2.  在“在 Excel 中分析”  对话框的“指定要用于连接到模型的用户名或角色”  中，选中“角色”  ，然后在下拉列表框中，选中 **Internet Sales Manager**，然后单击“确定”  。  
   
      Excel 将打开，并显示一个新工作簿。 将自动创建一个数据透视表。 数据透视表字段列表包含您的新模型中提供的所有数据字段。  
   

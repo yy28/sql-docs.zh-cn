@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084194"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>管理数据挖掘解决方案和对象
@@ -91,7 +91,7 @@ ms.locfileid: "66084194"
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) 是用于所有 Analysis Services 的数据定义语言。 XMLA 使您可以控制大多数数据挖掘对象和服务器操作。 客户端和服务器之间的所有管理操作都可通过使用 XMLA 来执行。 为了方便，可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 对 XML 进行换行。  
   
- **限制：**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成的某些 XMLA 语句仅支持在内部使用，而不能在 XML DDL 脚本中使用。  
+ **限制：** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成的某些 XMLA 语句仅支持在内部使用，而不能在 XML DDL 脚本中使用。  
   
 ## <a name="see-also"></a>请参阅  
  [开发人员指南&#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  

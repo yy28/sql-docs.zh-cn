@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061043"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 源编辑器（“错误输出”页）
@@ -29,16 +29,16 @@ ms.locfileid: "66061043"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，打开具有 CDC 源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 CDC 源。  
+2.  在“数据流”  选项卡上，双击 CDC 源。  
   
-3.  在 **“CDC 源编辑器”** 中，单击 **“错误输出”**。  
+3.  在 **“CDC 源编辑器”** 中，单击 **“错误输出”** 。  
   
 ## <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   
  **列**  
- 查看在“CDC 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
+ 查看在“CDC 源编辑器”  对话框中“连接管理器”  页上选择的外部（源）列。  
   
  **错误**  
  选择 CDC 源应该如何处理流中的错误：忽略失败、重定向行或使组件失败。  

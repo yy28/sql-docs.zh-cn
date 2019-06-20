@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0bb4c098b4a57f3b8cc3c1a930a3f9d3c78b3efb
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65817774"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67218103"
 ---
 启动数据质量客户端。 有关此操作的信息，请参阅

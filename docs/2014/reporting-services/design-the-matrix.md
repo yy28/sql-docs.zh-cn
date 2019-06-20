@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109298"
 ---
 # <a name="design-the-matrix"></a>设计矩阵
@@ -24,7 +24,7 @@ ms.locfileid: "66109298"
   
 ## <a name="options"></a>选项  
  **可用字段**  
- 选择在页面中矩阵上方以行组、列组或详细信息形式显示的字段。 若要将某个字段从 **“字段”** 移动到 **“页面”**、 **“列”**、 **“行”** 或 **“详细信息”**，请选择该字段，再单击 **“页面”**、 **“列”**、 **“行”** 或 **“详细信息”** 按钮。 或者，也可以将该字段拖至相应的框。  
+ 选择在页面中矩阵上方以行组、列组或详细信息形式显示的字段。 若要将某个字段从 **“字段”** 移动到 **“页面”** 、 **“列”** 、 **“行”** 或 **“详细信息”** ，请选择该字段，再单击 **“页面”** 、 **“列”** 、 **“行”** 或 **“详细信息”** 按钮。 或者，也可以将该字段拖至相应的框。  
   
  **显示的字段**  
  显示已经为页面、组或详细信息分配的字段。 单击 **“删除”** 可将字段从列表中删除。  

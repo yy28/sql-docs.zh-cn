@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 808543b2a9e0f770eaf47966bb8d6a08fecabcc8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071775"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>配置或修复 PowerPivot for SharePoint 2013（PowerPivot 配置工具）
@@ -70,23 +70,23 @@ ms.locfileid: "66071775"
 ##  <a name="bkmk_steps"></a> 配置步骤  
  指向该配置工具的链接仅在本地服务器上安装了 PowerPivot for SharePoint 2013 时才可见。  
   
-1.  在 **“开始”** 菜单中，指向 **“所有程序”**，然后依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** 和 **“PowerPivot for SharePoint 2013 配置”**。  
+1.  在 **“开始”** 菜单中，指向 **“所有程序”** ，然后依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** 和 **“PowerPivot for SharePoint 2013 配置”** 。  
   
-2.  单击 **“配置或修复 PowerPivot for SharePoint”**。  
+2.  单击 **“配置或修复 PowerPivot for SharePoint”** 。  
   
-3.  将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”**、 **“运行”** 和 **“退出”** 命令。  
+3.  将窗口放大为实际大小。 您应该在该窗口的底部看到一个菜单栏，其中包含 **“验证”** 、 **“运行”** 和 **“退出”** 命令。  
   
 4.  **默认帐户：** 参数选项卡上，键入的域用户帐户**默认帐户用户名**。 此帐户用于设置重要服务，包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序池。 不要指定 Network Service 或 Local System 之类的内置帐户。 该工具将阻止指定内置帐户的配置。  
   
      **通行短语：** 键入通行短语。 如果该 SharePoint 场是新场，则在向该 SharePoint 场中添加新的服务器或应用程序时，需要使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
   
-5.  **端口：**（可选） 键入用于连接到管理中心 web 应用程序或使用提供的随机生成的数的端口号。 该配置工具将首先检查该端口号是否可用，然后将其作为选项提供。  
+5.  **端口：** （可选） 键入用于连接到管理中心 web 应用程序或使用提供的随机生成的数的端口号。 该配置工具将首先检查该端口号是否可用，然后将其作为选项提供。  
   
 6.  在主页上，键入在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的名称。  
   
 7.  或者，查看用于完成各操作的剩余输入值。 有关每个输入值的详细信息，请参阅本主题中的 [用于配置服务器的输入值](#bkmk_input) 。  
   
-8.  您还可以选择删除不想处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”**，然后清除 **“在任务列表中包括此操作”** 复选框。  
+8.  您还可以选择删除不想处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”** ，然后清除 **“在任务列表中包括此操作”** 复选框。  
   
 9. 单击 **“验证”** 以便检查该工具是否有足够的信息来处理列表中的操作。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "66071775"
 |第|输入值|Source|Description|  
 |----------|-----------------|------------|-----------------|  
 |**配置或修复 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint**|默认帐户|当前用户|默认帐户是用于在场中设置共享服务的域 Windows 用户帐户。 默认帐户用于设置以下项：<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序<br />Secure Store Service<br />Excel Services<br />Web 应用程序池标识<br />网站集管理员<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户<br /><br /> 默认情况下，它将使用当前用户的域帐户。 建议您替换该默认值，除非您配置服务器是为了评估和非生产目的。 您可以在以后使用管理中心中更改服务标识。 或者，在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具中，为以下项指定专用的帐户：<br /><br /> Web 应用程序，使用 **“创建默认的 Web 应用程序”** 页（假定该工具正在为场创建 Web 应用程序）。<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户，使用此工具中的 **“为数据刷新创建无人参与的帐户”** 页。|  
-||数据库服务器|本地 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例（如果可用）|如果数据库引擎实例作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装，则该工具将使用此实例名称填充数据库服务器字段。 如果您没有安装数据库引擎，此字段将为空。<br /><br /> “数据库服务器”  是必需参数。 该实例可以是支持 SharePoint 场的任何 SQL Server 版本或发行版。|  
+||数据库服务器|本地 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例（如果可用）|如果数据库引擎实例作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装，则该工具将使用此实例名称填充数据库服务器字段。 如果您没有安装数据库引擎，此字段将为空。<br /><br /> “数据库服务器”   是必需参数。 该实例可以是支持 SharePoint 场的任何 SQL Server 版本或发行版。|  
 ||通行短语|用户输入|如果您正在创建新的场，则您输入的通行短语将用作该场的通行短语。 如果您正在向现有场添加 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则键入现有场的通行短语。|  
 ||SharePoint 管理中心端口|默认值（如果需要）|如果未配置场，则该工具将提供用于创建场的选项，包括创建指向管理中心的 HTTP 端点。 它会选取一个未在使用中的随机生成的端口号。|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([服务器名称]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|用户输入|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器是 Excel Services 启用核心 PowerPivot 功能所必需的。 您在此页上键入的服务器名称还将添加到 **“配置 PowerPivot 服务器”** 页上的列表中。|  
@@ -140,7 +140,7 @@ ms.locfileid: "66071775"
 ||通行短语|用户输入|用于数据加密的主密钥。 默认情况下，用于生成密钥的通行短语是用来在场中设置新服务的相同通行短语。 您可以将默认通行短语替换为唯一通行短语。|  
 |**为 DataRefresh 创建无人参与的帐户**|目标应用程序 ID|默认值（如果需要）|创建一个目标应用程序，以便存储用于无人参与的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新的凭据。<br /><br /> 应用程序 ID 可以是说明文本。|  
 ||目标应用程序的友好名称|默认值（如果需要）||  
-||无人参与的帐户用户名和密码|默认值（如果需要）|键入由目标应用程序用来运行无人参与数据刷新操作的 Windows 用户帐户的凭据。 有关详细信息，请参阅[在 SharePoint Server 2013 中使用无人参与的服务帐户配置 Excel Services 数据刷新](https://technet.microsoft.com/library/hh525344\(office.15\).aspx)(https://technet.microsoft.com/library/hh525344(office.15).aspx)。|  
+||无人参与的帐户用户名和密码|默认值（如果需要）|键入由目标应用程序用来运行无人参与数据刷新操作的 Windows 用户帐户的凭据。 有关详细信息，请参阅[在 SharePoint Server 2013 中使用无人参与的服务帐户配置 Excel Services 数据刷新](https://technet.microsoft.com/library/hh525344\(office.15\).aspx)(https://technet.microsoft.com/library/hh525344(office.15).aspx) 。|  
 ||站点 URL|默认值（如果需要）|键入与目标应用程序关联的网站集的网站 URL。 若要与其他网站集关联，请使用 SharePoint 管理中心。|  
 |**创建 Excel Services 服务应用程序**|服务应用程序名称|默认值（如果需要）|键入服务应用程序名称。 在 SharePoint 场的数据库服务器上创建具有相同名称的服务应用程序数据库。|  
 |**配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器**|服务应用程序名称|默认值（如果需要）|您在前一页中键入的服务应用程序名称。|  
@@ -200,7 +200,7 @@ ms.locfileid: "66071775"
  一段时间后，如果您确定需要额外的数据存储和处理能力，则可以向场中添加更多的在 SharePoint 模式下运行 Analysis Services 的服务器。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，你可在 SharePoint 模式下安装新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器，然后配置 Excel Services。 有关详细信息，请参阅"的单服务器安装之外"部分的[PowerPivot for SharePoint 2013 安装](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
 ## <a name="additional-resources"></a>其他资源  
- ![SharePoint 设置](../media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 设置](../media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) 。  
   
 ## <a name="see-also"></a>请参阅  
  [安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067013"
 ---
 # <a name="measures-ssas-tabular"></a>度量值（SSAS 表格）
@@ -90,9 +90,9 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**“度量值名称”**|使用“自动求和”时，度量值名称将位于后跟冒号的列名之前。 如果输入自定义公式，请键入名称并且后跟冒号，然后键入该公式。|显示在报告客户端的字段列表中的度量值名称。|  
   
 ##  <a name="bkmk_KPI"></a> 在 KPI 中使用度量值  
- KPI（关键绩效指标）由“基础”值（由度量值定义）定义，用于与“目标”值（也由度量值或绝对值定义）进行对比。 KPI 还包括以图形格式显示的“状态” ，这是一种计算，其中会根据各阈值之间的目标值对基础值进行评估。 业务专业人员通常使用 KPI 来确定关键业务度量的趋势。  
+ KPI（关键绩效指标）由“基础”值（由度量值定义）定义，用于与“目标”值（也由度量值或绝对值定义）进行对比   。 KPI 还包括以图形格式显示的“状态”  ，这是一种计算，其中会根据各阈值之间的目标值对基础值进行评估。 业务专业人员通常使用 KPI 来确定关键业务度量的趋势。  
   
- 任何度量值都可以作为 KPI 的基础度量值。 若要创建 KPI，请在度量值网格中右键单击某度量值，然后单击“创建 KPI”。 将显示“关键绩效指标”对话框，您可以在此指定目标值（由度量值或绝对值定义）、定义状态阈值和图形类型。 有关详细信息，请参阅 [KPI（SSAS 表格）](kpis-ssas-tabular.md)。  
+ 任何度量值都可以作为 KPI 的基础度量值。 若要创建 KPI，请在度量值网格中右键单击某度量值，然后单击“创建 KPI”  。 将显示“关键绩效指标”对话框，您可以在此指定目标值（由度量值或绝对值定义）、定义状态阈值和图形类型。 有关详细信息，请参阅 [KPI（SSAS 表格）](kpis-ssas-tabular.md)。  
   
 ##  <a name="bkmk_rel_tasks"></a> 相关任务  
   

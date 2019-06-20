@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047770"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
@@ -42,7 +42,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 是要验证其状态的对等拓扑中发布的名称。 *发布*是**sysname**，无默认值。  
   
-`[ @description = ] 'description'` 可用于标识各个状态请求的用户定义的信息。 *描述*是**nvarchar(4000)**，默认值为 NULL。  
+`[ @description = ] 'description'` 可用于标识各个状态请求的用户定义的信息。 *描述*是**nvarchar(4000)** ，默认值为 NULL。  
   
 `[ @request_id = ] request_id` 返回新请求的 ID。 *request_id*是**int**并且是输出参数。 可以在执行时使用该值[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)若要查看所有响应的状态请求。  
   

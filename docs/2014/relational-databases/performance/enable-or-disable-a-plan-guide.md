@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c64bf641a6519c42ad0d3a8cdfd578458f84439
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150927"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>启用或禁用计划指南
@@ -60,17 +60,17 @@ ms.locfileid: "63150927"
   
 2.  单击加号以便展开 **“计划指南”** 文件夹。  
   
-3.  右键单击要禁用或启用的计划指南，然后选择“禁用”或“启用”。  
+3.  右键单击要禁用或启用的计划指南，然后选择“禁用”  或“启用”  。  
   
-4.  在 **“禁用计划指南”** 或 **“启用计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”**。  
+4.  在 **“禁用计划指南”** 或 **“启用计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”** 。  
   
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>禁用或启用数据库中的所有计划指南  
   
 1.  单击加号以便展开您要禁用或启用计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
-2.  右键单击“计划指南”文件夹，然后选择“全部启用”或“全部禁用”。  
+2.  右键单击“计划指南”  文件夹，然后选择“全部启用”  或“全部禁用”  。  
   
-3.  在 **“禁用所有计划指南”** 或 **“启用所有计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”**。  
+3.  在 **“禁用所有计划指南”** 或 **“启用所有计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -78,9 +78,9 @@ ms.locfileid: "63150927"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     --Create a procedure on which to define the plan guide.  
@@ -122,9 +122,9 @@ ms.locfileid: "63150927"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     --Disable all plan guides in the database.  

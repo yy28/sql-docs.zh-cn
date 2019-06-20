@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cc66896eb1735d09991644dd49c03b5a94c208d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069431"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>选择成员（商业智能向导）
@@ -34,7 +34,7 @@ ms.locfileid: "66069431"
 |Option|Description|  
 |------------|-----------------|  
 |**内置度量值类型**|选择此选项可为指定的度量值包括货币换算功能。|  
-|**度量值**|从包含汇率的比率度量值组中，选择在换算从“内置度量值类型”中选择的度量值时要使用的度量值。|  
+|**度量值**|从包含汇率的比率度量值组中，选择在换算从“内置度量值类型”  中选择的度量值时要使用的度量值。|  
   
  **帐户层次结构**  
  选择此选项可以对多维数据集中所包括帐户维度的帐户层次结构中的一个或多个成员应用货币换算功能。 帐户层次结构是在维度的帐户中的层次结构`Type`属性设置为*帐户*。  

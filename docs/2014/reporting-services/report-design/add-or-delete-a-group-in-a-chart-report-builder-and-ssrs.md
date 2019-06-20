@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1828f0f76963cea8cf792c17a251c843a93b5b0c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106560"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在图表中添加或删除组（报表生成器和 SSRS）
@@ -33,7 +33,7 @@ ms.locfileid: "66106560"
   
 1.  在报表设计图面上，单击图表中的任意位置以将其选中。 此时将显示“图表数据”窗格  。  
   
-2.  在“类别组”区域中右键单击该组，然后单击“类别组属性”。  
+2.  在“类别组”  区域中右键单击该组，然后单击“类别组属性”  。  
   
 3.  添加或删除组表达式、筛选器、排序表达式和组变量。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66106560"
   
 1.  在报表设计图面上，单击图表中的任意位置以将其选中。 此时将显示“图表数据”窗格  。  
   
-2.  在“序列组”区域中右键单击该组，然后单击“序列组属性”。  
+2.  在“序列组”  区域中右键单击该组，然后单击“序列组属性”  。  
   
 3.  添加或删除组表达式、筛选器、排序表达式和组变量。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66106560"
   
 1.  在报表设计图面上，单击图表中的任意位置以将其选中。 此时将显示“图表数据”窗格  。  
   
-2.  在“类别组”或“序列组”区域中右键单击该组，然后单击“删除”。  
+2.  在“类别组”  或“序列组”  区域中右键单击该组，然后单击“删除”  。  
   
 ## <a name="see-also"></a>请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)  

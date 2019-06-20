@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62833806"
 ---
 # <a name="flat-file-connection-manager"></a>平面文件连接管理器
@@ -63,7 +63,7 @@ ms.locfileid: "62833806"
   
 -   使用表达式指定文件时，在 **“平面文件连接管理器编辑器”** 的 **“文件名”** 框中添加文件路径。  
   
--   将平面文件连接管理器的 **“DelayValidation”** 属性设置为 **“True”**。  
+-   将平面文件连接管理器的 **“DelayValidation”** 属性设置为 **“True”** 。  
   
  使用平面文件连接管理器和平面文件目标，您可以在运行时使用表达式创建文件名。  
   

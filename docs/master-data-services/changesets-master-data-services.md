@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6c6662cf12eaae7f43dc4041598cf9711eca128
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487396"
 ---
 # <a name="changesets-master-data-services"></a>变更集 (Master Data Services)
@@ -24,7 +24,7 @@ ms.locfileid: "65487396"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 现在支持将任何挂起的更改作为变更集保存到实体。 此功能有两种使用场景。  
   
--   当实体管理员打开“需要批准”时进行更改  
+-   当实体管理员打开“需要批准”时进行更改   
   
      如果实体管理员指定对指定实体的更改在提交前需要批准，那么对实体的任何更改必须先保存到新的或现有的变更集，才能提交以供批准。  有关详细信息，请参阅[需要审批 (Master Data Services)](../master-data-services/approval-required-master-data-services.md)  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84bd7e70c5ff3c1ee41bdcc331fefdd2422937ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471981"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格模型中的字符串存储和排序规则
@@ -62,7 +62,7 @@ ms.locfileid: "62471981"
 ## <a name="locale-and-collation-order"></a>区域设置和排序规则顺序  
  在比较字符串（文本值）时，定义等效性的内容通常是有关如何解释此类字符串的区域性方面。 在某些区域性中，某个字符的重音或大小写可能会完全改变该字符串的含义；因此，在为任何特定语言或区域确定等效性时，通常会考虑此类差异。  
   
- 通常，在使用您的计算机时，该计算机已配置为符合您自己的区域性期望和语言行为，并且文本值排序和比较之类的字符串运算在行为上符合预期。 控制特定于语言的行为的设置通过 Windows 中的“区域设置和区域”设置定义。 应用程序将读取这些设置，并相应地更改其行为。 在某些情况下，应用程序具有的功能可以允许您更改应用程序的区域性行为或比较字符串的方式。  
+ 通常，在使用您的计算机时，该计算机已配置为符合您自己的区域性期望和语言行为，并且文本值排序和比较之类的字符串运算在行为上符合预期。 控制特定于语言的行为的设置通过 Windows 中的“区域设置和区域”  设置定义。 应用程序将读取这些设置，并相应地更改其行为。 在某些情况下，应用程序具有的功能可以允许您更改应用程序的区域性行为或比较字符串的方式。  
   
  在您创建一个表格模型数据库时，默认情况下该数据库将以语言标识符和排序规则的形式继承这些区域性和语言设置。  
   

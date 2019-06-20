@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 058a3318f98d294d7c6c7ba2cf69becdf218b48f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079972"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>清单：使用 PowerShell 验证 PowerPivot for SharePoint
@@ -59,7 +59,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
   
 |||  
 |-|-|  
-|![sharepoint 常规应用程序组中的 powerpivot](../../../sql-server/install/media/ssas-powerpivot-logo.png "sharepoint 常规应用程序组中的 powerpivot")|借助 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板，您可以在管理中心有选择地验证大多数组件。 要在“管理中心”打开该面板，请单击 **“常规应用程序设置”**，然后单击 **“PowerPivot”** 中的 **“管理面板”**。 有关该面板的详细信息，请参阅 [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
+|![sharepoint 常规应用程序组中的 powerpivot](../../../sql-server/install/media/ssas-powerpivot-logo.png "sharepoint 常规应用程序组中的 powerpivot")|借助 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板，您可以在管理中心有选择地验证大多数组件。 要在“管理中心”打开该面板，请单击 **“常规应用程序设置”** ，然后单击 **“PowerPivot”** 中的 **“管理面板”** 。 有关该面板的详细信息，请参阅 [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
   
 ##  <a name="bkmk_symptoms"></a> 症状和建议操作  
  下表列出了症状或问题，以及本主题的建议章节（旨在帮助您解决问题）。  
@@ -234,7 +234,7 @@ PowerPivot      Online  Farm SPFarm Name=SharePoint_Config
 ```  
   
 ##  <a name="bkmk_timer_jobs"></a> 计时器作业  
- 验证计时器作业是否 **“联机”**。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] EngineService 未安装在 SharePoint 2013 上，因此，此脚本不会列出 SharePoint 2013 部署中的 EngineService 计时器作业。  
+ 验证计时器作业是否 **“联机”** 。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] EngineService 未安装在 SharePoint 2013 上，因此，此脚本不会列出 SharePoint 2013 部署中的 EngineService 计时器作业。  
   
 ```  
 Get-SPTimerJob | where {$_.service -like "*power*" -or $_.service -like "*mid*"} | select status, displayname, LastRunTime, service | format-table -property * -autosize | out-default  
@@ -402,7 +402,7 @@ PowerPivot Unload Data Usage Online    True AnalysisServicesUnloads             
  有关详细信息，请参阅 [PowerPivot Usage Data Collection](../../power-pivot-sharepoint/power-pivot-usage-data-collection.md)。  
   
 ##  <a name="bkmk_solutions"></a> 解决方案  
- 如果其他组件联机，则可跳过方案验证的验证。 但是，如果缺少运行状况规则，则需验证这两个解决方案是否存在，并验证两个 PowerPivot 解决方案是否为 **“联机”** 且 **“已部署”**。  
+ 如果其他组件联机，则可跳过方案验证的验证。 但是，如果缺少运行状况规则，则需验证这两个解决方案是否存在，并验证两个 PowerPivot 解决方案是否为 **“联机”** 且 **“已部署”** 。  
   
 ```  
 get-spsolution | select name, status, deployed, DeploymentState, DeployedServers | where {$_.Name -like "*powerpivot*"} | format-table -property * -autosize | out-default  

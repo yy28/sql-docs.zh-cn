@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080945"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>常规（“还原数据库”对话框）（Analysis Services - 多维数据）
@@ -30,7 +30,7 @@ ms.locfileid: "66080945"
   
  **若要在还原数据库对话框中显示常规页**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”文件夹，或“对象资源管理器”中的数据库，单击“还原”，然后在“选择页”下单击“常规”。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”  文件夹，或“对象资源管理器”  中的数据库，单击“还原”  ，然后在“选择页”  下单击“常规”  。  
   
 ## <a name="options"></a>选项  
  **脚本**  
@@ -55,7 +55,7 @@ ms.locfileid: "66080945"
  选择从中还原所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的备份文件。  
   
  **“浏览”**  
- 单击可显示“定位数据库文件”对话框，并选择要使用的备份文件的路径和文件名。 有关“定位数据库文件”对话框的详细信息，请参阅[“定位数据库文件”对话框（Analysis Services - 多维数据）](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。  
+ 单击可显示“定位数据库文件”  对话框，并选择要使用的备份文件的路径和文件名。 有关“定位数据库文件”  对话框的详细信息，请参阅[“定位数据库文件”对话框（Analysis Services - 多维数据）](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **允许覆盖数据库**  
  选择此选项允许 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 还原所选备份文件的内容来覆盖所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的现有对象。  

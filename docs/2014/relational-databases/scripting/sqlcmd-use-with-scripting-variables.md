@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090063"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>将 sqlcmd 与脚本变量结合使用
@@ -49,7 +49,7 @@ ms.locfileid: "66090063"
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要查看环境变量，请在“控制面板” 中打开“系统” ，然后单击“高级”  选项卡。  
+>  若要查看环境变量，请在“控制面板”  中打开“系统”  ，然后单击“高级”  选项卡。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隐式设置脚本变量  
  使用具有相关 **sqlcmd** 变量的选项启动 **sqlcmd** 时， **sqlcmd** 变量将被隐式设置为使用该选项指定的值。 在下面的示例中，启动 `sqlcmd` 时使用了 `-l` 选项。 这会隐式设置 SQLLOGINTIMEOUT 变量。  
@@ -79,7 +79,7 @@ ms.locfileid: "66090063"
   
 -   变量名不能包含空格字符或引号。  
   
--   变量名不能与变量表达式（如 *$(var)*）具有相同的形式。  
+-   变量名不能与变量表达式（如 *$(var)* ）具有相同的形式。  
   
 -   脚本变量不区分大小写。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "66090063"
  `4> GO`  
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 中使用用户级环境变量  
- 在下面的示例中，在命令提示符下设置了用户级环境变量 `%Temp%`，并将其传递给了 `sqlcmd` 输入文件。 若要获取用户级环境变量，请在“控制面板”中双击“系统”。 单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
+ 在下面的示例中，在命令提示符下设置了用户级环境变量 `%Temp%`，并将其传递给了 `sqlcmd` 输入文件。 若要获取用户级环境变量，请在“控制面板”  中双击“系统”  。 单击 **“高级”** 选项卡，再单击 **“环境变量”** 。  
   
  下列代码位于输入文件 `c:\testscript.txt`:  
   

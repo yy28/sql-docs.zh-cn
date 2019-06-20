@@ -11,14 +11,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbea11b0500c075105bff885cdb1cd8264b320d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62931637"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>第 2 课：创建 SQL Server 凭据
-  **凭据：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。  在这里， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原进程使用凭据对 Windows Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关如何查看、 复制或重新生成存储帐户详细信息**访问密钥**，请参阅[存储帐户访问密钥](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+  **凭据：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。  在这里， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原进程使用凭据对 Windows Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关如何查看、 复制或重新生成存储帐户详细信息**访问密钥**，请参阅[存储帐户访问密钥](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
  有关凭据的一般信息，请参阅 [凭据](../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62931637"
   
 2.  在对象资源管理器中，连接到已安装 AdventureWorks2012 数据库的数据库引擎实例，或使用计划用于本教程的自己的数据库。  
   
-3.  在 **“标准”** 工具栏上，单击 **“新建查询”**。  
+3.  在 **“标准”** 工具栏上，单击 **“新建查询”** 。  
   
 4.  将以下示例复制并粘贴到查询窗口中，并根据需要进行修改。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62931637"
   
      ![存储帐户映射到 sql 凭据](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "映射到 sql 凭据的存储帐户")  
   
-5.  验证 T-SQL 语句，然后单击 **“执行”**。  
+5.  验证 T-SQL 语句，然后单击 **“执行”** 。  
   
  有关 Windows Azure Blob 存储服务用于备份概念和要求的详细信息，请参阅[Windows Azure Blob 存储服务使用 SQL Server 备份和还原](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9592898521aee296677c195d860dcb6b5e205a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060100"
 ---
 # <a name="create-the-ssis-catalog"></a>创建 SSIS 目录
@@ -28,17 +28,17 @@ ms.locfileid: "66060100"
   
 2.  连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎。  
   
-3.  在“对象资源管理器”中，展开服务器节点，右键单击“Integration Services 目录”节点，然后单击“创建目录”。  
+3.  在“对象资源管理器”中，展开服务器节点，右键单击“Integration Services 目录”  节点，然后单击“创建目录”  。  
   
-4.  单击 **“启用 CLR 集成”**。  
+4.  单击 **“启用 CLR 集成”** 。  
   
      该目录使用 CLR 存储过程。  
   
-5.  单击“在 SQL Server 启动时启用自动执行 Integration Services 存储过程”，使 [catalog.startup](/sql/integration-services/system-stored-procedures/catalog-startup) 存储过程在每次重启 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器后运行。  
+5.  单击“在 SQL Server 启动时启用自动执行 Integration Services 存储过程”  ，使 [catalog.startup](/sql/integration-services/system-stored-procedures/catalog-startup) 存储过程在每次重启 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器后运行。  
   
      该存储过程对 SSISDB 目录的操作状态进行维护。 它可以纠正当 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器实例出现故障时正在运行的任何包的状态。  
   
-6.  输入密码，然后单击 **“确定”**。  
+6.  输入密码，然后单击 **“确定”** 。  
   
      该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   

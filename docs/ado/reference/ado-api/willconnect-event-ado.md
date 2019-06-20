@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 01b5c20668f97c80ae5abdcbb213914c012c7359
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66710057"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
 **WillConnect**连接开始之前，将调用事件。  
   
- **适用于：** [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **适用于：**[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>语法  
   

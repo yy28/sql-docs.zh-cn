@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a050c8eecadec138341ffe2f64a791eb198beebf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066741"
 ---
 # <a name="project-properties-ssas-tabular"></a>项目属性（SSAS 表格）
-  本主题介绍模型项目属性。 每个表格模型项目都具有一些指定如何部署项目和模型的部署选项和部署服务器属性。 例如，模型将要部署到的服务器和已部署的模型数据库名称。 这些设置与影响模型工作区数据库的模型属性不同。 此处所述的项目属性位于模式属性对话框中，不同于用于显示其他属性类型的属性窗口。 若要显示模式项目属性，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]“解决方案资源管理器”中右键单击该项目，然后单击“属性”。  
+  本主题介绍模型项目属性。 每个表格模型项目都具有一些指定如何部署项目和模型的部署选项和部署服务器属性。 例如，模型将要部署到的服务器和已部署的模型数据库名称。 这些设置与影响模型工作区数据库的模型属性不同。 此处所述的项目属性位于模式属性对话框中，不同于用于显示其他属性类型的属性窗口。 若要显示模式项目属性，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]“解决方案资源管理器”  中右键单击该项目，然后单击“属性”  。  
   
  本主题的内容：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66066741"
   
 ###  <a name="bkmk_conf_proj_settings"></a> 若要配置的部署选项和部署服务器属性设置  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]“解决方案资源管理器”中右键单击项目，再单击“属性”。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]“解决方案资源管理器”  中右键单击项目，再单击“属性”  。  
   
 2.  在 **“属性”** 窗口中，单击某个属性，然后键入值或单击向下箭头选择设置选项。  
   

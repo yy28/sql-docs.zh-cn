@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067853"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>“表属性”对话框（SSAS - 表格）
   可以使用 **中的** “表属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框来查看表格模型数据库中的表的属性。 所有属性为只读属性。  
   
- 在对象资源管理器中右键单击某个表，并选择“属性”，可以显示“表属性”对话框。  
+ 在对象资源管理器中右键单击某个表，并选择“属性”，可以显示“表属性”对话框。    
   
 ## <a name="options"></a>选项  
   

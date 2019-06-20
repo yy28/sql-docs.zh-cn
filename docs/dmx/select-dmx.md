@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: def96304f13f57095679056e6eab0a004b5c47d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658754"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
@@ -77,7 +77,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- 您可以限制查询返回使用的事例**其中**子句。 **其中**子句指定中的列引用**其中**表达式必须具有相同的语义中的列引用*\<选择列表 >* 的**选择**语句，并且只能返回一个布尔表达式。 语法**其中**子句如下所示  
+ 您可以限制查询返回使用的事例**其中**子句。 **其中**子句指定中的列引用**其中**表达式必须具有相同的语义中的列引用 *\<选择列表 >* 的**选择**语句，并且只能返回一个布尔表达式。 语法**其中**子句如下所示  
   
 ```  
 WHERE < condition expression >  

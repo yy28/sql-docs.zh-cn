@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087873"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>“分类剖面图”选项卡（挖掘模型查看器）
   可以使用 **“分类剖面图”** 选项卡，提供算法在分类模型中发现的分类的总体视图。 该选项卡可显示每个属性及其在每个分类中的分布情况。  
   
- **有关详细信息：**[Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)，[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **有关详细信息：** [Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)，[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -35,7 +35,7 @@ ms.locfileid: "66087873"
  选择用于查看所选挖掘模型的查看器。 可以对挖掘模型使用自定义查看器，也可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。  
   
  **显示图例**  
- 选择此选项可显示一个键，该键将显示查看器中的颜色与“状态”列中的值之间的映射。  
+ 选择此选项可显示一个键，该键将显示查看器中的颜色与“状态”  列中的值之间的映射。  
   
  **直方图条数**  
  更改此值可控制每个直方图中包含的状态的数目。 如果存在的状态数多于您选择显示的状态数，则直方图中将显示概率最高的状态，其余状态则组合到 **“其他”** 中。  

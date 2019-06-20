@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110029"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>在 SharePoint 中激活报表服务器和 Power View 集成功能
@@ -38,33 +38,33 @@ ms.locfileid: "66110029"
   
 1.  打开浏览器，找到要激活 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的网站。  
   
-2.  单击 **“网站操作”**。  
+2.  单击 **“网站操作”** 。  
   
-3.  单击 **“网站设置”**。  
+3.  单击 **“网站设置”** 。  
   
 4.  在网站集管理组中单击 **“网站集功能”** 。  
   
 5.  在列表中找到 **“报表服务器集成功能”** 或 **“Power View 集成功能”** 。  
   
-6.  单击 **“激活”**。  
+6.  单击 **“激活”** 。  
   
- 若要停用这些功能，您可以使用相同的过程，但单击 **“停用”** 而非 **“激活”**。  
+ 若要停用这些功能，您可以使用相同的过程，但单击 **“停用”** 而非 **“激活”** 。  
   
 ##  <a name="bkmk_centraladmin"></a> 若要激活或停用 Reporting Services 管理中心网站集功能：  
   
 1.  打开浏览器找到 SharePoint 管理中心。  
   
-2.  单击 **“网站操作”**。  
+2.  单击 **“网站操作”** 。  
   
-3.  单击 **“网站设置”**。  
+3.  单击 **“网站设置”** 。  
   
 4.  在网站集管理组中单击 **“网站集功能”** 。  
   
 5.  在列表中找到 **“报表服务器管理中心功能”** 。  
   
-6.  单击 **“激活”**。  
+6.  单击 **“激活”** 。  
   
- 若要停用这些功能，您可以使用相同的过程，但单击 **“停用”** 而非 **“激活”**。  
+ 若要停用这些功能，您可以使用相同的过程，但单击 **“停用”** 而非 **“激活”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
  激活此功能后，可以继续进行服务器集成。  

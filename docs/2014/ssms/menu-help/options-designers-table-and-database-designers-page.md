@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63283659"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>选项 （设计人员表和数据库设计器页）
-  使用此页可确定设计器的默认行为。 若要访问这些设置，请在“工具”菜单上，单击“选项”，展开“设计器”文件夹，再单击“表设计器”。  
+  使用此页可确定设计器的默认行为。 若要访问这些设置，请在“工具”  菜单上，单击“选项  ”，展开“设计器”  文件夹，再单击“表设计器”  。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **为表设计器更新重写连接字符串的超时值**  
@@ -78,6 +78,6 @@ ms.locfileid: "63283659"
      允许选择要查看的列。  
   
  **在新建关系图时启动“添加表”对话框**  
- 在打开设计器时自动打开“添加表”对话框。  
+ 在打开设计器时自动打开“添加表”  对话框。  
   
   

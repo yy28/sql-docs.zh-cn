@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059171"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Excel 源编辑器（“连接管理器”页）
@@ -31,10 +31,10 @@ ms.locfileid: "66059171"
   
 ## <a name="static-options"></a>静态选项  
  **“无缓存”**  
- 从列表中选择现有的 Excel 连接管理器，或单击“新建”创建新连接。  
+ 从列表中选择现有的 Excel 连接管理器，或单击“新建”  创建新连接。  
   
  **新建**  
- 使用“Excel 连接管理器”对话框创建一个新连接管理器。  
+ 使用“Excel 连接管理器”  对话框创建一个新连接管理器。  
   
  **数据访问模式**  
  指定从源选择数据的方法。  
@@ -42,12 +42,12 @@ ms.locfileid: "66059171"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |表或视图|从 Excel 文件的工作表或指定范围中检索数据。|  
-|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息：**[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
+|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息：** [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL 命令|使用 SQL 查询从 Excel 文件中检索数据。 有关查询语法的详细信息，请参阅 [Excel Source](data-flow/excel-source.md)。|  
 |变量中的 SQL 命令|在变量中指定 SQL 查询文本。|  
   
  **预览**  
- 通过使用“数据视图”对话框预览结果。 预览最多可以显示 200 行。  
+ 通过使用“数据视图”  对话框预览结果。 预览最多可以显示 200 行。  
   
 ## <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
@@ -61,16 +61,16 @@ ms.locfileid: "66059171"
   
 ### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”浏览至包含查询文本的文件。  
+ 输入 SQL 查询的文本，通过单击“生成查询”  来生成查询，或通过单击“浏览”  浏览至包含查询文本的文件。  
   
  **Parameters**  
  如果已经在参数化查询文本中使用 ? 作为参数占位符输入了参数化查询，请使用 **“设置查询参数”** 对话框将查询输入参数映射到包变量。  
   
  **生成查询**  
- 使用“查询生成器”对话框可直观地构造 SQL 查询。  
+ 使用“查询生成器”  对话框可直观地构造 SQL 查询。  
   
  **“浏览”**  
- 使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
+ 使用“打开”  对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
  验证查询文本的语法。  

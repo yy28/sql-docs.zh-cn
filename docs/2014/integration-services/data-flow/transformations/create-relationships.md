@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770373"
 ---
 # <a name="create-relationships"></a>创建关系
   可以使用 **“创建关系”** 对话框，编辑源列与在模糊查找转换编辑器、查找转换编辑器或字词查找转换编辑器中配置的查找表列之间的映射。  
   
 > [!NOTE]  
->  通过字词查找转换编辑器调用“创建关系”对话框时，只显示“输入列”和“查找列”列表。  
+>  通过字词查找转换编辑器调用“创建关系”  对话框时，只显示“输入列”  和“查找列”  列表。  
   
  若要了解有关使用 **“创建关系”** 对话框的转换的详细信息，请参阅 [Fuzzy Lookup Transformation](lookup-transformation.md)、 [Lookup Transformation](lookup-transformation.md)和 [Term Lookup Transformation](term-lookup-transformation.md)。  
   

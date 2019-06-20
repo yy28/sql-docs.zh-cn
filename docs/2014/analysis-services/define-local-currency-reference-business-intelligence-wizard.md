@@ -13,21 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082181"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>定义本地货币引用（商业智能向导）
-  可以使用“定义本地货币引用”页，为涉及“选择换算类型”页中指定的多对多或多对一换算类型的货币换算功能定义本地货币。 本地货币是存储 **“选择度量值”** 页中所选度量值的事务时使用的货币。  
+  可以使用“定义本地货币引用”  页，为涉及“选择换算类型”  页中指定的多对多或多对一换算类型的货币换算功能定义本地货币。 本地货币是存储 **“选择度量值”** 页中所选度量值的事务时使用的货币。  
   
 > [!NOTE]  
->  如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中右键单击维度启动了商业智能向导，则将不会显示此页。 如果在“选择换算类型”页中选择了“一对多”，则不会显示此页。  
+>  如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中右键单击维度启动了商业智能向导，则将不会显示此页。 如果在“选择换算类型”  页中选择了“一对多”  ，则不会显示此页。  
   
 ## <a name="options"></a>选项  
  **事实数据表中的标识符**  
- 对于包含“选择度量值”页中所选度量值的事实数据表所引用的货币维度，选择此选项可指定为该货币维度中的本地货币提供货币标识符的属性。 (的货币维度中一个其`Type`属性设置为*货币*。)  
+ 对于包含“选择度量值”  页中所选度量值的事实数据表所引用的货币维度，选择此选项可指定为该货币维度中的本地货币提供货币标识符的属性。 (的货币维度中一个其`Type`属性设置为*货币*。)  
   
  在由事务本身确定事务的本地货币时使用此选项。 例如，在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]示例数据库-[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，Internet 销售度量值组具有一个到 Currency 维度的常规维度关系。 该度量值组的事实数据表包含一个外键列，该外键列引用该维度的维度表中的货币标识符。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66082181"
  在成员表示本地货币的货币标识符的货币维度中选择货币属性。 (货币属性是其`Type`属性设置为*货币*。)  
   
 > [!NOTE]  
->  如果未选择“事实数据表中的标识符”选项，则此选项不可用。  
+>  如果未选择“事实数据表中的标识符”  选项，则此选项不可用。  
   
  **维度表中的属性**  
  选择此选项可从与包含本地货币货币标识符的度量值组相关的维度中指定属性。  
@@ -46,7 +46,7 @@ ms.locfileid: "66082181"
  在成员引用本地货币的货币标识符的维度中选择属性。  
   
 > [!NOTE]  
->  如果未选择“维度表中的属性”选项，则此选项不可用。  
+>  如果未选择“维度表中的属性”  选项，则此选项不可用。  
   
 ## <a name="see-also"></a>请参阅  
  [商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)   

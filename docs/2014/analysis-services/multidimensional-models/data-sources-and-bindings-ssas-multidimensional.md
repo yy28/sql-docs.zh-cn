@@ -34,10 +34,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076080"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>数据源和绑定（SSAS 多维）
@@ -177,7 +177,7 @@ ms.locfileid: "66076080"
  与外部绑定相关的所有元素都是可选的。 对于所有未指定的元素，ASSL 将应用持久化对象的 DDL 中包含的规范。 `DataSource` 命令中的 `DataSourceView` 或 `Process` 的规范是可选的。 如果指定 `DataSource` 或 `DataSourceView`，则将不对它们进行实例化，并且在 `Process` 命令完成后，不会保留它们。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>外部绑定类型的定义  
- 在外部 `Bindings` 集合内，ASSL 允许将绑定集合用于多个对象，每个对象对应一个 `Binding`。 每个 `Binding` 都有一个扩展的对象引用，该引用与对象引用类似，但它还可以引用次级对象（例如，维度属性和度量值组属性）。 此对象采用的典型平面格式`Object`中的元素`Process`命令，只不过\<*对象*>\<*/对象*>标记不存在。  
+ 在外部 `Bindings` 集合内，ASSL 允许将绑定集合用于多个对象，每个对象对应一个 `Binding`。 每个 `Binding` 都有一个扩展的对象引用，该引用与对象引用类似，但它还可以引用次级对象（例如，维度属性和度量值组属性）。 此对象采用的典型平面格式`Object`中的元素`Process`命令，只不过\<*对象*>\< */对象*>标记不存在。  
   
  为其指定绑定每个对象由 XML 元素的窗体\<*对象*> ID (例如， `DimensionID`)。 标识完对象后尽可能明确地处理该窗体\<*对象*> ID，就可以标识的元素为其为其指定绑定，这通常是`Source`。 有一个常见情况需要注意，即 `Source` 为 `DataItem` 的属性，这属于属性中的列绑定。 在这种情况下，您不需要指定 `DataItem` 标记，而只需要简单地指定 `Source` 属性，就如同该属性直接位于要绑定的列上一样。  
   

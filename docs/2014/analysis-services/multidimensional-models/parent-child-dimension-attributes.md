@@ -20,16 +20,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35521a8f12d3e5c16e63ba883a2b5d561bde4c96
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073482"
 ---
 # <a name="attributes-in-parent-child-hierarchies"></a>父子层次结构中的属性
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，通常会对维度中成员的内容做出常规假设。 叶成员包含直接派生自基础数据源的数据；非叶成员包含派生自对子成员所执行的聚合的数据。  
   
- 但是在父子层次结构中，一些非叶成员除包含通过子成员聚合的数据外，还可能包含派生自基础数据源的数据。 对于父子层次结构中的这些非叶成员，可创建包含基础事实数据表数据的系统生成的特殊子成员。 这些成员称为“数据成员 ”，它们包含与非叶成员直接相关的值，而非叶成员独立于通过该非叶成员的后代计算的汇总值。  
+ 但是在父子层次结构中，一些非叶成员除包含通过子成员聚合的数据外，还可能包含派生自基础数据源的数据。 对于父子层次结构中的这些非叶成员，可创建包含基础事实数据表数据的系统生成的特殊子成员。 这些成员称为“数据成员  ”，它们包含与非叶成员直接相关的值，而非叶成员独立于通过该非叶成员的后代计算的汇总值。  
   
  数据成员仅可用于具有父子层次结构的维度，并且仅当父属性允许时才可见。 可以使用维度设计器来控制数据成员的可见性。 若要公开数据成员，请将父特性的 `MembersWithData` 属性设置为 `NonLeafDataVisible.`。若要隐藏父特性所包含的数据成员，请将父特性的 `MembersWithData` 属性设置为 `NonLeafDataHidden`。  
   

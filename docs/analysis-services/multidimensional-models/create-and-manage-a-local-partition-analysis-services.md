@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49ac59377001eb6007f7f647d3817993c6121b74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62866672"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>创建和管理本地分区 (Analysis Services)
@@ -23,7 +23,7 @@ ms.locfileid: "62866672"
  可以在模型设计期间在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中创建分区，或在部署解决方案后使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 XMLA 来创建分区。 建议您仅选择一种方法。 如果您交替使用这些工具，可能会发现，在随后从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重新部署该解决方案时，在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中对已部署的数据库所进行的更改将被覆盖。  
   
 ## <a name="before-you-start"></a>开始之前  
- 检查所用版本是否为 Business Intelligence 或 Enterprise。 Standard 版不支持多个分区。 若要检查版本，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击服务器节点，然后选择“报表” | “常规”。 有关功能可用性的详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。  
+ 检查所用版本是否为 Business Intelligence 或 Enterprise。 Standard 版不支持多个分区。 若要检查版本，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中右键单击服务器节点，然后选择“报表” | “常规”。   有关功能可用性的详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。  
   
  如果您想以后将分区合并，则从一开始就须知道各分区必须具有相同的聚合设计。 仅当分区具有相同的聚合设计和存储模式时，才能将分区合并。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62866672"
   
  对筛选器进行构造，使得数据不会在各分区中重复。 分区的筛选指定事实数据表中哪些数据应用于分区。 多维数据集中对于所有分区的筛选必须从事实数据表中提取互斥的数据集。 如果同一事实数据出现在多个分区中，则可能会对该事实数据双重计数。  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的解决方案资源管理器中，双击该多维数据集以在多维数据集设计器中将其打开，然后单击“分区”选项卡。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的解决方案资源管理器中，双击该多维数据集以在多维数据集设计器中将其打开，然后单击“分区”选项卡。   
   
 2.  展开要添加分区的度量值组。 默认情况下，每个度量值组具有一个分区，此分区绑定到 DSV 中的事实数据表。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62866672"
   
      ![在分区窗格中的源列](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "分区窗格中的源列")  
   
-4.  在“绑定类型”中，选择 **“查询绑定”**。 将自动显示用于选择数据的 SQL 查询。  
+4.  在“绑定类型”中，选择 **“查询绑定”** 。 将自动显示用于选择数据的 SQL 查询。  
   
 5.  在底部的 WHERE 子句中，添加用于将此分区的数据分段的筛选器。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62866672"
     |第 2 集合：|"Continent" = 'NorthAmerica'<br /><br /> "Continent" = 'Europe'<br /><br /> "Continent" = 'SouthAmerica'|  
     |第 3 集合：|"Country" = 'USA'<br /><br /> "Country" = 'Mexico'<br /><br /> ("Country" <> 'USA' AND "Country" <> 'Mexico')|  
   
-6.  单击 **“检查”** 检查语法错误，然后单击 **“确定”**。  
+6.  单击 **“检查”** 检查语法错误，然后单击 **“确定”** 。  
   
 7.  重复前面的步骤以创建其余分区，每次修改 WHERE 子句都选择下一个数据切片。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62866672"
   
 9. 浏览该多维数据集以验证是否返回了正确的数据。  
   
- 在您拥有一个使用多个度量值组的度量值组后，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建其他分区。 在一个度量值组下，右键单击“分区”文件夹，然后选择“新建分区”以启动向导。  
+ 在您拥有一个使用多个度量值组的度量值组后，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建其他分区。 在一个度量值组下，右键单击“分区”文件夹，然后选择“新建分区”以启动向导。   
   
 > [!NOTE]  
 >  您无需筛选分区中的数据，而是可以使用同一查询在 DSV 中创建命名查询，然后使分区基于该命名查询。  
@@ -92,7 +92,7 @@ ms.locfileid: "62866672"
   
      该命名查询必须基于与该度量值组关联的事实数据表。 例如，如果对 FactInternetSales 度量值组进行分区，则 DSV 中的命名查询必须在 FROM 语句中指定 FactInternetSales 表。  
   
-2.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的解决方案资源管理器中，双击该多维数据集以在多维数据集设计器中将其打开，然后单击“分区”选项卡。  
+2.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的解决方案资源管理器中，双击该多维数据集以在多维数据集设计器中将其打开，然后单击“分区”选项卡。   
   
 3.  展开要添加分区的度量值组。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62866672"
   
 7.  在最后的“完成向导”页上，为分区提供一个描述性名称。  
   
-8.  单击 **“完成”**。  
+8.  单击 **“完成”** 。  
   
 9. 重复前面的步骤以创建其余分区，每次选择不同的命名查询以选择下一个数据切片。  
   

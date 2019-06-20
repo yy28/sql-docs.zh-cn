@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057139"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 目标编辑器（“连接管理器”页）
@@ -31,10 +31,10 @@ ms.locfileid: "66057139"
   
 ## <a name="static-options"></a>静态选项  
  **“无缓存”**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”对话框创建一个新连接管理器。  
+ 通过使用“配置 OLE DB 连接管理器”  对话框创建一个新连接管理器。  
   
  **数据访问模式**  
  指定向目标中加载数据的方法。 加载双字节字符集 (DBCS) 数据需要使用一个快速加载选项。 有关针对大容量插入进行了优化的快速加载数据访问模式的详细信息，请参阅 [OLE DB Destination](data-flow/ole-db-destination.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "66057139"
 |SQL 命令|使用 SQL 查询将数据加载到 OLE DB 目标中。|  
   
  **预览**  
- 使用“预览查询结果”对话框预览结果。 预览最多可以显示 200 行。  
+ 使用“预览查询结果”  对话框预览结果。 预览最多可以显示 200 行。  
   
 ## <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
  每个 **“数据访问模式”** 设置都显示一组特定于该设置的动态选项。 下面几节介绍对于每个 **“数据访问模式”** 设置均可用的所有动态选项。  
@@ -58,17 +58,17 @@ ms.locfileid: "66057139"
  从数据源的可用表列表或视图列表中选择表或视图的名称。  
   
  **新建**  
- 通过使用“创建表”对话框创建一个新表。  
+ 通过使用“创建表”  对话框创建一个新表。  
   
 > [!NOTE]  
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
 ### <a name="data-access-mode--table-or-view---fast-load"></a>数据访问模式 = 表或视图 – 快速加载  
  **表或视图的名称**  
- 使用此列表从数据库中选择表或视图，或单击“新建”创建新表。  
+ 使用此列表从数据库中选择表或视图，或单击“新建”  创建新表。  
   
  **新建**  
- 通过使用“创建表”对话框创建一个新表。  
+ 通过使用“创建表”  对话框创建一个新表。  
   
 > [!NOTE]  
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
@@ -89,7 +89,7 @@ ms.locfileid: "66057139"
  指定每批中的行数。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在“OLE DB 目标编辑器”中清空此文本框，则表示不希望为此属性分配自定义值。  
+>  如果在“OLE DB 目标编辑器”  中清空此文本框，则表示不希望为此属性分配自定义值。  
   
  **最大插入提交大小**  
  指定 OLE DB 目标在快速加载操作期间尝试提交的批大小。 值为 **0** 表示在处理完所有行之后以单批方式提交所有数据。  
@@ -97,10 +97,10 @@ ms.locfileid: "66057139"
 > [!NOTE]  
 >  如果该 OLE DB 目标和其他数据流组件正在更新同一源表，则 **0** 值可能导致正在运行的包停止响应。 若要防止包停止，请将 **“最大插入提交大小”** 选项设置为 **2147483647**。  
   
- 如果为此属性提供一个值，目标将分批提交行，提交的行数是 (a) “最大插入提交大小”与 (b) 当前正在处理的缓冲区中的剩余行数中的较小者。  
+ 如果为此属性提供一个值，目标将分批提交行，提交的行数是 (a) “最大插入提交大小”  与 (b) 当前正在处理的缓冲区中的剩余行数中的较小者。  
   
 > [!NOTE]  
->  目标中任何约束失败都将导致“最大插入提交大小”所定义的整批行失败。  
+>  目标中任何约束失败都将导致“最大插入提交大小”  所定义的整批行失败。  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>数据访问模式 = 表名变量或视图名变量  
  **变量名称**  
@@ -111,7 +111,7 @@ ms.locfileid: "66057139"
  选择包含表或视图名称的变量。  
   
  **新建**  
- 通过使用“创建表”对话框创建一个新表。  
+ 通过使用“创建表”  对话框创建一个新表。  
   
 > [!NOTE]  
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
@@ -132,7 +132,7 @@ ms.locfileid: "66057139"
  指定每批中的行数。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在“OLE DB 目标编辑器”中清空此文本框，则表示不希望为此属性分配自定义值。  
+>  如果在“OLE DB 目标编辑器”  中清空此文本框，则表示不希望为此属性分配自定义值。  
   
  **最大插入提交大小**  
  指定 OLE DB 目标在快速加载操作期间尝试提交的批大小。 默认值为 **2147483647** ，表示在处理完所有行之后以单批方式提交所有数据。  
@@ -142,16 +142,16 @@ ms.locfileid: "66057139"
   
 ### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。  
+ 输入 SQL 查询的文本，通过单击“生成查询”  来生成查询，或通过单击“浏览”  定位到包含查询文本的文件。  
   
 > [!NOTE]  
 >  OLE DB 目标不支持参数。 如果需要执行参数化 INSERT 语句，请考虑使用 OLE DB 命令转换。 有关详细信息，请参阅 [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)。  
   
  **生成查询**  
- 使用“查询生成器”对话框可直观地构造 SQL 查询。  
+ 使用“查询生成器”  对话框可直观地构造 SQL 查询。  
   
  **“浏览”**  
- 使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
+ 使用“打开”  对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
  验证查询文本的语法。  
