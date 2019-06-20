@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26d56116652e389e60edfb269ce2e23c14bb824f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62671133"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>使用 Microsoft 树查看器浏览模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 树查看器显示借助于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法生成的决策树。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种既支持分类又支持回归的混合决策树算法。 因此，你可以使用该查看器来查看基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法用于为离散属性和连续属性进行预测性建模。 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 树查看器显示借助于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法生成的决策树。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种既支持分类又支持回归的混合决策树算法。 因此，你可以使用该查看器来查看基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法用于为离散属性和连续属性进行预测性建模。 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。  
   
 > [!NOTE]  
 >  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
@@ -35,7 +35,7 @@ ms.locfileid: "62671133"
 ###  <a name="BKMK_DecisionTree"></a> 决策树  
  生成决策树模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将为每个可预测属性生成一个单独的树。 从查看器的 **“决策树”** 选项卡上的 **“树”** 列表中选择单个树，可查看该树。  
   
- 决策树由一系列拆分组成，最重要的拆分由算法确定，该拆分位于 **“全部”** 节点中查看器的左侧。 其他拆分出现在右侧。 “全部”节点中的拆分最为重要，由于该节点包含了数据集内引起拆分的最充分的条件，因而产生了第一个拆分。  
+ 决策树由一系列拆分组成，最重要的拆分由算法确定，该拆分位于 **“全部”** 节点中查看器的左侧。 其他拆分出现在右侧。 “全部”  节点中的拆分最为重要，由于该节点包含了数据集内引起拆分的最充分的条件，因而产生了第一个拆分。  
   
  您可以展开或折叠决策树中的各个节点，以显示或隐藏各节点后出现的拆分。 您还可以使用 **“决策树”** 选项卡上的选项来设置树的显示方式。 使用 **“显示级别”** 滑块，可以调整树中显示的级别数。 使用 **“默认扩展”** 可以设置模型中所有树的默认显示级别数。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "62671133"
  如果树是使用连续可预测属性生成的，则查看器为树中的每个节点显示一个菱形图，而不是直方图。 菱形图有一个表示属性范围的线条。 菱形位于节点的中间，其宽度表示该节点处属性的方差。 菱形越窄，说明该节点生成的预测更为精确。 查看器还显示用于确定节点中的拆分的回归公式。  
   
 #### <a name="additional-decision-tree-display-options"></a>其他决策树显示选项  
- 为决策树模型启用钻取后，即可访问支持某个节点的定型事例，方法是：右键单击树中的该节点，然后选择“钻取”。 可以在数据挖掘向导内启用钻取，也可以在 **“挖掘模型”** 选项卡中通过调整挖掘模型的钻取属性来启用钻取。  
+ 为决策树模型启用钻取后，即可访问支持某个节点的定型事例，方法是：右键单击树中的该节点，然后选择“钻取”  。 可以在数据挖掘向导内启用钻取，也可以在 **“挖掘模型”** 选项卡中通过调整挖掘模型的钻取属性来启用钻取。  
   
- 可以使用 **“决策树”** 选项卡上的缩放选项来放大或缩小某个树，也可以使用 **“调整为合适大小”** 将整个模型放入查看器的屏幕中。 如果某个树太大而无法将其调整为适合屏幕的大小，则可使用“导航” 选项在树中导航。 单击 **“导航”** 将打开一个单独的导航窗口，可通过它来选择要显示的模型部分。  
+ 可以使用 **“决策树”** 选项卡上的缩放选项来放大或缩小某个树，也可以使用 **“调整为合适大小”** 将整个模型放入查看器的屏幕中。 如果某个树太大而无法将其调整为适合屏幕的大小，则可使用“导航”  选项在树中导航。 单击 **“导航”** 将打开一个单独的导航窗口，可通过它来选择要显示的模型部分。  
   
  您还可以将树视图图像复制到剪贴板上，以便可将其粘贴到文档或图像处理软件中。 可以使用 **“复制图形视图”** 仅复制查看器中树的可见部分，也可以使用 **“复制整个图形”** 来复制树中所有扩展节点。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62671133"
   
 -   一个直方图，其中包含可预测属性的各种状态的数目。  
   
--   访问某个特定节点所需的条件，也称为“节点路径 ”。  
+-   访问某个特定节点所需的条件，也称为“节点路径  ”。  
   
 -   回归公式（对于线性回归模型）  
   
