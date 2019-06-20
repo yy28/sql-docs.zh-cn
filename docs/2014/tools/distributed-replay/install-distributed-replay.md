@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149726"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>从命令提示符安装 Distributed Replay
@@ -37,7 +37,7 @@ ms.locfileid: "63149726"
   
  使用下表中的参数可开发用于安装的命令行脚本。  
   
-|参数|描述|支持的值|  
+|参数|Description|支持的值|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **可选**|Distributed Replay 控制器服务的服务帐户。|检查帐户和密码|  
 |/CTLRSVCPASSWORD<br /><br /> **可选**|Distributed Replay 控制器服务帐户的密码。|检查帐户和密码|  

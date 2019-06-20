@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e2ad81b1d92bb45d9ab15ca11897804cc0d333a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63001761"
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
@@ -57,7 +57,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="remarks"></a>备注  
  任一*collection_set_id*或*名称*必须有一个值，都不能为 NULL。  
   
- 此过程将开始收集和上载作业指定的集合设置，并将立即启动收集代理作业，如果收集组具有其**@collection_mode**设置为非缓存 (1)。 有关详细信息，请参阅[sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
+ 此过程将开始收集和上载作业指定的集合设置，并将立即启动收集代理作业，如果收集组具有其 **@collection_mode** 设置为非缓存 (1)。 有关详细信息，请参阅[sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
  sp_sycollector_run_collection_set 还可用于运行没有计划的收集组。  
   

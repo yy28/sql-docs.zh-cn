@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081972"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>依赖关系网络关系图演练（数据挖掘外接程序）
@@ -45,7 +45,7 @@ ms.locfileid: "66081972"
   
      \<驱动器 >: \Program 文件 (x85) \Microsoft SQL Server 2012 数据挖掘外接程序  
   
-2.  拖动**依赖关系网络**形状拖到页面上以启动向导。 单击“下一步” 。  
+2.  拖动**依赖关系网络**形状拖到页面上以启动向导。 单击“下一步”  。  
   
 3.  在欢迎页上**依赖关系网络 Visio 形状向导**，单击**下一步**。  
   

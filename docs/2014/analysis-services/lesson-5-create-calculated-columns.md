@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078563"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>第 6 课：创建计算列
@@ -31,11 +31,11 @@ ms.locfileid: "66078563"
   
 #### <a name="create-a-month-calendar-calculated-column-in-the-date-table"></a>在 Date 表中创建 Month Calendar 计算列  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”菜单，然后指向“模型视图”，再单击“数据视图”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”  菜单，然后指向“模型视图”  ，再单击“数据视图”  。  
   
      只能在数据视图中使用模型设计器创建计算列。  
   
-2.  在模型设计器中，单击“Date”表（选项卡）。  
+2.  在模型设计器中，单击“Date”  表（选项卡）。  
   
 3.  右键单击**日历季度**列中，并单击**插入列**。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66078563"
   
 #### <a name="create-a-day-of-week-calculated-column-in-the-date-table"></a>在 Date 表中创建 Day of Week 计算列  
   
-1.  在“Date”表仍处于活动状态时，单击“列”菜单，然后单击“添加列”。  
+1.  在“Date”  表仍处于活动状态时，单击“列”  菜单，然后单击“添加列”  。  
   
      一个新列添加到表的最右侧。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66078563"
   
 3.  列重命名为`Day of Week`。  
   
-4.  单击列标题，然后将此列拖到“Day Name”列与“Day of Month”列之间。  
+4.  单击列标题，然后将此列拖到“Day Name”  列与“Day of Month”  列之间。  
   
     > [!TIP]  
     >  移动表中的列可使表变得更易于浏览。  
@@ -79,9 +79,9 @@ ms.locfileid: "66078563"
   
 #### <a name="create-a-product-subcategory-name-calculated-column-in-the-product-table"></a>在 Product 表中创建 Product Subcategory Name 计算列  
   
-1.  在模型设计器中，选择“Product”表。  
+1.  在模型设计器中，选择“Product”  表。  
   
-2.  滚动到表的最右侧。 请注意，最右侧的列被命名为“添加列”（斜体），单击该列标题。  
+2.  滚动到表的最右侧。 请注意，最右侧的列被命名为“添加列”  （斜体），单击该列标题。  
   
 3.  在公式栏中，键入以下公式。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66078563"
   
 #### <a name="create-a-product-category-name-calculated-column-in-the-product-table"></a>在 Product 表中创建 Product Category Name 计算列  
   
-1.  在“Product”表仍处于活动状态时，单击“列”菜单，然后单击“添加列”。  
+1.  在“Product”  表仍处于活动状态时，单击“列”  菜单，然后单击“添加列”  。  
   
 2.  在公式栏中，键入以下公式：  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66078563"
   
 #### <a name="create-a-margin-calculated-column-in-the-internet-sales-table"></a>在 Internet Sales 表中创建 Margin 计算列  
   
-1.  在模型设计器中，选择“Internet Sales”表。  
+1.  在模型设计器中，选择“Internet Sales”  表。  
   
 2.  添加新列。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "66078563"
   
 4.  列重命名为`Margin`。  
   
-5.  将此列拖到“Sales Amount”列与“Tax Amt”列之间。  
+5.  将此列拖到“Sales Amount”  列与“Tax Amt”  列之间。  
   
  Margin 计算列用来分析每个（产品）行的毛利润率。  
   

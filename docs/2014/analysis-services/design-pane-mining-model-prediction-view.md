@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081853"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>“设计”窗格（“挖掘模型预测”视图）
@@ -82,10 +82,10 @@ ms.locfileid: "66081853"
  从派生自源表的列的列表中选择列。 如果在 **“源”** 中选择了 **“预测函数”**，则此字段将包含所选挖掘模型中可用的预测函数。  
   
  **分组**  
- 与“和/或”列一起使用，将表达式组合到一起。 例如，`(expr1 Or expr2) And expr3`。  
+ 与“和/或”列一起使用，将表达式组合到一起。 例如， `(expr1 Or expr2) And expr3` 。  
   
  **和/或**  
- 用于创建逻辑查询。 例如，`(expr1 Or expr2) And expr3`。  
+ 用于创建逻辑查询。 例如， `(expr1 Or expr2) And expr3` 。  
   
  **条件/参数**  
  指定应用于该列的条件表达式或用户表达式。 可以将列从包含挖掘模型的表和输入表中拖动到单元。  

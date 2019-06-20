@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05ee617f1a065c44a7c593af244d778f76a7a627
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098411"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>GetDatabaseVersionDisplayName 方法 (WMI)
@@ -55,7 +55,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 |RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |修补程序||最接近的适用版本|  
   
- 如果版本早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000，返回的 HRESULT 为 ACT_E_BAD_VERSION。  
+ 如果版本早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000，返回的 HRESULT 为 ACT_E_BAD_VERSION  。  
   
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  

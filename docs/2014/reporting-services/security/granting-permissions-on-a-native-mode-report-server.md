@@ -23,17 +23,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 310ab4f332c3262b20e73211f5ec3d4a5f19786a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101934"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>授予对本机模式报表服务器的权限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的授权和身份验证子系统来确定哪些用户可以在报表服务器上执行操作和访问项。 基于角色的授权将角色分为用户或组可以执行的操作组。 身份验证基于内置的 Windows 身份验证或您提供的自定义身份验证模块。 您对这两种身份验证类型都可以使用预定义或自定义角色。  
   
 ## <a name="using-roles-to-grant-report-server-access"></a>使用角色授予报表服务器访问权限  
- 所有用户都在定义特定访问级别的角色上下文中与报表服务器进行交互。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了预定义的角色，您可以为用户和组分配这些角色，从而让其可以立即访问报表服务器。 预定义角色例如有“内容管理员”、“发布者”和“浏览者”。 每个角色定义一个相关任务的集合。 例如，“发布者”  具有添加报表和创建用于存储这些报表的文件夹的权限。  
+ 所有用户都在定义特定访问级别的角色上下文中与报表服务器进行交互。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了预定义的角色，您可以为用户和组分配这些角色，从而让其可以立即访问报表服务器。 预定义角色例如有“内容管理员”  、“发布者”  和“浏览者”  。 每个角色定义一个相关任务的集合。 例如，“发布者”  具有添加报表和创建用于存储这些报表的文件夹的权限。  
   
  角色分配通常从父节点继承，但是您可以通过为特定项创建新的角色分配来打破权限继承。 某个用户作为一个报表的“内容管理员”  角色成员的同时也可以是另一个报表的“浏览者”  角色的成员。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66101934"
   
 3.  对主文件夹（这是报表服务器文件夹层次结构的顶级文件夹），使用报表管理器为需要访问权限的每个用户或组分配角色。  
   
-4.  在站点级，使用预定义的角色“系统用户”和“系统管理员”在报表管理器的“站点设置”页为每个用户和组创建系统级角色分配。  
+4.  在站点级，使用预定义的角色“系统用户”  和“系统管理员”  在报表管理器的“站点设置”页为每个用户和组创建系统级角色分配。  
   
 5.  根据需要为特定文件夹、报表和其他项创建额外的角色分配。 应避免创建大量角色分配。 如果创建过多的角色分配，将很难跟踪每个用户的不同权限级别。  
   

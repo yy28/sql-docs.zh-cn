@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082693"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>查看或更改算法参数
   可以更改随用于生成数据挖掘模型的算法一起提供的参数，以自定义模型的结果。  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法参数不仅仅更改模型的属性，它们可用于从根本上更改处理、分组和显示数据的方式。 例如，您可以使用算法参数执行下列操作：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法参数不仅仅更改模型的属性，它们可用于从根本上更改处理、分组和显示数据的方式。 例如，您可以使用算法参数执行下列操作：  
   
 -   更改分析方法，如聚类分析方法。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66082693"
   
 ### <a name="change-an-algorithm-parameter"></a>更改算法参数  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘模型”选项卡中，右键单击要为其优化算法的挖掘模型的算法类型，选择“设置算法参数”。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘模型”  选项卡中，右键单击要为其优化算法的挖掘模型的算法类型，选择“设置算法参数”  。  
   
      此时将打开 **“算法参数”** 对话框。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66082693"
   
      如果未在 **“值”** 列中输入值， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用默认参数值。 **“范围”** 列说明了您可以输入的可能值。  
   
-3.  单击“确定” 。  
+3.  单击“确定”  。  
   
      此时，算法参数被设置为新值。 重新处理挖掘模型后，参数更改才反映在该模型中。  
   

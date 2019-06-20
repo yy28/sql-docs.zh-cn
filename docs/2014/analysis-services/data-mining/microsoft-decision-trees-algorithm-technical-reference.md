@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b52319eaa9af7305c2d3044f3e19762437fff62
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084019"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 决策树算法技术参考
@@ -35,14 +35,14 @@ ms.locfileid: "66084019"
 ## <a name="implementation-of-the-decision-trees-algorithm"></a>决策树算法的实现  
  Microsoft 决策树算法通过获取模型的近似后验分布，将 Bayesian 方法应用于学习因果交互模型。 有关此方法的详细说明，请参阅 Microsoft Research 站点上的文章 [结构和参数学习](https://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409)。  
   
- 用于评估学习所需的“先验知识”  的信息值的方法基于“可能性均等” 假定。 该假定认为数据对区分以不同方式表示同一条件独立断言的网络结构没有帮助。 先假定每个事例都有一个 Bayesian 先验网络和一个网络置信度的度量值。  
+ 用于评估学习所需的“先验知识”  的信息值的方法基于“可能性均等”  假定。 该假定认为数据对区分以不同方式表示同一条件独立断言的网络结构没有帮助。 先假定每个事例都有一个 Bayesian 先验网络和一个网络置信度的度量值。  
   
  然后，算法会利用给定的当前定型数据，使用这些先验网络计算网络结构的相对“后验概率”  ，并标识出具有最高后验概率的网络结构。  
   
  Microsoft 决策树算法使用不同的方法来计算最佳的树。 所使用的方法具体取决于任务，任务可为线性回归、分类或关联分析。 一个模型可包含多个针对不同可预测属性的树。 而且，每个树可包含多个分支，具体取决于数据中包含的属性和值的数量。 特定模型中生成的树的形状和深度取决于所使用的计分方法以及其他参数。 参数更改还会影响节点的拆分位置。  
   
 ### <a name="building-the-tree"></a>生成树  
- 创建可能的输入值集时，Microsoft 决策树算法会执行 *feature selection* 来标识提供大部分信息的属性和值，而不会考虑非常少见的值。 该算法还会通过将值分组到“收集箱” 来创建值分组，这样的值分组可作为一个单元进行处理，从而使性能得到优化。  
+ 创建可能的输入值集时，Microsoft 决策树算法会执行 *feature selection* 来标识提供大部分信息的属性和值，而不会考虑非常少见的值。 该算法还会通过将值分组到“收集箱”  来创建值分组，这样的值分组可作为一个单元进行处理，从而使性能得到优化。  
   
  树是通过确定输入和目标结果之间的相关性而生成的。 关联完所有属性后，算法会标识出最能完全分隔结果的属性。 最佳分隔点是通过使用计算信息获取分数的公式确定的。 信息获取分数最高的属性将用于将事例分为各个子集；然后，还会利用同一过程，以递归方式分析各子集，直至树无法拆分为止。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66084019"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持多个参数，这些参数可影响所生成的挖掘模型的性能和准确性。 您还可以对挖掘模型列或挖掘结构列设置建模标志来控制数据的处理方式。  
   
 > [!NOTE]  
->  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 决策树算法；但是，用于自定义 Microsoft 决策树算法行为的某些高级参数仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中提供。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 决策树算法；但是，用于自定义 Microsoft 决策树算法行为的某些高级参数仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中提供。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍了可用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的参数。  

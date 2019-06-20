@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c932d8d75ee33bc0a0970f858a0a04f9b522e4ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092596"
 ---
 # <a name="reporting-services-sharepoint-mode-authentication"></a>Reporting Services SharePoint 模式身份验证
@@ -30,7 +30,7 @@ ms.locfileid: "66092596"
   
 -   如果应用程序池帐户不需要密码，则将禁用 **“SSRS 应用程序池帐户密码:”** 选项。 例如，"NT Authority\NetworkService"。 如果应用程序池帐户的确需要密码，仅当您键入正确的密码，才能继续进行升级。  
   
- 有关详细信息，请参阅[升级和迁移 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628)。  
+ 有关详细信息，请参阅[升级和迁移 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628) 。  
   
 ## <a name="see-also"></a>请参阅  
  [升级和迁移 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)  

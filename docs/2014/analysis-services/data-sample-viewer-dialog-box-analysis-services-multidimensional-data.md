@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f406885d607827c4ed29102164c6fe89ea621508
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082618"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>“数据示例查看器”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “数据示例查看器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，查看用于为新多维数据集提供度量值的事实数据表的前 1000 条记录。  
   
- 若要打开“数据示例查看器”对话框，请在“多维数据集向导”的“选择度量值”页上，右键单击“可用度量值”网格中所列的度量值，再单击“查看示例数据”。  
+ 若要打开“数据示例查看器”对话框，请在“多维数据集向导”的“选择度量值”页上，右键单击“可用度量值”网格中所列的度量值，再单击“查看示例数据”。       
   
 ## <a name="options"></a>选项  
  表网格  

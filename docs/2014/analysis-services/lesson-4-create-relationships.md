@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078583"
 ---
 # <a name="lesson-5-create-relationships"></a>第 5 课：创建关系
@@ -30,7 +30,7 @@ ms.locfileid: "66078583"
   
 #### <a name="to-review-existing-relationships"></a>查看现有关系  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”菜单，然后指向“模型视图”，再单击“关系图视图”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”  菜单，然后指向“模型视图”  ，再单击“关系图视图”  。  
   
      模型设计器现在出现在“关系图视图”中，这是一种图形格式，可显示您导入的所有表以及表之间的线条。 表之间的线条指示当您导入数据时自动创建的关系。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66078583"
      请注意， **Customer** 表中的 **Geography Id** 列和 **Geography** 表中的 **Geography Id** 列现在同时出现在一个框中。 这表明关系中使用的是这些列。 关系的属性现在也显示在**属性**窗口。  
   
     > [!TIP]  
-    >  除了使用关系图视图中的模型设计器之外，还可以使用“管理关系”对话框以表格式显示所有表之间的关系。 单击“表”菜单，然后单击“管理关系”。 “管理关系”对话框显示导入数据时自动创建的关系。  
+    >  除了使用关系图视图中的模型设计器之外，还可以使用“管理关系”  对话框以表格式显示所有表之间的关系。 单击“表”  菜单，然后单击“管理关系”  。 “管理关系”  对话框显示导入数据时自动创建的关系。  
   
-3.  使用关系图视图中的模型设计器或“管理关系”对话框，验证在从 AdventureWorksDW 数据库中导入每个表时创建的以下关系：  
+3.  使用关系图视图中的模型设计器或“管理关系”  对话框，验证在从 AdventureWorksDW 数据库中导入每个表时创建的以下关系：  
   
     |在职|表|相关查找表|  
     |------------|-----------|--------------------------|  

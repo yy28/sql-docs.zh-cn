@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099553"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
@@ -31,11 +31,11 @@ ms.locfileid: "66099553"
 >  请不要将此功能与 Reporting Services 配置管理器相混淆，后者用于在安装完成后配置 Reporting Services。 有关详细信息，请参阅[配置和管理报表服务器（SSRS 本机模式）](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，从报表服务器项目或解决方案发布报表的操作称为“部署报表”。  
+>  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，从报表服务器项目或解决方案发布报表的操作称为“部署报表”  。  
   
 ### <a name="to-set-deployment-properties"></a>设置部署属性  
   
-1.  右键单击报表项目，再单击“属性”。  
+1.  右键单击报表项目，再单击“属性”  。  
   
 2.  在项目的 **“属性页”** 对话框中，从 **“配置”** 列表中选择要编辑的配置。 常用的配置有 **DebugLocal**、 **Debug**和 **Release**。  
   
@@ -63,19 +63,19 @@ ms.locfileid: "66099553"
     > [!NOTE]  
     >  对于在本机模式下运行的报表服务器，必须拥有对目标文件夹的 **“发布”** 权限，才能将报表发布到该文件夹。 发布权限通过角色分配提供，此角色分配将用户帐户映射到包括发布操作的角色。 有关详细信息，请参阅 [创建和管理角色分配](../security/create-and-manage-role-assignments.md)。 对于在 SharePoint 集成模式下运行的报表服务器，必须拥有对 SharePoint 站点的 **“成员”** 或 **“所有者”** 权限。 有关详细信息，请参阅 [报表服务器项的 SharePoint 站点和列表权限参考](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)。  
   
-10. 在 **TargetServerURL** 文本框中，键入目标报表服务器的 URL。 在发布报表之前，必须将此属性设置为有效的报表服务器 URL。 向在本机模式下运行的报表服务器发布时，请使用报表服务器虚拟目录的 URL（例如，http:*//server/reportserver* 或 https:*//server/reportserver*）。 这是报表服务器的虚拟目录，而不是报表管理器的虚拟目录。  
+10. 在 **TargetServerURL** 文本框中，键入目标报表服务器的 URL。 在发布报表之前，必须将此属性设置为有效的报表服务器 URL。 向在本机模式下运行的报表服务器发布时，请使用报表服务器虚拟目录的 URL（例如，http: *//server/reportserver* 或 https: *//server/reportserver*）。 这是报表服务器的虚拟目录，而不是报表管理器的虚拟目录。  
   
      发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点（例如 http://*servername*、 http://*servername*/*site* 或 http://*servername*/*site*/*subsite*）。  
   
 ### <a name="to-set-configuration-manager-properties"></a>设置配置管理器属性  
   
-1.  右键单击报表项目，再单击“属性”。  
+1.  右键单击报表项目，再单击“属性”  。  
   
-2.  在该项目的 **“属性页”** 对话框中，单击 **“配置管理器”**。  
+2.  在该项目的 **“属性页”** 对话框中，单击 **“配置管理器”** 。  
   
-3.  在 **“配置管理器”** 对话框中，选择要编辑的配置。 当前有效的配置显示为“活动(***\<配置>***)”。  
+3.  在 **“配置管理器”** 对话框中，选择要编辑的配置。 当前有效的配置显示为“活动(***\<配置>***)”  。  
   
-4.  在 **“项目上下文”** 中，为解决方案中的每个项目选中或清除 **“生成”** 或 **“部署”**。  
+4.  在 **“项目上下文”** 中，为解决方案中的每个项目选中或清除 **“生成”** 或 **“部署”** 。  
   
     > [!NOTE]  
     >  如果选中 **“生成”** ，报表设计器将生成报表项目，并在预览或发布到报表服务器之前检查错误。 如果选中 **“部署”** ，报表设计器将按照部署属性中的定义，将报表发布到报表服务器。 如果未选中 **“部署”** ，报表设计器将在本地预览窗口中显示在 **StartItem** 属性中指定的报表。  

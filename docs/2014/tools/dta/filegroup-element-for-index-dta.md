@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63154606"
 ---
 # <a name="filegroup-element-for-index-dta"></a>索引的文件组元素 (DTA)
@@ -37,7 +37,7 @@ ms.locfileid: "63154606"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|`string`，长度没有限制。|  
 |**默认值**|无。|  

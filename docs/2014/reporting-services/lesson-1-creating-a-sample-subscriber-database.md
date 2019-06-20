@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108539"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 课：创建示例订阅服务器数据库
@@ -26,11 +26,11 @@ ms.locfileid: "66108539"
   
 1.  启动 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，打开到[!INCLUDE[ssDE](../includes/ssde-md.md)]的连接。  
   
-2.  右键单击“数据库”，选择“新建数据库”。  
+2.  右键单击“数据库”，选择“新建数据库”  。  
   
 3.  在新的数据库对话框中的数据库名称中，键入*订户*。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  在工具栏中，单击“新建查询”按钮。  
+4.  在工具栏中，单击“新建查询”按钮  。  
   
 5.  将下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句复制到空查询中：  
   

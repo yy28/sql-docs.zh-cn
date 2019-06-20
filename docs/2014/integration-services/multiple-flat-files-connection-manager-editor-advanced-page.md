@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: de238c1012a255ceb59086e542d5529b8b907915
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057551"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多平面文件连接管理器编辑器（“高级”页）
-  可以使用“多平面文件连接管理器编辑器”对话框的“高级”页，设置平面文件连接管理器连接到的文本文件中的属性（如每列的数据类型和分隔符）。  
+  可以使用“多平面文件连接管理器编辑器”对话框的“高级”页，设置平面文件连接管理器连接到的文本文件中的属性（如每列的数据类型和分隔符）。    
   
  默认情况下，字符串列的长度为 50 个字符。 您可以计算示例数据并自动调整这些列的长度，以免数据截断或超出列宽。 还可以更新其他元数据以便与目标列兼容。 例如，可以将只包含整型数据的列的数据类型更改为数值数据类型，例如 DT_I2。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66057551"
 |**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|  
   
  **新建**  
- 单击“新建”添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
+ 单击“新建”  添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -60,10 +60,10 @@ ms.locfileid: "66057551"
 |**在其后插入**|在所选列后面插入新列。|  
   
  **删除**  
- 选择一列，然后单击“删除”来删除该列。  
+ 选择一列，然后单击“删除”  来删除该列。  
   
  **建议类型**  
- 使用“提供列类型建议”对话框可以评估所选的第一个文件中的示例数据，并获取对每列的数据类型和长度的建议。 有关详细信息，请参阅[“提供列类型建议”对话框 UI 参考](connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用“提供列类型建议”对话框可以评估所选的第一个文件中的示例数据，并获取对每列的数据类型和长度的建议。  有关详细信息，请参阅[“提供列类型建议”对话框 UI 参考](connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

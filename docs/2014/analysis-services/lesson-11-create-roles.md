@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079271"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 课：创建角色
@@ -27,7 +27,7 @@ ms.locfileid: "66079271"
   
 -   销售管理器-此角色可以包含你想要对所有模型对象和数据具有读取权限的组织中的用户。  
   
--   Sales Analyst US-此角色可以包括希望只是为了能够浏览与 US （美国） 的销售相关的数据在组织中的用户。 对于此角色，使用 DAX 公式来定义“行筛选器”，该筛选器将成员限制为只能浏览针对美国的数据。  
+-   Sales Analyst US-此角色可以包括希望只是为了能够浏览与 US （美国） 的销售相关的数据在组织中的用户。 对于此角色，使用 DAX 公式来定义“行筛选器”  ，该筛选器将成员限制为只能浏览针对美国的数据。  
   
 -   管理员-使用此角色可以包含你想要具有管理员权限，允许无限制访问权限和对模型数据库执行管理任务的权限的用户。  
   
@@ -42,33 +42,33 @@ ms.locfileid: "66079271"
   
 #### <a name="to-create-a-sales-manager-user-role"></a>创建 Sales Manager 用户角色  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”菜单，然后单击“角色”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”菜单，然后单击“角色”。    
   
-2.  在 **“角色管理器”** 对话框中，单击 **“新建”**。  
+2.  在 **“角色管理器”** 对话框中，单击 **“新建”** 。  
   
      一个具有“无”权限的新角色将添加到列表中。  
   
 3.  单击新角色，然后在**名称**列中，重命名为`Internet Sales Manager`。  
   
-4.  在“权限”列中，单击下拉列表，然后选择“读取”权限。  
+4.  在“权限”  列中，单击下拉列表，然后选择“读取”  权限。  
   
-5.  可选：单击“成员”选项卡，然后单击“添加”。  
+5.  可选：单击“成员”  选项卡，然后单击“添加”  。  
   
-6.  在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+6.  在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。   
   
-7.  确认你的选择，然后单击“确定”。  
+7.  确认你的选择，然后单击“确定”  。  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>创建 Sales Analyst US 用户角色  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”菜单，然后单击“角色”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”菜单，然后单击“角色”。    
   
-2.  在 **“角色管理器”** 对话框中，单击 **“新建”**。  
+2.  在 **“角色管理器”** 对话框中，单击 **“新建”** 。  
   
      一个具有“无”权限的新角色将添加到列表中。  
   
 3.  单击新角色，然后在**名称**列中，重命名为`Internet Sales US`。  
   
-4.  在“权限”列中，单击下拉列表，然后选择“读取”权限。  
+4.  在“权限”  列中，单击下拉列表，然后选择“读取”  权限。  
   
 5.  单击“行筛选器”选项卡，然后只针对 **Geography** 表，在“DAX 筛选器”列中键入以下公式：  
   
@@ -78,25 +78,25 @@ ms.locfileid: "66079271"
   
      在您完成公式的建立后，按 Enter。  
   
-6.  可选：单击“成员”选项卡，然后单击“添加”。  
+6.  可选：单击“成员”  选项卡，然后单击“添加”  。  
   
-7.  在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+7.  在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。   
   
-8.  确认你的选择，然后单击“确定”。  
+8.  确认你的选择，然后单击“确定”  。  
   
 #### <a name="to-create-an-administrator-role"></a>创建 Administrator 角色  
   
-1.  在 **“角色管理器”** 对话框中，单击 **“新建”**。  
+1.  在 **“角色管理器”** 对话框中，单击 **“新建”** 。  
   
 2.  单击新角色，然后在**名称**列中，重命名为`Internet Sales Administrator`。  
   
-3.  在“权限”列中，单击下拉列表，然后选择“管理员”权限。  
+3.  在“权限”列中，单击下拉列表，然后选择“管理员”权限。    
   
-4.  单击“成员”选项卡，然后单击“添加”。  
+4.  单击“成员”  选项卡，然后单击“添加”  。  
   
-5.  可选：在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+5.  可选：在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。   
   
-6.  确认你的选择，然后单击“确定”。  
+6.  确认你的选择，然后单击“确定”  。  
   
 ## <a name="next-steps"></a>后续步骤  
  若要继续学习本教程，请转到下一课：课程：[第 13 课：在 Excel 中分析](lesson-12-analyze-in-excel.md)。  

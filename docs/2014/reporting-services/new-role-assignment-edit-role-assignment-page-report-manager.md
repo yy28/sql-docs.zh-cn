@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108156"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>新建角色分配：编辑角色分配页 （报表管理器）
@@ -31,9 +31,9 @@ ms.locfileid: "66108156"
   
 2.  悬停在该项之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“安全性”**。 这会打开该项的“安全属性”页。  
+3.  在下拉菜单中，单击 **“安全性”** 。 这会打开该项的“安全属性”页。  
   
-4.  如果您要添加新的角色分配，则在工具栏中单击 **“新建角色分配”**。 如果您要编辑角色分配，请单击要编辑的组或用户名旁边的 **“编辑”** 。  
+4.  如果您要添加新的角色分配，则在工具栏中单击 **“新建角色分配”** 。 如果您要编辑角色分配，请单击要编辑的组或用户名旁边的 **“编辑”** 。  
   
     > [!NOTE]  
     >  如果某项当前从父项继承安全性，则在工具栏中单击 **“编辑项安全设置”** 可以更改安全设置。  

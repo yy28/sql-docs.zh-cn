@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011268"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
@@ -34,7 +34,7 @@ ms.locfileid: "66011268"
   
 -   如果只需要全文键或排名的信息，请使用 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) ，而不要使用分别与之对应的 CONTAINS 或 FREETEXT。  
   
--   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用 *top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”）时，才应使用此参数。  
+-   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用 *top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”  ）时，才应使用此参数。  
   
     > [!NOTE]  
     >  法律应用场景通常需要返回全部项，不过对于诸如电子商务等商业应用场景，性能可能更为重要。  

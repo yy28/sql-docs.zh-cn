@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b78691b0300b6098dfa88c35b4b61c7aa63fed4a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099820"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 实用工具 (SSRS)
@@ -51,11 +51,11 @@ ms.locfileid: "66099820"
 |`-c`|如果未使用 `-e` 参数，则为必需项。|指定用于将报表服务器连接到报表服务器数据库的连接字符串、凭据和数据源值。<br /><br /> 此参数不带值。 但是，必须对其指定其他参数以提供所有必需的连接值。<br /><br /> 您可以使用指定的参数`-c`包括`-m`， **-s**， `-i`，`-d`，`-a`，`-u`，`-p`，和`-t`。|  
 |`-e`|如果未使用 `-c` 参数，则为必需项。|指定无人参与报表执行帐户。<br /><br /> 此参数不带值。 但是，您必须在命令行中指定其他参数，以指定配置文件中加密的值。<br /><br /> 可以使用 `-e` 指定的参数包括 `-u` 和 `-p`。 您还可以设置 `-t`。|  
 |`-m`  *computername*|如果要配置远程报表服务器实例，则此参数是必需的。|指定承载报表服务器的计算机的名称。 如果省略该参数，则默认值为 `localhost`。|  
-|**-s**  servername|必需的。|指定承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
+|**-s**  servername |必需的。|指定承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
 |`-i`  *instancename*|如果使用了命名实例，则此参数是必需的。|如果使用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例承载报表服务器数据库，则此值指定该命名实例。|  
 |`-d`  *databasename*|必需的。|指定报表服务器数据库的名称。|  
 |`-a`  *身份验证方法*|必需的。|指定报表服务器连接到报表服务器数据库时使用的身份验证方法。 有效值是 `Windows` 或 `SQL`（该参数不区分大小写）。<br /><br /> `Windows` 指定报表服务器使用 Windows 身份验证。<br /><br /> `SQL` 指定报表服务器使用 SQL Server 身份验证。|  
-|`-u`  *[domain\\]username*|`-e` 是必需的，`-c` 是可选的。|指定报表服务器数据库连接或无人参与帐户的用户帐户。<br /><br /> 对于 **rsconfig -e**，该参数是必需的。 该帐户必须是域用户帐户。<br /><br /> 有关**rsconfig-c**并`-a SQL`，此参数必须指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。<br /><br /> 有关**rsconfig-c**和`-a Windows`，此参数可能指定域用户、 内置帐户或服务帐户凭据。 若要指定域帐户，请以“domain\username”格式指定域和用户名。 如果使用了内置帐户，则该参数是可选的。 如果要使用服务帐户凭据，则可省略该参数。|  
+|`-u`  *[domain\\]username*|`-e` 是必需的，`-c` 是可选的。|指定报表服务器数据库连接或无人参与帐户的用户帐户。<br /><br /> 对于 **rsconfig -e**，该参数是必需的。 该帐户必须是域用户帐户。<br /><br /> 有关**rsconfig-c**并`-a SQL`，此参数必须指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。<br /><br /> 有关**rsconfig-c**和`-a Windows`，此参数可能指定域用户、 内置帐户或服务帐户凭据。 若要指定域帐户，请以“domain\username”  格式指定域  和用户名  。 如果使用了内置帐户，则该参数是可选的。 如果要使用服务帐户凭据，则可省略该参数。|  
 |`-p`  *password*|如果指定了 `-u`，则该参数是必需的。|指定与 *username* 参数一起使用的密码。 如果帐户不需要密码，则可将该参数设置为空值。 对于域帐户，此值区分大小写。|  
 |`-t`|可选。|将错误消息输出到跟踪日志。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。|  
   

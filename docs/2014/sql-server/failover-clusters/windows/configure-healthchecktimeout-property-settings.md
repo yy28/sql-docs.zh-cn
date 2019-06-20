@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acb2a812f2e3c29a56916c671d76d91c676272d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049491"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
   HealthCheckTimeout 设置用于指定的时间，以毫秒为单位，SQL Server 资源 DLL 应等待返回的信息[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)报告之前存储过程AlwaysOn 故障转移群集实例 (FCI) 为不响应。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
   
--   **开始之前：**[限制和局限](#Limits)、[安全性](#Security)  
+-   **开始之前：** [限制和局限](#Limits)、[安全性](#Security)  
   
--   **若要配置 HeathCheckTimeout 设置，请使用：**[PowerShell](#PowerShellProcedure)，[故障转移群集管理器](#WSFC)， [Transact SQL](#TsqlProcedure)  
+-   **若要配置 HeathCheckTimeout 设置，请使用：** [PowerShell](#PowerShellProcedure)，[故障转移群集管理器](#WSFC)， [Transact SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -73,7 +73,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 2.  展开 **“服务和应用程序”** ，然后选择 FCI。  
   
-3.  右键单击“其他资源”下的“SQL Server 资源”，然后从右键菜单中选择“属性”。 此时将打开 SQL Server 资源 **“属性”** 对话框。  
+3.  右键单击“其他资源”  下的“SQL Server 资源”  ，然后从右键菜单中选择“属性”  。 此时将打开 SQL Server 资源 **“属性”** 对话框。  
   
 4.  选择 **“属性”** 选项卡，为 **HealthCheckTimeout** 属性输入所需的值，然后单击 **“确定”** 以应用更改。  
   

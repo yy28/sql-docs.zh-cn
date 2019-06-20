@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054777"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>在 Power Pivot 模式下安装 Analysis Services。
@@ -63,29 +63,29 @@ ms.locfileid: "63054777"
   
 2.  在左侧导航中，选择“安装”  。  
   
-3.  选择“全新 SQL Server 独立安装或向现有安装添加功能”。  
+3.  选择“全新 SQL Server 独立安装或向现有安装添加功能”  。  
   
-4.  如果看到 **“产品密钥”** 页，请指定 Evaluation Edition 或者为 Enterprise Edition 的许可副本输入产品密钥。 选择“下一步” 。 有关版本的详细信息，请参阅 [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+4.  如果看到 **“产品密钥”** 页，请指定 Evaluation Edition 或者为 Enterprise Edition 的许可副本输入产品密钥。 选择“下一步”  。 有关版本的详细信息，请参阅 [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
-5.  查看并接受 Microsoft 软件许可协议条款，然后选择“下一步” 。  
+5.  查看并接受 Microsoft 软件许可协议条款，然后选择“下一步”  。  
   
 6.  如果显示 **“全局规则”** 页，请查看安装向导显示的所有规则信息。  
   
-7.  在“Microsoft Update”  页上，建议你使用 Microsoft Update 检查更新，然后选择“下一步” 。  
+7.  在“Microsoft Update”  页上，建议你使用 Microsoft Update 检查更新，然后选择“下一步”  。  
   
-8.  **“安装安装程序文件”** 页将运行几分钟。 查看所有规则警告或失败的规则，然后选择“下一步” 。  
+8.  **“安装安装程序文件”** 页将运行几分钟。 查看所有规则警告或失败的规则，然后选择“下一步”  。  
   
-9. 如果看到其他的“安装程序支持规则” ，则查看所有警告并选择“下一步” 。  
+9. 如果看到其他的“安装程序支持规则”  ，则查看所有警告并选择“下一步”  。  
   
      **注意：** 因为启用了 Windows 防火墙，您将看到打开端口以便启用远程访问的警告。  
   
-10. 在“安装角色”  页上，选择“SQL Server 功能安装” 。  
+10. 在“安装角色”  页上，选择“SQL Server 功能安装”  。  
   
      选择“**下一步**”。  
   
-11. 在“功能选择”页上，选择“Analysis Services” 。 此选项允许你安装三种 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式中的任何一种。 在后续步骤中将选择该模式。 选择“下一步” 。  
+11. 在“功能选择”页上，选择“Analysis Services”  。 此选项允许你安装三种 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式中的任何一种。 在后续步骤中将选择该模式。 选择“下一步”  。  
   
-12. 在“实例配置”  页上，选择“命名实例”  ，然后对实例名称键入“POWERPIVOT”  。单击“下一步” 。  
+12. 在“实例配置”  页上，选择“命名实例”  ，然后对实例名称键入“POWERPIVOT”  。单击“下一步”  。  
   
      ![SQL 安装程序的登录页的实例配置](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL 安装程序的登录页的实例配置")  
   
@@ -118,13 +118,13 @@ ms.locfileid: "63054777"
   
      选择“**下一步**”。  
   
-17. 在“错误报告”  页上，选择“下一步” 。  
+17. 在“错误报告”  页上，选择“下一步”  。  
   
-18. 在“准备安装”  页上，选择“安装” 。  
+18. 在“准备安装”  页上，选择“安装”  。  
   
-19. 如果你看到了“需要重新启动计算机” 对话框，选择“确定” 。  
+19. 如果你看到了“需要重新启动计算机”  对话框，选择“确定”  。  
   
-20. 安装完毕后，选择“关闭” 。  
+20. 安装完毕后，选择“关闭”  。  
   
 21. 重新启动计算机。  
   
@@ -133,9 +133,9 @@ ms.locfileid: "63054777"
 ### <a name="verify-the-sql-server-installation"></a>验证 SQL Server 安装  
  验证 Analysis Services 服务是否正在运行。  
   
-1.  在 Microsoft Windows 中，单击“开始” ，选择“所有程序” 和“Microsoft SQL Server 2016”  组。  
+1.  在 Microsoft Windows 中，单击“开始”  ，选择“所有程序”  和“Microsoft SQL Server 2016”  组。  
   
-2.  选择“SQL Server Management Studio” 。  
+2.  选择“SQL Server Management Studio”  。  
   
 3.  连接到 Analysis Services 实例，例如 **[你的服务器名称]\POWERPIVOT**。 如果您可连接到该实例，则验证服务是否正在运行。  
   
@@ -150,11 +150,11 @@ ms.locfileid: "63054777"
   
 1.  在 Analysis Services 服务器上，启动 SQL Server Management Studio 并连接到 Analysis Services 实例，例如 `[MyServer]\POWERPIVOT`。  
   
-2.  在“对象资源管理器”中，右键单击实例名称，然后选择“属性”。  
+2.  在“对象资源管理器”中，右键单击实例名称，然后选择“属性”  。  
   
      ![查看 SSAS 服务器的属性](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "查看 SSAS 服务器的属性")  
   
-3.  在左窗格中，选择“安全性” 。 添加在其上安装 Office Online Server 的计算机账户。  
+3.  在左窗格中，选择“安全性”  。 添加在其上安装 Office Online Server 的计算机账户。  
   
      ![SSAS 服务器的安全设置](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS 服务器的安全设置")  
   
@@ -178,31 +178,31 @@ ms.locfileid: "63054777"
   
 1.  在 Analysis Services 服务器上，启动 SQL Server Management Studio 并连接到 Analysis Services 实例，例如 `[MyServer]\POWERPIVOT`。  
   
-2.  在“对象资源管理器”中，右键单击实例名称，然后选择“属性”。  
+2.  在“对象资源管理器”中，右键单击实例名称，然后选择“属性”  。  
   
      ![查看 SSAS 服务器的属性](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "查看 SSAS 服务器的属性")  
   
-3.  在左窗格中，选择“安全性” 。 添加您在步骤 1 中为 Excel Services 应用程序配置的域登录名。  
+3.  在左窗格中，选择“安全性”  。 添加您在步骤 1 中为 Excel Services 应用程序配置的域登录名。  
   
      ![SSAS 服务器的安全设置](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS 服务器的安全设置")  
   
 #### <a name="configure-excel-services-for-analysis-services-integration"></a>为 Analysis Services 集成配置 Excel Services  
   
-1.  在 SharePoint 管理中心的“应用程序管理”组中，单击 **“管理服务应用程序”**。  
+1.  在 SharePoint 管理中心的“应用程序管理”组中，单击 **“管理服务应用程序”** 。  
   
-2.  单击服务应用程序的名称，默认名称为 **“Excel 服务应用程序”**。  
+2.  单击服务应用程序的名称，默认名称为 **“Excel 服务应用程序”** 。  
   
-3.  在 **“管理 Excel Services 应用程序”** 页上，单击 **“数据模型设置”**。  
+3.  在 **“管理 Excel Services 应用程序”** 页上，单击 **“数据模型设置”** 。  
   
-4.  单击 **“添加服务器”**。  
+4.  单击 **“添加服务器”** 。  
   
-5.  在“服务器名称” 中，键入 Analysis Services 服务器名称和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 实例名称。 例如 `MyServer\POWERPIVOT`。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 实例名称是必需的。  
+5.  在“服务器名称”  中，键入 Analysis Services 服务器名称和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 实例名称。 例如 `MyServer\POWERPIVOT`。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 实例名称是必需的。  
   
      键入说明。  
   
-6.  单击 **“确定”**。  
+6.  单击 **“确定”** 。  
   
-7.  更改将在几分钟后生效，您也可以 **“停止”** 和 **“启动”** 服务 **“Excel Calculation Services”**。 若要  
+7.  更改将在几分钟后生效，您也可以 **“停止”** 和 **“启动”** 服务 **“Excel Calculation Services”** 。 若要  
   
      另一个选项是使用管理权限打开命令提示符，并键入 `iisreset /noforce`。  
   
@@ -222,13 +222,13 @@ ms.locfileid: "63054777"
   
 2.  在 Excel 中启动新的工作簿。  
   
-3.  在“数据”选项卡上，选择“获取外部数据”  中功能区上的“从其他源” 。  
+3.  在“数据”选项卡上，选择“获取外部数据”  中功能区上的“从其他源”  。  
   
-4.  选择 **“从 SQL Server”**。  
+4.  选择 **“从 SQL Server”** 。  
   
 5.  在 **“数据连接向导”** 中，输入包含您要使用的数据库的 SQL Server 实例的名称。  
   
-6.  在登录凭据下，验证是否选择了“使用 Windows 身份验证”  ，然后选择“下一步” 。  
+6.  在登录凭据下，验证是否选择了“使用 Windows 身份验证”  ，然后选择“下一步”  。  
   
 7.  选择要使用的数据库。  
   
@@ -238,11 +238,11 @@ ms.locfileid: "63054777"
   
 10. 选择要导入的表。  
   
-11. 选择“导入所选表之间的关系” 复选框，然后选择“下一步” 。 从关系数据库中导入多个表使您可使用已关联的表。 您可省略步骤，因为您无需手动构建关系。  
+11. 选择“导入所选表之间的关系”  复选框，然后选择“下一步”  。 从关系数据库中导入多个表使您可使用已关联的表。 您可省略步骤，因为您无需手动构建关系。  
   
-12. 在向导的“保存数据连接文件并完成”  页中，键入连接的名称并选择“完成” 。  
+12. 在向导的“保存数据连接文件并完成”  页中，键入连接的名称并选择“完成”  。  
   
-13. 将出现 **“导入数据”** 对话框。 选择“数据透视表” ，然后选择“确定” 。  
+13. 将出现 **“导入数据”** 对话框。 选择“数据透视表”  ，然后选择“确定”  。  
   
 14. 数据透视表字段列表将出现在工作簿中。   
     在该字段列表上，选择“全部”  选项卡  
@@ -262,7 +262,7 @@ ms.locfileid: "63054777"
  升级在以前版本的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中创建的工作簿所需的步骤取决于创建该工作簿的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 版本。 有关详细信息，请参阅 [升级工作簿和计划的数据刷新 (SharePoint 2013)](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
 ##  <a name="bkmk_multiple_servers"></a> 单服务器安装之外-Power Pivot for Microsoft SharePoint  
- **Web 前端 (WFE)** 或**中间层：**:若要使用[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 模式下在更大的 SharePoint 场，以安装其他服务器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]功能到场中，运行安装程序包**spPowerPivot16.msi (SharePoint 2016) 或 spPowerPivot.msi (SharePoint2013)，** 每台 SharePoint 服务器上。 spPowerPivot16.msi 或 spPowerPivot.msi 安装所需的数据提供程序以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016（或 2013）配置工具。  
+ **Web 前端 (WFE)** 或**中间层：** :若要使用[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 模式下在更大的 SharePoint 场，以安装其他服务器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]功能到场中，运行安装程序包**spPowerPivot16.msi (SharePoint 2016) 或 spPowerPivot.msi (SharePoint2013)，** 每台 SharePoint 服务器上。 spPowerPivot16.msi 或 spPowerPivot.msi 安装所需的数据提供程序以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016（或 2013）配置工具。  
   
  有关安装和配置中间层的详细信息，请参阅下面的内容：  
   

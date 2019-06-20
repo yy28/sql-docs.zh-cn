@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083380"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>挖掘结构（Analysis Services – 数据挖掘）
@@ -105,7 +105,7 @@ ms.locfileid: "66083380"
  `SELECT * FROM <model>.CASES` 语句返回相同的列，但是仅针对该特定模型中的事例返回。 有关详细信息，请参阅 [SELECT FROM <结构>.CASES](/sql/dmx/select-from-structure-cases) 和 [SELECT FROM <模型>.CASES (DMX)](/sql/dmx/select-from-model-content-dmx)。  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>在挖掘结构中使用数据挖掘模型  
- 数据挖掘模型为挖掘结构表示的数据应用挖掘模型算法。 挖掘模型是属于特定挖掘结构的对象，并且模型继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。 可以向挖掘结构中添加某个结构列的多个副本。 还可以向挖掘模型中添加某个结构列的多个副本，然后向该模型中的每个结构列赋予不同的名称或别名 。 有关为结构列创建别名的详细信息，请参阅[为模型列创建别名](create-an-alias-for-a-model-column.md)和[挖掘模型属性](mining-model-properties.md)。  
+ 数据挖掘模型为挖掘结构表示的数据应用挖掘模型算法。 挖掘模型是属于特定挖掘结构的对象，并且模型继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。 可以向挖掘结构中添加某个结构列的多个副本。 还可以向挖掘模型中添加某个结构列的多个副本，然后向该模型中的每个结构列赋予不同的名称或别名  。 有关为结构列创建别名的详细信息，请参阅[为模型列创建别名](create-an-alias-for-a-model-column.md)和[挖掘模型属性](mining-model-properties.md)。  
   
  有关数据挖掘模型的体系结构的详细信息，请参阅 [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)。  
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 148180d95bcbff1626069e72fb66dd9a3ca859c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667917"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>项目设置（类型映射）(SybaseToSQL)
@@ -44,7 +44,7 @@ ms.locfileid: "62667917"
 **删除**  
 单击以从映射列表中删除所选的数据类型映射。  
   
-重置为默认值  
+重置为默认值   
 单击以重置为 SSMA 默认值的类型映射列表。  
   
 ## <a name="default-type-mapping"></a>默认类型映射  

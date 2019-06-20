@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b26b05f41b23d1626fe3d9f7704d334bfe650098
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63070958"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>显示关系图属性 (Visual Database Tools)
@@ -29,9 +29,9 @@ ms.locfileid: "63070958"
   
 2.  通过在该设计器中单击对象以外的任意位置，确保没有在数据库关系图设计器中选择任何对象。  
   
-3.  在“视图”菜单中，单击“属性窗口”。  
+3.  在“视图”  菜单中，单击“属性窗口”  。  
   
- 该关系图的属性随即显示在“属性”窗口中。  
+ 该关系图的属性随即显示在“属性”  窗口中。  
   
 ## <a name="see-also"></a>请参阅  
  [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  

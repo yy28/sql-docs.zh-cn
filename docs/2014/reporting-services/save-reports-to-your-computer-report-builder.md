@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102313"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>将报表保存到您的计算机（报表生成器）
@@ -22,7 +22,7 @@ ms.locfileid: "66102313"
   
 ### <a name="to-save-a-report"></a>若要保存报表  
   
-1.  从“报表生成器”按钮，单击 **“保存”**。 此时，将打开“另存为”“\<报表项>”对话框。  
+1.  从“报表生成器”按钮，单击 **“保存”** 。 此时，将打开“另存为”“\<报表项>”对话框   。  
   
     > [!NOTE]  
     >  如果正在重新保存报表，会自动将其重新保存到以前的位置。 使用 **“另存为”** 选项可以更改位置。  
@@ -35,7 +35,7 @@ ms.locfileid: "66102313"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>将报表另存为不同名称  
   
-1.  从“报表生成器”按钮，单击 **“另存为”**。 此时，将打开“另存为”“\<报表项>”对话框。  
+1.  从“报表生成器”按钮，单击 **“另存为”** 。 此时，将打开“另存为”“\<报表项>”对话框   。  
   
 2.  找到计算机上要保存该报表的位置。  
   

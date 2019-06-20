@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127007"
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
@@ -68,8 +68,8 @@ ms.locfileid: "63127007"
  **-?**  
  显示使用信息。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
@@ -80,8 +80,8 @@ ms.locfileid: "63127007"
  **-DefinitionFile** _def_path_and_file_name_  
  代理定义文件的路径。 代理定义文件中包含代理的命令提示符参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-DistributorLogin** _distributor_login_  
  分发服务器登录名。  
@@ -110,7 +110,7 @@ ms.locfileid: "63127007"
  为扩展事件 XML 配置文件指定路径和文件名。 通过该扩展事件 XML 配置文件，您可以配置会话并且启用事件跟踪。  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
- 指定在日志读取器运行期间记录的历史记录数量。 选择 1 可将历史日志记录对性能的影响减小到最低限度。  
+ 指定在日志读取器运行期间记录的历史记录数量。  选择 1 可将历史日志记录对性能的影响减小到最低限度。  
   
 |HistoryVerboseLevel 值|Description|  
 |-------------------------------|-----------------|  
@@ -128,7 +128,7 @@ ms.locfileid: "63127007"
  仅限内部使用。  
   
  **-MaxCmdsInTran** _number_of_commands_  
- 指定在日志读取器将命令写入到分发数据库时可分组到一个事务中的语句的最大数目。 如果使用此参数，在发布服务器上的大事务（包含许多命令）应用于订阅服务器时，日志读取器代理和分发代理可将这些大事务拆分为若干个较小的事务。 指定此参数可以减少分发服务器的争用问题并缩短发布服务器与订阅服务器之间的滞后时间。 由于初始事务是以较小的单元应用的，订阅服务器可以在初始事务结束之前访问一个较大的逻辑发布服务器事务的行，因而会破坏事务的原子性。 默认值为 0 ，这将保持发布服务器的事务边界。  
+ 指定在日志读取器将命令写入到分发数据库时可分组到一个事务中的语句的最大数目。 如果使用此参数，在发布服务器上的大事务（包含许多命令）应用于订阅服务器时，日志读取器代理和分发代理可将这些大事务拆分为若干个较小的事务。 指定此参数可以减少分发服务器的争用问题并缩短发布服务器与订阅服务器之间的滞后时间。 由于初始事务是以较小的单元应用的，订阅服务器可以在初始事务结束之前访问一个较大的逻辑发布服务器事务的行，因而会破坏事务的原子性。 默认值为 0  ，这将保持发布服务器的事务边界。  
   
 > [!NOTE]  
 >  对于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布，会忽略此参数。 有关详细信息，请参阅 [Performance Tuning for Oracle Publishers](../non-sql/performance-tuning-for-oracle-publishers.md)的“配置事务集作业”部分。  
@@ -163,7 +163,7 @@ ms.locfileid: "63127007"
  **-ProfileName** _profile_name_  
  指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅[复制代理配置文件](replication-agent-profiles.md)。  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅 [数据库镜像和复制 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherSecurityMode** [ **0**| **1**]  

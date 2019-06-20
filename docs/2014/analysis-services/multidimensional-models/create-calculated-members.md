@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076279"
 ---
 # <a name="create-calculated-members"></a>创建计算成员
@@ -38,7 +38,7 @@ ms.locfileid: "66076279"
  或者，可以让计算成员包含在度量值中，而不是包含在维度中。 该选项也提供一个新的列标题或行标题，但这个标题附加在浏览器的度量值中。  
   
  **父成员**  
- 单击“更改”可以选择用于包含计算成员的父成员。 如果选择具有一个级别的层次结构或“MEASURES”作为父维度，则该选项不可用。  
+ 单击“更改”  可以选择用于包含计算成员的父成员。 如果选择具有一个级别的层次结构或“MEASURES”作为父维度，则该选项不可用。  
   
  层次结构划分为包含成员的不同级别。 每个成员都生成一个标题。 浏览多维数据集中的数据时，最终用户可以从选定的标题深化至先前未显示的副标题。 计算成员的标题将添加到选定的父成员下的第一个级别中。  
   

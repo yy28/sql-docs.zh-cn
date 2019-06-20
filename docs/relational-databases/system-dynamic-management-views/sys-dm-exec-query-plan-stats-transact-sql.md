@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: c4d4f58161885519767e299683fe32b5197a045f
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66198220"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
@@ -64,7 +64,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="remarks"></a>备注
 此系统函数是从开始提供[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4。
 
-这是一个选择加入功能，并且需要启用[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 从开始[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.5 中，若要在数据库级别完成此操作，请参阅中的 LAST_QUERY_PLAN_STATS 选项[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
+这是一个选择加入功能，并且需要启用[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 起，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 LAST_QUERY_PLAN_STATS 选项。
 
 此系统函数工作原理**轻型**查询执行统计信息分析基础结构。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  
 

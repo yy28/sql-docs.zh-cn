@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055427"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 连接管理器编辑器（“连接”页）
-  可以使用“SQL Server Compact Edition 连接管理器”对话框，指定连接到 **Compact 数据库时使用的属性。**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+  可以使用“SQL Server Compact Edition 连接管理器”对话框，指定连接到 **Compact 数据库时使用的属性。** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  若要了解有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition 连接管理器的详细信息，请参阅 [SQL Server Compact Edition 连接管理器](connection-manager/sql-server-compact-edition-connection-manager.md)。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66055427"
  输入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的路径和文件名。  
   
  **“浏览”**  
- 通过使用“选择 SQL Server Compact Edition 数据库”对话框找到所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库文件。  
+ 通过使用“选择 SQL Server Compact Edition 数据库”  对话框找到所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库文件。  
   
  **输入数据库密码**  
  输入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的密码。  

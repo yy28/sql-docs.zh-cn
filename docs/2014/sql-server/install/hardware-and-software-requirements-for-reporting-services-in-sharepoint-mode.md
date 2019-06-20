@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5584984121403b1a70e15fb02e85b7afcc169843
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094981"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式下的 Reporting Services 的硬件和软件要求
@@ -67,7 +67,7 @@ ms.locfileid: "66094981"
   
 ##  <a name="bkmk_more_information"></a> 详细信息
 
- 有关 SharePoint 更改的信息，请参阅[从 SharePoint 2010 更改为 SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx)。  
+ 有关 SharePoint 更改的信息，请参阅[从 SharePoint 2010 更改为 SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx) 。  
   
  [SQL Server 2014 发行说明](https://go.microsoft.com/fwlink/?LinkID=296445)。  
   

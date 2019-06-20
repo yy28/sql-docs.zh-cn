@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d71c83195c8f91984bbbce95bd00402928fdb36e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109208"
 ---
 # <a name="excel-device-information-settings"></a>Excel 设备信息设置
@@ -25,9 +25,9 @@ ms.locfileid: "66109208"
   
 |设置|ReplTest1|  
 |-------------|-----------|  
-|**OmitDocumentMap**|指示是否对于支持文档结构图的报表忽略文档结构图。 默认值为 `false`。|  
-|**OmitFormulas**|指示是否对所呈现报表忽略公式。 默认值是 `false`。|  
-|`SimplePageHeade`rs|指示是否将报表的页眉呈现到 Excel 页眉。 值为 `false` 指示将页眉呈现到工作表的第一行。 默认值为 `false`。|  
+|**OmitDocumentMap**|指示是否对于支持文档结构图的报表忽略文档结构图。 默认值是 `false`。|  
+|**OmitFormulas**|指示是否对所呈现报表忽略公式。 默认值为 `false`。|  
+|`SimplePageHeade`rs|指示是否将报表的页眉呈现到 Excel 页眉。 值为 `false` 指示将页眉呈现到工作表的第一行。 默认值是 `false`。|  
   
 ## <a name="see-also"></a>请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

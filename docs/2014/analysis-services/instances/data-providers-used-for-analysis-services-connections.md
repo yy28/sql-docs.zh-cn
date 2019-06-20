@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080102"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用于 Analysis Services 连接的数据提供程序
@@ -62,7 +62,7 @@ ms.locfileid: "66080102"
   
 1.  转到 C:\Windows\Assembly  
   
-2.  右键单击 Microsoft.AnalysisServices.AdomdClient 并单击“属性”。 单击 **“版本”**。  
+2.  右键单击 Microsoft.AnalysisServices.AdomdClient 并单击“属性”  。 单击 **“版本”** 。  
   
      对于 AMO，右键单击 Microsoft.AnalysisServices。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66080102"
   
 1.  转到 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkID=296473)。  
   
-2.  展开 **“安装说明”**。  
+2.  展开 **“安装说明”** 。  
   
 3.  向下滚动到包含 Analysis Services 组件的部分。 ADOMD.NET、OLE DB 访问接口和 AMO 是列表中的第二、三和四项。 每个库提供 32 位或 64 位版本。 运行 64 位操作系统的服务器和较新工作站将需要 64 位版本。  
   

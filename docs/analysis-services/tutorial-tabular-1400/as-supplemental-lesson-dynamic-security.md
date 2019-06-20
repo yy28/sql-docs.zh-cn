@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 81d2c60f281e439b010b8ead087e13cafa91c95e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8496868bc3b5b6ee42ac4f222724e859797662a4
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67149001"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263337"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>补充课程 - 动态安全性
 
@@ -25,7 +25,7 @@ ms.locfileid: "67149001"
   
 若要实现动态安全性，您将表添加到您的模型包含那些可以连接到模型并浏览模型对象和数据的用户的用户名。 使用本教程创建的模型是 Adventure Works; 的上下文中但是，若要完成本课程中，必须添加一个包含来自自己域的用户表。 添加的用户名称不需要的密码。 若要使用您自己域的用户的小型示例创建 EmployeeSecurity 表，您使用粘贴功能粘贴 Excel 电子表格中的员工数据。 在实际方案中，包含用户名的表通常是实际数据库中的表作为数据源;例如，实际的 DimEmployee 表。  
   
-若要实现动态安全性，您可以使用两个 DAX 函数：[USERNAME 函数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)并[LOOKUPVALUE 函数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 通过使用 LOOKUPVALUE 函数，该公式指定 EmployeeSecurity 表中的值。 公式随后将传递给 USERNAME 函数，后者指定登录的用户的用户名的值属于此角色。 然后，用户可以浏览仅指定的角色的行筛选器的数据。 在此方案中，您指定销售员工只能浏览的成员的销售区域的 Internet 销售数据。  
+若要实现动态安全性，您可以使用两个 DAX 函数：[USERNAME 函数 (DAX)](/dax/username-function-dax)并[LOOKUPVALUE 函数 (DAX)](/dax/lookupvalue-function-dax)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 通过使用 LOOKUPVALUE 函数，该公式指定 EmployeeSecurity 表中的值。 公式随后将传递给 USERNAME 函数，后者指定登录的用户的用户名的值属于此角色。 然后，用户可以浏览仅指定的角色的行筛选器的数据。 在此方案中，您指定销售员工只能浏览的成员的销售区域的 Internet 销售数据。  
   
 这些任务是此 Adventure Works 表格模型方案所特有的，但并不一定适用于实际的应用场景。 每个任务都包含描述任务目的的附加信息。  
   
@@ -188,6 +188,6 @@ AdventureWorksDW 示例数据库中的 DimEmployee 表包含来自 AdventureWork
   
 ## <a name="see-also"></a>请参阅  
 
-[USERNAME 函数 (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[LOOKUPVALUE 函数 (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
-[CUSTOMDATA 函数 (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  
+[USERNAME 函数 (DAX)](/dax/username-function-dax)  
+[LOOKUPVALUE 函数 (DAX)](/dax/lookupvalue-function-dax)  
+[CUSTOMDATA 函数 (DAX)](/dax/customdata-function-dax)  

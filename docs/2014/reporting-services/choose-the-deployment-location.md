@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e902d40a75e3034bb22f27711de325914d255435
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109831"
 ---
 # <a name="choose-the-deployment-location"></a>选择部署位置
@@ -24,7 +24,7 @@ ms.locfileid: "66109831"
   
 ## <a name="options"></a>选项  
  **报表服务器**  
- 例如，键入报表服务器虚拟目录的 URL http://localhost/reportserver。 这是报表服务器的虚拟目录，而不是报表管理器的虚拟目录。 默认情况下，报表服务器在安装后使用的虚拟目录名为 reportserver。  
+ 例如，键入报表服务器虚拟目录的 URL http://localhost/reportserver 。 这是报表服务器的虚拟目录，而不是报表管理器的虚拟目录。 默认情况下，报表服务器在安装后使用的虚拟目录名为 reportserver。  
   
  **部署文件夹**  
  键入在发布报表服务器项目中所包含报表时将使用的目标文件夹的名称。 文件夹的默认名称为项目的名称。 如果报表服务器上没有该文件夹，则报表设计器将在发布报表时创建该文件夹。  

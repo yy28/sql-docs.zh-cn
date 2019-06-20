@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081437"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>“编辑表属性”对话框 (SSAS)
-  **“编辑表属性”** 对话框可用于查看和修改通过使用“表导入向导”导入到模型设计器中的表的属性。 若要访问此对话框，请在模型设计器中选择表，然后在 **“表”** 菜单中单击 **“表属性”**。  
+  **“编辑表属性”** 对话框可用于查看和修改通过使用“表导入向导”导入到模型设计器中的表的属性。 若要访问此对话框，请在模型设计器中选择表，然后在 **“表”** 菜单中单击 **“表属性”** 。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  根据您最初是通过从列表中选择表还是通过使用 SQL 查询导入数据的，此对话框的选项将有所不同。  
@@ -38,7 +38,7 @@ ms.locfileid: "66081437"
  **源名称**  
  显示或更改从中获取数据的表。  
   
- 如果您将源更改为与当前表具有不同列的表，将显示一条消息以警告您列不相同。 然后，您必须选择要放在当前表中的列，并单击 **“保存”**。 您可以通过选中表左侧的复选框来替换整个表。  
+ 如果您将源更改为与当前表具有不同列的表，将显示一条消息以警告您列不相同。 然后，您必须选择要放在当前表中的列，并单击 **“保存”** 。 您可以通过选中表左侧的复选框来替换整个表。  
   
 > [!NOTE]  
 >  当您更改表的数据源时，您实质上是用新源表的内容替换当前表的内容。  

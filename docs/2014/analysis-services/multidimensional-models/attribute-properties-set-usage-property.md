@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077168"
 ---
 # <a name="set-usage-property"></a>设置用法属性
@@ -27,11 +27,11 @@ ms.locfileid: "66077168"
   
 ### <a name="to-set-usage-for-an-attribute"></a>设置属性的用法  
   
-1.  在解决方案资源管理器中，右键单击某个维度，再单击“打开”。  
+1.  在解决方案资源管理器中，右键单击某个维度，再单击“打开”。   
   
      默认情况下，将打开 **“维度结构”** 视图。  
   
-2.  在“属性”中，右键单击要为其设置用法的属性，指向“设置属性用法”，再单击下列选项之一：  
+2.  在“属性”中，右键单击要为其设置用法的属性，指向“设置属性用法”，再单击下列选项之一：    
   
     -   **Regular**  
   

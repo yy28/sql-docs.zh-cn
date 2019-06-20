@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076439"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>通过在数据源中生成非时间表来创建维度
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以借助 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导在不使用现有数据源的情况下创建维度。 在维度向导的“选择创建方法”页上选择“在数据源中生成非时间表”选项可执行此操作。 若要在基础数据源中创建新维度，必须具有在基础数据源中创建对象的权限。 在不使用预定义数据源视图的情况下定义维度时，可以从头开始定义维度，也可以使用维度模板来定义维度。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以借助 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导在不使用现有数据源的情况下创建维度。 在维度向导的“选择创建方法”页上选择“在数据源中生成非时间表”选项可执行此操作   。 若要在基础数据源中创建新维度，必须具有在基础数据源中创建对象的权限。 在不使用预定义数据源视图的情况下定义维度时，可以从头开始定义维度，也可以使用维度模板来定义维度。  
   
  维度向导提供了示例维度模板，您可以使用这些模板生成常用的维度类型。 可以从下列维度类型中选择：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66076439"
 ## <a name="specify-dimension-type"></a>指定维度类型  
  在维度向导的 **“指定维度类型”** 页上，可以指定维度类型。 如果基于模板生成维度，则维度类型已定义。 在此页上，还可以为指定的维度类型选择标准属性（如果有的话）。  
   
- 如果选择对应于维度类型的模板，则以该维度类型的选项填充此页。 如果不选择模板，或没有相应的维度类型，则默认维度类型是 **“常规”**。 如果尚未选择维度类型，请为要创建的维度选择最合适的类型。 如果没有为 **“维度类型”** 列出合适的类型，请使用 **“常规”**。  
+ 如果选择对应于维度类型的模板，则以该维度类型的选项填充此页。 如果不选择模板，或没有相应的维度类型，则默认维度类型是 **“常规”** 。 如果尚未选择维度类型，请为要创建的维度选择最合适的类型。 如果没有为 **“维度类型”** 列出合适的类型，请使用 **“常规”** 。  
   
  选择维度类型时，向导将在 **“维度属性”** 下列出适用于此维度的属性类型。 若要选择属性类型，请选中属性类型旁边的 **“包含”** 复选框，并在 **“维度属性”** 下面键入属性的名称。 默认名称与 **“属性类型”** 相同。  
   

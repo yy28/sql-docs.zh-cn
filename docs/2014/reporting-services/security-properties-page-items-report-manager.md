@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102173"
 ---
 # <a name="security-properties-page-items-report-manager"></a>项的“安全性”属性页（报表管理器）
@@ -35,7 +35,7 @@ ms.locfileid: "66102173"
   
 3.  在下拉菜单中，执行以下步骤之一：  
   
-    -   单击 **“安全性”**。 这会打开该项的“安全属性”页。  
+    -   单击 **“安全性”** 。 这会打开该项的“安全属性”页。  
   
     -   单击 **“管理”** 以打开该项的“常规属性”页。 然后，选择 **“安全性”** 选项卡。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66102173"
  编辑项安全性时可以使用以下按钮。  
   
  **删除**  
- 选中要删除的组名或用户名旁边的复选框，再单击 **“删除”**。 如果角色分配是剩余的唯一角色分配，或者如果它是定义报表服务器的安全基线的内置角色分配（如“Built-in\Administrators”），则不能删除该角色分配。 删除角色分配不会删除组或用户帐户或角色定义。  
+ 选中要删除的组名或用户名旁边的复选框，再单击 **“删除”** 。 如果角色分配是剩余的唯一角色分配，或者如果它是定义报表服务器的安全基线的内置角色分配（如“Built-in\Administrators”），则不能删除该角色分配。 删除角色分配不会删除组或用户帐户或角色定义。  
   
  **新建角色分配**  
  单击此选项可打开“新建角色分配”页，该页用于为当前项创建其他角色分配。 有关详细信息，请参阅[新建角色分配：编辑角色分配页&#40;报表管理器&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  

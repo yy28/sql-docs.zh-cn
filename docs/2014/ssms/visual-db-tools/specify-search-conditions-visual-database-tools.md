@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 75b29477c7ead402f06c9df2505a84636b906978
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63163957"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>指定搜索条件 (Visual Database Tools)
@@ -37,9 +37,9 @@ ms.locfileid: "63163957"
   
 1.  如果尚未指定搜索条件，请将要在搜索条件内使用的列或表达式添加到“条件”窗格中。  
   
-     如果创建选择查询，并且不希望在查询输出中显示搜索列或表达式，请清除每个搜索列或表达式的“输出”列，以将其从输出列中删除。  
+     如果创建选择查询，并且不希望在查询输出中显示搜索列或表达式，请清除每个搜索列或表达式的“输出”  列，以将其从输出列中删除。  
   
-2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”列中输入搜索条件。  
+2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”  列中输入搜索条件。  
   
     > [!NOTE]  
     >  如果不输入运算符，则查询和视图设计器将自动插入相等运算符“=”。  

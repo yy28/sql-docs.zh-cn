@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891282"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>步骤 5：测试第 4 课教程包
@@ -38,13 +38,13 @@ ms.locfileid: "62891282"
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>运行第 4 课教程包  
   
-1.  在 **“调试”** 菜单上单击 **“启动调试”**。  
+1.  在 **“调试”** 菜单上单击 **“启动调试”** 。  
   
-2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”**。  
+2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”** 。  
   
 ### <a name="to-verify-the-contents-of-the-erroroutputtxt-file"></a>验证 ErrorOutput.txt 文件的内容  
   
--   在记事本或任何其他文本编辑器中，打开 ErrorOutput.txt 文件。 默认的列顺序是：AverageRate、 CurrencyID、 CurrencyDate、 EndOfDateRate、 ErrorCode、 ErrorColumn、 ErrorDescription。  
+-   在记事本或任何其他文本编辑器中，打开 ErrorOutput.txt 文件。 默认的列顺序为：AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription。  
   
      请注意，文件中的所有行都包含不匹配的 CurrencyID 值 BAD、ErrorCode 值 -1071607778、ErrorColumn 值 0 以及 ErrorDescription 值“在查找期间行没有生成任何匹配项”。 由于此错误并不是列所特有的，所以 ErrorColumn 的值设置为 0。 它是已失败的查找操作。 .  
   

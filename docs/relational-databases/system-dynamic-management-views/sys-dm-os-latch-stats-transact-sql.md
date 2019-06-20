@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047994"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "63047994"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_latch_stats**。  
   
-|列名|数据类型|描述|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|闩锁类的名称。|  
 |waiting_requests_count|**bigint**|此类中的闩锁等待的个数。 此计数器在闩锁等待启动时递增。|  
@@ -74,7 +74,7 @@ GO
   
  下表包含对各种闩锁类的简短说明。  
   
-|闩锁类|描述|  
+|闩锁类|Description|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部使用，用于初始化对分配环形缓冲区创建过程的同步。|  
 |ALLOC_CREATE_FREESPACE_CACHE|用来初始化对堆的内部可用空间缓存的同步。|  

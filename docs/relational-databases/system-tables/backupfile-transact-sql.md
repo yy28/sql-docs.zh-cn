@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645508"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "62645508"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|包含备份集的文件的唯一标识号。 引用**backupset （backup_set_id)**。|  
+|**backup_set_id**|**int**|包含备份集的文件的唯一标识号。 引用**backupset （backup_set_id)** 。|  
 |**first_family_number**|**tinyint**|包含该备份文件的第一个介质的介质簇号。 可以为 NULL。|  
 |**first_media_number**|**smallint**|包含该备份文件的第一个介质的介质号。 可以为 NULL。|  
 |**filegroup_name**|**nvarchar(128)**|包含已备份数据库文件的文件组的名称。 可以为 NULL。|  
@@ -44,10 +44,10 @@ ms.locfileid: "62645508"
 |**source_file_block_size**|**numeric(10,0)**|原始数据或日志文件备份时所在的设备。 可以为 NULL。|  
 |**file_size**|**numeric(20,0)**|备份文件的长度（字节）。 可以为 NULL。|  
 |**logical_name**|**nvarchar(128)**|备份文件的逻辑名称。 可以为 NULL。|  
-|**physical_drive**|nvarchar(260)|物理驱动器或分区名称。 可以为 NULL。|  
-|**physical_name**|nvarchar(260)|物理（操作系统）文件名的剩余部分。 可以为 NULL。|  
-|State|**tinyint**|文件的状态，可以是下列值之一：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = SUSPECT <br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = DROPPED<br /><br /> 注意：跳过值 5，以便这些值对应于数据库状态的值。|  
-|**state_desc**|**nvarchar(64)**|文件状态的说明，可以是下列值之一：<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**physical_drive**|nvarchar(260) |物理驱动器或分区名称。 可以为 NULL。|  
+|**physical_name**|nvarchar(260) |物理（操作系统）文件名的剩余部分。 可以为 NULL。|  
+|State |**tinyint**|文件的状态，可以是下列值之一：<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = DROPPED<br /><br /> 注意：跳过值 5，以便这些值对应于数据库状态的值。|  
+|**state_desc**|**nvarchar(64)**|文件状态的说明，可以是下列值之一：<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|创建文件时的日志序列号。|  
 |**drop_lsn**|**numeric(25,0)**|删除文件时的日志序列号。 可以为 NULL。<br /><br /> 如果文件尚未删除，该值为 NULL。|  
 |**file_guid**|**uniqueidentifier**|文件的唯一标识符。|  
