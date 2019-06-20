@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205833"
 ---
 # <a name="delete-a-resource-pool"></a>删除资源池
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 删除资源池。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要删除资源池，请使用：**[SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
+-   **若要删除资源池，请使用：** [SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果资源池中包含工作负荷组，则不能删除该池。  
@@ -39,11 +39,11 @@ ms.locfileid: "63205833"
 ##  <a name="DelRPSSMS"></a> 使用对象资源管理器删除资源池  
  **使用 SQL Server Management Studio 删除资源池**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”** 。  
   
-2.  右键单击要删除的资源池，然后单击“删除”。  
+2.  右键单击要删除的资源池，然后单击“删除”  。  
   
-3.  在 **“删除对象”** 窗口的 **“要删除的对象”** 列表中，将列出资源池。 若要删除资源池，请单击 **“确定”**。  
+3.  在 **“删除对象”** 窗口的 **“要删除的对象”** 列表中，将列出资源池。 若要删除资源池，请单击 **“确定”** 。  
   
     > [!NOTE]  
     >  如果尝试删除的资源池中包含工作负荷组，则此操作将失败。  

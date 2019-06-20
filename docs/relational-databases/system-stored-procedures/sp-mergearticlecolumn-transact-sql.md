@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627800"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
@@ -50,9 +50,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` 标识要在其中创建垂直分区的列。 *列*是**sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 *列*不能为 NULL 时*操作*设置为**删除**。 若要从项目中排除列，请执行**sp_mergearticlecolumn**并指定*列*并`@operation = N'drop'`为每个要删除的列从指定*文章*.  
   
-`[ @operation = ] 'operation'` 是复制状态。 *操作*是**nvarchar(4)**，使用默认值为 ADD。 **添加**会标记列以进行复制。 **删除**清除该列。  
+`[ @operation = ] 'operation'` 是复制状态。 *操作*是**nvarchar(4)** ，使用默认值为 ADD。 **添加**会标记列以进行复制。 **删除**清除该列。  
   
-`[ @schema_replication = ] 'schema_replication'` 指定合并代理运行时将传播架构更改。 *schema_replication*是**nvarchar(5)**，默认值为 FALSE。  
+`[ @schema_replication = ] 'schema_replication'` 指定合并代理运行时将传播架构更改。 *schema_replication*是**nvarchar(5)** ，默认值为 FALSE。  
   
 > [!NOTE]  
 >  仅**FALSE**支持*schema_replication*。  

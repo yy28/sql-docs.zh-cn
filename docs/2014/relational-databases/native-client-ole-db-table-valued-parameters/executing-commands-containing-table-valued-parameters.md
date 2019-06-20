@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63228559"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>执行包含表值参数的命令
@@ -29,12 +29,12 @@ ms.locfileid: "63228559"
 ## <a name="table-valued-parameter-specification"></a>指定表值参数  
  使用者可以指定表值参数的类型。 此信息包括表值参数的类型名称。 如果连接的当前默认架构中不存在该表值参数的用户定义表类型，则它还包括架构名称。 根据服务器的支持情况，使用者还可以指定可选的元数据信息（如列的排序），以及指定特定列的所有行都具有默认值。  
   
- 若要指定表值参数，使用者调用 ISSCommandWithParameter::SetParameterInfo，并可以选择调用 isscommandwithparameters:: Setparameterproperties。 对于表值参数，DBPARAMBINDINFO 结构中 pwszDataSourceType 字段的值为 DBTYPE_TABLE。 ulParamSize 字段设为 ~0 以指示长度是未知的。 可以通过 isscommandwithparameters:: Setparameterproperties 设置特定属性对于表值参数，如架构名称、 类型名称、 列顺序和默认列。  
+ 若要指定表值参数，使用者调用 ISSCommandWithParameter::SetParameterInfo，并可以选择调用 isscommandwithparameters:: Setparameterproperties。 对于表值参数，DBPARAMBINDINFO 结构中 pwszDataSourceType 字段的值为 DBTYPE_TABLE  。 ulParamSize 字段设为 ~0 以指示长度是未知的  。 可以通过 isscommandwithparameters:: Setparameterproperties 设置特定属性对于表值参数，如架构名称、 类型名称、 列顺序和默认列。  
   
 ## <a name="table-valued-parameter-binding"></a>绑定表值参数  
  表值参数可以是任意行集对象。 访问接口在执行期间从该对象中读取数据并将表值参数发送到服务器。  
   
- 若要绑定表值参数，使用者调用 iaccessor:: Createaccessor。 表值参数的 DBBINDING 结构的 wType 字段设置为 DBTYPE_TABLE。 DBBINDING 结构的 pObject 成员为非 NULL 类型，并且 IID 的 pObject 成员设置为 IID_IRowset 或其他任何表值参数行集对象接口。 DBBINDING 结构中其余字段的设置方式应与流式 BLOB 的对应字段的设置方式相同。  
+ 若要绑定表值参数，使用者调用 iaccessor:: Createaccessor。 表值参数的 DBBINDING 结构的 wType 字段设置为 DBTYPE_TABLE  。 DBBINDING 结构的 pObject 成员为非 NULL 类型，并且 IID 的 pObject 成员设置为 IID_IRowset 或其他任何表值参数行集对象接口    。 DBBINDING 结构中其余字段的设置方式应与流式 BLOB 的对应字段的设置方式相同。  
   
  对于表值参数以及与表值参数关联的行集对象的绑定，存在如下限制：  
   

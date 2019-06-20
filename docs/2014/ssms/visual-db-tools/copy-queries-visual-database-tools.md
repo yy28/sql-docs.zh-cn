@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ef120e0142b3ccabb03fe8750b02713601d7fd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224487"
 ---
 # <a name="copy-queries-visual-database-tools"></a>复制查询 (Visual Database Tools)
@@ -25,9 +25,9 @@ ms.locfileid: "63224487"
   
 ### <a name="to-copy-a-query"></a>复制查询  
   
-1.  在“视图”菜单中，单击“解决方案资源管理器”。  
+1.  在“视图”  菜单中，单击“解决方案资源管理器”。  
   
-2.  在解决方案资源管理器中，右键单击要复制的查询，然后从快捷菜单中选择“打开”。  
+2.  在解决方案资源管理器中，右键单击要复制的查询，然后从快捷菜单中选择“打开”  。  
   
 3.  在 SQL 窗格中复制所需的查询部分。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63224487"
   
 5.  将光标定位到要添加 SQL 代码的位置。  
   
-6.  右键单击，然后在快捷菜单中单击“粘贴”。  
+6.  右键单击，然后在快捷菜单中单击“粘贴”  。  
   
 ## <a name="see-also"></a>请参阅  
  [重命名查询&#40;可视化数据库工具&#41;](visual-database-tools.md)   

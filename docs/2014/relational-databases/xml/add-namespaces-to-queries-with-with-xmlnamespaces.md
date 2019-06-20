@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbb7cbdda657ef59491cfbb2c1651b969d04428
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287720"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>使用 WITH XMLNAMESPACES 将命名空间添加到查询
@@ -179,7 +179,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- 只有 xml 命名空间无须在 WITH XMLNAMESPAC 中显式定义即可使用，如下列 PATH 模式查询所示。 此外，如果声明了前缀，则前缀必须绑定到命名空间 http://www.w3.org/XML/1998/namespace。 在 SELECT 子句中指定的名称将引用未使用 WITH XMLNAMESPACES 进行显式定义的 xml 命名空间前缀。  
+ 只有 xml 命名空间无须在 WITH XMLNAMESPAC 中显式定义即可使用，如下列 PATH 模式查询所示。 此外，如果声明了前缀，则前缀必须绑定到命名空间 http://www.w3.org/XML/1998/namespace 。 在 SELECT 子句中指定的名称将引用未使用 WITH XMLNAMESPACES 进行显式定义的 xml 命名空间前缀。  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  

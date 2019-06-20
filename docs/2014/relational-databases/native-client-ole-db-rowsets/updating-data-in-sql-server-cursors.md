@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63242918"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 游标中的数据
@@ -32,9 +32,9 @@ ms.locfileid: "63242918"
  如果客户端应用程序设计使事务长时间保持打开状态，事务隔离级别在定位行时可能造成严重滞后。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用 DBPROPVAL_TI_READCOMMITTED 指定的已提交读隔离级别。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持脏读的隔离时行集并发为只读。 因此，使用者可以在可修改行集中请求更高级别的隔离，但是不能成功请求任何更低级别。  
   
 ## <a name="immediate-and-delayed-update-modes"></a>立即更新模式和延迟更新模式  
- 在立即更新模式中，对 IRowsetChange::SetData 的每次调用均导致与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间发生一次往返。 如果使用者对一个行进行了多次更改，通过一个 SetData 调用提交所有更改将更有效。  
+ 在立即更新模式中，对 IRowsetChange::SetData 的每次调用均导致与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间发生一次往返  。 如果使用者对一个行进行了多次更改，通过一个 SetData 调用提交所有更改将更有效  。  
   
- 在延迟更新模式中，针对 IRowsetUpdate::Update 的 cRows 和 rghRows 参数中指示的每个行执行一次与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间的往返。  
+ 在延迟更新模式中，针对 IRowsetUpdate::Update 的 cRows 和 rghRows 参数中指示的每个行执行一次与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间的往返    。  
   
  无论哪种模式，往返表示当未针对行集打开事务对象时的不同事务。  
   

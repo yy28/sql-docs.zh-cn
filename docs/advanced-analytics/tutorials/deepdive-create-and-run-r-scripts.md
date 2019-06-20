@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 883a4afa68571c18e6dcaffe96d12644f611f99a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641332"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>计算 R （SQL Server 和 RevoScaleR 教程） 中的摘要统计信息
@@ -92,7 +92,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. 当从 SQL Server 中提取数据，通常就可以更好的性能通过增加为每次读取中提取的行数假定增加的块大小可以容纳在内存中。 运行以下命令，以增加的值*rowsPerRead*上数据源的参数。 之前，rowsPerRead 的值设置为 5000。
+2. 当从 SQL Server 中提取数据，通常就可以更好的性能通过增加为每次读取中提取的行数假定增加的块大小可以容纳在内存中。 运行以下命令，以增加的值*rowsPerRead*上数据源的参数。 之前，rowsPerRead  的值设置为 5000。
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
