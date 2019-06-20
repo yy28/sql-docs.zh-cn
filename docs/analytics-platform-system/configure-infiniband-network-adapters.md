@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057164"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>配置分析平台系统的 InfiniBand 网络适配器
@@ -72,9 +72,9 @@ ms.locfileid: "63057164"
   
     ![管理节点上的 InfiniBand 连接](media/network-teamib.png "管理节点上的 InfiniBand 连接")  
   
-4.  从 Internet 协议版本 4 (TCP/IPv4) 属性窗口中，记下为值**IP 地址**并**子网掩码**。  IP 地址**_装置\_域_-AD01**节点是分析平台系统 DNS 服务器的 IP 地址。  
+4.  从 Internet 协议版本 4 (TCP/IPv4) 属性窗口中，记下为值**IP 地址**并**子网掩码**。  IP 地址 **_装置\_域_-AD01**节点是分析平台系统 DNS 服务器的 IP 地址。  
   
-5.  上重复步骤 1-5 以上 TeamIB1 适配器**_装置\_域_-AD02**服务器。  
+5.  上重复步骤 1-5 以上 TeamIB1 适配器 **_装置\_域_-AD02**服务器。  
   
     ![PDW 管理节点 InfiniBand 1 属性](media/network-ip1-properties.png "PDW 管理节点 InfiniBand 1 属性")  
   

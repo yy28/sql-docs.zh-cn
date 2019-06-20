@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149692"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>导入 SCOM 管理包中的分析平台系统
@@ -48,7 +48,7 @@ System Center Operations Manager 2007 R2 必须安装并正在运行。
   
     ![选择这两个管理包](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP4.png "SCOM_IMP4")  
   
-7.  单击 **“安装”**。  
+7.  单击 **“安装”** 。  
   
     ![单击安装](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
@@ -68,11 +68,11 @@ System Center Operations Manager 2007 R2 必须安装并正在运行。
   
     ![选择管理包](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW2.png "SCOM_PDW2")  
   
-4.  单击 **“安装”**。  
+4.  单击 **“安装”** 。  
   
     ![单击安装](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
-5.  单击 **“关闭”**。  
+5.  单击 **“关闭”** 。  
   
     ![单击关闭](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   

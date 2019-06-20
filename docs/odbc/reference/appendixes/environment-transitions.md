@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ed2bbf40ac333db34d3920b2ed2ec688c344bfe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188985"
 ---
 # <a name="environment-transitions"></a>环境转换
 ODBC 环境具有以下三种状态。  
   
-|State|描述|  
+|State|Description|  
 |-----------|-----------------|  
 |E0|未分配的环境|  
 |E1|分配的环境中，未分配的连接|  

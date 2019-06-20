@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917464"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>通过备份和还原来复制数据库
@@ -36,7 +36,7 @@ ms.locfileid: "62917464"
   
  一般步骤如下：  
   
-1.  备份可能位于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的实例上的源数据库。 运行此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机为“源计算机”。  
+1.  备份可能位于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的实例上的源数据库。 运行此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机为“源计算机”  。  
   
 2.  你想要将数据库复制的计算机上 (*目标计算机*)，连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上要还原数据库。 如果需要，在目标服务器实例上创建与源数据库备份设备相同的设备。  
   

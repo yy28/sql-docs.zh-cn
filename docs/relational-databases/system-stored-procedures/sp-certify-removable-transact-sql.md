@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994316"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
@@ -46,7 +46,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>参数  
 `[ @dbname = ] 'dbname'` 指定要验证的数据库。 *dbname*是**sysname**。  
   
-`[ @autofix = ] 'auto'` 对系统管理员授予数据库及所有数据库对象的所有权，并除去任何用户创建的数据库用户及非默认的权限。 *自动*是**nvarchar(4)**，默认值为 NULL。  
+`[ @autofix = ] 'auto'` 对系统管理员授予数据库及所有数据库对象的所有权，并除去任何用户创建的数据库用户及非默认的权限。 *自动*是**nvarchar(4)** ，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 698a5941bc8e9920942e7ec7c962144b4ab24b62
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998285"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
@@ -48,7 +48,7 @@ sp_articlefilter [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 是的名称。 *文章*是**sysname**，无默认值。  
   
-`[ @filter_name = ] 'filter_name'` 是要从创建的筛选存储过程的名称*filter_name*。 *filter_name*是**nvarchar(386)**，默认值为 NULL。 您必须为项目筛选指定唯一的名称。  
+`[ @filter_name = ] 'filter_name'` 是要从创建的筛选存储过程的名称*filter_name*。 *filter_name*是**nvarchar(386)** ，默认值为 NULL。 您必须为项目筛选指定唯一的名称。  
   
 `[ @filter_clause = ] 'filter_clause'` 是的限制 (WHERE) 子句，用于定义水平筛选器。 当输入限制子句时，将省略关键字 WHERE。 *filter_clause*是**ntext**，默认值为 NULL。  
   
