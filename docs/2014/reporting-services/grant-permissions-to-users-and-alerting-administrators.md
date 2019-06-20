@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 48311ccaa22878fb5b17be75c3f12c64cb4a67e6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109062"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>向用户和警报管理员授予权限
@@ -30,19 +30,19 @@ ms.locfileid: "66109062"
   
 1.  转到要授予权限的 SharePoint 站点。  
   
-2.  在工具栏上，单击 **“网站操作”** ，然后单击 **“网站权限”**。  
+2.  在工具栏上，单击 **“网站操作”** ，然后单击 **“网站权限”** 。  
   
      如果未看到此选项，则表明您没有向他人授予权限所需的足够权限。  
   
-3.  单击 **“授予权限”**。  
+3.  单击 **“授予权限”** 。  
   
-4.  在“用户/组”中，键入要授予权限的用户名、组名或电子邮件地址。  
+4.  在“用户/组”中，键入要授予权限的用户名、组名或电子邮件地址  。  
   
 5.  选择 **“向 SharePoint 组添加用户”** 或 **“直接授予用户权限”** 选项。 根据您是选择 **“向 SharePoint 组添加用户”** 还是选择 **“直接授予用户权限”** ，执行下列操作之一：  
   
-    -   如果选择了“向 SharePoint 组添加用户”，则在下拉列表中选择某一权限级别。  
+    -   如果选择了“向 SharePoint 组添加用户”，则在下拉列表中选择某一权限级别  。  
   
-    -   如果您选择了 **“直接授予用户权限”**，则选择某一权限级别。  
+    -   如果您选择了 **“直接授予用户权限”** ，则选择某一权限级别。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

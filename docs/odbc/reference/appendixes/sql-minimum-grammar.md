@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270498"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 最低语法
@@ -28,12 +28,12 @@ ms.locfileid: "63270498"
   
  仅使用只读数据源的驱动程序可能不支持此部分中包含的语法处理变化的数据的那些的部分。 应用程序可以确定数据源通过调用是否是只读**SQLGetInfo** SQL_DATA_SOURCE_READ_ONLY 信息类型。  
   
-## <a name="statement"></a>。  
+## <a name="statement"></a>声明专用纸  
  *create-table-statement* ::=  
   
  CREATE TABLE*基础表名称*  
   
- (*数据类型列标识符*[*，列标识符的数据类型*]...)  
+ (*数据类型列标识符*[ *，列标识符的数据类型*]...)  
   
 > [!IMPORTANT]  
 >  作为*数据类型*中*create table 语句*，应用程序必须使用返回的结果集的 TYPE_NAME 列中数据类型**SQLGetTypeInfo**。  

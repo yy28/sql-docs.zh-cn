@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106703"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>向报表添加级联参数（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.locfileid: "66106703"
   
 ### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>使用包含多个相关参数的查询创建主数据集  
   
-1.  在“报表数据”窗格中，右键单击数据源，然后单击 **“添加数据集”**。  
+1.  在“报表数据”窗格中，右键单击数据源，然后单击 **“添加数据集”** 。  
   
 2.  在 **“名称”** 中，键入数据集的名称。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66106703"
   
     2.  每个级联参数的一个查询参数。 查询参数通过指定查询中要包含或排除的特定值来限制从数据源中检索的数据。 通常，查询参数出现在查询的限制子句中。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，查询参数出现在 WHERE 子句中。 有关详细信息，请参阅位于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 联机丛书 [上的](https://go.microsoft.com/fwlink/?linkid=120955)文档中的“使用 WHERE 和 HAVING 筛选行”。  
   
-6.  单击 **“运行”** (**“!”**)。 在包括查询参数并运行查询之后，将自动创建对应于查询参数的报表参数。  
+6.  单击 **“运行”** ( **“!”** )。 在包括查询参数并运行查询之后，将自动创建对应于查询参数的报表参数。  
   
     > [!NOTE]  
     >  首次运行查询时的查询参数顺序确定它们在报表中的创建顺序。 若要更改顺序，请参阅[更改报表参数的顺序（报表生成器和 SSRS）](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "66106703"
   
 ### <a name="to-create-a-dataset-to-provide-values-for-an-independent-parameter"></a>创建提供独立参数的值的数据集  
   
-1.  在“报表数据”窗格中，右键单击数据源，然后单击 **“添加数据集”**。  
+1.  在“报表数据”窗格中，右键单击数据源，然后单击 **“添加数据集”** 。  
   
 2.  在 **“名称”** 中，键入数据集的名称。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66106703"
   
      SELECT DISTINCT 命令从结果集删除重复值，以便从指定表的指定列中获取每个唯一值。  
   
-     单击 **“运行”** (**“!”**)。 结果集显示以上第一个参数的可用值。  
+     单击 **“运行”** ( **“!”** )。 结果集显示以上第一个参数的可用值。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66106703"
   
 ### <a name="to-set-available-values-for-a-report-parameter"></a>设置报表参数的可用值  
   
-1.  在“报表数据”窗格的“参数”文件夹中，右键单击第一个参数，然后单击 **“参数属性”**。  
+1.  在“报表数据”窗格的“参数”文件夹中，右键单击第一个参数，然后单击 **“参数属性”** 。  
   
 2.  在 **“名称”** 中，确保参数名称准确无误。  
   
-3.  单击 **“可用值”**。  
+3.  单击 **“可用值”** 。  
   
-4.  单击 **“从查询中获取值”**。 随即将显示以下三个字段。  
+4.  单击 **“从查询中获取值”** 。 随即将显示以下三个字段。  
   
 5.  在 **“数据集”** 的下拉列表中，单击在前面过程中创建的数据集的名称。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66106703"
   
 ### <a name="to-create-a-dataset-to-provide-values-for-a-dependent-parameter"></a>创建提供依赖参数的值的数据集  
   
-1.  在“报表数据”窗格中，右键单击数据源，然后单击 **“添加数据集”**。  
+1.  在“报表数据”窗格中，右键单击数据源，然后单击 **“添加数据集”** 。  
   
 2.  在 **“名称”** 中，键入数据集的名称。  
   
@@ -123,13 +123,13 @@ ms.locfileid: "66106703"
   
 ### <a name="to-set-available-values-for-a-report-parameter"></a>设置报表参数的可用值  
   
-1.  在“报表数据”窗格的“参数”文件夹中，右键单击第一个参数，然后单击 **“参数属性”**。  
+1.  在“报表数据”窗格的“参数”文件夹中，右键单击第一个参数，然后单击 **“参数属性”** 。  
   
 2.  在 **“名称”** 中，确保参数名称准确无误。  
   
-3.  单击 **“可用值”**。  
+3.  单击 **“可用值”** 。  
   
-4.  单击 **“从查询中获取值”**。  
+4.  单击 **“从查询中获取值”** 。  
   
 5.  在 **“数据集”** 的下拉列表中，单击在前面过程中创建的数据集的名称。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66106703"
   
 ### <a name="to-test-the-cascading-parameters"></a>测试级联参数  
   
-1.  单击 **“运行”**。  
+1.  单击 **“运行”** 。  
   
 2.  从第一个独立参数的下拉列表中，选择一个值。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66106703"
   
      在选择最后一个参数之后，不会自动运行报表，这样，您便可以更改您的选择。  
   
-4.  单击 **“查看报表”**。 报表根据您选择的参数来更新显示内容。  
+4.  单击 **“查看报表”** 。 报表根据您选择的参数来更新显示内容。  
   
 ## <a name="see-also"></a>请参阅  
  [添加、更改或删除报表参数（报表生成器和 SSRS）](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   

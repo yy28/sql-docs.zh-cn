@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62778938"
 ---
 # <a name="full-text-index-properties-general-page"></a>全文索引属性（“常规”页）
@@ -65,7 +65,7 @@ ms.locfileid: "62778938"
  全文索引所属的文件组。  
   
  **全文索引非索引字表**  
- 当前与全文索引关联的非索引字表。 非索引字表是 [非索引字](../relational-databases/search/full-text-search.md)的列表。 与全文索引关联的非索引字表（如果有）适用于该索引的全文查询。 可以通过选择从索引中删除非索引字表 **\<OFF >** 从列表中，也可以选择不同非索引字表;**\<系统 >** 指示系统非索引字表。  
+ 当前与全文索引关联的非索引字表。 非索引字表是 [非索引字](../relational-databases/search/full-text-search.md)的列表。 与全文索引关联的非索引字表（如果有）适用于该索引的全文查询。 可以通过选择从索引中删除非索引字表 **\<OFF >** 从列表中，也可以选择不同非索引字表; **\<系统 >** 指示系统非索引字表。  
   
  **若要创建非索引字表**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62778938"
  **搜索属性列表**  
  当前与全文索引关联的搜索属性列表（如果有）。 搜索属性列表指定一组文档属性，在填充关联的全文索引时这些文档属性包括在其中。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
- **\<关闭 >** 指示是当前没有与索引关联的搜索属性列表。 可以通过选择从索引中删除当前搜索属性列表**\<关闭 >** 从列表中，或从列表中选择不同的搜索属性列表。 在此处只列出当前数据库中的搜索属性列表。  
+ **\<关闭 >** 指示是当前没有与索引关联的搜索属性列表。 可以通过选择从索引中删除当前搜索属性列表 **\<关闭 >** 从列表中，或从列表中选择不同的搜索属性列表。 在此处只列出当前数据库中的搜索属性列表。  
   
 > [!NOTE]  
 >  您可以将给定的搜索属性列表与同一数据库中的多个全文索引相关联。  

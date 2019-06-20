@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094629"
 ---
 # <a name="install-distributed-replay-setup"></a>安装 Distributed Replay（安装程序）
@@ -76,15 +76,15 @@ ms.locfileid: "66094629"
   
 5.  在 **“安装程序支持文件”** 页，单击 **“安装”** 以便安装或更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的安装程序支持文件。  
   
-6.  在 **“设置角色”** 页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安装”**，然后单击 **“下一步”** 以继续进入 **“功能选择”** 页。  
+6.  在 **“设置角色”** 页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安装”** ，然后单击 **“下一步”** 以继续进入 **“功能选择”** 页。  
   
 7.  在 **“功能选择”** 页上，配置要安装的功能。  
   
-    -   若要安装管理工具，请选择“管理工具 - 基本”。  
+    -   若要安装管理工具，请选择“管理工具 - 基本”  。  
   
-    -   若要安装控制器服务，请选择 **“Distributed Replay 控制器”**。  
+    -   若要安装控制器服务，请选择 **“Distributed Replay 控制器”** 。  
   
-    -   若要安装客户端服务，请选择 **“Distributed Replay 客户端”**。  
+    -   若要安装客户端服务，请选择 **“Distributed Replay 客户端”** 。  
   
      **重要**:在您配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
   
@@ -104,11 +104,11 @@ ms.locfileid: "66094629"
   
     1.  在 32 位计算机上，默认安装路径为 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  在 64 位计算机上，默认安装路径为 C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\  
+    2.  在 64 位计算机上，默认安装路径为 C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\   
   
-9. 在完成后，单击 **“下一步”**。  
+9. 在完成后，单击 **“下一步”** 。  
   
-10. 在 **“安装规则”** 页上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将验证您的计算机配置。 在验证过程完成后，单击 **“下一步”**。  
+10. 在 **“安装规则”** 页上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将验证您的计算机配置。 在验证过程完成后，单击 **“下一步”** 。  
   
 11. **“磁盘空间要求”** 页计算指定的功能所需的磁盘空间， 然后将所需空间与可用磁盘空间进行比较。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66094629"
   
 13. 在 **“安装配置规则”** 页上，系统配置检查器将运行多组规则来针对您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能对您的计算机配置进行验证。  
   
-14. 在 **“准备安装程序”** 页上，单击 **“安装”**。  
+14. 在 **“准备安装程序”** 页上，单击 **“安装”** 。  
   
     > [!IMPORTANT]  
     >  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅 [完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  

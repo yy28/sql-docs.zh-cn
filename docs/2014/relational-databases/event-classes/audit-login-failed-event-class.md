@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2860e10ef74676fb013b43e1740c9cf82223baa9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63000360"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed 事件类
-   **Audit Login Failed** 事件类指明用户尝试登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但却失败了。 此类中的事件由新连接或从连接池中重用的连接触发。  
+  **Audit Login Failed** 事件类指明用户尝试登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但却失败了。 此类中的事件由新连接或从连接池中重用的连接触发。  
   
 ## <a name="audit-login-failed-event-class-data-columns"></a>Audit Login Failed 事件类的数据列  
   

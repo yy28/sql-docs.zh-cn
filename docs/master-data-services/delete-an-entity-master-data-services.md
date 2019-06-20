@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 64e8a75df1cfda03d0f90e1debb6fcbab750eaf6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478213"
 ---
 # <a name="delete-an-entity-master-data-services"></a>删除实体 (Master Data Services)
@@ -39,7 +39,7 @@ ms.locfileid: "65478213"
   
 ### <a name="to-delete-an-entity"></a>删除实体  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
 2.  在“管理模型”页上，从网格中选择一个模型。   
   
@@ -47,9 +47,9 @@ ms.locfileid: "65478213"
   
 4.  在“管理实体”  页上，从网格中选择要删除的实体所在的行。  
   
-5.  单击 **“删除”**。  
+5.  单击 **“删除”** 。  
   
-6.  在确认对话框中，单击 **“确定”**。  
+6.  在确认对话框中，单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)   

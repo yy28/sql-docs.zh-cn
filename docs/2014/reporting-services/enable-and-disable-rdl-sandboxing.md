@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109227"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>启用和禁用 RDL 沙盒
@@ -28,7 +28,7 @@ ms.locfileid: "66109227"
   
  在启用 RDL 沙盒处理时，禁用以下功能：  
   
--   报表定义的 \<Code> 元素中的自定义代码。  
+-   报表定义的 \<Code> 元素中的自定义代码  。  
   
 -   用于 [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] 自定义报表项的 RDL 向后兼容模式。  
   
@@ -68,10 +68,10 @@ ms.locfileid: "66109227"
 |**类型**|在 RDL 表达式内允许的成员的列表。|  
 |**Allow**|RDL 表达式中允许的一个类型或一组类型。|  
 |**Namespace**|**Allow** 的属性，它是包含应用于 Value 的一个或多个类型的命名空间。 此属性不区分大小写。|  
-|`AllowNew`|Allow 的布尔属性，控制是否允许在 RDL 表达式中或 RDL \<Class> 元素中创建该类型的新实例。<br /><br /> 注意：当`RDLSandboxing`启用时，不能在 RDL 表达式中，而不考虑的设置创建新数组`AllowNew`。|  
+|`AllowNew`|Allow 的布尔属性，控制是否允许在 RDL 表达式中或 RDL \<Class> 元素中创建该类型的新实例   。<br /><br /> 注意：当`RDLSandboxing`启用时，不能在 RDL 表达式中，而不考虑的设置创建新数组`AllowNew`。|  
 |**ReplTest1**|**Allow** 的值，作为在 RDL 表达式中要允许的类型的名称。 值 **\*** 指示命名空间中的所有类型都是允许的。 此属性不区分大小写。|  
-|**成员**|对于在类型 \<Types> 元素中包括的类型的列表，为在 RDL 表达式中不允许的成员名称的列表。|  
-|**拒绝**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 注意：在为某一成员指定了 Deny 后，不允许所有类型的具有此名称的所有成员。|  
+|**成员**|对于在类型 \<Types> 元素中包括的类型的列表，为在 RDL 表达式中不允许的成员名称的列表  。|  
+|**拒绝**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 注意：在为某一成员指定了 Deny 后，不允许所有类型的具有此名称的所有成员  。|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>当启用 RDL 沙盒处理时使用表达式  
  您可以修改 RDL 沙盒处理功能，以便通过以下方式管理表达式使用的资源：  
@@ -98,7 +98,7 @@ ms.locfileid: "66109227"
   
 -   [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `New`方法。  
   
--   报表定义中的 \<Classes> 元素。  
+-   报表定义中的 \<Classes> 元素  。  
   
 -   已为允许列表中的某一类型添加到阻止列表中的成员。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66109227"
   
  若要启用一种类型的成员，但拒绝其他类型的具有相同名称的成员，必须执行以下操作：  
   
--   为成员名称添加 \<Deny> 元素。  
+-   为成员名称添加 \<Deny> 元素  。  
   
 -   对于您想要启用的成员，为其创建一个代理成员，该成员在自定义程序集中的类上具有不同的名称。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66109227"
 -   在您更新报表服务器以处理更高版本的 RDL 架构时，因为新成员可能已添加到 RDL 类型中。  
   
 ### <a name="working-with-operators-and-new"></a>使用运算符和 New  
- 默认情况下，`New` 以外的所有 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 语言运算符都始终是允许的。 `New`运算符受`AllowNew`特性，可以在**\<允许 >** 元素。 其他语言运算符，如默认集合取值函数运算符`!`并[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 转换宏如`CInt`，始终允许。  
+ 默认情况下，`New` 以外的所有 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 语言运算符都始终是允许的。 `New`运算符受`AllowNew`特性，可以在 **\<允许 >** 元素。 其他语言运算符，如默认集合取值函数运算符`!`并[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 转换宏如`CInt`，始终允许。  
   
  不支持将运算符添加到阻止列表（包括自定义运算符）。 要排除某一类型的运算符，必须执行以下操作：  
   

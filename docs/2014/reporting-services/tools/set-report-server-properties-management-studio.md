@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c6dd1e22f90b834f5683a53d7b206dd1c8ad46e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099505"
 ---
 # <a name="set-report-server-properties-management-studio"></a>设置报表服务器属性 (Management Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "66099505"
   
 1.  启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并连接到报表服务器实例。  
   
-2.  右键单击报表服务器节点，然后选择“属性”。 单击 **“高级”** 以打开属性页。 有关各属性的说明，请参阅[服务器属性（“高级”页）- Reporting Services](server-properties-advanced-page-reporting-services.md)。  
+2.  右键单击报表服务器节点，然后选择“属性”  。 单击 **“高级”** 以打开属性页。 有关各属性的说明，请参阅[服务器属性（“高级”页）- Reporting Services](server-properties-advanced-page-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [在 Management Studio 中连接到报表服务器](connect-to-a-report-server-in-management-studio.md)   

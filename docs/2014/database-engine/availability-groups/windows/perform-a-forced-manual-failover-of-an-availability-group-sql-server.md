@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 604eac1d089c488210db2d95ad92f2d23e09f373
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789919"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的强制手动故障转移 (SQL Server)
@@ -205,7 +205,7 @@ ms.locfileid: "62789919"
   
         -   [在无仲裁情况下强制启动 WSFC 群集](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-    -   如果将故障转移到 [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 之外：我们建议你考虑调整的可用性模式和故障转移模式新主副本上以及在剩余的辅助副本以反映所需的同步提交和自动故障转移配置。  
+    -   如果将故障转移到 [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 之外：我们建议你考虑调整新的主要副本上和其他次要副本上的可用性模式和故障转移模式，以反映你所需的同步提交模式和自动故障转移配置。  
   
         > [!NOTE]  
         >  只有在当前主副本配置为同步提交模式时， [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 才存在。  
@@ -247,7 +247,7 @@ ms.locfileid: "62789919"
     -   [备份事务日志 (SQL Server)](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 ##  <a name="ExampleRecoveryFromCatastrophy"></a> 示例应用场景：使用强制故障转移从灾难性故障中恢复  
- 如果主副本失败并且没有同步的辅助副本可用，则强制可用性组进行故障转移可能是适当的反应。 强制故障转移的适合程度取决于：（1） 您是否预期主副本处于离线时间长于你的服务级别协议 (SLA) 可容忍和 （2） 您是否愿意为潜在数据丢失的风险使主数据库快速可用。 如果您决定可用性组需要强制故障转移，则实际的强制故障转移将是多步骤过程中的一个步骤。  
+ 如果主副本失败并且没有同步的辅助副本可用，则强制可用性组进行故障转移可能是适当的反应。 强制执行故障转移是否合适取决于以下几个方面：(1) 是否希望主要副本处于脱机状态的时间超过服务级别协议 (SLA) 的容限，(2) 是否愿意为使主数据库更快处于可用状态，而承担数据可能丢失的风险。 如果您决定可用性组需要强制故障转移，则实际的强制故障转移将是多步骤过程中的一个步骤。  
   
  为了说明使用强制故障转移从灾难性故障中恢复所需的步骤，本主题提供了一个可能的灾难恢复应用场景。 此示例应用场景假定某一可用性组的原始拓扑结构由一个主数据中心和一个远程数据中心构成。主数据中心承载三个同步提交可用性副本，包括主副本；而远程数据中心承载两个异步提交辅助副本。 下图说明了此示例可用性组的原始拓扑结构。 该可用性组由一个多子网 WSFC 群集承载，并且在主数据中心具有三个节点（**节点 01**、 **节点 02**和 **节点 03**），在远程数据中心有两个节点（**节点 04** 和 **节点 05**）。  
   
@@ -285,8 +285,8 @@ ms.locfileid: "62789919"
   
 ||步骤|链接|  
 |-|----------|-----------|  
-|**1.**|主数据中心中的节点返回到联机状态，并且重新建立与 WSFC 群集的通信。 其可用性副本将作为具有挂起的数据库的辅助副本进入联机状态，数据库管理员将需要手动尽快恢复这些数据库中的每个数据库。|[恢复可用性数据库 (SQL Server)](resume-an-availability-database-sql-server.md)<br /><br /> 提示：如果担心可能造成数据丢失故障转移后主数据库上，您应尝试同步提交辅助数据库上挂起数据库创建数据库快照。 请记住，在其任何辅助数据库被挂起时，事务日志截断在主数据库上被延迟。 此外，只要任何本地数据库保持挂起状态，则同步提交辅助副本的同步运行状况将无法转换到 HEALTHY。|  
-|**2.**|在恢复数据库后，数据库管理员暂时将新的主副本更改为同步提交模式。 这涉及两个步骤：<br /><br /> 1) 将一个脱机可用性副本更改为异步提交模式。 <br />2) 将新的主副本更改为同步提交模式。<br />注意：此步骤中使已恢复的同步提交辅助数据库能够成为 SYNCHRONIZED。|[更改可用性副本的可用性模式 (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
+|**1.**|主数据中心中的节点返回到联机状态，并且重新建立与 WSFC 群集的通信。 其可用性副本将作为具有挂起的数据库的辅助副本进入联机状态，数据库管理员将需要手动尽快恢复这些数据库中的每个数据库。|[恢复可用性数据库 (SQL Server)](resume-an-availability-database-sql-server.md)<br /><br /> 提示：如果担心在故障转移后主数据库上可能会丢失数据，则应该尝试在同步提交辅助数据库上创建已挂起数据库的数据库快照。 请记住，在其任何辅助数据库被挂起时，事务日志截断在主数据库上被延迟。 此外，只要任何本地数据库保持挂起状态，则同步提交辅助副本的同步运行状况将无法转换到 HEALTHY。|  
+|**2.**|在恢复数据库后，数据库管理员暂时将新的主副本更改为同步提交模式。 这涉及两个步骤：<br /><br /> 1) 将一个脱机可用性副本更改为异步提交模式。 <br />2) 将新的主副本更改为同步提交模式。<br />注意：此步骤将使已恢复的同步提交辅助数据库能够成为 SYNCHRONIZED。|[更改可用性副本的可用性模式 (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
 |**3.**|在 **节点 03** 上同步提交次要副本（原始主要副本）进入 HEALTHY 同步状态后，数据库管理员将执行到该副本的计划的手动故障转移，使其再次成为主要副本。 **节点 04** 上的副本将恢复成为辅助副本。|[sys.dm_hadr_database_replica_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [使用 AlwaysOn 策略查看可用性组的运行状况&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [执行可用性组的计划手动故障转移 (SQL Server)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|数据库管理员将连接到新的主副本，并且：<br /><br /> 1) 将以前的主副本（在远程中心中）更改回异步提交模式。<br />2) 将主数据中心中的异步提交辅助副本更改回同步提交模式。|[更改可用性副本的可用性模式 (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   

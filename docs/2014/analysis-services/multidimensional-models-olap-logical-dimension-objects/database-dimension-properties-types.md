@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62728553"
 ---
 # <a name="dimension-types"></a>维度类型
@@ -55,7 +55,7 @@ ms.locfileid: "62728553"
 |应用场景|一种其属性表示计划或策略分析信息的维度。|  
 |Quantitative|一种其属性表示定量信息的维度。|  
 |实用工具|一种其属性表示杂项信息的维度。|  
-|货币|该类型的维度包含货币数据和元数据。|  
+|Currency|该类型的维度包含货币数据和元数据。|  
 |Rates|一种其属性表示货币汇率信息的维度。|  
 |Channel|一种其属性表示渠道信息的维度。|  
 |Promotion|一种其属性表示营销促销信息的维度。|  

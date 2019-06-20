@@ -1,5 +1,5 @@
 ---
-title: 到 Windows Azure 的 SQL Server 托管的备份：互操作性和共存 |Microsoft Docs
+title: 针对 Microsoft Azure 的 SQL Server 托管备份：互操作性和共存 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842904"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>到 Windows Azure 的 SQL Server 托管的备份：互操作性和共存
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>针对 Microsoft Azure 的 SQL Server 托管备份：互操作性和共存
   本主题介绍[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中若干功能的互操作性和共存情况。 这些功能包括：AlwaysOn 可用性组、 数据库镜像、 备份维护计划、 日志传送、 即席备份、 分离数据库和 Drop Database。  
   
 ### <a name="alwayson-availability-groups"></a>AlwaysOn 可用性组  

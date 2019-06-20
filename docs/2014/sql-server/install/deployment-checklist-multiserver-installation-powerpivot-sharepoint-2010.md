@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e738635465bf6e7af0b16913c4c1f91f719f6a35
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095695"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署核对清单：PowerPivot for SharePoint 2010 的多服务器安装
@@ -84,13 +84,13 @@ ms.locfileid: "66095695"
   
     2.  打开“SQL Server 网络配置”。  
   
-    3.  选择“MSSQLSERVER 的协议”  。  
+    3.  选择“MSSQLSERVER 的协议” 。  
   
     4.  右键单击**TCP/IP** ，然后选择**启用**。  
   
     5.  单击**SQL Server 服务**。  
   
-    6.  右键单击**SQL Server (MSSQLSERVER)** ，然后单击**重新启动**。  
+    6.  右键单击**SQL Server (MSSQLSERVER)**，然后单击**重新启动**。  
   
 3.  启用通过 Windows 防火墙对数据库服务器进行入站访问。 这使场中的 SharePoint 服务器可以连接到 SharePoint 数据库。 有关详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66095695"
   
     4.  在规则类型中单击**自定义**。  
   
-    5.  单击“下一步”  。  
+    5.  单击“下一步” 。  
   
     6.  在程序中，在服务部分中单击**自定义**。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "66095695"
   
     8.  选择**SQL Server (MSSQLSERVER)** 如果您安装 SQL Server 作为默认实例，然后单击**确定**。  
   
-    9. 单击“下一步”  。  
+    9. 单击“下一步” 。  
   
     10. 在协议和端口中，接受默认设置，然后单击**下一步**。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66095695"
   
     14. 在名称键入的入站规则的说明性名称 (例如， **SQL Server**)。  
   
-    15. 单击 **“完成”** 。  
+    15. 单击 **“完成”**。  
   
 ##  <a name="installsp"></a> 安装和配置三层 SharePoint 2010 场  
  在用作 SharePoint 服务器的每台计算机上，运行 SharePoint Prerequisite Installer 程序，然后运行 SharePoint Server 安装程序。  
@@ -193,7 +193,7 @@ ms.locfileid: "66095695"
   
 2.  验证 PowerPivot 数据访问和处理功能在应用程序中可用。 您可以通过验证 PowerPivot 提供的库模板是否存在来验证此可用性：  
   
-    1.  在站点操作，单击**更多选项...** .  
+    1.  在站点操作，单击**更多选项...**.  
   
     2.  在库中，你应看到**数据馈送库**并**PowerPivot 库**。 这些库模板由 PowerPivot 功能提供，并且在正确集成了该功能的情况下在“库”列表中将可见。  
   
@@ -209,11 +209,11 @@ ms.locfileid: "66095695"
   
 5.  从“开始”菜单中的 Microsoft SQL Server 2008 R2 程序组启动 SQL Server Management Studio。 如果未在您的服务器上安装此工具，则可以跳到最后一步以便确认缓存文件是否存在。  
   
-6.  在“服务器类型”中，选择 **“Analysis Services”** 。  
+6.  在“服务器类型”中，选择 **“Analysis Services”**。  
   
-7.  在服务器名称，输入 **\<服务器名称 > \powerpivot**，其中 **\<服务器名称 >** 是具有 PowerPivot for SharePoint 安装的计算机的名称。  
+7.  在服务器名称，输入**\<服务器名称 > \powerpivot**，其中**\<服务器名称 >** 是具有 PowerPivot for SharePoint 安装的计算机的名称。  
   
-8.  单击 **“连接”** 。  
+8.  单击 **“连接”**。  
   
 9. 在对象资源管理器，单击**数据库**查看加载的 PowerPivot 数据文件的列表。  
   
@@ -231,9 +231,9 @@ ms.locfileid: "66095695"
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>向工作簿用户授予 SharePoint 权限  
  用户将首先需要 SharePoint 权限，然后才能发布或查看工作簿。 请务必授予**视图**需要用来查看已发布工作簿的用户的权限和**参与讨论**发布或管理工作簿的用户的权限。 您必须是网站集管理员才能授予权限。  
   
-1.  在网站中，单击 **“网站操作”** 。  
+1.  在网站中，单击 **“网站操作”**。  
   
-2.  单击 **“网站权限”** 。  
+2.  单击 **“网站权限”**。  
   
 3.  选中网站集的复选框**成员**组。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "66095695"
   
 5.  输入应有权添加或删除文档的 Windows 域用户或组帐户。  
   
-6.  单击“确定”  。  
+6.  单击“确定” 。  
   
 7.  选中网站集的复选框**访客**组。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "66095695"
   
 9. 输入应有权查看文档的 Windows 域用户或组帐户。 与前面一样，如果将应用程序配置为采用经典身份验证，则不要使用电子邮件地址或分发组。  
   
-10. 单击“确定”  。  
+10. 单击“确定” 。  
   
 #### <a name="install-adonet-data-services-35-sp1"></a>安装 ADO.NET Data Services 3.5 SP1  
  ADO.NET Data Services 是 SharePoint 列表的数据馈送导出所必需的。 SharePoint 2010 在 PrerequisiteInstaller 程序中不包括此组件，因此您必须手动安装它。 有关如何安装 ADO.NET Data Services 的详细信息，请参阅[安装 ADO.NET Data Services 以支持数据馈送导出 SharePoint 列表的](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108097"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>“占位符属性”对话框 -&gt;“常规”（报表生成器和 SSRS）
@@ -28,10 +28,10 @@ ms.locfileid: "66108097"
  键入占位符的标签。 该标签仅显示在设计图面中。  
   
  **ReplTest1**  
- 键入文本框的值。 该值应为字段表达式、其他表达式或标签。 单击“表达式” (*fx*) 按钮可编辑表达式。  
+ 键入文本框的值。 该值应为字段表达式、其他表达式或标签。 单击“表达式”  (*fx*) 按钮可编辑表达式。  
   
  **Tooltip**  
- 键入文本或计算结果为工具提示的表达式。 单击“表达式” (*fx*) 按钮可编辑表达式。 当用户将鼠标指针停在呈现报表中该项的上方时，便会显示此工具提示。  
+ 键入文本或计算结果为工具提示的表达式。 单击“表达式”  (*fx*) 按钮可编辑表达式。 当用户将鼠标指针停在呈现报表中该项的上方时，便会显示此工具提示。  
   
  **标记类型**  
  选择一个选项以指示占位符的呈现方式。  

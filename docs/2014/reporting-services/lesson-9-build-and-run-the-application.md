@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108375"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>第 9 课：生成并运行应用程序
@@ -32,7 +32,7 @@ ms.locfileid: "66108375"
   
 3.   单击“名称”列中的某个值。 随后将显示子报表以及经过筛选的相应数据。  
   
-4.  单击“返回父报表”  图标，在 **ReportViewer** 工具栏中导航回父报表。  
+4.   单击“返回父报表”  图标，在 **ReportViewer** 工具栏中导航回父报表。  
   
      ![ssrs 钻取使用 ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs 钻取使用 ReportViewer")  
   
