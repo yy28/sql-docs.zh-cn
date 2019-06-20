@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811541"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>将数据库引擎配置为侦听多个 TCP 端口
@@ -74,22 +74,22 @@ ms.locfileid: "62811541"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>将 SQL Server 数据库引擎配置为侦听其他 TCP 端口  
   
-1.  在 SQL Server 配置管理器中，展开“SQL Server 网络配置”，然后单击 _<instance_name>_ 的“协议”。  
+1.  在 SQL Server 配置管理器中，展开“SQL Server 网络配置”  ，然后单击 _<instance_name>_ 的“协议”  。  
   
-2.  展开 _<instance_name>_ 的“协议”，然后单击“TCP/IP”。  
+2.  展开 _<instance_name>_ 的“协议”  ，然后单击“TCP/IP”  。  
   
-3.  在右窗格中，右键单击要启用的每个禁用的 IP 地址，再单击“启用”。  
+3.  在右窗格中，右键单击要启用的每个禁用的 IP 地址，再单击“启用”  。  
   
-4.  右键单击“IPAll”，再单击“属性”。  
+4.  右键单击“IPAll”  ，再单击“属性”  。  
   
 5.  在 **“TCP 端口”** 框中，键入要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 侦听的端口（用逗号分隔）。 在本示例中，如果列出了默认端口 1433年，则键入`,1500`因此框中将显示`1433,1500`，然后单击**确定**。  
   
     > [!NOTE]  
-    >  如果不想对所有 IP 地址启用端口，则在属性框中只为所需地址配置其他端口。 然后，在控制台窗格中，右键单击“TCP/IP”，单击“属性”，然后在“全部侦听”框中选择“否”。  
+    >  如果不想对所有 IP 地址启用端口，则在属性框中只为所需地址配置其他端口。 然后，在控制台窗格中，右键单击“TCP/IP”  ，单击“属性”  ，然后在“全部侦听”  框中选择“否”  。  
   
-6.  在左窗格中，单击 **“SQL Server 服务”**。  
+6.  在左窗格中，单击 **“SQL Server 服务”** 。  
   
-7.  在右侧窗格中，右键单击“SQL Server _<instance_name>_”，然后单击“重新启动”。  
+7.  在右侧窗格中，右键单击“SQL Server  _<instance_name>_ ”，然后单击“重新启动”  。  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]重新启动后，错误日志将列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要侦听的端口。  
   

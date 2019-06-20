@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7da373509d875057f4d1ff50884ec446feb6cd2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090715"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>第 8 课. 将数据库还原到 Windows Azure 存储
@@ -73,13 +73,13 @@ ms.locfileid: "66090715"
   
 2.  展开**数据库**，然后选择数据库。  
   
-3.  右键单击数据库，指向“任务”，再单击“还原”。  
+3.  右键单击数据库，指向“任务”  ，再单击“还原”  。  
   
 4.  上**常规**页上，在**还原**源部分中，单击**源**设备。  
   
 5.  单击浏览按钮**源**设备文本框中，这将打开**选择备份设备**对话框。  
   
-6.  在备份介质文本框中，选择**文件**，然后单击**添加**按钮查找备份 (.bak) 文件。 单击“确定” 。  
+6.  在备份介质文本框中，选择**文件**，然后单击**添加**按钮查找备份 (.bak) 文件。 单击“确定”  。  
   
 7.  单击**文件**第一页上。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66090715"
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
-9. 单击“确定” 。  
+9. 单击“确定”  。  
   
  还原完后，登录到管理门户。 应该能在容器中看到 .mdf 和 .ldf 文件，如下所示：  
   

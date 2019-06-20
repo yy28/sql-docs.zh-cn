@@ -12,10 +12,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
 ms.openlocfilehash: 8f5b935636c4d00f39324e4a343419e3da68284b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108581"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>在何处查找用于 SharePoint 产品的 Reporting Services 外接程序
@@ -32,7 +32,7 @@ ms.locfileid: "66108581"
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 安装向导中还提供了该外接程序的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 版本：  
   
--   在安装向导的 **“功能选择”** 页上，选择 **“用于 SharePoint 产品的 Reporting Services 外接程序”**。  
+-   在安装向导的 **“功能选择”** 页上，选择 **“用于 SharePoint 产品的 Reporting Services 外接程序”** 。  
   
 -   从命令提示符安装中，使用 **RS_SHPWFE** 选项安装该外接程序。 有关详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]命令提示符安装，请参阅[命令提示符下安装的 Reporting Services SharePoint 模式和本机模式](install-reporting-services-at-the-command-prompt.md)。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66108581"
   
  若要下载并安装该外接程序，请访问 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心：  
   
--   **SP1 外接程序：**[Microsoft® SQL Server® 2012 SP1 Reporting Services 外接程序的 Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583)。  
+-   **SP1 外接程序：** [Microsoft® SQL Server® 2012 SP1 Reporting Services 外接程序的 Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583) 。  
   
--   **SP1:**[Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906)。  
+-   **SP1:** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906) 。  
   
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 用于 SharePoint 2010 产品的 Reporting Services 外接程序  
  从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本开始，此外接程序可以作为 SQL Server 安装向导的一部分在“功能选择”页中进行安装。 如果你希望单独下载和安装此外接程序，则可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心的 [用于 Microsoft® SharePoint® 技术 2010 的 Microsoft® SQL Server® 2012 Reporting Services 外接程序](https://go.microsoft.com/fwlink/?LinkID=207242) 页获得此文件的最新版本。  

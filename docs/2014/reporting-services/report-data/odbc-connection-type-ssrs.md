@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58c6a7aeca7bd465b793b7fa81fc56d15c27f060
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107233"
 ---
 # <a name="odbc-connection-type-ssrs"></a>ODBC 连接类型 (SSRS)
@@ -44,7 +44,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
   
   
 ##  <a name="Remarks"></a> 注释  
- ODBC 是在 OLEDB 之前采用的一种早期数据访问技术。 ODBC 只支持关系数据源。 ODBC 数据访问接口称为“驱动程序” 。 ODBC 驱动程序由 Microsoft 和第三方供应商提供。 例如，Microsoft Office 安装了连接到 Office 文件格式的 ODBC 驱动程序。  
+ ODBC 是在 OLEDB 之前采用的一种早期数据访问技术。 ODBC 只支持关系数据源。 ODBC 数据访问接口称为“驱动程序”  。 ODBC 驱动程序由 Microsoft 和第三方供应商提供。 例如，Microsoft Office 安装了连接到 Office 文件格式的 ODBC 驱动程序。  
   
  必须先安装 ODBC 驱动程序并生成计算机或系统 DSN，才能生成 ODBC 连接字符串。 若要成功检索到想要的数据，则必须提供驱动程序支持的查询语法。 参数支持因驱动程序而异。 有关详细信息，请参阅特定于所选驱动程序的主题，例如，[SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)。  
   

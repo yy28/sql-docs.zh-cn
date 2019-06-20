@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175035"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 命令行加载程序，用于并行数据仓库
@@ -136,7 +136,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 使用参数文件， *parameter_file_name*，代替命令行参数。 *parameter_file_name*可以包含任何命令行参数，除非*user_name*并*密码*。 如果在命令行和参数文件中指定参数，则命令行重写文件的参数。  
   
-参数文件包含一个参数，不带**-** 前缀，每行。  
+参数文件包含一个参数，不带 **-** 前缀，每行。  
   
 示例：  
   

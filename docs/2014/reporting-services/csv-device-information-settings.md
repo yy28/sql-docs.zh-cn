@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ddce07fd322948e16abb753f00b3e736026c0365
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109592"
 ---
 # <a name="csv-device-information-settings"></a>CSV 设备信息设置
@@ -27,7 +27,7 @@ ms.locfileid: "66109592"
   
 |设置|ReplTest1|  
 |-------------|-----------|  
-|`Encoding`|.NET Framework 支持的字符编码的 Internet 编号分配机构 (IANA) 名称。 默认值为 `UTF-8`。 其他值的示例包括 ASCII、UTF-7 和 UTF-16。|  
+|`Encoding`|.NET Framework 支持的字符编码的 Internet 编号分配机构 (IANA) 名称。 默认值是 `UTF-8`。 其他值的示例包括 ASCII、UTF-7 和 UTF-16。|  
 |`ExcelMode`|指定目标输出面向 Excel。 默认值为 `true`。|  
 |`FieldDelimiter`|要放入结果中的分隔符字符串。 默认值为逗号 (,)。 当您在 URL 中传递此设备信息的值时，应对该值进行 URL 编码。 例如，作为分隔符的制表符应为“%09”。<br /><br /> 可通过在配置文件中更改设备信息设置将默认字段分隔符更改为任何所需的字符，包括 TAB。 例如，若要使用 TAB，请将 FieldDelimiter 设置更改为 \<FieldDelimiter xml:space="preserve">[TAB]\</FieldDelimiter><br /><br /> 在此示例中，[TAB] 是实际的制表符，它表示在配置文件中将出现空白字符。 “xml:space”属性告诉分析器保留空白字符。|  
 |`FileExtension`|要放入结果中的文件扩展名。 默认值是 `.CSV`。 如果同时指定了 `FileExtension` 和 `Extension`，将优先使用 `FileExtension`。|  

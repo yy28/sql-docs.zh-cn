@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241260"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>在服务器上使用 XML 架构集合的要求和限制
@@ -39,7 +39,7 @@ ms.locfileid: "63241260"
 |**minOccurs** 和 **maxOccurs**|**minOccurs** 和 **maxOccurs** 属性的值必须符合 4 字节整数。 服务器拒绝不符合的架构。|  
 |**\<xsd:choice>**|如果架构中包含无子级的 **\<xsd:choice>** 粒子，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝该架构，除非该粒子的 **minOccurs** 属性值定义为零。|  
 |**\<xsd:include>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 服务器拒绝包含此元素的 XML 架构。<br /><br /> 一种解决方法是，可以预处理包括 **\<xsd:include>** 指令的 XML 架构，来复制所有包含的架构的内容并将其合并为单个架构，以上载到服务器。 有关详细信息，请参阅 [预处理架构以便合并包括的架构](preprocess-a-schema-to-merge-included-schemas.md)。|  
-|**\<xsd:key>**、**\<xsd:keyref>** 和 **\<xsd:unique>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持这些用于强制唯一性或建立键和键引用的基于 XSD 的约束。 无法注册包含这些元素的 XML 架构。|  
+|**\<xsd:key>** 、 **\<xsd:keyref>** 和 **\<xsd:unique>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持这些用于强制唯一性或建立键和键引用的基于 XSD 的约束。 无法注册包含这些元素的 XML 架构。|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 有关更新架构的其他方法的信息，请参阅 [&lt;xsd: redefine&gt; 元素](the-xsd-redefine-element.md)一起使用。|  
 |**\<xsd:simpleType>** 值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对带有除 `xs:time` 和 `xs:dateTime` 以外的秒部分的简单类型仅支持毫秒精度，对 `xs:time` 和 `xs:dateTime` 则支持 100 纳秒精度。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对所有已识别的 XSD 简单类型枚举具有限制。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持在 **\<xsd:simpleType>** 声明中使用“NaN”值。<br /><br /> 有关详细信息，请参阅[&lt;xsd:simpleType&gt; 声明的值](values-for-xsd-simpletype-declarations.md)一起使用。|  
 |**xsi:schemaLocation** 和 **xsi:noNamespaceSchemaLocation**|如果在插入到 `xml` 数据类型的列或变量的 XML 实例数据中存在这些属性，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将忽略这些属性。|  

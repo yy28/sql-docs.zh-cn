@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c11c21844b0709cf795375c4b8d17ee43847d06f
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945588"
 ---
 # <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "64945588"
 |-----------------|---------------|-----------------|  
 |**document_type**|**sysname**|支持的文档类型的文件扩展名。<br /><br /> 此值可用于标识将全文索引的列的类型期间使用的筛选器**varbinary （max)** 或**映像**。|  
 |**class_id**|**uniqueidentifier**|支持文件扩展名的 IFilter 类的 GUID。|  
-|path|nvarchar(260)|IFilter DLL 的路径。 路径时才会显示的成员**serveradmin**固定的服务器角色。|  
+|path |nvarchar(260) |IFilter DLL 的路径。 路径时才会显示的成员**serveradmin**固定的服务器角色。|  
 |**version**|**sysname**|IFilter DLL 的版本。|  
 |**manufacturer**|**sysname**|IFilter 制造商的名称。<br /><br /> 注意：仅记录与为制造商[!INCLUDE[msCoName](../../includes/msconame-md.md)]上支持[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
   

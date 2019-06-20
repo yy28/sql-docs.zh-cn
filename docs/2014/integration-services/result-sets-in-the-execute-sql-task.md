@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056432"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>执行 SQL 任务中的结果集
@@ -49,7 +49,7 @@ ms.locfileid: "66056432"
 ##  <a name="Populate_variable_with_result_set"></a> 使用结果集填充变量  
  如果结果集类型为单行、行集或 XML，则可以将查询返回的结果集绑定到用户定义的变量。  
   
- 如果结果集类型为“单行” ，则可以使用列名作为结果集名称，将返回结果中的列绑定到一个变量，也可以使用列列表中列的序号位置作为结果集名称。 例如，查询 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的结果集名称可以是 **Color** 或 **0**。 如果查询返回多个列，而您要访问所有列中的值，则必须将每列绑定到一个不同的变量。 如果使用数字作为结果集名称，将列映射到变量，则数字将反映列在查询的列列表中显示的顺序。 例如，在查询 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，对 **Color** 列使用 0，对 **ListPrice** 列使用 1。 使用列名作为结果集名称的功能将依赖于所配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
+ 如果结果集类型为“单行”  ，则可以使用列名作为结果集名称，将返回结果中的列绑定到一个变量，也可以使用列列表中列的序号位置作为结果集名称。 例如，查询 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的结果集名称可以是 **Color** 或 **0**。 如果查询返回多个列，而您要访问所有列中的值，则必须将每列绑定到一个不同的变量。 如果使用数字作为结果集名称，将列映射到变量，则数字将反映列在查询的列列表中显示的顺序。 例如，在查询 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，对 **Color** 列使用 0，对 **ListPrice** 列使用 1。 使用列名作为结果集名称的功能将依赖于所配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
   
  某些返回单个值的查询可能不包括列名称。 例如，语句 `SELECT COUNT (*) FROM Production.Product` 不返回列名称。 可以使用序数位置 0 作为结果名称来访问返回结果。 要按列名称访问返回结果，则查询必须包括 AS \<别名> 子句来提供列名称。 语句 `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`提供 **CountOfProduct** 列。 然后可以使用 **CountOfProduct** 列名称或序数位置 0 来访问返回结果列。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66056432"
   
  如果将变量映射到“单行”  结果集，则在满足以下条件时，SQL 语句返回的非字符串值将转换为字符串：  
   
--   **TypeConversionMode** 属性设置为 true。 在属性窗口中或通过使用“执行 SQL 任务编辑器” 设置属性值。  
+-   **TypeConversionMode** 属性设置为 true。 在属性窗口中或通过使用“执行 SQL 任务编辑器”  设置属性值。  
   
 -   转换不会导致数据截断。  
   

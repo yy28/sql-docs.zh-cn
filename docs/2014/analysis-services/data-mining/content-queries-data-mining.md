@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085652"
 ---
 # <a name="content-queries-data-mining"></a>内容查询（数据挖掘）
@@ -135,7 +135,7 @@ ms.locfileid: "66085652"
  本节提供了几个示例，用来演示选择的算法如何影响存储在模型中的信息类型。 有关挖掘模型内容以及每种模型类型特定的内容的详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
 ###  <a name="bkmk_Assoc"></a> 示例 1：针对关联模型的内容查询  
- `SELECT FROM <model>.CONTENT`语句返回不同种类的信息，具体取决于您正在查询的模型类型。 对于关联模型，“节点类型” 为一段关键信息。 节点类似于模型内容中的信息的容器。 在关联模型中，表示规则的节点的 NODE_TYPE 值为 8，而表示项集的节点的 NODE_TYPE 值为 7。  
+ `SELECT FROM <model>.CONTENT`语句返回不同种类的信息，具体取决于您正在查询的模型类型。 对于关联模型，“节点类型”  为一段关键信息。 节点类似于模型内容中的信息的容器。 在关联模型中，表示规则的节点的 NODE_TYPE 值为 8，而表示项集的节点的 NODE_TYPE 值为 7。  
   
  因此，以下查询将返回前 10 个项集，按照 SUPPORT 排序（默认排序）。  
   
