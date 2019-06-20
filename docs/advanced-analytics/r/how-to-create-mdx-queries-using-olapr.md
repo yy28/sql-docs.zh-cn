@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: dfae657f6ab7d8f0cefbdec729e6e836c4f7e4d8
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175276"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 创建 MDX 查询
@@ -80,7 +80,7 @@ ms.locfileid: "66175276"
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.带切片器的基本 MDX
 
-此 MDX 查询将选择度量值，用于 Internet 销售计数和销量的计数和数量，并将它们放置到“列”轴。 它将 SalesTerritory 维度的成员添加为切片器来筛选查询，使计算中仅使用澳大利亚的销售额。
+此 MDX 查询将选择度量值  ，用于 Internet 销售计数和销量的计数和数量，并将它们放置到“列”轴。 它将 SalesTerritory 维度的成员添加为切片器  来筛选查询，使计算中仅使用澳大利亚的销售额。
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 
@@ -157,11 +157,11 @@ explore(ocs)
 
 | 结果  |
 | ----|
-| Analysis Services 教程|
-|Internet 销售额|
-|分销商销售额|
-|销售汇总|
-|[1] TRUE|
+| Analysis Services 教程 |
+|Internet 销售额 |
+|分销商销售额 |
+|销售汇总 |
+|[1] TRUE |
 
 #### <a name="to-get-a-list-of-cube-dimensions"></a>获取多维数据集维度列表
 
@@ -175,14 +175,14 @@ explore(ocs, "Sales")
 
 | 结果  |
 | ----|
-| 客户|
-|日期|
-|地区|
+| 客户 |
+|日期 |
+|地区 |
 
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>返回指定维度和层次结构的所有成员
 
-定义源并创建句柄后，指定要返回的多维数据集、维度和层次结构。 在返回的结果中，带有前缀的项**->** 表示上一个成员的子级。
+定义源并创建句柄后，指定要返回的多维数据集、维度和层次结构。 在返回的结果中，带有前缀的项 **->** 表示上一个成员的子级。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
@@ -192,9 +192,9 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 
 | 结果  |
 | ----|
-| 附件|
-|自行车|
-|服装|
+| 附件 |
+|自行车 |
+|服装 |
 |_组件_|
 |-> 程序集组件|
 |-> 程序集组件|

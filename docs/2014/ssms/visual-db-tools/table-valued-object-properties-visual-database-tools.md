@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204553"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>表值对象属性 (Visual Database Tools)
-  在 **查询设计器和视图设计器**中选择表值对象时，这些属性将显示在“属性”窗口中。 表值对象可以是视图、同义词、派生表和表值函数。 除非另行说明，否则这些属性在“属性”窗口中为只读。  
+  在 **查询设计器和视图设计器**中选择表值对象时，这些属性将显示在“属性”窗口中。 表值对象可以是视图、同义词、派生表和表值函数。 除非另行说明，否则这些属性在“属性”  窗口中为只读。  
   
 > [!NOTE]  
 >  本主题中的属性按类别排序，而不是按字母顺序排序。  
@@ -29,7 +29,7 @@ ms.locfileid: "63204553"
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。  
   
  **标识类别**  
- 展开此项可显示“名称”和“TVO 类型”属性。  
+ 展开此项可显示“名称”  和“TVO 类型”  属性。  
   
  **名称**  
  显示所选表值对象的名称。  
@@ -38,7 +38,7 @@ ms.locfileid: "63204553"
  显示表值对象的类型。 其类型可以是基表、视图、表值函数或派生表。  
   
  **查询设计器类别**  
- 展开此项可显示“别名”、“列列表”、“全名”和“参数列表”属性。  
+ 展开此项可显示“别名”  、“列列表”  、“全名”  和“参数列表”  属性。  
   
  **别名**  
  显示所选表值对象的别名。 若要添加或更改别名，请在字段中键入相应内容。  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49459743e2eb8af64b1c41910c660f713dbdb2a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035922"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>从 SQL Server 实用工具中删除 SQL Server 实例
@@ -25,13 +25,13 @@ ms.locfileid: "63035922"
 > [!IMPORTANT]  
 >  在您使用此过程从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例前，请确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 SQL Server 代理服务正在要删除的实例上运行。  
   
-1.  从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的实用工具资源管理器中，单击 **“托管实例”**。 观察实用工具资源管理器内容窗格中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例的列表视图。  
+1.  从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的实用工具资源管理器中，单击 **“托管实例”** 。 观察实用工具资源管理器内容窗格中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例的列表视图。  
   
-2.  在该列表视图的 **“SQL Server 实例名称”** 列中，选择要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 右键单击要删除的实例，然后选择“删除托管实例…”。  
+2.  在该列表视图的 **“SQL Server 实例名称”** 列中，选择要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 右键单击要删除的实例，然后选择“删除托管实例…”  。  
   
-3.  指定具有管理员特权的实例的凭据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:单击**连接...**，验证中的信息**连接到服务器**对话框，然后单击**Connect**。 您将在 **“删除托管实例”** 对话框中看到登录信息。  
+3.  指定具有管理员特权的实例的凭据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:单击**连接...** ，验证中的信息**连接到服务器**对话框，然后单击**Connect**。 您将在 **“删除托管实例”** 对话框中看到登录信息。  
   
-4.  若要确认该操作，请单击 **“确定”**。 若要退出该操作，请单击 **“取消”**。  
+4.  若要确认该操作，请单击 **“确定”** 。 若要退出该操作，请单击 **“取消”** 。  
   
 ## <a name="manually-remove-a-managed-instance-of-sql-server-from-a-sql-server-utility"></a>手动从 SQL Server 实用工具中删除 SQL Server 的托管实例  
  此过程从 UCP 列表视图中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例并且停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具数据收集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不卸载。  

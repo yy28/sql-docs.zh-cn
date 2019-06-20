@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 75121c5a38994afe1326b26bf31f78d11a80cfa8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067723"
 ---
 # <a name="calculations-ssas-tabular"></a>计算（SSAS 表格）
-  将数据导入模型之后，可以添加计算来聚合、筛选、扩展、组合和保护该数据。 表格模型采用数据分析表达式 (DAX)，这是一种用于创建自定义计算的公式语言。 在表格模型中，使用 DAX 公式创建的计算用在“计算列” 、“度量值” 和“行筛选器” 中。  
+  将数据导入模型之后，可以添加计算来聚合、筛选、扩展、组合和保护该数据。 表格模型采用数据分析表达式 (DAX)，这是一种用于创建自定义计算的公式语言。 在表格模型中，使用 DAX 公式创建的计算用在“计算列”  、“度量值”  和“行筛选器”  中。  
   
 ## <a name="in-this-section"></a>本节内容  
   

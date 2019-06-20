@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ac2ff0a1617e2228d6b7b5f2651380b3a08ea17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062733"
 ---
 # <a name="advanced-settings-ssas"></a>高级设置 (SSAS)
-  **“表导入向导”** 的这一对话框可用于指定您要连接到的平面文件的编码和区域设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
+  **“表导入向导”** 的这一对话框可用于指定您要连接到的平面文件的编码和区域设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”** 。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
   

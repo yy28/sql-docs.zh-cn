@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059201"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Excel 目标编辑器（“错误输出”页）
@@ -31,12 +31,12 @@ ms.locfileid: "66059201"
  查看数据源的名称。  
   
  **列**  
- 查看在“Excel 源编辑器”对话框中“连接管理器”节点上选择的外部（源）列。  
+ 查看在“Excel 源编辑器”对话框中“连接管理器”节点上选择的外部（源）列   。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](data-flow/error-handling-in-data.md)  
   
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  

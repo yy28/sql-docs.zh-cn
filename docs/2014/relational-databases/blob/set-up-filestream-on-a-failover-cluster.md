@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9357a345593cd81c420b702a38a02c60da5aebcc
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66009920"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>在故障转移群集中设置 FILESTREAM
@@ -26,7 +26,7 @@ ms.locfileid: "66009920"
   
 1.  为故障转移群集设置主节点。  
   
-     在设置完成后，使用 **“SQL Server  配置管理器”** 在主节点上启用 FILESTREAM。 这将启用需要 Windows 管理员特权的设置。 如果需要远程访问，请选择 **“允许远程客户端针对 FILESTREAM 数据启用流访问”**。 这会创建一个文件共享群集资源。  
+     在设置完成后，使用 **“SQL Server  配置管理器”** 在主节点上启用 FILESTREAM。 这将启用需要 Windows 管理员特权的设置。 如果需要远程访问，请选择 **“允许远程客户端针对 FILESTREAM 数据启用流访问”** 。 这会创建一个文件共享群集资源。  
   
 2.  设置被动节点。  
   

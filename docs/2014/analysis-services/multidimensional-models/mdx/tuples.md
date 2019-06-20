@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073769"
 ---
 # <a name="tuples"></a>元组
@@ -40,7 +40,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  为查询中的集（此处由单个元组构成）指定轴时，必须在为行轴指定集之前先为列轴指定集。 列轴也可称为“axis(0)”或简称“0”。 有关 MDX 查询的详细信息，请参阅[基本 MDX 查询 (MDX)](mdx-query-the-basic-query.md)。  
+>  为查询中的集（此处由单个元组构成）指定轴时，必须在为行轴指定集之前先为列轴指定集。 列轴也可称为“axis(0)”或简称“0”   。 有关 MDX 查询的详细信息，请参阅[基本 MDX 查询 (MDX)](mdx-query-the-basic-query.md)。  
   
 ### <a name="tuples-as-values-or-member-references"></a>作为值或成员引用的元组  
  如前面的示例所示，您可以在查询中使用元组返回该元组所引用的单元的值。 或者您也可以在表达式中使用元组显式引用该元组中指定的成员。 查询或表达式可使用返回元组或获取元组的函数。 元组可用来引用它所指定的单元的值，或者用来指定成员组合（当元组用在函数中时）。  

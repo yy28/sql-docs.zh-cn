@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080757"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>突出显示异常值（Excel 表分析工具）
@@ -37,7 +37,7 @@ ms.locfileid: "66080757"
   
 2.  指定要分析的列。  
   
-3.  单击 **“运行”**。  
+3.  单击 **“运行”** 。  
   
 4.  打开标题为的工作表\<表名 > 离群值查看找到的离群值摘要。  
   

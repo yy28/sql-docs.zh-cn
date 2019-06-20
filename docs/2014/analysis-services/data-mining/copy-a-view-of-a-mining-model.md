@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085601"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>复制挖掘模型的视图
@@ -57,13 +57,13 @@ ms.locfileid: "66085601"
   
 1.  从 **“挖掘模型查看器”** 选项卡上的 **“挖掘模型”** 列表中，选择要查看的挖掘模型。  
   
-2.  从“查看器”下拉列表中，选择“Microsoft 一般内容树查看器”。  
+2.  从“查看器”  下拉列表中，选择“Microsoft 一般内容树查看器”  。  
   
-3.  在“节点标题(唯一 ID)”窗格中，单击一个节点。  
+3.  在“节点标题(唯一 ID)”  窗格中，单击一个节点。  
   
-4.  右键单击“节点详细信息”窗格，然后选择“全选”。  
+4.  右键单击“节点详细信息”  窗格，然后选择“全选”  。  
   
-5.  右键再次单击“节点详细信息”窗格，然后选择“复制”。  
+5.  右键再次单击“节点详细信息”  窗格，然后选择“复制”  。  
   
 ## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)  

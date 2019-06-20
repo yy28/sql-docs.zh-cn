@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076256"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>创建和管理远程分区 (Analysis Services)
@@ -56,25 +56,25 @@ ms.locfileid: "66076256"
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>为多维数据集部署指定有效服务器名称（在 SSDT 中）。  
   
-1.  在主服务器：在解决方案资源管理器，右键单击解决方案名称，然后选择**属性**。 在 **“属性”** 对话框中，单击 **“配置属性”**，然后依次单击 **“部署”** 和 **“服务器”** ，并设置主服务器名称。  
+1.  在主服务器：在解决方案资源管理器，右键单击解决方案名称，然后选择**属性**。 在 **“属性”** 对话框中，单击 **“配置属性”** ，然后依次单击 **“部署”** 和 **“服务器”** ，并设置主服务器名称。  
   
-2.  在从属服务器：在解决方案资源管理器，右键单击解决方案名称，然后选择**属性**。 在 **“属性”** 对话框中，单击 **“配置属性”**，然后依次单击 **“部署”** 和 **“服务器”** ，并设置从属服务器名称。  
+2.  在从属服务器：在解决方案资源管理器，右键单击解决方案名称，然后选择**属性**。 在 **“属性”** 对话框中，单击 **“配置属性”** ，然后依次单击 **“部署”** 和 **“服务器”** ，并设置从属服务器名称。  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>创建并部署辅助数据库（在 SSDT 中）  
   
 1.  在从属服务器：创建用于存储数据库的新 Analysis Services 项目。  
   
-2.  在从属服务器：在解决方案资源管理器中创建新的数据源指向多维数据集的数据库，master 数据库。 使用访问接口“本机 OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0”。  
+2.  在从属服务器：在解决方案资源管理器中创建新的数据源指向多维数据集的数据库，master 数据库。 使用访问接口“本机 OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0”  。  
   
 3.  在从属服务器：部署解决方案。  
   
 #### <a name="enable-features-in-ssms"></a>启用功能（在 SSMS 中）  
   
-1.  在从属服务器：在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，右键单击已连接[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例中对象资源管理器，然后选择**属性**。 将“功能\LinkToOtherInstanceEnabled”和“功能\LinkFromOtherInstanceEnabled”都设置为 **True**。  
+1.  在从属服务器：在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，右键单击已连接[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例中对象资源管理器，然后选择**属性**。 将“功能\LinkToOtherInstanceEnabled”  和“功能\LinkFromOtherInstanceEnabled”  都设置为 **True**。  
   
 2.  在从属服务器：重新启动服务器，右键单击对象资源管理器中的服务器名称并选择**重新启动**。  
   
-3.  在主服务器：在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，右键单击已连接[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例中对象资源管理器，然后选择**属性**。 将“功能\LinkToOtherInstanceEnabled”和“功能\LinkFromOtherInstanceEnabled”都设置为 **True**。  
+3.  在主服务器：在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，右键单击已连接[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例中对象资源管理器，然后选择**属性**。 将“功能\LinkToOtherInstanceEnabled”  和“功能\LinkFromOtherInstanceEnabled”  都设置为 **True**。  
   
 4.  在主服务器：若要重新启动服务器，右键单击对象资源管理器中的服务器名称并选择**重新启动**。  
   
@@ -110,13 +110,13 @@ ms.locfileid: "66076256"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>设置远程分区（在 SSDT 中）  
   
-1.  在主服务器：在多维数据集设计器中打开多维数据集，然后单击**分区**选项卡。展开度量值组。 如果已为多个分区配置了度量值组，则单击“新建分区”，或单击“源”列中的浏览 (. . .) 按钮编辑现有分区。  
+1.  在主服务器：在多维数据集设计器中打开多维数据集，然后单击**分区**选项卡。展开度量值组。 如果已为多个分区配置了度量值组，则单击“新建分区”  ，或单击“源”列中的浏览 (. . .) 按钮编辑现有分区。  
   
 2.  在分区向导的 **“指定源信息”** 中，选择初始数据源视图和事实数据表。  
   
 3.  如果正在使用查询绑定，请提供将要创建的新分区的数据进行分段的 WHERE 子句。  
   
-4.  在“处理和存储位置”中，在“处理位置”下选择“远程 Analysis Services 数据源”，并单击“新建”以创建指向从属数据库 db-storage 的新数据源。  
+4.  在“处理和存储位置”  中，在“处理位置”  下选择“远程 Analysis Services 数据源”  ，并单击“新建”  以创建指向从属数据库 db-storage 的新数据源。  
   
     > [!NOTE]  
     >  如果收到错误，指示数据源在集合中不存在，则必须打开存储数据库 db-storage 的项目，并创建指向主数据库 db-master 的数据源。  

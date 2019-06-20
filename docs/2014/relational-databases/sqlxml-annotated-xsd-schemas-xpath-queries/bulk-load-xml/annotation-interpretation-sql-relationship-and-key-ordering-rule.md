@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013512"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship 和键排序规则 (SQLXML 4.0)
   由于 XML 大容量加载在其节点进入作用域时会生成记录，并在其节点退出作用域时会将这些记录发送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，因此，有关记录的数据必须存在于节点的作用域中。  
   
- 请看以下 XSD 架构，在其中之间的一个对多关系**\<客户 >** 并**\<顺序 >** （一个客户可以下多个订单） 的元素是使用指定的`<sql:relationship>`元素：  
+ 请看以下 XSD 架构，在其中之间的一个对多关系 **\<客户 >** 并 **\<顺序 >** （一个客户可以下多个订单） 的元素是使用指定的`<sql:relationship>`元素：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -58,7 +58,7 @@ ms.locfileid: "66013512"
 </xsd:schema>  
 ```  
   
- 作为**\<客户 >** 元素节点进入作用域，则 XML 大容量加载将生成客户记录。 此记录一直保持，直到 XML 大容量加载读取 **\</Customer >**。 在处理过程中**\<顺序 >** 元素节点，XML 大容量加载使用`<sql:relationship>`以获取从 CustOrder 表的 CustomerID 外键列的值**\<客户 >** 父元素，因为**\<顺序 >** 元素不指定**CustomerID**属性。 这意味着该中定义**\<客户 >** 元素中，您必须指定**CustomerID**中指定的架构属性`<sql:relationship>`。 否则为当**\<顺序 >** 元素进入作用域、 XML 大容量加载将生成 CustOrder 表的记录和当 XML 大容量加载到达 **\</o >** 结束标记时，它将发送到记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]而无需 CustomerID 外键列的值。  
+ 作为 **\<客户 >** 元素节点进入作用域，则 XML 大容量加载将生成客户记录。 此记录一直保持，直到 XML 大容量加载读取 **\</Customer >** 。 在处理过程中 **\<顺序 >** 元素节点，XML 大容量加载使用`<sql:relationship>`以获取从 CustOrder 表的 CustomerID 外键列的值 **\<客户 >** 父元素，因为 **\<顺序 >** 元素不指定**CustomerID**属性。 这意味着该中定义 **\<客户 >** 元素中，您必须指定**CustomerID**中指定的架构属性`<sql:relationship>`。 否则为当 **\<顺序 >** 元素进入作用域、 XML 大容量加载将生成 CustOrder 表的记录和当 XML 大容量加载到达 **\</o >** 结束标记时，它将发送到记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]而无需 CustomerID 外键列的值。  
   
  将在该示例中提供的架构另存为 SampleSchema.xml。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66013512"
     set objBL=Nothing  
     ```  
   
-     结果是 XML 大容量加载在 CustOrder 表的 CustomerID 外键列中插入一个 NULL 值。 如果要修改的 XML 示例数据，以便 **\<CustomerID >** 子元素出现之前**\<顺序 >** 子元素，您将得到预期的结果：XML 大容量加载将指定的外键值插入到列。  
+     结果是 XML 大容量加载在 CustOrder 表的 CustomerID 外键列中插入一个 NULL 值。 如果要修改的 XML 示例数据，以便 **\<CustomerID >** 子元素出现之前 **\<顺序 >** 子元素，您将得到预期的结果：XML 大容量加载将指定的外键值插入到列。  
   
  以下是等效的 XDR 架构：  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a39cbc319b7b0a62f31b55ded8adfe60a49314b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066562"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>指定“标记为日期表”以便用于时间智能（SSAS 表格）
@@ -36,7 +36,7 @@ ms.locfileid: "66066562"
   
 1.  在模型设计器中，单击日期表。  
   
-2.  单击 **“表”** 菜单，然后依次单击 **“日期”** 和 **Mark as “日期” “表”**。  
+2.  单击 **“表”** 菜单，然后依次单击 **“日期”** 和 **Mark as “日期” “表”** 。  
   
 3.  在 **“标记日期表”** 对话框的 **“日期”** 列表框中，选择要用作唯一标识符的列。 此列必须包含唯一值，并且数据类型应为 Date。 例如：  
   

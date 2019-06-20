@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5da958d15c211063165de110d91910e378c940b6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983098"
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
@@ -55,7 +55,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文目录的标识符。|  
 |**NAME**|**sysname**|全文目录的名称。|  
-|PATH|nvarchar(260)|从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。|  
+|PATH |nvarchar(260) |从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。|  
 |**状态**|**int**|目录的全文索引填充状态：<br /><br /> 0 = 空闲<br /><br /> 1 = 正在进行完全填充<br /><br /> 2 = 已暂停<br /><br /> 3 = 已中止<br /><br /> 4 = Recovering<br /><br /> 5 = 关闭<br /><br /> 6 = 正在进行增量填充<br /><br /> 7 = 正在生成索引<br /><br /> 8 = 磁盘已满。 已暂停<br /><br /> 9 = 更改跟踪<br /><br /> NULL = 用户没有对全文目录的 VIEW 权限，或者未全文启用数据库，或者未安装全文组件。|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|与目录关联的全文索引表的数量。|  
   

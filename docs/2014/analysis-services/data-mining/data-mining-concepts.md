@@ -25,16 +25,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4217c455433f2fec4ebbe64b77346c54a6d47827
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085070"
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
   数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
   
- 这些模式和趋势可以被收集在一起并定义为“数据挖掘模型” 。 挖掘模型可以应用于特定的方案，例如：  
+ 这些模式和趋势可以被收集在一起并定义为“数据挖掘模型”  。 挖掘模型可以应用于特定的方案，例如：  
   
 -   **预测**:估计销售量、 预测服务器负载或服务器停机时间  
   
@@ -132,7 +132,7 @@ ms.locfileid: "66085070"
   
  通过创建挖掘结构定义要使用的数据列。 将挖掘结构链接到数据源，但只有对挖掘结构进行处理后，该结构才会实际包含数据。 处理挖掘结构时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 生成可用于分析的聚合信息以及其他统计信息。 基于该结构的所有挖掘模型均可使用该信息。 有关挖掘结构如何与挖掘模型关联的详细信息，请参阅[逻辑体系结构（Analysis Services - 数据挖掘）](logical-architecture-analysis-services-data-mining.md)。  
   
- 在处理结构和模型之前，数据挖掘模型也只是一个容器，它指定用于输入的列、要预测的属性以及指示算法如何处理数据的参数。 处理模型通常称为“定型 ”。 定型表示向结构中的数据应用特定数学算法以便提取模式的过程。 在定型过程中找到的模式取决于选择的定型数据、所选算法以及如何配置该算法。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包含多种不同算法，每种算法适合不同的任务类型，并且每种算法创建不同的模型类型。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的算法列表，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)。  
+ 在处理结构和模型之前，数据挖掘模型也只是一个容器，它指定用于输入的列、要预测的属性以及指示算法如何处理数据的参数。 处理模型通常称为“定型  ”。 定型表示向结构中的数据应用特定数学算法以便提取模式的过程。 在定型过程中找到的模式取决于选择的定型数据、所选算法以及如何配置该算法。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包含多种不同算法，每种算法适合不同的任务类型，并且每种算法创建不同的模型类型。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的算法列表，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)。  
   
  此外，还可以使用参数调整每种算法，并向定型数据应用筛选器，以便仅使用数据子集，进而创建不同结果。 在通过模型传递数据之后，即可查询挖掘模型对象包含的摘要和模式，并将其用于预测。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66085070"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可帮助您将数据分成定型数据集和测试数据集，使您可以更准确地评估基于相同数据的所有模型的性能。 您使用定型数据集生成模型，并通过创建预测查询来使用测试数据集测试模型的准确性。 在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中，生成挖掘模型时可自动执行该分区操作。 有关详细信息，请参阅 [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)生成数据挖掘项目。  
   
- 可以使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中数据挖掘设计器内的查看器来浏览算法发现的趋势和模式。 有关详细信息，请参阅 [数据挖掘模型查看器](data-mining-model-viewers.md)。 还可以使用该设计器中的工具（如，提升图和分类矩阵）来测试模型创建预测的性能。 若要验证模型是否特定于你的数据，或者是否可用于推断总体，可以使用称为交叉验证的统计方法来自动创建数据子集，并参照每个子集测试模型。 有关详细信息，请参阅 [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)生成数据挖掘项目。  
+ 可以使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中数据挖掘设计器内的查看器来浏览算法发现的趋势和模式。 有关详细信息，请参阅 [数据挖掘模型查看器](data-mining-model-viewers.md)。 还可以使用该设计器中的工具（如，提升图和分类矩阵）来测试模型创建预测的性能。 若要验证模型是否特定于你的数据，或者是否可用于推断总体，可以使用称为交叉验证  的统计方法来自动创建数据子集，并参照每个子集测试模型。 有关详细信息，请参阅 [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)生成数据挖掘项目。  
   
  如果您在 [生成模型](#BuildingModels) 步骤中创建的所有模型都无法正常工作，则必须返回到此过程的上一个步骤，并重新定义问题或重新调查原始数据集中的数据。  
   

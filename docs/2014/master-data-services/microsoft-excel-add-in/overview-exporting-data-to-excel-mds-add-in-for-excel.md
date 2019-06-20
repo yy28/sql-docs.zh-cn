@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482804"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>加载数据（用于 Excel 的 MDS 外接程序）
@@ -22,7 +22,7 @@ ms.locfileid: "65482804"
   
  您可以加载的数据仅限于您具有访问权限的数据。 访问数据的权限是在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序中或以编程方式设置的。  
   
- 加载大量数据时，您可以设置在数据可能需要较长时间加载时显示警告。 若要执行此操作，请在 **“选项”** 组中单击 **“设置”**。 在 **“数据”** 选项卡上，选择 **“显示针对大型数据集的筛选警告”**。  
+ 加载大量数据时，您可以设置在数据可能需要较长时间加载时显示警告。 若要执行此操作，请在 **“选项”** 组中单击 **“设置”** 。 在 **“数据”** 选项卡上，选择 **“显示针对大型数据集的筛选警告”** 。  
   
 > [!WARNING]  
 >  只能使用用于 Excel 的 MDS 外接程序在 Excel 中打开和更新启用 MDS 的工作薄。 不支持在未安装 MDS Excel 外接程序的计算机上的 Excel 中打开启用 MDS 的工作簿，并且可能导致工作簿文件损坏。 若要与他人共享数据，应该通过电子邮件向他人发送快捷查询文件，而不是保存该工作表并通过电子邮件发送。 有关查询的详细信息，请参阅[以电子邮件形式发送快捷查询文件（用于 Excel 的 MDS 外接程序）](email-a-shortcut-query-file-mds-add-in-for-excel.md)。  

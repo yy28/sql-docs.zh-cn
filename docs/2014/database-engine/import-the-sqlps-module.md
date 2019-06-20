@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 303d4cb75ad678ddd0c0f49e204566fc8a0d2c2c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064728"
 ---
 # <a name="import-the-sqlps-module"></a>导入 SQLPS 模块
   从 PowerShell 管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的建议的方法是将 `sqlps` 模块导入到 Windows PowerShell 2.0 环境中。 该模块将加载并注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理单元和可管理性程序集。  
   
-1.  **开始之前：**[安全性](#Security)  
+1.  **开始之前：** [安全性](#Security)  
   
-2.  **若要加载的模块：**[加载 sqlps 模块](#LoadSqlps)  
+2.  **若要加载的模块：** [加载 sqlps 模块](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>开始之前  
  在将 `sqlps` 模块导入到 Windows PowerShell 后，您可以：  

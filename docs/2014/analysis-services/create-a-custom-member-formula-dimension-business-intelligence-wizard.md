@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3976d9bd4c6f76e9bb970bce280c1e2da0d6fe22
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086944"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>创建自定义成员公式（维度）（商业智能向导）

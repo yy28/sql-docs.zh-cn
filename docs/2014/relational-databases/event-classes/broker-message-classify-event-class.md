@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4398085227952f30e4df7d54ac78c1aef1355173
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62664046"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify 事件类
@@ -33,7 +33,7 @@ ms.locfileid: "62664046"
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**EventClass**|**int**|捕获的事件类的类型。 **Broker:Message Classify** 始终为 **141**。|27|否|  
 |**EventSequence**|**int**|此事件的序列号。|51|否|  
-|**EventSubClass**|**nvarchar**|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> **本地**:所选路由具有 LOCAL 地址。<br /><br /> **远程**:所选路由具有非 LOCAL 地址。<br /><br /> **延迟**:消息被延迟，因为禁止转发或者没有匹配的路由。|21|是|  
+|**EventSubClass**|**nvarchar**|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> **本地**：所选路由具有 LOCAL 地址。<br /><br /> **远程**：所选路由具有非 LOCAL 地址。<br /><br /> **已延迟**：由于禁止转发或未出现匹配的路由，因此消息被延迟。|21|是|  
 |**FileName**|**nvarchar**|消息定向到的服务名称。|36|否|  
 |**GUID**|**uniqueidentifier**|对话的会话 ID。 此标识符将作为消息的一部分进行传输，并在会话双方之间共享。|54|否|  
 |**HostName**|**nvarchar**|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  

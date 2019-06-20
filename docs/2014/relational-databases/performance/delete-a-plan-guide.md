@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38065b8cc27526cccc8c1554b25a288662fef8a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151164"
 ---
 # <a name="delete-a-plan-guide"></a>删除计划指南
@@ -49,9 +49,9 @@ ms.locfileid: "63151164"
   
 2.  单击加号以便展开 **“计划指南”** 文件夹。  
   
-3.  右键单击要删除的计划指南，然后选择“删除”。  
+3.  右键单击要删除的计划指南，然后选择“删除”  。  
   
-4.  在 **“删除对象”** 对话框中，确保已选择正确的计划指南，然后单击 **“确定”**。  
+4.  在 **“删除对象”** 对话框中，确保已选择正确的计划指南，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -59,9 +59,9 @@ ms.locfileid: "63151164"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     --Create a procedure on which to define the plan guide.  
@@ -100,9 +100,9 @@ ms.locfileid: "63151164"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

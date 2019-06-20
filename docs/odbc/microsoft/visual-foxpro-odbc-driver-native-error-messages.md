@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065104"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC 驱动程序本机错误消息
@@ -296,7 +296,7 @@ ms.locfileid: "63065104"
 |901|函数参数的值、 类型或计数无效。|  
 |902|表达式计算器失败。|  
 |903|字符串是太长而无法容纳。|  
-|904|* * 或 ^ 域错误。|  
+|904|\* * 或 ^ 域错误。|  
 |905|LOG （):零或负用作参数。|  
 |906|Sqrt （） 参数不能为负。|  
 |912|操作是无效的通用字段。|  

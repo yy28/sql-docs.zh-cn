@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084132"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 关联算法技术参考
@@ -33,7 +33,7 @@ ms.locfileid: "66084132"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法均可用于分析关联，但每种算法找到的规则可能不同。 在决策树模型中，导致特定规则的拆分基于信息获取，而在关联模型中，规则完全基于置信度。 因此，在关联模型中，强规则或具有高置信度的规则由于不提供新信息，可能不一定会受到关注。  
   
 ## <a name="implementation-of-the-microsoft-association-algorithm"></a>Microsoft 关联算法的实现  
- Apriori 算法不分析模式，而是生成“候选项集 ”，然后计算该项集的数目。 根据要分析的数据类型，项目可表示事件、产品或属性值。  
+ Apriori 算法不分析模式，而是生成“候选项集  ”，然后计算该项集的数目。 根据要分析的数据类型，项目可表示事件、产品或属性值。  
   
  在最常见的关联模型类型布尔变量下，表示将 Yes/No 或 Missing/Existing 值分配给每个属性，如产品名称或事件名称。 例如，市场篮分析就是关联规则模型的一个示例，它使用布尔变量表示特定产品在客户的购物篮是存在还是不存在。  
   
@@ -42,19 +42,19 @@ ms.locfileid: "66084132"
  也可以为数值属性创建关联模型。 如果属性是连续的，则可以将数值“  离散化”或使用存储桶对其进行分组。 然后，即可将离散化值作为布尔值或属性值对来处理。  
   
 ### <a name="support-probability-and-importance"></a>支持、概率和重要性  
- “支持”（有时候将其称为“频率”）表示包含目标项目或项目组合的事例的数目。 只有至少具有指定支持量的项目才可包含在模型中。  
+ “支持”（有时候将其称为“频率”）表示包含目标项目或项目组合的事例的数目   。 只有至少具有指定支持量的项目才可包含在模型中。  
   
- “常用项集”指满足以下条件的项目集合：该项目集合所具有的支持超过由 MINIMUM_SUPPORT 参数定义的阈值。 例如，如果项集为 {A,B,C} 且 MINIMUM_SUPPORT 值为 10，则每个单个项目 A、B 和 C 必须均可在要包括在模型中的至少 10 个事例中找到，而且项目 {A,B,C} 的组合也必须可在至少 10 个事例中找到。  
+ “常用项集”  指满足以下条件的项目集合：该项目集合所具有的支持超过由 MINIMUM_SUPPORT 参数定义的阈值。 例如，如果项集为 {A,B,C} 且 MINIMUM_SUPPORT 值为 10，则每个单个项目 A、B 和 C 必须均可在要包括在模型中的至少 10 个事例中找到，而且项目 {A,B,C} 的组合也必须可在至少 10 个事例中找到。  
   
  **注意** 通过指定项集的最大长度（这里长度指项目数目），还可控制挖掘模型中项集的数目。  
   
  默认情况下，对任何特定项目或项集的支持均表示包含该项目或项集的事例的计数。 不过，还可以将 MINIMUM_SUPPORT 表示为占数据集的总事例的百分比，方法是键入数字作为小于 1 的小数值。 例如，如果指定 MINIMUM_SUPPORT 值为 0.03，就意味着至少有 3% 的数据集总事例必须包含该项目或项集以包含在模型中。 应当试用模型，以确定是使用计数还是百分比更有意义。  
   
- 恰恰相反，规则的阈值不用计数或百分比表示，而用概率（有时称为“置信度 ”）表示。 例如，如果项集 {A,B,C} 和项集 {A,B,D} 均出现在 50 个事例中，而项集 {A,B} 出现在另外 50 个事例中，则很明显，{A,B} 不是 {C} 的强预测因子。 因此，为了将某个特定结果对所有已知结果加权， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 通过将项集 {A,B,C} 支持除以所有相关项集支持来计算单个规则的概率（例如 If {A,B} Then {C}）。  
+ 恰恰相反，规则的阈值不用计数或百分比表示，而用概率（有时称为“置信度  ”）表示。 例如，如果项集 {A,B,C} 和项集 {A,B,D} 均出现在 50 个事例中，而项集 {A,B} 出现在另外 50 个事例中，则很明显，{A,B} 不是 {C} 的强预测因子。 因此，为了将某个特定结果对所有已知结果加权， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 通过将项集 {A,B,C} 支持除以所有相关项集支持来计算单个规则的概率（例如 If {A,B} Then {C}）。  
   
  可以通过设置 MINIMUM_PROBABILITY 的值来限制模型生成的规则的数目。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为创建的每个规则输出一个指示其“重要性”（也称为“提升”）的分数。 项集和规则的提升重要性的计算方法不同。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为创建的每个规则输出一个指示其“重要性”（也称为“提升”）的分数   。 项集和规则的提升重要性的计算方法不同。  
   
  项集重要性的计算方法为项集概率除以项集中各个项的合成概率。 例如，如果项集包含 {A,B}， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 首先计算包含此 A 和 B 组合的所有事例的数目，并用此事例数除以事例总数，然后将得到的概率规范化。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66084132"
   
  默认值为 0。 使用默认值时，算法生成的预测与在查询中请求的预测数量相同。  
   
- 如果为 OPTIMIZED_PREDICTION_COUNT 指定非零值，即使你请求了其他预测，预测查询也将最多返回指定项目数。 不过，设置值可提高预测性能。  
+ 如果为 OPTIMIZED_PREDICTION_COUNT 指定非零值，即使你请求了其他预测，预测查询也将最多返回指定项目数  。 不过，设置值可提高预测性能。  
   
  例如，如果将该值设置为 3，算法将仅缓存 3 个项目进行预测。 无法看到与返回的这 3 个项目具有同等可能的其他预测。  
   

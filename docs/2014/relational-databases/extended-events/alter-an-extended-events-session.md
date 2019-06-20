@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128604"
 ---
 # <a name="alter-an-extended-events-session"></a>更改扩展事件会话
@@ -38,15 +38,15 @@ ms.locfileid: "63128604"
 -   更改高级属性配置。  
   
 > [!NOTE]  
->  “SQL Server 扩展事件向导”不支持事件会话修改。  
+>  “SQL Server 扩展事件向导”  不支持事件会话修改。  
   
 ## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>如何使用 SQL Server 扩展事件向导更改扩展事件会话  
   
--   在对象资源管理器中，依次展开 **“管理”**、 **“扩展事件”** 和 **“会话”**。  
+-   在对象资源管理器中，依次展开 **“管理”** 、 **“扩展事件”** 和 **“会话”** 。  
   
--   右键单击要更改的会话，然后单击“属性”。  
+-   右键单击要更改的会话，然后单击“属性”  。  
   
--   在 **“属性”** 对话框中进行相应的更改，然后单击 **“确定”**。  
+-   在 **“属性”** 对话框中进行相应的更改，然后单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [ALTER EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/alter-event-session-transact-sql)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085493"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>通过模板创建单独预测查询
@@ -41,31 +41,31 @@ AS [t]
   
 ### <a name="to-open-a-prediction-query-template"></a>打开预测查询模板  
   
-1.  在“模板资源管理器”的“Analysis Server”模板列表中，依次展开“DMX”和“预测查询”。  
+1.  在“模板资源管理器”  的“Analysis Server”模板列表中，依次展开“DMX”  和“预测查询”  。  
   
-2.  双击“单独预测”。  
+2.  双击“单独预测”  。  
   
 3.  在 **“连接到 Analysis Services”** 对话框中，键入服务器的名称，该服务器具有包含要查询的挖掘模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-4.  单击 **“连接”**。  
+4.  单击 **“连接”** 。  
   
 5.  模板在指定的数据库中打开，同时打开的还有挖掘模型对象浏览器，其中包含数据挖掘函数和数据挖掘结构以及相关模型的列表。  
   
 ### <a name="to-customize-the-singleton-query-template"></a>自定义单独查询模板  
   
-1.  在模板中，单击“可用数据库”下拉列表，然后从列表中选择一个 Analysis Service 实例。  
+1.  在模板中，单击“可用数据库”  下拉列表，然后从列表中选择一个 Analysis Service 实例。  
   
 2.  在 **“挖掘模型”** 列表中，选择您要查询的挖掘模型。  
   
      挖掘模型中的列的列表显示在对象浏览器的 **“元数据”** 窗格中。  
   
-3.  在 **“查询”** 菜单上，选择 **“指定模板参数的值”**。  
+3.  在 **“查询”** 菜单上，选择 **“指定模板参数的值”** 。  
   
-4.  在“选择列表”行，键入 * 以返回所有列，或键入以逗号分隔的列和表达式的列表以返回特定的列。  
+4.  在“选择列表”  行，键入 * 以返回所有列，或键入以逗号分隔的列和表达式的列表以返回特定的列。  
   
      如果您键入 *，则会返回可预测列以及您在步骤 6 中为其提供新值的任何列。  
   
-     对于本主题开头部分显示的示例代码，“选择列表”行设置为 *。  
+     对于本主题开头部分显示的示例代码，“选择列表”  行设置为 *。  
   
 5.  在 **“挖掘模型”** 行，键入显示在 **“对象资源管理器”** 中的挖掘模型列表中的挖掘模型的名称。  
   
@@ -90,7 +90,7 @@ AS [t]
   
      对于本主题开头部分显示的示例代码，其他查询条件设置为 `'45' as [Age]`。  
   
-11. 单击 **“执行”**。  
+11. 单击 **“执行”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [创建预测（数据挖掘基础教程）](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  

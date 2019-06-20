@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b27bc6e2a9e75ee7112269fc3af5dc1ba7a4bbe0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488170"
 ---
 # <a name="export-data-to-excel-from-master-data-services"></a>Export Data to Excel from Master Data Services
@@ -37,20 +37,20 @@ ms.locfileid: "65488170"
   
 2.  在 **“主数据资源管理器”** 窗格中，选择所需模型和版本。 随之填充实体列表。  
   
-    -   如果 **“主数据资源管理器”** 窗格不可见，请在 **“连接并加载”** 组中，单击 **“显示资源管理器”**。  
+    -   如果 **“主数据资源管理器”** 窗格不可见，请在 **“连接并加载”** 组中，单击 **“显示资源管理器”** 。  
   
     -   如果 **“主数据资源管理器”** 窗格被禁用，则是因为现有工作表中已包含 MDS 管理的数据。 若要启用该窗格，请打开一个新工作表。  
   
-3.  在“主数据资源管理器”窗格的实体列表中，双击要加载的实体。  
+3.  在“主数据资源管理器”  窗格的实体列表中，双击要加载的实体。  
   
     > [!NOTE]  
-    >  -   只有前一百万个成员才能加载到 Excel 中。 若要在加载前对列表进行筛选，请在 **“连接并加载”** 组中，单击 **“筛选器”**。  
+    >  -   只有前一百万个成员才能加载到 Excel 中。 若要在加载前对列表进行筛选，请在 **“连接并加载”** 组中，单击 **“筛选器”** 。  
     > -   在作为约束列表（基于域的属性）的列中，默认情况下只加载前 25,000 个值。 您可以在 excelusersettings.config 文件（位于安装 Excel 的计算机上）的 MaximumDbaEntitySize 属性中更改该数值。 此文件位于 C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server\130\MasterDataServices\\。  
     >   
     >      如果基于域的属性的值数超过 MaximumDbEntitySize 属性设置，则不会加载值列表。  
   
     > [!NOTE]  
-    >  使用用于 32 位 Excel 的 Microsoft Excel 外接程序加载文本分隔数据时，如果“要加载的单元计数”和“要发布的单元计数”属性均设置为最大值 1000，则将出现内存不足错误。 必须使用 64 位 Excel，才能使用“要加载的单元计数”和“要发布的单元计数”的最大值设置。  
+    >  使用用于 32 位 Excel 的 Microsoft Excel 外接程序加载文本分隔数据时，如果“要加载的单元计数”  和“要发布的单元计数”  属性均设置为最大值 1000，则将出现内存不足错误。 必须使用 64 位 Excel，才能使用“要加载的单元计数”  和“要发布的单元计数”  的最大值设置。  
   
 ## <a name="next-steps"></a>后续步骤  
  [将数据从 Excel 导入 Master Data Services（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  

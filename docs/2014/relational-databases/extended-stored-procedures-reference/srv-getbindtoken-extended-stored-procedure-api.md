@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dec2e73de3c4c3525b29b44b7c4563a7fd6887ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127304"
 ---
 # <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken（扩展存储过程 API）
@@ -34,7 +34,7 @@ ms.locfileid: "63127304"
   
  获取调用该扩展存储过程的当前客户端会话中事务的绑定令牌。  
   
- 该扩展存储过程然后可以使用 sp_bindsession 将它针对同一服务器创建的任意新会话绑定到现有事务，以便新会话可以与调用了该扩展存储过程的客户端会话共享同一事务锁空间。  
+ 该扩展存储过程然后可以使用 sp_bindsession 将它针对同一服务器创建的任意新会话绑定到现有事务，以便新会话可以与调用了该扩展存储过程的客户端会话共享同一事务锁空间  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,10 +51,10 @@ bindtoken
 ```  
   
 ## <a name="arguments"></a>参数  
- srvproc  
+ srvproc   
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的所有信息。  
   
- bindtoken  
+ bindtoken   
  指向要复制绑定令牌的缓冲区的指针。 该绑定令牌用以 Null 值结束的字符串表示。 指定的缓冲区长度至少为 255 个字节。  
   
 ## <a name="returns"></a>返回  
@@ -64,11 +64,11 @@ bindtoken
   
 ### <a name="to-bind-an-extended-stored-procedure-session-to-the-client-session-that-called-it-so-they-share-the-same-transaction-lock-space"></a>将扩展存储过程会话绑定到调用它的客户端会话以便它们共享同一事务锁空间  
   
-1.  扩展存储过程调用 svr_getbindtoken 获取会话中当前事务的绑定令牌。 在给定的 bindtoken 参数中返回该令牌。  
+1.  扩展存储过程调用 svr_getbindtoken 获取会话中当前事务的绑定令牌  。 在给定的 bindtoken 参数中返回该令牌  。  
   
-2.  扩展存储过程打开针对同一服务器的新会话。 在该会话内，扩展存储过程将绑定令牌用于 sp_bindsession 以将新会话绑定到同一事务。 扩展存储过程可以创建多个会话并将所有会话绑定到同一事务。  
+2.  扩展存储过程打开针对同一服务器的新会话。 在该会话内，扩展存储过程将绑定令牌用于 sp_bindsession 以将新会话绑定到同一事务  。 扩展存储过程可以创建多个会话并将所有会话绑定到同一事务。  
   
-3.  当外部存储过程返回空字符串或使用空字符串调用 sp_bindsession 时，解除对会话的绑定。  
+3.  当外部存储过程返回空字符串或使用空字符串调用 sp_bindsession 时，解除对会话的绑定  。  
   
     > [!NOTE]  
     >  一次只能有一个绑定会话可以访问共享连接。 如果当前一个会话正在服务器上执行一个语句或其结果从服务器挂起，则在当前会话完成执行当前语句之前，其他共享同一绑定连接的会话都不能访问服务器。 如果在服务器忙时会话试图访问该连接，将为冲突的会话返回错误，指明连接正在使用中，会话应稍后重试。  

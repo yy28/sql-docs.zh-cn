@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: febaae6051e8428d3fed2bb6533ce2c4d972950f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078061"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>“级别命名模板”对话框（Analysis Services - 多维数据）

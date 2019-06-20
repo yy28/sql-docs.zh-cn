@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e11d8cddaa780e6572bdb9e8116fa970fc9ef95
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070121"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>查看将要优化的查询（基于使用情况的优化向导）

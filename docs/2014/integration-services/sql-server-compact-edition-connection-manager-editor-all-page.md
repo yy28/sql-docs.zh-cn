@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055466"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 连接管理器编辑器（“全部”页）
@@ -49,7 +49,7 @@ ms.locfileid: "66055466"
  指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的最大大小 (MB)。  
   
  **模式**  
- 指定打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的文件模式。 此属性的默认值为 **“读写”**。  
+ 指定打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 数据库的文件模式。 此属性的默认值为 **“读写”** 。  
   
  “模式”选项包含四个值，如下表所述：  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204809"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>创建预测结构和模型（数据挖掘中级教程）
@@ -24,15 +24,15 @@ ms.locfileid: "63204809"
   
 1.  在解决方案资源管理器中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，右键单击**挖掘结构**，然后选择**新建挖掘结构**。  
   
-2.  在 **“欢迎使用数据挖掘向导”** 页上，单击 **“下一步”**。  
+2.  在 **“欢迎使用数据挖掘向导”** 页上，单击 **“下一步”** 。  
   
 3.  上**选择定义方法**页上，确认**从现有关系数据库或数据仓库**已选择，然后单击**下一步**。  
   
-4.  上**创建数据挖掘结构**页面上，在**想要使用何种数据挖掘技术？**，选择**Microsoft 时序**，然后单击**下一步**。  
+4.  上**创建数据挖掘结构**页面上，在**想要使用何种数据挖掘技术？** ，选择**Microsoft 时序**，然后单击**下一步**。  
   
 5.  上**选择数据源视图**页面上，在**可用数据源视图**，选择**SalesByRegion**。  
   
-6.  单击“下一步” 。  
+6.  单击“下一步”  。  
   
 7.  上**指定表类型**页上，确保中的复选框**用例**vTimeSeries 表的列已选中，然后单击**下一步**。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63204809"
   
      ModelRegion 列被指定为**键**列，ReportingDate 列将自动指定为**Key Time**列。 您只能拥有一种类型的键。  
   
-11. 单击“下一步” 。  
+11. 单击“下一步”  。  
   
 12. 上**完成向导**页上，对于**挖掘结构名称**，类型`Forecasting`。  
   

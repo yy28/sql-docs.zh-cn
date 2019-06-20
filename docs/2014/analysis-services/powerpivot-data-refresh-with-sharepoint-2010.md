@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04dea4a32303e06d7f0e6c015eef38ba6d267a30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070853"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>使用 SharePoint 2010 进行 PowerPivot 数据刷新

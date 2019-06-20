@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3d20276a90a64ca414b8bb6253b03df08908a1f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921240"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>还原数据库备份 (SQL Server Management Studio)
@@ -32,13 +32,13 @@ ms.locfileid: "62921240"
 > [!IMPORTANT]  
 >  在完整恢复模式或大容量日志恢复模式下，必须先备份活动事务日志（称为日志尾部），然后才能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中还原数据库。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)数据库还原到一个新位置并且可以选择重命名该数据库。 若要还原已加密的数据库，您必须有权访问用于对数据库进行加密的证书或非对称密钥。 如果没有证书或非对称密钥，数据库将无法还原。 因此，只要需要该备份，就必须保留用于对数据库加密密钥进行加密的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)。  
   
- 请注意，如果您将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的数据库还原为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于“全文升级选项”服务器属性的设置。 如果将升级选项设置为“导入”或“重新生成”，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+ 请注意，如果您将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的数据库还原为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于“全文升级选项”  服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”  时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”  属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
 ### <a name="to-restore-a-full-database-backup"></a>还原完整数据库备份  
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
+2.  展开 **“数据库”** 。  根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
 3.  右键单击该数据库，指向**任务**，依次指向**还原**，然后单击**数据库**，这将打开**Restore Database**对话框。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62921240"
   
     -   **“设备”**  
   
-         单击“浏览”按钮 (**...**) 以打开“选择备份设备”对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”**。  
+         单击“浏览”按钮 ( **...** ) 以打开“选择备份设备”  对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”** 。  
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62921240"
   
 6.  在 **“还原到”** 框中，保留默认选项 **“至最近一次进行的备份”** ，或者单击 **“时间线”** 访问 **“备份时间线”** 对话框以手动选择要停止恢复操作的时间点。 有关指定特定时间点的详细信息，请参阅 [Backup Timeline](backup-timeline.md)。  
   
-7.  在 **“要还原的备份集”** 网格中，选择要还原的备份。 此网格将显示对于指定位置可用的备份。 默认情况下，系统会推荐一个恢复计划。 若要覆盖建议的恢复计划，可以更改网格中的选择。 当取消选择某个早期备份时，将自动取消选择那些需要还原该早期备份才能进行的备份。 有关“用于还原的备份集”网格中的列的信息，请参阅[还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)。  
+7.  在 **“要还原的备份集”** 网格中，选择要还原的备份。 此网格将显示对于指定位置可用的备份。 默认情况下，系统会推荐一个恢复计划。 若要覆盖建议的恢复计划，可以更改网格中的选择。 当取消选择某个早期备份时，将自动取消选择那些需要还原该早期备份才能进行的备份。 有关“用于还原的备份集”  网格中的列的信息，请参阅[还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)。  
   
 8.  或者单击 **“选择页”** 窗格中的 **“文件”** ，以便访问 **“文件”** 对话框。 在该对话框中，您可以通过在 **“将数据库文件还原为”** 网格中指定每个文件的新还原目标，将数据库还原到新的位置。 有关该网格的详细信息，请参阅[还原数据库（“文件”页）](restore-database-files-page.md)。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62921240"
   
         -   **RESTORE WITH STANDBY** 使数据库处于只读模式。 它撤消未提交的事务，但将撤消操作保存在备用文件中，以便能够还原恢复结果。  
   
-    3.  如果对于选择的时间点是必需的，则选择“还原前进行结尾日志备份”。 无需修改此设置，但可以选择备份日志尾部（即使不需要）。 此处为文件名？ 如果 **“常规”** 页面中的每一个备份设置为 Windows Azure，则尾部日志也将备份到同一存储容器中。  
+    3.  如果对于选择的时间点是必需的，则选择“还原前进行结尾日志备份”  。 无需修改此设置，但可以选择备份日志尾部（即使不需要）。 此处为文件名？ 如果 **“常规”** 页面中的每一个备份设置为 Windows Azure，则尾部日志也将备份到同一存储容器中。  
   
     4.  如果存在与数据库的活动连接，则还原操作可能会失败。 选中 **“关闭现有连接”** 以确保关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和数据库之间的所有活动连接。 此复选框可在执行还原操作之前将数据库设置为单用户模式，并在该操作完成后将数据库设置为多用户模式。  
   

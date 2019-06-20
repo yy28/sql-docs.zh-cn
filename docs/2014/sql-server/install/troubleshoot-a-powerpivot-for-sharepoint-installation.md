@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fc6e01ff69850cb4faf9240c9dc0247ba0d01f11
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091775"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>排除 PowerPivot for SharePoint 安装故障
@@ -33,12 +33,12 @@ ms.locfileid: "66091775"
   
 1.  在 PowerPivot Gallery 库中，单击**站点设置**从齿轮图标![SharePoint 设置](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")或**主页**列表。  
   
-2.  在 **“网站集管理”** 部分，单击 **“网站集功能”**。  
+2.  在 **“网站集管理”** 部分，单击 **“网站集功能”** 。  
   
-3.  单击 **“网站集功能”**。  
+3.  单击 **“网站集功能”** 。  
   
 4.  验证是否**PowerPivot 功能集成的站点集合**是**Active**。  
   
- 有关此问题的其他原因，请参阅[PowerPivot 库将显示红色 X 图标](https://support.microsoft.com/kb/2361559)(https://support.microsoft.com/kb/2361559)。  
+ 有关此问题的其他原因，请参阅[PowerPivot 库将显示红色 X 图标](https://support.microsoft.com/kb/2361559)(https://support.microsoft.com/kb/2361559) 。  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8543f1a7bd14db09873aaefb58b74efae0f3cf34
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061639"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 源编辑器（“错误输出”页）
@@ -28,21 +28,21 @@ ms.locfileid: "66061639"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 源的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 ADO NET 源。  
+2.  在“数据流”  选项卡上，双击 ADO NET 源。  
   
-3.  在 **“ADO NET 源编辑器”** 中，单击 **“错误输出”**。  
+3.  在 **“ADO NET 源编辑器”** 中，单击 **“错误输出”** 。  
   
 ## <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   
  **列**  
- 查看在“ADO NET 源编辑器”对话框的“连接管理器”页上选择的外部（源）列。  
+ 查看在“ADO NET 源编辑器”对话框的“连接管理器”页上选择的外部（源）列   。  
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](data-flow/error-handling-in-data.md)  
   
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  

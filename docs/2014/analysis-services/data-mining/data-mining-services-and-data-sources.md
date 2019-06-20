@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084919"
 ---
 # <a name="data-mining-services-and-data-sources"></a>数据挖掘服务和数据源
@@ -23,7 +23,7 @@ ms.locfileid: "66084919"
  本主题提供了在连接到 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例以创建、处理、部署或查询数据挖掘模型时需要了解的信息。  
   
 ## <a name="data-mining-services"></a>数据挖掘服务  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器组件是应用程序 msmdsrv.exe，该程序通常作为一项 Windows 服务来运行。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器组件是应用程序 msmdsrv.exe，该程序通常作为一项 Windows 服务来运行。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
   
 -   分析从客户端接收的语句  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66084919"
 |----------|-----------------|  
 |2383|默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。|  
 |2382|其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的重定向程序。|  
-|在服务器启动时动态分配| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的命名实例。|  
+|在服务器启动时动态分配|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的命名实例。|  
   
  有关控制此服务所用端口的详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66084919"
  还可以设置允许用户优化服务器并控制客户端使用的安全性的属性。 有关详细信息，请参阅 [Feature Properties](../server-properties/feature-properties.md)。  
   
 > [!NOTE]  
->  有关支持的各个版本的插件算法的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  有关支持的各个版本的插件算法的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>对数据挖掘对象的编程访问  
  您可以使用下列对象模型创建与 Analysis Services 数据库的连接和处理数据挖掘对象：  

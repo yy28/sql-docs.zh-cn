@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078430"
 ---
 # <a name="lesson-7-create-measures"></a>第 7 课：创建度量值
   在本课中，您将创建要包括在您的模型中的度量值。 与您在前一课中创建的计算列类似，度量值从根本上来说是使用 DAX 公式创建的计算。 但是，与计算列不同，度量值是基于用户选择的*筛选器*进行计算的；例如，添加到数据透视表中的“行标签”字段中的特定列或切片器。   然后，由所应用的度量值计算出筛选器中每个单元的值。 度量值是功能强大的、灵活的计算，您可以将其包含在几乎所有表格模型中，以便对数值数据执行动态计算。 若要了解详细信息，请参阅[度量值（SSAS 表格）](tabular-models/measures-ssas-tabular.md)。  
   
- 为了创建度量值，您将使用度量值网格。 默认情况下，每个表都有一个空的度量值网格；但是，您通常不会为每个表创建度量值。 在数据视图中时，度量值网格显示在模型设计器中的表下方。 若要隐藏或显示表的度量值网格，请单击“表”菜单，然后单击“显示度量值网格”。  
+ 为了创建度量值，您将使用度量值网格。 默认情况下，每个表都有一个空的度量值网格；但是，您通常不会为每个表创建度量值。 在数据视图中时，度量值网格显示在模型设计器中的表下方。 若要隐藏或显示表的度量值网格，请单击“表”  菜单，然后单击“显示度量值网格”  。  
   
  您可以通过在度量值网格中单击一个空单元，然后在编辑栏中键入 DAX 公式，以创建度量值。 在您单击 Enter 完成公式后，该度量值将显示在单元中。 还可以使用标准聚合函数创建度量值，方法是单击某列，然后单击工具栏上的“自动求和”按钮 (**∑**)。 使用“自动求和”功能创建的度量值将显示在该列正下方的度量值网格单元中，但是可以根据需要移动它们。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66078430"
   
 #### <a name="to-create-a-days-current-quarter-to-date-measure-in-the-date-table"></a>在 Date 表中创建 Days Current Quarter to Date 度量值  
   
-1.  在模型设计器中，单击“Date”表。  
+1.  在模型设计器中，单击“Date”  表。  
   
-2.  如果表下方尚未显示空的度量值网格，请单击“表”菜单，然后单击“显示度量值网格”。  
+2.  如果表下方尚未显示空的度量值网格，请单击“表”  菜单，然后单击“显示度量值网格”  。  
   
 3.  在度量值网格中，单击左上方的空单元。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66078430"
   
 #### <a name="to-create-a-days-in-current-quarter-measure-in-the-date-table"></a>在 Date 表中创建 Days in Current Quarter 度量值  
   
-1.  当“Date”表在模型设计器中仍处于活动状态时，在度量值网格中，单击刚才创建的度量值下方的空单元。  
+1.  当“Date”  表在模型设计器中仍处于活动状态时，在度量值网格中，单击刚才创建的度量值下方的空单元。  
   
 2.  在公式栏中，键入以下公式：  
   
@@ -70,19 +70,19 @@ ms.locfileid: "66078430"
   
 #### <a name="to-create-an-internet-distinct-count-sales-order-measure-in-the-internet-sales-table"></a>在 Internet Sales 表中创建 Internet Distinct Count Sales Order 度量值  
   
-1.  在模型设计器中，单击“Internet Sales”表（选项卡）。  
+1.  在模型设计器中，单击“Internet Sales”  表（选项卡）。  
   
-     如果尚未显示度量值网格，请右键单击“Internet Sales”表（选项卡），然后单击“显示度量值网格”。  
+     如果尚未显示度量值网格，请右键单击“Internet Sales”  表（选项卡），然后单击“显示度量值网格”  。  
   
-2.  单击“Sales Order Number”列标题。  
+2.  单击“Sales Order Number”  列标题。  
   
-3.  在工具栏上，单击“自动求和”(**∑**) 按钮旁边的向下箭头，然后选择“DistinctCount”。  
+3.  在工具栏上，单击“自动求和”(**∑**) 按钮旁边的向下箭头，然后选择“DistinctCount”  。  
   
      “自动求和”功能使用 DistinctCount 标准聚合公式自动为所选列创建度量值。  
   
      请注意，度量值网格中该列之下的顶部单元现包含度量值名称 **Distinct Count Sales Order Number**。 使用“自动求和”功能创建的度量值将自动放入关联列下方度量值网格中的最顶部单元中。  
   
-4.  在度量值网格中，单击新度量值，然后在“属性”窗口的“度量值名称”中，将度量值重命名为 **Internet Distinct Count Sales Order**。  
+4.  在度量值网格中，单击新度量值，然后在“属性”  窗口的“度量值名称”  中，将度量值重命名为 **Internet Distinct Count Sales Order**。  
   
 #### <a name="to-create-additional-measures-in-the-internet-sales-table"></a>在 Internet Sales 表中创建额外的度量值  
   

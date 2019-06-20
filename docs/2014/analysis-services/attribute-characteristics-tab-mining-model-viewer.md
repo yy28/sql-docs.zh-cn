@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063047"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>“属性特征”选项卡（挖掘模型查看器）
   可以使用 **“属性特征”** 窗格浏览 Naïve Bayes 模型中结果和输入属性之间的关系。 可以选择目标属性的值，然后查看对结果产生的影响最大的输入属性的列表。  
   
- **有关详细信息：**[Microsoft Naive Bayes 算法](data-mining/microsoft-naive-bayes-algorithm.md)，[使用 Microsoft Naive Bayes 查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **有关详细信息：** [Microsoft Naive Bayes 算法](data-mining/microsoft-naive-bayes-algorithm.md)，[使用 Microsoft Naive Bayes 查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -38,7 +38,7 @@ ms.locfileid: "66063047"
  选择要分析的可预测属性。  
   
  **ReplTest1**  
- 选择在“属性”中设置的可预测属性的状态。 由于 Naïve Bayes 模型不支持连续变量，因此，所有目标属性都包含离散或离散化结果。 始终会自动将 Missing 属性添加到列表。  
+ 选择在“属性”中设置的可预测属性的状态。  由于 Naïve Bayes 模型不支持连续变量，因此，所有目标属性都包含离散或离散化结果。 始终会自动将 Missing 属性添加到列表。  
   
  **特征\<可预测状态 >**  
  图形包含以下列，这些列对输入属性状态与所选可预测属性状态之间的关系进行了说明：  

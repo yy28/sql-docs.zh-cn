@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187926"
 ---
 # <a name="metadata-visibility-configuration"></a>元数据可见性配置
@@ -63,7 +63,7 @@ GO
   
 -   元数据生成的内置函数（如 OBJECTPROPERTYEX）可能返回 NULL。  
   
--    [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 存储过程可能只返回行子集或 NULL。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 存储过程可能只返回行子集或 NULL。  
   
  SQL 模块（如存储过程和触发器）在调用方的安全上下文中运行，因此，它们只有有限的元数据访问性。 例如，在以下代码中，当存储过程尝试访问表 `myTable` （调用方对该表没有权限）的元数据时，返回空的结果集。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，返回一行。  
   
@@ -102,7 +102,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>元数据可见性配置的优点和限制  
  元数据可见性配置在整个安全计划中发挥着重要作用。 但在有些情况下，有经验的用户和已确定的用户可以强制公开某些元数据。 建议将元数据权限部署为多种深层防御中的一种。  
   
- 理论上可以通过控制查询中的谓词评估顺序，强制在错误消息中显示元数据。 此类“试错攻击”的威胁并非是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专有的。 它由关系代数中允许的关联转换和交换转换表示。 可以通过限制错误消息中返回的信息来降低此风险。 为了以此方式进一步限制元数据的可见性，可以使用跟踪标志 3625 启动服务器。 此跟踪标志限制错误消息中显示的信息量。 进一步有助于防止强制泄漏。 需要在错误消息的简洁性和用于调试的难易程度之间进行权衡。 有关详细信息，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
+ 理论上可以通过控制查询中的谓词评估顺序，强制在错误消息中显示元数据。 此类“试错攻击”  的威胁并非是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专有的。 它由关系代数中允许的关联转换和交换转换表示。 可以通过限制错误消息中返回的信息来降低此风险。 为了以此方式进一步限制元数据的可见性，可以使用跟踪标志 3625 启动服务器。 此跟踪标志限制错误消息中显示的信息量。 进一步有助于防止强制泄漏。 需要在错误消息的简洁性和用于调试的难易程度之间进行权衡。 有关详细信息，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
  下列元数据无法强制公开：  
   

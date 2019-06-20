@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755239"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>连接到服务器（“连接属性”页）(Integration Services)
-  当连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或在“已注册的服务器”中注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”和“选项”。 注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，此对话框中仅显示“测试”和“保存”。  
+  当连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或在“已注册的服务器”  中注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”  和“选项”  。 注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，此对话框中仅显示“测试”  和“保存”  。  
   
 ## <a name="options"></a>选项  
  **端口号**  
@@ -43,9 +43,9 @@ ms.locfileid: "62755239"
  单击此项可更改对话框并隐藏其他服务器连接选项，例如记住密码。  
   
  **测试**  
- 在“已注册的服务器”中注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，单击此选项可以测试连接。  
+ 在“已注册的服务器”  中注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，单击此选项可以测试连接。  
   
  **保存**  
- 保存“已注册的服务器”中的设置。  
+ 保存“已注册的服务器”  中的设置。  
   
   

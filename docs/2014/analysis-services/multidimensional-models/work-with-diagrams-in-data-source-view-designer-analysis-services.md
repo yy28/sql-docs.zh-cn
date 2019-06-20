@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072382"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>使用数据源视图设计器中的关系图 (Analysis Services)
@@ -44,7 +44,7 @@ ms.locfileid: "66072382"
 ##  <a name="bkmk_add"></a> 添加关系图  
  创建 DSV 时自动创建 DSV 关系图。 在 DSV 存在后，您可以创建其他关系图、删除它们或隐藏特定对象以创建更便于管理的 DSV 表示形式。  
   
- 若要创建新关系图，请右键单击“关系图组织程序”窗格中的任意地方，再单击“新建关系图”。  
+ 若要创建新关系图，请右键单击“关系图组织程序”  窗格中的任意地方，再单击“新建关系图”  。  
   
  当 Analysis Services 项目中最初定义数据源视图 (DSV) 时，则会将所有表和视图都添加到数据源视图都添加到\<所有表 > 关系图。 在数据源视图设计器的“关系图组织程序”窗格中将显示此关系图，在“表”窗格中将列出此关系图中的表及其列和关系，并在架构窗格中将以图形方式显示此关系图中的表及其列和关系。 但是，为您添加表、 视图和命名的查询到\<所有表 > 关系图中，在此图中的对象数量较多难以可视化关系尤其是当多个事实数据表添加到关系图中，并且维度表与多个事实数据表相关。  
   

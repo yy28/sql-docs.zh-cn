@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24d605c3ca3374a41fa080a861b64001c36f3ef2
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019233"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263331"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式下的 DAX 公式兼容性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "63019233"
 
 某个特定函数可能未针对 DirectQuery 进行优化的原因包括：基础关系引擎无法执行与 xVelocity 引擎执行的计算等效的计算，或者公式无法转换为等效的 SQL 表达式。 在其他情况中，则是转换后的表达式和生成的计算的性能不可接受。
 
-若要了解有关所有 DAX 函数，请参阅 [DAX 函数参考]。(https://msdn.microsoft.com/library/ee634396.aspx)
+若要了解有关所有 DAX 函数，请参阅[DAX 函数参考](/dax/dax-function-reference)。
 
 ## <a name="dax-operators-in-directquery-mode"></a>DirectQuery 模式下的 DAX 运算符
-在 DirectQuery 模式下完全支持所有 DAX 比较和算术运算符。 若要了解详细信息，请参阅 [DAX 运算符参考](https://msdn.microsoft.com/library/ee634237.aspx)。
+在 DirectQuery 模式下完全支持所有 DAX 比较和算术运算符。 若要了解详细信息，请参阅 [DAX 运算符参考](/dax/dax-operator-reference)。
 
 
  
@@ -107,7 +107,7 @@ ms.locfileid: "63019233"
 -   在比较中以及在与 EXACT、AND、OR、 &amp;&amp;或 || 结合使用时，布尔值始终被当作逻辑值。  
   
 **从字符串转换为布尔值**  
-在内存中和 DirectQuery 模型中，只允许转换为布尔值从以下这些字符串： **""** （空字符串）， **"true"** ， **"false"** ; 其中一个空字符串强制转换为 false 值。  
+在内存中和 DirectQuery 模型中，只允许转换为布尔值从以下这些字符串： **""** （空字符串）， **"true"**， **"false"**; 其中一个空字符串强制转换为 false 值。  
   
 将任何其他字符串转换为布尔数据类型会导致错误。  
   
@@ -160,7 +160,7 @@ SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此
   
 相同的限制适用于其他对数函数：LOG10 和 ln。  
   
-有关 DAX 中的 **blank** 数据类型的详细信息，请参阅 [DAX 语法参考](https://msdn.microsoft.com/library/ee634217.aspx)。  
+有关 DAX 中的 **blank** 数据类型的详细信息，请参阅 [DAX 语法参考](/dax/dax-syntax-reference)。  
   
 **被零除和除以空白**  
 在 DirectQuery 模式下，被零 (0) 除和除以空白将始终导致错误。 SQL Server 不支持无穷大的概念，并且因为任何被零除的自然结果都是无穷大，所以，结果是一个错误。 但是，SQL Server 支持除以 Null 值，其结果必须始终为 Null。  

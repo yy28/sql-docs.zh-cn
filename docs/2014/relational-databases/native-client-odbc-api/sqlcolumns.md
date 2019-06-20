@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067707"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -38,7 +38,7 @@ ms.locfileid: "63067707"
 |列名|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 有关**varchar （max)** 数据类型。|  
-|TYPE_NAME|返回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，并**nvarchar （max)** 数据类型。|  
+|TYPE_NAME|返回"varchar"、"varbinary"或"nvarchar" **varchar （max)** ， **varbinary （max)** ，并**nvarchar （max)** 数据类型。|  
 |COLUMN_SIZE|返回为 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 数据类型，该值指示列的大小没有限制。|  
 |BUFFER_LENGTH|返回为 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 数据类型，该值指示缓冲区的大小没有限制。|  
 |SQL_DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 有关**varchar （max)** 数据类型。|  

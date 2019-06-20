@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb2a08d874dd022fdad3646ea263d34dd65b9739
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62677025"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>查看 SQL Server 对象的基于策略的管理方面
@@ -43,10 +43,10 @@ ms.locfileid: "62677025"
   
 #### <a name="to-view-all-of-the-facets-in-an-object"></a>查看对象的所有方面  
   
-1.  在对象资源管理器中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、实例对象、数据库或数据库对象，然后单击“Facet”。  
+1.  在对象资源管理器中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、实例对象、数据库或数据库对象，然后单击“Facet”  。  
   
-2.  在“查看 Facet - object_name”对话框的“方面”列表中，选择某一方面，查看其属性。 有关此对话框上可用选项的详细信息，请参阅 [View Facets Dialog Box](view-facets-dialog-box.md)。  
+2.  在“查看 Facet - object_name”对话框的“方面”列表中，选择某一方面，查看其属性    。 有关此对话框上可用选项的详细信息，请参阅 [View Facets Dialog Box](view-facets-dialog-box.md)。  
   
-3.  完成后，单击 **“确定”**。  
+3.  完成后，单击 **“确定”** 。  
   
   

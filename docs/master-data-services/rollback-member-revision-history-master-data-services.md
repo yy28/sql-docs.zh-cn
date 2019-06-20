@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50fda3c3fc295ed99a7c11fa8d6b9dd62fba1e6f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485966"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>回退成员修订历史记录 (Master Data Services)
@@ -38,7 +38,7 @@ ms.locfileid: "65485966"
   
 3.  单击“查看历史记录”   
   
-4.  选择要回退的修订，然后单击“回退” 。  
+4.  选择要回退的修订，然后单击“回退”  。  
   
 ## <a name="see-also"></a>请参阅  
  [成员修订历史记录 (Master Data Services)](../master-data-services/member-revision-history-master-data-services.md)   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58c88e60e4d4b4fa0b25cb5bdafe3ad248a794de
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484443"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>配置电子邮件通知 (Master Data Services)
@@ -31,11 +31,11 @@ ms.locfileid: "65484443"
   
 1.  在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的 **“数据库”** 页上，选择您的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。  
   
-2.  在 **“系统设置”** 部分中，单击 **“创建配置文件”**。  
+2.  在 **“系统设置”** 部分中，单击 **“创建配置文件”** 。  
   
 3.  填写所有必填字段。 有关详细信息，请参阅[“创建数据库邮件配置文件和帐户”对话框（Master Data Services 配置管理器）](../master-data-services/create-database-mail-profile-and-account-dialog-box.md)。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
     > [!NOTE]  
     >  在配置通知之后，您无法使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 进行更改。 必须直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中直接进行更改。 有关详细信息，请参阅 [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md)。  

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f806501ffbb52f3839fa343a05a8db57917533ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073686"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>修改或删除 Analysis Services 数据库
@@ -47,9 +47,9 @@ ms.locfileid: "66073686"
   
 2.  **“对象资源管理器”** 中，展开连接的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的节点，并确保要删除的对象可见。  
   
-3.  右键单击要删除的对象，再选择“删除”。  
+3.  右键单击要删除的对象，再选择“删除”  。  
   
-4.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
+4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [记录和编写 Analysis Services 数据库脚本](document-and-script-an-analysis-services-database.md)  

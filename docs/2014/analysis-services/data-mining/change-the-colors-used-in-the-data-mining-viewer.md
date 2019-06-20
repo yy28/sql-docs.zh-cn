@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4a8124d929faa22ec9429ca8bf15e4f0148ab71
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085932"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>更改数据挖掘查看器中使用的颜色
@@ -24,9 +24,9 @@ ms.locfileid: "66085932"
   
 ### <a name="to-change-the-colors-used-in-the-data-mining-viewers"></a>更改数据挖掘查看器中使用的颜色  
   
-1.  在 **或** 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] “工具” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]菜单中选择 **“选项”**。  
+1.  在 **或** 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] “工具” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]菜单中选择 **“选项”** 。  
   
-2.  在 **“选项”** 对话框中展开 **“设计器”**，再展开 **“数据挖掘查看器”**。  
+2.  在 **“选项”** 对话框中展开 **“设计器”** ，再展开 **“数据挖掘查看器”** 。  
   
 3.  找到要更改的查看器属性，单击当前颜色选择。  
   

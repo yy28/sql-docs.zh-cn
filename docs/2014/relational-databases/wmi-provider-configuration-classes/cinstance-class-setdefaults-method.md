@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2a105fd636c454ab236764611f1e57729ccad6ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192440"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>SetDefaults 方法（CInstance 类）
@@ -45,7 +45,7 @@ OverwriteAll
   
 #### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|参数|Description|  
 |---------------|-----------------|  
 |*OverwriteAll*|一个指定是否覆盖 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端实例的现有值的布尔值：若要覆盖现有数据，则为 `true`；如果不希望覆盖现有数据，则为 `false`。|  
   

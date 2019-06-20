@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63282104"
 ---
 # <a name="create-a-new-solution"></a>新建解决方案
@@ -26,7 +26,7 @@ ms.locfileid: "63282104"
   
 ### <a name="to-create-a-new-solution-and-project"></a>创建一个新解决方案和项目  
   
-1.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。  
+1.  在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。  
   
 2.  在“新建项目”对话框中，单击一个项目类型。  
   

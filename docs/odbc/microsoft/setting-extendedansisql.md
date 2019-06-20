@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9b8999e229e8a6ed4804b2f06a4072d139ae93a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63159363"
 ---
 # <a name="setting-extendedansisql"></a>设置 ExtendedAnsiSQL
 该属性可以通过添加 ExtendedAnsiSQL 属性控制在连接字符串中：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |ExtendedAnsiSQL=0 (default)|此设置不会启用新功能。|  
 |ExtendedAnsiSQL=1|此设置启用了新功能。|  

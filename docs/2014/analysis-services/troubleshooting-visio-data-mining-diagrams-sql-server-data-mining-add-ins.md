@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065720"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>解决 Visio 数据挖掘关系图问题（SQL Server 数据挖掘外接程序）

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076692"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>设置多维数据库的兼容级别 (Analysis Services)
@@ -59,7 +59,7 @@ ms.locfileid: "66076692"
   
 2.  使用 SQL Server Management Studio，连接到承载数据库的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。  
   
-3.  右键单击数据库名称，指向“编写数据库脚本为”，指向“ALTER to”，然后选择“新查询编辑器窗口”。 数据库的 XMLA 表示形式将在新窗口中打开。  
+3.  右键单击数据库名称，指向“编写数据库脚本为”  ，指向“ALTER to”  ，然后选择“新查询编辑器窗口”  。 数据库的 XMLA 表示形式将在新窗口中打开。  
   
 4.  复制以下 XML 元素：  
   

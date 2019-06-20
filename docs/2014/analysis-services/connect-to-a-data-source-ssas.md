@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087343"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>连接到数据源 (SSAS)
-  **“表导入向导”** 的这一页可用于创建与各种数据源（例如关系数据库、数据馈送和文件）的新数据源连接。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
+  **“表导入向导”** 的这一页可用于创建与各种数据源（例如关系数据库、数据馈送和文件）的新数据源连接。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”** 。  
   
  若要连接到数据源，必须在计算机上安装适当的访问接口。 您还必须在工作区数据库服务器上安装有适当的访问接口。 对于 32 位 (x86) 服务器，必须安装 32 位访问接口。 对于 64 位 (x64) 服务器，必须安装 64 位访问接口。  
   

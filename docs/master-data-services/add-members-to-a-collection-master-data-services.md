@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 086294f3615c32d9d8bbbd8c26da0439288dc8d3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486389"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>将成员添加到集合 (Master Data Services)
@@ -41,19 +41,19 @@ ms.locfileid: "65486389"
   
 2.   从“版本”列表中，选择某一版本。  
   
-3.  单击 **“资源管理器”**。  
+3.  单击 **“资源管理器”** 。  
   
-4.  从菜单栏中，指向“集合”，然后单击“entity_name”。  
+4.  从菜单栏中，指向“集合”  ，然后单击“entity_name”  。  
   
 5.  在网格中，单击要将成员添加到的集合对应的行。  
   
 6.  单击 **“集合成员”** 选项卡。  
   
-7.  单击 **“编辑成员”**。  
+7.  单击 **“编辑成员”** 。  
   
 8.  若要筛选可用成员列表，请从左侧列表中进行选择。  
   
-9. 单击包含您要添加的成员的行，然后单击 **“添加”**。  
+9. 单击包含您要添加的成员的行，然后单击 **“添加”** 。  
   
 10. 或者，单击 **“向上”** 或 **“向下”** 重新排列集合成员。  
   

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010901"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
@@ -35,7 +35,7 @@ ms.locfileid: "66010901"
   
 #### <a name="to-use-the-full-text-indexing-wizard"></a>使用全文索引向导  
   
-1.  在对象资源管理器中，右键单击要对其创建全文索引的表，指向“全文索引”，然后单击“定义全文索引”。  
+1.  在对象资源管理器中，右键单击要对其创建全文索引的表，指向  “全文索引”，然后单击  “定义全文索引”。  
   
      **唯一索引**  
      从下拉列表中选择索引。 索引必须是唯一且不为 Null 的单键列索引。 为全文唯一键选择最小的唯一键索引。 为了获得最佳性能，建议使用聚集索引。  
@@ -54,7 +54,7 @@ ms.locfileid: "66010901"
      **统计语义**  
      选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](semantic-search-sql-server.md)。  
   
-     如果您在选择 **“统计语义”** 前选择某一 **“语言”**，并且所选语言没有关联的语义语言模型，则 **“统计语义”** 复选框将被禁用。 如果你在选择“语言”前选择“统计语义”，则下拉组合框中提供的语言将限制为存在语义语言模型支持的那些语言。  
+     如果您在选择 **“统计语义”** 前选择某一 **“语言”** ，并且所选语言没有关联的语义语言模型，则 **“统计语义”** 复选框将被禁用。 如果你在选择  “语言”前选择  “统计语义”，则下拉组合框中提供的语言将限制为存在语义语言模型支持的那些语言。  
   
 2.  选择更改跟踪选项。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66010901"
      选中此项可以将该目录设为此数据库的默认目录。  
   
      **区分重音**  
-     指定新目录是区分重音还是不区分重音。 如果数据库区分重音，默认情况下会选中“区分”。  
+     指定新目录是区分重音还是不区分重音。 如果数据库区分重音，默认情况下会选中“区分”  。  
   
      **选择索引文件组**  
      指定对其创建全文索引的文件组。  
@@ -102,7 +102,7 @@ ms.locfileid: "66010901"
      **选择全文非索引字表**  
      指定要用于全文索引的非索引字表，或者禁用非索引字表。  
   
-     在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中，使用称为“非索引字表”的对象在数据库中管理非索引字。 “非索引字表”是一个由非索引字组成的列表，这些非索引字在与全文检索关联时会应用于该索引的全文查询。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
+     在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中，使用称为“非索引字表”的对象在数据库中管理非索引字。 “非索引字表”  是一个由非索引字组成的列表，这些非索引字在与全文检索关联时会应用于该索引的全文查询。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
      选择下列值之一：  
   

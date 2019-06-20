@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754081"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>已部署的数据层应用程序详细信息（SQL Server 实用工具）
@@ -40,7 +40,7 @@ ms.locfileid: "62754081"
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
- 若要访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“已部署的数据层应用程序”节点，然后选择“筛选器”。 实现筛选设置后，实用工具资源管理器中的“已部署的数据层应用程序”节点将标记为“已部署的数据层应用程序 (已筛选)”。 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md)。  
+ 若要访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“已部署的数据层应用程序”  节点，然后选择“筛选器”  。 实现筛选设置后，实用工具资源管理器中的“已部署的数据层应用程序”  节点将标记为“已部署的数据层应用程序 (已筛选)”。  有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md)。  
   
  默认情况下，下面的列将显示与每个数据层应用程序有关的运行状态信息。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62754081"
   
 -   应用程序 CPU - 显示此数据层应用程序的处理器使用率的运行状态。 根据为数据层应用程序设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
-     若要查看此数据层应用程序的处理器使用率历史记录，或者查看或更改策略限制，请单击“CPU 使用率”选项卡。  
+     若要查看此数据层应用程序的处理器使用率历史记录，或者查看或更改策略限制，请单击“CPU 使用率”  选项卡。  
   
 -   计算机 CPU - 显示计算机处理器使用率的运行状态。 根据为计算机设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
-     若要查看此数据层应用程序的处理器使用率历史记录，或者查看或更改策略限制，请单击“CPU 使用率”选项卡。  
+     若要查看此数据层应用程序的处理器使用率历史记录，或者查看或更改策略限制，请单击“CPU 使用率”  选项卡。  
   
 -   文件空间 - 为每个数据层应用程序显示文件空间使用率的运行状态的摘要。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62754081"
   
  可为数据文件和日志文件配置存储使用率策略。 若要查看或更改文件的存储使用率策略阈值，请单击“存储使用率”窗格底部的 **“文件策略”** 链接。 若要查看或更改存储卷的存储使用率策略阈值，请单击“存储使用率”窗格底部的 **“卷策略”** 链接。  
   
- 若要覆盖默认策略阈值，请单击单选按钮 **“覆盖默认策略”**，指定上限和下限值，然后单击 **“确定”**。  
+ 若要覆盖默认策略阈值，请单击单选按钮 **“覆盖默认策略”** ，指定上限和下限值，然后单击 **“确定”** 。  
   
  有关更改违反策略容限的详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   

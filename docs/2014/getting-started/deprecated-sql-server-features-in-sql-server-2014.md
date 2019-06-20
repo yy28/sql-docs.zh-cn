@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d28d829280e205028a99afd9fec2e019bf567ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089482"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的 SQL Server 功能
@@ -31,7 +31,7 @@ ms.locfileid: "66089482"
 ### <a name="slipstream-functionality"></a>补充功能  
  产品更新功能将替换 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1 中提供的补充功能。 因此的命令行参数 /*PCUSource*和 /*CUSource*、 与补充应不再使用功能相关联。 这些参数将继续有效，但可能会在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序的将来版本中删除。 /*UpdateSource*参数结合了 Slipstream 参数的功能 /*PCUSource*和 /*CUSource*。  
   
- 有关详细信息中提供的补充功能[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1，请参阅[补充 SQL Server 更新](https://go.microsoft.com/fwlink/?LinkId=219945)(https://go.microsoft.com/fwlink/?LinkId=219945)。  
+ 有关详细信息中提供的补充功能[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1，请参阅[补充 SQL Server 更新](https://go.microsoft.com/fwlink/?LinkId=219945)(https://go.microsoft.com/fwlink/?LinkId=219945) 。  
   
 ## <a name="see-also"></a>请参阅  
  [向后兼容性](../../2014/getting-started/backward-compatibility.md)  

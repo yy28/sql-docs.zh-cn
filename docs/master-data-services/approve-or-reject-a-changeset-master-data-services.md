@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 68d8ad9408a0630493e907ca1e9628a2d17f6efe
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489768"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>批准或拒绝变更集 (Master Data Services)
@@ -38,7 +38,7 @@ ms.locfileid: "65489768"
   
 ## <a name="to-approve-or-reject-a-changeset"></a>批准或拒绝变更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器” 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器”  。  
   
 2.  单击“实体”菜单中的某个实体  。  
   

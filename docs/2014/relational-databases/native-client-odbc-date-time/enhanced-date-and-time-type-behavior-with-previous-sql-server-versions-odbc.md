@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63140635"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "63140635"
   
 |SQL Server 2005 类型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）类型|ODBC 客户端类型|结果转换（SQL 到 C）|参数转换（C 到 SQL）|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DATETIME|date|SQL_C_TYPE_DATE|“确定”|确定 (1)|  
+|DATETIME|Date|SQL_C_TYPE_DATE|“确定”|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|“确定”|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分为非零值将失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
@@ -41,7 +41,7 @@ ms.locfileid: "63140635"
 |||SQL_C_TYPE_TIMESTAMP|失败的无效的时间文字。|确定 (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|“确定”|确定 (1)|  
 ||datetime2(7)|SQL_C_TYPE_TIMESTAMP|“确定”|由客户端转换将值舍入到 1/300 秒。|  
-|Smalldatetime|date|SQL_C_TYPE_DATE|“确定”|“确定”|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|“确定”|“确定”|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|“确定”|“确定”|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则失败。<br /><br /> 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  

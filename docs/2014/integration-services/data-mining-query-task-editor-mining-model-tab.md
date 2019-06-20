@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7019fd6fd3d7f2bc763098d30abca9aee670e1a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059926"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>数据挖掘查询任务编辑器（“挖掘模型”选项卡）
@@ -38,14 +38,14 @@ ms.locfileid: "66059926"
   
 ## <a name="mining-model-tab-options"></a>挖掘模型选项卡选项  
  **“连接”**  
- 从列表中选择 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接管理器，或单击“新建”创建新的连接管理器。  
+ 从列表中选择 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接管理器，或单击  “新建”创建新的连接管理器。  
   
- **相关主题：**[Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)  
+ **相关主题：** [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)  
   
  **新建**  
  创建新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接管理器。  
   
- **相关主题：**[“添加 Analysis Services 连接管理器”对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **相关主题：** [“添加 Analysis Services 连接管理器”对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **挖掘结构**  
  从列表中选择挖掘结构。  

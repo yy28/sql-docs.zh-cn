@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3aa29cede2849158162aba27332d5fe7f8f5fae5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082694"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server 事件探查器监视数据挖掘（Analysis Services – 数据挖掘）
@@ -37,7 +37,7 @@ ms.locfileid: "66082694"
 |**查询开始**<br /><br /> **查询结束**|EXECUTESQL|包含正在执行的 Transact-SQL 查询的文本|  
 |**查询开始**<br /><br /> **查询结束**|**2- SQLQuery**|包含任意针对以系统表形式存在的架构行集的查询的文本。|  
 |**DISCOVER Begin**<br /><br /> **DISCOVER End**|多个|包含封装在 XMLA 中的 DMX 函数调用或 DISCOVER 语句的文本。|  
-|**错误**|（无）|包含服务器发送到客户端的错误的文本。<br /><br /> 以“错误(数据挖掘):”或“信息(数据挖掘):”开头的错误消息专门在响应 DMX 请求时生成。 但只查看这些错误消息是不够的。 其他错误（例如由分析器生成的错误）虽然不具有此前缀，但也与数据挖掘有关。|  
+|**错误**|（无）|包含服务器发送到客户端的错误的文本。<br /><br /> 以“错误(数据挖掘):”  或“信息(数据挖掘):”  开头的错误消息专门在响应 DMX 请求时生成。 但只查看这些错误消息是不够的。 其他错误（例如由分析器生成的错误）虽然不具有此前缀，但也与数据挖掘有关。|  
   
  通过查看跟踪日志中的命令语句，还可以看到由客户端发送到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器的复杂语句（包括对系统存储过程的调用）的语法。 您可以借助该信息进行调试，或者也可以将有效语句用作创建新预测查询或模型的模板。 有关可以通过跟踪捕获的存储过程调用的一些示例，请参阅 [群集模型查询示例](clustering-model-query-examples.md)。  
   

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a82ef5c249dd1bc15bc91e9ccc502ebffe3f1728
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060114"
 ---
 # <a name="create-connection-managers"></a>创建连接管理器
@@ -30,12 +30,12 @@ ms.locfileid: "66060114"
   
  若要在创建新包时自动创建和配置连接管理器，可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导。 该向导还有助于创建和配置使用连接管理器的源和目标。 有关详细信息，请参阅 [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)。  
   
- 若要手动创建新的连接管理器并将其添加到现有包，可以使用在 **设计器的** “控制流” **、**“数据流” **和**“事件处理程序” **选项卡上出现的** “连接管理器” [!INCLUDE[ssIS](../includes/ssis-md.md)] 区域。 从 **“连接管理器”** 区域，选择要创建的连接管理器的类型，并使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器提供的对话框设置连接管理器的属性。 有关详细信息，请参阅本主题后面的“使用连接管理器区域”部分。  
+ 若要手动创建新的连接管理器并将其添加到现有包，可以使用在 **设计器的** “控制流” **、** “数据流” **和**“事件处理程序” **选项卡上出现的** “连接管理器” [!INCLUDE[ssIS](../includes/ssis-md.md)] 区域。 从 **“连接管理器”** 区域，选择要创建的连接管理器的类型，并使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器提供的对话框设置连接管理器的属性。 有关详细信息，请参阅本主题后面的“使用连接管理器区域”部分。  
   
  将连接管理器添加到包之后，可以在任务、Foreach 循环容器、源、转换和目标中使用它。 有关详细信息，请参阅 [Integration Services 任务](control-flow/integration-services-tasks.md)、[Foreach 循环容器](control-flow/foreach-loop-container.md)和[数据流](data-flow/data-flow.md)。  
   
 ## <a name="using-the-connection-managers-area"></a>使用连接管理器区域  
- 可以在 **设计器的**“控制流” **、**“数据流” **或** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡活动时创建连接管理器。  
+ 可以在 **设计器的**“控制流” **、** “数据流” **或** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡活动时创建连接管理器。  
   
  以下关系图显示 **设计器的** “控制流” **选项卡上的** “连接管理器” [!INCLUDE[ssIS](../includes/ssis-md.md)] 区域。  
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad20bfbec71f08d694a5f6d7d3104538d9e19e93
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063410"
 ---
 # <a name="threads-window"></a>“线程”窗口
@@ -45,7 +45,7 @@ ms.locfileid: "66063410"
  **[SPID]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话进程 ID，用于唯一标识此会话。 通过在 sys.sysprocesses 视图中选择 spid 列中此 ID 值所在的行，可以获取有关此会话的更多信息。  
   
- **位置**  
+ **Location**  
  显示正在调试的查询编辑器会话使用的脚本文件的名称。  
   
  **Priority**  

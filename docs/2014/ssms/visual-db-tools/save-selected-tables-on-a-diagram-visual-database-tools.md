@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067506"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>保存关系图中所选的表 (Visual Database Tools)
@@ -26,13 +26,13 @@ ms.locfileid: "63067506"
   
 1.  在数据库关系图中，选择要保存的表。  
   
-2.  在“文件”菜单中，选择“保存选择”。  
+2.  在“文件”  菜单中，选择“保存选择”  。  
   
-3.  保存所做的选择时，“保存”对话框将显示数据库中会被更新的表列表。  
+3.  保存所做的选择时，“保存”  对话框将显示数据库中会被更新的表列表。  
   
-     如果希望在继续操作前将表列表以文本文件形式保存到项目目录中，请选择“保存文本文件”。  
+     如果希望在继续操作前将表列表以文本文件形式保存到项目目录中，请选择“保存文本文件”  。  
   
-4.  在“保存”对话框中，确认表列表，再选择“是”保存这些表。  
+4.  在“保存”  对话框中，确认表列表，再选择“是”  保存这些表。  
   
     > [!NOTE]  
     >  表的列表除了包含所选的表之外，可能还包含其他表。 例如，如果更改了某列的数据类型，而该列参与了与另一个表的关系，那么这两个表都将包括在此列表中。  

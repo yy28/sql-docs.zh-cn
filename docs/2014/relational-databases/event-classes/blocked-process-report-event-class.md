@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62664263"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件类
   **Blocked Process Report** 事件类指明某个任务已被阻塞，导致超过指定的时间。 此事件类不包括系统任务和正在等待未发现死锁的资源的任务。  
   
- 若要配置阈值和报告生成频率，请使用 **sp_configure** 命令配置“阻塞的进程阈值”选项（以秒为单位进行设置）。 默认情况下，不生成阻塞的进程报告。 有关设置“阻塞的进程阈值”选项的详细信息，请参阅[服务器配置选项](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
+ 若要配置阈值和报告生成频率，请使用 **sp_configure** 命令配置“阻塞的进程阈值”  选项（以秒为单位进行设置）。 默认情况下，不生成阻塞的进程报告。 有关设置“阻塞的进程阈值”  选项的详细信息，请参阅[服务器配置选项](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
   
  有关筛选**阻塞的进程报告**事件类返回的数据的信息，请参阅[在跟踪中筛选事件 (SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)、[设置跟踪筛选器 (Transact-SQL)](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md) 或 [sp_trace_setfilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)。  
   

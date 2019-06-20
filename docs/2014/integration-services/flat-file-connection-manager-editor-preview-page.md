@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058738"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>平面文件连接管理器编辑器（“预览”页）
@@ -37,7 +37,7 @@ ms.locfileid: "66058738"
  指定在平面文件的开头要跳过多少行。  
   
  **刷新**  
- 通过单击“刷新”可以查看更改要跳过的行数后的效果。 只有在更改其他连接选项之后，此按钮才可见。  
+ 通过单击“刷新”可以查看更改要跳过的行数后的效果。  只有在更改其他连接选项之后，此按钮才可见。  
   
  **预览行**  
  查看平面文件中的示例数据，这些数据已按所选的选项划分为列和行。  

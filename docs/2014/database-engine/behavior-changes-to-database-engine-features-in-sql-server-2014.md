@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e7b629b93e0c79a003019a2e024388d54b12b76
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065205"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的行为更改
@@ -35,7 +35,7 @@ ms.locfileid: "66065205"
  [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql)选项用于确定响应的格式，而不实际运行查询将被替换[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)， [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)， [sys.dm_exec_describe_first_result_set &#40;-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)，和[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)。  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>有关为 SQL Server 代理任务编写脚本的行为的更改  
- 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，如果您通过复制现有作业中的脚本来创建新作业，则新作业可能会无意中影响现有作业。 若要创建新的作业使用现有作业中的脚本，请手动删除参数*@schedule_uid*通常是最后一个参数的部分中的现有作业中创建作业计划。 这将为新作业创建新的独立计划而不影响现有作业。  
+ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，如果您通过复制现有作业中的脚本来创建新作业，则新作业可能会无意中影响现有作业。 若要创建新的作业使用现有作业中的脚本，请手动删除参数 *@schedule_uid* 通常是最后一个参数的部分中的现有作业中创建作业计划。 这将为新作业创建新的独立计划而不影响现有作业。  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>CLR 用户定义函数和方法的常量折叠  
  在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，以下用户定义的 CLR 对象现已可折叠：  

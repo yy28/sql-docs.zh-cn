@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 78377afa1f1f71f8553a17df30a904a275afd577
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102483"
 ---
 # <a name="rgdi-device-information-settings"></a>RGDI 设备信息设置
@@ -22,7 +22,7 @@ ms.locfileid: "66102483"
   
 |设置|ReplTest1|  
 |-------------|-----------|  
-|`Page`|指定要呈现的报表页。 默认值为 `1`。|  
+|`Page`|指定要呈现的报表页。 默认值是 `1`。|  
 |`RGDIVersion`|此设置不起作用。|  
   
 ## <a name="see-also"></a>请参阅  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199251"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
@@ -49,7 +49,7 @@ ms.locfileid: "63199251"
 |DBTYPE_UDT|忽略|UDT|必须包括 DBPROPSET_SQLSERVERCOLUMN 属性集。|  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- 通过 prgParamInfo 在 DBPARAMINFO 结构中返回的信息如下所示：  
+ 通过 prgParamInfo 在 DBPARAMINFO 结构中返回的信息如下所示  ：  
   
 |参数类型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "63199251"
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|~0|已忽略|已忽略|已忽略|  
   
 ## <a name="isscommandwithparameters"></a>ISSCommandWithParameters  
- 应用程序使用 ISSCommandWithParameters 获取和设置在“参数属性”部分中定义的参数属性。  
+ 应用程序使用 ISSCommandWithParameters 获取和设置在“参数属性”部分中定义的参数属性  。  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
  返回的列如下所示：  
@@ -77,7 +77,7 @@ ms.locfileid: "63199251"
   
  为 Udt 还定义以下各列：  
   
-|列标识符|类型|描述|  
+|列标识符|类型|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的目录的名称。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的架构的名称。|  
@@ -102,7 +102,7 @@ ms.locfileid: "63199251"
   
  对于 UDT，还会定义以下列：  
   
-|列标识符|类型|描述|  
+|列标识符|类型|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的目录的名称。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的架构的名称。|  
@@ -130,18 +130,18 @@ ms.locfileid: "63199251"
   
 |符号|含义|  
 |------------|-------------|  
-|1|如果使用 ICommandWithParameters::SetParameterInfo 指定了非 DBTYPE_UDT 的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错。  将出现 DB_E_ERRORSOCCURRED 错误，参数状态将为 DBSTATUS_E_BADACCESSOR。<br /><br /> 如为类型不是 UDT 的服务器参数指定 UDT 类型的参数，则会出现错误。|  
+|1|如果使用 ICommandWithParameters::SetParameterInfo 指定了非 DBTYPE_UDT 的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错  。  将出现 DB_E_ERRORSOCCURRED 错误，参数状态将为 DBSTATUS_E_BADACCESSOR。<br /><br /> 如为类型不是 UDT 的服务器参数指定 UDT 类型的参数，则会出现错误。|  
 |2|数据从十六进制字符串转换为二进制数据。|  
 |3|数据从二进制数据转换为十六进制字符串。|  
-|4|在使用 CreateAccessor 或 GetNextRows 时进行验证。 错误为 DB_E_ERRORSOCCURRED 错误。 绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  
+|4|在使用 CreateAccessor 或 GetNextRows 时进行验证   。 错误为 DB_E_ERRORSOCCURRED 错误。 绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  
 |5|可能会使用 BY_REF。|  
 |6|UDT 参数可以绑定为 DBBINDING 中的 DBTYPE_IUNKNOWN。 如果绑定到 DBTYPE_IUNKNOWN，则表示应用程序要使用 ISequentialStream 接口将数据作为流进行处理。 当使用者指定了*wType*绑定为 DBTYPE_IUNKNOWN，类型和对应的列或输出中的存储过程的参数为 UDT，SQL Server Native Client 将返回 ISequentialStream。 查询 SQL Server Native Client 将某输入参数的 ISequentialStream 接口。<br /><br /> 如果是大型 UDT，可以选择不绑定 UDT 数据的长度，而是使用 DBTYPE_IUNKNOWN 绑定。 但是，对于小型 UDT，必须绑定长度。 如果满足以下一个或多个条件，可以将 DBTYPE_UDT 参数指定为大型 UDT：<br /><br /> -   *ulParamParamSize*为 ~ 0。<br />-在 DBPARAMBINDINFO 结构中设置了 DBPARAMFLAGS_ISLONG。<br /><br /> 对于行数据，仅允许对大型 UDT 进行 DBTYPE_IUNKNOWN 绑定。 您可以确定列的一个行集合上使用 icolumnsinfo:: Getcolumninfo 方法是为大型 UDT 类型或命令对象的 IColumnsInfo 接口。 如果满足以下一个或多个条件，DBTYPE_UDT 列即为大型 UDT 列：<br /><br /> -DBCOLUMNFLAGS_ISLONG 标志设置为开*dwFlags* DBCOLUMNINFO 结构的成员<br />-   *ulColumnSize* DBCOLUMNINFO 的成员为 ~ 0。|  
   
  可以绑定 DBTYPE_NULL 和 DBTYPE_EMPTY 用于输入参数，但不能用于输出参数或结果。 当绑定用于输入参数时，对于 DBTYPE_NULL，状态必须设置为 DBSTATUS_S_ISNULL，对于 DBTYPE_EMPTY 则必须设置为 DBSTATUS_S_DEFAULT。 DBTYPE_BYREF 不能与 DBTYPE_NULL 或 DBTYPE_EMPTY 一起使用。  
   
- DBTYPE_UDT 还可以转换为 DBTYPE_EMPTY 和 DBTYPE_NULL。 但是，DBTYPE_NULL 和 DBTYPE_EMPTY 无法转换为 DBTYPE_UDT。 这与 DBTYPE_BYTES 的情况是一致的。 ISSCommandWithParameters 用于将 UDT 处理为参数。  
+ DBTYPE_UDT 还可以转换为 DBTYPE_EMPTY 和 DBTYPE_NULL。 但是，DBTYPE_NULL 和 DBTYPE_EMPTY 无法转换为 DBTYPE_UDT。 这与 DBTYPE_BYTES 的情况是一致的。 ISSCommandWithParameters 用于将 UDT 处理为参数  。  
   
- OLE DB 核心服务 (IDataConvert) 提供的数据转换不适用于 DBTYPE_UDT。  
+ OLE DB 核心服务 (IDataConvert) 提供的数据转换不适用于 DBTYPE_UDT  。  
   
  不支持其他绑定。  
   

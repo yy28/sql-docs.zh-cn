@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f0760ef2d2a29540b126235d6328af1fbfad39ce
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483421"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>创建基于域的属性 (Master Data Services)
@@ -37,23 +37,23 @@ ms.locfileid: "65483421"
   
 ### <a name="to-create-a-domain-based-attribute"></a>创建基于域的属性  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”**。  
+2.  在 **“模型视图”** 页上，从菜单栏中，指向 **“管理”** ，然后单击 **“实体”** 。  
   
 3.  在 **“实体维护”** 页上，从 **“模型”** 列表中，选择某一模型。  
   
 4.  为您要为其创建属性的实体选择行。  
   
-5.  单击 **“编辑所选实体”**。  
+5.  单击 **“编辑所选实体”** 。  
   
 6.  在 **“编辑实体”** 页上：  
   
-    -   如果属性是针对叶成员的，则在 **“叶成员属性”** 窗格中，单击 **“添加叶属性”**。  
+    -   如果属性是针对叶成员的，则在 **“叶成员属性”** 窗格中，单击 **“添加叶属性”** 。  
   
-    -   如果属性是针对合并成员的，则在 **“合并成员属性”** 窗格中，单击 **“添加合并属性”**。  
+    -   如果属性是针对合并成员的，则在 **“合并成员属性”** 窗格中，单击 **“添加合并属性”** 。  
   
-    -   如果属性是针对集合的，则在 **“集合属性”** 窗格中，单击 **“添加集合属性”**。  
+    -   如果属性是针对集合的，则在 **“集合属性”** 窗格中，单击 **“添加集合属性”** 。  
   
 7.  上**添加属性**页上，选择**基于域的**选项。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "65483421"
   
 11. 可选。 选择 **Enable change tracking** 可以跟踪对属性值的更改。 有关详细信息，请参阅[向更改跟踪组添加属性 (Master Data Services)](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-12. 单击 **“保存属性”**。  
+12. 单击 **“保存属性”** 。  
   
-13. 在 **“实体维护”** 页上，单击 **“保存实体”**。  
+13. 在 **“实体维护”** 页上，单击 **“保存实体”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   

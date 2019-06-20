@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151189"
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
@@ -62,7 +62,7 @@ ms.locfileid: "63151189"
   
 1.  单击加号以便展开您要在其中创建计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
-2.  右键单击**计划指南**文件夹，然后选择**新建计划指南...**.  
+2.  右键单击**计划指南**文件夹，然后选择**新建计划指南...** .  
   
 3.  在 **“新建计划指南”** 对话框的 **“名称”** 框中，输入计划指南的名称。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63151189"
   
 7.  在 **“作用域批处理”** 列表中，输入其中包含该对象的架构的名称。 只有在 **“对象”** 选择为作用域类型时， **“作用域架构名称”** 框才可用。  
   
-8.  在“作用域对象名称”框中，输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的名称、用户定义的标量函数的名称、多语句表值函数的名称或其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 DML 触发器的名称。 只有在 **“对象”** 选择为作用域类型时， **“作用域对象名称”** 框才可用。  
+8.  在“作用域对象名称”  框中，输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的名称、用户定义的标量函数的名称、多语句表值函数的名称或其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 DML 触发器的名称。 只有在 **“对象”** 选择为作用域类型时， **“作用域对象名称”** 框才可用。  
   
 9. 在 **“参数”** 框中，输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中嵌入的所有参数的参数名称和数据类型。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63151189"
   
 10. 在 **“提示”** 框中，输入要应用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的查询提示或查询计划。 若要指定一个或多个查询提示，请输入一个有效的 OPTION 子句。  
   
-11. 单击“确定” 。  
+11. 单击“确定”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -94,9 +94,9 @@ ms.locfileid: "63151189"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- creates a plan guide named Guide1 based on a SQL statement  

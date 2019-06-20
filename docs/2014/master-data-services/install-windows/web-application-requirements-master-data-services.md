@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482886"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 应用程序要求 (Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "65482886"
  在使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 您可以从 [此处](https://go.microsoft.com/fwlink/?LinkId=243096)安装 Silverlight 5。  
   
 ### <a name="role-and-role-services-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>角色和角色服务（Windows Server 2008 或 Windows Server 2008 R2、Windows 7 操作系统）  
- 在 Windows Server 2008 R2 中，可以使用 **“服务器管理器”**（在 Microsoft 管理控制台 (MMC) 中提供）来安装 **“Web 服务器(IIS)”** 角色和以下必需的角色服务。  
+ 在 Windows Server 2008 R2 中，可以使用 **“服务器管理器”** （在 Microsoft 管理控制台 (MMC) 中提供）来安装 **“Web 服务器(IIS)”** 角色和以下必需的角色服务。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 和 Windows 7 操作系统中，使用控制面板中的 **“程序和功能”** 启用 **“Windows 功能”** 对话框中的这些选项。  
@@ -50,7 +50,7 @@ ms.locfileid: "65482886"
 |Web 服务器<br /><br /> 常见的 HTTP 功能<br /><br /> 静态内容<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 应用程序开发<br /><br /> ASP.NET<br /><br /> .NET 可扩展性<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> 安全性<br /><br /> Windows 身份验证<br /><br /> 请求筛选<br /><br /> 性能<br /><br /> 静态内容压缩<br /><br /> 管理工具<br /><br /> IIS 管理控制台|  
   
 ### <a name="role-and-role-services-windows-server-2012-or-windows-8-operating-systems"></a>角色和角色服务 （Windows Server 2012 或 Windows 8 操作系统）  
- 在 Windows Server 2012 中，可以使用 **“服务器管理器”**（在 Microsoft 管理控制台 (MMC) 中提供）来安装 **“Web 服务器(IIS)”** 角色和以下必需的角色服务。  
+ 在 Windows Server 2012 中，可以使用 **“服务器管理器”** （在 Microsoft 管理控制台 (MMC) 中提供）来安装 **“Web 服务器(IIS)”** 角色和以下必需的角色服务。  
   
 > [!NOTE]  
 >  在 Windows 8 操作系统中，使用控制面板中的 **“程序和功能”** 启用 **“Windows 功能”** 对话框中的这些选项。  

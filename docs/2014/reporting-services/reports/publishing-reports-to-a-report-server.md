@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102484"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>将报表发布到报表服务器
@@ -48,9 +48,9 @@ ms.locfileid: "66102484"
  您可以发布单个报表，也可以发布包含多个报表的报表服务器项目。 有关发布报表的说明，请参阅[发布的报表](../publish-reports.md)。  
   
 ### <a name="publishing-a-single-report"></a>发布单个报表  
- 如果不希望发布项目中的所有报表，可以选择只发布单个报表。 为此，请选择一种部署报表的配置（例如，“发布”配置），然后右键单击相应的报表，再单击“部署”。  
+ 如果不希望发布项目中的所有报表，可以选择只发布单个报表。 为此，请选择一种部署报表的配置（例如，“发布”配置），然后右键单击相应的报表，再单击“部署”  。  
   
- 如果报表使用共享数据源，您还需要部署共享数据源，否则，部署的报表将不会运行。 右键单击该共享数据源，再单击“部署”。  
+ 如果报表使用共享数据源，您还需要部署共享数据源，否则，部署的报表将不会运行。 右键单击该共享数据源，再单击“部署”  。  
   
  必须指定报表服务器的目标服务器 URL，并且可能需要更改将报表和共享数据源部署到的默认文件夹。  
   

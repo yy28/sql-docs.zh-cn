@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075992"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>在维度设计器中浏览维度数据
@@ -29,9 +29,9 @@ ms.locfileid: "66075992"
   
 1.  打开您要浏览的维度，然后单击 **“浏览器”** 选项卡。  
   
-2.  在“层次结构”下拉列表中，选择要浏览其数据的层次结构。  
+2.  在“层次结构”  下拉列表中，选择要浏览其数据的层次结构。  
   
-3.  根据情况，如果维度包括翻译，可以在“语言”下拉列表中选择要用于显示数据的语言。  
+3.  根据情况，如果维度包括翻译，可以在“语言”  下拉列表中选择要用于显示数据的语言。  
   
     > [!NOTE]  
     >  该维度中必须有一个以选定的语言定义的翻译。  

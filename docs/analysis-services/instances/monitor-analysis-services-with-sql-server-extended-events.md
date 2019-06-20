@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc51c444483dc9a89cf0b9edbd557c3dce11a054
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62709259"
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>使用 SQL Server 扩展事件监视 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-  扩展事件 (xEvents) 是一种占用系统资源非常少的轻量跟踪和性能监视系统，因此成为诊断生产和测试服务器问题的理想工具。 它还是高度可扩展、可配置的，且位于 SQL Server 2016 中，可通过新的内置工具支持更轻松地使用。 在 SQL Server Management Studio 中，连接到 Analysis Services 实例后，你可配置、运行及监视实时跟踪，类似于使用 SQL Server Profiler。 添加了更好的工具应使 xEvents 成为 SQL Server Profiler 更合理的替代，并且在如何诊断数据库引擎问题和 Analysis Services 工作负荷问题中创建更多对称。  
+  扩展事件 (xEvents  ) 是一种占用系统资源非常少的轻量跟踪和性能监视系统，因此成为诊断生产和测试服务器问题的理想工具。 它还是高度可扩展、可配置的，且位于 SQL Server 2016 中，可通过新的内置工具支持更轻松地使用。 在 SQL Server Management Studio 中，连接到 Analysis Services 实例后，你可配置、运行及监视实时跟踪，类似于使用 SQL Server Profiler。 添加了更好的工具应使 xEvents 成为 SQL Server Profiler 更合理的替代，并且在如何诊断数据库引擎问题和 Analysis Services 工作负荷问题中创建更多对称。  
   
  除了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，还可以通过 XMLA 脚本、按照原有方式配置  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 扩展事件会话，如同早期版本中支持的一样。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62709259"
   
 -   **event_file** 将会话数据存储在 .xel 文件中。  
   
--   **event_stream** 在 Management Studio 中启用“查看实时数据”选项。  
+-   **event_stream** 在 Management Studio 中启用“查看实时数据”  选项。  
   
 -   只要服务器在运行，**ring_buffer** 就会将会话数据存储在内存中。 服务器重新启动后，将给出会话数据  
   
@@ -59,17 +59,17 @@ ms.locfileid: "62709259"
   
  请务必配置会话以包含事件字段，以便可以轻松看到感兴趣的信息。  
   
- “配置”是对话框远端的选项。  
+ “配置”  是对话框远端的选项。  
   
  ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
   
- 在配置中的“事件字段”选项卡上，选择“TextData”，这样此字段出现在事件旁边，显示返回的值，包括正在服务器上执行的查询。  
+ 在配置中的“事件字段”选项卡上，选择“TextData”  ，这样此字段出现在事件旁边，显示返回的值，包括正在服务器上执行的查询。  
   
  配置所需事件和数据存储的会话后，可以单击脚本按钮以将配置发送到受支持的目标之一，包括文件、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的新查询以及剪贴板。  
   
  **刷新会话**  
   
- 一旦创建会话，确保刷新 Management Studio 中的会话文件夹，查看刚创建的会话。 如果配置了 event_stream，可以右键单击会话名称，然后选择“查看实时数据”以实时监视服务器活动。  
+ 一旦创建会话，确保刷新 Management Studio 中的会话文件夹，查看刚创建的会话。 如果配置了 event_stream，可以右键单击会话名称，然后选择“查看实时数据”  以实时监视服务器活动。  
   
 ##  <a name="bkmk_script_start"></a> 启动 Analysis Services 中的扩展事件的 XMLA 脚本  
  通过使用如下的 XMLA 创建对象脚本命令启用扩展事件跟踪：  
@@ -110,7 +110,7 @@ ms.locfileid: "62709259"
  定义用于此跟踪的唯一标识符。  
   
  *跟踪名称*  
- 提供给此跟踪的名称；通常是此跟踪的用户可读定义。 通常使用 trace_id 值作为该名称。  
+ 提供给此跟踪的名称；通常是此跟踪的用户可读定义。 通常使用 trace_id  值作为该名称。  
   
  *AS_event*  
  要公开的 Analysis Services 事件。 有关事件名称的详细信息，请参阅 [Analysis Services 跟踪事件](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 。  

@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62889210"
 ---
 # <a name="set-package-properties"></a>设置包属性
@@ -55,7 +55,7 @@ ms.locfileid: "62889210"
   
 -   [版本(Version)](#Version)  
   
- 有关不能在“属性”窗口中设置的其他包属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
+ 有关不能在“属性”  窗口中设置的其他包属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>在“属性”窗口中设置包属性  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62889210"
 |`CreatorComputerName`|创建包的计算机的名称。|  
 |`CreatorName`|包创建者的姓名。|  
 |`Description`|包功能说明。|  
-|`ID`|包 GUID，该属性是在创建包时分配的。 该属性为只读。 若要生成的新随机值`ID`属性中，选择**\<生成新 ID >** 下拉列表中。|  
+|`ID`|包 GUID，该属性是在创建包时分配的。 该属性为只读。 若要生成的新随机值`ID`属性中，选择 **\<生成新 ID >** 下拉列表中。|  
 |`Name`|包的名称。|  
 |`PackageType`|包类型。 其值为：`Default`、`DTSDesigner`、`DTSDesigner100`、`DTSWizard`、`SQLDBMaint` 和 `SQLReplication`。 此属性的默认值为 `Default`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> 。|  
   
@@ -117,8 +117,8 @@ ms.locfileid: "62889210"
   
 |属性|Description|  
 |--------------|-----------------|  
-|`Configurations`|包使用的配置集合。 单击浏览按钮 (…) 可以查看和配置包配置。|  
-|`Expressions`|单击浏览按钮 (…) 可以为包属性创建表达式。<br /><br /> 注意：您可以创建对象模型包含，而不仅仅是在属性窗口中列出的属性的所有包属性的属性表达式。<br /><br /> 有关详细信息，请参阅 [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 `Expressions`。 单击表达式文本框中的浏览按钮 (…) 可以修改和计算表达式。|  
+|`Configurations`|包使用的配置集合。 单击浏览按钮 (…) 可以查看和配置包配置  。|  
+|`Expressions`|单击浏览按钮 (…) 可以为包属性创建表达式  。<br /><br /> 注意：您可以创建对象模型包含，而不仅仅是在属性窗口中列出的属性的所有包属性的属性表达式。<br /><br /> 有关详细信息，请参阅 [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 `Expressions`。 单击表达式文本框中的浏览按钮 (…) 可以修改和计算表达式  。|  
 |`ForceExecutionResult`|包的执行结果。 其值为：`None`、`Success`、`Failure` 和 `Completion`。 此属性的默认值为 `None`。 有关详细信息，请参阅 T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult。|  
 |`LocaleId`|Microsoft Win32 区域设置。 此属性的默认值为本地计算机上操作系统的区域设置。|  
 |`LoggingMode`|指定包日志记录行为的值。 具体的值为 `Disabled`、`Enabled` 和 `UseParentSetting`。 此属性的默认值为 `UseParentSetting`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 。|  

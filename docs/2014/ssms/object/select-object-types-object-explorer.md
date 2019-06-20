@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 177aec3306c0be861b2fdf09f5a0d6974d715d3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63031991"
 ---
 # <a name="select-object-types-object-explorer"></a>选择对象类型（对象资源管理器）
-  使用此对话框可以指定“选择对象”对话框中所显示对象的类型。  
+  使用此对话框可以指定“选择对象”  对话框中所显示对象的类型。  
   
 ## <a name="select-the-types-of-objects-to-find"></a>选择要查找的对象类型  
- 从“对象类型”列表中选择所需的项。 此列表只包含可用于该操作类型的项；例如，为新对象选择所有者时，将只显示“登录名”。  
+ 从“对象类型”  列表中选择所需的项。 此列表只包含可用于该操作类型的项；例如，为新对象选择所有者时，将只显示“登录名”  。  
   
   

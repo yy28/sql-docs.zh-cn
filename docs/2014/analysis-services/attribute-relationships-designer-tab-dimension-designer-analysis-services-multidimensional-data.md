@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062265"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性关系（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
@@ -24,7 +24,7 @@ ms.locfileid: "66062265"
   
  **若要查看属性关系窗格**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”选项卡。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中，双击维度以打开维度设计器，然后单击“属性关系”  选项卡。  
   
 2.  在工具栏上，单击 **“显示列表视图”** 图标。  
   
@@ -42,18 +42,18 @@ ms.locfileid: "66062265"
   
 ### <a name="shortcut-menu-options"></a>快捷菜单选项  
  **编辑属性关系**  
- 打开“编辑属性关系”对话框，可以在其中修改属性关系。  
+ 打开“编辑属性关系”  对话框，可以在其中修改属性关系。  
   
  有关详细信息，请参阅[“创建属性关系”和“编辑属性关系”对话框（“属性关系设计器”选项卡，维度设计器）（Analysis Services - 多维数据）](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md)和[定义属性关系](multidimensional-models/attribute-relationships-define.md)。  
   
  **关系类型**  
- 将关系类型设置为“柔性”或“刚性”。 在柔性关系中，成员之间的关系会随时间而变化。 在刚性关系中，成员之间的关系不随时间而变化。  
+ 将关系类型设置为“柔性”  或“刚性”  。 在柔性关系中，成员之间的关系会随时间而变化。 在刚性关系中，成员之间的关系不随时间而变化。  
   
  **删除**  
  删除所选属性关系。  
   
  **属性**  
- 在“属性”窗口中显示特性的属性。  
+ 在“属性”  窗口中显示特性的属性。  
   
 ## <a name="see-also"></a>请参阅  
  [属性关系&#40;维度设计器&#41; &#40;Analysis Services-多维数据&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   

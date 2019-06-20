@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e97b3f75cf38842d4a9260f49d423725470b2d0f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489550"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>“创建 Web 应用程序”对话框（Master Data Services 配置管理器）
@@ -27,7 +27,7 @@ ms.locfileid: "65489550"
   使用“创建 Web 应用程序”  对话框可以创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。 此 Web 应用程序在“Web 配置”  页上选择的网站中创建。  
   
 ## <a name="web-application"></a>Web 应用程序  
- Web 服务器从文件系统中的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** 文件夹为此 Web 应用程序提供内容。 此位置在安装过程中指定，路径默认为驱动器:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication。  
+ Web 服务器从文件系统中的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** 文件夹为此 Web 应用程序提供内容。 此位置在安装过程中指定，路径默认为驱动器  :\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication。  
   
 |控件名称|Description|  
 |------------------|-----------------|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087103"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>连接到源数据（Excel 数据挖掘客户端）
@@ -60,13 +60,13 @@ ms.locfileid: "66087103"
   
 4.  指定身份验证方法。  
   
-5.  选择将数据库从**目录名称**下拉列表。 如果在实例上不存在任何数据库，请选择 **（默认值）**。  
+5.  选择将数据库从**目录名称**下拉列表。 如果在实例上不存在任何数据库，请选择 **（默认值）** 。  
   
 6.  键入该连接的友好名称。  
   
 7.  单击**测试连接**以验证服务器和数据库是否可用。  
   
-8.  单击 **“确定”**，再单击 **“关闭”**。  
+8.  单击 **“确定”** ，再单击 **“关闭”** 。  
   
 ### <a name="connections-using-a-web-service"></a>使用 Web 服务连接  
  如果您使用瘦客户端体系结构支持浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集和数据，则还可以通过 Web 服务配置到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器的连接。 有关如何定义基于 Web 的客户端的信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书。  

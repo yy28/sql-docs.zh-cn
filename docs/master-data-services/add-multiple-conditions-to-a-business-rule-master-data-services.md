@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7429694f469071b2383911314bd7e78e8808fdfc
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486476"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>向业务规则添加多个条件 (Master Data Services)
@@ -40,36 +40,36 @@ ms.locfileid: "65486476"
   
 ### <a name="to-add-multiple-conditions-to-a-business-rule"></a>向业务规则添加多个条件  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
+2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”** 。  
   
-3.  在“业务规则”页上，从“模型”下拉列表中选择一个模型。  
+3.  在“业务规则”  页上，从“模型”  下拉列表中选择一个模型。  
   
 4.  从  “实体”下拉列表中选择一个实体。  
   
-5.  从“成员类型”列表中选择一个成员类型。  
+5.  从“成员类型”  列表中选择一个成员类型。  
   
 6.  单击要编辑的业务规则所对应的行。  
   
-7.  单击 **“编辑”**。  
+7.  单击 **“编辑”** 。  
   
 8.  在左侧的 **If** 块中，从逻辑运算符下拉列表中选择 **AND/OR/NOT**。  
   
-9. 单击 **“添加”**。 此时将显示一个面板。  
+9. 单击 **“添加”** 。 此时将显示一个面板。  
   
 10. 从  “属性”下拉列表中选择一个属性。  
   
-11. 从“运算符”下拉列表中选择一个条件。  
+11. 从“运算符”  下拉列表中选择一个条件。  
   
 12. 填写所有必填字段。  
   
-13. 单击“保存” 。 此时，系统会在“If”  网格中新添加一行。  
+13. 单击“保存”  。 此时，系统会在“If”  网格中新添加一行。  
   
 14. （可选）若要添加更多条件，请完成第 8-13 步。  
   
     > [!TIP]  
-    >  若要删除条件，请选择条件并右键单击它，然后单击“删除”。  
+    >  若要删除条件，请选择条件并右键单击它，然后单击“删除”  。  
   
     > [!TIP]  
     >  你可以选择多个条件，然后右键单击将它们组合在一个逻辑运算符内，或取消将条件组合在特定的逻辑运算符内。  

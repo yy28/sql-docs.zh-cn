@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084300"
 ---
 # <a name="linear-regression-model-query-examples"></a>线性回归模型查询示例
@@ -71,7 +71,7 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
 ###  <a name="bkmk_Query2"></a> 示例查询 2:检索模型的回归公式  
  下面的查询返回一个线性回归模型的挖掘模型内容，该回归模型是通过使用 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)中使用的目标邮件数据源创建的。 此模型基于年龄预测客户收入。  
   
- 查询返回包含回归公式的节点的内容。 所有变量和系数均存储在嵌套表 NODE_DISTRIBUTION 的单独行中。 如果要查看完整的回归公式，请使用 [Microsoft 树查看器](browse-a-model-using-the-microsoft-tree-viewer.md)，单击“(全部)”节点，然后打开“挖掘图例”。  
+ 查询返回包含回归公式的节点的内容。 所有变量和系数均存储在嵌套表 NODE_DISTRIBUTION 的单独行中。 如果要查看完整的回归公式，请使用 [Microsoft 树查看器](browse-a-model-using-the-microsoft-tree-viewer.md)，单击“(全部)”节点，然后打开“挖掘图例”。    
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION as t  
@@ -96,7 +96,7 @@ FROM LR_PredictIncome.CONTENT
   
  Yearly Income = 57,220.919 + 471.688 * (Age - 45.427)  
   
- 可看出在“挖掘图例”中，对某些数值进行了舍入；但 NODE_DISTRIBUTION 表与“挖掘图例”实际上包含的是相同的值。  
+ 可看出在“挖掘图例”中，对某些数值进行了舍入；但 NODE_DISTRIBUTION 表与“挖掘图例”实际上包含的是相同的值。    
   
  VALUETYPE 列中的值可告诉您每一行所包含的信息的类型，这在以编程方式处理结果时很有用。 下表给出了一个线性回归公式的输出值的类型。  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055113"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>传输数据库任务编辑器（“数据库”页）
@@ -26,10 +26,10 @@ ms.locfileid: "66055113"
   
 ## <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接  。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接  。  
   
  **DestinationDatabaseName**  
  指定目标服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的名称。  
@@ -43,7 +43,7 @@ ms.locfileid: "66055113"
   
  若要使用源数据库文件的名称和位置自动填充此字段，请首先指定 **SourceConnection**、 **SourceDatabaseName**和 **SourceDatabaseFiles** 。  
   
- 若要对目标服务器上的数据库文件进行重命名或为其指定新位置，请使用源数据库信息填充此字段，再单击浏览按钮。 在 **“目标数据库文件”** 对话框中，编辑 **“目标文件”**、 **“目标文件夹”** 或 **“网络文件共享”**。  
+ 若要对目标服务器上的数据库文件进行重命名或为其指定新位置，请使用源数据库信息填充此字段，再单击浏览按钮。 在 **“目标数据库文件”** 对话框中，编辑 **“目标文件”** 、 **“目标文件夹”** 或 **“网络文件共享”** 。  
   
 > [!NOTE]  
 >  如果使用浏览按钮来定位数据库文件，则会使用本地驱动器表示法输入文件位置：例如，c:\\。 您必须将其替换为网络共享表示法（包括计算机名称和共享名称）。 如果使用默认的管理共享，您必须使用 $ 表示法，并且必须具有对该共享位置的管理权限。  
@@ -62,7 +62,7 @@ ms.locfileid: "66055113"
 >  如果为 **DestinationOverwrite** 指定 **True**，则会覆盖目标服务器数据库中的数据，这可能导致数据丢失。 若要避免数据丢失，请在执行传输数据库任务之前将目标服务器数据库备份到其他位置。  
   
  **操作**  
- 指定该任务是将数据库“复制”到目标服务器还是“移动”到目标服务器。  
+ 指定该任务是将数据库“复制”到目标服务器还是“移动”到目标服务器   。  
   
  **方法**  
  指定是在源服务器上的数据库处于在线模式时执行任务还是在其处于离线模式时执行任务。  

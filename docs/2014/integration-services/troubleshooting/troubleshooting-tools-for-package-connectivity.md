@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62766160"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>对包连接进行故障排除的工具
@@ -40,7 +40,7 @@ ms.locfileid: "62766160"
   
     -   查找转换、OLE DB 命令转换和渐变维度转换  
   
-     日志记录消息包括正被调用的方法的名称。 例如，这些日志消息可能包括 OLE DB `Open` 对象的 `Connection` 方法或 `ExecuteNonQuery` 对象的 `Command` 方法。 该消息具有以下格式，其中 '%1!s!'  是方法信息的占位符：  
+     日志记录消息包括正被调用的方法的名称。 例如，这些日志消息可能包括 OLE DB `Open` 对象的 `Connection` 方法或 `ExecuteNonQuery` 对象的 `Command` 方法。 该消息具有以下格式，其中 '%1!s!' 是方法信息的占位符：  
   
     ```  
     ExternalRequest_pre: The object is ready to make the following external request: '%1!s!'.  

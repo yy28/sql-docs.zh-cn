@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e027ece4576907b9543c7fc6eb9cbe161b3c4323
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157703"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>GetCurrentCertificate 方法（SecurityCertificate 类）
@@ -45,7 +45,7 @@ SHA , SQLInstance
   
 #### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|参数|Description|  
 |---------------|-----------------|  
 |*SHA*|一个在方法完成后指定当前安全证书 SHA 指纹的字符串值（输出参数）。|  
 |*SQLInstance*|一个为所需证书指定实例的字符串值。|  

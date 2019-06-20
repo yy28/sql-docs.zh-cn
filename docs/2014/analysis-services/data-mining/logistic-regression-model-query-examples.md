@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084231"
 ---
 # <a name="logistic-regression-model-query-examples"></a>逻辑回归模型查询示例
@@ -145,24 +145,24 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>创建 Call Center 挖掘结构和模型的离散化版本  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中，展开 **“挖掘结构”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中，展开 **“挖掘结构”** 。  
   
-2.  右键单击 Call Center.dmm 并选择“复制”。  
+2.  右键单击 Call Center.dmm 并选择  “复制”。  
   
-3.  右键单击 **“挖掘结构”** ，然后选择 **“粘贴”**。 将添加名为 Call Center 1 的新挖掘结构。  
+3.  右键单击 **“挖掘结构”** ，然后选择 **“粘贴”** 。 将添加名为 Call Center 1 的新挖掘结构。  
   
-4.  右键单击新的挖掘结构，然后选择“重命名”。 键入新名称 **Call Center Discretized**。  
+4.  右键单击新的挖掘结构，然后选择“重命名”。  键入新名称 **Call Center Discretized**。  
   
 5.  双击新的挖掘结构以在设计器中将其打开。 请注意，随之复制了所有挖掘模型，并且都具有扩展名 1。 暂时将这些名称保留原样。  
   
-6.  在“挖掘结构”选项卡中，右键单击 Service Grade 对应的列，然后选择“属性”。  
+6.  在“挖掘结构”选项卡中，右键单击 Service Grade 对应的列，然后选择“属性”。    
   
 7.  更改`Content`属性从**连续**到**Discretized**。 更改`DiscretizationMethod`属性设置为**群集**。 对于 Discretization BucketCount，键入 **3**。  
   
     > [!NOTE]  
     >  这些参数仅用于演示过程，不一定生成有效模型。  
   
-8.  从 **“挖掘模型”** 菜单上选择 **“处理挖掘结构和所有模型”**。  
+8.  从 **“挖掘模型”** 菜单上选择 **“处理挖掘结构和所有模型”** 。  
   
  以下示例查询基于此离散化模型，并预测了周中某指定日期的服务等级以及每个预测的结果的概率。  
   

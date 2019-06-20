@@ -1,7 +1,7 @@
 ---
 title: 在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 06/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c8af52dfe8c95b80f5b9550b41a14e1f70c7a6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42ccdae89fdb0883201ec022479e51a327ea0b33
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080164"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263227"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问
   此文章介绍了如何设置用于访问 Analysis Services 实例的 HTTP 端点。 你可以通过配置 MSMDPUMP.dll（一种在 Internet Information Services (IIS) 中运行的 ISAPI 扩展，可以在客户端应用程序和 Analysis Services 服务器之间抽送数据）实现对 HTTP 的访问。 在您的 BI 解决方案需要以下功能时，此方法可替代用于连接到 Analysis Services 的方法：  
@@ -261,7 +261,7 @@ ms.locfileid: "66080164"
 ##  <a name="bkmk_test"></a> 步骤 6:测试您的配置  
  针对 MSMDPUMP 的连接字符串语法是指向 MSMDPUMP.dll 文件的 URL。  
   
- 如果 web 应用程序正在侦听固定端口，将端口号追加到的服务器名称或 IP 地址 (例如， http://my-web-srv01:8080/OLAP/msmdpump.dll 或 http://123.456.789.012:8080/OLAP/msmdpump.dll 。  
+ 如果 web 应用程序正在侦听固定端口，将端口号追加到的服务器名称或 IP 地址，例如，`http://my-web-srv01:8080/OLAP/msmdpump.dll`或`http://123.456.789.012:8080/OLAP/msmdpump.dll`。  
   
  若要快速测试连接，你可以使用 Microsoft Excel 或 SQL Server Management Studio 打开连接  
   

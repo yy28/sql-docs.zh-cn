@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 表格模型中的计算组 |Microsoft Docs
-ms.date: 06/09/2019
+ms.date: 06/17/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822692"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263436"
 ---
 # <a name="calculation-groups-preview"></a>计算组 （预览）
  
@@ -64,7 +64,7 @@ ms.locfileid: "66822692"
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) -由计算项以确定在度量值的列表中指定的度量值的上下文中的表达式。
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) -由要检索的度量值的上下文中的格式字符串的计算项的表达式。
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) -由要检索的度量值的上下文中的格式字符串的计算项的表达式。
 
 ### <a name="time-intelligence-example"></a>时间智能的示例
 
@@ -251,7 +251,7 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-格式字符串表达式必须返回标量的字符串。 使用新[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax)若要还原到的基础度量值的格式字符串，如果在筛选器上下文中有多种货币的函数。
+格式字符串表达式必须返回标量的字符串。 使用新[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax)若要还原到的基础度量值的格式字符串，如果在筛选器上下文中有多种货币的函数。
 
 下面的动画显示的动态格式货币换算**销售**在报表中的度量值。
 
@@ -407,8 +407,6 @@ CALCULATE() 函数的 YTD 参数重写要重复使用已在 YTD 计算项中定�
 [对象级别安全](object-level-security.md)(OLS) 定义计算上不支持组的表。 但是，可以在相同的模型中的其他表上定义 OLS。 如果计算项引用 OLS 受保护的对象，则返回一般错误。
 
 [行级别安全性](roles-ssas-tabular.md#bkmk_rowfliters)(RLS) 不受支持。 （直接或间接），可以对表中相同的模型，但不是在计算组本身定义 RLS。
-
-[详细信息行表达式](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)计算组不支持。
 
 ## <a name="see-also"></a>另请参阅  
 

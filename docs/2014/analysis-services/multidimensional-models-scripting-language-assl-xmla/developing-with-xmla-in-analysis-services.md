@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00cb50fe4c71ad853e88ebd86b0891ca4bc24604
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727198"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>在 Analysis Services 中使用 XMLA 开发
@@ -60,7 +60,7 @@ ms.locfileid: "62727198"
 ## <a name="namespace-and-schema"></a>命名空间和架构  
   
 ### <a name="namespace"></a>命名空间  
- 此规范中定义的架构使用 XML 命名空间 https://schemas.microsoft.com/AnalysisServices/2003/Engine和标准的缩写"DDL"  
+ 此规范中定义的架构使用 XML 命名空间 https://schemas.microsoft.com/AnalysisServices/2003/Engine 和标准的缩写"DDL"  
   
 ### <a name="schema"></a>架构  
  用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象定义语言的 XML 架构定义语言 (XSD) 架构的定义基于本节中架构元素和层次结构的定义。  

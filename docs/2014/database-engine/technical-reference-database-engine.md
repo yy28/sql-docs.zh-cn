@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 67e79a107c47563e507ad27fb0bd14f703206b4c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088793"
 ---
 # <a name="technical-reference-database-engine"></a>技术参考（数据库引擎）
   查找有关 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的工具、语言和管理编程参考文档。  
   
- ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "小文件文件夹图标") 功能参考  
+ ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "小文件文件夹图标") 功能参考   
  [“已注册的服务器”组件的 F1 帮助](../ssms/register-servers/registered-servers-f1-help.md)  
   
  [SQL Server Management Studio 菜单帮助](../ssms/menu-help/sql-server-management-studio-menu-help.md)  
