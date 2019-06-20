@@ -22,19 +22,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810048"
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
-  使用“min server memory”和“max server memory”这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  
+  使用“min server memory”  和“max server memory”  这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  
   
  **min server memory** 的默认设置为 0， **max server memory** 的默认设置为 2147483647 MB。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
   
 > [!NOTE]  
->  将 **max server memory** 设置为最小值可能会严重降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能，甚至导致无法启动。 如果在更改此选项之后无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用“-f”启动选项启动它，并将“max server memory”重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
+>  将 **max server memory** 设置为最小值可能会严重降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能，甚至导致无法启动。 如果在更改此选项之后无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用“-f”启动选项启动它，并将“max server memory”重置为以前的值   。 有关详细信息，请参阅 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
   
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态使用内存时，它会定期查询系统以确定可用内存量。 保持此可用内存可避免操作系统 (OS) 进行分页。 如果可用内存较少， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会释放内存以供操作系统使用。 如果有更多的内存可用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会分配更多的内存。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在其工作负荷需要更多内存时才增加内存；空闲的服务器不会增加其虚拟地址空间的大小。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62810048"
  使用 **min server memory** 可以保证可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的 SQL Server 内存管理器使用的最小内存量。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会在启动时立即分配 **min server memory** 中指定的内存量。 不过，除非降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **的值，否则当内存使用量由于客户端负荷而达到该值后，** 不能释放内存。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不一定分配“最小服务器内存”中指定的内存量。 如果服务器上的负荷从不需要分配 **min server memory**指定的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以较少的内存运行。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不一定分配“最小服务器内存”中指定的内存量  。 如果服务器上的负荷从不需要分配 **min server memory**指定的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以较少的内存运行。  
   
 |操作系统类型|最小内存量允许**最大服务器内存**|  
 |-------------|----------------------------------------------------------------|  
@@ -58,29 +58,29 @@ ms.locfileid: "62810048"
 |64 位|128 MB|  
   
 ## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>如何使用 SQL Server Management Studio 配置内存选项  
- 使用“min server memory”和“max server memory”这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所管理的内存量 (MB)。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
+ 使用“min server memory”  和“max server memory”  这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所管理的内存量 (MB)。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory"></a>配置固定内存量的过程  
  **若要设置固定的内存量：**  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“内存”** 节点。  
   
 3.  在 **“服务器内存选项”** 中，为 **“最小服务器内存”** 和 **“最大服务器内存”** 输入所需的内存量。  
   
-     使用默认设置，将允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据可用系统资源动态更改其内存需求。 “min server memory”的默认设置为 0，“max server memory”的默认设置为 2147483647 MB。  
+     使用默认设置，将允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据可用系统资源动态更改其内存需求。 “min server memory”  的默认设置为 0，“max server memory”  的默认设置为 2147483647 MB。  
   
 ## <a name="maximize-data-throughput-for-network-applications"></a>最大化网络应用程序数据吞吐量  
- 若要优化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的系统内存使用情况，应该限制系统用于文件缓存的内存量。 若要限制文件系统缓存，请确保未选择 **“最大化文件共享数据吞吐量”** 。 通过选择 **“最小化使用的内存”** 或 **“平衡”**，可以指定最小文件系统缓存。  
+ 若要优化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的系统内存使用情况，应该限制系统用于文件缓存的内存量。 若要限制文件系统缓存，请确保未选择 **“最大化文件共享数据吞吐量”** 。 通过选择 **“最小化使用的内存”** 或 **“平衡”** ，可以指定最小文件系统缓存。  
   
 #### <a name="to-check-the-current-setting-on-your-operating-system"></a>检查操作系统的当前设置  
   
-1.  依次单击“开始”和“控制面板”，双击“网络连接”，然后双击“本地连接”。  
+1.  依次单击“开始”  和“控制面板”  ，双击“网络连接”  ，然后双击“本地连接”  。  
   
-2.  在 **“常规”** 选项卡上，单击 **“属性”**，选择 **“Microsoft 网络的文件和打印机共享”**，然后单击 **“属性”**。  
+2.  在 **“常规”** 选项卡上，单击 **“属性”** ，选择 **“Microsoft 网络的文件和打印机共享”** ，然后单击 **“属性”** 。  
   
-3.  如果选中了 **“最大化网络应用程序数据吞吐量”** ，请任选一个相应的其他选项，单击 **“确定”**，再关闭其余对话框。  
+3.  如果选中了 **“最大化网络应用程序数据吞吐量”** ，请任选一个相应的其他选项，单击 **“确定”** ，再关闭其余对话框。  
   
 ## <a name="lock-pages-in-memory"></a>锁定内存页  
  此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。 锁定内存中的页可以在发生将内存分页到磁盘时保持服务器的响应能力。 SQL Server**锁定内存页**在 32 位和 64 位的实例选项设置为 ON [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition 和更高版本时，有权运行 sqlservr.exe 的帐户授予 Windows"已锁定页中内存"(LPIM) 用户权限。 在 SQL Server 的早期版本中，为 32 位的 SQL Server 实例设置“锁定页”选项时，需要有权运行 sqlservr.exe 的帐户具有 LPIM 用户权限并且将“awe_enabled”配置选项设置为 ON。  
@@ -90,21 +90,21 @@ ms.locfileid: "62810048"
 ### <a name="to-disable-lock-pages-in-memory"></a>禁用“锁定内存页”  
  **若要禁用锁定页中内存选项：**  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。 在中**开放**框中，键入`gpedit.msc`。  
+1.  在 **“开始”** 菜单上，单击 **“运行”** 。 在中**开放**框中，键入`gpedit.msc`。  
   
      将打开 **“组策略”** 对话框。  
   
-2.  在 **“组策略”** 控制台上，展开 **“计算机配置”**，再展开 **“Windows 设置”**。  
+2.  在 **“组策略”** 控制台上，展开 **“计算机配置”** ，再展开 **“Windows 设置”** 。  
   
-3.  展开 **“安全设置”**，再展开 **“本地策略”**。  
+3.  展开 **“安全设置”** ，再展开 **“本地策略”** 。  
   
 4.  选择 **“用户权利指派”** 文件夹。  
   
      细节窗格中随即显示出策略。  
   
-5.  在该窗格中，双击“锁定内存页”。  
+5.  在该窗格中，双击“锁定内存页”  。  
   
-6.  在 **“本地安全策略设置”** 对话框中，选择有权运行 sqlservr.exe 的帐户，然后单击 **“删除”**。  
+6.  在 **“本地安全策略设置”** 对话框中，选择有权运行 sqlservr.exe 的帐户，然后单击 **“删除”** 。  
   
 ## <a name="virtual-memory-manager"></a>虚拟内存管理器  
  在 32 位操作系统中，可以访问 4 GB 的虚拟地址空间。 2 GB 的虚拟内存专用于进程，由应用程序使用。 2 GB 保留给操作系统使用。 所有操作系统版本都包含一个开关，该开关允许应用程序访问多达 3 GB 的虚拟地址空间，从而将操作系统使用的内存限制为 1 GB。 有关如何使用开关内存配置的详细信息，请参阅介绍 4 GB 优化的 Windows 文档。 当 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行在 64 位操作系统上时，其用户可用虚拟地址空间为整个 4 GB。  
@@ -115,7 +115,7 @@ ms.locfileid: "62810048"
   
  虚拟内存系统允许虚拟内存超过物理内存，这样虚拟内存与物理内存的比率可以大于 1:1。 因此，大型程序在计算机上运行时可以具有多种物理内存配置。 但是，使用比所有进程的平均组合工作集大得多的虚拟内存可能会导致性能降低。  
   
- **min server memory** 和 **max server memory** 选项都是高级选项。 如果使用 **sp_configure** 系统存储过程来更改这些设置，则只有在“显示高级选项”设置为 1 时才能更改它们。 这些设置更改后会立即生效，不需要重新启动服务器。  
+ **min server memory** 和 **max server memory** 选项都是高级选项。 如果使用 **sp_configure** 系统存储过程来更改这些设置，则只有在“显示高级选项”  设置为 1 时才能更改它们。 这些设置更改后会立即生效，不需要重新启动服务器。  
   
 ## <a name="running-multiple-instances-of-sql-server"></a>运行多个 SQL Server 实例  
  当运行多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时，可以使用三种方法来管理内存：  
@@ -134,9 +134,9 @@ ms.locfileid: "62810048"
 |-|-------------|-------------|  
 |常规内存|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的最大进程虚拟地址空间限制：<br /><br /> 2 GB<br /><br /> 3 GB，带有**3gb**启动参数 *<br /><br /> Wow64 的 4 GB\*\*|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的最大进程虚拟地址空间限制：<br /><br /> 8 TB，在 x64 体系结构上|  
   
- ***/3gb** 是一个操作系统的启动参数。 有关详细信息，请访问 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
+ * **/3gb** 是一个操作系统的启动参数。 有关详细信息，请访问 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
- * * WOW64 (Windows on Windows 64) 是一种模式中的 32 位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 64 位操作系统上运行。 有关详细信息，请访问 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
+ \* * WOW64 (Windows on Windows 64) 是一种模式中的 32 位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 64 位操作系统上运行。 有关详细信息，请访问 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
 ## <a name="examples"></a>示例  
   

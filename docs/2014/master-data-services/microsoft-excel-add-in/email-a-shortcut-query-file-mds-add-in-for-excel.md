@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478892"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>通过电子邮件发送快捷查询文件（用于 Excel 的 MDS 外接程序）
@@ -31,7 +31,7 @@ ms.locfileid: "65478892"
   
 1.  确保工作表中的数据采用您想要共享的格式。 有关筛选数据和对列重新排序的详细信息，请参阅[加载前筛选数据&#40;MDS 外接程序 excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md)并[对列重新排序&#40;MDS 外接程序 excel&#41; ](reorder-columns-mds-add-in-for-excel.md).  
   
-2.  在 **“保存并发送”** 组中，单击 **“发送查询”**。 随即打开一封电子邮件，其中附加了查询快捷文件。  
+2.  在 **“保存并发送”** 组中，单击 **“发送查询”** 。 随即打开一封电子邮件，其中附加了查询快捷文件。  
   
 ## <a name="next-steps"></a>后续步骤  
   

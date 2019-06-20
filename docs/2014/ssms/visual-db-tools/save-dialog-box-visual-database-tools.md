@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241157"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>“保存”对话框 (Visual Database Tools)
@@ -28,10 +28,10 @@ ms.locfileid: "63241157"
   
 ## <a name="options"></a>选项  
  **表受到影响时警告**  
- 指定下次保存所选的表时是否显示此对话框。 默认情况下，此框处于选中状态。 如果清除此选项，可以在“选项”对话框中重新选择该选项。  
+ 指定下次保存所选的表时是否显示此对话框。 默认情况下，此框处于选中状态。 如果清除此选项，可以在“选项”  对话框中重新选择该选项。  
   
  **保存文本文件**  
- 显示“另存为”对话框，提示你指定用于保存列出受影响表的文本文件的位置。 此文件包含受您所做更改影响的表的列表。  
+ 显示“另存为”  对话框，提示你指定用于保存列出受影响表的文本文件的位置。 此文件包含受您所做更改影响的表的列表。  
   
 ## <a name="see-also"></a>请参阅  
  [设计表 (Visual Database Tools)](visual-database-tools.md)  

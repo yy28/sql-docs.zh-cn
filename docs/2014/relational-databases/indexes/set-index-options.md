@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036187"
 ---
 # <a name="set-index-options"></a>设置索引选项
@@ -68,17 +68,17 @@ ms.locfileid: "63036187"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要修改索引属性的表，然后选择“设计”。  
+3.  右键单击你要修改索引属性的表，然后选择“设计”  。  
   
-4.  在“表设计器”菜单上，单击“索引/键”。  
+4.  在“表设计器”  菜单上，单击“索引/键”  。  
   
 5.  选择要修改的索引。 其属性将显示在主网格中。  
   
 6.  更改任意属性的设置以自定义索引。  
   
-7.  单击 **“关闭”**。  
+7.  单击 **“关闭”** 。  
   
-8.  在“文件”菜单上，选择“保存”以保存 _table_name_。  
+8.  在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在对象资源管理器中修改索引的属性  
   
@@ -90,13 +90,13 @@ ms.locfileid: "63036187"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要修改其属性的索引，然后选择“属性”。  
+5.  右键单击要修改其属性的索引，然后选择“属性”  。  
   
-6.  在 **“选择页”** 下，选择 **“选项”**。  
+6.  在 **“选择页”** 下，选择 **“选项”** 。  
   
 7.  更改任意属性的设置以自定义索引。  
   
-8.  若要添加、删除或更改索引列的位置，请从“索引属性 - index_name”对话框中选择“常规”页。 有关详细信息，请参阅 [Index Properties F1 Help](index-properties-f1-help.md)  
+8.  若要添加、删除或更改索引列的位置，请从“索引属性 -  index_name”  对话框中选择“常规”  页。 有关详细信息，请参阅 [Index Properties F1 Help](index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -104,9 +104,9 @@ ms.locfileid: "63036187"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -138,9 +138,9 @@ ms.locfileid: "63036187"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
      [!code-sql[IndexDDL#AlterIndex4](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex4)]  
   

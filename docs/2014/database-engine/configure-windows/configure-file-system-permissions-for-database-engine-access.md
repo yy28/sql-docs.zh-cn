@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811321"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>配置数据库引擎访问的文件系统权限
@@ -28,11 +28,11 @@ ms.locfileid: "62811321"
   
 ## <a name="to-grant-file-system-permission-to-the-per-service-sid"></a>将文件系统权限授予每个服务 SID  
   
-1.  使用 Windows 资源管理器，导航到存储数据库文件的文件系统位置。 右键单击文件系统文件夹，然后单击“属性”。  
+1.  使用 Windows 资源管理器，导航到存储数据库文件的文件系统位置。 右键单击文件系统文件夹，然后单击“属性”  。  
   
-2.  在 **“安全性”** 选项卡上，单击 **“编辑”**，然后单击 **“添加”**。  
+2.  在 **“安全性”** 选项卡上，单击 **“编辑”** ，然后单击 **“添加”** 。  
   
-3.  在 **“选择用户、计算机、服务帐户或组”** 对话框中，单击 **“位置”**，在位置列表的顶部选择您的计算机名称，然后单击 **“确定”**。  
+3.  在 **“选择用户、计算机、服务帐户或组”** 对话框中，单击 **“位置”** ，在位置列表的顶部选择您的计算机名称，然后单击 **“确定”** 。  
   
 4.  在中**输入要选择的对象名称**中，键入联机丛书主题中列出的每个服务 SID 名称**配置 Windows 服务帐户和权限**。 (有关[!INCLUDE[ssDE](../../includes/ssde-md.md)]每个服务 SID，使用**NT SERVICE\MSSQLSERVER**对于默认实例，或**NT SERVICE\MSSQL$ InstanceName**对于命名实例。)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62811321"
   
 8.  在中**组或用户名**名称框中，选择每个服务 SID，然后在**权限**\<名称 > 框中，选择**允许**的复选框**完全控制**。  
   
-9. 单击 **“应用”**，然后单击 **“确定”** 两次以退出。  
+9. 单击 **“应用”** ，然后单击 **“确定”** 两次以退出。  
   
 ## <a name="see-also"></a>请参阅  
  [管理数据库引擎服务](manage-the-database-engine-services.md)   

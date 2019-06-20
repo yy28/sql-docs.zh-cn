@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f341d13995cd7a13a06e0ad7b9b380ebd0184f7d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480954"
 ---
 # <a name="create-a-data-quality-project"></a>创建数据质量项目
@@ -39,7 +39,7 @@ ms.locfileid: "65480954"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建数据质量项目”**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建数据质量项目”** 。  
   
 3.  在 **“新建数据质量项目”** 屏幕中：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65480954"
   
     2.  还可以在 **“说明”** 框中键入新的数据质量项目的说明。  
   
-    3.  在 **“使用知识库”** 列表中，单击以便选择要用于数据质量项目的知识库 右侧的“知识库详细信息: <Knowledge_Base_Name>”区域将显示所选知识库中提供的域名。  
+    3.  在 **“使用知识库”** 列表中，单击以便选择要用于数据质量项目的知识库 右侧的“知识库详细信息: <Knowledge_Base_Name>”区域将显示所选知识库中提供的域名  。  
   
     4.  在 **“选择活动”** 区域中，单击您要使用此数据质量项目执行的活动：  
   

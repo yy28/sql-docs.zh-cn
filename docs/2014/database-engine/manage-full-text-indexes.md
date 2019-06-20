@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775039"
 ---
 # <a name="manage-full-text-indexes"></a>管理全文索引
@@ -25,11 +25,11 @@ ms.locfileid: "62775039"
   
 1.  在对象资源管理器中，展开服务器。  
   
-2.  展开“数据库”，然后展开包含全文索引的数据库。  
+2.  展开“数据库”  ，然后展开包含全文索引的数据库。  
   
-3.  展开 **“表”**。  
+3.  展开 **“表”** 。  
   
-4.  右键单击对其定义了全文索引的表，选择“全文索引”，然后在“全文索引”上下文菜单中单击“属性”。 此时将打开“全文索引属性”对话框。  
+4.  右键单击对其定义了全文索引的表，选择  “全文索引”，然后在  “全文索引”上下文菜单中单击  “属性”。 此时将打开“全文索引属性”  对话框。  
   
 5.  在 **“选择页”** 窗格中，您可以选择下列页中的任一页：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62775039"
     |**“列”**|显示可用于全文索引的表列。 对于选中的列，均会创建全文索引。 您可以根据需要选择将任意数目的可用列包括在全文索引中。 有关详细信息，请参阅[全文本索引属性（列页）](../../2014/database-engine/full-text-index-properties-columns-page.md)。|  
     |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅 [填充全文索引](../relational-databases/indexes/indexes.md)。<br /><br /> <strong>\*\* 重要\* \*</strong> 退出后**全文本索引属性**对话框中，所有新创建的计划程序与 SQL Server 代理作业 （启动表增量填充*database_name*。*table_name*)。|  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。   
   
 ##  <a name="props"></a> 查看索引的表和列的属性  
  一些 [!INCLUDE[tsql](../includes/tsql-md.md)] 函数（例如 OBJECTPROPERTYEX）可用来获取各种全文索引属性的值。 此信息可用于全文搜索的管理和故障排除。  
@@ -90,7 +90,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 #### <a name="to-find-the-identifier-of-the-full-text-key-column"></a>查找全文键列的标识符  
   
-1.  每个启用全文的表都有一个列，该列用于强制实现表中行的唯一性（“唯一键列”）。 从 OBJECTPROPERTYEX 函数获取的 `TableFulltextKeyColumn` 属性包含唯一键列的列 ID。  
+1.  每个启用全文的表都有一个列，该列用于强制实现表中行的唯一性（“唯一键列”）  。 从 OBJECTPROPERTYEX 函数获取的 `TableFulltextKeyColumn` 属性包含唯一键列的列 ID。  
   
      若要获取此标识符，可以使用 SELECT 语句调用 OBJECTPROPERTYEX 函数。 使用 OBJECT_ID 函数将转换的表的名称 (*table_name*) 转换为表 ID，并指定`TableFulltextKeyColumn`属性，如下所示：  
   
@@ -132,11 +132,11 @@ GO
   
 #### <a name="to-enable-a-table-for-full-text-indexing"></a>为表启用全文索引  
   
-1.  展开服务器组，展开“数据库”，再展开包含要为其启用全文索引的表的数据库。  
+1.  展开服务器组，展开  “数据库”，再展开包含要为其启用全文索引的表的数据库。  
   
-2.  展开“表”，然后右键单击要为其禁用或重新启用全文索引的表。  
+2.  展开“表”  ，然后右键单击要为其禁用或重新启用全文索引的表。  
   
-3.  选择“全文索引”，然后单击“禁用全文索引”或“启用全文索引”。  
+3.  选择  “全文索引”，然后单击  “禁用全文索引”或  “启用全文索引”。  
   
 ##  <a name="remove"></a> 从表中删除全文索引  
   
@@ -144,8 +144,8 @@ GO
   
 1.  在对象资源管理器中，右键单击要删除的全文索引所在的表。  
   
-2.  选择“删除全文索引”。  
+2.  选择  “删除全文索引”。  
   
-3.  在出现提示时，单击“确定”，确认是否要删除该全文索引。  
+3.  在出现提示时，单击  “确定”，确认是否要删除该全文索引。  
   
   

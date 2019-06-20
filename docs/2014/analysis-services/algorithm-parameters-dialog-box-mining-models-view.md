@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062612"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>“算法参数”对话框（“挖掘模型”视图）
@@ -38,7 +38,7 @@ ms.locfileid: "66062612"
 |**Range**|列出可以在 **“值”** 列中输入的可能值的范围。 范围可以是以下值之一：<br /><br /> 离散列表，例如 1、 2、 3<br /><br /> 内含范围，例如 [0，100]<br /><br /> 排他范围，例如 (0，...)<br /><br /> 组合，例如 [0，...)|  
   
  **说明**  
- 说明在“参数”列表中选定的参数。  
+ 说明在“参数”  列表中选定的参数。  
   
  **“添加”**  
  单击此选项可以向列表中添加其他算法的特定参数。 添加参数以后，可以在 **“参数”** 列中输入正确的名称，在 **“值”** 列中提供值。  

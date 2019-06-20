@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f97834b5df61df836b7cfd4cc4d890877f8855a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108524"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 课：创建报表服务器项目 (Reporting Services)
@@ -26,13 +26,13 @@ ms.locfileid: "66108524"
   
 1.  单击**启动**，依次指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然后单击**SQL Server Data Tools**。 如果这是首次打开[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，单击**商业智能设置**的默认环境设置。  
   
-2.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。  
+2.  在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。  
   
-3.  在“已安装的模板”列表中，单击“商业智能”。  
+3.  在“已安装的模板”  列表中，单击“商业智能”  。  
   
 4.  单击**报表服务器项目**。  
   
-5.  在“名称” 中，键入 **Tutorial**。  
+5.  在“名称”  中，键入 **Tutorial**。  
   
 6.  单击 **“确定”** 以创建项目。  
   
@@ -43,17 +43,17 @@ ms.locfileid: "66108524"
 1.  在解决方案资源管理器中右键单击**报表**，依次指向**添加**，然后单击**新项**。  
   
     > [!NOTE]  
-    >  如果“解决方案资源管理器”窗口不可见，请单击“视图”菜单中的“解决方案资源管理器”。  
+    >  如果“解决方案资源管理器”  窗口不可见，请单击“视图”  菜单中的“解决方案资源管理器”  。  
   
 2.  在中**添加新项**对话框中的**模板**，单击**报表**。  
   
-3.  在“名称” 中，键入 **Sales Orders.rdl** ，再单击“添加” 。  
+3.  在“名称”  中，键入 **Sales Orders.rdl** ，再单击“添加”  。  
   
      此时报表设计器将打开，并在“设计”视图中显示新的 .rdl 文件。  
   
- 报表设计器是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中运行的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]组件。 它包含两个视图：“设计”和“预览”。 单击各个选项卡可更改视图。  
+ 报表设计器是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中运行的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]组件。 它包含两个视图：“设计”  和“预览”  。 单击各个选项卡可更改视图。  
   
- 在“报表数据”  窗格中定义数据。 在“设计”  视图中定义报表布局。 可以在“预览”视图中运行报表并查看其外观。  
+ 在“报表数据”  窗格中定义数据。 在“设计”  视图中定义报表布局。 可以在“预览”  视图中运行报表并查看其外观。  
   
 ## <a name="next-task"></a>下一个任务  
  您已经成功创建了名为“Tutorial”的报表项目，并向该报表项目添加了报表定义 (.rdl) 文件。 接下来，您将指定要用于报表的数据源。 请参阅[第 2 课：指定连接信息 &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)。  

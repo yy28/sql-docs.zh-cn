@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 442c8ffca93052235db69394ed71ad2ff3157dfe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316213"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>清除跟踪窗口 (SQL Server Profiler)
@@ -27,7 +27,7 @@ ms.locfileid: "63316213"
   
 1.  选择要清除的跟踪窗口。  
   
-2.  在“编辑”菜单上，单击“清除跟踪窗口”。  
+2.  在“编辑”  菜单上，单击“清除跟踪窗口”  。  
   
      跟踪窗口中的内容将被删除。 请注意，如果已保存跟踪文件或表，则该文件或表的内容将保持不变。  
   

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056258"
 ---
 # <a name="save-a-package-to-the-file-system"></a>将包保存到文件系统
@@ -32,7 +32,7 @@ ms.locfileid: "66056258"
   
 2.  在解决方案资源管理器中，单击要保存的包。  
   
-3.  在 **“文件”** 菜单上单击 **“保存选定项”**。  
+3.  在 **“文件”** 菜单上单击 **“保存选定项”** 。  
   
     > [!NOTE]  
     >  可以在“属性”窗口中验证保存包的路径及文件名。  

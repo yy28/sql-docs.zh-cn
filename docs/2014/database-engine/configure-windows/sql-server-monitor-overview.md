@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755183"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 监视器概述
@@ -45,7 +45,7 @@ ms.locfileid: "62755183"
  以下菜单选项适用于 SQL Server 监视器。  
   
  **File**  
- 此菜单包含“退出”命令。  
+ 此菜单包含“退出”  命令。  
   
  **操作**  
  包含在导航树中所选节点的上下文菜单。  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056704"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>分区处理目标编辑器（“连接管理器”页）
@@ -31,16 +31,16 @@ ms.locfileid: "66056704"
   
 ## <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
   
  **新建**  
- 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
+ 通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  
   
  **可用分区列表**  
  选择要处理的分区。  
   
  **处理方法**  
- 选择处理方法。 此选项的默认值为 **“完全”**。  
+ 选择处理方法。 此选项的默认值为 **“完全”** 。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

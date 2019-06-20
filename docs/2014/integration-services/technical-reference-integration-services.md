@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055282"
 ---
 # <a name="technical-reference-integration-services"></a>技术参考 (Integration Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66055282"
   
  [Change Data Capture Designer for Oracle by Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
- ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标") 错误和事件  
+ ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标") 错误和事件   
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
  ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标") **TRANSACT-SQL 参考**  

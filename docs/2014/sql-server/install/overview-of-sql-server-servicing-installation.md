@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093584"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 服务安装概述
@@ -133,7 +133,7 @@ ms.locfileid: "66093584"
  重新启动在运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新安装程序之前关闭的应用程序。 成功安装后，可能还需要立即对升级后的 `master`、`msdb` 和 `model` 数据库再进行一次备份。  
   
 ## <a name="uninstalling-updates-from-includesscurrentincludessscurrent-mdmd"></a>从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 卸载更新  
- 可以使用“控制面板”中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] “程序和功能” **卸载** 累积更新或 Service Pack。 要查看已安装的更新列表，请通过依次单击 **“开始”** 按钮、 **“控制面板”**、 **“程序”**，然后在 **“程序和功能”** 下单击 **“查看已安装的更新”**，打开“已安装的更新”。 每个累积更新是分别列出的。 但是，如果安装的 Service Pack 版本高于累积更新，累积更新条目将会隐藏起来，并且仅在卸载了 Service Pack 后才会显示出来。  
+ 可以使用“控制面板”中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] “程序和功能” **卸载** 累积更新或 Service Pack。 要查看已安装的更新列表，请通过依次单击 **“开始”** 按钮、 **“控制面板”** 、 **“程序”** ，然后在 **“程序和功能”** 下单击 **“查看已安装的更新”** ，打开“已安装的更新”。 每个累积更新是分别列出的。 但是，如果安装的 Service Pack 版本高于累积更新，累积更新条目将会隐藏起来，并且仅在卸载了 Service Pack 后才会显示出来。  
   
  若要卸载任何 Service Pack 和更新，必须按先新后旧顺序，先卸载应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的最新更新或 Service Pack。 在下面的每个示例中，卸载完其他 Service Pack 或更新之后，最后剩下的都是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 累积更新 1：  
   

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771833"
 ---
 # <a name="adding-tasks-programmatically"></a>以编程方式添加任务
@@ -117,7 +117,7 @@ Dim exec As Executable = package.Executables.Add( _
   "Culture=neutral, PublicKeyToken=89845dcd8080cc91")  
 ```  
   
- 可以使用类的 AssemblyQualifiedName 属性，以编程方式获取任务的长名称，而无须指定任务版本，如下面的示例所示。 此示例需要引用 Microsoft.SqlServer.SQLTask 程序集。  
+ 可以使用类的 AssemblyQualifiedName  属性，以编程方式获取任务的长名称，而无须指定任务版本，如下面的示例所示。 此示例需要引用 Microsoft.SqlServer.SQLTask 程序集。  
   
 ```csharp  
 using Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask;  

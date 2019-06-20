@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813990"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>挂起可用性数据库 (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "62813990"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：**[避免出现已满事务日志](#FollowUp)  
+-   **跟进：** [避免出现已满事务日志](#FollowUp)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62813990"
  您必须连接到承载要挂起的数据库的服务器实例。 若要挂起主数据库和相应的辅助数据库，请连接到承载主副本的服务器实例。 若要挂起辅助数据库但保持主数据库可用，请连接到辅助副本。  
   
 ###  <a name="Recommendations"></a> 建议  
- 出现瓶颈时，短暂挂起一个或多个辅助数据库可能有助于暂时提高主副本的性能。 只要有一个辅助数据库仍挂起，就无法截断相应的主数据库的事务日志。 这将导致日志记录在主数据库上累积。 因此，我们建议您快速恢复或删除挂起的辅助数据库。 有关详细信息，请参阅[执行后续操作：避免事务日志已满](#FollowUp)，本主题中更高版本。  
+ 出现瓶颈时，短暂挂起一个或多个辅助数据库可能有助于暂时提高主副本的性能。 只要有一个辅助数据库仍挂起，就无法截断相应的主数据库的事务日志。 这将导致日志记录在主数据库上累积。 因此，我们建议您快速恢复或删除挂起的辅助数据库。 有关详细信息，请参阅本主题后面部分的[跟进：避免出现已满事务日志](#FollowUp)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -86,9 +86,9 @@ ms.locfileid: "62813990"
   
 3.  展开该可用性组。  
   
-4.  展开“可用性数据库”节点，右键单击该数据库，然后单击“挂起数据移动”。  
+4.  展开“可用性数据库”  节点，右键单击该数据库，然后单击“挂起数据移动”  。  
   
-5.  在 **“挂起数据移动”** 对话框中，单击 **“确定”**。  
+5.  在 **“挂起数据移动”** 对话框中，单击 **“确定”** 。  
   
      对象资源管理器通过更改数据库图标以显示一个暂停指示符，来指示已挂起该数据库。  
   

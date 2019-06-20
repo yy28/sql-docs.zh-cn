@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150352"
 ---
 # <a name="distributed-replay-security"></a>分布式重播安全性
@@ -51,9 +51,9 @@ ms.locfileid: "63150352"
   
     -   单击**启动**，单击**运行**，类型`services.msc`，然后按 ENTER。  
   
-2.  在“服务”对话框中，右键单击要配置的服务，然后单击“属性”。  
+2.  在“服务”  对话框中，右键单击要配置的服务，然后单击“属性”  。  
   
-3.  在 **“登录”** 选项卡上，单击 **“本帐户”**。  
+3.  在 **“登录”** 选项卡上，单击 **“本帐户”** 。  
   
 4.  配置要使用的用户帐户。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63150352"
   
 1.  **打开 dcomcnfg.exe 组件服务管理单元**:这是用于配置 DCOM 权限的工具。  
   
-    1.  在控制器计算机上，单击 **“开始”**。  
+    1.  在控制器计算机上，单击 **“开始”** 。  
   
     2.  类型`dcomcnfg.exe`中**搜索**框。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 666b7fdf5af10b6726a1e1d7a2aaafa075bf8777
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080557"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>从多维数据源导入（SSAS 表格）
@@ -26,11 +26,11 @@ ms.locfileid: "66080557"
   
 ### <a name="to-import-data-from-an-analysis-services-cube"></a>从 Analysis Services 多维数据集导入数据  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“从数据源导入”** 。  
   
-2.  在 **“连接到数据源”** 页中，选择 **Microsoft Analysis Services**，然后单击 **“下一步”**。  
+2.  在 **“连接到数据源”** 页中，选择 **Microsoft Analysis Services**，然后单击 **“下一步”** 。  
   
-3.  执行表导入向导中的步骤。 可以在 **“指定 MDX 查询”** 页上指定 MDX 查询。 若要使用 MDX 查询设计器，请在“指定 MDX 查询”页上单击 **“设计”**。  
+3.  执行表导入向导中的步骤。 可以在 **“指定 MDX 查询”** 页上指定 MDX 查询。 若要使用 MDX 查询设计器，请在“指定 MDX 查询”页上单击 **“设计”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [导入数据（SSAS 表格）](import-data-ssas-tabular.md)   

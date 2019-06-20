@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068141"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>指定表类型(数据挖掘向导)
   可以使用 **“指定表类型”** 页指定用于定义挖掘结构的表。 如果未选择某个表，则将不能使用该表来定义挖掘结构。  
   
 > [!NOTE]  
->  可以在以后在**数据挖掘设计器**的“挖掘结构”选项卡上添加表。  
+>  可以在以后在**数据挖掘设计器**的“挖掘结构”  选项卡上添加表。  
   
- **有关详细信息：**[嵌套表&#40;Analysis Services-数据挖掘&#41;](data-mining/nested-tables-analysis-services-data-mining.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：** [嵌套表&#40;Analysis Services-数据挖掘&#41;](data-mining/nested-tables-analysis-services-data-mining.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **表**  
- 显示在向导的“选择数据源视图”页上选择的数据源视图中的表。  
+ 显示在向导的“选择数据源视图”  页上选择的数据源视图中的表。  
   
  **事例**  
  选择一个要用作事例表的表。  

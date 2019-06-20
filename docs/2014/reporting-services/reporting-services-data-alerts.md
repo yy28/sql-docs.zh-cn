@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5dd8bad47bdbc1faaec1dcb7e9c7e9a05bed548
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102979"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
@@ -29,11 +29,11 @@ ms.locfileid: "66102979"
 ##  <a name="AlertingWF"></a> 数据警报体系结构和工作流  
  下面概述了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报的主要方面：  
   
--   定义和保存数据警报定义 - 运行一个报表、创建标识感兴趣的数据值的规则、定义用于发送数据警报消息的重复执行模式，并且指定警报消息的收件人。  
+-   定义和保存数据警报定义 - 运行一个报表、创建标识感兴趣的数据值的规则、定义用于发送数据警报消息的重复执行模式，并且指定警报消息的收件人  。  
   
--   运行数据警报定义 - 警报服务在计划的时间处理警报定义，检索报表数据，基于警报定义中的规则创建数据警报实例。  
+-   运行数据警报定义 - 警报服务在计划的时间处理警报定义，检索报表数据，基于警报定义中的规则创建数据警报实例  。  
   
--   向收件人递送数据警报消息 - 警报服务创建警报实例，并通过电子邮件将警报消息发送给收件人。  
+-   向收件人递送数据警报消息 - 警报服务创建警报实例，并通过电子邮件将警报消息发送给收件人  。  
   
  此外，作为数据警报所有者，您可以查看有关数据警报的信息，删除和编辑您的数据警报定义。 每个警报只有一个所有者，即创建该警报的人员。  
   

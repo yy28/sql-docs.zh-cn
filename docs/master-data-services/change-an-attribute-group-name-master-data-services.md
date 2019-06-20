@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2aba0d743c46416c3adf87542d2611c064db906e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485291"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>更改属性组名称 (Master Data Services)
@@ -35,21 +35,21 @@ ms.locfileid: "65485291"
   
 ### <a name="to-change-an-attribute-group-name"></a>更改属性组名称  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体” 。  
+2.  在“管理模型”  页上，从网格中选择一个模型，然后单击“实体”  。  
   
 3.  在“管理实体”  页上，从网格中选择要为其编辑属性组的实体所在的行。  
   
-4.  单击“属性组” 。  
+4.  单击“属性组”  。  
   
-5.  在“管理属性组”页上，从“成员类型”下拉列表中选择成员类型，展开“叶”、“合并”或“集合”，具体视你要更新的组类型而定。  
+5.  在“管理属性组”  页上，从“成员类型”  下拉列表中选择成员类型，展开“叶”  、“合并”  或“集合”  ，具体视你要更新的组类型而定。  
   
-6.  单击要更新的属性组的名称，然后单击“编辑” 。  
+6.  单击要更新的属性组的名称，然后单击“编辑”  。  
   
 7.  在  “名称”框中，键入新名称。  
   
-8.  单击 **“保存组”**。  
+8.  单击 **“保存组”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   

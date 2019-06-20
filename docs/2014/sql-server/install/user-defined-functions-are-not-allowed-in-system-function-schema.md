@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091324"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema 中不允许使用用户定义函数
@@ -54,7 +54,7 @@ ms.locfileid: "66091324"
   
 4.  替换为对引用**system_function_schema**与**dbo**包含用户定义函数 DDL 语句的所有脚本中。  
   
-5.  修改脚本，它们调用这些函数使用两个部分组成的名称 dbo **。**_function_name_，或三部分组成的名称_database_name_**。** dbo。*function_name*。  
+5.  修改脚本，它们调用这些函数使用两个部分组成的名称 dbo **。** _function_name_，或三部分组成的名称_database_name_ **。** dbo。*function_name*。  
   
  有关详细信息，请参阅 SQL Server 联机丛书的下列主题：  
   

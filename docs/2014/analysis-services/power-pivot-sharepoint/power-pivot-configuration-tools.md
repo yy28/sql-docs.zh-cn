@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88f8937658fd7330148f8bcf4e0f5e4db5463e7f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071351"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
@@ -63,9 +63,9 @@ ms.locfileid: "66071351"
 |--------------------------------------------------|-----------------------------------|  
 |主页提供了用于 **PowerPivot Server for Excel Services**的新选项。 此选项对于在 SharePoint 场外部运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持新的体系结构。 您可以将 Excel Services 配置为使用一个或多个在 SharePoint 模式下运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。<br /><br /> ![新的配置工具中的 PowerPivot 服务器](../media/as-powerpivot-configtool-differences-new-mainpage.gif "新配置工具中的 PowerPivot 服务器")||  
 ||2010 工具包括的页面**注册 SQL Server Analysis Services (PowerPivot) 本地服务器上**若要配置的本地实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 该页面不是 2013 工具的组成部分，因为没有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本地实例。<br /><br /> ![作为旧配置工具中的服务帐户](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "作为旧配置工具中的服务帐户")|  
-||**“创建 PowerPivot 服务应用程序”** 页具有一个额外选项，即 **“升级工作簿以启用数据刷新”**。 此选项在 2013 工具中不可用。<br /><br /> ![升级旧配置工具中的工作簿](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升级旧配置工具中的工作簿")|  
-|2013 工具具有一个新页面 **“配置 PowerPivot 服务器”**。 此页支持在 SharePoint 场外部运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新体系结构。 默认情况下，在主页的 **PowerPivot Server for Excel Services**文本框中键入的服务器名称也列在 **“配置 PowerPivot 服务器”** 上。<br /><br /> ![注册 PowerPivot 服务器新配置工具](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "注册 PowerPivot 服务器新配置工具")||  
-|2013 工具具有一个新页，即 **“将 PowerPivot 外接程序注册为 Excel Services 用法跟踪程序”**。 SharePoint 2010 Excel Services 不跟踪 PowerPivot 的使用数据。||  
+||**“创建 PowerPivot 服务应用程序”** 页具有一个额外选项，即 **“升级工作簿以启用数据刷新”** 。 此选项在 2013 工具中不可用。<br /><br /> ![升级旧配置工具中的工作簿](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升级旧配置工具中的工作簿")|  
+|2013 工具具有一个新页面 **“配置 PowerPivot 服务器”** 。 此页支持在 SharePoint 场外部运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新体系结构。 默认情况下，在主页的 **PowerPivot Server for Excel Services**文本框中键入的服务器名称也列在 **“配置 PowerPivot 服务器”** 上。<br /><br /> ![注册 PowerPivot 服务器新配置工具](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "注册 PowerPivot 服务器新配置工具")||  
+|2013 工具具有一个新页，即 **“将 PowerPivot 外接程序注册为 Excel Services 用法跟踪程序”** 。 SharePoint 2010 Excel Services 不跟踪 PowerPivot 的使用数据。||  
 ||2010 工具包含 **“将 MSOLAP.5 作为受信任提供程序添加”** 页以注册 MSOLAP，以便 SharePoint 2010 中的 Excel Services 可以加载 PowerPivot 模型。 此页不是 2013 工具的组成部分。 SharePoint 2013 Excel Services 不使用 MSOLAP 访问接口来加载模型。|  
   
 ##  <a name="bkmk_overview"></a> 使用 PowerPivot 配置工具的概述  

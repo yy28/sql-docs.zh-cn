@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9095c1fa767e1854c300df1ad08bf5d1900af860
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071927"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口
@@ -28,13 +28,13 @@ ms.locfileid: "66071927"
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>将受信任的访问接口添加到 Excel Services  
   
-1.  在“管理中心”中，单击 **“管理服务应用程序”**，然后单击 Excel Services 服务应用程序。  
+1.  在“管理中心”中，单击 **“管理服务应用程序”** ，然后单击 Excel Services 服务应用程序。  
   
-2.  单击 **“受信任的数据访问接口”**。  
+2.  单击 **“受信任的数据访问接口”** 。  
   
 3.  验证 MSOLAP.5 显示在列表中。 根据您配置 PowerPivot for SharePoint 的不同方式，MSOLAP.5 可能已受信任。  
   
-4.  如果它未列出，请单击 **“添加受信任的数据访问接口”**。  
+4.  如果它未列出，请单击 **“添加受信任的数据访问接口”** 。  
   
 5.  在“访问接口 ID”中，键入 `MSOLAP.5`。  
   

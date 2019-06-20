@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 17bbc891c54d28f5eedbebc1d51edf11d0ae405b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095340"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>执行帐户（SSRS 本机模式）
@@ -44,7 +44,7 @@ ms.locfileid: "66095340"
  选择此选项可指定一个帐户。  
   
  **帐户**  
- 输入一个 Windows 域用户帐户。 使用如下格式：\<domain>\\<user account\>。  
+ 输入一个 Windows 域用户帐户。 使用如下格式：\<domain>\\<user account\>  。  
   
  **密码**  
  键入密码。  

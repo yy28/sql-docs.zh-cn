@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89674116f8f41dbfca3041f3378e384b581be61f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403919"
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>课程 4-1-使用 Analysis Services Tutorial 项目的修改的版本
@@ -35,7 +35,7 @@ ms.locfileid: "65403919"
   
 4.  移动**adventure-工作原理的多维-教程-projects.zip**的子文件夹中的文件。  
   
-5.  右键单击该文件，然后选择“全部提取”。  
+5.  右键单击该文件，然后选择“全部提取”。   
   
 6.  浏览到 **Lesson 4 Start** 文件夹，以便找到 **Analysis Services Tutorial.sln** 文件。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "65403919"
   
 1.  在中[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，然后在**文件**菜单中，单击**关闭解决方案**关闭您不会使用的文件。  
   
-2.  在“文件”菜单中，指向“打开”，然后单击“项目”/“解决方案”。  
+2.  在“文件”  菜单中，指向“打开”  ，然后单击“项目”/“解决方案”  。  
   
 3.  浏览到将教程项目文件解压缩到的位置。  
   
@@ -57,10 +57,10 @@ ms.locfileid: "65403919"
 ### <a name="data-source-view"></a>“数据源视图”  
 该增强的项目的数据源视图中新增了来自 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] 数据库的一个事实数据表和四个维度表。  
   
-可以看到该数据源视图包含十个表， <All Tables> 关系图变得很拥挤， 因此很难轻松理解各表之间的关系并找到特定表。 为了解决这一问题，将这些表组织为两个逻辑关系图：“Internet 销售”关系图和“分销商销售”关系图。 这两个关系图均围绕一个事实数据表进行组织。 通过创建逻辑关系图，您可以在数据源视图中查看和使用表的特定子集，而无需始终在一个关系图中查看所有表及其关系。  
+可以看到该数据源视图包含十个表， <All Tables> 关系图变得很拥挤， 因此很难轻松理解各表之间的关系并找到特定表。 为了解决这一问题，将这些表组织为两个逻辑关系图：“Internet 销售”关系图和“分销商销售”关系图。   这两个关系图均围绕一个事实数据表进行组织。 通过创建逻辑关系图，您可以在数据源视图中查看和使用表的特定子集，而无需始终在一个关系图中查看所有表及其关系。  
   
 #### <a name="internet-sales-diagram"></a>“Internet 销售”关系图  
-“Internet 销售”关系图包含与直接通过 Internet 向客户销售 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品相关的表。 该关系图包含四个维度表和一个事实表，在第 1 课中已经将这些表添加到 **Adventure Works DW 2012** 数据源视图。 这些表包括：  
+“Internet 销售”关系图包含与直接通过 Internet 向客户销售 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品相关的表。  该关系图包含四个维度表和一个事实表，在第 1 课中已经将这些表添加到 **Adventure Works DW 2012** 数据源视图。 这些表包括：  
   
 -   **地域**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65403919"
 -   **InternetSales**  
   
 #### <a name="reseller-sales-diagram"></a>“分销商销售”关系图  
-“分销商销售”关系图包含与分销商销售 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品相关的表。 该关系图包含来自 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] 数据库的下列七个维度表和一个事实数据表：  
+“分销商销售”关系图包含与分销商销售 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品相关的表。  该关系图包含来自 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] 数据库的下列七个维度表和一个事实数据表：  
   
 -   **Reseller**  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65403919"
   
 -   **ResellerSales**  
   
-请注意，“Internet 销售”关系图和“分销商销售”关系图中都使用了 **DimGeography**、**DimDate** 和 **DimProduct** 表。 维度表可链接到多个事实数据表。  
+请注意，“Internet 销售”关系图和“分销商销售”关系图中都使用了 **DimGeography**、**DimDate** 和 **DimProduct** 表。   维度表可链接到多个事实数据表。  
   
 ### <a name="database-and-cube-dimensions"></a>数据库和多维数据集维度  
 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial 项目包含五个新数据库维度，而 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial 多维数据集包含与此相同的五个维度作为多维数据集维度。 这些维度已定义为具有通过使用命名计算、组合成员键和显示文件夹修改过的用户层次结构和属性。 下面的列表对这些新维度进行了说明。  

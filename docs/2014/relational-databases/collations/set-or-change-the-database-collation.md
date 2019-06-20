@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62874029"
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
@@ -74,13 +74,13 @@ ms.locfileid: "62874029"
   
 #### <a name="to-set-or-change-the-database-collation"></a>设置或更改数据库排序规则  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”** 。  
   
-2.  如果您正在创建一个新数据库，则右键单击 **“数据库”** ，然后单击 **“新建数据库”**。 如果您不希望使用默认排序规则，则单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
+2.  如果您正在创建一个新数据库，则右键单击 **“数据库”** ，然后单击 **“新建数据库”** 。 如果您不希望使用默认排序规则，则单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
   
-     或者，如果数据库已经存在，则右键单击所需数据库，然后单击 **“属性”**。 单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
+     或者，如果数据库已经存在，则右键单击所需数据库，然后单击 **“属性”** 。 单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
   
-3.  在完成后，单击 **“确定”**。  
+3.  在完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -88,9 +88,9 @@ ms.locfileid: "62874029"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何使用 [COLLATE](/sql/t-sql/statements/collations) 子句来指定排序规则名称。 此示例创建使用 `MyOptionsTest` 排序规则的数据库 `Latin1_General_100_CS_AS_SC` 。 在创建数据库后，执行 `SELECT` 语句以验证设置。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例演示如何使用 [COLLATE](/sql/t-sql/statements/collations) 子句来指定排序规则名称。 此示例创建使用 `MyOptionsTest` 排序规则的数据库 `Latin1_General_100_CS_AS_SC` 。 在创建数据库后，执行 `SELECT` 语句以验证设置。  
   
 ```sql  
 USE master;  
@@ -114,9 +114,9 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何在 [ALTER DATABASE](/sql/t-sql/statements/collations) 语句中使用 [COLLATE](/sql/t-sql/statements/alter-database-transact-sql) 子句来更改排序规则名称。 执行 `SELECT` 语句以验证更改。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何在 [ALTER DATABASE](/sql/t-sql/statements/collations) 语句中使用 [COLLATE](/sql/t-sql/statements/alter-database-transact-sql) 子句来更改排序规则名称。 执行 `SELECT` 语句以验证更改。  
   
 ```sql  
 USE master;  

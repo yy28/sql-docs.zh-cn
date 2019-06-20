@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26658ebc9cc2828bc127be2881bdf24d80922b67
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010293"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
@@ -84,7 +84,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 创建 FileTable**  
- 在对象资源管理器中，展开所选数据库下的对象，然后右键单击“Tables”文件夹，选择“新建 FileTable”。  
+ 在对象资源管理器中，展开所选数据库下的对象，然后右键单击“Tables”  文件夹，选择“新建 FileTable”  。  
   
  此选项将打开一个新的脚本窗口，其中包含一个 Transact-SQL 脚本模板，您可以自定义和运行此模板以创建 FileTable。 使用 **“查询”** 菜单上的 **“指定模板参数的值”** 选择可轻松指定脚本。  
   
@@ -96,7 +96,7 @@ GO
   
 -   由于一个 FileTable 包含一个 FILESTREAM 列，因此，FileTable 需要有效的 FILESTREAM 文件组。 可以指定有效的 FILESTREAM 文件组作为 **CREATE TABLE** 命令的一部分以创建 FileTable（可选）。 如果未指定文件组，则 FileTable 使用数据库的默认 FILESTREAM 文件组。 如果数据库没有 FILESTREAM 文件组，将引发错误。  
   
--   不能将表约束作为 CREATE TABLE…AS FILETABLE 语句的一部分创建。 但是，您以后可以使用 **ALTER TABLE** 语句添加该约束。  
+-   不能将表约束作为 CREATE TABLE…AS FILETABLE 语句的一部分创建  。 但是，您以后可以使用 **ALTER TABLE** 语句添加该约束。  
   
 -   不能在 **tempdb** 数据库或任何其他系统数据库中创建 FileTable。  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 更改 FileTable 的目录**  
- 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。 在 **FileTable** 页上，为 **“FileTable 目录名称”** 输入新值。  
+ 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。   在 **FileTable** 页上，为 **“FileTable 目录名称”** 输入新值。  
   
 ###  <a name="ReqAlter"></a> 更改 FileTable 的要求和限制  
   
@@ -175,7 +175,7 @@ GO
 |检查约束|系统定义的检查约束强制执行下列要求：<br /><br /> 有效的文件名。<br /><br /> 有效的文件属性。<br /><br /> 父对象必须是目录。<br /><br /> 命名空间层次结构在文件操作过程中锁定。|  
   
  **系统定义的约束的命名约定**  
- 上述系统定义的约束采用以下格式命名：**\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>**，其中：  
+ 上述系统定义的约束采用以下格式命名： **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** ，其中：  
   
 -   *<constraint_type>* 为 CK（检查约束）、DF（默认约束）、FK（外键）、PK（主键）或 UQ（唯一约束）。  
   

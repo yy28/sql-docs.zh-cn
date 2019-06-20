@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 001e62869146a7090fe4598650c763a690809cfb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103642"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器
@@ -29,7 +29,7 @@ ms.locfileid: "66103642"
 > [!NOTE]  
 >  性能对象用于监视本地报表服务器上的事件。 如果是在扩展部署中运行报表服务器，则只对当前服务器（而不是整个扩展部署）进行计数。  
   
- Windows 性能监视器 (**Perfmon.exe**) 中提供了性能对象。 有关详细信息，请参阅 Windows 文档。 [运行时分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 性能监视器 (**Perfmon.exe**) 中提供了性能对象。 有关详细信息，请参阅 Windows 文档。 [运行时分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  本主题内容：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66103642"
 |`Logon Attempts/sec`|登录尝试的频率。|  
 |`Logon Successes Total`|RSWindows 身份验证类型的成功登录次数。 RSWindows 身份验证类型包括 RSWindowsNegotiate、RSWindowsNTLM、RSWindowsKerberos 和 RSWindowsB asic。 值为零 (0) 表示自定义身份验证。|  
 |`Logon Successes/sec`|登录成功率。|  
-|`Memory Pressure State`|以下从 1-5 的数字，指示服务器的当前内存状态：<br /><br /> 1:没有压力<br /><br /> 2:低压力<br /><br /> 3:中等压力<br /><br /> 4:高压力<br /><br /> 5:过度的压力|  
+|`Memory Pressure State`|以下从 1-5 的数字，指示服务器的当前内存状态：<br /><br /> 1：没有压力<br /><br /> 2:低压力<br /><br /> 3：中等压力<br /><br /> 4：高压力<br /><br /> 5：过度的压力|  
 |`Memory Shrink Amount`|服务器请求缩小使用中内存的字节数。|  
 |`Memory Shrink Notifications/sec`|服务器上一秒内发出的缩小使用中内存的通知数。 该值表示服务器经历内存压力的频率。|  
 |`Requests Disconnected`|由于通信故障而断开连接的请求数。|  

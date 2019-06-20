@@ -13,14 +13,15 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bcd8c20039b048cf717c24981124ffd61cf51f4
+ms.sourcegitcommit: 6f8f975f7f97cd12fa008b05dc8d52cd1e94577f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158019"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251000"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>内存中 OLTP（内存中优化）
+
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]中的新增功能 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 可大幅度提高 OLTP 数据库应用程序性能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 是集成到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎中的内存优化的数据库引擎，针对 OLTP 进行了优化。  
   
 |||  
@@ -90,7 +91,11 @@ ms.locfileid: "63158019"
   
 -   [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [SQL Server 内存中 OLTP 内部组件概述](https://msdn.microsoft.com/library/dn720242.aspx)  
+-   [SQL Server 内存中 OLTP 内部组件概述](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
+    <!--
+         (https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
+         (/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016?view=sql-server-2016)
+    -->
   
 ## <a name="see-also"></a>请参阅  
  [数据库功能](../database-features.md)  

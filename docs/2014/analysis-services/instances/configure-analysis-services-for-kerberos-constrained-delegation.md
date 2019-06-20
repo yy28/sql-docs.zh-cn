@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1374179c5bdac27bc7fda98d8a4675eab4ca9a18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080232"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 约束委派配置 Analysis Services
@@ -66,19 +66,19 @@ ms.locfileid: "66080232"
   
  在两个先决条件均得到满足后，继续执行以下步骤。 请注意，若要设置约束委派，您必须是域管理员。  
   
-1.  在“Active Directory 用户和计算机”中，找到 Analysis Services 按其运行的服务帐户。 右键单击该服务帐户，然后选择 **“属性”**。  
+1.  在“Active Directory 用户和计算机”中，找到 Analysis Services 按其运行的服务帐户。 右键单击该服务帐户，然后选择 **“属性”** 。  
   
      出于说明目的，以下屏幕快照使用 OlapSvc 和 SQLSvc 分别表示 Analysis Services 和 SQL Server。  
   
      OlapSvc 是为针对 SQLSvc 的约束委派将配置的帐户。 在您完成此任务后，OlapSvc 将有权将服务票证上的委托的凭据传递给 SQLSvc，并且在请求数据时模拟原始调用方。  
   
-2.  在“委托”选项卡上，选择 **“仅信任此用户对指定服务的委托”**，后跟 **“仅使用 Kerberos”**。 单击“添加”  以指定允许 Analysis Services 委托凭据的服务。  
+2.  在“委托”选项卡上，选择 **“仅信任此用户对指定服务的委托”** ，后跟 **“仅使用 Kerberos”** 。 单击“添加”  以指定允许 Analysis Services 委托凭据的服务。  
   
      只有在将用户帐户 (OlapSvc) 分配给某一服务 (Analysis Services) 并且为该服务注册了 SPN 的情况下，“委托”选项卡才会出现。 SPN 注册要求该服务正在运行。  
   
      ![SSAS_Kerberos_1_AccountProperties](../media/ssas-kerberos-1-accountproperties.gif "SSAS_Kerberos_1_AccountProperties")  
   
-3.  在“添加服务”页上，单击 **“用户或计算机”**。  
+3.  在“添加服务”页上，单击 **“用户或计算机”** 。  
   
      ![SSAS_Kerberos_2_](../media/ssas-kerberos-2.gif "SSAS_Kerberos_2_")  
   

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960810"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
@@ -77,11 +77,11 @@ ms.locfileid: "62960810"
 |非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
 |队列读取器代理|**[\<分发服务器>].\<整数>**|  
   
- <sup>1</sup>对于 Oracle 发布的推送订阅，作业名称是**\<发布服务器 >-\<发布者**> 而不是**\<发布服务器 >-\<发布数据库 >**。  
+ <sup>1</sup>对于 Oracle 发布的推送订阅，作业名称是 **\<发布服务器 >-\<发布者**> 而不是 **\<发布服务器 >-\<发布数据库 >** 。  
   
- <sup>2</sup>对于 Oracle 发布的请求订阅，作业名称是**\<发布服务器 >-\<分发数据库**> 而不是**\<发布服务器 >-\<发布数据库 >**。  
+ <sup>2</sup>对于 Oracle 发布的请求订阅，作业名称是 **\<发布服务器 >-\<分发数据库**> 而不是 **\<发布服务器 >-\<发布数据库 >** 。  
   
- 配置复制时，指定运行代理应使用的帐户。 但是，所有作业步骤都使用“代理 ”的安全上下文运行；因此，复制会为指定的代理帐户在内部执行下列映射：  
+ 配置复制时，指定运行代理应使用的帐户。 但是，所有作业步骤都使用“代理  ”的安全上下文运行；因此，复制会为指定的代理帐户在内部执行下列映射：  
   
 -   首先使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](/sql/t-sql/statements/create-credential-transact-sql) 语句将帐户映射到凭据。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。  
   

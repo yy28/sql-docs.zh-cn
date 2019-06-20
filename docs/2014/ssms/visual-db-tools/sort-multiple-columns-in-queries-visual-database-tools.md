@@ -13,18 +13,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63070898"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>对查询中的多个列进行排序 (Visual Database Tools)
-  通过使用[“条件”窗格](visual-database-tools.md)中的“排序顺序”列，可以指定使用各列对数据进行排序时所依据的顺序。  
+  通过使用[“条件”窗格](visual-database-tools.md)中的“排序顺序”  列，可以指定使用各列对数据进行排序时所依据的顺序。  
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>依据多个列对查询结果进行排序  
   
-1.  在“条件”窗格中，单击排序要依据的列的“排序顺序”字段。  
+1.  在“条件”  窗格中，单击排序要依据的列的“排序顺序”  字段。  
   
 2.  键入一个整数或从下拉列表中选择一个整数，以指示此列在排序列中的位置。  
   

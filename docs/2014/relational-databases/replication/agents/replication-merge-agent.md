@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63216003"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
@@ -109,8 +109,8 @@ ms.locfileid: "63216003"
  **-?**  
  输出所有可用的参数。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
@@ -118,8 +118,8 @@ ms.locfileid: "63216003"
  **-Publication** _publication_  
  发布的名称。 只有将发布设置为总是使快照可用于新订阅或重新初始化的订阅时，此参数才有效。  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-SubscriberDB** _subscriber_database_  
  订阅服务器数据库的名称。  
@@ -136,8 +136,8 @@ ms.locfileid: "63216003"
  **-DefinitionFile** _def_path_and_file_name_  
  代理定义文件的路径。 代理定义文件中包含代理的命令提示符参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 对于分发服务器（推送）分发，名称默认为本地计算机上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的默认实例的名称。  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 对于分发服务器（推送）分发，名称默认为本地计算机上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的默认实例的名称。  
   
  **-DistributorLogin** _distributor_login_  
  分发服务器登录名。  
@@ -163,7 +163,7 @@ ms.locfileid: "63216003"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  建立连接时合并代理使用的安全套接字层 (SSL) 加密的级别。  
   
-|EncryptionLevel 值|描述|  
+|EncryptionLevel 值|Description|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -180,7 +180,7 @@ ms.locfileid: "63216003"
   
  指定同步过程中数据交换的类型，可以是下列值之一：  
   
-|ExchangeType 值|描述|  
+|ExchangeType 值|Description|  
 |------------------------|-----------------|  
 |**1**|代理应将订阅服务器上的数据更改上载到发布服务器。|  
 |**2**|代理应将发布服务器上的数据更改下载到订阅服务器。|  
@@ -199,7 +199,7 @@ ms.locfileid: "63216003"
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合并代理应使用的收敛级别，可以为以下值之一：  
   
-|ForceConvergenceLevel 值|描述|  
+|ForceConvergenceLevel 值|Description|  
 |---------------------------------|-----------------|  
 |**0** （默认值）|默认值。 执行不具有附加收敛的标准合并。|  
 |**1**|强制所有生成进行收敛。|  
@@ -220,7 +220,7 @@ ms.locfileid: "63216003"
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  指定在合并操作期间记录的历史记录数量。 选择 **1**可将历史日志记录对性能的影响减至最小。  
   
-|HistoryVerboseLevel 值|描述|  
+|HistoryVerboseLevel 值|Description|  
 |-------------------------------|-----------------|  
 |**0**|记录最终的代理状态消息、最终的会话详细信息和任何错误。|  
 |**1**|记录每个会话状态的增量会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。|  
@@ -261,7 +261,7 @@ ms.locfileid: "63216003"
  在历史记录线程检查目前是否有连接在等待服务器响应之前等待的秒数。 在执行长时间运行的批处理时，减小该值可避免检查代理将合并代理标记为可疑。 默认值为 **300** 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 登录超时前等待的秒数。 默认值为 15 秒。  
+ 登录超时前等待的秒数。  默认值为 15 秒。  
   
  **-MakeGenerationInterval** _make_generation_interval_seconds_  
  等待创建生成或更改批的秒数或下载到客户端的秒数。 默认值为 **1** 秒。  
@@ -284,7 +284,7 @@ ms.locfileid: "63216003"
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
- 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
+ 指定输出是否应提供详细内容。  如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
  **-ParallelUploadDownload** [**0**|**1**]  
  指定合并代理是否应并行处理上载到发布服务器和下载到订阅服务器的更改，这对于具有高带宽的大容量环境很有用。 如果 **ParallelUploadDownload** 为 **1**，则启用并行处理。  
@@ -298,7 +298,7 @@ ms.locfileid: "63216003"
  **-ProfileName** _profile_name_  
  指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅[复制代理配置文件](replication-agent-profiles.md)。  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅[数据库镜像和复制 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherLogin** _publisher_login_  
@@ -325,7 +325,7 @@ ms.locfileid: "63216003"
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  指定是否存在现有的订阅服务器数据库。  
   
-|SubscriberDBAddOption 值|描述|  
+|SubscriberDBAddOption 值|Description|  
 |---------------------------------|-----------------|  
 |**0**|使用现有数据库（默认值）。|  
 |**1**|创建一个新的空订阅服务器数据库。|  
@@ -371,7 +371,7 @@ ms.locfileid: "63216003"
  **-Validate** [**0**|**1**|**2**|**3**]  
  指定是否应在合并会话结束时执行验证，以及如果要执行验证，应执行哪种类型的验证。 建议值为 **3** 。  
   
-|Validate 值|描述|  
+|Validate 值|Description|  
 |--------------------|-----------------|  
 |**0** （默认值）|不执行验证。|  
 |**1**|只验证行计数。|  

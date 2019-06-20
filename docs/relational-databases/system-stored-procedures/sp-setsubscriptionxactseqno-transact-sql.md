@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
-ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66270158"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
@@ -50,7 +50,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。 当通过多个发布共享分发代理时，必须指定值为 ALL*发布*。  
   
-`[ @xact_seqno = ] xact_seqno` 是要应用于订阅服务器上的分发服务器上的下一个事务的 LSN。 *xact_seqno*是**varbinary(16)**，无默认值。  
+`[ @xact_seqno = ] xact_seqno` 是要应用于订阅服务器上的分发服务器上的下一个事务的 LSN。 *xact_seqno*是**varbinary(16)** ，无默认值。  
   
 ## <a name="result-set"></a>结果集  
   

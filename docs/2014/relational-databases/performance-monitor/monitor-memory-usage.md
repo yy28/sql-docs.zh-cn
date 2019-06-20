@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63239143"
 ---
 # <a name="monitor-memory-usage"></a>监视内存使用量
@@ -35,9 +35,9 @@ ms.locfileid: "63239143"
   
  若要监视内存不足的情况，请使用下列对象计数器：  
   
--   Memory:Available Bytes  
+-   Memory:  Available Bytes  
   
--   Memory:Pages/sec  
+-   Memory:  Pages/sec  
   
  **Available Bytes** 计数器指示当前有多少内存（以字节为单位）可供进程使用。 **Pages/sec** 计数器指示由于页错误而从磁盘取回的页数，或由于页错误而写入磁盘以释放工作集空间的页数。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "63239143"
   
  若要监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存量，请检查下列性能计数器：  
   
--   Process:Working Set  
+-   Process:  Working Set  
   
--   **SQL Server:缓冲区管理器：Buffer Cache Hit Ratio**  
+-   SQL Server：**缓冲区管理器：Buffer Cache Hit Ratio**  
   
--   **SQL Server:缓冲区管理器：Database pages**  
+-   SQL Server：**缓冲区管理器：Database pages**  
   
--   **SQL Server:内存管理器：Total Server Memory (KB)**  
+-   SQL Server：**内存管理器：Total Server Memory (KB)**  
   
  **WorkingSet** 计数器显示进程所用的内存量。 如果此内存量一直小于 **min server memory** 和 **max server memory** 服务器选项设置的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 被配置为使用过多内存。  
   

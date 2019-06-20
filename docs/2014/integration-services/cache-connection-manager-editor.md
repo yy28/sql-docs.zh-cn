@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061076"
 ---
 # <a name="cache-connection-manager-editor"></a>缓存连接管理器编辑器
@@ -27,7 +27,7 @@ ms.locfileid: "66061076"
   
  查找转换在引用数据集上执行查找。  
   
- “缓存连接管理器编辑器”对话框包含以下选项卡：  
+ “缓存连接管理器编辑器”  对话框包含以下选项卡：  
   
 -   [常规选项卡](#generaltab)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66061076"
  若要了解有关缓存连接管理器的详细信息，请参阅 [Cache Connection Manager](connection-manager/cache-connection-manager.md)。  
   
 ##  <a name="generaltab"></a> “常规”选项卡  
- “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件。  
+ “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件   。  
   
 ### <a name="options"></a>选项  
  **连接管理器名称**  

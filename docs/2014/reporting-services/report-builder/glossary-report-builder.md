@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0eb37b891afc31b56d0e518ba7aa73190491e5ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107809"
 ---
 # <a name="glossary-report-builder"></a>词汇表（报表生成器）
@@ -215,7 +215,7 @@ ms.locfileid: "66107809"
 |MDX|请参阅另一术语：多维表达式 (MDX)|  
 |Mercator 投影 (Mercator projection)|在地图报表项中，指的是 Gerardus Mercator 在 1569 年发现的柱面地图投影。|  
 |元数据|有关数据属性的信息，例如列中的数据类型（numeric、text 等）或列的长度；有关文件的信息，例如其标题、说明、创建日期以及最后修改日期；或者有关数据结构的信息或指定对象设计（例如多维数据集或维度）的信息。|  
-|方法|通过使用 COM 对象执行操作的函数，与在 SQL-DMO、OLE DB 和 ActiveX 数据对象 (ADO) 中一样。|  
+|method|通过使用 COM 对象执行操作的函数，与在 SQL-DMO、OLE DB 和 ActiveX 数据对象 (ADO) 中一样。|  
 |MIME 类型 (MIME type)|图像的文件格式，例如 .bmp、.gif 或 .jpeg。|  
 |模型依赖关系 (model dependency)|两个或更多个模型之间的一种关系，在这种关系中一个模型依赖于其他模型的信息。|  
 |多维表达式 (MDX)|用来定义多维对象以及查询和操作多维数据的语法。|  

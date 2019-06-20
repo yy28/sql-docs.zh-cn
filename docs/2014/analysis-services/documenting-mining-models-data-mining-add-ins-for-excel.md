@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081591"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>记录挖掘模型（Excel 数据挖掘外接程序）
@@ -37,7 +37,7 @@ ms.locfileid: "66081591"
   
 4.  在中**选择文档详细信息**对话框框中，选择两个选项之一：**完成信息**或**摘要信息**。  
   
-5.  单击 **“完成”**。  
+5.  单击 **“完成”** 。  
   
 6.  向导会自动创建一个包含指定的报表标题为的新工作表**模型文档**，  
   

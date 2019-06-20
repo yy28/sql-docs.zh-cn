@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632475"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE 和 INSERT 语句
@@ -29,19 +29,19 @@ ms.locfileid: "62632475"
   
  这些语句的语法是：  
   
- **更新**_表名称_  
+ **更新** _表名称_  
   
  **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
   
- [**,** _column-identifier_ **=** {*expression* &#124; **NULL**}]...  
+ [ **,** _column-identifier_ **=** {*expression* &#124; **NULL**}]...  
   
  [**WHERE** _search-condition_]  
   
  **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
   
- **INSERT INTO** _table-name_[**(** _column-identifier_ [**,** _column-identifier_]...**)**]  
+ **INSERT INTO** _table-name_[ **(** _column-identifier_ [ **,** _column-identifier_]... **)** ]  
   
- {*query-specification* &#124; **VALUES (** _insert-value_ [**,** _insert-value_]...**)**}  
+ {*query-specification* &#124; **VALUES (** _insert-value_ [ **,** _insert-value_]... **)** }  
   
  请注意，*查询规范*元素是仅在核心应用程序和扩展 SQL 语法和的中有效*表达式*并*搜索条件*元素变得更在核心应用程序和扩展 SQL 语法中复杂。  
   

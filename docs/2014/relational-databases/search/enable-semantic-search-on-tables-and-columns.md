@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011381"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
@@ -113,7 +113,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 创建新的语义索引**  
- 运行全文索引向导并在“选择表列” 页为每个要创建语义索引的列启用“统计语义” 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](use-the-full-text-indexing-wizard.md)。  
+ 运行全文索引向导并在“选择表列”  页为每个要创建语义索引的列启用“统计语义”  。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](use-the-full-text-indexing-wizard.md)。  
   
 ###  <a name="HowToEnableAlter"></a> 如何：现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
@@ -142,7 +142,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 添加语义索引**  
- 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
+ 可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
   
 ###  <a name="addreq"></a> 更改现有索引的要求和限制  
   
@@ -156,7 +156,7 @@ GO
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
  **使用 TRANSACT-SQL 删除语义索引**  
- -   要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句****。 可以在单个 **ALTER** 语句中从多个列删除索引。  
+ -   要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句  **** 。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
     ```sql  
     USE database_name  
@@ -168,7 +168,7 @@ GO
     GO  
     ```  
   
--   要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句****。  
+-   要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句  **** 。  
   
     ```sql  
     USE database_name  
@@ -181,7 +181,7 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 删除语义索引**  
- 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
+ 可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
   
 ###  <a name="dropreq"></a> 删除语义索引的要求和限制  
   
@@ -233,7 +233,7 @@ GO
     GO  
     ```  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”  。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
   
      值 True 表示除了启用全文索引外，还为指定的列启用了语义索引。  
   

@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a9adfe74aef16e475d06eddfbe08852f7618518
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084106"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 决策树算法
@@ -41,9 +41,9 @@ ms.locfileid: "66084106"
  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 公司的市场部希望标识以前的客户的某些特征，这些特征可能指示这些客户将来是否有可能购买其产品。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库存储描述其以前客户的人口统计信息。 通过使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法分析这些信息，市场部可以生成一个模型，该模型根据有关特定客户的已知列的状态（如人口统计或以前的购买模式）预测该客户是否会购买产品。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法通过在树中创建一系列拆分来生成数据挖掘模型。 这些拆分以“ 节点”来表示。 每当发现输入列与可预测列密切相关时，该算法便会向该模型中添加一个节点。 该算法确定拆分的方式不同，主要取决于它预测的是连续列还是离散列。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法通过在树中创建一系列拆分来生成数据挖掘模型。 这些拆分以“  节点”来表示。 每当发现输入列与可预测列密切相关时，该算法便会向该模型中添加一个节点。 该算法确定拆分的方式不同，主要取决于它预测的是连续列还是离散列。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法使用“  功能选择”来指导如何选择最有用的属性。 所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法均使用功能选择来改善分析的性能和质量。 功能选择对防止不重要的属性占用处理器时间意义重大。 如果在设计数据挖掘模型时使用过多的输入或可预测属性，则可能需要很长的时间来处理该模型，甚至导致内存不足。 用于确定是否拆分树的方法包括“平均信息量”和 Bayesian 网络的行业标准度量。 有关用于选择有意义的属性以及对这些属性计分和排列的方法的详细信息，请参阅[功能选择（数据挖掘）](feature-selection-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法使用“  功能选择”来指导如何选择最有用的属性。 所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法均使用功能选择来改善分析的性能和质量。 功能选择对防止不重要的属性占用处理器时间意义重大。 如果在设计数据挖掘模型时使用过多的输入或可预测属性，则可能需要很长的时间来处理该模型，甚至导致内存不足。 用于确定是否拆分树的方法包括“平均信息量”  和 Bayesian 网络的行业标准度量。  有关用于选择有意义的属性以及对这些属性计分和排列的方法的详细信息，请参阅[功能选择（数据挖掘）](feature-selection-data-mining.md)。  
   
  数据挖掘模型中的一个常见问题是该模型的定型数据中的细微差异过于敏感，在此情况下它称其为*过度拟合*或*过度定型*。 过度拟合模型无法推广到其他数据集。 为避免模型对任何特定的数据集过度拟合， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法使用一些技术来控制树的生长。 有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法工作方式的更深入说明，请参阅 [Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66084106"
  有关决策树模型支持的内容类型和数据类型的更多详细信息，请参阅 [Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)。  
   
 ## <a name="viewing-a-decision-trees-model"></a>查看决策树模型  
- 若要浏览该模型，可以使用 **“Microsoft 树查看器”**。 如果模型生成多个树，则可以选择其中一个树，然后该查看器即会显示对于每个可预测属性，这些事例分类方式的明细。 还可以使用依赖关系网络查看器来查看这些树的交互。 有关详细信息，请参阅 [使用 Microsoft 树查看器浏览模型](browse-a-model-using-the-microsoft-tree-viewer.md)。  
+ 若要浏览该模型，可以使用 **“Microsoft 树查看器”** 。 如果模型生成多个树，则可以选择其中一个树，然后该查看器即会显示对于每个可预测属性，这些事例分类方式的明细。 还可以使用依赖关系网络查看器来查看这些树的交互。 有关详细信息，请参阅 [使用 Microsoft 树查看器浏览模型](browse-a-model-using-the-microsoft-tree-viewer.md)。  
   
  如果想了解关于树中任何分支或节点的更多详细信息，还可以使用 [Microsoft 一般内容树查看器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)浏览该模型。 为该模型存储的内容包括每个节点中所有值的分布、树中每一级别的概率和连续属性的回归公式。 有关详细信息，请参阅 [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
   

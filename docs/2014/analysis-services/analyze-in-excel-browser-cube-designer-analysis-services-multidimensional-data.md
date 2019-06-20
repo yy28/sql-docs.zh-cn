@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062369"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>在 Excel 中分析（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -33,7 +33,7 @@ ms.locfileid: "66062369"
   
 4.  单击菜单栏中的 Excel 图标。  
   
-5.  在系统提示您启用数据连接时，单击 **“启用”**。 Excel 将使用当前数据连接打开，并且向电子表格中添加一个数据透视表，以便您可以开始浏览数据。  
+5.  在系统提示您启用数据连接时，单击 **“启用”** 。 Excel 将使用当前数据连接打开，并且向电子表格中添加一个数据透视表，以便您可以开始浏览数据。  
   
  您可以通过将度量值从事实表拖到“值”区域，并且将维度属性拖到“行”和“列”区域，以交互方式生成数据透视表。 如果您具有层次结构，则将它们添加到“行”和“列”区域。 您可以汇总或深化层次结构，以便在不同级别浏览事实数据。  
   

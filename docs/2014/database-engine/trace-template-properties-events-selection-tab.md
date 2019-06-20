@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d86515646236916a9c651c7fa02923b88b995cd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089549"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>跟踪模板属性（“事件选择”选项卡）
   使用 **“跟踪模板属性”** 对话框的 **“事件选择”** 选项卡，可以查看、编辑或指定要包含在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 跟踪模板中的事件类和数据列。  
   
 ## <a name="options"></a>选项  
- “事件”列  
+ “事件”  列  
  通过选择或清除事件列中的复选框，指定要跟踪的事件。 事件按事件类别进行组织。  
   
  如果在 **“常规”** 选项卡上选中 **“使新模板基于现有模板”** ，将会根据指定的模板自动选择事件。 有关事件类的详细信息，请参阅 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "66089549"
  显示所有可用数据列。 如果创建的新模板不是基于现有模板，默认情况下将选中此选项。 取消选中该复选卡可以隐藏 **“事件选择”** 网格中所有未选定的数据列。  
   
  **列筛选器**  
- 启动“编辑筛选器”对话框，该对话框将在数据列标签的左侧显示一个筛选器图标。 使用 **“编辑筛选器”** 对话框可编辑数据列筛选器。  
+ 启动“编辑筛选器”  对话框，该对话框将在数据列标签的左侧显示一个筛选器图标。 使用 **“编辑筛选器”** 对话框可编辑数据列筛选器。  
   
  **组织列**  
  更改跟踪中列的顺序，并按一列或多列对结果分组。  

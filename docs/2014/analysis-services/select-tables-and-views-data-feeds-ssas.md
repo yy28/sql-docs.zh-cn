@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82fcf08a84a06d33c33a520ce351f6c685092a15
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069282"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>选择表和视图（数据馈送）(SSAS)
-  **“表导入向导”** 的这一页可用于选择要从其导入数据的表和视图。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
+  **“表导入向导”** 的这一页可用于选择要从其导入数据的表和视图。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”** 。  
   
  此页上表和视图的外观将不会确保该导入将成功。 如果在“模拟信息”页中指定的用户没有足够的权限从所选数据库中读取，则导入将失败。  
   
@@ -40,10 +40,10 @@ ms.locfileid: "66069282"
  指定源表的友好名称。 默认情况下，该列显示在 **“源表”** 列中出现的源表的名称。  
   
  **筛选器详细信息**  
- 在某一筛选器已应用于要导入的数据时，在“筛选器详细信息”对话框中显示数据导入筛选器。 有关详细信息，请参阅[筛选器详细信息 (SSAS)](filter-details-ssas.md)。  
+ 在某一筛选器已应用于要导入的数据时，在“筛选器详细信息”  对话框中显示数据导入筛选器。 有关详细信息，请参阅[筛选器详细信息 (SSAS)](filter-details-ssas.md)。  
   
  **预览并筛选**  
- 显示“预览选择的表”对话框，该对话框用于将筛选器应用于要导入的数据。 有关详细信息，请参阅[预览选择的表 (SSAS)](preview-selected-table-ssas.md)。  
+ 显示“预览选择的表”  对话框，该对话框用于将筛选器应用于要导入的数据。 有关详细信息，请参阅[预览选择的表 (SSAS)](preview-selected-table-ssas.md)。  
   
  **选择相关的表**  
  选择与您选择的表和视图相关的表。  

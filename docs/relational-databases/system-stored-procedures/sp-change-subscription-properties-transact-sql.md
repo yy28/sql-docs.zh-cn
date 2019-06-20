@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997103"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
@@ -51,7 +51,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 是要更改的属性。 *属性*是**sysname**。  
   
-`[ @value = ] 'value'` 是该属性的新值。 *值*是**nvarchar(1000)**，无默认值。  
+`[ @value = ] 'value'` 是该属性的新值。 *值*是**nvarchar(1000)** ，无默认值。  
   
 `[ @publication_type = ] publication_type` 指定发布的复制类型。 *publication_type*是**int**，可以是下列值之一。  
   

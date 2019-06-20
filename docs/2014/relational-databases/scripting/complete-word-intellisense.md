@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbfa7853e1b12bc31b5676e3b64082a57a3c800a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064157"
 ---
 # <a name="complete-word-intellisense"></a>完成单词 (IntelliSense)
@@ -27,11 +27,11 @@ ms.locfileid: "66064157"
   
  有四种方式可用来调用完成单词功能：  
   
--   在 **“编辑”** 菜单中，指向 **IntelliSense**，然后单击 **“完成单词”**。  
+-   在 **“编辑”** 菜单中，指向 **IntelliSense**，然后单击 **“完成单词”** 。  
   
 -   按 Alt+ 向右键。  
   
--   右键单击文本编辑器，然后单击“完成单词”。  
+-   右键单击文本编辑器，然后单击“完成单词”  。  
   
 -   单击 **“文本编辑器”** 工具栏上的 **“完成单词”** 按钮。  
   

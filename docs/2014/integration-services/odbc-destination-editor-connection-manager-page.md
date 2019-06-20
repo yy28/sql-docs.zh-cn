@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057209"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 目标编辑器（“连接管理器”页）
@@ -30,9 +30,9 @@ ms.locfileid: "66057209"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，打开包含 ODBC 目标的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包。  
   
--   在“数据流”选项卡上，双击 ODBC 目标。  
+-   在“数据流”  选项卡上，双击 ODBC 目标。  
   
--   在 **“ODBC 目标编辑器”** 中，单击 **“连接管理器”**。  
+-   在 **“ODBC 目标编辑器”** 中，单击 **“连接管理器”** 。  
   
 ## <a name="options"></a>选项  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66057209"
  从列表中选择现有 ODBC 连接管理器，或单击“新建”创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
   
 ### <a name="new"></a>新版  
- 单击 **“新建”**。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的连接管理器。  
+ 单击 **“新建”** 。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的连接管理器。  
   
 ### <a name="data-access-mode"></a>数据访问模式  
  选择将数据加载到目标的方法。 选项显示在下表中：  

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cb35847a4eb24bc7e7fd49d00703577abeec6d16
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477036"
 ---
 # <a name="edit-a-model-deployment-package"></a>编辑模型部署包
@@ -37,19 +37,19 @@ ms.locfileid: "65477036"
   
 ### <a name="to-edit-a-model-deployment-package"></a>编辑模型部署包  
   
-1.  在 MDS 服务器上的 Windows 资源管理器中，移至驱动器:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
+1.  在 MDS 服务器上的 Windows 资源管理器中，移至驱动器  :\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
   
 2.  执行 ModelPackageEditor.exe。  
   
-3.  在模型编辑器向导中，单击 **“浏览”**，移至包含您的包的文件夹，选择一个包，然后单击 **“打开”**。 单击“下一步” 。  
+3.  在模型编辑器向导中，单击 **“浏览”** ，移至包含您的包的文件夹，选择一个包，然后单击 **“打开”** 。 单击“下一步”  。  
   
-4.  选择要部署的实体、派生层次结构、订阅视图或业务规则。 取消选择不想部署的这类项。 单击“下一步” 。  
+4.  选择要部署的实体、派生层次结构、订阅视图或业务规则。 取消选择不想部署的这类项。 单击“下一步”  。  
   
 5.  验证要部署的所选内容的列表。 若要更改，请单击 **“返回”** 并重复步骤 4。  
   
-6.  单击“浏览”，移至要保存部分包的文件夹，然后输入部分包的文件名（使用 .pkg 扩展名）。 单击“保存” 。  
+6.  单击“浏览”  ，移至要保存部分包的文件夹，然后输入部分包的文件名（使用 .pkg 扩展名）。 单击“保存”  。  
   
-7.  单击 **“完成”**。  
+7.  单击 **“完成”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   

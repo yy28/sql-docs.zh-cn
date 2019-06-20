@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62683984"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -72,9 +72,9 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent` 如果分发代理正在执行**sp_table_validation**，指定是否在分发代理应在后立即关闭完成验证。 *shutdown_agent*是**位**，默认值为**0**。 如果**0**，复制代理不会关闭。 如果**1**、 引发错误 20578，复制代理发出信号，若要关闭的情况下。 忽略此参数时**sp_table_validation**直接由用户执行。  
   
-`[ @table_name = ] table_name` 是用于输出消息的表名称。 *table_name*是**sysname**，默认值为**@table**。  
+`[ @table_name = ] table_name` 是用于输出消息的表名称。 *table_name*是**sysname**，默认值为 **@table** 。  
   
-`[ @column_list = ] 'column_list'` 是应在校验和函数中使用的列的列表。 *column_list*是**nvarchar(4000)**，默认值为 NULL。 启用合并项目验证，以指定不包括计算列和时间戳列的列列表。  
+`[ @column_list = ] 'column_list'` 是应在校验和函数中使用的列的列表。 *column_list*是**nvarchar(4000)** ，默认值为 NULL。 启用合并项目验证，以指定不包括计算列和时间戳列的列列表。  
   
 ## <a name="return-code-values"></a>返回代码值  
  如果执行校验和验证并且预期校验和等于表中的校验和**sp_table_validation**返回表通过校验和验证一条消息。 否则，将返回一条消息，指示表可能不同步，并报告预期的行数和实际行数之间的差异。  

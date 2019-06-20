@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 035cc8b8de493761b79ac391f2f543f96c941507
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102872"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服务和服务应用程序
@@ -38,24 +38,24 @@ ms.locfileid: "66102872"
 ##  <a name="bkmk_associations"></a> 修改服务应用程序与代理服务器组的关联  
  创建服务应用程序的“新建”页包含 **“Web 应用程序关联”** 部分。 此部分允许您在创建服务应用程序时对其进行关联。 使用以下步骤可更改关联和将客户配置分配给服务应用程序。 还可以使用相同的常规过程将代理添加到默认组，而不是更改服务应用程序与自定义组的关联。  
   
-1.  在 SharePoint 管理中心内，在“应用程序管理”中单击 **“配置服务应用程序关联”**。  
+1.  在 SharePoint 管理中心内，在“应用程序管理”中单击 **“配置服务应用程序关联”** 。  
   
-2.  在“服务应用程序关联”页中，将视图更改为 **“服务应用程序”**。  
+2.  在“服务应用程序关联”页中，将视图更改为 **“服务应用程序”** 。  
   
 3.  找到并单击新 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序的名称。 也可以单击应用程序代理组名称 **默认值** 以将代理添加到默认组，而不是完成以下步骤。  
   
 4.  在 **“编辑以下连接组”** 选择框中，选择 **自定义**。  
   
-5.  选中代理对应的框，然后单击 **“确定”**。  
+5.  选中代理对应的框，然后单击 **“确定”** 。  
   
 ##  <a name="bkmk_editserviceapplication"></a> 编辑服务应用程序属性  
  您可以重新打开服务应用程序的属性页以修改属性。  
   
-1.  在 SharePoint 管理中心内，在“应用程序管理”组中，单击 **“管理服务应用程序”**。  
+1.  在 SharePoint 管理中心内，在“应用程序管理”组中，单击 **“管理服务应用程序”** 。  
   
 2.  通过单击类型列以选择整行，选择服务应用程序。 如果您单击应用程序的名称，将打开服务的“管理”选项页，而不是打开服务应用程序的属性。  
   
-3.  在“服务应用程序”功能区中，单击 **“属性”**。  
+3.  在“服务应用程序”功能区中，单击 **“属性”** 。  
   
 ##  <a name="bkmk_powershell_create_ssrs_serviceapp"></a> 使用 PowerShell 创建 Reporting Services 服务应用程序  
  您可以使用 PowerShell 创建服务应用程序和代理。 下面的示例假定您知道要配置服务应用程序使用的应用程序池。  

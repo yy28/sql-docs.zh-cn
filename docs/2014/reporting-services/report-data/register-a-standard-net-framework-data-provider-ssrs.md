@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107162"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>注册标准 .NET Framework 数据访问接口 (SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66107162"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>在报表服务器上安装数据访问接口程序集  
   
-1.  在要在其上使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的报表服务器上，导航到 bin 目录的默认位置。 报表服务器 bin 目录的默认位置为 \<驱动器>:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin。  
+1.  在要在其上使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的报表服务器上，导航到 bin 目录的默认位置。 报表服务器 bin 目录的默认位置为 \<驱动器>:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin  。  
   
 2.  将程序集从临时位置复制到报表服务器的 bin 目录中。 也可以选择将程序集加载到全局程序集缓存 (GAC) 中。 有关详细信息，请参阅 MSDN 上的 [SDK 文档中的](https://go.microsoft.com/fwlink/?linkid=63912) Working with Assemblies and the Global Assembly Cache [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] （使用程序集和全局程序集缓存）。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66107162"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>在报表设计器客户端上安装数据访问接口程序集  
   
-1.  在要在其上使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的报表设计器客户端上，导航到 PrivateAssemblies 目录的默认位置。 PrivateAssemblies 目录的默认位置为 \<驱动器>:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
+1.  在要在其上使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的报表设计器客户端上，导航到 PrivateAssemblies 目录的默认位置。 PrivateAssemblies 目录的默认位置为 \<驱动器>:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies  。  
   
 2.  将程序集从临时位置复制到报表设计器客户端的 PrivateAssemblies 目录中。 也可以选择将程序集加载到全局程序集缓存 (GAC) 中。 有关详细信息，请参阅 MSDN 上的 [SDK 文档中的](https://go.microsoft.com/fwlink/?linkid=63912) Working with Assemblies and the Global Assembly Cache [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] （使用程序集和全局程序集缓存）。  
   

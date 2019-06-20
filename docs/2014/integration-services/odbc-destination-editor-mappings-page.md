@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057228"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC 目标编辑器（“映射”页）
@@ -33,7 +33,7 @@ ms.locfileid: "66057228"
  可用目标列的列表。 将目标列拖放到某一可用输入列以映射这些列。  
   
 ### <a name="input-column"></a>输入列  
- 查看选定的输入列。 可以通过选择“\<忽略>”以从输出中排除列来移除映射。  
+ 查看选定的输入列。 可以通过选择“\<忽略>”  以从输出中排除列来移除映射。  
   
 ### <a name="destination-column"></a>目标列  
  查看所有可用目标列（包括映射和未映射的列）。  

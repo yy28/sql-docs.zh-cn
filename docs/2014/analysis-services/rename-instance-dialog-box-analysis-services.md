@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f5196f8dd60dae731b7173730648d809438c262
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070371"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>“重命名实例”对话框（分析服务）
-  使用 **“重命名实例”** 对话框可以重命名 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的现有实例。 通过从 C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE 下启动“实例重命名”工具 (asinstancerename.exe)，可以显示“重命名实例”对话框。  
+  使用 **“重命名实例”** 对话框可以重命名 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的现有实例。 通过从 C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE 下启动“实例重命名”工具 (asinstancerename.exe)，可以显示“重命名实例”对话框。    
   
 ## <a name="options"></a>选项  
   

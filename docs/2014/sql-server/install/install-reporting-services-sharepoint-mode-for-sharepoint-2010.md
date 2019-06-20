@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 524ad97d02192a19198891c79c07f875a738fc30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094533"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式
@@ -66,7 +66,7 @@ ms.locfileid: "66094533"
   
 1.  运行 SQL Server 安装向导。  
   
-2.  在向导的左侧单击 **“安装”** ，然后单击 **“全新 SQL Server 独立安装或向现有安装添加功能”**。  
+2.  在向导的左侧单击 **“安装”** ，然后单击 **“全新 SQL Server 独立安装或向现有安装添加功能”** 。  
   
 3.  在 **“安装程序支持规则”** 页上单击 **“确定”** ，假定所有规则均已通过验证。  
   
@@ -76,11 +76,11 @@ ms.locfileid: "66094533"
   
 6.  上**产品密钥**页上，键入你的密钥或接受 Enterprise Evaluation edition 的默认值。  
   
-     单击“下一步” 。  
+     单击“下一步”  。  
   
 7.  阅读并接受许可条款。 对于您单击以同意发送功能使用情况数据来帮助改进产品功能和支持，Microsoft 深表感谢。  
   
-     单击“下一步” 。  
+     单击“下一步”  。  
   
 8.  选择**SQL Server 功能安装**上**安装角色**页。  
   
@@ -96,21 +96,21 @@ ms.locfileid: "66094533"
   
     -   如果您尚未安装 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可以选择 **“数据库引擎服务”** 和 **“管理工具 - 完整”** 以提供一个完整环境。  
   
-     单击“下一步” 。  
+     单击“下一步”  。  
   
      ![SharePoint 模式下的 SSRS 功能选择](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "SharePoint 模式下的 SSRS 功能选择")  
   
 10. 单击**下一步**上**安装规则**页。 查看任何警告或妨碍安装的问题。  
   
-11. 如果您已选择“数据库引擎服务”，请在 **“实例配置”** 页上接受 **MSSQLSERVER** 的默认实例，然后单击 **“下一步”**。 与以前的 Reporting Services 体系结构不同，Reporting Services 共享服务体系结构不基于 SQL Server“实例”。  
+11. 如果您已选择“数据库引擎服务”，请在 **“实例配置”** 页上接受 **MSSQLSERVER** 的默认实例，然后单击 **“下一步”** 。 与以前的 Reporting Services 体系结构不同，Reporting Services 共享服务体系结构不基于 SQL Server“实例”。  
   
-12. 阅读 **“磁盘空间要求”** 页，然后单击 **“下一步”**。  
+12. 阅读 **“磁盘空间要求”** 页，然后单击 **“下一步”** 。  
   
-13. 上**服务器配置**页上键入相应的凭据。 如果您要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报或订阅功能，则需要将 SQL Server 代理的 **“启动类型”** 更改为 **“自动”**。  
+13. 上**服务器配置**页上键入相应的凭据。 如果您要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报或订阅功能，则需要将 SQL Server 代理的 **“启动类型”** 更改为 **“自动”** 。  
   
-     单击“下一步” 。  
+     单击“下一步”  。  
   
-14. 如果您选择了“数据库引擎服务”，您将看到 **“数据库引擎配置”** 页。请将相应的帐户添加到 SQL 管理员列表，然后单击 **“下一步”**。  
+14. 如果您选择了“数据库引擎服务”，您将看到 **“数据库引擎配置”** 页。请将相应的帐户添加到 SQL 管理员列表，然后单击 **“下一步”** 。  
   
 15. 在 **“Reporting Services 配置”** 页上，您应该看到 **“仅安装”** 选项处于选中状态。 此选项将安装报表服务器文件，但不会为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置 SharePoint 环境。SQL Server 安装完成后，您需要按照本主题的其他章节的内容配置 SharePoint 环境。 这包括安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务和创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。  
   
@@ -118,11 +118,11 @@ ms.locfileid: "66094533"
   
 16. 请通过在 **“错误报告”** 页上单击用于发送错误报告的复选框，来帮助 Microsoft 改进 SQL Server 功能和服务。  
   
-     单击“下一步” 。  
+     单击“下一步”  。  
   
 17. 查看任何警告，然后在 **“安装配置规则”** 页上单击 **“下一步”** 。  
   
-18. 在 **“准备安装”** 页上，查看安装摘要，然后单击 **“下一步”**。 该摘要将包含**Reporting Services**将包含的安装模式值的节点**SharePointFilesOnlyMode**以及帐户信息。  
+18. 在 **“准备安装”** 页上，查看安装摘要，然后单击 **“下一步”** 。 该摘要将包含**Reporting Services**将包含的安装模式值的节点**SharePointFilesOnlyMode**以及帐户信息。  
   
 
   
@@ -164,7 +164,7 @@ ms.locfileid: "66094533"
   
 2.  找到 **“SQL Server Reporting Services 服务”** ，然后在“操作”列中单击 **“启动”** 。  
   
-3.  Reporting Services 服务的状态将从 **“已停止”** 更改为 **“已启动”**。 如果 Reporting Services 服务不在列表中，则使用 PowerShell 安装该服务。  
+3.  Reporting Services 服务的状态将从 **“已停止”** 更改为 **“已启动”** 。 如果 Reporting Services 服务不在列表中，则使用 PowerShell 安装该服务。  
   
     > [!NOTE]  
     >  如果 Reporting Services 服务停留在**起始**状态并且未更改为**已启动**，验证 SharePoint 2010 管理服务已启动 Windows 服务器管理器中。  
@@ -174,11 +174,11 @@ ms.locfileid: "66094533"
 ##  <a name="bkmk_create_serrviceapplication"></a> 创建 Reporting Services 服务应用程序  
  本节提供您在查看现有服务应用程序的情况下，用于创建服务应用程序的步骤和属性说明。  
   
-1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”**。  
+1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
   
 2.  在 SharePoint 功能区中，单击 **“新建”** 按钮。  
   
-3.  在“新建”菜单中，单击 **“SQL Server Reporting Services 服务应用程序”**。  
+3.  在“新建”菜单中，单击 **“SQL Server Reporting Services 服务应用程序”** 。  
   
     > [!WARNING]  
     >  如果[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]选项不会出现在列表中，则**指示的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]共享的服务未安装**。 查看上一节，了解如何使用 PowerShell cmdlt 安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务。  
@@ -193,11 +193,11 @@ ms.locfileid: "66094533"
   
 7.  在 **“数据库名称”** 中，默认值是 `ReportingService_<guid>`，这是唯一的数据库名称。 如果您键入一个新值，请键入唯一值。  
   
-8.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”**，请参考 SharePoint 管理员指南以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳实践。  
+8.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”** ，请参考 SharePoint 管理员指南以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳实践。  
   
 9. 在 **“Web 应用程序关联”** 部分中，选择要设置为供当前 Reporting Services 服务应用程序访问的 Web 应用程序。 可以将一个 Reporting Services 服务应用程序与一个 Web 应用程序相关联。 如果所有当前 Web 应用程序均已与一个 Reporting Services 服务应用程序相关联，将显示警告消息。  
   
-10. 单击“确定” 。  
+10. 单击“确定”  。  
   
 11. 用于创建服务应用程序的过程可能会需要几分钟才能完成。 当它完成时，将显示确认消息和一个指向 **“设置订阅和警报”** 页的链接。 如果您要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和警报功能，请完成该设置步骤。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -214,15 +214,15 @@ ms.locfileid: "66094533"
   
 1.  打开浏览器找到所需的 SharePoint 网站。  
   
-2.  单击 **“网站操作”**。  
+2.  单击 **“网站操作”** 。  
   
-3.  单击 **“网站设置”**。  
+3.  单击 **“网站设置”** 。  
   
 4.  在网站集管理组中单击 **“网站集功能”** 。  
   
 5.  在列表中找到 **“Power View 集成功能”** 。  
   
-6.  单击 **“激活”**。  
+6.  单击 **“激活”** 。  
   
  将对每个网站集完成此过程。 有关详细信息，请参阅[激活报表服务器和 Power View 集成功能在 SharePoint 中](../../reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "66094533"
 
   
 ### <a name="add-reporting-services-content-types"></a>添加 Reporting Services 内容类型  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供预定义的内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”**、 **“报表模型”** 和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。 有关详细信息，请参阅[将报表服务器内容类型添加到库&#40;在 SharePoint 集成模式下的 Reporting Services&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供预定义的内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”** 、 **“报表模型”** 和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。 有关详细信息，请参阅[将报表服务器内容类型添加到库&#40;在 SharePoint 集成模式下的 Reporting Services&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
 
   

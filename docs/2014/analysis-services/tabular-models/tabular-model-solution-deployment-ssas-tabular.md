@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0126337fb1f871a4d89354bd65cbfd11932bf5c0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066369"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格模型解决方案部署（SSAS 表格）
@@ -40,7 +40,7 @@ ms.locfileid: "66066369"
 ##  <a name="bkmk_deploying_bism"></a> 从 SQL Server Data Tools (SSDT) 部署表格模型  
  部署是一个较为简单的过程；但是，必须执行某些步骤，以便确保您的模型部署到正确的 Analysis Services 实例上并且具有正确的配置选项。  
   
- 表格模型使用若干部署特定的属性进行定义。 在您部署时，将建立与在 **“服务器”** 属性中指定的 Analysis Services 实例的连接。 然后在该实例上创建具有在 **“数据库”** 属性中指定的名称的新模型数据库（如果此数据库尚不存在）。 从该模型项目的 Model.bim 文件的元数据用于配置部署服务器上的模型数据库中的对象。 使用“处理选项”，你可以指定是否仅部署模型元数据，并且创建模型数据库；或者，如果指定了“默认”或“完全”，则用于连接到数据源的模拟凭据将从模型工作区数据库的内存中传递到已部署的模型数据库中。 Analysis Services 然后运行处理以便将数据填充到已部署的模型中。 一旦完成部署进程后，就可以通过使用数据连接或 SharePoint 中的 .bism 连接文件，将该模型连接到客户端应用程序。  
+ 表格模型使用若干部署特定的属性进行定义。 在您部署时，将建立与在 **“服务器”** 属性中指定的 Analysis Services 实例的连接。 然后在该实例上创建具有在 **“数据库”** 属性中指定的名称的新模型数据库（如果此数据库尚不存在）。 从该模型项目的 Model.bim 文件的元数据用于配置部署服务器上的模型数据库中的对象。 使用“处理选项”，你可以指定是否仅部署模型元数据，并且创建模型数据库；或者，如果指定了“默认”或“完全”，则用于连接到数据源的模拟凭据将从模型工作区数据库的内存中传递到已部署的模型数据库中    。 Analysis Services 然后运行处理以便将数据填充到已部署的模型中。 一旦完成部署进程后，就可以通过使用数据连接或 SharePoint 中的 .bism 连接文件，将该模型连接到客户端应用程序。  
   
 ##  <a name="bkmk_deploy_props"></a> 部署属性  
  项目的“部署选项”和“部署服务器”属性指定将模型部署到临时或生产 Analysis Services 环境的方式和位置。 在根据您的特定部署要求为所有模型项目定义默认属性设置时，可为每个项目更改这些属性设置。 有关设置默认部署属性的详细信息，请参阅[配置默认数据建模和部署属性（SSAS 表格）](properties-ssas-tabular.md)。  

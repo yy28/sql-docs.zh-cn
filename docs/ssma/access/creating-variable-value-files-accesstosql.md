@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138829"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件 (AccessToSQL)
@@ -22,7 +22,7 @@ ms.locfileid: "63138829"
   
 > [!NOTE]  
 > -  变量名称是作为前缀和后缀，以 $ （美元） 符号。 如果变量未分配的变量值文件中的值，在脚本文件的分析过程将会出错，导致拖延症控制台执行过程。  
-> -  转义符**$** 是**$$**。 如果参数的变量或静态值的值包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是一个变量。  
+> -  转义符 **$** 是 **$$** 。 如果参数的变量或静态值的值包含 **$** （美元） 符号，然后 **$$** 必须指定将其视为字符而不是一个变量。  
 > -  出于可维护性目的，可以在声明变量`'variable-group'`用户定义的变量的逻辑分隔的元素。  此元素的使用情况不是必需的。  
   
 **示例：**  

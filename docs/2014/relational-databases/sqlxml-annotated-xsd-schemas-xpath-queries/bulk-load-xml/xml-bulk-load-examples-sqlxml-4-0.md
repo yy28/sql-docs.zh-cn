@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013269"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 大容量加载示例 (SQLXML 4.0)
@@ -199,7 +199,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 将 XML 数据大容量加载到多个表中  
- 在此示例中，XML 文档组成**\<客户 >** 并**\<顺序 >** 元素。  
+ 在此示例中，XML 文档组成 **\<客户 >** 并 **\<顺序 >** 元素。  
   
 ```  
 <ROOT>  
@@ -231,7 +231,7 @@ Cust(CustomerID, CompanyName, City)
 CustOrder(OrderID, CustomerID)  
 ```  
   
- 以下 XSD 架构定义这些表的 XML 视图。 该架构指定的父-子关系之间**\<客户 >** 并**\<顺序 >** 元素。  
+ 以下 XSD 架构定义这些表的 XML 视图。 该架构指定的父-子关系之间 **\<客户 >** 并 **\<顺序 >** 元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -383,7 +383,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- 该架构指定**\<顺序 >** 具有元素**\<产品 >** 子元素。 **\<顺序 >** 元素映射到 Ord 表和**\<产品 >** 元素映射到数据库中的产品表。 在指定的链关系**\<产品 >** 元素标识由 OrderDetail 表表示的 M:N 关系。 （一个订单可能包含许多产品，而一个产品可能包含在许多订单中。）  
+ 该架构指定 **\<顺序 >** 具有元素 **\<产品 >** 子元素。 **\<顺序 >** 元素映射到 Ord 表和 **\<产品 >** 元素映射到数据库中的产品表。 在指定的链关系 **\<产品 >** 元素标识由 OrderDetail 表表示的 M:N 关系。 （一个订单可能包含许多产品，而一个产品可能包含在许多订单中。）  
   
  当您使用此架构大容量加载 XML 文档时，记录将添加到 Ord、Product 和 OrderDetail 表中。  
   
@@ -845,7 +845,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- 此架构标识 Cust 表的溢出列 (OverflowColumn)。 因此，所有未用完的 XML 数据为每个**\<客户 >** 元素添加到此列。  
+ 此架构标识 Cust 表的溢出列 (OverflowColumn)。 因此，所有未用完的 XML 数据为每个 **\<客户 >** 元素添加到此列。  
   
 > [!NOTE]  
 >  所有抽象元素 (元素组成的**抽象 ="true"** 指定) 和所有禁止的属性 (属性为其**禁止 ="true"** 指定) 被视为 XML 大容量溢出负载并添加到溢出列中，如果指定。 （否则，将忽略它们。）  

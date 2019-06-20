@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6afaa65d5d0a9c368b35cc410a1753838c8a5480
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107193"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 连接类型 (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66107193"
  使用报表数据源类型： **Microsoft SQL Server Analysis Services**。  
   
 ## <a name="connection-string"></a>连接字符串  
- 连接字符串是指向 PowerPivot 库或其他库，例如，在 SharePoint 上发布的 PowerPivot 工作簿的 URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx。  
+ 连接字符串是指向 PowerPivot 库或其他库，例如，在 SharePoint 上发布的 PowerPivot 工作簿的 URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx 。  
   
 ## <a name="credentials"></a>凭据  
  指定您访问 PowerPivot 工作簿和 SharePoint 站点所需的凭据，例如 Windows 身份验证（集成安全性）。 有关详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  

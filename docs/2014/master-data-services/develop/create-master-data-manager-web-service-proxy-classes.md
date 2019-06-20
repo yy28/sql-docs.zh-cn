@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c44e1830b1f04b1a7686bf7db1efea4549ae143e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479542"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>创建主数据管理器 Web 服务代理类
@@ -25,18 +25,18 @@ ms.locfileid: "65479542"
   
 1.  在文本编辑器中打开 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.配置文件。 此文件位于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装路径的 WebApplication 文件夹中。  
   
-2.  查找`mdsWsHttpBehavior`部分下 **\<serviceBehaviors >**。 有关 **\<serviceMetadata >** 元素中，设置`httpGetEnabled`到`true`。  
+2.  查找`mdsWsHttpBehavior`部分下 **\<serviceBehaviors >** 。 有关 **\<serviceMetadata >** 元素中，设置`httpGetEnabled`到`true`。  
   
     > [!NOTE]  
     >  如果您想要通过安全套接字层 (SSL) 启用 Web 服务，请在 web.config 文件的 `httpsGetEnabled` 部分中将 `true` 设置为 `mdsWsHttpBehavior`。 您还需要更改 `mdsWsHTTPBinding`，以便也为 SSL 配置它，并且注释掉非 SSL 部分。  
   
 3.  保存对文件的更改。  
   
-4.  通过浏览服务 URL 来测试元数据发布，例如： http://yourserver/MDS/service/service.svc。 如果启用元数据发布，则会显示一个以   
+4.  通过浏览服务 URL 来测试元数据发布，例如： http://yourserver/MDS/service/service.svc 。 如果启用元数据发布，则会显示一个以   
     “你已创建服务”开头的页面。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>通过使用 Visual Studio 创建代理类  
- 如果已安装了 Visual Studio 2010，则生成代理类的最简方法是将“服务引用”添加到项目中。 服务引用的地址为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，后面追加 /service/service.svc。 例如： http://yourserver/MDS/service/service.svc。 有关详细信息，请参阅[如何：添加、 更新或删除服务引用](https://go.microsoft.com/fwlink/?LinkId=221167)。  
+ 如果已安装了 Visual Studio 2010，则生成代理类的最简方法是将“服务引用”添加到项目中  。 服务引用的地址为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，后面追加 /service/service.svc。 例如： http://yourserver/MDS/service/service.svc 。 有关详细信息，请参阅[操作说明：添加、 更新或删除服务引用](https://go.microsoft.com/fwlink/?LinkId=221167)。  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>使用 Svcutil.exe 创建代理类  
  必须安装了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK，才能在计算机上运行 Svcutil.exe。 如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，必须使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令提示符运行该命令。 有关详细信息，请参阅 [ServiceModel 元数据实用工具 (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 和[根据服务元数据生成 WCF 客户端](https://go.microsoft.com/fwlink/?LinkId=164821)。  
@@ -52,11 +52,11 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
   
  其中：  
   
--   servername:port 是承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的计算机名称和端口号。  
+-   servername:port 是承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的计算机名称和端口号   。  
   
--   virtual_path 是 Internet 信息服务 (IIS) 中 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的虚拟路径。  
+-   virtual_path 是 Internet 信息服务 (IIS) 中 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的虚拟路径  。  
   
--   proxy_name 是生成的代理文件名称。  
+-   proxy_name 是生成的代理文件名称  。  
   
 ## <a name="see-also"></a>请参阅  
  [分类的 Web 服务操作 &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  

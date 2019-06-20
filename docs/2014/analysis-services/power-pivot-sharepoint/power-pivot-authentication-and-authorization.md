@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2fe19165a8b9e0d419a1cba67eeb4ada6a3ce183
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071430"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 身份验证和授权
@@ -52,11 +52,11 @@ ms.locfileid: "66071430"
   
  对于现有的 Web 应用程序，使用以下说明来验证 Web 应用程序配置为使用 Windows 身份验证。  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理 Web 应用程序”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理 Web 应用程序”** 。  
   
 2.  选择 Web 应用程序。  
   
-3.  单击 **“身份验证访问接口”**。  
+3.  单击 **“身份验证访问接口”** 。  
   
 4.  验证您对于每个区域具有一个访问接口，默认区域设置为 Windows。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66071430"
 |----------|-------------|-----------------|  
 |Web 应用程序|Windows 身份验证访问接口|PowerPivot 将它从 Excel Services 获得的声明标记转换为 Windows 用户标识。 任何使用 Excel Services 作为资源的 Web 应用程序都必须配置为使用 Windows 身份验证提供程序。|  
 |受信任位置|位置类型|此值必须设置为 **Microsoft SharePoint Foundation**。 PowerPivot 服务器检索 .xlsx 文件的副本，并将其加载到场中的 Analysis Services 服务器上。 此服务器只能从内容库中检索 .xlsx 文件。|  
-||允许外部数据|此值必须设置为 **“受信任的数据连接库和嵌入连接”**。 PowerPivot 数据连接嵌入在工作簿中。 如果您不允许嵌入的连接，则用户可以查看数据透视表缓存，但将不能与 PowerPivot 数据交互。|  
+||允许外部数据|此值必须设置为 **“受信任的数据连接库和嵌入连接”** 。 PowerPivot 数据连接嵌入在工作簿中。 如果您不允许嵌入的连接，则用户可以查看数据透视表缓存，但将不能与 PowerPivot 数据交互。|  
 ||刷新时警告|如果您正在使用 PowerPivot 库来存储工作簿和报表，则应禁用此值。 PowerPivot 库包含一个文档预览功能，如果同时关闭“打开时刷新”和“刷新时警告”，则其效果最佳。|  
 |受信任的数据访问接口|MSOLAP.4<br /><br /> MSOLAP.5|默认情况下包含 MSOLAP.4，但是 PowerPivot 数据访问要求 MSOLAP.4 访问接口为 SQL Server 2008 R2 版本。<br /><br /> MSOLAP.5 随 PowerPivot for SharePoint 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本一起安装。<br /><br /> 请勿从受信任的数据访问接口列表中删除这些访问接口。 在某些情况下，您可能需要在场中的其他 SharePoint 服务器上安装此访问接口的更多副本。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。|  
 |受信任的数据连接库|可选。|可以在 PowerPivot 工作簿中使用 Office 数据连接 (.odc) 文件。 如果您使用 .odc 文件向本地 PowerPivot 工作簿提供连接信息，则可以将相同的 .odc 文件添加到此库。|  

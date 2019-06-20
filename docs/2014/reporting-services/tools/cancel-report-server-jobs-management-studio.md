@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab7c4496465de8297f07dd18b3aa2acf26ab305d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100501"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消报表服务器作业 (Management Studio)
-  使用“取消报表服务器作业”对话框可以查看或取消正在执行的报表。 此对话框显示报表服务器上当前运行的所有作业。 尽管不能暂停或重新启动当前正在处理的作业，但是可以取消需要很长时间才能完成的所有作业或单个作业。  
+  使用“取消报表服务器作业”  对话框可以查看或取消正在执行的报表。 此对话框显示报表服务器上当前运行的所有作业。 尽管不能暂停或重新启动当前正在处理的作业，但是可以取消需要很长时间才能完成的所有作业或单个作业。  
   
  可以取消用户作业和系统作业。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66100501"
   
 -   系统作业是指由报表服务器启动的作业。 系统作业包括计划的报表处理。  
   
- 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，右键单击“作业”，再单击“取消所有作业”。 还可以打开“作业”，右键单击报表服务器上正在运行的作业，然后选择“取消作业”。  
+ 若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，右键单击“作业”，再单击“取消所有作业”   。 还可以打开“作业”，右键单击报表服务器上正在运行的作业，然后选择“取消作业”   。  
   
  在取消作业之前，可以查看其属性来确定作业的开始时间。 有关详细信息，请参阅[作业属性 (Management Studio)](job-properties-management-studio.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66100501"
  对于由用户启动的作业，此列显示用户名。  
   
  **“状态”**  
- 显示作业的状态。 有效值为 **“新”** 和 **“正在运行”**。 当作业开始时，状态始终为 **“新”** 。 在 60 秒之后，状态会改为 **“正在运行”**。 必须刷新该页才能看到变化。  
+ 显示作业的状态。 有效值为 **“新”** 和 **“正在运行”** 。 当作业开始时，状态始终为 **“新”** 。 在 60 秒之后，状态会改为 **“正在运行”** 。 必须刷新该页才能看到变化。  
   
  **确定**  
  取消一个或多个作业。 作业会立即取消，并且不能恢复。 如果错误地取消了某个作业，则必须再次请求报表或订阅功能以启动新作业。  
