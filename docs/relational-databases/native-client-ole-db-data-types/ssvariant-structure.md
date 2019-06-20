@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ecce9ecca3d0b234be9aec5c00718cc7c3f69272
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632498"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 结构
@@ -29,10 +29,10 @@ ms.locfileid: "62632498"
 
   **SSVARIANT**结构，它在 sqlncli.h 中定义，对应于中的 DBTYPE_SQLVARIANT 值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLEDB 提供程序。  
   
- **SSVARIANT**是区分的联合。 根据 vt 成员的值，使用者可以确定要读取的成员。 vt 值与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型相对应。 因此，SSVARIANT 结构可以具有任何 SQL Server 类型。 有关标准 OLE DB 类型的数据结构的详细信息，请参阅[类型指示符](https://go.microsoft.com/fwlink/?LinkId=122171)。  
+ **SSVARIANT**是区分的联合。 根据 vt 成员的值，使用者可以确定要读取的成员。 vt 值与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型相对应。 因此，SSVARIANT 结构可以具有任何 SQL Server 类型  。 有关标准 OLE DB 类型的数据结构的详细信息，请参阅[类型指示符](https://go.microsoft.com/fwlink/?LinkId=122171)。  
   
 ## <a name="remarks"></a>备注  
- 如果 DataTypeCompat==80，几个 SSVARIANT 子类型都将成为字符串。 例如，以下 vt 值将在 SSVARIANT 中显示为 VT_SS_WVARSTRING：  
+ 如果 DataTypeCompat==80，几个 SSVARIANT 子类型都将成为字符串  。 例如，以下 vt 值将在 SSVARIANT 中显示为 VT_SS_WVARSTRING  ：  
   
 -   VT_SS_DATETIMEOFFSET  
   
@@ -55,11 +55,11 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  每个成员的完整集的访问宏**SSVARIANT**结构，请参考 sqlncli.hi 文件。  
   
- 下表介绍了 SSVARIANT 结构的成员：  
+ 下表介绍了 SSVARIANT 结构的成员  ：  
   
 |成员|OLE DB 类型指示器|OLE DB C 数据类型|vt 值|注释|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|vt|SSVARTYPE|||指定 SSVARIANT 结构中包含的值类型。|  
+|vt|SSVARTYPE|||指定 SSVARIANT 结构中包含的值类型  。|  
 |bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|支持**tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。|  
 |sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|支持**smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。|  
 |lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|支持**int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。|  
@@ -70,7 +70,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|支持**位**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。|  
 |rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|支持**uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|支持**数值**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。|  
-|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|支持 date[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。|  
+|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|支持 date[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型  。|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|支持**smalldatetime**， **datetime**，并**datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。|  
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|支持**时间**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。<br /><br /> 包括以下成员：<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**字节**) 指定的小数位数*tTime2Val*值。|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|支持**datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。<br /><br /> 包括以下成员：<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**字节**) 指定的小数位数*tsDataTimeVal*值。|  

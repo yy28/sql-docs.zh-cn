@@ -12,10 +12,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 93f38f8e703aabc765d3badc91393eb130081c99
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797970"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>备份和还原数据库使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "66797970"
 
 2. 选择**备份文件**中**从还原**字段。 
 
-3. **從還原**欄位中選取*備份檔案*。
+3. **從還原**欄位中選取*備份檔案*。 
 
 3. 在**目的地**區段的**目標資料庫**欄位中輸入 **TutorialDB_Restored**，以將備份檔案還原至新的資料庫。
 

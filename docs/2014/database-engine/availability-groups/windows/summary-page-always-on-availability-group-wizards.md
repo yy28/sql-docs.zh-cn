@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814063"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>“摘要”页（AlwaysOn 可用性组向导）
-  本帮助主题介绍 **“摘要”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页上的网格可以查看您为新的可用性组进行的选择。 若要进行一项或多项更改，请单击 **“上一步”** 返回到相关的一个或多个页面。 更改完成后，单击 **“下一步”** 返回到 **“摘要”** 页。 如果您对所做选择满意，则单击 **“完成”**。  
+  本帮助主题介绍 **“摘要”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页上的网格可以查看您为新的可用性组进行的选择。 若要进行一项或多项更改，请单击 **“上一步”** 返回到相关的一个或多个页面。 更改完成后，单击 **“下一步”** 返回到 **“摘要”** 页。 如果您对所做选择满意，则单击 **“完成”** 。  
   
 ##  <a name="PageOptions"></a> “摘要”页选项  
  **脚本**  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bdcd5b9a30d19fc6fd0018fac1d24a275f236518
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148132"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263156"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -28,17 +28,17 @@ ms.locfileid: "50148132"
 ##  <a name="bkmk_usingTE"></a> 打开 Analysis Services 模板  
  用于数据库引擎查询以及 Analysis Services 查询和命令的所有模板均在模板资源管理器中提供。  
   
- 若要打开 **“模板资源管理器”**，请从 **“视图”** 菜单中选择它。 接下来，单击多维数据集图标可以查看可用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的模板的列表。  
+ 若要打开 **“模板资源管理器”** ，请从 **“视图”** 菜单中选择它。 接下来，单击多维数据集图标可以查看可用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的模板的列表。  
   
  ![为 Analysis Services 模板资源管理器，筛选](../../analysis-services/instances/media/ssas-templateexplorer.gif "模板资源管理器，筛选出的 Analysis Services")  
   
- 若要打开某一模板，请右键单击该模板名称，然后选择“打开”，或者将模板拖到已经打开的查询窗口中。 在查询窗口打开后，您可以使用工具栏或“查询”菜单上的命令来帮助您生成语句：  
+ 若要打开某一模板，请右键单击该模板名称，然后选择“打开”  ，或者将模板拖到已经打开的查询窗口中。 在查询窗口打开后，您可以使用工具栏或“查询”菜单上的命令来帮助您生成语句：  
   
--   若要查看查询的语法，请单击 **“分析”**。  
+-   若要查看查询的语法，请单击 **“分析”** 。  
   
--   若要运行查询，请单击 **“执行”**。  
+-   若要运行查询，请单击 **“执行”** 。  
   
-     若要停止正在运行的查询，请单击 **“取消执行查询”**。  
+     若要停止正在运行的查询，请单击 **“取消执行查询”** 。  
   
 -   在屏幕底部的 **“结果”** 选项卡中查看查询的结果。  
   
@@ -48,23 +48,23 @@ ms.locfileid: "50148132"
  此实例说明如何在 SQL Server Management Studio 中创建 MDX 查询，并且使用表格模型数据库作为数据源。 若要在您的计算机上重复此示例，您可以 [下载 Adventureworks 表格模型示例项目](http://go.microsoft.com/fwlink/?LinkId=231183)。  
   
 > [!WARNING]  
->  不能对已在直接查询模式下部署的表格模型使用 MDX 查询。 但是，可以通过将 DAX 表查询用于 EVALUATE 命令来发送等效的查询。 有关详细信息，请参阅 [DAX 查询参数](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544)。  
+>  不能对已在直接查询模式下部署的表格模型使用 MDX 查询。 但是，可以通过将 DAX 表查询用于 EVALUATE 命令来发送等效的查询。 有关详细信息，请参阅 [DAX 查询参数](/dax/dax-queries#parameters-in-dax-queries)。  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>从模板创建 MDX 查询  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的表格模型的实例。 右键单击数据库图标，选择“新建查询”，然后选择“MDX”。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的表格模型的实例。 右键单击数据库图标，选择“新建查询”  ，然后选择“MDX”  。  
   
-2.  在模板浏览器的 Analysis Services 模板中，打开 **MDX**，然后打开 **“查询”**。 将 **“基本查询”** 拖到查询窗口。  
+2.  在模板浏览器的 Analysis Services 模板中，打开 **MDX**，然后打开 **“查询”** 。 将 **“基本查询”** 拖到查询窗口。  
   
-3.  使用 **“元数据资源管理器”**，将下列字段和度量值拖到查询模板：  
+3.  使用 **“元数据资源管理器”** ，将下列字段和度量值拖到查询模板：  
   
-    1.  替换\<row_axis，mdx_set > 与 **[Product Category]。 [产品类别名称]**。  
+    1.  替换\<row_axis，mdx_set > 与 **[Product Category]。 [产品类别名称]** 。  
   
-    2.  替换\<column_axis，mdx_set > 与 **[Date]。 [日历年]。[Calendar Year]**.  
+    2.  替换\<column_axis，mdx_set > 与 **[Date]。 [日历年]。[Calendar Year]** .  
   
-    3.  替换\<from_clause，mdx_name > 与 **[Internet 销售额]**。  
+    3.  替换\<from_clause，mdx_name > 与 **[Internet 销售额]** 。  
   
-    4.  替换\<where_clause，mdx_set > 与 **[Measures]。 [Internet 总销售额]**。  
+    4.  替换\<where_clause，mdx_set > 与 **[Measures]。 [Internet 总销售额]** 。  
   
 4.  您可以按原样执行此查询，但您可能会想要进行某些更改，例如添加函数以便返回特定成员。 例如，在 **[Product Category].[Product Category Name]** 后输入 **.members**。 有关详细信息，请参阅 [Using Member Expressions](../../mdx/using-member-expressions.md)。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "50148132"
   
 #### <a name="create-a-backup-command-script-from-a-template"></a>从模板创建备份命令脚本  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的数据库的实例。 右键单击数据库图标，选择“新建查询”，然后选择“XMLA”。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的数据库的实例。 右键单击数据库图标，选择“新建查询”  ，然后选择“XMLA”  。  
   
     > [!WARNING]  
     >  您不能通过更改限制列表或通过在连接对话框中指定数据库来设置 XMLA 查询的上下文。 您必须从要查询的数据库打开 XMLA 查询窗口。  
@@ -125,16 +125,16 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 #### <a name="get-a-list-of-data-sources-for-a-tabular-model-using-a-schema-rowset-query"></a>使用架构行集查询获取表格模型的数据源的列表  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的数据库的实例。 右键单击数据库图标，选择“新建查询”，然后选择“XMLA”。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的数据库的实例。 右键单击数据库图标，选择“新建查询”  ，然后选择“XMLA”  。  
   
     > [!WARNING]  
     >  您不能通过更改限制列表或通过在连接对话框中指定数据库来设置 XMLA 查询的上下文。 您必须从要查询的数据库打开 XMLA 查询窗口。  
   
-2.  打开 **“模板资源管理器”**，将模板 **“发现架构行集”** 拖入空白查询窗口中。  
+2.  打开 **“模板资源管理器”** ，将模板 **“发现架构行集”** 拖入空白查询窗口中。  
   
 3.  在模板中，替换[RequestType 元素&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla)元素具有以下文本： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
-4.  单击 **“执行”**。  
+4.  单击 **“执行”** 。  
   
      预期的结果：  
   
@@ -154,14 +154,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Analysis Services 模板参考  
  提供以下模板以便使用 Analysis Services 数据库以及数据库中的对象，包括挖掘结构和挖掘模型、多维数据集和表格模型：  
   
-|类别|项模板|Description|  
+|Category|项模板|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\模型内容|内容查询|演示如何使用 DMX SELECT FROM *\<模型 >*。内容语句，检索指定的挖掘模型的挖掘模型架构行集内容。|  
+|DMX\模型内容|内容查询|演示如何使用 DMX SELECT FROM *\<模型 >* 。内容语句，检索指定的挖掘模型的挖掘模型架构行集内容。|  
 ||连续列值|演示如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 语句与 DMX **RangeMin**并**RangeMax**函数来检索一组从指定的挖掘模型中的连续列的指定范围的值。|  
 ||离散列值|演示如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 语句从指定的挖掘模型中的离散列检索一组完整的值。|  
 ||钻取查询|演示如何将 DMX SELECT * FROM Model.CASES 语句与 DMX IsInNode 函数一起使用来执行钻取查询|  
 ||模型属性|演示如何使用 DMX System.GetModelAttributes 函数返回模型所用属性的列表。|  
-||PMML 内容|演示如何使用 DMX SELECT \* FROM *\<模型 >*。PMML 语句检索挖掘模型，适用于支持此功能的算法的预测模型标记语言 (PMML) 表示形式。|  
+||PMML 内容|演示如何使用 DMX SELECT \* FROM *\<模型 >* 。PMML 语句检索挖掘模型，适用于支持此功能的算法的预测模型标记语言 (PMML) 表示形式。|  
 |DMX\模型管理|添加模型|演示如何使用 DMX ALTER MINING MODEL STRUCTURE 语句添加挖掘模型|  
 ||清除模型|演示如何使用 DMX DELETE * FROM MINING MODEL 语句删除指定挖掘模型的内容。|  
 ||清除结构事例|演示如何使用 DMX DELETE FROM MINING STRUCTURE 语句清除挖掘模型结构事例|  
@@ -211,9 +211,9 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||性能计数器|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_PERFORMANCE_COUNTERS 架构行集的内容。|  
 ||会话|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_SESSIONS 架构行集的内容。|  
 ||跟踪|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_TRACES 架构行集的内容。|  
-||中的|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_TRANSACTIONS 架构行集的内容。|  
+||事务|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_TRANSACTIONS 架构行集的内容。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维表达式 (MDX) 参考](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63140554"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>自行车购买者 DMX 教程
@@ -49,7 +49,7 @@ ms.locfileid: "63140554"
   
  数据挖掘扩展插件 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一种查询语言，可以使用它来创建和处理挖掘模型。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树算法创建的模型可用于预测某人是否将购买自行车。 生成的模型可以将单个客户或客户表作为一个输入。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析算法可以根据共享特征创建客户分组。 本教程的目的是提供将在自定义应用程序中使用的 DMX 脚本。  
   
- **详细信息：**[数据挖掘解决方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **详细信息：** [数据挖掘解决方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>挖掘结构和挖掘模型  
  开始创建 DMX 语句之前，了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用来创建挖掘模型的主要对象十分重要。 挖掘结构是一种数据结构，它定义生成挖掘模型的数据域。 单个挖掘结构可以包含多个共享相同域的挖掘模型。 挖掘模型可向挖掘结构所代表的数据应用挖掘模型算法。  

@@ -10,12 +10,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2df295b62ca76dfb46e767ed206180a52493255a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 5030feecab11ed0c7727424ae49bde788c1f55f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66102964"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046740"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本文概要介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念。  
@@ -76,7 +76,7 @@ ms.locfileid: "66102964"
  **报表和报表定义**  
  **RDL.** 报表定义是符合一种称为报表定义语言 (RDL) 的 XML 语法的 XML 文件。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，您在报表生成器或报表设计器之类的工具中创建报表定义。 它包含用于定义数据源连接的元素、用来检索数据的查询、表达式、参数、图像、文本框、表以及任何其他设计时布局。 有关详细信息，请参阅[报表定义语言 (SSRS)](reports/report-definition-language-ssrs.md)。  
   
- **RDLX.** 采用 RDLX 格式的报表定义是一种 RDL 文件，它具有给您带来 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 可视化体验的内部扩展插件。 有关详细信息，请参阅 [Power View 概述](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)（英文）。  
+ **RDLX.** 采用 RDLX 格式的报表定义是一种 RDL 文件，它具有给您带来 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 可视化体验的内部扩展插件。 有关详细信息，请参阅 [Power View 概述](https://support.office.com/article/power-view-explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e#__toc328127684)（英文）。  
   
  **RDLC.** Visual Studio 报表设计器生成 XML 格式的客户端报表定义 (.rdlc) 文件以供与 ReportViewer 控件结合使用。  
   

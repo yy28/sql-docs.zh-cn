@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828010"
 ---
 # <a name="data-flow"></a>数据流
@@ -184,12 +184,12 @@ ms.locfileid: "62828010"
  源和转换始终具有输出。 输出包含一个或多个输出列，如果数据流组件已配置为使用外部列，则输出列可引用外部列。 可对输出进行配置以提供对数据的下游处理有用的信息。 例如，可指示输出是否已排序。 还可为输出提供说明或更新输出名称。 在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，使用 **“高级编辑器”** 对话框对输出进行配置。  
   
 ### <a name="error-outputs"></a>错误输出  
- 源、目标和转换都可包含错误输出。 可使用 **“配置错误输出”** 对话框指定数据流组件响应每个输入中错误或列中错误的方式。 如果错误或数据截断在运行时发生，且将数据流组件配置为重定向行，则有错误的数据行将被发送到错误输出。 可以将错误输出连接到转换，这些转换应用其他转换或将数据定向到其他目标。 默认情况下，错误输出包含输出列和两个错误列：ErrorCode 和 ErrorColumn。 输出列包含失败行的数据， **ErrorCode** 提供错误代码，而 **ErrorColumn** 标识失败的列。  
+ 源、目标和转换都可包含错误输出。 可使用 **“配置错误输出”** 对话框指定数据流组件响应每个输入中错误或列中错误的方式。 如果错误或数据截断在运行时发生，且将数据流组件配置为重定向行，则有错误的数据行将被发送到错误输出。 可以将错误输出连接到转换，这些转换应用其他转换或将数据定向到其他目标。 默认情况下，错误输出包含输出列和两个错误列：ErrorCode 和 ErrorColumn   。 输出列包含失败行的数据， **ErrorCode** 提供错误代码，而 **ErrorColumn** 标识失败的列。  
   
  有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。  
   
 ### <a name="columns"></a>“列”  
- 输入、输出和错误输出是列的集合。 每一列都可配置并且根据列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供 3 种不同的列属性设置方法：编程方式、使用组件特定对话框，或使用“高级编辑器”对话框。  
+ 输入、输出和错误输出是列的集合。 每一列都可配置并且根据列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供 3 种不同的列属性设置方法：编程方式、使用组件特定对话框，或使用“高级编辑器”  对话框。  
   
 ## <a name="paths"></a>路径  
  路径连接数据流组件。 在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，可以查看和修改路径属性，查看路径开始点的输出元数据，以及将数据查看器附加到路径。  

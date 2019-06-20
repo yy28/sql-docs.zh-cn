@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de2ac80a10e66ed7673a65428c4bfa011d31b534
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210186"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263279"
 ---
 # <a name="what39s-new-in-analysis-services"></a>什么&#39;Analysis Services 中
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -133,9 +133,9 @@ refresh|处理对象。 ASSL 等效项为 PROCESS。
 公式栏的更新可帮助你使用语法颜色设置来区分函数、字段和度量值，以便更轻松地编写公式，它提供智能函数和字段建议，当你的 DAX 表达式组成部分有错误时，它将使用错误 *波形曲线*来告诉你。 它还允许你换行 (Alt + Enter) 和缩进 (Tab)。 在编辑栏现在还允许你为你的度量值的一部分编写注释，只需键入"/ /"并在同一行上的这些字符将被视为注释后面的所有内容。
 
 ### <a name="dax-variables"></a>DAX 变量    
-此版本现在包含对 DAX 中变量的支持。 现在，变量可将表达式的结果存储为命名变量，然后，可以将该变量作为参数传递给其他度量值表达式。 为变量表达式计算结果值后，这些值不会更改，即使在其他表达式中引用该变量。 有关详细信息，请参阅 [VAR 函数](http://msdn.microsoft.com/library/mt243785.aspx)。    
+此版本现在包含对 DAX 中变量的支持。 现在，变量可将表达式的结果存储为命名变量，然后，可以将该变量作为参数传递给其他度量值表达式。 为变量表达式计算结果值后，这些值不会更改，即使在其他表达式中引用该变量。 有关详细信息，请参阅 [VAR 函数](/dax/var-dax)。    
 ### <a name="new-dax-functions"></a>新的 DAX 函数
-在此版本中，DAX 引入了超过五十个新函数，可在 Power BI 中实现更快的计算和增强的可视化效果。 若要了解详细信息，请参阅 [新的 DAX 函数](http://msdn.microsoft.com/library/mt704075.aspx)。
+在此版本中，DAX 引入了超过五十个新函数，可在 Power BI 中实现更快的计算和增强的可视化效果。 若要了解详细信息，请参阅 [新的 DAX 函数](/dax/new-dax-functions)。
 ### <a name="save-incomplete-measures"></a>保存未完成的度量值
 现在，你可以直接在表格 1200 模型项目中保存未完成的 DAX 度量值，并在准备好继续时再次拾取这些值。
 ### <a name="additional-dax-enhancements"></a>其他 DAX 增强功能

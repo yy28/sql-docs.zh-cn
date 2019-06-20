@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650493"
 ---
 # <a name="proxy-editor-and--add-principal"></a>代理编辑器和添加主体
@@ -30,7 +30,7 @@ ms.locfileid: "62650493"
  列出所选类型的主体服务器。  
   
  **名称**  
- 选择主体的名称以便向其授予访问权限，或者选择“名称”以便向该列表中的所有主体授予访问权限。  
+ 选择主体的名称以便向其授予访问权限，或者选择“名称”  以便向该列表中的所有主体授予访问权限。  
   
 ## <a name="see-also"></a>请参阅  
  [创建 SQL Server 代理的代理帐户](create-a-sql-server-agent-proxy.md)  

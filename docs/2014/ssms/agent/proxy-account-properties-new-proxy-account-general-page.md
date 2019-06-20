@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650198"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>代理帐户属性和新建代理帐户（“常规”页）
@@ -33,7 +33,7 @@ ms.locfileid: "62650198"
 >  提供的凭据名称必须是一个现有凭据的名称。 有关创建凭据的信息，请参阅[创建凭据](../../relational-databases/security/authentication-access/create-a-credential.md)  
   
  **...**  
- 启动“选择凭据”对话框。  
+ 启动“选择凭据”  对话框。  
   
  **说明**  
  键入代理的说明。  

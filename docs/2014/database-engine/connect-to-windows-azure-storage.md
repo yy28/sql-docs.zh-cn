@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3525f28864c3260bd2b50d98f441f6ed5072accb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808568"
 ---
 # <a name="connect-to-windows-azure-storage"></a>连接到 Windows Azure 存储
-  可使用“Windows Azure 存储连接”对话框指定存储帐户并验证与 Windows Azure 的连接。  
+  可使用“Windows Azure 存储连接”  对话框指定存储帐户并验证与 Windows Azure 的连接。  
   
 ## <a name="options"></a>选项  
- 指定有关 Windows Azure 帐户的以下信息，然后单击“下一步”继续。  
+ 指定有关 Windows Azure 帐户的以下信息，然后单击“下一步”  继续。  
   
 1.  **存储帐户** - 指定存储帐户名称。  
   

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 2041901a851ca755b1079535ccbf763472ec7bc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63055667"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server 上安装 SSMA 组件 (OracleToSQL)
@@ -101,7 +101,7 @@ SSMA 扩展包添加了数据库， **sysdb**并**ssmatesterdb**，为指定的�
 ### <a name="sql-server-database-objects"></a>SQL Server 数据库对象  
 安装扩展包后，将会，请参阅**ssma_oracle.bcp_migration_packages**表中， **ssma_oracle.db_storage**表中，和一个**ssma_oracle.db_error_list**表中**sysdb**数据库。 您还会看到许多存储的过程和中的用户定义函数**ssma_oracle**架构。  
   
-你将数据迁移到每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业。 这些作业将命名为**ssma_oracle 数据迁移包 {GUID}**，而在中可见[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs 文件夹中。  
+你将数据迁移到每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业。 这些作业将命名为**ssma_oracle 数据迁移包 {GUID}** ，而在中可见[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs 文件夹中。  
   
 ## <a name="see-also"></a>请参阅  
 [安装 SSMA for Oracle 客户端&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  

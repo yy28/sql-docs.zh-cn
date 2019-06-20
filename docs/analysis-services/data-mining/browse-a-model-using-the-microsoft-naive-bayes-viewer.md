@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e7afe60ffa61af8e2c1ae5b60deb596230738a78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678807"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>使用 Microsoft Naive Bayes 查看器浏览模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes 查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种非常适合于针对预测性建模任务进行改编的分类算法。 有关此算法的详细信息，请参阅 [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes 查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种非常适合于针对预测性建模任务进行改编的分类算法。 有关此算法的详细信息，请参阅 [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)。  
   
  由于 Naive Bayes 模型的主要用途之一是提供一种快速浏览数据集内数据的方法，因此， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 查看器提供了多种方法来显示可预测属性与输入属性之间的交互。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62678807"
   
  若要显示一个将直方图的颜色关联到属性状态的挖掘图例，请单击 **“显示图例”** 复选框。 该挖掘图例还显示所选择的每个属性-值对的事例分布情况。  
   
- 若要将网格内容作为 HTML 表复制到剪贴板，请右键单击“属性配置文件”选项卡并选择“复制”。  
+ 若要将网格内容作为 HTML 表复制到剪贴板，请右键单击“属性配置文件”  选项卡并选择“复制”  。  
   
  [返回页首](#BKMK_ViewerTabs)  
   
@@ -60,19 +60,19 @@ ms.locfileid: "62678807"
  [返回页首](#BKMK_ViewerTabs)  
   
 ##  <a name="BKMK_Discrimination"></a> 属性对比  
- 若要使用 **“属性对比”** 选项卡，请从 **“属性”**、 **“值 1”** 和 **“值 2”** 列表中选择一个可预测属性以及它的两个状态。 然后， **“属性对比”** 选项卡上的网格将在列中显示以下信息：  
+ 若要使用 **“属性对比”** 选项卡，请从 **“属性”** 、 **“值 1”** 和 **“值 2”** 列表中选择一个可预测属性以及它的两个状态。 然后， **“属性对比”** 选项卡上的网格将在列中显示以下信息：  
   
  **“属性”**  
  列出数据集内的其他属性，这些属性包含一个高度倾向于可预测属性某个状态的状态。  
   
  **值**  
- 显示“属性”列中某属性的值。  
+ 显示“属性”  列中某属性的值。  
   
  **倾向于\<值为 1 >**  
- 显示一个彩色条，以指示属性值倾向于“值 1”中显示的可预测属性值的程度。  
+ 显示一个彩色条，以指示属性值倾向于“值 1”  中显示的可预测属性值的程度。  
   
  **倾向于\<值为 2 >**  
- 显示一个彩色条，以指示属性值倾向于“值 2”中显示的可预测属性值的程度。  
+ 显示一个彩色条，以指示属性值倾向于“值 2”  中显示的可预测属性值的程度。  
   
  [返回页首](#BKMK_ViewerTabs)  
   

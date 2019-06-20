@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d338cc5c194b29b438af7593b80aaf580c64bca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62926672"
 ---
 # <a name="debugging-control-flow"></a>调试控制流
@@ -50,7 +50,7 @@ ms.locfileid: "62926672"
 |当任务或容器收到 `OnTaskFailed` 事件时。|任务宿主失败时由其调用。|  
 |当任务或容器收到 `OnProgress` 事件时。|要更新任务执行的进度时调用。|  
 |当任务或容器收到 `OnQueryCancel` 事件时。|在可以取消执行的任务处理中，随时可以调用。|  
-|当任务或容器收到 `OnVariableValueChanged` 事件时。|变量值更改时，由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时调用。 变量的 RaiseChangeEvent 必须设置为`true`才能引发此事件。<br /><br /> &#42;&#42; 警告 &#42;&#42; 必须在容器范围定义与此断点关联的变量。 如果在包作用域定义变量，则不会命中断点。|  
+|当任务或容器收到 `OnVariableValueChanged` 事件时。|变量值更改时，由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时调用。 变量的 RaiseChangeEvent 必须设置为`true`才能引发此事件。<br /><br /> &#42;&#42; 警告 &#42;&#42; 必须在容器范围定义与此断点关联的变量   。 如果在包作用域定义变量，则不会命中断点。|  
 |当任务或容器收到 `OnCustomEvent` 事件时。|由任务调用，用于引发自定义的任务定义事件。|  
   
  除了对所有任务和容器可用的中断条件外，有些任务和容器还包含用来设置断点的特殊中断条件。 例如，可以在 For 循环容器上启用中断条件，设置一个在循环的每个迭代开始时挂起执行的断点。  
@@ -77,7 +77,7 @@ ms.locfileid: "62926672"
 -   [通过在任务或容器上设置断点调试包](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>进度报告  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器包含两种类型进度报告：“控制流”选项卡设计图面上的颜色编码和“进度”选项卡上的进度消息。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器包含两种类型进度报告：“控制流”选项卡设计图面上的颜色编码和“进度”选项卡上的进度消息   。  
   
  运行包时， [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器使用可指示执行状态的颜色显示每个任务或容器，以此来描绘执行进度。 可根据颜色判断元素是否正在等待运行、是否当前正在运行、是否已成功完成或者已经以失败结束。 停止包执行后，颜色编码将消失。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62926672"
 ## <a name="debug-windows"></a>调试窗口  
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 包含多个窗口，可以用来处理断点，以及用来调试包含断点的包。 若要了解每个窗口的更多信息，请打开该窗口，然后按 F1 显示该窗口的帮助。  
   
- 若要在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中打开这些窗口，请单击 **“调试”** 菜单，指向 **“窗口”**，然后单击 **“断点”**、 **“输出”** 或 **“即时”**。  
+ 若要在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中打开这些窗口，请单击 **“调试”** 菜单，指向 **“窗口”** ，然后单击 **“断点”** 、 **“输出”** 或 **“即时”** 。  
   
  下表介绍这些窗口。  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 342624645e9bd88d0a7afd08b3c18225fc2c14ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245385"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>从 SQL Server Management Studio 连接到任何 SQL Server 组件
@@ -33,7 +33,7 @@ ms.locfileid: "63245385"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件的功能。  
   
- 虽然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您在使用查询时无需先建立与数据源的连接，但其他多数任务需要一个连接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供了“连接到服务器”对话框，可用于配置到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的连接属性。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 启动时，将打开“连接到服务器”对话框，并提示你连接到服务器。 “连接到服务器”对话框会保留上次使用的连接设置。  
+ 虽然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您在使用查询时无需先建立与数据源的连接，但其他多数任务需要一个连接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供了“连接到服务器”  对话框，可用于配置到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的连接属性。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 启动时，将打开“连接到服务器”  对话框，并提示你连接到服务器。 “连接到服务器”  对话框会保留上次使用的连接设置。  
   
 > [!NOTE]  
 >  可以关闭此功能，以免自动启动某个连接。 有关详细信息，请参阅 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "63245385"
  注册服务器时， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 会在已注册的服务器中保存连接信息。 若要连接到某个已注册的服务器，可在已注册的服务器中双击该服务器名称。 对象资源管理器随即会打开一个到该服务器的连接。  
   
 ### <a name="saving-connections-in-solution-explorer"></a>在解决方案资源管理器中保存连接  
- 使用解决方案资源管理器，可以在项目中存储相关的查询、脚本、连接和其他关联的信息。 每个脚本项目都包含一个名为“连接”的节点，可以在其中保存一个或多个连接。 若要添加连接，可右键单击“连接”，再单击“新建连接”。 若要访问已保存的连接，可展开“连接”，然后双击该连接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 随即会打开一个与该连接关联的查询窗口。 保存后，脚本会保留其与特定连接的关联。  
+ 使用解决方案资源管理器，可以在项目中存储相关的查询、脚本、连接和其他关联的信息。 每个脚本项目都包含一个名为“连接”  的节点，可以在其中保存一个或多个连接。 若要添加连接，可右键单击“连接”  ，再单击“新建连接”  。 若要访问已保存的连接，可展开“连接”  ，然后双击该连接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 随即会打开一个与该连接关联的查询窗口。 保存后，脚本会保留其与特定连接的关联。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 SQL Server Management Studio](../sql-server-management-studio-ssms.md)   

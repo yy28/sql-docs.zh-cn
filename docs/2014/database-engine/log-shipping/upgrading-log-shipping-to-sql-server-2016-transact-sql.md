@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775388"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>将日志传送升级到 SQL Server 2014 (Transact-SQL)
@@ -79,7 +79,7 @@ ms.locfileid: "62775388"
   
  服务器升级完毕后，数据库即自动回到联机状态，随即进行升级。 数据库升级完毕后，日志传送作业将继续进行。  
   
-#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>应用场景 2：使用故障转移升级主服务器实例  
+#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>方案 2：使用故障转移升级主服务器实例  
  此方案最大限度地提高了可用性，同时使停机时间降低到最短。 此方案采取向辅助服务器实例实行受控故障转移的方式，使数据库在原始主服务器实例升级期间保持可用状态。 停机时间限于故障转移所需的相对短的时间，而不是升级主服务器实例所需的时间。  
   
  借助故障转移升级主服务器实例一般需要三个过程：执行到辅助服务器的受控故障转移，将原始主服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 主服务器实例上设置日志传送。 本节后面将对这三个过程进行介绍。  

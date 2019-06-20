@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: f23bdacdb3ddef9bd87187a5e7c3c9cc1b54d2af
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66776194"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知识库
@@ -38,13 +38,13 @@ ms.locfileid: "66776194"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“打开知识库”** 。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“打开知识库”**。  
   
 3.  在知识库表中右键单击某一知识库。  
   
 4.  在上下文菜单中，您可以执行以下操作：  
   
-    1.  **打开**：单击以在“选择活动”窗格内所选的活动中打开该知识库  。  
+    1.  **打开**：单击以在“选择活动”窗格内所选的活动中打开该知识库。  
   
     2.  **解锁**：你是否正在使用知识库中的一个步骤的域管理、 知识发现和匹配策略活动，并关闭它的用户，可以取消锁定该知识库。 如果您卸载了该知识库，则其他人士将能够打开并使用该知识库。 如果知识库未处于某一活动状态中，则此命令将不可用。 有关详细信息，请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66776194"
   
         1.  **源知识库**：此数据库所基于的知识库。 此为可选项。  
   
-        2.  **状态**：指示知识库是否处于“工作中”状态以及其是否位于特定的知识管理活动中（由其在上次关闭时的状态决定）  。 该状态可以是 **“工作中”** ，在此情况下，知识库在某一知识管理会话中打开，但未处于特定的活动中；也可以是 **“工作中”** 加上知识管理活动，在此情况下，知识库在某一知识管理会话中打开，并且处于特定的活动中。  
+        2.  **状态**：指示知识库是否处于“工作中”状态以及其是否位于特定的知识管理活动中（由其在上次关闭时的状态决定）。 该状态可以是 **“工作中”**，在此情况下，知识库在某一知识管理会话中打开，但未处于特定的活动中；也可以是 **“工作中”** 加上知识管理活动，在此情况下，知识库在某一知识管理会话中打开，并且处于特定的活动中。  
   
-        3.  **已锁定**：如果知识库已锁定，则为 True；否则为 False    
+        3.  **已锁定**：如果知识库已锁定，则为 True；否则为 False  
   
         4.  **包含未发布的内容**：如果知识库包含尚未保存的发布为 False 不的内容，则返回 true  
   

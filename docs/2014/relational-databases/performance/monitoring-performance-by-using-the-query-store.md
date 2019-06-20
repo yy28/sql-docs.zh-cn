@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150792"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
@@ -32,11 +32,11 @@ ms.locfileid: "63150792"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>通过使用 Management Studio 中的查询存储页  
   
-1.  在对象资源管理器中，右键单击数据库，然后单击“属性” 。 （要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版。）  
+1.  在对象资源管理器中，右键单击数据库，然后单击“属性”  。 （要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版。）  
   
 2.  在“数据库属性”  对话框中，选择“查询存储”  页。  
   
-3.  在“启用”  框中，选择“True” 。  
+3.  在“启用”  框中，选择“True”  。  
   
 #### <a name="by-using-transact-sql-statements"></a>通过使用 Transact-SQL 语句  
   
@@ -90,7 +90,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- 在选择“回归查询” 后，打开 **中的“回归查询”**[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 借助顶部的下拉列表框，可基于各种条件选择查询。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
+ 在选择“回归查询”  后，打开 **中的“回归查询”** [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 借助顶部的下拉列表框，可基于各种条件选择查询。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   

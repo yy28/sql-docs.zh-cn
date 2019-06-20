@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62629787"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>将 Oracle 架构迁移到 SQL Server 2017 Linux 上使用 SQL Server Migration Assistant
@@ -71,7 +71,7 @@ ms.locfileid: "62629787"
 
    ![连接到 Oracle](./media/sql-server-linux-convert-from-oracle/ConnectToOracle.png)
 
-1. 然后单击“连接” 。 在几分钟后，适用于 Oracle 的 SSMA 将连接到数据库并读取其元数据。
+1. 然后单击“连接”  。 在几分钟后，适用于 Oracle 的 SSMA 将连接到数据库并读取其元数据。
 
 ## <a name="create-a-report"></a>创建报表
 

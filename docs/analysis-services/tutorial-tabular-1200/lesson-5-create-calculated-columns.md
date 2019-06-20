@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df9b5a6d490b33b9aea786290acb7454d0066453
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404179"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>第 5 课：创建计算列
@@ -40,7 +40,7 @@ ms.locfileid: "65404179"
   
 3.  右键单击**CalendarQuarter**列标题，并单击**插入列**。  
   
-    一个名为“Calculated Column 1”的新列插入到“Calendar Quarter”列的左侧。  
+    一个名为“Calculated Column 1”  的新列插入到“Calendar Quarter”  列的左侧。  
   
 4.  在表上面的编辑栏中，键入以下公式。 自动完成功能将帮助您键入列和表的完全限定名称，并且列出可用的函数。  
   
@@ -80,7 +80,7 @@ DayOfWeek 计算列提供可排序的星期几名称。
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>在 DimProduct 表中创建 ProductSubcategoryName 计算的列  
   
   
-1.  在中**DimProduct**表中，滚动到最右侧的表。 请注意，最右侧的列被命名为“添加列”（斜体），单击该列标题。  
+1.  在中**DimProduct**表中，滚动到最右侧的表。 请注意，最右侧的列被命名为“添加列”  （斜体），单击该列标题。  
   
 2.  在公式栏中，键入以下公式。  
     
@@ -118,7 +118,7 @@ ProductCategoryName 计算的列用于在 DimProduct 表，其中包括 DimProdu
     =[SalesAmount]-[TotalProductCost]
     ``` 
 
-4.  将此列重命名为“Margin”。  
+4.  将此列重命名为“Margin”  。  
   
 5.  将列之间拖动**SalesAmount**列和**TaxAmt**列。 
  

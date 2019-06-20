@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62654961"
 ---
 # <a name="ddl-triggers"></a>DDL 触发器
@@ -50,7 +50,7 @@ ms.locfileid: "62654961"
   
  与 DML 触发器不同，DDL 触发器的作用域不是架构。 因此，不能将 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 之类的函数用于查询有关 DDL 触发器的元数据。 请改用目录视图。  
   
- 服务器范围的 DDL 触发器显示在 SQL Server Management Studio 对象资源管理器的“触发器”文件夹中。 此文件夹位于 **“服务器对象”** 文件夹下。 数据库范围的 DDL 触发器显示在“数据库触发器”文件夹中。 此文件夹位于相应数据库的 **“可编程性”** 文件夹下。  
+ 服务器范围的 DDL 触发器显示在 SQL Server Management Studio 对象资源管理器的“触发器”  文件夹中。 此文件夹位于 **“服务器对象”** 文件夹下。 数据库范围的 DDL 触发器显示在“数据库触发器”  文件夹中。 此文件夹位于相应数据库的 **“可编程性”** 文件夹下。  
   
 > [!IMPORTANT]  
 >  触发器内部的恶意代码可以在升级后的权限下运行。 有关如何帮助减少此威胁的详细信息，请参阅 [管理触发器安全](manage-trigger-security.md)。  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779221"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>在内存优化表上使用索引的指导原则
@@ -61,7 +61,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  在用不等谓词查询内存优化的表时，非聚集索引的性能将高于非聚集哈希索引。  
   
- 哈希索引需要键（哈希）才能仔细查找索引。 如果索引键由两列组成，但仅提供第一列，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 没有完整的键可进行哈希运算。  这将产生索引扫描查询计划。 由用法决定应编制哪些列的索引。  
+ 哈希索引需要键（哈希）才能仔细查找索引。 如果索引键由两列组成，但仅提供第一列，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 没有完整的键可进行哈希运算。 这将产生索引扫描查询计划。 由用法决定应编制哪些列的索引。  
   
  当非聚集索引中的列在许多行中的值相同（索引键列有许多重复值）时，更新、插入和删除的性能会降低。  在这种情况下提高性能的一种方法是向非聚集索引添加另一列。  
   

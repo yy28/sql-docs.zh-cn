@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63217815"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>计算表中的行数 (Visual Database Tools)
@@ -41,11 +41,11 @@ ms.locfileid: "63217815"
   
 1.  确保您要汇总的表已经包含在“关系图”窗格中。  
   
-2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”。 [查询和视图设计器](visual-database-tools.md)会在“条件”窗格的网格中添加一个“分组依据”列。  
+2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 [查询和视图设计器](visual-database-tools.md)会在“条件”窗格的网格中添加一个“分组依据”  列。  
   
 3.  选择 **\* （所有列）** 表示表值对象的矩形中。  
   
-     查询和视图设计器会自动在“条件”窗格的“分组依据”列中填充 **Count** 一词，并为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
+     查询和视图设计器会自动在“条件”窗格的“分组依据”  列中填充 **Count** 一词，并为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
 4.  运行查询。  
   
@@ -53,19 +53,19 @@ ms.locfileid: "63217815"
   
 1.  确保您要汇总的表已经包含在“关系图”窗格中。  
   
-2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”列。  
+2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”  列。  
   
 3.  选择 **\*（所有列）** 表示表结构对象的矩形中。  
   
-     查询和视图设计器会自动在“条件”窗格的“分组依据”列中填充 **Count** 一词，并为要汇总的列分配列别名。 若要在查询输出中创建更实用的列标题，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
+     查询和视图设计器会自动在“条件”窗格的“分组依据”  列中填充 **Count** 一词，并为要汇总的列分配列别名。 若要在查询输出中创建更实用的列标题，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
-4.  添加要搜索的数据列，再清除“输出”列中的复选框。  
+4.  添加要搜索的数据列，再清除“输出”  列中的复选框。  
   
-     查询和视图设计器会自动在网格的“分组依据”列中填充 **Group By** 一词。  
+     查询和视图设计器会自动在网格的“分组依据”  列中填充 **Group By** 一词。  
   
-5.  将“分组依据”列中的 **Group By** 改为 **Where**。  
+5.  将“分组依据”  列中的 **Group By** 改为 **Where**。  
   
-6.  在要搜索的数据列的“筛选器”列中，输入搜索条件。  
+6.  在要搜索的数据列的“筛选器”  列中，输入搜索条件。  
   
 7.  运行查询。  
   
@@ -73,13 +73,13 @@ ms.locfileid: "63217815"
   
 1.  确保您要汇总的表已经包含在“关系图”窗格中。  
   
-2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”列。  
+2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”  列。  
   
 3.  将要计数的列添加到“条件”窗格中。  
   
-     查询和视图设计器会自动在网格的“分组依据”列中填充 **Group By** 一词。  
+     查询和视图设计器会自动在网格的“分组依据”  列中填充 **Group By** 一词。  
   
-4.  将“分组依据”列中的 **Group By** 改为 **Count**。  
+4.  将“分组依据”  列中的 **Group By** 改为 **Count**。  
   
     > [!NOTE]  
     >  若要只计算唯一值的数目，请选择 **Count Distinct**。  

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0123027ac9aa87d616b52ac5cc26f36a20f7e1e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524011"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
@@ -33,15 +33,15 @@ ms.locfileid: "62524011"
   
 1.  在对象资源管理器中，展开配置为主服务器的服务器。   
   
-2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“管理目标服务器”。  
+2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，再单击“管理目标服务器”  。  
   
-3.  单击 **“发布指令”**，然后在 **“指令类型”** 列表中选择 **“脱离”**。  
+3.  单击 **“发布指令”** ，然后在 **“指令类型”** 列表中选择 **“脱离”** 。  
   
 4.  在 **“收件人”** 下，执行以下操作之一：  
   
     -   单击 **“所有目标服务器”** ，脱离此主服务器的所有目标服务器。 如果要完全卸载当前多服务器管理配置，则使用此选项。  
   
-    -   单击 **“以下目标服务器”**，再单击相应的 **“选择”** 框，脱离此主服务器的部分（而不是全部）目标服务器。  
+    -   单击 **“以下目标服务器”** ，再单击相应的 **“选择”** 框，脱离此主服务器的部分（而不是全部）目标服务器。  
   
 ## <a name="see-also"></a>请参阅  
  [创建多服务器环境](create-a-multiserver-environment.md)   

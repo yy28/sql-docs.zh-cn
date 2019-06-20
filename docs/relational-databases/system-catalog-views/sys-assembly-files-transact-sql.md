@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0279d6c2850dff07b365e7543f387f6cf6e9f328
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62516079"
 ---
 # <a name="sysassemblyfiles-transact-sql"></a>sys.assembly_files (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "62516079"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|此文件所属的程序集的 ID。|  
-|**名称**|nvarchar(260)|程序集文件的名称。|  
+|**名称**|nvarchar(260) |程序集文件的名称。|  
 |**file_id**|**int**|文件的 ID。 在程序集中是唯一的。 编号为 1 的文件 ID 表示程序集 DLL。|  
 |**content**|**varbinary(max)**|文件的内容。|  
   

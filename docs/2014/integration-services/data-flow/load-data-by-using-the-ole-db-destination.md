@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62902211"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>通过使用 OLE DB 目标来加载数据
@@ -42,7 +42,7 @@ ms.locfileid: "62902211"
   
     -   **“表或视图”** 在包含该数据的数据库中选择一个表或视图。  
   
-    -   **表或视图 - 快速加载** 在包含该数据的数据库中选择一个表或视图，然后设置快速加载选项：“保留标识”、“保留 NULL”、“表锁”、“CHECK 约束”、“每批行数”或“最大插入提交大小”。  
+    -   **表或视图 - 快速加载** 在包含该数据的数据库中选择一个表或视图，然后设置快速加载选项：“保留标识”  、“保留 NULL”  、“表锁”  、“CHECK 约束”  、“每批行数”  或“最大插入提交大小”  。  
   
     -   **表名变量或视图名变量** 在数据库中选择包含表名称或视图名称的用户定义变量。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62902211"
     > [!NOTE]  
     >  OLE DB 目标会自动映射同名的列。  
   
-9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅 [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)。  
+9. 若要配置错误输出，请单击 **“错误输出”** 。 有关详细信息，请参阅 [在数据流组件中配置错误输出](../configure-an-error-output-in-a-data-flow-component.md)。  
   
-10. 单击“确定” 。  
+10. 单击“确定”  。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

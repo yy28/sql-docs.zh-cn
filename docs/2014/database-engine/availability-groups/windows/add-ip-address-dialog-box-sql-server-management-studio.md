@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68bd85258bd3fd259386f020394ffb5bc70a9781
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791911"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>“添加 IP 地址”对话框 (SQL Server Management Studio)
@@ -50,7 +50,7 @@ ms.locfileid: "62791911"
 >  **“添加 IP 地址”** 对话框并不验证该 IP 地址。 该对话框也不会阻止您为已经添加到可用性组侦听器的子网继续添加其他子网地址。  
   
  **取消**  
- 单击以取消所做选择，并返回“新的可用性组侦听程序”对话框或“侦听程序”选项卡，不为任何子网添加静态 IP 地址。  
+ 单击以取消所做选择，并返回“新的可用性组侦听程序”  对话框或“侦听程序”  选项卡，不为任何子网添加静态 IP 地址。  
   
   
 ##  <a name="RelatedTasks"></a> 相关任务  

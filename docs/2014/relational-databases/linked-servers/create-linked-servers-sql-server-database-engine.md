@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743483"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
@@ -70,7 +70,7 @@ ms.locfileid: "62743483"
      **访问接口字符串**  
      键入与数据源相对应的 OLE DB 访问接口的唯一编程标识符 (PROGID)。 有关有效访问接口字符串的示例，请参阅 [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)的数据。  
   
-     **位置**  
+     **Location**  
      根据 OLE DB 访问接口的说明，键入数据库的位置。  
   
      **目录**  

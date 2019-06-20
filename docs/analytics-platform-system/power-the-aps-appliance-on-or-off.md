@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678625"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>用于分析平台系统的电源打开或关闭的设备
@@ -39,7 +39,7 @@ ms.locfileid: "62678625"
 > [!WARNING]  
 > 必须按所列的确切顺序执行所有步骤，每个步骤之前，必须完成都执行下一步，除非另有说明。 执行顺序不正确或无需等待每个步骤才能完成的步骤会导致错误，当设备在更高版本时已启动。  
   
-1.  连接到 PDW 控制节点 (**_PDW_region_-CTL01** )，并使用分析平台系统 appliance 域管理员帐户登录。  
+1.  连接到 PDW 控制节点 ( **_PDW_region_-CTL01** )，并使用分析平台系统 appliance 域管理员帐户登录。  
   
 2.  运行`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`以打开**Configuration Manager**。  
   

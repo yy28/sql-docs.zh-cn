@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62844095"
 ---
 # <a name="new-full-text-catalog-general-page"></a>新建全文目录（“常规”页）
@@ -38,7 +38,7 @@ ms.locfileid: "62844095"
  选中此项，可以将此目录设置为新建全文目录的默认目录。  
   
  **区分重音**  
- 指示目录区分还是不区分标注字符，例如波形符 (**~**)、锐音符 (**´**) 或元音 (**¨**)。 如果您选择 **“不区分”**，则在与此全文目录相关联的全文索引中将忽略标注字符。 有关标注字符的信息，请参阅[变音标记](https://www.merriam-webster.com/dictionary/diacritic)Merriam Webster 网站中。  
+ 指示目录区分还是不区分标注字符，例如波形符 ( **~** )、锐音符 (**´**) 或元音 (**¨**)。 如果您选择 **“不区分”** ，则在与此全文目录相关联的全文索引中将忽略标注字符。 有关标注字符的信息，请参阅[变音标记](https://www.merriam-webster.com/dictionary/diacritic)Merriam Webster 网站中。  
   
 ## <a name="see-also"></a>请参阅  
  [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
