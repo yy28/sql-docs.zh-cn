@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9e922f5bf8d07e75c976dbfc07b89b8527dbbc8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63023366"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
@@ -27,7 +27,7 @@ ms.locfileid: "63023366"
   
 |以-><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1,7|“确定”|-|-|1|1,3|1,7|-|OK (VT_BSTR)|“确定”|“确定”|4|4|  
+|Date|1,7|“确定”|-|-|1|1,3|1,7|-|OK (VT_BSTR)|“确定”|“确定”|4|4|  
 |Time|5,6,7|-|9|“确定”|6|3,6|5,6|-|OK (VT_BSTR)|“确定”|“确定”|4|4|  
 |Smalldatetime|7|8|9,10|10|“确定”|3|7|-|7 (VT_DATE)|“确定”|“确定”|4|4|  
 |DATETIME|5,7|8|9,10|10|“确定”|3|7|-|7 (VT_DATE)|“确定”|“确定”|4|4|  

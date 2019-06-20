@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62500424"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
@@ -44,7 +44,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 `[ @owner = ] 'owner'` 是订阅所有者。 *所有者*是**sysname**，默认值为 NULL。  
   
-`[ @tranid = ] 'transaction_id'` 允许按事务 ID 筛选输出 *transaction_id*是**nvarchar(70)**，默认值为 NULL。 如果已指定，则显示与排队命令关联的事务 ID。 如果为 NULL，则显示队列中的所有命令。  
+`[ @tranid = ] 'transaction_id'` 允许按事务 ID 筛选输出 *transaction_id*是**nvarchar(70)** ，默认值为 NULL。 如果已指定，则显示与排队命令关联的事务 ID。 如果为 NULL，则显示队列中的所有命令。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -54,7 +54,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**操作**|**nvarchar(10)**|同步发生时采取的操作类型。<br /><br /> INS= 插入 <br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
+|**操作**|**nvarchar(10)**|同步发生时采取的操作类型。<br /><br /> INS= 插入<br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
 |**tranid**|**nvarchar(70)**|执行命令的事务 ID。|  
 |**table column1...n**||指定的表中每个列的值*tablename*。|  
 |**msrepl_tran_version**|**uniqueidentifier**|该列用于跟踪对已复制数据的更改以及在发布服务器上执行冲突检测。 该列自动添加到表中。|  

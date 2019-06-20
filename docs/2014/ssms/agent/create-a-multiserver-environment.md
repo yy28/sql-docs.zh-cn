@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192969"
 ---
 # <a name="create-a-multiserver-environment"></a>创建多服务器环境
@@ -58,7 +58,7 @@ ms.locfileid: "63192969"
 ## <a name="related-tasks"></a>Related Tasks  
  以下主题介绍创建多服务器环境的常见任务：  
   
-|描述|主题|  
+|Description|主题|  
 |-----------------|-----------|  
 |描述如何创建主服务器。|[设置主服务器](make-a-master-server.md)|  
 |描述如何创建目标服务器。|[设置目标服务器](make-a-target-server.md)|  

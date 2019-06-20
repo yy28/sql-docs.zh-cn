@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058613"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>平面文件源编辑器（“列”页）
-  可以使用“平面文件源编辑器”对话框的“列”节点，将输出列映射到每个外部（源）列。  
+  可以使用“平面文件源编辑器”  对话框的“列”  节点，将输出列映射到每个外部（源）列。  
   
 > [!NOTE]  
 >  `FileNameColumnName`平面文件源的属性和`FastParse`及其输出列的属性中不可用**平面文件源编辑器**，但可以通过使用设置**高级编辑器**. 有关这些属性的详细信息，请参阅 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)的“平面文件源”部分。  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108171"
 ---
 # <a name="new-linked-report-page-report-manager"></a>“新建链接报表”页（报表管理器）
@@ -31,7 +31,7 @@ ms.locfileid: "66108171"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“创建链接报表”**。  
+3.  在下拉菜单中，单击 **“创建链接报表”** 。  
   
 ###### <a name="to-open-the-new-linked-report-page-from-the-general-properties-page-of-a-report"></a>从报表的“常规属性”页打开“新建链接报表”页  
   
@@ -39,9 +39,9 @@ ms.locfileid: "66108171"
   
 2.  悬停在该报表之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击 **“管理”**。 这会打开该报表的“常规”属性页。  
+3.  在下拉菜单中，单击 **“管理”** 。 这会打开该报表的“常规”属性页。  
   
-4.  在项工具栏中，单击 **“创建链接报表”**。  
+4.  在项工具栏中，单击 **“创建链接报表”** 。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -50,7 +50,7 @@ ms.locfileid: "66108171"
  **说明**  
  键入对报表内容的说明。 有权访问该报表的用户可以在“内容”页中查看此说明。  
   
- **位置**  
+ **Location**  
  指定包含该报表的文件夹路径。 默认情况下，链接报表创建时位于基础报表所在的文件夹中。 单击 **“更改位置”** 可以将链接报表放入其他文件夹。  
   
  **确定**  

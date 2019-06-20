@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835985"
 ---
 # <a name="edit-the-table-properties"></a>编辑表属性
@@ -42,11 +42,11 @@ ms.locfileid: "62835985"
   
     -   **新建捕获实例**：在此情况下，将保存新的捕获实例并且不删除旧的捕获实例。  
   
-         **请注意**:每个表不能具有超过两个捕获实例。 如果已有两个捕获实例，则此选项不可用。  
+         **注意**：每个表不能具有超过两个捕获实例。 如果已有两个捕获实例，则此选项不可用。  
   
     -   **替换现有捕获实例**：在此情况下，将删除当前捕获实例并用你创建的捕获实例替换。 如果为此表定义了两个捕获实例，则您必须选择要替换的一个实例。  
   
- **请注意**:可以从“表”选项卡的表列表中删除某一捕获实例。  
+ **注意**：可以从“表”选项卡的表列表中删除某一捕获实例。  
   
  在此对话框中输入完信息后，单击 **“确定”** 以接受更改。  
   

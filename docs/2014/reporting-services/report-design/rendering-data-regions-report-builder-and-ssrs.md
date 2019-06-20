@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 918aa5eee3aada465e904cf7f1627f93d1b9bb6b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105372"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>呈现数据区域（报表生成器和 SSRS）
@@ -35,7 +35,7 @@ ms.locfileid: "66105372"
  组上的逻辑分页符不会导致外部组标题断开。 例如，假定报表具有国家这一外部组和国家地区这一内部组。 如果在国家地区组的实例之间存在逻辑分页符，则报表的两页上都会显示国家这一外部组。  
   
 #### <a name="repeated-tablix-headers"></a>重复的 Tablix 标题  
- 在“属性”窗格中设置 RepeatWith 属性时，在数据区域内不会改变的项（例如列标题）将会在呈现该部分数据区域的每页上重复显示。 例如，如果某行数据显示在下一页并且设置了 Repeat With 属性，则列标题也会显示在呈现的页上。  
+ 在“属性”窗格中设置 RepeatWith 属性时，在数据区域内不会改变的项（例如列标题）将会在呈现该部分数据区域的每页上重复显示  。 例如，如果某行数据显示在下一页并且设置了 Repeat With 属性，则列标题也会显示在呈现的页上。  
   
 ### <a name="tablix-corner"></a>Tablix 角  
  左上角称为 Tablix 角。 Tablix 角内可以包含其他报表项，但如果在这种角内插入逻辑分页符，则在呈现 Tablix 数据区域时，将会忽略这些分页符。  

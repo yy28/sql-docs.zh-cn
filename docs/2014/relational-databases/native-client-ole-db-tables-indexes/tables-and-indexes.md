@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f0b3fcf58f3f2767fbdc653327bec334545bdd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213521"
 ---
 # <a name="tables-and-indexes"></a>表和索引
@@ -35,7 +35,7 @@ ms.locfileid: "63213521"
   
  在特定于访问接口的 DBPROPSET_SQLSERVERCOLUMN 属性集中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了以下属性。  
   
-|属性 ID|描述|  
+|属性 ID|Description|  
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|键入：VT_BSTR<br /><br /> R/W:写入<br /><br /> 默认值：Null<br /><br /> 说明:仅在使用此属性**ITableDefinition**。 该属性中指定的字符串可在创建 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)<br /><br /> 语句时使用。|  
   

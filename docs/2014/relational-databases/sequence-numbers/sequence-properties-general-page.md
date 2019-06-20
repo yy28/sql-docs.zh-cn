@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184435"
 ---
 # <a name="sequence-properties-general-page"></a>序列属性（“常规”页）
@@ -26,7 +26,7 @@ ms.locfileid: "63184435"
   
  有关同时使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函数的信息，请参阅 [序列号](sequence-numbers.md)。  
   
- 访问此页的方法有如下两种：在对象资源管理器中右键单击“序列”，再单击“新建序列”，或者右键单击现有序列，再单击“属性”。 如果右键单击现有序列，再单击“属性”，则以下某些选项是不可编辑的。 要更改序列选项，请使用 [ALTER SEQUENCE (Transact-SQL)](/sql/t-sql/statements/alter-sequence-transact-sql) 语句，或删除并重新创建序列对象。  
+ 访问此页的方法有如下两种：在对象资源管理器中右键单击“序列”  ，再单击“新建序列”  ，或者右键单击现有序列，再单击“属性”  。 如果右键单击现有序列，再单击“属性”  ，则以下某些选项是不可编辑的。 要更改序列选项，请使用 [ALTER SEQUENCE (Transact-SQL)](/sql/t-sql/statements/alter-sequence-transact-sql) 语句，或删除并重新创建序列对象。  
   
 ## <a name="options"></a>选项  
  **序列名称**  

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2bbe1636db483ad24f7744fe4d9902c520e07dbb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138859"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>编辑类型映射 (AccessToSQL)
@@ -35,10 +35,10 @@ ms.locfileid: "63138859"
 如果数据类型的可变长度，以下字段将显示下**源类型**:  
   
 **From**  
-指定此映射的最小长度。 例如，对于**文本**数据类型，可以输入 10，以指定的开始处的范围为此映射**text(10)**。  
+指定此映射的最小长度。 例如，对于**文本**数据类型，可以输入 10，以指定的开始处的范围为此映射**text(10)** 。  
   
 **若要**  
-指定此映射的最大长度。 例如，对于**文本**数据类型，可以输入 20 来指定此映射的结束时间范围**text(20)**。  
+指定此映射的最大长度。 例如，对于**文本**数据类型，可以输入 20 来指定此映射的结束时间范围**text(20)** 。  
   
 **目标类型**  
 选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]源数据类型映射到的数据类型。 SSMA 时创建的表或存储的过程中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，源数据类型将更改为此数据类型。  
@@ -46,5 +46,5 @@ ms.locfileid: "63138859"
 如果数据类型的可变长度，以下字段将显示下**目标类型**:  
   
 **Replace with**  
-指定此映射的目标长度。 例如，对于**nvarchar**数据类型，可以输入 20 来指定应将指定的源数据类型映射到**nvarchar(20)**。  
+指定此映射的目标长度。 例如，对于**nvarchar**数据类型，可以输入 20 来指定应将指定的源数据类型映射到**nvarchar(20)** 。  
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104094"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>配置报表服务器以进行远程管理
@@ -66,9 +66,9 @@ ms.locfileid: "66104094"
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>配置与报表服务器数据库的远程连接  
   
-1.  单击 **“开始”**，依次指向 **“程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  单击 **“开始”** ，依次指向 **“程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在左窗格中，展开“SQL Server 网络配置”，然后针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例单击“协议”。  
+2.  在左窗格中，展开“SQL Server 网络配置”，然后针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例单击“协议”   。  
   
 3.  在详细信息窗格中，启用“TCP/IP”和“命名管道”协议，然后重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66104094"
   
 ### <a name="to-set-dcom-permissions-to-enable-remote-wmi-access-for-non-administrators"></a>设置 DCOM 权限为非管理员启用远程 WMI 访问  
   
-1.  在“开始”菜单中，指向 **“管理工具”**，单击 **“组件服务”**。  
+1.  在“开始”菜单中，指向 **“管理工具”** ，单击 **“组件服务”** 。  
   
      对于 Windows Vista 中，在开始菜单中，单击**所有程序**，单击**运行**，然后输入`mmc comexp.msc`。  
   
@@ -106,27 +106,27 @@ ms.locfileid: "66104094"
   
 4.  选择“我的电脑”。  
   
-5.  在 **“操作”** 菜单中，选择 **“属性”**。  
+5.  在 **“操作”** 菜单中，选择 **“属性”** 。  
   
-6.  单击 **“COM 安全”**。  
+6.  单击 **“COM 安全”** 。  
   
-7.  在 **“启动和激活权限”** 中单击 **“编辑限制”**。  
+7.  在 **“启动和激活权限”** 中单击 **“编辑限制”** 。  
   
-8.  如果在 **“启动权限”** 中没有看到您的名称，请单击 **“添加”**。  
+8.  如果在 **“启动权限”** 中没有看到您的名称，请单击 **“添加”** 。  
   
-9. 键入您的用户帐户名，然后单击 **“确定”**。  
+9. 键入您的用户帐户名，然后单击 **“确定”** 。  
   
-10. 在“\<用户或组> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”。  
+10. 在“\<用户或组> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”      。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>为非管理员设置报表服务器 WMI 命名空间的权限  
   
-1.  在“开始”菜单中，指向 **“管理工具”**，单击 **“计算机管理”**。  
+1.  在“开始”菜单中，指向 **“管理工具”** ，单击 **“计算机管理”** 。  
   
 2.  打开“服务和应用程序”文件夹。  
   
-3.  右键单击“WMI 控件”，然后选择“属性”。  
+3.  右键单击“WMI 控件”，然后选择“属性”   。  
   
-4.  单击 **“安全性”**。  
+4.  单击 **“安全性”** 。  
   
 5.  打开 Root 文件夹。  
   
@@ -140,11 +140,11 @@ ms.locfileid: "66104094"
   
 10. 打开 v10 文件夹。  
   
-11. 选中 Admin 文件夹，然后单击 **“安全性”**。  
+11. 选中 Admin 文件夹，然后单击 **“安全性”** 。  
   
-12. 单击 **“添加”**，然后键入将用于管理服务器的用户帐户。  
+12. 单击 **“添加”** ，然后键入将用于管理服务器的用户帐户。  
   
-13. 在 **“允许”** 列中，选择 **“启用帐户”**、 **“远程启用”** 和 **“读取安全”**，然后单击 **“确定”**。  
+13. 在 **“允许”** 列中，选择 **“启用帐户”** 、 **“远程启用”** 和 **“读取安全”** ，然后单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

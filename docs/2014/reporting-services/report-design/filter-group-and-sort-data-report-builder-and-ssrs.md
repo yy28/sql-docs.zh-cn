@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f25545a48a95082636fc3efa951e5eab42c94be7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105892"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
@@ -61,7 +61,7 @@ ms.locfileid: "66105892"
   
  在从外部数据源检索数据之后，您可以向数据集、数据区域和数据区域组（包括详细信息组）添加筛选器。 在运行时应用筛选器的顺序为：先对数据集，再对数据区域，最后对组，并按照组层次结构自上而下的顺序。 在表、矩阵或列表中，对行组、列组和相邻组分别应用各自的筛选器。 在图表中，对类别组和序列组分别应用各自的筛选器。 有关详细信息，请参阅 [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
- 对于每个筛选器，需要指定一个“筛选器公式” 。 筛选器公式包括数据集字段或表达式，用于指定要筛选的数据、运算符以及要比较的值。 在处理项时，只包括与筛选条件匹配的数据值。  
+ 对于每个筛选器，需要指定一个“筛选器公式”  。 筛选器公式包括数据集字段或表达式，用于指定要筛选的数据、运算符以及要比较的值。 在处理项时，只包括与筛选条件匹配的数据值。  
   
  若要让用户能够控制报表中的数据，可以在筛选表达式中包括相应参数。 有关详细信息，请参阅[集合引用（报表生成器和 SSRS）](built-in-collections-parameters-collection-references-report-builder.md)。  
   

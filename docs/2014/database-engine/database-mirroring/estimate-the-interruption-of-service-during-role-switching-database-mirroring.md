@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806839"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>估计在角色切换期间服务的中断（数据库镜像）
@@ -45,7 +45,7 @@ ms.locfileid: "62806839"
  故障转移时间主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间（有关镜像服务器如何处理日志记录的详细信息，请参阅[数据库镜像 (SQL Server)](database-mirroring-sql-server.md)。 有关估计故障转移时间的信息，请参阅本主题后面的“估计故障转移重做速度”。  
   
 > [!IMPORTANT]  
->  如果在先创建，后更改索引或表的事务中发生故障转移，则故障转移占用的时间可能长于通常所需的时间。  例如，在以下一系列操作期间的故障转移可能会增加故障转移时间：BEGIN TRANSACTION，对表创建索引和 SELECT INTO 表。 在通过 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句完成事务之前，该事务中故障转移时间延长的可能性一直存在。  
+>  如果在先创建，后更改索引或表的事务中发生故障转移，则故障转移占用的时间可能长于通常所需的时间。  例如，在以下一系列操作过程中进行故障转移可能会延长故障转移时间：BEGIN TRANSACTION、在表上创建索引和选中表。 在通过 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句完成事务之前，该事务中故障转移时间延长的可能性一直存在。  
   
 ### <a name="the-redo-queue"></a>重做队列  
  前滚数据库涉及应用镜像服务器上的重做队列中当前存在的任何日志记录。 “重做队列”  包括已写入镜像服务器的磁盘上、但尚未在镜像数据库中前滚的日志记录。  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100695"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 库传递
@@ -51,9 +51,9 @@ ms.locfileid: "66100695"
   
 1.  转到从中访问报表的 SharePoint 站点。  
   
-2.  选择报表，单击它旁边的向下箭头，然后选择 **“管理订阅”**。  
+2.  选择报表，单击它旁边的向下箭头，然后选择 **“管理订阅”** 。  
   
-3.  单击 **“创建”**、 **“编辑”** 或 **“删除”**。  
+3.  单击 **“创建”** 、 **“编辑”** 或 **“删除”** 。  
   
  有关“管理订阅”列表的状态消息中显示有关订阅的当前信息，包括订阅是否成功以及上次运行订阅的日期和时间。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66100695"
  指定处理订阅时是否使用更新的版本替换具有相同名称和扩展名的文件。 如果希望使用更新的版本替换现有文件，请选择 **“覆盖”** 。 如果不希望订阅替换文件，请选择 **“无”** 。 在这种情况下，如果存在具有目标名称和扩展名的文件，则不进行传递。 如果希望通过在文件名末尾追加数字来添加同一文件的连续版本，请选择 **“Autoincrement”** 。  
   
  自动复制  
- 如果使用自动复制功能将一个文件的最新版本自动复制到多个位置，在启用“覆盖”的情况下则会复制此文件。 如果您使用了**Autoincrement**或**None**，则传递将失败并`rsDeliveryError`将发生错误。  
+ 如果使用自动复制功能将一个文件的最新版本自动复制到多个位置，在启用“覆盖”的情况下则会复制此文件  。 如果您使用了**Autoincrement**或**None**，则传递将失败并`rsDeliveryError`将发生错误。  
   
 ## <a name="see-also"></a>请参阅  
  [创建和管理 SharePoint 模式报表服务器的订阅](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   

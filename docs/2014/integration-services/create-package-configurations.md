@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060169"
 ---
 # <a name="create-package-configurations"></a>创建包配置
@@ -87,13 +87,13 @@ ms.locfileid: "66060169"
   
 2.  在解决方案资源管理器中，双击该包将其打开。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击 **“控制流”**、 **“数据流”**、 **“事件处理程序”** 或 **“包资源管理器”** 选项卡。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击 **“控制流”** 、 **“数据流”** 、 **“事件处理程序”** 或 **“包资源管理器”** 选项卡。  
   
-4.  在 **SSIS** 菜单上，单击“包配置” 。  
+4.  在 **SSIS** 菜单上，单击“包配置”  。  
   
-5.  在 **“包配置组织程序”** 对话框中，选择 **“启用包配置”**，再单击 **“添加”**。  
+5.  在 **“包配置组织程序”** 对话框中，选择 **“启用包配置”** ，再单击 **“添加”** 。  
   
-6.  在“包配置向导”页的欢迎页上，单击 **“下一步”**。  
+6.  在“包配置向导”页的欢迎页上，单击 **“下一步”** 。  
   
 7.  在“选择配置类型”页上，指定配置类型，然后设置与该配置类型相关的属性。 有关详细信息，请参阅 [包配置向导用户界面参考](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
   
@@ -102,15 +102,15 @@ ms.locfileid: "66060169"
     > [!NOTE]  
     >  只有 **XML 配置文件**和 **SQL Server** 配置类型支持在一个配置中包括多个属性。  
   
-9. 在“完成向导”页上，键入配置的名称，然后单击 **“完成”**。  
+9. 在“完成向导”页上，键入配置的名称，然后单击 **“完成”** 。  
   
 10. 查看 **“包配置组织程序”** 对话框中的配置。  
   
-11. 单击 **“关闭”**。  
+11. 单击 **“关闭”** 。  
   
 ## <a name="external-resources"></a>外部资源  
   
--   msdn.microsoft.com 上的技术文章 [理解 Integration Services 包配置](https://go.microsoft.com/fwlink/?LinkId=165643)   
+-   msdn.microsoft.com 上的技术文章 [理解 Integration Services 包配置](https://go.microsoft.com/fwlink/?LinkId=165643)  
   
 -   博客文章[代码的包配置中创建包](https://go.microsoft.com/fwlink/?LinkId=217663)，www.sqlis.com 上的。  
   

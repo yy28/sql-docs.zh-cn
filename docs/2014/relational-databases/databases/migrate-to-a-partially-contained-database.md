@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871723"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -63,9 +63,9 @@ GO
 #### <a name="enabling-contained-databases-using-management-studio"></a>使用 Management Studio 启用包含的数据库  
  下面的示例对[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
   
-1.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”。  
+1.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”  。  
   
-2.  在 **“高级”** 页面上的 **“包含”** 部分中，将 **“启用包含的数据库”** 选项设置为 **“True”**。  
+2.  在 **“高级”** 页面上的 **“包含”** 部分中，将 **“启用包含的数据库”** 选项设置为 **“True”** 。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -85,9 +85,9 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>使用 Management Studio 将数据库转换为部分包含的数据库  
  下面的示例将数据库转换为部分包含的数据库。  
   
-1.  在对象资源管理器中，展开“数据库”，右键单击要转换的数据库，然后单击“属性”。  
+1.  在对象资源管理器中，展开“数据库”  ，右键单击要转换的数据库，然后单击“属性”  。  
   
-2.  在 **“选项”** 页面上，将 **“包含类型”** 选项更改为 **“部分”**。  
+2.  在 **“选项”** 页面上，将 **“包含类型”** 选项更改为 **“部分”** 。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

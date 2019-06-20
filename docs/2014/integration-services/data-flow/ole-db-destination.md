@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901481"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
@@ -87,7 +87,7 @@ ms.locfileid: "62901481"
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|指定要插入的大小 (KB)。 选项具有窗体`KILOBYTES_PER_BATCH`  = \<正整数值**>**。|  
 |FIRE_TRIGGERS|指定是否在插入表上激发触发器。 选项的格式为 **FIRE_TRIGGERS**。 出现该选项说明要激发触发器。|  
-|ORDER|指定输入数据如何排序。 选项格式为 ORDER \<列名称> ASC&#124;DESC。 可以列出任何列数，是否包括排序顺序是可选的。 如果省略排序顺序，则插入操作假定数据不排序。<br /><br /> 注意：如果使用 ORDER 选项根据表的聚集索引的输入的数据进行排序，可以提高性能。|  
+|ORDER|指定输入数据如何排序。 选项格式为 ORDER \<列名称> ASC&#124;DESC。 可以列出任何列数，是否包括排序顺序是可选的。 如果省略排序顺序，则插入操作假定数据不排序。<br /><br /> 注意：如果使用 ORDER 选项根据表中的聚集索引对输入数据进行排序，可以提升性能。|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字传统上采用大写字母键入，但并不区分大小写。  
   

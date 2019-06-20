@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cc4dda934496bbfa33306537b515870f0de23de
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108180"
 ---
 # <a name="new-data-source-page-report-manager"></a>“新建数据源”页（报表管理器）
@@ -27,7 +27,7 @@ ms.locfileid: "66108180"
   
 1.  打开报表管理器，导航到要在其中创建数据源的文件夹。  
   
-2.  在工具栏中，单击 **“新建数据源”**。 必须具有“内容管理员”权限才能创建共享数据源。  
+2.  在工具栏中，单击 **“新建数据源”** 。 必须具有“内容管理员”权限才能创建共享数据源。  
   
 ## <a name="options"></a>选项  
  **名称**  

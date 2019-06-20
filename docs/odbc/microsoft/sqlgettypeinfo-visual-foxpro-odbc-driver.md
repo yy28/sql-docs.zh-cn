@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181411"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo（Visual FoxPro ODBC 驱动程序）
@@ -35,7 +35,7 @@ ms.locfileid: "63181411"
 |SQL_BIGINT|不提供支持。 没有 64 位 Visual FoxPro 类型。|  
 |SQL_BIT|逻辑函数|  
 |SQL_CHAR|字符|  
-|SQL_DATE|date|  
+|SQL_DATE|Date|  
 |SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|双精度|  
 |SQL_FLOAT|双精度|  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064632"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>浏览器（维度设计器）（Analysis Services - 多维数据）
@@ -28,10 +28,10 @@ ms.locfileid: "66064632"
  **“浏览器”** 选项卡包含以下窗格：  
   
  [工具栏](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
- 使用工具栏可以执行维度设计器的“浏览器”选项卡中的普通操作。  
+ 使用工具栏可以执行维度设计器的“浏览器”  选项卡中的普通操作。  
   
  [级别和成员](level-members-dimension-designer-analysis-services-multidimensional-data.md)  
- 使用“级别和成员”窗格可以使用所选语言浏览和修改所选层次结构的成员。  
+ 使用“级别和成员”  窗格可以使用所选语言浏览和修改所选层次结构的成员。  
   
 ## <a name="see-also"></a>请参阅  
  [维度设计器&#40;Analysis Services-多维数据&#41;](dimension-designer-analysis-services-multidimensional-data.md)   

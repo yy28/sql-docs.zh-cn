@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 247dd2950365a1b75a3b911fe6dfda1a4dd044df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107368"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
@@ -160,7 +160,7 @@ ms.locfileid: "66107368"
   
  在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 中，与此数据扩展插件关联的图形查询设计器是 [关系查询设计器用户界面](../relational-query-designer-user-interface.md)，而不是用于“ **Microsoft SQL Server**” 数据源类型的 [Visual Database Tool 设计器](../../ssms/visual-db-tools/visual-database-tool-designers.md)。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自动区分**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 并**Microsoft SQL Server**数据源类型，并打开与数据源类型关联的图形查询设计器。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自动区分** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **并**Microsoft SQL Server**数据源类型，并打开与数据源类型关联的图形查询设计器。  
   
  如果您在图形模式下使用该查询设计器，则会分析查询并可能将其重写。 基于文本的查询设计器也可用于编写查询。 如果希望控制用于查询的精确 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，请使用基于文本的查询设计器。 有关详细信息，请参阅[基于文本的查询设计器用户界面](../text-based-query-designer-user-interface.md)。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66107368"
  [返回数据源表](#DataSourcesTable)  
   
 ###  <a name="PWD"></a> Microsoft SQL Server 并行数据仓库处理扩展插件  
- 在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 中，与此数据扩展插件关联的图形查询设计器是 [关系查询设计器用户界面](../relational-query-designer-user-interface.md)，而不是用于“Microsoft SQL Server”数据源类型的 [Visual Database Tool 设计器](../../ssms/visual-db-tools/visual-database-tool-designers.md)。  
+ 在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 中，与此数据扩展插件关联的图形查询设计器是 [关系查询设计器用户界面](../relational-query-designer-user-interface.md)，而不是用于“ **Microsoft SQL Server**” 数据源类型的 [Visual Database Tool 设计器](../../ssms/visual-db-tools/visual-database-tool-designers.md)。  
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自动区分**SQL Server Parallel Data Warehouse**并**Microsoft SQL Server**数据源类型，并打开与数据源类型关联的图形查询设计器。  
   

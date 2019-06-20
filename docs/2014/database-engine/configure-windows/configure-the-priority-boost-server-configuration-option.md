@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d75f292ea86b4b619fec81ea7a6f7aafc83fdc15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62812269"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>配置 priority boost 服务器配置选项
@@ -39,7 +39,7 @@ ms.locfileid: "62812269"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置 priority boost 选项之后](#FollowUp)  
+-   **跟进：** [在配置优先级提升选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62812269"
   
 #### <a name="to-configure-the-priority-boost-option"></a>配置 priority boost 选项  
   
-1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”** 。  
   
 2.  单击 **“处理器”** 节点。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "62812269"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `priority boost` 选项的值设置为 `1`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `priority boost` 选项的值设置为 `1`。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -90,7 +90,7 @@ GO
   
  有关详细信息，请参阅 [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
-##  <a name="FollowUp"></a> 跟进：在配置 priority boost 选项之后  
+##  <a name="FollowUp"></a> 跟进：在配置优先级提升选项之后  
  必须重新启动服务器，设置才会生效。  
   
 ## <a name="see-also"></a>请参阅  

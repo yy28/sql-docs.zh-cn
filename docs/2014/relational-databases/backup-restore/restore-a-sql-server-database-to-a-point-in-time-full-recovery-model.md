@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921058"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>将 SQL Server 数据库还原到某个时点（完整恢复模式）
@@ -59,9 +59,9 @@ ms.locfileid: "62921058"
   
 1.  在“对象资源管理器”中，连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开服务器树。  
   
-2.  展开 **“数据库”**。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
+2.  展开 **“数据库”** 。  根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
-3.  右键单击数据库，指向“任务”，再指向“还原”，然后单击“数据库”。  
+3.  右键单击数据库，指向“任务”  ，再指向“还原”  ，然后单击“数据库”  。  
   
 4.  在 **“常规”** 页上，使用 **“源”** 部分指定要还原的备份集的源和位置。 选择以下选项之一：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62921058"
   
     -   **“设备”**  
   
-         单击“浏览”按钮 (**...**) 以打开“选择备份设备”对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”**。  
+         单击“浏览”按钮 ( **...** ) 以打开“选择备份设备”  对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”** 。  
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
@@ -86,16 +86,16 @@ ms.locfileid: "62921058"
   
 6.  单击 **“时间线”** 以访问 **“备份时间线”** 对话框。  
   
-7.  在 **“还原到”** 部分中，单击 **“具体日期和时间”**。  
+7.  在 **“还原到”** 部分中，单击 **“具体日期和时间”** 。  
   
 8.  使用 **“日期”** 和 **“时间”** 框或滑动条来指定应停止还原的具体日期和时间。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  使用“时间线间隔”框更改时间线上显示的时间量。  
+    >  使用“时间线间隔”  框更改时间线上显示的时间量。  
   
 9. 指定具体时点后，数据库恢复顾问确保只有需要还原到该时点的那些备份在 **“要还原的备份集”** 网格的 **“还原”** 列中处于选中状态。 这些选定的备份构成了为您的时点还原建议的还原计划。 应当仅使用选定的备份进行时点还原操作。  
   
-     有关“用于还原的备份集”网格中的列的信息，请参阅[还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)。 有关数据库恢复顾问的信息，请参阅[还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)。  
+     有关“用于还原的备份集”  网格中的列的信息，请参阅[还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)。 有关数据库恢复顾问的信息，请参阅[还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)。  
   
 10. 在 **“选项”** 页的 **“还原选项”** 面板中，可以根据您的实际情况选择下列任意选项：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62921058"
   
      有关这些选项的说明，请参阅[还原数据库（“选项”页）](restore-database-options-page.md)。  
   
-12. 如果对于选择的时间点是必需的，则选择“还原前进行结尾日志备份”。 无需修改此设置，但可以选择备份日志尾部（即使不需要）。  
+12. 如果对于选择的时间点是必需的，则选择“还原前进行结尾日志备份”  。 无需修改此设置，但可以选择备份日志尾部（即使不需要）。  
   
 13. 如果存在与数据库的活动连接，则还原操作可能会失败。 选中 **“关闭现有连接”** 以确保关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和数据库之间的所有活动连接。 此复选框可在执行还原操作之前将数据库设置为单用户模式，并在该操作完成后将数据库设置为多用户模式。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921058"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法**  
   
- RESTORE LOG *database_name* FROM < 备份设备 > WITH STOPAT  **= *`time`*，** 恢复...  
+ RESTORE LOG *database_name* FROM < 备份设备 > WITH STOPAT  **= *`time`* ，** 恢复...  
   
  恢复点是最新或之前发生的事务提交`datetime`由指定的值*时间*。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62921058"
   
 3.  还原上次差异数据库备份（如果有），而不恢复数据库 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  应用每个事务日志备份中相同的顺序在其中创建了它们，指定想要停止还原日志的时间 (RESTORE DATABASE *database_name* FROM < 备份设备 > WITH STOPAT **= *`time`*，** 恢复)。  
+4.  应用每个事务日志备份中相同的顺序在其中创建了它们，指定想要停止还原日志的时间 (RESTORE DATABASE *database_name* FROM < 备份设备 > WITH STOPAT **= *`time`* ，** 恢复)。  
   
     > [!NOTE]  
     >  RECOVERY 和 STOPAT 选项。 如果事务日志备份不包含要求的时间（例如，如果指定的时间超出了事务日志所包含的时间范围），则会生成警告，并且不会恢复数据库。  

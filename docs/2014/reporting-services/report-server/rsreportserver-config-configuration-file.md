@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1939e3b1f09e6afbc63ba0565e244e66a7cff26f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103232"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
@@ -98,14 +98,14 @@ ms.locfileid: "66103232"
  下表提供有关在文件的第一部分显示的常规配置设置的信息。 将按设置在配置文件中的显示顺序依次列出： 表的最后一列指示设置是适用于本机模式报表服务器 **(N)** 还是 SharePoint 模式报表服务器 **(S)** 或两者均适用。  
   
 > [!NOTE]  
->  在本主题中，“最大整数”是指 INT_MAX 值 2147483647。  有关详细信息，请参阅[整数限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
+>  在本主题中，“最大整数”是指 INT_MAX 值 2147483647。  有关详细信息，请参阅[整数限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx) 。  
   
 |设置|Description|模式|  
 |-------------|-----------------|----------|  
 |**Dsn**|指定承载报表服务器数据库的数据库服务器的连接字符串。 在创建报表服务器数据库时，此值会进行加密并添加到配置文件中。 对于 SharePoint，从 SharePoint 配置数据库获取数据库连接信息。|N,S|  
 |**ConnectionType**|指定报表服务器用来连接报表服务器数据库的凭据类型。 有效值为 `Default` 和 `Impersonate`。 如果将报表服务器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户或服务帐户连接到报表服务器数据库，则指定 `Default`。 如果报表服务器使用一个 Windows 帐户连接到报表服务器数据库，则指定 `Impersonate`。|N|  
 |**LogonUser、LogonDomain、LogonCred**|存储报表服务器连接到报表服务器数据库时所使用的域帐户的域、用户名和密码。 将报表服务器连接配置为使用域帐户时，会创建 `LogonUser`、`LogonDomain` 和 `LogonCred` 的值。 有关报表服务器数据库连接的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|N|  
-|**InstanceID**|报表服务器实例的标识符。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此值指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 默认情况下，此值是`MSRS12` *\<实例名 >*。 请不要修改此设置。 以下是完整值的一个示例： `<InstanceId>MSRS12.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的示例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|报表服务器实例的标识符。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此值指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 默认情况下，此值是`MSRS12` *\<实例名 >* 。 请不要修改此设置。 以下是完整值的一个示例： `<InstanceId>MSRS12.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的示例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|安装程序创建的报表服务器安装的标识符。 此值设置为 GUID。 请不要修改此设置。|N|  
 |**SecureConnectionLevel**|指定 Web 服务调用必须使用的安全套接字层 (SSL) 的级别。 此设置用于报表服务器 Web 服务和报表管理器。 当您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中配置 URL 以使用 HTTP 或 HTTPS 时将设置此值。 有效值的范围为 0 到 3 之间，其中 0 的安全性最低。 有关详细信息，请参阅 [使用安全 Web 服务方法](../report-server-web-service/net-framework/using-secure-web-service-methods.md) 和 [配置本机模式报表服务器上的 SSL 连接](../security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N,S|  
 |**DisableSecureFormsAuthenticationCookie**|默认值为 False。<br /><br /> 指定是否禁止将用于窗体和自定义身份验证 cookie 强制标记为安全的。 从 SQL Server 2012 开始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在发送到客户端时将用于自定义身份验证扩展插件的窗体身份验证 cookie 标记为安全 cookie。 通过更改此属性，报表服务器管理员和自定义安全扩展插件作者可以恢复以前的行为，即允许自定义安全扩展插件作者确定是否将 cookie 标记为安全 cookie。 建议将安全 cookie 用于窗体身份验证，以便帮助防止网络截取和重播攻击。|N|  
@@ -288,7 +288,7 @@ ms.locfileid: "66103232"
 |**SMTPUseSSL**|指定一个布尔值，通过设置该值可以在通过网络发送 SMTP 消息时使用安全套接字层 (SSL)。 默认值为 0（或 False）。 当 **SendUsing** 元素设置为 2 时可以使用此设置。|  
 |**SendUsing**|指定发生消息所使用的方法。 有效值为<br /><br /> 1=通过本地 SMTP 服务拾取目录发送消息。<br /><br /> 2=通过网络 SMTP 服务发送消息。|  
 |**SMTPAuthenticate**|指定一个整数，表示通过 TCP/IP 连接向 SMTP 服务发送消息时使用的身份验证类型。 有效值为<br /><br /> 0=无身份验证。<br /><br /> 1=（不支持）。<br /><br /> 2= NTLM (NT LanMan) 身份验证。 使用报表服务器 Windows 服务的安全上下文连接到网络 SMTP 服务器。|  
-|**From**|指定发送报表所使用的电子邮件地址，格式为 abc@host.xyz。 该地址显示在外发电子邮件的“发件人”行中。 如果使用远程 SMTP 服务器，则必须指定此值。 它应该是有权发送邮件的有效电子邮件帐户。|  
+|**From**|指定发送报表所使用的电子邮件地址，格式为 abc@host.xyz  。 该地址显示在外发电子邮件的“发件人”  行中。 如果使用远程 SMTP 服务器，则必须指定此值。 它应该是有权发送邮件的有效电子邮件帐户。|  
 |**EmbeddedRenderFormats，RenderingExtension**|指定在电子邮件正文中嵌入报表时所使用的呈现格式。 报表中的图像将随后嵌入报表中。 有效值为 MHTML 和 HTML4.0。|  
 |**PrivilegedUserRenderFormats**|指定当通过“管理所有订阅”任务启用订阅时，用户可以从中为报表订阅选择的呈现格式。 如果未设置此值，则可以使用所有未特意排除的呈现格式。|  
 |**ExcludedRenderFormats，RenderingExtension**|特意排除无法与给定的传递扩展插件协同工作的格式。 但不能排除同一个呈现扩展插件的多个实例。 如果排除多个实例，则在报表服务器读取配置文件时将出现错误。 默认情况下，排除将下列扩展插件用于电子邮件传递：<br /><br /> **HTMLOWC**<br /><br /> **Null**<br /><br /> **RGDI**|  
@@ -356,7 +356,7 @@ ms.locfileid: "66103232"
   
 -   [呈现扩展插件的设备信息设置 (Reporting Services)](../device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- 有关 \<Render> 下子 \<Extension> 元素属性的信息，请参阅以下主题：  
+ 有关 \<Render>  下子 \<Extension>  元素属性的信息，请参阅以下主题：  
   
 -   [在 RSReportServer.Config 中自定义呈现扩展插件参数](../customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
@@ -422,7 +422,7 @@ ms.locfileid: "66103232"
 |**MaxConnections**|指定与 Bing 地图 Web 服务之间的最大连接数。|  
 |**超时**|指定从 Bing 地图 Web 服务等待响应时的超时（秒）。|  
 |**AppID**|指定要用于 Bing 地图 Web 服务的应用程序标识符 (AppID)。 `(Default)` 指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认 AppID。<br /><br /> 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](https://go.microsoft.com/fwlink/?LinkId=151372)。<br /><br /> 请勿更改此值，除非您必须为您自己的 Bing 地图许可协议指定自定义 AppID。 当您更改 AppID 时，不必重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，更改就可以生效。|  
-|**CacheLevel**|从 System.Net.Cache 的 HttpRequestCacheLevel 枚举指定一个值。 默认值为 `Default`。 有关详细信息，请参阅 [HttpRequestCacheLevel 枚举](https://go.microsoft.com/fwlink/?LinkId=153353)。|  
+|**CacheLevel**|从 System.Net.Cache 的 HttpRequestCacheLevel 枚举指定一个值。 默认值是 `Default`。 有关详细信息，请参阅 [HttpRequestCacheLevel 枚举](https://go.microsoft.com/fwlink/?LinkId=153353)。|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> 本机模式报表服务器的默认配置文件  
  默认情况下，rsreportserver.config 文件安装到以下位置：  

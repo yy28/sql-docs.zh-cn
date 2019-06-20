@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059456"
 ---
 # <a name="development-of-an-integration-services-project"></a>Integration Services 项目的开发
@@ -31,7 +31,7 @@ ms.locfileid: "66059456"
  项目存储在解决方案中。 可以先创建解决方案，然后向该解决方案添加 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 如果不存在解决方案， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将在您首次创建项目时自动创建解决方案。 解决方案可以包含多个不同类型的项目。  
   
 > [!NOTE]  
->  默认情况下，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建新的 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]项目时， **“解决方案资源管理器”** 窗格不会显示该解决方案。 若要更改此默认行为，请在 **“工具”** 菜单上单击 **“选项”**。 在 **“选项”** 对话框中，展开 **“项目和解决方案”**，然后单击 **“常规”**。 在 **“常规”** 页上，选择 **“总是显示解决方案”**。  
+>  默认情况下，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建新的 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]项目时， **“解决方案资源管理器”** 窗格不会显示该解决方案。 若要更改此默认行为，请在 **“工具”** 菜单上单击 **“选项”** 。 在 **“选项”** 对话框中，展开 **“项目和解决方案”** ，然后单击 **“常规”** 。 在 **“常规”** 页上，选择 **“总是显示解决方案”** 。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

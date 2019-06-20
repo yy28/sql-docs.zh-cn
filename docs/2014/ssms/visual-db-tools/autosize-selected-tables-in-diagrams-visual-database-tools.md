@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63297573"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>自动调整关系图中选定表的大小 (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63297573"
   
 1.  选择要调整大小的表。  
   
-2.  右键单击选定的表，再从快捷菜单中选择“自动调整选定的表大小”。  
+2.  右键单击选定的表，再从快捷菜单中选择“自动调整选定的表大小”  。  
   
 ## <a name="see-also"></a>请参阅  
  [使用数据库关系图 (Visual Database Tools)](visual-database-tools.md)  

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63226243"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
@@ -59,10 +59,10 @@ cbValue
  *hdbc*  
  是大容量复制启用 ODBC 连接句柄。  
   
- field  
+ field   
  要设置其属性的按一定顺序的列号。  
   
- property  
+ property   
  属性常量之一。 在下表中定义属性常量。  
   
 |属性|ReplTest1|Description|  
@@ -106,7 +106,7 @@ cbValue
   
 -   可选终止字节序列的长度。  
   
- 每次调用**bcp_setcolfmt**指定一个用户文件列的格式。 例如，若要更改五列用户数据文件中的三个列的默认设置，请先调用[bcp_columns](bcp-columns.md)**(5)**，然后调用**bcp_setcolfmt**五次，有三个调用设置您的自定义格式。 对于剩余的两个调用，将 BCP_FMT_TYPE 设置为 0，并设置 BCP_FMT_INDICATOR_LENGTH、 BCP_FMT_DATA_LEN 和*cbValue*为 0、sql_varlen_data 和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 每次调用**bcp_setcolfmt**指定一个用户文件列的格式。 例如，若要更改五列用户数据文件中的三个列的默认设置，请先调用[bcp_columns](bcp-columns.md) **(5)** ，然后调用**bcp_setcolfmt**五次，有三个调用设置您的自定义格式。 对于剩余的两个调用，将 BCP_FMT_TYPE 设置为 0，并设置 BCP_FMT_INDICATOR_LENGTH、 BCP_FMT_DATA_LEN 和*cbValue*为 0、sql_varlen_data 和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
  **Bcp_columns**必须在调用之前调用函数**bcp_setcolfmt**。  
   

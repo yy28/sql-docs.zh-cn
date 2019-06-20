@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63285692"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>创建预测（数据挖掘基础教程）
@@ -57,7 +57,7 @@ ms.locfileid: "63285692"
   
      这样便将可预测列 [Bike Buyer] 映射到一个输入表列。  
   
-3.  单击“确定” 。  
+3.  单击“确定”  。  
   
 4.  在中**解决方案资源管理器**，右键单击**Targeted Mailing**数据源视图，然后选择**视图设计器**。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63285692"
     > [!WARNING]  
     >  如果看不到列表中的列，可能需要刷新设计器中加载的数据源视图的定义。 为此，请从**文件**菜单中，选择**保存所有**，然后关闭并重新打开设计器中的项目。  
   
-11. 单击“确定” 。  
+11. 单击“确定”  。  
   
 ## <a name="designing-the-prediction-query"></a>设计预测查询  
   
@@ -154,7 +154,7 @@ ms.locfileid: "63285692"
   
         1.  在中**保存数据挖掘查询结果**对话框中，选择数据源，或定义新的数据源。  
   
-        2.  键入将包含查询结果的表的名称。   
+        2.  键入将包含查询结果的表的名称。  
   
         3.  使用选项，**添加到数据源视图**，若要创建表，然后将其添加到现有的数据源视图。 这是如果你想要保留所有相关的表模型，如定型数据、 预测源数据和查询结果-在同一数据源视图很有用。  
   

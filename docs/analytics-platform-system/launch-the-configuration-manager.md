@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183434"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>在分析平台系统中启动配置管理器
@@ -25,7 +25,7 @@ ms.locfileid: "63183434"
 Analytics Platform System**Configuration Manager**只能由设备域管理员运行。 若要运行此工具时，需要设备域管理员密码。 若要创建 AP 的其他管理员，请参阅[创建 APS 域管理员&#40;APS&#41;](create-an-aps-domain-administrator-aps.md)。  
   
 ## <a name="Accessing"></a>启动配置管理器工具  
-若要运行 Configuration Manager，使用远程桌面连接到 PDW 控制节点 (**_PDW_region_-CTL01**) 节点，并作为登录_appliance_domain_ **\Administrator**。 启动时**Configuration Manager**程序中，使用**以管理员身份运行**选项以确保使用你的管理员凭据。  
+若要运行 Configuration Manager，使用远程桌面连接到 PDW 控制节点 ( **_PDW_region_-CTL01**) 节点，并作为登录_appliance_domain_ **\Administrator**。 启动时**Configuration Manager**程序中，使用**以管理员身份运行**选项以确保使用你的管理员凭据。  
   
 #### <a name="to-launch-from-a-browser-window"></a>若要在浏览器窗口中启动  
   

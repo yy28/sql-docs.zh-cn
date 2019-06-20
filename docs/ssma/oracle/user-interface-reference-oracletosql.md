@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 2acf2dca7b383d6ab579f46e33b10c10e541b88c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209920"
 ---
 # <a name="user-interface-reference-oracletosql"></a>用户界面参考 (OracleToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "63209920"
   
 |||  
 |-|-|  
-|主题|描述|  
+|主题|Description|  
 |[高级对象选择&#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|使用**高级对象选择**对话框可以通过使用筛选器条件来查找数据库对象，然后选择或清除这些对象。|  
 |[评估报告&#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|评估报告用于查看到的 Oracle 对象转换的结果[!INCLUDE[tsql](../../includes/tsql-md.md)]语法，并估计的时间和为迁移的复杂度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[Connect To Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|使用**连接到 Oracle**对话框以连接到你想要迁移的 Oracle 数据库。|  

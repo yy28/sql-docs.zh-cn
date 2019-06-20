@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 15b8f9aa0a2395d353fad3cde36ec1ee596d0202
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486121"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>创建基于域的属性（用于 Excel 的 MDS 外接程序）
@@ -44,13 +44,13 @@ ms.locfileid: "65486121"
   
 2.  单击要约束的列中的任意单元。  
   
-3.  在 **“生成模型”** 组中，单击 **“特性属性”**。  
+3.  在 **“生成模型”** 组中，单击 **“特性属性”** 。  
   
-4.  在“特性属性”对话框的“属性类型”列表中，选择“约束列表(基于域)”。  
+4.  在“特性属性”  对话框的“属性类型”  列表中，选择“约束列表(基于域)”  。  
   
 5.  在 **“使用以下位置的值填充属性”** 列表中：  
   
-    -   若要使用工作表中的值，请选择 **“所选列”**。 将使用所选列中的值创建新实体和新的临时表。  
+    -   若要使用工作表中的值，请选择 **“所选列”** 。 将使用所选列中的值创建新实体和新的临时表。  
   
     -   若要使用现有实体中的值，请选择该实体的名称。
     
@@ -58,7 +58,7 @@ ms.locfileid: "65486121"
   
 6.  如果您在前一步骤中选择 **“所选列”** ，则在 **“新实体名称”** 框中键入新实体的名称。 该名称可与列（属性）名称相同。  
   
-7.  单击“确定” 。 列中的每个单元现在都有一个可供用户从中选择的值列表。  
+7.  单击“确定”  。 列中的每个单元现在都有一个可供用户从中选择的值列表。  
   
 ## <a name="next-steps"></a>后续步骤  
   

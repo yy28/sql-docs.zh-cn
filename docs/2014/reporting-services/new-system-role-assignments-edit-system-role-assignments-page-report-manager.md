@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108132"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新建系统角色分配：编辑系统角色分配页 （报表管理器）
@@ -35,7 +35,7 @@ ms.locfileid: "66108132"
   
 1.  打开报表管理器。  
   
-2.  在页面顶部的右角，单击 **“站点设置”**。 这会打开该站点的“常规属性”页。  
+2.  在页面顶部的右角，单击 **“站点设置”** 。 这会打开该站点的“常规属性”页。  
   
 3.  选择 **“安全”** 选项卡。必须拥有“内容管理员”和“系统管理员”权限才能访问此页。  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057898"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>查找转换编辑器（“列”页）
@@ -32,7 +32,7 @@ ms.locfileid: "66057898"
   
  使用拖放操作将可用输入列映射到查找列。  
   
- 还可以用键盘通过以下方法将输入列映射到查找列：突出显示 **“可用输入列”** 表中的某一列，按应用程序键，然后单击 **“编辑映射”**。  
+ 还可以用键盘通过以下方法将输入列映射到查找列：突出显示 **“可用输入列”** 表中的某一列，按应用程序键，然后单击 **“编辑映射”** 。  
   
  **可用查找列**  
  查看查找列的列表。 查找列是包含在引用表中并可在其中查找与输入列相匹配的值的列。  
@@ -41,7 +41,7 @@ ms.locfileid: "66057898"
   
  使用这些复选框可以在引用表中选择要对其执行查找操作的列。  
   
- 还可以用键盘通过以下方法将查找列映射到输入列：突出显示 **“可用查找列”** 表中的某一列，按应用程序键，然后单击 **“编辑映射”**。  
+ 还可以用键盘通过以下方法将查找列映射到输入列：突出显示 **“可用查找列”** 表中的某一列，按应用程序键，然后单击 **“编辑映射”** 。  
   
  **查找列**  
  查看所选的查找列。 通过选中 **“可用查找列”** 表中的复选框即可选择查找列。  

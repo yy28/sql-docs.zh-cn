@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107999"
 ---
 # <a name="query-builder-report-wizard"></a>查询生成器（报表向导）
@@ -38,7 +38,7 @@ ms.locfileid: "66107999"
  在基于文本的查询设计器和图形查询设计器之间切换（如果二者都适用于该查询）。  
   
  **导入**  
- 打开“导入查询”对话框，显示任何可用报表的 .rdl 和 .sql 文件。 可以按原样使用导入的查询，也可以在查询生成器中进行修改。  
+ 打开“导入查询”  对话框，显示任何可用报表的 .rdl 和 .sql 文件。 可以按原样使用导入的查询，也可以在查询生成器中进行修改。  
   
  **运算符(Run)**  
  运行查询，并且在查询有效的情况下返回结果集。 请注意，如果查询是表达式，您将不能执行查询。 若要验证基于表达式的查询，您必须预览报表。  

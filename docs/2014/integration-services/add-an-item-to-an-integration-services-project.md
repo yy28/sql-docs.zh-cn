@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66b23e65542cd4f87818d6cc719dca59a9a4adec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062022"
 ---
 # <a name="add-an-item-to-an-integration-services-project"></a>向 Integration Services 项目添加项
@@ -31,11 +31,11 @@ ms.locfileid: "66062022"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开包含要添加项的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的解决方案。  
   
-2.  在解决方案资源管理器中，右键单击项目，指向“添加”，并执行下列操作之一：  
+2.  在解决方案资源管理器中，右键单击项目，指向“添加”  ，并执行下列操作之一：  
   
-    -   单击 **“新建项”**，然后从 **“添加新项”** 对话框的 **“模板”** 窗格中选择模板。  
+    -   单击 **“新建项”** ，然后从 **“添加新项”** 对话框的 **“模板”** 窗格中选择模板。  
   
-    -   单击 **“现有项”**，在 **“添加现有项”** 对话框中浏览，找到要添加到项目中的项，然后单击 **“添加”**。  
+    -   单击 **“现有项”** ，在 **“添加现有项”** 对话框中浏览，找到要添加到项目中的项，然后单击 **“添加”** 。  
   
 3.  新项即出现在解决方案资源管理器的相应文件夹中。  
   

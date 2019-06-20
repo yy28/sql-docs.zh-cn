@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107602"
 ---
 # <a name="start-report-builder-report-builder"></a>启动报表生成器（报表生成器）
@@ -38,7 +38,7 @@ ms.locfileid: "66107602"
   
 1.  在 Web 浏览器的地址栏中，键入报表服务器的 URL。 默认情况下，该 URL 为 http://\<*servername*>/reports。 报表管理器随之打开。  
   
-2.  单击 **“报表生成器”**。  
+2.  单击 **“报表生成器”** 。  
   
      报表生成器将打开，您随后可以在报表服务器上创建报表或打开报表。  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66107602"
   
 2.  打开库。  
   
-3.  单击 **“文档”**。  
+3.  单击 **“文档”** 。  
   
-4.  在 **“新建文档”** 菜单上，单击 **“报表生成器报表”**。  
+4.  在 **“新建文档”** 菜单上，单击 **“报表生成器报表”** 。  
   
      报表生成器将打开，您随后可以在报表服务器上创建报表或打开报表。  
   

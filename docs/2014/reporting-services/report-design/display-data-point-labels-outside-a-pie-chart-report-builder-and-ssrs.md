@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb726adbb523f679fd9d59e3e51b2dc1291e6247
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106051"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>在饼图外显示数据点标签（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "66106051"
   
 1.  向报表添加一个饼图。 有关详细信息，请参阅[向报表添加图表（报表生成器和 SSRS）](add-a-chart-to-a-report-report-builder-and-ssrs.md)。  
   
-2.  在设计图面上，右键单击图表并选择“显示数据标签”。  
+2.  在设计图面上，右键单击图表并选择“显示数据标签”  。  
   
 ### <a name="to-display-data-point-labels-outside-a-pie-chart"></a>在饼图外显示数据点标签  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66106051"
   
 1.  创建一个带有外部标签的饼图。  
   
-2.  在设计图面上，在饼图外部但在饼图边界之内右键单击，然后选择“图表区域属性”。随即将显示“图表区域属性”对话框。  
+2.  在设计图面上，在饼图外部但在饼图边界之内右键单击，然后选择“图表区域属性”  。随即将显示“图表区域属性”  对话框。  
   
-3.  在 **“三维选项”** 选项卡上，选择 **“启用三维”**。  
+3.  在 **“三维选项”** 选项卡上，选择 **“启用三维”** 。  
   
-4.  如果希望图表为标签留出更多空间但仍显示二维效果，则将“旋转”和“倾角”属性设置为“0”。  
+4.  如果希望图表为标签留出更多空间但仍显示二维效果，则将“旋转”  和“倾角”  属性设置为“0”  。  
   
 ## <a name="see-also"></a>请参阅  
  [饼图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   

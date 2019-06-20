@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6c9dea03a4b09ae4dcbe66e6712a542b1920ce0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181580"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
@@ -46,7 +46,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
   
  **ClosingPeriod**函数等同于下面的 MDX 语句：  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)`。  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)` 的用户。  
   
 > [!NOTE]  
 >  [OpeningPeriod](../mdx/openingperiod-mdx.md)函数是类似于**ClosingPeriod**函数，不同之处在于**OpeningPeriod**函数返回的第一个同级而不是最后一个同级。  

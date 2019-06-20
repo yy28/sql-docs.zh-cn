@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 ms.openlocfilehash: bb20f646179ec147e4bbca43689812cc39c5bf97
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945956"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
@@ -49,7 +49,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**object_id**|**int**|包含 XML 列的表 ID。|  
 |**index_id**|**int**|选择性 xml 索引的唯一 ID。|  
 |**path_id**|**int**|提升的 XML 路径 ID。|  
-|path|**nvarchar(4000)**|提升的路径。 例如，“/a/b/c/d/e”。|  
+|path |**nvarchar(4000)**|提升的路径。 例如，“/a/b/c/d/e”。|  
 |**名称**|**sysname**|路径名称。|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|基于**path_type**值 XQUERY 或 'SQL'。|  

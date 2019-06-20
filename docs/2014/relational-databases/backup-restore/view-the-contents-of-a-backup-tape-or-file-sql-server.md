@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfee2d0f32ffaaf73527effdeea13d43b83a39fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921225"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>查看备份磁带或文件的内容 (SQL Server)
@@ -56,15 +56,15 @@ ms.locfileid: "62921225"
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
+2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击要备的数据库，指向“任务”，再单击 “备份”。 将出现 **“备份数据库”** 对话框。  
+3.  右键单击要备的数据库，指向  “任务”，再单击  “备份”。 将出现 **“备份数据库”** 对话框。  
   
-4.  在 **“常规”** 页的 **“目标”** 部分中，单击 **“磁盘”** 或 **“磁带”**。 在 **“备份到”** 列表框中，查找所需的磁盘文件或磁带。  
+4.  在 **“常规”** 页的 **“目标”** 部分中，单击 **“磁盘”** 或 **“磁带”** 。 在 **“备份到”** 列表框中，查找所需的磁盘文件或磁带。  
   
-     如果磁盘文件或磁带未显示在列表框中，请单击“添加”。 选择一个文件名或磁带机。 若要将其添加到“备份到”列表框，请单击“确定”。  
+     如果磁盘文件或磁带未显示在列表框中，请单击  “添加”。 选择一个文件名或磁带机。 若要将其添加到  “备份到”列表框，请单击  “确定”。  
   
-5.  在“备份到”列表框中，选择要查看的磁盘或磁带机的路径，再单击“内容”。 将打开 **“设备内容”** 对话框。  
+5.  在  “备份到”列表框中，选择要查看的磁盘或磁带机的路径，再单击  “内容”。 将打开 **“设备内容”** 对话框。  
   
 6.  右侧窗格显示有关所选磁带或文件上的介质集和备份集的信息。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62921225"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  使用 [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) 语句。 此示例将返回有关名为 `AdventureWorks2012-FullBackup.bak`的文件的信息。  
   

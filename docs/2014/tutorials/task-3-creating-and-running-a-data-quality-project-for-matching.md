@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca7c735f00f4fa5c7baf102b26edb6634f57b90f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489232"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>任务 3：创建并运行数据质量项目以进行匹配
@@ -30,9 +30,9 @@ ms.locfileid: "65489232"
   
      ![新建数据质量项目-已选择匹配](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "新建数据质量项目-已选择匹配")  
   
-5.  单击“下一步” 。  
+5.  单击“下一步”  。  
   
-6.  在“映射”  页中，为“数据源”  选择“Excel 文件” 。  
+6.  在“映射”  页中，为“数据源”  选择“Excel 文件”  。  
   
 7.  单击**浏览**，然后选择**Cleansed Supplier List.xls**，这是从清理活动的输出文件。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "65489232"
 12. 单击**下一步**若要切换到**导出**页。  
   
 ## <a name="next-step"></a>下一步  
- [任务 4:将结果导出匹配到 Excel 文件的活动](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
+ [任务 4：将结果导出匹配到 Excel 文件的活动](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
   
   

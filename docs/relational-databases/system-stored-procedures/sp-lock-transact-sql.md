@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d917f71d7cf7a36bb5d2c50b0cddd7893102a7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960081"
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
@@ -52,7 +52,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- **Sp_lock**结果集包含由指定的会话保持每个锁的一行**@spid1**并**@spid2**参数。 如果既没有**@spid1**也不**@spid2**结果集将报告在锁定的所有会话的实例中当前处于活动状态的指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+ **Sp_lock**结果集包含由指定的会话保持每个锁的一行 **@spid1** 并 **@spid2** 参数。 如果既没有 **@spid1** 也不 **@spid2** 结果集将报告在锁定的所有会话的实例中当前处于活动状态的指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

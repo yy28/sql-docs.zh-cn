@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0f2731a89364dcf51f617c5490c0e46a16977ba2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099763"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>用于在报表服务器之间迁移内容的示例 Reporting Services rs.exe 脚本
@@ -74,7 +74,7 @@ ms.locfileid: "66099763"
   
 -   将内容从  服务器 B  
   
--   复制到 服务器 C  
+-   复制到  服务器 C  
   
 |服务器名称|报表服务器模式|  
 |-----------------|------------------------|  
@@ -90,7 +90,7 @@ ms.locfileid: "66099763"
 |项|是否迁移|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |密码|**是**|**是**|**不** 迁移密码。 在迁移内容项后，在目标服务器上更新凭据信息。 例如，具有已存储凭据的数据源。|  
-|我的报表|**是**|**是**|本机模式“我的报表”功能基于单个用户登录名，因此，对于使用 -u 参数以外的参数运行 rss 脚本的用户，脚本服务无权访问其“我的报表”文件夹中的内容。 此外，"我的报表"不是一项功能[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SharePoint 模式下和文件夹中的项不能复制到 SharePoint 环境。 因此，该脚本不复制源本机模式报表服务器上的"我的报表"文件夹中的报表项。 若要迁移此脚本使用"我的报表"文件夹中的内容，完成以下任务：<br /><br /> 1） 创建新文件夹在报表管理器。 或者，您可为每个用户创建文件夹或子文件夹。<br /><br /> 2） 为一个具有"我的报表"内容的用户的登录名。<br /><br /> 3） 在报表管理器中，单击**我的报表**文件夹。<br /><br /> 4） 单击**详细信息**文件夹视图。<br /><br /> 5） 选择要复制的每个报表。<br /><br /> 6） 单击**移动**报表管理器工具栏中。<br /><br /> 7） 选择所需的目标文件夹。<br /><br /> 8） 为每个用户重复步骤 2-7。<br /><br /> 9） 运行该脚本。|  
+|我的报表|**是**|**是**|本机模式“我的报表”功能基于单个用户登录名，因此，对于使用 -u 参数以外的参数运行 rss 脚本的用户，脚本服务无权访问其“我的报表”文件夹中的内容  。 此外，"我的报表"不是一项功能[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SharePoint 模式下和文件夹中的项不能复制到 SharePoint 环境。 因此，该脚本不复制源本机模式报表服务器上的"我的报表"文件夹中的报表项。 若要迁移此脚本使用"我的报表"文件夹中的内容，完成以下任务：<br /><br /> 1） 创建新文件夹在报表管理器。 或者，您可为每个用户创建文件夹或子文件夹。<br /><br /> 2） 为一个具有"我的报表"内容的用户的登录名。<br /><br /> 3） 在报表管理器中，单击**我的报表**文件夹。<br /><br /> 4） 单击**详细信息**文件夹视图。<br /><br /> 5） 选择要复制的每个报表。<br /><br /> 6） 单击**移动**报表管理器工具栏中。<br /><br /> 7） 选择所需的目标文件夹。<br /><br /> 8） 为每个用户重复步骤 2-7。<br /><br /> 9） 运行该脚本。|  
 |历史记录|**是**|**是**||  
 |历史记录设置|是|是|将迁移历史记录设置，但不迁移历史记录详细信息。|  
 |“计划”|是|是|若要迁移计划，在目标服务器上需运行 SQL Server 代理。 如果在目标服务器上未运行 SQL Server 代理，将会显示如下错误消息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
@@ -243,7 +243,7 @@ ms.locfileid: "66099763"
 |参数|Description|Required|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|源报表服务器的 URL|是|  
-|-u Domain\password -p password|源服务器的凭据。|可选，如果缺失则使用默认凭据|  
+|-u Domain\password -p password  |源服务器的凭据。|可选，如果缺失则使用默认凭据|  
 |**-v st**="SITE"||可选。 此参数仅用于 SharePoint 模式报表服务器。|  
 |**- v f**="SOURCEFOLDER"|设置为“/”将迁移所有内容，设置为“/folder/subfolder”之类的项将执行部分迁移。 将复制该文件夹内的所有内容|可选，默认为“/”。|  
 |**-v ts**="TARGET_URL"|目标 RS 服务器的 URL||  
@@ -268,7 +268,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_root"></a> 本机模式到 SharePoint 模式 - 根网站  
- 以下示例将内容从本机模式 SourceServer 迁移到 SharePoint 模式服务器 TargetServer 上的“根站点”。 本机模式服务器上的“报表”和“数据源”文件夹作为 SharePoint 部署上的新库迁移。  
+ 以下示例将内容从本机模式 SourceServer 迁移到 SharePoint 模式服务器 TargetServer 上的“根站点”   。 本机模式服务器上的“报表”和“数据源”文件夹作为 SharePoint 部署上的新库迁移。  
   
  ![ssrs_rss_migrate_root_site](../media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
@@ -335,21 +335,21 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
  **SharePoint 模式：**  
   
-1.  浏览至“站点设置” 。  
+1.  浏览至“站点设置”  。  
   
-2.  在 **Reporting Services** 组中，单击 **“管理共享计划”**。  
+2.  在 **Reporting Services** 组中，单击 **“管理共享计划”** 。  
   
 ### <a name="roles-and-groups"></a>角色和组  
  **Native Mode**  
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并且连接到您的本机模式报表服务器。  
   
-2.  在 **“对象资源管理器”** 中，单击 **“安全性”**。  
+2.  在 **“对象资源管理器”** 中，单击 **“安全性”** 。  
   
-3.  单击 **“角色”**。  
+3.  单击 **“角色”** 。  
   
 ##  <a name="bkmk_troubleshoot"></a> 故障排除  
- 使用跟踪标志“-t”可获得详细信息。 例如，如果您运行此脚本并看到如下消息  
+ 使用跟踪标志“-t”可获得详细信息  。 例如，如果您运行此脚本并看到如下消息  
   
 -   无法连接到服务器： http://\<servername>/ReportServer/ReportService2010.asmx  
   

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157496"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>并行数据仓库的 Grant T-SQL 的权限
@@ -245,7 +245,7 @@ GO
   
 若要创建管理员登录名，请参阅[固定服务器角色](pdw-permissions.md#fixed-server-roles)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  

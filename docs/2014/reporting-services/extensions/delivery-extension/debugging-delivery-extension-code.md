@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d289b3d4c4177ed885a3153bb758d0052286bec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164332"
 ---
 # <a name="debugging-delivery-extension-code"></a>调试传递扩展插件代码
@@ -34,15 +34,15 @@ ms.locfileid: "63164332"
   
 4.  导航到 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 和传递扩展插件项目，并在代码中设置一些断点。  
   
-5.  在传递扩展插件项目的窗口仍保持活动状态的同时，在“调试”菜单中单击“附加到进程”。  
+5.  在传递扩展插件项目的窗口仍保持活动状态的同时，在“调试”菜单中单击“附加到进程”   。  
   
-     “附加到进程”对话框会打开。  
+     “附加到进程”对话框会打开  。  
   
-6.  从进程列表中，选择 aspnet_wp.exe 进程（如果应用程序是在 IIS 6.0 中部署的，请选择 w3wp.exe），然后单击“附加”。  
+6.  从进程列表中，选择 aspnet_wp.exe 进程（如果应用程序是在 IIS 6.0 中部署的，请选择 w3wp.exe），然后单击“附加”  。  
   
 7.  使用传递扩展插件定义新订阅。 您最可能使用报表管理器或 SOAP API。 这将调用调试器并执行对应于断点的代码。  
   
-8.  使用 F11 键分步执行代码。 有关使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 进行调试的详细信息，请参阅 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 文档。  
+8.  使用 F11 键分步执行代码  。 有关使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 进行调试的详细信息，请参阅 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 文档。  
   
 ## <a name="see-also"></a>请参阅  
  [实现传递扩展插件](implementing-a-delivery-extension.md)   

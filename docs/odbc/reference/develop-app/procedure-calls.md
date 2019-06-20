@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63284579"
 ---
 # <a name="procedure-calls"></a>过程调用
 一个*过程*是数据源上存储的可执行对象。 通常，它是一个或更多的已经预编译的 SQL 语句。 调用过程的转义序列是  
   
- **{**[**？ =**]**调用** *过程名称*[**(**[*参数*] [**，**[*参数*]]...**)**]**}**  
+ **{** [ **？ =** ]**调用** *过程名称*[ **(** [*参数*] [ **，** [*参数*]]... **)** ] **}**  
   
  其中*过程名称*指定过程的名称和*参数*指定过程参数。  
   
