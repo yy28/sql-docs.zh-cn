@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 85e7c3a2-f2da-49bf-9d90-5fd246fd60e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ceb1b692c08e53945f3b621e09ab4d7d750289a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 91d9b9d3a50bf038e201ce0468f1da0e784c35b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766735"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66786619"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>executeUpdate 方法 (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>Parameters  
  *sql*  
   
- 一个**字符串**，其中包含 SQL 语句。  
+ 包含 SQL 语句的 String  。  
   
 ## <a name="return-value"></a>返回值  
- 一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0。  
+ 一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

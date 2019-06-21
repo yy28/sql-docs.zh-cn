@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a7d4fe32d7d1ac4be9a20923fc4d230ac64d1c8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ad7363db0cb1de986273e59d698e2f1b00d50deb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667805"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779094"
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,9 +36,9 @@ public final boolean getMoreResults(int mode)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- 模式  
+ 模式   
   
- 指示如何处理当前打开的结果集对象的 int。 必须是下列常量之一：  
+ 指示如何处理当前打开的结果集对象的 int  。 必须是下列常量之一：  
   
  CLOSE_CURRENT_RESULT  
   
@@ -47,7 +47,7 @@ public final boolean getMoreResults(int mode)
  CLOSE_ALL_RESULTS  
   
 ## <a name="return-value"></a>返回值  
- 如果返回的结果为一个结果集，则为 true。 否则为 **false**。  
+ 如果返回的结果为一个结果集，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -55,7 +55,7 @@ public final boolean getMoreResults(int mode)
 ## <a name="remarks"></a>Remarks  
  此 getMoreResults 方法由 java.sql.Statement 接口中的 getMoreResults 方法指定。  
   
- 如果在检索结果前调用 getMoreResults 方法，则该方法就会采用 mode 参数指定的行为方式并移动到下一个结果。  
+ 如果在检索结果前调用 getMoreResults 方法，则该方法就会采用 mode  参数指定的行为方式并移动到下一个结果。  
   
 > [!NOTE]  
 >  JDBC 驱动程序不支持使用 KEEP_CURRENT_RESULT 常量。 如果使用该常量，将引发异常。  

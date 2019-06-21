@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 16f5f09a-51b5-423a-b52d-8c2eaa04e9ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c40eeddf554cf26bf4de4e7bfb3348636d253fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: aa535d31edb1d6f94bd06f41eaffda5f1970841a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666111"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66788243"
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int-int"></a>setObject 方法 (java.lang.String, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,21 +39,21 @@ public void setObject(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCol*  
+ sCol   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
  *o*  
   
- Object 值。  
+ Object 值  。  
   
  *n*  
   
- 一个 int 值，此值指示 java.sql.Types 中定义的目标类型。  
+ 一个 int 值，此值指示 java.sql.Types 中定义的目标类型  。  
   
  *m*  
   
- 指示小数点右边的位数的 int。 对于除 NUMERIC 和 DECIMAL 外的其他类型，忽略此参数。  
+ 指示小数点右边的位数的 int  。 对于除 NUMERIC 和 DECIMAL 外的其他类型，忽略此参数。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

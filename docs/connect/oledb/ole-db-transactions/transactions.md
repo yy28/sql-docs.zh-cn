@@ -1,6 +1,6 @@
 ---
 title: 事务 |Microsoft Docs
-description: SQL Server 的 OLE DB 驱动程序中的事务
+description: OLE DB Driver for SQL Server 中的事务
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 30508460614d89b8b291bf4f978f2c0b4f8bc0ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0c5fc4c691902415455b2d8139b34cc39438f96d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619005"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795964"
 ---
 # <a name="transactions"></a>中的
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47619005"
   
  默认情况下，适用于 SQL Server 的 OLE DB 驱动程序使用自动提交事务模式，其中对使用者会话执行的每次离散操作均包含一个针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的完整事务。 适用于 SQL Server 的 OLE DB 驱动程序的自动提交模式是本地的，并且自动提交事务从不会跨多个会话。  
   
- 适用于 SQL Server 的 OLE DB 驱动程序公开 ITransactionLocal 接口，并允许使用者在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的单个连接上使用显式和隐式启动事务。 SQL Server 的 OLE DB 驱动程序不支持嵌套本地事务。  
+ 适用于 SQL Server 的 OLE DB 驱动程序公开 ITransactionLocal 接口，并允许使用者在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的单个连接上使用显式和隐式启动事务  。 SQL Server 的 OLE DB 驱动程序不支持嵌套本地事务。  
   
 ## <a name="in-this-section"></a>本节内容  
   

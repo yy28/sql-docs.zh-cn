@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_field_metadata |Microsoft Docs
+title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c030a6a3d2ba5caad755abfd92a5cf1adb01cc25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5a582a95223fd47863a6e42b8426ccfb13fcda59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748505"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796082"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-检索已准备语句的字段的元数据。 有关准备语句的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。 请注意，无论在执行前还是执行后，都可以在任何已准备的语句上调用 sqlsrv_field_metadata。  
+检索已准备语句的字段的元数据。 有关准备语句的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。 请注意，无论在执行前还是执行后，都可以在任何已准备的语句上调用 sqlsrv_field_metadata  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,16 +49,16 @@ sqlsrv_field_metadata( resource $stmt)
 |Size|字符类型（char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML）的字段的字符数。 二进制类型（binary(n)、varbinary(n)、UDT）的字段的字节数。 **NULL** 用于其他 SQL Server 数据类型。|  
 |精度|变量精度类型（real、numeric、decimal、datetime2、datetimeoffset 和 time）的精度。 **NULL** 用于其他 SQL Server 数据类型。|  
 |小数位数|变量小数位数类型（numeric、decimal、datetime2、datetimeoffset 和 time）的小数位数。 **NULL** 用于其他 SQL Server 数据类型。|  
-|可以为 Null|指示列可以为 null (SQLSRV_NULLABLE_YES)、不可为 null (SQLSRV_NULLABLE_NO) 还是未知列是否可以为 null (SQLSRV_NULLABLE_UNKNOWN) 的枚举值。|  
+|可以为 Null|指示列可以为 null (SQLSRV_NULLABLE_YES)、不可为 null (SQLSRV_NULLABLE_NO) 还是未知列是否可以为 null (SQLSRV_NULLABLE_UNKNOWN) 的枚举值    。|  
   
 下表提供有关每个子数组的键的详细信息（有关这些类型的详细信息，请参阅 SQL Server 文档）：  
   
 |SQL Server 2008 数据类型|类型|最小/最大精度|最小/最大小数位数|Size|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |BIGINT|SQL_BIGINT (-5)|||8|  
-|BINARY|SQL_BINARY (-2)|||0 < n < 8000 <sup>1</sup>|  
+|BINARY|SQL_BINARY (-2)||| 0 < n < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
-|char|SQL_CHAR (1)|||0 < n < 8000 <sup>1</sup>|  
+|char|SQL_CHAR (1)||| 0 < n < 8000 <sup>1</sup>|  
 |日期|SQL_TYPE_DATE (91)|10/10|0/0||  
 |DATETIME|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
@@ -68,10 +68,10 @@ sqlsrv_field_metadata( resource $stmt)
 |图像|SQL_LONGVARBINARY (-4)|||2 GB|  
 |ssNoversion|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
-|NCHAR|SQL_WCHAR (-8)|||0 < n < 4000 <sup>1</sup>|  
+|NCHAR|SQL_WCHAR (-8)||| 0 < n < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR (-10)|||1 GB|  
 |NUMERIC|SQL_NUMERIC (2)|1/38|0/精度值||  
-|NVARCHAR|SQL_WVARCHAR (-9)|||0 < n < 4000 <sup>1</sup>|  
+|NVARCHAR|SQL_WVARCHAR (-9)||| 0 < n < 4000 <sup>1</sup>|  
 |REAL|SQL_REAL (7)|4/4|||  
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
 |SMALLINT|SQL_SMALLINT (5)|||2 字节|  
@@ -79,11 +79,11 @@ sqlsrv_field_metadata( resource $stmt)
 |text|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |TIMESTAMP|SQL_BINARY (-2)|||8 字节|  
-|tinyint|SQL_TINYINT (-6)|||1 字节|  
+|TINYINT|SQL_TINYINT (-6)|||1 字节|  
 |udt|SQL_SS_UDT (-151)|||变量|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
-|varbinary|SQL_VARBINARY (-3)|||0 < n < 8000 <sup>1</sup>|  
-|varchar|SQL_VARCHAR (12)|||0 < n < 8000 <sup>1</sup>|  
+|varbinary|SQL_VARBINARY (-3)||| 0 < n < 8000 <sup>1</sup>|  
+|varchar|SQL_VARCHAR (12)||| 0 < n < 8000 <sup>1</sup>|  
 |xml|SQL_SS_XML (-152)|||0|  
   
 (1) 零 (0) 指示允许最大大小。  

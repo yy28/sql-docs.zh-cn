@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_free_stmt |Microsoft Docs
+title: sqlsrv_free_stmt | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7188935f0466a58c444f72e02ce541a646e1b41f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fe1471d41bf7b510c52f584b538fde03d6c0c084
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610738"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802808"
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_free_stmt( resource $stmt)
 除非使用无效参数调用该函数，否则布尔值为 **true** 。 如果使用无效参数调用该函数，将返回 **False** 。  
   
 > [!NOTE]  
-> 对于此函数，**Null** 是有效参数。 这允许在脚本中调用该函数多次。 例如，当在错误条件中释放某个语句，并且在脚本结尾再次释放时，第二次对 sqlsrv_free_stmt 的调用将返回 true，因为第一次对 sqlsrv_free_stmt 的调用（在错误条件中）将语句资源设置为 null。  
+> 对于此函数，**Null** 是有效参数。 这允许在脚本中调用该函数多次。 例如，当在错误条件中释放某个语句，并且在脚本结尾再次释放时，第二次对 sqlsrv_free_stmt 的调用将返回 true，因为第一次对 sqlsrv_free_stmt 的调用（在错误条件中）将语句资源设置为 null     。  
   
 ## <a name="example"></a>示例  
 以下示例创建某个语句资源、执行一次简单的查询，并调用 **sqlsrv_free_stmt** 来释放与该语句相关联的所有资源。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  

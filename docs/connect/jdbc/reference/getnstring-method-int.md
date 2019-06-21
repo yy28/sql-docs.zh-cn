@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8346dd85925e52e9f24feef734612174a2cd4bb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 03a11c4479ac860e84009fcd528d932098bdc661
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672415"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784350"
 ---
 # <a name="getnstring-method-int"></a>getNString 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索指定的值**NCHAR**， **NVARCHAR**，或**LONGNVARCHAR**参数作为 Java 编程语言的字符串。  
+  将指定 NCHAR  、NVARCHAR  或 LONGNVARCHAR  参数的值作为 Java 编程语言中的 String 进行检索。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,9 +31,9 @@ public final java.lang.String getNString(int parameterIndex)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *parameterIndex*  
+ parameterIndex   
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
  AStringobject。  

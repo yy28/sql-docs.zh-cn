@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40ca58f33dec39a1ec6d39979c7f6f0103acf8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682715"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66788630"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.sql.ResultSet getTypeInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getTypeInfo 方法由 java.sql.DatabaseMetaData 接口中的 getTypeInfo 方法指定。  
+ 此 getTypeInfo 方法是由 java.sql.DatabaseMetaData 接口中的 getTypeInfo 方法指定的。  
   
  由 getTypeInfo 方法返回的结果集将包含以下信息：  
   
@@ -55,11 +55,11 @@ public java.sql.ResultSet getTypeInfo()
 |LITERAL_SUFFIX|**String**|用于终止常量的一个或多个字符。|  
 |CREATE_PARAMS|**String**|此数据类型的创建参数说明。|  
 |NULLABLE|**short**|指示列能否包含 Null 值。 可以为下列值之一：<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
-|CASE_SENSITIVE|**boolean**|指示数据类型是否区分大小写。 如果类型区分大小写，则为“true”；否则为“false”。|  
+|CASE_SENSITIVE|**boolean**|指示数据类型是否区分大小写。 如果类型区分大小写，则为“true”；否则为“false”   。|  
 |SEARCHABLE|**short**|指示是否可在 SQL WHERE 子句中使用此列。 可以为下列值之一：<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
-|UNSIGNED_ATTRIBUTE|**boolean**|指示数据类型的符号。 如果类型未签名，则为“true”；否则为“false”。|  
-|FIXED_PREC_SCALE|**boolean**|指示数据类型可以为 money 值。 如果数据类型为 money 类型，则为“true”；否则为“false”。|  
-|AUTO_INCREMENT|**boolean**|指示数据类型可以自动递增。 如果类型可以自动递增，则为“true”；否则为“false”。|  
+|UNSIGNED_ATTRIBUTE|**boolean**|指示数据类型的符号。 如果类型未签名，则为“true”；否则为“false”   。|  
+|FIXED_PREC_SCALE|**boolean**|指示数据类型可以为 money 值。 如果数据类型为 money 类型，则为“true”；否则为“false”   。|  
+|AUTO_INCREMENT|**boolean**|指示数据类型可以自动递增。 如果类型可以自动递增，则为“true”；否则为“false”   。|  
 |LOCAL_TYPE_NAME|**String**|数据类型的本地化名称。|  
 |MINIMUM_SCALE|**short**|小数点右边的最大位数。|  
 |MAXIMUM_SCALE|**short**|小数点右边的最小位数。|  
@@ -67,7 +67,7 @@ public java.sql.ResultSet getTypeInfo()
 |SQL_DATETIME_SUB|**int**|JDBC 驱动程序不支持此类型。|  
 |NUM_PREC_RADIX|**int**|计算某列最大容纳数时所采用的位数或数字个数。|  
 |INTERVAL_PRECISION|**smallint**|间隔起始精度的值。|  
-|USERTYPE|**smallint**|来自 systypes 表的 usertype 值。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书。|  
+|USERTYPE|**smallint**|来自 systypes 表的 usertype 值   。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书。|  
   
 > [!NOTE]  
 >  有关 getTypeInfo 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_datatype_info (Transact-SQL)”。  

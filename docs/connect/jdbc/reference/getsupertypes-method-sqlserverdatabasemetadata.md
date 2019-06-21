@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5b8e78e6-2bb0-4dc7-9c77-a5609654cb05
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f50bfa76bcac217bf89c7047f2803301f314ded3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45d1b81a18d953bcf3df8ff142535204e648edbb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830707"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787462"
 ---
 # <a name="getsupertypes-method-sqlserverdatabasemetadata"></a>getSuperTypes 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,15 +43,15 @@ public java.sql.ResultSet getSuperTypes(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 一个包含目录名称的字符串。  
+ 一个包含目录名称的字符串  。  
   
- *schemaPattern*  
+ schemaPattern   
   
- 一个包含架构名称模式的字符串。  
+ 一个包含架构名称模式的字符串  。  
   
  *tableNamePattern*  
   
- 一个包含表名称模式的字符串。  
+ 一个包含表名称模式的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  

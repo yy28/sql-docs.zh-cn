@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0cbe71d1ff4d19da3baba87210a1444e83d4f98e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6cdfd42d0670d8d536e0a9bf40f2a6981ef5b937
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633767"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796360"
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>isSameRM 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +36,12 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *xares*  
+ xares   
   
  一个 XAResource 的对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果两个实例相同，则为 true。 否则为 **false**。  
+ 如果两个实例相同，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  javax.transaction.xa.XAException  

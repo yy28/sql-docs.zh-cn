@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5b839d3f-5a4e-43da-b93c-dc9e0f6d4b3b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5469eb85d3397aff2fa437a8d753c30c4b8641d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5d060f7ca8be70a27e4eca0a3a4cf2ec07b36671
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625135"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800089"
 ---
 # <a name="getarray-method-int"></a>getArray 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public java.sql.Array getArray(int i)
 #### <a name="parameters"></a>Parameters  
  *i*  
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个数组对象。  
+ Array 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

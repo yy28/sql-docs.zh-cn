@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66770270"
 ---
 # <a name="building-the-connection-url"></a>创建连接 URL
@@ -97,14 +97,14 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  sqljdbc_auth.dll 文件的安装位置如下：  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
+ \<安装目录  >\sqljdbc_\<版本  >\\<语言  >\auth\  
   
  有关受支持的任何操作系统[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)中新增功能的说明[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]的允许连接到应用程序使用和类型 4 Kerberos 集成身份验证的数据库。  
   
 > [!NOTE]  
 >  如果您运行 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 sqljdbc_auth.dll 文件，即使操作系统是 x64 版本也不例外。 如果您在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 sqljdbc_auth.dll 文件。  
   
- 也可以设置 java.libary.path 系统属性以指定 sqljdbc_auth.dll 的目录。 例如，如果 JDBC 驱动程序安装在默认目录中，您可以在 Java 应用程序启动时使用以下虚拟机 (VM) 参数来指定 DLL 的位置：  
+ 也可以设置 java.library.path 系统属性来指定 sqljdbc_auth.dll 的目录。 例如，如果 JDBC 驱动程序安装在默认目录中，您可以在 Java 应用程序启动时使用以下虚拟机 (VM) 参数来指定 DLL 的位置：  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

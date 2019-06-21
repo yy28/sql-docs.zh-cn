@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3da1afcd34e530b96a9be091c3f5ffe3aa247f48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783175"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800249"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
 
@@ -34,7 +34,7 @@ Microsoft Drivers for PHP for SQL Server 启用与 SQL Server 的 PHP 应用程�
 * [入门](getting-started-with-the-php-sql-driver.md)
 * [概述](overview-of-the-php-sql-driver.md)
 * [编程指南](programming-guide-for-php-sql-driver.md) 
-* [安全注意事项](security-considerations-for-php-sql-driver.md)
+* [需要考虑的安全性因素](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>社区  
 * [Microsoft Drivers for PHP for SQL Server 的支持资源](support-resources-for-the-php-sql-driver.md)
@@ -43,7 +43,7 @@ Microsoft Drivers for PHP for SQL Server 启用与 SQL Server 的 PHP 应用程�
 * ![下载向下箭头线圈出](../../ssdt/media/download.png)[若要下载驱动程序 for PHP for SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>示例  
-* [Microsoft Drivers for PHP for SQL Server 的代码示例](code-samples-for-php-sql-driver.md)
+* [Microsoft Driver for PHP for SQL Server 代码示例](code-samples-for-php-sql-driver.md)
 * [开始使用 Windows 上的 PHP](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [MacOS 上开始使用 PHP](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [在 Ubuntu 上与 PHP 入门](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

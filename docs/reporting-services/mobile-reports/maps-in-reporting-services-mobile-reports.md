@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294775"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62683704"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 地图是实现地理数据可视化效果的好办法。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三种不同类型的地图可视化，并且内置了各个洲和不同国家/地区的地图。 你也可以 [上载和使用自定义地图](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
@@ -34,13 +34,13 @@ SQL Server 移动报表提供了三种不同类型的地图，分别适用于不
   
 1. 在“布局”  选项卡中选择一个地图类型，将其拖到设计图面，并将其大小调整为你所需的大小。  
   
-2. 在“布局”视图>“视觉属性”面板>“地图”中，选择你所需的特定地图区域。  
+2. 依次转到“布局”  视图、“视觉对象属性”  面板和“地图”  ，选择需要的特定地图区域。  
   
    ![SSMRP_SelectMap](../../reporting-services/mobile-reports/media/ssmrp-selectmaps.png)  
   
-3. 对于辐射热度地图和区域停止点热度地图，请在“视觉属性”下方的“值方向”框中设置更高值还是更低值较好。  
+3. 对于辐射热度地图和区域停止点热度地图，请在“视觉属性”下方的“值方向”框中设置更高值还是更低值较好。    
   
-7. 对于气泡图，请在“视觉属性”下方将“使用不同颜色”设置为“开”或“关”，以便将气泡颜色设置为同一颜色或者是各不相同的颜色。  
+7. 对于气泡图，请在“视觉属性”下方将“使用不同颜色”设置为“开”或“关”，以便将气泡颜色设置为同一颜色或者是各不相同的颜色。      
   
 ## <a name="select-the-map-data"></a>选择地图数据  
 当第一次将地图添加到报表时， [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 使用模拟地理数据填充该地图。  
@@ -56,14 +56,14 @@ SQL Server 移动报表提供了三种不同类型的地图，分别适用于不
   
 1. 在左上角选择“数据”  选项卡。  
   
-2. 选择“添加数据”，然后选择“本地 Excel”或“SSRS 服务器”。  
+2. 选择“添加数据”，然后选择“本地 Excel”或“SSRS 服务器”    。  
   
-   > **提示**：请确保[数据格式适用于移动报表](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
+   > **提示**：请确保 [数据的格式为可用于移动报表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
   
-3. 选择需要的工作表，并选择“导入” 。  
+3. 选择需要的工作表，并选择“导入”  。  
    你可以在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中看到你的数据。  
   
-4. 在“数据”视图 >“数据属性”面板 >“键”下面，在左侧的框中选择包含地图数据的表，然后在右侧的框中选择与你的地图中的区域相匹配的键字段。  
+4. 依次转到“数据”  视图、“数据属性”  面板和“键”  下面，在左侧的框中选择包含地图数据的表，并在右侧的框中选择与地图中区域匹配的键字段。  
   
 5. 在“值”的下方，相同的表已在左侧框中。  选择要在地图上显示其值的数值字段。   
   
@@ -75,7 +75,7 @@ SQL Server 移动报表提供了三种不同类型的地图，分别适用于不
   
    ![SSMRP_MapRangeHeatPreview](../../reporting-services/mobile-reports/media/ssmrp-maprangeheatpreview.png)  
      
-8. 在左上角选择“保存”图标，然后选择“保存在本地”或“保存到服务器”。  
+8. 在左上角选择“保存”图标，然后选择“保存在本地”  或“保存到服务器”   。  
   
 ### <a name="see-also"></a>另请参阅  
 -  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  

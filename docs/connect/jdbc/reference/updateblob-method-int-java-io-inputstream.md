@@ -1,5 +1,5 @@
 ---
-title: updateBlob 方法 （int，java.io.InputStream） |Microsoft Docs
+title: updateBlob 方法 (int, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d0263018-d326-4a7b-bf6f-5f508db899d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be97300d01a5f5ce7106f4225c30319ee0f42de7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 444c7f6c3f1a657ae8b5531f60359078032a7128
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642095"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787249"
 ---
 # <a name="updateblob-method-int-javaioinputstream"></a>updateBlob 方法 (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,9 +32,9 @@ public void updateBlob(int columnIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
  *inputStream*  
   

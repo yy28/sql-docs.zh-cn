@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_cancel |Microsoft Docs
+title: sqlsrv_cancel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad06888895e863760cfde3589475a230e33f9a06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6c5b4c9120eca9ed37dd1e7824c630c72ee91313
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615255"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797021"
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_cancel( resource $stmt)
 布尔值：如果操作成功，则为 **true** 。 否则为 **false**。  
   
 ## <a name="example"></a>示例  
-下面的示例面向 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库来执行查询，随后在变量 $salesTotal 达到指定数值后，使用结果并对结果进行计数。 之后将丢弃其余的查询结果。 该示例假定已在本地计算机上安装了 SQL Server 和 AdventureWorks 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
+下面的示例面向 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库来执行查询，随后在变量 *$salesTotal* 达到指定数值后，使用结果并对结果进行计数。 之后将丢弃其余的查询结果。 该示例假定已在本地计算机上安装了 SQL Server 和 AdventureWorks 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -93,7 +93,7 @@ sqlsrv_cancel( $stmt);
 ```  
   
 ## <a name="comments"></a>注释  
-使用 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 和 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 组合准备和执行的语句可在调用 sqlsrv_cancel 后通过 sqlsrv_execute 重新执行。 使用 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 执行的语句无法在调用 sqlsrv_cancel 后重新执行。  
+使用 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 和 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 组合准备和执行的语句可在调用 sqlsrv_cancel 后通过 sqlsrv_execute 重新执行   。 使用 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 执行的语句无法在调用 sqlsrv_cancel 后重新执行  。  
   
 ## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)

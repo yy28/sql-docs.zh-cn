@@ -1,20 +1,20 @@
 ---
-title: Reporting Services 报表服务器 | Microsoft Docs
-ms.date: 09/25/2017
+title: 比较本机模式和 SharePoint 的 Reporting Services 报表服务器 |Microsoft Docs
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c432132f856d8c83b98f718351e1ef78be98360d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580574"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67038017"
 ---
-# <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
+# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>比较本机模式和 SharePoint 的 Reporting Services 报表服务器
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -52,7 +52,7 @@ Reporting Services 报表服务器在以下两种部署模式之一下运行：�
 |**URL 寻址**|是|在 SharePoint 集成模式下，URL 寻址方式有所不同。 使用 SharePoint URL 引用报表、报表模型、共享数据源和资源。 不使用报表服务器的文件夹层次结构。 如果您的自定义应用程序依赖于本机模式的报表服务器上支持的 URL 访问，则将报表服务器配置为 SharePoint 集成模式时，该功能将不再有效。<br /><br /> 有关 URL 访问的详细信息，请参阅 [URL 访问参数引用](../../reporting-services/url-access-parameter-reference.md)。|  
 |**自定义安全扩展插件**|是|不能在报表服务器上部署或使用 Reporting Services 自定义安全扩展插件。 报表服务器包括一个特殊用途的安全扩展插件，只要将报表服务器配置为以 SharePoint 集成模式运行，便会使用此插件。 该安全扩展插件是一个内部组件，并且是执行集成操作所必需的组件。|  
 |**配置管理器**|是|**\*\* 重要提示 \*\*** 配置管理器不能用于管理 SharePoint 模式报表服务器。 而是使用 SharePoint 管理中心。|  
-|**报表管理器**|是|配置管理器不能用于管理 SharePoint 模式。 请使用 SharePoint 应用程序页。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。|  
+|**Web 门户**|是|不能管理 web 门户中的 SharePoint 模式。 请使用 SharePoint 应用程序页。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。|  
 |**链接报表**|是|否。|  
 |**我的报表**|是|否|  
 |**我的订阅** 和批处理方法。|是|否|  
@@ -132,14 +132,12 @@ Reporting Services 报表服务器在以下两种部署模式之一下运行：�
   
 ## <a name="related-tasks"></a>相关任务
 
- 以下主题提供了有关安装、使用和维护报表服务器的其他信息：  
+ 下面的几篇文章提供了有关如何安装、使用和维护报表服务器的其他信息：  
   
 |任务|链接|  
 |----------|----------|  
 |查看硬件和软件要求。|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)列中的一个值匹配。|  
 |在 SharePoint 模式中安装 Reporting Services。|[安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|如果您是 Web 开发人员或具备创建级联样式表的专业知识，则可以修改默认样式，以更改工具栏或报表管理器的颜色、字体和布局，但需自行承担相应的风险。 此版本中既没有记录默认样式表，也没有记录修改样式表的说明。|[自定义 HTML 查看器和报表管理器的样式表](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
-|熟悉 HTML 样式和级联样式表 (CSS) 的 Web 开发人员可以使用本主题中的信息来确定可以对哪些文件进行修改，从而自定义报表管理器的外观。|[配置 Web 门户以传递自定义身份验证 Cookie](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |说明如何为报表服务器 Web 服务和 Windows 服务优化内存设置。|[为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |说明为远程管理配置报表服务器的建议步骤。|[配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |提供有关在本机报表服务器实例上配置 **“我的报表”** 的可用性的说明。|[启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

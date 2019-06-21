@@ -15,13 +15,13 @@ helpviewer_keywords:
 - bulk copy [OLE DB], about bulk copy
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: f9599b4e35cf54a14c04bf4675b61f962e9d0fb9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1e4581d06d04727133f5a48f5b663a4b689755f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211096"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66786002"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad (OLE DB) 大容量复制数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "53211096"
   
  使用者通知其对大容量复制的 OLE DB 驱动程序为 SQL Server 驱动程序特定属性 SSPROP_ENABLEFASTLOAD 设置为 variant_true，则需要的 SQL Server 的 OLE DB 驱动程序。 通过对数据源设置该属性，使用者为 SQL Server 会话创建一个 OLE DB 驱动程序。 新会话允许的使用者访问权限**IRowsetFastLoad**。  
   
- 可以参考完整示例，该示例演示了使用 IRowsetFastLoad 将记录大容量复制到表中的过程。 在此示例中，将 10 条记录添加到表 IRFLTable 中。 需要在数据库中创建表 IRFLTable。  
+ 可以参考完整示例，该示例演示了使用 IRowsetFastLoad 将记录大容量复制到表中的过程  。 在此示例中，将 10 条记录添加到表 IRFLTable 中  。 需要在数据库中创建表 IRFLTable  。  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "53211096"
   
 1.  建立与数据源的连接。  
   
-2.  将 SQL Server 驱动程序特定的数据源属性 ssprop_enablefastload 设置为，OLE DB 驱动程序设置为 VARIANT_TRUE。 通过将该属性设置为 VARIANT_TRUE，新创建的会话将允许使用者访问 IRowsetFastLoad。  
+2.  将 SQL Server 驱动程序特定的数据源属性 ssprop_enablefastload 设置为，OLE DB 驱动程序设置为 VARIANT_TRUE。 通过将该属性设置为 VARIANT_TRUE，新创建的会话将允许使用者访问 IRowsetFastLoad  。  
   
 3.  创建会话请求**IOpenRowset**接口。  
   
-4.  调用 IOpenRowset::OpenRowset 以打开包括表（将使用大容量复制操作复制其中数据）中所有行的行集。  
+4.  调用 IOpenRowset::OpenRowset 以打开包括表（将使用大容量复制操作复制其中数据）中所有行的行集  。  
   
 5.  执行需要的绑定和创建取值函数使用**iaccessor:: Createaccessor**。  
   

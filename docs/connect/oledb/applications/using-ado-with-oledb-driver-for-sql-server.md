@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778052"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>结合使用 ADO 和适用于 SQL Server 的 OLE DB 驱动程序
@@ -42,7 +42,7 @@ ms.locfileid: "66778052"
 
 -   `DataTypeCompatibility=80`  
 
- 有关适用于 SQL Server 的 OLE DB 驱动程序中连接字符串关键字的详细信息，请参阅[结合使用连接字符串关键字与适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
+ 若要详细了解 OLE DB Driver for SQL Server 支持的 ADO 连接字符串关键字，请参阅[结合使用连接字符串关键字与 OLE DB Driver for SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
 
  下例创建了一个 ADO 连接字符串，它完全启用以结合适用于 SQL Server 的 OLE DB 驱动程序一起使用，包括启用 MARS 功能：  
 

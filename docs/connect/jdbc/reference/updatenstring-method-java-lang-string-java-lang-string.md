@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: a6451896913876c3694a72e877c449109c61ac0b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66776683"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString 方法 (java.lang.String, java.lang.String)
@@ -32,11 +32,11 @@ public void updateNString(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *columnLabel*  
+ columnLabel   
   
  一个包含列标签的字符串  。  
   
- *nString*  
+ nString   
   
  一个**字符串**对象。  
   

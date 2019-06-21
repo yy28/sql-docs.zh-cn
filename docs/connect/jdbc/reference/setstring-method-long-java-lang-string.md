@@ -1,5 +1,5 @@
 ---
-title: setString 方法 (long, java.lang.String, int, int) | Microsoft Docs
+title: setString 方法 (long, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b23c0c5de87fc5df557d5d02958a72eaa336f8fb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66771666"
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString 方法 (long, java.lang.String)
@@ -37,7 +37,7 @@ public int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *pos*  
+ pos   
   
  开始写入 CLOB 的位置。  
   
@@ -52,7 +52,7 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 此 setString 方法是由 java.sql.CallableStatement 接口中的 setString 方法指定的。  
+ 此 setString 方法是由 java.sql.Clob 接口中的 setString 方法指定的。  
   
  从指定位置开始覆盖字符数据，并可以超过 CLOB 的初始长度。 指定“位置+1”值将追加到字符串末尾。 指定“位置+2”或更大值（或零或更小值）会引发位置错误。  
   

@@ -1,5 +1,5 @@
 ---
-title: afterLast 方法 (SQLServerResultSet) |Microsoft Docs
+title: afterLast 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cecaaa96-b07e-4038-a760-33164b283e42
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c3041b9e70c34d25fde4f8c0b461b864c572f6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 717b8788f29d226c3c5cef1bbd86b08af12d5d99
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830795"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803708"
 ---
 # <a name="afterlast-method-sqlserverresultset"></a>afterLast 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public void afterLast()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 afterLast 方法由 java.sql.ResultSet 接口中的 afterLast 方法指定。  
+ 此 afterLast 方法是由 java.sql.ResultSet 接口中的 afterLast 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

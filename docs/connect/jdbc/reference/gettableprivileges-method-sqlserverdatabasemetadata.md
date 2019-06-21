@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdea6926543bd95fa66c4b73a48736a3b685859e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 26c1630042b4f33230f37ec979de7bfa643b283b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802611"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,15 +40,15 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 一个包含目录名称的字符串。 对此参数提供 Null 值指示无需使用目录名称。  
+ 一个包含目录名称的字符串  。 对此参数提供 Null 值指示无需使用目录名称。  
   
  *schema*  
   
- 一个包含架构名称模式的字符串。 对此参数提供 Null 值指示无需使用架构名称。  
+ 一个包含架构名称模式的字符串  。 对此参数提供 Null 值指示无需使用架构名称。  
   
  *table*  
   
- 一个包含表名称模式的字符串。  
+ 一个包含表名称模式的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
@@ -57,7 +57,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getTablePrivileges 方法由 java.sql.DatabaseMetaData 接口中的 getTablePrivileges 方法指定。  
+ 此 getTablePrivileges 方法是由 java.sql.DatabaseMetaData 接口中的 getTablePrivileges 方法指定的。  
   
  由 getTablePrivileges 方法返回的结果集将包含以下信息：  
   

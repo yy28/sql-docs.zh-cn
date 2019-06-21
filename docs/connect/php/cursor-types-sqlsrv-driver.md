@@ -1,5 +1,5 @@
 ---
-title: 游标类型 （SQLSRV 驱动程序） |Microsoft Docs
+title: 游标类型（SQLSRV 驱动程序）| Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676135"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801488"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>游标类型（SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,9 +122,9 @@ sqlsrv_close( $conn );
 ## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>客户端游标和 SQLSRV 驱动程序  
 客户端游标是一项功能的版本 3.0 中添加[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，可用于缓存整个结果集在内存中。 使用客户端游标时执行查询后，可以提供行计数。  
   
-对于小型到中型的结果集，应使用客户端游标。 对于大型结果集使用服务器端游标。  
+客户端游标应用于中小型结果集。 对于大型结果集使用服务器端游标。  
   
-查询将返回 false，如果缓冲区足以容纳整个结果集。 可以增加缓冲区大小最大为 PHP 内存限制。  
+查询将返回 false，如果缓冲区足以容纳整个结果集。 可以将缓冲区大小增加到 PHP 内存限制。  
   
 使用 SQLSRV 驱动程序，可以配置用于保留结果集的 ClientBufferMaxKBSize 设置的缓冲区的大小[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)。 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)返回 ClientBufferMaxKBSize 的值。 此外可以在 php.ini 文件中使用 sqlsrv 设置最大缓冲区大小。ClientBufferMaxKBSize (例如，sqlsrv。ClientBufferMaxKBSize = 1024年)。  
   

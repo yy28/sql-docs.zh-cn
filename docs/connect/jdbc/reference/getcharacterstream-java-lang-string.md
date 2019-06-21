@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream (java.lang.String) |Microsoft Docs
+title: getCharacterStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5281e1b8-19b8-4fe5-83be-929d1987e25d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 578e20f8d76e43411ab4dc376073d4ade17636c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0a6712bc8bed19ea373bfc7202cbcac6a11205e0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687125"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800095"
 ---
 # <a name="getcharacterstream-javalangstring"></a>getCharacterStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +36,12 @@ public final java.io.Reader getCharacterStream(java.lang.String paramName)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- paramName  
+ paramName   
   
- 指示参数名称的字符串。  
+ 指示参数名称的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- 一个读取器对象。  
+ Reader 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

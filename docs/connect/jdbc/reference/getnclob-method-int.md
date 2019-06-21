@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: ff8d01b6f8d4350a2782e9660baab3d043d83582
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66784447"
 ---
 # <a name="getnclob-method-int"></a>getNClob 方法 (int)
@@ -31,7 +31,7 @@ public java.sql.NClob getNClob(int parameterIndex)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *parameterIndex*  
+ parameterIndex   
   
  指示参数索引的 int  。  
   

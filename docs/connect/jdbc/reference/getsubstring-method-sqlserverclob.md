@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cecfab59bc318d2ce6a2061e2116f5523b9874d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3404d7e31cdc5ed82a4a2c57af1a05354104d4bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787450"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>getSubString 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public java.lang.String getSubString(long pos,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *pos*  
+ pos   
   
  要提取的子字符串的第一个字符。 第一个字符的位置为 1。  
   
@@ -46,7 +46,7 @@ public java.lang.String getSubString(long pos,
  要复制的连续字符数。  
   
 ## <a name="return-value"></a>返回值  
- 指示 CLOB 中指定子字符串的 String 值。  
+ 指示 CLOB 中指定子字符串的 String  值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

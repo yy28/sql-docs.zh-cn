@@ -1,5 +1,5 @@
 ---
-title: getTimestamp 方法 (SQLServerResultSet) |Microsoft Docs
+title: getTimestamp 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 418d4db1-dfc2-47be-be76-8476265e1740
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e890f3a6cc0f35c3f7df1f44148b36e416a0b31c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 36b6c089891f8e049b8edfa24a22804d335952ae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736095"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66786281"
 ---
 # <a name="gettimestamp-method-sqlserverresultset"></a>getTimestamp 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47736095"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[getTimestamp (int)](../../../connect/jdbc/reference/gettimestamp-method-int-sqlserverresultset.md)|检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的 java.sql.Timestamp 对象。|  
 |[getTimestamp (int, java.util.Calendar)](../../../connect/jdbc/reference/gettimestamp-method-int-java-util-calendar-sqlserverresultset.md)|通过使用 Calendar 对象检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象当前行中指定列索引的值作为 Java 编程语言中的 java.sql.Timestamp 对象。|  

@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::getColumnMeta |Microsoft Docs
+title: PDOStatement::getColumnMeta | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c3fc12b1c8622596881810b784d5ceb95ae603ad
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 57bc8d1e6112a64f99864ce08f7adb81db6df781
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799116"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>Parameters  
-$conn：（整数）要检索其元数据的列的从零开始的数。  
+ $conn：（整数）要检索其元数据的列的从零开始的数。  
   
 ## <a name="return-value"></a>返回值  
 包含列的元数据的关联阵列（键和值）。 有关数组中的字段的说明，请参阅“备注”部分。  

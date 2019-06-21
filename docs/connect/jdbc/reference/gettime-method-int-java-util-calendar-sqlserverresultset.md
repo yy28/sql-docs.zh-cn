@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d21e0c1d-9d6e-468f-8b11-cc7209b2c2e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f81fb4bc93fe7166deaf6a9bac5eaf3ef717280
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a0dab0dd5052959782b1aa6591fd571d652251b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779021"
 ---
 # <a name="gettime-method-int-javautilcalendar-sqlserverresultset"></a>getTime 方法 (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,27 +37,27 @@ public java.sql.Time getTime(int columnIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
- *cal*  
+ cal   
   
  一个日历对象。  
   
 ## <a name="return-value"></a>返回值  
- 一个对象。  
+ Time 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getTime 方法由 java.sql.ResultSet 接口中的 getTime 方法指定。  
+ 此 getTime 方法是由 java.sql.ResultSet 接口中的 getTime 方法指定的。  
   
  此方法返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 数据类型的有效时间部分，日期部分设置为采用所提供的 Calendar 时区的 Java 基线日期 1970/01/01。  
   
 ## <a name="see-also"></a>另请参阅  
- [getTime 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+ [getTime 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

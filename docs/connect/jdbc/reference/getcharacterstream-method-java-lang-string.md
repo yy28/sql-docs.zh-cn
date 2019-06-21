@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f7bb4fd480eef5351a5727ac712a9a65d60c236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a818783c51f2629464f650c2985eb20d5f320c95
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701915"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784859"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>getCharacterStream 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
 #### <a name="parameters"></a>Parameters  
  *columnName*  
   
- 一个包含列名的字符串。  
+ 一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- 一个读取器对象。  
+ Reader 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

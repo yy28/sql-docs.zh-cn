@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPDone method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d0338fc05683c22df4a900f709770ac35e8b2bad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: ea7b944d51628e17c778cafe54a1eb384ce05f41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790920"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,17 +38,17 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 在调用 BCPDone 方法之后，不能对 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 接口调用其他操作。 唯一的可能性是调用 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
+ 在调用 BCPDone 方法之后，不能对 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 接口调用其他操作  。 唯一的可能性是调用 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法。  
+ 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法  。  
   
 ## <a name="example"></a>示例  
- 该示例演示如何使用 IBCPSession 接口。  
+ 该示例演示如何使用 IBCPSession 接口  。  
   
  在运行此示例之前，必须执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)]：  
   
@@ -66,7 +66,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  可以通过以下命令，使用 BCP 将此数据添加回表中：  
   
- bcp master..fltest in outfile.dat -n -T -S server  
+ bcp master..fltest in outfile.dat -n -T -S server    
   
 ```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  

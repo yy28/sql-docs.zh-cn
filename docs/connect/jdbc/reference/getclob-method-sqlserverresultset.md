@@ -1,5 +1,5 @@
 ---
-title: getBigDecimal 方法 (SQLServerResultSet) | Microsoft Docs
+title: getClob 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b5314932281224811ac5dbe3efd4bcf6c5023c0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66763640"
 ---
 # <a name="getclob-method-sqlserverresultset"></a>getClob 方法 (SQLServerResultSet)

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: dd517154b1390ae7c4ba7e4c13ce030df926958c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66766331"
 ---
 # <a name="supportsconvert-method-int-int"></a>supportsConvert 方法 (int, int)
@@ -37,11 +37,11 @@ public boolean supportsConvert(int fromType,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *fromType*  
+ fromType   
   
  要从其转换的 JDBC 类型。  
   
- *toType*  
+ toType   
   
  要转换到的 JDBC 类型。  
   

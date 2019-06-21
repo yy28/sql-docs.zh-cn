@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d612461d-4c3f-46db-b968-ff4c80b2aa7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb5c7e7d4b95b66cfb1524d9c9729f9b9132fc5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 920e47391cbaaeb1e78c8a7a4f440880edab60fd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722127"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803224"
 ---
 # <a name="iswrapperfor-method-sqlserverxadatasource"></a>isWrapperFor 方法 (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,12 +31,12 @@ public boolean isWrapperFor(Class iface)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *iface*  
+ iface   
   
  一个**类**定义的接口。  
   
 ## <a name="return-value"></a>返回值  
- 如果此对象实现了接口或包装了实现接口的对象，则为 true。 否则为 **false**。  
+ 如果此对象实现了接口或包装了实现接口的对象，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
