@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9d55da45733e15a9b2aa98f7c6d8fa386b1e4e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c8b3e731fdc3480d646e141cbd53b777407015f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682685"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66768268"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47682685"
   
 ## <a name="fields"></a>字段  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|用于允许使用紧密结合的 XA 事务，这些事务具有不同的 XA 分支事务 ID (XID)，但具有相同的全局事务 ID (GTRID)。|  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47682685"
   
 ## <a name="methods"></a>方法  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|提交由给定的 Xid 对象所指定的全局事务。|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|结束代表某个事务分支执行的工作。|  
@@ -51,7 +51,7 @@ ms.locfileid: "47682685"
 |[恢复 (recover)](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|从资源管理器获取准备好的事务分支的列表。|  
 |[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|请求资源管理器回滚代表事务分支执行的工作。|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|为此 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 对象设置当前事务超时值。|  
-|start[](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|开始代表在 Xid 对象中指定的事务分支工作。|  
+|[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|开始代表在 Xid 对象中指定的事务分支工作。|  
   
 ## <a name="inherited-methods"></a>继承的方法  
   

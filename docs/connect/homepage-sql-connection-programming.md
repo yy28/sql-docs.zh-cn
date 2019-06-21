@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289897"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63182192"
 ---
-# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>客户端编程到 Microsoft SQL Server 主页
+# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server 客户端编程的主页
 
 
 欢迎使用我们的主页有关客户端编程以使用 Microsoft SQL Server，以及与云中的 Azure SQL 数据库进行交互。 本文提供以下信息：
@@ -54,7 +54,7 @@ ms.locfileid: "51289897"
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp; [![C# 徽标][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM 实体框架，.NET framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java 徽标][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js 徽标][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 大加号][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 徽标][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Node.js 徽标][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [`ODBC for C++`  ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 徽标][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Python 徽标][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby 徽标][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -104,7 +104,7 @@ EF 有直接或间接关系具有以下技术：
 
 - .NET Framework
 - [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)，或[LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 语言语法增强功能，如**=>** C# 中的运算符。
+- 语言语法增强功能，如 **=>** C# 中的运算符。
 - 便捷的程序，以便将映射到 SQL 数据库中表的类生成源代码。 例如， [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
 
 
@@ -179,9 +179,9 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>C + + ODBC 
+## <a name="odbc-for-c"></a>有关 ODBCC++ 
 
-![ODBC 徽标][image-ref-350-odbc] ![cpp 大加号][image-ref-322-cpp]
+![ODBC 徽标][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
 开放式数据库连接 (ODBC) 在 20 世纪 90 年代中, 开发的它早于.NET Framework。 ODBC 被设计为独立于任何特定的数据库系统，并独立于操作系统。
 
@@ -191,17 +191,17 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 #### <a name="code-example"></a>代码示例
 
-- [C + + 代码示例中，使用 ODBC](../odbc/reference/sample-odbc-program.md)
+- [使用 ODBC 的 C++ 代码示例](../odbc/reference/sample-odbc-program.md)
 
 #### <a name="documentation-outline"></a>文档大纲
 
-在本部分中的 ODBC 内容重点介绍从 c + + 访问 SQL Server 或 Azure SQL 数据库。 下表列出了适用于 ODBC 的主要文档的近似概述。
+在本部分中的 ODBC 内容重点介绍从访问 SQL Server 或 Azure SQL 数据库C++。 下表列出了适用于 ODBC 的主要文档的近似概述。
 
 
 | 区域 | 子区域 | 描述 |
 | :--- | :------ | :---------- |
-| [C + + ODBC](./odbc/index.md) | 我们的文档的根。 |
-| [Linux Mac](./odbc/linux-mac/index.md) | &nbsp; | 有关在 Linux 或 MacOS 操作系统上使用 ODBC 的信息。 |
+| [有关 ODBCC++](./odbc/index.md) | 我们的文档的根。 |
+| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | 有关在 Linux 或 MacOS 操作系统上使用 ODBC 的信息。 |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | 有关 Windows 操作系统上使用 ODBC 的信息。 |
 | [管理](../odbc/admin/index.md) | &nbsp; | 用于管理 ODBC 数据源的管理工具。 |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | 各种 ODBC 驱动程序创建并由 Microsoft 提供的。 |
