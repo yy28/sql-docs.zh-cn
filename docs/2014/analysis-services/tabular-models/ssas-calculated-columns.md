@@ -10,12 +10,12 @@ ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ad2e89a8862c4b51856d70ddb1dfd3b1e1fdb17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066576"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284894"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>计算列（SSAS 表格）
   在表格模型中，通过计算列可以将新数据添加到您的模型。 而不是粘贴或导入到列的值，您可以创建用于定义列的行级值的 DAX 公式。 然后，计算列可用于报表、数据透视表或数据透视图中，您可以像使用任何其他数据列一样使用计算列。  
@@ -60,7 +60,7 @@ ms.locfileid: "66066576"
   
 -   当您重命名计算列时，必须手动更新依赖于该列的所有公式。 如果您没有处于手动更新模式，则更新公式结果将自动发生。 但是，此操作可能要花一些时间。  
   
--   有一些字符不能用于列名中。 有关详细信息，请参阅 [PowerPivot 的 DAX 语法规范](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx)中的“命名要求”。  
+-   有一些字符不能用于列名中。 有关详细信息，请参阅 [PowerPivot 的 DAX 语法规范](/dax/dax-syntax-reference)中的“命名要求”。  
   
 ##  <a name="bkmk_perf"></a> 计算列的性能  
  与用于度量值的公式相比，用于计算列的公式可能会消耗更多的资源。 原因之一是：计算列的结果始终是为表中的每一行计算的，而度量值仅是为报表、数据透视表或数据透视图中使用的筛选器定义的单元计算的。 例如，某个具有 100 万行的表将始终具有含 100 万个结果的计算列，并且对性能具有相应影响。 但是，数据透视表通常会通过应用行和列标题对数据进行筛选；因此，仅为数据透视表的每个单元中的数据子集计算度量值。  

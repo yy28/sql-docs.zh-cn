@@ -10,12 +10,12 @@ ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 063e68b8efad6227643d6309f08bcf3c6bf9c38c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479327"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284992"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>集成管理功能区域（主数据管理器）
   在“集成管理”功能区域中，管理员可以从临时表导入数据，并且创建用于订阅系统的订阅视图。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
@@ -25,7 +25,7 @@ ms.locfileid: "65479327"
   
  [加载或使用临时过程更新 Master Data Services 中的成员](add-update-and-delete-data-master-data-services.md)  
   
- [使用临时过程移动显式层次结构成员&#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
+ [使用临时过程移动显式层次结构成员&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)  
   
  [查看临时过程中发生的错误&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   

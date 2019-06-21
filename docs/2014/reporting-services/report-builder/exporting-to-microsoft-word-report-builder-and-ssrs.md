@@ -10,17 +10,17 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 003b950e908abab7e385836e761b5c230caa7fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3eaaace0d8ae5924305024e6ee67f7f3fefb415c
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107879"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285035"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
   Word 呈现扩展插件通过 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 的本机格式呈现报表。 格式为 Office Open XML。  
   
- 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 有关兼容包的详细信息，请参阅 [用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](https://go.microsoft.com/fwlink/?LinkID=205622)。  
+ 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 
   
  此呈现器生成的文件的内容类型为 **application/vnd.openxmlformats-officedocument.wordprocessingml.document** ，文件的文件扩展名为 .docx。  
   
@@ -76,9 +76,9 @@ ms.locfileid: "66107879"
   
  发生此情况的原因在于，Word 呈现器针对与 **PageNumber** 和 **TotalPages** 之类的分页相关的字段对报表进行分析，并且仅处理简单引用，而不处理对函数的调用。 在此情况下，该表达式将调用 **ToString** 函数。 下面两个表达式是等效的，并且当您在报表生成器或报表设计器中预览报表时，或者在报表管理器或 SharePoint 库中呈现已发布的报表时，这两个表达式都正确呈现。 但是，Word 呈现器仅对第二个表达式成功进行分析，并且呈现正确的页码。  
   
--   复杂表达式：  表达式为 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   复杂表达式：表达式为 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   具有文本运行的表达式：  文本 Average Sales 和表达式 `=Avg(Fields!YTDPurchase.Value, "Sales)` 以及文本 Page Number 和表达式 `=Globals!PageNumber`    
+-   具有文本运行的表达式：文本 Average Sales 和表达式 `=Avg(Fields!YTDPurchase.Value, "Sales)` 以及文本 Page Number 和表达式 `=Globals!PageNumber`  
   
  若要避免此问题，在表头和表尾中使用表达式时，请使用多文本运行，而非一个复杂表达式。 下面两个表达式是等效的。 第一个表达式是复杂表达式，第二个表达式使用文本运行。 Word 呈现器仅成功分析第二个表达式。  
   

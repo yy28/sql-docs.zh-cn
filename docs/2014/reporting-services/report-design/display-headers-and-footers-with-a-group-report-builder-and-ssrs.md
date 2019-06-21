@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b330b5aedaeff4cf73ad6dca3e88860dde0f90b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106062"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>与组一起显示组头和组尾（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.locfileid: "66106062"
  可以在“分组”窗格中选择 Tablix 成员，并在“属性”窗格中设置 **KeepWithGroup**、 **KeepTogether**和 **RepeatOnNewPage** 属性。 使用 **KeepWithGroup** 可帮助将组头和组尾与组显示在相同页上。 使用 **KeepTogether** 可帮助将静态成员与组的行或列显示在一起。 使用 **RepeatOnNewPage** 可在以下页上重复显示组头和组尾：其中的每一页至少显示 **KeepWithGroup** 值所指定的行组成员的一个完整实例。 列组成员不支持**RepeatOnNewPage** 。  
   
 > [!NOTE]  
->  KeepWithGroup、KeepTogether和 RepeatOnNewPage 是可通过使用“分组”窗格的“高级模式”设置的组成员属性。 有关详细信息，请参阅[“分组”窗格（报表生成器）](grouping-pane-report-builder.md)。  
+>  KeepWithGroup、KeepTogether和 RepeatOnNewPage 是可通过使用“分组”窗格的“高级模式”设置的组成员属性     。 有关详细信息，请参阅[“分组”窗格（报表生成器）](grouping-pane-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "66106062"
   
 1.  在设计图面上，单击 Tablix 数据区域中的任意位置以将其选定。 “分组”窗格将显示数据区域的行组和列组。  
   
-2.  在“分组”窗格的右侧，单击下箭头，然后单击 **“高级模式”**。 “行组”窗格显示行组层次结构的分层静态和动态成员。  
+2.  在“分组”窗格的右侧，单击下箭头，然后单击 **“高级模式”** 。 “行组”窗格显示行组层次结构的分层静态和动态成员。  
   
 3.  单击要与组行一起显示的组头或组尾行所对应的静态成员。 “属性”窗格显示 **“Tablix 成员”** 属性。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66106062"
   
 1.  在设计图面上，单击 Tablix 数据区域中的任意位置以将其选定。 “分组”窗格将显示数据区域的行组和列组。  
   
-2.  在“分组”窗格的右侧，单击下箭头，然后单击 **“高级模式”**。 “列组”窗格显示列组层次结构的分层静态和动态成员。  
+2.  在“分组”窗格的右侧，单击下箭头，然后单击 **“高级模式”** 。 “列组”窗格显示列组层次结构的分层静态和动态成员。  
   
 3.  单击要与组列一起显示的静态列所对应的静态成员。 “属性”窗格显示 **“Tablix 成员”** 属性。  
   

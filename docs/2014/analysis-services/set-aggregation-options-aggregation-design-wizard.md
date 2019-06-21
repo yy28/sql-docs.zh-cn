@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068808"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>设置聚合选项（聚合设计向导）
@@ -30,7 +30,7 @@ ms.locfileid: "66068808"
  通过指定聚合设计的性能可以提升的最大估计百分比以限制聚合设计。  
   
  **单击停止**  
- 通过在设计过程中单击“停止”，可以限制聚合设计。  
+ 通过在设计过程中单击“停止”  ，可以限制聚合设计。  
   
  **不设计聚合 （0%)**  
  指定聚合设计不包含聚合。 使用此选项可以清除分区、度量值组或多维数据集的现有聚合设计。  

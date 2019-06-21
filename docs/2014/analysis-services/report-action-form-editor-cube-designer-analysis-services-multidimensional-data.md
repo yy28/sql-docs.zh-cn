@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070298"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>报表操作窗体编辑器（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
@@ -27,7 +27,7 @@ ms.locfileid: "66070298"
  键入操作的名称。  
   
  **操作目标**  
- 展开可查看“目标类型”和“目标对象”选项。  
+ 展开可查看“目标类型”和“目标对象”选项。    
   
  **目标类型**  
  选择要与该操作关联的对象的类型。 服务器只向客户端返回适用于指定类型的对象的操作。 如果满足 **“条件”** ，并且选择了下表中指定的对象，则客户端可使用该操作。  
@@ -44,15 +44,15 @@ ms.locfileid: "66070298"
 |级别成员|**“目标对象”** 中级别的成员处于选中状态。|  
   
  **目标对象**  
- 选择要与该操作关联的对象。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例只将应用于所选对象的那些操作返回到客户端。 可用对象列表受所选 **“目标类型”** 的约束。  
+ 选择要与该操作关联的对象。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例只将应用于所选对象的那些操作返回到客户端。 可用对象列表受所选 **“目标类型”** 的约束。  
   
  **条件(可选)**  
- 输入描述可选条件（与“目标对象”一起使用）的多维表达式 (MDX) 表达式，以进一步限制该操作可用的时间。 表达式必须返回一个布尔值，如果为 True，指示该操作可用。  
+ 输入描述可选条件（与“目标对象”一起使用）的多维表达式 (MDX) 表达式，以进一步限制该操作可用的时间。  表达式必须返回一个布尔值，如果为 True，指示该操作可用。  
   
  将所选元素从 **“计算工具”** 窗格拖至此选项中，可包含所选元素的 MDX 语法。  
   
  **报表服务器**  
- 展开该选项可以查看“服务器名称”、“服务器路径”和“报表格式”选项。  
+ 展开该选项可以查看“服务器名称”、“服务器路径”和“报表格式”选项。     
   
  **服务器名称**  
  键入操作在其上运行报表的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 实例的名称。  
@@ -71,15 +71,15 @@ ms.locfileid: "66070298"
 |PDF|报表以 Adobe 可移植文档格式 (.pdf) 文件的形式返回。|  
   
  **参数(可选)**  
- 展开该选项可以查看一个网格，在该网格中，可以为“报表”中指定的报表提供报表参数。 该网格包含以下列：  
+ 展开该选项可以查看一个网格，在该网格中，可以为“报表”中指定的报表提供报表参数。  该网格包含以下列：  
   
 |“列”|Description|  
 |------------|-----------------|  
 |**参数名称**|键入要传递给报表的报表参数名称。|  
-|**参数值**|键入要传递给报表的报表参数值。<br /><br /> 单击省略号按钮 (**...**) 可以显示“MDX 生成器”对话框，并创建提供报表参数值的 MDX 表达式。 有关“MDX 生成器”对话框的详细信息，请参阅[“MDX 生成器”（Analysis Services - 多维数据）](mdx-builder-analysis-services-multidimensional-data.md)。<br /><br /> 如果将参数设置为 MDX 表达式，在运行操作时将计算该表达式，否则将参数不做任何修改直接传递给报表。|  
+|**参数值**|键入要传递给报表的报表参数值。<br /><br /> 单击省略号按钮 ( **...** ) 可以显示“MDX 生成器”对话框，并创建提供报表参数值的 MDX 表达式。  有关  “MDX 生成器”对话框的详细信息，请参阅[“MDX 生成器”（Analysis Services - 多维数据）](mdx-builder-analysis-services-multidimensional-data.md)。<br /><br /> 如果将参数设置为 MDX 表达式，在运行操作时将计算该表达式，否则将参数不做任何修改直接传递给报表。|  
   
  **附加属性**  
- 展开可查看“调用”、“应用程序”、“说明”、“标题”和“标题是 MDX”选项。,   
+ 展开可查看“调用”、“应用程序”、“说明”、“标题”和“标题是 MDX”选项。  ,      
   
  **调用**  
  选择相应设置，指示何时执行该操作。  
@@ -96,7 +96,7 @@ ms.locfileid: "66070298"
 |处于打开状态|第一次打开多维数据集时运行该操作。|  
   
  **应用程序**  
- 键入可以解释“操作表达式”所返回字符串的应用程序的名称。  
+ 键入可以解释“操作表达式”所返回字符串的应用程序的名称。   
   
  还可以使用此选项来标识最常使用此操作的客户端应用程序，并在弹出菜单中该操作的旁边显示相应的图标。  
   
@@ -107,12 +107,12 @@ ms.locfileid: "66070298"
  键入操作说明（可选）。  
   
  **Caption**  
- 当“标题是 MDX”设置为 **False** 时，在客户端应用程序中键入要为操作显示的标题。  
+ 当  “标题是 MDX”设置为 **False** 时，在客户端应用程序中键入要为操作显示的标题。  
   
  当 **“标题是 MDX”** 设置为 **True**时，显示返回标题字符串的键入多维表达式 (MDX)。  
   
  **标题是 MDX**  
- 选择 **False** 表示“标题”包含一个文字字符串，该字符串表示将在客户端应用程序中为该操作显示的标题。  
+ 选择 **False** 表示“标题”包含一个文字字符串，该字符串表示将在客户端应用程序中为该操作显示的标题。   
   
  选择 **True** 表示 **“标题”** 包含一个 MDX 表达式，该表达式返回一个表示将在客户端应用程序中为该操作显示的标题的字符串。 必须在将该操作返回给客户端应用程序之前解析 MDX 表达式。  
   

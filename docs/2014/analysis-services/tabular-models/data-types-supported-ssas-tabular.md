@@ -10,12 +10,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067274"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284930"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>支持的数据类型（SSAS 表格）
   本文说明可在表格模型中使用的数据类型，并且论述在数据分析表达式 (DAX) 公式中计算或使用数据时数据类型的隐式转换。  
@@ -68,7 +68,7 @@ ms.locfileid: "66067274"
 >  不能从字符串长度超过 131,072 个字符的 **varchar(max)** 列进行导入。  
   
 ### <a name="table-data-type"></a>表数据类型  
- 此外，DAX 使用“表”  数据类型。 DAX 在许多函数中都使用此数据类型，如在聚合和时间智能计算中。 某些函数要求对表的引用；其他函数返回可用作对其他函数的输入的表。 在要求表作为输入的某些函数中，您可以指定计算结果为表的表达式；对于某些函数，要求对基表的引用。 有关特定函数的要求的信息，请参阅 [DAX 函数引用](https://msdn.microsoft.com/library/ee634396.aspx)。  
+ 此外，DAX 使用“表”  数据类型。 DAX 在许多函数中都使用此数据类型，如在聚合和时间智能计算中。 某些函数要求对表的引用；其他函数返回可用作对其他函数的输入的表。 在要求表作为输入的某些函数中，您可以指定计算结果为表的表达式；对于某些函数，要求对基表的引用。 有关特定函数的要求的信息，请参阅 [DAX 函数引用](/dax/dax-function-reference)。  
   
 ##  <a name="bkmk_implicit"></a> DAX 公式中的隐式和显式数据类型转换  
  每个 DAX 函数都对用作输入和输出的数据类型具有特定的要求。 例如，某些函数要求将整数用于某些参数，将日期用于其他参数；其他一些函数则要求文本或表。  
@@ -188,7 +188,7 @@ ms.locfileid: "66067274"
 |BLANK OR BLANK|空白|错误|  
 |BLANK AND BLANK|空白|错误|  
   
- 有关特定函数或运算符如何处理空白的详细信息，请参阅 [DAX 函数引用](https://msdn.microsoft.com/library/ee634396.aspx)一节中关于各 DAX 函数的单独主题。  
+ 有关特定函数或运算符如何处理空白的详细信息，请参阅 [DAX 函数引用](/dax/dax-function-reference)一节中关于各 DAX 函数的单独主题。  
   
 ## <a name="see-also"></a>请参阅  
  [数据源（SSAS 表格）](../data-sources-ssas-tabular.md)   

@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7881df645a02e70948d81baa6fd8a029d06ea1b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066461"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284847"
 ---
 # <a name="tabular-model-data-access"></a>表格模型数据访问
   Analysis Services 中的表格模型数据库可由用于检索多维模型中的数据或元数据的大多数相同的客户端、接口和语言访问。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "66066461"
   
  此外，您可以在 XMLA EXECUTE 命令语句的上下文中使用 DAX 表达式来向已在 DirectQuery 模式下部署的表格模型发送查询。  
   
- 有关使用 DAX 的表格模型查询的示例，请参阅 [DAX 查询语法参考](https://msdn.microsoft.com/library/ee634217.aspx)。  
+ 有关使用 DAX，表格模型的查询的示例，请参阅 [DAX 查询语法参考] （/dax/dax 的语法参考
   
 ### <a name="mdx"></a>MDX  
  可以使用 MDX 创建针对将内存中缓存用作首选查询方法的表格模型（即，尚未在 DirectQuery 模式下部署的模型）的查询。 虽然 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 等客户端会使用 DAX 来创建聚合并将模型作为数据源进行查询，但如果熟悉 MDX，则可在 MDX 中快速创建示例查询，请参阅 [在 MDX 中生成度量值](../multidimensional-models/mdx/mdx-building-measures.md)。  

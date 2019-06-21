@@ -14,12 +14,12 @@ ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea1514b8b4e029537958e74fcdf20497b1e22d00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d6070f32cd8990a2be58db4c900da61681304cb
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070839"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284943"
 ---
 # <a name="technical-reference-ssas"></a>技术参考 (SSAS)
   查找用于在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用或管理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的工具、语言和 PowerShell 参考文档。  
@@ -38,7 +38,7 @@ ms.locfileid: "66070839"
  ![小文件文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")**查询和表达式语言参考**  
  [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
- [数据分析表达式&#40;DAX&#41;引用](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)  
+ [数据分析表达式&#40;DAX&#41;引用](/dax/data-analysis-expressions-dax-reference)  
   
  [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
   

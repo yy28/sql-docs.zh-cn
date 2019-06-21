@@ -13,12 +13,12 @@ ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3730ed26ec94d64dedb0ac17cd306a3d6d75a2b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 272fdcee66a8e702ac1dfe6c2da3d408c93a5e49
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482915"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284967"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>叶成员临时表 (Master Data Services)
   使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的叶成员临时表 (stg.name_Leaf) 可以创建、更新、停用和删除叶成员。 您还可以使用它更新叶成员的属性值。  
@@ -43,7 +43,7 @@ ms.locfileid: "65482915"
  你正在查找哪些信息，是否已经找到？ 我们会听取你的反馈，改进内容。 请将你的意见提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Leaf%20Member%20Staging%20Table%20page)  
   
 ## <a name="see-also"></a>请参阅  
- [加载或使用临时过程更新 Master Data Services 中的成员](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [加载或使用临时过程更新 Master Data Services 中的成员](add-update-and-delete-data-master-data-services.md)   
  [数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [查看临时过程中发生的错误&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [临时过程错误 (Master Data Services)](staging-process-errors-master-data-services.md)  

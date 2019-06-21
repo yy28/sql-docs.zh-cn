@@ -10,12 +10,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66066631"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284861"
 ---
 # <a name="roles-ssas-tabular"></a>角色（SSAS 表格）
   在表格模型中，角色定义模型的成员权限。 每个角色都包含成员（按 Windows 用户名或按 Windows 组）和权限（读取、处理、管理员）。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。  
@@ -40,7 +40,7 @@ ms.locfileid: "66066631"
 -   [相关任务](#bkmk_rt)  
   
 ##  <a name="bkmk_underst"></a> 了解角色  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用角色来管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和数据的安全性。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中有两种类型的角色：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用角色来管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和数据的安全性。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中有两种类型的角色：  
   
 -   服务器角色，它是一个固定角色，用于提供对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的管理员访问权限。  
   
@@ -96,8 +96,8 @@ ms.locfileid: "66066631"
   
 |函数|Description|  
 |--------------|-----------------|  
-|[USERNAME 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|返回当前登录用户的 domain\username。|  
-|[CUSTOMDATA 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|返回连接字符串中的 CustomData 属性。|  
+|[USERNAME 函数&#40;DAX&#41;](/dax/username-function-dax)|返回当前登录用户的 domain\username。|  
+|[CUSTOMDATA 函数&#40;DAX&#41;](/dax/customdata-function-dax)|返回连接字符串中的 CustomData 属性。|  
   
  您可以使用 LOOKUPVALUE 函数返回某一列的值，在该列中，Windows 用户名与 USERNAME 函数返回的用户名或 CustomData 函数返回的字符串相同。 然后，可以限制查询，只显示 LOOKUPVALUE 返回的值与相同或相关表中的值匹配的行。  
   
@@ -140,8 +140,8 @@ ms.locfileid: "66066631"
 ## <a name="see-also"></a>请参阅  
  [透视表（SSAS 表格）](perspectives-ssas-tabular.md)   
  [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA 函数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 函数&#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE 函数&#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 函数&#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

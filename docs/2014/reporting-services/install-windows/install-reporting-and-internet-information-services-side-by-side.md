@@ -12,12 +12,12 @@ ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6555f47c1d390180bbf2d2ccca1f29f07889465d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108803"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285039"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）
   可以在同一台计算机上安装和运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 和 Internet Information Services (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
@@ -43,9 +43,9 @@ ms.locfileid: "66108803"
   
 |示例|请求|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|接收发送到的所有请求 http://123.234.345.456/reports 或 http://\< 计算机名 > / 报表如果域名服务可以将 IP 地址解析为相应主机名。|  
+|http:\//123.234.345.456:80/reports|接收的所有请求发送到 http:\//123.234.345.456/reports 或 http://\<计算机名 > / 报表如果域名服务可以将 IP 地址解析为相应主机名。|  
 |http://+:80/reports|只要 URL 包含“reports”虚拟目录名，就将接收发送到对于该计算机有效的任何 IP 地址或主机名的任何请求。|  
-|http://123.234.345.456:80|接收的任何请求都指定 http://123.234.345.456 或 http://\< 计算机名 > 如果域名服务可以将 IP 地址解析为相应主机名。|  
+|http:\//123.234.345.456:80|接收的任何请求都指定 http:\//123.234.345.456 或 http://\<计算机名 > 如果域名服务可以将 IP 地址解析为相应主机名。|  
 |http://+:80|对于映射到 **“所有已分配的”** 的任何应用程序端点，接收尚未由其他应用程序接收的请求。|  
 |http://*:80|对于映射到 **“所有未分配的”** 的应用程序端点，接收尚未由其他应用程序接收的请求。|  
   

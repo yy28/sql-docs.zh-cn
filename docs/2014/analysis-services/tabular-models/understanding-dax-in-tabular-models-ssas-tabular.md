@@ -10,12 +10,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e02123703295d13a0be9bcb74382ce4a7ed9dd66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066264"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284921"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格模型中的 DAX（SSAS 表格）
   数据分析表达式 (DAX) 是一种公式语言，用于在针对 Microsoft Excel 工作簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目中创建自定义计算。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
@@ -124,7 +124,7 @@ ms.locfileid: "66066264"
   
 -   将两个或更多表达式组合起来以返回单个结果的逻辑运算符。  
   
- 有关在 DAX 公式中使用的运算符的详细信息，请参阅[针对 PowerPivot 的 DAX 运算符参考](https://msdn.microsoft.com/library/ee634237(v=sql.120).aspx)。  
+ 有关在 DAX 公式中使用的运算符的详细信息，请参阅[针对 PowerPivot 的 DAX 运算符参考](/dax/dax-operator-reference)。  
   
 ##  <a name="bkmk_DAX_Formulas"></a> DAX 公式  
  DAX 公式对于在计算列和度量值中创建计算以及使用行级别筛选器保护数据方面非常重要。 若要创建用于计算列和度量值的公式，您需要使用模型设计器窗口顶部的公式栏。 若要创建用于行筛选器的公式，您需要使用“角色管理器”对话框。 本节中的信息旨在帮助您开始了解 DAX 公式的基础知识。  
@@ -174,7 +174,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |---------------------|-----------------|  
 |`Days in Current Quarter:=`|度量值的名称。|  
 |`=`|公式以等号 (=) 开头。|  
-|`COUNTROWS`|[COUNTROWS 函数&#40;DAX&#41; ](https://msdn.microsoft.com/library/ee634574(v=sql.120).aspx)的日期表中的行进行计数|  
+|`COUNTROWS`|[COUNTROWS 函数&#40;DAX&#41; ](/dax/countrows-function-dax)的日期表中的行进行计数|  
 |`()`|左括号和右括号指定参数。|  
 |`DATESBETWEEN`|DATESBETWEEN 函数返回 Date 表的 Date 列中每个值的最后日期之间的天数。|  
 |`'Date'`|指定 Date 表。 表引在单引号中。|  
@@ -205,7 +205,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 >  在度量值内嵌套函数时会应用一些限制，以确保不会由于列之间的依赖关系所要求的许多计算而影响性能。  
   
 ##  <a name="bkmk_DAX_functions"></a> DAX 函数  
- 本节概述 DAX 中支持的函数“类型”。  有关详细信息，请参阅 [DAX 函数参考](https://msdn.microsoft.com/library/ee634396.aspx)。  
+ 本节概述 DAX 中支持的函数“类型”。  有关详细信息，请参阅 [DAX 函数参考](/dax/dax-function-reference)。  
   
  DAX 提供多种函数，可用于使用日期和时间执行计算、创建条件值、处理字符串、基于关系执行查找，以及循环访问某个表以执行递归计算。 如果您熟悉 Excel 公式，会发现 Excel 公式与 DAX 公式中的多数函数都极为相似；但是，DAX 公式在以下方面显著不同：  
   
@@ -218,28 +218,28 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -    DAX 函数包含多种“时间智能”函数。 利用这些函数，您可以定义或选择日期范围，并基于这些日期或范围执行动态计算。 例如，您可以比较并行时段内的总和。  
   
 ### <a name="date-and-time-functions"></a>日期和时间函数  
- DAX 中的日期和时间函数类似于 Microsoft Excel 中的日期和时间函数。 但是，DAX 函数基于 Microsoft SQL Server 使用的 `datetime` 数据类型。 有关详细信息，请参阅[日期和时间函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)。  
+ DAX 中的日期和时间函数类似于 Microsoft Excel 中的日期和时间函数。 但是，DAX 函数基于 Microsoft SQL Server 使用的 `datetime` 数据类型。 有关详细信息，请参阅[日期和时间函数&#40;DAX&#41;](/dax/date-and-time-functions-dax)。  
   
 ### <a name="filter-functions"></a>筛选器函数  
- DAX 中的筛选器函数可以返回特定数据类型、在相关表中查找值以及按相关值进行筛选。 查找函数通过使用表和关系进行工作，与数据库类似。 筛选函数可用于操作数据上下文来创建动态计算。 有关详细信息，请参阅[筛选器函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx)。  
+ DAX 中的筛选器函数可以返回特定数据类型、在相关表中查找值以及按相关值进行筛选。 查找函数通过使用表和关系进行工作，与数据库类似。 筛选函数可用于操作数据上下文来创建动态计算。 有关详细信息，请参阅[筛选器函数&#40;DAX&#41;](/dax/filter-functions-dax)。  
   
 ### <a name="information-functions"></a>信息函数  
- 信息函数查找作为参数提供的单元格或行，并且指示值是否与预期的类型匹配。 例如，如果您引用的值包含错误，则 ISERROR 函数将返回 TRUE。 有关详细信息，请参阅[信息函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634552(v=sql.120).aspx)。  
+ 信息函数查找作为参数提供的单元格或行，并且指示值是否与预期的类型匹配。 例如，如果您引用的值包含错误，则 ISERROR 函数将返回 TRUE。 有关详细信息，请参阅[信息函数&#40;DAX&#41;](/dax/information-functions-dax)。  
   
 ### <a name="logical-functions"></a>逻辑函数  
- 逻辑函数对表达式执行操作，以返回表达式中有关值的信息。 例如，通过 TRUE 函数您可以了解您正在计算的表达式是否返回 TRUE 值。 有关详细信息，请参阅[逻辑函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634365(v=sql.120).aspx)。  
+ 逻辑函数对表达式执行操作，以返回表达式中有关值的信息。 例如，通过 TRUE 函数您可以了解您正在计算的表达式是否返回 TRUE 值。 有关详细信息，请参阅[逻辑函数&#40;DAX&#41;](/dax/logical-functions-dax)。  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>数学和三角函数  
- DAX 中的数学函数与 Excel 中的数学和三角函数非常相似。 DAX 函数使用的数值数据类型存在一些细微的差别。 有关详细信息，请参阅[数学和三角函数函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634241(v=sql.120).aspx)。  
+ DAX 中的数学函数与 Excel 中的数学和三角函数非常相似。 DAX 函数使用的数值数据类型存在一些细微的差别。 有关详细信息，请参阅[数学和三角函数函数&#40;DAX&#41;](/dax/math-and-trig-functions-dax)。  
   
 ### <a name="statistical-functions"></a>统计函数  
- DAX 提供执行聚合的统计函数。 除了求和与平均值或者查找最小值和最大值外，您还可以通过 DAX 在聚合之前筛选列或基于相关表创建聚合。 有关详细信息，请参阅[统计函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634822(v=sql.120).aspx)。  
+ DAX 提供执行聚合的统计函数。 除了求和与平均值或者查找最小值和最大值外，您还可以通过 DAX 在聚合之前筛选列或基于相关表创建聚合。 有关详细信息，请参阅[统计函数&#40;DAX&#41;](/dax/statistical-functions-dax)。  
   
 ### <a name="text-functions"></a>文本函数  
- DAX 中的文本函数与 Excel 中的同等函数非常相似。 可以返回部分字符串、搜索字符串中的文本或连接字符串。 DAX 还提供了用于控制日期、时间和数字格式的函数。 有关详细信息，请参阅[文本函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634938(v=sql.120).aspx)。  
+ DAX 中的文本函数与 Excel 中的同等函数非常相似。 可以返回部分字符串、搜索字符串中的文本或连接字符串。 DAX 还提供了用于控制日期、时间和数字格式的函数。 有关详细信息，请参阅[文本函数&#40;DAX&#41;](/dax/text-functions-dax)。  
   
 ### <a name="time-intelligence-functions"></a>时间智能函数  
- DAX 中提供的时间智能函数允许您创建使用日历和日期的相关内置信息的计算。 通过将时间和日期范围与聚合或计算结合使用，您可以为销售、库存等生成可比较时间段内的有意义比较。 有关详细信息，请参阅[时间智能函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)。  
+ DAX 中提供的时间智能函数允许您创建使用日历和日期的相关内置信息的计算。 通过将时间和日期范围与聚合或计算结合使用，您可以为销售、库存等生成可比较时间段内的有意义比较。 有关详细信息，请参阅[时间智能函数&#40;DAX&#41;](/dax/time-intelligence-functions-dax)。  
   
 ###  <a name="bkmk_TableFunc"></a> 表值函数  
  有许多 DAX 函数可输出表并且/或者将表作为输入。 因为表可以包含单个列，所以表值函数还可以将单个列作为输入。 了解如何使用这些表值函数对于充分利用 DAX 公式很重要。 DAX 包括以下类型的表值函数：  
@@ -261,7 +261,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   使用公式中的特殊函数指定的关系  
   
-  有许多类型的上下文：“行上下文”  、“查询上下文”  和“筛选上下文”。  
+ 有许多类型的上下文：“行上下文” 、“查询上下文” 和“筛选上下文”。  
   
 ###  <a name="bkmk_row_context"></a> 行上下文  
  *行上下文*可视为"当前行"。 如果您在计算列中创建某一公式，则该公式的“行上下文”将包括来自当前行中所有列的值。 如果该表与其他表相关，则上下文还包括来自另一个表中与当前行相关的所有值。  
@@ -289,7 +289,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =MAXX(FILTER(Sales,[ProdKey]=EARLIER([ProdKey])),Sales[OrderQty])  
 ```  
   
- 此公式的详细演练，请参阅[EARLIER 函数](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx)。  
+ 此公式的详细演练，请参阅[EARLIER 函数](/dax/earlier-function-dax)。  
   
  总之，该 EARLIER 函数存储来自当前运算之前的运算中的行上下文。 在任何时候，该函数都在内存中存储两组上下文：一组上下文表示公式的内部循环的当前行，另一组上下文表示公式的外部循环的当前行。 DAX 自动在两个循环之间馈送值，以便您可以创建复杂的聚合。  
   
@@ -314,45 +314,45 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  在表格模型中，可通过多种方式来创建筛选上下文。 在可使用该模型的客户端的上下文（如 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表）中，用户可以随时通过在行和列标题上添加切片器或报表筛选器来创建筛选器。 还可以在公式中直接指定筛选表达式来执行以下操作：指定相关的值、筛选用作输入的表或动态获取计算中使用的值的上下文。 您还可以完全清除或有选择地清除特定列上的筛选器。 这在创建用于计算总计的公式时很有用。  
   
- 有关如何在公式内创建筛选器的详细信息，请参阅[筛选器函数](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx)。  
+ 有关如何在公式内创建筛选器的详细信息，请参阅[筛选器函数](/dax/filter-function-dax)。  
   
- 有关举例说明如何清除筛选器以便创建总计，请参阅[ALL 函数](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)。  
+ 有关举例说明如何清除筛选器以便创建总计，请参阅[ALL 函数](/dax/all-function-dax)。  
   
- 有关如何有选择地清除和应用筛选器公式中的示例，请参阅[ALLEXCEPT 函数](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx)。  
+ 有关如何有选择地清除和应用筛选器公式中的示例，请参阅[ALLEXCEPT 函数](/dax/allexcept-function-dax)。  
   
 ####  <a name="bkmk_determine_context"></a> 确定公式中的上下文  
  在创建一个 DAX 公式时，首先会测试该公式的语法是否有效，然后测试该公式以确保其包含的列和表的名称位于当前上下文中。 如果找不到该公式指定的任一列或表，则将返回错误。  
   
  如前所述，通过使用模型中的可用表、表之间的所有关系和所应用的所有筛选器来确定验证（和重新计算操作）期间的上下文。  
   
- 例如，如果刚刚将一些数据导入到一个新表中，而该表未与任何其他表关联（并且尚未应用任何筛选器），则当前上下文  是表中的完整列集。 如果通过关系将该表与其他表链接，则当前上下文将包括相关的表。 如果将该表中的某个列添加到一个报表中，该报表具有切片器并且可能具有一些报表筛选器，则公式的上下文是报表的每个单元中的数据子集。  
+ 例如，如果刚刚将一些数据导入到一个新表中，而该表未与任何其他表关联（并且尚未应用任何筛选器），则当前上下文是表中的完整列集。 如果通过关系将该表与其他表链接，则当前上下文将包括相关的表。 如果将该表中的某个列添加到一个报表中，该报表具有切片器并且可能具有一些报表筛选器，则公式的上下文是报表的每个单元中的数据子集。  
   
  上下文是一个很有用的概念，但也可能导致很难排除公式问题。 我们建议您从简单的公式和关系入手，了解上下文的工作原理。 下一节提供了一些示例，说明公式如何使用不同类型的上下文来动态返回结果。  
   
 ##### <a name="examples-of-context-in-formulas"></a>公式中上下文的示例  
   
-1.  [RELATED 函数](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx)函数可展开当前行，以包括相关列中的值的上下文。 这允许您执行查找。 该主题中的示例阐释筛选和行上下文的交互情况。  
+1.  [RELATED 函数](/dax/related-function-dax)函数可展开当前行，以包括相关列中的值的上下文。 这允许您执行查找。 该主题中的示例阐释筛选和行上下文的交互情况。  
   
-2.  [筛选器函数](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx)函数允许您指定要包括在当前上下文中的行。 该主题中的示例还演示如何在执行聚合的其他函数内嵌入筛选器。  
+2.  [筛选器函数](/dax/filter-function-dax)函数允许您指定要包括在当前上下文中的行。 该主题中的示例还演示如何在执行聚合的其他函数内嵌入筛选器。  
   
-3.  [ALL 函数](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)函数公式中设置上下文。 使用此函数可以覆盖因查询上下文而应用的筛选器。  
+3.  [ALL 函数](/dax/all-function-dax)函数公式中设置上下文。 使用此函数可以覆盖因查询上下文而应用的筛选器。  
   
-4.  [ALLEXCEPT 函数](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx)函数可以删除保留一个指定的所有筛选器。 以上两个主题包括的示例将引导您构建公式和了解复杂的上下文。  
+4.  [ALLEXCEPT 函数](/dax/allexcept-function-dax)函数可以删除保留一个指定的所有筛选器。 以上两个主题包括的示例将引导您构建公式和了解复杂的上下文。  
   
-5.  [EARLIER 函数](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx)并[EARLIEST 函数](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx)函数的以便循环遍历表执行计算，并引用内部循环中的值。 如果您熟悉递归的概念以及内部循环和外部循环，将领会到 EARLIER 和 EARLIEST 函数所提供的强大功能。 如果这些概念对您来说是全新的，则应仔细按照示例中的步骤执行，以便了解如何在计算中使用内部上下文和外部上下文。  
+5.  [EARLIER 函数](/dax/earlier-function-dax)并[EARLIEST 函数](/dax/earliest-function-dax)函数的以便循环遍历表执行计算，并引用内部循环中的值。 如果您熟悉递归的概念以及内部循环和外部循环，将领会到 EARLIER 和 EARLIEST 函数所提供的强大功能。 如果这些概念对您来说是全新的，则应仔细按照示例中的步骤执行，以便了解如何在计算中使用内部上下文和外部上下文。  
   
 ##  <a name="bkmk_RelModel"></a> 公式和表格模型  
  模型设计器（位于 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中）是一个区域，您可以在其中处理多个数据表，并连接表格模型中的这些表。 在此模型内，表通过具有公用值（键）的各列之间的关系联接起来。 利用表格模型，您可以将值链接到其他表中的列，从而创建更有趣的计算。 正如在关系数据库中一样，您可以连接多个级别的关系表，也可以在结果中使用任何表中的列。  
   
  例如，您可以链接销售表、产品表和产品类别表，用户可以在数据透视表和报表中使用列的各种组合。 关系字段可用于对连接的表进行筛选，或针对子集创建计算。 （如果不熟悉关系数据库以及表和联接的用法，请参阅[关系（SSAS 表格）](relationships-ssas-tabular.md)。）  
   
- 表格模型支持表之间的多种关系。 为避免混淆或结果错误，每次只将一个关系指定为活动关系，但您可以根据需要更改活动关系以便遍历计算数据中的不同连接。 [USERELATIONSHIP 函数&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230952(v=sql.120).aspx)可用于指定要在特定计算中使用的一个或多个关系。  
+ 表格模型支持表之间的多种关系。 为避免混淆或结果错误，每次只将一个关系指定为活动关系，但您可以根据需要更改活动关系以便遍历计算数据中的不同连接。 [USERELATIONSHIP 函数&#40;DAX&#41; ](/dax/userelationship-function-dax)可用于指定要在特定计算中使用的一个或多个关系。  
   
  在表格模型中，您应遵守以下公式设计规则：  
   
 -   在通过关系连接表时，必须确保用作键的两列具有匹配的值。 但不强制引用完整性，因此有可能在键列中具有不匹配值的情况下仍创建关系。 如果发生这种情况，您应注意空值或不匹配值可能会影响公式的结果。  
   
--    使用关系在模型中链接表时，可以扩大公式的计算范围（或“上下文”）。 因添加新表、新关系或因活动关系改变而引起的上下文变化可能会导致结果发生意外变化。 有关详细信息，请参阅本主题前面的 [DAX 公式中的上下文](#bkmk_context) 。  
+-   使用关系在模型中链接表时，可以扩大公式的计算范围（或“上下文”）。 因添加新表、新关系或因活动关系改变而引起的上下文变化可能会导致结果发生意外变化。 有关详细信息，请参阅本主题前面的 [DAX 公式中的上下文](#bkmk_context) 。  
   
 ##  <a name="bkmk_tables"></a> 使用表和列  
  表格模型中的表在外观上与 Excel 表类似，但在处理数据和公式的方式上却有所不同：  
@@ -372,10 +372,10 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =SUM('New Sales'[Amount]) + SUM('Past Sales'[Amount])  
 ```  
   
- 计算公式时，模型设计器首先检查常规语法，然后根据当前上下文中的可能列和表检查所提供的列和表的名称。 如果名称不明确或者列或表无法找到，则您将收到有关公式的错误（在发生错误的单元格中，用 #ERROR 字符串代替数据值）。 有关表、 列和其他对象的命名要求的详细信息，请参阅"命名要求"中[PowerPivot 的 DAX 语法规范](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx)。  
+ 计算公式时，模型设计器首先检查常规语法，然后根据当前上下文中的可能列和表检查所提供的列和表的名称。 如果名称不明确或者列或表无法找到，则您将收到有关公式的错误（在发生错误的单元格中，用 #ERROR 字符串代替数据值）。 有关表、 列和其他对象的命名要求的详细信息，请参阅"命名要求"中[PowerPivot 的 DAX 语法规范](/dax/dax-syntax-reference)。  
   
 ### <a name="table-relationships"></a>表关系  
- 通过创建表之间的关系，可以在另一个表中查找数据，并使用相关值来执行复杂计算。 例如，可以使用计算列来查找与当前分销商相关的所有装运记录，然后对每个分销商的装运成本求和。 但在许多情况下，关系可能没有必要。 可以在公式中使用 LOOKUPVALUE 函数为满足在 search_column  和 search_value  参数中指定的条件的行返回 result_columnName  中的值。  
+ 通过创建表之间的关系，可以在另一个表中查找数据，并使用相关值来执行复杂计算。 例如，可以使用计算列来查找与当前分销商相关的所有装运记录，然后对每个分销商的装运成本求和。 但在许多情况下，关系可能没有必要。 可以在公式中使用 LOOKUPVALUE 函数为满足在 search_column 和 search_value 参数中指定的条件的行返回 result_columnName 中的值。  
   
  很多 DAX 函数都要求两个表或多个表之间存在关系，以便定位所引用的列并返回有意义的结果。 其他函数将尝试确定关系；但是，为获得最佳结果，您始终应尽量创建关系。 有关详细信息，请参阅本主题前面的 [公式和表格模型](#bkmk_RelModel) 。  
   
@@ -395,9 +395,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  有关详细信息，请参阅 [处理数据（SSAS 表格）](../process-data-ssas-tabular.md)。  
   
 ##  <a name="bkmk_troubleshoot"></a> 更正公式中的错误  
-  如果在定义公式时遇到错误，公式可能会包含“语法错误”  、“语义错误”  或“计算错误”。  
+ 如果在定义公式时遇到错误，公式可能会包含“语法错误” 、“语义错误” 或“计算错误”。  
   
- 语法错误最容易解决。 它们通常涉及缺少括号或逗号。 有关单独函数的语法的帮助，请参阅 [DAX 函数参考](https://msdn.microsoft.com/library/ee634396.aspx)。  
+ 语法错误最容易解决。 它们通常涉及缺少括号或逗号。 有关单独函数的语法的帮助，请参阅 [DAX 函数参考](/dax/dax-function-reference)。  
   
  在语法无误时发生其他类型的错误，但引用的值或列在公式的上下文中没有意义。 此类语义和计算错误可能是由于下列任何问题导致的：  
   
@@ -421,7 +421,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [DAX 资源中心](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 同时提供关于 DAX 的内部和外部信息，包括由主要商业智能专业人员提交的大量 DAX 解决方案。  
   
 ## <a name="see-also"></a>请参阅  
- [数据分析表达式&#40;DAX&#41;引用](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
+ [数据分析表达式&#40;DAX&#41;引用](/dax/data-analysis-expressions-dax-reference)   
  [度量值（SSAS 表格）](measures-ssas-tabular.md)   
  [计算列（SSAS 表格）](ssas-calculated-columns.md)   
  [角色（SSAS 表格）](roles-ssas-tabular.md)   

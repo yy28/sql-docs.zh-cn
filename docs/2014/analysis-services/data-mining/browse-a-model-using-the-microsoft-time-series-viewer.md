@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085982"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>使用 Microsoft 时序查看器浏览模型
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 时序查看器显示由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法是一种回归算法，用于在预测方案中创建数据挖掘模型以预测连续列（如产品销量）。 这些时序模型可以包含基于不同算法的信息：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 时序查看器显示由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法是一种回归算法，用于在预测方案中创建数据挖掘模型以预测连续列（如产品销量）。 这些时序模型可以包含基于不同算法的信息：  
   
 -   ARTxp 算法，针对短期预测进行了优化。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66085982"
   
  对于每个树，时序模型都包含一个 **“全部”** 节点，然后分出一系列的节点，这些节点代表算法发现的周期性结构。 单击各个节点可以显示事例数之类的统计信息和公式。  
   
- 如果创建模型时只使用 ARTxp，则根节点的 **“挖掘图例”** 只包含事例总数。 对于每个非根节点，“挖掘图例”会包含树杈的更详细的信息：例如，它可能会显示节点的公式和事例数量。 图例中的“规则”  包含标识序列的信息以及规则适用的时间段。 例如，图例文本 `M200 Europe Amount -2` 指示节点表示 M200 Europe 序列在两个时间段之前一段时间的模型。  
+ 如果创建模型时只使用 ARTxp，则根节点的 **“挖掘图例”** 只包含事例总数。 对于每个非根节点，“挖掘图例”  会包含树杈的更详细的信息：例如，它可能会显示节点的公式和事例数量。 图例中的“规则”  包含标识序列的信息以及规则适用的时间段。 例如，图例文本 `M200 Europe Amount -2` 指示节点表示 M200 Europe 序列在两个时间段之前一段时间的模型。  
   
  如果创建模型时只使用 ARIMA，则 **“模型”** 选项卡包含一个标题为 **“全部”** 的单个节点。 根节点的 **“挖掘图例”** 包含 ARIMA 公式。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66085982"
   
  使用缩放选项可以调整显示的时间范围。 也可以通过以下方法查看特定的时间范围：单击图表，将时间选定范围拖到图表上，然后再次单击图表以放大选定的范围。  
   
- 使用 **“预测步骤”** 可以选择要在模型中显示多少个未来时间 **“步骤”**。 如果选择 **“显示偏差”** 复选框，则查看器会提供错误栏，这样您就可以查看预测值的准确度。  
+ 使用 **“预测步骤”** 可以选择要在模型中显示多少个未来时间 **“步骤”** 。 如果选择 **“显示偏差”** 复选框，则查看器会提供错误栏，这样您就可以查看预测值的准确度。  
   
  [返回页首](#BKMK_ViewerTabs)  
   

@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061694"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 源编辑器（“列”页）
-  可以使用“ADO NET 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
+  可以使用“ADO NET 源编辑器”  对话框的“列”  页，将输出列映射到每个外部（源）列。  
   
  若要了解有关 ADO NET 源的详细信息，请参阅 [ADO NET Source](data-flow/ado-net-source.md)。  
   
@@ -28,9 +28,9 @@ ms.locfileid: "66061694"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 源的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 ADO NET 源。  
+2.  在“数据流”  选项卡上，双击 ADO NET 源。  
   
-3.  在 **“ADO NET 源编辑器”** 中，单击 **“列”**。  
+3.  在 **“ADO NET 源编辑器”** 中，单击 **“列”** 。  
   
 ## <a name="options"></a>选项  
  **可用外部列**  

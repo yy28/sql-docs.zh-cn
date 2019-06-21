@@ -10,12 +10,12 @@ ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 288f9e0d5a86e34db2fdd81163f229eff5275606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064338"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284811"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的行为更改
   本主题针对多维、表格、数据挖掘和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 部署介绍 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 中的行为更改。 与早期版本的 SQL Server 相比，当前版本中的功能的工作或交互方式会受到行为更改的影响。  
@@ -40,7 +40,7 @@ ms.locfileid: "66064338"
 |问题|Description|  
 |-----------|-----------------|  
 |在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用时，SQL Server 2008 R2 PowerPivot 工作簿将不会在不进行提示的情况下升级和刷新模型。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 PowerPivot 工作簿。|2008 R2 工作簿将在 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]中打开，但计划的刷新将不起作用。 如果查看刷新历史记录，您将会看到如下错误消息：<br /> "工作簿包含不受支持的 PowerPivot 模型。 该工作簿中的 PowerPivot 模型采用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支持的 PowerPivot 模型如下： <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **如何升级工作簿：** 工作簿升级到 2012年工作簿之前，计划的刷新将不起作用。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：<br /><br /> 下载工作簿并在安装有 SQL Server 2012 PowerPivot for Excel 外接程序的 Microsoft Excel 2010 中打开该工作簿。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> 下载该工作簿并在 Microsoft Excel 2013 中打开它。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> <br /><br /> 工作簿升级的详细信息，请参阅[升级工作簿和计划的数据刷新&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。|  
-|DAX [ALL Function](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)中的行为更改。|在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]之前，如果您在“标记为日期表”中指定 [Date] 列以在时间智能中使用，且将 [Date] 列作为参数传递到 ALL 函数或作为筛选器传递给 CALCULATE 函数，则无论日期列中的切片器如何，都忽略表中所有列的所有筛选器。<br /><br /> 例如，<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]以前，对于 DateTable 的所有列忽略所有筛选器，无论作为参数传递给 ALL 的 [Date] 列是什么。<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 和 Excel 2013 的 PowerPivot 中，此行为将仅对作为参数传递给 ALL 的指定列忽略筛选器。<br /><br /> 要解决新行为问题，忽略作为整个表的筛选器的所有列，您可以从参数中排除 [Date] 列，例如：<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 这将产生与 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]以前的行为相同的结果。|  
+|DAX [ALL Function](/dax/all-function-dax)中的行为更改。|在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]之前，如果您在“标记为日期表”中指定 [Date] 列以在时间智能中使用，且将 [Date] 列作为参数传递到 ALL 函数或作为筛选器传递给 CALCULATE 函数，则无论日期列中的切片器如何，都忽略表中所有列的所有筛选器。<br /><br /> 例如，<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]以前，对于 DateTable 的所有列忽略所有筛选器，无论作为参数传递给 ALL 的 [Date] 列是什么。<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 和 Excel 2013 的 PowerPivot 中，此行为将仅对作为参数传递给 ALL 的指定列忽略筛选器。<br /><br /> 要解决新行为问题，忽略作为整个表的筛选器的所有列，您可以从参数中排除 [Date] 列，例如：<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 这将产生与 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]以前的行为相同的结果。|  
   
 ##  <a name="bkmk_sql2012"></a> 中的行为更改 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  本节介绍针对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]功能报告的行为更改。 这些更改也适用于 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
@@ -76,15 +76,15 @@ ms.locfileid: "66064338"
   
 1.  单击向下箭头以打开菜单，找到单独文档。  
   
-2.  单击 **“管理权限”** 。  
+2.  单击 **“管理权限”**。  
   
-3.  默认情况下，库将继承权限。 若要更改此库中单独工作簿的权限，请单击 **“停止继承权限”** 。  
+3.  默认情况下，库将继承权限。 若要更改此库中单独工作簿的权限，请单击 **“停止继承权限”**。  
   
 4.  按需要针对 PowerPivot 工作簿的附加权限的用户名或组名选中复选框。 附加权限将允许这些用户链接到嵌入的 PowerPivot 数据并且使用这些数据作为其他文档中的外部数据源。  
   
-5.  单击 **“编辑用户权限”** 。  
+5.  单击 **“编辑用户权限”**。  
   
-6.  选择 **“读取”** 权限，然后单击 **“确定”** 。  
+6.  选择 **“读取”** 权限，然后单击 **“确定”**。  
   
 #### <a name="powerpivot-gallery-new-rules-for-snapshot-generation-for-some-powerpivot-workbooks"></a>PowerPivot 库：为一些 PowerPivot 工作簿生成快照的新规则  
  此版本中引入了在 PowerPivot 库中生成快照映像的新要求，这消除了泄露信息的潜在根源（也即，显示来自您无权查看的数据源的数据的快照）。 这些要求仅适用于您每次查看 PowerPivot 工作簿时都连接到外部数据源的工作簿。 如果您只使用直观显示嵌入 PowerPivot 数据的工作簿，将看不到在 PowerPivot 库中生成快照的方式发生了什么变化。  
@@ -100,9 +100,9 @@ ms.locfileid: "66064338"
  ![GMNI_PowerPivotGalleryIcon_Locked](media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")  
   
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>负载平衡请求的新默认设置已从“循环”更改为“基于运行状况”  
- PowerPivot 服务应用程序具有一些默认设置，这些设置确定如何在场中的多台 PowerPivot for SharePoint 服务器之间分配对 PowerPivot 数据的请求。 在前一版本中，默认设置是 **“循环”** ，其中请求在可用服务器之间按顺序进行分配。 在这一版本中，默认值现在为 **“基于运行状况”** 。 PowerPivot 服务应用程序使用服务器运行状况统计数据（如可用内存或 CPU）来确定哪些服务器实例获取 xt 请求。  
+ PowerPivot 服务应用程序具有一些默认设置，这些设置确定如何在场中的多台 PowerPivot for SharePoint 服务器之间分配对 PowerPivot 数据的请求。 在前一版本中，默认设置是 **“循环”**，其中请求在可用服务器之间按顺序进行分配。 在这一版本中，默认值现在为 **“基于运行状况”**。 PowerPivot 服务应用程序使用服务器运行状况统计数据（如可用内存或 CPU）来确定哪些服务器实例获取 xt 请求。  
   
- 如果您从前一版本升级服务器，PowerPivot 服务应用程序将保留以前的默认设置（ **“循环”** ）。 若要使用 **“基于运行状况”** 分配方法设置，您必须修改配置设置。 有关详细信息，请参阅[创建和配置 PowerPivot 服务应用程序在管理中心内](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
+ 如果您从前一版本升级服务器，PowerPivot 服务应用程序将保留以前的默认设置（**“循环”**）。 若要使用 **“基于运行状况”** 分配方法设置，您必须修改配置设置。 有关详细信息，请参阅[创建和配置 PowerPivot 服务应用程序在管理中心内](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [后向兼容性](../../2014/getting-started/backward-compatibility.md)   
