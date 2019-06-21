@@ -1,5 +1,5 @@
 ---
-title: getType 方法 (SQLServerResultSet) |Microsoft Docs
+title: getType 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ffbc4a02-e851-431c-bc1a-7ab381d982bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9beb1e335faa29dc83e727e2366208172713909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 38cc11c791666ebefadf71a412ea5a5858c03f34
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726795"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66786144"
 ---
 # <a name="gettype-method-sqlserverresultset"></a>getType 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public int getType()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示当前游标类型的 int 值，可取值如下：  
+ 指示当前游标类型的 int  值，可取值如下：  
   
  ResultSet.TYPE_FORWARD_ONLY  
   
@@ -48,7 +48,7 @@ public int getType()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getType 方法由 java.sql.ResultSet 接口中的 getType 方法指定。  
+ 此 getType 方法是由 java.sql.ResultSet 接口中的 getType 方法指定的。  
   
  此方法可以用于确定实际游标类型。 如果应用程序选择了 TYPE_FORWARD_ONLY 或使用了默认游标类型，将返回 TYPE_FORWARD_ONLY。  
   

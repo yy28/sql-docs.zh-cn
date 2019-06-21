@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 860014601394e4e39436e3aa10de8ebcff55ddd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510723"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790282"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,8 +46,8 @@ Microsoft JDBC Driver for SQL Server 附带以下内置列主密钥存储提供�
 | 类                                                 | 描述                                        | 提供程序（查找）名称  | 预先注册？ |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
 | **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure 密钥保管库密钥存储提供程序。 | AZURE_KEY_VAULT         | 否                 |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | 用于 Windows 证书存储的提供程序。      | MSSQL_CERTIFICATE_STORE | 用户帐户控制                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java 密钥存储提供程序                   | MSSQL_JAVA_KEYSTORE     | 用户帐户控制                |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | 用于 Windows 证书存储的提供程序。      | MSSQL_CERTIFICATE_STORE | 是                |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java 密钥存储提供程序                   | MSSQL_JAVA_KEYSTORE     | 是                |
 
 对于预注册的密钥存储提供程序，不需要更改任何应用程序代码以使用这些提供程序，但请注意以下各项：
 
@@ -99,9 +99,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > [!IMPORTANT]
 >  如果使用 Azure 密钥保管库密钥存储提供程序时，JDBC 驱动程序的 Azure 密钥保管库实现这些库 （GitHub) 必须是包含在应用程序上具有依赖项：
 >
->  [azure sdk 的 java](https://github.com/Azure/azure-sdk-for-java)
+>  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-与 active directory-库-用于-java 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [azure-activedirectory-library-for-java 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > 有关如何在 Maven 项目中包含这些依赖关系的示例，请参阅[下载 ADAL4J 和 AKV 依赖项使用 Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -130,7 +130,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> 尽管这篇文章中的其他密钥存储提供程序可在驱动程序支持的所有平台上，JDBC 驱动程序的 SQLServerColumnEncryptionCertificateStoreProvider 实现是 Windows 在操作系统上可用。 它将对可用的驱动程序包中的 sqljdbc_auth.dll 的依赖项。 若要使用此提供程序，请将 sqljdbc_auth.dll 文件复制计算机中 Windows 系统路径下的 JDBC 驱动程序安装目录中。 也可以设置 java.libary.path 系统属性以指定 sqljdbc_auth.dll 的目录。 如果您运行 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 sqljdbc_auth.dll 文件，即使操作系统是 x64 版本也不例外。 如果您在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 sqljdbc_auth.dll 文件。 例如，如果使用的是 32 位 JVM，并且 JDBC 驱动程序安装在默认目录中，可以在 Java 应用程序启动时使用以下虚拟机 (VM) 参数来指定 DLL 的位置：`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 尽管这篇文章中的其他密钥存储提供程序可在驱动程序支持的所有平台上，JDBC 驱动程序的 SQLServerColumnEncryptionCertificateStoreProvider 实现是 Windows 在操作系统上可用。 它将对可用的驱动程序包中的 sqljdbc_auth.dll 的依赖项。 若要使用此提供程序，请将 sqljdbc_auth.dll 文件复制计算机中 Windows 系统路径下的 JDBC 驱动程序安装目录中。 也可以设置 java.library.path 系统属性来指定 sqljdbc_auth.dll 的目录。 如果您运行 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 sqljdbc_auth.dll 文件，即使操作系统是 x64 版本也不例外。 如果您在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 sqljdbc_auth.dll 文件。 例如，如果使用的是 32 位 JVM，并且 JDBC 驱动程序安装在默认目录中，可以在 Java 应用程序启动时使用以下虚拟机 (VM) 参数来指定 DLL 的位置：`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>使用 Java 密钥存储提供程序
 JDBC 驱动程序附带 Java 密钥存储的内置密钥存储提供程序实现。 如果**keyStoreAuthentication**连接字符串属性是在连接字符串中存在并设置为"JavaKeyStorePassword"，该驱动程序自动实例化并注册为 Java 密钥存储提供程序。 Java 密钥存储提供程序的名称是 MSSQL_JAVA_KEYSTORE。 此名称还可以通过使用 SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API 查询。 
@@ -338,7 +338,7 @@ public class AlwaysEncrypted {
 ```
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>为应用程序查询启用始终加密
-若要对参数启用加密，以及对面向加密列的查询结果启用解密，最简单的方法是将 columnEncryptionSetting 连接字符串关键字的值设置为“已启用”。
+若要对参数启用加密，以及对面向加密列的查询结果启用解密，最简单的方法是将 columnEncryptionSetting 连接字符串关键字的值设置为“已启用”   。
 
 以下连接字符串是 JDBC 驱动程序中启用始终加密的示例：
 
@@ -360,14 +360,14 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-还可以为单个查询启用始终加密。 有关详细信息，请参阅[控制的始终加密对性能影响](#controlling-the-performance-impact-of-always-encrypted)。 启用 Always Encrypted 不足以成功实现加密或解密。 你还需要确保：
+还可以为单个查询启用始终加密。 有关详细信息，请参阅[控制 Always Encrypted 对性能的影响](#controlling-the-performance-impact-of-always-encrypted)。 启用 Always Encrypted 不足以成功实现加密或解密。 你还需要确保：
 - 应用程序具有 *查看任意列主密钥定义* 和 *查看任意列加密密钥定义* 数据库权限，这是访问数据库中始终加密密钥的相关元数据所必需的权限。 有关详细信息，请参阅 [Always Encrypted（数据库引擎）中的权限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
 - 应用程序可以访问用于保护列加密密钥的列主密钥，以便对查询到的数据库列加密。 若要使用 Java 密钥存储提供程序，你需要提供连接字符串中的其他凭据。 有关详细信息，请参阅[使用 Java 密钥存储提供程序](#using-java-key-store-provider)。
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>配置如何将 java.sql.Time 值发送到服务器
-sendTimeAsDatetime 连接属性用于配置将 java.sql.Time 值发送到服务器的方式。 设置为 false 时，将为 SQL Server 时类型发送的时间值。 何时设置为 true，值发送为 datetime 类型的时间。 如果时间列已加密， **sendTimeAsDatetime**属性必须为 false，因为加密的列不支持从时间转换为日期时间。 另请注意，此属性是通过默认为 true，因此，使用加密的时间列时将需要将其设置为 false。 否则，该驱动程序将引发异常。 SQLServerConnection 类从驱动程序版本 6.0 开始，有两种方法以编程方式配置此属性的值：
+sendTimeAsDatetime  连接属性用于配置将 java.sql.Time 值发送到服务器的方式。 设置为 false 时，将为 SQL Server 时类型发送的时间值。 何时设置为 true，值发送为 datetime 类型的时间。 如果时间列已加密， **sendTimeAsDatetime**属性必须为 false，因为加密的列不支持从时间转换为日期时间。 另请注意，此属性是通过默认为 true，因此，使用加密的时间列时将需要将其设置为 false。 否则，该驱动程序将引发异常。 SQLServerConnection 类从驱动程序版本 6.0 开始，有两种方法以编程方式配置此属性的值：
  
-* public void setSendTimeAsDatetime (布尔 sendTimeAsDateTimeValue)
+* public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
 
 此属性的详细信息，请参阅[如何配置 java.sql.Time 值发送到服务器](configuring-how-java-sql-time-values-are-sent-to-the-server.md)。
@@ -578,13 +578,13 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 - 如果客户端应用程序通过数据库连接发送的大多数查询访问的是加密列，则可使用以下指南：
 
-    - 将“columnEncryptionSetting”连接字符串关键字设置为“已启用”。
+    - 将“columnEncryptionSetting”连接字符串关键字设置为“已启用”   。
     - 对于不访问任何加密列的单个查询，则设置 SQLServerStatementColumnEncryptionSetting.Disabled。 此设置将禁止调用 sys.sp_describe_parameter_encryption，同时禁止尝试对结果集中的任何值解密。
     - 对于其参数不需要加密但会从加密列检索数据的单个查询，则设置 SQLServerStatementColumnEncryptionSetting.ResultSet。 此设置将禁止调用 sys.sp_describe_parameter_encryption 和参数加密。 查询将能够解密来自加密列的结果。
 
 - 如果客户端应用程序通过数据库连接发送的大多数查询不访问加密列，则可使用以下指南：
 
-    - 将“columnEncryptionSetting”连接字符串关键字设置为“已禁用”。
+    - 将“columnEncryptionSetting”连接字符串关键字设置为“已禁用”   。
     - 对于有参数需要加密的单个查询，则设置 SQLServerStatementColumnEncryptionSetting.Enabled。 此设置将允许调用 sys.sp_describe_parameter_encryption，同时允许对从加密列中检索到的任何查询结果解密。
     - 对于其参数不需要加密但会从加密列检索数据的查询，则设置 SQLServerStatementColumnEncryptionSetting.ResultSet。 此设置将禁止调用 sys.sp_describe_parameter_encryption 和参数加密。 查询将能够解密来自加密列的结果。
 

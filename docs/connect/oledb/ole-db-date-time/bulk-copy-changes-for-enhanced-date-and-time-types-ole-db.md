@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 2e4291d32de1b18edb65560e21d16c76eb692f3d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769544"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>增强的日期和时间类型的大容量复制更改（OLE DB）
@@ -98,7 +98,7 @@ ms.locfileid: "66769544"
   
  **OLE DB 说明** 以下转换由 IBCPSession 执行。 IRowsetFastLoad 使用 OLE DB 转换中定义[转换到服务器从客户端执行](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)。 请注意，日期时间值将舍入为 1 秒的 1/300，smalldatetime 值在执行下述客户端转换后将秒设置为零。 日期时间舍入将传播至小时和分钟，而非日期。  
   
-|若要：<br /><br /> From|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|转换后 -><br /><br /> From|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |date|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
 |Time|N/A|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  
@@ -118,7 +118,7 @@ ms.locfileid: "66769544"
 |-|不支持任何转换。<br />|  
 |1|如果提供的数据不是有效的则发出错误。 对于 datetimeoffset 值，在转换为 UTC 后时间部分必须处于规定范围内，即使不要求转换为 UTC。 这是因为 TDS 和服务器始终规范化 UTC 的 datetimeoffset 值中的时间。 因此，在转换为 UTC 后，客户端必须检查时间部分是否处于支持的范围内。|  
 |2|忽略时间部分。|  
-|3|如果发生具有数据丢失的截断，则会发出错误。 对于 datetime2，秒的小数形式位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> **类型：** DBTIME2<br /><br /> **暗指的小数位数 0** 8<br /><br /> **暗指的小数位数 1..9** 1..9<br /><br /> <br /><br /> **类型：** DBTIMESTAMP<br /><br /> **暗指的小数位数 0：** 19<br /><br /> **暗指的小数位数 1..9：** 21..29<br /><br /> <br /><br /> **类型：** DBTIMESTAMPOFFSET<br /><br /> **暗指的小数位数 0：** 26<br /><br /> **暗指的小数位数 1..9：** 28..36|  
+|3|如果发生具有数据丢失的截断，则会发出错误。 对于 datetime2，秒的小数部分位数（小数位数）是由目标列的大小确定（以下表为依据）。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> **类型：** DBTIME2<br /><br /> **暗指的小数位数 0** 8<br /><br /> **暗指的小数位数 1..9** 1..9<br /><br /> <br /><br /> **类型：** DBTIMESTAMP<br /><br /> **暗指的小数位数 0：** 19<br /><br /> **暗指的小数位数 1..9：** 21..29<br /><br /> <br /><br /> **类型：** DBTIMESTAMPOFFSET<br /><br /> **暗指的小数位数 0：** 26<br /><br /> **暗指的小数位数 1..9：** 28..36|  
 |4|忽略日期部分。|  
 |5|时区设置为 UTC（例如 00:00）。|  
 |6|时间设置为零。|  

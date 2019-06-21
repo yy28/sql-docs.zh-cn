@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9a871bbbb7135d22771b3cd769a6ef0e5eb1bbe9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66768754"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>setNCharacterStream 方法 (int, java.io.Reader)
@@ -32,7 +32,7 @@ public final void setNCharacterStream(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *parameterIndex*  
+ parameterIndex   
   
  指示参数索引的 int  。  
   

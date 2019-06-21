@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 809e16fce7cac83b6ba09fcef676c8da920b0dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c63c526aed7bfae6027f3a9aa028bc2a2e20fbef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759675"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799647"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,15 +31,15 @@ public void setPoolable(boolean poolable) throws SQLException
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *可入池*  
+ poolable   
   
- 如果为 true，则请求语句入池。 如果为 false，则请求语句不入池。  
+ 如果为 true  ，则请求语句入池。 如果为 false  ，则请求语句不入池。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- poolable 参数中指定的值是对语句池实现的提示，用于指示应用程序是否希望语句入池。 语句池管理器决定应用程序是否使用该提示。  
+ poolable  参数中指定的值是对语句池实现的提示，用于指示应用程序是否希望语句入池。 语句池管理器决定应用程序是否使用该提示。  
   
  语句的池值既应用于由驱动程序实现的内部语句缓存，也应用于由应用程序服务器和其他应用程序实现的外部语句缓存。  
   

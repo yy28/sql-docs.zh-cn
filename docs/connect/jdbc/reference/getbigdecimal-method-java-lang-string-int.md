@@ -1,5 +1,5 @@
 ---
-title: getBigDecimal 方法 （java.lang.String，int） |Microsoft Docs
+title: getBigDecimal 方法 (java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6967ba55-9c9a-4f6f-a4d2-8ee9c9a82c14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 645bc4e075d35c1c3e60e988721ec03bd4bc5267
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 33adfc684528ddfcdab7373f251d743ac75dd593
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722905"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799878"
 ---
 # <a name="getbigdecimal-method-javalangstring-int"></a>getBigDecimal 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +40,13 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCol*  
+ sCol   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
  *scale*  
   
- 指示小数点右边的位数的 int。  
+ 指示小数点右边的位数的 int  。  
   
 ## <a name="return-value"></a>返回值  
  一个 BigDecimal 对象。  

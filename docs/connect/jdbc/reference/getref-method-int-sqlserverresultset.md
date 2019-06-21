@@ -1,5 +1,5 @@
 ---
-title: getRef 方法 (int) (SQLServerResultSet) |Microsoft Docs
+title: getRef 方法 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fc3f2d79-7cc3-47fa-a05e-4f7939d7f090
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd439052732d17a146adac8c89bc649f8d54f3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e00336655f9948becf4d68203dcf6fb137125b4c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786295"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800227"
 ---
 # <a name="getref-method-int-sqlserverresultset"></a>getRef 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public java.sql.Ref getRef(int i)
 #### <a name="parameters"></a>Parameters  
  *i*  
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
  Ref 对象。  
@@ -47,7 +47,7 @@ public java.sql.Ref getRef(int i)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getRef 方法由 java.sql.ResultSet 接口中的 getRef 方法指定。  
+ 此 getRef 方法是由 java.sql.ResultSet 接口中的 getRef 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getRef 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   

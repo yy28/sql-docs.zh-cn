@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9d591d3fb8e3852564429742a4bd0c2cf3af2653
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028306"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513159"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 课：创建示例订阅服务器数据库
 
@@ -25,12 +25,12 @@ ms.locfileid: "50028306"
   
 1.  启动 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，打开到 [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)]实例的连接。  
   
-2.  右键单击“数据库”，选择“新建数据库”。  
+2.  右键单击“数据库”，选择“新建数据库”  。  
   
-3.  在“新建数据库”对话框的“数据库名称”中，键入“订阅者”。 
+3.  在“新建数据库”对话框的“数据库名称”中，键入“订阅者”   。 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  在工具栏中，单击“新建查询”按钮。  
+5.  在工具栏中，单击“新建查询”按钮  。  
   
 6.  将下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句复制到空查询中：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "50028306"
     GO  
     ```  
   
-7.  单击 **“!在工具栏上执行** 。  
+7.  单击工具栏上的“!执行”  。  
   
 8.  使用 SELECT 语句查看您是否有三行数据。 例如： `select * from OrderInfo`  
   

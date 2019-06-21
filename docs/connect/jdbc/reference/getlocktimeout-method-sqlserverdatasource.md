@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25b16ae2c31233ee837c86cc156ddcb2d4ffa901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 120a90168d46f81d57115812c832c5c6674cf436
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793207"
 ---
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>getLockTimeout 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返回指示数据库在报告锁定超时之前要等待的毫秒数的 int 值。  
+  返回指示数据库在报告锁定超时之前要等待的毫秒数的 int  值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,10 +36,10 @@ public int getLockTimeout()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含数据库要等待的毫秒数的 int 值。  
+ 包含数据库要等待的毫秒数的 int  值。  
   
 ## <a name="remarks"></a>Remarks  
- 锁定超时值是数据库报告锁定超时之前要等待的毫秒数。默认值 -1 表示可以无限期等待。 如果指定，该值将成为此连接上所有语句的默认值。  
+ 锁定超时是指在等待多少毫秒后数据库报告锁定超时。默认值 -1 表示无限期等待。 如果指定，该值将成为此连接上所有语句的默认值。  
   
 > [!NOTE]  
 >  值为 0 表示不等待。 如果未设置 lockTimeout 属性，getLockTimeout 方法将返回默认值 -1。  

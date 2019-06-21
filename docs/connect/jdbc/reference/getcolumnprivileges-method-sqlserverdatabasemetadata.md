@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 934a230e295532231f52ac3ed787b6a4de366d54
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66763378"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges 方法 (SQLServerDatabaseMetaData)
@@ -69,7 +69,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 |“属性”|类型|描述|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|目录名称。|  
-|TABLE_SCHEM|**String**|表架构。|  
+|TABLE_SCHEM|**String**|表架构名称。|  
 |TABLE_NAME|**String**|表名称。|  
 |COLUMN_NAME|**String**|列名称。|  
 |GRANTOR|**String**|授予访问权限的对象。|  

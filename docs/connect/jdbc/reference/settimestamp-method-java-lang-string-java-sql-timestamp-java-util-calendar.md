@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 22e8d6b8d6fe6bd4c43e012732f44916012759eb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66768741"
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp-javautilcalendar"></a>setTimestamp 方法 (java.lang.String, java.sql.Timestamp, java.util.Calendar)
@@ -38,7 +38,7 @@ public void setTimestamp(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCol*  
+ sCol   
   
  包含参数名称的字符串  。  
   
@@ -54,7 +54,7 @@ public void setTimestamp(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setTimestamp 方法是由 java.sql.PreparedStatement 接口中的 setTimestamp 方法指定的。  
+ 此 setTimestamp 方法是由 java.sql.CallableStatement 接口中的 setTimestamp 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [setTimestamp 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   

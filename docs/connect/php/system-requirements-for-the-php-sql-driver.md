@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+manager: jroth
+ms.openlocfilehash: 0cea4c62c7976e1f6d84dc046abc1046179ef125
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658407"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803913"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 系统要求
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "58658407"
 
 如果正在下载 64 位版本的 Windows 上的驱动程序的 Windows 版本，则 ODBC 64 位安装程序将安装 32 位和 64 位 ODBC 驱动程序。 如果使用 Windows 的 32 位版本，使用 ODBC x86 安装程序。 在非 Windows 平台上只有 64 位版本的驱动程序可用。
 
-|SQL Server 驱动程序版本的 PHP&#8594;<br />&#8595;ODBC 驱动程序版本|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
+|SQL Server 驱动程序版本的 PHP&#8594;<br />&#8595; ODBC 驱动程序版本|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |ODBC 驱动程序 17+ |是|是|是| | | | |
 |ODBC 驱动程序 13.1|是|是|是|是|是| | |

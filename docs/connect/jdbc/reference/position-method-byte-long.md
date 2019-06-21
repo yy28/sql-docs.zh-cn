@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3844d294c72539e752f944b604409b4967a8c166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e6056412f6ab2726112d5286f2f52c83ff6691cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603929"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802466"
 ---
 # <a name="position-method-byte-long"></a>position 方法 (byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的 byte 数组模式和起始索引返回 BLOB 中指定模式的位置。  
+  根据给定的 byte  数组模式和起始索引返回 BLOB 中指定模式的位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,16 +37,16 @@ public long position(byte[] bPattern,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *bPattern*  
+ bPattern   
   
  要搜索的模式。  
   
- start  
+ start   
   
  要搜索的起始索引。  
   
 ## <a name="return-value"></a>返回值  
- 指示找到模式的位置的 long 值，如果未找到，则为 -1。  
+ 指示找到模式的位置的 long  值，如果未找到，则为 -1。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

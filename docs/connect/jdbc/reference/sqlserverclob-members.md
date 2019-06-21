@@ -1,5 +1,5 @@
 ---
-title: SQLServerClob 成员 |Microsoft Docs
+title: SQLServerClob 成员 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b77219ffbd397b830e1706a84ce5b7ae00aaa6e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0940e17ada4fb6ebf9c18667bff55a4fe4c42799
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736715"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803116"
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47736715"
   
 ## <a name="constructors"></a>构造函数  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|初始化 SQLServerClob 类的新实例。|  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47736715"
   
 ## <a name="methods"></a>方法  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|此方法可释放 CLOB 对象以及它所持有的资源。|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|将 Clob 作为 ASCII 流具体化。|  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba5046a2036b88c3ec55499a6e86609d8b050f7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 604e39fcf2d8bd6bfb218fe33fda391c2b53403a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611055"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762240"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString 方法 (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *pos*  
+ pos   
   
  开始写入 CLOB 的位置。  
   
@@ -47,11 +47,11 @@ public int setString(long pos,
   
  要写入 CLOB 的字符串。  
   
- offset  
+ offset   
   
  字符串中的偏移量，从这个位置开始读取字符。  
   
- len  
+ len   
   
  将要写入的字符数。  
   
@@ -62,7 +62,7 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 此 setString 方法由 java.sql.Clob 接口中的 setString 方法指定。  
+ 此 setString 方法是由 java.sql.Clob 接口中的 setString 方法指定的。  
   
  从指定位置开始覆盖字符数据，并可以覆盖 CLOB 的初始长度。 指定“位置+1”值将追加到字符串末尾。 指定“位置+2”或更大值（或零或更小值）会引发位置错误。  
   

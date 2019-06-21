@@ -11,11 +11,11 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: e198f561fd4f6bcec390ef8632c1cdc96f2810d6
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744796"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62854677"
 ---
 # <a name="universal-data-link-udl-configuration"></a>通用数据链接 (UDL) 配置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "56744796"
 |“用户名”|键入要在登录到数据源时用于身份验证的用户 ID。|
 |Password|键入要用于身份验证，当你登录到数据源的密码。|
 |空密码|选中此选项，使指定的提供程序连接字符串中使用空密码。|
-|允许保存密码|选中时，允许以与连接字符串一起保存的密码。 是否在连接字符串中包括密码取决于调用应用程序的功能。 <br/><br/>注意：如果保存密码，则密码在返回和保存时是未屏蔽和未加密的。|
+|允许保存密码|选中时，允许以与连接字符串一起保存的密码。 是否在连接字符串中包括密码取决于调用应用程序的功能。 <br/><br/>注意：  如果保存密码，则密码在返回和保存时是未屏蔽和未加密的。|
 |对数据使用强加密|选择它时，将加密数据，通过连接进行传递。|
 |信任服务器证书|选中后，将验证服务器的证书。 服务器的证书必须具有正确的主机名的服务器和受信任的证书颁发机构颁发。|
 |选择数据库|选择或键入你想要访问的数据库名称。|

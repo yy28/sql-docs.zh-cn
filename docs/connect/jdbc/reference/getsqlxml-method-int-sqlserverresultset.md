@@ -1,5 +1,5 @@
 ---
-title: getBigDecimal 方法 (int) (SQLServerResultSet) | Microsoft Docs
+title: getSQLXML 方法 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6222dddd0b563400506d6728062f031bd48a1c50
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66774165"
 ---
 # <a name="getsqlxml-method-int-sqlserverresultset"></a>getSQLXML 方法 (int) (SQLServerResultSet)
@@ -42,7 +42,7 @@ public final java.sql.SQLXML getSQLXML(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getSQLXML 方法是由 java.sql.CallableStatement 接口中的 getSQLXML 方法指定的。  
+ 此 getSQLXML 方法是由 java.sql.ResultSet 接口中的 getSQLXML 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getSQLXML 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   

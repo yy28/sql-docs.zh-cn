@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3fe74b50-9ccd-4973-a93a-6da2c20a4154
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5cf5ece7dff3a6e749025828ef0886ccb15eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b991bd56c730fbee833aca2aa965b294df05a7e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799694"
 ---
 # <a name="getblob-method-javalangstring"></a>getBlob 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,9 +36,9 @@ public java.sql.Blob getBlob(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCol*  
+ sCol   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  一个 Blob 对象。  

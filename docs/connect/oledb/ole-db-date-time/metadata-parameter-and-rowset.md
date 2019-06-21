@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 1109aeea10d08f3447f789698a5d464475ae4aaa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769253"
 ---
 # <a name="metadata---parameter-and-rowset"></a>元数据 - 参数和行集
@@ -40,7 +40,7 @@ ms.locfileid: "66769253"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  通过 prgParamInfo 在 DBPARAMINFO 结构中返回以下信息  ：  
   
-|参数类型|wType |ulParamSize |bPrecision |bScale |*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|参数类型|wType |ulParamSize |bPrecision |bScale |dwFlags <br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
 |日期|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  
@@ -56,7 +56,7 @@ ms.locfileid: "66769253"
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>ICommandWithParameters::SetParameterInfo 和隐含的参数类型  
  在 DBPARAMBINDINFO 结构中提供的信息必须符合以下规定：  
   
-|*pwszDataSourceType*<br /><br /> （特定于访问接口）|*pwszDataSourceType*<br /><br /> （一般 OLE DB）|ulParamSize |bScale |  
+|pwszDataSourceType <br /><br /> （特定于访问接口）|pwszDataSourceType <br /><br /> （一般 OLE DB）|ulParamSize |bScale |  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|忽略|  
 |日期|DBTYPE_DBDATE|6|忽略|  
@@ -73,7 +73,7 @@ ms.locfileid: "66769253"
   
  不调用 icommandwithparameters:: Setparameterinfo 时，该提供程序，如下所示意味着 iaccessor:: Createaccessor 中指定的绑定类型的服务器类型：  
   
-|绑定类型|*pwszDataSourceType*<br /><br /> （特定于访问接口）|  
+|绑定类型|pwszDataSourceType <br /><br /> （特定于访问接口）|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
 |DBTYPE_DBDATE|日期|  
@@ -119,7 +119,7 @@ ms.locfileid: "66769253"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 结构返回以下信息：  
   
-|参数类型|wType |ulColumnSize |bPrecision |bScale |*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|参数类型|wType |ulColumnSize |bPrecision |bScale |dwFlags <br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
 |日期|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  

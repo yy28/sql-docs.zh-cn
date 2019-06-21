@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c070bb12da865d1a5a43d2cb5ddf9a7f6a28fc5c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66763675"
 ---
 # <a name="getclob-method-javalangstring"></a>getClob 方法 (java.lang.String)
@@ -36,7 +36,7 @@ public java.sql.Clob getClob(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCol*  
+ sCol   
   
  包含参数名称的字符串  。  
   

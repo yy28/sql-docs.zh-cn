@@ -1,5 +1,5 @@
 ---
-title: refreshRow 方法 (SQLServerResultSet) |Microsoft Docs
+title: refreshRow 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 048fe245-157f-4fd8-be75-ce54b83e02b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 19bd400492ba8ce8547f48b83b2f94544bd28a2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b13711007627872af8076f40ccbe94c521c68583
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812615"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802125"
 ---
 # <a name="refreshrow-method-sqlserverresultset"></a>refreshRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

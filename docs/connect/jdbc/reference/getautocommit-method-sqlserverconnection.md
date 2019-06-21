@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: af1f67f4-f568-4e58-abcc-5c809a89b547
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba024f3ddafa4f4b0231774e244b145004d3bff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 78e6c28cf69b118b31d457569019710ed665c94e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662015"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799951"
 ---
 # <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean getAutoCommit()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果启用自动提交模式则为 **true**，否则为 **false**。  
+ 如果自动提交模式已启用，值为 true  ；否则，值为 false  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

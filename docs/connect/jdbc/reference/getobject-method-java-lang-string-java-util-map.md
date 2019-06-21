@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 59df8455dd856879d8c03a56de67cad6598527c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 673874b8019c141076c83958d73b9d4ba5846a8b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762845"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787558"
 ---
 # <a name="getobject-method-javalangstring-javautilmap"></a>getObject 方法 (java.lang.String, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,16 +40,16 @@ public java.lang.Object getObject(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCol*  
+ sCol   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
  *m*  
   
  Map 对象。  
   
 ## <a name="return-value"></a>返回值  
- Object 值。  
+ Object 值  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -63,13 +63,13 @@ public java.lang.Object getObject(java.lang.String sCol,
   
  从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 开始：  
   
--   date 类型的值将作为 java.sql.Date 对象返回。  
+-   date 类型的值将作为 java.sql.Date 对象返回  。  
   
--   time 类型的值将作为 java.sql.Time 对象返回。  
+-   time 类型的值将作为 java.sql.Time 对象返回  。  
   
--   datetime2 类型的值将作为 java.sql.Timestamp 对象返回。  
+-   datetime2 类型的值将作为 java.sql.Timestamp 对象返回  。  
   
--   datetimeoffset 类型的值将作为 microsoft.sql.DateTimeOffset 对象返回。  
+-   datetimeoffset 类型的值将作为 microsoft.sql.DateTimeOffset 对象返回  。  
   
 ## <a name="see-also"></a>另请参阅  
  [getObject 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   

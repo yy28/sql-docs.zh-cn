@@ -30,20 +30,20 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 729d2f7288e6156cdd0688f6eed4b3e5acada5ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796069"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 数据类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了 xml 数据类型，它可用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储 XML 文档和片段。 xml 数据类型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的内置数据类型，在某些方面类似于其他内置类型（如 int 和 varchar）。 与使用其他内置类型一样，可以在创建表时将 xml 数据类型用作列类型，也可以将其用作变量类型、参数类型或函数返回类型，还可以将其用在 CAST 和 CONVERT 函数中。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了 xml 数据类型，它可用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储 XML 文档和片段  。 xml 数据类型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的内置数据类型，在某些方面类似于其他内置类型（如 int 和 varchar）    。 与使用其他内置类型一样，可以在创建表时将 xml 数据类型用作列类型，也可以将其用作变量类型、参数类型或函数返回类型，还可以将其用在 CAST 和 CONVERT 函数中  。  
   
 ## <a name="programming-considerations"></a>编程时的注意事项  
  XML 可以是自描述的，即可以根据需要包含一个 XML 标头来指定文档的编码，例如：  
@@ -66,23 +66,23 @@ ms.locfileid: "52391454"
 -   **ISequentialStream**  
   
 > [!NOTE]  
->  适用于 SQL Server 的 OLE DB 驱动程序不包含 SAX 读取器，但 ISequentialStream 可在 MSXML 中轻松传递到 SAX 和 DOM 对象。  
+>  适用于 SQL Server 的 OLE DB 驱动程序不包含 SAX 读取器，但 ISequentialStream 可在 MSXML 中轻松传递到 SAX 和 DOM 对象  。  
   
- ISequentialStream 须用于检索大型 XML 文档。 用于其他大值类型的相同技术也适用于 XML。 有关详细信息，请参阅[使用大值类型](../../oledb/features/using-large-value-types.md)。  
+ ISequentialStream 须用于检索大型 XML 文档  。 用于其他大值类型的相同技术也适用于 XML。 有关详细信息，请参阅[使用大值类型](../../oledb/features/using-large-value-types.md)。  
   
- 还可以通过常见接口（如 IRow::GetColumns、IRowChange::SetColumns 和 ICommand::Execute）检索、插入或更新行集中类型为 XML 的列中存储的数据。 与检索情况类似，应用程序可将文本字符串或 ISequentialStream 传递给适用于 SQL Server 的 OLE DB 驱动程序。  
+ 还可以通过常见接口（如 IRow::GetColumns、IRowChange::SetColumns 和 ICommand::Execute）检索、插入或更新行集中类型为 XML 的列中存储的数据    。 与检索情况类似，应用程序可将文本字符串或 ISequentialStream 传递给适用于 SQL Server 的 OLE DB 驱动程序  。  
   
 > [!NOTE]  
->  要通过 ISequentialStream 接口以字符串格式发送 XML 数据，必须通过指定 DBTYPE_IUNKNOWN 获取 ISequentialStream 并在绑定中将其 pObject 参数设置为 Null。  
+>  要通过 ISequentialStream 接口以字符串格式发送 XML 数据，必须通过指定 DBTYPE_IUNKNOWN 获取 ISequentialStream 并在绑定中将其 pObject 参数设置为 Null    。  
   
- 当由于使用者缓冲区过小而导致已检索的 XML 数据被截断时，长度可能作为 0xffffffff 返回，这意味着长度为未知的。 此行为与将它实现为数据类型的行为一致，就是数据类型流式传输到客户端，但在实际数据之前不发送长度信息。 在某些情况下，如果提供程序已缓冲整个值（如 IRowset::GetData）且已执行数据转换，可能返回实际长度。  
+ 当由于使用者缓冲区过小而导致已检索的 XML 数据被截断时，长度可能作为 0xffffffff 返回，这意味着长度为未知的。 此行为与将它实现为数据类型的行为一致，就是数据类型流式传输到客户端，但在实际数据之前不发送长度信息。 在某些情况下，如果提供程序已缓冲整个值（如 IRowset::GetData）且已执行数据转换，可能返回实际长度  。  
   
  服务器会将发送到 SQL Server 的 XML 数据视为二进制数据。 此行为防止发生任何转换并允许 XML 分析器自动检测 XML 编码。 这样，就可以接受更广泛的 XML 文档（例如，以 UTF-8 编码的文档）作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的输入。  
   
  如果将输入 XML 绑定为 DBTYPE_WSTR，则应用程序必须确保已对其进行 Unicode 编码，以避免由于不必要的数据转换而可能导致损坏。  
   
 ### <a name="data-bindings-and-coercions"></a>数据绑定和强制  
- 下表描述将所列数据类型与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] xml 数据类型一同使用时出现的绑定和强制。  
+ 下表描述将所列数据类型与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] xml 数据类型一同使用时出现的绑定和强制  。  
   
 |数据类型|到服务器<br /><br /> **XML**|到服务器<br /><br /> **Non-XML**|从服务器<br /><br /> **XML**|从服务器<br /><br /> **Non-XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -91,11 +91,11 @@ ms.locfileid: "52391454"
 |DBTYPE_WSTR|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功<sup>4，6，12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_BSTR|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功 <sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|成功<sup>6，9，10</sup>|N/A <sup>2</sup>|成功<sup>5，6，12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|通过 ISequentialStream 的字节流<sup>7</sup>|N/A <sup>2</sup>|通过 ISequentialStream 的字节流<sup>11</sup>|N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|通过 ISequentialStream 的字节流<sup>7</sup> |N/A <sup>2</sup>|通过 ISequentialStream 的字节流<sup>11</sup> |N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|传递<sup>6，7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>如果使用 ICommandWithParameters::SetParameterInfo 指定了非 DBTYPE_XML 的服务器类型，并且取值函数类型为 DBTYPE_XML，则执行语句时将出错（DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）；否则，将数据发送到服务器，但服务器返回一个错误，指示不存在从 XML 到该参数的数据类型的隐式转换。  
+ <sup>1</sup>如果使用 ICommandWithParameters::SetParameterInfo  指定了除 DBTYPE_XML 以外的服务器类型，而取值函数类型为 DBTYPE_XML，那么就会在执行语句时出错（DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）；否则，数据发送到服务器，但服务器会返回错误，指明不存在将 XML 转换为参数的数据类型的隐式转换。  
   
  <sup>2</sup>超出本文的范围。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52391454"
   
  XML 标准要求 UTF-16 编码的 XML，以便以字节顺序标记 (BOM) UTF-16 字符代码 0xFEFF 开头。 使用 WSTR 和 BSTR 绑定时，适用于 SQL Server 的 OLE DB 驱动程序不要求 BOM 或添加 BOM，因为绑定隐含了编码。 当使用 BYTES、XML 或 IUNKNOWN 绑定时，目的是为了在处理其他 XML 处理器和存储系统时提供简便性。 在此情况下，应向 UTF-16 编码的 XML 提供 BOM，并且应用程序无需关心实际编码，因为绝大多数的 XML 处理器（包括 SQL Server）会通过检查该值的前几个字节推导出编码。 对于使用 BYTES、XML 或 IUNKNOWN 绑定从适用于 SQL Server 的 OLE DB 驱动程序收到的 XML 数据，它们始终以 UTF-16 进行编码、带有 BOM 且未嵌入编码声明。  
   
- OLE DB 核心服务 (IDataConvert) 提供的数据转换不适用于 DBTYPE_XML。  
+ OLE DB 核心服务 (IDataConvert) 提供的数据转换不适用于 DBTYPE_XML  。  
   
  当向服务器发送数据时将执行验证。 应由应用程序处理客户端验证和编码更改。 建议不直接处理 XML 数据，而应使用 DOM 或 SAX 读取器以对其进行处理。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "52391454"
 |SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|XML 架构集合的名称。 对于非 XML 列或非类型化的 XML 列，为 NULL。|  
   
 #### <a name="the-providertypes-schema-rowset"></a>PROVIDER_TYPES 架构行集  
- 在 PROVIDER_TYPES 架构行集中，xml 数据类型的 COLUMN_SIZE 值为 0，且 DATA_TYPE 为 DBTYPE_XML。  
+ 在 PROVIDER_TYPES 架构行集中，xml 数据类型的 COLUMN_SIZE 值为 0，且 DATA_TYPE 为 DBTYPE_XML  。  
   
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA 架构行集  
  所引入的新的架构行集 SS_XMLSCHEMA 可供客户端检索 XML 架构信息。 SS_XMLSCHEMA 行集包含以下列：  
@@ -170,7 +170,7 @@ ms.locfileid: "52391454"
  OLE DB 驱动程序适用于 SQL Server 添加了新值或更改许多核心 OLE DB 属性集。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
- 为通过 OLE DB 支持 xml 数据类型，适用于 SQL Server 的 OLE DB 驱动程序实现了新的 DBPROPSET_SQLSERVERPARAMETER 属性集，它包含下列值。  
+ 为通过 OLE DB 支持 xml 数据类型，适用于 SQL Server 的 OLE DB 驱动程序实现了新的 DBPROPSET_SQLSERVERPARAMETER 属性集，它包含下列值  。  
   
 |“属性”|类型|描述|  
 |----------|----------|-----------------|  
@@ -179,7 +179,7 @@ ms.locfileid: "52391454"
 |SSPROP_PARAM_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|目录内 XML 架构集合的名称。由三部分组成的 SQL 名称标识符的一部分。|  
   
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
- 为支持在 ITableDefinition 接口中创建表，适用于 SQL Server 的 OLE DB 驱动程序向 DBPROPSET_SQLSERVERCOLUMN 属性集添加三个新列。  
+ 为支持在 ITableDefinition 接口中创建表，适用于 SQL Server 的 OLE DB 驱动程序向 DBPROPSET_SQLSERVERCOLUMN 属性集添加三个新列  。  
   
 |“属性”|类型|描述|  
 |----------|----------|-----------------|  
@@ -193,13 +193,13 @@ ms.locfileid: "52391454"
  OLE DB 驱动程序适用于 SQL Server 添加了新值，或将更改为许多核心 OLE DB 接口。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 接口  
- 为通过 OLE DB 支持 xml 数据类型，适用于 SQL Server 的 OLE DB 驱动程序实现了大量更改，包括添加 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo），ISSCommandWithParameters 还提供 [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 和 [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 方法，它们用于处理服务器特定的数据类型。  
+ 为通过 OLE DB 支持 xml 数据类型，适用于 SQL Server 的 OLE DB 驱动程序实现了大量更改，包括添加 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口  。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo），ISSCommandWithParameters 还提供 [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 和 [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 方法，它们用于处理服务器特定的数据类型      。  
   
 > [!NOTE]  
->  ISSCommandWithParameters 接口也利用新的 SSPARAMPROPS 结构。  
+>  ISSCommandWithParameters 接口也利用新的 SSPARAMPROPS 结构  。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 接口  
- 适用于 SQL Server 的 OLE DB 驱动程序在 IColumnRowset::GetColumnsRowset 方法返回的行集中添加 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的如下列。 这些列包含 XML 架构集合的由三个部分组成的名称。 对于非 XML 列或非类型化 XML 列，所有这三列均取默认值 NULL。  
+ 适用于 SQL Server 的 OLE DB 驱动程序在 IColumnRowset::GetColumnsRowset 方法返回的行集中添加 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的如下列  。 这些列包含 XML 架构集合的由三个部分组成的名称。 对于非 XML 列或非类型化 XML 列，所有这三列均取默认值 NULL。  
   
 |列名|类型|描述|  
 |-----------------|----------|-----------------|  
@@ -208,26 +208,26 @@ ms.locfileid: "52391454"
 |DBCOLUMN_SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|类型化 XML 列的 XML 架构集合的名称，否则为 NULL。|  
   
 #### <a name="the-irowset-interface"></a>IRowset 接口  
- 通过 IRowset::GetData 方法检索 XML 列中的 XML 实例。 根据由客户端指定的绑定，可以将 XML 实例作为 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML、DBTYPE_STR、DBTYPE_BYTES 进行检索，或者通过 DBTYPE_IUNKNOWN 将其作为接口检索。 如果使用者指定 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，则访问接口将 XML 实例转换为用户请求的类型，并将其放入在相应绑定中指定的位置。  
+ 通过 IRowset::GetData 方法检索 XML 列中的 XML 实例  。 根据由客户端指定的绑定，可以将 XML 实例作为 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML、DBTYPE_STR、DBTYPE_BYTES 进行检索，或者通过 DBTYPE_IUNKNOWN 将其作为接口检索。 如果使用者指定 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，则访问接口将 XML 实例转换为用户请求的类型，并将其放入在相应绑定中指定的位置。  
   
- 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 参数设置为 NULL，或将 pObject 参数设置为 IID_ISequentialStream，则提供程序将 ISequentialStream 接口返回到使用者，让其可流式处理该列之外的 XML 数据。 然后，ISequentialStream 将 XML 数据作为 Unicode 字符流返回。  
+ 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 参数设置为 NULL，或将 pObject 参数设置为 IID_ISequentialStream，则提供程序将 ISequentialStream 接口返回到使用者，让其可流式处理该列之外的 XML 数据    。 然后，ISequentialStream 将 XML 数据作为 Unicode 字符流返回  。  
   
  当返回与 DBTYPE_IUNKNOWN 绑定的 XML 值时，访问接口将报告 `sizeof (IUnknown *)` 的大小值。 此行为与在将某列绑定为 DBTYPE_IUnknown 或 DBTYPE_IDISPATCH 时采用的方法，以及无法确定实际列大小时 DBTYPE_IUNKNOWN/ISequentialStream 采用的方式一致。  
   
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange 接口  
- 使用者可以通过两种方法更新列中的 XML 实例。 第一种方法是使用提供程序创建的存储对象 ISequentialStream。 使用者可调用 ISequentialStream::Write 方法直接更新提供程序返回的 XML 实例。  
+ 使用者可以通过两种方法更新列中的 XML 实例。 第一种方法是使用提供程序创建的存储对象 ISequentialStream  。 使用者可调用 ISequentialStream::Write 方法直接更新提供程序返回的 XML 实例  。  
   
- 第二种方法是通过 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法。 通过这一方法，可以在类型为 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML 或 DBTYPE_IUNKNOWN 的绑定中指定使用者缓冲区内的 XML 实例。  
+ 第二种方法是通过 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法   。 使用这种方法，可以在类型为 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML 或 DBTYPE_IUNKNOWN 的绑定中，指定使用者缓冲区内的 XML 实例。  
   
  如果指定 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，则提供程序将在适当的列中存储使用者缓冲区中的 XML 实例存储。  
   
- 如果指定 DBTYPE_IUNKNOWN/ISequentialStream，且使用者未指定任何存储对象，则使用者必须提前创建 ISequentialStream 对象，将 XML 文档与此对象绑定，然后通过 IRowsetChange::SetData 方法将此对象传递给提供程序。 使用者还可以创建存储对象，将 pObject 参数设置为 IID_ISequentialStream，创建 ISequentialStream 对象，然后将 ISequentialStream 对象传递给 IRowsetChange::SetData 方法。 在这两种情况下，提供程序都可以通过 ISequentialStream 对象检索 XML 对象，然后将其插入适当的列中。  
+ 如果指定 DBTYPE_IUNKNOWN/ISequentialStream，且使用者未指定任何存储对象，则使用者必须提前创建 ISequentialStream 对象，将 XML 文档与此对象绑定，然后通过 IRowsetChange::SetData 方法将此对象传递给提供程序   。 使用者还可以创建存储对象，将 pObject 参数设置为 IID_ISequentialStream，创建 ISequentialStream 对象，然后将 ISequentialStream 对象传递给 IRowsetChange::SetData 方法    。 在这两种情况下，提供程序都可以通过 ISequentialStream 对象检索 XML 对象，然后将其插入适当的列中  。  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 接口  
- IRowsetUpdate 接口提供了用于延迟更新的功能。 在使用者调用 IRowsetUpdate::Update 方法之前，供行集使用的数据不可用于其他事务。  
+ IRowsetUpdate 接口提供了用于延迟更新的功能  。 在使用者调用 IRowsetUpdate::Update 方法之前，供行集使用的数据不可用于其他事务  。  
   
 #### <a name="the-irowsetfind-interface"></a>IRowsetFind 接口  
- IRowsetFind::FindNextRow 方法不使用 xml 数据类型。 调用 IRowsetFind::FindNextRow 且 hAccessor 参数指定 DBTYPE_XML 列时，返回 DB_E_BADBINDINFO。 此时不考虑正在搜索的列的类型。 对于任何其他绑定类型，如果要搜索的列属于 xml 数据类型，则 FindNextRow 将失败并返回 DB_E_BADCOMPAREOP。  
+ IRowsetFind::FindNextRow 方法不使用 xml 数据类型   。 调用 IRowsetFind::FindNextRow 且 hAccessor 参数指定 DBTYPE_XML 列时，返回 DB_E_BADBINDINFO   。 此时不考虑正在搜索的列的类型。 对于任何其他绑定类型，如果要搜索的列属于 xml 数据类型，则 FindNextRow 将失败并返回 DB_E_BADCOMPAREOP   。  
  
   
 ## <a name="see-also"></a>另请参阅  

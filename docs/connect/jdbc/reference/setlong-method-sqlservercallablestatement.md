@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9fb6172a5ce5601a7af547771850424a74d1bfc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e10e06460ee04abeace42af47c84270901fa1a17
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846905"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799239"
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>setLong 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定参数设置为给定的 long 值。  
+  将指定参数设置为给定的 long  值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,9 +37,9 @@ public void setLong(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCol*  
+ sCol   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
  *l*  
   

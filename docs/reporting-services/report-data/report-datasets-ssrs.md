@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 666623579f6cd195908318c194ec4c0036493edf
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 921bb8bf3e0b601a567e54bf326c5b35824cc848
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500297"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037956"
 ---
 # <a name="report-datasets-ssrs"></a>报表数据集 (SSRS)
   若要向报表中添加数据，您需要创建数据集。 每个数据集都表示通过对数据源运行查询命令而获得的结果集。 结果集中的列是字段集合。 结果集中的行是数据。 数据集不包含实际数据。 数据集而是包含从数据源检索一组特定的数据所需的信息。  
@@ -94,7 +94,7 @@ ms.locfileid: "66500297"
   
  若要运行查询，您必须具有设计时凭据。 有关详细信息，请参阅[指定凭据和报表数据源的连接信息](specify-credential-and-connection-information-for-report-data-sources.md)并[数据连接、 数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- 数据扩展插件和外部数据源之间的通信由数据提供程序处理。 对查询命令语法的支持、查询参数和结果集中值的数据类型由各数据访问接口确定。 有关详细信息，请参阅针对数据扩展插件和[查询设计器（报表生成器）](query-design-tools-ssrs.md)的特定类型的主题。  
+ 数据扩展插件和外部数据源之间的通信由数据提供程序处理。 对查询命令语法的支持、查询参数和结果集中值的数据类型由各数据访问接口确定。 有关详细信息，请参阅与特定类型数据扩展插件和[查询设计工具 &#40;SSRS&#41;](query-design-tools-ssrs.md) 相关的主题。  
   
   
 ##  <a name="HowTo"></a> 操作指南主题  
@@ -131,6 +131,6 @@ ms.locfileid: "66500297"
   
 ## <a name="see-also"></a>另请参阅  
  [报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)
   
   

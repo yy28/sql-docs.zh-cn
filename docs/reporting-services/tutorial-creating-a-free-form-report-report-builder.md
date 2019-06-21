@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499560"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
@@ -505,7 +505,7 @@ ms.locfileid: "66499560"
 * [创建带列表的发票和表单](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
-有关查询设计器的详细信息，请参阅[查询设计器（报表生成器）](report-data/query-design-tools-ssrs.md)和[基于文本的查询设计器用户界面（报表生成器）](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
+若要详细了解查询设计器，请参阅[查询设计器工具 (SSRS)](report-data/query-design-tools-ssrs.md) 和[基于文本的查询设计器用户界面（报表生成器）](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md) 

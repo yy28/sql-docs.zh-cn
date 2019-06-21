@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 747b0308-1ce6-4eba-bdfc-af29c21c18cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: adb666267abc9596fa568706d603d6b14a608026
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: a9fbb5f5c74a549a84e54980d585b7b5c30f61a5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798932"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream"></a>updateAsciiStream 方法 (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,9 +32,9 @@ public void updateAsciiStream(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *columnLabel*  
+ columnLabel   
   
- 一个包含列标签的字符串。  
+ 一个包含列标签的字符串  。  
   
  *x*  
   
@@ -43,7 +43,7 @@ public void updateAsciiStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此 updateAsciiStream 方法由 java.sql.ResultSet 接口中的 updateAsciiStream 方法指定。  
   
  此方法将 InputStream 对象中的 ASCII 字符（字节）传递给可转换的字符列，即 Unicode 的 ASCII 范围 [0x00 - 0x7F] 以及 874、932、936、949、950 和 1250-1258 代码页。 此方法执行到目标排序规则页的转换。 尝试更新不可转换的目标列将引发异常。 对于二进制列，会传递原始字节。  

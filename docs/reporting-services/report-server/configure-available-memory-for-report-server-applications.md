@@ -12,21 +12,21 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cf0b0008efb05d15f7e34827ab0f80855fb526d
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506581"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>为报表服务器应用程序配置可用内存
  尽管 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可使用所有可用内存，但您可以通过为分配给 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器应用程序的内存资源总量配置上限来覆盖默认行为。 此外，您还可以设置阈值，以便报表服务器根据内存压力（低、中或高）来更改其排列请求优先级和处理请求的方式。 在内存压力较低时，报表服务器通过为交互式或按需报表处理提供一个略高的优先级进行响应。 在内存压力较高时，报表服务器使用多种方法在可用资源有限的情况下保持运行状态。  
   
- 本主题介绍用户可以指定的配置设置，还说明了服务器在内存压力成为处理请求的决定因素时的响应方式。  
+ 本文介绍了可指定的配置设置，以及当内存压力成为处理请求的一个考虑因素时服务器如何响应。  
   
 ## <a name="memory-management-policies"></a>内存管理策略  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过调整分配给特定的应用程序和特定类型的处理请求的内存量来响应系统资源约束。 在报表服务器服务中运行和受内存管理限制的应用程序包括：  
   
--   报表管理器，一个用于报表服务器的 Web 前端应用程序。  
+-   Web 门户，即用于报表服务器的 Web 前端应用程序。  
   
 -   报表服务器 Web 服务，用于交互式报表处理和按需请求。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66506581"
   
  如果负载模式包含峰值，修改默认设置将非常有用。 当处理负荷中突然出现峰值时，报表服务器可能会迅速从无内存压力状态转为内存分配失败状态。 如果您同时启动了某个占用大量内存的报表的多个并发实例，则可能会发生这种情况。 若要处理此类型的处理负荷，需要将报表服务器尽可能移动到中或高内存压力响应中，以便降低处理速度。 这样可以完成更多的请求。 为此，您应该降低 **MemorySafetyMargin** 的值，使低内存压力区域相对于其他区域更小。 此操作将导致对中内存压力和高内存压力的响应更早发生。  
   
-## <a name="configuration-settings-for-memory-management"></a>内存管理的配置设置  
+## <a name="configuration-settings-for-memory-management"></a>内存管理配置设置  
  控制报表服务器的内存分配的配置设置包括 **WorkingSetMaximum**、 **WorkingSetMinimum**、 **MemorySafetyMargin**和 **MemoryThreshold**。  
   
 -   **WorkingSetMaximum** 和 **WorkingSetMinimum** 用于定义可用内存的范围。 您可以配置这些设置，以便为报表服务器应用程序设置可用内存范围。 如果要在同一台计算机上承载多个应用程序，并且确定报表服务器相对于同一台计算机上的其他应用程序消耗的系统资源过多，则此设置可能很有用。  

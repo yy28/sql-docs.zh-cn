@@ -1,6 +1,6 @@
 ---
 title: Reporting Services 报表服务器（本机模式）| Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47ac37f217cb49cd676cc822618e5395c029256f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826901"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 报表服务器（本机模式）
   配置为本机模式的报表服务器将作为应用程序服务器运行，并专门通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件提供所有处理和管理功能。  
   
- 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或报表管理器来管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表。 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可在本机模式下管理报表服务器。  
+ 你可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或 web 门户来管理[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表。 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可在本机模式下管理报表服务器。  
   
  如果将报表服务器配置为 SharePoint 模式，则必须使用 SharePoint 站点上的内容管理页来管理报表、共享数据源和其他报表服务器项。  
   
- 本主题包含以下信息：  
+ 本文介绍了以下信息：  
   
 -   [本机模式摘要](#bkmk_sum)  
   
 -   [管理内容](#bkmk_managecontent)  
   
--   [保护资源的安全和管理资源](#bkmk_manageresources)  
+-   [保护和管理资源](#bkmk_manageresources)  
   
--   [从报表引用图像资源](#bkmk_referenceimage)  
+-   [引用报表中的图像资源](#bkmk_referenceimage)  
   
 ##  <a name="bkmk_sum"></a> 本机模式摘要  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式安装由几个需要管理和维护的服务器端功能组成。 这些服务器功能包括：  
@@ -77,25 +77,25 @@ ms.locfileid: "65581361"
   
  通过以下两个预定义的角色提供执行管理任务的权限： **系统管理员** 和 **内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。 有关这些预定义角色的详细信息，请参阅[角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
   
- 用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或报表管理器。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 报表管理器用于授予用户对报表服务器项和操作的访问权限，查看和使用报表以及其他内容类型，以及查看和使用所有共享项和报表分发功能。  
+ 用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 Web 门户。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 Web 门户用于向用户授予对报表服务器项和操作的访问权限，用于查看和使用报表以及其他内容类型，并用于查看和使用所有共享项和报表分发功能。  
   
-##  <a name="bkmk_manageresources"></a> 保护资源的安全和管理资源  
+##  <a name="bkmk_manageresources"></a> 保护和管理资源  
  资源是指存储在报表服务器上但不由报表服务器处理的托管项。 通常，资源为报表用户提供外部内容。 例如描述报表中所使用业务规则的 .jpg 文件或 HTML 文件中的图像。 JPG 或 HTML 文件存储在报表服务器上，但报表服务器会将文件直接传递到浏览器，而不会首先对其进行处理。  
   
  若要向报表服务器中添加资源，请上载或发布文件：  
   
 |运算|文件类型|  
 |---------------|---------------|  
-|上载|除报表定义 (.rdl) 文件和报表模型 (.smdl) 文件之外的所有文件都将作为资源上载。<br /><br /> 若要上载资源，如果报表服务器在本机模式下运行，则必须使用报表管理器，如果报表服务器在 SharePoint 集成模式下运行，则必须使用 SharePoint 站点上的应用程序页。 有关详细信息，请参阅[上传文件或报表（报表管理器）](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)或[将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)。|  
+|上载|除报表定义 (.rdl) 文件和报表模型 (.smdl) 文件之外的所有文件都将作为资源上载。<br /><br /> 若要上传资源，如果报表服务器在本机模式下运行，必须使用 Web 门户；如果报表服务器在 SharePoint 集成模式下运行，必须使用 SharePoint 网站上的应用程序页。 有关详细信息，请参阅[在报表服务器中上传文件或报表](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)，或[将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)。|  
 |发布|除 .rdl、.smdl 和 .rds 数据源文件之外，项目中的所有文件都将作为资源上载。 若要发布资源，请将现有项添加到报表设计器的一个项目中，然后将该项目发布到报表服务器。|  
   
- 所有资源最初都是文件系统中的文件，只是随后上载到报表服务器上而已。 除 ASP.NET 施加的 4 MB 的默认文件大小限制之外，对于可以上载的文件类型没有任何限制。 不过，具有等效 MIME 类型的文件类型比其他类型更适于作为资源发布到报表服务器。 例如，在用户单击基于 HTML 和 JPG 文件的资源时，这些资源将在浏览器窗口中打开，以网页形式呈现 HTML 文件，并以图像形式呈现 JPG 文件，这样，用户就可以看到。 相反，对于不具有等效 MIME 类型的资源（如桌面应用程序文件），则不能在浏览器窗口中呈现。  
+ 所有资源最初都是文件系统中的文件，只是随后上载到报表服务器上而已。 没有任何限制可以上传的文件类型，文件大小，最多 1 GB。 不过，具有等效 MIME 类型的文件类型比其他类型更适于作为资源发布到报表服务器。 例如，在用户单击基于 HTML 和 JPG 文件的资源时，这些资源将在浏览器窗口中打开，以网页形式呈现 HTML 文件，并以图像形式呈现 JPG 文件，这样，用户就可以看到。 相反，对于不具有等效 MIME 类型的资源（如桌面应用程序文件），则不能在浏览器窗口中呈现。  
   
  报表用户是否可以查看资源取决于浏览器的查看功能。 由于报表服务器不对资源进行处理，因此浏览器必须提供用于呈现特定 MIME 类型的查看功能。 如果浏览器无法呈现资源的内容，则查看资源的用户只能看到资源的常规属性。  
   
  在报表服务器文件夹层次结构中，资源与报表、共享数据源、共享计划和文件夹都以命名项的形式显示在一起。 您可以搜索、查看、保护资源和设置资源属性，就像对报表服务器上存储的任何其他项一样。 若要查看或管理资源，您的角色分配中必须拥有查看资源或管理资源的任务。  
   
-##  <a name="bkmk_referenceimage"></a> 从报表引用图像资源  
+##  <a name="bkmk_referenceimage"></a> 引用报表中的图像资源  
  资源可以包含报表中引用的图像。 如果报表要求包括使用外部图像，则可以考虑将图像存储为资源的以下好处：  
   
 -   在报表服务器数据库中集中存储。 如果将报表服务器数据库及其内容移到其他计算机，则外部图像会与报表保存在一起。 无需跟踪不同计算机的磁盘上存储的图像文件。  

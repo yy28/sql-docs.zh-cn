@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77065f64067ef505714bbd5e831d63abf41337bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4612b0762d8a0d619a19b61b8bb10ef6a68d1ba0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803082"
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47804963"
   
 ## <a name="fields"></a>字段  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|用来指定快照事务隔离级别。|  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47804963"
   
 ## <a name="methods"></a>方法  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|清除所报告的有关此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的所有警告。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|立即释放此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的数据库和 JDBC 资源，而非等待它们自动释放。|  

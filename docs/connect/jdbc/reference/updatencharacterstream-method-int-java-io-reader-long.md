@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5fad76cca594595a5efbf16a334975869684a039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 175f3e33f77d5f4d082ae8b98780b9f7bcafaa43
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624865"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798448"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>updateNCharacterStream 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,13 +33,13 @@ public void updateNCharacterStream(int columnIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
  *x*  
   
- 一个读取器对象。  
+ Reader 对象。  
   
  *length*  
   
@@ -51,11 +51,11 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  此 updateNCharacterStream 方法由 java.sql.ResultSet 接口中的 updateNCharacterStream 方法指定。  
   
- 此方法将来自要选择的读取器对象中传递 Unicode 字符**nchar**， **nvarchar （max)**， **ntext**，以及**xml**列。 在其他数据类型列上使用此方法会引发异常。  
+ 此方法将来自要选择的读取器对象中传递 Unicode 字符**nchar**， **nvarchar （max)** ， **ntext**，以及**xml**列。 在其他数据类型列上使用此方法会引发异常。  
   
- 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   
- 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [updateNCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader.md)。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度  。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [updateNCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateNCharacterStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

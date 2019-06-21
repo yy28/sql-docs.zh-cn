@@ -15,13 +15,13 @@ helpviewer_keywords:
 - GetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 91bf864bef7178fe7532b33648cdf307d80fe61c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: 5b492706895a774d5b916058394ff352123bd708
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030265"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66783940"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,17 +40,17 @@ HRESULT GetParameterProperties(
 ```  
   
 ## <a name="arguments"></a>参数  
- pcParams[out][in]  
- 一个指向内存的指针，该内存包含 prgParamProperties 中返回的 SSPARAMPROPS 结构数量。  
+ pcParams[out][in]   
+ 一个指向内存的指针，该内存包含 prgParamProperties 中返回的 SSPARAMPROPS 结构数量  。  
   
- prgParamProperties[out]  
- 指向内存中将返回 SSPARAMPROPS 结构数组的位置的指针。 提供程序为结构分配内存并返回此内存的地址；当使用者不再需要这些结构时，可以使用 IMalloc::Free 释放该内存。 在为 prgParamProperties 调用 IMalloc::Free 之前，使用者还必须为每个 DBPROP 结构的 vValue 属性调用 VariantClear，以防止当变量包含引用类型（如 BSTR）时发生内存泄漏。 如果 pcParams 在输出时为零或者发生了 DB_E_ERRORSOCCURRED 之外的错误，则提供程序不分配任何内存，且确保 prgParamProperties 在输出时是一个空指针。  
+ prgParamProperties[out]   
+ 指向内存中将返回 SSPARAMPROPS 结构数组的位置的指针。 提供程序为结构分配内存并返回此内存的地址；当使用者不再需要这些结构时，可以使用 IMalloc::Free 释放该内存  。 在为 prgParamProperties 调用 IMalloc::Free 之前，使用者还必须为每个 DBPROP 结构的 vValue 属性调用 VariantClear，以防止当变量包含引用类型（如 BSTR）时发生内存泄漏     。 如果 pcParams 在输出时为零或者发生了 DB_E_ERRORSOCCURRED 之外的错误，则提供程序不分配任何内存，且确保 prgParamProperties 在输出时是一个空指针   。  
   
 ## <a name="return-code-values"></a>返回代码值  
- GetParameterProperties 方法返回与核心 OLE DB ICommandProperties::GetProperties 方法相同的错误代码，只是不引发 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED。  
+ GetParameterProperties 方法返回与核心 OLE DB ICommandProperties::GetProperties 方法相同的错误代码，只是不引发 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED   。  
   
 ## <a name="remarks"></a>Remarks  
- 对 GetParameterInfo 而言，ISSCommandWithParameters::GetParameterProperties 方法的行为一致。 如果尚未调用 [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 或 SetParameterInfo，或者未在 cParams 等于零时 调用它们，则 GetParameterInfo 将派生参数信息并返回此信息。 如果至少已为一个参数调用了 ISSCommandWithParameters::SetParameterProperties 或 SetParameterInfo，则 ISSCommandWithParameters::GetParameterProperties 方法仅针对已对其调用 ISSCommandWithParameters::SetParameterProperties 的参数返回属性。 如果在 ISSCommandWithParameters::GetParameterProperties 或 GetParameterInfo 之后调用 ISSCommandWithParameters::SetParameterProperties，则对 ISSCommandWithParameters::GetParameterProperties 的后续调用将针对已对其调用 ISSCommandWithParameters::SetParameterProperties 方法的参数返回重写的值。  
+ 对 GetParameterInfo 而言，ISSCommandWithParameters::GetParameterProperties 方法的行为一致   。 如果尚未调用 [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 或 SetParameterInfo，或者未在 cParams 等于零时 调用它们，则 GetParameterInfo 将派生参数信息并返回此信息   。 如果至少已为一个参数调用了 ISSCommandWithParameters::SetParameterProperties 或 SetParameterInfo，则 ISSCommandWithParameters::GetParameterProperties 方法仅针对已对其调用 ISSCommandWithParameters::SetParameterProperties 的参数返回属性     。 如果在 ISSCommandWithParameters::GetParameterProperties 或 GetParameterInfo 之后调用 ISSCommandWithParameters::SetParameterProperties，则对 ISSCommandWithParameters::GetParameterProperties 的后续调用将针对已对其调用 ISSCommandWithParameters::SetParameterProperties 方法的参数返回重写的值      。  
   
  SSPARAMPROPS 结构的定义如下所示：  
   
@@ -66,9 +66,9 @@ HRESULT GetParameterProperties(
   
 |成员|描述|  
 |------------|-----------------|  
-|iOrdinal|所传递参数的序号。|  
-|cPropertySets|rgPropertySets 中 DBPROPSET 结构的数量。|  
-|rgPropertySets|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
+|iOrdinal |所传递参数的序号。|  
+|cPropertySets |rgPropertySets 中 DBPROPSET 结构的数量  。|  
+|rgPropertySets |指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  

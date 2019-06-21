@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 09042ee9-dfb1-4d0b-82bd-d1224b0aea80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 081da23826951c5c8c4d4872de1c28a771a2958b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dbddcadfec0ed7b2bab9573717d0079240443a94
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720915"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795691"
 ---
 # <a name="setcharacterstream-method-sqlservernclob"></a>setCharacterStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索用于在指定起始位置将 Unicode 字符流写入此 java.sql.NClob 对象表示的 NCLOB 值的流。  
+  检索用于在指定起始位置将 Unicode 字符流写入此 java.sql.NClob  对象表示的 NCLOB  值的流。  
   
 ## <a name="syntax"></a>语法  
   
@@ -31,9 +31,9 @@ public java.io.Writer setCharacterStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *pos*  
+ pos   
   
- 写入 NCLOB 值的起始位置；第一个位置为 1。  
+ 写入 NCLOB  值的起始位置；第一个位置为 1。  
   
 ## <a name="return-value"></a>返回值  
  表示可向其中写入 Unicode 编码字符的流的 Writer 对象。  

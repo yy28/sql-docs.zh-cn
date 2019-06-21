@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 6e9bca18-f64e-46a4-8541-2c9c39b393b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd3bf43488ee033969d2d74e66960b729440eed6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 15c64b062cd0da35a8f1c870da60062620b9e30a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811235"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798410"
 ---
 # <a name="updatenclob-method-int-javasqlnclob"></a>updateNClob 方法 (int, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 NClob 值更新指定列。  
+  使用 NClob 值更新指定列  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,11 +32,11 @@ public void updateNClob(int columnIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
- nClob  
+  nClob  
   
  NClob 对象。  
   
@@ -44,9 +44,9 @@ public void updateNClob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateNClob 方法由 java.sql.ResultSet 接口中的 updateNClob 方法指定。  
+ 此 updateNClob 方法是由 java.sql.ResultSet 接口中的 updateNClob 方法指定的。  
   
- 此方法仅支持**nvarchar （max)**， **ntext**，并**xml**列。 在任何其他数据类型上使用此方法会引发异常。  
+ 此方法仅支持**nvarchar （max)** ， **ntext**，并**xml**列。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateNClob 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

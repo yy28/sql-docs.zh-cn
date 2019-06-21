@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 287a05727bf62de813afec4ad285ef47f3b65943
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801635"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774632"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,19 +36,19 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 一个包含目录名称的字符串。 如果该名称为空字符串 ""，则结果将包括无目录的函数。 如果此字符串为“null”，目录名称则不可用于搜索。  
+ 一个包含目录名称的字符串  。 如果该名称为空字符串 ""，则结果将包括无目录的函数。 如果此字符串为“null”，目录名称则不可用于搜索  。  
   
- *schemaPattern*  
+ schemaPattern   
   
- 一个包含架构名称模式的字符串。 如果该名称为空字符串 ""，则结果将包括无架构的函数。 如果此字符串为“null”，架构名称则不可用于搜索。  
+ 一个包含架构名称模式的字符串  。 如果该名称为空字符串 ""，则结果将包括无架构的函数。 如果此字符串为“null”，架构名称则不可用于搜索  。  
   
- *functionNamePattern*  
+ functionNamePattern   
   
- 一个包含函数名称的字符串。  
+ 一个包含函数名称的字符串  。  
   
- *columnNamePattern*  
+ columnNamePattern   
   
- 一个包含参数名称的字符串。  
+ 一个包含参数名称的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
@@ -57,7 +57,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getFunctionColumns 方法由 java.sql.DatabaseMetaData 接口中的 getFunctionColumns 方法指定。  
+ 此 getFunctionColumns 方法是由 java.sql.DatabaseMetaData 接口中的 getFunctionColumns 方法指定的。  
   
  此方法只返回与指定目录内的指定架构、函数名称和参数名称相匹配的函数和参数。  
   
@@ -76,11 +76,11 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |LENGTH|**int**|以字节为单位的数据的长度。|  
 |SCALE|**short**|小数点右边的数字位数。|  
 |RADIX|**short**|数值类型的基数。|  
-|NULLABLE|**short**|指示参数或返回值是否可包括 null 值。<br /><br /> **可以为下列值之一：**<br /><br /> functionNoNulls (0)：不允许为 NULL 值。<br /><br /> functionNullable (1)：允许为 NULL 值。<br /><br /> functionNullableUnknown (2)：未知。|  
+|NULLABLE|**short**|指示参数或返回值是否可包括 null 值  。<br /><br /> **可以为下列值之一：**<br /><br /> functionNoNulls (0)：不允许为 NULL 值。<br /><br /> functionNullable (1)：允许为 NULL 值。<br /><br /> functionNullableUnknown (2)：未知。|  
 |REMARKS|**String**|有关列或参数的注释。|  
 |COLUMN_DEF|**String**|列的默认值。<br /><br /> **注意：** 此信息可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用且特定于 JDBC 驱动程序。|  
-|SQL_DATA_TYPE|**smallint**|此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外。<br /><br /> **注意：** 此信息可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用且特定于 JDBC 驱动程序。|  
-|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码。 对于数据类型以外**datetime**和 ISO**间隔**，此列为 NULL。<br /><br /> **注意：** 此信息可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用且特定于 JDBC 驱动程序。|  
+|SQL_DATA_TYPE|**smallint**|此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外    。<br /><br /> **注意：** 此信息可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用且特定于 JDBC 驱动程序。|  
+|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码      。 对于数据类型以外**datetime**和 ISO**间隔**，此列为 NULL。<br /><br /> **注意：** 此信息可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用且特定于 JDBC 驱动程序。|  
 |CHAR_OCTET_LENGTH|**int**|基于二进制和字符的最大长度的参数或列。 对于其他数据类型，该值为 NULL。|  
 |ORDINAL_POSITION|**int**|对于输入和输出参数，它表示从 1 开始的位置。<br /><br /> 对于结果集列，它指从 1 开始的结果集的列的位置。<br /><br /> 对于返回值，该值为 0。|  
 |IS_NULLABLE|**String**|确定参数或列的可为 Null 性。<br /><br /> 可以为下列值之一：<br /><br /> **是**：参数或列可包括 NULL 值。<br /><br /> **否**：参数或列不可包括 NULL 值。<br /><br /> 空字符串 ("")：未知。|  

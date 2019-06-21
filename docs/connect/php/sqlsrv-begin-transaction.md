@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_begin_transaction |Microsoft Docs
+title: sqlsrv_begin_transaction | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a7387890ef61348ed473bee7928a4bebc38d882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f01ffdced922414f83c18a86ff3d4d2c059e44d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797025"
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-在指定的连接上开始事务。 当前事务包括指定连接上的所有语句，这些语句在调用 **sqlsrv_begin_transaction** 之后和调用 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 或 [sqls_rvcommit](../../connect/php/sqlsrv-commit.md)之前执行。  
+在指定的连接上开始事务。 当前事务包括指定连接上的所有语句，这些语句在调用 **sqlsrv_begin_transaction** 之后和调用 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 或 [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)之前执行。  
   
 > [!NOTE]  
 > 默认情况下，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 处于自动提交模式。 这意味着，除非使用 **sqlsrv_begin_transaction**开始事务。  
@@ -50,7 +50,7 @@ sqlsrv_begin_transaction( resource $conn)
 布尔值：如果成功开始事务，则为 **true** 。 否则为 **false**。  
   
 ## <a name="example"></a>示例  
-作为事务的一部分，以下示例将执行两次查询。 如果两次查询都成功，将提交事务。 如果任一查询失败或这两次查询都失败，将回滚事务。  
+作为事务的一部分，以下示例将执行两次查询。 如果两次查询均成功完成，将提交事务。 如果任一查询失败或这两次查询都失败，将回滚事务。  
   
 该示例中的第一次查询向 AdventureWorks 数据库的 *Sales.SalesOrderDetail* 表格中插入了一个新销售订单。 该订单订购的是 5 套产品 ID 为 709 的产品。 第二次查询将产品 ID 为 709 的产品库存量减少 5 套。 这些查询包含在一个事务中，因为这两次查询均必须成功完成，数据库才能准确反映订单状态和产品供应情况。  
   

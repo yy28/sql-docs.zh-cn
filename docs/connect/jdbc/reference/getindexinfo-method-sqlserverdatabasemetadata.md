@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7d66a175522cd89cf4bd0aca567779244b0a385
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 22414058b0763f32c2b991487e006b8de8e50611
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789811"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774350"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,15 +42,15 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 #### <a name="parameters"></a>Parameters  
  *cat*  
   
- 一个包含目录名称的字符串。  
+ 一个包含目录名称的字符串  。  
   
  *schema*  
   
- 一个包含架构名称的字符串。  
+ 一个包含架构名称的字符串  。  
   
  *table*  
   
- 一个包含表名称的字符串。  
+ 一个包含表名称的字符串  。  
   
  *UNIQUE*  
   
@@ -82,10 +82,10 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |TYPE|**short**|索引的类型。 可以为下列值之一：<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|列在索引中的序号位置。 索引中的第一列为 1。|  
 |COLUMN_NAME|**String**|列的名称。|  
-|ASC_OR_DESC|**String**|索引排序规则中所用的顺序。 可以为下列值之一：<br /><br /> A（升序）<br /><br /> D（降序）<br /><br /> NULL（不适用）<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终会返回“A”。|  
+|ASC_OR_DESC|**String**|索引排序规则中所用的顺序。 可以为下列值之一：<br /><br /> A（升序）<br /><br /> D（降序）<br /><br /> NULL（不适用）<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终会返回“A”。|  
 |CARDINALITY|**int**|表中的行数或索引中的唯一值个数。|  
 |PAGES|**int**|用于存储索引或表的页数。|  
-|FILTER_CONDITION|**String**|筛选条件。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终会返回 null。|  
+|FILTER_CONDITION|**String**|筛选条件。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终会返回 null。|  
   
 > [!NOTE]  
 >  有关 getIndexInfo 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_indexes (Transact-SQL)”。  

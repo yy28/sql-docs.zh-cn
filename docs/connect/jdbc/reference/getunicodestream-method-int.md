@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fe3352ef2bffaed6151e163d5054b03a05c53418
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66765923"
 ---
 # <a name="getunicodestream-method-int"></a>getUnicodeStream 方法 (int)
@@ -50,7 +50,7 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getString方法是由 java.sql.ResultSet 接口中的 getString 方法指定的。  
+ 此 getUnicodeString方法是由 java.sql.ResultSet 接口中的 getUnicodeString 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getUnicodeStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   

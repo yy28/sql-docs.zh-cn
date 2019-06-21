@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d583ad2b20639f3df9d37de5180b94bb4dc692a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 41d9cf40028efb2fac732ec7f6da4a3be39095af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721325"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796809"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>setSavepoint 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,9 +36,9 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sName*  
+ sName   
   
- 包含保存点名称的 String 值。  
+ 包含保存点名称的 String  值。  
   
 ## <a name="return-value"></a>返回值  
  一个保存点的对象。  
@@ -49,7 +49,7 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
 ## <a name="remarks"></a>Remarks  
  此 setSavePoint 方法由 java.sql.Connection 接口中的 setSavePoint 方法指定。  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 会自动转义 sName 参数。  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 会自动转义 sName  参数。  
   
 ## <a name="see-also"></a>另请参阅  
  [setSavepoint 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   

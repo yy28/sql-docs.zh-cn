@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0e90f4d2ea8b98d2ecef237f04f5fe290a512c92
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66765902"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>getUDTs 方法 (SQLServerDatabaseMetaData)
@@ -46,11 +46,11 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
   
  一个包含目录名称的字符串  。  
   
- *schemaPattern*  
+ schemaPattern   
   
  一个包含架构名称模式的字符串  。  
   
- *typeNamePattern*  
+ typeNamePattern   
   
  一个包含类型名称模式的 String  。  
   

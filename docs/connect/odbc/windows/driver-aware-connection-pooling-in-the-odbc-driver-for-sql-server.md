@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56cb2a6a28e60aa34a2bb74d9d7c506f7d3b9523
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797800"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 中识别驱动程序的连接池
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "52403172"
   ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持[识别驱动程序的连接池](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 本主题介绍 Windows 上的 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中识别驱动程序的连接池的增强功能：  
   
 -   无论连接属性如何，使用 `SQLDriverConnect` 的连接都会从使用 `SQLConnect` 的连接转到单独的池。
-- 当使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证和识别驱动程序的连接池时，该驱动程序不会使用当前线程的 Windows 用户安全上下文来分离池中的连接。 也就是说，当连接等效于其用于通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证的 Windows 模拟方案的参数，且它们使用同一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证凭据连接到后端时，不同的 Windows 用户或许可以使用同一个连接池。 当使用 Windows 身份验证和识别驱动程序的连接池时，该驱动程序将使用当前 Windows 用户的安全上下文来分离池中的连接。 也就是说，对于 Windows 模拟方案，不同的 Windows 用户不会共享连接，即使这些连接使用相同的参数也是如此。
+- 如果使用的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证和驱动程序感知连接池，驱动程序不会对当前线程使用 Windows 用户的安全性上下文来分离池中的连接。 也就是说，当连接等效于其用于通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证的 Windows 模拟方案的参数，且它们使用同一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证凭据连接到后端时，不同的 Windows 用户或许可以使用同一个连接池。 如果使用的是 Windows 身份验证和驱动程序感知连接池，驱动程序会使用当前 Windows 用户的安全性上下文来分离池中的连接。 也就是说，对于 Windows 模拟方案，不同的 Windows 用户不会共享连接，即使这些连接使用相同的参数也是如此。
 - 使用 Azure Active Directory 和识别驱动程序的连接池时，该驱动程序还使用身份验证值来确定在连接池中的成员身份。
   
 -   识别驱动程序的连接池将阻止该池返回错误的连接。  
@@ -45,7 +45,7 @@ ms.locfileid: "52403172"
   
     |关键字|ODBC 驱动程序 13|ODBC 驱动程序 11|
     |-|-|-|
-    |`Address`|用户帐户控制|是|
+    |`Address`|是|是|
     |`AnsiNPW`|是|是|
     |`App`|是|是|
     |`ApplicationIntent`|是|是|  
@@ -64,13 +64,13 @@ ms.locfileid: "52403172"
     |`Trusted_Connection`|是|是|
     |`TrustServerCertificate`|是|是|
     |`UID`|是|是|
-    |`WSID`|是|用户帐户控制|
+    |`WSID`|是|是|
     
 - 如果以下任何连接属性在你的连接字符串和已入池的连接字符串之间有所不同，则不使用已入池的连接。  
   
     |Attribute|ODBC 驱动程序 13|ODBC 驱动程序 11|  
     |-|-|-|  
-    |`SQL_ATTR_CURRENT_CATALOG`|用户帐户控制|是|
+    |`SQL_ATTR_CURRENT_CATALOG`|是|是|
     |`SQL_ATTR_PACKET_SIZE`|是|是|
     |`SQL_COPT_SS_ANSI_NPW`|是|是|
     |`SQL_COPT_SS_ACCESS_TOKEN`|是|否|
@@ -92,11 +92,11 @@ ms.locfileid: "52403172"
  
 -   无需进行额外的网络调用，该驱动程序即可重置和调整以下连接关键字和属性。 该驱动程序将重置这些参数，以确保该连接不会包含错误信息。  
   
-     在驱动程序管理器尝试将你的连接与池中的连接进行匹配时，不会考虑这些连接关键字。 （即使更改其中一个参数，仍可重复使用现有连接。 该驱动程序将根据需要重置这些选项。）无需进行额外的网络调用，即可在客户端中重置这些属性。  
+     在驱动程序管理器尝试将你的连接与池中的连接进行匹配时，不会考虑这些连接关键字。 （即使更改其中一个参数，仍可重复使用现有连接。 驱动程序将根据需要重置这些选项。）无需进行额外的网络调用，即可在客户端中重置这些属性。  
   
     |关键字|ODBC 驱动程序 13|ODBC 驱动程序 11|  
     |-|-|-|  
-    |`AutoTranslate`|用户帐户控制|是|
+    |`AutoTranslate`|是|是|
     |`Description`|是|是|
     |`MultisubnetFailover`|是|是|  
     |`QueryLog_On`|是|是|
@@ -104,13 +104,13 @@ ms.locfileid: "52403172"
     |`QueryLogTime`|是|是|
     |`Regional`|是|是|
     |`StatsLog_On`|是|是|
-    |`StatsLogFile`|  是|用户帐户控制|
+    |`StatsLogFile`|  是|是|
   
      如果更改以下连接属性之一，仍可重复使用现有连接。  该驱动程序将根据需要重置该值。 无需进行额外的网络调用，该驱动程序即可在客户端中重置这些属性。  
   
     |Attribute|ODBC 驱动程序 13|ODBC 驱动程序 11|  
     |-|-|-|  
-    |所有语句属性|用户帐户控制|是|
+    |所有语句属性|是|是|
     |`SQL_ATTR_AUTOCOMMIT`|是|是|
     |`SQL_ATTR_CONNECTION_TIMEOUT`|  是|是|
     |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|是|是|
@@ -125,7 +125,7 @@ ms.locfileid: "52403172"
     |`SQL_COPT_SS_PRESERVE_CURSORS`|是|是|
     |`SQL_COPT_SS_TRANSLATE`|是|是|
     |`SQL_COPT_SS_USER_DATA`|  是|是|
-    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|是|用户帐户控制|  
+    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|是|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft ODBC Driver for SQL Server（Windows 平台）](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  

@@ -1,5 +1,5 @@
 ---
-title: updateClob 方法 (SQLServerResultSet) |Microsoft Docs
+title: updateClob 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e841f9a6-e94f-4552-a0e2-aefe3d84faf0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53dd68bc36a7d08140b5a831e5fa534c1f4212c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bfd8ac962579bd267cea300783dc35411d321a10
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804269"
 ---
 # <a name="updateclob-method-sqlserverresultset"></a>updateClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47751215"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[updateClob (int, java.sql.Clob)](../../../connect/jdbc/reference/updateclob-method-int-java-sql-clob.md)|在给定列索引时使用 java.sql.Clob 值更新指定列。|  
 |[updateClob 方法 &#40;java.io.Reader&#41;](../../../connect/jdbc/reference/updateclob-method-int-java-io-reader.md)|使用指定的 Reader 对象更新指定列。|  

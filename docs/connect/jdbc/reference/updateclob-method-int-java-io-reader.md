@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: df60fbf1-44b2-4658-84a5-5cb129ce2dc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb12e3424e4dd482c4ed2545c4c9efbdd1dc3993
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8da48ddf067d830a3fe69fe63de3636a9ae8852c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803366"
 ---
 # <a name="updateclob-method-int-javaioreader"></a>updateClob 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,19 +32,19 @@ public void updateClob(int columnIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
- reader  
+ reader   
   
- 一个读取器对象。  
+ Reader 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateClob 方法由 java.sql.ResultSet 接口中的 updateClob 方法指定。  
+ 此 updateClob 方法是由 java.sql.ResultSet 接口中的 updateClob 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

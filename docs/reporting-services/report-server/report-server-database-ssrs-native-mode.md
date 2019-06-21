@@ -1,6 +1,6 @@
 ---
 title: 报表服务器数据库（SSRS 本机模式）| Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -15,26 +15,26 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1790841420d86eea3cc3d7a19ccbd2e72283a425
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: a7e49888ddeb4d0666a8b46849560c63c4ac22f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577577"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826889"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>报表服务器数据库（SSRS 本机模式）
-  报表服务器是一种无状态服务器，它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 来存储元数据和对象定义。 为了将永久数据存储与临时存储要求分开，本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装使用两个数据库。 这两个数据库一起创建，并按名称绑定。 默认情况下，数据库名称分别为 **reportserver** 和 **reportservertempdb**。  
+  报表服务器是一种无状态服务器，它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 来存储元数据和对象定义。 为了将永久数据存储与临时存储要求分开，本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装使用两个数据库。 这两个数据库一起创建，并按名称绑定。 默认情况下，数据库名称分别为 ReportServer  和 ReportServerTempDB  。  
   
  SharePoint 模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装还将创建数据警报功能的数据库。 SharePoint 模式中的三个数据库与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序关联。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
  数据库可以在本地或远程 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例上运行。 如果您有足够的系统资源或要保留软件许可，则选择本地实例非常有用，但在远程计算机上运行数据库可以提高性能。  
   
- 可以从以前的安装或包含其他报表服务器实例的不同实例中导入或重用现有的报表服务器数据库。 报表服务器数据库的架构必须与报表服务器实例兼容。 如果数据库为较早的格式，则系统将提示您将其升级到当前格式。 新版本不能降级为旧版本。 如果您有一个较新的报表服务器数据库，则无法将其与更早版本的报表服务器实例一起使用。 有关如何将报表服务器数据库升级到较新格式的详细信息，请参阅 [升级报表服务器数据库](../../reporting-services/install-windows/upgrade-a-report-server-database.md)。  
+ 可以从以前的安装或包含其他报表服务器实例的不同实例中导入或重用现有的报表服务器数据库。 报表服务器数据库的架构必须与报表服务器实例兼容。 如果数据库为较早的格式，则系统将提示您将其升级到当前格式。 新版本不能降级为旧版本。 如果有较高版本的报表服务器数据库，便无法将它用于旧版报表服务器实例。 有关如何将报表服务器数据库升级到较新格式的详细信息，请参阅 [升级报表服务器数据库](../../reporting-services/install-windows/upgrade-a-report-server-database.md)。  
   
 > [!IMPORTANT]  
->  数据库的表结构已经针对服务器操作进行了优化，因此不应对其进行修改或调整。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能会将表结构从一个版本更改为下一个版本。 如果修改或扩展数据库，可能会限制或阻止执行将来执行升级或应用 Service Pack 的能力。 还可能会引入破坏报表服务器操作的更改。 例如，如果在 ReportServer 数据库上启用 READ_COMMITTED_SNAPSHOT，将中断交互式排序功能。  
+> 数据库的表结构已经针对服务器操作进行了优化，因此不应对其进行修改或调整。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能会将表结构从一个版本更改为下一个版本。 如果修改或扩展数据库，可能会限制或阻止执行将来执行升级或应用 Service Pack 的能力。 还可能会引入破坏报表服务器操作的更改。 例如，如果在 ReportServer 数据库上启用 READ_COMMITTED_SNAPSHOT，将中断交互式排序功能。  
   
- 必须通过报表服务器处理所有对报表服务器数据库的访问。 若要访问报表服务器数据库中的内容，可以使用报表服务器管理工具（例如报表管理器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]），或者使用编程接口，例如 URL 访问、报表服务器 Web 服务或 Windows Management Instrumentation (WMI) 提供程序。  
+ 必须通过报表服务器处理所有对报表服务器数据库的访问。 若要访问报表服务器数据库中的内容，可以使用报表服务器管理工具（如 Web 门户和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]），也可以使用编程接口（如 URL 访问、报表服务器 Web 服务或 Windows Management Instrumentation (WMI) 提供程序）。  
   
  与报表服务器数据库的连接通常通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来定义。 但是，如果您选择安装默认配置，则可以在安装过程中进行定义。 有关将报表服务器连接到数据库的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
@@ -69,5 +69,4 @@ ms.locfileid: "65577577"
  [管理报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Reporting Services 的备份和还原操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
-  
   

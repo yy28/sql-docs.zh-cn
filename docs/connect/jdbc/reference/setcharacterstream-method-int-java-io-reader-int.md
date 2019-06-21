@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06e959f6fa9144c62ef79d60c6264ac5445febd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 18e05d4707977499cff3864cef34e39f1bd45feb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797599"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>setCharacterStream 方法 (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,11 +40,11 @@ public final void setCharacterStream(int n,
 #### <a name="parameters"></a>Parameters  
  *n*  
   
- 指示参数编号的 int。  
+ 指示参数编号的 int  。  
   
- reader  
+ reader   
   
- 一个读取器对象。  
+ Reader 对象。  
   
  *length*  
   
@@ -56,9 +56,9 @@ public final void setCharacterStream(int n,
 ## <a name="remarks"></a>Remarks  
  此 setCharacterStream 方法由 java.sql.PreparedStatement 接口中的 setCharacterStream 方法指定。  
   
- 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   
- 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度  。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

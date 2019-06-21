@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500032"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>将 Reporting Services 分页报表项固定到 Power BI 仪表板
@@ -40,7 +40,7 @@ ms.locfileid: "66500032"
   
 -   如果想要刷新固定项，需要针对存储的凭据配置报表。  当你固定项时，将自动创建 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅，以管理固定到仪表板的项的数据刷新。  如果报表未使用存储的凭据，则当订阅运行时，你将在“我的订阅”页上看到类似于以下内容的错误消息  。  
   
-    PowerBI 传递错误：仪表板：IT 支出分析示例，直观图：Chart2，错误：无法完成当前操作。 用户数据源凭据不符合运行此报表或共享数据集的要求。 请输入用户数据源凭据。”
+    “PowerBI 传递错误:仪表板: IT 支出分析示例，视觉对象: Chart2，错误:无法完成当前操作。 用户数据源凭据不符合运行此报表或共享数据集的要求。 请输入用户数据源凭据。”
  
     请参阅 [在 Reporting Services 数据源中存储凭据](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)中的“为特定于报表的数据源配置存储凭据（本机模式）”部分  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66500032"
   
 ##  <a name="bkmk_to_pin"></a> 固定报表项  
   
-1. 确认你已登录到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]中。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，选择“我的设置”菜单项并登录  。 有关详细信息，请参阅[适用于 Power BI 集成的“我的设置”（Web 门户）](my-settings-for-power-bi-integration-web-portal.md)。
+1. 确认你已登录到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]中。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，选择“我的设置”菜单项并登录  。 有关详细信息，请参阅[用于 Power BI 集成的“我的设置”（Web 门户）](my-settings-for-power-bi-integration-web-portal.md)。
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66500032"
   
 ##  <a name="bkmk-troubleshoot"></a> 解决问题  
   
--   报表查看器工具栏中**没有 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 按钮：** 这指示报表服务器尚未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成。 有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
+-   **报表查看器工具栏中没有“[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]”按钮：** 此消息指明报表服务器尚未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成。 有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
   
 - **无法固定**：当你尝试固定项时，你看到以下错误消息：请参阅 [可以固定的项](#bkmk_supported_items)部分。  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66500032"
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **过期的 Power BI 凭据：**  你尝试固定项，并看到以下错误消息。 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，单击“我的设置”，在“我的设置”页上，单击“登录”   。 有关详细信息，请参阅[适用于 Power BI 集成的“我的设置”（Web 门户）](my-settings-for-power-bi-integration-web-portal.md)。  
+-   **过期的 Power BI 凭据：**  你尝试固定项，并看到以下错误消息。 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，单击“我的设置”，在“我的设置”页上，单击“登录”   。 有关详细信息，请参阅[用于 Power BI 集成的“我的设置”（Web 门户）](my-settings-for-power-bi-integration-web-portal.md)。  
   
         Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
--   **无法固定**：如果你尝试将项固定到处于只读状态的仪表板，你将看到类似于以下内容的错误消息：  
+-   **无法固定**：如果尝试将项固定到处于只读状态的仪表板，便会看到如下错误消息：  
   
         Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
   

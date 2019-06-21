@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b08c8ffed61f90260617395f3c4df89b64dd6e0e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799938"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,19 +42,19 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 一个包含目录名称的字符串。  
+ 一个包含目录名称的字符串  。  
   
  *schema*  
   
- 一个包含架构名称的字符串。  
+ 一个包含架构名称的字符串  。  
   
  *table*  
   
- 一个包含表名称的字符串。  
+ 一个包含表名称的字符串  。  
   
  *作用域*  
   
- 指示相关范围的 int。 可以包括下列值：  
+ 指示相关范围的 int  。 可以包括下列值：  
   
  bestRowTemporary (0)  
   
@@ -64,7 +64,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  *nullable*  
   
- true 可包含可为 Null 的列。 否则为 **false**。  
+ true  可包含可为 Null 的列。 否则为 **false**。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
@@ -77,7 +77,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  由 getBestRowIdentifier 方法返回的结果集将包含以下信息：  
   
-|名称|类型|描述|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
 |SCOPE|short|返回结果的范围。 可以为下列值之一：<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
 |COLUMN_NAME|String|列的名称。|  

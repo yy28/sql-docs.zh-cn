@@ -10,11 +10,11 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.openlocfilehash: 5c82c32922712b377fd732b6745b1761e9f32a82
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126757"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,16 +24,16 @@ ms.locfileid: "55889998"
  
 ## <a name="introduction"></a>简介
 
-本文提供有关如何开发 PHP 应用程序使用的信息[Always Encrypted （数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)并[适用于 SQL Server PHP 驱动程序](../../connect/php/Microsoft-php-driver-for-sql-server.md)。
+本文介绍了如何使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和 [PHP Driver for SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md) 来开发 PHP 应用程序。
 
 始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 的驱动程序（如适用于 SQL Server 的 ODBC 驱动程序）在客户端应用程序中以透明方式对敏感数据进行加密和解密。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 SQL Server PHP 驱动程序使用 ODBC 驱动程序用于加密敏感数据的 SQL Server。
 
 ## <a name="prerequisites"></a>必备条件
 
- -   在数据库中配置始终加密。 此配置涉及为选定数据库列预配 Always Encrypted 密钥和设置加密。 如果还没有配置了始终加密的数据库，请按照 [始终加密入门](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。 具体而言，数据库应包含列主密钥 (CMK)、 列加密密钥 (CEK)，以及包含一个或多个使用该 CEK 加密的列的表的元数据定义。
+ -   在数据库中配置始终加密。 此配置涉及为选定数据库列预配 Always Encrypted 密钥和设置加密。 如果还没有配置了始终加密的数据库，请按照 [始终加密入门](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。 尤其要注意的是，数据库应包含列主密钥 (CMK)、列加密密钥 (CEK) 和包含一个或多个使用该 CEK 加密的表的元数据定义。
  -   请确保在开发计算机上安装 SQL Server 版本 17 或更高版本的 ODBC 驱动程序。 有关详细信息，请参阅[ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
 
-## <a name="enabling-always-encrypted-in-a-php-application"></a>在 PHP 应用程序中启用始终加密
+## <a name="enabling-always-encrypted-in-a-php-application"></a>在 PHP 应用程序中启用 Always Encrypted
 
 若要对面向加密列的参数启用加密，以及对查询结果启用解密，最简单的方法是将 `ColumnEncryption` 连接字符串关键字的值设置为 `Enabled`。 SQLSRV 和 PDO_SQLSRV 驱动程序中启用始终加密示例如下：
 
@@ -49,24 +49,24 @@ $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
-启用始终加密是不够的加密或解密成功;此外需要确保：
- -   应用程序具有“查看任意列主密钥定义”和“查看任意列加密密钥定义”数据库权限，这是访问数据库中 Always Encrypted 密钥的相关元数据所必需的权限。 有关详细信息，请参阅[数据库的权限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
- -   应用程序可以访问可保护查询加密列 Cek 的 CMK。 此要求是依赖于存储 CMK 的密钥存储提供程序。 有关详细信息，请参阅[使用的列主密钥存储](#working-with-column-master-key-stores)。
+为了成功实现加密或解密，单单启用 Always Encrypted 还不够；还需要确保：
+ -   应用程序具有“查看任意列主密钥定义”和“查看任意列加密密钥定义”数据库权限，这是访问数据库中 Always Encrypted 密钥的相关元数据所必需的权限。 有关详细信息，请参阅[数据库权限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
+ -   应用程序可以访问 CMK，以保护已查询的加密列的 CEK。 此要求是依赖于存储 CMK 的密钥存储提供程序。 有关详细信息，请参阅[使用列主密钥存储](#working-with-column-master-key-stores)。
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>检索和修改加密列中的数据
 
-一旦在连接上启用始终加密，就可以使用标准 SQLSRV Api (请参阅[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)) 或 PDO_SQLSRV Api (请参阅[PDO_SQLSRV 驱动程序 API 参考](../../connect/php/pdo-sqlsrv-driver-reference.md)) 来检索或修改数据在加密的数据库列。 假设你的应用程序具有所需的数据库的权限，并且可以访问列主密钥，则驱动程序加密面向加密的列和解密从加密列，以透明方式行为检索到的数据的任何查询参数应用程序，如同未加密的列。
+一旦在连接上启用始终加密，就可以使用标准 SQLSRV Api (请参阅[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)) 或 PDO_SQLSRV Api (请参阅[PDO_SQLSRV 驱动程序 API 参考](../../connect/php/pdo-sqlsrv-driver-reference.md)) 来检索或修改数据在加密的数据库列。 假设应用程序拥有必需的数据库权限，并能访问列主密钥，且驱动程序负责加密任何定目标到加密列的查询参数，并解密从加密列检索到的数据，对应用程序的行为方式透明，就像列未加密一样。
 
-如果未启用 Always Encrypted，具有面向加密列的参数的查询将失败。 只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。 但是，该驱动程序不会尝试任何解密和应用程序收到二进制加密的数据 （作为字节数组）。
+如果未启用 Always Encrypted，具有面向加密列的参数的查询将失败。 只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。 不过，驱动程序不会尝试进行任何解密，并且应用程序会收到二进制加密数据（字节数组形式）。
 
 下表概述了查询的行为，具体取决于是否启用了 Always Encrypted：
 
 |查询特征|启用了始终加密，并且应用程序可以访问密钥和密钥元数据|启用了始终加密，但应用程序无法访问密钥或密钥元数据|禁用了始终加密|
 |---|---|---|---|
-|面向加密的列的参数。|以透明方式加密参数值。|错误|错误|
-|从加密列中检索数据，且没有面向加密列的参数。|以透明方式解密来自加密列的结果。 应用程序接收纯文本列的值。 |错误|不解密来自加密列的结果。 应用程序收到字节数组形式的加密值。|
+|面向加密列的参数。|以透明方式加密参数值。|错误|错误|
+|从加密列中检索数据，且没有面向加密列的参数。|以透明方式解密来自加密列的结果。 应用程序收到纯文本列值。 |错误|不解密来自加密列的结果。 应用程序收到字节数组形式的加密值。|
  
-以下示例说明如何检索和修改加密列中的数据。 这些示例假定具有以下架构的表。 SSN 和 BirthDate 列已加密。
+以下示例说明如何检索和修改加密列中的数据。 这些示例假定存在具有以下架构的表。 SSN 和 BirthDate 列已加密。
 ```
 CREATE TABLE [dbo].[Patients](
  [PatientId] [int] IDENTITY(1,1),
@@ -87,8 +87,8 @@ CREATE TABLE [dbo].[Patients](
 ### <a name="data-insertion-example"></a>数据插入示例
 
 以下示例演示如何使用 SQLSRV 和 PDO_SQLSRV 驱动程序患者表中插入一行。 请注意以下几点：
- -   对于示例代码中的加密，没有什么特定的注意事项。 该驱动程序会自动检测并加密 SSN 和 BirthDate 参数，面向加密的列的值。 该机制使得加密操作对应用程序而言是透明的。
- -   插入到数据库列（包括加密列）中的值将作为绑定参数传递。 在将值发送到非加密列时，可以选择使用参数（强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，必须使用该参数。 如果插入到 SSN 或 BirthDate 列中的值作为查询语句中嵌入的文本传递，查询会失败，因为该驱动程序不会尝试加密或其他处理查询中的文本。 因此，服务器会因为与加密列不兼容而拒绝它们。
+ -   对于示例代码中的加密，没有什么特定的注意事项。 驱动程序自动检测并加密定目标到加密列的 SSN 和 BirthDate 参数的值。 该机制使得加密操作对应用程序而言是透明的。
+ -   插入到数据库列（包括加密列）中的值将作为绑定参数传递。 在将值发送到非加密列时，可以选择使用参数（强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，必须使用该参数。 若将插入 SSN 或 BirthDate 列的值传递为嵌入查询声明的文本，查询将失败，因为驱动程序不会尝试加密或处理查询中的文本。 因此，服务器会因为与加密列不兼容而拒绝它们。
  -   在插入时使用的绑定参数的值，则 SQL 类型与目标列的数据类型相同或者支持将其转换为目标列的数据类型必须传递到数据库。 此要求是因为 Always Encrypted 支持几个类型转换 (有关详细信息，请参阅[Always Encrypted （数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md))。 两个 PHP 驱动程序，SQLSRV 和 PDO_SQLSRV，每个都有一种机制来帮助用户确定值的 SQL 类型。 因此，用户不必显式提供的 SQL 类型。
   -   SQLSRV 驱动程序，用户有两个选项：
    -   依赖 PHP 驱动程序，以确定并设置正确的 SQL 类型。 在这种情况下，用户必须使用`sqlsrv_prepare`和`sqlsrv_execute`来执行参数化的查询。
@@ -157,7 +157,7 @@ $stmt->execute();
  -   执行带有绑定参数的查询，PHP 驱动程序将自动确定用户的 SQL 类型，除非用户明确指定的 SQL 类型时使用 SQLSRV 驱动程序。
  -   程序打印的所有值均为纯文本形式，因为驱动程序将以透明方式解密从 SSN 和 BirthDate 列中检索到的数据。
  
-注意：仅当加密是确定性的查询可以对加密列执行相等比较。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
+注意：只有在加密是确定性的情况下，查询才能对加密列执行相等比较。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 
 SQLSRV:
 ```
@@ -184,7 +184,7 @@ $stmt->execute();
 $row = $stmt->fetch();
 ```
 
-### <a name="ciphertext-data-retrieval-example"></a>密码文本数据检索示例
+### <a name="ciphertext-data-retrieval-example"></a>已加密文本数据检索示例
 
 如果未启用始终加密，只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。
 
@@ -221,14 +221,14 @@ $row = $stmt->fetch();
  -   使用 SQLSRV 驱动程序使用时`sqlsrv_prepare`和`sqlsrv_execute`自动确定 SQL 类型，以及列的大小和参数的小数位数。
  -   当使用 PDO_SQLSRV 驱动程序来执行查询时，还会自动确定列大小和参数的小数位数的 SQL 类型
  -   使用 SQLSRV 驱动程序和时`sqlsrv_query`来执行查询：
-  -   支持从 SQL 类型转换为列的类型或参数的 SQL 类型也是完全与目标列的类型相同。
+  -   此参数的 SQL 类型与目标列的类型完全相同，或支持从 SQL 列转换为此列的类型。
   -   对于面向列的 `decimal` 和 `numeric` SQL Server 数据类型的参数，其精度和小数位数与为目标列配置的精度和小数位数相同。
   -   在用于修改目标列的查询中，面向列的 `datetime2`、`datetimeoffset` 或 `time` SQL Server 数据类型的参数的精度不大于目标列的精度。
  -   不使用 PDO_SQLSRV 语句属性`PDO::SQLSRV_ATTR_DIRECT_QUERY`或`PDO::ATTR_EMULATE_PREPARES`中参数化查询
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>由于传递纯文本而非加密值而发生的错误
 
-需要发送到服务器之前将其加密任何面向加密的列的值。 尝试插入、修改或者按纯文本值筛选加密列会导致错误。 为防止发生此类错误，请确保：
+面向加密列的任何值都需要先完成加密，然后才能发送给服务器。 尝试插入、修改或者按纯文本值筛选加密列会导致错误。 为防止发生此类错误，请确保：
  -   启用始终加密 (连接字符串中设置`ColumnEncryption`关键字`Enabled`)。
  -   使用 bind 参数发送面向加密列的数据。 下面的示例显示了按文本/常量对加密列 (SSN) 进行错误筛选的查询：
 ```
@@ -243,31 +243,31 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
  
 ### <a name="round-trips-to-retrieve-metadata-for-query-parameters"></a>为了检索查询参数的元数据而往返的次数
 
-如果为连接启用了 Always Encrypted，默认情况下，ODBC 驱动程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，并将查询语句（不带任何参数值）传递到 SQL Server。 此存储的过程分析查询语句，以找出，如果任何参数需要加密，并且如果是这样，将返回每个参数，以允许要进行加密的驱动程序的与加密相关信息。
+如果为连接启用了 Always Encrypted，默认情况下，ODBC 驱动程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，并将查询语句（不带任何参数值）传递到 SQL Server。 此存储过程会分析查询语句，以了解是否有任何参数需要加密；如果有，则会针对每个参数返回加密相关信息，以便驱动程序对它们加密。
 
 由于 PHP 驱动程序允许用户将参数绑定在已准备的语句，而无需提供 SQL 中，键入，当一个参数绑定支持始终加密的连接中，PHP 驱动程序调用[SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md)上若要获取 SQL 类型、 列大小和小数位数的参数。 元数据然后用于调用[SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md)。 这些额外`SQLDescribeParam`ODBC 驱动程序已具有客户端上存储信息的调用不需要额外的往返访问数据库时`sys.sp_describe_parameter_encryption`调用。
 
-上述行为可确保出现最高的客户端应用程序 （和应用程序开发人员） 的透明度级别不需要只要面向加密的列的值传递给驱动程序中需要注意的哪些查询在访问加密的列参数。
+上述行为可确保对客户端应用程序（和应用程序开发人员）高度透明，应用程序不需要知道哪些查询访问加密列，但前提是定目标到加密列的值在参数中传递到驱动程序。
 
 与不同的 SQL Server 的 ODBC 驱动程序，在语句/查询级别启用始终加密是尚不支持的 PHP 驱动程序中。 
 
 ### <a name="column-encryption-key-caching"></a>列加密密钥缓存
 
-若要减少对列主密钥存储调用，以解密列加密密钥 (CEK) 数，该驱动程序将缓存在内存中的纯文本 Cek。 从数据库元数据收到加密的 CEK (ECEK) 之后, 的 ODBC 驱动程序首先尝试查找纯文本 CEK 相对应的缓存中的加密密钥值。 该驱动程序将调用包含仅当它不能在缓存中找到相应的纯文本 CEK 的 CMK 的密钥存储。
+为了减少对列主密钥存储的调用次数以解密列加密密钥 (CEK)，驱动程序在内存中缓存纯文本 CEK。 从数据库元数据收到加密 CEK (ECEK) 后，ODBC 驱动程序会先尝试查找与缓存中的加密密钥值对应的纯文本 CEK。 只有在驱动程序无法从缓存中找到对应的纯文本 CEK 时，才会调用包含 CMK 的密钥存储。
 
-注意：在 SQL Server 的 ODBC 驱动程序，在两个小时的超时被收回缓存中的条目。 此行为意味着，对于给定的 ECEK，驱动程序将在生存期内的应用程序或每隔两小时联系一次的密钥存储，小者为准。
+注意：在 ODBC Driver for SQL Server 中，缓存中的项在两小时的超时过后被收回。 这种行为意味着，对于给定 ECEK，驱动程序在应用程序生存期内或每两小时（以较短持续时间为准）只联系密钥存储一次。
 
 ## <a name="working-with-column-master-key-stores"></a>使用列主密钥存储
 
-若要加密或解密数据，该驱动程序需要获取为目标列配置的 CEK。 Cek 存储在数据库元数据中的加密形式 (ECEKs) 中。 每个 CEK 具有相应 CMK 用来对其进行加密。 [数据库元数据](../../t-sql/statements/create-column-master-key-transact-sql.md)不存储 CMK 本身; 它仅包含的密钥存储和密钥存储可用于查找 CMK 的信息的名称。
+驱动程序需要获取为目标列配置的 CEK，才能加密或解密数据。 CEK 以加密形式 (ECEK) 存储在数据库元数据中。 每个 CEK 均有一个用于加密其自身的相应 CMK。 [数据库元数据](../../t-sql/statements/create-column-master-key-transact-sql.md)本身不存储 CMK；它只包含密钥存储的名称，以及密钥存储可用于查找 CMK 的信息。
 
-若要获取 ECEK 的纯文本值，该驱动程序，首先获取有关该 CEK 和其相应的 CMK，元数据，然后它使用此信息来联系包含 CMK 的密钥存储并请求该证书来解密 ECEK。 与使用密钥存储提供程序的密钥存储通信，该驱动程序。
+为了获取 ECEK 的纯文本值，驱动程序会先获取 CEK 及其相应 CMK 的元数据，再使用此信息联系包含 CMK 的密钥储存，并请求它解密 ECEK。 驱动程序使用密钥存储提供程序与密钥存储通信。
 
 对于 Microsoft Driver 5.3.0 for PHP for SQL Server，支持仅 Windows 证书存储区提供程序和 Azure 密钥保管库。 尚不支持其他密钥存储提供程序支持的 ODBC 驱动程序 （自定义密钥存储提供程序）。
 
 ### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
 
-Windows 上的 SQL Server ODBC 驱动程序包含名为 Windows 证书存储的内置列主密钥存储提供程序`MSSQL_CERTIFICATE_STORE`。 （此提供程序不是在 macOS 或 Linux 上可用。）与此提供程序，客户端计算机上本地存储 CMK 和应用程序无额外配置才可使用的驱动程序。 但是，应用程序必须具有对证书和私钥的访问的存储中。 有关详细信息，请参阅 [创建并存储列主密钥 (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
+适用于 Windows 上的 SQL Server 的 ODBC 驱动程序包含用于 Windows 证书存储的内置列主密钥存储提供程序 `MSSQL_CERTIFICATE_STORE`。 （此提供程序在 macOS 或 Linux 上不可用。）此提供程序会将 CMK 存储在客户端计算机本地，应用程序无需额外配置即可将它与驱动程序配合使用。 但是，应用程序必须有权访问存储中的证书及其私钥。 有关详细信息，请参阅 [创建并存储列主密钥 (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 ### <a name="using-azure-key-vault"></a>使用 Azure Key Vault
 
@@ -297,7 +297,7 @@ $connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "Co
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
-PDO_SQLSRV:使用 Azure Active Directory 帐户：
+PDO_SQLSRV： 使用 Azure Active Directory 帐户：
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
@@ -308,7 +308,7 @@ $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStor
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
-## <a name="limitations-of-the-php-drivers-when-using-always-encrypted"></a>PHP 驱动程序使用始终加密时的限制
+## <a name="limitations-of-the-php-drivers-when-using-always-encrypted"></a>使用 Always Encrypted 时的 PHP 驱动程序限制
 
 SQLSRV 和 PDO_SQLSRV:
  -   Linux/macOS 不支持 Windows 证书存储区提供程序

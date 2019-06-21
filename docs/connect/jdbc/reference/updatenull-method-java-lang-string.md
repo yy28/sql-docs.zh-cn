@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fb3e5cde-30e1-4c95-adf0-d5b6c1f0da95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c446bd0bc3332be32d2091aefff57baf092e4f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0546eb03b89512bbd7b52ef33ca44ac60fb426a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848905"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798806"
 ---
 # <a name="updatenull-method-javalangstring"></a>updateNull 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +38,13 @@ public void updateNull(java.lang.String columnName)
 #### <a name="parameters"></a>Parameters  
  *columnName*  
   
- 一个包含列名的字符串。  
+ 一个包含列名的字符串  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateNull 方法由 java.sql.ResultSet 接口中的 updateNull 方法指定。  
+ 此 updateNull 方法是由 java.sql.ResultSet 接口中的 updateNull 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateNull 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   

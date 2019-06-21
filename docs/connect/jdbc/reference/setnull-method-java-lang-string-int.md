@@ -1,5 +1,5 @@
 ---
-title: setNull 方法 （java.lang.String，int） |Microsoft Docs
+title: setNull 方法 (java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e1d7e267-d9de-407a-b1a9-abdc2623478d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10e19b094ff82c5e0d71aed0031ac5f119e18b40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fefddb1f1e412c411be1156ac5b7e188a03b6244
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667865"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800311"
 ---
 # <a name="setnull-method-javalangstring-int"></a>setNull 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,11 +37,11 @@ public void setNull(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCol*  
+ sCol   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
- *n 类型*  
+ nType   
   
  由 java.sql.Types 定义的 JDBC 类型代码。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2b3727da-0480-4cea-b8b1-abda90699b84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad07fbd53d2e3004ea96572d1c4d28f83e92a509
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5d777242d38e6a7002b2fa557c4ca18290e652a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604395"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795601"
 ---
 # <a name="setclob-method-int-javaioreader"></a>setClob 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,13 +32,13 @@ public final void setClob(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *parameterIndex*  
+ parameterIndex   
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
- reader  
+ reader   
   
- 一个读取器对象。  
+ Reader 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: feab619432b05f5f8588af804309d231d9893794
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 770717283a7a24d91218a2da0eebc0382072548e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806695"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800474"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>setNCharacterStream 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,17 +33,17 @@ public final void setNCharacterStream(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- parameterName  
+ parameterName   
   
- 指示参数名称的字符串。  
+ 指示参数名称的字符串  。  
   
  *value*  
   
- 一个读取器对象。  
+ Reader 对象。  
   
  *length*  
   
- 指示流中字符数的 long。  
+ 指示流中字符数的 long  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -53,9 +53,9 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  此方法应用于**NCHAR**， **NVARCHAR**， **NTEXT**，以及**XML**数据类型。  
   
- 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   
- 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setNCharacterStream 方法 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度  。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setNCharacterStream 方法 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [setNCharacterStream 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   

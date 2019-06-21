@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dc45b126-3196-47ff-956b-cbc897980ff8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 876b9a4392e675abd48931e4c398455c5e060188
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8edb9eec2f18fc133ccb64d9b43522a06ddad25b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660465"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66782719"
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp"></a>setTimestamp 方法 (java.lang.String, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,9 +37,9 @@ public void setTimestamp(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCol*  
+ sCol   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
  *t*  
   
@@ -49,7 +49,7 @@ public void setTimestamp(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setTimestamp 方法由 java.sql.CallableStatement 接口中的 setTimestamp 方法指定。  
+ 此 setTimestamp 方法是由 java.sql.CallableStatement 接口中的 setTimestamp 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [setTimestamp 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   

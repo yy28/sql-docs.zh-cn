@@ -14,20 +14,20 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 79aa1dcfd924dbe3e63989587afd6d706b1834de
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 61a913586bbba7dc9fc1d7d997ba33a9eddc8e0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66785945"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  可使用 ISequentialStream 接口绑定或检索大型数据。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
+  可使用 ISequentialStream 接口绑定或检索大型数据  。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -36,13 +36,13 @@ ms.locfileid: "53213528"
   
 1.  建立与数据源的连接。  
   
-2.  执行命令（本例中通过 IID_IRow 调用 ICommandExecute::Execute()）。  
+2.  执行命令（本例中通过 IID_IRow 调用 ICommandExecute::Execute()）  。  
   
-3.  提取列数据使用**open （)** 或**IRow::GetColumns()**。  
+3.  提取列数据使用**open （)** 或**IRow::GetColumns()** 。  
   
-    -   **Open （)** 可用来打开**ISequentialStream**在该行上。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）。  
+    -   **Open （)** 可用来打开**ISequentialStream**在该行上。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）   。  
   
-    -   如果使用 IRow::GetColumns()，则 DBCOLUMNACCESS 结构的 pData 元素设置为指向流对象。  
+    -   如果使用 IRow::GetColumns()，则 DBCOLUMNACCESS 结构的 pData 元素设置为指向流对象   。  
   
 4.  使用**ISequentialStream::Read()** 重复，若要指定的字节数读入使用者缓冲区。  
   

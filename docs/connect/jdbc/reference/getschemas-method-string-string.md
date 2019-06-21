@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76c5831547178b33854465d38cfe97dc87684d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b4129ebee2be0ca043be349dc57ca8612ab7d0b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684605"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66792193"
 ---
 # <a name="getschemas-method-string-string"></a>getSchemas 方法 (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,11 +34,11 @@ public ResultSet getSchemas(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 数据库中的目录名称。 如果该名称为空字符串 ""，则结果将包括无目录的架构。 如果此字符串为“null”，目录名称则不可用于搜索。  
+ 数据库中的目录名称。 如果该名称为空字符串 ""，则结果将包括无目录的架构。 如果此字符串为“null”，目录名称则不可用于搜索  。  
   
- *schemaPattern*  
+ schemaPattern   
   
- 架构的名称。 如果此字符串为“null”，架构名称则不可用于搜索。  
+ 架构的名称。 如果此字符串为“null”，架构名称则不可用于搜索  。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
@@ -51,7 +51,7 @@ public ResultSet getSchemas(java.lang.String catalog,
   
  由 getSchemas 方法返回的结果集包含以下信息：  
   
-|名称|类型|描述|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|架构的名称。|  
 |TABLE_CATALOG|**String**|架构的目录名称。|  

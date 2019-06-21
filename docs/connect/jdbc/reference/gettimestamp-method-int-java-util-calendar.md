@@ -1,5 +1,5 @@
 ---
-title: getTimestamp 方法 （int，java.util.Calendar） |Microsoft Docs
+title: getTimestamp 方法 (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc078598377ec7a866b90d68677cfd9302b6263a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f48f135f42c0e738f13d4e59f0be49589f32057
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66778615"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>getTimestamp 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,11 +37,11 @@ public java.sql.Timestamp getTimestamp(int index,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- 索引  
+ 索引   
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
- *cal*  
+ cal   
   
  一个日历对象。  
   
@@ -52,9 +52,9 @@ public java.sql.Timestamp getTimestamp(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getTimestamp 方法由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定。  
+ 此 getTimestamp 方法是由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定的。  
   
- 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 列返回值。  
+ 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 列返回值   。  
   
 ## <a name="see-also"></a>另请参阅  
  [getTimestamp 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

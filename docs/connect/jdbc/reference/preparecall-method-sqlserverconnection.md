@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 265b024c-898a-4bd0-98b5-f06076717b9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7857531732e0aa8b9ee69c2ba51a873b6eb50114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e817d67dc59fd9417b518f2ee24f8006e6d7e58c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762440"
 ---
 # <a name="preparecall-method-sqlserverconnection"></a>prepareCall 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "47841535"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[prepareCall (java.lang.String)](../../../connect/jdbc/reference/preparecall-method-java-lang-string.md)|创建用于调用数据库存储过程的 SQLServerCallableStatement 对象。|  
-|[prepareCall （java.lang.String，int，int）](../../../connect/jdbc/reference/preparecall-method-java-lang-string-int-int.md)|创建 SQLServerCallableStatement 对象，该对象使用给定的类型和并发机制生成 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。|  
+|[prepareCall (java.lang.String, int, int)](../../../connect/jdbc/reference/preparecall-method-java-lang-string-int-int.md)|创建 SQLServerCallableStatement 对象，该对象使用给定的类型和并发机制生成 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。|  
 |[prepareCall (java.lang.String, int, int, int)](../../../connect/jdbc/reference/preparecall-method-java-lang-string-int-int-int.md)|创建 SQLServerCallableStatement 对象，该对象使用给定的类型、并发机制和保持能力生成 SQLServerResultSet 对象。|  
   
 ## <a name="see-also"></a>另请参阅  

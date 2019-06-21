@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8deaaf006698018764eb67dc27e3f7cdb372e04a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a38bbf56613f0b06f874b5db4e4de03f0064492f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687759"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66783549"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,18 +36,18 @@ public void setTrustStore(java.lang.String trustStore)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- trustStore  
+  trustStore  
   
- 包含证书 trustStore 文件的路径（包括文件名）的字符串。  
+ 包含证书 trustStore 文件的路径（包括文件名）的字符串  。  
   
 ## <a name="remarks"></a>Remarks  
  如果未指定 trustStore 属性或将此属性设置为 null，则 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将依赖于信任关系管理器工厂的查找规则来确定要使用哪一个证书存储区。 默认的 SunX509 TrustManagerFactory 尝试按此顺序在下列位置查找信任的资料：  
   
 -   1. 由“javax.net.ssl.trustStore”Java 虚拟机 (JVM) 系统属性指定的文件。  
   
--   2. "\<-h >/lib/security/jssecacerts"文件。  
+-   2. “\<java-home>/lib/security/jssecacerts”文件。  
   
--   3. "\<-h >/lib/security/cacerts"文件。  
+-   3. “\<java-home>/lib/security/cacerts”文件。  
   
  有关详细信息，请参阅 Sun Microsystems 网站上的 SunX509 TrustManager 接口文档。  
   

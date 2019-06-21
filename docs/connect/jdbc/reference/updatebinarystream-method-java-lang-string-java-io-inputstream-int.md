@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9be246a7-85fa-49fc-ad79-aabe97f5b280
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41b3c59bdec9a2cbeb9c2dc3ce777e455ade2beb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a03a2ff79af2472af5d0bed31be3ad6d35f525bd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804955"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798834"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-int"></a>updateBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *columnLabel*  
+ columnLabel   
   
  一个包含列标签的字符串。  
   
@@ -48,7 +48,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
   
  *length*  
   
- 指示流长度的 int。  
+ 指示流长度的 int  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -58,9 +58,9 @@ public void updateBinaryStream(java.lang.String columnLabel,
   
  此方法将来自 InputStream 对象的字节传递给所选的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 二进制列，例如 binary、varbinary、varbinary(max)、image、xml 和 udt。 此方法不支持更新字符列。 若要使用 InputStream 更新字符列，请使用 [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) 方法。  
   
- 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   
- 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [updateBinaryStream 方法 (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md)。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度  。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [updateBinaryStream 方法 (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateBinaryStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)   

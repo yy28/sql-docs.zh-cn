@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d875e82b4db5e1725f43307348d27a6701e2a88d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2881f3a9e0d3a4179334256aa7d2917917cf97f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697785"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781325"
 ---
 # <a name="getcharacterstream-method-long-long"></a>getCharacterStream 方法 (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将 Clob 数据作为 Reader 对象或字符流返回且具有指定位置和长度。  
+  将 Clob  数据作为 Reader 对象或字符流返回且具有指定位置和长度。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,16 +32,16 @@ public java.io.Reader getCharacterStream(long pos,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *pos*  
+ pos   
   
- 指示与要检索的部分值的第一个字符之间偏移量的 long 值。  
+ 指示与要检索的部分值的第一个字符之间偏移量的 long 值  。  
   
  *length*  
   
- 指示要检索的部分值的字符长度的 long。  
+ 指示要检索的部分值的字符长度的 long  。  
   
 ## <a name="return-value"></a>返回值  
- 读取器对象，其中包含**Clob**数据。  
+ 包含 Clob  数据的 Reader 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

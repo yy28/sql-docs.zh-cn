@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fbd40c6edb2e4b623f0e2fbf7e00ad91dc683a04
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66766868"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException 构造函数 （java.lang.String，java.lang.String，int，java.lang.Throwable）
@@ -41,11 +41,11 @@ public SQLServerException(java.lang.String errText,
   
  包含错误文本的字符串。
   
- *errState*  
+ errState   
   
  包含错误的状态的字符串。
  
- *errNum*  
+ errNum   
   
  一个整数，它包含异常的错误代码。
  

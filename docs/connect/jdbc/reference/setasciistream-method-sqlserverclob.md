@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 76d58f43e1caded32ac03e2c8f96ee5b9365bb72
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66764976"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream 方法 (SQLServerClob)
@@ -36,7 +36,7 @@ public java.io.OutputStream setAsciiStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *pos*  
+ pos   
   
  开始写入 CLOB 对象的位置。  
   

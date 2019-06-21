@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506642"
 ---
 # <a name="create-a-linked-report"></a>创建链接报表
@@ -32,7 +32,7 @@ ms.locfileid: "66506642"
 
 2. 上**管理<reportname>** 页上，选择**创建链接的报表**。  
   
-3. 键入新链接报表的名称。 输入可选说明。  
+3. 输入新链接报表的名称。 输入可选说明。  
   
 4. 若要选择不同的报表的文件夹，选择右侧的省略号按钮 （...）***位置***。  导航到新文件夹的报表并选择**选择**。 如果不选择其他文件夹，在当前文件夹中创建链接的报表。  
   
@@ -46,6 +46,6 @@ ms.locfileid: "66506642"
   
 ## <a name="see-also"></a>另请参阅  
  [打开和关闭报表&#40;web 门户&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
- [Reporting Services 概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)  
+ [Reporting Services 概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
  [报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)
   

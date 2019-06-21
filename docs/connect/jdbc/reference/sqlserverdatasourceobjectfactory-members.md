@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52c6b133-f7ed-468d-8f34-bc2e4b81553e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e850f15ab1e9e690c11c863e9719e1231c8f7201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6f83002b2fcbf1620049e10c7fa8948ce554483d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701985"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796843"
 ---
 # <a name="sqlserverdatasourceobjectfactory-members"></a>SQLServerDataSourceObjectFactory 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47701985"
   
 ## <a name="constructors"></a>构造函数  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[SQLServerDataSourceObjectFactory ()](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|初始化 [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md) 类的新实例。|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47701985"
   
 ## <a name="methods"></a>方法  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)|检索指定数据源对象的实例。|  
   

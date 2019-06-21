@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: be4ecd3bfdf88029f56e86fb071edc51987a21b2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c1edbe7d411e06e477db016db62b4245e0893aee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801154"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,19 +54,19 @@ ms.locfileid: "51604587"
   
  为了使用请求模型，使用者必须提供其自己的对于行集对象的实现。 使用表值参数行集 (CLSID_ROWSET_TVP) 拉取模型，使用者则需要聚合表值参数行集公开的对象，该提供程序通过 ITableDefinitionWithConstraints::CreateTableWithConstraints 方法或 iopenrowset:: Openrowset 方法。 使用者对象应只覆盖 IRowset 接口实现。 您必须覆盖以下函数：  
   
--   Irowset:: Getnextrows  
+-   IRowset::GetNextRows  
   
--   Irowset:: Addrefrows  
+-   IRowset::AddRefRows  
   
--   Irowset:: Getdata  
+-   IRowset::GetData  
   
--   Irowset:: Releaserows  
+-   IRowset::ReleaseRows  
   
--   Irowset:: Restartposition  
+-   IRowset::RestartPosition  
   
  适用于 SQL Server 的 OLE DB 驱动程序将一次从使用者行集对象中读取一行或多行，以便在表值参数中支持流行为。 例如，用户可能在磁盘上（而非内存中）具有表值参数行集数据，当适用于 SQL Server 的 OLE DB 驱动程序要求时，可能实现从磁盘读取数据的功能。  
   
- 使用者将其数据格式传送到 OLE DB 驱动程序适用于 SQL Server 表值参数行集对象使用 iaccessor:: Createaccessor。 当从使用者缓冲区读取数据时，访问接口将验证所有可写入和非默认列是否至少可用于一个取值函数句柄，并使用相应的句柄来读取列数据。 为了避免混乱，在表值参数行集列与绑定之间应具有一对一的对应关系。 与同一列的重复绑定将导致错误。 此外，每个访问器都必须具有*iOrdinal* DBBindings 的序列中的成员。 对于 IRowset::GetData 的调用数将与每行的取值函数数量相同，调用的顺序将基于 iOrdinal 值的顺序（从低值到高值）。  
+ 使用者将其数据格式传送到 OLE DB 驱动程序适用于 SQL Server 表值参数行集对象使用 iaccessor:: Createaccessor。 当从使用者缓冲区读取数据时，访问接口将验证所有可写入和非默认列是否至少可用于一个取值函数句柄，并使用相应的句柄来读取列数据。 为了避免混乱，在表值参数行集列与绑定之间应具有一对一的对应关系。 与同一列的重复绑定将导致错误。 此外，每个访问器都必须具有*iOrdinal* DBBindings 的序列中的成员。 对于 IRowset::GetData 的调用数将与每行的取值函数数量相同，调用的顺序将基于 iOrdinal 值的顺序（从低值到高值）  。  
   
  访问接口应实现由表值参数行集对象显示的大多数接口。 使用者将使用最少的接口实现行集对象 (IRowset)。 由于盲聚合 (blind aggregation)，因此，表值参数行集对象将实现剩下的所必需的行集对象接口。  
   

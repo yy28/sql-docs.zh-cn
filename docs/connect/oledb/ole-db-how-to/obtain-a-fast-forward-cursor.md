@@ -12,13 +12,13 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 63eea442ea07dfa7562a51b758b0cecec11edfbe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 30c108b0b4f7d8022e5fccf1738b059a15abd687
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66791400"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>获取 FAST_FORWARD 游标
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51603868"
 
   若要获取只进只读游标，请将行集属性 DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT 和 DBPROP_OWNUPDATEDELETE 设置为 VARIANT_TRUE。  
   
- 本文提供了一个完整示例，说明如何通过设置行集属性来获取 FAST_FORWARD 游标。 设置属性后，执行 SELECT 语句，以检索并显示 AdventureWorks 数据库中 Purchasing.Vendor 表的 Name 列。  
+ 本文提供了一个完整示例，说明如何通过设置行集属性来获取 FAST_FORWARD 游标。 设置属性后，执行 SELECT 语句，以检索并显示 AdventureWorks 数据库中 Purchasing.Vendor 表的 Name 列    。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  

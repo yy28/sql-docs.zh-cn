@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f63ae057278b996b02b42668c3ad97bcf7b3f50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7ea9552ff9a9bf8d0a591f35670ca7147c67e18d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645465"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801356"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +36,12 @@ public java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个**字符串**，其中包含小写**完整**或**自适应**。  
+ 包含小写 full  或 adaptive  的 String  。  
   
 ## <a name="remarks"></a>Remarks  
- 指定在运行时从服务器读取全部结果的 full 值。  
+ 指定在运行时从服务器读取全部结果的 full  值。  
   
- adaptive 值指定在必要时缓冲尽可能少的数据。 adaptive 值为默认缓冲模式。  
+ adaptive  值指定在必要时缓冲尽可能少的数据。 adaptive  值为默认缓冲模式。  
   
  有关使用响应缓冲模式的详细信息，请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
   

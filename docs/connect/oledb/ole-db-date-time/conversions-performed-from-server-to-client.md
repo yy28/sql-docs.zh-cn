@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769369"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
@@ -28,9 +28,9 @@ ms.locfileid: "66769369"
   本文说明在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）与使用适用于 SQL Server 的 OLE DB 驱动程序编写的客户端应用程序之间执行的日期/时间转换。  
   
 ## <a name="conversions"></a>转换  
- 下表说明了返回到客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果在调用 icommandwithparameters:: Setparameterinfo 和中指定的类型*pwszDataSourceType*不的匹配将由服务器执行在服务器上，隐式转换的实际类型并返回到客户端的类型将匹配 icommandwithparameters:: Setparameterinfo 通过指定的类型。 如果服务器的转换规则与本文中介绍的规则不同，则可能会导致意外的转换结果。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是 1899-12-30。  
+ 下表说明了返回到客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果在调用 icommandwithparameters:: Setparameterinfo 和中指定的类型*pwszDataSourceType*不的匹配将由服务器执行在服务器上，隐式转换的实际类型并返回到客户端的类型将匹配 icommandwithparameters:: Setparameterinfo 通过指定的类型。 如果服务器的转换规则与本文描述的不同，这可能会导致意外转换结果出现。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是 1899-12-30。  
   
-|目标 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|转换后 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |date|1, 7|“确定”|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|“确定”|“确定”|4|4|  
 |Time|5, 6, 7|-|9|“确定”|6|3, 6|5, 6|-|OK (VT_BSTR)|“确定”|“确定”|4|4|  

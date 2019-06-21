@@ -1,5 +1,5 @@
 ---
-title: SQLServerDatabaseMetaData 成员 |Microsoft Docs
+title: SQLServerDatabaseMetaData 成员| Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95948680f7bd7bb1766207fa8894d274b5e09daf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dbbe2bde7b6eba06b865b5cd4fb94e471b626510
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800563"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47788071"
   
 ## <a name="inherited-fields"></a>继承的字段  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |java.sql.DatabaseMetaData|attributeNoNulls、attributeNullable、attributeNullableUnknown、bestRowNotPseudo、bestRowPseudo、 bestRowSession、bestRowTemporary、bestRowTransaction、bestRowUnknown、columnNoNulls、columnNullable、 columnNullableUnknown、importedKeyCascade、importedKeyInitiallyDeferred、importedKeyInitiallyImmediate、 importedKeyNoAction、importedKeyNotDeferrable、importedKeyRestrict、importedKeySetDefault、 importedKeySetNull、procedureColumnIn、procedureColumnInOut、procedureColumnOut、procedureColumnResult、 procedureColumnReturn、procedureColumnUnknown、procedureNoNulls、procedureNoResult、procedureNullable、 procedureNullableUnknown、procedureResultUnknown、procedureReturnsResult、sqlStateSQL、sqlStateSQL99、 sqlStateXOpen、tableIndexClustered、tableIndexHashed、tableIndexOther、tableIndexStatistic、typeNoNulls、 typeNullable、typeNullableUnknown、typePredBasic、typePredChar、typePredNone、typeSearchable、 versionColumnNotPseudo、versionColumnPseudo、versionColumnUnknown|  
   
 ## <a name="methods"></a>方法  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|检索当前用户是否有权调用 [getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md) 方法返回的所有过程。|  
 |[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|检索当前用户是否有权使用 SELECT 语句中的 [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) 方法返回的所有表。|  
@@ -49,7 +49,7 @@ ms.locfileid: "47788071"
 |[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|检索给定架构和目录中可用的用户定义类型的给定类型的给定属性的说明。|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|检索表中唯一标识一行的最佳列集的说明。|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|检索在连接的服务器中可用的目录名称。|  
-|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|检索此数据库用作目录和表名之间的分隔符的字符串。|  
+|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|检索此数据库用作目录和表名之间的分隔符的字符串  。|  
 |[getCatalogTerm](../../../connect/jdbc/reference/getcatalogterm-method-sqlserverdatabasemetadata.md)|检索数据库供应商有关“目录”的首选术语。|  
 |[getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md)|检索驱动程序支持的客户端信息属性的列表。|  
 |[getColumnPrivileges](../../../connect/jdbc/reference/getcolumnprivileges-method-sqlserverdatabasemetadata.md)|检索关于表中各列的访问权限的说明。|  
@@ -69,7 +69,7 @@ ms.locfileid: "47788071"
 |[getExtraNameCharacters](../../../connect/jdbc/reference/getextranamecharacters-method-sqlserverdatabasemetadata.md)|检索可以用于未加引号的标识符名称的所有其他字符，例如在 a-z、A-Z、0-9 和 _ 之外的字符。|  
 |[getFunctions](../../../connect/jdbc/reference/getfunctions-method-sqlserverdatabasemetadata.md)|检索系统函数和用户函数的说明。|  
 |[getFunctionColumns](../../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)|检索关于指定目录的系统函数或用户函数参数和返回类型的说明。|  
-|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|检索用于为 SQL 标识符加引号的字符串。|  
+|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|检索用于为 SQL 标识符加引号的字符串  。|  
 |[getImportedKeys](../../../connect/jdbc/reference/getimportedkeys-method-sqlserverdatabasemetadata.md)|检索由表的外键列引用的主键列的说明。|  
 |[getIndexInfo](../../../connect/jdbc/reference/getindexinfo-method-sqlserverdatabasemetadata.md)|检索给定表的索引和统计信息的说明。|  
 |[getJDBCMajorVersion](../../../connect/jdbc/reference/getjdbcmajorversion-method-sqlserverdatabasemetadata.md)|检索此驱动程序的 JDBC 主版本号。|  
@@ -99,14 +99,14 @@ ms.locfileid: "47788071"
 |[getProcedureColumns](../../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md)|检索存储过程参数和结果列的说明。|  
 |[getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md)|检索在给定目录、架构或存储过程名称模式中可用的存储过程的说明。|  
 |[getProcedureTerm](../../../connect/jdbc/reference/getprocedureterm-method-sqlserverdatabasemetadata.md)|检索与此数据库中的“过程”对应的首选术语。|  
-|[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverdatabasemetadata.md)|检索此数据库的结果集的默认可保持性。|  
+|[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverdatabasemetadata.md)|检索此数据库的结果集的默认保持能力。|  
 |[getRowIdLifetime](../../../connect/jdbc/reference/getrowidlifetime-method-sqlserverdatabasemetadata.md)|返回一种状态，该状态指示 SQL RowId 数据类型是否受支持。 如果受支持，则返回 RowId 对象保持有效的生存期。|  
 |[getSchemas](../../../connect/jdbc/reference/getschemas-method.md)|检索当前数据库中可用的架构名称。|  
 |[getSchemaTerm](../../../connect/jdbc/reference/getschematerm-method-sqlserverdatabasemetadata.md)|检索与此数据库中的“架构”对应的首选术语。|  
-|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|检索可用于转义通配符的 String 值。|  
+|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|检索可用于转义通配符的 String  值。|  
 |[getSQLKeywords](../../../connect/jdbc/reference/getsqlkeywords-method-sqlserverdatabasemetadata.md)|检索此数据库的所有 SQL 关键字（但并非 SQL92 关键字）的以逗号分隔的列表。|  
 |[getSQLStateType](../../../connect/jdbc/reference/getsqlstatetype-method-sqlserverdatabasemetadata.md)|指示 SQLException.getSQLState 方法返回的 SQLSTATE 是否为 X/Open（现称为 Open Group）、SQL CLI、SQL99 (JDBC 3.0) 或 SQL:2003 (JDBC 4.0)。|  
-|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|检索可用于此数据库的 String 函数以逗号分隔的列表。|  
+|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|检索可用于此数据库的 String  函数以逗号分隔的列表。|  
 |[getSuperTables](../../../connect/jdbc/reference/getsupertables-method-sqlserverdatabasemetadata.md)|检索在此数据库的特定架构中定义的表层次结构的说明。|  
 |[getSuperTypes](../../../connect/jdbc/reference/getsupertypes-method-sqlserverdatabasemetadata.md)|检索此数据库的特定架构中由用户定义的类型层次结构的说明。|  
 |[getSystemFunctions](../../../connect/jdbc/reference/getsystemfunctions-method-sqlserverdatabasemetadata.md)|检索可用于此数据库的系统函数的以逗号分隔的列表。|  
@@ -185,7 +185,7 @@ ms.locfileid: "47788071"
 |[supportsPositionedDelete](../../../connect/jdbc/reference/supportspositioneddelete-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持定位的 DELETE 语句。|  
 |[supportsPositionedUpdate](../../../connect/jdbc/reference/supportspositionedupdate-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持定位的 UPDATE 语句。|  
 |[supportsResultSetConcurrency](../../../connect/jdbc/reference/supportsresultsetconcurrency-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持与给定结果集类型结合的给定并发类型。|  
-|[supportsResultSetHoldability](../../../connect/jdbc/reference/supportsresultsetholdability-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持给定结果集可保持性。|  
+|[supportsResultSetHoldability](../../../connect/jdbc/reference/supportsresultsetholdability-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持给定结果集保持能力。|  
 |[supportsResultSetType](../../../connect/jdbc/reference/supportsresultsettype-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持给定结果集类型。|  
 |[supportsSavepoints](../../../connect/jdbc/reference/supportssavepoints-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持保存点。|  
 |[supportsSchemasInDataManipulation](../../../connect/jdbc/reference/supportsschemasindatamanipulation-method-sqlserverdatabasemetadata.md)|检索架构名称能否用于数据操作语句。|  

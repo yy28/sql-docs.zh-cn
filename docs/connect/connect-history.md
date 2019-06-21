@@ -3,18 +3,18 @@ title: Microsoft SQL server 驱动程序历史记录 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2018
 ms.prod: sql
-ms.reviewer: genemi
+ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
+author: MightyPen
+ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 5c312421c7934690c947dbe0bf23b6404afaf56f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
-ms.translationtype: HT
+ms.openlocfilehash: f8a0c12939882602f21a849d2fb3ec7d829df92b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822777"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL server 驱动程序历史记录
 
@@ -22,7 +22,7 @@ ms.locfileid: "66770504"
 
 ## <a name="odbc"></a>ODBC
 
-有三个不同代的 Microsoft OLE DB Provider for SQL Server。 第一个"SQL Server"ODBC 驱动程序的一部分仍附带[Windows 数据访问组件](#microsoft-or-windows-data-access-components)。 建议不要用于新的开发使用此驱动程序。 从 SQL Server 2005 开始[SQL Server Native Client](#sql-server-native-client)包含 ODBC 接口，并且与通过 SQL Server 2012 的 SQL Server 2005 一起提供的 ODBC 驱动程序。 建议不要用于新的开发使用此驱动程序。 SQL Server 2012 后[Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server)是最新的服务器功能，今后使用更新的驱动程序。
+有三代不同的 Microsoft ODBC Driver for SQL Server。 第一个"SQL Server"ODBC 驱动程序的一部分仍附带[Windows 数据访问组件](#microsoft-or-windows-data-access-components)。 建议不要用于新的开发使用此驱动程序。 从 SQL Server 2005 开始[SQL Server Native Client](#sql-server-native-client)包含 ODBC 接口，并且与通过 SQL Server 2012 的 SQL Server 2005 一起提供的 ODBC 驱动程序。 建议不要用于新的开发使用此驱动程序。 SQL Server 2012 后[Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server)是最新的服务器功能，今后使用更新的驱动程序。
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
@@ -36,7 +36,7 @@ SQL Server 2012 起的主要的 ODBC driver for SQL Server 已通过开发并发
 
 ## <a name="ole-db"></a>OLE DB
 
-有三个不同代的 Microsoft OLE DB Provider for SQL Server。 [Microsoft OLE DB Provider for SQL Server](#microsoft-or-windows-data-access-components) (SQLOLEDB) 仍作为 Windows 数据访问组件的一部分提供。 此提供程序将不会更新新功能并不建议新的开发使用此驱动程序。 从 SQL Server 2005 开始[SQL Server Native Client](#sql-server-native-client)包含一个 OLE DB 提供程序接口 (SQLNCLI)，并且随 SQL Server 2005 到 SQL Server 2017 的 OLE DB 访问接口。 它[于 2011 年宣布弃用](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)，且不建议在新开发中使用此驱动程序。 在 2017 中，OLE DB 数据访问技术已随后[取消弃用和新计划的发布已宣布](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/)2018 年。 新的 OLE DB 访问接口称为"Microsoft OLE DB Driver for SQL Server"(MSOLEDBSQL) 和当前维护和支持。
+有三个不同代的 Microsoft OLE DB Provider for SQL Server。 第一代“Microsoft OLE DB Provider for SQL Server”(SQLOLEDB) 仍作为 [Windows 数据访问组件](#microsoft-or-windows-data-access-components)的一部分提供。 此提供程序将不会更新新功能并不建议新的开发使用此驱动程序。 从 SQL Server 2005 开始[SQL Server Native Client](#sql-server-native-client)包含一个 OLE DB 提供程序接口 (SQLNCLI)，并且随 SQL Server 2005 到 SQL Server 2017 的 OLE DB 访问接口。 它[于 2011 年宣布弃用](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)，且不建议在新开发中使用此驱动程序。 在 2017 中，OLE DB 数据访问技术已随后[取消弃用和新计划的发布已宣布](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/)2018 年。 新的 OLE DB 访问接口称为"Microsoft OLE DB Driver for SQL Server"(MSOLEDBSQL) 和当前维护和支持。
 
 ## <a name="adonet"></a>ADO.NET
 

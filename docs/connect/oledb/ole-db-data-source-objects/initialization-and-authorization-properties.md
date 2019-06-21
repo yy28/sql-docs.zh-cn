@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 6778b08e106416a009e854c3b88c3f7a13efc88a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66768576"
 ---
 # <a name="initialization-and-authorization-properties"></a>初始化和授权属性
@@ -44,7 +44,7 @@ ms.locfileid: "66768576"
 |DBPROP_INIT_ASYNCH|SQL Server 的 OLE DB 驱动程序支持异步启动。<br /><br /> 如果设置 DBPROP_INIT_ASYNCH 属性中的 DBPROPVAL_ASYNCH_INITIALIZE 位，将导致 IDBInitialize::Initialize 成为非阻止调用  。 有关详细信息，请参阅[正在执行异步操作](../../oledb/features/performing-asynchronous-operations.md)。|  
 |DBPROP_INIT_CATALOG|要连接的现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的名称。|  
 |DBPROP_INIT_DATASOURCE|运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络名称。 如果计算机上运行了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的多个实例，则需要按 \\\ServerName\InstanceName 的形式指定 DBPROP_INIT_DATASOURCE 值，以连接到特定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例  。 转义序列 \\\ 表示反斜杠自身。|  
-|DBPROP_INIT_GENERALTIMEOUT|指示请求（数据源初始化和命令执行除外）超时前等待的时间（秒）。如果值为 0，则表示无限期超时。通过网络连接工作或者在分布式或事务处理情况下工作的访问接口可以支持该属性，以便在遇到长时间运行的请求时建议登记的组件触发超时。 数据源初始化和命令执行的超时仍分别由 DBPROP_INIT_TIMEOUT 和 DBPROP_COMMANDTIMEOUT 控制。<br /><br /> DBPROP_INIT_GENERALTIMEOUT 是只读的；如果尝试设置它，将返回 dwstatus 错误 DBPROPSTATUS_NOTSETTABLE  。|  
+|DBPROP_INIT_GENERALTIMEOUT|指明在多少秒后请求（数据源初始化和命令执行除外）超时。如果值为 0，则表示无限期超时。通过网络连接运行或用于分布式/事务方案的提供程序可以支持此属性，以建议登记的组件在遇到长时间运行的请求时触发超时。 数据源初始化和命令执行的超时仍分别由 DBPROP_INIT_TIMEOUT 和 DBPROP_COMMANDTIMEOUT 控制。<br /><br /> DBPROP_INIT_GENERALTIMEOUT 是只读的；如果尝试设置它，将返回 dwstatus 错误 DBPROPSTATUS_NOTSETTABLE  。|  
 |DBPROP_INIT_HWND|来自调用应用程序的 Windows 句柄。 如果允许提示用户输入初始化属性，则必须有有效的窗口句柄，才能显示初始化对话框。|  
 |DBPROP_INIT_IMPERSONATION_LEVEL|SQL Server 的 OLE DB 驱动程序不支持模拟级别调整。<br /><br /> SQL Server 的 OLE DB 驱动程序在尝试设置属性值将返回 DB_S_ERRORSOCCURRED。 DBPROP 结构的 dwStatus 成员指示 DBPROPSTATUS_NOTSUPPORTED  。|  
 |DBPROP_INIT_LCID|适用于 SQL Server 的 OLE DB 驱动程序验证区域设置 ID；如果区域设置 ID 不受支持或未在客户端上安装，则返回错误。|  

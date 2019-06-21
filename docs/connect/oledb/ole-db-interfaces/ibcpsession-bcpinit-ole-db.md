@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPInit method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6267489d917cc0a53244e89d9580e67af7a4b334
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 929d97cf3c46aacd65d0f7d924d31107fc80acde
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603337"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790894"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,9 +42,9 @@ HRESULT BCPInit(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 在调用任何其他大容量复制方法之前，应先调用 BCPInit 方法。 BCPInit 方法将对工作站和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之间的大容量数据复制执行必要的初始化。  
+ 在调用任何其他大容量复制方法之前，应先调用 BCPInit 方法  。 BCPInit 方法将对工作站和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之间的大容量数据复制执行必要的初始化  。  
   
- BCPInit 方法将检查数据库源表或目标表的结构，而不检查数据文件。 该方法将基于数据库表、视图或 SELECT 结果集中的每一列为数据文件指定数据格式值。 此指定包括每一列的数据类型、数据中是否存在长度或 Null 指示符和终止符字节字符串以及固定长度的数据类型的宽度。 BCPInit 方法按如下方式设置这些值：  
+ BCPInit 方法将检查数据库源表或目标表的结构，而不检查数据文件  。 该方法将基于数据库表、视图或 SELECT 结果集中的每一列为数据文件指定数据格式值。 此指定包括每一列的数据类型、数据中是否存在长度或 Null 指示符和终止符字节字符串以及固定长度的数据类型的宽度。 BCPInit 方法按如下方式设置这些值  ：  
   
 -   指定的数据类型是数据库表、视图或 SELECT 结果集中的列的数据类型。 数据类型枚举的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]for SQL Server 标头文件 (msoledbsql.h) OLE DB 驱动程序中指定的本机数据类型。 数据类型的值为 BCP_TYPE_XXX 模式。 数据将以其计算机形式表示。 也就是说，整数数据类型的列中的数据通过一个由四个字节组成的序列表示，该序列采用 big-endian 或 little-endian 格式，具体使用哪种格式取决于创建该数据文件的计算机。  
   
@@ -59,23 +59,23 @@ HRESULT BCPInit(
 > [!NOTE]  
 >  若要更改为数据文件指定的数据格式值，请使用 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法。  
   
- 对于不包含索引的表，可通过设置数据库选项 select into/bulkcopy 优化对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的大容量复制。  
+ 对于不包含索引的表，可通过设置数据库选项 select into/bulkcopy 优化对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的大容量复制  。  
   
 ## <a name="arguments"></a>参数  
- *pwszTable*[in]  
+ pwszTable  [in]  
  要复制进或复制出的数据库表的名称。 该名称可以包含数据库名称或所有者名称。 例如，"pubs.username.titles"、"pubs..titles"、"username.titles"。  
   
  如果 eDirection 参数设置为 BCP_DIRECTION_OUT，则 pwszTable 参数可以为数据库视图的名称。  
   
- 如果在调用 BCPExec 方法前将 eDirection 参数设置为 BCP_DIRECTION_OUT 并使用 BCPControl 方法指定 SELECT 语句，则必须将 pwszTable 参数设置为 NULL。  
+ 如果在调用 BCPExec 方法前将 eDirection 参数设置为 BCP_DIRECTION_OUT 并使用 BCPControl 方法指定 SELECT 语句，则必须将 pwszTable 参数设置为 NULL    。  
   
- *pwszDataFile*[in]  
+ pwszDataFile  [in]  
  要复制进或复制出的用户文件的名称。  
   
- *pwszErrorFile*[in]  
+ pwszErrorFile  [in]  
  错误文件的名称，该文件将用进度消息、错误消息以及无法从用户文件复制到表的任何行的副本进行填充。 如果*pwszErrorFile*参数设置为 NULL，不使用任何错误文件。  
   
- *eDirection*[in]  
+ eDirection  [in]  
  复制操作的方向，BCP_DIRECTION_IN 或 BCP_DIRECTION _OUT。 BCP_DIRECTION _IN 指示从用户文件向数据库表进行复制；BCP_DIRECTION _OUT 指示从数据库表向用户文件进行复制。  
   
 ## <a name="return-code-values"></a>返回代码值  

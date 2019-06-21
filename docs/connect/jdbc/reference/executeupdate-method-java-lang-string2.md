@@ -1,5 +1,5 @@
 ---
-title: executeUpdate 方法 (java.lang.String) |Microsoft Docs
+title: executeUpdate 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3a976f9e953729be7b9f993139a7603fe8444cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c408098ebe1e9e732b171390eb1901f01014292
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804846"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804151"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 方法 (java.lang.String)
 
@@ -36,16 +36,16 @@ public final int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>Parameters
 *sql*
 
-一个**字符串**，其中包含 SQL 语句。
+包含 SQL 语句的 String  。
 
 ## <a name="return-value"></a>返回值
-一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0。
+一个指示受影响的行数的 int，如果使用 DDL 语句，则为 0  。
 
 ## <a name="exceptions"></a>异常
 [SQLServerException](./sqlserverexception-class.md)
 
 ## <a name="remarks"></a>Remarks
-此 executeUpdate 方法由 java.sql.PreparedStatement 接口中的 executeUpdate 方法指定。
+此 executeUpdate 方法是由 java.sql.PreparedStatement 接口中的 executeUpdate 方法指定的。
 
 调用此方法将导致异常，因为在创建 SQLServerPreparedStatement 对象时指定了该对象的 SQL 语句。
 

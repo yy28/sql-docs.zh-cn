@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48c4497dfa8974fe5fd59747d4b7023002d3f762
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+manager: jroth
+ms.openlocfilehash: b17e45fee91b293524cca39037f15fac15cd881e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58646412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797072"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 发行说明
 
@@ -44,7 +44,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## <a name="whats-new-in-version-56"></a>版本 5.6 中的新增功能
 
-| 新建项 | 详细信息 |
+| 新项 | 详细信息 |
 | :------- | :------ |
 | 对 PHP 7.3 的支持。 | &nbsp; |
 | 对于 PHP 7.0 的拖放的支持。 | &nbsp; |
@@ -74,13 +74,13 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - 现在在所有平台上的默认版本 17，是
 - 支持 Ubuntu 17.10、 Debian 9 和 Suse Enterprise Linux 12
 - 已删除的支持 Ubuntu 15.10
-- 在 Windows 上的 CRUD 功能使用 Always encrypted 支持。 有关详细信息，请参阅[使用始终加密与 SQL Server PHP 驱动程序](../../connect/php/using-always-encrypted-php-drivers.md)
+- 在 Windows 上的 CRUD 功能使用 Always encrypted 支持。 有关详细信息，请参阅[结合使用 Always Encrypted 和 PHP Driver for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
   - 对 Windows 证书存储区的支持
   - 支持始终加密仅使用 Microsoft ODBC Driver 17 及更高版本
 - 对 Linux 和 macOS 上的非 UTF8 区域设置的支持
   - 使用 Microsoft ODBC Driver 17 及更高版本仅支持 Linux 和 macOS 上的非 UTF8 区域设置
 - 对 Azure SQL 数据仓库的支持
-- 对 Azure SQL 托管实例 （扩展个人预览版） 的支持
+- 支持 Azure SQL 托管实例（扩展的个人预览版）
 
 ## <a name="whats-new-in-version-43"></a>版本 4.3 中的新增功能
 

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3e316f6adb9e9ca0ca0b07bef7428ace03e0d6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ab08146bcda8d9cfa57021f141f309cacde549b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630965"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774303"
 ---
 # <a name="getcharacterstream-method-int"></a>getCharacterStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +36,12 @@ public java.io.Reader getCharacterStream(int columnIndex)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个读取器对象。  
+ Reader 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

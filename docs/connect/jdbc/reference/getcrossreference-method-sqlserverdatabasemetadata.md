@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 2fc70ed3e449840793dbd32e4d2014031256f3bd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66763008"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>getCrossReference 方法 (SQLServerDatabaseMetaData)
@@ -41,11 +41,11 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *cat1*  
+ cat1   
   
  一个包含具有主键的表的目录名称的字符串  。  
   
- *schem1*  
+ schem1   
   
  一个包含具有主键的表的构架名称的字符串  。  
   
@@ -53,15 +53,15 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  一个包含具有主键的表的表名称的字符串  。  
   
- *cat2*  
+ cat2   
   
  一个包含具有外键的表的目录名称的字符串  。  
   
- *schem2*  
+ schem2   
   
  一个包含具有外键的表的架构名称的字符串  。  
   
- *tab2*  
+ tab2   
   
  一个包含具有外键的表的表名称的字符串  。  
   

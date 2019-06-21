@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eaffcff1-286c-459f-83da-3150778480c9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54a1bb855cf8933754b023965fb6dddc097e8589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 71513f5e8006adffdb46b249f6358030d11b95a6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759035"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801504"
 ---
 # <a name="sqlserverresultset-class"></a>SQLServerResultSet 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47759035"
   
  **包：** com.microsoft.sqlserver.jdbc  
   
- **实现：**[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)  
+ **实现：** [ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ public final class SQLServerResultSet
   
  SQLServerResultSet 类提供了很多方法，便于用户使用任何本机 Java 数据类型和很多 Java 对象类型来更新结果集。  
   
- 此类支持取消对 SQLServerResultSet 类、ISQLServerResultSet 接口和 java.sql.ResultSet 接口。 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 此类支持取消包装 SQLServerResultSet 类、ISQLServerResultSet 接口和 java.sql.ResultSet 接口。 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72ef56833f8f6a6ed4cc66a91dcb7a9e4576c7f5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 58ebcb2560e3b03703d7a419b28c6c04e41c19f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794089"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC 驱动程序的预处理语句元数据缓存
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52395830"
 |-----------|-----------------|  
 |int getDiscardedServerPreparedStatementCount()|返回当前未处理的已准备语句撤消操作。|
 |void closeUnreferencedPreparedStatementHandles()|强制之请求的任何未完成丢弃准备的语句执行。|
-|布尔 getEnablePrepareOnFirstPreparedStatementCall()|返回特定的连接实例的行为。 如果为 false 则调用 sp_executesql 后第二次执行发生调用 sp_prepexec 未准备语句，第一次执行和将其实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果该语句仅执行一次，这关闭使 sp_unprepare 已准备的语句上的需要。 可以通过调用 setDefaultEnablePrepareOnFirstPreparedStatementCall() 更改此选项的默认值。|
+|boolean getEnablePrepareOnFirstPreparedStatementCall()|返回特定的连接实例的行为。 如果为 false 则调用 sp_executesql 后第二次执行发生调用 sp_prepexec 未准备语句，第一次执行和将其实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果该语句仅执行一次，这关闭使 sp_unprepare 已准备的语句上的需要。 可以通过调用 setDefaultEnablePrepareOnFirstPreparedStatementCall() 更改此选项的默认值。|
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|指定特定的连接实例的行为。 如果值为 false 则调用 sp_executesql 后第二次执行发生调用 sp_prepexec 未准备语句，第一次执行和将其实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果该语句仅执行一次，这关闭使 sp_unprepare 已准备的语句上的需要。|
 |int getServerPreparedStatementDiscardThreshold()|返回特定的连接实例的行为。 此设置控制多少未完成准备语句丢弃之前执行调用以清理服务器上未完成的句柄，则可以每个连接未完成操作 (sp_unprepare)。 如果设置为 < = 1，撤消已准备的语句关闭上立即执行操作。 如果设置为 {@literal >} 1，这些调用会放在一起以避免过于频繁调用 sp_unprepare 的开销。 可以通过调用 getDefaultServerPreparedStatementDiscardThreshold() 更改此选项的默认值。|
 |void setServerPreparedStatementDiscardThreshold(int value)|指定特定的连接实例的行为。 此设置控制多少未完成准备语句丢弃之前执行调用以清理服务器上未完成的句柄，则可以每个连接未完成操作 (sp_unprepare)。 如果设置为 < = 1 撤消操作已准备的语句关闭上立即执行。 如果设置为 > 1 这些调用会一起批处理，以避免过于频繁调用 sp_unprepare 的开销。|
@@ -52,7 +52,7 @@ ms.locfileid: "52395830"
 |新方法|描述|  
 |-----------|-----------------|  
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|如果此配置为 false 首次执行的已准备的语句调用 sp_executesql 和未准备语句后第二次执行发生调用 sp_prepexec 和实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果该语句仅执行一次，这关闭使 sp_unprepare 已准备的语句上的需要。|
-|布尔 getEnablePrepareOnFirstPreparedStatementCall()|如果此配置返回 false 首次执行的已准备的语句调用 sp_executesql，并且不准备语句，第二次执行发生后，它调用 sp_prepexec 并实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果该语句仅执行一次，这关闭使 sp_unprepare 已准备的语句上的需要。|
+|boolean getEnablePrepareOnFirstPreparedStatementCall()|如果此配置返回 false 首次执行的已准备的语句调用 sp_executesql，并且不准备语句，第二次执行发生后，它调用 sp_prepexec 并实际安装程序已准备的语句句柄。 以下执行调用 sp_execute。 如果该语句仅执行一次，这关闭使 sp_unprepare 已准备的语句上的需要。|
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|此设置控制多少未完成准备语句丢弃之前执行调用以清理服务器上未完成的句柄，则可以每个连接未完成操作 (sp_unprepare)。 如果设置为 < = 1 撤消操作已准备的语句关闭上立即执行。 如果设置为 {@literal >} 1 这些调用会一起批处理，以避免过于频繁调用 sp_unprepare 的开销|
 |int getServerPreparedStatementDiscardThreshold()|此设置控制多少未完成准备语句丢弃之前执行调用以清理服务器上未完成的句柄，则可以每个连接未完成操作 (sp_unprepare)。 如果设置为 < = 1 撤消操作已准备的语句关闭上立即执行。 如果设置为 {@literal >} 1 这些调用会一起批处理，以避免过于频繁调用 sp_unprepare 的开销。|
 
@@ -77,7 +77,7 @@ ms.locfileid: "52395830"
 |void setStatementPoolingCacheSize(int value)|指定用于此连接的已准备的语句缓存的大小。 值小于 1 表示没有缓存。|
 |int getStatementPoolingCacheSize()|返回此连接的已准备的语句缓存的大小。 值小于 1 表示没有缓存。|
 |int getStatementHandleCacheEntryCount()|返回当前的共用预定义的语句句柄数。|
-|布尔 isPreparedStatementCachingEnabled()|是否启用语句池或不适用于此连接。|
+|boolean isPreparedStatementCachingEnabled()|是否启用语句池或不适用于此连接。|
 
  **SQLServerDataSource**
  

@@ -15,10 +15,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 5518461fade08e6f23e1594056c284865957274c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769338"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日期和时间改进 (OLE DB)
@@ -34,7 +34,7 @@ ms.locfileid: "66769338"
  [针对 OLE DB 日期和时间改进的数据类型支持](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
  提供了有关 OLE DB （OLE DB 驱动程序适用于 SQL Server） 的信息类型的支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日期和时间数据类型。  
   
- [Metadata &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [元数据 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
  包含有关 DBBINDING 结构的信息**icommandwithparameters:: Getparameterinfo**， **icommandwithparameters:: Setparameterinfo**， **IColumnsRowset::GetColumnsRowset**，和我**ColumnsInfo::GetColumnInfo**。 还提供了有关 OLE DB 架构行集更新的信息。  
   
  [绑定和转换 (OLE DB)](../../oledb/ole-db-date-time/conversions-ole-db.md)  

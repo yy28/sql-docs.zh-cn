@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2bdbb539-0cb9-4047-98e3-7d6906af68f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f92c3dff2a80d312de89b28614370a8f549e96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 829a4c4eeab254931a6ef7094dfc5fd8ab4d8ec4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851675"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798396"
 ---
 # <a name="updatenclob-method-int-javaioreader-long"></a>updateNClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,13 +33,13 @@ public void updateNClob(int columnIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
- reader  
+ reader   
   
- 一个读取器对象。  
+ Reader 对象。  
   
  *length*  
   
@@ -49,9 +49,9 @@ public void updateNClob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateNClob 方法由 java.sql.ResultSet 接口中的 updateNClob 方法指定。  
+ 此 updateNClob 方法是由 java.sql.ResultSet 接口中的 updateNClob 方法指定的。  
   
- 此方法仅支持**nvarchar （max)**， **ntext**，并**xml**列。 在任何其他数据类型上使用此方法会引发异常。  
+ 此方法仅支持**nvarchar （max)** ， **ntext**，并**xml**列。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateNClob 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

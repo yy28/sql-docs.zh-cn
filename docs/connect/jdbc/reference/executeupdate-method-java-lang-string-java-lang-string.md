@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83e035d659fd7b6b59c7b8d8a0799415bef5c112
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 11cbfbbe9e703867c2030c902ace6eedab38d77d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611703"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66786666"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>executeUpdate 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,14 +39,14 @@ public final int executeUpdate(java.lang.String sql,
 #### <a name="parameters"></a>Parameters  
  *sql*  
   
- 一个**字符串**，其中包含 SQL 语句。  
+ 包含 SQL 语句的 String  。  
   
- *columnNames*  
+ columnNames   
   
- 一个 String 类型的数组，指示哪些自动生成的键的列名应可用。  
+ 一个 String  类型的数组，指示哪些自动生成的键的列名应可用。  
   
 ## <a name="return-value"></a>返回值  
- 指示受影响行数的 int，如果使用 DDL 语句，则此值为 0。  
+ 指示受影响行数的 int  ，如果使用 DDL 语句，则此值为 0。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

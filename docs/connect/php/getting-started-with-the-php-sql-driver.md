@@ -1,5 +1,5 @@
 ---
-title: 开始使用 Microsoft Drivers for PHP for SQL Server |Microsoft Docs
+title: Microsoft Driver for PHP for SQL Server 入门 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ebbae6e07f6d302122d46321538a3af35947fe0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0c09cd551932eb9297112a7436111cdab18232f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796170"
 ---
-# <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>开始使用 Microsoft Drivers for PHP for SQL Server
+# <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Driver for PHP for SQL Server 入门
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本部分提供有关使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]以及将驱动程序加载到 PHP 进程空间的系统要求的信息。  

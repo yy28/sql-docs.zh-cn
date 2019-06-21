@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: caabbe281791120a4f3b162029cb86dd340ffc28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 81cb6429cbf1c3f1dd1d97a0aee9458fff637f15
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730465"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779072"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,15 +41,15 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 一个包含目录名称的字符串。 对此参数提供 Null 值指示无需使用目录名称。  
+ 一个包含目录名称的字符串  。 对此参数提供 Null 值指示无需使用目录名称。  
   
  *schema*  
   
- 一个包含架构名称模式的字符串。 对此参数提供 Null 值指示无需使用架构名称。  
+ 一个包含架构名称模式的字符串  。 对此参数提供 Null 值指示无需使用架构名称。  
   
  *tableName*  
   
- 一个包含表名称模式的字符串。  
+ 一个包含表名称模式的字符串  。  
   
  *types*  
   
@@ -66,13 +66,13 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
   
  由 getTables 方法返回的结果集将包含以下信息：  
   
-|名称|类型|描述|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|指定的表所在的数据库的名称。|  
 |TABLE_SCHEM|**String**|表架构名称。|  
 |TABLE_NAME|**String**|表名称。|  
 |TABLE_TYPE|**String**|表类型。|  
-|REMARKS|**String**|表的说明。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
+|REMARKS|**String**|表的说明。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
 |TYPE_CAT|**String**|JDBC 驱动程序不支持此类型。|  
 |TYPE_SCHEM|**String**|JDBC 驱动程序不支持此类型。|  
 |TYPE_NAME|**String**|JDBC 驱动程序不支持此类型。|  

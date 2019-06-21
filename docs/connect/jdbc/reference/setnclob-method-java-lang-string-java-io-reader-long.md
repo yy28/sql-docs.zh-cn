@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c1b95ee7-7e82-418f-8f30-948589086f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1af4961609b132ebf6b508b54386e4c02ee3e6e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6521405173f72ffe7a72974d0f8ea0ec261bc9e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800394"
 ---
 # <a name="setnclob-method-javalangstring-javaioreader-long"></a>setNClob 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,17 +33,17 @@ public final void setNClob(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- parameterName  
+ parameterName   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
- reader  
+ reader   
   
- 一个读取器对象。  
+ Reader 对象。  
   
  *length*  
   
- 指示流中字符数的 long。  
+ 指示流中字符数的 long  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

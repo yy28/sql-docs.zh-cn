@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9ac737c528701baca47b8ffd592389cef3fad45
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: c535f7f09505eee1ceb3485d2ccfaebb16885949
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396331"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801983"
 ---
 # <a name="understanding-cursor-types"></a>了解游标类型
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,12 +46,12 @@ ms.locfileid: "52396331"
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/A|只进，只读|直通|完全|应用程序必须（向前）经过结果集一次。 这是默认行为，其行为与 TYPE_SS_DIRECT_FORWARD_ONLY 游标的方式相同。 在语句执行期间，驱动程序将整个结果集从服务器读入内存中。|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/A|只进，只读|直通|自适应|应用程序必须（向前）经过结果集一次。 其行为与 TYPE_SS_DIRECT_FORWARD_ONLY 游标的行为相同。 当应用程序请求行时，驱动程序从服务器读取对应的行，这样可以最大限度地减少客户端内存占用。|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|快进|只进，只读|cursor|N/A|应用程序必须通过使用服务器游标在结果集中进行一次（前进）传递。 其行为与 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 游标的行为相同。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
-|TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|动态（只进）|只进，可更新|N/A|N/A|应用程序必须（向前）经过结果集一次才能更新一行或多行。<br /><br /> 从提取大小指定的服务器中分块检索行。<br /><br /> 默认情况下，当应用程序调用 [SQLServerResultSet](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 对象的 [setFetchSize](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法时，提取大小是固定的。<br /><br /> **注意：** JDBC 驱动程序提供一项自适应缓冲功能，使你能够在应用程序需要时从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中检索语句执行结果，而不是一次性检索全部结果。 例如，如果应用程序需要检索一个因为太大而无法完全容纳于应用程序内存中的大型数据块，则自适应缓冲使客户端应用程序可以检索诸如流这样的值。 驱动程序的默认行为是“adaptive”。 但是，若要为只进的可更新结果集获取自适应缓冲，应用程序必须通过提供字符串值“adaptive”来显式调用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 有关示例代码，请参阅[更新大型数据样本](../../connect/jdbc/updating-large-data-sample.md)。|  
+|TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|动态（只进）|只进，可更新|N/A|N/A|应用程序必须（向前）经过结果集一次才能更新一行或多行。<br /><br /> 从提取大小指定的服务器中分块检索行。<br /><br /> 默认情况下，当应用程序调用 [SQLServerResultSet](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 对象的 [setFetchSize](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法时，提取大小是固定的。<br /><br /> **注意：** JDBC 驱动程序提供一项自适应缓冲功能，使你能够在应用程序需要时从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中检索语句执行结果，而不是一次性检索全部结果。 例如，如果应用程序需要检索一个因为太大而无法完全容纳于应用程序内存中的大型数据块，则自适应缓冲使客户端应用程序可以检索诸如流这样的值。 驱动程序的默认行为是“adaptive”  。 但是，若要为只进的可更新结果集获取自适应缓冲，应用程序必须通过提供字符串值“adaptive”来显式调用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法   。 有关示例代码，请参阅[更新大型数据样本](../../connect/jdbc/updating-large-data-sample.md)。|  
 |TYPE_SCROLL_INSENSITIVE|静态|可滚动，不可更新。<br /><br /> 外部行更新、插入和删除不可见。|N/A|N/A|应用程序需要数据库快照。 结果集不可更新。 仅支持 CONCUR_READ_ONLY。  使用此游标类型时，所有其他并发类型都将导致异常。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_READ_ONLY)|Keyset|可滚动，只读。 外部行更新可见，删除显示为缺失数据。<br /><br /> 外部行插入不可见。|N/A|N/A|应用程序必须只看到现有行的已更改数据。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> （CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL）|Keyset|可滚动，可更新。<br /><br /> 外部和内部行更新可见，删除显示为缺失数据；插入不可见。|N/A|N/A|应用程序可以使用 ResultSet 对象更改现有行中的数据。 应用程序还必须能够从 ResultSet 对象之外看到其他人员对行所做的更改。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_SS_DIRECT_FORWARD_ONLY|N/A|只进，只读|N/A|full 或 adaptive|整数值 = 2003。 提供一个完全缓冲的只读客户端游标。 不创建服务器游标。<br /><br /> 仅支持 CONCUR_READ_ONLY 并发类型。 与此游标类型一起使用时，所有其他并发类型都将导致异常。|  
-|TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|快进|只进|N/A|N/A|整数值 = 2004。 快速，使用服务器游标访问所有数据。 使用 CONCUR_UPDATABLE 并发类型时可更新。<br /><br /> 从提取大小指定的服务器中分块检索行。<br /><br /> 对于这种情况，为了获得自适应缓冲，应用程序必须通过提供一个 字符串值“adaptive”来显式调用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 有关示例代码，请参阅[更新大型数据样本](../../connect/jdbc/updating-large-data-sample.md)。|  
+|TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|快进|只进|N/A|N/A|整数值 = 2004。 快速，使用服务器游标访问所有数据。 使用 CONCUR_UPDATABLE 并发类型时可更新。<br /><br /> 从提取大小指定的服务器中分块检索行。<br /><br /> 对于这种情况，为了获得自适应缓冲，应用程序必须通过提供一个 字符串值“adaptive”来显式调用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法   。 有关示例代码，请参阅[更新大型数据样本](../../connect/jdbc/updating-large-data-sample.md)。|  
 |TYPE_SS_SCROLL_STATIC|静态|不反映其他用户的更新。|N/A|N/A|整数值 = 1004。 应用程序需要数据库快照。 这是 JDBC TYPE_SCROLL_INSENSITIVE 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的同义词，并且具有相同的并发设置行为。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_READ_ONLY)|Keyset|可滚动，只读。 外部行更新可见，删除显示为缺失数据。<br /><br /> 外部行插入不可见。|N/A|N/A|整数值 = 1005。 应用程序必须只看到现有行的已更改数据。 这是 JDBC TYPE_SCROLL_SENSITIVE 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的同义词，并且具有相同的并发设置行为。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
 |TYPE_SS_SCROLL_KEYSET<br /><br /> （CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL）|Keyset|可滚动，可更新。<br /><br /> 外部和内部行更新可见，删除显示为缺失数据；插入不可见。|N/A|N/A|整数值 = 1005。 应用程序必须更改现有行的数据或看到现有行的已更改数据。 这是 JDBC TYPE_SCROLL_SENSITIVE 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的同义词，并且具有相同的并发设置行为。<br /><br /> 从提取大小指定的服务器中分块检索行。|  
@@ -72,7 +72,7 @@ ms.locfileid: "52396331"
   
  前进游标和动态游标以类似的方式显示已删除的行，但仅限仍可在提取缓冲区中访问游标的情况。 对于前进游标，这一点相当简单。 对于动态游标，当提取大小大于 1 时，这一点就变得较复杂了。 应用程序可以在由提取缓冲区定义的窗口内前后移动游标，但是，当离开在其中更新已删除行的原始提取缓冲区时，已删除的行将消失。 如果应用程序并不希望通过使用动态游标来查看临时删除的行，则应使用 Fetch Relative (0)。  
   
- 如果使用游标更新 TYPE_SS_SCROLL_KEYSET 或 TYPE_SCROLL_SENSITIVE 游标行的键值，则行将保持其在结果集中的原始位置，无论已更新的行是否符合游标的选择条件。 如果在游标之外更新行，则已删除的行将出现在该行的原始位置，然而，该行仅当游标中存在具有新键值的另一行但它先前已被删除时才会出现在游标中。  
+ 如果 TYPE_SS_SCROLL_KEYSET 或 TYPE_SCROLL_SENSITIVE 游标行的键值使用游标进行更新，行会保留它在结果集中的原始位置，无论更新后的行是否符合游标的选择条件。 如果行在游标之外进行更新，已删除的行会出现在此行的原始位置，但仅当包含新键值的另一行出现在游标中，但已遭删除时，此行才会出现在游标中。  
   
  对于动态游标，已更新的行将保留其在提取缓冲区的位置，直到离开由提取缓冲区定义的窗口。 已更新的行随后可能重新出现在结果集内的不同位置，或者可能完全消失。 必须避免结果集中出现临时不一致的应用程序所使用的提取大小应为 1（对于 CONCUR_SS_SCROLL_LOCKS 并发机制，默认值为 8 行；对于其他并发机制，则为 128 行）。  
   

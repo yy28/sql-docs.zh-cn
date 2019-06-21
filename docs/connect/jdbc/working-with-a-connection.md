@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66761625"
 ---
 # <a name="working-with-a-connection"></a>使用连接
@@ -112,7 +112,7 @@ String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;
 String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"
 ```
 
-## <a name="closing-a-connection"></a>打开连接
+## <a name="closing-a-connection"></a>关闭连接
 
 可以通过调用 SQLServerConnection 类的 [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md) 方法显式地关闭数据库连接，如下所示：
 

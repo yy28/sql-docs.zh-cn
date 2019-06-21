@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 20e04cb0-34ea-4b7a-ba74-4de13b8645b6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43ac88017c33d392846dd8a6171e61c9f57e4639
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d83da542ac076fa3531403b9c0dfcef8908cda6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652275"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66788725"
 ---
 # <a name="position-method-sqlserverclob"></a>position 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "47652275"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
-|[位置 (java.sql.Clob，long)](../../../connect/jdbc/reference/position-method-java-sql-clob-long.md)|根据给定的开始位置返回 CLOB 中指定 CLOB 对象的字符位置。|  
-|[位置 (java.lang.String，long)](../../../connect/jdbc/reference/position-method-java-lang-string-long.md)|根据给定的开始位置返回 CLOB 中指定子字符串的字符位置。|  
+|[position (java.sql.Clob, long)](../../../connect/jdbc/reference/position-method-java-sql-clob-long.md)|根据给定的开始位置返回 CLOB 中指定 CLOB 对象的字符位置。|  
+|[position (java.lang.String, long)](../../../connect/jdbc/reference/position-method-java-lang-string-long.md)|根据给定的开始位置返回 CLOB 中指定子字符串的字符位置。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerClob 方法](../../../connect/jdbc/reference/sqlserverclob-methods.md)   

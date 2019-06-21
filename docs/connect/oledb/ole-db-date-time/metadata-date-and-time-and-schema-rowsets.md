@@ -12,13 +12,13 @@ helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 104785bc2a13218ee50135666b4efcc2e93a0b60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: e9ac734cbc11492074c322c21a9e7127249223a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800684"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>元数据 - 日期和时间与架构行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,6 +96,6 @@ ms.locfileid: "52403202"
  对于数值和小数类型，OLE DB 仅定义了 MINIMUM_SCALE 和 MAXIMUM_SCALE，因此适用于 SQL Server 的 OLE DB 驱动程序对 time、datetime2 和 datetimeoffset 使用这些列是非标准行为。  
   
 ## <a name="see-also"></a>另请参阅  
- [元数据&#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [元数据 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

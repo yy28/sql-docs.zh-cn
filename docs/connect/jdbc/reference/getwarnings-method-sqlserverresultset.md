@@ -1,5 +1,5 @@
 ---
-title: getWarnings 方法 (SQLServerResultSet) |Microsoft Docs
+title: getWarnings 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: eb4339b0-383b-4337-a935-e8ec3f0d4123
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c7032c175ad4f26cd11a31dc376fb240e1a8401
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e5f58118458d0591d068cedf8a99f389fe00b8f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726545"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779971"
 ---
 # <a name="getwarnings-method-sqlserverresultset"></a>getWarnings 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

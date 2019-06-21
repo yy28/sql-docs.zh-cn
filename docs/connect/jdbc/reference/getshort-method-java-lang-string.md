@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e590544295a7e3af7454d0a654fac7b78a9d2ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5216e773a297862774b70f47c64da5d701cc17d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743605"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796666"
 ---
 # <a name="getshort-method-javalangstring"></a>getShort 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的 short。  
+  在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的 short  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,9 +36,9 @@ public short getShort(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCol*  
+ sCol   
   
- 包含参数名称的字符串。  
+ 包含参数名称的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  一个**短**值。  

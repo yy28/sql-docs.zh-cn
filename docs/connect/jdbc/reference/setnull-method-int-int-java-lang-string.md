@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0fe4aa2416128330a7d3e75428958360d9a8528e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 62f91e694ea655fe29c7306aeea9471ba432072d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800336"
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>setNull 方法 (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,9 +38,9 @@ public final void setNull(int paramIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *paramIndex*  
+ paramIndex   
   
- 指示参数编号的 int。  
+ 指示参数编号的 int  。  
   
  *sqlType*  
   
@@ -48,7 +48,7 @@ public final void setNull(int paramIndex,
   
  *typeName*  
   
- 一个指示要设置的参数完全限定名称的 String。  
+ 一个指示要设置的参数完全限定名称的 String  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

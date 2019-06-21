@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 938cf980a4035684b2e77435d5ab4df9522b4407
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c098106fc3961e0248d638356df70527739203b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604005"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779996"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,15 +40,15 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 一个包含目录名称的字符串。  
+ 一个包含目录名称的字符串  。  
   
  *schema*  
   
- 一个包含架构名称模式的字符串。  
+ 一个包含架构名称模式的字符串  。  
   
  *table*  
   
- 一个包含表名称的字符串。  
+ 一个包含表名称的字符串  。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
@@ -57,7 +57,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getVersionColumns 方法由 java.sql.DatabaseMetaData 接口中的 getVersionColumns 方法指定。  
+ 此 getVersionColumns 方法是由 java.sql.DatabaseMetaData 接口中的 getVersionColumns 方法指定的。  
   
  由 getVersionColumns 方法返回的结果集将包含下列信息：  
   

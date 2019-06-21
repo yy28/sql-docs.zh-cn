@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c20b22e7eac31b66055e01c9442725d889f3309a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 098b696ea160a768b424c17275253baf60207b6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825975"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797408"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,9 +37,9 @@ public boolean supportsResultSetConcurrency(int type,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *type*  
+ *类型*  
   
- 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
+ 指示结果集类型的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一  ：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  TYPE_FORWARD_ONLY  
@@ -59,9 +59,9 @@ public boolean supportsResultSetConcurrency(int type,
   
  TYPE_SS_SCROLL_DYNAMIC  
   
- 并发  
+ 并发   
   
- 指示结果集并发级别的 int，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
+ 指示结果集并发级别的 int  ，它可以为 java.sql.ResultSet 或 SQLServerResultSet 中定义的以下值之一：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 类型  
  CONCUR_READ_ONLY  

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2::BCPSetBulkMode |Microsoft Docs
+title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
 description: 使用 IBCPSession2::BCPSetBulkMode 的查询或表创建超出任何一个大容量复制
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - BCPSetBulkMode function
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8df4a1e06e0bb1d7fbc4f4352c5c650be029f980
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 5987ca7b01022d30df0ee9bcded83ec4f65078ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790743"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,10 +41,10 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>参数  
- property  
+ property   
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
- *pField*  
+ pField   
  指向字段终止符值的指针。  
   
  cbField  
@@ -67,14 +67,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|参数无效。|  
 |**E_OUTOFMEMORY**|内存不足错误。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以使用 IBCPSession2::BCPSetBulkMode 外的查询或表大容量复制。 使用 IBCPSession2::BCPSetBulkMode 向外大容量复制查询语句时，必须先调用该方法，再调用 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` 来指定查询语句。  
   
  应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 icommandprepare:: Prepare 方法返回一个错误并阻止您检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  
   
- 下表列出了 property 参数的常量。  
+ 下表列出了 property 参数的常量  。  
   
-|属性|说明|  
+|属性|描述|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。Exe 文件，以及使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为**BCP_TYPE_SQLCHARACTER**。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE，然后使用 ibcpsession:: Bcpcolfmt *eUserDataType*属性设置为**BCP_TYPE_SQLNCHAR**。|  

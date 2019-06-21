@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: ce3df0755799e907bb286e10f5711a58a48135bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737008"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66782464"
 ---
 # <a name="using-spatial-datatypes"></a>正在使用空间数据类型
 
@@ -131,7 +131,7 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 |方法|描述|
 |:------|:----------|
-|Geography STGeomFromText (字符串 wkt，int SRID)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geography 实例的构造函数，增加了该实例传递的任何 Z（标高）和 M（度量）值。
+|Geography STGeomFromText(String wkt, int SRID)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geography 实例的构造函数，增加了该实例传递的任何 Z（标高）和 M（度量）值。
 |Geography STGeomFromWKB(byte[] wkb)| 开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式的 Geography 实例的构造函数。
 |Geography 反序列化 (byte [] wkb)| 从空间数据的内部 SQL Server 格式的 Geography 实例的构造函数。
 |Geography 分析 (字符串 wkt)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geography 实例的构造函数。 空间引用标识符是默认设置为 0。

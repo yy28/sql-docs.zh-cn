@@ -1,5 +1,5 @@
 ---
-title: updateBigDecimal 方法 (SQLServerResultSet) |Microsoft Docs
+title: updateBigDecimal 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 35445fe4-3b8e-4ec5-a138-067524236dc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 043e0c931b07f8069b9a1b7e06124f7cfc484bf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a8988926cb92f1f152e38efbadaa2466f9bd4b13
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768429"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798893"
 ---
 # <a name="updatebigdecimal-method-sqlserverresultset"></a>updateBigDecimal 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47768429"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[updateBigDecimal (int, java.math.BigDecimal)](../../../connect/jdbc/reference/updatebigdecimal-method-int-java-math-bigdecimal.md)|根据给定的列索引使用 BigDecimal 对象更新指定的列。|  
 |[updateBigDecimal (java.lang.String, java.math.BigDecimal)](../../../connect/jdbc/reference/updatebigdecimal-method-java-lang-string-java-math-bigdecimal.md)|根据给定列名称，使用 BigDecimal 对象更新指定列。|  

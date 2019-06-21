@@ -12,16 +12,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d99c9bf56a6856d953f30f7bd094b205d18bde8e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762847"
 ---
 # <a name="getnstring-method-javalangstring"></a>getNString 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索指定 **NCHAR**，**NVARCHAR**或**LONGNVARCHAR**参数作为 Java 编程语言中字符串的值。  
+  将指定 NCHAR  、NVARCHAR  或 LONGNVARCHAR  参数的值作为 Java 编程语言中的 String 进行检索。  
   
 ## <a name="syntax"></a>语法  
   

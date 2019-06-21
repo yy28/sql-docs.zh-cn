@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 8592d3dfc16f0dd9d13a6445f0d8290f9ad507e4
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499620"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
@@ -168,7 +168,7 @@ ms.locfileid: "66499620"
   
 -   对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，不同的数据源支持不同的参数语法。 支持范围包括在查询中按位置或名称标识的参数。 有关详细信息，请参阅[报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md) 中针对特定外部数据源类型的相关主题。 在关系查询设计器中，必须为筛选器选择参数选项，才能创建参数化查询。 有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
   
--   对于基于多维数据源（例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase）的查询，可以指定是否创建基于查询设计器中您指定的筛选器的参数。 有关详细信息，请参阅[查询设计器（报表生成器）](../report-data/query-design-tools-ssrs.md)中与数据扩展插件对应的查询设计器主题。  
+-   对于基于多维数据源（例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase）的查询，可以指定是否创建基于查询设计器中您指定的筛选器的参数。 有关详细信息，请参阅[查询设计工具 &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md) 中与数据扩展插件对应的查询设计器主题。  
   
 ##  <a name="bkmk_Manage_Parameters"></a> 已发布报表的参数管理  
  当您设计报表时，报表参数保存在报表定义中。 当您发布报表时，报表参数与报表定义分开保存和管理。  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c682e28244bf85ce761ab6f8d0b54d5f5f054679
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c0d96ded45fe1b6cb68eda222039e01901ebc65
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801333"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>getResponseBuffering 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,14 +36,14 @@ public final java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个 String，其中包含小写“full”或“adaptive”。  
+ 包含小写 full  或 adaptive  的 String  。  
   
 ## <a name="remarks"></a>Remarks  
- “adaptive”指定在必要时缓冲尽可能少的数据。  
+ “adaptive”  指定在必要时缓冲尽可能少的数据。  
   
- “full”指定在运行时从服务器读取全部结果。  
+ “full”  指定在运行时从服务器读取全部结果。  
   
- **adaptive** 是 JDBC Driver 2.0 和 3.0 版本中的默认值。 **full** 是 JDBC Driver 2.0 版之前。  
+ adaptive  是 JDBC 驱动程序版本 2.0 和 3.0 中的默认值。 full  是版本低于 2.0 的 JDBC 驱动程序中的默认值。  
   
  有关使用响应缓冲模式的详细信息，请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: getFetchSize 方法 (SQLServerResultSet) |Microsoft Docs
+title: getFetchSize 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7bc96930-b0c9-42f6-8df9-1d8d824408b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c35c68d931005262f11c023a17f059cbe7c32936
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b96c3112e2e207edc7cf9bbe3ae80eb5393eb9b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630525"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802026"
 ---
 # <a name="getfetchsize-method-sqlserverresultset"></a>getFetchSize 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public int getFetchSize()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示当前提取大小的 int。  
+ 指示当前提取大小的 int  。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

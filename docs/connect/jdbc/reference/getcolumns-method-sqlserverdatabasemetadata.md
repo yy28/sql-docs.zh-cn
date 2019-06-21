@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 2a3f536c180106ed29ae5758433d2f59bb7a8b47
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66763391"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns 方法 (SQLServerDatabaseMetaData)
@@ -69,7 +69,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |“属性”|类型|描述|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|目录名称。|  
-|TABLE_SCHEM|**String**|表架构。|  
+|TABLE_SCHEM|**String**|表架构名称。|  
 |TABLE_NAME|**String**|表名称。|  
 |COLUMN_NAME|**String**|列名称。|  
 |DATA_TYPE|**smallint**|来自 java.sql.Types 的 SQL 数据类型。|  

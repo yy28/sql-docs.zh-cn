@@ -1,5 +1,5 @@
 ---
-title: 如何： 检索 I/O 参数使用 SQLSRV 驱动程序 |Microsoft Docs
+title: 操作说明：使用 SQLSRV 驱动程序检索 I/O 参数 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c865207156703d87ae827a3274e788b7b8bda270
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c27dc3cddc8dac57edc4afdcc2f4191934e243f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629925"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799314"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序检索输入和输出参数
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47629925"
 > [!NOTE]  
 > 将 *$vacationHrs* 初始化为 4 可将返回的 PHPTYPE 设置为整数。 若要确保数据类型的完整性，应先初始化输入/输出参数并随后调用存储过程，或者应指定所需的 PHPTYPE。 有关指定 PHPTYPE 的信息，请参阅 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
-因为该存储过程返回两个结果，所以在执行该存储过程之后必须调用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)，使输出参数的值可用。 调用 sqlsrv_next_result 后，$vacationHrs 将包含存储过程返回的输出参数的值。  
+因为该存储过程返回两个结果，所以在执行该存储过程之后必须调用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)，使输出参数的值可用。 调用 sqlsrv_next_result 后，$vacationHrs 将包含存储过程返回的输出参数的值   。  
   
 > [!NOTE]  
 > 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅[调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  

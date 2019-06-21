@@ -1,5 +1,5 @@
 ---
-title: wasNull 方法 (SQLServerResultSet) |Microsoft Docs
+title: wasNull 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d37f80ef-d72c-4429-ada3-1d685bdab6d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8411c007d8ad7fa68836460bbbc436487458568f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e4e8ae304208a6b4cf9c76fa26920ea16d45faca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711696"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802528"
 ---
 # <a name="wasnull-method-sqlserverresultset"></a>wasNull 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果读取的最后一个值为 Null，则为 true。 否则为 **false**。  
+ 如果读取的最后一个值为 Null，则为 true  。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

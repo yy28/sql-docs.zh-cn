@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_commit |Microsoft Docs
+title: sqlsrv_commit | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a1e1de776485b04c7f5fe63bfc2e8b595eb30ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd620df122c3203a056817f3e9c35667fad433f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798245"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796989"
 ---
 # <a name="sqlsrvcommit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +50,7 @@ sqlsrv_commit( resource $conn )
 布尔值：如果成功提交事务，则为 **true** 。 否则为 **false**。  
   
 ## <a name="example"></a>示例  
-作为事务的一部分，以下示例将执行两次查询。 如果两次查询都成功，将提交事务。 如果任一查询失败或这两次查询都失败，将回滚事务。  
+作为事务的一部分，以下示例将执行两次查询。 如果两次查询均成功完成，将提交事务。 如果任一查询失败或这两次查询都失败，将回滚事务。  
   
 该示例中的第一次查询向 AdventureWorks 数据库的 *Sales.SalesOrderDetail* 表格中插入了一个新销售订单。 该订单订购的是 5 套产品 ID 为 709 的产品。 第二次查询将产品 ID 为 709 的产品库存量减少 5 套。 这些查询包含在一个事务中，因为这两次查询均必须成功完成，数据库才能准确反映订单状态和产品供应情况。  
   

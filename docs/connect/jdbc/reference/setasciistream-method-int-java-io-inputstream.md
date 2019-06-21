@@ -12,16 +12,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 71467c99e486e04ea9ba707821ed011ecdd61f13
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66765106"
 ---
 # <a name="setasciistream-method-int-javaioinputstream"></a>setAsciiStream 方法 (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定的参数编号设置为给定的 InputStream 对象。  
+  将指定参数号设置为给定 java.io.InputStream 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,7 +32,7 @@ public final void setAsciiStream(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *parameterIndex*  
+ parameterIndex   
   
  指示参数编号的 int  。  
   

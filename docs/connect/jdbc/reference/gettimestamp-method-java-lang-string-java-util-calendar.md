@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 39d50008ac35e592b97ad17726a419c61b2a30e7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66767405"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>getTimestamp 方法 (java.lang.String, java.util.Calendar)
@@ -41,7 +41,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
   
  包含参数名称的字符串  。  
   
- *cal*  
+ cal   
   
  一个日历对象。  
   
@@ -52,7 +52,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getTime 方法是由 java.sql.CallableStatement 接口中的 getTime 方法指定的。  
+ 此 getTimestamp 方法是由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定的。  
   
  此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 列返回值   。  
   

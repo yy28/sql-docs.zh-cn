@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_execute |Microsoft Docs
+title: sqlsrv_execute | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21f88cccf3e9984f425c5e8207e6f9127d40ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5a4def4047691f25c96f1e003cfc8c47e97c4276
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796913"
 ---
 # <a name="sqlsrvexecute"></a>sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_execute( resource $stmt)
 布尔值：如果成功执行语句，则为 **true** 。 否则为 **false**。  
   
 ## <a name="example"></a>示例  
-以下示例执行在 AdventureWorks 数据库的 [Sales.SalesOrderDetail](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 表中更新字段的语句。 该示例假定已在本地计算机上安装了 SQL Server 和 AdventureWorks 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例执行在 *AdventureWorks* 数据库的 [Sales.SalesOrderDetail](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 表中更新字段的语句。 该示例假定已在本地计算机上安装了 SQL Server 和 AdventureWorks 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  

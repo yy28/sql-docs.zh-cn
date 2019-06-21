@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9681ddf0946627306a64c099d2df1c242d95bcbe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762807"
 ---
 # <a name="getnstring-method-javalangstring-sqlserverresultset"></a>getNString 方法 (java.lang.String) (SQLServerResultSet)
@@ -31,7 +31,7 @@ public java.lang.String getNString(java.lang.String columnLabel)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *columnLabel*  
+ columnLabel   
   
  一个包含列标签的 String。  
   
@@ -42,7 +42,7 @@ public java.lang.String getNString(java.lang.String columnLabel)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getNString 方法是由 java.sql.CallableStatement 接口中的 getNString 方法指定的。  
+ 此 getNString 方法是由 java.sql.SQLServerResultSet 接口中的 getNString 方法指定的。  
   
  此方法可以用于检索的值**nvarchar**， **nchar**， **nvarchar （max)** ， **ntext**，或**xml**的当前行中的列[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。 如果尝试使用此方法检索其他数据类型的值，则会引发异常。  
   

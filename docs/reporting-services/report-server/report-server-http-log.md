@@ -1,6 +1,6 @@
 ---
 title: 报表服务器 HTTP 日志 | Microsoft Docs
-ms.date: 03/02/2018
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d290d32cbe05a0e378486cad72c5f39a2bc6e58
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140453"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   报表服务器 HTTP 日志记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
@@ -28,9 +28,9 @@ ms.locfileid: "65581394"
 |||  
 |-|-|  
 |File name|默认情况下，文件名为 ReportServerService_HTTP_\<timestamp>.log。 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
-|文件位置|该文件位于 \Microsoft SQL Server\\\<SQL Server Instance>\Reporting Services\LogFiles 中。|  
+|文件位置|该文件位于 \Microsoft SQL Server\\\<SQL Server Instance>\Reporting Services\LogFiles 中  。|  
 |文件格式|该文件是 EN-US 格式。 它是 ASCII 文本文件。|  
-|创建和保留文件|当您在配置文件中启用了日志、重新启动服务以及报表服务器处理 HTTP 请求时，会创建 HTTP 日志。 如果您配置了相应的设置但并未看到日志文件，请打开报表或启动报表服务器应用程序（如报表管理器）以生成 HTTP 请求从而创建日志文件。<br /><br /> 在各服务重新启动并且随后发生对报表服务器的 HTTP 请求时，会创建日志文件的新实例。<br /><br /> 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。|  
+|创建和保留文件|当您在配置文件中启用了日志、重新启动服务以及报表服务器处理 HTTP 请求时，会创建 HTTP 日志。 如果配置了相应设置但没有看到日志文件，请打开报表或启动报表服务器应用程序（如 Web 门户），以生成创建日志文件的 HTTP 请求。<br /><br /> 在各服务重新启动并且随后发生对报表服务器的 HTTP 请求时，会创建日志文件的新实例。<br /><br /> 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>报表服务器 HTTP 日志的配置设置  
  若要配置报表服务器 HTTP 日志，请使用记事本来修改 ReportingServicesService.exe.config 文件。 此配置文件位于 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 文件夹。  
@@ -52,7 +52,7 @@ ms.locfileid: "65581394"
 ```  
   
 ## <a name="log-file-fields"></a>日志文件字段  
- 下表对在日志中可用的字段进行了说明： 该字段列表是可配置的；您可以通过 **HTTPTraceSwitches** 配置设置来指定要包括哪些字段。 如果您不指定 **HTTPTraceSwitches** ，则“默认” 列会指定日志文件是否自动包含某个字段。  
+ 下表对在日志中可用的字段进行了说明： 该字段列表是可配置的；您可以通过 **HTTPTraceSwitches** 配置设置来指定要包括哪些字段。 如果您不指定 **HTTPTraceSwitches** ，则“默认”  列会指定日志文件是否自动包含某个字段。  
   
 |字段|描述|，则“默认”|  
 |-----------|-----------------|-------------|  
@@ -80,5 +80,4 @@ ms.locfileid: "65581394"
  [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [错误和事件参考 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
   

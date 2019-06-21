@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+manager: jroth
+ms.openlocfilehash: adf71b7f701d96ddf56f5070475fb853f89042ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663113"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801732"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>结合使用 Azure Active Directory 和 ODBC 驱动程序
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ Microsoft ODBC Driver for SQL Server 使用版本 13.1 或更高版本允许 ODB
 
 |“属性”|值|，则“默认”|描述|
 |-|-|-|-|
-|`Authentication`|（未设置），（空字符串）、 `SqlPassword`， `ActiveDirectoryPassword`， `ActiveDirectoryIntegrated`， `ActiveDirectoryInteractive`， `ActiveDirectoryMsi` |(未设置)|控制身份验证模式。<table><tr><th>ReplTest1<th>描述<tr><td>(未设置)<td>身份验证模式由其他关键字 （现有旧的连接选项。）<tr><td>(空字符串)<td>连接字符串为“{0}”重写和取消设置`Authentication`值在 DSN 中的设置。<tr><td>`SqlPassword`<td>直接进行身份验证使用的用户名和密码的 SQL Server 实例。<tr><td>`ActiveDirectoryPassword`<td>使用 Azure Active Directory 标识使用用户名和密码进行身份验证。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows 驱动程序_。 使用 Azure Active Directory 标识使用集成身份验证进行身份验证。<tr><td>`ActiveDirectoryInteractive`<td>_Windows 驱动程序_。 使用 Azure Active Directory 标识使用交互式身份验证进行身份验证。<tr><td>`ActiveDirectoryMsi`<td>使用 Azure Active Directory 标识使用托管的服务标识身份验证进行身份验证。 为用户分配的标识，UID 设置为用户标识的对象 ID。</table>|
+|`Authentication`|（未设置），（空字符串）、 `SqlPassword`， `ActiveDirectoryPassword`， `ActiveDirectoryIntegrated`， `ActiveDirectoryInteractive`， `ActiveDirectoryMsi` |(未设置)|控制身份验证模式。<table><tr><th>ReplTest1<th>描述<tr><td>(未设置)<td>身份验证模式由其他关键字 （现有旧的连接选项。）<tr><td>(空字符串)<td>连接字符串重写和取消设置`Authentication`值在 DSN 中的设置。<tr><td>`SqlPassword`<td>直接进行身份验证使用的用户名和密码的 SQL Server 实例。<tr><td>`ActiveDirectoryPassword`<td>使用 Azure Active Directory 标识使用用户名和密码进行身份验证。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows 驱动程序_。 使用 Azure Active Directory 标识使用集成身份验证进行身份验证。<tr><td>`ActiveDirectoryInteractive`<td>_Windows 驱动程序_。 使用 Azure Active Directory 标识使用交互式身份验证进行身份验证。<tr><td>`ActiveDirectoryMsi`<td>使用 Azure Active Directory 标识使用托管的服务标识身份验证进行身份验证。 对于用户分配的标识，UID 设置为用户标识的对象 ID。</table>|
 |`Encrypt`|(未设置)、`Yes``No`|（请参见说明）|控制连接的加密。 如果预属性值`Authentication`设置不是_无_在 DSN 或连接字符串中，默认值是`Yes`。 否则默认值为 `No`。 如果该属性`SQL_COPT_SS_AUTHENTICATION`重写的预特性值`Authentication`、 显式 DSN 或连接字符串或连接属性中设置的加密值。 加密的预属性值是`Yes`的值设置为如果`Yes`的 DSN 或连接字符串中。|
 
 ## <a name="new-andor-modified-connection-attributes"></a>新的和/或修改连接属性
@@ -105,7 +105,7 @@ SQLDriverConnect 请求以完成连接所需的信息时显示提示对话框包
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
-8. AAD 托管服务标识身份验证使用系统分配或用户分配标识进行身份验证来设置连接。 为用户分配的标识，UID 设置为用户标识的对象 ID。<br>
+8. AAD 托管服务标识身份验证使用系统分配或用户分配标识进行身份验证来设置连接。 对于用户分配的标识，UID 设置为用户标识的对象 ID。<br>
 对于系统分配的标识，<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 为用户分配的标识与对象 ID 等于 myObjectId，<br>
@@ -168,7 +168,7 @@ typedef struct AccessToken
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
-下面是一个与 Azure Active Directory 托管服务标识的身份验证一起使用的连接字符串示例。 请注意，UID 设置为用户分配的标识的用户标识的对象 ID。
+下面是一个与 Azure Active Directory 托管服务标识的身份验证一起使用的连接字符串示例。 请注意，对于用户分配的标识，UID 设置为用户标识的对象 ID。
 ~~~
 // For system-assigned identity,
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 178c41970407e6104181207396a5baefb5ed282e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 271669134e18d3c6040f1e2e10163b5d5e21daab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713425"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797610"
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>setBytes 方法 (long, byte, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public int setBytes(long pos,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *pos*  
+ pos   
   
  BLOB 中开始写入数据的位置（从 1 开始）。  
   
@@ -47,16 +47,16 @@ public int setBytes(long pos,
   
  要写入 BLOB 的字节的数组。  
   
- offset  
+ offset   
   
- 字节数组中要从 byte 数组开始读取数据的位置的偏移量。  
+ 字节数组中要从 byte  数组开始读取数据的位置的偏移量。  
   
- len  
+ len   
   
  要尝试从字节数组读入 BLOB 的字节数。  
   
 ## <a name="return-value"></a>返回值  
- 包含写入的字节数的 int。  
+ 包含写入的字节数的 int  。  
   
 ## <a name="exceptions"></a>异常  
  java.sql.SQLException  
@@ -64,7 +64,7 @@ public int setBytes(long pos,
 ## <a name="remarks"></a>Remarks  
  此 setBytes 方法是由 java.sql.Blob 接口中的 setBytes 方法指定的。  
   
- 从指定位置开始覆盖数据，并可以超过 BLOB 的初始长度。 指定“位置+1”值将追加字节。 传递“位置+2”或更大值（或零或更小值）会引发位置错误。 传递长度为零的 byte 数组会因未写入任何字节而返回零。  
+ 从指定位置开始覆盖数据，并可以超过 BLOB 的初始长度。 指定“位置+1”值将追加字节。 传递“位置+2”或更大值（或零或更小值）会引发位置错误。 传递长度为零的 byte  数组会因未写入任何字节而返回零。  
   
 ## <a name="see-also"></a>另请参阅  
  [setBytes 方法&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   

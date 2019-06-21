@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e7554c761d35c6683802cfb4e5428221f697089c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769587"
 ---
 # <a name="geturl-method-javalangstring-sqlserverresultset"></a>getURL 方法 (java.lang.String) (SQLServerResultSet)
@@ -36,7 +36,7 @@ public java.net.URL getURL(java.lang.String sColumn)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sColumn*  
+ sColumn   
   
  一个包含列名的字符串  。  
   

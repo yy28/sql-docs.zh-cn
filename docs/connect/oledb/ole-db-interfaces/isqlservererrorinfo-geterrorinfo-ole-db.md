@@ -15,13 +15,13 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 22424e6c8cac92ec0bada0ed3dab13e9b6938c14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 6a43a5882529353a05b41a111ead20d0dd148078
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600497"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799340"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,11 +43,11 @@ HRESULT GetErrorInfo(
 ```  
   
 ## <a name="arguments"></a>参数  
- ppSSErrorInfo[out]  
- 指向 SSERRORINFO 结构的指针。 如果方法失败或者不存在与该错误关联的任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 信息，则访问接口不会分配任何内存，并且会确保 ppSSErrorInfo 参数在输出时为一个空指针。  
+ ppSSErrorInfo[out]   
+ 指向 SSERRORINFO 结构的指针。 如果方法失败或者不存在与该错误关联的任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 信息，则访问接口不会分配任何内存，并且会确保 ppSSErrorInfo 参数在输出时为一个空指针  。  
   
- ppErrorStrings[out]  
- 指向 Unicode 字符串指针的指针。 如果方法失败或者不存在与该错误关联的任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 信息，则访问接口不会分配任何内存，并且会确保 ppErrorStrings 参数在输出时为一个空指针。 如果使用 IMalloc::Free 方法释放 ppErrorStrings 参数，则会释放所返回的 SSERRORINFO 结构的三个单个字符串成员，因为内存是按块进行分配的。  
+ ppErrorStrings[out]   
+ 指向 Unicode 字符串指针的指针。 如果方法失败或者不存在与该错误关联的任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 信息，则访问接口不会分配任何内存，并且会确保 ppErrorStrings 参数在输出时为一个空指针  。 如果使用 IMalloc::Free 方法释放 ppErrorStrings 参数，则会释放所返回的 SSERRORINFO 结构的三个单个字符串成员，因为内存是按块进行分配的   。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
@@ -60,7 +60,7 @@ HRESULT GetErrorInfo(
  SQL Server 的 OLE DB 驱动程序无法分配足够的内存来完成该请求。  
   
 ## <a name="remarks"></a>Remarks  
- 适用于 SQL Server 的 OLE DB 驱动程序为通过使用者传递的指针返回的 SSERRORINFO 和 OLECHAR 字符串分配内存。 当使用者不再需要访问错误数据时，使用者必须使用 IMalloc::Free 方法释放该内存。  
+ 适用于 SQL Server 的 OLE DB 驱动程序为通过使用者传递的指针返回的 SSERRORINFO 和 OLECHAR 字符串分配内存。 当使用者不再需要访问错误数据时，使用者必须使用 IMalloc::Free 方法释放该内存  。  
   
  SSERRORINFO 结构的定义如下所示：  
   
@@ -80,15 +80,15 @@ SSERRORINFO;
   
 |成员|描述|  
 |------------|-----------------|  
-|pwszMessage|来自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的错误消息。 消息是通过 IErrorInfo::GetDescription 方法返回的。|  
-|pwszServer|在其上发生了该错误的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。|  
-|pwszProcedure|如果错误发生在存储过程中，则为生成该错误的存储过程的名称；否则，为空字符串。|  
-|lNative|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误号。 该错误号与在 ISQLErrorInfo::GetSQLInfo 方法的 plNativeError 参数中返回的错误号相同。|  
-|bState|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的状态。|  
-|bClass|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的严重性。|  
-|wLineNumber|如果适用，为生成错误消息的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程的行。 如果与过程无关，则为默认值 1。|  
+|pwszMessage |来自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的错误消息。 消息是通过 IErrorInfo::GetDescription 方法返回的  。|  
+|pwszServer |在其上发生了该错误的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。|  
+|pwszProcedure |如果错误发生在存储过程中，则为生成该错误的存储过程的名称；否则，为空字符串。|  
+|lNative |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误号。 该错误号与在 ISQLErrorInfo::GetSQLInfo 方法的 plNativeError 参数中返回的错误号相同   。|  
+|bState |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的状态。|  
+|bClass |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误的严重性。|  
+|wLineNumber |如果适用，为生成错误消息的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程的行。 如果与过程无关，则为默认值 1。|  
   
- 结构中的指针引用在 ppErrorStrings 参数中返回的字符串中的地址。  
+ 结构中的指针引用在 ppErrorStrings 参数中返回的字符串中的地址  。  
   
 ## <a name="see-also"></a>另请参阅  
  [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   

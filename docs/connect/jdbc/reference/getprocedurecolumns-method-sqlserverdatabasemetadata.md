@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c239a16728538acece726c1d0b4722d9c2977765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c71218c709921cd9180bff2b9a6b5997ae7450c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734695"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771195"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,21 +39,21 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *sCatalog*  
+ sCatalog   
   
- 一个包含目录名称的字符串。 对此参数提供 Null 值指示无需使用目录名称。  
+ 一个包含目录名称的字符串  。 对此参数提供 Null 值指示无需使用目录名称。  
   
- *sSchema*  
+ sSchema   
   
- 一个包含架构名称模式的字符串。 对此参数提供 Null 值指示无需使用架构名称。  
+ 一个包含架构名称模式的字符串  。 对此参数提供 Null 值指示无需使用架构名称。  
   
  *proc*  
   
- 一个包含过程名称模式的字符串。  
+ 一个包含过程名称模式的字符串  。  
   
  *col*  
   
- 一个包含列名称模式的字符串。 对此参数提供 Null 值将为每一列返回一行。  
+ 一个包含列名称模式的字符串  。 对此参数提供 Null 值将为每一列返回一行。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
@@ -66,7 +66,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
   
  由 getProcedureColumns 方法返回的结果集将包含以下信息：  
   
-|名称|类型|描述|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|指定的存储过程所在数据库的名称。|  
 |PROCEDURE_SCHEM|**String**|存储过程的架构。|  
@@ -80,10 +80,10 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SCALE|**short**|小数点右边的数字位数。|  
 |RADIX|**short**|数值类型的基数。|  
 |NULLABLE|**short**|指示列能否包含 Null 值。 可以为下列值之一：<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
-|REMARKS|**String**|过程列的说明。<br /><br /> <br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
+|REMARKS|**String**|过程列的说明。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
 |COLUMN_DEF|**String**|列的默认值。|  
-|SQL_DATA_TYPE|**smallint**|此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外。|  
-|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码。 对于数据类型以外**datetime**和 ISO**间隔**，此列为 NULL。|  
+|SQL_DATA_TYPE|**smallint**|此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外    。|  
+|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码      。 对于数据类型以外**datetime**和 ISO**间隔**，此列为 NULL。|  
 |CHAR_OCTET_LENGTH|**int**|列中的最大字节数。|  
 |ORDINAL_POSITION|**int**|列在表中的索引。|  
 |IS_NULLABLE|**String**|指示列是否允许 Null 值。|  

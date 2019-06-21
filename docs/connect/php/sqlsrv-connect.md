@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_connect |Microsoft Docs
+title: sqlsrv_connect | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8df39220a9d3ee2286e4ed86610790e20a3b78c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a5cb52f4e27ea933b4988c3c8f2daee6fb90147d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601187"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796898"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
   
 同样从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 3.0 开始，你还可以指定要连接到 AlwaysOn 可用性组的虚拟网络名称。 有关详细信息[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支持[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，请参阅[支持的高可用性和灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。  
   
-$connectionInfo [可选]：包含连接属性的关联数组（例如，array ("Database" => "AdventureWorks")）。 有关数组的受支持密钥的列表，请参阅 [Connection Options](../../connect/php/connection-options.md) 。  
+$connectionInfo [可选]：包含连接属性的关联数组（例如，array ("Database" => "AdventureWorks")）    。 有关数组的受支持密钥的列表，请参阅 [Connection Options](../../connect/php/connection-options.md) 。  
   
 ## <a name="return-value"></a>返回值  
 PHP 连接资源。 如果无法成功创建和打开连接，则返回 **false** 。  

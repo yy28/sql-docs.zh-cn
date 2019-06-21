@@ -1,5 +1,5 @@
 ---
-title: getInt 方法 (int) (SQLServerResultSet) |Microsoft Docs
+title: getInt 方法 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: c465ff91-ab96-41de-8917-96c4974c2624
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3d6aa0a75a519da0399d46a2c9caa24566ef673
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fcf1e472ef62a2df8656063eda01cf4dfec3bda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766615"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781302"
 ---
 # <a name="getint-method-int-sqlserverresultset"></a>getInt 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的 int。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的 int  。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,9 +36,9 @@ public int getInt(int columnIndex)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- columnIndex  
+ columnIndex   
   
- 指示列索引的 int。  
+ 指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
  **Int**值。  

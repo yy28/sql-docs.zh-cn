@@ -9,14 +9,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: 59a1458c98fb12f2f053bfd71649f40ddc5d1e4e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 84e729cd60a28ff8a58760bd3810ec538a327007
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55047211"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800486"
 ---
 # <a name="custom-keystore-providers"></a>自定义密钥存储提供程序
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -83,7 +83,7 @@ typedef struct CEKeystoreProvider {
 
 |字段名|描述|
 |:--|:--|
-|`Name`|密钥存储提供程序的名称。 它不能与其他任何密钥存储提供程序以前加载的驱动程序或此库中存在相同。 以 null 结尾、 宽-字符 * 字符串。|
+|`Name`|密钥存储提供程序的名称。 它不能与其他任何密钥存储提供程序以前加载的驱动程序或此库中存在相同。 以 Null 结尾的宽字符*字符串。|
 |`Init`|初始化函数。 如果不需要初始化函数，则此字段可能为 null。|
 |`Read`|提供程序读取函数。 可以为 null，如果不是必需的。|
 |`Write`|提供程序写函数。 所需读取是否不为 null。 可以为 null，如果不是必需的。|
@@ -140,8 +140,8 @@ int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 |:--|:--|
 |`ctx`|[输入]操作上下文。|
 |`onError`|[输入]错误报告函数。|
-|`keyPath`|[输入]值[KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 由给定 ECEK 引用的元数据特性。 以 null 终止宽-字符 * 字符串。 这是为了确定此提供程序处理 CMK。|
-|`alg`|[输入]值[算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)给定 ECEK 的元数据特性。 以 null 终止宽-字符 * 字符串。 这是为了识别用于加密给定的 ECEK 的加密算法。|
+|`keyPath`|[输入]值[KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 由给定 ECEK 引用的元数据特性。 以 Null 结尾的宽字符*字符串。 这是为了确定此提供程序处理 CMK。|
+|`alg`|[输入]值[算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)给定 ECEK 的元数据特性。 以 Null 结尾的宽字符*字符串。 这是为了识别用于加密给定的 ECEK 的加密算法。|
 |`ecek`|[输入]指向要解密的 ECEK 指针。|
 |`ecekLen`|[输入]ECEK 的长度。|
 |`cekOut`|[输出]提供程序应为已解密的 ECEK 分配内存和指针指向的 cekOut 写入其地址。 它必须是可释放的内存使用此块[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) 或释放 (Linux/Mac) 函数。 如果没有内存分配因出错而或以其他方式，应设置提供程序 * cekOut 到 null 指针。|
@@ -157,8 +157,8 @@ int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 |:--|:--|
 |`ctx`|[输入]操作上下文。|
 |`onError`|[输入]错误报告函数。|
-|`keyPath`|[输入]值[KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 由给定 ECEK 引用的元数据特性。 以 null 终止宽-字符 * 字符串。 这是为了确定此提供程序处理 CMK。|
-|`alg`|[输入]值[算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)给定 ECEK 的元数据特性。 以 null 终止宽-字符 * 字符串。 这是为了识别用于加密给定的 ECEK 的加密算法。|
+|`keyPath`|[输入]值[KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 由给定 ECEK 引用的元数据特性。 以 Null 结尾的宽字符*字符串。 这是为了确定此提供程序处理 CMK。|
+|`alg`|[输入]值[算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)给定 ECEK 的元数据特性。 以 Null 结尾的宽字符*字符串。 这是为了识别用于加密给定的 ECEK 的加密算法。|
 |`cek`|[输入]指向要加密的 CEK。|
 |`cekLen`|[输入]CEK 的长度。|
 |`ecekOut`|[输出]提供程序应为加密的 CEK 分配内存和指针指向的 ecekOut 写入其地址。 它必须是可释放的内存使用此块[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) 或释放 (Linux/Mac) 函数。 如果没有内存分配因出错而或以其他方式，应设置提供程序 * ecekOut 到 null 指针。|
@@ -187,7 +187,7 @@ void (*Free)();
 |参数|描述|
 |:--|:--|
 |`ctx`|[输入]要在报告错误的上下文。|
-|`msg`|[输入]报告错误消息。 以 null 结尾的宽字符字符串。 若要允许参数化的信息必须存在，此字符串可包含的窗体接受的格式插入设置序列[FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)函数。 可通过此参数指定扩展的功能，如下所述。|
+|`msg`|[输入]报告错误消息。 以 Null 结尾的宽字符字符串。 若要允许参数化的信息必须存在，此字符串可包含的窗体接受的格式插入设置序列[FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)函数。 可通过此参数指定扩展的功能，如下所述。|
 |...|[输入]中容纳不下的格式说明符消息，根据需要的其他可变参数参数。|
 
 若要报告时出现错误，提供程序调用 onError，提供的上下文参数传递到提供程序函数按该驱动程序和可选的其他参数的错误消息要在其中设置格式。 提供程序可能会调用此函数多次发布连续在一个提供程序函数调用中的多条错误消息。 例如：

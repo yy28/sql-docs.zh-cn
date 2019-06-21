@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: ea12e36463212117353284fb0543e00af8f2a1ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66774086"
 ---
 # <a name="getsqlxml-method-javalangstring-sqlserverresultset"></a>getSQLXML 方法 (java.lang.String) (SQLServerResultSet)
@@ -42,7 +42,7 @@ public final java.sql.SQLXML getSQLXML(java.lang.String columnLabel)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getSQLXML 方法是由 java.sql.CallableStatement 接口中的 getSQLXML 方法指定的。  
+ 此 getSQLXML 方法是由 java.sql.ResultSet 接口中的 getSQLXML 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getSQLXML 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   

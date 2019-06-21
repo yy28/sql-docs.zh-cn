@@ -21,13 +21,13 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1cab9f8d7810216fff9e56fc9bab99cf1b58c92e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: efc2c82f047beca82f1daeda6318f16803499f86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396351"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802858"
 ---
 # <a name="using-user-defined-types"></a>使用用户定义类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "52396351"
  UDT 可用作表的列定义、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 批处理中的变量，还可用作 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数或存储过程的参数。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序  
- 适用于 SQL Server 的 OLE DB 驱动程序支持将 UDT 用作带元数据信息的二进制类型，让你能将 UDT 当作对象进行管理。 UDT 列公开为 DBTYPE_UDT，且其元数据通过核心 OLE DB 接口 IColumnRowset 和新增的 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口公开。  
+ 适用于 SQL Server 的 OLE DB 驱动程序支持将 UDT 用作带元数据信息的二进制类型，让你能将 UDT 当作对象进行管理。 UDT 列公开为 DBTYPE_UDT，且其元数据通过核心 OLE DB 接口 IColumnRowset 和新增的 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口公开  。  
   
 > [!NOTE]  
->  IRowsetFind::FindNextRow 方法不适用于 UDT 数据类型。 如果将 UDT 用作搜索列类型，则返回 DB_E_BADCOMPAREOP。  
+>  IRowsetFind::FindNextRow 方法不适用于 UDT 数据类型  。 如果将 UDT 用作搜索列类型，则返回 DB_E_BADCOMPAREOP。  
   
 ### <a name="data-bindings-and-coercions"></a>数据绑定和强制  
  下表说明将所列数据类型与某一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 一同使用时出现的绑定和强制。 UDT 列是通过 OLE DB 驱动程序中适用于 SQL Server 公开为 DBTYPE_UDT。 可以通过适当的架构行集获取元数据，这样即可将您自行定义的类型作为对象来管理。  
@@ -58,7 +58,7 @@ ms.locfileid: "52396351"
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持<sup>6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|支持<sup>3,6</sup>|N/A<sup>2</sup>|N/A|N/A<sup>2</sup>|  
   
- <sup>1</sup>如果使用 ICommandWithParameters::SetParameterInfo 指定 DBTYPE_UDT 之外的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错（DB_E_ERRORSOCCURRED；参数状态为 DBSTATUS_E_BADACCESSOR）。 如果不是这样，数据将发送到服务器，但服务器会返回错误，指示不存在从 UDT 到参数的数据类型的隐式转换。  
+ <sup>1</sup>如果使用 ICommandWithParameters::SetParameterInfo 指定 DBTYPE_UDT 之外的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错（DB_E_ERRORSOCCURRED；参数状态为 DBSTATUS_E_BADACCESSOR）  。 否则，数据发送到服务器，但服务器会返回错误，指明不存在将 UDT 转换为参数的数据类型的隐式转换。  
   
  <sup>2</sup>超出本文的范围。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "52396351"
  还可以将 DBTYPE_UDT 转换为 DBTYPE_EMPTY 和 DBTYPE_NULL，但无法将 DBTYPE_NULL 和 DBTYPE_EMPTY 转换为 DBTYPE_UDT。 这与 DBTYPE_BYTES 的情况是一致的。  
   
 > [!NOTE]  
->  借助继承自 ICommandWithParameters 的新接口 ISSCommandWithParameters，可将 UDT 当作参数处理。 应用程序必须使用此接口为 UDT 参数至少设置 DBPROPSET_SQLSERVERPARAMETER 属性集的 SSPROP_PARAM_UDT_NAME。 否则，ICommand::Execute 将返回 DB_E_ERRORSOCCURRED。 此接口和属性集将在后文中介绍。  
+>  借助继承自 ICommandWithParameters 的新接口 ISSCommandWithParameters，可将 UDT 当作参数处理   。 应用程序必须使用此接口为 UDT 参数至少设置 DBPROPSET_SQLSERVERPARAMETER 属性集的 SSPROP_PARAM_UDT_NAME。 否则，ICommand::Execute 将返回 DB_E_ERRORSOCCURRED  。 此接口和属性集将在后文中介绍。  
   
- 如果在某列中插入用户定义类型，而该列的大小不足以包含该类型的所有数据，则 ICommand::Execute 将返回 S_OK，且状态为 DB_E_ERRORSOCCURRED。  
+ 如果在某列中插入用户定义类型，而该列的大小不足以包含该类型的所有数据，则 ICommand::Execute 将返回 S_OK，且状态为 DB_E_ERRORSOCCURRED  。  
   
- OLE DB 核心服务 (IDataConvert) 提供的数据转换不适用于 DBTYPE_UDT。 不支持其他绑定。  
+ OLE DB 核心服务 (IDataConvert) 提供的数据转换不适用于 DBTYPE_UDT  。 不支持其他绑定。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行集的添加和更改内容  
  OLE DB 驱动程序适用于 SQL Server 添加了新值，或将更改为许多核心 OLE DB 架构行集。  
@@ -151,7 +151,7 @@ ms.locfileid: "52396351"
  SSPROP_PARAM_UDT_NAME 是必需的。 SSPROP_PARAM_UDT_CATALOGNAME 和 SSPROP_PARAM_UDT_SCHEMANAME 是可选的。 如果任何属性指定有误，将返回 DB_E_ERRORSINCOMMAND。 如果未指定 SSPROP_PARAM_UDT_CATALOGNAME 和 SSPROP_PARAM_UDT_SCHEMANAME，则必须在定义表的同一数据库和架构中定义 UDT。 如果 UDT 定义没有位于表所在的架构中（但位于相同的数据库中），则必须指定 SSPROP_PARAM_UDT_SCHEMANAME。 如果 UDT 定义位于不同的数据库中，则必须指定 SSPROP_PARAM_UDT_CATALOGNAME 和 SSPROP_PARAM_UDT_SCHEMANAME。  
   
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
- 为支持在 ITableDefinition 接口中创建表，适用于 SQL Server 的 OLE DB 驱动程序向 DBPROPSET_SQLSERVERCOLUMN 属性集添加了如下三个新列。  
+ 为支持在 ITableDefinition 接口中创建表，适用于 SQL Server 的 OLE DB 驱动程序向 DBPROPSET_SQLSERVERCOLUMN 属性集添加了如下三个新列  。  
   
 |“属性”|描述|类型|描述|  
 |----------|-----------------|----------|-----------------|  
@@ -164,7 +164,7 @@ ms.locfileid: "52396351"
   
  ADO 将通过使用“说明”列中的相应条目引用这些属性。  
   
- SSPROP_COL_UDTNAME 是必需的。 SSPROP_COL_UDT_CATALOGNAME 和 SSPROP_COL_UDT_SCHEMANAME 是可选的。 如果任何属性指定有误，将返回 DB_E_ERRORSINCOMMAND。  
+ SSPROP_COL_UDTNAME 是必需的。 SSPROP_COL_UDT_CATALOGNAME 和 SSPROP_COL_UDT_SCHEMANAME 是可选的。 如果任何属性指定有误，将返回 DB_E_ERRORSINCOMMAND  。  
   
  如果既未指定 SSPROP_COL_UDT_CATALOGNAME 也未指定 SSPROP_COL_UDT_SCHEMANAME，则必须在定义表的同一数据库和架构中定义 UDT。  
   
@@ -176,13 +176,13 @@ ms.locfileid: "52396351"
  OLE DB 驱动程序适用于 SQL Server 添加了新值，或将更改为许多核心 OLE DB 接口。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 接口  
- 为通过 OLE DB 支持 UDT，适用于 SQL Server 的 OLE DB 驱动程序字符串实现了大量更改，包括添加 ISSCommandWithParameters 接口。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo）之外，ISSCommandWithParameters 还提供 GetParameterProperties 和 SetParameterProperties 方法，它们用于处理服务器特定的数据类型。  
+ 为通过 OLE DB 支持 UDT，适用于 SQL Server 的 OLE DB 驱动程序字符串实现了大量更改，包括添加 ISSCommandWithParameters 接口  。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo）之外，ISSCommandWithParameters 还提供 GetParameterProperties 和 SetParameterProperties 方法，它们用于处理服务器特定的数据类型        。  
   
 > [!NOTE]  
->  ISSCommandWithParameters 接口也利用新的 SSPARAMPROPS 结构。  
+>  ISSCommandWithParameters 接口也利用新的 SSPARAMPROPS 结构  。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 接口  
- 除了 ISSCommandWithParameters 接口，适用于 SQL Server 的 OLE DB 驱动程序还向调用 IColumnsRowset::GetColumnRowset 方法所返回的行集添加了下列新值。  
+ 除了 ISSCommandWithParameters 接口，适用于 SQL Server 的 OLE DB 驱动程序还向调用 IColumnsRowset::GetColumnRowset 方法所返回的行集添加了下列新值   。  
   
 |列名|类型|描述|  
 |-----------------|----------|-----------------|  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPReadFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 451b2b52f44af44176ab5470992d30e24df70582
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 46139cddfb91c974f78547794bec55251abce25c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600267"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790830"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,16 +39,16 @@ HRESULT BCPReadFmt(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 可使用 BCPReadFmt 方法从格式化文件中读取数据，其中该文件指定数据文件中的数据格式。 此方法能够检测格式化文件的正确版本。 它可以自动检测格式化文件采用的是 xml 格式还是旧式的文本格式，并据此执行操作。 为 SQL Server BCP 支持的 OLE DB 驱动程序的格式化文件版本是版本 6.0 或更高版本。  
+ 可使用 BCPReadFmt 方法从格式化文件中读取数据，其中该文件指定数据文件中的数据格式  。 此方法能够检测格式化文件的正确版本。 它可以自动检测格式化文件采用的是 xml 格式还是旧式的文本格式，并据此执行操作。 为 SQL Server BCP 支持的 OLE DB 驱动程序的格式化文件版本是版本 6.0 或更高版本。  
   
- BCPReadFmt 方法在读取格式值之后，会相应调用 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法。 用户不必分析格式化文件并发出上述调用。  
+ BCPReadFmt 方法在读取格式值之后，会相应调用 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法  。 用户不必分析格式化文件并发出上述调用。  
   
- 要保存格式化文件，请调用 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 方法。 调用 BCPReadFmt 方法可引用保存的格式。 或者，可使用大容量复制实用工具 (bcp) 将用户定义数据格式保存在可由 BCPReadFmt 方法引用的文件中。  
+ 要保存格式化文件，请调用 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 方法。 调用 BCPReadFmt 方法可引用保存的格式  。 或者，可使用大容量复制实用工具 (bcp) 将用户定义数据格式保存在可由 BCPReadFmt 方法引用的文件中   。  
   
  **BCP_OPTION_DELAYREADFMT**的值*eOption*参数[ibcpsession:: Bcpcontrol](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)修改 ibcpsession:: Bcpreadfmt 的行为。  
   
 ## <a name="arguments"></a>参数  
- *pwszFormatFile*[in]  
+ pwszFormatFile  [in]  
  包含数据文件格式值的文件的路径和文件名。  
   
 ## <a name="return-code-values"></a>返回代码值  

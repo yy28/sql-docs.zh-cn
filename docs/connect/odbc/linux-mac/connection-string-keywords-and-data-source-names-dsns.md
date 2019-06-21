@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 1f3e311b0f7d27b6a0ca2d12ae510960859ae80d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125837"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797511"
 ---
 # <a name="connecting-to-sql-server"></a>连接到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "54125837"
 请参阅[DSN 和连接字符串关键字和属性](../../../connect/odbc/dsn-connection-string-attribute.md)的所有连接字符串关键字和特性在 Linux 和 Mac 上受支持
 
 > [!IMPORTANT]  
-> 当连接到使用数据库镜像（有一个故障转移伙伴）的数据库时，不要在连接字符串中指定数据库名称。 应发送 use database_name 命令连接到该数据库，然后再执行查询。  
+> 当连接到使用数据库镜像（有一个故障转移伙伴）的数据库时，不要在连接字符串中指定数据库名称。 应发送 use database_name 命令连接到该数据库，然后再执行查询   。  
   
 传递给的值**驱动程序**关键字可以是以下之一：  
   
@@ -53,9 +53,9 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-你可以选择指定协议和端口来连接到服务器。 例如， **Server = tcp:**_servername_**，12345**。 请注意，唯一支持的 Linux 和 macOS 的驱动程序的协议是`tcp`。
+你可以选择指定协议和端口来连接到服务器。 例如， **Server = tcp:** _servername_ **，12345**。 请注意，唯一支持的 Linux 和 macOS 的驱动程序的协议是`tcp`。
 
-若要连接到静态端口上的命名实例，请使用 Server=servername,port_number<b></b>。 不支持连接到动态端口。  
+若要连接到静态端口上的命名实例，请使用 Server=servername,port_number<b></b>   。 不支持连接到动态端口。  
 
 可以选择将 DSN 信息添加到模板文件并执行以下命令，以将其添加到 `~/.odbc.ini`：
  - **odbcinst -i -s -f** _template_file_  

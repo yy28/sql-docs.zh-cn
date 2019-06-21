@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d7e07cff-6fc4-4c9c-8e8f-838c77734bc5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d276b14fabbf815358ab56a1f0398cc183b6c2ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b32d98e6be6297bd2bfab2953648be4fca07f6a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745651"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796510"
 ---
 # <a name="isnullable-method-sqlserverparametermetadata"></a>isNullable 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public int isNullable(int param)
 #### <a name="parameters"></a>Parameters  
  *param*  
   
- 指示参数索引的 int。  
+ 指示参数索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 指示指定参数的为 Null 性的 int，可以为以下值之一：  
+ 指示指定参数的为 Null 性的 int  ，可以为以下值之一：  
   
  ParameterMetaData.parameterNoNulls  
   

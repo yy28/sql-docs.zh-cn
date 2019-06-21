@@ -1,5 +1,5 @@
 ---
-title: SQLServerException 构造函数 (java.lang.Object，java.lang.String，java.lang.String，StreamError，boolean) |Microsoft Docs
+title: SQLServerException 构造函数 (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89d156ca5024ed49cbc3b5256266c393c897ae12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 33b5d593cfc5ac4b46fdfe7dcf7a845f754d5f3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756385"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800915"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException 构造函数 (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public SQLServerException(java.lang.Object obj,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- obj  
+ obj   
   
  IO 缓冲区生成了异常。
 
@@ -52,11 +52,11 @@ public SQLServerException(java.lang.Object obj,
   
  一个包含 SQL 状态的枚举对象。
  
- *streamError*  
+ streamError   
   
  StreamError 对象，其中包含有关错误的详细信息。
  
- *bStack*  
+ bStack   
   
  一个布尔值，该值指示是否应生成堆栈跟踪。
   

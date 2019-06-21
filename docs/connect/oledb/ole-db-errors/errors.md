@@ -1,5 +1,5 @@
 ---
-title: 错误 |Microsoft Docs
+title: 错误 | Microsoft Docs
 description: 错误
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB error handling
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 96772a8de06454d038b3e018643cd32e5132ec2c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a9f937e130af664570b92b006a54d329b33b9e23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606107"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798134"
 ---
 # <a name="errors"></a>错误
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "51606107"
 
   OLE/COM 对象通过对象成员函数的 HRESULT 返回代码报告错误。 OLE/COM HRESULT 是一种位压缩结构。 OLE 提供取消对结构成员的引用的宏。  
   
- OLE/COM 指定 IErrorInfo 接口。 该接口公开 GetDescription 之类的方法。 这允许客户端从 OLE/COM 服务器提取错误详细信息。 OLE DB 扩展 IErrorInfo 以支持返回针对单成员函数执行的多个错误信息包。  
+ OLE/COM 指定 IErrorInfo 接口  。 该接口公开 GetDescription 之类的方法  。 这允许客户端从 OLE/COM 服务器提取错误详细信息。 OLE DB 扩展 IErrorInfo 以支持返回针对单成员函数执行的多个错误信息包  。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以返回多个错误。 通过调用 [IMultipleResults::GetResult](https://go.microsoft.com/fwlink/?LinkId=129630) 并结合 ISQLErrorInfo 和 IErrorRecords，应用程序可以一次检索一个服务器错误。  
   
- 适用于 SQL Server 的 OLE DB 驱动程序公开 OLE DB 记录增强型 IErrorInfo、自定义 ISQLErrorInfo 和特定于访问接口的 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 错误对象接口。  
+ 适用于 SQL Server 的 OLE DB 驱动程序公开 OLE DB 记录增强型 IErrorInfo、自定义 ISQLErrorInfo 和特定于访问接口的 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 错误对象接口   。  
   
  有关跟踪错误的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 有关添加中的错误跟踪的增强功能的信息[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，请参阅[访问扩展事件日志中的诊断信息](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
