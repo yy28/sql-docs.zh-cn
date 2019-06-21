@@ -15,11 +15,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 1a45ddf4920f693db928dddd30256c20f36ebe4a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524340"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037251"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "52524340"
 |没有安装 SQL Server 2008 R2 Management Studio 的 64 位版|安装 SQL Server 2008 R2 Management Studio（包括 SP2）|SQLManagementStudio_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=251791) (#此处)），以安装免费的 SQL Server 2008 R2 SP2 Management Studio Express Edition。|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 如果另一进程锁定了 SQAGTRES.dll 可能会导致安装程序失败  
-**问题**：SQL Server 安装程序操作可能会失败并出现如下错误： `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 。根本原因是另一个进程锁定了 C:\Windows\system32\SQAGTRES.DLL 而安装程序无法更新它。  
+**问题**：SQL Server 安装程序操作可能失败，出现以下错误：`Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.`根本原因是另一进程锁定了 C:\Windows\system32\SQAGTRES.DLL，从而导致安装程序无法更新该文件。  
   
-**变通方法**：将 C:\Windows\system32\SQAGTRES.DLL 重命名为一个 C:\Windows\system32\SQAGTRES_old.DLL 这样的临时名称，然后选择安装程序错误信息上的“重试”选项。 这样，安装程序就可以继续运行了。 重新启动之后，您可以删除临时文件 C:\Windows\system32\SQAGTRES_old.DLL。  
+**解决方法**：将 C:\Windows\system32\SQAGTRES.DLL 重命名为临时名称，比如 C:\Windows\system32\SQAGTRES_old.DLL，然后在安装错误消息处选择重试选项。 这样，安装程序就可以继续运行了。 重新启动之后，您可以删除临时文件 C:\Windows\system32\SQAGTRES_old.DLL。  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 此 Service Pack 中已修复的已知问题  
 有关此 Service Pack 中已修复的 Bug 和已知问题的完整列表，请参阅此 [主知识库文章](https://support.microsoft.com/kb/2630455)。  

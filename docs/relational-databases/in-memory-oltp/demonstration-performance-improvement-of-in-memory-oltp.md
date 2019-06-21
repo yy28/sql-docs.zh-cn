@@ -13,13 +13,13 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677546"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047871"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存中 OLTP 的性能改进
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存 OLTP 的性能改进
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本主题中的代码示例演示了内存优化表的快速性能。 从传统、已解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)]访问内存优化表中的数据时，此性能改进非常明显。 从本机编译存储过程 (NCSProc) 访问内存优化表中的数据时，此性能改进甚至更明显。  
@@ -33,7 +33,7 @@ ms.locfileid: "51677546"
 ## <a name="code-example"></a>代码示例  
  以下各小节介绍了每个步骤。  
   
-### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>步骤 1a：使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>步骤 1a：使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的先决条件  
  此第一个小节中的步骤仅适用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中运行的情况，而不适用于在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中运行的情况。 请执行以下操作：  
   
 1.  使用 SQL Server Management Studio (SSMS.exe) 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 或也可使用任何类似于 SSMS.exe 的工具。  
@@ -59,7 +59,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>步骤 1b：如果使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>步骤 1b：使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 时的先决条件  
  本小节仅适用于使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]的情况。 请执行以下操作：  
   
 1.  决定将用于代码示例的现有测试数据库。  
@@ -68,7 +68,7 @@ go
   
  如果需要有关使用 Azure 门户来实现这一操作的说明，请参阅 [Azure SQL Database 入门](https://azure.microsoft.com/documentation/articles/sql-database-get-started)。  
   
-### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>步骤 2：创建内存优化表和 NCSProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>第 2 步：创建内存优化表和 NCSProc  
  此步骤创建内存优化表和本机编译的存储过程 (NCSProc)。 请执行以下操作：  
   
 1.  使用 SSMS.exe 连接到新的数据库。  

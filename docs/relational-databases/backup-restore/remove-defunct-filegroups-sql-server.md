@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c44870c5c562f2dc28fa5e7b94c3547c425cee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025270"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>删除失效文件组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47597206"
   
 -   [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除失效的文件组，请使用：**  
   
@@ -59,9 +59,9 @@ ms.locfileid: "47597206"
   
      例如，可以选择让文件组失效来解决由于数据库中不再需要的脱机文件组而导致的事务延迟。 这样的文件组失效之后，由于这些文件组的脱机而延迟的事务将脱离延迟状态。 有关详细信息，请参阅 [延迟的事务 (SQL Server)](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)中删除失效的文件组。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -70,25 +70,25 @@ ms.locfileid: "47597206"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**，右键单击要从其中删除文件的数据库，再单击 **“属性”**。  
+2.  展开 **“数据库”** ，右键单击要从其中删除文件的数据库，再单击 **“属性”** 。  
   
 3.  选择 **“文件”** 页。  
   
-4.  在 **“数据库文件”** 网格中，选择要删除的文件，单击 **“删除”**，然后单击 **“确定”**。  
+4.  在 **“数据库文件”** 网格中，选择要删除的文件，单击 **“删除”** ，然后单击 **“确定”** 。  
   
 5.  选择 **“文件组”** 页。  
   
-6.  在 **“行”** 网格中，选择要删除的文件组，单击 **“删除”**，然后单击 **“确定”**。  
+6.  在 **“行”** 网格中，选择要删除的文件组，单击 **“删除”** ，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-remove-defunct-filegroups"></a>删除失效的文件组  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 （**注意：** 此示例假定文件和文件组已存在。 若要创建这些对象，请参阅 [ALTER DATABASE 和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)主题中的示例 B。）第一个示例通过使用具有 `test1dat3` 子句的 `test1dat4` 语句，从失效的文件组中删除 `ALTER DATABASE` 和 `REMOVE FILE` 文件。 第二个示例通过使用 `Test1FG1` 子句，删除失效的文件组 `REMOVE FILEGROUP`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 （注意：  此示例假定文件和文件组已存在。 若要创建这些对象，请参阅 [ALTER DATABASE 和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)主题中的示例 B。）第一个示例通过使用具有 `test1dat3` 子句的 `test1dat4` 语句，从失效的文件组中删除 `ALTER DATABASE` 和 `REMOVE FILE` 文件。 第二个示例通过使用 `Test1FG1` 子句，删除失效的文件组 `REMOVE FILEGROUP`。  
   
 ```sql  
 USE master;  

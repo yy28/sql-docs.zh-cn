@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034976"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>临时表注意事项和限制
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52410084"
   
 -   由于 **FILETABLE** 和 **FILESTREAM** 允许在 **外部进行数据操作，所以临时表和历史记录表不能为** FILETABLE **，且可以包含** FILESTREAM [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的任何受支持的数据类型的列，因此系统版本控制不能得到保证。  
   
--   尽管临时表支持 Blob 数据类型，如 **(n)varchar(max)**、**varbinary(max)**、 **(n)text** 和 **image**，但由于其大小，会导致产生巨大的存储成本，并可能对性能产生影响。 因此在设计系统的过程中，应慎重使用这些数据类型。  
+-   尽管临时表支持 Blob 数据类型，如 **(n)varchar(max)** 、**varbinary(max)** 、 **(n)text** 和 **image**，但由于其大小，会导致产生巨大的存储成本，并可能对性能产生影响。 因此在设计系统的过程中，应慎重使用这些数据类型。  
   
 -   必须在与当前表相同的数据库中创建历史记录表。 不支持对 **Linked Server** 的临时查询。  
   
@@ -56,20 +56,20 @@ ms.locfileid: "52410084"
   
 -   当前表上不允许**ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 。 换言之，当临时表引用外键关系中的表时（对应于 sys.foreign_keys 中的 *parent_object_id* ），将不允许 CASCADE 选项。 若要解除此限制，请使用应用程序逻辑或 after 触发器，以在主键表中进行删除时保持一致性（对应于 sys.foreign_keys 中的  *referenced_object_id* ）。 如果主键表是时态表而引用表为非时态表，则不存在此类限制。 
 
-    **注意：** 此限制仅适用于 SQL Server 2016。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017（从 CTP 2.0 开始）中支持 CASCADE 选项。  
+    **注意**：此限制仅适用于 SQL Server 2016。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017（从 CTP 2.0 开始）中支持 CASCADE 选项。  
   
 -   在当前表或历史记录表上均不允许使用**INSTEAD OF** 触发器，以避免导致 DML 逻辑失效。 仅在当前表上允许**AFTER** 触发器。 这些触发器在历史记录表上会被阻止，以避免导致 DML 逻辑失效。  
   
 -   复制技术的使用受到限制。  
   
-    -   **始终启用：** 完全支持  
+    -   **Always On：** 完全支持  
   
-    -   **更改数据捕获和更改数据跟踪：** 仅当前表支持  
+    -   **变更数据捕获和数据跟踪**仅当前表支持  
   
     -   **快照和事务复制**：仅支持未启用临时的单个发布服务器和启用了临时的一个订阅服务器。 在这种情况下，发布服务器用于 OLTP 工作负载，而订阅服务器用于卸载报表（包括“AS OF”查询）。    
         不支持使用多个订阅服务器，因为这种方案可能导致临时数据不一致，原因是每个服务器都依赖于本地系统时钟。  
   
-    -   **合并复制：** 不支持临时表  
+    -   **合并复制：** 不支持时态表  
   
 -   定期查询仅影响当前表中的数据。 若要查询历史记录表中的数据，必须使用临时查询。 稍后将在本文档中“查询临时数据”部分讨论相关内容。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "52410084"
   
     -   分区配置  
   
-    -   Permissions  
+    -   权限  
   
     -   行级别安全性谓词  
   

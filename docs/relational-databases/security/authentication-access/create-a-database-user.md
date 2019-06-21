@@ -26,11 +26,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11e155be4678c2cb57b9b551b412570e4578eb46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715846"
 ---
 # <a name="create-a-database-user"></a>创建数据库用户
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "52516661"
 ### <a name="selecting-the-type-of-user"></a>选择用户类型  
  **登录名或没有映射到登录名的用户**  
   
- 如果对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不熟悉，可能很难决定要创建哪种类型的用户。 首先问问自己，需要访问数据库的用户或组是否有登录名？ 管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用户和需要访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的多个或者全部数据库的用户通常拥有主数据库中的登录名。 在这种情况下，你需要创建一个“带登录名的 SQL 用户” 。 数据库用户是连接到数据库时的登录名的标识。 数据库用户可以使用与登录名相同的名称，但这不是必需的。 本主题假设 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已存在登录名。 有关如何创建登录名的信息，请参阅 [创建登录名](../../../relational-databases/security/authentication-access/create-a-login.md)  
+ 如果对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不熟悉，可能很难决定要创建哪种类型的用户。 首先问问自己，需要访问数据库的用户或组是否有登录名？ 管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用户和需要访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的多个或者全部数据库的用户通常拥有主数据库中的登录名。 在这种情况下，你需要创建一个“带登录名的 SQL 用户”  。 数据库用户是连接到数据库时的登录名的标识。 数据库用户可以使用与登录名相同的名称，但这不是必需的。 本主题假设 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已存在登录名。 有关如何创建登录名的信息，请参阅 [创建登录名](../../../relational-databases/security/authentication-access/create-a-login.md)  
   
  如果需要访问数据库的用户和组没有登录名，并且他们只需要访问一个或少数几个数据库，则创建 **Windows 用户** 或者 **带密码的 SQL 用户**。 也称为包含的数据库用户，它与主数据库的登录名不相关。 当你想在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例间轻松地移动数据库时，这是一个理想的选择。 若要对 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]使用此选项，管理员必须首先对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用包含的数据库，然后对包含启用数据库。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
-> **重要说明！** 作为包含的数据库用户进行连接时，必须在连接字符串中提供数据库的名称。 若要在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中指定数据库，在“连接到”  对话框中单击“选项” ，然后单击“连接属性”  选项卡。  
+> **重要说明！** 作为包含的数据库用户进行连接时，必须在连接字符串中提供数据库的名称。 若要在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中指定数据库，在“连接到”  对话框中单击“选项”  ，然后单击“连接属性”  选项卡。  
   
  当用户连接无法使用 Windows 进行身份验证时，选择“带密码的 SQL 用户”  或者“带用户名的 SQL 用户”  ，具体取决于 **SQL Server 身份验证登录名**。 组织外的用户（例如客户）连接到你的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时这种情况很常见。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52516661"
   
  可以向作为安全主体的用户授予权限。 用户的作用域是数据库。 若要连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的特定数据库，登录名必须映射到数据库用户。 数据库内的权限是向数据库用户而不是登录名授予和拒绝授予的。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  需要对数据库拥有 **ALTER ANY USER** 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SSMS 创建用户  
@@ -74,9 +74,9 @@ ms.locfileid: "52516661"
   
 2.  展开要在其中创建新数据库用户的数据库。  
   
-3.  右键单击“安全性”文件夹，指向“新建”，然后选择“用户…”。  
+3.  右键单击“安全性”文件夹，指向“新建”，然后选择“用户…”    。  
   
-4.  在“常规”页上的“数据库用户 - 新建”对话框中，从“用户类型”列表中选择以下一个用户类型：  
+4.  在“常规”页上的“数据库用户 - 新建”对话框中，从“用户类型”列表中选择以下一个用户类型    ：  
   
     -   **带登录名的 SQL 用户**  
   
@@ -93,30 +93,30 @@ ms.locfileid: "52516661"
 5.  选择选项时，对话框中的其他选项可能改变。 某些选项仅适用于特定类型的数据库用户。 某些选项可以为空，并且将使用默认值。  
   
      **用户名**  
-     输入新用户的名称。 如果你从“用户类型”列表中选择了“Windows 用户”，则还可以单击省略号 (…) 打开“选择用户或组”对话框。  
+     输入新用户的名称。 如果你从“用户类型”列表中选择了“Windows 用户”，则还可以单击省略号 (…) 打开“选择用户或组”对话框     。  
   
      **登录名**  
-     输入用户的登录名。 或者，单击省略号 (…) 以打开“选择登录名”对话框。 如果您从 **“用户类型”** 列表中选择了 **“带登录名的 SQL 用户”** 或 **“Windows 用户”** ，则 **“登录名”** 可用。  
+     输入用户的登录名。 或者，单击省略号 (…) 以打开“选择登录名”对话框   。 如果您从 **“用户类型”** 列表中选择了 **“带登录名的 SQL 用户”** 或 **“Windows 用户”** ，则 **“登录名”** 可用。  
   
-     “密码”和“确认密码”  
+     “密码”  和“确认密码”   
      输入在数据库中进行身份验证的用户的密码。  
   
      **默认语言**  
      输入默认的用户语言。  
   
      **默认架构**  
-     输入此用户所创建的对象所属的架构。 或者，单击省略号 (…) 以打开“选择架构”对话框。 如果您从 **“用户类型”** 列表中选择了 **“带登录名的 SQL 用户”**, **“不带登录名的 SQL 用户”** 或 **“Windows 用户”** ，则 **“默认架构”** 可用。  
+     输入此用户所创建的对象所属的架构。 或者，单击省略号 (…) 以打开“选择架构”对话框   。 如果您从 **“用户类型”** 列表中选择了 **“带登录名的 SQL 用户”** , **“不带登录名的 SQL 用户”** 或 **“Windows 用户”** ，则 **“默认架构”** 可用。  
   
      **证书名称**  
-     输入将用于数据库用户的证书。 或者，单击省略号 (…) 以打开“选择证书”对话框。 如果从 **“用户类型”** 列表中选择了 **“映射到证书的用户”** ，则 **“证书名称”** 可用。  
+     输入将用于数据库用户的证书。 或者，单击省略号 (…) 以打开“选择证书”对话框   。 如果从 **“用户类型”** 列表中选择了 **“映射到证书的用户”** ，则 **“证书名称”** 可用。  
   
      **非对称密钥名称**  
-     输入将用于数据库用户的密钥。 或者，单击省略号 (…) 以打开“选择非对称密钥”对话框。 如果从 **“用户类型”** 列表中选择了 **“映射到非对称密钥的用户”** ，则 **“非对称密钥名称”** 可用。  
+     输入将用于数据库用户的密钥。 或者，单击省略号 (…) 以打开“选择非对称密钥”对话框   。 如果从 **“用户类型”** 列表中选择了 **“映射到非对称密钥的用户”** ，则 **“非对称密钥名称”** 可用。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- “数据库用户 - 新建” 对话框还在四个其他页面上提供了选项：“拥有的架构”、“成员身份”、“安全对象”和“扩展属性”。  
+ “数据库用户 - 新建”对话框还提供了四个其他页上的选项  ：“拥有的架构”、“成员身份”、“安全对象”和“扩展属性”     。  
   
 -   **“拥有的架构”** 页列出了可由新的数据库用户拥有的所有可能的架构。 若要向数据库用户添加架构或者从数据库用户中删除架构，请在 **“此用户拥有的架构”** 下选中或取消选中架构旁边的复选框。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "52516661"
      查看或指定对象的扩展属性。 每个扩展属性都由与该对象关联的元数据的名称/值对组成。  
   
      **省略号 (...)**  
-     单击“值”后面的省略号 (…) 按钮可打开“已扩展属性的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。 有关详细信息，请参阅 [“扩展属性的值”对话框](../../databases/value-for-extended-property-dialog-box.md)。  
+     单击“值”后面的省略号 (…) 按钮可打开“已扩展属性的值”对话框    。 在这一较大的范围中键入或查看扩展属性的值。 有关详细信息，请参阅 [“扩展属性的值”对话框](../../databases/value-for-extended-property-dialog-box.md)。  
   
      **删除**  
      删除所选扩展属性。  
@@ -145,9 +145,9 @@ ms.locfileid: "52516661"
     
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在“标准”  菜单栏上，单击“新建查询” 。  
+2.  在“标准”  菜单栏上，单击“新建查询”  。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  

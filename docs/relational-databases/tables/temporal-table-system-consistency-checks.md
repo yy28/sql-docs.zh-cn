@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 187a333da1f38cc89f8783b48e0c171630339c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766173"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034834"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>临时表系统一致性检查
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47766173"
 10. 历史记录表未配置更改跟踪或更改数据捕获。  
   
 ### <a name="data-consistency-check"></a>数据一致性检查  
- 将 **SYSTEM_VERSIONING** 设置为 **ON** 并作为任何 DML 操作的一部分之前，系统将执行以下检查： **SysEndTime** ≥**SysStartTime**  
+ 将“SYSTEM_VERSIONING”设置为“ON”并将之作为任何 DML 操作的一部分之前，系统将执行以下检查   ：SysEndTime ≥ SysStartTime    
   
  创建现有历史记录表的链接时，可以选择执行数据一致性检查。 此数据一致性检查可确保现有记录不重叠，并且每个单独的记录都满足临时要求。 系统默认执行数据一致性检查。 通常，每当当前表和历史记录表之间的数据可能失去同步时（如纳入已填充历史数据的现有历史记录表时），建议执行数据一致性检查。  
   

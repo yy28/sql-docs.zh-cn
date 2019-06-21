@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96d2e507283cacb475cbb866dba304e6faaa823f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648135"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797105"
 ---
 # <a name="mssqlserver7916"></a>MSSQLSERVER_7916
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47648135"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_REPAIR_RECORD|  
-|消息正文|修复: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)，页 P_ID，槽 S_ID 的记录已删除。 将重新生成索引。|  
+|消息正文|修复:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE），页 P_ID，槽 S_ID 的记录已删除。 将重新生成索引。|  
   
 ## <a name="explanation"></a>解释  
 这是来自 REPAIR 的信息性消息，指示已将指定记录从页中删除。  

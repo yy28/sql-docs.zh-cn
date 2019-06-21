@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8b369aafc68c7bf06ca56e325c036ffa0c7e4341
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639351"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>参数  
- number | @number_var  
+ number | @number_var     
  指示一周的第一天的一个整数。 可以是下列值之一。  
   
 |ReplTest1|一周的第一天是|  
@@ -68,7 +68,7 @@ SET DATEFIRST 7 ;
 |**4**|星期四|  
 |**5**|星期五|  
 |**6**|星期六|  
-|**7**（默认值，美国英语）|星期日|  
+|**7**英语）|星期日|  
   
 ## <a name="remarks"></a>Remarks  
  若要查看 SET DATEFIRST 的当前设置，请使用 [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md) 函数。  
@@ -77,7 +77,7 @@ SET DATEFIRST 7 ;
   
  指定 SET DATEFIRST 对 DATEDIFF 不起作用。 DATEDIFF 始终使用星期日作为每周的第一天，以确保函数是确定性的。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

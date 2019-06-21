@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644361"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,19 +95,19 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  公用表表达式还可与 SELECT、INSERT、UPDATE 和 CREATE VIEW 等语句一起使用。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- TOP **(**_expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  指定将要删除的任意行数或任意行的百分比。 *expression* 可以是行数或行的百分比。 与 INSERT、UPDATE 或 DELETE 一起使用的 TOP 表达式中被引用行将不按任何顺序排列。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
   
  FROM  
- 一个可选关键字，可用在 DELETE 关键字与目标 table_or_view_name 或 rowset_function_limited 之间。  
+ 一个可选关键字，可用在 DELETE 关键字与目标 table_or_view_name 或 rowset_function_limited 之间   。  
   
  *table_alias*  
  在表示要从中删除行的表或视图的 FROM *table_source* 子句中指定的别名。  
   
- server_name  
+ server_name   
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 表或视图所在服务器的名称（使用链接服务器名称或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数作为服务器名称）。 如果指定了 server_name，则需要 database_name 和 schema_name。  
+ 表或视图所在服务器的名称（使用链接服务器名称或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数作为服务器名称）。 如果指定了 server_name，则需要 database_name 和 schema_name    。  
   
  *database_name*  
  数据库的名称。  
@@ -115,19 +115,19 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *schema_name*  
  表或视图所属架构的名称。  
   
- table_or_view_name  
+ table_or_view_name   
  要从中删除行的表或视图的名称。  
   
  在其作用域内还可用作 DELETE 语句中的表源的表变量。  
   
- table_or_view_name 引用的视图必须可更新，并且只在视图定义的 FROM 子句中引用一个基表。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
+ table_or_view_name 引用的视图必须可更新，并且只在视图定义的 FROM 子句中引用一个基表  。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
- rowset_function_limited  
+ rowset_function_limited   
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数，视提供程序的功能而定。  
   
- WITH ( \<table_hint_limited> [... n] )  
+ WITH ( \<table_hint_limited> [... n] )     
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<OUTPUT_Clause>  
@@ -156,15 +156,15 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  指定 DELETE 在指定游标的当前位置执行。  
   
  GLOBAL  
- 指定 cursor_name 是指全局游标。  
+ 指定 cursor_name 是指全局游标  。  
   
- cursor_name  
- 从其中进行提取的打开游标的名称。 如果同时存在名为 cursor_name 的全局游标和局部游标，那么，在指定了 GLOBAL 时，该参数是指全局游标；否则是指局部游标。 游标必须允许更新。  
+ cursor_name   
+ 从其中进行提取的打开游标的名称。 如果同时存在名为 cursor_name 的全局游标和局部游标，那么，在指定了 GLOBAL 时，该参数是指全局游标；否则是指局部游标  。 游标必须允许更新。  
   
- cursor_variable_name  
+ cursor_variable_name   
  游标变量的名称。 游标变量必须引用允许更新的游标。  
   
- OPTION ( \<query_hint> [ ,... n] )  
+ OPTION ( \<query_hint> [ ,... n] )      
  关键字，指示用于自定义[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句的方式的优化器提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳实践  
@@ -215,7 +215,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ### <a name="permissions"></a>权限  
  要求对目标表具有 DELETE 权限。 如果语句包含 WHERE 子句，则还必须有 SELECT 权限。  
   
- 默认情况下，将 DELETE 权限授予 **sysadmin** 固定服务器角色成员、**db_owner** 和 **db_datawriter** 固定数据库角色成员以及表所有者。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户。  
+ 默认情况下，将 DELETE 权限授予 **sysadmin** 固定服务器角色成员、**db_owner** 和 **db_datawriter** 固定数据库角色成员以及表所有者。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户    。  
   
 ## <a name="examples"></a>示例  
   
@@ -315,7 +315,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. 使用 TOP 限制删除的行数  
- 当 TOP (n) 子句与 DELETE 一起使用时，将针对随机选择的 n 行执行删除操作。 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `PurchaseOrderDetail` 表中删除到期日期早于 2006 年 7 月 1 日的 `20` 个随机行。  
+ 当 TOP (n) 子句与 DELETE 一起使用时，将针对随机选择的 n 行执行删除操作   。 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `PurchaseOrderDetail` 表中删除到期日期早于 2006 年 7 月 1 日的 `20` 个随机行。  
   
 ```sql
 DELETE TOP (20)   
@@ -341,7 +341,7 @@ GO
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 通过使用链接服务器从远程表删除数据  
- 下面的示例将删除远程表中的行。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分。  
+ 下面的示例将删除远程表中的行。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分  。  
   
 ```sql
 USE master;  
@@ -377,7 +377,7 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. 通过使用 OPENDATASOURCE 函数从远程表删除数据  
- 以下示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数从远程表中删除行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称。  
+ 以下示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数从远程表中删除行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称   。  
   
 ```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  

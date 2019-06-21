@@ -20,11 +20,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c18ceba0be4237cc6b4a0ae824af9021631861c1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828457"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643756"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY 数据库权限 (Transact-SQL)
 
@@ -57,7 +57,7 @@ DENY <permission> [ ,...n ]
 
 ## <a name="arguments"></a>参数
 
-permission 指定可对数据库拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。
+permission  指定可对数据库拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。
 
 ALL 该选项不拒绝所有可能权限。 拒绝 ALL 等同于拒绝下列权限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
 
@@ -67,24 +67,24 @@ CASCADE 指示要拒绝的权限也会被对指定主体授予权限的主体拒
 
 AS \<database_principal> 指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。
 
-Database_user 指定数据库用户。
+Database_user  指定数据库用户。
 
-Database_role 指定数据库角色。
+Database_role  指定数据库角色。
 
-Application_role
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+Application_role  
+适用范围  ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
 指定应用程序角色。
 
-Database_user_mapped_to_Windows_User 指定映射到 Windows 用户的数据库用户。
+Database_user_mapped_to_Windows_User  指定映射到 Windows 用户的数据库用户。
 
-Database_user_mapped_to_Windows_Group 指定映射到 Windows 组的数据库用户。
+Database_user_mapped_to_Windows_Group  指定映射到 Windows 组的数据库用户。
 
-Database_user_mapped_to_certificate 指定映射到证书的数据库用户。
+Database_user_mapped_to_certificate  指定映射到证书的数据库用户。
 
-Database_user_mapped_to_asymmetric_key 指定映射到非对称密钥的数据库用户。
+Database_user_mapped_to_asymmetric_key  指定映射到非对称密钥的数据库用户。
 
-Database_user_with_no_login 指定无相应服务器级主体的数据库用户。
+Database_user_with_no_login  指定无相应服务器级主体的数据库用户。
 
 ## <a name="remarks"></a>Remarks
 
@@ -105,7 +105,7 @@ Database_user_with_no_login 指定无相应服务器级主体的数据库用户�
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br /> **适用于**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  。|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
@@ -116,7 +116,7 @@ Database_user_with_no_login 指定无相应服务器级主体的数据库用户�
 |ALTER ANY REMOTE SERVICE BINDING|ALTER|CONTROL SERVER|
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|
-|更改任何安全策略<br /> 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|CONTROL|CONTROL SERVER|
+|更改任何安全策略<br /> 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|CONTROL|CONTROL SERVER|
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|
@@ -170,7 +170,7 @@ Database_user_with_no_login 指定无相应服务器级主体的数据库用户�
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 执行此语句的主体（或用 AS 选项指定的主体）必须具有对数据库的 CONTROL 权限，或具有隐含对数据库的 CONTROL 权限的更高权限。
 
@@ -192,7 +192,7 @@ GO
 
 以下示例拒绝应用程序角色 `REFERENCES` 对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 `AuditMonitor` 权限。
 
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。
 
 ```sql
 USE AdventureWorks2012;

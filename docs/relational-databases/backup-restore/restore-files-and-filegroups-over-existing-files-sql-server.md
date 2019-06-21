@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef333004fc3ed3d5404aa8cae7e3880c74fad1bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631925"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62504416"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>在现有文件上还原文件和文件组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47631925"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要在现有文件上还原文件和文件组，请使用：**  
   
@@ -57,9 +57,9 @@ ms.locfileid: "47631925"
   
 -   若要还原已加密的数据库，您必须有权访问用于对数据库进行加密的证书或非对称密钥。 如果没有证书或非对称密钥，数据库将无法还原。 因此，只要需要该备份，就必须保留用于对数据库加密密钥进行加密的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
@@ -68,9 +68,9 @@ ms.locfileid: "47631925"
   
 #### <a name="to-restore-files-and-filegroups-over-existing-files"></a>在现有文件上还原文件和文件组  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”** 。  
   
-2.  右键单击所需数据库，指向“任务”，再指向“还原”，然后单击“文件和文件组”。  
+2.  右键单击所需数据库，指向“任务”  ，再指向“还原”  ，然后单击“文件和文件组”  。  
   
 3.  在 **“常规”** 页上的 **目标数据库** 列表框中，输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb**之外的所有数据库。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47631925"
   
     -   **源设备**  
   
-         单击浏览按钮。 在 **“指定备份设备”** 对话框的 **“备份介质类型”** 列表框中，选择列出的设备类型之一。 若要为 **“备份介质”** 列表框选择一个或多个设备，请单击 **“添加”**。  
+         单击浏览按钮。 在 **“指定备份设备”** 对话框的 **“备份介质类型”** 列表框中，选择列出的设备类型之一。 若要为 **“备份介质”** 列表框选择一个或多个设备，请单击 **“添加”** 。  
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
@@ -92,8 +92,8 @@ ms.locfileid: "47631925"
     |-----------------|------------|  
     |**还原**|选中的复选框指示要还原的备份集。|  
     |**名称**|备份集的名称。|  
-    |**文件类型**|指定备份中数据的类型： **“数据”**、 **“日志”** 或 **“Filestream 数据”**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
-    |**类型**|执行的备份类型有： **“完整”**、 **“差异”** 或 **“事务日志”**。|  
+    |**文件类型**|指定备份中数据的类型：数据、日志，或 Filestream 数据    。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |**类型**|执行的备份类型：“完整”、“差异”或“事务日志”    。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
     |**文件逻辑名称**|文件的逻辑名称。|  
     |**“数据库”**|备份操作中涉及的数据库的名称。|  
@@ -104,7 +104,7 @@ ms.locfileid: "47631925"
   
 6.  在 **“选择页”** 窗格中，单击 **“选项”** 页。  
   
-7.  在“还原选项”面板中，选择“覆盖现有数据库 (WITH REPLACE)”。 还原操作将会覆盖所有现有数据库及其相关文件，即使已存在同名的其他数据库或文件。  
+7.  在“还原选项”  面板中，选择“覆盖现有数据库 (WITH REPLACE)”  。 还原操作将会覆盖所有现有数据库及其相关文件，即使已存在同名的其他数据库或文件。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

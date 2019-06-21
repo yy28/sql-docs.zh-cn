@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: afe254580b59dbfea6d486b2999f97642c145d7f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667446"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62735115"
 ---
 # <a name="mssqlserver605"></a>MSSQLSERVER_605
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51667446"
   
 -   操作系统过早地通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已完成某个 I/O 操作；尽管不存在实际的数据损坏，但显示错误消息。  
   
-运行带有优化器提示 NOLOCK 的查询，或将事务隔离级别设置为 READ UNCOMMITTED。 当使用 NOLOCK 或 READ UNCOMMITTED 的查询尝试读取被其他用户移走或更改的数据时，将发生 605 错误。 若要验证是否为暂时性的 605 错误，请稍后重新运行该查询。 有关详细信息，请参阅下面的知识库文章 [235880](https://support.microsoft.com/kb/235880/en-us)：“You receive an "Error 605" error message when you run a query with the optimizer hint NOLOCK or you set the transaction isolation level to READ UNCOMMITTED in SQL Server.”（当用优化程序提示 NOLOCK 运行查询或者在 SQL Server 中将事务隔离级别设为 READ UNCOMMITTED 时，将收到‘错误 605’错误消息）。  
+运行带有优化器提示 NOLOCK 的查询，或将事务隔离级别设置为 READ UNCOMMITTED。 当使用 NOLOCK 或 READ UNCOMMITTED 的查询尝试读取被其他用户移走或更改的数据时，将发生 605 错误。 若要验证是否为暂时性的 605 错误，请稍后重新运行该查询。 有关详细信息，请参阅此知识库文章 [235880](https://support.microsoft.com/kb/235880/en-us)：“You receive an "Error 605" error message when you run a query with the optimizer hint NOLOCK or you set the transaction isolation level to READ UNCOMMITTED in SQL Server.”（当用优化程序提示 NOLOCK 运行查询或者在 SQL Server 中将事务隔离级别设为 READ UNCOMMITTED 时，将收到“错误 605”错误消息）。  
   
 通常，如果在数据访问期间发生该错误，但后续的 DBCC CHECKDB 操作在没有出错的情况下完成，则 605 错误可能是暂时的。  
   

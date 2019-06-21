@@ -28,11 +28,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026103"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -127,33 +127,33 @@ ALTER AUTHORIZATION ON
     
 |||    
 |-|-|    
-|OBJECT|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 数据仓库、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|ASSEMBLY|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ASYMMETRIC KEY|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|AVAILABILITY GROUP |适用范围：SQL Server 2012 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
-|CERTIFICATE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|CONTRACT|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|DATABASE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 有关详细信息，请参阅下面的 [ALTER AUTHORIZATION FOR 数据库](#AlterDB)部分。|    
-|ENDPOINT|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|FULLTEXT CATALOG|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|FULLTEXT STOPLIST|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|MESSAGE TYPE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|REMOTE SERVICE BINDING|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|ROLE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ROUTE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|SCHEMA|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 数据仓库、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|SEARCH PROPERTY LIST|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|SERVER ROLE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|SERVICE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|SYMMETRIC KEY|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|TYPE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|XML SCHEMA COLLECTION|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|OBJECT|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 数据仓库、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  。|    
+|ASSEMBLY|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|    
+|ASYMMETRIC KEY|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|    
+|AVAILABILITY GROUP |适用范围：  SQL Server 2012 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
+|CERTIFICATE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|    
+|CONTRACT|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。|    
+|DATABASE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。 有关详细信息，请参阅下面的 [ALTER AUTHORIZATION FOR 数据库](#AlterDB)部分。|    
+|ENDPOINT|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。|    
+|FULLTEXT CATALOG|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|    
+|FULLTEXT STOPLIST|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|    
+|MESSAGE TYPE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。|    
+|REMOTE SERVICE BINDING|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。|    
+|ROLE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|    
+|ROUTE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。|    
+|SCHEMA|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 数据仓库、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  。|    
+|SEARCH PROPERTY LIST|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|    
+|SERVER ROLE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。|    
+|SERVICE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  。|    
+|SYMMETRIC KEY|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|    
+|TYPE|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|    
+|XML SCHEMA COLLECTION|适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。|    
     
- entity_name    
+ entity_name     
  实体名。    
     
- principal_name | SCHEMA OWNER    
- 将拥有实体的安全主体名称。 数据库对象必须为数据库主体、数据库用户或角色所拥有。 服务器对象（如数据库）必须为服务器主体（登录名）所拥有。 将 SCHEMA OWNER 指定为 principal_name，指示对象必须为拥有对象架构的主体所拥有。    
+ principal_name | SCHEMA OWNER     
+ 将拥有实体的安全主体名称。 数据库对象必须为数据库主体、数据库用户或角色所拥有。 服务器对象（如数据库）必须为服务器主体（登录名）所拥有。 将 SCHEMA OWNER 指定为 principal_name，指示对象必须为拥有对象架构的主体所拥有   。    
     
 ## <a name="remarks"></a>Remarks    
  ALTER AUTHORIZATION 可用于更改任何具有所有者的实体的所有权。 数据库包含的实体的所有权，可以转移给任何数据库级的主体。 服务器级实体的所有权只能转移给服务器级主体。    
@@ -193,9 +193,9 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|主体必须为登录名。|    
   
 ## <a name="AlterDB"></a>对数据库执行 ALTER AUTHORIZATION  
-适用范围：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+适用范围：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
 ### <a name="for-sql-server"></a>对于 SQL Server：  
-**对新所有者的要求：**   
+**对新所有者的要求：**    
 新所有者主体必须是以下项之一：  
 
 -   SQL Server 身份验证登录名。  
@@ -203,10 +203,10 @@ ALTER AUTHORIZATION ON
 -   表示 Windows 组的 Windows 用户，通过 Windows 身份验证登录名进行身份验证。  
   
 **对执行 ALTER AUTHORIZATION 语句的人员的要求：**  
-如果不是 sysadmin 固定服务器角色的成员，则必须至少对数据库具有 TAKE OWNERSHIP 权限和对新所有者用户名具有 IMPERSONATE 权限。   
+如果不是 sysadmin 固定服务器角色的成员，则必须至少对数据库具有 TAKE OWNERSHIP 权限和对新所有者用户名具有 IMPERSONATE 权限  。   
 
 ### <a name="for-azure-sql-database"></a>对于 Azure SQL 数据库：  
-**对新所有者的要求：**   
+**对新所有者的要求：**    
 新所有者主体必须是以下项之一：  
 
 -   SQL Server 身份验证登录名。  
@@ -256,7 +256,7 @@ ON d.owner_sid = sl.sid;
   
 ### <a name="best-practice"></a>最佳实践  
   
-将 Azure AD 组用作 db_owner 固定数据库角色的成员，而不是将 Azure AD 用户用作数据库的单个所有者。 下面的步骤演示如何将禁用登录名配置为数据库所有者，并将 Azure Active Directory 组 (`mydbogroup`) 设为 db_owner 角色的成员。 
+将 Azure AD 组用作 db_owner 固定数据库角色的成员，而不是将 Azure AD 用户用作数据库的单个所有者  。 下面的步骤演示如何将禁用登录名配置为数据库所有者，并将 Azure Active Directory 组 (`mydbogroup`) 设为 db_owner 角色的成员  。 
 1.  以 Azure AD 管理员身份登录 SQL Server，将数据库的所有者更改为禁用的 SQL Server 身份验证登录名。 例如，在用户数据库中执行：  
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
@@ -265,12 +265,12 @@ ON d.owner_sid = sl.sid;
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  在用户数据库中，将表示 Azure AD 组的用户添加到 db_owner 固定数据库角色。 例如：  
+3.  在用户数据库中，将表示 Azure AD 组的用户添加到 db_owner 固定数据库角色  。 例如：  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
-现在，`mydbogroup` 成员可将数据库作为 db_owner 角色的成员进行集中管理。  
+现在，`mydbogroup` 成员可将数据库作为 db_owner 角色的成员进行集中管理  。  
 - 从 Azure AD 组中移除此组的成员时，他们会自动失去此数据库的 dbo 权限。  
 - 同样，如果向 `mydbogroup` Azure AD 组中添加新成员，他们将自动获得此数据库的 dbo 权限。  
   
@@ -283,7 +283,7 @@ SELECT IS_MEMBER ('db_owner');
 返回值 1 表示该用户是角色的成员。  
    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>权限    
  要求具有实体的 TAKE OWNERSHIP 权限。 如果新所有者不是执行该语句的用户，那么：1) 如果新所有者是用户或登录名，则要求具有该所有者的 IMPERSONATE 权限；2) 如果新所有者是角色，则要求具有该角色的成员身份或该角色的 ALTER 权限；3) 如果新所有者是应用程序角色，则要求具有该应用程序角色的 ALTER 权限。    
     
 ## <a name="examples"></a>示例    
@@ -346,7 +346,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```    
     
 ### <a name="f-changing-the-owner-of-a-database"></a>F. 更改数据库所有者    
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。    
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]  。    
     
  以下示例将 `Parts` 数据库的所有者更改为登录名 `MichikoOsada`。    
     

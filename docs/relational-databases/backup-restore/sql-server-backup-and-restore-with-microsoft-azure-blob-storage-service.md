@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 625eccb976c500dcacaa5612ca41bac8b638fbed
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434439"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516221"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "58434439"
   
 -   **Azure Blob 存储中的数据库文件的文件快照备份** 通过使用 Azure 快照， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份可以通过使用 Azure Blob 存储服务为存储的数据库文件提供几乎即时的备份和还原。 此功能可以简化备份和还原策略，而且它还支持时间点还原。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。 SQL Server 2016 或更高版本中提供此功能。  
   
--   **使 SQL Server 管理 Microsoft Azure 备份：** 通过配置 SQL Server，来管理备份策略并为一个或多个数据库安排备份，或根据实例级别设置默认值。 此功能被称为 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**。 有关详细信息，请参阅 [Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更高版本中提供此功能。  
+-   **使 SQL Server 管理 Microsoft Azure 备份：** 通过配置 SQL Server，来管理备份策略并为一个或多个数据库安排备份，或根据实例级别设置默认值。 此功能被称为 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 。 有关详细信息，请参阅 [Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更高版本中提供此功能。  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>将 Microsoft Azure Blob 服务用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处  
   
@@ -51,7 +51,7 @@ ms.locfileid: "58434439"
   
      此外，目前存储在 Microsoft Azure Blob 存储服务中的备份文件直接可用于本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或在 Microsoft Azure 虚拟机中运行的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而无需进行数据库附加/分离或下载并附加 VHD。  
   
--   成本优势：只需要为使用的服务付费。 可以作为经济合算的站点外备份存档方案。 有关详细信息和链接，请参阅 [Microsoft Azure 计费注意事项](#Billing) 一节。  
+-   成本权益：只需要为使用的服务付费。 可以作为经济合算的站点外备份存档方案。 有关详细信息和链接，请参阅 [Microsoft Azure 计费注意事项](#Billing) 一节。  
   
 ##  <a name="Billing"></a> Microsoft Azure 计费注意事项：  
  了解 Microsoft Azure 存储成本使你能够预测在 Microsoft Azure 中创建和存储备份的成本。  

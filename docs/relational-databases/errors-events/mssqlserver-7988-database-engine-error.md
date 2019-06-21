@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e6bd546d47bbd78a4b448ed3059605365a9d2d0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797101"
 ---
 # <a name="mssqlserver7988"></a>MSSQLSERVER_7988
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47699535"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_PRE_CHECKS_CHAIN_LOOP_DETECTED|  
-|消息正文|系统表预检查: 对象 ID O_ID。 在 P_ID 处检测到数据链中存在循环。 由于不可修复的错误，Check 语句已终止。|  
+|消息正文|系统表预检查:对象 ID O_ID。 在 P_ID 处检测到数据链中存在循环。 由于不可修复的错误，Check 语句已终止。|  
   
 ## <a name="explanation"></a>解释  
 DBCC CHECKDB 的第一个阶段用于对关键系统表的数据页进行简单检查。 如果找到任何错误，无法修复它们；因此，DBCC CHECKDB 立即终止。 在页 *P_ID* 上检测到页链接循环。 当页的下一页指针最终返回到该页时，将出现页链接循环。  

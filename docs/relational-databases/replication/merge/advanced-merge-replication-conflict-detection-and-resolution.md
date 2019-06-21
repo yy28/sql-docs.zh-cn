@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130567"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639772"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>高级合并复制 - 冲突的检测和解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "54130567"
 -   指定默认的基于优先级的解决机制，还是指定项目冲突解决程序。 项目冲突解决程序可以是：  
   
     -   以托管代码编写的  业务逻辑处理程序。   
-    -   基于 COM 的自定义冲突解决程序 。    
+    -   基于 COM 的自定义冲突解决程序  。    
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]提供的基于 COM 的冲突解决程序。  
   
      如果使用的是默认解决机制，则冲突的检测和解决行为还取决于所用的订阅类型：客户端或服务器。  
@@ -101,7 +101,7 @@ ms.locfileid: "54130567"
   
      合并复制提供了 API，通过该 API 可以用各种语言（如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）将冲突解决程序编写为 COM 对象。 有关详细信息，请参阅 [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
      [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括许多基于 COM 的冲突解决程序。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "54130567"
   
  冲突查看器显示来自三个系统表的信息：  
   
--   复制会为合并项目中的每个表创建一个冲突表，该冲突表的名称格式为 **MSmerge_conflict_\<PublicationName>_\<ArticleName>**。  
+-   复制会为合并项目中的每个表创建一个冲突表，该冲突表的名称格式为 **MSmerge_conflict_\<PublicationName>_\<ArticleName>** 。  
   
      冲突表与其所依据的表具有相同的结构。 其中某个冲突表中的一行由冲突行的落选版本（冲突行的入选版本位于实际用户表中）组成。  
   

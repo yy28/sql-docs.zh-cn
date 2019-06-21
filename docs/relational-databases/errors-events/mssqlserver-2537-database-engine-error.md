@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 58b54c71171e2d05ac57de0d9851ceb63f88a71e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045323"
 ---
 # <a name="mssqlserver2537"></a>MSSQLSERVER_2537
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47821099"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_RECORD_CHECK_FAILED|  
-|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (type TYPE)，页 P_ID，行 ROW_ID。 记录检查(CHECK_TEXT)失败。 值为 VALUE1 和 VALUE2。|  
+|消息正文|表错误：对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID（类型为 TYPE），页 P_ID，行 ROW_ID。 记录检查(CHECK_TEXT)失败。 值为 VALUE1 和 VALUE2。|  
   
 ## <a name="explanation"></a>解释  
 行 ROW_ID（或该行中的某列）未通过 CHECK_TEXT 所描述的测试或条件。  

@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df2683d7a0c580624dd56aa8d35e183ab7ac6bbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942794"
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ SET LOCK_TIMEOUT timeout_period
 ```  
   
 ## <a name="arguments"></a>参数  
- timeout_period  
+ timeout_period   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回锁定错误前经过的毫秒数。 值为 -1（默认值）时表示没有超时期限（即无限期等待）。  
   
  当锁等待超过超时值时，将返回错误。 值为 0 时表示根本不等待，一遇到锁就返回消息。  
@@ -61,12 +61,12 @@ SET LOCK_TIMEOUT timeout_period
   
  CREATE DATABASE、ALTER DATABASE 和 DROP DATABASE 语句不使用 SET LOCK_TIMEOUT 设置。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A：将锁超时设置为 1800 毫秒  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A:将锁超时设置为 1800 毫秒  
  下面的示例将锁超时期限设置为 `1800` 毫秒。  
   
 ```sql  

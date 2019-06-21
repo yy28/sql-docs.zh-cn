@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 866600d2400dc84e597999eaaf88db08f65f9e89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855625"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045406"
 ---
 # <a name="mssqlserver2518"></a>MSSQLSERVER_2518
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47855625"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_NO_EXPRESSION_EVAL_CLR_DISABLED|  
-|消息正文|对象 ID O_ID（对象 "O_NAME"）: 由于禁用了公共语言运行时 (CLR)，因此无法检查此对象的计算列和用户定义类型。|  
+|消息正文|对象 ID O_ID （对象”O_NAME”）：由于禁用了公共语言运行时(CLR)，无法检查此对象的计算列和用户定义类型。|  
   
 ## <a name="explanation"></a>解释  
 此信息性消息指示，查询处理器无法为 DBCC 提供内部对象，以允许对计算列和公共语言运行时 (CLR) 用户定义类型进行计算。 之所以出现此问题，是因为其中一个列涉及 CLR，但未启用 CLR。 内部对象涉及所有列。 因此，无法计算单个列将阻止创建内部对象。 这意味着在 DBCC 检查索引和基表之间的一致性时，将不检查计算列是否正确或使用它们。  

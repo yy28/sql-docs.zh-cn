@@ -24,11 +24,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 0f398fc02392331a64fd5514e0e8d8e2d7e6deeb
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047451"
 ---
 # <a name="monitor-cpu-usage"></a>监视 CPU 使用率
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53380049"
   
      对应于处理器执行用户进程（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）所用时间的百分比。  
   
--   **System: Processor Queue Length**  
+-   **系统：Processor Queue Length**  
   
      对应于等待处理器时间的线程数。 当一个进程的线程需要的处理器循环数超过可获得的循环数时，就产生了处理器瓶颈。 如果有很多进程在争用处理器时间，可能需要安装一个速度更快的处理器。 如果使用的是多处理器系统，则可以增加一个处理器。  
   

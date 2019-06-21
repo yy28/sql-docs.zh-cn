@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751613"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系统版本控制临时表与内存优化表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "51658071"
 ## <a name="the-internal-memory-optimized-staging-table"></a>内部内存优化临时表  
  内部内存优化临时表是一个由系统创建用来优化 DML 操作的内部对象。  
   
--   生成的表名采用以下格式：**Memory_Optimized_History_Table_<object_id>**，其中 *<object_id>* 是当前临时表的标识符。  
+-   采用以下格式生成表名：生成的表名采用以下格式：Memory_Optimized_History_Table_<object_id>，其中 <object_id> 是当前时态表的标识符   。  
   
 -   该表在当前临时表的架构上另加一个 BIGINT 列。 此附加列保证了移动到内部历史记录缓冲区的行的唯一性。  
   
--   此附加列采用以下名称格式：**Change_ID[_< suffix>]**，其中 *_\<suffix>* 可以在表已有 *Change_ID* 列的情况下选择性地进行添加。  
+-   此附加列采用以下名称格式：Change_ID[_< suffix>]，其中 _\<suffix> 可以在表已有 Change_ID 列的情况下选择性地进行添加    。  
   
 -   系统版本控制的内存优化表的最大行大小因临时表中的附加 BIGINT 列而减去 8 个字节。 新的最大值现在为 8052 字节。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "51658071"
  数据刷新会从内存中内部缓冲区删除早于当前运行的最早事务的所有记录，以便将这些记录移动到基于磁盘的历史记录表。  
   
  你可以通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) 并指定架构和表名来强制进行数据刷新：   
-**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name**。 利用这个由用户执行的命令，将像在系统按内部计划调用数据刷新任务时一样调用相同的数据移动进程。  
+**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name** 。 利用这个由用户执行的命令，将像在系统按内部计划调用数据刷新任务时一样调用相同的数据移动进程。  
   
 ## <a name="see-also"></a>另请参阅  
  [临时表](../../relational-databases/tables/temporal-tables.md)   

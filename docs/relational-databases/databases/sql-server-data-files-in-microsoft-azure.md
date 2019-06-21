@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579499"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62706733"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "57579499"
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>为何在 Microsoft Azure 中使用 SQL Server 数据文件？ 
   
--   **迁移方便快捷优势：** 此功能简化了迁移过程，无需进行任何应用程序更改，可一次性在本地计算机之间以及在本地与云环境中的计算机之间迁移一个数据库。 因此，它能在保持现有本地基础架构不变的情况下支持增量迁移。 此外，在应用程序需要在本地环境多个位置运行时，对集中数据存储的访问权限可以简化应用程序逻辑。 在某些情况下，可能需要在地理上分散的位置快速设置计算机中心，以便从很多不同来源收集数据。 通过此新增强功能，无需将数据从一个位置移动到另一个位置，你可以将很多数据库以 Microsoft Azure Blob 的形式进行存储，然后运行 Transact-SQL 脚本在本地计算机或虚拟机中创建数据库。  
+-   **迁移方便快捷优势：** 此功能在本地计算机之间以及在本地与云环境中的计算机之间一次迁移一个数据库，从而简化了迁移过程，而无需进行任何应用程序更改。 因此，它能在保持现有本地基础架构不变的情况下支持增量迁移。 此外，在应用程序需要在本地环境多个位置运行时，对集中数据存储的访问权限可以简化应用程序逻辑。 在某些情况下，可能需要在地理上分散的位置快速设置计算机中心，以便从很多不同来源收集数据。 通过此新增强功能，无需将数据从一个位置移动到另一个位置，你可以将很多数据库以 Microsoft Azure Blob 的形式进行存储，然后运行 Transact-SQL 脚本在本地计算机或虚拟机中创建数据库。  
   
 -   **成本和无限制存储优势：** 借助此功能，不仅可以在 Microsoft Azure 中使用无限制的站外存储，还能利用本地计算机资源。 当使用 Microsoft Azure 作为存储位置时，可以轻松将精力放在应用程序逻辑上，避免了硬件管理方面的开销。 如果丢失一个本地计算节点，无需进行任何数据移动操作即可设置新节点。  
   
@@ -102,7 +102,7 @@ ON
   
 -   在此功能的最新版本中，不支持在 Azure 存储中存储 **FileStream** 数据。 可以在数据库中存储 **FileStream** 文件，该数据库还包含存储在 Azure 存储中的数据文件，但所有 FileStream 数据文件都必须存储在本地存储中。  由于 FileStream 数据必须驻留在本地存储中，不能使用 Azure 存储在计算机之间移动它，我们建议继续使用[传统技术](../../relational-databases/blob/move-a-filestream-enabled-database.md)在不同的计算机之间移动与 FileStream 关联的数据。  
   
--   目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且包含一个活动数据库文件，ServerB 意外启动并且也包含一个指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，错误代码为 **5120 无法打开物理文件 "%.\*ls"。操作系统错误 %d：“%ls”**。  
+-   目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且包含一个活动数据库文件，ServerB 意外启动并且也包含一个指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，错误代码为 **5120 无法打开物理文件 "%.\*ls"。操作系统错误 %d：“%ls”** 。  
   
 -   只有 .mdf、.ldf 和 .ndf 文件才可以通过使用 Azure 功能中的 SQL Server 数据文件存储在 Azure 存储中。  
   
@@ -114,7 +114,7 @@ ON
   
 -   使用“Azure 中的 SQL Server 数据文件”功能时，SQL Server 使用 **master** 数据库中的排序规则集来执行所有 URL 或文件路径比较。  
   
--   只要不在主数据库中添加新数据库文件，就支持 AlwaysOn 可用性组。 如果某个数据库操作要求在主数据库中创建新文件，请首先在次要节点中禁用 AlwaysOn 可用性组。 然后对主数据库执行该数据库操作，并在主节点中备份该数据库。 接下来，将数据库还原到次要节点，并在次要节点中启用 AlwaysOn 可用性组。 请注意，使用“Azure 中的 SQL Server 数据文件”功能时，不支持 AlwaysOn 故障转移群集实例。  
+-   只要不在主数据库中添加新数据库文件，就支持 AlwaysOn 可用性组  。 如果某个数据库操作要求在主数据库中创建新文件，请首先在次要节点中禁用 AlwaysOn 可用性组。 然后对主数据库执行该数据库操作，并在主节点中备份该数据库。 接下来，将数据库还原到次要节点，并在次要节点中启用 AlwaysOn 可用性组。 请注意，使用“Azure 中的 SQL Server 数据文件”功能时，不支持 AlwaysOn 故障转移群集实例。  
   
 -   在正常操作期间，SQL Server 使用临时租约来保留用于存储的 Blob，并且每 45 到 60 秒续租每个 Blob。 如果服务器崩溃，启动另一个配置为使用相同 Blob 的 SQL Server 实例，则新实例将等待 60 秒，以待现有 Blob 租约过期。 如果要将数据库附加到另一个实例，又无法在 60 秒内等待租约过期，则可显式中断 Blob 租约，以免执行附加操作时发生任何故障。  
   
@@ -128,9 +128,9 @@ ON
  从 SQL Server 2014 起，增加了一个与“Azure 存储中的 SQL Server 数据文件”功能结合使用的新 SQL Server 对象。 这个新的 SQL Server 对象称为 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) 。系统监视器可使用它在用 Windows Azure 存储运行 SQL Server 时监视活动。  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支持  
- 使用 SQL Server Management Studio 时，您可通过多个对话框窗口使用此功能。 例如，可以键入存储容器的 URL 路径，如 https://teststorageaccnt.blob.core.windows.net/testcontainer/：
+ 使用 SQL Server Management Studio 时，您可通过多个对话框窗口使用此功能。 例如，可以键入存储容器的 URL 路径，如 https://teststorageaccnt.blob.core.windows.net/testcontainer/ ：
  
- 将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。 有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+ 将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。     有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 ### <a name="sql-server-management-objects-smo-support"></a>SQL Server 管理对象 (SMO) 支持  
  使用“Azure 中的 SQL Server 数据文件”功能时，支持所有 SQL Server 管理对象 (SMO)。 如果 SMO 对象需要文件路径，请使用 BLOB URL 格式而不是本地文件路径，如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 有关 SQL Server 管理对象的详细信息，请参阅 SQL Server 联机丛书中的 [SQL Server 管理对象 (SMO) 编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
@@ -147,14 +147,14 @@ ON
   
  **身份验证错误**  
   
--   *凭据 '%.\*ls' 被某活动数据库文件使用，因此无法删除它。*   
+-   *凭据 '%.\*ls' 被某活动数据库文件使用，因此无法删除它。*    
     解决方法：尝试删除 Azure 存储中活动数据库文件仍在使用的凭据时，可能会看到此错误。 要删除凭据，必须先删除拥有此数据库文件的关联 Blob。 要删除具有活动租约的 Blob，必须先中断租约。  
   
--   *未在容器上正确创建共享访问签名。*   
+-   *未在容器上正确创建共享访问签名。*    
      解决方法：确保已在容器上正确创建了共享访问签名。 有关第 2 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)。  
   
--   *尚未正确创建 SQL Server 凭据。*   
-    解决方法：确保已对“标识”字段使用了“共享访问签名”，并正确创建了机密。 有关第 3 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-3-database-backup-to-url.md)。  
+-   *尚未正确创建 SQL Server 凭据。*    
+    解决方法：确保已对“标识”字段使用了“共享访问签名”，并正确创建了机密  。 有关第 3 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-3-database-backup-to-url.md)。  
   
  **租赁 Blob 错误：**  
   
@@ -168,8 +168,8 @@ ON
 2.  *运行 Alter 语句时出错*   
     解决方法：确保在数据库联机时执行 Alter Database 语句。 将数据文件复制到 Azure 存储时，始终创建页 Blob 而不是块 Blob。 否则，ALTER Database 将失败。 有关第 7 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
-3.  *错误代码 5120 无法打开物理文件“%.\*ls”。操作系统错误 %d:“%ls”*   
-    解决方法：目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且包含一个活动数据库文件，ServerB 意外启动并且也包含一个指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，错误代码为 *5120 无法打开物理文件 "%.\*ls".操作系统错误 %d：“%ls”*。  
+3.  *错误代码 5120 无法打开物理文件“%.\*ls”。操作系统错误 %d:“%ls”*    
+    解决方法：目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且包含一个活动数据库文件，ServerB 意外启动并且也包含一个指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，错误代码为 *5120 无法打开物理文件 "%.\*ls".操作系统错误 %d：“%ls”* 。  
   
      要解决此问题，首先需要确定是否需要 ServerA 访问 Azure 存储中的数据库文件。 如果不需要，只需删除 ServerA 与 Azure 存储中数据库文件之间的任何连接。 为此，请按照下列步骤进行操作：  
   

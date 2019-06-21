@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bfaeb323e940ca2d289ddae58aaf679bed9fffa
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140802"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -127,6 +127,8 @@ WITH ( LANGUAGE = 'R' )
 指定特定平台的包的内容。 每个平台仅支持一个文件项目。
 
 可以是以本地路径或网络路径的形式指定的文件。
+
+尝试访问 <client_assembly_specifier> 中指定的程序集时，SQL Server 会模拟当前 Windows 登录的安全上下文  。 如果 <client_assembly_specifier> 指定了网络位置（UNC 路径），则由于委托限制，当前登录名的模拟将不应用于网络位置  。 在这种情况下，将使用 SQL Server 服务帐户的安全上下文进行访问。 有关详细信息，请参阅[凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
 
 还可以为文件指定一个 OS 平台。 针对特定语言或运行时，每个 OS 平台只允许一个文件项目或内容。
 

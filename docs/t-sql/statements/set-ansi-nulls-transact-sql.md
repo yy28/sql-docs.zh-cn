@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aef2847aa8e6aed4504359bcc3bd5e0c21c3d8c7
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638675"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -58,9 +58,9 @@ SET ANSI_NULLS ON
 ```
 
 ## <a name="remarks"></a>Remarks  
-当 ANSI_NULLS 为 ON 时，即使 column_name 中包含空值，使用 WHERE column_name = NULL 的 SELECT 语句仍返回零行。 即使 column_name 中包含非空值，使用 WHERE column_name <> NULL 的 SELECT 语句仍返回零行。  
+当 ANSI_NULLS 为 ON 时，即使 column_name 中包含空值，使用 WHERE column_name = NULL 的 SELECT 语句仍返回零行    。 即使 column_name 中包含非空值，使用 WHERE column_name <> NULL 的 SELECT 语句仍返回零行    。  
   
-当 ANSI_NULLS 为 OFF 时，等于 (=) 和不等于 (<>) 比较运算符不遵守 ISO 标准。 使用 WHERE column_name = NULL 的 SELECT 语句返回 column_name 中包含空值的行。 使用 WHERE column_name <> NULL 的 SELECT 语句返回列中包含非空值的行。 此外，使用 WHERE column_name <> XYZ_value 的 SELECT 语句返回所有不为 XYZ_value 也不为 NULL 的行。  
+当 ANSI_NULLS 为 OFF 时，等于 (=) 和不等于 (<>) 比较运算符不遵守 ISO 标准。 使用 WHERE column_name = NULL 的 SELECT 语句返回 column_name 中包含空值的行    。 使用 WHERE column_name <> NULL 的 SELECT 语句返回列中包含非空值的行   。 此外，使用 WHERE column_name <> XYZ_value 的 SELECT 语句返回所有不为 XYZ_value 也不为 NULL 的行    。  
   
 当 ANSI_NULLS 为 ON 时，所有对 null 值的比较均取值为 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，如果数据值为 NULL，则所有数据对空值的比较将取值为 TRUE。 如果未指定 SET ANSI_NULLS，则应用当前数据库的 ANSI_NULLS 选项设置。 有关 ANSI_NULLS 数据库选项的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
 
@@ -104,7 +104,7 @@ IF ( (32 & @@OPTIONS) = 32 ) SET @ANSI_NULLS = 'ON';
 SELECT @ANSI_NULLS AS ANSI_NULLS;   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63008556"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure 的 SQL Server 托管备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52397050"
 |**Microsoft Azure 帐户**|可以在浏览 [购买选项](https://azure.microsoft.com/pricing/free-trial/) 之前，使用 [免费试用版](https://azure.microsoft.com/pricing/purchase-options/)开始使用 Azure。|  
 |**Azure 存储帐户**|备份存储在与 Azure 存储帐户相关的 Azure Blob 存储中。 有关创建存储帐户的分步说明，请参阅 [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)（关于 Azure 存储帐户）。|  
 |**Blob 容器**|BLOB 组织在容器中。 你可以为备份文件指定目标容器。 可以在 [Azure 管理门户](https://manage.windowsazure.com/)中创建容器，或者可以使用 **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 命令。|  
-|**共享访问签名 (SAS)**|对目标容器的访问由共享访问签名 (SAS) 控制。 有关 SAS 的概述，请参阅 [Shared Access Signatures, Part 1: Understanding the SAS Model（共享访问签名，第 1 部分：了解 SAS 模型）](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 可以使用 **New-AzureStorageContainerSASToken** PowerShell 命令在代码中创建一个 SAS 令牌。 有关简化此过程的 PowerShell 脚本，请参阅 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)（使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程）。 SAS 令牌可以存储在 **SQL 凭据** 中，供 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]使用。|  
+|**共享访问签名 (SAS)**|对目标容器的访问由共享访问签名 (SAS) 控制。 有关 SAS 的概述，请参阅 [共享访问签名（第 1 部分）：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 可以使用 **New-AzureStorageContainerSASToken** PowerShell 命令在代码中创建一个 SAS 令牌。 有关简化此过程的 PowerShell 脚本，请参阅 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)（使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程）。 SAS 令牌可以存储在 **SQL 凭据** 中，供 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]使用。|  
 |**SQL Server 代理**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 必须运行 SQL Server 代理以进行工作。 考虑将启动选项设置为自动。|  
   
 ## <a name="components"></a>组件  
@@ -116,7 +116,7 @@ ms.locfileid: "52397050"
 ##  <a name="support_limits"></a> 可支持性  
  以下内容支持特定于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的限制和注意事项：  
   
--   支持备份“主”、“模型”和“msdb”系统数据库。 不支持备份“tempdb”。 
+-   支持备份“主”  、“模型”  和“msdb”  系统数据库。 不支持备份“tempdb”  。 
   
 -   对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，所有恢复模式（完整、大容量日志和简单）均受支持。  
   

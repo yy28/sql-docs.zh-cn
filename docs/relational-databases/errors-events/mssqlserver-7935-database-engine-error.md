@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04c7250025a5773adcb785d5d3ff27bedfb25f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610445"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797062"
 ---
 # <a name="mssqlserver7935"></a>MSSQLSERVER_7935
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47610445"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_MISSING_COLUMN|  
-|消息正文|表错误: 存在对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的列的 Filestream 目录 ID F_ID，但该分区中不存在该列。|  
+|消息正文|表错误：存在对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的列的 Filestream 目录 ID F_ID，但该分区中不存在该列。|  
   
 ## <a name="explanation"></a>解释  
 执行 DBCC CHECKDB 期间，发现指定对象的列的 FILESTREAM 目录；但是，未在该分区的对应元数据中找到该列。  

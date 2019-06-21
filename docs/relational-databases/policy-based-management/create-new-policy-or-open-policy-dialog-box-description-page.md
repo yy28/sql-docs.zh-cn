@@ -12,11 +12,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6315784a4092f73f9243c49902eb40ea905edcf4
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63009082"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>“创建新策略”或“打开策略”对话框，“说明”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,13 +29,13 @@ ms.locfileid: "51512612"
  **Description**  
  键入策略说明。  
   
- **更多帮助超链接: 要显示的文本**  
- 在执行策略时，将在“结果详细视图”页中显示更多帮助超链接。 键入要显示为超链接的文本。  
+ 更多帮助超链接：要显示的文本  ：  
+ 在执行策略时，将在“结果详细视图”  页中显示更多帮助超链接。 键入要显示为超链接的文本。  
   
- **更多帮助超链接: 地址**  
- 键入在用户单击“结果详细视图”页中显示的超链接文本时打开的网页的超链接。  
+ 更多帮助超链接：地址   
+ 键入在用户单击“结果详细视图”  页中显示的超链接文本时打开的网页的超链接。  
   
- **更多帮助超链接: 测试链接**  
+ 更多帮助超链接：测试链接   
  单击可打开超链接以测试链接的有效性。  
   
  **创建日期**  

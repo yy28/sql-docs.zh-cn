@@ -30,15 +30,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 024ac3c7d8940a1bf6123e2af201444079fd1efc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025443"
 ---
 # <a name="recovery-models-sql-server"></a>恢复模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原操作发生在数据库的恢复模式的上下文中。 恢复模式旨在控制事务日志维护。 “恢复模式”是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原操作发生在数据库的恢复模式的上下文中。 恢复模式旨在控制事务日志维护。 “恢复模式”  是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。  
   
  **本主题内容：**  
   

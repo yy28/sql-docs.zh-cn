@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 43dcc80932c1c6b41e3f775c5b27903dd015e85e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776715"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62858778"
 ---
 # <a name="mssqlserver17067"></a>MSSQLSERVER_17067
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47776715"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|SQLASSERT_MESG|  
-|消息正文|SQL Server 断言: 文件: \<%s>，行 = %d %s。 此错误可能与时间有关。 如果重新运行该语句后错误仍然存在，请使用 DBCC CHECKDB 来检查数据库的结构是否完整，或重新启动服务器以确保内存中的数据结构未破坏。|  
+|消息正文|SQL Server 断言:文件：\<%s>，行 = %d %s。 此错误可能与时间有关。 如果重新运行该语句后错误仍然存在，请使用 DBCC CHECKDB 来检查数据库的结构是否完整，或重新启动服务器以确保内存中的数据结构未破坏。|  
   
 ## <a name="explanation"></a>解释  
 与时间有关的暂时性错误或内存中或磁盘上的数据损坏均可导致此错误。  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1a3642d349fd9d6df39651e38b8b1789dd935c49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840375"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62761217"
 ---
 # <a name="select-backup-destination"></a>选择备份目标
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47840375"
 |||  
 |-|-|  
 |**磁带机**|选择此选项，以从与运行服务器实例的计算机建立了物理连接的磁带机列表中选择磁带机作为备份目标。<br /><br /> 注意：远程计算机中的磁带备份设备不是有效的备份目标。|  
-|**备份设备**|选择此选项以选择现有的逻辑备份设备。 这些逻辑备份设备对应于与运行服务器实例的计算机建立了物理连接的磁带机。<br /><br /> 注意：有关如何创建磁带备份设备的详细信息，请参阅[为磁带驱动器定义逻辑备份设备 (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)。|  
+|**备份设备**|选择此选项以选择现有的逻辑备份设备。 这些逻辑备份设备对应于与运行服务器实例的计算机建立了物理连接的磁带机。<br /><br /> 注意：有关如何创建磁带备份设备的详细信息，请参阅[为磁带驱动器定义逻辑备份设备 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
  [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

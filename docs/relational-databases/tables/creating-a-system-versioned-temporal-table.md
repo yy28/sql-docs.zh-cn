@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515983"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52409614"
 -   使用事先创建的用户定义的历史记录表创建临时表：创建最满足你的需求的历史记录表，然后在临时表创建过程中引用该表。  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>使用匿名历史记录表创建临时表  
- 使用“匿名”历史记录表创建临时表是一个可快速创建对象的方便选项，特别是在原型环境和测试环境中。 它也是创建时态表的最简单方法，因为它不需要在 SYSTEM_VERSIONING 子句中指定任何参数。 下面的示例将在不定义历史记录表名称的情况下，创建启用了系统版本控制的新表。  
+ 使用“匿名”历史记录表创建临时表是一个可快速创建对象的方便选项，特别是在原型环境和测试环境中。 它也是创建时态表的最简单方法，因为它不需要在 SYSTEM_VERSIONING 子句中指定任何参数  。 下面的示例将在不定义历史记录表名称的情况下，创建启用了系统版本控制的新表。  
   
 ```  
 CREATE TABLE Department   
@@ -58,11 +58,11 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   将在当前表或临时表所在的架构中自动创建匿名历史记录表。  
   
--   匿名历史记录表名称采用以下格式：*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]*（suffix 为后缀）。 后缀是可选的，仅当表名的第一部分不唯一时才会添加它。  
+-   匿名历史记录表名采用以下格式：MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]  . 后缀是可选的，仅当表名的第一部分不唯一时才会添加它。  
   
 -   历史记录表将创建为行存储表。 如果可能，将应用页压缩，否则历史记录表将不会进行压缩。 例如，某些表配置（如稀疏列）不允许压缩。  
   
--   将为历史记录表（名称自动生成，格式为 *IX_<history_table_name>*）创建一个默认聚集索引。 聚集索引包含 **PERIOD** 列（结束、开始）。  
+-   将为历史记录表（名称自动生成，格式为 *IX_<history_table_name>* ）创建一个默认聚集索引。 聚集索引包含 **PERIOD** 列（结束、开始）。  
   
 -   若要将当前表创建为内存优化表，请参阅[系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)。  
   
@@ -182,7 +182,7 @@ ALTER TABLE InsurancePolicy
   
 -   添加期间将对当前表执行数据一致性检查，以确保期间列的默认值有效。  
   
--   如果在启用 **SYSTEM_VERSIONING**时指定了现有历史记录表，则将对当前表和历史记录表同时执行临时数据一致性检查。 如果你将 DATA_CONISTENCY_CHECK = OFF 指定为一个附加参数，则可跳过此项检查。  
+-   如果在启用 **SYSTEM_VERSIONING**时指定了现有历史记录表，则将对当前表和历史记录表同时执行临时数据一致性检查。 如果你将 DATA_CONISTENCY_CHECK = OFF 指定为一个附加参数，则可跳过此项检查  。  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>将现有表迁移到内置支持  
  此示例演示如何基于触发器将现有解决方案迁移到内置临时支持。 对于此示例，我们假定当前自定义解决方案将当前数据和历史数据拆分为两个单独的用户表（**ProjectTaskCurrent** 和 **ProjectTaskHistory**）。 如果现有解决方案使用单个表来存储实际行和历史行，则应在执行此示例所示的此迁移步骤前将数据拆分为两个表：  

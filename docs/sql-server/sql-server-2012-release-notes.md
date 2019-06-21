@@ -14,11 +14,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658311"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63002365"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "58658311"
 **解决方法：** 你可以参考系统配置检查报告，了解有关这些安装规则的详细信息。 系统配置检查将会生成一个报告，该报告包含对每个执行规则的简短说明以及执行状态。 该系统配置检查报告位于 %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 为分布式重播控制器服务添加本地用户帐户可能会意外终止安装程序  
-**问题：** 在 SQL Server 安装程序的“Distributed Replay 控制器”页中，在尝试为 Distributed Replay 控制器服务添加本地用户帐户时，安装程序将意外终止并且显示“SQL Server 安装失败”的错误消息。  
+**问题：** 在 SQL Server 安装程序的“Distributed Replay 控制器”页中，在尝试为 Distributed Replay 控制器服务添加本地用户帐户时，安装程序将意外终止并且显示“SQL Server 安装失败”的错误消息  。  
   
 **解决方法：** 在 SQL 安装过程中，请勿通过“添加当前用户”或“添加...”来添加本地用户帐户。 在安装过程后，通过执行下面的步骤来手动添加本地用户帐户：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "58658311"
   
 3.  在“组件服务”窗口中，导航到“**控制台根节点**” -> “**组件服务**” -> “**计算机**” -> “**我的电脑**” -> “**Dconfig**” ->“**DReplayController**”。  
   
-4.  右键单击“DReplayController” ，然后单击“属性” 。  
+4.  右键单击“DReplayController”  ，然后单击“属性”  。  
   
 5.  在 **“DReplayController 属性”** 窗口中的 **“安全性”** 选项卡上，单击 **“启动和激活权限”** 部分的 **“编辑”** 。  
   
@@ -73,7 +73,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
 **解决方法：** 在未能安装 SQL Server 引擎或 Analysis Services 时就会出现此情况。 若要解决该问题，请参考 SQL Server 安装程序日志来解决 SQL Server 引擎和 Analysis Services 失败的问题。 有关详细信息，请参阅查看和阅读 SQL Server 安装程序日志文件。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 在重命名网络名称后，SQL Server 2008、2008 R2 Analysis Services 故障转移群集升级到 SQL Server 2012 可能失败  
-**问题：** 在你使用 Windows 群集管理器工具更改 Microsoft SQL Server 2008 或 2008 R2 Analysis Services 故障转移群集实例的网络名称后，升级操作可能会失败。  
+**问题：** 在使用 Windows 群集管理员工具更改 Microsoft SQL Server 2008 或 2008 R2 Analysis Services 故障转移群集实例的网络名称后，升级操作可能会失败。  
   
 **解决方法：** 若要解决此问题，请按照[此知识库文章](https://support.microsoft.com/kb/955784)的解决方法部分中的说明更新 ClusterName 注册表项。  
   
@@ -152,7 +152,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         2.  若要启用“ **Microsoft .NET Framework 3.5.1**”，请选中该功能旁边的复选框。 若要关闭 Windows 功能，请取消选中该复选框。  
   
-        3.  单击“确定” 。  
+        3.  单击“确定”  。  
   
         **使用部署映像服务和管理 (DISM.exe) 启用 .NET Framework 3.5 SP1：**  
   
@@ -164,7 +164,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
             sm /online /Get-Features  
             ```  
   
-        2.  可选:在命令提示符下，键入以下命令以便列出与你感兴趣的特定功能有关的信息。  
+        2.  可选：在命令提示符下，键入以下命令以便列出与你感兴趣的特定功能有关的信息。  
   
             ```  
             Dism /online /Get-FeatureInfo /FeatureName:NetFx3  
@@ -203,7 +203,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 **解决方法：** 可以从[此 Microsoft 下载中心页](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)下载适当版本的 Sync Framework。  
   
 ### <a name="110-if-visual-studio-2010-service-pack-1-is-uninstalled-the-sql-server-2012-instance-must-be-repaired-to-restore-certain-components"></a>1.10 如果卸载了 Visual Studio 2010 Service Pack 1，则必须修复 SQL Server 2012 实例以还原特定组件  
-**问题：**[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 安装依赖于 Visual Studio 2010 Service Pack 1 的某些组件。 如果卸载 Service Pack 1，某些共享组件将降级为其初始版本，并且另有少数组件将从计算机中完全删除。  
+**问题：** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 安装依赖于 Visual Studio 2010 Service Pack 1 的某些组件。 如果卸载 Service Pack 1，某些共享组件将降级为其初始版本，并且另有少数组件将从计算机中完全删除。  
   
 **解决方法：** 从最初的源介质或网络安装位置修复 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 实例。  
   
@@ -217,16 +217,16 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 5.  在“ **选择实例** ”页上选择要修复的实例，然后单击“ **下一步** ”继续操作。  
   
-6.  将运行修复规则以验证修复操作。 若要继续，请单击 **“下一步”**。  
+6.  将运行修复规则以验证修复操作。 若要继续，请单击 **“下一步”** 。  
   
-7.  “ **准备修复** ”页指示修复操作已准备就绪，可以继续。 若要继续，请单击 **“修复”**。  
+7.  “ **准备修复** ”页指示修复操作已准备就绪，可以继续。 若要继续，请单击 **“修复”** 。  
   
 8.  “ **修复进度** ”页显示修复操作的状态。 “ **完成** ”页指示修复操作已完成。  
   
 有关如何修复 SQL Server 实例的详细信息，请参阅 [修复失败的 SQL Server 2012 安装](../database-engine/install-windows/repair-a-failed-sql-server-installation.md)(#修复失败的-sql-server-2012-安装)。  
   
 ### <a name="111-an-instance-of-sql-server-2012-might-fail-after-an-os-upgrade"></a>1.11 SQL Server 2012 实例在操作系统升级后可能失败  
-**问题：** 如果你将操作系统从 Windows Vista 升级到 Windows 7 SP1，SQL Server 2012 实例可能失败，且具有以下错误。  
+**问题：** 如果将操作系统从 Windows Vista 升级到 Windows 7 SP1，SQL Server 2012 实例可能失败，且具有以下错误。  
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
@@ -263,7 +263,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 -   断开与 SQL 编辑器的连接，然后将 MDX / DMX 编辑器连接到 AS 服务器。  
   
 ### <a name="22-cannot-create-or-open-tabular-projects-when-builtinadministrators-group-name-cannot-be-resolved"></a>2.2 在 BUILTIN\Administrators 组名称无法解析时，无法创建或打开表格项目  
-**问题：** 您必须首先是工作区数据库服务器的管理员，然后才能创建或打开表格项目。 可以通过添加用户名或组名，将某一用户添加到服务器管理员组。 如果您是 BUILTIN\Administrator 组的成员，则无法创建或编辑 BIM 文件，除非该工作区数据库服务器联接到最初对其进行设置的域。 如果您打开或创建该 BIM 文件，则操作将失败并且显示以下错误消息：  
+**问题：** 你必须首先是工作区数据库服务器的管理员，然后才能创建或打开表格项目。 可以通过添加用户名或组名，将某一用户添加到服务器管理员组。 如果您是 BUILTIN\Administrator 组的成员，则无法创建或编辑 BIM 文件，除非该工作区数据库服务器联接到最初对其进行设置的域。 如果您打开或创建该 BIM 文件，则操作将失败并且显示以下错误消息：  
   
 `"The BIM file cannot be opened. The server connected to is not valid. Reason: You are not an administrator of server [server name]."`  
   
@@ -282,13 +282,13 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 在您使用表格模型时，存在与 AS 处理任务有关的问题：  
   
-**问题：** 您将看到多维数据集、度量值组和维度，而非数据库、表和分区。 这是对该任务的一个限制。  
+**问题：** 你将看到多维数据集、度量值组和维度，而非数据库、表和分区。 这是对该任务的一个限制。  
   
 **解决方法：** 你仍可以使用多维数据集/度量值组/维度结构处理你的表格模型。  
   
 **问题：** 在表格模式下运行的 AS 支持的某些处理选项在 AS 处理任务（例如处理碎片整理）中未公开。  
   
-**解决方法：** 改用 Analysis Services 执行 DDL 任务执行包含 ProcessDefrag 命令的 XMLA 脚本。  
+**解决方法：** 请改用 Analysis Services 执行 DDL 任务执行包含 ProcessDefrag 命令的 XMLA 脚本。  
   
 **问题：** 该工具中的某些配置选项不适用。 例如，在处理分区时不应使用“处理相关对象”，并且“并行处理”配置选项包含指示在标准 SKU 上不支持并行处理的无效错误消息。  
   
@@ -326,9 +326,9 @@ A semantic language statistics database is not registered. Full-text indexes usi
 **解决方法：** 安装 SQL Server 2012 累积更新 1 可解决此问题。 有关说明，请参阅[https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817)。  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 若要重新安装数据质量服务器，请在卸载数据质量服务器后删除 DQS 对象  
-**问题：** 如果你卸载数据质量服务器，DQS 对象（DQS 数据库、DQS 登录名和 DQS 存储过程）不会从 SQL Server 实例中删除。  
+**问题：** 如果卸载数据质量服务器，DQS 对象（DQS 数据库、DQS 登录名和 DQS 存储过程）不会从 SQL Server 实例中删除。  
   
-**解决方法：** 要重新安装同一台计算机上和相同 SQL Server 实例中的数据质量服务器，你必须从 SQL Server 实例中手动删除 DQS 对象。 此外，您还必须首先从计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 文件夹中删除 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA）文件，然后才能重新安装数据质量服务器。 否则，数据质量服务器安装将失败。 如果您想要保留数据，例如知识库或数据质量项目，则应移动数据库文件，而非删除它们。 有关在卸载进程完成后删除 DQS 对象的详细信息，请参阅 [删除数据质量服务器对象](https://msdn.microsoft.com/library/hh231667.aspx)(#删除数据质量服务器对象)。  
+**解决方法：** 要在同一台计算机上和相同 SQL Server 实例中重新安装数据质量服务器，必须从 SQL Server 实例中手动删除 DQS 对象。 此外，您还必须首先从计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 文件夹中删除 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA）文件，然后才能重新安装数据质量服务器。 否则，数据质量服务器安装将失败。 如果您想要保留数据，例如知识库或数据质量项目，则应移动数据库文件，而非删除它们。 有关在卸载进程完成后删除 DQS 对象的详细信息，请参阅 [删除数据质量服务器对象](https://msdn.microsoft.com/library/hh231667.aspx)(#删除数据质量服务器对象)。  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 知识发现或交互式清理活动已终止的指示被延迟  
 **问题：** 如果管理员在“活动监视”屏幕中终止某一活动，则在正在运行知识发现、域管理或交互式清理活动的交互用户执行下一操作前，将不会收到指出其活动已终止的任何指示。  
@@ -336,30 +336,30 @@ A semantic language statistics database is not registered. Full-text indexes usi
 **解决方法：** None  
   
 ### <a name="44-a-cancel-operation-discards-work-from-multiple-activities"></a>4.4 取消操作放弃来自多个活动的工作  
-**问题：** 如果为正在运行的知识发现或域管理活动单击“取消”，并且当此活动正在运行时其他活动之前已完成了且没有任何发布操作正在执行，则自上次发布以来执行的所有活动中的工作都将被放弃，而不仅是放弃当前工作。  
+**问题：** 如果为正在运行的知识发现或域管理活动单击“取消”，并且当此活动正在运行时其他活动之前已完成了且没有任何发布操作正在执行，则自上次发布以来执行的所有活动中的工作都将被放弃，而不仅是放弃当前工作  。  
   
-**解决方法：** 为避免此问题，请在开始新活动之前，发布你需要保留在知识库中的工作。  
+**解决方法：** 为避免此问题，请在开始新活动之前，发布需要保留在知识库中的工作。  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 对于大字号，控件不能正确缩放  
-**问题：** 如果将文本大小更改为“更大 - 150%”（在 Windows Server 2008 或 Windows 7 中），或者将自定义 DPI 设置更改为 200%（在 Windows 7 中），“新建知识库”页上的“取消”和“创建”按钮将无法访问。  
+**问题：** 如果将文本大小更改为“更大 - 150%”（在 Windows Server 2008 或 Windows 7 中），或者将自定义 DPI 设置更改为 200%（在 Windows 7 中），“新建知识库”页上的“取消”和“创建”按钮将无法访问    。  
   
 **解决方法：** 若要解决此问题，请设置较小的字号。  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 不支持 800x600 的屏幕分辨率  
-**问题：** 如果屏幕分辨率设置为 800x600，则数据质量客户端应用程序不正确显示。  
+**问题：** 如果屏幕分辨率设置为 800x600，则数据质量客户端应用程序不会正确显示。  
   
 **解决方法：** 若要解决此问题，请将屏幕分辨率设为更高值。  
   
 ### <a name="47-map-bigint-column-in-the-source-data-to-a-decimal-domain-to-prevent-data-loss"></a>4.7 将源数据中的 Bigint 列映射为小数域以免数据丢失  
-**问题：** 如果源数据中的某一列为 bigint 数据类型，则必须在 DQS 中将此列映射为 decimal 数据类型的域，而非 integer 数据类型。 其原因在于， **decimal** 数据类型与 **int** 数据类型相比可表示更大的值范围，因此可以存放更大的值。  
+**问题：** 如果源数据中的某一列为 bigint 数据类型，则必须在 DQS 中将此列映射为 decimal 数据类型的域，而非 integer 数据类型    。 其原因在于， **decimal** 数据类型与 **int** 数据类型相比可表示更大的值范围，因此可以存放更大的值。  
   
 ### <a name="48-nvarcharmax-and-varcharmax-data-types-are-not-supported-in-the-dqs-cleansing-component-in-integration-services"></a>4.8 在 Integration Services 的 DQS 清理组件中不支持 NVARCHAR(MAX) 和 VARCHAR(MAX) 数据类型  
-**问题：** Integration Services 的 DQS 清理组件中不支持 nvarchar(max) 和 varchar(max) 数据类型的数据列。 同样地，这些数据列在 DQS 清理转换编辑器的“映射”选项卡中无法使用，因此无法清理。  
+**问题：** Integration Services 的 DQS 清理组件中不支持 nvarchar(max) 和 varchar(max) 数据类型的数据列   。 同样地，这些数据列在 DQS 清理转换编辑器的“映射”选项卡中无法使用，因此无法清理。  
   
-**解决方法：** 在使用 DQS 清理组件处理这些数据列前，必须使用数据转换将其转换为 DT_STR 或 DT_WSTR 数据类型。  
+**解决方法：** 在使用 DQS 清理组件处理这些数据列前，必须使用数据转换将其转换为 DT_STR 或 DT_WSTR 数据类型   。  
   
 ### <a name="49-the-item-to-run-dqsinstallerexe-on-the-start-menu-is-overwritten-on-new-sql-server-instance-installation"></a>4.9 在新的 SQL Server 实例安装上，“开始”菜单上运行 DQSInstaller.exe 的项被改写  
-**问题：** 如果选择在 SQL Server 实例上安装 Data Quality Services，完成 SQL Server 安装后，则会在名为“Data Quality 服务器安装程序”的“Data Quality Services”程序组下的“开始”菜单上创建一个项。 但是，如果在同一计算机上安装多个 SQL Server 实例，在“ **开始** ”菜单上仍有单个“ **数据质量服务器安装程序** ”项。 单击此项将在最近安装的 SQL Server 实例中运行 DQSInstaller.exe 文件。  
+**问题：** 如果选择在 SQL Server 实例上安装 Data Quality Services，完成 SQL Server 安装后，则会在名为“Data Quality 服务器安装程序”的“Data Quality Services”程序组下的“开始”菜单上创建一个项    。 但是，如果在同一计算机上安装多个 SQL Server 实例，在“ **开始** ”菜单上仍有单个“ **数据质量服务器安装程序** ”项。 单击此项将在最近安装的 SQL Server 实例中运行 DQSInstaller.exe 文件。  
   
 ### <a name="410-activity-monitoring-displays-incorrect-status-for-failed-integration-services-cleansing-activities"></a>4.10 对于失败的 Integration Services 清理活动，“活动监视”显示不正确的状态  
 “活动监视”屏幕甚至对于“ **当前状态** ”列中失败的 Integration Services 清理活动也错误地显示“ **成功** ”。  
@@ -371,21 +371,21 @@ A semantic language statistics database is not registered. Full-text indexes usi
 在清理数据质量项目中，如果映射了某些源数据（带有包含 date 数据类型的子域的复合域）中的字段，则清理结果中的子域输出的日期格式不正确并且导出到数据库的操作失败。  
   
 ### <a name="413-error-when-mapping-to-an-excel-sheet-that-contains-a--semicolon-in-its-name"></a>4.13 映射到名称中包含 ;（分号）的 Excel 工作表时的错误  
-**问题：** 在 Data Quality Client 中的任何 DQS 活动的“映射”页上，如果映射到名称中包含 ;（分号）的源 excel 工作表，当你在“映射”页上单击“下一步”时，系统将显示未经处理的异常消息。  
+**问题：** 在 Data Quality Client 中的任何 DQS 活动的“映射”页上，如果映射到名称中包含 ;（分号）的源 excel 工作表，当你在“映射”页上单击“下一步”时，系统将显示未经处理的异常消息    。  
   
 **解决方法：** 从包含要映射的源数据的 Excel 文件的工作表名称中删除 ;（分号），然后重试。  
   
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 在清理和匹配期间 Excel 中未映射的源字段中 Date 或 DateTime 值的问题  
-**问题**：如果源数据为 Excel 且没有映射包含 Date 或 DateTime 数据类型的值的源字段，在清理和匹配活动期间将发生以下事件：  
+**问题**：如果源数据为 Excel 且没有映射包含 Date 或 DateTime 数据类型的值的源字段，在清理和匹配活动期间将发生以下事件   ：  
   
 -   以 yyyymmdd 格式显示和导出未映射的 **Date** 值。  
   
 -   对于未映射的 **DateTime** 值将丢失时间值，且以 yyyymmdd 格式显示和导出它们。  
   
-**解决方法：** 你可以在清理活动中的“管理和查看结果”页以及匹配活动中的“匹配”页右下窗格中查看未映射的字段值。  
+**解决方法：** 你可以在清理活动中的“管理和查看结果”页以及匹配活动中的“匹配”页右下窗格中查看未映射的字段值   。  
   
 ### <a name="415-cannot-import-domain-values-from-an-excel-file-xls-containing-more-than-255-columns-of-data"></a>4.15 无法从包含 255 列以上的数据的 Excel 文件 (.xls) 导入域值  
-**问题：** 如果将值导入某个域（该域来自包含 255 列以上的数据的 Excel 97-2003 文件 (.xls)），将显示异常消息并且导入失败。  
+**问题：** 如果将值导入某个域（该域来自包含 255 列以上数据的 Excel 97-2003 文件 (.xls)），将显示异常消息并且导入失败。  
   
 **解决方法：** 若要解决此问题，可以执行以下操作之一：  
   
@@ -397,13 +397,13 @@ A semantic language statistics database is not registered. Full-text indexes usi
 活动监视功能仅供具有 dqs_administrator 角色的用户使用。 如果您的用户帐户具有 dqs_kb_editor 或 dqs_kb_operator 角色，则活动监视功能将不可用于数据质量客户端应用程序。  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 在为域管理打开“最近的知识库”列表中的数据库时出错  
-问题：如果你在 Data Quality Client 主屏幕中为域管理活动打开“最近的知识库”列表中的某一知识库，则可能会出现以下错误：  
+问题：如果你在 Data Quality Client 主屏幕中为域管理活动打开“最近的知识库”列表中的某一知识库，则可能会出现以下错误  ：  
   
 `"A configuration with name 'RecentList:KB:<domain>\<username>' already exists in the database."`  
   
 此错误是由于 DQS 在 SQL Server 数据库和 C# 中采用不同的方法对字符串进行比较导致的。 SQL Server 数据库中的字符串比较不区分大小写，而在 C# 中则区分大小写。  
   
-我们将用一个示例加以说明。 以用户 Domain\user1 为例。 该用户使用“user1”帐户登录到数据质量客户端计算机，并且对某个知识库进行处理。 DQS 将每个用户的最近知识库作为 DQS_MAIN 数据库的 A_CONFIGURATION 表的一条记录存储。 在此例中，将用以下名称存储该记录：RecentList:KB:Domain\user1。 之后，该用户以“User1”的身份登录到数据质量客户端计算机（请注意，U 为大写），并且尝试为域管理活动在“最近的知识库”列表中打开该知识库。 DQS 中的基础代码将比较这两个字符串 RecentList:KB:DOMAIN\user1 和 DOMAIN\User1，并且在 C# 中考虑区分大小写的字符串比较，这两个字符串将不匹配，因此，DQS 将尝试为用户 (User1) 在 DQS_MAIN 数据库的 A_CONFIGURATION 表中插入一个新记录。 但是，由于在 SQL 数据库中采用不区分大小写的字符串比较，所以，该字符串在 DQS_MAIN 数据库的 A_CONFIGURATION 表中已存在，并且插入操作将失败。  
+我们将用一个示例加以说明。 以用户 Domain\user1 为例。 该用户使用“user1”帐户登录到数据质量客户端计算机，并且对某个知识库进行处理。 DQS 将每个用户的最近知识库作为 DQS_MAIN 数据库的 A_CONFIGURATION 表的一条记录存储。 在此例中，将用以下名称存储该记录：RecentList:KB:Domain\user1. 之后，该用户以“User1”的身份登录到数据质量客户端计算机（请注意，U 为大写），并且尝试为域管理活动在“最近的知识库”列表中打开该知识库  。 DQS 中的基础代码将比较这两个字符串 RecentList:KB:DOMAIN\user1 和 DOMAIN\User1，并且在 C# 中考虑区分大小写的字符串比较，这两个字符串将不匹配，因此，DQS 将尝试为用户 (User1) 在 DQS_MAIN 数据库的 A_CONFIGURATION 表中插入一个新记录。 但是，由于在 SQL 数据库中采用不区分大小写的字符串比较，所以，该字符串在 DQS_MAIN 数据库的 A_CONFIGURATION 表中已存在，并且插入操作将失败。  
   
 **解决方法：** 若要解决此问题，可以执行以下操作之一：  
   
@@ -435,12 +435,12 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ## <a name="DE"></a>5.0 数据库引擎  
   
 ### <a name="51-use-of-distributed-replay-controller-and-distributed-replay-client-features"></a>5.1 使用分布式重播控制器和分布式重播客户端功能  
-**问题：** 在 Windows Server 2008、Windows Server 2008 R2 和 Windows Server 7 的 Server Core SKU 中提供分布式重播控制器和分布式重播客户端功能，尽管在 Server Core SKU 中不支持这两个功能。  
+**问题：** Windows Server 2008、Windows Server 2008 R2 和 Windows Server 7 的 Server Core SKU 中提供分布式重播控制器和分布式重播客户端功能，尽管 Server Core SKU 中不支持这两个功能。  
   
-**解决方法：** 不要在 Windows Server 2008、Windows Server 2008 R2 和 Windows Server 7 的 Server Core SKU 中安装或使用这两个功能。  
+**解决方法：** 请勿在 Windows Server 2008、Windows Server 2008 R2 和 Windows Server 7 的 Server Core SKU 中安装或使用这两个功能。  
   
 ### <a name="52-sql-server-management-studio-depends-on-visual-studio-2010-sp1"></a>5.2 SQL Server Management Studio 依赖于 Visual Studio 2010 SP1  
-**问题**：SQL Server 2012 Management Studio 依赖于 Visual Studio 2010 SP1 才能正常工作。 卸载 Visual Studio 2010 SP1 可能会导致 SQL Server Management Studio 中的功能丧失并且使 Management Studio 处于不支持的状态。 在此情况下可能会出现以下问题：  
+**问题**：SQL Server 2012 Management Studio 必须依赖 Visual Studio 2010 SP1 才能正常工作。 卸载 Visual Studio 2010 SP1 可能会导致 SQL Server Management Studio 中的功能丧失并且使 Management Studio 处于不支持的状态。 在此情况下可能会出现以下问题：  
   
 -   ssms.exe 的命令行参数将不会正常工作。  
   
@@ -450,10 +450,10 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 -   不能在正常的用户模式下调试查询。  
   
-**解决方法**：再次安装 Visual Studio 2010 SP1 并且重新启动 Management Studio。  
+**解决方法**：再次安装 Visual Studio 2010 SP1 并重启 Management Studio。  
   
 ### <a name="53-x64-operating-systems-require-64-bit-powershell-20"></a>5.3 x64 操作系统要求 64 位 PowerShell 2.0  
-**问题：** 对于 64 位操作系统上的 SQL Server 2012 实例，不支持 Windows PowerShell Extensions for SQL Server 的 32 位安装。  
+**问题：** 64 位操作系统上的 SQL Server 2012 实例不支持安装 32 位的 Windows PowerShell Extensions for SQL Server。  
   
 **解决方法：**  
   
@@ -462,14 +462,14 @@ A semantic language statistics database is not registered. Full-text indexes usi
 -   或者，从 32 位 Windows PowerShell 2.0 提示符导入 SQLPS 模块。  
   
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 在生成脚本向导中浏览时可能会出错  
-**问题：** 通过单击“保存或发布脚本”在生成脚本向导中生成脚本后，如果单击“选择选项”或“设置脚本编写选项”进行浏览，再次单击“保存或发布脚本”则可能会导致以下错误：  
+**问题：** 通过单击“保存或发布脚本”在生成脚本向导中生成脚本后，如果单击“选择选项”或“设置脚本编写选项”进行浏览，再次单击“保存或发布脚本”则可能会导致以下错误     ：  
   
 <a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 其他信息：  
 对象名称“sys.federations”无效。 （Microsoft SQL Server，错误：208）</pre>  
   
-**解决方法：** 关闭后再重新打开该生成脚本向导。  
+**解决方法：** 关闭后重新打开该生成脚本向导。  
   
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 新的维护计划布局与早期的 SQL Server 工具不兼容  
 **问题：** 在使用 SQL Server 2012 管理工具修改在以前版本的 SQL Server 管理工具（SQL Server 2008 R2、SQL Server 2008 或 SQL Server 2005）中创建的现有维护计划时，该维护计划以新格式保存。 早期版本的 SQL Server 管理工具不支持这个新格式。  
@@ -499,17 +499,17 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 下表汇总了针对 AlwaysOn 可用性组的驱动程序支持：  
   
-|驱动程序|多子网故障转移|应用程序意向|只读路由|多子网故障转移：更快的单子网端点故障转移|多子网故障转移：SQL 群集实例的命名实例解析|  
+|驱动程序|多子网故障转移|应用程序意向|只读路由|多子网故障转移：更快的单子网终结点故障转移|多子网故障转移：SQL 群集实例的命名实例解析|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|是|是|是|是|是|  
 |SQL Native Client 11.0 OLEDB|否|是|是|否|否|  
-|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序**\&#42;**）|是|是|是|是|用户帐户控制|  
-|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|是|是|是|是|是|  
+|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序 **\&#42;** ）|是|是|是|是|用户帐户控制|  
+|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;** ）|是|是|是|是|是|  
 |Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|是|  
   
-\&#42; 下载 ADO .NET（结合使用 .NET Framework 4.0）的连接性修补程序：[https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)。  
+\&#42; 下载 ADO .NET（结合使用 .NET Framework 4.0）的连接性修补程序：[https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)  。  
   
-\&#42;\&#42; 下载 ADO .NET（结合使用 .NET Framework 3.5 SP1）的连接性修补程序：[https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)。  
+\&#42;\&#42; 下载 ADO .NET（结合使用 .NET Framework 3.5 SP1）的连接性修补程序：[https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)  。  
   
 **MultiSubnetFailover 关键字和相关功能**  
   
@@ -529,21 +529,21 @@ MultiSubnetFailover 是 SQL Server 2012 中用于允许使用 AlwaysOn 可用性
   
 **NET Framework 3.5 或 OLEDB 不支持 MultiSubnetFailover=True**  
   
-**问题：** 如果您的可用性组或故障转移群集实例具有取决于不同子网的多个 IP 地址的侦听器名称（在 WSFC 群集管理器中称作网络名称或客户端访问点），并且您在将 ADO.NET 用于 .NET Framework 3.5SP1 或 SQL Native Client 11.0 OLEDB，则可能您对可用性组侦听器的 50% 的客户端连接请求都将遇到连接超时。  
+**问题：** 如果你的可用性组或故障转移群集实例具有取决于不同子网的多个 IP 地址的侦听器名称（在 WSFC 群集管理器中称作网络名称或客户端访问点），并且你将 ADO.NET 用于 .NET Framework 3.5SP1 或 SQL Native Client 11.0 OLEDB，则可能你对可用性组侦听器的 50% 的客户端连接请求都将遇到连接超时。  
   
 **解决方法：** 我们建议你执行以下任务之一。  
   
 -   如果您无权操作群集资源，则将连接超时更改为 30 秒（该值导致 20 秒的 TCP 超时期加上 10 秒的缓冲）。  
   
-    优点：如果发生了跨子网故障转移，则客户端恢复时间将比较短。  
+    优点  ：如果发生跨子网故障转移，则客户端恢复时间将比较短。  
   
-    缺点：半数的客户端连接将需要超过 20 秒的时间  
+    缺点  ：半数的客户端连接将需要 20 多秒  
   
 -   如果你有权操作群集资源，则更强烈推荐的方法是将你的可用性组侦听器的网络名称设置为 **RegisterAllProvidersIP**=0。 有关详细信息，请参阅本部分后面的“用于禁用 RegisterAllProvidersIP 和减少 TTL 的示例 PowerShell 脚本”。  
   
-    优点：无需增加客户端连接超时值。  
+    优点  ：无需增加客户端连接超时值。  
   
-    缺点：如果跨子网故障转移发生，则客户端恢复时间可能为 15 分钟或更长，具体时间取决于 HostRecordTTL 设置以及跨站点 DNS/AD 复制计划的设置。  
+    缺点  ：如果发生跨子网故障转移，则客户端恢复时间可能为 15 分钟或更长，具体时间取决于 HostRecordTTL 设置以及跨站点 DNS/AD 复制计划的设置。  
   
 **用于禁用 RegisterAllProvidersIP 和减少 TTL 的示例 PowerShell 脚本**  
   
@@ -588,18 +588,18 @@ Oracle CDC 服务是一种 Windows 服务，该服务将扫描 Oracle 事务日�
 **解决方法：** 若要安装 Oracle CDC 服务，请从 SQL Server 安装介质手动运行 AttunityOracleCdcService.msi。 若要安装 CDC 设计器控制台，请从 SQL Server 安装介质手动运行 AttunityOracleCdcDesigner.msi。  用于 x86 和 x64 的安装包位于 SQL Server 安装介质上的 .\Tools\AttunityCDCOracle\ 中。  
   
 #### <a name="612-f1-help-functionality-points-to-incorrect-documentation-files"></a>6.1.2 F1 帮助功能指向错误的文档文件  
-**问题：** 你不能通过使用 F1 帮助下拉列表或者通过在 Attunity 控制台中单击“?”来访问正确的帮助文档。 这些方法指向错误的 chm 文件。  
+**问题：** 你不能通过使用 F1 帮助下拉列表或者在 Attunity 控制台中单击“?”来访问正确的帮助文档。 这些方法指向错误的 chm 文件。  
   
-**解决方法：** 在安装 CDC Service for Oracle 和 CDC Designer for Oracle 时将安装正确的 chm 文件。 若要查看正确的帮助内容，请从以下位置直接启动 chm 文件： `%Program Files%\Change Data Capture for Oracle by Attunity\*.chm`。  
+**解决方法：** 在安装适用于 Oracle 的 CDC Service 和适用于 Oracle 的 CDC Designer 时将安装正确的 chm 文件。 若要查看正确的帮助内容，请从以下位置直接启动 chm 文件： `%Program Files%\Change Data Capture for Oracle by Attunity\*.chm`。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="MDS"></a>7.0 Master Data Services  
   
 ### <a name="71-fixing-an-mds-installation-in-a-cluster"></a>7.1 在群集中修复 MDS 安装  
-**问题：** 如果在安装 SQL Server 2012 的 RTM 版本的群集实例时选中了“Master Data Services”复选框，MDS 则将安装在单个节点上，但它将不可用并且在你添加到群集的附加节点上将不起作用。  
+**问题：** 如果在安装 SQL Server 2012 的 RTM 版本的群集实例时选中了“Master Data Services”复选框，MDS 则将安装在单个节点上，但它将不可用并且在你添加到群集的附加节点上将不起作用  。  
   
-**解决方法**：要解决此问题，你必须执行以下步骤安装 SQL Server 2012 Cumulative Release 1 (CU1)：  
+**解决方法**：要解决此问题，必须执行以下步骤安装 SQL Server 2012 Cumulative Release 1 (CU1)：  
   
 1.  确保不存在 SQL/MDS 安装。  
   
@@ -629,9 +629,9 @@ SQL Server 2012 包含 StreamInsight 2.0。 StreamInsight 2.0 要求 Microsoft S
 ## <a name="UA"></a>10.0 升级顾问  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 指向安装升级顾问的链接在中文 (HK) 操作系统上未启用  
-问题：当您尝试在中文（香港特别行政区）操作系统 (OS) 的任何支持的 Windows 版本上安装升级顾问时，可能会发现指向安装升级顾问的链接未启用。  
+问题：尝试在中文（香港特别行政区）操作系统 (OS) 支持的任何 Windows 版本上安装升级顾问时，可能会发现指向安装升级顾问的链接未启用。  
   
-**解决方法**：找到 SQLUA.msi 文件（在你的 SQL Server 2012 介质的 `\1028_CHT_LP\x64\redist\Upgrade Advisor` 或 `\1028_CHT_LP\x86\redist\Upgrade Advisor` 位置，具体取决于你的操作系统体系结构）。  
+**解决方法**：找到 SQLUA.msi 文件（在你的 SQL Server 2012 介质的 `\1028_CHT_LP\x64\redist\Upgrade Advisor` 或 `\1028_CHT_LP\x86\redist\Upgrade Advisor` 位置，具体取决于你的操作系统体系结构）  。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

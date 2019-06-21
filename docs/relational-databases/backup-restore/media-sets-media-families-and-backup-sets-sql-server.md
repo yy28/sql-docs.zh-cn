@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a8023d72b28ec3ff9e9bafe2423b26620a5046ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534111"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672472"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>介质集、介质簇和备份集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "52534111"
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> 媒体集、媒体簇和备份集概述  
  包含一个或多个备份介质的集合的备份构成一个介质集。 *媒体集* 是 *备份媒体*（磁带或磁盘文件，或者是 Azure Blob）的有序集合，一个或多个备份操作使用固定类型和数量的备份设备向其写入。 给定媒体集使用磁带驱动器，或者使用磁盘驱动器或 Azure Blob，但不能结合使用两者或以上。 
  
-**例如：** 与媒体集相关联的备份设备可能是三个名为 `\\.\TAPE0`、 `\\.\TAPE1`和 `\\.\TAPE2`的磁带驱动器。 该介质集仅包含磁带，最少需要三个磁带（每个磁带机一个磁带）。 备份设备的类型和数量是在创建介质集时建立的，不能更改。 但是，如有必要，可以在备份和还原操作之间将给定设备替换为同一类型的设备。  
+**示例：** 与媒体集相关联的备份设备可能是三个名为 `\\.\TAPE0`、`\\.\TAPE1` 和 `\\.\TAPE2` 的磁带驱动器。 该介质集仅包含磁带，最少需要三个磁带（每个磁带机一个磁带）。 备份设备的类型和数量是在创建介质集时建立的，不能更改。 但是，如有必要，可以在备份和还原操作之间将给定设备替换为同一类型的设备。  
   
  介质集是在备份操作过程中通过格式化备份介质从而在备份介质上创建的。 有关详细信息，请参阅本主题后面的 [创建新介质集](#CreatingMediaSet)。 设置格式后，每个文件或磁带都包含介质集的介质标头，可以开始接收备份内容。 有了标头后，备份操作会将指定数据备份到为该操作指定的所有备份设备中的备份介质。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "52534111"
 
   
 ## <a name="media-families"></a>介质簇  
- “介质簇” 由在介质集中的单个非镜像设备或一组镜像设备上创建的备份构成。 介质集所使用的备份设备的数量决定了介质集中的介质簇的数量。 例如，如果介质集使用两个非镜像备份设备，则该介质集包含两个介质簇。  
+ “介质簇”  由在介质集中的单个非镜像设备或一组镜像设备上创建的备份构成。 介质集所使用的备份设备的数量决定了介质集中的介质簇的数量。 例如，如果介质集使用两个非镜像备份设备，则该介质集包含两个介质簇。  
   
 在镜像介质集中，所有介质簇也是镜像的。 例如，如果使用六个备份设备来设置介质集的格式，其中使用了两个镜像，则有三个介质簇，每个介质簇包含两个相同的备份数据副本。 有关镜像媒体集的详细信息，请参阅[镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)。  
   
- 介质簇中的每个磁带或磁盘都分配了“介质序列号” 。 磁盘的介质序列号通常为 1。 在磁带介质簇中，起始磁带的序列号为 1，第二盘磁带的序列号为 2，依此类推。 有关详细信息，请参阅本主题后面的 [介质集、介质簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)不熟悉的读者。
+ 介质簇中的每个磁带或磁盘都分配了“介质序列号”  。 磁盘的介质序列号通常为 1。 在磁带介质簇中，起始磁带的序列号为 1，第二盘磁带的序列号为 2，依此类推。 有关详细信息，请参阅本主题后面的 [介质集、介质簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)不熟悉的读者。
   
 ## <a name="the-media-header"></a>介质标头  
  备份介质（磁盘文件或磁带）的每个卷都包含介质标头，介质标头是在第一次使用磁带（或磁盘）执行备份操作时创建的。 标头在重新设置介质格式之前保持不变。  
@@ -140,7 +140,7 @@ WITH
   
  ![分布在 3 个媒体集磁带上的第二个备份集](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "分布在 3 个媒体集磁带上的第二个备份集")  
   
- 在还原备份时，您可以使用 FILE 选项来指定想要使用的备份。 下面的示例展示了 FILE **=**_backup_set_file_number_ 子句的使用方法，在还原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的完整数据库备份并随后还原位于相同媒体集上的数据库差异备份时使用该子句。 介质集使用了三个备份磁带，它们位于磁带机 `\\.\tape0`、 `tape1`和 `tape2`上。  
+ 在还原备份时，您可以使用 FILE 选项来指定想要使用的备份。 下面的示例展示了 FILE **=** _backup_set_file_number_ 子句的使用方法，在还原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的完整数据库备份并随后还原位于相同媒体集上的数据库差异备份时使用该子句。 介质集使用了三个备份磁带，它们位于磁带机 `\\.\tape0`、 `tape1`和 `tape2`上。  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -253,7 +253,7 @@ GO
 ##  <a name="RelatedTasks"></a> 相关任务  
  **创建新媒体集**  
   
--   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“备份到新媒体集并清除所有现有备份集”选项）  
+-   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“备份到新媒体集并清除所有现有备份集”  选项）  
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md) （FORMAT 选项）  
   
@@ -261,13 +261,13 @@ GO
   
  **在现有媒体上追加新的备份**  
   
--   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“追加到现有备份集”选项）  
+-   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“追加到现有备份集”  选项）  
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md) （NOINIT 选项）  
   
  **覆盖所有现有备份集**  
   
--   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“覆盖所有现有备份集”选项）  
+-   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“覆盖所有现有备份集”  选项）  
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md) （INIT 选项）  
   

@@ -25,11 +25,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 84f05928f5033895e0d6b25a6461231e5a350267
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62737971"
 ---
 # <a name="monitor-memory-usage"></a>监视内存使用量
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "53379059"
   
  若要监视内存不足的情况，请使用下列对象计数器：  
   
--   Memory:Available Bytes  
+-   Memory:  Available Bytes  
   
--   Memory:Pages/sec  
+-   Memory:  Pages/sec  
   
  **Available Bytes** 计数器指示当前有多少内存（以字节为单位）可供进程使用。 **Pages/sec** 计数器指示由于页错误而从磁盘取回的页数，或由于页错误而写入磁盘以释放工作集空间的页数。  
   
  **Available Bytes** 计数器的值低表示计算机总内存不足或应用程序没有释放内存。 **Pages/sec** 计数器的比率高表示分页过多。 监视 **Memory:** Page Faults/sec 计数器以确保磁盘活动不是由分页造成。  
   
- 分页率偏低（以及由此产生的页错误）是正常的，即使计算机有大量的可用内存。 Microsoft Windows 虚拟内存管理器 (VMM) 在剪裁 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他进程的工作集大小时会收走这些进程的页。 此 VMM 活动会导致页错误。 为确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其它处理是否是过多分页的原因，请监控 **Process:** Page Faults/sec 计数器，该计数器属于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理实例。  
+ 分页率偏低（以及由此产生的页错误）是正常的，即使计算机有大量的可用内存。 Microsoft Windows 虚拟内存管理器 (VMM) 在剪裁 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他进程的工作集大小时会收走这些进程的页。 此 VMM 活动会导致页错误。 若要确定分页过多是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还是由另一个进程导致，请监视 **Process:** Page Faults/sec 计数器，该计数器属于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理实例。  
   
  有关解决分页过多的详细信息，请参阅 Windows 操作系统文档。  
   
@@ -54,13 +54,13 @@ ms.locfileid: "53379059"
   
  若要监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存量，请检查下列性能计数器：  
   
--   Process:Working Set  
+-   Process:  Working Set  
   
--   **SQL Server：Buffer Manager:Buffer Cache Hit Ratio**  
+-   SQL Server：**Buffer Manager:Buffer Cache Hit Ratio**  
   
--   **SQL Server：Buffer Manager:Database pages**  
+-   SQL Server：**Buffer Manager:Database pages**  
   
--   **SQL Server：Memory Manager:Total Server Memory (KB)**  
+-   SQL Server：**Memory Manager:Total Server Memory (KB)**  
   
  **WorkingSet** 计数器显示进程所用的内存量。 如果此内存量一直小于 **min server memory** 和 **max server memory** 服务器选项设置的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 被配置为使用过多内存。  
   

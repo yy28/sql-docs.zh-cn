@@ -36,11 +36,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4afc59a5901497fc3112cff3a06bbe20dd3ce04d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334804"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466993"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -142,40 +142,40 @@ CONTAINS (
 ```  
   
 ## <a name="arguments"></a>参数  
- column_name  
- FROM 子句中所指定的表的全文索引列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型。  
+ column_name   
+ FROM 子句中所指定的表的全文索引列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型           。  
   
- column_list  
- 指定以逗号分隔的两个或更多个列。 column_list 必须用括号括起来。 除非指定 language_term，否则 column_list 中所有列的语言必须相同。  
+ column_list   
+ 指定以逗号分隔的两个或更多个列。 column_list 必须用括号括起来  。 除非指定 language_term，否则 column_list 中所有列的语言必须相同   。  
   
  \*  
- 指定查询按给定的搜索条件在 FROM 子句中指定的表中搜索所有全文检索列。 CONTAINS 子句中的列必须来自包含全文索引的单个表。 除非指定 language_term，否则表的所有列的语言必须相同。  
+ 指定查询按给定的搜索条件在 FROM 子句中指定的表中搜索所有全文检索列。 CONTAINS 子句中的列必须来自包含全文索引的单个表。 除非指定 language_term，否则表的所有列的语言必须相同  。  
   
- PROPERTY ( column_name , 'property_name')  
+ PROPERTY ( column_name , 'property_name')    
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
  指定在其中搜索指定搜索条件的文档属性。  
   
 > [!IMPORTANT]  
->  要使查询返回任何行，必须在全文检索的搜索属性列表中指定 property_name，并且全文检索必须包含 property_name 的属性特定条目。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+>  要使查询返回任何行，必须在全文检索的搜索属性列表中指定 property_name，并且全文检索必须包含 property_name 的属性特定条目   。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
- LANGUAGE language_term  
+ LANGUAGE language_term   
  查询中用于断字、词干分析、同义词库扩展和替换，以及干扰词（或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)）删除的语言。 此参数可选。  
   
- 如果将采用不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则给定文档的区域设置标识符 (LCID) 将决定为其内容编制索引时使用的语言。 在对这种列进行查询时，指定 LANGUAGE language_term 可增大找到有效匹配项的可能性。  
+ 如果将采用不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则给定文档的区域设置标识符 (LCID) 将决定为其内容编制索引时使用的语言。 在对这种列进行查询时，指定 LANGUAGE language_term 可增大找到有效匹配项的可能性  。  
   
- language_term 可指定为与语言的 LCID 相对应的字符串、整数或十六进制值。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素。 如果未指定值，则使用该列的全文语言。  
+ language_term 可指定为与语言的 LCID 相对应的字符串、整数或十六进制值  。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素  。 如果未指定值，则使用该列的全文语言。  
   
- 如果指定为字符串，language_term 将对应于 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 兼容性视图中的 alias 列值。 字符串必须用单引号引起来，如 'language_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
+ 如果指定为字符串，language_term 将对应于 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 兼容性视图中的 alias 列值   。 字符串必须用单引号引起来，如 'language_term'  。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID  。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值  。 十六进制值不能超过八位（包括前导零在内）。  
   
  如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
   
- 如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term。  
+ 如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term  。  
   
- \<contains_search_condition>  
- 指定要在 column_name 中搜索的文本和匹配条件。  
+ \<contains_search_condition>   
+ 指定要在 column_name 中搜索的文本和匹配条件  。  
   
-\<contains_search_condition> 属于 nvarchar. 将另一个字符数据类型用作输入时，将发生隐式转换。 不能使用大型字符串数据类型 nvarchar(max) 和 varchar(max)。 在下面的示例中，`@SearchWord` 变量（被定义为 `varchar(30)`）导致 `CONTAINS` 谓词中发生隐式转换。
+\<contains_search_condition> 属于 nvarchar   . 将另一个字符数据类型用作输入时，将发生隐式转换。 不能使用大型字符串数据类型 nvarchar(max) 和 varchar(max)。 在下面的示例中，`@SearchWord` 变量（被定义为 `varchar(30)`）导致 `CONTAINS` 谓词中发生隐式转换。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -187,7 +187,7 @@ FROM Production.ProductDescription
 WHERE CONTAINS(Description, @SearchWord);  
 ```  
   
- 由于“参数截取”跨转换无效，因此请使用 nvarchar 以获得更好性能。 本示例将 `@SearchWord` 声明为 `nvarchar(30)`。  
+ 由于“参数截取”跨转换无效，因此请使用 nvarchar 以获得更好性能  。 本示例将 `@SearchWord` 声明为 `nvarchar(30)`。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -201,35 +201,35 @@ WHERE CONTAINS(Description, @SearchWord);
   
  对于生成非最佳计划的情况，还可以使用 OPTIMIZE FOR 查询提示。  
   
- word  
+ word   
  不带空格或标点符号的字符串。  
   
- phrase  
+ phrase   
  在每个词之间有空格的一个或多个词。  
   
 > [!NOTE]  
 >  某些语言（如亚洲一些地区的书面语言）的短语可以由彼此之间没有空格的一个或多个词组成。  
   
 \<simple_term>  
-指定词或短语的完全匹配项。 有效的简单字词示例有 "blue berry"、blueberry 和 "Microsoft SQL Server"。 应该使用双引号 ("") 将短语引起来。 短语中的词在数据库列中出现的顺序必须与 \<contains_search_condition> 中指定的顺序相同。 搜索词或短语中的字符时不区分大小写。 全文检索列中的干扰词（或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)）（例如 a、and 或 the）不会存储在全文检索中。 如果在单个词搜索中使用了干扰词，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误消息，指出查询仅包含干扰词。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 \Mssql\Binn\FTERef 目录下有一个标准的干扰词列表。  
+指定词或短语的完全匹配项。 有效的简单字词示例有 "blue berry"、blueberry 和 "Microsoft SQL Server"。 应该使用双引号 ("") 将短语引起来。 短语中的词在数据库列中出现的顺序必须与 \<contains_search_condition> 中指定的顺序相同  。 搜索词或短语中的字符时不区分大小写。 全文检索列中的干扰词（或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)）（例如 a、and 或 the）不会存储在全文检索中。 如果在单个词搜索中使用了干扰词，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误消息，指出查询仅包含干扰词。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 \Mssql\Binn\FTERef 目录下有一个标准的干扰词列表。  
   
- 标点将被忽略。 因此，`CONTAINS(testing, "computer failure")` 将匹配包含 "Where is my computer?  Failure to find it would be expensive" 这个值的行。 有关断字符行为的详细信息，请参阅[配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
+ 标点将被忽略。 因此，`CONTAINS(testing, "computer failure")` 将匹配包含 "Where is my computer? Failure to find it would be expensive" 这个值的行。 有关断字符行为的详细信息，请参阅[配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
  \<prefix_term>  
  指定以指定文本开始的词或短语的匹配项。 将前缀字词用英文双引号 ("") 引起来，并在右引号前添加一个星号 (\*)，这样一来，以星号前指定的简单字词开头的所有文本都将被匹配。 该子句应按以下方式指定：`CONTAINS (column, '"text*"')`。 星号可匹配词或短语所含根词的 0 个、1 个或多个字符。 如果文本和星号不用英文双引号分隔，则谓词将读取 `CONTAINS (column, 'text*')`，全文搜索会将星号看作字符，搜索 `text*` 的完全匹配项。 由于断字符通常忽略星号 (\*) 这样的字符，因此全文引擎将不会查找带此类字符的词。  
   
- 如果 \<prefix_term> 是一个短语，则该短语中包含的每个词都将被看成一个单独的前缀。 因此，指定了一个 "local wine*" 前缀字词的查询，将匹配所有包含 "local winery"、"locally wined and dined" 等文本的行。  
+ 如果 \<prefix_term> 是一个短语，则该短语中包含的每个词都将被看成一个单独的前缀  。 因此，指定了一个 "local wine*" 前缀字词的查询，将匹配所有包含 "local winery"、"locally wined and dined" 等文本的行。  
   
  \<generation_term>  
  包含的简单字词包括要搜索的原始词的变体时，指定词的匹配项。  
   
  INFLECTIONAL  
- 指定要对指定的简单字词使用与语言相关的词干分析器。 词干分析器的行为是根据每种具体语言的词干确定规则定义的。 非特定语言没有关联的词干分析器。 使用被查询的列的列语言来引用所需的词干分析器。 如果指定了 language_term，则使用与该语言对应的词干分析器。  
+ 指定要对指定的简单字词使用与语言相关的词干分析器。 词干分析器的行为是根据每种具体语言的词干确定规则定义的。 非特定语言没有关联的词干分析器。 使用被查询的列的列语言来引用所需的词干分析器。 如果指定了 language_term，则使用与该语言对应的词干分析器  。  
   
- \<generation_term> 中的给定 \<simple_term> 将不会匹配名词和动词。  
+ \<generation_term> 中的给定 \<simple_term> 将不会匹配名词和动词   。  
   
  THESAURUS  
- 指定使用对应于列全文语言或指定的查询语言的同义词库。 最长模式或来自 \<simple_term> 的模式将与同义词库匹配，并生成其他字词以扩展或替换原始模式。 如果找不到与 \<simple_term> 完全或部分匹配的匹配项，不匹配部分将被视为 simple_term。 有关全文搜索同义词库的详细信息，请参阅 [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
+ 指定使用对应于列全文语言或指定的查询语言的同义词库。 最长模式或来自 \<simple_term> 的模式将与同义词库匹配，并生成其他字词以扩展或替换原始模式  。 如果找不到与 \<simple_term> 完全或部分匹配的匹配项，不匹配部分将被视为 simple_term   。 有关全文搜索同义词库的详细信息，请参阅 [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
  \<generic_proximity_term>  
  指定词或短语的匹配项必须处于所搜索的文档中。  
@@ -238,7 +238,7 @@ WHERE CONTAINS(Description, @SearchWord);
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]我们建议使用 \<custom_proximity_term>。  
   
  NEAR | ~  
- 指示 NEAR 或 ~ 运算符两侧的词或短语必须存在于某个文档中，才能返回匹配项。 您必须指定两个搜索词。 给定的搜索词可以是由双引号分隔的单个词或短语 ("phrase")。  
+ 指示 NEAR 或 ~ 运算符两侧的词或短语必须存在于某个文档中，才能返回匹配项。 您必须指定两个搜索词。 给定的搜索词可以是由双引号分隔的单个词或短语 ("phrase")  。  
   
  可将多个邻近词链接起来，例如 `a NEAR b NEAR c` 或 `a ~ b ~ c`。 链接在一起的邻近词必须均存在于文档中才能返回匹配项。  
   
@@ -251,7 +251,7 @@ WHERE CONTAINS(Description, @SearchWord);
   
  指定词或短语的匹配项，并且可以选择指定搜索词之间允许的最大距离。 你还可以指定必须按你指定的确切顺序查找搜索词 (\<match_order>)。  
   
- 给定的搜索词可以是由双引号分隔的单个词或短语 ("phrase")。 文档中必须包含每个指定的词才能返回匹配项。 您必须至少指定两个搜索词。 最大的搜索词数为 64 个。  
+ 给定的搜索词可以是由双引号分隔的单个词或短语 ("phrase")  。 文档中必须包含每个指定的词才能返回匹配项。 您必须至少指定两个搜索词。 最大的搜索词数为 64 个。  
   
  默认情况下，自定义近似词返回包含指定词的行，而不考虑间隔的距离及其顺序。 例如，若要匹配下面的查询，文档只需包含 `term1` 和 "`term3 term4`"，它们可以处于任意位置以及采用任意顺序：  
   
@@ -313,10 +313,10 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  指定（由查询返回的）匹配行与一组词和短语匹配，每个词和短语有一个可选的加权值。  
   
  ISABOUT  
- 指定 \<weighted_term> 关键字。  
+ 指定 \<weighted_term> 关键字  。  
   
- WEIGHT(weight_value)  
- 指定介于 0.0 和 1.0 之间的加权值。 \<weighted_term> 中的每个部分可能包含 weight_value。 使用 weight_value 可更改查询的各个部分如何影响赋予与该查询匹配的每行的排名值。 WEIGHT 不影响 CONTAINS 查询的结果，但 WEIGHT 会影响 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查询中的排名。  
+ WEIGHT(weight_value)   
+ 指定介于 0.0 和 1.0 之间的加权值。 \<weighted_term> 中的每个部分可能包含 weight_value   。 使用 weight_value 可更改查询的各个部分如何影响赋予与该查询匹配的每行的排名值  。 WEIGHT 不影响 CONTAINS 查询的结果，但 WEIGHT 会影响 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查询中的排名。  
   
 > [!NOTE]  
 >  不管操作系统的区域设置如何，小数点分隔符始终为句点。  
@@ -333,7 +333,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  { OR | | }  
  指示匹配项必须满足这两个包含搜索条件之一。 可以使用竖线符号 (|) 代替关键字 OR 来表示 OR 运算符。  
   
- 如果 \<contains_search_condition> 包含带括号的组，则首先计算这些带括号的组。 计算了带括号的组之后，将这些逻辑运算符用于包含搜索条件时，适用以下规则：  
+ 如果 \<contains_search_condition> 包含带括号的组，则首先计算这些带括号的组  。 计算了带括号的组之后，将这些逻辑运算符用于包含搜索条件时，适用以下规则：  
   
 -   NOT 用在 AND 之前。  
   

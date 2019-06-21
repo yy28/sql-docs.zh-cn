@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ee40f9b7632a388cb9b0889f40ee510c39ba34b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: c96654d1e16a3b730aa3f2a09f14da4c91971b9d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65946484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145500"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -51,7 +51,7 @@ CHECKSUM ( * | expression [ ,...n ] )
 - **text**
 - **XML**
 
-另一个非可比数据类型为，以上述任一数据类型作为基类型的 sql_variant。
+另一个非可比数据类型为，以上述任一数据类型作为基类型的 sql_variant  。
   
 *expression*  
 除非可比数据类型之外的任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
@@ -68,6 +68,8 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 `CHECKSUM` 值取决于排序规则。 使用不同排序规则存储的相同值将返回一个不同的 `CHECKSUM` 值。
   
+`CHECKSUM ()` 不保证结果唯一。
+
 ## <a name="examples"></a>示例  
 这些示例显示了如何使用 `CHECKSUM` 来生成哈希索引。
   

@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 08794856151267477753b1b756a63b6eb897b7f7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 63d16dd3856fc680ab580451f769bd29aeabeef4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761857"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140612"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的租用、群集和运行状况检测超时的机制和指南 
 
@@ -46,7 +46,7 @@ Always On 资源 DLL 监视内部 SQL Server 组件的状态。 `sp_server_diagn
 
 租用机制强制执行 SQL Server 和 Windows Server 故障转移群集之间的同步。 发出故障转移命令时，群集服务会对当前主副本的资源 DLL 进行脱机调用。 资源 DLL 首先尝试使用存储过程使 AG 脱机。 如果此存储过程失败或超时，则会将失败报告回群集服务，然后发出终止命令。 终止再次尝试执行相同的存储过程，但使 AG 在一个新副本上联机之前，群集这次不会等待资源 DLL 报告成功或失败。 如果第二个过程调用失败，那么资源主机将不得不依赖租用机制使实例脱机。 调用资源 DLL 使 AG 脱机时，资源 DLL 会发出租用停止事件的信号，唤醒 SQL Server 租用工作线程使 AG 脱机。 即使未发出停止事件的信号，租用也将过期，并且副本将转换为解析状态。 
 
-租用主要是主实例和群集之间的同步机制，但它也可以创建无需故障转移的故障条件。 例如，高 CPU 使用率、内存不足的情况（虚拟内存较低、进程分页）、SQL 进程在生成内存转储时无法响应、系统范围的挂起、群集 (WSFC) 脱机（例如由仲裁丢失所致）会阻止 SQL 实例续租并导致故障转移。 
+租用主要是主实例和群集之间的同步机制，但它也可以创建无需故障转移的故障条件。 例如，高 CPU 使用率、内存不足的情况（虚拟内存较低、进程分页）、SQL 进程在生成内存转储时无法响应、系统范围的挂起、群集 (WSFC) 脱机（例如由仲裁丢失所致）会阻止 SQL 实例续租并导致重启或故障转移。 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>群集超时值的准则 
 
@@ -156,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   
  | 超时设置 | 用途 | Between | 使用 | IsAlive 和 LooksAlive | 原因 | 结果 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
- | 租用超时 </br> **默认值：20000** | 防止裂脑 | 主站点到群集 </br> (HADR) | [Windows 事件对象](/windows/desktop/Sync/event-objects)| 在两者中使用 | OS 挂起、虚拟内存不足、生成转储、限定 CPU、WSFC 故障（失去仲裁） | AG 资源脱机-联机、故障转移 |  
+ | 租用超时 </br> **默认值：20000** | 防止裂脑 | 主站点到群集 </br> (HADR) | [Windows 事件对象](/windows/desktop/Sync/event-objects)| 在两者中使用 | OS 挂起、虚拟内存不足、工作集、生成转储、限定 CPU、WSFC 故障（失去仲裁） | AG 资源脱机-联机、故障转移 |  
  | 会话超时 </br> **默认值：10000** | 就主副本和辅助副本之间的通信问题进行通知 | 辅助副本到主副本 </br> (HADR) | [TCP 套接字（通过 DBM 终结点发出的消息）](/windows/desktop/WinSock/windows-sockets-start-page-2) | 二者都不使用 | 网络通信， </br> 辅助副本的问题 - 故障、OS 挂起、资源争用 | 辅助副本 - 已断开连接 | 
  |HealthCheck 超时  </br> **默认值：30000** | 指示尝试确定主副本的运行状况时超时 | 群集到辅助副本 </br> （FCI 和 HADR） | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 在两者中使用 | 满足故障条件、OS 挂起、虚拟内存不足、工作集微调、生成转储、WSFC（丢失仲裁）、计划程序问题（死锁计划程序）| AG 资源脱机-联机或故障转移、FCI 重启/故障转移 |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |

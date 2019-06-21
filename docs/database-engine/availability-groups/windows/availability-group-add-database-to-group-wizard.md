@@ -16,12 +16,12 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 80c63fa27f1ba85882b18f47910f38c06dd09f51
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db9c48686a6292f4a2fcd6ef85501fb1b715241d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800138"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140650"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>使用“可用性组向导”将数据库添加到 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,6 +66,10 @@ ms.locfileid: "66800138"
      如果数据库包含数据库主密钥，则请在“密码”列中输入数据库主密钥的密码。   
   
 5.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
+
+    - **自动种子设定**
+      
+      选择此选项可使用自动种子设定。 自动种子设定使用日志流传输将使用 VDI 的备份流式传输到使用所配置终结点的可用性组的每个数据库的次要副本。 无需手动执行此操作即可还原次要副本上的数据库备份。 有关自动种子设定的详细信息，请参阅[自动种子设定 ](automatic-seeding-secondary-replicas.md)。
   
     -   **Full**  
   

@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513746"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62707124"
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "52513746"
     
  适合使用延迟事务持续性的部分情况如下：    
     
- **可容忍丢失部分数据。**    
+ **可容忍丢失部分数据。**     
  如果可以容忍一定的数据丢失，例如只要有大部分数据即可，个别记录不是非常重要，就值得考虑延迟持续性。 如果无法容忍任何数据丢失，则不要使用延迟事务持续性。    
     
- **在事务日志写入时遭遇瓶颈。**    
+ **在事务日志写入时遭遇瓶颈。**     
  如果性能问题是由于事务日志写入延迟造成的，则应用程序可能适合使用延迟事务持续性。    
     
- **工作负荷的争用率很高。**    
+ **工作负荷的争用率很高。**     
  如果系统工作负载争用级别很高，则会花费大量时间等待锁释放。 延迟事务持续性会缩短提交时间，因此能够更快地释放锁，从而实现更大的吞吐量。    
     
  ### <a name="delayed-transaction-durability-guarantees"></a>延迟事务持续性保证   
@@ -102,7 +102,7 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [默认] 使用此设置时，不管提交级别设置如何 (DELAYED_DURABILITY=[ON | OFF])，对数据库提交的所有事务都是完全持久事务。 无需更改和重新编译存储过程。 这样能确保任何数据都不会因延迟持续性面临风险。    
     
  **ALLOWED**    
- 使用此设置时，每个事务的持续性都在事务级别确定 - DELAYED_DURABILITY = { OFF | ON }。 有关详细信息，请参阅 [原子块级别控制 - 本机编译存储过程](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl)和[提交级别控制 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl)。    
+ 使用此设置时，每个事务的持续性都在事务级别确定 - DELAYED_DURABILITY = { OFF | ON }  。 有关详细信息，请参阅 [原子块级别控制 - 本机编译存储过程](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl)和[提交级别控制 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl)。    
     
  **FORCED**    
  使用此设置，对数据库提交的每个事务都是延迟持久事务。 无论事务指定完全持久 (DELAYED_DURABILITY = OFF) 还是不进行任何指定，事务都是延迟持久事务。 当数据库适合使用延迟事务持续性，并且您不希望更改任何应用程序代码时，此设置很有用。    

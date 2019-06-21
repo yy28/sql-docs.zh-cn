@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4375d7b0ce19c5bb0f44a0be3b55e7b105b5a4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794113"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145421"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -127,7 +127,7 @@ REM Gather information about the instance of LocalDB
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>连接到 LocalDB 的共享实例
 
-若要连接到某一 LocalDB 共享实例，请将 `.\`（句点 + 反斜杠）添加到连接字符串以便引用为共享实例保留的命名空间。 例如，若要连接到名为 `AppData` 的 LocalDB 的共享实例，可使用连接字符串（例如 `(localdb).AppData`）作为连接字符串的一部分。 连接到用户不拥有的 LocalDB 共享实例的用户必须具有 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名。
+若要连接到某一 LocalDB 共享实例，请将 `\.\`（反斜杠 + 句点 + 反斜杠）添加到连接字符串以便引用为共享实例保留的命名空间。 例如，若要连接到名为 `AppData` 的 LocalDB 的共享实例，可使用连接字符串（例如 `(localdb)\.\AppData`）作为连接字符串的一部分。 连接到用户不拥有的 LocalDB 共享实例的用户必须具有 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名。
 
 ## <a name="troubleshooting"></a>故障排除
 
