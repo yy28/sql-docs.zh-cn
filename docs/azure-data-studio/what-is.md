@@ -11,18 +11,18 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 1484d0bf2598cc3db8314c088b081ccd9327f5fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18fbf279a4d32121f552fda345d8024d1d408e31
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801914"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313967"
 ---
 # <a name="what-is-azure-data-studio"></a>什么是 Azure Data Studio？
 
 Azure Data Studio是一种跨平台数据库工具，适用于在Windows，MacOS和Linux上使用Microsoft系列内部部署和云数据平台的数据专业人员。
 
-此前在预览名称SQL Operations Studio下发布的Azure Data Studio提供了现代化编辑器体验，包括Intellisense，代码片段，源代码控制集成和集成终端。 它在设计时考虑了数据平台用户，内置了查询结果集和可自定义的仪表板。
+此前已发布预览版名称 SQL Operations Studio 下，Azure Data Studio 提供了与 IntelliSense、 代码段、 源代码管理集成和集成的终端的现代编辑器体验。 它在设计时考虑了数据平台用户，内置了查询结果集和可自定义的仪表板。
 
 **[下载并安装 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 

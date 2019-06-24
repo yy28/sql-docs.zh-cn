@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 23d867bba50a42dc55f4095abbfd92129df634be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd71429e5a407e595cc3f65e73e984bfc12280b1
+ms.sourcegitcommit: 5d27fb187006e676d652884f0c1f5133a1bd62b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785873"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152220"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Linux 和 macOS 上的 ODBC 驱动程序的数据访问跟踪
 
@@ -30,6 +30,7 @@ UnixODBC 驱动程序管理器在 macOS 和 Linux 上的支持跟踪 ODBC API �
 若要跟踪应用程序的 ODBC 行为，请编辑`odbcinst.ini`文件的`[ODBC]`部分设置的值`Trace=Yes`和`TraceFile`为的文件将包含在跟踪输出; 该文件夹的路径为例：
 
 ```ini
+[ODBC]
 Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```

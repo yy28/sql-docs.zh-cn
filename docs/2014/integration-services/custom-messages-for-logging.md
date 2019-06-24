@@ -15,12 +15,12 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060088"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316668"
 ---
 # <a name="custom-messages-for-logging"></a>日志记录的自定义消息
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组丰富的自定义事件，可以用来写入包和很多任务的日志项。 使用这些项可以记录预定义的事件或用户定义的消息，供随后分析时使用，从而将有关执行进度、结果和问题的详细信息保存下来。 例如，可以记录大容量插入的开始和结束时间，从而找出包运行时的性能问题。  
@@ -258,12 +258,8 @@ ms.locfileid: "66060088"
   
 |日志项|Description|  
 |---------------|-----------------|  
-|`XMLOperation`|提供任务所执行的操作的相关信息|  
-  
-## <a name="related-content"></a>相关内容  
- dougbert.com 上的博客文章 [为 Integration Services 任务记录自定义事件](https://go.microsoft.com/fwlink/?LinkId=150580)。  
+|`XMLOperation`|提供任务所执行的操作的相关信息|   
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services (SSIS) 日志记录](performance/integration-services-ssis-logging.md)  
-  
   

@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
+ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836312"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298217"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -233,7 +233,6 @@ ms.locfileid: "66836312"
 |如果 `SELECT` 在继续执行查询之前等待同步统计信息更新操作完成，则动态管理视图 `sys.dm_exec_requests` 列 `command` 显示 `SELECT (STATMAN)`。 | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |新的等待类型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 会显示在 `sys.dm_os_wait_stats` 动态管理视图中。 它显示了针对同步统计信息刷新操作耗费的实例级别累计时间。|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
 |混合缓冲池是 SQL Server 数据库引擎的一项新功能，可以在必要时直接访问位于永久性内存 (PMEM) 设备上的数据库文件上的数据库页。|[混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了静态数据掩码。 可以使用静态数据掩码来清理 SQL Server 数据库副本中的敏感数据。|[静态数据掩码](../relational-databases/security/static-data-masking.md) |
 |在图形匹配查询中使用派生表或视图别名 |[图形边缘约束](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 

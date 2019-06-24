@@ -2,7 +2,7 @@
 title: 评估企业和合并评估报表 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA 评估企业和 SQL Server 在升级或迁移到 Azure SQL 数据库之前合并评估报表。
 ms.custom: ''
-ms.date: 03/19/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: f9ca00c2390ef0a03369ac21cfe02fcf7ed01392
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0021e5851627e156addb86fa1c136d78d3be2228
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794381"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313841"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -30,22 +30,24 @@ ms.locfileid: "66794381"
 
 - 指定工具的计算机将会启动 DMA 在网络上。 请确保此计算机已连接到 SQL Server 目标。
 - 下载并安装：
-    - [数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)v3.6 或更高版本。
-    - [PowerShell](https://aka.ms/wmf5download) 5.0 版或更高版本。
-    - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 或更高版本。
-    - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更高版本。
-    - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
-    - [Azure PowerShell 模块](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)v3.6 或更高版本。
+  - [PowerShell](https://aka.ms/wmf5download) 5.0 版或更高版本。
+  - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 或更高版本。
+  - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更高版本。
+  - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
+  - [Azure PowerShell 模块](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下载并提取：
-    - [DMA 报表 Power BI 模板](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)。
-    - [LoadWarehouse 脚本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip)。
+  - [DMA 报表 Power BI 模板](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)。
+  - [LoadWarehouse 脚本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip)。
 
 ## <a name="loading-the-powershell-modules"></a>加载 PowerShell 模块
+
 保存到 PowerShell 模块目录的 PowerShell 模块，可调用而无需使用之前显式加载的模块。
 
 若要加载模块，请执行以下步骤：
+
 1. 导航到 C:\Program Files\WindowsPowerShell\Modules，然后创建名为的文件夹**DataMigrationAssistant**。
-2. 打开[PowerShell 模块](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip)，然后将它们保存到你创建的文件夹。
+2. 打开[PowerShell 模块](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip)，然后将它们保存到你创建的文件夹。
 
       ![PowerShell 模块](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -64,9 +66,11 @@ ms.locfileid: "66794381"
     新的 PowerShell 会话启动时 PowerShell 现在应会自动加载这些模块。
 
 ## <a name="create-inventory"></a> 创建 SQL 服务器的清单
+
 然后再运行 PowerShell 脚本，以评估 SQL Server，构建所需的 SQL 服务器，你想要评估的清单。
 
 此清单，可以采用两种形式之一：
+
 - Excel CSV 文件
 - SQL Server 表
 
@@ -79,7 +83,7 @@ ms.locfileid: "66794381"
 
 
 如果使用 csv 文件导入数据，请确保有只有两个列的数据-**实例名称**并**数据库名称**，和列不包含标头行。
- 
+
  ![csv 文件内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
 ### <a name="if-using-a-sql-server-table"></a>如果使用的 SQL Server 表
@@ -88,6 +92,7 @@ ms.locfileid: "66794381"
 > 对于默认实例为 MSSQLServer 设置实例名称。
 
 创建一个数据库，称为**EstateInventory**和名为表**DatabaseInventory**。 包含此清单数据的表可以具有任意数量的列，只要存在以下四列：
+
 - ServerName
 - InstanceName
 - DatabaseName
@@ -102,6 +107,7 @@ ms.locfileid: "66794381"
 请记住，具体取决于许多对象和其复杂性，评估可能需要特别长的时间 （小时数 +），因此它是比较明智的做法来分隔成可管理块的评估。
 
 ## <a name="running-a-scaled-assessment"></a>运行缩放的评估
+
 加载到模块目录的 PowerShell 模块并创建后清单，您需要通过打开 PowerShell 并运行 dmaDataCollector 函数进行缩放的评估。
  
   ![dmaDataCollector 函数列表](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
@@ -144,6 +150,7 @@ ms.locfileid: "66794381"
 DmaProcessor 函数应该只需要几秒钟来处理单个文件。
 
 ## <a name="loading-the-data-warehouse"></a>加载数据仓库
+
 DmaProcessor 已完成处理评估文件后，数据将加载到 DMAReporting 数据库报告表中。 此时，您需要加载数据仓库。
 
 1. 使用 LoadWarehouse 脚本来填充维度中的任何缺失值。
@@ -155,6 +162,7 @@ DmaProcessor 已完成处理评估文件后，数据将加载到 DMAReporting �
       ![加载的 LoadWarehouse 内容](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>设置数据库所有者
+
 尽管这不是必需的若要从报告，获取最大的价值建议中设置数据库所有者**dimDBOwner**维度，并更新**DBOwnerKey**中**FactAssessment**表。  按此过程将允许进行切片和筛选基于特定的数据库所有者在 Power BI 报表。
 
 LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数据库所有者。
@@ -176,7 +184,9 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
    > 如果没有看到你所期待的数据，请尝试更改活动书签。  有关详细信息，请参阅以下部分中的详细信息。
 
 ## <a name="working-with-dma-reports"></a>使用 DMA 报表
+
 若要处理的 DMA 报表，使用书签和切片器要作为筛选依据：
+
 - 评估类型 （Azure SQL DB、 Azure SQL MI、 SQL 内部） 
 - 实例名
 - 数据库名称
@@ -186,11 +196,12 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
 
 ![DMA 报表书签和筛选器](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
 
-这使以下边栏选项卡：
+选择筛选器书签将启用以下边栏选项卡：
 
 ![DMA 报告视图边栏选项卡](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
 
 可以使用书签报表之间切换上下文：
+
 - Azure SQL DB 云评估
 - Azure SQL MI 云评估
 - 在本地评估
@@ -201,10 +212,11 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
 
 ![DMA 报告视图后退按钮](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
 
-要显示在以下任何一项上当前是否应用了筛选器的报表页的左下角还有一个提示：
-* FactAssessment-InstanceName
-* FactAssessment – DatabaseName
-* dimDBOwner-DBOwner
+要显示在任何以下各项上当前是否应用了筛选器的报表页的左下角还有一个提示：
+
+- FactAssessment-InstanceName
+- FactAssessment – DatabaseName
+- dimDBOwner-DBOwner
 
 ![应用筛选器提示](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
@@ -212,6 +224,7 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
 > 如果您仅执行 Azure SQL 数据库评估，然后填充只有云报表。 相反，如果您仅执行内部评估，只有在本地报表进行填充。 但是，如果执行 Azure 和本地评估，然后加载到仓库的这两种评估您可以切换云报表和通过按住 CTRL 单击本地报表关联的图标。
 
 ## <a name="reports-visuals"></a>报表视觉对象
+
 以下各节中显示的 Power BI 报表中显示的详细信息。
 
 ### <a name="readiness-"></a>准备情况 %
@@ -231,6 +244,7 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
   ![DMA 准备情况存储桶](../dma/media//dma-consolidatereports/dma-readiness-bucket.png)
 
 此视觉对象显示数据库的以下就绪情况存储桶的细分：
+
 - 100%就绪
 - 75 99%就绪
 - 50-75%就绪
@@ -240,13 +254,14 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
  
   ![DMA 问题 WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
-此视觉对象中选定内容上下文显示当前内发生的问题 (所有内容，实例，数据库 [序列图的])。 越大单词出现在屏幕上，更高版本的该类别中的问题数。 鼠标指针悬停在某个词显示该类别中出现的问题数。
+此视觉对象中选定内容上下文显示当前内发生的问题 (所有内容，实例，数据库 [序列图的])。 越大单词屏幕上显示，该类别中的问题越多。 鼠标指针悬停在某个词显示该类别中出现的问题数。
 
 ### <a name="database-readiness"></a>数据库准备情况
 
   ![DMA 数据库准备情况报告](../dma/media//dma-consolidatereports/dma-database-readiness-report.png)
 
 本部分是报表，其中显示了实例数据库的准备情况的主要部分。 此报表具有向下钻取层次的结构：
+
 - InstanceDatabase
 - ChangeCategory
 - 标题
@@ -270,4 +285,5 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
   ![DMA 修正计划的报表筛选器选项](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>脚本免责声明
+
 *在本文中提供的示例脚本不受任何 Microsoft 标准支持计划或服务。仅按原样提供的所有脚本，而无需任何种类的担保。Microsoft 进一步拒绝所有默示的保证，包括但不限于，任何默示保证的适销性或适用于某种特定用途。与你保持因使用或执行示例脚本和文档的全部风险。在任何 Microsoft、 其作者或创建、 生产或交付的脚本中其他涉及的任何人都应承担任何责任 （包括但不限于，损失业务利润损失、 业务中断、 丢失业务信息或其他 pecuniary 丢失） 因使用或不能使用的示例脚本或文档，即使 Microsoft 已被告知此类损害的可能性。查找之前在其他站点/存储库/博客上重新发布这些脚本的权限。*
