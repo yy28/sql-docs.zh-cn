@@ -17,12 +17,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ab14ac049e9081e82175512a0107af446a51f37
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828010"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343873"
 ---
 # <a name="data-flow"></a>数据流
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供 3 种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
@@ -161,7 +161,7 @@ ms.locfileid: "62828010"
 |Source|Description|  
 |------------|-----------------|  
 |Oracle 目标|Oracle 目标是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目标组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
-|SAP BI 目标|SAP BI 目标是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目标组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://go.microsoft.com/fwlink/?LinkId=110393)。|  
+|SAP BI 目标|SAP BI 目标是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目标组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=16978)。|  
 |Teradata 目标|Teradata 目标是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目标组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括连接管理器和源。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle 和 Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
   
  有关如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=210369)。  

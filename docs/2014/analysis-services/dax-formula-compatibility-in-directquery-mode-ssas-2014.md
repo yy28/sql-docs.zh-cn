@@ -10,12 +10,12 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2136c162846b31c4d221d7aaad6476ba70508287
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284962"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343898"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式下的 DAX 公式兼容性 (SSAS 2014)
 可以使用数据分析表达式语言 (DAX) 在 Analysis Services 表格模型中，创建度量值和使用其他自定义公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 工作簿中的数据模型和 Power BI Desktop 数据模型。 在大多数方面，在这些环境中创建的模型是相同的并可以使用相同的度量值、 关系和 Kpi，等等。但是，如果创建 Analysis Services 表格模型并将其部署在 DirectQuery 模式下，有一些限制，可以使用的公式。 本主题概述了这些差异，列出了在兼容级别 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式下，不支持的函数并列出了支持的函数但可能返回不同的结果。  
@@ -85,7 +85,7 @@ ms.locfileid: "67284962"
 **从字符串转换为日期/时间**  
 在 DirectQuery 模式中，从日期和时间的字符串表示形式转换为实际的 **datetime** 值的行为与在 SQL Server 中相同。  
   
-了解如何管理从字符串转换到的规则**datetime**中的数据类型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]模型，请参阅 [DAX 语法参考] （/dax/dax 的语法参考
+了解如何管理从字符串转换到的规则**datetime**中的数据类型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]模型，请参阅[DAX 语法参考](/dax/dax-syntax-reference)。
   
 使用内存中数据存储区的模型所支持的日期文本格式范围比 SQL Server 支持的日期字符串格式的范围更加有限。 然而，DAX 支持自定义日期和时间格式。  
   
@@ -133,7 +133,7 @@ SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此
   
 相同的限制适用于其他对数函数：LOG10 和 ln。  
   
-有关详细信息**空白**数据类型在 DAX 中，请参阅 [DAX 语法参考] （/dax/dax 的语法参考
+有关 DAX 中的 **blank** 数据类型的详细信息，请参阅 [DAX 语法参考](/dax/dax-syntax-reference)。
   
 **被零除和除以空白**  
 在 DirectQuery 模式下，被零 (0) 除和除以空白将始终导致错误。 SQL Server 不支持无穷大的概念，并且因为任何被零除的自然结果都是无穷大，所以，结果是一个错误。 但是，SQL Server 支持除以 Null 值，其结果必须始终为 Null。  
