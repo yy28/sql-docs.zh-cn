@@ -1,7 +1,7 @@
 ---
 title: sys.indexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 04/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f65371e31362524a5a909d1fdda4a047b2525966
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff8fb876ace87e26522cc19ffdc97359a9216844
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004245"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387981"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,12 +54,14 @@ ms.locfileid: "63004245"
 |**has_filter**|**bit**|1 = 索引具有一个筛选器，且仅包含符合筛选器定义的行。<br /><br /> 0 = 索引不具有筛选器。|  
 |**filter_definition**|**nvarchar(max)**|包含在筛选索引中的行子集的表达式。<br /><br /> 对于堆或非筛选索引，其值为 NULL。|  
 |**auto_created**|**bit**|1 = 索引已通过自动优化。<br /><br />0 = 索引由用户创建。
+|**optimize_for_sequential_key**|**bit**|1 = 索引的最后一页插入优化已启用。<br><br>0 = 默认值。 索引已禁用的最后一页插入优化。|
+
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Production.Product` 表的所有索引。  
+ 下面的示例返回所有索引的表`Production.Product`在[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。  
   
 ```  
   

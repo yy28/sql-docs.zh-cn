@@ -5,17 +5,17 @@ description: 了解如何将部署在 Kubernetes 上的 SQL Server 2019 大数�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782247"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388783"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -82,14 +82,14 @@ kubectl config view
 
 | 部署配置文件 | Kubernetes 环境 |
 |---|---|
-| **aks-dev-test.json** | Azure Kubernetes 服务 (AKS) |
-| **kubeadm-dev-test.json** | 多台计算机 (kubeadm) |
-| **minikube-dev-test.json** | Minikube |
+| **aks-dev-test** | Azure Kubernetes 服务 (AKS) |
+| **kubeadm-dev-test** | 多台计算机 (kubeadm) |
+| **minikube-dev-test** | Minikube |
 
-可以通过运行部署大数据群集**mssqlctl 群集创建**。 这会提示您选择一种默认配置，并会引导你完成部署。
+可以通过运行部署大数据群集**mssqlctl bdc 创建**。 这会提示您选择一种默认配置，并会引导你完成部署。
 
 ```bash
-mssqlctl cluster create
+mssqlctl bdc create
 ```
 
 在此方案中，系统会提示输入不是默认配置，如密码的一部分的任何设置。 请注意，Docker 信息向你由 Microsoft 提供的 SQL Server 2019 一部分[早期采用计划](https://aka.ms/eapsignup)。
@@ -99,35 +99,38 @@ mssqlctl cluster create
 
 ## <a id="customconfig"></a> 自定义配置
 
-还有可能要自定义部署配置文件。 可以使用以下步骤来执行此操作：
+还有可能要自定义自己的部署配置文件。 可以使用以下步骤来执行此操作：
 
-1. 开始使用 Kubernetes 环境匹配的标准部署配置文件之一。 可以使用**mssqlctl 群集配置列表**命令以列出它们：
+1. 开始使用 Kubernetes 环境匹配的标准部署配置文件之一。 可以使用**mssqlctl bdc 配置列表**命令以列出它们：
 
    ```bash
-   mssqlctl cluster config list
+   mssqlctl bdc config list
    ```
 
-1. 若要自定义你的部署，请创建的部署配置文件的一份**mssqlctl 群集配置 init**命令。 例如，以下命令将创建一份**aks 开发 test.json**当前目录中的部署配置文件：
+1. 若要自定义你的部署，请创建的部署配置文件的一份**mssqlctl bdc 配置 init**命令。 例如，以下命令将创建一份**aks 开发测试**部署配置文件中名为的目标目录`custom`:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. 若要自定义部署配置文件中的设置，可以在一种工具，适用于编辑 json 文档，如 VS Code 中编辑它。 对于脚本化自动化，你可以编辑自定义配置文件使用**mssqlctl 群集配置部分，设置**命令。 例如，以下命令可更改要更改已部署群集的名称从默认的自定义配置文件 (**mssql 群集**) 到**测试群集**:  
-
-   ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > 是用于查找 JSON 路径的有用工具[JSONPath 联机计算器](https://jsonpath.com/)。
+   > `--target`指定包含配置文件的目录基于`--source`参数。
+
+1. 若要自定义部署配置配置文件中的设置，可以编辑一个工具，适用于编辑 JSON 文件，例如 VS Code 中的部署配置文件。 对于脚本化自动化，还可以编辑自定义部署配置文件使用**mssqlctl bdc 配置部分，设置**命令。 例如，以下命令可更改要更改已部署群集的名称从默认的自定义部署配置文件 (**mssql 群集**) 到**测试群集**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > `--config-profile`发生在该目录中对部署配置 JSON 文件指定自定义部署配置文件中，但实际修改的目录名称。 是用于查找 JSON 路径的有用工具[JSONPath 联机计算器](https://jsonpath.com/)。
 
    除了传递键 / 值对，还可以提供 JSON 值的内联或传递 JSON 修补程序文件。 有关详细信息，请参阅[配置的大数据群集部署设置](deployment-custom-configuration.md)。
 
-1. 然后，将传递到自定义配置文件**mssqlctl 群集创建**。 请注意，必须设置所需[环境变量](#env)，否则系统将提示输入值：
+1. 然后，将传递到自定义配置文件**mssqlctl bdc 创建**。 请注意，必须设置所需[环境变量](#env)，否则系统将提示输入值：
 
    ```bash
-   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -146,7 +149,7 @@ mssqlctl cluster create
 | **KNOX_PASSWORD** | Knox 用户的密码。 |
 | **MSSQL_SA_PASSWORD** | 对于 master 的 SQL 实例 SA 用户的密码。 |
 
-在调用之前，必须设置这些环境变量**mssqlctl 群集创建**。 如果未设置任何变量，则会提示输入它。
+在调用之前，必须设置这些环境变量**mssqlctl bdc 创建**。 如果未设置任何变量，则会提示输入它。
 
 下面的示例演示如何设置适用于 Linux (bash) 和 Windows (PowerShell) 的环境变量：
 
@@ -168,10 +171,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-在设置环境变量，您必须运行`mssqlctl cluster create`就能触发部署。 此示例使用上面创建的群集配置文件：
+在设置环境变量之后, 必须运行`mssqlctl bdc create`就能触发部署。 此示例使用上面创建的群集配置配置文件：
 
 ```
-mssqlctl cluster create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 请注意以下准则：
@@ -182,7 +185,7 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 
 ## <a id="unattended"></a> 无人参与的安装
 
-有关无人参与部署，必须设置所有必需的环境变量，使用配置文件，并调用`mssqlctl cluster create`命令与`--accept-eula yes`参数。 上一节中的示例演示用于无人参与安装的语法。
+有关无人参与部署，必须设置所有必需的环境变量，使用配置文件，并调用`mssqlctl bdc create`命令与`--accept-eula yes`参数。 上一节中的示例演示用于无人参与安装的语法。
 
 ## <a id="monitor"></a> 监视部署
 
@@ -195,7 +198,7 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 小于 15 到 30 分钟后，您应会收到通知，正在运行的控制器 pod:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
 2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
 2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
@@ -206,11 +209,8 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 部署完成后，输出会通知您成功：
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
 2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
-
-记下的 URL**门户终结点**以便在下一节中使用前面的输出中。
 
 > [!TIP]
 > 已部署的大数据群集的默认名称是`mssql-cluster`除非自定义配置已更改。
@@ -236,10 +236,10 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 
    在部署过程中指定的用户名和密码配置为控制器 （CONTROLLER_USERNAME 和 CONTROLLER_PASSWORD）。
 
-1. 运行**mssqlctl 群集终结点列表**以获取每个终结点和其对应的 IP 地址和端口值的说明的列表。 
+1. 运行**mssqlctl bdc 终结点列表**以获取每个终结点和其对应的 IP 地址和端口值的说明的列表。 
 
    ```bash
-   mssqlctl cluster endpoint list
+   mssqlctl bdc endpoint list
    ```
 
    以下列表显示了此命令的示例输出：
@@ -252,7 +252,6 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
    yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
    app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
    management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
    log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
    metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
    controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https

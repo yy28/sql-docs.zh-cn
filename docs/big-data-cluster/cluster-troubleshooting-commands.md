@@ -5,17 +5,17 @@ description: 本文提供了用于监视和故障排除 SQL Server 2019 大数�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d217e206ff9b41b0b61fa2d0407f530ef31eadf7
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800739"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388717"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>监视和故障排除 SQL Server 大数据群集
 
@@ -116,12 +116,11 @@ kubectl get svc -n mssql-cluster
 |---|---|
 | **master-svc-external** | 可以访问主实例。<br/>(**外部 IP，31433**并**SA**用户) |
 | **controller-svc-external** | 支持工具和管理群集的客户端。 |
-| **mgmtproxy-svc-external** | 提供对访问[群集管理门户](cluster-admin-portal.md)。<br/>(https://**外部 IP**: 30777/门户) |
 | **gateway-svc-external** | 提供对 HDFS/Spark 网关的访问。<br/>(**EXTERNAL-IP**并**根**用户) |
 | **appproxy-svc-external** | 支持应用程序部署方案。 |
 
 > [!TIP]
-> 这是一种方法查看与服务**kubectl**，但也可以使用`mssqlctl cluster endpoint list`命令来查看这些终结点。 有关详细信息，请参阅[获取大数据群集终结点](deployment-guidance.md#endpoints)。
+> 这是一种方法查看与服务**kubectl**，但也可以使用`mssqlctl bdc endpoint list`命令来查看这些终结点。 有关详细信息，请参阅[获取大数据群集终结点](deployment-guidance.md#endpoints)。
 
 ## <a name="get-service-details"></a>获取服务详细信息
 
@@ -224,10 +223,6 @@ kubectl get pods <pod_name> -o yaml -n <namespace_name> | grep hostIP
 ```bash
 kubectl get pods master-0 -o yaml -n mssql-cluster | grep hostIP
 ```
-
-## <a name="cluster-administration-portal"></a>群集管理门户
-
-使用[群集管理门户](cluster-admin-portal.md)来监视大数据群集的状态。 例如，在部署中，您可以使用**部署**选项卡。你必须等待**mgmtproxy svc 外部**要访问此门户中，因此不会在部署开始之前启动服务。
 
 ## <a name="kubernetes-dashboard"></a>Kubernetes 仪表板
 

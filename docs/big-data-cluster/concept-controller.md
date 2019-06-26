@@ -6,17 +6,17 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 115809307b430a9e5079de4db71180cca4766dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0623a920b060e4d5d1e7724f39e2eadb0bd2475
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783168"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387949"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集上的控制器？
 
@@ -44,17 +44,13 @@ ms.locfileid: "66783168"
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>控制器服务通过群集进行管理
 
-你可以管理仅通过使用控制器服务在群集`mssqlctl`Api 或群集中承载的群集管理门户。 如果 pod 等其他 Kubernetes 对象部署到相同的命名空间时，它们是未托管或由控制器服务监视。
+你可以管理通过使用控制器服务群集**mssqlctl**命令。 如果 pod 等其他 Kubernetes 对象部署到相同的命名空间时，它们是未托管或由控制器服务监视。 此外可以使用**kubectl**用于管理级别的 Kubernetes 群集的命令。 有关详细信息，请参阅[监视和故障排除 SQL Server 大数据群集](cluster-troubleshooting-commands.md)。
 
-在控制器和大数据群集创建的 Kubernetes 对象 （有状态集，pod、 机密等） 驻留在专用的 Kubernetes 命名空间。 控制器服务将由 Kubernetes 群集管理器来管理该命名空间中的所有资源授予的权限。  初始群集部署使用的过程中自动配置此方案中的 RBAC 策略`mssqlctl`。 
+在控制器和大数据群集创建的 Kubernetes 对象 （有状态集，pod、 机密等） 驻留在专用的 Kubernetes 命名空间。 控制器服务将由 Kubernetes 群集管理器来管理该命名空间中的所有资源授予的权限。  初始群集部署使用的过程中自动配置此方案中的 RBAC 策略**mssqlctl**。
 
 ### <a name="mssqlctl"></a>mssqlctl
 
-`mssqlctl` 可让群集管理员若要启动和管理大数据群集控制器服务公开的 REST Api 通过 Python 编写命令行实用程序。
-
-### <a name="cluster-administration-portal"></a>群集管理门户
-
-控制器服务启动并运行后，可以使用群集管理器[群集管理门户](cluster-admin-portal.md)若要监视部署进度，检测和解决群集内服务的问题。
+**mssqlctl**是启用群集管理员若要启动和管理控制器服务公开的 REST Api 通过大数据群集以 Python 编写的命令行实用程序。
 
 ## <a name="controller-service-security"></a>控制器服务安全性
 

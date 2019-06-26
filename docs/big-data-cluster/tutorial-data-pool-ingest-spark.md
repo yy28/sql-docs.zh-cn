@@ -5,17 +5,17 @@ description: 本教程演示如何将数据引入到在 Azure Data Studio 中使
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: aa38de6e488c71109758d26481a8487f574f6451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56715b8134ca5427807bb287124d7766aefb1b3b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770886"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388556"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程：将数据引入到 Spark 作业的 SQL Server 数据池
 
@@ -56,7 +56,7 @@ ms.locfileid: "66770886"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
 1. 创建命名的外部表**web_clickstreams_spark_results**中数据池。
@@ -74,7 +74,7 @@ ms.locfileid: "66770886"
       );
    ```
   
-1. 在 CTP 3.0 中，数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
+1. 在 CTP 3.1 中，数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
 
 ## <a name="start-a-spark-streaming-job"></a>启动 Spark 流式处理作业
 
@@ -104,7 +104,7 @@ ms.locfileid: "66770886"
 
    下表描述了每个自变量：
 
-   | 参数 | 描述 |
+   | 参数 | Description |
    |---|---|
    | 服务器名称 (server name) | SQL 服务器读取表架构，请使用 |
    | 端口号 | SQL Server 端口正在侦听 （默认值为 1433年） |

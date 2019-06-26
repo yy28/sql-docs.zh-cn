@@ -1,7 +1,7 @@
 ---
 title: sys.internal_partitions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,14 +14,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86c559adeeca787ac0e278eed5fb832b8c00bfd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5795ec9feaef483dd3ee9b5f3e31dbb619a89331
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537887"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388341"
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (TRANSACT-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   返回为每个跟踪基于磁盘的表的列存储索引的内部数据的行集的一行。 这些行集是列存储索引的内部并跟踪已删除行、 行组映射和增量存储行组。 它们为每个表分区; 每个跟踪数据每个表具有至少一个分区。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次重新生成列存储索引将重新创建行集。   
@@ -39,6 +39,7 @@ ms.locfileid: "52537887"
 |rows|**bigint**|此分区中的大约行数。|  
 |data_compression|**tinyint**|压缩的行集的状态：<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|为每个分区的压缩状态。 行存储表的可能值为 NONE、ROW 和 PAGE。 列存储表的可能值为 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。|  
+|optimize_for_sequential_key|**bit**|1 = 分区最后一页插入启用了优化。<br><br>0 = 默认值。 分区具有禁用的最后一页插入优化。|
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: aa95621178b26becd5985fd60b7b2d3588607d17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7a61c97d3e1636cd6a11173e281c192d1533d93
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801867"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388754"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 大数据群集 （预览版） 上的应用程序
 
@@ -45,7 +45,7 @@ ms.locfileid: "66801867"
 
 ## <a name="capabilities"></a>功能
 
-在 SQL Server 2019 （预览版） CTP 3.0 可以创建、 删除、 描述、 初始化，列表运行，并更新你的应用程序。 下表描述了可用于应用程序部署命令**mssqlctl**。
+在 SQL Server 2019 （预览版） 可以创建、 删除、 描述、 初始化，列表运行，并更新你的应用程序。 下表描述了可用于应用程序部署命令**mssqlctl**。
 
 |Command |Description |
 |:---|:---|

@@ -5,31 +5,31 @@ description: 了解如何使用配置文件自定义大数据群集部署。
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 61e6d50de66ca7fe4a9b5f3e1c5511fc19b8cffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba2587c2effdc3242e6032a0137bbf43ac153f1c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782261"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388804"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>配置大数据群集的部署设置
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-若要自定义群集部署配置文件，可以使用任何 json 格式编辑器，例如 VSCode。 对于脚本编写这些编辑用于自动化目的，我们提供**mssqlctl 群集配置节**命令。 本文介绍如何通过修改部署配置文件配置的大数据群集部署。 它提供了有关如何更改为不同的方案配置的示例。 有关如何在部署中使用的配置文件的详细信息，请参阅[部署指南](deployment-guidance.md#configfile)。
+若要自定义群集部署配置文件，可以使用任何 JSON 格式编辑器，如 VSCode。 脚本编写用于自动化目的这些编辑，请使用**mssqlctl bdc 配置节**命令。 本文介绍如何通过修改部署配置文件配置的大数据群集部署。 它提供了有关如何更改为不同的方案配置的示例。 有关如何在部署中使用的配置文件的详细信息，请参阅[部署指南](deployment-guidance.md#configfile)。
 
 ## <a name="prerequisites"></a>先决条件
 
 - [安装 mssqlctl](deploy-install-mssqlctl.md)。
 
-- 每个此部分中的示例假设您已创建一份标准配置文件之一。 有关详细信息，请参阅[创建自定义配置文件](deployment-guidance.md#customconfig)。 例如，以下命令将创建**custom.json**文件基于默认**aks 开发 test.json**配置：
+- 每个此部分中的示例假设您已创建一份标准配置文件之一。 有关详细信息，请参阅[创建自定义配置文件](deployment-guidance.md#customconfig)。 例如，以下命令将创建一个名为目录`custom`，其中包含基于默认值的 JSON 部署配置文件**aks 开发测试**配置：
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
 ## <a id="clustername"></a> 更改群集名称
@@ -46,7 +46,7 @@ ms.locfileid: "66782261"
 以下命令将发送到的键-值对 **--json 值**参数，以更改到的大数据群集名称**测试群集**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-cluster"
+mssqlctl bdc config section set --config-profile custom -j "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -67,16 +67,6 @@ mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-clust
         "name": "ServiceProxy",
         "serviceType": "LoadBalancer",
         "port": 30777
-    },
-    {
-        "name": "AppServiceProxy",
-        "serviceType": "LoadBalancer",
-        "port": 30778
-    },
-    {
-        "name": "Knox",
-        "serviceType": "LoadBalancer",
-        "port": 30443
     }
 ]
 ```
@@ -84,7 +74,7 @@ mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-clust
 下面的示例使用内联 JSON 若要更改的端口**控制器**终结点：
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> 配置池副本
@@ -121,23 +111,35 @@ mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.
 可以通过修改在池中配置的实例数**副本**每个池的值。 下面的示例使用内联 JSON 可以更改这些值到的存储和数据池`10`和`4`分别：
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
 ```
 
 ## <a id="storage"></a> 配置存储
 
-此外可以更改的存储类和用于每个池的特征。 下面的示例向存储池分配自定义的存储类，并更新存储 100 gb 数据的永久性卷声明的大小。 本部分中必须要使用更新设置的配置文件*mssqlctl 群集配置集合*命令，请参阅如何使用修补程序文件来将此部分添加下面：
+此外可以更改的存储类和用于每个池的特征。 下面的示例向存储池分配自定义的存储类，并更新存储 100 gb 数据的永久性卷声明的大小。 本部分中必须要使用更新设置的配置文件*mssqlctl bdc 配置集*命令，请参阅如何使用修补程序文件来将此部分添加下面：
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
-> 配置文件基于**kubeadm 开发 test.json**不具有存储定义的每个池，但这可以手动添加必要。
+> 配置文件基于**kubeadm 开发测试**不具有存储定义的每个池，但这可以手动添加必要。
 
 有关存储配置的详细信息，请参阅[与大数据群集在 Kubernetes 的 SQL Server 数据暂留](concept-data-persistence.md)。
+
+## <a id="sparkstorage"></a> 配置存储，没有 spark
+
+此外可以配置存储池没有 spark 的情况下运行并创建一个单独的 spark 池。 这使您能够缩放 spark 计算 power 独立于存储。 若要了解如何配置 spark 池，请参阅[JSON 修补程序文件示例](#jsonpatch)本文结尾处。
+
+本部分中必须要使用更新设置的配置文件`mssqlctl cluster config set command`。 以下 JSON 修补程序文件演示如何将此添加。
+
+默认情况下**includeSpark**设置为存储池设置为 true，因此必须添加**includeSpark**字段以便更改的存储配置：
+
+```bash
+mssqlctl cluster config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].includeSpark=false"
+```
 
 ## <a id="podplacement"></a> 配置使用 Kubernetes 标签的 pod 位置
 
@@ -162,7 +164,7 @@ mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.typ
 ```
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> JSON 修补程序文件
@@ -177,6 +179,7 @@ JSON 修补程序文件一次配置多个设置。 有关 JSON 修补程序的�
 - 更新控制平面存储中的存储类名称。
 - 更新存储池的池存储设置。
 - 更新存储池的 Spark 设置。
+- 使用 2 个副本用于群集创建 spark 池
 
 ```json
 {
@@ -199,16 +202,6 @@ JSON 修补程序文件一次配置多个设置。 有关 JSON 修补程序的�
             "serviceType": "LoadBalancer",
             "port": 30778,
             "name": "ServiceProxy"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30778,
-            "name": "AppServiceProxy"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30443,
-            "name": "Knox"
         }
       ]
     },
@@ -248,7 +241,6 @@ JSON 修补程序文件一次配置多个设置。 有关 JSON 修补程序的�
             "size": "32Gi"
           }
         }
-      }
     },
     {
       "op": "replace",
@@ -260,7 +252,44 @@ JSON 修补程序文件一次配置多个设置。 有关 JSON 修补程序的�
         "executorCores": 1,
         "executorMemory": "1536m"
       }
-    }
+    },
+    {
+      "op": "add",
+      "path": "spec.pools/-",
+      "value":
+      {
+        "metadata": {
+          "kind": "Pool",
+          "name": "default"
+        },
+        "spec": {
+          "type": "Spark",
+          "replicas": 2
+        },
+        "hadoop": {
+          "yarn": {
+            "nodeManager": {
+              "memory": 12288,
+              "vcores": 6
+            },
+            "schedulerMax": {
+              "memory": 12288,
+              "vcores": 6
+            },
+            "capacityScheduler": {
+              "maxAmPercent": 0.3
+            }
+          },
+          "spark": {
+            "driverMemory": "2g",
+            "driverCores": 1,
+            "executorInstances": 2,
+            "executorMemory": "2g",
+            "executorCores": 1
+          }
+        }
+      }
+    }   
   ]
 }
 ```
@@ -268,10 +297,10 @@ JSON 修补程序文件一次配置多个设置。 有关 JSON 修补程序的�
 > [!TIP]
 > 结构和选项的更改部署配置文件的详细信息，请参阅[适用于大数据群集的部署配置文件引用](reference-deployment-config.md)。
 
-使用**mssqlctl 群集配置部分，设置**应用 JSON 修补程序文件中的更改。 下面的示例应用**patch.json**到目标部署配置文件的文件**custom.json**。
+使用**mssqlctl bdc 配置部分，设置**应用 JSON 修补程序文件中的更改。 下面的示例应用**patch.json**到目标部署配置文件的文件**custom.json**。
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>后续步骤

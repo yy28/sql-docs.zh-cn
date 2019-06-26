@@ -5,16 +5,16 @@ description: 了解步骤以及用于部署 SQL Server 2019 大数据群集 （�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797912"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388833"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 大数据群集入门
 
@@ -47,7 +47,7 @@ ms.locfileid: "66797912"
 
 ## <a name="deploy-a-big-data-cluster"></a>部署大数据群集
 
-配置 Kubernetes 之后, 你部署使用的大数据群集`mssqlctl cluster create`命令。 在部署时，您可以采取几种不同方法。
+配置 Kubernetes 之后, 你部署使用的大数据群集`mssqlctl bdc create`命令。 在部署时，您可以采取几种不同方法。
 
 - 如果您要部署到开发测试环境，你可以选择使用之一[默认配置](deployment-guidance.md#deploy)提供**mssqlctl**。
 

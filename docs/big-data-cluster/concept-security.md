@@ -6,17 +6,17 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a71c4fb8902bb016de0d5ee607f955db61d94901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783069"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387944"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 大数据群集的安全性概念
 
@@ -34,7 +34,7 @@ ms.locfileid: "66783069"
 
 * 网关 HDFS/Spark (Knox)-这是一个基于 HTTPS 的终结点。 其他终结点是通过此代理。 HDFS/Spark 网关用于访问服务，如 webHDFS 和 Livy。 当你看到对 Knox 的引用，这是终结点。
 
-* 控制器终结点-用于管理群集会公开 REST Api 的大数据群集管理服务。 一些工具，如管理门户中，还可以通过此终结点访问。
+* 控制器终结点-用于管理群集会公开 REST Api 的大数据群集管理服务。 某些工具还可以通过此终结点访问。
 
 * 主实例的数据库工具和应用程序连接到 SQL Server 主实例在群集中的 TDS 端点。
 

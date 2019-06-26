@@ -5,17 +5,17 @@ description: 本教程演示如何查询 SQL Server 2019 大数据群集 （预�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d24c5b2089160236f4dcfaf5acf00e2426137f89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83a039fcbc335ecbc6057b1c8d7d1a953ba2c364
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770803"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388654"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教程：在 SQL Server 大数据群集中的查询 HDFS
 
@@ -77,7 +77,7 @@ ms.locfileid: "66770803"
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
    BEGIN
      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+     WITH (LOCATION = 'sqlhdfs://controller-svc/default');
    END
    ```
 

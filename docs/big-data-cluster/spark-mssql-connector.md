@@ -5,26 +5,37 @@ description: 了解如何在 Spark 中使用 MSSQL Spark 连接器来读取和�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: faa9d90cf78df5d73f125c7660b79d39e2bd5622
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d8172bc1d2b831d0cbeaab72bead283853b22cc
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770942"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388633"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何读取和写入到 SQL Server 从 Spark 使用 MSSQL Spark 连接器
 
 密钥的大数据使用模式是在 Spark 中，然后将数据写入 SQL Server 访问业务线应用程序的大容量数据处理。 这些使用情况模式受益于利用关键的 SQL 优化，并提供了高效的写机制的连接器。
 
-大数据群集提供了使用 SQL Server 大容量为高性能 Spark SQL 写入到编写 Api 的新 MSSQL Spark 连接器。 本文提供如何读取和使用 MSSQL Spark 连接器写入从 Spark 到 SQL Server 的示例。 在此示例中，从 HDFS 的大数据群集，处理的 Spark，然后写入群集使用的新 MSSQL Spark 连接器中的 SQL Server 主实例中读取数据。
+本文提供了如何使用 MSSQL Spark 连接器来读取和写入大数据群集中的以下位置的示例：
+
+1. SQL Server 主实例
+1. SQL Server 数据池
+
+   ![MSSQL Spark 连接器关系图](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+
+该示例将执行以下任务：
+
+- 从 HDFS 中读取文件并进行一些基本的处理。
+- 数据帧写入为 SQL 表的 SQL Server 主实例，然后阅读到数据帧的表。
+- 将数据帧写入到 SQL 外部表作为 SQL Server 数据池，然后阅读到数据帧的外部表。
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 连接器接口
 
-MSSQL Spark 连接器基于 Spark 数据源的 Api，并提供熟悉的 Spark JDBC 连接器界面。 有关接口参数，请参阅[Apache Spark 文档](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)。 按名称引用 MSSQL Spark 连接器**com.microsoft.sqlserver.jdbc.spark**。
+SQL Server 2019 预览提供了**MSSQL Spark 连接器**适用于大数据群集使用 SQL Server 大容量 Api 的写入 Spark SQL 写入。 MSSQL Spark 连接器基于 Spark 数据源的 Api，并提供熟悉的 Spark JDBC 连接器界面。 有关接口参数，请参阅[Apache Spark 文档](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)。 按名称引用 MSSQL Spark 连接器**com.microsoft.sqlserver.jdbc.spark**。
 
 下表描述已更改或新接口参数：
 
@@ -55,7 +66,9 @@ MSSQL Spark 连接器基于 Spark 数据源的 Api，并提供熟悉的 Spark JD
 
 1. 下载[AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv)到本地计算机。
 
-1. 在 Azure 数据 Studio 中，右键单击在大数据群集中的 HDFS 文件夹并选择**的新目录**。 目录命名**spark_data**。
+1. 启动 Azure Data Studio，并[连接到你的大数据群集](connect-to-big-data-cluster.md)。
+
+1. 在大数据群集上的 HDFS 文件夹上右键单击并选择**的新目录**。 目录命名**spark_data**。
 
 1. 右键单击**spark_data**目录，然后选择**将文件上传**。 上传**AdultCensusIncome.csv**文件。
 

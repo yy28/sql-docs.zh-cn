@@ -5,16 +5,16 @@ description: Mssqlctl 命令的参考文章。
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: acc25e6b3deca199ad774378318e17991614dcaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779240"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388665"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -26,9 +26,11 @@ ms.locfileid: "66779240"
 |     |     |
 | --- | --- |
 |[mssqlctl 应用](reference-mssqlctl-app.md) | 创建、 删除、 运行和管理应用程序。 |
-|[mssqlctl cluster](reference-mssqlctl-cluster.md) | 选择、 管理和运行群集。 |
+|[mssqlctl bdc](reference-mssqlctl-bdc.md) | 选择、 管理和运行 SQL Server 大数据群集。 |
+|[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | HDFS 模块提供了用于访问 HDFS 命令文件系统。 |
 [mssqlctl login](#mssqlctl-login) | 登录到群集的控制器终结点。
 [mssqlctl logout](#mssqlctl-logout) | 日志移出群集。
+|[mssqlctl sql](reference-mssqlctl-sql.md) | SQL DB CLI 允许用户与通过 T-SQL 的 SQL Server 进行交互。 |
 ## <a name="mssqlctl-login"></a>mssqlctl 登录名
 部署群集时，将在部署期间，应使用列出的控制器终结点到登录名。  如果不知道控制器终结点，您可能会通过群集的 kube 配置对您的系统的默认位置的登录名<user home>/.kube/config 或使用 KUBECONFIG 环境变量，即导出 KUBECONFIG=path/to/.kube/config。
 ```bash

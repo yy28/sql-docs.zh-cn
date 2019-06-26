@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 504559fab3078b03ea3b8aea923035654f60ce47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782134"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388792"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何装载 ADLS hdfs 分层大数据群集中的第 2 代
 
@@ -112,10 +112,10 @@ ms.locfileid: "66782134"
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. 将在 Azure 中使用远程 HDFS 存储装载**mssqlctl 群集存储池装入创建**。 将占位符值替换为之前运行以下命令：
+1. 将在 Azure 中使用远程 HDFS 存储装载**mssqlctl bdc 存储池装入创建**。 将占位符值替换为之前运行以下命令：
 
    ```bash
-   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ ms.locfileid: "66782134"
 若要列出的大数据群集中的所有装载状态，请使用以下命令：
 
 ```bash
-mssqlctl cluster storage-pool mount status
+mssqlctl bdc storage-pool mount status
 ```
 
 若要列出的在 HDFS 中的特定路径装载状态，请使用以下命令：
 
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> 删除装载
 
-若要删除装载，请使用**mssqlctl 群集存储池装入删除**命令，并在 HDFS 中指定的装载路径：
+若要删除装载，请使用**mssqlctl bdc 存储池装入删除**命令，并在 HDFS 中指定的装载路径：
 
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>后续步骤

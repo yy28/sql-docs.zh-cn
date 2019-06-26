@@ -5,17 +5,17 @@ description: 了解有关 SQL Server 2019 大数据群集 （预览版），在 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 12/07/2018
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667c7a76bfc0b74ab8ee642ccb558a774a1e0e2c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801888"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388731"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>什么是 SQL Server 大数据群集？
 
@@ -57,9 +57,7 @@ SQL Server 大数据群集启用 AI 和机器学习的数据存储在 HDFS 存�
 
 ### <a name="management-and-monitoring"></a>管理和监视
 
-通过组合使用命令行工具、 Api、 管理员门户和动态管理视图提供了管理和监视。
-
-[群集管理员门户](cluster-admin-portal.md)是群集中将显示状态和运行状况的 pod 的 web 界面。 它还提供用于日志分析和监视仪表板的链接到其他仪表板。
+通过组合使用命令行工具、 Api、 门户和动态管理视图提供了管理和监视。
 
 Azure Data Studio 可用于大数据群集上执行各种任务。 这新启用**SQL Server 2019 扩展 （预览版）** 。 此扩展提供了：
 
