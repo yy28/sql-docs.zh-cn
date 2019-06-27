@@ -4,17 +4,17 @@ description: 了解如何安装 SQL Server 语言扩展 (Java) 在 Red Hat、 Ub
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c796d8f445f4cc1b02a0f49d12cde55e0a7ab4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719379"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399934"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安装 SQL Server 2019 语言扩展 (Java)
 
@@ -28,7 +28,7 @@ Linux 容器还支持语言扩展。 包含语言扩展，我们不会提供预�
 
 ## <a name="uninstall-previous-ctp"></a>卸载以前的 CTP
 
-在过去几个 CTP 版本中，从而导致较少的包已更改的包列表。 我们建议卸载 CTP 2.x 安装 CTP 3.0 之前删除所有以前的包。 不支持通过并行安装多个版本。
+在过去几个 CTP 版本中，从而导致较少的包已更改的包列表。 我们建议卸载 CTP 2.x 安装 CTP 3.1 之前删除所有以前的包。 不支持通过并行安装多个版本。
 
 ### <a name="1-confirm-package-installation"></a>1.确认包安装
 
@@ -52,7 +52,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-30-install"></a>3.继续 CTP 3.0 安装
+### <a name="3-proceed-with-ctp-31-install"></a>3.继续 CTP 3.1 安装
 
 安装的最高级别包为操作系统在本文中使用的说明。
 
@@ -185,6 +185,20 @@ sudo zypper install mssql-server-extensibility-java
 6. 重新启动`mssql-launchpadd`再次服务。
 
 7. 对于想要使用中的语言扩展每个数据库，你需要注册的外部语言[创建的外部语言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+
+## <a name="register-external-language"></a>注册的外部语言
+
+对于想要使用中的语言扩展每个数据库，你需要注册的外部语言[创建的外部语言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+
+下面的示例将添加到 Linux 上的 SQL Server 上的数据库调用 Java 外部语言。
+
+```SQL
+CREATE EXTERNAL LANGUAGE Java
+FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
+GO
+```
+
+有关详细信息，请参阅[创建的外部语言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
 
 ## <a name="verify-installation"></a>验证安装
 

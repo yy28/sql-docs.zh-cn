@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b31c47039c79e0b8303f560694e67276dd192b6f
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388773"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400022"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何装载 S3 分层大数据群集中的 hdfs
 
@@ -32,12 +32,12 @@ ms.locfileid: "67388773"
 
 ## <a name="access-keys"></a>访问密钥
 
-1. 打开命令提示符可以访问你的大数据群集的客户端计算机上。
+### <a name="set-environment-variable-for-access-key-credentials"></a>设置环境变量中的访问密钥凭据
 
-1. 创建一个名为的本地文件**filename.creds** ，其中包含你使用以下格式的 S3 帐户凭据：
+打开命令提示符可以访问你的大数据群集的客户端计算机上。 使用以下格式的环境变量设置。 请注意，凭据必须位于一个逗号分隔列表。 在 Windows 上使用 set 命令。 如果使用的 Linux，则改为使用导出。
 
    ```text
-    fs.s3a.access.key=<Access Key ID of the key>
+    set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
     fs.s3a.secret.key=<Secret Access Key of the key>
    ```
 
@@ -59,11 +59,13 @@ ms.locfileid: "67388773"
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+   
+1. 设置环境变量 MOUNT_CREDENTIALS 按照上面的说明
 
 1. 将在 Azure 中使用远程 HDFS 存储装载**mssqlctl bdc 存储池装入创建**。 将占位符值替换为之前运行以下命令：
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

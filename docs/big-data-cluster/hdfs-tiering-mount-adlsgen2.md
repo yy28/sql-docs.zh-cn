@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388792"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400016"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何装载 ADLS hdfs 分层大数据群集中的第 2 代
 
@@ -64,17 +64,15 @@ ms.locfileid: "67388792"
 
 等待 5-10 分钟，然后使用装载的凭据
 
-### <a name="create-credential-file"></a>创建凭据文件
+### <a name="set-environment-variable-for-oauth-credentials"></a>设置环境变量中的 OAuth 凭据
 
-打开命令提示符可以访问你的大数据群集的客户端计算机上。
-
-创建一个名为的本地文件**filename.creds** ，其中包含你使用以下格式的 Azure 数据湖存储第 2 代帐户凭据：
+打开命令提示符可以访问你的大数据群集的客户端计算机上。 设置环境变量使用以下格式：请注意，凭据必须位于一个逗号分隔列表。 在 Windows 上使用 set 命令。 如果使用的 Linux，则改为使用导出。
 
    ```text
-    fs.azure.account.auth.type=OAuth
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above]
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above]
+    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
+    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
     fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
@@ -85,20 +83,20 @@ ms.locfileid: "67388792"
  > [!TIP]
    > 有关如何查找访问密钥的详细信息 (`<storage-account-access-key>`) 你的存储帐户，请参阅[查看和复制访问密钥](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys)。
 
-### <a name="create-credential-file"></a>创建凭据文件
+### <a name="set-environment-variable-for-access-key-credentials"></a>设置环境变量中的访问密钥凭据
 
 1. 打开命令提示符可以访问你的大数据群集的客户端计算机上。
 
-1. 创建一个名为的本地文件**filename.creds** ，其中包含你使用以下格式的 Azure 数据湖存储第 2 代帐户凭据：
+1. 打开命令提示符可以访问你的大数据群集的客户端计算机上。 使用以下格式的环境变量设置。 请注意，凭据必须位于一个逗号分隔列表。 在 Windows 上使用 set 命令。 如果使用的 Linux，则改为使用导出。
 
    ```text
-   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
 ## <a id="mount"></a> 将远程 HDFS 存储装载
 
-现在，已准备好的访问密钥或使用 OAuth 的凭据文件，可以开始安装。 以下步骤将 Azure Data Lake 中到本地 HDFS 存储大数据群集的远程 HDFS 存储装载。
+既然已设置为访问密钥或使用 OAuth MOUNT_CREDENTIALS 环境变量，可以开始安装。 以下步骤将 Azure Data Lake 中到本地 HDFS 存储大数据群集的远程 HDFS 存储装载。
 
 1. 使用**kubectl**若要查找的终结点的 IP 地址**控制器 svc 外部**大数据群集中的服务。 寻找**外部 IP**。
 
@@ -111,11 +109,12 @@ ms.locfileid: "67388792"
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+1. 设置环境变量 MOUNT_CREDENTIALS （滚动进行说明）
 
 1. 将在 Azure 中使用远程 HDFS 存储装载**mssqlctl bdc 存储池装入创建**。 将占位符值替换为之前运行以下命令：
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

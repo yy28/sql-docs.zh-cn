@@ -9,14 +9,14 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.custom: seodec18
-ms.date: 06/06/2019
+ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: b8de39cd3039c24420325dbff5ffb3f1db4efd40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3954e9dbe1159608cb0141e908ae65b7cde7fa81
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801851"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400115"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
@@ -124,7 +124,8 @@ ms.locfileid: "66801851"
 
    sudo apt-get install libunwind8
    ```
-
+## <a name="download-insiders-build-of-azure-data-studio"></a>下载 Azure Data Studio 的预览体验成员的版本
+一般情况下，用户应下载 Azure Data Studio 更高版本的稳定的版本。 但是，如果你想要试用我们的 beta 功能并向我们提供反馈，您可以下载[预览体验成员版本的 Azure Data Studio。](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
 
 ## <a name="uninstall-azure-data-studio"></a>卸载 Azure Data Studio
 
