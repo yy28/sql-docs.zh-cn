@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51c7dbf8e50f6c3537a2a4171720c160c444471d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad42063b2c4959429bdc54e3772aa755bc32e2f2
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797864"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412950"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 的大数据群集部署中配置 Azure Kubernetes 服务
 
@@ -70,28 +70,44 @@ Azure 资源组是在哪个 Azure 中部署和管理资源的逻辑组。 以下
    az account set --subscription <subscription id>
    ```
 
-1. 创建一个包含资源组**az 组创建**命令。 下面的示例创建名为的资源组`sqlbigdatagroup`在`westus2`位置。
+1. 创建一个包含资源组**az 组创建**命令。 下面的示例创建名为的资源组`sqlbdcgroup`在`westus2`位置。
 
    ```azurecli
-   az group create --name sqlbigdatagroup --location westus2
+   az group create --name sqlbdcgroup --location westus2
    ```
 
 ## <a name="create-a-kubernetes-cluster"></a>创建 Kubernetes 群集
 
 1. 在与 AKS 创建 Kubernetes 群集[az aks 创建](https://docs.microsoft.com/cli/azure/aks)命令。 下面的示例创建名为的 Kubernetes 群集*kubcluster*具有一个 Linux 代理节点的大小**Standard_L8s**。 请确保你在前面几节中使用同一资源组中创建 AKS 群集。
 
-    ```azurecli
+   **bash:**
+
+   ```bash
    az aks create --name kubcluster \
-    --resource-group sqlbigdatagroup \
-    --generate-ssh-keys \
-    --node-vm-size Standard_L8s \
-    --node-count 1 \
-    --kubernetes-version 1.12.8
-    ```
+   --resource-group sqlbdcgroup \
+   --generate-ssh-keys \
+   --node-vm-size Standard_L8s \
+   --node-count 1 \
+   --kubernetes-version 1.12.8
+   ```
+
+   **PowerShell:**
+
+   ```powershell
+   az aks create --name kubcluster `
+   --resource-group sqlbdcgroup `
+   --generate-ssh-keys `
+   --node-vm-size Standard_L8s `
+   --node-count 1 `
+   --kubernetes-version 1.12.8
+   ```
 
    可以增加或减少 Kubernetes 代理节点数，方法是更改`--node-count <n>`其中`<n>`是你想要使用的代理节点数。 这不包括在后台由 AKS 主 Kubernetes 节点。 前面的示例仅供评估使用的单个节点。
 
    几分钟后，该命令完成并返回有关群集的 JSON 格式信息。
+
+   > [!TIP]
+   > 如果在 AKS 中创建群集的任何错误，请参见[故障排除部分](#troubleshoot)的这篇文章。
 
 1. 保存 JSON 输出以供将来使用前一命令。
 
@@ -100,17 +116,24 @@ Azure 资源组是在哪个 Azure 中部署和管理资源的逻辑组。 以下
 1. 若要配置 kubectl 以连接到 Kubernetes 群集，运行[az aks get-credentials 来获取凭据](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)命令。 此步骤下载凭据，并配置 kubectl CLI 来使用它们。
 
    ```azurecli
-   az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
+   az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
    ```
 
 1. 若要验证连接到群集，请使用[kubectl 获取](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)命令返回群集节点的列表。  下面的示例中显示的输出如你打算有个主节点和 3 个代理节点。
 
-   ```
+   ```bash
    kubectl get nodes
    ```
 
+## <a id="troubleshoot"></a> 故障排除
+
+如果你使用上述命令创建 Azure Kubernetes 服务的任何问题，请尝试以下解决方法：
+
+- 请确保已安装[最新的 Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)。
+- 请尝试相同步骤使用不同的资源组和群集名称。
+
 ## <a name="next-steps"></a>后续步骤
 
-在本文中的步骤配置在 AKS 中的 Kubernetes 群集。 下一步是将 SQL Server 2019 大数据部署到群集。 有关如何部署大数据群集的详细信息，请参阅以下文章：
+在本文中的步骤配置在 AKS 中的 Kubernetes 群集。 下一步是部署 AKS Kubernetes 群集上的 SQL Server 2019 大数据群集。 有关如何部署大数据群集的详细信息，请参阅以下文章：
 
 [如何部署 SQL Server 大数据群集在 Kubernetes 上](deployment-guidance.md)

@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 1d06b668a6c8badef75a0e90d3f58b67b1269984
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400016"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419049"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何装载 ADLS hdfs 分层大数据群集中的第 2 代
 
@@ -81,7 +81,7 @@ ms.locfileid: "67400016"
 此外可以装载使用可以获取有关在 Azure 门户上在 ADLS 帐户访问密钥。
 
  > [!TIP]
-   > 有关如何查找访问密钥的详细信息 (`<storage-account-access-key>`) 你的存储帐户，请参阅[查看和复制访问密钥](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys)。
+   > 有关如何查找访问密钥的详细信息 (`<storage-account-access-key>`) 你的存储帐户，请参阅[查看帐户密钥和连接字符串](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string)。
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>设置环境变量中的访问密钥凭据
 

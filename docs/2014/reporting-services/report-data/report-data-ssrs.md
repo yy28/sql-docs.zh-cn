@@ -4,17 +4,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: ''
-ms.prod: reporting-services-2014, sql-server-2014
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 8c0a6ef25f33b5396ecea36edfd57ac3c42e8f5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be36e61a44a416283e77638f01005f1b3e16883b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721414"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413056"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的报表数据
 
@@ -22,7 +23,7 @@ ms.locfileid: "62721414"
   
 ##  <a name="BkMk_ReportDataTerms"></a> 术语
 
- 如果您不熟悉[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]概念，查看中的以下条款[Reporting Services 概念&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md):*数据连接*，*嵌入的数据源*，*共享数据源*，*嵌入数据集*，*共享数据集*，*数据集查询**报表部件*，并*数据警报*。  
+ 如果您不熟悉[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]概念，查看中的以下条款[Reporting Services 概念&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md):*数据连接*，*嵌入的数据源*，*共享数据源*，*嵌入数据集*，*共享数据集*，*数据集查询* *报表部件*，并*数据警报*。  
   
 ##  <a name="BkMk_ReportDataTips"></a> 用于指定报表数据的提示
 

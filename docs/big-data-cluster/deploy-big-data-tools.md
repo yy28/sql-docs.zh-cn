@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797915"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412969"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
@@ -33,7 +33,7 @@ ms.locfileid: "66797915"
 |---|---|---|---|
 | **mssqlctl** | 是 | 用于安装和管理大数据群集的命令行工具。 | [安装](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | 是 | 监视基础 Kuberentes 群集的命令行工具 ([的详细信息](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | 是 | 用于查询 SQL Server 的跨平台图形化工具 ([的详细信息](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [安装](../azure-data-studio/download.md) |
+| **Azure Data Studio （预览体验成员）** | 是 | 用于查询 SQL Server 的跨平台图形化工具 ([的详细信息](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [安装](https://aka.ms/azdata-insiders) |
 | **SQL Server 2019 扩展** | 是 | 适用于支持连接到大数据群集的 Azure Data Studio 的扩展。 此外提供了数据虚拟化向导。 | [安装](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | 适用于 AKS | 用于管理 Azure 服务的新式命令行界面。 与 AKS 的大数据群集部署一起使用 ([的详细信息](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [安装](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 可选 | 新式命令行接口，用于查询 SQL Server ([的详细信息](https://github.com/dbcli/mssql-cli/blob/master/README.rst))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |

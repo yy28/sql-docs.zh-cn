@@ -1,7 +1,7 @@
 ---
 title: 图形处理与 SQL Server 和 Azure SQL 数据库 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d985245052949451a0b519ee4d7b312a97f4a
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502479"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413076"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>图形处理与 SQL Server 和 Azure SQL 数据库
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -84,6 +84,9 @@ AND Person1.Name = 'John';
 [合并](../../t-sql/statements/merge-transact-sql.md)语句执行插入、 更新或删除基于与源表联接的结果对目标表的操作。 例如，您可以通过插入、 更新或删除基于目标表与源表之间的差异对目标表中的行同步两个表。 Azure SQL 数据库和 SQL Server vNext 现在支持在 MERGE 语句中使用匹配的谓词。 也就是说，现可以使用匹配谓词用于在单个语句，而不是单独的 INSERT/UPDATE/DELETE 语句中指定关系图的关系的新数据合并当前图形数据 （节点或边界表）。
 
 若要了解有关如何在合并 DML 中使用匹配项的详细信息请参阅[MERGE 语句](../../t-sql/statements/merge-transact-sql.md)
+
+## <a name="shortest-path"></a>最短路径
+[SHORTEST_PATH](./sql-graph-shortest-path.md)函数查找在关系图或从给定的节点开始到关系图中的所有其他节点中任何 2 个节点之间最短路径。 最短路径还可以用于查找可传递闭包或针对任意长度遍历图形中。 
 
  ## <a name="next-steps"></a>后续步骤  
 读取[SQL 图形数据库-体系结构](./sql-graph-architecture.md)

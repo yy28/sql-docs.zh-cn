@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 75f4f7d046e144713efa271fb1980d4518843448
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388783"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413103"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -192,15 +192,14 @@ mssqlctl bdc create --config-profile custom --accept-eula yes
 在群集启动期间客户端命令窗口将输出的部署状态。 在部署过程中，您应看到一系列消息，它正在等待控制器 pod:
 
 ```output
-2019-04-12 14:40:10.0129 UTC | INFO | Waiting for controller pod to be up...
+Waiting for cluster controller to start.
 ```
 
 小于 15 到 30 分钟后，您应会收到通知，正在运行的控制器 pod:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
-2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
-2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
+Cluster controller endpoint is available at 11.111.111.11:30080.
+Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
@@ -209,7 +208,7 @@ mssqlctl bdc create --config-profile custom --accept-eula yes
 部署完成后，输出会通知您成功：
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
+Cluster deployed successfully.
 ```
 
 > [!TIP]
@@ -228,7 +227,7 @@ mssqlctl bdc create --config-profile custom --accept-eula yes
    > [!TIP]
    > 如果在部署期间未更改默认名称，使用`-n mssql-cluster`在前一命令中。 **mssql 群集**是大数据群集的默认名称。
 
-1. 登录到大数据群集**mssqlctl 登录**。 设置 **-控制器终结点**控制器终结点的外部 IP 地址的参数。
+1. 登录到大数据群集[mssqlctl 登录](reference-mssqlctl.md)。 设置 **-控制器终结点**控制器终结点的外部 IP 地址的参数。
 
    ```bash
    mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
@@ -236,29 +235,35 @@ mssqlctl bdc create --config-profile custom --accept-eula yes
 
    在部署过程中指定的用户名和密码配置为控制器 （CONTROLLER_USERNAME 和 CONTROLLER_PASSWORD）。
 
-1. 运行**mssqlctl bdc 终结点列表**以获取每个终结点和其对应的 IP 地址和端口值的说明的列表。 
+1. 运行[mssqlctl bdc 终结点列表](reference-mssqlctl-bdc-endpoint.md)以获取每个终结点和其对应的 IP 地址和端口值的说明的列表。 
 
    ```bash
-   mssqlctl bdc endpoint list
+   mssqlctl bdc endpoint list -o table
    ```
 
    以下列表显示了此命令的示例输出：
 
    ```output
-   Name               Description                                             Endpoint                                                   Ip              Port    Protocol
-   -----------------  ------------------------------------------------------  ---------------------------------------------------------  --------------  ------  ----------
-   gateway            Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  30443   https
-   spark-history      Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  30443   https
-   yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
-   app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
-   management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
-   metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
-   controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
-   sql-server-master  SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  31433   tcp
-   webhdfs            HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  30443   https
-   livy               Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  30443   https
+   Description                                             Endpoint                                                   Ip              Name               Port    Protocol
+   ------------------------------------------------------  ---------------------------------------------------------  --------------  -----------------  ------  ----------
+   Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  gateway            30443   https
+   Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  spark-history      30443   https
+   Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  yarn-ui            30443   https
+   Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  app-proxy          30778   https
+   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  mgmtproxy          30777   https
+   Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  logsui             30777   https
+   Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  metricsui          30777   https
+   Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  controller         30080   https
+   SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  sql-server-master  31433   tcp
+   HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  webhdfs            30443   https
+   Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
+
+此外可以通过运行以下命令，为群集部署的所有服务终结点**kubectl**命令：
+
+```bash
+kubectl get svc -n <your-big-data-cluster-name>
+```
 
 ### <a name="minikube"></a>Minikube
 
@@ -268,11 +273,38 @@ mssqlctl bdc create --config-profile custom --accept-eula yes
 minikube ip
 ```
 
-不管平台如何在 Kubernetes 群集上运行，若要获取针对的群集，运行以下命令部署的所有服务终结点：
+## <a id="status"></a> 验证群集状态
+
+在部署后，可以检查与群集的状态[mssqlctl bdc 状态显示](reference-mssqlctl-bdc-status.md)命令。
 
 ```bash
-kubectl get svc -n <your-big-data-cluster-name>
+mssqlctl bdc status show -o table
 ```
+
+> [!TIP]
+> 若要运行的状态命令，你必须首先登录**mssqlctl 登录**命令，在上一终结点节中所示。
+
+以下显示了此命令的示例输出：
+
+```output
+Kind     Name           State
+-------  -------------  -------
+BDC      mssql-cluster  Ready
+Control  default        Ready
+Master   default        Ready
+Compute  default        Ready
+Data     default        Ready
+Storage  default        Ready
+```
+
+除了此摘要状态，还可以获取更详细的状态，使用以下命令：
+
+- [mssqlctl bdc 控件状态](reference-mssqlctl-bdc-control-status.md)
+- [mssqlctl bdc 池状态](reference-mssqlctl-bdc-pool-status.md)
+
+这些命令的输出包含到更详细的分析 Kibana 和 Grafana 仪表板的 Url。 
+
+除了使用之外**mssqlctl**，还可以使用 Azure Data Studio 若要查找的终结点和状态信息。 有关查看群集状态的详细信息**mssqlctl**和 Azure Data Studio，请参阅[如何查看的大数据群集状态](view-cluster-status.md)。
 
 ## <a id="connect"></a> 连接到群集
 
