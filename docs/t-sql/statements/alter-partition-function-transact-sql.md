@@ -55,11 +55,11 @@ ALTER PARTITION FUNCTION partition_function_name()
 ```  
   
 ## <a name="arguments"></a>参数  
-partition_function_name  
+partition_function_name   
 要修改的分区函数的名称。  
   
-SPLIT RANGE ( boundary_value )  
-在分区函数中添加一个分区。 boundary_value 确定新分区的范围，因此它必须不同于分区函数的现有边界范围。 根据 boundary_value，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将某个现有范围拆分为两个范围。 在这两个范围中，具有新 boundary_value 的范围是新分区。  
+SPLIT RANGE ( boundary_value )   
+在分区函数中添加一个分区。 boundary_value 确定新分区的范围，因此它必须不同于分区函数的现有边界范围  。 根据 boundary_value，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将某个现有范围拆分为两个范围  。 在这两个范围中，具有新 boundary_value  的范围是新分区。  
   
 文件组必须处于联机状态， 并且使用分区函数作为 NEXT USED 来保存新分区的分区方案必须标记该文件组。 CREATE PARTITION SCHEME 语句将文件组分配给分区。 CREATE PARTITION FUNCTION 语句创建的分区数少于用于保存分区的文件组。 CREATE PARTITION SCHEME 语句可能会留出比所需文件组数量更多的文件组。 如果发生这种情况，最终就会有未分配的文件组。 此外，分区方案会将其中一个文件组标记为 NEXT USED。 该文件组用于保存新的分区。 如果分区方案未将任何文件组标记为 NEXT USED，则必须使用 ALTER PARTITION SCHEME 语句。 
 
@@ -70,14 +70,14 @@ ALTER PARTITION SCHEME 语句可以添加文件组，也可以选择现有文件
 > [!NOTE]  
 >  列存储索引限制：如果表中存在列存储索引，则只能拆分空的分区。 需要先删除或禁用此列存储索引才能执行此操作。  
   
-MERGE [ RANGE ( boundary_value) ]  
-删除一个分区并将该分区中存在的所有值都合并到某个剩余分区中。 RANGE (boundary_value) 必须是一个现有边界值，已删除分区中的值将合并到该值中。 如果最初保存 boundary_value 的文件组没有被剩余分区使用，也没有使用 NEXT USED 属性进行标记，此参数将从分区方案中删除该文件组。 合并的分区位于最初不保存 boundary_value 的文件组中。 boundary_value 是一个可以引用变量（包括用户定义类型变量）或函数（包括用户定义函数）的常量表达式。 它无法引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 boundary_value 必须匹配或可隐式转换为其对应分区列的数据类型。 另外，在隐式转换期间，如果 boundary_value 值的大小和比例与其对应的 input_parameter_type 不匹配，也不能截断它。  
+MERGE [ RANGE ( boundary_value) ]   
+删除一个分区并将该分区中存在的所有值都合并到某个剩余分区中。 RANGE (boundary_value) 必须是一个现有边界值，已删除分区中的值将合并到该值中  。 如果最初保存 boundary_value  的文件组没有被剩余分区使用，也没有使用 NEXT USED 属性进行标记，此参数将从分区方案中删除该文件组。 合并的分区位于最初不保存 boundary_value  的文件组中。 boundary_value 是一个可以引用变量（包括用户定义类型变量）或函数（包括用户定义函数）的常量表达式  。 它无法引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 boundary_value  必须匹配或可隐式转换为其对应分区列的数据类型。 另外，在隐式转换期间，如果 boundary_value  值的大小和比例与其对应的 input_parameter_type  不匹配，也不能截断它。  
   
 > [!NOTE]  
 >  列存储索引限制：不能合并包含列存储索引的两个非空分区。 需要先删除或禁用此列存储索引才能执行此操作  
   
 ## <a name="best-practices"></a>最佳实践  
-始终在分区范围的两端保留空分区。 在两端保留分区可保证分区拆分和分区合并不会导致任何数据移动。 在开始时执行分区拆分，在结束时执行分区合并。 避免拆分或合并填充的分区。 拆分或合并填充的分区可能效率低下。 之所以效率低下，是因为拆分或合并可能导致生成多达四次日志，并且还可能导致严重的锁定问题。  
+始终在分区范围的两端保留空分区。 在两端保留分区可保证分区拆分和分区合并不会导致任何数据移动。 在开始时执行分区拆分，在结束时执行分区合并。 避免拆分或合并填充的分区。 拆分或合并填充的分区可能效率低下。 之所以效率低下，是因为拆分或合并可能导致日志生成次数比原来多四倍，并且还可能导致严重的锁定问题。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
 ALTER PARTITION FUNCTION 在单个原子操作中对使用该函数的任何表和索引进行重新分区。 但该操作在脱机状态下进行，并且根据重新分区的范围，可能会消耗大量资源。  
