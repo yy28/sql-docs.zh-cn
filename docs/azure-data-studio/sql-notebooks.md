@@ -3,7 +3,7 @@ title: 如何在 Azure Data Studio 中使用 SQL Notebook
 titleSuffix: Azure Data Studio
 description: 了解如何在 Azure Data Studio 中使用 SQL Notebook
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798039"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469081"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用 notebook
 
@@ -163,14 +163,13 @@ import <package-name>
 
 运行此命令时`Module not found`返回。 如果您的包存在，然后将未收到错误。
 
-如果它返回`Module not Found`错误，然后单击**管理包**启动终端。 现在可以安装本地包。 使用以下命令以安装包：
+如果它返回`Module not Found`错误，然后单击**管理包**以启动向导体验。 
 
-```bash
-./pip install <package-name>
-```
+![image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > 在 Mac 上请按照在终端窗口中安装包的说明。 
+在此向导中，您将是一种能够看到**已安装**包。 您可以搜索列表和关联的每个包版本。 如果你需要**卸载**其中的任何包，然后您可以单击其中一个包，然后单击**卸载所选的包**选项。
+
+您还将能够在单击**新增**包**搜索**特定包中，选择相关的版本，然后单击**安装**。 默认情况下，我们选择搜索包的最新版本。 
 
 安装此包后，您应能够处于 Notebook 单元中，并键入以下命令：
 
@@ -178,11 +177,7 @@ import <package-name>
 import <package-name>
 ```
 
-若要卸载包，请使用从终端运行以下命令：
-
-```bash
-./pip uninstall <package-name>
-```
+如果你需要**卸载**其中的任何包，然后您可以在一个或多个包上单击，然后单击**卸载所选的包**选项。
 
 ## <a name="next-steps"></a>后续步骤
 

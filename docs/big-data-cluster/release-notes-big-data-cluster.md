@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 424b09f9cd18a3fa68eb8a3ade26eecc1191ef72
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388640"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469124"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>对于 SQL Server 上的大数据群集的发行说明
 
@@ -36,7 +36,7 @@ ms.locfileid: "67388640"
 | `mssqlctl` 命令更改 | `mssqlctl cluster` 命令已重命名为`mssqlctl bdc`。 有关详细信息，请参阅[`mssqlctl`引用](reference-mssqlctl.md)。 |
 | 新`mssqlctl`状态命令和群集管理门户中的删除。 | 群集管理门户将在此版本中删除。 已添加到新状态命令`mssqlctl`现有监视命令的补数。 |
 | Spark 计算池 | 创建其他节点，而无需纵向扩展存储提升 Spark 的计算能力。 此外，您可以开始不会使用 spark 的存储池节点。 分离 Spark 和存储。 有关详细信息，请参阅[配置存储，没有 spark](deployment-custom-configuration.md#sparkstorage)。 |
-| MSSQL Spark 连接器 | 读取/写入数据池外部表的支持。 上一版本支持读/写到主实例仅限表。 |
+| MSSQL Spark 连接器 | 读取/写入数据池外部表的支持。 上一版本支持读/写到主实例仅限表。 有关详细信息，请参阅[如何读取和写入到 SQL Server 从 Spark 使用 MSSQL Spark 连接器](spark-mssql-connector.md)。 |
 | 机器学习中使用 MLeap | [在 Spark 中的 MLeap 机器学习模型进行训练和评分中使用的 Java 语言扩展。 SQL Server](spark-create-machine-learning-model.md)。 |
 
 ### <a name="known-issues"></a>已知问题

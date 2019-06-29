@@ -17,12 +17,12 @@ ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71eec87e4cdf325a20e6ad213dd8f591a094f825
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb1fcf2a88824a2ddef2e8b896b2ee585fa2623a
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267930"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469091"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Excel 的 SQLGetInfo 返回值
 下表列出了 C 语言 #defines *fInfoType*参数和返回的相应值**SQLGetInfo**。 可以通过列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*参数。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
@@ -112,7 +112,7 @@ ms.locfileid: "63267930"
 |SQL_GETDATA_EXTENSIONS|多个值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|""（反引号）|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`"（反引号）|  
 |SQL_KEYWORDS|多个值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -157,7 +157,7 @@ ms.locfileid: "63267930"
 |SQL_SCROLL_OPTIONS|多个值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|"EXCEL"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`\@#$%^&\*\_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|多个值|  
 |SQL_SUBQUERIES|多个值|  
 |SQL_SYSTEM_FUNCTIONS|0|  

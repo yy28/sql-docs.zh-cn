@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f4d66846be52a1f42a87f6dd11a584ace4e3ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499683"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469142"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,6 +346,7 @@ GO
 |HADR_TDS_LISTENER_SYNC |内部 Alwayson 系统或 WSFC 群集将请求启动或停止侦听器。 对此请求的处理始终是异步的，并且存在删除冗余请求的机制。 还存在此进程由于配置更改而挂起的时刻。 与此侦听器同步机制相关的所有等待都使用此等待类型。 仅限内部使用。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |需要启动和/或停止某一可用性组侦听器的 Alwayson Transact-SQL 语句的末尾使用。 启动/停止操作异步完成，因为用户线程将阻塞，直到已知侦听器的情况下使用此等待类型。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |仅限内部使用。 <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | 异地复制辅助数据库配置有较低时，会发生计算比主数据库的大小 (较低 SLO)。 由于延迟的日志占用量而由辅助情况下，主数据库将受到限制。 这被引起的辅助数据库具有不足，无法计算容量来保持主数据库的更改的速率。 <br /> **适用对象**：Azure SQL Database| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |仅限内部使用。 <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |仅限内部使用。 <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |仅限内部使用。 <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
