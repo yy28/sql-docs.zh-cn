@@ -14,20 +14,20 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e7b629b93e0c79a003019a2e024388d54b12b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be2957778e30af73abfafa210dee4746ffd869c9
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065205"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463456"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的行为更改
   本主题介绍[!INCLUDE[ssDE](../includes/ssde-md.md)]中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
   
-## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中的行为更改  
+## <a name="SQL14"></a> 中的行为更改 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，如果对其运行查询的 XML 文档包含超过某一特定长度（超过 4020 个字符）的字符串，则查询可能会返回不正确的结果。 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中，此类查询将返回正确的结果。  
   
-## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中的行为更改  
+## <a name="Denali"></a> 中的行为更改 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>元数据发现  
  中的改进[!INCLUDE[ssDE](../includes/ssde-md.md)]开头[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]允许 SQLDescribeCol 以获取更准确描述的预期的结果比在以前版本的返回 SQLDescribeCol [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[元数据发现](../relational-databases/native-client/features/metadata-discovery.md)。  
@@ -84,7 +84,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
   
 |源 XS 数据类型|目标 SQL Server 数据类型|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> ssNoversion<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> SMALLINT<br /><br /> ssNoversion<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
+|byte<br /><br /> short<br /><br /> INT<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> SMALLINT<br /><br /> INT<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
 |Decimal|Decimal<br /><br /> NUMERIC|  
 |FLOAT|REAL|  
 |double|FLOAT|  

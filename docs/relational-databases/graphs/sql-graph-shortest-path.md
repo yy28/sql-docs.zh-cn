@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed931a8b1918961b69cc0600f94aff6e4d68b9e1
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413984"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463546"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -39,12 +39,12 @@ SHORTEST_PATH 函数允许您查找：
 * 单一源最短路径。
 * 从多个源节点到多个目标节点的最短路径。
 
-它采用一种任意长度的字符串模式作为输入并返回两个节点之间存在的最短路径。 此函数仅可在匹配项。 它接受任意长度的字符串模式，并在关系图，与该模式匹配中查找最短路径。 该函数返回任何两个给定节点之间只有一个最短路径。 如果存在，两个或多个具有相同的长度，任何对源和目标节点之间的最短路径，该函数将返回已在遍历过程中发现第一个的只有一条路径。 请注意任意长度的字符串模式，只能在 SHORTEST_PATH 函数内指定。 
+它采用一种任意长度的字符串模式作为输入并返回两个节点之间存在的最短路径。 此函数仅可在匹配项。 该函数返回任何两个给定节点之间只有一个最短路径。 如果存在，任何对源和目标节点，遍历期间找到第一个函数返回只有一条路径之间的长度相同的两个或多个最短路径。 请注意任意长度的字符串模式，只能在 SHORTEST_PATH 函数内指定。 
 
 请参阅[匹配项 （SQL 图形）](../../t-sql/queries/match-sql-graph.md)语法。 
 
 ## <a name="for-path"></a>为路径
-路径必须使用与将参与任意长度的字符串模式的 FROM 子句中的任何节点或边界表名称。 路径可以使引擎节点或边界表将返回表示列表的节点或边缘从起始节点到结束节点遍历的路径的有序的集合。 不能直接在 SELECT 子句中计划这些表中的属性。 若要将项目从这些表的属性中，图形路径聚合函数必须使用。  
+路径必须使用与将参与任意长度的字符串模式的 FROM 子句中的任何节点或边界表名称。 路径可以使引擎节点或边界表将返回表示列表的节点或边缘遍历的路径中找到的有序的集合。 不能直接在 SELECT 子句中计划这些表中的属性。 若要将项目从这些表的属性中，图形路径聚合函数必须使用。  
 
 ## <a name="arbitrary-length-pattern"></a>任意长度的字符串模式
 此模式包含节点和边缘，直到达到所需的节点，或者直到模式中指定的迭代的最大数目必须重复遍历满足。 每次执行查询时，执行这种模式的结果将是节点和边缘从起始节点到结束节点遍历的路径的有序的集合。 这是一个正则表达式样式语法模式并支持以下两个模式限定符：

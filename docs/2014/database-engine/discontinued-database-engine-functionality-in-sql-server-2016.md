@@ -33,24 +33,24 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779856"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463467"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中废止的数据库引擎功能
   本主题介绍 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> 中废止的功能 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  下表列出了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中移除的功能。  
   
 |Category|已不再使用的功能|替代功能|  
 |--------------|--------------------------|-----------------|  
 |兼容级别|90 兼容性级别|必须将数据库的兼容性级别至少设置为 100。 当兼容性级别低于 100 的数据库升级到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]时，在升级操作过程中数据库的兼容性级别将设置为 100。|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> 中废止的功能 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  下表列出了 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中移除的功能。  
   
 |Category|已不再使用的功能|替代功能|  
@@ -93,6 +93,6 @@ ms.locfileid: "62779856"
 -   添加的字段：target_kb、pages_kb  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 2014 中弃用的数据库引擎功能](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [SQL Server 2014 中弃用的数据库引擎功能](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   
