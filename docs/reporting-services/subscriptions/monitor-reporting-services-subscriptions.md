@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 33d865ad28e9d013b97910ff30c4bcf7be760f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140538"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285048"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  
@@ -46,7 +46,7 @@ ms.locfileid: "67140538"
 |“登录属性”|描述|  
 |------------|-----------------|  
 |新建订阅|在您首次创建订阅时显示。|  
-|Inactive|无法处理订阅时显示。 有关详细信息，请参阅本文稍后将介绍的“管理非活动订阅”部分。|  
+|Inactive|无法处理订阅时出现。 有关详细信息，请参阅本文稍后将介绍的“管理非活动订阅”部分。|  
 |已完成：已处理 \<number> 个，共 \<number> 个；\<number> 个错误    。|显示数据驱动订阅执行的状态；此消息来自计划和传递处理器。|  
 |已处理 \<number> 个 |计划和传递处理器成功传递或不再试图传递的通知数。 当数据驱动传递完成后，已处理通知数应等于已生成通知的总数。|  
 |总计 \<number> 个 |最后一次传递订阅生成的通知总数。|  
@@ -76,7 +76,7 @@ ms.locfileid: "67140538"
   
  以下是与订阅相关的跟踪日志文件错误消息示例：  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36:: i INFO: 正在将 EnableExecutionLogging 初始化为 True，如服务器系统属性中所规定。emailextension!WindowsService_7!b60!05/20/2019-22:34:41:: e ERROR: 发送电子邮件时出错  。 Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i 信息:正在将 EnableExecutionLogging 初始化为 True，如服务器系统属性中所规定。emailextension!WindowsService_7!b60!05/20/2019-22:34:41 错误:发送电子邮件时出错  。 Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  日志文件不包括有关是否打开报表或传递是否真正成功的信息。 成功传递意味着计划和传递处理器未生成任何错误，并且报表服务器已连接到邮件服务器。 如果电子邮件在用户邮箱中产生无法传递的消息错误，该信息不会包括在日志文件中。 有关日志文件的详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   

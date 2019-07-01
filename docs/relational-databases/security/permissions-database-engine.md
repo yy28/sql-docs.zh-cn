@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521b183a1901bac8a5ac982baa65d2d8cbb60264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8303b8639ff72ad8bf6f9e3ebfc0b2232aae147b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840056"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412667"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,11 +54,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 -   ALTER ANY \<*Server Securable*>，其中 *Server Securable* 可为任何服务器安全对象。  
   
-     授予创建、更改或删除“服务器安全对象” 的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
+     授予创建、更改或删除“服务器安全对象”  的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
   
 -   ALTER ANY \<*Database Securable*>，其中 *Database Securable* 可为数据库级别的任何安全对象。  
   
-     授予创建、更改或删除“数据库安全对象” 的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
+     授予创建、更改或删除“数据库安全对象”  的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
   
 -   TAKE OWNERSHIP  
   
@@ -74,11 +74,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 -   CREATE \<*服务器安全对象*>  
   
-     授予被授权者创建“服务器安全对象” 的权限。  
+     授予被授权者创建“服务器安全对象”  的权限。  
   
 -   CREATE \<*数据库安全对象*>  
   
-     授予被授权者创建“数据库安全对象” 的权限。  
+     授予被授权者创建“数据库安全对象”  的权限。  
   
 -   CREATE \<*包含架构的安全对象*>  
   
@@ -109,7 +109,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |IMPERSONATE|登录名和用户|  
 |Insert|同义词、表和列、视图和列。 可以在数据库、架构或对象级别授予权限。|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列|  
-|REFERENCES|AGGREGATE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />CERTIFICATE、<br />CONTRACT、<br />DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SEQUENCE OBJECT、 <br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、<br />VIEW 和<br />XML SCHEMA COLLECTION|  
+|REFERENCES|AGGREGATE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />CERTIFICATE、<br />CONTRACT、<br />DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SEQUENCE OBJECT、 <br />SYMMETRIC KEY、<br />TABLE、<br />TYPE、<br />VIEW 和<br />XML SCHEMA COLLECTION|  
 |SELECT|同义词、表和列、视图和列。 可以在数据库、架构或对象级别授予权限。|  
 |TAKE OWNERSHIP|除 DATABASE SCOPED CONFIGURATION、LOGIN、SERVER 和 USER 外的所有对象类。|  
 |UPDATE|同义词、表和列、视图和列。 可以在数据库、架构或对象级别授予权限。|  
@@ -259,9 +259,9 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|删除|  
+|OBJECT|删除|DL|SCHEMA|删除|  
 |OBJECT|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
-|OBJECT|Insert|IN|SCHEMA|INSERT|  
+|OBJECT|Insert|IN|SCHEMA|Insert|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
@@ -418,7 +418,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="special-considerations-for-column-level-permissions"></a>列级权限的特殊注意事项
 
-授予列级权限语法 *<table_name>(\<column _name>)*。 例如：
+授予列级权限语法 *<table_name>(\<column _name>)* 。 例如：
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
