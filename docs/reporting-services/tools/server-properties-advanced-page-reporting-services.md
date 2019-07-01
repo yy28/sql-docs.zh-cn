@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571351"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463582"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
 
@@ -93,8 +93,9 @@ ms.locfileid: "65571351"
 
 **AccessControlMaxAge** 指定预备请求结果可缓存的秒数。 默认值为 600（10 分钟）。
 
-**AllowedResourceExtensionsForUpload** ***（仅限 Power BI 报表服务器）*** 设置可上传到报表服务器的资源扩展。 不需要包含的内置文件类型的扩展名，如 &ast;.rdl 和 &ast;.pbix。 默认扩展名为“&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx”。 
+**AllowedResourceExtensionsForUpload**扩展可上传到报表服务器的资源组。 不需要包含的内置文件类型的扩展名，如 &ast;.rdl 和 &ast;.pbix。 默认扩展名为“&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx”。
 
+**RestrictedResourceMimeTypeForUpload**的 mime 类型用户组不允许上传的内容。 已存储具有受限制的 mime 类型的任何资源仅可作为应用程序/八进制流而不是正在打开执行由浏览器下载。  默认情况下，在此列表中，没有限制的项，但我们建议组织填充此选项以提供最安全的体验。
 
 **EditSessionCacheLimit**  
 指定可在一个报表编辑会话中处于活动状态的数据缓存条目数。 默认数量为 5。  
