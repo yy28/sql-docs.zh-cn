@@ -1,7 +1,7 @@
 ---
 title: 向报表历史记录添加快照（报表管理器）| Microsoft Docs
-ms.prod: reporting-services-2014
-ms.technology: reporting-services-native
+ms.prod: reporting-services
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: ba994e3fe63bfabeb9949f6dc96dc4b4536f0f0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1b211684bc267671ea86571f4214c32c013f674
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568544"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463427"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>向报表历史记录添加快照（报表管理器）
 
@@ -24,7 +24,7 @@ ms.locfileid: "64568544"
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>向报表历史记录中手动添加快照
   
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 1. 在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头  。
   

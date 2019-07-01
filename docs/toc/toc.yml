@@ -1,4 +1,4 @@
-- name: 欢迎
+- name: 欢迎使用 SQL Server
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: 先前版本 2014-2005
   href: ../toc/previous-versions-sql-server.md
@@ -147,14 +147,10 @@
           items:
             - name: 使用 PROSE 代码加速器进行数据整理
               href: ../big-data-cluster/use-prose-for-big-data-automation.md
-            - name: 使用 Spark 训练和创建机器学习模型
-              href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
-            - name: 使用 Spark/Mleap 导出机器学习模型
-              href: ../big-data-cluster/export-model-with-spark-mleap.md
+            - name: 具有 MLeap 的 Spark 机器学习模型
+              href: ../big-data-cluster/spark-create-machine-learning-model.md
             - name: 在 RStudio 中使用 Sparklyr
               href: ../big-data-cluster/sparklyr-from-RStudio.md
-            - name: GPU 支持和 TensorFlow
-              href: ../big-data-cluster/spark-gpu-tensorflow.md
             - name: 将 Spark 与 SQL Server 集成
               href: ../big-data-cluster/spark-mssql-connector.md
         - name: 管理 SQL Server 大数据群集
@@ -181,42 +177,56 @@
               href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
             - name: 使用扩展的 Spark History Server
               href: ../big-data-cluster/spark-history-server.md
-    - name: 参考
+- name: 参考
+  items:
+    - name: 部署参考
       items:
-        - name: 部署参考
+        - name: 部署配置文件
+          href: ../big-data-cluster/reference-deployment-config.md
+    - name: mssqlctl 参考
+      items:
+        - name: mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl.md
+        - name: 应用部署
           items:
-            - name: 部署配置文件
-              href: ../big-data-cluster/reference-deployment-config.md
-        - name: mssqlctl 参考
+            - name: 应用
+              href: ../big-data-cluster/reference-mssqlctl-app.md
+            - name: 应用模板
+              href: ../big-data-cluster/reference-mssqlctl-app-template.md
+        - name: 分类
           items:
-            - name: mssqlctl
-              href: ../big-data-cluster/reference-mssqlctl.md
-            - name: 应用部署
-              items:
-                - name: mssqlctl 应用
-                  href: ../big-data-cluster/reference-mssqlctl-app.md
-                - name: mssqlctl 应用模板
-                  href: ../big-data-cluster/reference-mssqlctl-app-template.md
-            - name: 分类
-              items:
-                - name: mssqlctl 群集
-                  href: ../big-data-cluster/reference-mssqlctl-cluster.md
-                - name: mssqlctl 群集配置
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
-                - name: mssqlctl 群集配置部分
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
-                - name: mssqlctl 群集调试
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
-                - name: mssqlctl 群集终结点
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-endpoint.md
-                - name: mssqlctl 群集状态
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-status.md
-            - name: 存储器
-              items:
-                - name: mssqlctl 群集存储池
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
-                - name: mssqlctl 群集存储池装载
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
+            - name: bdc
+              href: ../big-data-cluster/reference-mssqlctl-bdc.md
+            - name: bdc 配置
+              href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
+            - name: bdc 配置节
+              href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
+            - name: bdc 控件
+              href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
+            - name: bdc 控件状态
+              href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md
+            - name: bdc 调试
+              href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
+            - name: bdc 终结点
+              href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+            - name: bdc 池
+              href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
+            - name: bdc 池状态
+              href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md
+            - name: bdc 状态
+              href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
+        - name: 存储器
+          items:
+            - name: bdc 存储
+              href: ../big-data-cluster/reference-mssqlctl-storage.md
+            - name: bdc 存储装载
+              href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+            - name: hdfs
+              href: ../big-data-cluster/reference-mssqlctl-hdfs.md
+        - name: SQL
+          items:
+            - name: sql
+              href: ../big-data-cluster/reference-mssqlctl-sql.md
 - name: 业务连续性
   items:
     - name: 概述
@@ -8116,8 +8126,10 @@
               href: ../relational-databases/security/auditing/sql-server-audit-records.md
     - name: 教程
       items:
-        - name: 使用 SSMS 的具有安全 Enclave 的 Always Encrypted
+        - name: 通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
           href: ../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+        - name: 在具有安全 Enclave 的 Always Encrypted 的列上创建和使用索引
+          href: ../relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
     - name: 参考
       items:
         - name: “权限”或“安全对象”页
@@ -14324,6 +14336,8 @@
               href: ../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md
             - name: sp_dropuser
               href: ../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md
+            - name: sp_enclave_send_keys
+              href: ../relational-databases/system-stored-procedures/sp-enclave-send-keys-sql.md
             - name: sp_grantdbaccess
               href: ../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md
             - name: sp_grantlogin

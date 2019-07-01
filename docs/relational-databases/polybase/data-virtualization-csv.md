@@ -5,17 +5,17 @@ author: Abiola
 ms.author: aboke
 ms.reviewer: jroth
 manager: craigg
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: dab04f5c544e84c5763b8101cb166741463d460a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a0a609d2581230418df2a7c1ae1e990a04e41ae
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993935"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388856"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>将外部表向导与 CSV 文件一起使用
 
@@ -26,14 +26,14 @@ SQL Server 2019 还允许从 HDFS 中的 CSV 文件虚拟化数据。  此过程
 自 CTP 2.4 起，数据池和存储池外部数据源默认不会再创建在大数据群集中。 在使用向导之前，请使用以下 Transact-SQL 查询在目标数据库中创建默认 SqlStoragePool 外部数据源  。 请确保首先将查询的上下文更改为目标数据库。
 
 ```sql
-  -- Create default data sources for SQL Big Data Cluster
-  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-      CREATE EXTERNAL DATA SOURCE SqlDataPool
-      WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+-- Create default data sources for SQL Big Data Cluster
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+    CREATE EXTERNAL DATA SOURCE SqlDataPool
+    WITH (LOCATION = 'sqldatapool://controller-svc/default');
 
-  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+    CREATE EXTERNAL DATA SOURCE SqlStoragePool
+    WITH (LOCATION = 'sqlhdfs://controller-svc/default');
 ```
 
 ## <a name="launch-the-external-table-wizard"></a>启动外部表向导

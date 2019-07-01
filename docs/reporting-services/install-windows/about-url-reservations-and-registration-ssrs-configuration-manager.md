@@ -1,6 +1,6 @@
 ---
 title: 关于 URL 预留和注册（SSRS 配置管理器）| Microsoft Docs
-ms.date: 05/18/2016
+ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640407e68b146e399dc478b17a91c351b23fe306
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454505"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314040"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 预留和注册（SSRS 配置管理器）
-  Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 预留。 URL 预留定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，将定义报表服务器 Web 服务和报表管理器的 URL 预留。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为你创建 URL 预留：  
+  Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 预留。 URL 预留定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，URL 预留是同时针对报表服务器 Web 服务和 Web 门户进行定义。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为你创建 URL 预留：  
   
--   安装程序将使用默认值创建 URL 预留。 如果安装程序安装默认配置，它将保留两个 URL；一个是报表服务器 Web 服务的 URL，另一个是为报表管理器保留的 URL。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具添加更多 URL 或修改安装程序创建的默认 URL。  
+-   安装程序将使用默认值创建 URL 预留。 如果安装程序安装默认配置，它将预留两个 URL：一个用于报表服务器 Web 服务，另一个用于 Web 门户。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具添加更多 URL 或修改安装程序创建的默认 URL。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具将根据你在该工具的 **Web 服务 URL** 或 **Web 门户 URL** 页中指定的 URL 创建 URL 预留。  
   
  安装程序和此工具都还会为报表服务器服务分配对 URL 的权限、检查有无重复实例并向 HTTP.SYS 添加 URL 预留。 切勿使用 HttpCfg.exe 或其他工具直接创建或修改 Reporting Services URL 预留。 如果您跳过了某一步骤或设置了无效的值，您将会遇到可能难以诊断或修复的问题。  
   
 > [!NOTE]  
->  HTTP.SYS 是一个操作系统组件，用于侦听网络请求并将它们路由至请求队列。 在此版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，HTTP.SYS 为报表服务器 Web 服务和报表管理器建立和维护请求队列。 Internet Information Services (IIS) 不再用于承载或访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序。 有关 HTTP.SYS 功能的详细信息，请参阅 MSDN 上的 [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) （HTTP 服务器 API）。  
+> HTTP.SYS 是一个操作系统组件，用于侦听网络请求并将它们路由至请求队列。 在此版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，HTTP.SYS 为报表服务器 Web 服务和 Web 门户建立和维护请求队列。 Internet Information Services (IIS) 不再用于承载或访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序。 若要详细了解 HTTP.SYS 功能，请参阅 [HTTP 服务器 API](https://go.microsoft.com/fwlink/?LinkId=92652)。  
   
 ##  <a name="ReportingServicesURLs"></a> Reporting Services 中的 URL  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中，可以通过 URL 访问以下工具、应用程序和项：  
@@ -42,10 +42,10 @@ ms.locfileid: "66454505"
  不应通过 URL 将其他已发布的、可通过 URL 寻址的项（如共享数据源）作为独立项进行访问。 当在浏览器窗口中查看这些项时，报表服务器不会以有意义的格式显示这些项。  
   
 > [!NOTE]  
->  本主题不讨论对存储在报表服务器上的特定报表的 URL 访问。 有关通过 URL 对这些项进行访问的详细信息，请参阅 [联机丛书中的](../../reporting-services/access-report-server-items-using-url-access.md) 使用 URL 访问报表服务器项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+> 本主题不介绍如何对报表服务器中存储的特定报表进行 URL 访问。 若要详细了解如何对这些项进行 URL 访问，请参阅[使用 URL 访问来访问报表服务器项](../../reporting-services/access-report-server-items-using-url-access.md)。  
   
 ##  <a name="URLreservation"></a> URL 预留和注册  
- URL 预留定义了可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在 HTTP.SYS 中为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 保留一个或多个 URL，然后在服务启动时注册它们。 通过向 URL 追加参数，可以通过 Web 服务打开报表。 预留和注册由 HTTP.SYS 实现。 有关详细信息，请参阅 MSDN 上的 [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653)（命名空间预留、注册和路由）。  
+ URL 预留定义了可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在 HTTP.SYS 中为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 保留一个或多个 URL，然后在服务启动时注册它们。 通过向 URL 追加参数，可以通过 Web 服务打开报表。 预留和注册功能是由 HTTP.SYS 提供。 有关详细信息，请参阅[命名空间预留、注册和路由](https://go.microsoft.com/fwlink/?LinkId=92653)。  
   
  *URL 预留*是指创建指向 Web 应用程序的 URL 端点并将其存储在 HTTP.SYS 中的过程。 HTTP.SYS 是计算机上定义的所有 URL 预留的公共存储库，它定义了一组保证 URL 预留唯一的公共规则。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66454505"
  如果在默认配置中安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，安装程序将为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]保留 URL。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中定义 URL 预留时，也可以接受这些默认值。 如果安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 或安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作为命名实例，则默认 URL 将包含实例名称。  
   
 > [!IMPORTANT]  
->  实例字符为下划线字符 ( **_** )。  
+> 实例字符为下划线字符 ( **_** )。  
   
  URL 预留包含一个端口号。 以下操作系统将允许多个 Web 应用程序共享一个端口：  
   
@@ -89,11 +89,11 @@ ms.locfileid: "66454505"
 |SQL Server Express|报表服务器 Web 服务|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
 |SQL Server Express|Web 门户|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
-##  <a name="URLPermissionsAccounts"></a> Reporting Services URL 的身份验证和服务标识  
+##  <a name="URLPermissionsAccounts"></a> 用于 Reporting Services URL 的身份验证和服务标识  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留显示 URL 预留的帐户。 虚拟服务帐户用于为运行在同一实例上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序创建的所有 URL。
   
  
- 因为默认安全性为 **RSWindowsNegotiate**，所以匿名访问已禁用。 对于 Intranet 访问，报表服务器 URL 使用网络计算机名称。 如果要为 Internet 连接配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，必须使用其他设置。 有关身份验证的详细信息，请参阅 [联机丛书中的](../../reporting-services/security/authentication-with-the-report-server.md) 使用报表服务器进行身份验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 因为默认安全性为 **RSWindowsNegotiate**，所以匿名访问已禁用。 对于 Intranet 访问，报表服务器 URL 使用网络计算机名称。 如果要为 Internet 连接配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，必须使用其他设置。 若要详细了解身份验证，请参阅[向报表服务器进行身份验证](../../reporting-services/security/authentication-with-the-report-server.md)。  
   
 ##  <a name="URLlocalAdmin"></a> 用于本地管理的 URL  
  如果为 URL 预留指定了强通配符或弱通配符，则可使用 `https://localhost/reportserver` 或 `https://localhost/reports`。  
@@ -105,5 +105,4 @@ ms.locfileid: "66454505"
 ## <a name="see-also"></a>另请参阅  
  [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [URL 预留语法（SSRS 配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
-  
   

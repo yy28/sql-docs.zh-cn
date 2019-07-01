@@ -1,7 +1,7 @@
 ---
 title: 使用 PowerShell 配置 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 529aaf3e6de3d748ee998b4b345bf90e84a885f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a65a662ad178eaf5e6ae620c7b66a64fd63e75ae
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521681"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387965"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 配置 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ SqlServer PowerShell 模块提供用于在 Azure SQL 数据库和 SQL Server 201
 
 SqlServer 模块中的 Always Encrypted cmdlet 适用于密钥或敏感数据，因此，必须在安全的计算机上运行这些 cmdlet。 管理 Always Encrypted 时，请不要在托管 SQL Server 实例的计算机上执行 cmdlet，而是在另一台计算机上执行。
 
-由于 Always Encrypted 的主要目的是确保加密敏感数据的安全（即使数据库系统遭到入侵），因此在 SQL Server 计算机上执行处理密钥或敏感数据的 PowerShell 脚本可减少或抵消该功能带来的益处。 有关其他安全相关的建议，请参阅 [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)（密钥管理的安全注意事项）。
+由于 Always Encrypted 的主要目的是确保加密敏感数据的安全（即使数据库系统遭到入侵），因此在 SQL Server 计算机上执行处理密钥或敏感数据的 PowerShell 脚本可减少或抵消该功能带来的益处。 有关其他安全相关的建议，请参阅 [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)（密钥管理的安全注意事项）。
 
 单个 cmdlet 文章的链接位于 [此页底部](#aecmdletreference)。
 

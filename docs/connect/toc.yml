@@ -1,7 +1,7 @@
-- name: SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: 与 SQL Server 进行交互的编程
   href: ../connect/homepage-sql-connection-programming.md
+- name: 欢迎使用 SQL Server >>
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: SQL Server 驱动程序
   href: ../connect/sql-connection-libraries.md
 - name: SQL Server 驱动程序历史记录

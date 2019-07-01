@@ -1,6 +1,6 @@
 ---
 title: 监视报表服务器性能 | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba639ea5bc65cb8d5e753883418ad3937919fa1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 36837445c13d5a0aa0c2bf0f93008d93e87d77d8
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577667"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314018"
 ---
 # <a name="monitoring-report-server-performance"></a>监视报表服务器性能
   使用性能监视工具可监视报表服务器的性能以评估服务器活动，查看趋势，诊断系统瓶颈以及收集可以帮您确定当前系统配置是否充分的数据。 若要优化服务器性能，可指定回收报表服务器应用程序域的频率。 有关详细信息，请参阅 [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "65577667"
   
  任务管理器提供了有关计算机上运行的程序和进程的信息。 您可以使用任务管理器来监视报表服务器性能的关键指标。 还可以评估运行中进程的活动，以及查看有关 CPU 和内存使用情况的图表及数据。 有关使用任务管理器的信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 产品文档。  
   
- 您可以使用性能控制台和事件查看器来创建有关报表处理与资源消耗情况的日志和警报。 有关由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]生成的 Windows 事件的信息，请参阅 [Windows 应用程序日志](../../reporting-services/report-server/windows-application-log.md)。 有关性能控制台的信息，请参阅本主题稍后部分中的“Windows 性能计数器”。  
+ 您可以使用性能控制台和事件查看器来创建有关报表处理与资源消耗情况的日志和警报。 有关由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]生成的 Windows 事件的信息，请参阅 [Windows 应用程序日志](../../reporting-services/report-server/windows-application-log.md)。 若要了解性能控制台，请参阅本主题稍后将介绍的“Windows 性能计数器”。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具还提供有关用于缓存和会话管理的报表服务器数据库和临时数据库的信息。  
   
@@ -55,28 +55,28 @@ ms.locfileid: "65577667"
 -   验证对系统配置所做的更改是否具有所需的性能效果。  
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 性能对象  
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包括下列性能对象：  
+SQL Server 2016 Reporting Services 或更高版本 (SSRS) 包括下列性能对象：  
   
 -   用于监视报表服务器性能的**MSRS 2011 Web Service** 和 **MSRS 2011 SharePoint Mode Web Service** 。 这些性能对象包括一系列用于跟踪报表服务器处理的计数器，这些处理通常通过交互式报表查看操作启动。 只要 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止报表服务器 Web 服务，这些计数器就会重置。  
   
 -   用于监视计划操作和报表传递的**MSRS 2011 Windows Service** 和 **MSRS 2011 Windows Service SharePoint Mode** to monitor scheduled operations 和 report delivery. 这些性能对象包括一系列用于跟踪报表处理的计数器，这些处理通过计划操作启动。 计划操作包括订阅和传递、报表执行快照以及报表历史记录。  
   
--   **Reportserver: Service** 和 **ReportServerSharePoint:Service** 用于监视与 HTTP 相关的事件和内存管理。 这些计数器特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，用于跟踪报表服务器中与 HTTP 相关的事件，例如请求、连接和登录尝试。 此性能对象还包括与内存管理相关的计数器。  
+-   ReportServer Service  和 ReportServerSharePoint Service  用于监视与 HTTP 相关的事件和内存管理。 这些计数器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 专用，用于为报表服务器跟踪与 HTTP 相关的事件，如请求、连接和登录尝试。 此性能对象还包括与内存管理相关的计数器。  
   
  如果单台计算机上有多个报表服务器实例，则可以同时监视多个实例或分别监视各个实例。 选择要在添加计数器时包括的实例。 有关使用性能控制台 (perfmon.msc) 和添加计数器的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 产品文档。  
   
 ## <a name="other-performance-counters"></a>其他性能计数器  
- 仅对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] MSRS 2008 Web Service **、** MSRS 2008 Windows Service **和**ReportServer:Service **提供自定义**性能计数器。 下列性能对象为报表服务器提供附加的性能监视数据。  
+ 自定义 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 性能计数器仅用于 MSRS 2008 Web 服务  、MSRS 2008 Windows 服务  和 ReportServer 服务  。 下列性能对象为报表服务器提供附加的性能监视数据。  
   
 |性能对象|说明|  
 |------------------------|-----------|  
-|**.NET CLR Data** 和 **.NET CLR Memory**|报表管理器使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 性能计数器。 有关详细信息，请参阅 MSDN 中的“提高 .NET 应用程序的性能和可伸缩性”。|  
+|**.NET CLR Data** 和 **.NET CLR Memory**|Web 门户使用[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]性能计数器。 有关详细信息，请参阅 MSDN 中的“提高 .NET 应用程序的性能和可伸缩性”。|  
 |**处理**|为 ReportingServicesService 实例添加 **Elapsed Time** 和 **ID Process** 性能计数器，以便按进程 ID 跟踪进程运行时间。|  
   
 ## <a name="sharepoint-events"></a>SharePoint 事件  
  除了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 性能对象之外，如果您在 SharePoint 集成模式下运行报表服务器并配置了报表环境以使用 SharePoint 产品，您可能还想配置 SharePoint 事件。 在本节中，将使用 SharePoint 集成模式下的报表服务器事件来查看可能提供有用信息（如果您的报表环境与 SharePoint 集成）的诊断事件。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
  [MSRS 2011 Web Service 和 MSRS 2011 Windows Service 性能对象的性能计数器（本机模式）](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
  介绍报表服务器 Web 服务所使用的性能计数器。  
   
@@ -93,5 +93,4 @@ ms.locfileid: "65577667"
  [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)  
-  
   

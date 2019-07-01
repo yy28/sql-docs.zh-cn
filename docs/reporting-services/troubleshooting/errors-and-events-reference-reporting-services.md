@@ -10,12 +10,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: ee8957385f68b7c719c973a5e4b957d779133258
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+ms.openlocfilehash: 55246173a23d8bae7fa9aab82a527800eb8bb23a
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140809"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285065"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>错误和事件参考 (Reporting Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67140809"
 |117|错误|启动/关闭|报表服务器|报表服务器数据库版本无效。|  
 |118|警告|日志记录|报表服务器<br /><br /> Web 门户|跟踪日志不在预期的目录位置；此时将在默认目录中创建新的跟踪日志。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
 |119|错误|激活|报表服务器<br /><br /> 计划和传递处理器|\<Source> 未获取访问报表服务器数据库内容的权限  。|  
-|120|错误|激活|报表服务器|无法解密对称密钥。 运行该服务所使用的帐户很可能已更改。 有关详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
+|120|错误|激活|报表服务器|无法解密对称密钥。 最有可能的是，服务运行所使用的帐户发生了更改。 有关详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
 |121|错误|启动/关闭|报表服务器|远程过程调用 (RPC) 服务无法启动。|  
 |122|警告|传递|计划和传递处理器|计划和传递处理器无法连接到用于电子邮件传递的 SMTP 服务器。 有关 SMTP 服务器连接的详细信息，请参阅[电子邮件设置-Reporting Services 本机模式 （配置管理器）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
 |123|警告|日志记录|报表服务器<br /><br /> Web 门户|报表服务器无法对跟踪日志进行写入操作。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。|  

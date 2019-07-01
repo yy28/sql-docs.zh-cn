@@ -2,7 +2,7 @@
 title: Azure Data Lake Analytics 任务 | Microsoft Docs
 description: 使用 Data Lake Analytics 任务，可以将 U-SQL 作业提交到 Azure Data Lake Analytics 服务。
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: maghan
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28c9ed815825dbebd0d7f96b983ee34f1176b48c
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014918"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419165"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 任务
 
@@ -37,7 +37,7 @@ ms.locfileid: "66014918"
 
 ## <a name="general-page-configuration"></a>“常规”页配置
 
-在“常规”  页上，可以配置任务，并提供任务提交的 U-SQL 脚本。 若要详细了解 U-SQL 语言，请参阅 [U-SQL 语言参考](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference)。
+在“常规”  页上，可以配置任务，并提供任务提交的 U-SQL 脚本。 若要详细了解 U-SQL 语言，请参阅 [U-SQL 语言参考](/u-sql/)。
 
 ### <a name="basic-configuration"></a>基本配置
 

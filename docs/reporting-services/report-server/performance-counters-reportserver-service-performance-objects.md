@@ -1,6 +1,6 @@
 ---
 title: 性能计数器 - ReportServer 服务，性能对象 | Microsoft Docs
-ms.date: 03/07/2017
+ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -10,12 +10,13 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7e87b285eccbd35c6c90cffa2f32e276aaefe0ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: aac7ce5685f4f70b98028d481f2da2bf630e3cb0
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581054"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412641"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>性能计数器 - ReportServer 服务，性能对象
   该主题描述了作为 **部署的一部分的** ReportServer:Service **和** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 性能对象的性能计数器。  

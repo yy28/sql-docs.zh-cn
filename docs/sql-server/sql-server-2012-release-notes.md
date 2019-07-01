@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad92bfee285b8a64b704e0636ce2421a80da4fed
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63002365"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351555"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -464,10 +464,12 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 在生成脚本向导中浏览时可能会出错  
 **问题：** 通过单击“保存或发布脚本”在生成脚本向导中生成脚本后，如果单击“选择选项”或“设置脚本编写选项”进行浏览，再次单击“保存或发布脚本”则可能会导致以下错误     ：  
   
-<a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
+<pre>
+An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
-其他信息：  
-对象名称“sys.federations”无效。 （Microsoft SQL Server，错误：208）</pre>  
+ADDITIONAL INFORMATION:  
+Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
+</pre>  
   
 **解决方法：** 关闭后重新打开该生成脚本向导。  
   
