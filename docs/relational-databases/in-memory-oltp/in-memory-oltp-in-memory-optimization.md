@@ -1,7 +1,7 @@
 ---
 title: 内存中 OLTP（内存中优化）| Microsoft Docs
 ms.custom: ''
-ms.date: 11/22/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5d982ba0b7a2ec5b35a6d38da3a5831119c4c1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ebb953132e28a3ea0766f7d9d7cd40f3f620659
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047571"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351657"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>内存中 OLTP（内存中优化）
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 可显著改善事务处理、数据引入和数据加载的性能以及暂时数据方案。  若要跳转到快速测试自己的内存优化表和本机编译的存储过程所需的基本代码和知识，请参阅
@@ -42,7 +43,7 @@ ms.locfileid: "63047571"
  
  请注意， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 是用于提高事务处理性能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术。 有关提高报告和分析查询性能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术，请参阅 [列存储索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)。
   
- 已对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的内存中 OLTP 进行了多项改进。 增加了 Transact-SQL 外围应用，以使其更易于迁移数据库应用程序。 添加了对内存优化表和本机编译的存储过程执行 ALTER 操作的支持，以使其更易于维护应用程序。 有关 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 中新增功能的信息，请参阅[列存储索引 - 新增功能](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)。  
+ 已对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的内存中 OLTP 进行了多项改进。 增加了 Transact-SQL 外围应用，以使其更易于迁移数据库应用程序。 添加了对内存优化表和本机编译的存储过程执行 ALTER 操作的支持，以使其更易于维护应用程序。
   
 > [!NOTE]  
 >  **进行试用**  

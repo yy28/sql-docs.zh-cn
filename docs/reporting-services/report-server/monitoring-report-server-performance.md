@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36837445c13d5a0aa0c2bf0f93008d93e87d77d8
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: HT
+ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314018"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412658"
 ---
 # <a name="monitoring-report-server-performance"></a>监视报表服务器性能
   使用性能监视工具可监视报表服务器的性能以评估服务器活动，查看趋势，诊断系统瓶颈以及收集可以帮您确定当前系统配置是否充分的数据。 若要优化服务器性能，可指定回收报表服务器应用程序域的频率。 有关详细信息，请参阅 [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -53,6 +53,8 @@ ms.locfileid: "67314018"
 -   验证硬件升级是否具有所需的性能效果。  
   
 -   验证对系统配置所做的更改是否具有所需的性能效果。  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 性能对象  
 SQL Server 2016 Reporting Services 或更高版本 (SSRS) 包括下列性能对象：  
@@ -85,9 +87,8 @@ SQL Server 2016 Reporting Services 或更高版本 (SSRS) 包括下列性能对�
   
  [ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中与 HTTP 相关的性能计数器和与内存相关的性能计数器。  
-  
- SharePoint 集成模式下的报表服务器事件  
- 介绍使用 SharePoint 产品运行报表环境时要记录的有用的诊断事件。  
+
+::: moniker-end
   
 ## <a name="see-also"></a>另请参阅  
  [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
