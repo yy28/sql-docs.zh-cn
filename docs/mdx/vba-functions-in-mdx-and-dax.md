@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251551"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500044"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函数
 
@@ -53,10 +53,10 @@ ms.locfileid: "63251551"
 |CVErr|不支持||  
 |Date|仅 MDX|**警告**DAX 实现同名的不同函数; DATE (Year，Month，Day) 函数，用于从给定参数生成一个 date 类型值|  
 |DateAdd|仅 MDX|**警告**DAX 实现同名的不同函数; DATEADD (\<日期 >，< number_of_intervals >\<间隔 >) 函数，用于移动从给定的日期由数量的给定时间间隔|  
-|DateDiff]|仅 MDX||  
+|DateDiff|仅 MDX||  
 |DatePart|仅 MDX||  
 |DateSerial|仅 MDX||  
-|DateValue]|DAX、MDX||  
+|DateValue|DAX、MDX||  
 |Day|DAX、MDX||  
 |DDB|仅 MDX||  
 |Dir|不支持||  
@@ -118,7 +118,7 @@ ms.locfileid: "63251551"
 |MonthName|不支持||  
 |MsgBox|不支持||  
 |现在|DAX、MDX||  
-|NPer]|仅 MDX||  
+|NPer|仅 MDX||  
 |NPV|仅 MDX||  
 |Oct|仅 MDX||  
 |分区|仅 MDX||  
@@ -146,7 +146,7 @@ ms.locfileid: "63251551"
 |Str|仅 MDX||  
 |StrComp|仅 MDX||  
 |StrConv|仅 MDX||  
-|String]|仅 MDX||  
+|String|仅 MDX||  
 |StrReverse|不支持||  
 |开关|仅 MDX||  
 |SYD|仅 MDX||  
@@ -156,7 +156,7 @@ ms.locfileid: "63251551"
 |Timer|仅 MDX||  
 |TimeSerial|仅 MDX||  
 |TimeValue|DAX、MDX||  
-|Trim]|DAX、MDX||  
+|Trim|DAX、MDX||  
 |TypeName|仅 MDX||  
 |UBound|不支持||  
 |UCase|仅 MDX||  
