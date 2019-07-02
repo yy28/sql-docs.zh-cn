@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd837276436de158f58fd2f66ed864930fe6032
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269918"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400049"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -602,4 +602,10 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 |**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|指定在无法修改的对象中发现差异（例如，如果文件的大小或路径存在差异）时是否生成警告。|
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|指定是否验证排序规则兼容性。
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|指定在出现可能阻止成功发布的问题的情况下，是否应在发布前执行将停止发布操作的检查。 例如，如果具有在数据库项目中不存在的目标数据库上的外键并且在发布时导致错误，则发布操作可能会停止。|
-  
+
+## <a name="exit-codes"></a>退出代码
+
+返回以下退出代码的命令：
+
+- 0 = 成功
+- 非零 = 失败

@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.openlocfilehash: 34d549a433bebe20beaae287362537a851b2ae6b
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66836323"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469148"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,14 +185,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  标识应用程序中某个会话端点的唯一标识符。 每个会话端点的会话句柄都是唯一的，发起方端点和目标端点具有不同的会话句柄。  
   
- 会话句柄由 *@dialog_handle* 语句的 **@dialog_handle** 参数以及 **conversation_handle** 语句结果集中的 **conversation_handle** 列返回到应用程序。  
+ 会话句柄由 BEGIN DIALOG  语句的 \@dialog_handle  参数以及 RECEIVE  语句结果集中的 conversation_handle  列返回到应用程序。  
   
  会话句柄在 **sys.transmission_queue** 和 **sys.conversation_endpoints** 目录视图的 **conversation_handle** 列中报告。  
   
  *conversation_group_id*  
  标识会话组的唯一标识符。  
   
- 会话组 ID 由 *@conversation_group_id* 语句的 **@conversation_group_id** 参数以及 **conversation_group_id** 语句结果集中的 **conversation_handle** 列返回到应用程序。  
+ 会话组 ID 由 GET CONVERSATION GROUP  语句的 \@conversation_group_id  参数以及 RECEIVE  语句结果集中的 conversation_group_id  列返回到应用程序。  
   
  会话组 ID 在 **sys.conversation_groups** 和 **sys.conversation_endpoints** 目录视图的 **conversation_group_id** 列中报告。  
   
